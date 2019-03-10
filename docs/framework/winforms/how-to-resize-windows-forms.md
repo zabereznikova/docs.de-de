@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 57a75cf07e3487c5a115e57c068b412c33538bce
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 9399069ad5365b025fe8c92b2f10c36c4666f4b4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664535"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705417"
 ---
 # <a name="how-to-resize-windows-forms"></a>Vorgehensweise: Ändern der Größe Windows Forms
 Sie können die Größe eines Windows Forms auf verschiedene Weise angeben. Sie können die Höhe und Breite des Formulars programmgesteuert ändern, indem Sie einen neuen Wert für die <xref:System.Windows.Forms.Form.Size%2A>-Eigenschaft festlegen oder die <xref:System.Windows.Forms.Control.Height%2A>- oder die <xref:System.Windows.Forms.Control.Width%2A>-Eigenschaft einzeln anpassen. Wenn Sie Visual Studio verwenden, können Sie die Größe des mithilfe der Windows Forms-Designer ändern. Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Ändern der Größe Windows Forms mithilfe des Designers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100)).  
@@ -113,5 +113,5 @@ Sie können die Größe eines Windows Forms auf verschiedene Weise angeben. Sie 
     ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Erste Schritte mit Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
-- [Erweitern von Windows Forms-Anwendungen](../../../docs/framework/winforms/advanced/index.md)
+- [Erste Schritte mit Windows Forms](getting-started-with-windows-forms.md)
+- [Erweitern von Windows Forms-Anwendungen](./advanced/index.md)

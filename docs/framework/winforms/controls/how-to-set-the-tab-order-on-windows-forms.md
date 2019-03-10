@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 118785e14dddcd5ff19aa8c143f9e8df05d8980b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f566dfb5dbc118c5a6be7f874b5b4857756075a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675207"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705878"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>Vorgehensweise: Festlegen der Aktivierreihenfolge in Windows Forms
 Die Aktivierreihenfolge ist die Reihenfolge, in der ein Benutzer den Fokus von einem Steuerelement zu einem anderen wechselt durch Drücken der TAB-Taste. Jedes Formular verfügt über eine eigene Aktivierreihenfolge. Standardmäßig entspricht die Aktivierreihenfolge der Reihenfolge, in der Sie die Steuerelemente erstellt. Aktivierreihenfolge Nummerierung beginnt mit 0 (null).  
@@ -32,7 +32,7 @@ Die Aktivierreihenfolge ist die Reihenfolge, in der ein Benutzer den Fokus von e
 2.  Klicken Sie auf die Steuerelemente, nacheinander, um die Aktivierreihenfolge herstellen sollen.  
   
     > [!NOTE]
-    >  Die Position eines Steuerelements in der Aktivierreihenfolge kann auf einen beliebigen Wert größer als oder gleich 0 festgelegt werden. Beim Auftreten von Duplikaten die Z-Reihenfolge der beiden Steuerelemente ausgewertet, und das Steuerelement im Vordergrund ist zunächst im Registerkartenformat. (Die Z-Reihenfolge ist für die Schichtung der Steuerelemente in einem Formular entlang des Formulars z-Achse [Tiefe]. Die Z-Reihenfolge bestimmt, welche Steuerelemente vor den anderen Steuerelementen sind.) Weitere Informationen zur Z-Anordnung finden Sie unter [Überlagern von Objekten in Windows Forms](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
+    >  Die Position eines Steuerelements in der Aktivierreihenfolge kann auf einen beliebigen Wert größer als oder gleich 0 festgelegt werden. Beim Auftreten von Duplikaten die Z-Reihenfolge der beiden Steuerelemente ausgewertet, und das Steuerelement im Vordergrund ist zunächst im Registerkartenformat. (Die Z-Reihenfolge ist für die Schichtung der Steuerelemente in einem Formular entlang des Formulars z-Achse [Tiefe]. Die Z-Reihenfolge bestimmt, welche Steuerelemente vor den anderen Steuerelementen sind.) Weitere Informationen zur Z-Anordnung finden Sie unter [Überlagern von Objekten in Windows Forms](how-to-layer-objects-on-windows-forms.md).  
   
 3.  Wenn Sie fertig sind, klicken Sie auf **Aktivierreihenfolge** auf die **Ansicht** im Menü erneut aus, um die Reihenfolge registerkartenmodus lassen.  
   
@@ -52,10 +52,10 @@ Die Aktivierreihenfolge ist die Reihenfolge, in der ein Benutzer den Fokus von e
      Ein Steuerelement, dessen <xref:System.Windows.Forms.Control.TabStop%2A> eingestellt wurde `false` verwaltet seine Position in der Aktivierreihenfolge nach wie vor, auch wenn das Steuerelement wird übersprungen, wenn Sie die Steuerelemente mit der TAB-Taste durchlaufen.  
   
     > [!NOTE]
-    >  Eine Gruppe von Optionsfeldern verfügt über eine einzelne Registerkarte, die zur Laufzeit zu beenden. Die ausgewählte Schaltfläche (, also auf die Schaltfläche mit der <xref:System.Windows.Forms.RadioButton.Checked%2A> -Eigenschaft auf festgelegt `true`) verfügt über seine <xref:System.Windows.Forms.Control.TabStop%2A> Eigenschaft automatisch festgelegt, um `true`, während die anderen Schaltflächen haben ihre <xref:System.Windows.Forms.Control.TabStop%2A> -Eigenschaft auf festgelegt `false`. Weitere Informationen zum Gruppieren <xref:System.Windows.Forms.RadioButton> Steuerelemente finden Sie [Gruppieren von Windows Forms RadioButton-Steuerelementen in als Satz](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
+    >  Eine Gruppe von Optionsfeldern verfügt über eine einzelne Registerkarte, die zur Laufzeit zu beenden. Die ausgewählte Schaltfläche (, also auf die Schaltfläche mit der <xref:System.Windows.Forms.RadioButton.Checked%2A> -Eigenschaft auf festgelegt `true`) verfügt über seine <xref:System.Windows.Forms.Control.TabStop%2A> Eigenschaft automatisch festgelegt, um `true`, während die anderen Schaltflächen haben ihre <xref:System.Windows.Forms.Control.TabStop%2A> -Eigenschaft auf festgelegt `false`. Weitere Informationen zum Gruppieren <xref:System.Windows.Forms.RadioButton> Steuerelemente finden Sie [Gruppieren von Windows Forms RadioButton-Steuerelementen in als Satz](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)
-- [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Windows Forms-Steuerelemente](index.md)
+- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)

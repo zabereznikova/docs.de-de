@@ -2,16 +2,16 @@
 title: 'Vorgehensweise: Erstellen Sie eine benutzerdefinierte Instanz Store'
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-ms.openlocfilehash: de3602b928a861500e7984fe88bbb2176d58b840
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503189"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707767"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>Vorgehensweise: Erstellen Sie eine benutzerdefinierte Instanz Store
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] enthält <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, einen Instanzspeicher, der SQL Server verwendet, um Workflowdaten beizubehalten. Wenn die Anwendung Workflowdaten auf einem anderen Medium, z. B. einer anderen Datenbank oder einem anderen Dateisystem dauerhaft speichern muss, können Sie einen benutzerdefinierten Instanzspeicher implementieren. Ein benutzerdefinierter Instanzspeicher wird erstellt, indem die abstrakte <xref:System.Runtime.DurableInstancing.InstanceStore>-Klasse erweitert wird und die Methoden implementiert werden, die für die Implementierung erforderlich sind. Eine vollständige Implementierung eines benutzerdefinierten instanzspeichers finden Sie unter den [Unternehmenseinkaufsprozess](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) Beispiel.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] enthält <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, einen Instanzspeicher, der SQL Server verwendet, um Workflowdaten beizubehalten. Wenn die Anwendung Workflowdaten auf einem anderen Medium, z. B. einer anderen Datenbank oder einem anderen Dateisystem dauerhaft speichern muss, können Sie einen benutzerdefinierten Instanzspeicher implementieren. Ein benutzerdefinierter Instanzspeicher wird erstellt, indem die abstrakte <xref:System.Runtime.DurableInstancing.InstanceStore>-Klasse erweitert wird und die Methoden implementiert werden, die für die Implementierung erforderlich sind. Eine vollständige Implementierung eines benutzerdefinierten instanzspeichers finden Sie unter den [Unternehmenseinkaufsprozess](./samples/corporate-purchase-process.md) Beispiel.
 
 ## <a name="implementing-the-begintrycommand-method"></a>Implementieren der BeginTryCommand-Methode
 
@@ -226,11 +226,11 @@ ms.locfileid: "57503189"
 
 ## <a name="using-a-custom-instance-store"></a>Verwenden eines benutzerdefinierten Instanzspeichers
 
-Um einen benutzerdefinierten Instanzspeicher zu implementieren, weisen Sie <xref:System.Activities.WorkflowApplication.InstanceStore%2A> eine Instanz des Instanzspeichers zu, und implementieren Sie die <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>-Methode. Finden Sie unter den [Vorgehensweise: Erstellen und Ausführen einer Workflows mit langer Laufzeit](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) ausführliche Tutorial.
+Um einen benutzerdefinierten Instanzspeicher zu implementieren, weisen Sie <xref:System.Activities.WorkflowApplication.InstanceStore%2A> eine Instanz des Instanzspeichers zu, und implementieren Sie die <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>-Methode. Finden Sie unter den [Vorgehensweise: Erstellen und Ausführen einer Workflows mit langer Laufzeit](how-to-create-and-run-a-long-running-workflow.md) ausführliche Tutorial.
 
 ## <a name="a-sample-instance-store"></a>Beispiel für einen Instanzspeicher
 
-Im folgenden Codebeispiel wird eine vollständige Implementierung eines instanzspeichers aus dem [Unternehmenseinkaufsprozess](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md) Beispiel. Dieser Instanzspeicher speichert Workflowdaten unter Verwendung von XML dauerhaft in einer Datei.
+Im folgenden Codebeispiel wird eine vollständige Implementierung eines instanzspeichers aus dem [Unternehmenseinkaufsprozess](./samples/corporate-purchase-process.md) Beispiel. Dieser Instanzspeicher speichert Workflowdaten unter Verwendung von XML dauerhaft in einer Datei.
 
 ```csharp
 using System;

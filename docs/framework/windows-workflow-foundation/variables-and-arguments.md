@@ -2,15 +2,15 @@
 title: Variablen und Argumente
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 7d4bcbb28ffac0ea0f2f6d4aa238523855570f7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e534a54802228d6d001838008fc9d8f36fc0827
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520106"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717816"
 ---
 # <a name="variables-and-arguments"></a>Variablen und Argumente
-In Windows Workflow Foundation (WF) Variablen stellen die Speicherung von Daten während Argumente den Fluss der Daten in und aus einer Aktivität darstellen. Eine Aktivität verfügt über einen Satz von Argumenten, die die Signatur der Aktivität ausmachen. Darüber hinaus kann eine Aktivität eine Liste von Variablen verwalten. Ein Entwickler kann während des Entwurfs eines Workflows Variablen zu dieser Liste hinzufügen oder daraus löschen. Ein Argument wird mit einem Ausdruck gebunden, der einen Wert zurückgibt.  
+In Windows Workflow Foundation (WF), Variablen darstellen, die Speicherung von Daten und Argumente darstellen den Fluss der Daten in und aus einer Aktivität. Eine Aktivität verfügt über einen Satz von Argumenten, die die Signatur der Aktivität ausmachen. Darüber hinaus kann eine Aktivität eine Liste von Variablen verwalten. Ein Entwickler kann während des Entwurfs eines Workflows Variablen zu dieser Liste hinzufügen oder daraus löschen. Ein Argument wird mit einem Ausdruck gebunden, der einen Wert zurückgibt.  
   
 ## <a name="variables"></a>Variablen  
  Variablen sind Speicherorte für Daten. Variablen werden als Teil der Definition eines Workflows deklariert. Variablen nehmen zur Laufzeit Werte an, die dann als Teil des Zustands einer Workflowinstanz gespeichert werden. Eine Variablendefinition gibt den Typ der Variable und optional auch ihren Namen an. Im folgenden Code wird gezeigt, wie eine Variable deklariert und ihr mit einer <xref:System.Activities.Statements.Assign%601>-Aktivität ein Wert zugewiesen wird und wie der Wert mithilfe einer <xref:System.Activities.Statements.WriteLine>-Aktivität in der Konsole angezeigt wird.  
@@ -141,4 +141,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- Weitere Informationen zum Arbeiten mit Argumenten, Variablen und Ausdrücke im Code finden Sie unter [Entwickeln von Workflows, Aktivitäten und Ausdrücken mithilfe von imperativem Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md) und [erforderliche Argumente und Überladungsgruppen](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md).
+ Weitere Informationen zum Arbeiten mit Argumenten, Variablen und Ausdrücke im Code finden Sie unter [Entwickeln von Workflows, Aktivitäten und Ausdrücken mithilfe von imperativem Code](authoring-workflows-activities-and-expressions-using-imperative-code.md) und [erforderliche Argumente und Überladungsgruppen](required-arguments-and-overload-groups.md).

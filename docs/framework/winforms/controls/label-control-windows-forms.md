@@ -6,33 +6,33 @@ helpviewer_keywords:
 - labels
 - LinkLabel control [Windows Forms]
 ms.assetid: 2028bbe3-ffe2-43e8-8ae3-dec759d2ecec
-ms.openlocfilehash: 5a4dd320b4242b1e557b5fc5edfca1a1baf7c954
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0175a6551d7257d7d74df27ab4b927320b176dd7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536145"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707741"
 ---
 # <a name="label-control-windows-forms"></a>Label-Steuerelement (Windows Forms)
 > [!IMPORTANT]
->  Die <xref:System.Windows.Forms.ToolStripLabel> -Steuerelement ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.Label> Steuerelement. Können Sie die <xref:System.Windows.Forms.ToolStripLabel> mit anderen neue Steuerelemente wie z. B. die <xref:System.Windows.Forms.ToolStripDropDown>. Allerdings die <xref:System.Windows.Forms.Label> Steuerelement wird für Abwärtskompatibilität und für zukünftige Verwendung beibehalten, falls gewünscht.  
+>  Die <xref:System.Windows.Forms.ToolStripLabel> -Steuerelement ersetzt und funktionell erweitert die <xref:System.Windows.Forms.Label> Steuerelement. Sie können die <xref:System.Windows.Forms.ToolStripLabel> mit anderen neuen Steuerelementen wie z. B. die <xref:System.Windows.Forms.ToolStripDropDown>. Allerdings die <xref:System.Windows.Forms.Label> Steuerelement wird für die Abwärtskompatibilität und zur zukünftigen Verwendung, beibehalten, falls gewünscht.  
   
- Windows Forms <xref:System.Windows.Forms.Label> Steuerelemente dienen zum Anzeigen von Text oder Bilder, die vom Benutzer bearbeitet werden können. Sie werden verwendet, um Objekte in einem Formular zu identifizieren, ergeben eine Beschreibung, welche eines bestimmten Steuerelements wird Wenn geklickt haben, z. B., oder Informationen als Antwort auf ein Laufzeitereignis oder ein Prozess in der Anwendung anzeigen. Da die <xref:System.Windows.Forms.Label> Steuerelement den Fokus erhalten kann, kann auch zum Erstellen von Zugriffstasten für andere Steuerelemente verwendet werden.  
+ Windows Forms <xref:System.Windows.Forms.Label> Steuerelemente werden verwendet, um Text oder Bilder, die vom Benutzer nicht bearbeitet werden können. Sie werden verwendet, um Objekte in einem Formular zu identifizieren, geben eine Beschreibung, welche eines bestimmten Steuerelements erfolgt Wenn geklickt haben, z. B. oder zum Anzeigen von Informationen als Antwort auf ein Laufzeitereignis oder Prozesse in Ihrer Anwendung. Da die <xref:System.Windows.Forms.Label> Steuerelement den Fokus nicht erhalten, sondern kann auch zum Erstellen von Zugriffstasten für andere Steuerelemente verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über das Label-Steuerelement](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
+ [Übersicht über das Label-Steuerelement](label-control-overview-windows-forms.md)  
  Hier werden das Steuerelement und seine wichtigsten Funktionen und Eigenschaften erläutert.  
   
- [Gewusst wie: Erstellen von Zugriffstasten mit Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)  
- Beschreibt, wie eine Bezeichnung verwenden, um eine Zugriffstaste für ein anderes Steuerelement zu definieren.  
+ [Vorgehensweise: Erstellen von Zugriffstasten mit Windows Forms-Steuerelementen](how-to-create-access-keys-with-windows-forms-label-controls.md)  
+ Beschreibt, wie eine Bezeichnung zu verwenden, um eine Zugriffstaste für ein anderes Steuerelement zu definieren.  
   
- [Gewusst wie: Anpassen der Größe des Label-Steuerelements in Windows Forms an seinen Inhalt](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
- Erläutert das Anpassen der Größe des Label-Steuerelement für die Beschriftung.  
+ [Vorgehensweise: Größe der Größe des Label-Steuerelements in Windows Forms an seinen Inhalt](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
+ Erläutert die Anpassung der Größe eines Label-Steuerelements für die Beschriftung.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.Label>  
- Beschreibt diese Klasse und enthält Links zu allen zugehörigen Membern.  
+ Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)  
  Enthält eine vollständige Liste der Windows Forms-Steuerelemente mit Links zu Informationen zur jeweiligen Verwendung.

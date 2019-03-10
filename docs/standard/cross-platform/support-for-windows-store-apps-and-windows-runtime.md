@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2870e79d82d92bd0c853e6e042add3b4243f888
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 750bddce508a72c6aaac659feac90b7c17e53137
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835485"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708404"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>.NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime
 
@@ -41,7 +41,7 @@ ms.locfileid: "56835485"
 
     -   Funktionen, die lediglich die Betriebssystem-API umschließen, wurden ebenfalls entfernt, da [!INCLUDE[wrt](../../../includes/wrt-md.md)] auf einfache Weise von verwaltetem Code aus aufgerufen werden kann.
 
-     Weitere Informationen zu den [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], finden Sie unter den [.NET für Windows Store-apps – Übersicht](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Weitere Informationen zum API-Auswahlverfahren finden Sie unter den [.NET für Windows Store-apps](https://blogs.msdn.microsoft.com/dotnet/2012/04/17/net-for-metro-style-apps/) Eintrag im .NET-Blog.
+     Weitere Informationen zu den [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], finden Sie unter den [.NET für Windows Store-apps – Übersicht](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Weitere Informationen zum API-Auswahlverfahren finden Sie unter den [.NET für Windows Store-apps](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) Eintrag im .NET-Blog.
 
 -   Die [Windows-Runtime](/uwp/api/) stellt die Benutzeroberflächenelemente für das Erstellen von [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -apps und bietet Zugriff auf Betriebssystemfunktionen. Wie .NET Framework verfügt [!INCLUDE[wrt](../../../includes/wrt-md.md)] über Metadaten, die es dem C#- und dem Visual Basic-Compiler ermöglichen, [!INCLUDE[wrt](../../../includes/wrt-md.md)] so zu verwenden, wie sie die .NET Framework-Klassenbibliotheken verwenden. .NET Framework vereinfacht die Verwendung von [!INCLUDE[wrt](../../../includes/wrt-md.md)] durch das Ausblenden einiger Unterschiede:
 

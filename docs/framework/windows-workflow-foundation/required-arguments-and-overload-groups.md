@@ -2,12 +2,12 @@
 title: Erforderliche Argumente und Überladungsgruppen
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: d7cfe00d93f1eede77bcda5881c63843722c9a17
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: b5006a201ce5db68e925bd5764fadde308bbccb4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452900"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707871"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Erforderliche Argumente und Überladungsgruppen
 Aktivitäten können so konfiguriert werden, dass bestimmte Argumente gebunden werden müssen, wenn die Ausführung der Aktivität gültig sein soll. Das `RequiredArgument`-Attribut wird verwendet, um anzugeben, dass bestimmte Argumente für eine Aktivität erforderlich sind. Mit dem `OverloadGroup`-Attribut werden die Kategorien erforderlicher Argumente zusammen anzuordnen. Mit diesen Attributen können Aktivitätsautoren einfache oder komplexe Konfigurationen für die Aktivitätsvalidierung bereitstellen.  
@@ -63,7 +63,7 @@ public sealed class Add : CodeActivity<int>
   
  **Wert für das erforderliche aktivitätsargument 'Operand1' wurde nicht angegeben.**  
 > [!NOTE]
-> Weitere Informationen zu überprüfen und Behandeln von Validierungsfehlern und-Warnungen finden Sie unter [Aufrufen der Aktivitätsvalidierung](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).  
+> Weitere Informationen zu überprüfen und Behandeln von Validierungsfehlern und-Warnungen finden Sie unter [Aufrufen der Aktivitätsvalidierung](invoking-activity-validation.md).  
   
 ## <a name="using-overload-groups"></a>Verwenden von Überladungsgruppen
 
@@ -106,7 +106,7 @@ class CreateLocation: Activity
   
  Ziel dieser Aktivität ist es, einen Standort in den USA anzugeben. Hierzu kann der Benutzer der Aktivität den Standort mithilfe von drei Argumentgruppen angeben. Zum Angeben gültiger Argumentkombinationen wurden drei Überladungsgruppen definiert. `G1` enthält das `Latitude`-Argument und das `Longitude`-Argument. `G2` enthält `Street`, `City` und `State`. `G3` enthält `Street` und `Zip`. `Name` ist ebenfalls ein erforderliches Argument, jedoch nicht Teil einer Überladungsgruppe. Damit diese Aktivität gültig ist, müsste `Name` zusammen mit allen Argumenten aus einer (und nur einer) der Überladungsgruppen gebunden werden.  
   
- Im folgenden Beispiel stammt aus dem [Datenbankzugriffsaktivitäten](../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md) Beispiel, es gibt zwei überladungsgruppen: `ConnectionString` und `ConfigFileSectionName`. Damit diese Aktivität gültig ist, müssen das `ProviderName`-Argument und das `ConnectionString`-Argument gebunden werden oder das `ConfigName`-Argument, jedoch nicht beides.  
+ Im folgenden Beispiel stammt aus dem [Datenbankzugriffsaktivitäten](./samples/database-access-activities.md) Beispiel, es gibt zwei überladungsgruppen: `ConnectionString` und `ConfigFileSectionName`. Damit diese Aktivität gültig ist, müssen das `ProviderName`-Argument und das `ConnectionString`-Argument gebunden werden oder das `ConfigName`-Argument, jedoch nicht beides.  
   
 ```  
 Public class DbUpdate: AsyncCodeActivity  

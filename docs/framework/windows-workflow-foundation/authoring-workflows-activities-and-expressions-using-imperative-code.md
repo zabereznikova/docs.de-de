@@ -2,43 +2,43 @@
 title: Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Code
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
-ms.openlocfilehash: a0566e01d5786c955562ef97d6d083d886278293
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.openlocfilehash: 1a11da9ce3dd73f0bc2851b68e7c354e55c9d2d3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46519525"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708365"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Code
-Eine Workflowdefinition ist eine Struktur konfigurierter Aktivitätsobjekte. Diese Struktur mit Aktivitäten kann auf viele verschiedene Arten definiert werden, z. B. durch manuelle Bearbeitung des XAML-Codes oder mit dem Workflow-Designer, um XAML-Daten zu erzeugen. Die Verwendung von XAML ist jedoch keine Voraussetzung. Sie können Workflowdefinitionen auch programmgesteuert erstellen. Dieses Thema bietet eine Übersicht über das Erstellen von Workflowdefinitionen, Aktivitäten und Ausdrücken mithilfe von Code. Beispiele zum Arbeiten mit XAML-Workflows mithilfe von Code, finden Sie unter [Serialisieren von Workflows und Aktivitäten in und aus XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
+Eine Workflowdefinition ist eine Struktur konfigurierter Aktivitätsobjekte. Diese Struktur mit Aktivitäten kann auf viele verschiedene Arten definiert werden, z. B. durch manuelle Bearbeitung des XAML-Codes oder mit dem Workflow-Designer, um XAML-Daten zu erzeugen. Die Verwendung von XAML ist jedoch keine Voraussetzung. Sie können Workflowdefinitionen auch programmgesteuert erstellen. Dieses Thema bietet eine Übersicht über das Erstellen von Workflowdefinitionen, Aktivitäten und Ausdrücken mithilfe von Code. Beispiele zum Arbeiten mit XAML-Workflows mithilfe von Code, finden Sie unter [Serialisieren von Workflows und Aktivitäten in und aus XAML](serializing-workflows-and-activities-to-and-from-xaml.md).  
   
 ## <a name="creating-workflow-definitions"></a>Erstellen von Workflowdefinitionen  
  Sie können eine Workflowdefinition erstellen, indem Sie eine Instanz eines Aktivitätstyps instanziieren und die Eigenschaften des Aktivitätsobjekts konfigurieren. Für Aktivitäten, die keine untergeordneten Aktivitäten enthalten, erreichen Sie dies mit einigen Codezeilen.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#47](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#47)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#47](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#47)]  
   
 > [!NOTE]
->  In den Beispielen dieses Themas wird <xref:System.Activities.WorkflowInvoker> zum Ausführen der Beispielworkflows verwendet. Weitere Informationen zum Aufrufen von Workflows, übergeben von Argumenten und der verschiedenen Hostingoptionen, die verfügbar sind, finden Sie unter [Verwenden von WorkflowInvoker und WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md).  
+>  In den Beispielen dieses Themas wird <xref:System.Activities.WorkflowInvoker> zum Ausführen der Beispielworkflows verwendet. Weitere Informationen zum Aufrufen von Workflows, übergeben von Argumenten und der verschiedenen Hostingoptionen, die verfügbar sind, finden Sie unter [Verwenden von WorkflowInvoker und WorkflowApplication](using-workflowinvoker-and-workflowapplication.md).  
   
  In diesem Beispiel wird ein Workflow erstellt, der aus einer einzelnen <xref:System.Activities.Statements.WriteLine>-Aktivität besteht. Das <xref:System.Activities.Statements.WriteLine>-Argument der <xref:System.Activities.Statements.WriteLine.Text%2A>-Aktivität wird festgelegt, und der Workflow wird aufgerufen. Wenn eine Aktivität untergeordnete Aktivitäten enthält, ist die Konstruktionsmethode ähnlich. Im folgenden Beispiel wird eine <xref:System.Activities.Statements.Sequence>-Aktivität verwendet, die zwei <xref:System.Activities.Statements.WriteLine>-Aktivitäten enthält.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#48](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#48)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#48](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#48)]  
   
 ### <a name="using-object-initializers"></a>Verwenden von Objektinitialisierern  
  In den Beispielen in diesem Thema wird die Syntax zur Objektinitialisierung verwendet. Die Objektinitialisierungssyntax kann eine nützliche Möglichkeit zum Erstellen von Workflowdefinitionen per Code darstellen, da diese eine hierarchische Ansicht der Aktivitäten im Workflow bietet und die Beziehung zwischen den Aktivitäten anzeigt. Die Verwendung der Objektinitialisierungssyntax ist keine Anforderung der programmgesteuerten Erstellung von Workflows. Das folgende Beispiel entspricht von der Funktion her dem vorherigen Beispiel.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#49](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#49)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#49](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#49)]  
   
- Weitere Informationen über Objektinitialisierer finden Sie unter [wie: Initialisieren von Objekten ohne Aufruf eines Konstruktors (C#-Programmierhandbuch)](https://go.microsoft.com/fwlink/?LinkId=161015) und [wie: Deklarieren eines Objekts mithilfe eines Objektinitialisierers](https://go.microsoft.com/fwlink/?LinkId=161016).  
+ Weitere Informationen über Objektinitialisierer finden Sie unter [Vorgehensweise: Initialisieren von Objekten ohne Aufruf eines Konstruktors (C# -Programmierhandbuch)](https://go.microsoft.com/fwlink/?LinkId=161015) und [Vorgehensweise: Deklarieren eines Objekts mithilfe eines Objektinitialisierers](https://go.microsoft.com/fwlink/?LinkId=161016).  
   
 ### <a name="working-with-variables-literal-values-and-expressions"></a>Verwenden von Variablen, literalen Werten und Ausdrücken  
  Achten Sie beim Erstellen einer Workflowdefinition per Code darauf, welcher Code als Teil der Erstellung einer Workflowdefinition ausgeführt wird und welcher Code als Teil der Ausführung einer Instanz dieses Workflows ausgeführt wird. Der folgende Workflow soll z. B. eine zufällige Zahl generieren und auf die Konsole schreiben.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#50](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#50)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#50](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#50)]  
   
  Wenn dieser Workflowdefinitionscode ausgeführt wird, erfolgt der Aufruf von `Random.Next`, und das Ergebnis wird in der Workflowdefinition als literaler Wert gespeichert. Es können viele Instanzen dieses Workflows aufgerufen werden, und für alle wird jeweils die gleiche Zahl angezeigt. Um die Zufallszahlengenerierung während der Workflowausführung durchführen zu lassen, müssen Sie einen Ausdruck verwenden, der bei jeder Ausführung des Workflows ausgewertet wird. Im folgenden Beispiel wird ein Visual Basic-Ausdruck mit <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> verwendet.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#51](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#51)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#51](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#51)]  
   
  Der Ausdruck im vorherigen Beispiel könnte auch mithilfe von <xref:Microsoft.CSharp.Activities.CSharpValue%601> und einem C#-Ausdruck implementiert werden.  
   
@@ -50,28 +50,29 @@ new Assign<int>
 }  
 ```  
   
- C#-Ausdrücke müssen kompiliert werden, bevor der Workflow, in dem sie enthalten sind, aufgerufen wird. Wenn die C#-Ausdrücke nicht kompiliert werden, eine <xref:System.NotSupportedException> wird ausgelöst, wenn der Workflow mit einer Meldung ähnlich der folgenden aufgerufen wird: `Expression Activity type 'CSharpValue`1" ist eine Kompilierung um auszuführen.  Stellen Sie sicher, dass der Workflow kompiliert wurde. "In den meisten Szenarien, in Visual Studio c# erstellte Workflows werden Ausdrücke automatisch kompiliert, aber in einigen Szenarien wie Codeworkflows, c#-Ausdrücke müssen manuell kompiliert werden. Ein Beispiel dafür, wie c#-Ausdrücke kompiliert, finden Sie die [mithilfe von C#-Ausdrücken in Codeworkflows](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CodeWorkflows) Teil der [c#-Ausdrücke](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md) Thema.  
+ C#-Ausdrücke müssen kompiliert werden, bevor der Workflow, in dem sie enthalten sind, aufgerufen wird. Wenn die C# Ausdrücke werden nicht kompiliert werden, eine <xref:System.NotSupportedException> wird ausgelöst, wenn der Workflow mit einer Meldung ähnlich der folgenden aufgerufen wird: `Expression Activity type 'CSharpValue`1" erforderlich, dass der Kompilierung ausgeführt.  Stellen Sie sicher, dass der Workflow kompiliert wurde. "In den meisten Szenarien, in Visual Studio c# erstellte Workflows werden Ausdrücke automatisch kompiliert, aber in einigen Szenarien wie Codeworkflows, c#-Ausdrücke müssen manuell kompiliert werden. Ein Beispiel dafür, wie c#-Ausdrücke kompiliert, finden Sie die [mithilfe von C#-Ausdrücken in Codeworkflows](csharp-expressions.md#CodeWorkflows) Teil der [c#-Ausdrücke](csharp-expressions.md) Thema.  
   
- <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> stellt einen Ausdruck in Visual Basic-Syntax dar, der als R-Wert in einem Ausdruck verwendet werden kann, und <xref:Microsoft.CSharp.Activities.CSharpValue%601> stellt einen Ausdruck in C#-Syntax dar, der als R-Wert in einem Ausdruck verwendet werden kann. Diese Ausdrücke werden jedes Mal ausgewertet, wenn die enthaltende Aktivität ausgeführt wird. Das Ergebnis des Ausdrucks wird der Workflowvariablen `n` zugewiesen, und diese Ergebnisse werden von der nächsten Aktivität im Workflow verwendet. Um zur Laufzeit auf den Wert der Workflowvariablen `n` zuzugreifen, ist der <xref:System.Activities.ActivityContext> erforderlich. Darauf kann mit dem folgenden Lambdaausdruck zugegriffen werden.  
+ 
+  <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> stellt einen Ausdruck in Visual Basic-Syntax dar, der als R-Wert in einem Ausdruck verwendet werden kann, und <xref:Microsoft.CSharp.Activities.CSharpValue%601> stellt einen Ausdruck in C#-Syntax dar, der als R-Wert in einem Ausdruck verwendet werden kann. Diese Ausdrücke werden jedes Mal ausgewertet, wenn die enthaltende Aktivität ausgeführt wird. Das Ergebnis des Ausdrucks wird der Workflowvariablen `n` zugewiesen, und diese Ergebnisse werden von der nächsten Aktivität im Workflow verwendet. Um zur Laufzeit auf den Wert der Workflowvariablen `n` zuzugreifen, ist der <xref:System.Activities.ActivityContext> erforderlich. Darauf kann mit dem folgenden Lambdaausdruck zugegriffen werden.  
   
 > [!NOTE]
 >  Beachten Sie, dass beide Codebeispiele C# als Programmiersprache verwenden. In einem Fall wird jedoch <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> und im anderen <xref:Microsoft.CSharp.Activities.CSharpValue%601> verwendet. <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> und <xref:Microsoft.CSharp.Activities.CSharpValue%601> können sowohl in Visual Basic- als auch in C#-Projekten verwendet werden. Standardmäßig entsprechen die im Workflow-Designer erstellten Ausdrücke der Programmiersprache des Hostingprojekts. Wenn Workflows im Code erstellt werden, wählt der Workflowautor die verwendete Sprache nach eigenem Ermessen aus.  
   
  In diesen Beispielen wird das Ergebnis des Ausdrucks der Workflowvariablen `n` zugewiesen, und diese Ergebnisse werden von der nächsten Aktivität im Workflow verwendet. Um zur Laufzeit auf den Wert der Workflowvariablen `n` zuzugreifen, ist der <xref:System.Activities.ActivityContext> erforderlich. Darauf kann mit dem folgenden Lambdaausdruck zugegriffen werden.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#52](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#52)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#52](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#52)]  
   
  Weitere Informationen zu Lambdaausdrücken finden Sie unter [Lambda-Ausdrücke (C#-Programmierhandbuch)](https://go.microsoft.com/fwlink/?LinkID=152436) oder [Lambda-Ausdrücke (Visual Basic)](https://go.microsoft.com/fwlink/?LinkID=152437).  
   
- Lambdaausdrücke können nicht in das XAML-Format serialisiert werden. Wenn versucht wird, einen Workflow mit Lambda-Ausdrücken zu serialisieren, wird <xref:System.Activities.Expressions.LambdaSerializationException> mit der folgenden Meldung ausgelöst: "Dieser Workflow enthält im Code spezifizierte Lambda-Ausdrücke. Diese Ausdrücke sind nicht XAML-serialisierbar. Um den Workflow XAML-serialisierbar zu machen, verwenden Sie entweder VisualBasicValue/VisualBasicReference oder ExpressionServices.Convert(lambda). Dadurch werden die Lambda-Ausdrücke in Ausdrucksaktivitäten konvertiert." Um diesen Ausdruck mit XAML kompatibel zu machen, verwenden Sie <xref:System.Activities.Expressions.ExpressionServices> und <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>. Dies wird im folgenden Beispiel veranschaulicht.  
+ Lambda-Ausdrücke können nicht in das XAML-Format serialisiert werden. Wenn einen Workflow mit Lambdaausdrücken zu serialisieren versucht wird, eine <xref:System.Activities.Expressions.LambdaSerializationException> wird mit der folgenden Meldung ausgelöst: "Dieser Workflow enthält im Code spezifizierte Lambdaausdrücke. Diese Ausdrücke sind nicht XAML-serialisierbar. Um den Workflow XAML-serialisierbar zu machen, verwenden Sie entweder VisualBasicValue/VisualBasicReference oder ExpressionServices.Convert(lambda). Dadurch werden die Lambda-Ausdrücke in Ausdrucksaktivitäten konvertiert." Um diesen Ausdruck mit XAML kompatibel zu machen, verwenden Sie <xref:System.Activities.Expressions.ExpressionServices> und <xref:System.Activities.Expressions.ExpressionServices.Convert%2A>. Dies wird im folgenden Beispiel veranschaulicht.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#53](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#53)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#53](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#53)]  
   
  Es kann auch ein <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> verwendet werden. Beachten Sie, dass kein Lambda-Ausdruck erforderlich ist, wenn Sie einen Visual Basic-Ausdruck verwenden.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#54](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#54)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#54](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#54)]  
   
- Zur Laufzeit werden die Visual Basic-Ausdrücke in LINQ-Ausdrücke kompiliert. Beide vorherigen Beispiele sind in XAML serialisierbar, aber wenn die serialisierte XAML im Workflow-Designer angezeigt und bearbeitet werden soll, verwenden Sie <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> für die Ausdrücke. Serialisierte Workflows, die `ExpressionServices.Convert` verwenden, können zwar im Designer geöffnet werden, der Wert des Ausdrucks ist jedoch leer. Weitere Informationen zum Serialisieren von Workflows in XAML finden Sie unter [Serialisieren von Workflows und Aktivitäten in und aus XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
+ Zur Laufzeit werden die Visual Basic-Ausdrücke in LINQ-Ausdrücke kompiliert. Beide vorherigen Beispiele sind in XAML serialisierbar, aber wenn die serialisierte XAML im Workflow-Designer angezeigt und bearbeitet werden soll, verwenden Sie <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> für die Ausdrücke. Serialisierte Workflows, die `ExpressionServices.Convert` verwenden, können zwar im Designer geöffnet werden, der Wert des Ausdrucks ist jedoch leer. Weitere Informationen zum Serialisieren von Workflows in XAML finden Sie unter [Serialisieren von Workflows und Aktivitäten in und aus XAML](serializing-workflows-and-activities-to-and-from-xaml.md).  
   
 #### <a name="literal-expressions-and-reference-types"></a>Literale Ausdrücke und Verweistypen  
  Literale Ausdrücke werden in Workflows durch die <xref:System.Activities.Expressions.Literal%601>-Aktivität dargestellt. Die folgenden <xref:System.Activities.Statements.WriteLine>-Aktivitäten sind funktional äquivalent.  
@@ -97,7 +98,7 @@ new Assign
 },  
 ```  
   
- Bei der Überprüfung des Workflows, der die Aktivität enthält, wird der folgende Validierungsfehler zurückgegeben: "Literal unterstützt nur Werttypen und den unveränderlichen Typ 'System.String'. Der System.Collections.Generic.List`1 [System.String]-Typ kann nicht als Literal verwendet werden." Beim Aufrufen des Workflows wird <xref:System.Activities.InvalidWorkflowException> ausgelöst, die den Text des Validierungsfehlers enthält. Dies ist ein Validierungsfehler, da durch das Erstellen eines literalen Ausdrucks mit einem Verweistyp keine neue Instanz des Verweistyps für die einzelnen Instanzen des Workflows erstellt wird. Um diesen Fehler zu beheben, ersetzen Sie den literalen Ausdruck durch einen Ausdruck, der eine neue Instanz des Verweistyps erstellt und zurückgibt.  
+ Wenn der Workflow, der mit dieser Aktivität überprüft wurde, wird der folgende Validierungsfehler zurückgegeben: "Literal unterstützt nur Werttypen und den unveränderlichen Typ System.String. Der System.Collections.Generic.List`1 [System.String]-Typ kann nicht als Literal verwendet werden." Beim Aufrufen des Workflows wird <xref:System.Activities.InvalidWorkflowException> ausgelöst, die den Text des Validierungsfehlers enthält. Dies ist ein Validierungsfehler, da durch das Erstellen eines literalen Ausdrucks mit einem Verweistyp keine neue Instanz des Verweistyps für die einzelnen Instanzen des Workflows erstellt wird. Um diesen Fehler zu beheben, ersetzen Sie den literalen Ausdruck durch einen Ausdruck, der eine neue Instanz des Verweistyps erstellt und zurückgibt.  
   
 ```csharp  
 new Assign  
@@ -107,12 +108,12 @@ new Assign
 },  
 ```  
   
- Weitere Informationen zu Ausdrücken finden Sie unter [Ausdrücke](../../../docs/framework/windows-workflow-foundation/expressions.md).  
+ Weitere Informationen zu Ausdrücken finden Sie unter [Ausdrücke](expressions.md).  
   
 #### <a name="invoking-methods-on-objects-using-expressions-and-the-invokemethod-activity"></a>Aufrufen von Methoden für Objekte mithilfe von Ausdrücken und der InvokeMethod-Aktivität  
  Die <xref:System.Activities.Expressions.InvokeMethod%601>-Aktivität kann verwendet werden, um statische und Instanzenmethoden von Klassen in .NET Framework aufzurufen. In einem vorherigen Beispiel dieses Themas wird eine Zufallszahl mithilfe der <xref:System.Random>-Klasse generiert.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#51](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#51)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#51](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#51)]  
   
  Die <xref:System.Activities.Expressions.InvokeMethod%601>-Aktivität kann auch verwendet werden, um die <xref:System.Random.Next%2A>-Methode der <xref:System.Random>-Klasse aufzurufen.  
   
@@ -135,14 +136,14 @@ new InvokeMethod<int>
 ## <a name="arguments-and-dynamic-activities"></a>Argumente und dynamische Aktivitäten  
  Eine Workflowdefinition wird im Code erstellt, indem Aktivitäten in einer Aktivitätsstruktur zusammengestellt und alle Eigenschaften und Argumente konfiguriert werden. Vorhandene Argumente können gebunden werden, aber Aktivitäten können keine neuen Argumente hinzugefügt werden. Dies gilt auch für Workflowargumente, die an die Stammaktivität übergeben werden. In imperativem Code werden Workflowargumente als Eigenschaften eines neuen CLR-Typs angegeben, und in XAML werden sie mithilfe von `x:Class` und `x:Member` deklariert. Da kein neuer CLR-Typ erstellt wird, wenn eine Workflowdefinition als Struktur von Objekten im Arbeitsspeicher erstellt wird, können Argumente nicht hinzugefügt werden. Argumente können jedoch einer <xref:System.Activities.DynamicActivity> hinzugefügt werden. In diesem Beispiel wird eine <xref:System.Activities.DynamicActivity%601> erstellt, die zwei ganzzahlige Argumente verwendet, diese zusammenfügt und das Ergebnis zurückgibt. Für jedes Argument wird ein <xref:System.Activities.DynamicActivityProperty>-Element erstellt, und das Ergebnis des Vorgangs wird dem <xref:System.Activities.Activity%601.Result%2A>-Argument von <xref:System.Activities.DynamicActivity%601> zugewiesen.  
   
- [!code-csharp[CFX_WorkflowApplicationExample#55](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#55)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#55](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#55)]  
   
- Weitere Informationen zu dynamischen Aktivitäten finden Sie unter [erstellen eine Aktivität zur Laufzeit](../../../docs/framework/windows-workflow-foundation/creating-an-activity-at-runtime-with-dynamicactivity.md).  
+ Weitere Informationen zu dynamischen Aktivitäten finden Sie unter [erstellen eine Aktivität zur Laufzeit](creating-an-activity-at-runtime-with-dynamicactivity.md).  
   
 ## <a name="compiled-activities"></a>Kompilierte Aktivitäten  
- Dynamische Aktivitäten bieten eine Möglichkeit, eine Aktivität mit Argumenten auf der Basis von Code zu definieren, Aktivitäten können jedoch auch im Code erstellt und in Typen kompiliert werden. Es können einfache Aktivitäten erstellt werden, die von <xref:System.Activities.CodeActivity> abgeleitet sind, und asynchrone Aktivitäten, die von <xref:System.Activities.AsyncCodeActivity> abgeleitet sind. Diese Aktivitäten können Argumente und Rückgabewerte aufweisen, und ihre Logik kann mithilfe von imperativem Code definiert werden. Beispiele zum Erstellen dieser Aktivitätstypen finden Sie in [CodeActivity-Basisklasse](../../../docs/framework/windows-workflow-foundation/workflow-activity-authoring-using-the-codeactivity-class.md) und [Erstellen von asynchronen Aktivitäten](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  
+ Dynamische Aktivitäten bieten eine Möglichkeit, eine Aktivität mit Argumenten auf der Basis von Code zu definieren, Aktivitäten können jedoch auch im Code erstellt und in Typen kompiliert werden. Es können einfache Aktivitäten erstellt werden, die von <xref:System.Activities.CodeActivity> abgeleitet sind, und asynchrone Aktivitäten, die von <xref:System.Activities.AsyncCodeActivity> abgeleitet sind. Diese Aktivitäten können Argumente und Rückgabewerte aufweisen, und ihre Logik kann mithilfe von imperativem Code definiert werden. Beispiele zum Erstellen dieser Aktivitätstypen finden Sie in [CodeActivity-Basisklasse](workflow-activity-authoring-using-the-codeactivity-class.md) und [Erstellen von asynchronen Aktivitäten](creating-asynchronous-activities-in-wf.md).  
   
- Aktivitäten, die von <xref:System.Activities.NativeActivity> abgeleitet werden, können ihre Logik mithilfe von imperativem Code definieren, und sie können auch untergeordnete Aktivitäten enthalten, die die Logik definieren. Sie haben außerdem Vollzugriff auf Funktionen der Laufzeit, z. B. das Erstellen von Lesezeichen. Beispiele zum Erstellen einer <xref:System.Activities.NativeActivity>--basierten Aktivität finden Sie unter [NativeActivity-Basisklasse](../../../docs/framework/windows-workflow-foundation/nativeactivity-base-class.md), [Vorgehensweise: Erstellen einer Aktivität](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md), und die [benutzerdefinierte zusammengesetzte mit systemeigener Aktivität](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-using-native-activity.md)Beispiel.  
+ Aktivitäten, die von <xref:System.Activities.NativeActivity> abgeleitet werden, können ihre Logik mithilfe von imperativem Code definieren, und sie können auch untergeordnete Aktivitäten enthalten, die die Logik definieren. Sie haben außerdem Vollzugriff auf Funktionen der Laufzeit, z. B. das Erstellen von Lesezeichen. Beispiele zum Erstellen einer <xref:System.Activities.NativeActivity>--basierten Aktivität finden Sie unter [NativeActivity-Basisklasse](nativeactivity-base-class.md), [Vorgehensweise: Erstellen einer Aktivität](how-to-create-an-activity.md), und die [benutzerdefinierte zusammengesetzte mit systemeigener Aktivität](./samples/custom-composite-using-native-activity.md) Beispiel.  
   
  Aktivitäten, die von <xref:System.Activities.Activity> abgeleitet sind, definieren ihre Logik nur durch die Verwendung untergeordneter Aktivitäten. Diese Aktivitäten werden in der Regel mit dem Workflow-Designer erstellt, können aber auch mithilfe von Code definiert werden. Im folgenden Beispiel wird eine `Square`-Aktivität definiert, die von `Activity<int>` abgeleitet wird. Die `Square`-Aktivität verfügt über ein einzelnes <xref:System.Activities.InArgument%601> namens `Value` und definiert ihre Logik, indem eine <xref:System.Activities.Statements.Sequence>-Aktivität unter Verwendung der <xref:System.Activities.Activity.Implementation%2A>-Eigenschaft angegeben wird. Die <xref:System.Activities.Statements.Sequence>-Aktivität enthält eine <xref:System.Activities.Statements.WriteLine>-Aktivität und eine <xref:System.Activities.Statements.Assign%601>-Aktivität. Zusammen implementieren diese drei Aktivitäten die Logik der `Square`-Aktivität.  
   

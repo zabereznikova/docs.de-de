@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-ms.openlocfilehash: c8290fe7722dba564bf5addab662a9f6b62d924f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44c985cef035e33e88ba246584efcb30fe0e9b97
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607880"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705557"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Implementieren des virtuellen Modus mit Just-In-Time-Laden von Daten in das DataGridView-Steuerelement in Windows Forms
 Ein Grund für das Implementieren des virtuellen Modus in den <xref:System.Windows.Forms.DataGridView> Steuerelement wird zum Abrufen von Daten nur bei Bedarf ist. Dies wird als bezeichnet *just-in-Time-Datenladevorgang*.  
@@ -26,7 +26,7 @@ Ein Grund für das Implementieren des virtuellen Modus in den <xref:System.Windo
   
  In den folgenden Abschnitten wird beschrieben, wie eine <xref:System.Windows.Forms.DataGridView> Steuerelement mit einem just-in-Time-Cache.  
   
- Um den Code in diesem Thema als einzelne Auflistung kopieren möchten, finden Sie unter [Vorgehensweise: Implementieren des virtuellen Modus mit Just-in-Time-Daten laden in das Windows Forms-DataGridView-Steuerelement](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
+ Zum Kopieren des Codes in diesem Thema als einzelne Auflistung lesen Sie [Vorgehensweise: Implementieren des virtuellen Modus mit Just-in-Time-Daten laden in das Windows Forms-DataGridView-Steuerelement](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   
 ## <a name="the-form"></a>Das Formular  
  Das folgende Codebeispiel definiert ein Formular mit einem nur-Lese- <xref:System.Windows.Forms.DataGridView> -Steuerelement, das für die Interaktion mit einem `Cache` -Objekt über eine <xref:System.Windows.Forms.DataGridView.CellValueNeeded> -Ereignishandler. Die `Cache` -Objekt verwaltet die lokal gespeicherten Werte und verwendet eine `DataRetriever` Objekt Werte aus der Orders-Tabelle der Northwind-Beispieldatenbank abgerufen. Die `DataRetriever` Objekt, das implementiert die `IDataPageRetriever` durch erforderliche Schnittstelle die `Cache` Klasse, dient auch zum Initialisieren der <xref:System.Windows.Forms.DataGridView> Zeilen und Spalten zu steuern.  
@@ -34,24 +34,24 @@ Ein Grund für das Implementieren des virtuellen Modus in den <xref:System.Windo
  Die `IDataPageRetriever`, `DataRetriever`, und `Cache` werden weiter unten in diesem Thema beschrieben.  
   
 > [!NOTE]
->  Das Speichern vertraulicher Informationen (z. B. eines Kennworts) innerhalb der Verbindungszeichenfolge kann die Sicherheit einer Anwendung beeinträchtigen. Der Zugriff auf eine Datenbank lässt sich mithilfe der Windows-Authentifizierung (wird auch als integrierte Sicherheit bezeichnet) sicherer steuern. Weitere Informationen finden Sie unter [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+>  Das Speichern vertraulicher Informationen (z. B. eines Kennworts) innerhalb der Verbindungszeichenfolge kann die Sicherheit einer Anwendung beeinträchtigen. Der Zugriff auf eine Datenbank lässt sich mithilfe der Windows-Authentifizierung (wird auch als integrierte Sicherheit bezeichnet) sicherer steuern. Weitere Informationen finden Sie unter [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../data/adonet/protecting-connection-information.md).  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#100)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#100)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#100)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#100)]  
   
 ## <a name="the-idatapageretriever-interface"></a>Die IDataPageRetriever-Schnittstelle  
  Das folgende Codebeispiel definiert die `IDataPageRetriever` -Schnittstelle, die Implementierung wird durch die `DataRetriever` Klasse. Ist die einzige Methode, die in diese Schnittstelle deklariert die `SupplyPageOfData` -Methode, die einen anfänglichen Zeilenindex und die Anzahl von Zeilen in einer einzelnen Seite mit Daten erforderlich sind. Diese Werte werden durch die Implementierung verwendet, um eine Teilmenge der Daten aus einer Datenquelle abzurufen.  
   
  Ein `Cache` Objekt verwendet eine Implementierung dieser Schnittstelle während der Erstellung, um die beiden ersten Seiten mit Daten zu laden. Wenn ein nicht zwischengespeicherter Wert benötigt wird, wird der Cache verwirft eine dieser Seiten und fordert eine neue Seite mit dem Wert aus der `IDataPageRetriever`.  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#201)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#201)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#201)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#201](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#201)]  
   
 ## <a name="the-dataretriever-class"></a>Die DataRetriever-Klasse  
  Das folgende Codebeispiel definiert die `DataRetriever` Klasse implementiert die `IDataPageRetriever` Schnittstelle, um Seiten mit Daten von einem Server abzurufen. Die `DataRetriever` Klasse bietet auch `Columns` und `RowCount` Eigenschaften, die die <xref:System.Windows.Forms.DataGridView> -Steuerelement verwendet, um die erforderlichen Spalten zu erstellen und die entsprechende Anzahl von leeren Zeilen hinzufügen der <xref:System.Windows.Forms.DataGridView.Rows%2A> Auflistung. Hinzufügen von leeren Zeilen ist erforderlich, damit das Steuerelement verhält, als ob sie alle Daten in der Tabelle enthält. Dies bedeutet, dass das Bildlauffeld auf der Bildlaufleiste wird die richtige Größe haben, und des Benutzers auf eine beliebige Zeile in der Tabelle zugreifen. Die Zeilen aufgefüllt werden, indem die <xref:System.Windows.Forms.DataGridView.CellValueNeeded> Ereignishandler nur dann, wenn sie in die Ansicht gescrollt werden.  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#200)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#200)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#200)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#200](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#200)]  
   
 ## <a name="the-cache-class"></a>Die Cacheklasse  
  Das folgende Codebeispiel definiert die `Cache` Klasse, die zwei Seiten mit Daten, die durch aufgefüllt verwaltet eine `IDataPageRetriever` Implementierung. Die `Cache` -Klasse definiert eine innere `DataPage` Struktur, die enthält eine <xref:System.Data.DataTable> um die Werte in einem einzigen Cache speichern-Seite und berechnet die Zeile indiziert, für die die oberen und unteren Grenzen der Seite darstellen.  
@@ -60,8 +60,8 @@ Ein Grund für das Implementieren des virtuellen Modus in den <xref:System.Windo
   
  Vorausgesetzt, dass die Anzahl der Zeilen, Seiten mit dem die Anzahl der Zeilen, die gleichzeitig auf dem Bildschirm angezeigt werden können entspricht, ermöglicht dieses Modell paging für die Tabelle effizient an die zuletzt angezeigte Seite zurückzugeben.  
   
- [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
- [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
+ [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
+ [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
   
 ## <a name="additional-considerations"></a>Weitere Überlegungen  
  Die vorherigen Codebeispielen dienen zur Veranschaulichung der just-in-Time-Daten werden geladen. Sie müssen zum Ändern des Codes für Ihre eigenen Anforderungen zum Erzielen einer maximalen Effizienz zu erzielen. Zumindest müssen Sie einen entsprechenden Wert für die Anzahl der Zeilen pro Seite mit Daten im Cache auswählen. Dieser Wert wird übergeben, in der `Cache` Konstruktor. Die Anzahl der Zeilen pro Seite sollte nicht kleiner als die Anzahl der Zeilen, die gleichzeitig in angezeigt werden, können Ihre <xref:System.Windows.Forms.DataGridView> Steuerelement.  
@@ -73,8 +73,8 @@ Ein Grund für das Implementieren des virtuellen Modus in den <xref:System.Windo
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Leistungsoptimierung im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Virtueller Modus im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)
-- [Vorgehensweise: Implementieren des virtuellen Modus mit Just-in-Time-Daten laden in das DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+- [Leistungsoptimierung im DataGridView-Steuerelement in Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Virtueller Modus im DataGridView-Steuerelement in Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
+- [Vorgehensweise: Implementieren des virtuellen Modus mit Just-in-Time-Daten laden in das DataGridView-Steuerelement in Windows Forms](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

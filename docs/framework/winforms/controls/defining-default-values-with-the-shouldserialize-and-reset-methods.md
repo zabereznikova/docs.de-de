@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 23b4ddb3399c12f5bf3c387991676e7ea93b8a29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cb23220be2b4a3564c4869016c05065afe7c27c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497432"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704450"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>Definieren von Standardwerten mit der ShouldSerialize-Methode und der Reset-Methode
 `ShouldSerialize` und `Reset` sind optionale Methoden, die Sie für eine Eigenschaft angeben können, wenn die Eigenschaft nicht der Fall ist eine einfache Standardwert aufweisen. Wenn die Eigenschaft einen einfachen Standardwert verfügt, sollten Sie anwenden der <xref:System.ComponentModel.DefaultValueAttribute> , und geben Sie stattdessen den Standardwert an den Attributkonstruktor-Klasse. Einen dieser Mechanismen können im Designer die folgenden Funktionen:  
@@ -144,6 +144,6 @@ public class MyControl : Control {
  In diesem Fall, auch wenn der Wert der privaten Variablen zugreifen der `MyFont` -Eigenschaft ist `null`, der Eigenschaftenbrowser zeigt keine `null`; stattdessen wird die <xref:System.Windows.Forms.Control.Font%2A> Eigenschaft des übergeordneten Elements, wenn er nicht ist `null`, Der Standardwert <xref:System.Windows.Forms.Control.Font%2A> in definierten <xref:System.Windows.Forms.Control>. Daher ist der Standardwert für `MyFont` kann nicht einfach festgelegt werden, und ein <xref:System.ComponentModel.DefaultValueAttribute> nicht auf diese Eigenschaft angewendet werden. Stattdessen die `ShouldSerialize` und `Reset` -Methode müssen implementiert werden, für die `MyFont` Eigenschaft.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Eigenschaften in Windows Forms-Steuerelementen](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
-- [Definieren einer Eigenschaft](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)
-- [Durch geänderte Eigenschaften ausgelöste Ereignisse](../../../../docs/framework/winforms/controls/property-changed-events.md)
+- [Eigenschaften in Windows Forms-Steuerelementen](properties-in-windows-forms-controls.md)
+- [Definieren einer Eigenschaft](defining-a-property-in-windows-forms-controls.md)
+- [Durch geänderte Eigenschaften ausgelöste Ereignisse](property-changed-events.md)

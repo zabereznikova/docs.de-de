@@ -9,37 +9,37 @@ helpviewer_keywords:
 - forms. Help (using designer)
 - Windows applications [Windows Forms], Help (using designer)
 ms.assetid: a8563d25-8a75-4bc7-a024-f1870591b50f
-ms.openlocfilehash: b16ba14eea68083cd7bdfc91c88375406137f450
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 207ceeafa2ea06340310577c636deb5ea1977aae
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527222"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715307"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Integrieren von Benutzerhilfe in Windows Forms
-Ein Aspekt unerlässlich, aber häufig übersehene Erstellen von Windows-basierten Anwendungen ist das Hilfesystem auf, weil es sich handelt, in dem Benutzer um Unterstützung zu erhalten, in Zeiten Verwirrung aktivieren. Windows Forms unterstützen zwei verschiedene Arten von Hilfe, die [HelpProvider-Komponente](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md). Die erste Möglichkeit besteht, zeigen den Benutzer zu einer Hilfedatei HTML-oder HTML-Hilfe-1. *x* oder höher vorliegen. Die zweite kann anzeigen, kurze "Was This is"-Geben Sie die Hilfe auf einzelne Steuerelemente Dies ist besonders für Dialogfelder. Beide Arten von Hilfe können im selben Formular verwendet werden.  
+Ein grundlegender, aber häufig übersehene Aspekt erstellen Windows-basierter Anwendungen ist das Hilfesystem, da es sich handelt, in dem Benutzer um Unterstützung zu erhalten, in Zeiten Verwirrung zu aktivieren. Windows Forms unterstützen zwei verschiedene Arten von Hilfe, die [HelpProvider-Komponente](../controls/helpprovider-component-windows-forms.md). Die erste Möglichkeit besteht, zeigen den Benutzer zu einer Hilfedatei HTML oder HTML-Hilfe-1. *x* oder höher vorliegen. Die zweite kann anzeigen, kurze "Was ist"-Geben Sie die Hilfe auf einzelne Steuerelemente Dies ist besonders nützlich in Dialogfeldern. Beide Arten von Hilfe können im selben Formular verwendet werden.  
   
- Darüber hinaus die [ToolTip-Komponente](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md) kann verwendet werden, um individuelle Hilfe für Steuerelemente in Windows Forms bereitzustellen.  
+ Darüber hinaus die [ToolTip-Komponente](../controls/tooltip-component-windows-forms.md) können verwendet werden, um individuelle Hilfe bieten für in Windows Forms-Steuerelemente bereitzustellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Bereitstellen von Hilfe in einer Windows-Anwendung](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md)  
- Erklärt, wie die `HelpProvider` Komponente Steuerelemente mit Dateien in einem Hilfesystem verknüpfen.  
+ [Vorgehensweise: Bereitstellen von Hilfe in einer Windows-Anwendung](how-to-provide-help-in-a-windows-application.md)  
+ Erläutert, wie die `HelpProvider` Komponente, um Steuerelemente auf Dateien in einem Hilfesystem verknüpfen.  
   
- [Gewusst wie: Anzeigen der kontextbezogenen Hilfe](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
- Erklärt, wie die `HelpProvider` Komponente zum Anzeigen der Hilfe für Windows Forms.  
+ [Vorgehensweise: Anzeigen der kontextbezogenen Hilfe](how-to-display-pop-up-help.md)  
+ Erläutert, wie die `HelpProvider` -Komponente zum Anzeigen der kontextbezogenen Hilfe in Windows Forms.  
   
- [Benutzerführung mithilfe von QuickInfos](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
- Beschreibt die Verwendung der `ToolTip` Komponente, für das Steuerelement spezifische Hilfe anzeigen.  
+ [Benutzerführung mithilfe von QuickInfos](control-help-using-tooltips.md)  
+ Beschreibt die Verwendung der `ToolTip` -Komponente zum Anzeigen der Hilfe zu bestimmten Steuerelementen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [HelpProvider-Komponente](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
+ [HelpProvider-Komponente](../controls/helpprovider-component-windows-forms.md)  
  Erläutert die Grundlagen von der `HelpProvider` Komponente.  
   
- [ToolTip-Komponente](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
+ [ToolTip-Komponente](../controls/tooltip-component-windows-forms.md)  
  Erläutert die Grundlagen von der `ToolTip` Komponente.  
   
- [Übersicht über Windows Forms](../../../../docs/framework/winforms/windows-forms-overview.md)  
+ [Übersicht über Windows Forms](../windows-forms-overview.md)  
  Erläutert die Grundlagen von Windows Forms.  
   
- [Windows Forms](../../../../docs/framework/winforms/index.md)  
+ [Windows Forms](../index.md)  
  Bietet eine Übersicht über Windows Forms.

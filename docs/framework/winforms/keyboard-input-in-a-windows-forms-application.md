@@ -6,28 +6,28 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 68f5bc70-14d5-45c9-b288-7d7b1493ee79
-ms.openlocfilehash: 90070ec6fb27e2f9892a3874cc326fe77af1a063
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eaeee45e2c7856012b4ff20eefea3fca53679467
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537072"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715827"
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Tastatureingaben in einer Windows Forms-Anwendung
-Windows Forms umfasst Standardtastatur-Ereignisse, die ermöglichen es Ihnen, die auf bestimmte Tastatureingaben zu reagieren, und bietet auch Methoden, mit denen Sie abfangen, zu ändern, und Nutzen von Tastatureingaben auf der Anwendungsebene wird die Form, und Ebene steuern.  
+Windows Forms umfasst die Standardtastatur-Ereignisse, die ermöglichen es Ihnen, die auf bestimmte Tastatureingaben zu reagieren, und bietet außerdem Möglichkeiten, abzufangen, zu ändern, und Nutzen von Tastatureingaben auf der Anwendungsebene wird die Form, und steuern.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Funktionsweise von Tastatureingaben](../../../docs/framework/winforms/how-keyboard-input-works.md)  
- Beschreibt, wie tastaturmeldungen verarbeitet und Tastaturereignisse umgewandelt werden.  
+ [Funktionsweise von Tastatureingaben](how-keyboard-input-works.md)  
+ Beschreibt, wie tastaturnachrichten verarbeitet und transformiert in der Tastaturereignisse.  
   
- [Verwenden von Tastaturereignissen](../../../docs/framework/winforms/using-keyboard-events.md)  
- Enthält Informationen zu den Typen von Tastaturereignissen und die Informationen, die durch die Tastatur-Ereignishandler empfangen wird.  
+ [Verwenden von Tastaturereignissen](using-keyboard-events.md)  
+ Enthält Informationen zu den Typen von Tastaturereignissen und die Informationen, die von der Tastatur-Ereignishandler empfangen wird.  
   
- [Gewusst wie: Ändern von Tastatureingaben in ein Standardsteuerelement](../../../docs/framework/winforms/how-to-modify-keyboard-input-to-a-standard-control.md)  
+ [Vorgehensweise: Ändern von Tastatureingaben in ein Standardsteuerelement](how-to-modify-keyboard-input-to-a-standard-control.md)  
  Stellt ein Codebeispiel, das zeigt, wie Werte zu ändern, bevor sie ein Steuerelement erreichen.  
   
- [Gewusst wie: Bestimmen, welche Zusatztaste gedrückt wurde](../../../docs/framework/winforms/how-to-determine-which-modifier-key-was-pressed.md)  
+ [Vorgehensweise: Bestimmen Sie, welche Zusatztaste gedrückt wurde](how-to-determine-which-modifier-key-was-pressed.md)  
  Veranschaulicht, wie Sie herausfinden, ob zusätzlich zu einer anderen Taste UMSCHALT, ALT oder STRG gedrückt wurde.  
   
- [Gewusst wie: Behandeln von Tastatureingaben auf Formularebene](../../../docs/framework/winforms/how-to-handle-keyboard-input-at-the-form-level.md)  
- Stellt ein Codebeispiel, das zeigt, wie Schlüssel abfangen, bevor sie ein Steuerelement erreichen.
+ [Vorgehensweise: Behandeln von Tastatureingaben auf Formularebene](how-to-handle-keyboard-input-at-the-form-level.md)  
+ Stellt ein Codebeispiel, das zeigt, wie Schlüssel abzufangen, bevor sie ein Steuerelement erreichen.

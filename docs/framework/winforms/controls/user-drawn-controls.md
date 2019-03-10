@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: e9eab78695db128c0538914c5364aaa54c135403
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509960"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709673"
 ---
 # <a name="user-drawn-controls"></a>Benutzerdefinierte Steuerelemente
 .NET Framework bietet die Möglichkeit, eigene Steuerelemente problemlos zu entwickeln. Können Sie ein Benutzersteuerelement, das einen Satz der Standardsteuerelemente, die zusammen mit Code gebunden ist, erstellen, oder Sie können Ihr eigenes Steuerelement von Grund auf neu entwerfen, einrichten. Sie können auch die Vererbung verwenden, erstellen ein Steuerelement, das von einem vorhandenen Steuerelement erbt und die gesamte Funktionalität hinzufügen. Für welchen Ansatz Sie verwenden, bietet .NET Framework-Funktionen um eine benutzerdefinierte grafische Benutzeroberfläche für jedes Steuerelement zu zeichnen, die Sie erstellen.  
@@ -25,7 +25,7 @@ ms.locfileid: "54509960"
   
 -   <xref:System.Drawing.Graphics> Objekt - kapselt mehrere Graphics-orientierten Objekten und Methoden, die zum Zeichnen des Steuerelements erforderliche Funktionen bereitstellen.  
   
- Weitere Informationen zu den <xref:System.Drawing.Graphics> -Objekt und verwendet werden, finden Sie unter [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md).  
+ Weitere Informationen zu den <xref:System.Drawing.Graphics> -Objekt und verwendet werden, finden Sie unter [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](../advanced/how-to-create-graphics-objects-for-drawing.md).  
   
  Die <xref:System.Windows.Forms.Control.OnPaint%2A> Ereignis wird ausgelöst, wenn das Steuerelement gezeichnet oder auf dem Bildschirm aktualisiert wird und die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Objekt darstellt, das Rechteck in der Darstellung wird durchgeführt. Wenn das gesamte Steuerelement aktualisiert werden, werden muss die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> die Größe des gesamten Steuerelements darstellt. Wenn nur ein Teil des Steuerelements muss aktualisiert werden jedoch die <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> Objekt wird nur in die Region, die zu zeichnenden darstellen. Ein Beispiel der Fall wäre, wenn ein Steuerelement durch ein anderes Steuerelement oder Formular in der Benutzeroberfläche teilweise verdeckt wurde.  
   
@@ -81,6 +81,6 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
-- [Konstituierende Steuerelemente](../../../../docs/framework/winforms/controls/constituent-controls.md)
-- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [Konstituierende Steuerelemente](constituent-controls.md)
+- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](varieties-of-custom-controls.md)

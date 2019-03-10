@@ -7,21 +7,21 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 4a4cd1e7582e6e7443ceb1f4188eb3359638d8df
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 44180c1d8e7f6fd29778ef6b9f5bd5e333c3ece2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332207"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702346"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Vorgehensweise: Festlegen von standardmäßigen Zellenstilen und Datenformaten für das DataGridView-Steuerelement in Windows Forms mithilfe des Designers
 Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Angeben von standardmäßigen Zellenstilen und Datenformaten für das gesamte Steuerelement, für bestimmte Spalten, für die Zeilen- und Spaltenüberschriften und für abwechselnde Zeilen, um einen Ledger-Effekt zu erstellen von Zellen. Die Standardstile für das gesamte Steuerelement festgelegt werden standardmäßig überschrieben, die Stile für abwechselnde Zeilen und Spalten festgelegt. Stile, die Sie im Code für die einzelnen Zeilen und Zellen festlegen wird darüber hinaus die Standardstile überschreiben.  
   
- Weitere Informationen zu Zellstile, finden Sie unter [Zellstile im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md). Festlegen von Stilen für abwechselnde Zeilen finden Sie unter [Vorgehensweise: Festlegen von abwechselnden Zeilenstilen für das Windows Forms-DataGridView-Steuerelement mithilfe des Designers](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md).  
+ Weitere Informationen zu Zellstile, finden Sie unter [Zellstile im DataGridView-Steuerelement in Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md). Festlegen von Stilen für abwechselnde Zeilen finden Sie unter [Vorgehensweise: Festlegen von abwechselnden Zeilenstilen für das Windows Forms-DataGridView-Steuerelement mithilfe des Designers](set-alternating-row-styles-for-the-datagrid-using-the-designer.md).  
   
- Sie können auch festlegen, Stile, die mit der <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> Eigenschaft, um alle Zeilen auswirken, die dem Steuerelement hinzugefügt werden. Weitere Informationen zu der Zeilenvorlage, finden Sie unter [Vorgehensweise: Verwenden der Zeilenvorlage zum Anpassen von Zeilen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/use-the-row-template-to-customize-rows-in-the-datagrid.md).  
+ Sie können auch festlegen, Stile, die mit der <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> Eigenschaft, um alle Zeilen auswirken, die dem Steuerelement hinzugefügt werden. Weitere Informationen zu der Zeilenvorlage, finden Sie unter [Vorgehensweise: Verwenden der Zeilenvorlage zum Anpassen von Zeilen im DataGridView-Steuerelement in Windows Forms](use-the-row-template-to-customize-rows-in-the-datagrid.md).  
   
- Benötigen Sie die folgenden Verfahren eine **Windows-Anwendung** Projekt ein Formular mit einer <xref:System.Windows.Forms.DataGridView> Steuerelement. Informationen zum Einrichten eines solchen Projekts finden Sie unter [Vorgehensweise: Erstellen eines Windows Forms-Anwendungsprojekts](/visualstudio/ide/step-1-create-a-windows-forms-application-project) und [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ Benötigen Sie die folgenden Verfahren eine **Windows-Anwendung** Projekt ein Formular mit einer <xref:System.Windows.Forms.DataGridView> Steuerelement. Informationen zum Einrichten eines solchen Projekts finden Sie unter [Vorgehensweise: Erstellen eines Windows Forms-Anwendungsprojekts](/visualstudio/ide/step-1-create-a-windows-forms-application-project) und [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
 >  Je nach den aktiven Einstellungen oder der Version unterscheiden sich die Dialogfelder und Menübefehle auf Ihrem Bildschirm möglicherweise von den in der Hilfe beschriebenen. Klicken Sie im Menü **Extras** auf **Einstellungen importieren und exportieren** , um die Einstellungen zu ändern. Weitere Informationen finden Sie unter [Personalisieren von Visual Studio-IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -30,7 +30,7 @@ Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Ange
   
 1.  Wählen Sie die <xref:System.Windows.Forms.DataGridView> Steuerelement im Designer.  
   
-2.  In der **Eigenschaften** Fenster, klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../../../../docs/framework/winforms/media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, oder <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> Eigenschaft. Die **CellStyle-Generator** Dialogfeld wird angezeigt.  
+2.  In der **Eigenschaften** Fenster, klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, oder <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> Eigenschaft. Die **CellStyle-Generator** Dialogfeld wird angezeigt.  
   
 3.  Definieren Sie durch Festlegen der Eigenschaften, die über den Stil der **Vorschau** Bereich, um Ihre Auswahl zu bestätigen.  
   
@@ -45,7 +45,7 @@ Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Ange
   
 2.  Wählen Sie eine Spalte aus der **Selected Columns** Liste.  
   
-3.  In der **Spalteneigenschaften** Raster klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../../../../docs/framework/winforms/media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> Eigenschaft. Die **CellStyle-Generator** Dialogfeld wird angezeigt.  
+3.  In der **Spalteneigenschaften** Raster klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> Eigenschaft. Die **CellStyle-Generator** Dialogfeld wird angezeigt.  
   
 4.  Definieren Sie durch Festlegen der Eigenschaften, die über den Stil der **Vorschau** Bereich, um Ihre Auswahl zu bestätigen.  
   
@@ -53,7 +53,7 @@ Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Ange
   
 1.  Verwenden Sie eine der vorangehenden Verfahren zum Anzeigen einer **CellStyle-Generator** Dialogfeld im Zusammenhang mit der eine standardmäßige Zelle Style-Eigenschaft.  
   
-2.  In der **CellStyle-Generator** Dialogfeld klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../../../../docs/framework/winforms/media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> Diese Eigenschaft. Die **Formatzeichenfolge** Dialogfeld wird angezeigt.  
+2.  In der **CellStyle-Generator** Dialogfeld klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> Diese Eigenschaft. Die **Formatzeichenfolge** Dialogfeld wird angezeigt.  
   
 3.  Wählen Sie einen Formattyp aus, und ändern Sie die Details des Typs (z. B. die Anzahl der anzuzeigenden Dezimalstellen), mit der **Beispiel** Feld, um Ihre Auswahl zu bestätigen.  
   
@@ -66,7 +66,7 @@ Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Ange
 - <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>
-- [Zellstile im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Festlegen von abwechselnden Zeilenstilen für das DataGridView-Steuerelement in Windows Forms mithilfe des Designers](../../../../docs/framework/winforms/controls/set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
+- [Zellstile im DataGridView-Steuerelement in Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Festlegen von abwechselnden Zeilenstilen für das DataGridView-Steuerelement in Windows Forms mithilfe des Designers](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
 - [Vorgehensweise: Erstellen eines Windows Forms-Anwendungsprojekts](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md)

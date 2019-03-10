@@ -9,12 +9,12 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: e1f8f7fa1f3f351314ac1d454d591f46654d8f81
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2936a64338f47107b11b5f6eb85c5e94707bf926
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643597"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707962"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>Vorgehensweise: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms
 Wenn Daten in einer Windows Forms dargestellt <xref:System.Windows.Forms.CheckedListBox> -Steuerelement, Sie können entweder Durchlaufen der Auflistung gespeichert werden, der <xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> -Eigenschaft, oder dem Durchlaufen der Liste mithilfe der <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Methode, um zu bestimmen, welche Elemente aktiviert sind. Die <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> Methode akzeptiert eine Indexnummer des Elements als Argument und gibt `true` oder `false`. Im Gegensatz zum Ergebnis, was zu erwarten die <xref:System.Windows.Forms.ListBox.SelectedItems%2A> und <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> Eigenschaften sind nicht bestimmen, welche Elemente aktiviert sind; sie bestimmen, welche Elemente hervorgehoben werden.  
@@ -112,4 +112,4 @@ Wenn Daten in einer Windows Forms dargestellt <xref:System.Windows.Forms.Checked
     ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Windows Forms-Steuerelemente zum Auflisten von Optionen](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [Windows Forms-Steuerelemente zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 06f2320648bd8fee3465ea1672be886293667879
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 0b87034487ef0f2cabed786354682f394500cafc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664418"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707884"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Vorgehensweise: Testen Sie das Laufzeitverhalten eines UserControl
 Bei der Entwicklung einer <xref:System.Windows.Forms.UserControl>, müssen Sie dessen Laufzeitverhalten zu testen. Können einen separaten Windows-basiertes Anwendungsprojekt zu erstellen und das Steuerelement auf einem Testformular, aber dieses Verfahren ist unpraktisch. Eine schnellere und einfachere Möglichkeit ist die Verwendung der **UserControl-Testcontainer** von Visual Studio bereitgestellt. Dieser Testcontainer, die direkt über das Windows-Steuerelementbibliothek-Projekt wird gestartet.  
@@ -68,7 +68,7 @@ Bei der Entwicklung einer <xref:System.Windows.Forms.UserControl>, müssen Sie d
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.UserControl>
-- [Vorgehensweise: Erstellen von zusammengesetzten Steuerelementen](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)
-- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit visuellen ElementC#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [Vorgehensweise: Erstellen von zusammengesetzten Steuerelementen](how-to-author-composite-controls.md)
+- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit visuellen ElementC#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [Benutzersteuerelement-Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

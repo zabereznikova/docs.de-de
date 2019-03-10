@@ -9,12 +9,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: a1dac7e44894d5c96adadd45671793b4cd1d1681
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a4731e081b31f74b4f17c2796b56cdf6b95e3e2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680260"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705726"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Vorgehensweise: Zugreifen auf Objekte in einer Windows Forms-DataGridViewComboBoxCell-Dropdownliste-Liste
 Wie die <xref:System.Windows.Forms.ComboBox> -Steuerelement, das <xref:System.Windows.Forms.DataGridViewComboBoxColumn> und <xref:System.Windows.Forms.DataGridViewComboBoxCell> Typen ermöglichen es Ihnen, beliebige Objekte in die Dropdown-Liste hinzufügen. Mit diesem Feature können Sie komplexer Zustände in einer Dropdown-Liste darstellen, ohne entsprechenden Objekte in einer separaten Sammlung speichern zu müssen.  
@@ -29,25 +29,25 @@ Wie die <xref:System.Windows.Forms.ComboBox> -Steuerelement, das <xref:System.Wi
   
 1.  Erstellen Sie ein neues <xref:System.Windows.Forms.DataGridViewComboBoxColumn> , und füllen Sie die <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A> Auflistung. Alternativ können Sie festlegen, die Spalte <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> Eigenschaft, um die Auflistung von Geschäftsobjekten. In diesem Fall können nicht, Sie jedoch hinzufügen "nicht zugeordnete" auf die Dropdown-Liste ohne eine entsprechende Geschäftsobjekt, das in Ihrer Sammlung erstellen.  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#110)]
-     [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#110)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#110)]
+     [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#110)]  
   
 2.  Legen Sie für die Eigenschaften <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> und <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> fest. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> Gibt die Eigenschaft an das Geschäftsobjekt, das in der Dropdown Liste angezeigt. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> Gibt die Eigenschaft, die einen Verweis auf das Geschäftsobjekt zurückgibt.  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#115)]
-     [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#115)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#115)]
+     [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#115)]  
   
 3.  Stellen Sie sicher, dass für der Geschäftstyp für das Objekt eine Eigenschaft enthält, die einen Verweis auf die aktuelle Instanz zurückgibt. Diese Eigenschaft muss den Namen mit den zugewiesenen Wert <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> im vorherigen Schritt.  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#310)]
-     [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#310)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#310)]
+     [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#310)]  
   
 ### <a name="to-retrieve-the-currently-selected-business-object"></a>Das aktuell ausgewählte Geschäftsobjekt abrufen  
   
 -   Abrufen der Zelle <xref:System.Windows.Forms.DataGridViewCell.Value%2A> Eigenschaft und wandeln sie in der Business-Objekttyp.  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#120)]
-     [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#120)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#120)]
+     [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#120)]  
   
 ## <a name="example"></a>Beispiel  
  Das vollständige Beispiel veranschaulicht die Verwendung von Geschäftsobjekten in einem Dropdown-Liste. Im Beispiel eine <xref:System.Windows.Forms.DataGridView> -Steuerelement gebunden ist, eine Auflistung von `Task` Objekte. Jede `Task` Objekt verfügt über eine `AssignedTo` Eigenschaft, die angibt der `Employee` -Objekt, für die jeweilige Aufgabe gerade zugewiesen. Die `Assigned To` angezeigt, die `Name` zugewiesenen Wert für die einzelnen, Mitarbeiter oder "nicht zugewiesen", wenn die `Task.AssignedTo` Eigenschaftswert ist `null`.  
@@ -60,8 +60,8 @@ Wie die <xref:System.Windows.Forms.ComboBox> -Steuerelement, das <xref:System.Wi
   
 3.  Klicken Sie auf eine `Request Status` Schaltfläche zum Aufrufen der `RequestStatus` Methode des aktuellen `Employee` Objekt für diese Zeile. Dies zeigt, dass das ausgewählte Objekt erfolgreich abgerufen wurde.  
   
- [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#000)]
- [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#000)]  
+ [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#000)]
+ [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#000)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Für dieses Beispiel benötigen Sie Folgendes:  
@@ -80,4 +80,4 @@ Wie die <xref:System.Windows.Forms.ComboBox> -Steuerelement, das <xref:System.Wi
 - <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCell.Value%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ComboBox>
-- [Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)

@@ -5,21 +5,21 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
-ms.openlocfilehash: ddceec86938ef5f500c38eb90004dc1f9d11b122
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 409dd945ebd26d212f62745ce6751f7507641bb2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537780"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708088"
 ---
 # <a name="creating-a-new-windows-form"></a>Erstellen neuer Windows Forms
-Dieses Thema enthält Links zu Themen, in denen beschrieben wird, wie Sie Ihre erste Windows Forms-Anwendung erstellen. Darüber hinaus befassen sich die Themen in diesem Abschnitt mit der Einführung von einigen grundlegenden Begriffen und Richtlinien, die Sie kennen sollten, wenn Sie mit der Erstellung einer Windows Forms-Anwendung beginnen. Um den Lerneffekt zu Windows Forms-Anwendung finden Sie der zugehörigen Themenliste unter den Steuerelementen in diese, Ereignisse und Behandlung von Ereignissen und zum Behandeln der Eingaben des Benutzers verwendet werden können.  
+Dieses Thema enthält Links zu Themen, in denen beschrieben wird, wie Sie Ihre erste Windows Forms-Anwendung erstellen. Darüber hinaus befassen sich die Themen in diesem Abschnitt mit der Einführung von einigen grundlegenden Begriffen und Richtlinien, die Sie kennen sollten, wenn Sie mit der Erstellung einer Windows Forms-Anwendung beginnen. Um weitere Informationen zu Windows Forms-Anwendungen, die Steuerelemente, die in diese Ereignisse und Behandlung von Ereignissen und Behandeln von Benutzereingaben, verwendet werden können finden Sie unter der zugehörigen Themenliste.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Windows Forms-Koordinaten](../../../docs/framework/winforms/windows-forms-coordinates.md).  
+ [Windows Forms-Koordinaten](windows-forms-coordinates.md).  
  Beschreibt die Client- und Bildschirmkoordinaten.  
   
- [Gewusst wie: Erstellen einer Windows Forms-Anwendung über die Befehlszeile](../../../docs/framework/winforms/how-to-create-a-windows-forms-application-from-the-command-line.md)  
+ [Vorgehensweise: Erstellen einer Windows Forms-Anwendung über die Befehlszeile](how-to-create-a-windows-forms-application-from-the-command-line.md)  
  Beschreibt, wie eine einfache Windows Form erstellt und über die Befehlszeile kompiliert wird.  
   
 ## <a name="reference"></a>Referenz  
@@ -30,14 +30,14 @@ Dieses Thema enthält Links zu Themen, in denen beschrieben wird, wie Sie Ihre e
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Behandeln von Benutzereingaben](../../../docs/framework/winforms/controls/handling-user-input.md)  
+ [Behandeln von Benutzereingaben](./controls/handling-user-input.md)  
  Enthält Links zu Themen, in denen Benutzereingaben und deren Behandlung in Windows Forms-Anwendungen besprochen werden.  
   
- [Erstellen von Ereignishandlern in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [Erstellen von Ereignishandlern in Windows Forms](creating-event-handlers-in-windows-forms.md)  
  Enthält Links zu Themen, in denen erörtert wird, wie Ereignisse in Windows Forms-Anwendungen behandelt werden.  
   
- [Ändern der Darstellung von Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ [Ändern der Darstellung von Windows Forms](changing-the-appearance-of-windows-forms.md)  
  Enthält Links zu Themen, in denen gezeigt wird, wie die Darstellung von Windows Forms-Anwendungen geändert wird.  
   
- [Windows Forms-Steuerelemente nach Funktion](../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)  
+ [Windows Forms-Steuerelemente nach Funktion](./controls/windows-forms-controls-by-function.md)  
  Enthält Links zu Themen, in denen die Steuerelemente beschrieben werden, die Sie in Windows Forms-Anwendungen verwenden können.

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: 96145a6205c3e80b23f3c69750f7faaec04aabba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526742"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714345"
 ---
 # <a name="application-settings-for-custom-controls"></a>Anwendungseinstellungen für benutzerdefinierte Steuerelemente
 Sie müssen bestimmte Aufgaben aus, um Ihre benutzerdefinierten Steuerelemente bieten die Möglichkeit, Anwendungseinstellungen beizubehalten, wenn die Steuerelemente in Anwendungen von Drittanbietern gehostet werden, ausführen.  
@@ -26,7 +26,7 @@ Sie müssen bestimmte Aufgaben aus, um Ihre benutzerdefinierten Steuerelemente b
   
 2.  Diese benutzerdefinierten Einstellungen-Klasse erstellen, nachdem das Steuerelement erstellt und in der Form eines Formulars, wie z. B. platziert wurde <xref:System.Windows.Forms.Form.Load> -Ereignishandler.  
   
- Anweisungen zum Erstellen einer CustomSettings-Klasse, finden Sie unter [Vorgehensweise: Erstellen von Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md).  
+ Anweisungen zum Erstellen einer CustomSettings-Klasse, finden Sie unter [Vorgehensweise: Erstellen von Anwendungseinstellungen](how-to-create-application-settings.md).  
   
 ## <a name="settings-keys-and-shared-settings"></a>Freigegebene Einstellungen und Einstellungsschlüssel  
  Einige Steuerelemente können mehrere Male in derselben Form verwendet werden. In den meisten Fällen, sollten Sie diese Steuerelemente auf ihre eigenen individuellen Einstellungen beizubehalten. Mit der <xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A> Eigenschaft <xref:System.Configuration.IPersistComponentSettings>, Sie können angeben, dass eine eindeutige Zeichenfolge, die mehrere Versionen eines Steuerelements in einem Formular eindeutig machen können.  
@@ -48,4 +48,4 @@ Sie müssen bestimmte Aufgaben aus, um Ihre benutzerdefinierten Steuerelemente b
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [Architektur der Anwendungseinstellungen](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [Architektur der Anwendungseinstellungen](application-settings-architecture.md)

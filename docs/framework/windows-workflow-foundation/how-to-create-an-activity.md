@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 8aa6900b26bbe9f77fe0802a7929febe5af61269
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 271f26888e8b140b64464f5c9c4eabb7170afe05
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872956"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709015"
 ---
 # <a name="how-to-create-an-activity"></a>Vorgehensweise: Erstellen einer Aktivität
 
@@ -42,8 +42,8 @@ Aktivitäten sind die wichtigsten Einheiten für das Verhalten in [!INCLUDE[wf1]
 
 4.  Ersetzen Sie die vorhandene `ReadInt`-Definition durch die folgende Definition.
 
-     [!code-csharp[CFX_WF_GettingStarted#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
-     [!code-vb[CFX_WF_GettingStarted#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
+     [!code-csharp[CFX_WF_GettingStarted#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
+     [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
     > Die `ReadInt`-Aktivität wird von <xref:System.Activities.NativeActivity%601> statt von <xref:System.Activities.CodeActivity> abgeleitet. Das entspricht dem Standard für die Vorlage "Codeaktivität". <xref:System.Activities.CodeActivity%601> kann verwendet werden, wenn die Aktivität ein einziges Ergebnis bereitstellt, das durch das <xref:System.Activities.Activity%601.Result%2A>-Argument verfügbar gemacht wird, da <xref:System.Activities.CodeActivity%601> jedoch nicht die Verwendung von Lesezeichen unterstützt, wird <xref:System.Activities.NativeActivity%601> verwendet.
@@ -100,13 +100,13 @@ Aktivitäten sind die wichtigsten Einheiten für das Verhalten in [!INCLUDE[wf1]
 
 ## <a name="next-steps"></a>Nächste Schritte
 
-Anweisungen zum Erstellen eines Workflows mit den Aktivitäten besteht, finden Sie im nächsten Schritt im Tutorial [Vorgehensweise: Erstellen eines Workflows](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md).
+Anweisungen zum Erstellen eines Workflows mit den Aktivitäten besteht, finden Sie im nächsten Schritt im Tutorial [Vorgehensweise: Erstellen eines Workflows](how-to-create-a-workflow.md).
 
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
-- [Entwerfen und Implementieren von benutzerdefinierten Aktivitäten](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)
-- [Tutorial mit ersten Schritten](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [Vorgehensweise: Erstellen eines Workfows](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
-- [Verwenden des ExpressionTextBox in einem benutzerdefinierten Aktivitätsdesigner](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [Entwerfen und Implementieren von benutzerdefinierten Aktivitäten](designing-and-implementing-custom-activities.md)
+- [Tutorial mit ersten Schritten](getting-started-tutorial.md)
+- [Vorgehensweise: Erstellen eines Workflows](how-to-create-a-workflow.md)
+- [Verwenden des ExpressionTextBox in einem benutzerdefinierten Aktivitätsdesigner](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

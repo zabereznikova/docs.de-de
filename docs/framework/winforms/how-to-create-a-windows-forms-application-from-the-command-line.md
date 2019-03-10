@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 354375d4758e4ab34d34571257f6414e6a8584f0
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 5dc5c3425672dd71359edf61c5f8625d96ad09ce
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664197"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716945"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Vorgehensweise: Erstellen einer Windows Forms-Anwendung über die Befehlszeile
 In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Sie zum Erstellen einer Windows Forms-Anwendung und Ausführen dieser Anwendung über die Befehlszeile abschließen müssen. Visual Studio bietet umfassende Unterstützung für diese Verfahren.  Siehe auch [Exemplarische Vorgehensweise: Hosten ein Windows Forms-Steuerelements in WPF](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md).  
@@ -27,20 +27,20 @@ In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Si
   
 1.  Geben Sie in einer leeren Codedatei die folgende Imports- bzw. using-Anweisungen ein:  
   
-     [!code-csharp[System.Windows.Forms.BasicForm#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.BasicForm#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.BasicForm#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.BasicForm#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#2)]  
   
 2.  Deklarieren Sie eine Klasse namens `Form1`, die von der Form-Klasse erbt.  
   
-     [!code-csharp[System.Windows.Forms.BasicForm#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.BasicForm#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
 3.  Erstellen Sie einen Standardkonstruktor für `Form1`.  
   
      In einem späteren Verfahren fügen Sie dem Konstruktor weiteren Code hinzu.  
   
-     [!code-csharp[System.Windows.Forms.BasicForm#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
-     [!code-vb[System.Windows.Forms.BasicForm#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.BasicForm#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
+     [!code-vb[System.Windows.Forms.BasicForm#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
   
 4.  Fügen Sie der Klasse eine `Main`-Method hinzu.  
   
@@ -50,8 +50,8 @@ In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Si
   
     3.  Erstellen Sie eine Instanz des Formulars, und führen Sie diese aus.  
   
-     [!code-csharp[System.Windows.Forms.BasicForm#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
-     [!code-vb[System.Windows.Forms.BasicForm#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
+     [!code-csharp[System.Windows.Forms.BasicForm#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
+     [!code-vb[System.Windows.Forms.BasicForm#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
   
 #### <a name="to-compile-and-run-the-application"></a>So kompilieren Sie die Anwendung und führen sie aus  
   
@@ -68,9 +68,9 @@ In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Si
 3.  Geben Sie an der Eingabeaufforderung: `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Hinzufügen eines Steuerelements und Behandeln eines Ereignisses  
- Anhand der vorherigen Schritte wurde veranschaulicht, wie Sie ein einfaches Windows Form erstellen, das kompiliert und ausgeführt wird. Im nächsten Verfahren wird erläutert, wie Sie ein Steuerelement erstellen und es dem Formular hinzufügen und wie Sie ein Ereignis für das Steuerelement behandeln. Weitere Informationen zu den Steuerelementen, die Sie zu Windows Forms hinzufügen können, finden Sie unter [Windows Forms-Steuerelemente](../../../docs/framework/winforms/controls/index.md).  
+ Anhand der vorherigen Schritte wurde veranschaulicht, wie Sie ein einfaches Windows Form erstellen, das kompiliert und ausgeführt wird. Im nächsten Verfahren wird erläutert, wie Sie ein Steuerelement erstellen und es dem Formular hinzufügen und wie Sie ein Ereignis für das Steuerelement behandeln. Weitere Informationen zu den Steuerelementen, die Sie zu Windows Forms hinzufügen können, finden Sie unter [Windows Forms-Steuerelemente](./controls/index.md).  
   
- Zusätzlich zu dem Wissen, wie Windows Forms-Anwendungen erstellt werden, sollten Sie auch wissen, wie ereignisbasierte Programmierung geht und wie Benutzereingaben behandelt werden. Weitere Informationen finden Sie unter [Erstellen von Ereignishandlern in Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md), und [Behandeln von Benutzereingaben](../../../docs/framework/winforms/controls/handling-user-input.md)  
+ Zusätzlich zu dem Wissen, wie Windows Forms-Anwendungen erstellt werden, sollten Sie auch wissen, wie ereignisbasierte Programmierung geht und wie Benutzereingaben behandelt werden. Weitere Informationen finden Sie unter [Erstellen von Ereignishandlern in Windows Forms](creating-event-handlers-in-windows-forms.md), und [Behandeln von Benutzereingaben](./controls/handling-user-input.md)  
   
 #### <a name="to-declare-a-button-control-and-handle-its-click-event"></a>So deklarieren Sie ein Button-Steuerelement und behandeln sein Click-Ereignis  
   
@@ -82,8 +82,8 @@ In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Si
   
      Im folgenden Codebeispiel wird die Deklaration des Button-Steuerelements veranschaulicht.  
   
-     [!code-csharp[System.Windows.Forms.FormWithButton#2](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#2)]
-     [!code-vb[System.Windows.Forms.FormWithButton#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#2)]  
+     [!code-csharp[System.Windows.Forms.FormWithButton#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#2)]
+     [!code-vb[System.Windows.Forms.FormWithButton#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#2)]  
   
 4.  Erstellen Sie eine Methode, um das <xref:System.Windows.Forms.Control.Click>-Ereignis für die Schaltfläche zu behandeln.  
   
@@ -91,23 +91,23 @@ In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Si
   
      Im folgenden Codebeispiel wird veranschaulicht, wie das Click-Ereignis des Button-Steuerelements behandelt wird.  
   
-     [!code-csharp[System.Windows.Forms.FormWithButton#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
-     [!code-vb[System.Windows.Forms.FormWithButton#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
+     [!code-csharp[System.Windows.Forms.FormWithButton#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
+     [!code-vb[System.Windows.Forms.FormWithButton#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
   
 6.  Ordnen Sie das <xref:System.Windows.Forms.Control.Click>-Ereignis der Methode zu, die Sie erstellt haben.  
   
      Im folgenden Codebeispiel wird veranschaulicht, wie der Methode das Ereignis zugeordnet wird.  
   
-     [!code-csharp[System.Windows.Forms.FormWithButton#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#4)]
-     [!code-vb[System.Windows.Forms.FormWithButton#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#4)]  
+     [!code-csharp[System.Windows.Forms.FormWithButton#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#4)]
+     [!code-vb[System.Windows.Forms.FormWithButton#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#4)]  
   
 7.  Kompilieren Sie die Anwendung, und führen Sie sie aus, wie im vorherigen Verfahren beschrieben.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Codebeispiel entspricht dem vollständigen Beispiel aus den vorherigen Verfahren.  
   
- [!code-csharp[System.Windows.Forms.FormWithButton#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.FormWithButton#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   
@@ -116,6 +116,6 @@ In den folgenden Verfahren werden die grundlegenden Schritte beschrieben, die Si
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
-- [Ändern der Darstellung von Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)
-- [Erweitern von Windows Forms-Anwendungen](../../../docs/framework/winforms/advanced/index.md)
-- [Erste Schritte mit Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+- [Ändern der Darstellung von Windows Forms](changing-the-appearance-of-windows-forms.md)
+- [Erweitern von Windows Forms-Anwendungen](./advanced/index.md)
+- [Erste Schritte mit Windows Forms](getting-started-with-windows-forms.md)

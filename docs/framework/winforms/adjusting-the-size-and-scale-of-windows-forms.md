@@ -6,25 +6,25 @@ helpviewer_keywords:
 - Windows Forms, adjusting size
 - Windows Forms, changing scale
 ms.assetid: a014d2b3-3273-4521-95e1-00171033bf58
-ms.openlocfilehash: 811153b8b2c8545371f794e7aafd05333f7b50f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f4e793c3e007e74a33c691cddefa321df6ca6879
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516412"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717308"
 ---
 # <a name="adjusting-the-size-and-scale-of-windows-forms"></a>Anpassen der Größe und Skalieren von Windows Forms
 Dieses Thema enthält Links zu Informationen über die Größenänderung von Windows Forms.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Gewusst wie: Ändern der Größe von Windows Forms](~/docs/framework/winforms/how-to-resize-windows-forms.md)  
+ [Vorgehensweise: Ändern der Größe Windows Forms](~/docs/framework/winforms/how-to-resize-windows-forms.md)  
  Enthält Anweisungen dazu, wie die Größe von Windows Forms festgelegt wird.  
   
  [Automatische Skalierung in Windows Forms](~/docs/framework/winforms/automatic-scaling-in-windows-forms.md)  
  Erläutert, wie ein Formular mit seinen Steuerelementen mithilfe der automatischen Skalierung auf verschiedenen Computern ordnungsgemäß angezeigt wird.  
   
- [Hohe DPI-Unterstützung in Windows Forms](../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)    
- Behandelt Windows Forms Unterstützung für hohen dpi-WERTEN und dynamische Skalierung. 
+ [Hohe DPI-Unterstützung in Windows Forms](high-dpi-support-in-windows-forms.md)    
+ Beschreibt die Windows Forms-Unterstützung für hohe DPI-Werte und dynamische Skalierung. 
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Drawing.Size>  

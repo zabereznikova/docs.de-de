@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: a81cf11ea5ca405e2013b7c7375a863aeb1f110f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81c85186d2f15917a6aa1067814a0119edf3f460
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609615"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705167"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>Vorgehensweise: Hinzufügen oder Entfernen von Bildern mit der ImageList-Komponente in Windows Forms
 Die Windows-Formulare <xref:System.Windows.Forms.ImageList> Komponente wird mit Bildern in der Regel aufgefüllt, bevor sie mit einem Steuerelement verknüpft ist. Sie können jedoch hinzufügen und entfernen Bilder, nachdem die Bildliste mit einem Steuerelement.  
@@ -142,6 +142,6 @@ imageList1.Images.RemoveByKey("myPhoto");
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [ImageList-Komponente](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
-- [Übersicht über die ImageList-Komponente](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)
-- [Bilder, Bitmaps und Metadateien](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [ImageList-Komponente](imagelist-component-windows-forms.md)
+- [Übersicht über die ImageList-Komponente](imagelist-component-overview-windows-forms.md)
+- [Bilder, Bitmaps und Metadateien](../advanced/images-bitmaps-and-metafiles.md)

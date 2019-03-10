@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 70e6e53c4aaa348c6cae2e677121f92367f33349
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 9995542385ed32b6e6f522d049113279a711dba4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305258"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715386"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Vorgehensweise: Festlegen von Rasteroptionen für alle Windows Forms
 Wie Sie mit der Arbeit in der Visual Studio-Entwicklungsumgebung werden verwendet, können Sie Einstellungen für die Formulare und Projekte, mit denen, die Sie zusammenarbeiten, im Windows Forms-Designer festlegen.  
@@ -27,16 +27,16 @@ Wie Sie mit der Arbeit in der Visual Studio-Entwicklungsumgebung werden verwende
   
 2.  Im linken Bereich die **Optionen** Dialogfeld klicken Sie auf **Windows Forms-Designer**.  
   
-     Klicken Sie im rechten Bereich unter der **Layouteinstellungen** Überschrift können legen Sie die standardmäßige Einstellungen für alle neuen Formulare, die Sie erstellen. Diese Einstellungen umfassen die Größe des Rasters gibt an, ob Steuerelemente darauf ausgerichtet, und gibt an, ob es standardmäßig aktiviert ist. Darüber hinaus können Sie auswählen zwischen **SnapToGrid** und **Ausrichtungslinien** Layoutmodi. Weitere Informationen zu Ausrichtungslinien, finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
+     Klicken Sie im rechten Bereich unter der **Layouteinstellungen** Überschrift können legen Sie die standardmäßige Einstellungen für alle neuen Formulare, die Sie erstellen. Diese Einstellungen umfassen die Größe des Rasters gibt an, ob Steuerelemente darauf ausgerichtet, und gibt an, ob es standardmäßig aktiviert ist. Darüber hinaus können Sie auswählen zwischen **SnapToGrid** und **Ausrichtungslinien** Layoutmodi. Weitere Informationen zu Ausrichtungslinien, finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Allgemein, Windows Forms-Designer, Optionen (Dialogfeld)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/index.md)
-- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
-- [Anordnen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [Vorgehensweise: Festlegen der Aktivierreihenfolge in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)
-- [Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Einfügen von Steuerelementen in Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
-- [Windows Forms-Steuerelemente](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [Windows Forms-Steuerelemente nach Funktion](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Windows Forms-Steuerelemente](index.md)
+- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
+- [Vorgehensweise: Festlegen der Aktivierreihenfolge in Windows Forms](how-to-set-the-tab-order-on-windows-forms.md)
+- [Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Einfügen von Steuerelementen in Windows Forms](putting-controls-on-windows-forms.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)

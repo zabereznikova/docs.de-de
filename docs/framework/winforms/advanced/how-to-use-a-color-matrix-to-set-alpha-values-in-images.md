@@ -10,12 +10,12 @@ helpviewer_keywords:
 - matrices [Windows Forms], alpha values
 - bitmaps [Windows Forms], using color matrices for semi-transparent
 ms.assetid: a27121e6-f7e9-4c09-84e2-f05aa9d2a1bb
-ms.openlocfilehash: 0e62bee55938e79d1555c463ac770f7b35be20f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e102f51d00953d05ed1d217a345e32178676ffe
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578802"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716334"
 ---
 # <a name="how-to-use-a-color-matrix-to-set-alpha-values-in-images"></a>Vorgehensweise: Verwenden einer Farbmatrix zum Festlegen von Alphawerten in Bildern
 Die <xref:System.Drawing.Bitmap> Klasse (erbt von der <xref:System.Drawing.Image> Klasse) und die <xref:System.Drawing.Imaging.ImageAttributes> -Klasse bieten Funktionen zum Abrufen und Pixelwerte festlegen. Können Sie die <xref:System.Drawing.Imaging.ImageAttributes> Klasse so ändern Sie den Alpha-Werte für ein vollständiges Bild, oder Sie rufen die <xref:System.Drawing.Bitmap.SetPixel%2A> Methode der <xref:System.Drawing.Bitmap> Klasse, um die Pixelwerte der einzelnen ändern.  
@@ -25,16 +25,16 @@ Die <xref:System.Drawing.Bitmap> Klasse (erbt von der <xref:System.Drawing.Image
   
  Während des Renderns, werden die Alpha-Werte in der Bitmap in 80 Prozent der einstellungsänderungen konvertiert. Dies führt zu einem Bild, das mit dem Hintergrund gemischt wird. Wie in die folgende Abbildung gezeigt, sieht das Bitmap-Bild transparent; Sie sehen, dass die durchgehende schwarze Linie durchzogen ist.  
   
- ![Alphablending mit einer Matrix](../../../../docs/framework/winforms/advanced/media/image2.png "image2")  
+ ![Alphablending mit einer Matrix](./media/image2.png "image2")  
   
  Wenn das Bild über im weißen Teil der Hintergrund ist, hat das Image mit die Farbe Weiß gemischt wurden. In dem das Bild für die schwarze Linie schneidet, wird das Image mit die Farbe Schwarz gemischt.  
   
- [!code-csharp[System.Drawing.AlphaBlending#21](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#21)]
- [!code-vb[System.Drawing.AlphaBlending#21](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
+ [!code-csharp[System.Drawing.AlphaBlending#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#21)]
+ [!code-vb[System.Drawing.AlphaBlending#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, d.h. ein Parameter vom <xref:System.Windows.Forms.PaintEventHandler>.  
+ Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert die <xref:System.Windows.Forms.PaintEventArgs>`e`-Klasse, die ein Parameter von <xref:System.Windows.Forms.PaintEventHandler> ist.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Grafik und Zeichnen in Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [Alphablending von Linien und Füllungen](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)
+- [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
+- [Alphablending von Linien und Füllungen](alpha-blending-lines-and-fills.md)

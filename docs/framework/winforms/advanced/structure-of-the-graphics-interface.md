@@ -5,12 +5,12 @@ helpviewer_keywords:
 - GDI+, using managed interface
 - graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
-ms.openlocfilehash: 4d000adfa02555a766410833fabe4039dd06c268
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33be9d4d4e5a1aca933bb84e948b2200cd96b152
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592045"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708111"
 ---
 # <a name="structure-of-the-graphics-interface"></a>Struktur der grafischen Oberfläche
 Die Schnittstelle für verwaltete Klassen zu [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] enthält ca. 60 Klassen, 50 Enumerationen und Strukturen von 8. Die <xref:System.Drawing.Graphics> Klasse bildet den Kern der [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Funktionen; Dies ist die Klasse, die tatsächlich Linien, Kurven, Abbildungen, Bilder und Text zeichnet.  
@@ -23,6 +23,6 @@ Die Schnittstelle für verwaltete Klassen zu [!INCLUDE[ndptecgdiplus](../../../.
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] definiert mehrere Enumerationen, die Sammlungen verwandter Konstanten sind. Z. B. die <xref:System.Drawing.Drawing2D.LineJoin> Enumeration enthält die Elemente <xref:System.Drawing.Drawing2D.LineJoin.Bevel>, <xref:System.Drawing.Drawing2D.LineJoin.Miter>, und <xref:System.Drawing.Drawing2D.LineJoin.Round>, geben Sie die Stile an, die zum Verbinden von zwei Linien verwendet werden können.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über Grafiken](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)
-- [Verwalteter Code in GDI+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)
-- [Verwenden von verwalteten Grafikklassen](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)
+- [Übersicht über Grafiken](graphics-overview-windows-forms.md)
+- [Verwalteter Code in GDI+](about-gdi-managed-code.md)
+- [Verwenden von verwalteten Grafikklassen](using-managed-graphics-classes.md)

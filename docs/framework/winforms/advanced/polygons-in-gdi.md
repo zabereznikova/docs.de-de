@@ -9,30 +9,30 @@ helpviewer_keywords:
 - drawing [Windows Forms], polygons
 - GDI+, polygons
 ms.assetid: a72213d2-d69a-4c2b-a75c-be7b20390c13
-ms.openlocfilehash: 94f18b3150a5c953f2e886f644ec5cfaabd786fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cffbee5f73b9fe92e2f1f3c7eff2f2336d9123a5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511510"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710081"
 ---
 # <a name="polygons-in-gdi"></a>Polygone in GDI+
 Ein Polygon ist eine geschlossene Form mit drei oder mehr gerade Seiten. Z. B. ein Dreieck ist ein Polygon mit drei Seiten, ein Rechteck ist ein Polygon mit vier Seiten und ein Fünfeck ist ein Polygon mit fünf Seiten. Die folgende Abbildung zeigt verschiedene Polygone.  
   
- ![Polygons](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art07.gif "Aboutgdip02_art07")  
+ ![Polygons](./media/aboutgdip02-art07.gif "Aboutgdip02_art07")  
   
 ## <a name="drawing-a-polygon"></a>Zeichnen eines Polygons  
  Um ein Polygon zu zeichnen, müssen Sie eine <xref:System.Drawing.Graphics> Objekt eine <xref:System.Drawing.Pen> Objekt und ein Array von <xref:System.Drawing.Point> (oder <xref:System.Drawing.PointF>) Objekte. Die <xref:System.Drawing.Graphics> -Objekt ermöglicht die <xref:System.Drawing.Graphics.DrawPolygon%2A> Methode. Die <xref:System.Drawing.Pen> -Objekt speichert Attribute, z. B. Breite und Farbe der Linie verwendet, um das Polygon, und das Array von Rendern <xref:System.Drawing.Point> -Objekte speichert, die Punkte durch gerade Linien miteinander verbunden werden. Die <xref:System.Drawing.Pen> Objekt und das Array von <xref:System.Drawing.Point> Objekte werden als Argumente übergeben die <xref:System.Drawing.Graphics.DrawPolygon%2A> Methode. Im folgende Beispiel zeichnet ein Vieleck, drei Seiten. Beachten Sie, dass es nur drei Punkte im `myPointArray`: (0, 0), (50, 30), und (30, 60). Die <xref:System.Drawing.Graphics.DrawPolygon%2A> Methode schließt automatisch das Polygon durch Zeichnen einer Linie aus (30, 60) wieder zum Ausgangspunkt (0, 0).  
   
- [!code-csharp[LinesCurvesAndShapes#111](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#111)]
- [!code-vb[LinesCurvesAndShapes#111](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#111)]  
+ [!code-csharp[LinesCurvesAndShapes#111](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#111)]
+ [!code-vb[LinesCurvesAndShapes#111](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#111)]  
   
  Die folgende Abbildung zeigt das Polygon.  
   
- ![Polygon](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art08.gif "Aboutgdip02_art08")  
+ ![Polygon](./media/aboutgdip02-art08.gif "Aboutgdip02_art08")  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
-- [Linien, Kurven und Formen](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [Vorgehensweise: Erstellen eines Stifts](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)
+- [Linien, Kurven und Formen](lines-curves-and-shapes.md)
+- [Vorgehensweise: Erstellen eines Stifts](how-to-create-a-pen.md)

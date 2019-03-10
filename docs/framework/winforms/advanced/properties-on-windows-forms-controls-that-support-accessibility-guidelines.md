@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, accessibility properties of controls
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-ms.openlocfilehash: b731f277620925a333c8d9eba64c8900674327da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eee7499373809538355227633ab9a1a66aedb9ed
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552209"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716399"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>Eigenschaften für Windows Forms-Steuerelemente, die Richtlinien für Eingabehilfen unterstützen
 Steuerelemente auf der standard-Toolbox für Windows Forms unterstützen viele Barrierefreiheits-Richtlinien, einschließlich Verfügbarmachung des Tastaturfokus und die Bildschirmelementen verfügbar zu machen.  
@@ -31,4 +31,4 @@ Steuerelemente auf der standard-Toolbox für Windows Forms unterstützen viele B
 |BackgroundImage|Lassen Sie diese Eigenschaft leer, um den Text lesbarer zu gestalten.|  
   
 ## <a name="see-also"></a>Siehe auch
-- [Exemplarische Vorgehensweise: Erstellen von behindertengerechten Windows-basierten Anwendungen](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)
+- [Exemplarische Vorgehensweise: Erstellen von behindertengerechten Windows-basierten Anwendungen](walkthrough-creating-an-accessible-windows-based-application.md)

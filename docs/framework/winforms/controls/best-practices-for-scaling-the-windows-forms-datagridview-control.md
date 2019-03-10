@@ -9,12 +9,12 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-ms.openlocfilehash: 5adbcdb4aa34b3878e278d47337defe4388dd892
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 895dd132c070157355c28a935e43240f2750159e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710871"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706416"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms
 Die <xref:System.Windows.Forms.DataGridView> Steuerelement wurde entwickelt, um maximale Skalierbarkeit bereitzustellen. Wenn Sie große Datenmengen anzeigen müssen, sollten Sie die in diesem Thema, um zu vermeiden, verwenden große Mengen an Arbeitsspeicher, oder beschränken die Reaktionsfähigkeit der Benutzeroberfläche (UI) beschriebenen Richtlinien befolgen. In diesem Thema wird Folgendes erläutert:  
@@ -31,16 +31,16 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement wurde entwickelt, um 
   
 -   Verhindert, dass Zeilen aufgehoben  
   
- Wenn Sie besondere leistungsanforderungen haben, können Sie virtuellen Modus implementieren, und stellen eigene Datenverwaltungsvorgänge. Weitere Informationen finden Sie unter [Datenanzeigemodi im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md).  
+ Wenn Sie besondere leistungsanforderungen haben, können Sie virtuellen Modus implementieren, und stellen eigene Datenverwaltungsvorgänge. Weitere Informationen finden Sie unter [Datenanzeigemodi im DataGridView-Steuerelement in Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="using-cell-styles-efficiently"></a>Effiziente Verwendung des Zellstile  
  Jede Zelle, Zeile und Spalte haben eine eigene Formatinformationen. Informationen zum Schriftschnitt befindet sich in <xref:System.Windows.Forms.DataGridViewCellStyle> Objekte. Erstellen Zelle stilobjekte für viele einzelne <xref:System.Windows.Forms.DataGridView> Elemente können ineffizient sein, insbesondere bei der Arbeit mit großen Datenmengen. Um Auswirkungen auf die Leistung zu vermeiden, verwenden Sie die folgenden Richtlinien:  
   
 -   Vermeiden Sie das Festlegen von Eigenschaften für den Zellstil für einzelne <xref:System.Windows.Forms.DataGridViewCell> oder <xref:System.Windows.Forms.DataGridViewRow> Objekte. Dies schließt das Zeilenobjekt gemäß der <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> Eigenschaft. Jede neue Zeile, die die Zeilenvorlage geklont wurde, erhält eine eigene Kopie der Vorlage Cell-Style-Objekt. Legen Sie für maximale Skalierbarkeit gibt die Eigenschaften für den Zellstil an die <xref:System.Windows.Forms.DataGridView> Ebene. Legen Sie z. B. die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> Eigenschaft anstelle der <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> Eigenschaft.  
   
--   Wenn einige Zellen erforderlich ist, außer der standardformatierung formatieren, verwenden Sie den gleichen <xref:System.Windows.Forms.DataGridViewCellStyle> Instanz für Gruppen von Zellen, Zeilen oder Spalten. Vermeiden des direktes Festlegen von Eigenschaften des Typs <xref:System.Windows.Forms.DataGridViewCellStyle> auf einzelne Zellen, Zeilen und Spalten. Ein Beispiel für die Zelle Stil freigeben, finden Sie unter [Vorgehensweise: Festlegen von Standardzellenformaten für das Windows-DataGridView-Steuerelement Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md). Sie können außerdem Leistungseinbußen vermeiden, wenn Zellstile einzeln verarbeiten Festlegen der <xref:System.Windows.Forms.DataGridView.CellFormatting> -Ereignishandler. Ein Beispiel finden Sie unter [Gewusst wie: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
+-   Wenn einige Zellen erforderlich ist, außer der standardformatierung formatieren, verwenden Sie den gleichen <xref:System.Windows.Forms.DataGridViewCellStyle> Instanz für Gruppen von Zellen, Zeilen oder Spalten. Vermeiden des direktes Festlegen von Eigenschaften des Typs <xref:System.Windows.Forms.DataGridViewCellStyle> auf einzelne Zellen, Zeilen und Spalten. Ein Beispiel für die Zelle Stil freigeben, finden Sie unter [Vorgehensweise: Festlegen von Standardzellenformaten für das Windows-DataGridView-Steuerelement Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md). Sie können außerdem Leistungseinbußen vermeiden, wenn Zellstile einzeln verarbeiten Festlegen der <xref:System.Windows.Forms.DataGridView.CellFormatting> -Ereignishandler. Ein Beispiel finden Sie unter [Gewusst wie: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
   
--   Wenn eine Zellenstils, verwenden Sie die <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType> Eigenschaft anstelle der <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> Eigenschaft. Zugriff auf die <xref:System.Windows.Forms.DataGridViewCell.Style%2A> Eigenschaft erstellt eine neue Instanz der dem <xref:System.Windows.Forms.DataGridViewCellStyle> Klasse, wenn die Eigenschaft noch nicht verwendet wurde. Darüber hinaus kann dieses Objekt nicht enthalten die vollständige Stilinformationen für die Zelle, wenn einige Stile, die von den Zeilen-, Spalten- oder Steuerelement geerbt werden. Weitere Informationen zur Vererbung von Zellenstilen finden Sie unter [Zellstile im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+-   Wenn eine Zellenstils, verwenden Sie die <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType> Eigenschaft anstelle der <xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType> Eigenschaft. Zugriff auf die <xref:System.Windows.Forms.DataGridViewCell.Style%2A> Eigenschaft erstellt eine neue Instanz der dem <xref:System.Windows.Forms.DataGridViewCellStyle> Klasse, wenn die Eigenschaft noch nicht verwendet wurde. Darüber hinaus kann dieses Objekt nicht enthalten die vollständige Stilinformationen für die Zelle, wenn einige Stile, die von den Zeilen-, Spalten- oder Steuerelement geerbt werden. Weitere Informationen zur Vererbung von Zellenstilen finden Sie unter [Zellstile im DataGridView-Steuerelement in Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="using-shortcut-menus-efficiently"></a>Effiziente Verwendung des Kontextmenüs  
  Jede Zelle, Zeile und Spalte haben eine eigene im Kontextmenü. Kontextmenüs in der <xref:System.Windows.Forms.DataGridView> Steuerelement durch dargestellt <xref:System.Windows.Forms.ContextMenuStrip> Steuerelemente. Genau wie bei Stil Cell-Objekte, Erstellen von Kontextmenüs für viele einzelne <xref:System.Windows.Forms.DataGridView> Elemente wirkt sich negativ auf die Leistung. Um diese Leistungsminderung zu vermeiden, verwenden Sie die folgenden Richtlinien:  
@@ -60,7 +60,7 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement wurde entwickelt, um 
   
 -   Deaktivieren Sie für maximale Skalierbarkeit automatische größenanpassungen und programmgesteuerten größenanpassung.  
   
- Weitere Informationen finden Sie unter [Größenänderungsoptionen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md).  
+ Weitere Informationen finden Sie unter [Größenänderungsoptionen im DataGridView-Steuerelement in Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="using-the-selected-cells-rows-and-columns-collections-efficiently"></a>Effiziente Verwendung von der ausgewählten Zellen, Zeilen und Spalten Sammlungen  
  Die <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> Sammlung führt keine effizient mit einer großen Auswahl. Die <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> und <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> Sammlungen können auch sein, ineffizient, jedoch in geringerem Maße, da es viele weniger Zeilen als Zellen in einer typischen gibt <xref:System.Windows.Forms.DataGridView> -Steuerelement, und viele weniger Spalten als Zeilen. Um Leistungseinbußen zu vermeiden, bei der Arbeit mit diesen Auflistungen, verwenden Sie die folgenden Richtlinien:  
@@ -137,9 +137,9 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement wurde entwickelt, um 
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.DataGridView>
-- [Leistungsoptimierung im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Virtueller Modus im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Datenanzeigemodi im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
-- [Zellstile im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Festlegen von Standardzellenformaten für das DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
-- [Größenänderungsoptionen im DataGridView-Steuerelement in Windows Forms](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)
+- [Leistungsoptimierung im DataGridView-Steuerelement in Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Virtueller Modus im DataGridView-Steuerelement in Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Datenanzeigemodi im DataGridView-Steuerelement in Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Zellstile im DataGridView-Steuerelement in Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Festlegen von Standardzellenformaten für das DataGridView-Steuerelement in Windows Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Größenänderungsoptionen im DataGridView-Steuerelement in Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md)

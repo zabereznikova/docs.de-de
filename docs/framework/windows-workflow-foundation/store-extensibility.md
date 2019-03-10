@@ -2,12 +2,12 @@
 title: Erweiterbarkeit des Speichers
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 0c6f67469db04705a9ac7827ef301ff226ea3bdb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 46c1ea40925a5c79180171da9a705d7e6b7c8b89
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465726"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703263"
 ---
 # <a name="store-extensibility"></a>Erweiterbarkeit des Speichers
 
@@ -36,7 +36,7 @@ Die <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>-Klasse v
     application.Extensions.Add(documentStatusExtension);
     ```
 
-     Weitere Informationen zum Hinzufügen eines benutzerdefinierten persistenzteilnehmers finden Sie unter den [Persistenzteilnehmer](../../../docs/framework/windows-workflow-foundation/persistence-participants.md) Beispiel.
+     Weitere Informationen zum Hinzufügen eines benutzerdefinierten persistenzteilnehmers finden Sie unter den [Persistenzteilnehmer](persistence-participants.md) Beispiel.
 
 3. Die benutzerdefinierten Aktivitäten in der DP-Anwendung füllen verschiedene Statusfelder in der **Execute** Methode.
 

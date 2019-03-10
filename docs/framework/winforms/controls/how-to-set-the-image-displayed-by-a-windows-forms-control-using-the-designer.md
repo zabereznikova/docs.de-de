@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 0f8c2ef747a160adc292a3330a4478b7a8c432d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 265fc88fb2bb9aef0696ea0d7e707ae07084df1d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562309"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702256"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Vorgehensweise: Das Bild angezeigt, die von einer Windows Forms-Steuerelement mithilfe des Designers
 Mehrerer Windows Forms-Steuerelemente können Bilder anzeigen. Das Bild kann ein Symbol, das den Zweck des Steuerelements, z. B. auf eine Schaltfläche, ein Datenträgersymbol wird ermittelt, werden die **speichern** Befehl. Alternativ kann das Symbol ein Hintergrundbild auf dem Steuerelement der gewünschten Eindruck sein.  
@@ -26,7 +26,7 @@ Mehrerer Windows Forms-Steuerelemente können Bilder anzeigen. Das Bild kann ein
   
 1.  In der **Eigenschaften** wählen Sie im Fenster der **Image** oder **BackgroundImage** -Eigenschaft des Steuerelements, klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten ()  
   
-     ![VisualStudioEllipsesButton screenshot](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")  
+     ![VisualStudioEllipsesButton screenshot](../media/vbellipsesbutton.png "vbEllipsesButton")  
   
      ) zum Anzeigen der **Ressource auswählen** Dialogfeld.  
   
@@ -36,4 +36,4 @@ Mehrerer Windows Forms-Steuerelemente können Bilder anzeigen. Das Bild kann ein
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

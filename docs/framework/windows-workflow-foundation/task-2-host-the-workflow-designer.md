@@ -2,12 +2,12 @@
 title: 'Aufgabe 2: Hosten des Workflowdesigners'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e8895e4b2c90f189c88ec3a803615e736dada455
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572772"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708638"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Aufgabe 2: Hosten des Workflowdesigners
 Dieses Thema beschreibt das Verfahren zum Hosten einer Instanz von der [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in einer Windows Presentation Foundation (WPF)-Anwendung.  
@@ -16,7 +16,7 @@ Dieses Thema beschreibt das Verfahren zum Hosten einer Instanz von der [!INCLUDE
   
 ### <a name="to-host-the-workflow-designer"></a>So hosten Sie den Workflow-Designer  
   
-1.  Öffnen der HostingApplication-Projekt, die Sie in erstellt [Aufgabe 1: Erstellen eine neuen Windows Presentation Foundation-Anwendung](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md).  
+1.  Öffnen der HostingApplication-Projekt, die Sie in erstellt [Aufgabe 1: Erstellen eine neuen Windows Presentation Foundation-Anwendung](task-1-create-a-new-wpf-app.md).  
   
 2.  Passen Sie die Fenstergröße an, um die Verwendung des [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] einfacher zu machen. Zu diesem Zweck wählen **MainWindow-Element** im Designer, drücken Sie F4, um die **Eigenschaften** Fenster, und aktivieren Sie in der **Layout** Abschnitt vorhanden, legen Sie die **Breite** auf einen Wert von 600 und die **Höhe** auf einen Wert von 350.  
   
@@ -97,7 +97,7 @@ Dieses Thema beschreibt das Verfahren zum Hosten einer Instanz von der [!INCLUDE
         }  
         ```  
   
-         Weitere Informationen zum Registrieren von Aktivitätsdesignern finden Sie unter [Vorgehensweise: Erstellen ein benutzerdefinierten Aktivitätsdesigners](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md).  
+         Weitere Informationen zum Registrieren von Aktivitätsdesignern finden Sie unter [Vorgehensweise: Erstellen ein benutzerdefinierten Aktivitätsdesigners](how-to-create-a-custom-activity-designer.md).  
   
     5.  Fügen Sie im `MainWindow`-Klassenkonstruktor den zuvor deklarierten Methoden Aufrufe hinzu, um die Metadaten für die Designerunterstützung zu registrieren und das <xref:System.Activities.Presentation.WorkflowDesigner>-Objekt zu erstellen.  
   
@@ -119,9 +119,9 @@ Dieses Thema beschreibt das Verfahren zum Hosten einer Instanz von der [!INCLUDE
   
 9. Drücken Sie F5, um die Projektmappe zu erstellen und auszuführen.  
   
-10. Finden Sie unter [Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md) erfahren, wie hinzufügen **Toolbox** und **PropertyGrid** zu Ihrem neu gehosteten Workflow-Designer unterstützt.  
+10. Finden Sie unter [Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche](task-3-create-the-toolbox-and-propertygrid-panes.md) erfahren, wie hinzufügen **Toolbox** und **PropertyGrid** zu Ihrem neu gehosteten Workflow-Designer unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Erneutes Hosten des Workflow-Designers](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche](../../../docs/framework/windows-workflow-foundation/task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [Erneutes Hosten des Workflow-Designers](rehosting-the-workflow-designer.md)
+- [Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung](task-1-create-a-new-wpf-app.md)
+- [Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche](task-3-create-the-toolbox-and-propertygrid-panes.md)

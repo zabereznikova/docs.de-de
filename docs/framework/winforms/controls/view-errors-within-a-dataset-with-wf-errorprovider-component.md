@@ -9,12 +9,12 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 48f333fbae816748813b370bccc559cea2714fa5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6202ac758d2cbf599c7e48a31ed2804608c70977
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694047"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705387"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Vorgehensweise: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider-Komponente in Windows Forms
 Sie können die Windows-Formulare verwenden <xref:System.Windows.Forms.ErrorProvider> Komponente, um die Spaltenfehler innerhalb eines Datasets oder anderen Datenquelle anzuzeigen. Für eine <xref:System.Windows.Forms.ErrorProvider> Komponente zum Anzeigen der Datenfehler in einem Formular, es muss keine werden direkt mit einem Steuerelement verknüpft ist. Sobald sie mit einer Datenquelle gebunden ist, kann es ein Fehlersymbol neben jedem Steuerelement anzeigen, die an die gleiche Datenquelle gebunden ist.  
@@ -63,5 +63,5 @@ Sie können die Windows-Formulare verwenden <xref:System.Windows.Forms.ErrorProv
     ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über die ErrorProvider-Komponente](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)
-- [Vorgehensweise: Anzeigen von Fehlersymbolen für die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [Übersicht über die ErrorProvider-Komponente](errorprovider-component-overview-windows-forms.md)
+- [Vorgehensweise: Anzeigen von Fehlersymbolen für die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms](display-error-icons-for-form-validation-with-wf-errorprovider.md)

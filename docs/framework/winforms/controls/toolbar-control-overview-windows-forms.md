@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], about toolbars
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-ms.openlocfilehash: 42c3d9c681da9ca87125a274fa12af623269bd70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 249c5854b83a62878ecef0350e08ba4b00523aff
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745247"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708846"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>Übersicht über das ToolBar-Steuerelement (Windows Forms)
 > [!NOTE]
@@ -28,11 +28,11 @@ ms.locfileid: "54745247"
   
  Wenn die <xref:System.Windows.Forms.ToolBar.Appearance%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.ToolBarAppearance>, die Symbolleisten-Schaltflächen angezeigt werden, erhöht und dreidimensional. Sie können festlegen, die <xref:System.Windows.Forms.ToolBar.Appearance%2A> Eigenschaft von der Symbolleiste, um <xref:System.Windows.Forms.ToolBarAppearance> gerne die Symbolleiste und deren Schaltflächen flach dargestellt. Wenn der Mauszeiger über eine flache Schaltfläche bewegt wird, wird die Schaltfläche dreidimensional dargestellt. Symbolleistenschaltflächen können mithilfe von Trennzeichen in logische Gruppen eingeteilt werden. Ein Trennzeichen ist eine Symbolleisten-Schaltfläche mit den <xref:System.Windows.Forms.ToolBarButton.Style%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.ToolBarButtonStyle>. Es wird als leerer Zwischenraum auf der Symbolleiste dargestellt. Wenn die Symbolleiste flach dargestellt wird, werden die Trennlinien als Linien und nicht als Zwischenraum zwischen den Schaltflächen dargestellt.  
   
- Die <xref:System.Windows.Forms.ToolBar> Steuerelement ermöglicht es Ihnen zum Erstellen von Symbolleisten hinzufügen <xref:System.Windows.Forms.Button> Objekte eine <xref:System.Windows.Forms.ToolBar.Buttons%2A> Auflistung. Können Sie den Auflistungs-Editor auf die Schaltflächen zum Hinzufügen einer <xref:System.Windows.Forms.ToolBar> Steuerelement; jede <xref:System.Windows.Forms.Button> -Objekt sollte Text oder ein Bild zugewiesen ist, können, jedoch auch beides zuweisen können. Das Bild wird von einer verknüpften [ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)-Komponente zur Verfügung gestellt. Zur Laufzeit können Sie hinzufügen oder entfernen Sie Schaltflächen aus der <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> mithilfe der <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> und <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> Methoden. Programmieren die Schaltflächen des eine <xref:System.Windows.Forms.ToolBar>, fügen Sie Code in die <xref:System.Windows.Forms.ToolBar.ButtonClick> Ereignisse der <xref:System.Windows.Forms.ToolBar>unter Verwendung der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> Eigenschaft der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> Klasse, um zu bestimmen, welche Schaltfläche geklickt wurde.  
+ Die <xref:System.Windows.Forms.ToolBar> Steuerelement ermöglicht es Ihnen zum Erstellen von Symbolleisten hinzufügen <xref:System.Windows.Forms.Button> Objekte eine <xref:System.Windows.Forms.ToolBar.Buttons%2A> Auflistung. Können Sie den Auflistungs-Editor auf die Schaltflächen zum Hinzufügen einer <xref:System.Windows.Forms.ToolBar> Steuerelement; jede <xref:System.Windows.Forms.Button> -Objekt sollte Text oder ein Bild zugewiesen ist, können, jedoch auch beides zuweisen können. Das Bild wird von einer verknüpften [ImageList](imagelist-component-windows-forms.md)-Komponente zur Verfügung gestellt. Zur Laufzeit können Sie hinzufügen oder entfernen Sie Schaltflächen aus der <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> mithilfe der <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> und <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> Methoden. Programmieren die Schaltflächen des eine <xref:System.Windows.Forms.ToolBar>, fügen Sie Code in die <xref:System.Windows.Forms.ToolBar.ButtonClick> Ereignisse der <xref:System.Windows.Forms.ToolBar>unter Verwendung der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> Eigenschaft der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> Klasse, um zu bestimmen, welche Schaltfläche geklickt wurde.  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Forms.ToolBar>
-- [ToolBar-Steuerelement](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
-- [Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)
-- [Vorgehensweise: Definieren eines Symbols für eine Symbolleisten-Schaltfläche](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
-- [Vorgehensweise: Trigger Menüereignissen für Symbolleistenschaltflächen](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar-Steuerelement](toolbar-control-windows-forms.md)
+- [Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement](how-to-add-buttons-to-a-toolbar-control.md)
+- [Vorgehensweise: Definieren eines Symbols für eine Symbolleisten-Schaltfläche](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Vorgehensweise: Trigger Menüereignissen für Symbolleistenschaltflächen](how-to-trigger-menu-events-for-toolbar-buttons.md)

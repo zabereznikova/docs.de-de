@@ -2,12 +2,12 @@
 title: Auflistungsaktivitäten in WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: c29b81dcff943b350a0696d0d9996f8e2ce986c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ce7dd348a19608d35bf448bda2e1380e5af1130
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590077"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705250"
 ---
 # <a name="collection-activities-in-wf"></a>Auflistungsaktivitäten in WF
 Auflistungsaktivitäten werden für die Arbeit mit Auflistungsobjekten in einem Workflow verwendet. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] verfügt über vom System bereitgestellte Aktivitäten, mit denen Elemente zu einer Auflistung hinzugefügt oder daraus entfernt werden können und mit denen überprüft werden kann, ob ein Element in einer Auflistung vorhanden ist. Außerdem können Auflistungen bereinigt werden. `ExistsInCollection` und `RemoveFromCollection` haben eine <xref:System.Activities.OutArgument%601> des Typs <xref:System.Boolean>, das das Ergebnis angibt.  
@@ -426,4 +426,4 @@ Activity wf = new Sequence
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Code](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [Erstellen von Workflows, Aktivitäten und Ausdrücken mit imperativem Code](authoring-workflows-activities-and-expressions-using-imperative-code.md)
