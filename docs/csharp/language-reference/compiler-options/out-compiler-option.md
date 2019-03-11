@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 62a8835361e2e55d3d970cf3ae7cd2699e3c79fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d1134367cbbe494f5ab882d88cc083110ffd5c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725739"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362356"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C#-Compileroptionen)
 Die Option **-out** gibt den Namen der Ausgabedatei an.  
@@ -28,7 +28,7 @@ Die Option **-out** gibt den Namen der Ausgabedatei an.
  `filename`  
  Der Name der Ausgabedatei, die vom Compiler erstellt wurde  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  In der Befehlszeile ist es möglich, mehrere Ausgabedateien für die Kompilierung anzugeben. Der Compiler geht davon aus, mindestens eine Quellcodedatei nach der Option **-out** zu finden. Anschließend werden alle Quellcodedateien in der von der Option **-out** angegebenen Ausgabedatei kompiliert.  
   
  Geben Sie den vollständigen Namen und die Erweiterung der Datei an, die Sie erstellen möchten.  
@@ -45,7 +45,7 @@ Die Option **-out** gibt den Namen der Ausgabedatei an.
   
  Alle Module, die als Teil einer Kompilierung erstellt werden, werden Dateien, die jeder Assembly zugeordnet sind, die auch bei der Kompilierung erstellt werden. Verwenden Sie [ildasm.exe](../../../framework/tools/ildasm-exe-il-disassembler.md), um das Assemblymanifest mit den zugehörigen Dateien anzuzeigen.  
   
- Die Compileroption „-out“ ist erforderlich, damit eine EXE-Datei das Ziel einer Friend-Assembly sein kann. Weitere Informationen finden Sie unter [Friend-Assemblys](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+ Die Compileroption „-out“ ist erforderlich, damit eine EXE-Datei das Ziel einer Friend-Assembly sein kann. Weitere Informationen finden Sie unter [Friend-Assemblys](../../../standard/assembly/friend-assemblies.md).  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
@@ -67,5 +67,5 @@ csc t.cs -out:mymodule.netmodule -target:module t2.cs
 ## <a name="see-also"></a>Siehe auch
 
 - [C#-Compileroptionen](../../../csharp/language-reference/compiler-options/index.md)
-- [Friend-Assemblys](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Friend-Assemblys](../../../standard/assembly/friend-assemblies.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

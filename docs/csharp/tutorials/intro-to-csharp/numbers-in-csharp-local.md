@@ -3,12 +3,12 @@ title: Zahlen in C# – Einführung in das C#-Tutorial
 description: Machen Sie sich mit C# vertraut, indem Sie numerische Typen, ihre Eigenschaften und Methoden erkunden.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 009c737297c331b1aa4dcad058ac6bfdf05ac037
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1b09a65b42395bfa1caf9e564120d3df1f3f1ed5
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978617"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673859"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Bearbeiten von Ganzzahlen und Gleitkommazahlen in C\#
 
@@ -20,7 +20,7 @@ Für dieses Tutorial benötigen Sie einen Computer, den Sie für die Entwicklung
 
 Erstellen Sie ein Verzeichnis mit dem Namen **numbers-quickstart**. Machen Sie dieses Verzeichnis zum aktuellen Verzeichnis, und führen Sie `dotnet new console -n NumbersInCSharp -o .` aus.
 
-Öffnen Sie **Program.cs** in Ihrem bevorzugten Editor, und ersetzen Sie die Zeile `Console.Writeline("Hello World!");` durch Folgendes:
+Öffnen Sie **Program.cs** in Ihrem bevorzugten Editor, und ersetzen Sie die Zeile `Console.WriteLine("Hello World!");` durch Folgendes:
 
 ```csharp
 int a = 18;
@@ -29,7 +29,7 @@ int c = a + b;
 Console.WriteLine(c);
 ```
 
-Führen Sie diesen Code aus, indem Sie `dotnet run` in Ihr Befehlsfenster eingeben. 
+Führen Sie diesen Code aus, indem Sie `dotnet run` in Ihr Befehlsfenster eingeben.
 
 Sie haben soeben eine der grundlegenden arithmetischen Operationen mit ganzen Zahlen kennengelernt. Der `int`-Typ steht für **integer**, d.h. eine positive oder negative ganze Zahl. Sie verwenden zum Addieren das `+`-Symbol. Zu den anderen häufig verwendeten arithmetischen Operationen für ganze Zahlen zählen Folgende:
 
@@ -48,13 +48,13 @@ c = a / b;
 Console.WriteLine(c);
 ```
 
-Führen Sie diesen Code aus, indem Sie `dotnet run` in Ihr Befehlsfenster eingeben. 
-    
+Führen Sie diesen Code aus, indem Sie `dotnet run` in Ihr Befehlsfenster eingeben.
+
 Wenn Sie möchten, können Sie auch experimentieren, indem Sie mehrere arithmetische Operationen in der gleichen Zeile ausführen. Testen Sie zum Beispiel `c = a + b - 12 * 17;`. Das Kombinieren von Variablen und konstanten Zahlen ist erlaubt.
 
 > [!TIP]
 > Bei Ihren ersten Schritten mit C# (oder einer anderen Programmiersprache) kann es zu Fehlern kommen, wenn Sie Codes schreiben. Der **Compiler** findet diese Fehler und meldet diese. Sollte die Ausgabe Fehlermeldungen enthalten, sehen Sie sich den Beispielcode und den Code in Ihrem Fenster an, um festzustellen, was behoben werden muss.
-> Durch diese Übung lernen Sie die Struktur eines C#-Codes kennen.     
+> Durch diese Übung lernen Sie die Struktur eines C#-Codes kennen.
 
 Sie haben den ersten Schritt abgeschlossen. Bevor Sie mit dem nächsten Abschnitt beginnen, verschieben wir den aktuellen Code in eine separate Methode. Dies erleichtert das Arbeiten mit einem neuen Beispiel. Benennen Sie Ihre `Main` -Methode in `WorkingWithIntegers` um, und schreiben Sie eine neue `Main`-Methode, die `WorkingWithIntegers` aufruft. Anschließend sollte der Code wie folgt aussehen:
 
@@ -164,7 +164,7 @@ namespace NumbersInCSharp
         }
 
         static void OrderPrecedence()
-        {   
+        {
             int a = 5;
             int b = 4;
             int c = 2;
@@ -196,6 +196,7 @@ namespace NumbersInCSharp
 ```
 
 ## <a name="explore-integer-precision-and-limits"></a>Erkunden der Genauigkeit und Grenzwerte ganzer Zahlen
+
 Im vorherigen Beispiel haben Sie gesehen, dass das Ergebnis bei der Division ganzer Zahlen abgeschnitten wird.
 Sie erhalten den Restwert **remainder** mithilfe des **Modulo**-Operators, dem `%`-Zeichen. Testen Sie den folgenden Code in Ihrer `Main`-Methode:
 
@@ -210,7 +211,7 @@ Console.WriteLine($"remainder: {e}");
 ```
 
 Der integer-C#-Typ unterscheidet sich noch in einem weiteren Punkt von einer mathematischen ganzen Zahl: Der `int`-Typ ist mit minimalen und maximalen Grenzwerten versehen. Fügen Sie diesen Code zu Ihrer `Main`-Methode hinzu, um die jeweiligen Grenzwerte zu sehen:
-    
+
 ```csharp
 int max = int.MaxValue;
 int min = int.MinValue;
@@ -223,13 +224,14 @@ Wenn bei einer Berechnung ein Wert herauskommt, der diese Grenzwerte überschrei
 int what = max + 3;
 Console.WriteLine($"An example of overflow: {what}");
 ```
-    
-Beachten Sie, dass die Antwort sehr nah an der minimalen (negativen) ganzen Zahl liegt. Sie entspricht `min + 2`. Die Additionsoperation hat die zulässigen Werte für ganze Zahlen **überlaufen**.
+
+Beachten Sie, dass die Antwort sehr nah an der minimalen (negativen) ganzen Zahl liegt. Sie entspricht `min + 2`.
+Die Additionsoperation hat die zulässigen Werte für ganze Zahlen **überlaufen**.
 Die Antwort enthält eine sehr große negative Zahl, da ein Überlauf den größtmöglichen ganzzahligen Wert bis zum kleinstmöglichen Wert umschließt.
 
 Wenn der `int`-Typ nicht Ihren Anforderungen entspricht, so gibt es verschiedene numerische Typen mit anderen Grenzwerten und Genauigkeitsgraden, die Sie verwenden können. Werfen wir im Folgenden einmal einen Blick auf diese.
 
-Fügen Sie den Code, den Sie in diesem Abschnitt geschrieben haben, wieder in eine separate Methode ein. Nennen Sie es `TestLimits`. 
+Fügen Sie den Code, den Sie in diesem Abschnitt geschrieben haben, wieder in eine separate Methode ein. Nennen Sie es `TestLimits`.
 
 ## <a name="work-with-the-double-type"></a>Arbeiten mit dem Double-Typ
 
@@ -262,7 +264,7 @@ double min = double.MinValue;
 Console.WriteLine($"The range of double is {min} to {max}");
 ```
 
-Diese Werte werden in der wissenschaftlichen Schreibweise ausgegeben. Die Zahl links von `E` ist die Mantisse. Die Zahl rechts ist der Exponent als Potenz von 10. 
+Diese Werte werden in der wissenschaftlichen Schreibweise ausgegeben. Die Zahl links von `E` ist die Mantisse. Die Zahl rechts ist der Exponent als Potenz von 10.
 
 Wie bei Dezimalzahlen in der Mathematik können double-Werte in C# Rundungsfehler aufweisen. Testen Sie den folgenden Code:
 
@@ -303,23 +305,23 @@ Console.WriteLine(c / d);
 
 Mit dem Suffix `M` neben einer Zahl geben Sie an, dass eine Konstante den `decimal`-Typ verwenden soll.
 
-Beachten Sie, dass der aus dieser arithmetischen Operation resultierende Wert vom Typ „decimal“ rechts neben dem Dezimalpunkt mehr Ziffern enthält. 
+Beachten Sie, dass der aus dieser arithmetischen Operation resultierende Wert vom Typ „decimal“ rechts neben dem Dezimalpunkt mehr Ziffern enthält.
 
 ***Übung***
 
-Nachdem Sie nun die verschiedenen numerischen Typen kennengelernt haben, schreiben Sie Code, der den Flächeninhalt eines Kreises mit einem Radius von 2,5 cm berechnet. Denken Sie daran, dass der Flächeninhalt eines Kreises durch das Quadrat des Radius multipliziert mit Pi gebildet wird. Hinweis: .NET bietet eine Konstante für Pi (<xref:System.Math.PI?displayProperty=nameWithType>), die Sie für die Berechnung dieses Werts verwenden können. 
+Nachdem Sie nun die verschiedenen numerischen Typen kennengelernt haben, schreiben Sie Code, der den Flächeninhalt eines Kreises mit einem Radius von 2,5 cm berechnet. Denken Sie daran, dass der Flächeninhalt eines Kreises durch das Quadrat des Radius multipliziert mit Pi gebildet wird. Hinweis: .NET bietet eine Konstante für Pi (<xref:System.Math.PI?displayProperty=nameWithType>), die Sie für die Berechnung dieses Werts verwenden können.
 
 Sie sollten eine Antwort zwischen 19 und 20 erhalten.
 Sie können Ihre Antwort anhand des [fertig gestellten Beispielcodes auf GitHub](https://github.com/dotnet/samples/tree/master/csharp/numbers-quickstart/Program.cs#L104-L106) prüfen.
 
-Wenn Sie möchten, testen Sie andere Formeln. 
+Wenn Sie möchten, testen Sie andere Formeln.
 
 Sie haben den Schnellstart „Zahlen in C#“ abgeschlossen. Sie können mit dem Schnellstart [Branches und Schleifen](branches-and-loops-local.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
 
 Weitere Informationen zu Zahlen in C# finden Sie auch unter folgenden Themen:
 
-[Tabelle ganzzahliger Typen](../../language-reference/keywords/integral-types-table.md)   
-[Tabelle für Gleitkommatypen](../../language-reference/keywords/floating-point-types-table.md)   
-[Tabelle integrierter Typen](../../language-reference/keywords/built-in-types-table.md)   
-[Tabelle für implizite numerische Konvertierungen](../../language-reference/keywords/implicit-numeric-conversions-table.md)   
-[Tabelle für explizite numerische Konvertierungen](../../language-reference/keywords/explicit-numeric-conversions-table.md)
+- [Tabelle ganzzahliger Typen](../../language-reference/keywords/integral-types-table.md)
+- [Tabelle für Gleitkommatypen](../../language-reference/keywords/floating-point-types-table.md)
+- [Tabelle integrierter Typen](../../language-reference/keywords/built-in-types-table.md)
+- [Tabelle für implizite numerische Konvertierungen](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Tabelle für explizite numerische Konvertierungen](../../language-reference/keywords/explicit-numeric-conversions-table.md)

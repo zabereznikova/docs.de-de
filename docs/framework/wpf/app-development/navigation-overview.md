@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 75d891052abffe3362c13aa09fe880404564639a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7636a7d9a100d0df95f7d5462672819624ba52a4
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377183"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679969"
 ---
 # <a name="navigation-overview"></a>Übersicht über die Navigation
 Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil, die verwendet werden, kann in zwei Arten von Anwendungen: eigenständige Anwendungen und [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Zum Packen von Inhalten für die Navigation [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet die <xref:System.Windows.Controls.Page> Klasse. Können Sie von einem navigieren <xref:System.Windows.Controls.Page> in ein anderes deklarativ mithilfe einer <xref:System.Windows.Documents.Hyperlink>, oder programmgesteuert, durch die Verwendung der <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] verwendet das Journal, um Seiten zu speichern, von denen weg navigiert wurde, und um wieder zu den Seiten zurück zu navigieren.  
@@ -136,7 +136,7 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  In diesem Beispiel die `StartupUri` -Attribut festgelegt ist, mit einem relativen Paket- [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] HomePage.xaml identifiziert. Wenn die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] wird gestartet, HomePage.xaml automatisch navigiert und angezeigt. Dies wird durch die folgende Abbildung veranschaulicht dargestellt eine [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] , die von einem Webserver gestartet wurde.  
   
- ![XBAP-Seite](./media/navigationoverviewfigure9.png "NavigationOverviewFigure9")  
+ ![XBAP-Seite](./media/navigation-overview/xbap-launched-from-a-web-server.png "dadurch eine XBAP, die von einem Webserver gestartet wird.")  
   
 > [!NOTE]
 >  Weitere Informationen zu Entwicklung und Bereitstellung von [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], finden Sie unter [Übersicht über WPF-XAML-Browseranwendungen](wpf-xaml-browser-applications-overview.md) und [Bereitstellen von WPF-Anwendungen](deploying-a-wpf-application-wpf.md).  
@@ -151,7 +151,7 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  Das Ergebnis ist in der folgenden Abbildung dargestellt.  
   
- ![Fenstertitel, Höhe, Breite](./media/navigationoverviewfigure2.png "NavigationOverviewFigure2")  
+ ![Fenstertitel, Höhe, Breite](./media/navigation-overview/window-title-width-height.png "zeigt den Fenstertitel, Höhe und Breite, die Sie konfigurieren können.")  
   
 <a name="NavigatingBetweenXAMLPages"></a>   
 ### <a name="hyperlink-navigation"></a>Linknavigation  
@@ -169,11 +169,11 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  Die folgende Abbildung zeigt ein [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] mit einem <xref:System.Windows.Controls.Page> , bei dem ein <xref:System.Windows.Documents.Hyperlink>.  
   
- ![Seite mit Link](./media/navigationoverviewfigure3.png "NavigationOverviewFigure3")  
+ ![Seite mit Link](./media/navigation-overview/xbap-with-a-page-with-a-hyperlink.png "eine XBAP mit einer Seite mit einem Link angezeigt.")  
   
  Wie zu erwarten ist, klicken auf die <xref:System.Windows.Documents.Hyperlink> bewirkt, dass die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] zu navigieren die <xref:System.Windows.Controls.Page> , die durch gekennzeichnet ist die `NavigateUri` Attribut. Darüber hinaus die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Fügt einen Eintrag für die vorherige <xref:System.Windows.Controls.Page> der Liste zuletzt besuchte Seiten in [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]. Das wird in der folgenden Abbildung gezeigt.  
   
- ![Zurück- und Vorwärts-Schaltflächen](./media/navigationoverviewfigure4.png "NavigationOverviewFigure4")  
+ ![Zurück- und Vorwärts-Schaltflächen](./media/navigation-overview/back-and-forward-navigation.png "navigieren, mit der zurück- und Vorwärts-Schaltfläche.")  
   
  Zusätzlich zur Unterstützung der Navigation von einem <xref:System.Windows.Controls.Page> zu einem anderen <xref:System.Windows.Documents.Hyperlink> auch der FragmentNavigation unterstützt.  
   
@@ -309,7 +309,7 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  Die Navigationsereignisse werden in der Reihenfolge ausgelöst, die in der folgenden Abbildung dargestellt wird.  
   
- ![Seitennavigations-Flussdiagramm](./media/navigationoverviewfigure11.png "NavigationOverviewFigure11")  
+ ![Seitennavigations-Flussdiagramm](./media/navigation-overview/order-of-navigation-events.png "Seitennavigations-Flussdiagramm-Ereignis")  
   
  Im Allgemeinen eine <xref:System.Windows.Controls.Page> ist nicht auf diese Ereignisse sorgen. Es ist wahrscheinlicher, dass eine Anwendung mit ihnen befasst und aus diesem Grund werden diese Ereignisse auch von ausgelöst der <xref:System.Windows.Application> Klasse:  
   
@@ -345,7 +345,7 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
 #### <a name="navigating-the-journal-from-internet-explorer"></a>Navigieren im Journal in Internet Explorer  
  Vom Konzept her funktioniert das Journal auf die gleiche Weise der **zurück** und **weiterleiten** mithilfe der Schaltflächen im [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] führen. Diese sind in der folgenden Abbildung dargestellt.  
   
- ![Zurück- und Vorwärts-Schaltflächen](./media/navigationoverviewfigure4.png "NavigationOverviewFigure4")  
+ ![Zurück- und Vorwärts-Schaltflächen](./media/navigation-overview/back-and-forward-navigation.png "navigieren, mit der zurück- und Vorwärts-Schaltfläche.")  
   
  Für [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] die gehostet werden, indem [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)], [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] integriert die Erfassung in der Navigation [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] von [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]. Dadurch können Benutzer Seiten navigieren ein [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] mithilfe der **wieder**, **weiterleiten**, und **zuletzt besuchte Seiten** mithilfe der Schaltflächen im [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]. Die Erfassung nicht integriert ist [!INCLUDE[TLA2#tla_ie6](../../../../includes/tla2sharptla-ie6-md.md)] auf die gleiche Weise für [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)] oder Internet Explorer 8. Stattdessen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] rendert eine Ersatznavigations- [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
@@ -402,7 +402,7 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  Aus diesem Grund ist das Standardverhalten des Journals zum Speichern von <xref:System.Windows.Controls.Page> Metadaten in jedem Journaleintrag, anstatt einen Verweis auf eine <xref:System.Windows.Controls.Page> Objekt. Wenn zu einem Journaleintrag navigiert wird, dessen <xref:System.Windows.Controls.Page> Metadaten wird verwendet, um eine neue Instanz des angegebenen <xref:System.Windows.Controls.Page>. Infolgedessen wird jede <xref:System.Windows.Controls.Page> navigiert wird, die in der folgenden Abbildung dargestellte Lebensdauer hat.  
   
- ![Seitenlebensdauer](./media/navigationoverviewfigure10.PNG "NavigationOverviewFigure10")  
+ ![Seitenlebensdauer](./media/navigation-overview/navigated-page-lifetime.png "zeigt die Lebensdauer, wenn eine Seite navigiert wird.")  
   
  Auch mithilfe der Journaling-Standardverhalten zum Arbeitsspeicherverbrauch speichern kann, kann die Leistung beim Rendern der pro Seite beeinträchtigt werden; umfangreichem eine <xref:System.Windows.Controls.Page> kann sehr zeitaufwendig, insbesondere, wenn sie viel Inhalt hat sein. Wenn Sie beibehalten müssen eine <xref:System.Windows.Controls.Page> Instanz im Journal, können Sie auf zwei Techniken dafür zeichnen. Erstens können Sie programmgesteuert zu navigieren eine <xref:System.Windows.Controls.Page> -Objekt durch Aufrufen der <xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType> Methode.  
   
@@ -412,7 +412,7 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  Die Lebensdauer einer <xref:System.Windows.Controls.Page> , aktiv beibehalten unterscheidet sich leicht von einer nicht. Beim ersten ein <xref:System.Windows.Controls.Page> , bleibt aktiv navigiert wird, ist er instanziiert, wie eine <xref:System.Windows.Controls.Page> , die nicht aktiv beibehalten. Aber da eine Instanz von der <xref:System.Windows.Controls.Page> beibehalten im Journal, es ist nicht mehr instanziiert für solange sie in der Erfassung ist. Daher, wenn eine <xref:System.Windows.Controls.Page> Initialisierungslogik, die jedes Mal aufgerufen werden muss, hat die <xref:System.Windows.Controls.Page> navigiert wird, Sie sollten es aus dem Konstruktor in verschieben einen Handler für die <xref:System.Windows.FrameworkElement.Loaded> Ereignis. Wie in der folgenden Abbildung dargestellt die <xref:System.Windows.FrameworkElement.Loaded> und <xref:System.Windows.FrameworkElement.Unloaded> Ereignisse sind immer noch jedes Mal ausgelöst, eine <xref:System.Windows.Controls.Page> navigiert wird und jeweils.  
   
- ![Wenn die Loaded- und Unloaded-Ereignisse ausgelöst werden](./media/navigationoverviewfigure17.png "NavigationOverviewFigure17")  
+ ![Wenn die Loaded- und Unloaded-Ereignisse ausgelöst werden](./media/navigation-overview/loaded-and-unloaded-events.png "geladen und entladen Ereignisse werden ausgelöst, wenn eine Seite in und aus navigiert wird.")  
   
  Wenn eine <xref:System.Windows.Controls.Page> ist nicht aktiv beibehalten, Sie sollten nicht eines der folgenden:  
   
@@ -474,7 +474,7 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  Wenn eine <xref:System.Windows.Controls.Page> diese Steuerelemente verwendet, in diese eingegebenen Daten über gespeichert <xref:System.Windows.Controls.Page> -Navigationen hinweg, wie die **Lieblingsfarbe** <xref:System.Windows.Controls.ListBox> in der folgenden Abbildung.  
   
- ![Seite mit Steuerelementen, die den Zustand speichern](./media/navigationoverviewfigure13.png "NavigationOverviewFigure13")  
+ ![Seite mit Steuerelementen, die Zustand speichern](./media/navigation-overview/data-remembered-across-page-navigations.png "eingegebene Daten über Seite Navigationen hinweg gespeichert.")  
   
  Wenn eine <xref:System.Windows.Controls.Page> verfügt über Steuerelemente, die in der obigen Liste nicht, oder wenn der Zustand in benutzerdefinierten Objekten gespeichert wird, müssen Sie Code schreiben, um das Journal den Zustand über <xref:System.Windows.Controls.Page> Navigationen hinweg.  
   
@@ -549,7 +549,7 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  Die folgende Abbildung zeigt die <xref:System.Windows.Navigation.NavigationWindow> als Hauptanwendungsfenster einer eigenständigen Anwendung.  
   
- ![Ein Hauptfenster](./media/navigationoverviewfigure18.png "NavigationOverviewFigure18")  
+ ![Ein Hauptfenster](./media/navigation-overview/navigation-window-as-main-window.png "Navigationsfenster als Hauptfenster")  
   
  In der Abbildung können Sie sehen, die die <xref:System.Windows.Navigation.NavigationWindow> einen Titel hat, obwohl dies nicht, in festgelegt wurde der <xref:System.Windows.Navigation.NavigationWindow> Implementierungscode aus dem vorherigen Beispiel. Stattdessen wird der Titel mit festgelegt die <xref:System.Windows.Controls.Page.WindowTitle%2A> -Eigenschaft, die in den folgenden Code gezeigt wird.  
   
@@ -569,11 +569,11 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  Die folgende Abbildung zeigt das Ergebnis.  
   
- ![Ein Dialogfeld](./media/navigationoverviewfigure19.png "NavigationOverviewFigure19")  
+ ![Ein Dialogfeld](./media/navigation-overview/navigation-window-as-dialog-box.png "Navigationsfenster als Dialogfeld")  
   
  Wie Sie sehen können, <xref:System.Windows.Navigation.NavigationWindow> zeigt [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]-Stil **wieder** und **Vorwärts** Schaltflächen, die Benutzer im Journal navigieren können. Wie in der folgenden Abbildung veranschaulicht, bieten diese Schaltflächen dieselbe Benutzererfahrung.  
   
- ![Zurück- und Vorwärts-Schaltflächen in einem NavigationWindow](./media/navigationoverviewfigure20.png "NavigationOverviewFigure20")  
+ ![Zurück- und Vorwärts-Schaltflächen in einem NavigationWindow](./media/navigation-overview/back-and-forward-buttons-in-navigation-window.png "zurück- und Vorwärts-Schaltflächen in einem Navigationsfenster")  
   
  Wenn Ihre Seiten eigene navigationsunterstützung für Journal und Benutzeroberfläche bereitstellen, können Sie Ausblenden der **zurück** und **weiterleiten** Schaltflächen angezeigt werden, indem <xref:System.Windows.Navigation.NavigationWindow> durch Festlegen des Werts von der <xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI%2A> Eigenschaft `false`.  
   
@@ -591,13 +591,13 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  Dieses Markup wird der `Source` Attribut der `Frame` Element mit einem Paket- [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für die <xref:System.Windows.Controls.Page> , die <xref:System.Windows.Controls.Frame> zunächst navigieren sollte. Die folgende Abbildung zeigt ein [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] mit einem <xref:System.Windows.Controls.Page> , bei dem ein <xref:System.Windows.Controls.Frame> , die zwischen mehreren Seiten navigiert ist.  
   
- ![Ein Frame, der zwischen mehreren Seiten navigiert](./media/navigationoverviewfigure5.png "NavigationOverviewFigure5")  
+ ![Ein Frame, der zwischen mehreren Seiten navigiert](./media/navigation-overview/frame-navigation-between-multiple-pages.png "zeigt eine Frame-Navigation zwischen mehreren Seiten.")  
   
  Müssen Sie nicht nur mit <xref:System.Windows.Controls.Frame> innerhalb des Inhalts von einem <xref:System.Windows.Controls.Page>. Es ist auch üblich, zum Hosten einer <xref:System.Windows.Controls.Frame> innerhalb des Inhalts von einer <xref:System.Windows.Window>.  
   
  In der Standardeinstellung <xref:System.Windows.Controls.Frame> nur sein eigenes Journal verwendet, in dem kein anderes. Wenn eine <xref:System.Windows.Controls.Frame> ist Teil des Inhalts, der weder gehostet wird eine <xref:System.Windows.Navigation.NavigationWindow> oder [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame> verwendet das Journal, zu dem gehört die <xref:System.Windows.Navigation.NavigationWindow> oder [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. In einigen Fällen jedoch eine <xref:System.Windows.Controls.Frame> muss unter Umständen für das eigene Journal zuständig sein. Ein Grund dafür ist Navigation mithilfe des Journals innerhalb der Seiten zu ermöglichen, die von gehosteten eine <xref:System.Windows.Controls.Frame>. Dies wird in der folgenden Abbildung verdeutlicht.  
   
- ![Frame- und Seiten-Diagramm](./media/navigationoverviewfigure7.png "NavigationOverviewFigure7")  
+ ![Frame- und Seiten-Diagramm](./media/navigation-overview/journal-navigation-within-pages-hosted-by-a-frame.png "Navigation mithilfe des Journals innerhalb von einem Frame gehostete Seiten zeigt.")  
   
  In diesem Fall können Sie konfigurieren die <xref:System.Windows.Controls.Frame> auf sein eigenes Journal verwendet, durch Festlegen der <xref:System.Windows.Controls.Frame.JournalOwnership%2A> Eigenschaft der <xref:System.Windows.Controls.Frame> zu <xref:System.Windows.Navigation.JournalOwnership.OwnsJournal>. Dies wird im folgenden Markup gezeigt.  
   
@@ -607,7 +607,7 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  Die folgende Abbildung zeigt die Auswirkung der Navigation in einem <xref:System.Windows.Controls.Frame> , sein eigenes Journal verwendet.  
   
- ![Ein Frame mit einem eigenen Journal](./media/navigationoverviewfigure8.png "NavigationOverviewFigure8")  
+ ![Ein Frame, der sein eigenes Journal verwendet](./media/navigation-overview/frame-uses-its-own-journal.png "Dies zeigt die Auswirkung der Navigation innerhalb eines Rahmens, der sein eigenes Journal verwendet.")  
   
  Beachten Sie, die die Journaleinträge, von der Navigations-angezeigt werden [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] in die <xref:System.Windows.Controls.Frame>, sondern nach [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)].  
   
@@ -624,19 +624,19 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
 ## <a name="navigation-hosts"></a>Navigationshosts  
  <xref:System.Windows.Controls.Frame> und <xref:System.Windows.Navigation.NavigationWindow> sind Klassen, die als Navigationshosts bezeichnet werden. Ein *Navigationshost* ist eine Klasse, navigieren Sie zu und Inhalt anzeigen kann. Um dies zu erreichen, verwendet jeder Navigationshost eigene <xref:System.Windows.Navigation.NavigationService> und Journal. Die grundlegende Konstruktion eines Navigationshosts wird in der folgenden Abbildung gezeigt.  
   
- ![Navigatordiagramme](./media/navigationoverviewfigure15.png "NavigationOverviewFigure15")  
+ ![Navigatordiagramme](./media/navigation-overview/navigation-host-construction.png "grundlegende Konstruktion eines Navigationshosts")  
   
  Grundsätzlich werden dadurch <xref:System.Windows.Navigation.NavigationWindow> und <xref:System.Windows.Controls.Frame> Navigation identisch zu unterstützen, die eine [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] bietet, wenn im Browser gehostet.  
   
  Neben der Verwendung von <xref:System.Windows.Navigation.NavigationService> und einem Journal, implementieren Navigationshosts dieselben Member, die <xref:System.Windows.Navigation.NavigationService> implementiert. Dies wird in der folgenden Abbildung verdeutlicht.  
   
- ![Ein Journal in einem Frame und in einem NavigationWindow](./media/naivgationoverviewfigure24.png "NaivgationOverviewFigure24")  
+ ![Ein Journal in einem Frame und in einem NavigationWindow](./media/navigation-overview/navigation-window-and-frame.png "Navigationsfenster und Frame")  
   
  Dies ermöglicht es Ihnen, Navigationsunterstützung direkt für sie zu programmieren. Dies in Erwägung, wenn Sie eine benutzerdefinierte Navigation bereitstellen müssen [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] für eine <xref:System.Windows.Controls.Frame> , befindet sich einem <xref:System.Windows.Window>. Darüber hinaus implementieren beide Typen zusätzliche, navigationsbezogenen-Elemente, einschließlich `BackStack` (<xref:System.Windows.Navigation.NavigationWindow.BackStack%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Frame.BackStack%2A?displayProperty=nameWithType>) und `ForwardStack` (<xref:System.Windows.Navigation.NavigationWindow.ForwardStack%2A?displayProperty=nameWithType>, <xref:System.Windows.Controls.Frame.ForwardStack%2A?displayProperty=nameWithType>), mit denen Sie die Journaleinträge im zurück in den aufgelistet werden. Aufrufliste und Vorwärtsstapel.  
   
  Wie bereits erwähnt, können in einer Anwendung mehrere Journale vorhanden sein. Die folgende Abbildung enthält ein Beispiel für die Fälle, in denen das auftreten kann.  
   
- ![Mehrere Journale in einer Anwendung](./media/naivgationoverviewfigure25.png "NaivgationOverviewFigure25")  
+ ![Mehrere Journale in einer Anwendung](./media/navigation-overview/multiple-journals-in-one-application.png "Dies ist ein Beispiel für mehrere Journale in einer Anwendung.")  
   
 <a name="Navigating_to_Content_Other_than_Pages"></a>   
 ## <a name="navigating-to-content-other-than-xaml-pages"></a>Navigieren zu anderem Inhalt als XAML-Seiten  
@@ -660,7 +660,7 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  Wenn Sie auf die Datei doppelklicken, wird der Browser geöffnet und navigiert zur Datei und zeigt den Inhalt an. Das wird in der folgenden Abbildung gezeigt.  
   
- ![Anzeige des Inhalts in der Datei Person.XAML](./media/navigationoverviewfigure21.png "NavigationOverviewFigure21")  
+ ![Anzeige des Inhalts in der Datei Person.XAML](./media/navigation-overview/contents-of-person-xaml-file.png "zeigt den Inhalt der Datei Person.XAML.")  
   
  Sie können eine loose anzeigen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei aus den folgenden:  
   
@@ -711,7 +711,7 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  Die folgende Abbildung zeigt das Ergebnis.  
   
- ![Eine Seite, die zu einer Klasse navigiert](./media/navigationoverviewfigure22.png "NavigationOverviewFigure22")  
+ ![Eine Seite, die zu einer Klasse navigiert](./media/navigation-overview/page-navigates-to-an-object.png "Dies ist ein Beispiel für eine Seite, auf ein Objekt navigiert.")  
   
  Aus dieser Abbildung können Sie ersehen, dass nichts Nützliches angezeigt wird. In der Tat der Wert, der angezeigt wird, ist der Rückgabewert von der `ToString` -Methode für die **Person** Objekt; standardmäßig ist dies die einzige Wert, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zum Darstellen des Objekts verwenden können. Sie können außer Kraft setzen der `ToString` Methode, um aussagekräftigere Informationen zurückzugeben, allerdings wird auch dann nur ein Zeichenfolgenwert sein. Sie verwenden können, eine Technik, der die Darstellungsfunktionen von nutzt [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] ist die Verwendung von Datenvorlagen. Sie können eine Datenvorlage implementieren, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] können mit einem Objekt eines bestimmten Typs zuordnen. Der folgende Code zeigt eine Datenvorlage für die `Person` Objekt.  
   
@@ -719,7 +719,7 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  Hier ist die Datenvorlage zugeordnet ist die `Person` Typ mithilfe der `x:Type` -Markuperweiterung in der `DataType` Attribut. Die Datenvorlage bindet dann `TextBlock` Elemente (finden Sie unter <xref:System.Windows.Controls.TextBlock>) auf die Eigenschaften der `Person` Klasse. Die folgende Abbildung zeigt die aktualisierte Darstellung des der `Person` Objekt.  
   
- ![Navigation zu einer Klasse mit einer Datenvorlage](./media/navigationoverviewfigure23.png "NavigationOverviewFigure23")  
+ ![Navigation zu einer Klasse, die eine Datenvorlage](./media/navigation-overview/navigating-to-a-class.png "Navigation zu einer Klasse, die eine Datenvorlage.")  
   
  Ein Vorteil dieser Technik liegt in der Konsistenz, die Ihnen die Wiederverwendung der Datenvorlage zur konsistenten Anzeige Ihrer Objekte in der gesamten Anwendung erlaubt.  
   

@@ -2,12 +2,12 @@
 title: Asynchrone Rückgabetypen (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 4587ec66df91683a1fd02f0ec09c09099d922b0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548244"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368180"
 ---
 # <a name="async-return-types-c"></a>Asynchrone Rückgabetypen (C#)
 Asynchrone Methoden können folgende Rückgabetypen haben:
@@ -24,7 +24,7 @@ Weitere Informationen über die Methode „Async“ finden Sie unter [Asynchrono
   
 Jeder Rückgabetyp wird in einem der folgenden Abschnitte untersucht und am Ende des Themas wird ein vollständiges Beispiel aller drei Typen verwenden.  
   
-##  Rückgabetyp <a name="BKMK_TaskTReturnType"></a> Task\<TResult\>  
+## Rückgabetyp <a name="BKMK_TaskTReturnType"></a> Task\<TResult\>  
 Der <xref:System.Threading.Tasks.Task%601>-Rückgabetyp wird für eine asynchrone Methode verwendet, die eine [Rückgabeanweisung](../../../../csharp/language-reference/keywords/return.md) (C#) enthält, in der der Operand den Typ `TResult` hat.  
   
 Im folgenden Beispiel enthält die asynchrone `GetLeisureHours`-Methode eine `return`-Anweisung, die eine ganze Zahl zurückgibt. Aus diesem Grund muss die Methodendeklaration den Rückgabetyp `Task<int>` haben.  Die asynchrone Methode <xref:System.Threading.Tasks.Task.FromResult%2A> ist ein Platzhalter für einen Vorgang, der eine Zeichenfolge zurückgibt.
@@ -40,7 +40,7 @@ Sie können die Vorgehensweise besser verstehen, wenn Sie den Aufruf von `GetLei
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
-##  <a name="BKMK_TaskReturnType"></a> Aufgabenrückgabetyp  
+## <a name="BKMK_TaskReturnType"></a> Aufgabenrückgabetyp  
 Asynchrone Methoden, die keine `return`-Anweisung enthalten oder eine `return`-Anweisung enthalten, die keinen Operanden zurückgibt, haben normalerweise einen Rückgabetyp von <xref:System.Threading.Tasks.Task>. Solche Methoden geben `void` zurück, wenn sie synchron ausgeführt werden. Wenn Sie einen <xref:System.Threading.Tasks.Task>-Rückgabetyp für eine asynchrone Methode verwenden, kann ein aufrufende Methode einen `await`-Operator verwenden, um den Abschluss des Aufrufers anzuhalten, bis die aufgerufene asynchrone Methode beendet ist.  
   
 Im folgenden Beispiel enthält die asynchrone Methode `WaitAndApologize` keine `return`-Anweisung, daher gibt die Methode ein <xref:System.Threading.Tasks.Task>-Objekt zurück. Dadurch wird ermöglicht, dass auf `WaitAndApologize` erwartet wird. Beachten Sie, dass der Typ <xref:System.Threading.Tasks.Task> keine `Result`-Eigenschaft enthält, da er nicht über einen Rückgabewert verfügt.  
@@ -55,7 +55,7 @@ Der folgende Code trennt Aufrufe der Methode `WaitAndApologize` vom Erwarten der
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a> Rückgabetyp „Void“
+## <a name="BKMK_VoidReturnType"></a> Rückgabetyp „Void“
 
 Der Rückgabetyp `void` wird in asynchronen Ereignishandlern verwendet, die den Rückgabetyp `void` erfordern. Für andere Methoden als Ereignishandler, die keinen Wert zurückgeben, sollten Sie stattdessen <xref:System.Threading.Tasks.Task> zurückgeben, da eine asynchrone Methode, die `void` zurückgibt, nicht erwartet werden kann. Jeder Aufrufer einer solchen Methode muss in der Lage sein, in seiner Ausführung bis zum Abschluss fortzufahren, ohne auf die aufgerufene asynchrone Methode zu warten, und der Aufrufer muss unabhängig von den Werten oder Ausnahmen sein, die die asynchrone Methode generiert.  
   

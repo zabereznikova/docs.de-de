@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-ms.openlocfilehash: 706a020bfb007250b9a1b708da25704aacd755e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1aa3b54eb842bb92e4ae2cbb562a11464acac63
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601534"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717445"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Vorgehensweise: Gruppieren von Steuerelementen mit dem Panel-Steuerelement in Windows Forms mithilfe des Designers
 Windows Forms <xref:System.Windows.Forms.Panel> Steuerelemente werden verwendet, um die Gruppierung anderer Steuerelemente. Es gibt drei Gründe zum Gruppieren von Steuerelementen. Eine ist die visuelle Gruppierung von verwandten Form-Elemente für eine übersichtliche Benutzeroberfläche. eine andere ist die programmgesteuerte Gruppieren von Optionsfeldern z. B. das letzte ist für die Steuerelemente zur Entwurfszeit als Einheit verschieben.  
@@ -30,6 +30,6 @@ Windows Forms <xref:System.Windows.Forms.Panel> Steuerelemente werden verwendet,
 3.  (Optional) Wenn Sie einen Rahmen um einen Bereich hinzufügen möchten, legen Sie dessen <xref:System.Windows.Forms.BorderStyle> Eigenschaft. Es gibt drei Optionen: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>, und <xref:System.Windows.Forms.BorderStyle.None>.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Panel-Steuerelement](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
-- [Übersicht über das Panel-Steuerelement](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)
-- [Vorgehensweise: Festlegen des Hintergrunds eines Bereichs](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)
+- [Panel-Steuerelement](panel-control-windows-forms.md)
+- [Übersicht über das Panel-Steuerelement](panel-control-overview-windows-forms.md)
+- [Vorgehensweise: Festlegen des Hintergrunds eines Bereichs](how-to-set-the-background-of-a-windows-forms-panel.md)

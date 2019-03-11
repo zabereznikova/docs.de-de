@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: bc1bc1376271b3a01d9b720dd85f812ea55cf34c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d39840f3b12df621a0e8d5fae5725065c295e59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665044"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361264"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname (C#-Compileroption)
 Gibt eine Assembly an, auf deren nicht öffentliche Typen ein .NET-Modul zugreifen kann.  
@@ -28,7 +28,7 @@ Gibt eine Assembly an, auf deren nicht öffentliche Typen ein .NET-Modul zugreif
  `assembly_name`  
  Der Name einer Assembly, auf deren nicht öffentliche Typen die NETMODULE-Datei zugreifen kann  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  **-moduleassemblyname** sollte beim Erstellen einer NETMODULE-Datei und wenn die folgenden Bedingungen erfüllt sind verwendet werden:  
   
 -   Die NETMODULE-Datei benötigt Zugriff auf nicht öffentliche Typen in einer vorhandenen Assembly.  
@@ -39,7 +39,7 @@ Gibt eine Assembly an, auf deren nicht öffentliche Typen ein .NET-Modul zugreif
   
  Weitere Informationen zum Erstellen einer NETMODULE-Datei finden Sie unter [-target:module (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md).  
   
- Weitere Informationen finden Sie unter [Friend-Assemblys](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md).  
+ Weitere Informationen finden Sie unter [Friend-Assemblys](../../../standard/assembly/friend-assemblies.md).  
   
  Diese Option steht nicht in der Entwicklungsumgebung zur Verfügung. Sie ist nur verfügbar, wenn Sie über die Befehlszeile kompilieren.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb1fed9455add5a6fa48443bc7b862112b74a871
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 4649663338efd0cc07b435991f90ba15843cc301
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220639"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496832"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)
 Das [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Metadatenexport-Tool (Winmdexp.exe) transformiert ein .NET Framework-Modul in eine Datei, die [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Metadaten enthält. Obwohl .NET Framework-Assemblys und [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Metadatendateien dasselbe physische Format verwenden, gibt es Unterschiede bezüglich des Inhalts der Metadatentabellen, d. h. dass .NET Framework-Assemblys nicht automatisch als [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Komponenten verwendet werden können. Der Prozess des Konvertierens eines .NET Framework-Moduls in eine [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Komponente wird als *Exportieren* bezeichnet. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] enthält die resultierende Windows-Metadatendatei (.winmd) sowohl Metadaten als auch Implementierung.  
@@ -29,7 +29,7 @@ Das [!INCLUDE[wrt](../../../includes/wrt-md.md)]-Metadatenexport-Tool (Winmdexp.
 winmdexp [options] winmdmodule  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
   
 |Argument oder Option|Beschreibung|  
 |------------------------|-----------------|  

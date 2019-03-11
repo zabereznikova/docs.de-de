@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: b08d119c0c7edb71ceab5c763c1359bf4c90cfec
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: cb2dd26d3f111e8de0dc9c7904837d9b053d17bb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212533"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724712"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Bewährte Methoden für Transport Layer Security (TLS) mit .NET Framework
 
@@ -252,8 +252,8 @@ Die bewährten Methoden in diesem Artikel hängen von der Installation aktueller
 
 Um .NET Framework zu aktualisieren, damit das Betriebssystem die beste Version von TLS verwenden kann, müssen mindestens folgende Installationsanforderungen erfüllt sein:
 
-- Die [Vorschauversion des Qualitätsrollups für .NET Framework vom August 2017](https://blogs.msdn.microsoft.com/dotnet/2017/08/16/net-framework-august-2017-preview-of-quality-rollup)
-- **Oder** das [Sicherheits- und Qualitätsrollup für .NET Framework vom September 2017](https://blogs.msdn.microsoft.com/dotnet/2017/09/12/net-framework-september-2017-security-and-quality-rollup)
+- Die [Vorschauversion des Qualitätsrollups für .NET Framework vom August 2017](https://devblogs.microsoft.com/dotnet/net-framework-august-2017-preview-of-quality-rollup/)
+- **Oder** das [Sicherheits- und Qualitätsrollup für .NET Framework vom September 2017](https://devblogs.microsoft.com/dotnet/net-framework-september-2017-security-and-quality-rollup/)
 
 Siehe auch:
 

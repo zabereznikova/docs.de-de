@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 95a060f047094d7f1336a3e1e26b34c7d47b5a42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e96f86e516e7b741aa9fbf67efd1683d0845101
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495513"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488512"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
@@ -32,7 +32,7 @@ Geben Sie an der Eingabeaufforderung Folgendes ein:
 ildasm [options] [PEfilename] [options]
 ```
 
-#### <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameter
 
 Für Dateien mit den Erweiterungen *.exe*, *.dll*, *.obj*, *.lib* und *.winmd* stehen die folgenden Optionen zur Verfügung.
 
@@ -91,7 +91,7 @@ Die folgenden Optionen gelten nur für *LIB*-Dateien bei der Ausgabe in eine Dat
 > [!NOTE]
 > Bei allen Optionen für *Ildasm.exe* wird nicht zwischen Groß- und Kleinschreibung unterschieden, und sie werden anhand der ersten drei Buchstaben erkannt. **/quo** entspricht beispielsweise **/quoteallnames**. Optionen, die Argumente angeben, können entweder einen Doppelpunkt (:) oder ein Gleichheitszeichen (=) als Trennzeichen zwischen der Option und dem Argument enthalten. So wären zum Beispiel **/output:** *dateiname* und **/output=** *dateiname* identisch.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 *Ildasm.exe* funktioniert nur bei PE-Dateien auf der Festplatte. Bei Dateien, die im globalen Assemblycache installiert sind, funktioniert dieses Tool nicht.
 

@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: c4d2d84a59aebedda2d1e6380caeef170051c0a3
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 5bce891a0061bb1810559febf1ab904a5fb6fc94
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411442"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675783"
 ---
 # <a name="customizing-structure-marshalling"></a>Anpassen des Marshallens für Strukturen
 
@@ -65,7 +65,7 @@ struct WinBool
 };
 ```
 
-Mit den unten gezeigten Werten `UmanagedType.U1` oder `UnmanagedType.I1` können Sie die Runtime anweisen, das `b`-Feld als nativen 1-Byte-`bool`-Typ zu marshallen.
+Mit den unten gezeigten Werten `UnmanagedType.U1` oder `UnmanagedType.I1` können Sie die Runtime anweisen, das `b`-Feld als nativen 1-Byte-`bool`-Typ zu marshallen.
 
 ```csharp
 public struct CBool
@@ -342,7 +342,7 @@ struct Currency
 Unter Windows können Sie Felder vom Typ `object` in nativen Code marshallen. Diese Felder können in einen der drei folgenden Typen gemarshallt werden:
 - [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
-- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch). 
+- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 
 Standardmäßig wird ein Feld vom Typ `object` in ein `IUnknown*`-Feld gemarshallt, das das Objekt umschließt.
 

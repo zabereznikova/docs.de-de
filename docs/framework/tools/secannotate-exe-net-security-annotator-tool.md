@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be9100f49fcf6ed2926489e8346123eb7c3cfc70
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: caedc586a9d33ecbdc4a8c7202abcfdaafabd98c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221348"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469273"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET Security Annotator-Tool)
 Das .NET Security Annotator-Tool (SecAnnotate.exe) ist eine Befehlszeilenanwendung, die die `SecurityCritical`- und `SecuritySafeCritical`-Teile einer oder mehrerer Assemblys identifiziert.  
@@ -29,7 +29,7 @@ Das .NET Security Annotator-Tool (SecAnnotate.exe) ist eine Befehlszeilenanwendu
 SecAnnotate.exe [parameters] [assemblies]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
   
 |Option|Beschreibung|  
 |------------|-----------------|  
@@ -49,7 +49,7 @@ SecAnnotate.exe [parameters] [assemblies]
 |`/x`<br /><br /> oder<br /><br /> `/verbose`|Legt die ausführliche Ausgabe während des Kommentierens fest.|  
 |`/y:` *verzeichnis*<br /><br /> oder<br /><br /> `/symbolpath:` *verzeichnis*|Schließt das angegebene Verzeichnis beim Suchen nach Symboldateien während der Anmerkung ein.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Parameter und Assemblys werden möglicherweise auch in einer Antwortdatei bereitgestellt, die in der Befehlszeile angegeben und der ein @-Zeichen vorangestellt wird. Jede Zeile in der Antwortdatei sollte einen einzelnen Parameter- oder Assemblynamen enthalten.  
   
  Weitere Informationen zu .NET Security Annotator finden Sie im Eintrag [Using SecAnnotate to Analyze Your Assemblies for Transparency Violations (Analysieren Ihrer Assemblys auf Transparenzverstöße mit SecAnnotate)](https://go.microsoft.com/fwlink/?LinkId=187648) im .NET Security Blog.  

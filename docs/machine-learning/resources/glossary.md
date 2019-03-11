@@ -2,17 +2,20 @@
 title: Machine Learning-Glossar – ML.NET
 description: Ein Glossar mit wichtigen Begriffen aus dem Machine Learning-Bereich, die Sie bei der Erstellung benutzerdefinierter Modelle unterstützen.
 ms.custom: seodec18
-ms.date: 12/20/2018
-ms.openlocfilehash: 3dfa17e9264bf913465adb63ce0a90a9d196e617
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.date: 03/05/2019
+ms.openlocfilehash: 52f4aa7300edbbdabcc37d7710654dab455d27b0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092435"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498899"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Machine Learning-Glossar mit wichtigen Begriffen
 
 Die folgende Liste ist eine Zusammenstellung wichtiger Begriffe aus dem Machine Learning-Bereich, die Sie bei der Erstellung benutzerdefinierter Modelle in ML.NET unterstützen.
+
+> [!NOTE]
+> Diese Dokumentation bezieht sich auf ML.NET, das sich zurzeit in der Vorschau befindet. Änderungen am Material vorbehalten. Weitere Informationen finden Sie in der [ML.NET-Einführung](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
 
 ## <a name="accuracy"></a>Genauigkeit
 

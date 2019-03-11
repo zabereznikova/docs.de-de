@@ -2,12 +2,12 @@
 title: Service Trace Viewer-Tool (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442892"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680385"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer-Tool (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die Analyse der diagnoseablaufverfolgungen, die von WCF generiert werden. Service Trace Viewer bietet eine Möglichkeit, ganz einfach zusammenführen, anzeigen und Filtern von Ablaufverfolgungsnachrichten im Protokoll, damit können Sie diagnostizieren, reparieren und prüfen die WCF-Dienstprobleme.  
@@ -50,7 +50,13 @@ Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die
 |ActivityTracing|Ablaufereignisse zwischen Verarbeitungsaktivitäten und Komponenten.<br /><br /> Diese Ebene ermöglicht es Administratoren und Entwicklern, Anwendungen in einer Anwendungsdomäne zu korrelieren.<br /><br /> -Ablaufverfolgungen für Aktivitätsgrenzen: Start/Stopp.<br />-Ablaufverfolgungen für Übertragungen.|  
   
  Mit `add` können Sie den Namen und den Typ des Ablaufverfolgungslisteners angeben, den Sie verwenden möchten. In der Beispielkonfiguration wird der Listener `sdt` genannt und der standardmäßige .NET Framework-Ablaufverfolgungslistener (`System.Diagnostics.XmlWriterTraceListener`) wird als Typ hinzugefügt. Verwenden Sie `initializeData`, um den Namen der Protokolldatei für diesen Listener festzulegen. Außerdem können Sie einen einfachen Dateinamen durch einen vollqualifizierten Pfad ersetzen.  
-  
+
+Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuerelemente in einigen Designs mit hohem Kontrast angezeigt werden. Sie können diese Änderung deaktivieren, durch das Entfernen der folgenden Einstellung aus der *svcTraceViewer.exe.config* Datei:
+
+```xml
+<AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+```
+
 ## <a name="using-the-service-trace-viewer-tool"></a>Verwenden des Service Trace Viewer-Tools  
   
 ### <a name="opening-and-viewing-wcf-trace-files"></a>Öffnen und Anzeigen von WCF-Ablaufverfolgungsdateien  

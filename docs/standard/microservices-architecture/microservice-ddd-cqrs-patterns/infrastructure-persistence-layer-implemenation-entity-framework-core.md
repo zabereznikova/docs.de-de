@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 01e326b049ab8bb8d9c7f8c78acfc272d1d57ae9
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 637e51c45217c9ff214395235348b09119200fe7
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146133"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676342"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementieren der Infrastrukturpersistenzebene mit Entity Framework Core
 
@@ -56,7 +56,7 @@ public class Order : Entity
     private DateTime _orderDate;
     // Other fields ...
 
-    private readonly List<OrderItem> _orderItems; 
+    private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
     protected Order() { }
@@ -72,7 +72,7 @@ public class Order : Entity
     {
         // Validation logic...
 
-        var orderItem = new OrderItem(productId, productName, 
+        var orderItem = new OrderItem(productId, productName,
                                       unitPrice, discount,
                                       pictureUrl, units);
         _orderItems.Add(orderItem);
@@ -80,7 +80,7 @@ public class Order : Entity
 }
 ```
 
-Beachten Sie, dass auf die Eigenschaft `OrderItems` mit `IReadOnlyCollection<OrderItem>` nur schreibgeschützt zugegriffen werden kann. Dieser Typ ist schreibgeschützt, damit er vor regelmäßigen externen Aktualisierungen geschützt ist. 
+Beachten Sie, dass auf die Eigenschaft `OrderItems` mit `IReadOnlyCollection<OrderItem>` nur schreibgeschützt zugegriffen werden kann. Dieser Typ ist schreibgeschützt, damit er vor regelmäßigen externen Aktualisierungen geschützt ist.
 
 EF Core bietet eine Möglichkeit, das Domänenmodell der physischen Datenbank zuzuordnen, ohne das Domänenmodell zu „verunreinigen“. Dabei handelt es sich um reinen .NET-POCO-Code, da die Zuordnungsaktion in der Persistenzebene implementiert wird. Bei dieser Zuordnungsaktion müssen Sie die Zuordnung zwischen den Feldern und der Datenbank konfigurieren. Im folgenden Beispiel der `OnModelCreating`-Methode von `OrderingContext` und der `OrderEntityTypeConfiguration`Klasse weist der Aufruf von `SetPropertyAccessMode` EF Core an, über ein Feld auf die Eigenschaft `OrderItems` zuzugreifen.
 
@@ -101,7 +101,7 @@ class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
         orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
         // Other configuration
 
-        var navigation = 
+        var navigation =
               orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
 
         //EF access the OrderItem collection property through its backing field
@@ -140,7 +140,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 
         public Buyer Add(Buyer buyer)
         {
-            return _context.Buyers.Add(buyer).Entity; 
+            return _context.Buyers.Add(buyer).Entity;
         }
 
         public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
@@ -353,11 +353,11 @@ Wie weiter oben bereits erläutert, ist das Abfragespezifikationsmuster ein dom�
 
 Das Abfragespezifikationsmuster definiert eine Abfrage in einem Objekt. Um beispielsweise eine ausgelagerte Abfrage, die nach bestimmten Produkten sucht, zu kapseln, können Sie eine PagedProduct-Spezifikation erstellen, die die erforderlichen Eingabeparameter (pageNumber, pageSize, Filter usw.) verwendet. Anschließend würde ein IQuerySpecification-Objekt innerhalb einer Repositorymethode (in der Regel eine List()-Überladung) akzeptiert und die erwartete Abfrage anhand dieser Spezifikation ausgeführt werden.
 
-Ein Beispiel für eine generische Spezifikationsschnittstelle ist der folgende Code aus [eShopOnweb](https://github.com/dotnet-architecture/eShopOnWeb).
+Ein Beispiel für eine generische Spezifikationsschnittstelle ist der folgende Code aus [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb).
 
 ```csharp
 // GENERIC SPECIFICATION INTERFACE
-// https://github.com/dotnet-architecture/eShopOnWeb 
+// https://github.com/dotnet-architecture/eShopOnWeb
 
 public interface ISpecification<T>
 {
@@ -372,7 +372,7 @@ Die Implementierung einer generischen Spezifikationsbasisklasse wäre dann die f
 ```csharp
 // GENERIC SPECIFICATION IMPLEMENTATION (BASE CLASS)
 // https://github.com/dotnet-architecture/eShopOnWeb
- 
+
 public abstract class BaseSpecification<T> : ISpecification<T>
 {
     public BaseSpecification(Expression<Func<T, bool>> criteria)
@@ -381,16 +381,16 @@ public abstract class BaseSpecification<T> : ISpecification<T>
     }
     public Expression<Func<T, bool>> Criteria { get; }
 
-    public List<Expression<Func<T, object>>> Includes { get; } = 
+    public List<Expression<Func<T, object>>> Includes { get; } =
                                            new List<Expression<Func<T, object>>>();
 
     public List<string> IncludeStrings { get; } = new List<string>();
- 
+
     protected virtual void AddInclude(Expression<Func<T, object>> includeExpression)
     {
         Includes.Add(includeExpression);
     }
-    
+
     // string-based includes allow for including children of children
     // e.g. Basket.Items.Product
     protected virtual void AddInclude(string includeString)
@@ -432,18 +432,19 @@ public IEnumerable<T> List(ISpecification<T> spec)
     var queryableResultWithIncludes = spec.Includes
         .Aggregate(_dbContext.Set<T>().AsQueryable(),
             (current, include) => current.Include(include));
- 
+
     // modify the IQueryable to include any string-based include statements
     var secondaryResult = spec.IncludeStrings
         .Aggregate(queryableResultWithIncludes,
             (current, include) => current.Include(include));
- 
+
     // return the result of the query using the specification's criteria expression
     return secondaryResult
                     .Where(spec.Criteria)
                     .AsEnumerable();
 }
 ```
+
 Zusätzlich zum Kapseln der Filterlogik kann die Spezifikation die Form der zurückzugebenden Daten angeben, einschließlich der aufzufüllenden Eigenschaften.
 
 Obwohl davon abgeraten wird, IQueryable-Objekte aus einem Repository abzurufen, ist es in Ordnung, sie innerhalb des Repositorys zum Erstellen eines Ergebnissatzes zu verwenden. Sie können die Verwendung dieses Ansatzes oben bei der List-Methode sehen, die intermediäre IQueryable-Ausdrücke verwendet, um die Liste der in der Abfrage enthaltenen Elemente zu erstellen, bevor die Abfrage mit den Kriterien der Spezifikation in der letzten Zeile ausgeführt wird.
@@ -468,6 +469,6 @@ Obwohl davon abgeraten wird, IQueryable-Objekte aus einem Repository abzurufen, 
 - **The Specification pattern (Spezifikationsmuster)** \
   [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
 
->[!div class="step-by-step"]
->[Zurück](infrastructure-persistence-layer-design.md)
->[Weiter](nosql-database-persistence-infrastructure.md)
+> [!div class="step-by-step"]
+> [Zurück](infrastructure-persistence-layer-design.md)
+> [Weiter](nosql-database-persistence-infrastructure.md)

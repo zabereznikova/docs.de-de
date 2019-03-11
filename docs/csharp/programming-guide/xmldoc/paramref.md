@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <paramref> C# XML tag
 - paramref C# XML tag
 ms.assetid: 756c24c1-f591-40e8-a838-559761539b0b
-ms.openlocfilehash: e6d6c62c97179d74bdb6bdd88eeb1ee129226fed
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9612fb61151953e0d3b70a4803aafeb571aec7dd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201403"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477942"
 ---
 # <a name="paramref-c-programming-guide"></a>\<paramref> (C#-Programmierhandbuch)
 ## <a name="syntax"></a>Syntax  
@@ -23,7 +23,7 @@ ms.locfileid: "57201403"
 <paramref name="name"/>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `name`  
  Der Name des Parameters, auf den verwiesen wird. Setzen Sie den Namen in einfache oder doppelte Anführungszeichen (" ").  
   

@@ -2,12 +2,12 @@
 title: Auflistungen (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: ddbbc60c497b324bdeb2614149569d5de5f4c114
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: d5e3aeab2e035ec2b5f97fd41c84ffa7625ba0b4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675412"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373438"
 ---
 # <a name="collections-c"></a>Auflistungen (C#)
 Für eine Vielzahl von Anwendungen sollten Sie Gruppen von miteinander verwandten Objekten erstellen und verwalten. Zum Gruppieren von Objekten gibt es zwei Möglichkeiten: das Erstellen von Objektarrays und das Erstellen von Auflistungen von Objekten.  
@@ -541,7 +541,7 @@ public class Color
 ```  
 
 <a name="BKMK_Iterators"></a> 
-##  <a name="iterators"></a>Iterators  
+## <a name="iterators"></a>Iterators  
  Ein *Iterator* wird verwendet, um eine benutzerdefinierte Iteration durch eine Auflistung auszuführen. Ein Iterator kann eine Methode oder ein `get`-Accessor sein. Ein Iterator verwendet eine [yield return](../../../csharp/language-reference/keywords/yield.md)-Anweisung, um jedes Element der Auflistung separat zurückzugeben.  
   
  Sie rufen einen Iterator mithilfe einer [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Anweisung auf. Jede Iteration der `foreach`-Schleife ruft den Iterator auf. Wenn eine `yield return`-Anweisung im Iterator erreicht ist, wird ein Ausdruck zurückgegeben, und die aktuelle Position im Code wird beibehalten. Wenn der Iterator das nächste Mal aufgerufen wird, wird die Ausführung von dieser Position neu gestartet.  

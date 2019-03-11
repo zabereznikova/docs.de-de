@@ -4,16 +4,16 @@ description: Verstehen Sie die grundlegenden Konzepte für das containerisieren 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: eff764472b4a9fc5b699545fc9629cc12d0186ca
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747261"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676836"
 ---
 # <a name="monolithic-applications"></a>Monolithische Anwendungen
 
-Sie sind in diesem Szenario erstellen eine einzelne und monolithischen Webanwendung oder einen Dienst und als Container bereitstellen. Innerhalb der Anwendung möglicherweise nicht die Struktur monolithische sein; Es kann mehrere Bibliotheken, Komponenten oder sogar Ebenen (Anwendungsebene, Domänenebene, Datenzugriffsebene, usw.) enthalten. Extern, ist es einem einzelnen Container, wie ein einzelner Prozess, einzelne Webanwendung oder einzelnen Dienst.
+In diesem Szenario sind Sie erstellen eine einfachen und monolithischen Webanwendung oder einen Dienst und als Container bereitstellen. Innerhalb der Anwendung möglicherweise nicht die Struktur monolithische sein; Es kann mehrere Bibliotheken, Komponenten oder sogar Ebenen (Anwendungsebene, Domänenebene, Datenzugriffsebene, usw.) enthalten. Extern, ist es einem einzelnen Container, wie ein einzelner Prozess, einzelne Webanwendung oder einzelnen Dienst.
 
 Stellen Sie einen einzelnen Container bereit, der diese Anwendung darstellt, um dieses Modell zu verwalten. Für die Skalierung, fügen Sie einfach ein paar weitere Kopien mit einem vorangestellten Lastenausgleich hinzu. Die Einfachheit stammt aus der Verwaltung von einer einzelnen Bereitstellung in einem einzelnen Container oder virtuellen Computer (VM).
 
@@ -71,7 +71,7 @@ Entweder bietet einfach eine einzelner Container-app, Azure App Services, weil e
 
 Mit Azure App Service ist intuitiv und die Einrichtung und schnell ausgeführt werden, da sie über gute Git bietet Integration auszuführende Code, erstellen Sie sie in Microsoft Visual Studio, und direkt in Azure bereitstellen. Traditionell (mit keine Docker), ggf. andere Funktionen, Frameworks oder Abhängigkeiten, die in App Services nicht unterstützt werden Sie jedoch erforderlich, um dafür zu warten, bis das Azure-Team diese Abhängigkeiten im Anwendungsdienst aktualisiert oder zu anderen Diensten wie gewechselt Service Fabric, Cloud Services oder sogar VMs, für die Sie verfügen über zusätzliche Kontrolle und können eine erforderliche Komponente oder ein Framework für Ihre Anwendung installieren.
 
-Jetzt aber, wie in Abbildung 4-4 dargestellt kann bei der Verwendung von Visual Studio 2017 docker-Unterstützung in Azure App Service Sie sollen beliebig in Ihrer appumgebung. Wenn Sie eine Abhängigkeit zu Ihrer app hinzugefügt, da es in einem Container ausgeführt wird, erhalten Sie die Möglichkeit, diese Abhängigkeiten in Ihrer dockerfile-Datei oder Docker-Image einschließen.
+Jetzt aber, wie in Abbildung 4-4 dargestellt kann bei der Verwendung von Visual Studio 2017 docker-Unterstützung in Azure App Service Sie sollen beliebig in Ihrer appumgebung. Wenn Sie eine Abhängigkeit zu Ihrer app hinzugefügt, da Sie es in einem Container ausführen, erhalten Sie die Möglichkeit, diese Abhängigkeiten in Ihrer dockerfile-Datei oder Docker-Image einschließen.
 
 ![Überblick über die Visual Studio-Assistenten zum Veröffentlichen in Azure app Service, markieren die Auswahl für die containerregistrierung.](./media/image4.png)
 

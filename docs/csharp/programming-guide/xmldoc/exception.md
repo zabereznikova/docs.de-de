@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: b316927c5dfd5eda05bea653f9a601cca9865af3
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4036b53674eb680c2df3136e8dd6d8165514dbb8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56982062"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487698"
 ---
 # <a name="exception-c-programming-guide"></a>\<exception> (C#-Programmierhandbuch)
 ## <a name="syntax"></a>Syntax  
@@ -23,7 +23,7 @@ ms.locfileid: "56982062"
 <exception cref="member">description</exception>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  cref = " `member`"  
  Ein Verweis auf eine Ausnahme, die von der aktuellen Kompilierungsumgebung verfügbar ist. Der Compiler prüft, ob die angegebene Ausnahme vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen. `member` muss in doppelte Anführungszeichen (" ") gesetzt werden.  
   

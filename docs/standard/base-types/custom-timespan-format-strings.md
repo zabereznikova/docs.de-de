@@ -6,7 +6,7 @@ dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- format spexifiers, custom time interval
+- format specifiers, custom time interval
 - format strings
 - formatting [.NET Framework], time interval
 - custom time interval format strings
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0681ff9c59e77650654495ecd6e6d9f9ded82517
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 6bfab03a6dc7ae62a7564815f7b054370cde64f8
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665094"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677109"
 ---
 # <a name="custom-timespan-format-strings"></a>Benutzerdefinierte TimeSpan-Formatzeichenfolgen
 
@@ -71,7 +71,7 @@ Benutzerdefinierte <xref:System.TimeSpan>-Formatzeichenfolgen werden auch von de
 |&#92;|Das Escapezeichen.<br /><br /> Weitere Informationen: [Andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |Jedes andere Zeichen|Alle anderen Zeichen ohne Escapezeichen werden als benutzerdefinierte Formatbezeichner interpretiert.<br /><br /> Weitere Informationen: [Andere Zeichen](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
-<a name="dSpecifier"></a> 
+<a name="dSpecifier"></a>
 
 ## <a name="the-d-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "d"
 
@@ -89,9 +89,10 @@ Das folgende Beispiel veranschaulicht die Verwendung des benutzerdefinierten For
 
 [Zurück zur Tabelle](#table)
 
-<a name="ddSpecifier"></a> 
+<a name="ddSpecifier"></a>
 
 ## <a name="the-dd-dddddddd-custom-format-specifiers"></a>Benutzerdefinierte Formatbezeichner "dd" bis "dddddddd"
+
 Die benutzerdefinierten Formatbezeichner "dd", "ddd", "dddd", "ddddd", "dddddd", "ddddddd" und "dddddddd" geben den Wert der <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType>-Eigenschaft aus, der die Anzahl ganzer Tage im Zeitintervall darstellt.
 
 Die Ausgabezeichenfolge enthält eine Mindestanzahl von Ziffern, die durch die Anzahl der "d"-Zeichen im Formatbezeichner angegeben wird, und wird bei Bedarf mit führenden Nullen aufgefüllt. Wenn die Ziffern in der Anzahl von Tagen die Anzahl der "d"-Zeichen im Formatbezeichner überschreiten, wird die volle Anzahl von Tagen in der Ergebniszeichenfolge ausgegeben.
@@ -103,9 +104,10 @@ Im folgenden Beispiel werden diese Formatbezeichner verwendet, um die Zeichenfol
 
 [Zurück zur Tabelle](#table)
 
-<a name="hSpecifier"></a> 
+<a name="hSpecifier"></a>
 
 ## <a name="the-h-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "h"
+
 Der benutzerdefinierte Formatbezeichner "h" gibt den Wert der <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>-Eigenschaft aus, der die Anzahl ganzer Stunden im Zeitintervall darstellt, die nicht als Teil der Tageskomponente gezählt werden. Er gibt einen einstelligen Zeichenfolgenwert zurück, wenn der Wert der <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>-Eigenschaft zwischen 0 und 9 liegt, und einen zweistelligen Zeichenfolgenwert, wenn der Wert der <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>-Eigenschaft zwischen 10 und 23 liegt.
 
 Wenn der benutzerdefinierte Formatbezeichner "h" allein verwendet wird, geben Sie "%h" an, damit er nicht fälschlich als Standardformatzeichenfolge interpretiert wird. Dies wird im folgenden Beispiel veranschaulicht.
@@ -125,9 +127,10 @@ Das folgende Beispiel veranschaulicht die Verwendung des benutzerdefinierten For
 
 [Zurück zur Tabelle](#table)
 
-<a name="hhSpecifier"></a> 
+<a name="hhSpecifier"></a>
 
 ## <a name="the-hh-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "hh"
+
 Der benutzerdefinierte Formatbezeichner "hh" gibt den Wert der <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>-Eigenschaft aus, der die Anzahl ganzer Stunden im Zeitintervall darstellt, die nicht als Teil der Tageskomponente gezählt werden. Für Werte zwischen 0 und 9 enthält die Ausgabezeichenfolge eine führende Null.
 
 Normalerweise wird eine Eingabezeichenfolge, die nur eine Zahl enthält, bei einem Analysevorgang als Anzahl von Tagen interpretiert. Sie können stattdessen den benutzerdefinierten Formatbezeichner "hh" verwenden, wenn die numerische Zeichenfolge als Anzahl von Stunden interpretiert werden soll. Dies wird im folgenden Beispiel veranschaulicht.
@@ -142,9 +145,10 @@ Das folgende Beispiel veranschaulicht die Verwendung des benutzerdefinierten For
 
 [Zurück zur Tabelle](#table)
 
-<a name="mSpecifier"></a> 
+<a name="mSpecifier"></a>
 
 ## <a name="the-m-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "m"
+
 Der benutzerdefinierte Formatbezeichner "m" gibt den Wert der <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>-Eigenschaft aus, der die Anzahl ganzer Minuten im Zeitintervall darstellt, die nicht als Teil der Tageskomponente gezählt werden. Er gibt einen einstelligen Zeichenfolgenwert zurück, wenn der Wert der <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>-Eigenschaft zwischen 0 und 9 liegt, und einen zweistelligen Zeichenfolgenwert, wenn der Wert der <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>-Eigenschaft zwischen 10 und 59 liegt.
 
 Wenn der benutzerdefinierte Formatbezeichner "m" allein verwendet wird, geben Sie "%m" an, damit er nicht fälschlich als Standardformatzeichenfolge interpretiert wird. Dies wird im folgenden Beispiel veranschaulicht.
@@ -164,9 +168,10 @@ Das folgende Beispiel veranschaulicht die Verwendung des benutzerdefinierten For
 
 [Zurück zur Tabelle](#table)
 
-<a name="mmSpecifier"></a> 
+<a name="mmSpecifier"></a>
 
 ## <a name="the-mm-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "mm"
+
 Der benutzerdefinierte Formatbezeichner "mm" gibt den Wert der <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>-Eigenschaft aus, der die Anzahl ganzer Minuten im Zeitintervall darstellt, die nicht als Teil der Stunden- oder Tageskomponente gezählt werden. Für Werte zwischen 0 und 9 enthält die Ausgabezeichenfolge eine führende Null.
 
 Normalerweise wird eine Eingabezeichenfolge, die nur eine Zahl enthält, bei einem Analysevorgang als Anzahl von Tagen interpretiert. Sie können stattdessen den benutzerdefinierten Formatbezeichner "mm" verwenden, wenn die numerische Zeichenfolge als Anzahl von Minuten interpretiert werden soll. Dies wird im folgenden Beispiel veranschaulicht.
@@ -181,9 +186,10 @@ Das folgende Beispiel veranschaulicht die Verwendung des benutzerdefinierten For
 
 [Zurück zur Tabelle](#table)
 
-<a name="sSpecifier"></a> 
+<a name="sSpecifier"></a>
 
 ## <a name="the-s-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "s"
+
 Der benutzerdefinierte Formatbezeichner "s" gibt den Wert der <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>-Eigenschaft aus, der die Anzahl ganzer Sekunden im Zeitintervall darstellt, die nicht als Teil der Stunden-, Tages- oder Minutenkomponente gezählt werden. Er gibt einen einstelligen Zeichenfolgenwert zurück, wenn der Wert der <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>-Eigenschaft zwischen 0 und 9 liegt, und einen zweistelligen Zeichenfolgenwert, wenn der Wert der <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>-Eigenschaft zwischen 10 und 59 liegt.
 
 Wenn der benutzerdefinierte Formatbezeichner "s" allein verwendet wird, geben Sie "%s" an, damit er nicht fälschlich als Standardformatzeichenfolge interpretiert wird. Dies wird im folgenden Beispiel veranschaulicht.
@@ -203,9 +209,10 @@ Das folgende Beispiel veranschaulicht die Verwendung des benutzerdefinierten For
 
 [Zurück zur Tabelle](#table)
 
-<a name="ssSpecifier"></a> 
+<a name="ssSpecifier"></a>
 
 ## <a name="the-ss-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "ss"
+
 Der benutzerdefinierte Formatbezeichner "ss" gibt den Wert der <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>-Eigenschaft aus, der die Anzahl ganzer Sekunden im Zeitintervall darstellt, die nicht als Teil der Stunden-, Tages- oder Minutenkomponente gezählt werden. Für Werte zwischen 0 und 9 enthält die Ausgabezeichenfolge eine führende Null.
 
 Normalerweise wird eine Eingabezeichenfolge, die nur eine Zahl enthält, bei einem Analysevorgang als Anzahl von Tagen interpretiert. Sie können stattdessen den benutzerdefinierten Formatbezeichner "ss" verwenden, wenn die numerische Zeichenfolge als Anzahl von Sekunden interpretiert werden soll. Dies wird im folgenden Beispiel veranschaulicht.
@@ -220,9 +227,10 @@ Das folgende Beispiel veranschaulicht die Verwendung des benutzerdefinierten For
 
 [Zurück zur Tabelle](#table)
 
-<a name="fSpecifier"></a> 
+<a name="fSpecifier"></a>
 
 ## <a name="thef-custom-format-specifier"></a>Benutzerdefinierter Formatbezeichner "f"
+
 Der benutzerdefinierte Formatbezeichner "f" gibt die Zehntelsekunden in einem Zeitintervall aus. Bei einem Formatierungsvorgang werden die restlichen Dezimalstellen abgeschnitten. Bei einem Analysevorgang, bei dem die <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>- oder <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>-Methode aufgerufen wird, muss die Eingabezeichenfolge genau eine Dezimalstelle enthalten.
 
 Wenn der benutzerdefinierte Formatbezeichner "f" allein verwendet wird, geben Sie "%f" an, damit er nicht fälschlich als Standardformatzeichenfolge interpretiert wird.
@@ -234,9 +242,10 @@ Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "f" verwendet
 
 [Zurück zur Tabelle](#table)
 
-<a name="ffSpecifier"></a> 
+<a name="ffSpecifier"></a>
 
 ## <a name="the-ff-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "ff"
+
 Der benutzerdefinierte Formatbezeichner "ff" gibt die Hundertstelsekunden in einem Zeitintervall aus. Bei einem Formatierungsvorgang werden die restlichen Dezimalstellen abgeschnitten. Bei einem Analysevorgang, bei dem die <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>- oder <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>-Methode aufgerufen wird, muss die Eingabezeichenfolge genau zwei Dezimalstellen enthalten.
 
 Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "ff" verwendet, um die Hundertstelsekunden in einem <xref:System.TimeSpan>-Wert anzuzeigen. „ff“ wird zuerst als einziger Formatbezeichner verwendet und dann in einer benutzerdefinierten Formatzeichenfolge mit dem Bezeichner „s“ kombiniert.
@@ -246,9 +255,10 @@ Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "ff" verwende
 
 [Zurück zur Tabelle](#table)
 
-<a name="f3Specifier"></a> 
+<a name="f3Specifier"></a>
 
 ## <a name="the-fff-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "fff"
+
 Der benutzerdefinierte Formatbezeichner "fff" (mit drei "f"-Zeichen) gibt die Millisekunden in einem Zeitintervall aus. Bei einem Formatierungsvorgang werden die restlichen Dezimalstellen abgeschnitten. Bei einem Analysevorgang, bei dem die <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>- oder <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>-Methode aufgerufen wird, muss die Eingabezeichenfolge genau drei Dezimalstellen enthalten.
 
 Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "fff" verwendet, um die Millisekunden in einem <xref:System.TimeSpan>-Wert anzuzeigen. „fff“ wird zuerst als einziger Formatbezeichner verwendet und dann in einer benutzerdefinierten Formatzeichenfolge mit dem Bezeichner „s“ kombiniert.
@@ -258,9 +268,10 @@ Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "fff" verwend
 
 [Zurück zur Tabelle](#table)
 
-<a name="f4Specifier"></a> 
+<a name="f4Specifier"></a>
 
 ## <a name="the-ffff-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "ffff"
+
 Der benutzerdefinierte Formatbezeichner "ffff" (mit vier "f"-Zeichen) gibt die Zehntausendstelsekunden in einem Zeitintervall aus. Bei einem Formatierungsvorgang werden die restlichen Dezimalstellen abgeschnitten. Bei einem Analysevorgang, bei dem die <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>- oder <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>-Methode aufgerufen wird, muss die Eingabezeichenfolge genau vier Dezimalstellen enthalten.
 
 Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "ffff" verwendet, um die Zehntausendstelsekunden in einem <xref:System.TimeSpan>-Wert anzuzeigen. „ffff“ wird zuerst als einziger Formatbezeichner verwendet und dann in einer benutzerdefinierten Formatzeichenfolge mit dem Bezeichner „s“ kombiniert.
@@ -270,9 +281,10 @@ Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "ffff" verwen
 
 [Zurück zur Tabelle](#table)
 
-<a name="f5Specifier"></a> 
+<a name="f5Specifier"></a>
 
 ## <a name="the-fffff-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "fffff"
+
 Der benutzerdefinierte Formatbezeichner "fffff" (mit fünf "f"-Zeichen) gibt die Hunderttausendstelsekunden in einem Zeitintervall aus. Bei einem Formatierungsvorgang werden die restlichen Dezimalstellen abgeschnitten. Bei einem Analysevorgang, bei dem die <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>- oder <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>-Methode aufgerufen wird, muss die Eingabezeichenfolge genau fünf Dezimalstellen enthalten.
 
 Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "ffff" verwendet, um die Hunderttausendstelsekunden in einem <xref:System.TimeSpan>-Wert anzuzeigen. „fffff“ wird zuerst als einziger Formatbezeichner verwendet und dann in einer benutzerdefinierten Formatzeichenfolge mit dem Bezeichner „s“ kombiniert.
@@ -282,9 +294,10 @@ Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "ffff" verwen
 
 [Zurück zur Tabelle](#table)
 
-<a name="f6Specifier"></a> 
+<a name="f6Specifier"></a>
 
 ## <a name="the-ffffff-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "ffffff"
+
 Der benutzerdefinierte Formatbezeichner "ffffff" (mit sechs "f"-Zeichen) gibt die Millionstelsekunden in einem Zeitintervall aus. Bei einem Formatierungsvorgang werden die restlichen Dezimalstellen abgeschnitten. Bei einem Analysevorgang, bei dem die <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>- oder <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>-Methode aufgerufen wird, muss die Eingabezeichenfolge genau sechs Dezimalstellen enthalten.
 
 Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "ffffff" verwendet, um die Millionstelsekunden in einem <xref:System.TimeSpan>-Wert anzuzeigen. Er wird zuerst als einziger Formatbezeichner verwendet und dann in einer benutzerdefinierten Formatzeichenfolge mit dem Bezeichner "s" kombiniert.
@@ -294,9 +307,10 @@ Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "ffffff" verw
 
 [Zurück zur Tabelle](#table)
 
-<a name="f7Specifier"></a> 
+<a name="f7Specifier"></a>
 
 ## <a name="the-fffffff-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "fffffff"
+
 Der benutzerdefinierte Formatbezeichner "fffffff" (mit sieben "f"-Zeichen) gibt die Zehnmillionstelsekunden (oder Sekundenbruchteile) in einem Zeitintervall aus. Bei einem Analysevorgang, bei dem die <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>- oder <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>-Methode aufgerufen wird, muss die Eingabezeichenfolge genau sieben Dezimalstellen enthalten.
 
 Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "fffffff" verwendet, um die Sekundenbruchteile in einem <xref:System.TimeSpan>-Wert anzuzeigen. Er wird zuerst als einziger Formatbezeichner verwendet und dann in einer benutzerdefinierten Formatzeichenfolge mit dem Bezeichner "s" kombiniert.
@@ -306,9 +320,10 @@ Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "fffffff" ver
 
 [Zurück zur Tabelle](#table)
 
-<a name="F_Specifier"></a> 
+<a name="F_Specifier"></a>
 
 ## <a name="the-f-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "F"
+
 Der benutzerdefinierte Formatbezeichner "F" gibt die Zehntelsekunden in einem Zeitintervall aus. Bei einem Formatierungsvorgang werden die restlichen Dezimalstellen abgeschnitten. Wenn der Wert der Zehntelsekunden des Zeitintervalls 0 (null) ist, wird er nicht in die Ergebniszeichenfolge eingeschlossen. Bei einem Analysevorgang, bei dem die <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>- oder <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>-Methode aufgerufen wird, ist das Vorhandensein der Zehntelsekundenstelle optional.
 
 Wenn der benutzerdefinierte Formatbezeichner "F" allein verwendet wird, geben Sie "%F" an, damit er nicht fälschlich als Standardformatzeichenfolge interpretiert wird.
@@ -320,9 +335,10 @@ Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "F" verwendet
 
 [Zurück zur Tabelle](#table)
 
-<a name="FF_Specifier"></a> 
+<a name="FF_Specifier"></a>
 
 ## <a name="the-ff-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "FF"
+
 Der benutzerdefinierte Formatbezeichner "FF" gibt die Hundertstelsekunden in einem Zeitintervall aus. Bei einem Formatierungsvorgang werden die restlichen Dezimalstellen abgeschnitten. Wenn Nachkommanullen vorhanden sind, werden sie nicht in die Ergebniszeichenfolge eingeschlossen. Bei einem Analysevorgang, bei dem die <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>- oder <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>-Methode aufgerufen wird, ist das Vorhandensein der Zehntel- und Hundertstelsekundenstelle optional.
 
 Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "FF" verwendet, um die Hundertstelsekunden in einem <xref:System.TimeSpan>-Wert anzuzeigen. Dieser benutzerdefinierte Formatbezeichner wird auch für einen Analysevorgang verwendet.
@@ -332,9 +348,10 @@ Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "FF" verwende
 
 [Zurück zur Tabelle](#table)
 
-<a name="F3_Specifier"></a> 
+<a name="F3_Specifier"></a>
 
 ## <a name="the-fff-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "FFF"
+
 Der benutzerdefinierte Formatbezeichner "FFF" (mit drei "F"-Zeichen) gibt die Millisekunden in einem Zeitintervall aus. Bei einem Formatierungsvorgang werden die restlichen Dezimalstellen abgeschnitten. Wenn Nachkommanullen vorhanden sind, werden sie nicht in die Ergebniszeichenfolge eingeschlossen. Bei einem Analysevorgang, bei dem die <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>- oder <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>-Methode aufgerufen wird, ist das Vorhandensein der Zehntel-, Hundertstel- und Tausendstelsekundenstelle optional.
 
 Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "FFF" verwendet, um die Tausendstelsekunden in einem <xref:System.TimeSpan>-Wert anzuzeigen. Dieser benutzerdefinierte Formatbezeichner wird auch für einen Analysevorgang verwendet.
@@ -344,9 +361,10 @@ Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "FFF" verwend
 
 [Zurück zur Tabelle](#table)
 
-<a name="F4_Specifier"></a> 
+<a name="F4_Specifier"></a>
 
 ## <a name="the-ffff-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "FFFF"
+
 Der benutzerdefinierte Formatbezeichner "FFFF" (mit vier "F"-Zeichen) gibt die Zehntausendstelsekunden in einem Zeitintervall aus. Bei einem Formatierungsvorgang werden die restlichen Dezimalstellen abgeschnitten. Wenn Nachkommanullen vorhanden sind, werden sie nicht in die Ergebniszeichenfolge eingeschlossen. Bei einem Analysevorgang, bei dem die <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>- oder <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>-Methode aufgerufen wird, ist das Vorhandensein der Zehntel-, Hundertstel-, Tausendstel- und Zehntausendstelsekundenstelle optional.
 
 Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "FFFF" verwendet, um die Zehntausendstelsekunden in einem <xref:System.TimeSpan>-Wert anzuzeigen. Der benutzerdefinierte Formatbezeichner "FFFF" wird auch für einen Analysevorgang verwendet.
@@ -356,9 +374,10 @@ Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "FFFF" verwen
 
 [Zurück zur Tabelle](#table)
 
-<a name="F5_Specifier"></a> 
+<a name="F5_Specifier"></a>
 
 ## <a name="the-fffff-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "FFFFF"
+
 Der benutzerdefinierte Formatbezeichner "FFFFF" (mit fünf "F"-Zeichen) gibt die Hunderttausendstelsekunden in einem Zeitintervall aus. Bei einem Formatierungsvorgang werden die restlichen Dezimalstellen abgeschnitten. Wenn Nachkommanullen vorhanden sind, werden sie nicht in die Ergebniszeichenfolge eingeschlossen. Bei einem Analysevorgang, bei dem die <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>- oder <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>-Methode aufgerufen wird, ist das Vorhandensein der Zehntel-, Hundertstel-, Tausendstel-, Zehntausendstel- und Hunderttausendstelsekundenstelle optional.
 
 Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "FFFFF" verwendet, um die Hunderttausendstelsekunden in einem <xref:System.TimeSpan>-Wert anzuzeigen. Der benutzerdefinierte Formatbezeichner "FFFFF" wird auch für einen Analysevorgang verwendet.
@@ -368,9 +387,10 @@ Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "FFFFF" verwe
 
 [Zurück zur Tabelle](#table)
 
-<a name="F6_Specifier"></a> 
+<a name="F6_Specifier"></a>
 
 ## <a name="the-ffffff-custom-format-specifier"></a>Der benutzerdefinierte Formatbezeichner "FFFFFF"
+
 Der benutzerdefinierte Formatbezeichner "FFFFFF" (mit sechs "F"-Zeichen) gibt die Millionstelsekunden in einem Zeitintervall aus. Bei einem Formatierungsvorgang werden die restlichen Dezimalstellen abgeschnitten. Wenn Nachkommanullen vorhanden sind, werden sie nicht in die Ergebniszeichenfolge eingeschlossen. Bei einem Analysevorgang, bei dem die <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>- oder <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>-Methode aufgerufen wird, ist das Vorhandensein der Zehntel-, Hundertstel-, Tausendstel-, Zehntausendstel-, Hunderttausendstel- und Millionstelsekundenstelle optional.
 
 Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "FFFFFF" verwendet, um die Millionstelsekunden in einem <xref:System.TimeSpan>-Wert anzuzeigen. Dieser benutzerdefinierte Formatbezeichner wird auch für einen Analysevorgang verwendet.
@@ -380,9 +400,10 @@ Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "FFFFFF" verw
 
 [Zurück zur Tabelle](#table)
 
-<a name="F7_Specifier"></a> 
+<a name="F7_Specifier"></a>
 
 ## <a name="the-fffffff-custom-format-specifier"></a>Benutzerdefinierte Formatbezeichner "FFFFFFF"
+
 Der benutzerdefinierte Formatbezeichner "FFFFFFF" (mit sieben "F"-Zeichen) gibt die Zehnmillionstelsekunden (oder Sekundenbruchteile) in einem Zeitintervall aus. Wenn Nachkommanullen vorhanden sind, werden sie nicht in die Ergebniszeichenfolge eingeschlossen. Bei einem Analysevorgang, bei dem die <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>- oder <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>-Methode aufgerufen wird, ist das Vorhandensein der sieben Dezimalstellen in der Eingabezeichenfolge optional.
 
 Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "FFFFFFF" verwendet, um die Sekundenbruchteile in einem <xref:System.TimeSpan>-Wert anzuzeigen. Dieser benutzerdefinierte Formatbezeichner wird auch für einen Analysevorgang verwendet.
@@ -392,7 +413,7 @@ Im folgenden Beispiel wird der benutzerdefinierte Formatbezeichner "FFFFFFF" ver
 
 [Zurück zur Tabelle](#table)
 
-<a name="Other"></a> 
+<a name="Other"></a>
 
 ## <a name="other-characters"></a>Andere Zeichen
 

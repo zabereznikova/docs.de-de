@@ -2,12 +2,12 @@
 title: Objektorientiertes Programmieren (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8f7a810b3f3ec74723ca5e715b7428e1b60928f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7822b9afa4b568563222d6096ea1b1ecc5d5ee0a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702482"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377923"
 ---
 # <a name="object-oriented-programming-c"></a>Objektorientiertes Programmieren (C#)
 C# bietet vollständige Unterstützung für objektorientierte Programmierung, einschließlich Kapselung, Vererbung und Polymorphie.  
@@ -50,11 +50,11 @@ C# bietet vollständige Unterstützung für objektorientierte Programmierung, ei
   
 -   [Schnittstellen](#Interfaces)  
   
--   [Generika](#Generics)  
+-   [Generics](#Generics)  
   
 -   [Delegaten](#Delegates)  
   
-##  <a name="Classes"></a> Klassen und Objekte  
+## <a name="Classes"></a> Klassen und Objekte  
  Die Begriffe *Klasse* und *Objekt* werden manchmal synonym verwendet; genau genommen beschreiben Klassen jedoch den *Typ* von Objekten, während Objekte verwendbare *Instanzen* von Klassen sind. Das Erstellen eines Objekts wird daher als *Instanziierung* bezeichnet. Um auf den Vergleich mit Bauplänen zurückzukommen: Eine Klasse ist ein Bauplan, und ein Objekt ist ein anhand dieses Bauplans errichtetes Gebäude.  
   
  So definieren Sie eine Klasse  
@@ -81,10 +81,10 @@ struct SampleStruct
   
 -   [struct](../../../csharp/language-reference/keywords/struct.md)  
   
-###  <a name="Members"></a> Klassenmember  
+### <a name="Members"></a> Klassenmember  
  Jede Klasse kann über andere *Klassenmember* verfügen. Diese enthalten Eigenschaften, die Klassendaten beschreiben, Methoden, die Klassenverhalten definieren sowie Ereignisse, die die Kommunikation zwischen verschiedenen Klassen und Objekten bereitstellen.  
   
-####  <a name="Properties"></a> Eigenschaften und Felder  
+#### <a name="Properties"></a> Eigenschaften und Felder  
  Felder und Eigenschaften stellen die in einem Objekt enthaltenen Informationen dar. Felder sind wie Variablen, sie können direkt gelesen oder festgelegt werden.  
   
  So definieren Sie ein Feld  
@@ -133,7 +133,7 @@ class SampleClass
   
 -   [set](../../../csharp/language-reference/keywords/set.md)  
   
-####  <a name="Methods"></a> Methoden  
+#### <a name="Methods"></a> Methoden  
  Eine *Methode* ist eine Aktion, die von einem Objekt ausgeführt werden kann.  
   
  So definieren Sie eine Methode einer Klasse:  
@@ -165,7 +165,7 @@ public int sampleMethod(int sampleParam) {}
   
 -   [Erweiterungsmethoden](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
   
-####  <a name="Constructors"></a> Konstruktoren  
+#### <a name="Constructors"></a> Konstruktoren  
  Konstruktoren sind Klassenmethoden, die automatisch ausgeführt werden, wenn ein Objekt eines bestimmten Typs erstellt wird. Konstruktoren initialisieren normalerweise die Datenmember des neuen Objekts. Konstruktoren können nur einmal während der Erstellung der Klasse ausgeführt werden. Weiterhin wird der Code im Konstruktor immer vor jedem anderen Code in einer Klasse ausgeführt. Sie können jedoch mehrere Konstruktorüberladungen auf die gleiche Weise wie für jede andere Methode erstellen.  
   
  So definieren Sie einen Konstruktor für eine Klasse:  
@@ -184,12 +184,12 @@ public class SampleClass
   
  [Konstruktoren](../../../csharp/programming-guide/classes-and-structs/constructors.md).  
   
-####  <a name="Finalizers"></a> Finalizer  
+#### <a name="Finalizers"></a> Finalizer  
  Finalizer werden zur Zerstörung von Klasseninstanzen verwendet. In .NET Framework verwaltet die Garbage Collection die Speicherbelegung automatisch und gibt Arbeitsspeicher für die verwalteten Objekte in der Anwendung frei. Möglicherweise sind jedoch noch Finalizer erforderlich, um alle nicht verwalteten Ressourcen zu bereinigen, die von der Anwendung erstellt werden. Es kann nur einen Finalizer für eine Klasse geben.  
   
  Weitere Informationen zu Finalizern und der Garbage Collection in .NET Framework finden Sie unter [Garbage Collection](../../../standard/garbage-collection/index.md).  
   
-####  <a name="Events"></a> Ereignisse  
+#### <a name="Events"></a> Ereignisse  
  Ereignisse aktivieren eine Klasse oder ein Objekt, um Informationen über Aktionen von Interesse an andere Klassen oder Objekte zu übermitteln. Die Klasse, die das Ereignis sendet (oder auslöst), wird als *Herausgeber* bezeichnet, und die Klassen, die das Ereignis empfangen (oder verarbeiten), werden als *Abonnenten* bezeichnet. Weitere Informationen zu Ereignissen sowie zu ihrer Auslösung und Behandlung finden Sie unter [Ereignisse](../../../standard/events/index.md).  
   
 -   Verwenden Sie das Schlüsselwort [event](../../../csharp/language-reference/keywords/event.md), um ein Ereignis in einer Klasse zu deklarieren.  
@@ -198,7 +198,7 @@ public class SampleClass
   
 -   Verwenden Sie den `+=`-Operator, um ein Ereignis zu abonnieren, und verwenden Sie den `-=`-Operator, um das Abonnement eines Ereignisses zu kündigen.  
   
-####  <a name="NestedClasses"></a> Geschachtelte Klassen  
+#### <a name="NestedClasses"></a> Geschachtelte Klassen  
  Eine Klasse, die in einer anderen Klasse definiert wird, wird als *geschachtelt* bezeichnet. Standardmäßig ist die geschachtelte Klasse privat.  
   
 ```csharp  
@@ -217,7 +217,7 @@ class Container
 Container.Nested nestedInstance = new Container.Nested()  
 ```  
   
-###  <a name="AccessModifiers"></a> Zugriffsmodifizierer und Zugriffsebenen  
+### <a name="AccessModifiers"></a> Zugriffsmodifizierer und Zugriffsebenen  
  Alle Klassen und Klassenmember können mit *Zugriffsmodifizierern* angeben, welche Zugriffsebene sie für andere Klassen bereitstellen.  
   
  Die folgenden Zugriffsmodifizierer sind verfügbar:  
@@ -233,7 +233,7 @@ Container.Nested nestedInstance = new Container.Nested()
   
  Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
-###  <a name="InstantiatingClasses"></a> Instanziieren von Klassen  
+### <a name="InstantiatingClasses"></a> Instanziieren von Klassen  
  Um ein Objekt zu erstellen, müssen Sie eine Klasse instanziieren oder eine Klasseninstanz erstellen.  
   
 ```csharp  
@@ -263,7 +263,7 @@ SampleClass sampleObject = new SampleClass
   
 -   [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
   
-###  <a name="Static"></a> Statische Klassen und Member  
+### <a name="Static"></a> Statische Klassen und Member  
  Ein statischer Member der Klasse ist eine Eigenschaft, eine Prozedur oder ein Feld, die von allen Instanzen einer Klasse gemeinsam verwendet werden.  
   
  So definieren Sie einen statischen Member:  
@@ -285,7 +285,7 @@ Console.WriteLine(SampleClass.SampleString);
   
  Weitere Informationen finden Sie unter [static](../../../csharp/language-reference/keywords/static.md).  
   
-###  <a name="AnonymousTypes"></a> Anonyme Typen  
+### <a name="AnonymousTypes"></a> Anonyme Typen  
  Mit anonymen Typen können Objekte erstellt werden, ohne eine Klassendefinition für den Datentyp zu schreiben. Stattdessen erzeugt der Compiler eine Klasse. Die Klasse hat keinen verwendbaren Namen und enthält die von Ihnen in der Deklaration des Objekts angegebenen Eigenschaften.  
   
  So erstellen Sie eine Instanz eines anonymen Typs  
@@ -298,7 +298,7 @@ var sampleObject =
   
  Weitere Informationen finden Sie unter: [Anonyme Typen](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
-##  <a name="Inheritance"></a> Vererbung  
+## <a name="Inheritance"></a> Vererbung  
  Vererbung ermöglicht die Erstellung neuer Klassen, die in anderen Klassen definiertes Verhalten wieder verwenden, erweitern und ändern. Die Klasse, deren Member vererbt werden, wird *Basisklasse* genannt, und die Klasse, die diese Member erbt, wird *abgeleitete Klasse* genannt. Alle Klassen in C# erben jedoch implizit von der Klasse <xref:System.Object>, die die .NET-Klassenhierarchie unterstützt und einfache Dienste für alle Klassen bereitstellt.  
   
 > [!NOTE]
@@ -330,7 +330,7 @@ public abstract class B { }
   
 -   [abstract](../../../csharp/language-reference/keywords/abstract.md)  
   
-###  <a name="Overriding"></a> Überschreiben von Membern  
+### <a name="Overriding"></a> Überschreiben von Membern  
  Standardmäßig erbt eine abgeleitete Klasse alle Member von ihrer Basisklasse. Wenn Sie das Verhalten des geerbten Members ändern möchten, müssen Sie diesen überschreiben. Das heißt, Sie können eine neue Implementierung der Methode, der Eigenschaft oder des Ereignisses in der abgeleiteten Klasse definieren.  
   
  Mit folgenden Modifizierern steuern Sie das Überschreiben von Eigenschaften und Methoden:  
@@ -342,7 +342,7 @@ public abstract class B { }
 |[abstract](../../../csharp/language-reference/keywords/abstract.md)|Erfordert das Überschreiben eines Klassenmembers in der abgeleiteten Klasse.|  
 |[new-Modifizierer](../../../csharp/language-reference/keywords/new-modifier.md)|Blendet einen von einer Basisklasse geerbten Member aus.|  
   
-##  <a name="Interfaces"></a> Schnittstellen  
+## <a name="Interfaces"></a> Schnittstellen  
  Schnittstellen definieren (wie Klassen) einen Satz von Eigenschaften, Methoden und Ereignissen. Im Gegensatz zu Klassen jedoch bieten Schnittstellen keine Implementierung. Sie werden durch Klassen implementiert und als von Klassen unabhängige Entitäten definiert. Eine Schnittstelle stellt insofern einen Vertrag dar, dass eine Klasse, die eine Schnittstelle implementiert, jeden Aspekt dieser Schnittstelle gemäß seiner Definition implementieren muss.  
   
  So definieren Sie eine Schnittstelle  
@@ -372,7 +372,7 @@ class SampleClass : ISampleInterface
   
  [interface](../../../csharp/language-reference/keywords/interface.md)  
   
-##  <a name="Generics"></a> Generika  
+## <a name="Generics"></a> Generika  
  Klassen, Strukturen, Schnittstellen und Methoden in .NET Framework können *Typparameter* enthalten, die Objekttypen definieren, die sie speichern oder verwenden können. Das einfachste Beispiel für Generika ist eine Auflistung, in der Sie den Typ von Objekten angeben können, die in einer Auflistung gespeichert werden sollen.  
   
  So definieren Sie eine generische Klasse  
@@ -393,11 +393,11 @@ sampleObject.Field = "Sample string";
   
  Weitere Informationen finden Sie unter:  
   
--   [Generika](~/docs/standard/generics/index.md)  
+-   [Generics](~/docs/standard/generics/index.md)  
   
--   [Generika](../../../csharp/programming-guide/generics/index.md)  
+-   [Generics](../../../csharp/programming-guide/generics/index.md)  
   
-##  <a name="Delegates"></a> Delegaten  
+## <a name="Delegates"></a> Delegaten  
  Ein *Delegat* ist ein Typ, der eine Methodensignatur definiert. Er kann einen Verweis auf jede Methode bereitstellen, die über eine kompatible Signatur verfügt. Sie können die Methode über den Delegaten aufrufen. Delegaten werden verwendet, um Methoden als Argumente an anderen Methoden zu übergeben.  
   
 > [!NOTE]

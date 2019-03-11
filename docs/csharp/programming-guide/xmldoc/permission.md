@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 475e9ab5c59260544b0e413e165953c0b84449b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ea0b8c37f6ef803fd36592376a7a8c0c334f719c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973898"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489396"
 ---
 # <a name="permission-c-programming-guide"></a>\<permission> (C#-Programmierhandbuch)
 ## <a name="syntax"></a>Syntax  
@@ -23,7 +23,7 @@ ms.locfileid: "56973898"
 <permission cref="member">description</permission>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  cref = " `member`"  
  Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann. Der Compiler prüft, ob das angegebene Codeelement vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen. *member* muss in doppelte Anführungszeichen (" ") gesetzt werden.  
   

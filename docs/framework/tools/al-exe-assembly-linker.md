@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5fe3d3b913724729bb7cc8582450dfb6f50ee53
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 19cccc5bcec82b04a337aa0d3913fede0a435ae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223194"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492256"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Assembly Linker-Tool)
 
@@ -33,7 +33,7 @@ Geben Sie an der Eingabeaufforderung Folgendes ein:
 al sources options
 ```
 
-#### <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameter
 
 Sie können eine oder mehrere der folgenden Quellen (`sources`) angeben.
 
@@ -79,7 +79,7 @@ Sie können die folgenden Optionen (`options`) angeben. Die Angabe von **/out** 
 |`@filename`|Gibt eine Antwortdatei an, die *Al.exe*-Befehle enthält.<br /><br /> Die Befehle in der Antwortdatei können jeweils in einer Zeile oder zusammen in einer Zeile durch mehrere Leerzeichen getrennt stehen.|
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Alle Visual Studio-Compiler erzeugen Assemblys. Wenn Sie jedoch über mindestens ein Modul (Metadaten ohne Manifest) verfügen, können Sie *Al.exe* verwenden, um eine Assembly mit dem Manifest in einer separaten Datei zu erstellen.
 

@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 923d177a294e0aeccc3fe6632488a2bc5f48b727
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: b50b081dd3307f60f32bfa13c61f69e14d6341c8
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362842"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362707"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Anwenden von CQRS- und CQS-Ansätzen in einem DDD-Microservice in eShopOnContainers
 
@@ -41,7 +41,7 @@ Unterschiedliche Kontextgrenzen (Bounded Contexts, BCs) wenden außerdem verschi
 
 Es gibt nur eine Anwendungsarchitektur: die Architektur der System- oder der End-to-End-Anwendung, die Sie gerade entwerfen (z.B. die Microservicesarchitektur). Der Entwurf der einzelnen Kontextgrenzen oder Microservices in dieser Anwendung spiegelt die eigenen Vor-und Nachteile und die interne Entwurfsentscheidungen auf Ebene der Musterarchitektur wider. Wenden Sie auf keinen Fall überall dieselben Architekturmuster wie CQRS oder DDD an.
 
-####  <a name="additional-resources"></a>Zusätzliche Ressourcen
+### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Martin Fowler. CQRS** \
   [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)

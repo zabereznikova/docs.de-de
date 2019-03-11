@@ -3,12 +3,12 @@ title: Verzweigungen und Schleifen – Einführung in das C#-Tutorial
 description: In diesem Tutorial über Verzweigungen und Schleifen schreiben Sie C#-Code, um die Sprachsyntax zu erkunden, die bedingte Verzweigungen und Schleifen zum wiederholten Ausführen von Anweisungen unterstützt.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153773"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677785"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Bedingungen für Verzweigungs- und Schleifenanweisungen
 
@@ -20,7 +20,7 @@ Für dieses Tutorial benötigen Sie einen Computer, den Sie für die Entwicklung
 
 Erstellen Sie ein Verzeichnis mit dem Namen **branches-tutorial**. Machen Sie dieses Verzeichnis zum aktuellen Verzeichnis, und führen Sie `dotnet new console -n BranchesAndLoops -o .` aus. Dieser Befehl erstellt im aktuellen Verzeichnis eine neue .NET Core-Konsolenanwendung.
 
-Öffnen Sie **Program.cs** in Ihrem bevorzugten Editor, und ersetzen Sie die Zeile `Console.Writeline("Hello World!");` durch den folgenden Code:
+Öffnen Sie **Program.cs** in Ihrem bevorzugten Editor, und ersetzen Sie die Zeile `Console.WriteLine("Hello World!");` durch den folgenden Code:
 
 ```csharp
 int a = 5;
@@ -31,7 +31,7 @@ if (a + b > 10)
 
 Testen Sie diesen Code, indem Sie `dotnet run` in Ihr Konsolenfenster eingeben. Es sollte folgende Meldung in Ihrer Konsole angezeigt werden: „Die Antwort ist größer als 10.“
 
-Ändern Sie die Deklaration von `b` so, dass die Summe kleiner als 10 ist: 
+Ändern Sie die Deklaration von `b` so, dass die Summe kleiner als 10 ist:
 
 ```csharp
 int b = 3;
@@ -63,7 +63,8 @@ Die Anweisung, die nach dem Schlüsselwort `else` folgt, wird nur ausgeführt, w
 
 > [!IMPORTANT]
 > Der Einzug unter den `if`- und `else`-Anweisungen dient zur besseren Lesbarkeit.
-> In der Programmiersprache C# werden Einzüge oder Leerräume nicht berücksichtigt. Die Anweisung nach dem Schlüsselwort `if` bzw. `else` wird basierend auf der Bedingung ausgeführt. Alle Beispiele in diesem Tutorial folgen der gängigen Vorgehensweise, Zeilen basierend auf der Ablaufsteuerung von Anweisungen mit einem Einzug zu versehen.
+> In der Programmiersprache C# werden Einzüge oder Leerräume nicht berücksichtigt.
+> Die Anweisung nach dem Schlüsselwort `if` bzw. `else` wird basierend auf der Bedingung ausgeführt. Alle Beispiele in diesem Tutorial folgen der gängigen Vorgehensweise, Zeilen basierend auf der Ablaufsteuerung von Anweisungen mit einem Einzug zu versehen.
 
 Da Einzüge nicht relevant sind, müssen Sie mit `{` und `}` angeben, dass Sie mehr als eine Anweisung im Rahmen des bedingt ausgeführten Blocks verwenden möchten. C#-Programmierer verwenden solche geschweifte Klammern in der Regel bei allen `if`- und `else`-Anweisungen. Das folgende Beispiel ist identisch mit dem Inhalt, den Sie soeben erstellt haben. Ändern Sie den obigen Code dahingehend, dass er mit dem folgenden Code übereinstimmt:
 
@@ -158,7 +159,7 @@ namespace BranchesAndLoops
             {
                 Console.WriteLine("The answer is not greater than 10");
                 Console.WriteLine("And the first number is not greater than the second");
-            }            
+            }
         }
 
         static void Main(string[] args)
@@ -218,7 +219,7 @@ Die **for**-Schleife wird üblicherweise in C# verwendet. Testen Sie diesen Code
 for(int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
-} 
+}
 ```
 
 Dieser funktioniert auf dieselbe Weise wie die `while`-Schleife und die `do`-Schleife, die Sie bereits verwendet haben. Die `for`-Anweisung besteht aus drei Teilen, die steuern, wie sie ausgeführt wird.
@@ -252,7 +253,7 @@ Sie können mit dem Tutorial [Zeichenfolgeninterpolation](interpolated-strings-l
 
 Weitere Informationen zu diesen Begriffen finden Sie unter folgenden Themen:
 
-[if- und else-Anweisung](../../language-reference/keywords/if-else.md)  
-[while-Anweisung](../../language-reference/keywords/while.md)  
-[do-Anweisung](../../language-reference/keywords/do.md)  
-[for-Anweisung](../../language-reference/keywords/for.md)  
+- [if- und else-Anweisung](../../language-reference/keywords/if-else.md)
+- [while-Anweisung](../../language-reference/keywords/while.md)
+- [do-Anweisung](../../language-reference/keywords/do.md)
+- [for-Anweisung](../../language-reference/keywords/for.md)

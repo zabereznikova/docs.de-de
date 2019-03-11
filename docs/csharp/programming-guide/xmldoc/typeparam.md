@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: 9150ab3e29eaa6b692e2ab2be90bb0e87ba54941
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fc2c0ec29dd2652d48a6f941bec939bbd9aac8e9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978648"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471640"
 ---
 # <a name="typeparam-c-programming-guide"></a>\<typeparam> (C#-Programmierhandbuch)
 ## <a name="syntax"></a>Syntax  
@@ -22,7 +22,7 @@ ms.locfileid: "56978648"
 <typeparam name="name">description</typeparam>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  `name`  
  Der Name des Typparameters. Setzen Sie den Namen in einfache oder doppelte Anführungszeichen (" ").  
   

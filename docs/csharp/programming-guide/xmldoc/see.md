@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 1816aeb0ddf783c8ad0baa7f5d460f0fc60747e1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 90fd73346d255d195fa7384ebc2f60ebc4f32fba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974821"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480675"
 ---
 # <a name="see-c-programming-guide"></a>\<see> (C#-Programmierhandbuch)
 ## <a name="syntax"></a>Syntax  
@@ -25,7 +25,7 @@ ms.locfileid: "56974821"
 <see cref="member"/>  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
  cref = " `member`"  
  Ein Verweis auf einen Member oder ein Feld, das von der aktuellen Kompilierungsumgebung aufgerufen werden kann. Der Compiler überprüft, ob das angegebene Codeelement vorhanden ist, und übergibt `member` an den Elementnamen in der XML-Ausgabe. Setzen Sie *member* in doppelte Anführungszeichen (" ").  
   
