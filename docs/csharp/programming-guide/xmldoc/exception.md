@@ -9,40 +9,40 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: b316927c5dfd5eda05bea653f9a601cca9865af3
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4036b53674eb680c2df3136e8dd6d8165514dbb8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56982062"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487698"
 ---
-# <a name="exception-c-programming-guide"></a><span data-ttu-id="30708-102">\<exception> (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="30708-102">\<exception> (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="30708-103">Syntax</span><span class="sxs-lookup"><span data-stu-id="30708-103">Syntax</span></span>  
+# <a name="exception-c-programming-guide"></a><span data-ttu-id="9a3c6-102">\<exception> (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="9a3c6-102">\<exception> (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="9a3c6-103">Syntax</span><span class="sxs-lookup"><span data-stu-id="9a3c6-103">Syntax</span></span>  
   
 ```xml  
 <exception cref="member">description</exception>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="30708-104">Parameter</span><span class="sxs-lookup"><span data-stu-id="30708-104">Parameters</span></span>  
- <span data-ttu-id="30708-105">cref = " `member`"</span><span class="sxs-lookup"><span data-stu-id="30708-105">cref = " `member`"</span></span>  
- <span data-ttu-id="30708-106">Ein Verweis auf eine Ausnahme, die von der aktuellen Kompilierungsumgebung verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="30708-106">A reference to an exception that is available from the current compilation environment.</span></span> <span data-ttu-id="30708-107">Der Compiler prüft, ob die angegebene Ausnahme vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen.</span><span class="sxs-lookup"><span data-stu-id="30708-107">The compiler checks that the given exception exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="30708-108">`member` muss in doppelte Anführungszeichen (" ") gesetzt werden.</span><span class="sxs-lookup"><span data-stu-id="30708-108">`member` must appear within double quotation marks (" ").</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9a3c6-104">Parameter</span><span class="sxs-lookup"><span data-stu-id="9a3c6-104">Parameters</span></span>  
+ <span data-ttu-id="9a3c6-105">cref = " `member`"</span><span class="sxs-lookup"><span data-stu-id="9a3c6-105">cref = " `member`"</span></span>  
+ <span data-ttu-id="9a3c6-106">Ein Verweis auf eine Ausnahme, die von der aktuellen Kompilierungsumgebung verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="9a3c6-106">A reference to an exception that is available from the current compilation environment.</span></span> <span data-ttu-id="9a3c6-107">Der Compiler prüft, ob die angegebene Ausnahme vorhanden ist, und übersetzt in der Ausgabe-XML `member` in den kanonischen Elementnamen.</span><span class="sxs-lookup"><span data-stu-id="9a3c6-107">The compiler checks that the given exception exists and translates `member` to the canonical element name in the output XML.</span></span> <span data-ttu-id="9a3c6-108">`member` muss in doppelte Anführungszeichen (" ") gesetzt werden.</span><span class="sxs-lookup"><span data-stu-id="9a3c6-108">`member` must appear within double quotation marks (" ").</span></span>  
   
- <span data-ttu-id="30708-109">Weitere Informationen zum Erstellen von cref-Verweisen auf einen generischen Typ finden Sie unter [\<see](../../../csharp/programming-guide/xmldoc/see.md).</span><span class="sxs-lookup"><span data-stu-id="30708-109">For more information on how to create a cref reference to a generic type, see [\<see>](../../../csharp/programming-guide/xmldoc/see.md).</span></span>  
+ <span data-ttu-id="9a3c6-109">Weitere Informationen zum Erstellen von cref-Verweisen auf einen generischen Typ finden Sie unter [\<see](../../../csharp/programming-guide/xmldoc/see.md).</span><span class="sxs-lookup"><span data-stu-id="9a3c6-109">For more information on how to create a cref reference to a generic type, see [\<see>](../../../csharp/programming-guide/xmldoc/see.md).</span></span>  
   
  `description`  
- <span data-ttu-id="30708-110">Eine Beschreibung der Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="30708-110">A description of the exception.</span></span>  
+ <span data-ttu-id="9a3c6-110">Eine Beschreibung der Ausnahme.</span><span class="sxs-lookup"><span data-stu-id="9a3c6-110">A description of the exception.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="30708-111">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="30708-111">Remarks</span></span>  
- <span data-ttu-id="30708-112">Mit dem Tag \<exception> können Sie angeben, welche Ausnahmen ausgelöst werden können.</span><span class="sxs-lookup"><span data-stu-id="30708-112">The \<exception> tag lets you specify which exceptions can be thrown.</span></span> <span data-ttu-id="30708-113">Dieses Tag kann für Definitionen für Methoden, Eigenschaften, Ereignisse und Indexer angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="30708-113">This tag can be applied to definitions for methods, properties, events, and indexers.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9a3c6-111">Anmerkungen</span><span class="sxs-lookup"><span data-stu-id="9a3c6-111">Remarks</span></span>  
+ <span data-ttu-id="9a3c6-112">Mit dem Tag \<exception> können Sie angeben, welche Ausnahmen ausgelöst werden können.</span><span class="sxs-lookup"><span data-stu-id="9a3c6-112">The \<exception> tag lets you specify which exceptions can be thrown.</span></span> <span data-ttu-id="9a3c6-113">Dieses Tag kann für Definitionen für Methoden, Eigenschaften, Ereignisse und Indexer angewendet werden.</span><span class="sxs-lookup"><span data-stu-id="9a3c6-113">This tag can be applied to definitions for methods, properties, events, and indexers.</span></span>  
   
- <span data-ttu-id="30708-114">Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.</span><span class="sxs-lookup"><span data-stu-id="30708-114">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="9a3c6-114">Dokumentationskommentare werden zu einer Datei verarbeitet, indem sie mit [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) kompiliert werden.</span><span class="sxs-lookup"><span data-stu-id="9a3c6-114">Compile with [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
- <span data-ttu-id="30708-115">Weitere Informationen zur Behandlung von Ausnahmen finden Sie unter [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/index.md).</span><span class="sxs-lookup"><span data-stu-id="30708-115">For more information about exception handling, see [Exceptions and Exception Handling](../../../csharp/programming-guide/exceptions/index.md).</span></span>  
+ <span data-ttu-id="9a3c6-115">Weitere Informationen zur Behandlung von Ausnahmen finden Sie unter [Ausnahmen und Ausnahmebehandlung](../../../csharp/programming-guide/exceptions/index.md).</span><span class="sxs-lookup"><span data-stu-id="9a3c6-115">For more information about exception handling, see [Exceptions and Exception Handling](../../../csharp/programming-guide/exceptions/index.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="30708-116">Beispiel</span><span class="sxs-lookup"><span data-stu-id="30708-116">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="9a3c6-116">Beispiel</span><span class="sxs-lookup"><span data-stu-id="9a3c6-116">Example</span></span>  
  [!code-csharp[csProgGuideDocComments#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#4)]  
   
-## <a name="see-also"></a><span data-ttu-id="30708-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="30708-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9a3c6-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9a3c6-117">See also</span></span>
 
-- [<span data-ttu-id="30708-118">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="30708-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
-- [<span data-ttu-id="30708-119">Empfohlene Tags für Dokumentationskommentare</span><span class="sxs-lookup"><span data-stu-id="30708-119">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="9a3c6-118">C#-Programmierhandbuch</span><span class="sxs-lookup"><span data-stu-id="9a3c6-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)
+- [<span data-ttu-id="9a3c6-119">Empfohlene Tags für Dokumentationskommentare</span><span class="sxs-lookup"><span data-stu-id="9a3c6-119">Recommended Tags for Documentation Comments</span></span>](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
