@@ -4,6 +4,7 @@ description: 'Erfahren Sie, wie Sie bestimmte Aufgaben ausführen können, die S
 ms.custom: seodec18
 ms.date: 03/01/2019
 ---
+
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>Schrittanleitungen für .NET Machine Learning – ML.NET
 
 Der Abschnitt mit Schrittanleitungen im Leitfaden für ML.NET finden Sie schnell Antworten auf häufige Fragen. In manchen Fällen können Artikel in mehreren Abschnitten aufgeführt sein, damit sie einfacher zu finden sind.
@@ -44,7 +45,7 @@ Der Abschnitt mit Schrittanleitungen im Leitfaden für ML.NET finden Sie schnell
 
 * [Featureentwicklung für ein Modelltraining mit Textdaten in ML.NET](train-model-textual-ml-net.md)
 
-## <a name="run"></a>Run 
+## <a name="run"></a>Run
 
 * [Untersuchen von Zwischendatenwerten beim Verarbeiten der ML.NET-Pipeline](inspect-intermediate-data-ml-net.md)
 
@@ -52,7 +53,6 @@ Der Abschnitt mit Schrittanleitungen im Leitfaden für ML.NET finden Sie schnell
 
 * [Einzelvorhersage mit PredictionFunction](single-predict-model-ml-net.md)
 
-## <a name="probabalistic-infernet"></a>Probabilistisch (Infer.NET)
+## <a name="probabilistic-infernet"></a>Probabilistisch (Infer.NET)
 
 * [Erstellen einer App für eine Spielerrangliste mit Infer.NET und probabilistischer Programmierung](matchup-app-infer-net.md)
-

@@ -1,19 +1,13 @@
 ---
-title: C#-Referenz
+title: 'C#-Referenz'
 ms.date: 02/14/2017
 helpviewer_keywords:
-- Visual C#, language reference
-- language reference [C#]
-- Programmer's Reference for C#
-- C# language, reference
-- reference, C# language
+  - 'Visual C#, language reference'
+  - 'language reference [C#]'
+  - 'Programmer''s Reference for C#'
+  - 'C# language, reference'
+  - 'reference, C# language'
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: c9400c2836d923fe92ed88ec947a1953800bc47d
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472502"
 ---
 # <a name="c-reference"></a>C#-Referenz
 Dieser Abschnitt enthält Referenzmaterial zu Schlüsselwörtern, Operatoren, Sonderzeichen, Präprozessordirektiven, Compileroptionen sowie Compilerfehlern und -warnmeldungen von C#.  
@@ -37,8 +31,11 @@ Dieser Abschnitt enthält Referenzmaterial zu Schlüsselwörtern, Operatoren, So
  [C#-Compilerfehler](../../csharp/language-reference/compiler-messages/index.md)  
  Enthält Codeausschnitte, die die Ursache und Korrektur der C#-Compilerfehler und -warnungen veranschaulichen.  
   
- [C#-Programmiersprachenspezifikation](../../csharp/language-reference/language-specification/index.md)  
- Stellt Links zur neuesten Version der C#-Sprachspezifikation bereit.  
+ [C#-Programmiersprachenspezifikation](../../../_csharplang/spec/introduction.md)  
+ Die C# 6.0-Sprachspezifikation. Dies ist ein Entwurfsvorschlag für die C# 6.0-Sprache. Version 5.0 wurde im Dezember 2017 als Dokument [Standard ECMA-334, 5. Edition](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf) veröffentlicht.
+  
+ [C# 7.0-Sprachvorschläge](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
+ Es gibt eine Reihe neuer Features, die in C# 7.0 implementiert wurden. Dazu gehören der Musterabgleich, lokale Funktionen, out-Variablendeklarationen, throw-Ausdrücke, binäre Literale und Zahlentrennzeichen. Dieser Ordner enthält die Spezifikationen für jedes dieser Features.
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
 
