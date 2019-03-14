@@ -1,20 +1,25 @@
 ---
 title: Operationalisieren eines trainierten Machine Learning-Modells in Apps – ML.NET
 description: Erfahren Sie, wie Sie mit ML.NET ein trainiertes und ausgewertetes Machine Learning-Modell in Anwendungen nutzen.
-ms.date: 11/07/2018
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ff3f0a8856382d020129693bcf722f572fd87606
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: be6906c939b82d00067babaeebe809dae3de413a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131644"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675133"
 ---
-# <a name="operationalize-a-trained-machine-learning-model-in-apps---mlnet"></a><span data-ttu-id="0a5d9-103">Operationalisieren eines trainierten Machine Learning-Modells in Apps – ML.NET</span><span class="sxs-lookup"><span data-stu-id="0a5d9-103">Operationalize a trained machine learning model in apps - ML.NET</span></span>
+# <a name="operationalize-a-trained-machine-learning-model-in-apps---mlnet"></a><span data-ttu-id="920a4-103">Operationalisieren eines trainierten Machine Learning-Modells in Apps – ML.NET</span><span class="sxs-lookup"><span data-stu-id="920a4-103">Operationalize a trained machine learning model in apps - ML.NET</span></span>
 
-<span data-ttu-id="0a5d9-104">Wenn Sie die Modellmetriken gut finden, ist es Zeit, das Modell zu „operationalisieren“.</span><span class="sxs-lookup"><span data-stu-id="0a5d9-104">When the model metrics look good to you, it's time to 'operationalize' the model.</span></span> <span data-ttu-id="0a5d9-105">Das `model`-Objekt, das Sie erstellt haben, kann in verschiedenen Umgebungen genutzt, fortbestehen und wiederverwendet werden, wobei die gleichen Schritte angewendet werden, die es beim Training „gelernt“ hat.</span><span class="sxs-lookup"><span data-stu-id="0a5d9-105">The `model` object you built can be consumed, persisted, and reused in different environments, applying the same steps that it 'learned' during training.</span></span>
+> [!NOTE]
+> <span data-ttu-id="920a4-104">Dieses Thema bezieht sich auf ML.NET, was derzeit als Vorschau verfügbar ist, und das Material kann jederzeit geändert werden.</span><span class="sxs-lookup"><span data-stu-id="920a4-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="920a4-105">Weitere Informationen finden Sie in [der ML.NET-Einführung](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="920a4-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="0a5d9-106">Um das Modell in einer Datei zu speichern und erneut zu laden (möglicherweise in einem anderen Kontext), verwenden Sie das folgende Beispiel:</span><span class="sxs-lookup"><span data-stu-id="0a5d9-106">To save the model to a file, and reload it (potentially in a different context), use the following example:</span></span>
+<span data-ttu-id="920a4-106">Diese Anleitung und das dazugehörte Beispiel verwenden derzeit **ML.NET Version 0.10**.</span><span class="sxs-lookup"><span data-stu-id="920a4-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="920a4-107">Weitere Informationen finden Sie in den Anmerkungen zur Version im [Dotnet/Machinelearning-GitHub-Repository](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="920a4-107">For more information, see the release notes at the [dotnet/machinelearning github repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)</span></span>
+
+<span data-ttu-id="920a4-108">Wenn Sie die Modellmetriken gut finden, ist es Zeit, das Modell zu „operationalisieren“.</span><span class="sxs-lookup"><span data-stu-id="920a4-108">When the model metrics look good to you, it's time to 'operationalize' the model.</span></span> <span data-ttu-id="920a4-109">Das `model`-Objekt, das Sie erstellt haben, kann in verschiedenen Umgebungen genutzt, fortbestehen und wiederverwendet werden, wobei die gleichen Schritte angewendet werden, die es beim Training „gelernt“ hat.</span><span class="sxs-lookup"><span data-stu-id="920a4-109">The `model` object you built can be consumed, persisted, and reused in different environments, applying the same steps that it 'learned' during training.</span></span>
+
+<span data-ttu-id="920a4-110">Um das Modell in einer Datei zu speichern und erneut zu laden (möglicherweise in einem anderen Kontext), verwenden Sie das folgende Beispiel:</span><span class="sxs-lookup"><span data-stu-id="920a4-110">To save the model to a file, and reload it (potentially in a different context), use the following example:</span></span>
 
 ```csharp
 using (var stream = File.Create(modelPath))

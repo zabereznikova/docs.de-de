@@ -1,22 +1,27 @@
 ---
 title: Laden von Daten aus einer Textdateien für die Machine Learning-Verarbeitung – ML.NET
 description: Erfahren Sie, wie Sie Daten aus einer Textdatei laden, um mit ML.NET Machine Learning-Modelle zu erstellen, zu trainieren und zu bewerten.
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 70c7ccdeaa27b78a412c2bc82f524d4bf42a740a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 62f68bd950d6a2c116baaba86ba7e27a10cec69d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091707"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676290"
 ---
-# <a name="load-data-from-a-text-file-for-machine-learning-processing---mlnet"></a><span data-ttu-id="23a9d-103">Laden von Daten aus einer Textdateien für die Machine Learning-Verarbeitung – ML.NET</span><span class="sxs-lookup"><span data-stu-id="23a9d-103">Load data from a text file for machine learning processing - ML.NET</span></span>
+# <a name="load-data-from-a-text-file-for-machine-learning-processing---mlnet"></a><span data-ttu-id="5b32a-103">Laden von Daten aus einer Textdateien für die Machine Learning-Verarbeitung – ML.NET</span><span class="sxs-lookup"><span data-stu-id="5b32a-103">Load data from a text file for machine learning processing - ML.NET</span></span>
 
-<span data-ttu-id="23a9d-104">`TextLoader` wird verwendet, um Daten aus einer Textdatei zu laden.</span><span class="sxs-lookup"><span data-stu-id="23a9d-104">`TextLoader` is used to load data from text files.</span></span> <span data-ttu-id="23a9d-105">Sie müssen die Datenspalten, deren Typen und ihre Position in der Textdatei angeben.</span><span class="sxs-lookup"><span data-stu-id="23a9d-105">You need to specify the data columns, their types, and their location in the text file.</span></span>
+> [!NOTE]
+> <span data-ttu-id="5b32a-104">Dieses Thema bezieht sich auf ML.NET, was derzeit als Vorschau verfügbar ist, und das Material kann jederzeit geändert werden.</span><span class="sxs-lookup"><span data-stu-id="5b32a-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="5b32a-105">Weitere Informationen finden Sie in [der ML.NET-Einführung](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span><span class="sxs-lookup"><span data-stu-id="5b32a-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="23a9d-106">Beachten Sie, dass es durchaus akzeptabel ist, einige Spalten einer Datei zu lesen oder die gleiche Spalte mehrmals zu lesen.</span><span class="sxs-lookup"><span data-stu-id="23a9d-106">Note that it's perfectly acceptable to read some columns of a file, or read the same column multiple times.</span></span>
+<span data-ttu-id="5b32a-106">Diese Anleitung und das dazugehörte Beispiel verwenden derzeit **ML.NET Version 0.10**.</span><span class="sxs-lookup"><span data-stu-id="5b32a-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="5b32a-107">Weitere Informationen finden Sie in den Anmerkungen zur Version im [Dotnet/Machinelearning-GitHub-Repository](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span><span class="sxs-lookup"><span data-stu-id="5b32a-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="23a9d-107">[Beispieldatei](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="23a9d-107">[Example file](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
+<span data-ttu-id="5b32a-108">`TextLoader` wird verwendet, um Daten aus einer Textdatei zu laden.</span><span class="sxs-lookup"><span data-stu-id="5b32a-108">`TextLoader` is used to load data from text files.</span></span> <span data-ttu-id="5b32a-109">Sie müssen die Datenspalten, deren Typen und ihre Position in der Textdatei angeben.</span><span class="sxs-lookup"><span data-stu-id="5b32a-109">You need to specify the data columns, their types, and their location in the text file.</span></span>
+
+<span data-ttu-id="5b32a-110">Beachten Sie, dass es durchaus akzeptabel ist, einige Spalten einer Datei zu lesen oder die gleiche Spalte mehrmals zu lesen.</span><span class="sxs-lookup"><span data-stu-id="5b32a-110">Note that it's perfectly acceptable to read some columns of a file, or read the same column multiple times.</span></span>
+
+<span data-ttu-id="5b32a-111">[Beispieldatei](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span><span class="sxs-lookup"><span data-stu-id="5b32a-111">[Example file](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
 
 ```console
 Label   Workclass   education   marital-status
@@ -26,7 +31,7 @@ Label   Workclass   education   marital-status
 1   Private Some-college    Married-civ-spouse
 ```
 
-<span data-ttu-id="23a9d-108">So laden Sie die Daten aus einer Textdatei:</span><span class="sxs-lookup"><span data-stu-id="23a9d-108">To load the data from a text file:</span></span>
+<span data-ttu-id="5b32a-112">So laden Sie die Daten aus einer Textdatei:</span><span class="sxs-lookup"><span data-stu-id="5b32a-112">To load the data from a text file:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
