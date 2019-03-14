@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Offi
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c4fce49b079473ddcc2b840527b8aeb951fec780
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479606"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674652"
 ---
 # <a name="official-net-docker-images"></a>Offizielle .NET-Docker-Images
 
@@ -23,9 +23,9 @@ Die meisten Image-Repositorys stellen umfangreiche Taggingfunktionen bereit, die
 
 Beim Erstellen von Docker-Images für Entwickler standen für Microsoft die folgenden wichtigen Szenarios im Mittelpunkt:
 
--   Images zum *Entwickeln* und Erstellen von .NET Core-Apps
+- Images zum *Entwickeln* und Erstellen von .NET Core-Apps
 
--   Images zum *Ausführen* von .NET Core-Apps
+- Images zum *Ausführen* von .NET Core-Apps
 
 Warum mehrere Images? Beim Entwickeln, Erstellen und Ausführen von Containeranwendungen gibt es üblicherweise unterschiedliche Prioritäten. Durch das Bereitstellen verschiedener Images leistet Microsoft einen Beitrag zur Optimierung der separaten Prozesse des Entwickelns, Erstellens und Bereitstellens von Apps.
 
@@ -50,6 +50,6 @@ Wenn Sie sich die .NET-Image-Repositorys im Docker-Hub ansehen, werden Sie mehre
 | microsoft/dotnet:**2.2-aspnetcore-runtime** | ASP.NET Core mit Optimierungen nur für die Runtime und ASP.NET Core unter Linux und Windows (Mehrfacharchitektur) |
 | microsoft/dotnet:**2.2-sdk**                | .NET Core mit enthaltenen SDKs unter Linux und Windows (Mehrfacharchitektur)                                  |
 
->[!div class="step-by-step"]
->[Zurück](net-container-os-targets.md)
->[Weiter](../architect-microservice-container-applications/index.md)
+> [!div class="step-by-step"]
+> [Zurück](net-container-os-targets.md)
+> [Weiter](../architect-microservice-container-applications/index.md)

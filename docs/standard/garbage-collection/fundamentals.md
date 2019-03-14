@@ -1,6 +1,7 @@
 ---
 title: Grundlagen der Garbage Collection
-ms.date: 03/30/2017
+description: Erfahren Sie, wie der Garbage Collector funktioniert und wie er für eine optimale Leistung konfiguriert werden kann.
+ms.date: 03/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066322"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712473"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Grundlagen der Garbage Collection
 <a name="top"></a> In der Common Language Runtime (CLR) dient der Garbage Collector als automatischer Speicher-Manager. Der Garbage Collector bietet folgende Vorteile:  
@@ -30,28 +31,8 @@ ms.locfileid: "55066322"
   
 -   Bietet Speichersicherheit, indem sichergestellt wird, dass ein Objekt den Inhalt eines anderen Objekts nicht verwenden kann.  
   
- In diesem Thema werden die wichtigsten Konzepte der Garbage Collection beschrieben. Es enthält die folgenden Abschnitte:  
-  
--   [Grundlagen des Arbeitsspeichers](#fundamentals_of_memory)  
-  
--   [Bedingungen für eine Garbage Collection](#conditions_for_a_garbage_collection)  
-  
--   [Der verwaltete Heap](#the_managed_heap)  
-  
--   [Generationen](#generations)  
-  
--   [Was geschieht während einer Garbage Collection](#what_happens_during_a_garbage_collection)  
-  
--   [Bearbeiten von nicht verwalteten Ressourcen](#manipulating_unmanaged_resources)  
-  
--   [Garbage Collection für die Arbeitsstation und Garbage Collection auf dem Server](#workstation_and_server_garbage_collection)  
-  
--   [Concurrent garbage collection](#concurrent_garbage_collection)  
-  
--   [Garbage Collection auf Arbeitsstationen im Hintergrund](#background_garbage_collection)  
-  
--   [Garbage Collection auf dem Server im Hintergrund](#background_server_garbage_collection)  
-  
+ In diesem Thema werden die wichtigsten Konzepte der Garbage Collection beschrieben. 
+ 
 <a name="fundamentals_of_memory"></a>   
 ## <a name="fundamentals-of-memory"></a>Grundlagen des Arbeitsspeichers  
  Die folgende Liste liefert eine Zusammenfassung wichtiger Arbeitsspeicherkonzepte der CLR.  
@@ -109,9 +90,9 @@ ms.locfileid: "55066322"
   
  Die Intrusivität (Häufigkeit und Dauer) von Garbage Collections wird bestimmt durch den Umfang der Speicherbelegungen und der Größe des beibehaltenen Speichers auf dem verwalteten Heap.  
   
- Der Heap kann als Ansammlung von zwei Heaps betrachtet werden: der große Objektheap und der kleine Objektheap.  
+ Der Heap kann als Ansammlung von zwei Heaps betrachtet werden: der [große Objektheap](large-object-heap.md) und der kleine Objektheap.  
   
- Der große Objektheap enthält sehr große Objekte, die mindestens 85.000 Bytes groß sind. Die Objekte auf dem großen Objektheap sind normalerweise Arrays. Ein Instanzobjekt ist meistens nicht sehr groß.  
+ Der [große Objektheap](large-object-heap.md) enthält sehr große Objekte, die mindestens 85.000 Bytes groß sind. Die Objekte auf dem großen Objektheap sind normalerweise Arrays. Ein Instanzobjekt ist meistens nicht sehr groß.  
   
  [Zurück nach oben](#top)  
   

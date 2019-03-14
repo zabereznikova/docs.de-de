@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Mit 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: bef268a180584c47486a16960ca13fd63201fbe2
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 9e1d07e48d88376efb5fbdbdadc999c8dcd5082d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479866"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374907"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Mit .NET-Containern angezieltes Betriebssystem
 
@@ -57,6 +57,6 @@ Wenn Sie den Namen des Images zu Ihrer Dockerfile-Datei hinzufügen, können Sie
 </tbody>
 </table>
 
->[!div class="step-by-step"]
->[Zurück](container-framework-choice-factors.md)
->[Weiter](official-net-docker-images.md)
+> [!div class="step-by-step"]
+> [Zurück](container-framework-choice-factors.md)
+> [Weiter](official-net-docker-images.md)

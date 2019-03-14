@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: cf1757531fc9eceee17f1faec66668945b9c2758
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b451d896186ffb650e495c10786106c37ab16131
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967970"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676017"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementieren ereignisbasierter Kommunikation zwischen Microservices (Integrationsereignisse)
 
@@ -76,19 +76,19 @@ Der Ereignisbus steht in Zusammenhang mit dem Observer-Muster und dem Publish-Su
 
 Beim [Observer-Muster](https://en.wikipedia.org/wiki/Observer_pattern) versorgt das primäre Objekt (als „Observable“ bezeichnet) andere interessierte Objekte (als „Observer“ bezeichnet) mit wichtigen Informationen (Ereignissen).
 
-### <a name="publishsubscribe-pubsub-pattern"></a>Muster „Veröffentlichen/Abonnieren“ 
+### <a name="publishsubscribe-pubsub-pattern"></a>Muster „Veröffentlichen/Abonnieren“
 
 Das [Muster „Veröffentlichen/Abonnieren“](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10)) dient demselben Zweck wie das Beobachtermuster: andere Dienste sollen über bestimmte Ereignisse informiert werden. Es gibt jedoch einen wichtigen Unterschied zwischen dem Observer-Muster und dem Pub/Sub-Muster. Beim Observer-Muster erfolgt die Übertragung direkt vom Observable an die Observer, d.h. sie „kennen“ einander. Beim Pub/Sub-Muster gibt es jedoch eine dritte Komponente, den Broker oder Nachrichtenbroker bzw. Ereignisbus, den sowohl der Herausgeber als auch der Abonnent kennt. Wenn Sie also das Pub/Sub-Muster verwenden, sind Herausgeber und Abonnenten dank dem erwähnten Ereignisbus oder Nachrichtenbroker präzise entkoppelt.
 
-### <a name="the-middleman-or-event-bus"></a>Der Vermittler oder Ereignisbus 
+### <a name="the-middleman-or-event-bus"></a>Der Vermittler oder Ereignisbus
 
 Wie erzielen Sie Anonymität zwischen Herausgeber und Abonnent? Eine einfache Möglichkeit besteht darin, die gesamte Kommunikation einem Vermittler zu überlassen. Ein Ereignisbus ist ein solcher Vermittler.
 
 Ein Ereignisbus besteht in der Regel aus zwei Teilen:
 
--   aus der Abstraktion oder Schnittstelle
+- aus der Abstraktion oder Schnittstelle
 
--   aus einer oder mehreren Implementierungen
+- aus einer oder mehreren Implementierungen
 
 In Abbildung 6-19 wird deutlich, dass der Ereignisbus aus der Sicht der Anwendung lediglich einen Veröffentlichen/Abonnieren-Kanal darstellt. Sie können diesen asynchronen Code auf verschiedene Weisen implementieren. Er kann mehrere Implementierungen aufweisen, sodass je nach Umgebungsanforderungen (z.B. Produktions- oder Entwicklungsumgebung) zwischen diesen gewechselt werden kann.
 
@@ -129,6 +129,6 @@ Die `Publish`-Methode ist einfach. Der Ereignisbus sendet das an ihn weitergelei
 
 Die `Subscribe`-Methoden (abhängig von den Argumenten können mehrere Implementierungen verwendet werden) werden von den Microservices verwendet, die Ereignisse empfangen möchten. Diese Methode weist zwei Argumente auf. Beim ersten Argument handelt es sich um das Integrationsereignis, das abonniert werden kann (`IntegrationEvent`). Beim zweiten Argument handelt es sich um den Integrationsereignishandler (oder die Rückrufmethode) mit dem Namen `IIntegrationEventHandler<T>`. Dieses Argument wird ausgeführt, wenn der Empfängermicroservice diese Integrationsereignisnachricht empfängt.
 
->[!div class="step-by-step"]
->[Zurück](database-server-container.md)
->[Weiter](rabbitmq-event-bus-development-test-environment.md)
+> [!div class="step-by-step"]
+> [Zurück](database-server-container.md)
+> [Weiter](rabbitmq-event-bus-development-test-environment.md)

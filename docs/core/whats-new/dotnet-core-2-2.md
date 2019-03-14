@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 058e7ee1dc834ff23a9a4aa191f7eaeb1016375c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49a65dd44159e9800f7cf50a1edaa3d9e9b82e47
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679776"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677265"
 ---
 # <a name="whats-new-in-net-core-22"></a>Neuerungen in .NET Core 2.2
 
@@ -28,9 +28,9 @@ Dieser neue Bereitstellungsmodus hat den entscheidenden Vorteil, dass Sie eine a
 
 **Behandeln von Ereignissen in Runtimediensten**
 
-Möglicherweise möchten Sie die Nutzung von Runtimediensten wie GC, JIT und ThreadPool durch Ihre Anwendung überwachen, um zu verstehen, wie sich diese auf Ihre Anwendung auswirken. Auf Windows-Systemen geschieht dies in der Regel durch die Überwachung der ETW-Ereignisse des aktuellen Prozesses. Obwohl dies weiterhin gut funktioniert, ist es nicht immer möglich, ETW zu verwenden, wenn Sie in einer Umgebung mit niedriger Priorität oder unter Linux oder macOS arbeiten.  
+Möglicherweise möchten Sie die Nutzung von Runtimediensten wie GC, JIT und ThreadPool durch Ihre Anwendung überwachen, um zu verstehen, wie sich diese auf Ihre Anwendung auswirken. Auf Windows-Systemen geschieht dies in der Regel durch die Überwachung der ETW-Ereignisse des aktuellen Prozesses. Obwohl dies weiterhin gut funktioniert, ist es nicht immer möglich, ETW zu verwenden, wenn Sie in einer Umgebung mit niedriger Priorität oder unter Linux oder macOS arbeiten. 
 
-Ab .NET Core 2.2 können CoreCLR-Ereignisse nun über die <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithtype>-Klasse genutzt werden. Diese Ereignisse beschreiben das Verhalten der Runtimedienste wie GC, JIT-Kompilierung, ThreadPool und Interop. Dies sind die gleichen Ereignisse wie bei Teilen des CoreCLR ETW-Anbieters.  Dies ermöglicht es Anwendungen, diese Ereignisse zu verarbeiten oder einen Transportmechanismus zu nutzen, um sie an einen Telemetrieaggregationsdienst zu senden. Im folgenden Codebeispiel wird erläutert, wie Sie Ereignisse abonnieren:
+Ab .NET Core 2.2 können CoreCLR-Ereignisse nun über die <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType>-Klasse genutzt werden. Diese Ereignisse beschreiben das Verhalten der Runtimedienste wie GC, JIT-Kompilierung, ThreadPool und Interop. Dies sind die gleichen Ereignisse wie bei Teilen des CoreCLR ETW-Anbieters.  Dies ermöglicht es Anwendungen, diese Ereignisse zu verarbeiten oder einen Transportmechanismus zu nutzen, um sie an einen Telemetrieaggregationsdienst zu senden. Im folgenden Codebeispiel wird erläutert, wie Sie Ereignisse abonnieren:
 
 ```csharp
 internal sealed class SimpleEventListener : EventListener
@@ -82,7 +82,7 @@ Der JIT-Compiler implementierte in .NET Core 2.1 eine neue Compilertechnologie, 
 
 - Eine **zweite Stufe**, die optimiertem Code für Methoden generiert, die häufig ausgeführt werden. Die zweite Stufe der Kompilierung wird parallel zum Verbessern der Leistung ausgeführt.
 
-Informationen zur Leistungssteigerung, die sich aus der mehrstufigen Kompilierung ergeben kann, finden Sie unter [Ankündigung zu .NET Core 2.2 Vorschauversion 2](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/). 
+Informationen zur Leistungssteigerung, die sich aus der mehrstufigen Kompilierung ergeben kann, finden Sie unter [Ankündigung zu .NET Core 2.2 Vorschauversion 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/).
 
 In .NET Core 2.2 Vorschauversion 2 wurde die mehrstufige Kompilierung standardmäßig aktiviert. Allerdings haben wir entschieden, dass wir noch nicht bereit sind, die mehrstufige Kompilierung standardmäßig zu aktivieren. Daher bleibt die mehrstufigen Kompilierung in .NET Core 2.2 weiterhin ein abonnierbares Feature. Informationen zum Abonnieren der mehrstufigen Kompilierung finden Sie unter [Verbesserungen am Jit-Compiler](dotnet-core-2-1.md#jit-compiler-improvements) in [Neuerungen in .NET Core 2.1](dotnet-core-2-1.md).
 

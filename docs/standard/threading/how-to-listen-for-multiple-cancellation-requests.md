@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Lauschen auf mehrere Abbruchanforderungen'
+title: 'Vorgehensweise: Lauschen auf mehrere Abbruchanforderungen'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ba8000544d0b7d35a818d41a75f38e6fd0293d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 17874b8b9733ea18d4877e2c79810fcd6247db0b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44178564"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680230"
 ---
-# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Gewusst wie: Lauschen auf mehrere Abbruchanforderungen
+# <a name="how-to-listen-for-multiple-cancellation-requests"></a>Vorgehensweise: Lauschen auf mehrere Abbruchanforderungen
 In diesem Beispiel wird gezeigt, wie Sie zwei Abbruchtoken gleichzeitig abhören können, um einen Vorgang abzubrechen, wenn dies von einem der beiden Token angefordert wird.  
   
 > [!NOTE]
@@ -32,7 +32,7 @@ In diesem Beispiel wird gezeigt, wie Sie zwei Abbruchtoken gleichzeitig abhören
   
  Wenn das verknüpfte Token eine <xref:System.OperationCanceledException> auslöst, ist das Token, das an die Ausnahme übergeben wird, das verknüpfte Token, und nicht eines der Vorgängertoken. Um zu ermitteln, welches Token abgebrochen wurde, prüfen Sie direkt den Status der Vorgängertoken.  
   
- In diesem Beispiel sollte <xref:System.AggregateException> niemals ausgelöst werden, aber es wird hier dennoch abgefangen, da in der Praxis alle anderen Ausnahmen außer <xref:System.OperationCanceledException>, die von dem Taskdelegaten ausgelöst werden, von einer <xref:System.OperationCanceledException> umschlossen sind.  
+ In diesem Beispiel sollte <xref:System.AggregateException> niemals ausgelöst werden, aber es wird hier dennoch abgefangen, da in der Praxis alle anderen Ausnahmen außer <xref:System.OperationCanceledException>, die von dem Taskdelegaten ausgelöst werden, von einer <xref:System.AggregateException> umschlossen sind.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02568de0a1cc5cec6b92e646e000e69ae79b1646
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 1bdb51d38109cf4c072a9841983e86a444e964b0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066388"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492633"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Strong Name-Tool)
 Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [starken Namen](../../../docs/framework/app-domains/strong-named-assemblies.md). SN.EXE stellt Optionen zum Verwalten von Schlüsseln, Erzeugen und Überprüfen von Signaturen bereit.  
@@ -40,7 +40,7 @@ Das Strong Name-Tool („sn.exe“) hilft beim Signieren von Assemblys mit [star
 sn [-quiet][option [parameter(s)]]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
   
 |Option|Beschreibung|  
 |------------|-----------------|  
@@ -79,7 +79,7 @@ sn [-quiet][option [parameter(s)]]
 > [!NOTE]
 >  Bei allen Optionen für SN.EXE wird zwischen der Groß- und Kleinschreibung unterschieden. Sie müssen die Optionen daher exakt wie gezeigt angeben, damit sie vom Tool richtig interpretiert werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Die Optionen **-R** und **-Rc** sind bei Assemblys nützlich, die verzögert signiert wurden. In diesem Szenario wurde während der Kompilierung nur der öffentliche Schlüssel festgelegt. Die Signierung wird auf einen späteren Zeitpunkt verschoben, wenn der private Schlüssel bekannt ist.  
   
 > [!NOTE]

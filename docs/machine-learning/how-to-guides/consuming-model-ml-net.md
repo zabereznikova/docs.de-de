@@ -1,16 +1,21 @@
 ---
 title: Operationalisieren eines trainierten Machine Learning-Modells in Apps – ML.NET
 description: Erfahren Sie, wie Sie mit ML.NET ein trainiertes und ausgewertetes Machine Learning-Modell in Anwendungen nutzen.
-ms.date: 11/07/2018
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ff3f0a8856382d020129693bcf722f572fd87606
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: be6906c939b82d00067babaeebe809dae3de413a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131644"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675133"
 ---
 # <a name="operationalize-a-trained-machine-learning-model-in-apps---mlnet"></a>Operationalisieren eines trainierten Machine Learning-Modells in Apps – ML.NET
+
+> [!NOTE]
+> Dieses Thema bezieht sich auf ML.NET, was derzeit als Vorschau verfügbar ist, und das Material kann jederzeit geändert werden. Weitere Informationen finden Sie in [der ML.NET-Einführung](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Diese Anleitung und das dazugehörte Beispiel verwenden derzeit **ML.NET Version 0.10**. Weitere Informationen finden Sie in den Anmerkungen zur Version im [Dotnet/Machinelearning-GitHub-Repository](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Wenn Sie die Modellmetriken gut finden, ist es Zeit, das Modell zu „operationalisieren“. Das `model`-Objekt, das Sie erstellt haben, kann in verschiedenen Umgebungen genutzt, fortbestehen und wiederverwendet werden, wobei die gleichen Schritte angewendet werden, die es beim Training „gelernt“ hat.
 

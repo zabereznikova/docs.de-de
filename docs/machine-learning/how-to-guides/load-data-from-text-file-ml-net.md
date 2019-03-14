@@ -1,16 +1,21 @@
 ---
 title: Laden von Daten aus einer Textdateien für die Machine Learning-Verarbeitung – ML.NET
 description: Erfahren Sie, wie Sie Daten aus einer Textdatei laden, um mit ML.NET Machine Learning-Modelle zu erstellen, zu trainieren und zu bewerten.
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 70c7ccdeaa27b78a412c2bc82f524d4bf42a740a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 62f68bd950d6a2c116baaba86ba7e27a10cec69d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091707"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676290"
 ---
 # <a name="load-data-from-a-text-file-for-machine-learning-processing---mlnet"></a>Laden von Daten aus einer Textdateien für die Machine Learning-Verarbeitung – ML.NET
+
+> [!NOTE]
+> Dieses Thema bezieht sich auf ML.NET, was derzeit als Vorschau verfügbar ist, und das Material kann jederzeit geändert werden. Weitere Informationen finden Sie in [der ML.NET-Einführung](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Diese Anleitung und das dazugehörte Beispiel verwenden derzeit **ML.NET Version 0.10**. Weitere Informationen finden Sie in den Anmerkungen zur Version im [Dotnet/Machinelearning-GitHub-Repository](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 `TextLoader` wird verwendet, um Daten aus einer Textdatei zu laden. Sie müssen die Datenspalten, deren Typen und ihre Position in der Textdatei angeben.
 

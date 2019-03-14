@@ -4,12 +4,12 @@ description: Untersuchen Sie die in ML.NET unterstützten herausragenden technis
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 01/14/2019
-ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e649c9a27f0409cb9cdfb554963b5c0e732991f2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415350"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355407"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Datentransformationen für maschinelles Lernen – ML.NET
 
@@ -25,7 +25,7 @@ Die folgenden Tabellen enthalten Informationen über alle in ML.NET unterstützt
 | <xref:Microsoft.ML.Transforms.GroupTransform> | Gruppiert Werte einer Skalarspalte auf Grundlage einer ID einer zusammenhängenden Gruppe und überführt diese in einen Vektor. |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | Hebt die Gruppierung für Vektorspalten auf und überführt diese in Zeilensequenzen; Umkehrvorgang zur Gruppentransformation. |
 
-## <a name="conversions"></a>Konvertierungen 
+## <a name="conversions"></a>Konvertierungen
 
 | Transformation | Definition |
 | --- | --- |
@@ -36,7 +36,6 @@ Die folgenden Tabellen enthalten Informationen über alle in ML.NET unterstützt
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | Konvertiert einen Schlüssel in eine Vektorspalte. |
 | <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | Ändert den zugrundeliegenden Spaltentyp, vorausgesetzt, der Typ kann konvertiert werden. |
 | <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | Konvertiert Eingabewerte (Wörter, Zahlen usw.) für eine Wörterbuchindizierung. |
-
 
 ## <a name="deep-learning"></a>Deep Learning
 
@@ -49,17 +48,17 @@ Die folgenden Tabellen enthalten Informationen über alle in ML.NET unterstützt
 
 | Transformation | Definition |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Entfernt eine angegebene Liste von Stoppwörtern durch Vergleich einzelner Token (ohne Berücksichtigung der Groß-/Kleinschreibung) mit den Stoppwörtern.| 
+| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Entfernt eine angegebene Liste von Stoppwörtern durch Vergleich einzelner Token (ohne Berücksichtigung der Groß-/Kleinschreibung) mit den Stoppwörtern.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | Nimmt eine oder mehrere ImageType-Spalten an und konvertiert sie in eine Graustufendarstellung des gleichen Bilds.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | Nimmt eine oder mehrere ReadOnlyMemory-Spalten an und lädt sie als einen ImageType. |
 | <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | Nimmt eine oder mehrere ImageType-Spalten an und konvertiert sie in eine Vektordarstellung.|
 | <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | Nimmt eine oder mehrere ImageType-Spalten an und ändert ihre Größe auf die angegebene Höhe und Breite.|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | Implementiert LightLDA, eine Implementierung der Latent Dirichlet Allocation auf dem neuesten Stand.|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | Lädt bestimmte Transformationen aus der angegebenen Modelldatei. Ermöglicht die gezielte Auswahl von Transformationen aus einer serialisierten Kette oder die Anwendung einer vortrainierten Transformation auf eine andere (aber trotzdem kompatible) Datenansicht. |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Erstellt eine Sammlung mit der Anzahl der N-Gramme (Sequenzen aufeinander folgender Werte der Länge 1–n) in einem angegebenen Schlüsselvektor. Dabei wird ein Wörterbuch mit N-Grammen erstellt, und die ID im Wörterbuch wird als Index in der Sammlung verwendet. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Wandelt eine Sammlung von Tokentext (Vektor von ReadOnlyMemory) oder Vektoren von Schlüsseln in numerische Featurevektoren um. Die Featurevektoren sind die Anzahlen von N-Grammen (Abfolgen aufeinander folgender Token – Wörter oder Schlüssel – mit der Länge 1-n). | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Wandelt eine Sammlung von Tokentext (Vektor von ReadOnlyMemory) mittels Hashing in numerische Featurevektoren um. | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Erzeugt eine Sammlung mit der Anzahl der N-Gramme (Abfolgen aufeinander folgender Wörter der Länge 1–n) in einem bestimmten Text. | 
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Erstellt eine Sammlung mit der Anzahl der N-Gramme (Sequenzen aufeinander folgender Werte der Länge 1–n) in einem angegebenen Schlüsselvektor. Dabei wird ein Wörterbuch mit N-Grammen erstellt, und die ID im Wörterbuch wird als Index in der Sammlung verwendet. |
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Wandelt eine Sammlung von Tokentext (Vektor von ReadOnlyMemory) oder Vektoren von Schlüsseln in numerische Featurevektoren um. Die Featurevektoren sind die Anzahlen von N-Grammen (Abfolgen aufeinander folgender Token – Wörter oder Schlüssel – mit der Länge 1-n). |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Wandelt eine Sammlung von Tokentext (Vektor von ReadOnlyMemory) mittels Hashing in numerische Featurevektoren um. |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Erzeugt eine Sammlung mit der Anzahl der N-Gramme (Abfolgen aufeinander folgender Wörter der Länge 1–n) in einem bestimmten Text. |
 | <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | Konvertiert den Kategoriewert in ein Indikatorarray. Dazu wird auf der Grundlage der Daten ein Wörterbuch der Kategorien erstellt und die ID im Wörterbuch als Index im Array verwendet. |
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | Berechnet die Projektion des Featurevektors auf einen niederrangigen Teilraum. |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | Verwendet ein vortrainiertes Stimmungsmodell, um Eingabezeichenfolgen zu bewerten. |
@@ -73,7 +72,7 @@ Die folgenden Tabellen enthalten Informationen über alle in ML.NET unterstützt
 
 | Transformation | Definition |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.AlexNetExtension> | Dies ist eine Erweiterungsmethode für die Verwendung mit dem <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>, um ein vortrainiertes [AlexNet](https://en.wikipedia.org/wiki/AlexNet)-Modell zu verwenden. Das NuGet-Paket, das diese Erweiterung enthält, beinhaltet außerdem garantiert die binäre Modelldatei. | 
+| <xref:Microsoft.ML.Transforms.AlexNetExtension> | Dies ist eine Erweiterungsmethode für die Verwendung mit dem <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>, um ein vortrainiertes [AlexNet](https://en.wikipedia.org/wiki/AlexNet)-Modell zu verwenden. Das NuGet-Paket, das diese Erweiterung enthält, beinhaltet außerdem garantiert die binäre Modelldatei. |
 | <xref:Microsoft.ML.Transforms.ResNet18Extension> | Diese ist eine Erweiterungsmethode für die Verwendung mit dem <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>, um ein vortrainiertes ResNet18-Modell zu verwenden. Das NuGet-Paket, das diese Erweiterung enthält, beinhaltet außerdem garantiert die binäre Modelldatei. |
 | <xref:Microsoft.ML.Transforms.ResNet50Extension> | Diese ist eine Erweiterungsmethode für die Verwendung mit dem <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>, um ein vortrainiertes ResNet50-Modell zu verwenden. Das NuGet-Paket, das diese Erweiterung enthält, beinhaltet außerdem garantiert die binäre Modelldatei. |
 | <xref:Microsoft.ML.Transforms.ResNet101Extension> | Diese ist eine Erweiterungsmethode für die Verwendung mit dem <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator>, um ein vortrainiertes ResNet101-Modell zu verwenden. Das NuGet-Paket, das diese Erweiterung enthält, beinhaltet außerdem garantiert die binäre Modelldatei. |

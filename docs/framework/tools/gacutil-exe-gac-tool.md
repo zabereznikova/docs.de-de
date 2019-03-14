@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 779cf36fb10cc3acbefabd6ef90a885cc221f3f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3b1f1d153c0ba8c9ae44243adc4672eee872085
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541221"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492490"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (Global Assembly Cache-Tool)
 Das Global Assembly Cache-Tool ermöglicht das Anzeigen und Bearbeiten vom Inhalt des globalen Assemblycaches und des Downloadcaches.  
@@ -39,7 +39,7 @@ Das Global Assembly Cache-Tool ermöglicht das Anzeigen und Bearbeiten vom Inhal
 gacutil [options] [assemblyName | assemblyPath | assemblyListFile]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
   
 |Argument|Beschreibung|  
 |--------------|-----------------|  
@@ -69,7 +69,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/ur**  *assemblyName*<br /><br /> *Schema*<br /><br /> *ID*<br /><br /> *Beschreibung*|Deinstalliert einen Verweis auf eine angegebene Assembly aus dem globalen Assemblycache. Um einen Verweis auf eine Assembly zu entfernen, müssen Sie dieselben Parameter *scheme*, *id* und *description* angeben, die beim Installieren der Assembly mit der **/i**-Option und der **/r**-Option (bzw. der **/ir**-Option) angegeben wurden. Eine Beschreibung der gültigen Werte, die für diese Parameter angegeben werden können, finden Sie unter der **/r**-Option.<br /><br /> Die Angabe dieser Option entspricht der kombinierten Angabe der **/u**-Option und der **/r**-Option.|  
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
   
 > [!NOTE]
 >  Sie müssen zum Verwenden von "Gacutil.exe" über Administratorrechte verfügen.  

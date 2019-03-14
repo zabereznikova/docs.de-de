@@ -3,12 +3,12 @@ title: Arbeiten mit LINQ
 description: In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generieren, Methoden zur Verwendung in LINQ-Abfragen schreiben und zwischen strikter Auswertung (Eager Evaluation) und verzögerter Auswertung (Lazy Evaluation) unterscheiden.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: b7faa75234dec62be63e96c0f15f97c6d2aa4c99
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7613051bf5a8419244453339dd036d92249d2002
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170807"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679653"
 ---
 # <a name="working-with-linq"></a>Arbeiten mit LINQ
 
@@ -16,13 +16,13 @@ ms.locfileid: "53170807"
 
 In diesem Tutorial lernen Sie Features in .NET Core und der Sprache C# kennen. Es werden die folgenden Themen abgedeckt:
 
-*   Generieren von Sequenzen mit LINQ
-*   Schreiben von Methoden, die sich problemlos in LINQ-Abfragen verwenden lassen
-*   Unterscheiden zwischen strenger und verzögerter Auswertung
+- Generieren von Sequenzen mit LINQ
+- Schreiben von Methoden, die sich problemlos in LINQ-Abfragen verwenden lassen
+- Unterscheiden zwischen strenger und verzögerter Auswertung
 
 Sie lernen diese Techniken durch Erstellen einer Anwendung, die eine der grundlegenden Fertigkeiten jedes Zauberkünstlers demonstriert: den [Faro-Shuffle](https://en.wikipedia.org/wiki/Faro_shuffle). Ein Faro-Shuffle ist eine Kartenmischtechnik, bei der zwei Kartenpäckchen exakt so ineinander gefächert werden, dass auf eine Karte des einen Stapels stets eine Karte des anderen Stapels folgt.
 
-Zauberer verwenden diese Technik, weil sie damit nach jedem Mischen genau wissen, welche Karte sich wo befindet, und die Reihenfolge ein sich wiederholendes Muster ist. 
+Zauberer verwenden diese Technik, weil sie damit nach jedem Mischen genau wissen, welche Karte sich wo befindet, und die Reihenfolge ein sich wiederholendes Muster ist.
 
 Im vorliegenden Artikel dient die Technik dazu, das Manipulieren von Datensequenzen mit einem anschaulichen Beispiel zu zeigen. Die von Ihnen erstellte Anwendung stellt einen Kartenstapel zusammen und führt dann eine Sequenz aus Mischvorgängen aus, wobei die Sequenz jedes Mal ausgegeben wird. Sie werden auch die aktualisierte mit der ursprünglichen Reihenfolge vergleichen.
 
@@ -36,7 +36,7 @@ Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten. Die Install
 
 Im ersten Schritt wird eine neue Anwendung erstellt. Öffnen Sie eine Eingabeaufforderung, und erstellen Sie ein neues Verzeichnis für Ihre Anwendung. Legen Sie das Verzeichnis als aktuelles Verzeichnis fest. Geben Sie an der Eingabeaufforderung den Befehl `dotnet new console` ein. Hierdurch werden die Startdateien für eine einfache „Hello World“-Anwendung erstellt.
 
-Wenn Sie C# noch nie verwendet haben, erläutert [dieses Tutorial](console-teleprompter.md) die Struktur eines C#-Programms. Sie können dieses Tutorial lesen und dann zu diesem Artikel zurückkehren, um mehr über LINQ zu erfahren. 
+Wenn Sie C# noch nie verwendet haben, erläutert [dieses Tutorial](console-teleprompter.md) die Struktur eines C#-Programms. Sie können dieses Tutorial lesen und dann zu diesem Artikel zurückkehren, um mehr über LINQ zu erfahren.
 
 ## <a name="creating-the-data-set"></a>Erstellen des Datasets
 
@@ -82,6 +82,7 @@ static IEnumerable<string> Ranks()
     yield return "ace";
 }
 ```
+
 Platzieren Sie diese unterhalb der `Main`-Methode in Ihrer `Program.cs`-Datei. Diese Methoden nutzen beide die `yield return`-Syntax, um während der Ausführung eine Sequenz zu erzeugen. Der Compiler erstellt ein Objekt, das <xref:System.Collections.Generic.IEnumerable%601>implementiert und die Sequenz aus Zeichenfolgen erst dann generiert, wenn diese angefordert werden.
 
 Verwenden Sie nun diese Iteratormethoden, um den Spielkartenstapel zu erstellen. Sie platzieren die LINQ-Abfrage in unserer `Main`-Methode. Sie sieht wie folgt aus:
@@ -98,16 +99,18 @@ static void Main(string[] args)
     foreach (var card in startingDeck)
     {
         Console.WriteLine(card);
-    } 
+    }
 }
 ```
 
 Die verschiedenen `from`-Klauseln erzeugen <xref:System.Linq.Enumerable.SelectMany%2A>, wodurch aus der Kombination jedes Elements in der ersten Sequenz mit jedem Element in der zweiten Sequenz eine einzige Sequenz erstellt wird. Für unsere Zwecke ist die Reihenfolge wichtig. Das erste Element in der ersten Quellsequenz (Farben) wird mit jedem Element in der zweiten Sequenz (Ränge) kombiniert. Dadurch werden alle dreizehn Karten der ersten Farbe erzeugt. Dieser Vorgang wird mit jedem Element in der ersten Sequenz (Farben) wiederholt. Das Ergebnis ist ein Kartenstapel, der erst nach Farben und innerhalb der Farben nach Werten sortiert ist.
 
 Beachten Sie unbedingt Folgendes: Ob Sie LINQ-Anweisungen in der oben verwendeten Abfragesyntax schreiben oder stattdessen die Methodensyntax verwenden, Sie können immer von einer Form der Syntax zur anderen wechseln. Die obige, in der Abfragesyntax geschriebene Abfrage kann in der Methodensyntax geschrieben werden als:
+
 ```csharp
 var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit = suit, Rank = rank }));
 ```
+
 Der Compiler übersetzt mit der Abfragesyntax geschriebene LINQ-Anweisungen in die entsprechende Methodenaufrufsyntax. Aus diesem Grund erzielen unabhängig von Ihrer Syntaxwahl die beiden Versionen der Abfrage das gleiche Ergebnis. Wählen Sie die beste Syntax für Ihre Situation aus: Wenn Sie z.B. in einem Team arbeiten, in dem einige Mitglieder mit der Methodensyntax Schwierigkeiten haben, versuchen Sie, die Abfragesyntax zu bevorzugen.
 
 Führen Sie jetzt das erstellte Beispiel aus. Es werden alle 52 Karten des Kartenstapels angezeigt. Es kann sehr hilfreich sein, dieses Beispiel mit einem Debugger auszuführen, um zu beobachten, wie die Methoden `Suits()` und `Ranks()` ausgeführt werden. Sie können deutlich erkennen, dass jede Zeichenfolge in jeder Sequenz erst dann erstellt wird, wenn sie benötigt wird.
@@ -131,7 +134,7 @@ public static void Main(string[] args)
         Console.WriteLine(c);
     }
 
-    // 52 cards in a deck, so 52 / 2 = 26    
+    // 52 cards in a deck, so 52 / 2 = 26
     var top = startingDeck.Take(26);
     var bottom = startingDeck.Skip(26);
 }
@@ -141,7 +144,7 @@ In der Standardbibliothek ist jedoch keine Mischmethode vorhanden, Sie müssen s
 
 Um Funktionalität für Ihre Interaktion mit den <xref:System.Collections.Generic.IEnumerable%601>-Formen, die Sie von einigen LINQ-Abfragen erhalten, hinzuzufügen, müssen Sie einige besondere Arten von Methoden schreiben, die als [Erweiterungsmethoden](../../csharp/programming-guide/classes-and-structs/extension-methods.md) bezeichnet werden. Eine Erweiterungsmethode ist im Wesentlichen eine *statische Methode* für einen speziellen Zweck, die einem bereits vorhandenen Typ Funktionalität hinzufügt, ohne diesen ursprünglichen Typ ändern zu müssen.
 
-Fügen Sie für Ihre Erweiterungsmethoden eine neue *statische* Klassendatei namens `Extensions.cs` Ihrem Programm hinzu, und beginnen Sie dann, die erste Erweiterungsmethode zu erstellen: 
+Fügen Sie für Ihre Erweiterungsmethoden eine neue *statische* Klassendatei namens `Extensions.cs` Ihrem Programm hinzu, und beginnen Sie dann, die erste Erweiterungsmethode zu erstellen:
 
 ```csharp
 // Extensions.cs
@@ -191,7 +194,7 @@ public static void Main(string[] args)
     {
         Console.WriteLine(c);
     }
-        
+
     var top = startingDeck.Take(26);
     var bottom = startingDeck.Skip(26);
     var shuffle = top.InterleaveSequenceWith(bottom);
@@ -211,7 +214,7 @@ Das Schreiben einer Methode, mit der ermittelt wird, ob die beiden Sequenzen gle
 
 [!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
-Dies zeigt ein zweites LINQ-Idiom: Terminalmethoden. Diese Methoden akzeptieren eine Sequenz als Eingabe (bzw. in diesem Fall zwei Sequenzen) und geben einen einzelnen Skalarwert zurück. Terminalmethoden sind immer die endgültige Methode in einer Kette von Methoden für eine LINQ-Abfrage, daher der Namen „Terminalmethode“. 
+Dies zeigt ein zweites LINQ-Idiom: Terminalmethoden. Diese Methoden akzeptieren eine Sequenz als Eingabe (bzw. in diesem Fall zwei Sequenzen) und geben einen einzelnen Skalarwert zurück. Terminalmethoden sind immer die endgültige Methode in einer Kette von Methoden für eine LINQ-Abfrage, daher der Namen „Terminalmethode“.
 
 Sie können diese Methode in Aktion sehen, wenn Sie sie verwenden, um zu ermitteln, wann der Kartenstapel wieder die ursprüngliche Reihenfolge aufweist. Platzieren Sie den Code zum Mischen in einer Schleife, und halten Sie diese an, wenn die Sequenz wieder die ursprüngliche Reihenfolge aufweist. Wenden Sie hierzu die `SequenceEquals()`-Methode an. Hier sehen Sie, warum diese Methode immer die letzte in einer Abfrage sein muss: sie gibt anstelle einer Sequenz einen einzelnen Wert zurück:
 
@@ -279,7 +282,7 @@ public static void Main(string[] args)
     {
         Console.WriteLine(c);
     }
-        
+
     Console.WriteLine();
     var times = 0;
     var shuffle = startingDeck;
@@ -321,24 +324,24 @@ Sie können hier die Leistung des Codes verbessern, um die Anzahl der Ausführun
 
 Jetzt ist der Mischvorgang nach außen auf 30 Abfragen reduziert. Auch beim Mischen nach innen werden Sie ähnliche Verbesserungen feststellen: Jetzt werden 162 Abfragen ausgeführt.
 
-Bitte beachten Sie: Dieses Beispiel sollte **nur** Anwendungsfälle veranschaulichen, bei denen eine verzögerte Auswertung zu Leistungsproblemen führen kann. Es ist wichtig, festzustellen, wo die verzögerte Auswertung die Codeleistung beeinträchtigen kann, aber es ist gleichermaßen wichtig, zu verstehen, dass nicht alle Abfragen strikt ausgeführt werden sollten. Ursache der Leistungseinbußen, die auftreten, wenn Sie <xref:System.Linq.Enumerable.ToArray%2A> nicht verwenden, ist, dass jede neue Anordnung des Kartenstapels aus der vorherigen Anordnung erstellt wird. Bei der verzögerten Auswertung bedeutet dies, dass jede neue Kartenstapelkonfiguration aus dem ursprünglichen Kartenstapel erzeugt wird. Dabei wird sogar der Code ausgeführt, der den `startingDeck`-Stapel erstellt hat. Das verursacht eine Menge zusätzlichen Aufwands. 
+Bitte beachten Sie: Dieses Beispiel sollte **nur** Anwendungsfälle veranschaulichen, bei denen eine verzögerte Auswertung zu Leistungsproblemen führen kann. Es ist wichtig, festzustellen, wo die verzögerte Auswertung die Codeleistung beeinträchtigen kann, aber es ist gleichermaßen wichtig, zu verstehen, dass nicht alle Abfragen strikt ausgeführt werden sollten. Ursache der Leistungseinbußen, die auftreten, wenn Sie <xref:System.Linq.Enumerable.ToArray%2A> nicht verwenden, ist, dass jede neue Anordnung des Kartenstapels aus der vorherigen Anordnung erstellt wird. Bei der verzögerten Auswertung bedeutet dies, dass jede neue Kartenstapelkonfiguration aus dem ursprünglichen Kartenstapel erzeugt wird. Dabei wird sogar der Code ausgeführt, der den `startingDeck`-Stapel erstellt hat. Das verursacht eine Menge zusätzlichen Aufwands.
 
 In der Praxis werden manche Algorithmen gut mit der strikten Auswertung ausgeführt, für andere eignet sich die verzögerte Auswertung besser. Für die routinemäßige Nutzung eignet sich die verzögerte Auswertung in der Regel besser, wenn es sich bei der Datenquelle um einen separaten Prozess handelt, beispielsweise um eine Datenbank-Engine. Bei Datenbanken ermöglicht die verzögerte Auswertung komplexere Abfragen, um nur einen Roundtrip zum Datenbankprozess und zurück zu Ihrem übrigen Code auszuführen. LINQ ist flexibel, unabhängig davon, ob Sie die verzögerte oder strikte Auswertung verwenden, also wägen Sie Ihre Prozesse ab, und wählen Sie die Art der Auswertung aus, die Ihnen die beste Leistung bietet.
 
 ## <a name="conclusion"></a>Schlussbemerkung
 
 In diesem Projekt wurde Folgendes behandelt:
-* Verwendung von LINQ-Abfragen zum Aggregieren von Daten in einer sinnvollen Abfolge
-* Schreiben von Erweiterungsmethoden zum Hinzufügen eigener benutzerdefinierter Funktionalität zu LINQ-Abfragen
-* Lokalisieren von Bereichen in unserem Code, in denen LINQ-Abfragen zu Leistungsproblemen wie Geschwindigkeitseinbußen führen können
-* verzögerte und strikte Auswertung im Hinblick auf die LINQ-Abfragen und die möglichen Auswirkungen auf die Abfrageleistung
+- Verwendung von LINQ-Abfragen zum Aggregieren von Daten in einer sinnvollen Abfolge
+- Schreiben von Erweiterungsmethoden zum Hinzufügen eigener benutzerdefinierter Funktionalität zu LINQ-Abfragen
+- Lokalisieren von Bereichen in unserem Code, in denen LINQ-Abfragen zu Leistungsproblemen wie Geschwindigkeitseinbußen führen können
+- verzögerte und strikte Auswertung im Hinblick auf die LINQ-Abfragen und die möglichen Auswirkungen auf die Abfrageleistung
 
 Abgesehen von LINQ haben Sie ein wenig über die Verfahren gelernt, die Zauberer für Kartentricks anwenden. Zauberer verwenden den Faro-Shuffle, weil sie damit genau steuern können, wann sich welche Karte wo im Stapel befindet. Verderben Sie mit Ihrem Wissen jetzt aber nicht anderen den Spaß!
 
 Weitere Informationen zu LINQ finden Sie unter:
-* [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
-    * [Einführung in LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
-    * [Erste Schritte mit LINQ in C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
+    - [Einführung in LINQ](../programming-guide/concepts/linq/introduction-to-linq.md)
+    - [Erste Schritte mit LINQ in C#](../programming-guide/concepts/linq/getting-started-with-linq.md)
         - [Grundlegende LINQ-Abfragevorgänge (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
         - [Datentransformationen mit LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
         - [Abfragesyntax und Methodensyntax in LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)

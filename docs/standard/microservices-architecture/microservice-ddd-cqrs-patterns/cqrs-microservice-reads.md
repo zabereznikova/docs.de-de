@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: a77a92d12e3b60ebb67bab557a4e5ec1dd2f882f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 104c7564b7dd29209b48d99b1dea7524c07d7e69
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126445"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360419"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementieren von Lesevorgängen/Abfragen in einem CQRS-Microservice
 
@@ -95,13 +95,13 @@ Zu beachten ist, dass durch die Verwendung eines dynamischen Typs die zurückgeg
 
 ### <a name="viewmodel-as-predefined-dto-classes"></a>ViewModel als vordefinierte DTO-Klasse
 
-**Vorteile:** Vordefinierte statische ViewModel-Klassen wie „Verträge“, die auf expliziten DTO-Klassen beruhen, eignen sich insbesondere für öffentliche APIs. Ähnliches gilt auch für langfristige Microservices, und zwar auch dann, wenn diese nur für eine einzelne Anwendung eingesetzt werden.
+**Vorteile**: Vordefinierte statische ViewModel-Klassen wie „Verträge“, die auf expliziten DTO-Klassen beruhen, eignen sich insbesondere für öffentliche APIs. Ähnliches gilt auch für langfristige Microservices, und zwar auch dann, wenn diese nur für eine einzelne Anwendung eingesetzt werden.
 
 Wenn Sie Antworttypen für Swagger festlegen möchten, müssen Sie explizite DTO-Klassen als Rückgabetyp verwenden. Mit vordefinierten DTO-Klassen können Sie daher mehr Informationen aus Swagger beziehen und anzeigen lassen. Dadurch werden die API-Dokumentation und die Kompatibilität bei der Nutzung der API verbessert.
 
-**Nachteile:** Wie bereits erwähnt, sind für die Aktualisierung der DTO-Klassen mehrere Schritte erforderlich, sobald der Code geändert werden muss.
+**Nachteile**: Wie bereits erwähnt, sind für die Aktualisierung der DTO-Klassen mehrere Schritte erforderlich, sobald der Code geändert werden muss.
 
-*Autorentipp:* Wir haben in den Abfragen, die im Microservice für Bestellungen in eShopOnContainers implementiert wurden, zunächst dynamische ViewModels verwendet, da sich dieses Vorgehen in frühen Entwicklungsphasen als leicht und agil erwiesen hat. Sobald unser Code stabil war, haben wir die APIs umgestaltet und statische oder vordefinierte DTOs für die ViewModels verwendet, da es für die Consumer des Microservices leichter war, mit expliziten DTO-Typen umzugehen, die als Verträge genutzt wurden.
+*Autorentipp*: Wir haben in den Abfragen, die im Microservice für Bestellungen in eShopOnContainers implementiert wurden, zunächst dynamische ViewModels verwendet, da sich dieses Vorgehen in frühen Entwicklungsphasen als leicht und agil erwiesen hat. Sobald unser Code stabil war, haben wir die APIs umgestaltet und statische oder vordefinierte DTOs für die ViewModels verwendet, da es für die Consumer des Microservices leichter war, mit expliziten DTO-Typen umzugehen, die als Verträge genutzt wurden.
 
 Im folgenden Beispiel wird gezeigt, wie die Abfrage Daten mithilfe der expliziten ViewModel-DTO-Klasse „OrderSummary“ zurückgibt.
 
@@ -188,13 +188,13 @@ In der Abbildung werden mehrere Beispielwerte, die auf den ViewModel-Typen basie
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Dapper** \
-  [*https://github.com/StackExchange/dapper-dot-net*](https://github.com/StackExchange/dapper-dot-net)
+ <https://github.com/StackExchange/dapper-dot-net>
 
 - **Julie Lerman. Datenpunkte – Dapper, Entity Framework und Hybrid-Apps (Artikel im MSDN Magazine)** \
-  [*https://msdn.microsoft.com/magazine/mt703432.aspx*](https://msdn.microsoft.com/magazine/mt703432.aspx)
+  <https://msdn.microsoft.com/magazine/mt703432.aspx>
 
 - **ASP.NET Core-Web-API-Hilfeseiten mit Swagger** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio)
+  <https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger?tabs=visual-studio>
 
 >[!div class="step-by-step"]
 >[Zurück](eshoponcontainers-cqrs-ddd-microservice.md)

@@ -7,21 +7,21 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 9e63b16106f69ec35b7713ffc1a28e2cfb19d2d9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 40ba9b2dcc7321c81ee3f03112e677363c37a5f9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203651"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723308"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachunabhängigkeit und sprachunabhängige Komponenten
 
 .NET ist sprachunabhängig. Dies bedeutet, dass Sie als Entwickler in einer von vielen Sprachen für die .NET-Implementierung entwickeln können, beispielsweise C#, F# und Visual Basic. Sie können auf die Typen und Member von Klassenbibliotheken zugreifen, die für die .NET-Implementierung entwickelt wurden, ohne die Sprache, in der sie ursprünglich geschrieben wurden, kennen und ohne den Konventionen der Originalsprache folgen zu müssen. Wenn Sie ein Komponentenentwickler sind, kann von allen .NET-Apps sprachunabhängig auf die Komponente zugegriffen werden.
 
 > [!NOTE]
-> In diesem Artikel wird das Erstellen sprachunabhängiger Komponenten erläutert. Diese Komponenten können von Apps verwendet werden, die in einer beliebigen Sprache geschrieben wurden. Sie können auch eine einzelne Komponente oder App aus Quellcode erstellen, der in mehreren Sprachen geschrieben wurde. Weitere Informationen finden Sie im zweiten Teil dieses Artikels unter [Sprachübergreifende Interoperabilität](#cross-language-interoperability). 
+> In diesem Artikel wird das Erstellen sprachunabhängiger Komponenten erläutert. Diese Komponenten können von Apps verwendet werden, die in einer beliebigen Sprache geschrieben wurden. Sie können auch eine einzelne Komponente oder App aus Quellcode erstellen, der in mehreren Sprachen geschrieben wurde. Weitere Informationen finden Sie im zweiten Teil dieses Artikels unter [Sprachübergreifende Interoperabilität](#cross-language-interoperability).
 
-Um vollständig mit anderen Objekten zu interagieren, die in irgendeiner Programmiersprache geschrieben wurden, müssen die Objekte den Aufrufern nur die Funktionen verfügbar machen, die allen Sprachen gemeinsam sind. Dieser gemeinsame Satz von Funktionen wird von der CLS (Common Language Specification) definiert. Das ist ein Satz von Regeln, die für generierte Assemblys gelten. Die Common Language Specification wird in der Partition I, in den Klauseln 7 bis 11 im [ECMA 335-Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) definiert. 
+Um vollständig mit anderen Objekten zu interagieren, die in irgendeiner Programmiersprache geschrieben wurden, müssen die Objekte den Aufrufern nur die Funktionen verfügbar machen, die allen Sprachen gemeinsam sind. Dieser gemeinsame Satz von Funktionen wird von der CLS (Common Language Specification) definiert. Das ist ein Satz von Regeln, die für generierte Assemblys gelten. Die Common Language Specification wird in der Partition I, in den Klauseln 7 bis 11 im [ECMA 335-Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) definiert.
 
 Wenn die Komponente der Common Language Specification entspricht, ist sichergestellt, dass sie CLS-kompatibel ist, und dass vom Code in Assemblys, die in irgendeiner CLS unterstützenden Programmiersprache geschrieben wurden, aus auf sie zugegriffen werden kann. Sie können bestimmen, ob die Komponente zur Kompilierzeit der Common Language Specification entspricht, indem Sie das [CLSCompliantAttribute](xref:System.CLSCompliantAttribute)-Attribut auf den Quellcode anwenden. Weitere Informationen finden Sie im Abschnitt zum [CLSCompliantAttribute-Attribut](#the-clscompliantattribute-attribute).
 
@@ -32,33 +32,33 @@ In diesem Artikel:
     * [Typen und Typmembersignaturen](#types-and-type-member-signatures)
 
     * [Namenskonventionen](#naming-conventions)
-    
+
     * [Typkonvertierung](#type-conversion)
-    
+
     * [Arrays](#arrays)
-    
+
     * [Schnittstellen](#interfaces)
-    
+
     * [Enumerationen](#enumerations)
-    
+
     * [Typmember im Allgemeinen](#type-members-in-general)
-    
+
     * [Memberzugriff](#member-accessibility)
-    
+
     * [Generische Typen und Member](#generic-types-and-members)
-    
+
     * [Konstruktoren](#constructors)
-    
+
     * [Eigenschaften](#properties)
-    
+
     * [Ereignisse](#events)
-    
+
     * [Überladungen](#overloads)
-    
+
     * [Ausnahmen](#exceptions)
-    
+
     * [Attribute](#attributes)
-    
+
 * [CLSCompliantAttribute-Attribut](#the-clscompliantattribute-attribute)
 
 * [Sprachübergreifende Interoperabilität](#cross-language-interoperability)
@@ -68,12 +68,12 @@ In diesem Artikel:
 In diesem Abschnitt werden die Regeln zum Erstellen einer CLS-kompatiblen Komponente beschrieben. Eine vollständige Liste der Regeln finden Sie unter Partition I, Klausel 11 im [ECMA 335-Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 > [!NOTE]
-> In der Common Language Specification wird für jede Regel der CLS-Kompatibilität erläutert, wie sie auf Consumer (Entwickler, die programmgesteuert auf eine CLS-kompatible Komponente zugreifen), Frameworks (Entwickler, die einen Sprachcompiler zum Erstellen von CLS-kompatiblen Bibliotheken verwenden) und Extender (Entwickler, die zum Erstellen CLS-kompatibler Komponenten ein Tool, wie einen Sprachcompiler oder einen Codeparser, erstellen) anzuwenden ist. In diesem Artikel wird auf die Anwendbarkeit der Regeln für Frameworks eingegangen. Beachten Sie allerdings, dass möglicherweise einige der Regeln für Extender auch auf Assemblys anwendbar sind, die mithilfe von [Reflection.Emit](xref:System.Reflection.Emit) erstellt werden. 
+> In der Common Language Specification wird für jede Regel der CLS-Kompatibilität erläutert, wie sie auf Consumer (Entwickler, die programmgesteuert auf eine CLS-kompatible Komponente zugreifen), Frameworks (Entwickler, die einen Sprachcompiler zum Erstellen von CLS-kompatiblen Bibliotheken verwenden) und Extender (Entwickler, die zum Erstellen CLS-kompatibler Komponenten ein Tool, wie einen Sprachcompiler oder einen Codeparser, erstellen) anzuwenden ist. In diesem Artikel wird auf die Anwendbarkeit der Regeln für Frameworks eingegangen. Beachten Sie allerdings, dass möglicherweise einige der Regeln für Extender auch auf Assemblys anwendbar sind, die mithilfe von [Reflection.Emit](xref:System.Reflection.Emit) erstellt werden.
 
-Um eine sprachenneutrale Komponente zu entwerfen, müssen Sie nur die CLS-Kompatibilitätregeln auf die öffentliche Schnittstelle der Komponente anwenden. Die private Implementierung muss nicht mit der Spezifikation konform sein. 
+Um eine sprachenneutrale Komponente zu entwerfen, müssen Sie nur die CLS-Kompatibilitätregeln auf die öffentliche Schnittstelle der Komponente anwenden. Die private Implementierung muss nicht mit der Spezifikation konform sein.
 
 > [!IMPORTANT]
-> Die Regeln für CLS-Kompatibilität gelten nur für die öffentlichen Schnittstelle einer Komponente, nicht für die private Implementierung. 
+> Die Regeln für CLS-Kompatibilität gelten nur für die öffentlichen Schnittstelle einer Komponente, nicht für die private Implementierung.
 
 Zum Beispiel sind ganze Zahlen ohne Vorzeichen, außer [Byte](xref:System.Byte), nicht CLS-kompatibel. Da die `Person`-Klasse im folgenden Beispiel eine `Age`-Eigenschaft des Typs [UInt16](xref:System.UInt16) verfügbar macht, zeigt der folgende Code eine Compilerwarnung an.
 
@@ -86,7 +86,7 @@ public class Person
 {
    private UInt16 personAge = 0;
 
-   public UInt16 Age 
+   public UInt16 Age
    { get { return personAge; } }
 }
 // The attempt to compile the example displays the following compiler warning:
@@ -94,25 +94,25 @@ public class Person
 ```
 
 ```vb
-<Assembly: CLSCompliant(True)> 
+<Assembly: CLSCompliant(True)>
 
 Public Class Person
    Private personAge As UInt16
 
    Public ReadOnly Property Age As UInt16
       Get
-         Return personAge      
-      End Get   
+         Return personAge
+      End Get
    End Property
 End Class
 ' The attempt to compile the example displays the following compiler warning:
 '    Public1.vb(9) : warning BC40027: Return type of function 'Age' is not CLS-compliant.
-'    
+'
 '       Public ReadOnly Property Age As UInt16
 '                                ~~~
 ```
 
-Sie können CLS-Kompatibilität für die Person-Klasse erreichen, indem Sie den Typ der `Age`-Eigenschaft von `UInt16` in [Int16](xref:System.Int16) ändern. Dies ist eine CLS-kompatible ganze Zahl mit Vorzeichen und einer Länge von 16 Bit. Sie müssen den Typ des privaten `personAge`-Felds nicht ändern. 
+Sie können CLS-Kompatibilität für die Person-Klasse erreichen, indem Sie den Typ der `Age`-Eigenschaft von `UInt16` in [Int16](xref:System.Int16) ändern. Dies ist eine CLS-kompatible ganze Zahl mit Vorzeichen und einer Länge von 16 Bit. Sie müssen den Typ des privaten `personAge`-Felds nicht ändern.
 
 ```csharp
 using System;
@@ -123,21 +123,21 @@ public class Person
 {
    private Int16 personAge = 0;
 
-   public Int16 Age 
+   public Int16 Age
    { get { return personAge; } }
 }
 ```
 
 ```vb
-<Assembly: CLSCompliant(True)> 
+<Assembly: CLSCompliant(True)>
 
 Public Class Person
    Private personAge As UInt16
 
    Public ReadOnly Property Age As Int16
       Get
-         Return CType(personAge, Int16)      
-      End Get   
+         Return CType(personAge, Int16)
+      End Get
    End Property
 End Class
 ```
@@ -146,11 +146,11 @@ Die öffentliche Schnittstelle einer Bibliothek besteht aus folgenden Elementen:
 
 * Definitionen öffentlicher Klassen
 
-* Definitionen öffentlicher Member von öffentlichen Klassen sowie in Definitionen von Membern, auf die abgeleitete Klassen zugreifen können (d. h. geschützte Member). 
+* Definitionen öffentlicher Member von öffentlichen Klassen sowie in Definitionen von Membern, auf die abgeleitete Klassen zugreifen können (d. h. geschützte Member).
 
-* Parameter und Rückgabetypen öffentlicher Methoden von öffentlichen Klassen sowie Parameter und Rückgabetypen von Methoden, auf die abgeleitete Klassen zugreifen können. 
+* Parameter und Rückgabetypen öffentlicher Methoden von öffentlichen Klassen sowie Parameter und Rückgabetypen von Methoden, auf die abgeleitete Klassen zugreifen können.
 
-Die Regeln für CLS-Kompatibilität werden in der folgenden Tabelle aufgeführt. Der Text der Regeln wird in vollem Wortlaut dem [ECMA 335-Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) entnommen. Copyright 2012 durch Ecma-International. Ausführlichere Informationen zu diesen Regeln finden Sie in den folgenden Abschnitten. 
+Die Regeln für CLS-Kompatibilität werden in der folgenden Tabelle aufgeführt. Der Text der Regeln wird in vollem Wortlaut dem [ECMA 335-Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm) entnommen. Copyright 2012 durch Ecma-International. Ausführlichere Informationen zu diesen Regeln finden Sie in den folgenden Abschnitten.
 
 Kategorie | Siehe | Regel | Regelzahl
 -------- | --- | ---- | -----------
@@ -171,7 +171,7 @@ Ereignisse | [Ereignisse](#events) | Die `add` und `remove`-Methoden eines Ereig
 Ereignisse | [Ereignisse](#events) | Die `add`- und `remove`-Methoden eines Ereignisses müssen jeweils einen Parameter akzeptieren, dessen Typ den Ereignistyp definiert. Dieser Typ muss von [System.Delegate](xref:System.Delegate) abgeleitet sein. |32
 Ereignisse | [Ereignisse](#events) | Ereignisse müssen einem bestimmten Benennungsschema folgen. Das SpecialName-Attribut, auf das in CLS-Regel 29 verwiesen wird, muss in den entsprechenden Namensvergleichen ignoriert werden und Bezeichnerregeln einhalten.  |33
 Ausnahmen | [Ausnahmen](#exceptions) | Ausgelöste Objekte müssen vom Typ [System.Exception](xref:System.Exception) oder einem davon geerbten Typ sein. Dennoch müssen CLS-kompatible Methoden die Weitergabe anderer Ausnahmetypen nicht blockieren. | 40
-Allgemein | [CLS-Kompatibilitätsregeln](#cls-compliance-rules) | CLS-Regeln betreffen nur die Teile eines Typs, deren Zugriff oder Sichtbarkeit außerhalb der definierenden Assembly liegen. | 1
+Allgemein | [CLS-Kompatibilitätsregeln](#cls-compliance-rules) | CLS-Regeln gelten nur für die Teile eines Typs, die außerhalb der definierenden Assembly sichtbar sind und auf die außerhalb der definierenden Assembly zugegriffen werden kann. | 1
 Allgemein | [CLS-Kompatibilitätsregeln](#cls-compliance-rules) | Member von Typen, die nicht CLS-kompatibel sind, dürfen nicht als CLS-kompatibel gekennzeichnet werden. | 2
 Generika | [Generische Typen und Member](#generic-types-and-members) | Geschachtelte Typen müssen mindestens so viele generische Parameter aufweisen wie der einschließende Typ. Die Position von generischen Parametern in einem geschachtelten Typ entspricht der Position der generischen Parameter im einschließenden Typ.  | 42
 Generika | [Generische Typen und Member](#generic-types-and-members) | Der Name eines generischen Typs muss die Anzahl von Typparametern, die auf dem nicht geschachtelten Typ deklariert oder neu in den Typ eingeführt werden, kodieren, wenn er entsprechend der oben definierten Regeln geschachtelt ist. | 43
@@ -204,16 +204,16 @@ Typen | [Typen und Typmembersignaturen](#types-and-type-member-signatures) | [Sy
 
 ### <a name="types-and-type-member-signatures"></a>Typen und Typmembersignaturen
 
-Der [System.Object](xref:System.Object)-Typ ist CLS-kompatibel, und er ist der Basistyp aller Objekttypen im .NET Framework-Typsystem. Vererbung erfolgt im .NET Framework entweder implizit (zum Beispiel erbt die [String](xref:System.String)-Klasse implizit von der `Object`-Klasse) oder explizit (zum Beispiel erbt die [CultureNotFoundException](xref:System.Globalization.CultureNotFoundException)-Klasse explizit von der [ArgumentException](xref:System.ArgumentException)-Klasse, die explizit von der [Exception](xref:System.Exception)-Klasse erbt). Damit ein abgeleiteter Typ CLS-kompatibel ist, muss auch der Basistyp CLS-kompatibel sein. 
+Der [System.Object](xref:System.Object)-Typ ist CLS-kompatibel, und er ist der Basistyp aller Objekttypen im .NET Framework-Typsystem. Vererbung erfolgt im .NET Framework entweder implizit (zum Beispiel erbt die [String](xref:System.String)-Klasse implizit von der `Object`-Klasse) oder explizit (zum Beispiel erbt die [CultureNotFoundException](xref:System.Globalization.CultureNotFoundException)-Klasse explizit von der [ArgumentException](xref:System.ArgumentException)-Klasse, die explizit von der [Exception](xref:System.Exception)-Klasse erbt). Damit ein abgeleiteter Typ CLS-kompatibel ist, muss auch der Basistyp CLS-kompatibel sein.
 
-Im folgenden Beispiel wird ein abgeleiteter Typ veranschaulicht, dessen Basistyp nicht CLS-kompatibel ist. Es wird eine `Counter`-Basisklasse definiert, die eine ganze Zahl ohne Vorzeichen mit einer Länge von 32 Bit als Indikator verwendet. Da die Klasse Gegenfunktionalität bereitstellt, indem eine ganze Zahl ohne Vorzeichen umgebrochen wird, wird die Klasse als nicht CLS-kompatibel gekennzeichnet. Daher ist eine abgeleitete Klasse, `NonZeroCounter`, auch nicht CLS-kompatibel. 
+Im folgenden Beispiel wird ein abgeleiteter Typ veranschaulicht, dessen Basistyp nicht CLS-kompatibel ist. Es wird eine `Counter`-Basisklasse definiert, die eine ganze Zahl ohne Vorzeichen mit einer Länge von 32 Bit als Indikator verwendet. Da die Klasse Gegenfunktionalität bereitstellt, indem eine ganze Zahl ohne Vorzeichen umgebrochen wird, wird die Klasse als nicht CLS-kompatibel gekennzeichnet. Daher ist eine abgeleitete Klasse, `NonZeroCounter`, auch nicht CLS-kompatibel.
 
 ```csharp
 using System;
 
 [assembly: CLSCompliant(true)]
 
-[CLSCompliant(false)] 
+[CLSCompliant(false)]
 public class Counter
 {
    UInt32 ctr;
@@ -238,7 +238,7 @@ public class Counter
       get { return ctr; }
    }
 
-   public void Increment() 
+   public void Increment()
    {
       ctr += (uint) 1;
    }
@@ -263,7 +263,7 @@ public class NonZeroCounter : Counter
 ```vb
 <Assembly: CLSCompliant(True)>
 
-<CLSCompliant(False)> _ 
+<CLSCompliant(False)> _
 Public Class Counter
    Dim ctr As UInt32
 
@@ -300,38 +300,36 @@ Public Class NonZeroCounter : Inherits Counter
    End Sub
 End Class
 ' Compilation produces a compiler warning like the following:
-'    Type3.vb(34) : warning BC40026: 'NonZeroCounter' is not CLS-compliant 
+'    Type3.vb(34) : warning BC40026: 'NonZeroCounter' is not CLS-compliant
 '    because it derives from 'Counter', which is not CLS-compliant.
-'    
+'
 '    Public Class NonZeroCounter : Inherits Counter
 '                 ~~~~~~~~~~~~~~
 ```
 
-Alle in den Membersignaturen angezeigten Typen, einschließlich des Rückgabetyps oder des Eigenschaftentyps einer Methode, müssen CLS-kompatibel sein. Außerdem ist für generische Typen Folgendes erforderlich: 
+Alle in den Membersignaturen angezeigten Typen, einschließlich des Rückgabetyps oder des Eigenschaftentyps einer Methode, müssen CLS-kompatibel sein. Außerdem ist für generische Typen Folgendes erforderlich:
 
 * Alle Typen, die einen instanziierten generischen Typ zusammensetzen, müssen CLS-kompatibel sein.
 
-* Alle als Einschränkungen für generische Parameter verwendeten Typen müssen CLS-kompatibel sein. 
+* Alle als Einschränkungen für generische Parameter verwendeten Typen müssen CLS-kompatibel sein.
 
-Das [allgemeine Typsystem](common-type-system.md) von .NET enthält verschiedene integrierte Datentypen, die direkt von der Common Language Runtime unterstützt werden und insbesondere in den Metadaten einer Assembly codiert werden. Von diesen systeminternen Typen sind die in der folgenden Tabelle aufgeführten Typen CLS-kompatibel. 
-
+Das [allgemeine Typsystem](common-type-system.md) von .NET enthält verschiedene integrierte Datentypen, die direkt von der Common Language Runtime unterstützt werden und insbesondere in den Metadaten einer Assembly codiert werden. Von diesen systeminternen Typen sind die in der folgenden Tabelle aufgeführten Typen CLS-kompatibel.
 
 CLS-kompatibler Typ | Beschreibung
 ------------------ | -----------
-[Byte](xref:System.Byte) | Ganze 8-Bit-Zahl ohne Vorzeichen 
-[Int16](xref:System.Int16) | Ganze 16-Bit-Zahl mit Vorzeichen 
-[Int32](xref:System.Int32) | 32-Bit-Ganzzahl mit Vorzeichen 
+[Byte](xref:System.Byte) | Ganze 8-Bit-Zahl ohne Vorzeichen
+[Int16](xref:System.Int16) | Ganze 16-Bit-Zahl mit Vorzeichen
+[Int32](xref:System.Int32) | 32-Bit-Ganzzahl mit Vorzeichen
 [Int64](xref:System.Int64) | 64-Bit-Ganzzahl mit Vorzeichen
 [Single](xref:System.Single) | Gleitkommawert mit einfacher Genauigkeit
 [Double](xref:System.Double) | Gleitkommawert mit doppelter Genauigkeit
-[Boolean](xref:System.Boolean) | TRUE- oder FALSE-Werttyp 
+[Boolean](xref:System.Boolean) | TRUE- oder FALSE-Werttyp
 [Char](xref:System.Char) | UTF-16-codierte Codeeinheit
 [Decimal](xref:System.Decimal) | Dezimalzahl ohne Gleitkomma
 [IntPtr](xref:System.IntPtr) | Zeiger oder Handle einer Plattform-definierten Größe
-[String](xref:System.String) | Sammlung von null, einem oder mehreren Char-Objekten 
- 
-Die in der folgenden Tabelle aufgeführten systeminternen Typen sind nicht CLS-kompatibel.
+[String](xref:System.String) | Sammlung von null, einem oder mehreren Char-Objekten
 
+Die in der folgenden Tabelle aufgeführten systeminternen Typen sind nicht CLS-kompatibel.
 
 Nicht kompatibler Typ | Beschreibung | CLS-kompatible Alternative
 ------------------ | ----------- | -------------------------
@@ -340,36 +338,36 @@ Nicht kompatibler Typ | Beschreibung | CLS-kompatible Alternative
 [UInt32](xref:System.UInt32) | 32-Bit-Ganzzahl ohne Vorzeichen | [Int64](xref:System.Int64)
 [UInt64](xref:System.UInt64) | 64-Bit-Ganzzahl ohne Vorzeichen | [Int64](xref:System.Int64) (kann überlaufen), [BigInteger](xref:System.Numerics.BigInteger) oder [Double](xref:System.Double)
 [UIntPtr](xref:System.UIntPtr) | Zeiger ohne Vorzeichen oder Handle | [IntPtr](xref:System.IntPtr)
- 
- Die .NET Framework-Klassenbibliothek oder jede andere Klassenbibliothek schließen möglicherweise andere nicht CLS-kompatible Typen ein, zum Beispiel: 
- 
- * Geschachtelte Werttypen Im folgenden C#-Beispiel wird eine Klasse erstellt, die über eine öffentliche Eigenschaft des Typs `int`* mit dem Namen `Value` verfügt. Da `int`* ein geschachtelter Werttyp ist, markiert der Compiler ihn als nicht CLS-kompatibel.
 
-  ```csharp
-  using System;
+Die .NET Framework-Klassenbibliothek oder jede andere Klassenbibliothek schließen möglicherweise andere nicht CLS-kompatible Typen ein, zum Beispiel:
 
-  [assembly:CLSCompliant(true)]
+* Geschachtelte Werttypen Im folgenden C#-Beispiel wird eine Klasse erstellt, die über eine öffentliche Eigenschaft des Typs `int`* mit dem Namen `Value` verfügt. Da `int`* ein geschachtelter Werttyp ist, markiert der Compiler ihn als nicht CLS-kompatibel.
 
-  public unsafe class TestClass
-  {
-     private int* val;
+```csharp
+using System;
 
-     public TestClass(int number)
-     {
-        val = (int*) number;
-     }
+[assembly:CLSCompliant(true)]
 
-     public int* Value {
-        get { return val; }        
-     }
-  }
-  // The compiler generates the following output when compiling this example:
-  //        warning CS3003: Type of 'TestClass.Value' is not CLS-compliant
-  ```
+public unsafe class TestClass
+{
+   private int* val;
+
+   public TestClass(int number)
+   {
+      val = (int*) number;
+   }
+
+   public int* Value {
+      get { return val; }
+   }
+}
+// The compiler generates the following output when compiling this example:
+//        warning CS3003: Type of 'TestClass.Value' is not CLS-compliant
+```
 
 * Typisierte Verweise, die spezielle Konstrukte sind, in denen ein Verweis auf ein Objekt und ein Verweis auf einen Typ enthalten sind.
 
-Wenn ein Typ nicht CLS-kompatibel ist, sollten Sie das Attribut [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) mit einem *isCompliant*-Parameter mit einem Wert von `false` anwenden. Weitere Informationen finden Sie im Abschnitt zum [CLSCompliantAttribute-Attribut](#the-clscompliantattribute-attribute).  
+Wenn ein Typ nicht CLS-kompatibel ist, sollten Sie das Attribut [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) mit einem *isCompliant*-Parameter mit einem Wert von `false` anwenden. Weitere Informationen finden Sie im Abschnitt zum [CLSCompliantAttribute-Attribut](#the-clscompliantattribute-attribute).
 
 Im folgenden Beispiel wird das Problem der CLS-Kompatibilität in einer Methodensignatur und in der Instanziierung des generischen Typs veranschaulicht. Dabei wird eine `InvoiceItem`-Klasse mit einer Eigenschaft vom Typ [UInt32](xref:System.UInt32), einer Eigenschaft vom Typ [Nullable(Of UInt32)](xref:System.Nullable%601) und einem Konstruktor mit Parametern vom Typ `UInt32` und `Nullable(Of UInt32)` definiert. Sie erhalten vier Compilerwarnungen, wenn Sie versuchen, das Beispiel zu kompilieren.
 
@@ -426,36 +424,36 @@ Public Class InvoiceItem
    Public Property Quantity As Nullable(Of UInteger)
       Get
          Return qty
-      End Get   
-      Set 
+      End Get
+      Set
          qty = value
-      End Set   
+      End Set
    End Property
 
    Public Property InvoiceId As UInteger
-      Get   
+      Get
          Return invId
       End Get
-      Set 
+      Set
          invId = value
-      End Set   
+      End Set
    End Property
 End Class
 ' The attempt to compile the example displays output similar to the following:
 '    Type1.vb(13) : warning BC40028: Type of parameter 'sku' is not CLS-compliant.
-'    
+'
 '       Public Sub New(sku As UInteger, quantity As Nullable(Of UInteger))
 '                      ~~~
 '    Type1.vb(13) : warning BC40041: Type 'UInteger' is not CLS-compliant.
-'    
+'
 '       Public Sub New(sku As UInteger, quantity As Nullable(Of UInteger))
 '                                                               ~~~~~~~~
 '    Type1.vb(18) : warning BC40041: Type 'UInteger' is not CLS-compliant.
-'    
+'
 '       Public Property Quantity As Nullable(Of UInteger)
 '                                               ~~~~~~~~
 '    Type1.vb(27) : warning BC40027: Return type of function 'InvoiceId' is not CLS-compliant.
-'    
+'
 '       Public Property InvoiceId As UInteger
 ```
 
@@ -490,7 +488,7 @@ public class InvoiceItem
    public int InvoiceId
    {
       get { return (int) invId; }
-      set { 
+      set {
          if (value <= 0)
             throw new ArgumentOutOfRangeException("The invoice number is zero or negative.");
          invId = (uint) value; }
@@ -518,24 +516,24 @@ Public Class InvoiceItem
    Public Property Quantity As Nullable(Of Integer)
       Get
          Return qty
-      End Get   
-      Set 
+      End Get
+      Set
          qty = value
-      End Set   
+      End Set
    End Property
 
    Public Property InvoiceId As Integer
-      Get   
+      Get
          Return CInt(invId)
       End Get
-      Set 
+      Set
          invId = CUInt(value)
-      End Set   
+      End Set
    End Property
 End Class
 ```
 
-Zusätzlich zu bestimmten aufgeführten Typen sind einige Typenkategorien ebenfalls nicht CLS-kompatibel. Diese schließen nicht verwaltete Zeigertypen und Funktionszeigertypen ein. Im folgenden Beispiel wird eine Compilerwarnung erzeugt, da ein Zeiger auf eine ganze Zahl verwendet wird, um ein Array ganzer Zahlen zu erstellen. 
+Zusätzlich zu bestimmten aufgeführten Typen sind einige Typenkategorien ebenfalls nicht CLS-kompatibel. Diese schließen nicht verwaltete Zeigertypen und Funktionszeigertypen ein. Im folgenden Beispiel wird eine Compilerwarnung erzeugt, da ein Zeiger auf eine ganze Zahl verwendet wird, um ein Array ganzer Zahlen zu erstellen.
 
 ```csharp
 using System;
@@ -555,12 +553,12 @@ public class ArrayHelper
       }
       return arr;
    }
-}   
+}
 // The attempt to compile this example displays the following output:
 //    UnmanagedPtr1.cs(8,57): warning CS3001: Argument type 'int*' is not CLS-compliant
 ```
 
-```vb
+```csharp
 using System;
 
 [assembly: CLSCompliant(true)]
@@ -578,16 +576,16 @@ public class ArrayHelper
       }
       return arr;
    }
-}   
+}
 // The attempt to compile this example displays the following output:
 //    UnmanagedPtr1.cs(8,57): warning CS3001: Argument type 'int*' is not CLS-compliant
 ```
 
-Für CLS-kompatible abstrakte Klassen (also Klassen, die in C# als `abstract` markiert sind), müssen alle Member der Klasse auch CLS-kompatibel sein. 
+Für CLS-kompatible abstrakte Klassen (also Klassen, die in C# als `abstract` markiert sind), müssen alle Member der Klasse auch CLS-kompatibel sein.
 
 ### <a name="naming-conventions"></a>Namenskonventionen 
 
-Da bei einigen Programmiersprachen die Groß- und Kleinschreibung nicht beachtet werden muss, müssen Bezeichner (wie die Namen von Namespaces, Typen und Membern) durch mehr als die Groß-/Kleinschreibung unterschieden werden. Zwei Bezeichner gelten als äquivalent, wenn ihre kleingeschriebenen Zuordnungen identisch sind. Im folgenden C#-Beispiel werden zwei öffentliche Klassen definiert: `Person` und `person`. Da sie sich nur durch die Groß-/Kleinschreibung unterscheiden, markiert der C#-Compiler sie als nicht CLS-kompatibel. 
+Da bei einigen Programmiersprachen die Groß- und Kleinschreibung nicht beachtet werden muss, müssen Bezeichner (wie die Namen von Namespaces, Typen und Membern) durch mehr als die Groß-/Kleinschreibung unterschieden werden. Zwei Bezeichner gelten als äquivalent, wenn ihre kleingeschriebenen Zuordnungen identisch sind. Im folgenden C#-Beispiel werden zwei öffentliche Klassen definiert: `Person` und `person`. Da sie sich nur durch die Groß-/Kleinschreibung unterscheiden, markiert der C#-Compiler sie als nicht CLS-kompatibel.
 
 ```csharp
 using System;
@@ -604,16 +602,16 @@ public class person
 
 }
 // Compilation produces a compiler warning like the following:
-//    Naming1.cs(11,14): warning CS3005: Identifier 'person' differing 
+//    Naming1.cs(11,14): warning CS3005: Identifier 'person' differing
 //                       only in case is not CLS-compliant
 //    Naming1.cs(6,14): (Location of symbol related to previous warning)
 ```
 
 Programmiersprachenbezeichner, wie die Namen von Namespaces, Typen und Membern, müssen dem [Unicode-Standard 3.0, Fachbericht 15, Anhang 7](https://www.unicode.org/reports/tr15/tr15-18.html) entsprechen. Dies bedeutet Folgendes:
 
-* Das erste Zeichen eines Bezeichners kann jeder Unicode-Großbuchstabe, Kleinbuchstabe, großer Anfangsbuchstabe, Modifiziererbuchstabe, anderer Buchstabe oder jede Buchstabenzahl sein. Informationen zu Unicode-Zeichenkategorien finden Sie unter der [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory)-Enumeration. 
+* Das erste Zeichen eines Bezeichners kann jeder Unicode-Großbuchstabe, Kleinbuchstabe, großer Anfangsbuchstabe, Modifiziererbuchstabe, anderer Buchstabe oder jede Buchstabenzahl sein. Informationen zu Unicode-Zeichenkategorien finden Sie unter der [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory)-Enumeration.
 
-* Nachfolgende Zeichen können aus einer der Kategorien wie das erste Zeichen stammen, und sie können auch Markierungen ohne Zwischenraum, Sperrmarkierungen, Dezimalwerte, Connectorinterpunktionen und Formatierungscodes umfassen. 
+* Nachfolgende Zeichen können aus einer der Kategorien wie das erste Zeichen stammen, und sie können auch Markierungen ohne Zwischenraum, Sperrmarkierungen, Dezimalwerte, Connectorinterpunktionen und Formatierungscodes umfassen.
 
 Bevor Sie Bezeichner vergleichen, sollten Sie Formatierungscodes herausfiltern und die Bezeichner in die Unicode-Normalisierungsform C konvertieren, da ein einzelnes Zeichen durch mehrere UTF-16-codierte Codeeinheiten dargestellt werden kann. Zeichensequenzen, die die gleichen Codeeinheiten in der Unicode-Normalisierungsform C erzeugen, sind nicht CLS-kompatibel. Im folgenden Beispiel werden zwei Eigenschaften definiert: eine namens `Å`, die aus dem ÅNGSTRÖM-ZEICHEN (U+212B) besteht, und eine zweite namens `Å`, die aus dem Zeichen LATEINISCHER GROSSBUCHSTABE A MIT RING OBEN (U+00C5) besteht. Der C#-Compiler kennzeichnet den Quellcode als nicht CLS-kompatibel.
 
@@ -627,7 +625,7 @@ public class Size
    {
        get { return a1; }
        set { a1 = value; }
-   }         
+   }
 
    public double Å
    {
@@ -657,10 +655,10 @@ Public Class Size
        Get
           Return a1
        End Get
-       Set 
+       Set
           a1 = value
        End Set
-   End Property         
+   End Property
 
    Public Property Å As Double
        Get
@@ -668,24 +666,24 @@ Public Class Size
        End Get
        Set
           a2 = value
-       End Set   
+       End Set
    End Property
 End Class
 ' Compilation produces a compiler warning like the following:
 '    Naming1.vb(9) : error BC30269: 'Public Property Å As Double' has multiple definitions
 '     with identical signatures.
-'    
+'
 '       Public Property Å As Double
 '                       ~
 ```
 
-Membernamen innerhalb eines bestimmten Bereichs (wie den Namespaces innerhalb einer Assembly, den Typen in einem Namespace oder den Membern innerhalb eines Typs) müssen eindeutig sein, abgesehen von Namen, die durch Überladen aufgelöst werden. Diese Anforderung ist zwingender als die des allgemeinen Typsystems, bei dem mehrere Member innerhalb eines Bereichs über identische Namen verfügen dürfen, solange es unterschiedliche Arten von Membern sind (zum Beispiel eine Methode und ein Feld). Insbesondere für Typmember: 
+Membernamen innerhalb eines bestimmten Bereichs (wie den Namespaces innerhalb einer Assembly, den Typen in einem Namespace oder den Membern innerhalb eines Typs) müssen eindeutig sein, abgesehen von Namen, die durch Überladen aufgelöst werden. Diese Anforderung ist zwingender als die des allgemeinen Typsystems, bei dem mehrere Member innerhalb eines Bereichs über identische Namen verfügen dürfen, solange es unterschiedliche Arten von Membern sind (zum Beispiel eine Methode und ein Feld). Insbesondere für Typmember:
 
-* Felder und geschachtelte Typen werden allein nach Namen unterschieden. 
+* Felder und geschachtelte Typen werden allein nach Namen unterschieden.
 
-* Methoden, Eigenschaften und Ereignisse mit demselben Namen müssen sich durch mehr als nur den Rückgabetyp unterscheiden. 
+* Methoden, Eigenschaften und Ereignisse mit demselben Namen müssen sich durch mehr als nur den Rückgabetyp unterscheiden.
 
-Im folgenden Beispiel wird die Anforderung veranschaulicht, dass Membernamen innerhalb des Bereichs eindeutig sein müssen. Es wird eine Klasse namens `Converter` definiert, die vier Member namens `Conversion` umfasst. Drei Methoden und eine Eigenschaft. Die Methode, die einen Parameter `Int64` umfasst, hat einen eindeutigen Namen, doch die beiden Methoden mit einem `Int32`-Parameter sind nicht eindeutig, da der Rückgabewert nicht als ein Teil der Signatur eines Members gültig ist. Die `Conversion`- Eigenschaft verstößt auch gegen diese Anforderung, da Eigenschaften nicht den gleichen Namen wie überladene Methoden besitzen dürfen. 
+Im folgenden Beispiel wird die Anforderung veranschaulicht, dass Membernamen innerhalb des Bereichs eindeutig sein müssen. Es wird eine Klasse namens `Converter` definiert, die vier Member namens `Conversion` umfasst. Drei Methoden und eine Eigenschaft. Die Methode, die einen Parameter `Int64` umfasst, hat einen eindeutigen Namen, doch die beiden Methoden mit einem `Int32`-Parameter sind nicht eindeutig, da der Rückgabewert nicht als ein Teil der Signatur eines Members gültig ist. Die `Conversion`- Eigenschaft verstößt auch gegen diese Anforderung, da Eigenschaften nicht den gleichen Namen wie überladene Methoden besitzen dürfen.
 
 ```csharp
 using System;
@@ -712,8 +710,8 @@ public class Converter
    public bool Conversion
    {
       get { return true; }
-   }     
-}  
+   }
+}
 // Compilation produces a compiler error like the following:
 //    Naming3.cs(13,17): error CS0111: Type 'Converter' already defines a member called
 //            'Conversion' with the same parameter types
@@ -742,34 +740,34 @@ Public Class Converter
    Public ReadOnly Property Conversion As Boolean
       Get
          Return True
-      End Get   
-   End Property     
+      End Get
+   End Property
 End Class
 ' Compilation produces a compiler error like the following:
-'    Naming3.vb(8) : error BC30301: 'Public Function Conversion(number As Integer) As Double' 
-'                    and 'Public Function Conversion(number As Integer) As Single' cannot 
+'    Naming3.vb(8) : error BC30301: 'Public Function Conversion(number As Integer) As Double'
+'                    and 'Public Function Conversion(number As Integer) As Single' cannot
 '                    overload each other because they differ only by return types.
-'    
+'
 '       Public Function Conversion(number As Integer) As Double
 '                       ~~~~~~~~~~
-'    Naming3.vb(20) : error BC30260: 'Conversion' is already declared as 'Public Function 
+'    Naming3.vb(20) : error BC30260: 'Conversion' is already declared as 'Public Function
 '                     Conversion(number As Integer) As Single' in this class.
-'    
+'
 '       Public ReadOnly Property Conversion As Boolean
 '                                ~~~~~~~~~~
 ```
 
-Einzelne Sprachen enthalten eindeutige Schlüsselwörter, sodass Sprachen für die Common Language Runtime einen Mechanismus zum Verweisen auf Bezeichner (z. B. Typnamen) bereitstellen müssen, die mit den Schlüsselwörtern übereinstimmen. Beispielsweise ist `case` ein Schlüsselwort in C# und Visual Basic. Im folgenden Visual Basic-Beispiel wird eine Klasse namens `case` eindeutig vom `case`-Schlüsselwort unterschieden, indem öffnende und schließende geschweifte Klammern verwendet werden. Andernfalls würde in dem Beispiel die folgende Fehlermeldung erzeugt: "Das Schlüsselwort ist kein gültiger Bezeichner", und der Code könnte nicht kompiliert werden. 
+Einzelne Sprachen enthalten eindeutige Schlüsselwörter, sodass Sprachen für die Common Language Runtime einen Mechanismus zum Verweisen auf Bezeichner (z. B. Typnamen) bereitstellen müssen, die mit den Schlüsselwörtern übereinstimmen. Beispielsweise ist `case` ein Schlüsselwort in C# und Visual Basic. Im folgenden Visual Basic-Beispiel wird eine Klasse namens `case` eindeutig vom `case`-Schlüsselwort unterschieden, indem öffnende und schließende geschweifte Klammern verwendet werden. Andernfalls würde in dem Beispiel die folgende Fehlermeldung erzeugt: "Das Schlüsselwort ist kein gültiger Bezeichner", und der Code könnte nicht kompiliert werden.
 
 ```vb
 Public Class [case]
    Private _id As Guid
-   Private name As String  
+   Private name As String
 
    Public Sub New(name As String)
       _id = Guid.NewGuid()
-      Me.name = name 
-   End Sub   
+      Me.name = name
+   End Sub
 
    Public ReadOnly Property ClientName As String
       Get
@@ -779,7 +777,7 @@ Public Class [case]
 End Class
 ```
 
-Im folgenden C#-Beispiel kann die `case`-Klasse instanziiert werden, indem das @-Symbol verwendet wird, um den Bezeichner eindeutig vom Schlüsselwort zu unterscheiden. Ohne dieses Zeichen würde der C#-Compiler zwei Fehlermeldungen anzeigen:"Typ erwartet" und "Ungültiger Ausdruck 'case'". 
+Im folgenden C#-Beispiel kann die `case`-Klasse instanziiert werden, indem das @-Symbol verwendet wird, um den Bezeichner eindeutig vom Schlüsselwort zu unterscheiden. Ohne dieses Zeichen würde der C#-Compiler zwei Fehlermeldungen anzeigen:"Typ erwartet" und "Ungültiger Ausdruck 'case'".
 
 ```csharp
 using System;
@@ -798,13 +796,13 @@ public class Example
 
 In der Common Language Specification werden zwei Konvertierungsoperatoren definiert:
 
-* `op_Implicit`, das für Erweiterungskonvertierungen verwendet wird, die zu keinem Datenverlust oder Genauigkeitsverlust führen. Zum Beispiel umfasst die [Decimal](xref:System.Decimal)-Struktur einen überladenen `op_Implicit`-Operator, um Werte integraler Typen und [Char](xref:System.Char)-Werte in `Decimal`-Werte zu konvertieren. 
+* `op_Implicit`, das für Erweiterungskonvertierungen verwendet wird, die zu keinem Datenverlust oder Genauigkeitsverlust führen. Zum Beispiel umfasst die [Decimal](xref:System.Decimal)-Struktur einen überladenen `op_Implicit`-Operator, um Werte integraler Typen und [Char](xref:System.Char)-Werte in `Decimal`-Werte zu konvertieren.
 
-* `op_Explicit`, der für einschränkende Konvertierungen verwendet wird, die zu Größenverlusten (ein Wert wird in einen Wert konvertiert, der über einen kleineren Bereich verfügt) bzw. zu Verlusten der Genauigkeit führen können. Zum Beispiel umfasst die `Decimal`-Struktur einen überladenen `op_Explicit`-Operator, um den [Double](xref:System.Double)-Wert und den [Single](xref:System.Single)-Wert in `Decimal` zu konvertieren und die `Decimal`-Werte in integrale Werte, `Double`, `Single` und `Char` zu konvertieren. 
+* `op_Explicit`, der für einschränkende Konvertierungen verwendet wird, die zu Größenverlusten (ein Wert wird in einen Wert konvertiert, der über einen kleineren Bereich verfügt) bzw. zu Verlusten der Genauigkeit führen können. Zum Beispiel umfasst die `Decimal`-Struktur einen überladenen `op_Explicit`-Operator, um den [Double](xref:System.Double)-Wert und den [Single](xref:System.Single)-Wert in `Decimal` zu konvertieren und die `Decimal`-Werte in integrale Werte, `Double`, `Single` und `Char` zu konvertieren.
 
-Allerdings wird Operatorüberladung oder die Definition benutzerdefinierter Operatoren nicht von allen Sprachen unterstützt. Wenn Sie diese Konvertierungsoperatoren implementieren, sollten Sie eine alternative Methode zum Ausführen der Konvertierung bereitstellen. Es wird empfohlen, `From`Xxx- und `To`Xxx-Methoden bereitzustellen. 
+Allerdings wird Operatorüberladung oder die Definition benutzerdefinierter Operatoren nicht von allen Sprachen unterstützt. Wenn Sie diese Konvertierungsoperatoren implementieren, sollten Sie eine alternative Methode zum Ausführen der Konvertierung bereitstellen. Es wird empfohlen, `From`Xxx- und `To`Xxx-Methoden bereitzustellen.
 
-Im folgenden Beispiel werden CLS-kompatible implizite und explizite Konvertierungen definiert. Es wird eine `UDouble`-Klasse erstellt, die eine Gleitkommazahl mit doppelter Genauigkeit und Vorzeichen darstellt. Implizite Konvertierungen aus `UDouble` in `Double` und explizite Konvertierungen aus `UDouble` in `Single`, aus `Double` in `UDouble` und aus `Single` in `UDouble` werden bereitgestellt. Es wird auch eine `ToDouble`-Methode als Alternative zum Operator für implizite Konvertierung definiert, und die `ToSingle`, `FromDouble`-Methode sowie die `FromSingle`-Methode werden als Alternativen zu den Operatoren der expliziten Konvertierung definiert. 
+Im folgenden Beispiel werden CLS-kompatible implizite und explizite Konvertierungen definiert. Es wird eine `UDouble`-Klasse erstellt, die eine Gleitkommazahl mit doppelter Genauigkeit und Vorzeichen darstellt. Implizite Konvertierungen aus `UDouble` in `Double` und explizite Konvertierungen aus `UDouble` in `Single`, aus `Double` in `UDouble` und aus `Single` in `UDouble` werden bereitgestellt. Es wird auch eine `ToDouble`-Methode als Alternative zum Operator für implizite Konvertierung definiert, und die `ToSingle`, `FromDouble`-Methode sowie die `FromSingle`-Methode werden als Alternativen zu den Operatoren der expliziten Konvertierung definiert.
 
 ```csharp
 using System;
@@ -839,10 +837,10 @@ public struct UDouble
 
    public static implicit operator Single(UDouble value)
    {
-      if (value.number > (double) Single.MaxValue) 
+      if (value.number > (double) Single.MaxValue)
          throw new InvalidCastException("A UDouble value is out of range of the Single type.");
 
-      return (float) value.number;         
+      return (float) value.number;
    }
 
    public static explicit operator UDouble(double value)
@@ -851,7 +849,7 @@ public struct UDouble
          throw new InvalidCastException("A negative value cannot be converted to a UDouble.");
 
       return new UDouble(value);
-   } 
+   }
 
    public static implicit operator UDouble(float value)
    {
@@ -859,17 +857,17 @@ public struct UDouble
          throw new InvalidCastException("A negative value cannot be converted to a UDouble.");
 
       return new UDouble(value);
-   } 
+   }
 
    public static Double ToDouble(UDouble value)
    {
       return (Double) value;
-   }   
+   }
 
    public static float ToSingle(UDouble value)
    {
       return (float) value;
-   }   
+   }
 
    public static UDouble FromDouble(double value)
    {
@@ -879,7 +877,7 @@ public struct UDouble
    public static UDouble FromSingle(float value)
    {
       return new UDouble(value);
-   }   
+   }
 }
 ```
 
@@ -912,7 +910,7 @@ Public Structure UDouble
       If value.number > CDbl(Single.MaxValue) Then
          Throw New InvalidCastException("A UDouble value is out of range of the Single type.")
       End If
-      Return CSng(value.number)         
+      Return CSng(value.number)
    End Operator
 
    Public Shared Narrowing Operator CType(value As Double) As UDouble
@@ -920,22 +918,22 @@ Public Structure UDouble
          Throw New InvalidCastException("A negative value cannot be converted to a UDouble.")
       End If
       Return New UDouble(value)
-   End Operator 
+   End Operator
 
    Public Shared Narrowing Operator CType(value As Single) As UDouble
       If value < 0 Then
          Throw New InvalidCastException("A negative value cannot be converted to a UDouble.")
       End If
       Return New UDouble(value)
-   End Operator 
+   End Operator
 
    Public Shared Function ToDouble(value As UDouble) As Double
       Return CType(value, Double)
-   End Function   
+   End Function
 
    Public Shared Function ToSingle(value As UDouble) As Single
       Return CType(value, Single)
-   End Function   
+   End Function
 
    Public Shared Function FromDouble(value As Double) As UDouble
       Return New UDouble(value)
@@ -943,15 +941,15 @@ Public Structure UDouble
 
    Public Shared Function FromSingle(value As Single) As UDouble
       Return New UDouble(value)
-   End Function   
+   End Function
 End Structure
 ```
 
 ### <a name="arrays"></a>Arrays
 
-CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel: 
+CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel:
 
-* Die unteren Begrenzungen aller Dimensionen eines Arrays müssen gleich 0 sein. Im folgenden Beispiel wird ein Array mit einer nicht CLS-kompatiblen Untergrenze von eins erstellt. Beachten Sie, dass der Compiler ungeachtet des Vorhandenseins des [CLSCompliantAttribute](xref:System.CLSCompliantAttribute)-Attributs nicht erkennt, dass das von der `Numbers.GetTenPrimes`-Methode zurückgegebene Array nicht CLS-kompatibel ist. 
+* Die unteren Begrenzungen aller Dimensionen eines Arrays müssen gleich 0 sein. Im folgenden Beispiel wird ein Array mit einer nicht CLS-kompatiblen Untergrenze von eins erstellt. Beachten Sie, dass der Compiler ungeachtet des Vorhandenseins des [CLSCompliantAttribute](xref:System.CLSCompliantAttribute)-Attributs nicht erkennt, dass das von der `Numbers.GetTenPrimes`-Methode zurückgegebene Array nicht CLS-kompatibel ist.
 
   ```csharp
   [assembly: CLSCompliant(true)]
@@ -966,13 +964,13 @@ CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel:
         arr.SetValue(3, 3);
         arr.SetValue(5, 4);
         arr.SetValue(7, 5);
-        arr.SetValue(11, 6); 
+        arr.SetValue(11, 6);
         arr.SetValue(13, 7);
         arr.SetValue(17, 8);
         arr.SetValue(19, 9);
         arr.SetValue(23, 10);
 
-        return arr; 
+        return arr;
     }
   }
   ```
@@ -998,7 +996,7 @@ CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel:
   End Class
   ```
 
-* Alle Arrayelemente müssen aus CLS-kompatiblen Typen bestehen. Im folgenden Beispiel werden zwei Methoden, die nicht CLS-kompatible Arrays zurückgeben, definiert. Die erste Methode gibt ein Array von [UInt32](xref:System.UInt32)-Werten zurück. Die zweite Methode gibt ein [Object](xref:System.Object)-Array zurück, das [Int32](xref:System.Int32)- und `UInt32`-Werte umfasst. Obwohl der Compiler das erste Array aufgrund des `UInt32`-Typs als nicht kompatibel identifiziert, wird nicht erkannt, dass das zweite Array nicht CLS-kompatible Elemente umfasst. 
+* Alle Arrayelemente müssen aus CLS-kompatiblen Typen bestehen. Im folgenden Beispiel werden zwei Methoden, die nicht CLS-kompatible Arrays zurückgeben, definiert. Die erste Methode gibt ein Array von [UInt32](xref:System.UInt32)-Werten zurück. Die zweite Methode gibt ein [Object](xref:System.Object)-Array zurück, das [Int32](xref:System.Int32)- und `UInt32`-Werte umfasst. Obwohl der Compiler das erste Array aufgrund des `UInt32`-Typs als nicht kompatibel identifiziert, wird nicht erkannt, dass das zweite Array nicht CLS-kompatible Elemente umfasst.
 
   ```csharp
   using System;
@@ -1038,9 +1036,9 @@ CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel:
   End Class
   ' Compilation produces a compiler warning like the following:
   '    warning BC40027: Return type of function 'GetTenPrimes' is not CLS-compliant.
-  ```                             
+  ```
 
-* Die Überladungsauflösung für Methoden mit Arrayparametern basiert sowohl auf der Tatsache, dass es Arrays sind, als auch auf dem Elementtyp. Aus diesem Grund ist die folgende Definition einer überladenen `GetSquares`-Methode CLS-kompatibel. 
+* Die Überladungsauflösung für Methoden mit Arrayparametern basiert sowohl auf der Tatsache, dass es Arrays sind, als auch auf dem Elementtyp. Aus diesem Grund ist die folgende Definition einer überladenen `GetSquares`-Methode CLS-kompatibel.
 
   ```csharp
   using System;
@@ -1054,10 +1052,10 @@ CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel:
     {
         byte[] numbersOut = new byte[numbers.Length];
         for (int ctr = 0; ctr < numbers.Length; ctr++) {
-            int square = ((int) numbers[ctr]) * ((int) numbers[ctr]); 
+            int square = ((int) numbers[ctr]) * ((int) numbers[ctr]);
             if (square <= Byte.MaxValue)
                 numbersOut[ctr] = (byte) square;
-            // If there's an overflow, assign MaxValue to the corresponding 
+            // If there's an overflow, assign MaxValue to the corresponding
             // element.
             else
                 numbersOut[ctr] = Byte.MaxValue;
@@ -1070,7 +1068,7 @@ CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel:
   {
         BigInteger[] numbersOut = new BigInteger[numbers.Length];
         for (int ctr = 0; ctr < numbers.Length; ctr++)
-            numbersOut[ctr] = numbers[ctr] * numbers[ctr]; 
+            numbersOut[ctr] = numbers[ctr] * numbers[ctr];
 
        return numbersOut;
     }
@@ -1086,14 +1084,14 @@ CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel:
      Public Function GetSquares(numbers As Byte()) As Byte()
         Dim numbersOut(numbers.Length - 1) As Byte
         For ctr As Integer = 0 To numbers.Length - 1
-           Dim square As Integer = (CInt(numbers(ctr)) * CInt(numbers(ctr))) 
+           Dim square As Integer = (CInt(numbers(ctr)) * CInt(numbers(ctr)))
            If square <= Byte.MaxValue Then
               numbersOut(ctr) = CByte(square)
-           ' If there's an overflow, assign MaxValue to the corresponding 
+           ' If there's an overflow, assign MaxValue to the corresponding
            ' element.
            Else
               numbersOut(ctr) = Byte.MaxValue
-           End If   
+           End If
         Next
         Return numbersOut
      End Function
@@ -1101,7 +1099,7 @@ CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel:
      Public Function GetSquares(numbers As BigInteger()) As BigInteger()
          Dim numbersOut(numbers.Length - 1) As BigInteger
          For ctr As Integer = 0 To numbers.Length - 1
-            numbersOut(ctr) = numbers(ctr) * numbers(ctr) 
+            numbersOut(ctr) = numbers(ctr) * numbers(ctr)
          Next
          Return numbersOut
      End Function
@@ -1110,13 +1108,13 @@ CLS-kompatible Arrays sind mit den folgenden Regeln kompatibel:
 
 ### <a name="interfaces"></a>Schnittstellen
 
-CLS-kompatible Schnittstellen können Eigenschaften, Ereignisse und virtuelle Methoden (Methoden ohne Implementierung) definieren. Eine CLS-kompatible Schnittstelle kann keine der folgenden Aspekte aufweisen: 
+CLS-kompatible Schnittstellen können Eigenschaften, Ereignisse und virtuelle Methoden (Methoden ohne Implementierung) definieren. Eine CLS-kompatible Schnittstelle kann keine der folgenden Aspekte aufweisen:
 
-* Statische Methoden oder statische Felder Der C#-Compiler generiert Compilerfehler, wenn Sie einen statischen Member in einer Schnittstelle definieren. 
+* Statische Methoden oder statische Felder Der C#-Compiler generiert Compilerfehler, wenn Sie einen statischen Member in einer Schnittstelle definieren.
 
 * Felder Die C#-Compiler generiert Compilerfehler, wenn Sie ein Feld in einer Schnittstelle definieren.
 
-* Methoden, die nicht CLS-kompatibel sind. Zum Beispiel umfasst die folgende Schnittstellendefinition eine Methode, `INumber.GetUnsigned`, die als nicht CLS-kompatibel gekennzeichnet wird. In diesem Beispiel wird eine Compilerwarnung generiert. 
+* Methoden, die nicht CLS-kompatibel sind. Zum Beispiel umfasst die folgende Schnittstellendefinition eine Methode, `INumber.GetUnsigned`, die als nicht CLS-kompatibel gekennzeichnet wird. In diesem Beispiel wird eine Compilerwarnung generiert.
 
   ```csharp
   using System;
@@ -1138,19 +1136,19 @@ CLS-kompatible Schnittstellen können Eigenschaften, Ereignisse und virtuelle Me
 
   Public Interface INumber
     Function Length As Integer
-      <CLSCompliant(False)> Function GetUnsigned As ULong   
+      <CLSCompliant(False)> Function GetUnsigned As ULong
     End Interface
     ' Attempting to compile the example displays output like the following:
-    '    Interface2.vb(9) : warning BC40033: Non CLS-compliant 'function' is not allowed in a 
+    '    Interface2.vb(9) : warning BC40033: Non CLS-compliant 'function' is not allowed in a
     '    CLS-compliant interface.
-    '    
+    '
     '       <CLSCompliant(False)> Function GetUnsigned As ULong
     '                                      ~~~~~~~~~~~
   ```
 
-  Aufgrund dieser Regel, ist es nicht erforderlich, dass CLS-kompatible Typen nicht CLS-kompatible Member implementieren. Wenn ein CLS-kompatibles Framework eine Klasse verfügbar macht, die eine nicht CLS- kompatible Schnittstelle implementiert, sollte sie konkrete Implementierungen aller nicht-CLS-kompatiblen Member angeben. 
+  Aufgrund dieser Regel, ist es nicht erforderlich, dass CLS-kompatible Typen nicht CLS-kompatible Member implementieren. Wenn ein CLS-kompatibles Framework eine Klasse verfügbar macht, die eine nicht CLS- kompatible Schnittstelle implementiert, sollte sie konkrete Implementierungen aller nicht-CLS-kompatiblen Member angeben.
 
-CLS-kompatible Sprachcompiler müssen einer Klasse auch ermöglichen, separate Implementierungen von Membern bereitzustellen, die in mehreren Schnittstellen über den gleichen Namen und dieselbe Signatur verfügen. C# unterstützt explizite Schnittstellenimplementierungen, um unterschiedliche Implementierungen identisch benannter Methoden bereitzustellen. Im folgenden Beispiel wird dieses Szenario veranschaulicht, indem eine `Temperature`-Klasse definiert wird, die die `ICelsius`-Schnittstelle und die `IFahrenheit`-Schnittstelle als explizite Schnittstellenimplementierungen implementiert. 
+CLS-kompatible Sprachcompiler müssen einer Klasse auch ermöglichen, separate Implementierungen von Membern bereitzustellen, die in mehreren Schnittstellen über den gleichen Namen und dieselbe Signatur verfügen. C# unterstützt explizite Schnittstellenimplementierungen, um unterschiedliche Implementierungen identisch benannter Methoden bereitzustellen. Im folgenden Beispiel wird dieses Szenario veranschaulicht, indem eine `Temperature`-Klasse definiert wird, die die `ICelsius`-Schnittstelle und die `IFahrenheit`-Schnittstelle als explizite Schnittstellenimplementierungen implementiert.
 
 ```csharp
 using System;
@@ -1175,7 +1173,7 @@ public class Temperature : ICelsius, IFahrenheit
    {
       // We assume that this is the Celsius value.
       _value = value;
-   } 
+   }
 
    decimal IFahrenheit.GetTemperature()
    {
@@ -1185,7 +1183,7 @@ public class Temperature : ICelsius, IFahrenheit
    decimal ICelsius.GetTemperature()
    {
       return _value;
-   } 
+   }
 }
 public class Example
 {
@@ -1194,9 +1192,9 @@ public class Example
       Temperature temp = new Temperature(100.0m);
       ICelsius cTemp = temp;
       IFahrenheit fTemp = temp;
-      Console.WriteLine("Temperature in Celsius: {0} degrees", 
+      Console.WriteLine("Temperature in Celsius: {0} degrees",
                         cTemp.GetTemperature());
-      Console.WriteLine("Temperature in Fahrenheit: {0} degrees", 
+      Console.WriteLine("Temperature in Fahrenheit: {0} degrees",
                         fTemp.GetTemperature());
    }
 }
@@ -1222,7 +1220,7 @@ Public Class Temperature : Implements ICelsius, IFahrenheit
    Public Sub New(value As Decimal)
       ' We assume that this is the Celsius value.
       _value = value
-   End Sub 
+   End Sub
 
    Public Function GetFahrenheit() As Decimal _
           Implements IFahrenheit.GetTemperature
@@ -1232,15 +1230,15 @@ Public Class Temperature : Implements ICelsius, IFahrenheit
    Public Function GetCelsius() As Decimal _
           Implements ICelsius.GetTemperature
       Return _value
-   End Function 
+   End Function
 End Class
 
 Module Example
    Public Sub Main()
       Dim temp As New Temperature(100.0d)
-      Console.WriteLine("Temperature in Celsius: {0} degrees", 
+      Console.WriteLine("Temperature in Celsius: {0} degrees",
                         temp.GetCelsius())
-      Console.WriteLine("Temperature in Fahrenheit: {0} degrees", 
+      Console.WriteLine("Temperature in Fahrenheit: {0} degrees",
                         temp.GetFahrenheit())
    End Sub
 End Module
@@ -1251,27 +1249,27 @@ End Module
 
 ### <a name="enumerations"></a>Enumerationen
 
-Bei CLS-kompatiblen Enumerationen müssen die folgenden Regeln beachtet werden: 
+Bei CLS-kompatiblen Enumerationen müssen die folgenden Regeln beachtet werden:
 
-* Der zugrunde liegende Typ der Enumeration muss ein systeminterner CLS-kompatibler Ganzzahltyp sein ([Byte](xref:System.Byte), [Int16](xref:System.Int16), [Int32](xref:System.Int32) oder [Int64](xref:System.Int64)). Im folgenden Code wird beispielsweise versucht, eine Enumeration zu definieren, deren zugrunde liegender Typ [UInt32](xref:System.UInt32) ist. Eine Compilerwarnung wird generiert. 
+* Der zugrunde liegende Typ der Enumeration muss ein systeminterner CLS-kompatibler Ganzzahltyp sein ([Byte](xref:System.Byte), [Int16](xref:System.Int16), [Int32](xref:System.Int32) oder [Int64](xref:System.Int64)). Im folgenden Code wird beispielsweise versucht, eine Enumeration zu definieren, deren zugrunde liegender Typ [UInt32](xref:System.UInt32) ist. Eine Compilerwarnung wird generiert.
 
     ```csharp
     using System;
 
     [assembly: CLSCompliant(true)]
 
-    public enum Size : uint { 
-        Unspecified = 0, 
-        XSmall = 1, 
-        Small = 2, 
-        Medium = 3, 
-        Large = 4, 
-        XLarge = 5 
+    public enum Size : uint {
+        Unspecified = 0,
+        XSmall = 1,
+        Small = 2,
+        Medium = 3,
+        Large = 4,
+        XLarge = 5
     };
 
     public class Clothing
     {
-        public string Name; 
+        public string Name;
         public string Type;
         public string Size;
     }
@@ -1298,36 +1296,36 @@ Bei CLS-kompatiblen Enumerationen müssen die folgenden Regeln beachtet werden:
     End Class
     ' The attempt to compile the example displays a compiler warning like the following:
     '    Enum3.vb(6) : warning BC40032: Underlying type 'UInt32' of Enum is not CLS-compliant.
-    '    
+    '
     '    Public Enum Size As UInt32
     '                ~~~~
     ```
 
-* Ein Enumerationstyp muss über ein Feld namens `Value__` mit einer einzelnen Instanz verfügen, das mit dem `FieldAttributes.RTSpecialName`-Attribut markiert ist. Damit können Sie den Feldwert implizit verweisen. 
+* Ein Enumerationstyp muss über ein Feld namens `Value__` mit einer einzelnen Instanz verfügen, das mit dem `FieldAttributes.RTSpecialName`-Attribut markiert ist. Damit können Sie den Feldwert implizit verweisen.
 
-* Eine Enumeration umfasst literale statische Felder, deren Typen vom gleichen Typ wie die Enumeration selbst sein müssen. Wenn Sie zum Beispiel eine `State`-Enumeration mit den Werten aus `State.On` und `State.Off` definieren, sind `State.On` und `State.Off` literale statische Felder, deren Typ `State` ist. 
+* Eine Enumeration umfasst literale statische Felder, deren Typen vom gleichen Typ wie die Enumeration selbst sein müssen. Wenn Sie zum Beispiel eine `State`-Enumeration mit den Werten aus `State.On` und `State.Off` definieren, sind `State.On` und `State.Off` literale statische Felder, deren Typ `State` ist.
 
-* Es gibt zwei Arten von Enumerationen. 
-    
+* Es gibt zwei Arten von Enumerationen.
+
     * Eine Enumeration, die einen Satz wechselseitig exklusiver, benannter ganzzahliger Werte darstellt. Dieser Typ der Enumeration wird durch das Fehlen des benutzerdefinierten [System.FlagsAttribute](xref:System.FlagsAttribute)-Attributs angegeben.
-    
-    * Eine Enumeration, die einen Satz von Bitflags darstellt, die zum Generieren eines unbenannten Werts kombiniert werden können. Dieser Typ der Enumeration wird durch das Vorhandensein des benutzerdefinierten [System.FlagsAttribute](xref:System.FlagsAttribute)-Attributs angegeben.
-    
- Weitere Informationen finden Sie in der Dokumentation zur [Enum](xref:System.Enum)-Struktur. 
 
-* Der Wert einer Enumeration wird nicht auf den Bereich der angegebenen Werte beschränkt. Das heißt, der Wertebereich einer Enumeration ist der Bereich des zugrunde liegenden Werts. Sie können die `Enum.IsDefined`-Methode verwenden, um zu bestimmen, ob ein angegebener Wert ein Member einer Enumeration ist. 
+    * Eine Enumeration, die einen Satz von Bitflags darstellt, die zum Generieren eines unbenannten Werts kombiniert werden können. Dieser Typ der Enumeration wird durch das Vorhandensein des benutzerdefinierten [System.FlagsAttribute](xref:System.FlagsAttribute)-Attributs angegeben.
+
+ Weitere Informationen finden Sie in der Dokumentation zur [Enum](xref:System.Enum)-Struktur.
+
+* Der Wert einer Enumeration wird nicht auf den Bereich der angegebenen Werte beschränkt. Das heißt, der Wertebereich einer Enumeration ist der Bereich des zugrunde liegenden Werts. Sie können die `Enum.IsDefined`-Methode verwenden, um zu bestimmen, ob ein angegebener Wert ein Member einer Enumeration ist.
 
 ### <a name="type-members-in-general"></a>Typmember im Allgemeinen
 
-Die Common Language Specification erfordert, dass auf alle Felder und Methoden als Member einer bestimmten Klasse zugegriffen werden. Daher sind globale statische Felder und Methoden (das heißt, statische Felder oder Methoden, die unabhängig von einem Typ definiert werden), nicht CLS-kompatibel. Wenn Sie versuchen, ein globales Feld oder eine Methode im Quellcode einzuschließen, wird vom C#-Compiler ein Compilerfehler generiert. 
+Die Common Language Specification erfordert, dass auf alle Felder und Methoden als Member einer bestimmten Klasse zugegriffen werden. Daher sind globale statische Felder und Methoden (das heißt, statische Felder oder Methoden, die unabhängig von einem Typ definiert werden), nicht CLS-kompatibel. Wenn Sie versuchen, ein globales Feld oder eine Methode im Quellcode einzuschließen, wird vom C#-Compiler ein Compilerfehler generiert.
 
-Die Common Language Specification unterstützt nur die verwaltete Standardaufrufkonvention. Sie unterstützt keine nicht verwalteten Aufrufkonventionen und keine Methoden mit variablen Argumentlisten, die mit dem `varargs`-Schlüsselwort gekennzeichnet werden. Verwenden Sie für Variablenargumentlisten, die mit der verwalteten Standardaufrufkonvention kompatibel sind, das [ParamArrayAttribute](xref:System.ParamArrayAttribute)-Attribut oder die Implementierung der jeweiligen Sprache, wie z.B. das `params`-Schlüsselwort in C# und das `ParamArray`-Schlüsselwort in Visual Basic. 
+Die Common Language Specification unterstützt nur die verwaltete Standardaufrufkonvention. Sie unterstützt keine nicht verwalteten Aufrufkonventionen und keine Methoden mit variablen Argumentlisten, die mit dem `varargs`-Schlüsselwort gekennzeichnet werden. Verwenden Sie für Variablenargumentlisten, die mit der verwalteten Standardaufrufkonvention kompatibel sind, das [ParamArrayAttribute](xref:System.ParamArrayAttribute)-Attribut oder die Implementierung der jeweiligen Sprache, wie z.B. das `params`-Schlüsselwort in C# und das `ParamArray`-Schlüsselwort in Visual Basic.
 
 ### <a name="member-accessibility"></a>Memberzugriff
 
-Das Überschreiben eines geerbten Members kann den Zugriff auf diesen Member nicht ändern. Beispielsweise kann eine öffentliche Methode in einer Basisklasse nicht von einer privaten Methode in einer abgeleiteten Klasse überschrieben werden. Es gibt allerdings eine Ausnahme: einen `protected internal`-Member (in C#) oder einen `Protected Friend`-Member (in Visual Basic) in einer Assembly, die von einem Typ in einer anderen Assembly überschrieben wird.  In diesem Fall ist der Zugriff auf die Überschreibung `Protected`. 
+Das Überschreiben eines geerbten Members kann den Zugriff auf diesen Member nicht ändern. Beispielsweise kann eine öffentliche Methode in einer Basisklasse nicht von einer privaten Methode in einer abgeleiteten Klasse überschrieben werden. Es gibt allerdings eine Ausnahme: einen `protected internal`-Member (in C#) oder einen `Protected Friend`-Member (in Visual Basic) in einer Assembly, die von einem Typ in einer anderen Assembly überschrieben wird.  In diesem Fall ist der Zugriff auf die Überschreibung `Protected`.
 
-Im folgenden Beispiel wird der Fehler veranschaulicht, der generiert wird, wenn das [CLSCompliantAttribute](xref:System.CLSCompliantAttribute)-Attribut auf `true` festgelegt wird und `Person`, eine von `Animal` abgeleitete Klasse, versucht, den Zugriff auf die `Species`-Eigenschaft von öffentlich in privat zu ändern. Das Beispiel wird erfolgreich kompiliert, wenn der Zugriff auf öffentlich geändert wird. 
+Im folgenden Beispiel wird der Fehler veranschaulicht, der generiert wird, wenn das [CLSCompliantAttribute](xref:System.CLSCompliantAttribute)-Attribut auf `true` festgelegt wird und `Person`, eine von `Animal` abgeleitete Klasse, versucht, den Zugriff auf die `Species`-Eigenschaft von öffentlich in privat zu ändern. Das Beispiel wird erfolgreich kompiliert, wenn der Zugriff auf öffentlich geändert wird.
 
 ```csharp
 using System;
@@ -1343,15 +1341,15 @@ public class Animal
       _species = species;
    }
 
-   public virtual string Species 
-   {    
+   public virtual string Species
+   {
       get { return _species; }
    }
 
    public override string ToString()
    {
-      return _species;   
-   } 
+      return _species;
+   }
 }
 
 public class Human : Animal
@@ -1368,12 +1366,12 @@ public class Human : Animal
       get { return _name; }
    }
 
-   private override string Species 
+   private override string Species
    {
       get { return base.Species; }
    }
 
-   public override string ToString() 
+   public override string ToString()
    {
       return _name;
    }
@@ -1409,8 +1407,8 @@ Public Class Animal
    End Property
 
    Public Overrides Function ToString() As String
-      Return _species   
-   End Function 
+      Return _species
+   End Function
 End Class
 
 Public Class Human : Inherits Animal
@@ -1430,7 +1428,7 @@ Public Class Human : Inherits Animal
    Private Overrides ReadOnly Property Species As String
       Get
          Return MyBase.Species
-      End Get   
+      End Get
    End Property
 
    Public Overrides Function ToString() As String
@@ -1446,14 +1444,14 @@ Public Module Example
    End Sub
 End Module
 ' The example displays the following output:
-'     'Private Overrides ReadOnly Property Species As String' cannot override 
+'     'Private Overrides ReadOnly Property Species As String' cannot override
 '     'Public Overridable ReadOnly Property Species As String' because
 '      they have different access levels.
-' 
+'
 '         Private Overrides ReadOnly Property Species As String
 ```
 
-Der Zugriff auf Typen in der Signatur eines Members muss möglich sein, wenn auf den Member zugegriffen werden kann. Das bedeutet zum Beispiel, dass ein öffentlicher Member keinen Parameter enthalten kann, dessen Typ privat, geschützt oder intern ist. Im folgenden Beispiel wird der Compilerfehler veranschaulicht, der entsteht, wenn ein `StringWrapper`-Klassenkonstruktor einen internen `StringOperationType`-Enumerationswert verfügbar macht, der bestimmt, wie ein Zeichenfolgenwert umschlossen werden soll. 
+Der Zugriff auf Typen in der Signatur eines Members muss möglich sein, wenn auf den Member zugegriffen werden kann. Das bedeutet zum Beispiel, dass ein öffentlicher Member keinen Parameter enthalten kann, dessen Typ privat, geschützt oder intern ist. Im folgenden Beispiel wird der Compilerfehler veranschaulicht, der entsteht, wenn ein `StringWrapper`-Klassenkonstruktor einen internen `StringOperationType`-Enumerationswert verfügbar macht, der bestimmt, wie ein Zeichenfolgenwert umschlossen werden soll.
 
 ```csharp
 using System;
@@ -1466,14 +1464,14 @@ public class StringWrapper
    bool useSB = false;
 
    public StringWrapper(StringOperationType type)
-   {   
+   {
       if (type == StringOperationType.Normal) {
          useSB = false;
-      }   
+      }
       else {
          useSB = true;
          internalSB = new StringBuilder();
-      }    
+      }
    }
 
    // The remaining source code...
@@ -1497,13 +1495,13 @@ Public Class StringWrapper
    Dim internalSB As StringBuilder = Nothing
    Dim useSB As Boolean = False
 
-   Public Sub New(type As StringOperationType)   
+   Public Sub New(type As StringOperationType)
       If type = StringOperationType.Normal Then
          useSB = False
       Else
-         internalSB = New StringBuilder() 
+         internalSB = New StringBuilder()
          useSB = True
-      End If    
+      End If
    End Sub
 
    ' The remaining source code...
@@ -1516,16 +1514,16 @@ End Enum
 ' The attempt to compile the example displays the following output:
 '    error BC30909: 'type' cannot expose type 'StringOperationType'
 '     outside the project through class 'StringWrapper'.
-'    
+'
 '       Public Sub New(type As StringOperationType)
 '                              ~~~~~~~~~~~~~~~~~~~
 ```
 
 ### <a name="generic-types-and-members"></a>Generische Typen und Member
 
-Geschachtelte Typen weisen immer mindestens so viele generische Parameter auf wie der einschließende Typ. Diese entsprechen der Position nach den generischen Parametern im einschließenden Typ. Der generische Typ kann auch neue generische Parameter enthalten. 
+Geschachtelte Typen weisen immer mindestens so viele generische Parameter auf wie der einschließende Typ. Diese entsprechen der Position nach den generischen Parametern im einschließenden Typ. Der generische Typ kann auch neue generische Parameter enthalten.
 
-Die Beziehung zwischen generischen Typparametern eines enthaltenden Typs und den geschachtelten Typen wird möglicherweise von der Syntax der einzelnen Sprachen verdeckt. Im folgenden Beispiel enthält ein generischer Typ `Outer<T>` zwei geschachtelte Klassen: `Inner1A` und `Inner1B<U>`. Die Aufrufe der `ToString`-Methode, die jede Klasse von `Object.ToString` erbt, zeigen, dass jede geschachtelte Klasse die Typparameter der enthaltenden Klasse umfasst. 
+Die Beziehung zwischen generischen Typparametern eines enthaltenden Typs und den geschachtelten Typen wird möglicherweise von der Syntax der einzelnen Sprachen verdeckt. Im folgenden Beispiel enthält ein generischer Typ `Outer<T>` zwei geschachtelte Klassen: `Inner1A` und `Inner1B<U>`. Die Aufrufe der `ToString`-Methode, die jede Klasse von `Object.ToString` erbt, zeigen, dass jede geschachtelte Klasse die Typparameter der enthaltenden Klasse umfasst.
 
 ```csharp
 using System;
@@ -1622,9 +1620,9 @@ End Module
 '       Outer`1+Inner1B`1[System.String,System.Int32]
 ```
 
-Der Name eines generischen Typs wird in der Form *name*'*n* codiert, wobei *name* der Typname, *`* ein Zeichenliteral und *n* die Anzahl von Parametern ist, die für den Typ deklariert sind, oder, bei geschachtelten generischen Typen, die Anzahl neu eingeführter Typparameter. Diese Codierung von Namen des generischen Typs ist hauptsächlich für Entwickler relevant, die Reflexion verwenden, um auf CLS-kompatible generische Typen in einer Bibliothek zuzugreifen. 
+Der Name eines generischen Typs wird in der Form *name*'*n* codiert, wobei *name* der Typname, *`* ein Zeichenliteral und *n* die Anzahl von Parametern ist, die für den Typ deklariert sind, oder, bei geschachtelten generischen Typen, die Anzahl neu eingeführter Typparameter. Diese Codierung von Namen des generischen Typs ist hauptsächlich für Entwickler relevant, die Reflexion verwenden, um auf CLS-kompatible generische Typen in einer Bibliothek zuzugreifen.
 
-Wenn Einschränkungen auf einen generischen Typ angewendet werden, müssen alle als Einschränkungen verwendeten Typen auch CLS-kompatibel sein. Im folgenden Beispiel wird eine Klasse namens `BaseClass` definiert, die nicht CLS-kompatibel ist sowie eine generische Klasse namens `BaseCollection` deren Typparameter von `BaseClass` abgeleitet werden muss. Aber, da `BaseClass` nicht CLS-kompatibel ist, gibt der Compiler eine Warnung aus. 
+Wenn Einschränkungen auf einen generischen Typ angewendet werden, müssen alle als Einschränkungen verwendeten Typen auch CLS-kompatibel sein. Im folgenden Beispiel wird eine Klasse namens `BaseClass` definiert, die nicht CLS-kompatibel ist sowie eine generische Klasse namens `BaseCollection` deren Typparameter von `BaseClass` abgeleitet werden muss. Aber, da `BaseClass` nicht CLS-kompatibel ist, gibt der Compiler eine Warnung aus.
 
 ```csharp
 using System;
@@ -1651,9 +1649,9 @@ End Class
 Public Class BaseCollection(Of T As BaseClass)
 End Class
 ' Attempting to compile the example displays the following output:
-'    warning BC40040: Generic parameter constraint type 'BaseClass' is not 
+'    warning BC40040: Generic parameter constraint type 'BaseClass' is not
 '    CLS-compliant.
-'    
+'
 '    Public Class BaseCollection(Of T As BaseClass)
 '                                        ~~~~~~~~~
 ```
@@ -1675,7 +1673,7 @@ public class Number<T> where T : struct
    {
       try {
          this.number = Convert.ToDouble(value);
-      }  
+      }
       catch (OverflowException e) {
          throw new ArgumentException("value is too large.", e);
       }
@@ -1695,19 +1693,19 @@ public class Number<T> where T : struct
    }
 }
 
-public class FloatingPoint<T> : Number<T> 
+public class FloatingPoint<T> : Number<T>
 {
-   public FloatingPoint(T number) : base(number) 
+   public FloatingPoint(T number) : base(number)
    {
       if (typeof(float) == number.GetType() ||
-          typeof(double) == number.GetType() || 
+          typeof(double) == number.GetType() ||
           typeof(decimal) == number.GetType())
          this.number = Convert.ToDouble(number);
-      else   
+      else
          throw new ArgumentException("The number parameter is not a floating-point number.");
-   }       
-}           
-// The attempt to comple the example displays the following output:
+   }
+}
+// The attempt to compile the example displays the following output:
 //       error CS0453: The type 'T' must be a non-nullable value type in
 //               order to use it as parameter 'T' in the generic type or method 'Number<T>'
 ```
@@ -1739,22 +1737,22 @@ Public Class Number(Of T As Structure)
    End Function
 End Class
 
-Public Class FloatingPoint(Of T) : Inherits Number(Of T) 
+Public Class FloatingPoint(Of T) : Inherits Number(Of T)
    Public Sub New(number As T)
-      MyBase.New(number) 
+      MyBase.New(number)
       If TypeOf number Is Single Or
                TypeOf number Is Double Or
-               TypeOf number Is Decimal Then 
+               TypeOf number Is Decimal Then
          Me.number = Convert.ToDouble(number)
-      Else   
+      Else
          throw new ArgumentException("The number parameter is not a floating-point number.")
-      End If   
-   End Sub       
-End Class           
-' The attempt to comple the example displays the following output:
+      End If
+   End Sub
+End Class
+' The attempt to compile the example displays the following output:
 '    error BC32105: Type argument 'T' does not satisfy the 'Structure'
 '    constraint for type parameter 'T'.
-'    
+'
 '    Public Class FloatingPoint(Of T) : Inherits Number(Of T)
 '                                                          ~
 ```
@@ -1777,7 +1775,7 @@ public class Number<T> where T : struct
    {
       try {
          this.number = Convert.ToDouble(value);
-      }  
+      }
       catch (OverflowException e) {
          throw new ArgumentException("value is too large.", e);
       }
@@ -1797,18 +1795,18 @@ public class Number<T> where T : struct
    }
 }
 
-public class FloatingPoint<T> : Number<T> where T : struct 
+public class FloatingPoint<T> : Number<T> where T : struct
 {
-   public FloatingPoint(T number) : base(number) 
+   public FloatingPoint(T number) : base(number)
    {
       if (typeof(float) == number.GetType() ||
-          typeof(double) == number.GetType() || 
+          typeof(double) == number.GetType() ||
           typeof(decimal) == number.GetType())
          this.number = Convert.ToDouble(number);
-      else   
+      else
          throw new ArgumentException("The number parameter is not a floating-point number.");
-   }       
-}      
+   }
+}
 ```
 
 ```vb
@@ -1838,30 +1836,30 @@ Public Class Number(Of T As Structure)
    End Function
 End Class
 
-Public Class FloatingPoint(Of T As Structure) : Inherits Number(Of T) 
+Public Class FloatingPoint(Of T As Structure) : Inherits Number(Of T)
    Public Sub New(number As T)
-      MyBase.New(number) 
+      MyBase.New(number)
       If TypeOf number Is Single Or
                TypeOf number Is Double Or
-               TypeOf number Is Decimal Then 
+               TypeOf number Is Decimal Then
          Me.number = Convert.ToDouble(number)
-      Else   
+      Else
          throw new ArgumentException("The number parameter is not a floating-point number.")
-      End If   
-   End Sub       
+      End If
+   End Sub
 End Class
 ```
 
 Die Common Language Specification erzwingt ein konservatives Pro-Instanziierungsmodell für geschachtelte Typen und geschützte Member. Offene generische Typen können Felder oder Member mit Signaturen nicht verfügbar machen, die eine bestimmte Instanziierung eines geschachtelten, geschützten generischen Typs enthalten. Nicht generische Typen, die eine bestimmte Instanziierung einer generischen Basisklasse oder Schnittstelle erweitern, können Felder oder Member mit Signaturen nicht verfügbar machen, die eine andere Instanziierung eines geschachtelten, geschützten generischen Typs enthalten.
 
-Das folgende Beispiel definiert einen generischen Typ „`C1<T>`“ und eine geschützte Klasse „`C1<T>.N`“. `C1<T>` verfügt über zwei Methoden, `M1` und `M2`. Allerdings ist `M1` nicht CLS-kompatibel, da versucht wird, ein `C1<int>.N`-Objekt von `C1<T>` zurückzugeben. Eine zweite Klasse, `C2`, wird von `C1<long>` abgeleitet. Sie verfügt über zwei Methoden, `M3` und `M4`. `M3` ist nicht CLS-kompatibel, da versucht wird, ein `C1<int>.N`-Objekt von einer Unterklasse von `C1<long>` zurückzugeben. Beachten Sie, dass Sprachcompiler sogar noch restriktiver sein können. In diesem Beispiel zeigt Visual Basic einen Fehler an, wenn versucht wird, `M4` zu kompilieren. 
+Das folgende Beispiel definiert einen generischen Typ „`C1<T>`“ und eine geschützte Klasse „`C1<T>.N`“. `C1<T>` verfügt über zwei Methoden, `M1` und `M2`. Allerdings ist `M1` nicht CLS-kompatibel, da versucht wird, ein `C1<int>.N`-Objekt von `C1<T>` zurückzugeben. Eine zweite Klasse, `C2`, wird von `C1<long>` abgeleitet. Sie verfügt über zwei Methoden, `M3` und `M4`. `M3` ist nicht CLS-kompatibel, da versucht wird, ein `C1<int>.N`-Objekt von einer Unterklasse von `C1<long>` zurückzugeben. Beachten Sie, dass Sprachcompiler sogar noch restriktiver sein können. In diesem Beispiel zeigt Visual Basic einen Fehler an, wenn versucht wird, `M4` zu kompilieren.
 
 ```csharp
 using System;
 
 [assembly:CLSCompliant(true)]
 
-public class C1<T> 
+public class C1<T>
 {
    protected class N { }
 
@@ -1872,7 +1870,7 @@ public class C1<T>
                                       // inside C1<T>
 }
 
-public class C2 : C1<long> 
+public class C2 : C1<long>
 {
    protected void M3(C1<int>.N n) { }  // Not CLS-compliant – C1<int>.N is not
                                        // accessible in C2 (extends C1<long>)
@@ -1888,7 +1886,7 @@ public class C2 : C1<long>
 ```vb
 <Assembly:CLSCompliant(True)>
 
-Public Class C1(Of T) 
+Public Class C1(Of T)
    Protected Class N
    End Class
 
@@ -1901,39 +1899,39 @@ Public Class C1(Of T)
    End Sub                               ' inside C1(Of T)
 End Class
 
-Public Class C2 : Inherits C1(Of Long) 
+Public Class C2 : Inherits C1(Of Long)
    Protected Sub M3(n As C1(Of Integer).N)   ' Not CLS-compliant – C1(Of Integer).N is not
    End Sub                                   ' accessible in C2 (extends C1(Of Long))
 
-   Protected Sub M4(n As C1(Of Long).N)   
-   End Sub                                
+   Protected Sub M4(n As C1(Of Long).N)
+   End Sub
 End Class
 ' Attempting to compile the example displays output like the following:
-'    error BC30508: 'n' cannot expose type 'C1(Of Integer).N' in namespace 
+'    error BC30508: 'n' cannot expose type 'C1(Of Integer).N' in namespace
 '    '<Default>' through class 'C1'.
-'    
+'
 '       Protected Sub M1(n As C1(Of Integer).N)   ' Not CLS-compliant - C1<int>.N not
 '                             ~~~~~~~~~~~~~~~~
-'    error BC30389: 'C1(Of T).N' is not accessible in this context because 
+'    error BC30389: 'C1(Of T).N' is not accessible in this context because
 '    it is 'Protected'.
-'    
+'
 '       Protected Sub M3(n As C1(Of Integer).N)   ' Not CLS-compliant - C1(Of Integer).N is not
-'    
+'
 '                             ~~~~~~~~~~~~~~~~
-'    
+'
 '    error BC30389: 'C1(Of T).N' is not accessible in this context because it is 'Protected'.
-'    
-'       Protected Sub M4(n As C1(Of Long).N)  
+'
+'       Protected Sub M4(n As C1(Of Long).N)
 '                             ~~~~~~~~~~~~~
 ```
 
 ### <a name="constructors"></a>Konstruktoren
 
-Bei Konstruktoren in den CLS-kompatiblen Klassen und Strukturen müssen die folgenden Regeln beachtet werden: 
+Bei Konstruktoren in den CLS-kompatiblen Klassen und Strukturen müssen die folgenden Regeln beachtet werden:
 
-* Der Konstruktor einer abgeleiteten Klasse muss den Instanzkonstruktor der Basisklasse aufrufen, bevor er auf geerbte Instanzdaten zugreift. Diese Anforderung basiert auf der Tatsache, dass Konstruktoren nicht nach ihren abgeleiteten Klassen geerbt werden. Diese Regel gilt nicht für Strukturen, die keine direkte Vererbung unterstützen. 
+* Der Konstruktor einer abgeleiteten Klasse muss den Instanzkonstruktor der Basisklasse aufrufen, bevor er auf geerbte Instanzdaten zugreift. Diese Anforderung basiert auf der Tatsache, dass Konstruktoren nicht nach ihren abgeleiteten Klassen geerbt werden. Diese Regel gilt nicht für Strukturen, die keine direkte Vererbung unterstützen.
 
-  In der Regel erzwingen Compiler diese Regel unabhängig von der CLS-Kompatibilität, wie im folgenden Beispiel gezeigt. Es wird eine `Doctor`-Klasse erstellt, die von einer `Person`-Klasse abgeleitet ist. Doch die `Doctor`-Klasse kann den `Person`-Klassenkonstruktor nicht zum Initialisieren geerbter Instanzfelder aufrufen. 
+  In der Regel erzwingen Compiler diese Regel unabhängig von der CLS-Kompatibilität, wie im folgenden Beispiel gezeigt. Es wird eine `Doctor`-Klasse erstellt, die von einer `Person`-Klasse abgeleitet ist. Doch die `Doctor`-Klasse kann den `Person`-Klassenkonstruktor nicht zum Initialisieren geerbter Instanzfelder aufrufen.
 
     ```csharp
     using System;
@@ -1947,31 +1945,31 @@ Bei Konstruktoren in den CLS-kompatiblen Klassen und Strukturen müssen die folg
     public Person(string firstName, string lastName, string id)
     {
         if (String.IsNullOrEmpty(firstName + lastName))
-            throw new ArgumentNullException("Either a first name or a last name must be provided.");    
+            throw new ArgumentNullException("Either a first name or a last name must be provided.");
 
         fName = firstName;
         lName = lastName;
         _id = id;
     }
 
-    public string FirstName 
+    public string FirstName
     {
         get { return fName; }
     }
 
-    public string LastName 
+    public string LastName
     {
         get { return lName; }
     }
 
-    public string Id 
+    public string Id
     {
         get { return _id; }
     }
 
     public override string ToString()
     {
-        return String.Format("{0}{1}{2}", fName, 
+        return String.Format("{0}{1}{2}", fName,
                             String.IsNullOrEmpty(fName) ?  "" : " ",
                             lName);
     }
@@ -1995,14 +1993,14 @@ Bei Konstruktoren in den CLS-kompatiblen Klassen und Strukturen müssen die folg
     ```
 
     ```vb
-    <Assembly: CLSCompliant(True)> 
+    <Assembly: CLSCompliant(True)>
 
     Public Class Person
        Private fName, lName, _id As String
 
        Public Sub New(firstName As String, lastName As String, id As String)
           If String.IsNullOrEmpty(firstName + lastName) Then
-             Throw New ArgumentNullException("Either a first name or a last name must be provided.")    
+             Throw New ArgumentNullException("Either a first name or a last name must be provided.")
           End If
 
           fName = firstName
@@ -2029,7 +2027,7 @@ Bei Konstruktoren in den CLS-kompatiblen Klassen und Strukturen müssen die folg
        End Property
 
        Public Overrides Function ToString() As String
-          Return String.Format("{0}{1}{2}", fName, 
+          Return String.Format("{0}{1}{2}", fName,
                                If(String.IsNullOrEmpty(fName), "", " "),
                                lName)
        End Function
@@ -2044,40 +2042,40 @@ Bei Konstruktoren in den CLS-kompatiblen Klassen und Strukturen müssen die folg
        End Function
     End Class
     ' Attempting to compile the example displays output like the following:
-    '    Ctor1.vb(46) : error BC30148: First statement of this 'Sub New' must be a call 
-    '    to 'MyBase.New' or 'MyClass.New' because base class 'Person' of 'Doctor' does 
+    '    Ctor1.vb(46) : error BC30148: First statement of this 'Sub New' must be a call
+    '    to 'MyBase.New' or 'MyClass.New' because base class 'Person' of 'Doctor' does
     '    not have an accessible 'Sub New' that can be called with no arguments.
-    '    
+    '
     '       Public Sub New()
     '                  ~~~
     ````
-    
-* Ein Objektkonstruktor kann nur aufgerufen werden, um ein Objekt zu erstellen. Außerdem kann ein Objekt nicht zweimal initialisiert werden. Beispielsweise bedeutet dies, dass mit `Object.MemberwiseClone` keine Konstruktoren aufgerufen werden dürfen.  
+
+* Ein Objektkonstruktor kann nur aufgerufen werden, um ein Objekt zu erstellen. Außerdem kann ein Objekt nicht zweimal initialisiert werden. Beispielsweise bedeutet dies, dass mit `Object.MemberwiseClone` keine Konstruktoren aufgerufen werden dürfen.
 
 ### <a name="properties"></a>Eigenschaften
 
 Eigenschaften in den CLS-kompatiblen Typen müssen die folgenden Regeln beachten:
 
-* Eine Eigenschaft muss über einen Setter, einen Getter oder beides verfügen. In einer Assembly werden diese als spezielle Methoden implementiert, das bedeutet, dass sie als separate Methoden (der Getter hat den Namen `get`\_*propertyname* und der Setter den Namen `set`\_*propertyname*) erscheinen, die als `SpecialName` gekennzeichnet in den Metadaten der Assembly angezeigt werden. Die C#-Compiler erzwingt diese Regel automatisch, ohne das <xref:System.CLSCompliantAttribute>-Attribut anzuwenden. 
+* Eine Eigenschaft muss über einen Setter, einen Getter oder beides verfügen. In einer Assembly werden diese als spezielle Methoden implementiert, das bedeutet, dass sie als separate Methoden (der Getter hat den Namen `get`\_*propertyname* und der Setter den Namen `set`\_*propertyname*) erscheinen, die als `SpecialName` gekennzeichnet in den Metadaten der Assembly angezeigt werden. Die C#-Compiler erzwingt diese Regel automatisch, ohne das <xref:System.CLSCompliantAttribute>-Attribut anzuwenden.
 
-* Ein Typ der Eigenschaft entspricht dem Rückgabetyp der Getter-Methode der Eigenschaft und dem letzten Argument der Setter-Methode. Diese Typen müssen CLS-kompatibel sein, und Argumente können der Eigenschaft nicht mithilfe eines Verweises zugewiesen werden (das heißt, es können keine verwalteten Zeiger sein). 
+* Ein Typ der Eigenschaft entspricht dem Rückgabetyp der Getter-Methode der Eigenschaft und dem letzten Argument der Setter-Methode. Diese Typen müssen CLS-kompatibel sein, und Argumente können der Eigenschaft nicht mithilfe eines Verweises zugewiesen werden (das heißt, es können keine verwalteten Zeiger sein).
 
-* Wenn eine Eigenschaft einen Getter und einen Setter aufweist, müssen beide "virtual", "static" oder "instance" sein. Der C#-Compiler erzwingt diese Regel automatisch über die Eigenschaftendefinitionssyntax. 
+* Wenn eine Eigenschaft einen Getter und einen Setter aufweist, müssen beide "virtual", "static" oder "instance" sein. Der C#-Compiler erzwingt diese Regel automatisch über die Eigenschaftendefinitionssyntax.
 
 ### <a name="events"></a>Ereignisse
 
-Ein Ereignis wird vom Namen und dem Typ definiert. Der Ereignistyp ist ein Delegat, der zum Angeben des Ereignisses verwendet wird. Zum Beispiel hat das `DbConnection.StateChange`-Ereignis den Typ `StateChangeEventHandler`. Neben dem Ereignis selbst, stellen drei Methoden mit Namen basierend auf dem Ereignisnamen die Implementierung des Ereignisses bereit und werden in den Metadaten der Assembly als `SpecialName` gekennzeichnet: 
+Ein Ereignis wird vom Namen und dem Typ definiert. Der Ereignistyp ist ein Delegat, der zum Angeben des Ereignisses verwendet wird. Zum Beispiel hat das `DbConnection.StateChange`-Ereignis den Typ `StateChangeEventHandler`. Neben dem Ereignis selbst, stellen drei Methoden mit Namen basierend auf dem Ereignisnamen die Implementierung des Ereignisses bereit und werden in den Metadaten der Assembly als `SpecialName` gekennzeichnet:
 
-* Eine Methode zum Hinzufügen eines Ereignishandlers namens `add`_*Ereignisname*. Die Ereignisabonnementmethode für das `DbConnection.StateChange`-Ereignis hat zum Beispiel den Namen `add_StateChange`. 
+* Eine Methode zum Hinzufügen eines Ereignishandlers namens `add`_*Ereignisname*. Die Ereignisabonnementmethode für das `DbConnection.StateChange`-Ereignis hat zum Beispiel den Namen `add_StateChange`.
 
 * Eine Methode zum Enternen eines Ereignishandlers namens `remove`_*Ereignisname*. Die Entfernenmethode für das `DbConnection.StateChange`-Ereignis hat zum Beispiel den Namen `remove_StateChange`.
 
-* Eine Methode für den Hinweis, dass das Ereignis namens `raise`_*Ereignisname* aufgetreten ist. 
+* Eine Methode für den Hinweis, dass das Ereignis namens `raise`\_*EventName* aufgetreten ist.
 
 > [!NOTE]
-> Die meisten Regeln der Common Language Specification zu Ereignissen werden von den Sprachcompilern implementiert und sind für Komponentenentwickler transparent. 
+> Die meisten Regeln der Common Language Specification zu Ereignissen werden von den Sprachcompilern implementiert und sind für Komponentenentwickler transparent.
 
-Die Methoden für das Hinzufügen, Entfernen und Auslösen des Ereignisses verfügen über den gleichen Zugriff. Sie müssen zudem "static", "instance" oder "virtual" sein. Die Methoden zum Hinzufügen und Entfernen eines Ereignisses verfügen über einen Parameter, dessen Typ der Ereignisdelegattyp ist. Die Methoden zum Hinzufügen und Entfernen müssen beide vorhanden sein oder beide fehlen. 
+Die Methoden für das Hinzufügen, Entfernen und Auslösen des Ereignisses verfügen über den gleichen Zugriff. Sie müssen zudem "static", "instance" oder "virtual" sein. Die Methoden zum Hinzufügen und Entfernen eines Ereignisses verfügen über einen Parameter, dessen Typ der Ereignisdelegattyp ist. Die Methoden zum Hinzufügen und Entfernen müssen beide vorhanden sein oder beide fehlen.
 
 Im folgenden Beispiel wird eine CLS-kompatible Klasse namens `Temperature` definiert, die ein `TemperatureChanged`-Ereignis auslöst, wenn die Temperaturänderung zwischen zwei Messungen einem Schwellenwert entspricht oder diesen überschreitet. Die `Temperature`-Klasse definiert eine `raise_TemperatureChanged`-Methode explizit, sodass sie selektiv Ereignishandler ausführen kann.
 
@@ -2091,7 +2089,7 @@ using System.Collections.Generic;
 public class TemperatureChangedEventArgs : EventArgs
 {
    private Decimal originalTemp;
-   private Decimal newTemp; 
+   private Decimal newTemp;
    private DateTimeOffset when;
 
    public TemperatureChangedEventArgs(Decimal original, Decimal @new, DateTimeOffset time)
@@ -2099,17 +2097,17 @@ public class TemperatureChangedEventArgs : EventArgs
       originalTemp = original;
       newTemp = @new;
       when = time;
-   }   
+   }
 
    public Decimal OldTemperature
    {
       get { return originalTemp; }
-   } 
+   }
 
    public Decimal CurrentTemperature
    {
       get { return newTemp; }
-   } 
+   }
 
    public DateTimeOffset Time
    {
@@ -2153,7 +2151,7 @@ public class Temperature
          ti.Recorded = DateTimeOffset.UtcNow;
          previous = current;
          current = value;
-         if (Math.Abs(current - previous) >= tolerance) 
+         if (Math.Abs(current - previous) >= tolerance)
             raise_TemperatureChanged(new TemperatureChangedEventArgs(previous, current, ti.Recorded));
       }
    }
@@ -2161,7 +2159,7 @@ public class Temperature
    public void raise_TemperatureChanged(TemperatureChangedEventArgs eventArgs)
    {
       if (TemperatureChanged == null)
-         return; 
+         return;
 
       foreach (TemperatureChanged d in TemperatureChanged.GetInvocationList()) {
          if (d.Method.Name.Contains("Duplicate"))
@@ -2203,14 +2201,14 @@ public class Example
       temp.CurrentTemperature = 63;
    }
 
-   internal void TemperatureNotification(Object sender, TemperatureChangedEventArgs e) 
+   internal void TemperatureNotification(Object sender, TemperatureChangedEventArgs e)
    {
-      Console.WriteLine("Notification 1: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature);   
+      Console.WriteLine("Notification 1: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature);
    }
 
    public void DuplicateTemperatureNotification(Object sender, TemperatureChangedEventArgs e)
-   { 
-      Console.WriteLine("Notification 2: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature);   
+   {
+      Console.WriteLine("Notification 2: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature);
    }
 }
 ```
@@ -2223,26 +2221,26 @@ Imports System.Collections.Generic
 
 Public Class TemperatureChangedEventArgs   : Inherits EventArgs
    Private originalTemp As Decimal
-   Private newTemp As Decimal 
+   Private newTemp As Decimal
    Private [when] As DateTimeOffset
 
    Public Sub New(original As Decimal, [new] As Decimal, [time] As DateTimeOffset)
       originalTemp = original
       newTemp = [new]
       [when] = [time]
-   End Sub   
+   End Sub
 
    Public ReadOnly Property OldTemperature As Decimal
       Get
          Return originalTemp
       End Get
-   End Property 
+   End Property
 
    Public ReadOnly Property CurrentTemperature As Decimal
       Get
          Return newTemp
       End Get
-   End Property 
+   End Property
 
    Public ReadOnly Property [Time] As DateTimeOffset
       Get
@@ -2332,28 +2330,28 @@ Public Class Example
 
    Friend Shared Sub TemperatureNotification(sender As Object, e As TemperatureChangedEventArgs) _
           Handles temp.TemperatureChanged
-      Console.WriteLine("Notification 1: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature)   
+      Console.WriteLine("Notification 1: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature)
    End Sub
 
    Friend Shared Sub DuplicateTemperatureNotification(sender As Object, e As TemperatureChangedEventArgs) _
           Handles temp.TemperatureChanged
-      Console.WriteLine("Notification 2: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature)   
+      Console.WriteLine("Notification 2: The temperature changed from {0} to {1}", e.OldTemperature, e.CurrentTemperature)
    End Sub
 End Class
 ```
 
 ### <a name="overloads"></a>Overloads
 
-Die Common Language Specification erzwingt die folgenden Anforderungen für überladene Member: 
+Die Common Language Specification erzwingt die folgenden Anforderungen für überladene Member:
 
-* Member können auf Grundlage der Anzahl und des Typs eines Parameters überladen werden. Aufrufkonvention, Rückgabetyp, die benutzerdefinierten Modifizierer, die auf die Methode oder deren Parameter angewendet werden und, ob Parameter nach Wert oder nach Verweis übergeben werden, werden bei der Unterscheidung zwischen Überladungen nicht beachtet. Ein Beispiel finden Sie im Abschnitt [Namenskonventionen](#naming-conventions) im Code für die Anforderung, dass Namen innerhalb eines Bereichs eindeutig sein müssen. 
+* Member können auf Grundlage der Anzahl und des Typs eines Parameters überladen werden. Aufrufkonvention, Rückgabetyp, die benutzerdefinierten Modifizierer, die auf die Methode oder deren Parameter angewendet werden und, ob Parameter nach Wert oder nach Verweis übergeben werden, werden bei der Unterscheidung zwischen Überladungen nicht beachtet. Ein Beispiel finden Sie im Abschnitt [Namenskonventionen](#naming-conventions) im Code für die Anforderung, dass Namen innerhalb eines Bereichs eindeutig sein müssen.
 
-* Nur Eigenschaften und Methoden können überladen werden. Felder und Ereignisse können nicht überladen werden. 
+* Nur Eigenschaften und Methoden können überladen werden. Felder und Ereignisse können nicht überladen werden.
 
-* Generische Methoden können auf Grundlage der Anzahl ihrer generischen Parameter überladen werden. 
+* Generische Methoden können auf Grundlage der Anzahl ihrer generischen Parameter überladen werden.
 
 > [!NOTE]
->Der `op_Explicit`-Operator und der `op_Implicit`-Operator sind Ausnahmen von der Regel, dass Rückgabewerte nicht als Teil einer Methodensignatur für Überladungsauflösung gelten. Diese beiden Operatoren können auf Grundlage ihrer Parameter und ihrer Rückgabewerte überladen werden. 
+> Der `op_Explicit`-Operator und der `op_Implicit`-Operator sind Ausnahmen von der Regel, dass Rückgabewerte nicht als Teil einer Methodensignatur für Überladungsauflösung gelten. Diese beiden Operatoren können auf Grundlage ihrer Parameter und ihrer Rückgabewerte überladen werden.
 
 ### <a name="exceptions"></a>Ausnahmen
 
@@ -2365,7 +2363,7 @@ using System;
 [assembly: CLSCompliant(true)]
 
 public class ErrorClass
-{ 
+{
    string msg;
 
    public ErrorClass(string errorMessage)
@@ -2387,7 +2385,7 @@ public static class StringUtilities
          ErrorClass badIndex = new ErrorClass("The index is not within the string.");
          throw badIndex;
       }
-      string[] retVal = { value.Substring(0, index - 1), 
+      string[] retVal = { value.Substring(0, index - 1),
                           value.Substring(index) };
       return retVal;
    }
@@ -2402,7 +2400,7 @@ Imports System.Runtime.CompilerServices
 
 <Assembly: CLSCompliant(True)>
 
-Public Class ErrorClass 
+Public Class ErrorClass
    Dim msg As String
 
    Public Sub New(errorMessage As String)
@@ -2412,7 +2410,7 @@ Public Class ErrorClass
    Public ReadOnly Property Message As String
       Get
          Return msg
-      End Get   
+      End Get
    End Property
 End Class
 
@@ -2422,19 +2420,19 @@ Public Module StringUtilities
          Dim BadIndex As New ErrorClass("The index is not within the string.")
          Throw BadIndex
       End If
-      Dim retVal() As String = { value.Substring(0, index - 1), 
+      Dim retVal() As String = { value.Substring(0, index - 1),
                                  value.Substring(index) }
       Return retVal
    End Function
 End Module
 ' Compilation produces a compiler error like the following:
 '    Exceptions1.vb(27) : error BC30665: 'Throw' operand must derive from 'System.Exception'.
-'    
+'
 '             Throw BadIndex
 '             ~~~~~~~~~~~~~~
 ```
 
-Um diesen Fehler zu beheben, muss die `ErrorClass`-Klasse von `System.Exception` erben. Außerdem muss die Message-Eigenschaft außer Kraft gesetzt werden. Im folgenden Beispiel werden diese Fehler korrigiert, um eine CLS-kompatible `ErrorClass`-Klasse zu definieren.  
+Um diesen Fehler zu beheben, muss die `ErrorClass`-Klasse von `System.Exception` erben. Außerdem muss die Message-Eigenschaft außer Kraft gesetzt werden. Im folgenden Beispiel werden diese Fehler korrigiert, um eine CLS-kompatible `ErrorClass`-Klasse zu definieren.
 
 ```csharp
 using System;
@@ -2442,7 +2440,7 @@ using System;
 [assembly: CLSCompliant(true)]
 
 public class ErrorClass : Exception
-{ 
+{
    string msg;
 
    public ErrorClass(string errorMessage)
@@ -2464,7 +2462,7 @@ public static class StringUtilities
          ErrorClass badIndex = new ErrorClass("The index is not within the string.");
          throw badIndex;
       }
-      string[] retVal = { value.Substring(0, index - 1), 
+      string[] retVal = { value.Substring(0, index - 1),
                           value.Substring(index) };
       return retVal;
    }
@@ -2486,7 +2484,7 @@ Public Class ErrorClass : Inherits Exception
    Public Overrides ReadOnly Property Message As String
       Get
          Return msg
-      End Get   
+      End Get
    End Property
 End Class
 
@@ -2496,7 +2494,7 @@ Public Module StringUtilities
          Dim BadIndex As New ErrorClass("The index is not within the string.")
          Throw BadIndex
       End If
-      Dim retVal() As String = { value.Substring(0, index - 1), 
+      Dim retVal() As String = { value.Substring(0, index - 1),
                                  value.Substring(index) }
       Return retVal
    End Function
@@ -2507,14 +2505,14 @@ End Module
 
 In .NET-Frameworkassemblys stellen benutzerdefinierte Attribute einen erweiterbaren Mechanismus zum Speichern benutzerdefinierter Attribute und das Abrufen von Metadaten über Programmierobjekte, wie Assemblys, Typen, Member und Methodenparameter, bereit. Benutzerdefinierte Attribute müssen von [System.Attribute](xref:System.Attribute) oder einem Typ abgeleitet werden, der von `System.Attribute` abgeleitet wird.
 
-Das folgende Beispiel verstößt gegen diese Regel. Es wird eine `NumericAttribute`-Klasse definiert, die nicht von `System.Attribute` abgeleitet ist. Beachten Sie, dass der Compilerfehler nur entsteht, wenn das nicht CLS-kompatible Attribut angewendet wird, nicht aber, wenn die Klasse definiert ist. 
+Das folgende Beispiel verstößt gegen diese Regel. Es wird eine `NumericAttribute`-Klasse definiert, die nicht von `System.Attribute` abgeleitet ist. Beachten Sie, dass der Compilerfehler nur entsteht, wenn das nicht CLS-kompatible Attribut angewendet wird, nicht aber, wenn die Klasse definiert ist.
 
 ```csharp
 using System;
 
 [assembly: CLSCompliant(true)]
 
-[AttributeUsageAttribute(AttributeTargets.Class | AttributeTargets.Struct)] 
+[AttributeUsageAttribute(AttributeTargets.Class | AttributeTargets.Struct)]
 public class NumericAttribute
 {
    private bool _isNumeric;
@@ -2524,7 +2522,7 @@ public class NumericAttribute
       _isNumeric = isNumeric;
    }
 
-   public bool IsNumeric 
+   public bool IsNumeric
    {
       get { return _isNumeric; }
    }
@@ -2561,9 +2559,9 @@ End Class
    Dim Value As Double
 End Structure
 ' Compilation produces a compiler error like the following:
-'    error BC31504: 'NumericAttribute' cannot be used as an attribute because it 
+'    error BC31504: 'NumericAttribute' cannot be used as an attribute because it
 '    does not inherit from 'System.Attribute'.
-'    
+'
 '    <Numeric(True)> Public Structure UDouble
 '     ~~~~~~~~~~~~~
 ```
@@ -2590,9 +2588,9 @@ Der Konstruktor oder die Eigenschaften eines CLS-kompatiblen Attributs können n
 
 * [Type](xref:System.Type)
 
-* Ein Enumerationstyp, dessen zugrunde liegender Typ `Byte`, `Int16`, `Int32` oder `Int64` ist. 
+* Ein Enumerationstyp, dessen zugrunde liegender Typ `Byte`, `Int16`, `Int32` oder `Int64` ist.
 
-Im folgenden Beispiel wird eine von [Attribute](xref:System.Attribute) abgeleitete `DescriptionAttribute`-Klasse definiert. Der Klassenkonstruktor verfügt über einen Parameter des Typs `Descriptor`, sodass die Klasse nicht CLS-kompatibel ist. Beachten Sie, dass der C#-Compiler eine Warnung ausgibt, die Kompilierung aber erfolgreich durchführt. 
+Im folgenden Beispiel wird eine von [Attribute](xref:System.Attribute) abgeleitete `DescriptionAttribute`-Klasse definiert. Der Klassenkonstruktor verfügt über einen Parameter des Typs `Descriptor`, sodass die Klasse nicht CLS-kompatibel ist. Beachten Sie, dass der C#-Compiler eine Warnung ausgibt, die Kompilierung aber erfolgreich durchführt.
 
 ```csharp
 using System;
@@ -2604,7 +2602,7 @@ public enum DescriptorType { type, member };
 public class Descriptor
 {
    public DescriptorType Type;
-   public String Description; 
+   public String Description;
 }
 
 [AttributeUsage(AttributeTargets.All)]
@@ -2614,11 +2612,11 @@ public class DescriptionAttribute : Attribute
 
    public DescriptionAttribute(Descriptor d)
    {
-      desc = d; 
+      desc = d;
    }
 
    public Descriptor Descriptor
-   { get { return desc; } } 
+   { get { return desc; } }
 }
 // Attempting to compile the example displays output like the following:
 //       warning CS3015: 'DescriptionAttribute' has no accessible
@@ -2634,8 +2632,8 @@ Public Enum DescriptorType As Integer
 End Enum
 
 Public Class Descriptor
-   Public Type As DescriptorType 
-   Public Description As String 
+   Public Type As DescriptorType
+   Public Description As String
 End Class
 
 <AttributeUsage(AttributeTargets.All)> _
@@ -2643,53 +2641,53 @@ Public Class DescriptionAttribute : Inherits Attribute
    Private desc As Descriptor
 
    Public Sub New(d As Descriptor)
-      desc = d 
+      desc = d
    End Sub
 
    Public ReadOnly Property Descriptor As Descriptor
-      Get 
+      Get
          Return desc
-      End Get    
+      End Get
    End Property
 End Class
 ```
 
 ## <a name="the-clscompliantattribute-attribute"></a>Das CLSCompliantAttribute-Attribut
 
-Das [CLSCompliantAttribute](xref:System.CLSCompliantAttribute)-Attribut wird verwendet, um anzugeben, ob ein Programmelement mit der Common Language Specification kompatibel ist. Der `CLSCompliantAttribute.CLSCompliantAttribute(Boolean)`-Konstruktor enthält einen einzelnen erforderlichen Parameter, *isCompliant*, der angibt, ob das Programmelement CLS-kompatibel ist. 
+Das [CLSCompliantAttribute](xref:System.CLSCompliantAttribute)-Attribut wird verwendet, um anzugeben, ob ein Programmelement mit der Common Language Specification kompatibel ist. Der `CLSCompliantAttribute.CLSCompliantAttribute(Boolean)`-Konstruktor enthält einen einzelnen erforderlichen Parameter, *isCompliant*, der angibt, ob das Programmelement CLS-kompatibel ist.
 
-Zur Kompilierzeit erkennt der Compiler nicht kompatible Elemente, von denen angenommen wird, dass sie CLS-kompatibel sind, und gibt eine Warnung aus. Der Compiler gibt keine Warnungen für die Typen oder Member aus, die explizit als nicht kompatibel deklariert werden. 
+Zur Kompilierzeit erkennt der Compiler nicht kompatible Elemente, von denen angenommen wird, dass sie CLS-kompatibel sind, und gibt eine Warnung aus. Der Compiler gibt keine Warnungen für die Typen oder Member aus, die explizit als nicht kompatibel deklariert werden.
 
-Komponentenentwickler können das `CLSCompliantAttribute`-Attribut auf zwei Arten verwenden: 
+Komponentenentwickler können das `CLSCompliantAttribute`-Attribut auf zwei Arten verwenden:
 
-* Um die Teile der öffentlichen Schnittstelle zu definieren, die von einer CLS-kompatiblen Komponente und den nicht CLS-kompatiblen Teilen verfügbar gemacht werden. Wenn das Attribut verwendet wird, um bestimmte Programmelemente als CLS-kompatibel zu markieren, stellt seine Verwendung sicher, dass auf diese Elemente aus allen Sprachen und Tools für das .NET Framework zugegriffen werden kann. 
+* Um die Teile der öffentlichen Schnittstelle zu definieren, die von einer CLS-kompatiblen Komponente und den nicht CLS-kompatiblen Teilen verfügbar gemacht werden. Wenn das Attribut verwendet wird, um bestimmte Programmelemente als CLS-kompatibel zu markieren, stellt seine Verwendung sicher, dass auf diese Elemente aus allen Sprachen und Tools für das .NET Framework zugegriffen werden kann.
 
 * Um sicherzustellen, dass die öffentliche Schnittstelle der Komponentenbibliothek nur Programmelemente verfügbar macht, die CLS-kompatibel sind. Wenn Elemente nicht CLS-kompatibel sind, geben Compiler im Allgemeinen eine Warnung aus.
 
 > [!WARNING]
 > In einigen Fällen erzwingen CLS-kompatible Sprachcompiler Regeln unabhängig davon, ob das `CLSCompliantAttribute`-Attribut verwendet wird. Das Definieren eines `*static`-Members in einer Schnittstelle verstößt zum Beispiel gegen eine CLS-Regel. Wenn Sie jedoch einen `*static`-Member in einer Schnittstelle definieren, zeigt der C#-Compiler eine Fehlermeldung an, und beim Kompilieren der App tritt ein Fehler auf.
 
-Das `CLSCompliantAttribute`-Attribut wird mit einem [AttributeUsageAttribute](xref:System.AttributeUsageAttribute)-Attribut markiert, das einen Wert von `AttributeTargets.All` aufweist. Dieser Wert ermöglicht das Anwenden des `CLSCompliantAttribute`-Attributs auf jedem Programmelement, einschließlich Assemblys, Modulen, Typen (Klassen, Strukturen, Enumerationen, Schnittstellen und Delegaten), Typmembern (Konstruktoren, Methoden, Eigenschaften, Feldern und Ereignissen), Parametern, generischen Parametern und Rückgabewerten. In der Praxis sollten Sie das Attribut allerdings nur auf Assemblys, Typen und Typmember anwenden. Andernfalls ignorieren Compiler das Attribut und generieren weiterhin Compilerwarnungen, wenn sie einen nicht kompatiblen Parameter, einen generischen Parameter oder einen Rückgabewert in der öffentlichen Schnittstelle der Bibliothek vorfinden.  
+Das `CLSCompliantAttribute`-Attribut wird mit einem [AttributeUsageAttribute](xref:System.AttributeUsageAttribute)-Attribut markiert, das einen Wert von `AttributeTargets.All` aufweist. Dieser Wert ermöglicht das Anwenden des `CLSCompliantAttribute`-Attributs auf jedem Programmelement, einschließlich Assemblys, Modulen, Typen (Klassen, Strukturen, Enumerationen, Schnittstellen und Delegaten), Typmembern (Konstruktoren, Methoden, Eigenschaften, Feldern und Ereignissen), Parametern, generischen Parametern und Rückgabewerten. In der Praxis sollten Sie das Attribut allerdings nur auf Assemblys, Typen und Typmember anwenden. Andernfalls ignorieren Compiler das Attribut und generieren weiterhin Compilerwarnungen, wenn sie einen nicht kompatiblen Parameter, einen generischen Parameter oder einen Rückgabewert in der öffentlichen Schnittstelle der Bibliothek vorfinden.
 
-Der Wert des `CLSCompliantAttribute`-Attributs wird von enthaltenen Programmelementen geerbt. Wenn beispielsweise eine Assembly als CLS-kompatibel markiert ist, sind die Typen auch CLS-kompatibel. Wenn ein Typ als CLS-kompatibel gekennzeichnet ist, sind seine geschachtelten Typen und Member auch CLS-kompatibel. 
+Der Wert des `CLSCompliantAttribute`-Attributs wird von enthaltenen Programmelementen geerbt. Wenn beispielsweise eine Assembly als CLS-kompatibel markiert ist, sind die Typen auch CLS-kompatibel. Wenn ein Typ als CLS-kompatibel gekennzeichnet ist, sind seine geschachtelten Typen und Member auch CLS-kompatibel.
 
-Sie können die geerbte Kompatibilität explizit überschreiben, indem Sie das `CLSCompliantAttribute`- Attribut auf ein enthaltenes Programmelement anwenden. Beispielsweise können Sie das `CLSCompliantAttribute`-Attribut mit einem *isCompliant*-Wert von `false` verwenden, um einen inkompatiblen Typ in einer kompatiblen Assembly zu definieren, und Sie können das Attribut mit einem *isCompliant*-Wert von `true` verwenden, um einen kompatiblen Typ in einer inkompatiblen Assembly zu definieren. Sie können auch nicht kompatible Member in einem kompatiblen Typ definieren. Allerdings kann ein nicht kompatibler Typ keine kompatiblen Member aufweisen, sodass Sie das Attribut nicht mit einem *isCompliant*-Wert von `true` verwenden können, um die Vererbung eines nicht kompatiblen Typs zu überschreiben. 
+Sie können die geerbte Kompatibilität explizit überschreiben, indem Sie das `CLSCompliantAttribute`- Attribut auf ein enthaltenes Programmelement anwenden. Beispielsweise können Sie das `CLSCompliantAttribute`-Attribut mit einem *isCompliant*-Wert von `false` verwenden, um einen inkompatiblen Typ in einer kompatiblen Assembly zu definieren, und Sie können das Attribut mit einem *isCompliant*-Wert von `true` verwenden, um einen kompatiblen Typ in einer inkompatiblen Assembly zu definieren. Sie können auch nicht kompatible Member in einem kompatiblen Typ definieren. Allerdings kann ein nicht kompatibler Typ keine kompatiblen Member aufweisen, sodass Sie das Attribut nicht mit einem *isCompliant*-Wert von `true` verwenden können, um die Vererbung eines nicht kompatiblen Typs zu überschreiben.
 
-Wenn Sie Komponenten entwickeln, sollten Sie stets das `CLSCompliantAttribute`- Attribut verwenden, um anzugeben, ob die Assembly, die Typen und die Member CLS-kompatibel sind. 
+Wenn Sie Komponenten entwickeln, sollten Sie stets das `CLSCompliantAttribute`- Attribut verwenden, um anzugeben, ob die Assembly, die Typen und die Member CLS-kompatibel sind.
 
-So erstellen Sie CLS-kompatible Komponenten: 
+So erstellen Sie CLS-kompatible Komponenten:
 
 1. Verwenden Sie `CLSCompliantAttribute`, um die Assembly als CLS-kompatibel zu markieren.
 
-2. Markieren Sie jeden öffentlich verfügbar gemachten, nicht CLS-kompatiblen Typ in der Assembly als nicht kompatibel. 
+2. Markieren Sie jeden öffentlich verfügbar gemachten, nicht CLS-kompatiblen Typ in der Assembly als nicht kompatibel.
 
-3. Markieren Sie alle öffentlich verfügbar gemachten Member in CLS-kompatiblen Typen als nicht kompatibel. 
+3. Markieren Sie alle öffentlich verfügbar gemachten Member in CLS-kompatiblen Typen als nicht kompatibel.
 
-4. Stellen Sie eine CLS-kompatible Alternative für nicht CLS-kompatible Member bereit. 
+4. Stellen Sie eine CLS-kompatible Alternative für nicht CLS-kompatible Member bereit.
 
-Wenn alle inkompatiblen Typen und Member erfolgreich markiert wurden, sollte der Compiler keine Kompatibilitätswarnungen ausgeben. Allerdings sollten Sie angeben, welche Member nicht CLS-kompatibel sind und ihre CLS-kompatiblen Alternativen in der Produktdokumentation aufführen. 
+Wenn alle inkompatiblen Typen und Member erfolgreich markiert wurden, sollte der Compiler keine Kompatibilitätswarnungen ausgeben. Allerdings sollten Sie angeben, welche Member nicht CLS-kompatibel sind und ihre CLS-kompatiblen Alternativen in der Produktdokumentation aufführen.
 
-Im folgenden Beispiel wird das `CLSCompliantAttribute`-Attribut verwendet, um eine CLS-kompatible Assembly und einen Typ, `CharacterUtilities`, zu definieren, der über zwei nicht CLS-kompatible Member verfügt. Da beide Member mit dem `CLSCompliant(false)`-Attribut markiert sind, generiert der Compiler keine Warnungen. Die Klasse stellt auch eine CLS-kompatible Alternative für beide Methoden bereit. Normalerweise würden der `ToUTF16`- Methode lediglich zwei Überladungen hinzugefügt werden, um CLS-kompatible Alternativen bereitzustellen. Da Methoden aber nicht aufgrund des Rückgabewerts überladen werden können, sind die Namen der CLS-kompatiblen Methoden von den Namen der nicht kompatiblen Methoden unterschiedlich.  
+Im folgenden Beispiel wird das `CLSCompliantAttribute`-Attribut verwendet, um eine CLS-kompatible Assembly und einen Typ, `CharacterUtilities`, zu definieren, der über zwei nicht CLS-kompatible Member verfügt. Da beide Member mit dem `CLSCompliant(false)`-Attribut markiert sind, generiert der Compiler keine Warnungen. Die Klasse stellt auch eine CLS-kompatible Alternative für beide Methoden bereit. Normalerweise würden der `ToUTF16`- Methode lediglich zwei Überladungen hinzugefügt werden, um CLS-kompatible Alternativen bereitzustellen. Da Methoden aber nicht aufgrund des Rückgabewerts überladen werden können, sind die Namen der CLS-kompatiblen Methoden von den Namen der nicht kompatiblen Methoden unterschiedlich.
 
 ```csharp
 using System;
@@ -2707,7 +2705,7 @@ public class CharacterUtilities
 
    [CLSCompliant(false)] public static ushort ToUTF16(Char ch)
    {
-      return Convert.ToUInt16(ch); 
+      return Convert.ToUInt16(ch);
    }
 
    // CLS-compliant alternative for ToUTF16(String).
@@ -2726,7 +2724,7 @@ public class CharacterUtilities
    public bool HasMultipleRepresentations(String s)
    {
       String s1 = s.Normalize(NormalizationForm.FormC);
-      return s.Equals(s1);   
+      return s.Equals(s1);
    }
 
    public int GetUnicodeCodePoint(Char ch)
@@ -2734,7 +2732,7 @@ public class CharacterUtilities
       if (Char.IsSurrogate(ch))
          throw new ArgumentException("ch cannot be a high or low surrogate.");
 
-      return Char.ConvertToUtf32(ch.ToString(), 0);   
+      return Char.ConvertToUtf32(ch.ToString(), 0);
    }
 
    public int GetUnicodeCodePoint(Char[] chars)
@@ -2750,7 +2748,7 @@ public class CharacterUtilities
       }
       else {
          return Char.ConvertToUtf32(chars.ToString(), 0);
-      } 
+      }
    }
 }
 ```
@@ -2767,7 +2765,7 @@ Public Class CharacterUtilities
    End Function
 
    <CLSCompliant(False)> Public Shared Function ToUTF16(ch As Char) As UShort
-      Return Convert.ToUInt16(ch) 
+      Return Convert.ToUInt16(ch)
    End Function
 
    ' CLS-compliant alternative for ToUTF16(String).
@@ -2783,14 +2781,14 @@ Public Class CharacterUtilities
 
    Public Function HasMultipleRepresentations(s As String) As Boolean
       Dim s1 As String = s.Normalize(NormalizationForm.FormC)
-      Return s.Equals(s1)   
+      Return s.Equals(s1)
    End Function
 
    Public Function GetUnicodeCodePoint(ch As Char) As Integer
       If Char.IsSurrogate(ch) Then
          Throw New ArgumentException("ch cannot be a high or low surrogate.")
       End If
-      Return Char.ConvertToUtf32(ch.ToString(), 0)   
+      Return Char.ConvertToUtf32(ch.ToString(), 0)
    End Function
 
    Public Function GetUnicodeCodePoint(chars() As Char) As Integer
@@ -2805,16 +2803,16 @@ Public Class CharacterUtilities
          End If
       Else
          Return Char.ConvertToUtf32(chars.ToString(), 0)
-      End If 
-   End Function            
+      End If
+   End Function
 End Class
 ```
 
-Wenn Sie eine App anstelle einer Bibliothek entwickeln, (das heißt, wenn Sie keine Typen oder Member verfügbar machen, die von anderen App-Entwicklern genutzt werden können), ist die CLS-Kompatibilität der Programmelemente, die von der App genutzt werden, nur relevant, wenn sie von Ihrer Sprache nicht unterstützt werden. In diesem Fall generiert der Sprachcompiler einen Fehler, wenn Sie versuchen, ein nicht CLS-kompatibles Element zu verwenden. 
+Wenn Sie eine App anstelle einer Bibliothek entwickeln, (das heißt, wenn Sie keine Typen oder Member verfügbar machen, die von anderen App-Entwicklern genutzt werden können), ist die CLS-Kompatibilität der Programmelemente, die von der App genutzt werden, nur relevant, wenn sie von Ihrer Sprache nicht unterstützt werden. In diesem Fall generiert der Sprachcompiler einen Fehler, wenn Sie versuchen, ein nicht CLS-kompatibles Element zu verwenden.
 
 ## <a name="cross-language-interoperability"></a>Sprachübergreifende Interoperabilität
 
-Der Begriff „Sprachunabhängigkeit“ kann mehrere Bedeutungen haben. Eine Bedeutung umfasst die nahtlose Nutzung von Typen, die in einer Sprache geschrieben werden, in einer App, die in einer anderen Sprache geschrieben wurde. Eine zweite Bedeutung, die in diesem Artikels hervorgehoben wird, umfasst die Kombination von Code aus mehreren Sprachen in einer einzelnen .NET Framework-Assembly. 
+Der Begriff „Sprachunabhängigkeit“ kann mehrere Bedeutungen haben. Eine Bedeutung umfasst die nahtlose Nutzung von Typen, die in einer Sprache geschrieben werden, in einer App, die in einer anderen Sprache geschrieben wurde. Eine zweite Bedeutung, die in diesem Artikels hervorgehoben wird, umfasst die Kombination von Code aus mehreren Sprachen in einer einzelnen .NET Framework-Assembly.
 
 Das folgende Beispiel veranschaulicht die sprachübergreifende Interoperabilität. Es wird die Klassenbibliothek Utilities.dll erstellt, die zwei Klassen einschließt: `NumericLib` und `StringLib`. Die `NumericLib`-Klasse wurde in C# und die `StringLib`-Klasse in Visual Basic geschrieben. Im Folgenden sehen Sie den Quellcode für `StringUtil.vb`, der in der `StringLib`-Klasse einen einzelnen Member `ToTitleCase` enthält.
 
@@ -2823,7 +2821,7 @@ Imports System.Collections.Generic
 Imports System.Runtime.CompilerServices
 
 Public Module StringLib
-   Private exclusions As List(Of String) 
+   Private exclusions As List(Of String)
 
    Sub New()
       Dim words() As String = { "a", "an", "and", "of", "the" }
@@ -2833,7 +2831,7 @@ Public Module StringLib
 
    <Extension()> _
    Public Function ToTitleCase(title As String) As String
-      Dim words() As String = title.Split() 
+      Dim words() As String = title.Split()
       Dim result As String = String.Empty
 
       For ctr As Integer = 0 To words.Length - 1
@@ -2845,10 +2843,10 @@ Public Module StringLib
             result += word.ToLower()
          End If
          If ctr <= words.Length - 1 Then
-            result += " "             
-         End If   
-      Next 
-      Return result 
+            result += " "
+         End If
+      Next
+      Return result
    End Function
 End Module
 ```
@@ -2858,15 +2856,15 @@ Im Folgenden sehen Sie den Quellcode für "NumberUtil.cs", der eine `NumericLib`
 ```csharp
 using System;
 
-public static class NumericLib 
+public static class NumericLib
 {
    public static bool IsEven(this IConvertible number)
    {
       if (number is Byte ||
           number is SByte ||
           number is Int16 ||
-          number is UInt16 || 
-          number is Int32 || 
+          number is UInt16 ||
+          number is Int32 ||
           number is UInt32 ||
           number is Int64)
          return ((long) number) % 2 == 0;
@@ -2878,26 +2876,26 @@ public static class NumericLib
 
    public static bool NearZero(double number)
    {
-      return number < .00001; 
+      return number < .00001;
    }
 }
 ```
 
-Um die beiden Klassen in einer einzelnen Assembly zu verpacken, müssen Sie sie in Module kompilieren. Verwenden Sie zum Kompilieren der Visual Basic-Quellcodedatei in einem Modul folgenden Befehl: 
+Um die beiden Klassen in einer einzelnen Assembly zu verpacken, müssen Sie sie in Module kompilieren. Verwenden Sie zum Kompilieren der Visual Basic-Quellcodedatei in einem Modul folgenden Befehl:
 
-```
-vbc /t:module StringUtil.vb 
+```console
+vbc /t:module StringUtil.vb
 ```
 
 Verwenden Sie zum Kompilieren der C#-Quellcodedatei in einem Modul folgenden Befehl:
 
-```
+```console
 csc /t:module NumberUtil.cs
 ```
 
-Verwenden Sie dann das Linktool (Link.exe), um die beiden Module in eine Assembly zu kompilieren: 
+Verwenden Sie dann das Linktool (Link.exe), um die beiden Module in eine Assembly zu kompilieren:
 
-```
+```console
 link numberutil.netmodule stringutil.netmodule /out:UtilityLib.dll /dll
 ```
 
@@ -2939,13 +2937,12 @@ End Module
 
 Verwenden Sie zum Kompilieren des Visual Basic-Codes folgenden Befehl:
 
-```
+```console
 vbc example.vb /r:UtilityLib.dll
 ```
 
 Zum Kompilieren mit C# ändern Sie den Namen des Compilers von vbc in csc und die Dateierweiterung von „.vb“ in „.cs“:
 
-```
+```console
 csc example.cs /r:UtilityLib.dll
 ```
-

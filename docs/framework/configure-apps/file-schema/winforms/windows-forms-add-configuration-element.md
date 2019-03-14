@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 107de172e523758474bafb3b86a2960b926a010a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371371"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788478"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms hinzufügen Konfigurationselement
 
@@ -41,14 +41,14 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 | `key` Name | Werte | Beschreibung |
 | ---------- | ------ | ----------- |
-| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Gibt an, ob der verankerten Steuerelemente in einem einzelnen Durchlauf skaliert werden. "true", um einzelne deaktivieren übergeben Skalierung; andernfalls "false". Finden Sie im Abschnitt "Einzelne pass Skalierung" in der ["Hinweise"](#Remarks) für Weitere Informationen. |
+| "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | Gibt an, ob der verankerten Steuerelemente in einem einzelnen Durchlauf skaliert werden. "true", um einzelne deaktivieren übergeben Skalierung; andernfalls "false". Finden Sie im Abschnitt "Einzelne pass Skalierung" in der ["Hinweise"](#remarks) für Weitere Informationen. |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | Gibt an, ob eine Anwendung DPI kompatibel ist. Legen Sie den Schlüssel auf "PerMonitorV2" zur Unterstützung der Dpi-Unterstützung; Legen Sie sie andernfalls auf "False". DPI-Unterstützung ist ein optionales Feature. um Windows Forms-Unterstützung für hohe DPI-Werte nutzen zu können, sollten Sie seinen Wert in "PerMonitorV2" festlegen. Finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen. |
 | "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | Gibt an, ob die <xref:System.Windows.Forms.CheckedListBox> Control nutzt die Vorteile der skalieren und layouthinweise Verbesserungen in .NET Framework 4.7 eingeführt wurden. "true" zum Deaktivieren der Verbesserungen bei der Caling und Layout; andernfalls "False". |
 | "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | Gibt an, ob die <xref:System.Windows.Forms.DataGridView> steuern, skalieren und layouthinweise Verbesserungen in .NET Framework 4.7 eingeführt wurden. "true" zum Deaktivieren der DPI-Unterstützung; "false" andernfalls. |
 | "DisableDpiChangedMessageHandling" | "true"&#124;"false" | "true" zum Empfang von Nachrichten, die im Zusammenhang mit der DPI-Skalierung Änderungen; "false" andernfalls. Finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen. |
 | "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Gibt an, ob es sich bei eine Windows Forms-Anwendung aufgrund von Änderungen der DPI-Skalierung automatisch angepasst wird. "true" aktiviert automatische Größenänderung. andernfalls "false". |
-| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | Gibt an, ob die <xref:System.Windows.Forms.Form> in einem einzelnen Durchlauf skaliert wird. So deaktivieren Sie "true" Single-Pass Skalierung; andernfalls "false". Finden Sie im Abschnitt "Einzelne pass Skalierung" in der ["Hinweise"](#Remarks) für Weitere Informationen. |
-| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | Gibt an, ob die <xref:System.Windows.Forms.MonthCalendar> Steuerelement in einem einzelnen Durchlauf skaliert wird. So deaktivieren Sie "true" Single-Pass Skalierung; andernfalls "false". Finden Sie im Abschnitt "Einzelne pass Skalierung" in der ["Hinweise"](#Remarks) für Weitere Informationen. |
+| "Form.DisableSinglePassControlScaling" | "true"&#124;"false" | Gibt an, ob die <xref:System.Windows.Forms.Form> in einem einzelnen Durchlauf skaliert wird. So deaktivieren Sie "true" Single-Pass Skalierung; andernfalls "false". Finden Sie im Abschnitt "Einzelne pass Skalierung" in der ["Hinweise"](#remarks) für Weitere Informationen. |
+| "MonthCalendar.DisableSinglePassControlScaling" | "true"&#124;"false" | Gibt an, ob die <xref:System.Windows.Forms.MonthCalendar> Steuerelement in einem einzelnen Durchlauf skaliert wird. So deaktivieren Sie "true" Single-Pass Skalierung; andernfalls "false". Finden Sie im Abschnitt "Einzelne pass Skalierung" in der ["Hinweise"](#remarks) für Weitere Informationen. |
 | "Toolstrip.DisableHighDpiImprovements" | "true"&#124;"false" | Gibt an, ob die <xref:System.Windows.Forms.ToolStrip> Control nutzt die Vorteile der skalieren und layouthinweise Verbesserungen in .NET Framework 4.7 eingeführt wurden. "true" zum Deaktivieren der DPI-Unterstützung; "false" andernfalls. |
 
 ### <a name="child-elements"></a>Untergeordnete Elemente
@@ -61,7 +61,7 @@ Keine
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | Konfiguriert die Unterstützung für neue Features von Windows Forms-Anwendung. |
 
-## <a name="a-nameremarks--remarks"></a><a name="remarks" /> "Hinweise"
+## <a name="remarks"></a>Hinweise
 
 Ab .NET Framework 4.7 ermöglicht das `<System.Windows.Forms.ApplicationConfigurationSection>`-Element die Konfiguration von Windows Forms-Anwendungen für die Nutzung von Funktionen, die in neueren Versionen von .NET Framework hinzugefügt werden.
 
@@ -96,6 +96,7 @@ Die einzelnen teilnehmen Standardeinstellung durch Festlegen von bereitgestellte
    <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
 </System.Windows.Forms.ApplicationConfigurationSection>
 ```
+
 In der Regel, deaktivieren Sie eine bestimmte Funktion, da Sie ausgewählt haben, um programmgesteuert zu verarbeiten.
 
 Weitere Informationen zu profitieren, hohe DPI-Unterstützung in Windows Forms-Anwendungen, finden Sie unter [hohe DPI-Unterstützung in Windows Forms](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md).

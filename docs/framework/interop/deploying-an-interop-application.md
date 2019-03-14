@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c265b583b74ac9d7df128e3343bbc368e3cf9c4e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: d0efe9234bd61a45fa87e68cdbed1be69957d218
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220810"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675159"
 ---
 # <a name="deploying-an-interop-application"></a>Bereitstellen einer Interop-Anwendung
 Eine Interop-Anwendung enthält üblicherweise eine .NET-Clientassembly, eine oder mehr Interopassemblys, die unterschiedliche COM-Typbibliotheken darstellen, sowie eine oder mehrere COM-Komponenten. Visual Studio und das [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] stellen Tools zum Importieren und Konvertieren einer Typbibliothek in eine Interopassembly bereit, wie in [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](importing-a-type-library-as-an-assembly.md) beschrieben. Es gibt zwei Möglichkeiten zum Bereitstellen einer Interop-Anwendung:  
@@ -38,8 +38,7 @@ Eine Interop-Anwendung enthält üblicherweise eine .NET-Clientassembly, eine od
 ### <a name="private-assemblies"></a>Private Assemblys  
  Zum Installieren einer Assembly zur privaten Nutzung, müssen die ausführbare Anwendungsdatei und die Interopassembly, die importierte COM-Typen enthält, in der gleichen Verzeichnisstruktur installiert sein. Die folgende Abbildung zeigt eine unsignierte Interopassembly zur privaten Nutzung durch Client1.exe und Client2.exe, die sich in separaten Verzeichnissen befinden. Die Interopassembly, die in diesem Beispiel LOANLib.dll genannt wird, wird zweimal installiert.  
   
- ![Directory structure and Windows registry (Verzeichnisstruktur und Windows-Registrierung)](media/comdeployprivate.gif "comdeployprivate")  
-Verzeichnisstruktur- und Registrierungseinträge für eine private Bereitstellung  
+ ![Verzeichnisstruktur und Windows-Registrierung](./media/deploying-an-interop-application/com-private-deployment.gif "Verzeichnisstruktur- und Registrierungseinträge für eine private Bereitstellung")  
   
  Alle COM-Komponenten, die der Anwendung zugeordnet sind, müssen in der Windows-Registrierung installiert sein. Wenn Client1.exe und Client2.exe in der Abbildung auf verschiedenen Computern installiert sind, müssen Sie die COM-Komponenten auf beiden Computern registrieren.  
   

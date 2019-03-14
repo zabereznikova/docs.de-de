@@ -1,16 +1,21 @@
 ---
 title: Einzelvorhersage mit PredictionEngine – ML.NET
 description: Lernen Sie, wie Sie mit ML.NET-PredictionEngine Einzelvorhersagen treffen.
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 328067816be37c9490ae71974e3f6da4ae079f25
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 68837888c53409b4249bbece481888fb4167a5ca
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092032"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673807"
 ---
 # <a name="use-the-predictionengine-to-make-one-prediction-at-a-time---mlnet"></a>Einzelvorhersage mit PredictionEngine – ML.NET 
+
+> [!NOTE]
+> Dieses Thema bezieht sich auf ML.NET, was derzeit als Vorschau verfügbar ist, und das Material kann jederzeit geändert werden. Weitere Informationen finden Sie in [der ML.NET-Einführung](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Diese Anleitung und das dazugehörte Beispiel verwenden derzeit **ML.NET Version 0.10**. Weitere Informationen finden Sie in den Anmerkungen zur Version im [Dotnet/Machinelearning-GitHub-Repository](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 Da jedes ML.NET-Modell ein Transformator ist, verwenden Sie `model.Transform`, um das Modell auf `DataView` anzuwenden und Vorhersagen zu treffen. 
 

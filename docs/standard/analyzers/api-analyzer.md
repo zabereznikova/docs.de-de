@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759131"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680268"
 ---
 # <a name="net-api-analyzer"></a>.NET API-Analysetool
 
@@ -44,7 +44,7 @@ Wenn eine veraltete API, z.B. <xref:System.Net.WebClient>, in einem Code verwend
 
 Das Fenster **Fehlerliste** enthält Warnungen mit einer eindeutigen ID pro veralteter API, wie in folgendem Beispiel (`DE004`) gezeigt: 
 
-![„Screenshot des Fensters mit der Fehlerliste, welche die ID und Beschreibung der Warnungen zeigt“](media/api-analyzer/warnings.jpg)
+![„Screenshot des Fensters mit der Fehlerliste, welche die ID und Beschreibung der Warnungen zeigt“](media/api-analyzer/warnings-id-and-descriptions.jpg "Fehlerliste mit Warnungen")
 
 Wenn Sie auf die ID klicken, gelangen Sie auf eine Webseite mit detaillierten Informationen darüber, warum die API veraltet ist, und mit Vorschlägen zu alternativen APIs, die verwendet werden können.
 
@@ -112,5 +112,5 @@ Der Benutzer entscheidet, wie die Diagnose behandelt werden soll: als Warnungen,
 
 ## <a name="see-also"></a>Siehe auch
 
-- Blogbeitrag [Introducing API Analyzer](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) (Einführung in das API-Analysetool).
+- Blogbeitrag [Introducing API Analyzer](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) (Einführung in das API-Analysetool).
 - Demovideo [API Analyzer](https://youtu.be/eeBEahYXGd0) (API-Analysetool) auf YouTube

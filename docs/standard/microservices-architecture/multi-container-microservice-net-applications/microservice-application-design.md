@@ -4,12 +4,12 @@ description: .NET-Microservicearchitekturfür .NET-Containeranwendungen | Übers
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 124bd402af7b721366af67b362747dfd71907f34
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 777262ddeecf1e171344b34e586032e56f398463
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981880"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674392"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Entwerfen einer an Microservice orientierten Anwendung
 
@@ -91,7 +91,7 @@ Daher handelt es sich bei den Bereitstellungseinheiten für Microservices (und b
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-- **GitHub-Repository „eShopOnContainers“. Quellcode für die Referenzanwendung**  
+- **GitHub-Repository „eShopOnContainers“. Quellcode für die Referenzanwendung**\
     [https://aka.ms/eShopOnContainers/](https://aka.ms/eShopOnContainers/)
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Vorteile eines auf Microservices basierenden Ansatzes
@@ -142,7 +142,7 @@ Wie bereits im Abschnitt zur Architektur erwähnt, sollten Sie beim Entwerfen un
 
 Bei der externen Architektur handelt es sich um die Microservicearchitektur, die sich aus mehreren Diensten zusammensetzt und den im Abschnitt zur Architektur in diesem Handbuch beschriebenen Prinzipien folgt. Jedoch ist es, abhängig von der Art jedes Microservices und unabhängig von der allgemeinen Microservicearchitektur, für die Sie sich entscheiden, üblich und manchmal ratsam, über verschiedene interne Architekturen für verschiedene Microservices zu verfügen, von denen jede auf unterschiedlichen Mustern basiert. Die Microservices können sogar verschiedene Technologien und Programmiersprachen verwenden. Abbildung 6-2 veranschaulicht diese Vielfalt.
 
-![Unterschied zwischen externer Architektur mit Microservicemustern, API-Gateways, resilienter Kommunikation, Pub/Sub usw. und interner Architektur mit den Eigenschaften datengesteuert/CRUD, DDD-Muster, Abhängigkeitsinjektion, mehrere Bibliotheken usw.](./media/image2.png)
+![Unterschied zwischen externer Architektur mit Microservicemustern, API-Gateways, resilienter Kommunikation, Pub/Sub usw. und interner Architektur: datengesteuert/CRUD, DDD-Muster, Abhängigkeitsinjektion, mehrere Bibliotheken usw.](./media/image2.png)
 
 **Abbildung 6-2**. Externe im Vergleich zu interner Architektur und Entwurf
 
@@ -150,7 +150,7 @@ Beispielsweise sind in dem Beispiel *eShopOnContainers* die Katalog-, Warenkorb-
 
 Ein weiterer Grund für eine unterschiedliche Methode je Microservice könnte die Art jedes Microservices darstellen. Beispielsweise ist es möglicherweise besser, eine funktionale Programmiersprache wie F\# oder sogar eine Sprache wie R zu verwenden, wenn Sie für Domänen für KI und maschinelles Lernen entwickeln, anstelle einer objektorientierten Programmiersprache wie C\#.
 
-Das Fazit ist, dass jeder Microservice über eine andere interne Architektur verfügen kann, die auf unterschiedlichen Entwurfsmustern basiert. Nicht alle Microservices sollten mithilfe von komplexen DDD-Mustern implementiert werden, da sie dadurch unnötig kompliziert gemacht würden. Dementsprechend sollten komplexe Microservices mit sich stets ändernder Geschäftslogik nicht als CRUD-Komponenten implementiert werden, da dies zu Code von geringer Qualität führen könnte. 
+Das Fazit ist, dass jeder Microservice über eine andere interne Architektur verfügen kann, die auf unterschiedlichen Entwurfsmustern basiert. Nicht alle Microservices sollten mithilfe von komplexen DDD-Mustern implementiert werden, da sie dadurch unnötig kompliziert gemacht würden. Dementsprechend sollten komplexe Microservices mit sich stets ändernder Geschäftslogik nicht als CRUD-Komponenten implementiert werden, da dies zu Code von geringer Qualität führen könnte.
 
 ## <a name="the-new-world-multiple-architectural-patterns-and-polyglot-microservices"></a>Der neue Ansatz: mehrere Architekturmuster und mehrsprachige Microservices
 

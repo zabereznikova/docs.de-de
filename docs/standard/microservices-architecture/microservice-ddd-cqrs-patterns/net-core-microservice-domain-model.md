@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 884a558827e0e016e27315cee1ea9ed3e0d03dc4
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ec56a02e27f4218b3abc5839d1265815e188d2ea
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065907"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363019"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementieren eines Microservicedomänenmodells mit .NET Core 
 
@@ -171,11 +171,11 @@ Beispielsweise enthält das nachfolgende OrderAggregate-Codebeispiel mehrere pri
 - **Vaughn Vernon. Modeling Aggregates with DDD and Entity Framework (Modellieren von Aggregaten mit dem domänengesteuerten Design und Entity Framework).** Hinweis: Dieser Artikel gilt *nicht* für Entity Framework Core. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. Codierung für Domain-Driven Design: Tipps für Entwickler mit Datenschwerpunkt** \
-  [*https://msdn.microsoft.com/magazine/dn342868.aspx*](https://msdn.microsoft.com/magazine/dn342868.aspx)
+- **Julie Lerman. Datenpunkte – Codierung für Domain-Driven Design: Tipps für Entwickler mit Datenschwerpunkt** \
+  <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
 - **Udi Dahan. How to create fully encapsulated Domain Models (Erstellen eines vollständig gekapselten Domänenmodells)** \
-  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 >[!div class="step-by-step"]
 >[Zurück](microservice-domain-model.md)

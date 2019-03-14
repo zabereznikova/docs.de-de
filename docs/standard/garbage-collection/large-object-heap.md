@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: ff25d2cef52a8c690f895222d69591bc53b3765e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066427"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677171"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Der große Objektheap auf Windows-Systemen
 
@@ -47,12 +47,12 @@ Wenn eine Garbage Collection ausgelöst wird, geht der Garbage Collector alle ak
 
 Abbildung 1 zeigt ein Szenario, bei dem Generation 1 nach der ersten Garbage Collection für Generation 0 gebildet wird, bei der `Obj1` und `Obj3` inaktiv sind. Generation 2 wird nach der ersten Garbage Collection für Generation 1 gebildet, bei der `Obj2` und `Obj5` inaktiv sind. Beachten Sie, dass diese und die folgenden Abbildungen nur zur Veranschaulichung dienen. Sie enthalten nur wenige Objekte, um besser darzustellen, was auf dem Heap geschieht. In der Praxis sind an einer Garbage Collection in der Regel wesentlich mehr Objekte beteiligt.
 
-![Abbildung 1: Garbage Collection für Generation 0 und 1](media/loh/loh-figure-1.jpg)  
+![Abbildung 1: Garbage Collection für Generation 0 und 1](media/loh/loh-figure-1.jpg)\
 Abbildung 1: Garbage Collection für Generation 0 und 1.
 
 Abbildung 2 veranschaulicht, dass nach einer Garbage Collection für Generation 2, bei der `Obj1` und `Obj2` inaktiv sind, bildet die Garbage Collection freien Arbeitsspeicher, der von `Obj1` und `Obj2` belegt werden kann. Diese werden dann verwendet, um eine Zuordnungsanforderung für `Obj4` zu erfüllen. Der Speicherplatz nach dem letzten Objekt (`Obj3`) bis zum Ende des Segments kann ebenfalls zur Erfüllung von Zuordnungsanforderungen verwendet werden.
 
-![Abbildung 2: Nach einer Garbage Collection für Generation 2](media/loh/loh-figure-2.jpg)  
+![Abbildung 2: Nach einer Garbage Collection für Generation 2](media/loh/loh-figure-2.jpg)\
 Abbildung 2: Nach einer Garbage Collection für Generation 2
 
 Wenn nicht genügend Speicherplatz zur Erfüllung der Zuordnungsanforderungen für große Objekte verfügbar ist, versucht die Garbage Collection zunächst, weitere Segmente vom Betriebssystem anzufordern. Wenn dies fehlschlägt, wird eine Garbage Collection für Generation 2 ausgelöst, um Speicherplatz freizugeben.
@@ -61,7 +61,7 @@ Bei einer Garbage Collection für Generation 1 oder 2 gibt der Garbage Collector
 
 Da der große Objektheap nur während Garbage Collections für Generation 2 bereinigt wird, kann ein Segment des großen Objektheaps nur während einer solchen Garbage Collection freigegeben werden. In Abbildung 3 wird ein Szenario veranschaulicht, indem der Garbage Collector ein Segment (Segment 2) für das Betriebssystem freigibt und mehr Speicherplatz für die verbleibenden Segmente aufhebt. Wenn der aufgehobene Speicherplatz am Ende des Segments verwendet werden muss, um Zuordnungsanforderungen für große Objekte zu erfüllen, wird der Arbeitsspeicher wieder committet. (Eine Erläuterung zum Übernehmen und Aufheben finden Sie in der Dokumentation für [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc).)
 
-![Abbildung 3: Großer Objektheap nach einer Garbage Collection für Generation 2](media/loh/loh-figure-3.jpg)  
+![Abbildung 3: Großer Objektheap nach einer Garbage Collection für Generation 2](media/loh/loh-figure-3.jpg)\
 Abbildung 3: Der große Objektheap nach einer Garbage Collection für Generation 2
 
 ## <a name="when-is-a-large-object-collected"></a>Wann wird ein großes Objekt bereinigt?
@@ -156,7 +156,7 @@ Diese Speicherleistungsindikatoren sind in der Regel ein guter erster Schritt be
 
 Eine allgemeine Möglichkeit zum Anzeigen von Leistungsindikatoren ist die Verwendung des Systemmonitors (perfmon.exe). Fügen Sie den entsprechenden Indikator für Prozesse, die für Sie wichtig sind, mithilfe von „Leistungsindikatoren hinzufügen“ hinzu. Sie können die Leistungsindikatordaten im Systemmonitor wie in Abbildung 4 dargestellt in einer Protokolldatei speichern.
 
-![Abbildung 4: Hinzufügen von Leistungsindikatoren.](media/loh/perfcounter.png)  
+![Abbildung 4: Hinzufügen von Leistungsindikatoren.](media/loh/perfcounter.png)\
 Abbildung 4: Der große Objektheap nach einer Garbage Collection für Generation 2
 
 Leistungsindikatoren können auch programmgesteuert abgefragt werden. Viele Benutzer sammeln die Leistungsdaten auf diese Weise im Rahmen ihrer alltäglichen Testprozesse. Wenn Indikatoren mit ungewöhnlichen Werten angezeigt werden, können dann mithilfe anderer Methoden detailliertere Daten abgerufen werden, um die Untersuchung zu erleichtern.
@@ -184,8 +184,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 Das Ergebnis ähnelt Folgendem:
 
-![Abbildung 5: Überprüfen von ETW-Ereignissen mithilfe von PerfView](media/loh/perfview.png)  
-Abbildung 5: Mithilfe von PerfView angezeigte ETW-Ereignisse
+![Abbildung 5: Überprüfen von ETW-Ereignissen mithilfe von PerfView](media/loh/perfview.png) Abbildung 5: Mithilfe von PerfView angezeigte ETW-Ereignisse
 
 Sie werden feststellen, dass alle Garbage Collections für Generation 2 durchgeführt und von AllocLarge ausgelöst wurden. Das bedeutet, dass die Zuordnung eines großen Objekts diese Garbage Collection ausgelöst hat. Es ist bekannt, dass es sich um temporäre Zuordnungen handelt, da die Spalte **LOH Survival Rate** (Beibehaltungsrate des großen Objektheaps) „1 %“ anzeigt.
 
@@ -197,7 +196,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 Dadurch wird ein AllocationTick-Ereignis erfasst, das etwa alle 100.000 Zuordnungen ausgelöst wird. Das bedeutet, dass immer dann ein Ereignis ausgelöst wird, wenn ein großes Objekt zugeordnet wird. Sie können dann eine der Ansichten für die Heapzuordnung der Garbage Collection betrachten, in denen die Aufruflisten angezeigt werden, die große Objekte zugeordnet haben:
 
-![Abbildung 6: Ansicht der Heapzuordnung einer Garbage Collection](media/loh/perfview2.png)  
+![Abbildung 6: Ansicht der Heapzuordnung einer Garbage Collection](media/loh/perfview2.png)\
 Abbildung 6: Ansicht der Heapzuordnung einer Garbage Collection
 
 Wie Sie sehen können, handelt es sich hierbei um einen einfachen Test, der nur große Objekte aus seiner `Main`-Methode zuordnet.

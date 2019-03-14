@@ -1,16 +1,21 @@
 ---
 title: 'Trainieren eines Machine Learning-Modells mit Kreuzvalidierung: ML.NET'
 description: Erfahren Sie wie ein Machine Learning-Modell mithilfe von Kreuzvalidierung mit ML.NET trainiert werden kann, um die Vorhersagegenauigkeit des Modells zu erhöhen.
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8d74b69340895bcfe3cdc3d3a6121d7331a0a5e2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092279"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676537"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a>Trainieren eines Machine Learning-Modells mit Kreuzvalidierung: ML.NET
+
+> [!NOTE]
+> Dieses Thema bezieht sich auf ML.NET, was derzeit als Vorschau verfügbar ist, und das Material kann jederzeit geändert werden. Weitere Informationen finden Sie in [der ML.NET-Einführung](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
+
+Diese Anleitung und das dazugehörte Beispiel verwenden derzeit **ML.NET Version 0.10**. Weitere Informationen finden Sie in den Anmerkungen zur Version im [Dotnet/Machinelearning-GitHub-Repository](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).
 
 [Kreuzvalidierung](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) ist eine nützliche Technik für ML-Anwendungen. Sie hilft, die Varianz der Modellqualität von einer Ausführung zur nächsten zu schätzen, und sie macht außerdem den Auszug eines separaten Testsets zur Evaluierung überflüssig.
 

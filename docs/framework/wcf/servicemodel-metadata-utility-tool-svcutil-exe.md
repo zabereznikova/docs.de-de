@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 9682d79a912ac24e549093e0713cf65fb61bb4d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533207"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788426"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel Metadata Utility-Tool (Svcutil.exe)
 
@@ -43,7 +43,7 @@ Die folgende Tabelle enthält die verschiedenen Funktionen, die von diesem Tool 
 
 Das Tool hat ein Timeout von fünf Minuten an, beim Abrufen von Metadaten. Dieses Timeout gilt nur beim Abrufen von Metadaten über das Netzwerk. Es gilt nicht für die Verarbeitung dieser Metadaten.
 
-### <a name="multi-targetting"></a>Festlegung von Zielversionen
+### <a name="multi-targeting"></a>Festlegung von Zielversionen
 
 Das Tool unterstützt die Festlegung von Zielversionen nicht. Wenn Sie eine von .NET 4-Artefakt generieren möchten *svcutil.exe*, verwenden Sie die *svcutil.exe* aus dem .NET 4-SDK. Verwenden Sie die ausführbare Datei aus dem .NET 3.5-SDK, um ein .NET 3.5-Artefakt zu generieren.
 
@@ -59,7 +59,7 @@ Die folgende Tabelle zeigt, dass einige im allgemeinen Optionen für dieses Tool
 
 |Option|Beschreibung|
 |------------|-----------------|
-|/ Directory:\<Verzeichnis >|Das Verzeichnis, in dem die Dateien erstellt werden sollen.<br /><br /> Standardeinstellung: Das aktuelle Verzeichnis.<br /><br /> Kurzform: `/d`.|
+|/ Directory:\<Verzeichnis >|Das Verzeichnis, in dem die Dateien erstellt werden sollen.<br /><br /> Standard: Das aktuelle Verzeichnis.<br /><br /> Kurzform: `/d`.|
 |/help|Zeigt die Befehlssyntax und Optionen für das Tool an.<br /><br /> Kurzform: `/?`.|
 |/noLogo|Die Copyright- und die Bannermeldung werden unterdrückt.|
 |/svcutilConfig:\<configFile>|Gibt eine benutzerdefinierte Konfigurationsdatei an, die statt der Datei App.config verwendet werden soll. Dies kann verwendet werden, um system.serviceModel-Erweiterungen zu registrieren, ohne die Konfigurationsdatei des Tools zu ändern.|
@@ -71,7 +71,7 @@ Svcutil.exe kann Code für Dienstverträge, Clients und Datentypen aus Metadaten
 
 Sie können die *SvcUtil.exe* Tool zum Generieren von Dienst- und Datenverträgen anhand eines vordefinierten WSDL-Dokuments. Verwenden Sie den /serviceContract-Schalter, und geben Sie eine URL oder einen Dateipfad für den Speicherort des WSDL-Dokuments an, an dem es gefunden oder heruntergeladen werden kann. Dadurch wird die Dienst- und Datenverträgen definiert, die im WSDL-Dokument, das zum Implementieren eines kompatiblen Diensts verwendet werden kann. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen von Metadaten und Implementieren eines kompatiblen Diensts](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md).
 
-Für einen Dienst mit einem BasicHttpContextbinding-Endpunkt *Svcutil.exe* generiert eine BasicHttpBinding, deren der `allowCookies` -Attributsatz auf `true` stattdessen. Die Cookies werden auf dem Server für den Kontext verwendet. Möchten Sie den Kontext auf dem Client verwalten, wenn der Dienst Cookies verwendet, so können Sie die Konfiguration manuell für die Verwendung einer Kontextbindung ändern.
+Für einen Dienst mit einem BasicHttpContextBinding-Endpunkt *Svcutil.exe* generiert eine BasicHttpBinding, deren der `allowCookies` -Attributsatz auf `true` stattdessen. Die Cookies werden auf dem Server für den Kontext verwendet. Möchten Sie den Kontext auf dem Client verwalten, wenn der Dienst Cookies verwendet, so können Sie die Konfiguration manuell für die Verwendung einer Kontextbindung ändern.
 
 > [!CAUTION]
 > Svcutil.exe generiert den Client auf der Basis der vom Dienst empfangenen WSDL- oder Richtliniendatei. Der Benutzerprinzipalname (UPN) wird generiert, durch die Aneinanderreihung von Benutzername, "\@" und einen vollständig qualifizierten Domänennamen (FQDN). Für in Active Directory registrierte Benutzer ist dieses Format jedoch nicht gültig, und der vom Tool generierte UPN verursacht einen Fehler bei der Kerberos-Authentifizierung mit der Fehlermeldung "Der Anmeldeversuch ist fehlgeschlagen". Um dieses Problem zu beheben, sollten Sie die von diesem Tool generierte Clientdatei manuell reparieren.
@@ -97,10 +97,10 @@ Für einen Dienst mit einem BasicHttpContextbinding-Endpunkt *Svcutil.exe* gener
 |/ Language:\<Sprache >|Gibt die Programmiersprache an, die zur Codegenerierung verwendet werden soll. Geben Sie entweder einen in der Datei Machine.config registrierten Sprachnamen oder den vollqualifizierten Namen einer Klasse, die von erbt <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Werte: c#, cs, csharp, vb, visualbasic, c++, cpp<br /><br /> Standard: csharp<br /><br /> Kurzform: `/l`.|
 |/mergeConfig|Fügt die generierte Konfiguration in eine vorhandene Datei ein, statt die vorhandene Datei zu überschreiben.|
 |/messageContract|Generiert Nachrichtenvertragstypen.<br /><br /> Kurzform: `/mc`.|
-|/namespace:\<string,string>|Gibt eine Zuordnung von einem WSDL- oder XML-Schema-targetNamespace zu einem CLR-Namespace an. Mithilfe von "\*' für den TargetNamespace werden alle TargetNamespaces ohne eine explizite Zuordnung diesem CLR-Namespace zugeordnet.<br /><br /> Um zu gewährleisten, dass der Nachrichtenvertragsname nicht mit dem Vorgangsnamen in Konflikt steht, sollten Sie den Typverweis entweder mit `::` angeben oder sicherstellen, dass die Namen einmalig sind.<br /><br /> Standardeinstellung: Abgeleitet aus dem Zielnamespace des Schemadokuments für Datenverträge. Der Standardnamespace wird für alle anderen generierten Typen verwendet.<br /><br /> Kurzform: `/n` **Hinweis:**  Beim Generieren von Typen, die mit "XmlSerializer" verwendet, wird nur die Zuordnung zu einem einzelnen Namespace unterstützt. Alle generierte Typen werden entweder in den Standardnamespace oder vom angegebenen Namespace ' *'.|
+|/namespace:\<string,string>|Gibt eine Zuordnung von einem WSDL- oder XML-Schema-targetNamespace zu einem CLR-Namespace an. Mithilfe von "\*' für den TargetNamespace werden alle TargetNamespaces ohne eine explizite Zuordnung diesem CLR-Namespace zugeordnet.<br /><br /> Um zu gewährleisten, dass der Nachrichtenvertragsname nicht mit dem Vorgangsnamen in Konflikt steht, sollten Sie den Typverweis entweder mit `::` angeben oder sicherstellen, dass die Namen einmalig sind.<br /><br /> Standard: Abgeleitet aus dem Zielnamespace des Schemadokuments für Datenverträge. Der Standardnamespace wird für alle anderen generierten Typen verwendet.<br /><br /> Kurzform: `/n` **Hinweis:**  Beim Generieren von Typen, die mit "XmlSerializer" verwendet, wird nur die Zuordnung zu einem einzelnen Namespace unterstützt. Alle generierte Typen werden entweder in den Standardnamespace oder vom angegebenen Namespace ' *'.|
 |/noConfig|Es werden keine Konfigurationsdateien generiert.|
-|/noStdLib|Verweist nicht auf Standardbibliotheken.<br /><br /> Standardeinstellung: Mscorlib.dll und System.servicemodel.dll verwiesen.|
-|/out:\<file>|Gibt den Dateinamen für den generierten Code an.<br /><br /> Standardeinstellung: Abgeleitet von WSDL-Definitionsnamen, WSDL Dienstnamen oder Zielnamespace eines der Schemas.<br /><br /> Kurzform: `/o`.|
+|/noStdLib|Verweist nicht auf Standardbibliotheken.<br /><br /> Standard: Mscorlib.dll und System.servicemodel.dll verwiesen.|
+|/out:\<file>|Gibt den Dateinamen für den generierten Code an.<br /><br /> Standard: Abgeleitet von WSDL-Definitionsnamen, WSDL Dienstnamen oder Zielnamespace eines der Schemas.<br /><br /> Kurzform: `/o`.|
 |/ reference:\<Dateipfad >|Verweist auf Typen in der angegebenen Assembly. Beim Generieren von Clients können Sie diese Option verwenden, um Assemblys anzugeben, die unter Umständen die Typen mit den zu importierenden Metadaten enthalten.<br /><br /> Sie können mit diesem Schalter keine Nachrichtenverträge oder <xref:System.Xml.Serialization.XmlSerializer>-Typen angeben.<br /><br /> Wenn auf <xref:System.DateTimeOffset> verwiesen wird, wird dieser Typ verwendet, statt einen neuen Typ zu generieren. Wenn die Anwendung mit [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] geschrieben wird, verweist SvcUtil.exe automatisch auf <xref:System.DateTimeOffset>.<br /><br /> Kurzform: `/r`.|
 |/serializable|Generiert mit dem Serializable-Attribut markierte Klassen.<br /><br /> Kurzform: `/s`.|
 |/serviceContract|Generiert nur Code für Dienstverträge. Clientklasse und -konfiguration werden nicht generiert.<br /><br /> Kurzform: `/sc`.|
@@ -160,7 +160,7 @@ Svcutil gibt die folgenden Metadatenanforderungen gleichzeitig aus, um Metadaten
 
 - DISCO-Anforderung (mit DiscoveryClientProtocol von ASMX) an die angegebene Adresse
 
-Standardmäßig verwendet Svcutil.exe die in der <xref:System.ServiceModel.Description.MetadataExchangeBindings>-Klasse definierten Bindungen, um MEX-Anforderungen zu stellen. Um die für WS-Metadata Exchange verwendete Bindung zu konfigurieren, müssen Sie einen Clientendpunkt in der Konfiguration definieren, der den IMetadataExchange-Vertrag verwendet. Dies kann entweder in der Konfigurationsdatei von Svcutil.exe oder in einer anderen Konfigurationsdatei, die mit der `/svcutilConfig`-Option angegeben wird, definiert werden.
+Standardmäßig verwendet „Svcutil.exe“ die in der <xref:System.ServiceModel.Description.MetadataExchangeBindings>-Klasse definierten Bindungen, um MEX-Anforderungen zu stellen. Um die für WS-Metadata Exchange verwendete Bindung zu konfigurieren, müssen Sie einen Clientendpunkt in der Konfiguration definieren, der den IMetadataExchange-Vertrag verwendet. Dies kann entweder in der Konfigurationsdatei von Svcutil.exe oder in einer anderen Konfigurationsdatei, die mit der `/svcutilConfig`-Option angegeben wird, definiert werden.
 
 `svcutil.exe /t:metadata  <url>* | <epr>`
 
@@ -191,7 +191,7 @@ Svcutil.exe kann den erforderlichen C#-Serialisierungscode aus den kompilierten 
 |------------|-----------------|
 |/ reference:\<Dateipfad >|Fügt die angegebene Assembly dem Satz von Assemblys hinzu, der zum Auflösen von Typverweisen verwendet wird.<br /><br /> Kurzform: `/r`.|
 |/excludeType:\<type>|Gibt einen vollqualifizierten oder assemblyqualifizierten Namen eines Typs an, der aus dem Export oder der Validierung ausgeschlossen werden soll.<br /><br /> Kurzform: `/et`.|
-|/out:\<file>|Gibt den Dateinamen für den generierten Code an. Diese Option wird ignoriert, wenn mehrere Assemblys als Eingabe an das Tool übergeben werden.<br /><br /> Standardeinstellung: Vom Assemblynamen abgeleitet.<br /><br /> Kurzform: `/o`.|
+|/out:\<file>|Gibt den Dateinamen für den generierten Code an. Diese Option wird ignoriert, wenn mehrere Assemblys als Eingabe an das Tool übergeben werden.<br /><br /> Standard: Vom Assemblynamen abgeleitet.<br /><br /> Kurzform: `/o`.|
 |/UseSerializerForFaults|Gibt an, dass der <xref:System.Xml.Serialization.XmlSerializer> für Lektüre und das Schreiben von Fehlern, statt des Standard-<xref:System.Runtime.Serialization.DataContractSerializer>, verwendet werden soll.|
 
 ## <a name="examples"></a>Beispiele

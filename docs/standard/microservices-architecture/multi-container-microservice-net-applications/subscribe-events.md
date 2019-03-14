@@ -4,28 +4,28 @@ description: '.NET Microservices: Architektur für .NET-Containeranwendungen | D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: eef1ad347cb621e1f26c9c65d46d71e83a2c3a23
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8ddc966710f6a9a949983726fd93505fbc88391f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971779"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675029"
 ---
 # <a name="subscribing-to-events"></a>Abonnieren von Ereignissen
 
 Wenn Sie den Ereignisbus verwenden möchten, müssen Sie zunächst mit den Microservices die Ereignisse abonnieren, die sie erhalten sollen. Dies sollte im empfangenden Microservice erfolgen.
 
-Im folgenden einfachen Codebeispiel wird veranschaulicht, was in jedem empfangenden Microservice implementiert werden muss, wenn Sie den Dienst starten (in der `Startup`-Klasse), damit ein Abonnement der nötigen Ereignisse erfolgt. In diesem Fall benötigt der `basket.api`-Microservice ein Abonnement von `ProductPriceChangedIntegrationEvent`- und `OrderStartedIntegrationEvent`-Meldungen. 
+Im folgenden einfachen Codebeispiel wird veranschaulicht, was in jedem empfangenden Microservice implementiert werden muss, wenn Sie den Dienst starten (in der `Startup`-Klasse), damit ein Abonnement der nötigen Ereignisse erfolgt. In diesem Fall benötigt der `basket.api`-Microservice ein Abonnement von `ProductPriceChangedIntegrationEvent`- und `OrderStartedIntegrationEvent`-Meldungen.
 
 Wenn z.B. das `ProductPriceChangedIntegrationEvent`-Ereignis abonniert wird, erkennt der Warenkorb-Microservice Änderungen am Produktpreis und warnt den Benutzer, wenn es eine Änderung an einem Produkt gab, das sich in dessen Warenkorb befindet.
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
 
-eventBus.Subscribe<ProductPriceChangedIntegrationEvent, 
+eventBus.Subscribe<ProductPriceChangedIntegrationEvent,
                    ProductPriceChangedIntegrationEventHandler>();
 
-eventBus.Subscribe<OrderStartedIntegrationEvent, 
+eventBus.Subscribe<OrderStartedIntegrationEvent,
                    OrderStartedIntegrationEventHandler>();
 
 ```
@@ -87,9 +87,9 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 }
 ```
 
-In diesem Fall wird dieser Code in einen Web-API-Controller eingefügt, da der ursprüngliche Microservice ein einfacher CRUD-Microservice ist. 
- 
-In komplexeren Microservices (wenn Sie z.B. CQRS-Ansätze verwenden) kann er in der `CommandHandler`-Klasse in der `Handle()`-Methode implementiert werden. 
+In diesem Fall wird dieser Code in einen Web-API-Controller eingefügt, da der ursprüngliche Microservice ein einfacher CRUD-Microservice ist.
+
+In komplexeren Microservices (wenn Sie z.B. CQRS-Ansätze verwenden) kann er in der `CommandHandler`-Klasse in der `Handle()`-Methode implementiert werden.
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Entwerfen von Unteilbarkeit und Stabilität beim Veröffentlichen im Ereignisbus
 
@@ -103,11 +103,11 @@ Kehren wir nun zum ursprünglichen Problem und dem dazugehörigen Beispiel zurü
 
 Wie bereits im Abschnitt zur Architektur erwähnt, können Sie dieses Problem auf unterschiedliche Arten behandeln:
 
--   Sie können das [Muster „Ereignissourcing“](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) verwenden.
+- Sie können das [Muster „Ereignissourcing“](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing) verwenden.
 
--   Verwenden von [Transaktionsprotokollmining](https://www.scoop.it/t/sql-server-transaction-log-mining).
+- Verwenden von [Transaktionsprotokollmining](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
--   Sie können das [Muster „Postausgang“](http://gistlabs.com/2014/05/the-outbox/) verwenden. Dabei handelt es sich um eine Transaktionstabelle, die die Integrationsereignisse speichert (und so die lokale Transaktion erweitert).
+- Sie können das [Muster „Postausgang“](http://gistlabs.com/2014/05/the-outbox/) verwenden. Dabei handelt es sich um eine Transaktionstabelle, die die Integrationsereignisse speichert (und so die lokale Transaktion erweitert).
 
 Für dieses Szenario ist das vollständige Muster „Ereignissourcing“ (ES) einer der besten, wenn nicht *der* beste Ansatz. Es gibt jedoch viele Anwendungsszenarios, in denen das Implementieren des vollständigen ES-Systems nicht möglich ist. ES bedeutet, dass nur Domänenereignisse und keine aktuellen Statusdatendaten in Ihrer Transaktionsdatenbank gespeichert werden. Wenn nur Domänenereignisse gespeichert werden, kann dies viele Vorteile haben, wie z.B. die Verfügbarkeit des Systemverlaufs, wodurch Sie den Status Ihres Systems zu jedem zurückliegenden Zeitpunkt nachverfolgen können. Das Implementieren eines vollständigen ES-Systems erfordert jedoch das Neustrukturieren eines Großteils Ihres Systems und geht mit vielen anderen Komplexitäten und Anforderungen einher. Beispielsweise sollten Sie dann eine Datenbank speziell zum Ereignissourcing verwenden, wie z.B. [Event Store](https://eventstore.org/) oder dokumentorientierte Datenbanken wie Azure Cosmos DB, MongoDB, Cassandra, CouchDB oder RavenDB. ES ist eine sinnvolle Herangehensweise an dieses Problem, aber nicht die einfachste Lösung, wenn Sie sich noch nicht mit Ereignissourcing auskennen.
 
@@ -125,19 +125,19 @@ Wenn Sie bereits eine relationale Datenbank verwenden, können Sie eine Transakt
 
 Der Prozess läuft wie folgt ab:
 
-1.  Die Anwendung startet eine lokale Datenbanktransaktion.
+1. Die Anwendung startet eine lokale Datenbanktransaktion.
 
-2.  Anschließend aktualisiert sie den Status Ihrer Domänenentitäten und fügt ein Ereignis in der Integrationsereignistabelle ein.
+2. Anschließend aktualisiert sie den Status Ihrer Domänenentitäten und fügt ein Ereignis in der Integrationsereignistabelle ein.
 
-3.  Schließlich wird die Transaktion von der Anwendung committet, und die gewünschte Unteilbarkeit wird erreicht.
+3. Schließlich wird die Transaktion von der Anwendung committet, und die gewünschte Unteilbarkeit wird erreicht.
 
-4.  Nun veröffentlichen Sie das Ereignis auf eine beliebige Weise (Weiter).
+4. Nun veröffentlichen Sie das Ereignis auf eine beliebige Weise (Weiter).
 
 Wenn Sie die Schritte zum Veröffentlichen von Ereignissen implementieren, haben Sie die folgenden Wahlmöglichkeiten:
 
--   Sie können das Integrationsereignis unmittelbar nach dem Committen der Transaktion veröffentlichen und eine andere lokale Transaktion verwenden, um die Ereignisse in der Tabelle als „Veröffentlicht“ zu kennzeichnen. Verwenden Sie die Tabelle anschließend wie ein Artefakt, um die Integrationsereignisse nachzuverfolgen, falls Probleme bei den Remotemicroservices auftreten, und ergreifen Sie Ausgleichsmaßnahmen auf Grundlage der gespeicherten Integrationsereignisse.
+- Sie können das Integrationsereignis unmittelbar nach dem Committen der Transaktion veröffentlichen und eine andere lokale Transaktion verwenden, um die Ereignisse in der Tabelle als „Veröffentlicht“ zu kennzeichnen. Verwenden Sie die Tabelle anschließend wie ein Artefakt, um die Integrationsereignisse nachzuverfolgen, falls Probleme bei den Remotemicroservices auftreten, und ergreifen Sie Ausgleichsmaßnahmen auf Grundlage der gespeicherten Integrationsereignisse.
 
--   Sie können die Tabelle als eine Art Warteschlange verwenden. Ein separater Anwendungsthread oder -prozess fragt die Integrationsereignistabelle ab, veröffentlicht die Ereignisse im Ereignisbus und verwendet anschließend eine lokale Transaktion, um das Ereignis als „Veröffentlicht“ zu kennzeichnen.
+- Sie können die Tabelle als eine Art Warteschlange verwenden. Ein separater Anwendungsthread oder -prozess fragt die Integrationsereignistabelle ab, veröffentlicht die Ereignisse im Ereignisbus und verwendet anschließend eine lokale Transaktion, um das Ereignis als „Veröffentlicht“ zu kennzeichnen.
 
 In Abbildung 6-22 wird der Aufbau des ersten Ansatzes veranschaulicht.
 
@@ -166,55 +166,55 @@ Der Deutlichkeit halber wird im folgenden Beispiel der gesamte Prozess in einem 
 ```csharp
 // Update Product from the Catalog microservice
 //
-public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate) 
+public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate)
 {
-  var catalogItem = 
-       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id == 
-                                                               productToUpdate.Id); 
+  var catalogItem =
+       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id ==
+                                                               productToUpdate.Id);
   if (catalogItem == null) return NotFound();
 
-  bool raiseProductPriceChangedEvent = false; 
-  IntegrationEvent priceChangedEvent = null; 
+  bool raiseProductPriceChangedEvent = false;
+  IntegrationEvent priceChangedEvent = null;
 
-  if (catalogItem.Price != productToUpdate.Price) 
-          raiseProductPriceChangedEvent = true; 
+  if (catalogItem.Price != productToUpdate.Price)
+          raiseProductPriceChangedEvent = true;
 
   if (raiseProductPriceChangedEvent) // Create event if price has changed
   {
-      var oldPrice = catalogItem.Price; 
+      var oldPrice = catalogItem.Price;
       priceChangedEvent = new ProductPriceChangedIntegrationEvent(catalogItem.Id,
-                                                                  productToUpdate.Price, 
-                                                                  oldPrice); 
+                                                                  productToUpdate.Price,
+                                                                  oldPrice);
   }
   // Update current product
-  catalogItem = productToUpdate; 
+  catalogItem = productToUpdate;
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if (!raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent)
   {
       await _catalogContext.SaveChangesAsync();
   }
   else  // Publish to event bus only if product price changed
   {
-        // Achieving atomicity between original DB and the IntegrationEventLog 
+        // Achieving atomicity between original DB and the IntegrationEventLog
         // with a local transaction
         using (var transaction = _catalogContext.Database.BeginTransaction())
         {
-           _catalogContext.CatalogItems.Update(catalogItem); 
+           _catalogContext.CatalogItems.Update(catalogItem);
            await _catalogContext.SaveChangesAsync();
 
            // Save to EventLog only if product price changed
-           if(raiseProductPriceChangedEvent) 
-               await _integrationEventLogService.SaveEventAsync(priceChangedEvent); 
+           if(raiseProductPriceChangedEvent)
+               await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
 
            transaction.Commit();
-        }   
+        }
 
-      // Publish the intergation event through the event bus
-      _eventBus.Publish(priceChangedEvent); 
+      // Publish the integration event through the event bus
+      _eventBus.Publish(priceChangedEvent);
 
       integrationEventLogService.MarkEventAsPublishedAsync(
-                                                priceChangedEvent); 
+                                                priceChangedEvent);
   }
 
   return Ok();
@@ -303,7 +303,7 @@ Es gibt Meldungsverarbeitungen, die von sich aus idempotent sind. Wenn ein Syste
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Honoring message idempotency (Berücksichtigen der Idempotenz von Nachrichten)** <br/>
+- **Honoring message idempotency (Berücksichtigen der Idempotenz von Nachrichten)** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>Deduplizieren von Integrationsereignismeldungen
@@ -324,69 +324,69 @@ Wenn das Flag „Redelivered“ festgelegt ist, muss der Empfänger dies beachte
 
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
--   **Forked eShopOnContainers using NServiceBus (Particular Software) (Forken von eShopOnContainers mit NServiceBus (Bestimmte Software))** <br/>
+- **Forked eShopOnContainers using NServiceBus (Particular Software) (Forken von eShopOnContainers mit NServiceBus (Bestimmte Software))** <br/>
     [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
--   **Event Driven Messaging (Ereignisgesteuertes Messaging)** <br/>
+- **Event Driven Messaging (Ereignisgesteuertes Messaging)** <br/>
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring für die Dienstbeständigkeit: Eine Beurteilung der Kopplung)** <br/>
+- **Jimmy Bogard. Refactoring Towards Resilience: Evaluating Coupling (Refactoring für die Dienstbeständigkeit: Eine Beurteilung der Kopplung)** <br/>
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Publish-Subscribe channel (Publish-Subscribe-Kanal)** <br/>
+- **Publish-Subscribe channel (Publish-Subscribe-Kanal)** <br/>
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Communicating Between Bounded Contexts (Kommunizieren zwischen gebundenen Kontexten)** <br/>
+- **Communicating Between Bounded Contexts (Kommunizieren zwischen gebundenen Kontexten)** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
--   **Eventual Consistency (Letztliche Konsistenz)** <br/>
+- **Eventual Consistency (Letztliche Konsistenz)** <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown. Strategies for Integrating Bounded Contexts (Strategien zur Integration gebundener Kontexte)** <br/>
+- **Philip Brown. Strategies for Integrating Bounded Contexts (Strategien zur Integration gebundener Kontexte)** <br/>
     [*https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2 (Entwickeln von Transaktionsmicroservices mit Aggregaten, Ereignissourcing und CQRS: Teil 2)** <br/>
+- **Chris Richardson. Developing Transactional Microservices Using Aggregates, Event Sourcing and CQRS - Part 2 (Entwickeln von Transaktionsmicroservices mit Aggregaten, Ereignissourcing und CQRS: Teil 2)** <br/>
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson. Event Sourcing pattern (Muster: Ereignissourcing)** <br/>
+- **Chris Richardson. Event Sourcing pattern (Muster: Ereignissourcing)** <br/>
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **Introducing Event Sourcing (Einführung in Ereignissourcing)** <br/>
+- **Introducing Event Sourcing (Einführung in Ereignissourcing)** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
--   **Event Store-Datenbank**. Offizielle Website. <br/>
+- **Event Store-Datenbank**. Offizielle Website. <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen. Event-Driven Data Management for Microservices (Ereignisgesteuerte Datenverwaltung für Microservices)** <br/>
+- **Patrick Nommensen. Event-Driven Data Management for Microservices (Ereignisgesteuerte Datenverwaltung für Microservices)** <br/>
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **The CAP theorem (Das CAP-Theorem)** <br/>
+- **The CAP theorem (Das CAP-Theorem)** <br/>
     [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **What is CAP Theorem? (Was ist das CAP-Theorem?)** <br/>
+- **What is CAP Theorem? (Was ist das CAP-Theorem?)** <br/>
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Data Consistency Primer (Einführung in die Datenkonsistenz)** <br/>
+- **Data Consistency Primer (Einführung in die Datenkonsistenz)** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
--   **Rick Saling. The CAP Theorem: Why „Everything is Different“ with the Cloud and Internet (Das CAP-Theorem: Warum für die Cloud und das Internet andere „Regeln“ gelten)** <br/>
+- **Rick Saling. The CAP Theorem: Why „Everything is Different“ with the Cloud and Internet (Das CAP-Theorem: Warum für die Cloud und das Internet andere „Regeln“ gelten)** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed (CAP zwölf Jahre später: So haben sich die „Regeln“ verändert)** <br/>
+- **Eric Brewer. CAP Twelve Years Later: How the "Rules" Have Changed (CAP zwölf Jahre später: So haben sich die „Regeln“ verändert)** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Azure Service Bus. Brokered Messaging: Duplicate Detection (Brokermessaging: Erkennen von Duplikaten)**  <br/>
+- **Azure Service Bus. Brokered Messaging: Duplicate Detection (Brokermessaging: Erkennen von Duplikaten)**  <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Reliability Guide (Zuverlässigkeitsleitfaden)** (RabbitMQ-Dokumentation)* <br/>
+- **Reliability Guide (Zuverlässigkeitsleitfaden)** (RabbitMQ-Dokumentation)* <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
 
--   **Azure Service Bus. Brokered Messaging: Duplicate Detection (Brokermessaging: Erkennen von Duplikaten)** <br/>
+- **Azure Service Bus. Brokered Messaging: Duplicate Detection (Brokermessaging: Erkennen von Duplikaten)** <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Reliability Guide (Zuverlässigkeitsleitfaden)** (RabbitMQ-Dokumentation) <br/>
+- **Reliability Guide (Zuverlässigkeitsleitfaden)** (RabbitMQ-Dokumentation) <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
->[!div class="step-by-step"]
->[Zurück](rabbitmq-event-bus-development-test-environment.md)
->[Weiter](test-aspnet-core-services-web-apps.md)
+> [!div class="step-by-step"]
+> [Zurück](rabbitmq-event-bus-development-test-environment.md)
+> [Weiter](test-aspnet-core-services-web-apps.md)

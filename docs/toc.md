@@ -1209,6 +1209,7 @@
 ### Verwenden des trainierten Modells
 #### [Einzelvorhersage mit PredictionEngine](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [Operationalisieren eines trainierten Modells](machine-learning/how-to-guides/consuming-model-ml-net.md)
+#### [Azure Functions-Servicemodell](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
 ### Infer.NET
 #### [Probabilistische Programmierung mit Infer.NET](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## Referenz

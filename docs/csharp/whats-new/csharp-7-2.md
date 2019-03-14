@@ -2,17 +2,17 @@
 title: Neues in C# 7.2
 description: Eine Übersicht der neuen Funktionen in C# 7.2
 ms.date: 08/16/2017
-ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9525d52e5eab4b8213b8a1920531dc4b4d7ac0a3
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148174"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673222"
 ---
 # <a name="whats-new-in-c-72"></a>Neues in C# 7.2
 
 C# 7.2 ist ein weiteres Release einer Unterversion, das eine Reihe nützlicher Funktionen ergänzt.
-Ein Aspekt für diesen Release ist die effizientere Arbeit mit Werttypen durch Vermeiden unnötiger Kopien oder Zuweisungen. 
+Ein Aspekt für diesen Release ist die effizientere Arbeit mit Werttypen durch Vermeiden unnötiger Kopien oder Zuweisungen.
 
 Die restlichen Funktionen sind kleine Features, die den Komfort steigern.
 
@@ -48,7 +48,7 @@ Methodenaufrufe dürfen jetzt benannte Argumente verwenden, die positionellen Ar
 
 ## <a name="leading-underscores-in-numeric-literals"></a>Führende Unterstriche in numerischen Literalen
 
-Die Implementierung der Unterstützung für Stellentrennzeichen in C# 7.0 ließ den Unterstrich `_` nicht als erstes Zeichen von Literalwerten zu. Hexadezimale und binäre numerische Literale dürfen jetzt mit einem `_` beginnen. 
+Die Implementierung der Unterstützung für Stellentrennzeichen in C# 7.0 ließ den Unterstrich `_` nicht als erstes Zeichen von Literalwerten zu. Hexadezimale und binäre numerische Literale dürfen jetzt mit einem `_` beginnen.
 
 Beispiel:
 

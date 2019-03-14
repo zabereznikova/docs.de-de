@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 115f7a2f-d422-4605-ab36-13a8dd28142a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7dbba5161c1eeecef41e93c908752410acbd956
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 21eea2ccdff88a11e9708fef317011dc547cafda
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221250"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677213"
 ---
 # <a name="interop-marshaling"></a>Interop-Marshalling
 <a name="top"></a> Interop-Marshalling steuert, wie Daten in Methodenargumenten und Rückgabewerten zwischen verwaltetem und nicht verwaltetem Speicher während Aufrufen übergeben werden. Interop-Marshalling ist eine Laufzeitaktivität, die vom Marshallingdienst der Common Language Runtime ausgeführt wird.  
@@ -44,8 +44,7 @@ ms.locfileid: "56221250"
   
  Sowohl Plattformaufruf als auch COM-Interop verwenden Interop-Marshalling, um, falls erforderlich, Methodenargumente präzise zwischen Aufrufer und Aufgerufenem und umgekehrt zu verschieben. Wie die folgende Abbildung zeigt, fließt ein Methodenaufruf eines Plattformaufrufs vom verwalteten zum nicht verwalteten Code und niemals umgekehrt, es sei denn, dass [Rückruffunktionen](callback-functions.md) beteiligt sind. Obwohl Plattformaufrufe nur vom verwalteten zum nicht verwalteten Code fließen können, können Daten als Ein-oder Ausgabeparameter in beide Richtungen fließen. COM-Interop-Methodenaufrufe können in beide Richtungen fließen.  
   
- ![Plattformaufruf](./media/interopmarshaling.png "Interop-Marshalling")  
-Plattformaufruf- und COM-Interop-Aufruffluss  
+ ![Plattformaufruf](./media/interop-marshaling/interop-marshaling-invoke-and-com.png "Plattformaufruf- und COM-Interop-Aufruffluss")  
   
  Auf der niedrigsten Ebene verwenden beide Mechanismen denselben Interop-Marshallingdienst. Bestimmte Datentypen werden aber ausschließlich nur von COM-Interop oder von Plattformaufrufen unterstützt. Details hierzu finden Sie unter [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md).  
   
@@ -67,8 +66,7 @@ Plattformaufruf- und COM-Interop-Aufruffluss
   
  Da Client und Server im selben Apartment sind, verarbeitet der Interop-Marshallingdienst automatisch das gesamte Daten-Marshalling. Die folgende Abbildung zeigt, wie der Interop-Marshallingdienst zwischen verwalteten und nicht verwalteten Heaps innerhalb desselben COM-artigen Apartments agiert.  
   
- ![Interop-Marshalling](./media/interopheap.gif "Interop-Heap")  
-Marshallingprozess im selben Apartment.  
+ ![Interop-Marshalling zwischen verwalteten und nicht verwalteten Heaps](./media/interop-marshaling/interop-heaps-managed-and-unmanaged.gif "Marshalling-Prozess im selben Apartment")  
   
  Wenn Sie planen, einen verwalteten Server zu exportieren, sollten Sie daran denken, dass der COM-Client das Apartment des Servers bestimmt. Ein von einem COM-Client aufgerufener und in einem MTA initialisierter verwalteter Server muss Threadsicherheit sicherstellen.  
   
@@ -84,8 +82,7 @@ Marshallingprozess im selben Apartment.
   
  Wenn ein verwalteter Client und ein nicht verwalteter Server im selben Apartment sind, verarbeitet der Interop-Marshallingdienst das gesamte Daten-Marshalling. Wenn Client und Server in unterschiedlichen Apartments initialisiert werden, ist jedoch auch COM-Marshalling erforderlich. Die folgende Abbildung zeigt die Elemente eines apartmentübergreifenden Aufrufs.  
   
- ![COM-Marshalling](./media/singleprocessmultapt.gif "Singleprocessmultapt")  
-Apartmentübergreifender Aufruf zwischen einem .NET-Client und einem COM-Objekt  
+ ![COM-Marshalling](./media/interop-marshaling/single-process-across-multi-apartment.gif "Apartmentübergreifender Aufruf zwischen einem .NET-Client und einem COM-Objekt")  
   
  Für apartmentübergreifendes Marshalling können Sie Folgendes tun:  
   
@@ -110,14 +107,12 @@ Apartmentübergreifender Aufruf zwischen einem .NET-Client und einem COM-Objekt
   
  Die folgende Abbildung zeigt, wie Interop-Marshalling und COM-Marshalling Kommunikationskanäle über Prozess- und Hostgrenzen hinweg bereitstellen.  
   
- ![COM-Marshalling](./media/interophost.gif "Interop-Host")  
-Prozessübergreifendes Marshalling  
+ ![COM-Marshalling](./media/interop-marshaling/interop-and-com-marshaling.gif "Prozessübergreifendes Marshalling")  
   
 ### <a name="preserving-identity"></a>Beibehalten der Identität  
  Die Common Language Runtime behält die Identität verwalteter und nicht verwalteter Verweise bei. Die folgende Abbildung zeigt den Fluss direkter, nicht verwalteter Verweise (obere Zeile) und direkter, verwalteter Verweise (untere Zeile) über Prozess- und Hostgrenzen hinweg.  
   
- ![COM Callable Wrapper und Runtime Callable Wrapper](./media/interopdirectref.gif "interopdirectref")  
-Verweisübergabe über Prozess- und Hostgrenzen hinweg  
+ ![COM Callable Wrapper und Runtime Callable Wrapper](./media/interop-marshaling/interop-direct-ref-across-process.gif "Verweisübergabe über Prozess- und Hostgrenzen hinweg")  
   
  In dieser Abbildung:  
   
@@ -133,7 +128,7 @@ Verweisübergabe über Prozess- und Hostgrenzen hinweg
 ### <a name="managed-remoting"></a>Verwaltetes Remoting  
  Die Laufzeit bietet auch verwaltetes Remoting, das Sie zum Einrichten eines Kommunikationskanals zwischen verwalteten Objekten über Prozess- und Hostgrenzen hinweg verwenden können. Verwaltetes Remoting kann eine Firewall zwischen den kommunizierenden Komponenten unterstützen, wie die folgende Abbildung zeigt.  
   
- ![SOAP oder TcpChannel](./media/interopremotesoap.gif "Interopremotesoap")  
+ ![SOAP oder TcpChannel](./media/interop-marshaling/interop-remote-soap-or-tcp.gif "Firewallübergreifende Remoteaufrufe mit SOAP oder der TcpChannel-Klasse")  
 Firewallübergreifende Remoteaufrufe mit SOAP oder der TcpChannel-Klasse  
   
  Einige nicht verwaltete Aufrufe können durch SOAP geleitet werden, z.B. die Aufrufe zwischen Serviced Components und COM.  

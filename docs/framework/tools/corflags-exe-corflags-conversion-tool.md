@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae2efe619d9c6ebcf2c570b5a63d569faf3b3343
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a97ba44cfadc27582b2ae9119c01b392f14a19f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690747"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496494"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (Konvertierungstool CorFlags)
 Das Konvertierungstool „CorFlags“ ermöglicht das Konfigurieren des CorFlags-Abschnitts eines Headers eines portierbaren ausführbaren Images.  
@@ -28,7 +28,7 @@ Das Konvertierungstool „CorFlags“ ermöglicht das Konfigurieren des CorFlags
 CorFlags.exe assembly [options]  
 ```  
   
-#### <a name="parameters"></a>Parameter  
+## <a name="parameters"></a>Parameter  
   
 |Erforderlicher Parameter|Beschreibung|  
 |------------------------|-----------------|  
@@ -49,7 +49,7 @@ CorFlags.exe assembly [options]
 |**/RevertCLRHeader**|Setzt die CLR-Headerversion auf 2.0 zurück.|  
 |**/UpgradeCLRHeader**|Aktualisiert die CLR-Headerversion auf 2.5. **Hinweis**:  Assemblys können nur als systemeigener Code ausgeführt werden, wenn sie mindestens über die CLR-Headerversion 2.5 verfügen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Wenn keine Optionen angegeben sind, zeigt das Konvertierungstool CorFlags die Flags für die angegebene Assembly an.  
   
 ## <a name="see-also"></a>Siehe auch

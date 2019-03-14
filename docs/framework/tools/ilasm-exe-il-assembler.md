@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f043fa541073402bee9fc4cf84e8151e6e0192f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b73a98542dfc6fa68e79655bc5538cf005e4636
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549209"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492582"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL-Assembler)
 
@@ -34,7 +34,7 @@ Geben Sie an der Eingabeaufforderung Folgendes ein:
 ilasm [options] filename [[options]filename...]
 ```
 
-#### <a name="parameters"></a>Parameter
+## <a name="parameters"></a>Parameter
 
 | Argument | Beschreibung |
 | -------- | ----------- |
@@ -81,7 +81,7 @@ ilasm [options] filename [[options]filename...]
 > [!NOTE]
 > Bei allen Optionen für *Ilasm.exe* wird nicht zwischen Groß- und Kleinschreibung unterschieden, und sie werden anhand der ersten drei Buchstaben erkannt. So ist zum Beispiel **/lis** das Gleiche wie **/listing**, und **/res**:myresfile.res entspricht **/resource:** myresfile.res. Optionen, die Argumente angeben, können entweder einen Doppelpunkt (:) oder ein Gleichheitszeichen (=) als Trennzeichen zwischen der Option und dem Argument enthalten. So wären zum Beispiel **/output:***file.ext* und **/output=**=*file.ext* identisch.
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Der IL-Assembler unterstützt Anbieter von Tools beim Entwerfen und Implementieren von IL-Generatoren. Durch die Verwendung von *Ilasm.exe* können sich Entwickler von Tools und Compilern auf die Generierung von IL und Metadaten konzentrieren, ohne sich um IL-Ausgaben im PE-Dateiformat kümmern zu müssen.
 
