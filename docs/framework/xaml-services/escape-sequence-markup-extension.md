@@ -11,12 +11,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: 8a065573abb5a230d2a51f1767bd8d2e829bccd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eaee0a1f92d8b7cb3810651eda21f1cc800ebf57
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521269"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58018548"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} Escapesequenz / Markuperweiterung
 Stellt die XAML-Escapesequenz für Attributwerte bereit. Die-Escapesequenz kann nachfolgende Werte im Attribut als Literal interpretiert werden soll.  
@@ -56,8 +56,8 @@ Stellt die XAML-Escapesequenz für Attributwerte bereit. Die-Escapesequenz kann 
   
  Die Escape-Sequenz ({}) ist häufig erforderlich, wenn einen XML-Datentyp angeben, die an einem Ort Namespacequalifizierer einschließen muss, wo eine XAML-Markuperweiterung angezeigt werden kann. Dies schließt den Start einen XAML-Attributwert, und klicken Sie in einer Markuperweiterung, sofort nach einem Gleichheitszeichen (=). Das folgende Beispiel zeigt die Escapesequenzen für einen XML-Namespace, der am Anfang einer XAML-Attributwert angezeigt wird.  
   
- [!code-xaml[XLINQExample#StackPanelResources](../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
+ [!code-xaml[XLINQExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Typkonverter und Markuperweiterungen für XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [XML-Zeichenentitäten und XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
+- [Typkonverter und Markuperweiterungen für XAML](type-converters-and-markup-extensions-for-xaml.md)
+- [XML-Zeichenentitäten und XAML](xml-character-entities-and-xaml.md)

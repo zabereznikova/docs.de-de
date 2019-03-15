@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_PathNotFound1
 ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
-ms.openlocfilehash: 84f4b8dbc5636fb9e0bee24a2f7be0b129cb4399
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 67da1c1ba411e0ee5328ce521acb52b47d614c4c
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280865"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58041446"
 ---
 # <a name="path-pathname-not-found"></a>Pfad "\<Pfadname >' wurde nicht gefunden.
 Das Betriebssystem kann den angegebenen Pfad w채hrend eines Datei- oder Datentr채gerzugriffs nicht finden. Der Pfad zu einer Datei muss die Laufwerksangabe sowie die Verzeichnisse und Unterverzeichnisse enthalten, die durchlaufen werden m체ssen, um zu der Datei zu gelangen. Ein Pfad kann relativ oder absolut sein.  
@@ -19,5 +19,6 @@ Das Betriebssystem kann den angegebenen Pfad w채hrend eines Datei- oder Datentr�
 1.  Vergewissern Sie sich, dass der Pfad die erforderlichen Elemente enth채lt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [Vorgehensweise: Analysieren von Dateipfaden](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

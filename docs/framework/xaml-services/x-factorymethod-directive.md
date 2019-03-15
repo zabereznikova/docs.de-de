@@ -6,12 +6,12 @@ helpviewer_keywords:
 - FactoryMethod directive in XAML [XAML Services]
 - x:FactoryMethod directive [XAML Services]
 ms.assetid: 829bcbdf-5318-4afb-9a03-c310e0d2f23d
-ms.openlocfilehash: 2d5656e6328e1902bddcda3d1ac4b4eabb148d28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb78514540f5f44b07b1fdd16283d26c647a3ac4
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731360"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034545"
 ---
 # <a name="xfactorymethod-directive"></a>x:FactoryMethod-Anweisung
 Gibt eine Methode als einen Konstruktor, den ein XAML-Prozessor verwenden soll, um ein Objekt zu initialisieren, nach dessen Unterstützungstyp auflösen.  
@@ -57,4 +57,4 @@ Gibt eine Methode als einen Konstruktor, den ein XAML-Prozessor verwenden soll, 
  `x:FactoryMethod` als ein Element mit allen anderen Eigenschaftenelemente stehen darf, müssen alle vorausgehen `x:Arguments` auch als Elemente angegeben, und muss alle Inhalt "oder" Inner Text/Initialisierungstext vor.  
   
 ## <a name="see-also"></a>Siehe auch
-- [x:Arguments-Direktive](../../../docs/framework/xaml-services/x-arguments-directive.md)
+- [x:Arguments-Direktive](x-arguments-directive.md)

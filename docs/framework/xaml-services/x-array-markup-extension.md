@@ -8,12 +8,12 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: e94928f17a31cdadae11f69c37a4f148452b5d2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d528039245e2720f78e8817e1752d88ca94e6e0
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699739"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58047886"
 ---
 # <a name="xarray-markup-extension"></a>x:Array-Markuperweiterung
 Bietet allgemeine Unterstützung für Arrays von Objekten in XAML durch eine Markuperweiterung. Dies entspricht der `x:ArrayExtension` XAML-Typ in [MS-XAML].  
@@ -46,9 +46,9 @@ Bietet allgemeine Unterstützung für Arrays von Objekten in XAML durch eine Mar
   
  `x:Array` ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll. `x:Array` ist teilweise eine Ausnahme von dieser Regel, da statt alternatives Attribut-Wert-Behandlung, `x:Array` alternative Behandlung von seinen inneren Text-Inhalt enthält. Dieses Verhalten ermöglicht die Typen, die von einem vorhandenen Content-Modell in einem Array gruppiert werden und später im Code-Behind verweist, auf das benannte Array nicht unterstützt werden können; Rufen Sie <xref:System.Array> Methoden zum Abrufen der einzelnen Arrayelemente.  
   
- Alle Markuperweiterungen in XAML verwenden Sie die geschweiften Klammern ({,} `)` in der Attributsyntax, d.h. die Konvention, die mit dem erkennt ein XAML-Prozessor, der den Wert des Attributs eine Markuperweiterung verarbeitet werden muss. Weitere Informationen über Markuperweiterungen im Allgemeinen finden Sie unter [Typkonverter und Markuperweiterungen für XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md).  
+ Alle Markuperweiterungen in XAML verwenden Sie die geschweiften Klammern ({,} `)` in der Attributsyntax, d.h. die Konvention, die mit dem erkennt ein XAML-Prozessor, der den Wert des Attributs eine Markuperweiterung verarbeitet werden muss. Weitere Informationen über Markuperweiterungen im Allgemeinen finden Sie unter [Typkonverter und Markuperweiterungen für XAML](type-converters-and-markup-extensions-for-xaml.md).  
   
- In XAML 2009 `x:Array` als Sprachprimitive eine Markuperweiterung definiert ist. Weitere Informationen finden Sie unter [integrierte Typen für häufige XAML-Sprachprimitive](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md).  
+ In XAML 2009 `x:Array` als Sprachprimitive eine Markuperweiterung definiert ist. Weitere Informationen finden Sie unter [integrierte Typen für häufige XAML-Sprachprimitive](built-in-types-for-common-xaml-language-primitives.md).  
   
 ## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
  In der Regel der Object-Elemente, die Werte ein `x:Array` sind keine Elemente, die in vorhanden sind die [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] XAML-Namespace und eine Präfix-Zuordnung zu einem nicht standardmäßigen XAML-Namespace erfordern.  
@@ -67,8 +67,8 @@ Bietet allgemeine Unterstützung für Arrays von Objekten in XAML durch eine Mar
   
  `</x:Array>`  
   
- Für benutzerdefinierte Typen, die als Elemente des Arrays verwendet werden, muss die Klasse auch die Anforderungen für die in XAML instanziiert wird, die als Object-Elemente unterstützen. Weitere Informationen finden Sie unter [XAML und benutzerdefinierte Klassen für WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
+ Für benutzerdefinierte Typen, die als Elemente des Arrays verwendet werden, muss die Klasse auch die Anforderungen für die in XAML instanziiert wird, die als Object-Elemente unterstützen. Weitere Informationen finden Sie unter [XAML und benutzerdefinierte Klassen für WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Markuperweiterungen und WPF-XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [Aus WPF zu System.Xaml migrierte Typen](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [Markuperweiterungen und WPF-XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Aus WPF zu System.Xaml migrierte Typen](types-migrated-from-wpf-to-system-xaml.md)
