@@ -1,13 +1,7 @@
 ---
-title: F#-Sprachreferenz
-description: Informieren Sie sich F#-Sprache-Feature von diesem Verweis zum sprachtoken Konzepte, Typen, Ausdrücke und Compiler-unterstütztes Konstrukt Themen.
+title: 'F#-Sprachreferenz'
+description: 'Suchen F# Language Featureinformationen von diesem Verweis zum sprachtoken Konzepte, Typen, Ausdrücke und Compiler-unterstütztes Konstrukt Themen.'
 ms.date: 05/16/2016
-ms.openlocfilehash: adce37ee393673b7611ad24f385c8b8106f6ce86
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45646414"
 ---
 # <a name="f-language-reference"></a>F#-Sprachreferenz
 
@@ -91,11 +85,11 @@ Die folgende Tabelle enthält Themen, in denen F#-Ausdrücke beschrieben werden.
 |-----|-----------|
 |[Bedingte Ausdrücke: `if...then...else`](conditional-expressions-if-then-else.md)|Beschreibt den `if...then...else`-Ausdruck, der unterschiedliche Codezweige ausführt und je nach angegebenem booleschen Ausdruck ebenso einen anderen Wert ergibt.|
 |[Vergleichsausdrücke](match-expressions.md)|Beschreibt den `match`-Ausdruck, der die Verzweigungssteuerung bereitstellt, die auf dem Vergleich eines Ausdrucks mit einer Reihe von Mustern basiert.|
-|[Schleifen: `for...to`-Ausdruck](loops-for-to-expression.md)|Beschreibt den `for...to`-Ausdruck, der zum Durchlaufen einer Schleife eines Wertebereichs einer Schleifenvariable verwendet wird.|
-|[Schleifen: `for...in`-Ausdruck](loops-for-in-expression.md)|Beschreibt den `for...in`-Ausdruck, ein Schleifenkonstrukt, das zum Durchlaufen der Übereinstimmungen eines Musters in einer aufzählbaren Auflistung verwendet wird, z.B. eine Reihe von Ausdrücken, eine Sequenz, Liste, ein Array oder ein anderes Konstrukt, das die Enumeration unterstützt.|
-|[Schleifen: `while...do`-Ausdruck](loops-while-do-expression.md)|Beschreibt den `while...do`-Ausdruck, der verwendet wird, um iterative Ausführung (Schleifen) auszuführen, während eine bestimmte Testbedingung erfüllt ist.|
+|[Schleifen: `for...to` Ausdruck](loops-for-to-expression.md)|Beschreibt den `for...to`-Ausdruck, der zum Durchlaufen einer Schleife eines Wertebereichs einer Schleifenvariable verwendet wird.|
+|[Schleifen: `for...in` Ausdruck](loops-for-in-expression.md)|Beschreibt den `for...in`-Ausdruck, ein Schleifenkonstrukt, das zum Durchlaufen der Übereinstimmungen eines Musters in einer aufzählbaren Auflistung verwendet wird, z.B. eine Reihe von Ausdrücken, eine Sequenz, Liste, ein Array oder ein anderes Konstrukt, das die Enumeration unterstützt.|
+|[Schleifen: `while...do` Ausdruck](loops-while-do-expression.md)|Beschreibt den `while...do`-Ausdruck, der verwendet wird, um iterative Ausführung (Schleifen) auszuführen, während eine bestimmte Testbedingung erfüllt ist.|
 |[Objektausdrücke](object-expressions.md)|Beschreibt Objektausdrücke, die Ausdrücke darstellen, die neue Instanzen eines dynamisch erstellten anonymen Objekttyps erstellen, der auf einem vorhandenen Basistyp, einer Schnittstelle oder einem Satz von Schnittstellen basiert.|
-|[Verzögerte Berechnungen](lazy-computations.md)|Beschreibt verzögerte Berechnungen, was Berechnungen sind, die nicht sofort ausgewertet werden, sondern erst dann, wenn das Ergebnis tatsächlich benötigt wird.|
+|[Nicht strikte Ausdrücke](lazy-expressions.md)|Beschreibt verzögerte Ausdrücke, die Berechnungen sind, die nicht sofort ausgewertet, aber stattdessen ausgewertet, wenn das Ergebnis tatsächlich benötigt wird.|
 |[Berechnungsausdrücke](computation-expressions.md)|Beschreibt Berechnungsausdrücke in F#, die eine bequeme Syntax für das Schreiben von Berechnungen bereitstellen, die mithilfe von Ablaufsteuerungskonstrukten und Bindungen sequenziert und kombiniert werden können. Sie können verwendet werden, um eine einfache Syntax für *monads* bereitstellen, eine Funktion zur funktionalen Programmierung, die zur Verwaltung von Daten, Steuereffekte und Nebenwirkungen in funktionalen Programmen verwendet werden können. Ein Typ eines Berechnungsausdrucks, der asynchrone Workflow, bietet Unterstützung für asynchrone und gleichzeitige Berechnungen. Weitere Informationen finden Sie unter [Asynchrone Workflows](asynchronous-workflows.md).|
 |[Asynchrone Workflows](asynchronous-workflows.md)|Beschreibt asynchrone Workflows, eine Sprachfunktion, mit der Sie asynchronen Code in einer Weise schreiben können, die der Methode zum Schreiben von synchronem Code sehr ähnlich ist.|
 |[Zitieren von Code](code-quotations.md)|Beschreibt Codezitate, eine Sprachfunktion, die das programmgesteuerte Generieren und Arbeiten mit F#-Codeausdrücken ermöglicht.|

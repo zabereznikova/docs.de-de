@@ -449,7 +449,7 @@
 ### [Signaturdateien](fsharp/language-reference/signature-files.md)
 ### [Maßeinheiten](fsharp/language-reference/units-of-measure.md)
 ### [XML-Dokumentation](fsharp/language-reference/xml-documentation.md)
-### [Verzögerte Berechnungen](fsharp/language-reference/lazy-computations.md)
+### [Nicht strikte Ausdrücke](fsharp/language-reference/lazy-expressions.md)
 ### [Berechnungsausdrücke](fsharp/language-reference/computation-expressions.md)
 ### [Asynchrone Workflows](fsharp/language-reference/asynchronous-workflows.md)
 ### [Abfrageausdrücke](fsharp/language-reference/query-expressions.md)
@@ -1210,6 +1210,7 @@
 #### [Einzelvorhersage mit PredictionEngine](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [Operationalisieren eines trainierten Modells](machine-learning/how-to-guides/consuming-model-ml-net.md)
 #### [Azure Functions-Servicemodell](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
+#### [Servicemodell in Web-API](machine-learning/how-to-guides/serve-model-web-api-ml-net.md)
 ### Infer.NET
 #### [Probabilistische Programmierung mit Infer.NET](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## Referenz

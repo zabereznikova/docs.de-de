@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 20591186448fa1c3b4a91ed303bd2a5c6e452491
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 683c28d626f32971e7e1fa5f50343b3e7ea125be
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272018"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845959"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 Definiert einen TCP-Transport, der von einem Kanal zum Übertragen von Nachrichten für eine benutzerdefinierte Bindung verwendet werden kann.  
@@ -49,7 +49,7 @@ Definiert einen TCP-Transport, der von einem Kanal zum Übertragen von Nachricht
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|channelInitializationTimeout|Ruft das Zeitlimit zum Initialisieren eines Kanals ab, der akzeptiert werden soll, oder legt das Limit fest.  Die maximale Zeit in Sekunden, in der sich der Kanal im Initialisierungsstatus befinden kann, bevor die Verbindung getrennt wird. Dieses Kontingent umfasst die Zeit, die eine TCP-Verbindung beanspruchen darf, um sich über das .NET Message Framing-Protokoll zu authentifizieren. Ein Client muss vorab einige Daten senden, bevor der Server über genügend Informationen zum Ausführen der Authentifizierung verfügt. Der Standardwert ist 30 Sekunden.|  
+|channelInitializationTimeout|Ruft das Zeitlimit zum Initialisieren eines Kanals ab, der akzeptiert werden soll, oder legt das Limit fest.  Die maximale Zeit in Sekunden, in der sich der Kanal im Initialisierungsstatus befinden kann, bevor die Verbindung getrennt wird. Dieses Kontingent umfasst die Zeit, die eine TCP-Verbindung ausführen kann, um sich über das .NET Message Framing-Protokoll zu authentifizieren. Ein Client muss vorab einige Daten senden, bevor der Server über genügend Informationen zum Ausführen der Authentifizierung verfügt. Der Standardwert ist 30 Sekunden.|  
 |connectionBufferSize|Ruft die Puffergröße ab, oder legt die Puffergröße fest, die zum Übertragen eines Teils der serialisierten Nachricht vom Client oder Dienst verwendet wird.|  
 |hostNameComparisonMode|Ruft einen Wert ab oder legt einen Wert fest, der angibt, ob der Hostname zum Erreichen des Diensts bei übereinstimmendem URI verwendet werden soll.|  
 |listenBacklog|Die maximale Anzahl der Verbindungsanforderungen in der Warteschlange, die für einen Webdienst ausstehen können. Das `connectionLeaseTimeout`-Attribut beschränkt die Zeit, die ein Client wartet, bevor eine Verbindungsausnahme ausgelöst wird. Dies ist eine Eigenschaft auf Socketebene, die die maximale Anzahl der in der Warteschlange eingereihten Verbindungsanforderungen steuert, die für einen Webdienst ausstehend sein können. Wenn ListenBacklog zu niedrig ist, wird WCF keine Anforderungen mehr und neue Verbindungen aus diesem Grund löschen, bis der Server einige der vorhandenen Verbindungen in der Warteschlange bestätigt. Der Standardwert ist 16 * Anzahl der Prozessoren.|  

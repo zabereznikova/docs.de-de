@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680359"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844248"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Verwenden von Docker-Tools in Visual Studio 2017 unter Windows
 
@@ -20,7 +20,8 @@ Der Developer-Workflow bei Verwendung der Docker-Tools in Visual Studio 2017 Ver
 
 Mit den neuesten Versionen von Docker für Windows ist es einfacher, entwickeln jemals auf Docker-Anwendungen, da das Setup einfach ist, wie in den folgenden Referenzen beschrieben.
 
-> [! Informationen] Weitere Informationen zum Installieren von Docker für Windows, navigieren zu (<https://docs.docker.com/docker-for-windows/>).
+> [!TIP]
+> Wechseln Sie zu, um weitere Informationen zum Installieren von Docker für Windows (<https://docs.docker.com/docker-for-windows/>).
 
 ## <a name="docker-support-in-visual-studio-2017"></a>Docker-Unterstützung in Visual Studio 2017
 
@@ -83,7 +84,8 @@ In der folgende Tabelle können Sie entscheiden, wie Sie diese Optionen festlege
 > [!WARNING]
 > Wenn die Localhost-SSL-Zertifikat nicht vertrauenswürdig ist, und Sie das Kontrollkästchen zum Unterdrücken der eingabeaufforderungen, können der HTTPS-webanforderungen zur Laufzeit in Ihrer app oder Ihres Diensts fehlschlagen. In diesem Fall deaktivieren Sie die **keine Aufforderung** aktiviert, führen Sie das Projekt, und vertrauen an der Eingabeaufforderung angeben.
 
-> [! Informationen] Weitere Informationen zu den Dienste-Implementierung und Verwendung von Visual Studio-Tools für Docker, lesen Sie die folgenden Artikeln:
+> [!TIP]
+> Weitere Informationen zu den Dienste-Implementierung und Verwendung von Visual Studio-Tools für Docker lesen Sie die folgenden Artikeln:
 >
 >Debuggen von apps in einem lokalen Docker-Container: <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >

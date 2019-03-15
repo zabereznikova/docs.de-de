@@ -1,22 +1,17 @@
 ---
-title: Einführung in C# - Leitfaden für C#
-description: Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.
+title: 'Einführung in C# - Leitfaden für C#'
+description: 'Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.'
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: bece954c095870651126e486c2c6eb978e78f96d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150393"
 ---
-# <a name="a-tour-of-the-c-language"></a>Überblick über C#  
+
+# <a name="a-tour-of-the-c-language"></a>Überblick über C#
 
 C# (Aussprache „C Sharp“) ist eine einfache, moderne, objektorientierte und typsichere Programmiersprache. C# hat seine Wurzeln in der C-Sprachenfamilie und ist Programmierern, die mit C, C++, Java und JavaScript arbeiten, sofort vertraut.
 
 C# ist eine objektorientierte Sprache, umfasst allerdings auch Unterstützung für eine ***komponentenorientierte*** Programmierung. Die Softwareentwicklung von heute beruht zunehmend auf Softwarekomponenten in Form von eigenständigen und selbstbeschreibenden Funktionspaketen. Wichtig bei solchen Komponenten ist, dass sie für ein Programmiermodell mit Eigenschaften, Methoden und Ereignissen stehen. Sie verfügen über Attribute, die deklarative Informationen zur Komponente bereitstellen, und lassen sich in ihre eigene Dokumentation integrieren. C# bietet Sprachkonstrukte zur direkten Unterstützung für diese Konzepte, wodurch C# zu einer sehr natürlichen Sprache wird, in der Softwarekomponenten erstellt und verwendet werden.
 
-Mehrere C#-Funktionen helfen beim Entwickeln stabiler und dauerhafter Anwendungen: ***Automatische Speicherbereinigung*** fordert automatisch Arbeitsspeicher zurück, der von nicht reagierenden und nicht verwendeten Objekten blockiert wird. ***Ausnahmebehandlung*** bietet einen strukturierten und erweiterbaren Ansatz zur Fehlererkennung und Wiederherstellung. Die ***typsichere*** Gestaltung der Sprache macht das Lesen in nicht initialisierten Variablen, das Indizieren von Arrays jenseits der Grenzen oder das Durchführen nicht geprüfter Typumwandlungen unmöglich.
+Mehrere C#-Funktionen helfen beim Entwickeln stabiler und dauerhafter Anwendungen: ***Garbage Collection*** fordert automatisch Arbeitsspeicher zurück, der von nicht reagierenden und nicht verwendeten Objekten blockiert wird. ***Ausnahmebehandlung*** bietet einen strukturierten und erweiterbaren Ansatz zur Fehlererkennung und Wiederherstellung. Die ***typsichere*** Gestaltung der Sprache macht das Lesen in nicht initialisierten Variablen, das Indizieren von Arrays jenseits ihrer Grenzen oder das Durchführen nicht geprüfter Typumwandlungen unmöglich.
 
 C# verfügt über ein ***einheitliches Typsystem***. Alle C#-Typen, einschließlich primitiver Typen wie `int` und `double`, erben von einem einzelnen `object`-Stammtyp. Daher verwenden alle Typen einen Satz allgemeiner Vorgänge, und Werte eines beliebigen Typs können gespeichert, übertragen und konsistent ausgeführt werden. Darüber hinaus unterstützt C# benutzerdefinierte Verweistypen und Werttypen und ermöglicht so die dynamische Zuordnung von Objekten sowie die Inlinespeicherung einfacher Strukturen.
 
@@ -73,7 +68,7 @@ Es gibt noch viel mehr über C# zu erfahren.  Die folgenden Themen bieten eine �
 * [Delegaten](delegates.md)
     - Ein ***Delegattyp*** stellt Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp dar. Delegate ermöglichen die Behandlung von Methoden als Entitäten, die Variablen zugewiesen und als Parameter übergeben werden können. Delegate ähneln dem Konzept von Funktionszeigern, die Sie in einigen anderen Sprachen finden. Im Gegensatz zu Funktionszeigern sind Delegate allerdings objektorientiert und typsicher.
 * [Attribute](attributes.md)
-    * ***Attribute*** ermöglichen Programmen das Angeben zusätzlicher deklarativer Informationen zu Typen, Member und andere Entitäten.
+     * ***Attribute*** ermöglichen Programmen das Angeben zusätzlicher deklarativer Informationen zu Typen, Member und andere Entitäten.
 
->[!div class="step-by-step"]
->[Nächste](program-structure.md)
+> [!div class="step-by-step"]
+> [Nächste](program-structure.md)

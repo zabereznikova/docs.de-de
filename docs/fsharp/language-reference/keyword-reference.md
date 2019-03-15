@@ -2,12 +2,12 @@
 title: Schlüsselwortreferenz
 description: Hier finden Sie Links zu Informationen über alle der F# Programmiersprachen-Schlüsselwörter.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: d55846fe7c8d31454b6bc8684de75546800df7d6
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "54857904"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845293"
 ---
 # <a name="keyword-reference"></a>Schlüsselwortreferenz
 
@@ -50,7 +50,7 @@ Die folgende Tabelle zeigt alle F# Schlüsselwörter in alphabetischer Reihenfol
 |`inline`|[Funktionen](functions/index.md)<br /><br />[Inlinefunktionen](functions/inline-functions.md)|Verwendet, um anzugeben, dass ein, die direkt in der aufrufenden Code integriert werden soll.|
 |`interface`|[Schnittstellen](interfaces.md)|Sie deklarieren und Implementieren von Schnittstellen verwendet.|
 |`internal`|[Zugriffssteuerung](access-control.md)|Verwendet, um anzugeben, dass ein Element sichtbar ist innerhalb einer Assembly außerhalb davon hingegen nicht.|
-|`lazy`|[Verzögerte Berechnungen](lazy-computations.md)|Verwendet, um eine Berechnung angeben, die ausgeführt werden soll, nur, wenn ein Ergebnis benötigt wird.|
+|`lazy`|[Nicht strikte Ausdrücke](lazy-expressions.md)|Verwendet, um einen Ausdruck angeben, die ausgeführt werden, nur, wenn ein Ergebnis benötigt wird.|
 |`let`|[`let` Bindungen](functions/let-bindings.md)|Zum Verknüpfen oder zu binden, einen Namen auf einen Wert oder die Funktion verwendet.|
 |`let!`|[Asynchrone Workflows](asynchronous-workflows.md)<br /><br />[Berechnungsausdrücke](computation-expressions.md)|Verwendet in asynchrone Workflows, um einen Namen auf das Ergebnis eine asynchrone Berechnung zu binden, oder, im anderen Berechnungsausdrücken verwendet, um einen Namen an ein Ergebnis zu binden, der den Typ der Berechnung wird.|
 |`match`|[Vergleichsausdrücke](match-expressions.md)|Mit der Verzweigung von Vergleichen eines Werts mit einem Muster.|

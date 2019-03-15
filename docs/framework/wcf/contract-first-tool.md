@@ -2,12 +2,12 @@
 title: Vertrag zuerst-Tool
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: 86ef109425a75e46e056447f4f40df36aa332293
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: ef19843d6c8a9de0b926dd8512f5a58a5966e1bf
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261614"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846180"
 ---
 # <a name="contract-first-tool"></a>Vertrag zuerst-Tool
 Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] können Datenvertragsklassen mithilfe des Vertrag zuerst-Tools automatisch aus vorhandenen Diensten erstellt werden. Zum Verwenden des Vertrag zuerst-Tools muss die XSD (XML Schema Definition)-Datei lokal heruntergeladen werden. Das Tool kann keine Remotedatenverträge per HTTP importieren.
@@ -87,7 +87,7 @@ Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In [!I
 
 -   **ImportXMLTypes**: Diese Einstellung gibt an, ob die Datenvertrags-Serialisierer anzuwendende konfiguriert die <xref:System.SerializableAttribute> -Attribut auf Klassen ohne den <xref:System.Runtime.Serialization.DataContractAttribute> Attribut.  Diese Einstellung gilt nur, wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**.
 
--   **SupportFx35TypedDataSets**: Diese Einstellung gibt an, ob eine zusätzliche Funktionalität für typisierte Datasets, die für .net erstellt Framework 3.5. Wenn **Serialisierungsmodus** nastaven NA hodnotu **XML-Serialisierungsprogramm**, <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> Erweiterung wird an den XML-Schema-Importer hinzugefügt werden, wenn dieser Wert auf "true" festgelegt ist. Wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**, den Typ <xref:System.DateTimeOffset> aus verweisen ausgeschlossen wird, wenn dieser Wert auf "False" festgelegt ist, damit eine <xref:System.DateTimeOffset> wird immer generiert für ältere Frameworkversionen.
+-   **SupportFx35TypedDataSets**: Diese Einstellung gibt an, ob zusätzliche Funktionen für typisierte Datasets, die für .NET Framework 3.5 erstellten bereitzustellen. Wenn **Serialisierungsmodus** nastaven NA hodnotu **XML-Serialisierungsprogramm**, <xref:System.Data.Design.TypedDataSetSchemaImporterExtensionFx35> Erweiterung wird an den XML-Schema-Importer hinzugefügt werden, wenn dieser Wert auf "true" festgelegt ist. Wenn **Serialisierungsmodus** nastaven NA hodnotu **Data Contract Serializer**, den Typ <xref:System.DateTimeOffset> aus verweisen ausgeschlossen wird, wenn dieser Wert auf "False" festgelegt ist, damit eine <xref:System.DateTimeOffset> wird immer generiert für ältere Frameworkversionen.
 
 -   **InputXsdFiles**: Diese Einstellung gibt die Liste der Eingabedateien an. Jede Datei muss ein gültiges XML-Schema enthalten.
 
@@ -105,7 +105,7 @@ Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In [!I
     "*, <CLR Namespace>"
     ```
 
--   **OutputDirectory**: Diese Einstellung gibt an, das Verzeichnis, in dem die Codedateien generiert werden.
+-   **OutputDirectory**: Diese Einstellung gibt das Verzeichnis, in dem die Codedateien generiert wird.
 
  Die Einstellungen werden verwendet, um Dienstvertragstypen aus Vertragsdateien zu generieren, wenn das Projekt erstellt wird.
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 70e589fcff241a664ef470dfeb746412cde6b515
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbd70631a365c8687ad9b7ed89639e9041e4366e
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570199"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845665"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Aktivieren von Multiple Active Result Sets
 MARS (Multiple Active Result Sets) ist eine Funktion, die mit SQL Server verwendet wird und das Ausführen mehrerer Batches über eine einzelne Verbindung ermöglicht. Wenn MARS für die Verwendung mit SQL Server aktiviert wird, fügen die einzelnen verwendeten Befehlsobjekte der Verbindung eine Sitzung hinzu.  
@@ -94,7 +94,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Meldung: Diese gibt an, dass der Transaktionskontext von einer anderen Sitzung verwendet wird.  
   
- Quelle: .Net SqlClient Data Provider  
+ Quelle: .NET SqlClient-Datenanbieter  
   
  Erwartet: (NULL)  
   

@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation-Funktionsdetails
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721852"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846544"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation-Funktionsdetails
 
@@ -101,7 +101,7 @@ Das WCF-Konfigurationsschema ist komplex und bietet Benutzern viele schwer zu fi
 
 - [Standardendpunktelement](https://go.microsoft.com/fwlink/?LinkId=204942)
 
-- [Dienstkonfigurationsverbesserungen in .net Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [Dienstkonfigurationsverbesserungen in .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
 
 - [Häufiger Benutzerfehler in .NET 4: Tippfehler bei den Namen der WF-/WCF-Dienst](https://go.microsoft.com/fwlink/?LinkId=204944)
 
@@ -263,7 +263,7 @@ Ein Benutzer muss zur Eingabe aufgefordert werden. Unter normalen Umständen wü
 
 ## <a name="wcf-routing-service"></a>WCF-Routingdienst
 
-Der Routingdienst soll ein generischer Software Router zu sein, der können Sie steuern, wie WCF-Nachrichten zwischen den Clients und Diensten fließen. Der Routingdienst können Sie entkoppeln Ihre Clients Ihrer Dienste, die Ihnen mehr Freiheit in Bezug auf die Konfigurationen bietet, können Sie unterstützen, und die Flexibilität bei der Verwendung zum Hosten Ihrer Dienste in Betracht ziehen. In .NET 3.5 waren Clients und Dienste eng gekoppelt; ein Client musste es musste es, sprechen und, wo sie gespeichert wurden alle Dienste kennen. Außerdem bestanden für WCF in .NET Framework 3.5 die folgenden Einschränkungen:
+Der Routingdienst soll ein generischer Software Router zu sein, der können Sie steuern, wie WCF-Nachrichten zwischen den Clients und Diensten fließen. Der Routingdienst können Sie entkoppeln Ihre Clients Ihrer Dienste, die Ihnen mehr Freiheit in Bezug auf die Konfigurationen bietet, können Sie unterstützen, und die Flexibilität bei der Verwendung zum Hosten Ihrer Dienste in Betracht ziehen. In .NET 3.5 waren Clients und Dienste eng gekoppelt; ein Client musste es musste es, sprechen und, wo sie gespeichert wurden alle Dienste kennen. WCF in .NET Framework 3.5 mussten außerdem die folgenden Einschränkungen:
 
 - Die Fehlerbehandlung war komplex, da diese Logik fest in den Client codiert werden musste.
 
@@ -271,7 +271,7 @@ Der Routingdienst soll ein generischer Software Router zu sein, der können Sie 
 
 - Dienste waren selten gut aufgeteilt: Es ist einfacher, eine Clientinteraktion mit nur einem Dienst umzusetzen, der alles implementiert, anstatt zwischen mehreren Diensten auswählen zu müssen.
 
-Beim Entwurf des Routingdiensts in .NET 4 wurde dafür Sorge getragen, dass diese Probleme leichter gelöst werden können. Der neue Routingdienst hat die folgenden Funktionen:
+Des Routingdiensts in .NET 4 wurde entwickelt, um diese Probleme lösen zu erleichtern. Der neue Routingdienst hat die folgenden Funktionen:
 
 1. Inhaltsbasiertes Routing (<xref:System.ServiceModel.Dispatcher.MessageFilter>-Objekte untersuchen eine Nachricht, um das Ziel der Nachricht zu ermitteln.
 
@@ -327,7 +327,7 @@ Ein Entwickler möchte Endpunkte nicht hartcodieren, da noch nicht feststeht, wa
 
 ## <a name="tracking"></a>Nachverfolgung
 
-Die workflownachverfolgung bietet einen Einblick in die Ausführung einer Workflowinstanz. Die Nachverfolgungsereignisse werden von einem Workflow auf workflowinstanzebene und beim Ausführen von Aktivitäten innerhalb des Workflows ausgegeben. Dem Workflowhost muss eine Workflownachverfolgungskomponente hinzugefügt werden, um Nachverfolgungsdatensätze zu abonnieren. Die Nachverfolgungsdatensätze werden mit einem Nachverfolgungsprofil gefiltert. .NET Framework stellt eine ETW-Nachverfolgungskomponente (Event Tracing for Windows, Ereignisablaufverfolgung für Windows) bereit, und in der Datei "machine.config" wird ein Basisprofil installiert.
+Die workflownachverfolgung bietet einen Einblick in die Ausführung einer Workflowinstanz. Die Nachverfolgungsereignisse werden von einem Workflow auf workflowinstanzebene und beim Ausführen von Aktivitäten innerhalb des Workflows ausgegeben. Dem Workflowhost muss eine Workflownachverfolgungskomponente hinzugefügt werden, um Nachverfolgungsdatensätze zu abonnieren. Die Nachverfolgungsdatensätze werden mit einem Nachverfolgungsprofil gefiltert. .NET Framework bietet ein Nachverfolgungsteilnehmer ETW (Event-Ereignisablaufverfolgung für Windows), und ein Basisprofil installiert ist, in der Datei "Machine.config".
 
 ### <a name="getting-started"></a>Erste Schritte
 
