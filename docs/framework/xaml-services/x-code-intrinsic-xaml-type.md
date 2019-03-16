@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 74fcc158c0556b85ac5175584fa4948513c69053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641108"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58050596"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>Systeminterner x:Code-XAML-Typ
 Ermöglicht die Platzierung von Code innerhalb einer XAML-Produktion. Dieser Code kann entweder von einer Implementierung der XAML-Prozessor kompiliert werden, die XAML, oder von links in der XAML-Produktion zur späteren Verwendung für z.B. Interpretation von einer Runtime kompiliert wird.  
@@ -40,7 +40,7 @@ Ermöglicht die Platzierung von Code innerhalb einer XAML-Produktion. Dieser Cod
   
 -   Die `x:Code` -Anweisungselement muss ein unmittelbar untergeordnetes Element des Stammelements der XAML-Produktion sein.  
   
--   [X: Class-Anweisung](../../../docs/framework/xaml-services/x-class-directive.md) muss für das Stammelement der übergeordneten bereitgestellt werden.  
+-   [X: Class-Anweisung](x-class-directive.md) muss für das Stammelement der übergeordneten bereitgestellt werden.  
   
 -   Der Code eingefügt, in `x:Code` behandelt werden, von der Kompilierung innerhalb des Bereichs der partiellen Klasse sein, die bereits für diese XAML-Seite erstellt wird. Aus diesem Grund muss alle Code, den Sie definieren, Member oder Variablen der partiellen Klasse sein.  
   
@@ -49,6 +49,6 @@ Ermöglicht die Platzierung von Code innerhalb einer XAML-Produktion. Dieser Cod
 -   Verweise auf Entitäten außerhalb der partiellen Klasse CLR-Namespace müssen alle vollqualifiziert sein. Wenn Mitglieder, die deklariert wird, überschreibungen, um die partielle Klasse überschreibbare Member sind, muss dies mit dem sprachspezifischen Override-Schlüsselwort angegeben werden. Wenn Sie im Member deklariert `x:Code` Bereich in Konflikt mit Membern der partiellen Klasse aus dem XAML erstellt, so, dass der Compiler den Konflikt, meldet die XAML-Datei kann nicht kompiliert oder geladen.  
   
 ## <a name="see-also"></a>Siehe auch
-- [x:Class-Anweisung](../../../docs/framework/xaml-services/x-class-directive.md)
-- [Code-Behind und XAML in WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [Übersicht über XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [x:Class-Anweisung](x-class-directive.md)
+- [Code-Behind und XAML in WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [Übersicht über XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

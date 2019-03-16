@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: f3417ed53131a695623ea6c365314ab2c5eedd37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04d1a8b1c6f05537f12c3df79fda007332621264
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629295"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049457"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Für Typkonverter und Markuperweiterungen verfügbare Dienstkontexte
 Autoren der Typen, die Typ-Konverter und Markuperweiterungsverwendungen erfordern häufig Kontextinformationen dazu, wo sich eine Verwendung im Markup oder in der umgebenden Objektdiagrammstruktur befindet. Informationen können erforderlich sein, damit das bereitgestellte Objekt ordnungsgemäß instanziiert wird oder Objektverweise zu vorhandenen Objekten im Objektdiagramm hergestellt werden können. Wenn Sie .NET Framework-XAML-Dienste verwenden, wird der Kontext, der möglicherweise als eine Reihe von Dienstschnittstellen verfügbar gemacht werden muss. Der Typkonverter oder der Markuperweiterungsunterstützungscode können eine Abfrage für einen Dienstkontext für Anbieter ausführen, die verfügbar ist und von <xref:System.Xaml.XamlObjectWriter> oder verwandten Typen übergeben wird. Der XAML-Schemakontext ist direkt über einen solchen Dienst verfügbar. In diesem Thema wird beschrieben, wie von einer Wertkonverterimplementierung auf Dienstkontexte zugegriffen werden kann, außerdem werden normalerweise verfügbare Dienste und ihre Rollen aufgeführt.  
@@ -129,7 +129,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Dienst-API:**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
- Der XAML-Schemakontext ist für alle Vorgänge zur Ladeverzögerung erforderlich, da derselbe Schemakontext in dem verzögerten Bereich fungieren muss, um den verzögerten Inhalt zu integrieren. Weitere Informationen zur Rolle des XAML-Schemakontexts finden Sie unter [XAML Services](../../../docs/framework/xaml-services/index.md).  
+ Der XAML-Schemakontext ist für alle Vorgänge zur Ladeverzögerung erforderlich, da derselbe Schemakontext in dem verzögerten Bereich fungieren muss, um den verzögerten Inhalt zu integrieren. Weitere Informationen zur Rolle des XAML-Schemakontexts finden Sie unter [XAML Services](index.md).  
   
 ### <a name="irootobjectprovider"></a>IRootObjectProvider  
  **Referenzdokumentation**: <xref:System.Xaml.IRootObjectProvider>  
@@ -189,5 +189,5 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [Übersicht über Markuperweiterungen für XAML](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)
-- [Übersicht über Typkonverter für XAML](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+- [Übersicht über Markuperweiterungen für XAML](markup-extensions-for-xaml-overview.md)
+- [Übersicht über Typkonverter für XAML](type-converters-for-xaml-overview.md)

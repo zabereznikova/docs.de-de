@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: 2fc44163db99be5a0f2ddb2820053a5bdda3ccbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86e5619774cc1512e39fa2fb50f4c0ba5f1d074c
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668989"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042091"
 ---
 # <a name="xtype-markup-extension"></a>x:Type-Markuperweiterung
 Stellt die CLR <xref:System.Type> -Objekt, das die zugrunde liegende Typ für einen angegebenen XAML-Typ ist.  
@@ -61,7 +61,7 @@ Stellt die CLR <xref:System.Type> -Objekt, das die zugrunde liegende Typ für ei
 ## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
   
 ### <a name="default-xaml-namespace-and-type-mapping"></a>Standard-XAML-Namespace und Typzuordnung  
- Der XAML-Standardnamespace für WPF-Programmierung enthält die XAML-Typen für die typische XAML-Szenarien benötigen Sie die meisten; aus diesem Grund können Sie häufig Präfixe vermeiden, wenn Sie Werte für XAML-Typen zu verweisen. Sie müssen möglicherweise ein Präfix zugeordnet wird, wenn Sie einen Typ verweist, aus einer benutzerdefinierten Assembly oder für Typen, die in einer WPF-Assembly vorhanden sein, aber aus einem CLR-Namespace, der nicht dem XAML-Standardnamespace zugeordnet werden. Weitere Informationen zum Zuordnen von CLR-Namespaces, XAML-Namespaces und Präfixe finden Sie unter [XAML-Namespaces und Namespace-Zuordnung für WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ Der XAML-Standardnamespace für WPF-Programmierung enthält die XAML-Typen für die typische XAML-Szenarien benötigen Sie die meisten; aus diesem Grund können Sie häufig Präfixe vermeiden, wenn Sie Werte für XAML-Typen zu verweisen. Sie müssen möglicherweise ein Präfix zugeordnet wird, wenn Sie einen Typ verweist, aus einer benutzerdefinierten Assembly oder für Typen, die in einer WPF-Assembly vorhanden sein, aber aus einem CLR-Namespace, der nicht dem XAML-Standardnamespace zugeordnet werden. Weitere Informationen zum Zuordnen von CLR-Namespaces, XAML-Namespaces und Präfixe finden Sie unter [XAML-Namespaces und Namespace-Zuordnung für WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 ### <a name="type-properties-that-support-typename-as-string"></a>Geben Sie die Eigenschaften dieser Unterstützung Typename-als-Zeichenfolge  
  WPF unterstützt Techniken, mit denen der Wert für einige Eigenschaften des Typs <xref:System.Type> ohne eine `x:Type` Markuperweiterungsverwendung. Stattdessen können Sie den Wert als Zeichenfolge angeben, die den Typ bezeichnet. Beispiele dafür sind <xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType> und <xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>. Für dieses Verhalten wird nicht über Markuperweiterungen oder Typkonverter unterstützt. Stattdessen ist dies eine Verzögerung Verhalten über implementiert <xref:System.Windows.FrameworkElementFactory>.  
@@ -71,7 +71,7 @@ Stellt die CLR <xref:System.Type> -Objekt, das die zugrunde liegende Typ für ei
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 bietet zusätzliche Unterstützung für generische Typen und das Funktionsverhalten der ändert `x:TypeArguments` und `x:Type` zur Bereitstellung dieser Unterstützung.  
   
--   `x:TypeArguments` und das zugeordnete Objekt-Element für eine generische Objektinstanziierung kann auf andere Elemente als Stamm. Weitere Informationen finden Sie im Abschnitt "XAML 2009" [X: TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+-   `x:TypeArguments` und das zugeordnete Objekt-Element für eine generische Objektinstanziierung kann auf andere Elemente als Stamm. Weitere Informationen finden Sie im Abschnitt "XAML 2009" [X: TypeArguments Directive](x-typearguments-directive.md).  
   
 -   XAML 2009 unterstützt eine Syntax zum Angeben eines generischen Typs Einschränkung im Markup. Dies kann verwendet werden, indem `x:TypeArguments`, `x:Type`, oder indem die beiden Funktionen sollten in Kombination.  
   
@@ -81,6 +81,6 @@ Stellt die CLR <xref:System.Type> -Objekt, das die zugrunde liegende Typ für ei
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Style>
-- [Erstellen von Formaten und Vorlagen](../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [Übersicht über XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [Markuperweiterungen und WPF-XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [Erstellen von Formaten und Vorlagen](../wpf/controls/styling-and-templating.md)
+- [Übersicht über XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Markuperweiterungen und WPF-XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

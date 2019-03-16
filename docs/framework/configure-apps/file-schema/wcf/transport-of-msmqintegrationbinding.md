@@ -2,12 +2,12 @@
 title: <transport> von <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: c266d751ff3e89f653763ed83c78041d89e22517
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 53b434002d81e4735688ae3821db356c4e6e0fb1
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55290146"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58040293"
 ---
 # <a name="transport-of-msmqintegrationbinding"></a>\<transport> of \<msmqIntegrationBinding>
 Definiert die Sicherheitseinstellungen für Message Queuing-Integration und -Transport.  
@@ -40,7 +40,7 @@ msmqIntegrationBinding
 |`msmqAuthenticationMode`|Gibt an, wie die Nachricht vom MSMQ-Transport authentifiziert werden muss. Wenn dies auf `None` festgelegt ist, muss der Wert des `msmqProtectionLevel`-Attributs auch auf `None` festgelegt sein.<br /><br /> Folgende Werte sind gültig:<br /><br /> – None: Keine Authentifizierung.<br />-   WindowsDomain: Der Authentifizierungsmechanismus verwendet Active Directory, um das x. 509-Zertifikat für die mit der Nachricht SID verknüpfte zu erhalten. Dies wird anschließend zum Prüfen der ACL der Warteschlange verwendet, um sicherzustellen, dass der Benutzer über Berechtigungen zum Schreiben in die Warteschlange verfügt.<br />-Zertifikat: Der Kanal Ruft das Zertifikat aus dem Zertifikatspeicher ab.<br /><br /> Der Standardwert ist WindowsDomain. Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
 |`msmqEncryptionAlgorithm`|Gibt den Algorithmus an, der beim Übertragen von Nachrichten zwischen Warteschlangen-Managern für die Nachrichtenverschlüsselung verwendet werden soll. Folgende Werte sind gültig:<br /><br /> -RC4Stream<br />-   AES<br /><br /> Der Standardwert ist RC4Stream. Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
 |`msmqProtectionLevel`|Gibt an, wie die Nachricht auf der Ebene des MSMQ-Transports gesichert wird. Mit der Verschlüsselung wird die Nachrichtenintegrität sichergestellt, während EncryptAndSign sowohl Nachrichtenintegrität als auch Nachweisbarkeit sicherstellt. Dabei wird geprüft, ob die Nachricht wirklich vom Absender kommt und der Absender wirklich der ist, der er vorgibt zu sein.<br /><br /> -Die folgenden: Gültige Werte<br />– None: Kein Schutz.<br />-Anmeldung: Nachrichten werden signiert.<br />-   EncryptAndSign: Nachrichten werden verschlüsselt und signiert.<br /><br /> Der Standardwert ist Sign. Dieses Attribut ist vom Typ ProtectionLevel.|  
-|`msmqSecureHashAlgorithm`|-Gibt den Algorithmus zum Berechnen des Digests als Teil von Signaturen verwendet werden. Folgende Werte sind gültig:<br />-   MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> Der Standardwert ist SHA1. Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
+|`msmqSecureHashAlgorithm`|-Gibt den Algorithmus zum Berechnen des Digests als Teil von Signaturen verwendet werden. Folgende Werte sind gültig:<br />-   MD5<br />-   SHA1<br />-   SHA256<br />-   SHA512<br /><br /> Der Standardwert ist SHA1. Dieses Attribut ist vom Typ <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.<br>Microsoft empfiehlt aufgrund der Probleme mit Namenskonflikten mit MD5 und SHA1 SHA256 "oder" besser an.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  

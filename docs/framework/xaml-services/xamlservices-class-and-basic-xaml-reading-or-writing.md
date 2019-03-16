@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: bbb5f31516be4e977471ee1250502e58e252f1c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68211babbce2e9512689fa329dcf33be0afa4a0c
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503191"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58027128"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices-Klasse und grundlegende XAML-Lese- und -Schreibvorgänge
 <xref:System.Xaml.XamlServices> ist eine von .NET Framework-XAML-Diensten bereitgestellt Klasse, die verwendet werden kann, um XAML-Szenarien zu adressieren, die keinen bestimmten Zugriff auf die Informationen zum XAML-Knotenstream/XAML-Typsystem erfordern, oder die aus diesen Knoten abgerufen werden. Die<xref:System.Xaml.XamlServices> -API kann wie folgt zusammengefasst werden: `Load` oder `Parse` to suppodert a XAML load path, `Save` to suppodert a XAML save path, and `Transform` um eine Technik bereitzustellen, die einen Ladepfad und einen Speicherpfad verbindet. `Transform` kann verwendet werden, um von einem XAML-Schema zu einem anderen zu wechseln. In diesem Thema sind diese API-Klassifizierungen zusammengefasst, und die Unterschiede zwischen bestimmten Methodenüberladungen werden beschrieben.  
@@ -21,7 +21,7 @@ ms.locfileid: "54503191"
   
  Die einfachste Überladung für die meisten Szenarien ist <xref:System.Xaml.XamlServices.Load%28System.String%29>. Diese Überladung verfügt über einen `fileName` -Parameter, bei dem es sich einfach um den Namen einer Textdatei handelt, die die zu ladende XAML enthält. Dies eignet sich für Anwendungsszenarien wie Anwendungen mit voller Vertrauenswürdigkeit, die zuvor den Zustand oder Daten in den lokalen Computer serialisiert haben. Dies ist auch für Frameworks nützlich, bei denen Sie das Anwendungsmodell definieren und eine der Standarddateien laden möchten, die Anwendungsverhalten, die beim Start angezeigte Benutzeroberfläche oder andere vom Framework definierte Funktionen definieren.  
   
- <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> hat ähnliche Szenarien. Diese Überladung kann nützlich sein, wenn Sie zu ladende Dateien vom Benutzer auswählen lassen, da ein <xref:System.IO.Stream> eine häufige Ausgabe von anderen <xref:System.IO> -APIs ist, die auf ein Dateisystem zugreifen können. Oder Sie könnten über asynchrone Downloads oder andere Netzwerktechniken, die ebenfalls einen Stream bereitstellen, auf XAML-Quellen zugreifen. (Das Laden aus einem Stream oder einer vom Benutzer ausgewählten Quelle hat Auswirkungen auf die Sicherheit. Weitere Informationen finden Sie unter [XAML Security Considerations](../../../docs/framework/xaml-services/xaml-security-considerations.md).)  
+ <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> hat ähnliche Szenarien. Diese Überladung kann nützlich sein, wenn Sie zu ladende Dateien vom Benutzer auswählen lassen, da ein <xref:System.IO.Stream> eine häufige Ausgabe von anderen <xref:System.IO> -APIs ist, die auf ein Dateisystem zugreifen können. Oder Sie könnten über asynchrone Downloads oder andere Netzwerktechniken, die ebenfalls einen Stream bereitstellen, auf XAML-Quellen zugreifen. (Das Laden aus einem Stream oder einer vom Benutzer ausgewählten Quelle hat Auswirkungen auf die Sicherheit. Weitere Informationen finden Sie unter [XAML Security Considerations](xaml-security-considerations.md).)  
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> und <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> sind Überladungen, die Reader für Formate aus früheren Versionen von .NET Framework erfordern. Zum Verwenden dieser Überladungen sollten Sie bereits eine Readerinstanz erstellt und deren `Create` -API verwendet haben, um die XAML in der relevanten Form (Text oder XML) zu laden. Wenn Sie bereits Datensatzzeiger in die anderen Reader verschoben oder andere Vorgänge damit ausgeführt haben, spielt dies keine Rolle. Die Ladepfadlogik aus <xref:System.Xaml.XamlServices.Load%2A> verarbeitet immer die gesamte XAML-Eingabe vom Stamm abwärts. Für diese Überladungen sind folgende Szenarien denkbar:  
   
@@ -59,9 +59,9 @@ ms.locfileid: "54503191"
 ## <a name="transform"></a>Transformation  
  <xref:System.Xaml.XamlServices.Transform%2A> konvertiert oder transformiert XAML, indem sie einen Ladepfad und einen Speicherpfad als einzelnen Vorgang verknüpft. Ein anderer Schemakontext oder ein anderes Unterstützungstypsystem kann für <xref:System.Xaml.XamlReader> und <xref:System.Xaml.XamlWriter>verwendet werden. Dies wirkt sich darauf aus, wie das resultierende XAML transformiert wird. Es funktioniert gut für umfassende Transformationsvorgänge.  
   
- Für Vorgänge, bei denen jeder Knoten in einem XAML-Knotenstream untersucht wird, wird <xref:System.Xaml.XamlServices.Transform%2A>in der Regel nicht verwendet. Stattdessen müssen Sie eigene Ladepfad-/Speicherpfadvorgänge definieren und eigene Logik verwenden. Verwenden Sie in einem der Pfade ein XAML Reader/XAML-Writer-Paar um Ihre eigene Knotenschleife. Laden Sie z. B. die ursprüngliche XAML mit <xref:System.Xaml.XamlXmlReader> , und springen Sie mit aufeinander folgenden <xref:System.Xaml.XamlXmlReader.Read%2A> -Aufrufen in die Knoten. Durch das Vorgehen auf XAML-Knotenstreamebene können Sie jetzt einzelne Knoten (Typen, Member, andere Knoten) anpassen, um eine Transformation anzuwenden, oder die Knoten unverändert beibehalten. Anschließend senden Sie den Knoten an die relevante `Write` -API eines <xref:System.Xaml.XamlObjectWriter> und schreiben das Objekt aus. Weitere Informationen finden Sie unter [Understanding XAML Node Stream Structures and Concepts](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md).  
+ Für Vorgänge, bei denen jeder Knoten in einem XAML-Knotenstream untersucht wird, wird <xref:System.Xaml.XamlServices.Transform%2A>in der Regel nicht verwendet. Stattdessen müssen Sie eigene Ladepfad-/Speicherpfadvorgänge definieren und eigene Logik verwenden. Verwenden Sie in einem der Pfade ein XAML Reader/XAML-Writer-Paar um Ihre eigene Knotenschleife. Laden Sie z. B. die ursprüngliche XAML mit <xref:System.Xaml.XamlXmlReader> , und springen Sie mit aufeinander folgenden <xref:System.Xaml.XamlXmlReader.Read%2A> -Aufrufen in die Knoten. Durch das Vorgehen auf XAML-Knotenstreamebene können Sie jetzt einzelne Knoten (Typen, Member, andere Knoten) anpassen, um eine Transformation anzuwenden, oder die Knoten unverändert beibehalten. Anschließend senden Sie den Knoten an die relevante `Write` -API eines <xref:System.Xaml.XamlObjectWriter> und schreiben das Objekt aus. Weitere Informationen finden Sie unter [Understanding XAML Node Stream Structures and Concepts](understanding-xaml-node-stream-structures-and-concepts.md).  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Xaml.XamlObjectWriter>
 - <xref:System.Xaml.XamlServices>
-- [XAML Services](../../../docs/framework/xaml-services/index.md) (XAML-Dienste)
+- [XAML Services](index.md) (XAML-Dienste)

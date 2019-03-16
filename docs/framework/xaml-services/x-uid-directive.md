@@ -7,12 +7,12 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 361240c2d2c140c7bf521ece423df4aaed075ba4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e946c63227a06b2032ce27e61899c1b8f05ec9f
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745414"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042971"
 ---
 # <a name="xuid-directive"></a>x:Uid-Anweisung
 Stellt einen eindeutigen Bezeichner für die Markupelemente bereit. In vielen Fällen wird dieser eindeutige Bezeichner von XAML Lokalisierungsprozesse und Tools verwendet.  
@@ -39,9 +39,9 @@ Stellt einen eindeutigen Bezeichner für die Markupelemente bereit. In vielen F�
  Frameworks können eine bestimmte Eigenschaft angeben, in ihrem Objektmodell als Alias für `x:Uid` durch Anwenden des Attributs <xref:System.Windows.Markup.UidPropertyAttribute> zu definierenden Typs. Wenn ein Framework eine bestimmte Eigenschaft angegeben ist, es ist nicht zulässig, beide anzugeben `x:Uid` und das Element mit einem Alias versehen, auf das gleiche Objekt. Wenn beide `x:Uid` und die Alias-Element angegeben werden, die .NET Framework XAML Services-API in der Regel löst eine <xref:System.Xaml.XamlDuplicateMemberException> für diesen Fall.  
   
 ## <a name="wpf-usage-notes"></a>Hinweise zur WPF-Verwendung  
- Weitere Informationen über die Rolle des `x:Uid` in der WPF-Lokalisierung-Prozess und die BAML-Form von XAML, finden Sie unter [Globalisierung für WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md) oder <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+ Weitere Informationen über die Rolle des `x:Uid` in der WPF-Lokalisierung-Prozess und die BAML-Form von XAML, finden Sie unter [Globalisierung für WPF](../wpf/advanced/globalization-for-wpf.md) oder <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 - <xref:Microsoft.Build.Tasks.Windows.UidManager>
-- [Globalisierung für WPF](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [Globalisierung für WPF](../wpf/advanced/globalization-for-wpf.md)

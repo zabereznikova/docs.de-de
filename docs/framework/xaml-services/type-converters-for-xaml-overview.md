@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 79b4d972e5d82eaac6571efebb974ac7d764d30e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62e92a0bf537bd5a15b71751b3d62755c6b12dfa
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659149"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049498"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Übersicht über Typkonverter für XAML
 Typkonverter stellen die Logik für einen Objekt-Writer bereit, der die Konvertierung von einer Zeichenfolge im XAML-Markup in bestimmte Objekte in einem Objektdiagramm vornimmt. In .NET Framework XAML Services muss der Typkonverter eine Klasse sein, die aus <xref:System.ComponentModel.TypeConverter>abgeleitet wird. Einige Konverter unterstützen zudem den XAML-Speicherpfad und können zum Serialisieren eines Objekts in ein Zeichenfolgenformular im Serialisierungsmarkup verwendet werden. In diesem Thema wird beschrieben, wie und wann Typkonverter in XAML aufgerufen werden. Zudem enthält es Implementierungsratschläge für die Methodenüberschreibungen von <xref:System.ComponentModel.TypeConverter>.  
@@ -29,7 +29,7 @@ Typkonverter stellen die Logik für einen Objekt-Writer bereit, der die Konverti
 >  XAML-Sprachdirektiven verwenden keine Typkonverter.  
   
 ### <a name="type-converters-and-markup-extensions"></a>Typkonverter und Markuperweiterungen  
- Markuperweiterungen müssen durch einen XAML-Prozessor verarbeitet werden, bevor die Überprüfung auf Eigenschaftstyp und andere Überlegungen erfolgt. Wenn beispielsweise eine als Attribut festzulegende Eigenschaft normalerweise eine Typkonvertierung aufweist, in einem bestimmten Fall jedoch durch eine Markuperweiterungsverwendung festgelegt wird, dann wird das Markuperweiterungsverhalten zuerst festgelegt. Eine allgemeine Situation, in der eine Markuperweiterung erforderlich ist, besteht im Erstellen eines Verweises auf ein vorhandenes Objekt. In diesem Szenario kann ein zustandsloser Typkonverter nur eine neue Instanz genieren, die möglicherweise nicht gewünscht ist. Weitere Informationen zur Markuperweiterungen finden Sie unter [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md).  
+ Markuperweiterungen müssen durch einen XAML-Prozessor verarbeitet werden, bevor die Überprüfung auf Eigenschaftstyp und andere Überlegungen erfolgt. Wenn beispielsweise eine als Attribut festzulegende Eigenschaft normalerweise eine Typkonvertierung aufweist, in einem bestimmten Fall jedoch durch eine Markuperweiterungsverwendung festgelegt wird, dann wird das Markuperweiterungsverhalten zuerst festgelegt. Eine allgemeine Situation, in der eine Markuperweiterung erforderlich ist, besteht im Erstellen eines Verweises auf ein vorhandenes Objekt. In diesem Szenario kann ein zustandsloser Typkonverter nur eine neue Instanz genieren, die möglicherweise nicht gewünscht ist. Weitere Informationen zur Markuperweiterungen finden Sie unter [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 ### <a name="native-type-converters"></a>Systemeigene Typkonverter  
  In den WPF- und .NET XAML-dienstimplementierungen gibt es bestimmte CLR-Typen, die systemeigenen Typ verfügen, jedoch die CLR-Typen sind nicht konventionell vorstellen als primitive. Ein Beispiel eines solchen Typs ist <xref:System.DateTime>. Ein Grund dafür besteht in der Funktionsweise der .NET Framework-Architektur: Der Typ <xref:System.DateTime> ist in „mscorlib“ definiert. Hierbei handelt es sich um die grundlegendste Bibliothek in .NET. Es ist nicht zulässig,<xref:System.DateTime> mit einem Attribut zu attribuieren, das aus einer anderen Assembly stammt, wodurch eine Abhängigkeit erschaffen wird (<xref:System.ComponentModel.TypeConverterAttribute> stammt aus dem System). Daher kann der gewöhnliche Typkonverter-Ermittlungsmechanismus durch die Attributierung nicht unterstützt werden. Stattdessen verfügt der XAML-Parser über eine Liste von Typen, für die die systemeigene Verarbeitung erforderlich ist, und diese Typen werden ähnlich wie echte Primitive verarbeitet. Im Fall von <xref:System.DateTime>umfasst diese Verarbeitung einen Aufruf von <xref:System.DateTime.Parse%2A>.  
@@ -60,7 +60,7 @@ Typkonverter stellen die Logik für einen Objekt-Writer bereit, der die Konverti
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> und <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> sind Unterstützungsmethoden, die verwendet werden, wenn ein Dienst die Funktionen der <xref:System.ComponentModel.TypeConverter> -Implementierung abfragt. Sie müssen diese Methoden implementieren, um `true` für typspezifische Klassen zurückzugeben, welche die entsprechenden Konvertierungsmethoden Ihres Konverters unterstützen. Für XAML-Zwecke bedeutet dies in der Regel den <xref:System.String> -Typ.  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Kulturinformations- und Typkonverter für XAML  
- Jede <xref:System.ComponentModel.TypeConverter> -Implementierung kann eindeutig interpretieren, was eine gültige Zeichenfolge für eine Konvertierung ist, und sie kann zudem die Typbeschreibung, die als Parameter weitergegeben wird, verwenden oder ignorieren. Eine wichtige Überlegung in Bezug auf die Kultur- und XAML-Typkonvertierung lautet wie folgt: Auch wenn die Verwendung von lokalisierbaren Zeichenfolgen als Attributwerten durch XAML unterstützt wird, können Sie diese lokalisierbaren Zeichenfolgen nicht als Typkonvertereingabe mit bestimmten Kulturanforderungen verwenden. Diese Einschränkung besteht, da Typkonverter für XAML-Attributwerte ein zwangsläufig festes XAML-Sprachverarbeitungsverhalten umfassen, in dem die `en-US` -Kultur verwendet wird. Weitere Informationen über entwicklungsgründe für diese Einschränkung finden Sie in der XAML-Sprachspezifikation ([\[MS-XAML-\]](https://go.microsoft.com/fwlink/?LinkId=114525)) oder [WPF-Globalisierung und Lokalisierung Übersicht](../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md).  
+ Jede <xref:System.ComponentModel.TypeConverter> -Implementierung kann eindeutig interpretieren, was eine gültige Zeichenfolge für eine Konvertierung ist, und sie kann zudem die Typbeschreibung, die als Parameter weitergegeben wird, verwenden oder ignorieren. Eine wichtige Überlegung in Bezug auf die Kultur- und XAML-Typkonvertierung lautet wie folgt: Auch wenn die Verwendung von lokalisierbaren Zeichenfolgen als Attributwerten durch XAML unterstützt wird, können Sie diese lokalisierbaren Zeichenfolgen nicht als Typkonvertereingabe mit bestimmten Kulturanforderungen verwenden. Diese Einschränkung besteht, da Typkonverter für XAML-Attributwerte ein zwangsläufig festes XAML-Sprachverarbeitungsverhalten umfassen, in dem die `en-US` -Kultur verwendet wird. Weitere Informationen über entwicklungsgründe für diese Einschränkung finden Sie in der XAML-Sprachspezifikation ([\[MS-XAML-\]](https://go.microsoft.com/fwlink/?LinkId=114525)) oder [WPF-Globalisierung und Lokalisierung Übersicht](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
   
  Beispielsweise können Kulturunterschiede in Kulturen ein Problem werden, in welchen anstelle eines Punkts als dezimales Trennzeichen ein Komma für die Zahlen im Zeichenfolgenformat verwendet wird. Diese Verwendung führt zu einem Konflikt mit dem Verhalten, das viele vorhandenen Typkonverter aufweisen, was in der Verwendung eines Kommas als Trennzeichen besteht. Das Weitergeben einer Kultur über `xml:lang` in der umgebenden XAML löst das Problem nicht.  
   
@@ -101,7 +101,7 @@ Typkonverter stellen die Logik für einen Objekt-Writer bereit, der die Konverti
   
 <a name="accessing_service_provider_context_from_a_markup_extension_implementation"></a>   
 ## <a name="accessing-service-provider-context-from-a-markup-extension-implementation"></a>Zugriff auf den Dienstanbieterkontext über eine Markuperweiterungsimplementierung  
- Die verfügbaren Dienste sind für jeden Wertkonverter gleich. Der Unterschied besteht darin, wie jeder Wertkonverter den Dienstkontext empfängt. Der Zugriff auf Dienste und die verfügbaren Dienste werden im Thema [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)beschrieben.  
+ Die verfügbaren Dienste sind für jeden Wertkonverter gleich. Der Unterschied besteht darin, wie jeder Wertkonverter den Dienstkontext empfängt. Der Zugriff auf Dienste und die verfügbaren Dienste werden im Thema [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)beschrieben.  
   
 <a name="type_converters_in_the_xaml_node_stream"></a>   
 ## <a name="type-converters-in-the-xaml-node-stream"></a>Typkonverter im XAML-Knotenstream  
@@ -109,5 +109,5 @@ Typkonverter stellen die Logik für einen Objekt-Writer bereit, der die Konverti
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.ComponentModel.TypeConverterAttribute>
-- [Typkonverter und Markuperweiterungen für XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [Übersicht über XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [Typkonverter und Markuperweiterungen für XAML](type-converters-and-markup-extensions-for-xaml.md)
+- [Übersicht über XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
