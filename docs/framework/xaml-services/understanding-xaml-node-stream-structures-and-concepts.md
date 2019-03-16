@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: 261c44ae06959ed387a4619bf2fdb99b37141c86
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365723"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034745"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Grundlagen zu XAML-Knotenstreamstrukturen und -konzepten
 
@@ -232,7 +232,7 @@ Bestimmte Direktiven sind speziell zum Bereitstellen weiterer Informationen für
 
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>XamlObjectWriter-Verhalten und Knotenreihenfolge
 
-Das`StartObject` für einen <xref:System.Xaml.XamlObjectWriter> ist nicht notwendigerweise ein Signal für den XAML-Objektwriter, die Objektinstanz sofort zu erstellen. XAML umfasst mehrere Sprachfunktionen, bei denen ein Objekt mit zusätzlichen Eingaben initialisiert werden kann und das Erzeugen des anfänglichen Objekts nicht ausschließlich vom Aufrufen eines Standardkonstruktors abhängig ist, bevor Eigenschaften festgelegt werden. Zu diesen Funktionen zählen: <xref:System.Windows.Markup.XamlDeferLoadAttribute>, Initialisierungstext, [x:TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md), Positionsparameter einer Markuperweiterung, Factorymethoden und zugehörige [x:Arguments](../../../docs/framework/xaml-services/x-arguments-directive.md) -Knoten (XAML 2009). In jedem dieser Fälle wird die tatsächliche Objekterstellung verzögert, und da der Knotenstream neu sortiert wird, kann der XAML-Objektwriter ein Verhalten verwenden, bei dem die Instanz tatsächlich jedes Mal erstellt wird, wenn ein Startmember gefunden wird, bei dem es sich nicht um eine Konstruktionsdirektive für diesen Objekttyp handelt.
+Das`StartObject` für einen <xref:System.Xaml.XamlObjectWriter> ist nicht notwendigerweise ein Signal für den XAML-Objektwriter, die Objektinstanz sofort zu erstellen. XAML umfasst mehrere Sprachfunktionen, bei denen ein Objekt mit zusätzlichen Eingaben initialisiert werden kann und das Erzeugen des anfänglichen Objekts nicht ausschließlich vom Aufrufen eines Standardkonstruktors abhängig ist, bevor Eigenschaften festgelegt werden. Zu diesen Funktionen zählen: <xref:System.Windows.Markup.XamlDeferLoadAttribute>, Initialisierungstext, [x:TypeArguments](x-typearguments-directive.md), Positionsparameter einer Markuperweiterung, Factorymethoden und zugehörige [x:Arguments](x-arguments-directive.md) -Knoten (XAML 2009). In jedem dieser Fälle wird die tatsächliche Objekterstellung verzögert, und da der Knotenstream neu sortiert wird, kann der XAML-Objektwriter ein Verhalten verwenden, bei dem die Instanz tatsächlich jedes Mal erstellt wird, wenn ein Startmember gefunden wird, bei dem es sich nicht um eine Konstruktionsdirektive für diesen Objekttyp handelt.
 
 ### <a name="getobject"></a>GetObject
 
@@ -241,5 +241,5 @@ Das`StartObject` für einen <xref:System.Xaml.XamlObjectWriter> ist nicht notwen
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xaml.XamlObjectReader>
-- [XAML Services](../../../docs/framework/xaml-services/index.md) (XAML-Dienste)
-- [XAML-Namespaces](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+- [XAML Services](index.md) (XAML-Dienste)
+- [XAML-Namespaces](xaml-namespaces-for-net-framework-xaml-services.md)
