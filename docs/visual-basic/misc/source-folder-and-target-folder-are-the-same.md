@@ -2,23 +2,24 @@
 title: Quell- und Zielordner sind identisch.
 ms.date: 07/20/2015
 ms.assetid: d4e6f996-8bbe-45f2-b662-f26b4474f44d
-ms.openlocfilehash: f02bdf0f6ac8e4d45c308239c2713ccbb1ab6038
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3739afd25971433d78d84bb183c51ab674ecd9a
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592110"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58026369"
 ---
-# <a name="source-folder-and-target-folder-are-the-same"></a><span data-ttu-id="74cff-102">Quell- und Zielordner sind identisch.</span><span class="sxs-lookup"><span data-stu-id="74cff-102">Source folder and target folder are the same</span></span>
-<span data-ttu-id="74cff-103">Es wurde versucht, eine Datei zu kopieren oder zu verschieben, aber Quell- und Zielverzeichnis sind identisch.</span><span class="sxs-lookup"><span data-stu-id="74cff-103">An attempt has been made to copy or move a file, but the specified source directory and target directory are the same.</span></span> <span data-ttu-id="74cff-104">Dies kann das Ergebnis einer fehlerhaften Analyse eines Dateipfads sein.</span><span class="sxs-lookup"><span data-stu-id="74cff-104">This may be a result of incorrectly parsing a file path.</span></span>  
+# <a name="source-folder-and-target-folder-are-the-same"></a><span data-ttu-id="a2d84-102">Quell- und Zielordner sind identisch.</span><span class="sxs-lookup"><span data-stu-id="a2d84-102">Source folder and target folder are the same</span></span>
+<span data-ttu-id="a2d84-103">Es wurde versucht, eine Datei zu kopieren oder zu verschieben, aber Quell- und Zielverzeichnis sind identisch.</span><span class="sxs-lookup"><span data-stu-id="a2d84-103">An attempt has been made to copy or move a file, but the specified source directory and target directory are the same.</span></span> <span data-ttu-id="a2d84-104">Dies kann das Ergebnis einer fehlerhaften Analyse eines Dateipfads sein.</span><span class="sxs-lookup"><span data-stu-id="a2d84-104">This may be a result of incorrectly parsing a file path.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="74cff-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="74cff-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="a2d84-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="a2d84-105">To correct this error</span></span>  
   
--   <span data-ttu-id="74cff-106">Stellen Sie sicher, dass Sie das richtige Quell- und Zielverzeichnis angegeben haben.</span><span class="sxs-lookup"><span data-stu-id="74cff-106">Make sure you supplied the correct source and target directories.</span></span>  
+-   <span data-ttu-id="a2d84-106">Stellen Sie sicher, dass Sie das richtige Quell- und Zielverzeichnis angegeben haben.</span><span class="sxs-lookup"><span data-stu-id="a2d84-106">Make sure you supplied the correct source and target directories.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="74cff-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="74cff-107">See also</span></span>
-- [<span data-ttu-id="74cff-108">My.Computer.FileSystem.MoveFile</span><span class="sxs-lookup"><span data-stu-id="74cff-108">My.Computer.FileSystem.MoveFile</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A)
-- [<span data-ttu-id="74cff-109">My.Computer.FileSystem.CopyFile</span><span class="sxs-lookup"><span data-stu-id="74cff-109">My.Computer.FileSystem.CopyFile</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A)
-- [<span data-ttu-id="74cff-110">Vorgehensweise: Analysieren von Dateipfaden</span><span class="sxs-lookup"><span data-stu-id="74cff-110">How to: Parse File Paths</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
-- [<span data-ttu-id="74cff-111">Vorgehensweise: Verschieben einer Datei</span><span class="sxs-lookup"><span data-stu-id="74cff-111">How to: Move a File</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)
-- [<span data-ttu-id="74cff-112">Vorgehensweise: Kopieren von Dateien mit einem bestimmten Muster in ein Verzeichnis</span><span class="sxs-lookup"><span data-stu-id="74cff-112">How to: Copy Files with a Specific Pattern to a Directory</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
+## <a name="see-also"></a><span data-ttu-id="a2d84-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a2d84-107">See also</span></span>
+
+- [<span data-ttu-id="a2d84-108">My.Computer.FileSystem.MoveFile</span><span class="sxs-lookup"><span data-stu-id="a2d84-108">My.Computer.FileSystem.MoveFile</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A)
+- [<span data-ttu-id="a2d84-109">My.Computer.FileSystem.CopyFile</span><span class="sxs-lookup"><span data-stu-id="a2d84-109">My.Computer.FileSystem.CopyFile</span></span>](xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A)
+- [<span data-ttu-id="a2d84-110">Vorgehensweise: Analysieren von Dateipfaden</span><span class="sxs-lookup"><span data-stu-id="a2d84-110">How to: Parse File Paths</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [<span data-ttu-id="a2d84-111">Vorgehensweise: Verschieben von Dateien</span><span class="sxs-lookup"><span data-stu-id="a2d84-111">How to: Move a File</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)
+- [<span data-ttu-id="a2d84-112">Vorgehensweise: Kopieren von Dateien mit einem bestimmten Muster in ein Verzeichnis</span><span class="sxs-lookup"><span data-stu-id="a2d84-112">How to: Copy Files with a Specific Pattern to a Directory</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)
