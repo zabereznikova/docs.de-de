@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 0ce219ca5477c5714225cfc86fe29334bea30a88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27ff9d027f5ff5155543097b7f0f0c2839387fe5
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611201"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042455"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier-Anweisung
 XAML-Kompilierungsverhalten ändert, sodass Felder für benannte Objektverweise mit definiert werden <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> anstelle von Zugriff auf die <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> Standardverhalten.  
@@ -29,7 +29,7 @@ XAML-Kompilierungsverhalten ändert, sodass Felder für benannte Objektverweise 
 |*Public*|Die genaue Zeichenfolge, die Sie zum Festlegen von übergeben <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> im Vergleich zu <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> variiert in Abhängigkeit von der Code-Behind-Programmiersprache, die verwendet wird. Siehe Hinweise.|  
   
 ## <a name="dependencies"></a>Abhängigkeiten  
- Wenn eine XAML-Produktion verwendet `x:FieldModifier` , muss das Stammelement dieser XAML-Produktion deklarieren eine [X: Class-Anweisung](../../../docs/framework/xaml-services/x-class-directive.md).  
+ Wenn eine XAML-Produktion verwendet `x:FieldModifier` , muss das Stammelement dieser XAML-Produktion deklarieren eine [X: Class-Anweisung](x-class-directive.md).  
   
 ## <a name="remarks"></a>Hinweise  
  `x:FieldModifier` ist nicht relevant, für das Deklarieren von Klassen oder Membern der allgemeinen Zugriffsebene. Es ist nur für XAML-Verarbeitungsverhalten relevant, wenn ein bestimmtes XAML-Objekt, das Teil einer XAML-Produktion verarbeitet wird, wird ein Objekt, das potenziell in ein Objektdiagramm aus einer Anwendung zugegriffen werden kann. In der Standardeinstellung der Feldverweis für ein solches Objekt "private", bleibt die verhindern, dass Steuerelementconsumer das Objektdiagramm direkt ändern. Stattdessen Steuerelementconsumer erwartet, das Objektdiagramm mithilfe von standard-Muster, die von Programmiermodellen, wie z. B. aktiviert werden, durch Abrufen der Layoutstamm, das untergeordnete Element elementauflistungen, die dedizierte öffentliche Eigenschaften, ändern und so weiter.  
@@ -46,13 +46,13 @@ XAML-Kompilierungsverhalten ändert, sodass Felder für benannte Objektverweise 
   
  <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> ist das Standardverhalten, da sie nur selten ist, dass Code außerhalb der Assembly, die die XAML kompiliert Zugriff auf ein Element mit XAML erstellten benötigt. WPF-Sicherheitsarchitektur zusammen mit XAML-Kompilierungsverhalten nicht Felder zum Speichern von Elementinstanzen als öffentlich, deklarieren, es sei denn, Sie ausdrücklich Festlegen der `x:FieldModifier` den öffentlichen Zugriff zulässt.  
   
- `x:FieldModifier` gilt nur für Elemente mit einem [X: Name Directive](../../../docs/framework/xaml-services/x-name-directive.md) , da der Name verwendet wird, auf das Feld verwiesen wird, nachdem er öffentlich ist.  
+ `x:FieldModifier` gilt nur für Elemente mit einem [X: Name Directive](x-name-directive.md) , da der Name verwendet wird, auf das Feld verwiesen wird, nachdem er öffentlich ist.  
   
- Standardmäßig ist die partielle Klasse für das Stammelement öffentlich. Allerdings können Sie es machen nicht öffentliche mithilfe der [X: ClassModifier-Anweisung](../../../docs/framework/xaml-services/x-classmodifier-directive.md). Die [X: ClassModifier-Anweisung](../../../docs/framework/xaml-services/x-classmodifier-directive.md) wirkt sich auch auf die Zugriffsebene der Stammelementklasse-Instanz. Sie können beide einfügen `x:Name` und `x:FieldModifier` für den Stamm-Element, aber dies nur eine Kopie öffentliches Feld das Stammelement, mit der Zugriffsebene der "true"-Klasse weiterhin benutzergesteuert [X: ClassModifier-Anweisung](../../../docs/framework/xaml-services/x-classmodifier-directive.md).  
+ Standardmäßig ist die partielle Klasse für das Stammelement öffentlich. Allerdings können Sie es machen nicht öffentliche mithilfe der [X: ClassModifier-Anweisung](x-classmodifier-directive.md). Die [X: ClassModifier-Anweisung](x-classmodifier-directive.md) wirkt sich auch auf die Zugriffsebene der Stammelementklasse-Instanz. Sie können beide einfügen `x:Name` und `x:FieldModifier` für den Stamm-Element, aber dies nur eine Kopie öffentliches Feld das Stammelement, mit der Zugriffsebene der "true"-Klasse weiterhin benutzergesteuert [X: ClassModifier-Anweisung](x-classmodifier-directive.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [XAML- und benutzerdefinierte Klassen für WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
-- [Code-Behind und XAML in WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [x:Name-Anweisung](../../../docs/framework/xaml-services/x-name-directive.md)
-- [Erstellen einer WPF-Anwendung (WPF)](../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
-- [x:ClassModifier-Anweisung](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
+- [XAML- und benutzerdefinierte Klassen für WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+- [Code-Behind und XAML in WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [x:Name-Anweisung](x-name-directive.md)
+- [Erstellen einer WPF-Anwendung (WPF)](../wpf/app-development/building-a-wpf-application-wpf.md)
+- [x:ClassModifier-Anweisung](x-classmodifier-directive.md)

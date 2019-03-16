@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrKILL_NoFilesFound1
 ms.assetid: 218808a2-8e36-4f13-a60a-770624e1ace3
-ms.openlocfilehash: bcd0bf78adcbd339c1b58f82f445fe43446366f3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d573c38f2a92baea4a1caf19ad8e4fefeb9aebbf
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263762"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58038059"
 ---
 # <a name="no-files-found-matching-filename"></a>Keine Dateien gefunden "\<Dateiname >"
 Der Dateiname ist falsch, oder die Datei ist nicht vorhanden.  
@@ -19,4 +19,5 @@ Der Dateiname ist falsch, oder die Datei ist nicht vorhanden.
 1.  Stellen Sie sicher, dass der Dateiname richtig ist.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)

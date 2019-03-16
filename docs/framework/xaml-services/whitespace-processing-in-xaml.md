@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 750f054c908cd9d837a18ee6c8a537285b325288
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da559a7e009861faaba16484276eb97be537482b
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728356"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048033"
 ---
 # <a name="white-space-processing-in-xaml"></a>Leerzeichen in XAML verarbeitet
 Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet werden müssen, indem eine [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung. In diesem Thema werden diese XAML-Sprachregeln erläutert. Er dokumentiert auch zusätzliche Leerzeichen behandeln, die von definiert ist die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Implementierung der XAML-Prozessor und der XAML-Writer für die Serialisierung.  
@@ -35,7 +35,7 @@ Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet wer
   
 5.  Ein Leerzeichen unmittelbar vor dem Endtag wird gelöscht.  
   
- „Standard“ entspricht dem Zustand, der durch den Standardwert des [xml:space](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md) -Attribut bezeichnet wird.  
+ „Standard“ entspricht dem Zustand, der durch den Standardwert des [xml:space](xml-space-handling-in-xaml.md) -Attribut bezeichnet wird.  
   
 <a name="whitespace_in_inner_text_and_string_primitives"></a>   
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>Leerraum in innerem Text und zeichenfolgenprimitive  
@@ -75,6 +75,6 @@ Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet wer
  Darüber hinaus sollten bestimmte Inlineelemente, die einen Zeilenumbruch in einem Flussdokumentmodell absichtlich nicht auch in eine Auflistung Leerzeichen ein zusätzliches Leerzeichen führen. Z. B. die <xref:System.Windows.Documents.LineBreak> Element hat den gleichen Zweck wie die \<BR / >-Tag in [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)], und zur besseren Lesbarkeit im Markup in der Regel eine <xref:System.Windows.Documents.LineBreak> wird durch einen erstellten Zeilenvorschub von nachfolgendem Text getrennt. Dieser Zeilenvorschub darf nicht zu einem voranstellten Leerzeichen in der nächsten Zeile normalisiert werden. So aktivieren Sie dieses Verhalten, die Klassendefinition für den <xref:System.Windows.Documents.LineBreak> Element gilt die <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, wird dann von interpretiert die [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] -Prozessor so, Leerzeichen, umgibt <xref:System.Windows.Documents.LineBreak> immer entfernt.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [XML-Zeichenentitäten und XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
-- [XML: space-Behandlung in XAML](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+- [Übersicht über XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [XML-Zeichenentitäten und XAML](xml-character-entities-and-xaml.md)
+- [XML: space-Behandlung in XAML](xml-space-handling-in-xaml.md)
