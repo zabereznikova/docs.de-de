@@ -8,38 +8,38 @@ helpviewer_keywords:
 - colors [Windows Forms], rotating
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-ms.openlocfilehash: cb3824d8a5a5674b83124301dbfbd5a3ba60effa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d3fa49e6129c93df93378fb2b607a87a5a0be087
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720617"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125888"
 ---
 # <a name="how-to-rotate-colors"></a>Vorgehensweise: Drehen von Farben
 Drehung in einer vierdimensionalen Farbraum ist schwierig, zu visualisieren. Wir können es vorstellbar, stimmen zu einer der festen Farbkomponenten vereinfachen. Nehmen wir an, dass in jedem die alpha-Komponente auf 1 festgesetzt (vollständig deckend) beibehalten. Dann können wir einen dreidimensionalen Farbraum mit roten, grünen und blauen Achsen visualisieren, wie in der folgenden Abbildung dargestellt.  
   
- ![Recoloring](./media/recoloring03.gif "recoloring03")  
+ ![Abbildung der Drehung mit roten, grünen und blauen Achsen.](./media/how-to-rotate-colors/rotation-red-green-blue-axes.gif)  
   
  Eine Farbe kann als ein Punkt im 3D-Raum betrachtet werden. Beispielsweise wird der Punkt im Raum (1, 0, 0) darstellt, die Farbe Rot, und der Punkt im Raum (0, 1, 0) darstellt, die Farbe Grün.  
   
  Die folgende Abbildung zeigt was es bedeutet, die die Farbe (1, 0, 0) gedreht, über einen Winkel von 60 Grad in der Rot-Grün-Ebene. Drehung in einer Ebene Parallel zur Rot-Grün-Ebene kann als Drehung um die blauen Achse betrachtet werden.  
   
- ![Recoloring](./media/recoloring04.gif "recoloring04")  
+ ![Abbildung der Drehung um die blauen Achse.](./media/how-to-rotate-colors/rotation-about-blue-axis.gif)  
   
- In der folgende Abbildung wird veranschaulicht, wie eine Farbmatrix zum Ausführen der Rotation zu jeder der drei Koordinatenachsen (Rot, Grün, Blau) initialisiert wird.  
+ Die folgende Abbildung zeigt das Initialisieren einer Farbmatrix zum Ausführen der Rotation zu jeder der drei Koordinatenachsen (Rot, Grün, Blau):  
   
- ![Recoloring](./media/recoloring05.gif "recoloring05")  
+ ![Initialisieren einer Farbmatrix zum Ausführen von Rotationen um drei Achsen an.](./media/how-to-rotate-colors/rotation-about-three-axes.gif)  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Bild, das alle eine Farbe ("1", "0", "0,6") und wendet eine Drehung um 60 Grad die blaue Achse an. Der Winkel der Drehung wird sich in einer Ebene überflüssig, die parallel zu der Rot-Grün-Ebene ist.  
   
- Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und das Bild Farben gedreht, auf der rechten Seite.  
+ Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und das Bild Farben gedreht, auf der rechten Seite an:  
   
- ![Drehen von Farben](./media/colortrans5.png "colortrans5")  
+ ![Abbildung der ursprüngliche Bild und Bild Farben gedreht.](./media/how-to-rotate-colors/original-color-rotated-images.png)  
   
- Die folgende Abbildung zeigt eine Visualisierung der Color-Drehung, die in den folgenden Code ausgeführt wird.  
+ Die folgende Abbildung zeigt eine Visualisierung der Color-Drehung, die in den folgenden Code ausgeführt:
   
- ![Recoloring](./media/recoloring06.gif "recoloring06")  
+ ![Abbildung der Visualisierung der Drehung Farbe.](./media/how-to-rotate-colors/visualization-color-rotation.gif)  
   
  [!code-csharp[System.Drawing.RotateColors#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RotateColors/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: e2a4b1157ec1f114b9e33f220e09fc791cfb9fc3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a1417c5ee6fe774214c10b0164eb84dbfb2ed2bb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353035"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125680"
 ---
 # <a name="threading-model"></a>Threading-Modell
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] soll Entwicklern bei Problemen mit Threading helfen. Als Ergebnis der meisten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Entwickler keine Schnittstelle schreiben, die mehr als einem Thread verwendet. Da Multithreadprogramme komplex und schwierig zu debuggen sind, sollten sie vermieden werden, wenn Singlethread-Lösungen vorhanden sind.  
@@ -62,7 +62,7 @@ ms.locfileid: "57353035"
   
  Betrachten Sie das folgende Beispiel:  
   
- ![Primzahlen-Screenshot](./media/threadingprimenumberscreenshot.PNG "ThreadingPrimeNumberScreenShot")  
+ ![Screenshot mit threading von Primzahlen.](./media/threading-model/threading-prime-numbers.png)  
   
  Diese einfache Anwendung zählt ab drei aufwärts und sucht dabei nach Primzahlen. Klickt der Benutzer die **starten** Schaltfläche, um die Suche beginnt. Wenn das Programm eine Primzahl findet, wird die Benutzeroberfläche mit dieser Entdeckung aktualisiert. Der Benutzer kann die Suche zu jedem Zeitpunkt beenden.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "57353035"
   
  Die beste Möglichkeit, Verarbeitungszeit auf Berechnung und Ereignisbehandlung aufzuteilen wird zum Verwalten der Berechnung von der die <xref:System.Windows.Threading.Dispatcher>. Mithilfe der <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> -Methode, wir können primzahlüberprüfungen in identisch, die in die Warteschlange [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] -Ereignisse stammen. In unserem Beispiel planen wir nur eine einzige Primzahlüberprüfung zu einem Zeitpunkt ein. Nach Abschluss der Primzahlüberprüfung planen wir sofort die nächste Überprüfung ein. Diese Überprüfung erfolgt erst, wenn ausstehende [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] behandelt wurden.  
   
- ![Darstellung der Dispatcher-Warteschlange](./media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
+ ![Screenshot mit der Dispatcher-Warteschlange.](./media/threading-model/threading-dispatcher-queue.png)  
   
  [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] führt die Rechtschreibprüfung mithilfe dieses Mechanismus durch. Rechtschreibprüfung erfolgt im Hintergrund die Leerlaufzeit an, der über die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Thread. Sehen wir uns den Code an.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "57353035"
   
  In diesem Beispiel simulieren wir einen Remoteprozeduraufruf, der eine Wettervorhersage abruft. Wir verwenden einen separaten Arbeitsthread aus, um die Ausführung dieses Aufrufs und planen wir eine Updatemethode in der <xref:System.Windows.Threading.Dispatcher> von der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Threads ein, wenn wir fertig sind.  
   
- ![Wetter-UI-Screenshot](./media/threadingweatheruiscreenshot.PNG "ThreadingWeatherUIScreenShot")  
+ ![Screenshot mit dem Wetter-UI.](./media/threading-model/threading-weather-ui.png)  
   
  [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweathercodebehind)]
  [!code-vb[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweathercodebehind)]  
@@ -189,7 +189,7 @@ ms.locfileid: "57353035"
 ### <a name="nested-pumping"></a>Geschachtelte Verteilung  
  Manchmal ist es nicht möglich, völlig gesperrt ist, bis die [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Thread. Betrachten wir die <xref:System.Windows.MessageBox.Show%2A> Methode der <xref:System.Windows.MessageBox> Klasse. <xref:System.Windows.MessageBox.Show%2A> Gibt nicht zurück, bis der Benutzer die Schaltfläche "OK" klickt. Es wird jedoch ein Fenster erstellt, das über eine Meldungsschleife verfügen muss, um interaktiv zu sein. Während wir warten, bis der Benutzer auf „OK“ klickt, reagiert das ursprüngliche Anwendungsfenster nicht auf Benutzereingaben. Es verarbeitet jedoch weiterhin Paint-Meldungen. Das ursprüngliche Fenster zeichnet sich selbst neu, wenn es verdeckt war und dann wieder angezeigt wird.  
   
- ![MessageBox mit einer „OK“-Schaltfläche](./media/threadingnestedpumping.png "ThreadingNestedPumping")  
+ ![Screenshot, der eine MessageBox mit Schaltfläche "OK" anzeigt](./media/threading-model/threading-message-loop.png)  
   
  Ein Thread muss für das Meldungsfenster zuständig sein. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] könnte einen neuen Thread nur für das Meldungsfenster erstellen, aber dieser Thread wäre nicht in der Lage, die deaktivierten Elemente im ursprünglichen Fenster zu zeichnen (beachten Sie den bereits erwähnten gegenseitigen Ausschluss). Stattdessen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verwendet ein geschachteltes meldungsverarbeitungssystem. Die <xref:System.Windows.Threading.Dispatcher> Klasse enthält eine spezielle Methode namens <xref:System.Windows.Threading.Dispatcher.PushFrame%2A>, dem aktuellen Ausführungspunkt in einer Anwendung speichert eine neue Meldungsschleife beginnt. Nach Abschluss die geschachtelten Meldungsschleife Ausführung fortgesetzt wird, nach dem ursprünglichen <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> aufrufen.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "57353035"
   
  Die meisten Schnittstellen werden nicht mit der im Hinblick auf Threadsicherheit erstellt, da Entwickler bei Ihrer Arbeit, die eine [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nie durch mehrere Threads zugegriffen wird. In diesem Fall ist der Singlethread Umweltbelastung zu unerwarteten Zeiten ändern kann diese falsch verursacht, die Auswirkungen der <xref:System.Windows.Threading.DispatcherObject> soll gegenseitige Ausschlussmechanismus um zu lösen. Betrachten Sie den folgenden Pseudocode:  
   
- ![Diagramm des Threadingwiedereintritts](./media/threadingreentrancy.png "ThreadingReentrancy")  
+ ![Diagramm, das threading Eintrittsinvarianz angezeigt wird. ](./media/threading-model/threading-reentrancy.png "ThreadingReentrancy")  
   
  In den meisten Fällen das ist richtig, aber es gibt Situationen, in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , in denen solch ein unerwarteter Wiedereintritt kann wirklich zu Problemen führen. In diesem Fall zu bestimmten Zeiten, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aufrufe <xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>, welche Änderungen die sperranweisung für diesen Thread so die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Sperre Wiedereintritt anstatt der üblichen [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Sperre.  
   

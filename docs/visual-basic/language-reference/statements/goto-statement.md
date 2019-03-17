@@ -13,12 +13,12 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 9d2cec7f9cd2cc9d8985c9add103748583c25dc9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e7aa036f632b4c310c4978d0d684c1222d2b096
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968932"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125563"
 ---
 # <a name="goto-statement"></a>GoTo-Anweisung
 Brancht ohne Bedingungen in eine angegebene Zeile in einer Prozedur.  
@@ -54,8 +54,7 @@ GoTo line
   
  Die folgende Abbildung zeigt eine `Try` Konstruktion in einer anderen geschachtelt. Verschiedene getestete Branches zwischen die beiden Konstruktionen Datenblöcke werden als gültig oder ungültig angegeben.  
   
- ![Grafisches Diagramm zum Branchen in Try-Konstrukten](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
-Gültige und ungültige Branches in Try-Konstrukten  
+ ![Grafisches Diagramm zum Branchen in Try-Konstrukten](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die `GoTo` Branch in Zeile Bezeichnungen in einer Prozedur-Anweisung.  

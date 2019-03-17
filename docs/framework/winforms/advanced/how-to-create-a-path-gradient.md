@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 6fbe8a78131cb64e28326133a7cc0fbdcbffd46b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720396"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126226"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Vorgehensweise: Erstellen eines linearen Pfadfarbverlaufs
 Die <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasse können Sie die Möglichkeit, die Sie ausfüllen einer Form nach und nach Ändern von Farben anpassen. Beispielsweise können Sie eine Farbe für den Mittelpunkt der einen Pfad und eine andere Farbe für die Grenze eines Pfads angeben. Sie können auch separate Farben für die einzelnen mehrere Punkte entlang der Grenzen eines Pfads angeben.  
@@ -26,13 +26,13 @@ Die <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasse können Sie die Mö
   
 -   Im folgenden Beispiel wird eine Ellipse mit der ein Pinsel mit Farbverlauf. Die Farbe in der Mitte auf Blau festgelegt und die Mittelpunktfarbe Hellblau festgelegt. Die folgende Abbildung zeigt die ausgefüllte Ellipse.  
   
-     ![Farbverlaufspfad](./media/pathgradient1.png "pathgradient1")  
+     ![Farbverlaufspfad füllt eine Ellipse.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
      Standardmäßig wird ein Pinsel mit Farbverlauf außerhalb der Grenzen des Pfads nicht erweitert. Wenn Sie Pfadfarbverlaufs verwenden, um einer Figur zu füllen, die über die Begrenzung des Pfads hinausgeht, wird der Bereich des Bildschirms außerhalb des Pfads wird nicht aufgefüllt.  
   
-     Die folgende Abbildung zeigt, was geschieht, wenn Sie ändern, die <xref:System.Drawing.Graphics.FillEllipse%2A> rufen Sie in den folgenden Code zur `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`.  
+     Die folgende Abbildung zeigt, was geschieht, wenn Sie ändern, die <xref:System.Drawing.Graphics.FillEllipse%2A> rufen Sie in den folgenden Code zur `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
-     ![Farbverlaufspfad](./media/pathgradient2.png "pathgradient2")  
+     ![Farbverlaufspfad außerhalb der Grenzen des Pfads erweitert.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
@@ -46,9 +46,9 @@ Die <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasse können Sie die Mö
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   Das folgende Beispiel zeichnet ein linearen Pfadfarbverlaufs ohne eine <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt im Code. Bestimmte <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> Konstruktor in diesem Beispiel empfängt ein Array von Punkten benötigt jedoch keiner <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt. Beachten Sie außerdem, dass die <xref:System.Drawing.Drawing2D.PathGradientBrush> wird verwendet, um ein Rechteck, das keinen Pfad zu füllen. Das Rechteck ist größer als der geschlossenen Pfad verwendet, um den Pinsel, zu definieren, damit einige des Rechtecks nicht vom Pinsel gezeichnet wird. Die folgende Abbildung zeigt das Rechteck (gepunkteten Linie) und der Teil des Rechtecks gezeichnet, indem Pfadfarbverlaufs.  
+-   Das folgende Beispiel zeichnet ein linearen Pfadfarbverlaufs ohne eine <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt im Code. Bestimmte <xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A> Konstruktor in diesem Beispiel empfängt ein Array von Punkten benötigt jedoch keiner <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt. Beachten Sie außerdem, dass die <xref:System.Drawing.Drawing2D.PathGradientBrush> wird verwendet, um ein Rechteck, das keinen Pfad zu füllen. Das Rechteck ist größer als der geschlossenen Pfad verwendet, um den Pinsel, zu definieren, damit einige des Rechtecks nicht vom Pinsel gezeichnet wird. Die folgende Abbildung zeigt das Rechteck (gepunkteten Linie) und der Teil des Rechtecks gezeichnet, indem Pfadfarbverlaufs: 
   
-     ![Farbverlauf](./media/gradient4.png "gradient4")  
+     ![Farbverlauf Teil von Pfadfarbverlaufs gezeichnet.](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
@@ -65,7 +65,7 @@ Die <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasse können Sie die Mö
   
      In der folgenden Abbildung ist das Ergebnis des angegebenen Codes dargestellt. Ellipse auf der linken Seite ist Aqua nur auf den Mittelpunkt. Ellipse auf der rechten Seite ist Aqua überall innerhalb des inneren Pfads.  
   
- ![Gradient](./media/focusscales1nogamma.png "focusscales1NoGamma")  
+ ![Der Fokus Skalen Farbverlaufseffekt](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
@@ -78,7 +78,7 @@ Die <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasse können Sie die Mö
   
      Die folgende Abbildung zeigt das Dreieck mit benutzerdefinierten Pfadfarbverlaufs gefüllt.  
   
-     ![Farbverlaufspfad](./media/pathgradient4.png "pathgradient4")  
+     ![Dreieck wird mit benutzerdefinierter Pfad Farbverlaufspinsel gefüllt.](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
@@ -92,18 +92,18 @@ Die <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasse können Sie die Mö
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     Die folgende Abbildung zeigt die ausgefüllte Ellipse und den Mittelpunkt des Pfadfarbverlaufs.  
+     Die folgende Abbildung zeigt die ausgefüllte Ellipse und den Mittelpunkt des Pfadfarbverlaufs:  
   
-     ![Farbverlaufspfad](./media/pathgradient5.png "pathgradient5")  
+     ![Farbverlaufspfad mit gefüllte Ellipse und Center Punkt.](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
 -   Sie können den Mittelpunkt des Pfadfarbverlaufs an einem Speicherort außerhalb des Pfads festlegen, die zum Erstellen des Pinsels verwendet wurde. Im folgenden Beispiel ersetzt der Aufruf zum Festlegen der <xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A> Eigenschaft im vorangehenden Code.  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     Die folgende Abbildung zeigt die Ausgabe durch diese Änderung.  
+     Die folgende Abbildung zeigt die Ausgabe durch diese Änderung:  
   
-     ![Farbverlaufspfad](./media/pathgradient6.png "pathgradient6")  
+     ![Farbverlaufspfad mit einem Mittelpunkt außerhalb des Pfads.](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
   
      In der vorherigen Abbildung sind die Punkte in der rechten oberen Ecke der Ellipse nicht reines Blau (obwohl sie sehr dicht beieinander liegen). Die Farben im Farbverlauf positioniert sind, als ob die Füllung auf den Punkt (145, 35) erreicht, in dem die Farbe reines Blau (0, 0, 255) wäre. Aber die Füllung nie erreicht (145, 35), da ein Pinsel mit Farbverlauf nur innerhalb des Pfads zeichnet.  
   

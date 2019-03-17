@@ -11,39 +11,34 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 409981e9c751144d26151210977a45b5e1eccf0a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5de1068401dac61c5de5b86604da9417e18a94ae
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368150"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125940"
 ---
 # <a name="how-to-create-outlined-text"></a>Vorgehensweise: Erstellen von Text mit Kontur
 In den meisten Fällen, wenn Sie Textzeichenfolgen in Verzierung Hinzufügen Ihrer [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -Anwendung können Sie Text im Hinblick auf eine Auflistung von diskreten Zeichen oder Symbole verwenden. Beispielsweise Sie Pinsels mit linearem Farbverlauf zu erstellen und anwenden, können die <xref:System.Windows.Controls.Control.Foreground%2A> Eigenschaft eine <xref:System.Windows.Controls.TextBox> Objekt. Wenn Sie anzeigen oder bearbeiten das Textfeld ein, wird Pinsels mit linearem Farbverlauf automatisch auf den aktuellen Satz von Zeichen in der Textzeichenfolge angewendet.  
   
- ![Angezeigter Text mit einem linearen Farbverlaufspinsel](./media/outlinedtext01.jpg "OutlinedText01")  
-Beispiel für einen Pinsel mit linearem Farbverlauf auf das Textfeld angewendet  
+ ![Angezeigter Text mit einem linearen Farbverlaufspinsel](./media/how-to-create-outlined-text/text-linear-gradient.jpg)    
   
  Sie können aber auch konvertieren, Text in <xref:System.Windows.Media.Geometry> Objekte, die Ihnen ermöglichen, andere Arten von visuell rich-Text zu erstellen. Sie können z. B. Erstellen einer <xref:System.Windows.Media.Geometry> Objekt auf Grundlage der Gliederung einer Textzeichenfolge.  
   
- ![Textkontur mit einem linearen Farbverlaufspinsel](./media/outlinedtext02.jpg "OutlinedText02")  
-Beispiel für einen Pinsel mit linearem Farbverlauf auf die Geometrie Gliederung des Texts angewendet  
+ ![Textkontur mit einem linearen Farbverlaufspinsel](./media/how-to-create-outlined-text/text-outline-linear-gradient.jpg)  
   
  Wenn in Text konvertiert wird eine <xref:System.Windows.Media.Geometry> Objekt, es ist nicht mehr eine Sammlung von Zeichen, die Zeichen in der Textzeichenfolge kann nicht geändert werden. Sie können jedoch die Darstellung des konvertierten Texts durch Ändern der Strich- und Füllungseigenschaften ändern. Der Strich bezieht sich auf die Kontur des konvertierten Texts und die Füllung auf den Bereich innerhalb der Kontur.  
   
  Die folgenden Beispiele zeigen verschiedene Möglichkeiten zum Erstellen von visuellen Effekten durch Ändern von Strich und Füllung des konvertierten Texts.  
   
- ![Text mit unterschiedlichen Farben für Füllung und Strich](./media/outlinedtext03.jpg "OutlinedText03")  
-Beispiel für das Festlegen von unterschiedlichen Farben für Strich und Füllung  
+ ![Text mit unterschiedlichen Farben für Füllung und Strich](./media/how-to-create-outlined-text/fill-stroke-text-effect.jpg)  
   
- ![Text mit auf Strich angewendetem Bildpinsel](./media/outlinedtext04.jpg "OutlinedText04")  
-Beispiel für die Anwendung eines Bildpinsels auf den Strich  
+ ![Text mit auf Strich angewendeten Bildpinsel](./media/how-to-create-outlined-text/image-brush-application.jpg)
   
  Es ist auch möglich, die umgebende Rechteckfeld oder die Hervorhebung des konvertierten Texts zu ändern. Das folgende Beispiel veranschaulicht eine Möglichkeit zum Erstellen visueller Effekte durch Ändern des Strichs und Hervorhebung des konvertierten Texts.  
   
- ![Text mit auf Strich angewendetem Bildpinsel](./media/outlinedtext05.jpg "OutlinedText05")  
-Beispiel für die Anwendung eines Bildpinsels auf den Strich und die Hervorhebung  
-  
+ ![Text mit Bildpinsel angewendet, um zu zeichnen, und markieren](./media/how-to-create-outlined-text/image-brush-text-application.jpg)
+
 ## <a name="example"></a>Beispiel  
  Der Schlüssel für die Konvertierung von Text in einem <xref:System.Windows.Media.Geometry> Objekt ist die Verwendung der <xref:System.Windows.Media.FormattedText> Objekt. Nachdem Sie dieses Objekt erstellt haben, können Sie mithilfe der <xref:System.Windows.Media.FormattedText.BuildGeometry%2A> und <xref:System.Windows.Media.FormattedText.BuildHighlightGeometry%2A> Methoden für die Konvertierung des Texts, der <xref:System.Windows.Media.Geometry> Objekte. Die erste Methode gibt die Geometrie des formatierten Texts zurück. die zweite Methode gibt zurück, dass die Geometrie des formatierten Texts umgebenden Felds des. Im folgenden Codebeispiel wird veranschaulicht, wie zum Erstellen einer <xref:System.Windows.Media.FormattedText> Objekt und die Geometrien, der den formatierten Text und die umgebende Feld abrufen.  
   

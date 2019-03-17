@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 639b53ada8639ed686d04b4aa2e5295ca08240b0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a66edd0297b723b81c31675c9b0e6b6def9ed10a
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714176"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125862"
 ---
 # <a name="using-nested-graphics-containers"></a>Verwenden geschachtelter Grafikcontainer
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] enthält der Container, die Sie verwenden können, um vorübergehend zu ersetzen oder erweitern Teil des Zustands in einer <xref:System.Drawing.Graphics> Objekt. Sie erstellen einen Container durch Aufrufen der <xref:System.Drawing.Graphics.BeginContainer%2A> Methode eine <xref:System.Drawing.Graphics> Objekt. Rufen Sie <xref:System.Drawing.Graphics.BeginContainer%2A> wiederholt, um geschachtelte Container zu erstellen. Jeder Aufruf von <xref:System.Drawing.Graphics.BeginContainer%2A> muss mit einem Aufruf von kombiniert werden <xref:System.Drawing.Graphics.EndContainer%2A>.  
@@ -25,9 +25,9 @@ ms.locfileid: "57714176"
  [!code-csharp[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#61)]
  [!code-vb[System.Drawing.MiscLegacyTopics#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#61)]  
   
- Im vorangehenden Code innerhalb des Containers gezeichnete Rechteck zunächst nach der globalen Transformation des Containers (Drehung) und dann durch die globale Transformation transformiert die <xref:System.Drawing.Graphics> Objekt (Translation). Außerhalb des Containers gezeichnete Rechteck transformiert wird, nur durch die globale Transformation für das <xref:System.Drawing.Graphics> Objekt (Translation). Die folgende Abbildung zeigt die zwei Rechtecken.  
+ Im vorangehenden Code innerhalb des Containers gezeichnete Rechteck zunächst nach der globalen Transformation des Containers (Drehung) und dann durch die globale Transformation transformiert die <xref:System.Drawing.Graphics> Objekt (Translation). Außerhalb des Containers gezeichnete Rechteck transformiert wird, nur durch die globale Transformation für das <xref:System.Drawing.Graphics> Objekt (Translation). Die folgende Abbildung zeigt die beiden Rechtecke: 
   
- ![Geschachtelte Container](./media/csnestedcontainers1.png "csnestedcontainers1")  
+ ![Abbildung der geschachtelte Container.](./media/using-nested-graphics-containers/nested-containers-illustration.png)  
   
 ## <a name="clipping-in-nested-containers"></a>Clipping in verschachtelten Containern  
  Im folgende Beispiel wird veranschaulicht, wie geschachtelte Container Ausschneidebereiche behandeln. Der Code erstellt eine <xref:System.Drawing.Graphics> Objekt und einen Container innerhalb der <xref:System.Drawing.Graphics> Objekt. Der Ausschneidebereich der <xref:System.Drawing.Graphics> Objekt ist ein Rechteck, und der Ausschneidebereich des Containers ist eine Ellipse. Der Code werden zwei Aufrufe der <xref:System.Drawing.Graphics.DrawLine%2A> Methode. Der erste Aufruf <xref:System.Drawing.Graphics.DrawLine%2A> befindet sich innerhalb des Containers und der zweite Aufruf von <xref:System.Drawing.Graphics.DrawLine%2A> außerhalb des Containers (nach dem Aufruf von <xref:System.Drawing.Graphics.EndContainer%2A>). Die erste Zeile wird durch die Schnittmenge der beiden Ausschneidebereiche abgeschnitten. In der zweite Zeile wird abgeschnitten, nur durch den rechteckigen Ausschneidebereich der <xref:System.Drawing.Graphics> Objekt.  
@@ -35,9 +35,9 @@ ms.locfileid: "57714176"
  [!code-csharp[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/CS/Class1.cs#62)]
  [!code-vb[System.Drawing.MiscLegacyTopics#62](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#62)]  
   
- Die folgende Abbildung zeigt die beiden abgeschnittenen Zeilen.  
+ Die folgende Abbildung zeigt die beiden abgeschnittenen Zeilen:
   
- ![Geschachtelte Container](./media/nestedcontainers2.png "nestedcontainers2")  
+ ![Abbildung der einen geschachtelten Container mit abgeschnittenen Zeilen.](./media/using-nested-graphics-containers/nested-container-clipped-lines.png)  
   
  Wie die beiden vorherigen Beispiele zeigen, sind Transformationen und Ausschneidebereiche kumulative in verschachtelten Containern. Wenn Sie die globalen Transformationen des Containers festlegen und die <xref:System.Drawing.Graphics> Objekt, beide Transformationen gelten für Elemente, die von innerhalb des Containers gezeichnet. Die Transformation des Containers werden zuerst und die Transformation die <xref:System.Drawing.Graphics> Objekt angewendet. Wenn Sie festlegen, dass die Ausschneidebereiche des Containers und der <xref:System.Drawing.Graphics> Objekt, Elemente aus, die innerhalb des Containers werden durch die Schnittmenge der beiden Ausschneidebereiche abgeschnitten werden.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "57714176"
   
  Die folgende Abbildung zeigt die drei Zeichenfolgen. Die Zeichenfolgen, die gezeichnet wird, aus dem inneren Container und die <xref:System.Drawing.Graphics> Objekt durch Antialiasing geglättet werden. Die Zeichenfolge aus dem äußeren Container wird nicht durch Antialiasing geglättet, da die <xref:System.Drawing.Graphics.TextRenderingHint%2A> -Eigenschaftensatz auf <xref:System.Drawing.Text.TextRenderingHint.SingleBitPerPixel>.  
   
- ![Geschachtelte Container](./media/nestedcontainers3.png "nestedcontainers3")  
+ ![Abbildung der Zeichenfolgen von geschachtelten Containern gezeichnet werden.](./media/using-nested-graphics-containers/nested-containers-three-strings.png)  
   
 ## <a name="see-also"></a>Siehe auch
 - <xref:System.Drawing.Graphics>

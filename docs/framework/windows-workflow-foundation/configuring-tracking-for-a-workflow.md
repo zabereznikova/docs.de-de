@@ -2,12 +2,12 @@
 title: Konfigurieren der Nachverfolgung für einen Workflow
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719402"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126200"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Konfigurieren der Nachverfolgung für einen Workflow
 
@@ -183,9 +183,9 @@ Gehen Sie wie folgt vor, um Nachverfolgungsdatensätze anzuzeigen.
 
 6. Mit der rechten Maustaste die **analytisch** Knoten, und wählen **aktualisieren.** Nachverfolgungsdatensätze sollten im mittleren Bereich sichtbar sein.
 
-Das folgende Bild zeigt Nachverfolgungsereignisse in der Ereignisanzeige an.
+Das folgende Bild zeigt Nachverfolgungsereignisse in der Ereignisanzeige:
 
-![Ereignis-Viewer angezeigt, die Nachverfolgungsdatensätze](./media/trackingeventviewer.PNG "TrackingEventViewer")
+![Screenshot der Ereignisanzeige mit nachverfolgungsdatensätzen.](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
 ### <a name="registering-an-application-specific-provider-id"></a>Registrieren einer anwendungsspezifischen Anbieter-ID
 

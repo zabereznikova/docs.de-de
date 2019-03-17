@@ -2,12 +2,12 @@
 title: Einführung in F#
 description: Untersuchen Sie in dieser Tour mithilfe von Codebeispielen einige der wichtigsten Funktionen der Programmiersprache F#.
 ms.date: 11/06/2018
-ms.openlocfilehash: d741f7066517ad9bc004e2a89ba0d85a1d4c424d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b3ec7fd2c42712440ea7d7045c560ab20390b45
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968295"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125576"
 ---
 # <a name="tour-of-f"></a>Einführung in F\#
 
@@ -136,10 +136,6 @@ Fehler bei den oben genannten folgen, führt zu einem Kompilierungsfehler.
 [Übereinstimmende Muster](language-reference/pattern-matching.md) ist die F#-Sprache-Funktion die Richtigkeit für Vorgänge für F#-Typen ermöglicht.  In den obigen Beispielen haben Sie wahrscheinlich bemerkt, dass einiges an `match x with ...` Syntax.  Dieses Konstrukt kann den Compiler, der verstehen kann, die "Form" Datentypen, um gezwungen, alle möglichen Fälle berücksichtigen, wenn ein Datentyp, durch was bekannt ist als vollständige Musterabgleich mit.  Dies ist unglaublich leistungsfähige auf Richtigkeit, und auf "heben", was normalerweise relevant Runtime in während der Kompilierung wäre clever verwendet werden kann.
 
 [!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L705-L742)]
-
-Sie können auch die Kurzform `function` Konstrukt für den Musterabgleich, das ist nützlich, wenn beim Schreiben von Funktionen auf, die Stellen verwenden [teilweise Anwendung](language-reference/functions/index.md#partial-application-of-arguments):
-
-[!code-fsharp[PatternMatching](../../samples/snippets/fsharp/tour.fs#L744-L762)]
 
 Sie haben möglicherweise bemerkt wird die Verwendung von der `_` Muster.  Dies bezeichnet man als den [Platzhaltermuster](language-reference/pattern-matching.md#wildcard-pattern), dies ist eine Möglichkeit, mit dem Text "Keine Rolle, was etwas ist".  Zwar praktisch ist, können Sie versehentlich zu umgehen, vollständig Musterabgleich und nicht mehr während der Kompilierung Gebieten profitieren, wenn man sich mit nicht `_`.  Es wird am besten verwendet, wenn Sie bestimmte Teile eines zerlegten Typs nicht relevant ist wenn Muster Abgleich oder die letzte Klausel, wenn Sie alle sinnvolle Fälle in einem musterabgleichsausdruck aufgezählt haben.
 
