@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie Sie API-Gateways mit Ocelot implementieren u
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b51341b25fb81d93f85ff33fe6f2225196126ea0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 404f19f55b3be1e4be161543556bb2619f164b9b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679488"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846102"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementieren von API-Gateways mit Ocelot
 
@@ -176,10 +176,10 @@ namespace OcelotApiGw
             var builder = WebHost.CreateDefaultBuilder(args);
 
             builder.ConfigureServices(s => s.AddSingleton(builder))
-                                                          .ConfigureAppConfiguration(
-                              ic => ic.AddJsonFile(Path.Combine("configuration",
-                                                                "configuration.json")))
-                                                                .UseStartup<Startup>();
+                    .ConfigureAppConfiguration(
+                          ic => ic.AddJsonFile(Path.Combine("configuration",
+                                                            "configuration.json")))
+                    .UseStartup<Startup>();
             var host = builder.Build();
             return host;
         }
@@ -541,19 +541,19 @@ Ingress leitet dagegen nur HTTP-Anforderungen um und versucht nicht, Microservic
 
 Eine Ingress-Nginx-Ebene in Kubernetes vor den Webanwendungen sowie mehrere Ocelot-API-Gateways/BFFs wie in der folgenden Abbildung ist die ideale Architektur.
 
- ![Kubernetes Ingress dient als Reverseproxy für den gesamten Datenverkehr zur App. Dies gilt auch für Web-Apps, die normalerweise außerhalb des API-Gateway-Bereichs liegen.](./media/image41.png)
+![Kubernetes Ingress dient als Reverseproxy für den gesamten Datenverkehr zur App. Dies gilt auch für Web-Apps, die normalerweise außerhalb des API-Gateway-Bereichs liegen.](./media/image41.png)
 
 **Abbildung 6-41**. Die Ingress-Ebene in eShopOnContainers bei Bereitstellung in Kubernetes
 
 Wenn Sie eShopOnContainers in Kubernetes bereitstellen, werden nur wenige Dienste oder Endpunkte über _ingress_ verfügbar gemacht. Hierbei handelt es sich im Wesentlichen um die folgende Liste mit Postfixes in den URLs:
 
--   `/` für die SPA-Clientwebanwendung
--   `/webmvc` für die MVC-Clientwebanwendung
--   `/webstatus` für die Clientwebanwendung, zeigt den Status/Integritätsprüfungen an
--   `/webshoppingapigw` für die BFF- und „Shopping“-Webgeschäftsprozesse
--   `/webmarketingapigw` für die BFF- und „Marketing“-Webgeschäftsprozesse
--   `/mobileshoppingapigw` für die mobilen BFF- und „Shopping“-Geschäftsprozesse
--   `/mobilemarketingapigw` für die mobilen BFF- und „Marketing“-Geschäftsprozesse
+- `/` für die SPA-Clientwebanwendung
+- `/webmvc` für die MVC-Clientwebanwendung
+- `/webstatus` für die Clientwebanwendung, zeigt den Status/Integritätsprüfungen an
+- `/webshoppingapigw` für die BFF- und „Shopping“-Webgeschäftsprozesse
+- `/webmarketingapigw` für die BFF- und „Marketing“-Webgeschäftsprozesse
+- `/mobileshoppingapigw` für die mobilen BFF- und „Shopping“-Geschäftsprozesse
+- `/mobilemarketingapigw` für die mobilen BFF- und „Marketing“-Geschäftsprozesse
 
 Bei der Bereitstellung für Kubernetes verwendet jedes Ocelot-API-Gateway für jeden _Pod_, der die API-Gateways ausführt, eine andere configuration.json-Datei. Diese configuration.json-Dateien werden bereitgestellt, indem ein Volume (ursprünglich mit dem Skript „deploy.ps1“) eingebunden wird, das auf einer Kubernetes-_Konfigurationszuordnung_ mit dem Namen „ocelot“ basiert. Jeder Container bindet die entsprechende Konfigurationsdatei in den Containerordner namens `/app/configuration` ein.
 

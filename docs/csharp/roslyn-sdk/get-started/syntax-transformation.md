@@ -3,12 +3,12 @@ title: Erste Schritte mit der Syntaxtransformation (Roslyn-APIs)
 description: Eine Einführung in das Durchlaufen, Abfragen und schrittweise Durchlaufen von Syntaxstrukturen.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122572"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788439"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Erste Schritte mit der Syntaxtransformation
 
@@ -152,7 +152,7 @@ Fügen Sie nun diese Anweisung hinzu, um den Initialisierungsausdruck zu binden:
 
 Abschließend fügen Sie die folgende `if`-Anweisung hinzu, um den vorhandenen Typnamen durch das Schlüsselwort `var` zu ersetzen, wenn der Typ des Initialisierungsausdrucks dem angegebenen Typ entspricht:
 
-[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Replace the initializer node")]
+[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
 Die Bedingung ist erforderlich, da die Deklaration den Initialisierungsausdruck in eine Basisklasse oder eine Schnittstelle umwandeln kann. Wenn das gewünscht wird, stimmen die Typen auf der linken und rechten Seite der Zuweisung nicht überein. Das Entfernen des expliziten Typs würde in diesen Fällen die Semantik eines Programms verändern. `var` wird als Bezeichner und nicht als Schlüsselwort angegeben, da `var` ein kontextbezogenes Schlüsselwort ist. Die führenden und nachgestellten Trivia (Leerzeichen) werden vom alten Typnamen in das Schlüsselwort `var` übertragen, um vertikale Leerzeichen und Einrückungen beizubehalten. Es ist einfacher, `ReplaceNode` anstelle von `With*` für die Transformation der <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> zu verwenden, da der Typname eigentlich ein untergeordnetes Element der zweiten Ebene der Deklarationsanweisung ist.
 

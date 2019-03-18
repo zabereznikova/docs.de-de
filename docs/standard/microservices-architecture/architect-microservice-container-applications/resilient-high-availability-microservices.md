@@ -4,12 +4,12 @@ description: Microservices müssen so entworfen werden, dass sie vorübergehende
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c5bd272380f25f801c7b75c8b8e73a080ac89eef
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e601ccae8ee3493e6a5d9cd35c4573a9df2da46
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970791"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846622"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resilienz und Hochverfügbarkeit bei Microservices
 
@@ -77,7 +77,7 @@ Unterschiedliche Orchestratoren können ähnlich klingen. Die Diagnosefunktionen
   [*https://www.splunk.com/*](https://www.splunk.com/)
 
 - **EventSource-Klasse** API for events tracing for Windows (ETW) (API für die Ereignisablaufverfolgung für Windows (ETW))
-  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
+  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]
 >[Zurück](microservice-based-composite-ui-shape-layout.md)

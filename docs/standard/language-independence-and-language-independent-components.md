@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d8957a5376e17ff69bf9e811125af5a4af1e3b6
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836551"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846466"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachenunabhängigkeit und sprachunabhängige Komponenten
 Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer der zahlreichen Sprachen entwickeln kann, die auf .NET Framework ausgerichtet sind, z. B. C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL und Windows PowerShell. Sie können auf die Typen und Member von Klassenbibliotheken, die für .NET Framework entwickelt wurden, zugreifen, ohne die Sprache, in der sie ursprünglich geschrieben wurden, kennen zu müssen und ohne den Konventionen der Originalsprache folgen zu müssen. Wenn Sie ein Komponentenentwickler sind, kann von allen .NET Framework-Apps sprachenunabhängig auf die Komponente zugegriffen werden.  
@@ -343,7 +343,7 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
 ### <a name="member-accessibility"></a>Memberzugriff  
  Das Überschreiben eines geerbten Members kann den Zugriff auf diesen Member nicht ändern. Beispielsweise kann eine öffentliche Methode in einer Basisklasse nicht von einer privaten Methode in einer abgeleiteten Klasse überschrieben werden. Es gibt allerdings eine Ausnahme: einen `protected internal`-Member (in C#) oder einen `Protected Friend`-Member (in Visual Basic) in einer Assembly, die von einem Typ in einer anderen Assembly überschrieben wird. In diesem Fall ist der Zugriff auf die Überschreibung `Protected`.  
   
- Im folgenden Beispiel wird der Fehler veranschaulicht, der generiert wird, wenn das <xref:System.CLSCompliantAttribute>-Attribut auf `true` festgelegt wird und `Person` , eine von `Animal` abgeleitete Klasse, versucht den Zugriff auf die `Species`-Eigenschaft von öffentlich auf privat zu ändern. Das Beispiel wird erfolgreich kompiliert, wenn der Zugriff auf öffentlich geändert wird.  
+ Im folgenden Beispiel wird der Fehler veranschaulicht, der generiert wird, wenn das <xref:System.CLSCompliantAttribute>-Attribut auf `true` festgelegt wird und `Human` , eine von `Animal` abgeleitete Klasse, versucht den Zugriff auf die `Species`-Eigenschaft von öffentlich auf privat zu ändern. Das Beispiel wird erfolgreich kompiliert, wenn der Zugriff auf öffentlich geändert wird.  
   
  [!code-csharp[Conceptual.CLSCompliant#28](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/accessibility1.cs#28)]
  [!code-vb[Conceptual.CLSCompliant#28](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/accessibility1.vb#28)]  

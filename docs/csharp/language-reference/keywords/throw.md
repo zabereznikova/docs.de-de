@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e29c0cc85f0ec6ccd3f428d64121f53b91ae9a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6911ff96ca847f554e9b615aba6ab83a212efee
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713849"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125992"
 ---
 # <a name="throw-c-reference"></a>throw (C#-Referenz)
 
@@ -60,7 +60,7 @@ Ab C# 7.0 kann `throw` sowohl als Ausdruck als auch als Anweisung verwendet werd
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]  
 
-- Ein Ausdruckskörper[lambda](../../lambda-expressions.md) oder eine Ausdruckskörpermethode. Das folgende Beispiel veranschaulicht eine Ausdruckskörpermethode, die eine <xref:System.InvalidCastException> auslöst, da eine Konvertierung in einen <xref:System.DateTime>-Wert nicht unterstützt wird.
+- Ein Ausdruckskörper[lambda](../../programming-guide/statements-expressions-operators/lambda-expressions.md) oder eine Ausdruckskörpermethode. Das folgende Beispiel veranschaulicht eine Ausdruckskörpermethode, die eine <xref:System.InvalidCastException> auslöst, da eine Konvertierung in einen <xref:System.DateTime>-Wert nicht unterstützt wird.
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]  
 

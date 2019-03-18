@@ -3,12 +3,12 @@ title: Klassen und Objekte in C# – Überblick über C#
 description: Neu bei C#? Lesen Sie diese Übersicht über Klassen, Objekte und Vererbung.
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 51661a0728e9a68c0c646f493b648120897f95fd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147547"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846141"
 ---
 # <a name="classes-and-objects"></a>Klassen und Objekte
 
@@ -123,7 +123,7 @@ Die *Signatur* einer Methode muss innerhalb der Klasse eindeutig sein, in der di
 
 Parameter werden dazu verwendet, Werte oder Variablenverweise an Methoden zu übergeben. Die Parameter einer Methode erhalten ihre tatsächlichen Werte über *Argumente*, die angegeben werden, wenn die Methode aufgerufen wird. Es gibt vier Arten von Parametern: Wertparameter, Verweisparameter, Ausgabeparameter und Parameterarrays.
 
-Ein *Wertparameter* wird zum Übergeben von Eingabeargumenten verwendet. Ein Wertparameter entspricht einer lokalen Variablen, die ihren Anfangswert von dem Argument erhält, das für den Parameter übergeben wurde. Änderungen an einem Wertparameter wirken sich nicht auf das Argument aus, das für den Parameter übergeben wurde. 
+Ein *Wertparameter* wird zum Übergeben von Eingabeargumenten verwendet. Ein Wertparameter entspricht einer lokalen Variablen, die ihren Anfangswert von dem Argument erhält, das für den Parameter übergeben wurde. Änderungen an einem Wertparameter wirken sich nicht auf das Argument aus, das für den Parameter übergeben wurde.
 
 Wertparameter können optional sein, indem ein Standardwert festgelegt wird, damit die zugehörigen Argumente weggelassen werden können.
 
@@ -293,6 +293,6 @@ Der Garbage Collector kann weitestgehend selbst über den Zeitpunkt der Objektbe
 
 Die `using`-Anweisung bietet einen besseren Ansatz für die Objektzerstörung.
 
->[!div class="step-by-step"]
->[Zurück](statements.md)
->[Weiter](structs.md)
+> [!div class="step-by-step"]
+> [Zurück](statements.md)
+> [Weiter](structs.md)
