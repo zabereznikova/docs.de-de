@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: fd86293c539bf58ac93894e0b879dddb984825e1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: be0b6a0bbe927f248be434afd15dde6a66791fe6
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378945"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "58126122"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>Vorgehensweise: Anwenden von Transformationen auf Text
 Transformationen können die Anzeige von Text in Ihrer Anwendung ändern. Die folgenden Beispiele verwenden verschiedene Arten von Renderingtransformationen die Anzeige von Text in beeinflusst eine <xref:System.Windows.Controls.TextBlock> Steuerelement.  
@@ -28,8 +28,7 @@ Transformationen können die Anzeige von Text in Ihrer Anwendung ändern. Die fo
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt um einen bestimmten Punkt in der zweidimensionalen X-Y-Ebene gedrehten Text.  
   
- ![Gedrehter Text mithilfe einer RotateTransform](./media/transformedtext01.jpg "TransformedText01")  
-Beispiel für um 90 Grad gedrehten Text  
+ ![Gedrehter Text mithilfe einer RotateTransform](./media/how-to-apply-transforms-to-text/text-rotated-ninety-degrees.jpg)  
   
  Im folgenden Codebeispiel wird eine <xref:System.Windows.Media.RotateTransform> um Text zu drehen. Ein <xref:System.Windows.Media.RotateTransform.Angle%2A> -Wert von 90 Dreht das Element um 90 Grad im Uhrzeigersinn.  
   
@@ -37,8 +36,7 @@ Beispiel für um 90 Grad gedrehten Text
   
  Das folgende Beispiel zeigt die zweite Textzeile, die um 150 % entlang der X-Achse skaliert ist, und die dritte Textzeile, die um 150 % entlang der Y-Achse skaliert ist.  
   
- ![Skalierter Text mithilfe einer ScaleTransform skalierter](./media/transformedtext02.jpg "TransformedText02")  
-Beispiel für skalierten Text  
+ ![Skalierter Text mithilfe einer ScaleTransform](./media/how-to-apply-transforms-to-text/scaled-text-scaletransform.jpg) 
   
  Im folgenden Codebeispiel wird eine <xref:System.Windows.Media.ScaleTransform> zum Skalieren von Text aus der ursprünglichen Größe.  
   
@@ -49,17 +47,15 @@ Beispiel für skalierten Text
   
  Das folgende Beispiel zeigt einen entlang der X-Achse geneigten Text.  
   
- ![Geneigter Text mithilfe einer SkewTransform](./media/transformedtext03.jpg "TransformedText03")  
-Beispiel für verzerrten Text  
-  
+ ![Geneigter Text mithilfe einer SkewTransform](./media/how-to-apply-transforms-to-text/skewed-transformed-text.jpg)
+   
  Im folgenden Codebeispiel wird eine <xref:System.Windows.Media.SkewTransform> um Text zu neigen. Eine Neigung ist eine Transformation, die den Koordinatenraum auf ungleichmäßige Art ausdehnt. In diesem Beispiel werden die zwei Textzeichenfolgen um -30 Grad und 30 Grad entlang der X-Koordinate geneigt.  
   
  [!code-xaml[TextTransformSample#TextTransformSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextTransformSample/CS/Window1.xaml#texttransformsample3)]  
   
  Das folgende Beispiel zeigt Text, der entlang der X- und Y-Achse übersetzt oder verschoben wurde.  
   
- ![Textversatz mithilfe einer TranslateTransform](./media/transformedtext04.jpg "TransformedText04")  
-Beispiel für übersetzten Text  
+ ![Textversatz mithilfe einer TranslateTransform](./media/how-to-apply-transforms-to-text/transformed-text-x-y-axis.jpg)
   
  Im folgenden Codebeispiel wird eine <xref:System.Windows.Media.TranslateTransform> um Text zu versetzen. In diesem Beispiel erstellt eine geringfügig versetzte Kopie des Textes hinter dem primären Text einen Schatteneffekt.  
   
