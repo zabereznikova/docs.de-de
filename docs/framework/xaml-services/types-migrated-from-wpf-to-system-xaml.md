@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: bc895313ae89d464c4ddc16607d19b2e6160f80c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fc9d1b2666db05fc4fb902cf8db03d9d876001b
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524259"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58031471"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>Aus WPF zu System.Xaml migrierte Typen
 In [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] und [!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)], beide [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] und Windows Workflow Foundation eine XAML-sprachimplementierung enthalten. Viele der öffentlichen Typen, die Erweiterbarkeit für die WPF-XAML-Implementierung bereitstellten, waren in den WindowsBase-, PresentationCore- und PresentationFramework-Assemblys vorhanden. Ebenso waren öffentliche Typen, die Erweiterbarkeit für Windows Workflow Foundation-XAML bereitgestellt, in der System.Workflow.ComponentModel-Assembly. In [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]wurden einige der XAML-bezogenen Typen zur System.Xaml-Assembly migriert. Eine allgemeine .NET Framework-Implementierung der XAML-Sprachdienste unterstützt viele XAML-Erweiterbarkeitsszenarios, die ursprünglich durch die XAML-Implementierung eines bestimmten Frameworks definiert wurden, jetzt jedoch Bestandteil der allgemeinen XAML-Sprachunterstützung in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] sind. In diesem Thema werden die migrierten Typen aufgeführt und Probleme im Zusammenhang mit der Migration erläutert.  
@@ -65,7 +65,7 @@ In [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] und [!INCLUDE[
 |<xref:System.Windows.Markup.StaticExtension>|`{x:Static ...}`|  
 |<xref:System.Windows.Markup.TypeExtension>|`{x:Type ...}`|  
   
- Obwohl System.Xaml möglicherweise keine spezifischen Unterstützungsklassen enthält, befindet sich die allgemeine Logik für die Verarbeitung von Sprachfeatures für die XAML-Sprache jetzt in System.Xaml und den zugehörigen implementierten XAML-Readern und XAML-Writern. Beispiel: `x:TypeArguments` ist ein Attribut, das von XAML-Readern und XAML-Writern aus System.Xaml-Implementierungen verarbeitet wird; es kann im XAML-Knotenstream eingetragen werden, verfügt über Behandlung im standardmäßigen (CLR-basierten) XAML-Schemakontext, hat eine XAML-Typsystemdarstellung usw. Folglich ist die Referenzdokumentation für alle Features auf XAML-Sprachebene ein untergeordnetes Thema von [XAML Services](../../../docs/framework/xaml-services/index.md) und diesem allgemeinen Bereich der .NET Framework-Dokumentation, statt Bestandteil der WPF-Dokumentation als untergeordnetes Thema von [Erweitert (Windows Presentation Foundation)](../../../docs/framework/wpf/advanced/index.md) zu sein (was in der 3.5-Dokumentation weiterhin der Fall ist).  
+ Obwohl System.Xaml möglicherweise keine spezifischen Unterstützungsklassen enthält, befindet sich die allgemeine Logik für die Verarbeitung von Sprachfeatures für die XAML-Sprache jetzt in System.Xaml und den zugehörigen implementierten XAML-Readern und XAML-Writern. Beispiel: `x:TypeArguments` ist ein Attribut, das von XAML-Readern und XAML-Writern aus System.Xaml-Implementierungen verarbeitet wird; es kann im XAML-Knotenstream eingetragen werden, verfügt über Behandlung im standardmäßigen (CLR-basierten) XAML-Schemakontext, hat eine XAML-Typsystemdarstellung usw. Folglich ist die Referenzdokumentation für alle Features auf XAML-Sprachebene ein untergeordnetes Thema von [XAML Services](index.md) und diesem allgemeinen Bereich der .NET Framework-Dokumentation, statt Bestandteil der WPF-Dokumentation als untergeordnetes Thema von [Erweitert (Windows Presentation Foundation)](../wpf/advanced/index.md) zu sein (was in der 3.5-Dokumentation weiterhin der Fall ist).  
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## <a name="valueserializer-and-supporting-classes"></a>ValueSerializer und unterstützende Klassen  
@@ -126,4 +126,4 @@ In [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] und [!INCLUDE[
  Wenn Sie Verweise auf WPF-Assemblys und System.Xaml einschließen und außerdem `include` -Anweisungen für den <xref:System.Windows.Markup> - und den <xref:System.Xaml> -Namespace verwenden, müssen Sie die Aufrufe dieser APIs möglicherweisemöglicherweise vollständig qualifizieren, um die Typen ohne Mehrdeutigkeit aufzulösen.  
   
 ## <a name="see-also"></a>Siehe auch
-- [XAML Services](../../../docs/framework/xaml-services/index.md) (XAML-Dienste)
+- [XAML Services](index.md) (XAML-Dienste)

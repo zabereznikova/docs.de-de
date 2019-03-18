@@ -15,12 +15,12 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: f6225dfcc02b90da58ccafd5c70726b6f80f29d4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: feda058a9672a3150f7beb5c1bc124eee1eae9eb
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839091"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048674"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>Integrierte Typen für häufige XAML-Sprachprimitive
 In XAML 2009 wird die Unterstützung auf XAML-Sprachebene für mehrere Datentypen eingeführt, bei denen es sich um häufig verwendete Primitiven in der Common Language Runtime (CLR) und anderen Programmiersprachen handelt. In XAML 2009 wurde Unterstützung für die folgenden Primitiven hinzugefügt: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`und `x:Array`  
@@ -66,7 +66,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xdecimal"></a>x:Decimal  
  Für CLR-Unterstützung entspricht die `x:Decimal` -Primitive <xref:System.Decimal>.  
   
- Beachten Sie, dass die XAML-Analyse grundsätzlich in der `en-US`-Kultur erfolgt. Gemäß der `en-US` -Kultur ist das richtige Trennzeichen für die Bestandteile einer Dezimalzahl immer ein Punkt (`.`), und zwar unabhängig von Kultureinstellungen der Entwicklungsumgebung oder dem tatsächlichen Clientziel, in das die XAML zur Laufzeit geladen wird.  
+ Beachten Sie, dass die XAML-Analyse grundsätzlich in der `en-US` -Kultur erfolgt. Gemäß der `en-US` -Kultur ist das richtige Trennzeichen für die Bestandteile einer Dezimalzahl immer ein Punkt (`.`), und zwar unabhängig von Kultureinstellungen der Entwicklungsumgebung oder dem tatsächlichen Clientziel, in das die XAML zur Laufzeit geladen wird.  
   
  Die XAML-sprachspezifikationsdefinition finden Sie unter [ \[MS-XAML-\] Abschnitte 5.2.14 und 5.4.8](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
@@ -125,7 +125,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xarray"></a>x:Array  
  Für CLR-Unterstützung entspricht die `x:Array` -Primitive <xref:System.Array>.  
   
- In XAML 2006 können Sie ein Array mit einer Markuperweiterungssyntax definieren. Die XAML 2009-Syntax ist dagegen eine sprachdefinierte Primitive, die keinen Zugriff auf eine Markuperweiterung erfordert. Weitere Informationen zur Unterstützung von XAML 2006 finden Sie unter [x:Array Markup Extension](../../../docs/framework/xaml-services/x-array-markup-extension.md).  
+ In XAML 2006 können Sie ein Array mit einer Markuperweiterungssyntax definieren. Die XAML 2009-Syntax ist dagegen eine sprachdefinierte Primitive, die keinen Zugriff auf eine Markuperweiterung erfordert. Weitere Informationen zur Unterstützung von XAML 2006 finden Sie unter [x:Array Markup Extension](x-array-markup-extension.md).  
   
  Die XAML-sprachspezifikationsdefinition finden Sie unter [ \[MS-XAML-\] Abschnitte 5.2.18](https://go.microsoft.com/fwlink/?LinkId=114525).  
   
@@ -133,4 +133,4 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ## <a name="wpf-support"></a>WPF-Unterstützung  
  In WPF können Sie XAML 2009-Funktionen verwenden, jedoch nur für XAML, das nicht markupkompiliert ist. Markupkompilierte XAML für WPF und die BAML-Form von XAML unterstützen die XAML 2009-Schlüsselwörter und -Funktionen derzeit nicht.  
   
- Ein Szenario, in dem Sie XAML 2009-Funktionen mit WPF wird, wenn Sie loose XAML erstellen und dann laden Sie dieses XAML in einer WPF-Laufzeit und ein Objektdiagramm mit <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>. Die WPF <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> und die zugehörige <xref:System.Windows.Markup.XamlReader.Load%2A> können XAML 2009-Sprachschlüsselwörter und-Funktionen in eine gültige objektdiagrammdarstellung verarbeiten.
+ Ein Szenario, in dem XAML 2009-Funktionen mit WPF verwendet werden können, liegt vor, wenn Sie Loose XAML erstellen und dieses XAML dann mit <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>in eine WPF-Laufzeit und ein Objektdiagramm laden. Der WPF- <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> und sein <xref:System.Windows.Markup.XamlReader.Load%2A> können XAML 2009-Sprachschlüsselwörter und -Funktionen in eine gültige Objektdiagrammdarstellung verarbeiten.
