@@ -43,7 +43,11 @@ Alle einführenden Tutorials, die auf die „Hallo Welt“-Lektion folgen, sind 
 
 ## <a name="explore-new-features-in-c"></a>Erkunden neuer Features in C\#
 
-Probieren Sie mithilfe dieser [interaktiven Erkundung](exploration/csharp-6.yml) die neuen Features in [C# 6](../whats-new/csharp-6.md) aus.
+* [Probieren Sie neue Features in C# 6 interaktiv aus](exploration/csharp-6.yml): Entdecken Sie die in [C# 6](../whats-new/csharp-6.md) hinzugefügten Features interaktiv in Ihrem Browser.
+* [Zeichenfolgeninterpolation](string-interpolation.md): veranschaulicht die Verwendung von Zeichenfolgeninterpolation zum Erstellen formatierter Zeichenfolgen in C#.
+* [Verweistypen, die NULL-Werte zulassen](nullable-reference-types.md): demonstriert, wie Sie Verweistypen mit Unterstützung von NULL-Werten einsetzen können, um Ihre Entwurfsabsicht auszudrücken.
+* [Aktualisieren eines Projekts zum Verwenden Nullwerte zulassender Verweistypen](upgrade-to-nullable-references.md): veranschaulicht Techniken zum Aktualisieren eines vorhandenen Projekts zur Verwendung Nullwerte zulassender Verweistypen.
+* [Erweitern von Datenfunktionen mithilfe des Musterabgleichs](pattern-matching.md): veranschaulicht, wie mithilfe des Musterabgleichs Typen über ihre Kernfunktionen hinaus erweitert werden.
 
 ## <a name="general-tutorials"></a>Allgemeine Tutorials
 
@@ -53,6 +57,4 @@ Mit folgenden Tutorials können Sie C#-Programme mit [.NET Core](../../core/inde
 * [REST-Client](console-webapiclient.md): veranschaulicht Webkommunikation, JSON-Serialisierung und objektorientierte Funktionen in der Sprache C#.
 * [Vererbung in C# und .NET](inheritance.md): veranschaulicht die Vererbung in C#, einschließlich der Verwendung der Vererbung zur Definition von Basisklassen, abstrakten Basisklassen und abgeleiteten Klassen.
 * [Arbeiten mit LINQ](working-with-linq.md): veranschaulicht viele der Features von LINQ und die Sprachelemente, die diese unterstützen.
-* [Zeichenfolgeninterpolation](string-interpolation.md): veranschaulicht die Verwendung von Zeichenfolgeninterpolation zum Erstellen formatierter Zeichenfolgen in C#.
 * [Verwenden von Attributen](attributes.md): veranschaulicht das Erstellen und Verwenden von Attributen in C#.
-* [Verweistypen, die NULL-Werte zulassen](nullable-reference-types.md): demonstriert, wie Sie Verweistypen mit Unterstützung von NULL-Werten einsetzen können, um Ihre Entwurfsabsicht auszudrücken.
