@@ -1,15 +1,10 @@
 ---
 title: Das .NET Compiler Platform SDK (Roslyn APIs)
-description: Erfahren Sie, wie das .NET Compiler Platform-SDK (auch als „Roslyn-APIs“ bezeichnet) verwendet wird, um den .NET-Code zu analysieren, Fehler zu erkennen und diese Fehler zu beheben.
+description: 'Erfahren Sie, wie das .NET Compiler Platform-SDK (auch als „Roslyn-APIs“ bezeichnet) verwendet wird, um den .NET-Code zu analysieren, Fehler zu erkennen und diese Fehler zu beheben.'
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: be65d8ecafc13fc699efb10dc396b0631ba70810
-ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54249137"
 ---
+
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform-SDK
 
 Compiler erstellen bei der Validierung der Syntax und Semantik eines Anwendungscodes ein detailliertes Modell davon. Basierend auf diesem Modell wird die ausführbare Ausgabe aus dem Quellcode erstellt. Zugriff auf dieses Modell wird durch das .NET Compiler Platform-SDK ermöglicht. Um die Produktivität zu steigern, greifen wir vermehrt auf Funktionen der integrierten Entwicklungsumgebung (IDE) zurück, wie IntelliSense, Refactoring, intelligentes Umbenennen, „Alle Verweise suchen“ und „Gehe zu Definition“. Zur Verbesserung unserer Codequalität nehmen wir Codeanalysetools und zur Unterstützung der Anwendungsentwicklung Codegeneratoren zu Hilfe. Je intelligenter diese Tools werden, desto umfangreicher wird auch der erforderliche Zugriff auf das Modell, das nur von Compilern bei der Verarbeitung des Anwendungscodes erstellt wird. Genau darin besteht das Hauptziel der Roslyn-APIs: Das Geheimnis um die Blackboxes zu lüften und Tools wie auch Endbenutzern die Nutzung der umfassenden Informationen zu ermöglichen, die bezüglich unseres Codes in den Compilern enthalten sind.
@@ -19,7 +14,7 @@ Anstatt eine nicht transparente Übersetzung von Quellcode in Objektcode bereitz
 
 Das .NET Compiler Platform-SDK vereinfacht die Erstellung von codeabhängigen Tools und Anwendungen um ein Vielfaches. Es schafft zahlreiche Innovationsmöglichkeiten in Bereichen wie etwa folgenden: Metaprogrammierung, Codegenerierung und -transformation, interaktive Nutzung der C#- und VB-Sprachen und Einbettung von C# und VB in domänenspezifischen Sprachen.
 
-Mit dem .NET Compiler Platform-SDK können Sie ***Analysetools*** und ***Codefehlerbehebungen*** erstellen, die Codierungsfehler finden und korrigieren. ***Analysetools*** analysieren die Syntax und Struktur des Codes und erkennen Praktiken, die korrigiert werden sollten. ***Codefehlerbehebungen*** stellen empfohlene Updates zur Behebung von Codierungsfehlern bereit, die von Analysetools gefunden werden. In der Regel werden ein Analysetool und die zugehörigen Codefehlerbehebungen in ein einzelnes Projekt gepackt. 
+Mit dem .NET Compiler Platform-SDK können Sie ***Analysetools*** und ***Codefehlerbehebungen*** erstellen, die Codierungsfehler finden und korrigieren. ***Analysetools*** analysieren die Syntax und Struktur des Codes und erkennen Praktiken, die korrigiert werden sollten. ***Codefehlerbehebungen*** stellen empfohlene Updates zur Behebung von Codierungsfehlern bereit, die von Analysetools gefunden werden. In der Regel werden ein Analysetool und die zugehörigen Codefehlerbehebungen in ein einzelnes Projekt gepackt.
 
 Analysetools und Codefehlerbehebungen verwenden zur Codeanalyse statische Analysen. Sie führen den Code nicht aus oder bieten andere Vorteile in Bezug auf Tests. Sie können jedoch auf Praktiken hinweisen, die häufig zu Fehlern, zu Problemen bei der Codeverwaltung oder zur Validierung von Standardrichtlinien führen.
 
@@ -46,7 +41,7 @@ Teams können Analysetools und Codefehlerbehebungen erstellen, die nach den am h
 Für .NET-Entwickler steht eine Vielzahl von Bibliotheken zu NuGet zur Verfügung.
 Diese stammen von Microsoft, Drittanbietern sowie von Communitymitgliedern und Freiwilligen. Diese Bibliotheken erhalten mehr Akzeptanz und höhere Bewertungen, wenn Entwickler mit diesen Bibliotheken erfolgreich sein können.
 
-Neben der Dokumentation können Sie Analysetools und Codefehlerbehebungen bereitstellen, die häufige Verstöße gegen Ihre Bibliothek aufspüren und korrigieren. Diese unmittelbaren Korrekturen verhelfen Entwickler schneller zum Erfolg. 
+Neben der Dokumentation können Sie Analysetools und Codefehlerbehebungen bereitstellen, die häufige Verstöße gegen Ihre Bibliothek aufspüren und korrigieren. Diese unmittelbaren Korrekturen verhelfen Entwickler schneller zum Erfolg.
 
 Sie können Analysetools und Codefehlerbehebungen mit Ihrer Bibliothek in NuGet packen. In diesem Szenario installiert jeder Entwickler, der Ihr NuGet-Paket installiert, auch das Paket des Analysetools. Alle Entwickler, die Ihre Bibliothek verwenden, erhalten sofort Richtlinien von Ihrem Team in Form eines unmittelbaren Feedbacks zu Fehlern und von Korrekturvorschlägen.
 
@@ -62,12 +57,12 @@ Das .NET Compiler Platform-SDK enthält die neuesten Sprachobjektmodelle für di
 
 In den folgenden fünf Themenbereichen erfahren Sie mehr über die Konzepte im .NET Compiler Platform-SDK:
 
- - [Sehen Sie sich Code mit der Syntaxschnellansicht an.](syntax-visualizer.md)
- - [Grundlegendes zum API-Modell von Compilern](compiler-api-model.md)
- - [Arbeiten mit der Syntax](work-with-syntax.md)
- - [Arbeiten mit der Semantik](work-with-semantics.md)
- - [Arbeiten mit einem Arbeitsbereich](work-with-workspace.md)
- 
+- [Sehen Sie sich Code mit der Syntaxschnellansicht an.](syntax-visualizer.md)
+- [Grundlegendes zum API-Modell von Compilern](compiler-api-model.md)
+- [Arbeiten mit der Syntax](work-with-syntax.md)
+- [Arbeiten mit der Semantik](work-with-semantics.md)
+- [Arbeiten mit einem Arbeitsbereich](work-with-workspace.md)
+
 Installieren Sie zunächst das **SDK für die .NET Compiler Platform**:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
