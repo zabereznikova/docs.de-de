@@ -5,13 +5,8 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: f3054ca74efbd09449f43e0654734bfe10e3a7c0
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058333"
 ---
+
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Komponententests in .NET Core und .NET Standard
 
 Mit .NET Core können Sie im Handumdrehen Komponententests erstellen. Dieser Artikel gibt eine kurze Einführung zu Komponententests (und wie sich diese von anderen Arten von Tests unterscheiden). Über die am Ende der Seite verlinkten Ressourcen erfahren Sie, wie Sie einer Projektmappe ein neues Testprojekt hinzufügen. Nachdem Sie Ihre Testprojekte erstellt haben, können Sie Ihre Komponententests über die Befehlszeile oder Visual Studio durchführen.
