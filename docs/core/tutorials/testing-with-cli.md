@@ -4,16 +4,16 @@ description: In diesem Tutorial wird das Organisieren und Testen von .NET Core-P
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9ca9cd1b392912b01ed5ac37d0617d582b993ae8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ffd15edc633142116089d206135eb16416eb14cb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242708"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "57845907"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organisieren und Testen von Projekten mit der .NET Core-Befehlszeile
 
-Dieses Tutorial folgt auf [Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung der Befehlszeile](using-with-xplat-cli.md), was Sie über die Erstellung einer einfachen Konsolen-App hinaus führt, damit Sie erweiterte und gut organisierte Anwendungen entwickeln können. Nachdem Sie gesehen haben, wie Sie Ordner zum Organisieren Ihres Codes verwenden können, zeigt Ihnen dieses Tutorial, wie Sie eine Konsolenanwendung mit dem [xUnit](https://xunit.github.io/)-Testframework erweitern können.
+Dieses Tutorial folgt auf [Erste Schritte mit .NET Core unter Windows/Linux/macOS unter Verwendung der Befehlszeile](using-with-xplat-cli.md), was Sie über die Erstellung einer einfachen Konsolen-App hinaus führt, damit Sie erweiterte und gut organisierte Anwendungen entwickeln können. Nachdem Sie gesehen haben, wie Sie Ordner zum Organisieren Ihres Codes verwenden können, zeigt Ihnen dieses Tutorial, wie Sie eine Konsolenanwendung mit dem [xUnit](https://xunit.github.io/)-Testframework erweitern können.
 
 ## <a name="using-folders-to-organize-code"></a>Verwenden von Ordnern zum Strukturieren von Code
 
@@ -48,7 +48,7 @@ Projekte, die Dateien logisch in Ordner gruppieren, sind einfach zu navigieren u
 
 Sie können für die folgenden Schritte entweder mithilfe des [NewTypes Pets-Beispiels](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) durchführen oder Ihre eigenen Dateien und Ordner erstellen. Die Typen werden logisch in einer Ordnerstruktur organisiert, die das spätere Hinzufügen zusätzlicher Typen erlaubt. Tests werden ebenso logisch in Ordnern platziert, wobei später weitere Tests durchgeführt werden können.
 
-In diesem Beispiel sind zwei Typen enthalten, `Dog` und `Cat`, mit deren Hilfe die allgemeine Schnittstelle `IPet` implementiert wird. Ihr Ziel für das `NewTypes`-Projekt ist es, die auf Haustiere (pets) bezogenen Typen in einem *Pets*-Ordner zu organisieren. Wenn andere Typen später hinzugefügt werden, z.B. *WildAnimals*, werden sie im *NewTypes*-Ordner neben dem *Pets*-Ordner platziert. Der *WildAnimals*-Ordner kann womöglich Tierarten enthalten, die keine Haustiere sind, z.B. die Typen `Squirrel` und `Rabbit`. Dadurch, dass Typen hinzugefügt werden, bleibt das Projekt organisiert. 
+In diesem Beispiel sind zwei Typen enthalten, `Dog` und `Cat`, mit deren Hilfe die allgemeine Schnittstelle `IPet` implementiert wird. Ihr Ziel für das `NewTypes`-Projekt ist es, die auf Haustiere (pets) bezogenen Typen in einem *Pets*-Ordner zu organisieren. Wenn andere Typen später hinzugefügt werden, z.B. *WildAnimals*, werden sie im *NewTypes*-Ordner neben dem *Pets*-Ordner platziert. Der *WildAnimals*-Ordner kann womöglich Tierarten enthalten, die keine Haustiere sind, z.B. die Typen `Squirrel` und `Rabbit`. Dadurch, dass Typen hinzugefügt werden, bleibt das Projekt organisiert.
 
 Erstellen Sie die folgende Ordnerstruktur mit angegebenem Dateiinhalt:
 
@@ -144,16 +144,16 @@ public class PetTests
     {
         string expected = "Woof!";
         string actual = new Dog().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
-    
+
     [Fact]
     public void CatTalkToOwnerReturnsMeow()
     {
         string expected = "Meow!";
         string actual = new Cat().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
 }
@@ -184,9 +184,8 @@ Nachstehend ist die vollständige Projektstruktur dargestellt:
 
 Beginnen Sie im *test/NewTypesTests*-Verzeichnis. Stellen Sie das Testprojekt mit dem [`dotnet restore`](../tools/dotnet-restore.md)-Befehl wieder her. Führen Sie die Tests mit dem [`dotnet test`](../tools/dotnet-test.md)-Befehl aus. Dieser Befehl startet den in der Projektdatei angegebenen Test Runner.
 
- [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
- 
 Der Test schlägt wie erwartet fehl, und die Konsole zeigt die folgende Ausgabe:
 
 ```
@@ -238,4 +237,3 @@ Test execution time: 1.6029 Seconds
 Die Tests werden erfolgreich ausgeführt. Die Haustiertyp-Methoden geben die korrekten Werte zurück, wenn sie mit dem Besitzer kommunizieren.
 
 Sie haben Techniken zum Organisieren und Testen von Projekten mithilfe von xUnit gelernt. Machen Sie mit diesen Techniken weiter, und wenden Sie sie in Ihren eigenen Projekten an. *Viel Spaß beim Programmieren!*
-

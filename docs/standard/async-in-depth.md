@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 45dc8b72bd61fc9aa04c977a2dc67c37384697fc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677525"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57844735"
 ---
 # <a name="async-in-depth"></a>Async ausführlich
 
@@ -21,12 +21,12 @@ Schreiben von E/A- und CPU-gebundenem asynchronen Code ist mit dem .NET Task-bas
 
 Tasks sind Konstrukte zum Implementieren dessen, was als [Promise-Modell der Parallelität](https://en.wikipedia.org/wiki/Futures_and_promises) bezeichnet wird.  Kurz gesagt: Sie bieten Ihnen eine „Zusage“, dass die Arbeit zu einem späteren Zeitpunkt abgeschlossen wird, sodass Sie die Zusage mit einer sauberen API koordinieren können.
 
-*   `Task` stellt einen einzelnen Vorgang dar, der keinen Wert zurückgibt.
-*   `Task<T>` stellt einen einzelnen Vorgang dar, der einen Wert des Typs `T` zurückgibt.
+* `Task` stellt einen einzelnen Vorgang dar, der keinen Wert zurückgibt.
+* `Task<T>` stellt einen einzelnen Vorgang dar, der einen Wert des Typs `T` zurückgibt.
 
 Es ist wichtig, Tasks als asynchron stattfindende Abstraktionen von Arbeit zu betrachten, und *nicht* als Abstraktion des Threadings. Tasks werden standardmäßig auf dem aktuellen Thread ausgeführt und delegieren Arbeit nach Bedarf an das Betriebssystem. Optional können Tasks explizit zur Ausführung auf einem separaten Thread über die `Task.Run`-API angefordert werden.
 
-Tasks machen ein API-Protokoll zum Überwachen des Ergebniswerts (im Fall von `Task<T>`) eines Tasks sowie zum Warten und Zugriff darauf verfügbar. Sprachintegration mit dem Schlüsselwort `await` bietet eine Abstraktion auf höherer Ebene für die Verwendung von Tasks. 
+Tasks machen ein API-Protokoll zum Überwachen des Ergebniswerts (im Fall von `Task<T>`) eines Tasks sowie zum Warten und Zugriff darauf verfügbar. Sprachintegration mit dem Schlüsselwort `await` bietet eine Abstraktion auf höherer Ebene für die Verwendung von Tasks.
 
 Mithilfe von `await` kann Ihre Anwendung bzw. Ihr Dienst sinnvolle Aufgaben erledigen, während ein Task ausgeführt wird, indem die Steuerung an seinen Aufrufer übergeben wird, bis der Task abgeschlossen ist. Ihr Code muss sich nicht auf Rückrufe oder Ereignisse verlassen, um die Ausführung nach Abschluss des Tasks fortzusetzen. Die Sprach- und Task-API-Integration erledigt dies für Sie. Bei Verwendung von `Task<T>` „enthüllt“ das Schlüsselwort `await` darüber hinaus den Wert, der bei Abschluss des Tasks zurückgegeben wird.  Wie dies funktioniert, wird weiter unten erläutert.
 
@@ -43,7 +43,7 @@ public Task<string> GetHtmlAsync()
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     return client.GetStringAsync("https://www.dotnetfoundation.org");
 }
 ```
@@ -55,14 +55,14 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     // Execution of GetFirstCharactersCountAsync() is yielded to the caller here
     // GetStringAsync returns a Task<string>, which is *awaited*
     var page = await client.GetStringAsync("https://www.dotnetfoundation.org");
-    
+
     // Execution resumes when the client.GetStringAsync task completes,
     // becoming synchronous again.
-    
+
     if (count > page.Length)
     {
         return page;
@@ -74,7 +74,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 }
 ```
 
-Der Aufruf von `GetStringAsync()` erfolgt über .NET-Bibliotheken auf niedrigerer Ebene (möglicherweise mit Aufruf anderer Async-Methoden), bis er einen PInvoke-Interop-Aufruf in eine native Netzwerkbibliothek erreicht. Die native Bibliothek kann anschließend einen Aufruf in einen System-API-Aufruf durchführen (z.B. `write()` an einen Socket unter Linux). Ein Taskobjekt wird an der nativen/verwalteten Grenze erstellt, möglicherweise mit [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)). Das Taskobjekt wird durch die Ebenen nach oben weitergegeben, möglicherweise bearbeitet oder direkt zurückgegeben, schließlich an den ursprünglichen Aufrufer zurückgegeben. 
+Der Aufruf von `GetStringAsync()` erfolgt über .NET-Bibliotheken auf niedrigerer Ebene (möglicherweise mit Aufruf anderer Async-Methoden), bis er einen PInvoke-Interop-Aufruf in eine native Netzwerkbibliothek erreicht. Die native Bibliothek kann anschließend einen Aufruf in einen System-API-Aufruf durchführen (z.B. `write()` an einen Socket unter Linux). Ein Taskobjekt wird an der nativen/verwalteten Grenze erstellt, möglicherweise mit [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)). Das Taskobjekt wird durch die Ebenen nach oben weitergegeben, möglicherweise bearbeitet oder direkt zurückgegeben, schließlich an den ursprünglichen Aufrufer zurückgegeben.
 
 Im zweiten Beispiel oben wird ein `Task<T>`-Objekt von `GetStringAsync` zurückgegeben. Die Verwendung des Schlüsselworts `await` bewirkt, dass die Methode ein neu erstelltes Taskobjekt zurückgibt. Die Steuerung wird von dieser Position in der `GetFirstCharactersCountAsync`-Methode an den Aufrufer zurückgegeben. Die Methoden und Eigenschaften des [Task&lt;T&gt;](xref:System.Threading.Tasks.Task%601)-Objekts ermöglichen Aufrufern, den Status des Tasks zu überwachen, der abgeschlossen wird, wenn der verbleibende Code in GetFirstCharactersCountAsync ausgeführt wurde.
 
@@ -90,9 +90,9 @@ Obwohl das Obige den Eindruck weckt, es sei viel Arbeit zu bewältigen, ist es i
 
 0-1————————————————————————————————————————————————–2-3
 
-*   Die zwischen den Punkten `0` und `1` verstrichene Zeit umfasst alles, bis eine Async-Methode die Steuerung an ihren Aufrufer übergibt.
-*   Die zwischen den Punkten `1` und `2` verstrichene Zeit ist die für E/A aufgewendete Zeit ohne CPU-Kosten.
-*   Schließlich wird die zwischen den Punkten `2` und `3` verstrichene Zeit für die Rückgabe der Steuerung (und möglicherweise eines Werts) an die Async-Methode aufgewendet. An diesem Punkt übernimmt sie wieder die Ausführung.
+* Die zwischen den Punkten `0` und `1` verstrichene Zeit umfasst alles, bis eine Async-Methode die Steuerung an ihren Aufrufer übergibt.
+* Die zwischen den Punkten `1` und `2` verstrichene Zeit ist die für E/A aufgewendete Zeit ohne CPU-Kosten.
+* Schließlich wird die zwischen den Punkten `2` und `3` verstrichene Zeit für die Rückgabe der Steuerung (und möglicherweise eines Werts) an die Async-Methode aufgewendet. An diesem Punkt übernimmt sie wieder die Ausführung.
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>Was bedeutet dies für ein Serverszenario?
 
@@ -125,13 +125,13 @@ public async Task<int> CalculateResult(InputData data)
 {
     // This queues up the work on the threadpool.
     var expensiveResultTask = Task.Run(() => DoExpensiveCalculation(data));
-    
+
     // Note that at this point, you can do some other work concurrently,
     // as CalculateResult() is still executing!
-    
+
     // Execution of CalculateResult is yielded here!
     var result = await expensiveResultTask;
-    
+
     return result;
 }
 ```

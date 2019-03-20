@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5920935637393f8cfd11aed85a600dc28d49011
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635974"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58038185"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Veraltete Member in .NET Framework
-In den Tabellen in diesem Artikel werden die Typmember nach Assembly geordnet aufgeführt, die in .NET Framework 4.5 und höheren Versionen veraltet sind. Über die nachfolgenden Links finden Sie eine Liste der veralteten Member und empfohlenen Alternativen in den jeweiligen Assemblys. In diesem Thema werden nicht die Member veralteter Typen aufgeführt. Eine Liste veralteter Typen finden Sie unter [Veraltete Typen](../../../docs/framework/whats-new/obsolete-types.md).  
+In den Tabellen in diesem Artikel werden die Typmember nach Assembly geordnet aufgeführt, die in .NET Framework 4.5 und höheren Versionen veraltet sind. Über die nachfolgenden Links finden Sie eine Liste der veralteten Member und empfohlenen Alternativen in den jeweiligen Assemblys. In diesem Thema werden nicht die Member veralteter Typen aufgeführt. Eine Liste veralteter Typen finden Sie unter [Veraltete Typen](obsolete-types.md).  
   
 -   [Veraltete Member in Systemassemblys](#SystemMembers)  
   
@@ -416,7 +416,7 @@ In den Tabellen in diesem Artikel werden die Typmember nach Assembly geordnet au
 |<xref:System.ComponentModel.Design.ComponentDesigner?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.ComponentDesigner.OnSetComponentDefaults%2A>|Diese Methode ist veraltet. Verwenden Sie stattdessen <xref:System.ComponentModel.Design.ComponentDesigner.InitializeNewComponent%2A?displayProperty=nameWithType>.|  
 |<xref:System.ComponentModel.Design.DesignSurface?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A>|Die <xref:System.ComponentModel.Design.DesignSurface.CreateComponent%2A>-Methode wurde ersetzt durch <xref:System.ComponentModel.Design.DesignSurface.CreateInstance%28System.Type%29>.|  
 |<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer?displayProperty=nameWithType>|<xref:System.ComponentModel.Design.Serialization.CodeDomSerializer.SerializeToReferenceExpression%2A>|Diese Methode ist veraltet. Verwenden Sie stattdessen <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.SerializeToExpression%2A> oder <xref:System.ComponentModel.Design.Serialization.CodeDomSerializerBase.GetExpression%2A>.|  
-|<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A>|Die Verwendung dieser Eigenschaft generiert einen Compilerfehler.<br /><br /> Error: This property can no longer be referenced, and is included to support existing compiled applications. (Fehler: Auf diese Eigenschaft kann nicht mehr verwiesen werden. Sie ist enthalten, um vorhandene kompilierte Anwendungen zu unterstützen.) Die Entwurfszeitelement-Ansichtsarchitektur wird nicht mehr verwendet.|  
+|<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeElementView%2A>|Die Verwendung dieser Eigenschaft generiert einen Compilerfehler.<br /><br /> Fehler: This property can no longer be referenced, and is included to support existing compiled applications. (Fehler: Auf diese Eigenschaft kann nicht mehr verwiesen werden. Sie ist enthalten, um vorhandene kompilierte Anwendungen zu unterstützen.) Die Entwurfszeitelement-Ansichtsarchitektur wird nicht mehr verwendet.|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.DesignTimeHtmlRequiresLoadComplete%2A>|Die empfohlene Alternative ist die Verwendung von [`ControlDesigner.SetViewFlags(ViewFlags.DesignTimeHtmlRequiresLoadComplete, true)`](xref:System.Web.UI.Design.ControlDesigner.SetViewFlags%2A).|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.GetPersistInnerHtml%2A>|Die empfohlene Alternative ist <xref:System.Web.UI.Design.ControlDesigner.GetPersistenceContent%2A?displayProperty=nameWithType>.|  
 |<xref:System.Web.UI.Design.ControlDesigner?displayProperty=nameWithType>|<xref:System.Web.UI.Design.ControlDesigner.IsDirty%2A>|Die empfohlene Alternative ist die Verwendung von [`ControlDesigner.Tag.SetDirty`](xref:System.Web.UI.Design.IControlDesignerTag.SetDirty%2A) und [`ControlDesigner.Tag.IsDirty`](xref:System.Web.UI.Design.IControlDesignerTag.IsDirty%2A).|  
@@ -799,5 +799,5 @@ In den Tabellen in diesem Artikel werden die Typmember nach Assembly geordnet au
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|Der Registrierungsschlüssel `DynData` funktioniert nur unter Win9x, was von dieser .NET Framework-Version nicht unterstützt wird. Verwenden Sie stattdessen den Registrierungsschlüssel `PerformanceData`. Diese Eigenschaft wird in einer der nächsten Framework-Versionen entfernt.|  
   
 ## <a name="see-also"></a>Siehe auch
-- [Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md)
-- [Veraltete Typen](../../../docs/framework/whats-new/obsolete-types.md)
+- [Veraltete Elemente in der Klassenbibliothek](whats-obsolete.md)
+- [Veraltete Typen](obsolete-types.md)

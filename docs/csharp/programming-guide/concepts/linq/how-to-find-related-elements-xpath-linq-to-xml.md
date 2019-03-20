@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Suchen nach verwandten Elementen (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 47609f9bf047000585c56387acf648bcfa6ee5b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0463be7cabca088a1a5a200b9e8648914f16e7f5
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617407"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57843338"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>Vorgehensweise: Suchen nach verwandten Elementen (XPath-LINQ to XML) (C#)
 In diesem Thema wird gezeigt, wie Sie ein Element abrufen können, das auf der Basis eines Attributs ausgewählt wird, auf das vom Wert eines anderen Elements verwiesen wird.  
@@ -19,7 +19,7 @@ In diesem Thema wird gezeigt, wie Sie ein Element abrufen können, das auf der B
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel sucht nach dem 12. `Order`-Element und ermittelt anschließend den Kunden für diesen Auftrag.  
   
- Beachten Sie, dass beim Indizieren von Listen in .Net die Zählung mit 0 (Null) beginnt. Beim Indizieren einer Auflistung von Knoten in einem XPath-Prädikat beginnt die Zählung dagegen mit 1. Dieser Unterschied wird im folgenden Beispiel verdeutlicht.  
+ Beachten Sie, dass beim Indizieren von Listen in .NET die Zählung mit 0 (Null) beginnt. Beim Indizieren einer Auflistung von Knoten in einem XPath-Prädikat beginnt die Zählung dagegen mit 1. Dieser Unterschied wird im folgenden Beispiel verdeutlicht.  
   
  In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   

@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - '#line directive [C#]'
 ms.assetid: 6439e525-5dd5-4acb-b8ea-efabb32ff95b
-ms.openlocfilehash: 81c719698e1dc3462e13c149c0f6a26657052f5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51cffe40321aad2c91fb9a09821531545a415aec
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740549"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57845920"
 ---
 # <a name="line-c-reference"></a>#line (C#-Referenz)
 Mit `#line` können Sie die Zeilennummer des Compilers und (optional) die Dateinamensausgabe für Fehler und Warnungen bearbeiten.
 
-Das folgende Beispiel zeigt, wie Sie zwei Warnungen melden können, die Zeilennummern zugeordnet sind. Die `#line 200`-Anweisung erzwingt die Nummer 200 der nächsten Zeile (obwohl der Standardwert #6 ist), und bis zur nächsten #line-Anweisung wird der Dateiname als „Special“ gemeldet. Die #line-Standardanweisung legt die Zeilennummerierung auf deren Standardnummerierung fest, bei der die Zeilen gezählt werden, die von der vorherigen Anweisung neu nummeriert wurden.  
+Das folgende Beispiel zeigt, wie Sie zwei Warnungen melden können, die Zeilennummern zugeordnet sind. Die `#line 200`-Anweisung erzwingt die Nummer 200 der nächsten Zeile (obwohl der Standardwert #6 ist), und bis zur nächsten `#line`-Anweisung wird der Dateiname als „Special“ gemeldet. Die `#line default`-Standardanweisung legt die Zeilennummerierung auf deren Standardnummerierung fest, bei der die Zeilen gezählt werden, die von der vorherigen Anweisung neu nummeriert wurden.  
   
 ```csharp
 class MainClass  
@@ -47,7 +47,7 @@ MainClass.cs(12,16): warning CS0168: The variable 's' is declared but never used
 MainClass.cs(13,16): warning CS0168: The variable 'd' is declared but never used
 ```
 
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Die `#line`-Anweisung könnte in einem automatischen Zwischenschritt im Buildprozess verwendet werden. Wenn beispielsweise Zeilen aus der ursprünglichen Quellcodedatei entfernt würden, Sie jedoch trotzdem möchten, dass der Compiler eine Ausgabe basierend auf der ursprünglichen Zeilennummerierung in der Datei generiert, könnten Sie Zeilen entfernen und anschließend die ursprüngliche Zeilennummerierung mit `#line` simulieren.  
   
  Die `#line hidden`-Anweisung blendet die aufeinander folgenden Zeilen im Debugger aus, sodass alle Zeilen zwischen einer `#line hidden`-Anweisung und der nächsten `#line`-Anweisung (vorausgesetzt es handelt sich nicht um eine weitere `#line hidden`-Anweisung) übersprungen werden, wenn der Entwickler den Code durchläuft. Diese Option kann auch dazu verwendet werden, ASP.NET die Möglichkeit zu geben, zwischen benutzerdefiniertem und computergeneriertem Code zu unterscheiden. Obwohl ASP.NET der primäre Anwender dieser Funktion ist, ist es wahrscheinlich, dass mehr Quellgeneratoren sich diese zunutze machen werden.  

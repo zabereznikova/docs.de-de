@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie ML.NET in einem Szenario mit binärer Klassif
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d7e46b489506f4adad843ba5315afde4c7689b4e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b0d02babd126a62ef9a87b251f525a08376069aa
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723321"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57845790"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutorial: Verwenden von ML.NET in einem Standpunktanalyse-Szenario mit binärer Klassifizierung
 
@@ -180,7 +180,7 @@ public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlConte
 ```
 ## <a name="load-the-data"></a>Laden der Daten
 
-Da der zuvor von Ihnen erstellte `SentimentData`-Datenmodelltyp dem Schema des Datasets entspricht, können Sie das Initialisieren, Zuordnen und Laden des Datasets mit dem `MLContext.Data.ReadFromTextFile`-Wrapper für <xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29> in einer Codezeile zusammenfassen. Zurückgegeben wird ein <xref:Microsoft.Data.DataView.IDataView>. 
+Da der zuvor von Ihnen erstellte `SentimentData`-Datenmodelltyp dem Schema des Datasets entspricht, können Sie das Initialisieren, Zuordnen und Laden des Datasets mit dem `MLContext.Data.LoadFromTextFile`-Wrapper für die [LoadFromTextFile-Methode](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) in einer Codezeile zusammenfassen. Zurückgegeben wird ein <xref:Microsoft.Data.DataView.IDataView>. 
 
  Als Ein- und Ausgabe von `Transforms` ist ein `DataView` der grundlegende Datenpipelinetyp, vergleichbar mit `IEnumerable` für `LINQ`.
 
@@ -215,7 +215,7 @@ Die `BuildAndTrainModel`-Methode führt die folgenden Aufgaben aus:
 * Vorhersagen des Standpunkts anhand der Testdaten.
 * Zurückgeben des Modells.
 
-Erstellen Sie die `Train`-Methode mit dem folgenden Code direkt nach der `Main`-Methode:
+Erstellen Sie die `BuildAndTrainModel`-Methode mit dem folgenden Code direkt nach der `Main`-Methode:
 
 ```csharp
 public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView splitTrainSet)

@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine vorhandene .NET Framework-Konsolenanwend
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 379e0814d7d254935ef23a483d5e0f9163babcd1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145279"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126083"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Ausführen von Konsolenanwendungen in Windows-Containern
 
@@ -50,7 +50,7 @@ Windows-Container werden unter [Windows 10 Anniversary Update](https://www.micro
 
 Sie müssen über Docker für Windows, Version 1.12 Beta 26 oder höher, verfügen, um Windows-Container zu unterstützen. Standardmäßig arbeitet Docker mit Linux-basierten Containern. Wechseln Sie zu Windows-Containern, indem Sie in der Taskleiste mit der rechten Maustaste auf das Docker-Symbol klicken und **Zu Windows-Containern wechseln** auswählen. Docker führt den Änderungsprozess aus. Möglicherweise ist ein Neustart erforderlich.
 
-![Windows-Container](./media/console/SwitchContainer.png)
+![Screenshot der Menüoption „Windows-Container“.](./media/console/windows-container-option.png)
 
 ## <a name="building-the-application"></a>Erstellen der Anwendung
 Konsolenanwendungen werden üblicherweise über ein Installationsprogramm, einen FTP-Speicherort oder eine Dateifreigabe verteilt. Wenn Sie eine Anwendung in einem Container bereitstellen, müssen die Assets kompiliert und an einem Speicherort bereitgestellt werden, der beim Erstellen des Docker-Images verwendet werden kann.

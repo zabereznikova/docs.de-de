@@ -3,12 +3,12 @@ title: System.Delegate und das `delegate`-Schlüsselwort
 description: Informationen zu den Klassen in .NET Framework, die Delegaten unterstützen, und wie diese zum Schlüsselwort „delegate“ zugeordnet werden.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827299"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126174"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate und das `delegate`-Schlüsselwort
 
@@ -99,14 +99,14 @@ Comparison<string> comparer = CompareLength;
 phrases.Sort(comparer);
 ```
 
-Wenn es sich bei der als Delegatziel verwendeten Methode um eine kleine Methode handelt, wird gewöhnlich die [Lambda-Ausdruck](lambda-expressions.md)-Syntax für die Durchführung der Zuweisung verwendet:
+Wenn es sich bei der als Delegatziel verwendeten Methode um eine kleine Methode handelt, wird gewöhnlich die [Lambdaausdruck](./programming-guide/statements-expressions-operators/lambda-expressions.md)-Syntax für die Durchführung der Zuweisung verwendet:
 
 ```csharp
 Comparison<string> comparer = (left, right) => left.Length.CompareTo(right.Length);
 phrases.Sort(comparer);
 ```
 
-Die Verwendung von Lambda-Ausdrücken für Delegatziele wird in einem [späteren Abschnitt](delegates-patterns.md) ausführlicher behandelt.
+Die Verwendung von Lambdaausdrücken für Delegatziele wird in einem [späteren Abschnitt](delegates-patterns.md) ausführlicher behandelt.
 
 Das Sort()-Beispiel fügt dem Delegaten typischerweise eine einzelne Zielmethode an. Allerdings unterstützen Delegatobjekte Aufruflisten mit mehreren Zielmethoden, die an ein Delegatobjekt angefügt sind.
 

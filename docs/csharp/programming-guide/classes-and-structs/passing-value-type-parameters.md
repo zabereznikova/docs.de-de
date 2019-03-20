@@ -6,15 +6,15 @@ helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: c02526c41e7aabb1d443765d047cdae052b48985
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0c9d8c33715b4baf11bfac05cd4881d1475f8844
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964243"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846997"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>Übergeben von Werttypparametern (C#-Programmierhandbuch)
-In einer [Werttypvariablen](../../../csharp/language-reference/keywords/value-types.md) sind die Daten direkt enthalten, während eine [Verweistypvariable](../../../csharp/language-reference/keywords/reference-types.md) einen Verweis auf die Daten enthält. Wenn eine Werttypvariable als Wert an eine Methode übergeben wird, bedeutet dies die Übergabe einer Kopie der Variablen an die Methode. Alle Änderungen am Parameter, die innerhalb der Methode erfolgen, haben keine Auswirkung auf die ursprünglichen Daten, die in der Argumentvariable gespeichert sind. Wenn Sie möchten, dass mit der aufgerufenen Methode der Wert des Parameters geändert wird, müssen Sie ihn als Verweis übergeben, unter Verwendung des Schlüsselworts [ref](../../../csharp/language-reference/keywords/ref.md) oder [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md). Sie können auch das Schlüsselwort [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) verwenden, um einen Wertparameter pro Verweis zu übergeben, um einerseits zwar eine Kopie zu vermeiden, andererseits aber zu garantieren, dass der Wert nicht verändert wird. Der Einfachheit halber wird im folgenden Beispiel `ref` verwendet.  
+In einer [Werttypvariablen](../../../csharp/language-reference/keywords/value-types.md) sind die Daten direkt enthalten, während eine [Verweistypvariable](../../../csharp/language-reference/keywords/reference-types.md) einen Verweis auf die Daten enthält. Wenn eine Werttypvariable als Wert an eine Methode übergeben wird, bedeutet dies die Übergabe einer Kopie der Variablen an die Methode. Alle Änderungen am Parameter, die innerhalb der Methode erfolgen, haben keine Auswirkung auf die ursprünglichen Daten, die in der Argumentvariable gespeichert sind. Wenn Sie möchten, dass mit der aufgerufenen Methode der Wert des Arguments geändert wird, müssen Sie ihn als Verweis übergeben, unter Verwendung des Schlüsselworts [ref](../../../csharp/language-reference/keywords/ref.md) oder [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md). Sie können auch das Schlüsselwort [in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) verwenden, um einen Wertparameter pro Verweis zu übergeben, um einerseits zwar eine Kopie zu vermeiden, andererseits aber zu garantieren, dass der Wert nicht verändert wird. Der Einfachheit halber wird im folgenden Beispiel `ref` verwendet.  
   
 ## <a name="passing-value-types-by-value"></a>Übergeben von Werttypen als Wert  
  Im folgenden Beispiel wird gezeigt, wie Werttypparameter als Wert übergeben werden. Die Variable `n` wird als Wert an die `SquareIt`-Methode übergeben. Alle Änderungen, die innerhalb der Methode vorgenommen werden, wirken sich nicht auf den ursprünglichen Wert der Variablen aus.  

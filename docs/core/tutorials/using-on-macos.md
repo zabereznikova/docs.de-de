@@ -1,17 +1,17 @@
 ---
-title: Erste Schritte mit .NET Core unter Mac OS
+title: Erste Schritte mit .NET Core unter macOS
 description: Dieses Dokument bietet einen Überblick über die Schritte und den Workflow zum Erstellen einer .NET Core-Projektmappe mithilfe von Visual Studio Code.
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: ad403ed96435f162899e600a317d00bab00638f2
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 8deaab67f7a824f6eb079f49b7fd75e0c02f1025
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170272"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788452"
 ---
-# <a name="getting-started-with-net-core-on-macos"></a>Erste Schritte mit .NET Core unter Mac OS
+# <a name="get-started-with-net-core-on-macos"></a>Erste Schritte mit .NET Core unter macOS
 
 Dieses Dokument bietet einen Überblick über die Schritte und den Workflow zum Erstellen einer .NET Core-Projektmappe für macOS. Erfahren Sie, wie Projekte und Unittests erstellt, die Debuggingtools verwendet und Bibliotheken von Drittanbietern über [NuGet](https://www.nuget.org/) eingebunden werden.
 
@@ -26,7 +26,7 @@ Installieren Sie [Visual Studio Code](https://code.visualstudio.com). Im Rahmen 
 
 Installieren Sie die C#-Erweiterung für Visual Studio Code, indem Sie Visual Studio Code öffnen und <kbd>F1</kbd> drücken, um die Visual Studio Code-Palette zu öffnen. Geben Sie **ext install** ein, um die Liste mit Erweiterungen anzuzeigen. Wählen Sie die C#-Erweiterung aus. Starten Sie Visual Studio Code neu, um die Erweiterung zu aktivieren. Weitere Informationen finden Sie unter [Dokumentation zur C#-Erweiterung von Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
-## <a name="getting-started"></a>Erste Schritte
+## <a name="get-started"></a>Erste Schritte
 
 In diesem Tutorial erstellen Sie drei Projekte: ein Bibliotheksprojekt, Tests für dieses Bibliotheksprojekt sowie eine Konsolenanwendung, die die Bibliothek nutzt. Sie können die Quelle für dieses Thema im Repository „dotnet/samples“ auf GitHub [anzeigen oder herunterladen](https://github.com/dotnet/samples/tree/master/core/getting-started/golden). Anweisungen zum Herunterladen finden Sie unter [Beispiele und Lernprogramme](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 

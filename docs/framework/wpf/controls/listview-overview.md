@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 07328a83e431bab02a72c3f252299e4b6b919b82
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 33f4cc55a52a67381c1fbf0d0a92bfad5e50b1ec
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379145"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186116"
 ---
 # <a name="listview-overview"></a>Übersicht über ListView
 Die <xref:System.Windows.Controls.ListView> Steuerelement bietet die Infrastruktur, um einen Satz von Datenelementen in verschiedenen Layouts oder Ansichten anzuzeigen. Benutzer können damit z.B. die Datenelemente in einer Tabelle anzeigen und die Spalten sortieren.  
@@ -33,7 +33,7 @@ Die <xref:System.Windows.Controls.ListView> Steuerelement bietet die Infrastrukt
   
  Die folgende Abbildung zeigt, wie die Daten aus dem vorherigen Beispiel angezeigt werden.  
   
- ![ListView with GridView output](./media/listviewgridview.JPG "ListViewGridView")  
+ ![Screenshot mit einer ListView mit GridView-Ausgabe.](./media/gridview-overview/listview-gridview-output.jpg)  
   
  Sie können einen benutzerdefinierten Ansichtsmodus erstellen, durch die Definition einer Klasse, die von erbt die <xref:System.Windows.Controls.ViewBase> Klasse. Die <xref:System.Windows.Controls.ViewBase> Klasse bietet die Infrastruktur, die Sie benötigen, um eine benutzerdefinierte Ansicht zu erstellen. Weitere Informationen dazu, wie Sie eine benutzerdefinierte Ansicht erstellen, finden Sie unter [Erstellen eines benutzerdefinierten Ansichtsmodus für eine ListView](how-to-create-a-custom-view-mode-for-a-listview.md).  
   

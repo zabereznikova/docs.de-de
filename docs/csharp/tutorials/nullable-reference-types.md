@@ -3,12 +3,12 @@ title: Entwerfen mit Verweistypen, die NULL-Werte zulassen
 description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistypen, die NULL-Werte zulassen. Sie erfahren, wie Sie Ihre Entwurfsabsicht ausdrücken, wenn die Verweiswerte Null sein können, und wie Sie den Compiler durchsetzen, wenn sie nicht NULL sein können.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 1c0df9b129e9c434eb3b5e6e50144013c2c0462e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 7f071dedd2e7a611b08a3fd37a7c0b3182be049b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442099"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846583"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Besseres Ausdrücken Ihrer Entwurfsabsicht mit Verweistypen, die NULL-Werte zulassen und nicht zulassen
 
@@ -24,7 +24,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0 Beta-Compilers. Der C# 8 Beta-Compiler ist mit [2019 für Visual Studio Vorschauversion 2](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) oder [.NET Core 3.0 Vorschauversion 2](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar.
+Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0 Beta-Compilers. Der C# 8 Beta-Compiler ist mit [2019 für Visual Studio Vorschauversion 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) oder [.NET Core 3.0 Vorschauversion 3](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar.
 
 In diesem Tutorial wird vorausgesetzt, dass Sie C# und .NET, einschließlich Visual Studio oder die .NET Core-CLI kennen.
 

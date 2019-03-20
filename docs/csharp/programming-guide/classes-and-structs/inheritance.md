@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ad7253fb9efc891e1f0fdea118e1fe7bde6a857
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202352"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125914"
 ---
 # <a name="inheritance-c-programming-guide"></a>Vererbung (C#-Programmierhandbuch)
 
@@ -30,8 +30,7 @@ Die Vererbung ist, zusammen mit der Kapselung und der Polymorphie, eines der dre
   
  Die folgende Abbildung zeigt eine Klasse `WorkItem`, die ein Arbeitselement in einem Geschäftsprozess repräsentiert. Wie alle Klassen leitet es sich von <xref:System.Object?displayProperty=nameWithType> ab und erbt dessen Methoden. `WorkItem` fügt von allein fünf Member hinzu. Diese beinhalten einen Konstruktor, weil Konstruktoren nicht vererbt werden. Die Klasse `ChangeRequest` erbt von `WorkItem` und repräsentiert eine bestimmt Art von Arbeitselementen. `ChangeRequest` fügt den von `WorkItem` und <xref:System.Object> geerbten Membern zwei weitere Member hinzu. Es muss seinen eigenen Konstruktor hinzufügen, und es fügt auch `originalItemID` hinzu. Die Eigenschaft `originalItemID` ermöglicht es der `ChangeRequest`-Instanz, mit dem ursprünglichen `WorkItem` verknüpft zu werden, für das die Änderungsanforderung gilt.  
   
- ![Klassenvererbung](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Klassenvererbung")  
-Klassenvererbung  
+ ![Diagramm, das die Klassenvererbung zeigt](./media/inheritance/class-inheritance-diagram.png)  
   
  Das folgende Beispiel zeigt, wie die in der oben stehenden Abbildung veranschaulichten Klassenbeziehungen in C# ausgedrückt werden. Das Beispiel zeigt auch, wie `WorkItem` die virtuelle Methode <xref:System.Object.ToString%2A?displayProperty=nameWithType> außer Kraft setzt, und wie die `ChangeRequest`-Klasse die `WorkItem`-Implementierung der Methode erbt.  
   

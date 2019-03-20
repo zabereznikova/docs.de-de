@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 37332e529992f963f576a273dac917d671a3c198
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9457430ab61681ad154aba98d72850f19d30280d
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360198"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185440"
 ---
 # <a name="gridview-overview"></a>Übersicht über GridView
 <xref:System.Windows.Controls.GridView> Modus der Listenansicht ist einer der Ansichtsmodi für eine <xref:System.Windows.Controls.ListView> Steuerelement. Die <xref:System.Windows.Controls.GridView> -Klasse und die unterstützenden Klassen ermöglichen Ihnen und Ihren Benutzern um Element Auflistungen in einer Tabelle anzuzeigen, die in der Regel Schaltflächen als interaktive Spaltenheader verwendet. In diesem Thema werden die <xref:System.Windows.Controls.GridView> Klasse und ihre Verwendung erläutert.  
@@ -26,10 +26,8 @@ ms.locfileid: "57360198"
 >  Das Schaltflächen-Steuerelemente, die <xref:System.Windows.Controls.GridView> verwendeten davon abgeleitet sind <xref:System.Windows.Controls.Primitives.ButtonBase>.  
   
  Die folgende Abbildung zeigt eine <xref:System.Windows.Controls.GridView> Ansicht <xref:System.Windows.Controls.ListView> Inhalt.  
-  
- **GridView-Ansicht von ListView-Inhalt**  
-  
- ![Mit einem Stil versehene ListView-Ansicht](./media/styledlistview.PNG "Mit einem Stil versehene ListView-Ansicht")  
+    
+ ![Screenshot mit GridView-Ansicht von ListView-Inhalten.](./media/gridview-overview/styled-listview-content.png)  
   
  <xref:System.Windows.Controls.GridView> Spalten werden durch dargestellt <xref:System.Windows.Controls.GridViewColumn> -Objekte, die automatisch an ihren Inhalt anpassen können. Optional können Sie explizit festlegen einer <xref:System.Windows.Controls.GridViewColumn> auf eine bestimmte Breite. Sie können die Spaltenbreite mithilfe der Ziehelemente zwischen den Spaltenheadern anpassen. Sie können auch dynamisch hinzufügen, entfernen, ersetzen, und Spalten neu anordnen, da diese Funktionalität ist in integriert <xref:System.Windows.Controls.GridView>. Allerdings <xref:System.Windows.Controls.GridView> kann nicht direkt aktualisiert werden die Daten, das es anzeigt.  
   
@@ -37,11 +35,9 @@ ms.locfileid: "57360198"
   
  [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
- Die nachstehende Abbildung zeigt die Tabelle, die mit dem vorherigen Beispiel erstellt wurde.  
-  
- **GridView-Ansicht, die Daten aus ItemsSource anzeigt**  
-  
- ![ListView mit GridView-Ausgabe](./media/listviewgridview.JPG "ListViewGridView")  
+ Die nachstehende Abbildung zeigt die Tabelle, die mit dem vorherigen Beispiel erstellt wurde. Das GridView-Steuerelement zeigt Daten aus einem ItemsSource-Objekt:
+    
+ ![Screenshot mit einer ListView mit GridView-Ausgabe.](./media/gridview-overview/listview-gridview-output.jpg)  
   
 <a name="GridViewLayoutandStyle"></a>   
 ## <a name="gridview-layout-and-style"></a>GridView-Layout und Stil  

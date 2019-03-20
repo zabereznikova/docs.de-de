@@ -1,6 +1,6 @@
 ---
 title: Aufgabenbasiertes asynchrones Muster (TAP, Task-based Asynchronous Pattern)
-ms.date: 03/30/2017
+ms.date: 02/26/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,22 +14,23 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe69943a6f87bbbb7f29d1e4d6d30c26709725d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c9dd8e49ad3270fe62b65469470485fcb169a4e7
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579014"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788543"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>Aufgabenbasiertes asynchrones Muster (TAP, Task-based Asynchronous Pattern)
 Das aufgabenbasierte asynchrone Muster (TAP) basiert auf den Typen <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> und <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> im <xref:System.Threading.Tasks?displayProperty=nameWithType>-Namespace, mit denen beliebige asynchrone Vorgänge dargestellt werden. TAP ist das empfohlene Entwurfsmuster für asynchrone Neuentwicklungen.  
   
-## <a name="naming-parameters-and-return-types"></a>Benennung, Parameter und Rückgabetypen  
- TAP verwendet eine einfache Methode, um die Initiierung und den Abschluss eines asynchronen Vorgangs darzustellen. Dies steht im Gegensatz zum asynchronen Programmierungsmodell (APM oder `IAsyncResult`)-Muster, welches die Methoden `Begin` und `End` erfordert sowie im Gegensatz zum ereignisbasierten asynchronen Muster (EAP), das eine Methode mit `Async`-Suffix erfordert, sowie ein oder mehrere Ereignisse, Ereignishandler-Delegattypen und `EventArg`-abgeleitete Typen. Asynchrone Methoden im TAP umfassen das Suffix `Async` nach dem Vorgangsnamen, z.B. `GetAsync` für einen `Get`-Vorgang. Wenn Sie eine TAP-Methode zu einer Klasse hinzufügen, die bereits diese Methode mit dem `Async`-Suffix enthält, verwenden Sie stattdessen das Suffix `TaskAsync`. Wenn beispielsweise die Klasse bereits über eine `GetAsync`-Methode verfügt, verwenden Sie den Namen `GetTaskAsync`.  
+## <a name="naming-parameters-and-return-types"></a>Benennung, Parameter und Rückgabetypen
+
+TAP verwendet eine einfache Methode, um die Initiierung und den Abschluss eines asynchronen Vorgangs darzustellen. Dies steht sowohl zum Muster des asynchronen Programmiermodells (Asynchronous Programming Model, APM oder `IAsyncResult`) als auch dem ereignisbasierten asynchronen Muster (Event-based Asynchronous Pattern, EAP) im Kontrast. APM erfordert die Methoden `Begin` und `End`. EAP erfordert eine Methode, die das `Async`-Suffix hat, und auch mindestens ein Ereignis, einen Ereignishandler-Delegattypen und aus `EventArg` abgeleitete Typen. Asynchrone Methoden im TAP umfassen das Suffix `Async` nach dem Vorgangsnamen für Methoden, die awaitable-Typen zurückgeben, z.B. <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> und <xref:System.Threading.Tasks.ValueTask%601>. Ein asynchroner `Get`-Vorgang, der einen `Task<String>` zurückgibt, kann z.B. mit `GetAsync` benannt werden. Wenn Sie eine TAP-Methode einer Klasse hinzufügen, die bereits eine EAP-Methode mit dem `Async`-Suffix enthält, verwenden Sie stattdessen das Suffix `TaskAsync`. Wenn beispielsweise die Klasse bereits über eine `GetAsync`-Methode verfügt, verwenden Sie den Namen `GetTaskAsync`. Wenn eine Methode einen asynchronen Vorgang startet, aber keinen awaitable-Typ zurückgibt, sollte ihr Name mit `Begin`, `Start` oder einem ähnlichen Verb beginnen, sodass eindeutig ist, dass diese Methode nicht das Ergebnis des Vorgangs zurückgibt.  
   
  Die TAP-Methode gibt entweder <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> zurück. Das hängt davon ab, ob die entsprechende synchrone Methode „void“ oder einen `TResult`-Typ zurückgibt.  
   
- Die Parameter einer TAP-Methode sollten mit den Parametern der synchronen Entsprechung übereinstimmen und in der gleichen Reihenfolge bereitgestellt werden.  Diese Regel gilt jedoch nicht für den `out`-Parameter und den `ref`-Parameter. Diese Parameter sollten vollständig vermieden werden. Alle Daten, die über einen `out`-Parameter oder einen `ref`-Parameter zurückgegeben werden, sollten stattdessen als Teil des von `TResult` zurückgegebenen <xref:System.Threading.Tasks.Task%601> zurückgegeben werden, wobei für die Verwendung mehrerer Werte ein Tupel oder eine benutzerdefinierte Datenstruktur genutzt wird. 
+ Die Parameter einer TAP-Methode sollten mit den Parametern der synchronen Entsprechung übereinstimmen und in der gleichen Reihenfolge bereitgestellt werden.  Diese Regel gilt jedoch nicht für den `out`-Parameter und den `ref`-Parameter. Diese Parameter sollten vollständig vermieden werden. Alle Daten, die über einen `out`-Parameter oder einen `ref`-Parameter zurückgegeben werden, sollten stattdessen als Teil des von `TResult` zurückgegebenen <xref:System.Threading.Tasks.Task%601> zurückgegeben werden, wobei für die Verwendung mehrerer Werte ein Tupel oder eine benutzerdefinierte Datenstruktur genutzt wird. Sie sollten auch erwägen, einen <xref:System.Threading.CancellationToken>-Parameter hinzuzufügen, sogar dann, wenn die synchrone Entsprechung der TAP-Methode keinen anbietet.
  
  Methoden, die ausschließlich zur Erstellung, Bearbeitung oder Kombination von Tasks dienen (wobei die asynchrone Verwendung der Methode im Methodennamen oder im Namen des Typs, zu dem die Methode gehört, angegeben wird), müssen nicht nach diesem Benennungsmuster benannt werden. Diese Methoden werden häufig als *Combinators* bezeichnet. Beispiele für Combinators umfassen <xref:System.Threading.Tasks.Task.WhenAll%2A> und <xref:System.Threading.Tasks.Task.WhenAny%2A> und werden im Abschnitt [Verwenden der integrierten taskbasierten Combinators](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators) des Artikels [Verwenden des taskbasierten asynchronen Musters](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md) erläutert.  
   
@@ -94,7 +95,8 @@ Das aufgabenbasierte asynchrone Muster (TAP) basiert auf den Typen <xref:System.
  Wenn TAP-Implementierungen Überladungen bereitstellen, die einen Statusparameter akzeptieren, müssen sie den Wert `progress` für das Argument `null` zulassen. In diesem Fall wird kein Status gemeldet. TAP-Implementierungen sollten den Status synchron an das <xref:System.Progress%601>-Objekt melden, das die asynchrone Methode ermöglicht, um den Status schnell bereitzustellen und dem Consumer des Status ermöglichen, zu bestimmen wie und wo die Informationen am besten bearbeitet werden. Zum Beispiel kann die Statusinstanz Rückrufe marshallen und Ereignisse auf einem aufgezeichneten Synchronisierungskontext auslösen.  
   
 ## <a name="iprogresst-implementations"></a>IProgress\<T>-Implementierungen  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] stellt eine einzelne <xref:System.IProgress%601>-Implementierung bereit: <xref:System.Progress%601>. Die <xref:System.Progress%601>-Klasse wird folgendermaßen deklariert:  
+ 
+  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] stellt eine einzelne <xref:System.IProgress%601>-Implementierung bereit: <xref:System.Progress%601>. Die <xref:System.Progress%601>-Klasse wird folgendermaßen deklariert:  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  
@@ -190,7 +192,7 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|description|  
+|Titel|Beschreibung|  
 |-----------|-----------------|  
 |[Muster für die asynchrone Programmierung](../../../docs/standard/asynchronous-programming-patterns/index.md)|Stellt die drei Muster zum Ausführen von asynchronen Vorgängen vor: das aufgabenbasierte asynchrone Muster (TAP), das asynchrone Programmiermodell (APM) und das ereignisbasierte asynchrone Muster (EAP).|  
 |[Implementieren des aufgabenbasierten asynchronen Entwurfsmusters](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|Beschreibt, wie Sie das aufgabenbasierte asynchrone Muster (Task-based Asynchronous Pattern, TAP) auf drei Arten implementieren können: mit C# und den Visual Basic-Compilern in Visual Studio, manuell oder mit einer Kombination von Compilermethoden und manuellen Methoden.|  

@@ -4,12 +4,12 @@ description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Wind
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
-ms.openlocfilehash: 20d8899d404ec72e3b1b9c2471524133a6428c44
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125495"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186103"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>Auswählen von Azure-Compute-Plattformen, für die containerbasierte Anwendungen
 
@@ -17,12 +17,12 @@ Wie Sie nach dem Lesen in den vorherigen Abschnitten bemerkt haben, ist Azure ei
 
 Als eine *standardmäßig* Empfehlungen zu erstellen, die folgenden ist das Hauptkriterium, die in diesem Handbuch empfohlen:
 
-  - **Einzelne monolithischen app:** Wählen Sie Azure App Service
-  - **N-schichtigen Anwendung:** Wählen Sie orchestratoren wie z. B. Azure Kubernetes Service (AKS), Service Fabric (AE) oder App Service aus, wenn Sie eine einzelne oder einige Back-End-Dienste verfügen
-  - **Microservices für Linux:** Wählen Sie ACS/Kubernetes
-  - **Windows-Microservices:** Wählen Sie Service Fabric
-  - **Serverlose Funktionen & Ereignishandler:** Wählen Sie die Azure-Funktionen
-  - **Umfangreiche Batch:** Wählen Sie mit Azure Batch
+- **Einzelne monolithischen app:** Wählen Sie Azure App Service
+- **N-schichtigen Anwendung:** Wählen Sie orchestratoren wie z. B. Azure Kubernetes Service (AKS), Service Fabric (AE) oder App Service aus, wenn Sie eine einzelne oder einige Back-End-Dienste verfügen
+- **Microservices für Linux:** Wählen Sie ACS/Kubernetes
+- **Windows-Microservices:** Wählen Sie Service Fabric
+- **Serverlose Funktionen & Ereignishandler:** Wählen Sie die Azure-Funktionen
+- **Umfangreiche Batch:** Wählen Sie mit Azure Batch
 
 Allerdings sollten diese Empfehlung mit Salt-Wert, eine Prise ausgeführt werden, wie Ihre Anwendung die Anforderungen und Merkmale des Produkts Auswahl abhängig ist. Nicht alle Anwendungen sind identisch, auch wenn Anfangs sie ähnliche Typen aussehen könnte.
 
@@ -36,6 +36,6 @@ Beachten Sie, dass die zugrunde liegende Betriebssystem (im Vergleich zu Windows
 
 Jedoch diese Unterschiede im Betriebssystem Maturity in der Zukunft eingeblendet werden und mehrere Plattformen vergleichbar OS Reife und die Entscheidung wird mehr über Einstellungen, die basierend auf bestimmten Features, die Ihre Anwendung möglicherweise oder basierend auf jeder Plattform Ökosystem anordnen Gründe.
 
->[!div class="step-by-step"]
->[Zurück](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
->[Weiter](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+> [!div class="step-by-step"]
+> [Zurück](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [Weiter](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6db80e4cb1f54ed58dabf84f4a88f1b3db616ea
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 6d2800e4608d6055f4815f835a1375f9fffee9fc
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443113"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58049728"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Veraltete Typen in .NET Framework
-<a name="introduction"></a> In den Tabellen dieses Artikels sind die Typen aufgeführt, die in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] veraltet sind, geordnet nach Assembly. Über die nachfolgenden Links finden Sie eine Liste der veralteten Typen und empfohlenen Alternativen in den jeweiligen Assemblys. Da diese Typen veraltet sind, sind alle ihrer Member ebenfalls veraltet. Eine Liste weiterer veralteter Member in der .NET Framework-Klassenbibliothek finden Sie unter [Veraltete Member](../../../docs/framework/whats-new/obsolete-members.md).
+<a name="introduction"></a> In den Tabellen dieses Artikels sind die Typen aufgeführt, die in [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] veraltet sind, geordnet nach Assembly. Über die nachfolgenden Links finden Sie eine Liste der veralteten Typen und empfohlenen Alternativen in den jeweiligen Assemblys. Da diese Typen veraltet sind, sind alle ihrer Member ebenfalls veraltet. Eine Liste weiterer veralteter Member in der .NET Framework-Klassenbibliothek finden Sie unter [Veraltete Member](obsolete-members.md).
 
 -   [Veraltete Typen in Systemassemblys](#obsolete_types_in_system_assemblies)
 
@@ -779,5 +779,5 @@ Weitere Informationen zum Migrieren von Visual Basic 6 finden Sie unter [Visual 
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|"Microsoft.VisualC.dll" ist eine veraltete Assembly und ist nur aus Gründen der Abwärtskompatibilität vorhanden.|
 
 ## <a name="see-also"></a>Siehe auch
-- [Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md)
-- [Veraltete Member](../../../docs/framework/whats-new/obsolete-members.md)
+- [Veraltete Elemente in der Klassenbibliothek](whats-obsolete.md)
+- [Veraltete Member](obsolete-members.md)

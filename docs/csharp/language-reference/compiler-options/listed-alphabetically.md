@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: d225a4bf9da35a59a409a783347ec407b49bf16a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1e7b19999ab8536e9a1b05c1ad5d548c8da2cbd6
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677729"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58037695"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>C#-Compileroptionen alphabetisch sortiert
 
@@ -29,7 +29,7 @@ Die folgenden Compileroptionen sind alphabetisch sortiert. Eine nach Kategorien 
 |[-baseaddress](baseaddress-compiler-option.md)|Gibt die Basisadresse für die zu erstellende Bibliothek an.|
 |[-bugreport](bugreport-compiler-option.md)|Erstellt eine Fehlerberichtsdatei. Diese Datei wird zusammen mit den Absturzinformationen gesendet, wenn sie zusammen mit „-errorreport:prompt“ oder „-errorreport:send“ verwendet wird.|
 |[/checked](checked-compiler-option.md)|Führt dazu, dass der Compiler Überlaufprüfen generiert.|
-|-checksumalgorithm:\<alg>|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte: SHA-1 (Standard) oder SHA-256.|
+|-checksumalgorithm:\<alg>|Gibt den Algorithmus zur Berechnung der Quelldateiprüfsumme an, der in der PDB-Datei gespeichert ist.  Unterstützte Werte: SHA-1 (Standard) oder SHA-256.<br>Microsoft empfiehlt aufgrund der Konflikte mit SHA1 SHA256. |
 |[-codepage](codepage-compiler-option.md)|Gibt die beim Öffnen von Quelldateien zu verwendende Codepage an.|
 |[-debug](debug-compiler-option.md)|Gibt Debuginformationen aus.|
 |[-define](define-compiler-option.md)|Definiert Symbole für die bedingte Kompilierung.|

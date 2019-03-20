@@ -2,12 +2,12 @@
 title: Neuerungen in C# 7.3
 description: Eine Übersicht der neuen Features in C# 7.3
 ms.date: 05/16/2018
-ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873799"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58028677"
 ---
 # <a name="whats-new-in-c-73"></a>Neuerungen in C# 7.3
 
@@ -51,7 +51,7 @@ unsafe struct S
 }
 ```
 
-In früheren Versionen von C# mussten Sie eine Variable für den Zugriff auf eine der ganzen Zahlen anheften, die Teil von `myFixedField` sind. Der folgende Code lässt sich nun in einem sicheren Kontext kompilieren:
+In früheren Versionen von C# mussten Sie eine Variable für den Zugriff auf eine der ganzen Zahlen anheften, die Teil von `myFixedField` sind. Der folgende Code wird kompiliert, ohne die Variable `p` in einer separaten `fixed`-Anweisung anzuheften:
 
 ```csharp
 class C
