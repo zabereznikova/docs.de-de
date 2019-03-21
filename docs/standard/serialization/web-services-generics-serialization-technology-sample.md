@@ -1,5 +1,5 @@
 ---
-title: Technologiebeispiel für die Generikaserialisierung in Webdiensten
+title: Technologiebeispiel für die Genericsserialisierung in Webdiensten
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
 ms.openlocfilehash: 59224df97d54ac089293068bbb5dfa3fe26a8d8c
@@ -9,10 +9,10 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2019
 ms.locfileid: "56971870"
 ---
-# <a name="web-services-generics-serialization-technology-sample"></a>Technologiebeispiel für die Generikaserialisierung in Webdiensten
+# <a name="web-services-generics-serialization-technology-sample"></a>Technologiebeispiel für die Genericsserialisierung in Webdiensten
 [Beispiel herunterladen](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
   
- In diesem Beispiel wird die Verwendung und Steuerung der Generikaserialisierung in ASP.NET-Webdiensten veranschaulicht.  
+ In diesem Beispiel wird die Verwendung und Steuerung der Genericsserialisierung in ASP.NET-Webdiensten veranschaulicht.  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>So erstellen Sie das Beispiel mithilfe von Visual Studio  
   

@@ -30,7 +30,7 @@ Die C#-Buildtools berücksichtigen die neueste Hauptversion der Standardsprachve
 
 Wenn Sie sich einmal die Version 1.0 von C# ansehen, werden Sie viele Gemeinsamkeiten mit Java feststellen. Als [Teil der vorgegebenen Entwurfsziele für ECMA](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html) sollte sie eine „einfache, moderne, objektorientierte Universalsprache sein“.  Zu diesem Zeitpunkt bedeuteten die Ähnlichkeiten mit Java, dass die frühen Entwurfsziele erreicht wurden.
 
-Wenn Sie sich C# 1.0 jedoch heute ansehen, wird Ihnen schwindlig. Es fehlten die integrierten Async-Funktionen und einige der cleveren Funktionen bezüglich Generika, die heute als selbstverständlich betrachtet werden. In der Tat fehlten Generika vollständig.  Und was ist mit [LINQ](../linq/index.md)? War noch nicht verfügbar. Bis zum Erscheinen dieser Erweiterungen dauerte es noch einige Jahre.
+Wenn Sie sich C# 1.0 jedoch heute ansehen, wird Ihnen schwindlig. Es fehlten die integrierten Async-Funktionen und einige der cleveren Funktionen bezüglich Generics, die heute als selbstverständlich betrachtet werden. In der Tat fehlten Generics vollständig.  Und was ist mit [LINQ](../linq/index.md)? War noch nicht verfügbar. Bis zum Erscheinen dieser Erweiterungen dauerte es noch einige Jahre.
 
 Im Vergleich zu heute sieht C# Version 1.0 jedoch ziemlich minimalistisch aus. Man musste selbst ausführlichen Code schreiben. Irgendwo musste man jedoch anfangen. C# Version 1.0 war eine brauchbare Alternative zu Java auf der Windows-Plattform.
 
@@ -71,11 +71,11 @@ Andere Features von C# 2.0 fügten vorhandenen Features Funktionen hinzu:
 
 C# mag als allgemein gehaltene, objektorientierte (OO) Sprache angefangen haben. Das änderte sich mit C# Version 2.0 jedoch schnell. Sobald man diese im Griff hatte, widmete man sich einigen ernsten Problemfeldern der Entwickler. Und zwar in bedeutungsvoller Art und Weise.
 
-Mit Generika können Typen und Methoden für einen beliebigen Typ ausgeführt werden, und sie behalten dennoch ihre Typsicherheit bei. Wenn Sie zum Beispiel <xref:System.Collections.Generic.List%601> haben, können Sie `List<string>` oder `List<int>` verwenden und typsichere Vorgänge für diese Zeichenfolgen oder Ganzzahlen ausführen, während Sie sie durchlaufen. Die Verwendung von Generika ist besser als das Erstellen von `ListInt`, das für jeden Vorgang von `ArrayList` abgeleitet oder aus `Object` umgewandelt wird.
+Mit Generics können Typen und Methoden für einen beliebigen Typ ausgeführt werden, und sie behalten dennoch ihre Typsicherheit bei. Wenn Sie zum Beispiel <xref:System.Collections.Generic.List%601> haben, können Sie `List<string>` oder `List<int>` verwenden und typsichere Vorgänge für diese Zeichenfolgen oder Ganzzahlen ausführen, während Sie sie durchlaufen. Die Verwendung von Generics ist besser als das Erstellen von `ListInt`, das für jeden Vorgang von `ArrayList` abgeleitet oder aus `Object` umgewandelt wird.
 
 C# Version 2.0 brachte Iteratoren mit sich. Kurz gesagt können Sie mit Iteratoren alle Elemente in einem `List` (oder anderen Enumerable-Typen) mit einer `foreach`-Schleife untersuchen. Als erstklassiger Bestandteil der Sprache verbesserten Iteratoren die Lesbarkeit der Sprache und die Möglichkeiten zum Erörtern des Codes erheblich.
 
-Trotzdem hinkte C# weiter ein wenig hinter Java her. Von Java gab es bereits Versionen mit Generika und Iteratoren. Das sollte sich jedoch bald ändern, da sich die Sprachen weiter voneinander weg entwickelten.
+Trotzdem hinkte C# weiter ein wenig hinter Java her. Von Java gab es bereits Versionen mit Generics und Iteratoren. Das sollte sich jedoch bald ändern, da sich die Sprachen weiter voneinander weg entwickelten.
 
 ## <a name="c-version-30"></a>C# Version 3.0
 
@@ -110,7 +110,7 @@ Die nächste Version führte einige interessante neue Features ein:
 - [Generische Kovarianz und Kontravarianz](../../standard/generics/covariance-and-contravariance.md)
 - [Eingebettete Interop-Typen](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
 
-Eingebettete Interop-Typen überwanden eine Schwierigkeit beim Entwickeln. Generische Kovarianz und Kontravarianz bieten Ihnen mehr Möglichkeiten zum Verwenden von Generika. Sie sind allerdings recht theoretisch und werden vermutlich von Framework- und Bibliotheksautoren am meisten geschätzt. Mit benannten und optionalen Parametern können Sie Methodenüberladungen eliminieren. Außerdem bieten sie Bequemlichkeit. Keines dieser Features war jedoch bahnbrechend.
+Eingebettete Interop-Typen überwanden eine Schwierigkeit beim Entwickeln. Generische Kovarianz und Kontravarianz bieten Ihnen mehr Möglichkeiten zum Verwenden von Generics. Sie sind allerdings recht theoretisch und werden vermutlich von Framework- und Bibliotheksautoren am meisten geschätzt. Mit benannten und optionalen Parametern können Sie Methodenüberladungen eliminieren. Außerdem bieten sie Bequemlichkeit. Keines dieser Features war jedoch bahnbrechend.
 
 Das wichtigste Feature war die Einführung des `dynamic`-Schlüsselworts. Das in C# Version 4.0 eingeführte `dynamic`-Schlüsselwort gibt die Möglichkeit zum Überschreiben des Compilers bei Eingabe zur Kompilierzeit. Durch die Verwendung des dynamischen Schlüsselworts können Sie Konstrukte schreiben, die dynamisch typisierten Sprachen wie JavaScript ähneln. Sie können ein `dynamic x = "a string"` erstellen und dann sechs hinzufügen, und überlassen Sie es der Runtime herauszufinden, was als Nächstes geschehen soll.
 

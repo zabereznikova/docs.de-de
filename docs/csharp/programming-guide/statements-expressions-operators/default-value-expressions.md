@@ -27,7 +27,7 @@ Ein Standardwertausdruck `default(T)` erzeugt den Standardwert für einen Typ `T
 |[struct](../../language-reference/keywords/struct.md)|Der Wert, der erzeugt wird, indem alle Werttypfelder auf ihre Standardwerte und alle Verweistypfelder auf `null` festgelegt werden.|
 |Nullable-Typ|Eine Instanz, für die die <xref:System.Nullable%601.HasValue%2A>-Eigenschaft `false` und die <xref:System.Nullable%601.Value%2A>-Eigenschaft nicht definiert ist.|
 
-Standardwertausdrücke sind besonders nützlich in generischen Klassen und Methoden. Das Zuweisen eines Standardwerts zu einem parametrisierten Typ `T` wird beim Verwenden von Generika erschwert, wenn folgende Punkte im Voraus noch unklar sind:
+Standardwertausdrücke sind besonders nützlich in generischen Klassen und Methoden. Das Zuweisen eines Standardwerts zu einem parametrisierten Typ `T` wird beim Verwenden von Generics erschwert, wenn folgende Punkte im Voraus noch unklar sind:
 
 - Ob `T` ein Verweistyp oder ein Werttyp ist.
 - Wenn `T` ein Werttyp ist, unabhängig davon, ob es ein numerischer Wert oder eine Struktur ist.

@@ -80,7 +80,7 @@ Die Bereiche der `field1` und `field2` sind beschränkt auf den Typ, in dem sie 
 
 ## <a name="type-parameters-in-let-bindings"></a>Typparameter in let-Bindungen
 
-Ein `let` Bindung auf Modulebene, in einen Typ oder in einem Berechnungsausdruck kann explizite Typparameter haben. Eine Let-Bindung in einem Ausdruck, z. B. innerhalb einer Funktionsdefinition, dürfen keine Typparameter aufweisen. Weitere Informationen finden Sie unter [Generika](../generics/index.md).
+Ein `let` Bindung auf Modulebene, in einen Typ oder in einem Berechnungsausdruck kann explizite Typparameter haben. Eine Let-Bindung in einem Ausdruck, z. B. innerhalb einer Funktionsdefinition, dürfen keine Typparameter aufweisen. Weitere Informationen finden Sie unter [Generics](../generics/index.md).
 
 ## <a name="attributes-on-let-bindings"></a>Attribute in let-Bindungen
 

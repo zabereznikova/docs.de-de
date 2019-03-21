@@ -375,9 +375,9 @@ Weitere Informationen finden Sie unter:
 - [Interface-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [Implements-Anweisung](../../../visual-basic/language-reference/statements/implements-statement.md)
 
-## <a name="generics"></a>Generika
+## <a name="generics"></a>Generics
 
-Klassen, Strukturen, Schnittstellen und Methoden in .NET zählen *Typparameter* , definieren die Typen von Objekten, die sie speichern oder verwenden können. Das einfachste Beispiel für Generika ist eine Auflistung, in der Sie den Typ von Objekten angeben können, die in einer Auflistung gespeichert werden sollen.
+Klassen, Strukturen, Schnittstellen und Methoden in .NET zählen *Typparameter* , definieren die Typen von Objekten, die sie speichern oder verwenden können. Das einfachste Beispiel für Generics ist eine Auflistung, in der Sie den Typ von Objekten angeben können, die in einer Auflistung gespeichert werden sollen.
 
 So definieren Sie eine generische Klasse
 

@@ -1,5 +1,5 @@
 ---
-title: Generika zur Laufzeit – C#-Programmierhandbuch
+title: Generics zur Laufzeit – C#-Programmierhandbuch
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,7 +12,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2019
 ms.locfileid: "56981477"
 ---
-# <a name="generics-in-the-run-time-c-programming-guide"></a>Generika zur Laufzeit (C#-Programmierhandbuch)
+# <a name="generics-in-the-run-time-c-programming-guide"></a>Generics zur Laufzeit (C#-Programmierhandbuch)
 Beim Kompilieren eines generischen Typs oder einer generischen Methode in Microsoft Intermediate Language (MSIL) wird über Metadaten auf das Vorkommen von Typparametern hingewiesen. Die Art der Verwendung von MSIL für einen generischen Typ hängt davon ab, ob es sich bei dem übergebenen Typparameter um einen Werttyp oder einen Referenztyp handelt.  
   
  Wenn das erste Mal ein generischer Typ mit einem Werttyp als Parameter erstellt wird, erstellt die Laufzeit einen spezialisierten generischen Typ, bei dem übergebene Parameter an den entsprechenden Stellen in MSIL ersetzt werden. Spezialisierte generische Typen werden für jeden eindeutigen Werttyp, der als Parameter verwendet wird, einmal erstellt.  
@@ -27,7 +27,7 @@ Beim Kompilieren eines generischen Typs oder einer generischen Methode in Micros
   
  Angenommen, dass an anderer Stelle im Code jedoch eine weitere <xref:System.Collections.Generic.Stack%601>-Klasse erstellt wird, mit einem anderen Werttyp, z.B. `long`, oder einer benutzerdefinierten Struktur als Parameter. Daraufhin generiert die Laufzeit eine andere Version des generischen Typs und ersetzt `long` an den entsprechenden Stellen in MSIL. Konvertierungen sind nicht mehr notwendig, da jede spezialisierte generische Klasse den Werttyp nativ enthält.  
   
- Bei Referenztypen unterscheidet sich die Funktionsweise von Generika geringfügig. Wenn das erste Mal ein generischer Typ mit einem beliebigem Referenztyp erstellt wird, erstellt die Laufzeit einen spezialisierten generischen Typ, bei dem die Parameter durch Objektverweise in MSIL ersetzt werden. Wenn jetzt ein konstruierter Typ mit einem Referenztyp als Parameter instanziiert wird (unabhängig davon, um welchen Typ es sich dabei handelt), wird die zuvor erstellte spezialisierte Version des generischen Typs verwendet. Dies ist möglich, da alle Verweise die gleiche Größe haben.  
+ Bei Referenztypen unterscheidet sich die Funktionsweise von Generics geringfügig. Wenn das erste Mal ein generischer Typ mit einem beliebigem Referenztyp erstellt wird, erstellt die Laufzeit einen spezialisierten generischen Typ, bei dem die Parameter durch Objektverweise in MSIL ersetzt werden. Wenn jetzt ein konstruierter Typ mit einem Referenztyp als Parameter instanziiert wird (unabhängig davon, um welchen Typ es sich dabei handelt), wird die zuvor erstellte spezialisierte Version des generischen Typs verwendet. Dies ist möglich, da alle Verweise die gleiche Größe haben.  
   
  Angenommen, Sie verfügen über zwei Referenztypen, eine `Customer`-Klasse und eine `Order`-Klasse, und Sie haben einen Stapel von `Customer`-Typen erstellt:  
   
@@ -43,7 +43,7 @@ Beim Kompilieren eines generischen Typs oder einer generischen Methode in Micros
   
  [!code-csharp[csProgGuideGenerics#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#46)]  
   
- Wie auch bei der vorherigen Verwendung der mit dem Typ `Order` erstellten Klasse <xref:System.Collections.Generic.Stack%601> wird eine weitere Instanz der spezialisierten Klasse <xref:System.Collections.Generic.Stack%601> erstellt. Die darin enthaltenen Zeiger werden so festgelegt, dass sie auf einen Arbeitsspeicherbereich von der Größe eines `Customer`-Typs verweisen. Da die Anzahl der Referenztypen von Programm zu Programm sehr unterschiedlich sein kann, wird bei der C#-Implementierung von Generika eine übermäßige Zunahme des Codeumfangs dadurch verhindert, dass die Anzahl der spezialisierten Klassen, die vom Compiler für generische Klassen von Referenztypen erstellt werden, auf eine reduziert wird.  
+ Wie auch bei der vorherigen Verwendung der mit dem Typ `Order` erstellten Klasse <xref:System.Collections.Generic.Stack%601> wird eine weitere Instanz der spezialisierten Klasse <xref:System.Collections.Generic.Stack%601> erstellt. Die darin enthaltenen Zeiger werden so festgelegt, dass sie auf einen Arbeitsspeicherbereich von der Größe eines `Customer`-Typs verweisen. Da die Anzahl der Referenztypen von Programm zu Programm sehr unterschiedlich sein kann, wird bei der C#-Implementierung von Generics eine übermäßige Zunahme des Codeumfangs dadurch verhindert, dass die Anzahl der spezialisierten Klassen, die vom Compiler für generische Klassen von Referenztypen erstellt werden, auf eine reduziert wird.  
   
  Weiterhin gilt, dass eine mit einem Werttyp- oder Referenztypparameter instanziierte generische C#-Klasse zur Laufzeit mittels Reflektion abgefragt werden kann. Dabei können sowohl der tatsächliche Typ als auch der Typparameter ermittelt werden.  
   

@@ -18,7 +18,7 @@ In diesem Abschnitt werden das Erstellen, Konfigurieren, Debuggen, Speichern und
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Grundlagen der Anwendung](../../docs/standard/application-essentials.md)  
- Bietet Informationen über grundlegende Appentwicklungsaufgaben, wie z. B. Programmieren mit Appdomänen und Assemblys, Verwenden von Attributen, Formatieren und Analysieren von Basistypen, Verwenden von Auflistungen, Behandeln von Ereignissen und Ausnahmen, Verwenden von Dateien und Datenstreams und Verwenden von Generika.  
+ Bietet Informationen über grundlegende App-Entwicklungsaufgaben, wie z. B. Programmieren mit App-Domänen und Assemblys, Verwenden von Attributen, Formatieren und Analysieren von Basistypen, Verwenden von Auflistungen, Behandeln von Ereignissen und Ausnahmen, Verwenden von Dateien und Datenstreams und Verwenden von Generics.  
   
  [Daten und Modellierung](../../docs/framework/data/index.md)  
  Enthält Informationen zum Zugreifen auf Daten mit ADO.NET, Language Integrated Query (LINQ), WCF-Datendienste und XML.  

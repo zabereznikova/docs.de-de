@@ -27,7 +27,7 @@ ms.locfileid: "57471926"
  Der Name des Typparameters. Setzen Sie den Namen in einfache oder doppelte Anführungszeichen (" ").  
   
 ## <a name="remarks"></a>Anmerkungen  
- Weitere Informationen zu den Typparametern in generischen Typen und Methoden, finden Sie unter [Generika](../../../csharp/programming-guide/generics/index.md).  
+ Weitere Informationen zu den Typparametern in generischen Typen und Methoden, finden Sie unter [Generics](../../../csharp/programming-guide/generics/index.md).  
   
  Verwenden Sie dieses Tag, um Consumern der Dokumentationsdatei zu ermöglichen, das Wort auf unterschiedliche Weise zu formatieren, z.B. in Kursivschrift.  
   

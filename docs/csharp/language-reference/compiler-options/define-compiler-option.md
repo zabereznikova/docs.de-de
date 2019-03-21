@@ -47,7 +47,7 @@ Die Option **-define** definiert `name` als Symbol in allen Quellcodedateien Ihr
  Der C#-Compiler selbst definiert keine Symbole oder Makros, die Sie in Ihrem Quellcode verwenden können. Alle Symboldefinitionen müssen benutzerdefiniert sein.  
   
 > [!NOTE]
->  Anders als in Programmiersprachen wie C++ ist es in C# bei Verwendung von `#define` nicht zulässig, einem Symbol einen Wert zuzuweisen. Beispielsweise kann `#define` nicht zum Erstellen eines Makros oder zum Definieren einer Konstante verwendet werden. Falls Sie eine Konstante definieren müssen, verwenden Sie eine `enum`-Variable. Wenn Sie ein C++-übliches Makro erstellen möchten, erwägen Sie Alternativen wie Generika. Da Makros sehr fehleranfällig sind, ist ihre Verwendung in C# nicht zugelassen. Es stehen jedoch sicherere Alternativen zur Verfügung.  
+>  Anders als in Programmiersprachen wie C++ ist es in C# bei Verwendung von `#define` nicht zulässig, einem Symbol einen Wert zuzuweisen. Beispielsweise kann `#define` nicht zum Erstellen eines Makros oder zum Definieren einer Konstante verwendet werden. Falls Sie eine Konstante definieren müssen, verwenden Sie eine `enum`-Variable. Wenn Sie ein C++-übliches Makro erstellen möchten, erwägen Sie Alternativen wie Generics. Da Makros sehr fehleranfällig sind, ist ihre Verwendung in C# nicht zugelassen. Es stehen jedoch sicherere Alternativen zur Verfügung.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   

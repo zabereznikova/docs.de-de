@@ -16,7 +16,7 @@ ms.lasthandoff: 02/26/2019
 ms.locfileid: "56835810"
 ---
 # <a name="when-to-use-generic-collections"></a>Verwenden von generischen Auflistungen
-Das Verwenden von generischen Auflistungen wird generell empfohlen, da Sie den unmittelbaren Vorteil die Typsicherheit erhalten, ohne von einem Basisauflistungstyp abweichen und typenspezifische Member implementieren zu müssen. Generische Auflistungstypen bieten allgemein auch eine bessere Leistung als die entsprechenden nicht generischen Auflistungstypen (und besser als Typen, die von nicht generischen Basisauflistungstypen abgeleitet sind), wenn die Auflistungselemente Werttypen sind, da bei generischen Typen keine Notwendigkeit zum Einschließen der Elemente besteht.  
+Das Verwenden von generischen Auflistungen wird generell empfohlen, da Sie den unmittelbaren Vorteil die Typsicherheit erhalten, ohne von einem Basisauflistungstyp abweichen und typenspezifische Member implementieren zu müssen. Generische Auflistungstypen bieten allgemein auch eine bessere Leistung als die entsprechenden nicht generischen Auflistungstypen (und besser als Typen, die von nicht generischen Basisauflistungstypen abgeleitet sind), wenn die Auflistungselemente Werttypen sind, da bei Generics keine Notwendigkeit zum Einschließen der Elemente besteht.  
   
  Für Programme, die auf [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] oder höher abzielen, sollten Sie die generischen Auflistungsklassen im <xref:System.Collections.Concurrent> -Namespace verwenden, wenn mehrere Threads möglicherweise Elemente gleichzeitig der Auflistung hinzufügen oder daraus entfernen.  
   

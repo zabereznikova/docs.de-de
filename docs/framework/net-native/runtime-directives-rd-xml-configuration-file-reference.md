@@ -236,7 +236,7 @@ Im folgenden Beispiel lautet die Serialisierungsrichtlinieneinstellung für alle
 </Directives>
 ```
 
-### <a name="if-open-generics-and-instantiated-elements-apply-the-same-policy-type"></a>Wenn offene generische Typen und instanziierte Elemente denselben Richtlinientyp anwenden
+### <a name="if-open-generics-and-instantiated-elements-apply-the-same-policy-type"></a>Wenn offene Generics und instanziierte Elemente denselben Richtlinientyp anwenden
 
 Im folgenden Beispiel wird `Dictionary<int,int>` die `Browse`-Richtlinie nur dann zugewiesen, wenn das Modul einen anderen Grund hat, ihm die `Browse`-Richtlinie zuzuweisen (was sonst das Standardverhalten wäre). In jeder anderen Instanziierung von <xref:System.Collections.Generic.Dictionary%602> sind alle Member durchsuchbar.
 

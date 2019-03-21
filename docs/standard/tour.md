@@ -93,17 +93,17 @@ Delegaten ähneln C++-Funktionszeigern, sind aber typsicher. Sie stellen eine Ar
 
 Delegaten werden in .NET häufig in Ereignishandlern, beim Definieren asynchroner Vorgänge und in Lambdaausdrücken verwendet, die einer der Eckpfeiler von LINQ sind. Weitere Informationen finden Sie im Thema [Delegaten und Lambdas](delegates-lambdas.md).
 
-## <a name="generics"></a>Generika
+## <a name="generics"></a>Generics
 
-Generika ermöglichen dem Programmierer, beim Entwerfen der Klassen einen *Typparameter* einzuführen, über den der Clientcode (die Benutzer des Typs) den genauen Typ angeben kann, der anstelle des Typparameters verwendet werden soll.
+Generics ermöglichen dem Programmierer, beim Entwerfen der Klassen einen *Typparameter* einzuführen, über den der Clientcode (die Benutzer des Typs) den genauen Typ angeben kann, der anstelle des Typparameters verwendet werden soll.
 
-Generika wurden hinzugefügt, um Programmierer beim Implementieren generischer Datenstrukturen zu unterstützen. Vor der Einführung von Generika mussten Programmierer mit Elementen vom Typ `object` arbeiten, um z.B. den Typ `List` generisch zu machen. Dies hat zu verschiedenen Leistungs- und Semantikproblemen sowie zu möglichen kleinen Runtimefehlern geführt. Die bekannteste Variante solcher Fehler tritt auf, wenn eine Datenstruktur z.B. sowohl ganze Zahlen als auch Zeichenfolgen enthält und beim Arbeiten mit den Members der Liste eine `InvalidCastException` ausgelöst wird.
+Generics wurden hinzugefügt, um Programmierer beim Implementieren generischer Datenstrukturen zu unterstützen. Vor der Einführung von Generika mussten Programmierer mit Elementen vom Typ `object` arbeiten, um z.B. den Typ `List` generisch zu machen. Dies hat zu verschiedenen Leistungs- und Semantikproblemen sowie zu möglichen kleinen Runtimefehlern geführt. Die bekannteste Variante solcher Fehler tritt auf, wenn eine Datenstruktur z.B. sowohl ganze Zahlen als auch Zeichenfolgen enthält und beim Arbeiten mit den Members der Liste eine `InvalidCastException` ausgelöst wird.
 
 Das folgende Beispiel zeigt ein einfaches Programm, das unter Verwendung einer Instanz von <xref:System.Collections.Generic.List%601>-Typen ausgeführt wird:
 
 [!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
 
-Weitere Informationen finden Sie im Thema [Generische Typen (Generika) – Übersicht](generics.md).
+Weitere Informationen finden Sie im Thema [Generische Typen (Generics) – Übersicht](generics.md).
 
 ## <a name="async-programming"></a>Asynchrone Programmierung
 

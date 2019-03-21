@@ -242,7 +242,7 @@ Eine *Sammlung* ist eine Liste von Elementen eines bestimmten Typs. In [!INCLUDE
   
  Übergeben Sie zum Auswählen der zu generierenden Sammlungstypen eine Liste der Sammlungstypen, die Sie verwenden möchten, in die <xref:System.Runtime.Serialization.ImportOptions.ReferencedCollectionTypes%2A> -Eigenschaft des <xref:System.Runtime.Serialization.ImportOptions> -Objekts, wenn Sie das Schema importieren. Diese Typen werden als *referenzierte Sammlungstypen*bezeichnet.  
   
- Wenn auf generische Typen verwiesen wird, müssen sie entweder vollständig offene oder vollständig geschlossene Generika sein.  
+ Wenn auf generische Typen verwiesen wird, müssen sie entweder vollständig offene oder vollständig geschlossene Generics sein.  
   
 > [!NOTE]
 >  Wenn Sie das Tool „Svcutil.exe“ verwenden, kann dieser Verweis über den **/collectionType** -Befehlszeilenschalter (Kurzform: **/ct**) erreicht werden. Denken Sie daran, dass Sie auch die Assembly für die referenzierten Sammlungstypen über den **/reference** -Schalter (Kurzform: **/r**) angeben müssen. Bei generischen Typen folgt auf den Namen des Typs ein Graviszeichen und die Anzahl der generischen Parameter. Das Graviszeichen (\`) ist nicht zu verwechseln mit das einfache Anführungszeichen ('). Sie können mehrere referenzierte Sammlungstypen angeben, indem Sie den **/collectionType** -Schalter mehrmals verwenden.  
@@ -262,7 +262,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  Sie können Sammlungsschnittstellentypen als Teil Ihrer referenzierten Sammlungstypen angeben, jedoch können Sie keine ungültigen Sammlungstypen angeben (wie diejenigen ohne `Add` -Methode oder öffentlichen Konstruktor).  
   
- Ein geschlossener generischer Typ wird als beste Übereinstimmung betrachtet. (Nicht generische Typen werden als äquivalent zu geschlossenen Generika von `Object`betrachtet). Wenn beispielsweise die Typen "Generische <xref:System.Collections.Generic.List%601> von <xref:System.DateTime>", "Generische <xref:System.ComponentModel.BindingList%601> " (offener generischer Typ) und " <xref:System.Collections.ArrayList> " die referenzierten Sammlungstypen sind, wird Folgendes generiert:  
+ Ein geschlossener generischer Typ wird als beste Übereinstimmung betrachtet. (Nicht generische Typen werden als äquivalent zu geschlossenen Generics von `Object`betrachtet). Wenn beispielsweise die Typen "Generische <xref:System.Collections.Generic.List%601> von <xref:System.DateTime>", "Generische <xref:System.ComponentModel.BindingList%601> " (offener generischer Typ) und " <xref:System.Collections.ArrayList> " die referenzierten Sammlungstypen sind, wird Folgendes generiert:  
   
  [!code-csharp[c_collection_types_in_data_contracts#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#10)]
  [!code-vb[c_collection_types_in_data_contracts#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#10)]  
@@ -278,7 +278,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  Wenn ein Typ mehr als eine Listensammlungsschnittstelle implementiert, gelten die folgenden Einschränkungen:  
   
--   Wenn der Typ das generische <xref:System.Collections.Generic.IEnumerable%601> (oder die davon abgeleiteten Schnittstellen) mehrfach für verschiedene Typen implementiert, gilt der Typ nicht als gültiger referenzierter Sammlungstyp und wird ignoriert. Dies gilt auch, wenn einige Implementierungen ungültig sind oder offene Generika verwenden. Beispielsweise würde ein Typ, der das generische <xref:System.Collections.Generic.IEnumerable%601> von `int` und das generische <xref:System.Collections.Generic.IEnumerable%601> von T implementiert, niemals als referenzierte Sammlung von `int` oder eines anderen Typs verwendet werden, unabhängig davon, ob der Typ eine `Add` -Methode, die `int` akezptiert, oder eine `Add` -Methode, die einen Parameter vom Typ T akzeptiert, oder beides aufweist.  
+-   Wenn der Typ das generische <xref:System.Collections.Generic.IEnumerable%601> (oder die davon abgeleiteten Schnittstellen) mehrfach für verschiedene Typen implementiert, gilt der Typ nicht als gültiger referenzierter Sammlungstyp und wird ignoriert. Dies gilt auch, wenn einige Implementierungen ungültig sind oder offene Generics verwenden. Beispielsweise würde ein Typ, der das generische <xref:System.Collections.Generic.IEnumerable%601> von `int` und das generische <xref:System.Collections.Generic.IEnumerable%601> von T implementiert, niemals als referenzierte Sammlung von `int` oder eines anderen Typs verwendet werden, unabhängig davon, ob der Typ eine `Add` -Methode, die `int` akezptiert, oder eine `Add` -Methode, die einen Parameter vom Typ T akzeptiert, oder beides aufweist.  
   
 -   Wenn der Typ eine generische Sammlungsschnittstelle sowie <xref:System.Collections.IList>implementiert, wird er niemals als referenzierter Sammlungstyp verwendet, es sei denn, die generische Sammlungsschnittstelle ist ein geschlossener generischer Typ vom Typ <xref:System.Object>.  
   

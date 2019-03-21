@@ -31,7 +31,7 @@ Wir verwenden die List.Sort()-Methode weiterhin als Beispiel. Der erste Schritt 
 public delegate int Comparison<in T>(T left, T right);
 ```
 
-Der Compiler generiert eine von `System.Delegate` abgeleitete Klasse, die der verwendeten Signatur entspricht (in diesem Fall eine Methode, die eine ganze Zahl zurückgibt und über zwei Argumente verfügt). Der Typ des Delegaten ist `Comparison`. Der Delegattyp `Comparison` ist ein generischer Typ. Weitere Informationen zu Generika finden Sie [hier](generics.md).
+Der Compiler generiert eine von `System.Delegate` abgeleitete Klasse, die der verwendeten Signatur entspricht (in diesem Fall eine Methode, die eine ganze Zahl zurückgibt und über zwei Argumente verfügt). Der Typ des Delegaten ist `Comparison`. Der Delegattyp `Comparison` ist ein generischer Typ. Weitere Informationen zu Generics finden Sie [hier](generics.md).
 
 Beachten Sie, dass es so scheinen kann, als ob die Syntax eine Variable deklariert, aber tatsächlich deklariert sie einen *Typ*. Sie können Delegattypen innerhalb von Klassen, direkt in Namespaces oder sogar im globalen Namespace definieren.
 
@@ -120,7 +120,7 @@ Interessanterweise sind die Klassen `System.Delegate` und `System.MulticastDeleg
  
 Stattdessen erstellt der C#-Compiler Instanzen einer von `MulticastDelegate` abgeleiteten Klasse, wenn Sie das C#-Schlüsselwort verwenden, um Delegattypen zu deklarieren.
 
-Dieser Entwurf hat seinen Ursprung in der ersten Version von C# und .NET. Ein Ziel des Entwurfsteams war sicherzustellen, dass die Sprache bei der Verwendung von Delegaten Typsicherheit erzwingt. Dies bedeutete sicherzustellen, dass Delegaten mit dem richtigen Typ und der richtigen Anzahl von Argumenten aufgerufen werden. Zudem sollte jeder Rückgabetyp zur Kompilierzeit richtig angegeben werden. Delegaten waren Teil von .NET Version 1.0, die es vor Generika gab.
+Dieser Entwurf hat seinen Ursprung in der ersten Version von C# und .NET. Ein Ziel des Entwurfsteams war sicherzustellen, dass die Sprache bei der Verwendung von Delegaten Typsicherheit erzwingt. Dies bedeutete sicherzustellen, dass Delegaten mit dem richtigen Typ und der richtigen Anzahl von Argumenten aufgerufen werden. Zudem sollte jeder Rückgabetyp zur Kompilierzeit richtig angegeben werden. Delegaten waren Teil von .NET Version 1.0, die es vor Generics gab.
 
 Die beste Möglichkeit, diese Typsicherheit zu erzwingen, bestand darin, dass der Compiler die konkreten Delegatklassen erstellt, die die verwendete Methodensignatur darstellten.
 

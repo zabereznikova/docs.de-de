@@ -1,15 +1,10 @@
 ---
-title: Neues in C# – Leitfaden für C#
-description: Wie sich die C#-Programmiersprache weiterentwickelt
+title: 'Neues in C# – Leitfaden für C#'
+description: 'Wie sich die C#-Programmiersprache weiterentwickelt'
 ms.date: 11/13/2017
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: b079c21ee90a797b038b96ae68123a538464c382
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201438"
 ---
+
 # <a name="whats-new-in-c"></a>Neues in C# #
 
 Diese Seite enthält eine Roadmap zu den neuen Funktionen in jeder Hauptversion der C#-Sprache. Die verlinkten Artikel enthalten ausführliche Informationen zu den wichtigsten Funktionen, die in jeder Version hinzugefügt wurden. Sie finden Informationen zu neuen Funktionen, die entweder in einer allgemeinen Version oder in der öffentlichen Vorschau veröffentlicht wurden. Informationen zu den Status von Programmiersprachenfunktionen, so auch Funktionen, die für zukünftige Versionen geplant sind, finden Sie im [dotnet/roslyn-Repository](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) auf GitHub.
@@ -47,7 +42,7 @@ Im Folgenden sind die Hauptfunktionen aufgelistet, die mit vorherigen Versionen 
 * C# 3, Visual Studio .NET 2008:
   - Objekt- und Auflistungsinitialisierer, Lambdaausdrücke, Erweiterungsmethoden, anonyme Typen, automatische Eigenschaften, lokaler `var`-Typrückschluss und [Language Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md).
 * C# 2, Visual Studio .NET 2005:
-  - Anonyme Methoden, generische Typen, auf NULL festlegbare Typen, Iteratoren/Yield, `static`-Klassen und Ko-/Kontravarianz für Delegaten.
+  - Anonyme Methoden, Generics, auf NULL festlegbare Typen, Iteratoren/Yield, `static`-Klassen und Ko-/Kontravarianz für Delegaten.
 * C# 1.1, Visual Studio .NET 2003:
   - `#line`-Pragma und XML-Dokumentationskommentare
 * C# 1, Visual Studio .NET 2002:

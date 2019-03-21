@@ -69,7 +69,7 @@ items:
       - name: Garbage Collection
         tocHref: /dotnet/standard/garbage-collection/
         topicHref: /dotnet/standard/garbage-collection/index
-      - name: Generika in .NET
+      - name: Generics in .NET
         tocHref: /dotnet/standard/generics/
         topicHref: /dotnet/standard/generics/index
       - name: Globalisierung und Lokalisierung
@@ -409,7 +409,7 @@ items:
         - name: Das Dateisystem und die Registrierung
           tocHref: /dotnet/csharp/programming-guide/file-system/
           topicHref: /dotnet/csharp/programming-guide/file-system/index
-        - name: Generika
+        - name: Generics
           tocHref: /dotnet/csharp/programming-guide/generics/
           topicHref: /dotnet/csharp/programming-guide/generics/index
         - name: Indexer

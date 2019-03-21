@@ -39,7 +39,7 @@ Mithilfe der Beispiele in diesem Thema wird veranschaulicht, wie mit Ereignissen
  [!code-vb[EventsOverview#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdata.vb#6)]  
   
 ## <a name="example"></a>Beispiel  
- Im nächsten Beispiel wird das Deklarieren eines Delegaten für ein Ereignis dargestellt. Der Delegat wird `ThresholdReachedEventHandler` genannt. Das ist nur eine Abbildung. In der Regel müssen Sie einen Delegaten für ein Ereignis nicht deklarieren, da Sie entweder den <xref:System.EventHandler>-Delegaten oder den <xref:System.EventHandler%601>-Delegaten verwenden können. Sie sollten einen Delegaten nur in seltenen Szenarien deklarieren, zum Beispiel wenn Sie eine Klasse für Legacy-Code, in dem keine Generika verwendet werden können, verfügbar machen.  
+ Im nächsten Beispiel wird das Deklarieren eines Delegaten für ein Ereignis dargestellt. Der Delegat wird `ThresholdReachedEventHandler` genannt. Das ist nur eine Abbildung. In der Regel müssen Sie einen Delegaten für ein Ereignis nicht deklarieren, da Sie entweder den <xref:System.EventHandler>-Delegaten oder den <xref:System.EventHandler%601>-Delegaten verwenden können. Sie sollten einen Delegaten nur in seltenen Szenarien deklarieren, zum Beispiel wenn Sie eine Klasse für Legacy-Code, in dem keine Generics verwendet werden können, verfügbar machen.  
   
  [!code-csharp[EventsOverview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdelegate.cs#7)]
  [!code-vb[EventsOverview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdelegate.vb#7)]  

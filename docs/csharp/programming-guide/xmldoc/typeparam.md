@@ -32,7 +32,7 @@ ms.locfileid: "57471640"
 ## <a name="remarks"></a>Hinweise  
  Die `<typeparam>` -Tag sollte im Kommentar für einen generischen Typ oder eine Methodendeklaration verwendet werden, um einen Typparameter zu beschreiben. Fügen Sie ein Tag für jeden Typparameter des generischen Typs oder der Methode hinzu.  
   
- Weitere Informationen finden Sie unter [Generika](../../../csharp/programming-guide/generics/index.md).  
+ Weitere Informationen finden Sie unter [Generics](../../../csharp/programming-guide/generics/index.md).  
   
  Der Text für die `<typeparam>` Tag wird in IntelliSense angezeigt werden, dem [Objekt Browserfenster](/visualstudio/ide/viewing-the-structure-of-code#BKMK_ObjectBrowser) Webbericht für Codekommentare.  
   

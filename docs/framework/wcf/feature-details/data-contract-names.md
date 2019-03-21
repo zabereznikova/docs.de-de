@@ -51,7 +51,7 @@ Das folgende Beispiel zeigt, wie Sie das Standardbenennungsverhalten für Datenv
 [!code-vb[C_DataContractNames#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#1)]
 
 ## <a name="data-contract-names-for-generic-types"></a>Datenvertragsnamen für generische Typen
-Für die Bestimmung von Datenvertragsnamen für generische Typen existieren besondere Regeln. Diese Regeln helfen, Übereinstimmungen von Datenvertragsnamen zwischen zwei geschlossenen Generika des gleichen generischen Typs zu vermeiden.
+Für die Bestimmung von Datenvertragsnamen für generische Typen existieren besondere Regeln. Diese Regeln helfen, Übereinstimmungen von Datenvertragsnamen zwischen zwei geschlossenen Generics des gleichen generischen Typs zu vermeiden.
 
 Wird standardmäßig der Name des Datenvertrags für ein generischer Typ den Namen des Typs, gefolgt von der Zeichenfolge "Of", wird gefolgt von den Datenvertragsnamen der generischen Parameter, gefolgt von einem *Hash* mithilfe der datenvertragsnamespaces der berechnet die generischen Parameter. Ein Hash ist das Ergebnis einer mathematischen Funktion, die als "Fingerabdruck" fungiert, der Daten eindeutig identifiziert. Wenn es sich bei allen generischen Parametern um primitive Typen handelt, wird der Hash weggelassen.
 

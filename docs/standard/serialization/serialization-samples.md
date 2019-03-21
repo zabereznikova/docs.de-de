@@ -20,7 +20,7 @@ In diesem Abschnitt werden Serialisierungsobjekte in .NET Framework veranschauli
  Veranschaulicht die in .NET Serialisierung verfügbaren Funktionen für die Versionstoleranz.  
   
  [Technologiebeispiel für die Generikaserialisierung in Webdiensten](../../../docs/standard/serialization/web-services-generics-serialization-technology-sample.md)  
- Veranschaulicht die Verwendung und Steuerung der Generikaserialisierung in ASP.NET-Webdiensten. 
+ Veranschaulicht die Verwendung und Steuerung der Genericsserialisierung in ASP.NET-Webdiensten. 
   
  [SchemaImporterExtension-Technologiebeispiel](../../../docs/standard/serialization/schemaimporterextension-technology-sample.md)  
  Veranschaulicht eine benutzerdefinierte <xref:System.Xml.Serialization.Advanced.SchemaImporterExtension>-Klasse.  

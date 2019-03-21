@@ -1,5 +1,5 @@
 ---
-title: Vorteile von Generika – C#-Programmierhandbuch
+title: Vorteile von Generics – C#-Programmierhandbuch
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -12,8 +12,8 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 02/28/2019
 ms.locfileid: "56965410"
 ---
-# <a name="benefits-of-generics-c-programming-guide"></a>Vorteile von Generika (C#-Programmierhandbuch)
-Generika bieten die Lösung für eine Einschränkung in früheren Versionen der Common Language Runtime und der C#-Sprache, bei der Generalisierung durch die Umwandlung von Typen in den und aus dem universellen Basistyp <xref:System.Object> erfolgt. Durch Erstellen einer generischen Klasse können Sie eine Auflistung erstellen, die zur Kompilierzeit typsicher ist.  
+# <a name="benefits-of-generics-c-programming-guide"></a>Vorteile von Generics (C#-Programmierhandbuch)
+Generics bieten die Lösung für eine Einschränkung in früheren Versionen der Common Language Runtime und der C#-Sprache, bei der Generalisierung durch die Umwandlung von Typen in den und aus dem universellen Basistyp <xref:System.Object> erfolgt. Durch Erstellen einer generischen Klasse können Sie eine Auflistung erstellen, die zur Kompilierzeit typsicher ist.  
   
  Die Einschränkungen bei der Verwendung nicht generischer Auflistungsklassen können durch das Schreiben eines kurzen Programms veranschaulicht werden, das die Auflistungsklasse <xref:System.Collections.ArrayList> aus der .NET-Klassenbibliothek verwendet. Eine Instanz der <xref:System.Collections.ArrayList>-Klasse kann jeden Verweis- oder Werttyp speichern.  
   
@@ -29,7 +29,7 @@ Generika bieten die Lösung für eine Einschränkung in früheren Versionen der 
   
  In den Versionen 1.0 und 1.1 der C#-Sprache können Sie generalisierten Code in der Auflistung der .NET Framework-Basisklassenbibliothek nur vermeiden, wenn Sie Ihre eigenen typspezifischen Auflistungen schreiben. Da eine solche Klasse nur für einen Datentyp verwendet werden kann, verlieren Sie so aber die Vorteile der Generalisierung und müssen die Klasse für jeden Typ, der gespeichert wird, umschreiben.  
   
- Was <xref:System.Collections.ArrayList> und ähnliche Klassen eigentlich benötigen, ist eine Möglichkeit für den Clientcode, instanzweise den zu verwendenden Datentyp anzugeben. Dann wäre keine Typumwandlung nach oben zu <xref:System.Object> mehr nötig, und der Compiler könnte eine Typüberprüfung durchführen. Das heißt, dass <xref:System.Collections.ArrayList> einen Typparameter benötigt. Genau das bieten Generika. In der generischen <xref:System.Collections.Generic.List%601>-Auflistung im <xref:System.Collections.Generic>-Namespace sieht der gleiche Vorgang des Hinzufügens von Elementen zur Auflistung ungefähr so aus:  
+ Was <xref:System.Collections.ArrayList> und ähnliche Klassen eigentlich benötigen, ist eine Möglichkeit für den Clientcode, instanzweise den zu verwendenden Datentyp anzugeben. Dann wäre keine Typumwandlung nach oben zu <xref:System.Object> mehr nötig, und der Compiler könnte eine Typüberprüfung durchführen. Das heißt, dass <xref:System.Collections.ArrayList> einen Typparameter benötigt. Genau das bieten Generics. In der generischen <xref:System.Collections.Generic.List%601>-Auflistung im <xref:System.Collections.Generic>-Namespace sieht der gleiche Vorgang des Hinzufügens von Elementen zur Auflistung ungefähr so aus:  
   
  [!code-csharp[csProgGuideGenerics#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#6)]  
   

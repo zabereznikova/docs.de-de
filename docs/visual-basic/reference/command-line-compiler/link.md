@@ -59,7 +59,7 @@ Bewirkt, dass der Compiler dem Projekt, das Sie aktuell kompilieren, COM-Typinfo
   
  Die Kurzform von `-link` ist `-l`.  
   
-## <a name="generics-and-embedded-types"></a>Generika und eingebettete Typen  
+## <a name="generics-and-embedded-types"></a>Generics und eingebettete Typen  
  In den folgenden Abschnitten werden die Einschränkungen bei der Verwendung von generischen Typen in Anwendungen, die Interop-Typen einbetten, beschrieben.  
   
 ### <a name="generic-interfaces"></a>Generische Schnittstellen  

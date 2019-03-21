@@ -1,15 +1,9 @@
 ---
-title: Generika
-description: Erfahren Sie, wie Sie mithilfe generischer F#-Funktionen und Typen, die Sie Code schreiben, die mit einer Vielzahl von Typen funktioniert, ohne Code wiederholen zu ermöglichen.
+title: Generics
+description: 'Erfahren Sie, wie Sie mithilfe generischer F#-Funktionen und Typen, die Sie Code schreiben, die mit einer Vielzahl von Typen funktioniert, ohne Code wiederholen zu ermöglichen.'
 ms.date: 05/16/2016
-ms.openlocfilehash: bafb80893df2f3fab85840ee844bc78d1fb33428
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614351"
 ---
-# <a name="generics"></a>Generika
+# <a name="generics"></a>Generics
 
 F#-Funktionswerte, -Methoden, -Eigenschaften und -Aggregattypen, wie z.B. Klassen und Unterscheidungs-Unions können *generisch* sein. Generische Konstrukte enthalten mindestens einen Typparameter, die in der Regel vom Benutzer des generischen Konstrukts angegeben wird. Mit generischen Funktionen und Typen können Sie Code schreiben, der mit einer Vielzahl von Typen funktioniert, ohne den Code für jeden Typ zu wiederholen. Ihren Code generisch zu erstellen kann einfach sein, da Ihr Code häufig implizit abgeleitet wird, um durch den Typrückschluss des Compilers und durch automatische Verallgemeinerungsmechanismen generisch zu sein.
 

@@ -216,7 +216,7 @@ Sie können Kommentare nach impliziten Zeilenfortsetzungen, innerhalb von Initia
  Sie können bestimmte Warnungen für Bereiche innerhalb einer Quelldatei deaktivieren und aktivieren.  
   
  **Verbesserungen bei XML-Dokumentationskommentaren**  
- Beim Schreiben von Dokumentationskommentaren steht intelligente Editor- und Buildunterstützung zum Überprüfen von Parameternamen, ordnungsgemäßer Handhabung von `crefs` (Generika, Operatoren usw.), Farben und Umgestaltung bereit.  
+ Beim Schreiben von Dokumentationskommentaren steht intelligente Editor- und Buildunterstützung zum Überprüfen von Parameternamen, ordnungsgemäßer Handhabung von `crefs` (Generics, Operatoren usw.), Farben und Umgestaltung bereit.  
   
  [Partial Module and Interface Definitions (Partielle Modul- und Schnittstellendefinitionen)](../../visual-basic/language-reference/modifiers/partial.md)  
  Zusätzlich zu Klassen und Strukturen können Sie partielle Module und Schnittstellen deklarieren.  

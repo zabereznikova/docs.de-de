@@ -82,7 +82,7 @@ Ein `interface`-Typ definiert einen Vertrag als benannter Satz öffentlicher Fun
 
 Ein `delegate`-Typ stellt Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp dar. Delegate ermöglichen die Behandlung von Methoden als Entitäten, die Variablen zugewiesen und als Parameter übergeben werden können. Delegate werden analog zu Funktionstypen von funktionalen Sprachen bereitgestellt. Sie ähneln auch dem Konzept von Funktionszeigern, die Sie in einigen anderen Sprachen finden. Im Gegensatz zu Funktionszeigern sind Delegate allerdings objektorientiert und typsicher.
 
-Die Typen, `class`, `struct`, `interface` und `delegate` unterstützen generische Typen, wobei sie mit anderen Typen parametrisiert werden können.
+Die Typen, `class`, `struct`, `interface` und `delegate` unterstützen Generics, wobei sie mit anderen Typen parametrisiert werden können.
 
 Ein `enum`-Typ ist ein eigenständiger Typ mit einer benannten Konstante. Jeder `enum`-Typ verfügt über einen zugrunde liegenden Typ, der einer der acht ganzzahligen Typen sein muss. Der Satz von Werten eines `enum`-Typs ist mit dem Satz von Werten des zugrunde liegenden Typs identisch.
 
