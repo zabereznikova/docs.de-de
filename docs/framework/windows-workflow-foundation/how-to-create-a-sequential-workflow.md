@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 2213d766435aaafbf37b8646a66ea3007bfcb734
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719636"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262578"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>Vorgehensweise: Erstellen eines sequenziellen Workflows
 Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden. Dieses Thema führt durch Erstellen eines Workflows, der integrierten Aktivitäten, wie z. B. verwendet die <xref:System.Activities.Statements.Sequence> Aktivität und die benutzerdefinierten Aktivitäten aus dem vorherigen [Vorgehensweise: Erstellen einer Aktivität](how-to-create-an-activity.md) Thema. Der Workflow erstellt ein Spiel, das Zahlen errät.  
@@ -21,7 +21,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
 > [!NOTE]
 >  Eine abgeschlossene Version des Tutorials können Sie im [Windows Workflow Foundation (WF45) Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976)herunterladen.  
   
-### <a name="to-create-the-workflow"></a>So erstellen Sie den Workflow  
+## <a name="to-create-the-workflow"></a>So erstellen Sie den Workflow  
   
 1.  Mit der rechten Maustaste **NumberGuessWorkflowActivities** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **neues Element**.  
   
@@ -31,7 +31,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 4.  Ziehen Sie eine **Sequenz** Aktivität aus der **Control Flow** im Abschnitt der **Toolbox** und legen ihn auf der **Aktivität hier ablegen** Bezeichnung auf der Workflow-Entwurfsoberfläche.  
   
-### <a name="to-create-the-workflow-variables-and-arguments"></a>So erstellen Sie die Workflowvariablen und -argumente  
+## <a name="to-create-the-workflow-variables-and-arguments"></a>So erstellen Sie die Workflowvariablen und -argumente  
   
 1.  Doppelklicken Sie auf **SequentialNumberGuessWorkflow.xaml** in **Projektmappen-Explorer** um den Workflow im Designer anzuzeigen, wenn er nicht bereits angezeigt wird.  
   
@@ -62,7 +62,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 13. Klicken Sie auf **Variablen** in der unteren linken Seite des Aktivitätsdesigners zu schließen die **Variablen** Bereich.  
   
-### <a name="to-add-the-workflow-activities"></a>So fügen Sie die Workflowaktivitäten hinzu  
+## <a name="to-add-the-workflow-activities"></a>So fügen Sie die Workflowaktivitäten hinzu  
   
 1.  Ziehen Sie ein **zuweisen** Aktivität aus der **primitive** Teil der **Toolbox** und legen ihn auf die **Sequenz** Aktivität. Typ `Target` in die **zu** Feld und den folgenden Ausdruck in der **Geben Sie einen C#-Ausdruck** oder **VB-Ausdruck eingeben** Feld.  
   
@@ -137,13 +137,13 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
 13. Klicken Sie auf die **WriteLine** -Aktivität in der **dann** Abschnitt, um es auszuwählen, und geben Sie den folgenden Ausdruck in der **Text** Wertefeld der Eigenschaft.  
   
-    ```vb  
+    ```text
     "Your guess is too low."  
     ```  
   
 14. Klicken Sie auf die **WriteLine** -Aktivität in der **Else** Abschnitt, um es auszuwählen, und geben Sie den folgenden Ausdruck in der **Text** Wertefeld der Eigenschaft.  
   
-    ```vb  
+    ```text
     "Your guess is too high."  
     ```  
   
@@ -151,7 +151,7 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
   
      ![Abgeschlossener sequenzieller Workflow](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
   
-### <a name="to-build-the-workflow"></a>So erstellen Sie den Workflow  
+## <a name="to-build-the-workflow"></a>So erstellen Sie den Workflow  
   
 1.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
