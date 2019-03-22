@@ -21,7 +21,7 @@ Der Name der Struktur muss ein gültiger C#- [Bezeichnername](../inside-a-progra
 
 Jede die <xref:System.IEquatable%601>-Schnittstelle implementierende Klasse oder Struktur muss eine Definition für eine <xref:System.IEquatable%601.Equals%2A>-Methode enthalten, die mit der Signatur übereinstimmt, die durch die Schnittstelle angegeben wird. Daher können Sie auf eine Klasse zählen, die `IEquatable<T>` für die Einbeziehung einer `Equals`-Methode implementiert, mit der eine Instanz der Klasse bestimmen kann, ob es sich zu einer anderen Instanz derselben Klasse identisch verhält.  
   
-Die Definition für `IEquatable<T>` stellt keine Implementierung für `Equals` bereit. Die Schnittstelle definiert nur die Signatur. Auf diese Weise ähnelt eine Schnittstelle in C# einer abstrakten Klasse, in der alle Methoden abstrakt sind. Eine Klasse oder Struktur kann jedoch mehrere Schnittstellen implementieren. Eine Klasse kann jedoch nur eine einzelne Klasse, ein Abstrakt oder nichts erben. Daher können Sie durch die Verwendung von Schnittstellen das Verhalten von mehreren Quellen in einer Klasse einbeziehen.  
+Die Definition für `IEquatable<T>` stellt keine Implementierung für `Equals` bereit. Die Schnittstelle definiert nur die Signatur. Auf diese Weise ähnelt eine Schnittstelle in C# einer abstrakten Klasse, in der alle Methoden abstrakt sind. Eine Klasse oder Struktur kann jedoch mehrere Schnittstellen implementieren. Eine Klasse kann jedoch nur eine einzelne Klasse, ein Abstrakt oder nichts erben.
   
 Weitere Informationen zu abstrakten Klassen finden Sie unter [Abstrakte und versiegelte Klassen und Klassenmember](../classes-and-structs/abstract-and-sealed-classes-and-class-members.md).  
   
@@ -45,7 +45,7 @@ Eine Basisklasse kann zudem Schnittstellenmember mithilfe von virtuellen Membern
 
 Eine Schnittstelle verfügt über die folgenden Eigenschaften:  
 
-- Eine Schnittstelle ähnelt einer abstrakten Basisklasse. Jede die Schnittstelle implementierende Klasse oder Struktur muss alle zugehörigen Member implementieren.
+- Eine Schnittstelle ähnelt einer abstrakten Basisklasse, die nur abstrakte Member enthält. Jede die Schnittstelle implementierende Klasse oder Struktur muss alle zugehörigen Member implementieren.
 - Eine Schnittstelle kann nicht direkt instanziiert werden. Die zugehörigen Member werden durch die die Schnittstelle implementierende Klasse oder Struktur implementiert.
 - Schnittstellen können Ereignisse, Indexer, Methoden und Eigenschaften enthalten.
 - Schnittstellen enthalten keine Implementierung von Methoden.
