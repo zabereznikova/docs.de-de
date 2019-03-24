@@ -4,12 +4,12 @@ description: Dieser Artikel soll Projektbesitzern dabei helfen, Ihre eigene Lös
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 57bb766f1d91c502a508b6362dc642310009c8c4
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: ab484ccc2c5b51b2ee1dca57df51669d288f3e6b
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904028"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186064"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organisieren Ihres Projekts zur Unterstützung von sowohl .NET Framework als auch .NET Core
 
@@ -36,7 +36,7 @@ Erfahren Sie, wie Sie eine Lösung erstellen, die .NET Framework und .NET Core p
 
 Betrachten Sie das folgende Repository:
 
-![Vorhandenes Projekt](media/project-structure/project.png)
+![Vorhandenes Projekt](./media/project-structure/existing-project-structure.png)
 
 [**Quellcode**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/)
 
@@ -46,7 +46,7 @@ Im Folgenden sind verschiedene Möglichkeiten beschrieben, Unterstützung für .
 
 Organisieren Sie das Repository neu, sodass alle vorhandenen *\*.csproj*-Dateien entfernt werden, und eine einzelne *\*.csproj*-Datei erstellt wird, die mehrere Frameworks als Ziel hat. Dies ist eine hervorragende Option, da ein einzelnes Projekt für andere Frameworks kompilieren kann. Außerdem kann die Option verschiedene Kompilierungsoptionen und Abhängigkeiten pro Zielframework behandeln.
 
-![CSPROJ-Datei für mehrere Zielframeworks erstellen](media/project-structure/project.csproj.png)
+![CSPROJ-Datei für mehrere Zielframeworks erstellen](./media/project-structure/multi-targeted-project.png)
 
 [**Quellcode**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/)
 
@@ -58,7 +58,7 @@ Zu beachtende Änderungen:
 
 Wenn es vorhandene Projekte gibt, die ältere Frameworks als Ziel haben, empfiehlt es sich, diese Projekte unverändert zu lassen und ein .NET Core-Projekt zu verwenden, um kommende Frameworks als Ziel festzulegen.
 
-![.NET Core-Projekt mit vorhandenem Projekt in anderem Ordner](media/project-structure/project.csproj.different.png)
+![.NET Core-Projekt mit vorhandenem Projekt in anderem Ordner](./media/project-structure/separate-projects-same-source.png)
 
 [**Quellcode**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
 

@@ -2,12 +2,12 @@
 title: dotnet-Befehl
 description: Informationen zum dotnet-Befehl (generischer Treiber für die .NET Core CLI-Tools) und dessen Verwendung.
 ms.date: 06/04/2018
-ms.openlocfilehash: 53eb96ee6fe809b2e6e42eec4e7e9b5f7c5edf2a
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 107a529952cce62dac840874fa5d6d8986376adf
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066440"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185635"
 ---
 # <a name="dotnet-command"></a>dotnet-Befehl
 
@@ -81,9 +81,9 @@ Zeigt die installierten .NET Core-SDKs an.
 `--roll-forward-on-no-candidate-fx <N>`
 
 Definiert ein Verhalten, wenn das erforderliche freigegebene Framework nicht verfügbar ist. `N` kann Folgendes sein:
- * `0` - Das Ausführen von Rollforward ist auch für die Nebenversion deaktiviert.
- * `1` - Rollforward wird in der Nebenversion, nicht aber in der Hauptversion, ausgeführt. Dies ist das Standardverhalten.
- * `2` - Rollforward wird in Neben- und Hauptversionen ausgeführt.
+* `0` - Das Ausführen von Rollforward ist auch für die Nebenversion deaktiviert.
+* `1` - Rollforward wird in der Nebenversion, nicht aber in der Hauptversion, ausgeführt. Dies ist das Standardverhalten.
+* `2` - Rollforward wird in Neben- und Hauptversionen ausgeführt.
 
  Weitere Informationen finden Sie unter [Rollforward](../whats-new/dotnet-core-2-1.md#roll-forward).
 
@@ -258,7 +258,7 @@ Befehl | Funktion
 [dotnet tool uninstall](dotnet-tool-uninstall.md) | Deinstalliert ein Global-Tool von Ihrem Computer.
 [dotnet tool update](dotnet-tool-update.md) | Aktualisiert ein Global Tool auf dem Computer.
 
-### <a name="additional-tools"></a>Zusätzliche Tools
+### <a name="additional-tools"></a>Weitere Tools
 
 Beginnend mit .NET Core SDK 2.1.300 steht eine Reihe von Tools, die nur auf Projektbasis unter Verwendung von `DotnetCliToolReference` verfügbar waren, jetzt als Teil des .NET Core SDK zur Verfügung. Diese Tools werden in der folgenden Tabelle aufgeführt:
 
