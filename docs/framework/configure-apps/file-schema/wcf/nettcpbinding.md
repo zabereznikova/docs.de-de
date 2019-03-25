@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: 54e9a488b9e83b07d1d6d7e18e92ecedc5c74ea6
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: d719b5c65eda8299170705cede81907a51b12e79
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759183"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412278"
 ---
 # <a name="nettcpbinding"></a>\<netTcpBinding>
 
@@ -65,7 +65,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |`closeTimeout`|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Schließvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
-|`hostnameComparisonMode`|Gibt den HTTP-Hostnamen-Vergleichsmodus an, der verwendet wird, um URIs zu analysieren. Dieses Attribut ist vom Typ `System.ServiceModel.HostnameComparisonMode` und gibt an, ob beim Abgleich des URI der Hostname zum Erreichen des Dienstes verwendet wird. Der Standardwert lautet `StrongWildcard`, wodurch der Hostname beim Abgleich ignoriert wird.|  
+|`hostNameComparisonMode`|Gibt den HTTP-Hostnamen-Vergleichsmodus an, der verwendet wird, um URIs zu analysieren. Dieses Attribut ist vom Typ <xref:System.ServiceModel.HostNameComparisonMode> und gibt an, ob beim Abgleich des URI der Hostname zum Erreichen des Dienstes verwendet wird. Der Standardwert lautet <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, wodurch der Hostname beim Abgleich ignoriert wird.|  
 |`listenBacklog`|Eine positive ganze Zahl, die die maximale Anzahl an Kanälen angibt, die im Listener darauf warten, akzeptiert zu werden. Verbindungen oberhalb des Limits werden in die Warteschlange gestellt, bis unterhalb des Limits Speicherplatz verfügbar wird. Das `connectionTimeout`-Attribut beschränkt die Zeit, die ein Client wartet, bevor eine Verbindungsausnahme ausgelöst wird. Der Standard ist 10.|  
 |`maxBufferPoolSize`|Eine ganze Zahl, die die maximale Pufferpoolgröße für diese Bindung angibt. Der Standardwert ist 512 * 1024 Bytes. Viele Teile von Windows Communication Foundation (WCF) verwenden Puffer. Das Erstellen und Zerstören von Puffern bei jeder Verwendung ist kostspielig. Dasselbe gilt für die Garbage Collection für Puffer. Bei Pufferpools können Sie einen zu verwendenden Puffer aus dem Pool nehmen und ihn nach der Verwendung wieder dem Pool zuführen. So wird der Aufwand beim Erstellen und Zerstören von Puffern vermieden.|  
 |`maxBufferSize`|Eine positive ganze Zahl, die die maximale Größe des Puffers in Bytes angibt, der zum Speichern von Nachrichten verwendet wird.<br /><br /> Wenn das `transferMode`-Attribut auf `Buffered` festgelegt ist, sollte dieses Attribut auf den `maxReceivedMessageSize`-Attributwert festgelegt werden.<br /><br /> Wenn das `transferMode`-Attribut auf `Streamed` festgelegt ist, darf dieses Attribut den `maxReceivedMessageSize`-Attributwert nicht überschreiten und sollte mindestens auf die Größe des Headers festgelegt werden.<br /><br /> Der Standard ist 65536. Weitere Informationen finden Sie unter <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>.|  
@@ -98,7 +98,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 
 Diese Bindung generiert standardmäßig eine Laufzeitkommunikation, die Transportsicherheit, TCP zur Nachrichtenübermittlung und eine binäre Nachrichtencodierung verwendet. Diese Bindung ist eine entsprechende Windows Communication Foundation (WCF)-System bereitgestellte Wahl für die Kommunikation über ein Intranet.  
   
- Die Standardkonfiguration für die `netTcpBinding` ist schneller als die Konfiguration von bereitgestellten der `wsHttpBinding`, aber es ist nur für WCF-Kommunikation vorgesehen. Das Sicherheitsverhalten ist mit dem optionalen `securityMode`-Attribut konfigurierbar. Die Verwendung von WS-ReliableMessaging ist mit dem optionalen `reliableSessionEnabled`-Attribut konfigurierbar. Zuverlässiges Messaging ist jedoch standardmäßig deaktiviert. Die vom System bereitgestellten HTTP-Bindungen, wie z.&#160;B. `wsHttpBinding` und `basicHttpBinding` sind im Allgemeinen so konfiguriert, dass Funktionen standardmäßig aktiviert werden ,während die `netTcpBinding`-Bindung Funktionen standardmäßig deaktiviert, sodass Sie die Unterstützung für eine der WS-*-Spezifikationen explizit übernehmen müssen. Das bedeutet, dass die Standardkonfiguration für TCP Meldungen zwischen Endpunkten schneller austauscht als die standardmäßig für die HTTP-Bindungen festgelegten Konfigurationen.  
+ Die Standardkonfiguration für die `netTcpBinding` ist schneller als die Konfiguration von bereitgestellten der `wsHttpBinding`, aber es ist nur für WCF-Kommunikation vorgesehen. Das Sicherheitsverhalten ist mit dem optionalen `securityMode`-Attribut konfigurierbar. Die Verwendung von WS-ReliableMessaging ist mit dem optionalen `reliableSessionEnabled`-Attribut konfigurierbar. Zuverlässiges Messaging ist jedoch standardmäßig deaktiviert. Die vom System bereitgestellten HTTP-Bindungen, wie z.&amp;#160;B. `wsHttpBinding` und `basicHttpBinding`, sind im Allgemeinen so konfiguriert, dass Funktionen standardmäßig aktiviert werden ,während die `netTcpBinding`-Bindung Funktionen standardmäßig deaktiviert, sodass Sie die Unterstützung für eine der WS-*-Spezifikationen explizit übernehmen müssen. Das bedeutet, dass die Standardkonfiguration für TCP Meldungen zwischen Endpunkten schneller austauscht als die standardmäßig für die HTTP-Bindungen festgelegten Konfigurationen.  
   
 ## <a name="example"></a>Beispiel
 

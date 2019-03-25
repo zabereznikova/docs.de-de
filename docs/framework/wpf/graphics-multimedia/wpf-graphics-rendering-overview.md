@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: c1d7654dc190b00363fa6cc47c362b5f9e90d8f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: da455adb23dd70a915e81217c6c30f2d523e001c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375531"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409652"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Übersicht über das WPF-Grafikrendering
 Das Thema bietet einen Überblick über die visuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Schicht. Es konzentriert sich auf die Rolle der <xref:System.Windows.Media.Visual> Klasse zum Rendern der Unterstützung in der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Modell.  
@@ -49,8 +49,7 @@ Das Thema bietet einen Überblick über die visuelle [!INCLUDE[TLA2#tla_winclien
   
  <xref:System.Windows.Media.Visual> wird als öffentliche abstrakte Klasse verfügbar gemacht werden von der untergeordnete Klassen abgeleitet werden müssen. Die folgende Abbildung zeigt die Hierarchie der visuellen Objekte, die in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügbar gemacht werden.  
   
- ![Diagramm der abgeleiteten Klassen aus dem visuellen Objekt](./media/visualclass01.png "VisualClass01")  
-Klassenhierarchie von visuellen Objekten  
+ ![Diagramm der vom Visual-Objekt abgeleiteten Klassen](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
 ### <a name="drawingvisual-class"></a>DrawingVisual-Klasse  
  Die <xref:System.Windows.Media.DrawingVisual> ist eine einfache Klasse, die zum Rendern von Formen, Bildern oder Text verwendet wird. Diese Klasse wird als einfach angesehen, da sie keine Layout- oder Ereignisbehandlung bereitstellt, was die Laufzeitleistung verbessert. Aus diesem Grund sind Zeichnungen für Hintergründe und ClipArt ideal. Die <xref:System.Windows.Media.DrawingVisual> können verwendet werden, um ein benutzerdefiniertes visuelles Objekt erstellen. Weitere Informationen finden Sie unter [Verwenden von DrawingVisual-Objekten](using-drawingvisual-objects.md).  
@@ -110,8 +109,7 @@ Reihenfolge der DrawingGroup-Vorgänge
   
  Würden Sie die visuellen Objekte auflisten, die standardmäßig umfassen <xref:System.Windows.Controls.Button> -Steuerelement, sehen Sie, dass die Hierarchie von visuellen Objekten, die unten dargestellt:  
   
- ![Diagramm der visuellen Strukturhierarchie](./media/visuallayeroverview03.gif "VisualLayerOverview03")  
-Diagramm der visuellen Strukturhierarchie  
+ ![Diagramm der visuellen Strukturhierarchie](./media/wpf-graphics-rendering-overview/visual-object-diagram.gif) 
   
  Die <xref:System.Windows.Controls.Button> Steuerelement enthält eine <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> -Element, das wiederum enthält ein <xref:System.Windows.Controls.ContentPresenter> Element. Die <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> -Element ist dafür verantwortlich, für das Zeichnen eines Rahmens und eines Hintergrunds für die <xref:System.Windows.Controls.Button>. Die <xref:System.Windows.Controls.ContentPresenter> Element ist dafür verantwortlich, den Inhalt der <xref:System.Windows.Controls.Button>. In diesem Fall, da Sie Text anzeigen, die <xref:System.Windows.Controls.ContentPresenter> Element enthält eine <xref:System.Windows.Controls.TextBlock> Element. Die Tatsache, die die <xref:System.Windows.Controls.Button> -Steuerelement verwendet eine <xref:System.Windows.Controls.ContentPresenter> bedeutet, die der Inhalt von anderen Elementen wie z. B. dargestellt werden könnte ein <xref:System.Windows.Controls.Image> oder eine Geometrie, wie z. B. eine <xref:System.Windows.Media.EllipseGeometry>.  
   
@@ -124,8 +122,7 @@ Diagramm der visuellen Strukturhierarchie
   
  Wenn Sie die visuellen Objekte auflisten und vektorgrafikanweisungslisten, aus denen besteht die <xref:System.Windows.Controls.Button> -Steuerelement, sehen Sie, dass die Hierarchie der Objekte, die unten dargestellt:  
   
- ![Diagramm der visuellen Struktur und des Renderings von Daten](./media/visuallayeroverview04.png "VisualLayerOverview04")  
-Diagramm der visuellen Struktur und des Renderings von Daten  
+ ![Diagramm der visuellen Struktur und des Renderings von Daten](./media/wpf-graphics-rendering-overview/visual-tree-rendering-data.png)  
   
  Die <xref:System.Windows.Controls.Button> Steuerelement enthält eine <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> -Element, das wiederum enthält ein <xref:System.Windows.Controls.ContentPresenter> Element. Die <xref:Microsoft.Windows.Themes.ClassicBorderDecorator> Element ist dafür verantwortlich, alle diskreten Grafikelemente, aus denen der Rahmen und Hintergrund einer Schaltfläche zu zeichnen. Die <xref:System.Windows.Controls.ContentPresenter> Element ist dafür verantwortlich, den Inhalt der <xref:System.Windows.Controls.Button>. In diesem Fall sind da Sie ein Bild anzeigen. dem <xref:System.Windows.Controls.ContentPresenter> Element enthält eine <xref:System.Windows.Controls.Image> Element.  
   
@@ -149,14 +146,12 @@ Diagramm der visuellen Struktur und des Renderings von Daten
   
  Würden Sie die visuellen Objekte auflisten, standardmäßig umfassen, die <xref:System.Windows.Controls.StackPanel> Element im Markupbeispiel sehen Sie, dass die Hierarchie von visuellen Objekten, die unten dargestellt:  
   
- ![Diagramm der visuellen Strukturhierarchie](./media/visuallayeroverview05.gif "VisualLayerOverview05")  
-Diagramm der visuellen Strukturhierarchie  
+ ![Diagramm der visuellen Strukturhierarchie](./media/wpf-graphics-rendering-overview/visual-tree-hierarchy.gif)  
   
 ### <a name="rendering-order"></a>Renderingreihenfolge  
  Die visuelle Struktur bestimmt die Renderingreihenfolge der visuellen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und Zeichnungsobjekte. Die Reihenfolge des Durchlaufs beginnt mit dem visuellen Stammelement, das der oberste Knoten in der visuellen Struktur ist. Die untergeordnete Elemente des visuellen Stammelements werden von links nach rechts durchlaufen. Wenn ein visuelles Objekt über untergeordnete Elemente verfügt, werden seine untergeordneten Elemente vor den gleichgeordneten visuellen Elementen durchlaufen. Dies bedeutet, dass der Inhalt eines untergeordneten visuellen Objekts vor dem Inhalt des visuellen Objekts selbst gerendert wird.  
   
- ![Diagramm der visuellen Struktur-Rendering-Reihenfolge](./media/visuallayeroverview06.gif "VisualLayerOverview06")  
-Diagramm der visuellen Struktur-Rendering-Reihenfolge  
+ ![Diagramm der visuellen Struktur-Rendering-Reihenfolge](./media/wpf-graphics-rendering-overview/visual-tree-rendering-order.gif) 
   
 ### <a name="root-visual"></a>Visuelles Stammobjekt  
  Das **visuelle Stammobjekt** ist das oberste Element in der Hierarchie einer visuellen Struktur. In den meisten Anwendungen ist die Basisklasse für das visuelle Stammobjekt entweder <xref:System.Windows.Window> oder <xref:System.Windows.Navigation.NavigationWindow>. Wenn Sie jedoch visuelle Objekte in einer Win32-Anwendung hosten, ist das visuelle Stammobjekt das oberste visuelle Objekt, das Sie im Win32-Fenster hosten. Weitere Informationen finden Sie unter [Tutorial: Hosten von visuellen Objekten in einer Win32-Anwendung](tutorial-hosting-visual-objects-in-a-win32-application.md).  
@@ -178,9 +173,8 @@ Diagramm der logischen Struktur
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>Anzeigen der visuellen Struktur mit XamlPad  
  Das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Tool XamlPad bietet eine Option zum Anzeigen und Durchsuchen der visuellen Struktur, die dem aktuell definierten [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]-Inhalt entspricht. Klicken Sie auf die Schaltfläche **Visuelle Struktur anzeigen** der Menüleiste, um die visuelle Struktur anzuzeigen. Im Folgenden wird die Erweiterung des [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]-Inhalts in Knoten in der visuellen Struktur im Panel **Visueller Struktur-Explorer**-Bereich in XamlPad veranschaulicht:  
   
- ![Visueller Struktur-Explorer-Bereich in XamlPad](./media/visuallayeroverview08.png "VisualLayerOverview08")  
-Visueller Struktur-Explorer-Bereich in XamlPad  
-  
+ ![Visueller Struktur-Explorer-Bereich in XamlPad](./media/wpf-graphics-rendering-overview/visual-tree-explorer.png)  
+
  Beachten Sie, dass die <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBox>, und <xref:System.Windows.Controls.Button> Steuerelemente jeder anzeigen, eine separate visuelle Objekthierarchie in die **visueller Struktur-Explorer** -Bereich von XamlPad. Grund hierfür ist, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelemente verfügen über eine <xref:System.Windows.Controls.ControlTemplate> , die die visuelle Struktur des Steuerelements enthält. Wenn Sie explizit auf ein Steuerelement verweisen, verweisen Sie implizit auf dessen visuelle Hierarchie.  
   
 ### <a name="profiling-visual-performance"></a>Erstellung von visuellen Leistungsprofilen  
@@ -196,14 +190,12 @@ Visual Profiler-Anzeigeausgabe
 ### <a name="retained-mode-graphics"></a>Retained Mode-Grafiken  
  Einer der Schlüssel zum Verständnis der Rolle des visuellen Objekts ist der Unterschied zwischen Grafiksystemen mit **Direktmodus** und **Retained Mode**. Eine standardmäßige Win32-Anwendung, die auf GDI oder GDI+ basiert, verwendet ein Grafiksystem mit unmittelbaren Modus. Das heißt, dass die Anwendung für das Neuzeichnen des Teils des Clientbereichs verantwortlich ist, der aufgrund einer Aktion, z.B. Änderung der Größe eines Fensters, oder eines Objekts, dessen visuelle Darstellung geändert wird, ungültig ist.  
   
- ![Diagramm der Win32-Renderingsequenz](./media/visuallayeroverview01.png "VisualLayerOverview01")  
-Diagramm der Win32-Renderingsequenz  
+ ![Diagramm der Win32-Renderingsequenz](./media/wpf-graphics-rendering-overview/win32-rendering-squence.png)  
   
  Im Gegensatz dazu verwendet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ein System mit Retained Mode. Dies bedeutet, dass Objekte, die eine visuelle Darstellung haben, einen Satz serialisierter Zeichnungsdaten definieren. Nachdem die Zeichnungsdaten definiert wurden, ist das System für alle Repaint-Anforderungen zum Rendern der Anwendungsobjekte verantwortlich. Auch zur Laufzeit können Sie Anwendungsobjekte ändern oder erstellen und das System weiterhin auf Zeichnungsanforderungen reagieren lassen. Die Leistungsstärke eines Grafiksystems mit Retained Mode ist darauf zurückzuführen, dass Zeichnungsinformationen stets in einem serialisierten Zustand von der Anwendung gespeichert werden, die Verantwortung für das Rendering aber dem System überlassen wird. Das folgende Diagramm zeigt, wie die Anwendung [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] auf Zeichnungsanforderungen reagieren lässt.  
   
- ![Diagramm der WPF-Renderingsequenz](./media/visuallayeroverview02.png "VisualLayerOverview02")  
-Diagramm der WPF-Renderingsequenz  
-  
+ ![Diagramm der WPF-Renderingsequenz](./media/wpf-graphics-rendering-overview/wpf-rendering-sequence.png)  
+
 #### <a name="intelligent-redrawing"></a>Intelligentes Neuzeichnen  
  Einer der größten Vorteile bei der Verwendung von Grafiken mit dem Retained Mode besteht darin, dass [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] effizient optimieren kann, was in der Anwendung neu gezeichnet werden muss. Auch wenn Sie über eine komplexe Szene mit unterschiedlicher Deckkraft verfügen, müssen Sie im Allgemeinen nicht für besondere Zwecke Code zum Neuzeichnen optimieren. Vergleichen Sie dies mit der Win32-Programmierung, bei der Sie viele Ressourcen in die Optimierung Ihrer Anwendung durch Minimierung des Neuzeichnungaufwands im Aktualisierungsbereich investieren können. Ein Beispiel für den Typ der Komplexität in Verbindung mit der Optimierung der Neuzeichnung in Win32-Anwendungen finden Sie unter [Neuzeichnen im Aktualisierungsbereich](/windows/desktop/gdi/redrawing-in-the-update-region).  
   
@@ -214,8 +206,7 @@ Diagramm der WPF-Renderingsequenz
   
  Die folgende Abbildung zeigt ein Quellbild, dessen Größe um 300 % geändert wurde. Beachten Sie die Verzerrungen, die angezeigt werden, wenn das Quellbild als Bitmap-Grafik gestreckt und nicht als Vektorgrafikbild skaliert wird.  
   
- ![Unterschiede zwischen Raster-und Vektorgrafiken](./media/vectorgraphics01.png "VectorGraphics01")  
-Unterschiede zwischen Raster- und Vektorgrafiken  
+ ![Unterschiede zwischen Raster- und Vektorgrafiken](./media/wpf-graphics-rendering-overview/raster-vector-differences.png)  
   
  Das folgende Markup zeigt zwei <xref:System.Windows.Shapes.Path> definierten Elemente. Das zweite Element verwendet eine <xref:System.Windows.Media.ScaleTransform> zum Ändern der Größe der zeichnungsanweisungen des ersten Elements um 300 %. Beachten Sie, dass die zeichnungsanweisungen in den <xref:System.Windows.Shapes.Path> Elemente bleiben unverändert.  
   

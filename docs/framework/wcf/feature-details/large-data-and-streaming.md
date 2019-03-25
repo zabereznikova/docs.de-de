@@ -2,12 +2,12 @@
 title: Umfangreiche Daten und Streaming
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: c6514903294147671804b5b8de47fddc764b0547
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fa49f9da7caf9146f73017ec051381a8e9ef9e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674114"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411056"
 ---
 # <a name="large-data-and-streaming"></a>Umfangreiche Daten und Streaming
 Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfrastruktur. Da XML-Daten häufig in dem definierten im standard-Text-Format codiert ist die [XML 1.0-Spezifikation](https://go.microsoft.com/fwlink/?LinkId=94838), vernetzte Systementwickler und Architekten sind in der Regel, sorgen die über das Netzwerk Speicherbedarf (oder Größe) der gesendeten Nachrichten über das Netzwerk und die textbasierte Codierung von XML stellt besondere Herausforderungen für die effiziente Übertragung binärer Daten dar.  
@@ -33,7 +33,7 @@ Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfra
 ### <a name="binary-content"></a>Binärer Inhalt  
  Es gibt einen Bereich, in dem binäre Codierungen textbasierten Codierungen in Hinblick auf die resultierende Nachrichtengröße überlegen sind, und zwar bei großen binären Datenelementen. Dazu gehören Bilder, Videos, Soundclips und jede sonstige Form von nicht transparenten, binären Daten, die zwischen einem Dienst und seinem Consumer ausgetauscht werden. Damit diese Typen in XML-Text passen, werden sie in der Regel mit Base64 codiert.  
   
- In einer Base64-codierten Zeichenfolge stellt jedes Zeichen 6 Bits der ursprünglichen 8-Bit-Daten dar. Das ergibt ein Codierung-Mehraufwand-Verhältnis von 4:3 für Base64, wobei üblicherweise bei der Konvertierung hinzugefügte zusätzliche Formatierungszeichen (Wagenrücklauf/Zeilenvorschub) nicht berücksichtigt werden. Während die Bedeutung der Unterschiede zwischen XML und binären Codierungen normalerweise vom Szenario abhängen, ist die Größenzunahme von über 33&#160;% beim Übertragen einer 500-MB-Nutzlast in der Regel nicht akzeptabel.  
+ In einer Base64-codierten Zeichenfolge stellt jedes Zeichen 6 Bits der ursprünglichen 8-Bit-Daten dar. Das ergibt ein Codierung-Mehraufwand-Verhältnis von 4:3 für Base64, wobei üblicherweise bei der Konvertierung hinzugefügte zusätzliche Formatierungszeichen (Wagenrücklauf/Zeilenvorschub) nicht berücksichtigt werden. Während die Bedeutung der Unterschiede zwischen XML und binären Codierungen normalerweise vom Szenario abhängen, ist die Größenzunahme von über 33&amp;#160;% beim Übertragen einer 500-MB-Nutzlast in der Regel nicht akzeptabel.  
   
  Um diesen Codierungsaufwand zu verhindern, ermöglicht der MTOM-Standard (Message Transmission Optimization Mechanism) eine Externalisierung großer Datenelement, die in einer Nachrichten enthalten sind. Dabei können die Elemente als Binärdaten ohne spezielle Codierung mit der Nachricht gesendet werden. Bei MTOM werden Nachrichten auf ähnliche Weise auf Simple Mail Transfer Protocol (SMTP) e-Mail-Nachrichten mit Anlagen oder eingebetteten Inhalten (Bilder und anderer eingebetteter Inhalt) ausgetauscht. MTOM-Nachrichten werden mit der Stammteil die eigentliche SOAP-Nachricht als Multipart/related MIME-Sequenzen verpackt.  
   
@@ -67,7 +67,7 @@ Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfra
   
 |Bindungselement des Encoders|Beschreibung|  
 |-----------------------------|-----------------|  
-|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Der Textnachrichtencoder ist der Standardencoder für alle HTTP-basierten Bindungen. Er empfiehlt sich für alle benutzerdefinierten Bindungen, bei denen besonders auf Interoperabilität Wert gelegt wird. Dieser Encoder liest und schreibt auf SOAP 1.1/SOAP 1.2 basierende Standardtextnachrichten ohne spezielle Behandlung von binären Daten. Wenn <xref:System.ServiceModel.Channels.MessageVersion> einer Nachricht nicht auf `None` festgelegt ist, wird der Wrapper des SOAP-Umschlags in der Ausgabe weggelassen und nur der Inhalt des Nachrichtentextes wird serialisiert.|  
+|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|Der Textnachrichtencoder ist der Standardencoder für alle HTTP-basierten Bindungen. Er empfiehlt sich für alle benutzerdefinierten Bindungen, bei denen besonders auf Interoperabilität Wert gelegt wird. Dieser Encoder liest und schreibt auf SOAP 1.1/SOAP 1.2 basierende Standardtextnachrichten ohne spezielle Behandlung von binären Daten. Wenn die <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> Eigenschaft einer Nachricht nastaven NA hodnotu <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>, SOAP-Umschlag-Wrappers ist in der Ausgabe weggelassen und nur der Inhalt des Nachrichtentextes wird serialisiert.|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|Der MTOM-Nachrichtenencoder ist ein Textencoder, der eine spezielle Behandlung binärer Daten implementiert und nicht standardmäßig in den Standardbindungen verwendet wird, da es sich um ein extrem fallabhängiges Hilfsprogramm für Optimierungen handelt. Wenn die Nachricht binäre Daten enthält, die einen Schwellenwert überschreiten, nach dem die MTOM-Codierung vorteilhafter ist, werden die Daten in einen MIME-Teil externalisiert, der auf den Nachrichtenumschlag folgt. Siehe "Aktivieren von MTOM" weiten unten in diesem Abschnitt.|  
 |<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|Der binäre Nachrichtenencoder ist der Standardencoder für Net * Bindungen und die richtige Wahl, wenn beide Kommunikationspartner auf WCF basieren. Der binäre Nachrichtenencoder verwendet das .NET Binary XML-Format. Dieses Format ist eine spezielle Binärdarstellung für XML-Informationssets (Infosets) von Microsoft, die in der Regel kompakter ist als die entsprechende XML 1.0-Darstellung und binäre Daten als Bytestream codiert.|  
   
@@ -92,7 +92,7 @@ Windows Communication Foundation (WCF) ist eine XML-basierte Kommunikationsinfra
   
  Wie bereits erwähnt, hängt die Entscheidung für die MTOM-Codierung vom zu sendenden Datenvolumen ab. Da MTOM auf der Bindungsebene aktiviert wird, wirkt sich diese Codierung auf alle Vorgänge eines bestimmten Endpunkts aus.  
   
- Der MTOM-Encoder gibt unabhängig davon, ob binäre Daten letztendlich externalisiert werden, immer MTOM-codierte MIME-Multipart-Nachrichten aus. Aktivieren Sie deshalb MTOM nur für Endpunkte, die Nachrichten mit über 1&#160;KB binärer Daten austauschen. Außerdem sollten die Dienstverträge, die für die Verwendung mit für MTOM aktivierten Endpunkten möglichst darauf beschränkt sein, dass sie nur Vorgänge zu solchen Datenübertragungen angeben. Die zugehörigen Steuerungsfunktionen sollten sich in einem gesonderten Vertrag befinden. Diese "Nur-MTOM"-Regel gilt nur für Nachrichten, die über einen für MTOM aktivierten Endpunkt gesendet werden. Der MTOM-Encoder kann auch eingehende Nachrichten decodieren und analysieren, die nicht auf MTOM basieren.  
+ Der MTOM-Encoder gibt unabhängig davon, ob binäre Daten letztendlich externalisiert werden, immer MTOM-codierte MIME-Multipart-Nachrichten aus. Aktivieren Sie deshalb MTOM nur für Endpunkte, die Nachrichten mit über 1&amp;#160;KB binärer Daten austauschen. Außerdem sollten die Dienstverträge, die für die Verwendung mit für MTOM aktivierten Endpunkten möglichst darauf beschränkt sein, dass sie nur Vorgänge zu solchen Datenübertragungen angeben. Die zugehörigen Steuerungsfunktionen sollten sich in einem gesonderten Vertrag befinden. Diese "Nur-MTOM"-Regel gilt nur für Nachrichten, die über einen für MTOM aktivierten Endpunkt gesendet werden. Der MTOM-Encoder kann auch eingehende Nachrichten decodieren und analysieren, die nicht auf MTOM basieren.  
   
  Verwendung der MTOM-Encoders entspricht, mit allen anderen WCF-Funktionen. Beachten Sie jedoch, dass diese Regel nicht in allen Fällen gelten kann, wie z. B. bei einer erforderlichen Sitzungsunterstützung.  
   

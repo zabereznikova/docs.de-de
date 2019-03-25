@@ -10,20 +10,19 @@ helpviewer_keywords:
 - Expander control [WPF]
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
-ms.openlocfilehash: ba034dfceb4a42e1f88d15379b482e47a0700b8d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a7dc0d2cc32d387f87221748ab94ac82c2dfc8b0
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371940"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410510"
 ---
 # <a name="expander"></a>Expander
 Ein <xref:System.Windows.Controls.Expander> ermöglicht es einem Benutzer auf einen Header anzeigen und zu erweitern, um weitere Details anzuzeigen oder um einen Abschnitt auf einen Header zu reduzieren.  
   
  Die folgende Abbildung enthält ein Beispiel für dieses Steuerelement in erweitertem Zustand.  
   
- ![Expander-Beispiel](./media/expanderexample.JPG "ExpanderExample")  
-Expander-Steuerelement  
+ ![Expander-Beispiel](./media/expander/expander-control-example.jpg)
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über Expander-Steuerelemente](expander-overview.md)  

@@ -16,33 +16,30 @@ helpviewer_keywords:
 - typography [WPF], text decorations
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
-ms.openlocfilehash: a142604fdb36ec6f85e9411b37077bfffff587d4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 22ff91770786e39e019de307167007548396ab33
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363916"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411329"
 ---
 # <a name="how-to-create-a-text-decoration"></a>Vorgehensweise: Erstellen einer Textdekoration
 Ein <xref:System.Windows.TextDecoration> Objekt ist eine visuelle Verzierung, können Sie Text hinzufügen. Es gibt vier Arten von Textdekorationen: Unterstreichung, Baseline, durchgestrichen und Überstrichen. Das folgende Beispiel zeigt die Speicherorte der Textdekorationen relativ zum Text.  
   
- ![Diagramm der Textergänzungsstellen](./media/textdecoration01.gif "TextDecoration01")  
-Beispiel für Text-Decoration-Typen  
+ ![Diagramm der Text-Decoration-Typen](./media/how-to-create-a-text-decoration/text-decoration-types.gif)  
   
  Erstellen Sie zum Hinzufügen einer Textdekorations Text eine <xref:System.Windows.TextDecoration> Objekt, und ändern Sie seine Eigenschaften. Verwenden der <xref:System.Windows.TextDecoration.Location%2A> Eigenschaft, um anzugeben, wo die Textdekoration angezeigt wird, z. B. unterstrichen. Verwenden der <xref:System.Windows.TextDecoration.Pen%2A> Eigenschaft, um die Darstellung der Textdekoration, z. B. eine durchgehende Füllung oder den Farbverlauf anzugeben. Wenn Sie einen Wert für nicht angeben der <xref:System.Windows.TextDecoration.Pen%2A> die Dekorationen standardmäßig die gleiche Farbe wie der Text-Eigenschaft. Nachdem Sie definiert haben eine <xref:System.Windows.TextDecoration> Objekt, das Hinzufügen der <xref:System.Windows.TextDecorations> Auflistung mit den gewünschten Text-Objekt.  
   
  Das folgende Beispiel zeigt einen Text-Decoration, die mit einem linearen Farbverlaufspinsel und ein gestrichelten Stift formatiert wurde.  
   
- ![Textergänzung mit linearer farbverlaufsunterstreichung](./media/textdecoration02.png "TextDecoration02")  
-Beispiel für eine Unterstreichung formatiert mit einem linearen Farbverlauf Pinsel und gestrichelten Stift  
+ ![Textergänzung mit linearer Farbverlaufsunterstreichung](./media/how-to-create-a-text-decoration/text-decoration-gradient.png)  
   
  Die <xref:System.Windows.Documents.Hyperlink> Objekt ist ein fortlaufendes Inhaltselement, das Ihnen das Hosten von links im fortlaufenden Inhalt ermöglicht. In der Standardeinstellung <xref:System.Windows.Documents.Hyperlink> verwendet eine <xref:System.Windows.TextDecoration> Objekt, das eine Unterstreichung anzuzeigen. <xref:System.Windows.TextDecoration> Objekte können ressourcenintensiv sein, zu instanziieren, insbesondere wenn Sie viele <xref:System.Windows.Documents.Hyperlink> Objekte. Wenn Sie umfassenden Gebrauch von machen <xref:System.Windows.Documents.Hyperlink> Elemente, Sie möchten könnten eine Unterstreichung nur, wenn ein Ereignis auslösen, z. B. die <xref:System.Windows.ContentElement.MouseEnter> Ereignis.  
   
  Im folgenden Beispiel wird die Unterstreichung für den Link "Meine MSN" dynamische – es nur angezeigt, wenn die <xref:System.Windows.ContentElement.MouseEnter> Ereignis wird ausgelöst.  
   
- ![Links mit TextDecorations](./media/textdecoration03.png "TextDecoration03")  
-Links mit TextDecorations definiert  
-  
+ ![Links mit TextDecorations](./media/how-to-create-a-text-decoration/text-decorations-hyperlinks.png)  
+   
  Weitere Informationen finden Sie unter [Specify Whether a Hyperlink is Underlined (Angeben, ob ein Link unterstrichen wird)](how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
 ## <a name="example"></a>Beispiel  

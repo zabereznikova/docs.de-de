@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 297d7ea0fbbd5b066539e6f2341b29390b3d38b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738351"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409470"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Bewährte Methoden: Datenvertragsversionsverwaltung
 In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenverträgen aufgeführt, die sich im Laufe der Zeit auf einfache Weise entwickeln können. Weitere Informationen zu Datenverträgen finden Sie unter den Themen in [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -70,7 +70,7 @@ In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenvert
   
     2.  Wenn der Standardwert `null` bzw. "0" für den Member nicht akzeptabel ist, muss mithilfe von <xref:System.Runtime.Serialization.OnDeserializingAttribute> eine Rückrufmethode bereitgestellt werden, um einen geeigneten Standardwert anzugeben, falls der Member im eingehenden Stream nicht enthalten ist. Weitere Informationen zu den Rückruf, finden Sie unter [versionstolerante Serialisierungsrückrufe](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md).  
   
-    3.  Sie sollten die `Order`-Eigenschaft des `DataMemberAttribute` verwenden, um sicherzustellen, dass alle neu hinzugefügten Datenmember nach den vorhandenen Datenmembern stehen. Die empfohlene Methode hierfür lautet wie folgt aus: Keine Datenmember in der ersten Version des Datenvertrags müssen ihre `Order` Eigenschaftensatz. Sie sollten für alle Datenmember, die Sie in Version 2 des Datenvertrags hinzugefügt haben, die `Order`-Eigenschaft auf "2" festlegen. Ebenso sollten Sie die `Order`-Eigenschaft für in Version 3 des Datenvertrags hinzugefügte Datenmember auf "3" festlegen usw. Es ist zulässig, mehrere Datenmember auf die gleiche `Order`-Nummer festzulegen.  
+    3.  Die <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType> -Eigenschaft sollte verwendet werden, um sicherzustellen, dass alle neu hinzugefügten Datenmember nach den vorhandenen Datenmembern angezeigt. Die empfohlene Methode hierfür lautet wie folgt aus: Keine Datenmember in der ersten Version des Datenvertrags müssen ihre `Order` Eigenschaftensatz. Sie sollten für alle Datenmember, die Sie in Version 2 des Datenvertrags hinzugefügt haben, die `Order`-Eigenschaft auf "2" festlegen. Ebenso sollten Sie die `Order`-Eigenschaft für in Version 3 des Datenvertrags hinzugefügte Datenmember auf "3" festlegen usw. Es ist zulässig, mehrere Datenmember auf die gleiche `Order`-Nummer festzulegen.  
   
 9. Entfernen Sie Datenmember in höheren Versionen auch dann nicht, wenn die <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>-Eigenschaft in den vorherigen Versionen auf der Standardeinstellung `false` belassen wurde.  
   
@@ -82,7 +82,7 @@ In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenvert
   
      Wenn zum Beispiel die Version 1 eines Person-Datenvertrags nur den Name-Datenmember enthält, sollten Sie keine Version 2a des Vertrags erstellen, indem Sie nur den Age-Member hinzufügen, und keine Version 2b, indem Sie nur den Address-Member hinzufügen. Der Übergang von 2a zu 2b würde das Entfernen von "Age" und das Hinzufügen von "Address" umfassen. Ein Übergang in der anderen Richtung würde hingegen das Entfernen von "Address" und das Hinzufügen von "Age" umfassen. Das Entfernen von Membern ist im Rahmen dieser Richtlinien nicht zulässig.  
   
-13. Sie sollten generell keine neuen Untertypen vorhandener Datenvertragstypen in einer neuen Version Ihrer Anwendung erstellen. Außerdem sollten Sie keine neuen Datenverträge erstellen, die anstelle von Datenmembern verwendet werden, die als Objekt oder als Schnittstellentypen deklariert sind. Das Erstellen dieser neuen Klassen ist nur zulässig, wenn Sie wissen, dass Sie die neuen Typen der Liste der bekannten Typen aller Instanzen der alten Anwendung hinzufügen können. Es kann zum Beispiel sein, dass Sie in Version 1 Ihrer Anwendung den LibraryItem-Datenvertragstyp mit den Datenvertrags-Untertypen "Buch" und "Zeitung" verwenden. "LibraryItem" würde dann über eine Liste der bekannten Typen verfügen, die "Buch" und "Zeitung" enthält. Angenommen, Sie fügen in Version 2 den Typ "Zeitschrift" hinzu, bei dem es sich um einen Untertyp von "LibraryItem" handelt. Wenn Sie eine Zeitschrift-Instanz von Version&#160;2 an Version&#160;1 senden, ist der Zeitschrift-Datenvertrag nicht in der Liste der bekannten Typen enthalten, und es wird eine Ausnahme ausgelöst.  
+13. Sie sollten generell keine neuen Untertypen vorhandener Datenvertragstypen in einer neuen Version Ihrer Anwendung erstellen. Außerdem sollten Sie keine neuen Datenverträge erstellen, die anstelle von Datenmembern verwendet werden, die als Objekt oder als Schnittstellentypen deklariert sind. Das Erstellen dieser neuen Klassen ist nur zulässig, wenn Sie wissen, dass Sie die neuen Typen der Liste der bekannten Typen aller Instanzen der alten Anwendung hinzufügen können. Es kann zum Beispiel sein, dass Sie in Version 1 Ihrer Anwendung den LibraryItem-Datenvertragstyp mit den Datenvertrags-Untertypen "Buch" und "Zeitung" verwenden. "LibraryItem" würde dann über eine Liste der bekannten Typen verfügen, die "Buch" und "Zeitung" enthält. Angenommen, Sie fügen in Version 2 den Typ "Zeitschrift" hinzu, bei dem es sich um einen Untertyp von "LibraryItem" handelt. Wenn Sie eine Zeitschrift-Instanz von Version&amp;#160;2 an Version&amp;#160;1 senden, ist der Zeitschrift-Datenvertrag nicht in der Liste der bekannten Typen enthalten, und es wird eine Ausnahme ausgelöst.  
   
 14. Sie sollten zwischen Versionen keine Enumerationsmember hinzufügen oder entfernen. Außerdem sollten Sie Enumerationsmember nicht umbenennen, es sei denn, Sie verwenden die Name-Eigenschaft des `EnumMemberAttribute`-Attributs, um ihre Namen im Datenvertragsmodell identisch zu halten.  
   

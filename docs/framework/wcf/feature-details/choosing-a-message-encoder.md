@@ -2,12 +2,12 @@
 title: Auswählen eines Nachrichtenencoders
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
-ms.openlocfilehash: 027c9e460e15b4b038147cd79c04bd082bc3356d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538426"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409483"
 ---
 # <a name="choosing-a-message-encoder"></a>Auswählen eines Nachrichtenencoders
 In diesem Thema wird erläutert, Kriterien zum Wählen einer der Nachrichtenencoder, die in Windows Communication Foundation (WCF) enthalten sind: Text, Binär und Message Transmission Optimization Mechanism (MTOM).  
@@ -34,10 +34,10 @@ In diesem Thema wird erläutert, Kriterien zum Wählen einer der Nachrichtenenco
 |------------|-----------------|---------------------------------------|  
 |Unterstützte Zeichensätze|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> und <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> unterstützen nur die UTF8- und UTF16-Unicode (*big-Endian-* und *little-Endian-*) Codierungen. Sind andere Codierungen erforderlich (beispielsweise UTF7 oder ASCII), muss ein benutzerdefinierter Encoder verwendet werden. Ein Beispiel für benutzerdefinierte Encoder finden Sie unter [Custom Message Encoder](https://go.microsoft.com/fwlink/?LinkId=119857).|Text|  
 |Inspektion|Inspektion ist die Fähigkeit, Nachrichten während der Übertragung zu untersuchen. Textcodierungem, entweder mit oder ohne die Verwendung von SOAP, ermöglichen die Inspektion und Analyse von Nachrichten mit vielen Anwendungen, ohne spezielle Tools zu verwenden. Beachten Sie, dass sich die Verwendung der Übertragungssicherheit, entweder auf Nachrichten- oder auf Transportebene, auf die Inspektionsfähigkeit der Nachrichten auswirkt. Vertraulichkeit schützt eine Nachricht davor, untersucht zu werden, und Integrität schützt eine Nachricht davor, geändert zu werden.|Text|  
-|Zuverlässigkeit|Zuverlässigkeit ist die Widerstandsfähigkeit eines Encoders gegen Übertragungsfehler. Zuverlässigkeit kann auch auf Nachrichten-, Transport- oder Anwendungsebene bereitgestellt werden. Allen die standard-WCF-Encoder wird davon ausgegangen, dass eine andere Ebene Zuverlässigkeit bereitstellt. Der Encoder hat wenige Möglichkeiten, nach einem Übertragungsfehler eine Wiederherstellung durchzuführen.|Keine|  
+|Zuverlässigkeit|Zuverlässigkeit ist die Widerstandsfähigkeit eines Encoders gegen Übertragungsfehler. Zuverlässigkeit kann auch auf Nachrichten-, Transport- oder Anwendungsebene bereitgestellt werden. Allen die standard-WCF-Encoder wird davon ausgegangen, dass eine andere Ebene Zuverlässigkeit bereitstellt. Der Encoder hat wenige Möglichkeiten, nach einem Übertragungsfehler eine Wiederherstellung durchzuführen.|Keiner|  
 |Einfachheit|Einfachheit stellt die Leichtigkeit dar, mit der Sie Encoder und Decoder für eine Codierungsspezifikation erstellen können. Textcodierungen sind besonders vorteilhaft für die Einfachheit. Die POX-Textcodierung hat den zusätzlichen Vorteil, dass keine Unterstützung der SOAP-Verarbeitung erforderlich ist.|Text (POX)|  
 |Größe|Die Codierung bestimmt den Mehraufwand für den Inhalt. Die Größe der codierten Nachrichten bezieht sich direkt auf den maximalen Durchsatz von Dienstvorgängen. Binäre Codierungen sind im Allgemeinen kompakter als Textcodierungen. Wenn die Nachrichtengröße ein Maximum erreicht hat, sollten Sie auch eine Komprimierung des Nachrichteninhalts während der Codierung in Erwägung ziehen. Durch die Komprimierung entstehen jedoch höhere Verarbeitungskosten für den Absender und den Empfänger der Nachricht.|Binär|  
-|Streaming|Streaming ermöglicht Anwendungen, mit der Verarbeitung einer Nachricht zu beginnen, bevor die ganze Nachricht angekommen ist. Wenn Sie das Streaming effektiv anwenden möchten, ist es erforderlich, dass die wichtigen Daten einer Nachricht am Anfang der Nachricht zur Verfügung stehen, sodass die empfangende Anwendung nicht warten muss, bis die Nachricht ankommt. Außerdem müssen Anwendungen, die eine Übertragung per Stream nutzen, die Daten in der Nachricht inkrementell organisieren, damit der Inhalt keine Weiterleitungsabhängigkeiten aufweist. In vielen Fällen müssen Sie einen Kompromiss schließen zwischen dem Streaminginhalt und der kleinstmöglichen Übertragungsgröße dieses Inhalts.|Keine|  
+|Streaming|Streaming ermöglicht Anwendungen, mit der Verarbeitung einer Nachricht zu beginnen, bevor die ganze Nachricht angekommen ist. Wenn Sie das Streaming effektiv anwenden möchten, ist es erforderlich, dass die wichtigen Daten einer Nachricht am Anfang der Nachricht zur Verfügung stehen, sodass die empfangende Anwendung nicht warten muss, bis die Nachricht ankommt. Außerdem müssen Anwendungen, die eine Übertragung per Stream nutzen, die Daten in der Nachricht inkrementell organisieren, damit der Inhalt keine Weiterleitungsabhängigkeiten aufweist. In vielen Fällen müssen Sie einen Kompromiss schließen zwischen dem Streaminginhalt und der kleinstmöglichen Übertragungsgröße dieses Inhalts.|Keiner|  
 |Unterstützung von Drittanbietertools|Unterstützungsbereiche für eine Codierung umfassen Entwicklung und Diagnose. Drittanbieter haben viel investiert in Bibliotheken und Toolkits zur Verarbeitung von Nachrichten, die im POX-Format codiert sind.|Text (POX)|  
 |Interoperabilität|Dieser Faktor bezieht sich auf die Fähigkeit von einem WCF-Encoder für die Zusammenarbeit mit nicht-WCF-Dienste.|Text<br /><br /> MTOM (teilweise)|  
   
@@ -65,9 +65,9 @@ Die IgnoreWhitespace-Einstellung wird ignoriert.
 
 Ab WCF 4.5 bietet der binäre WCF-Encoder Komprimierungsunterstützung. Dies ermöglicht es Ihnen, den gzip/deflate-Algorithmus zum Senden komprimierter Nachrichten von einem WCF-Client zu senden und mit komprimierten Nachrichten von einem selbst gehosteten WCF-Dienst zu antworten. Diese Funktion ermöglicht die Komprimierung bei HTTP- und TCP-Transporten. Ein IIS-gehosteter WCF-Dienst kann immer durch Konfigurieren des IIS-Hostservers zum Senden von komprimierten Antworten befähigt werden. Der Komprimierungstyp wird mit der <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A?displayProperty=nameWithType>-Eigenschaft konfiguriert. Diese Eigenschaft wird auf einen der <xref:System.ServiceModel.Channels.CompressionFormat?displayProperty=nameWithType>-Enumerationswerte festgelegt:
 
-* `CompressionFormat.Deflate`
-* `CompressionFormat.GZip`
-* `CompressionFormat.None`
+- <xref:System.ServiceModel.Channels.CompressionFormat.Deflate>
+- <xref:System.ServiceModel.Channels.CompressionFormat.GZip>
+- <xref:System.ServiceModel.Channels.CompressionFormat.None>
   
 Da diese Eigenschaft nur auf dem BinaryMessageEncodingBindingElement verfügbar gemacht wird, müssen Sie zum Erstellen einer benutzerdefinierten Bindung wie folgt zur Verwendung dieses Features:
 

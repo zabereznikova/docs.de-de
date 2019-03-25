@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: 83b55ca42a3cebb6ceb2aec128202f14dc35da0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5fece86dca524cb3f94f64dcb98361a93bf84a3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657557"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410926"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Vorgehensweise: Sichern eines Diensts mit Windows-Anmeldeinformationen
 In diesem Thema veranschaulicht, wie transportsicherheit für einen Windows Communication Foundation (WCF)-Dienst zu ermöglichen, sich in einer Windows-Domäne befindet und von Clients in der gleichen Domäne aufgerufen wird. Weitere Informationen zu diesem Szenario finden Sie unter [Transportsicherheit mit Windows-Authentifizierung](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Eine beispielanwendung finden Sie unter den [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) Beispiel.  
@@ -52,7 +52,7 @@ In diesem Thema veranschaulicht, wie transportsicherheit für einen Windows Comm
   
 2.  Erstellen Sie eine <xref:System.Type>-Variable mit der Bezeichnung `contractType`, und weisen Sie ihr den Typ der Schnittstelle (`ICalculator`) zu. Verwenden Sie bei der Verwendung von Visual Basic die `GetType` Operator ist; bei Verwendung von c#, verwenden die `typeof` Schlüsselwort.  
   
-3.  Erstellen Sie eine zweite `Type`-Variable mit der Bezeichnung `serviceType`, und weisen Sie ihr den Typ des implementierten Vertrags (`Calculator`) zu.  
+3.  Erstellen Sie eine zweite <xref:System.Type>-Variable mit der Bezeichnung `serviceType`, und weisen Sie ihr den Typ des implementierten Vertrags (`Calculator`) zu.  
   
 4.  Erstellen Sie eine Instanz der <xref:System.Uri>-Klasse mit der Bezeichnung `baseAddress` mit der Basisadresse des Dienstes. Die Basisadresse muss ein Schema haben, das mit dem Transport übereinstimmt. In diesem Fall das Transportschema HTTP, und die Adresse enthält den speziellen Uniform Resource Identifier (URI) "Localhost" und einen Port-Nummer (8036) sowie eine basisendpunktadresse ("ServiceModelSamples /): `http://localhost:8036/serviceModelSamples/`.  
   
@@ -102,11 +102,11 @@ In diesem Thema veranschaulicht, wie transportsicherheit für einen Windows Comm
   
 1.  Hinzufügen einer [ \<WsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) Element, das [ \<Bindungen >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) -Elementabschnitt der Konfigurationsdatei.  
   
-2.  Fügen Sie dem <`binding`>-Element ein <`WSHttpBinding`>-Element hinzu, und legen Sie das `configurationName`-Attribut auf einen für Ihre Anwendung geeigneten Wert fest.  
+2.  Hinzufügen einer <`binding`>-Element der <`WSHttpBinding`> Element, und legen die `configurationName` -Attribut auf einen für Ihre Anwendung geeigneten Wert.  
   
-3.  Fügen Sie ein <`security`>-Element hinzu, und legen Sie das `mode`-Attribut auf "Message" fest.  
+3.  Hinzufügen einer <`security`> Element, und legen die `mode` -Attribut auf die Nachricht.  
   
-4.  Fügen Sie ein <`message`>-Element hinzu, und legen Sie das `clientCredentialType`-Attribut auf "Windows" fest.  
+4.  Hinzufügen einer <`message`> Element, und legen die `clientCredentialType` -Attribut auf Windows.  
   
 5.  Ersetzen Sie in der Konfigurationsdatei des Diensts den `<bindings>`-Abschnitt durch den folgenden Code. Wenn Sie nicht bereits über eine Dienstkonfigurationsdatei verfügen, finden Sie unter [Verwendung von Bindungen zum Konfigurieren von Diensten und Clients](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md).  
   
@@ -123,7 +123,7 @@ In diesem Thema veranschaulicht, wie transportsicherheit für einen Windows Comm
     ```  
   
 ### <a name="using-the-binding-in-a-client"></a>Verwenden der Bindung in einem Client  
- In dieser Prozedur wird die Generierung zweier Dateien veranschaulicht: einem Proxy, der mit dem Dienst kommuniziert, und einer Konfigurationsdatei. Darüber hinaus werden auch Änderungen am Clientprogramm beschrieben &#8211; der dritten Datei, die auf dem Client verwendet wird.  
+ In dieser Prozedur wird die Generierung zweier Dateien veranschaulicht: einem Proxy, der mit dem Dienst kommuniziert, und einer Konfigurationsdatei. Darüber hinaus werden auch Änderungen am Clientprogramm beschrieben &amp;#8211; der dritten Datei, die auf dem Client verwendet wird.  
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>So verwenden Sie eine Bindung für einen Client mit Konfiguration  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Button controls [WPF], creating with automatic layout
 - automatic layout [WPF], creating buttons
 ms.assetid: 96c206d0-9e77-4784-9d2d-5045aed2021c
-ms.openlocfilehash: 185bf71d4105d10a2bb85e6a0abd9da63c7d26f0
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 8eb1e93dd87c210812c9b7758c744a616ef2d862
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185453"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409782"
 ---
 # <a name="how-to-use-automatic-layout-to-create-a-button"></a>Vorgehensweise: Verwenden des automatischen Layouts zum Erstellen einer Schaltfläche
 Dieses Beispiel beschreibt, wie der automatische Layoutansatz zum Erstellen einer Schaltfläche in einer lokalisierbaren Anwendung verwendet wird.  
@@ -25,10 +25,9 @@ Die folgenden beiden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xa
   
 [!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
- Die folgende Grafik zeigt die Ausgabe der Codebeispiele.  
+ Die folgende Abbildung zeigt die Ausgabe der Codebeispiele mit fester Größe automatisch Schaltflächen:
   
- ![Die gleiche Schaltfläche mit Text in unterschiedlichen Sprachen](./media/globalizationbutton.png "GlobalizationButton")  
-Schaltfläche zur automatischen Größenanpassung  
+ ![Die gleiche Schaltfläche mit Text in unterschiedlichen Sprachen](./media/use-automatic-layout-overview/auto-resizable-button.png)  
   
 ## <a name="see-also"></a>Siehe auch
 

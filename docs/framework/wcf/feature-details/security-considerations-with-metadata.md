@@ -2,12 +2,12 @@
 title: Sicherheitsüberlegungen für Metadaten
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: fa1a79a0be6682a8459043955a7956f6f8444bf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e1ad9f3c7d2a77ec6237bf1fc12c0d1a67181ad
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585564"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411912"
 ---
 # <a name="security-considerations-with-metadata"></a>Sicherheitsüberlegungen für Metadaten
 Wenn Sie die Metadaten-Features in Windows Communication Foundation (WCF) verwenden, sollten Sie die Sicherheitsaspekte bei der Veröffentlichung, abrufen und verwenden die Metadaten des Diensts.  
@@ -28,7 +28,7 @@ Wenn Sie die Metadaten-Features in Windows Communication Foundation (WCF) verwen
 ## <a name="using-safe-techniques-for-processing-metadata"></a>Verwenden sicherer Techniken zum Verarbeiten von Metadaten  
  Dienstmetadaten werden häufig von einem Dienst über ein Netzwerk abgerufen. Hierzu werden standardisierte Protokolle wie WS-MetadataExchange (MEX) verwendet. Viele Metadatenformate enthalten Verweismechanismen, um auf weitere Metadaten zu verweisen. Verweise in WSDL (Web Services Description Language)-, XML-Schema- und MEX-Dokumenten werden vom <xref:System.ServiceModel.Description.MetadataExchangeClient>-Typ automatisch verarbeitet. Die Größe des aus den abgerufenen Metadaten erstellten <xref:System.ServiceModel.Description.MetadataSet>-Objekts verhält sich direkt proportional zum <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A>-Wert für die verwendete <xref:System.ServiceModel.Description.MetadataExchangeClient>-Instanz sowie zum `MaxReceivedMessageSize`-Wert für die von dieser <xref:System.ServiceModel.Description.MetadataExchangeClient>-Instanz verwendeten Bindung. Legen Sie geeignete Werte für diese Kontingente fest.  
   
- In WCF wird Dienstmetadaten als XML verarbeitet. Beim Verarbeiten von XML-Dokumenten schützen sich die Anwendungen selbst vor bösartigen XML-Strukturen. Verwenden der `XmlDictionaryReader` mit geeigneten Kontingenten, beim Verarbeiten von XML, und legen Sie außerdem die <xref:System.Xml.XmlTextReader.DtdProcessing%2A> Eigenschaft `Prohibit`.  
+ In WCF wird Dienstmetadaten als XML verarbeitet. Beim Verarbeiten von XML-Dokumenten schützen sich die Anwendungen selbst vor bösartigen XML-Strukturen. Verwenden der <xref:System.Xml.XmlDictionaryReader> mit geeigneten Kontingenten, beim Verarbeiten von XML, und legen Sie außerdem die <xref:System.Xml.XmlTextReader.DtdProcessing%2A> Eigenschaft <xref:System.Xml.DtdProcessing.Prohibit>.  
   
  Das Metadatensystem in WCF ist erweiterbar und Metadatenerweiterungen können in der Anwendungskonfigurationsdatei registriert werden (siehe [Erweitern des Metadatensystems](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)). Von Metadatenerweiterungen kann beliebiger Code ausgeführt werden, weshalb die Anwendungskonfigurationsdatei mithilfe geeigneter Zugriffssteuerungslisten (Access Control Lists, ACLs) geschützt werden muss und ausschließlich vertrauenswürdige Implementierungen von Metadatenerweiterungen registriert werden dürfen.  
   

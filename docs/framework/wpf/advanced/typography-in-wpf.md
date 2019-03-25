@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 3afb6a9bd62083704a3147df9d1cc5477b4f5921
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7378ddc8ada198beb005bc8682e6cb131def4ceb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125628"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412135"
 ---
 # <a name="typography-in-wpf"></a>Typografie in WPF
 In diesem Thema werden die wichtigsten typografischen Funktionen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vorgestellt. Diese Funktionen umfassen die verbesserte Qualität und Leistung beim Textrendering, die Unterstützung von [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]-Typografie, einen verbesserten internationalen Text, eine verbesserte Unterstützung für Schriftarten sowie neue Text-Anwendungsprogrammierschnittstellen (APIs).  
@@ -121,7 +121,7 @@ Text mit ClearType-Antialiasing auf der y-Achse
  Weitere Informationen finden Sie unter [Dokumente in WPF](documents-in-wpf.md).  
   
 ### <a name="lightweight-text-drawing"></a>Einfache Textzeichnung  
- Sie können Text direkt zu zeichnen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Objekte mithilfe der <xref:System.Windows.Media.DrawingContext.DrawText%2A> Methode der <xref:System.Windows.Media.DrawingContext> Objekt. Um diese Methode verwenden, erstellen Sie eine <xref:System.Windows.Media.FormattedText> Objekt. Dieses Objekt ermöglicht das Zeichnen von mehrzeiligem Text, in dem jedes Zeichen einzeln formatiert werden kann. Die Funktionalität der <xref:System.Windows.Media.FormattedText> Objekt beinhaltet einen Großteil der Funktionalität der DrawText-Flags der Win32-API. Darüber hinaus die <xref:System.Windows.Media.FormattedText> Objekt enthält Funktionen wie Unterstützung von Auslassungszeichen, in dem ein Auslassungszeichen angezeigt wird, wenn der Text seine Grenze überschreitet. Das folgende Beispiel zeigt Text auf den verschiedene Formatierungen angewendet wurden, wie z.B. einen linearen Farbverlauf auf dem zweiten und dritten Wort.  
+ Sie können Text direkt zu zeichnen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Objekte mithilfe der <xref:System.Windows.Media.DrawingContext.DrawText%2A> Methode der <xref:System.Windows.Media.DrawingContext> Objekt. Um diese Methode verwenden, erstellen Sie eine <xref:System.Windows.Media.FormattedText> Objekt. Dieses Objekt ermöglicht das Zeichnen von mehrzeiligem Text, in dem jedes Zeichen einzeln formatiert werden kann. Die Funktionalität der <xref:System.Windows.Media.FormattedText> Objekt beinhaltet einen Großteil der Funktionalität der DrawText-Flags in der Windows-API. Darüber hinaus die <xref:System.Windows.Media.FormattedText> Objekt enthält Funktionen wie Unterstützung von Auslassungszeichen, in dem ein Auslassungszeichen angezeigt wird, wenn der Text seine Grenze überschreitet. Das folgende Beispiel zeigt Text auf den verschiedene Formatierungen angewendet wurden, wie z.B. einen linearen Farbverlauf auf dem zweiten und dritten Wort.  
   
  ![Mit dem FormattedText-Objekt angezeigter Text](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   

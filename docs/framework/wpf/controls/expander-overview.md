@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369928"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409457"
 ---
 # <a name="expander-overview"></a>Übersicht über Expander-Steuerelemente
 Ein <xref:System.Windows.Controls.Expander> -Steuerelement bietet eine Möglichkeit zum Bereitstellen von Inhalt in einem erweiterbaren Bereich, der einem Fenster ähnelt und einen Header enthält.  
@@ -45,7 +45,7 @@ Ein <xref:System.Windows.Controls.Expander> -Steuerelement bietet eine Möglichk
   
  **Expander-Steuerelement in einem ScrollViewer**  
   
- ![Expander mit einer ScrollBar](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![Screenshot mit einem Expander mit ScrollBar.](./media/expander-overview/expander-scrollbar-control.jpg)  
   
  Beim Platzieren ein <xref:System.Windows.Controls.Expander> steuern, eine <xref:System.Windows.Controls.ScrollViewer>, legen die <xref:System.Windows.Controls.ScrollViewer> -Dimensionseigenschaft, der die Richtung, in denen entspricht der <xref:System.Windows.Controls.Expander> Inhalt wird geöffnet, auf die Größe des der <xref:System.Windows.Controls.Expander> Inhaltsbereich. Wenn Sie festlegen, z. B. die <xref:System.Windows.Controls.Expander.ExpandDirection%2A> Eigenschaft der <xref:System.Windows.Controls.Expander> zu <xref:System.Windows.Controls.ExpandDirection.Down> (der Inhaltsbereich wird nach unten), Festlegen der <xref:System.Windows.FrameworkElement.Height%2A> Eigenschaft der <xref:System.Windows.Controls.ScrollViewer> Steuerelement, die für den Inhaltsbereich erforderliche Höhe. Wenn Sie die Höhendimension stattdessen für den Inhalt selbst festlegen <xref:System.Windows.Controls.ScrollViewer> erkennt diese Einstellung nicht und ist daher kein bildlauffähiger Inhalt bereitgestellt.  
   

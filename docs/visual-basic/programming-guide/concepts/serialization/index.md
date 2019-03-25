@@ -9,7 +9,7 @@ Serialisierung ist der Prozess der Konvertierung eines Objekts in einen Bytestre
 ## <a name="how-serialization-works"></a>Funktionsweise der Serialisierung  
  Diese Abbildung zeigt den gesamten Ablauf der Serialisierung.  
   
- ![Grafik zur Serialisierung](../../../../csharp/programming-guide/concepts/serialization/media/serialization.gif "Serialisierung")  
+![Grafik zur Serialisierung](./media/index/serialization-process.gif)
   
  Das Objekt wird in einen Stream serialisiert, der nicht nur die Daten, sondern auch Informationen über den Typ des Objekts enthält, wie z.B. Version, Kultur und Assemblyname. Aus diesem Stream kann das Objekt in einer Datenbank, einer Datei oder einem Arbeitsspeicher gespeichert werden.  
   

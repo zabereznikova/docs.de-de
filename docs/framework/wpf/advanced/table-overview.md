@@ -9,12 +9,12 @@ helpviewer_keywords:
 - documents [WPF], tables
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
-ms.openlocfilehash: e202fe839de547145c36a5664b62c350f40bfce6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4abb6368946f9dac5fdefd6ca44f3adeed55f78f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379011"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410818"
 ---
 # <a name="table-overview"></a>Übersicht über Tabellen
 <xref:System.Windows.Documents.Table> ist ein Element auf Blockebene, die rasterbasierte Darstellung von Flussdokumentinhalten unterstützt. Die Flexibilität dieses Elements macht es nicht nur sehr hilfreich, sondern auch schwieriger zu verstehen und richtig zu verwenden.  
@@ -72,7 +72,7 @@ ms.locfileid: "57379011"
   
  Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
   
- ![Screenshot: Rendern einer Basistabelle](./media/basictablerrender.png "BasicTablerRender")  
+ ![Screenshot, der zeigt, wie eine einfache Tabelle gerendert wird.](./media/table-overview/basic-table-render-example.png)  
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>Tabellenkapselung  

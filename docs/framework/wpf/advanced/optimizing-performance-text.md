@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: db0738008766343fa19454cac14e75b318663f34
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352770"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409405"
 ---
 # <a name="optimizing-performance-text"></a>Optimieren der Leistung: Text
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet Unterstützung für die Präsentation von Textinhalt durch Verwendung von umfangreichen [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]-Steuerelementen. Im Allgemeinen können Sie das Rendern von Text in drei Ebenen unterteilen:  
@@ -133,8 +133,9 @@ ms.locfileid: "57352770"
 ### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a>Anzeigen der Unterstreichungen von Links nur bei MouseEnter-Ereignissen  
  Ein <xref:System.Windows.TextDecoration> Objekt ist eine visuelle Verzierung, die Sie Text hinzufügen können; sie kann jedoch ressourcenintensiv, instanziieren. Wenn Sie umfassenden Gebrauch von machen <xref:System.Windows.Documents.Hyperlink> Elemente könnten Sie eine Unterstreichung nur, wenn ein Ereignis auslösen, z. B. die <xref:System.Windows.ContentElement.MouseEnter> Ereignis. Weitere Informationen finden Sie unter [Specify Whether a Hyperlink is Underlined (Angeben, ob ein Link unterstrichen wird)](how-to-specify-whether-a-hyperlink-is-underlined.md).  
   
- ![Links mit TextDecorations](./media/textdecoration03.png "TextDecoration03")  
-Link-Anzeige bei MouseEnter-Ereignis  
+  Die folgende Abbildung zeigt, wie das MouseEnter-Ereignis wird ausgelöst, unterstrichenen Links:
+
+  ![Links mit TextDecorations](./media/how-to-specify-whether-a-hyperlink-is-underlined/text-decorations-hyperlinks.png)   
   
  Das folgende Markup-Beispiel zeigt eine <xref:System.Windows.Documents.Hyperlink> mit und ohne Unterstreichung definiert:  
   

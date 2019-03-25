@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 5de30627d6d0e1209b12912437ae3403890f1678
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5e83d13d24a0b17fd886995e552dd0a7e2cf8ff4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828344"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409951"
 ---
 # <a name="connection-strings-and-configuration-files"></a>Verbindungszeichenfolgen und Konfigurationsdateien
 Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu Sicherheitslücken und Wartungsproblemen führen. Unverschlüsselte Verbindungszeichenfolgen, die in den Quellcode einer Anwendung kompiliert wurden, können mit dem Tool [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) angezeigt werden. Hinzu kommt, dass die Anwendung neu kompiliert werden muss, wenn sich die Verbindungszeichenfolge irgendwann einmal ändert. Aus diesen Gründen empfehlen wir, Verbindungszeichenfolgen in einer Anwendungskonfigurationsdatei zu speichern.  
@@ -81,10 +81,10 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|Verbindungszeichenfolge. Wird dem **connectionString**-Attribut zugeordnet.|  
   
 ### <a name="example-listing-all-connection-strings"></a>Beispiel: Auflisten aller Verbindungszeichenfolgen  
- Dieses Beispiel durchläuft die `ConnectionStringSettings`-Auflistung und zeigt im Konsolenfenster die Eigenschaften <xref:System.Configuration.ConnectionStringSettings.Name%2A>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> und <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> an.  
+ Dieses Beispiel durchläuft die <xref:System.Configuration.ConnectionStringSettingsCollection> und zeigt die <xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>, <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>, und <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> Eigenschaften im Konsolenfenster angezeigt.  
   
 > [!NOTE]
->  <legacyBold>System.Configuration.dll</legacyBold> ist nicht in allen Projekttypen enthalten, sodass Sie u. U. einen Verweis einfügen müssen, um die Konfigurationsklassen zu verwenden. Wie die jeweilige Anwendungskonfigurationsdatei heißt und wo sie gespeichert ist, hängt von der Art der Anwendung und dem Hostingprozess ab.  
+>  &lt;legacyBold&gt;System.Configuration.dll&lt;/legacyBold&gt; ist nicht in allen Projekttypen enthalten, sodass Sie u. U. einen Verweis einfügen müssen, um die Konfigurationsklassen zu verwenden. Wie die jeweilige Anwendungskonfigurationsdatei heißt und wo sie gespeichert ist, hängt von der Art der Anwendung und dem Hostingprozess ab.  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
@@ -139,7 +139,7 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
 |<xref:System.Configuration.RsaProtectedConfigurationProvider>|Verwendet zum Verschlüsseln und Entschlüsseln der Daten den RSA-Verschlüsselungsalgorithmus. Der RSA-Algorithmus kann sowohl für die Verschlüsselung mit öffentlichem Schlüssel als auch für digitale Signaturen verwendet werden. Er wird auch als "öffentlicher Schlüssel" oder asymmetrische Verschlüsselung bezeichnet, da bei dieser Art der Verschlüsselung zwei verschiedene Schlüssel eingesetzt werden. Mit dem [ASP.NET IIS-Registrierungstool (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) können Sie die Abschnitte in einer Web.config-Datei verschlüsseln und die Verschlüsselungsschlüssel verwalten. ASP.NET entschlüsselt die Konfigurationsdatei, wenn die Datei verarbeitet wird. Die Identität der ASP.NET-Anwendung muss berechtigt sein, den Verschlüsselungsschlüssel zu lesen, mit dem die verschlüsselten Abschnitte verschlüsselt und entschlüsselt werden.|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|Verwendet zum Verschlüsseln der Konfigurationsabschnitte die Windows-Datenschutz-API (DPAPI). Die DPAPI verwendet die in Windows integrierten Kryptografiedienste, und sie kann für den computerspezifischen oder den benutzerkontospezifischen Schutz konfiguriert werden. Der computerspezifische Schutz bietet sich an, wenn auf demselben Server mehrere Anwendungen vorhanden sind, die Informationen gemeinsam nutzen müssen. Die Verwendung des benutzerkontospezifischen Schutzes empfiehlt sich bei Diensten, die mit einer bestimmten Benutzeridentität, z. B. einer freigegebenen gehosteten Umgebung, ausgeführt werden. Jede Anwendung wird unter einer separaten Identität ausgeführt, was den Zugriff auf Ressourcen, wie z. B. Dateien und Datenbanken, einschränkt.|  
   
- Beide Anbieter bieten eine starke Verschlüsselung der Daten. Wenn Sie aber beabsichtigen, ein und dieselbe verschlüsselte Konfigurationsdatei auf mehreren Servern, z. B. in einer Webfarm, zu verwenden, müssen Sie den `RsaProtectedConfigurationProvider` verwenden, da nur er die Möglichkeit bietet, die zum Verschlüsseln der Daten verwendeten Verschlüsselungsschlüssel zu exportieren und sie auf einem anderen Server zu importieren. Weitere Informationen finden Sie unter [Importieren und Exportieren von RSA-Schlüsselcontainern mit geschützter Konfiguration](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
+ Beide Anbieter bieten eine starke Verschlüsselung der Daten. Wenn Sie aber beabsichtigen, ein und dieselbe verschlüsselte Konfigurationsdatei auf mehreren Servern, z. B. in einer Webfarm, zu verwenden, müssen Sie den <xref:System.Configuration.RsaProtectedConfigurationProvider> verwenden, da nur er die Möglichkeit bietet, die zum Verschlüsseln der Daten verwendeten Verschlüsselungsschlüssel zu exportieren und sie auf einem anderen Server zu importieren. Weitere Informationen finden Sie unter [Importieren und Exportieren von RSA-Schlüsselcontainern mit geschützter Konfiguration](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100)).  
   
 ### <a name="using-the-configuration-classes"></a>Verwenden der Konfigurationsklassen  
  Der <xref:System.Configuration>-Namespace stellt Klassen zum programmgesteuerten Arbeiten mit Konfigurationseinstellungen bereit. Die <xref:System.Configuration.ConfigurationManager>-Klasse ermöglicht den Zugriff auf Computer-, Anwendungs- und Benutzerkonfigurationsdateien. Beim Erstellen einer ASP.NET-Anwendung können Sie die <xref:System.Web.Configuration.WebConfigurationManager>-Klasse verwenden, die dieselbe Funktionalität bietet, Ihnen gleichzeitig aber auch den Zugriff auf Einstellungen erlaubt, die es so nur in ASP.NET-Anwendungen gibt, beispielsweise die Einstellungen in **\<system.web>**.  
@@ -148,7 +148,7 @@ Das Einbetten von Verbindungszeichenfolgen in den Code Ihrer Anwendung kann zu S
 >  Der <xref:System.Security.Cryptography>-Namespace enthält Klassen, die zusätzliche Optionen zum Verschlüsseln und Entschlüsseln von Daten bereitstellen. Verwenden Sie diese Klassen, wenn Sie Kryptografiedienste benötigen, die bei Verwendung der geschützten Konfiguration nicht verfügbar sind. Einige dieser Klassen sind Wrapper für die nicht verwaltete Microsoft CryptoAPI, während es sich bei anderen Klassen um verwaltete Implementierungen handelt. Weitere Informationen finden Sie unter [Kryptografiedienste](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90)).  
   
 ### <a name="appconfig-example"></a>"App.config"-Beispiel  
- In diesem Beispiel wird gezeigt, wie Sie die Verschlüsselung des Abschnitts **connectionStrings** in der Datei **app.config** einer Windows-Anwendung aktivieren und deaktivieren können. In diesem Beispiel übernimmt die Prozedur den Namen der Anwendung, z. B. <legacyBold>MyApplication.exe</legacyBold>, als Argument. Die Datei **app.config** wird dann verschlüsselt und in den Ordner kopiert, der die ausführbare Datei mit dem Namen „MyApplication.exe.config“ enthält.  
+ In diesem Beispiel wird gezeigt, wie Sie die Verschlüsselung des Abschnitts **connectionStrings** in der Datei **app.config** einer Windows-Anwendung aktivieren und deaktivieren können. In diesem Beispiel übernimmt die Prozedur den Namen der Anwendung, z. B. MyApplication.exe, als Argument. Die Datei **app.config** wird dann verschlüsselt und in den Ordner kopiert, der die ausführbare Datei mit dem Namen „MyApplication.exe.config“ enthält.  
   
 > [!NOTE]
 >  Die Verbindungszeichenfolge kann nur auf dem Computer entschlüsselt werden, auf dem sie verschlüsselt wurde.  

@@ -44,8 +44,7 @@ Sie können für die Optionen jeweils den Wert 0 oder 1 einstellen. Nicht vorhan
 
 Ab .NET Framework, Version 2.0, generiert der JIT-Compiler immer Verfolgungsinformationen unabhängig vom Wert für `GenerateTrackingInfo`, aber die `AllowOptimize` Wert immer noch wirkt sich ein. Wenn Sie das native Image mithilfe von [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) ohne Optimierung vorkompilieren, muss bei der Ausführung von „Ngen.exe“ die INI-Datei im Zielordner mit der Einstellung `AllowOptimize=0` vorhanden sein. Wenn Sie eine Assembly ohne Optimierung vorkompiliert haben, müssen Sie den vorkompilierten Code mit NGen.exe entfernen **/ uninstall** Option vor der Ngen.exe erneut ausführen, um den Code in optimierter Form vorzukompilieren. Wenn die INI-Datei nicht im Ordner vorhanden ist, führt die Vorkompilierung standardmäßig Ngen.exe des Codes wie optimiert.
 
-
-  <xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> kontrolliert die Einstellungen für eine Assembly. **DebuggableAttribute** enthält zwei Felder, die steuern, ob der JIT-Compiler eine Optimierung und/oder Verfolgungsinformationen generieren soll. Ab .NET Framework, Version 2.0, generiert der JIT-Compiler immer Verfolgungsinformationen.
+<xref:System.Diagnostics.DebuggableAttribute?displayProperty=nameWithType> kontrolliert die Einstellungen für eine Assembly. **DebuggableAttribute** enthält zwei Felder, die steuern, ob der JIT-Compiler eine Optimierung und/oder Verfolgungsinformationen generieren soll. Ab .NET Framework, Version 2.0, generiert der JIT-Compiler immer Verfolgungsinformationen.
 
 Für eine Verkaufsversion Compiler nicht legen **DebuggableAttribute**. Standardmäßig generiert der JIT-Compiler die höchste Leistung, die am schwersten zu debuggen. Durch Aktivieren der JIT-Verfolgung wird die Leistung geringfügig, durch Deaktivieren der Optimierung erheblich verschlechtert.
 

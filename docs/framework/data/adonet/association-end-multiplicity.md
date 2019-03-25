@@ -2,12 +2,12 @@
 title: Multiplizität des Zuordnungsendes
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
-ms.openlocfilehash: 151b15a6df021a25f6c3ecea00af147c6b7196ff
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 183bbafaf1de3adf8719c7ee562be3513832ef10
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185674"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412096"
 ---
 # <a name="association-end-multiplicity"></a>Multiplizität des Zuordnungsendes
 *Zuordnungsendes* definiert die Anzahl der [Entitätstyp](../../../../docs/framework/data/adonet/entity-type.md) -Instanzen, die an einem Ende einer [Zuordnung](../../../../docs/framework/data/adonet/association-type.md).  
@@ -25,7 +25,7 @@ ms.locfileid: "58185674"
 ## <a name="example"></a>Beispiel  
  Die unten stehende Abbildung zeigt ein konzeptionelles Modell mit zwei Zuordnungen: `PublishedBy` und `WrittenBy`. Die Zuordnungsenden für die `PublishedBy`-Zuordnung sind die Entitätstypen `Book` und `Publisher`. Die Multiplizität des der `Publisher` -Endes ist eins (1), und die Multiplizität der `Book` End kann viele (\*).  
   
- ![Beispielmodell](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![Beispielmodell mit drei Entitätstypen](./media/association-end-multiplicity/example-model-three-entity-types.gif)  
   
  Das ADO.NET Entity Framework verwendet eine domänenspezifische Sprache (DSL) Bezeichnung konzeptionelle Schemadefinitionssprache ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)), konzeptionelle Modelle zu definieren. Die folgende CSDL definiert die in der Abbildung oben gezeigte `PublishedBy`-Zuordnung:  
   

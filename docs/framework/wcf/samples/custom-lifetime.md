@@ -2,12 +2,12 @@
 title: Benutzerdefinierte Lebensdauer
 ms.date: 08/20/2018
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: 1946608c69401fb08f6eb458a8adabea24563963
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be6013d568e3625c5eac7e0c145db7df1c6917e3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520770"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410380"
 ---
 # <a name="custom-lifetime"></a>Benutzerdefinierte Lebensdauer
 
@@ -185,7 +185,7 @@ public void NotifyIdle(InstanceContextIdleCallback callback,
 }
 ```
 
-Bevor Sie die `ICustomLease.IsIdle` Eigenschaft aktiviert ist, wird die Callback-Eigenschaft muss festgelegt werden, da dies entscheidend für `CustomLeaseExtension` den Verteiler benachrichtigen, wenn es in den Leerlauf wechselt. Wenn `ICustomLease.IsIdle` `true` zurückgibt, wird der private `isIdle`-Member einfach in `CustomLifetimeLease` auf `true` festgelegt, und die Rückrufmethode wird vom Member aufgerufen. Da der Code eine Sperre enthalten ist, können nicht andere Threads den Wert dieses privaten Members nicht ändern. Das nächste Mal mit dem Verteiler ruft der <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType>, gibt `true` und der Verteiler, die die Instanz freigeben kann.
+Bevor Sie die `ICustomLease.IsIdle` Eigenschaft aktiviert ist, wird die Callback-Eigenschaft muss festgelegt werden, da dies entscheidend für `CustomLeaseExtension` den Verteiler benachrichtigen, wenn es in den Leerlauf wechselt. Wenn `ICustomLease.IsIdle``true` zurückgibt, wird der private `isIdle`-Member einfach in `CustomLifetimeLease` auf `true` festgelegt, und die Rückrufmethode wird vom Member aufgerufen. Da der Code eine Sperre enthalten ist, können nicht andere Threads den Wert dieses privaten Members nicht ändern. Das nächste Mal mit dem Verteiler ruft der <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType>, gibt `true` und der Verteiler, die die Instanz freigeben kann.
 
 Jetzt da die Vorarbeit für die benutzerdefinierte Erweiterung abgeschlossen ist, muss sie in das Dienstmodell eingebunden werden. Zum Einbinden der `CustomLeaseExtension` Implementierung, die die <xref:System.ServiceModel.InstanceContext>, WCF bietet der <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer> Schnittstelle, führen Sie das bootstrapping von <xref:System.ServiceModel.InstanceContext>. In diesem Beispiel implementiert die `CustomLeaseInitializer`-Klasse diese Schnittstelle und fügt eine `CustomLeaseExtension`-Instanz zur <xref:System.ServiceModel.InstanceContext.Extensions%2A>-Auflistung aus der einzigen Methodeninitialisierung hinzu. Diese Methode wird vom Verteiler aufgerufen, während <xref:System.ServiceModel.InstanceContext> initialisiert wird.
 
@@ -201,7 +201,7 @@ public void InitializeInstanceContext(InstanceContext instanceContext,
 }
 ```
 
- Zum Schluss die <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> Implementierung ist eingebunden in das Dienstmodell mithilfe der <xref:System.ServiceModel.Description.IServiceBehavior> Implementierung. Diese Implementierung wird in der `CustomLeaseTimeAttribute`-Klasse eingefügt, und sie wird außerdem von der `Attribute`-Basisklasse abgeleitet, um dieses Verhalten als Attribut verfügbar zu machen.
+ Zum Schluss die <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> Implementierung ist eingebunden in das Dienstmodell mithilfe der <xref:System.ServiceModel.Description.IServiceBehavior> Implementierung. Diese Implementierung wird in der `CustomLeaseTimeAttribute`-Klasse eingefügt, und sie wird außerdem von der <xref:System.Attribute>-Basisklasse abgeleitet, um dieses Verhalten als Attribut verfügbar zu machen.
 
 ```csharp
 public void ApplyDispatchBehavior(ServiceDescription description,
@@ -240,7 +240,7 @@ Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für de
 
 1. Stellen Sie sicher, dass Sie durchgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](building-the-samples.md).
+2. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](building-the-samples.md)aufgeführten Anweisungen.
 
 3. Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](running-the-samples.md).
 

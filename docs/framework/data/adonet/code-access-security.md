@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 5712b0f7ef67e0a925207858e17d256dbf50cc60
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: af3fe9a233972e939dc14117fc08343bca9d5fd6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826261"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411563"
 ---
 # <a name="code-access-security-and-adonet"></a>Codezugriffssicherheit und ADO.NET
 .NET Framework bietet sowohl rollenbasierte Sicherheit als auch Codezugriffssicherheit (Code Access Security, CAS). Beide werden mit einer von der CLR (Common Language Runtime) bereitgestellten gemeinsamen Infrastruktur implementiert. In der Welt des nicht verwalteten Codes werden die meisten Anwendungen mit den Berechtigungen des Benutzers oder Prinzipals ausgeführt. Daher können Computersysteme beschädigt werden und vertrauliche Daten in die falschen Hände gelangen, wenn ein Benutzer mit erweiterten Rechten schädliche oder fehlerhafte Software ausführt.  
@@ -58,7 +58,7 @@ ms.locfileid: "55826261"
  Wenn eine Assembly mit einem starken Namen versehen wird, erhalten Anwendungen oder Komponenten eine eindeutige Identität, über die andere Software explizit auf die Assembly verweisen können. Ein starker Name schützt Assemblys vor Angriffen durch andere Assemblys, die bösartigen Code enthalten. Außerdem wird durch starke Namen die Versionskonsistenz zwischen verschiedenen Versionen einer Komponente gewährleistet. Assemblys, die im globalen Assemblycache (GAC) bereitgestellt werden sollen, müssen einen starken Namen erhalten. Weitere Informationen finden Sie unter [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
   
 ## <a name="partial-trust-in-adonet-20"></a>Teilweise Vertrauenswürdigkeit in ADO.NET 2.0  
- In ADO.NET 2.0 können der .NET Framework-Datenanbieter für SQL Server, der .NET Framework-Datenanbieter für OLE DB, der .NET Framework-Datenanbieter für ODBC und der .NET Framework-Datenanbieter für Oracle jetzt alle in teilweise vertrauenswürdigen Umgebungen ausgeführt werden. In früheren Versionen von .NET Framework wurde nur <xref:System.Data.SqlClient> in nicht vollständig vertrauenswürdigen Umgebungen unterstützt.  
+ In ADO.NET 2.0 können der .NET Framework-Datenanbieter für SQL Server, der .NET Framework-Datenanbieter für OLE DB, der .NET Framework-Datenanbieter für ODBC und der .NET Framework-Datenanbieter für Oracle jetzt alle in teilweise vertrauenswürdigen Umgebungen ausgeführt werden. In früheren Releases von .NET Framework wurde nur <xref:System.Data.SqlClient> in nicht vollständig vertrauenswürdigen Umgebungen unterstützt.  
   
  Eine teilweise vertrauenswürdige Anwendung, die den Datenanbieter für SQL Server verwendet, muss mindestens die Berechtigung zum Ausführen und die <xref:System.Data.SqlClient.SqlClientPermission>-Berechtigung besitzen.  
   
@@ -71,9 +71,9 @@ ms.locfileid: "55826261"
 |-----------------------------------|-----------------|  
 |`Action`|Ruft eine Sicherheitsaktion ab oder legt diese fest. Wird von <xref:System.Security.Permissions.SecurityAttribute> geerbt.|  
 |`AllowBlankPassword`|Aktiviert oder deaktiviert die Verwendung von leeren Kennwörtern in einer Verbindungszeichenfolge. Gültige Werte sind `true` (zum Aktivieren der Verwendung von leeren Kennwörtern) und `false` (zum Deaktivieren der Verwendung von leeren Kennwörtern). Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
-|`ConnectionString`|Gibt eine zulässige Verbindungszeichenfolge an. Es können mehrere Verbindungszeichenfolgen angegeben werden. **Hinweis**:  Die Verbindungszeichenfolge darf keine Benutzer-ID und kein Kennwort enthalten. In dieser Version können Einschränken von Verbindungszeichenfolgen nicht mit dem .NET Framework-Konfigurationstool geändert werden. <br /><br /> Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
+|`ConnectionString`|Gibt eine zulässige Verbindungszeichenfolge an. Es können mehrere Verbindungszeichenfolgen angegeben werden. **Hinweis**:  Die Verbindungszeichenfolge darf keine Benutzer-ID und kein Kennwort enthalten. In diesem Release können Einschränken von Verbindungszeichenfolgen nicht mit dem .NET Framework-Konfigurationstool geändert werden. <br /><br /> Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
 |`KeyRestrictions`|Gibt zulässige oder unzulässige Parameter für Verbindungszeichenfolgen an. Parameter für Verbindungszeichenfolgen werden in der Form identifiziert  *\<Parametername > =*. Es können mehrere durch Semikolon (;) getrennte Parameter angegeben werden. **Hinweis**:  Wenn Sie keine `KeyRestrictions` angeben, die `KeyRestrictionBehavior`-Eigenschaft aber auf `AllowOnly` oder `PreventUsage` festlegen, sind keine zusätzlichen Verbindungszeichenfolgenparameter zulässig. Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
-|`KeyRestrictionBehavior`|Legt die Verbindungszeichenfolgenparameter als die einzigen zulässigen zusätzlichen Parameter fest (`AllowOnly`) oder gibt die nicht zulässigen zusätzlichen Parameter an (`PreventUsage`). Standardmäßig ist `AllowOnly` festgelegt. Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
+|`KeyRestrictionBehavior`|Legt die Verbindungszeichenfolgenparameter als die einzigen zulässigen zusätzlichen Parameter fest (`AllowOnly`) oder gibt die nicht zulässigen zusätzlichen Parameter an (`PreventUsage`). `AllowOnly` Der Standardwert ist. Wird von <xref:System.Data.Common.DBDataPermissionAttribute> geerbt.|  
 |`TypeID`|Ruft bei Implementierung in einer abgeleiteten Klasse einen eindeutigen Bezeichner für dieses Attribut ab. Wird von <xref:System.Attribute> geerbt.|  
 |`Unrestricted`|Gibt an, ob für die Ressource uneingeschränkte Berechtigungen deklariert wurden. Wird von <xref:System.Security.Permissions.SecurityAttribute> geerbt.|  
   
@@ -190,7 +190,7 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilität mit nicht verwaltetem Code  
- Code, der außerhalb der CLR ausgeführt wird, wird als nicht verwalteter Code bezeichnet. Deshalb können Sicherheitsmechanismen, z. B. CAS, auf nicht verwalteten Code nicht angewendet werden. Beispiele für nicht verwalteten Code sind COM-Komponenten, ActiveX-Schnittstellen und Win32 API-Funktionen. Damit bei der Ausführung von nicht verwaltetem Code die Gesamtsicherheit der Anwendung nicht gefährdet wird, sind besondere Sicherheitsüberlegungen notwendig. Weitere Informationen finden Sie unter [Interoperation mit nicht verwaltetem Code](../../../../docs/framework/interop/index.md).  
+ Code, der außerhalb der CLR ausgeführt wird, wird als nicht verwalteter Code bezeichnet. Deshalb können Sicherheitsmechanismen, z. B. CAS, auf nicht verwalteten Code nicht angewendet werden. COM-Komponenten, ActiveX-Schnittstellen und Windows-API-Funktionen sind Beispiele für nicht verwalteten Code. Damit bei der Ausführung von nicht verwaltetem Code die Gesamtsicherheit der Anwendung nicht gefährdet wird, sind besondere Sicherheitsüberlegungen notwendig. Weitere Informationen finden Sie unter [Interoperation mit nicht verwaltetem Code](../../../../docs/framework/interop/index.md).  
   
  .NET Framework unterstützt den Zugriff durch COM-Interop, um die Abwärtskompatibilität zu vorhandenen COM-Komponenten sicherzustellen. Sie können COM-Komponenten in eine .NET Framework-Anwendung einbauen, indem Sie die entsprechenden COM-Typen mit den COM-Interop-Tools importieren. Nach dem Import sind die COM-Typen einsatzbereit. COM-Interop ermöglicht es COM-Clients auch, auf verwalteten Code zuzugreifen, indem Assemblymetadaten in eine Typbibliothek exportiert und die verwalteten Komponenten als COM-Komponente registriert werden. Weitere Informationen finden Sie unter [Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   

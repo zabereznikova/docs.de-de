@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 4a2e1704e72e608f5b5fd9c6dace42c144f92bb4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5f9ac99078d64387acee9160118928ad8de1764c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973170"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411537"
 ---
 # <a name="declare-statement"></a>Declare Statement
 Deklariert einen Verweis auf eine Prozedur in einer externen Datei implementiert.  
@@ -127,7 +127,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 -   **Mechanismus.** Visual Basic verwendet das .NET Framework *Plattformaufruf* (PInvoke)-Mechanismus zum Lösen und Zugriff auf externe Prozeduren. Die `Declare` Anweisung und die <xref:System.Runtime.InteropServices.DllImportAttribute> Klasse, die beide automatisch diesen Mechanismus verwenden, und keine Kenntnisse über PInvoke ist nicht erforderlich. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Aufrufen von Windows-APIs](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md).  
   
 > [!IMPORTANT]
->  Wenn die externe Prozedur außerhalb der common Language Runtime (CLR) ausgeführt wird, ist es *von nicht verwaltetem Code*. Wenn Sie eine solche Prozedur, z. B. eine Win32-API-Funktion oder einer COM-Methode aufrufen können Sie Ihre Anwendung Sicherheitsrisiken verfügbar machen. Weitere Informationen finden Sie unter [Secure Coding Guidelines für nicht verwalteten Code](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
+>  Wenn die externe Prozedur außerhalb der common Language Runtime (CLR) ausgeführt wird, ist es *von nicht verwaltetem Code*. Wenn Sie eine solche Prozedur, z. B. eine Windows-API-Funktion oder einer COM-Methode aufrufen können Sie Ihre Anwendung zu Sicherheitsrisiken verfügbar machen. Weitere Informationen finden Sie unter [Secure Coding Guidelines für nicht verwalteten Code](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md).  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel deklariert einen externen Verweis auf eine `Function` Prozedur, die den aktuellen Benutzernamen zurückgibt. Es ruft dann die externe Prozedur `GetUserNameA` als Teil der `getUser` Verfahren.  

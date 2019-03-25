@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Migrate AJAX-Enabled ASP.NET Web Services to WCF'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: de90f4b89f182c55dec3f6fee6836c64535aa2d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c7052a67e756ae0c3fa1692c3ed746419384de4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638287"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410939"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>Vorgehensweise: Migrate AJAX-Enabled ASP.NET Web Services to WCF
 Dieses Thema beschreibt Verfahren zum Migrieren von eines einfachen ASP.NET AJAX-Diensts mit einem entsprechenden AJAX-fähigen Windows Communication Foundation (WCF)-Dienst. Es zeigt, wie eine funktional der WCF-Version von ASP.NET AJAX-Dienst zu erstellen. Die beiden Dienste können dann parallel verwendet werden, oder der WCF-Dienst kann verwendet werden, um die ASP.NET AJAX-Dienst zu ersetzen.
@@ -113,7 +113,7 @@ Dieses Thema beschreibt Verfahren zum Migrieren von eines einfachen ASP.NET AJAX
 ## <a name="example"></a>Beispiel
  Der Code, der sich aus den hier besprochenen Verfahren ergibt, wird im folgenden Beispiel bereitgestellt.
 
-```
+```csharp
 //This is the ASP.NET code in the Service1.asmx.cs file.
 
 using System;
@@ -203,7 +203,7 @@ d.Add("two", 2);
 
 |Unterschiedskategorie|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
-|Deserialisieren des leeren Puffers (new byte[0]) in <xref:System.Object> (oder <xref:System.Uri> oder andere Klassen).|SerializationException|null|
+|Deserialisieren des leeren Puffers (new byte[0]) in <xref:System.Object> (oder <xref:System.Uri> oder andere Klassen).|SerializationException|NULL|
 |Serialisierung von <xref:System.DBNull.Value>|{} (or {"__type":"#System"})|Null|
 |Serialisierung der privaten Member von [Serializable]-Typen.|serialisiert|nicht serialisiert|
 |Serialisierung der öffentlichen Eigenschaften von <xref:System.Runtime.Serialization.ISerializable>-Typen|nicht serialisiert|serialisiert|

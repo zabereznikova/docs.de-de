@@ -2,12 +2,12 @@
 title: Aktive Muster
 description: Erfahren Sie, wie aktive Muster zu verwenden, um benannte Partitionen definieren, die Eingabedaten in der Programmiersprache F# zu unterteilen.
 ms.date: 05/16/2016
-ms.openlocfilehash: c830011b69809bd399aab0c8a8bc25d40d5c82cc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 0f1f57de425836738201d2d8f84ab67a0df142ee
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612841"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412083"
 ---
 # <a name="active-patterns"></a>Aktive Muster
 
@@ -86,23 +86,23 @@ Die Ausgabe des vorherigen Beispiels lautet wie folgt aus:
 Something else : Not matched.
 ```
 
-Wenn Sie partielle aktive Muster zu verwenden, können manchmal die einzelnen Optionen zusammenhanglosen oder sich gegenseitig ausschließende, jedoch keine sein müssen. Im folgenden Beispiel sind das Muster Quadrat und den Cube-Muster nicht zusammenhanglos, da einige Zahlen sowohl Quadrate und Cubes, z. B. 64 sind. Das folgende Programm druckt alle ganzen Zahlen bis 1000000, die Quadrate und Cubes sind.
+Wenn Sie partielle aktive Muster zu verwenden, können manchmal die einzelnen Optionen zusammenhanglosen oder sich gegenseitig ausschließende, jedoch keine sein müssen. Im folgenden Beispiel sind das Muster Quadrat und den Cube-Muster nicht zusammenhanglos, da einige Zahlen sowohl Quadrate und Cubes, z. B. 64 sind. Das folgende Programm verwendet die AND-Muster, das Quadrat und den Cube-Muster kombiniert. Drucken alle ganzen Zahlen bis zu 1000, die sowohl Quadrate und Cubes, als auch diejenigen, bei die nur auf Cubes sind. 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 Die Ausgabe lautet wie folgt:
 
 ```
-1
-64
-729
-4096
-15625
-46656
-117649
-262144
-531441
-1000000
+1 is a cube and a square
+8 is a cube
+27 is a cube
+64 is a cube and a square
+125 is a cube
+216 is a cube
+343 is a cube
+512 is a cube
+729 is a cube and a square
+1000 is a cube
 ```
 
 ## <a name="parameterized-active-patterns"></a>Parametrisierte aktive Muster

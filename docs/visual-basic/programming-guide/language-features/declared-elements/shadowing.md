@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 6ac973493b67fa15ca935f61bbb8e5c07bda1e0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580862"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411004"
 ---
 # <a name="shadowing-in-visual-basic"></a>Shadowing in Visual Basic
 Wenn zwei Programmierelemente mit demselben Namen gemeinsam nutzen, eine davon kann auszublenden, oder *Schatten*, der andere Controller. In diesem Fall ist das Shadowing-Element nicht als Referenz verfügbar; Stattdessen löst, wenn Ihr Code den Elementnamen verwendet, die Visual Basic-Compiler es auf das shadowing-Element.  
@@ -41,8 +41,7 @@ Wenn zwei Programmierelemente mit demselben Namen gemeinsam nutzen, eine davon k
   
  Die folgende Abbildung zeigt zwei Variablen, die sowohl für benannte `temp`. Die lokale Variable `temp` führt Shadowing für die Membervariable `temp` Wenn der Zugriff innerhalb ihrer eigenen Prozedur `p`. Allerdings die `MyClass` Schlüsselwort umgeht das shadowing und greift auf die Membervariable.  
   
- ![Grafisches Diagramm des shadowings über den Gültigkeitsbereich](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowscope.gif "ShadowScope")  
-Shadowings über den Gültigkeitsbereich  
+ ![Grafik, die zeigt shadowings über den Gültigkeitsbereich.](./media/shadowing/shadow-scope-diagram.gif)
   
  Ein Beispiel des shadowings über den Bereich finden Sie unter [Vorgehensweise: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
   
@@ -51,8 +50,7 @@ Shadowings über den Gültigkeitsbereich
   
  Die folgende Abbildung zeigt eine Basisklasse `b` und eine abgeleitete Klasse `d` von erbt `b`. Die Basisklasse der Klasse definiert eine Prozedur namens `proc`, und die abgeleitete Klasse mit einer anderen Prozedur mit demselben Namen Shadowing für Sie. Die erste `Call` Anweisung greift auf das shadowing `proc` in der abgeleiteten Klasse. Allerdings die `MyBase` Schlüsselwort umgeht das shadowing und greift auf die Prozedur Shadowing durchgeführt wurde, in der Basisklasse.  
   
- ![Grafisches Diagramm des shadowings durch Vererbung](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowinherit.gif "ShadowInherit")  
-Shadowings durch Vererbung  
+ ![Grafisches Diagramm des Shadowings durch Vererbung](./media/shadowing/shadowing-inherit-diagram.gif)  
   
  Ein Beispiel des shadowings durch Vererbung, finden Sie unter [Vorgehensweise: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) und [Vorgehensweise: Ausblenden einer geerbten Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
   

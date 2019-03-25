@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37e6b995a84a54dfcb52460d11e9843a933a5684
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353074"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409873"
 ---
 # <a name="reliability-best-practices"></a>Empfohlene Vorgehensweisen für die Zuverlässigkeit
 
@@ -241,7 +241,7 @@ Alle Methoden, in denen Synchronisierung oder Threading zur Anwendung kommt, mü
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>Verwenden Sie Blockierungen in nicht verwaltetem Code nicht unbegrenzt lange
 
-Blockierungen in nicht verwaltetem Code anstatt in verwaltetem Code können zu einem Denial-of-Service-Angriff führen, da die CLR nicht in der Lage ist, den Thread abzubrechen.  Durch einen blockierten Thread wird – zumindest bei Verzicht auf unsichere Vorgänge – die CLR daran gehindert, die <xref:System.AppDomain> zu entladen.  Das Blockieren mittels Win32-Synchronisierungsprimitivs ist ein deutliches Beispiel für einen Vorgang, der verhindert werden muss.  Eine Blockierung in einem Aufruf von `ReadFile` auf einem Socket sollte nach Möglichkeit vermieden werden. Im Idealfall sollte die Win32-API einen Mechanismus für einen solchen Vorgang zur Verfügung stellen, sodass ein Timeout ausgelöst werden kann.
+Blockierungen in nicht verwaltetem Code anstatt in verwaltetem Code können zu einem Denial-of-Service-Angriff führen, da die CLR nicht in der Lage ist, den Thread abzubrechen.  Durch einen blockierten Thread wird – zumindest bei Verzicht auf unsichere Vorgänge – die CLR daran gehindert, die <xref:System.AppDomain> zu entladen.  Das Blockieren mittels einer Windows ist Synchronisierungsprimitive ein deutliches Beispiel etwas, das wir ist nicht zulässig.  In einem Aufruf blockiert `ReadFile` auf einem Socket sollte nach Möglichkeit vermieden werden – im Idealfall sollte die Windows-API bieten einen Mechanismus für einen solchen Vorgang zu einem Timeout.
 
 Jede Methode, die in nativem Code aufgerufen wird, sollte idealerweise einen Win32-Aufruf mit einem angemessenen, zeitlich begrenzten Timeout verwenden.  Wenn der Benutzer ein Timeout festlegen darf, sollte dieses nur dann zeitlich unbegrenzt sein dürfen, falls der Benutzer über bestimmte Sicherheitsberechtigungen verfügt.  Wenn eine Methode länger als ca. 10 Sekunden blockiert wird, benötigen Sie entweder eine Version, die Timeouts unterstützt, oder zusätzliche CLR-Unterstützung.
 

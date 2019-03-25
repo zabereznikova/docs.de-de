@@ -2,12 +2,12 @@
 title: FILESTREAM-Daten
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: cd496909a387f5726b2d22adae14085a60eae881
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1dea5d1e2f40c44e8f24bdbc9742288429d9933a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674735"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410276"
 ---
 # <a name="filestream-data"></a>FILESTREAM-Daten
 
@@ -180,7 +180,7 @@ Die vollständige Dokumentation für FILESTREAM befindet sich in den folgenden A
 |Thema|Beschreibung|
 |-----------|-----------------|
 |[FILESTREAM (SQLServer)](/sql/relational-databases/blob/filestream-sql-server)|Beschreibt, in welchen Fällen die FILESTREAM-Speicherung verwendet werden sollte und wie diese die SQL Server-Datenbank-Engine mit einem NTFS-Dateisystem integriert.|
-|[Erstellen von Clientanwendungen für FILESTREAM-Daten](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Beschreibt die Win32 API-Funktionen zum Arbeiten mit FILESTREAM-Daten.|
+|[Erstellen von Clientanwendungen für FILESTREAM-Daten](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Beschreibt die Windows-API-Funktionen zum Arbeiten mit FILESTREAM-Daten.|
 |[FILESTREAM und andere SQL Server-Funktionen](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Enthält Überlegungen, Richtlinien und Einschränkungen zur Verwendung von FILESTREAM-Daten mit anderen Funktionen von SQL Server.|
 
 ## <a name="see-also"></a>Siehe auch

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: 05c678b25563eb7a4e2e5ce0e49138b5445b4764
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7ebb49ad5e1262dcb71dcd31c9073dfe52c49789
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707598"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409860"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>Vorgehensweise: Zeichnen einer Linie mit Linienenden
 Sie können den Anfang oder Ende einer Zeile in einer von mehreren Formen namens Linienenden zeichnen. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] unterstützt verschiedene Linienenden, z. B. Roundrobin, Quadrat, Raute und Pfeilspitze.  
@@ -25,7 +25,7 @@ Sie können den Anfang oder Ende einer Zeile in einer von mehreren Formen namens
   
  Im folgende Beispiel zeichnet eine Linie mit einer Pfeilspitze an einem Ende und einem runden Ende am anderen Ende. Die Abbildung zeigt die resultierenden Zeile:  
   
- ![Stifte](./media/pens4.gif "pens4")  
+ ![Abbildung der eine Zeile mit einem runden Ende.](./media/how-to-draw-a-line-with-line-caps/line-cap-arrowhead-example.gif)  
   
  [!code-csharp[System.Drawing.UsingAPen#71](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.UsingAPen#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#71)]  

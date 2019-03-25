@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: d7a00f2508769534e49c965d098dbacb01a1f189
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 8da1f49bf5b7d3daf6319906fb49390c008d209c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843531"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412213"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Erweitern von Glasframe in eine WPF-Anwendung
 
@@ -26,11 +26,9 @@ In diesem Thema veranschaulicht das Erweitern der [!INCLUDE[TLA#tla_winvista](..
 
 ## <a name="example"></a>Beispiel
 
-Die folgende Abbildung zeigt den in der Adressleiste von Internet Explorer 7 erweiterten Glasframe.
+Die folgende Abbildung zeigt den in der Adressleiste von Internet Explorer 7 erweiterten Glasframe:
 
-**Internet Explorer mit erweitertem Glasframe hinter der Adressleiste.**
-
-![IE7 mit sich hinter die Adressleiste ausdehnendem Glasframe](./media/ie7glasstopbar.PNG "IE7glasstopbar")
+![Screenshot mit Glasframe hinter die Adressleiste IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
 Um ein Glasframe auf einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung zu erweitern, benötige Sie Zugriff auf nicht verwaltete [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Das folgende Codebeispiel führt einen Plattformaufruf (Pinvoke) für die beiden [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] durch, der erforderlich ist, um den Frame in den Clientbereich zu erweitern. Jede dieser [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] werden in einer Klasse namens **NonClientRegionAPI** deklariert.
 
@@ -147,11 +145,9 @@ Das folgende Beispiel zeigt ein einfaches Fenster, in dem der Frame in den Clien
 </Window>
 ```
 
-Die folgende Abbildung zeigt den in eine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung erweiterten Glasframe.
+Die folgende Abbildung zeigt die in erweiterten Glasframe eine [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendung:
 
-**In eine** [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**-Anwendung erweiterter Glasframe.**
-
-![In eine WPF-Anwendung erweiterter Glasframe.](./media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")
+![Screenshot der eine in einer WPF-Anwendung erweiterter Glasframe.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
 ## <a name="see-also"></a>Siehe auch
 

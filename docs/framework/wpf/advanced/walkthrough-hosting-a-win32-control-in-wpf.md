@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 1bb5def111aad850a5f74afaba352394ac2587e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 13845eb662064e0ac1db913bedc0b21214292db5
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377403"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412317"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines Win32-Steuerelements in WPF
 Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erstellen von Anwendungen. Jedoch wenn Sie eine erhebliche Investition in Win32-Code verfügen, es möglicherweise effektiver sein, mindestens einige wiederzuverwenden, Programmieren Sie in der WPF-Anwendung anstatt ihn vollständig neu zu schreiben. WPF bietet ein einfaches Verfahren zum Hosten eines Win32-Fensters, in einer WPF-Seite.  
@@ -23,9 +23,9 @@ Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erst
   
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Anforderungen  
- In diesem Thema wird davon ausgegangen, sowohl WPF und Win32-Programmierung vertraut sind. Eine grundlegende Einführung in WPF-Programmierung, finden Sie unter [Einstieg](../getting-started/index.md). Eine Einführung in Win32-Programmierung, Sie sollten verweisen auf eine der zahlreichen Büchern zu diesem Thema, insbesondere *Programming Windows* von Charles Petzold.  
+ In diesem Thema wird davon ausgegangen, sowohl WPF als auch Windows-API-Programmierung vertraut sind. Eine grundlegende Einführung in WPF-Programmierung, finden Sie unter [Einstieg](../getting-started/index.md). Eine Einführung in Windows-API programmieren, finden Sie in zahlreichen Büchern zu diesem Thema, insbesondere *Programming Windows* von Charles Petzold.  
   
- Da das Beispiel, das in diesem Thema begleitet in implementiert ist C#, Platform Invocation Services (PInvoke) nutzen, um Zugriff auf die Win32-API vereinfacht. Eine gewisse Vertrautheit mit PInvoke ist hilfreich, aber keine Voraussetzung.  
+ Da das Beispiel, das in diesem Thema begleitet in implementiert ist C#, Platform Invocation Services (PInvoke) nutzen, um Zugriff auf die Windows-API vereinfacht. Eine gewisse Vertrautheit mit PInvoke ist hilfreich, aber keine Voraussetzung.  
   
 > [!NOTE]
 >  Dieses Lernprogramm enthält eine Reihe von Codebeispielen aus dem genannten Beispiel. Aus Gründen der besseren Lesbarkeit wird jedoch nicht der gesamte Beispielcode aufgeführt. Sie können auch abrufen oder Anzeigen der vollständigen Code unter [Hosten eines Win32-ListBox-Steuerelements in WPF-Beispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control).  

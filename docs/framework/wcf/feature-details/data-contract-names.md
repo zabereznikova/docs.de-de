@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-ms.openlocfilehash: cd878452f3ec99627507334a26873a004e5b5314
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16a42a2808104a77e56e93564a679dfc578e73f6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196693"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408872"
 ---
 # <a name="data-contract-names"></a>Datenvertragsnamen
 
@@ -64,7 +64,7 @@ In diesem Beispiel hat der Typ `Drawing<Square,RegularRedBrush>` den Datenvertra
 
 ## <a name="customizing-data-contract-names-for-generic-types"></a>Anpassen von Datenvertragsnamen für generische Typen
 
-Zuweilen sind die für generische Typen erstellten Datenvertragsnamen, wie zuvor beschrieben, nicht akzeptabel. Beispielsweise können Sie von vornherein wissen, dass eine Übereinstimmung der Namen ausgeschlossen ist, und möchten daher den Hash entfernen. In diesem Fall können Sie die <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>-Eigenschaft des `DataContractAttribute`-Attributs nutzen, um eine andere Art der Erstellung der Namen festzulegen. Sie können Zahlen in geschweiften Klammern innerhalb der `Name`-Eigenschaft nutzen, um auf Datenvertragsnamen von generischen Parametern zu verweisen. (0 (null) verweist auf den ersten Parameter, 1 verweist auf den zweiten usw.) Um auf den Hash zu verweisen, können Sie ein Rautezeichen (#) in geschweiften Klammern verwenden. Sie können jeden dieser Verweise mehrmals oder gar nicht verwenden.
+Zuweilen sind die für generische Typen erstellten Datenvertragsnamen, wie zuvor beschrieben, nicht akzeptabel. Beispielsweise können Sie von vornherein wissen, dass eine Übereinstimmung der Namen ausgeschlossen ist, und möchten daher den Hash entfernen. In diesem Fall können Sie die <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A?displayProperty=nameWithType> Eigenschaft, um eine andere Möglichkeit zum Generieren von Namen anzugeben. Sie können Zahlen in geschweiften Klammern innerhalb der `Name`-Eigenschaft nutzen, um auf Datenvertragsnamen von generischen Parametern zu verweisen. (0 (null) verweist auf den ersten Parameter, 1 verweist auf den zweiten usw.) Um auf den Hash zu verweisen, können Sie ein Rautezeichen (#) in geschweiften Klammern verwenden. Sie können jeden dieser Verweise mehrmals oder gar nicht verwenden.
 
 Beispielsweise könnte der vorangehende allgemeine `Drawing`-Typ deklariert worden sein, wie im folgenden Beispiel gezeigt:
 

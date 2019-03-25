@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 3895bb44139a05d1933f1d3af19ccb9799309515
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363084"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411433"
 ---
 # <a name="security-considerations-for-data"></a>Sicherheitsüberlegungen zu Daten
 
@@ -276,7 +276,7 @@ Diese Situation ist vermeidbar, wenn folgenden Punkte beachtet werden:
 
 - Seien Sie vorsichtig, wenn Sie ältere Typen verwenden, die mit dem <xref:System.SerializableAttribute> -Attribut gekennzeichnet sind. Viele davon wurden für [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Remoting zur ausschließlichen Verwendung mit vertrauenswürdigen Daten entwickelt. Bei der Entwicklung vorhandener Typen, die mit diesem Attribut gekennzeichnet sind, spielte die Sicherheit möglicherweise keine Rolle.
 
-- Verlassen Sie sich nicht darauf, dass die <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> -Eigenschaft des `DataMemberAttribute` -Attributs das Vorhandensein von Daten in einem sicheren Zustand garantiert. Deren Status könnte auch `null`, `zero`oder `invalid`lauten.
+- Verlassen Sie sich nicht darauf, dass die <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> -Eigenschaft des <xref:System.Runtime.Serialization.DataMemberAttribute> -Attributs das Vorhandensein von Daten in einem sicheren Zustand garantiert. Deren Status könnte auch `null`, `zero`oder `invalid`lauten.
 
 - Vertrauen Sie niemals einem Objektdiagramm, das von einer nicht vertrauenswürdigen Datenquelle deserialisiert wurde, ohne es zuerst zu überprüfen. Zwar kann sich jedes einzelne Objekt in einem konsistenten Zustand befinden, das Objektdiagramm insgesamt vielleicht jedoch nicht. Außerdem kann es sein, dass selbst bei deaktiviertem Objektdiagramm-Beibehaltungsmodus das deserialisierte Diagramm in einem Zirkelverweis noch mehrere Verweise auf das selbe Objekt aufweist. Weitere Informationen finden Sie unter [Serialisierung und Deserialisierung](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).
 
@@ -312,33 +312,33 @@ Berücksichtigen Sie beim Ausführen von teilweise vertrauenswürdigem Code die 
 
 - Wenn Sie zulassen, dass teilweise vertrauenswürdiger Codezugriff auf Ihre <xref:System.Runtime.Serialization.DataContractSerializer> Instanz oder anderweitig steuern die [Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md), ihn möglicherweise viel Kontrolle über den Prozess für die Serialisierung/Deserialisierung ausführen. Er kann beispielsweise beliebige Typen einfügen, was zur Offenlegung von Informationen führt, oder das sich ergebende Objektdiagramm und die serialisierten Daten manipulieren bzw. einen Überlauf des resultierenden serialisierten Streams herbeiführen. Eine entsprechende <xref:System.Runtime.Serialization.NetDataContractSerializer> -Bedrohung wird im Abschnitt "Sicheres Verwenden von NetDataContractSerializer" beschrieben.
 
-- Wenn das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut auf einen Typ angewendet wird (oder der Typ als `[Serializable]` gekennzeichnet wird, ohne `ISerializable`zu sein), kann das Deserialisierungsprogramm eine Instanz eines solchen Typs selbst dann erstellen, wenn alle Konstruktoren durch Aufrufe nicht öffentlich und/oder geschützt sind.
+- Wenn das <xref:System.Runtime.Serialization.DataContractAttribute> -Attribut auf einen Typ angewendet wird (oder der Typ als <xref:System.SerializableAttribute> gekennzeichnet wird, ohne <xref:System.Runtime.Serialization.ISerializable>zu sein), kann das Deserialisierungsprogramm eine Instanz eines solchen Typs selbst dann erstellen, wenn alle Konstruktoren durch Aufrufe nicht öffentlich und/oder geschützt sind.
 
 - Vertrauen Sie niemals dem Ergebnis der Deserialisierung, es sei denn , die Daten können als vertrauenswürdig eingestuft werden und Sie sind sicher, dass alle bekannten Typen vertrauenswürdige Typen sind. Beachten Sie, dass bei Ausführung unter teilweiser Vertrauenswürdigkeit bekannte Typen nicht aus der Anwendungskonfigurationsdatei, sondern aus der Computerkonfigurationsdatei geladen werden.
 
-- Wenn Sie eine `DataContractSerializer` -Instanz mit einem Ersatzselektor übergeben, der im teilweise vertrauenswürdigen Modus hinzugefügt wurde, kann der Code alle änderbaren Einstellungen dieses Ersatzselektors ändern.
+- Wenn Sie eine <xref:System.Runtime.Serialization.DataContractSerializer> -Instanz mit einem Ersatzselektor übergeben, der im teilweise vertrauenswürdigen Modus hinzugefügt wurde, kann der Code alle änderbaren Einstellungen dieses Ersatzselektors ändern.
 
 - Wenn ein XML-Reader (oder die enthaltenen Daten) auf teilweise vertrauenswürdigem Code basiert, dann betrachten Sie das resultierende deserialisierte Objekt als nicht vertrauenswürdige Daten.
 
 - Der Umstand, dass der <xref:System.Runtime.Serialization.ExtensionDataObject> -Typ keine öffentlichen Member besitzt, bedeutet nicht, dass die darin enthaltenen Daten sicher sind. Wenn Sie z.&#160;B. eine Deserialisierung aus einer privilegierten Datenquelle in ein Objekt ausführen, in dem sich einige Daten befinden, und dieses Objekt anschließend an teilweise vertrauenswürdigen Code übergeben, kann dieser Code die Daten in `ExtensionDataObject` lesen, indem er das Objekt serialisiert. Legen Sie bei einer Deserialisierung aus einer privilegierten Datenquelle in ein Objekt, das später an teilweise vertrauenswürdigen Code übergeben wird, wenn möglich die <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> -Einstellung auf `true` fest.
 
-- <xref:System.Runtime.Serialization.DataContractSerializer> und <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> unterstützen die Serialisierung von privaten, geschützten, internen und öffentlichen Membern mit vollständiger Vertrauenswürdigkeit. Bei teilweiser Vertrauenswürdigkeit können jedoch nur öffentliche Member serialisiert werden. Wenn eine Anwendung versucht, einen nicht öffentlichen Member zu serialisieren, wird eine `SecurityException` ausgelöst.
+- <xref:System.Runtime.Serialization.DataContractSerializer> und <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> unterstützen die Serialisierung von privaten, geschützten, internen und öffentlichen Membern mit vollständiger Vertrauenswürdigkeit. Bei teilweiser Vertrauenswürdigkeit können jedoch nur öffentliche Member serialisiert werden. Wenn eine Anwendung versucht, einen nicht öffentlichen Member zu serialisieren, wird eine <xref:System.Security.SecurityException> ausgelöst.
 
-    Verwenden Sie das `System.Runtime.CompilerServices.InternalsVisibleTo` -Assemblyattribut, um zuzulassen, dass interne oder geschützte interne Member serialisiert werden können. Dieses Attribut ermöglicht es einer Assembly zu deklarieren, dass eigene interne Member in anderen Assemblys sichtbar sein sollen. In diesem Fall deklariert eine Assembly, deren interne Member serialisiert werden sollen, dass ihre internen Member für System.Runtime.Serialization.dll sichtbar sein sollen.
+    Verwenden Sie das <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> -Assemblyattribut, um zuzulassen, dass interne oder geschützte interne Member serialisiert werden können. Dieses Attribut ermöglicht es einer Assembly zu deklarieren, dass eigene interne Member in anderen Assemblys sichtbar sein sollen. In diesem Fall deklariert eine Assembly, deren interne Member serialisiert werden sollen, dass ihre internen Member für System.Runtime.Serialization.dll sichtbar sein sollen.
 
     Der Vorteil dieser Vorgehensweise besteht darin, dass kein Codegenerierungspfad mit erweiterten Berechtigungen erforderlich ist.
 
     Gleichzeitig sind jedoch zwei gravierende Nachteile zu beachten.
 
-    Der erste Nachteil besteht darin, dass die Opt-In-Eigenschaft des `InternalsVisibleTo` -Attributs assemblyweit festgelegt ist. Das heißt, Sie können nicht angeben, dass nur die internen Member einer bestimmten Klasse serialisiert werden sollen. Natürlich können Sie immer noch festlegen, dass ein bestimmter interner Member nicht serialisiert werden soll, indem Sie dem betreffenden Member einfach kein `DataMember` -Attribut hinzufügen. Ebenso können Entwickler angeben, dass ein Member intern und nicht privat oder geschützt ist, wobei jedoch geringe Nachteile in Bezug auf die Sichtbarkeit zu erwarten sind.
+    Der erste Nachteil besteht darin, dass die Opt-In-Eigenschaft des <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> -Attributs assemblyweit festgelegt ist. Das heißt, Sie können nicht angeben, dass nur die internen Member einer bestimmten Klasse serialisiert werden sollen. Natürlich können Sie immer noch festlegen, dass ein bestimmter interner Member nicht serialisiert werden soll, indem Sie dem betreffenden Member einfach kein <xref:System.Runtime.Serialization.DataMemberAttribute> -Attribut hinzufügen. Ebenso können Entwickler angeben, dass ein Member intern und nicht privat oder geschützt ist, wobei jedoch geringe Nachteile in Bezug auf die Sichtbarkeit zu erwarten sind.
 
     Der zweite Nachteil besteht darin, dass nach wie vor keine privaten und geschützten Member unterstützt werden.
 
-    Betrachten Sie das folgende Programm, das die Verwendung des `InternalsVisibleTo` -Attributs bei teilweiser Vertrauenswürdigkeit veranschaulicht:
+    Betrachten Sie das folgende Programm, das die Verwendung des <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> -Attributs bei teilweiser Vertrauenswürdigkeit veranschaulicht:
 
     [!code-csharp[CDF_WCF_SecurityConsiderationsForData#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/cdf_wcf_securityconsiderationsfordata/cs/program.cs#1)]
 
-    Im obigen Beispiel entspricht `PermissionsHelper.InternetZone` dem `PermissionSet` für teilweise Vertrauenswürdigkeit. Ohne `InternalsVisibleToAttribute`tritt nun ein Anwendungsfehler auf, wobei eine `SecurityException` ausgelöst wird, die angibt, dass nicht öffentliche Member mit teilweiser Vertrauenswürdigkeit nicht serialisiert werden können.
+    Im obigen Beispiel entspricht `PermissionsHelper.InternetZone` dem <xref:System.Security.PermissionSet> für teilweise Vertrauenswürdigkeit. Nun, ohne die <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> -Attribut, die Anwendung fehl, Auslösen einer <xref:System.Security.SecurityException> gibt an, dass nicht öffentliche Member bei teilweiser Vertrauenswürdigkeit nicht serialisiert werden können.
 
     Wenn jedoch der Quelldatei die folgende Zeile hinzugefügt wird, wird das Programm erfolgreich ausgeführt.
 
