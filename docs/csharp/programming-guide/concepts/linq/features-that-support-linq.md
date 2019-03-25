@@ -4,90 +4,102 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 5cda3f1a076a89326d78e2be887d10eae9a722b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0b35bec3bbc30f411a705220c468fa8961b83cb
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558019"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186025"
 ---
-# <a name="c-features-that-support-linq"></a><span data-ttu-id="7e4d2-102">C#-Funktionen mit LINQ-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="7e4d2-102">C# Features That Support LINQ</span></span>
-<span data-ttu-id="7e4d2-103">Im folgenden Abschnitt werden neue Sprachkonstrukte, die in C# 3.0 eingeführt werden, vorgestellt.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-103">The following section introduces new language constructs introduced in C# 3.0.</span></span> <span data-ttu-id="7e4d2-104">Obwohl diese neuen Funktionen zu einem gewissen Grad mit [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen verwendet werden, sind sie nicht beschränkt auf [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] und können in jedem Kontext, in dem Sie sie nützlich finden, verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-104">Although these new features are all used to a degree with [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries, they are not limited to [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] and can be used in any context where you find them useful.</span></span>  
-  
-## <a name="query-expressions"></a><span data-ttu-id="7e4d2-105">Abfrageausdrücke</span><span class="sxs-lookup"><span data-stu-id="7e4d2-105">Query Expressions</span></span>  
- <span data-ttu-id="7e4d2-106">Abfrageausdrücke verwenden eine deklarative Syntax wie SQL oder XQuery, um eine Abfrage über IEnumerable-Sammlungen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-106">Query expressions use a declarative syntax similar to SQL or XQuery to query over IEnumerable collections.</span></span> <span data-ttu-id="7e4d2-107">Zur Kompilierzeit wird die Abfragesyntax in Methodenaufrufe an eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Implementierung des Anbieters der Erweiterungsmethode des Standardabfrageoperators kompiliert.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-107">At compile time query syntax is converted to method calls to a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider's implementation of the standard query operator extension methods.</span></span> <span data-ttu-id="7e4d2-108">Applikationen steuern die Standardabfrageoperatoren, die sich durch Angabe des entsprechenden Namespace mit einer `using`-Anweisung innerhalb des Bereichs befinden.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-108">Applications control the standard query operators that are in scope by specifying the appropriate namespace with a `using` directive.</span></span> <span data-ttu-id="7e4d2-109">Der folgende Abfrageausdruck nimmt ein Array von Zeichenfolgen, gruppiert sie nach dem ersten Zeichen in der Zeichenfolge und sortiert die Gruppen.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-109">The following query expression takes an array of strings, groups them according to the first character in the string, and orders the groups.</span></span>  
-  
-```csharp  
-var query = from str in stringArray  
-            group str by str[0] into stringGroup  
-            orderby stringGroup.Key  
-            select stringGroup;  
-```  
-  
- <span data-ttu-id="7e4d2-110">Weitere Informationen finden Sie unter [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md).</span><span class="sxs-lookup"><span data-stu-id="7e4d2-110">For more information, see [LINQ Query Expressions](../../../../csharp/programming-guide/linq-query-expressions/index.md).</span></span>  
-  
-## <a name="implicitly-typed-variables-var"></a><span data-ttu-id="7e4d2-111">Implizit typisierte Variablen (var)</span><span class="sxs-lookup"><span data-stu-id="7e4d2-111">Implicitly Typed Variables (var)</span></span>  
- <span data-ttu-id="7e4d2-112">Anstatt beim Deklarieren und Initialisieren einer Variablen einen Typ explizit anzugeben, können Sie den [var](../../../../csharp/language-reference/keywords/var.md)-Modifizierer verwenden, um den Compiler zum Ableiten und Zuweisen des Typs anzuweisen, wie hier gezeigt:</span><span class="sxs-lookup"><span data-stu-id="7e4d2-112">Instead of explicitly specifying a type when you declare and initialize a variable, you can use the [var](../../../../csharp/language-reference/keywords/var.md) modifier to instruct the compiler to infer and assign the type, as shown here:</span></span>  
-  
-```csharp  
-var number = 5;  
-var name = "Virginia";  
-var query = from str in stringArray  
-            where str[0] == 'm'  
-            select str;  
-```  
-  
- <span data-ttu-id="7e4d2-113">Variablen, die als `var` deklariert werden, sind ebenso stark typisiert wie Variablen, deren Typ Sie explizit angeben.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-113">Variables declared as `var` are just as strongly-typed as variables whose type you specify explicitly.</span></span> <span data-ttu-id="7e4d2-114">Die Verwendung von `var` macht es möglich, anonyme Typen zu erstellen, dies ist jedoch nur für lokale Variablen möglich.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-114">The use of `var` makes it possible to create anonymous types, but it can be used only for local variables.</span></span> <span data-ttu-id="7e4d2-115">Arrays können auch mit impliziter Typisierung deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-115">Arrays can also be declared with implicit typing.</span></span>  
-  
- <span data-ttu-id="7e4d2-116">Weitere Informationen finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span><span class="sxs-lookup"><span data-stu-id="7e4d2-116">For more information, see [Implicitly Typed Local Variables](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span></span>  
-  
-## <a name="object-and-collection-initializers"></a><span data-ttu-id="7e4d2-117">Objekt- und Auflistungsinitialisierer</span><span class="sxs-lookup"><span data-stu-id="7e4d2-117">Object and Collection Initializers</span></span>  
- <span data-ttu-id="7e4d2-118">Objekt- und Auflistungsinitialisierer ermöglichen das Initialisieren von Objekten ohne expliziten Aufruf eines Konstruktors für das Objekt.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-118">Object and collection initializers make it possible to initialize objects without explicitly calling a constructor for the object.</span></span> <span data-ttu-id="7e4d2-119">Initialisierer werden in der Regel in Abfrageausdrücken verwendet, wenn sie die Quelldaten in einen neuen Datentyp projizieren.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-119">Initializers are typically used in query expressions when they project the source data into a new data type.</span></span> <span data-ttu-id="7e4d2-120">In einer Klasse namens `Customer` mit öffentlichen `Name`- und `Phone`-Eigenschaften können Objektinitialisierer wie im folgenden Code verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="7e4d2-120">Assuming a class named `Customer` with public `Name` and `Phone` properties, the object initializer can be used as in the following code:</span></span>  
-  
-```csharp  
-Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
-```  
-<span data-ttu-id="7e4d2-121">Wenn Sie mit der `Customer`-Klasse fortfahren, gehen Sie davon aus, dass eine Datenquelle namens `IncomingOrders` vorhanden ist, und dass für jede Bestellung mit einem großen `OrderSize`-Wert ein neues `Customer`-Element basierend auf dieser Bestellung erstellt werden soll.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-121">Continuing with our `Customer` class, assume that there is a data source called `IncomingOrders`, and that for each order with a large `OrderSize`, we would like to create a new `Customer` based off of that order.</span></span> <span data-ttu-id="7e4d2-122">Eine LINQ-Abfrage kann auf dieser Datenquelle ausgeführt werden und verwendet die Objektinitialisierung, um eine Auflistung zu füllen:</span><span class="sxs-lookup"><span data-stu-id="7e4d2-122">A LINQ query can be executed on this data source and use object initialization to fill a collection:</span></span>
+# <a name="c-features-that-support-linq"></a><span data-ttu-id="46abc-102">C#-Funktionen mit LINQ-Unterstützung</span><span class="sxs-lookup"><span data-stu-id="46abc-102">C# Features That Support LINQ</span></span>
+
+<span data-ttu-id="46abc-103">Im folgenden Abschnitt werden neue Sprachkonstrukte, die in C# 3.0 eingeführt werden, vorgestellt.</span><span class="sxs-lookup"><span data-stu-id="46abc-103">The following section introduces new language constructs introduced in C# 3.0.</span></span> <span data-ttu-id="46abc-104">Obwohl diese neuen Funktionen zu einem gewissen Grad mit [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragen verwendet werden, sind sie nicht beschränkt auf [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] und können in jedem Kontext, in dem Sie sie nützlich finden, verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="46abc-104">Although these new features are all used to a degree with [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries, they are not limited to [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] and can be used in any context where you find them useful.</span></span>
+
+## <a name="query-expressions"></a><span data-ttu-id="46abc-105">Abfrageausdrücke</span><span class="sxs-lookup"><span data-stu-id="46abc-105">Query Expressions</span></span>
+
+<span data-ttu-id="46abc-106">Abfrageausdrücke verwenden eine deklarative Syntax wie SQL oder XQuery, um eine Abfrage über IEnumerable-Sammlungen zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="46abc-106">Query expressions use a declarative syntax similar to SQL or XQuery to query over IEnumerable collections.</span></span> <span data-ttu-id="46abc-107">Zur Kompilierzeit wird die Abfragesyntax in Methodenaufrufe an eine [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Implementierung des Anbieters der Erweiterungsmethode des Standardabfrageoperators kompiliert.</span><span class="sxs-lookup"><span data-stu-id="46abc-107">At compile time query syntax is converted to method calls to a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provider's implementation of the standard query operator extension methods.</span></span> <span data-ttu-id="46abc-108">Applikationen steuern die Standardabfrageoperatoren, die sich durch Angabe des entsprechenden Namespace mit einer `using`-Anweisung innerhalb des Bereichs befinden.</span><span class="sxs-lookup"><span data-stu-id="46abc-108">Applications control the standard query operators that are in scope by specifying the appropriate namespace with a `using` directive.</span></span> <span data-ttu-id="46abc-109">Der folgende Abfrageausdruck nimmt ein Array von Zeichenfolgen, gruppiert sie nach dem ersten Zeichen in der Zeichenfolge und sortiert die Gruppen.</span><span class="sxs-lookup"><span data-stu-id="46abc-109">The following query expression takes an array of strings, groups them according to the first character in the string, and orders the groups.</span></span>
+
+```csharp
+var query = from str in stringArray
+            group str by str[0] into stringGroup
+            orderby stringGroup.Key
+            select stringGroup;
+```
+
+<span data-ttu-id="46abc-110">Weitere Informationen finden Sie unter [LINQ-Abfrageausdrücke](../../../../csharp/programming-guide/linq-query-expressions/index.md).</span><span class="sxs-lookup"><span data-stu-id="46abc-110">For more information, see [LINQ Query Expressions](../../../../csharp/programming-guide/linq-query-expressions/index.md).</span></span>
+
+## <a name="implicitly-typed-variables-var"></a><span data-ttu-id="46abc-111">Implizit typisierte Variablen (var)</span><span class="sxs-lookup"><span data-stu-id="46abc-111">Implicitly Typed Variables (var)</span></span>
+
+<span data-ttu-id="46abc-112">Anstatt beim Deklarieren und Initialisieren einer Variablen einen Typ explizit anzugeben, können Sie den [var](../../../../csharp/language-reference/keywords/var.md)-Modifizierer verwenden, um den Compiler zum Ableiten und Zuweisen des Typs anzuweisen, wie hier gezeigt:</span><span class="sxs-lookup"><span data-stu-id="46abc-112">Instead of explicitly specifying a type when you declare and initialize a variable, you can use the [var](../../../../csharp/language-reference/keywords/var.md) modifier to instruct the compiler to infer and assign the type, as shown here:</span></span>
+
+```csharp
+var number = 5;
+var name = "Virginia";
+var query = from str in stringArray
+            where str[0] == 'm'
+            select str;
+```
+
+<span data-ttu-id="46abc-113">Variablen, die als `var` deklariert werden, sind ebenso stark typisiert wie Variablen, deren Typ Sie explizit angeben.</span><span class="sxs-lookup"><span data-stu-id="46abc-113">Variables declared as `var` are just as strongly-typed as variables whose type you specify explicitly.</span></span> <span data-ttu-id="46abc-114">Die Verwendung von `var` macht es möglich, anonyme Typen zu erstellen, dies ist jedoch nur für lokale Variablen möglich.</span><span class="sxs-lookup"><span data-stu-id="46abc-114">The use of `var` makes it possible to create anonymous types, but it can be used only for local variables.</span></span> <span data-ttu-id="46abc-115">Arrays können auch mit impliziter Typisierung deklariert werden.</span><span class="sxs-lookup"><span data-stu-id="46abc-115">Arrays can also be declared with implicit typing.</span></span>
+
+<span data-ttu-id="46abc-116">Weitere Informationen finden Sie unter [Implizit typisierte lokale Variablen](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span><span class="sxs-lookup"><span data-stu-id="46abc-116">For more information, see [Implicitly Typed Local Variables](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md).</span></span>
+
+## <a name="object-and-collection-initializers"></a><span data-ttu-id="46abc-117">Objekt- und Auflistungsinitialisierer</span><span class="sxs-lookup"><span data-stu-id="46abc-117">Object and Collection Initializers</span></span>
+
+<span data-ttu-id="46abc-118">Objekt- und Auflistungsinitialisierer ermöglichen das Initialisieren von Objekten ohne expliziten Aufruf eines Konstruktors für das Objekt.</span><span class="sxs-lookup"><span data-stu-id="46abc-118">Object and collection initializers make it possible to initialize objects without explicitly calling a constructor for the object.</span></span> <span data-ttu-id="46abc-119">Initialisierer werden in der Regel in Abfrageausdrücken verwendet, wenn sie die Quelldaten in einen neuen Datentyp projizieren.</span><span class="sxs-lookup"><span data-stu-id="46abc-119">Initializers are typically used in query expressions when they project the source data into a new data type.</span></span> <span data-ttu-id="46abc-120">In einer Klasse namens `Customer` mit öffentlichen `Name`- und `Phone`-Eigenschaften können Objektinitialisierer wie im folgenden Code verwendet werden:</span><span class="sxs-lookup"><span data-stu-id="46abc-120">Assuming a class named `Customer` with public `Name` and `Phone` properties, the object initializer can be used as in the following code:</span></span>
+
+```csharp
+Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };
+```
+
+<span data-ttu-id="46abc-121">Wenn Sie mit der `Customer`-Klasse fortfahren, gehen Sie davon aus, dass eine Datenquelle namens `IncomingOrders` vorhanden ist, und dass für jede Bestellung mit einem großen `OrderSize`-Wert ein neues `Customer`-Element basierend auf dieser Bestellung erstellt werden soll.</span><span class="sxs-lookup"><span data-stu-id="46abc-121">Continuing with our `Customer` class, assume that there is a data source called `IncomingOrders`, and that for each order with a large `OrderSize`, we would like to create a new `Customer` based off of that order.</span></span> <span data-ttu-id="46abc-122">Eine LINQ-Abfrage kann auf dieser Datenquelle ausgeführt werden und verwendet die Objektinitialisierung, um eine Auflistung zu füllen:</span><span class="sxs-lookup"><span data-stu-id="46abc-122">A LINQ query can be executed on this data source and use object initialization to fill a collection:</span></span>
+
 ```csharp
 var newLargeOrderCustomers = from o in IncomingOrders
                             where o.OrderSize > 5
                             select new Customer { Name = o.Name, Phone = o.Phone };
 ```
-<span data-ttu-id="7e4d2-123">Die Datenquelle kann mehr Eigenschaften im Hintergrund haben als die Klasse `Customer`, z.B. `OrderSize`, aber bei der Objektinitialisierung werden die von der Abfrage zurückgegebenen Daten in den gewünschten Datentyp umgewandelt. Wählen Sie die Daten aus, die für Ihre Klasse relevant sind.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-123">The data source may have more properties lying under the hood than the `Customer` class such as `OrderSize`, but with object initialization, the data returned from the query is molded into the desired data type; we choose the data that is relevant to our class.</span></span> <span data-ttu-id="7e4d2-124">Daher verfügen wir jetzt über ein `IEnumerable`-Element, das mit den neuen gewünschten `Customer`-Informationen gefüllt ist.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-124">As a result, we now have an `IEnumerable` filled with the new `Customer`s we wanted.</span></span> <span data-ttu-id="7e4d2-125">Das oben Geschilderte kann auch in der Methodensyntax von LINQ geschrieben werden:</span><span class="sxs-lookup"><span data-stu-id="7e4d2-125">The above can also be written in LINQ's method syntax:</span></span>
+
+<span data-ttu-id="46abc-123">Die Datenquelle kann mehr Eigenschaften im Hintergrund haben als die Klasse `Customer`, z.B. `OrderSize`, aber bei der Objektinitialisierung werden die von der Abfrage zurückgegebenen Daten in den gewünschten Datentyp umgewandelt. Wählen Sie die Daten aus, die für Ihre Klasse relevant sind.</span><span class="sxs-lookup"><span data-stu-id="46abc-123">The data source may have more properties lying under the hood than the `Customer` class such as `OrderSize`, but with object initialization, the data returned from the query is molded into the desired data type; we choose the data that is relevant to our class.</span></span> <span data-ttu-id="46abc-124">Daher verfügen wir jetzt über ein `IEnumerable`-Element, das mit den neuen gewünschten `Customer`-Informationen gefüllt ist.</span><span class="sxs-lookup"><span data-stu-id="46abc-124">As a result, we now have an `IEnumerable` filled with the new `Customer`s we wanted.</span></span> <span data-ttu-id="46abc-125">Das oben Geschilderte kann auch in der Methodensyntax von LINQ geschrieben werden:</span><span class="sxs-lookup"><span data-stu-id="46abc-125">The above can also be written in LINQ's method syntax:</span></span>
+
 ```csharp
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
 ```
- <span data-ttu-id="7e4d2-126">Weitere Informationen finden Sie unter:</span><span class="sxs-lookup"><span data-stu-id="7e4d2-126">For more information, see:</span></span>
- 
- - [<span data-ttu-id="7e4d2-127">Objekt- und Auflistungsinitialisierer</span><span class="sxs-lookup"><span data-stu-id="7e4d2-127">Object and Collection Initializers</span></span>](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
- - [<span data-ttu-id="7e4d2-128">Abfrageausdruckssyntax für Standardabfrageoperatoren</span><span class="sxs-lookup"><span data-stu-id="7e4d2-128">Query Expression Syntax for Standard Query Operators</span></span>](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+<span data-ttu-id="46abc-126">Weitere Informationen finden Sie unter:</span><span class="sxs-lookup"><span data-stu-id="46abc-126">For more information, see:</span></span>
 
-## <a name="anonymous-types"></a><span data-ttu-id="7e4d2-129">Anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="7e4d2-129">Anonymous Types</span></span>  
- <span data-ttu-id="7e4d2-130">Ein anonymer Typ wird vom Compiler erstellt, und der Typname ist nur für den Compiler verfügbar.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-130">An anonymous type is constructed by the compiler and the type name is only available to the compiler.</span></span> <span data-ttu-id="7e4d2-131">Anonyme Typen stellen eine bequeme Möglichkeit zum vorübergehenden Gruppieren einer Reihe von Eigenschaften in einem Abfrageergebnis bereit, ohne einen separaten benannten Typ definieren zu müssen.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-131">Anonymous types provide a convenient way to group a set of properties temporarily in a query result without having to define a separate named type.</span></span> <span data-ttu-id="7e4d2-132">Anonyme Typen werden mit einem neuen Ausdruck und einem Objektinitialisierer initialisiert, wie hier gezeigt:</span><span class="sxs-lookup"><span data-stu-id="7e4d2-132">Anonymous types are initialized with a new expression and an object initializer, as shown here:</span></span>  
-  
+- [<span data-ttu-id="46abc-127">Objekt- und Auflistungsinitialisierer</span><span class="sxs-lookup"><span data-stu-id="46abc-127">Object and Collection Initializers</span></span>](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+
+- [<span data-ttu-id="46abc-128">Abfrageausdruckssyntax für Standardabfrageoperatoren</span><span class="sxs-lookup"><span data-stu-id="46abc-128">Query Expression Syntax for Standard Query Operators</span></span>](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+
+## <a name="anonymous-types"></a><span data-ttu-id="46abc-129">Anonyme Typen</span><span class="sxs-lookup"><span data-stu-id="46abc-129">Anonymous Types</span></span>
+
+<span data-ttu-id="46abc-130">Ein anonymer Typ wird vom Compiler erstellt, und der Typname ist nur für den Compiler verfügbar.</span><span class="sxs-lookup"><span data-stu-id="46abc-130">An anonymous type is constructed by the compiler and the type name is only available to the compiler.</span></span> <span data-ttu-id="46abc-131">Anonyme Typen stellen eine bequeme Möglichkeit zum vorübergehenden Gruppieren einer Reihe von Eigenschaften in einem Abfrageergebnis bereit, ohne einen separaten benannten Typ definieren zu müssen.</span><span class="sxs-lookup"><span data-stu-id="46abc-131">Anonymous types provide a convenient way to group a set of properties temporarily in a query result without having to define a separate named type.</span></span> <span data-ttu-id="46abc-132">Anonyme Typen werden mit einem neuen Ausdruck und einem Objektinitialisierer initialisiert, wie hier gezeigt:</span><span class="sxs-lookup"><span data-stu-id="46abc-132">Anonymous types are initialized with a new expression and an object initializer, as shown here:</span></span>
+
 ```csharp
-select new {name = cust.Name, phone = cust.Phone};  
-```  
-  
- <span data-ttu-id="7e4d2-133">Weitere Informationen finden Sie unter [Anonyme Typen](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="7e4d2-133">For more information, see [Anonymous Types](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>  
-  
-## <a name="extension-methods"></a><span data-ttu-id="7e4d2-134">Erweiterungsmethoden</span><span class="sxs-lookup"><span data-stu-id="7e4d2-134">Extension Methods</span></span>  
- <span data-ttu-id="7e4d2-135">Eine Erweiterungsmethode ist eine statische Methode, die einem Typ zugeordnet werden kann, sodass sie aufgerufen werden kann, als ob es sich um eine Instanzmethode für den Typ handeln würde.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-135">An extension method is a static method that can be associated with a type, so that it can be called as if it were an instance method on the type.</span></span> <span data-ttu-id="7e4d2-136">Diese Funktion ermöglicht es Ihnen, neue Methoden zu vorhandenen Typen „hinzuzufügen“, ohne sie tatsächlich zu ändern.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-136">This feature enables you to, in effect, "add" new methods to existing types without actually modifying them.</span></span> <span data-ttu-id="7e4d2-137">Die Standardabfrageoperatoren sind eine Reihe von Erweiterungsmethoden, die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragefunktionen für jeden Typ bieten, der <xref:System.Collections.Generic.IEnumerable%601> implementiert.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-137">The standard query operators are a set of extension methods that provide [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query functionality for any type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span>  
-  
- <span data-ttu-id="7e4d2-138">Weitere Informationen finden Sie unter [Erweiterungsmethoden](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span><span class="sxs-lookup"><span data-stu-id="7e4d2-138">For more information, see [Extension Methods](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span></span>  
-  
-## <a name="lambda-expressions"></a><span data-ttu-id="7e4d2-139">Lambda-Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="7e4d2-139">Lambda Expressions</span></span>  
- <span data-ttu-id="7e4d2-140">Ein Lambdaausdruck ist eine Inlinefunktion, die den Operator => verwendet, um Eingabeparameter vom Funktionstext zu trennen, und die zur Kompilierzeit in einen Delegaten oder eine Ausdrucksbaumstruktur konvertiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-140">A lambda expression is an inline function that uses the => operator to separate input parameters from the function body and can be converted at compile time to a delegate or an expression tree.</span></span> <span data-ttu-id="7e4d2-141">In der [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Programmierung erhalten Sie Lambdaausdrücke, wenn Sie direkte Methodenaufrufe für die Standardabfrageoperatoren vornehmen.</span><span class="sxs-lookup"><span data-stu-id="7e4d2-141">In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] programming, you will encounter lambda expressions when you make direct method calls to the standard query operators.</span></span>  
-  
- <span data-ttu-id="7e4d2-142">Weitere Informationen finden Sie unter:</span><span class="sxs-lookup"><span data-stu-id="7e4d2-142">For more information, see:</span></span>  
-  
--   [<span data-ttu-id="7e4d2-143">Anonyme Funktionen</span><span class="sxs-lookup"><span data-stu-id="7e4d2-143">Anonymous Functions</span></span>](../../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)  
-  
--   [<span data-ttu-id="7e4d2-144">Lambda-Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="7e4d2-144">Lambda Expressions</span></span>](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
-  
--   [<span data-ttu-id="7e4d2-145">Ausdrucksbaumstrukturen (C#)</span><span class="sxs-lookup"><span data-stu-id="7e4d2-145">Expression Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-   
-## <a name="see-also"></a><span data-ttu-id="7e4d2-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7e4d2-146">See also</span></span>
+select new {name = cust.Name, phone = cust.Phone};
+```
 
-- [<span data-ttu-id="7e4d2-147">Language Integrated Query (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="7e4d2-147">Language-Integrated Query (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/index.md)
+<span data-ttu-id="46abc-133">Weitere Informationen finden Sie unter [Anonyme Typen](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span><span class="sxs-lookup"><span data-stu-id="46abc-133">For more information, see [Anonymous Types](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).</span></span>
+
+## <a name="extension-methods"></a><span data-ttu-id="46abc-134">Erweiterungsmethoden</span><span class="sxs-lookup"><span data-stu-id="46abc-134">Extension Methods</span></span>
+
+<span data-ttu-id="46abc-135">Eine Erweiterungsmethode ist eine statische Methode, die einem Typ zugeordnet werden kann, sodass sie aufgerufen werden kann, als ob es sich um eine Instanzmethode für den Typ handeln würde.</span><span class="sxs-lookup"><span data-stu-id="46abc-135">An extension method is a static method that can be associated with a type, so that it can be called as if it were an instance method on the type.</span></span> <span data-ttu-id="46abc-136">Diese Funktion ermöglicht es Ihnen, neue Methoden zu vorhandenen Typen „hinzuzufügen“, ohne sie tatsächlich zu ändern.</span><span class="sxs-lookup"><span data-stu-id="46abc-136">This feature enables you to, in effect, "add" new methods to existing types without actually modifying them.</span></span> <span data-ttu-id="46abc-137">Die Standardabfrageoperatoren sind eine Reihe von Erweiterungsmethoden, die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfragefunktionen für jeden Typ bieten, der <xref:System.Collections.Generic.IEnumerable%601> implementiert.</span><span class="sxs-lookup"><span data-stu-id="46abc-137">The standard query operators are a set of extension methods that provide [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query functionality for any type that implements <xref:System.Collections.Generic.IEnumerable%601>.</span></span>
+
+<span data-ttu-id="46abc-138">Weitere Informationen finden Sie unter [Erweiterungsmethoden](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span><span class="sxs-lookup"><span data-stu-id="46abc-138">For more information, see [Extension Methods](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md).</span></span>
+
+## <a name="lambda-expressions"></a><span data-ttu-id="46abc-139">Lambda-Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="46abc-139">Lambda Expressions</span></span>
+
+<span data-ttu-id="46abc-140">Ein Lambdaausdruck ist eine Inlinefunktion, die den Operator => verwendet, um Eingabeparameter vom Funktionstext zu trennen, und die zur Kompilierzeit in einen Delegaten oder eine Ausdrucksbaumstruktur konvertiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="46abc-140">A lambda expression is an inline function that uses the => operator to separate input parameters from the function body and can be converted at compile time to a delegate or an expression tree.</span></span> <span data-ttu-id="46abc-141">In der [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Programmierung erhalten Sie Lambdaausdrücke, wenn Sie direkte Methodenaufrufe für die Standardabfrageoperatoren vornehmen.</span><span class="sxs-lookup"><span data-stu-id="46abc-141">In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] programming, you will encounter lambda expressions when you make direct method calls to the standard query operators.</span></span>
+
+<span data-ttu-id="46abc-142">Weitere Informationen finden Sie unter:</span><span class="sxs-lookup"><span data-stu-id="46abc-142">For more information, see:</span></span>
+
+- [<span data-ttu-id="46abc-143">Anonyme Funktionen</span><span class="sxs-lookup"><span data-stu-id="46abc-143">Anonymous Functions</span></span>](../../../../csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+
+- [<span data-ttu-id="46abc-144">Lambda-Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="46abc-144">Lambda Expressions</span></span>](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+
+- [<span data-ttu-id="46abc-145">Ausdrucksbaumstrukturen (C#)</span><span class="sxs-lookup"><span data-stu-id="46abc-145">Expression Trees (C#)</span></span>](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
+
+## <a name="see-also"></a><span data-ttu-id="46abc-146">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="46abc-146">See also</span></span>
+
+- [<span data-ttu-id="46abc-147">Language Integrated Query (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="46abc-147">Language-Integrated Query (LINQ) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/index.md)
