@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
-ms.openlocfilehash: a36f4a6f01c4e11429fda3a3022b4092e98db6cf
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 90fd7332242ed58d7716e248248e2c06a6ba023f
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212208"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185739"
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
 
@@ -254,12 +254,12 @@ Wenn Sie den aktuellen Thread blockieren, um auf den Abschluss einer Aufgabe zu 
 
 Machen Sie sich nicht abhängig vom Zustand globaler Objekte oder der Ausführung bestimmter Methoden. Seien Sie stattdessen nur abhängig von Rückgabewerten der Methoden. Warum?
 
-  * Code wird leichter verständlich sein.
-  * Code wird leichter zu testen sein.
-  * Das Kombinieren von asynchronem und synchronem Code ist wesentlich einfacher.
-  * Racebedingungen können in der Regel ganz vermieden werden.
-  * Je nach Rückgabewerten ist das Koordinieren von asynchronem Code einfach.
-  * (Bonus) funktioniert hervorragend mit Abhängigkeitsinjektion.
+* Code wird leichter verständlich sein.
+* Code wird leichter zu testen sein.
+* Das Kombinieren von asynchronem und synchronem Code ist wesentlich einfacher.
+* Racebedingungen können in der Regel ganz vermieden werden.
+* Je nach Rückgabewerten ist das Koordinieren von asynchronem Code einfach.
+* (Bonus) funktioniert hervorragend mit Abhängigkeitsinjektion.
 
 Ein empfohlenes Ziel ist das vollständige oder nahezu vollständige Erreichen [referenzieller Transparenz](https://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29) in Ihrem Code. Dies führt zu einer sehr vorhersagbaren, getesteten und verwaltbaren Codebasis.
 

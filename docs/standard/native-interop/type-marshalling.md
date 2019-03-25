@@ -4,12 +4,12 @@ description: Erfahren Sie, wie .NET Ihre Strukturen in eine native Darstellung m
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2c62581d34e77f208b7764f955dfa37613615ee4
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b4846f2e6cd945a25ec6a747c9038d48fe115559
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411388"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185414"
 ---
 # <a name="type-marshalling"></a>Marshallen von Typen
 
@@ -38,8 +38,8 @@ Die erste Tabelle beschreibt die Zuordnungen für verschiedene Typen, für die d
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | Entweder `char` oder `char16_t`, je nach `CharSet` von P/Invoke oder der Struktur. Informationen dazu finden Sie in der [Dokumentation zum Zeichensatz](/.charset.md). |
-| `string`  | Entweder `char*` oder `char16_t*`, je nach `CharSet` von P/Invoke oder der Struktur. Informationen dazu finden Sie in der [Dokumentation zum Zeichensatz](/.charset.md). |
+| `char`    | Entweder `char` oder `char16_t`, je nach `CharSet` von P/Invoke oder der Struktur. Informationen dazu finden Sie in der [Dokumentation zum Zeichensatz](charset.md). |
+| `string`  | Entweder `char*` oder `char16_t*`, je nach `CharSet` von P/Invoke oder der Struktur. Informationen dazu finden Sie in der [Dokumentation zum Zeichensatz](charset.md). |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
 | .NET-Zeigertypen (z.B. `void*`)  | `void*` |
@@ -73,7 +73,7 @@ Für einige Typen ist das Marshalling nur als Parameter möglich, nicht als Feld
 
 | .NET-Typ | Nativer Typ (nur Parameter) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | Entweder `char*` oder `char16_t*`, je nach `CharSet` von P/Invoke.  Informationen dazu finden Sie in der [Dokumentation zum Zeichensatz](/.charset.md). |
+| `System.Text.StringBuilder` | Entweder `char*` oder `char16_t*`, je nach `CharSet` von P/Invoke.  Informationen dazu finden Sie in der [Dokumentation zum Zeichensatz](charset.md). |
 | `System.ArgIterator` | `va_list` (nur auf Windows x86/x64/arm64) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
