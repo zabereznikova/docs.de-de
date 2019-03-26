@@ -10,8 +10,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57714774"
 ---
 # <a name="transaction-activities-in-wf"></a>Transaktionsaktivitäten in WF
-
-  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] verfügt über mehrere vom System bereitgestellte Aktivitäten, um Transaktionen, Kompensationen und Abbrüche zu modellieren. Diese Programmiermodelle ermöglichen es dem Workflow, sich weiter vorwärts zu bewegen, falls Änderungen in der Geschäftslogik auftreten oder eine Fehlerbehandlung ausgeführt wird. Weitere Informationen zu Transaktionen, kompensationen und Abbrüche finden Sie unter [Transaktionen](workflow-transactions.md), [Kompensierung](compensation.md), und [Abbruch](modeling-cancellation-behavior-in-workflows.md).  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] verfügt über mehrere vom System bereitgestellte Aktivitäten, um Transaktionen, Kompensationen und Abbrüche zu modellieren. Diese Programmiermodelle ermöglichen es dem Workflow, sich weiter vorwärts zu bewegen, falls Änderungen in der Geschäftslogik auftreten oder eine Fehlerbehandlung ausgeführt wird. Weitere Informationen zu Transaktionen, kompensationen und Abbrüche finden Sie unter [Transaktionen](workflow-transactions.md), [Kompensierung](compensation.md), und [Abbruch](modeling-cancellation-behavior-in-workflows.md).  
   
 ## <a name="transaction-activities"></a>Transaktionsaktivitäten  
   

@@ -57,8 +57,7 @@ End Class
 ## <a name="remarks"></a>Hinweise  
  Ein `Class` -Anweisung definiert einen neuen Datentyp. Ein *Klasse* ist ein wesentlicher Baustein der objektorientierten Programmierung (OOP). Weitere Informationen finden Sie unter [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
- 
-  `Class` kann nur auf Namespace- oder Modulebene verwendet werden. Dies bedeutet, dass die *Deklarationskontext* für eine Klasse, eine Quelldatei, Namespace, Klasse, Struktur, Modul oder Schnittstelle sein muss, und eine Prozedur oder der Block nicht möglich. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ `Class` kann nur auf Namespace- oder Modulebene verwendet werden. Dies bedeutet, dass die *Deklarationskontext* für eine Klasse, eine Quelldatei, Namespace, Klasse, Struktur, Modul oder Schnittstelle sein muss, und eine Prozedur oder der Block nicht möglich. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
  Jede Instanz einer Klasse verfügt über eine Lebensdauer, die unabhängig von allen anderen Instanzen. Diese Lebensdauer beginnt bei der Erstellung von einem [neuer Operator](../../../visual-basic/language-reference/operators/new-operator.md) Klausel oder eine Funktion, wie z. B. <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>. Sie endet, wenn alle Variablen, zeigen auf die Instanz, dass festgelegt wurden [nichts](../../../visual-basic/language-reference/nothing.md) oder Instanzen anderer Klassen.  
   

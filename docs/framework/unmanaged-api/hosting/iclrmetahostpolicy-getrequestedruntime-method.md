@@ -80,9 +80,7 @@ Diese Methode gibt die folgenden spezifischen HRESULTs sowie HRESULT-Fehler zur�
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|
 |E_POINTER|`pwzVersion` ist ungleich NULL, und `pcchVersion` ist gleich NULL.<br /><br /> - oder - <br /><br /> `pwzImageVersion` ist ungleich NULL, und `pcchImageVersion` ist gleich NULL.|
 |E_INVALIDARG|`dwPolicyFlags` gibt nicht `METAHOST_POLICY_HIGHCOMPAT` an.|
-|ERROR_INSUFFICIENT_BUFFER|
-  `pwzVersion` ist nicht genügend Arbeitsspeicher zugewiesen.<br /><br /> - oder - <br /><br /> 
-  `pwzImageVersion` ist nicht genügend Arbeitsspeicher zugewiesen.|
+|ERROR_INSUFFICIENT_BUFFER|`pwzVersion` ist nicht genügend Arbeitsspeicher zugewiesen.<br /><br /> - oder - <br /><br /> `pwzImageVersion` ist nicht genügend Arbeitsspeicher zugewiesen.|
 |CLR_E_SHIM_RUNTIMELOAD|`dwPolicyFlags` enthält METAHOST_POLICY_APPLY_UPGRADE_POLICY und sowohl `pwzVersion` als auch `pcchVersion` sind gleich NULL.|
 
 ## <a name="requirements"></a>Anforderungen

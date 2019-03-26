@@ -1,5 +1,5 @@
 ---
-title: Pfad "<pathname>' wurde nicht gefunden.
+title: Pfad '<pathname>' wurde nicht gefunden.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_PathNotFound1
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58041446"
 ---
-# <a name="path-pathname-not-found"></a>Pfad "\<Pfadname >' wurde nicht gefunden.
+# <a name="path-pathname-not-found"></a>Pfad '\<Pfadname >' wurde nicht gefunden.
 Das Betriebssystem kann den angegebenen Pfad während eines Datei- oder Datenträgerzugriffs nicht finden. Der Pfad zu einer Datei muss die Laufwerksangabe sowie die Verzeichnisse und Unterverzeichnisse enthalten, die durchlaufen werden müssen, um zu der Datei zu gelangen. Ein Pfad kann relativ oder absolut sein.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

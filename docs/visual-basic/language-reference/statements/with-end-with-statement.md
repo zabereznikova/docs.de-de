@@ -54,8 +54,7 @@ End With
   
  Der Datentyp `objectExpression` kann ein beliebiger Klassen- oder Strukturtyp und sogar ein elementarer Visual Basic-Typ sein, z. B. `Integer`.  Wenn `objectExpression` kein Objekt liefert, können Sie nur die Werte der Member lesen oder Methoden aufrufen; Sie erhalten eine Fehlermeldung, wenn Sie versuchen, Werte zu Membern einer Struktur zuzuweisen, die in einer `With...End With`-Anweisung verwendet wird.  Denselben Fehler würden Sie erhalten, wenn Sie eine Methode aufrufen, die eine Struktur zurückgegeben hat und unmittelbar auf einen Wert zugreifen und diesen einem Member des Funktionsergebnisses zuweisen, z. B. `GetAPoint().x = 1`.  Das Problem in beiden Fällen besteht darin, dass die Struktur nur in der Aufrufliste vorhanden ist und es in solchen Fällen keine Möglichkeit für einen Member einer geänderten Struktur gibt, Daten so an eine Position zu schreiben, dass die Änderung durch anderen Code im Programm berücksichtigt werden kann.  
   
- 
-  `objectExpression` wird nach Eintragung in den Block einmal ausgewertet. Es gibt keine Möglichkeit, `objectExpression` aus dem `With`-Block heraus neu zuzuweisen.  
+ `objectExpression` wird nach Eintragung in den Block einmal ausgewertet. Es gibt keine Möglichkeit, `objectExpression` aus dem `With`-Block heraus neu zuzuweisen.  
   
  In einem `With`-Block können Sie nur auf die Methoden und Eigenschaften des angegebenen Objekts zugreifen, ohne sie zu qualifizieren. Sie können zwar auch Methoden und Eigenschaften anderer Objekte verwenden, diese müssen Sie jedoch mit dem Objektnamen qualifizieren.  
   

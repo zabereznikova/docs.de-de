@@ -145,9 +145,7 @@ public class LineItem
 }
 ```
 
-
-  <xref:System.Runtime.Serialization.DataContractAttribute> gibt an, dass null oder mehr Felder oder Eigenschaften eines Typs serialisiert werden sollen. <xref:System.Runtime.Serialization.DataMemberAttribute> gibt dagegen an, dass ein bestimmtes Feld oder eine Eigenschaft serialisiert werden soll. <xref:System.Runtime.Serialization.DataContractAttribute> kann für eine Klasse oder Struktur übernommen werden. 
-  <xref:System.Runtime.Serialization.DataMemberAttribute> kann auf ein Feld oder eine Eigenschaft angewendet werden, und die Felder und Eigenschaften, für die das Attribut übernommen wird, können entweder öffentlich oder privat sein. Instanzen von Typen, die die <xref:System.Runtime.Serialization.DataContractAttribute> angewendet werden, um diese bezeichnet als Datenverträge in WCF. Sie werden mit <xref:System.Runtime.Serialization.DataContractSerializer> in XML serialisiert.
+<xref:System.Runtime.Serialization.DataContractAttribute> gibt an, dass null oder mehr Felder oder Eigenschaften eines Typs serialisiert werden sollen. <xref:System.Runtime.Serialization.DataMemberAttribute> gibt dagegen an, dass ein bestimmtes Feld oder eine Eigenschaft serialisiert werden soll. <xref:System.Runtime.Serialization.DataContractAttribute> kann für eine Klasse oder Struktur übernommen werden. <xref:System.Runtime.Serialization.DataMemberAttribute> kann auf ein Feld oder eine Eigenschaft angewendet werden, und die Felder und Eigenschaften, für die das Attribut übernommen wird, können entweder öffentlich oder privat sein. Instanzen von Typen, die die <xref:System.Runtime.Serialization.DataContractAttribute> angewendet werden, um diese bezeichnet als Datenverträge in WCF. Sie werden mit <xref:System.Runtime.Serialization.DataContractSerializer> in XML serialisiert.
 
 Nachfolgend finden Sie eine Liste der wichtigen Unterschiede zwischen der Verwendung von <xref:System.Runtime.Serialization.DataContractSerializer> und der Verwendung von <xref:System.Xml.Serialization.XmlSerializer> sowie der verschiedenen Attribute des <xref:System.Xml.Serialization>-Namespace.
 
@@ -180,8 +178,7 @@ Nachfolgend finden Sie eine Liste der wichtigen Unterschiede zwischen der Verwen
 
 - Da <xref:System.Runtime.Serialization.DataContractSerializer> auf die nicht öffentlichen Member eines Typs zugreifen kann, ist im Gegensatz zu <xref:System.Xml.Serialization.XmlSerializer> zudem volle Vertrauenswürdigkeit erforderlich. Die Codezugriffsberechtigung volle Vertrauenswürdigkeit ermöglicht vollständigen Zugriff auf alle Ressourcen auf einem Computer, der mit den Anmeldeinformationen, unter denen der Code ausgeführt wird, zugegriffen werden kann. Diese Option sollte mit Vorsicht verwendet werden, wie voll vertrauenswürdiger Code auf alle Ressourcen auf dem Computer zugreift.
 
-- 
-  <xref:System.Runtime.Serialization.DataContractSerializer> bietet einige Unterstützung für Versionsverwaltung:
+- <xref:System.Runtime.Serialization.DataContractSerializer> bietet einige Unterstützung für Versionsverwaltung:
 
     - <xref:System.Runtime.Serialization.DataMemberAttribute> verfügt über eine <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>-Eigenschaft, der der Wert false für Member zugewiesen werden kann, die neuen Versionen eines Datenvertrags hinzugefügt werden, die in früheren Versionen noch nicht vorhanden waren. Dadurch wird Anwendungen mit der neueren Version des Vertrags das Verarbeiten früherer Versionen ermöglicht.
 
@@ -207,8 +204,7 @@ public class LineItem
 Das Windows Software Development Kit (SDK) enthält ein Befehlszeilentool namens der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Wie Sie das Tool xsd.exe mit ASP.NET-Webdiensten verwendet Svcutil.exe kann Definitionen von .NET-Datentypen aus XML-Schema generieren. Bei den Typen handelt es sich um Datenverträge, sofern <xref:System.Runtime.Serialization.DataContractSerializer> XML in dem vom XML-Schema definierten Format ausgeben kann; andernfalls sind sie für die Serialisierung mithilfe von <xref:System.Xml.Serialization.XmlSerializer> vorgesehen. Svcutil.exe kann auch ein XML-Schema aus Datenverträgen generieren, mit dessen `dataContractOnly` wechseln.
 
 > [!NOTE]
-> Obwohl verwenden ASP.NET-Webdienste die <xref:System.Xml.Serialization.XmlSerializer>, und WCF-ASP.NET-Kompatibilitätsmodus stellt WCF-Dienste, die das Verhalten von ASP.NET-Webdiensten zu imitieren, die ASP.NET-Kompatibilitätsoption schränkt nicht ein, eine mit der <xref:System.Xml.Serialization.XmlSerializer>. 
-  <xref:System.Runtime.Serialization.DataContractSerializer> kann nach wie vor verwendet werden, während die Dienste im ASP.NET-Kompatibilitätsmodus ausgeführt werden.
+> Obwohl verwenden ASP.NET-Webdienste die <xref:System.Xml.Serialization.XmlSerializer>, und WCF-ASP.NET-Kompatibilitätsmodus stellt WCF-Dienste, die das Verhalten von ASP.NET-Webdiensten zu imitieren, die ASP.NET-Kompatibilitätsoption schränkt nicht ein, eine mit der <xref:System.Xml.Serialization.XmlSerializer>. <xref:System.Runtime.Serialization.DataContractSerializer> kann nach wie vor verwendet werden, während die Dienste im ASP.NET-Kompatibilitätsmodus ausgeführt werden.
 
 ## <a name="service-development"></a>Dienstentwicklung
 

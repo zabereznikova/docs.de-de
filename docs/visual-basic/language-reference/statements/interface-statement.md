@@ -61,8 +61,7 @@ End Interface
   
  Eine Klasse oder Struktur implementiert die Schnittstelle, indem Sie Code für jeden von der Schnittstelle definierten Member angeben. Schließlich, wenn die Anwendung eine Instanz von dieser Klasse oder Struktur erstellt, ein Objekt vorhanden ist und wird im Arbeitsspeicher ausgeführt. Weitere Informationen finden Sie unter [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) und [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- 
-  `Interface` kann nur auf Namespace- oder Modulebene verwendet werden. Dies bedeutet, dass die *Deklarationskontext* für eine Schnittstelle, eine Quelldatei, Namespace, Klasse, Struktur, Modul oder Schnittstelle sein muss, und eine Prozedur oder der Block nicht möglich. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ `Interface` kann nur auf Namespace- oder Modulebene verwendet werden. Dies bedeutet, dass die *Deklarationskontext* für eine Schnittstelle, eine Quelldatei, Namespace, Klasse, Struktur, Modul oder Schnittstelle sein muss, und eine Prozedur oder der Block nicht möglich. Weitere Informationen finden Sie unter [Deklarationskontexte und Standardzugriffsebenen](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
  Der Standard für Schnittstellen [Friend](../../../visual-basic/language-reference/modifiers/friend.md) Zugriff. Sie können ihre Zugriffsebenen mit den Zugriffsmodifizierern anpassen. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
