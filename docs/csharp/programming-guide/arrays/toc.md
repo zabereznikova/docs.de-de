@@ -1,8 +1,0 @@
-# [Arrays](index.md)
-## [Arrays als Objekte](arrays-as-objects.md)
-## [Eindimensionale Arrays](single-dimensional-arrays.md)
-## [Mehrdimensionale Arrays](multidimensional-arrays.md)
-## [Verzweigte Arrays](jagged-arrays.md)
-## [Verwenden von foreach mit Arrays](using-foreach-with-arrays.md)
-## [Übergeben von Arrays als Argumente](passing-arrays-as-arguments.md)
-## [Implizit typisierte Arrays](implicitly-typed-arrays.md)

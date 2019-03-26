@@ -1,7 +1,0 @@
-# [Kovarianz und Kontravarianz](index.md)
-## [Varianz in generischen Schnittstellen](variance-in-generic-interfaces.md)
-### [Erstellen von varianten generischen Schnittstellen](creating-variant-generic-interfaces.md)
-### [Verwenden von Varianz in Schnittstellen für generische Auflistungen](using-variance-in-interfaces-for-generic-collections.md)
-## [Varianz bei Delegaten](variance-in-delegates.md)
-### [Verwenden von Varianz bei Delegaten](using-variance-in-delegates.md)
-### [Verwenden von Varianz für die generischen Delegaten Func und Action](using-variance-for-func-and-action-generic-delegates.md)

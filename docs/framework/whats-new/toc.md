@@ -1,5 +1,0 @@
-# [Neuigkeiten](index.md)
-## [Neuerungen bei der Barrierefreiheit](whats-new-in-accessibility.md) 
-## [Veraltete Elemente in der Klassenbibliothek](whats-obsolete.md)
-### [Veraltete Typen](obsolete-types.md)
-### [Veraltete Member](obsolete-members.md)
