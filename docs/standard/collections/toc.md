@@ -1,8 +1,0 @@
-# [Auflistungen und Datenstrukturen](index.md)
-## [Auswählen einer Auflistungsklasse](selecting-a-collection-class.md)
-## [Häufig verwendete Auflistungstypen](commonly-used-collection-types.md)
-## [Verwenden von generischen Auflistungen](when-to-use-generic-collections.md)
-## [Vergleiche und Sortierungen innerhalb von Auflistungen](comparisons-and-sorts-within-collections.md)
-## [Sortierte Auflistungstypen](sorted-collection-types.md)
-## [Hashtable-Auflistungstyp und Dictionary-Auflistungstyp](hashtable-and-dictionary-collection-types.md)
-## [threadsichere Auflistungen](thread-safe/)

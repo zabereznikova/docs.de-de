@@ -1,5 +1,0 @@
-# [Compiler and Language Provider Settings Schema (Schema für Compiler- und Sprachanbietereinstellungen)](index.md)
-## [<System.codedom>-Element](system-codedom-element.md)
-### [<compilers>-Element](compilers-element.md)
-#### [<compiler>-Element](compiler-element.md)
-##### [<providerOption>-Element](provideroption-element.md)
