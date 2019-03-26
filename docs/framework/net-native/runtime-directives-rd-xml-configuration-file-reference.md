@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8314f34f9fe0be43e7371d29cb4b366a819807c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5ca8cf76745190bd9819dde522c34e57952cd1ca
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356103"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410458"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz
 
@@ -405,7 +405,7 @@ Die Anwendung der `Serialize`-Richtlinie auf ein Feld bewirkt die folgenden Rich
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>Die Auswirkungen der Richtlinien XmlSerializer, DataContractSerializer und DataContractJsonSerializer
 
-Im Gegensatz zur `Serialize`-Richtlinie, die für reflektionsbasierte Serialisierungsprogramme gedacht ist, werden die Richtlinien `XmlSerializer`, `DataContractSerializer` und `DataContractJsonSerializer` verwendet, um eine Reihe von Serialisierungsprogrammen zu aktivieren, die der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette bekannt sind. Diese Serialisierungsprogramme werden nicht mithilfe von Reflektion implementiert, aber der Satz von Typen, die zur Laufzeit serialisiert werden können, wird auf ähnliche Weise wie reflektierbare Typen bestimmt.
+Im Gegensatz zur `Serialize`-Richtlinie, die für reflektionsbasierte Serialisierungsprogramme gedacht ist, werden die Richtlinien <xref:System.Xml.Serialization.XmlSerializer>, <xref:System.Runtime.Serialization.DataContractSerializer> und <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> verwendet, um eine Reihe von Serialisierungsprogrammen zu aktivieren, die der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette bekannt sind. Diese Serialisierungsprogramme werden nicht mithilfe von Reflektion implementiert, aber der Satz von Typen, die zur Laufzeit serialisiert werden können, wird auf ähnliche Weise wie reflektierbare Typen bestimmt.
 
 Die Anwendung einer dieser Richtlinien auf einen Typ ermöglicht die Serialisierung des Typs mit dem entsprechenden Serialisierungsprogramm. Außerdem können alle Typen, von denen das Serialisierungsmodul statisch bestimmen kann, dass für sie Serialisierung erforderlich ist, serialisierbar sein.
 
