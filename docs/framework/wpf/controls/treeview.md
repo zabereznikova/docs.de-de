@@ -8,19 +8,19 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: d041c287fe88a2d44920848bc14cae97a70b3f0d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b353b413f7486990b6dd8ae5126809b27590ae3c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355115"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464930"
 ---
 # <a name="treeview"></a>TreeView
 Die <xref:System.Windows.Controls.TreeView> -Steuerelement zeigt Informationen in einer hierarchischen Struktur mit reduzierbaren Knoten.  
   
- Die folgende Abbildung ist ein Beispiel für eine <xref:System.Windows.Controls.TreeView> -Steuerelement, das geschachtelte <xref:System.Windows.Controls.TreeViewItem> Steuerelemente.  
+ Die folgende Abbildung ist ein Beispiel für eine <xref:System.Windows.Controls.TreeView> -Steuerelement, das geschachtelte <xref:System.Windows.Controls.TreeViewItem> Steuerelemente:  
   
- ![TreeView-Darstellung](./media/treeviewillustration.JPG "TreeViewIllustration")  
+ ![Abbildung der geschachtelte TreeViewItem-Steuerelementen.](./media/treeview/nested-treeviewitem-controls.jpg)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über TreeView](treeview-overview.md)  

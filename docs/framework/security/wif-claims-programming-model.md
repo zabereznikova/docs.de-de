@@ -3,17 +3,17 @@ title: WIF-Claims-Programmiermodell
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 543db91eaa058a87cfe579a23abb710f21ec1b85
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316505"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462811"
 ---
 # <a name="wif-claims-programming-model"></a>WIF-Claims-Programmiermodell
 Entwickler von ASP.NET und Windows Communication Foundation (WCF) verwenden normalerweise die IIdentity- und IPrincipal-Schnittstellen zum Arbeiten mit Identitätsinformationen des Benutzers. Windows Identity Foundation (WIF) wurde in .NET 4.5 integriert, sodass Ansprüche jetzt immer für jeden Prinzipal vorhanden sind, wie in der folgenden Abbildung dargestellt:
 
- ![WIF-Claims-Programmiermodell](../../../docs/framework/security/media/wifclaimsprogrammingmodel.png "WIFClaimsProgrammingModel")
+ ![Diagramm, das zeigt, das WIF-Claims-Programmiermodell.](./media/wif-claims-programming-model/wif-claims-programming-model.png)
 
  In .NET 4.5 enthält System.Security.Claims die neuen Klassen ClaimsPrincipal und ClaimsIdentity (siehe Abbildung oben). Alle Prinzipale in .NET werden nun von ClaimsPrincipal abgeleitet. Alle integrierten Identitätsklassen, z.B. FormsIdentity für ASP.NET und WindowsIdentity werden jetzt aus ClaimsIdentity abgeleitet. Auf ähnliche Weise werden alle integrierten Prinzipalklassen wie GenericPrincipal und WindowsPrincipal aus ClaimsPrincipal abgeleitet.
 
@@ -59,7 +59,7 @@ WIF unterstützt verschiedene Kombinationen von standardmäßigen Authentifizier
 |SAML 2.0|Identisch mit „SAML 1.1“.|Identisch mit „SAML 1.1 Windowskonto zugeordnet“.|
 |X509|1.  Ansprüche mit den Eigenschaften X500 distinguished Name, EmailName, DnsName, SimpleName, UpnName, UrlName, Fingerabdruck, RsaKey (dies kann mithilfe der RSACryptoServiceProvider.ExportParameters-Methode aus der X509Certificate2.PublicKey.Key-Eigenschaft extrahiert werden), DsaKey (dies kann mithilfe der DSACryptoServiceProvider.ExportParameters-Methode aus der X509Certificate2.PublicKey.Key-Eigenschaft extrahiert werden), SerialNumber aus dem X509-Zertifikat.<br />2.  AuthenticationMethod-Anspruch mit einem `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`-Wert. AuthenticationInstant-Anspruch mit dem Zeitwert, zu dem das Zertifikat im XmlSchema-DateTime-Format überprüft wurde.|1.  Er verwendet den vollqualifizierten Domänennamen des Windows-Kontos als `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`-Anspruchswert. sein.<br />2.  Ansprüche aus dem X509-Zertifikat, die Windows nicht zugeordnet sind, und Ansprüche aus dem Windows-Konto, die durch die Zuordnung des Zertifikats zu Windows abgerufen werden.|
 |UPN|1.  Ansprüche sind den Ansprüchen im Abschnitt Windows-Authentifizierung ähnlich.<br />2.  AuthenticationMethod-Anspruch mit einem `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`-Wert. Der AuthenticationInstant-Anspruch mit dem Zeitwert, zu dem das Kennwort im XmlSchema-DateTime-Format überprüft wurde.||
-|Windows (Kerberos oder NTLM)|1.  Aus dem Zugriffstoken generierte Ansprüche, beispielsweise: PrimarySID, DenyOnlyPrimarySID PrimaryGroupSID, DenyOnlyPrimaryGroupSID, GroupSID, DenyOnlySID und Name<br />2.  AuthenticationMethod mit einem `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`-Wert. Der AuthenticationInstant-Anspruch mit dem Zeitwert, zu dem das Windows-Zugangstoken im XmlSchema-DateTime-Format erstellt wurde.||
+|Windows (Kerberos oder NTLM)|1.  Ansprüche aus dem Zugriffstoken, z. B. generiert: PrimarySID, DenyOnlyPrimarySID, PrimaryGroupSID, DenyOnlyPrimaryGroupSID, GroupSID, DenyOnlySID und Name<br />2.  AuthenticationMethod mit einem `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`-Wert. Der AuthenticationInstant-Anspruch mit dem Zeitwert, zu dem das Windows-Zugangstoken im XmlSchema-DateTime-Format erstellt wurde.||
 |RSA-Schlüsselpaar|1.  Der `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa`-Anspruch mit dem Wert des RSAKeyValue.<br />2.  AuthenticationMethod-Anspruch mit einem `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature`-Wert. Der AuthenticationInstant-Anspruch mit dem Zeitwert, zu dem der RSA-Schlüssel (d.h. die Signatur wurde überprüft) im XMLSchema-DateTime-Format authentifiziert wurde.||
 
 |Authentifizierungstyp|URI, der im AuthenticationMethod-Anspruch ausgegeben wurde|

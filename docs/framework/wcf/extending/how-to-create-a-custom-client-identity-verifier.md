@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: a7107e6e0bfdb948b584b5cbd57eafc3aff1bd59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19be92acb16ffb5e98eb39ba36a406d66e58d97b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569374"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464020"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Clientidentitätsüberprüfung
 Die *Identität* Feature von Windows Communication Foundation (WCF) ermöglicht es einem Client im voraus die erwartete Identität des Diensts angeben. Bei jeder Authentifizierung eines Servers beim Client wird die Identität mit der erwarteten Identität verglichen. (Eine Erläuterung der Identität und wie es funktioniert, finden Sie unter [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  
@@ -33,7 +33,7 @@ Die *Identität* Feature von Windows Communication Foundation (WCF) ermöglicht 
      [!code-csharp[c_HowToSetCustomClientIdentity#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howtosetcustomclientidentity/cs/source.cs#7)]
      [!code-vb[c_HowToSetCustomClientIdentity#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howtosetcustomclientidentity/vb/source.vb#7)]  
   
-2.  Überschreiben Sie die <xref:System.ServiceModel.Security.IdentityVerifier.CheckAccess%2A>-Methode. Mit dieser Methode wird bestimmt, ob die Identitätsprüfung erfolgreich war oder fehlgeschlagen ist.  
+2.  Überschreiben Sie die <xref:System.ServiceModel.Security.IdentityVerifier.CheckAccess%2A> -Methode. Mit dieser Methode wird bestimmt, ob die Identitätsprüfung erfolgreich war oder fehlgeschlagen ist.  
   
 3.  Die `CheckAccess`-Methode verfügt über zwei Parameter. Der erste Parameter ist eine Instanz der <xref:System.ServiceModel.EndpointIdentity>-Klasse. Der zweite Parameter ist eine Instanz der <xref:System.IdentityModel.Policy.AuthorizationContext>-Klasse.  
   
@@ -86,5 +86,4 @@ Die *Identität* Feature von Windows Communication Foundation (WCF) ermöglicht 
 - <xref:System.ServiceModel.EndpointIdentity>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
 - [Dienstidentitätsbeispiel](../../../../docs/framework/wcf/samples/service-identity-sample.md)
-- [Autorisierungsrichtlinie](../../../../docs/framework/wcf/samples/authorization-policy.md)
 - [Autorisierungsrichtlinie](../../../../docs/framework/wcf/samples/authorization-policy.md)

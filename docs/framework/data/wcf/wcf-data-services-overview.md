@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: eb9adf5ff66a8b45bea79a9abaa139a46abb5b39
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b7e8d0842b705a2fc8897511e1b2e01441d9c6b9
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094021"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465840"
 ---
 # <a name="wcf-data-services-overview"></a>Übersicht über WCF Data Services
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht die Erstellung und Verarbeiten von Datendiensten für das Internet oder Intranet mit den [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] ermöglicht Ihnen, Ihre Daten als Ressourcen verfügbar machen, die mit URIs adressierbar sind. Dies ermöglicht Ihnen das Zugreifen auf und Ändern von Daten mit der REST (Representational State Transfer)-Semantik, insbesondere mit den Standard-HTTP-Verben GET, PUT, POST und DELETE. Dieses Thema beinhaltet eine Übersicht sowohl über die Muster als auch die Methoden, die mit [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] definiert werden, sowie über die von [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bereitgestellten Funktionen, mit denen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] in .NET Framework-basierten Anwendungen verwendet werden kann.  
@@ -53,7 +53,7 @@ ms.locfileid: "56094021"
 ## <a name="architecture-overview"></a>Architekturübersicht  
  Das folgende Diagramm veranschaulicht die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Architektur zum Verfügbarmachen von [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Feeds und zur Verwendung dieser Feeds in [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]--fähigen Clientbibliotheken:  
   
- ![WCF Data Services-Architekturdiagramm](../../../../docs/framework/data/wcf/media/astoriaservicearch.gif "AstoriaServiceArch")  
+ ![Screenshot, der einen WCF Data Services-Architekturdiagramm zeigt.](./media/wcf-data-services-overview/windows-communication-foundation-data-services-architecture.gif)  
   
 ## <a name="see-also"></a>Siehe auch
 - [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)

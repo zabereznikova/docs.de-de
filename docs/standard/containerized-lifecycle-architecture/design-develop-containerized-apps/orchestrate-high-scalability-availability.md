@@ -4,12 +4,12 @@ description: Produktionsanwendungen müssen bereitgestellt und verwaltet mit orc
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: b8c947ffc34b62204b6a370f1133111a3e2d3198
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 834e0b91a596f489c10e4eb11b0de2b5eaeb9f1c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679046"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466399"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Orchestrieren von Microservices und Anwendungen mit mehreren Containern für hohe Skalierbarkeit und Verfügbarkeit
 
@@ -115,13 +115,13 @@ Weitere Informationen finden Sie im Artikel [Teamentwicklung mit Azure Dev Leerz
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Erste Schritte mit Azure Kubernetes Service (AKS)** \
-  [*https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal*](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
+  [https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)
 
 - **Azure Dev Spaces** \
-  [*https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces*](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
+  [https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces](https://docs.microsoft.com/azure/dev-spaces/azure-dev-spaces)
 
 - **Kubernetes.** Die offizielle Website. \
-  [*https://kubernetes.io/*](https://kubernetes.io/)
+  [https://kubernetes.io/](https://kubernetes.io/)
 
 ## <a name="using-azure-service-fabric"></a>Verwenden von Azure Service Fabric
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dcaeb6d3adcd658a9844ae5cf8e758172bd7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5799ab8e827305fca565064a0ae7290c6c19eb01
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516511"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463006"
 ---
 # <a name="using-the-assert-method"></a>Verwenden der Assert-Methode
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -57,8 +57,7 @@ ms.locfileid: "54516511"
   
 -   Die Methode A ist in Assembly A enthalten, die Methode B ist in Assembly B enthalten usw.  
   
- ![](../../../docs/framework/misc/media/assert.gif "assert")  
-Verwenden von "Assert"  
+ ![Diagramm, das die Assemblys der Assert-Methode veranschaulicht.](./media/using-the-assert-method/assert-method-assemblies.gif)    
   
  Bestätigt in diesem Szenario ruft Methode A B, B ruft C, C ruft E und E ruft f Methode C, Berechtigung zum Lesen von Dateien auf Laufwerk C (Berechtigung P1) und Methode E fordert die Berechtigung zum Lesen von TXT-Dateien auf Laufwerk C (Berechtigung P1A). Wenn die Forderung in F zur Laufzeit gefunden wird, wurde ein Stackwalk ausgeführt wird, um die Berechtigungen aller Aufrufer von F, überprüfen E. E ab Berechtigung P1A erteilt der Stackwalk fortgesetzt wird, um die Berechtigungen von C zu untersuchen, in dem die Assertion für C erkannt wird. Da die geforderte Berechtigung (P1A) eine Teilmenge der über "Assert" bereitgestellten Berechtigung (P1) darstellt, wird der Stackwalk beendet, und die Sicherheitsüberprüfung wird automatisch erfolgreich abgeschlossen. Es spielt keine Rolle, dass den Assemblys A und B die Berechtigung P1A nicht erteilt wurde. Durch die Assertion von P1 gewährleistet Methode C, dass ihre Aufrufer auf die von P1 geschützte Ressource zugreifen können, selbst wenn den Aufrufern nicht die Berechtigung für den Zugriff auf diese Ressource erteilt wurde.  
   

@@ -2,12 +2,12 @@
 title: Überwachungsteilnehmer
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 934c49aaa48ecb319d55fa997aaac4eec93b54c3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 343c2eea5d8e4cb7e90f2e2344cce9f3418c25dd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711966"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462993"
 ---
 # <a name="tracking-participants"></a>Überwachungsteilnehmer
 Nachverfolgungsteilnehmer sind Erweiterungspunkte, über die ein Workflowentwickler auf <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A>-Objekte zugreifen und sie verarbeiten kann. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] enthält einen standardmäßigen Überwachungsteilnehmer, der Überwachungsdatensätze als ETW (Ereignisablaufverfolgung für Windows)-Ereignisse schreibt. Wenn dies nicht Ihren Anforderungen entspricht, können Sie auch einen benutzerdefinierten Überwachungsteilnehmer schreiben.  
@@ -60,7 +60,7 @@ Nachverfolgungsteilnehmer sind Erweiterungspunkte, über die ein Workflowentwick
   
  Die folgende Abbildung zeigt den Überwachungsdatenstrom über den ETW-Überwachungsteilnehmer. Sobald die Überwachungsdaten die ETW-Sitzung erreichen, kann auf unterschiedliche Weise darauf zugegriffen werden. Eine der besten Möglichkeiten für den Zugriff auf diese Ereignisse ist die Ereignisanzeige, ein häufig verwendetes Windows-Tool für die Anzeige von Protokollen und Ablaufverfolgungen von Anwendungen und Diensten.  
   
- ![Der Fluss für nachverfolgung und ETW-Nachverfolgungsanbieter](./media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![Nachverfolgen von Daten über den ETW-nachverfolgungsanbieter Datenfluss.](./media/tracking-participants/tracking-data-event-tracing-windows-provider.gif)  
   
 ## <a name="tracking-participant-event-data"></a>Ereignisdaten von Überwachungsteilnehmern  
  Ein Überwachungsteilnehmer serialisiert verfolgte Ereignisdaten in einer ETW-Sitzung jeweils im Format von einem Ereignis pro Überwachungsdatensatz.  Ein Ereignis wird innerhalb des Bereichs von 100 bis 199 durch eine ID identifiziert. Definitionen der nachverfolgungsereignis Datensätze, die von einem Überwachungsteilnehmer ausgegeben, finden Sie die [Referenz zu Nachverfolgungsereignissen](tracking-events-reference.md) Thema.  

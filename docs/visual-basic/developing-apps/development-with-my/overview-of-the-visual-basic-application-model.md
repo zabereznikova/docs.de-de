@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 16522424ecd3009cb905bacb39694189a9540318
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517382"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464098"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Übersicht über das Visual Basic-Anwendungsmodell
 Visual Basic bietet ein klar definiertes Modell zur Steuerung des Verhaltens von Windows Forms-Anwendungen: das Visual Basic-Anwendungsmodell. Dieses Modell enthält Ereignisse für die Behandlung von der Anwendung starten und Herunterfahren, als auch Ereignisse für das Abfangen von nicht behandelten Ausnahmen. Darüber hinaus Unterstützung für die Entwicklung von Einzel-Instanz-Anwendungen. Das Anwendungsmodell ist erweiterbar und, damit Entwickler, die mehr Kontrolle benötigen die überschreibbaren Methoden anpassen können.  
@@ -26,9 +26,9 @@ Visual Basic bietet ein klar definiertes Modell zur Steuerung des Verhaltens von
   
 -   Jedem nachfolgender Versuch, die die Anwendung zu starten, wenn die erste Instanz ausgeführt wird, führt zu sehr unterschiedliches Verhalten. Der nächste Versuch benachrichtigt die erste Instanz über die Befehlszeilenargumente, und klicken Sie dann sofort beendet. Die erste Instanz verarbeitet die `StartupNextInstance` Ereignis, um zu bestimmen, was die Befehlszeilenargumente der nachfolgenden Instanz wurden und weiterhin ausgeführt.  
   
-     Dieses Diagramm zeigt, wie eine nachfolgende Instanz die erste Instanz signalisiert.  
+     Dieses Diagramm zeigt, wie eine nachfolgende Instanz die erste Instanz signalisiert:  
   
-     ![Einzelne Instanz Anwendungsimage](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
+     ![Das Diagramm, das ein Bild zur einzelinstanzanwendung anzeigt.](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
   
  Verarbeiten der `StartupNextInstance` Ereignis können Sie steuern das Verhalten Ihrer Anwendung Einzel-Instanz. Microsoft Outlook wird z. B. in der Regel als Einzelinstanz-Anwendung. Wenn Outlook ausgeführt wird, und Sie versuchen, das Starten von Outlook in diesem Fall wechselt der Fokus mit der ursprünglichen Instanz, aber einer anderen Instanz ist nicht geöffnet werden.  
   

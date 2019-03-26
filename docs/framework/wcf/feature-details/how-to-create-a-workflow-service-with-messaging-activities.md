@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen eines Workflowdiensts mit Messagingaktivitäten'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: a90f525e23fcad0e46ebc378d22b8282e613643a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83e96a91348cd8f703801252109bd474df58a679
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584976"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466204"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Vorgehensweise: Erstellen eines Workflowdiensts mit Messagingaktivitäten
 In diesem Thema wird beschrieben, wie Sie mithilfe der Messagingaktivitäten einen einfachen Workflowdienst erstellen. Der Schwerpunkt des Themas liegt auf der Mechanik zum Erstellen eines Workflowdiensts. Der Dienst besteht ausschließlich aus Messagingaktivitäten. In einem realen Dienst enthält der Workflow noch viele andere Aktivitäten. Der Dienst implementiert einen Vorgang mit dem Namen "Echo", der eine Zeichenfolge verwendet und diese an den Aufrufer zurückgibt. Dieses Thema ist das erste von zwei Themen, die zusammengehören. Im nächsten Thema [so wird's gemacht: Zugreifen auf einen Dienst aus einer Workflowanwendung](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) wird erläutert, wie eine workflowanwendung erstellen, die den in diesem Thema erstellten Dienst aufrufen kann.  
@@ -22,7 +22,7 @@ In diesem Thema wird beschrieben, wie Sie mithilfe der Messagingaktivitäten ein
   
 3.  Nachdem das Projekt erstellt wurde, wird die Datei "Service1.xamlx" im Designer geöffnet. Dies ist in der folgenden Abbildung dargestellt.  
   
-     ![Im Designer angezeigte Standardworkflow](../../../../docs/framework/wcf/feature-details/media/defaultworkflowservice.JPG "DefaultWorkflowService")  
+     ![Screenshot zeigt die geöffnete Service1.xamlx-Datei im Designer.](./media/how-to-create-a-workflow-service-with-messaging-activities/default-workflow-service.jpg)  
   
      Mit der rechten Maustaste in der Aktivität, die mit der Bezeichnung **sequenzieller Dienst** , und wählen Sie **löschen**.  
   
@@ -30,37 +30,37 @@ In diesem Thema wird beschrieben, wie Sie mithilfe der Messagingaktivitäten ein
   
 1.  Wählen Sie die **Toolbox** Registerkarte auf der linken Seite des Bildschirms, um die Toolbox anzuzeigen, und klicken Sie auf das Pinsymbol, damit das Fenster geöffnet bleibt. Erweitern Sie die **Messaging** Abschnitt der Toolbox auf die messagingaktivitäten und die Vorlagen für messagingaktivitäten anzuzeigen, wie in der folgenden Abbildung dargestellt.  
   
-     ![Erweitert die Toolbox mit](../../../../docs/framework/wcf/feature-details/media/wfdesignertoolbox.JPG "WFDesignerToolbox")  
+     ![Screenshot mit der Toolbox mit Abschnitt Messaging erweitert.](./media/how-to-create-a-workflow-service-with-messaging-activities/toolbox-messaging-section.jpg)  
   
 2.  Drag & drop eine **ReceiveAndSendReply** Vorlage zum Workflow-Designer. Erstellt eine <xref:System.Activities.Statements.Sequence> Aktivität mit einer **empfangen** -Aktivität gefolgt von einer <xref:System.ServiceModel.Activities.SendReply> Aktivität, wie in der folgenden Abbildung dargestellt.  
   
-     ![ReceiveAndSendReply-Vorlage im Designer](../../../../docs/framework/wcf/feature-details/media/receiveandsendreply.JPG "ReceiveAndSendReply")  
+     ![Screenshot mit der ReceiveAndSendReply-Vorlage.](./media/how-to-create-a-workflow-service-with-messaging-activities/receiveandsendreply-template.jpg)  
   
      Beachten Sie, dass die <xref:System.ServiceModel.Activities.SendReply>-Eigenschaft der <xref:System.ServiceModel.Activities.SendReply.Request%2A>-Aktivität auf `Receive` festgelegt ist, also auf den Namen der <xref:System.ServiceModel.Activities.Receive>-Aktivität, auf die die <xref:System.ServiceModel.Activities.SendReply>-Aktivität antwortet.  
   
 3.  In der <xref:System.ServiceModel.Activities.Receive> Aktivitätstyp `Echo` in das Textfeld ein, die mit der Bezeichnung **OperationName**. Dadurch wird der Name des Vorgangs definiert, den der Dienst implementiert.  
   
-     ![Geben Sie den Namen des Vorgangs](../../../../docs/framework/wcf/feature-details/media/defineoperation.JPG "DefineOperation")  
+     ![Screenshot mit, wo Sie den Namen des Vorgangs angeben.](./media/how-to-create-a-workflow-service-with-messaging-activities/define-operation-name.jpg)  
   
 4.  Mit der <xref:System.ServiceModel.Activities.Receive> Aktivität ausgewählt haben, öffnen Sie das Fenster "Eigenschaften", wenn nicht bereits geöffnet, indem Sie auf die **Ansicht** Menü und auswählen **Fenster "Eigenschaften"**. In der **Fenster "Eigenschaften"** einen Bildlauf nach unten, bis Sie sehen **CanCreateInstance** , und klicken Sie auf das Kontrollkästchen, wie in der folgenden Abbildung dargestellt. Mit dieser Einstellung wird es dem Workflowdiensthost ermöglicht, (bei Bedarf) eine neue Instanz des Diensts zu erstellen, wenn eine Meldung empfangen wird.  
   
-     ![CanCreateInstance-Eigenschaft](../../../../docs/framework/wcf/feature-details/media/cancreateinstance.JPG "CanCreateInstance")  
+     ![Screenshot mit der CanCreateInstance-Eigenschaft.](./media/how-to-create-a-workflow-service-with-messaging-activities/cancreateinstance-property.jpg)  
   
 5.  Wählen Sie die <xref:System.Activities.Statements.Sequence> -Aktivität, und klicken Sie auf die **Variablen** Schaltfläche in der unteren linken Ecke des Designers. Der Variablen-Editor wird angezeigt. Klicken Sie auf die **Variable erstellen** Link, um eine Variable zum Speichern der Zeichenfolge gesendet, um den Vorgang hinzuzufügen. Benennen Sie die Variable `msg` und legen Sie dessen **Variable** Geben Sie in eine Zeichenfolge, wie in der folgenden Abbildung gezeigt.  
   
-     ![Fügen Sie eine Variable](../../../../docs/framework/wcf/feature-details/media/addvariable.JPG "AddVariable")  
+     ![Screenshot, der zeigt, wie Sie eine Variable hinzuzufügen.](./media/how-to-create-a-workflow-service-with-messaging-activities/add-variable-msg-string.jpg)  
   
      Klicken Sie auf die **Variablen** Schaltfläche erneut aus, um den Variablen-Editor zu schließen.  
   
 6.  Klicken Sie auf die **definieren...** -Link in der **Content** Textfeld in die <xref:System.ServiceModel.Activities.Receive> Aktivität zum Anzeigen der **Inhaltsdefinition** Dialogfeld. Wählen Sie die **Parameter** Optionsfeld, klicken Sie auf die **hinzufügen neuen Parameter** verknüpfen, geben Sie `inMsg` in die **Namen** wählen Sie im Text **Zeichenfolge**in die **Typ** Dropdown-Listenfeld, und geben `msg` in die **zuordnen zu** Textfeld wie in der folgenden Abbildung dargestellt.  
   
-     ![Hinzufügen von Parameterinhalt](../../../../docs/framework/wcf/feature-details/media/parameterscontent.jpg "ParametersContent")  
+     ![Screenshot, der zeigt, Hinzufügen von Parametern, die Inhalt.](./media/how-to-create-a-workflow-service-with-messaging-activities/adding-parameters-content.jpg)  
   
      Dadurch wird angegeben, dass die Empfangsaktivität Zeichenfolgenparameter empfängt und dass diese Daten an die `msg`-Variable gebunden werden. Klicken Sie auf **OK** schließen die **Inhaltsdefinition** Dialogfeld.  
   
 7.  Klicken Sie auf die **definieren...**  -link in der **Content** im Feld der <xref:System.ServiceModel.Activities.SendReply> Aktivität zum Anzeigen der **Inhaltsdefinition** Dialogfeld. Wählen Sie die **Parameter** Optionsfeld, klicken Sie auf die **hinzufügen neuen Parameter** verknüpfen, geben Sie `outMsg` in die **Namen** wählen Sie im Textfeld **Zeichenfolge**in die **Typ** im Dropdown-Listenfeld und `msg` in die **Wert** Textfeld wie in der folgenden Abbildung dargestellt.  
   
-     ![Hinzufügen von Parameterinhalt](../../../../docs/framework/wcf/feature-details/media/parameterscontent2.jpg "ParametersContent2")  
+     ![Screenshot mit den OutMsg Parameter hinzufügen.](./media/how-to-create-a-workflow-service-with-messaging-activities/outmsg-parameters-content.jpg)  
   
      Dadurch wird angegeben, dass die <xref:System.ServiceModel.Activities.SendReply>-Aktivität eine Nachricht oder einen Nachrichtenvertragstyp sendet und dass die Daten an die `msg`-Variable gebunden werden. Da dies eine <xref:System.ServiceModel.Activities.SendReply>-Aktivität ist, werden die Daten von `msg` verwendet, um die von der Aktivität an den Client zurückgesendete Nachricht aufzufüllen. Klicken Sie auf **OK** schließen die **Inhaltsdefinition** Dialogfeld.  
   
@@ -75,17 +75,17 @@ In diesem Thema wird beschrieben, wie Sie mithilfe der Messagingaktivitäten ein
   
 2.  Wählen Sie die **Web** Registerkarte, und wählen Sie **bestimmte Seite** unter **Startaktion** und `Service1.xamlx` in das Textfeld ein, wie in der folgenden Abbildung dargestellt.  
   
-     ![Das Dialogfeld mit Projekteigenschaften](../../../../docs/framework/wcf/feature-details/media/projectpropertiesdlg.JPG "ProjectPropertiesDlg")  
+     ![Screenshot mit Eigenschaftendialogfeld des Projekts.](./media/how-to-create-a-workflow-service-with-messaging-activities/project-properties-dialog.jpg)  
   
      Der in "Service1.xamlx" definierte Dienst wird dann unter ASP.NET Development Server gehostet.  
   
 3.  Drücken Sie STRG+F5, um den Dienst zu starten. Das Symbol "ASP.NET Development Server" wird in der unteren rechten Ecke des Desktops angezeigt. Dies ist in der folgenden Abbildung dargestellt.  
   
-     ![Das Serversymbol ASP.NET-Entwickler](../../../../docs/framework/wcf/feature-details/media/aspnetdevservericon.JPG "ASPNETDEVServerIcon")  
+     ![Screenshot mit dem Symbol für ASP.NET Developer-Server.](./media/how-to-create-a-workflow-service-with-messaging-activities/asp-net-dev-server-icon.jpg)  
   
      Außerdem zeigt Internet Explorer für den Dienst die Hilfeseite für WCF-Dienste an.  
   
-     ![WCF-Hilfeseite](../../../../docs/framework/wcf/feature-details/media/wcfhelppate.JPG "WCFHelpPate")  
+     ![Screenshot mit der Hilfeseite von WCF-Dienst.](./media/how-to-create-a-workflow-service-with-messaging-activities/wcf-service-help-page.jpg)  
   
 4.  Fortfahren mit der [Vorgehensweise: Zugreifen auf einen Dienst aus einer Workflowanwendung](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) Thema, um einen workflowclient zu erstellen, die diesen Dienst aufruft.  
   

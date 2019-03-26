@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 93a3ec342a852c28173d3051d65c091c0adc4492
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 1fd2809af805c641484545b1c3606898e0bc3e2d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333026"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466165"
 ---
 # <a name="queues-overview"></a>Warteschlangenübersicht
 In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Warteschlangenkommunikation vorgestellt. Die folgenden Abschnitte werden in den Details wie den hier beschriebenen warteschlangenbegriffe in Windows Communication Foundation (WCF) festgelegt werden.  
@@ -74,7 +74,6 @@ In diesem Abschnitt werden die allgemeinen Begriffe und Kernbegriffe der Wartesc
  Nachdem eine Nachricht in der Zielwarteschlange eingetroffen ist, schlägt der Dienst beim Verarbeiten der Nachricht ggf. wiederholt fehl. Eine Anwendung, die im Rahmen einer Transaktion eine Nachricht aus einer Warteschlange ausliest und eine Datenbank aktualisiert, kann zum Beispiel auf das Problem treffen, dass die Verbindung zur Datenbank vorübergehend unterbrochen ist. In diesem Fall wird für die Transaktion ein Rollback ausgeführt, es wird eine neue Transaktion erstellt, und die Nachricht wird erneut aus der Warteschlange ausgelesen. Ein zweiter Versuch kann erfolgreich sein oder fehlschlagen. Es kann je nach Fehlerursache auch vorkommen, dass die Nachricht wiederholt nicht an die Anwendung zugestellt wird. In diesem Fall wird die Nachricht als "potenziell schädlich" eingestuft. Nachrichten dieser Art werden in eine Warteschlange für potenziell schädliche Nachrichten verschoben, die von einer Anwendung zur Bearbeitung von potenziell schädlichen Nachrichten gelesen werden kann.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Sitzungen und Warteschlangen](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
 - [Warteschlangen für unzustellbare Nachrichten](../../../../docs/framework/wcf/samples/dead-letter-queues.md)

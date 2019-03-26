@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 7583eab4673dc14380f18456d1713351dbc74f17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8cd2c58efb08523050e19c31201be48ae98ba03
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603117"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466230"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Intranet: Ungesicherter Client und Dienst
 Die folgende Abbildung zeigt einen einfachen Windows Communication Foundation (WCF)-Dienst entwickelt, um Informationen zu einem sicheren privaten Netzwerk zu einer WCF-Anwendung bereitstellen. Sicherheit ist nicht erforderlich, da die Daten weniger wichtig ist, das Netzwerk als grundsätzlich sicher erwartet wird, oder die Sicherheit wird durch eine Ebene unterhalb der WCF-Infrastruktur bereitgestellt.  
   
- ![Intranet: ungesicherter Client und Dienst-Szenario](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
+ ![Intranet: ungesicherter Client und Dienst-Szenario.](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|Sicherheitsmodus|Keine|  
+|Sicherheitsmodus|Keiner|  
 |Transport|TCP|  
 |Bindung|<xref:System.ServiceModel.NetTcpBinding>|  
 |Interoperabilität|Nur WCF|  
-|Authentifizierung|Keine|  
-|Integrität|Keine|  
-|Vertraulichkeit|Keine|  
+|Authentifizierung|Keiner|  
+|Integrität|Keiner|  
+|Vertraulichkeit|Keiner|  
   
 ## <a name="service"></a>Dienst  
  Der folgende Code und die folgende Konfiguration werden unabhängig voneinander ausgeführt. Führen Sie einen der folgenden Schritte aus:  
@@ -75,7 +75,7 @@ Die folgende Abbildung zeigt einen einfachen Windows Communication Foundation (W
   
 -   Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
   
--   Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Beispiel:  
+-   Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Zum Beispiel:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

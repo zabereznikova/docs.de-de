@@ -2,12 +2,12 @@
 title: WCF-Dienste und ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 837d03bbbac01be48d03c9170fc0a9a36c970da0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 80f4f9a473f223928981ee3f0c2e9f2464cbafaf
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282606"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463474"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF-Dienste und ASP.NET
 
@@ -17,7 +17,7 @@ In diesem Thema wird erläutert, hosting Windows Communication Foundation (WCF) 
 
 In IIS (Internetinformationsdienste) gehosteten WCF-Dienste können mit gespeichert werden. ASPX-Seiten und ASMX-Webdiensten innerhalb einer einzelnen, gemeinsamen Anwendungsdomäne. ASP.NET bietet allgemeine Infrastrukturdienste, wie etwa AppDomain-Verwaltung und dynamische Kompilierung für WCF und ASP.NET HTTP-Laufzeit. Die Standardkonfiguration für WCF wird Seite-an-Seite mit ASP.NET.
 
-![WCF-Dienste und ASP.NET:: Statusfreigabe](./media/hostingwcfwithaspnet.gif "HostingWCFwithASPNET")
+![Screenshot der WCF-Dienste und ASP.NET:: Freigeben des Status.](./media/wcf-services-and-aspnet/windows-communication-foundation-services-asp-dotnet-configuration.gif)
 
 Die ASP.NET HTTP-Laufzeit behandelt ASP.NET-Anforderungen, jedoch nicht Teil bei der Verarbeitung von Anforderungen, die für WCF-Diensten bestimmt ist, obwohl diese Dienste in derselben AppDomain gehostet werden, da ASP.NET Inhalt ist. Stattdessen wird das WCF-Dienstmodell fängt Nachrichten, WCF-Dienste und leitet sie durch die WCF-Transport-/Kanalstapel.
 

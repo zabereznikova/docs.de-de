@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], animations
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
-ms.openlocfilehash: e62c8288460206e7ebfbc18787bd9c2f2144a5bc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4cc7932b43f8a3c35d750f9a9020e16257867f76
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356961"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463123"
 ---
 # <a name="how-to-apply-animations-to-text"></a>Vorgehensweise: Anwenden von Animationen auf Text
 Animationen können die Anzeige und die Darstellung von Text in Ihrer Anwendung ändern. Die folgenden Beispiele verwenden die verschiedene Arten von Animationen die Anzeige von Text in beeinflusst eine <xref:System.Windows.Controls.TextBlock> Steuerelement.  
@@ -26,9 +26,8 @@ Animationen können die Anzeige und die Darstellung von Text in Ihrer Anwendung 
   
  Das folgende Diagramm zeigt die Auswirkung des der <xref:System.Windows.Controls.TextBlock> Steuerelement Änderung der Durchlässigkeit von `1.00` zu `0.00` während des 5-Sekunden-Intervalls von definiert die <xref:System.Windows.Media.Animation.Timeline.Duration%2A>.  
   
- ![Text, der sich ändernder Deckkraft von 1,00 in 0,00](./media/fadedtext01.png "FadedText01")  
-Änderung der Deckkraft des Textes von 1,00 in 0,00  
-  
+ ![Der Text sich ändernder Deckkraft von 1,00 in 0,00.](./media/how-to-apply-animations-to-text/faded-text-opacity-change.png)  
+   
  Im folgenden Beispiel wird eine <xref:System.Windows.Media.Animation.ColorAnimation> die Vordergrundfarbe des Textblocks animiert. Der Wert für die Vordergrundfarbe ändert sich im Verlauf von 5 Sekunden von einer Farbe in eine zweite Farbe. Anschließend werden die Farbwerte umgekehrt und es wird fortgefahren.  
   
  [!code-xaml[TextAnimationSample#TextAnimationSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample3)]  
