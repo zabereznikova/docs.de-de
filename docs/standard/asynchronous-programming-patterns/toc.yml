@@ -1,0 +1,58 @@
+items:
+- name: Muster für die asynchrone Programmierung
+  href: index.md
+  items:
+  - name: Aufgabenbasiertes asynchrones Muster (TAP, Task-based Asynchronous Pattern)
+    href: task-based-asynchronous-pattern-tap.md
+    items:
+    - name: Implementieren des aufgabenbasierten asynchronen Entwurfsmusters
+      href: implementing-the-task-based-asynchronous-pattern.md
+    - name: Verwenden des aufgabenbasierten asynchronen Musters
+      href: consuming-the-task-based-asynchronous-pattern.md
+    - name: Interoperabilität mit anderen asynchronen Mustern und Typen
+      href: interop-with-other-asynchronous-patterns-and-types.md
+  - name: Ereignisbasiertes asynchrones Muster (EAP)
+    href: event-based-asynchronous-pattern-eap.md
+    items:
+    - name: Übersicht über ereignisbasierte asynchrone Muster
+      href: event-based-asynchronous-pattern-overview.md
+    - name: Implementieren des ereignisbasierten asynchronen Entwurfsmusters
+      href: implementing-the-event-based-asynchronous-pattern.md
+    - name: Bewährte Verfahrensweisen für das Implementieren des ereignisbasierten asynchronen Entwurfsmusters
+      href: best-practices-for-implementing-the-event-based-asynchronous-pattern.md
+    - name: Gründe für das Implementieren des ereignisbasierten asynchronen Musters
+      href: deciding-when-to-implement-the-event-based-asynchronous-pattern.md
+    - name: 'Vorgehensweise: Implementieren von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen'
+      href: component-that-supports-the-event-based-asynchronous-pattern.md
+    - name: 'Vorgehensweise: Implementieren eines Clients des ereignisbasierten asynchronen Musters'
+      href: how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md
+    - name: 'Vorgehensweise: Verwenden von Komponenten, die das ereignisbasierte asynchrone Muster unterstützen'
+      href: how-to-use-components-that-support-the-event-based-asynchronous-pattern.md
+  - name: Asynchrones Programmiermodell (APM)
+    href: asynchronous-programming-model-apm.md
+    items:
+    - name: Aufrufen von asynchronen Methoden unter Verwendung von IAsyncResult
+      href: calling-asynchronous-methods-using-iasyncresult.md
+      items:
+      - name: Blockieren der Anwendungsausführung mithilfe von AsyncWaitHandle
+        href: blocking-application-execution-using-an-asyncwaithandle.md
+      - name: Blockieren der Anwendungsausführung durch Beenden eines asynchronen Vorgangs
+        href: blocking-application-execution-by-ending-an-async-operation.md
+      - name: Abrufen des Status einer asynchronen Operation
+        href: polling-for-the-status-of-an-asynchronous-operation.md
+      - name: Verwenden eines AsyncCallback-Delegaten zum Beenden einer asynchronen Operation
+        href: using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md
+        items:
+        - name: Verwenden von AsyncCallback-Delegat und Zustandsobjekt
+          href: using-an-asynccallback-delegate-and-state-object.md
+    - name: Asynchrone Programmierung mithilfe von Delegaten
+      href: asynchronous-programming-using-delegates.md
+      items:
+      - name: Asynchrones Aufrufen von synchronen Methoden
+        href: calling-synchronous-methods-asynchronously.md
+ms.openlocfilehash: 2f93abd762516ade20948cceb3b2a1617af04885
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469042"
