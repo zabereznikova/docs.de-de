@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: d1a93fe81b892b85f77547d48428d3d9a78d5173
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373096"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466217"
 ---
 # <a name="wpf-windows-overview"></a>Übersicht über WPF-Fenster
 Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige Anwendungen über Windows. Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigenständige [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen stellen ihre eigenen Windows über das <xref:System.Windows.Window> Klasse. In diesem Thema werden <xref:System.Windows.Window> , bevor Sie die Grundlagen der Erstellung und Verwaltung von Fenstern in eigenständigen Anwendungen behandelt.  
@@ -44,9 +44,9 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Die Fensterklasse  
- In der folgenden Abbildung werden die Bestandteile eines Fensters dargestellt.  
+ Die folgende Abbildung zeigt die Bestandteile eines Fensters an:  
   
- ![Fensterelemente](./media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![Screenshot mit Windows-Elementen.](./media/wpf-windows-overview/window-constituent-elements.png)  
   
  Ein Fenster wird in zwei Bereiche geteilt: der Nicht-Clientbereich und der Clientbereich.  
   
@@ -146,7 +146,7 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  Schließlich Öffnen des Fensters durch den Aufruf der <xref:System.Windows.Window.Show%2A> Methode das Ergebnis wird in der folgenden Abbildung dargestellt.  
   
- ![Ein durch Aufrufen von Show geöffnetes Fenster](./media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![Ein Fenster, das durch den Aufruf von Window.Show geöffnet](./media/wpf-windows-overview//window-opened-show-method.png)  
   
  Ein Fenster, das durch Aufrufen von <xref:System.Windows.Window.Show%2A> wird ein nicht modales Fenster, das bedeutet, dass die Anwendung in einem Modus ausgeführt, die Benutzern ermöglicht wird, andere Fenster in derselben Anwendung zu aktivieren.  
   
@@ -282,13 +282,13 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>Ereignisse in der Lebensdauer eines Fensters  
- In der folgenden Darstellung wird die Abfolge der wichtigsten Ereignisse in der Lebensdauer eines Fensters gezeigt.  
+ Die folgende Abbildung zeigt die Abfolge der wichtigsten Ereignisse in der Lebensdauer eines Fensters an:  
   
- ![Fensterlebensdauer](./media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![Diagramm, das Ereignisse in ein Fenster Lebensdauer angezeigt.](./media/wpf-windows-overview/window-lifetime-events.png)  
   
- Die folgende Abbildung zeigt die Abfolge der wichtigsten Ereignisse in der Lebensdauer eines Fensters, das ohne Aktivierung angezeigt wird (<xref:System.Windows.Window.ShowActivated%2A> nastaven NA hodnotu `false` , bevor das Fenster angezeigt wird).  
+ Die folgende Abbildung zeigt die Abfolge der wichtigsten Ereignisse in der Lebensdauer eines Fensters, das ohne Aktivierung angezeigt wird (<xref:System.Windows.Window.ShowActivated%2A> nastaven NA hodnotu `false` , bevor das Fenster angezeigt wird):  
   
- ![Fensterlebensdauer &#40;Window.ShowActivated &#61; False&#41;](./media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![Diagramm, das Ereignisse in der Lebensdauer eines Fensters, ohne Aktivierung angezeigt.](./media/wpf-windows-overview/window-lifetime-no-activation.png)  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>Fensterposition  
@@ -351,21 +351,21 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  **Für Höheneigenschaften:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **Für Breiteneigenschaften:**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
@@ -437,9 +437,9 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
 -   <xref:System.Windows.WindowStyle.ToolWindow>  
   
- Die Auswirkung dieser Fensterstile wird in der folgenden Abbildung veranschaulicht.  
+ Die Auswirkung dieser Fensterstile sind in der folgenden Abbildung dargestellt:  
   
- ![Fensterstile](./media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![Abbildung der Rahmenarten des Fensters.](./media/wpf-windows-overview/window-border-styles.png)  
   
  Sie können festlegen, <xref:System.Windows.Window.WindowStyle%2A> entweder [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup oder Code, da es unwahrscheinlich ist, um während der Lebensdauer eines Fensters zu ändern ist, in den meisten Fällen konfigurieren sie mithilfe von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup.  
   
@@ -448,9 +448,9 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
 #### <a name="non-rectangular-window-style"></a>Nicht rechteckiger Fensterstil  
  Es gibt auch Situationen, in dem der Rahmen, die formatiert <xref:System.Windows.Window.WindowStyle%2A> ermöglicht Ihnen, sind nicht ausreichend. Sie möchten z. B. eine Anwendung mit einem nicht rechteckigen Rahmen erstellen, wie [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] verwendet.  
   
- Betrachten Sie beispielsweise das Sprechblasenfenster in der folgenden Abbildung.  
+ Betrachten Sie beispielsweise das Sprechblasenfenster in der folgenden Abbildung aus:  
   
- ![Nicht rechteckiges Fenster](./media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![Ein Spracherkennung Blase-Fenster, das besagt der Drag & Me.](./media/wpf-windows-overview/non-rectangular-window-figure.png)  
   
  Diese Art von Fenster erstellt werden kann, indem die <xref:System.Windows.Window.WindowStyle%2A> Eigenschaft <xref:System.Windows.WindowStyle.None>, und mithilfe von speziellen zu unterstützen, die <xref:System.Windows.Window> zur Transparenz bietet.  
   
@@ -460,9 +460,10 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
 <a name="Task_Bar_Presence"></a>   
 ### <a name="task-bar-presence"></a>Vorhandensein der Taskleiste  
- Die Standarddarstellung eines Fensters umfasst eine Taskleistenschaltfläche wie in der folgenden Abbildung.  
-  
- ![Fenster mit einer Taskleistenschaltfläche](./media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+
+Die standarddarstellung eines Fensters umfasst eine Taskleistenschaltfläche wie in der folgenden Abbildung dargestellt:
+
+ ![Screenshot, der ein Fenster mit einer Taskleistenschaltfläche anzeigt.](./media/wpf-windows-overview/window-taskbar-button.png)  
   
  Einige Arten von Windows keine Taskleistenschaltfläche, z. B. Meldungsfelder und Dialogfelder (siehe [Übersicht über Dialogfelder](dialog-boxes-overview.md)). Sie können steuern, ob die Taskleistenschaltfläche für ein Fenster, durch Festlegen angezeigt wird der <xref:System.Windows.Window.ShowInTaskbar%2A> Eigenschaft (`true` standardmäßig).  
   
