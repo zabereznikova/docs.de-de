@@ -3,12 +3,12 @@ title: Bereitstellen eines Machine Learning-Modells in der ASP.NET Core-Web-API
 description: Bereitstellen eines Machine Learning-Modells zur ML.NET-Standpunktanalyse über das Internet mithilfe der ASP.NET Core-Web-API
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 07b751caff8ef0ca9a23bed68ddf88feb7b5ae4f
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 0cc13ec22b3a8805ec4aa17bf10560b2564ccd63
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57856702"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307914"
 ---
 # <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>Vorgehensweise: Bereitstellen eines Machine Learning-Modells über die ASP.NET Core-Web-API
 
@@ -96,56 +96,9 @@ public class SentimentPrediction
 }
 ```
 
-## <a name="create-prediction-service"></a>Erstellen eines Vorhersagediensts
+## <a name="register-predictionengine-for-use-in-application"></a>Registrieren von PredictionEngine zur Verwendung in der Anwendung
 
-Um die Vorhersagelogik in der gesamten Anwendung zu organisieren und erneut zu verwenden, erstellen Sie einen Vorhersagedienst.
-
-1. Erstellen Sie ein Verzeichnis mit dem Namen *Services* in Ihrem Projekt für die Dienste, die von der Anwendung verwendet werden:
-
-    Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt, und wählen Sie **Hinzufügen > Neuer Ordner** aus. Geben Sie „Services“ ein, und drücken Sie die **EINGABETASTE**.
-
-1. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das *Services*-Verzeichnis, und wählen Sie **Hinzufügen > Neues Element** aus.
-1. Wählen Sie im Dialogfeld **Neues Element hinzufügen** die Option **Klasse** aus, und ändern Sie das Feld **Name** in *PredictionService.cs*. Wählen Sie dann die Schaltfläche **Hinzufügen** aus. Die Datei *PredictionService.cs* wird im Code-Editor geöffnet. Fügen Sie am Anfang der Datei *PredictionService.cs* die folgende using-Anweisung hinzu:
-
-```csharp
-using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.ML;
-using Microsoft.ML.Core.Data;
-using SentimentAnalysisWebAPI.DataModels;
-```
-
-Entfernen Sie die vorhandene Klassendefinition, und fügen Sie den folgenden Code der Datei *PredictionService.cs* hinzu:
-
-```csharp
-public class PredictionService
-{
-    private readonly PredictionEngine<SentimentData, SentimentPrediction> _predictionEngine;
-    public PredictionService(PredictionEngine<SentimentData,SentimentPrediction> predictionEngine)
-    {
-        _predictionEngine = predictionEngine;
-    }
-
-    public string Predict(SentimentData input)
-    {
-        // Make a prediction
-        SentimentPrediction prediction = _predictionEngine.Predict(input);
-
-        //If prediction is true then it is toxic. If it is false, the it is not.
-        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
-
-        return isToxic;
-
-    }
-}
-```
-
-## <a name="register-predictions-service-for-use-in-application"></a>Registrieren des Vorhersagediensts für die Verwendung in der Anwendung
-
-Um den Vorhersagedienst in Ihrer Anwendung zu verwenden, müssen Sie ihn jedes Mal erstellen, wenn er benötigt wird. Für diesen Fall hat sich die ASP.NET Core-Abhängigkeitsinjektion bewährt.
+Sie können `PredictionEngine` verwenden, um eine einzelne Vorhersage zu treffen. Wenn Sie `PredictionEngine` in Ihrer Anwendung verwenden möchten, müssen Sie sie jedes Mal erstellen, wenn sie benötigt wird. Für diesen Fall hat sich die ASP.NET Core-Abhängigkeitsinjektion bewährt.
 
 Unter dem folgenden Link finden Sie weitere Informationen über die [Abhängigkeitsinjektion](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1).
 
@@ -161,18 +114,17 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.ML;
 using Microsoft.ML.Core.Data;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
 ```
 
-1. Fügen Sie die folgenden Codezeilen der *ConfigureServices*-Methode hinzu:
+2. Fügen Sie die folgenden Codezeilen der *ConfigureServices*-Methode hinzu:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-    services.AddSingleton<MLContext>();
-    services.AddSingleton<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
+    services.AddScoped<MLContext>();
+    services.AddScoped<PredictionEngine<SentimentData, SentimentPrediction>>((ctx) =>
     {
         MLContext mlContext = ctx.GetRequiredService<MLContext>();
         string modelFilePathName = "MLModels/sentiment_model.zip";
@@ -187,9 +139,11 @@ public void ConfigureServices(IServiceCollection services)
         // Return prediction engine
         return model.CreatePredictionEngine<SentimentData, SentimentPrediction>(mlContext);
     });
-    services.AddSingleton<PredictionService>();
 }
 ```
+
+> [!WARNING]
+> `PredictionEngine` ist nicht threadsicher. Indem Sie die Lebensdauer auf *Bereichsbezogen* festlegen, können Sie die Kosten für die Objekterstellung beschränken. Objekte vom Typ *Bereichsbezogen* sind innerhalb einer Anforderung identisch, anforderungsübergreifend sind sie jedoch unterschiedlich. Klicken Sie auf den Link [Lebensdauer](/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1#service-lifetimes), um weitere Informationen darüber zu erhalten.
 
 Auf der höchsten Stufe initialisiert dieser Code die Objekte und Dienste bei Anforderung automatisch, sodass dies nicht manuell durchgeführt werden muss.
 
@@ -202,9 +156,10 @@ Um die eingehenden HTTP-Anforderungen zu verarbeiten, müssen Sie einen Controll
 1. Ändern Sie in der Eingabeaufforderung das Feld **Controllername** in *PredictController.cs*. Wählen Sie dann die Schaltfläche „Hinzufügen“ aus. Die Datei *PredictController.cs* wird im Code-Editor geöffnet. Fügen Sie am Anfang der Datei *PredictController.cs* die folgende using-Anweisung hinzu:
 
 ```csharp
+using System;
 using Microsoft.AspNetCore.Mvc;
 using SentimentAnalysisWebAPI.DataModels;
-using SentimentAnalysisWebAPI.Services;
+using Microsoft.ML;
 ```
 
 Entfernen Sie die vorhandene Klassendefinition, und fügen Sie den folgenden Code der Datei *PredictController.cs* hinzu:
@@ -212,12 +167,12 @@ Entfernen Sie die vorhandene Klassendefinition, und fügen Sie den folgenden Cod
 ```csharp
 public class PredictController : ControllerBase
 {
+    
+    private readonly PredictionEngine<SentimentData,SentimentPrediction> _predictionEngine;
 
-    private readonly PredictionService _predictionService;
-
-    public PredictController(PredictionService predictionService)
+    public PredictController(PredictionEngine<SentimentData, SentimentPrediction> predictionEngine)
     {
-        _predictionService = predictionService; //Define prediction service
+        _predictionEngine = predictionEngine; //Define prediction engine
     }
 
     [HttpPost]
@@ -227,13 +182,20 @@ public class PredictController : ControllerBase
         {
             return BadRequest();
         }
-        return Ok(_predictionService.Predict(input));
-    }
 
+        // Make a prediction
+        SentimentPrediction prediction = _predictionEngine.Predict(input);
+
+        //If prediction is true then it is toxic. If it is false, the it is not.
+        string isToxic = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
+
+        return Ok(isToxic);
+    }
+    
 }
 ```
 
-Damit wird der Vorhersagedienst durch Übergabe an den Konstruktor des Controllers zugewiesen, den Sie über die Abhängigkeitsinjektion erhalten. Dann wird der Vorhersagedienst in der POST-Methode dieses Controllers verwendet, um Vorhersagen zu treffen und bei Erfolg die Ergebnisse an den Benutzer zurückzugeben.
+Damit wird die `PredictionEngine` durch Übergabe an den Konstruktor des Controllers zugewiesen, den Sie über die Abhängigkeitsinjektion erhalten. Dann wird die `PredictionEngine` in der POST-Methode dieses Controllers verwendet, um Vorhersagen zu treffen und bei Erfolg die Ergebnisse an den Benutzer zurückzugeben.
 
 ## <a name="test-web-api-locally"></a>Lokales Testen der Web-API
 

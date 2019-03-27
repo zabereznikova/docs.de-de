@@ -3,12 +3,12 @@ title: Verwenden von Features für den Musterabgleich, um Datentypen zu erweiter
 description: Dieses fortgeschrittene Tutorial veranschaulicht die Verwendung von Musterabgleichverfahren zum Erstellen von Funktionen mit Daten und Algorithmen, die separat erstellt werden.
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 0d7c853709d0986710bf4d1a72daeb1f7cda3109
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125810"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262523"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>Tutorial: Verwenden von Features für den Musterabgleich, um Datentypen zu erweitern
 
@@ -17,7 +17,7 @@ Mit C# 7 wurden einfache Funktionen für den Musterabgleich eingeführt. Diese F
 In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 > [!div class="checklist"]
-> * Erkennen von Situationen, in denen Musterabgleich verwendet werden soll.
+> * Erkennen von Situationen, in denen ein Musterabgleich verwendet werden soll.
 > * Verwenden von Musterabgleichausdrücken, um Verhalten auf Grundlage von Typen und Eigenschaftswerten zu implementieren.
 > * Kombinieren des Musterabgleichs mit anderen Verfahren, um vollständige Algorithmen zu erstellen.
 
@@ -45,12 +45,12 @@ Sie können den Startercode aus dem Repository [dotnet/samples](https://github.c
 
 ## <a name="pattern-matching-designs"></a>Musterabgleichentwürfe
 
-Das Szenario in diesem Tutorial hebt die Arten von Problemen hervor, die sich gut zur Lösung mithilfe des Musterabgleichs eignen: 
+Das Szenario in diesem Tutorial hebt die Arten von Problemen hervor, für deren Lösung Musterabgleiche gut geeignet sind:
 
 - Die Objekte, mit denen Sie arbeiten müssen, befinden sich nicht in einer Objekthierarchie, die Ihren Zielen entspricht. Sie arbeiten möglicherweise mit Klassen, die zu nicht verbundenen Systemen gehören.
 - Die Funktionalität, die Sie hinzufügen, ist nicht Teil der Kernabstraktion für diese Klassen. Die für ein Fahrzeug gezahlte Maut *ändert sich* für verschiedene Arten von Fahrzeugen, aber die Maut ist keine Kernfunktion des Fahrzeugs.
 
-Wenn die *Form* der Daten und die mit diesen Daten durchgeführten *Vorgänge* nicht zusammen beschrieben werden, erleichtern die Musterabgleichfunktionen in C# die Arbeit mit ihnen. 
+Wenn die *Form* der Daten und die mit diesen Daten durchgeführten *Vorgänge* nicht zusammen beschrieben werden, erleichtern die Musterabgleichfunktionen in C# die Arbeit mit ihnen.
 
 ## <a name="implement-the-basic-toll-calculations"></a>Implementieren der grundlegenden Mautberechnungen
 
@@ -61,7 +61,7 @@ Die grundlegendsten Mautberechnungen basieren nur auf dem Fahrzeugtyp:
 - Ein `Bus` zahlt 5,00 US-Dollar.
 - Ein `DeliveryTruck` zahlt 10,00 US-Dollar.
 
-Erstellen Sie eine neue `TollCalculator`-Klasse, und implementieren Sie einen Musterabgleich nach dem Fahrzeugtyp, um den Mautbetrag zu ermitteln.
+Erstellen Sie eine neue `TollCalculator`-Klasse, und implementieren Sie einen Musterabgleich nach dem Fahrzeugtyp, um den Mautbetrag zu ermitteln. Im folgenden Codebeispiel wird die ursprüngliche Implementierung der `TollCalculator`-Klasse veranschaulicht.
 
 ```csharp
 using System;
@@ -87,7 +87,7 @@ namespace toll_calculator
 }
 ```
 
-Der vorherige Code verwendet einen **Switch-Ausdruck** (nicht zu verwechseln mit einer [`switch`](../language-reference/keywords/switch.md)-Anweisung), der das **Typmuster** testet. Ein **Switch-Ausdruck** beginnt mit der Variablen – `vehicle` im vorangehenden Code – gefolgt vom `switch`-Schlüsselwort. Als Nächstes folgen alle **Switch-Arme** in geschweiften Klammern. Der `switch`-Ausdruck nimmt andere Überarbeitungen an der Syntax vor, die die `switch`-Anweisung umgibt. Das `case`-Schlüsselwort wird ausgelassen, und das Ergebnis jedes einzelnen Arms ist ein Ausdruck. Die letzten beiden Arme zeigen eine neue Sprachfunktion. Der `{ }`-Fall entspricht jedem Objekt ungleich NULL, das nicht mit einem früheren Arm übereinstimmte. Diese Arm fängt alle an diese Methode übergebenen falschen Typen ab. Zum Schluss fängt das `null`-Muster die Übergabe von `null` an diese Methode ab. Das `null`-Muster kann an letzter Stelle stehen, da die anderen Typmuster nur mit einem Objekt ungleich NULL des richtigen Typs übereinstimmen.
+Der vorherige Code verwendet einen **Switch-Ausdruck** (nicht zu verwechseln mit einer [`switch`](../language-reference/keywords/switch.md)-Anweisung), der das **Typmuster** testet. Ein **Switch-Ausdruck** beginnt mit der Variablen – `vehicle` im vorangehenden Code – gefolgt vom `switch`-Schlüsselwort. Als Nächstes folgen alle **Switch-Arme** in geschweiften Klammern. Der `switch`-Ausdruck nimmt andere Überarbeitungen an der Syntax vor, die die `switch`-Anweisung umgibt. Das `case`-Schlüsselwort wird ausgelassen, und das Ergebnis jedes einzelnen Arms ist ein Ausdruck. Die letzten beiden Arme zeigen eine neue Sprachfunktion. Der `{ }`-Fall entspricht jedem Objekt ungleich NULL, das nicht mit einem früheren Arm übereinstimmte. Diese Arm fängt alle an diese Methode übergebenen falschen Typen ab.  Der `{ }`-Fall muss den Fällen für jeden Fahrzeugtyp folgen. Wenn die Reihenfolge umgekehrt werden würde, hätte der `{ }`-Fall Vorrang. Zum Schluss erkennt das `null`-Muster die Übergabe von `null` an diese Methode. Das `null`-Muster kann an letzter Stelle stehen, da die anderen Typmuster nur mit einem Objekt ungleich NULL des richtigen Typs übereinstimmen.
 
 Sie können diesen Code mit folgendem Code in `Program.cs` testen:
 
@@ -121,7 +121,7 @@ namespace toll_calculator
             }
             catch (ArgumentException e)
             {
-                Console.WriteLine("Caught an argument exception when using the wrong type", DayOfWeek.Friday);
+                Console.WriteLine("Caught an argument exception when using the wrong type");
             }
             try
             {
@@ -150,7 +150,7 @@ Die Mautbehörde möchte, dass die Fahrzeuge maximal ausgelastet werden. Sie hat
 - Busse, die zu weniger als 50% gefüllt sind, zahlen einen Aufschlag von 2,00 US-Dollar.
 - Busse, die zu mehr als 90% ausgelastet sind, erhalten einen Rabatt von 1,00 US-Dollar.
 
-Diese Regeln können mit dem **Eigenschaftenmuster** im gleichen Switch-Ausdruck implementiert werden. Das Eigenschaftenmuster untersucht Eigenschaften des Objekts, nachdem der Typ bestimmt wurde.  Der einzelne Fall eines `Car` wird auf vier verschiedene Fälle erweitert:
+Diese Regeln können mit dem **Eigenschaftenmuster** im gleichen Switch-Ausdruck implementiert werden. Das Eigenschaftenmuster untersucht Eigenschaften des Objekts, nachdem der Typ bestimmt wurde. Der einzelne Fall eines `Car` wird auf vier verschiedene Fälle erweitert:
 
 ```csharp
 vehicle switch
@@ -158,13 +158,13 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1 }       => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
+    Car c                       => 2.00m - 1.0m,
 
     // ...
 };
 ```
 
-Die ersten drei Fällen testen den Typ als `Car` und überprüfen dann den Wert der `Passengers`-Eigenschaft. Wenn beide übereinstimmen, wird dieser Ausdruck ausgewertet und zurückgegeben. Die letzte Klausel enthält die `when`-Klausel eines Switch-Arms. Mit der `when`-Klausel testen Sie andere Bedingungen einer Eigenschaft als Gleichheit. Im vorherigen Beispiel prüft die `when`-Klausel, ob mehr als 2 Fahrgäste im PKW sitzen. Genau genommen ist es in diesem Beispiel nicht erforderlich.
+Die ersten drei Fällen testen den Typ als `Car` und überprüfen dann den Wert der `Passengers`-Eigenschaft. Wenn beide übereinstimmen, wird dieser Ausdruck ausgewertet und zurückgegeben.
 
 Sie würden auch die Fälle für Taxis auf ähnliche Weise erweitern:
 
@@ -192,14 +192,14 @@ vehicle switch
     // ...
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     // ...
 };
 ```
 
-Die Mautbehörde interessiert sich nicht für die Anzahl der Fahrgäste in Lieferwagen. Stattdessen berücksichtigt sie beim Berechnen der Maut die Gewichtsklasse der Lieferwagen. Lieferwagen über 2,3 t wird ein Aufschlag von 5,00 US-Dollar berechnet. Leichte Lieferwagen unter 1,35 t erhalten einen Rabatt von 2,00 US-Dollar.  Diese Regel wird mit folgendem Code implementiert:
+Die Mautbehörde interessiert sich nicht für die Anzahl der Fahrgäste in Lieferwagen. Stattdessen berücksichtigt sie beim Berechnen der Maut die Gewichtsklasse der Lieferwagen. Lieferwagen über 2,3 t wird ein Aufschlag von 5,00 US-Dollar berechnet. Leichte Lieferwagen unter 1,35 t (3.000 Pfund) erhalten einen Rabatt von 2,00 USD. Diese Regel wird mit folgendem Code implementiert:
 
 ```csharp
 vehicle switch
@@ -212,7 +212,7 @@ vehicle switch
 };
 ```
 
-Wenn Sie damit fertig sind, haben Sie eine Methode, die der folgenden ähnelt:
+Im vorherigen Code sehen Sie die `when`-Klausel eines switch-Arms. Mit der `when`-Klausel testen Sie andere Bedingungen einer Eigenschaft als Gleichheit. Wenn Sie damit fertig sind, haben Sie eine Methode, die der folgenden ähnelt:
 
 ```csharp
 vehicle switch
@@ -220,17 +220,17 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1}        => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
-   
+    Car c                       => 2.00m - 1.0m,
+
     Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
     Taxi { Fares: 2}  => 3.50m - 0.50m,
     Taxi t            => 3.50m - 1.00m,
-    
+
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
@@ -252,7 +252,7 @@ public decimal CalculateToll(object vehicle) =>
             2 => 2.0m - 0.5m,
             _ => 2.00m - 1.0m
         },
-    
+
         Taxi t => t.Fares switch
         {
             0 => 3.50m + 1.00m,
@@ -260,11 +260,11 @@ public decimal CalculateToll(object vehicle) =>
             2 => 3.50m - 0.50m,
             _ => 3.50m - 1.00m
         },
-    
+
         Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
         Bus b => 5.00m,
-    
+
         DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
         DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
         DeliveryTruck t => 10.00m,
@@ -309,7 +309,7 @@ Die folgende Tabelle zeigt die Kombinationen von Eingabewerten und des Multiplik
 
 Es gibt 16 verschiedene Kombinationen der drei Variablen. Durch Kombinieren einiger Bedingungen vereinfachen Sie den endgültigen Switch-Ausdruck.
 
-Das System, das die Maut erhebt, verwendet eine <xref:System.DateTime>-Struktur für die Uhrzeit, zu der die Maut erhoben wurde. Erstellen Sie die Membermethoden, die die Variablen aus der obigen Tabelle erstellen.  Die folgende Funktion verwendet einen Switch-Ausdruck für den Musterabgleich, um auszudrücken, ob eine <xref:System.DateTime>-Struktur ein Wochenende oder einen Wochentag darstellt:
+Das System, das die Maut erhebt, verwendet eine <xref:System.DateTime>-Struktur für die Uhrzeit, zu der die Maut erhoben wurde. Erstellen Sie die Membermethoden, die die Variablen aus der obigen Tabelle erstellen. Die folgende Funktion verwendet einen switch-Ausdruck für den Musterabgleich, um auszudrücken, ob eine <xref:System.DateTime>-Struktur ein Wochenende oder einen Wochentag darstellt:
 
 ```csharp
 private static bool IsWeekDay(DateTime timeOfToll) =>
@@ -339,13 +339,13 @@ Nachdem Sie diese Methoden erstellt haben, können Sie einen anderen `switch`-Au
 
 [!code-csharp[FullTuplePattern](~/samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#TuplePatternOne)]
 
-Der obige Code funktioniert, aber er kann vereinfacht werden. Alle acht Kombinationen für das Wochenende haben die gleiche Maut. Sie können alle acht mit der folgenden einen Zeile ersetzen:
+Der obige Code funktioniert, aber er kann vereinfacht werden. Alle acht Kombinationen für das Wochenende haben die gleiche Maut. Sie können alle acht mit der folgenden Zeile ersetzen:
 
 ```csharp
 (false, _, _) => 1.0m,
 ```
 
-Sowohl stadteinwärts als auch stadtauswärts gehender Verkehr haben an Wochentagen tagsüber und nachts den gleichen Multiplikator. Diese vier Switch-Arme können durch die folgenden zwei Zeilen ersetzt werden:
+Sowohl stadteinwärts als auch stadtauswärts gehender Verkehr haben an Wochentagen tagsüber und nachts den gleichen Multiplikator. Diese vier switch-Arme können durch die folgenden zwei Zeilen ersetzt werden:
 
 ```csharp
 (true, TimeBand.Overnight, _) => 0.75m,
@@ -372,9 +372,9 @@ Schließlich können Sie die zwei Hauptverkehrszeiten entfernen, zu denen der re
 
 [!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
-Dieses Beispiel zeigt einen der Vorteile des Musterabgleichs. Die Musterverzweigungen werden der Reihe nach ausgewertet. Wenn Sie sie neu anordnen, sodass eine frühere Verzweigung einen Ihrer späteren Fälle verarbeitet, warnt Sie der Compiler. Diese Sprachregeln haben die Durchführung der vorherigen Vereinfachungen erleichtert mit der Zuversicht, dass der Code sich nicht geändert hat.
+Dieses Beispiel verdeutlicht einen der Vorteile von Musterabgleich: Die Musterverzweigungen werden der Reihe nach ausgewertet. Wenn Sie sie neu anordnen, sodass eine frühere Verzweigung einen Ihrer späteren Fälle verarbeitet, gibt der Compiler einen Warnhinweis zum unerreichbaren Code aus. Diese Sprachregeln haben die Durchführung der vorherigen Vereinfachungen erleichtert mit der Zuversicht, dass der Code sich nicht geändert hat.
 
-Der Musterabgleich bietet eine natürliche Syntax, um andere Lösungen zu implementieren, als Sie bei der Verwendung objektorientierter Verfahren erstellen würden. Die Cloud sorgt dafür, dass Daten und Funktionen getrennt bleiben. Die *Form* der Daten und die daran ausgeführten *Vorgänge* werden nicht notwendigerweise zusammen beschrieben. In diesem Tutorial haben Sie vorhandene Daten auf von ihrer ursprünglichen Funktion völlig unterschiedliche Arten verwendet. Der Musterabgleich ermöglichte Ihnen, Funktionalität zu schreiben, die diese Typen überschrieben hat, obwohl Sie sie nicht erweitern konnten.
+Ein Musterabgleich führt dazu, dass einige Codetypen leichter lesbar sind, und bietet eine Alternative zu objektorientierten Verfahren, wenn Ihren Klassen kein Code hinzugefügt werden kann. Die Cloud sorgt dafür, dass Daten und Funktionen getrennt bleiben. Die *Form* der Daten und die daran ausgeführten *Vorgänge* werden nicht notwendigerweise zusammen beschrieben. In diesem Tutorial haben Sie vorhandene Daten auf von ihrer ursprünglichen Funktion völlig unterschiedliche Arten verwendet. Der Musterabgleich ermöglichte Ihnen, Funktionalitäten zu erstellen, die diese Typen überschrieben haben, obwohl Sie sie nicht erweitern konnten.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

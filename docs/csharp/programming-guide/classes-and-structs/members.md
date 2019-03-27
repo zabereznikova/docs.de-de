@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 246ddeeab9814f32b0a3bf0d3586007a434d3953
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9497eb265251f4f8affd5e2c6c7e6ed401263984
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592849"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262482"
 ---
 # <a name="members-c-programming-guide"></a>Member (C#-Programmierhandbuch)
 Klassen und Strukturen verfügen über Member, die ihre Daten und ihr Verhalten darstellen. Die Member einer Klasse umfassen alle Member, die in dieser Klasse deklariert sind, sowie alle Member (mit Ausnahme von Konstruktoren und Finalizer), die in den Klassen der Vererbungshierarchie deklariert sind. Private Member in Basisklassen werden geerbt. Aus abgeleiteten Klassen kann jedoch nicht darauf zugegriffen werden.  
@@ -21,7 +21,7 @@ Klassen und Strukturen verfügen über Member, die ihre Daten und ihr Verhalten 
 |Member|Beschreibung|  
 |------------|-----------------|  
 |[Felder](../../../csharp/programming-guide/classes-and-structs/fields.md)|Felder sind im Gültigkeitsbereich einer Klasse deklarierte Variablen. Ein Feld kann ein integrierter numerischer Typ oder eine Instanz einer anderen Klasse sein. So kann zum Beispiel eine Kalenderklasse über ein Feld verfügen, das das aktuelle Datum enthält.|  
-|[Konstanten](../../../csharp/programming-guide/classes-and-structs/constants.md)|Konstanten sind Felder oder Eigenschaften, deren Wert bei der Kompilierung festgelegt wird und nicht geändert werden kann.|  
+|[Konstanten](../../../csharp/programming-guide/classes-and-structs/constants.md)|Konstanten sind Felder, deren Wert bei der Kompilierung festgelegt wird und nicht geändert werden kann.|  
 |[Eigenschaften](../../../csharp/programming-guide/classes-and-structs/properties.md)|Eigenschaften sind Methoden einer Klasse, auf die zugegriffen wird, als ob sie Felder dieser Klasse wären. Eine Eigenschaft kann ein Klassenfeld davor schützen, ohne das Wissen des Objekts geändert zu werden.|  
 |[Methoden](../../../csharp/programming-guide/classes-and-structs/methods.md)|Methoden definieren die Aktionen, die von einer Klasse ausgeführt werden können. Methoden können Parameter entgegennehmen, die Eingabedaten bereitstellen, und mithilfe von Parametern Ausgabedaten zurückgeben. Methoden können auch direkt einen Wert zurückgeben, ohne einen Parameter zu verwenden.|  
 |[Ereignisse](../../../csharp/programming-guide/events/index.md)|Ereignisse stellen für andere Objekte Benachrichtigungen darüber bereit, dass bestimmte Vorgänge (z. B. das Klicken auf eine Schaltfläche oder die erfolgreiche Beendigung einer Methode) eingetreten sind. Ereignisse werden mithilfe von Delegaten definiert und ausgelöst.|  
