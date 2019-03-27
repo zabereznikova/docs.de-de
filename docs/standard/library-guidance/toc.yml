@@ -1,0 +1,30 @@
+items:
+- name: Leitfaden für die Open Source-Bibliothek
+  href: index.md
+  items:
+  - name: Erste Schritte
+    href: get-started.md
+  - name: Plattformübergreifende Ziele
+    href: cross-platform-targeting.md
+  - name: Starke Namen
+    href: strong-naming.md
+  - name: NuGet
+    href: nuget.md
+    items:
+    - name: Abhängigkeiten
+      href: dependencies.md
+    - name: SourceLink
+      href: sourcelink.md
+    - name: Veröffentlichen
+      href: publish-nuget-package.md
+  - name: Versionskontrolle
+    href: versioning.md
+    items:
+    - name: Breaking Changes
+      href: breaking-changes.md
+ms.openlocfilehash: eb2748f71480aee063efadd8291c76440347169b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468700"

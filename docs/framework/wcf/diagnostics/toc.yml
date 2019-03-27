@@ -1,0 +1,38 @@
+items:
+- name: Verwaltung und Diagnose
+  href: index.md
+- name: Nachrichtenprotokollierung
+  href: message-logging.md
+  items:
+  - name: Übersicht über den Nachrichtenfluss
+    href: message-flow-overview.md
+  - name: Konfigurieren der Nachrichtenprotokollierung
+    href: configuring-message-logging.md
+  - name: Anzeigen von Nachrichtenprotokollen
+    href: viewing-message-logs.md
+  - name: Sicherheitsaspekte für Nachrichtenprotokollierung
+    href: security-concerns-for-message-logging.md
+  - name: Ablaufverfolgung
+    href: tracing/
+  - name: Analytische Ablaufverfolgung per ETW
+    href: etw/
+  - name: Leistungsindikatoren
+    href: performance-counters/
+  - name: Ereignisprotokollierung
+    href: event-logging/
+  - name: Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose
+    href: wmi/
+  - name: Ausnahmenreferenz
+    href: exceptions-reference/
+- name: Konfigurieren der Anwendung
+  href: configuring-your-application.md
+- name: ServiceModel-Registrierungstool
+  href: servicemodel-registration-tool.md
+- name: Bereitstellen von Diensten
+  href: deploying-services.md
+ms.openlocfilehash: 4d111b1284ffcb29397a6caafdad4df9abc85086
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469597"
