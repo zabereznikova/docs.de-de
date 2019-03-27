@@ -1,6 +1,6 @@
 ---
-title: Erstellen einer Windows-Dienstanwendung in Visual Studio
-ms.date: 09/10/2018
+title: 'Tutorial: Erstellen einer Windows-Dienst-App'
+ms.date: 03/14/2019
 dev_langs:
 - csharp
 - vb
@@ -9,68 +9,80 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 52c2f64bbb71e07dcab1fd7cd42662f9ed2c8445
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 786b9e28607cced0a15793415ff5fd470b559374
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56665029"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262496"
 ---
-# <a name="walkthrough-create-a-windows-service-app"></a><span data-ttu-id="5cf53-102">Exemplarische Vorgehensweise: Erstellen einer Windows-Dienst-App</span><span class="sxs-lookup"><span data-stu-id="5cf53-102">Walkthrough: Create a Windows service app</span></span>
+# <a name="tutorial-create-a-windows-service-app"></a><span data-ttu-id="e5734-102">Tutorial: Erstellen einer Windows-Dienst-App</span><span class="sxs-lookup"><span data-stu-id="e5734-102">Tutorial: Create a Windows service app</span></span>
 
-<span data-ttu-id="5cf53-103">In diesem Artikel wird beschrieben, wie Sie eine einfache Windows-Dienstanwendung in Visual Studio erstellen, die Meldungen in ein Ereignisprotokoll schreibt.</span><span class="sxs-lookup"><span data-stu-id="5cf53-103">This article demonstrates how to create a simple Windows service app in Visual Studio that writes messages to an event log.</span></span>
+<span data-ttu-id="e5734-103">In diesem Artikel wird beschrieben, wie Sie eine Windows-Dienstanwendung in Visual Studio erstellen, die Meldungen in ein Ereignisprotokoll schreibt.</span><span class="sxs-lookup"><span data-stu-id="e5734-103">This article demonstrates how to create a Windows service app in Visual Studio that writes messages to an event log.</span></span>
 
-## <a name="create-a-service"></a><span data-ttu-id="5cf53-104">Erstellen eines Diensts</span><span class="sxs-lookup"><span data-stu-id="5cf53-104">Create a service</span></span>
+## <a name="create-a-service"></a><span data-ttu-id="e5734-104">Erstellen eines Diensts</span><span class="sxs-lookup"><span data-stu-id="e5734-104">Create a service</span></span>
 
-<span data-ttu-id="5cf53-105">Erstellen Sie zunächst das Projekt, und legen Sie die Werte fest, die für die korrekte Funktion des Diensts erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="5cf53-105">To begin, create the project and set values that are required for the service to function correctly.</span></span>
+<span data-ttu-id="e5734-105">Erstellen Sie zunächst das Projekt, und legen Sie die Werte fest, die für die korrekte Funktion des Diensts erforderlich sind.</span><span class="sxs-lookup"><span data-stu-id="e5734-105">To begin, create the project and set the values that are required for the service to function correctly.</span></span>
 
-1. <span data-ttu-id="5cf53-106">Wählen Sie in Visual Studio auf der Menüleiste **Datei** > **Neu** > **Projekt** aus (oder drücken Sie **STRG**+**UMSCHALT**+**N**), um das Dialogfeld **Neues Projekt** zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="5cf53-106">In Visual Studio, on the menu bar, choose **File** > **New** > **Project** (or press **Ctrl**+**Shift**+**N**) to open the **New Project** dialog.</span></span>
+1. <span data-ttu-id="e5734-106">Wählen Sie in Visual Studio auf der Menüleiste **Datei\*\*\*\*Neu** > **Projekt** aus (oder drücken Sie **STRG**+**UMSCHALT**+**N**), um das Fenster **Neues Projekt** zu öffnen.</span><span class="sxs-lookup"><span data-stu-id="e5734-106">From the Visual Studio **File** menu, select **New** > **Project** (or press **Ctrl**+**Shift**+**N**) to open the **New Project** window.</span></span>
 
-2. <span data-ttu-id="5cf53-107">Navigieren Sie zur Projektvorlage **Windows-Dienst**.</span><span class="sxs-lookup"><span data-stu-id="5cf53-107">Navigate to and select the **Windows Service** project template.</span></span> <span data-ttu-id="5cf53-108">Erweitern Sie **Installierte** > [**Visual C#** oder **Visual Basic**] > **Windows-Desktop**, oder geben Sie **Windows-Dienst** in das Suchfeld oben rechts ein.</span><span class="sxs-lookup"><span data-stu-id="5cf53-108">Expand **Installed** > [**Visual C#** or **Visual Basic**] > **Windows Desktop**, or type **Windows Service** in the search box on the upper right.</span></span>
+2. <span data-ttu-id="e5734-107">Navigieren Sie zur Projektvorlage **Windows-Dienst (.NET Framework)**, und wählen Sie sie aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-107">Navigate to and select the **Windows Service (.NET Framework)** project template.</span></span> <span data-ttu-id="e5734-108">Sie finden diese, indem Sie **Installiert** und **Visual C#** aufklappen oder **Visual Basic**, und dann **Windows-Desktop** auswählen.</span><span class="sxs-lookup"><span data-stu-id="e5734-108">To find it, expand **Installed** and **Visual C#** or **Visual Basic**, then select **Windows Desktop**.</span></span> <span data-ttu-id="e5734-109">Alternativ können Sie im Suchfeld oben rechts *Windows-Dienst* eingeben und die **EINGABETASTE** drücken.</span><span class="sxs-lookup"><span data-stu-id="e5734-109">Or, enter *Windows Service* in the search box on the upper right and press **Enter**.</span></span>
 
    ![Windows-Dienstvorlage im Dialogfeld „Neues Projekt“ in Visual Studio](media/new-project-dialog.png)
 
    > [!NOTE]
-   > <span data-ttu-id="5cf53-110">Wenn Sie die Vorlage **Windows-Dienst** nicht finden können, müssen Sie möglicherweise die Workload **.NET-Desktopentwicklung** installieren.</span><span class="sxs-lookup"><span data-stu-id="5cf53-110">If you don't see the **Windows Service** template, you may need to install the **.NET desktop development** workload.</span></span> <span data-ttu-id="5cf53-111">Klicken Sie im Dialogfeld **Neues Projekt** auf den Link **Visual Studio-Installer öffnen** unten links.</span><span class="sxs-lookup"><span data-stu-id="5cf53-111">In the **New Project** dialog, click the link that says **Open Visual Studio Installer** on the lower left.</span></span> <span data-ttu-id="5cf53-112">Wählen Sie im **Visual Studio-Installer** die Workload **.NET-Desktopentwicklung** und dann **Ändern** aus.</span><span class="sxs-lookup"><span data-stu-id="5cf53-112">In **Visual Studio Installer**, select the **.NET desktop development** workload and then choose **Modify**.</span></span>
+   > <span data-ttu-id="e5734-111">Wenn Sie die Vorlage **Windows-Dienst** nicht finden können, müssen Sie möglicherweise die Workload **.NET-Desktopentwicklung** installieren:</span><span class="sxs-lookup"><span data-stu-id="e5734-111">If you don't see the **Windows Service** template, you may need to install the **.NET desktop development** workload:</span></span>
+   >  
+   > <span data-ttu-id="e5734-112">Wählen Sie im Dialogfeld **Neues Projekt** im unteren linken Bereich **Visual Studio-Installer öffnen** aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-112">In the **New Project** dialog, select **Open Visual Studio Installer** on the lower left.</span></span> <span data-ttu-id="e5734-113">Wählen Sie die Workload **.NET-Desktopentwicklung** aus, und klicken Sie anschließend auf **Ändern**.</span><span class="sxs-lookup"><span data-stu-id="e5734-113">Select the **.NET desktop development** workload, and then select **Modify**.</span></span>
 
-3. <span data-ttu-id="5cf53-113">Benennen Sie das Projekt **MyNewService**, und wählen Sie dann **OK** aus.</span><span class="sxs-lookup"><span data-stu-id="5cf53-113">Name the project **MyNewService**, and then choose **OK**.</span></span>
+3. <span data-ttu-id="e5734-114">Geben Sie als **Name** *MyNewService* ein, und klicken Sie dann auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="e5734-114">For **Name**, enter *MyNewService*, and then select **OK**.</span></span>
 
-   <span data-ttu-id="5cf53-114">Die Projektvorlage beinhaltet eine Komponentenklasse mit dem Namen `Service1`, die von <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> erbt.</span><span class="sxs-lookup"><span data-stu-id="5cf53-114">The project template includes a component class named `Service1` that inherits from <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>.</span></span> <span data-ttu-id="5cf53-115">Sie enthält einen großen Teil des grundlegenden Dienstcodes, etwa den Code zum Starten des Diensts.</span><span class="sxs-lookup"><span data-stu-id="5cf53-115">It includes much of the basic service code, such as the code to start the service.</span></span>
+   <span data-ttu-id="e5734-115">Die Registerkarte **Design** wird angezeigt (**Service1.cs [Design]** oder **Service1.vb [Design]**).</span><span class="sxs-lookup"><span data-stu-id="e5734-115">The **Design** tab appears (**Service1.cs [Design]** or **Service1.vb [Design]**).</span></span>
+   
+   <span data-ttu-id="e5734-116">Die Projektvorlage beinhaltet eine Komponentenklasse mit dem Namen `Service1`, die von <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> erbt.</span><span class="sxs-lookup"><span data-stu-id="e5734-116">The project template includes a component class named `Service1` that inherits from <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>.</span></span> <span data-ttu-id="e5734-117">Sie enthält einen großen Teil des grundlegenden Dienstcodes, etwa den Code zum Starten des Diensts.</span><span class="sxs-lookup"><span data-stu-id="e5734-117">It includes much of the basic service code, such as the code to start the service.</span></span>
 
-## <a name="rename-the-service"></a><span data-ttu-id="5cf53-116">Umbenennen des Diensts</span><span class="sxs-lookup"><span data-stu-id="5cf53-116">Rename the service</span></span>
+## <a name="rename-the-service"></a><span data-ttu-id="e5734-118">Umbenennen des Diensts</span><span class="sxs-lookup"><span data-stu-id="e5734-118">Rename the service</span></span>
 
-<span data-ttu-id="5cf53-117">Benennen Sie den Dienst von **Service1** in **MyNewService** um.</span><span class="sxs-lookup"><span data-stu-id="5cf53-117">Rename the service from **Service1** to **MyNewService**.</span></span>
+<span data-ttu-id="e5734-119">Benennen Sie den Dienst von **Service1** in **MyNewService** um.</span><span class="sxs-lookup"><span data-stu-id="e5734-119">Rename the service from **Service1** to **MyNewService**.</span></span>
 
-1. <span data-ttu-id="5cf53-118">Klicken Sie in der **Entwurfsansicht** für „Service1.cs“ (oder „Service1.vb“) auf den Link zum **Wechseln in die Codeansicht**.</span><span class="sxs-lookup"><span data-stu-id="5cf53-118">In the **Design** view for Service1.cs (or Service1.vb), click the link to **switch to code view**.</span></span> <span data-ttu-id="5cf53-119">Klicken Sie mit der rechten Maustaste auf **Service1**, und wählen Sie im Kontextmenü **Umbenennen** aus.</span><span class="sxs-lookup"><span data-stu-id="5cf53-119">Right-click on **Service1** and select **Rename** from the context menu.</span></span> <span data-ttu-id="5cf53-120">Geben Sie **MyNewService** ein, und drücken Sie dann die **EINGABETASTE**, oder klicken Sie auf **Übernehmen**.</span><span class="sxs-lookup"><span data-stu-id="5cf53-120">Enter **MyNewService** and then press **Enter** or click **Apply**.</span></span>
+1. <span data-ttu-id="e5734-120">Wählen Sie im **Projektmappen-Explorer** die Datei **Service1.cs** oder **Service1.vb** aus, und klicken Sie im Kontextmenü auf **Umbenennen**.</span><span class="sxs-lookup"><span data-stu-id="e5734-120">In **Solution Explorer**, select **Service1.cs**, or **Service1.vb**, and choose **Rename** from the shortcut menu.</span></span> <span data-ttu-id="e5734-121">Nennen Sie die Datei um in **MyNewService.cs** oder **MyNewService.vb**, und drücken Sie dann die **EINGABETASTE**.</span><span class="sxs-lookup"><span data-stu-id="e5734-121">Rename the file to **MyNewService.cs**, or **MyNewService.vb**, and then press **Enter**</span></span>
 
-2. <span data-ttu-id="5cf53-121">Ändern Sie im **Eigenschaftenfenster** für **Service1.cs [Entwurf]** oder **Service1.vb [Entwurf]** den Wert von **ServiceName** in **MyNewService**.</span><span class="sxs-lookup"><span data-stu-id="5cf53-121">In the **Properties** window for **Service1.cs [Design]** or **Service1.vb [Design]**, change the **ServiceName** value to **MyNewService**.</span></span>
+    <span data-ttu-id="e5734-122">Daraufhin wird ein Popupfenster angezeigt, in dem Sie gefragt werden, ob Sie alle Verweise auf das Codeelement *Service1* umbenennen möchten.</span><span class="sxs-lookup"><span data-stu-id="e5734-122">A pop-up window appears asking whether you would like to rename all references to the code element *Service1*.</span></span>
 
-3. <span data-ttu-id="5cf53-122">Benennen Sie im **Projektmappen-Explorer** **Service1.cs** in **MyNewService.cs** um, oder benennen Sie **Service1.vb** in **MyNewService.vb** um.</span><span class="sxs-lookup"><span data-stu-id="5cf53-122">In **Solution Explorer**, rename **Service1.cs** to **MyNewService.cs**, or rename **Service1.vb** to **MyNewService.vb**.</span></span>
+2. <span data-ttu-id="e5734-123">Wählen Sie im Popupfenster **Ja** aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-123">In the pop-up window, select **Yes**.</span></span>
 
-## <a name="add-features-to-the-service"></a><span data-ttu-id="5cf53-123">Hinzufügen von Features zum Dienst</span><span class="sxs-lookup"><span data-stu-id="5cf53-123">Add features to the service</span></span>
+    <span data-ttu-id="e5734-124">![Eingabeaufforderung „Umbenennen“](media/windows-service-rename.png "Windows-Dienst-Eingabeaufforderung „Umbenennen“")</span><span class="sxs-lookup"><span data-stu-id="e5734-124">![Rename prompt](media/windows-service-rename.png "Windows service rename prompt")</span></span>
 
-<span data-ttu-id="5cf53-124">In diesem Abschnitt fügen Sie dem Windows-Dienst ein benutzerdefiniertes Ereignisprotokoll hinzu.</span><span class="sxs-lookup"><span data-stu-id="5cf53-124">In this section, you add a custom event log to the Windows service.</span></span> <span data-ttu-id="5cf53-125">Ereignisprotokolle sind Windows-Diensten in keiner Weise zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="5cf53-125">Event logs are not associated in any way with Windows services.</span></span> <span data-ttu-id="5cf53-126">Hier wird die <xref:System.Diagnostics.EventLog>-Komponente als Beispiel für die Art von Komponente verwendet, die Sie einem Windows-Dienst hinzufügen können.</span><span class="sxs-lookup"><span data-stu-id="5cf53-126">The <xref:System.Diagnostics.EventLog> component is used here as an example of the type of component you can add to a Windows service.</span></span>
+2. <span data-ttu-id="e5734-125">Wählen Sie in der Registerkarte **Design** aus dem Kontextmenü **Eigenschaften** aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-125">In the **Design** tab, select **Properties** from the shortcut menu.</span></span> <span data-ttu-id="e5734-126">Ändern Sie im Fenster **Eigenschaften** den Wert für **ServiceName** in *MyNewService*.</span><span class="sxs-lookup"><span data-stu-id="e5734-126">From the **Properties** window, change the **ServiceName** value to *MyNewService*.</span></span>
 
-### <a name="add-custom-event-log-functionality"></a><span data-ttu-id="5cf53-127">Hinzufügen einer benutzerdefinierten Ereignisprotokollfunktion</span><span class="sxs-lookup"><span data-stu-id="5cf53-127">Add custom event log functionality</span></span>
+    <span data-ttu-id="e5734-127">![Diensteigenschaften](media/windows-service-properties.png "Windows-Diensteigenschaften")</span><span class="sxs-lookup"><span data-stu-id="e5734-127">![Service properties](media/windows-service-properties.png "Windows service properties")</span></span>
 
-1. <span data-ttu-id="5cf53-128">Öffnen Sie im **Projektmappen-Explorer**das Kontextmenü für **MyNewService.cs** oder **MyNewService.vb**, und wählen Sie dann **Designer anzeigen**aus.</span><span class="sxs-lookup"><span data-stu-id="5cf53-128">In **Solution Explorer**, open the context menu for **MyNewService.cs** or **MyNewService.vb**, and then choose **View Designer**.</span></span>
+3. <span data-ttu-id="e5734-128">Wählen Sie im Menü **Datei** die Option **Alle speichern** aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-128">Select **Save All** from the **File** menu.</span></span>
 
-2. <span data-ttu-id="5cf53-129">Ziehen Sie im **Werkzeugkasten** aus dem Abschnitt **Komponenten**eine <xref:System.Diagnostics.EventLog> -Komponente in den Designer.</span><span class="sxs-lookup"><span data-stu-id="5cf53-129">From the **Components** section of the **Toolbox**, drag an <xref:System.Diagnostics.EventLog> component to the designer.</span></span>
 
-3. <span data-ttu-id="5cf53-130">Öffnen Sie im **Projektmappen-Explorer**das Kontextmenü für **MyNewService.cs** oder **MyNewService.vb**, und wählen Sie dann **Code anzeigen**aus.</span><span class="sxs-lookup"><span data-stu-id="5cf53-130">In **Solution Explorer**, open the context menu for **MyNewService.cs** or **MyNewService.vb**, and then choose **View Code**.</span></span>
+## <a name="add-features-to-the-service"></a><span data-ttu-id="e5734-129">Hinzufügen von Features zum Dienst</span><span class="sxs-lookup"><span data-stu-id="e5734-129">Add features to the service</span></span>
 
-4. <span data-ttu-id="5cf53-131">Bearbeiten Sie den Konstruktor, um ein benutzerdefiniertes Ereignisprotokoll zu definieren:</span><span class="sxs-lookup"><span data-stu-id="5cf53-131">Edit the constructor to define a custom event log:</span></span>
+<span data-ttu-id="e5734-130">In diesem Abschnitt fügen Sie dem Windows-Dienst ein benutzerdefiniertes Ereignisprotokoll hinzu.</span><span class="sxs-lookup"><span data-stu-id="e5734-130">In this section, you add a custom event log to the Windows service.</span></span> <span data-ttu-id="e5734-131">Die <xref:System.Diagnostics.EventLog>-Komponente wird als Beispiel für die Art von Komponente verwendet, die Sie einem Windows-Dienst hinzufügen können.</span><span class="sxs-lookup"><span data-stu-id="e5734-131">The <xref:System.Diagnostics.EventLog> component is an example of the type of component you can add to a Windows service.</span></span>
+
+### <a name="add-custom-event-log-functionality"></a><span data-ttu-id="e5734-132">Hinzufügen einer benutzerdefinierten Ereignisprotokollfunktion</span><span class="sxs-lookup"><span data-stu-id="e5734-132">Add custom event log functionality</span></span>
+
+1. <span data-ttu-id="e5734-133">Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für **MyNewService.cs** oder **MyNewService.vb**, und wählen Sie dann **Designer anzeigen** aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-133">In **Solution Explorer**, from the shortcut menu for **MyNewService.cs**, or **MyNewService.vb**, choose **View Designer**.</span></span>
+
+2. <span data-ttu-id="e5734-134">Erweitern Sie in der **Toolbox** die Option **Komponenten**, und ziehen Sie dann die **EventLog**-Komponente in eine der Registerkarten **Service1.cs [Design]** oder **Service1.vb [Design]**.</span><span class="sxs-lookup"><span data-stu-id="e5734-134">In **Toolbox**, expand **Components**, and then drag the **EventLog** component to the **Service1.cs [Design]**, or **Service1.vb [Design]** tab.</span></span>
+
+3. <span data-ttu-id="e5734-135">Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für **MyNewService.cs** oder **MyNewService.vb**, und wählen Sie dann **Code anzeigen** aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-135">In **Solution Explorer**, from the shortcut menu for **MyNewService.cs**, or **MyNewService.vb**, choose **View Code**.</span></span>
+
+4. <span data-ttu-id="e5734-136">Definieren Sie ein benutzerdefiniertes Ereignisprotokoll.</span><span class="sxs-lookup"><span data-stu-id="e5734-136">Define a custom event log.</span></span> <span data-ttu-id="e5734-137">Für C# bearbeiten Sie den vorhandenen `MyNewService()`-Konstruktor; für Visual Basic wird der `New()`-Konstruktor hinzugefügt:</span><span class="sxs-lookup"><span data-stu-id="e5734-137">For C#, edit the existing `MyNewService()` constructor; for Visual Basic, add the `New()` constructor:</span></span>
 
    ```csharp
    public MyNewService()
    {
         InitializeComponent();
 
-        eventLog1 = new System.Diagnostics.EventLog();
-        if (!System.Diagnostics.EventLog.SourceExists("MySource"))
+        eventLog1 = new EventLog();
+        if (!EventLog.SourceExists("MySource"))
         {
-            System.Diagnostics.EventLog.CreateEventSource(
-                "MySource", "MyNewLog");
+            EventLog.CreateEventSource("MySource", "MyNewLog");
         }
         eventLog1.Source = "MySource";
         eventLog1.Log = "MyNewLog";
@@ -79,64 +91,99 @@ ms.locfileid: "56665029"
 
    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]
 
-### <a name="define-what-occurs-when-the-service-starts"></a><span data-ttu-id="5cf53-132">Definieren, was beim Starten des Diensts ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="5cf53-132">Define what occurs when the service starts</span></span>
+5. <span data-ttu-id="e5734-138">Fügen Sie den <xref:System.Diagnostics?displayProperty=nameWithType>-Namespace hinzu, indem Sie (sofern diese nicht bereits vorhanden ist) die `using`-Anweisung in der Datei **MyNewService.cs** bzw. die `Imports`-Anweisung in der Datei **MyNewService.vb** verwenden:</span><span class="sxs-lookup"><span data-stu-id="e5734-138">Add a `using` statement to **MyNewService.cs** (if it doesn't already exist), or an `Imports` statement **MyNewService.vb**, for the <xref:System.Diagnostics?displayProperty=nameWithType> namespace:</span></span>
 
-<span data-ttu-id="5cf53-133">Suchen Sie im Code-Editor die Methode <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, die beim Erstellen des Projekts automatisch überschrieben worden war.</span><span class="sxs-lookup"><span data-stu-id="5cf53-133">In the code editor, locate the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method that was automatically overridden when you created the project.</span></span> <span data-ttu-id="5cf53-134">Fügen Sie eine Codezeile hinzu, die beim Starten des Diensts einen Eintrag in das Ereignisprotokoll schreibt:</span><span class="sxs-lookup"><span data-stu-id="5cf53-134">Add a line of code that writes an entry to the event log when the service starts:</span></span>
+    ```csharp
+    using System.Diagnostics;
+    ```
+
+    ```vb
+    Imports System.Diagnostics
+    ```
+
+6. <span data-ttu-id="e5734-139">Wählen Sie im Menü **Datei** die Option **Alle speichern** aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-139">Select **Save All** from the **File** menu.</span></span>
+
+### <a name="define-what-occurs-when-the-service-starts"></a><span data-ttu-id="e5734-140">Definieren, was beim Starten des Diensts ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="e5734-140">Define what occurs when the service starts</span></span>
+
+<span data-ttu-id="e5734-141">Suchen Sie im Code-Editor für **MyNewService.cs** oder **MyNewService.vb** die <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode; Visual Studio hat beim Erstellen des Projekts automatisch eine leere Methodendefinition erstellt.</span><span class="sxs-lookup"><span data-stu-id="e5734-141">In the code editor for **MyNewService.cs** or **MyNewService.vb**, locate the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method; Visual Studio automatically created an empty method definition when you created the project.</span></span> <span data-ttu-id="e5734-142">Fügen Sie Code hinzu, der beim Starten des Diensts einen Eintrag in das Ereignisprotokoll schreibt:</span><span class="sxs-lookup"><span data-stu-id="e5734-142">Add code that writes an entry to the event log when the service starts:</span></span>
 
 [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
 [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]
 
-<span data-ttu-id="5cf53-135">Eine Dienstanwendung soll eine lange Laufzeit haben, damit sie in der Regel etwas abfragt oder etwas im System überwacht.</span><span class="sxs-lookup"><span data-stu-id="5cf53-135">A service application is designed to be long-running, so it usually polls or monitors something in the system.</span></span> <span data-ttu-id="5cf53-136">Die Überwachung wird in der <xref:System.ServiceProcess.ServiceBase.OnStart%2A> -Methode eingerichtet.</span><span class="sxs-lookup"><span data-stu-id="5cf53-136">The monitoring is set up in the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method.</span></span> <span data-ttu-id="5cf53-137">Allerdings erfolgt die Überwachung jedoch nicht durch <xref:System.ServiceProcess.ServiceBase.OnStart%2A> .</span><span class="sxs-lookup"><span data-stu-id="5cf53-137">However, <xref:System.ServiceProcess.ServiceBase.OnStart%2A> doesn’t actually do the monitoring.</span></span> <span data-ttu-id="5cf53-138">Die <xref:System.ServiceProcess.ServiceBase.OnStart%2A> -Methode muss zum Betriebssystem zurückkehren, sobald die Ausführung des Dienstes begonnen hat.</span><span class="sxs-lookup"><span data-stu-id="5cf53-138">The <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method must return to the operating system after the service's operation has begun.</span></span> <span data-ttu-id="5cf53-139">Sie darf keine Endlosschleife oder Blöcke ausführen.</span><span class="sxs-lookup"><span data-stu-id="5cf53-139">It must not loop forever or block.</span></span> <span data-ttu-id="5cf53-140">Mit der <xref:System.Timers.Timer?displayProperty=nameWithType>-Komponente können Sie einen einfachen Abrufmechanismus wie folgt einrichten: Legen Sie in der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode Parameter für die Komponente fest, und setzen Sie anschließend die <xref:System.Timers.Timer.Enabled%2A>-Eigenschaft auf `true`.</span><span class="sxs-lookup"><span data-stu-id="5cf53-140">To set up a simple polling mechanism, you can use the <xref:System.Timers.Timer?displayProperty=nameWithType> component as follows: In the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method, set parameters on the component, and then set the <xref:System.Timers.Timer.Enabled%2A> property to `true`.</span></span> <span data-ttu-id="5cf53-141">Der Zeitgeber löst dann regelmäßig zu der Zeit Ereignisse im Code aus, zu der der Dienst seine Überwachung ausführen könnte.</span><span class="sxs-lookup"><span data-stu-id="5cf53-141">The timer raises events in your code periodically, at which time your service could do its monitoring.</span></span> <span data-ttu-id="5cf53-142">Sie können hierfür den folgenden Code verwenden:</span><span class="sxs-lookup"><span data-stu-id="5cf53-142">You can use the following code to do this:</span></span>
+#### <a name="polling"></a><span data-ttu-id="e5734-143">Abrufen</span><span class="sxs-lookup"><span data-stu-id="e5734-143">Polling</span></span>
 
-```csharp
-// Set up a timer that triggers every minute.
-System.Timers.Timer timer = new System.Timers.Timer();
-timer.Interval = 60000; // 60 seconds
-timer.Elapsed += new System.Timers.ElapsedEventHandler(this.OnTimer);
-timer.Start();
-```
+<span data-ttu-id="e5734-144">Da eine Dienstanwendung mit langer Laufzeit entworfen wird, fragt sie in der Regel das System ab oder überwacht es. Dies haben Sie in der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode eingerichtet.</span><span class="sxs-lookup"><span data-stu-id="e5734-144">Because a service application is designed to be long-running, it usually polls or monitors the system, which you set up in the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method.</span></span> <span data-ttu-id="e5734-145">Die `OnStart`-Methode muss zum Betriebssystem zurückkehren, sobald die Ausführung des Dienstes begonnen hat, damit das System nicht blockiert wird.</span><span class="sxs-lookup"><span data-stu-id="e5734-145">The `OnStart` method must return to the operating system after the service's operation has begun so that the system isn't blocked.</span></span> 
 
-```vb
-' Set up a timer that triggers every minute.
-Dim timer As System.Timers.Timer = New System.Timers.Timer()
-timer.Interval = 60000 ' 60 seconds
-AddHandler timer.Elapsed, AddressOf Me.OnTimer
-timer.Start()
-```
+<span data-ttu-id="e5734-146">Mit der <xref:System.Timers.Timer?displayProperty=nameWithType>-Komponente können Sie einen einfachen Abrufmechanismus einrichten.</span><span class="sxs-lookup"><span data-stu-id="e5734-146">To set up a simple polling mechanism, use the <xref:System.Timers.Timer?displayProperty=nameWithType> component.</span></span> <span data-ttu-id="e5734-147">Der Timer löst in regelmäßigen Intervallen ein <xref:System.Timers.Timer.Elapsed>-Ereignis aus. Zu diesem Zeitpunkt kann Ihr Dienst die Überwachung durchführen.</span><span class="sxs-lookup"><span data-stu-id="e5734-147">The timer raises an <xref:System.Timers.Timer.Elapsed> event at regular intervals, at which time your service can do its monitoring.</span></span> <span data-ttu-id="e5734-148">Sie verwenden die <xref:System.Timers.Timer>-Komponente folgendermaßen:</span><span class="sxs-lookup"><span data-stu-id="e5734-148">You use the <xref:System.Timers.Timer> component as follows:</span></span>
 
-<span data-ttu-id="5cf53-143">Fügen Sie der Klasse eine Membervariable hinzu.</span><span class="sxs-lookup"><span data-stu-id="5cf53-143">Add a member variable to the class.</span></span> <span data-ttu-id="5cf53-144">Sie enthält den Bezeichner des nächsten Ereignisses, das in das Ereignisprotokoll geschrieben werden soll.</span><span class="sxs-lookup"><span data-stu-id="5cf53-144">It contains the identifier of the next event to write into the event log.</span></span>
+- <span data-ttu-id="e5734-149">Legen Sie die Eigenschaften der <xref:System.Timers.Timer>-Komponente in der `MyNewService.OnStart`-Methode fest.</span><span class="sxs-lookup"><span data-stu-id="e5734-149">Set the properties of the <xref:System.Timers.Timer> component in the `MyNewService.OnStart` method.</span></span>
+- <span data-ttu-id="e5734-150">Starten Sie den Timer durch Aufrufen der <xref:System.Timers.Timer.Start%2A>-Methode.</span><span class="sxs-lookup"><span data-stu-id="e5734-150">Start the timer by calling the <xref:System.Timers.Timer.Start%2A> method.</span></span>
 
-```csharp
-private int eventId = 1;
-```
+##### <a name="set-up-the-polling-mechanism"></a><span data-ttu-id="e5734-151">Richten sie den Abrufmechanismus ein.</span><span class="sxs-lookup"><span data-stu-id="e5734-151">Set up the polling mechanism.</span></span>
 
-```vb
-Private eventId As Integer = 1
-```
+1. <span data-ttu-id="e5734-152">Fügen Sie im `MyNewService.OnStart`-Ereignis den folgenden Code ein, um den Abrufmechanismus einzurichten:</span><span class="sxs-lookup"><span data-stu-id="e5734-152">Add the following code in the `MyNewService.OnStart` event to set up the polling mechanism:</span></span>
 
-<span data-ttu-id="5cf53-145">Fügen Sie eine neue Methode zum Verarbeiten des Zeitgeberereignisses hinzu:</span><span class="sxs-lookup"><span data-stu-id="5cf53-145">Add a new method to handle the timer event:</span></span>
+   ```csharp
+   // Set up a timer that triggers every minute.
+   Timer timer = new Timer();
+   timer.Interval = 60000; // 60 seconds
+   timer.Elapsed += new ElapsedEventHandler(this.OnTimer);
+   timer.Start();
+   ```
 
-```csharp
-public void OnTimer(object sender, System.Timers.ElapsedEventArgs args)
-{
-    // TODO: Insert monitoring activities here.
-    eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId++);
-}
-```
+   ```vb
+   ' Set up a timer that triggers every minute.
+   Dim timer As Timer = New Timer()
+   timer.Interval = 60000 ' 60 seconds
+   AddHandler timer.Elapsed, AddressOf Me.OnTimer
+   timer.Start()
+   ```
 
-```vb
-Private Sub OnTimer(sender As Object, e As Timers.ElapsedEventArgs)
-    ' TODO: Insert monitoring activities here.
-    eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId)
-    eventId = eventId + 1
-End Sub
-```
+2. <span data-ttu-id="e5734-153">Fügen Sie den <xref:System.Timers?displayProperty=nameWithType>-Namespace hinzu, indem Sie die `using`-Anweisung in der Datei **MyNewService.cs** bzw. die `Imports`-Anweisung in der Datei **MyNewService.vb** verwenden:</span><span class="sxs-lookup"><span data-stu-id="e5734-153">Add a `using` statement to **MyNewService.cs**, or an `Imports` statement to **MyNewService.vb**, for the <xref:System.Timers?displayProperty=nameWithType> namespace:</span></span>
 
-<span data-ttu-id="5cf53-146">Möglicherweise möchten Sie Aufgaben mit Arbeitsthreads im Hintergrund statt Ihre Arbeit auf der Haupt-Thread ausführen.</span><span class="sxs-lookup"><span data-stu-id="5cf53-146">You might want to perform tasks by using background worker threads instead of running all your work on the main thread.</span></span> <span data-ttu-id="5cf53-147">Weitere Informationen finden Sie unter <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="5cf53-147">For more information, see <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.</span></span>
 
-### <a name="define-what-occurs-when-the-service-is-stopped"></a><span data-ttu-id="5cf53-148">Definieren, was beim Beenden des Diensts ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="5cf53-148">Define what occurs when the service is stopped</span></span>
+   ```csharp
+   using System.Timers;
+   ```
 
-<span data-ttu-id="5cf53-149">Fügen Sie der Methode <xref:System.ServiceProcess.ServiceBase.OnStop%2A> eine Codezeile hinzu, die beim Beenden des Diensts einen Eintrag zum Ereignisprotokoll hinzufügt:</span><span class="sxs-lookup"><span data-stu-id="5cf53-149">Add a line of code to the <xref:System.ServiceProcess.ServiceBase.OnStop%2A> method that adds an entry to the event log when the service is stopped:</span></span>
+   ```vb
+   Imports System.Timers
+   ```
+
+
+3. <span data-ttu-id="e5734-154">Fügen Sie der `MyNewService`-Klasse die `OnTimer`-Methode hinzu, um das <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType>-Ereignis zu verarbeiten:</span><span class="sxs-lookup"><span data-stu-id="e5734-154">In the `MyNewService` class, add the `OnTimer` method to handle the <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> event:</span></span>
+
+   ```csharp
+   public void OnTimer(object sender, ElapsedEventArgs args)
+   {
+       // TODO: Insert monitoring activities here.
+       eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId++);
+   }
+   ```
+
+   ```vb
+   Private Sub OnTimer(sender As Object, e As Timers.ElapsedEventArgs)
+      ' TODO: Insert monitoring activities here.
+      eventLog1.WriteEntry("Monitoring the System", EventLogEntryType.Information, eventId)
+      eventId = eventId + 1
+   End Sub
+   ```
+
+4. <span data-ttu-id="e5734-155">Fügen Sie der `MyNewService`-Klasse eine Membervariable hinzu.</span><span class="sxs-lookup"><span data-stu-id="e5734-155">In the `MyNewService` class, add a member variable.</span></span> <span data-ttu-id="e5734-156">Sie enthält den Bezeichner des nächsten Ereignisses, das in das Ereignisprotokoll geschrieben werden soll:</span><span class="sxs-lookup"><span data-stu-id="e5734-156">It contains the identifier of the next event to write into the event log:</span></span>
+
+   ```csharp
+   private int eventId = 1;
+   ```
+
+   ```vb
+   Private eventId As Integer = 1
+   ```
+
+<span data-ttu-id="e5734-157">Anstatt alle Aufgaben auf dem Hauptthread auszuführen, können Sie Aufgaben mithilfe von Arbeitsthreads im Hintergrund ausführen.</span><span class="sxs-lookup"><span data-stu-id="e5734-157">Instead of running all your work on the main thread, you can run tasks by using background worker threads.</span></span> <span data-ttu-id="e5734-158">Weitere Informationen finden Sie unter <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.</span><span class="sxs-lookup"><span data-stu-id="e5734-158">For more information, see <xref:System.ComponentModel.BackgroundWorker?displayProperty=fullName>.</span></span>
+
+### <a name="define-what-occurs-when-the-service-is-stopped"></a><span data-ttu-id="e5734-159">Definieren, was beim Beenden des Diensts ausgeführt wird</span><span class="sxs-lookup"><span data-stu-id="e5734-159">Define what occurs when the service is stopped</span></span>
+
+<span data-ttu-id="e5734-160">Fügen Sie der Methode <xref:System.ServiceProcess.ServiceBase.OnStop%2A> eine Codezeile hinzu, die beim Beenden des Diensts einen Eintrag zum Ereignisprotokoll hinzufügt:</span><span class="sxs-lookup"><span data-stu-id="e5734-160">Insert a line of code in the <xref:System.ServiceProcess.ServiceBase.OnStop%2A> method that adds an entry to the event log when the service is stopped:</span></span>
 
 ```csharp
 eventLog1.WriteEntry("In OnStop.");
@@ -144,22 +191,26 @@ eventLog1.WriteEntry("In OnStop.");
 
 [!code-vb[VbRadconService#4](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#4)]
 
-### <a name="define-other-actions-for-the-service"></a><span data-ttu-id="5cf53-150">Definieren weiterer Aktionen für den Dienst</span><span class="sxs-lookup"><span data-stu-id="5cf53-150">Define other actions for the service</span></span>
+### <a name="define-other-actions-for-the-service"></a><span data-ttu-id="e5734-161">Definieren weiterer Aktionen für den Dienst</span><span class="sxs-lookup"><span data-stu-id="e5734-161">Define other actions for the service</span></span>
 
-<span data-ttu-id="5cf53-151">Sie können die Methoden <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> und <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> überschreiben, um zusätzliche Verarbeitungsschritte für Ihre Komponente zu definieren.</span><span class="sxs-lookup"><span data-stu-id="5cf53-151">You can override the <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>, and <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> methods to define additional processing for your component.</span></span> <span data-ttu-id="5cf53-152">Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> -Methode überschrieben wird.</span><span class="sxs-lookup"><span data-stu-id="5cf53-152">The following code shows how you can override the <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> method:</span></span>
+<span data-ttu-id="e5734-162">Sie können die Methoden <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> und <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> überschreiben, um zusätzliche Verarbeitungsschritte für Ihre Komponente zu definieren.</span><span class="sxs-lookup"><span data-stu-id="e5734-162">You can override the <xref:System.ServiceProcess.ServiceBase.OnPause%2A>, <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>, and <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> methods to define additional processing for your component.</span></span> 
+
+<span data-ttu-id="e5734-163">Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ServiceProcess.ServiceBase.OnContinue%2A>-Methode in der `MyNewService`-Klasse überschrieben wird:</span><span class="sxs-lookup"><span data-stu-id="e5734-163">The following code shows how you to override the <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> method in the `MyNewService` class:</span></span>
 
 [!code-csharp[VbRadconService#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#5)]
 [!code-vb[VbRadconService#5](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#5)]
 
-<span data-ttu-id="5cf53-153">Einige benutzerdefinierte Aktionen müssen eintreten, wenn ein Windows-Dienst von der <xref:System.Configuration.Install.Installer> Klasse installiert wird.</span><span class="sxs-lookup"><span data-stu-id="5cf53-153">Some custom actions have to occur when a Windows service is installed by the <xref:System.Configuration.Install.Installer> class.</span></span> <span data-ttu-id="5cf53-154">Visual Studio kann diese Installationsprogramme speziell für einen Windows-Dienst erstellen und sie dem Projekt hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="5cf53-154">Visual Studio can create these installers specifically for a Windows service and add them to your project.</span></span>
 
-## <a name="set-service-status"></a><span data-ttu-id="5cf53-155">Festlegen des Dienststatus</span><span class="sxs-lookup"><span data-stu-id="5cf53-155">Set service status</span></span>
+## <a name="set-service-status"></a><span data-ttu-id="e5734-164">Festlegen des Dienststatus</span><span class="sxs-lookup"><span data-stu-id="e5734-164">Set service status</span></span>
 
-<span data-ttu-id="5cf53-156">Dienste melden ihren Status mit dem Dienststeuerungs-Manager, damit Benutzer erkennen können, ob ein Dienst ordnungsgemäß ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="5cf53-156">Services report their status to the Service Control Manager, so that users can tell whether a service is functioning correctly.</span></span> <span data-ttu-id="5cf53-157">Dienste, die von standardmäßig von <xref:System.ServiceProcess.ServiceBase> übernommen werden, melden eine begrenzte Anzahl von Statuseinstellungen, darunter Beendet, Angehalten und Werden ausgeführt.</span><span class="sxs-lookup"><span data-stu-id="5cf53-157">By default, services that inherit from <xref:System.ServiceProcess.ServiceBase> report a limited set of status settings, including Stopped, Paused, and Running.</span></span> <span data-ttu-id="5cf53-158">Wenn es etwas länger dauert, bis ein Dienst startet, kann es hilfreich sein, einen Status Start ausstehend zu melden.</span><span class="sxs-lookup"><span data-stu-id="5cf53-158">If a service takes a little while to start up, it might be helpful to report a Start Pending status.</span></span> <span data-ttu-id="5cf53-159">Sie können auch die Statuseinstellungen Start ausstehend und Stopp ausstehend durch Hinzufügen von Code implementieren, der in Windows die Funktion [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) aufruft.</span><span class="sxs-lookup"><span data-stu-id="5cf53-159">You can also implement the Start Pending and Stop Pending status settings by adding code that calls into the Windows [SetServiceStatus function](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus).</span></span>
+<span data-ttu-id="e5734-165">Dienste melden ihren Status an den [Dienststeuerungs-Manager](/windows/desktop/Services/service-control-manager), damit Benutzer erkennen können, ob ein Dienst ordnungsgemäß ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="e5734-165">Services report their status to the [Service Control Manager](/windows/desktop/Services/service-control-manager) so that a user can tell whether a service is functioning correctly.</span></span> <span data-ttu-id="e5734-166">Standardmäßig meldet ein Dienst, der von <xref:System.ServiceProcess.ServiceBase> erbt, eine begrenzte Anzahl von Statuseinstellungen. Dazu gehören SERVICE_STOPPED, SERVICE_PAUSED und SERVICE_RUNNING.</span><span class="sxs-lookup"><span data-stu-id="e5734-166">By default, a service that inherits from <xref:System.ServiceProcess.ServiceBase> reports a limited set of status settings, which include SERVICE_STOPPED, SERVICE_PAUSED, and SERVICE_RUNNING.</span></span> <span data-ttu-id="e5734-167">Wenn es etwas länger dauert, bis ein Dienst startet, kann es hilfreich sein, den Status SERVICE_START_PENDING zu melden.</span><span class="sxs-lookup"><span data-stu-id="e5734-167">If a service takes a while to start up, it's useful to report a SERVICE_START_PENDING status.</span></span> 
 
-<span data-ttu-id="5cf53-160">Zum Implementieren des Dienststatus „ausstehend“:</span><span class="sxs-lookup"><span data-stu-id="5cf53-160">To implement service pending status:</span></span>
+<span data-ttu-id="e5734-168">Sie können auch die Statuseinstellungen SERVICE_START_PENDING und SERVICE_STOP_PENDING durch Hinzufügen von Code implementieren, der in Windows die Funktion [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) aufruft.</span><span class="sxs-lookup"><span data-stu-id="e5734-168">You can implement the SERVICE_START_PENDING and SERVICE_STOP_PENDING status settings by adding code that calls the Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) function.</span></span>
 
-1. <span data-ttu-id="5cf53-161">Fügen Sie eine `using`-Anweisung oder eine `Imports`-Deklaration für den <xref:System.Runtime.InteropServices?displayProperty=nameWithType>-Namespace zur Datei MyNewService.cs oder MyNewService.vb hinzu:</span><span class="sxs-lookup"><span data-stu-id="5cf53-161">Add a `using` statement or `Imports` declaration for the <xref:System.Runtime.InteropServices?displayProperty=nameWithType> namespace in the MyNewService.cs or MyNewService.vb file:</span></span>
+
+### <a name="implement-service-pending-status"></a><span data-ttu-id="e5734-169">Implementieren des Dienststatus SERVICE_PENDING</span><span class="sxs-lookup"><span data-stu-id="e5734-169">Implement service pending status</span></span>
+
+1. <span data-ttu-id="e5734-170">Fügen Sie den <xref:System.Runtime.InteropServices?displayProperty=nameWithType>-Namespace hinzu, indem Sie die `using`-Anweisung in der Datei **MyNewService.cs** bzw. die `Imports`-Anweisung in der Datei **MyNewService.vb** verwenden:</span><span class="sxs-lookup"><span data-stu-id="e5734-170">Add a `using` statement to **MyNewService.cs**, or an `Imports` statement to **MyNewService.vb**, for the <xref:System.Runtime.InteropServices?displayProperty=nameWithType> namespace:</span></span>
 
     ```csharp
     using System.Runtime.InteropServices;
@@ -169,7 +220,7 @@ eventLog1.WriteEntry("In OnStop.");
     Imports System.Runtime.InteropServices
     ```
 
-2. <span data-ttu-id="5cf53-162">Fügen Sie folgenden Code zum MyNewService.cs hinzu, um die `ServiceState` Werte zu deklarieren und um eine Struktur für den Status hinzuzufügen, die Sie in einem Plattformaufruf verwenden:</span><span class="sxs-lookup"><span data-stu-id="5cf53-162">Add the following code to MyNewService.cs to declare the `ServiceState` values and to add a structure for the status, which you'll use in a platform invoke call:</span></span>
+2. <span data-ttu-id="e5734-171">Fügen Sie **MyNewService.cs** bzw. **MyNewService.vb** folgenden Code hinzu, um die `ServiceState`-Werte zu deklarieren und um eine Struktur für den Status hinzuzufügen, die Sie in einem Plattformaufruf verwenden:</span><span class="sxs-lookup"><span data-stu-id="e5734-171">Add the following code to **MyNewService.cs**, or **MyNewService.vb**, to declare the `ServiceState` values and to add a structure for the status, which you'll use in a platform invoke call:</span></span>
 
     ```csharp
     public enum ServiceState
@@ -219,7 +270,7 @@ eventLog1.WriteEntry("In OnStop.");
     End Structure
     ```
 
-3. <span data-ttu-id="5cf53-163">Deklarieren Sie nun in der Klasse `MyNewService` die Funktion [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) mithilfe eines [Plattformaufrufs](../interop/consuming-unmanaged-dll-functions.md):</span><span class="sxs-lookup"><span data-stu-id="5cf53-163">Now, in the `MyNewService` class, declare the [SetServiceStatus function](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) by using [platform invoke](../interop/consuming-unmanaged-dll-functions.md):</span></span>
+3. <span data-ttu-id="e5734-172">Deklarieren Sie nun in der Klasse `MyNewService` die Funktion [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) mithilfe eines [Plattformaufrufs](../interop/consuming-unmanaged-dll-functions.md):</span><span class="sxs-lookup"><span data-stu-id="e5734-172">In the `MyNewService` class, declare the [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) function by using [platform invoke](../interop/consuming-unmanaged-dll-functions.md):</span></span>
 
     ```csharp
     [DllImport("advapi32.dll", SetLastError = true)]
@@ -230,7 +281,7 @@ eventLog1.WriteEntry("In OnStop.");
     Declare Auto Function SetServiceStatus Lib "advapi32.dll" (ByVal handle As IntPtr, ByRef serviceStatus As ServiceStatus) As Boolean
     ```
 
-4. <span data-ttu-id="5cf53-164">Um den Status Start ausstehend zu implementieren, fügen Sie den folgenden Code am Anfang der <xref:System.ServiceProcess.ServiceBase.OnStart%2A> Methode hinzu:</span><span class="sxs-lookup"><span data-stu-id="5cf53-164">To implement the Start Pending status, add the following code to the beginning of the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method:</span></span>
+4. <span data-ttu-id="e5734-173">Soll der Status Start SERVICE_START_PENDING implementiert werden, fügen Sie den folgenden Code am Anfang der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode hinzu:</span><span class="sxs-lookup"><span data-stu-id="e5734-173">To implement the SERVICE_START_PENDING status, add the following code to the beginning of the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method:</span></span>
 
     ```csharp
     // Update the service state to Start Pending.
@@ -248,7 +299,7 @@ eventLog1.WriteEntry("In OnStop.");
     SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
-5. <span data-ttu-id="5cf53-165">Fügen Sie den Code hinzu, um den Status Wird ausgeführt am Ende der <xref:System.ServiceProcess.ServiceBase.OnStart%2A> -Methode festzulegen.</span><span class="sxs-lookup"><span data-stu-id="5cf53-165">Add code to set the status to Running at the end of the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method.</span></span>
+5. <span data-ttu-id="e5734-174">Fügen Sie am Ende der `OnStart`-Methode Code hinzu, um den Status SERVICE_RUNNING festzulegen:</span><span class="sxs-lookup"><span data-stu-id="e5734-174">Add code to the end of the `OnStart` method to set the status to SERVICE_RUNNING:</span></span>
 
     ```csharp
     // Update the service state to Running.
@@ -262,52 +313,88 @@ eventLog1.WriteEntry("In OnStop.");
     SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
-6. <span data-ttu-id="5cf53-166">(Optional) Wiederholen Sie diesen Vorgang für die <xref:System.ServiceProcess.ServiceBase.OnStop%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="5cf53-166">(Optional) Repeat this procedure for the <xref:System.ServiceProcess.ServiceBase.OnStop%2A> method.</span></span>
+6. <span data-ttu-id="e5734-175">(Optional) Wenn <xref:System.ServiceProcess.ServiceBase.OnStop%2A> eine Methode mit langer Laufzeit ist, wiederholen Sie diese Prozedur in der Methode `OnStop`.</span><span class="sxs-lookup"><span data-stu-id="e5734-175">(Optional) If <xref:System.ServiceProcess.ServiceBase.OnStop%2A> is a long-running method, repeat this procedure in the `OnStop` method.</span></span> <span data-ttu-id="e5734-176">Implementieren Sie den Status SERVICE_STOP_PENDING und geben Sie den SERVICE_STOPPED-Status zurück, bevor die `OnStop`-Methode endet.</span><span class="sxs-lookup"><span data-stu-id="e5734-176">Implement the SERVICE_STOP_PENDING status and return the SERVICE_STOPPED status before the `OnStop` method exits.</span></span>
+
+   <span data-ttu-id="e5734-177">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="e5734-177">For example:</span></span>
+
+    ```csharp
+    // Update the service state to Stop Pending.
+    ServiceStatus serviceStatus = new ServiceStatus();
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOP_PENDING;
+    serviceStatus.dwWaitHint = 100000;
+    SetServiceStatus(this.ServiceHandle, ref serviceStatus);
+
+    // Update the service state to Stopped.
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED;
+    SetServiceStatus(this.ServiceHandle, ref serviceStatus);
+    ```
+
+    ```vb
+    ' Update the service state to Stop Pending.
+    Dim serviceStatus As ServiceStatus = New ServiceStatus()
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOP_PENDING
+    serviceStatus.dwWaitHint = 100000
+    SetServiceStatus(Me.ServiceHandle, serviceStatus)
+
+    ' Update the service state to Stopped.
+    serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED
+    SetServiceStatus(Me.ServiceHandle, serviceStatus)    
+    ```
 
 > [!NOTE]
-> <span data-ttu-id="5cf53-167">Das Dialogfeld [Dienststeuerungs-Manager](/windows/desktop/Services/service-control-manager) verwendet die Member `dwWaitHint` und `dwCheckpoint` der [SERVICE_STATUS-Struktur](/windows/desktop/api/winsvc/ns-winsvc-_service_status), um zu bestimmen, wie lange bis zum Starten oder Herunterfahren eines Windows-Diensts gewartet werden muss.</span><span class="sxs-lookup"><span data-stu-id="5cf53-167">The [Service Control Manager](/windows/desktop/Services/service-control-manager) uses the `dwWaitHint` and `dwCheckpoint` members of the [SERVICE_STATUS structure](/windows/desktop/api/winsvc/ns-winsvc-_service_status) to determine how much time to wait for a Windows service to start or shut down.</span></span> <span data-ttu-id="5cf53-168">Wenn Ihre Methoden <xref:System.ServiceProcess.ServiceBase.OnStart%2A> und <xref:System.ServiceProcess.ServiceBase.OnStop%2A> eine lange Ausführungszeit haben, kann Ihr Dienst durch das erneute Aufrufen von [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) mit einem erhöhten `dwCheckPoint`-Wert mehr Zeit anfordern.</span><span class="sxs-lookup"><span data-stu-id="5cf53-168">If your <xref:System.ServiceProcess.ServiceBase.OnStart%2A> and <xref:System.ServiceProcess.ServiceBase.OnStop%2A> methods run long, your service can request more time by calling [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) again with an incremented `dwCheckPoint` value.</span></span>
+> <span data-ttu-id="e5734-178">Der Dienststeuerungs-Manager verwendet die Member `dwWaitHint` und `dwCheckpoint` der [SERVICE_STATUS-Struktur](/windows/desktop/api/winsvc/ns-winsvc-_service_status), um zu bestimmen, wie lange bis zum Starten oder Herunterfahren eines Windows-Diensts gewartet werden muss.</span><span class="sxs-lookup"><span data-stu-id="e5734-178">The Service Control Manager uses the `dwWaitHint` and `dwCheckpoint` members of the [SERVICE_STATUS structure](/windows/desktop/api/winsvc/ns-winsvc-_service_status) to determine how much time to wait for a Windows service to start or shut down.</span></span> <span data-ttu-id="e5734-179">Wenn Ihre Methoden `OnStart` und `OnStop` eine lange Ausführungszeit haben, kann Ihr Dienst durch das erneute Aufrufen von `SetServiceStatus` mit einem erhöhten `dwCheckPoint`-Wert mehr Zeit anfordern.</span><span class="sxs-lookup"><span data-stu-id="e5734-179">If your `OnStart` and `OnStop` methods run long, your service can request more time by calling `SetServiceStatus` again with an incremented `dwCheckPoint` value.</span></span>
 
-## <a name="add-installers-to-the-service"></a><span data-ttu-id="5cf53-169">Hinzufügen von Installern zum Dienst</span><span class="sxs-lookup"><span data-stu-id="5cf53-169">Add installers to the service</span></span>
+## <a name="add-installers-to-the-service"></a><span data-ttu-id="e5734-180">Hinzufügen von Installern zum Dienst</span><span class="sxs-lookup"><span data-stu-id="e5734-180">Add installers to the service</span></span>
 
-<span data-ttu-id="5cf53-170">Bevor Sie einen Windows-Dienst ausführen können, müssen Sie ihn bei der Installation im Dienststeuerungs-Manager registrieren.</span><span class="sxs-lookup"><span data-stu-id="5cf53-170">Before you can run a Windows service, you need to install it, which registers it with the Service Control Manager.</span></span> <span data-ttu-id="5cf53-171">Sie können Installationsprogramme dem Projekt hinzufügen, die die Registrierungsdetails behandelt.</span><span class="sxs-lookup"><span data-stu-id="5cf53-171">You can add installers to your project that handle the registration details.</span></span>
+<span data-ttu-id="e5734-181">Bevor Sie einen Windows-Dienst ausführen können, müssen Sie ihn bei der Installation im Dienststeuerungs-Manager registrieren.</span><span class="sxs-lookup"><span data-stu-id="e5734-181">Before you run a Windows service, you need to install it, which registers it with the Service Control Manager.</span></span> <span data-ttu-id="e5734-182">Sie können Ihrem Projekt Installer hinzufügen, um die Registrierungsdetails zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="e5734-182">Add installers to your project to handle the registration details.</span></span>
 
-1. <span data-ttu-id="5cf53-172">Öffnen Sie im **Projektmappen-Explorer**das Kontextmenü für **MyNewService.cs** oder **MyNewService.vb**, und wählen Sie dann **Designer anzeigen**aus.</span><span class="sxs-lookup"><span data-stu-id="5cf53-172">In **Solution Explorer**, open the context menu for **MyNewService.cs** or **MyNewService.vb**, and then choose **View Designer**.</span></span>
+1. <span data-ttu-id="e5734-183">Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für **MyNewService.cs** oder **MyNewService.vb**, und wählen Sie dann **Designer anzeigen** aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-183">In **Solution Explorer**, from the shortcut menu for **MyNewService.cs**, or **MyNewService.vb**, choose **View Designer**.</span></span>
 
-2. <span data-ttu-id="5cf53-173">Klicken Sie auf den Hintergrund des Designers, um den Dienst selbst, nicht Elemente seines Inhalts, zu markieren.</span><span class="sxs-lookup"><span data-stu-id="5cf53-173">Click the background of the designer to select the service itself, instead of any of its contents.</span></span>
+2. <span data-ttu-id="e5734-184">Wählen Sie in der Ansicht **Design** den Hintergrundbereich aus, und wählen Sie dann im Kontextmenü **Installer hinzufügen** aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-184">In the **Design** view, select the background area, then choose **Add Installer** from the shortcut menu.</span></span>
 
-3. <span data-ttu-id="5cf53-174">Öffnen Sie das Kontextmenü für das Designer-Fenster (wenn Sie ein Zeigegerät verwenden, rechtsklicken Sie in das Fenster) und wählen Sie dann **Installer hinzufügen**.</span><span class="sxs-lookup"><span data-stu-id="5cf53-174">Open the context menu for the designer window (if you’re using a pointing device, right-click inside the window), and then choose **Add Installer**.</span></span>
+     <span data-ttu-id="e5734-185">Standardmäßig fügt Visual Studio Ihrem Projekt eine Komponentenklasse namens `ProjectInstaller` hinzu, die zwei Installer beinhaltet.</span><span class="sxs-lookup"><span data-stu-id="e5734-185">By default, Visual Studio adds a component class named `ProjectInstaller`, which contains two installers, to your project.</span></span> <span data-ttu-id="e5734-186">Diese Installer sind für Ihren Dienst und den zum Dienst gehörigen Prozess bestimmt.</span><span class="sxs-lookup"><span data-stu-id="e5734-186">These installers are for your service and for the service's associated process.</span></span>
 
-   <span data-ttu-id="5cf53-175">Standardmäßig wird dem Projekt eine Komponentenklasse mit zwei Installationsprogrammen hinzugefügt.</span><span class="sxs-lookup"><span data-stu-id="5cf53-175">By default, a component class that contains two installers is added to your project.</span></span> <span data-ttu-id="5cf53-176">Die Komponente erhält den Namen **ProjectInstaller**; die darin enthaltenen Installationsprogramme sind zum einen das Installationsprogramm für den Dienst und zum andern das Installationsprogramm für den zugeordneten Prozess des Diensts.</span><span class="sxs-lookup"><span data-stu-id="5cf53-176">The component is named **ProjectInstaller**, and the installers it contains are the installer for your service and the installer for the service's associated process.</span></span>
+4. <span data-ttu-id="e5734-187">Klicken Sie in der Ansicht **Design** für **ProjectInstaller** auf **serviceInstaller1**, wenn es sich um ein Visual C#-Projekt handelt, bzw. auf **ServiceInstaller1** , wenn es sich um ein Visual Basic-Projekt handelt, und wählen Sie dann im Kontextmenü **Eigenschaften** aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-187">In the **Design** view for **ProjectInstaller**, select **serviceInstaller1** for a Visual C# project, or **ServiceInstaller1** for a Visual Basic project, then choose **Properties** from the shortcut menu.</span></span>
 
-4. <span data-ttu-id="5cf53-177">Klicken Sie in der Ansicht **Entwurf** für **ProjectInstaller**auf **ServiceInstaller1** , wenn es sich um ein Visual Basic-Projekt handelt, bzw. auf **serviceInstaller1** , wenn es sich um ein Visual C#-Projekt handelt.</span><span class="sxs-lookup"><span data-stu-id="5cf53-177">In **Design** view for **ProjectInstaller**, choose **serviceInstaller1** for a Visual C# project, or **ServiceInstaller1** for a Visual Basic project.</span></span>
+5. <span data-ttu-id="e5734-188">Vergewissern Sie sich im Fenster **Eigenschaften**, dass die <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A>-Eigenschaft auf **MyNewService** festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="e5734-188">In the **Properties** window, verify the <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> property is set to **MyNewService**.</span></span>
 
-5. <span data-ttu-id="5cf53-178">Vergewissern Sie sich im Fenster **Eigenschaften** , dass die <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> -Eigenschaft auf **MyNewService**festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="5cf53-178">In the **Properties** window, make sure the <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> property is set to **MyNewService**.</span></span>
+6. <span data-ttu-id="e5734-189">Fügen Sie der <xref:System.ServiceProcess.ServiceInstaller.Description%2A>-Eigenschaft Text hinzu, z. B. *Ein Beispieldienst*.</span><span class="sxs-lookup"><span data-stu-id="e5734-189">Add text to the <xref:System.ServiceProcess.ServiceInstaller.Description%2A> property, such as *A sample service*.</span></span> 
 
-6. <span data-ttu-id="5cf53-179">Legen Sie die **Beschreibung** -Eigenschaft auf Text, wie z. B. "Ein Beispieldienst" fest.</span><span class="sxs-lookup"><span data-stu-id="5cf53-179">Set the **Description** property to some text, such as "A sample service".</span></span> <span data-ttu-id="5cf53-180">Dieser Text wird im Fenster Dienste angezeigt und hilft dem Benutzer den Dienst zu identifizieren, und zu verstehen, wofür er verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="5cf53-180">This text appears in the Services window and helps the user identify the service and understand what it’s used for.</span></span>
+     <span data-ttu-id="e5734-190">Dieser Text wird im Fenster **Dienste** in der Spalte **Beschreibung** angezeigt und beschreibt den Dienst für den Benutzer.</span><span class="sxs-lookup"><span data-stu-id="e5734-190">This text appears in the **Description** column of the **Services** window and describes the service to the user.</span></span>
 
-7. <span data-ttu-id="5cf53-181">Legen Sie die <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> -Eigenschaft auf den Text fest, der im Fenster Dienste in der Spalte **Name** angezeigt werden soll.</span><span class="sxs-lookup"><span data-stu-id="5cf53-181">Set the <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> property to the text that you want to appear in the Services window in the **Name** column.</span></span> <span data-ttu-id="5cf53-182">Beispielsweise können Sie "MyNewService Display Name" eingeben.</span><span class="sxs-lookup"><span data-stu-id="5cf53-182">For example, you can enter "MyNewService Display Name".</span></span> <span data-ttu-id="5cf53-183">Dieser Name kann sich von der <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> -Eigenschaft unterscheidet, die dem Namen entspricht, der vom System verwendet wird (z. B. bei Verwendung des `net start` -Befehls zum Starten des Dienstes).</span><span class="sxs-lookup"><span data-stu-id="5cf53-183">This name can be different from the <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> property, which is the name used by the system (for example, when you use the `net start` command to start your service).</span></span>
+    <span data-ttu-id="e5734-191">![Dienstbeschreibung im Fenster „Dienste“.](media/windows-service-description.png "Dienstbeschreibung")</span><span class="sxs-lookup"><span data-stu-id="e5734-191">![Service description in the Services window.](media/windows-service-description.png "Service description")</span></span>
 
-8. <span data-ttu-id="5cf53-184">Legen Sie die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> -Eigenschaft auf <xref:System.ServiceProcess.ServiceStartMode.Automatic>fest.</span><span class="sxs-lookup"><span data-stu-id="5cf53-184">Set the <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> property to <xref:System.ServiceProcess.ServiceStartMode.Automatic>.</span></span>
+7. <span data-ttu-id="e5734-192">Fügen Sie in der <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A>-Eigenschaft Text hinzu,</span><span class="sxs-lookup"><span data-stu-id="e5734-192">Add text to the <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> property.</span></span> <span data-ttu-id="e5734-193">z. B. *MyNewService-Anzeigename*.</span><span class="sxs-lookup"><span data-stu-id="e5734-193">For example, *MyNewService Display Name*.</span></span> 
 
-     <span data-ttu-id="5cf53-185">![Installer-Eigenschaften für einen Windows-Dienst](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_Installereigenschaften")</span><span class="sxs-lookup"><span data-stu-id="5cf53-185">![Installer Properties for a Windows service](../../../docs/framework/windows-services/media/windowsservice-installerproperties.PNG "WindowsService_InstallerProperties")</span></span>
+     <span data-ttu-id="e5734-194">Dieser Text wird im Fenster **Dienste** in der Spalte **Anzeigename** angezeigt.</span><span class="sxs-lookup"><span data-stu-id="e5734-194">This text appears in the **Display Name** column of the **Services** window.</span></span> <span data-ttu-id="e5734-195">Dieser Name kann sich von der <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A>-Eigenschaft unterscheiden, die dem Namen entspricht, der vom System verwendet wird (z. B. bei Verwendung des `net start`-Befehls zum Starten des Diensts).</span><span class="sxs-lookup"><span data-stu-id="e5734-195">This name can be different from the <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> property, which is the name the system uses (for example, the name you use for the `net start` command to start your service).</span></span>
 
-9. <span data-ttu-id="5cf53-186">Klicken Sie im Designer auf **ServiceProcessInstaller1** , wenn es sich um ein Visual Basic#-Projekt handelt, bzw. auf **serviceProcessInstaller1** , wenn es sich um ein Visual Basic-Projekt handelt.</span><span class="sxs-lookup"><span data-stu-id="5cf53-186">In the designer, choose **serviceProcessInstaller1** for a Visual C# project, or **ServiceProcessInstaller1** for a Visual Basic project.</span></span> <span data-ttu-id="5cf53-187">Legen Sie die <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> -Eigenschaft auf <xref:System.ServiceProcess.ServiceAccount.LocalSystem>fest.</span><span class="sxs-lookup"><span data-stu-id="5cf53-187">Set the <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> property to <xref:System.ServiceProcess.ServiceAccount.LocalSystem>.</span></span> <span data-ttu-id="5cf53-188">Dies bewirkt, dass der Dienst installiert und mit dem lokalen Systemkonto ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="5cf53-188">This causes the service to be installed and to run using the local system account.</span></span>
+8. <span data-ttu-id="e5734-196">Legen Sie die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>-Eigenschaft über die Dropdownliste auf <xref:System.ServiceProcess.ServiceStartMode.Automatic> fest.</span><span class="sxs-lookup"><span data-stu-id="e5734-196">Set the <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> property to <xref:System.ServiceProcess.ServiceStartMode.Automatic> from the drop-down list.</span></span>
+
+9. <span data-ttu-id="e5734-197">Wenn Sie diesen Vorgang abgeschlossen haben, sollte das **Eigenschaften**-Fenster der folgenden Abbildung entsprechen:</span><span class="sxs-lookup"><span data-stu-id="e5734-197">When you're finished, the **Properties** windows should look like the following figure:</span></span>
+
+     <span data-ttu-id="e5734-198">![Installer-Eigenschaften für einen Windows-Dienst](media/windows-service-installer-properties.png "Windows-Dienst-Installereigenschaften")</span><span class="sxs-lookup"><span data-stu-id="e5734-198">![Installer Properties for a Windows service](media/windows-service-installer-properties.png "Windows service installer properties")</span></span>
+
+9. <span data-ttu-id="e5734-199">Klicken Sie in der Ansicht **Design** für **ProjectInstaller** auf **serviceProcessInstaller1**, wenn es sich um ein Visual C#-Projekt handelt, bzw. auf **ServiceProcessInstaller1** , wenn es sich um ein Visual Basic-Projekt handelt, und wählen Sie dann im Kontextmenü **Eigenschaften** aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-199">In the **Design** view for **ProjectInstaller**, choose **serviceProcessInstaller1** for a Visual C# project, or **ServiceProcessInstaller1** for a Visual Basic project, then choose **Properties** from the shortcut menu.</span></span> <span data-ttu-id="e5734-200">Legen Sie die <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A>-Eigenschaft über die Dropdownliste auf <xref:System.ServiceProcess.ServiceAccount.LocalSystem> fest.</span><span class="sxs-lookup"><span data-stu-id="e5734-200">Set the <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> property to <xref:System.ServiceProcess.ServiceAccount.LocalSystem> from the drop-down list.</span></span> 
+
+     <span data-ttu-id="e5734-201">Diese Einstellung installiert den Dienst und führt ihn mithilfe des lokalen Systemkontos aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-201">This setting installs the service and runs it by using the local system account.</span></span>
 
     > [!IMPORTANT]
-    > <span data-ttu-id="5cf53-189">Das Konto <xref:System.ServiceProcess.ServiceAccount.LocalSystem> verfügt über ein breites Berechtigungsspektrum, einschließlich der Berechtigung zum Schreiben in das Ereignisprotokoll.</span><span class="sxs-lookup"><span data-stu-id="5cf53-189">The <xref:System.ServiceProcess.ServiceAccount.LocalSystem> account has broad permissions, including the ability to write to the event log.</span></span> <span data-ttu-id="5cf53-190">Bei der Verwendung dieses Kontos ist allerdings Vorsicht geboten, da sich dadurch das Risiko von Malware-Angriffen erhöhen kann.</span><span class="sxs-lookup"><span data-stu-id="5cf53-190">Use this account with caution, because it might increase your risk of attacks from malicious software.</span></span> <span data-ttu-id="5cf53-191">Für andere Aufgaben sollten Sie das Konto <xref:System.ServiceProcess.ServiceAccount.LocalService> verwenden, das auf dem lokalen Computer als Benutzer ohne Berechtigungen fungiert. Remoteservern werden anonyme Anmeldeinformationen übergeben.</span><span class="sxs-lookup"><span data-stu-id="5cf53-191">For other tasks, consider using the <xref:System.ServiceProcess.ServiceAccount.LocalService> account, which acts as a non-privileged user on the local computer and presents anonymous credentials to any remote server.</span></span> <span data-ttu-id="5cf53-192">Dieses Beispiel schlägt fehl, wenn Sie versuchen, das <xref:System.ServiceProcess.ServiceAccount.LocalService> -Konto zu verwenden, da zum Schreiben in das Ereignisprotokoll eine Genehmigung benötigt wird.</span><span class="sxs-lookup"><span data-stu-id="5cf53-192">This example fails if you try to use the <xref:System.ServiceProcess.ServiceAccount.LocalService> account, because it needs permission to write to the event log.</span></span>
+    > <span data-ttu-id="e5734-202">Das Konto <xref:System.ServiceProcess.ServiceAccount.LocalSystem> verfügt über ein breites Berechtigungsspektrum, einschließlich der Berechtigung zum Schreiben in das Ereignisprotokoll.</span><span class="sxs-lookup"><span data-stu-id="e5734-202">The <xref:System.ServiceProcess.ServiceAccount.LocalSystem> account has broad permissions, including the ability to write to the event log.</span></span> <span data-ttu-id="e5734-203">Bei der Verwendung dieses Kontos ist allerdings Vorsicht geboten, da sich dadurch das Risiko von Malware-Angriffen erhöhen kann.</span><span class="sxs-lookup"><span data-stu-id="e5734-203">Use this account with caution, because it might increase your risk of attacks from malicious software.</span></span> <span data-ttu-id="e5734-204">Für andere Aufgaben sollten Sie das Konto <xref:System.ServiceProcess.ServiceAccount.LocalService> verwenden, das auf dem lokalen Computer als Benutzer ohne Berechtigungen fungiert. Remoteservern werden anonyme Anmeldeinformationen übergeben.</span><span class="sxs-lookup"><span data-stu-id="e5734-204">For other tasks, consider using the <xref:System.ServiceProcess.ServiceAccount.LocalService> account, which acts as a non-privileged user on the local computer and presents anonymous credentials to any remote server.</span></span> <span data-ttu-id="e5734-205">Dieses Beispiel schlägt fehl, wenn Sie versuchen, das <xref:System.ServiceProcess.ServiceAccount.LocalService> -Konto zu verwenden, da zum Schreiben in das Ereignisprotokoll eine Genehmigung benötigt wird.</span><span class="sxs-lookup"><span data-stu-id="e5734-205">This example fails if you try to use the <xref:System.ServiceProcess.ServiceAccount.LocalService> account, because it needs permission to write to the event log.</span></span>
 
-<span data-ttu-id="5cf53-193">Weitere Informationen zu Installern finden Sie unter [Vorgehensweise: Hinzufügen von Installern zu Ihrer Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span><span class="sxs-lookup"><span data-stu-id="5cf53-193">For more information about installers, see [How to: Add Installers to Your service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).</span></span>
+<span data-ttu-id="e5734-206">Weitere Informationen zu Installern finden Sie unter [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](how-to-add-installers-to-your-service-application.md).</span><span class="sxs-lookup"><span data-stu-id="e5734-206">For more information about installers, see [How to: Add installers to your service application](how-to-add-installers-to-your-service-application.md).</span></span>
 
-## <a name="optional-set-startup-parameters"></a><span data-ttu-id="5cf53-194">(Optional) Festlegen der Startparameter</span><span class="sxs-lookup"><span data-stu-id="5cf53-194">(Optional) Set startup parameters</span></span>
-
-<span data-ttu-id="5cf53-195">Ein Windows-Dienst akzeptiert wie jede andere ausführbare Datei Befehlszeilenargumente oder Startparameter.</span><span class="sxs-lookup"><span data-stu-id="5cf53-195">A Windows service, like any other executable, can accept command-line arguments, or startup parameters.</span></span> <span data-ttu-id="5cf53-196">Wenn Sie einen Code zum Startparameterprozess hinzufügen, können Benutzer den Dienst mithilfe des Fensters "Dienste" in der Windows-Systemsteuerung mit ihren eigenen benutzerdefinierten Startparametern starten.</span><span class="sxs-lookup"><span data-stu-id="5cf53-196">When you add code to process startup parameters, users can start your service with their own custom startup parameters by using the Services window in the Windows Control Panel.</span></span> <span data-ttu-id="5cf53-197">Diese Startparameter werden jedoch nicht beim nächsten Start des Dienst beibehalten.</span><span class="sxs-lookup"><span data-stu-id="5cf53-197">However, these startup parameters are not persisted the next time the service starts.</span></span> <span data-ttu-id="5cf53-198">Um Startparameter dauerhaft festzulegen, können Sie diese in der Registrierung festlegen, wie in diesem Verfahren dargestellt.</span><span class="sxs-lookup"><span data-stu-id="5cf53-198">To set startup parameters permanently, you can set them in the registry, as shown in this procedure.</span></span>
+## <a name="optional-set-startup-parameters"></a><span data-ttu-id="e5734-207">(Optional) Festlegen der Startparameter</span><span class="sxs-lookup"><span data-stu-id="e5734-207">(Optional) Set startup parameters</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="5cf53-199">Bevor Sie sich entscheiden, die Startparameter hinzuzufügen, ziehen Sie in Betracht, ob dies die beste Möglichkeit für die Übertragung von Informationen an Ihren Dienst ist.</span><span class="sxs-lookup"><span data-stu-id="5cf53-199">Before you decide to add startup parameters, consider whether that is the best way to pass information to your service.</span></span> <span data-ttu-id="5cf53-200">Obwohl Startparameter einfach zu verwenden und zu analysieren sind, und sie Benutzer sie leicht überschreiben können, sind sie möglicherweise ohne die Dokumentation schwerer zu erkennen und zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="5cf53-200">Although startup parameters are easy to use and to parse, and users can easily override them, they might be harder for users to discover and use without documentation.</span></span> <span data-ttu-id="5cf53-201">In der Regel, wenn der Dienst mehr als nur ein paar Startparameter erfordert, sollten Sie stattdessen die Verwendung des Verzeichnisses oder einer Konfigurationsdatei erwägen.</span><span class="sxs-lookup"><span data-stu-id="5cf53-201">Generally, if your service requires more than just a few startup parameters, you should consider using the registry or a configuration file instead.</span></span> <span data-ttu-id="5cf53-202">Jeder Windows-Dienst ist ein Eintrag im Verzeichnis unter **HKLM\System\CurrentControlSet\services**.</span><span class="sxs-lookup"><span data-stu-id="5cf53-202">Every Windows service has an entry in the registry under **HKLM\System\CurrentControlSet\services**.</span></span> <span data-ttu-id="5cf53-203">Gemäß dem Service-Schlüssel können Sie den Teilschlüssel **Parameter** zum Speichern von Informationen verwenden, auf die Ihr Dienst zugreifen kann.</span><span class="sxs-lookup"><span data-stu-id="5cf53-203">Under the service's key, you can use the **Parameters** subkey to store information that your service can access.</span></span> <span data-ttu-id="5cf53-204">Sie können Konfigurationsdateien für einen Windows-Dienst genauso wie für andere Arten von Programmen verwenden.</span><span class="sxs-lookup"><span data-stu-id="5cf53-204">You can use application configuration files for a Windows service the same way you do for other types of programs.</span></span> <span data-ttu-id="5cf53-205">Beispielcode finden Sie unter <xref:System.Configuration.ConfigurationManager.AppSettings%2A>.</span><span class="sxs-lookup"><span data-stu-id="5cf53-205">For example code, see <xref:System.Configuration.ConfigurationManager.AppSettings%2A>.</span></span>
+> <span data-ttu-id="e5734-208">Bevor Sie sich entscheiden, die Startparameter hinzuzufügen, ziehen Sie in Betracht, ob dies die beste Möglichkeit für die Übertragung von Informationen an Ihren Dienst ist.</span><span class="sxs-lookup"><span data-stu-id="e5734-208">Before you decide to add startup parameters, consider whether it's the best way to pass information to your service.</span></span> <span data-ttu-id="e5734-209">Obwohl Startparameter einfach zu verwenden und zu analysieren sind, und Benutzer sie leicht überschreiben können, sind sie möglicherweise ohne Dokumentation schwerer zu erkennen und zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="e5734-209">Although they're easy to use and parse, and a user can easily override them, they might be harder for a user to discover and use without documentation.</span></span> <span data-ttu-id="e5734-210">Wenn der Dienst mehrere Startparameter erfordert, sollten Sie in der Regel stattdessen die Verwendung des Verzeichnisses oder einer Konfigurationsdatei erwägen.</span><span class="sxs-lookup"><span data-stu-id="e5734-210">Generally, if your service requires more than just a few startup parameters, you should use the registry or a configuration file instead.</span></span> 
 
-<span data-ttu-id="5cf53-206">So fügen Sie Startparameter hinzu:</span><span class="sxs-lookup"><span data-stu-id="5cf53-206">To add startup parameters:</span></span>
+<span data-ttu-id="e5734-211">Ein Windows-Dienst akzeptiert Befehlszeilenargumente oder Startparameter.</span><span class="sxs-lookup"><span data-stu-id="e5734-211">A Windows service can accept command-line arguments, or startup parameters.</span></span> <span data-ttu-id="e5734-212">Wenn Sie einen Code zum Startparameterprozess hinzufügen, können Benutzer den Dienst mithilfe des Fensters „Diensteigenschaften“ mit ihren eigenen benutzerdefinierten Startparametern starten.</span><span class="sxs-lookup"><span data-stu-id="e5734-212">When you add code to process startup parameters, a user can start your service with their own custom startup parameters in the service properties window.</span></span> <span data-ttu-id="e5734-213">Diese Startparameter werden jedoch nicht beim nächsten Start des Dienst beibehalten.</span><span class="sxs-lookup"><span data-stu-id="e5734-213">However, these startup parameters aren't persisted the next time the service starts.</span></span> <span data-ttu-id="e5734-214">Wenn Sie Startparameter dauerhaft festlegen möchten, müssen Sie sie im Verzeichnis festlegen.</span><span class="sxs-lookup"><span data-stu-id="e5734-214">To set startup parameters permanently, set them in the registry.</span></span>
 
-1. <span data-ttu-id="5cf53-207">Fügen Sie in der `Main`-Methode in Program.cs oder in MyNewService.Designer.vb einen Eingabeparameter hinzu, um den Dienstkonstruktor zu übergeben:</span><span class="sxs-lookup"><span data-stu-id="5cf53-207">In the `Main` method in Program.cs or in MyNewService.Designer.vb, add an input parameter to pass to the service constructor:</span></span>
+<span data-ttu-id="e5734-215">Jeder Windows-Dienst hat einen Verzeichniseintrag unter dem Unterschlüssel **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services**.</span><span class="sxs-lookup"><span data-stu-id="e5734-215">Each Windows service has a registry entry under the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services** subkey.</span></span> <span data-ttu-id="e5734-216">Verwenden Sie unter dem Unterschlüssel jedes Diensts den Unterschlüssel **Parameter** zum Speichern von Informationen, auf die Ihr Dienst zugreifen kann.</span><span class="sxs-lookup"><span data-stu-id="e5734-216">Under each service's subkey, use the **Parameters** subkey to store information that your service can access.</span></span> <span data-ttu-id="e5734-217">Sie können Konfigurationsdateien für einen Windows-Dienst genauso wie für andere Arten von Programmen verwenden.</span><span class="sxs-lookup"><span data-stu-id="e5734-217">You can use application configuration files for a Windows service the same way you do for other types of programs.</span></span> <span data-ttu-id="e5734-218">Beispielcode finden Sie unter <xref:System.Configuration.ConfigurationManager.AppSettings?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e5734-218">For sample code, see <xref:System.Configuration.ConfigurationManager.AppSettings?displayProperty=nameWithType>.</span></span>
+
+### <a name="to-add-startup-parameters"></a><span data-ttu-id="e5734-219">Hinzufügen von Startparametern</span><span class="sxs-lookup"><span data-stu-id="e5734-219">To add startup parameters</span></span>
+
+1. <span data-ttu-id="e5734-220">Wählen Sie **Program.cs** oder **MyNewService.Designer.vb** aus, und wählen Sie dann im Kontextmenü **Code anzeigen** aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-220">Select **Program.cs**, or **MyNewService.Designer.vb**, then choose **View Code** from the shortcut menu.</span></span> <span data-ttu-id="e5734-221">Ändern Sie in der `Main`-Methode den Code, sodass ein Eingabeparameter hinzugefügt wird, und übergeben Sie ihn an den Dienstkonstruktor:</span><span class="sxs-lookup"><span data-stu-id="e5734-221">In the `Main` method, change the code to add an input parameter and pass it to the service constructor:</span></span>
 
    ```csharp
    static void Main(string[] args)
@@ -323,44 +410,48 @@ eventLog1.WriteEntry("In OnStop.");
 
    ```vb
    Shared Sub Main(ByVal cmdArgs() As String)
-       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewServiceVB(cmdArgs)}
+       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewService(cmdArgs)}
        System.ServiceProcess.ServiceBase.Run(ServicesToRun)
    End Sub
    ```
 
-2. <span data-ttu-id="5cf53-208">Ändern Sie den `MyNewService` -Konstruktor wie folgt:</span><span class="sxs-lookup"><span data-stu-id="5cf53-208">Change the `MyNewService` constructor as follows:</span></span>
+2. <span data-ttu-id="e5734-222">Ändern Sie in **MyNewService.cs** bzw. **MyNewService.vb** den `MyNewService`-Konstruktor, sodass der Eingabeparameter folgendermaßen verarbeitet wird:</span><span class="sxs-lookup"><span data-stu-id="e5734-222">In **MyNewService.cs**, or **MyNewService.vb**, change the `MyNewService` constructor to process the input parameter as follows:</span></span>
 
    ```csharp
+   using System.Diagnostics;
+
    public MyNewService(string[] args)
    {
        InitializeComponent();
 
-        string eventSourceName = "MySource";
-        string logName = "MyNewLog";
+       string eventSourceName = "MySource";
+       string logName = "MyNewLog";
 
-        if (args.Length > 0)
-        {
-            eventSourceName = args[0];
-        }
+       if (args.Length > 0)
+       {
+          eventSourceName = args[0];
+       }
 
-        if (args.Length > 1)
-        {
-            logName = args[1];
-        }
+       if (args.Length > 1)
+       {
+           logName = args[1];
+       }
 
-        eventLog1 = new System.Diagnostics.EventLog();
+       eventLog1 = new EventLog();
 
-        if (!System.Diagnostics.EventLog.SourceExists(eventSourceName))
-        {
-            System.Diagnostics.EventLog.CreateEventSource(eventSourceName, logName);
-        }
+       if (!EventLog.SourceExists(eventSourceName))
+       {
+           EventLog.CreateEventSource(eventSourceName, logName);
+       }
 
-        eventLog1.Source = eventSourceName;
-        eventLog1.Log = logName;
+       eventLog1.Source = eventSourceName;
+       eventLog1.Log = logName;
    }
    ```
 
    ```vb
+   Imports System.Diagnostics
+
    Public Sub New(ByVal cmdArgs() As String)
        InitializeComponent()
        Dim eventSourceName As String = "MySource"
@@ -371,18 +462,18 @@ eventLog1.WriteEntry("In OnStop.");
        If (cmdArgs.Count() > 1) Then
            logName = cmdArgs(1)
        End If
-       eventLog1 = New System.Diagnostics.EventLog()
-       If (Not System.Diagnostics.EventLog.SourceExists(eventSourceName)) Then
-           System.Diagnostics.EventLog.CreateEventSource(eventSourceName, logName)
+       eventLog1 = New EventLog()
+       If (Not EventLog.SourceExists(eventSourceName)) Then
+           EventLog.CreateEventSource(eventSourceName, logName)
        End If
        eventLog1.Source = eventSourceName
        eventLog1.Log = logName
    End Sub
    ```
 
-   <span data-ttu-id="5cf53-209">Dieser Code legt die Ereignisquelle und den Protokollnamen gemäß der angegebenen Startparameter fest oder verwendet Standardwerte, wenn keine Argumente angegeben werden.</span><span class="sxs-lookup"><span data-stu-id="5cf53-209">This code sets the event source and log name according to the supplied startup parameters, or uses default values if no arguments are supplied.</span></span>
+   <span data-ttu-id="e5734-223">Diese Code legt die Ereignisquelle und den Protokollnamen gemäß der Startparameter fest, die der Benutzer angibt.</span><span class="sxs-lookup"><span data-stu-id="e5734-223">This code sets the event source and log name according to the startup parameters that the user supplies.</span></span> <span data-ttu-id="e5734-224">Wenn keine Argumente angegeben werden, werden Standardwerte verwendet.</span><span class="sxs-lookup"><span data-stu-id="e5734-224">If no arguments are supplied, it uses default values.</span></span>
 
-3. <span data-ttu-id="5cf53-210">Um Befehlszeilenargumente anzugeben, fügen Sie den folgenden Code zu der `ProjectInstaller` -Klasse in ProjectInstaller.cs oder ProjectInstaller.vb hinzu:</span><span class="sxs-lookup"><span data-stu-id="5cf53-210">To specify the command-line arguments, add the following code to the `ProjectInstaller` class in ProjectInstaller.cs or ProjectInstaller.vb:</span></span>
+3. <span data-ttu-id="e5734-225">Sollen Befehlszeilenargumente angegeben werden, fügen Sie der `ProjectInstaller`-Klasse in **ProjectInstaller.cs** bzw. **ProjectInstaller.vb** den folgenden Code hinzu:</span><span class="sxs-lookup"><span data-stu-id="e5734-225">To specify the command-line arguments, add the following code to the `ProjectInstaller` class in **ProjectInstaller.cs**, or **ProjectInstaller.vb**:</span></span>
 
    ```csharp
    protected override void OnBeforeInstall(IDictionary savedState)
@@ -401,90 +492,100 @@ eventLog1.WriteEntry("In OnStop.");
    End Sub
    ```
 
-   <span data-ttu-id="5cf53-211">Dieser Code ändert den **ImagePath** -Registrierungsschlüssel, der in der Regel den vollständigen Pfad der ausführbaren Datei für den Windows-Dienst enthält, indem er ihm die Standardwerte für die Parameter hinzufügt.</span><span class="sxs-lookup"><span data-stu-id="5cf53-211">This code modifies the **ImagePath** registry key, which typically contains the full path to the executable for the Windows service, by adding the default parameter values.</span></span> <span data-ttu-id="5cf53-212">Die Anführungszeichen rund um den Pfad (und um jeden einzelnen Parameter) sind erforderlich, um den Dienst korrekt zu starten.</span><span class="sxs-lookup"><span data-stu-id="5cf53-212">The quotation marks around the path (and around each individual parameter) are required for the service to start up correctly.</span></span> <span data-ttu-id="5cf53-213">Um die Startparameter für diesen Windows-Dienst zu ändern, können Benutzer die Parameter ändern, die im **ImagePath** -Registrierungsschlüssel angegeben sind, obwohl es besser wäre, ihn programmgesteuert zu ändern und die Funktionalität für Benutzer in einer geeigneten Form (z. B. in einem Dienstprogramm Verwaltung oder Konfiguration) verfügbar zu machen.</span><span class="sxs-lookup"><span data-stu-id="5cf53-213">To change the startup parameters for this Windows service, users can change the parameters given in the **ImagePath** registry key, although the better way is to change it programmatically and expose the functionality to users in a friendly way (for example, in a management or configuration utility).</span></span>
+   <span data-ttu-id="e5734-226">Dieser Wert enthält in der Regel den vollständigen Pfad zur ausführbaren Datei des Windows-Diensts.</span><span class="sxs-lookup"><span data-stu-id="e5734-226">Typically, this value contains the full path to the executable for the Windows service.</span></span> <span data-ttu-id="e5734-227">Die Anführungszeichen rund um den Pfad und um jeden einzelnen Parameter sind erforderlich, um den Dienst korrekt zu starten.</span><span class="sxs-lookup"><span data-stu-id="e5734-227">For the service to start up correctly, the user must supply quotation marks for the path and each individual parameter.</span></span> <span data-ttu-id="e5734-228">Ein Benutzer kann die Parameter im **ImagePath**-Verzeichniseintrag ändern, um die Startparameter für den Windows-Dienst zu ändern.</span><span class="sxs-lookup"><span data-stu-id="e5734-228">A user can change the parameters in the **ImagePath** registry entry to change the startup parameters for the Windows service.</span></span> <span data-ttu-id="e5734-229">Besser ist es jedoch, den Wert programmgesteuert zu ändern und die Funktionalität in einer benutzerfreundlichen Weise verfügbar zu machen, z. B. mithilfe eines Verwaltungs- oder Konfigurationshilfsprogramms.</span><span class="sxs-lookup"><span data-stu-id="e5734-229">However, a better way is to change the value programmatically and expose the functionality in a user-friendly way, such as by using a management or configuration utility.</span></span>
 
-## <a name="build-the-service"></a><span data-ttu-id="5cf53-214">Erstellen des Diensts</span><span class="sxs-lookup"><span data-stu-id="5cf53-214">Build the service</span></span>
 
-1. <span data-ttu-id="5cf53-215">Öffnen Sie im **Projektmappen-Explorer**das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften**aus.</span><span class="sxs-lookup"><span data-stu-id="5cf53-215">In **Solution Explorer**, open the context menu for your project, and then choose **Properties**.</span></span>
+## <a name="build-the-service"></a><span data-ttu-id="e5734-230">Erstellen des Diensts</span><span class="sxs-lookup"><span data-stu-id="e5734-230">Build the service</span></span>
 
-   <span data-ttu-id="5cf53-216">Die Eigenschaftenseiten für Ihr Projekt werden angezeigt.</span><span class="sxs-lookup"><span data-stu-id="5cf53-216">The property pages for your project appear.</span></span>
+1. <span data-ttu-id="e5734-231">Wählen Sie im **Projektmappen-Explorer** aus dem Kontextmenü des **MyNewService**-Projekts die Option **Eigenschaften** aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-231">In **Solution Explorer**, choose **Properties** from the shortcut menu for the **MyNewService** project.</span></span>
 
-2. <span data-ttu-id="5cf53-217">Klicken Sie in der Registerkarte **Anwendung** in der Liste **Startobjekt** auf **MyNewService.Program**.</span><span class="sxs-lookup"><span data-stu-id="5cf53-217">On the **Application** tab, in the **Startup object** list, choose **MyNewService.Program**.</span></span>
+   <span data-ttu-id="e5734-232">Die Eigenschaftenseiten für Ihr Projekt werden angezeigt.</span><span class="sxs-lookup"><span data-stu-id="e5734-232">The property pages for your project appear.</span></span>
 
-3. <span data-ttu-id="5cf53-218">Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für das Projekt und wählen Sie dann **Erstellen** aus, um das Projekt zu erstellen (oder drücken Sie **STRG**+**UMSCHALT**+**B**).</span><span class="sxs-lookup"><span data-stu-id="5cf53-218">In **Solution Explorer**, open the context menu for your project, and then choose **Build** to build the project (or press **Ctrl**+**Shift**+**B**).</span></span>
+2. <span data-ttu-id="e5734-233">Klicken Sie in der Registerkarte **Anwendung** in der Liste **Startobjekt** auf **MyNewService.Program**, oder auf **Sub Main**, wenn es sich um ein Visual Basic-Projekt handelt.</span><span class="sxs-lookup"><span data-stu-id="e5734-233">On the **Application** tab, in the **Startup object** list, choose **MyNewService.Program**, or **Sub Main** for Visual Basic projects.</span></span>
 
-## <a name="install-the-service"></a><span data-ttu-id="5cf53-219">Installieren des Diensts</span><span class="sxs-lookup"><span data-stu-id="5cf53-219">Install the service</span></span>
+3. <span data-ttu-id="e5734-234">Wählen Sie im **Projektmappen-Explorer** aus dem Kontextmenü des Projekts **Erstellen** aus, um das Projekt zu erstellen (oder drücken Sie **STRG**+**UMSCHALT**+**B**).</span><span class="sxs-lookup"><span data-stu-id="e5734-234">To build the project, in **Solution Explorer**, choose **Build** from the shortcut menu for your project (or press **Ctrl**+**Shift**+**B**).</span></span>
 
-<span data-ttu-id="5cf53-220">Nachdem Sie den Windows-Dienst nun erstellt haben, können Sie ihn installieren.</span><span class="sxs-lookup"><span data-stu-id="5cf53-220">Now that you've built the Windows service, you can install it.</span></span> <span data-ttu-id="5cf53-221">Um einen Windows-Dienst zu installieren, müssen Sie über Administratorberechtigungen für den Computer verfügen, auf dem Sie ihn installieren.</span><span class="sxs-lookup"><span data-stu-id="5cf53-221">To install a Windows service, you must have administrator credentials on the computer on which you're installing it.</span></span>
+## <a name="install-the-service"></a><span data-ttu-id="e5734-235">Installieren des Diensts</span><span class="sxs-lookup"><span data-stu-id="e5734-235">Install the service</span></span>
 
-1. <span data-ttu-id="5cf53-222">Öffnen Sie die **Developer-Eingabeaufforderung für Visual Studio** mit Administratoranmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="5cf53-222">Open **Developer Command Prompt for Visual Studio** with administrative credentials.</span></span> <span data-ttu-id="5cf53-223">Wenn Sie eine Maus verwenden, klicken Sie mit der rechten Maustaste im Windows-Startmenü auf **Developer-Eingabeaufforderung für VS 2017**, und wählen Sie dann **Mehr** > **Als Administrator ausführen** aus.</span><span class="sxs-lookup"><span data-stu-id="5cf53-223">If you’re using a mouse, right-click on **Developer Command Prompt for VS 2017** in the Windows Start menu, and then choose **More** > **Run as Administrator**.</span></span>
+<span data-ttu-id="e5734-236">Nachdem Sie den Windows-Dienst nun erstellt haben, können Sie ihn installieren.</span><span class="sxs-lookup"><span data-stu-id="e5734-236">Now that you've built the Windows service, you can install it.</span></span> <span data-ttu-id="e5734-237">Soll ein Windows-Dienst installiert werden, müssen Sie über Administratorberechtigungen für den Computer verfügen, auf dem Sie ihn installieren.</span><span class="sxs-lookup"><span data-stu-id="e5734-237">To install a Windows service, you must have administrator credentials on the computer where it's installed.</span></span>
 
-2. <span data-ttu-id="5cf53-224">Navigieren Sie im Fenster **Developer-Eingabeaufforderung** zu dem Ordner, der die Ausgabe Ihres Projekts enthält (standardmäßig das Unterverzeichnis *\bin\Debug* Ihres Projekts).</span><span class="sxs-lookup"><span data-stu-id="5cf53-224">In the **Developer Command Prompt** window, navigate to the folder that contains your project's output (by default, it's the *\bin\Debug* subdirectory of your project).</span></span>
+1. <span data-ttu-id="e5734-238">Öffnen Sie die [Developer-Eingabeaufforderung für Visual Studio](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs) mit Administratoranmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="e5734-238">Open [Developer Command Prompt for Visual Studio](https://docs.microsoft.com/dotnet/framework/tools/developer-command-prompt-for-vs) with administrative credentials.</span></span> <span data-ttu-id="e5734-239">Wählen Sie im Windows-**Startmenü** im Visual Studio-Ordner **Developer-Eingabeaufforderung für Visual Studio 2017** aus, und klicken Sie dann im Kontextmenü auf **Mehr** > **Als Administrator ausführen**.</span><span class="sxs-lookup"><span data-stu-id="e5734-239">From the Windows **Start** menu, select **Developer Command Prompt for VS 2017** in the Visual Studio folder, then select **More** > **Run as Administrator** from the shortcut menu.</span></span>
 
-3. <span data-ttu-id="5cf53-225">Geben Sie folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="5cf53-225">Enter the following command:</span></span>
+2. <span data-ttu-id="e5734-240">Navigieren Sie im Fenster **Developer-Eingabeaufforderung für Visual Studio** zu dem Ordner, der die Ausgabe Ihres Projekts enthält (standardmäßig das Unterverzeichnis *\bin\Debug* Ihres Projekts).</span><span class="sxs-lookup"><span data-stu-id="e5734-240">In the **Developer Command Prompt for Visual Studio** window, navigate to the folder that contains your project's output (by default, the *\bin\Debug* subdirectory of your project).</span></span>
+
+3. <span data-ttu-id="e5734-241">Geben Sie folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="e5734-241">Enter the following command:</span></span>
 
     ```shell
-    installutil.exe MyNewService.exe
+    installutil MyNewService.exe
     ```
 
-    <span data-ttu-id="5cf53-226">Wenn der Dienst erfolgreich installiert wird, meldet **installutil.exe** Erfolg.</span><span class="sxs-lookup"><span data-stu-id="5cf53-226">If the service installs successfully, **installutil.exe** reports success.</span></span> <span data-ttu-id="5cf53-227">Wenn das System **InstallUtil.exe** nicht finden kann, stellen Sie sicher, dass sie auf Ihrem Computer vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="5cf53-227">If the system could not find **InstallUtil.exe**, make sure that it exists on your computer.</span></span> <span data-ttu-id="5cf53-228">Dieses Tool wird mit dem .NET Framework im Ordner *%windir%\Microsoft.NET\Framework[64]\\[Frameworkversion]* installiert.</span><span class="sxs-lookup"><span data-stu-id="5cf53-228">This tool is installed with the .NET Framework to the folder *%windir%\Microsoft.NET\Framework[64]\\[framework version]*.</span></span> <span data-ttu-id="5cf53-229">Der Standardpfad für die 32-Bit-Version lautet beispielsweise *%windir%\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*.</span><span class="sxs-lookup"><span data-stu-id="5cf53-229">For example, the default path for the 32-bit version is *%windir%\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe*.</span></span>
+    <span data-ttu-id="e5734-242">Wenn der Dienst erfolgreich installiert wurde, meldet der Befehl Erfolg.</span><span class="sxs-lookup"><span data-stu-id="e5734-242">If the service installs successfully, the command reports success.</span></span> 
 
-    <span data-ttu-id="5cf53-230">Wenn der Prozess **installutil.exe** Fehler meldet, überprüfen Sie das Installationsprotokoll, um die Gründe zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="5cf53-230">If the **installutil.exe** process reports failure, check the install log to find out why.</span></span> <span data-ttu-id="5cf53-231">Standardmäßig befindet sich das Protokoll im gleichen Ordner wie die ausführbare Datei.</span><span class="sxs-lookup"><span data-stu-id="5cf53-231">By default the log is in the same folder as the service executable.</span></span> <span data-ttu-id="5cf53-232">Bei der Installation kann ein Fehler auftreten, wenn die <xref:System.ComponentModel.RunInstallerAttribute>-Klasse nicht in der `ProjectInstaller`-Klasse vorhanden ist, das Attribut nicht auf **true** festgelegt ist oder die `ProjectInstaller`-Klasse nicht als **public** gekennzeichnet ist.</span><span class="sxs-lookup"><span data-stu-id="5cf53-232">The installation can fail if  the <xref:System.ComponentModel.RunInstallerAttribute> Class is not present on the `ProjectInstaller` class, if the attribute is not set to **true**, or if the `ProjectInstaller` class is not marked **public**.</span></span>
+    <span data-ttu-id="e5734-243">Wenn das System die Datei *installutil.exe* nicht finden kann, stellen Sie sicher, dass sie auf Ihrem Computer vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="e5734-243">If the system can't find *installutil.exe*, make sure that it exists on your computer.</span></span> <span data-ttu-id="e5734-244">Dieses Tool wird mit dem .NET Framework im Ordner *%windir%\Microsoft.NET\Framework[64]\\&lt;[Frameworkversion]&gt;* installiert.</span><span class="sxs-lookup"><span data-stu-id="e5734-244">This tool is installed with the .NET Framework to the folder *%windir%\Microsoft.NET\Framework[64]\\&lt;framework version&gt;*.</span></span> <span data-ttu-id="e5734-245">Der Standardpfad für die 64-Bit-Version lautet beispielsweise *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.</span><span class="sxs-lookup"><span data-stu-id="e5734-245">For example, the default path for the 64-bit version is *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe*.</span></span>
 
-<span data-ttu-id="5cf53-233">Weitere Informationen finden Sie unter [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span><span class="sxs-lookup"><span data-stu-id="5cf53-233">For more information, see [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span></span>
+    <span data-ttu-id="e5734-246">Wenn der Prozess **installutil.exe** fehlschlägt, überprüfen Sie das Installationsprotokoll, um die Gründe zu bestimmen.</span><span class="sxs-lookup"><span data-stu-id="e5734-246">If the **installutil.exe** process fails, check the install log to find out why.</span></span> <span data-ttu-id="e5734-247">Standardmäßig befindet sich das Protokoll im gleichen Ordner wie die ausführbare Datei des Diensts.</span><span class="sxs-lookup"><span data-stu-id="e5734-247">By default, the log is in the same folder as the service executable.</span></span> <span data-ttu-id="e5734-248">Die Installation kann aus folgenden Gründen fehlschlagen:</span><span class="sxs-lookup"><span data-stu-id="e5734-248">The installation can fail if:</span></span> 
+    - <span data-ttu-id="e5734-249">Die <xref:System.ComponentModel.RunInstallerAttribute>-Klasse ist in der `ProjectInstaller`-Klasse nicht vorhanden.</span><span class="sxs-lookup"><span data-stu-id="e5734-249">The <xref:System.ComponentModel.RunInstallerAttribute> class isn't present on the `ProjectInstaller` class.</span></span>
+    -  <span data-ttu-id="e5734-250">Das Attribut ist nicht auf `true` festgelegt.</span><span class="sxs-lookup"><span data-stu-id="e5734-250">The attribute isn't set to `true`.</span></span> 
+    - <span data-ttu-id="e5734-251">Die `ProjectInstaller`-Klasse ist nicht als `public` definiert.</span><span class="sxs-lookup"><span data-stu-id="e5734-251">The `ProjectInstaller` class isn't defined as `public`.</span></span>
 
-## <a name="start-and-run-the-service"></a><span data-ttu-id="5cf53-234">Starten und Ausführen des Diensts</span><span class="sxs-lookup"><span data-stu-id="5cf53-234">Start and run the service</span></span>
+<span data-ttu-id="e5734-252">Weitere Informationen finden Sie unter [Vorgehensweise: Installieren und Deinstallieren von Diensten](how-to-install-and-uninstall-services.md).</span><span class="sxs-lookup"><span data-stu-id="e5734-252">For more information, see [How to: Install and uninstall services](how-to-install-and-uninstall-services.md).</span></span>
 
-1. <span data-ttu-id="5cf53-235">Öffnen Sie in Windows die Desktop-App **Dienste**.</span><span class="sxs-lookup"><span data-stu-id="5cf53-235">In Windows, open the **Services** desktop app.</span></span> <span data-ttu-id="5cf53-236">Drücken Sie **Windows**+**R**, um das Feld **Ausführen** zu öffnen, geben Sie dann **services.msc** ein, und drücken Sie die **EINGABETASTE**, oder klicken Sie auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="5cf53-236">Press **Windows**+**R** to open the **Run** box, and then enter **services.msc** and press **Enter** or click **OK**.</span></span>
+## <a name="start-and-run-the-service"></a><span data-ttu-id="e5734-253">Starten und Ausführen des Diensts</span><span class="sxs-lookup"><span data-stu-id="e5734-253">Start and run the service</span></span>
 
-     <span data-ttu-id="5cf53-237">Ihr Dienst sollte in **Dienste** alphabetisch nach dem Anzeigenamen aufgeführt sein, den Sie für ihn festgelegt haben.</span><span class="sxs-lookup"><span data-stu-id="5cf53-237">You should see your service listed in **Services**, displayed alphabetically by the display name that you set for it.</span></span>
+1. <span data-ttu-id="e5734-254">Öffnen Sie in Windows die Desktop-App **Dienste**.</span><span class="sxs-lookup"><span data-stu-id="e5734-254">In Windows, open the **Services** desktop app.</span></span> <span data-ttu-id="e5734-255">Drücken Sie **Windows**+**R**, um das Feld **Ausführen** zu öffnen, geben Sie dann *services.msc* ein, und drücken Sie die **EINGABETASTE**, oder klicken Sie auf **OK**.</span><span class="sxs-lookup"><span data-stu-id="e5734-255">Press **Windows**+**R** to open the **Run** box, enter *services.msc*, and then press **Enter** or select **OK**.</span></span>
 
-     ![MyNewService im Fenster "Dienste".](../../../docs/framework/windows-services/media/windowsservices-serviceswindow.PNG)
+     <span data-ttu-id="e5734-256">Ihr Dienst sollte in **Dienste** alphabetisch nach dem Anzeigenamen aufgeführt sein, den Sie für ihn festgelegt haben.</span><span class="sxs-lookup"><span data-stu-id="e5734-256">You should see your service listed in **Services**, displayed alphabetically by the display name that you set for it.</span></span>
 
-2. <span data-ttu-id="5cf53-239">Öffnen Sie in **Dienste** das Kontextmenü für den Dienst, und wählen Sie dann **Start** aus.</span><span class="sxs-lookup"><span data-stu-id="5cf53-239">In **Services**, open the shortcut menu for your service, and then choose **Start**.</span></span>
+     ![MyNewService im Fenster "Dienste".](media/windowsservices-serviceswindow.PNG)
 
-3. <span data-ttu-id="5cf53-240">Um den Dienst zu beenden, öffnen Sie das Kontextmenü für den Dienst, und wählen Sie **Beenden** aus.</span><span class="sxs-lookup"><span data-stu-id="5cf53-240">To stop the service, open the shortcut menu for the service, and then choose **Stop**.</span></span>
+2. <span data-ttu-id="e5734-258">Der Dienst wird gestartet, wenn Sie im Kontextmenü des Diensts **Starten** auswählen.</span><span class="sxs-lookup"><span data-stu-id="e5734-258">To start the service, choose **Start** from the service's shortcut menu.</span></span>
 
-4. <span data-ttu-id="5cf53-241">(Optional) An der Befehlszeile können Sie die Befehle `net start ServiceName` und `net stop ServiceName` zum Starten und Beenden Ihres Diensts verwenden.</span><span class="sxs-lookup"><span data-stu-id="5cf53-241">(Optional) From the command line, you can use the commands `net start ServiceName` and `net stop ServiceName` to start and stop your service.</span></span>
+3. <span data-ttu-id="e5734-259">Der Dienst wird angehalten, wenn Sie im Kontextmenü des Diensts **Stopp** auswählen.</span><span class="sxs-lookup"><span data-stu-id="e5734-259">To stop the service, choose **Stop** from the service's shortcut menu.</span></span>
 
-### <a name="verify-the-event-log-output-of-your-service"></a><span data-ttu-id="5cf53-242">Überprüfen der Ereignisprotokollausgabe des Diensts</span><span class="sxs-lookup"><span data-stu-id="5cf53-242">Verify the event log output of your service</span></span>
+4. <span data-ttu-id="e5734-260">(Optional) Über die Befehlszeile können Sie die Befehle **net start &lt;Dienstname&gt;** und **net stop &lt;Dienstname&gt;** verwenden, um Ihren Dienst zu starten und zu stoppen.</span><span class="sxs-lookup"><span data-stu-id="e5734-260">(Optional) From the command line, use the commands **net start &lt;service name&gt;** and **net stop &lt;service name&gt;** to start and stop your service.</span></span>
 
-1. <span data-ttu-id="5cf53-243">Öffnen Sie die **Ereignisanzeige**, indem Sie mit der Eingabe von **Ereignisanzeige** im Suchfeld in der Windows-Taskleiste beginnen und dann in den Suchergebnissen **Ereignisanzeige** auswählen.</span><span class="sxs-lookup"><span data-stu-id="5cf53-243">Open **Event Viewer** by starting to type **Event Viewer** in the search box on the Windows task bar, and then selecting **Event Viewer** from the search results.</span></span>
+### <a name="verify-the-event-log-output-of-your-service"></a><span data-ttu-id="e5734-261">Überprüfen der Ereignisprotokollausgabe des Diensts</span><span class="sxs-lookup"><span data-stu-id="e5734-261">Verify the event log output of your service</span></span>
+
+1. <span data-ttu-id="e5734-262">Öffnen Sie in Windows die Desktop-App **Event Viewer**.</span><span class="sxs-lookup"><span data-stu-id="e5734-262">In Windows, open the **Event Viewer** desktop app.</span></span> <span data-ttu-id="e5734-263">Geben Sie in der Windows-Suchleiste *Event Viewer* ein, und wählen Sie dann in den Suchergebnissen **Event Viewer** aus.</span><span class="sxs-lookup"><span data-stu-id="e5734-263">Enter *Event Viewer* in the Windows search bar, and then select **Event Viewer** from the search results.</span></span>
 
    > [!TIP]
-   > <span data-ttu-id="5cf53-244">In Visual Studio können Sie auf Ereignisprotokolle zugreifen, indem Sie den **Server-Explorer** öffnen (Tastatur: **STRG**+**ALT**+**S**) und den Knoten **Ereignisprotokolle** für den lokalen Computer erweitern.</span><span class="sxs-lookup"><span data-stu-id="5cf53-244">In Visual Studio, you can access event logs by opening **Server Explorer** (Keyboard: **Ctrl**+**Alt**+**S**) and expanding the **Event Logs** node for the local computer.</span></span>
+   > <span data-ttu-id="e5734-264">In Visual Studio können Sie auf Ereignisprotokolle zugreifen, indem Sie über das Menü **Anzeigen** den **Server-Explorer** öffnen (oder **STRG**+**ALT**+**S** drücken) und den Knoten **Ereignisprotokolle** für den lokalen Computer aufklappen.</span><span class="sxs-lookup"><span data-stu-id="e5734-264">In Visual Studio, you can access event logs by opening **Server Explorer** from the **View** menu (or press **Ctrl**+**Alt**+**S**) and expanding the **Event Logs** node for the local computer.</span></span>
 
-2. <span data-ttu-id="5cf53-245">Klappen Sie in der **Ereignisanzeige** **Anwendungs- und Dienstprotokolle** auf.</span><span class="sxs-lookup"><span data-stu-id="5cf53-245">In **Event Viewer**, expand **Applications and Services Logs**.</span></span>
+2. <span data-ttu-id="e5734-265">Klappen Sie in der **Ereignisanzeige** **Anwendungs- und Dienstprotokolle** auf.</span><span class="sxs-lookup"><span data-stu-id="e5734-265">In **Event Viewer**, expand **Applications and Services Logs**.</span></span>
 
-3. <span data-ttu-id="5cf53-246">Suchen Sie den Eintrag für **MyNewLog** (oder **MyLogFile1**, wenn Sie das optionale Verfahren befolgt haben, um Befehlszeilenargumente hinzuzufügen), und klappen Sie ihn auf.</span><span class="sxs-lookup"><span data-stu-id="5cf53-246">Locate the listing for **MyNewLog** (or **MyLogFile1**, if you followed the optional procedure to add command-line arguments) and expand it.</span></span> <span data-ttu-id="5cf53-247">Sie sehen Einträge für die beiden Aktionen (Starten und Beenden), die Ihr Dienst ausgeführt hat.</span><span class="sxs-lookup"><span data-stu-id="5cf53-247">You should see entries for the two actions (start and stop) that your service performed.</span></span>
+3. <span data-ttu-id="e5734-266">Suchen Sie den Eintrag für **MyNewLog** (oder **MyLogFile1**, wenn Sie das Verfahren befolgt haben, um Befehlszeilenargumente hinzuzufügen), und klappen Sie ihn auf.</span><span class="sxs-lookup"><span data-stu-id="e5734-266">Locate the listing for **MyNewLog** (or **MyLogFile1** if you followed the procedure to add command-line arguments) and expand it.</span></span> <span data-ttu-id="e5734-267">Sie sollten Einträge für die beiden Aktionen (Starten und Stopp) sehen, die Ihr Dienst ausgeführt hat.</span><span class="sxs-lookup"><span data-stu-id="e5734-267">You should see the entries for the two actions (start and stop) that your service performed.</span></span>
 
-     ![Verwenden der Ereignisanzeige zum Anzeigen von Einträgen im Ereignisprotokoll](../../../docs/framework/windows-services/media/windows-service-event-viewer.png)
+     ![Verwenden der Ereignisanzeige zum Anzeigen von Einträgen im Ereignisprotokoll](media/windows-service-event-viewer.png)
 
-## <a name="uninstall-the-service"></a><span data-ttu-id="5cf53-249">Deinstallieren des Diensts</span><span class="sxs-lookup"><span data-stu-id="5cf53-249">Uninstall the service</span></span>
+## <a name="clean-up-resources"></a><span data-ttu-id="e5734-269">Bereinigen von Ressourcen</span><span class="sxs-lookup"><span data-stu-id="e5734-269">Clean up resources</span></span>
 
-1. <span data-ttu-id="5cf53-250">Öffnen Sie die **Developer-Eingabeaufforderung für Visual Studio** mit Administratoranmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="5cf53-250">Open **Developer Command Prompt for Visual Studio** with administrative credentials.</span></span>
+<span data-ttu-id="e5734-270">Wenn Sie die Windows-Dienst-App nicht länger benötigen, können Sie sie entfernen.</span><span class="sxs-lookup"><span data-stu-id="e5734-270">If you no longer need the Windows service app, you can remove it.</span></span> 
 
-2. <span data-ttu-id="5cf53-251">Navigieren Sie im Eingabeaufforderungsfenster zu dem Ordner, der die Ausgabe Ihres Projekts enthält.</span><span class="sxs-lookup"><span data-stu-id="5cf53-251">In the command prompt window, navigate to the folder that contains your project's output.</span></span>
+1. <span data-ttu-id="e5734-271">Öffnen Sie die **Developer-Eingabeaufforderung für Visual Studio** mit Administratoranmeldeinformationen.</span><span class="sxs-lookup"><span data-stu-id="e5734-271">Open **Developer Command Prompt for Visual Studio** with administrative credentials.</span></span>
 
-3. <span data-ttu-id="5cf53-252">Geben Sie folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="5cf53-252">Enter the following command:</span></span>
+2. <span data-ttu-id="e5734-272">Navigieren Sie im Fenster **Developer-Eingabeaufforderung für Visual Studio** zu dem Ordner, der die Ausgabe Ihres Projekts enthält.</span><span class="sxs-lookup"><span data-stu-id="e5734-272">In the **Developer Command Prompt for Visual Studio** window, navigate to the folder that contains your project's output.</span></span>
+
+3. <span data-ttu-id="e5734-273">Geben Sie folgenden Befehl ein:</span><span class="sxs-lookup"><span data-stu-id="e5734-273">Enter the following command:</span></span>
 
     ```shell
     installutil.exe /u MyNewService.exe
     ```
 
-   <span data-ttu-id="5cf53-253">Wenn der Dienst erfolgreich deinstalliert ist, meldet **installutil.exe**, dass der Dienst erfolgreich entfernt wurde.</span><span class="sxs-lookup"><span data-stu-id="5cf53-253">If the service uninstalls successfully, **installutil.exe** reports that your service was successfully removed.</span></span> <span data-ttu-id="5cf53-254">Weitere Informationen finden Sie unter [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span><span class="sxs-lookup"><span data-stu-id="5cf53-254">For more information, see [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).</span></span>
+   <span data-ttu-id="e5734-274">Wenn der Dienst erfolgreich deinstalliert wurde, meldet der Befehl, dass der Dienst erfolgreich entfernt wurde.</span><span class="sxs-lookup"><span data-stu-id="e5734-274">If the service uninstalls successfully, the command reports that your service was successfully removed.</span></span> <span data-ttu-id="e5734-275">Weitere Informationen finden Sie unter [Vorgehensweise: Installieren und Deinstallieren von Diensten](how-to-install-and-uninstall-services.md).</span><span class="sxs-lookup"><span data-stu-id="e5734-275">For more information, see [How to: Install and uninstall services](how-to-install-and-uninstall-services.md).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="5cf53-255">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="5cf53-255">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="e5734-276">Nächste Schritte</span><span class="sxs-lookup"><span data-stu-id="e5734-276">Next steps</span></span>
 
-<span data-ttu-id="5cf53-256">Jetzt, da Sie den Dienst erstellt haben, kann es sinnvoll sein, ein eigenständiges Setupprogramm zu erstellen, das von anderen für die Installation Ihres Windows-Diensts verwendet werden kann.</span><span class="sxs-lookup"><span data-stu-id="5cf53-256">Now that you've created the service, you might want to create a standalone setup program that others can use to install your Windows service.</span></span> <span data-ttu-id="5cf53-257">ClickOnce unterstützt keine Windows-Dienste, aber Sie können das [WiX-Toolset](http://wixtoolset.org/) verwenden, um ein Installationsprogramm für einen Windows-Dienst zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="5cf53-257">ClickOnce doesn't support Windows services, but you can use the [WiX Toolset](http://wixtoolset.org/) to create an installer for a Windows service.</span></span> <span data-ttu-id="5cf53-258">Weitere Ideen finden Sie unter [Erstellen eines Installationspakets](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).</span><span class="sxs-lookup"><span data-stu-id="5cf53-258">For other ideas, see [Create an installer package](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).</span></span>
+<span data-ttu-id="e5734-277">Nach der Erstellung des Diensts haben Sie nun folgende Möglichkeiten:</span><span class="sxs-lookup"><span data-stu-id="e5734-277">Now that you've created the service, you can:</span></span>
 
-<span data-ttu-id="5cf53-259">Sie können die Verwendung einer <xref:System.ServiceProcess.ServiceController>-Komponente untersuchen, die es Ihnen ermöglicht, Befehle an den installierten Dienst zu senden.</span><span class="sxs-lookup"><span data-stu-id="5cf53-259">You might explore the use of a <xref:System.ServiceProcess.ServiceController> component, which enables you to send commands to the service you've installed.</span></span>
+- <span data-ttu-id="e5734-278">Erstellen eines eigenständigen Setupprogramms, damit andere Personen Ihren Windows-Dienst installieren können.</span><span class="sxs-lookup"><span data-stu-id="e5734-278">Create a standalone setup program for others to use to install your Windows service.</span></span> <span data-ttu-id="e5734-279">Verwenden Sie das [WiX-Toolset](http://wixtoolset.org/), um einen Installer für einen Windows-Dienst zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="e5734-279">Use the [WiX Toolset](http://wixtoolset.org/) to create an installer for a Windows service.</span></span> <span data-ttu-id="e5734-280">Weitere Ideen finden Sie unter [Erstellen eines Installationspakets](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).</span><span class="sxs-lookup"><span data-stu-id="e5734-280">For other ideas, see [Create an installer package](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).</span></span>
 
-<span data-ttu-id="5cf53-260">Sie können ein Installationsprogramm verwenden, um ein Ereignisprotokoll während der Installation statt während der Ausführung der Anwendung zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="5cf53-260">You can use an installer to create an event log when the application is installed instead of creating the event log when the application runs.</span></span> <span data-ttu-id="5cf53-261">Außerdem wird das Ereignisprotokoll vom Installationsprogramm gelöscht, wenn die Anwendung deinstalliert wird.</span><span class="sxs-lookup"><span data-stu-id="5cf53-261">Additionally, the event log will be deleted by the installer when the application is uninstalled.</span></span> <span data-ttu-id="5cf53-262">Weitere Informationen finden Sie auf der Referenzseite <xref:System.Diagnostics.EventLogInstaller> .</span><span class="sxs-lookup"><span data-stu-id="5cf53-262">For more information, see the <xref:System.Diagnostics.EventLogInstaller> reference page.</span></span>
+- <span data-ttu-id="e5734-281">Sie können die Verwendung einer <xref:System.ServiceProcess.ServiceController>-Komponente untersuchen, die es Ihnen ermöglicht, Befehle an den installierten Dienst zu senden.</span><span class="sxs-lookup"><span data-stu-id="e5734-281">Explore the <xref:System.ServiceProcess.ServiceController> component, which enables you to send commands to the service you've installed.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="5cf53-263">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5cf53-263">See also</span></span>
+- <span data-ttu-id="e5734-282">Sie können einen Installer verwenden, um ein Ereignisprotokoll während der Installation anstatt während der Ausführung der Anwendung zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="e5734-282">Instead of creating the event log when the application runs, use an installer to create an event log when you install the application.</span></span> <span data-ttu-id="e5734-283">Das Ereignisprotokoll wird vom Installer entfernt, wenn Sie die Anwendung deinstallieren.</span><span class="sxs-lookup"><span data-stu-id="e5734-283">The event log is deleted by the installer when you uninstall the application.</span></span> <span data-ttu-id="e5734-284">Weitere Informationen finden Sie unter <xref:System.Diagnostics.EventLogInstaller>.</span><span class="sxs-lookup"><span data-stu-id="e5734-284">For more information, see <xref:System.Diagnostics.EventLogInstaller>.</span></span>
 
-- [<span data-ttu-id="5cf53-264">Windows-Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="5cf53-264">Windows service applications</span></span>](../../../docs/framework/windows-services/index.md)
-- [<span data-ttu-id="5cf53-265">Einführung in Windows-Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="5cf53-265">Introduction to Windows service applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [<span data-ttu-id="5cf53-266">Vorgehensweise: Debuggen von Windows-Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="5cf53-266">How to: Debug Windows service applications</span></span>](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [<span data-ttu-id="5cf53-267">Dienste (Windows)</span><span class="sxs-lookup"><span data-stu-id="5cf53-267">Services (Windows)</span></span>](/windows/desktop/Services/services)
+## <a name="see-also"></a><span data-ttu-id="e5734-285">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e5734-285">See also</span></span>
+
+- [<span data-ttu-id="e5734-286">Windows-Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="e5734-286">Windows service applications</span></span>](index.md)
+- [<span data-ttu-id="e5734-287">Einführung in Windows-Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="e5734-287">Introduction to Windows service applications</span></span>](introduction-to-windows-service-applications.md)
+- [<span data-ttu-id="e5734-288">Vorgehensweise: Debuggen von Windows-Dienstanwendungen</span><span class="sxs-lookup"><span data-stu-id="e5734-288">How to: Debug Windows service applications</span></span>](how-to-debug-windows-service-applications.md)
+- [<span data-ttu-id="e5734-289">Dienste (Windows)</span><span class="sxs-lookup"><span data-stu-id="e5734-289">Services (Windows)</span></span>](/windows/desktop/Services/services)
