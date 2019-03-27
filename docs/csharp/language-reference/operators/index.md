@@ -1,29 +1,23 @@
 ---
-title: C#-Operatoren
+title: 'C#-Operatoren'
 ms.date: 04/04/2018
 f1_keywords:
-- cs.operators
+  - cs.operators
 helpviewer_keywords:
-- boolean operators [C#]
-- expressions [C#], operators
-- logical operators [C#]
-- operators [C#]
-- Visual C#, operators
-- indirection operators [C#]
-- assignment operators [C#]
-- shift operators [C#]
-- relational operators [C#]
-- bitwise operators [C#]
-- address operators [C#]
-- keywords [C#], operators
-- arithmetic operators [C#]
+  - 'boolean operators [C#]'
+  - 'expressions [C#], operators'
+  - 'logical operators [C#]'
+  - 'operators [C#]'
+  - 'Visual C#, operators'
+  - 'indirection operators [C#]'
+  - 'assignment operators [C#]'
+  - 'shift operators [C#]'
+  - 'relational operators [C#]'
+  - 'bitwise operators [C#]'
+  - 'address operators [C#]'
+  - 'keywords [C#], operators'
+  - 'arithmetic operators [C#]'
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 6380fa4ec99f598be0d01db1061900520e94d5f1
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333407"
 ---
 # <a name="c-operators"></a>C#-Operatoren
 
@@ -47,9 +41,9 @@ Hierbei handelt es sich um die höchsten Rangfolgenoperatoren.
 
 [a&#91;x&#93;](index-operator.md) – Aggregatobjektindizierung.
 
-[x++](increment-operator.md) – Postfixinkrement. Gibt den Wert von x zurück und aktualisiert dann den Speicherort mit dem Wert von x, der eins größer ist (für gewöhnlich wird die Ganzzahl 1 addiert).
+[x++](arithmetic-operators.md#increment-operator-) – Postfixinkrement. Gibt den Wert von x zurück und aktualisiert dann den Speicherort mit dem Wert von x, der eins größer ist (für gewöhnlich wird die Ganzzahl 1 addiert).
 
-[x--](decrement-operator.md) – Postfixdekrement. Gibt den Wert von x zurück und aktualisiert dann den Speicherort mit dem Wert von x, der eins kleiner ist (für gewöhnlich wird die Ganzzahl 1 subtrahiert).
+[x--](arithmetic-operators.md#decrement-operator---) – Postfixdekrement. Gibt den Wert von x zurück und aktualisiert dann den Speicherort mit dem Wert von x, der eins kleiner ist (für gewöhnlich wird die Ganzzahl 1 subtrahiert).
 
 [new](../keywords/new-operator.md) – Typinstanziierung.
 
@@ -79,9 +73,9 @@ Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und ein
 
 [~x](bitwise-complement-operator.md) – Bitweises Komplement.
 
-[++x](increment-operator.md) – Präfixinkrement. Gibt den Wert von x nach dem Aktualisieren des Speicherorts mit dem Wert von x zurück, der eins größer ist (für gewöhnlich wird die Ganzzahl 1 addiert).
+[++x](arithmetic-operators.md#increment-operator-) – Präfixinkrement. Gibt den Wert von x nach dem Aktualisieren des Speicherorts mit dem Wert von x zurück, der eins größer ist (für gewöhnlich wird die Ganzzahl 1 addiert).
 
-[--x](decrement-operator.md) – Präfixdekrement. Gibt den Wert von x nach dem Aktualisieren des Speicherorts mit dem Wert von x zurück, der eins kleiner ist (für gewöhnlich wird die ganze Zahl 1 subtrahiert).
+[--x](arithmetic-operators.md#decrement-operator---) – Präfixdekrement. Gibt den Wert von x nach dem Aktualisieren des Speicherorts mit dem Wert von x zurück, der eins kleiner ist (für gewöhnlich wird die ganze Zahl 1 subtrahiert).
 
 [(T)x](invocation-operator.md) – Typumwandlung.
 
@@ -95,19 +89,19 @@ Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und ein
 
 Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und eine geringere Rangfolge als der vorherige Abschnitt.
 
-[x * y](multiplication-operator.md) – Multiplikation.
+[x * y](arithmetic-operators.md#multiplication-operator-) – Multiplikation.
 
-[x / y](division-operator.md) – Division. Wenn es sich bei den Operanden um Ganzzahlen handelt, ist das Ergebnis eine Ganzzahl, die in Richtung 0 abgeschnitten wird (beispielsweise `-7 / 2 is -3`).
+[x / y](arithmetic-operators.md#division-operator-) – Division. Wenn es sich bei den Operanden um Ganzzahlen handelt, ist das Ergebnis eine Ganzzahl, die in Richtung 0 abgeschnitten wird (beispielsweise `-7 / 2 is -3`).
 
-[x % y](remainder-operator.md) – Restwert. Wenn es sich bei den Operanden um Ganzzahlen handelt, wird dadurch der Rest der Division x durch y zurückgegeben.  Wenn `q = x / y` und `r = x % y`, dann `x = q * y + r`.
+[x % y](arithmetic-operators.md#remainder-operator-) – Restwert. Wenn es sich bei den Operanden um Ganzzahlen handelt, wird dadurch der Rest der Division x durch y zurückgegeben.  Wenn `q = x / y` und `r = x % y`, dann `x = q * y + r`.
 
 ## <a name="additive-operators"></a>Additive Operatoren
 
 Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und eine geringere Rangfolge als der vorherige Abschnitt.
 
-[x + y](addition-operator.md) – Addition.
+[x + y](arithmetic-operators.md#addition-operator-) – Addition.
 
-[x – y](subtraction-operator.md) – Subtraktion.
+[x – y](arithmetic-operators.md#subtraction-operator--) – Subtraktion.
 
 ## <a name="shift-operators"></a>Schiebeoperatoren
 
@@ -195,9 +189,9 @@ Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und ein
 
 [x *= y](multiplication-assignment-operator.md) – Multiplikationszuweisung. Multiplizieren Sie den Wert `y` mit dem Wert `x`. Speichern Sie das Ergebnis in `x`, und geben Sie den neuen Wert zurück.
 
-[x /= y](division-assignment-operator.md) – Divisionszuweisung. Dividieren Sie den Wert `x` durch den Wert `y`. Speichern Sie das Ergebnis in `x`, und geben Sie den neuen Wert zurück.
+[x /= y](arithmetic-operators.md#compound-assignment) – Divisionszuweisung. Dividieren Sie den Wert `x` durch den Wert `y`. Speichern Sie das Ergebnis in `x`, und geben Sie den neuen Wert zurück.
 
-[x %= y](remainder-assignment-operator.md) – Restwertzuweisung. Dividieren Sie den Wert `x` durch den Wert `y`. Speichern Sie den Rest in `x`, und geben Sie den neuen Wert zurück.
+[x %= y](arithmetic-operators.md#compound-assignment) – Restwertzuweisung. Dividieren Sie den Wert `x` durch den Wert `y`. Speichern Sie den Rest in `x`, und geben Sie den neuen Wert zurück.
 
 [x &= y](and-assignment-operator.md) – AND-Zuweisung. Führen Sie eine AND-Operation der Werte `y` und `x` aus. Speichern Sie das Ergebnis in `x`, und geben Sie den neuen Wert zurück.
 
@@ -210,20 +204,6 @@ Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und ein
 [x >>= y](right-shift-assignment-operator.md) – Rechtsschiebezuweisung. Verschieben Sie den Wert von `x` nach rechts um `y` Stellen. Speichern Sie das Ergebnis in `x`, und geben Sie den neuen Wert zurück.
 
 [=>](lambda-operator.md) – Lambdadeklaration.
-
-## <a name="arithmetic-overflow"></a>Arithmetischer Überlauf
-
-Die arithmetischen Operatoren ([+](addition-operator.md), [-](subtraction-operator.md), [*](multiplication-operator.md), [/](division-operator.md)) können Ergebnisse erzeugen, die sich außerhalb des zulässigen Wertebereichs für den betreffenden numerischen Typ befinden. Einzelheiten zu bestimmten Operatoren finden Sie im entsprechenden Abschnitt, grundsätzlich gilt aber:
-
-- Arithmetischer Überlauf bei ganzen Zahlen löst entweder eine <xref:System.OverflowException> aus oder verwirft die höchstwertigen Bits des Ergebnisses. Division ganzer Zahlen durch Null löst immer eine <xref:System.DivideByZeroException> aus.
-
-   Wenn ein Überlauf bei ganzen Zahlen auftritt, hängen die Auswirkungen vom Ausführungskontext ab, bei dem es sich um [checked oder unchecked](../keywords/checked-and-unchecked.md) handeln kann. In einem "checked"-Kontext wird eine <xref:System.OverflowException> ausgelöst. In einem "unchecked"-Kontext werden die höchstwertigen Bits verworfen, und die Ausführung wird fortgesetzt. Bei C# haben Sie die Wahl, einen Überlauf zu verarbeiten oder zu ignorieren. Standardmäßig erscheinen arithmetische Operationen in einem *unchecked*-Kontext.
-
-   Neben arithmetischen Operationen können auch Konvertierungen zwischen ganzzahligen Typen (z.B. die Umwandlung von [long](../keywords/long.md) nach [int](../keywords/int.md)) einen Überlauf verursachen. Sie sind von der Ausführung „checked“ oder „unchecked“ abhängig. Bitweise Operatoren und Schiebeoperatoren verursachen allerdings nie einen Überlauf.
-
-- Arithmetischer Überlauf oder Division durch 0 (null) löst bei Gleitkommazahlen nie eine Ausnahme aus, weil die Gleitkommatypen auf IEEE 754 basieren und daher Vorkehrungen für die Darstellung von Unendlich und NaN (Not a Number/Keine Zahl) aufweisen.
-
-- Arithmetischer Überlauf bei [Decimal](../keywords/decimal.md) löst immer eine <xref:System.OverflowException> aus. Dezimale Division durch Null löst immer eine <xref:System.DivideByZeroException> aus.
 
 ## <a name="see-also"></a>Siehe auch
 
