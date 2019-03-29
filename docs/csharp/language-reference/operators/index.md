@@ -131,9 +131,9 @@ Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und ein
 
 Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und eine geringere Rangfolge als der vorherige Abschnitt.
 
-[x == y](equality-comparison-operator.md) – Gleichheit. Standardmäßig wird für Verweistypen, die nicht `string` entsprechen, diese Verweisübereinstimmung (Identitätstest) zurückgeben Typen können `==` jedoch überladen. Wenn Sie also vorhaben, die Identität zu testen, sollten Sie möglichst die `ReferenceEquals`-Methode für `object` verwenden.
+[x == y](equality-operators.md#equality-operator-) – Gleichheit. Standardmäßig wird für Verweistypen, die nicht `string` entsprechen, diese Verweisübereinstimmung (Identitätstest) zurückgeben Typen können `==` jedoch überladen. Wenn Sie also vorhaben, die Identität zu testen, sollten Sie möglichst die `ReferenceEquals`-Methode für `object` verwenden.
 
-[x != y](not-equal-operator.md) – ungleich. Siehe hierzu den Kommentar für `==`. Wenn ein Typ `==` überlädt, muss er `!=` überladen.
+[x != y](equality-operators.md#inequality-operator-) – ungleich. Siehe hierzu den Kommentar für `==`. Wenn ein Typ `==` überlädt, muss er `!=` überladen.
 
 ## <a name="logical-and-operator"></a>Logischer AND-Operator
 
