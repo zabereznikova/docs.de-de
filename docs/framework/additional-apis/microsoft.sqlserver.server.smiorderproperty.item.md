@@ -3,8 +3,7 @@ title: SmiOrderProperty.Item-Eigenschaft (Microsoft.SqlServer.Server)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
 topic_type:
 - apiref
 api_name:
@@ -14,38 +13,38 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: cb2f6cb956f9571f9bd2ba7f86d79c5df6e72a15
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 499522a11cac744c14ac32cf3bfe485a46b19d93
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827733"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634322"
 ---
-# <a name="smiorderpropertyitem-property"></a><span data-ttu-id="f40cd-102">SmiOrderProperty.Item-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="f40cd-102">SmiOrderProperty.Item Property</span></span>
+# <a name="smiorderpropertyitem-property"></a><span data-ttu-id="a8536-102">SmiOrderProperty.Item-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="a8536-102">SmiOrderProperty.Item Property</span></span>
 
-<span data-ttu-id="f40cd-103">Ruft die Reihenfolge der Spalten für die Entität ab.</span><span class="sxs-lookup"><span data-stu-id="f40cd-103">Gets the column order for the entity.</span></span> <span data-ttu-id="f40cd-104">Die Assembly, die diese Eigenschaft enthält, verfügt über eine Friend-Beziehung SQLAccess.dll.</span><span class="sxs-lookup"><span data-stu-id="f40cd-104">The assembly that contains this property has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="f40cd-105">Es ist für die Verwendung durch SQL Server vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="f40cd-105">It's intended for use by SQL Server.</span></span> <span data-ttu-id="f40cd-106">Verwenden Sie für andere Datenbanken Hostingmechanismus, die von dieser Datenbank bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="f40cd-106">For other databases, use the hosting mechanism provided by that database.</span></span>
+<span data-ttu-id="a8536-103">Ruft die Reihenfolge der Spalten für die Entität ab.</span><span class="sxs-lookup"><span data-stu-id="a8536-103">Gets the column order for the entity.</span></span> <span data-ttu-id="a8536-104">Die Assembly, die diese Eigenschaft enthält, verfügt über eine Friend-Beziehung SQLAccess.dll.</span><span class="sxs-lookup"><span data-stu-id="a8536-104">The assembly that contains this property has a friend relationship with SQLAccess.dll.</span></span> <span data-ttu-id="a8536-105">Es ist für die Verwendung durch SQL Server vorgesehen.</span><span class="sxs-lookup"><span data-stu-id="a8536-105">It's intended for use by SQL Server.</span></span> <span data-ttu-id="a8536-106">Verwenden Sie für andere Datenbanken Hostingmechanismus, die von dieser Datenbank bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="a8536-106">For other databases, use the hosting mechanism provided by that database.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="f40cd-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="f40cd-107">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="a8536-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="a8536-107">Syntax</span></span>
 
 ```csharp
 internal SmiColumnOrder Item { get; }
 ```
 
-## <a name="property-value"></a><span data-ttu-id="f40cd-108">Eigenschaftswert</span><span class="sxs-lookup"><span data-stu-id="f40cd-108">Property value</span></span>
+## <a name="property-value"></a><span data-ttu-id="a8536-108">Eigenschaftswert</span><span class="sxs-lookup"><span data-stu-id="a8536-108">Property value</span></span>
 
-<span data-ttu-id="f40cd-109">Die Spaltenreihenfolge.</span><span class="sxs-lookup"><span data-stu-id="f40cd-109">The column order.</span></span>
+<span data-ttu-id="a8536-109">Die Spaltenreihenfolge.</span><span class="sxs-lookup"><span data-stu-id="a8536-109">The column order.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="f40cd-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f40cd-110">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="a8536-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a8536-110">Remarks</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="f40cd-111">Die `SmiOrderProperty.Item` -Eigenschaft ist intern und nicht direkt in Ihrem Code verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="f40cd-111">The `SmiOrderProperty.Item` property is internal and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="a8536-111">Die `SmiOrderProperty.Item` -Eigenschaft ist intern und nicht direkt in Ihrem Code verwendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="a8536-111">The `SmiOrderProperty.Item` property is internal and is not meant to be used directly in your code.</span></span>
 >
-> <span data-ttu-id="f40cd-112">Microsoft unterstützt nicht die Verwendung dieser Eigenschaft in einer produktionsanwendung unter keinen Umständen.</span><span class="sxs-lookup"><span data-stu-id="f40cd-112">Microsoft does not support the use of this property in a production application under any circumstance.</span></span>
+> <span data-ttu-id="a8536-112">Microsoft unterstützt nicht die Verwendung dieser Eigenschaft in einer produktionsanwendung unter keinen Umständen.</span><span class="sxs-lookup"><span data-stu-id="a8536-112">Microsoft does not support the use of this property in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="f40cd-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f40cd-113">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="a8536-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a8536-113">Requirements</span></span>
 
-<span data-ttu-id="f40cd-114">**Namespace:** <xref:Microsoft.SqlServer.Server></span><span class="sxs-lookup"><span data-stu-id="f40cd-114">**Namespace:** <xref:Microsoft.SqlServer.Server></span></span>
+<span data-ttu-id="a8536-114">**Namespace:** <xref:Microsoft.SqlServer.Server></span><span class="sxs-lookup"><span data-stu-id="a8536-114">**Namespace:** <xref:Microsoft.SqlServer.Server></span></span>
 
-<span data-ttu-id="f40cd-115">**Assembly:** System.Data (in "System.Data.dll")</span><span class="sxs-lookup"><span data-stu-id="f40cd-115">**Assembly:** System.Data (in System.Data.dll)</span></span>
+<span data-ttu-id="a8536-115">**Assembly:** System.Data (in "System.Data.dll")</span><span class="sxs-lookup"><span data-stu-id="a8536-115">**Assembly:** System.Data (in System.Data.dll)</span></span>
 
-<span data-ttu-id="f40cd-116">**.NET Framework-Versionen:** Verfügbar seit 2.0.</span><span class="sxs-lookup"><span data-stu-id="f40cd-116">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="a8536-116">**.NET Framework-Versionen:** Verfügbar seit 2.0.</span><span class="sxs-lookup"><span data-stu-id="a8536-116">**.NET Framework versions:** Available since 2.0.</span></span>
