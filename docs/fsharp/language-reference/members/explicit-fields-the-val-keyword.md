@@ -40,7 +40,7 @@ Ein unveränderliches Feld mit der Bezeichnung `someField` verfügt zum Beispiel
 Bei einem veränderlichen Feld ist die kompilierte .NET-Darstellung ein .NET-Feld.
 
 >[!WARNING]
-`Note` .NET Framework-Namespaces `System.ComponentModel` enthält ein Attribut, das den gleichen Namen hat. Informationen zu diesem Attribut finden Sie unter `System.ComponentModel.DefaultValueAttribute`.
+> Der .NET Framework-Namespace `System.ComponentModel` enthält ein Attribut, das den gleichen Namen hat. Informationen zu diesem Attribut finden Sie unter `System.ComponentModel.DefaultValueAttribute`.
 
 Der folgende Code zeigt die Verwendung expliziter Felder und zum Vergleich eine `let`-Bindung in einer Klasse, die über einen primären Konstruktor verfügt. Beachten Sie, dass das `let`-gebundene Feld `myInt1` privat ist. Wenn das `let`-gebundene Feld `myInt1` von einer Membermethode referenziert wird, ist der Selbstbezeichner `this` nicht erforderlich. Wenn Sie jedoch die expliziten Felder `myInt2` und `myString` referenzieren, ist der Selbstbezeichner erforderlich.
 
