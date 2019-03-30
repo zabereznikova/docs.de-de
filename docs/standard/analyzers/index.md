@@ -2,7 +2,7 @@
 title: Die auf Roslyn basierenden Analysetools – .NET
 description: 'Erfahren Sie mehr zu auf Roslyn basierenden Analysetools, die Probleme erkennen und Problembehebungen vorschlagen.'
 author: billwagner
-ms.author: billwagner
+ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
 ---
