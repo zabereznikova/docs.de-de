@@ -2,12 +2,12 @@
 title: Eigenschaften
 description: Erfahren Sie mehr über F# Eigenschaften, die Mitglieder sind, die einem Objekt zugeordneten Werte darstellen.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8e74e0bc0850b5f07c4697f624d5393813bec6e0
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: bf605ee1135bd3b3561bde9a8ae66353497931b0
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614505"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675691"
 ---
 # <a name="properties"></a>Eigenschaften
 
@@ -103,7 +103,7 @@ class1.ExplicitProperty = 1131210765
 Die Ausgabe der obige Code zeigt, dass der Wert des AutoProperty unverändert ist, wenn wird wiederholt aufgerufen, während die ExplicitProperty jedes Mal ändert, die sie aufgerufen wird. Dies zeigt, dass der Ausdruck für eine automatisch implementierte Eigenschaft nicht jedes Mal ausgewertet wird, wie die Gettermethode für die explizite Eigenschaft ist.
 
 >[!WARNING]
-Es gibt einige Bibliotheken, z. B. Entity Framework (`System.Data.Entity`), benutzerdefinierte Vorgänge ausführen, in den Konstruktoren, die auch mit der Initialisierung des automatisch implementierte Eigenschaften nicht funktionieren. Verwenden Sie in diesen Fällen explizite Eigenschaften.
+>Es gibt einige Bibliotheken, z. B. Entity Framework (`System.Data.Entity`), benutzerdefinierte Vorgänge ausführen, in den Konstruktoren, die auch mit der Initialisierung des automatisch implementierte Eigenschaften nicht funktionieren. Verwenden Sie in diesen Fällen explizite Eigenschaften.
 
 Eigenschaften können Mitglieder der Klassen, Strukturen, Unterscheidungs-Unions, Datensätze, Schnittstellen und Erweiterungen des Typs sein, und es können auch in Object-Ausdrücke definiert werden.
 

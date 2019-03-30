@@ -2,19 +2,19 @@
 title: Aggregationsvorgänge (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: fe39c2efb5d9f24a7d9d5240b20a9ca687ed1aa9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 5d8e5c589b19527062f7752b2f795c8396683bbd
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202183"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675639"
 ---
 # <a name="aggregation-operations-visual-basic"></a>Aggregationsvorgänge (Visual Basic)
 Während eines Aggregationsvorgangs wird aus einer Auflistung von Werten ein einzelner Wert berechnet. Ein Beispiel für einen Aggregationsvorgang ist die Berechnung der durchschnittlichen Tagestemperatur aus den Tagestemperaturen eines Monats.  
   
  Die folgende Abbildung zeigt das Ergebnis von zwei verschiedenen Aggregationsvorgängen bei einer Zahlensequenz. Der erste Vorgang zählt die Zahlen zusammen. Der zweite Vorgang gibt den höchsten Wert der Sequenz zurück.  
   
- ![LINQ-Aggregationsvorgänge](../../../../csharp/programming-guide/concepts/linq/media/linq_aggregation.png "LINQ_Aggregation")  
+ ![Abbildung der LINQ-Aggregationsvorgänge.](./media/aggregation-operations/linq-aggregation-operations.png)  
   
  Die Methoden des Standardabfrageoperators, die Aggregationsvorgänge ausführen, sind im folgenden Abschnitt aufgeführt.  
   
