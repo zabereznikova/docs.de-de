@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: e6274f470e042fa5d581a574d13bd67ae8e8d6e9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 582988c9eed19fe49bc86e75e7a9d80bbf2a6d59
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979462"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654528"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Objektlebensdauer: Wie die Objekte werden erstellt und zerstört (Visual Basic)
 Erstellt mit dem `New`-Schlüsselwort eine Instanz einer Klasse, ein Objekt. Initialisierungsaufgaben müssen häufig für neue Objekte ausgeführt werden, bevor sie verwendet werden. Gebräuchliche Initialisierungsaufgaben umfassen das Öffnen von Dateien, Verbinden mit Datenbanken und das Lesen von Werten von Registrierungsschlüsseln. Visual Basic steuert die Initialisierung neuer Objekte mit Prozeduren mit Namen *Konstruktoren* (spezielle Methoden, die Kontrolle über die Initialisierung zu ermöglichen).  
@@ -53,7 +53,7 @@ Erstellt mit dem `New`-Schlüsselwort eine Instanz einer Klasse, ein Objekt. Ini
  Nachdem Sie den Code zum Aufrufen des Konstruktors des übergeordneten Objekts geschrieben haben, können Sie einen beliebigen zusätzlichen Initialisierungscode dem `Sub New`-Verfahren hinzufügen. `Sub New` akzeptiert die Argumente, wenn Sie als einen parametrisierten Konstruktor aufgerufen. Diese Parameter werden von der den Konstruktor aufrufenden Prozedur übergeben, zum Beispiel `Dim AnObject As New ThisClass(X)`.  
   
 ### <a name="sub-finalize"></a>Sub Finalize  
- Vor der Freigabe von Objekten ruft die CLR automatisch die `Finalize`-Methode für das Objekt auf, das ein `Sub Finalize`-Verfahren definiert Die `Finalize`-Methode kann Code enthalten, der direkt vor der Zerstörung eines Objekts ausgeführt werden muss, z. B. Code zum Schließen von Dateien und Speichern von Zustandsinformationen.  Es gibt leichte Leistungseinbußen für die Ausführung von `Sub Finalize`, sodass Sie eine `Sub Finalize`-Methode nur definieren sollten, wenn Sie Objekte explizit freigeben müssen.  
+ Vor der Freigabe von Objekten ruft die CLR automatisch die `Finalize`-Methode für das Objekt auf, das ein `Sub Finalize`-Verfahren definiert Die `Finalize`-Methode kann Code enthalten, der direkt vor der Zerstörung eines Objekts ausgeführt werden muss, z. B. Code zum Schließen von Dateien und Speichern von Zustandsinformationen. Es gibt leichte Leistungseinbußen für die Ausführung von `Sub Finalize`, sodass Sie eine `Sub Finalize`-Methode nur definieren sollten, wenn Sie Objekte explizit freigeben müssen.  
   
 > [!NOTE]
 >  Der Garbage Collector in der CLR nicht (und nicht möglich) entsorgen *nicht verwaltete Objekte*, Objekte, die das Betriebssystem direkt außerhalb der CLR-Umgebung ausgeführt wird. Dies liegt daran, dass unterschiedliche nicht verwaltete Objekte auf verschiedene Arten freigegeben werden müssen. Diese Informationen ist nicht direkt dem nicht verwalteten Objekt zugeordnet; Sie muss in der Dokumentation für das Objekt vorhanden sein. Eine Klasse, die nicht verwaltete Objekte verwendet, muss diese in ihrer `Finalize`-Methode freigeben.  
@@ -70,11 +70,11 @@ Erstellt mit dem `New`-Schlüsselwort eine Instanz einer Klasse, ein Objekt. Ini
   
  Wenn eine Instanz einer abgeleiteten Klasse erstellt wird, wird der `Sub New`-Konstruktor der Basisklasse zuerst ausgeführt, gefolgt von Konstruktoren in abgeleiteten Klassen. Dies geschieht, da die erste Codezeile in einem `Sub New`-Konstruktor die Syntax `MyBase.New()` verwendet, um den Konstruktor der Klasse direkt über sich selbst in der Klassenhierarchie aufzurufen. Der `Sub New`-Konstruktor wird dann für jede Klasse in der Klassenhierarchie aufgerufen, bis der Konstruktor für die Basisklasse erreicht wird. An dieser Stelle wird der Code im Konstruktor für die Basisklasse ausgeführt, gefolgt vom Code in jedem Konstruktor in allen abgeleiteten Klassen und der Code in den meisten abgeleiteten Klassen wird als letztes ausgeführt.  
   
- ![Konstruktoren und Vererbung](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance.gif "VaConstructorsInheritance")  
+ ![Screenshot der Hierarchie-Klasse, Konstruktoren und Vererbung.](./media/object-lifetime-how-objects-are-created-and-destroyed/subnew-constructor-inheritance.gif)  
   
  Wenn ein Objekt nicht mehr benötigt wird, ruft die CLR die <xref:System.Object.Finalize%2A>-Methode für dieses Objekt auf, bevor der Speicher freigegeben wird. Die <xref:System.Object.Finalize%2A> -Methode wird `destructor` genannt, weil es Bereinigungsaufgaben führt, z. B. Speichern von Zustandsinformationen, Schließen von Dateien und Verbindungen mit Datenbanken sowie andere Aufgaben, die vor der Freigabe eines Objekts ausgeführt werden müssen.  
   
- ![Konstruktoren und Vererbung 2](../../../../visual-basic/programming-guide/language-features/objects-and-classes/media/vaconstructorsinheritance_2.gif "vaConstructorsInheritance_2")  
+ ![Screenshot der-Destruktor die Finalize-Methode.](./media/object-lifetime-how-objects-are-created-and-destroyed/finalize-method-destructor.gif)  
   
 ## <a name="idisposable-interface"></a>IDisposable-Schnittstelle  
  Klasseninstanzen steuern oft nicht von der CLR verwaltete Ressourcen, z. B. Windows-Handles und Datenbankverbindungen. Diese Ressourcen müssen in der `Finalize`-Methode der Klasse beseitigt werden, sodass sie freigegeben werden, wenn das Objekt vom Garbage Collector zerstört wird. Der Garbage Collector zerstört Objekte jedoch nur, wenn die CLR mehr freien Arbeitsspeicher erfordert. Dies bedeutet, dass die Ressourcen erst freigegeben werdn, nachdem das Objekt längst den Gültigkeitsbereich verlassen hat.  

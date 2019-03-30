@@ -2,12 +2,12 @@
 title: Dynamisches Update
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: a1d5337bf69cb87d790ce4074cde4c18c989a4d8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e28a34e500034eec6cf250d94cf7631ca85a7d40
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724474"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653885"
 ---
 # <a name="dynamic-update"></a>Dynamisches Update
 
@@ -101,7 +101,7 @@ using (FileStream fs = System.IO.File.Open(@"C:\WorkflowDefinitions\MortgageWork
 }
 ```
 
-Wenn <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> zurückgegeben wird, werden die geklonte Workflowdefinition und andere Informationen zum dynamischen Update, die im Aufruf von <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> hinzugefügt wurden, entfernt. Die geänderte Workflowdefinition kann jetzt gespeichert werden, sodass sie später beim Fortsetzen aktualisierter Workflowinstanzen verwendet werden kann. Im folgenden Beispiel wird die geänderte Workflowdefinition in `MortgageWorkflow_v2.xaml` gespeichert.
+Wenn <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> zurückgegeben wird, werden die geklonte Workflowdefinition und andere Informationen zum dynamischen Update, die im Aufruf von <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> hinzugefügt wurden, entfernt. Die geänderte Workflowdefinition kann jetzt gespeichert werden, sodass sie später beim Fortsetzen aktualisierter Workflowinstanzen verwendet werden kann. Im folgenden Beispiel wird die geänderte Workflowdefinition in `MortgageWorkflow_v1.1.xaml` gespeichert.
 
 ```csharp
 // Save the modified workflow definition.

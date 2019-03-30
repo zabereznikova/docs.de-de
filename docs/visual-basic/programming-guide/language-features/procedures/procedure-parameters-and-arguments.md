@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b62e4b752074bb8d1a660e51ab230a87ff21db4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972545"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654236"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>Parameter und Argumente von Prozeduren (Visual Basic)
 In den meisten Fällen benötigt eine Prozedur einige Informationen zu den Umständen zusammen, die in denen sie aufgerufen wurde. Eine Prozedur, die wiederholte oder freigegebene Aufgaben ausführt, verwendet verschiedene Informationen für jeden Aufruf an. Diese Informationen bestehen aus Variablen, Konstanten und Ausdrücke, die Sie beim Aufruf an die Prozedur übergeben.  
@@ -36,8 +36,7 @@ In den meisten Fällen benötigt eine Prozedur einige Informationen zu den Umst�
   
  Die folgende Abbildung zeigt den Code, der die Prozedur aufruft `safeSquareRoot` von zwei verschiedenen Stellen. Beim erste Aufruf übergibt den Wert der Variablen `x` (4.0) an den Parameter `number`, und der Rückgabewert in `root` (2.0) der Variablen zugewiesen `y`. Beim zweiten Aufruf wird den Literalwert 9.0 auf `number`, und weist den Rückgabewert (3.0) Variablen `z`.  
   
- ![Grafisches Diagramm der Argumentübergabe an Parameter](./media/parametersargue.gif "ParametersArgue")  
-Übergeben von Argumenten für einen parameter  
+ ![Diagramm zeigt das Übergeben eines Arguments an einen parameter](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
  Weitere Informationen finden Sie unter [Unterschiede zwischen Parametern und Argumenten](./differences-between-parameters-and-arguments.md).  
   

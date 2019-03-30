@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: ea4abc38968b929412945cddaca3ca3fe6f377d6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9255dd4adba19bfef1332e5e3dfa463ee96f43f0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707429"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653989"
 ---
 # <a name="using-transformations-to-scale-colors"></a>Skalieren von Farben mithilfe von Transformationen
 Die Skalierungstransformation multipliziert mindestens eine der vier Farbkomponenten durch eine Zahl. Die Farbe Matrix Einträge, die Skalierung darstellen, werden in der folgenden Tabelle angegeben.  
@@ -31,9 +31,9 @@ Die Skalierungstransformation multipliziert mindestens eine der vier Farbkompone
  [!code-csharp[System.Drawing.RecoloringImages#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
  [!code-vb[System.Drawing.RecoloringImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
   
- Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und die skalierten Bild auf der rechten Seite an.  
+ Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und die skalierten Bild auf der rechten Seite an:  
   
- ![Skalieren von Farben](./media/colortrans3.png "colortrans3")  
+ ![Screenshot, in dem die ursprünglichen und skalierten Farben verglichen.](./media/using-transformations-to-scale-colors/four-bar-scale-one-color.png)  
   
  Die folgende Tabelle enthält die Farbe Vektoren für die vier Balken, vor und nach der blauen Skalierung. Beachten Sie, dass die blaue Komponente in der vierten Farbleiste aus 0.8 auf 0.6 ist ein Fehler aufgetreten. Der Grund dafür ist [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] behält nur der Bruchteil des Ergebnisses. Beispielsweise (: (2)(0.8) = 1.6, und der Bruchteil von 1.6 ist 0.6. Nur die Nachkommastellen beibehalten wird sichergestellt, dass das Ergebnis immer im Intervall [0, 1].  
   
@@ -50,9 +50,9 @@ Die Skalierungstransformation multipliziert mindestens eine der vier Farbkompone
  [!code-csharp[System.Drawing.RecoloringImages#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
  [!code-vb[System.Drawing.RecoloringImages#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
   
- Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und die skalierten Bild auf der rechten Seite an.  
+ Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und die skalierten Bild auf der rechten Seite an:  
   
- ![Skalieren von Farben](./media/colortrans4.png "colortrans4")  
+ ![Screenshot, in dem die ursprünglichen und skalierten Farben verglichen.](./media/using-transformations-to-scale-colors/four-bar-scale-multiple-colors.png)  
   
  Die folgende Tabelle enthält die Farbe Vektoren für die vier Balken, vor und nach die roten, grünen und blauen Skalierung.  
   

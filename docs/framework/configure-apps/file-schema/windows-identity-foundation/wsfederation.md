@@ -3,12 +3,12 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 801970ec05fc88587a5b45b5bb3a855d1a81afb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de79ad6447fe67afc596783eff3fa3e6a02b600c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356090"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654587"
 ---
 # <a name="wsfederation"></a>\<wsFederation>
 Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
@@ -52,7 +52,7 @@ Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Services.WSFed
 |---------------|-----------------|  
 |authenticationType|Ein URI, der den Authentifizierungstyp angibt. Legt den Wauth-Parameters von WS-Verbund-anmeldungsanforderung fest. Dies ist optional. Der Standardwert ist eine leere Zeichenfolge und gibt an, dass es sich bei der Wauth-Parameter nicht in der Anforderung enthalten ist.|  
 |Aktualität|Der gewünschte Höchstalter für authentifizierungsanforderungen in Minuten. Legt den Wfresh-Parameter in WS-Verbund-anmeldungsanforderung fest. Dies ist optional. Der Standardwert ist 0. Dies ist optional. **Warnung:**  In der nächsten Version von .NET Framework 4.5 den `freshness` Attributs werden vom Typ `xs:string` und seinen Standardwert `null`.|  
-|homeRealm|Den Startbereich des Identitätsanbieters (IP) für die Authentifizierung verwenden. Legt den Whr-Parameter in WS-Verbund-anmeldungsanforderung fest. Dies ist optional. Der Standardwert ist eine leere Zeichenfolge und gibt an, dass es sich bei der Whr-Parameter nicht in der Anforderung enthalten ist.|  
+|homeRealm|Den Startbereich des Identitätsanbieters (IdP) zur Authentifizierung verwenden. Legt den Whr-Parameter in WS-Verbund-anmeldungsanforderung fest. Dies ist optional. Der Standardwert ist eine leere Zeichenfolge und gibt an, dass es sich bei der Whr-Parameter nicht in der Anforderung enthalten ist.|  
 |issuer|Der URI des den beabsichtigten Aussteller des Tokens. Legt das base URL des WS-Verbund-anmeldeanforderungen und abmeldeanforderungen erforderlich sind.|  
 |persistentCookiesOnPassiveRedirects|Gibt an, ob permanente Cookies auf Authentifizierung ausgegeben werden. Dies ist optional. Der Standardwert ist "false", Cookies werden nicht ausgegeben.|  
 |passiveRedirectEnabled|Gibt an, ob das WSFAM aktiviert ist, nicht autorisierte Anforderungen automatisch an einen STS umleiten. Dies ist optional. Der Standardwert ist "true", nicht autorisierte Anforderungen werden automatisch umgeleitet.|  
@@ -68,7 +68,7 @@ Ermöglicht die Konfiguration für die <xref:System.IdentityModel.Services.WSFed
 |signOutReply|Gibt Sie die URL, an dem der Client vom Sicherheitstokendienst (STS) umgeleitet werden soll, während der passiven Abmeldung durch das WS-Verbund-Protokoll. Legt den Wreply-Parameter für eine WS-Verbund-abmeldungsanforderung fest. Dies ist optional. Der Standardwert ist eine leere Zeichenfolge, die angibt, dass keine zusätzlichen Parameter in der Anforderung enthalten sein soll.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   

@@ -10,20 +10,19 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: b72eef632b4564abc69e6ebef43b940eb0950e9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c09c0bdee0e8740abb7cc085f0796048a5db150c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523388"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654366"
 ---
 # <a name="loop-structures-visual-basic"></a>Schleifenstruktur (Visual Basic)
 Visual Basic-Schleifenstruktur können Sie eine oder mehrere Zeilen Code wiederholt auszuführen. Sie können die Anweisungen in einer Schleifenstruktur wiederholen, bis eine Bedingung ist `True`, bis eine Bedingung ist `False`, eine Zahl, die mehrmals oder einmal für jedes Element in einer angegebenen Auflistung.  
   
- Die folgende Abbildung zeigt eine Schleifenstruktur, die einen Satz von Anweisungen ausgeführt, bis eine Bedingung erfüllt wird.  
+ Die folgende Abbildung zeigt eine Schleifenstruktur, die einen Satz von Anweisungen ausgeführt, bis eine Bedingung erfüllt wird:  
   
- ![Flussdiagramm der Do... Until-Schleife](../../../../visual-basic/programming-guide/language-features/control-flow/media/dountilloop.gif "DoUntilLoop")  
-Einen Satz von Anweisungen ausgeführt, bis eine Bedingung erfüllt wird.  
+ ![Flussdiagramm, das zeigt, wie eine Do... Until-Schleife.](./media/loop-structures/do-until-loop-true-condition.gif)  
   
 ## <a name="while-loops"></a>While-Schleifen  
  Die `While`... `End While` Konstruktion wird eine Reihe von Anweisungen ausgeführt, solange die Bedingung in angegeben die `While` -Anweisung ist `True`. Weitere Informationen finden Sie unter [während... While-Anweisung enden](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  

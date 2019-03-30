@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: be9f1916722b493490541046906a38b9fac63a4e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 84f7e0f1174a048d650741075344de3158c2994e
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371982"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654314"
 ---
 # <a name="security-wpf"></a>Sicherheit (WPF)
 <a name="introduction"></a> Wenn Sie Windows Presentation Foundation (WPF)-eigenständige und im Browser gehostete Anwendungen zu entwickeln, müssen Sie das Sicherheitsmodell berücksichtigen. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] eigenständige Anwendungen werden mit uneingeschränkten Berechtigungen ausgeführt ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** Berechtigungssatz), ob mithilfe von Windows Installer (MSI), XCopy, bereitgestellt oder [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Die Bereitstellung teilweise vertrauenswürdiger eigenständiger WPF-Anwendungen mit ClickOnce wird nicht unterstützt. Eine voll vertrauenswürdige hostanwendung kann jedoch eine teilweise vertrauenswürdige erstellen <xref:System.AppDomain> mit dem .NET Framework-Add-in-Modell. Weitere Informationen finden Sie unter [Übersicht über WPF-Add-Ins](./app-development/wpf-add-ins-overview.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "57371982"
   
  Als *Anwendungsnavigation* wird die Navigation zwischen Inhaltselementen in einer Anwendung bezeichnet, die in einem Browser gehostet wird. Als *Browsernavigation* wird die Navigation bezeichnet, die die Inhalts- und Speicherort-URL eines Browsers selbst ändert. Die Beziehung zwischen Anwendungsnavigation (in der Regel XAML) und Browsernavigation (in der Regel HTML) wird in der folgenden Abbildung dargestellt:
   
- ![Navigationsdiagramm](./media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
+ ![Beziehung zwischen Anwendungsnavigation und Browsernavigation.](./media/security-wpf/application-browser-navigation-relationship.png)  
   
  Der Typ des Inhalts, der für sicher gilt eine [!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)] , zu dem navigiert werden hauptsächlich dadurch bestimmt, ob Anwendungsnavigation oder Browsernavigation verwendet wird.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "57371982"
   
      Die **Sicherheitseinstellungen** Dialogfeld wird angezeigt, und Sie können die Sicherheitseinstellungen für die ausgewählte Zone konfigurieren.  
   
-     ![Dialogfeld „Sicherheitseinstellungen“](./media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
+     ![Screenshot, das Dialogfeld Sicherheitseinstellungen zeigt.](./media/security-wpf/windows-presentation-foundation-security-settings.png)  
   
 > [!NOTE]
 >  Sie können auch aus Internet Explorer zum Dialogfeld „Internetoptionen“ gelangen. Klicken Sie auf **Tools** , und klicken Sie dann auf **Internetoptionen**.  
