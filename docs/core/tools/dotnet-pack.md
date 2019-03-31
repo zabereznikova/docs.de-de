@@ -2,12 +2,12 @@
 title: Befehl „dotnet pack“
 description: Der dotnet pack-Befehl erstellt NuGet-Pakete für ein .NET Core-Projekt.
 ms.date: 12/04/2018
-ms.openlocfilehash: 43ee31c7cd070cf0e73975c1444ef13496afae91
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 4b665140f7c660c5851fb68b07ecec2d9391b925
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "58020935"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464475"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -77,7 +77,7 @@ Sie können dem `dotnet pack`-Befehl MSBuild-Eigenschaften für den Packvorgang 
 
 * **`--no-build`**
 
-  Erstellt das Projekt nicht vor dem Packen. Das `--no-restore`-Flag wird implizit festgelegt.
+  Erstellt das Projekt nicht vor dem Packen. Zudem wird das Flag `--no-restore` implizit festgelegt.
 
 * **`--no-dependencies`**
 
