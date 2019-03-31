@@ -100,7 +100,7 @@ class1.ExplicitProperty = 978922705
 class1.ExplicitProperty = 1131210765
 ```
 
-Die Ausgabe der obige Code zeigt, dass der Wert des AutoProperty unverändert ist, wenn er wiederholt aufgerufen wird, während die ExplicitProperty sich jedes Mal ändert, wenn sie aufgerufen wird. Dies zeigt, dass der Ausdruck für eine automatisch implementierte Eigenschaft nicht jedes Mal ausgewertet wird, wie die Gettermethode für die explizite Eigenschaft.
+Die Ausgabe der obige Code zeigt, dass der Wert der AutoProperty unverändert ist, wenn er wiederholt aufgerufen wird, während die ExplicitProperty sich jedes Mal ändert, wenn sie aufgerufen wird. Dies zeigt, dass der Ausdruck für eine automatisch implementierte Eigenschaft nicht jedes Mal ausgewertet wird, wie die Gettermethode für die explizite Eigenschaft.
 
 >[!WARNING]
 >Es gibt einige Bibliotheken, z. B. Entity Framework (`System.Data.Entity`), die benutzerdefinierte Vorgänge in den Konstruktoren ausführen, die auch mit der Initialisierung der automatisch implementierte Eigenschaften nicht funktionieren. Verwenden Sie in diesen Fällen explizite Eigenschaften.
