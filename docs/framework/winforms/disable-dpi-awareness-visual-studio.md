@@ -1,17 +1,17 @@
 ---
 title: Deaktivieren Sie die DPI--Unterstützung in Visual Studio
 description: Beschreibt die Einschränkungen von Windows Forms-Designer auf HDPI-Bildschirmen und wie Sie Visual Studio als DPI-Wert ohne-Prozess ausgeführt.
-ms.date: 12/17/2018
-ms.prod: visual-studio-dev15
+ms.date: 03/19/2019
+ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710536"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633867"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Deaktivieren Sie die DPI--Unterstützung in Visual Studio
 
@@ -23,11 +23,14 @@ Die **Windows Forms-Designer** in Visual Studio verfügt nicht über Unterstütz
 
 ![Windows Forms-Designer auf HDPI-monitor](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
-In Visual Studio 2017 Version 15,8 und höher, wenn Sie einem Formular im öffnen die **Windows Forms-Designer** einen Monitor HDPI Visual Studio ein gelber Balken nur zu Informationszwecken am oberen Rand der Designer zeigt:
+Beim Öffnen eines Formulars in der **Windows Forms-Designer** in Visual Studio auf einem Monitor HDPI Visual Studio ein gelber Balken nur zu Informationszwecken am oberen Rand der Designer zeigt:
 
 ![Informationsleiste in Visual Studio neu starten, DPI-Wert ohne Modus](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 Die Nachricht liest **Skalierung auf Ihre Hauptanzeige auf 200 % (192 dpi) festgelegt ist. Dies kann dazu führen, dass Renderingprobleme im Fenster Designers.**
+
+> [!NOTE]
+> Diese Informationsleiste wurde in Visual Studio 2017 Version 15.8 eingeführt.
 
 Wenn Sie im Designer funktionieren nicht und nicht das Layout Ihres Formulars anpassen müssen, können Sie ignorieren die Informationsleiste und weiter ausgeführt, im Code-Editor oder in anderen Typen von Designern. (Sie können auch [deaktivieren Sie Benachrichtigungen](#disable-notifications) , damit die Informationsleiste weiterhin nicht angezeigt werden.) Nur die **Windows Forms-Designer** betroffen ist. Wenn Sie in der Sie arbeiten benötigen die **Windows Forms-Designer**, im nächste Abschnitt hilft Ihnen [lösen des Problems](#to-resolve-the-problem).
 
@@ -51,10 +54,13 @@ Es ist wichtig, wenn Sie die Arbeit in fertig sind, starten Sie Visual Studio al
 
 Sie können Visual Studio als DPI-Wert ohne markieren, durch Ändern der Registrierung. Open **Registrierungs-Editor** und einen Eintrag hinzufügen die **HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers** Unterschlüssel:
 
-**Eintrag**: C:\Programme\Microsoft Dateien (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**Eintrag**: Je nachdem, ob Sie Visual Studio 2017 oder 2019 verwenden verwenden Sie einen der folgenden Werte:
 
-   > [!NOTE]
-   > Wenn Sie die Professional bzw. Enterprise Edition von Visual Studio 2017 verwenden, ersetzen Sie **Community** mit **Professional** oder **Enterprise** im Eintrag. Ersetzen Sie außerdem den Buchstaben des Laufwerks nach Bedarf.
+- C:\Programme\Microsoft Dateien (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+- C:\Programme\Microsoft Dateien (x86) \Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+
+> [!NOTE]
+> Wenn Sie die Professional bzw. Enterprise Edition von Visual Studio verwenden, ersetzen Sie **Community** mit **Professional** oder **Enterprise** im Eintrag. Ersetzen Sie außerdem den Buchstaben des Laufwerks nach Bedarf.
 
 **Typ**: REG_SZ
 

@@ -2,12 +2,12 @@
 title: 'Explizite Felder: Das Val Schlüsselwort'
 description: Erfahren Sie mehr über die F# "Val"-Schlüsselwort, das verwendet wird, um einen Speicherort zum Speichern eines Werts in einer Klasse oder Struktur, ohne die Initialisierung des Typs zu deklarieren.
 ms.date: 05/16/2016
-ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53773626"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634010"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Explizite Felder: Das Val Schlüsselwort
 

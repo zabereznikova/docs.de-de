@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: ef9771f44ce5bc61787f2060469d7a0b244e96b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 395077b7c82ee54a51b8086df0c59f731e3a2b70
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356506"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634218"
 ---
 # <a name="application-management-overview"></a>Übersicht über die Anwendungsverwaltung
 Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der für die Implementierung und Verwaltung der Anwendung gilt. Dieses Thema enthält eine Übersicht über die Funktionen in der <xref:System.Windows.Application> Klasse zum Erstellen und Verwalten von Anwendungen.  
@@ -323,7 +323,7 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
 ### <a name="unhandled-exceptions"></a>Nicht behandelte Ausnahmen  
  Es kommt vor, dass eine Anwendung unter nicht ordnungsgemäßen Bedingungen heruntergefahren wird, z. B. wenn eine unerwartete Ausnahme ausgelöst wird. In diesem Fall verfügt die Anwendung möglicherweise nicht über den Code, der zum Erkennen und Verarbeiten der Ausnahme erforderlich ist. Eine solche Ausnahme wird als nicht behandelte Ausnahme bezeichnet. Vor dem Schließen der Anwendung wird eine Meldung angezeigt, die der folgenden ähnelt.  
   
- ![Benachrichtigung über Ausnahmefehler](./media/applicationmanagementoverviewfigure2.png "ApplicationManagementOverviewFigure2")  
+ ![Screenshot mit einer Benachrichtigung über Ausnahmefehler.](./media/application-management-overview/unhandled-exception-notification.png)  
   
  Für die Benutzererfahrung ist es vorteilhafter, wenn eine Anwendung dieses Standardverhalten vermeidet. Dazu dienen mehrere oder alle der folgenden Aktionen:  
   

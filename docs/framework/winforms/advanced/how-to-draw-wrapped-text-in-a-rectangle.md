@@ -9,21 +9,21 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-ms.openlocfilehash: 5c4e76cda37527d0167b21c0d206749ba6dab4a9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 35eca2fc0fe40db1b590f4c599baee01c9a9faf3
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708859"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654527"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Vorgehensweise: Zeichnen von umbrochenem Text in einem Rechteck
 Sie können die umbrochenen Text in ein Rechteck zeichnen, mit der <xref:System.Drawing.Graphics.DrawString%2A> überladene Methode, die von der <xref:System.Drawing.Graphics> Klasse, die akzeptiert eine <xref:System.Drawing.Rectangle> oder <xref:System.Drawing.RectangleF> Parameter. Sie können auch eine <xref:System.Drawing.Brush> und <xref:System.Drawing.Font>.  
   
  Sie können auch umbrochenen Text in ein Rechteck zeichnen, mit der <xref:System.Windows.Forms.TextRenderer.DrawText%2A> überladene Methode, die von der <xref:System.Windows.Forms.TextRenderer> , akzeptiert eine <xref:System.Drawing.Rectangle> und ein <xref:System.Windows.Forms.TextFormatFlags> Parameter. Sie können auch eine <xref:System.Drawing.Color> und <xref:System.Drawing.Font>.  
   
- Die folgende Abbildung zeigt die Ausgabe von Text in das Rechteck gezeichnet werden, bei der Verwendung der <xref:System.Drawing.Graphics.DrawString%2A> Methode.  
+ Die folgende Abbildung zeigt die Ausgabe von Text in das Rechteck gezeichnet werden, bei der Verwendung der <xref:System.Drawing.Graphics.DrawString%2A> Methode:
   
- ![Schriftartentext](./media/csfontstext2.png "csfontstext2")  
+ ![Screenshot, der die Ausgabe zeigt die Verwendung der Methode "DrawString".](./media/how-to-draw-wrapped-text-in-a-rectangle/drawstring-method-font-text.png)  
   
 ### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>Zum Zeichnen von umbrochenem Text in einem Rechteck mit GDI +  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 5ba92e113faf9d68bad97968937cc736132b2065
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708531"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634166"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Arraydimensionen in Visual Basic
 Ein *Dimension* ist eine Richtung, in dem Sie die Spezifikation der Elemente eines Arrays können variieren. Ein Array, das den Umsatz für jeden Tag des Monats insgesamt enthält hat es sich um eine Dimension (Tag des Monats). Ein Array, das den Umsatz nach Abteilung für jeden Tag des Monats insgesamt enthält verfügt über zwei Dimensionen (die Abteilung-Anzahl und den Tag des Monats). Wird aufgerufen, die Anzahl der Dimensionen, die ein Array hat seine *Rang*.  
@@ -27,14 +27,11 @@ Ein *Dimension* ist eine Richtung, in dem Sie die Spezifikation der Elemente ein
   
  Die folgenden Abbildungen zeigen die grundlegende Struktur von Arrays mit unterschiedlichem Rang. Jedes Element in den Abbildungen zeigt die Werte des Indexes, die darauf zugreifen. Sie können z. B. das erste Element der zweiten Zeile des zweidimensionalen Arrays zugreifen, durch Angabe von Indizes `(1, 0)`.  
   
- ![Grafisches Diagramm eines&#45;-dimensionales Array](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
-Eindimensionale Arrays  
+ ![Diagramm, das ein eindimensionales Array zeigt.](./media/array-dimensions/one-dimensional-array.gif)  
   
- ![Grafisches Diagramm der beiden&#45;-dimensionales Array](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
-zweidimensionales array  
+ ![Diagramm, das ein zweidimensionales Array zeigt.](./media/array-dimensions/two-dimensional-array.gif)  
   
- ![Grafisches Diagramm der drei&#45;-dimensionales Array](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
-dreidimensionale array  
+ ![Diagramm ein dreidimensionales Arrays zeigt.](./media/array-dimensions/three-dimensional-array.gif)  
   
 ### <a name="one-dimension"></a>Eine Dimension  
  Viele Arrays haben nur eine Dimension, wie z. B. die Anzahl der einzelnen Altersgruppen. Die einzige Voraussetzung für ein Element angeben, ist das Alter, das die Anzahl die dieses Element enthält. Aus diesem Grund wird ein entsprechendes Array nur ein Index verwendet. Das folgende Beispiel deklariert eine Variable für eine *eindimensionales Array* ALT Anzahl der Zugriffe von 0 bis 120.  

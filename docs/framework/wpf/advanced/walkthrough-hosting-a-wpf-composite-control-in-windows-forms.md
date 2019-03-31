@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 257462cea4d4926ce5ad22a9d97a3a56e1d6c2a1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d38a9c67edb5df89554e9e02274410a825b3384b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368271"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654548"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie haben jedoch eine erhebliche Investition [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Code, es kann zum Erweitern Ihrer vorhandenen effektiver sein [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] anstatt sie von Grund auf neu zu schreiben. Ein häufiges Szenario ist, wenn eine eingebettet werden soll, oder weitere Steuerelemente implementiert wird, mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] innerhalb der Windows Forms-Anwendung. Weitere Informationen zum Anpassen von WPF-Steuerelemente finden Sie unter [Anpassung von Steuerelementen](../controls/control-customization.md).  
@@ -31,10 +31,12 @@ ms.locfileid: "57368271"
 Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.  
   
 ## <a name="implementing-the-wpf-composite-control"></a>Implementieren des zusammengesetzten WPF-Steuerelements  
- Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zusammengesetztes Steuerelement, die in diesem Beispiel verwendeten ist ein einfaches Dateneingabeformular, die Namen und Adresse des Benutzers erfordert. Klickt der Benutzer eine der zwei Schaltflächen, um anzugeben, dass die Aufgabe abgeschlossen ist, löst das Steuerelement ein benutzerdefiniertes Ereignis aus, um diese Informationen an den Host zurückzugeben. Die folgende Abbildung zeigt das gerenderte Steuerelement.  
+ Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zusammengesetztes Steuerelement, die in diesem Beispiel verwendeten ist ein einfaches Dateneingabeformular, die Namen und Adresse des Benutzers erfordert. Klickt der Benutzer eine der zwei Schaltflächen, um anzugeben, dass die Aufgabe abgeschlossen ist, löst das Steuerelement ein benutzerdefiniertes Ereignis aus, um diese Informationen an den Host zurückzugeben. Die folgende Abbildung zeigt das gerenderte Steuerelement. 
+
+ Die folgende Abbildung zeigt ein zusammengesetztes WPF-Steuerelement: 
+
   
- ![Einfaches WPF-Steuerelement](./media/avaloncontrol.png "AvalonControl")  
-Zusammengesetztes WPF-Steuerelement  
+ ![Screenshot mit einer einfachen WPF-Steuerelements.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-presentation-foundation-composite-control.png)  
   
 ### <a name="creating-the-project"></a>Erstellen des Projekts  
  Um das Projekt zu starten:  
@@ -180,9 +182,10 @@ namespace MyControls
 <a name="winforms_host_section"></a>   
 ## <a name="implementing-the-windows-forms-host-application"></a>Implementieren der Windows Forms-Hostanwendung  
  Die Windows-Formulare Hosten der Anwendung verwendet ein <xref:System.Windows.Forms.Integration.ElementHost> Objekt, das Hosten der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zusammengesetztes Steuerelement. Die Anwendung behandelt den `OnButtonClick` Ereignis, um die Daten vom zusammengesetzten Steuerelement zu empfangen. Die Anwendung verfügt außerdem über eine Reihe von Optionsfeldern, die Sie verwenden können, um die Darstellung des Steuerelements zu ändern. Die folgende Abbildung zeigt die Anwendung.  
-  
- ![Windows-Formular Hosting Avalon-Steuerelement](./media/wfhost.png "WFHost")  
-In Windows Forms-Anwendung gehostetes zusammengesetztes WPF-Steuerelements  
+
+Die folgende Abbildung zeigt einen zusammengesetzten WPF-Steuerelements in einer Windows Forms-Anwendung gehostet"  
+
+ ![Scteenshot, die ein Windows Form-Hosting Avalon-Steuerelement anzeigt.](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
   
 ### <a name="creating-the-project"></a>Erstellen des Projekts  
  Um das Projekt zu starten:  
@@ -228,7 +231,7 @@ In Windows Forms-Anwendung gehostetes zusammengesetztes WPF-Steuerelements
   
 4.  Fügen Sie die folgenden <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> Steuerelemente im Formular.  
   
-    |name|Text|  
+    |Name|Text|  
     |----------|----------|  
     |groupBox1|Hintergrundfarbe|  
     |groupBox2|Vordergrundfarbe|  
@@ -240,7 +243,7 @@ In Windows Forms-Anwendung gehostetes zusammengesetztes WPF-Steuerelements
   
 5.  Fügen Sie die folgenden <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> -Steuerelementen an die <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> Steuerelemente.  
   
-    |GroupBox|name|Text|  
+    |GroupBox|Name|Text|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|Ursprünglich|  
     |groupBox1|radioBackgroundLightGreen|Hellgrün|  
@@ -261,7 +264,7 @@ In Windows Forms-Anwendung gehostetes zusammengesetztes WPF-Steuerelements
   
 6.  Fügen Sie die folgenden <xref:System.Windows.Forms.Label?displayProperty=nameWithType> steuert, mit dem letzten <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>. Diese Steuerelemente zeigen die vom zurückgegebenen Daten die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zusammengesetztes Steuerelement.  
   
-    |GroupBox|name|Text|  
+    |GroupBox|Name|Text|  
     |--------------|----------|----------|  
     |groupBox7|lblName|Name:|  
     |groupBox7|lblAddress|Straße und Hausnummer:|  

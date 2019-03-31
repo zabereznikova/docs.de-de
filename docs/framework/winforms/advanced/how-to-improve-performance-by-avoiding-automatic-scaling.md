@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: b8238a4f0ce482d63ab33833c4bceaaa2814253d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705337"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653794"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Vorgehensweise: Verbessern der Leistung durch Vermeiden der automatischen Skalierung
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ein Bild kann automatisch skaliert werden, wie Sie es zeichnen, die Leistung verringern würden. Alternativ können Sie steuern die Skalierung des Bilds durch die Maße des Zielrechtecks zum Übergeben der <xref:System.Drawing.Graphics.DrawImage%2A> Methode.  
@@ -30,15 +30,15 @@ ms.locfileid: "57705337"
  Selbst wenn eine Bildschirmauflösung von 96 DPI-Wert, unterscheidet [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] wahrscheinlich Skalierung das Bild als wäre die Auflösung von 96 DPI-Wert. Der Grund dafür ist eine [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> Objekt einen Gerätekontext, zugeordnet ist und wann [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Abfragen, die der Gerätekontext für die Auflösung des Bildschirms, das Ergebnis ist in der Regel 96, unabhängig von der tatsächlichen Bildschirmauflösung. Sie können die automatische Skalierung, indem das Zielrechteck im Vermeiden der <xref:System.Drawing.Graphics.DrawImage%2A> Methode.  
   
 ## <a name="example"></a>Beispiel  
- Im folgende Beispiel wird das gleiche Image zweimal zeichnet. Im ersten Fall ist die Breite und Höhe des Zielrechtecks nicht angegeben, und das Bild wird automatisch skaliert. Im zweiten Fall sind die Breite und Höhe (gemessen in Pixel) des Zielrechtecks identisch sein, als die Breite und Höhe des Originalbilds angegeben. Die folgende Abbildung zeigt das Bild zweimal gerendert.  
+ Im folgende Beispiel wird das gleiche Image zweimal zeichnet. Im ersten Fall ist die Breite und Höhe des Zielrechtecks nicht angegeben, und das Bild wird automatisch skaliert. Im zweiten Fall sind die Breite und Höhe (gemessen in Pixel) des Zielrechtecks identisch sein, als die Breite und Höhe des Originalbilds angegeben. Die folgende Abbildung zeigt das Bild zweimal gerendert:  
   
- ![Skaliert die Textur](./media/csscaledtexture1.png "csscaledtexture1")  
+ ![Screenshot mit Bildern mit skalierte Struktur.](./media/how-to-improve-performance-by-avoiding-automatic-scaling/two-scaled-texture-images.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers. Ersetzen Sie Texture.jpg mit einem Image-Name und Pfad, der auf Ihrem System gültig sind.  
+ Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Ersetzen Sie Texture.jpg mit einem Image-Name und Pfad, der auf Ihrem System gültig sind.  
   
 ## <a name="see-also"></a>Siehe auch
 - [Bilder, Bitmaps und Metadateien](images-bitmaps-and-metafiles.md)

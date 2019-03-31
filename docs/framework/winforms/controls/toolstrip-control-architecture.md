@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 6e0c5a426f05590523c178f4b56d07ee98b39d7e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bede247ca9e1c2c20ffc8fef9fd4fab89aa78453
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719385"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654769"
 ---
 # <a name="toolstrip-control-architecture"></a>Architektur des ToolStrip-Steuerelements
 Die <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.ToolStripItem> Klassen bieten ein flexibles, erweiterbares System zum Anzeigen der Symbolleiste, Status und Menüelementen. Diese Klassen sind in enthalten die <xref:System.Windows.Forms> -Namespace, und sie werden alle in der Regel mit dem Präfix "ToolStrip" benannt (z. B. <xref:System.Windows.Forms.ToolStripOverflow>) oder mit dem Suffix "Entfernen" (z. B. <xref:System.Windows.Forms.MenuStrip>).  
@@ -19,8 +19,7 @@ Die <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.ToolStr
   
  <xref:System.Windows.Forms.ToolStrip> ist die abstrakte Basisklasse für <xref:System.Windows.Forms.MenuStrip>, <xref:System.Windows.Forms.StatusStrip>, und <xref:System.Windows.Forms.ContextMenuStrip>. Das folgende Objekt Modell zeigt das <xref:System.Windows.Forms.ToolStrip> Vererbungshierarchie.  
   
- ![ToolStrip-Objektmodell](./media/toolstripobjectmodel.gif "ToolStripObjectModel")  
-ToolStrip-Objektmodell  
+ ![Diagramm das ToolStrip-Objektmodell zeigt.](./media/toolstrip-control-architecture/toolstrip-object-model.gif)  
   
  Es stehen alle Elemente in einem <xref:System.Windows.Forms.ToolStrip> über die <xref:System.Windows.Forms.ToolStrip.Items%2A> Auflistung. Es stehen alle Elemente in einem <xref:System.Windows.Forms.ToolStripDropDownItem> über die <xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A> Auflistung. In einer Klasse abgeleitet <xref:System.Windows.Forms.ToolStrip>, können Sie auch die <xref:System.Windows.Forms.ToolStrip.DisplayedItems%2A> Eigenschaft, um nur die Elemente zuzugreifen, die gerade angezeigt werden. Dies sind die Elemente, die derzeit nicht in ein Überlaufmenü befinden.  
   
@@ -198,7 +197,7 @@ ToolStrip-Objektmodell
 ##### <a name="stack-layouts"></a>Stack-Layouts  
  Stapeln wird das Anordnen der Elemente nebeneinander an beiden Enden der <xref:System.Windows.Forms.ToolStrip>. Die folgende Liste beschreibt die Stack-Layouts.  
   
--   Standardmäßig ist <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> festgelegt. Diese Einstellung bewirkt, dass die <xref:System.Windows.Forms.ToolStrip> sein Layout automatisch in Übereinstimmung mit der <xref:System.Windows.Forms.ToolStrip.Orientation%2A> Eigenschaft um Zieh- und zu verarbeiten.  
+-   <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> Der Standardwert ist. Diese Einstellung bewirkt, dass die <xref:System.Windows.Forms.ToolStrip> sein Layout automatisch in Übereinstimmung mit der <xref:System.Windows.Forms.ToolStrip.Orientation%2A> Eigenschaft um Zieh- und zu verarbeiten.  
   
 -   <xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow> Rendert die <xref:System.Windows.Forms.ToolStrip> Elemente nebeneinander vertikal.  
   
@@ -251,8 +250,7 @@ ToolStrip-Objektmodell
   
  <xref:System.Windows.Forms.ToolStripItem> ist die abstrakte Basisklasse für alle Elemente, die näher betrachten einen <xref:System.Windows.Forms.ToolStrip>. Das folgende Objekt Modell zeigt das <xref:System.Windows.Forms.ToolStripItem> Vererbungshierarchie.  
   
- ![ToolStripItem-Objektmodell](./media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
-ToolStripItem-Objektmodell  
+ ![Diagramm das ToolStripItem-Objektmodell zeigt.](./media/toolstrip-control-architecture/toolstripitem-object-model.gif)  
   
  <xref:System.Windows.Forms.ToolStripItem> Klassen, die entweder direkt von erben <xref:System.Windows.Forms.ToolStripItem>, oder indirekt von <xref:System.Windows.Forms.ToolStripItem> über <xref:System.Windows.Forms.ToolStripControlHost> oder <xref:System.Windows.Forms.ToolStripDropDownItem>.  
   

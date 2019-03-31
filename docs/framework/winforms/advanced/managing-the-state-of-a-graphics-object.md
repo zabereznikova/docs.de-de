@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a0166d2ee5a16916fdc2ece95eaf130ebd2598d5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717621"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653781"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Verwalten des Zustands eines Graphics-Objekts
 Die <xref:System.Drawing.Graphics> -Klasse ist das Herzstück von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Um alles zu zeichnen, Sie erhalten eine <xref:System.Drawing.Graphics> Objekt, dessen Eigenschaften festlegen und seine Methoden aufrufen <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>, usw.).  
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  Die folgende Abbildung zeigt zwei Ellipsen. Beachten Sie, dass die 30-Grad-Drehung um den Ursprung des Koordinatensystems (linke obere Ecke des Clientbereichs), nicht jedoch zu den Mittelpunkten die Auslassungspunkte. Beachten Sie außerdem, dass mit der die Stiftbreite 1 1-Pixel für die erste Ellipse und 1 mm für die zweite Ellipse.  
   
- ![Ovale](./media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![Abbildung der zwei Ellipsen: Drehung und Stift-Breite.](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
   
 ### <a name="clipping-region"></a>Ausschneidebereich  
  Ein <xref:System.Drawing.Graphics> -Objekt verwaltet einen Ausschneidebereich, der für alle Elemente, die von diesem gilt <xref:System.Drawing.Graphics> Objekt. Sie können den Ausschneidebereich festlegen, durch den Aufruf der <xref:System.Drawing.Graphics.SetClip%2A> Methode.  
@@ -146,9 +146,9 @@ graphics.DrawLine(pen, 0, 30, 150, 160);
 graphics.DrawLine(pen, 40, 20, 190, 150);  
 ```  
   
- Die folgende Abbildung zeigt die Zeilen abgeschnitten.  
+ Die folgende Abbildung zeigt die abgeschnittenen Zeilen:  
   
- ![Clip-Bereich beschränkt](./media/graphicsascon2.png "graphicsascon2")  
+ ![Diagramm der beschränkter Clip-Bereich zeigt.](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
   
 ## <a name="see-also"></a>Siehe auch
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)

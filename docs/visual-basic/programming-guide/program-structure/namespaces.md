@@ -16,12 +16,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 6a93124789d629b1d1a953345d4b0b02a8c6ffa6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977252"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654665"
 ---
 # <a name="namespaces-in-visual-basic"></a>Namespaces in Visual Basic
 Namespaces organisieren die in einer Assembly definierten Objekte. Assemblys können mehrere Namespaces enthalten, die wiederum andere Namespaces enthalten können. Namespaces vermeiden Mehrdeutigkeit und vereinfachen Verweise, wenn Sie große Gruppen von Objekten verwenden, zum Beispiel Klassenbibliotheken.  
@@ -37,9 +37,9 @@ Namespaces organisieren die in einer Assembly definierten Objekte. Assemblys kö
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   
- Die folgende Abbildung zeigt zwei Namespacehierarchien, beide mit einem Objekt mit dem Namen `ListBox`.  
+ Die folgende Abbildung zeigt zwei Namespacehierarchien, beide mit einem Objekt mit dem Namen `ListBox`:  
   
- ![Namespace-Hierarchie](../../../visual-basic/programming-guide/program-structure/media/vanamespacehierarchy.gif "VaNamespaceHierarchy")  
+ ![Screenshot mit zwei Namespacehierarchien.](./media/namespaces/visual-basic-namespace-hierarchy.gif)  
   
  Standardmäßig enthält jede ausführbare Datei, die Sie mit Visual Basic erstellen einen Namespace mit dem gleichen Namen wie Ihr Projekt. Wenn Sie zum Beispiel ein Objekt in einem Projekt mit dem Namen `ListBoxProject`definieren, enthält die ausführbare Datei ListBoxProject.exe einen Namespace mit dem Namen `ListBoxProject`.  
   

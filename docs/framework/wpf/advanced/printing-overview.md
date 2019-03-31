@@ -15,12 +15,12 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-ms.openlocfilehash: 9e7cc41602e7e86d328767db257e6dbaa7e8fed1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c009d86deada690f673736e0e35eb710e25f7781
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370500"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654379"
 ---
 # <a name="printing-overview"></a>Übersicht über das Drucken
 Mit Microsoft .NET Framework, Anwendungsentwickler, die mit Windows Presentation Foundation (WPF) verfügen über umfangreiche neue drucken und Druckvorschau systemverwaltung [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Mit [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] stehen einige dieser Erweiterungen des Drucksystems auch Entwicklern zur Verfügung, die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Anwendungen erstellen, sowie Entwicklern, die nicht verwalteten Code verwenden. Im Zentrum dieser neuen Funktionen stehen das neue [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]-Dateiformat und der [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Druckpfad.  
@@ -64,9 +64,9 @@ Mit Microsoft .NET Framework, Anwendungsentwickler, die mit Windows Presentation
   
  So aktivieren Sie die Verwendung von XPSDrv-basierten Druckern durch [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] und Windows Forms-Anwendungen, die [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] -Druckertreiber (XPSDrv) unterstützt die Konvertierung von [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] zu [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] Format. Das XPSDrv-Modell umfasst außerdem einen Konverter für das [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Format nach [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)], sodass [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Anwendungen [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Dokumente drucken können. Für [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen erfolgt die Konvertierung von [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] zu [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] Format erfolgt automatisch durch die <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> und <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> Methoden der <xref:System.Windows.Xps.XpsDocumentWriter> Klasse, wenn die Druckerwarteschlange des Schreibvorgangs nicht verfügt einen XPSDrv-Treiber. (Windows Forms-Anwendungen nicht drucken [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] Dokumente.)  
   
- Die folgende Abbildung stellt das Drucksubsystem dar und definiert die von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] bereitgestellten sowie die von Software- und Hardwareherstellern definierten Anteile.  
+ Die folgende Abbildung zeigt das Drucken-Subsystem und definiert die Teile von bereitgestellten [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)], und die von Software- und Hardwareherstellern definierten Anteile:  
   
- ![Das XPS-Drucksystem](./media/xpsprint.PNG "XPSPrint")  
+ ![Screenshot zeigt, dass das System die XPS-Druckpfad.](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>Einfacher XPS-Druck  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] definiert sowohl eine einfache als auch eine erweiterte [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Für Anwendungen, die keine umfangreichen Druckanpassungen oder Zugriff auf die Gesamtmenge der [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Funktionen erfordern, ist eine Unterstützung für einfachen Druck verfügbar. Die einfache Druckunterstützung wird über ein Druckdialogfeld-Steuerelement verfügbar gemacht, das nur minimale Konfiguration erfordert und eine vertraute [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bietet. Viele [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Funktionen sind in diesem vereinfachten Druckmodell verfügbar.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: e0a52dcd3b403b3b5795dc0d025ac93176f009c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359132"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634452"
 ---
 # <a name="dialog-boxes-overview"></a>Übersicht über Dialogfelder
 Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl die hauptsächlichen Daten über den die Anwendung ausgeführt wird, und macht die Funktionalität zum Verarbeiten dieser Daten über zeigt [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] -Mechanismen wie Menüleisten, Symbolleisten und Statusleisten. Eine nicht triviale Anwendung kann auch zusätzliche Fenster anzeigen, um Folgendes auszuführen:  
@@ -40,7 +40,7 @@ Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl die 
 ## <a name="message-boxes"></a>Meldungsfelder  
  Ein *Meldungsfeld* ist ein Dialogfeld mit dem Textinformationen angezeigt und können Benutzer mithilfe von Schaltflächen Entscheidungen treffen werden kann. In der folgenden Abbildung ist ein Meldungsfeld dargestellt, in dem Textinformationen angezeigt werden, eine Frage gestellt wird und der Benutzer mithilfe von drei Schaltflächen die Frage beantworten kann.  
   
- ![Dialogfeld für Textverarbeitung](./media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
+ ![Schließt ein Dialogfeld gefragt, ob die Änderungen auf das Dokument vor der Anwendung gespeichert werden soll.](./media/dialog-boxes-overview/word-processor-dialog.png)  
   
  Um ein Meldungsfeld zu erstellen, verwenden Sie die <xref:System.Windows.MessageBox> Klasse. <xref:System.Windows.MessageBox> können Sie Text in Meldungsfeldern, Titel, Symbol und Schaltflächen, die mithilfe von Code wie folgt zu konfigurieren.  
   
@@ -73,7 +73,7 @@ Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl die 
 ### <a name="open-file-dialog"></a>Dialogfeld „Datei öffnen“  
  Das Dialogfeld „Datei öffnen“, das in der folgenden Abbildung gezeigt wird, wird von Funktionen zum Öffnen von Dateien verwendet, um den Namen einer zu öffnenden Datei abzurufen.  
   
- ![Dialogfeld „Öffnen“](./media/dialogboxesoverviewfigure2.png "DialogBoxesOverviewFigure2")  
+ ![Ein Dialogfeld geöffnet, das die Position zum Abrufen der Datei.](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
  Das Standarddialogfeld Datei öffnen, wird als implementiert die <xref:Microsoft.Win32.OpenFileDialog> Klasse und befindet sich in der <xref:Microsoft.Win32> Namespace. Im folgenden Code wird gezeigt, wie ein solches Dialogfeld erstellt, konfiguriert und angezeigt und wie das Ergebnis verarbeitet wird.  
   
@@ -89,7 +89,7 @@ Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl die 
 ### <a name="save-file-dialog-box"></a>Dialogfeld „Datei speichern“  
  Das Dialogfeld „Datei speichern“, das in der folgenden Abbildung gezeigt wird, wird von Funktionen zum Speichern von Dateien verwendet, um den Namen einer zu speichernden Datei abzurufen.  
   
- ![Dialogfeld „Speichern unter“](./media/dialogboxesoverviewfigure3.png "DialogBoxesOverviewFigure3")  
+ ![Ein Dialogfeld Speichern unter, die den Standort zum Speichern der Datei.](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
  Das Standarddialogfeld speichern Datei wird als implementiert die <xref:Microsoft.Win32.SaveFileDialog> Klasse, und befindet sich in der <xref:Microsoft.Win32> Namespace. Im folgenden Code wird gezeigt, wie ein solches Dialogfeld erstellt, konfiguriert und angezeigt und wie das Ergebnis verarbeitet wird.  
   
@@ -102,7 +102,7 @@ Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl die 
 ### <a name="print-dialog-box"></a>Dialogfeld „Drucken“  
  Das Dialogfeld „Drucken“, das in der folgenden Abbildung gezeigt wird, wird von Funktionen zum Drucken verwendet, um den Drucker auszuwählen und zu konfigurieren, auf dem der Benutzer Daten ausgeben möchte.  
   
- ![Dialogfeld „Drucken“](./media/dialogboxesoverviewfigure4.png "DialogBoxesOverviewFigure4")  
+ ![Screenshot, ein Druckdialogfeld zeigt.](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
  Das Standarddialogfeld Drucken wird implementiert, als die <xref:System.Windows.Controls.PrintDialog> Klasse, und befindet sich in der <xref:System.Windows.Controls> Namespace. Im folgenden Code wird gezeigt, wie ein solches Dialogfeld erstellt, konfiguriert und angezeigt wird.  
   
@@ -119,7 +119,7 @@ Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl die 
 ### <a name="creating-a-modal-custom-dialog-box"></a>Erstellen eines modalen benutzerdefinierten Dialogfelds  
  In diesem Thema wird gezeigt, wie Sie mit <xref:System.Windows.Window> eine typische modale dialogfeldimplementierung zu erstellen. mit der `Margins` Dialogfeld als Beispiel (finden Sie unter [Dialogfeldbeispiel](https://go.microsoft.com/fwlink/?LinkID=159984)). Die `Margins` Dialogfeld wird in der folgenden Abbildung dargestellt.  
   
- ![Dialogfeld „Ränder“](./media/dialogboxesoverviewfigure5.png "DialogBoxesOverviewFigure5")  
+ ![Ein Dialogfeld Ränder mit Feldern zum linken Rand, Oberer Rand, der rechte Rand und der untere Rand zu definieren.](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
 #### <a name="configuring-a-modal-dialog-box"></a>Konfigurieren eines modalen Dialogfelds  
  Die Benutzeroberfläche für ein normales Dialogfeld enthält Folgendes:  
@@ -208,7 +208,7 @@ Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl die 
   
  Nachdem die Validierungsregel zugeordnet ist, wird [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] automatisch angewendet, wenn Daten in das gebundene Steuerelement eingegeben werden. Wenn ein Steuerelement ungültige Daten enthält [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zeigt einen roten Rahmen um das ungültige Steuerelement, wie in der folgenden Abbildung dargestellt.  
   
- ![Ungültiger Linker Rand](./media/dialogboxesoverviewfigure7.png "DialogBoxesOverviewFigure7")  
+ ![Ein Dialogfeld Ränder mit einem roten Rahmen um den Wert Ungültiger Linker Rand.](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] beschränkt Benutzer nicht so lange auf das ungültige Steuerelement, bis sie gültige Daten eingegeben haben. Das wird als gutes Verhalten für ein Dialogfeld verstanden: Benutzer sollten in einem Dialogfeld frei durch die Steuerelemente navigieren können, unabhängig davon, ob die Daten gültig sind. Dies bedeutet jedoch ein Benutzer eingeben kann ungültige Daten, und drücken Sie die **OK** Schaltfläche. Aus diesem Grund müssen vom Code auch zum Validieren aller Steuerelemente in einem Dialogfeld Feld, wenn die **OK** gedrückt wird durch Behandeln der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
   
@@ -277,7 +277,7 @@ Eigenständige Anwendungen haben in der Regel ein Hauptfenster, dass sowohl die 
 ### <a name="creating-a-modeless-custom-dialog-box"></a>Erstellen eines nicht modalen benutzerdefinierten Dialogfelds  
  Ein nicht modales Dialogfeld, z. B. das in der folgenden Abbildung dargestellte Dialogfeld „Suchen“, besitzt dasselbe grundlegende Aussehen wie das modale Dialogfeld.  
   
- ![Dialogfeld „Suchen“](./media/dialogboxesoverviewfigure6.PNG "DialogBoxesOverviewFigure6")  
+ ![Screenshot mit einem Dialogfeld Suchen.](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
   
  Allerdings ist das Verhalten etwas anders, wie in den folgenden Abschnitten beschrieben wird.  
   

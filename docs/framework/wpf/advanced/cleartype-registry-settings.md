@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 471a94333260d30bc9c650f13e3a7489d9d5db7e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a2b24077145b3b24fa021121450534264aea0c8b
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369720"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675899"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType-Registrierungseinstellungen
 Dieses Thema enthält eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] registrierungseinstellungen, mit denen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen.  
@@ -57,7 +57,7 @@ Dieses Thema enthält eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](..
   
  Für jeden Anzeigegerätenamen eines Benutzers einer `ClearTypeLevel` DWORD-Wert definiert. Der folgende Screenshot zeigt die Registrierungs-Editor-Einstellung für die [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Ebene.  
   
- ![ClearType-Einstellungen im Registrierungs-Editor](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![ClearType-Einstellungen im Registrierungs-Editor.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Anwendungen Rendern Text in einem der beiden Modi: mit und ohne [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]. Wenn Text gerendert wird, ohne [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)], wird dies als Graustufenrendering bezeichnet.  
@@ -75,7 +75,7 @@ Dieses Thema enthält eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](..
   
  Für jeden Anzeigegerätenamen eines Benutzers einer `GammaLevel` DWORD-Wert definiert. Der folgende Screenshot zeigt die Registrierungs-Editor-Einstellung für die Gammastufe.  
   
- ![ClearType-Einstellungen im Registrierungs-Editor](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![ClearType-Gamma auf Einstellungen im Registrierungs-Editor](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="pixel_structure"></a>   
 ## <a name="pixel-structure"></a>Pixelstruktur  
@@ -99,7 +99,7 @@ Dieses Thema enthält eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](..
   
  Für jeden Anzeigegerätenamen eines Benutzers einer `PixelStructure` DWORD-Wert definiert. Der folgende Screenshot zeigt die Registrierungs-Editor-Einstellung für die Pixelstruktur.  
   
- ![ClearType-Einstellungen im Registrierungs-Editor](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![ClearType-Gamma auf Einstellungen im Registrierungs-Editor](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="text_contrast_level"></a>   
 ## <a name="text-contrast-level"></a>Textkontraststufe  
@@ -112,7 +112,7 @@ Dieses Thema enthält eine Übersicht über die [!INCLUDE[TLA2#tla_winclient](..
   
  Für jeden Anzeigegerätenamen eines Benutzers einer `TextContrastLevel` DWORD-Wert definiert. Der folgende Screenshot zeigt die Registrierungs-Editor-Einstellung für die Textkontraststufe.  
   
- ![ClearType-Einstellungen im Registrierungs-Editor](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![ClearType-Einstellungen im Registrierungs-Editor.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 ## <a name="see-also"></a>Siehe auch
 - [Übersicht über ClearType](cleartype-overview.md)

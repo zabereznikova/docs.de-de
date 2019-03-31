@@ -4,12 +4,12 @@ description: Dieses Dokument bietet einen Überblick über die Schritte und den 
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 8deaab67f7a824f6eb079f49b7fd75e0c02f1025
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: e5ac6fa04a2a5001146936de56acafeec7dd895d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788452"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409496"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>Erste Schritte mit .NET Core unter macOS
 
@@ -215,7 +215,7 @@ Legen Sie bei der Anweisung `WriteLine` in der `Main`-Methode einen Haltepunkt f
 
 Öffnen Sie die Registerkarte „Debugger“, indem Sie das Debugger-Symbol in der Visual Studio Code-Symbolleiste auswählen, **Anzeigen > Debuggen** aus der Menüleiste auswählen oder den Tastaturkurzbefehl <kbd>STRG</kbd>+<kbd>UMSCHALT</kbd>+<kbd>D</kbd> verwenden:
 
-![Visual Studio Code-Debugger](./media/using-on-macos/vscodedebugger.png)
+![Visual Studio Code-Debugger](./media/using-on-macos/visual-studio-code-debugger.png)
 
 Klicken Sie auf die Schaltfläche „Wiedergabe“, um die Anwendung unter dem Debugger zu starten. Die App startet mit der Ausführung und läuft bis zum Haltepunkt, wo sie anhält. Führen Sie die `Get`-Methode schrittweise aus, und stellen Sie sicher, dass Sie die richtigen Argumente eingefügt haben. Bestätigen Sie, dass die Antwort 42 ist.
 
