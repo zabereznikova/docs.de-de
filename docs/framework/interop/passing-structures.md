@@ -9,40 +9,40 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48f24187d0c9992008e7471ffe1a5b75f9768239
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1617a082a6ad46023add2d2df7de2561e2815881
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494368"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409691"
 ---
-# <a name="passing-structures"></a><span data-ttu-id="768c7-102">Übergeben von Strukturen</span><span class="sxs-lookup"><span data-stu-id="768c7-102">Passing Structures</span></span>
-<span data-ttu-id="768c7-103">Bei vielen nicht verwalteten Funktionen wird erwartet, dass Member von Strukturen (benutzerdefinierte Typen in Visual Basic) oder Member von Klassen, die in verwaltetem Code definiert werden, als Parameter an die Funktion übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="768c7-103">Many unmanaged functions expect you to pass, as a parameter to the function, members of structures (user-defined types in Visual Basic) or members of classes that are defined in managed code.</span></span> <span data-ttu-id="768c7-104">Wenn Sie Strukturen oder Klassen an nicht verwalteten Code mithilfe von Plattformaufruf übergeben, müssen Sie zusätzliche Informationen angeben, um das ursprüngliche Layout und die ursprüngliche Ausrichtung beizubehalten.</span><span class="sxs-lookup"><span data-stu-id="768c7-104">When passing structures or classes to unmanaged code using platform invoke, you must provide additional information to preserve the original layout and alignment.</span></span> <span data-ttu-id="768c7-105">Dieses Thema enthält eine Einführung in das <xref:System.Runtime.InteropServices.StructLayoutAttribute>-Attribut, das Sie zum Definieren formatierter Typen verwenden.</span><span class="sxs-lookup"><span data-stu-id="768c7-105">This topic introduces the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute, which you use to define formatted types.</span></span> <span data-ttu-id="768c7-106">Sie können für verwaltete Strukturen und Klassen verschiedene vorhersagbare Layoutverhalten auswählen, die von der **LayoutKind**-Enumeration bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="768c7-106">For managed structures and classes, you can select from several predictable layout behaviors supplied by the **LayoutKind** enumeration.</span></span>  
+# <a name="passing-structures"></a><span data-ttu-id="95858-102">Übergeben von Strukturen</span><span class="sxs-lookup"><span data-stu-id="95858-102">Passing Structures</span></span>
+<span data-ttu-id="95858-103">Bei vielen nicht verwalteten Funktionen wird erwartet, dass Member von Strukturen (benutzerdefinierte Typen in Visual Basic) oder Member von Klassen, die in verwaltetem Code definiert werden, als Parameter an die Funktion übergeben werden.</span><span class="sxs-lookup"><span data-stu-id="95858-103">Many unmanaged functions expect you to pass, as a parameter to the function, members of structures (user-defined types in Visual Basic) or members of classes that are defined in managed code.</span></span> <span data-ttu-id="95858-104">Wenn Sie Strukturen oder Klassen an nicht verwalteten Code mithilfe von Plattformaufruf übergeben, müssen Sie zusätzliche Informationen angeben, um das ursprüngliche Layout und die ursprüngliche Ausrichtung beizubehalten.</span><span class="sxs-lookup"><span data-stu-id="95858-104">When passing structures or classes to unmanaged code using platform invoke, you must provide additional information to preserve the original layout and alignment.</span></span> <span data-ttu-id="95858-105">Dieses Thema enthält eine Einführung in das <xref:System.Runtime.InteropServices.StructLayoutAttribute>-Attribut, das Sie zum Definieren formatierter Typen verwenden.</span><span class="sxs-lookup"><span data-stu-id="95858-105">This topic introduces the <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute, which you use to define formatted types.</span></span> <span data-ttu-id="95858-106">Sie können für verwaltete Strukturen und Klassen verschiedene vorhersagbare Layoutverhalten auswählen, die von der **LayoutKind**-Enumeration bereitgestellt werden.</span><span class="sxs-lookup"><span data-stu-id="95858-106">For managed structures and classes, you can select from several predictable layout behaviors supplied by the **LayoutKind** enumeration.</span></span>  
   
- <span data-ttu-id="768c7-107">Es gibt einen entscheidenden Unterschied zwischen Struktur- und Klassentypen, der für die im vorliegenden Thema dargestellten Konzepte eine Schlüsselposition einnimmt.</span><span class="sxs-lookup"><span data-stu-id="768c7-107">Central to the concepts presented in this topic is an important difference between structure and class types.</span></span> <span data-ttu-id="768c7-108">Strukturen sind Werttypen und Klassen sind Referenztypen, wobei Klassen immer mindestens eine Speicherdereferenzierungsebene (einen Zeiger auf einen Wert) bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="768c7-108">Structures are value types and classes are reference types — classes always provide at least one level of memory indirection (a pointer to a value).</span></span> <span data-ttu-id="768c7-109">Dieser Unterschied ist relevant, da nicht verwaltete Funktionen oftmals eine Dereferenzierung erfordern, wie durch die Signaturen in der ersten Spalte der folgenden Tabelle gezeigt.</span><span class="sxs-lookup"><span data-stu-id="768c7-109">This difference is important because unmanaged functions often demand indirection, as shown by the signatures in the first column of the following table.</span></span> <span data-ttu-id="768c7-110">Die verwalteten Struktur- und Klassendeklarationen in den anderen Spalten geben an, in welchem Ausmaß die Dereferenzierungsebene in der Deklaration angepasst werden kann. Es werden Deklarationen für Visual Basic und Visual C# bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="768c7-110">The managed structure and class declarations in the remaining columns show the degree to which you can adjust the level of indirection in your declaration.Declarations are provided for both Visual Basic and Visual C#.</span></span>  
+ <span data-ttu-id="95858-107">Es gibt einen entscheidenden Unterschied zwischen Struktur- und Klassentypen, der für die im vorliegenden Thema dargestellten Konzepte eine Schlüsselposition einnimmt.</span><span class="sxs-lookup"><span data-stu-id="95858-107">Central to the concepts presented in this topic is an important difference between structure and class types.</span></span> <span data-ttu-id="95858-108">Strukturen sind Werttypen und Klassen sind Referenztypen, wobei Klassen immer mindestens eine Speicherdereferenzierungsebene (einen Zeiger auf einen Wert) bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="95858-108">Structures are value types and classes are reference types — classes always provide at least one level of memory indirection (a pointer to a value).</span></span> <span data-ttu-id="95858-109">Dieser Unterschied ist relevant, da nicht verwaltete Funktionen oftmals eine Dereferenzierung erfordern, wie durch die Signaturen in der ersten Spalte der folgenden Tabelle gezeigt.</span><span class="sxs-lookup"><span data-stu-id="95858-109">This difference is important because unmanaged functions often demand indirection, as shown by the signatures in the first column of the following table.</span></span> <span data-ttu-id="95858-110">Die verwalteten Struktur- und Klassendeklarationen in den anderen Spalten geben an, in welchem Ausmaß die Dereferenzierungsebene in der Deklaration angepasst werden kann. Es werden Deklarationen für Visual Basic und Visual C# bereitgestellt.</span><span class="sxs-lookup"><span data-stu-id="95858-110">The managed structure and class declarations in the remaining columns show the degree to which you can adjust the level of indirection in your declaration.Declarations are provided for both Visual Basic and Visual C#.</span></span>  
   
-|<span data-ttu-id="768c7-111">Nicht verwaltete Signatur</span><span class="sxs-lookup"><span data-stu-id="768c7-111">Unmanaged signature</span></span>|<span data-ttu-id="768c7-112">Verwaltete Deklaration:</span><span class="sxs-lookup"><span data-stu-id="768c7-112">Managed declaration:</span></span> <br /><span data-ttu-id="768c7-113">keine Dereferenzierung</span><span class="sxs-lookup"><span data-stu-id="768c7-113">no indirection</span></span><br />`Structure MyType`<br />`struct MyType;`|<span data-ttu-id="768c7-114">Verwaltete Deklaration:</span><span class="sxs-lookup"><span data-stu-id="768c7-114">Managed declaration:</span></span> <br /><span data-ttu-id="768c7-115">eine Dereferenzierungsebene</span><span class="sxs-lookup"><span data-stu-id="768c7-115">one level of indirection</span></span><br />`Class MyType`<br />`class MyType;`|  
+|<span data-ttu-id="95858-111">Nicht verwaltete Signatur</span><span class="sxs-lookup"><span data-stu-id="95858-111">Unmanaged signature</span></span>|<span data-ttu-id="95858-112">Verwaltete Deklaration:</span><span class="sxs-lookup"><span data-stu-id="95858-112">Managed declaration:</span></span> <br /><span data-ttu-id="95858-113">keine Dereferenzierung</span><span class="sxs-lookup"><span data-stu-id="95858-113">no indirection</span></span><br />`Structure MyType`<br />`struct MyType;`|<span data-ttu-id="95858-114">Verwaltete Deklaration:</span><span class="sxs-lookup"><span data-stu-id="95858-114">Managed declaration:</span></span> <br /><span data-ttu-id="95858-115">eine Dereferenzierungsebene</span><span class="sxs-lookup"><span data-stu-id="95858-115">one level of indirection</span></span><br />`Class MyType`<br />`class MyType;`|  
 |-------------------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|  
-|`DoWork(MyType x);`<br /><br /> <span data-ttu-id="768c7-116">Erfordert 0 Dereferenzierungsebenen.</span><span class="sxs-lookup"><span data-stu-id="768c7-116">Demands zero levels of indirection.</span></span>|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> <span data-ttu-id="768c7-117">Fügt 0 Dereferenzierungsebenen hinzu.</span><span class="sxs-lookup"><span data-stu-id="768c7-117">Adds zero levels of indirection.</span></span>|<span data-ttu-id="768c7-118">Nicht möglich, da bereits eine Dereferenzierungsebene besteht.</span><span class="sxs-lookup"><span data-stu-id="768c7-118">Not possible because there is already one level of indirection.</span></span>|  
-|`DoWork(MyType* x);`<br /><br /> <span data-ttu-id="768c7-119">Erfordert eine Dereferenzierungsebene.</span><span class="sxs-lookup"><span data-stu-id="768c7-119">Demands one level of indirection.</span></span>|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> <span data-ttu-id="768c7-120">Fügt eine Dereferenzierungsebene hinzu.</span><span class="sxs-lookup"><span data-stu-id="768c7-120">Adds one level of indirection.</span></span>|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> <span data-ttu-id="768c7-121">Fügt 0 Dereferenzierungsebenen hinzu.</span><span class="sxs-lookup"><span data-stu-id="768c7-121">Adds zero levels of indirection.</span></span>|  
-|`DoWork(MyType** x);`<br /><br /> <span data-ttu-id="768c7-122">Erfordert zwei Dereferenzierungsebenen.</span><span class="sxs-lookup"><span data-stu-id="768c7-122">Demands two levels of indirection.</span></span>|<span data-ttu-id="768c7-123">Nicht möglich, da **ByRef** **ByRef** oder `ref` `ref` nicht verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="768c7-123">Not possible because **ByRef** **ByRef** or `ref` `ref` cannot be used.</span></span>|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> <span data-ttu-id="768c7-124">Fügt eine Dereferenzierungsebene hinzu.</span><span class="sxs-lookup"><span data-stu-id="768c7-124">Adds one level of indirection.</span></span>|  
+|`DoWork(MyType x);`<br /><br /> <span data-ttu-id="95858-116">Erfordert 0 Dereferenzierungsebenen.</span><span class="sxs-lookup"><span data-stu-id="95858-116">Demands zero levels of indirection.</span></span>|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> <span data-ttu-id="95858-117">Fügt 0 Dereferenzierungsebenen hinzu.</span><span class="sxs-lookup"><span data-stu-id="95858-117">Adds zero levels of indirection.</span></span>|<span data-ttu-id="95858-118">Nicht möglich, da bereits eine Dereferenzierungsebene besteht.</span><span class="sxs-lookup"><span data-stu-id="95858-118">Not possible because there is already one level of indirection.</span></span>|  
+|`DoWork(MyType* x);`<br /><br /> <span data-ttu-id="95858-119">Erfordert eine Dereferenzierungsebene.</span><span class="sxs-lookup"><span data-stu-id="95858-119">Demands one level of indirection.</span></span>|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> <span data-ttu-id="95858-120">Fügt eine Dereferenzierungsebene hinzu.</span><span class="sxs-lookup"><span data-stu-id="95858-120">Adds one level of indirection.</span></span>|`DoWork(ByVal x As MyType)` <br /> `DoWork(MyType x)`<br /><br /> <span data-ttu-id="95858-121">Fügt 0 Dereferenzierungsebenen hinzu.</span><span class="sxs-lookup"><span data-stu-id="95858-121">Adds zero levels of indirection.</span></span>|  
+|`DoWork(MyType** x);`<br /><br /> <span data-ttu-id="95858-122">Erfordert zwei Dereferenzierungsebenen.</span><span class="sxs-lookup"><span data-stu-id="95858-122">Demands two levels of indirection.</span></span>|<span data-ttu-id="95858-123">Nicht möglich, da **ByRef** **ByRef** oder `ref` `ref` nicht verwendet werden können.</span><span class="sxs-lookup"><span data-stu-id="95858-123">Not possible because **ByRef** **ByRef** or `ref` `ref` cannot be used.</span></span>|`DoWork(ByRef x As MyType)` <br /> `DoWork(ref MyType x)`<br /><br /> <span data-ttu-id="95858-124">Fügt eine Dereferenzierungsebene hinzu.</span><span class="sxs-lookup"><span data-stu-id="95858-124">Adds one level of indirection.</span></span>|  
   
- <span data-ttu-id="768c7-125">Die Tabelle beschreibt die folgenden Richtlinien für Plattformaufrufdeklarationen:</span><span class="sxs-lookup"><span data-stu-id="768c7-125">The table describes the following guidelines for platform invoke declarations:</span></span>  
+ <span data-ttu-id="95858-125">Die Tabelle beschreibt die folgenden Richtlinien für Plattformaufrufdeklarationen:</span><span class="sxs-lookup"><span data-stu-id="95858-125">The table describes the following guidelines for platform invoke declarations:</span></span>  
   
--   <span data-ttu-id="768c7-126">Verwenden Sie eine Struktur, die durch einen Wert übergeben wird, wenn die nicht verwaltete Funktion keine Dereferenzierung erfordert.</span><span class="sxs-lookup"><span data-stu-id="768c7-126">Use a structure passed by value when the unmanaged function demands no indirection.</span></span>  
+-   <span data-ttu-id="95858-126">Verwenden Sie eine Struktur, die durch einen Wert übergeben wird, wenn die nicht verwaltete Funktion keine Dereferenzierung erfordert.</span><span class="sxs-lookup"><span data-stu-id="95858-126">Use a structure passed by value when the unmanaged function demands no indirection.</span></span>  
   
--   <span data-ttu-id="768c7-127">Verwenden Sie entweder eine Struktur, die durch einen Verweis übergeben wird, oder eine Klasse, die durch einen Wert übergeben wird, wenn die nicht verwaltete Funktion eine Dereferenzierungsebene erfordert.</span><span class="sxs-lookup"><span data-stu-id="768c7-127">Use either a structure passed by reference or a class passed by value when the unmanaged function demands one level of indirection.</span></span>  
+-   <span data-ttu-id="95858-127">Verwenden Sie eine Struktur, die durch einen Verweis übergeben wird, oder verwenden Sie eine Klasse, die durch einen Wert übergeben wird, wenn die nicht verwaltete Funktion eine Dereferenzierungsebene erfordert.</span><span class="sxs-lookup"><span data-stu-id="95858-127">Use either a structure passed by reference or a class passed by value when the unmanaged function demands one level of indirection.</span></span>  
   
--   <span data-ttu-id="768c7-128">Verwenden Sie eine Klasse, die durch einen Verweis übergeben wird, wenn die nicht verwaltete Funktion zwei Dereferenzierungsebenen erfordert.</span><span class="sxs-lookup"><span data-stu-id="768c7-128">Use a class passed by reference when the unmanaged function demands two levels of indirection.</span></span>  
+-   <span data-ttu-id="95858-128">Verwenden Sie eine Klasse, die durch einen Verweis übergeben wird, wenn die nicht verwaltete Funktion zwei Dereferenzierungsebenen erfordert.</span><span class="sxs-lookup"><span data-stu-id="95858-128">Use a class passed by reference when the unmanaged function demands two levels of indirection.</span></span>  
   
-## <a name="declaring-and-passing-structures"></a><span data-ttu-id="768c7-129">Deklarieren und Übergeben von Strukturen</span><span class="sxs-lookup"><span data-stu-id="768c7-129">Declaring and Passing Structures</span></span>  
- <span data-ttu-id="768c7-130">Im folgenden Beispiel wird gezeigt, wie Sie `Point`-Strukturen und `Rect`-Strukturen in verwaltetem Code definieren und die Typen als Parameter an die **PtInRect**-Funktion in der Datei „User32.dll“ übergeben können.</span><span class="sxs-lookup"><span data-stu-id="768c7-130">The following example shows how to define the `Point` and `Rect` structures in managed code, and pass the types as parameter to the **PtInRect** function in the User32.dll file.</span></span> <span data-ttu-id="768c7-131">**PtInRect** hat folgende nicht verwaltete Signatur:</span><span class="sxs-lookup"><span data-stu-id="768c7-131">**PtInRect** has the following unmanaged signature:</span></span>  
+## <a name="declaring-and-passing-structures"></a><span data-ttu-id="95858-129">Deklarieren und Übergeben von Strukturen</span><span class="sxs-lookup"><span data-stu-id="95858-129">Declaring and Passing Structures</span></span>  
+ <span data-ttu-id="95858-130">Im folgenden Beispiel wird gezeigt, wie Sie `Point`-Strukturen und `Rect`-Strukturen in verwaltetem Code definieren und die Typen als Parameter an die **PtInRect**-Funktion in der Datei „User32.dll“ übergeben können.</span><span class="sxs-lookup"><span data-stu-id="95858-130">The following example shows how to define the `Point` and `Rect` structures in managed code, and pass the types as parameter to the **PtInRect** function in the User32.dll file.</span></span> <span data-ttu-id="95858-131">**PtInRect** hat folgende nicht verwaltete Signatur:</span><span class="sxs-lookup"><span data-stu-id="95858-131">**PtInRect** has the following unmanaged signature:</span></span>  
   
 ```  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
- <span data-ttu-id="768c7-132">Hinweis: Sie müssen die Rect-Struktur durch Verweis übergeben, da von der Funktion ein Zeiger auf einen RECT-Typ erwartet wird.</span><span class="sxs-lookup"><span data-stu-id="768c7-132">Notice that you must pass the Rect structure by reference, since the function expects a pointer to a RECT type.</span></span>  
+ <span data-ttu-id="95858-132">Hinweis: Sie müssen die Rect-Struktur durch Verweis übergeben, da von der Funktion ein Zeiger auf einen RECT-Typ erwartet wird.</span><span class="sxs-lookup"><span data-stu-id="95858-132">Notice that you must pass the Rect structure by reference, since the function expects a pointer to a RECT type.</span></span>  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -59,9 +59,9 @@ Public Structure <StructLayout(LayoutKind.Explicit)> Rect
     <FieldOffset(12)> Public bottom As Integer  
 End Structure  
   
-Class Win32API      
-    Declare Auto Function PtInRect Lib "user32.dll" _  
-    (ByRef r As Rect, p As Point) As Boolean  
+Friend Class WindowsAPI      
+    Friend Shared Declare Auto Function PtInRect Lib "user32.dll" (
+        ByRef r As Rect, p As Point) As Boolean  
 End Class  
 ```  
   
@@ -82,20 +82,21 @@ public struct Rect {
     [FieldOffset(12)] public int bottom;  
 }     
   
-class Win32API {  
+internal static class WindowsAPI
+{  
     [DllImport("User32.dll")]  
-    public static extern bool PtInRect(ref Rect r, Point p);  
+    internal static extern bool PtInRect(ref Rect r, Point p);  
 }  
 ```  
   
-## <a name="declaring-and-passing-classes"></a><span data-ttu-id="768c7-133">Deklarieren und Übergeben von Klassen</span><span class="sxs-lookup"><span data-stu-id="768c7-133">Declaring and Passing Classes</span></span>  
- <span data-ttu-id="768c7-134">Sie können Member einer Klasse an nicht verwaltete DLL-Funktionen übergeben, solange die Klasse ein festes Layout für Member hat.</span><span class="sxs-lookup"><span data-stu-id="768c7-134">You can pass members of a class to an unmanaged DLL function, as long as the class has a fixed member layout.</span></span> <span data-ttu-id="768c7-135">Das folgende Beispiel veranschaulicht, wie Sie Member der `MySystemTime`-Klasse, die sequenziell definiert sind, an **GetSystemTime** in der Datei „User32.dll“ übergeben können.</span><span class="sxs-lookup"><span data-stu-id="768c7-135">The following example demonstrates how to pass members of the `MySystemTime` class, which are defined in sequential order, to the **GetSystemTime** in the User32.dll file.</span></span> <span data-ttu-id="768c7-136">**GetSystemTime** hat folgende nicht verwaltete Signatur:</span><span class="sxs-lookup"><span data-stu-id="768c7-136">**GetSystemTime** has the following unmanaged signature:</span></span>  
+## <a name="declaring-and-passing-classes"></a><span data-ttu-id="95858-133">Deklarieren und Übergeben von Klassen</span><span class="sxs-lookup"><span data-stu-id="95858-133">Declaring and Passing Classes</span></span>  
+ <span data-ttu-id="95858-134">Sie können Member einer Klasse an nicht verwaltete DLL-Funktionen übergeben, solange die Klasse ein festes Layout für Member hat.</span><span class="sxs-lookup"><span data-stu-id="95858-134">You can pass members of a class to an unmanaged DLL function, as long as the class has a fixed member layout.</span></span> <span data-ttu-id="95858-135">Das folgende Beispiel veranschaulicht, wie Sie Member der `MySystemTime`-Klasse, die sequenziell definiert sind, an **GetSystemTime** in der Datei „User32.dll“ übergeben können.</span><span class="sxs-lookup"><span data-stu-id="95858-135">The following example demonstrates how to pass members of the `MySystemTime` class, which are defined in sequential order, to the **GetSystemTime** in the User32.dll file.</span></span> <span data-ttu-id="95858-136">**GetSystemTime** hat folgende nicht verwaltete Signatur:</span><span class="sxs-lookup"><span data-stu-id="95858-136">**GetSystemTime** has the following unmanaged signature:</span></span>  
   
 ```  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
- <span data-ttu-id="768c7-137">Im Unterschied zu Werttypen besitzen Klassen immer mindestens eine Dereferenzierungsebene.</span><span class="sxs-lookup"><span data-stu-id="768c7-137">Unlike value types, classes always have at least one level of indirection.</span></span>  
+ <span data-ttu-id="95858-137">Im Unterschied zu Werttypen besitzen Klassen immer mindestens eine Dereferenzierungsebene.</span><span class="sxs-lookup"><span data-stu-id="95858-137">Unlike value types, classes always have at least one level of indirection.</span></span>  
   
 ```vb  
 Imports System  
@@ -113,17 +114,17 @@ Imports Microsoft.VisualBasic
     Public wMiliseconds As Short  
 End Class  
   
-Public Class Win32  
-    Declare Auto Sub GetSystemTime Lib "Kernel32.dll"(sysTime _  
-        As MySystemTime)  
-    Declare Auto Function MessageBox Lib "User32.dll"(hWnd As IntPtr, _  
-        txt As String, caption As String, Typ As Integer) As Integer  
+Friend Class WindowsAPI  
+    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+        sysTime As MySystemTime)  
+    Friend Shared Declare Auto Function MessageBox Lib "User32.dll" (
+        hWnd As IntPtr, lpText As String, lpCaption As String, uType As UInteger) As Integer  
 End Class  
   
 Public Class TestPlatformInvoke      
     Public Shared Sub Main()  
         Dim sysTime As New MySystemTime()  
-        Win32.GetSystemTime(sysTime)  
+        WindowsAPI.GetSystemTime(sysTime)  
   
         Dim dt As String  
         dt = "System time is:" & ControlChars.CrLf & _  
@@ -131,7 +132,7 @@ Public Class TestPlatformInvoke
               ControlChars.CrLf & "Month: " & sysTime.wMonth & _  
               ControlChars.CrLf & "DayOfWeek: " & sysTime.wDayOfWeek & _  
               ControlChars.CrLf & "Day: " & sysTime.wDay  
-        Win32.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
+        WindowsAPI.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
     End Sub  
 End Class  
 ```  
@@ -148,13 +149,14 @@ public class MySystemTime {
     public ushort wSecond;   
     public ushort wMilliseconds;   
 }  
-class Win32API {  
+internal static class WindowsAPI
+{  
     [DllImport("Kernel32.dll")]  
-    public static extern void GetSystemTime(MySystemTime st);  
+    internal static extern void GetSystemTime(MySystemTime st);  
   
-    [DllImport("user32.dll", CharSet=CharSet.Auto)]  
-     public static extern int MessageBox(IntPtr hWnd,  
-         string text, string caption, int options);  
+    [DllImport("user32.dll", CharSet = CharSet.Auto)]  
+    internal static extern int MessageBox(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);  
 }  
   
 public class TestPlatformInvoke  
@@ -162,7 +164,7 @@ public class TestPlatformInvoke
     public static void Main()  
     {  
         MySystemTime sysTime = new MySystemTime();  
-        Win32API.GetSystemTime(sysTime);  
+        WindowsAPI.GetSystemTime(sysTime);  
   
         string dt;  
         dt = "System time is: \n" +  
@@ -170,13 +172,13 @@ public class TestPlatformInvoke
               "Month: " + sysTime.wMonth + "\n" +  
               "DayOfWeek: " + sysTime.wDayOfWeek + "\n" +  
               "Day: " + sysTime.wDay;  
-        Win32API.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0);  
+        WindowsAPI.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0);  
     }  
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="768c7-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="768c7-138">See also</span></span>
-- [<span data-ttu-id="768c7-139">Calling a DLL Function (Aufrufen einer DLL-Funktion)</span><span class="sxs-lookup"><span data-stu-id="768c7-139">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)
+## <a name="see-also"></a><span data-ttu-id="95858-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="95858-138">See also</span></span>
+- [<span data-ttu-id="95858-139">Calling a DLL Function (Aufrufen einer DLL-Funktion)</span><span class="sxs-lookup"><span data-stu-id="95858-139">Calling a DLL Function</span></span>](../../../docs/framework/interop/calling-a-dll-function.md)
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.FieldOffsetAttribute>
