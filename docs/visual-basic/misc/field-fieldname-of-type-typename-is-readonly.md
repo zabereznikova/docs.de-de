@@ -1,5 +1,5 @@
 ---
-title: Feld '<fieldname>"vom Typ"<typename>' ist 'ReadOnly'
+title: Feld '<fieldname>'vom Typ'<typename>' ist 'ReadOnly'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_ReadOnlyField2
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58043721"
 ---
-# <a name="field-fieldname-of-type-typename-is-readonly"></a>Feld '\<Fieldname > "vom Typ"\<Typname >' ist 'ReadOnly'
+# <a name="field-fieldname-of-type-typename-is-readonly"></a>Feld '\<Fieldname > 'vom Typ'\<Typname >' ist 'ReadOnly'
 Sie haben versucht, in ein Feld zu schreiben, das als `ReadOnly`deklariert ist.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

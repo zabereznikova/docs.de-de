@@ -1,5 +1,5 @@
 ---
-title: Argument kann nicht konvertiert werden kann '<argumentname>"vom Typ"<type1>' in Typ'<type2>"
+title: Argument kann nicht konvertiert werden kann '<argumentname>'vom Typ'<type1>' in Typ'<type2>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_ConvertToType3
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58049979"
 ---
-# <a name="cannot-convert-argument-argumentname-of-type-type1-to-type-type2"></a>Argument kann nicht konvertiert werden kann '\<Argumentname >' vom Typ "\<Typ1 >" in den Typ "\<Typ2 >"
+# <a name="cannot-convert-argument-argumentname-of-type-type1-to-type-type2"></a>Argument kann nicht konvertiert werden kann '\<Argumentname >' vom Typ '\<Typ1 >' in den Typ '\<Typ2 >'
 Eine Konvertierungsoperation versucht, ein Argument in einen inkompatiblen Typ zu konvertieren.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

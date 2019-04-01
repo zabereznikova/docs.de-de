@@ -1,5 +1,5 @@
 ---
-title: Öffentlicher Member '<membername>'für Typ"<typename>' wurde nicht gefunden.
+title: Öffentlicher Member '<membername>'für Typ'<typename>' wurde nicht gefunden.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_MemberNotFoundOnType2

@@ -1,5 +1,5 @@
 ---
-title: Methode "<methodname>"hat keinen Parameter namens"<parametername>"
+title: Methode '<methodname>'hat keinen Parameter namens'<parametername>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_InvalidNamedArg2
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58043771"
 ---
-# <a name="method-methodname-has-no-parameter-named-parametername"></a>Methode "\<Methodenname >' verfügt über keinen Parameter mit dem Namen"\<Parametername >'
+# <a name="method-methodname-has-no-parameter-named-parametername"></a>Methode '\<Methodenname >' verfügt über keinen Parameter mit dem Namen'\<Parametername >'
 Ein angegebenes benanntes Argument stimmt mit keinem der Argumente der Zielmethode überein.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

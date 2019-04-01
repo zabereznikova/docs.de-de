@@ -1,5 +1,5 @@
 ---
-title: Wurde kein Standardmember gefunden, für den Typ "<typename>"
+title: Wurde kein Standardmember gefunden, für den Typ '<typename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_NoDefaultMemberFound1
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58022447"
 ---
-# <a name="no-default-member-found-for-type-typename"></a>Wurde kein Standardmember gefunden, für den Typ "\<Typname >'
+# <a name="no-default-member-found-for-type-typename"></a>Wurde kein Standardmember gefunden, für den Typ '\<Typname >'
 Es wurde ein `Get` - oder `Set` -Indexaufruf mit später Bindung versucht.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

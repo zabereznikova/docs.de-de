@@ -1,5 +1,5 @@
 ---
-title: Methode "<methodname>' kann nicht aufgerufen werden, mit <number> Argumente
+title: Methode '<methodname>' kann nicht aufgerufen werden, mit <number> Argumente
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoMethodTakingXArguments2
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58025115"
 ---
-# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>Methode "\<Methodenname >' kann nicht aufgerufen werden, mit \<Anzahl > Argumenten
+# <a name="method-methodname-cannot-be-called-with-number-arguments"></a>Methode '\<Methodenname >' kann nicht aufgerufen werden, mit \<Anzahl > Argumenten
 Ein Methodenaufruf enthält die falsche Anzahl von Argumenten.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

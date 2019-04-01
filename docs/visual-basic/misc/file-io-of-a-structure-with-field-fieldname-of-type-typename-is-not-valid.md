@@ -1,5 +1,5 @@
 ---
-title: Datei-e/a einer Struktur mit dem Feld "<fieldname>"vom Typ"<typename>' ist ungültig
+title: Datei-e/a einer Struktur mit dem Feld '<fieldname>'vom Typ'<typename>' ist ungültig
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_UnsupportedFieldType2
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58048117"
 ---
-# <a name="file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid"></a>Datei-e/a einer Struktur mit dem Feld "\<Fieldname >" vom Typ "\<Typname >' ist ungültig
+# <a name="file-io-of-a-structure-with-field-fieldname-of-type-typename-is-not-valid"></a>Datei-e/a einer Struktur mit dem Feld '\<Fieldname >' vom Typ '\<Typname >' ist ungültig
 Die Struktur, die Sie in eine Datei schreiben möchten, enthält einen nicht unterstützten Typ.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

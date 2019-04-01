@@ -1,5 +1,5 @@
 ---
-title: Loop-Steuerungsvariable des Typs "<typename>' implementiert nicht die 'System.IComparable'-Schnittstelle
+title: Loop-Steuerungsvariable des Typs '<typename>' implementiert nicht die 'System.IComparable'-Schnittstelle
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_IComparable2
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58029477"
 ---
-# <a name="loop-control-variable-of-type-typename-does-not-implement-the-systemicomparable-interface"></a>Loop-Steuerungsvariable des Typs "\<Typname >' implementiert nicht die 'System.IComparable'-Schnittstelle
+# <a name="loop-control-variable-of-type-typename-does-not-implement-the-systemicomparable-interface"></a>Loop-Steuerungsvariable des Typs '\<Typname >' implementiert nicht die 'System.IComparable'-Schnittstelle
 Eine Variable hat einen Typ, der die `System.IComparable` -Schnittstelle nicht implementiert. `System.IComparable` muss von einem Werttyp oder einer Klasse implementiert werden.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

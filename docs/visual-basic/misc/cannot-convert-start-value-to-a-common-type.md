@@ -1,5 +1,5 @@
 ---
-title: Start-Wert des Typs kann nicht konvertiert werden kann '<type1>', limit-Wert von "<type2>"und die step-Wert des"<type3>" in einen gemeinsamen Typ
+title: Start-Wert des Typs kann nicht konvertiert werden kann '<type1>', limit-Wert von '<type2>'und die step-Wert des'<type3>' in einen gemeinsamen Typ
 ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_CommonType3
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57203242"
 ---
-# <a name="cannot-convert-start-value-of-type-type1-limit-value-of-type2-and-step-value-of-type3-to-a-common-type"></a>Start-Wert des Typs kann nicht konvertiert werden "\<Typ1 >', limit-Wert, der"\<Typ2 > "und der step-Wert des"\<Typ3 >' in einen gemeinsamen Typ
+# <a name="cannot-convert-start-value-of-type-type1-limit-value-of-type2-and-step-value-of-type3-to-a-common-type"></a>Start-Wert des Typs kann nicht konvertiert werden '\<Typ1 >', limit-Wert, der'\<Typ2 > 'und der step-Wert des'\<Typ3 >' in einen gemeinsamen Typ
 Die angegebenen `For...Next` -Steuerelementwerte weisen unterschiedliche Typen auf und sind daher ungültig, da sie nicht in einen gemeinsamen Typ konvertiert werden können.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

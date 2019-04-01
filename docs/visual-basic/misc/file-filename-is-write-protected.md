@@ -1,5 +1,5 @@
 ---
-title: Datei "<filename>' ist schreibgeschützt
+title: Datei '<filename>' ist schreibgeschützt
 ms.date: 07/20/2015
 ms.assetid: 6e5105b1-a634-4cde-a753-5bf1ae85a55a
 ms.openlocfilehash: 89c7c01be68c4f996c5e96235d0e101c04ec37d8
@@ -9,7 +9,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58030708"
 ---
-# <a name="file-filename-is-write-protected"></a>Datei "\<Dateiname >' ist schreibgeschützt
+# <a name="file-filename-is-write-protected"></a>Datei '\<Dateiname >' ist schreibgeschützt
 Die Datei, in die Sie zu schreiben versuchen, ist schreibgeschützt und kann daher nicht geändert werden.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

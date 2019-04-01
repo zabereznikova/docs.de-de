@@ -1,5 +1,5 @@
 ---
-title: Das benannte Argument "<argumentname>' wurde mehrmals angegeben.
+title: Das benannte Argument '<argumentname>' wurde mehrmals angegeben.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNamedArgumentAlreadyUsed1
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58041913"
 ---
-# <a name="named-argument-argumentname-specified-multiple-times"></a>Das benannte Argument "\<Argumentname >' wurde mehrmals angegeben.
+# <a name="named-argument-argumentname-specified-multiple-times"></a>Das benannte Argument '\<Argumentname >' wurde mehrmals angegeben.
 Sie haben ein benanntes Argument mehrmals angegeben.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

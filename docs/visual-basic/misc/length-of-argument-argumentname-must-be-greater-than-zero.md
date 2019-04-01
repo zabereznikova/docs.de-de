@@ -1,5 +1,5 @@
 ---
-title: Länge des Arguments "<argumentname>' muss größer als 0 (null) sein
+title: Länge des Arguments '<argumentname>' muss größer als 0 (null) sein
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_LengthGTZero1
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58042556"
 ---
-# <a name="length-of-argument-argumentname-must-be-greater-than-zero"></a>Länge des Arguments "\<Argumentname >' muss größer als 0 (null) sein
+# <a name="length-of-argument-argumentname-must-be-greater-than-zero"></a>Länge des Arguments '\<Argumentname >' muss größer als 0 (null) sein
 Ein Wert eines Arguments ist gleich oder kleiner als 0 (null).  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  

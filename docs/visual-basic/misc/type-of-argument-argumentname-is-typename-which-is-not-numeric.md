@@ -1,5 +1,5 @@
 ---
-title: Typ des Arguments "<argumentname>"is"<typename>", das ist nicht numerisch
+title: Typ des Arguments '<argumentname>'is'<typename>', das ist nicht numerisch
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_NotNumericType2
@@ -11,7 +11,7 @@ ms.contentlocale: de-DE
 ms.lasthandoff: 03/15/2019
 ms.locfileid: "58031237"
 ---
-# <a name="type-of-argument-argumentname-is-typename-which-is-not-numeric"></a>Typ des Arguments "\<Argumentname >' ist '\<Typename >", das ist nicht numerisch
+# <a name="type-of-argument-argumentname-is-typename-which-is-not-numeric"></a>Typ des Arguments '\<Argumentname >' ist '\<Typename >', das ist nicht numerisch
 Ein nicht numerisches Argument tritt in einer Situation auf, in der ein numerisches Argument erwartet wird.  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
