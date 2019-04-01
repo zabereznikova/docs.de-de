@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/18/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 502a7aafd434650d09cefa2781d3749e5a435564
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: be59760091767b7229d80693cd69434581a8b140
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186129"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634413"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Tutorial: Iris-Clustering mithilfe eines Clusteringlernmoduls – ML.NET
 
@@ -136,7 +136,7 @@ Laden Sie die Daten mithilfe des generischen `MLContext.Data.LoadFromTextFile`-W
 Im Rahmen dieses Tutorials umfasst die Pipeline der Clusteraufgabe die zwei folgenden Schritte:
 
 - Verketten geladener Spalten zu einer Spalte **Features**, die von einem Clustertrainer verwendet wird;
-- Verwenden eines <xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer>-Trainers, um das Modell mithilfe des Clusteralgorithmus k-means++ zu trainieren.
+- Verwenden eines <xref:Microsoft.ML.Trainers.KMeansPlusPlusTrainer>-Trainers, um das Modell mithilfe des Clusteralgorithmus k-means++ zu trainieren.
 
 Fügen Sie der `Main`-Methode folgenden Code hinzu:
 

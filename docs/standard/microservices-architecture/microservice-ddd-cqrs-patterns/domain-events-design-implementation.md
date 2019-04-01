@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 84ab1a67aca30aa1967ef2fb11f930bf14ec45e3
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 1c943ac93e629da069b594291cd55a952e18742c
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675477"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464397"
 ---
 # <a name="domain-events-design-and-implementation"></a>Domänenereignisse: Entwurf und Implementierung
 
@@ -347,37 +347,37 @@ Verwenden Sie Domänenereignisse, um explizit Nebenwirkungen von Änderungen in 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Greg Young. What is a Domain Event? (Was ist ein Domänenereignis?)** \
-  [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
+  [http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
 
 - **Jan Stenberg. Domain Events and Eventual Consistency (Domänenereignisse und letztliche Konsistenz)** \
-  [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
+  [https://www.infoq.com/news/2015/09/domain-events-consistency](https://www.infoq.com/news/2015/09/domain-events-consistency)
 
 - **Jimmy Bogard. A better domain events pattern (Ein verbessertes Domänenereignismuster)** \
-  [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
+  [https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
 - **Vaughn Vernon. Effective Aggregate Design - Part II: Making Aggregates Work Together (Effektive Aggregatentwicklung Teil II: Kooperation von Aggregaten)** \
-  [*https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+  [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 - **Jimmy Bogard. Strengthening your domain: Domain Events (Stärken Ihrer Domäne: Domänenereignisse)** \
-  [*https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/*](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
+  [https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
 
 - **Tony Truong. Domain Events Pattern Example (Beispiel für das Domänenereignismuster)** \
-  [*https://www.tonytruong.net/domain-events-pattern-example/*](https://www.tonytruong.net/domain-events-pattern-example/)
+  [https://www.tonytruong.net/domain-events-pattern-example/](https://www.tonytruong.net/domain-events-pattern-example/)
 
 - **Udi Dahan. How to create fully encapsulated Domain Models (Erstellen eines vollständig gekapselten Domänenmodells)** \
-  [*http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/*](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+  [http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
 
 - **Udi Dahan. Domain Events – Take 2 (Domänenereignisse: Teil II)** \
-  [*http://udidahan.com/2008/08/25/domain-events-take-2/*](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
+  [http://udidahan.com/2008/08/25/domain-events-take-2/](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
 
 - **Udi Dahan. Domain Events – Salvation (Domänenereignisse: Nachtrag mit Verbesserungen)** \
-  [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
+  [http://udidahan.com/2009/06/14/domain-events-salvation/](http://udidahan.com/2009/06/14/domain-events-salvation/)
 
 - **Jan Kronquist. Don't publish Domain Events, return them! (Warum das Zurückgeben dem Veröffentlichen von Domänenereignissen vorzuziehen ist)** \
-  [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
+  [https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
 
 - **Cesar de la Torre. Domain Events vs. Integration Events in DDD and microservices architectures (Domänenereignisse vs. Integrationsereignisse in DDD und Microservicearchitekturen)** \
-  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
+  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
 
 >[!div class="step-by-step"]
 >[Zurück](client-side-validation.md)

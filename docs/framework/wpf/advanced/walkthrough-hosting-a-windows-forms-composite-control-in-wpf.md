@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 4263b81b0917b544f37c55299b1e394e5fbaa6ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 50d85b74b523c8985bd0d3d407097a4f42cfeb60
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359717"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654223"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wann haben Sie jedoch eine erhebliche Investition [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Code möglich effektiver mindestens wiederverwenden Teil dieses Codes in Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung anstatt sie von Grund auf neu zu schreiben. Das häufigste Szenario ist, wenn Sie vorhandenen Windows Forms-Steuerelemente haben. In einigen Fällen können Sie vielleicht gar nicht mehr auf den Quellcode für diese Steuerelemente zugreifen. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet ein einfaches Verfahren zum Hosten solcher Steuerelemente in einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung. Beispielsweise können Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] für den Großteil der Programmierung beim Hosten Ihrer speziellen <xref:System.Windows.Forms.DataGridView> Steuerelemente.  
@@ -36,9 +36,10 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
   
 ## <a name="implementing-the-windows-forms-composite-control"></a>Implementieren des zusammengesetzten Windows Forms-Steuerelements  
  In diesem Beispiel verwendeten zusammengesetzte Windows Forms-Steuerelement ist ein einfaches Dateneingabeformular. Dieses Formular erfasst den Namen und die Adresse des Benutzers und gibt diese Information unter Verwendung eines benutzerdefinierten Ereignisses an den Host zurück. Die folgende Abbildung zeigt das gerenderte Steuerelement.  
-  
- ![Einfaches Windows Forms-Steuerelement](./media/wfcontrol.gif "WFControl")  
-Zusammengesetztes Windows Forms-Steuerelement  
+
+ Die folgende Abbildung zeigt ein zusammengesetztes Windows Forms-Steuerelement:  
+
+ ![Screenshot mit einer einfachen Windows Forms-Steuerelement.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-forms-control.gif)  
   
 ### <a name="creating-the-project"></a>Erstellen des Projekts  
  Um das Projekt zu starten:  
@@ -128,7 +129,9 @@ Zusammengesetztes Windows Forms-Steuerelement
 ## <a name="implementing-the-wpf-host-application"></a>Implementieren der WPF-Hostanwendung
  Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Hosten der Anwendung verwendet die <xref:System.Windows.Forms.Integration.WindowsFormsHost> zu hostende Steuerelement `MyControl1`. Die Anwendung behandelt den `OnButtonClick` Ereignis, um die Daten aus dem Steuerelement zu empfangen. Es verfügt auch über eine Auflistung von Optionsschaltflächen, mit denen Sie einige der Eigenschaften des Steuerelements ändern, aktivieren Sie die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung. Die folgende Abbildung zeigt die fertige Anwendung.
 
- ![Ein in einer WPF-Seite eingebettetes Steuerelement](./media/avalonhost.gif "AvalonHost") die vollständige Anwendung, das Anzeigen des Steuerelements in WPF-Anwendung eingebettet
+Die folgende Abbildung zeigt der vollständigen Anwendung, einschließlich des Steuerelements in WPF-Anwendung eingebettet werden:
+
+ ![Screenshot, der ein Steuerelement anzeigt, die in einer WPF-Seite eingebettet werden.](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-presentation-foundation-page-control.gif)
 
 ### <a name="creating-the-project"></a>Erstellen des Projekts
  Um das Projekt zu starten:

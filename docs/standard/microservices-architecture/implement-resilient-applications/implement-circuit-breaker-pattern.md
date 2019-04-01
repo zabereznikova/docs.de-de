@@ -4,12 +4,12 @@ description: Erfahren Sie, wie das Circuit-Breaker-Muster als ergänzendes Syste
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: ca35214332b5ae0851a35d34aa329775206c2b66
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 25a8b52749c3a8448a80155b233edb938e9bdd64
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362807"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464189"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementieren des Circuit Breaker-Musters
 
@@ -147,7 +147,7 @@ Eine weitere Möglichkeit für `CircuitBreakerPolicy` ist die Verwendung von `Is
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Circuit Breaker-Muster**\
-  [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](/azure/architecture/patterns/circuit-breaker)
+  [https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
 >[Zurück](implement-http-call-retries-exponential-backoff-polly.md)

@@ -4,12 +4,12 @@ description: Microservices müssen so entworfen werden, dass sie vorübergehende
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5e601ccae8ee3493e6a5d9cd35c4573a9df2da46
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ebf3a81718cd3423d3c80edb9c2f5b10f4ef47da
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846622"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465814"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Resilienz und Hochverfügbarkeit bei Microservices
 
@@ -59,25 +59,25 @@ Unterschiedliche Orchestratoren können ähnlich klingen. Die Diagnosefunktionen
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **The Twelve-Factor App. XI. Protokolle: Protokolle als Strom von Ereignissen behandeln** \
-  [*https://12factor.net/logs*](https://12factor.net/logs)
+  [https://12factor.net/logs](https://12factor.net/logs)
 
 - GitHub-Repository **Microsoft.Diagnostics.EventFlow-Bibliothek**. \
-  [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
+  [https://github.com/Azure/diagnostics-eventflow](https://github.com/Azure/diagnostics-eventflow)
 
 - **Was ist die Azure-Diagnose?** \
-  [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
+  [https://docs.microsoft.com/azure/azure-diagnostics](https://docs.microsoft.com/azure/azure-diagnostics)
 
 - **Verbinden von Windows-Computern mit dem Log Analytics-Dienst in Azure** \
-  [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+  [https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
 - **Protokollieren des Gemeinten: Verwenden des Semantic Logging Application Block** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - Die offizielle Website von **Splunk**. \
-  [*https://www.splunk.com/*](https://www.splunk.com/)
+  [https://www.splunk.com/](https://www.splunk.com/)
 
 - **EventSource-Klasse** API for events tracing for Windows (ETW) (API für die Ereignisablaufverfolgung für Windows (ETW))
-  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
+  [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)
 
 >[!div class="step-by-step"]
 >[Zurück](microservice-based-composite-ui-shape-layout.md)

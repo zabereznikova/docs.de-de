@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Verwe
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 3804ac13580a967bc95617acbce86a3a0c8e7292
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 38de5d686c17810f406a57d58554046ba2d888d9
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058541"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545727"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>SeedWork (wiederverwendbare Basisklassen und Schnittstellen für Ihr Domänenmodell)
 
@@ -25,7 +25,7 @@ Viele Entwickler verwenden diese Vorgänge zum Kopieren und Einfügen (und kein 
 
 ## <a name="the-custom-entity-base-class"></a>Die benutzerdefinierte Entity-Basisklasse
 
-Der folgende Code ist ein Beispiel für eine Entity-Basisklasse, in der Sie Code platzieren können, der von jeder beliebigen Domänenentität genauso verwendet werden kann, z.B. Entitäts-ID, [Gleichheitsoperatoren](~/docs/csharp/language-reference/operators/equality-comparison-operator.md) oder eine Liste der Domänenereignisse pro Entität.
+Der folgende Code ist ein Beispiel für eine Entity-Basisklasse, in der Sie Code platzieren können, der von jeder beliebigen Domänenentität genauso verwendet werden kann, z.B. Entitäts-ID, [Gleichheitsoperatoren](~/docs/csharp/language-reference/operators/equality-operators.md) oder eine Liste der Domänenereignisse pro Entität.
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
@@ -140,7 +140,7 @@ public interface IRepository<T> where T : IAggregateRoot
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Martin Fowler. Separated Interface (Schnittstellenaufteilung)** \
-  [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
+  [https://www.martinfowler.com/eaaCatalog/separatedInterface.html](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 >[!div class="step-by-step"]
 >[Zurück](net-core-microservice-domain-model.md)

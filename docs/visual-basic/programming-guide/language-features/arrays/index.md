@@ -56,7 +56,7 @@ Die folgende Abbildung zeigt die `students` Array. Für jedes Element des Arrays
 
 - Der im Element enthaltene Wert steht für die Anzahl der Schüler in dieser Jahrgangsstufe.
 
-![Bild des Arrays mit der Anzahl von Schülern](../../language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool") Elemente des Arrays "Students"
+![Das Diagramm zeigt ein Array von der Anzahl von Schülern](./media/index/students-array-elements.gif)
 
 Das folgende Beispiel enthält die Visual Basic-Code, der erstellt und verwendet das Array:
 

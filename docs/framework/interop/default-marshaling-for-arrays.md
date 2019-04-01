@@ -10,29 +10,20 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae339b18032becffcaece1924a22b958ed86d364
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c2b5646a1a556c57814602790d5f17104d2148e5
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219684"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410744"
 ---
 # <a name="default-marshaling-for-arrays"></a>Standardmäßiges Marshalling für Arrays
 In einer Anwendung, die vollständig aus verwaltetem Code besteht, übergibt die Common Language Runtime Arraytypen als In-/Out-Parameter. Im Gegensatz dazu übergibt der Interopmarshaller außerdem ein Array als In-Parameter in der Standardeinstellung.  
   
  Bei der [pinning optimization](copying-and-pinning.md) (Fixierungsoptimierung),kann ein blitfähiges Array den Anschein erwecken, dass es als In/Out-Parameter fungiert, wenn es mit Objekten in demselben Apartment interagiert. Wenn Sie allerdings den Code später in eine Typbibliothek exportieren, mit der der computerübergreifende Proxy generiert wird, und diese Bibliothek dazu verwendet wird, Ihre Aufrufe über Apartments hinweg zu marshallen, können sich die Aufrufe wieder wie TRUE-Parameter verhalten.  
   
- Arrays sind naturgemäß komplex, und die Unterschiede zwischen verwalteten und nicht verwalteten Arrays bieten mehr Informationen als andere nicht blitfähige Typen. Dieses Thema enthält die folgenden Informationen zum Marshallen von Arrays:  
+ Arrays sind naturgemäß komplex, und die Unterschiede zwischen verwalteten und nicht verwalteten Arrays bieten mehr Informationen als andere nicht blitfähige Typen.  
   
--   [Verwaltete Arrays](#cpcondefaultmarshalingforarraysanchor1)  
-  
--   [Nicht verwaltete Arrays](#cpcondefaultmarshalingforarraysanchor2)  
-  
--   [Übergeben von Arrayparametern an .NET-Code](#cpcondefaultmarshalingforarraysanchor3)  
-  
--   [Übergeben von Arrays an COM](#cpcondefaultmarshalingforarraysanchor4)  
-  
-<a name="cpcondefaultmarshalingforarraysanchor1"></a>   
 ## <a name="managed-arrays"></a>Verwaltete Arrays  
  Verwaltete Arraytypen können variieren. Allerdings ist die <xref:System.Array?displayProperty=nameWithType>-Klasse die Basisklasse für alle Arraytypen. Die **System.Array**-Klasse enthält Eigenschaften, um den Rang, die Länge und die Unter- und Obergrenze eines Arrays zu bestimmen, als auch Methoden zum Zugreifen, Sortieren, Durchsuchen, Kopieren und Erstellen von Arrays.  
   
@@ -46,11 +37,9 @@ In einer Anwendung, die vollständig aus verwaltetem Code besteht, übergibt die
 |**ELEMENT_TYPE_CLASS**|Unbekannt|Unbekannt|Unbekannt|**System.Array**|  
 |**ELEMENT_TYPE_SZARRAY**|Durch den Typ angegeben.|1|0|*Typ* **[** *n* **]**|  
   
-<a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>Nicht verwaltete Arrays  
  Nicht verwaltete Arrays sind entweder sichere Arrays im COM-Stil oder Arrays im C-Stil mit fester oder variabler Länge. Sichere Arrays sind selbstbeschreibende Arrays, die den Typ, den Rang und die Grenzen der verknüpften Arraydaten enthalten. Arrays im C-Stil sind eindimensionale typisierte Arrays mit einer festen Untergrenze von 0. Der Marshallingdienst bietet nur eingeschränkt Unterstützung für beide Typen von Arrays.  
   
-<a name="cpcondefaultmarshalingforarraysanchor3"></a>   
 ## <a name="passing-array-parameters-to-net-code"></a>Übergeben von Arrayparametern an .NET-Code  
  Arrays im C-Stil und sichere Arrays, können aus nicht verwaltetem Code an .NET-Code, als ein sicheres Array oder ein Array im C-Stil übergeben werden. Die folgende Tabelle zeigt den nicht verwalteten Typwert und den importierten Typ.  
   
@@ -190,7 +179,6 @@ void New3(ref String ar);
   
  Der Interop-Marshaller verwendet die **CoTaskMemAlloc**- und **CoTaskMemFree**-Methoden, um Speicherplatz zu belegen und abzurufen. Diese Methoden müssen auch bei der Speicherbelegung durch nicht verwalteten Code verwendet werden.  
   
-<a name="cpcondefaultmarshalingforarraysanchor4"></a>   
 ## <a name="passing-arrays-to-com"></a>Übergeben von Arrays an COM  
  Alle verwalteten Arraytypen können von verwaltetem Code an nicht verwalteten Code übergeben werden. Abhängig vom verwalteten Typ und den auf diesen Typ angewendeten Attributen, kann, wie in der folgenden Tabelle gezeigt, das Array als sicheres Array oder als Array im C-Stil abgerufen werden.  
   

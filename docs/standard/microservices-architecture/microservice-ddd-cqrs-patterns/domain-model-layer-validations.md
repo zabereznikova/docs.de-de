@@ -4,12 +4,12 @@ description: .NET-Microservicesarchitektur für .NET-Containeranwendungen | Wich
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 4ec170c5951147e4979152a0208b00a1369b16d7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 6c5f42309970f14aa9a0cda3c48efa59b620bdb5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679540"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464163"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>Entwerfen von Validierungen auf der Domänenmodellebene
 
@@ -88,25 +88,25 @@ Wenn Sie z.B. die Feldvalidierung mit Datenanmerkungen verwenden, duplizieren Si
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Rachel Appel. Introduction to model validation in ASP.NET Core MVC** \ (Einführung in die Modellvalidierung im ASP.NET Core MVC)
-  [*https://docs.microsoft.com/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
+  [https://docs.microsoft.com/aspnet/core/mvc/models/validation](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
 
 - **Rick Anderson. Adding validation** \ (Hinzufügen der Validierung)
-  [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+  [https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 - **Martin Fowler. Replacing Throwing Exceptions with Notification in Validations** \ (Ersetzen des Auslösens von Ausnahmen durch Benachrichtigungen in Validierungen)
-  [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
+  [https://martinfowler.com/articles/replaceThrowWithNotification.html](https://martinfowler.com/articles/replaceThrowWithNotification.html)
 
 - **Specification and Notification Patterns** \ (Spezifikations- und Benachrichtigungsmuster)
-  [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
+  [https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
 
 - **Lev Gorodinski. Validation in Domain-Driven Design (DDD)** \ (Validierung in Domain-Driven-Design [DDD])
-  [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
+  [http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
 
 - **Colin Jack. Domain Model Validation** \ (Validierung des Domänenmodells)
-  [*https://colinjack.blogspot.com/2008/03/domain-model-validation.html*](https://colinjack.blogspot.com/2008/03/domain-model-validation.html)
+  [https://colinjack.blogspot.com/2008/03/domain-model-validation.html](https://colinjack.blogspot.com/2008/03/domain-model-validation.html)
 
 - **Jimmy Bogard. Validation in a DDD world** \ (Validierung in einer DDD-Welt)
-  [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
+  [https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
 
 > [!div class="step-by-step"]
 > [Zurück](enumeration-classes-over-enum-types.md)

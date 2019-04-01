@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie HTTP-Fehler mit Polly und HttpClientFactory v
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: d0c3042f2831e5f256f43e32e70645213054f247
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 07333b84896c223f076e9c36cc90ab7ea7ac37c7
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479645"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465723"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Implementieren von Wiederholungen von HTTP-Aufrufen mit exponentiellem Backoff mit HttpClientFactory und Polly-Richtlinien
 
@@ -72,16 +72,16 @@ Policy
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Wiederholungsmuster**\
-  [*https://docs.microsoft.com/azure/architecture/patterns/retry*](/azure/architecture/patterns/retry)
+  [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
 - **Polly und HttpClientFactory**\
-  [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
+  [https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)
 
 - **Polly (.NET-Bibliothek zur Gewährleistung von Resilienz und zur Behandlung temporärer Fehler)**\
-  [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
+  [https://github.com/App-vNext/Polly](https://github.com/App-vNext/Polly)
 
 - **Marc Brooker. Jitter: Dinge durch Zufall verbessern**\
-  [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
+  [https://brooker.co.za/blog/2015/03/21/backoff.html](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
 >[!div class="step-by-step"]
 >[Zurück](explore-custom-http-call-retries-exponential-backoff.md)

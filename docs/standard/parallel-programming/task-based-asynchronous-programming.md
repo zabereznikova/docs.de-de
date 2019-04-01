@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2a525a8aff6f6b05777de736d97c72c38a2fa62
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268027"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409925"
 ---
 # <a name="task-based-asynchronous-programming"></a>Aufgabenbasiertes asynchrones Programmieren
 
@@ -104,7 +104,7 @@ Die meisten APIs, die Aufgaben erstellen, stellen Überladungen bereit, die eine
 |<xref:System.Threading.Tasks.TaskCreationOptions.LongRunning>|Gibt an, dass die Aufgabe einen Vorgang mit langer Laufzeit darstellt.|
 |<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent>|Gibt an, dass eine Aufgabe als angefügtes untergeordnetes Element der aktuellen Aufgabe erstellt werden soll (sofern vorhanden). Weitere Informationen finden Sie unter [Angefügte und getrennte untergeordnete Aufgaben](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).|
 |<xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach>|Gibt an, dass beim Angeben der `AttachedToParent`-Option durch eine innere Aufgabe diese Aufgabe nicht zu einer angefügten untergeordneten Aufgabe wird.|
-|<xref:System.Threading.Tasks.TaskCreationOptions.HideScheduler>|Gibt an, dass die Aufgabenplaner für Aufgaben, die über das Aufrufen von Methoden wie <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> aus einer bestimmten Aufgabe erstellt werden, der Standardplaner ist und nicht der Planer, mit dem diese Aufgabe ausgeführt wird.|
+|<xref:System.Threading.Tasks.TaskCreationOptions.HideScheduler>|Gibt an, dass der Taskplaner für Aufgaben, die über das Aufrufen von Methoden wie <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> oder <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> aus einer bestimmten Aufgabe erstellt werden, der Standardplaner ist und nicht der Planer, mit dem diese Aufgabe ausgeführt wird.|
 
 Die Optionen können mit einer bitweisen **OR**-Operation kombiniert werden. Im folgenden Beispiel wird eine Aufgabe veranschaulicht, die über die <xref:System.Threading.Tasks.TaskCreationOptions.LongRunning>-Option und die <xref:System.Threading.Tasks.TaskContinuationOptions.PreferFairness>-Option verfügt.
 
@@ -236,7 +236,7 @@ Weitere Informationen zu Ausnahmen und Aufgaben finden Sie unter [Ausnahmebehand
 
 ## <a name="canceling-tasks"></a>Abbrechen von Aufgaben
 
-Die `Task`-Klasse unterstützt einen kooperativen Abbruch und ist vollständig in die <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>-Klasse und die <xref:System.Threading.CancellationToken?displayProperty=nameWithType>-Klasse integriert, die in .NET Framework 4 eingeführt wurden. Viele Konstruktoren in der <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>-Klasse verwenden ein <xref:System.Threading.CancellationToken>-Objekt als Eingabeparameter. Viele der <xref:System.Threading.Tasks.TaskFactory.StartNew%2A>- und <xref:System.Threading.Tasks.Task.Run%2A>-Überladungen enthalten auch einen <xref:System.Threading.CancellationToken>-Parameter.
+Die <xref:System.Threading.Tasks.Task>-Klasse unterstützt einen kooperativen Abbruch und ist vollständig in die <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>-Klasse und die <xref:System.Threading.CancellationToken?displayProperty=nameWithType>-Klasse integriert, die in .NET Framework 4 eingeführt wurden. Viele Konstruktoren in der <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>-Klasse verwenden ein <xref:System.Threading.CancellationToken>-Objekt als Eingabeparameter. Viele der <xref:System.Threading.Tasks.TaskFactory.StartNew%2A>- und <xref:System.Threading.Tasks.Task.Run%2A>-Überladungen enthalten auch einen <xref:System.Threading.CancellationToken>-Parameter.
 
 Mit der <xref:System.Threading.CancellationTokenSource>-Klasse können Sie das Token erstellen und die Abbruchanforderung zu einem späteren Zeitpunkt ausgeben. Übergeben Sie das Token als Argument an <xref:System.Threading.Tasks.Task>, und verweisen Sie in dem Benutzerdelegaten, der auf eine Abbruchanforderung reagiert, auf das gleiche Token.
 
@@ -264,7 +264,7 @@ Die meisten Anwendungs- oder Bibliotheksentwickler machen sich keine Gedanken ü
 
 ## <a name="related-data-structures"></a>Verwandte Datenstrukturen
 
-Die TPL beinhaltet zahlreiche neue öffentliche Typen, die sowohl in parallelen, als auch in sequenziellen Szenarios hilfreich sind. Hierzu zählen mehrere threadsichere, schnelle und skalierbare Auflistungsklassen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace sowie mehrere neue Synchronisierungstypen, z. B. <xref:System.Threading.Semaphore?displayProperty=nameWithType> und <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>, die für bestimmte Arten von Arbeitslasten effizienter als ihre Vorgänger sind. Andere neue Typen in .NET Framework 4, z. B. <xref:System.Threading.Barrier?displayProperty=nameWithType> und <xref:System.Threading.SpinLock?displayProperty=nameWithType>, stellen Funktionalität bereit, die in früheren Versionen nicht verfügbar war. Weitere Informationen finden Sie unter [Datenstrukturen für die parallele Programmierung](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md).
+Die TPL beinhaltet zahlreiche neue öffentliche Typen, die sowohl in parallelen, als auch in sequenziellen Szenarios hilfreich sind. Hierzu zählen mehrere threadsichere, schnelle und skalierbare Auflistungsklassen im <xref:System.Collections.Concurrent?displayProperty=nameWithType>-Namespace sowie mehrere neue Synchronisierungstypen, z. B. <xref:System.Threading.Semaphore?displayProperty=nameWithType> und <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>, die für bestimmte Arten von Arbeitslasten effizienter als ihre Vorgänger sind. Andere neue Typen in .NET Framework 4, z. B. <xref:System.Threading.Barrier?displayProperty=nameWithType> und <xref:System.Threading.SpinLock?displayProperty=nameWithType>, stellen Funktionalität bereit, die in früheren Releases nicht verfügbar war. Weitere Informationen finden Sie unter [Datenstrukturen für die parallele Programmierung](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md).
 
 ## <a name="custom-task-types"></a>Benutzerdefinierte Aufgabentypen
 

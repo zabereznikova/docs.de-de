@@ -4,12 +4,12 @@ description: Hier erfahren Sie, wie Sie API-Gateways mit Ocelot implementieren u
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 404f19f55b3be1e4be161543556bb2619f164b9b
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: b7ef0e7a172337f32f625bd65261b6577decd223
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846102"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464540"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Implementieren von API-Gateways mit Ocelot
 
@@ -564,19 +564,19 @@ In den Quellcodedateien von eShopOnContainers befinden sich die ursprünglichen 
 Bei Verwendung eines Ocelot-API-Gateways gibt es weitere wichtige Features zu erforschen und zu verwenden. Diese werden unter den folgenden Links beschrieben.
 
 - **Dienstermittlung auf Clientseite mit Integration von Ocelot in Consul oder Eureka** \
-  [*https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+  [https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
 
 - **Zwischenspeichern auf der API-Gateway-Ebene** \
-  [*https://ocelot.readthedocs.io/en/latest/features/caching.html*](https://ocelot.readthedocs.io/en/latest/features/caching.html)
+  [https://ocelot.readthedocs.io/en/latest/features/caching.html](https://ocelot.readthedocs.io/en/latest/features/caching.html)
 
 - **Protokollieren auf der API-Gateway-Ebene** \
-  [*https://ocelot.readthedocs.io/en/latest/features/logging.html*](https://ocelot.readthedocs.io/en/latest/features/logging.html)
+  [https://ocelot.readthedocs.io/en/latest/features/logging.html](https://ocelot.readthedocs.io/en/latest/features/logging.html)
 
 - **Quality of Service (Wiederholungen und Schaltkreisunterbrecher) auf der API-Gateway-Ebene** \
-  [*https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+  [https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
 
 - **Bandbreitenbegrenzung** \
-  [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
+  [https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 > [!div class="step-by-step"]
 > [Zurück](background-tasks-with-ihostedservice.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6ee44cb58033e0e235222fb3f74302f84092dbcb
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203109"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545441"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Vorgehensweise: Definieren von Wertgleichheit für einen Typ (C#-Programmierhandbuch)
 Wenn Sie eine Klasse oder Struktur definieren, entscheiden Sie, ob es sinnvoll ist, eine benutzerdefinierte Definition der Wertgleichheit (oder Äquivalenz) für den Typ zu erstellen. In der Regel implementieren Sie Wertgleichheit, wenn Objekte des Typs zu einer Auflistung hinzugefügt werden sollen oder wenn ihr Hauptzweck im Speichern einer Reihe von Feldern oder Eigenschaften besteht. Sie können die Definition der Wertgleichheit auf einem Vergleich aller Felder und Eigenschaften im Typ oder auf einer Teilmenge aufbauen. Ihre Implementierung in Klassen und Strukturen sollte in beiden Fällen die fünf Äquivalenzgarantien befolgen:  
@@ -37,7 +37,7 @@ Wenn Sie eine Klasse oder Struktur definieren, entscheiden Sie, ob es sinnvoll i
   
 2.  Implementieren Sie die Schnittstelle <xref:System.IEquatable%601?displayProperty=nameWithType>, indem Sie eine typspezifische `Equals`-Methode bereitstellen. An dieser Stelle wird der eigentliche Äquivalenzvergleich ausgeführt. Sie könnten Gleichheit z.B. nur über den Vergleich von ein oder zwei Feldern in Ihrem Typ definieren. Lösen Sie keine Ausnahmen aus `Equals` aus. Nur für Klassen: Diese Methode sollte nur Felder prüfen, die in der Klasse deklariert sind. Sie sollte `base.Equals` aufrufen, um Felder in der Basisklasse zu prüfen. (Tun Sie dies nicht, wenn der Typ direkt von <xref:System.Object> erbt, da die <xref:System.Object>-Implementierung von <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> eine Überprüfung der Verweisgleichheit durchführt.)  
   
-3.  Optional, aber empfohlen: Überladen Sie die Operatoren [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) und [!=](../../../csharp/language-reference/operators/not-equal-operator.md).  
+3.  Optional, aber empfohlen: Überladen Sie die Operatoren [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) und [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-).  
   
 4.  Überschreiben Sie <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>, damit zwei Objekte, die Wertgleichheit besitzen, den gleichen Hashcode erzeugen.  
   
@@ -61,7 +61,7 @@ Wenn Sie eine Klasse oder Struktur definieren, entscheiden Sie, ob es sinnvoll i
   
  Für Strukturen führt die Standardimplementierung von <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (was die außer Kraft gesetzte Version in <xref:System.ValueType?displayProperty=nameWithType> ist) eine Überprüfung der Wertgleichheit durch, indem sie Reflektion zum Vergleichen der Werte jedes Felds im Typ verwendet. Wenn ein Implementierer die virtuelle `Equals`-Methode in einer Struktur überschreibt, dient dies der Bereitstellung effizienterer Mittel für die Ausführung der Wertgleichheitsprüfung und optional dazu, den Vergleich auf einer Teilmenge des Felds oder der Eigenschaften der Struktur zu basieren.  
   
- Die Operatoren [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) und [!=](../../../csharp/language-reference/operators/not-equal-operator.md) können nicht auf Strukturen operieren, es sei denn, die Struktur überlädt sie explizit.  
+ Die Operatoren [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) und [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) können nicht auf Strukturen operieren, es sei denn, die Struktur überlädt sie explizit.  
   
 ## <a name="see-also"></a>Siehe auch
 
