@@ -1,0 +1,18 @@
+items:
+- name: Accessing Application Settings
+  href: index.md
+  items:
+  - name: 'Vorgehensweise: Erstellen von Eigenschaftenrastern für Benutzereinstellungen'
+    href: how-to-create-property-grids-for-user-settings.md
+  - name: 'Vorgehensweise: Beibehalten von Benutzereinstellungen'
+    href: how-to-persist-user-settings.md
+  - name: 'Vorgehensweise: Ändern von Benutzereinstellungen'
+    href: how-to-change-user-settings.md
+  - name: 'Vorgehensweise: Lesen von Anwendungseinstellungen'
+    href: how-to-read-application-settings.md
+ms.openlocfilehash: 1360983a14f27ca882a6d5323ee4620386352b99
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469543"

@@ -1,0 +1,25 @@
+items:
+- name: Typen
+  href: index.md
+  items:
+  - name: Umwandlung und Typkonvertierungen
+    href: casting-and-type-conversions.md
+  - name: Boxing und Unboxing
+    href: boxing-and-unboxing.md
+  - name: Verwenden von dynamischen Typen
+    href: using-type-dynamic.md
+    items:
+    - name: 'Exemplarische Vorgehensweise: Erstellen und Verwenden von dynamischen Objekten (C# und Visual Basic)'
+      href: walkthrough-creating-and-using-dynamic-objects.md
+  - name: 'Vorgehensweise: Konvertieren eines Bytearrays in einen ganzzahligen Typ'
+    href: how-to-convert-a-byte-array-to-an-int.md
+  - name: 'Vorgehensweise: Konvertieren einer Zeichenfolge in ein Bytearray'
+    href: how-to-convert-a-string-to-a-number.md
+  - name: 'Vorgehensweise: Konvertieren zwischen Hexadezimalzeichenfolgen und numerischen Typen'
+    href: how-to-convert-between-hexadecimal-strings-and-numeric-types.md
+ms.openlocfilehash: ec544bd0f41d24e9775277ac1968787de9391dd5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468763"

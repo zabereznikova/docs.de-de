@@ -1,0 +1,138 @@
+items:
+- name: Sprachreferenz
+  href: index.md
+  items:
+  - name: Angeben der Sprachversion
+    href: configure-language-version.md
+  - name: C#-Schlüsselwörter
+    href: keywords/index.md
+  - name: C#-Operatoren
+    href: operators/index.md
+  - name: C#-Sonderzeichen
+    href: tokens/index.md
+  - name: C#-Präprozessoranweisungen
+    href: preprocessor-directives/index.md
+  - name: C#-Compileroptionen
+    href: compiler-options/index.md
+  - name: C#-Compilerfehler
+    href: compiler-messages/index.md
+  - name: C# 6.0 draft specification (C# 6.0 - Entwurfsspezifikationen)
+    items:
+    - name: Einführung
+      href: ../../../_csharplang/spec/introduction.md
+    - name: Lexikalische Struktur
+      href: ../../../_csharplang/spec/lexical-structure.md
+    - name: Grundlegende Konzepte
+      href: ../../../_csharplang/spec/basic-concepts.md
+    - name: Typen
+      href: ../../../_csharplang/spec/types.md
+    - name: Variablen
+      href: ../../../_csharplang/spec/variables.md
+    - name: Konvertierungen
+      href: ../../../_csharplang/spec/conversions.md
+    - name: Ausdrücke
+      href: ../../../_csharplang/spec/expressions.md
+    - name: Anweisungen
+      href: ../../../_csharplang/spec/statements.md
+    - name: Namespaces
+      href: ../../../_csharplang/spec/namespaces.md
+    - name: Klassen
+      href: ../../../_csharplang/spec/classes.md
+    - name: Strukturen
+      href: ../../../_csharplang/spec/structs.md
+    - name: Arrays
+      href: ../../../_csharplang/spec/arrays.md
+    - name: Schnittstellen
+      href: ../../../_csharplang/spec/interfaces.md
+    - name: Enumerationen
+      href: ../../../_csharplang/spec/enums.md
+    - name: Delegaten
+      href: ../../../_csharplang/spec/delegates.md
+    - name: Ausnahmen
+      href: ../../../_csharplang/spec/exceptions.md
+    - name: Attribute
+      href: ../../../_csharplang/spec/attributes.md
+    - name: Unsicherer Code
+      href: ../../../_csharplang/spec/unsafe-code.md
+    - name: Dokumentationskommentare
+      href: ../../../_csharplang/spec/documentation-comments.md
+  - name: C# 7.0-Sprachvorschläge
+    items:
+    - name: Musterabgleich
+      href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
+    - name: Lokale Funktionen
+      href: ../../../_csharplang/proposals/csharp-7.0/local-functions.md
+    - name: out-Variablendeklaration
+      href: ../../../_csharplang/proposals/csharp-7.0/out-var.md
+    - name: Throw-Ausdrücke
+      href: ../../../_csharplang/proposals/csharp-7.0/throw-expression.md
+    - name: Binäre Literale
+      href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
+    - name: Zahlentrennzeichen
+      href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
+  - name: C# 7.1-Sprachvorschläge
+    items:
+    - name: Async Main-Methode
+      href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
+    - name: Standardausdrücke
+      href: ../../../_csharplang/proposals/csharp-7.1/target-typed-default.md
+    - name: Ableiten von Tupelnamen
+      href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
+    - name: Musterabgleich mit Generics
+      href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
+  - name: C# 7.2-Sprachvorschläge
+    items:
+    - name: Schreibgeschützte Verweise
+      href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
+    - name: Sicherheit zur Kompilierzeit für ref-ähnliche Typen
+      href: ../../../_csharplang/proposals/csharp-7.2/span-safety.md
+    - name: Nicht schließende benannte Argumente
+      href: ../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
+    - name: Privat geschützt
+      href: ../../../_csharplang/proposals/csharp-7.2/private-protected.md
+    - name: Bedingter ref-Ausdruck
+      href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
+    - name: Trennzeichen für vorangestellte Ziffern
+      href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
+  - name: C# 7.3-Sprachvorschläge
+    items:
+    - name: Nicht verwaltete generische Typeneinschränkungen
+      href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
+    - name: Für `fixed`-Felder zur Indizierung ist kein Anheften erforderlich unabhängig vom Kontext „verschiebbar/nicht verschiebbar“
+      href: ../../../_csharplang/proposals/csharp-7.3/indexing-movable-fixed-fields.md
+    - name: Musterbasierte `fixed`-Anweisung
+      href: ../../../_csharplang/proposals/csharp-7.3/pattern-based-fixed.md
+    - name: Lokale ref-Neuzuweisung
+      href: ../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md
+    - name: Stackalloc-Arrayinitialisierer
+      href: ../../../_csharplang/proposals/csharp-7.3/stackalloc-array-initializers.md
+    - name: Auf Felder ausgerichtete Attribute für automatisch implementierte Eigenschaft
+      href: ../../../_csharplang/proposals/csharp-7.3/auto-prop-field-attrs.md
+    - name: Ausdrucksvariablen in Initialisierern
+      href: ../../../_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md
+    - name: Tupelgleichheit (==) und -ungleichheit (! =)
+      href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
+    - name: Verbesserte Überladungskandidaten
+      href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
+  - name: C# 8.0-Sprachvorschläge
+    items:
+    - name: Nullverweistypen – Vorschlag
+      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
+    - name: Nullverweistypen – Spezifikation
+      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
+    - name: Rekursiver Musterabgleich
+      href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
+    - name: Asynchrone Datenströme
+      href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
+    - name: Bereiche
+      href: ../../../_csharplang/proposals/csharp-8.0/ranges.md
+    - name: Musterbasierte Verwendung und using-Deklarationen
+      href: ../../../_csharplang/proposals/csharp-8.0/using.md
+    - name: Koaleszierende NULL-Zuweisung
+      href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
+ms.openlocfilehash: a2c2b2377b093b542f9d45ae688de121db1c1959
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469303"

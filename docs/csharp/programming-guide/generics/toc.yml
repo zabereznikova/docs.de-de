@@ -1,0 +1,36 @@
+items:
+- name: Generics
+  href: index.md
+  items:
+  - name: Einführung in Generics
+    href: introduction-to-generics.md
+  - name: Vorteile von Generics
+    href: benefits-of-generics.md
+  - name: Generische Typparameter
+    href: generic-type-parameters.md
+  - name: Einschränkungen für Typparameter
+    href: constraints-on-type-parameters.md
+  - name: Generische Klassen
+    href: generic-classes.md
+  - name: Generische Schnittstellen
+    href: generic-interfaces.md
+  - name: Generische Methoden
+    href: generic-methods.md
+  - name: Generics und Arrays
+    href: generics-and-arrays.md
+  - name: Generische Delegate
+    href: generic-delegates.md
+  - name: Unterschiede zwischen C++-Vorlagen und C#-Generics
+    href: differences-between-cpp-templates-and-csharp-generics.md
+  - name: Generics zur Laufzeit
+    href: generics-in-the-run-time.md
+  - name: Generics und Reflexion
+    href: generics-and-reflection.md
+  - name: Generics und Attribute
+    href: generics-and-attributes.md
+ms.openlocfilehash: daccd9dc4b0c808750866aacad6dacffc1282f6e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468895"

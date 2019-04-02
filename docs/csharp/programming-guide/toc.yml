@@ -1,0 +1,52 @@
+items:
+- name: C#-Programmierhandbuch
+  href: index.md
+  items:
+  - name: Einblicke in ein C#-Programm
+    href: inside-a-program/
+  - name: Main() und Befehlszeilenargumente
+    href: main-and-command-args/
+  - name: Programmierkonzepte
+    href: concepts/
+  - name: Anweisungen, Ausdrücke und Operatoren
+    href: statements-expressions-operators/
+  - name: Typen
+    href: types/
+  - name: Klassen und Strukturen
+    href: classes-and-structs/
+  - name: Schnittstellen
+    href: interfaces/
+  - name: Enumerationstypen
+    href: enumeration-types.md
+  - name: Delegaten
+    href: delegates/index.md
+  - name: Arrays
+    href: arrays/
+  - name: Zeichenfolgen
+    href: strings/
+  - name: Indexer
+    href: indexers/
+  - name: Ereignisse
+    href: events/
+  - name: Generics
+    href: generics/
+  - name: Namespaces
+    href: namespaces/
+  - name: Nullable-Typen
+    href: nullable-types/
+  - name: Unsicherer Code und Zeiger
+    href: unsafe-code-pointers/
+  - name: XML-Dokumentationskommentare
+    href: xmldoc/
+  - name: Ausnahmen und Ausnahmebehandlung
+    href: exceptions/
+  - name: Das Dateisystem und die Registrierung
+    href: file-system/
+  - name: Interoperabilität
+    href: interop/
+ms.openlocfilehash: 735c939dd903ff7e713fc9870afeda99786f8e77
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469652"

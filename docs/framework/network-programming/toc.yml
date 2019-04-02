@@ -1,0 +1,235 @@
+items:
+- name: Netzwerkprogrammierung in .NET Framework
+  href: index.md
+  items:
+  - name: Gewusst-wie-Themen zur Netzwerkprogrammierung
+    href: network-programming-how-to-topics.md
+  - name: Einführung in austauschbare Protokolle
+    href: introducing-pluggable-protocols.md
+  - name: Anfordern von Daten
+    href: requesting-data.md
+    items:
+    - name: Erstellen von Internetanforderungen
+      href: creating-internet-requests.md
+    - name: 'Vorgehensweise: Anfordern einer Webseite und Abrufen der Ergebnisse als Stream'
+      href: how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md
+    - name: 'Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse'
+      href: how-to-request-data-using-the-webrequest-class.md
+    - name: 'Vorgehensweise: Senden von Daten mithilfe der WebRequest-Klasse'
+      href: how-to-send-data-using-the-webrequest-class.md
+    - name: 'Vorgehensweise: Abrufen einer protokollspezifischen WebResponse-Klasse, die einer WebRequest-Klasse entspricht'
+      href: how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md
+    - name: Verwenden von Streams im Netzwerk
+      href: using-streams-on-the-network.md
+    - name: Vornehmen von asynchronen Anforderungen
+      href: making-asynchronous-requests.md
+    - name: Behandeln von Fehlern
+      href: handling-errors.md
+  - name: Programmieren austauschbarer Protokolle
+    href: programming-pluggable-protocols.md
+    items:
+    - name: 'Vorgehensweise: Registrieren eines benutzerdefinierten Protokolls mit WebRequest'
+      href: how-to-register-a-custom-protocol-using-webrequest.md
+    - name: 'Vorgehensweise: Typumwandlung einer WebRequest-Klasse in protokollspezifische Zugriffseigenschaften'
+      href: how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md
+    - name: Ableiten von WebRequest
+      href: deriving-from-webrequest.md
+    - name: Ableiten von WebResponse
+      href: deriving-from-webresponse.md
+  - name: Verwenden von Anwendungsprotokollen
+    href: using-application-protocols.md
+    items:
+    - name: HTTP
+      href: http.md
+      items:
+      - name: HttpListener
+        href: httplistener.md
+    - name: 'Vorgehensweise: Zugreifen auf HTTP-spezifische Eigenschaften'
+      href: how-to-access-http-specific-properties.md
+    - name: Verwalten von Verbindungen
+      href: managing-connections.md
+      items:
+      - name: Verbindungsgruppierung
+        href: connection-grouping.md
+      - name: 'Vorgehensweise: Zuweisen von Benutzerinformationen zu Gruppenverbindungen'
+        href: how-to-assign-user-information-to-group-connections.md
+    - name: TCP-UDP
+      href: tcp-udp.md
+      items:
+      - name: Verwenden von TCP-Diensten
+        href: using-tcp-services.md
+      - name: Verwenden von UDP-Diensten
+        href: using-udp-services.md
+    - name: Sockets
+      href: sockets.md
+      items:
+      - name: 'Vorgehensweise: Erstellen eines Sockets'
+        href: how-to-create-a-socket.md
+      - name: Verwenden von Clientsockets
+        href: using-client-sockets.md
+        items:
+        - name: Verwenden eines synchronen Clientsockets
+          href: using-a-synchronous-client-socket.md
+        - name: Verwenden von asynchronen Clientsockets
+          href: using-an-asynchronous-client-socket.md
+      - name: Überwachen mit Sockets
+        href: listening-with-sockets.md
+        items:
+        - name: Verwenden eines synchronen Serversockets
+          href: using-a-synchronous-server-socket.md
+        - name: Verwenden eines asynchronen Serversockets
+          href: using-an-asynchronous-server-socket.md
+      - name: Socketcodebeispiele
+        href: socket-code-examples.md
+        items:
+        - name: Synchrone Clientsockets - Beispiel
+          href: synchronous-client-socket-example.md
+        - name: Synchroner Serversocket, Beispiel
+          href: synchronous-server-socket-example.md
+        - name: Asynchrone Clientsockets - Beispiel
+          href: asynchronous-client-socket-example.md
+        - name: Asynchroner Serversocket, Beispiel
+          href: asynchronous-server-socket-example.md
+    - name: FTP
+      href: ftp.md
+      items:
+      - name: 'Vorgehensweise: Herunterladen von Dateien über FTP'
+        href: how-to-download-files-with-ftp.md
+      - name: 'Vorgehensweise: Hochladen von Dateien über FTP'
+        href: how-to-upload-files-with-ftp.md
+      - name: 'Vorgehensweise: Auflisten von Verzeichnisinhalt mit FTP'
+        href: how-to-list-directory-contents-with-ftp.md
+    - name: Grundlegendes zu WebRequest-Problemen und -Ausnahmen
+      href: understanding-webrequest-problems-and-exceptions.md
+  - name: Internetprotokoll Version 6
+    href: internet-protocol-version-6.md
+    items:
+    - name: IPv6-Adressierung
+      href: ipv6-addressing.md
+    - name: IPv6-Routing
+      href: ipv6-routing.md
+    - name: Automatische IPv6-Konfiguration
+      href: ipv6-auto-configuration.md
+    - name: Aktivieren und Deaktivieren von IPv6
+      href: enabling-and-disabling-ipv6.md
+    - name: 'Vorgehensweise: Ändern der Computerkonfigurationsdatei zum Aktivieren der IPv6-Unterstützung'
+      href: how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md
+  - name: Konfigurieren von Internetanwendungen
+    href: configuring-internet-applications.md
+  - name: Netzwerkablaufverfolgung in .NET Framework
+    href: network-tracing.md
+    items:
+    - name: Interpretieren von Netzwerkablaufverfolgung
+      href: interpreting-network-tracing.md
+    - name: Aktivieren der Netzwerkablaufverfolgung
+      href: enabling-network-tracing.md
+    - name: 'Vorgehensweise: Konfigurieren der Netzwerkablaufverfolgung'
+      href: how-to-configure-network-tracing.md
+  - name: Cacheverwaltung für Netzwerkanwendungen
+    href: cache-management-for-network-applications.md
+    items:
+    - name: Cacherichtlinie
+      href: cache-policy.md
+    - name: Speicherortbasierte Cacherichtlinien
+      href: location-based-cache-policies.md
+    - name: zeitbasierte Cacherichtlinien
+      href: time-based-cache-policies.md
+      items:
+      - name: Cacherichtlinieninteraktion – maximales Alter und maximale Überalterung
+        href: cache-policy-interaction-maximum-age-and-maximum-staleness.md
+      - name: Cacherichtlinieninteraktion – maximales Alter und minimale Aktualität
+        href: cache-policy-interaction-maximum-age-and-minimum-freshness.md
+    - name: Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen
+      href: configuring-caching-in-network-applications.md
+      items:
+      - name: 'Vorgehensweise: Festlegen einer speicherortbasierten Cacherichtlinie für eine Anwendung'
+        href: how-to-set-a-location-based-cache-policy-for-an-application.md
+      - name: 'Vorgehensweise: Festlegen der zeitbasierten Standardcacherichtlinie für eine Anwendung'
+        href: how-to-set-the-default-time-based-cache-policy-for-an-application.md
+      - name: 'Vorgehensweise: Anpassen einer zeitbasierten Cacherichtlinie'
+        href: how-to-customize-a-time-based-cache-policy.md
+      - name: 'Vorgehensweise: Festlegen einer Cacherichtlinie für eine Anforderung'
+        href: how-to-set-cache-policy-for-a-request.md
+  - name: Sicherheit in der Netzwerkprogrammierung
+    href: security-in-network-programming.md
+    items:
+    - name: Transport Layer Security (TLS) – bewährte Methoden
+      href: tls.md
+    - name: Verwenden von Secure Sockets Layer
+      href: using-secure-sockets-layer.md
+      items:
+      - name: Zertifikatauswahl und -überprüfung
+        href: certificate-selection-and-validation.md
+    - name: Internetauthentifizierung
+      href: internet-authentication.md
+      items:
+      - name: Standard- und Digestauthentifizierung
+        href: basic-and-digest-authentication.md
+      - name: NTLM- und Kerberos-Authentifizierung
+        href: ntlm-and-kerberos-authentication.md
+    - name: Web- und Socketberechtigungen
+      href: web-and-socket-permissions.md
+  - name: Bewährte Methoden für System.Net-Klassen
+    href: best-practices-for-system-net-classes.md
+  - name: Zugreifen auf das Internet über einen Proxy
+    href: accessing-the-internet-through-a-proxy.md
+    items:
+    - name: Proxykonfiguration
+      href: proxy-configuration.md
+    - name: Automatische Proxyerkennung
+      href: automatic-proxy-detection.md
+    - name: 'Vorgehensweise: Aktivieren einer WebRequest-Klasse zur Verwendung eines Proxys für die Internetkommunikation'
+      href: how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md
+    - name: 'Vorgehensweise: Überschreiben einer globalen Proxyauswahl'
+      href: how-to-override-a-global-proxy-selection.md
+  - name: NetworkInformation
+    href: networkinformation.md
+    items:
+    - name: 'Vorgehensweise: Erkennen von Netzwerkverfügbarkeit und Adressänderungen'
+      href: how-to-detect-network-availability-and-address-changes.md
+    - name: 'Vorgehensweise: Abrufen von Schnittstellen- und Protokollinformationen'
+      href: how-to-get-interface-and-protocol-information.md
+    - name: 'Vorgehensweise: Pingen eines Hosts'
+      href: how-to-ping-a-host.md
+  - name: Änderungen am System.Uri-Namespace in Version 2.0
+    href: changes-to-the-system-uri-namespace-in-version-2-0.md
+  - name: International Resource Identifier-Unterstützung in System.Uri
+    href: international-resource-identifier-support-in-system-uri.md
+  - name: Erweiterungen der Socketleistung in Version 3.5
+    href: socket-performance-enhancements-in-version-3-5.md
+  - name: Peer Name Resolution-Protokoll (PNRP)
+    href: peer-name-resolution-protocol.md
+    items:
+    - name: Peernamen und PNRP-IDs
+      href: peer-names-and-pnrp-ids.md
+    - name: Peernamenveröffentlichung und -auflösung
+      href: peer-name-publication-and-resolution.md
+    - name: PNRP-Clouds
+      href: pnrp-clouds.md
+    - name: PNRP-Caches
+      href: pnrp-caches.md
+    - name: PNRP in der Anwendungsentwicklung
+      href: pnrp-in-application-development.md
+  - name: Peer-to-Peer-Zusammenarbeit
+    href: peer-to-peer-collaboration.md
+    items:
+    - name: Informationen zum System.NET.PeerToPeer.Collaboration-Namespace
+      href: about-the-system-net-peertopeer-collaboration-namespace.md
+    - name: Peer-to-Peer-Netzwerkszenarien
+      href: peer-to-peer-networking-scenarios.md
+  - name: Änderungen an der NTLM-Authentifizierung für „HttpWebRequest“ in Version 3.5 SP1
+    href: changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md
+  - name: Integrierte Windows-Authentifizierung mit erweitertem Schutz
+    href: integrated-windows-authentication-with-extended-protection.md
+  - name: NAT-Durchlauf mit IPv6 und Teredo
+    href: nat-traversal-using-ipv6-and-teredo.md
+  - name: Netzwerkisolation für Windows Store-Apps
+    href: network-isolation-for-windows-store-apps.md
+  - name: Beispiele zur Netzwerkprogrammierung
+    href: network-programming-samples.md
+ms.openlocfilehash: 9f44403f015f28fe92aed3309584abc51156db3a
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468676"

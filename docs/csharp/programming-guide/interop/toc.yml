@@ -1,0 +1,22 @@
+items:
+- name: Interoperabilität
+  href: index.md
+  items:
+  - name: Überblick über die Interoperabilität
+    href: interoperability-overview.md
+  - name: 'Vorgehensweise: Zugreifen auf Office-Interop-Objekte mithilfe von Visual C#-Funktionen'
+    href: how-to-access-office-onterop-objects.md
+  - name: 'Vorgehensweise: Indizierte Eigenschaften bei der COM-Interop-Programmierung'
+    href: how-to-use-indexed-properties-in-com-interop-rogramming.md
+  - name: 'Vorgehensweise: Verwenden eines Plattformaufrufs zum Wiedergeben einer Wavedatei'
+    href: how-to-use-platform-invoke-to-play-a-wave-file.md
+  - name: 'Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)'
+    href: walkthrough-office-programming.md
+  - name: COM-Beispielklasse
+    href: example-com-class.md
+ms.openlocfilehash: 73e8696b89fa8ce212bc517f884f0ac615de09fc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469120"

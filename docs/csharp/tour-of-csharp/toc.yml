@@ -1,0 +1,32 @@
+items:
+- name: Einführung in C#
+  href: index.md
+  items:
+  - name: Programmstruktur
+    href: program-structure.md
+  - name: Typen und Variablen
+    href: types-and-variables.md
+  - name: Ausdrücke
+    href: expressions.md
+  - name: Anweisungen
+    href: statements.md
+  - name: Klassen und Objekte
+    href: classes-and-objects.md
+  - name: Strukturen
+    href: structs.md
+  - name: Arrays
+    href: arrays.md
+  - name: Schnittstellen
+    href: interfaces.md
+  - name: Enumerationen
+    href: enums.md
+  - name: Delegaten
+    href: delegates.md
+  - name: Attribute
+    href: attributes.md
+ms.openlocfilehash: 9f1265c48bea8f76bd352eb95605187b1385cae5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468931"
