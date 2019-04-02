@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 9b7ef12591e0a231b633f461547ec0eeaec1a530
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: e78772df1cf7e5f8999305a1b726a7085f94601b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58308097"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410068"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>Tutorial: Erstellen eines Filmempfehlungssystems mit ML.NET
 
@@ -103,20 +103,20 @@ Im Machine Learning-Kontext heißen Spalten, mit denen eine Vorhersage getroffen
 
 Da Sie Filmbewertungen vorhersagen möchten, ist `Label` die Bewertungsspalte. Die anderen drei Spalten `userId`, `movieId` und `timestamp` sind alle `Features`, mit denen das `Label` vorhergesagt wird.
 
-| Features      | Label         |
+| Features      | Bezeichnung         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
-| `movieId `      |               |
+| `movieId`      |               |
 | `timestamp`     |               |
 
 Sie müssen selbst entscheiden, welche `Features` Sie verwenden möchten, um das `Label` vorherzusagen. Sie können auch Methoden wie [Permutation Feature Importance](../how-to-guides/determine-global-feature-importance-in-model.md) verwenden, um die besten `Features` auszuwählen.
 
 In diesem Tutorial sollten Sie die `timestamp`-Spalte nicht als `Feature` festlegen, da der Zeitstempel nicht beeinflusst, wie ein Benutzer einen Film bewertet, und daher nicht zu einer genaueren Vorhersage beitragen würde.
 
-| Features      | Label         |
+| Features      | Bezeichnung         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
-| `movieId `      |               |
+| `movieId`      |               |
 
 Als Nächstes müssen Sie die Datenstruktur für die Eingabeklasse definieren.
 
@@ -206,7 +206,7 @@ Fügen Sie `BuildAndTrainModel()` folgenden Code hinzu, um die Datentransformati
 
 Da `userId` und `movieId` keine reellen Zahlen, sondern Benutzer und Filmtitel darstellen, verwenden Sie die [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A)-Methode, um jede `userId` und `movieId` in eine `Feature`-Spalte mit einem numerischen Schlüsseltyp (also in ein Format, das von Empfehlungsalgorithmen akzeptiert wird) zu transformieren. Anschließend fügen Sie die Werte als neue Datasetspalten ein:
 
-| userId | movieId | Label | userIdEncoded | movieIdEncoded |
+| userId | movieId | Bezeichnung | userIdEncoded | movieIdEncoded |
 | ------------- |:-------------:| -----:|-----:|-----:|
 | 1 | 1 | 4 | userKey1 | movieKey1 |
 | 1 | 3 | 4 | userKey1 | movieKey2 |

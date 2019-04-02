@@ -8,7 +8,7 @@ ms.date: 01/30/2019
 
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure
 
-![Titelbild](./media/cover.png)
+![Titelbild des Leifadens „Architect Modern Web Applications“ (Entwerfen moderner Webanwendungen)](./media/index/web-application-guide-cover-image.png)
 
 VERÖFFENTLICHT VON
 

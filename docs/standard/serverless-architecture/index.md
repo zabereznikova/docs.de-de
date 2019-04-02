@@ -1,19 +1,14 @@
 ---
 title: 'Serverlose Apps: Architektur, Muster und Azure-Implementierung'
-description: Leitfaden für die serverlose Architektur Erfahren Sie, wann, warum und wie eine serverlose Architektur (im Gegensatz zu Infrastructure-as-a-Service [IaaS] oder Platform as a Service [PaaS]) für Ihre Unternehmensanwendungen implementiert werden kann.
+description: 'Leitfaden für die serverlose Architektur Erfahren Sie, wann, warum und wie eine serverlose Architektur (im Gegensatz zu Infrastructure-as-a-Service [IaaS] oder Platform as a Service [PaaS]) für Ihre Unternehmensanwendungen implementiert werden kann.'
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: a19784f42c63914e9cf8f42ee6408ec9aa46e4f3
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745315"
 ---
+
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>Serverlose Apps: Architektur, Muster und Azure-Implementierung
 
-![](./media/Cover.jpg)
+![Screenshot des Covers des E-Books „Serverless Apps“ (Serverlose Apps)](./media/index/serverless-apps-cover.jpg)
 
 > DOWNLOAD verfügbar unter: <https://aka.ms/serverless-ebook>
 
