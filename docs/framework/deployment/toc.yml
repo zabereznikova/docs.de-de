@@ -1,0 +1,43 @@
+items:
+- name: Bereitstellung
+  href: index.md
+  items:
+  - name: Bereitstellen von .NET Framework
+    href: deploying-the-net-framework.md
+    items:
+    - name: Bereitstellungshandbuch für Entwickler
+      href: deployment-guide-for-developers.md
+    - name: Bereitstellungshandbuch für Administratoren
+      href: guide-for-administrators.md
+    - name: Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen
+      href: reducing-system-restarts.md
+    - name: 'Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5'
+      href: how-to-get-progress-from-the-dotnet-installer.md
+    - name: 'Fehler beim Initialisieren von .NET Framework: Verwalten der Benutzerfreundlichkeit'
+      href: initialization-errors-managing-the-user-experience.md
+    - name: 'Vorgehensweise: Debuggen von CLR-Aktivierungsproblemen'
+      href: how-to-debug-clr-activation-issues.md
+  - name: Bereitstellen von .NET Framework-Anwendungen
+    href: net-framework-applications.md
+    items:
+    - name: So sucht Common Language Runtime nach Assemblys
+      href: how-the-runtime-locates-assemblies.md
+    - name: Best Practices für das Laden von Assemblys
+      href: best-practices-for-assembly-loading.md
+  - name: .NET Framework Client Profile
+    href: client-profile.md
+  - name: Parallele Ausführung
+    href: side-by-side-execution.md
+    items:
+    - name: Konfigurieren der Umleitung der Assemblybindung
+      href: configuring-assembly-binding-redirection.md
+    - name: Richtlinien für die Erstellung von Komponenten für die parallele Ausführung
+      href: guidelines-for-creating-components-for-side-by-side-execution.md
+    - name: Prozessinterne parallele Ausführung
+      href: in-process-side-by-side-execution.md
+ms.openlocfilehash: 73f101fc5031c1ae97a626025d6b16c5729a2568
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469141"

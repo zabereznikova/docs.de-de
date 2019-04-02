@@ -1,0 +1,58 @@
+items:
+- name: Ausnahmenreferenz
+  href: index.md
+  items:
+  - name: COM+-Integration
+    href: com-integration.md
+  - name: Konfiguration
+    href: configuration.md
+  - name: 'Kernkommunikation: Kanalframework'
+    href: core-communications-channel-framework.md
+  - name: 'Kernkommunikation: Verbindungsframework'
+    href: core-communications-connection-framework.md
+  - name: 'Kernkommunikation: HTTP/HTTPS-Transportkanäle'
+    href: core-communications-http-https-transport-channels.md
+  - name: 'Kernkommunikation: Interne Duplextransportkanäle'
+    href: core-communications-internal-duplex-transport-channels.md
+  - name: 'Kernkommunikation: Named Pipe-Transportkanäle'
+    href: core-communications-named-pipe-transport-channels.md
+  - name: 'Kernkommunikation: TCP-Transportkanäle'
+    href: core-communications-tcp-transport-channels.md
+  - name: 'Kernkommunikation: Transportframework'
+    href: core-communications-transport-framework.md
+  - name: 'Kernkommunikation: Dienstprogramme'
+    href: core-communications-utilities.md
+  - name: 'Kernkommunikation: Webhostsupport'
+    href: core-communications-webhost-support.md
+  - name: Hosting
+    href: hosting-exceptions.md
+  - name: IdentityModel
+    href: identitymodel-exceptions.md
+  - name: MSMQ-Integrationstransport
+    href: msmq-integration-transport.md
+  - name: MSMQ-Transport.
+    href: msmq-transport.md
+  - name: Peerkanal
+    href: peer-channel.md
+  - name: Zuverlässiges Messaging
+    href: reliable-messaging.md
+  - name: Sicherheitsausnahmen
+    href: security-exceptions.md
+  - name: Dienstframework
+    href: service-framework.md
+  - name: Dienstframeworkdaten
+    href: service-framework-data.md
+  - name: Dienstframeworkmetadaten
+    href: service-framework-metadata.md
+  - name: Transaktion
+    href: transaction-exceptions.md
+  - name: Transaktionsformatierung
+    href: transaction-formatter.md
+  - name: Tools
+    href: tools.md
+ms.openlocfilehash: e3ba9b5630ceaa9e4124fb4577759cfddb536951
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468775"

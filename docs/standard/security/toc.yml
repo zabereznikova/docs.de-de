@@ -1,0 +1,79 @@
+items:
+- name: Sicherheit
+  href: index.md
+  items:
+  - name: Schlüsselbegriffe der Sicherheit
+    href: key-security-concepts.md
+  - name: Rollenbasierte Sicherheit
+    href: role-based-security.md
+    items:
+    - name: Principal- und Identitätsobjekte
+      href: principal-and-identity-objects.md
+    - name: 'Vorgehensweise: Erstellen eines WindowsPrincipal-Objekts'
+      href: how-to-create-a-windowsprincipal-object.md
+    - name: 'Vorgehensweise: Erstellen von GenericPrincipal-Objekten und GenericIdentity-Objekten'
+      href: how-to-create-genericprincipal-and-genericidentity-objects.md
+    - name: Ersetzen eines Principalobjekts
+      href: replacing-a-principal-object.md
+    - name: Wechseln und Zurücksetzen der Identität
+      href: impersonating-and-reverting.md
+  - name: Kryptografiemodell
+    href: cryptography-model.md
+    items:
+    - name: Kryptografische Dienste
+      href: cryptographic-services.md
+    - name: Erzeugen von Schlüsseln für die Ver- und Entschlüsselung
+      href: generating-keys-for-encryption-and-decryption.md
+    - name: 'Vorgehensweise: Speichern asymmetrischer Schlüssel in einem Schlüsselcontainer'
+      href: how-to-store-asymmetric-keys-in-a-key-container.md
+    - name: Verschlüsseln von Daten
+      href: encrypting-data.md
+    - name: Entschlüsseln von Daten
+      href: decrypting-data.md
+    - name: Kryptografische Signaturen
+      href: cryptographic-signatures.md
+    - name: Gewährleisten der Datenintegrität über Hashcodes
+      href: ensuring-data-integrity-with-hash-codes.md
+    - name: Erstellen eines kryptografischen Schemas
+      href: creating-a-cryptographic-scheme.md
+    - name: 'Vorgehensweise: Verschlüsseln von XML-Elementen mit symmetrischen Schlüsseln'
+      href: how-to-encrypt-xml-elements-with-symmetric-keys.md
+    - name: 'Vorgehensweise: Entschlüsseln von XML-Elementen mit symmetrischen Schlüsseln'
+      href: how-to-decrypt-xml-elements-with-symmetric-keys.md
+    - name: 'Vorgehensweise: Entschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln'
+      href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
+    - name: 'Vorgehensweise: Entschlüsseln von XML-Elementen mit asymmetrischen Schlüsseln'
+      href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
+    - name: 'Vorgehensweise: Verschlüsseln von XML-Elementen mit X.509-Zertifikaten'
+      href: how-to-encrypt-xml-elements-with-x-509-certificates.md
+    - name: 'Vorgehensweise: Entschlüsseln von XML-Elementen mit X.509-Zertifikaten'
+      href: how-to-decrypt-xml-elements-with-x-509-certificates.md
+    - name: 'Vorgehensweise: Signieren von XML-Dokumenten mit digitalen Signaturen'
+      href: how-to-sign-xml-documents-with-digital-signatures.md
+    - name: 'Vorgehensweise: Überprüfen der digitalen Signaturen von XML-Dokumenten'
+      href: how-to-verify-the-digital-signatures-of-xml-documents.md
+    - name: 'Vorgehensweise: Verwenden des Datenschutzes'
+      href: how-to-use-data-protection.md
+    - name: 'Vorgehensweise: Zugreifen auf Hardwaregeräte zur Verschlüsselung'
+      href: how-to-access-hardware-encryption-devices.md
+    - name: 'Exemplarische Vorgehensweise: Erstellen einer kryptografischen Anwendung'
+      href: walkthrough-creating-a-cryptographic-application.md
+  - name: Richtlinien für das Schreiben von sicherem Code
+    href: secure-coding-guidelines.md
+    items:
+    - name: Sichern von Statusdaten
+      href: securing-state-data.md
+    - name: Sicherheit und Benutzereingaben
+      href: security-and-user-input.md
+    - name: Sicherheit und Racebedingungen
+      href: security-and-race-conditions.md
+    - name: Sicherheit und dynamische Codegenerierung
+      href: security-and-on-the-fly-code-generation.md
+    - name: Verwenden der Auffüllung für die Zeitsteuerung bei Sicherheitsrisiken mit symmetrischer Entschlüsselung im CBC-Modus
+      href: vulnerabilities-cbc-mode.md
+ms.openlocfilehash: bf0a409f88486c4fb5ca476ab5f96be6e1aa823d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469336"

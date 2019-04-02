@@ -205,18 +205,18 @@ Unterstützung für Dekomprimierung mithilfe von Windows-APIs ist standardmäßi
 
 - `TryGetValue`-Methoden, die das try-Muster, das in anderen Sammlungstypen verwendet wird, auf diese beiden Typen erweitern. Dabei handelt es sich um folgenden Methoden:
 
-   - [public bool HashSet<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
-   - [public bool SortedSet<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+   - [public bool HashSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+   - [public bool SortedSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
 
 - `Enumerable.To*`-Erweiterungsmethoden, die eine Sammlung in ein <xref:System.Collections.Generic.HashSet%601> konvertieren:
 
-   - [public static HashSet<TSource> ToHashSet<TSource>(this IEnumerable<TSource> source)](xref:System.Linq.Enumerable.ToHashSet%2A)
-   - [public static HashSet<TSource> ToHashSet<TSource>(this IEnumerable<TSource> source, IEqualityComparer<TSource> comparer)](xref:System.Linq.Enumerable.ToHashSet%2A)
+   - [public static HashSet\<TSource> ToHashSet\<TSource>(this IEnumerable\<TSource> source)](xref:System.Linq.Enumerable.ToHashSet%2A)
+   - [public static HashSet\<TSource> ToHashSet\<TSource>(this IEnumerable\<TSource> source, IEqualityComparer\<TSource> comparer)](xref:System.Linq.Enumerable.ToHashSet%2A)
 
 - Neue <xref:System.Collections.Generic.HashSet%601>-Konstruktoren, mit denen Sie die Kapazität der Sammlung festlegen können. Dies führt zu einem Leistungsvorteil, wenn Sie die Größe von <xref:System.Collections.Generic.HashSet%601> im voraus kennen:
 
    - [public HashSet(int capacity)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32))
-   - [public HashSet(int capacity, IEqualityComparer<T> comparer)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32,System.Collections.Generic.IEqualityComparer%7B%600%7D))
+   - [public HashSet(int capacity, IEqualityComparer\<T> comparer)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32,System.Collections.Generic.IEqualityComparer%7B%600%7D))
 
 Die <xref:System.Collections.Concurrent.ConcurrentDictionary%602>-Klasse enthält neue Überladungen der <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>- und <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>-Methoden zum Abrufen eines Werts aus dem Wörterbuch oder zum Hinzufügen eines Werts, wenn kein Wert gefunden wurde, sowie zum Hinzufügen eines Werts zum Wörterbuch bzw. zum Aktualisieren des Werts, wenn dieser bereits vorhanden ist.
 

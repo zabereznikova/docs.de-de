@@ -1,0 +1,87 @@
+items:
+- name: Verarbeiten von Laufwerken, Verzeichnissen und Dateien
+  href: processing.md
+  items:
+  - name: Dateizugriff mit Visual Basic
+    href: file-access.md
+    items:
+    - name: Lesen aus Dateien
+      href: reading-from-files.md
+      items:
+      - name: 'Vorgehensweise: Lesen aus Textdateien'
+        href: how-to-read-from-text-files.md
+      - name: 'Vorgehensweise: Lesen aus durch Trennzeichen getrennten Textdateien'
+        href: how-to-read-from-comma-delimited-text-files.md
+      - name: 'Vorgehensweise: Lesen aus Textdateien mit fester Breite'
+        href: how-to-read-from-fixed-width-text-files.md
+      - name: 'Vorgehensweise: Lesen aus Textdateien mit mehreren Formaten'
+        href: how-to-read-from-text-files-with-multiple-formats.md
+      - name: 'Vorgehensweise: Lesen aus Binärdateien'
+        href: how-to-read-from-binary-files.md
+      - name: 'Vorgehensweise: Lesen von Text aus Dateien mit StreamReader'
+        href: how-to-read-text-from-files-with-a-streamreader.md
+    - name: Schreiben in Dateien
+      href: writing-to-files.md
+      items:
+      - name: 'Vorgehensweise: Schreiben von Text in Dateien'
+        href: how-to-write-text-to-files.md
+      - name: 'Vorgehensweise: Anfügen an Textdateien'
+        href: how-to-append-to-text-files.md
+      - name: 'Vorgehensweise: Schreiben in Binärdateien'
+        href: how-to-write-to-binary-files.md
+      - name: 'Vorgehensweise: Schreiben von Text in Dateien im Verzeichnis „Eigene Dokumente“'
+        href: how-to-write-text-to-files-in-the-my-documents-directory.md
+      - name: 'Vorgehensweise: Schreiben von Text in Dateien mit StreamWriter'
+        href: how-to-write-text-to-files-with-a-streamwriter.md
+    - name: Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen
+      href: creating-deleting-and-moving-files-and-directories.md
+      items:
+      - name: 'Vorgehensweise: Kopieren von Dateien mit einem bestimmten Muster in ein Verzeichnis'
+        href: how-to-copy-files-with-a-specific-pattern-to-a-directory.md
+      - name: 'Vorgehensweise: Erstellen einer Kopie einer Datei im gleichen Verzeichnis'
+        href: how-to-create-a-copy-of-a-file-in-the-same-directory.md
+      - name: 'Vorgehensweise: Erstellen einer Kopie einer Datei in einem anderen Verzeichnis'
+        href: how-to-create-a-copy-of-a-file-in-a-different-directory.md
+      - name: 'Vorgehensweise: Erstellen einer Datei'
+        href: how-to-create-a-file.md
+      - name: 'Vorgehensweise: Löschen einer Datei'
+        href: how-to-delete-a-file.md
+      - name: 'Vorgehensweise: Suchen nach Dateien mit einem bestimmten Muster'
+        href: how-to-find-files-with-a-specific-pattern.md
+      - name: 'Vorgehensweise: Verschieben einer Datei'
+        href: how-to-move-a-file.md
+      - name: 'Vorgehensweise: Umbenennen einer Datei'
+        href: how-to-rename-a-file.md
+      - name: 'Vorgehensweise: Kopieren eines Verzeichnisses in ein anderes Verzeichnis'
+        href: how-to-copy-a-directory-to-another-directory.md
+      - name: 'Vorgehensweise: Erstellen eines Verzeichnisses'
+        href: how-to-create-a-directory.md
+      - name: 'Vorgehensweise: Suchen nach Unterverzeichnissen mit einem bestimmten Muster'
+        href: how-to-find-subdirectories-with-a-specific-pattern.md
+      - name: 'Vorgehensweise: Abrufen einer Sammlung der Dateien in einem Verzeichnis'
+        href: how-to-get-the-collection-of-files-in-a-directory.md
+      - name: 'Vorgehensweise: Abrufen des Inhalts des Verzeichnisses „Eigene Dokumente“'
+        href: how-to-retrieve-the-contents-of-the-my-documents-directory.md
+      - name: 'Vorgehensweise: Analysieren von Dateipfaden'
+        href: how-to-parse-file-paths.md
+    - name: Analysieren von Textdateien mit dem TextFieldParser-Objekt
+      href: parsing-text-files-with-the-textfieldparser-object.md
+    - name: Dateicodierungen
+      href: file-encodings.md
+    - name: 'Problembehandlung: Lesen aus und Schreiben in Textdateien'
+      href: troubleshooting-reading-from-and-writing-to-text-files.md
+  - name: Grundlagen zu Datei-E/A-Vorgängen und dem Dateisystem in .NET Framework
+    href: basics-of-net-framework-file-io-and-the-file-system.md
+    items:
+    - name: Für Datei-E/A-Vorgänge und die Arbeit mit dem Dateisystem in .NET Framework verwendete Klassen
+      href: classes-used-in-net-framework-file-io-and-the-file-system.md
+  - name: 'Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden'
+    href: walkthrough-manipulating-files-by-using-net-framework-methods.md
+  - name: 'Exemplarische Vorgehensweise: Erstellen von Dateien und Verzeichnissen'
+    href: walkthrough-manipulating-files-and-directories.md
+ms.openlocfilehash: 04d5b3252fa087fcbba7d29662e7ad1e3fb24d2e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469441"

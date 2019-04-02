@@ -66,10 +66,12 @@ ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
   
 -   Jeder Typ im CTS ist als *Werttyp* oder *Referenztyp* definiert. Dies betrifft auch alle benutzerdefinierten Typen in der .NET-Klassenbibliothek und Ihre eigenen benutzerdefinierten Typen. Typen, die Sie mithilfe des [struct](../../../csharp/language-reference/keywords/struct.md)-Schlüsselworts definieren, sind Werttypen. Alle integrierten numerischen Typen sind `structs`. Typen, die Sie mithilfe des [class](../../../csharp/language-reference/keywords/class.md)-Schlüsselworts definieren, sind Referenztypen. Für Referenztypen und Werttypen gelten unterschiedliche Kompilierzeitregeln und ein anderes Laufzeitverhalten.  
   
- In der folgenden Abbildung wird die Beziehung zwischen Werttypen und Referenztypen im CTS dargestellt.  
+ In der folgenden Abbildung wird die Beziehung zwischen Werttypen und Referenztypen im CTS dargestellt.
+
+ Die folgende Abbildung zeigt Werttypen und Verweistypen im CTS: 
   
- ![Wert- und Verweistypen](../../../csharp/programming-guide/types/media/valuetypescts.png "ValueTypeCTS")  
-Werttypen und Referenztypen im CTS  
+  
+ ![Screenshot mit CTS-Werttypen und -Verweistypen.](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]
 >  Wie Sie sehen, sind die am häufigsten verwendeten Typen alle im <xref:System>-Namespace organisiert. Jedoch ist es für den Namespace, in dem ein Typ enthalten ist, unerheblich, ob es sich um einen Werttyp oder einen Referenztyp handelt.  

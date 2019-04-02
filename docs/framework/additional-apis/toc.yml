@@ -1,0 +1,99 @@
+items:
+- name: Zusätzliche Klassenbibliotheken und APIs
+  href: index.md
+  items:
+  - name: Microsoft.SqlServer.Server
+    items:
+    - name: SmiOrderProperty-Klasse
+      items:
+      - name: SmiOrderProperty.Item
+        href: microsoft.sqlserver.server.smiorderproperty.item.md
+  - name: System.Data.SqlTypes
+    items:
+    - name: SqlChars-Klasse
+      items:
+      - name: SqlChars.Stream-Eigenschaft
+        href: system.data.sqltypes.sqlchars.stream.md
+    - name: SqlStreamChars-Klasse
+      items:
+      - name: SqlStreamChars-Konstruktor
+        href: system.data.sqltypes.sqlstreamchars.-ctor.md
+      - name: CanSeek-Eigenschaft
+        href: system.data.sqltypes.sqlstreamchars.canseek.md
+      - name: IsNull-Eigenschaft
+        href: system.data.sqltypes.sqlstreamchars.isnull.md
+      - name: Length-Eigenschaft
+        href: system.data.sqltypes.sqlstreamchars.length.md
+      - name: Close-Methode
+        href: system.data.sqltypes.sqlstreamchars.close.md
+      - name: Dispose-Methode
+        href: system.data.sqltypes.sqlstreamchars.dispose.md
+      - name: Flush-Methode
+        href: system.data.sqltypes.sqlstreamchars.flush.md
+      - name: Read-Methode
+        href: system.data.sqltypes.sqlstreamchars.read.md
+      - name: Seek-Methode
+        href: system.data.sqltypes.sqlstreamchars.seek.md
+      - name: SetLength-Methode
+        href: system.data.sqltypes.sqlstreamchars.setlength.md
+      - name: Write-Methode
+        href: system.data.sqltypes.sqlstreamchars.write.md
+  - name: System.Net
+    items:
+    - name: Verbindungsklasse
+      href: connection.md
+      items:
+      - name: m_WriteList-Feld
+        href: m_writelist.md
+    - name: ConnectionGroup-Klasse
+      href: connectiongroup.md
+      items:
+      - name: m_ConnectionList-Feld
+        href: m_connectionlist.md
+    - name: CoreResponseData-Klasse
+      href: coreresponsedata.md
+      items:
+      - name: m_ResponseHeaders-Feld
+        href: coreresponsedata_m_responseheaders.md
+      - name: m_StatusCode-Feld
+        href: coreresponsedata_m_statuscode.md
+    - name: HTTPWebRequest-Klasse
+      items:
+      - name: _AutoRedirects-Feld
+        href: _autoredirects.md
+      - name: _CoreResponse-Feld
+        href: httpwebrequest__coreresponse.md
+      - name: _HttpResponse-Feld
+        href: _httpresponse.md
+    - name: ServicePoint-Klasse
+      items:
+      - name: m_ConnectionGroupList-Feld
+        href: m_connectiongrouplist.md
+      - name: s_ServicePointTable-Feld
+        href: s_servicepointtable.md
+  - name: System.Windows.Diagnostics
+    items:
+    - name: VisualDiagnostics-Klasse
+      items:
+      - name: s_isDebuggerCheckDisabledForTestPurposes-Feld
+        href: s-isdebuggercheckdisabledfortestpurposes-field.md
+  - name: System.Windows.Forms.Design
+    items:
+    - name: DataMemberFieldEditor-Klasse
+      href: datamemberfieldeditor-class.md
+    - name: DataMemberListEditor-Klasse
+      href: datamemberlisteditor-class.md
+  - name: stdole-Namespace
+    items:
+    - name: IFont.Name-Eigenschaft
+      href: stdole.ifont.name.md
+    - name: IPicture.Handle-Eigenschaft
+      href: stdole.ipicture.handle.md
+    - name: IPictureDisp.Handle-Eigenschaft
+      href: stdole.ipicturedisp.handle.md
+ms.openlocfilehash: fc163ef7a254443ce25676eafd75f34b36e8f336
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469655"

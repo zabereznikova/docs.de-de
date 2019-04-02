@@ -1,0 +1,49 @@
+items:
+- name: XML in Visual Basic
+  href: index.md
+  items:
+  - name: Übersicht über LINQ to XML
+    href: overview-of-linq-to-xml.md
+  - name: Erstellen von XML
+    href: creating-xml.md
+    items:
+    - name: Übersicht über XML-Literale
+      href: xml-literals-overview.md
+    - name: Eingebettete Ausdrücke in XML
+      href: embedded-expressions-in-xml.md
+    - name: Namen von deklarierten XML-Elementen und Attributen
+      href: names-of-declared-xml-elements-and-attributes.md
+    - name: XML-Literale und die XML 1.0-Spezifikation
+      href: xml-literals-and-the-xml-1-0-specification.md
+    - name: Leerzeichen in XML-Literalen
+      href: white-space-in-xml-literals.md
+    - name: 'Vorgehensweise: Erstellen von XML-Literalen'
+      href: how-to-create-xml-literals.md
+    - name: 'Vorgehensweise: Einbetten von Ausdrücken in XML-Literale'
+      href: how-to-embed-expressions-in-xml-literals.md
+  - name: Bearbeiten von XML
+    href: manipulating-xml.md
+    items:
+    - name: 'Vorgehensweise: Laden von XML aus einer Datei, einer Zeichenfolge oder einem Stream'
+      href: how-to-load-xml-from-a-file-string-or-stream.md
+    - name: 'Vorgehensweise: Transformieren von XML unter Verwendung von LINQ'
+      href: how-to-transform-xml-by-using-linq.md
+    - name: 'Vorgehensweise: Ändern von XML-Literalen'
+      href: how-to-modify-xml-literals.md
+  - name: Aufrufen von XML
+    href: accessing-xml.md
+    items:
+    - name: 'Vorgehensweise: Zugreifen auf XML-Nachfolgerelemente'
+      href: how-to-access-xml-descendant-elements.md
+    - name: 'Vorgehensweise: Zugreifen auf untergeordnete XML-Elemente'
+      href: how-to-access-xml-child-elements.md
+    - name: 'Vorgehensweise: Zugreifen auf XML-Attribute'
+      href: how-to-access-xml-attributes.md
+    - name: 'Vorgehensweise: Deklarieren und Verwenden von XML-Namespacepräfixen'
+      href: how-to-declare-and-use-xml-namespace-prefixes.md
+ms.openlocfilehash: 7d2d931b5f88e9af9a2cdef92168d907e3fd6ce6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469159"

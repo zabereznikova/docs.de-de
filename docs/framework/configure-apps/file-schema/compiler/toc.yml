@@ -1,0 +1,21 @@
+items:
+- name: Schema für Compiler- und Sprachanbietereinstellungen
+  href: index.md
+  items:
+  - name: <system.codedom>-Element
+    href: system-codedom-element.md
+    items:
+    - name: <compilers>-Element
+      href: compilers-element.md
+      items:
+      - name: <compiler>-Element
+        href: compiler-element.md
+        items:
+        - name: <providerOption>-Element
+          href: provideroption-element.md
+ms.openlocfilehash: 9d49c036cf0bb5279ff014c962c31a8d0ae04ff2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469640"

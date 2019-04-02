@@ -1,0 +1,281 @@
+items:
+- name: Sprachreferenz
+  href: index.md
+  items:
+  - name: LINQ to Entities
+    href: linq-to-entities.md
+    items:
+    - name: Abfragen in LINQ to Entities
+      href: queries-in-linq-to-entities.md
+      items:
+      - name: 'Beispiele für die methodenbasierte Abfragesyntax: Projection'
+        href: method-based-query-syntax-examples-projection.md
+      - name: 'Beispiele für die methodenbasierte Abfragesyntax: Filtern'
+        href: method-based-query-syntax-examples-filtering.md
+      - name: 'Beispiele für die methodenbasierte Abfragesyntax: Sortieren'
+        href: method-based-query-syntax-examples-ordering.md
+      - name: 'Beispiele für die methodenbasierte Abfragesyntax: Aggregatoperatoren'
+        href: method-based-query-syntax-examples-aggregate-operators.md
+      - name: 'Beispiele für die methodenbasierte Abfragesyntax: Partitionierung'
+        href: method-based-query-syntax-examples-partitioning.md
+      - name: 'Beispiele für die methodenbasierte Abfragesyntax: Umwandeln'
+        href: method-based-query-syntax-examples-conversion.md
+      - name: 'Beispiele für die methodenbasierte Abfragesyntax: Joinoperatoren'
+        href: method-based-query-syntax-examples-join-operators.md
+      - name: 'Beispiele für die methodenbasierte Abfragesyntax: Elementoperatoren'
+        href: method-based-query-syntax-examples-element-operators.md
+      - name: 'Beispiele für die methodenbasierte Abfragesyntax: Gruppierung'
+        href: method-based-query-syntax-examples-grouping.md
+      - name: 'Beispiele für die methodenbasierte Abfragesyntax: Navigieren in Beziehungen'
+        href: method-based-query-syntax-examples-navigating-relationships.md
+      - name: 'Beispiele für die Abfrageausdruckssyntax: Projection'
+        href: query-expression-syntax-examples-projection.md
+      - name: 'Beispiele für die Abfrageausdruckssyntax: Filtern'
+        href: query-expression-syntax-examples-filtering.md
+      - name: 'Beispiele für die Abfrageausdruckssyntax: Sortieren'
+        href: query-expression-syntax-examples-ordering.md
+      - name: 'Beispiele für die Abfrageausdruckssyntax: Aggregatoperatoren'
+        href: query-expression-syntax-examples-aggregate-operators.md
+      - name: 'Beispiele für die Abfrageausdruckssyntax: Partitionierung'
+        href: query-expression-syntax-examples-partitioning.md
+      - name: 'Beispiele für die Abfrageausdruckssyntax: Joinoperatoren'
+        href: query-expression-syntax-examples-join-operators.md
+      - name: 'Beispiele für die Abfrageausdruckssyntax: Elementoperatoren'
+        href: query-expression-syntax-examples-element-operators.md
+      - name: 'Beispiele für die Abfrageausdruckssyntax: Gruppierung'
+        href: query-expression-syntax-examples-grouping.md
+      - name: 'Beispiele für die Abfrageausdruckssyntax: Navigieren in Beziehungen'
+        href: query-expression-syntax-examples-navigating-relationships.md
+    - name: Ausdrücke in LINQ to Entities-Abfragen
+      href: expressions-in-linq-to-entities-queries.md
+      items:
+      - name: Konstante Ausdrücke
+        href: constant-expressions.md
+      - name: Vergleichsausdrücke
+        href: comparison-expressions.md
+      - name: NULL-Vergleiche
+        href: null-comparisons.md
+      - name: Initialisierungsausdrücke
+        href: initialization-expressions.md
+    - name: Aufrufen von Funktionen in LINQ to Entities-Abfragen
+      href: calling-functions-in-linq-to-entities-queries.md
+      items:
+      - name: 'Vorgehensweise: Aufrufen kanonischer Funktionen'
+        href: how-to-call-canonical-functions.md
+      - name: 'Vorgehensweise: Aufrufen von Datenbankfunktionen'
+        href: how-to-call-database-functions.md
+      - name: 'Vorgehensweise: Aufrufen benutzerdefinierter Datenbankfunktionen'
+        href: how-to-call-custom-database-functions.md
+      - name: 'Vorgehensweise: Aufrufen modelldefinierter Funktionen in Abfragen'
+        href: how-to-call-model-defined-functions-in-queries.md
+      - name: 'Vorgehensweise: Aufrufen modelldefinierter Funktionen als Objektmethoden'
+        href: how-to-call-model-defined-functions-as-object-methods.md
+    - name: Kompilierte Abfragen (LINQ to Entities)
+      href: compiled-queries-linq-to-entities.md
+    - name: Abfrageausführung
+      href: query-execution.md
+    - name: Abfrageergebnisse
+      href: query-results.md
+    - name: Standardabfrageoperatoren in LINQ to Entities-Abfragen
+      href: standard-query-operators-in-linq-to-entities-queries.md
+    - name: Zuordnen von CLR-Methoden zu kanonischen Funktionen
+      href: clr-method-to-canonical-function-mapping.md
+    - name: Unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)
+      href: supported-and-unsupported-linq-methods-linq-to-entities.md
+    - name: Bekannte Probleme von und Überlegungen zu LINQ to Entities
+      href: known-issues-and-considerations-in-linq-to-entities.md
+  - name: Entity SQL-Sprache
+    href: entity-sql-language.md
+    items:
+    - name: Übersicht über Entity SQL
+      href: entity-sql-overview.md
+      items:
+      - name: Unterschiede zwischen Entity SQL und Transact-SQL
+        href: how-entity-sql-differs-from-transact-sql.md
+      - name: Entity SQL-Kurzreferenz
+        href: entity-sql-quick-reference.md
+      - name: Typsystem
+        href: type-system-entity-sql.md
+      - name: Typdefinitionen
+        href: type-definitions-entity-sql.md
+      - name: Konstruktionstypen
+        href: constructing-types-entity-sql.md
+      - name: Zwischenspeichern von Abfrageplänen
+        href: query-plan-caching-entity-sql.md
+      - name: Namespaces
+        href: namespaces-entity-sql.md
+      - name: Bezeichner
+        href: identifiers-entity-sql.md
+      - name: Parameter
+        href: parameters-entity-sql.md
+      - name: Variablen
+        href: variables-entity-sql.md
+      - name: Nicht unterstützte Ausdrücke
+        href: unsupported-expressions-entity-sql.md
+      - name: Literale
+        href: literals-entity-sql.md
+      - name: NULL-Literale und Typrückschluss
+        href: null-literals-and-type-inference-entity-sql.md
+      - name: Eingabezeichensatz
+        href: input-character-set-entity-sql.md
+      - name: Abfrageausdrücke
+        href: query-expressions-entity-sql.md
+      - name: Funktionen
+        href: functions-entity-sql.md
+        items:
+        - name: Benutzerdefinierte Funktionen
+          href: user-defined-functions-entity-sql.md
+        - name: Auflösung von Funktionsüberladungen
+          href: function-overload-resolution-entity-sql.md
+        - name: Aggregatfunktionen
+          href: aggregate-functions-entity-sql.md
+      - name: Operatorrangfolge
+        href: operator-precedence-entity-sql.md
+      - name: Paging
+        href: paging-entity-sql.md
+      - name: Vergleichssemantik
+        href: comparison-semantics-entity-sql.md
+      - name: Zusammenstellen verschachtelter Entity SQL-Abfragen
+        href: composing-nested-entity-sql-queries.md
+      - name: Strukturierte Typen, die NULL-Werte zulassen
+        href: nullable-structured-types-entity-sql.md
+    - name: Entity SQL-Referenz
+      href: entity-sql-reference.md
+      items:
+      - name: + (Hinzufügen)
+        href: add.md
+      - name: + (Zeichenfolgenverkettung)
+        href: string-concatenation-entity-sql.md
+      - name: '- (Negativ)'
+        href: negative-entity-sql.md
+      - name: '- (Subtrahieren)'
+        href: subtract-entity-sql.md
+      - name: '* (Multiplizieren)'
+        href: multiply-entity-sql.md
+      - name: / (Dividieren)
+        href: divide-entity-sql.md
+      - name: Prozent (Modulo)
+        href: modulo-entity-sql.md
+      - name: '&& (UND)'
+        href: and-entity-sql.md
+      - name: '|| (ODER)'
+        href: or-entity-sql.md
+      - name: '! (NOT)'
+        href: not-entity-sql.md
+      - name: = (gleich)
+        href: equals-entity-sql.md
+      - name: '> (größer als)'
+        href: greater-than-entity-sql.md
+      - name: '>>= (größer oder gleich)'
+        href: greater-than-or-equal-to-entity-sql.md
+      - name: < (kleiner als)
+        href: less-than-entity-sql.md
+      - name: <= (kleiner oder gleich)
+        href: less-than-or-equal-to-entity-sql.md
+      - name: '!= (ungleich)'
+        href: not-equal-to-entity-sql.md
+      - name: sein. (Memberzugriff)
+        href: member-access-entity-sql.md
+      - name: -- (Kommentar)
+        href: comment-entity-sql.md
+      - name: ANYELEMENT
+        href: anyelement-entity-sql.md
+      - name: BETWEEN
+        href: between-entity-sql.md
+      - name: CASE
+        href: case-entity-sql.md
+      - name: CAST
+        href: cast-entity-sql.md
+      - name: COLLECTION
+        href: collection-entity-sql.md
+      - name: CREATEREF
+        href: createref-entity-sql.md
+      - name: DEREF
+        href: deref-entity-sql.md
+      - name: EXCEPT
+        href: except-entity-sql.md
+      - name: EXISTS
+        href: exists-entity-sql.md
+      - name: FLATTEN
+        href: flatten-entity-sql.md
+      - name: FROM
+        href: from-entity-sql.md
+      - name: FUNCTION
+        href: function-entity-sql.md
+      - name: GROUP BY
+        href: group-by-entity-sql.md
+      - name: GROUPPARTITION
+        href: grouppartition-entity-sql.md
+      - name: HAVING
+        href: having-entity-sql.md
+      - name: KEY
+        href: key-entity-sql.md
+      - name: IN
+        href: in-entity-sql.md
+      - name: INTERSECT
+        href: intersect-entity-sql.md
+      - name: ISNULL
+        href: isnull-entity-sql.md
+      - name: ISOF
+        href: isof-entity-sql.md
+      - name: LIKE
+        href: like-entity-sql.md
+      - name: LIMIT
+        href: limit-entity-sql.md
+      - name: MULTISET
+        href: multiset-entity-sql.md
+      - name: Konstruktoren benannter Typen
+        href: named-type-constructor-entity-sql.md
+      - name: NAVIGATE
+        href: navigate-entity-sql.md
+      - name: OFTYPE
+        href: oftype-entity-sql.md
+      - name: ORDER BY
+        href: order-by-entity-sql.md
+      - name: OVERLAPS
+        href: overlaps-entity-sql.md
+      - name: REF
+        href: ref-entity-sql.md
+      - name: ROW
+        href: row-entity-sql.md
+      - name: SELECT
+        href: select-entity-sql.md
+      - name: SET
+        href: set-entity-sql.md
+      - name: SKIP
+        href: skip-entity-sql.md
+      - name: THEN
+        href: then-entity-sql.md
+      - name: TOP
+        href: top-entity-sql.md
+      - name: TREAT
+        href: treat-entity-sql.md
+      - name: UNION
+        href: union-entity-sql.md
+      - name: USING
+        href: using-entity-sql.md
+      - name: WHERE
+        href: where-entity-sql.md
+  - name: Kanonische Funktionen
+    href: canonical-functions.md
+    items:
+    - name: Aggregieren kanonischer Funktionen
+      href: aggregate-canonical-functions.md
+    - name: Kanonische Mathematikfunktionen
+      href: math-canonical-functions.md
+    - name: Kanonische Zeichenfolgefunktionen
+      href: string-canonical-functions.md
+    - name: Kanonische Funktionen für Datum und Zeit
+      href: date-and-time-canonical-functions.md
+    - name: Bitweise kanonische Funktionen
+      href: bitwise-canonical-functions.md
+    - name: Räumliche Funktionen
+      href: spatial-functions.md
+    - name: Andere kanonische Funktionen
+      href: other-canonical-functions.md
+ms.openlocfilehash: 5886642c5f0074893aa960333fa4d85aa5fa1e46
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468862"
