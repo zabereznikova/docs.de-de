@@ -7,28 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 6a12bc35aeaa6e9e21835ce0a091ee89ea4c326d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b06c1d930a3551e9bc175c814a6297894799237d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260367"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837980"
 ---
-# <a name="type-typename-has-no-constructors"></a><span data-ttu-id="18846-102">Typ "\<Typname >' hat keine Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="18846-102">Type '\<typename>' has no constructors</span></span>
-<span data-ttu-id="18846-103">Ein Typ unterstützt nicht den Aufruf von `Sub New()`.</span><span class="sxs-lookup"><span data-stu-id="18846-103">A type does not support a call to `Sub New()`.</span></span> <span data-ttu-id="18846-104">Eine mögliche Ursache ist ein beschädigter Compiler oder eine fehlerhafte Binärdatei.</span><span class="sxs-lookup"><span data-stu-id="18846-104">One possible cause is a corrupted compiler or binary file.</span></span>  
+# <a name="type-typename-has-no-constructors"></a><span data-ttu-id="06633-102">Typ "\<Typname >' hat keine Konstruktoren</span><span class="sxs-lookup"><span data-stu-id="06633-102">Type '\<typename>' has no constructors</span></span>
+<span data-ttu-id="06633-103">Ein Typ unterstützt nicht den Aufruf von `Sub New()`.</span><span class="sxs-lookup"><span data-stu-id="06633-103">A type does not support a call to `Sub New()`.</span></span> <span data-ttu-id="06633-104">Eine mögliche Ursache ist ein beschädigter Compiler oder eine fehlerhafte Binärdatei.</span><span class="sxs-lookup"><span data-stu-id="06633-104">One possible cause is a corrupted compiler or binary file.</span></span>  
   
- <span data-ttu-id="18846-105">**Fehler-ID:** BC30251</span><span class="sxs-lookup"><span data-stu-id="18846-105">**Error ID:** BC30251</span></span>  
+ <span data-ttu-id="06633-105">**Fehler-ID:** BC30251</span><span class="sxs-lookup"><span data-stu-id="06633-105">**Error ID:** BC30251</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="18846-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="18846-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="06633-106">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="06633-106">To correct this error</span></span>  
   
-1.  <span data-ttu-id="18846-107">Wenn sich der Typ in einem anderen Projekt oder in einer referenzierten Datei befindet, installieren Sie das Projekt oder die Datei erneut.</span><span class="sxs-lookup"><span data-stu-id="18846-107">If the type is in a different project or in a referenced file, reinstall the project or file.</span></span>  
+1.  <span data-ttu-id="06633-107">Wenn sich der Typ in einem anderen Projekt oder in einer referenzierten Datei befindet, installieren Sie das Projekt oder die Datei erneut.</span><span class="sxs-lookup"><span data-stu-id="06633-107">If the type is in a different project or in a referenced file, reinstall the project or file.</span></span>  
   
-2.  <span data-ttu-id="18846-108">Wenn sich der Typ im gleichen Projekt befindet, kompilieren Sie die Assembly mit dem Typ neu.</span><span class="sxs-lookup"><span data-stu-id="18846-108">If the type is in the same project, recompile the assembly containing the type.</span></span>  
+2.  <span data-ttu-id="06633-108">Wenn sich der Typ im gleichen Projekt befindet, kompilieren Sie die Assembly mit dem Typ neu.</span><span class="sxs-lookup"><span data-stu-id="06633-108">If the type is in the same project, recompile the assembly containing the type.</span></span>  
   
-3.  <span data-ttu-id="18846-109">Wenn der Fehler erneut auftritt, installieren Sie Visual Basic-Compiler neu.</span><span class="sxs-lookup"><span data-stu-id="18846-109">If the error recurs, reinstall the Visual Basic compiler.</span></span>  
+3.  <span data-ttu-id="06633-109">Wenn der Fehler erneut auftritt, installieren Sie Visual Basic-Compiler neu.</span><span class="sxs-lookup"><span data-stu-id="06633-109">If the error recurs, reinstall the Visual Basic compiler.</span></span>  
   
-4.  <span data-ttu-id="18846-110">Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.</span><span class="sxs-lookup"><span data-stu-id="18846-110">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>  
+4.  <span data-ttu-id="06633-110">Wenn der Fehler weiterhin besteht, tragen Sie Informationen zu den Umständen zusammen, und benachrichtigen Sie den Produktsupport von Microsoft.</span><span class="sxs-lookup"><span data-stu-id="06633-110">If the error persists, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="18846-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="18846-111">See also</span></span>
-- [<span data-ttu-id="18846-112">Objekte und Klassen</span><span class="sxs-lookup"><span data-stu-id="18846-112">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [<span data-ttu-id="18846-113">Sprechen Sie mit uns</span><span class="sxs-lookup"><span data-stu-id="18846-113">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="06633-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="06633-111">See also</span></span>
+
+- [<span data-ttu-id="06633-112">Objekte und Klassen</span><span class="sxs-lookup"><span data-stu-id="06633-112">Objects and Classes</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [<span data-ttu-id="06633-113">Sprechen Sie mit uns</span><span class="sxs-lookup"><span data-stu-id="06633-113">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
