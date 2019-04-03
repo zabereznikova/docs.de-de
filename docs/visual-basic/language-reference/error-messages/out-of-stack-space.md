@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 2f91763888069b6dca90da03995dc1b6812fd426
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25905e65e74b11d167d3ce2ad258599fb958eb88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655490"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814600"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Nicht genügend Stapelspeicher (Visual Basic)
 Der Stapel ist ein Arbeitsbereich des Arbeitsspeichers, der wächst oder schrumpft dynamisch mit den Anforderungen des ausgeführten Programms an. Seine Grenzen wurden überschritten.  
@@ -29,4 +29,5 @@ Der Stapel ist ein Arbeitsbereich des Arbeitsspeichers, der wächst oder schrump
 6.  Stellen Sie sicher, dass Sie nicht "Ereignisfolge" dazu führte, durch Auslösen eines Ereignisses, das eine Ereignisprozedur bereits auf dem Stapel aufruft. Eine Ereigniskette ist vergleichbar mit einer nicht abgeschlossenen rekursiven Prozeduraufruf, aber es ist weniger offensichtlich, da der Aufruf von Visual Basic, anstatt einen expliziten Aufruf im Code ausgeführt wird. Verwenden der `Calls` Dialogfeld anzeigen, welche Prozeduren auf dem Stapel aktiv sind.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Fenster "Arbeitsspeicher"](/visualstudio/debugger/memory-windows)

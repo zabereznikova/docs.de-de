@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: c5d427495e8eedae9dc0163c97401338fb6d0bbd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fa8607bf72dfb344048ec82514182dcb6810274d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276613"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817161"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>Zurückkopieren des ByRef-Parameters '\<Parametername >' zurück in das entsprechende Argument führt zu einer Einschränkung vom Typ "\<Typname1 >' in den Typ"\<Typname2 >'
 Eine Prozedur wird aufgerufen, mit der ein Argument, das den entsprechenden Typ erweitert werden kann, und die Konvertierung aus dem Parameter mit dem Argument einschränkend.  
@@ -34,6 +34,7 @@ Eine Prozedur wird aufgerufen, mit der ein Argument, das den entsprechenden Typ 
 -   Wenn ein Wert in das aufrufende Argument zurückgegeben werden sollen, definieren Sie den Operator für die umgekehrte Konvertierung als [Widening](../../../visual-basic/language-reference/modifiers/widening.md), sofern möglich.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Parameter und Argumente von Prozeduren](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
 - [Übergeben von Argumenten als Wert und als Verweis](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
