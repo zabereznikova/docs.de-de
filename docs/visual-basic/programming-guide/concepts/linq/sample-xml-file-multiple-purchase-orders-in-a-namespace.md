@@ -1,18 +1,18 @@
 ---
-title: 'XML-Beispieldatei: Mehrere Bestellungen in einem Namespace3'
+title: 'Beispiel-XML-Datei: Mehrere Bestellungen in einem Namespace3'
 ms.date: 07/20/2015
 ms.assetid: 03f754c6-89f7-4143-8456-4963044be7e5
-ms.openlocfilehash: 4ef1e715bf9b1fd8e417f189655a1badc6d0df2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f7a25b9b56c5d37d45ee46928f3d4ceb3607c35
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616172"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829940"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a><span data-ttu-id="2ee42-102">XML-Beispieldatei: Mehrere Bestellungen in einem Namespace</span><span class="sxs-lookup"><span data-stu-id="2ee42-102">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>
-<span data-ttu-id="2ee42-103">Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet.</span><span class="sxs-lookup"><span data-stu-id="2ee42-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="2ee42-104">Diese Datei enthält mehrere Aufträge.</span><span class="sxs-lookup"><span data-stu-id="2ee42-104">This file contains several purchase orders.</span></span> <span data-ttu-id="2ee42-105">Der XML-Code befindet sich in einem Namespace.</span><span class="sxs-lookup"><span data-stu-id="2ee42-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a><span data-ttu-id="f45b6-102">Beispiel-XML-Datei: Mehrere Bestellungen in einem Namespace</span><span class="sxs-lookup"><span data-stu-id="f45b6-102">Sample XML File: Multiple Purchase Orders in a Namespace</span></span>
+<span data-ttu-id="f45b6-103">Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet.</span><span class="sxs-lookup"><span data-stu-id="f45b6-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="f45b6-104">Diese Datei enthält mehrere Aufträge.</span><span class="sxs-lookup"><span data-stu-id="f45b6-104">This file contains several purchase orders.</span></span> <span data-ttu-id="f45b6-105">Der XML-Code befindet sich in einem Namespace.</span><span class="sxs-lookup"><span data-stu-id="f45b6-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseordersinnamespacexml"></a><span data-ttu-id="2ee42-106">PurchaseOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="2ee42-106">PurchaseOrdersInNamespace.xml</span></span>  
+## <a name="purchaseordersinnamespacexml"></a><span data-ttu-id="f45b6-106">PurchaseOrdersInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="f45b6-106">PurchaseOrdersInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -109,5 +109,6 @@ ms.locfileid: "54616172"
 </aw:PurchaseOrders>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2ee42-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2ee42-107">See also</span></span>
-- [<span data-ttu-id="2ee42-108">XML-Beispieldokumente (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="2ee42-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="f45b6-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f45b6-107">See also</span></span>
+
+- [<span data-ttu-id="f45b6-108">XML-Beispieldokumente (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="f45b6-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

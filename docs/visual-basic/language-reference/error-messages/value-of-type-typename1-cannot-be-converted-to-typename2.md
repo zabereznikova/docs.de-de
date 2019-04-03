@@ -1,5 +1,5 @@
 ---
-title: Der Wert vom Typ "<typename1>" kann nicht zu "<typename2>" konvertiert werden.
+title: Der Wert vom Typ '<typename1>' kann nicht zu '<typename2>' konvertiert werden.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30955
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: cd2f6e4b51bc327826301d3c7b39c97a4bed3793
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261242"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829022"
 ---
-# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a><span data-ttu-id="58308-102">Wert vom Typ "\<Typname1 >' kann nicht konvertiert werden, um"\<Typname2 >'</span><span class="sxs-lookup"><span data-stu-id="58308-102">Value of type '\<typename1>' cannot be converted to '\<typename2>'</span></span>
-<span data-ttu-id="58308-103">Wert vom Typ "\<Typname1 >' kann nicht konvertiert werden, um"\<Typname2 >'.</span><span class="sxs-lookup"><span data-stu-id="58308-103">Value of type '\<typename1>' cannot be converted to '\<typename2>'.</span></span> <span data-ttu-id="58308-104">{Typenkonflikt beim wird möglicherweise durch das Mischen eines Dateiverweises mit einem Projektverweis auf Assembly '\<Assemblyname >'.</span><span class="sxs-lookup"><span data-stu-id="58308-104">Type mismatch could be due to the mixing of a file reference with a project reference to assembly '\<assemblyname>'.</span></span> <span data-ttu-id="58308-105">Den Dateiverweis, ersetzen Sie die "\<" FilePath ">" in Projekt "\<projektnamen1 >' mit einem Projektverweis auf"\<projektname2 > ".</span><span class="sxs-lookup"><span data-stu-id="58308-105">Try replacing the file reference to '\<filepath>' in project '\<projectname1>' with a project reference to '\<projectname2>'.</span></span>  
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a><span data-ttu-id="d1d1c-102">Wert vom Typ "\<Typname1 >' kann nicht konvertiert werden, um"\<Typname2 >'</span><span class="sxs-lookup"><span data-stu-id="d1d1c-102">Value of type '\<typename1>' cannot be converted to '\<typename2>'</span></span>
+<span data-ttu-id="d1d1c-103">Wert vom Typ "\<Typname1 >' kann nicht konvertiert werden, um"\<Typname2 >'.</span><span class="sxs-lookup"><span data-stu-id="d1d1c-103">Value of type '\<typename1>' cannot be converted to '\<typename2>'.</span></span> <span data-ttu-id="d1d1c-104">{Typenkonflikt beim wird möglicherweise durch das Mischen eines Dateiverweises mit einem Projektverweis auf Assembly '\<Assemblyname >'.</span><span class="sxs-lookup"><span data-stu-id="d1d1c-104">Type mismatch could be due to the mixing of a file reference with a project reference to assembly '\<assemblyname>'.</span></span> <span data-ttu-id="d1d1c-105">Den Dateiverweis, ersetzen Sie die "\<" FilePath ">" in Projekt "\<projektnamen1 >' mit einem Projektverweis auf"\<projektname2 > ".</span><span class="sxs-lookup"><span data-stu-id="d1d1c-105">Try replacing the file reference to '\<filepath>' in project '\<projectname1>' with a project reference to '\<projectname2>'.</span></span>  
   
- <span data-ttu-id="58308-106">In einer Situation, in denen ein Projekt sowohl einen Projektverweis als auch ein Dateiverweis erstellt, garantiert der Compiler nicht, dass es sich bei einem Typ in einen anderen konvertiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="58308-106">In a situation where a project makes both a project reference and a file reference, the compiler cannot guarantee that one type can be converted to another.</span></span>  
+ <span data-ttu-id="d1d1c-106">In einer Situation, in denen ein Projekt sowohl einen Projektverweis als auch ein Dateiverweis erstellt, garantiert der Compiler nicht, dass es sich bei einem Typ in einen anderen konvertiert werden kann.</span><span class="sxs-lookup"><span data-stu-id="d1d1c-106">In a situation where a project makes both a project reference and a file reference, the compiler cannot guarantee that one type can be converted to another.</span></span>  
   
- <span data-ttu-id="58308-107">Der folgende Pseudocode veranschaulicht eine Situation, die diesen Fehler verursachen kann.</span><span class="sxs-lookup"><span data-stu-id="58308-107">The following pseudo-code illustrates a situation that can generate this error.</span></span>  
+ <span data-ttu-id="d1d1c-107">Der folgende Pseudocode veranschaulicht eine Situation, die diesen Fehler verursachen kann.</span><span class="sxs-lookup"><span data-stu-id="d1d1c-107">The following pseudo-code illustrates a situation that can generate this error.</span></span>  
   
  `' ================ Visual Basic project P1 ================`  
   
@@ -47,19 +47,19 @@ ms.locfileid: "55261242"
   
  `End Class`  
   
- <span data-ttu-id="58308-108">Projekt `P1` indirekte Projekt verweist auf Projekt `P2` Projekt `P3`, und auch einen direkten Verweis auf `P3`.</span><span class="sxs-lookup"><span data-stu-id="58308-108">Project `P1` makes an indirect project reference through project `P2` to project `P3`, and also a direct file reference to `P3`.</span></span> <span data-ttu-id="58308-109">Die Deklaration von `commonObject` verwendet den Dateiverweis auf `P3`, während im Aufruf von `P2.getCommonClass` verwendet den Projektverweis `P3`.</span><span class="sxs-lookup"><span data-stu-id="58308-109">The declaration of `commonObject` uses the file reference to `P3`, while the call to `P2.getCommonClass` uses the project reference to `P3`.</span></span>  
+ <span data-ttu-id="d1d1c-108">Projekt `P1` indirekte Projekt verweist auf Projekt `P2` Projekt `P3`, und auch einen direkten Verweis auf `P3`.</span><span class="sxs-lookup"><span data-stu-id="d1d1c-108">Project `P1` makes an indirect project reference through project `P2` to project `P3`, and also a direct file reference to `P3`.</span></span> <span data-ttu-id="d1d1c-109">Die Deklaration von `commonObject` verwendet den Dateiverweis auf `P3`, während im Aufruf von `P2.getCommonClass` verwendet den Projektverweis `P3`.</span><span class="sxs-lookup"><span data-stu-id="d1d1c-109">The declaration of `commonObject` uses the file reference to `P3`, while the call to `P2.getCommonClass` uses the project reference to `P3`.</span></span>  
   
- <span data-ttu-id="58308-110">Das Problem in diesem Fall ist, dass es sich bei der Dateiverweis gibt an, einen Pfad und Namen für die Ausgabedatei `P3` (normalerweise p3.dll), während die Projektverweise auf das Quellprojekt ermitteln (`P3`) nach Projektname.</span><span class="sxs-lookup"><span data-stu-id="58308-110">The problem in this situation is that the file reference specifies a file path and name for the output file of `P3` (typically p3.dll), while the project references identify the source project (`P3`) by project name.</span></span> <span data-ttu-id="58308-111">Aus diesem Grund der Compiler nicht garantieren, dass den Typ `P3.commonClass` stammt aus der gleiche Quellcode über zwei unterschiedliche Verweise.</span><span class="sxs-lookup"><span data-stu-id="58308-111">Because of this, the compiler cannot guarantee that the type `P3.commonClass` comes from the same source code through the two different references.</span></span>  
+ <span data-ttu-id="d1d1c-110">Das Problem in diesem Fall ist, dass es sich bei der Dateiverweis gibt an, einen Pfad und Namen für die Ausgabedatei `P3` (normalerweise p3.dll), während die Projektverweise auf das Quellprojekt ermitteln (`P3`) nach Projektname.</span><span class="sxs-lookup"><span data-stu-id="d1d1c-110">The problem in this situation is that the file reference specifies a file path and name for the output file of `P3` (typically p3.dll), while the project references identify the source project (`P3`) by project name.</span></span> <span data-ttu-id="d1d1c-111">Aus diesem Grund der Compiler nicht garantieren, dass den Typ `P3.commonClass` stammt aus der gleiche Quellcode über zwei unterschiedliche Verweise.</span><span class="sxs-lookup"><span data-stu-id="d1d1c-111">Because of this, the compiler cannot guarantee that the type `P3.commonClass` comes from the same source code through the two different references.</span></span>  
   
- <span data-ttu-id="58308-112">Diese Situation tritt in der Regel auf, wenn Projektverweise und Dateiverweise kombiniert werden.</span><span class="sxs-lookup"><span data-stu-id="58308-112">This situation typically occurs when project references and file references are mixed.</span></span> <span data-ttu-id="58308-113">In der vorhergehenden Abbildung können das Problem würde nicht auftreten, wenn `P1` vorgenommen einen direkten Projektverweis auf `P3` anstelle eines Dateiverweises.</span><span class="sxs-lookup"><span data-stu-id="58308-113">In the preceding illustration, the problem would not occur if `P1` made a direct project reference to `P3` instead of a file reference.</span></span>  
+ <span data-ttu-id="d1d1c-112">Diese Situation tritt in der Regel auf, wenn Projektverweise und Dateiverweise kombiniert werden.</span><span class="sxs-lookup"><span data-stu-id="d1d1c-112">This situation typically occurs when project references and file references are mixed.</span></span> <span data-ttu-id="d1d1c-113">In der vorhergehenden Abbildung können das Problem würde nicht auftreten, wenn `P1` vorgenommen einen direkten Projektverweis auf `P3` anstelle eines Dateiverweises.</span><span class="sxs-lookup"><span data-stu-id="d1d1c-113">In the preceding illustration, the problem would not occur if `P1` made a direct project reference to `P3` instead of a file reference.</span></span>  
   
- <span data-ttu-id="58308-114">**Fehler-ID:** BC30955</span><span class="sxs-lookup"><span data-stu-id="58308-114">**Error ID:** BC30955</span></span>  
+ <span data-ttu-id="d1d1c-114">**Fehler-ID:** BC30955</span><span class="sxs-lookup"><span data-stu-id="d1d1c-114">**Error ID:** BC30955</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="58308-115">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="58308-115">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d1d1c-115">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="d1d1c-115">To correct this error</span></span>  
   
--   <span data-ttu-id="58308-116">Den Dateiverweis, einen Projektverweis zu ändern.</span><span class="sxs-lookup"><span data-stu-id="58308-116">Change the file reference to a project reference.</span></span>  
+-   <span data-ttu-id="d1d1c-116">Den Dateiverweis, einen Projektverweis zu ändern.</span><span class="sxs-lookup"><span data-stu-id="d1d1c-116">Change the file reference to a project reference.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="58308-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="58308-117">See also</span></span>
-- [<span data-ttu-id="58308-118">Typkonvertierung in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="58308-118">Type Conversions in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [<span data-ttu-id="58308-119">Verwalten von Verweisen in einem Projekt</span><span class="sxs-lookup"><span data-stu-id="58308-119">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)
+## <a name="see-also"></a><span data-ttu-id="d1d1c-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d1d1c-117">See also</span></span>
 
+- [<span data-ttu-id="d1d1c-118">Typkonvertierung in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="d1d1c-118">Type Conversions in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [<span data-ttu-id="d1d1c-119">Verwalten von Verweisen in einem Projekt</span><span class="sxs-lookup"><span data-stu-id="d1d1c-119">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)

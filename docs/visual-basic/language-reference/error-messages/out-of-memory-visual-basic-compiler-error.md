@@ -7,31 +7,32 @@ f1_keywords:
 helpviewer_keywords:
 - BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
-ms.openlocfilehash: 6e0efebfaa9c922ea7b72a7c4314801eb2c35dda
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ea12139118af32df18bac805aa0b4f1267c175c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595525"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822868"
 ---
-# <a name="out-of-memory-visual-basic-compiler-error"></a><span data-ttu-id="a0ef3-102">Nicht genügend Arbeitsspeicher (Visual Basic-Compilerfehler)</span><span class="sxs-lookup"><span data-stu-id="a0ef3-102">Out of memory (Visual Basic Compiler Error)</span></span>
-<span data-ttu-id="a0ef3-103">Es war mehr Arbeitsspeicher erforderlich als verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="a0ef3-103">More memory was required than is available.</span></span>  
+# <a name="out-of-memory-visual-basic-compiler-error"></a><span data-ttu-id="40a67-102">Nicht genügend Arbeitsspeicher (Visual Basic-Compilerfehler)</span><span class="sxs-lookup"><span data-stu-id="40a67-102">Out of memory (Visual Basic Compiler Error)</span></span>
+<span data-ttu-id="40a67-103">Es war mehr Arbeitsspeicher erforderlich als verfügbar ist.</span><span class="sxs-lookup"><span data-stu-id="40a67-103">More memory was required than is available.</span></span>  
   
- <span data-ttu-id="a0ef3-104">**Fehler-ID:** BC2004</span><span class="sxs-lookup"><span data-stu-id="a0ef3-104">**Error ID:** BC2004</span></span>  
+ <span data-ttu-id="40a67-104">**Fehler-ID:** BC2004</span><span class="sxs-lookup"><span data-stu-id="40a67-104">**Error ID:** BC2004</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="a0ef3-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="a0ef3-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="40a67-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="40a67-105">To correct this error</span></span>  
   
--   <span data-ttu-id="a0ef3-106">Schließen Sie nicht benötigte Anwendungen, Dokumente und Dateien.</span><span class="sxs-lookup"><span data-stu-id="a0ef3-106">Close unnecessary applications, documents and source files.</span></span>  
+-   <span data-ttu-id="40a67-106">Schließen Sie nicht benötigte Anwendungen, Dokumente und Dateien.</span><span class="sxs-lookup"><span data-stu-id="40a67-106">Close unnecessary applications, documents and source files.</span></span>  
   
--   <span data-ttu-id="a0ef3-107">Auszuschließen Sie erforderliche Steuerelemente und Formulare, sodass weniger gleichzeitig geladen werden</span><span class="sxs-lookup"><span data-stu-id="a0ef3-107">Eliminate unnecessary controls and forms so fewer are loaded at one time</span></span>  
+-   <span data-ttu-id="40a67-107">Auszuschließen Sie erforderliche Steuerelemente und Formulare, sodass weniger gleichzeitig geladen werden</span><span class="sxs-lookup"><span data-stu-id="40a67-107">Eliminate unnecessary controls and forms so fewer are loaded at one time</span></span>  
   
--   <span data-ttu-id="a0ef3-108">Reduzieren der Anzahl von `Public` Variablen.</span><span class="sxs-lookup"><span data-stu-id="a0ef3-108">Reduce the number of `Public` variables.</span></span>  
+-   <span data-ttu-id="40a67-108">Reduzieren der Anzahl von `Public` Variablen.</span><span class="sxs-lookup"><span data-stu-id="40a67-108">Reduce the number of `Public` variables.</span></span>  
   
--   <span data-ttu-id="a0ef3-109">Überprüfen Sie die verfügbaren Speicherplatz.</span><span class="sxs-lookup"><span data-stu-id="a0ef3-109">Check available disk space.</span></span>  
+-   <span data-ttu-id="40a67-109">Überprüfen Sie die verfügbaren Speicherplatz.</span><span class="sxs-lookup"><span data-stu-id="40a67-109">Check available disk space.</span></span>  
   
--   <span data-ttu-id="a0ef3-110">Den verfügbaren Arbeitsspeicher durch Installation von zusätzlichem Arbeitsspeicher oder das Neuzuordnen von Speicher zu erhöhen.</span><span class="sxs-lookup"><span data-stu-id="a0ef3-110">Increase the available RAM by installing additional memory or reallocating memory.</span></span>  
+-   <span data-ttu-id="40a67-110">Den verfügbaren Arbeitsspeicher durch Installation von zusätzlichem Arbeitsspeicher oder das Neuzuordnen von Speicher zu erhöhen.</span><span class="sxs-lookup"><span data-stu-id="40a67-110">Increase the available RAM by installing additional memory or reallocating memory.</span></span>  
   
--   <span data-ttu-id="a0ef3-111">Stellen Sie sicher, dass der Speicher freigegeben wird, wenn es nicht mehr benötigt wird.</span><span class="sxs-lookup"><span data-stu-id="a0ef3-111">Make sure that memory is freed when it is no longer needed.</span></span>  
+-   <span data-ttu-id="40a67-111">Stellen Sie sicher, dass der Speicher freigegeben wird, wenn es nicht mehr benötigt wird.</span><span class="sxs-lookup"><span data-stu-id="40a67-111">Make sure that memory is freed when it is no longer needed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0ef3-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a0ef3-112">See also</span></span>
-- [<span data-ttu-id="a0ef3-113">Fehlertypen</span><span class="sxs-lookup"><span data-stu-id="a0ef3-113">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a><span data-ttu-id="40a67-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="40a67-112">See also</span></span>
+
+- [<span data-ttu-id="40a67-113">Fehlertypen</span><span class="sxs-lookup"><span data-stu-id="40a67-113">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
