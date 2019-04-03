@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: ebb9d21e32993f2eb035993d32dc3de7d97b49f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46f59403feced4baafef4662065cb7daedbeaa7b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672135"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837077"
 ---
 # <a name="visual-basic-naming-conventions"></a>Benennungskonventionen in Visual Basic
 Wenn Sie ein Element in Visual Basic-Anwendung benennen, muss das erste Zeichen des Namens ein alphabetisches Zeichen oder einem Unterstrich sein. Beachten Sie jedoch, dass die Namen, die mit einem Unterstrich beginnen mit nicht konform sind die [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../../standard/language-independence-and-language-independent-components.md) (CLS).  
@@ -41,6 +41,7 @@ Wenn Sie ein Element in Visual Basic-Anwendung benennen, muss das erste Zeichen 
 -   Vermeiden Sie Namen in einem inneren Gültigkeitsbereich, die den Namen in einem äußeren Bereich identisch sind. Wenn die falsche Variable zugegriffen wird, können zu einem Fehler führen. Im Falle ein Konflikts zwischen einer Variablen und das Schlüsselwort mit demselben Namen müssen Sie das Schlüsselwort es mit der entsprechenden Typbibliothek abgrenzen, indem Sie identifizieren. Angenommen, Sie haben eine Variable namens `Date`, können Sie die systeminterne Funktion `Date` Funktion nur über einen Aufruf <xref:System.DateTime.Date%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Schlüsselwörter als Elementnamen in Code](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)
 - [Me, My, MyBase und MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [Namen deklarierter Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

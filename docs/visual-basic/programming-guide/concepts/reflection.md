@@ -2,12 +2,12 @@
 title: Reflektion (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 59910edda8e2dfc4ec8e697b1d5b9a0f47ff9dbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2ad8957d308aa98935c862ec1864b6682be904b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690110"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834880"
 ---
 # <a name="reflection-visual-basic"></a>Reflektion (Visual Basic)
 Reflektion bietet Objekte (vom Typ <xref:System.Type>), die Assemblys, Module und Typen beschreiben. Mithilfe von Reflektion können Sie dynamisch eine Instanz eines Typs erzeugen, den Typ an ein vorhandenes Objekt binden und Typinformationen von vorhandenen Objekten abfragen. Ebenso wird erläutert wie die Methoden vorhandener Objekte aufgerufen und auf ihre Felder und Eigenschaften zugegriffen werden kann. Wenn Sie Attribute in Ihrem Code verwenden, können Sie mit Reflektion auf diese zugreifen. Weitere Informationen finden Sie unter [Attribute](../../../standard/attributes/index.md).  
@@ -62,5 +62,6 @@ System.Console.WriteLine(info)
 -   [Abrufen von Informationen aus Attributen](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Visual Basic-Programmierhandbuch](../../../visual-basic/programming-guide/index.md)
 - [Assemblys in der Common Language Runtime (CLR)](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)

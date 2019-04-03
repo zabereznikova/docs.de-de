@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: aeacc49faad6198a9341a1ec7d010f1cd173912d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dbffe2bd196e798b90104aebb74269387660c794
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288976"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840457"
 ---
 # <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>Nicht-CLS-kompatible \<Membername > ist in einer CLS-kompatiblen Schnittstelle nicht zulässig
 Eine Eigenschaft, Prozedur oder das Ereignis in einer Schnittstelle als RuntimeCompatibility `<CLSCompliant(True)>` bei die Schnittstelle selbst als RuntimeCompatibility `<CLSCompliant(False)>` oder überhaupt nicht gekennzeichnet.  
@@ -36,5 +36,5 @@ Eine Eigenschaft, Prozedur oder das Ereignis in einer Schnittstelle als RuntimeC
 -   Wenn Sie dieses Element in der aktuellen Schnittstelle verbleiben müssen, entfernen Sie die <xref:System.CLSCompliantAttribute> aus seiner Definition oder kennzeichnen Sie ihn als `<CLSCompliant(False)>`.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Interface-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md)
 
+- [Interface-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md)

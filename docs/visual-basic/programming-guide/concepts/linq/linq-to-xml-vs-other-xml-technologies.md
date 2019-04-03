@@ -2,12 +2,12 @@
 title: LINQ to XML im Vergleich zu Anderen XML-Technologies2
 ms.date: 07/20/2015
 ms.assetid: 72ce3a82-ffc6-488c-98e7-b9b40f3591ec
-ms.openlocfilehash: 2a671e2588dfe5d325caf745d60fcb993f4d0052
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80d3d034454d4de74e8aafd41679b82d111e6f3e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690321"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839092"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML im Vergleich zu anderen XML-Technologien
 In diesem Thema wird [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mit den folgenden XML-Technologien verglichen: <xref:System.Xml.XmlReader>, XSLT, MSXML und XmlLite. Diese Informationen helfen Ihnen bei Ihrer Entscheidung für eine dieser Technologien.  
@@ -53,4 +53,5 @@ In diesem Thema wird [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] mit d
  XmlLite ist nicht in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] integriert. Die Produktivitätsverbesserungen für Programmierer, die zu den großen Vorteilen von [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] gehören, können mit XmlLite nicht erzielt werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erste Schritte (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

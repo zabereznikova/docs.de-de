@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
-ms.openlocfilehash: c57f431350d4f63507ee7374616b62ca32151c86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6da1031b60a4cd73c53588cf18992797c3fddab
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639405"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839066"
 ---
 # <a name="bad-file-name-or-number"></a>Der Dateiname oder die Zahl ist ungültig.
 Fehler beim Versuch, die die angegebene Datei zuzugreifen. Zu den möglichen Ursachen für diesen Fehler sind:  
@@ -29,5 +29,6 @@ Fehler beim Versuch, die die angegebene Datei zuzugreifen. Zu den möglichen Urs
 3.  Überprüfen Sie die Dateinamen, um sicherzustellen, dass sie den Betriebssystem-Konventionen entsprechen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>
 - [Visual Basic-Benennungskonventionen](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

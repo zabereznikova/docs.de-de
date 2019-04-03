@@ -2,12 +2,12 @@
 title: Brechen Sie eine asynchrone Aufgabe oder Aufgabenliste (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
-ms.openlocfilehash: 81676324145bcf8f6d9a13e757865fa86e6d2e23
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: deb469f2c083870fc96c9217fa862d189629df1f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374452"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834984"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>Brechen Sie eine asynchrone Aufgabe oder Aufgabenliste (Visual Basic)
 Sie können eine Schaltfläche einrichten, über die Sie eine asynchrone Anwendung abbrechen können, wenn Sie nicht darauf warten möchten, bis diese beendet wird. Anhand der Beispiele in diesem Thema können Sie einer Anwendung, über die der Inhalt einer Website oder einer Liste von Websites heruntergeladen wird, eine Schaltfläche zum Abbrechen hinzufügen.  
@@ -455,6 +455,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Threading.CancellationTokenSource>
 - <xref:System.Threading.CancellationToken>
 - [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

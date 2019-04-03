@@ -2,12 +2,12 @@
 title: Warteschlangen für unzustellbare Meldungen
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 263c1fd399c8863154e0e53a1f79528d38022b78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5877d7ae0c38b82053da87907c54c70ef11bd543
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721294"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837857"
 ---
 # <a name="dead-letter-queues"></a>Warteschlangen für unzustellbare Meldungen
 Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mit Fehlern bei der Zustellung. Es basiert auf der [Binden von MSMQ transaktive](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel. In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.
@@ -20,7 +20,7 @@ Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mi
 
  In einer Warteschlangenkommunikation kommuniziert der Client über eine Warteschlange mit dem Dienst. Genauer ausgedrückt bedeutet dies, dass der Client Nachrichten an eine Warteschlange sendet. Der Dienst empfängt Nachrichten aus der Warteschlange. Folglich müssen der Dienst und der Client nicht gleichzeitig ausgeführt werden, um über eine Warteschlange zu kommunizieren.
 
- Da die Kommunikation über Warteschlangen zu einer gewissen Verzögerung führen kann, können Sie der Nachricht eine Gültigkeitsdauer zuweisen, um sicherzustellen, dass die Nachricht nach Ablauf der Gültigkeit nicht mehr an die Anwendung gesendet wird. Es gibt auch Fälle, in denen eine Anwendung informiert werden muss, wenn eine Nachricht nicht zugestellt werden konnte. In derartigen Fällen, wenn beispielsweise die Gültigkeitsdauer der Nachricht abgelaufen ist, oder wenn die Nachricht nicht zugestellt werden konnte, werden die Nachrichten in der Warteschlange für unzustellbare Nachrichten abgelegt. Die sendende Anwendung kann die Nachricht daraufhin in der Warteschlange für unzustellbare Nachrichten lesen und Gegenmaßnahmen ergreifen. Diese reichen von keiner Maßnahme bis zur Behebung der Ursache für die Unzustellbarkeit der Nachricht und erneuter Sendung.
+ Da die Kommunikation über Warteschlangen zu einer gewissen Verzögerung führen kann, können Sie der Nachricht eine Gültigkeitsdauer zuweisen, um sicherzustellen, dass die Nachricht nach Ablauf der Gültigkeit nicht mehr an die Anwendung gesendet wird. Es gibt auch Fälle, in denen eine Anwendung informiert werden muss, wenn eine Nachricht nicht zugestellt werden konnte. In derartigen Fällen, wenn beispielsweise die Gültigkeitsdauer der Nachricht abgelaufen ist, oder wenn die Nachricht nicht zugestellt werden konnte, werden die Nachrichten in der Warteschlange für unzustellbare Nachrichten abgelegt. Die sendende Anwendung kann die Nachricht daraufhin in der Warteschlange für unzustellbare Nachrichten lesen und Korrekturmaßnahmen ergreifen. Diese reichen von keiner Maßnahme bis zur Behebung der Ursache für die Unzustellbarkeit der Nachricht und erneuter Sendung.
 
  Die Warteschlange für unzustellbare Nachrichten in der `NetMsmqBinding`-Bindung wird in den folgenden Eigenschaften ausgedrückt:
 
@@ -361,4 +361,3 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
   
-## <a name="see-also"></a>Siehe auch

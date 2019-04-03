@@ -2,12 +2,12 @@
 title: Externes RuleSet-Toolkit
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: 510b70f7ebeda784dce4731bb4a08896ac2e8361
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c453c6137beeae8eee0e356734a1f9cdf8d8568b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710042"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840236"
 ---
 # <a name="external-ruleset-toolkit"></a>Externes RuleSet-Toolkit
 
@@ -28,11 +28,9 @@ Die Komponenten dieses Beispiel umfassen:
 
 - Eine `ExternalPolicy`-Aktivität, die ein RuleSet vom RuleSet-Dienst anfordert und das RuleSet für den Workflow ausführt.
 
-Die Interaktion der Komponenten ist in Abbildung 1 dargestellt. In den nachfolgenden Abschnitten werden die einzelnen Komponenten beschrieben.
+Die Interaktion der Komponenten ist in der folgenden Abbildung dargestellt. In den nachfolgenden Abschnitten werden die einzelnen Komponenten beschrieben.
 
-![Übersicht über externen RuleSet-Beispiel](./media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
-
-Abbildung 1: Beispielübersicht
+![Diagramm mit der Übersicht über die External RuleSet Toolkit-Beispiel.](./media/external-ruleset-toolkit/ruleset-toolkit-overview.gif)
 
 > [!IMPORTANT]
 > Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.
@@ -45,19 +43,15 @@ Abbildung 1: Beispielübersicht
 
 ## <a name="ruleset-tool"></a>RuleSet-Tool
 
-Eine Bildschirmabbildung des RuleSet-Tools ist in Abbildung 2 dargestellt. Von der **Regel Store** Menü können Sie die verfügbaren RuleSets aus der Datenbank laden und geänderten ruleSets im Speicher. Eine Anwendungskonfigurationsdatei stellt eine Datenbank-Verbindungszeichenfolge für die RuleSet-Datenbank bereit. Wenn Sie das Tool starten, werden die RuleSets automatisch aus der konfigurierten Datenbank geladen.
+Die folgende Abbildung zeigt einen Screenshot des RuleSet-Tools. Von der **Regel Store** Menü können Sie die verfügbaren RuleSets aus der Datenbank laden und geänderten ruleSets im Speicher. Eine Anwendungskonfigurationsdatei stellt eine Datenbank-Verbindungszeichenfolge für die RuleSet-Datenbank bereit. Wenn Sie das Tool starten, werden die RuleSets automatisch aus der konfigurierten Datenbank geladen.
 
-![Ausgabe eines externen RuleSet-Toolkitbeispiels](./media/rulesetbrowser.gif "RuleSetBrowser")
-
-Abbildung 2: RuleSet-Browser
+![Screenshot der RuleSet-Browser.](./media/external-ruleset-toolkit/ruleset-browser-dialog.gif)
 
 Das RuleSet-Tool weist den RuleSets Haupt- und Nebenversionsnummern zu, wodurch Sie mehrere Versionen gleichzeitig verwalten und speichern können (das Tool bietet keinen Sperrmechanismus oder andere Konfigurationsverwaltungsfunktionen zusätzlich zur Versionsverwaltungsoption). Mit dem Tool können Sie neue RuleSet-Versionen erstellen oder vorhandene Versionen löschen. Beim Klicken auf **neu**, das Tool erstellt einen neuen RuleSet-Namen und übernimmt Version 1.0. Wenn Sie eine Version kopieren, erstellt das Tool eine Kopie der ausgewählten RuleSet-Version, einschließlich der enthaltenen Regeln, und weist neue, eindeutige Versionsnummern zu. Diese Versionsnummern basieren auf den Versionsnummern von vorhandenen RuleSets. Sie können den RuleSet-Namen und die Versionsnummern mit den zugeordneten Feldern des Formulars ändern.
 
-Beim Klicken auf **Bearbeiten von Regeln**, startet der RuleSet-Editor, wie in Abbildung 3 dargestellt.
+Beim Klicken auf **Bearbeiten von Regeln**, startet der RuleSet-Editor, wie in der folgenden Abbildung gezeigt:
 
-![Externes RuleSet-Toolkit-Beispielausgabe](./media/ruleseteditor.gif "RuleSetEditor")
-
-Abbildung 3: RuleSet-Editor
+![Screenshot der RuleSet-Editor angezeigt.](./media/external-ruleset-toolkit/ruleset-editor-dialog.gif)
 
 Dies ist ein rehosting im Editor-Dialogfeld, das Teil des Visual Studio für Windows Workflow Foundation-add-Ins ist. Es stellt die gleiche Funktionalität bereit, einschließlich der Intellisense-Unterstützung. Die Regeln werden anhand eines Zieltyps (z. B. eines Workflows) erstellt, die dem RuleSet im Tool zugeordnet ist; Beim Klicken auf **Durchsuchen** in des Hauptdialogfelds der **Workflow/Type Selector** Dialogfeld wird angezeigt, wie in Abbildung 4 dargestellt.
 
@@ -69,21 +63,17 @@ Sie können die **Workflow/Type Selector** Dialogfeld, um eine Assembly und eine
 
 Der Pfad der Assemblydatei und der Typname `name are stored with the` RuleSet in der Datenbank, sodass Wenn RuleSet aus der Datenbank abgerufen wird das Tool versucht, automatisch den Zieltyp lädt.
 
-Beim Klicken auf **OK** in die **Workflow/Type Selector** Dialogfeld überprüft den ausgewählten Typ anhand des RuleSet aus, um sicherzustellen, dass der Zieltyp alle Elemente, die von den Regeln verwiesen wird. Fehler werden angezeigt, einem **Validierungsfehler** Dialogfeld (siehe Abbildung 5). Sie können trotz der Fehler mit der Änderung fortfahren oder auf **Abbrechen**. Von der **Tools** Menü im Hauptdialogfeld des Tools, die Sie klicken können **überprüfen** die RuleSet-Version anhand der Zielaktivität erneut zu überprüfen.
+Beim Klicken auf **OK** in die **Workflow/Type Selector** Dialogfeld überprüft den ausgewählten Typ anhand des RuleSet aus, um sicherzustellen, dass der Zieltyp alle Elemente, die von den Regeln verwiesen wird. Fehler werden angezeigt, einem **Validierungsfehler** Dialogfeld. Sie können trotz der Fehler mit der Änderung fortfahren oder auf **Abbrechen**. Von der **Tools** Menü im Hauptdialogfeld des Tools, die Sie klicken können **überprüfen** die RuleSet-Version anhand der Zielaktivität erneut zu überprüfen.
 
-![Validierungsfehler vom externen RuleSet-Beispiel](./media/validationerrorsruleset.png "ValidationErrorsRuleSet")
-
-Abbildung 5: Validierungsfehler
+![Der Screenshot zeigt das Dialogfeld Überprüfungsfehler.](./media/external-ruleset-toolkit/validation-errors-dialog.png)
 
 Von der **Daten** Menü Tool für die Sie importieren und exportieren Sie die RuleSets. Beim Klicken auf **Import**, ein Dateiauswahl-Dialogfeld angezeigt wird, von dem Sie eine rules-Datei auswählen können. Dies kann oder möglicherweise nicht in eine Datei, die zunächst in Visual Studio erstellt. Die RULES-Datei sollte eine serialisierte `RuleDefinitions`-Instanz enthalten, die wiederum eine Auflistung der Bedingungen und RuleSets enthält. Das Tool verwendet keine der bedingungenauflistung es unterstützt jedoch die Verwendung der `RuleDefinitions` Rules-Format, um die Interaktion mit der Visual Studio-Umgebung zu ermöglichen.
 
-Nach der Auswahl einer rules-Datei eine **RuleSet-Selektor** angezeigt (siehe Abbildung 6). Mit dem Dialogfeld können Sie die RuleSets aus der Datei auswählen, die Sie importieren möchten (als Standard sind alle RuleSets angegeben). Die RuleSets in der RULES-Datei weisen keine Versionsnummern auf, da ihre Versionsverwaltung in einem WF-Projekt der Version der Assembly entspricht. Während des Importvorgangs weist das Tool automatisch die nächste verfügbare Hauptversionsnummer (die Sie nach dem Import ändern können); sehen Sie die zugewiesenen Versionsnummern in der **RuleSet-Selektor** Liste.
+Nach der Auswahl einer rules-Datei eine **RuleSet-Selektor** Dialogfeld wird angezeigt. Mit dem Dialogfeld können Sie die RuleSets aus der Datei auswählen, die Sie importieren möchten (als Standard sind alle RuleSets angegeben). Die RuleSets in der RULES-Datei weisen keine Versionsnummern auf, da ihre Versionsverwaltung in einem WF-Projekt der Version der Assembly entspricht. Während des Importvorgangs weist das Tool automatisch die nächste verfügbare Hauptversionsnummer (die Sie nach dem Import ändern können); sehen Sie die zugewiesenen Versionsnummern in der **RuleSet-Selektor** Liste.
 
-Für jedes importierte RuleSet versucht das Tool, den zugeordneten Typ im Ordner bin\Debug unterhalb des Verzeichnisses der RULES-Datei (falls vorhanden) basierend auf den im RuleSet verwendeten Membern zu finden. Falls mehrere passende Typen gefunden werden, versucht das Tool, einen Typ basierend auf einer Übereinstimmung zwischen der RULES-Datei und dem Typnamen zu finden (z.&#160;B. entspricht der `Workflow1`-Typ Workflow1.rules). Wenn mehrere Übereinstimmungen vorhanden sind, werden Sie aufgefordert, den Typ auszuwählen. Wenn dieser Mechanismus für die automatische Identifizierung keine übereinstimmende Assembly oder keinen ersten Typ findet, nach dem Import können Sie auf **Durchsuchen** auf des Hauptdialogfelds, an den zugeordneten Typ zu navigieren.
+Für jedes importierte RuleSet versucht das Tool, den zugeordneten Typ im Ordner bin\Debug unterhalb des Verzeichnisses der RULES-Datei (falls vorhanden) basierend auf den im RuleSet verwendeten Membern zu finden. Falls mehrere passende Typen gefunden werden, versucht das Tool, einen Typ basierend auf einer Übereinstimmung zwischen der RULES-Datei und dem Typnamen zu finden (z.&amp;#160;B. entspricht der `Workflow1`-Typ Workflow1.rules). Wenn mehrere Übereinstimmungen vorhanden sind, werden Sie aufgefordert, den Typ auszuwählen. Wenn dieser Mechanismus für die automatische Identifizierung keine übereinstimmende Assembly oder keinen ersten Typ findet, nach dem Import können Sie auf **Durchsuchen** auf des Hauptdialogfelds, an den zugeordneten Typ zu navigieren. Die folgende Abbildung zeigt die RuleSet-Selektor:
 
-![RuleSet-Selektor](./media/rulesetselector.gif "RuleSetSelector")
-
-Abbildung 6: RuleSet-Selektor
+![Screenshot, der das RuleSet-Selektor-Dialogfeld anzeigt.](./media/external-ruleset-toolkit/ruleset-selector-dialog.gif)
 
 Beim Klicken auf **Data-Export** im Hauptdialogfeld des Tools-Menü die **RuleSet-Selektor** Dialogfeld erneut angezeigt, von dem Sie die RuleSets aus der Datenbank bestimmen können, die exportiert werden sollen. Beim Klicken auf **OK**, **Datei speichern** Dialogfeld wird angezeigt, in dem Sie den Namen und Speicherort der resultierenden rules-Datei angeben können. Da die RULES-Datei keine Versionsinformationen enthält, können Sie lediglich eine RuleSet-Version mit einem bestimmten RuleSet-Namen auswählen.
 

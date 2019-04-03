@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-ms.openlocfilehash: 53f021faa9e4ae69a71d825ca823e1180421afc6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c364296997f571956caad995581102ed990549d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522478"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842563"
 ---
 # <a name="pathfile-access-error"></a>Pfad-/Dateizugriffsfehler
 Während eines Datei- oder Datenträgerzugriffs könnte das Betriebssystem keine Verbindung zwischen dem Pfad und den Dateinamen herstellen.  
@@ -25,4 +25,5 @@ Während eines Datei- oder Datenträgerzugriffs könnte das Betriebssystem keine
 4.  Stellen Sie sicher, dass Sie nicht versucht haben, um ein Visual Basic-Projekt in einer Datenbank oder das Dokument zu ändern.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)

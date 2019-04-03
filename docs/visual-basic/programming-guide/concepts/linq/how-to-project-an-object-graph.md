@@ -2,18 +2,18 @@
 title: 'Vorgehensweise: Projektieren eines Objektdiagramms (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 32629718b26036530bc9c856f5dff6ed1d7ae0c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6403bb0aa63120b6ec82e4e94d483769f2cfe1aa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730827"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834555"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a>Vorgehensweise: Projektieren eines Objektdiagramms (Visual Basic)
 In diesem Thema wird gezeigt, wie Sie ein XML-Dokument für das Projizieren (oder Auffüllen) eines Objektdiagramms verwenden können.  
   
 ## <a name="example"></a>Beispiel  
- Der folgende Code füllt ein Objektdiagramm mit dem `Address`, `PurchaseOrder`, und `PurchaseOrderItem` Klassen aus der [XML-Beispieldatei: Typische Bestellung (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML-Dokument.  
+ Der folgende Code füllt ein Objektdiagramm mit den Klassen `Address`, `PurchaseOrder` und `PurchaseOrderItem` aus dem XML-Dokument [Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Class Address  
@@ -338,6 +338,7 @@ ShipDate: 5/21/1999
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
 - [Projektionen und Transformationen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

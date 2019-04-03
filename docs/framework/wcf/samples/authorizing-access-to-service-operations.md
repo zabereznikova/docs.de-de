@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Authorizing Access To Service Operations Sample [Windows Communication Foundation]
 - authorization, Windows Communication Foundation sample
 ms.assetid: ddcfdaa5-8b2e-4e13-bd85-887209dc6328
-ms.openlocfilehash: b38134c901e1058e966d217e9b673083e45803c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50b6ab528aaebabbe709104632e269dfa68072a5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716614"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842368"
 ---
 # <a name="authorizing-access-to-service-operations"></a>Zugriffsautorisierung für Dienstvorgänge
 In diesem Beispiel wird veranschaulicht, wie Sie mit der [ \<ServiceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md) um Verwendung ermöglichen die <xref:System.Security.Permissions.PrincipalPermissionAttribute> Attribut, um den Zugriff auf Dienstvorgänge autorisieren. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) Beispiel. Dienst und Client werden mithilfe von konfiguriert die [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). Die `mode` Attribut der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) festgelegt wurde `Message` und `clientCredentialType` festgelegt wurde `Windows`. <xref:System.Security.Permissions.PrincipalPermissionAttribute> wird auf jede Dienstmethode angewandt und für die Beschränkung des Zugriffs auf jeden Vorgang verwendet. Der Aufrufer muss Windows-Administrator sein, um auf jeden Vorgang zugreifen zu können.  
@@ -63,4 +63,3 @@ public double Add(double n1, double n2)
   
 3.  Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Siehe auch

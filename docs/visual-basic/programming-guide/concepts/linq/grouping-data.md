@@ -2,12 +2,12 @@
 title: Gruppieren von Daten (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: 14b114906a0e04a4d11c323f80b070603a7286c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c658ac5c46baec1bfa976074b78ac86d791b6515
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576963"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842056"
 ---
 # <a name="grouping-data-visual-basic"></a>Gruppieren von Daten (Visual Basic)
 Als „Gruppieren“ wird das Anordnen von Daten in Gruppen bezeichnet, sodass die Elemente in jeder Gruppe über ein gemeinsames Attribut verfügen.  
@@ -64,6 +64,7 @@ MsgBox(sb.ToString())
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Linq>
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Group By-Klausel](../../../../visual-basic/language-reference/queries/group-by-clause.md)

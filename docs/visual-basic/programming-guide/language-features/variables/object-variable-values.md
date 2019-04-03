@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: ce38089e91b25cf50e738d956881f3a44bfa3306
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c17c5f85952596f0a080ca473e8f792740e66b8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588724"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840392"
 ---
 # <a name="object-variable-values-visual-basic"></a>Werte von Objektvariablen (Visual Basic)
 Eine Variable die [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) kann auf Daten eines beliebigen Typs verweisen. Der Wert, die Sie in Speichern einer `Object` Variable wird an anderer Stelle im Arbeitsspeicher gespeichert, während die Variable selbst einen Zeiger auf die Daten enthält.  
@@ -67,6 +67,7 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
  Sie können deklarieren und verwenden Sie ein Array von `Object` Variablen. Dies ist nützlich, wenn Sie eine Vielzahl von Datentypen und Objektklassen verarbeiten müssen. Alle Elemente in einem Array müssen den gleichen Datentyp deklariert. Dieser Datentyp als deklarieren `Object` ermöglicht Ihnen das Speichern von Objekten und -Klasseninstanzen zusammen mit anderen Datentypen in das Array.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Deklaration von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [Zuweisen von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)

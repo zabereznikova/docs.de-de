@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36810
 ms.assetid: 9323b5d2-ba14-4e49-91f1-9ad647162144
-ms.openlocfilehash: 17886ececbd418ae60d6321c7a6278a1e982b9af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 337fc1fb4dfc83c9b4814d3e45eb0cbe0758f7ce
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611279"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842524"
 ---
 # <a name="errors-occurred-while-compiling-the-xml-schemas-in-the-project"></a>Fehler beim Kompilieren der XML-Schemas im Projekt
 Fehler beim Kompilieren der XML-Schemas im Projekt. Aus diesem Grund ist die XML-IntelliSense nicht verfügbar.  
@@ -32,5 +32,6 @@ Fehler beim Kompilieren der XML-Schemas im Projekt. Aus diesem Grund ist die XML
 -   Wenn kein Fehler im XSD-Schema identifiziert wird, möglicherweise der XML-Compiler nicht genügend Informationen, um eine detaillierte Fehlermeldung bereitzustellen. Möglicherweise können Sie detailliertere Fehlerinformationen erhalten, wenn Sie sicherstellen, dass die XML-Namespaces für die XSD-Dateien in Ihrem Projekt Übereinstimmung, die XML-Namespaces, die für das XML-Schemaset in Visual Studio identifiziert enthalten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Fenster „Fehlerliste“](/visualstudio/ide/reference/error-list-window)
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

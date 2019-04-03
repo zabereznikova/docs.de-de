@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31043
 ms.assetid: 5bd90c71-1b78-444b-91e1-4789451ef085
-ms.openlocfilehash: 06e5e36f3e0522e0449c0ef9698f3a1b01b9cb5f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58889809b3d8d0823784279c421a141dc8056984
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549066"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841965"
 ---
 # <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a>Arrays, die als Strukturmember deklariert sind, können nicht mit einer vorgegebenen Größe definiert werden.
 Ein Array in einer Struktur wird mit einer vorgegebenen Größe deklariert. Jedes Strukturelement kann nicht initialisiert, und deklarieren eine Arraygröße ist eine Form der Initialisierung.  
@@ -37,5 +37,6 @@ Ein Array in einer Struktur wird mit einer vorgegebenen Größe deklariert. Jede
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Vorgehensweise: Deklarieren einer Struktur](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)

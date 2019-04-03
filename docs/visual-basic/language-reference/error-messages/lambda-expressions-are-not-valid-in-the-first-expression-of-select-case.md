@@ -1,5 +1,5 @@
 ---
-title: Lambdaausdrücke sind im ersten Ausdruck einer 'Select Case'-Anweisung nicht gültig
+title: Lambda-Ausdrücke sind im ersten Ausdruck einer 'Select Case'-Anweisung nicht gültig
 ms.date: 07/20/2015
 f1_keywords:
 - bc36635
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: d56515093020a4c987d132491957ce6db9e21683
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e51ba4ad0910d0db2b927f84303e5c55515f4b84
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287793"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843452"
 ---
-# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Lambdaausdrücke sind im ersten Ausdruck einer 'Select Case'-Anweisung nicht gültig
+# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Lambda-Ausdrücke sind im ersten Ausdruck einer 'Select Case'-Anweisung nicht gültig
 Sie können einen Lambda-Ausdruck keine für den Testausdruck in einer `Select Case` Anweisung. Definitionen von Lambda-Ausdrücken zurückgegeben werden, Funktionen und der Testausdruck eine `Select Case` -Anweisung muss ein elementarer Datentyp sein.  
   
  Der folgende Code verursacht diesen Fehler:  
@@ -41,6 +41,7 @@ End Select
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Lambda-Ausdrücke](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [If...Then...Else-Anweisung](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [Select...Case-Anweisung](../../../visual-basic/language-reference/statements/select-case-statement.md)

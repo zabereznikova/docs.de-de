@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Control-Namespace-Präfixe (Visual Basic) (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
-ms.openlocfilehash: 91117307caf7e55bd8b512fbd841760616f0b2c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e5a05d2fa93e61338f450d0a4d890fa94c04fd2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623741"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839032"
 ---
 # <a name="how-to-control-namespace-prefixes-visual-basic-linq-to-xml"></a>Vorgehensweise: Control-Namespace-Präfixe (Visual Basic) (LINQ to XML)
 In diesem Thema wird beschrieben, wie Sie Namespacepräfixe steuern können.  
@@ -54,4 +54,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

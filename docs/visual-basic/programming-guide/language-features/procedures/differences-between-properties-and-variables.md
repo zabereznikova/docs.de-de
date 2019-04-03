@@ -14,12 +14,12 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: f2388f091278d398b5e8f3b82f147ab69937f2aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4800e23519c2cc1c8b2b219287b9fa018b9bbf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689522"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842901"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Unterschiede zwischen Eigenschaften und Variablen in Visual Basic
 Variablen und Eigenschaften, die sowohl Werte darzustellen, die Sie zugreifen können. Es gibt jedoch Unterschiede in den Speicher und Implementierung.  
@@ -38,13 +38,14 @@ Variablen und Eigenschaften, die sowohl Werte darzustellen, die Sie zugreifen k�
 |Deklaration|Einzelne Declaration-Anweisung|Reihe von Anweisungen in einem Codeblock|  
 |Implementierung|Zentralen Speicherort|Ausführbarer Code (Eigenschaftenprozeduren)|  
 |Speicher|Direkt zugeordnet und Wert der Variablen|In der Regel hat internen Speicher außerhalb der Eigenschaft enthaltende Klasse oder das Modul nicht verfügbar.<br /><br /> Eigenschaftswert nicht existiert oder als gespeicherte Element <sup>1</sup>|  
-|Ausführbarer code|Keine|Müssen mindestens eine Prozedur|  
+|Ausführbarer code|Keiner|Müssen mindestens eine Prozedur|  
 |Lese- und Schreibzugriff|Lese-/Schreibzugriff oder schreibgeschützten|Lese-/Schreibzugriff, schreibgeschützt oder lesegeschützt|  
 |Benutzerdefinierte Aktionen (zusätzlich zum Akzeptieren oder Wert zurückgibt)|Nicht möglich|Kann als Teil des festlegen oder Abrufen des Eigenschaftswerts ausgeführt werden|  
   
  <sup>1</sup> im Gegensatz zu einer Variablen, entspricht der Wert einer Eigenschaft kann nicht direkt auf ein einzelnes Element des Speichers. Der Speicher kann für die der Einfachheit halber oder die Sicherheitsgruppe in Teile aufgeteilt werden, oder der Wert kann in verschlüsselter Form gespeichert werden. In diesen Fällen die `Get` -Prozedur Bestandteile zusammen oder entschlüsselt den gespeicherten Wert, und die `Set` -Prozedur den neuen Wert zu verschlüsseln oder Teilen Sie es in den zugehörigen Speicher. Ein Eigenschaftswert möglicherweise flüchtig und wie die Zeit des Tages, in diesem Fall die `Get` Prozedur berechnet es im laufenden Betrieb jedes Mal, die Sie Zugriff auf die Eigenschaft.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Eigenschaftenprozeduren](./property-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30148
 ms.assetid: 4426e8fc-cb39-4eb8-ba95-503cd32fcc89
-ms.openlocfilehash: d29d7609f8f3f38eadda9a9c763f3ba8e6b99e61
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: debab4e495d05a05801dd11850d0665c8bd6b299
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365086"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834321"
 ---
 # <a name="first-statement-of-this-sub-new-must-be-a-call-to-mybasenew-or-myclassnew-no-accessible-constructor-without-parameters"></a>Die erste Anweisung dieses "Sub New" muss ein Aufruf an "MyBase.New" oder "MyClass.New" sein (Zugriff auf Konstruktor ohne Parameter nicht möglich)
 Die erste Anweisung dieser "Sub New" muss ein Aufruf von "MyBase.New" oder "MyClass.New" sein, da Basisklasse\<Basename >' von '\<Derivedname >' verfügt nicht über zugegriffen werden kann 'Sub New"hat, die ohne Argumente aufgerufen werden kann.  
@@ -28,4 +28,5 @@ Die erste Anweisung dieser "Sub New" muss ein Aufruf von "MyBase.New" oder "MyCl
      Wenn die Basisklasse der Klasse einen Konstruktor verfügt, die als deklariert wird z. B. `Public Sub New(ByVal index as Integer)`, wird die erste Anweisung in der abgeleiteten Klassenkonstruktor möglicherweise `MyBase.New(100)`.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Grundlagen der Vererbung](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: c7243108d0b7c06f48a21f343321322bb2cc2946
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560281"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833814"
 ---
 # <a name="composite-data-types-visual-basic"></a>Zusammengesetzte Datentypen (Visual Basic)
 Zusätzlich zu den bereitgestellten Typen Visual Basic elementarer Datentyp können Sie auch Elemente verschiedener Inhaltstypen erstellen zusammenstellen *zusammengesetzte Datentypen* wie z. B. Klassen, Strukturen und Arrays. Sie können zusammengesetzte Datentypen von elementare Typen und von anderen zusammengesetzten Typen erstellen. Beispielsweise können Sie ein Array von Strukturelementen oder eine Struktur mit Array-Elemente definieren.  
@@ -62,6 +62,7 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
  Weitere Informationen über Klassen finden Sie unter [Objekte und Klassen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Elementare Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

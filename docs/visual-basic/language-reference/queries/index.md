@@ -2,9 +2,15 @@
 title: Abfragen (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'queries [Visual Basic]'
-  - 'LINQ, queries'
+- queries [Visual Basic]
+- LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
+ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836895"
 ---
 # <a name="queries-visual-basic"></a>Abfragen (Visual Basic)
 Visual Basic ermöglicht Ihnen die Erstellung [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] -Ausdrücken in Ihrem Code.  
@@ -53,5 +59,6 @@ Visual Basic ermöglicht Ihnen die Erstellung [!INCLUDE[vbteclinqext](~/includes
  Beschreibt die `Where` -Klausel, die eine filterbedingung für eine Abfrage angibt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

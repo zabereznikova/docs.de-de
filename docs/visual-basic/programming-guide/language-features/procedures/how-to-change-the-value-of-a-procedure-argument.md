@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: ea91e88f6833b9a3abbb349688c277be10312a6c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974912"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837493"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>Vorgehensweise: Ändern des Werts eines Prozedurarguments (Visual Basic)
 Wenn Sie eine Prozedur aufrufen, entspricht jedes Argument, das Sie angeben, einer der Parameter in der Prozedur definiert. In einigen Fällen kann der Code der Prozedur den Wert, der zugrunde liegenden Argument im aufrufenden Code ändern. In anderen Fällen kann die Prozedur nur die lokale Kopie eines Arguments ändern.  
@@ -78,6 +78,7 @@ Wenn Sie eine Prozedur aufrufen, entspricht jedes Argument, das Sie angeben, ein
  Es ist immer ein potenzielles Risiko einer Prozedur zum Ändern des Werts, der ein Argument im aufrufenden Code zugrunde liegt. Stellen Sie sicher, dass Sie erwarten, dass dieser Wert geändert werden, und auf Gültigkeit überprüft werden vor der Verwendung vorbereitet werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verfahren](./index.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Vorgehensweise: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)

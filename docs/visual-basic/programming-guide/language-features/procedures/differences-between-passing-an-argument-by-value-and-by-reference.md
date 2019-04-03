@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], passing arguments by value
 - arguments [Visual Basic], passing by value or by reference
 ms.assetid: 5f5c38fe-3e2d-494c-8fff-f4025b55ec93
-ms.openlocfilehash: 129bb01184d051572ac757a2883aac4de8469d2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b85941c14721280a5025db442c4793930244ec8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513307"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837511"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis (Visual Basic)
 Wenn Sie ein oder mehrere Argumente an eine Prozedur übergeben, entspricht jedes Argument im aufrufenden Code eine zugrunde liegende Programmierelement ein Element. Sie können entweder den Wert dieses Elements zugrunde liegenden oder einen Verweis darauf übergeben. Dies bezeichnet man als den *Übergabemechanismus*.  
@@ -40,6 +40,7 @@ Wenn Sie ein oder mehrere Argumente an eine Prozedur übergeben, entspricht jede
 |Verweistyp (enthält einen Zeiger auf eine Klasse oder Struktur-Instanz)|Die Prozedur kann die Variable kann nicht geändert werden jedoch ändern Membern der Instanz auf der er verweist.|Die Variable und den Membern der Instanz auf der er verweist, kann die Prozedur ändern.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verfahren](./index.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Vorgehensweise: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: 78c5303461ecf25a1487e072f4f6be25bde98dca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b872eda97d1e349ad781b12810e4b166d6e46fe1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587462"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837311"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Übergeben von Argumenten nach Position und Name (Visual Basic)
 Beim Aufruf einer `Sub` oder `Function` Verfahren können Sie Argumente übergeben *anhand der Position* – in der Reihenfolge, in dem sie in der Definition der Prozedur angezeigt werden, oder Sie übergeben diese *anhand des Namens*, ohne Bezug zum Positionieren.  
@@ -95,6 +95,7 @@ Argumente können nicht anhand des Namens nicht eingeben müssen die erforderlic
 Sie können nicht anhand des Namens ein Parameterarray übergeben. Dies ist daran, dass wenn Sie die Prozedur aufrufen, eine unbestimmte Anzahl von kommagetrennten Argumenten für das Parameterarray bereitgestellt, und der Compiler kann nicht mehr als ein Argument mit einem einzigen Namen zuordnen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verfahren](./index.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Vorgehensweise: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)

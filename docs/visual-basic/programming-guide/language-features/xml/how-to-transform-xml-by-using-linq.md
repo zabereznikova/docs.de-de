@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML [Visual Basic], transforming
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
-ms.openlocfilehash: 628af13a4cdea41ade943b69e326ec2d9abcbf1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d07c47e64b7eaea80155eabbc50bc2bae0a889c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536346"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834259"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>Vorgehensweise: Transformieren von XML mithilfe von LINQ (Visual Basic)
 [XML-Literale](../../../../visual-basic/language-reference/xml-literals/index.md) erleichtern das Lesen von XML aus einer Quelle, und in ein neues XML-Format transformieren. Sie können profitieren Sie von LINQ-Abfragen zum Abrufen des Inhalts zu transformieren oder Ändern von Inhalt in einem vorhandenen Dokument in ein neues XML-Format.  
@@ -156,6 +156,7 @@ ms.locfileid: "54536346"
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [XML-Literale](../../../../visual-basic/language-reference/xml-literals/index.md)
 - [Bearbeiten von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

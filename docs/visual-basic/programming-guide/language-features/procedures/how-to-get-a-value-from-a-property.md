@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: de5719527216411c7bd156f2cc0d369442eaee20
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7dbc9d926ae937dd032c0c054bde440037ab9f0d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964772"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842914"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>Vorgehensweise: Abrufen eines Werts aus einer Eigenschaft (Visual Basic)
 Sie rufen den Wert einer Eigenschaft, indem Sie den Eigenschaftennamen in einen Ausdruck einschließen.  
@@ -39,6 +39,7 @@ Sie rufen den Wert einer Eigenschaft, indem Sie den Eigenschaftennamen in einen 
  Der Wert der Eigenschaft ist Teil des Ausdrucks wie eine Variable oder Konstante würde, oder es befindet sich in der Variablen oder Eigenschaft auf der linken Seite der Zuweisung.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verfahren](./index.md)
 - [Eigenschaftenprozeduren](./property-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)

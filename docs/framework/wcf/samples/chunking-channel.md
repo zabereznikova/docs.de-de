@@ -2,12 +2,12 @@
 title: Segmentierungskanal
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 4adbd558aff9e1689b1e14521c43f1cad281dbc6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0733a1ce914be98f6bad9b8f58ca8e4384ac74fa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411498"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834763"
 ---
 # <a name="chunking-channel"></a>Segmentierungskanal
 Beim Senden großer Nachrichten mit Windows Communication Foundation (WCF) ist es oft wünschenswert, um die Menge an Arbeitsspeicher verwendet, um die Pufferung dieser Nachrichten einzuschränken. Eine mögliche Lösung besteht im Streamen des Nachrichtentexts (vorausgesetzt, der größte Teil der Daten befindet sich dort). Einige Protokolle erfordern jedoch die Pufferung der Nachricht als Ganzes. Zuverlässiges Messaging und Sicherheit sind zwei solche Beispiele. Eine weitere mögliche Lösung besteht darin, die große Nachricht in kleinere Nachrichten zu teilen, so genannte Segmente, diese Segmente jeweils einzeln zu senden und dann auf der Empfängerseite die große Nachricht wiederherzustellen. Die Anwendung selbst könnte diese Segmentierung und Desegmentierung vornehmen, oder es könnte alternativ ein benutzerdefinierter Kanal dafür verwendet werden. Das Beispiel für den Segmentierungskanal zeigt, wie mit einem benutzerdefinierten Protokollkanal oder Mehrschicht-Kanal das Segmentieren und Desegmentieren beliebig großer Nachrichten vorgenommen werden kann.  
@@ -199,9 +199,7 @@ as the ChunkingStart message.
 ```  
   
 ## <a name="chunking-channel-architecture"></a>Segmentierungskanalarchitektur  
- Der Segmentierungskanal ist ein `IDuplexSessionChannel`, der im Allgemeinen der typischen Kanalarchitektur folgt. Es gibt ein `ChunkingBindingElement`, das eine `ChunkingChannelFactory` und einen `ChunkingChannelListener` erstellen kann. 
-  `ChunkingChannelFactory` erstellt auf Anforderung Instanzen von `ChunkingChannel`. 
-  `ChunkingChannelListener` erstellt Instanzen von `ChunkingChannel`, wenn ein neuer innerer Kanal akzeptiert wird. Der `ChunkingChannel` selbst ist für das Senden und Empfangen von Nachrichten verantwortlich.  
+ Der Segmentierungskanal ist ein `IDuplexSessionChannel`, der im Allgemeinen der typischen Kanalarchitektur folgt. Es gibt ein `ChunkingBindingElement`, das eine `ChunkingChannelFactory` und einen `ChunkingChannelListener` erstellen kann. `ChunkingChannelFactory` erstellt auf Anforderung Instanzen von `ChunkingChannel`. `ChunkingChannelListener` erstellt Instanzen von `ChunkingChannel`, wenn ein neuer innerer Kanal akzeptiert wird. Der `ChunkingChannel` selbst ist für das Senden und Empfangen von Nachrichten verantwortlich.  
   
  Eine Ebene tiefer beruht `ChunkingChannel` für die Implementierung des Segmentierungsprotokolls auf mehreren Komponenten. Auf der Senderseite verwendet der Kanal einen benutzerdefinierten <xref:System.Xml.XmlDictionaryWriter>, den so genannten `ChunkingWriter`, der die eigentliche Segmentierung durchführt. `ChunkingWriter` verwendet den inneren Kanal direkt zum Senden von Segmenten. Durch die Verwendung eines benutzerdefinierten `XmlDictionaryWriter` können Segmente versendet werden, während der große Text der ursprünglichen Nachricht geschrieben wird. Dies bedeutet, dass nicht die gesamte ursprüngliche Nachricht gepuffert wird.  
   
@@ -286,8 +284,7 @@ interface ITestService
   
  `OnCreateChannel` verwendet die innere Kanalfactory zur Erstellung eines inneren `IDuplexSessionChannel`-Kanals. Anschließend erstellt es einen neuen `ChunkingDuplexSessionChannel`, dem sie beim Empfang diesen inneren Kanal sowie die Liste der zu segmentierenden Nachrichtenaktionen und die maximale Anzahl der zu puffernden Segmente übergibt. Die Liste der zu segmentierenden Nachrichtenaktionen und die maximale Anzahl der zu puffernden Segmente sind zwei Parameter, die im Konstruktor an `ChunkingChannelFactory` weitergegeben werden. Im Abschnitt über `ChunkingBindingElement` wird beschrieben, woher diese Werte kommen.  
   
- 
-  `OnOpen`, `OnClose`, `OnAbort` und ihre asynchronen Entsprechungen rufen die entsprechende Zustandsübergangsmethode in der inneren Kanalfactory auf.  
+ `OnOpen`, `OnClose`, `OnAbort` und ihre asynchronen Entsprechungen rufen die entsprechende Zustandsübergangsmethode in der inneren Kanalfactory auf.  
   
 ## <a name="implementing-channel-listener"></a>Implementieren eines Kanallisteners  
  Der `ChunkingChannelListener` ist ein Wrapper um einen inneren Kanallistener. Neben dem Delegieren von Aufrufen an diesen inneren Kanallistener besteht seine Hauptaufgabe darin, neue `ChunkingDuplexSessionChannels` um Kanäle zu legen, die aus dem inneren Kanallistener akzeptiert wurden. Dies erfolgt in `OnAcceptChannel` und `OnEndAcceptChannel`. Dem neu erstellten `ChunkingDuplexSessionChannel` wird der innere Kanal, zusammen mit den anderen, bereits beschriebenen Parametern, übergeben.  
@@ -381,4 +378,3 @@ Service started, press enter to exit
  > Sent chunk 10 of message 5b226ad5-c088-4988-b737-6a565e0563dd  
 ```  
   
-## <a name="see-also"></a>Siehe auch

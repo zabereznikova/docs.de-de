@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203625"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843100"
 ---
 # <a name="access-levels-in-visual-basic"></a>Zugriffsebenen in Visual Basic
 Die *Zugriffsebene* eines deklarierten Elements wird das Ausmaß der Fähigkeit, darauf zuzugreifen, d. h., welcher Code hat über die Berechtigung zum Lesen oder darin schreiben. Dies wird bestimmt, nicht nur durch, wie Sie das Element selbst deklarieren, sondern auch von der Zugriffsebene des Containers von des Elements. Code, der nicht auf ein einschließenden Element zugreifen kann: Dabei kann auf keinen der enthaltenen Elemente zugreifen, auch wenn diese als deklariert `Public`. Z. B. eine `Public` -Variable in eine `Private` Struktur kann aus zugegriffen werden, in der Klasse, die die Struktur enthält, jedoch nicht von außerhalb der Klasse.  
@@ -115,6 +115,7 @@ Die Schlüsselwörter, die Zugriffsebene angeben heißen *Zugriffsmodifizierer*.
 |`Private Protected`|Code in der Klasse, die ein privates geschütztes Element deklariert, oder Code in einer abgeleiteten Klasse finden Sie in der gleichen Assembly wie die Bas-Klasse.|Schnittstellen<br /><br /> Klassen<br /><br /> Strukturen<br /><br /> Verfahren<br /><br /> Eigenschaften<br /><br /> Membervariablen<br /><br /> Konstanten<br /><br /> Enumerationen<br /><br /> Ereignisse<br /><br /> Externe Deklarationen<br /><br /> Delegaten|Klasse|
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Static](../../../../visual-basic/language-reference/modifiers/static.md)
 - [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

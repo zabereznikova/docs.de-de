@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 7e400e20-5d1e-4d22-a65c-9df79d5c1621
-ms.openlocfilehash: 28d8e96190328fba0769a0be247cc8b0c6bf1d68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90004ff2e9d5fcf1470b34b93091545b2b848b33
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746758"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834040"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>XML-Achseneigenschaften (Visual Basic)
 Die Themen in diesem Abschnitt dokumentieren die Syntax von XML-Achseneigenschaften in Visual Basic. Die XML-Achseneigenschaften erleichtern die XML-Daten direkt in Ihrem Code zugreifen.  
@@ -28,4 +28,5 @@ Die Themen in diesem Abschnitt dokumentieren die Syntax von XML-Achseneigenschaf
 |[XML-Value-Eigenschaft](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)|Beschreibt, wie Zugriff auf den Wert des ersten Elements einer Auflistung von <xref:System.Xml.Linq.XElement> oder <xref:System.Xml.Linq.XAttribute> Objekte.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

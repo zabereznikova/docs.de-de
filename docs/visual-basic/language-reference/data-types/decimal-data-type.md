@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 7a04f0a9862927f8588a895c7f0f099509aa4d8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d530a8c1f85d2f0045184c05df63849047a8204
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512891"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834100"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal-Datentyp (Visual Basic)
 Speichert signierte 128-Bit (16-Byte)-Werte, die ganze Zahl (12-Byte) der 96-Bit-Zahlen mit einer Variablen Potenz von 10 skaliert darstellt. Der Skalierungsfaktor gibt die Anzahl der Ziffern rechts vom Dezimaltrennzeichen an. Es reicht von 0 bis 28. Mit einer Skala von 0 (keine Dezimalstellen) an, der der größte mögliche Wert ist + / – 79.228.162.514.264.337.593.543.950.335 (+/-7 .9228162514264337593543950335E + 28). Der Höchstwert ist + / – 7,9228162514264337593543950335 mit 28 Dezimalstellen und der kleinste Wert ungleich NULL ist + / – 0,0000000000000000000000000001 (+/-1E-28).  
@@ -79,6 +79,7 @@ Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
  Für `bigDec3`, des Literaltypzeichens `D` löst das Problem, da der Compiler interpretiert das Literal als ein `Decimal` anstatt als eine `Long`.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Decimal?displayProperty=nameWithType>
 - <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>
 - <xref:System.Math.Round%2A?displayProperty=nameWithType>

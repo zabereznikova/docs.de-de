@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 71e6cf3e6169434ea0a28f8691cf82f6c8e8a030
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7bd47d2461ba86dfbd1d5ff5993382914116f9ba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979923"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842251"
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML-Elementliteral (Visual Basic)
 
@@ -160,6 +160,7 @@ Ein Literal, das stellt ein <xref:System.Xml.Linq.XElement> Objekt.
  Beachten Sie, dass der Compiler das Präfix des globalen XML-Namespace in eine Präfixdefinition für den XML-Namespace konvertiert. Die \<Ns:middle >-Element definiert das XML-Namespacepräfix für die \<Ns:inner1 > Element. Allerdings die \<Ns:inner2 >-Element verwendet den Namespace, definiert durch die `Imports` Anweisung.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Xml.Linq.XElement>
 - [Namen von deklarierten XML-Elementen und Attributen](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
 - [XML-Kommentarliteral](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)

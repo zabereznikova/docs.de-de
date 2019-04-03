@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Drehen, spiegeln und Zerren von Bildern'
+title: 'Vorgehensweise: Drehen, Spiegeln und Neigen von Bildern'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 3e539f41667edb505269fe420396c79b68f34e8f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dda03c9c1e1390ca6a5250471f047d3747e989e2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711498"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839911"
 ---
-# <a name="how-to-rotate-reflect-and-skew-images"></a>Vorgehensweise: Drehen, spiegeln und Zerren von Bildern
+# <a name="how-to-rotate-reflect-and-skew-images"></a>Vorgehensweise: Drehen, Spiegeln und Neigen von Bildern
 Sie können zu drehen, spiegeln und neigen ein Image, indem Zielpunkte für die oberen linken, oberen rechten und unteren linken Ecke des ursprünglichen Bilds. Die drei Zielpunkte bestimmen eine affine Transformation, die ein Parallelogramm das Originalbild rechteckige zuordnet.  
   
 ## <a name="example"></a>Beispiel  
@@ -30,15 +30,15 @@ Sie können zu drehen, spiegeln und neigen ein Image, indem Zielpunkte für die 
   
  Die folgende Abbildung zeigt das ursprüngliche Bild und das Bild, das dem Parallelogramm zugeordnet. Das ursprüngliche Bild hat verzerrt, wiedergegeben, gedreht, übersetzt und. Die Zeile, die ausgeführt, über wird die x-Achse entlang des oberen Randes des ursprünglichen Bilds zugeordnet ist ("200", "20") und (110, 100). Die Zeile, die ausgeführt, über wird die y-Achse entlang des linken Randes des ursprünglichen Bilds zugeordnet ist ("200", "20") und (250, 30).  
   
- ![Streifen](./media/stripes1.gif "Stripes1")  
+ ![Das ursprüngliche Bild und das Bild, das dem Parallelogramm zugeordnet.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-illustration.gif)  
   
- Die folgende Abbildung zeigt eine ähnliche Transformation angewendet auf ein Foto.  
+ Die folgende Abbildung zeigt eine ähnliche Transformation angewendet auf ein Foto an:  
   
- ![Transformiert Anstieg](./media/transformedclimber.png "TransformedClimber")  
+ ![Das Bild, der einen Anstieg und das Bild, das dem Parallelogramm zugeordnet werden soll.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-photo.png)  
   
- Die folgende Abbildung zeigt eine ähnliche Transformation angewendet auf einer Metadatei an.  
+ Die folgende Abbildung zeigt eine ähnliche Transformation, die auf einer Metadatei angewendet:  
   
- ![Transformiert die Metadatei](./media/transformedmetafile.png "TransformedMetafile")  
+ ![Abbildung von Formen, Text und dem Parallelogramm zugeordnet.](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-metafile.png)  
   
  Im folgenden Beispiel wird die Bilder in der ersten Abbildung gezeigt.  
   

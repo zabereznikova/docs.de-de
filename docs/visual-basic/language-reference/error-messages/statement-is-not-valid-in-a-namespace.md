@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
-ms.openlocfilehash: 98a450fd92993506005268b54798bbc8547a60fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c2b30045b25c1ef6542eff74716e9919ab8af93
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686308"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841757"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>Die Anweisung ist in einem Namespace ungültig.
 Die Anweisung kann nicht auf der Ebene eines Namespace verwendet werden. Die einzigen Deklarationen, die auf Namespaceebene zulässig sind, Modul, Schnittstelle, Klasse, Delegat, Enumeration und Strukturdeklarationen.  
@@ -24,5 +24,6 @@ Die Anweisung kann nicht auf der Ebene eines Namespace verwendet werden. Die ein
 -   Verschieben Sie die Anweisung auf eine Position innerhalb der Module, Klasse, Schnittstelle, Struktur, Enumeration oder Delegatdefinition.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Gültigkeitsbereich in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: 78c1d529053a10fc208ee5499b759623c227cb25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3635729705520518d4c950f8a79da7d1249285bf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681809"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841614"
 ---
 # <a name="structures-and-classes-visual-basic"></a>Strukturen und Klassen (Visual Basic)
 Visual Basic wird die Syntax für Strukturen und Klassen, mit dem Ergebnis, dass größtenteils die gleichen Funktionen unterstützen vereinheitlicht. Es gibt jedoch auch wichtige Unterschiede zwischen Klassen und Strukturen.  
@@ -87,6 +87,7 @@ Visual Basic wird die Syntax für Strukturen und Klassen, mit dem Ergebnis, dass
 -   **Gleichheit.** Gleichheitsüberprüfung von zwei Strukturen muss für ein Element für Element durchgeführt werden. Zwei Objektvariablen verglichen werden können, mit der <xref:System.Object.Equals%2A> Methode. <xref:System.Object.Equals%2A> Gibt an, ob die zwei Variablen auf dieselbe Instanz verweisen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Zusammengesetzte Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

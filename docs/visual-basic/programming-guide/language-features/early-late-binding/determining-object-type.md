@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: becbbef008e8a474db198748d45f260fcb90c758
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 625ddb8fc153708a80e8cf475f48d595efbe4df2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966774"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842628"
 ---
 # <a name="determining-object-type-visual-basic"></a>Bestimmen des Objekttyps (Visual Basic)
 Generisches Objektvariablen (d. h. deklarierte Variablen als `Object`) Objekte aus einer Klasse enthalten kann. Bei Verwendung von Variablen des Typs `Object`, müssen Sie möglicherweise verschiedene Aktionen basierend auf der Klasse des Objekts, z. B. einige Objekte können nicht unterstützen, eine bestimmte Eigenschaft oder Methode. Visual Basic bietet zwei Methoden ermitteln, welche Art von Objekt in eine Objektvariable gespeichert ist: die `TypeName` Funktion und die `TypeOf...Is` Operator.  
@@ -45,6 +45,7 @@ Generisches Objektvariablen (d. h. deklarierte Variablen als `Object`) Objekte a
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [Aufrufen einer Eigenschaft oder Methode mit einem Zeichenfolgennamen](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
 - [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: 26a987543cdd80e7e3075dd4d0a04de69b51e465
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964921"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843408"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>Vorgehensweise: Deklarieren einer Konstante (Visual Basic)
 Sie verwenden die `Const` Anweisung, um eine Konstante deklariert, und legen Sie dessen Wert. Durch Deklarieren einer Konstante, weisen Sie einen aussagekräftigen Namen auf einen Wert an. Nachdem eine Konstante deklariert wird, nicht geändert oder einen neuer Wert zugewiesen.  
@@ -66,6 +66,7 @@ Sie verwenden die `Const` Anweisung, um eine Konstante deklariert, und legen Sie
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Const-Anweisung](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [Konstanten und literale Datentypen](constant-and-literal-data-types.md)
 - [Übersicht über Konstanten](constants-overview.md)

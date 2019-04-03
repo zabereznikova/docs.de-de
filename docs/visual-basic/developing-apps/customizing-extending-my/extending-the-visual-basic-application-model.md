@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 64c175216cf21b7947462cf79e4b88ab6fcd6d86
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: aceb63d3cb9af75fa4eb32ed5bca5d65825704e8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245647"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834711"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Erweitern des Visual Basic-Anwendungsmodells
 Sie können das Anwendungsmodell Funktionen hinzugefügt, durch das Überschreiben der `Overridable` Mitglied der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Klasse. Dieses Verfahren ermöglicht Ihnen das Anpassen des Verhaltens des Anwendungsmodells und Ihren eigenen Methoden zu aufrufen hinzufügen, wie die Anwendung startet und beendet wird.  
@@ -19,58 +19,58 @@ Sie können das Anwendungsmodell Funktionen hinzugefügt, durch das Überschreib
   
  Die folgende Grafik zeigt die Aufruffolge für Anwendung-Modell in einer normalen Visual Basic Windows Forms-Anwendung. Die Sequenz beginnt, wenn die `Sub Main` Prozeduraufrufe der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> Methode.  
   
- ![Visual Basic-Anwendungsmodell &#45; &#45; ausführen](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
+ ![Das Diagramm zeigt die Aufruffolge-Anwendungsmodell.](./media/extending-the-visual-basic-application-model/application-model-call-sequence.gif)  
   
  Das Visual Basic-Anwendungsmodell bietet außerdem die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> und <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> Ereignisse. Die folgende Abbildung zeigt den Mechanismus zum Auslösen von diesen Ereignissen.  
   
- ![Visual Basic-Anwendungsmodell &#45; &#45; neben Instanz](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
+ ![Das Diagramm zeigt die OnStartupNextInstance-Methode, die das StartupNextInstance-Ereignis auslöst.](./media/extending-the-visual-basic-application-model/raise-startupnextinstance-event.gif)  
   
- ![Visual Basic-Anwendungsmodell-nicht behandelte Ausnahme](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_unhandex.gif "VB_UnhandEx")  
+ ![Das Diagramm zeigt die OnUnhandledException-Methode, die das UnhandledException-Ereignis auslöst.](./media/extending-the-visual-basic-application-model/raise-unhandledexception-event.gif)  
   
 ## <a name="overriding-the-base-methods"></a>Überschreiben von Basismethoden  
  Die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> Methode definiert die Reihenfolge, in dem die `Application` Methoden ausführen. In der Standardeinstellung die `Sub Main` Prozedur für eine Windows Forms-Anwendung ruft die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> Methode.  
   
  Wenn die Anwendung eine normale Anwendung (Mehrfachinstanz-Anwendung) oder die erste Instanz des eine einzelinstanzanwendung ist die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> Methode führt die `Overridable` Methoden in der folgenden Reihenfolge:  
   
-1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> Standardmäßig diese Methode legt fest, die visuelle Stile, die Textanzeigestile und die aktuelle Prinzipal für den Hauptthread der Anwendung (sofern die Anwendung Windows-Authentifizierung verwendet wird), und ruft `ShowSplashScreen` Wenn weder `/nosplash` noch `-nosplash` dient als ein Befehlszeilenargument.  
+1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A>. Standardmäßig diese Methode legt fest, die visuelle Stile, die Textanzeigestile und die aktuelle Prinzipal für den Hauptthread der Anwendung (sofern die Anwendung Windows-Authentifizierung verwendet wird), und ruft `ShowSplashScreen` Wenn weder `/nosplash` noch `-nosplash` dient als ein Befehlszeilenargument.  
   
      Starten der Anwendung wird abgebrochen, wenn diese Funktion gibt `False`. Dies kann nützlich sein, wenn es gibt Situationen, in denen die Anwendung nicht ausgeführt werden soll.  
   
      Die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> Methode ruft die folgenden Methoden:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> Bestimmt, ob die Anwendung einen Begrüßungsbildschirm definiert wurde, und wenn dies der Fall ist, zeigt den Begrüßungsbildschirm in einem separaten Thread an.  
+    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A>. Bestimmt, ob die Anwendung einen Begrüßungsbildschirm definiert wurde, und wenn dies der Fall ist, zeigt den Begrüßungsbildschirm in einem separaten Thread an.  
   
          Die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShowSplashScreen%2A> Methode enthält den Code, dem der Begrüßungsbildschirm anzeigt, Bildschirm mindestens für die Anzahl der Millisekunden, die gemäß der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A> Eigenschaft. Um diese Funktion verwenden zu können, müssen Sie den Begrüßungsbildschirm hinzufügen, auf Ihre Anwendung mit der **Projekt-Designer** (welche legt die `My.Application.MinimumSplashScreenDisplayTime` auf zwei Sekunden), oder legen Sie die `My.Application.MinimumSplashScreenDisplayTime` Eigenschaft in einer Methode, die die überschreibt<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnInitialize%2A> oder <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> Methode. Weitere Informationen finden Sie unter <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MinimumSplashScreenDisplayTime%2A>.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> Ermöglicht einem Designer, Code auszugeben, die den Begrüßungsbildschirm initialisiert.  
+    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Ermöglicht einem Designer, Code auszugeben, die den Begrüßungsbildschirm initialisiert.  
   
          Standardmäßig führt diese Methode keine Aktion. Bei Auswahl ein Begrüßungsbildschirms für Ihre Anwendung in Visual Basic **Projekt-Designer**, überschreibt der Designer die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> Methode mit einer Methode, die festlegt der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> Eigenschaft, um eine neue Instanz des Formulars Splash-Bildschirm .  
   
-2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A> Stellt einen Erweiterungspunkt zum Auslösen der `Startup` Ereignis. Starten der Anwendung wird beendet, wenn diese Funktion gibt `False`.  
+2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Stellt einen Erweiterungspunkt zum Auslösen der `Startup` Ereignis. Starten der Anwendung wird beendet, wenn diese Funktion gibt `False`.  
   
      Standardmäßig löst diese Methode die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup> Ereignis. Wenn der Ereignishandler setzt der <xref:System.ComponentModel.CancelEventArgs.Cancel> Eigenschaft des Ereignisarguments auf `True`, gibt die Methode zurück `False` zum Start der Anwendung abbrechen.  
   
-3.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A> Stellt einen Ausgangspunkt für den Fall kann die hauptanwendung damit beginnen, ausgeführt, nachdem die Initialisierung abgeschlossen ist.  
+3.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnRun%2A>. Stellt einen Ausgangspunkt für den Fall kann die hauptanwendung damit beginnen, ausgeführt, nachdem die Initialisierung abgeschlossen ist.  
   
      Standardmäßig, bevor in der Windows Forms-Nachrichtenschleife, wird diese Methode ruft die `OnCreateMainForm` (zum Hauptformular der Anwendung zu erstellen) und `HideSplashScreen` (zum Schließen des Begrüßungsbildschirms) Methoden:  
   
-    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> Bietet eine Möglichkeit für einen Designer zum Ausgeben von Code, der das Hauptformular initialisiert.  
+    1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Bietet eine Möglichkeit für einen Designer zum Ausgeben von Code, der das Hauptformular initialisiert.  
   
          Standardmäßig führt diese Methode keine Aktion. Allerdings bei der Auswahl einer Hauptformular für Ihre Anwendung in Visual Basic **Projekt-Designer**, überschreibt der Designer die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> Methode mit einer Methode, die festlegt der <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> Eigenschaft, um eine neue Instanz des Hauptformulars.  
   
-    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A> Wenn die Anwendung einen Begrüßungsbildschirm definiert und es geöffnet ist, schließt diese Methode den Begrüßungsbildschirm.  
+    2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Wenn die Anwendung einen Begrüßungsbildschirm definiert und es geöffnet ist, schließt diese Methode den Begrüßungsbildschirm.  
   
          Standardmäßig schließt diese Methode den Begrüßungsbildschirm.  
   
-4.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A> Bietet eine Möglichkeit zum Anpassen, wie eine einzelinstanzanwendung verhält, wenn eine andere Instanz der Anwendung gestartet wird.  
+4.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>. Bietet eine Möglichkeit zum Anpassen, wie eine einzelinstanzanwendung verhält, wenn eine andere Instanz der Anwendung gestartet wird.  
   
      Standardmäßig löst diese Methode die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> Ereignis.  
   
-5.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A> Stellt einen Erweiterungspunkt zum Auslösen der `Shutdown` Ereignis. Diese Methode wird nicht ausgeführt werden, wenn eine nicht behandelte Ausnahme in die Hauptassembly der Anwendung auftritt.  
+5.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnShutdown%2A>. Stellt einen Erweiterungspunkt zum Auslösen der `Shutdown` Ereignis. Diese Methode wird nicht ausgeführt werden, wenn eine nicht behandelte Ausnahme in die Hauptassembly der Anwendung auftritt.  
   
      Standardmäßig löst diese Methode die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> Ereignis.  
   
-6.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A> Ausgeführt, wenn eine unbehandelte Ausnahme in einem der oben aufgeführten Methoden auftritt.  
+6.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnUnhandledException%2A>. Ausgeführt, wenn eine unbehandelte Ausnahme in einem der oben aufgeführten Methoden auftritt.  
   
      Standardmäßig löst diese Methode die <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> Ereignis solange kein Debugger angefügt ist und die Anwendung ist der Umgang mit den `UnhandledException` Ereignis.  
   
@@ -90,13 +90,14 @@ Sie können das Anwendungsmodell Funktionen hinzugefügt, durch das Überschreib
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SaveMySettingsOnExit%2A>|Wenn die Anwendung beim Beenden der Anwendung automatisch Benutzer – Änderungen der Anwendung speichert.|**My.Settings beim Herunterfahren speichern** Kontrollkästchen|  
 |<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.ShutdownStyle%2A>|Was bewirkt, dass die Anwendung beendet wurde z. B. wenn das Startformular schließt oder wenn das letzte Formular geschlossen wird.|**Modus für das Herunterfahren** Liste|  
   
-## <a name="see-also"></a>Siehe auch  
- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>  
- [Übersicht über das Visual Basic-Anwendungsmodell](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- [Seite „Anwendung“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+## <a name="see-also"></a>Siehe auch
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>
+- [Übersicht über das Visual Basic-Anwendungsmodell](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
+- [Seite „Anwendung“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 7bd78772b35e3f336f49c1d39b5f56a3a2076c30
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970284"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842044"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Vorgehensweise: Erzwingen, dass ein Argument als Wert (Visual Basic) übergeben werden
 Den Übergabemechanismus der Prozedurdeklaration. Wenn ein Parameter deklariert wird [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic geht davon aus, das entsprechende Argument als Verweis übergeben. Dadurch wird das Verfahren zum Ändern des Werts des zugrunde liegenden Arguments im aufrufenden Code Programmierelements. Wenn Sie das zugrunde liegende Element für eine solche Änderung schützen möchten, können Sie überschreiben die `ByRef` Übergabemechanismus in der Prozedur aufrufen, indem der Name des Arguments in Klammern einschließen. Diese Klammern sind zusätzlich zu den Klammern einschließen der Liste der Argumente im Aufruf.  
@@ -53,6 +53,7 @@ Den Übergabemechanismus der Prozedurdeklaration. Wenn ein Parameter deklariert 
  Es ist immer ein potenzielles Risiko einer Prozedur zum Ändern des Werts, der ein Argument im aufrufenden Code zugrunde liegt. Stellen Sie sicher, dass Sie erwarten, dass dieser Wert geändert werden, und auf Gültigkeit überprüft werden vor der Verwendung vorbereitet werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verfahren](./index.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Vorgehensweise: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)

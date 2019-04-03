@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411004"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839391"
 ---
 # <a name="shadowing-in-visual-basic"></a>Shadowing in Visual Basic
 Wenn zwei Programmierelemente mit demselben Namen gemeinsam nutzen, eine davon kann auszublenden, oder *Schatten*, der andere Controller. In diesem Fall ist das Shadowing-Element nicht als Referenz verfügbar; Stattdessen löst, wenn Ihr Code den Elementnamen verwendet, die Visual Basic-Compiler es auf das shadowing-Element.  
@@ -138,6 +138,7 @@ End Class
  Im vorherigen Beispiel, die Variable `basObj` ist als die Basisklasse der Klasse deklariert. Zuweisen einer `dervCls` Objekt eine erweiternde Konvertierung und ist daher gültig. Jedoch nicht die Basisklasse die shadowing-Version der Variablen zugreifen `z` in der abgeleiteten Klasse, sodass der Compiler löst `basObj.z` auf den ursprünglichen Wert der Basisklasse.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Erweiternde und eingrenzende Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - VBC40059
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
-ms.openlocfilehash: 058aa4891d05147756290affd60ea5fb260c33ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c0b4f56e3d1613486dd1198976557831ce657e1b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262951"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837545"
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>Ein Verweis auf eingebettete Interop-Assembly erstellt wurde "\<assembly1 >' aufgrund eines indirekten Verweises auf diese Assembly aus Assembly '\<assembly2 >'
 Es wurde ein Verweis auf die eingebettete Interopassembly „\<assembly1>“ aufgrund eines indirekten Verweises auf diese Assembly aus Assembly „\<assembly2>“ erstellt. Ändern Sie ggf. für beide Assembly die Eigenschaft 'Interoptypen einbetten'.  
@@ -32,5 +32,6 @@ Es wurde ein Verweis auf die eingebettete Interopassembly „\<assembly1>“ auf
 -   Um die Warnung zu entfernen, können Sie die `Embed Interop Types`-Eigenschaft von assembly1 auf `False` festlegen. In diesem Fall werden Interoptypinformationen von eine primäre Interopassembly (PIA) bereitgestellt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)
 - [Interoperabilität mit nicht verwaltetem Code](../../../framework/interop/index.md)

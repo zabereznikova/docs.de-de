@@ -2,9 +2,15 @@
 title: Variablen in Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'variables [Visual Basic]'
-  - 'values [Visual Basic], storing'
+- variables [Visual Basic]
+- values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
+ms.openlocfilehash: 9a39c53ea2d57bca379297897d6d4d1b9f7a1a9f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840379"
 ---
 # <a name="variables-in-visual-basic"></a>Variablen in Visual Basic
 Sie müssen oft Werte speichern, wenn Sie Berechnungen mit Visual Basic ausführen. Sie möchten z.B. mehrere Werte berechnen, sie vergleichen und je nach Ergebnis des Vergleichs unterschiedliche Vorgänge auf diesen ausführen. Sie müssen die Werte beibehalten, wenn Sie sie vergleichen möchten.  
@@ -28,6 +34,7 @@ Sie müssen oft Werte speichern, wenn Sie Berechnungen mit Visual Basic ausführ
  Wie eine Variable stellt auch eine *Eigenschaft* einen Wert dar, auf den Sie zugreifen können. Jedoch ist er komplexer als eine Variable. Eine Eigenschaft verwendet Codeblöcke, die steuern, wie der Wert festgelegt und abgerufen wird. Weitere Informationen finden Sie unter [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Problembehandlung bei Variablen](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)

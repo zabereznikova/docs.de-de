@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Festlegen der Kachelgröße für ein TileBrush'
+title: 'Vorgehensweise: Festlegen der Kachelgröße für einen TileBrush'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TileBrush [WPF], size of tile properties
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
-ms.openlocfilehash: ecac41b0ca40abf59dfcba1efffc076687c2f1ff
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 80b5dfc668464df829db593668bea8a9a4ec09e4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502227"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839695"
 ---
-# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Vorgehensweise: Festlegen der Kachelgröße für ein TileBrush
+# <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Vorgehensweise: Festlegen der Kachelgröße für einen TileBrush
 
 Dieses Beispiel veranschaulicht das Festlegen die Flächengröße für ein <xref:System.Windows.Media.TileBrush>. Standardmäßig eine <xref:System.Windows.Media.TileBrush> erzeugt eine einzelne Kachel, die den Bereich vollständig ausfüllt, die Sie zeichnen werden. Sie können dieses Verhalten überschreiben, indem Sie die Einstellung der <xref:System.Windows.Media.TileBrush.Viewport%2A> und <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> Eigenschaften.
 
@@ -20,19 +20,19 @@ Die <xref:System.Windows.Media.TileBrush.Viewport%2A> Eigenschaft gibt die Fläc
 
 ## <a name="example"></a>Beispiel
 
-Im folgenden Beispiel wird ein <xref:System.Windows.Media.ImageBrush>, einen Typ von <xref:System.Windows.Media.TileBrush>, um ein Rechteck mit Flächen gezeichnet werden soll. In diesem Beispiel werden die Seiten der einzelnen Flächen auf 50 x 50 Prozent der Seiten des Ausgabebereichs (des Rechtecks) festgelegt. Als Ergebnis wird das Rechteck mit vier Projektionen des Bilds gezeichnet.
+Im folgenden Beispiel wird ein <xref:System.Windows.Media.ImageBrush>, einen Typ von <xref:System.Windows.Media.TileBrush>, um ein Rechteck mit Flächen gezeichnet werden soll. Im Beispiel wird jede Kachel auf 50 x 50 Prozent des Ausgabebereichs (das Rechteck). Als Ergebnis wird das Rechteck mit vier Projektionen des Bilds gezeichnet.
 
-In der folgenden Abbildung ist die von diesem Beispiel erstellte Ausgabe dargestellt.
+Die folgende Abbildung zeigt die Ausgabe, die das Beispiel erzeugt:
 
-![Beispiel für die Anordnung mit einem Bildpinsel](./media/0.png "0")
+![Ein Rechteck mit vier Kirschen Anordnung mit einem Bildpinsel veranschaulicht.](./media/how-to-set-the-tile-size-for-a-tilebrush/rectangle-tile-image-brush.png)
 
 [!code-csharp[UsingImageBrush_snip#RelativeTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#relativetilesizeexample)]
 
 Im nächsten Beispiel wird erstellt eine <xref:System.Windows.Media.ImageBrush>, legt diese fest seine <xref:System.Windows.Media.TileBrush.Viewport%2A> zu `0,0,25,25` und die zugehörige <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> zu <xref:System.Windows.Media.BrushMappingMode.Absolute>, und verwendet, um ein weiteres Rechteck gezeichnet. Als Ergebnis erzeugt der Pinsel Flächen mit einer Breite und Höhe von 25 Pixeln.
 
-In der folgenden Abbildung ist die von diesem Beispiel erstellte Ausgabe dargestellt.
+Die folgende Abbildung zeigt die Ausgabe, die das Beispiel erzeugt:
 
-![Flächen mit einem Viewport von 0,0,0.25,0.25](./media/25x25viewport.png "25x25viewport")
+![Ein Rechteck mit zugeht Kirschen einen gekachelten TileBrush mit einem Viewport veranschaulicht.](./media/how-to-set-the-tile-size-for-a-tilebrush/25-x-25-viewport-tilebrush.png)
 
 [!code-csharp[UsingImageBrush_snip#AbsoluteTileSizeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/UsingImageBrush_snip/CSharp/TileSizeExample.cs#absolutetilesizeexample)]
 

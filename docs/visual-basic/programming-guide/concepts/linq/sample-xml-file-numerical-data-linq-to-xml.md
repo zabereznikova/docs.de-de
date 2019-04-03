@@ -1,15 +1,15 @@
 ---
-title: 'XML-Beispieldatei: Numerische Daten (LINQ to XML)'
+title: 'Beispiel-XML-Datei: Numerische Daten (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 5faef812-0006-4d84-9cf2-5746070e7fbf
-ms.openlocfilehash: 23f5388aeb5cdd97d33423d2d150ccefbae25a52
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 578ec2de69ae549e255fdafb98d3483f6330ce5d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495785"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842680"
 ---
-# <a name="sample-xml-file-numerical-data-linq-to-xml"></a>XML-Beispieldatei: Numerische Daten (LINQ to XML)
+# <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Beispiel-XML-Datei: Numerische Daten (LINQ to XML)
 Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Diese Datei enthält numerische Daten zum Summieren, zur Durchschnittsberechnung und zum Gruppieren.  
   
 ## <a name="dataxml"></a>Data.xml  
@@ -56,4 +56,5 @@ Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [XML-Beispieldokumente (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

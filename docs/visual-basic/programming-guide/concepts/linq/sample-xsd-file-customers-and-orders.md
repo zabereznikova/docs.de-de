@@ -2,17 +2,17 @@
 title: 'XSD-Beispieldatei: Kunden und Orders2'
 ms.date: 07/20/2015
 ms.assetid: a0c0b414-c8e1-45e4-bb67-b5e650c97130
-ms.openlocfilehash: 42d6d2b85f74f2d32d373208da296343b44927a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2549b4d330ecd8b60ede86c55f28930ae5e41dc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556560"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836830"
 ---
 # <a name="sample-xsd-file-customers-and-orders"></a>XSD-Beispieldatei: Kunden und Bestellungen
-Die folgende XSD-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Diese Datei enthält eine Schemadefinition für die [XML-Beispieldatei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md). Das Schema verwendet die XSD-Funktionen `xs:key` und `xs:keyref`, um festzulegen, dass das `CustomerID`-Attribut des `Customer`-Elements ein Schlüssel ist, und um eine Beziehung zwischen dem `CustomerID`-Element in jedem `Order`-Element und dem `CustomerID`-Attribut in jedem `Customer`-Element einzurichten.  
+Die folgende XSD-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Diese Datei enthält eine Schemadefinition für die [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md). Das Schema verwendet die XSD-Funktionen `xs:key` und `xs:keyref`, um festzulegen, dass das `CustomerID`-Attribut des `Customer`-Elements ein Schlüssel ist, und um eine Beziehung zwischen dem `CustomerID`-Element in jedem `Order`-Element und dem `CustomerID`-Attribut in jedem `Customer`-Element einzurichten.  
   
- Ein Beispiel für das Schreiben von LINQ-Abfragen, die diese Beziehung mit nutzen die `Join` -Klausel finden Sie unter [Vorgehensweise: Verbinden von zwei Auflistungen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
+ Ein Beispiel für das Schreiben von LINQ-Abfragen, die diese Beziehung mithilfe der `Join`-Klausel nutzen, finden Sie unter [Vorgehensweise: Verbinden von zwei Auflistungen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md).  
   
 ## <a name="customersordersxsd"></a>CustomersOrders.xsd  
   
@@ -94,4 +94,5 @@ Die folgende XSD-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [XML-Beispieldokumente (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

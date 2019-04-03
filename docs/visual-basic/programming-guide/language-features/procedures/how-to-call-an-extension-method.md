@@ -5,12 +5,12 @@ helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 4e9391a4c4a159cd5e198689bf7af7cd64c3a872
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2543694e6bf8da5b67ecaccc92633a8448154063
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620447"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837127"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>Vorgehensweise: Aufrufen einer Erweiterungsmethode (Visual Basic)
 Erweiterungsmethoden können Sie einer vorhandenen Klasse Methoden hinzufügen. Nachdem eine Erweiterungsmethode deklariert und in den Gültigkeitsbereich eingebunden ist, können Sie es wie eine Instanzmethode des Typs aufrufen, die sie erweitert. Weitere Informationen dazu, wie Sie eine Erweiterungsmethode zu schreiben, finden Sie unter [Vorgehensweise: Schreiben einer Erweiterungsmethode](./how-to-write-an-extension-method.md).  
@@ -95,6 +95,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Schreiben einer Erweiterungsmethode](./how-to-write-an-extension-method.md)
 - [Erweiterungsmethoden](./extension-methods.md)
 - [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

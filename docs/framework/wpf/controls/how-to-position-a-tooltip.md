@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: d20eea0890708eb2ec2ada503f5c871d54ccc035
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 64b3823be5203ffcb9dcea371495dbb6ead1605f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364532"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840496"
 ---
 # <a name="how-to-position-a-tooltip"></a>Vorgehensweise: Positionieren einer QuickInfo
 Dieses Beispiel zeigt, wie Sie die Position einer QuickInfo auf dem Bildschirm angeben.  
@@ -34,16 +34,19 @@ Dieses Beispiel zeigt, wie Sie die Position einer QuickInfo auf dem Bildschirm a
  Wenn Sie den Inhalt einer QuickInfo mit definieren eine <xref:System.Windows.Controls.ToolTip> -Objekts verwenden Sie die Eigenschaften einer Klasse, aber die <xref:System.Windows.Controls.ToolTipService> Eigenschaften haben Vorrang vor. Verwenden der <xref:System.Windows.Controls.ToolTipService> Eigenschaften für QuickInfos, die nicht als definiert sind <xref:System.Windows.Controls.ToolTip> Objekte.  
   
  Die folgenden Abbildungen zeigen, wie Sie eine QuickInfo zu positionieren, indem Sie mit diesen Eigenschaften. Zwar, wird die [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Beispiele in den folgenden Abbildungen zeigen, wie zum Festlegen der Eigenschaften, die von definiert sind die <xref:System.Windows.Controls.ToolTip> Klasse, die entsprechenden Eigenschaften der <xref:System.Windows.Controls.ToolTipService> Klasse, gelten dieselben Layoutregeln. Weitere Informationen zu den möglichen Werten für die Placement-Eigenschaft finden Sie unter [Verhalten beim Platzieren von Popups](popup-placement-behavior.md).  
+ 
+ Die folgende Abbildung zeigt die QuickInfo-Platzierung mit der Platzierung-Eigenschaft:  
   
- ![QuickInfo-Platzierung](./media/tooltipplacement.png "ToolTipPlacement")  
-QuickInfo-Platzierung mit der Platzierung-Eigenschaft  
+ ![Diagramm mit der QuickInfo-Platzierung mit der Platzierung-Eigenschaft.](./media/how-to-position-a-tooltip/tooltip-placement-property.png)
+ 
+ Die folgende Abbildung zeigt die QuickInfo-Platzierung mit den Eigenschaften für Platzierung und "PlacementRectangle":   
+
+ ![Diagramm mit der QuickInfo-Platzierung mithilfe einer "PlacementRectangle"-Eigenschaft.](./media/how-to-position-a-tooltip/tooltip-placement-rectangle-property.png)  
+ 
+ Die folgende Abbildung zeigt die QuickInfo-Platzierung mit den Eigenschaften für Platzierung und "PlacementRectangle" Offset:   
   
- ![Platzieren einer QuickInfo mithilfe eines Platzierungsrechtecks](./media/tooltipplacementrectangle.png "ToolTipPlacementRectangle")  
-QuickInfo-Platzierung mit den Eigenschaften für Platzierung und "PlacementRectangle"  
-  
- ![QuickInfo-platzierungsdiagramm](./media/tooltipplacementprhv.png "ToolTipPlacementPRHV")  
-QuickInfo-Platzierung mithilfe der Platzierung und "PlacementRectangle" Offset-Eigenschaften  
-  
+ ![Diagramm mit der QuickInfo-Platzierung mit der Offset-Eigenschaft.](./media/how-to-position-a-tooltip/tooltip-placement-offset-property.png)
+
  Das folgende Beispiel zeigt, wie Sie mit der <xref:System.Windows.Controls.ToolTip> Eigenschaft, um die Position einer QuickInfo anzugeben, deren Inhalt, eine <xref:System.Windows.Controls.ToolTip> Objekt.  
   
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  

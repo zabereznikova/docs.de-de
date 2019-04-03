@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 49efaa6470b6fea062be0663d8b1c48b9284bd99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 743160889c4f24a9edb2d0f9799662a74c5061fb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671992"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842082"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>Merkmale von "My" auf Grundlage des Projekttyps (Visual Basic)
 `My` Stellt nur die Objekte, die durch einen bestimmten Projekttyp erforderlich sind. Z. B. die `My.Forms` Objekt ist in Windows Forms-Anwendungen verfügbar, aber nicht verfügbar ist, in einer Konsolenanwendung. In diesem Thema wird beschrieben, welche `My` Objekte sind in verschiedenen Projekttypen verfügbar.  
@@ -56,6 +56,7 @@ ms.locfileid: "54671992"
  <sup>7</sup> Webversion `My.User`. Dieses Objekt ist die Identität der aktuellen HTTP-Anforderung der Anwendung zugeordnet.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.Logging.Log>

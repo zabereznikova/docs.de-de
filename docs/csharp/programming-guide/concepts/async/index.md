@@ -2,14 +2,14 @@
 title: Asynchrone Programmierung in C#
 description: Ein Überblick über die C#-Sprachunterstützung für asynchrone Programmierung mit async, await, Task und Task<T>
 ms.date: 03/18/2019
-ms.openlocfilehash: 1d2b4d93ed63eb4db990093da0aa4038388b6f9e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: dc85fd4fb30278dc39c75c88d5fd23c1f1633366
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464280"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504365"
 ---
-# <a name="the-task-asynchronous-programming-model-in-c"></a>Das aufgabenbasierte asynchrone Programmiermodell in C# #
+# <a name="the-task-asynchronous-programming-model-in-c"></a>Das aufgabenbasierte asynchrone Programmiermodell in C\#
 
 Das aufgabenbasierte asynchrone Programmiermodell (TAP) stellt eine Abstraktion asynchronen Codes bereit. Sie können Code in gewohnter Weise als eine Folge von Anweisungen schreiben. Sie können diesen Code so lesen, als ob jede Anweisung abgeschlossen wäre, bevor die nächste Anweisung beginnt. Der Compiler führt eine Reihe von Transformationen durch, da möglicherweise einige dieser Anweisungen gestartet werden und eine <xref:System.Threading.Tasks.Task> zurückgeben, die die derzeit ausgeführte Arbeit darstellt.
 
@@ -36,7 +36,7 @@ Computer interpretieren diese Anweisungen anders als Menschen. Nach jeder Anweis
 
 Wenn der Computer die obigen Anweisungen asynchron ausführen soll, müssen Sie asynchronen Code schreiben.
 
-Diese Überlegungen sind wichtig für die Programme, die Sie heutzutage schreiben. Wenn Sie Client-Programme schreiben, möchten Sie, dass die Benutzeroberfläche auf Benutzereingaben reagiert. Ihre Anwendung sollte nicht den Eindruck erwecken, dass sich das Smartphone aufgehängt hat, während es Daten aus dem Web herunterlädt. Wenn Sie Serverprogramme schreiben, möchten Sie nicht, dass Threads blockiert werden. Diese Threads könnten für andere Anforderungen benötigt werden. Die Verwendung von synchronem Code, wenn asynchrone Alternativen vorhanden sind, verhindert günstigere Erweiterungen, denn Sie bezahlen für diese blockierten Threads.
+Diese Überlegungen sind wichtig für die Programme, die Sie heutzutage schreiben. Wenn Sie Client-Programme schreiben, möchten Sie, dass die Benutzeroberfläche auf Benutzereingaben reagiert. Ihre Anwendung sollte nicht den Eindruck erwecken, dass sich das Smartphone aufgehängt hat, während es Daten aus dem Web herunterlädt. Wenn Sie Serverprogramme schreiben, möchten Sie nicht, dass Threads blockiert werden. Diese Threads könnten für andere Anforderungen benötigt werden. Die Verwendung von synchronem Code, wenn asynchrone Alternativen vorhanden sind, beeinträchtigt Ihre Möglichkeiten für günstigere Erweiterungen. Sie bezahlen für die blockierten Threads.
 
 Erfolgreiche moderne Anwendungen erfordern asynchronen Code. Ohne Sprachunterstützung erforderte das Schreiben von asynchronem Code Rückrufe, Abschlussereignisse oder andere Methoden, die die ursprüngliche Absicht des Codes verdeckten. Synchroner Code hat den Vorteil, dass er einfach zu verstehen ist. Dank der schrittweise durchgeführten Aktionen lässt sich der Code leicht überprüfen und nachvollziehen. Bei traditionellen asynchronen Modellen mussten Sie sich auf die asynchronen Eigenschaften des Codes und nicht auf die grundlegenden Aktionen des Codes konzentrieren.
 

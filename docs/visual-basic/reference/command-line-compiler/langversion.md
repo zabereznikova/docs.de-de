@@ -6,12 +6,12 @@ helpviewer_keywords:
 - langversion compiler option [Visual Basic]
 - -langversion compiler option [Visual Basic]
 ms.assetid: 59b7b0c8-2dde-4e9b-94e7-0237f7e0bafb
-ms.openlocfilehash: 6fffe264377474bba14f6f086b521ccf9bd04adf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db2cb1eb107973e9ce60ecb0d669c677d4fa2c51
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534458"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839721"
 ---
 # <a name="-langversion-visual-basic"></a>-langversion (Visual Basic)
 Bewirkt, dass den Compiler nur Syntax akzeptiert, die in der angegebenen Version des Visual Basic-Sprache enthalten ist.  
@@ -45,6 +45,7 @@ vbc -langversion:9.0 sample.vb
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Festlegen einer bestimmten .NET-Framework-Version](/visualstudio/ide/targeting-a-specific-dotnet-framework-version)

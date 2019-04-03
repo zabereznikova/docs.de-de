@@ -9,31 +9,32 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
-ms.openlocfilehash: 489c60aff7b431617477a381161e1c8f587947e5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b6413c8481a021afa34b7de228df14c109a50889
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703308"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834230"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>Übersicht über das BindingNavigator-Steuerelement (Windows Forms)
 Mit dem <xref:System.Windows.Forms.BindingNavigator>-Steuerelement können Sie ein standardisiertes Instrument erstellen, mit dem Benutzer Daten in einem Windows Form suchen und ändern können. <xref:System.Windows.Forms.BindingNavigator> wird häufig zusammen mit der <xref:System.Windows.Forms.BindingSource>-Komponente verwendet, damit Benutzer Datensätze in einem Formular durchlaufen und bearbeiten können.  
   
 ## <a name="how-the-bindingnavigator-works"></a>So funktioniert der BindingNavigator  
- Das <xref:System.Windows.Forms.BindingNavigator>-Steuerelement besteht aus einem <xref:System.Windows.Forms.ToolStrip>-Objekt mit einer Reihe von <xref:System.Windows.Forms.ToolStripItem>-Objekten für die meisten gängigen datenbezogenen Aktionen: Hinzufügen von Daten, Löschen von Daten und Navigieren durch Daten. Standardmäßig enthält das <xref:System.Windows.Forms.BindingNavigator>-Steuerelement enthält diese Standardschaltflächen. Die folgende Abbildung zeigt das <xref:System.Windows.Forms.BindingNavigator>-Steuerelement in einem Formular.  
+
+ Das <xref:System.Windows.Forms.BindingNavigator>-Steuerelement besteht aus einem <xref:System.Windows.Forms.ToolStrip>-Objekt mit einer Reihe von <xref:System.Windows.Forms.ToolStripItem>-Objekten für die meisten gängigen datenbezogenen Aktionen: Hinzufügen von Daten, Löschen von Daten und Navigieren durch Daten. Standardmäßig enthält das <xref:System.Windows.Forms.BindingNavigator>-Steuerelement enthält diese Standardschaltflächen. Der folgende Screenshot zeigt die <xref:System.Windows.Forms.BindingNavigator> Steuerelement in einem Formular:
   
- ![BindingNavigator-Steuerelement](./media/cpdatacontainerctrl.gif "CpDataContainerCtrl")  
+ ![Screenshot, der das BindingNavigator-Steuerelement anzeigt.](./media/bindingnavigator-control-overview-windows-forms/bindingnavigator-control-form.gif)  
   
  In der folgende Tabelle sind die Steuerelemente aufgelistet und deren Funktionen beschrieben.  
   
 |Steuerelement|Funktion|  
 |-------------|--------------|  
-|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A>-Schaltfläche|Fügt eine neue Zeile in der zugrunde liegenden Datenquelle ein.|  
-|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A>-Schaltfläche|Löscht die aktuelle Zeile aus der zugrunde liegenden Datenquelle.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A>-Schaltfläche|Wechselt zum ersten Element in der zugrunde liegenden Datenquelle.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A>-Schaltfläche|Wechselt zum letzten Element in der zugrunde liegenden Datenquelle.|  
-|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A>-Schaltfläche|Wechselt zum nächsten Element in der zugrunde liegenden Datenquelle.|  
-|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A>-Schaltfläche|Wechselt zum vorherigen Element in der zugrunde liegenden Datenquelle.|  
+|<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> Schaltfläche "|Fügt eine neue Zeile in der zugrunde liegenden Datenquelle ein.|  
+|<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> Schaltfläche "|Löscht die aktuelle Zeile aus der zugrunde liegenden Datenquelle.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> Schaltfläche "|Wechselt zum ersten Element in der zugrunde liegenden Datenquelle.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveLastItem%2A> Schaltfläche "|Wechselt zum letzten Element in der zugrunde liegenden Datenquelle.|  
+|<xref:System.Windows.Forms.BindingNavigator.MoveNextItem%2A> Schaltfläche "|Wechselt zum nächsten Element in der zugrunde liegenden Datenquelle.|  
+|<xref:System.Windows.Forms.BindingNavigator.MovePreviousItem%2A> Schaltfläche "|Wechselt zum vorherigen Element in der zugrunde liegenden Datenquelle.|  
 |<xref:System.Windows.Forms.BindingNavigator.PositionItem%2A>-Textfeld|Gibt die aktuelle Position in der zugrunde liegenden Datenquelle zurück.|  
 |<xref:System.Windows.Forms.BindingNavigator.CountItem%2A>-Textfeld|Gibt die Gesamtzahl von Elementen in der zugrunde liegenden Datenquelle zurück.|  
   
