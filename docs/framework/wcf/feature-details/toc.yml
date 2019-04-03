@@ -1,0 +1,939 @@
+items:
+- name: Details zur WCF-Funktion
+  href: index.md
+  items:
+  - name: Workflowdienste
+    href: workflow-services.md
+    items:
+    - name: Übersicht über Workflowdienste
+      href: workflow-services-overview.md
+    - name: Erstellen eines Workflowdiensts mit langer Ausführungszeit
+      href: creating-a-long-running-workflow-service.md
+    - name: Messagingaktivitäten
+      href: messaging-activities.md
+    - name: 'Vorgehensweise: Erstellen eines Workflowdiensts mit Messagingaktivitäten'
+      href: how-to-create-a-workflow-service-with-messaging-activities.md
+    - name: Verwenden von Verträgen im Workflow
+      href: using-contracts-in-workflow.md
+    - name: Übersicht über das Hosten von Workflowdiensten
+      href: hosting-workflow-services-overview.md
+      items:
+      - name: Hosten von Workflowdiensten
+        href: hosting-workflow-services.md
+      - name: Interne Funktionsweise des Workflowdiensthosts
+        href: workflow-service-host-internals.md
+      - name: Erweiterbarkeit des Workflowdiensthosts
+        href: workflow-service-host-extensibility.md
+      - name: Workflowsteuerungsendpunkt
+        href: workflow-control-endpoint.md
+      - name: 'Vorgehensweise: Hosten eines Workflowdiensts mit Windows Server AppFabric'
+        href: how-to-host-a-workflow-service-with-windows-server-app-fabric.md
+      - name: Konfigurieren von WorkflowServiceHost
+        href: configuring-workflowservicehost.md
+        items:
+        - name: 'Vorgehensweise: Konfigurieren der Persistenz mit WorkflowServiceHost'
+          href: how-to-configure-persistence-with-workflowservicehost.md
+        - name: 'Vorgehensweise: Konfigurieren der Nachverfolgung mit WorkflowServiceHost'
+          href: how-to-configure-tracking-with-workflowservicehost.md
+        - name: 'Vorgehensweise: Konfigurieren des Leerlaufverhaltens mit WorkflowServiceHost'
+          href: how-to-configure-idle-behavior-with-workflowservicehost.md
+        - name: 'Vorgehensweise: Konfigurieren des Verhaltens bei nicht behandelten Ausnahmen für Workflows mit WorkflowServiceHost'
+          href: config-workflow-unhandled-exception-workflowservicehost.md
+    - name: Korrelation
+      href: correlation.md
+      items:
+      - name: Übersicht über die Korrelation
+        href: correlation-overview.md
+      - name: Permanenter Duplex
+        href: durable-duplex-correlation.md
+      - name: Anforderung-Antwort
+        href: request-reply-correlation.md
+      - name: Problembehandlung bei der Korrelation
+        href: troubleshooting-correlation.md
+    - name: Konfigurieren der Serialisierung in einem Workflowdienst
+      href: configuring-serialization-in-a-workflow-service.md
+    - name: 'Vorgehensweise: Zugreifen auf einen Dienst aus einer Workflowanwendung'
+      href: how-to-access-a-service-from-a-workflow-application.md
+    - name: Verarbeiten von Nachrichten außerhalb der normalen Reihenfolge
+      href: out-of-order-message-processing.md
+    - name: Transaktionsfluss in Workflowdienste und aus Workflowdiensten
+      href: flowing-transactions-into-and-out-of-workflow-services.md
+    - name: Ändern der Cachefreigabeebenen für Send-Aktivitäten
+      href: changing-the-cache-sharing-levels-for-send-activities.md
+    - name: Hinzufügen eines Dienstverweises in einer Workflowprojektmappe
+      href: adding-a-service-reference-in-a-workflow-solution.md
+    - name: Parallele Versionsverwaltung in WorkflowServiceHost
+      href: side-by-side-versioning-in-workflowservicehost.md
+  - name: 'Endpunkte: Adressen, Bindungen und Verträge'
+    href: endpoints-addresses-bindings-and-contracts.md
+    items:
+    - name: Adressen
+      href: endpoint-addresses.md
+    - name: Bindungen
+      href: bindings.md
+      items:
+      - name: Konfigurieren der vom System bereitgestellten Bindungen
+        href: configuring-system-provided-bindings.md
+      - name: Konfigurieren von Timeoutwerten für eine Bindung
+        href: configuring-timeout-values-on-a-binding.md
+      - name: Erstellen von Multicastanwendungen mithilfe des UDP-Transports
+        href: creating-multicasting-applications-using-the-udp-transport.md
+    - name: Verträge
+      href: contracts.md
+      items:
+      - name: ServiceModel-Attribute und ServiceDescription-Referenz
+        href: servicemodel-attributes-and-servicedescription-reference.md
+      - name: Anforderung-Antwort-Dienste
+        href: request-reply-services.md
+      - name: 'Vorgehensweise: Erstellen eines Anforderung-Antwort-Vertrags'
+        href: how-to-create-a-request-reply-contract.md
+      - name: Unidirektionale Dienste
+        href: one-way-services.md
+      - name: 'Vorgehensweise: Erstellen eines unidirektionalen Vertrags'
+        href: how-to-create-a-one-way-contract.md
+      - name: Duplexdienste
+        href: duplex-services.md
+      - name: 'Vorgehensweise: Erstellen eines Duplexvertrags'
+        href: how-to-create-a-duplex-contract.md
+      - name: 'Vorgehensweise: Erstellen eines Diensts mit einer Vertragsklasse'
+        href: how-to-create-a-wcf-contract-with-a-class.md
+      - name: 'Vorgehensweise: Erstellen eines Diensts mit einer Vertragsschnittstelle'
+        href: how-to-create-a-service-with-a-contract-interface.md
+      - name: Verwenden von ServiceThrottlingBehavior zur Steuerung der Leistung des WCF-Diensts
+        href: using-servicethrottlingbehavior-to-control-wcf-service-performance.md
+    - name: 'Vorgehensweise: Erstellen eines Dienstendpunkts in einer Konfiguration'
+      href: how-to-create-a-service-endpoint-in-configuration.md
+    - name: 'Vorgehensweise: Erstellen eines Dienstendpunkts im Code'
+      href: how-to-create-a-service-endpoint-in-code.md
+    - name: 'Vorgehensweise: Verwenden von „Svcutil.exe“ zum Überprüfen von kompiliertem Dienstcode'
+      href: how-to-use-svcutil-exe-to-validate-compiled-service-code.md
+    - name: Standardendpunkte
+      href: standard-endpoints.md
+  - name: Datenübertragung und Serialisierung
+    href: data-transfer-and-serialization.md
+    items:
+    - name: Angeben von Datenübertragung in Dienstverträgen
+      href: specifying-data-transfer-in-service-contracts.md
+    - name: Verwenden von Datenverträgen
+      href: using-data-contracts.md
+      items:
+      - name: 'Vorgehensweise: Erstellen eines grundlegenden Datenvertrags für eine Klasse oder Struktur'
+        href: how-to-create-a-basic-data-contract-for-a-class-or-structure.md
+      - name: Serialisierbare Typen
+        href: serializable-types.md
+      - name: Datenvertragsnamen
+        href: data-contract-names.md
+      - name: Datenvertragsäquivalenz
+        href: data-contract-equivalence.md
+      - name: Datenmember-Reihenfolge
+        href: data-member-order.md
+      - name: Bekannte Typen in Datenverträgen
+        href: data-contract-known-types.md
+      - name: Aufwärtskompatible Datenverträge
+        href: forward-compatible-data-contracts.md
+      - name: Datenvertragsversionsverwaltung
+        href: data-contract-versioning.md
+      - name: Versionstolerante Serialisierungsrückrufe
+        href: version-tolerant-serialization-callbacks.md
+      - name: Standardwerte der Datenelemente
+        href: data-member-default-values.md
+      - name: Interoperable Objektverweise
+        href: interoperable-object-references.md
+      - name: Vom Datenvertragsserialisierer unterstützte Typen
+        href: types-supported-by-the-data-contract-serializer.md
+        items:
+        - name: Sammlungstypen in Datenverträgen
+          href: collection-types-in-data-contracts.md
+        - name: XML- und ADO.NET-Typen in Datenverträgen
+          href: xml-and-ado-net-types-in-data-contracts.md
+        - name: Enumerationstypen in Datenverträgen
+          href: enumeration-types-in-data-contracts.md
+    - name: Data Contract Serializer
+      href: data-contract-serializer.md
+      items:
+      - name: Serialisierung und Deserialisierung
+        href: serialization-and-deserialization.md
+      - name: Import und Export von Schemas
+        href: schema-import-and-export.md
+        items:
+        - name: Importieren von Schemas zum Generieren von Klassen
+          href: importing-schema-to-generate-classes.md
+        - name: Exportieren von Schemas aus Klassen
+          href: exporting-schemas-from-classes.md
+        - name: Steuern der Serialisierung und Deserialisierung mit SerializationBinder
+          href: controlling-serialization-and-deserialization-with-serializationbinder.md
+      - name: Verwenden eines Datenvertragsresolvers
+        href: using-a-data-contract-resolver.md
+    - name: Verwenden der XmlSerializer-Klasse
+      href: using-the-xmlserializer-class.md
+      items:
+      - name: 'Vorgehensweise: Verbessern der Startzeit von WCF-Clientanwendungen mit dem XmlSerializer'
+        href: startup-time-of-wcf-client-applications-using-the-xmlserializer.md
+    - name: Verwendung von Nachrichtenverträgen
+      href: using-message-contracts.md
+    - name: Erstellen eines signierten und/oder verschlüsselten benutzerdefinierten Headers
+      href: creating-a-custom-header-that-is-signed-and-or-encrypted.md
+    - name: Verwenden der Message-Klasse
+      href: using-the-message-class.md
+    - name: Filtern
+      href: filtering.md
+    - name: Umfangreiche Daten und Streaming
+      href: large-data-and-streaming.md
+      items:
+      - name: 'Vorgehensweise: Aktivieren des Streamingmodus'
+        href: how-to-enable-streaming.md
+    - name: Sicherheitsüberlegungen zu Daten
+      href: security-considerations-for-data.md
+    - name: Datenübertragungsarchitektur - Übersicht
+      href: data-transfer-architectural-overview.md
+  - name: Sitzungen, Instanziierung und Parallelität
+    href: sessions-instancing-and-concurrency.md
+    items:
+    - name: 'Vorgehensweise: Erstellen eines Diensts, der Sitzungen erfordert'
+      href: how-to-create-a-service-that-requires-sessions.md
+    - name: 'Vorgehensweise: Steuern der Dienstinstanzierung'
+      href: how-to-control-service-instancing.md
+    - name: Geordnete Verarbeitung von Nachrichten im Single-Parallelitätsmodus
+      href: ordered-processing-of-messages-in-single-concurrency-mode.md
+  - name: Transportprotokolle
+    href: transports.md
+    items:
+    - name: Wählen eines Transports
+      href: choosing-a-transport.md
+    - name: Auswählen eines Nachrichtenencoders
+      href: choosing-a-message-encoder.md
+    - name: Nachrichtenübertragung per Stream
+      href: streaming-message-transfer.md
+    - name: Konfigurieren von HTTP und HTTPS
+      href: configuring-http-and-https.md
+    - name: 'Vorgehensweise: Ersetzen der WCF URL-Reservierung durch eine eingeschränkte Reservierung'
+      href: how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md
+    - name: Transportkontingente
+      href: transport-quotas.md
+    - name: Arbeiten mit NATs und Firewalls
+      href: working-with-nats-and-firewalls.md
+    - name: Net.TCP-Anschlussfreigabe
+      href: net-tcp-port-sharing.md
+      items:
+      - name: 'Vorgehensweise: Aktivieren des Net.TCP-Portfreigabediensts'
+        href: how-to-enable-the-net-tcp-port-sharing-service.md
+      - name: 'Vorgehensweise: Konfigurieren eines WCF-Diensts für die Portfreigabe'
+        href: how-to-configure-a-wcf-service-to-use-port-sharing.md
+      - name: Konfigurieren des Net.TCP-Portfreigabediensts
+        href: configuring-the-net-tcp-port-sharing-service.md
+    - name: Codieren von binären Objekten mit dem ByteStream-Encoder
+      href: encoding-binary-objects-with-bytestream-encoder.md
+  - name: Warteschlangen und zuverlässige Sitzungen
+    href: queues-and-reliable-sessions.md
+    items:
+    - name: Zuverlässige Sitzungen
+      href: reliable-sessions.md
+      items:
+      - name: Übersicht über zuverlässige Sitzungen
+        href: reliable-sessions-overview.md
+      - name: 'Vorgehensweise: Austauschen von Nachrichten innerhalb einer zuverlässigen Sitzung'
+        href: how-to-exchange-messages-within-a-reliable-session.md
+      - name: 'Vorgehensweise: Schützen von Nachrichten innerhalb einer zuverlässigen Sitzung'
+        href: how-to-secure-messages-within-reliable-sessions.md
+      - name: 'Vorgehensweise: Erstellen einer benutzerdefinierten zuverlässigen Sitzungsbindung mit HTTPS'
+        href: how-to-create-a-custom-reliable-session-binding-with-https.md
+      - name: Empfohlene Vorgehensweisen für zuverlässige Sitzungen
+        href: best-practices-for-reliable-sessions.md
+    - name: Warteschlangen in WCF
+      href: queues-in-wcf.md
+      items:
+      - name: Warteschlangenübersicht
+        href: queues-overview.md
+      - name: Warteschlangen in WCF
+        href: queuing-in-wcf.md
+        items:
+        - name: Dienstendpunkte und Adressieren von Warteschlangen
+          href: service-endpoints-and-queue-addressing.md
+        - name: Webhosting einer Anwendung mit Queuing
+          href: web-hosting-a-queued-application.md
+      - name: 'Vorgehensweise: Austauschen von Nachrichten in einer Warteschlange mit WCF-Endpunkten'
+        href: how-to-exchange-queued-messages-with-wcf-endpoints.md
+      - name: 'Vorgehensweise: Nachrichtenaustausch mit WCF-Endpunkten und Message Queuing-Anwendungen'
+        href: how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md
+      - name: Gruppieren von Nachrichten in der Warteschlange einer Sitzung
+        href: grouping-queued-messages-in-a-session.md
+      - name: Batchverarbeitung von Nachrichten in einer Transaktion
+        href: batching-messages-in-a-transaction.md
+      - name: Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern
+        href: using-dead-letter-queues-to-handle-message-transfer-failures.md
+      - name: Behandlung nicht verarbeitbarer Nachrichten
+        href: poison-message-handling.md
+      - name: Unterschiede zwischen den Warteschlangenfunktionen in Windows Vista, Windows Server 2003 und Windows XP
+        href: diff-in-queue-in-vista-server-2003-windows-xp.md
+      - name: Sichern von Nachrichten mit Transportsicherheit
+        href: securing-messages-using-transport-security.md
+      - name: Sichern von Nachrichten mithilfe der Nachrichtensicherheit
+        href: securing-messages-using-message-security.md
+      - name: Problembehandlung bei Nachrichtenwarteschlangen
+        href: troubleshooting-queued-messaging.md
+      - name: Bewährte Methoden für die Kommunikation unter Verwendung von Warteschlangen
+        href: best-practices-for-queued-communication.md
+  - name: Transaktionen
+    href: transactions-in-wcf.md
+    items:
+    - name: Übersicht über Windows-Kommunikationfoundation-Transaktionen
+      href: transactions-overview.md
+    - name: Transaktionsmodelle
+      href: transaction-models.md
+    - name: Transaktionsunterstützung in System.ServiceModel
+      href: transactional-support-in-system-servicemodel.md
+      items:
+      - name: ServiceModel-Transaktionsattribute
+        href: servicemodel-transaction-attributes.md
+      - name: ServiceModel-Transaktionskonfiguration
+        href: servicemodel-transaction-configuration.md
+      - name: Aktivieren des Transaktionsflusses
+        href: enabling-transaction-flow.md
+      - name: 'Vorgehensweise: Erstellen eines Transaktionsdiensts'
+        href: how-to-create-a-transactional-service.md
+      - name: Erkennen einer Transaktionsanwendung
+        href: diagnosing-transactional-applications.md
+      - name: Vergleichen von Transaktionen in COM+ und ServiceModel
+        href: comparing-transactions-in-com-and-servicemodel.md
+      - name: Integrieren von Enterprise Services-Transaktionskomponenten
+        href: integrating-enterprise-services-transactional-components.md
+    - name: Verwenden von WS-AtomicTransaction
+      href: using-ws-atomictransaction.md
+      items:
+      - name: Konfigurieren der WS-AtomicTransaction-Unterstützung
+        href: configuring-ws-atomic-transaction-support.md
+  - name: Sicherheit
+    href: security.md
+    items:
+    - name: Übersicht über die Sicherheit
+      href: security-overview.md
+    - name: Begriffe der Sicherheit
+      href: security-concepts.md
+      items:
+      - name: In WCF verwendete Sicherheitsbegriffe
+        href: security-concepts-used-in-wcf.md
+      - name: Sicherheit bei verteilten Anwendungen
+        href: distributed-application-security.md
+      - name: Sicherheitsterminologie
+        href: wcf-security-terminology.md
+    - name: Häufige Sicherheitsszenarien
+      href: common-security-scenarios.md
+      items:
+      - name: 'Internet: Ungesicherter Client und Dienst'
+        href: internet-unsecured-client-and-service.md
+      - name: 'Intranet: Ungesicherter Client und Dienst'
+        href: intranet-unsecured-client-and-service.md
+      - name: Transportsicherheit mit einem anonymen Client
+        href: transport-security-with-an-anonymous-client.md
+      - name: Transportsicherheit mit Standardauthentifizierung
+        href: transport-security-with-basic-authentication.md
+      - name: Transportsicherheit mit Windows-Authentifizierung
+        href: transport-security-with-windows-authentication.md
+      - name: Transportsicherheit mit Zertifikatauthentifizierung
+        href: transport-security-with-certificate-authentication.md
+      - name: Nachrichtensicherheit mit einem anonymen Client
+        href: message-security-with-an-anonymous-client.md
+      - name: Nachrichtensicherheit über einen Benutzernamenclient
+        href: message-security-with-a-user-name-client.md
+      - name: Nachrichtensicherheit durch einem Zertifikatclient
+        href: message-security-with-a-certificate-client.md
+      - name: Nachrichtensicherheit über einen Windows-Client
+        href: message-security-with-a-windows-client.md
+      - name: Nachrichtensicherheit mit einem Windows-Client ohne Anmeldeinformationen-Aushandlung
+        href: message-security-with-a-windows-client-without-credential-negotiation.md
+      - name: Nachrichtensicherheit durch gegenseitige Zertifikate
+        href: message-security-with-mutual-certificates.md
+      - name: Nachrichtensicherheit durch ausgestellte Token
+        href: message-security-with-issued-tokens.md
+      - name: Vertrauenswürdiges Subsystem
+        href: trusted-subsystem.md
+    - name: Sicherheitsverhalten
+      href: security-behaviors-in-wcf.md
+    - name: Bindungen und Sicherheit
+      href: bindings-and-security.md
+      items:
+      - name: Sicherheitsfunktionen mit benutzerdefinierten Bindungen
+        href: security-capabilities-with-custom-bindings.md
+        items:
+        - name: SecurityBindingElement-Authentifizierungsmodi
+          href: securitybindingelement-authentication-modes.md
+        - name: 'Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement'
+          href: how-to-create-a-custom-binding-using-the-securitybindingelement.md
+        - name: 'Vorgehensweise: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus'
+          href: how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md
+        - name: 'Vorgehensweise: Deaktivieren sicherer Sitzungen auf einer WSFederationHttpBinding'
+          href: how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md
+        - name: 'Vorgehensweise: Aktivieren der Nachrichtenreplay-Erkennung'
+          href: how-to-enable-message-replay-detection.md
+        - name: 'Vorgehensweise: Erstellen unterstützender Anmeldeinformationen'
+          href: how-to-create-a-supporting-credential.md
+        - name: 'Vorgehensweise: Einrichten einer Signaturbestätigung'
+          href: how-to-set-up-a-signature-confirmation.md
+        - name: 'Vorgehensweise: Festlegen der maximalen Zeitdehnung (Uhrabweichung)'
+          href: how-to-set-a-max-clock-skew.md
+        - name: 'Vorgehensweise: Deaktivieren der Verschlüsselung digitaler Signaturen'
+          href: how-to-disable-encryption-of-digital-signatures.md
+    - name: Sichern von Diensten und Clients
+      href: securing-services-and-clients.md
+      items:
+      - name: Programmieren der WCF-Sicherheit
+        href: programming-wcf-security.md
+        items:
+        - name: Wählen eines Typs von Anmeldeinformationen
+          href: selecting-a-credential-type.md
+        - name: 'Vorgehensweise: Authentifizierung mit Benutzernamen und Kennwort'
+          href: how-to-authenticate-with-a-user-name-and-password.md
+      - name: Transportsicherheit
+        href: transport-security.md
+        items:
+        - name: Übersicht über die Transportsicherheit
+          href: transport-security-overview.md
+        - name: HTTP-Transportsicherheit
+          href: http-transport-security.md
+        - name: Grundlagen der HTTP-Authentifizierung
+          href: understanding-http-authentication.md
+        - name: Identitätswechsel und Transportsicherheit
+          href: using-impersonation-with-transport-security.md
+        - name: 'Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat'
+          href: how-to-configure-a-port-with-an-ssl-certificate.md
+        - name: 'Vorgehensweise: Konfigurieren eines IIS-gehosteten WCF-Diensts mit SSL'
+          href: how-to-configure-an-iis-hosted-wcf-service-with-ssl.md
+      - name: Nachrichtensicherheit
+        href: message-security-in-wcf.md
+        items:
+        - name: 'Vorgehensweise: Sichern eines Diensts mit einem X.509-Zertifikat'
+          href: how-to-secure-a-service-with-an-x-509-certificate.md
+        - name: 'Vorgehensweise: Verwenden von Transportsicherheit und Nachrichtenanmeldeinformationen'
+          href: how-to-use-transport-security-and-message-credentials.md
+        - name: Verhindern von Replay-Angriffen bei Hosten eines WCF-Diensts in einer Webfarm
+          href: preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm.md
+      - name: Sichere Sitzungen
+        href: secure-sessions.md
+        items:
+        - name: Sichere Unterhaltungen und sichere Sitzungen.
+          href: secure-conversations-and-secure-sessions.md
+        - name: 'Vorgehensweise: Erstellen einer sicheren Sitzung'
+          href: how-to-create-a-secure-session.md
+        - name: 'Vorgehensweise: Erstellen eines Tokens für den Sicherheitskontext einer sicheren Sitzung'
+          href: how-to-create-a-security-context-token-for-a-secure-session.md
+        - name: Sicherheitsüberlegungen für Sicherheitssitzungen
+          href: security-considerations-for-secure-sessions.md
+      - name: Verwenden von Zertifikaten
+        href: working-with-certificates.md
+        items:
+        - name: 'Vorgehensweise: Abrufen eines Zertifikats'
+          href: how-to-obtain-a-certificate-wcf.md
+        - name: 'Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-In'
+          href: how-to-view-certificates-with-the-mmc-snap-in.md
+        - name: 'Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats'
+          href: how-to-retrieve-the-thumbprint-of-a-certificate.md
+        - name: 'Vorgehensweise: Zugänglichmachen von X.509-Zertifikaten für WCF'
+          href: how-to-make-x-509-certificates-accessible-to-wcf.md
+        - name: 'Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung'
+          href: how-to-create-temporary-certificates-for-use-during-development.md
+        - name: 'Vorgehensweise: Angeben der Zertifizierungsstellen-Zertifikatkette, die verwendet wird, um Signaturen zu überprüfen'
+          href: specify-the-certificate-authority-chain-verify-signatures-wcf.md
+        - name: Unterschiede bei der Zertifikatsvalidierung zwischen HTTPS, SSL über TCP und SOAP-Sicherheit
+          href: cert-val-diff-https-ssl-over-tcp-and-soap.md
+        - name: Unterschiede zwischen von Internet Explorer und WCF durchgeführter Dienstzertifikatsvalidierung
+          href: diff-service-certificate-validation-ie-and-wcf.md
+        - name: 'Vorgehensweise: Einheitliche Verweise auf X.509-Zertifikate'
+          href: how-to-consistently-reference-x-509-certificates.md
+    - name: Authentifizierung
+      href: authentication-in-wcf.md
+      items:
+      - name: 'Vorgehensweise: Verwenden des ASP.NET-Mitgliedschaftsanbieters'
+        href: how-to-use-the-aspnet-membership-provider.md
+      - name: 'Vorgehensweise: Verwenden eines benutzerdefinierten Benutzernamens und eines Kennwort-Validierungssteuerelements'
+        href: how-to-use-a-custom-user-name-and-password-validator.md
+      - name: 'Vorgehensweise: Verwenden mehrerer Sicherheitstokens desselben Typs'
+        href: how-to-use-multiple-security-tokens-of-the-same-type.md
+      - name: Dienstidentität und Authentifizierung
+        href: service-identity-and-authentication.md
+      - name: Sicherheitsaushandlung und Timeouts
+        href: security-negotiation-and-timeouts.md
+      - name: Debuggen von Windows-Authentifizierungsfehlern
+        href: debugging-windows-authentication-errors.md
+      - name: Verwenden von mehreren Authentifizierungsschemen mit WCF
+        href: using-multiple-authentication-schemes-with-wcf.md
+    - name: Autorisierung
+      href: authorization-in-wcf.md
+      items:
+      - name: Zugriffssteuerungsmechanismen
+        href: access-control-mechanisms.md
+      - name: 'Vorgehensweise: Verwenden des Rollenanbieters für den ASP.NET bei einem Dienst'
+        href: how-to-use-the-aspnet-role-provider-with-a-service.md
+      - name: 'Vorgehensweise: Verwenden des Rollenanbieters für den ASP.NET-Autorisierungs-Manager bei einem Dienst'
+        href: how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md
+      - name: Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell
+        href: managing-claims-and-authorization-with-the-identity-model.md
+        items:
+        - name: Ansprüche und Token
+          href: claims-and-tokens.md
+        - name: Ansprüche und das Verweigern des Zugriffs auf Ressourcen
+          href: claims-and-denying-access-to-resources.md
+        - name: Erstellen von Ansprüchen und Ressourcenwerte
+          href: claim-creation-and-resource-values.md
+      - name: Delegierung und Identitätswechsel
+        href: delegation-and-impersonation-with-wcf.md
+    - name: Verbund und ausgestellte Token
+      href: federation-and-issued-tokens.md
+      items:
+      - name: Verbund
+        href: federation.md
+      - name: Verbund und Vertrauenswürdigkeit
+        href: federation-and-trust.md
+      - name: 'Vorgehensweise: Erstellen eines Verbundclients'
+        href: how-to-create-a-federated-client.md
+      - name: 'Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst'
+        href: how-to-configure-credentials-on-a-federation-service.md
+      - name: 'Vorgehensweise: Erstellen einer WSFederationHttpBinding'
+        href: how-to-create-a-wsfederationhttpbinding.md
+      - name: 'Vorgehensweise: Erstellen eines Sicherheitstokendiensts'
+        href: how-to-create-a-security-token-service.md
+      - name: SAML-Token (Security Assertions Markup Language) und Ansprüche
+        href: saml-tokens-and-claims.md
+      - name: 'Vorgehensweise: Konfigurieren eines lokalen Ausstellers'
+        href: how-to-configure-a-local-issuer.md
+      - name: 'Vorgehensweise: Erstellen einer Bindung mit Duplexverbund'
+        href: how-to-create-a-duplex-federated-binding.md
+    - name: Überwachung
+      href: auditing-security-events.md
+      items:
+      - name: 'Vorgehensweise: Überwachen von Sicherheitsereignissen'
+        href: how-to-audit-wcf-security-events.md
+    - name: Sicherheitsleitfaden und empfohlene Vorgehensweisen
+      href: security-guidance-and-best-practices.md
+      items:
+      - name: Bewährte Methoden für Sicherheit
+        href: best-practices-for-security-in-wcf.md
+      - name: Sicherheitsüberlegungen
+        href: security-considerations-in-wcf.md
+        items:
+        - name: Veröffentlichung von Informationen
+          href: information-disclosure.md
+        - name: Angriffe durch Rechteerweiterung
+          href: elevation-of-privilege.md
+        - name: Dienstverweigerung (Denial of Service)
+          href: denial-of-service.md
+        - name: Verfälschungen
+          href: tampering.md
+        - name: Wiederholungsangriffe
+          href: replay-attacks.md
+        - name: Nicht unterstützte Szenarien
+          href: unsupported-scenarios.md
+      - name: Überlegungen zur Leistung
+        href: performance-considerations.md
+        items:
+        - name: Suchen von Ansprüchen in einem ClaimSet
+          href: finding-claims-in-a-claimset.md
+        - name: Verschlüsselung von digitalen Signaturen
+          href: encryption-of-digital-signatures.md
+    - name: Übersicht über den erweiterten Schutz für die Authentifizierung
+      href: extended-protection-for-authentication-overview.md
+      items:
+      - name: Infodatei für das Beispiel zum erweiterten Schutz für die Authentifizierung
+        href: readme-for-extended-protection-authentication-sample.md
+  - name: Peer-to-Peer-Netzwerke
+    href: peer-to-peer-networking.md
+    items:
+    - name: Peerkanalszenarien
+      href: peer-channel-scenarios.md
+    - name: Peerkanalbegriffe
+      href: peer-channel-concepts.md
+      items:
+      - name: Peer-Meshs
+        href: peer-meshes.md
+      - name: Peerknoten
+        href: peer-nodes.md
+      - name: Peerkanalsicherheit
+        href: peer-channel-security.md
+      - name: Peerresolver
+        href: peer-resolvers.md
+        items:
+        - name: 'Einblicke in den CustomPeerResolverService: Clientregistrierungen'
+          href: inside-the-custompeerresolverservice-client-registrations.md
+    - name: Erstellen einer Peerkanalanwendung
+      href: building-a-peer-channel-application.md
+      items:
+      - name: Konvertieren einer NetTcpBinding-Anwendung in eine Peerkanalanwendung
+        href: converting-a-nettcpbinding-application-to-a-peer-channel-application.md
+      - name: Beschränken der Nachrichtenverteilung
+        href: limiting-message-distribution.md
+      - name: Hinzufügen von Online- und Offlinestatus
+        href: adding-online-and-offline-status.md
+      - name: Sichern von Peerkanalanwendungen
+        href: securing-peer-channel-applications.md
+  - name: Metadaten
+    href: metadata.md
+    items:
+    - name: Übersicht über die Metadatenarchitektur
+      href: metadata-architecture-overview.md
+    - name: Metadatenformate
+      href: metadata-formats.md
+    - name: Exportieren und Importieren von Metadaten
+      href: exporting-and-importing-metadata.md
+      items:
+      - name: 'Vorgehensweise: Importieren von Metadaten in Dienstendpunkte'
+        href: how-to-import-metadata-into-service-endpoints.md
+      - name: 'Vorgehensweise: Exportieren von Metadaten aus Dienstendpunkten'
+        href: how-to-export-metadata-from-service-endpoints.md
+      - name: ServiceDescription und WSDL-Verweis
+        href: servicedescription-and-wsdl-reference.md
+      - name: 'Vorgehensweise: Verwenden von „Svcutil.exe“ zum Exportieren von Metadaten aus kompiliertem Dienstcode'
+        href: how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md
+    - name: Veröffentlichen von Metadaten
+      href: publishing-metadata.md
+      items:
+      - name: 'Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei'
+        href: how-to-publish-metadata-for-a-service-using-a-configuration-file.md
+      - name: 'Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst über den Code'
+        href: how-to-publish-metadata-for-a-service-using-code.md
+    - name: Abrufen von Metadaten
+      href: retrieving-metadata.md
+      items:
+      - name: 'Vorgehensweise: Verwenden von „Svcutil.exe“ zum Herunterladen von Metadatendokumenten'
+        href: how-to-use-svcutil-exe-to-download-metadata-documents.md
+      - name: 'Vorgehensweise: Verwenden von MetadataResolver, um Bindungsmetadaten dynamisch zu erhalten'
+        href: how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md
+      - name: 'Vorgehensweise: Die Verwendung von MetadataExchangeClient zum Abrufen von Metadaten'
+        href: how-to-use-metadataexchangeclient-to-retrieve-metadata.md
+    - name: Verwenden von Metadaten
+      href: using-metadata.md
+      items:
+      - name: Grundlagen des generierten Clientcodes
+        href: understanding-generated-client-code.md
+      - name: 'Vorgehensweise: Abrufen von Metadaten und Implementieren eines kompatiblen Diensts'
+        href: how-to-retrieve-metadata-and-implement-a-compliant-service.md
+      - name: Generieren eines WCF-Clients aus Dienstmetadaten
+        href: generating-a-wcf-client-from-service-metadata.md
+    - name: Sicherheitsüberlegungen für Metadaten
+      href: security-considerations-with-metadata.md
+      items:
+      - name: 'Vorgehensweise: Sichern von Metadatenendpunkten'
+        href: how-to-secure-metadata-endpoints.md
+      - name: 'Vorgehensweise: Zulassen von Metadatenanforderungen während der Autorisierung'
+        href: how-to-allow-metadata-requests-while-authorizing.md
+  - name: Clients
+    href: clients.md
+    items:
+    - name: WCF-Clientarchitektur
+      href: client-architecture.md
+    - name: Zugreifen auf Dienste mithilfe eines WCF-Clients
+      href: accessing-services-using-a-client.md
+      items:
+      - name: 'Vorgehensweise: Zugreifen auf Dienste mit unidirektionalen und Anforderung-Antwort-Verträgen'
+        href: how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md
+      - name: 'Vorgehensweise: Zugreifen auf Dienste mit einem Duplexvertrag'
+        href: how-to-access-services-with-a-duplex-contract.md
+      - name: 'Vorgehensweise: Zugriff auf einen WSE3.0-Dienst'
+        href: how-to-access-a-wse-3-0-service-with-a-wcf-client.md
+      - name: 'Vorgehensweise: Verwenden der ChannelFactory'
+        href: how-to-use-the-channelfactory.md
+      - name: Kanalfactory und Zwischenspeichern
+        href: channel-factory-and-caching.md
+      - name: 'Vorgehensweise: Asynchrones Aufrufen von Dienstvorgängen'
+        href: how-to-call-wcf-service-operations-asynchronously.md
+      - name: Clientanwendungen mittlerer Ebene
+        href: middle-tier-client-applications.md
+      - name: 'Vorgehensweise: Asynchrones Aufrufen von Vorgängen mit einer Kanalfactory'
+        href: how-to-call-operations-asynchronously-using-a-channel-factory.md
+      - name: Zugreifen auf WCF-Dienste mit einer Windows Store-Client-App
+        href: accessing-wcf-services-with-a-windows-store-client-app.md
+      - name: 'Vorgehensweise: Erstellen einer Kanalfactory, mit der ein Kanal erstellt und verwaltet werden kann'
+        href: how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md
+    - name: WCF-Clientkonfiguration
+      href: client-configuration.md
+  - name: Hosting
+    href: hosting.md
+    items:
+    - name: Hosten in Internetinformationsdiensten
+      href: hosting-in-internet-information-services.md
+      items:
+      - name: Bereitstellen eines IIS-gehosteten WCF-Diensts
+        href: deploying-an-internet-information-services-hosted-wcf-service.md
+      - name: WCF-Dienste und ASP.NET
+        href: wcf-services-and-aspnet.md
+      - name: Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten
+        href: internet-information-services-hosting-best-practices.md
+      - name: 'Vorgehensweise: Hosten eines WCF-Diensts in IIS'
+        href: how-to-host-a-wcf-service-in-iis.md
+      - name: Konfigurieren von Internetinformationsdienste 7.0 für Windows Communication Foundation
+        href: configuring-iis-for-wcf.md
+    - name: Hosten in WAS (Windows Process Activation Service)
+      href: hosting-in-windows-process-activation-service.md
+      items:
+      - name: WAS-Aktivierungsarchitektur
+        href: was-activation-architecture.md
+      - name: Konfigurieren von WAS für die Verwendung mit WCF
+        href: configuring-the-wpa--service-for-use-with-wcf.md
+      - name: 'Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten'
+        href: how-to-install-and-configure-wcf-activation-components.md
+      - name: 'Vorgehensweise: Hosten eines WCF-Diensts in WAS'
+        href: how-to-host-a-wcf-service-in-was.md
+    - name: Hosten in einer Windows-Dienstanwendung
+      href: hosting-in-a-windows-service-application.md
+      items:
+      - name: 'Vorgehensweise: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst'
+        href: how-to-host-a-wcf-service-in-a-managed-windows-service.md
+    - name: Hosten in einer verwalteten Anwendung
+      href: hosting-in-a-managed-application.md
+    - name: Konfigurationsbasierte Aktivierung unter IIS und WAS
+      href: configuration-based-activation-in-iis-and-was.md
+    - name: Unterstützen mehrerer IIS-Sitebindungen
+      href: supporting-multiple-iis-site-bindings.md
+    - name: System.Web.Routing-Integration
+      href: system-web-routing-integration.md
+  - name: Teilweise Vertrauenswürdigkeit
+    href: partial-trust.md
+    items:
+    - name: Unterstützte Bereitstellungsszenarien
+      href: supported-deployment-scenarios.md
+    - name: Funktionskompatibilität für teilweise Vertrauenswürdigkeit
+      href: partial-trust-feature-compatibility.md
+    - name: Empfehlungen für eine teilweise vertrauenswürdige Umgebung
+      href: partial-trust-best-practices.md
+  - name: Interoperabilität und Integration
+    href: interoperability-and-integration.md
+    items:
+    - name: Handbuch für die Interoperabilität von Webdienstprotokollen
+      href: web-services-protocols-interoperability-guide.md
+      items:
+      - name: Durch vom System bereitgestellte Interoperabilitätsbindungen unterstützte Webdienstprotokolle
+        href: web-services-protocols-supported-by-system-provided-interoperability-bindings.md
+      - name: Messagingprotokolle
+        href: messaging-protocols.md
+      - name: Datenvertrags-Schemareferenz
+        href: data-contract-schema-reference.md
+      - name: WSDL und Richtlinie
+        href: wsdl-and-policy.md
+      - name: Sicherheitsprotokolle, Version&amp;#160;1.0
+        href: security-protocols-version-1-0.md
+      - name: Sicherheitsprotokolle
+        href: security-protocols.md
+      - name: Zuverlässiges Messaging-Protokoll, Version 1.0
+        href: reliable-messaging-protocol-version-1-0.md
+      - name: Zuverlässiges Messaging-Protokoll, Version 1,1
+        href: reliable-messaging-protocol-version-1-1.md
+      - name: Transaktionsprotokolle, Version 1.0
+        href: transaction-protocols-version-1-0.md
+      - name: Transaktionsprotokolle
+        href: transaction-protocols.md
+      - name: Kontextaustauschprotokoll
+        href: context-exchange-protocol.md
+      - name: Verwenden mehrerer verschiedener Vertrauensprotokolle in Verbundszenarien
+        href: mixing-trust-protocols-in-federated-scenarios.md
+    - name: Integrieren von COM+-Anwendungen
+      href: integrating-with-com-plus-applications.md
+      items:
+      - name: Übersicht über die Integration von COM+-Anwendungen
+        href: integrating-with-com-plus-applications-overview.md
+      - name: 'Vorgehensweise: Verwenden des COM+-Dienstmodell-Konfigurationstools'
+        href: how-to-use-the-com-service-model-configuration-tool.md
+      - name: 'Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen'
+        href: how-to-configure-com-service-settings.md
+      - name: 'Vorgehensweise: Bereitstellung einer COM+-Integrationsanwendung'
+        href: how-to-deploy-a-com-integration-application.md
+    - name: Integrieren von COM-Anwendungen
+      href: integrating-with-com-applications.md
+      items:
+      - name: Übersicht über die Integration von COM-Anwendungen
+        href: integrating-with-com-applications-overview.md
+      - name: 'Vorgehensweise: Registrieren und Konfigurieren eines Dienstmonikers'
+        href: how-to-register-and-configure-a-service-moniker.md
+      - name: 'Vorgehensweise: Verwenden des Windows Communication Foundation-Dienstmonikers ohne Registrierung'
+        href: use-the-wcf-service-moniker-without-registration.md
+      - name: 'Vorgehensweise: Verwenden eines Dienstmonikers mit WSDL-Verträgen'
+        href: how-to-use-a-service-moniker-with-wsdl-contracts.md
+      - name: 'Vorgehensweise: Verwenden eines Dienstmonikers mit Metadatenaustausch-Verträgen'
+        href: how-to-use-a-service-moniker-with-metadata-exchange-contracts.md
+      - name: 'Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit'
+        href: how-to-specify-channel-security-credentials.md
+    - name: Migrieren von .NET-Remoteanwendungen nach WCF
+      href: migrating-net-remoting-applications-to-wcf.md
+    - name: Interoperabilität mit Web Services Enhancements 3.0
+      href: interoperability-with-web-services-enhancements-3-0.md
+      items:
+      - name: 'Vorgehensweise: Konfigurieren von WCF-Diensten für die Zusammenarbeit mit WSE3.0-Clients'
+        href: how-to-configure-wcf-services-to-interoperate-with-wse-3-0-clients.md
+      - name: 'Vorgehensweise: Konfigurieren eines WCF-Clients für die Zusammenarbeit mit WSE3.0-Diensten'
+        href: how-to-configure-a-wcf-client-to-interoperate-with-wse3-0-services.md
+    - name: Migrieren von WSE 3.0-Webdiensten zu WCF
+      href: migrating-wse-3-0-web-services-to-wcf.md
+    - name: Interoperabilität mit ASP.NET-Webdiensten
+      href: interop-with-aspnet-web-services.md
+      items:
+      - name: 'Vorgehensweise: Konfigurieren eines WCF-Diensts für die Zusammenarbeit mit ASP.NET-Webdienstclients'
+        href: config-wcf-service-with-aspnet-web-service.md
+    - name: Migrieren von ASP.NET-Webdiensten zu WCF
+      href: migrating-aspnet-web-services-to-wcf.md
+      items:
+      - name: Vergleichen von ASP.NET-Webdiensten mit WCF nach Zweck und verwendeten Standards
+        href: comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md
+      - name: Vergleichen von ASP.NET-Webdiensten mit WCF auf Grundlage der Entwicklung
+        href: comparing-aspnet-web-services-to-wcf-based-on-development.md
+      - name: 'Vorbereitungen für Windows Communication Foundation: einfachere Migration in der Zukunft'
+        href: anticipating-adopting-the-wcf-easing-future-integration.md
+      - name: 'Vorbereitungen für Windows Communication Foundation: einfachere Integration in der Zukunft'
+        href: anticipating-adopting-wcf-migration.md
+      - name: Übernehmen von Windows Communication Foundation
+        href: adopting-wcf.md
+    - name: Interoperabilität mit POX-Anwendungen
+      href: interoperability-with-pox-applications.md
+  - name: WCF-Web-HTTP-Programmiermodell
+    href: wcf-web-http-programming-model.md
+    items:
+    - name: Überblick über WCF-Web-HTTP-Programmiermodelle
+      href: wcf-web-http-programming-model-overview.md
+    - name: Objektmodell für WCF-Web-HTTP-Programmierung
+      href: wcf-web-http-programming-object-model.md
+    - name: 'Vorgehensweise: Erstellen eines grundlegenden WCF-Web-HTTP-Diensts'
+      href: how-to-create-a-basic-wcf-web-http-service.md
+    - name: 'Vorgehensweise: Verfügbarmachen eines Vertrags für SOAP- und Webclients'
+      href: how-to-expose-a-contract-to-soap-and-web-clients.md
+    - name: UriTemplate und UriTemplateTable
+      href: uritemplate-and-uritemplatetable.md
+    - name: 'Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zurückgibt'
+      href: service-returns-arbitrary-data-using-the-wcf-web.md
+    - name: 'Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF REST-Programmiermodells akzeptiert'
+      href: create-a-service-arbitrary-data-using-wcf.md
+    - name: Cacheunterstützung für WCF-Web-HTTP-Dienste
+      href: caching-support-for-wcf-web-http-services.md
+    - name: Hilfeseite zum WCF-Web-HTTP-Dienst
+      href: wcf-web-http-service-help-page.md
+    - name: WCF-Web-HTTP-Formatierung
+      href: wcf-web-http-formatting.md
+    - name: WCF-Web-HTTP-Fehlerbehandlung
+      href: wcf-web-http-error-handling.md
+    - name: Verwenden von JSONP
+      href: using-jsonp.md
+    - name: Aufrufen eines REST-Diensts aus einem WCF-Dienst
+      href: calling-a-rest-style-service-from-a-wcf-service.md
+  - name: WCF Syndication
+    href: wcf-syndication.md
+    items:
+    - name: Übersicht über WCF Syndication
+      href: wcf-syndication-overview.md
+    - name: Architektur von Syndication
+      href: architecture-of-syndication.md
+    - name: Wie das WCF-Syndication-Objektmodell Atom und RSS zugeordnet wird
+      href: how-the-wcf-syndication-object-model-maps-to-atom-and-rss.md
+    - name: 'Vorgehensweise: Erstellen eines grundlegenden RSS-Feeds'
+      href: how-to-create-a-basic-rss-feed.md
+    - name: 'Vorgehensweise: Erstellen eines grundlegenden Atom-Feeds'
+      href: how-to-create-a-basic-atom-feed.md
+    - name: 'Vorgehensweise: Verfügbarmachen eines Feeds als Atom und RSS'
+      href: how-to-expose-a-feed-as-both-atom-and-rss.md
+    - name: Syndication-Erweiterbarkeit
+      href: syndication-extensibility.md
+  - name: AJAX-Integration und JSON-Unterstützung
+    href: ajax-integration-and-json-support.md
+    items:
+    - name: Erstellen von WCF-Diensten für ASP.NET AJAX
+      href: creating-wcf-services-for-aspnet-ajax.md
+      items:
+      - name: 'Vorgehensweise: Erstellen eines AJAX-aktivierten WCF-Diensts und Zugreifen auf diesen'
+        href: create-an-ajax-wcf-asp-net-client.md
+      - name: 'Vorgehensweise: Hinzufügen eines ASP.NET AJAX-Endpunkts ohne Verwendung einer Konfiguration'
+        href: how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md
+      - name: 'Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts'
+        href: how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md
+      - name: 'Vorgehensweise: Auswählen zwischen HTTP POST- und HTTP GET-Anforderungen für ASP.NET AJAX-Endpunkte'
+        href: http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md
+    - name: Erstellen von WCF AJAX-Diensten ohne ASP.NET
+      href: creating-wcf-ajax-services-without-aspnet.md
+    - name: Unterstützung für JSON und andere Datenübertragungsformate
+      href: support-for-json-and-other-data-transfer-formats.md
+      items:
+      - name: Eigenständige JSON-Serialisierung.
+        href: stand-alone-json-serialization.md
+      - name: 'Vorgehensweise: Serialisieren und Deserialisieren von JSON-Daten'
+        href: how-to-serialize-and-deserialize-json-data.md
+      - name: Zuordnung zwischen JSON und XML
+        href: mapping-between-json-and-xml.md
+      - name: Serialisieren in Json mit Programmierung auf Nachrichtenebene
+        href: serializing-in-json-with-message-level-programming.md
+    - name: 'Vorgehensweise: Migrieren AJAX-aktivierter ASP.NET-Webdienste nach WCF'
+      href: how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md
+  - name: WCF-Suche
+    href: wcf-discovery.md
+    items:
+    - name: Übersicht über die WCF-Suche
+      href: wcf-discovery-overview.md
+    - name: Objektmodell der WCF-Suche
+      href: wcf-discovery-object-model.md
+    - name: Suche und FindCriteria
+      href: discovery-find-and-findcriteria.md
+    - name: 'Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client'
+      href: how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md
+    - name: Implementieren eines Suchproxys
+      href: implementing-a-discovery-proxy.md
+      items:
+      - name: 'Vorgehensweise: Implementieren eines Suchproxys'
+        href: how-to-implement-a-discovery-proxy.md
+      - name: 'Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist'
+        href: discoverable-service-that-registers-with-the-discovery-proxy.md
+      - name: 'Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet'
+        href: client-app-discovery-proxy-to-find-a-service.md
+      - name: 'Vorgehensweise: Testen des Suchproxys'
+        href: how-to-test-the-discovery-proxy.md
+      - name: 'Vorgehensweise: Bestimmen der Discovery-Version einer Überprüfungsanforderung'
+        href: how-to-determine-the-discovery-version-of-a-probe-request.md
+    - name: Versionskontrolle für die Suche
+      href: discovery-versioning.md
+    - name: Konfigurieren der Suche in einer Konfigurationsdatei
+      href: configuring-discovery-in-a-configuration-file.md
+    - name: Verwenden des Suchclientchannels
+      href: using-the-discovery-client-channel.md
+    - name: Verwenden einer benutzerdefinierten Bindung mit dem Suchclientchannel
+      href: using-a-custom-binding-with-the-discovery-client-channel.md
+    - name: Suchankündigungen und Ankündigungsclient
+      href: discovery-announcements-and-announcement-client.md
+    - name: DiscoveryClient und DynamicEndpoint
+      href: discoveryclient-and-dynamicendpoint.md
+  - name: Routing
+    href: routing.md
+    items:
+    - name: Einführung in das Routing
+      href: routing-introduction.md
+    - name: Routingdienst
+      href: routing-service.md
+    - name: Routingverträge
+      href: routing-contracts.md
+    - name: Nachrichtenfilter
+      href: message-filters.md
+      items:
+      - name: Auswählen eines Filters
+        href: choosing-a-filter.md
+      - name: Benutzerdefinierte Filter
+        href: custom-filters.md
+      - name: 'Vorgehensweise: Verwenden von Filtern'
+        href: how-to-use-filters.md
+    - name: Routingszenarien
+      href: routing-scenarios.md
+      items:
+      - name: 'Vorgehensweise: Dienstversionsverwaltung'
+        href: how-to-service-versioning.md
+      - name: 'Vorgehensweise: Dienstdatenpartitionierung'
+        href: how-to-service-data-partitioning.md
+      - name: 'Vorgehensweise: Dynamisches Update'
+        href: how-to-dynamic-update.md
+      - name: 'Vorgehensweise: Fehlerbehandlung'
+        href: how-to-error-handling.md
+  - name: WCF und internationale Domänennamen
+    href: wcf-and-internationalized-domain-names.md
+  - name: WCF und WebSockets
+    href: wcf-and-websockets.md
+    items:
+    - name: Verwenden der NetHttpBinding
+      href: using-the-nethttpbinding.md
+    - name: 'Vorgehensweise: Erstellen eines WCF-Diensts, der über WebSockets kommuniziert'
+      href: how-to-create-a-wcf-service-that-communicates-over-websockets.md
+  - name: Fehlerbehandlung
+    href: error-handling.md
+ms.openlocfilehash: e3e5ea2aa8b0462cfad8dd7094ccf7d669611ae1
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469207"

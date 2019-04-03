@@ -1,0 +1,171 @@
+items:
+- name: WCF Data Services 4.5
+  href: index.md
+  items:
+  - name: Übersicht
+    href: wcf-data-services-overview.md
+  - name: Erste Schritte
+    href: getting-started-with-wcf-data-services.md
+    items:
+    - name: Verfügbarmachen Ihrer Daten als Dienst
+      href: exposing-your-data-as-a-service-wcf-data-services.md
+    - name: Zugreifen auf Datendienstressourcen
+      href: accessing-data-service-resources-wcf-data-services.md
+    - name: Verwenden eines Datendiensts in einer Clientanwendung
+      href: using-a-data-service-in-a-client-application-wcf-data-services.md
+    - name: Schnellstart
+      href: quickstart-wcf-data-services.md
+      items:
+      - name: Erstellen des Datendiensts
+        href: creating-the-data-service.md
+      - name: Zugreifen auf den Dienst mit einem Webbrowser
+        href: accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md
+      - name: Erstellen der .NET Framework-Clientanwendung
+        href: creating-the-dotnet-client-application-wcf-data-services-quickstart.md
+    - name: Anwendungsszenarios
+      href: application-scenarios-wcf-data-services.md
+    - name: Ressourcen
+      href: wcf-data-services-resources.md
+  - name: Definieren von WCF Data Services
+    href: defining-wcf-data-services.md
+    items:
+    - name: Konfigurieren des Datendiensts
+      href: configuring-the-data-service-wcf-data-services.md
+      items:
+      - name: 'Vorgehensweise: Entwickeln eines mit IIS ausgeführten WCF-Datendiensts'
+        href: how-to-develop-a-wcf-data-service-running-on-iis.md
+      - name: 'Vorgehensweise: Aktivieren des Zugriffs auf den Datendienst'
+        href: how-to-enable-access-to-the-data-service-wcf-data-services.md
+      - name: 'Vorgehensweise: Aktivieren von Paging für Datendienstergebnisse'
+        href: how-to-enable-paging-of-data-service-results-wcf-data-services.md
+    - name: Datendienstanbieter
+      href: data-services-providers-wcf-data-services.md
+      items:
+      - name: Entity Framework-Anbieter
+        href: entity-framework-provider-wcf-data-services.md
+        items:
+        - name: 'Vorgehensweise: Erstellen eines Datendiensts mit einer ADO.NET-Entity Framework-Datenquelle'
+          href: create-a-data-service-using-an-adonet-ef-data-wcf.md
+      - name: Reflektionsanbieter
+        href: reflection-provider-wcf-data-services.md
+        items:
+        - name: 'Vorgehensweise: Erstellen eines Datendiensts mit dem Reflektionsanbieter'
+          href: create-a-data-service-using-rp-wcf-data-services.md
+        - name: 'Vorgehensweise: Erstellen eines Datendiensts mit einer LINQ to SQL-Datenquelle'
+          href: create-a-data-service-using-linq-to-sql-wcf.md
+      - name: Benutzerdefinierte Datendienstanbieter
+        href: custom-data-service-providers-wcf-data-services.md
+      - name: Streaminganbieter
+        href: streaming-provider-wcf-data-services.md
+    - name: Dienstvorgänge
+      href: service-operations-wcf-data-services.md
+      items:
+      - name: 'Vorgehensweise: Definieren eines Dienstvorgangs'
+        href: how-to-define-a-service-operation-wcf-data-services.md
+    - name: Feedanpassung
+      href: feed-customization-wcf-data-services.md
+      items:
+      - name: 'Vorgehensweise: Anpassen von Feeds mit dem Entity Framework-Anbieter'
+        href: how-to-customize-feeds-with-ef-provider-wcf-data-services.md
+      - name: 'Vorgehensweise: Anpassen von Feeds mit dem Reflektionsanbieter'
+        href: how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md
+    - name: Interceptors
+      href: interceptors-wcf-data-services.md
+      items:
+      - name: 'Vorgehensweise: Abfangen von Datendienstnachrichten'
+        href: how-to-intercept-data-service-messages-wcf-data-services.md
+    - name: Entwickeln und Bereitstellen von WCF Data Services
+      href: developing-and-deploying-wcf-data-services.md
+    - name: Sichern von WCF Data Services
+      href: securing-wcf-data-services.md
+    - name: Hosten des Datendiensts
+      href: hosting-the-data-service-wcf-data-services.md
+    - name: Datendienstversionsverwaltung
+      href: data-service-versioning-wcf-data-services.md
+    - name: Details der WCF Data Services-Protokollimplementierung
+      href: wcf-data-services-protocol-implementation-details.md
+    - name: Verwenden von Aktionen zum Implementieren des serverseitigen Verhaltens
+      href: using-actions-to-implement-server-side-behavior.md
+  - name: WCF Data Services-Clientbibliothek
+    href: wcf-data-services-client-library.md
+    items:
+    - name: Generieren der Datendienstclientbibliothek
+      href: generating-the-data-service-client-library-wcf-data-services.md
+      items:
+      - name: WCF Data Service-Clienthilfsprogramm ("DataSvcUtil.exe")
+        href: wcf-data-service-client-utility-datasvcutil-exe.md
+      - name: 'Vorgehensweise: Hinzufügen eines Datendienstverweises'
+        href: how-to-add-a-data-service-reference-wcf-data-services.md
+      - name: 'Vorgehensweise: Manuelles Generieren von Clientdatendienstklassen'
+        href: how-to-manually-generate-client-data-service-classes-wcf-data-services.md
+    - name: Abfragen des Datendiensts
+      href: querying-the-data-service-wcf-data-services.md
+      items:
+      - name: Abfrageprojektionen
+        href: query-projections-wcf-data-services.md
+        items:
+        - name: 'Vorgehensweise: Projizieren von Abfrageergebnissen'
+          href: how-to-project-query-results-wcf-data-services.md
+      - name: Überlegungen zu LINQ
+        href: linq-considerations-wcf-data-services.md
+      - name: Objektmaterialisierung
+        href: object-materialization-wcf-data-services.md
+      - name: 'Vorgehensweise: Ausführen von Datendienstabfragen'
+        href: how-to-execute-data-service-queries-wcf-data-services.md
+      - name: 'Vorgehensweise: Hinzufügen von Abfrageoptionen zu einer Datendienstabfrage'
+        href: how-to-add-query-options-to-a-data-service-query-wcf-data-services.md
+      - name: 'Vorgehensweise: Bestimmen der Anzahl der von einer Abfrage zurückgegebenen Entitäten'
+        href: number-of-entities-returned-by-a-query-wcf.md
+      - name: 'Vorgehensweise: Angeben von Clientanmeldeinformationen für eine Datendienstanforderung'
+        href: specify-client-creds-for-a-data-service-request-wcf.md
+      - name: 'Vorgehensweise: Festlegen von Headern in der Clientanforderung'
+        href: how-to-set-headers-in-the-client-request-wcf-data-services.md
+    - name: Laden von verzögerten Inhalten
+      href: loading-deferred-content-wcf-data-services.md
+      items:
+      - name: 'Vorgehensweise: Laden von verwandten Entitäten'
+        href: how-to-load-related-entities-wcf-data-services.md
+      - name: 'Vorgehensweise: Laden von ausgelagerten Ergebnissen'
+        href: how-to-load-paged-results-wcf-data-services.md
+    - name: Aktualisieren des Datendiensts
+      href: updating-the-data-service-wcf-data-services.md
+      items:
+      - name: 'Vorgehensweise: Hinzufügen, Ändern und Löschen von Entitäten'
+        href: how-to-add-modify-and-delete-entities-wcf-data-services.md
+      - name: 'Vorgehensweise: Definieren von Entitätsbeziehungen'
+        href: how-to-define-entity-relationships-wcf-data-services.md
+      - name: 'Vorgehensweise: Anfügen einer vorhandenen Entität an den DataServiceContext'
+        href: attach-an-existing-entity-to-dc-wcf-data.md
+    - name: Asynchrone Vorgänge
+      href: asynchronous-operations-wcf-data-services.md
+      items:
+      - name: 'Vorgehensweise: Ausführen von asynchronen Datendienstabfragen'
+        href: how-to-execute-asynchronous-data-service-queries-wcf-data-services.md
+      - name: 'Vorgehensweise: Erstellen einer asynchronen Windows Presentation Framework-Anwendung'
+        href: create-an-asynchronous-wpf-application-wcf-data-services.md
+    - name: Batchvorgänge
+      href: batching-operations-wcf-data-services.md
+      items:
+      - name: 'Vorgehensweise: Ausführen von Abfragen in einem Batch'
+        href: how-to-execute-queries-in-a-batch-wcf-data-services.md
+    - name: Binden von Daten an Steuerelemente
+      href: binding-data-to-controls-wcf-data-services.md
+      items:
+      - name: 'Vorgehensweise: Binden von Daten an Windows Presentation Foundation-Elemente'
+        href: bind-data-to-wpf-elements-wcf-data-services.md
+      - name: 'Vorgehensweise: Binden von Daten mit einer Projektdatenquelle'
+        href: how-to-bind-data-using-a-project-data-source-wcf-data-services.md
+      - name: 'Vorgehensweise: Anpassen des Datenbindungsverhaltens'
+        href: how-to-customize-data-binding-behaviors-wcf-data-services.md
+    - name: Aufrufen von Dienstvorgängen
+      href: calling-service-operations-wcf-data-services.md
+    - name: Verwalten des Datendienstkontexts
+      href: managing-the-data-service-context-wcf-data-services.md
+    - name: Arbeiten mit Binärdaten
+      href: working-with-binary-data-wcf-data-services.md
+ms.openlocfilehash: e38823c7d5b9d6b9ed5f126bab7b1677f9290904
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469459"
