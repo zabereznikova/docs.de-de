@@ -2,12 +2,12 @@
 title: Ausgeben von Benutzercode-Ablaufverfolgungen
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 5ecc0c2110362f715275729b5e4c4c7e1ec03496
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eadfe1a77f815f904fb54b8bab51440f3d9f5532
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492663"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831778"
 ---
 # <a name="emitting-user-code-traces"></a>Ausgeben von Benutzercode-Ablaufverfolgungen
 Zusätzlich zum Aktivieren der Ablaufverfolgung in der Konfiguration zum Sammeln von instrumentierungsdaten, die von Windows Communication Foundation (WCF) generiert, können Sie auch programmgesteuert in Benutzercode Ausgeben von ablaufverfolgungen. Auf diese Weise können proaktiv Instrumentierungsdaten zur späteren Analyse erstellt werden. Die entsprechende Vorgehensweise wird in diesem Thema erläutert.  
@@ -126,19 +126,21 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
  ![Ablaufverfolgungs-Viewer: Ausgeben von Benutzer&#45;code ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 Liste der Aktivitäten nach Erstellungszeit (linker Bereich) und deren geschachtelter Aktivitäten (Bereich rechts oben)  
   
- Wird vom Dienstcode eine Ausnahme ausgelöst, durch die auch vom Client eine Ausnahme ausgelöst wird (beispielsweise bei Ausbleiben einer Antwort auf eine Anforderung), erscheinen sowohl die Warn- oder Fehlermeldung des Diensts als auch die des Clients in der gleichen Aktivität, um das Herstellen eines direkten Zusammenhangs zu ermöglichen. Im folgenden Diagramm löst der Dienst eine Ausnahme aus die Meldung "der Dienst zum Verarbeiten dieser Anforderung im Benutzercode verweigert." Der Client löst auch eine Ausnahme, die besagt "der Server nicht zum Verarbeiten der Anforderung aufgrund eines internen Fehlers konnte."  
+ Wird vom Dienstcode eine Ausnahme ausgelöst, durch die auch vom Client eine Ausnahme ausgelöst wird (beispielsweise bei Ausbleiben einer Antwort auf eine Anforderung), erscheinen sowohl die Warn- oder Fehlermeldung des Diensts als auch die des Clients in der gleichen Aktivität, um das Herstellen eines direkten Zusammenhangs zu ermöglichen. In der folgenden Abbildung wird Ausnahme der Dienst eine, die besagt "der Dienst zum Verarbeiten dieser Anforderung im Benutzercode verweigert." Der Client löst auch eine Ausnahme, die besagt "der Server nicht zum Verarbeiten der Anforderung aufgrund eines internen Fehlers konnte."
+ 
+ Die folgenden Abbildungen zeigt, dass endpunktübergreifende Fehler für eine bestimmte Anforderung in der gleichen Aktivität angezeigt werden, wenn die anforderungsaktivitäts-Id weitergegeben wurde:       
   
- ![Verwenden von Trace Viewer zum Ausgeben von Benutzer&#45;code ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
-Endpunktübergreifende Fehler für eine bestimmte Anforderung erscheinen in der gleichen Aktivität, wenn die Anforderungsaktivitäts-ID weitergegeben wurde.  
+ ![Screenshot mit Fehlern für Endpunkte, die für eine bestimmte Anforderung.](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)  
   
- Durch Doppelklicken auf die Multiply-Aktivität im linken Bereich wird das folgende Diagramm angezeigt. Dieses enthält die Ablaufverfolgungen für die Multiply-Aktivität für jeden beteiligten Prozess. Es ist zu sehen, dass zunächst eine Warnung für den Service aufgetreten ist (Ausnahme ausgelöst). Daraufhin kommt es auch auf dem Client zu Warnungen und Fehlern, da die Anforderung nicht verarbeitet werden konnte. Somit lassen sich die kausale Fehlerbeziehung zwischen Endpunkten sowie die Grundursache des Fehlers ableiten.  
+ Durch Doppelklicken auf die Multiply-Aktivität im linken Bereich wird das folgende Diagramm angezeigt. Dieses enthält die Ablaufverfolgungen für die Multiply-Aktivität für jeden beteiligten Prozess. Es ist zu sehen, dass zunächst eine Warnung für den Service aufgetreten ist (Ausnahme ausgelöst). Daraufhin kommt es auch auf dem Client zu Warnungen und Fehlern, da die Anforderung nicht verarbeitet werden konnte. Somit lassen sich die kausale Fehlerbeziehung zwischen Endpunkten sowie die Grundursache des Fehlers ableiten. 
+
+ Die folgende Abbildung zeigt eine Diagrammansicht der Fehlerkorrelation:    
   
- ![Verwenden von Trace Viewer zum Ausgeben von Benutzer&#45;code ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
-Diagrammansicht der Fehlerkorrelation  
+ ![Screenshot mit der Diagrammansicht der Fehlerkorrelation.](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)  
   
  Zum Abrufen der vorherigen Ablaufverfolgungen wird `ActivityTracing` für die Benutzerablaufverfolgungsquellen und `propagateActivity=true` für die `System.ServiceModel`-Ablaufverfolgungsquelle festgelegt. `ActivityTracing` wurde nicht für die `System.ServiceModel`-Ablaufverfolgungsquelle festgelegt, um die Aktivitätsweitergabe von Benutzercode an Benutzercode zu ermöglichen. (Wenn die ServiceModel-aktivitätsablaufverfolgung aktiviert ist, die auf dem Client definierte Aktivitäts-ID nicht ganz an den Benutzercode für den Dienst weitergegeben; Datenübertragung, Korrelieren jedoch den Client und Dienst benutzercodeaktivitäten, zwischen WCF-Aktivitäten.)  
   
- Das Definieren von Aktivitäten und das Weitergeben der Aktivitäts-ID ermöglicht das endpunktübergreifende Herstellen eines direkten Fehlerzusammenhangs. Dadurch lässt sich die Grundursache eines Fehlers schneller ermitteln.  
+ Das Definieren von Aktivitäten und das Weitergeben der Aktivitäts-ID ermöglicht das endpunktübergreifende Herstellen eines direkten Fehlerzusammenhangs. Dadurch lässt sich die Ursache eines Fehlers schneller ermitteln.  
   
 ## <a name="see-also"></a>Siehe auch
 - [Erweitern der Ablaufverfolgung](../../../../../docs/framework/wcf/samples/extending-tracing.md)

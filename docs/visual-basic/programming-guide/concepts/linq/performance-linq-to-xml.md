@@ -2,12 +2,12 @@
 title: Leistung (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 155557f6-5d7e-4784-9d00-f42092a28857
-ms.openlocfilehash: 4a9353aa1dfeae749664d1ea69b0196e5f202235
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c58bcecbe196f32c0a6ce885929292490b37e052
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594784"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824818"
 ---
 # <a name="performance-linq-to-xml-visual-basic"></a>Leistung (LINQ to XML) (Visual Basic)
 Dieser Abschnitt enthält Informationen über die Leistung in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], insbesondere über die Leistung von funktionaler Konstruktion und Abfragen.  
@@ -26,4 +26,5 @@ Dieser Abschnitt enthält Informationen über die Leistung in [!INCLUDE[sqltecxl
  Stellt Leistungsinformationen über statisch kompilierte Abfragen im Gegensatz zu von der XPath-Ausdrucksauswertung durchgeführten Analyse und Verarbeitung bereit.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Programmierhandbuch (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

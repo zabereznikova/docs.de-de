@@ -6,12 +6,12 @@ helpviewer_keywords:
 - symbols, operators
 - Visual Basic code, operators
 ms.assetid: cb44c210-686f-4417-a13f-51c0d60161f8
-ms.openlocfilehash: 5a892476be71b74cdac82d9751e3b9806359e64e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fbb8dd0dafb0d16531f13280a2033e4f085897f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671485"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816633"
 ---
 # <a name="operators-summary-visual-basic"></a>Operatoren: Zusammenfassung (Visual Basic)
 Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.  
@@ -26,5 +26,6 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
 |Verschiedene Operationen|[AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md), [Await](../../../visual-basic/language-reference/operators/await-operator.md), [GetType](../../../visual-basic/language-reference/operators/gettype-operator.md)|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)

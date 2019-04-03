@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42104
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
-ms.openlocfilehash: 23201b89f44f6384ae9f75d941d264e8d59bef80
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 46551a917aeb794c8d35985076b67a315386f628
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268833"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819358"
 ---
 # <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>Variable "\<Variablenname >' wird verwendet, bevor ihr einen Wert zugewiesen wurde.
 Variable "\<Variablenname >' wird verwendet, bevor sie einen Wert zugewiesen wurde. Zur Laufzeit kann eine NULL-Verweisausnahme auftreten.  
@@ -32,6 +32,7 @@ Variable "\<Variablenname >' wird verwendet, bevor sie einen Wert zugewiesen wur
 -   Eine Möglichkeit, um sicherzustellen, dass die Variable immer einen gültigen Wert aufweist, ist als Teil der Deklaration initialisiert werden. Finden Sie unter "Initialisierung" in [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Dim-Anweisung](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Variablendeklaration](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Problembehandlung bei Variablen](../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)

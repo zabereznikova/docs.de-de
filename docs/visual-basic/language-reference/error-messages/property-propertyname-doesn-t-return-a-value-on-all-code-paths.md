@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-ms.openlocfilehash: 1788d06aa5236d4cfc33999df86ad72c420b41df
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a535a6b951dc9872109527f78d7de5f3fcdd3292
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269002"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821880"
 ---
 # <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>Eigenschaft '\<Propertyname >' nicht für alle Codepfade einen Wert zurück
 Eigenschaft '\<Propertyname >' nicht für alle Codepfade einen Wert zurück. Wenn das Ergebnis verwendet wird, kann während der Laufzeit eine NULL-Verweisausnahme auftreten.  
@@ -40,6 +40,7 @@ Eigenschaft '\<Propertyname >' nicht für alle Codepfade einen Wert zurück. Wen
      Es ist einfacher, um sicherzustellen, dass es sich bei jeder Beendigung der Prozedur einen Wert zurückgibt, wenn Sie immer verwenden die `Return` Anweisung. Wenn Sie die letzte Anweisung vor so vorgehen `End Get` muss eine `Return` Anweisung.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Eigenschaftenprozeduren](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
 - [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Get-Anweisung](../../../visual-basic/language-reference/statements/get-statement.md)

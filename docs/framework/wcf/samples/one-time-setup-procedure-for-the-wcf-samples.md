@@ -2,12 +2,12 @@
 title: Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 705314c1eb0318fe7da53108d51f9dc985a3fdfa
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 76cf2c7ec7edbfaaa186b45f4b810c7d4c0b1d47
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333455"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825169"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 Die meisten der Windows Communication Foundation (WCF)-Beispiele sind in Internet Information Services (IIS) gehostet und von einem gemeinsamen virtuellen Verzeichnis ausführen. Diesem einmaligen Setupverfahren erstellt einen Ordner auf dem Datenträger; Es fügt auch ein virtuelles Verzeichnis in IIS **ServiceModelSamples**.
@@ -85,5 +85,3 @@ Die meisten der Windows Communication Foundation (WCF)-Beispiele sind in Interne
     >  Stellen Sie sicher, dass der MSMQ-Dienst gestartet wurde, bevor Sie Beispiele ausführen, für die Message Queuing erforderlich ist.
 
 15. Einige Beispiele erfordern Zertifikate. Finden Sie unter [Internetinformationsdienste (IIS) Installationsanweisungen zu Serverzertifikaten](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md).
-
-## <a name="see-also"></a>Siehe auch

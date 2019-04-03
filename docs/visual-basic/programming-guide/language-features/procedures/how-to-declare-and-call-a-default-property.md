@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: c7510147e2abdcfbb71cf79412a9125724776685
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f11b5a184b72df68e302094dee762ec6876a397c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977551"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829329"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Vorgehensweise: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic
 Ein *Standardeigenschaft* ist eine Klasse oder Struktur-Eigenschaft, die Ihren Code zugreifen können, ohne ihn. Beim Aufrufen von Code Namen einer Klasse oder Struktur, aber keine Eigenschaft, und der Kontext ermöglicht den Zugriff auf eine Eigenschaft, Visual Basic löst den Zugriff auf diese Klasse oder Struktur Standardeigenschaft, falls vorhanden.  
@@ -82,6 +82,7 @@ Ein *Standardeigenschaft* ist eine Klasse oder Struktur-Eigenschaft, die Ihren C
  Wegen der genannten Nachteile sollten Sie keine Standardeigenschaften definieren. Sie sollten für die Lesbarkeit des Codes berücksichtigen Sie auch immer explizit verweisen, die allen Eigenschaften, auch die Standardeigenschaften.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Eigenschaftenprozeduren](./property-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md)

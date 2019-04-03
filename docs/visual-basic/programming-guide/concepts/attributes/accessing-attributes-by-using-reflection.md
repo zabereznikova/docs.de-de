@@ -2,12 +2,12 @@
 title: Zugriff auf Attribute mit Reflektion (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: caf48372f165f3689503d47472a5fa28d2299193
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5cbce8529cc7554a8edacb2d83dabb73a495eec
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625107"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827652"
 ---
 # <a name="accessing-attributes-by-using-reflection-visual-basic"></a>Zugriff auf Attribute mit Reflektion (Visual Basic)
 Die Tatsache, dass Sie benutzerdefinierte Attribute definieren und diese in Ihren Quellcode platzieren können, hätte keinen Nutzen, wenn Sie diese Informationen nicht abrufen und darauf reagieren könnten. Mithilfe der Reflektion können Sie die Informationen abrufen, die mit benutzerdefinierten Attributen definiert wurden. Die Schlüsselmethode ist `GetCustomAttributes`, die ein Array von Objekten zurück gibt, die die Laufzeitäquivalente der Quellcodeattribute sind. Diese Methode hat mehrere überladene Versionen. Weitere Informationen finden Sie unter <xref:System.Attribute>.  
@@ -100,6 +100,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)

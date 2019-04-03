@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30737
 ms.assetid: 3f40bacd-3fac-4741-b204-852f693d4340
-ms.openlocfilehash: b3aa66416f0cad6a6fb29a20aa0bca5e3486a18e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f5053bddf4b9ba791ad6d0733e1dd89c4ded91bd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275430"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818357"
 ---
 # <a name="no-accessible-main-method-with-an-appropriate-signature-was-found-in-name"></a>Es wurde keine zugreifbare Main-Methode mit entsprechender Signatur in gefunden "\<Name >'
 Befehlszeile-Anwendungen benötigen eine `Sub Main` definiert. `Main` muss deklariert werden, als `Public Shared` ggf. in einer Klasse oder als definierten `Public` Wenn in einem Modul definiert.  
@@ -24,5 +24,6 @@ Befehlszeile-Anwendungen benötigen eine `Sub Main` definiert. `Main` muss dekla
 -   Definieren einer `Public Sub Main` Verfahren für Ihr Projekt. Deklarieren Sie sie als `Shared` nur, wenn Sie sie innerhalb einer Klasse definieren.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Struktur der Visual Basic-Programmen](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
 - [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)

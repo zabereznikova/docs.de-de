@@ -8,12 +8,12 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 7215be3f454f4a799124620fb5db520282988035
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7f2ae3bb0e7c09d966c53fb17b1cbe675dfce8b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272634"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814054"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>Spät gebundene überladungsauflösung kann nicht angewendet werden, um "\<Prozedurname >', da die Zugreifende Instanz ein Schnittstellentyp ist.
 Der Compiler versucht, einen Verweis auf eine überladene Eigenschaft oder Prozedur aufzulösen, aber der Verweis schlägt fehl, weil ein Argument des Typs `Object` und das verweisende Objekt weist den Datentyp einer Schnittstelle. Die `Object` Argument erzwingt, dass der Compiler zum Auflösen des Verweises als spät gebunden.  
@@ -65,6 +65,7 @@ refer.s1(CType(o1, Double))
  Jede der vorausgehenden Zeilen Code explizit wandelt die `Object` Variable `o1` auf einen der Parametertypen für die Überladungen definiert.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Prozedurüberladung](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
 - [Überladungsauflösung](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
 - [CType-Funktion](../../../visual-basic/language-reference/functions/ctype-function.md)

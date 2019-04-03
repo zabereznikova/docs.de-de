@@ -10,12 +10,12 @@ helpviewer_keywords:
 - time, Visual Basic keywords and run-time library members
 - time data types [Visual Basic]
 ms.assetid: 914d0563-b53c-492c-ac62-d833ce805f2f
-ms.openlocfilehash: 9cf3d26427e483a1e1e5c1bc5316a829325a841f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44bd867412c30eae9a3092446cfd9674ba5e34a4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731906"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819047"
 ---
 # <a name="dates-and-times-summary-visual-basic"></a>Datums- und Uhrzeitangaben: Zusammenfassung (Visual Basic)
 Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.  
@@ -30,5 +30,6 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
 |Terminieren eines Prozesses|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)

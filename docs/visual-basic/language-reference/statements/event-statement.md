@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 13b1d18592379d7a08e68e84ffba62f1cc977caa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2f600f3ed37f38ddd7d86300231e0c447f458aa6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966072"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831890"
 ---
 # <a name="event-statement"></a>Event-Anweisung
 Deklariert ein benutzerdefiniertes Ereignis.  
@@ -118,6 +118,7 @@ End Event
 >  Die `My.Application.DoEvents`-Methode verarbeitet Ereignisse nicht in der gleichen Weise wie das Formular. Damit das Formular die Ereignisse direkt verarbeiten kann, können Sie Multithreading verwenden. Weitere Informationen finden Sie unter [Managed Threading](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [RaiseEvent-Anweisung](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
 - [Implements-Anweisung](../../../visual-basic/language-reference/statements/implements-statement.md)
 - [Ereignisse](../../../visual-basic/programming-guide/language-features/events/index.md)

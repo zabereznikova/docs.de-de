@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 2bd88b2df91c38d658e46157a9a83ce44ab9f25c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981269"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820775"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Arithmetische Operatoren in Visual Basic
 Arithmetische Operatoren werden viele der vertrauten arithmetischen Operationen ausführen, bei denen die Berechnung von numerischen Werten, die durch Literale, Variablen, andere Ausdrücke, Funktion und eigenschaftsaufrufen und Konstanten dargestellt verwendet. Sind Sie auch mit arithmetischen Operatoren klassifiziert Bitschiebeoperatoren, die auf der Ebene der einzelbits der Operanden werden und ihre Bitmuster nach links oder rechts.  
@@ -95,6 +95,7 @@ Arithmetische Operatoren werden viele der vertrauten arithmetischen Operationen 
  Setzen Sie `Option Strict Off`, Visual Basic ermöglicht implizite einschränkende Konvertierungen erfolgen, jedoch auch unerwarteten Verlust von Daten oder Genauigkeit führen können. Aus diesem Grund empfehlen wir die Verwendung `Option Strict On` beim Schreiben von Produktionscode. Weitere Informationen finden Sie unter [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Arithmetische Operatoren](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Bitverschiebungsoperatoren](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [Vergleichsoperatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

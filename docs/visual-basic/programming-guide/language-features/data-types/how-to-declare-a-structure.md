@@ -7,12 +7,12 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: cee2768d0e7475d2df123491e2b506bf5c08785f
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066115"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825096"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Vorgehensweise: Deklarieren einer Struktur (Visual Basic)
 Sie beginnen mit eine Structure-Deklaration die [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md), und beenden sie mit der `End Structure` Anweisung. Zwischen zwei Anweisungen müssen Sie mindestens eine deklarieren *Element*. Die Elemente können einen beliebigen Datentyp aufweisen, jedoch muss mindestens eine entweder eine nicht freigegebene Variable oder eine nicht freigegebene nicht benutzerdefinierte Event.  
@@ -56,6 +56,7 @@ Sie beginnen mit eine Structure-Deklaration die [Structure-Anweisung](../../../.
      Neben den Variablen `Sub` Prozeduren und Ereignisse, Sie können auch Konstanten definieren `Function` Prozeduren und Eigenschaften in einer Struktur. Sie können festlegen, dass höchstens eine Eigenschaft als die *Standardeigenschaft*, sofern er mindestens ein Argument verwendet. Sie können ein Ereignis mit behandeln eine [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` Verfahren. Weitere Informationen finden Sie unter [Vorgehensweise: Deklarieren und Aufrufen eine Standardeigenschaft in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Elementare Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Zusammengesetzte Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

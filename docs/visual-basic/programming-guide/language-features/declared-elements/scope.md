@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 38dd9d6d40780c25f06a35cf1ffbe4743b7da4a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537240"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823544"
 ---
 # <a name="scope-in-visual-basic"></a>Gültigkeitsbereich in Visual Basic
 Die *Bereich* eines deklarierten Elements ist ein Satz von sämtlicher Code, die darauf verweisen kann, ohne seinen Namen qualifizieren oder durch Verfügbarmachen, einer [Imports-Anweisung (.NET-Namespace und Typ)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Ein Element kann eine der folgenden Ebenen Bereich sein:  
@@ -135,6 +135,7 @@ Public strMsg As String
  Wenn Sie eine Variable oder Konstante zu deklarieren, wird es im Allgemeinen guter Programmierstil, um den Bereich so eng wie möglich zu machen (Blockbereich ist die geringstmögliche). Dadurch wird Speicherplatz gespart und minimiert die Wahrscheinlichkeit, dass Ihr Code, der fälschlicherweise die falsche Variable auf. Ebenso sollten Sie eine Variable deklarieren [statische](../../../../visual-basic/language-reference/modifiers/static.md) nur wenn den Wert zwischen den Prozeduraufrufen beibehalten werden muss.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Merkmale deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Vorgehensweise: Steuern des Gültigkeitsbereichs einer Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

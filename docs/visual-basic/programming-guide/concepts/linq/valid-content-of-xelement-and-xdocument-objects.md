@@ -2,12 +2,12 @@
 title: Gültiger Inhalt von XElement- und XDocument-Objekte2
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
-ms.openlocfilehash: 168c87f23d4545afe7b80579673c050068ee697b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb5dda6bee0863a2ef951975e92c55184df9d516
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502701"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828801"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>Gültiger Inhalt von XElement- und XDocument-Objekten
 In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstruktoren und Methoden übergeben werden können, die Sie zum Hinzufügen von Inhalt zu Elementen und Dokumenten verwenden.  
@@ -89,4 +89,5 @@ In diesem Thema werden die gültigen Argumente beschrieben, die an die Konstrukt
 |<xref:System.Xml.Linq.XNode.ReplaceWith%2A>|Ersetzt einen Knoten durch neuen Inhalt.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Abfrage für die Gesamtzahl der Bytes in einem Ordnersatz (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-ms.openlocfilehash: 5eedd2ed0d8756f400f1ccfa1b1d71f699a42116
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9aa098ddca2e3ad300913b207c9db5a4976eded7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506601"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831669"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Vorgehensweise: Abfrage für die Gesamtzahl der Bytes in einem Ordnersatz (LINQ) (Visual Basic)
 Dieses Beispiel zeigt, wie die Gesamtanzahl der Bytes, die von allen Dateien in einem angegebenen Ordner und allen Unterordnern verwendet werden, abgerufen wird.  
@@ -75,5 +75,6 @@ End Module
  Erstellen Sie ein Projekt, das .NET Framework Version 3.5 oder höher mit einem Verweis auf "System.Core.dll" und ein `Imports` -Anweisung für den Namespace "System.Linq".  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

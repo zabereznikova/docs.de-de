@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 44b0a2513f504c8fecec74868130463581b597af
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981698"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818591"
 ---
 # <a name="operator-statement"></a>Operator Statement
 Deklariert das Operatorsymbol, Operanden und Code, der eine Operatorprozedur für eine Klasse oder Struktur definieren.  
@@ -171,6 +171,7 @@ End Operator
  [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IsFalse-Operator](../../../visual-basic/language-reference/operators/isfalse-operator.md)
 - [IsTrue-Operator](../../../visual-basic/language-reference/operators/istrue-operator.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)

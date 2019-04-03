@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: 1e4c46088d3d89d9c2066e33def880941107575f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab6a4a0e6736e2af9c1fa0dd170b6aa4c42d9e4a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565019"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817153"
 ---
 # <a name="end-of-statement-expected"></a>end of-Anweisung erwartet.
 Die Anweisung syntaktisch abgeschlossen ist, aber eine zusätzliche Programmierelement folgt auf das Element, das die Anweisung abgeschlossen ist. Ein Zeilenabschlusszeichen ist am Ende jeder Anweisung erforderlich.
@@ -28,5 +28,6 @@ Die Anweisung syntaktisch abgeschlossen ist, aber eine zusätzliche Programmiere
 2.  Fügen Sie einem Zeilenabschluss, nach das Element, das die Anweisung abgeschlossen ist.
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Umbrechen und Zusammenfassen von Anweisungen in Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
 - [Anweisungen](../../../visual-basic/programming-guide/language-features/statements.md)

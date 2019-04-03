@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 06f3009d984f7a303a0ee6e8d529a3ff60900fbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a880ae8c13eebd5d9d325468098e058f58d3fa71
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498682"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826664"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten (Visual Basic)
 Wenn Sie eine Prozedur aufrufen, übergeben Sie ein oder mehrere Argumente in der Regel darauf. Jedes Argument entspricht einem zugrunde liegenden Programmierelement. Die zugrunde liegenden Elemente und die Argumente selbst können geändert werden kann oder als nicht änderbar sein.  
@@ -38,6 +38,7 @@ Wenn Sie eine Prozedur aufrufen, übergeben Sie ein oder mehrere Argumente in de
  Die aufgerufene Prozedur kann die lokale Kopie der veränderbaren Arguments ändern, aber diese Änderung keine Auswirkungen auf das zugrunde liegende Element im aufrufenden Code hat.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verfahren](./index.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Vorgehensweise: Übergeben von Argumenten an eine Prozedur](./how-to-pass-arguments-to-a-procedure.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: 2c74ed916e43bee6857df819c19ab03bef80b3c4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3cfdf8150c8ccd9e1b4f047cd1ce8ee4ad6bbc1a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285193"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813404"
 ---
 # <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>Verweis auf die Assembly erforderlich "\<Assemblyidentity >' mit Typ"\<Typename > ", aber kein geeigneter Verweis konnte nicht gefunden werden, aufgrund der Mehrdeutigkeit der Projekte\<projektname1 >" und "\< projektname2 > "
 Ein Ausdruck verwendet einen Typ (z. B. eine Klasse, eine Struktur, eine Schnittstelle, eine Enumeration oder einen Delegaten), der außerhalb des Projekts definiert ist. Sie haben jedoch Projektverweise auf mehr als eine Assembly, die diesen Typ definiert.  
@@ -30,6 +30,7 @@ Ein Ausdruck verwendet einen Typ (z. B. eine Klasse, eine Struktur, eine Schnitt
 2.  Fügen Sie in den Projekteigenschaften einen Verweis auf die Datei mit der Assembly hinzu, die den von Ihnen verwendeten Typ definiert.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwalten von Verweisen in einem Projekt](/visualstudio/ide/managing-references-in-a-project)
 - [Verweise auf deklarierte Elemente](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 

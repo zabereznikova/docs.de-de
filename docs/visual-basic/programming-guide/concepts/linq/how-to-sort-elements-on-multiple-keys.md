@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Sortieren von Elementen nach mehreren Schlüsseln (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-ms.openlocfilehash: ff5d3260efc5ba3630cb785bd265061c9a8e05da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d423505a5b47189b9de556675d4b71f428a6bdc6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506471"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828614"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>Vorgehensweise: Sortieren von Elementen nach mehreren Schlüsseln (Visual Basic)
 In diesem Thema wird das Sortieren nach mehreren Schlüsseln gezeigt.  
@@ -15,7 +15,7 @@ In diesem Thema wird das Sortieren nach mehreren Schlüsseln gezeigt.
 ## <a name="example"></a>Beispiel  
  Die Ergebnisse in diesem Beispiel werden zunächst nach der Postleitzahl des Versandziels und dann nach dem Auftragsdatum geordnet.  
   
- In diesem Beispiel wird die folgende XML-Dokument verwendet: [XML-Beispieldatei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -64,7 +64,7 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird dieselbe Abfrage für XML in einem Namespace gezeigt. Weitere Informationen finden Sie unter [arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- In diesem Beispiel wird die folgende XML-Dokument verwendet: [XML-Beispieldatei: Kunden und Bestellungen in einem Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Kunden und Bestellungen in einem Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adventure-works.com'>  
@@ -117,4 +117,5 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Standardabfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

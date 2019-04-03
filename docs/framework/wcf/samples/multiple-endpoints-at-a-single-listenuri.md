@@ -2,12 +2,12 @@
 title: Mehrere Endpunkte unter einem ListenUri
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
-ms.openlocfilehash: fbf636acf5e2cf4ef0f417b6b50a93d3e25c3ea6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6852c673ef21c2b2d511b02d4cc146b22c4c7506
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643467"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821022"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Mehrere Endpunkte unter einem ListenUri
 In diesem Beispiel wird ein Dienst gezeigt, der mehrere Endpunkte unter einem einzelnen `ListenUri` hostet. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , das einen rechnerdienst implementiert.  
@@ -17,7 +17,7 @@ In diesem Beispiel wird ein Dienst gezeigt, der mehrere Endpunkte unter einem ei
   
  Wie in der [mehrere Endpunkte](../../../../docs/framework/wcf/samples/multiple-endpoints.md) Beispiel ein Dienst kann mehrere Endpunkte, die jeweils unterschiedliche Adressen und möglicherweise auch verschiedene Bindungen hosten. In diesem Beispiel wird gezeigt, dass mehrere Endpunkte auch bei der gleichen Adresse gehostet werden können. Außerdem werden in diesem Beispiel die Unterschiede zwischen den beiden Arten der Adressen eines Dienstendpunkts dargestellt: `EndpointAddress` und `ListenUri`.  
   
- Die `EndpointAddress` ist die logische Adresse eines Diensts. An diese Adresse werden SOAP-Nachrichten adressiert. Der `ListenUri` ist die physische Adresse des Diensts. Er verfügt über die Informationen zu Port und Adresse, an denen der Dienst auf dem aktuellen Computer tatsächlich Nachrichten überwacht. In den meisten Fällen müssen diese Adressen nicht unterschiedlich sein. Wenn ein `ListenUri` nicht explizit angegeben ist, wird er standardmäßig auf den URI der `EndpointAddress` des Endpunkts festgelegt. In einigen Fällen ist es jedoch nützlich, die Adressen zu unterscheiden, z.&#160;B. wenn Sie einen Router konfigurieren, der Nachrichten akzeptiert, die möglicherweise an eine Reihe verschiedener Dienste adressiert sind.  
+ Die `EndpointAddress` ist die logische Adresse eines Diensts. An diese Adresse werden SOAP-Nachrichten adressiert. Der `ListenUri` ist die physische Adresse des Diensts. Er verfügt über die Informationen zu Port und Adresse, an denen der Dienst auf dem aktuellen Computer tatsächlich Nachrichten überwacht. In den meisten Fällen müssen diese Adressen nicht unterschiedlich sein. Wenn ein `ListenUri` nicht explizit angegeben ist, wird er standardmäßig auf den URI der `EndpointAddress` des Endpunkts festgelegt. In einigen Fällen ist es jedoch nützlich, die Adressen zu unterscheiden, z.&amp;#160;B. wenn Sie einen Router konfigurieren, der Nachrichten akzeptiert, die möglicherweise an eine Reihe verschiedener Dienste adressiert sind.  
   
 ## <a name="service"></a>Dienst  
  Der Dienst in diesem Beispiel besitzt zwei Verträge: `ICalculator` und `IEcho`. Zusätzlich zum üblichen `IMetadataExchange`-Endpunkt gibt es drei Anwendungsendpunkte, wie im folgenden Code gezeigt.  
@@ -79,4 +79,3 @@ calcClient.ChannelFactory.Endpoint.Behaviors.Add(
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpointsSingleUri`  
   
-## <a name="see-also"></a>Siehe auch

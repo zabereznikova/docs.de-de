@@ -2,12 +2,12 @@
 title: Beibehalten von Leerzeichen beim Laden oder Parsen von XML 2
 ms.date: 07/20/2015
 ms.assetid: ef6518e0-2c8d-462c-8b92-a16e9dc737ad
-ms.openlocfilehash: b4f4f59e1cd4423d2ec7418c09a9abd1273ce3b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fa000d9299515101bc01923db43d442577be828
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716181"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818968"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Beibehalten von Leerzeichen beim Laden oder Parsen von XML
 In diesem Thema wird beschrieben, wie das Leerraumverhalten von [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] gesteuert werden kann.  
@@ -38,4 +38,5 @@ In diesem Thema wird beschrieben, wie das Leerraumverhalten von [!INCLUDE[sqltec
  Zum Erstellen einer XML-Struktur können Sie einen <xref:System.Xml.XmlWriter> verwenden. Knoten, die in den <xref:System.Xml.XmlWriter> geschrieben werden, werden in der Struktur aufgefüllt. Wenn Sie jedoch eine XML-Struktur mit dieser Methode erstellen, bleiben alle Knoten unabhängig davon erhalten, ob der Knoten Leerraum ist und ob er signifikant ist.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Analysieren von XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

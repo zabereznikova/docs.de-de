@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: d128e4647930044e24eb544ec92213b481417cb0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4ae2366552426af0107c8d7a35bb5368fe30c8a7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965760"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824675"
 ---
 # <a name="optional-parameters-visual-basic"></a>Optionale Parameter (Visual Basic)
 Sie können angeben, dass ein Prozedurparameter optional ist und in Aufrufen der Prozedur kein Argument dafür bereitgestellt werden muss. *Optionale Parameter* sind gekennzeichnet durch die `Optional` Schlüsselwort in der Prozedurdefinition. Dabei gelten folgende Regeln:  
@@ -60,6 +60,7 @@ Sub name(argument 1, , , argument 4)
  Eine weitere Möglichkeit, eine Prozedur mit optionalen Parametern zu definieren, ist das Überladen. Wenn ein optionaler Parameter vorhanden ist, können Sie zwei überladene Versionen der Prozedur definieren, eine mit und eine ohne Parameter. Mit steigender Anzahl an optionalen Parametern wird dieses Konzept jedoch komplizierter. Allerdings hat es den Vorteil, dass Sie immer genau wissen, ob das aufrufende Programm jedes optionale Argument bereitgestellt hat.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verfahren](./index.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Übergeben von Argumenten als Wert und als Verweis](./passing-arguments-by-value-and-by-reference.md)

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Debuggen von leeren Abfrageergebnissätzen (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 72233981e6e9a309c3f328041736f3fce71746cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80e505be03a26f80bbba9d3673732505b27e9598
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715451"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822795"
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>Vorgehensweise: Debuggen von leeren Abfrageergebnissätzen (Visual Basic)
 Eines der häufigsten Probleme beim Abfragen von XML-Strukturen besteht darin, dass der Entwickler, wenn die XML-Struktur einen Standardnamespace besitzt, mitunter die Abfrage so schreibt, als würde sich das XML nicht in einem Namespace befinden.  
@@ -90,4 +90,5 @@ End of result set
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Standardabfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

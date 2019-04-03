@@ -2,12 +2,12 @@
 title: Erstellen benutzerdefinierter Attribute (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5c9ef584-6c7c-496b-92a9-6e42f8d9ca28
-ms.openlocfilehash: 4bc60e20d163c6aec231152940f548fcb58442f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90e8e9b9a3fa8e0b488f41d035b017d6113213b5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526352"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814353"
 ---
 # <a name="creating-custom-attributes-visual-basic"></a>Erstellen benutzerdefinierter Attribute (Visual Basic)
 Sie können eigene benutzerdefinierte Attribute erstellen, indem Sie eine Attributklasse definieren. Dies ist eine Klasse, die direkt oder indirekt von <xref:System.Attribute> abgeleitet wird, was es einfach macht, schnell Attributdefinitionen in Metadaten zu identifizieren. Angenommen, Sie möchten Typen mit dem Namen des Programmierers markieren, der den Typ geschrieben hat. Sie definieren möglicherweise eine benutzerdefinierte `Author`-Attributklasse:  
@@ -63,6 +63,7 @@ End Class
 >  Wenn die Attributklasse eine Eigenschaft enthält, muss die Eigenschaft Lese- und Schreibberechtigung aufweisen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Reflection>
 - [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)
 - [Verfassen von benutzerdefinierten Attributen](../../../../standard/attributes/writing-custom-attributes.md)

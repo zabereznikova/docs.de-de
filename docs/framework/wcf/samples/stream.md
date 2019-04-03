@@ -2,12 +2,12 @@
 title: Stream
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: c16f12e6fb122fbba7dc46abb26859be49c08f74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca6c4a2f8bfd87982bc1b8574c65c5d5a2282a93
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662594"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828094"
 ---
 # <a name="stream"></a>Stream
 Das Streambeispiel zeigt die Verwendung des Kommunikationsstream-Übertragungsmodus. Der Dienst macht mehrere Vorgänge verfügbar, die Streams senden und empfangen. Dieses Beispiel ist selbst gehostet. Sowohl der Client als auch der Dienst sind Konsolenprogramme.  
@@ -61,7 +61,7 @@ public interface IStreamingSample
 </customBinding>  
 ```  
   
- Zusätzlich zum Festlegen des `transferMode` auf `Streamed` legt der oben aufgeführte Konfigurationscode die `maxReceivedMessageSize` auf 64 MB fest. Als Schutzmechanismus legt `maxReceivedMessageSize` einen Höchstwert für die maximal zulässige Größe von Nachrichten beim Empfang fest. Die Standardeinstellung von `maxReceivedMessageSize` ist 64&#160;KB, was normalerweise zu niedrig für die Verwendung des Streamingmodus ist.  
+ Zusätzlich zum Festlegen des `transferMode` auf `Streamed` legt der oben aufgeführte Konfigurationscode die `maxReceivedMessageSize` auf 64 MB fest. Als Schutzmechanismus legt `maxReceivedMessageSize` einen Höchstwert für die maximal zulässige Größe von Nachrichten beim Empfang fest. Die Standardeinstellung von `maxReceivedMessageSize` ist 64&amp;#160;KB, was normalerweise zu niedrig für die Verwendung des Streamingmodus ist.  
   
 ## <a name="processing-data-as-it-is-streamed"></a>Verarbeiten von Daten bei deren Streamingübertragung  
  Bei den Vorgängen `GetStream`, `UploadStream` und `EchoStream` werden Daten direkt aus einer Datei gesendet oder empfangene Daten direkt in einer Datei gespeichert. In manchen Fällen ist es jedoch erforderlich, große Mengen von Daten zu senden oder zu empfangen und Teile dieser Daten dabei zu verarbeiten. Eine Möglichkeit in solchen Situationen wäre, einen benutzerdefinierten Stream (eine Klasse, die sich von <xref:System.IO.Stream> ableitet) zu schreiben, der Daten verarbeitet, während diese gelesen oder geschrieben werden. Der `GetReversedStream`-Vorgang und die `ReverseStream`-Klasse sind ein Beispiel für ein solches Vorgehen.  
@@ -185,4 +185,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  
   
-## <a name="see-also"></a>Siehe auch

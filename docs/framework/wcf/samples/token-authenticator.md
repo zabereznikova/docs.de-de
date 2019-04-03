@@ -2,12 +2,12 @@
 title: Tokenauthentifizierer
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: f6cbef617145e40cfc1e43012af2eb65afbbe05c
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 1e0ab9a7c1cd1b5d92556973928a014957f51918
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305001"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824220"
 ---
 # <a name="token-authenticator"></a>Tokenauthentifizierer
 Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tokenauthentifizierers. Ein tokenauthentifizierers in Windows Communication Foundation (WCF) wird zum Überprüfen des Tokens verwendet wird, mit der Meldung, überprüfen, dass es in sich selbst konsistent, und Authentifizieren der Identität mit dem Token zugeordnet.
@@ -279,8 +279,7 @@ static void Main()
     serviceHost.Description.Behaviors.Add(serviceCredential);
     ```
 
- Um die Informationen zu den Aufrufern anzuzeigen, können Sie <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> verwenden, wie im folgenden Code gezeigt. 
-  <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> enthält Informationen zu den Ansprüchen des aktuellen Aufrufers.
+ Um die Informationen zu den Aufrufern anzuzeigen, können Sie <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> verwenden, wie im folgenden Code gezeigt. <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> enthält Informationen zu den Ansprüchen des aktuellen Aufrufers.
 
 ```
 static void DisplayIdentityInformation()
@@ -368,4 +367,3 @@ static void DisplayIdentityInformation()
   
 1.  Führen Sie Cleanup.bat im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
   
-## <a name="see-also"></a>Siehe auch

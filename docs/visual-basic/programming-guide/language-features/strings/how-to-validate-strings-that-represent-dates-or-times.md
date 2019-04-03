@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - String data type [Visual Basic], validation
 ms.assetid: ae7d4b29-3436-4032-bdbf-4650eb1c8e19
-ms.openlocfilehash: c1a3f14354e36dec91aca3afbe8470eff7146318
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f24ff05e48327c21c02eb92b07db17266f743a80
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970403"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815229"
 ---
 # <a name="how-to-validate-strings-that-represent-dates-or-times-visual-basic"></a>Vorgehensweise: Überprüfen von Zeichenfolgen, Datumsangaben oder Uhrzeiten darstellen (Visual Basic)
 Im folgenden Codebeispiel wird eine `Boolean` Wert, der angibt, ob eine Zeichenfolge ein gültiger Datums- oder Zeitwert darstellt.  
@@ -25,6 +25,7 @@ Im folgenden Codebeispiel wird eine `Boolean` Wert, der angibt, ob eine Zeichenf
  Mit dieser Methode können Sie um die Zeichenfolge zu überprüfen, bevor Sie versuchen, konvertieren die `String` zu einem `DateTime` Variable. Überprüfen Sie zuerst das Datum oder Uhrzeit, können Sie vermeiden, zur Laufzeit eine Ausnahme generiert.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:Microsoft.VisualBasic.Information.IsDate%2A>
 - <xref:Microsoft.VisualBasic.Interaction.InputBox%2A>
 - [Überprüfen von Zeichenfolgen in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/validating-strings.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 88597e5cfa1db46e147b829c8ffc634697cecc7e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: c92a94cd6223aad8e4ea3da86a8dd37bd71aad2c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739487"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820996"
 ---
 # <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Vorgehensweise: Ändern von Daten in einer Datenbank mit LINQ (Visual Basic)
 Language Integrated Query (LINQ) Abfragen erleichtern Ihnen den Zugriff auf Informationen und Ändern von Werten in der Datenbank.  
@@ -161,6 +161,7 @@ Language Integrated Query (LINQ) Abfragen erleichtern Ihnen den Zugriff auf Info
 7.  Drücken Sie F5, um das Projekt auszuführen. Klicken Sie auf **hinzufügen** um einen neuen Datensatz hinzuzufügen. Klicken Sie auf **Update** so ändern Sie den neuen Datensatz. Klicken Sie auf **löschen** auf den neuen Datensatz zu löschen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Abfragen](../../../../visual-basic/language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

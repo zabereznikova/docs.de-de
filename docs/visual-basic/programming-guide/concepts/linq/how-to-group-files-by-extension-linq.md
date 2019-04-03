@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Dateien Gruppieren nach Erweiterung (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 904dc6d7-7162-4655-a7f4-5785d669bc5a
-ms.openlocfilehash: 0e705e83f1aff6146347be5430fb446da2efd843
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: e40101e7de01d403c5bc55a0d4e68f776ddfc0c1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201793"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829277"
 ---
 # <a name="how-to-group-files-by-extension-linq-visual-basic"></a>Vorgehensweise: Dateien Gruppieren nach Erweiterung (LINQ) (Visual Basic)
 In dieses Beispiel wird veranschaulicht, wie Sie mithilfe von LINQ erweiterte Gruppierungs- und Sortiervorgänge mit Datei- oder Ordnerlisten ausführen können. Es zeigt auch, wie der Bildlauf für die Ausgabe im Konsolenfenster mithilfe der Methoden <xref:System.Linq.Enumerable.Skip%2A> und <xref:System.Linq.Enumerable.Take%2A> durchgeführt wird.  
@@ -97,5 +97,6 @@ End Module
  Erstellen Sie ein Projekt, das .NET Framework Version 3.5 oder höher mit einem Verweis auf "System.Core.dll" und ein `Imports` -Anweisung für den Namespace "System.Linq".  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

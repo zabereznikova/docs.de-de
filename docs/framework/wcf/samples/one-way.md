@@ -2,12 +2,12 @@
 title: Unidirektional
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: 7e21a1cd16c025aae0f38b6a516b3c487f7b908f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4b8a805fdbe4f330496233d5234abc0169b8c6e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529024"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826690"
 ---
 # <a name="one-way"></a>Unidirektional
 In diesem Beispiel wird ein Dienstvertrag mit unidirektionalen Dienstvorgängen veranschaulicht. Der Client wartet nicht darauf, dass Dienstvorgänge abgeschlossen sind, wie es bei bidirektionalen Dienstvorgängen der Fall ist. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) und verwendet die `wsHttpBinding` Bindung. Der Dienst ist in diesem Beispiel eine selbst gehostete Konsolenanwendung, sodass Sie den Dienst beobachten können, der Nachrichten empfängt und verarbeitet. Der Client ist auch eine Konsolenanwendung.  
@@ -106,4 +106,3 @@ Processing Divide(22,7) - result: 3.14285714285714
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
   
-## <a name="see-also"></a>Siehe auch

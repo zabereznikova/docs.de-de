@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: 34348d57db0875d9c2c6192ac754b4f83f515ac4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ee2449ff905bfdacaeeee4cc244db1ce50e00104
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965463"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824305"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Vorgehensweise: Das Ablegen eines Werts in einer Eigenschaft (Visual Basic)
 Sie können einen Wert in einer Eigenschaft speichern, indem Sie die Namen der Eigenschaft auf der linken Seite einer zuweisungsanweisung einfügen.  
@@ -35,6 +35,7 @@ Sie können einen Wert in einer Eigenschaft speichern, indem Sie die Namen der E
 4.  Der Wert, der auf der rechten Seite der Zuweisung generiert wird in der Eigenschaft gespeichert.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
 - [Eigenschaftenprozeduren](./property-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: fcb50a9c7e36bab046be25d7f82f91cfe0f9be8e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 796342d17b0d0f1a642aff381274746d1fda3559
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966917"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816446"
 ---
 # <a name="resume-statement"></a>Resume-Anweisung
 Setzt die Ausführung fort, nachdem eine Fehlerbehandlungsroutine abgeschlossen ist.  
@@ -63,6 +63,7 @@ Resume [ Next | line ]
  **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [Error-Anweisung](../../../visual-basic/language-reference/statements/error-statement.md)
 - [On Error-Anweisung](../../../visual-basic/language-reference/statements/on-error-statement.md)

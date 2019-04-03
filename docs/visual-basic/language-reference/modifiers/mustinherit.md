@@ -10,12 +10,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-ms.openlocfilehash: 124262695f9333ce31c4097662688e0fe30f300d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0bda03d3c01356317fbcc56d44199ff4f9484b5b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969530"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816563"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 Gibt an, dass eine Klasse nur als Basisklasse verwendet werden kann und ein Objekt kann nicht direkt daraus erstellen.  
@@ -48,6 +48,7 @@ Gibt an, dass eine Klasse nur als Basisklasse verwendet werden kann und ein Obje
  [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Inherits-Anweisung](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
 - [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)

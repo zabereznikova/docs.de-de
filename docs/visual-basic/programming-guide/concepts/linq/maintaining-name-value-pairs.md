@@ -2,12 +2,12 @@
 title: Warten von Name / Wert-Paaren (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ac2072-d9f5-432b-84f0-a889c62fd813
-ms.openlocfilehash: d0f0306ef354eb55bb32d28332590c02425b112a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67bde0954b74b7e5145dd2d930e16feb3371a881
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705955"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825027"
 ---
 # <a name="maintaining-namevalue-pairs-visual-basic"></a>Warten von Name/Wert-Paaren (Visual Basic)
 Viele Anwendungen müssen Informationen verwalten, die am besten als Name/Wert-Paare geführt werden. Solche Informationen können z. B. Konfigurationsinformationen oder globale Einstellungen sein. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] enthält einige Methoden, die das Unterhalten von Name/Wert-Paaren vereinfachen. Sie können die Informationen entweder als Attribute oder als Satz untergeordneter Elemente unterhalten.  
@@ -119,6 +119,7 @@ Console.WriteLine(root)
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Xml.Linq.XElement.SetAttributeValue%2A>
 - <xref:System.Xml.Linq.XElement.SetElementValue%2A>
 - [Ändern von XML-Bäumen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

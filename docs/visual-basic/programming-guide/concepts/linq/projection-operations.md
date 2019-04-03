@@ -2,12 +2,12 @@
 title: Projektionsvorgänge (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: f7f1ba7b595d5ea63468aaa2d4fdda62cb9d0693
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e2af45f9cbbed9eb88095a30e2b77a7730740898
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408950"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820983"
 ---
 # <a name="projection-operations-visual-basic"></a>Projektionsvorgänge (Visual Basic)
 Projektion bezieht sich auf einen Vorgang, bei dem ein Objekt in eine neue Form transformiert wird, die häufig nur aus den Eigenschaften besteht, die anschließend verwendet werden. Mithilfe der Projektion können Sie einen neuen Typ erstellen, der aus den einzelnen Objekten erstellt wird. Sie können eine Eigenschaft projizieren und eine mathematische Funktion für sie ausführen. Sie können auch das ursprüngliche Objekt projizieren, ohne es zu ändern.  
@@ -171,6 +171,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Linq>
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Select-Klausel](../../../../visual-basic/language-reference/queries/select-clause.md)

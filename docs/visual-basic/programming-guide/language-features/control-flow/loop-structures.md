@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: c09c0bdee0e8740abb7cc085f0796048a5db150c
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 56165eecce5e73c4e06235dac1691774fb39b794
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654366"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833309"
 ---
 # <a name="loop-structures-visual-basic"></a>Schleifenstruktur (Visual Basic)
 Visual Basic-Schleifenstruktur können Sie eine oder mehrere Zeilen Code wiederholt auszuführen. Sie können die Anweisungen in einer Schleifenstruktur wiederholen, bis eine Bedingung ist `True`, bis eine Bedingung ist `False`, eine Zahl, die mehrmals oder einmal für jedes Element in einer angegebenen Auflistung.  
@@ -37,6 +37,7 @@ Visual Basic-Schleifenstruktur können Sie eine oder mehrere Zeilen Code wiederh
  Die `For Each`... `Next` Konstruktion wird eine Reihe von Anweisungen, die einmal für jedes Element in einer Sammlung ausgeführt. Sie geben die Loop-Steuerelementvariable, aber Sie müssen nicht bestimmt werden, starten oder den Endwert dieser. Weitere Informationen finden Sie unter [für jede... Nächste Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Ablaufsteuerung](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Entscheidungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [Weitere Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

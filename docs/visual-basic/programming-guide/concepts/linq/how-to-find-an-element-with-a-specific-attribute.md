@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Suchen nach einem Element mit bestimmten Attributen (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
-ms.openlocfilehash: f170daa58dc2ee8759beeb04df7670d9d43fb494
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4af129cdb7e9049be747b9eb29aaa26ef5d8188
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536060"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813859"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>Vorgehensweise: Suchen nach einem Element mit bestimmten Attributen (Visual Basic)
 In diesem Thema wird gezeigt, wie Sie nach einem Element mit einem bestimmten Wert suchen können.  
@@ -15,7 +15,7 @@ In diesem Thema wird gezeigt, wie Sie nach einem Element mit einem bestimmten We
 ## <a name="example"></a>Beispiel  
  Das Beispiel zeigt die Suche nach dem `Address`-Element mit dem `Type`-Attribut und dem Wert "Billing".  
   
- In diesem Beispiel wird die folgende XML-Dokument verwendet: [XML-Beispieldatei: Typische Bestellung (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Typische Bestellung (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md).  
   
 ```vb  
 Dim root As XElement = XElement.Load("PurchaseOrder.xml")  
@@ -46,7 +46,7 @@ Next
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird dieselbe Abfrage für XML in einem Namespace gezeigt. Weitere Informationen finden Sie unter [arbeiten mit XML-Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).  
   
- In diesem Beispiel wird die folgende XML-Dokument verwendet: [XML-Beispieldatei: Typische Bestellung in einem Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Typische Bestellung in einem Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -79,6 +79,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
 - [Standardabfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

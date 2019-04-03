@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID14
 ms.assetid: 16681c75-a400-422d-9351-c691d3c7614e
-ms.openlocfilehash: 371159684d34b1e13751d4a3109fb7efa5c1a255
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 303f7926279c320059a3eb7c7b023af63c5001bf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521646"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821282"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Nicht genügend Zeichenfolgenspeicher (Visual Basic)
 Mit Visual Basic können Sie sehr große Zeichenfolgen verwenden. Allerdings können die Anforderungen von anderen Programmen und die Möglichkeit, die Sie mit Zeichenfolgen arbeiten weiterhin diesen Fehler verursachen.  
@@ -21,5 +21,6 @@ Mit Visual Basic können Sie sehr große Zeichenfolgen verwenden. Allerdings kö
 2.  Entfernen Sie alle nicht benötigten Anwendungen aus dem Arbeitsspeicher mehr Platz schaffen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)
 - [Zeichenfolgenbearbeitung: Zusammenfassung](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

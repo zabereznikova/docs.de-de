@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: 94d43b7bea48d85e612b5c995e20e286f14b024a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976498"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819306"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Logische und bitweise Operatoren in Visual Basic
 Logische Operatoren vergleichen `Boolean` Ausdrücke und Rückgabe einer `Boolean` Ergebnis. Die `And`, `Or`, `AndAlso`, `OrElse`, und `Xor` Operatoren sind *binäre* , da sie zwei Operanden in Anspruch nehmen, während er sich die `Not` Operator *unäre* , da die kann eines einzelnen Operanden aus. Einige dieser Operatoren können auch die bitweise logische Operationen für ganzzahlige Werte ausführen.  
@@ -96,6 +96,7 @@ Logische Operatoren vergleichen `Boolean` Ausdrücke und Rückgabe einer `Boolea
 >  Bitweise Operationen können nur für ganzzahlige Typen ausgeführt werden. Gleitkommazahlen-Punktwerte müssen in ganzzahlige Typen konvertiert werden, bevor bitweise Operation fortgesetzt werden kann.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Logische/bitweise Operatoren (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Boolesche Ausdrücke](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [Arithmetische Operatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

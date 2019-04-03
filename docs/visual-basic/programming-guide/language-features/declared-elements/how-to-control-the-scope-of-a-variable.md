@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: 656bfa6fa9b3445d91cd8ac39b83bccf3e44758e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521412"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818722"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Vorgehensweise: Steuern des Gültigkeitsbereichs einer Variablen (Visual Basic)
 In der Regel wird eine Variable *Bereich*, oder als Referenz in der Region, in dem Sie wurde deklariert, sichtbar. In einigen Fällen die Variable des *Zugriffsebene* können ihren Bereich beeinflussen.  
@@ -87,6 +87,7 @@ Public strMsg As String
  Je schmaler des Gültigkeitsbereichs einer Variablen, verwendet der geringer ist die Wahrscheinlichkeit, die bösartiger Code eine ungültige vornehmen können.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Gültigkeitsbereich in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [Lebensdauer in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Zugriffsebenen in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

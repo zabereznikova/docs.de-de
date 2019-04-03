@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e76fcb891e0b258d261208f7cb9173c49899ba11
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 155d5c36483accc12d066a5530fea20a563e1498
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974262"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814496"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Visual Basic-Features, die LINQ unterstützen
 Der Name [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] bezieht sich auf die Technologie in Visual Basic unterstützt query Syntax und andere Sprachkonstrukte direkt in der Sprache. Mit [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], Sie müssen nicht zum Abfragen einer externen Datenquelle eine neue Sprache lernen. Sie können für Daten in relationalen Datenbanken, XML-Speicher oder Objekten Abfragen, mit Visual Basic. Diese Integration der Abfragefunktionen in der Sprache ermöglicht die Überprüfung auf Syntaxfehler und typsicherheit. Diese Integration wird sichergestellt, dass Sie bereits die meisten Was müssen wissen Sie wissen, umfangreiche und verschiedene Abfragen in Visual Basic schreiben.  
@@ -94,6 +94,7 @@ Der Name [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] bezieht sich au
  Weitere Informationen finden Sie unter [Lambdaausdrücke](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

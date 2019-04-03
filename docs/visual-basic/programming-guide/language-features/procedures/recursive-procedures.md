@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 97cceb833da0ef6f9ee4e3dab5abb1f2ba73a94e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: de9a2af9fc3cd78879b6525245727a6f52d51c63
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969322"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832384"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Rekursive Prozeduren (Visual Basic)
 Ein *rekursive* Verfahren ist ein, der sich selbst aufruft. Im Allgemeinen ist dies nicht die effektivste Möglichkeit, Visual Basic-Code zu schreiben.  
@@ -38,6 +38,7 @@ Ein *rekursive* Verfahren ist ein, der sich selbst aufruft. Im Allgemeinen ist d
  **Testen von**. Wenn Sie eine rekursive Prozedur schreiben, sollten Sie sie sorgfältig testen, um sicherzustellen, dass es immer eine einschränkende Bedingung erfüllt. Sie sollten auch sicherstellen, dass Sie nicht genügend Arbeitsspeicher aufgrund zu viele rekursive Aufrufe nicht ausführen können.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.StackOverflowException>
 - [Verfahren](./index.md)
 - [Sub-Prozeduren](./sub-procedures.md)

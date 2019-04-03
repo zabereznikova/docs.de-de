@@ -17,12 +17,12 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-ms.openlocfilehash: fc531bb619ed54cf35d2e89b8e6df3ec7175f3f9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 699737ffbe0b136af8862931fadacec26772b928
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973547"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833281"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Variablendeklaration in Visual Basic
 Sie deklarieren eine Variable, die den Namen und Eigenschaften angeben. Die deklarationsanweisung für Variablen ist der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md). Bestimmen sein Speicherort und den Inhalt der Merkmale der Variablen.  
@@ -78,6 +78,7 @@ Dim l, m As Long, x, y As Single
  Einer Variablentyps des *Zugriffsebene* wird das Ausmaß der Code mit der Berechtigung, darauf zuzugreifen. Dies richtet sich nach den Zugriffsmodifizierer (wie z. B. [öffentliche](../../../../visual-basic/language-reference/modifiers/public.md) oder [Private](../../../../visual-basic/language-reference/modifiers/private.md)), mit denen Sie der `Dim` Anweisung. Weitere Informationen finden Sie unter [Zugriffsebenen in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Erstellen einer neuen Variablen](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
 - [Vorgehensweise: Verschieben von Daten in und aus einer Variablen](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)
 - [Datentypen](../../../../visual-basic/language-reference/data-types/index.md)

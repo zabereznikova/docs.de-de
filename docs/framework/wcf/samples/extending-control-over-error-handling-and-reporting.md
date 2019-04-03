@@ -2,12 +2,12 @@
 title: Erweitern der Kontrolle über Fehlerbehandlung und -meldung
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 30b36f5373563ec9faba8e655ab1e31d47b23c99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a6064d5ebc8f80eb5fe3cba309c0eb1c71ee020
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622454"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814340"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Erweitern der Kontrolle über Fehlerbehandlung und -meldung
 In diesem Beispiel wird veranschaulicht, wie zum Erweitern der Kontrolle über Fehlerbehandlung und Fehlerberichterstattung in einen Windows Communication Foundation (WCF) mit der <xref:System.ServiceModel.Dispatcher.IErrorHandler> Schnittstelle. Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) mit zusätzlichen Code zum Behandeln von Fehlern an den Dienst hinzugefügt. Der Client erzwingt verschiedene Fehlerbedingungen. Der Dienst fängt die Fehler ab und protokolliert sie in einer Datei.  
@@ -17,7 +17,7 @@ In diesem Beispiel wird veranschaulicht, wie zum Erweitern der Kontrolle über F
   
  Dienste können Fehler abfangen, Verarbeitungen ausführen und beeinflussen, wie Fehler mithilfe der <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle gemeldet werden. Die Schnittstelle besitzt zwei Methoden, die implementiert werden können: <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> und <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>. Mit der <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29>-Methode können Sie eine Fehlermeldung, die bei einer Ausnahme generiert wird, hinzufügen, ändern oder unterdrücken. Mit der <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>-Methode können Sie die Verarbeitung von Fehlern bei einem Fehlerereignis zulassen und steuern, ob eine weitere Fehlerbehandlung ausgeführt werden kann.  
   
- In diesem Beispiel implementiert der `CalculatorErrorHandler`-Typ die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle. In der  
+ In diesem Beispiel implementiert der `CalculatorErrorHandler`-Typ die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle. Geben Sie Feld  
   
  <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>-Methode protokolliert der `CalculatorErrorHandler` den Fehler in der Textdatei Error.txt in c:\logs. Beachten Sie, dass das Beispiel den Fehler protokolliert, ihn aber nicht unterdrückt, so dass er wieder zurück an den Client gemeldet werden kann.  
   
@@ -158,4 +158,3 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
   
-## <a name="see-also"></a>Siehe auch

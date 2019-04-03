@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Clipboard
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
-ms.openlocfilehash: 3ef591844d16daac75abb36b3aa89c91a068fe1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e606b5b496274b48b7d1f3ff768bb2bec5216fe
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616159"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814249"
 ---
 # <a name="mycomputerclipboard-object"></a>My.Computer.Clipboard-Objekt
 Stellt Methoden zur Bearbeitung der Zwischenablage bereit.  
@@ -31,5 +31,6 @@ Stellt Methoden zur Bearbeitung der Zwischenablage bereit.
  **Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:Microsoft.VisualBasic.Devices.Computer.Clipboard%2A>
 - [My.Computer-Objekt](../../../visual-basic/language-reference/objects/my-computer-object.md)

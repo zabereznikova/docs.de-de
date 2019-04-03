@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 16f4fb28ab030ccebed2a8d1b93a3a6c29d075c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5aea43c2dab4eb44ab40449ee6e970a28fdc4abb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501255"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821451"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>Verweise auf deklarierte Elemente (Visual Basic)
 Wenn Ihr Code auf einem deklarierten Element verweist, wird von Visual Basic-Compiler dem Namen in den Verweis auf die entsprechende Deklaration mit dem Namen übereinstimmt. Wenn mehr als ein Element mit demselben Namen deklariert wird, können Sie steuern, welches dieser Elemente wird auf das SKD *qualifizierenden* seinen Namen.  
@@ -194,6 +194,7 @@ Dim xDoc As xD.XmlDocument
  Wenn zwei Programmierelemente mit demselben Namen gemeinsam nutzen, eine davon kann auszublenden, oder *Schatten*, der andere Controller. Ein schattiertes Element steht nicht als Referenz; Stattdessen löst, wenn Ihr Code den Elementnamen für die Shadowing durchgeführt wurde verwendet, die Visual Basic-Compiler es auf das shadowing-Element. Eine ausführlichere Erläuterung anhand von Beispielen, finden Sie unter [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Merkmale deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Verwalten von Projekt- und Projektmappeneigenschaften](/visualstudio/ide/managing-project-and-solution-properties)

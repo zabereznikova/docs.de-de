@@ -2,12 +2,12 @@
 title: Erwartete Ausnahmen
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: ff4241d6843158d859efbb010f165b27f5477286
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16b7a4029c9225984d71e5252605376d2d4b6d53
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539622"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832033"
 ---
 # <a name="expected-exceptions"></a>Erwartete Ausnahmen
 Dieses Beispiel zeigt, wie erwartete Ausnahmen beim Verwenden eines typisierten Clients abgefangen werden. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , das einen rechnerdienst implementiert. In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.  
@@ -48,7 +48,7 @@ catch (CommunicationException exception)
  Wenn eine erwartete Ausnahme auftritt, kann der Client anschließend noch verwendbar oder nicht mehr verwendbar sein. Um zu bestimmen, ob der Client immer noch verwendbar ist, überprüfen Sie, dass die `State`-Eigenschaft `CommunicationState`.Opened ist. Wenn der Client immer noch geöffnet ist, dann ist er auch noch verwendbar. Andernfalls sollten Sie den Client abbrechen und alle Verweise auf ihn freigeben.  
   
 > [!CAUTION]
->  Manchmal lässt sich beobachten, dass Clients mit einer Sitzung nach einer Ausnahme nicht mehr verwendbar sind, während Clients ohne eine Sitzung auch nach Auftreten einer Ausnahme oftmals noch verwendet werden können. Da es jedoch für keinen der beiden Fälle eine Garantie gibt, sollte die Anwendung &#150; falls der Client nach einer Ausnahme weiter verwendet werden soll &#150; mithilfe der `State`-Eigenschaft überprüfen, ob der Client weiterhin geöffnet ist.  
+>  Manchmal lässt sich beobachten, dass Clients mit einer Sitzung nach einer Ausnahme nicht mehr verwendbar sind, während Clients ohne eine Sitzung auch nach Auftreten einer Ausnahme oftmals noch verwendet werden können. Da es jedoch für keinen der beiden Fälle eine Garantie gibt, sollte die Anwendung &amp;#150; falls der Client nach einer Ausnahme weiter verwendet werden soll &amp;#150; mithilfe der `State`-Eigenschaft überprüfen, ob der Client weiterhin geöffnet ist.  
   
  Wenn Sie das Beispiel ausführen, werden die Antworten und Ausnahmen für den Vorgang im Konsolenfenster des Clients angezeigt.  
   
@@ -80,4 +80,3 @@ Got System.TimeoutException
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  
   
-## <a name="see-also"></a>Siehe auch

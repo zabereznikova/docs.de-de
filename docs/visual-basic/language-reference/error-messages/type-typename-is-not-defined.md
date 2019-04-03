@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 80a3d31a8a46ce616be2dd2ab27faf0af04876f2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c2675d61307d92da1710368668f43af3559060a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275075"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825039"
 ---
 # <a name="type-typename-is-not-defined"></a>Typ "\<Typname >' ist nicht definiert.
 Die Anweisung hat auf einen Typ verwiesen, die nicht definiert wurde. Sie können einen Typ wie z. B. in einer deklarationsanweisung definieren `Enum`, `Structure`, `Class`, oder `Interface`.  
@@ -32,6 +32,7 @@ Die Anweisung hat auf einen Typ verwiesen, die nicht definiert wurde. Sie könne
 -   Stellen Sie sicher, dass der Typ in einer Assembly, die das Ziel .NET Framework-Profil gehört. Weitere Informationen finden Sie unter [Problembehandlung bei .NET Framework-Zielversionsfehlern](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Enum-Anweisung](../../../visual-basic/language-reference/statements/enum-statement.md)
 - [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)

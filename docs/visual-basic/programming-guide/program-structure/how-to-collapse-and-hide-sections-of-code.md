@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: bbce0e4a2427843ed9d9d51b25684db8c54ba69a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980125"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822286"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>Vorgehensweise: Reduzieren und Ausblenden von Codeabschnitten (Visual Basic)
 Die `#Region` Richtlinie ermöglicht es Ihnen, reduzieren und Ausblenden von Codeabschnitten in Visual Basic-Dateien. Die `#Region` -Direktive können Sie einen Block mit Code, den Sie erweitern können, oder reduzieren angeben, wenn Sie Visual Studio Code-Editor verwenden. Die Möglichkeit, um ausgewählten Code auszublenden, kann Ihre Dateien leichter lesbar und besser verwaltbar. Weitere Informationen finden Sie unter [Gliedern](/visualstudio/ide/outlining).  
@@ -30,6 +30,7 @@ Die `#Region` Richtlinie ermöglicht es Ihnen, reduzieren und Ausblenden von Cod
     >  Ausblenden von Code verhindert nicht, dass er kompiliert wird, und hat keinen Einfluss auf `#If...#End If` Anweisungen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Bedingte Kompilierung](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
 - [#Region-Anweisung](../../../visual-basic/language-reference/directives/region-directive.md)
 - [#If...Then...#Else-Anweisungen](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

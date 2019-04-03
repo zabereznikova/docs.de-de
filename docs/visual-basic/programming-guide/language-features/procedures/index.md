@@ -2,12 +2,18 @@
 title: Prozeduren in Visual Basic
 ms.date: 04/28/2017
 helpviewer_keywords:
-  - 'procedures [Visual Basic], structured code'
-  - 'Visual Basic code, procedures'
-  - 'procedures [Visual Basic], types of'
-  - 'structured code [Visual Basic], procedures'
-  - procedures
+- procedures [Visual Basic], structured code
+- Visual Basic code, procedures
+- procedures [Visual Basic], types of
+- structured code [Visual Basic], procedures
+- procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
+ms.openlocfilehash: dfd366cd823931962af878de59225ea183fff7c0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814925"
 ---
 # <a name="procedures-in-visual-basic"></a>Prozeduren in Visual Basic
 Ein *Prozedur* ist ein Block von Visual Basic-Anweisungen, die von einer deklarationsanweisung eingeschlossen (`Function`, `Sub`, `Operator`, `Get`, `Set`) und eine entsprechende `End` Deklaration. Alle ausführbare Anweisungen in Visual Basic müssen in einer Prozedur sein.  
@@ -56,6 +62,7 @@ Ein *Prozedur* ist ein Block von Visual Basic-Anweisungen, die von einer deklara
 -   Nachdem Sie Prozeduren für ein Programm entwickelt haben, können Sie diese auch in anderen Programmen einsetzen, und das oft mit wenigen bis gar keinen Änderungen. So können Sie Codeduplikate vermeiden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Erstellen Sie eine Prozedur](./how-to-create-a-procedure.md)
 - [Sub-Prozeduren](./sub-procedures.md)
 - [Function-Prozeduren](./function-procedures.md)

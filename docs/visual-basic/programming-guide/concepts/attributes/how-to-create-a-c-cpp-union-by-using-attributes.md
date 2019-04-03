@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen einer C / C++-Union mit Attributen (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
-ms.openlocfilehash: e37aac03db7a24e6519acb4eb843b46b8c60b4f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c3ebf248f5d2f20e2fff25fb8326a294b51d153
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663283"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829303"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Vorgehensweise: Erstellen einer C/C++-Union mit Attributen (Visual Basic)
 Mithilfe von Attributen können Sie anpassen, wie Strukturen im Arbeitsspeicher angeordnet werden. Sie können z.B. das erstellen, was als eine Union in C/C++ bekannt ist, indem Sie die mit `StructLayout(LayoutKind.Explicit)`- und `FieldOffset`-Attribute verwenden.  
@@ -67,6 +67,7 @@ Structure TestExplicit
  Die zwei Ganzzahlfelder `i1` und `i2` teilen die gleichen Speicheradressen wie `lg`. Diese Art der Kontrolle über das Strukturlayout ist nützlich, wenn Sie Plattformaufrufe nutzen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)

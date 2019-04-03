@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: f57a5df92b1e1dd20575c7930ac2a6eb546e1400
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 37926e48ef6dc12a6b96bbdb8b268993c82e4b48
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333000"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821269"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 In diesem Beispiel wird die `netNamedPipeBinding`-Bindung veranschaulicht, die prozessübergreifende Kommunikation auf dem gleichen Computer bereitstellt. Benannte Pipes funktionieren nicht computerübergreifend. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) rechnerdienst.  
@@ -27,7 +27,7 @@ In diesem Beispiel wird die `netNamedPipeBinding`-Bindung veranschaulicht, die p
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Im vorigen Beispiel wird gezeigt, wie ein Endpunkt für die Verwendung der `netNamedPipeBinding`-Bindung mit den Standardeinstellungen konfiguriert wird. Wenn Sie die`netNamedPipeBinding`-Bindung konfigurieren und einige der Einstellungen ändern möchten, müssen Sie eine Bindungskonfiguration definieren. Der Endpunkt muss auf die Bindungskonfiguration mithilfe des `bindingConfiguration`-Attributs mit einem Namen verweisen.  
+ Im vorigen Beispiel wird gezeigt, wie ein Endpunkt für die Verwendung der `netNamedPipeBinding`-Bindung mit den Standardeinstellungen konfiguriert wird. Wenn Sie die `netNamedPipeBinding`-Bindung konfigurieren und einige der Einstellungen ändern möchten, müssen Sie eine Bindungskonfiguration definieren. Der Endpunkt muss auf die Bindungskonfiguration mithilfe des `bindingConfiguration`-Attributs mit einem Namen verweisen.  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
@@ -94,4 +94,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\NamedPipe`  
   
-## <a name="see-also"></a>Siehe auch

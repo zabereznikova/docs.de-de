@@ -13,12 +13,12 @@ helpviewer_keywords:
 - operators [Visual Basic], conjunction
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
-ms.openlocfilehash: 090ae67c1e5f04c5d9c4f6aed7f8131d8f830166
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7e25f25677fa684427bdaf00cea73916ffbad655
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968854"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818617"
 ---
 # <a name="and-operator-visual-basic"></a>And-Operator (Visual Basic)
 Führt eine logische Konjunktion für zwei `Boolean` Ausdrücke oder eine bitweise Konjunktion zweier numerischer Ausdrücke.  
@@ -87,6 +87,7 @@ result = expression1 And expression2
  Im vorherige Beispiel werden die Ergebnisse von 8, 2 und 0 (null) bzw. erzeugt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Logische/bitweise Operatoren (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

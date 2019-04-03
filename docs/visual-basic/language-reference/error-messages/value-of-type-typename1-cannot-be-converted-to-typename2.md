@@ -1,5 +1,5 @@
 ---
-title: Der Wert vom Typ "<typename1>" kann nicht zu "<typename2>" konvertiert werden.
+title: Der Wert vom Typ '<typename1>' kann nicht zu '<typename2>' konvertiert werden.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30955
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: cd2f6e4b51bc327826301d3c7b39c97a4bed3793
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261242"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829022"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>Wert vom Typ "\<Typname1 >' kann nicht konvertiert werden, um"\<Typname2 >'
 Wert vom Typ "\<Typname1 >' kann nicht konvertiert werden, um"\<Typname2 >'. {Typenkonflikt beim wird möglicherweise durch das Mischen eines Dateiverweises mit einem Projektverweis auf Assembly '\<Assemblyname >'. Den Dateiverweis, ersetzen Sie die "\<" FilePath ">" in Projekt "\<projektnamen1 >' mit einem Projektverweis auf"\<projektname2 > ".  
@@ -60,6 +60,6 @@ Wert vom Typ "\<Typname1 >' kann nicht konvertiert werden, um"\<Typname2 >'. {Ty
 -   Den Dateiverweis, einen Projektverweis zu ändern.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Typkonvertierung in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Verwalten von Verweisen in einem Projekt](/visualstudio/ide/managing-references-in-a-project)
-

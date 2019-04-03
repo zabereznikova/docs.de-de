@@ -9,12 +9,12 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 4aabb1eef717b06222696980d4cbce7a781fb567
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735246"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825377"
 ---
 # <a name="decision-structures-visual-basic"></a>Entscheidungsstrukturen (Visual Basic)
 Visual Basic können Sie die Bedingungen zu testen, und führen Sie verschiedene Vorgänge abhängig von den Ergebnissen dieses Tests. Sie können testen, auf eine Bedingung wird "true" oder "false" für verschiedene Werte für einen Ausdruck oder für verschiedene Ausnahmen generiert, wenn Sie eine Reihe von Anweisungen ausführen.  
@@ -47,6 +47,7 @@ Andere Aktionen auszuführen, wenn eine Bedingung ist "true", und wann ist "fals
 >  Für viele Steuerungsstrukturen Wenn Sie ein Schlüsselwort, klicken Sie auf werden alle Schlüsselwörter in der Struktur hervorgehoben. Z. B. beim Klicken auf `If` in einer `If...Then...Else` Konstruktion, die alle Instanzen von `If`, `Then`, `ElseIf`, `Else`, und `End If` bei der Erstellung werden hervorgehoben. Um zum nächsten oder vorherigen hervorgehobenen Schlüsselwort zu verschieben, drücken Sie STRG + UMSCHALT + nach-unten oder STRG + UMSCHALT + nach-oben-Taste.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Ablaufsteuerung](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Schleifenstruktur](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Weitere Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

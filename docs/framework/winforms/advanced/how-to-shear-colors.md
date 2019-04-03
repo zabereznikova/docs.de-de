@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: eff468e5761038723e16eddf84bdcf8849ac30d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bb5f9043ea5bdd25e984d73d3640c80f599714e6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720224"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826391"
 ---
 # <a name="how-to-shear-colors"></a>Vorgehensweise: Scheren von Farben
 Verzerrens erhöht oder verringert eine Farbe Komponente durch eine Menge, die proportional zu einer anderen Farbe-Komponente. Betrachten Sie beispielsweise die Transformation, in denen die Rotkomponente um die Hälfte der Wert des Blauanteils erhöht wird. Unter einer Transformation würde die Farbe ("0.2", "0.5", "1") werden ("0,7", "0.5", "1"). Der neue Rotanteil ist "0,2" + ((1/2)(1) = 0,7.  
@@ -21,9 +21,9 @@ Verzerrens erhöht oder verringert eine Farbe Komponente durch eine Menge, die p
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt eine <xref:System.Drawing.Image> Objekt aus der Datei ColorBars4.bmp. Anschließend wird der Code im vorherigen Abschnitt auf jedes Pixel in der Abbildung beschriebene Verbiegen Transformation angewendet.  
   
- Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und die Schertransformation auf der rechten Seite an.  
+ Die folgende Abbildung zeigt das ursprüngliche Bild auf der linken Seite und die Schertransformation auf der rechten Seite an: 
   
- ![Scheren von Farben](./media/colortrans6.png "colortrans6")  
+ ![Mit Farbiger Streifen Seite-an-Seite zur Veranschaulichung das ursprüngliche Bild und die Schertransformation von zwei Quadraten.](./media/how-to-shear-colors/original-image-sheared-image.png)  
   
  Die folgende Tabelle enthält die Farbe Vektoren für die vier Balken, vor und nach der Transformation Verbiegen.  
   

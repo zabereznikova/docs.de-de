@@ -2,12 +2,12 @@
 title: Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7f55b0be-9f6e-44f8-865c-6afbea50cc54
-ms.openlocfilehash: 5e4204c3fa80acced42649e76abfa2be05f35d82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6331ad0994e121d2d7007c9999f3a684b83efe6d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595174"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823220"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Klassifizierung von Standardabfrageoperatoren nach Ausführungsarten (Visual Basic)
 Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit einer von zwei möglichen Arten ausgeführt: direkt oder zurückgestellt. Abfrageoperatoren, die die verzögerte Ausführung verwenden, können darüber hinaus in zwei Kategorien unterteilt werden: Streaming und Nicht-Streaming. Wenn Sie wissen, wie die einzelnen Abfrageoperatoren ausgeführt werden, erleichtert dies das Verständnis der Ergebnisse, die Sie von einer Abfrage erhalten. Dies ist insbesondere dann der Fall, wenn die Datenquelle geändert wird oder wenn Sie eine Abfrage auf Grundlage einer anderen Abfrage erstellen. In diesem Thema werden die Standardabfrageoperatoren gemäß ihrer Ausführungsarten klassifiziert.  
@@ -88,6 +88,7 @@ Die LINQ to Objects-Implementierungen des Standardabfrageoperators werden mit ei
 |<xref:System.Linq.Enumerable.Where%2A>|<xref:System.Collections.Generic.IEnumerable%601>||X||  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Linq.Enumerable>
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)

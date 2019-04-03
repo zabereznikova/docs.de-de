@@ -8,12 +8,12 @@ helpviewer_keywords:
 - limits, Visual Basic code
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
-ms.openlocfilehash: 0f356b52304110299ed0af9bbccd5d03893f31a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10f67c02d25ec275d1c3e98197d51c25aa250c19
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596357"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824909"
 ---
 # <a name="visual-basic-limitations"></a>Beschränkungen in Visual Basic
 Frühere Versionen von Visual Basic erzwungen Grenzen in Code, z. B. die Länge der Namen von Variablen, die Anzahl der Variablen in Modulen und Modulgröße zulässig. In Visual Basic .NET haben diese Einschränkungen gelockert wurden Ihnen nur größere freiheiten beim Schreiben und Anordnen von Ihrem Code.  
@@ -33,5 +33,6 @@ Frühere Versionen von Visual Basic erzwungen Grenzen in Code, z. B. die Länge 
 -   **Zeichenfolgenlänge der Umgebung.** Es gibt höchstens 32768 Zeichen für eine beliebige Umgebungszeichenfolge, die als Befehlszeilenargument verwendet. Dies ist eine Einschränkung auf allen Plattformen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Programmstruktur und Codekonventionen](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Visual Basic-Benennungskonventionen](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

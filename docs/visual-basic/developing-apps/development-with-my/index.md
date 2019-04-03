@@ -9,12 +9,12 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: 2758dc847d6549689d688ef4742bb334b1968988
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d9dc1cd26b4bf110526fe6d136e943be730a443
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720222"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830317"
 ---
 # <a name="development-with-my-visual-basic"></a>Entwicklung mit "My" (Visual Basic)
 Visual Basic stellt neue Features für die schnelle Anwendungsentwicklung bereit, die die Produktivität und die Benutzerfreundlichkeit erhöhen und zugleich Leistung liefern. Eines dieser Features, das den Namen `My` trägt, stellt den Zugriff auf Informationen und Standardobjektinstanzen bereit, die mit der Anwendung und seiner Laufzeitumgebung verwandt sind. Diese Informationen werden in einem Format organisiert, das durch IntelliSense erkannt werden kann, und gemäß ihrer Verwendung logisch beschrieben.  
@@ -23,7 +23,7 @@ Visual Basic stellt neue Features für die schnelle Anwendungsentwicklung bereit
   
  Diese Tabelle zeigt die `My`-Objekte der obersten Ebene und ihre Beziehung zueinander.  
   
- ![Objektmodell für „My“](../../../visual-basic/developing-apps/development-with-my/media/myobjmodel.gif "MyObjModel")  
+ ![Das Diagramm zeigt das Objektmodell für meine.](./media/index/my-object-model-relationships.gif)  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Ausführen von Aufgaben mit My.Application, My.Computer und My.User](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
@@ -42,6 +42,7 @@ Visual Basic stellt neue Features für die schnelle Anwendungsentwicklung bereit
  Bietet Informationen zu den in verschiedenen Projekttypen verfügbaren `My`-Funktionen  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>

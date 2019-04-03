@@ -2,6 +2,12 @@
 title: Ausdrucksbaumstrukturen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8bbbb02d-7ffc-476b-8c25-118d82bf5d46
+ms.openlocfilehash: c1e576439956a735962978d37430949ed6bc39d8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832494"
 ---
 # <a name="expression-trees-visual-basic"></a>Ausdrucksbaumstrukturen (Visual Basic)
 Ausdrucksbaumstrukturen stellen Code in einer baumähnlichen Datenstruktur dar, in denen jeder Knoten ein Ausdruck ist, z. B. ein Methodenaufruf oder eine binäre Operation wie `x < y`.  
@@ -136,6 +142,7 @@ Console.WriteLine(expr.Compile()(4))
  Weitere Informationen finden Sie unter [Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Linq.Expressions>
 - [Vorgehensweise: Ausführen von Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
 - [Vorgehensweise: Ändern von Ausdrucksbaumstrukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)

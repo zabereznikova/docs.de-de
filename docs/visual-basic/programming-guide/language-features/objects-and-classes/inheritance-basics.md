@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: 3d772fb81eb13b9454f44ff8ae4256bdb4144caa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e4b8511145e758bf3d6328141be0e526965dccf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970297"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826573"
 ---
 # <a name="inheritance-basics-visual-basic"></a>Grundlagen der Vererbung (Visual Basic)
 Die `Inherits` -Anweisung verwendet, um eine neue Klasse namens deklariert eine *abgeleitete Klasse*basierend auf einer vorhandenen Klasse, die als bezeichnet ein *Basisklasse*. Abgeleitete Klassen erben, und erweitern können, die Eigenschaften, Methoden, Ereignissen, Felder und Konstanten, die in der Basisklasse definiert. Der folgende Abschnitt beschreibt einige der Regeln für die Vererbung, und die Modifizierer, die Sie verwenden können, so ändern Sie die Möglichkeit Klassen erben oder geerbt werden:  
@@ -143,5 +143,6 @@ End Class
  Obwohl `derivedClass` überschreibt `testMethod`, `MyClass` -Schlüsselwort in `useMyClass` hebt den Auswirkungen der überschreiben und der Compiler löst den Aufruf die Basisklassenversion von `testMethod`.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Inherits-Anweisung](../../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Me, My, MyBase und MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

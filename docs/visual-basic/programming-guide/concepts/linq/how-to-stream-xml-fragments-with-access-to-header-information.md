@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Stream-XML-Fragmenten mit Zugriff auf Headerinformationen (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-ms.openlocfilehash: 26d1d2166aaf8eaa62ba3ef7b3ffa9ab104574e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c11a64eb28e8952636ab877479852bd883fc7eba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657323"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829472"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>Vorgehensweise: Stream-XML-Fragmenten mit Zugriff auf Headerinformationen (Visual Basic)
 Es kann vorkommen, dass Sie willkürlich große XML-Dateien lesen und Ihre Anwendung so schreiben müssen, dass der Arbeitsspeicherbedarf der Anwendung vorhersehbar ist. Wenn Sie versuchen, eine XML-Struktur mit einer großen XML-Datei zu füllen, ändert sich Ihre Speicherbeanspruchung proportional zur Größe der Datei, also exzessiv. Deshalb sollten Sie stattdessen ein Streamingverfahren verwenden.  
@@ -231,4 +231,5 @@ End Class
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erweiterte LINQ to XML-Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

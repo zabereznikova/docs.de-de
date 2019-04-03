@@ -2,12 +2,12 @@
 title: Erstellen von XML-Strukturen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e86ba12b-17de-4579-81bb-66322b84cfbe
-ms.openlocfilehash: fa7afe913c0faffca23b457ce58755f1db55400c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22dcb111b3c6da01fa60b3ea918b91cb89031b3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630943"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819189"
 ---
 # <a name="creating-xml-trees-visual-basic"></a>Erstellen von XML-Strukturen (Visual Basic)
 Eine der häufigsten XML-Aufgaben besteht darin, eine XML-Struktur zu konstruieren. In diesem Abschnitt werden mehrere Möglichkeiten für die Erstellung solcher Strukturen beschrieben.  
@@ -25,4 +25,5 @@ Eine der häufigsten XML-Aufgaben besteht darin, eine XML-Struktur zu konstruier
 |[Gültiger Inhalt von XElement- und XDocument-Objekten](../../../../visual-basic/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects.md)|Beschreibt die gültigen Argumente, die an Konstruktoren und Methoden übergeben werden können, mit denen Elemente und Dokumente hinzugefügt werden.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Programmierhandbuch (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

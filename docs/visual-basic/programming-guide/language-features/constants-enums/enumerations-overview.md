@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, enumerations
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
-ms.openlocfilehash: 5d84711c9efbe8d73d1cfe1dc7ac431b675d0b50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c3465a3b2d12b110096ceedf2602d6560b82f4d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693093"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821841"
 ---
 # <a name="enumerations-overview-visual-basic"></a>Übersicht über Enumerationen (Visual Basic)
 Enumerationen bieten eine bequeme Möglichkeit, um mit Sätzen verknüpfter Konstanten zu arbeiten und Konstante Werten Namen zuzuweisen. Sie können zum Beispiel eine Enumeration für einen Satz von Integerkonstanten deklarieren, denen die Tage der Woche zugewiesen sind, und dann in Ihrem Code die Namen der Wochentage statt deren Integerwerte verwenden.  
@@ -29,6 +29,7 @@ Enumerationen bieten eine bequeme Möglichkeit, um mit Sätzen verknüpfter Kons
 |Entscheiden Sie, wann eine Enumeration verwenden.|[Situationen für die Verwendung von Enumerationen](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Konstanten](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [Benutzerdefinierte Konstanten](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
 - [Vorgehensweise: Deklarieren einer Konstante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)

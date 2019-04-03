@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], embedded expressions
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
-ms.openlocfilehash: feb0168c216b23ff02ca9350f868e091fefca689
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965786"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827574"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>Eingebettete Ausdrücke in XML (Visual Basic)
 Eingebettete Ausdrücke ermöglichen Ihnen die Erstellung von XML-Literale, die Ausdrücke enthalten, die zur Laufzeit ausgewertet werden. Die Syntax für einen eingebetteten Ausdruck ist `<%=` `expression` `%>`, das ist identisch mit der Syntax in verwendet [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -81,6 +81,7 @@ Eingebettete Ausdrücke ermöglichen Ihnen die Erstellung von XML-Literale, die 
 >  Wenn Sie ein XML-Namespacepräfix deklarieren, indem die `xmlns` Namespace-Attribut den Wert des Attributs muss eine Konstante Zeichenfolge sein. In dieser Hinsicht mithilfe der `xmlns` Attribut ist, wie die Verwendung der `Imports` Anweisung, um ein XML-Namespace zu deklarieren. Sie können keinen eingebetteten Ausdruck verwenden, um die XML-Namespacewert anzugeben.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen von XML in Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML-Dokumentliteral](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
 - [XML-Elementliteral](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

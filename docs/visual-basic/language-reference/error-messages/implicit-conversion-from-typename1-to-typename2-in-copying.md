@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: f875206b15ee048311e43624e197e78413de522e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7b02659d96b08c592b25ddf3ef1f99114c3ee269
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279616"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831760"
 ---
 # <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>Implizite Konvertierung von '\<Typname1 >' zu '\<Typname2 >' beim Zurückkopieren des Wertes des ByRef-Parameters '\<Parametername >' zurück in das entsprechende Argument.
 Eine Prozedur wird aufgerufen, mit einem [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) Argument eines anderen Typs als die des entsprechenden Parameters.  
@@ -32,6 +32,7 @@ Eine Prozedur wird aufgerufen, mit einem [ByRef](../../../visual-basic/language-
 -   Wenn Sie die Prozedur mit einem Argument aufrufen müssen, dessen Typ sich vom Parametertyp unterscheidet, jedoch kein Wert in das aufrufende Argument zurückgegeben werden muss, definieren Sie den Parameter als [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) anstelle von `ByRef`.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verfahren](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Parameter und Argumente von Prozeduren](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
 - [Übergeben von Argumenten als Wert und als Verweis](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
-ms.openlocfilehash: 6e0efebfaa9c922ea7b72a7c4314801eb2c35dda
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ea12139118af32df18bac805aa0b4f1267c175c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595525"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822868"
 ---
 # <a name="out-of-memory-visual-basic-compiler-error"></a>Nicht genügend Arbeitsspeicher (Visual Basic-Compilerfehler)
 Es war mehr Arbeitsspeicher erforderlich als verfügbar ist.  
@@ -34,4 +34,5 @@ Es war mehr Arbeitsspeicher erforderlich als verfügbar ist.
 -   Stellen Sie sicher, dass der Speicher freigegeben wird, wenn es nicht mehr benötigt wird.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)

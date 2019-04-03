@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: 141040a715487b3cbcfff1c3b9969a0869c8a3d8
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201707"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826196"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Grundlegende Abfrageoperationen (Visual Basic)
 Dieses Thema enthält eine kurze Einführung in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Ausdrücke in Visual Basic, und klicken Sie auf einige der geläufigsten Vorgänge, die Sie in einer Abfrage ausführen. Weitere Informationen finden Sie unter den folgenden Themen:  
@@ -153,6 +153,7 @@ Where cust.City = "London" Or cust.City = "Paris"
  Weitere Informationen zu `Group By`, finden Sie unter [Group By-Klausel](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Collections.Generic.IEnumerable%601>
 - [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Abfragen](../../../../visual-basic/language-reference/queries/index.md)

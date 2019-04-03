@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 7a0b513e5045db609550133e20c20ef65f17844c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca336e2ffa3831167088d92bfca017ce2226d8a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551917"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828081"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Erstellen und Verwenden von Komponenten in Visual Basic
 Eine *Komponente* ist eine Klasse, die die Schnittstelle <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> implementiert oder die direkt oder indirekt von einer Klasse ableitet, die <xref:System.ComponentModel.IComponent> implementiert. Eine [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]-Komponente ist ein Objekt, das wiederverwendet werden, mit anderen Objekten interagieren, die Steuerung von externen Ressourcen ermöglichen und Unterstützung während der Entwurfszeit bieten kann.  
@@ -63,5 +63,5 @@ Eine *Komponente* ist eine Klasse, die die Schnittstelle <xref:System.ComponentM
  Erläutert die Behebung häufiger Probleme.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Zugriff während der Entwurfszeit-Unterstützung in Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
 
+- [Vorgehensweise: Zugriff während der Entwurfszeit-Unterstützung in Windows Forms](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

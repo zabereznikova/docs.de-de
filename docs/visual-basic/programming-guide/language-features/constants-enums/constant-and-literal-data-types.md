@@ -9,12 +9,12 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 269045dcfec14fafe878c2716490c93e79efe3d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 50e36aa13439bafcca27a7153a8c5d6043f03975
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978214"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833502"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>Konstanten und literale Datentypen (Visual Basic)
 Ein Literal ist ein Wert, der als sich selbst und nicht als der Wert einer Variablen oder das Ergebnis eines Ausdrucks, z. B. die Zahl 3 oder die Zeichenfolge "Hello" ausgedrückt wird. Eine Konstante ist, einen aussagekräftigen Namen, der tritt an die Stelle eines Literals und behält den gleichen Wert in der gesamten Anwendung, im Gegensatz zu einer Variablen, deren Wert ändern kann.  
@@ -62,6 +62,7 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
 |`String`|"|(keine)|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Benutzerdefinierte Konstanten](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
 - [Vorgehensweise: Deklarieren einer Konstante](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
 - [Übersicht über Konstanten](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)

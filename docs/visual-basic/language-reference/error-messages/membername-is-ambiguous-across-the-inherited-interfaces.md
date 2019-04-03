@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
-ms.openlocfilehash: 1548c9894d476cc4b92d6581362d309e7b4d00d4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4415608bcfca63b43b3d9ebf17ce622ccd418775
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264991"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820856"
 ---
 # <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a>'\<Membername >' ist mehrdeutig, in der geerbten Schnittstelle\<schnittstellenname1 >' und '\<schnittstellenname2 >'
 Die Schnittstelle erbt mindestens zwei Elemente mit dem gleichen Namen von mehreren Schnittstellen.  
@@ -47,4 +47,5 @@ Die Schnittstelle erbt mindestens zwei Elemente mit dem gleichen Namen von mehre
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

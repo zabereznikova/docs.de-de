@@ -2,12 +2,12 @@
 title: Vertrag zuerst-Tool
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: ef19843d6c8a9de0b926dd8512f5a58a5966e1bf
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: ad0566eaff08d27e8368f091388adda7376a37ef
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846180"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819618"
 ---
 # <a name="contract-first-tool"></a>Vertrag zuerst-Tool
 Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] können Datenvertragsklassen mithilfe des Vertrag zuerst-Tools automatisch aus vorhandenen Diensten erstellt werden. Zum Verwenden des Vertrag zuerst-Tools muss die XSD (XML Schema Definition)-Datei lokal heruntergeladen werden. Das Tool kann keine Remotedatenverträge per HTTP importieren.
@@ -61,11 +61,11 @@ Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In [!I
 ## <a name="configuring-contract-first-options"></a>Konfigurieren von Vertrag zuerst-Optionen
  Vertrag zuerst-Optionen können im Eigenschaftenmenü eines WCF-Projekts konfiguriert werden. Um Vertrag zuerst-Entwicklung zu aktivieren, wählen die **XSD als Typdefinitionssprache aktivieren** Kontrollkästchen in der WCF-Seite des Fenster mit den Projekteigenschaften.
 
- ![WCF-Projektoptionen mit Contract&#45;erste](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")
+ ![Screenshot der WCF-Optionen zusammen mit Vertrag zuerst-Entwicklung aktiviert.](./media/contract-first-tool/contract-first-options.png)
 
  Um erweiterte Eigenschaften zu konfigurieren, klicken Sie auf die Schaltfläche Erweitert.
 
- ![Erweiterte Contract&#45;ersten Eigenschaften](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")
+ ![Erweiterte Einstellungen für die Codegenerierung Vertrag (Dialogfeld).](./media/contract-first-tool/advanced-contract-settings.png)
 
  Die folgenden erweiterten Einstellungen können für die Codegenerierung aus Verträgen konfiguriert werden. Die Einstellungen können nur für alle Dateien im Projekt konfiguriert werden. Das Konfigurieren der Einstellungen für einzelne Dateien ist derzeit nicht möglich.
 
@@ -118,9 +118,9 @@ Dienstverträge müssen häufig aus vorhandenen Diensten erstellt werden. In [!I
 using MyProjectNamespace.ContractTypes;
 ```
 
- Die im Dienstvertrag definierten Typen sind dann wie unten dargestellt im Projekt auflösbar.
+ Die im Dienstvertrag definierten Typen werden wie unten dargestellt im Projekt aufgelöst werden kann:
 
- ![Verwenden von Typen abgeleitet von einem Dienstvertrag](../../../docs/framework/wcf/media/contractfirsttypes.png "ContractFirstTypes")
+ ![SearchRequest-Klasse, die in IntelliSense angezeigt werden, nach dem die ersten paar Buchstaben eingeben.](./media/contract-first-tool/service-contract-types.png)
 
  Die vom Tool generierten Typen werden in der Datei GeneratedXSDTypes.cs erstellt. Die Datei wird erstellt, der \<Projektverzeichnis > /obj/\<Buildkonfiguration > /XSDGeneratedCode/ Verzeichnisses standardmäßig. Das Beispielschema am Anfang dieses Themas wird wie folgt konvertiert:
 

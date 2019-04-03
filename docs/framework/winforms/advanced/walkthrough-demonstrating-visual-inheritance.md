@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: aa4d18c0e3bbc2613502c7232771c57acc7f0dc8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721449"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816316"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Exemplarische Vorgehensweise: Demonstrieren der visuellen Vererbung
 Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anzeigen und neue Steuerelemente hinzufügen. In dieser exemplarischen Vorgehensweise erstellen Sie ein Basisformular und kompilieren es in eine Klassenbibliothek. Sie importieren diese Klassenbibliothek in ein anderes Projekt und erstellen ein neues Formular, das vom Basisformular erbt. Bei dieser exemplarischen Vorgehensweise lernen Sie Folgendes:  
@@ -140,7 +140,7 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
   
 5.  Öffnen Sie das geerbte Formular (**Form2**) im Designer, indem Sie darauf doppelklicken, wenn es nicht bereits geöffnet ist.  
   
-     Im Designer haben die geerbten Schaltflächen ein Symbol (![VisualBasicInheritanceSymbol-bildschirmabbildung](./media/vbinheritanceglyph.gif "VbInheritanceGlyph")) in der oberen Ecke, der angibt, sie werden geerbt.  
+     Im Designer haben die geerbten Schaltflächen ein Symbol (![Screenshot der Vererbung von Visual Basic-Symbols.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) in der oberen Ecke, der angibt, sie werden geerbt.  
   
 6.  Wählen Sie die **Say Hello** Schaltfläche, und beobachten Sie die Handles zur Größenänderung. Da diese Schaltfläche geschützt ist, können die Erben sie verschieben, ihre Größe ändern, ihre Beschriftung ändern und andere Änderungen vornehmen.  
   

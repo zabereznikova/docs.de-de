@@ -2,12 +2,12 @@
 title: 'Benutzerdefinierter Nachrichtenencoder: Komprimierungsencoder'
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: dc1241f0652c55fee0db7ca7ff19b28fea656c16
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7dd172920e88e5da51fbb9965409d1d5a03accf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583622"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825291"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Benutzerdefinierter Nachrichtenencoder: Komprimierungsencoder
 In diesem Beispiel wird veranschaulicht, wie einen benutzerdefinierten Encoder mit der Windows Communication Foundation (WCF)-Plattform implementiert werden.  
@@ -222,7 +222,7 @@ binding.Namespace = "http://tempuri.org/bindings";
   
  Obwohl dies für die meisten Benutzerszenarios ausreichen sollte, ist die Unterstützung einer Dateikonfiguration wichtig, wenn der Dienst im Web gehostet werden soll. Zur Unterstützung des Webhostszenarios müssen Sie einen benutzerdefinierten Konfigurationshandler erstellen, damit ein benutzerdefiniertes Bindungselement in einer Datei konfiguriert werden kann.  
   
- Einen Konfigurationshandler für das Bindungselement können Sie auf dem von [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] bereitgestellten Konfigurationssystem erstellen. Der Konfigurationshandler für das Bindungselement muss von der <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>-Klasse abgeleitet sein. Mithilfe der `BindingElementType`-Eigenschaft wird dem Konfigurationssystem der Typ des Bindungselements, das für diesen Abschnitt erstellt werden soll, mitgeteilt. Sämtliche Aspekte des `BindingElement`, die festgelegt werden können, sollten in der abgeleiteten <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>-Klasse als Eigenschaften zugänglich gemacht werden. Das <xref:System.Configuration.ConfigurationPropertyAttribute> dient als Hilfe beim Zuordnen der Konfigurationselementattribute zu den Eigenschaften und &#150; wenn Attribute fehlen &#150; beim Einstellen von Standardwerten. Nachdem die Werte aus der Konfiguration geladen und auf die Eigenschaften angewendet wurden, wird die <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A>-Methode aufgerufen, die die Eigenschaften in eine konkrete Instanz eines Bindungselements konvertiert. Mit der <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A>-Methode werden die Eigenschaften aus der abgeleiteten <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>-Klasse in die Werte konvertiert, die im neu erstellten Bindungselement festgelegt werden sollen.  
+ Einen Konfigurationshandler für das Bindungselement können Sie auf dem von [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] bereitgestellten Konfigurationssystem erstellen. Der Konfigurationshandler für das Bindungselement muss von der <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>-Klasse abgeleitet sein. Mithilfe der `BindingElementType`-Eigenschaft wird dem Konfigurationssystem der Typ des Bindungselements, das für diesen Abschnitt erstellt werden soll, mitgeteilt. Sämtliche Aspekte des `BindingElement`, die festgelegt werden können, sollten in der abgeleiteten <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>-Klasse als Eigenschaften zugänglich gemacht werden. Das <xref:System.Configuration.ConfigurationPropertyAttribute> dient als Hilfe beim Zuordnen der Konfigurationselementattribute zu den Eigenschaften und &amp;#150; wenn Attribute fehlen &amp;#150; beim Einstellen von Standardwerten. Nachdem die Werte aus der Konfiguration geladen und auf die Eigenschaften angewendet wurden, wird die <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.CreateBindingElement%2A>-Methode aufgerufen, die die Eigenschaften in eine konkrete Instanz eines Bindungselements konvertiert. Mit der <xref:System.ServiceModel.Configuration.BindingElementExtensionElement.ApplyConfiguration%2A>-Methode werden die Eigenschaften aus der abgeleiteten <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>-Klasse in die Werte konvertiert, die im neu erstellten Bindungselement festgelegt werden sollen.  
   
  Das folgenden Codebeispiel zeigt die Implementierung des `GZipMessageEncodingElement`.  
   
@@ -355,4 +355,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
   
-## <a name="see-also"></a>Siehe auch

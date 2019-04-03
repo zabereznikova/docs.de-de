@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 843ea95cded81aa7870f8a7bef20df586c4085a6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361199"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814154"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Erweitern des My-Namespaces in Visual Basic
 Die `My` Namespaces in Visual Basic verfügbar macht, Eigenschaften und Methoden, mit denen Sie problemlos von der Leistungsfähigkeit von .NET Framework nutzen können. Die `My` Namespace vereinfacht häufige Programmierprobleme, häufig eine schwierige Aufgabe auf eine einzige Zeile Code zu reduzieren. Darüber hinaus die `My` Namespace ist vollständig erweiterbar, sodass Sie das Verhalten anpassen können `My` und seiner Hierarchie zur Anpassung an die spezifischen Anforderungen Ihrer Anwendung neue Dienste hinzugefügt. Beide in diesem Thema Anpassen von vorhandenen Mitglieder der `My` Namespace und wie Sie eigene benutzerdefinierten Klassen zum Hinzufügen der `My` Namespace.  
@@ -101,6 +101,7 @@ Die `My` Namespaces in Visual Basic verfügbar macht, Eigenschaften und Methoden
  Ausführliche Informationen zum Bereitstellen von `My` Namespaceerweiterungen finden Sie unter [Verpacken und Bereitstellen von benutzerdefinierten My-Erweiterungen](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Packen und Bereitstellen von benutzerdefinierten My-Erweiterungen](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)
 - [Erweitern des Visual Basic-Anwendungsmodells](../../../visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
 - [Anpassen der verfügbaren Objekte in „My“](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: 66255a9bfa2a4f9acb33073bae755efbab61042e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dde627edfeb1d4473c9d2e01b9ff83c580a0f122
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977978"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822686"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Vorgehensweise: Kombinieren von Daten mit LINQ mithilfe von Joins (Visual Basic)
 Visual Basic bietet die `Join` und `Group Join` -Abfrageklauseln, um den Inhalt mehrerer Sammlungen basierend auf häufig verwendete Werte zwischen den Sammlungen kombinieren können. Diese Werte werden als bezeichnet *Schlüssel* Werte. Mit relationale Datenbank vertraute Entwickler erkennt die `Join` -Klausel als ein INNER JOIN und `Group Join` -Klausel so effektiv einen LEFT OUTER JOIN.  
@@ -80,6 +80,7 @@ Visual Basic bietet die `Join` und `Group Join` -Abfrageklauseln, um den Inhalt 
 2.  Drücken Sie F5, um die Beispiele ausführen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Join-Klausel](../../../../visual-basic/language-reference/queries/join-clause.md)

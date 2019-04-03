@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: dc7cba394f623ae94a0d9ca8285fc12af8f0dacf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07db963ac3cf9d1c0d17c420480189d362cdaf2c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600335"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831565"
 ---
 # <a name="error-types-visual-basic"></a>Fehlertypen (Visual Basic)
 In Visual Basic Fehler (so genannte *Ausnahmen*) fallen in drei Kategorien unterteilt: Syntaxfehler, Laufzeitfehler und Logikfehler.  
@@ -33,5 +33,6 @@ In Visual Basic Fehler (so genannte *Ausnahmen*) fallen in drei Kategorien unter
  *Logikfehler* sind diejenigen, die angezeigt werden, sobald die Anwendung verwendet wird. Sie sind die meisten häufig unerwünschten oder unerwartete Ergebnisse als Reaktion auf Benutzeraktionen. Z. B. einen falsch Schlüssel oder andere externe beeinflussen möglicherweise dazu führen, dass Ihre Anwendung nicht mehr funktioniert innerhalb der erwarteten Parameter oder vollständig. Logische Fehler sind im Allgemeinen am schwersten zu beheben, da es nicht immer klar ist, in dem sie stammen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Try...Catch...Finally-Anweisung](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [Debugger – Grundlagen](/visualstudio/debugger/debugger-basics)

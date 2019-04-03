@@ -25,12 +25,12 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: 8dfee8a8678fb00fcded4b7da57c3b200ef64d69
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979533"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815595"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Überlegungen zur Prozedurüberladung (Visual Basic)
 Wenn Sie eine Prozedur zu überladen, müssen Sie einen anderen verwenden *Signatur* für jede überladene Version. Dies bedeutet normalerweise, dass jede Version eine anderen Parameterliste angeben muss. Weitere Informationen finden Sie unter "Andere Signatur" in [Prozedurüberladung](./procedure-overloading.md).  
@@ -122,6 +122,7 @@ Wenn Sie eine Prozedur zu überladen, müssen Sie einen anderen verwenden *Signa
 -   Der Compiler kann nicht auf einen Fehler signalisieren, wenn der aufrufende Code einen Datentyp übergibt, den die Prozedur nicht unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verfahren](./index.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Problembehandlung bei Prozeduren](./troubleshooting-procedures.md)

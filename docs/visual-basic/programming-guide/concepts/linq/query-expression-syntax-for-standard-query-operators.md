@@ -2,12 +2,12 @@
 title: Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: eb978d86-d3b5-497b-95ce-a054bea8f510
-ms.openlocfilehash: 49a0b9d70022ee655d87b34a3bb044e1f60b308d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdbca93d5898e363ccf62b13231163573e2ba972
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549677"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832514"
 ---
 # <a name="query-expression-syntax-for-standard-query-operators-visual-basic"></a>Abfrageausdruckssyntax für Standardabfrageoperatoren (Visual Basic)
 Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine dedizierte Schlüsselwortsyntax von Visual Basic, die ihnen ermöglicht, die als Teil des aufzurufenden eine *Abfrageausdruck*. Mit einem Abfrageausdruck kann eine Abfrage besser lesbar ausgedrückt werden als mit dessen *methodenbasierter* Entsprechung. Die Abfrageausdrucksklauseln werden bei der Kompilierung in Aufrufe der Abfragemethoden übersetzt.  
@@ -43,6 +43,7 @@ Einige der häufiger verwendeten Standardabfrageoperatoren verfügen über eine 
 |<xref:System.Linq.Enumerable.Where%2A>|`Where`<br /><br /> (Weitere Informationen finden Sie unter [Where-Klausel](../../../../visual-basic/language-reference/queries/where-clause.md).)|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 5e91f1b99a17f4bbdc65a77ab26050ee57e96ac4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b7e600a23ed326fe3e914957b4e698bc34c6135
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724842"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819649"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Vorgehensweise: Zugreifen auf Member eines Objekts (Visual Basic)
 Wenn Sie eine Objektvariablen, die auf ein Objekt verweist verfügen, möchten Sie häufig die Member des Objekts, z. B. die Methoden, Eigenschaften, Felder und Ereignisse zusammenarbeiten. Angenommen, nachdem Sie erstellt haben ein neues <xref:System.Windows.Forms.Form> -Objekts können Sie festlegen möchten die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft oder der Aufruf der <xref:System.Windows.Forms.Control.Focus%2A> Methode.  
@@ -71,6 +71,7 @@ Wenn Sie eine Objektvariablen, die auf ein Objekt verweist verfügen, möchten S
      Um den Zugriff auf Member eines Objekts Sie die Objektvariable zuweisen, müssen Sie festlegen, `Option Strict Off`. Wenn Sie dies tun, kann nicht der Compiler nicht garantieren, dass ein bestimmtes Element durch das Objekt verfügbar gemacht wird, die Sie der Variablen zuweisen. Wenn das Objekt keinen Member verfügbar macht, Sie versuchen, die für den Zugriff auf, eine <xref:System.MemberAccessException> Ausnahme auftritt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Object>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.MemberAccessException>

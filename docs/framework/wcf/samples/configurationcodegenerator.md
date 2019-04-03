@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: eb547c89dc5d4af9330a6881d64f433de9bdad94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a481fe1e3c3aedd74f0e1546259b4eeeb9bed118
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669080"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821932"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 Der ConfigurationCodeGenerator ist ein Tool, mit dem Sie Ihre Implementierungen von benutzerdefinierten Kanälen für das Konfigurationssystem verfügbar machen können. Auf diese Weise können Benutzer den benutzerdefinierten Kanal wie bei vom System bereitgestellten Bindungen (wie `NetTcpBinding`) oder benutzerdefinierten Bindungen mit dem `TcpTransportBindingElement` mithilfe einer .config-Datei konfigurieren.  
@@ -44,10 +44,9 @@ Der ConfigurationCodeGenerator ist ein Tool, mit dem Sie Ihre Implementierungen 
   
     1.  Bei Verwendung der Option "/be" implementiert eine der .cs-Dateien den `BindingElementExtensionSection` für Ihr Bindungselement. Dieser Code macht Ihr `BindingElement` für das Konfigurationssystem verfügbar, sodass Ihr Bindungselement auch von anderen benutzerdefinierten Bindungen verwendet werden kann. Die anderen Dateien enthalten Klassen, die Standardwerte und Konstanten darstellen. Die Dateien enthalten `//TODO`-Kommentare, um Sie daran zu erinnern, die Standardwerte zu aktualisieren.  
   
-    2.  Wenn Sie die Option "/sb" angegeben haben, implementieren zwei der .cs-Dateien ein `StandardBindingElement` bzw. ein `StandardBindingCollectionElement`, das Ihre Standardbindung für das Konfigurationssystem verfügbar macht. Die anderen Dateien enthalten Klassen, die Standardwerte und Konstanten darstellen. Die Dateien enthalten `//TODO`-Kommentare, um Sie daran zu erinnern, die Standardwerte zu aktualisieren.  
+    2.  Wenn Sie die Option „/sb“ angegeben haben, implementieren zwei der „.cs“-Dateien ein `StandardBindingElement` bzw. ein `StandardBindingCollectionElement`, das Ihre Standardbindung für das Konfigurationssystem verfügbar macht. Die anderen Dateien enthalten Klassen, die Standardwerte und Konstanten darstellen. Die Dateien enthalten `//TODO`-Kommentare, um Sie daran zu erinnern, die Standardwerte zu aktualisieren.  
   
          Wenn Sie die /sb angegeben: der CodeToAddTo option\<*Ihrestdbindung*> .cs enthält Code, der Sie manuell in die Klasse einfügen müssen, die Ihre standardbindung implementiert.  
   
      Die Datei "SampleConfig.xml" enthält den Konfigurationscode, den Sie der Konfigurationsdatei hinzufügen müssen, die die oben in Schritt 1 oder 2 definierten Handler registriert.  
   
-## <a name="see-also"></a>Siehe auch

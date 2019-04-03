@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Filtern Sie nach einem optionalen Element (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
-ms.openlocfilehash: feb7c3fbf40db81835ef132c52a2d9f2af1229be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2a1c7d4091af80e79a6758bcede8f4ccc753f03
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552423"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820661"
 ---
 # <a name="how-to-filter-on-an-optional-element-visual-basic"></a>Vorgehensweise: Filtern Sie nach einem optionalen Element (Visual Basic)
 Es kann vorkommen, dass Sie nach einem Element filtern möchten, ohne genau zu wissen, ob dieses Element in Ihrem XML-Dokument tatsächlich existiert. Die Suche sollte dann so ausgeführt werden, dass für den Fall, dass das Element das gesuchte untergeordnete Element nicht besitzt, beim Filtern keine Ausnahme wegen eines NULL-Verweises ausgelöst wird. Im folgenden Beispiel besitzt das `Child5`-Element kein untergeordnetes `Type`-Element, dennoch wird die Abfrage korrekt ausgeführt.  
@@ -107,6 +107,7 @@ Child Four Text
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>

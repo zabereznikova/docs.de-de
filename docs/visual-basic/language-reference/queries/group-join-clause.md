@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: 32f16d7f52665182dd82966693baa50ac9551f87
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3da4ca2db299a65b2c0f1fa259bbaabe4f53aa33
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972949"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821958"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join-Klausel (Visual Basic)
 Fasst zwei Auflistungen zu einer einzelnen hierarchischen Auflistung zusammen. Die Join-Operation wird auf Grundlage übereinstimmender Schlüssel.  
@@ -56,6 +56,7 @@ Group Join element [As type] In collection _
  [!code-vb[VbSimpleQuerySamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#14)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Einführung in LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Abfragen](../../../visual-basic/language-reference/queries/index.md)
 - [Select-Klausel](../../../visual-basic/language-reference/queries/select-clause.md)

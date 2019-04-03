@@ -5,12 +5,12 @@ helpviewer_keywords:
 - highentropyva compiler option (Visual Basic)
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
-ms.openlocfilehash: 546b563276e0db4ee2472ef325d09fd337a62513
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16bfea37a5742ac5aaaabfacdcf03a2b5bedb6db
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638755"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819278"
 ---
 # <a name="-highentropyva-visual-basic"></a>-Highentropyva (Visual Basic)
 Gibt an, ob eine 64-Bit ausführbare Datei oder eine ausführbare Datei, die gekennzeichnet ist, indem die [/Platform: anycpu](../../../visual-basic/reference/command-line-compiler/platform.md) Compileroption von Address Space Layout Randomization (ASLR) mit hoher Entropie unterstützt.  
@@ -31,5 +31,6 @@ Gibt an, ob eine 64-Bit ausführbare Datei oder eine ausführbare Datei, die gek
  Wenn die Option für die ausführbare Zieldatei und alle Module auf muss dem es abhängig ist, Zeigerwerte verarbeiten, die größer als 4 Gigabyte (GB) sind, wenn diese Module als 64-Bit-Prozesse ausgeführt werden können.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: a770167bca0dc3538c828bfcc8a8de4ef86e80c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8a7eda2a636d7f89131d140c82ad4f3c4743211
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602415"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826677"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Vorgehensweise: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable (Visual Basic)
 Sie können eine Variable durch ausblenden *shadowing* es, d. h. durch ihn mit einer Variablen mit dem gleichen Namen neu zu definieren. Sie können die Variable Schattenkopien, die Sie auf zwei Arten ausblenden möchten:  
@@ -104,6 +104,7 @@ Sie können eine Variable durch ausblenden *shadowing* es, d. h. durch ihn mit e
  Shadowing führt mehr als eine Version einer Variablen mit dem gleichen Namen. Die Version, die auf die der Compiler den Verweis löst hängt eine codeanweisung dem Variablennamen verweist, von Faktoren ab, wie z. B. den Speicherort der codeanweisung und das Vorhandensein einer qualifizierenden Zeichenfolge ab. Dies kann das Risiko von Verweisen auf eine unerwünschte Version eine solche Variable erhöhen. Sie können dieses Risiko verringern, indem Sie alle Verweise auf eine solche Variable vollständig qualifizieren.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Unterschiede zwischen Shadowing und Überschreiben](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

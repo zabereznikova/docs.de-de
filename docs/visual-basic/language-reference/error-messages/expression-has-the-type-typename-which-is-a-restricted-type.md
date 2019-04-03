@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-ms.openlocfilehash: 6d366ec750ea5a4505ae5ea618e27f47406ba959
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6d2edadc323994f7f25394321fb1aff18f7154c5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274018"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824272"
 ---
 # <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>Ausdruck weist den Typ "\<Typname >', einen eingeschränkten Typ, kann nicht verwendet werden, um von 'Object' oder 'ValueType' geerbte Member zuzugreifen
 Ein Ausdruck ergibt einen Typ, der von der common Language Runtime (CLR) geschachtelt werden kann, aber greift auf ein Element, das Boxing erforderlich.  
@@ -32,4 +32,5 @@ Ein Ausdruck ergibt einen Typ, der von der common Language Runtime (CLR) geschac
 3.  Schreiben Sie Anweisung um den Methodenaufruf zu vermeiden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Implizite und explizite Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: fe08c855e4dd0adca68d48c3b32cb399033a9d46
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e6e65b1a75d7a80caff3e7cbacdb9dd706e46cdf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974925"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815569"
 ---
 # <a name="operator-procedures-visual-basic"></a>Operatorprozeduren (Visual Basic)
 Eine Operatorprozedur besteht aus einer Reihe von Visual Basic-Anweisungen, die das Verhalten von Standardoperatoren definieren (z. B. `*`, `<>`, oder `And`) auf eine Klasse oder Struktur, die Sie definiert haben. Dies ist die Abkürzung *operatorüberladung*.  
@@ -81,6 +81,7 @@ Eine Operatorprozedur besteht aus einer Reihe von Visual Basic-Anweisungen, die 
   
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verfahren](./index.md)
 - [Sub-Prozeduren](./sub-procedures.md)
 - [Function-Prozeduren](./function-procedures.md)

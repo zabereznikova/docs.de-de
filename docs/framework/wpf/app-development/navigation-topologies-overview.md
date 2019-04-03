@@ -9,12 +9,12 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 16ce791c300c431b7349293d00648c881f97c372
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3e5cca90861ccdeaff904a34c6f484cfdd32c975
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356779"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819592"
 ---
 # <a name="navigation-topologies-overview"></a>Übersicht über Navigationstopologien
 <a name="introduction"></a> Diese Übersicht bietet eine Einführung in die Navigationstopologien [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Anschließend werden drei allgemeine Navigationstopologien mit Beispielen erläutert.  
@@ -46,7 +46,7 @@ ms.locfileid: "57356779"
   
  In diesem Thema werden drei allgemeine Navigationstopologien behandelt: *feste lineare*, *feste hierarchische*, und *dynamisch generierten*. Jede Navigationstopologie wird anhand eines Beispiels, die erläutert ein [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] wie derjenige, der in der folgenden Abbildung gezeigt wird:  
   
- ![Aufgabeseiten mit Datenelementen](./media/navigationtopologyfigure6.png "NavigationTopologyFigure6")  
+ ![Aufgabeseiten mit Datenelementen und Navigationssymbole.](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
   
 <a name="Structured_Navigation_Topologies"></a>   
 ## <a name="structured-navigation-topologies"></a>Strukturierte Navigationstopologien  
@@ -60,9 +60,9 @@ ms.locfileid: "57356779"
   
 <a name="Navigation_over_a_Fixed_Linear_Topology"></a>   
 ## <a name="navigation-over-a-fixed-linear-topology"></a>Navigation über eine feste lineare Topologie  
- Die Struktur einer festen linearen Topologie entspricht der eines Assistenten, der aus einer oder mehreren Seiten besteht, durch die in einer festen Reihenfolge navigiert wird. Die folgende Abbildung zeigt den Verlauf eines Assistenten mit einer festen linearen Topologie sowie dessen Struktur auf oberster Ebene.  
+ Die Struktur einer festen linearen Topologie entspricht der eines Assistenten, der aus einer oder mehreren Seiten besteht, durch die in einer festen Reihenfolge navigiert wird. Die folgende Abbildung zeigt die Struktur auf oberster Ebene und den Verlauf eines Assistenten mit einer festen linearen Topologie:  
   
- ![Navigationstopologie-Diagramm](./media/navigationtopologyfigure1.png "NavigationTopologyFigure1")  
+ ![Diagramm, das eine feste lineare Topologie veranschaulicht.](./media/navigation-topologies-overview/navigation-topology-fixed-linear.png)  
   
  Folgende Verhaltensweisen sind für die Navigation über eine feste lineare Topologie typisch:  
   
@@ -84,13 +84,13 @@ ms.locfileid: "57356779"
   
 <a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>   
 ## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>Dynamische Navigation über eine feste hierarchische Topologie  
- In einigen Anwendungen gibt es Seiten, die eine Navigation zu zwei oder mehreren anderen Seiten ermöglichen, wie in der folgenden Abbildung veranschaulicht wird.  
+ In einigen Anwendungen verhindert Seiten die Navigation zu zwei oder mehreren anderen Seiten, wie in der folgenden Abbildung gezeigt: 
   
- ![Eine Seite, die zu mehreren Seiten navigieren kann](./media/navigationtopologyfigure2.png "NavigationTopologyFigure2")  
+ ![Das Diagramm, das eine Seite anzeigt, die zu mehreren Seiten navigieren kann.](./media/navigation-topologies-overview/navigation-topology-multiple-pages.png)  
   
- Diese Struktur bezeichnet man als feste hierarchische Topologie. Die Reihenfolge, in der die Hierarchie durchlaufen wird, wird häufig zur Laufzeit durch die Anwendung oder den Benutzer bestimmt. Jede Seite in der Hierarchie, die eine Navigation zu zwei oder mehreren Seiten ermöglicht, sammelt zur Laufzeit Daten, die erforderlich sind, zu bestimmen, zu welcher Seite navigiert wird. Die folgende Abbildung veranschaulicht eine von mehreren möglichen Navigationsreihenfolgen auf Grundlage der vorherigen Abbildung.  
+ Diese Struktur bezeichnet man als feste hierarchische Topologie. Die Reihenfolge, in der die Hierarchie durchlaufen wird, wird häufig zur Laufzeit durch die Anwendung oder den Benutzer bestimmt. Jede Seite in der Hierarchie, die eine Navigation zu zwei oder mehreren Seiten ermöglicht, sammelt zur Laufzeit Daten, die erforderlich sind, zu bestimmen, zu welcher Seite navigiert wird. Die folgende Abbildung veranschaulicht eine von mehreren möglichen Navigationsreihenfolgen auf Grundlage der vorherigen Abbildung:  
   
- ![Navigationstopologie-Diagramm](./media/navigationtopologyfigure3.png "NavigationTopologyFigure3")  
+ ![Diagramm eine mögliche Navigationsreihenfolge zeigt.](./media/navigation-topologies-overview/navigation-topology-fixed-hierarchical.png)  
   
  Obwohl bei dieser Topologie die Reihenfolge für die Navigation durch die Seiten einer festen hierarchischen Struktur zur Laufzeit bestimmt wird, ist die Benutzererfahrung dieselbe wie bei einer festen linearen Topologie:  
   
@@ -114,13 +114,13 @@ ms.locfileid: "57356779"
   
 <a name="Navigation_over_a_Dynamically_Generated_Topology"></a>   
 ## <a name="navigation-over-a-dynamically-generated-topology"></a>Navigation über eine dynamisch generierte Topologie  
- In einigen Anwendungen kann die Reihenfolge, in der durch zwei oder mehrere Seiten navigiert wird, nur zur Laufzeit bestimmt werden, sei es durch den Benutzer, die Anwendung oder durch externe Daten. Die folgende Abbildung veranschaulicht einen Satz von Seiten mit einer unbestimmten Navigationsreihenfolge.  
+ In einigen Anwendungen kann die Reihenfolge, in der durch zwei oder mehrere Seiten navigiert wird, nur zur Laufzeit bestimmt werden, sei es durch den Benutzer, die Anwendung oder durch externe Daten. Die folgende Abbildung veranschaulicht einen Satz von Seiten mit einer unbestimmten Navigationsreihenfolge:  
   
- ![Navigationstopologie-Diagramm](./media/navigationtopologyfigure4.png "NavigationTopologyFigure4")  
+ ![Ein Satz von Seiten mit einer unbestimmten Navigationsreihenfolge.](./media/navigation-topologies-overview/navigation-topology-dynamically-generated.png)  
   
- Die nächste Abbildung veranschaulicht eine Navigationsreihenfolge, die zur Laufzeit vom Benutzer ausgewählt wurde.  
+ Die folgende Abbildung veranschaulicht eine Navigationsreihenfolge, die zur Laufzeit vom Benutzer ausgewählt wurde:  
   
- ![Navigationsdiagramm](./media/navigationtopologyfigure5.png "NavigationTopologyFigure5")  
+ ![Diagramm, das eine Navigationsreihenfolge, die zur Laufzeit ausgewählte zeigt.](./media/navigation-topologies-overview/navigation-topology-sequence-chosen-run-time.png)  
   
  Die Navigationsreihenfolge wird als dynamisch generierte Topologie bezeichnet. Wie bei den anderen Navigationstopologien bleibt die Benutzererfahrung dieselbe:  
   

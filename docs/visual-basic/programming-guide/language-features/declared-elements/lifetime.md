@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976043"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824922"
 ---
 # <a name="lifetime-in-visual-basic"></a>Lebensdauer in Visual Basic
 Die *Lebensdauer* eines deklarierten Elements ist den Zeitraum, während die It für die Verwendung verfügbar ist. Variablen sind nur Elemente, die deren Lebensdauer. Zu diesem Zweck der Compiler behandelt Prozedurparameter, und Funktionsergebnis ist als spezielle Fälle von Variablen. Die Lebensdauer einer Variablen stellt die Zeitspanne, in dem sie einen Wert enthalten kann. Der Wert kann während seiner Lebensdauer ändern, aber sie enthält immer einen Wert.  
@@ -72,6 +72,7 @@ Die *Lebensdauer* eines deklarierten Elements ist den Zeitraum, während die It 
  Im vorherigen Beispiel können Sie die gleiche Lebensdauer erzeugen, indem deklarieren `applesSold` auf Modulebene. Wenn Sie den Bereich einer Variablen auf diese Weise geändert, jedoch müsste die Prozedur nicht mehr exklusiven Zugriff darauf. Da andere Prozeduren zugegriffen werden konnte `applesSold` und ändern Sie seinen Wert, die laufende Summe ist möglicherweise unzuverlässig und der Code möglicherweise schwieriger zu warten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
 - [Namen deklarierter Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

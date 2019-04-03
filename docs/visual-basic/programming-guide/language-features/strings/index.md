@@ -2,9 +2,15 @@
 title: Zeichenfolgen in Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic code, strings'
-  - 'strings [Visual Basic], Visual Basic'
+- Visual Basic code, strings
+- strings [Visual Basic], Visual Basic
 ms.assetid: 7e4c777c-ad69-46e2-8b9e-9be4033b1c96
+ms.openlocfilehash: 856927baa06019f7827bf9751352069f0fc37829
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821074"
 ---
 # <a name="strings-in-visual-basic"></a>Zeichenfolgen in Visual Basic
 Dieser Abschnitt beschreibt die grundlegenden Konzepte für die Verwendung von Zeichenfolgen in Visual Basic.  
@@ -29,4 +35,5 @@ Dieser Abschnitt beschreibt die grundlegenden Konzepte für die Verwendung von Z
  Zeigt, wie Zeichenfolge mithilfe der kryptografischen Dienstanbieterversion des Triple Data Encryption Standard-Algorithmus verschlüsselt und wieder entschlüsselt werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Funktionen von Visual Basic](../../../../visual-basic/programming-guide/language-features/index.md)

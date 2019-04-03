@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: e519fcaf90c6f18e75d5c409cbe7067d5db36429
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975939"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813911"
 ---
 # <a name="user-defined-constants-visual-basic"></a>Benutzerdefinierte Konstanten (Visual Basic)
 Eine Konstante ist, einen aussagekräftigen Namen, der nimmt den Platz einer Zahl oder Zeichenfolge, die nicht geändert wird. Konstanten speichern Werte, die, wie der Name schon sagt, während der Ausführung einer Anwendung konstant bleiben. Konstanten, die definiert werden, indem Sie die Steuerelemente oder Komponenten, mit denen Sie zusammenarbeiten können, oder können Sie Ihre eigenen erstellen. Konstanten, die Sie selbst erstellen, werden als beschrieben *benutzerdefinierte*.  
@@ -56,6 +56,7 @@ Eine Konstante ist, einen aussagekräftigen Namen, der nimmt den Platz einer Zah
  Wenn eine Schleife auftritt, generiert Visual Basic einen Compilerfehler.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Const-Anweisung](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [Konstanten und literale Datentypen](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
 - [Konstanten und Enumerationen](../../../../visual-basic/programming-guide/language-features/constants-enums/index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: f57b5ae35bf97a04ff235d213ffad27bd015e711
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 579da4b52a9a7c4c747a9ace390c04611207c94d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981464"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822907"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Exemplarische Vorgehensweise: Aufrufen von Windows-APIs (Visual Basic)
 Windows-APIs sind Dynamic Link Libraries (DLLs), die Teil des Windows-Betriebssystems sind. Können Sie diese Aufgaben auszuführen, wenn es schwierig, Ihre eigenen Prozeduren zu schreiben ist. Windows stellt z. B. eine Funktion namens `FlashWindowEx` , mit der Sie die Titelleiste für eine Anwendung wechseln Sie zwischen hellen und dunklen Graustufen.  
@@ -148,6 +148,7 @@ Windows-APIs sind Dynamic Link Libraries (DLLs), die Teil des Windows-Betriebssy
 12. Klicken Sie auf **Button2**. Die Meldung "die Datei erfolgreich verschoben wurde" wird angezeigt, wenn die Datei verschoben werden kann.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)

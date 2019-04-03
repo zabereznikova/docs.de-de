@@ -2,12 +2,12 @@
 title: Anwendbarkeit der funktionalen Transformation (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
-ms.openlocfilehash: 01ebc25e77e7098d0aad5ec612e57d7f6b078d4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7efeab82dafc284f64a950eb7f5e4a6ee3f2e73d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699401"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827613"
 ---
 # <a name="applicability-of-functional-transformation-visual-basic"></a>Anwendbarkeit der funktionalen Transformation (Visual Basic)
 Reine funktionale Transformationen können in vielen Situationen angewendet werden.  
@@ -33,6 +33,7 @@ Reine funktionale Transformationen können in vielen Situationen angewendet werd
  In diesem Fall Denken Sie daran, dass Visual Basic unterstützt sowohl den imperativen als auch den funktionalen Ansatz, damit der optimale Entwurf für Ihre Anwendung der beide Elemente beinhaltet möglicherweise.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Einführung in reine funktionale Transformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Funktionale Transformation von XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-transformation-of-xml.md)
 - [Refactoring in reine Funktionen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

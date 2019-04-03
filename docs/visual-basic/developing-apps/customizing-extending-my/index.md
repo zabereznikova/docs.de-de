@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 18c249348fe0daafc24dc939fe796f513128139e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89a9a988bab62cb77e3e5a5075fa01bdbb11f4c0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746766"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820944"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Anpassen von Projekten und Erweitern von "My" mit Visual Basic
 Sie können anpassen, Projektvorlagen, geben Sie zusätzliche `My` Objekte. Dies erleichtert die für andere Entwickler zu suchen und Ihre Objekte verwenden.  
@@ -46,4 +46,5 @@ Sie können anpassen, Projektvorlagen, geben Sie zusätzliche `My` Objekte. Dies
  Beschreibt die `My` Objekt, das Eigenschaften, Methoden und Ereignisse bereitstellt, die sich auf die aktuelle Anwendung beziehen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Entwickeln von Anwendungen mit Visual Basic](../../../visual-basic/developing-apps/index.md)

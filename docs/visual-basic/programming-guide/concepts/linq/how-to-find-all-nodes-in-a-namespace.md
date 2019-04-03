@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Suchen Sie aller Knoten in einem Namespace (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b735d7da-5727-48a3-ab57-a16378adc32e
-ms.openlocfilehash: 3a89b0eae4baf380787df32b1d327dd1f52b6f05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04447df1d4a3e29558a3bad172715d2bdee340b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640680"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813846"
 ---
 # <a name="how-to-find-all-nodes-in-a-namespace-visual-basic"></a>Vorgehensweise: Suchen Sie aller Knoten in einem Namespace (Visual Basic)
 Sie können nach den Namespaces der einzelnen Elemente oder Attribute filtern und so alle Knoten im jeweiligen Namespace ermitteln.  
@@ -54,7 +54,7 @@ Nodes in the http://www.adventure-works.com namespace
 ## <a name="example"></a>Beispiel  
  Die XML-Datei, auf die die folgende Abfrage zugreift, enthält Aufträge in zwei verschiedenen Namespaces. Die Abfrage erstellt eine neue Struktur, die nur die Elemente in einem der Namespaces enthält.  
   
- In diesem Beispiel wird die folgende XML-Dokument verwendet: [XML-Beispieldatei: Konsolidierte Bestellungen](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Konsolidierte Bestellungen](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-consolidated-purchase-orders.md).  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -110,4 +110,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Standardabfragen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

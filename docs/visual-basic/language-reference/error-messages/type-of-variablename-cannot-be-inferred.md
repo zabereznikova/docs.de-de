@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: 1f1df0c7391c027994caabadc4b857bec55f5938
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e90e881546c12df2c8b19ff03a4d4c7304c4596c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367179"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815874"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>Geben Sie der "\<Variablenname >' kann nicht abgeleitet werden, weil die schleifenbegrenzungen und die Step-Klausel nicht in denselben Typ konvertiert werden
 Sie geschrieben haben eine `For...Next` Schleife, in denen der Compiler nicht werden, einen Datentyp für die Schleifensteuerungsvariable abgeleitet kann da die folgenden Bedingungen erfüllt sind:  
@@ -63,6 +63,7 @@ Dim n = 20
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
 - [For...Next-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [Implizite und explizite Konvertierungen](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

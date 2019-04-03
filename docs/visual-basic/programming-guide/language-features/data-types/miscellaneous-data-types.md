@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 7e32bf158b91c23c32028eb6877bd0089a9019b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4808d87322d5b21b70ec38e2eb31b2b204938745
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655048"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821764"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Sonstige Datentypen (Visual Basic)
 Visual Basic bietet es sich um verschiedene Datentypen, die nicht auf die Zahlen oder Zeichen ausgerichtet sind. Stattdessen verarbeiten sie spezialisierte wie Ja/Nein-Werte, Datums-/Uhrzeitwerten und Objekt-Adressen.  
@@ -31,6 +31,7 @@ Visual Basic bietet es sich um verschiedene Datentypen, die nicht auf die Zahlen
  Der Vorteil der `Object` -Datentyp ist, dass Sie es, zum Speichern von Daten eines beliebigen Datentyps verwenden können. Der Nachteil ist, dass Sie zusätzliche Vorgänge anfallen, die weitere Ausführung Zeit in Anspruch nehmen, und stellen die Anwendung verlangsamen. Bei Verwendung einer `Object` Variablen für Werttypen, es fallen *Boxing* und *unboxing*. Wenn Sie es für Verweistypen verwenden, verursachen Sie *späte Bindung*.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Typzeichen](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Elementare Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Numerische Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)

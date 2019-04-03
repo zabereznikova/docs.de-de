@@ -2,12 +2,12 @@
 title: Unterscheidungs-Unions
 description: Erfahren Sie, wie Sie mit F# Unterscheidungs-Unions.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1bb6dc06fb727f85eb5500719b175fc29090450b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611866"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821425"
 ---
 # <a name="discriminated-unions"></a>Unterscheidungs-Unions
 
@@ -156,7 +156,7 @@ Unterscheidungs-Unions können rekursiv sein, d. h., dass die Union selbst im T
 
 Im vorherigen Code verfügt `resultSumTree` über den Wert 10. Die folgende Abbildung zeigt die Struktur für `myTree` an.
 
-![Struktur für myTree](../media/TreeStructureDiagram.png)
+![Das Diagramm, das die Struktur für MyTree anzeigt.](../media/discriminated-unions/tree-structure-mytree.png)
 
 Unterscheidungs-Unions funktionieren gut, wenn die Knoten in der Struktur heterogen sind. Im folgenden Code stellt der `Expression`-Typ die abstrakte Syntaxstruktur eines Ausdrucks in einer einfachen Programmiersprache dar, die Addition und Multiplikation von Zahlen und Variablen unterstützt. Einige der Union-Fälle sind nicht rekursiv und stellen entweder Zahlen (`Number`) oder Variablen (`Variable`) dar. Andere Fälle sind rekursiv und stellen Operationen (`Add` und `Multiply`) dar, wobei die Operanden auch Ausdrücke sind. Die `Evaluate`-Funktion verwendet einen Vergleichsausdruck, um die Syntaxstruktur rekursiv zu verarbeiten.
 

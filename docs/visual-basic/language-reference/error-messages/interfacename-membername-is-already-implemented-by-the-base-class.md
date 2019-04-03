@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42015
 ms.assetid: 658c070a-113e-4bd8-b294-12c243191160
-ms.openlocfilehash: 5d5d9f21069c7b9aa54940525b7678bc3987b77c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 64bd7771820c2a4073350b7a5189d3a32c4775be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264150"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832363"
 ---
 # <a name="interfacenamemembername-is-already-implemented-by-the-base-class-baseclassname-re-implementation-of-type-assumed"></a>'\<Schnittstellenname >. \<Membername >' ist bereits in der Basisklasse implementiert\<Basisklassenname >'. Die erneute Implementierung von \<Typ > davon ausgegangen, dass
 Eine Eigenschaft, Prozedur oder das Ereignis in einer abgeleiteten Klasse verwendet eine `Implements` -Klausel für einen Schnittstellenmember, die bereits in der Basisklasse implementiert wird.  
@@ -30,4 +30,5 @@ Eine Eigenschaft, Prozedur oder das Ereignis in einer abgeleiteten Klasse verwen
 -   Wenn Sie keine erneute Implementierung des Schnittstellenmembers beabsichtigen, entfernen Sie die `Implements` -Klausel aus der Deklaration der Eigenschaft, Prozedur oder des Ereignisses.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Schnittstellen](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

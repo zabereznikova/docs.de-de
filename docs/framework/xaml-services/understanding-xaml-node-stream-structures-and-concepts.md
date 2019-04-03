@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034745"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824428"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Grundlagen zu XAML-Knotenstreamstrukturen und -konzepten
 
@@ -188,7 +188,7 @@ Ein`StartMember` -Element mit <xref:System.Xaml.XamlMember> , das `BoardSize`dar
 
 `EndObject` stimmt mit `GameBoard`
 
-Beachten Sie, dass es keine Typkonverterinstanz in diesem Knotenstream gibt. Sie können Typkonverterinformationen jedoch abrufen, indem Sie <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> für den <xref:System.Xaml.XamlMember> für `BoardSize` aufrufen. Wenn ein gültiger XAML-Schemakontext vorhanden ist, können Sie die Konvertermethoden auch aufrufen, indem Sie eine Instanz von <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>abrufen.
+Beachten Sie, dass es keine Typkonverterinstanz in diesem Knotenstream gibt. Sie können Typkonverterinformationen jedoch abrufen, indem Sie <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> für den <xref:System.Xaml.XamlMember> für `BoardSize`aufrufen. Wenn ein gültiger XAML-Schemakontext vorhanden ist, können Sie die Konvertermethoden auch aufrufen, indem Sie eine Instanz von <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>abrufen.
 
 ### <a name="markup-extensions-in-the-xaml-node-stream"></a>Markuperweiterungen im XAML-Knotenstream
 
@@ -216,9 +216,9 @@ In der folgenden Liste sind alle Fälle aufgeführt, in denen ein XAML-Reader vo
 
 - **Positionsparameter für eine Markuperweiterung:** Der Name dieses Memberknotens ist `_PositionalParameters`, und er ist im XAML-Namespace XAML-Sprache definiert. Er enthält immer eine generische Liste von Objekten, bei denen es sich um Positionsparameter handelt, die durch Trennung bei dem im Eingabe-XAML angegebenen `,` -Trennzeichen vorab getrennt werden. Eine statische Entität für die Positionsparameterdirektive kann aus <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>abgerufen werden.
 
-- **Unbekannter Inhalt:** Der Name dieses Memberknotens ist `_UnknownContent`. Streng genommen handelt es sich um ein <xref:System.Xaml.XamlDirective>-Element und ist im XAML-Namespace der XAML-Sprache definiert. Diese Direktive wird als Sentinel für Fälle verwendet, in denen ein XAML-Objektelement im Quell-XAML Inhalt aufweist, aber keine Inhaltseigenschaft im aktuell verfügbaren XAML-Schemakontext ermittelt werden kann. Sie können diesen Fall in einem XAML-Knotenstream erkennen, indem Sie ihn auf Member mit dem Namen `_UnknownContent` prüfen. Falls keine andere Aktion in einem Ladepfad-XAML-Knotenstream ausgeführt wird, wird der standardmäßige <xref:System.Xaml.XamlObjectWriter> bei versuchtem `WriteEndObject` ausgelöst, wenn der `_UnknownContent` -Member für ein Objekt gefunden wird. Der standardmäßige <xref:System.Xaml.XamlXmlWriter> wird nicht ausgelöst, und der Member wird als implizit behandelt. Sie können eine statische Entität für `_UnknownContent` von <xref:System.Xaml.XamlLanguage.UnknownContent%2A>abrufen.
+- **Unbekannter Inhalt:** Der Name dieses Memberknotens ist `_UnknownContent`. Streng genommen handelt es sich um ein <xref:System.Xaml.XamlDirective>-Element und ist im XAML-Namespace der XAML-Sprache definiert. Diese Direktive wird als Sentinel für Fälle verwendet, in denen ein XAML-Objektelement im Quell-XAML Inhalt aufweist, aber keine Inhaltseigenschaft im aktuell verfügbaren XAML-Schemakontext ermittelt werden kann. Sie können diesen Fall in einem XAML-Knotenstream erkennen, indem Sie ihn auf Member mit dem Namen `_UnknownContent`prüfen. Falls keine andere Aktion in einem Ladepfad-XAML-Knotenstream ausgeführt wird, wird der standardmäßige <xref:System.Xaml.XamlObjectWriter> bei versuchtem `WriteEndObject` ausgelöst, wenn der `_UnknownContent` -Member für ein Objekt gefunden wird. Der standardmäßige <xref:System.Xaml.XamlXmlWriter> wird nicht ausgelöst, und der Member wird als implizit behandelt. Sie können eine statische Entität für `_UnknownContent` von <xref:System.Xaml.XamlLanguage.UnknownContent%2A>abrufen.
 
-- **Auflistungseigenschaft einer Auflistung:** Obwohl der CLR-Unterstützungstyp einer für XAML verwendeten Auflistungsklasse normalerweise über eine dedizierte benannte Eigenschaft verfügt, die die Elemente der Auflistung enthält, ist diese Eigenschaft einem XAML-Typsystem vor der Unterstützungstypauflösung nicht bekannt. Stattdessen fügt der XAML-Knotenstream einen `Items` -Platzhalter als Member des XAML-Auflistungstyps ein. In der .NET Framework-XAML-Dienstimplementierung lautet der Name dieser Direktive/dieses Members im Knotenstream `_Items`. Eine Konstante für diese Direktive kann aus <xref:System.Xaml.XamlLanguage.Items%2A>abgerufen werden.
+- **Auflistungseigenschaft einer Auflistung:** Obwohl die CLR-Unterstützungstyp einer Auflistungsklasse, die für XAML, in der Regel verwendet wird eine dedizierte benannte Eigenschaft, die die Elemente der Auflistung enthält hat, ist diese Eigenschaft einem XAML-Typsystem vor der unterstützungstypauflösung nicht bekannt. Stattdessen fügt der XAML-Knotenstream einen `Items` -Platzhalter als Member des XAML-Auflistungstyps ein. In der .NET Framework-XAML-Dienstimplementierung lautet der Name dieser Direktive/dieses Members im Knotenstream `_Items`. Eine Konstante für diese Direktive kann aus <xref:System.Xaml.XamlLanguage.Items%2A>abgerufen werden.
 
     Beachten Sie, dass ein XAML-Knotenstream eine Items-Eigenschaft mit Elementen enthalten kann, die auf nicht analysierbar sein auf der Grundlage der unterstützungstypauflösung und XAML-Schemakontext. Ein auf ein Objekt angewendeter
 

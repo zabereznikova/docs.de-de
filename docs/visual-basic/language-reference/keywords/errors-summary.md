@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - errors [Visual Basic]
 ms.assetid: 2557da60-c6dc-4e99-8128-fceb6f8a0736
-ms.openlocfilehash: abce728a595000af7c917488da783c6f4298a3f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6df4a446e5dbd5ae73c860c86b5a881225d8be1c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611968"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826642"
 ---
 # <a name="errors-summary-visual-basic"></a>Fehler: Zusammenfassung (Visual Basic)
 Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Laufzeitbibliothek nach ihrem Zweck und ihrer Verwendung geordnet.  
@@ -24,5 +24,6 @@ Im Folgenden sind die Schlüsselwörter von Visual Basic und die Member der Lauf
 |Bereitstellen von Systemfehlercode|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)

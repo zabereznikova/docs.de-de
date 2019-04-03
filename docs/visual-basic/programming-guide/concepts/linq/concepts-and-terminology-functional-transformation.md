@@ -2,12 +2,12 @@
 title: Konzepte und Terminologie (funktionale Transformation) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
-ms.openlocfilehash: e98e24bb60dd2a5b6e84195120429fac0b8832e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6308185b39651095482dca434ce25d717bd5e6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651863"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820801"
 ---
 # <a name="concepts-and-terminology-functional-transformation-visual-basic"></a>Konzepte und Terminologie (funktionale Transformation) (Visual Basic)
 Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mit reinen funktionalen Transformationen verwendet werden. Bei Verwendung der funktionalen Transformation zum Transformieren von Daten erhalten Sie Code, der häufig schneller programmiert werden kann, ausdrucksstärker ist und einfacher von Fehlern bereinigt und verwaltet werden kann als Code, der auf die herkömmliche imperative Methode zurückzuführen ist.  
@@ -72,5 +72,6 @@ Dieses Thema führt Sie in die Konzepte und Begriffe ein, die im Zusammenhang mi
  Diese Sprachfunktionen werden in Codebeispielen im gesamten Abschnitt verwendet.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Einführung in reine funktionale Transformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Funktionale Programmierung und Imperative Programmierung (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

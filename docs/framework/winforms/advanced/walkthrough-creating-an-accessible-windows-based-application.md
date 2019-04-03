@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708274"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823466"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Exemplarische Vorgehensweise: Erstellen von behindertengerechten Windows-basierten Anwendungen
 Das Erstellen von barrierefreien Anwendungen ist für Unternehmen von größter Bedeutung. Bei vielen staatlichen Stellen gibt es für den Kauf von Software Vorschriften hinsichtlich der Barrierefreiheit. Das Certified for Windows-Logo beinhaltet Anforderungen zur Barrierefreiheit. Allein in den USA gibt es etwa 30 Millionen Menschen, viele davon potenzielle Kunden, für die die Barrierefreiheit von Software maßgeblich ist.  
@@ -55,9 +55,9 @@ Das Erstellen von barrierefreien Anwendungen ist für Unternehmen von größter 
   
 -   Stellen Sie sicher, dass jedes Label-Steuerelement, das ein TextBox-Steuerelement beschreibt, dem TextBox-Steuerelement in der Aktivierreihenfolge direkt vorangestellt ist.  
   
--   Fügen Sie für die <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft jedes Steuerelements, zu dem der Benutzer navigieren können soll, mit dem Zeichen "&" eine Zugriffstaste hinzu.  
+-   Hinzufügen, mit dem Zeichen "&" eine Zugriffstaste der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft eines beliebigen Steuerelements, die der Benutzer navigieren kann soll.  
   
--   Fügen Sie für die <xref:System.Windows.Forms.Control.Text%2A>-Eigenschaft der Bezeichnung, die einem Steuerelement vorangestellt ist, zu dem der Benutzer navigieren können soll, mit dem Zeichen "&" eine Zugriffstaste hinzu. Legen Sie <xref:System.Windows.Forms.Label.UseMnemonic%2A>-Eigenschaft der Bezeichnungen auf `true` fest, sodass der Fokus auf das nächste Steuerelement in der Aktivierreihenfolge festgelegt wird, wenn der Benutzer die Zugriffstaste drückt.  
+-   Hinzufügen, mit dem Zeichen "&" eine Zugriffstaste der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft der Bezeichnung, die einem Steuerelement vorangestellt, die der Benutzer ggf. ist zu navigieren. Legen Sie <xref:System.Windows.Forms.Label.UseMnemonic%2A>-Eigenschaft der Bezeichnungen auf `true` fest, sodass der Fokus auf das nächste Steuerelement in der Aktivierreihenfolge festgelegt wird, wenn der Benutzer die Zugriffstaste drückt.  
   
 -   Fügen Sie allen Menüelementen Zugriffstasten hinzu.  
   
@@ -65,7 +65,7 @@ Das Erstellen von barrierefreien Anwendungen ist für Unternehmen von größter 
   
 -   Gehen Sie entsprechend der nachstehenden Beschreibung vor, um dem Formular die Steuerelemente hinzuzufügen und die Eigenschaften festzulegen. Am Ende der Tabelle finden Sie ein Bild, das ein Modell für die Anordnung der Steuerelemente auf dem Formular zeigt.  
   
-    |Objekt|Eigenschaft|Wert|  
+    |Object|Eigenschaft|Wert|  
     |------------|--------------|-----------|  
     |Form1|AccessibleDescription|Bestellformular|  
     ||AccessibleName|Bestellformular|  
@@ -135,10 +135,12 @@ Das Erstellen von barrierefreien Anwendungen ist für Unternehmen von größter 
     |MenuItem|Name|fileCommands|  
     ||Text|&Datei|  
     |MenuItem|Name|exitApp|  
-    ||Text|&Beenden|  
-  
-     ![Pizzabestellformular](./media/vbpizzaorderform.gif "VbPizzaOrderForm")  
-Das Formular sieht in etwa wie folgt aus:  
+    ||Text|&Beenden|
+    
+      Das Formular sieht in etwa wie in der folgenden Abbildung:
+    
+      ![Die pizzabestellformular mit einer Namen im Textfeld "und" Größe "und" Beläge Auswahl.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+
   
 ## <a name="supporting-high-contrast-mode"></a>Unterstützen des Modus für hohe Kontraste  
  Der Modus für hohe Kontraste ist eine Windows-Systemeinstellung, die die Lesbarkeit verbessert, indem kontrastreiche Farben und Schriftgrade verwendet werden, die für sehbehinderte Benutzer vorteilhaft sind. Die <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Eigenschaft wird bereitgestellt, um zu bestimmen, ob der Modus für hohe Kontraste festgelegt ist.  

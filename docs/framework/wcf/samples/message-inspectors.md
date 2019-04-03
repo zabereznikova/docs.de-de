@@ -2,12 +2,12 @@
 title: Nachrichteninspektoren
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 99886ef112a74bb86346208c5c24b09349ba4027
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 248e74e039c0ebb0b1580ec2cb4f19d713d95c51
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552852"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830148"
 ---
 # <a name="message-inspectors"></a>Nachrichteninspektoren
 In diesem Beispiel wird veranschaulicht, wie Client- und Dienstnachrichteninspektoren implementiert und konfiguriert werden.  
@@ -56,9 +56,9 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
 }  
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> wird immer dann aufgerufen, wenn eine Antwort zum Versenden zurück an einen Client bereit ist, oder bei unidirektionalen Nachrichten, wenn die eingehende Nachricht verarbeitet wurde. Dadurch können sich Erweiterungen darauf verlassen, unabhängig von MEP symmetrisch aufgerufen zu werden. Wie bei <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> wird die Nachricht als Verweisparameter übergeben und kann überprüft, bearbeitet oder ersetzt werden. Die in diesem Beispiel durchgeführte Validierung der Nachricht wird ebenfalls an die `ValidMessageBody`-Methode delegiert, die Behandlung der Validierungsfehler erfolgt in diesem Fall jedoch etwas anders.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> wird immer dann aufgerufen, wenn eine Antwort zum Versenden zurück an einen Client bereit ist, oder bei unidirektionalen Nachrichten, wenn die eingehende Nachricht verarbeitet wurde. Dadurch können sich Erweiterungen darauf verlassen, unabhängig von MEP symmetrisch aufgerufen zu werden. Wie bei <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> wird die Nachricht als Verweisparameter übergeben und kann überprüft, bearbeitet oder ersetzt werden. Die in diesem Beispiel durchgeführte Überprüfung der Nachricht wird ebenfalls an die `ValidMessageBody`-Methode delegiert, die Behandlung der Validierungsfehler erfolgt in diesem Fall jedoch etwas anders.  
   
- Wenn ein Validierungsfehler beim Dienst auftritt, löst die `ValidateMessageBody`-Methode von <xref:System.ServiceModel.FaultException> abgeleitete Ausnahmen aus. In der <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>-Methode können diese Ausnahmen in der Infrastruktur des Dienstmodells abgelegt werden, wo sie automatisch in SOAP-Fehler umgewandelt und an den Client weitergeleitet werden. In der <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>-Methode dürfen <xref:System.ServiceModel.FaultException>-Ausnahmen nicht in der Infrastruktur abgelegt werden, da die Transformation der vom Dienst ausgelösten Fehlerausnahmen vor dem Aufrufen des Nachrichteninspektors erfolgt. Die folgende Implementierung erfasst deshalb die bekannte `ReplyValidationFault`-Ausnahme und ersetzt die Antwortnachricht durch eine explizite Fehlermeldung. Diese Methode stellt sicher, dass keine ungültigen Nachrichten von der Dienstimplementierung zurückgegeben werden.  
+ Wenn ein Validierungsfehler beim Dienst auftritt, löst die `ValidateMessageBody`-Methode von <xref:System.ServiceModel.FaultException> abgeleitete Ausnahmen aus. In der <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>-Methode können diese Ausnahmen in der Infrastruktur des Dienstmodells abgelegt werden, wo sie automatisch in SOAP-Fehler transformiert und an den Client weitergeleitet werden. In der <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>-Methode dürfen <xref:System.ServiceModel.FaultException>-Ausnahmen nicht in der Infrastruktur abgelegt werden, da die Transformation der vom Dienst ausgelösten Fehlerausnahmen vor dem Aufrufen des Nachrichteninspektors erfolgt. Die folgende Implementierung erfasst deshalb die bekannte `ReplyValidationFault`-Ausnahme und ersetzt die Antwortnachricht durch eine explizite Fehlermeldung. Diese Methode stellt sicher, dass keine ungültigen Nachrichten von der Dienstimplementierung zurückgegeben werden.  
   
 ```  
 void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.Message reply, object correlationState)  
@@ -84,7 +84,7 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
   
  <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> wird aufgerufen, wenn die Nachricht entweder von der Clientanwendung oder vom Vorgangsformatierer erstellt wurde. Wie bei Verteilernachrichteninspektoren kann die Nachricht entweder nur überprüft oder vollständig ersetzt werden. In diesem Beispiel delegiert der Inspektor dieselbe lokale `ValidateMessageBody`-Hilfsmethode, die auch für Verteilernachrichteninspektoren verwendet wird.  
   
- Die Verhaltensunterschiede zwischen Client- und die Dienstüberprüfung (wie im Konstruktor festgelegt) bestehen darin, dass die Clientüberprüfung lokale Ausnahmen, die im Benutzercode abgelegt sind, auslöst, weil sie lokal auftreten und nicht aufgrund eines Dienstausfalls. Im Allgemeinen gilt, dass Dienstverteilerinspektoren Fehler auslösen und Clientinspektoren Ausnahmen auslösen.  
+ Die Verhaltensunterschiede zwischen Client- und die Dienstvalidierung (wie im Konstruktor festgelegt) bestehen darin, dass die Clientvalidierung lokale Ausnahmen, die im Benutzercode abgelegt sind, auslöst, weil sie lokal auftreten und nicht aufgrund eines Dienstausfalls. Im Allgemeinen gilt, dass Dienstverteilerinspektoren Fehler auslösen und Clientinspektoren Ausnahmen auslösen.  
   
  Diese <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>-Implementierung stellt sicher, dass keine ungültigen Nachrichten an den Dienst gesendet werden.  
   
@@ -413,4 +413,3 @@ catch (Exception e)
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
   
-## <a name="see-also"></a>Siehe auch

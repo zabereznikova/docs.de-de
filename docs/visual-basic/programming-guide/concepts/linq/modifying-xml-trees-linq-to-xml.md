@@ -2,12 +2,12 @@
 title: Ändern von XML-Bäumen (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4ae511a5-4fc9-4178-9c8e-761357deae3f
-ms.openlocfilehash: b34324b993a9c65aad6c2b7c92b33bf4ce9037cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4673902880822e6e4ed0bc144aedc2428faa5b69
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725639"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814886"
 ---
 # <a name="modifying-xml-trees-linq-to-xml-visual-basic"></a>Ändern von XML-Bäumen (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist ein Speicher im Arbeitsspeicher, der XML-Strukturen speichert. Nachdem Sie eine XML-Struktur aus einer Quelle geladen oder analysiert haben, können Sie diese Struktur in [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ändern, sie anschließend serialisieren und möglicherweise in einer Datei speichern oder an einen Remoteserver senden.  
@@ -28,4 +28,5 @@ ms.locfileid: "54725639"
 |[Vorgehensweise: Ändern Sie den Namespace für eine gesamte XML-Struktur (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-change-the-namespace-for-an-entire-xml-tree.md)|Zeigt, wie eine XML-Struktur aus einem Namespace in einen anderen Namespace verschoben werden kann.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Programmierhandbuch (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

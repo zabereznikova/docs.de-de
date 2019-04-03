@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-ms.openlocfilehash: 91f754366441cb984edf23f2c2dca4fa5c542a8e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 049db16875b14bc095e293d2a923917a9ec1d99b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279525"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814457"
 ---
 # <a name="unable-to-load-information-for-class-classname"></a>Kann nicht geladen werden Informationen für die Klasse\<Klassenname >'
 Ein Verweis wurde auf eine Klasse erstellt, die nicht verfügbar ist.  
@@ -26,4 +26,5 @@ Ein Verweis wurde auf eine Klasse erstellt, die nicht verfügbar ist.
 2.  Versuchen Sie, auf einen der im Modul deklarierten Member zuzugreifen. In einigen Fällen können in der Debugumgebung Member nicht gefunden werden, weil die Module, in denen sie deklariert sind, noch nicht geladen wurden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Debuggen in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)

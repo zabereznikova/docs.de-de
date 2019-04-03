@@ -19,12 +19,12 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 456383dd2f38e96a8ff18472ff44c65ba7b4a341
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 701d10a334757a96ffd634204c1e1d5eb5418ce6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626484"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824662"
 ---
 # <a name="double-data-type-visual-basic"></a>Double-Datentyp (Visual Basic)
 Speichert signierte IEEE-64-Bit (8 Byte) mit doppelter Genauigkeit Gleitkommazahlen, die in den Wertebereich von - 1.79769313486231570E + 308 bis - liegen 4.94065645841246544E-324 für negative Werte und 4.94065645841246544E-324 bis 1.79769313486231570E + 308 für positive Werte. Zahlen mit doppelter Genauigkeit speichern eine Approximation einer reellen Zahl.  
@@ -56,6 +56,7 @@ Speichert signierte IEEE-64-Bit (8 Byte) mit doppelter Genauigkeit Gleitkommazah
 -   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Double?displayProperty=nameWithType>-Struktur.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Double?displayProperty=nameWithType>
 - [Datentypen](../../../visual-basic/language-reference/data-types/index.md)
 - [Decimal-Datentyp](../../../visual-basic/language-reference/data-types/decimal-data-type.md)

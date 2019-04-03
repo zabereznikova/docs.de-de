@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Schreiben einer LINQ to XML-Axis-Methode (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
-ms.openlocfilehash: 5d1fdaa9a5c3cb47bedd6d8f6e98b59f844d9ef5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f10ee90076a71aa44f480639d3bc460ea59044ea
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655477"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824168"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>Vorgehensweise: Schreiben einer LINQ to XML-Axis-Methode (Visual Basic)
 Sie können Ihre eigenen Achsenmethoden schreiben und so Auflistungen aus einer XML-Struktur abrufen. Eine der geeignetsten Methoden dafür besteht darin, eine Erweiterungsmethode zu schreiben, die eine Auflistung von Elementen oder Attributen zurückgibt. Die Grundlage für das Schreiben Ihrer Erweiterungsmethode zum Zurückgeben eines bestimmten Teilsatzes von Elementen oder Attributen bilden die Anforderungen Ihrer Anwendung.  
@@ -15,7 +15,7 @@ Sie können Ihre eigenen Achsenmethoden schreiben und so Auflistungen aus einer 
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden zwei Erweiterungsmethoden verwendet: Die erste Erweiterungsmethode, `GetXPath`, bedient sich eines <xref:System.Xml.Linq.XObject> und gibt einen XPath-Ausdruck zurück, der beim Auswerten den Knoten oder das Attribut zurückgibt. Die zweite Erweiterungsmethode, `Find`, bedient sich eines <xref:System.Xml.Linq.XElement>. Sie gibt eine Auflistung von <xref:System.Xml.Linq.XAttribute>-Objekten und <xref:System.Xml.Linq.XElement>-Objekten zurück, die bestimmten angegebenen Text enthalten.  
   
- In diesem Beispiel wird die folgende XML-Dokument verwendet: [XML-Beispieldatei: Mehrere Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
+ In diesem Beispiel wird das folgende XML-Dokument verwendet: [Beispiel-XML-Datei: Mehrere Bestellungen (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).  
   
 ```vb  
 Imports System.Runtime.CompilerServices  
@@ -216,4 +216,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pens [Windows Forms], setting width
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
-ms.openlocfilehash: e82f406b4fdca93df7a811eea5506846d56fda28
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b01482c059906d76ad9e506b593d580431f0ec09
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703048"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828198"
 ---
 # <a name="how-to-set-pen-width-and-alignment"></a>Vorgehensweise: Festlegen von Stiftbreite und-Ausrichtung
 Bei der Erstellung einer <xref:System.Drawing.Pen>, Sie können die Stiftbreite als eines der Argumente an den Konstruktor bereitstellen. Sie können auch die Stiftbreite mit Ändern der <xref:System.Drawing.Pen.Width%2A> Eigenschaft der <xref:System.Drawing.Pen> Klasse.  
@@ -28,7 +28,7 @@ Bei der Erstellung einer <xref:System.Drawing.Pen>, Sie können die Stiftbreite 
   
 -   Legen Sie den Wert, der die <xref:System.Drawing.Pen.Alignment%2A> Eigenschaft <xref:System.Drawing.Drawing2D.PenAlignment.Center> (Standard), um anzugeben, dass mit dem grünen Stift gezeichneten Pixel auf der theoretischen Linie zentriert werden soll. Die folgende Abbildung zeigt die resultierende Linie.  
   
-     ![Stifte](./media/pens1a.gif "pens1A")  
+     ![Ein schwarzer thin Grün hervorgehobene Linie.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-line.gif)  
   
      Im folgenden Codebeispiel wird zeichnet ein Rechteck zweimal: einmal mit einem schwarzen Stift der Breite 1 und einmal mit einem grünen Stift der Breite 10.  
   
@@ -39,9 +39,9 @@ Bei der Erstellung einer <xref:System.Drawing.Pen>, Sie können die Stiftbreite 
   
 -   Legen Sie den Wert von der <xref:System.Drawing.Pen.Alignment%2A> Eigenschaft <xref:System.Drawing.Drawing2D.PenAlignment.Center> um anzugeben, dass die mit dem grünen Stift gezeichneten Pixel soll, auf die Begrenzung des Rechtecks zentriert werden.  
   
-     Die folgende Abbildung zeigt das sich ergebende Rechteck.  
+     Die folgende Abbildung zeigt das sich ergebende Rechteck:
   
-     ![Stifte](./media/pens2.gif "pens2")  
+     ![Ein Rechteck mit dem schwarzen schmale Linien Grün hervorgehobene gezeichnet.](./media/how-to-set-pen-width-and-alignment/green-pixels-centered-rectangle.gif)  
   
      [!code-csharp[System.Drawing.UsingAPen#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#42)]
      [!code-vb[System.Drawing.UsingAPen#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#42)]  
@@ -53,9 +53,9 @@ Bei der Erstellung einer <xref:System.Drawing.Pen>, Sie können die Stiftbreite 
      [!code-csharp[System.Drawing.UsingAPen#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#43)]
      [!code-vb[System.Drawing.UsingAPen#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#43)]  
   
-     Jetzt werden die Pixel in der breiten grünen Linie innerhalb des Rechtecks angezeigt, wie in der folgenden Abbildung dargestellt.  
+     Jetzt werden die Pixel in der breiten grünen Linie innerhalb des Rechtecks angezeigt, wie in der folgenden Abbildung gezeigt:
   
-     ![Stifte](./media/pens3.gif "pens3")  
+     ![Ein Rechteck mit schwarzen Linien mit der breiten grünen Linie in gezeichnet.](./media/how-to-set-pen-width-and-alignment/green-pixels-inside-rectangle.gif)  
   
 ## <a name="see-also"></a>Siehe auch
 - [Verwenden eines Stifts zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)

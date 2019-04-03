@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], retrieving values
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
-ms.openlocfilehash: 9b34173ebb3226fa00610c124c7b680e18d80de9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717943"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818534"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>Vorgehensweise: Verschieben von Daten in und aus einer Variablen (Visual Basic)
 Sie können einen Wert in einer Variablen speichern, indem Sie den Namen den Variablen auf der linken Seite einer zuweisungsanweisung einfügen.  
@@ -50,6 +50,7 @@ Sie können einen Wert in einer Variablen speichern, indem Sie den Namen den Var
      Der Wert der Variablen ist Teil des Ausdrucks wie würden eine Konstante, und wird dann in der Variablen oder Eigenschaft auf der linken Seite der Zuweisung gespeichert.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Variablen](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [Variablendeklaration](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

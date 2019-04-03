@@ -7,12 +7,12 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: f9cc6d0165b0eda8358d250c37910b1362473ab1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a6e542e297a17f44d929235530ae6058cf13a36
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640601"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816329"
 ---
 # <a name="structure-variables-visual-basic"></a>Strukturvariablen (Visual Basic)
 Nachdem Sie eine Struktur erstellt haben, können Sie Variablen auf Prozedurebene und auf Modulebene wie dieser Typ deklarieren. Beispielsweise können Sie eine Struktur, zeichnet Informationen zu einem Computersystem erstellen. Dies wird im folgenden Beispiel veranschaulicht:  
@@ -53,6 +53,7 @@ yourSystem = mySystem
  Wenn ein Strukturelement einen Referenztyp darstellt, z. B. eine `String`, `Object`, oder ein Array, das Zeiger auf die Daten werden kopiert. Im vorherigen Beispiel wenn `systemInfo` hatte eine Objektvariable enthalten, und klicken Sie dann im vorherigen Beispiel wird den Zeiger von kopiert haben, würden `mySystem` zu `yourSystem`, und eine Änderung an den Daten des Objekts durch eine Struktur wäre in Kraft, beim Zugriff auf über die andere Struktur.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Elementare Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Zusammengesetzte Datentypen](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

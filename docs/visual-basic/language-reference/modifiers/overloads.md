@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: b20dbf20c580d08553ae22f6a62ee33a7354db74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d68846938aba809a7a3a6f7d27f185bb90a39cb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624914"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819332"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 Gibt an, dass eine Eigenschaft oder Prozedur eine Eigenschaft oder Prozedur bzw. mehrere mit dem gleichen Namen neu deklariert.  
@@ -39,7 +39,7 @@ Gibt an, dass eine Eigenschaft oder Prozedur eine Eigenschaft oder Prozedur bzw.
   
     -   der Anzahl der Typparameter (für eine generische Prozedur)  
   
-    -   des Rückgabetyps (nur für eine Konvertierungsoperatorprozedur)  
+    -   der Rückgabetyp (nur für eine Konvertierungsoperatorprozedur)  
   
      Alle Überladungen müssen denselben Namen aufweisen. Jede muss sich jedoch von allen anderen in mindestens einem der vorstehenden Punkte unterscheiden. Dadurch kann der Compiler unterscheiden, welche Version verwendet werden muss, wenn der Code die Eigenschaft oder Prozedur aufruft.  
   
@@ -74,6 +74,7 @@ Gibt an, dass eine Eigenschaft oder Prozedur eine Eigenschaft oder Prozedur bzw.
  [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Prozedurüberladung](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

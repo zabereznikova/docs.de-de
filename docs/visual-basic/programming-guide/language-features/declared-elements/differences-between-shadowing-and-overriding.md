@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: d60d668c97019418b30b89147e86f7beea1c31f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640676"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827925"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Unterschiede zwischen Shadowing und Überschreiben (Visual Basic)
 Wenn Sie eine Klasse, die von einer Basisklasse erbt definieren, möchten Sie manchmal eine oder mehrere Elemente der Basisklasse in der abgeleiteten Klasse neu zu definieren. Shadowing und überschreiben sind verfügbar für diesen Zweck.  
@@ -52,6 +52,7 @@ Wenn Sie eine Klasse, die von einer Basisklasse erbt definieren, möchten Sie ma
 -   Sie möchten die Freiheit der Typ des Elements zu ändern oder das Aufrufen der Sequenz.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Vorgehensweise: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)

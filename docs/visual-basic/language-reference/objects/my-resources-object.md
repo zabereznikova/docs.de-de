@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: 758d3334fd9d3b01e088246cf2fe28c5b03576d6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ee4d30b82ceada5c4f3fc4ad95dc8eeedd9355b0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973729"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821737"
 ---
 # <a name="myresources-object"></a>My.Resources-Objekt
 Stellt Eigenschaften und Klassen für den Zugriff auf die Ressourcen der Anwendung bereit.  
@@ -78,6 +78,6 @@ Stellt Eigenschaften und Klassen für den Zugriff auf die Ressourcen der Anwendu
  [!code-vb[VbVbalrMyResources#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyResources/VB/Form1.vb#10)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwalten von Anwendungsressourcen (.NET)](/visualstudio/ide/managing-application-resources-dotnet)
 - [Ressourcen in Desktop-Apps](../../../framework/resources/index.md)
-

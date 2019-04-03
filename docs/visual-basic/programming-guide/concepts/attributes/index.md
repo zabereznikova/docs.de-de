@@ -2,6 +2,12 @@
 title: Übersicht über Attribute (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
+ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827691"
 ---
 # <a name="attributes-overview-visual-basic"></a>Übersicht über Attribute (Visual Basic)
 Attribute stellen eine effiziente Methode dar, Metadaten oder deklarative Informationen Code (Assemblys, Typen, Methoden, Eigenschaften usw.) zuzuordnen. Nach dem Zuordnen eines Attributs zu einer Programmentität kann das Attribut zur Laufzeit mit einer Technik namens *Reflektion* abgefragt werden. Weitere Informationen finden Sie unter [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
@@ -137,6 +143,7 @@ Module: CLSCompliant(True)>
 -   [Aufruferinformationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Visual Basic-Programmierhandbuch](../../../../visual-basic/programming-guide/index.md)
 - [Reflektion (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [Attribute](../../../../standard/attributes/index.md)

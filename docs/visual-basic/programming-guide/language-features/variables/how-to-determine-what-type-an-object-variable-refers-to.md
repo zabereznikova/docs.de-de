@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 149af116f2b848082367b33d826bace8345cee05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc6f54719d4f30be00b7b85f0ab18c4cb02b0d7c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571177"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816407"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>Vorgehensweise: Bestimmen des Typs (Visual Basic) eine Objektvariable verweist
 Eine Objektvariable enthält einen Zeiger auf Daten, die an anderer Stelle gespeichert werden. Der Typ der Daten kann während der Laufzeit ändern. Sie können jederzeit eingehen, verwenden die <xref:System.Type.GetTypeCode%2A> Methode, um den aktuellen Laufzeittyp zu bestimmen oder die [TypeOf-Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) um zu ermitteln, ob die aktuelle Laufzeit-Typinformationen mit einem angegebenen Typ kompatibel ist.  
@@ -53,6 +53,7 @@ Eine Objektvariable enthält einen Zeiger auf Daten, die an anderer Stelle gespe
  Beachten Sie, dass der angegebene Typ eine Variable oder einen Ausdruck kann nicht an. Es muss den Namen eines definierten Typs, z. B. eine Klasse, Struktur oder Schnittstelle sein. Hierzu gehören z. B. systeminterne Typen `Integer` und `String`.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.GetTypeCode%2A>

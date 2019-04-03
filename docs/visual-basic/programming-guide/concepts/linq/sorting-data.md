@@ -2,19 +2,19 @@
 title: Sortieren von Daten (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: 5875b15dbdec69aca653b8f6cca4dd07fc9af343
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ad39aca6a53221f077a6b8313262d508744ff5ea
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126252"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819085"
 ---
 # <a name="sorting-data-visual-basic"></a>Sortieren von Daten (Visual Basic)
 Bei einem Sortiervorgang werden die Elemente einer Sequenz auf Grundlage eines oder mehrerer Attribute sortiert. Mit dem ersten Sortierkriterium wird eine primäre Sortierung der Elemente ausgeführt. Sie können die Elemente innerhalb jeder primären Sortiergruppe sortieren, indem Sie ein zweites Sortierkriterium angeben.  
   
  Die folgende Abbildung zeigt das Ergebnis eines alphabetischen Sortiervorgangs bei einer Zeichensequenz.  
   
- ![Grafik, die ein alphabetischen Sortiervorgangs zeigt.](./media/sorting-data/alphabetical-sort-operation.png)  
+ ![Grafik, die einen alphabetischen Sortiervorgang zeigt.](./media/sorting-data/alphabetical-sort-operation.png)  
   
  Die Methoden des Standardabfrageoperators, die Daten sortieren, sind im folgenden Abschnitt aufgeführt.  
   
@@ -143,6 +143,7 @@ MsgBox(sb.ToString())
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Linq>
 - [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Order By-Klausel](../../../../visual-basic/language-reference/queries/order-by-clause.md)

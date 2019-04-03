@@ -2,12 +2,12 @@
 title: Arbeiten mit XML-Namespaces (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 428bf4b0-e348-4ffd-986b-d905d5a0e7fa
-ms.openlocfilehash: e103920187ecbbfb14a1723556d1fae0265a88d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2b9db9ed547858eb5358d5e3c871c6a84d22ae6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607906"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828894"
 ---
 # <a name="working-with-xml-namespaces-visual-basic"></a>Arbeiten mit XML-Namespaces (Visual Basic)
 In den Themen in diesem Abschnitt wird beschrieben, wie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Namespaces unterstützt.  
@@ -24,4 +24,5 @@ In den Themen in diesem Abschnitt wird beschrieben, wie [!INCLUDE[sqltecxlinq](~
 |[Vorgehensweise: Schreiben von Abfragen für XML in Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|Veranschaulicht das Angeben von XML-Namespaces in Visual Basic-LINQ to XML-Abfragen.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Programmierhandbuch (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

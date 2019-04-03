@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: 292ec8c76695427ab00110d83502f7d16c6504b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e42fca7800a76cab10fd60058e34d31ae8b8830
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719741"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821660"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Konvertierungen zwischen Zeichenfolgen und anderen Typen (Visual Basic)
 Sie können numerische, konvertieren `Boolean`, oder Datum/Uhrzeit-Wert, der eine `String`. Sie können auch in umgekehrter Richtung konvertieren, aus einem Zeichenfolgenwert in "Numerisch", `Boolean`, oder `Date` – sofern der Inhalt der Zeichenfolge als gültigen Wert des Zieltyps Daten interpretiert werden können. Ist dies nicht möglich, tritt ein Laufzeitfehler auf.  
@@ -41,6 +41,7 @@ Str = "The total count is " & count
  Wenn Visual Basic eine Zeichenfolge in einen numerischen Wert konvertiert, verwendet es die **regionale Einstellungen** Einstellungen in der Windows **Systemsteuerung** zum Interpretieren von Tausenden Trennzeichen, Dezimaltrennzeichen und Währungssymbol. Dies bedeutet, dass eine Konvertierung eines festlegen, aber nicht in einer anderen erfolgreich ausgeführt werden kann. Z. B. `"$14.20"` ist akzeptabel, in das Gebietsschema Englisch (Vereinigte Staaten), aber nicht in Gebietsschemas Französisch.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Typkonvertierung in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Erweiternde und eingrenzende Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Implizite und explizite Konvertierungen](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

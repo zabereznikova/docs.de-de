@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 1bc467854e0c1f082a986c1216e971c86d85c994
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5fc96e1ae3624adc197b5b13029498b9aa90c95e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970076"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819501"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Exemplarische Vorgehensweise: Implementieren von IEnumerable(Of T) in Visual Basic
 Die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle wird implementiert von Klassen, die eine Sequenz von Werten eines Elements zu einem Zeitpunkt zurückgeben kann. Der Vorteil des Zurückgebens von Daten, die ein Element zu einem Zeitpunkt ist, dass Sie nicht den vollständigen Satz von Daten in den Arbeitsspeicher zu dessen Funktionsweise geladen werden soll. Sie müssen nur genügend Arbeitsspeicher verwenden, um ein einzelnes Element aus den Daten zu laden. Klassen, in denen die `IEnumerable(T)` Schnittstelle kann verwendet werden, mit `For Each` Schleifen oder LINQ-Abfragen.  
@@ -94,6 +94,7 @@ Die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle wird impleme
  [!code-vb[VbVbalrIteratorWalkthrough#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIteratorWalkthrough/VB/Module1.vb#10)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Ablaufsteuerung](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Schleifenstruktur](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

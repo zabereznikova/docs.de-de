@@ -2,12 +2,18 @@
 title: Empfohlene XML-Tags für Dokumentationskommentare (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
-  - vb.XmlDocComment
+- vb.XmlDocComment
 helpviewer_keywords:
-  - 'tags, XML'
-  - 'XML comments, recommended tags [Visual Basic]'
-  - 'comments, recommended XML tags'
+- tags, XML
+- XML comments, recommended tags [Visual Basic]
+- comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
+ms.openlocfilehash: e59ee25b22c51e47dc83233af33099e6c55de87b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814947"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>Empfohlene XML-Tags für Dokumentationskommentare (Visual Basic)
 Visual Basic-Compiler kann Dokumentationskommentaren in Ihrem Code in eine XML-Datei verarbeitet werden. Sie können zusätzliche Tools verwenden, zum Verarbeiten der XML-Datei in der Dokumentation.  
@@ -34,6 +40,7 @@ Visual Basic-Compiler kann Dokumentationskommentaren in Ihrem Code in eine XML-D
 >  Wenn die Spitze Klammern im Text eines Dokumentationskommentars angezeigt werden soll, verwenden Sie `&lt;` und `&gt;`. Z. B. die Zeichenfolge `"&lt;text in angle brackets&gt;"` hostnamensadresse `<text in angle brackets>`.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Dokumentieren von Code mit XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 - [Vorgehensweise: Erstellen von XML-Dokumentation](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

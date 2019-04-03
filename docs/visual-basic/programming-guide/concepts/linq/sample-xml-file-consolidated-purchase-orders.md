@@ -1,15 +1,15 @@
 ---
-title: 'XML-Beispieldatei: Konsolidierte Kauf Orders3'
+title: 'Beispiel-XML-Datei: Konsolidierte Kauf Orders3'
 ms.date: 07/20/2015
 ms.assetid: 7203da90-a514-415a-b978-6980e89f3e9c
-ms.openlocfilehash: 2cfd996c088f29766b3878c3c5ad1fc48c69e2dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edeb1381b674ee9f6fba45f14c7b6f12b363a37a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503682"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824740"
 ---
-# <a name="sample-xml-file-consolidated-purchase-orders"></a>XML-Beispieldatei: Konsolidierte Bestellungen
+# <a name="sample-xml-file-consolidated-purchase-orders"></a>Beispiel-XML-Datei: Konsolidierte Bestellungen
 Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Diese Datei besteht aus einem Satz von unterschiedlich geformten Aufträgen verschiedener Unternehmen. Für die Aufträge eines Unternehmens gibt es jeweils einen eigenen Namespace.  
   
 ## <a name="consolidatedpurchaseordersxml"></a>ConsolidatedPurchaseOrders.xml  
@@ -145,4 +145,5 @@ Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [XML-Beispieldokumente (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

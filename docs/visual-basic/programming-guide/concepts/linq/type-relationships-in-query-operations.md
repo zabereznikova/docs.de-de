@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 4dc5497f2e9bacac3062fde6e7dc48270697f1df
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465216"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822335"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Typbeziehungen in Abfrageoperationen (Visual Basic)
 Im verwendeten Variablen [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] Abfrage Vorgänge sind stark typisiert und miteinander kompatibel sein müssen. Starke Typisierung wird in der Datenquelle, in der Abfrage selbst und in die Ausführung der Abfrage verwendet werden. Die folgende Abbildung Begriffe, die zum Beschreiben einer [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] Abfrage. Weitere Informationen zu den Teilen einer Abfrage finden Sie unter [Grundlegende Abfrageoperationen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  
@@ -117,6 +117,7 @@ Next
 3.  Der Typ der Iterationsvariablen in der `For Each` Schleife ist der anonyme Typ, der in Schritt 2 erstellt haben. Da der Typ keinen verwendbaren Namen aufweist, muss implizit der Typ der Schleifenvariablen Iteration bestimmt werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Anonyme Typen](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

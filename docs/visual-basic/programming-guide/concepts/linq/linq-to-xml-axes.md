@@ -2,17 +2,17 @@
 title: LINQ to XML-Achsen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ecd3bd00-28e5-4517-a59f-53bff39fd478
-ms.openlocfilehash: 2b785dd43feece816675d36064b2b4218ab94cd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a04c15357b5630de06dc0743523e5a98c91745e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684891"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831994"
 ---
 # <a name="linq-to-xml-axes-visual-basic"></a>LINQ to XML-Achsen (Visual Basic)
 Nachdem Sie eine XML-Struktur erstellt oder ein XML-Dokument in eine XML-Struktur geladen haben, können Sie durch Abfragen der XML-Struktur nach Elementen und Attributen suchen und deren Werte abrufen.  
   
- Bevor Sie mit dem Schreiben von Abfragen beginnen, müssen Sie sich mit dem Thema [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Achsen beschäftigen. Es gibt zwei Arten von Achsenmethoden: Erstens werden die Methoden, die Sie für eine einzelne Aufrufen <xref:System.Xml.Linq.XElement> Objekt <xref:System.Xml.Linq.XDocument> Objekt oder <xref:System.Xml.Linq.XNode> Objekt. Diese Methoden arbeiten mit einem einzelnen Objekt und geben eine Auflistung von <xref:System.Xml.Linq.XElement>-Objekten, <xref:System.Xml.Linq.XAttribute>-Objekten oder <xref:System.Xml.Linq.XNode>-Objekten zurück. Zum anderen gibt es Erweiterungsmethoden für Auflistungen, die Auflistungen zurückgeben. Die Erweiterungsmethoden zählen die Quellauflistung auf, rufen für jedes Element in der Auflistung die entsprechende Achsenmethode auf und verketten die Ergebnisse.  
+ Bevor Sie mit dem Schreiben von Abfragen beginnen, müssen Sie sich mit dem Thema [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Achsen beschäftigen. Es gibt zwei Arten von Achsenmethoden: Zum einen gibt es die Methoden, die Sie für ein einzelnes <xref:System.Xml.Linq.XElement>-Objekt, <xref:System.Xml.Linq.XDocument>-Objekt oder <xref:System.Xml.Linq.XNode>-Objekt aufrufen. Diese Methoden arbeiten mit einem einzelnen Objekt und geben eine Auflistung von <xref:System.Xml.Linq.XElement>-Objekten, <xref:System.Xml.Linq.XAttribute>-Objekten oder <xref:System.Xml.Linq.XNode>-Objekten zurück. Zum anderen gibt es Erweiterungsmethoden für Auflistungen, die Auflistungen zurückgeben. Die Erweiterungsmethoden zählen die Quellauflistung auf, rufen für jedes Element in der Auflistung die entsprechende Achsenmethode auf und verketten die Ergebnisse.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -31,4 +31,5 @@ Nachdem Sie eine XML-Struktur erstellt oder ein XML-Dokument in eine XML-Struktu
 |[Sprachintegrierte Achsen in Visual Basic (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/language-integrated-axes.md)|Enthält eine Zusammenfassung die Achsen Visual Basic integriert.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Programmierhandbuch (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

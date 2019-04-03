@@ -6,17 +6,17 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: 2654860269bc57cf6aed814760414c6ccb6383da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1e6ec63688899533b64a6fc5215f77019b64b49c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968763"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830161"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>Vorgehensweise: Deklarieren einer Enumeration (Visual Basic)
 Sie erstellen eine Enumeration mit den `Enum` Anweisung im Abschnitt zu Deklarationen einer Klasse oder das Modul. Sie können eine Enumeration innerhalb einer Methode nicht deklarieren. Verwenden Sie zum Angeben der entsprechenden Zugriffsebene `Private`, `Protected`, `Friend`, oder `Public`.  
   
- Ein `Enum` Typ hat einen Namen, einen zugrunde liegenden Typ und einen Satz von Feldern, von denen jedes eine Konstante darstellt. Der Name muss ein gültiger Visual Basic .NET Qualifizierer sein. Der zugrunde liegende Typ muss einen ganzzahligen Typ –`Byte`, `Short`, `Long` oder `Integer`. Standardmäßig ist `Integer` festgelegt. Enumerationen sind immer stark typisiert und sind nicht austauschbar mit Ganzzahltypen.  
+ Ein `Enum` Typ hat einen Namen, einen zugrunde liegenden Typ und einen Satz von Feldern, von denen jedes eine Konstante darstellt. Der Name muss ein gültiger Visual Basic .NET Qualifizierer sein. Der zugrunde liegende Typ muss einen ganzzahligen Typ –`Byte`, `Short`, `Long` oder `Integer`. `Integer` Der Standardwert ist. Enumerationen sind immer stark typisiert und sind nicht austauschbar mit Ganzzahltypen.  
   
  Enumerationen dürfen keine Gleitkommawerte haben. Wenn eine Enumeration einen Gleitkommawert mit zugewiesen ist `Option Strict On`, ein Compilerfehler ausgelöst. Wenn `Option Strict` ist `Off`, der Wert wird automatisch konvertiert, um die `Enum` Typ.  
   
@@ -43,6 +43,7 @@ Sie erstellen eine Enumeration mit den `Enum` Anweisung im Abschnitt zu Deklarat
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Enumerationen und Namensqualifikation](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [Vorgehensweise: Finden Sie in einen Enumerationsmember](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [Vorgehensweise: Durchlaufen einer Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)

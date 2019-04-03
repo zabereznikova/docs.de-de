@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: a396bede9e0004c9f0681e3399af95f31592a0b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9f61de9bf528690e6057ec445ea7f1b77b3be0b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361407"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828471"
 ---
 # <a name="flow-document-overview"></a>Übersicht über Flussdokumente
 Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein vordefiniertes Layout festgelegt zu werden, passen Flussdokumente ihren Inhalt basierend auf Laufzeitvariablen dynamisch an Variablen wie Fenstergröße, Geräteauflösung und optionale Benutzereinstellungen an und brechen den Inhalt dynamisch um. Zudem bieten Flussdokumente erweiterte Dokumentfunktionen, z.B. Paginierung und Spalten. Dieses Thema enthält eine Übersicht über Flussdokumente und deren Erstellung.  
@@ -128,9 +128,9 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  [!code-xaml[SpanSnippets#_BlockUIXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml#_blockuixaml)]  
   
- Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird.  
+ Die folgende Abbildung zeigt, wie dieses Beispiel gerendert wird:  
   
- ![Screenshot: UIElement eingebettet in fortlaufenden Inhalt](./media/blockuicontainer.png "BlockUIContainer")  
+ ![Screenshot mit einem UIElement eingebettet in fortlaufenden Inhalt.](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
  **List**  
   

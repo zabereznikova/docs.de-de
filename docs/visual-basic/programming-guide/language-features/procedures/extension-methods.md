@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: a0c1721027307243fbad587afe996cc5f07a6928
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970544"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822075"
 ---
 # <a name="extension-methods-visual-basic"></a>Erweiterungsmethoden (Visual Basic)
 Erweiterungsmethoden ermöglichen Entwicklern das Hinzufügen von benutzerdefinierten Funktionen, Datentypen, die bereits definiert sind, ohne einen neuen abgeleiteten Typ zu erstellen. Erweiterungsmethoden ermöglichen das Schreiben eine Methode, die aufgerufen werden können, als handele es sich um eine Instanzenmethode des vorhandenen Typs.  
@@ -175,6 +175,7 @@ End Module
  Wenn sich die Mehrdeutigkeit durch die Anwendung einer Rangfolge nicht auflösen lässt, können Sie den vollqualifizierten Namen zum Festlegen der aufgerufenen Methode verwenden. Wenn die `Print`-Methode aus dem vorherigen Beispiel in einem Modul mit dem Namen `StringExtensions` definiert wird, lautet der vollqualifizierte Name `StringExtensions.Print(example)` und nicht `example.Print()`.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.CompilerServices>
 - <xref:System.Runtime.CompilerServices.ExtensionAttribute>
 - [Erweiterungsmethoden](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

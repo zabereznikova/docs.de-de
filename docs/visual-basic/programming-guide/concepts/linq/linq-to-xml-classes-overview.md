@@ -2,12 +2,12 @@
 title: LINQ to XML-Klassen-Übersicht (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
-ms.openlocfilehash: 0b95a3f4411e20390962a2eccf28b8cfad4b8e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd6990c387da3c687335561d1e13b7ec62fb5b84
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570121"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822829"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML-Klassen-Übersicht (Visual Basic)
 In diesem Thema finden Sie eine Liste der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Klassen im <xref:System.Xml.Linq>-Namespace sowie jeweils eine kurze Beschreibung.  
@@ -30,7 +30,7 @@ In diesem Thema finden Sie eine Liste der [!INCLUDE[sqltecxlinq](~/includes/sqlt
   
 -   <xref:System.Xml.Linq.XDocument>  
   
-### <a name="xdeclaration-class"></a>"XDeclaration"-Klasse  
+### <a name="xdeclaration-class"></a>XDeclaration-Klasse  
  <xref:System.Xml.Linq.XDeclaration> stellt eine XML-Deklaration dar. XML-Deklarationen werden zum Deklarieren der XML-Version und zum Codieren von Dokumenten verwendet. Außerdem geben XML-Deklarationen an, ob das XML-Dokument eigenständig ist. Wenn ein Dokument eigenständig ist, sind keine externen Markupdeklarationen vorhanden (weder in einer externen DTD, noch in einer externen Parameterentität, auf die von der internen Teilmenge aus verwiesen wird).  
   
 ### <a name="xdocument-class"></a>"XDocument"-Klasse  
@@ -80,11 +80,12 @@ In diesem Thema finden Sie eine Liste der [!INCLUDE[sqltecxlinq](~/includes/sqlt
 ### <a name="xobjectchangeeventargs-class"></a>"XObjectChangeEventArgs"-Klasse  
  <xref:System.Xml.Linq.XObjectChangeEventArgs> stellt Daten für die Ereignisse <xref:System.Xml.Linq.XObject.Changing> und <xref:System.Xml.Linq.XObject.Changed> bereit.  
   
-### <a name="xprocessinginstruction-class"></a>"XProcessingInstruction"-Klasse  
+### <a name="xprocessinginstruction-class"></a>XProcessingInstruction-Klasse  
  <xref:System.Xml.Linq.XProcessingInstruction> stellt eine XML-Verarbeitungsanweisung dar. Eine Verarbeitungsanweisung stellt der Anwendung, die das XML-Dokument verarbeitet, entsprechende Informationen zur Verarbeitung bereit.  
   
 ### <a name="xtext-class"></a>"XText"-Klasse  
  <xref:System.Xml.Linq.XText> stellt einen Textknoten dar. Diese Klasse muss in den meisten Fällen nicht verwendet werden. Sie wird hauptsächlich für gemischten Inhalt eingesetzt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [LINQ to XML Programming Overview (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

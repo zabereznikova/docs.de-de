@@ -17,12 +17,12 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: cb0ea5ce52effad4df541e6a9196b1faf279262e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05de1d9f8966c17d84deba34f27819cce4aff3fe
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522508"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832618"
 ---
 # <a name="implements-clause-visual-basic"></a>Implements-Klausel (Visual Basic)
 Gibt an, dass ein Klasse oder Struktur-Member die Implementierung für einen in einer Schnittstelle definierten Member bereitstellt.  
@@ -45,6 +45,7 @@ Die `Implements` -Schlüsselwort kann in den folgenden Kontexten verwendet werde
 - [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Implements-Anweisung](../../../visual-basic/language-reference/statements/implements-statement.md)
 - [Interface-Anweisung](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)

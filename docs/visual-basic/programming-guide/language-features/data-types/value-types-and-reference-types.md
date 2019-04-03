@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 2f09a2842edfa9471267f294c9b64229ae824098
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738747"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819537"
 ---
 # <a name="value-types-and-reference-types"></a>Wert- und Verweistypen
 In Visual Basic werden Datentypen basierend auf deren Klassifizierung implementiert. Die Visual Basic-Datentypen werden anhand des Verhaltens klassifiziert, je nachdem, ob eine Variable eines bestimmten Typs die eigenen Daten speichert oder einen Zeiger auf die Daten. Wenn sie ihre eigenen Daten speichert, handelt es sich um einen *Werttyp*. Wenn sie einen Zeiger auf die Daten an einer anderer Stelle im Arbeitsspeicher enthält, ist es eim *Verweistyp*.  
@@ -73,6 +73,7 @@ Dim totals() As Single = New Single(8) {}
  Finden Sie heraus, ob ein `Object` Variablen fungiert als ein Verweistyp oder ein Werttyp durch Übergabe an die <xref:Microsoft.VisualBasic.Information.IsReference%2A> -Methode in der die <xref:Microsoft.VisualBasic.Information> Klasse von der <xref:Microsoft.VisualBasic?displayProperty=nameWithType> Namespace. <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> Gibt `True` Wenn den Inhalt der `Object` Variable stellt einen Verweistyp handelt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Auf NULL festlegbare Werttypen](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
 - [Typkonvertierung in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)

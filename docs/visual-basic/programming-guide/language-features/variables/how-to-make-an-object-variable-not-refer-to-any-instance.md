@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic], variable assignment
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
-ms.openlocfilehash: ceee1b47fb66cfb8e24b6871af3be6475031504f
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 373d4ae84c44b212ad02b0b4266af75921e40423
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738876"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818688"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>Vorgehensweise: Einer Objektvariablen verweist nicht auf eine beliebige Instanz (Visual Basic)
 Sie können die Zuordnung einer Objektvariablen von jeder Objektinstanz aufheben, durch Festlegung auf [nichts](../../../../visual-basic/language-reference/nothing.md).  
@@ -32,6 +32,7 @@ Sie können die Zuordnung einer Objektvariablen von jeder Objektinstanz aufheben
  Wenn Sie eine Objektvariablen für Objekte, die vertrauliche oder sensible Daten enthalten verwenden, können Sie die Variable festlegen, um `Nothing` Wenn Sie nicht aktiv zuständig sind mit einem dieser Objekte. Dies reduziert die Wahrscheinlichkeit, dass bösartiger Code, um Zugriff auf die Daten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.NullReferenceException>
 - [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Zuweisen von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)

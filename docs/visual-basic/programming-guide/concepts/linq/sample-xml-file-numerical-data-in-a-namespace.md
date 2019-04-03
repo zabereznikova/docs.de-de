@@ -1,15 +1,15 @@
 ---
-title: 'XML-Beispieldatei: Numerische Daten in einem Namespace1'
+title: 'Beispiel-XML-Datei: Numerische Daten in einem Namespace1'
 ms.date: 07/20/2015
 ms.assetid: f01cc0a1-fb55-4b42-8380-16f4be47d6f4
-ms.openlocfilehash: 410e3df37c0e6f38f984e65cf3a9d4cc0a338110
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09954798615954d238273b3d4ed71b5ff475394f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585236"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816199"
 ---
-# <a name="sample-xml-file-numerical-data-in-a-namespace"></a>XML-Beispieldatei: Numerische Daten in einem Namespace
+# <a name="sample-xml-file-numerical-data-in-a-namespace"></a>Beispiel-XML-Datei: Numerische Daten in einem Namespace
 Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Dokumentation verwendet. Diese Datei enthält numerische Daten zum Summieren, zur Durchschnittsberechnung und zum Gruppieren. Der XML-Code befindet sich in einem Namespace.  
   
 ## <a name="data"></a>Daten  
@@ -56,4 +56,5 @@ Die folgende XML-Datei wird in verschiedenen Beispielen in der [!INCLUDE[sqltecx
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [XML-Beispieldokumente (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: 798650bbefc0c5b2ac097b87ab44a2b380117939
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a399b92c66c8a88d10d661ff41aef58a82bbc2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523219"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829914"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Vorgehensweise: Freigeben einer Systemressource (Visual Basic)
 Sie können eine `Using` Block, um sicherzustellen, dass das System eine Ressource freigibt, wenn der Code den Block beendet. Dies ist hilfreich, wenn Sie eine Systemressource, die eine große Menge an Arbeitsspeicher beansprucht oder andere Komponenten auch verwenden möchten.  
@@ -45,6 +45,7 @@ Sie können eine `Using` Block, um sicherzustellen, dass das System eine Ressour
      Sie können auf die gleiche Weise auf eine Systemressource, z. B. ein Dateihandle oder einen COM-Wrapper verwenden. Sie verwenden eine `Using` blockieren, wenn Sie sicher sein wollen, dass die Ressource, die für andere Komponenten verfügbar, nachdem Sie beendet haben die `Using` Block.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Data.SqlClient.SqlConnection>
 - [Ablaufsteuerung](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Entscheidungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
