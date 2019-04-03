@@ -2,21 +2,21 @@
 title: Hilfeseite zum WCF-Web-HTTP-Dienst
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: f803d2046684bc1aa148e78b6325f26a8ec5c427
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 60fd909d6e7d3ba0e0c0254024ef7eb40263b59e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121206"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826833"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Hilfeseite zum WCF-Web-HTTP-Dienst
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] stellt eine automatische Hilfeseite für WCF-WEB-HTTP-Dienste bereit. Auf dieser Hilfeseite sind Beschreibungen der einzelnen Vorgänge, Anforderungs- und Antwortformate sowie Schemas aufgeführt. Diese Funktionalität ist standardmäßig deaktiviert. Klicken Sie bei-Benutzer an einen WCF-WEB-HTTP-Dienst durchsucht und fügt "/ Help" an das Ende der URL, z. B. `http://localhost:8000/Customers/Help`, einer Hilfeseite ein, wie die folgende angezeigt wird.  
   
- ![WCF-REST-Hilfeseite](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
+ ![Öffnen Sie ein Browser mit den WCF REST-Hilfeseite.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page.gif)  
   
  Benutzer können dann auf alle Methoden klicken, die auf der Hilfeseite aufgeführt sind. Außerdem wird für den jeweiligen Vorgang eine Seite angezeigt, die weitere Informationen zur Methode enthält, beispielsweise Nachrichtenformate und Beispielantworten. Das folgende Bild ist ein Beispiel für eine Hilfeseite einer Methode.  
   
- ![WCF REST-Hilfeseitendetails](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagedetail2.gif "WCFRESTHELPPAGEDETAIL2")  
+ ![Öffnen Sie ein Browser mit den Details des WCF REST-Hilfe-Seite für die GetCustomers-Methode.](./media/wcf-web-http-service-help-page/windows-communication-foundation-rest-help-page-detail.gif)  
   
 ## <a name="using-the-wcf-web-http-help-page"></a>Verwenden der WCF-Web-HTTP-Hilfeseite  
  Die WCF-WEB-HTTP-Hilfeseite zeigt für jeden Vorgang eine kurze Beschreibung an, sofern Sie mithilfe von <xref:System.ComponentModel.DescriptionAttribute> eine Beschreibung angegeben haben. Dieses Attribut verwendet eine Zeichenfolge, die eine kurze Beschreibung des Vorgangs enthält, auf den es angewendet wird. Der folgende Code veranschaulicht z. B., wie Sie <xref:System.ComponentModel.DescriptionAttribute> verwenden, um eine kurze Beschreibung bereitzustellen.  

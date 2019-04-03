@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID98
 ms.assetid: 059b43e1-202d-4fa2-806b-7bad63c1e7ca
-ms.openlocfilehash: 5f0740af49bb369be87a1a33973b67f59acf3ab6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a8d6603bf5c97b966d29f000b21435cec8040d8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700831"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840951"
 ---
 # <a name="a-property-or-method-call-cannot-include-a-reference-to-a-private-object-either-as-an-argument-or-as-a-return-value"></a>Ein Aufruf für eine Eigenschaft oder Methode darf keinen Verweis auf ein privates Objekt enthalten - weder als Argument, noch als Rückgabewert.
 Zu den möglichen Ursachen für diesen Fehler gehören:  
@@ -27,4 +27,5 @@ Zu den möglichen Ursachen für diesen Fehler gehören:
 1.  Entfernen Sie den Verweis.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)

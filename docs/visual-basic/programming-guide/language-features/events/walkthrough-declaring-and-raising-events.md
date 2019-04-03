@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 04f3cab43f7f7f7fc73e0b209b1bacee136513b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0f48c90232c00f53007e7d2f8f08e2107406ecad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975393"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841003"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen (Visual Basic)
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie für das Deklarieren und Auslösen von Ereignissen für eine Klasse, die mit dem Namen `Widget`. Nachdem Sie die Schritte abgeschlossen haben, Sie möchten das begleitthema lesen [Exemplarische Vorgehensweise: Behandeln von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), erfahren, wie Sie Ereignisse aus `Widget` Objekte Statusinformationen in einer Anwendung bereitstellen.  
@@ -74,6 +74,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie für das Dekla
  Nachdem die `Widget` Klasse Ereignisse auslösen kann, können Sie in der nächsten exemplarischen Vorgehensweise verschieben. [Exemplarische Vorgehensweise: Behandeln von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md) veranschaulicht, wie `WithEvents` , ordnen Sie einen Ereignishandler mit dem `PercentDone` Ereignis.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>
 - <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>
 - [Exemplarische Vorgehensweise: Behandeln von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)

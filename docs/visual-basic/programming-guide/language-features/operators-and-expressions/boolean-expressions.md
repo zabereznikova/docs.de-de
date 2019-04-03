@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ce9146791935a488108d110134e9273507b0da6f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965539"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825533"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolesche Ausdrücke (Visual Basic)
 Ein *booleschen Ausdruck* ist ein Ausdruck, der auf einen Wert ergibt die [Boolean-Datentyp](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` oder `False`. `Boolean` Ausdrücke können verschiedene Formen annehmen. Die einfachste Form des direkten Zeichenfolgenvergleichs den Wert der ist eine `Boolean` Variable eine `Boolean` Literal, wie im folgenden Beispiel gezeigt.  
@@ -67,6 +67,7 @@ Ein *booleschen Ausdruck* ist ein Ausdruck, der auf einen Wert ergibt die [Boole
  Sie können Klammern verwenden, um die Reihenfolge der Auswertung von booleschen Ausdrücken zu steuern. Ausdrücke in Klammern werden zuerst ausgewertet. Für mehrere Schachtelungsebenen erhält die am tiefsten geschachtelte Ausdrücke Vorrang. Innerhalb von Klammern wird die Auswertung gemäß den Regeln der Operatorrangfolge. Weitere Informationen finden Sie unter [Operatorrangfolge in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Logische und bitweise Operatoren in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [Wertvergleiche](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [Anweisungen](../../../../visual-basic/programming-guide/language-features/statements.md)

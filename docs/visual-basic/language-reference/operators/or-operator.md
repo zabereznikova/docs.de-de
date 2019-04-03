@@ -15,12 +15,12 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-ms.openlocfilehash: cbfc94ad70695e9a785375f2460f9f9d8f3a20c5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0277b6f24e62ed5f0cad3dae225c86fffc4c09b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977538"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835296"
 ---
 # <a name="or-operator-visual-basic"></a>Or-Operator (Visual Basic)
 Führt eine logische Disjunktion für zwei `Boolean` Ausdrücke oder eine bitweise Disjunktion zweier numerischer Ausdrücke.  
@@ -89,6 +89,7 @@ result = expression1 Or expression2
  Im vorherige Beispiel werden die Ergebnisse von 10, 14 und 14, bzw. erzeugt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Logische/bitweise Operatoren (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Operator Precedence in Visual Basic (Operatorrangfolge in Visual Basic)](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Nach Funktionalität sortierte Operatoren](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

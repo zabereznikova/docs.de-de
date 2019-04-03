@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: f2617d270caf5ed4ade68934486fee6afb6c413f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572720"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835283"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Vorgehensweise: Zuweisen eines Arrays zu einem anderen Array (Visual Basic)
 Da Arrays Objekte sind, können Sie sie in zuweisungsanweisungen wie andere Objekttypen. Eine Array-Variable enthält einen Zeiger auf die Daten enthalten sind, die die Elemente des Arrays und die Informationen Rang und die Länge und eine Zuordnung kopiert nur this-Zeiger.  
@@ -43,6 +43,7 @@ Da Arrays Objekte sind, können Sie sie in zuweisungsanweisungen wie andere Obje
  Der Compiler meldet, dass ein Fehler, wenn die oben genannten Regeln, z. B. verletzt werden die Datentypen nicht kompatibel sind oder die Ränge ungleich sind. Sie können die Fehlerbehandlung in Ihrem Code, um sicherzustellen, dass die Arrays kompatibel sind, bevor Sie versuchen, eine Zuordnung hinzufügen. Sie können auch die [TryCast-Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md) Schlüsselwort, wenn Sie das Auslösen einer Ausnahme vermeiden möchten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Arrays](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Problembehandlung bei Arrays](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Enum-Anweisung](../../../../visual-basic/language-reference/statements/enum-statement.md)

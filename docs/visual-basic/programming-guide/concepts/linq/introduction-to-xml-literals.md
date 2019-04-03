@@ -2,12 +2,12 @@
 title: Einführung in die XML-Literalen in Visual Basic2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: b6c4773236c3af83603033c74e2e12e9f47a86b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ba1e018d4ad9501532745a88090f0f756b5c17
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624027"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841294"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Einführung in XML-Literale in Visual Basic
 Dieser Abschnitt enthält Informationen zum Erstellen von XML-Strukturen in Visual Basic.  
@@ -64,7 +64,7 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="using-embedded-expressions"></a>Verwenden von eingebetteten Ausdrücken  
- Ein wichtiges Merkmal von XML-Literalen besteht darin, dass sie eingebettete Ausdrücke zulassen. Mit eingebetteten Ausdrücken können Sie Ausdrücke auswerten und die Ergebnisse eines Ausdrucks in die XML-Struktur einfügen. Wenn die Auswertung des Ausdrucks einen <xref:System.Xml.Linq.XElement>-Typ ergibt, wird ein Element in die Struktur eingefügt. Wenn die Auswertung des Ausdrucks einen <xref:System.Xml.Linq.XAttribute>-Typ ergibt, wird ein Attribut in die Struktur eingefügt. Sie können Elemente und Attribute nur an den Stellen in die Struktur einfügen, an denen sie gültig sind.  
+ Eine wichtige Funktion von XML-Literalen besteht darin, dass sie eingebettete Ausdrücke zulassen. Mit eingebetteten Ausdrücken können Sie Ausdrücke auswerten und die Ergebnisse eines Ausdrucks in die XML-Struktur einfügen. Wenn die Auswertung des Ausdrucks einen <xref:System.Xml.Linq.XElement>-Typ ergibt, wird ein Element in die Struktur eingefügt. Wenn die Auswertung des Ausdrucks einen <xref:System.Xml.Linq.XAttribute>-Typ ergibt, wird ein Attribut in die Struktur eingefügt. Sie können Elemente und Attribute nur an den Stellen in die Struktur einfügen, an denen sie gültig sind.  
   
  Dabei muss beachtet werden, dass ein eingebetteter Ausdruck nur einen einzelnen Ausdruck enthalten kann. Das Einbetten mehrerer Anweisungen ist nicht möglich. Wenn ein Ausdruck sich über eine einzelne Zeile hinaus erstreckt, müssen Sie das Zeilenfortsetzungszeichen verwenden.  
   
@@ -196,4 +196,5 @@ Child2 was attached
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen von XML-Strukturen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

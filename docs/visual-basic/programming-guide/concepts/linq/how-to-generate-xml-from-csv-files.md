@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Generieren von XML aus CSV-Dateien (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: fe4dbc87-7b0d-40bf-88c3-5d706ee89a4d
-ms.openlocfilehash: 5facb31c33c777a5d7ed083dbfda5bd18a67e6a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 056cb1545ac296f0b0861155c5ec5c08b19dd5b8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706679"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835405"
 ---
 # <a name="how-to-generate-xml-from-csv-files-visual-basic"></a>Vorgehensweise: Generieren von XML aus CSV-Dateien (Visual Basic)
 In diesem Beispiel wird gezeigt, wie Sie mit [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] aus einer CSV-Datei eine XML-Datei generieren können.  
@@ -108,4 +108,5 @@ Console.WriteLine(cust)
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Projektionen und Transformationen (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

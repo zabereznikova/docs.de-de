@@ -2,12 +2,12 @@
 title: Verwenden des WCF-Monikers mit COM-Clients
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 3cd334dab8574845e10332e90b50fef833447a1d
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: e784b40cb16177fe31f8031ea26617122b9b27db
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303958"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836206"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Verwenden des WCF-Monikers mit COM-Clients
 In diesem Beispiel wird veranschaulicht, wie Sie mit, dass der Windows Communication Foundation (WCF)-Dienstmoniker um Webdienste in COM-basierte entwicklungsumgebungen, wie Microsoft Office Visual Basic for Applications (Office VBA) oder Visual Basic 6.0 zu integrieren. Das Beispiel umfasst einen Windows Script Host-Client (.vbs), eine unterstützende Clientbibliothek (.dll) und eine Dienstbibliothek (.dll), die von Internetinformationsdienste (IIS) gehostet werden. Der Dienst ist ein Rechnerdienst und der COM-Client ruft mathematische Operationen (Addieren, Subtrahieren, Multiplizieren und Dividieren) auf dem Dienst auf. Die Clientaktivität ist in den Meldungsfeldfenstern sichtbar.  
@@ -89,7 +89,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
 -   Die Adresse des Dienstendpunkts.  
   
--   Die Bindung, die der Client verwenden sollte, um eine Verbindung mit diesem Endpunkt herzustellen. In diesem Fall wird die vom System definierte wsHttpBinding verwendet. Allerdings können auch benutzerdefinierte Bindungen in den Clientkonfigurationsdateien definiert werden. Für die Verwendung mit dem Windows Script Host wird die benutzerdefinierte Bindung in einer Cscript.exe.config-Datei im gleichen Verzeichnis wie "Cscript.exe" definiert.  
+-   Die Bindung, die der Client verwenden sollte, um eine Verbindung mit diesem Endpunkt herzustellen. In diesem Fall wird die vom System definierte wsHttpBinding verwendet. Allerdings können auch benutzerdefinierte Bindungen in den Clientkonfigurationsdateien definiert werden. Für die Verwendung mit dem Windows Script Host wird die benutzerdefinierte Bindung in einer „Cscript.exe.config“-Datei im gleichen Verzeichnis wie „Cscript.exe“ definiert.  
   
 -   Der Typ des Vertrags, der vom Endpunkt unterstützt wird. Dies ist der Typ, der oben generiert und registriert wurde. Da ein Visual Basic-Skript keine stark typisierte COM-Umgebung bereitstellt, muss eine ID für den Vertrag festgelegt werden. Diese GUID ist die `interfaceID` aus "CalcProxy.tlb", die durch COM-Tools wie OLE/COM-Objektkatalog (OleView.exe) eingesehen werden kann. Für stark typisierte Umgebungen wie Office VBA oder Visual Basic 6.0 kann anstelle des Vertragsparameters ein expliziter Verweis auf die Typbibliothek hinzugefügt werden und daraufhin eine Deklaration des Typs des Proxyobjekts erfolgen. Auf diese Weise wird auch während der Clientanwendungsentwicklung IntelliSense-Unterstützung bereitgestellt.  
   
@@ -136,7 +136,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
 -   Der Name und Namespace des Vertrags. Diese Identifikation ist erforderlich, da die WSDL möglicherweise mehr als einen Vertrag enthält.  
   
     > [!NOTE]
-    >  Standardmäßig generiert die WCF-Dienste separate WSDL-Dateien für jeden Namespace, die die Verwendung. Diese werden mit der Verwendung des WSDL-Importkonstrukts verknüpft. Da der Moniker eine einzige WSDL-Definition erwartet, muss der Dienst entweder einen einzigen Namespace verwenden (wie in diesem Beispiel gezeigt) oder die separaten Dateien müssen manuell zusammengeführt werden.  
+    >  Standardmäßig generiert die WCF-Dienste separate WSDL-Dateien für jeden Namespace, die die Verwendung. Diese werden mit der Verwendung des WSDL-Importkonstrukts verknüpft. Da der Moniker eine einzige WSDL-Definition erwartet, muss der Dienst entweder einen einzigen Namespace verwenden (wie in diesem Beispiel gezeigt), oder die separaten Dateien müssen manuell zusammengeführt werden.  
   
  Durch Erstellung der Proxyinstanz mit dem Dienstmoniker kann die Clientanwendung Methoden auf dem Proxy aufrufen. Dies führt dazu, dass die Dienstmonikerinfrastruktur die entsprechenden Dienstvorgänge aufruft.  
   
@@ -237,4 +237,3 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 -   Entfernen Sie aus Sicherheitsgründen die Definition des virtuellen Verzeichnisses und die in den Setupschritten gewährten Berechtigungen, wenn Sie die Beispiele abgeschlossen haben.  
   
-## <a name="see-also"></a>Siehe auch

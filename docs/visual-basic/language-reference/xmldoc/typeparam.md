@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typeparam XML tag
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
-ms.openlocfilehash: 9e07a0c9d100669215f01a168da98902644a6f0b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 014623be84f9d7eb8a25ac4aadcce450f158c154
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496143"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827236"
 ---
 # <a name="typeparam-visual-basic"></a>\<Typeparam > (Visual Basic)
 Definiert einen Typparametername und Beschreibung.  
@@ -39,4 +39,5 @@ Definiert einen Typparametername und Beschreibung.
  [!code-vb[VbVbcnXmlDocComments#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#8)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)

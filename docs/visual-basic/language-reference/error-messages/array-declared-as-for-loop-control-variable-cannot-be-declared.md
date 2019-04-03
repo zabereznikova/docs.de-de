@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
-ms.openlocfilehash: d8fe794adcc1c2d28437bac7e732f99a6b6c07c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bee3bcd3701945f5cf77f6761defc8be77acf49f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518617"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843577"
 ---
 # <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a>Ein Array, das als For-Schleifensteuerungsvariable deklariert ist, kann nicht mit einer vorgegebenen Größe deklariert werden.
 Ein `For Each` -Schleife verwendet ein Array als seine *Element* Iterationsvariable initialisiert jedoch dieses Array.  
@@ -34,6 +34,7 @@ For Each listElement(1) As Integer In arrayList
 -   Entfernen Sie die Initialisierung aus der Deklaration der *Element* Iterationsvariable.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [For...Next-Anweisung](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [Sammlungen](../../../standard/collections/index.md)

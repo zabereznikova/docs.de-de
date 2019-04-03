@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 29a40102a9d2f1aa1eac12510005b997de796880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4b3e7a3994423c962866b643ffc5173669e3a2e5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719355"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841164"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Vorgehensweise: Erben von Formularen mithilfe des Dialogfelds-Auswahl
 Das Dialogfeld **Vererbungsauswahl** bietet die einfachste Möglichkeit, ein Formular oder ein anderes Objekt zu erben. Mithilfe dieser Option können Sie die Vorteile von Codezeichenfolgen oder Benutzeroberflächen (UI) nutzen, die Sie bereits in anderen Projektmappen erstellt haben.  
@@ -41,7 +41,7 @@ Das Dialogfeld **Vererbungsauswahl** bietet die einfachste Möglichkeit, ein For
   
 6.  Wählen Sie die Komponente aus.  
   
-     Die Komponente wird im **Projektmappen-Explorer** zu Ihrem Projekt hinzugefügt. Falls die Komponente über eine Benutzeroberfläche verfügt, werden die Steuerelemente, die Bestandteil des geerbten Formulars sind, mit einer Glyphe (![VisualBasicInheritanceSymbol screenshot](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) gekennzeichnet. Sobald Sie eines dieser Steuerelemente auswählen, können Sie am Rahmen erkennen, welche Sicherheitsebene das Steuerelement im Formular der übergeordneten Klasse besitzt. In der folgenden Tabelle sind die Verhaltensweisen aufgeführt, die den verschiedenen Sicherheitsebenen entsprechen.  
+     Die Komponente wird im **Projektmappen-Explorer** zu Ihrem Projekt hinzugefügt. Wenn sie eine Benutzeroberfläche verfügt, Steuerelemente, die Bestandteil des geerbten Formulars sind durch ein Symbol markiert (![Screenshot von der Visual Basic-Vererbung-Symbol.](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif)), und bei Auswahl dieser Option müssen Sie einen Rahmen, der angibt, der Sicherheitsebene das Steuerelement besitzt, auf die Form der Komponente. In der folgenden Tabelle sind die Verhaltensweisen aufgeführt, die den verschiedenen Sicherheitsebenen entsprechen.  
   
     |Sicherheitsebene des Steuerelements|Mögliche Interaktion mit geerbtem Formular im Designer und Code-Editor|  
     |-------------------------------|--------------------------------------------------------------------------------|  

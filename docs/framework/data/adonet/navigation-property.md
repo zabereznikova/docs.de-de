@@ -2,12 +2,12 @@
 title: Navigationseigenschaft – ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: 6729b22dbc012d5ccfabd64cd83b710833fe1b9d
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: b57ecf9329aa9ea8afc07507613c9e3961bfd0a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857943"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836597"
 ---
 # <a name="navigation-property"></a>Navigationseigenschaft
 
@@ -29,7 +29,7 @@ Der Datentyp einer Navigationseigenschaft richtet sich nach der [Multiplizität]
 
 Die unten stehende Abbildung zeigt ein konzeptionelles Modell mit drei Entitätstypen: `Book`, `Publisher` und `Author`. Die Navigationseigenschaften `Publisher` und `Authors` werden für den Book-Entitätstyp definiert. Die Navigationseigenschaft `Books` wird sowohl für den Publisher-Entitätstyp als auch den `Author`-Entitätstyp definiert.
 
-![Modell mit Navigationseigenschaften](/media/modelwithnavprops.gif "ModelWithNavProps")
+ ![Das Diagramm zeigt ein konzeptionelles Modell mit drei Entitätstypen.](./media/navigation-property/conceptual-model-entity-types-associations.gif)  
 
 Die [ADO.NET Entity Framework](./ef/index.md) verwendet eine domänenspezifische Sprache (DSL) Bezeichnung konzeptionelle Schemadefinitionssprache ([CSDL](./ef/language-reference/csdl-specification.md)), konzeptionelle Modelle zu definieren. Die folgende CSDL definiert den in der Abbildung oben gezeigten `Book`-Entitätstyp:
 

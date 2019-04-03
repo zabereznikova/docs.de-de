@@ -2,12 +2,12 @@
 title: Schlüsselkonzepte im Entity Data Model
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: 0a79143f8927a8368eaba1224c27f453ca81bdf7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcfc9cbb82a23dcb4d33ca8a838a49eac7180111
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574325"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825663"
 ---
 # <a name="entity-data-model-key-concepts"></a>Schlüsselkonzepte im Entity Data Model
 Der Entity Data Model (EDM) verwendet drei wichtige Konzepte, um die Struktur der Daten zu beschreiben: *Entitätstyp*, *Zuordnungstyp*, und *Eigenschaft*. Diese sind die wichtigsten Konzepte zum Beschreiben der Datenstruktur in einer beliebigen Implementierung des EDM.  
@@ -32,7 +32,7 @@ Der Entity Data Model (EDM) verwendet drei wichtige Konzepte, um die Struktur de
 ## <a name="representations-of-a-conceptual-model"></a>Darstellungen eines konzeptionellen Modells  
  Ein *Konzeptmodell* ist eine bestimmte Darstellung der Struktur einiger Daten als Entitäten und Beziehungen. Eine Möglichkeit zur Darstellung eines konzeptionellen Modells ist ein Diagramm. Das folgende Diagramm stellt ein konzeptionelles Modell mit drei Entitätstypen (`Book`, `Publisher` und `Author`) sowie zwei Zuordnungen (`PublishedBy` und `WrittenBy`) dar:  
   
- ![Modell mit Navigationseigenschaften](../../../../docs/framework/data/adonet/media/modelwithnavprops.gif "ModelWithNavProps")  
+ ![Das Diagramm zeigt ein konzeptionelles Modell mit drei Entitätstypen.](./media/entity-data-model-key-concepts/conceptual-model-entity-types-associations.gif)  
   
  Diese Darstellung hat jedoch einige Nachteile beim Bereitstellen einiger Details zum Modell. Informationen zu Eigenschaftentyp und Entitätenmenge werden z. B. nicht im Diagramm bereitgestellt. Der Umfang eines konzeptionellen Modells kann mit einer domänenspezifischen Sprache (DSL) deutlicher vermittelt werden. Die [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) verwendet eine XML-basierte DSL mit der Bezeichnung *konzeptionelle Schemadefinitionssprache* ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)), konzeptionelle Modelle zu definieren. Das Folgende ist die CSDL-Definition des oben im Diagramm gezeigten konzeptionellen Modells:  
   

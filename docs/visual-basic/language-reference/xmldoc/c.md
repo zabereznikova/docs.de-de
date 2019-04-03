@@ -5,12 +5,12 @@ helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-ms.openlocfilehash: d8efd2359ecb65bec1b427d8b1dca4b0c88a1152
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9be9f9e96fc1b79ea97d54c54352da63b93ef264
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469026"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838039"
 ---
 # <a name="c-visual-basic"></a>\<c> (Visual Basic)
 Gibt an, dass Text in einer Beschreibung Code ist.  
@@ -38,4 +38,5 @@ Gibt an, dass Text in einer Beschreibung Code ist.
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [XML-Kommentartags](../../../visual-basic/language-reference/xmldoc/index.md)

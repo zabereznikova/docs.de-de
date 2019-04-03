@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30108
 ms.assetid: 7931361d-78e2-40ca-ac69-e3374273b248
-ms.openlocfilehash: f07268628a45e6286136250e8570d1adb32939ed
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: db984dad40de3082a274636934d1fc5d782093b3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285141"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838091"
 ---
 # <a name="typename-is-a-type-and-cannot-be-used-as-an-expression"></a>"\<Typname >' ist ein Typ und kann nicht als Ausdruck verwendet werden
 Ein Typname tritt auf, wo ein Ausdruck erforderlich ist. Ein Ausdruck muss aus einer Kombination von Variablen, Konstanten, Literalen, Eigenschaften und `Function` -Prozeduraufrufen bestehen.  
@@ -24,4 +24,5 @@ Ein Typname tritt auf, wo ein Ausdruck erforderlich ist. Ein Ausdruck muss aus e
 -   Entfernen Sie den Typnamen, und erstellen Sie den Ausdruck mit gültigen Elementen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Operatoren und Ausdrücke](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

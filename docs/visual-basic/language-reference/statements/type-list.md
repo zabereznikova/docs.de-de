@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: 3939d05b74dc6b9d79cae8307f5c5c736a1917d5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d071e59d94e51ca55167983d0ee3098bd5c7dd8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968269"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843629"
 ---
 # <a name="type-list-visual-basic"></a>Typenliste (Visual Basic)
 Gibt an, die *Typparameter* für eine *generische* Programmierelement. Mehrere Parameter werden durch Kommas getrennt. Es folgt die Syntax für einen Typ-Parameter.  
@@ -93,6 +93,7 @@ Gibt an, die *Typparameter* für eine *generische* Programmierelement. Mehrere P
  [!code-vb[VbVbalrStatements#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#5)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Of](../../../visual-basic/language-reference/statements/of-clause.md)
 - [New-Operator](../../../visual-basic/language-reference/operators/new-operator.md)
 - [Zugriffsebenen in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)

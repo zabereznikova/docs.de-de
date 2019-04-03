@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
-ms.openlocfilehash: 78981e5af0d4bf1694a3ad7c9ead2e4e7fd9330e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e6ddab16c59d7ce95d96b377e3f372f6ebe5278
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703548"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843564"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>Zugriff des freigegebenen Members, konstanten Members, Enumerationsmembers oder geschachtelten Typs über eine Instanz; der qualifizierende Ausdruck wird nicht ausgewertet
 Eine Instanzvariable für eine Klasse oder Struktur wird verwendet, für den Zugriff auf eine `Shared` Variable, Eigenschaft, Prozedur oder das Ereignis in dieser Klasse oder Struktur definiert. Diese Warnung kann auch auftreten, wenn eine Instanzvariable Zugriff auf eine implizit freigegebenen Member einer Klasse oder Struktur, z. B. eine Konstante oder -Enumeration oder eine geschachtelte Klasse oder Struktur verwendet wird.  
@@ -56,5 +56,6 @@ End Module
 >  Warnung für die Auswirkungen des Bereichs sein, wenn zwei Programmierelemente mit den gleichen Namen haben. Im vorherigen Beispiel, wenn Sie eine Instanz mit deklarieren `Dim testClass as testClass = Nothing`, behandelt der Compiler einen Aufruf von `testClass.sayHello()` tritt ebenfalls ein Zugriff auf die Methode durch den Namen der Klasse und keine Warnung.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Gültigkeitsbereich in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic]
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
-ms.openlocfilehash: b8dfc166681dbadf1d2f4ba5a985011f5427f50a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 97c651dbcc657fbab0706c9a959bd0031c0fe343
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981425"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826092"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
 Stellt den Standardwert eines beliebigen Datentyps dar. Für Verweistypen; der Standardwert ist die `null` Verweis. Der Standardwert hängt für Werttypen gibt an, ob der Werttyp auf NULL festlegbar ist.  
@@ -51,6 +51,7 @@ Stellt den Standardwert eines beliebigen Datentyps dar. Für Verweistypen; der S
  `Nothing` unterscheidet sich von der <xref:System.DBNull> Objekt, das eine nicht initialisierte Variante oder eine Spalte nicht vorhandene Datenbank darstellt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Dim-Anweisung](../../visual-basic/language-reference/statements/dim-statement.md)
 - [Objektlebensdauer: Wie die Objekte erstellt und zerstört werden](../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Lebensdauer in Visual Basic](../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

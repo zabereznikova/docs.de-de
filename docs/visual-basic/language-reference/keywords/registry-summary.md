@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - registry [Visual Basic]
 ms.assetid: 6e90eb8a-1a4e-4387-8a68-9287dc7875e8
-ms.openlocfilehash: 08e390f7fe3395fd04eb98f8e433baac960bb7b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88b9c530da3da39c0d70d9d8e90626bd5e133cf3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627543"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838052"
 ---
 # <a name="registry-summary-visual-basic"></a>Registrierung: Zusammenfassung (Visual Basic)
 Visual Studio-Programmiersprachen-Schlüsselwörter und Member der Laufzeitbibliothek nach ihrem Zweck organisiert sind, und verwenden.  
@@ -23,6 +23,7 @@ Visual Studio-Programmiersprachen-Schlüsselwörter und Member der Laufzeitbibli
 |Speichern von Programmeinstellungen|<xref:Microsoft.VisualBasic.Interaction.SaveSetting%2A>|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Schlüsselwörter](../../../visual-basic/language-reference/keywords/index.md)
 - [Member der Visual Basic-Laufzeitbibliothek](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Lesen aus der und Schreiben in die Registrierung](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
