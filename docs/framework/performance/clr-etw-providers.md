@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fd1a4d41e65ea4d39f1cfee33aa5e166eec71ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0911132a705f3de89d771324cbb63e8db31bdfdb
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628551"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890513"
 ---
 # <a name="clr-etw-providers"></a>CLR-ETW-Anbieter
 Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbieter und den Rundownanbieter.  
@@ -51,7 +51,7 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
   
  Vor dem Start der Enumeration wird das `DCEndInit`-Ereignis ausgelöst. Am Ende der Enumeration wird das `DCEndComplete`-Ereignis ausgelöst, um den Consumer zu benachrichtigen, dass die Datensammlung ordnungsgemäß beendet wurde. Start- und Endrundown werden hauptsächlich für verwaltete Symbolauflösung verwendet. Der Startrundown kann Adressbereichsinformationen für Methoden enthalten, die bereits JIT-kompiliert wurden, bevor die Profilerstellungssitzung gestartet wurde. Der Endrundown kann Adressbereichsinformationen für alle Methoden liefern, deren JIT-Kompilierung zum Zeitpunkt der Deaktivierung der Profilerstellung erfolgt ist.  
   
- Der Endrundown wird nicht automatisch ausgeführt, wenn eine Profilerstellungssitzung beendet wird. Stattdessen muss ein Tool, von dem verwaltete Symbolauflösung ausgeführt werden soll, explizit eine CLR-Rundownanbietersitzung aufrufen, bei der das Schlüsselwort `EndRundownKeyword` aktiviert ist (unmittelbar vor dem Beenden der Profilerstellung).  
+ Der Endrundown wird nicht automatisch ausgeführt, wenn eine Profilerstellungssitzung beendet wird. Stattdessen muss ein Tool, von dem eine verwaltete Symbolauflösung ausgeführt werden soll, explizit eine CLR-Rundownanbietersitzung aufrufen, bei der das Schlüsselwort `EndRundownKeyword` aktiviert ist (unmittelbar vor dem Beenden der Profilerstellung).  
   
  Obwohl entweder vom Start- oder vom Endrundown Methodenadressbereichs-Informationen für verwaltete Symbolauflösung bereitgestellt werden können, wird empfohlen, das Schlüsselwort `EndRundownKeyword` (das `DCEnd`-Ereignisse angibt) anstelle des Schlüsselworts `StartRundownKeyword` zu verwenden (das `DCStart`-Ereignisse angibt). Mit `StartRundownKeyword` wird der Rundown während der Profilerstellungssitzung ausgeführt, wodurch u. U. das Szenario, für das ein Profil erstellt wurde, beeinträchtigt wird.  
   
@@ -84,12 +84,12 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
 4.  Führen Sie die Profile zusammen, um eine Protokolldatei zu erstellen:  
   
     ```  
-    xperf -merge -d clr1.etl clr2.etl merged.etl  
+    xperf -merge clr1.etl clr2.etl merged.etl  
     ```  
   
-     Die Datei „merged.etl“ enthält die Ereignisse von den Laufzeit- und Rundownanbietersitzungen.  
+     Die Datei "merged.etl" enthält die Ereignisse von den Laufzeit- und Rundownanbietersitzungen.  
   
  Ein Tool kann die Schritte 2 und 3 ausführen (dabei wird eine Rundownsitzung gestartet und anschließend die Profilerstellung beendet), anstatt sofort die Profilerstellung zu deaktivieren, wenn ein Benutzer das Beenden der Profilerstellung anfordert. Schritt 4 kann auch mit einem Tool ausgeführt werden.  
   
 ## <a name="see-also"></a>Siehe auch
-- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

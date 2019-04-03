@@ -5,18 +5,20 @@ helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: 74be338cd6f704174d89032fb7f9e859215c2bc3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: HT
+ms.openlocfilehash: c0b47521c6a62071466ae4193cd8553bdfb3dcde
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843538"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890370"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>Anpassen der verfügbaren Objekte in "My" (Visual Basic)
+
 In diesem Thema wird beschrieben, wie Sie die steuern können `My` Objekte werden durch Festlegen des Projekts aktiviert `_MYTYPE` Konstante für bedingte Kompilierung. Der Visual Studio integrierte Entwicklungsumgebung (IDE) behält die `_MYTYPE` Konstante für bedingte Kompilierung für ein Projekt mit den Projekttyp synchronisiert.  
   
-## <a name="predefined-mytype-values"></a>Vordefinierte _MYTYPE-Werte  
- Verwenden Sie die `/define` Compileroption zum Festlegen der `_MYTYPE` Konstante für bedingte Kompilierung. Wenn Sie einen eigenen Wert für angeben der `_MYTYPE` konstant ist, müssen Sie den Zeichenfolgenwert in umgekehrter Schrägstrich/Anführungszeichen einschließen (\\") Sequenzen. Sie könnten beispielsweise Folgendes verwenden:  
+## <a name="predefined-mytype-values"></a>Vordefinierte \_MYTYPE-Werte  
+
+Verwenden Sie die `/define` Compileroption zum Festlegen der `_MYTYPE` Konstante für bedingte Kompilierung. Wenn Sie einen eigenen Wert für angeben der `_MYTYPE` konstant ist, müssen Sie den Zeichenfolgenwert in umgekehrter Schrägstrich/Anführungszeichen einschließen (\\") Sequenzen. Sie könnten beispielsweise Folgendes verwenden:  
   
 ```  
 /define:_MYTYPE=\"WindowsForms\"  
@@ -24,7 +26,7 @@ In diesem Thema wird beschrieben, wie Sie die steuern können `My` Objekte werde
   
  Diese Tabelle wird gezeigt, wie die `_MYTYPE` Konstante für bedingte Kompilierung auf festgelegt ist, für verschiedene Projekttypen.  
   
-|Projekttyp:|_MYTYPE Wert|  
+|Projekttyp:|\_Wert von MYTYPE|  
 |------------------|--------------------|  
 |Klassenbibliothek|"Windows"|  
 |Konsolenanwendung|"Console"|  
@@ -37,12 +39,13 @@ In diesem Thema wird beschrieben, wie Sie die steuern können `My` Objekte werde
 |Empty|"Empty"|  
   
 > [!NOTE]
->  Alle Zeichenfolgenvergleichen für die bedingte Kompilierung wird die Groß-/Kleinschreibung beachtet, unabhängig davon, wie der `Option Compare` Anweisung festgelegt ist.  
+> Alle Zeichenfolgenvergleichen für die bedingte Kompilierung wird die Groß-/Kleinschreibung beachtet, unabhängig davon, wie der `Option Compare` Anweisung festgelegt ist.  
   
-## <a name="dependent-my-compilation-constants"></a>Abhängige _MY Kompilierungskonstanten  
- Die `_MYTYPE` Konstante für bedingte Kompilierung, wiederum steuert die Werte von mehreren anderen `_MY` Kompilierungskonstanten:  
+## <a name="dependent-my-compilation-constants"></a>Abhängige \_Meine Kompilierungskonstanten  
+
+Die `_MYTYPE` Konstante für bedingte Kompilierung, wiederum steuert die Werte von mehreren anderen `_MY` Kompilierungskonstanten:  
   
-|_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
+|\_MYTYPE|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_MYFORMS|\_MYUSERTYPE|\_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
 |"Console"|"Console"|"Windows"|Nicht definiert|"Windows"|true|  
 |"Custom"|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|Nicht definiert|  
@@ -56,7 +59,7 @@ In diesem Thema wird beschrieben, wie Sie die steuern können `My` Objekte werde
  In der Standardeinstellung nicht definierte Konstanten für bedingte Kompilierung in aufgelöst `FALSE`. Sie können Werte für den nicht definierten Konstanten angeben, beim Kompilieren des Projekts, um das Standardverhalten außer Kraft zu setzen.  
   
 > [!NOTE]
->  Wenn `_MYTYPE` festgelegt ist auf "Custom", das Projekt enthält die `My` Namespace, aber es enthält keine Objekte. Jedoch festlegen `_MYTYPE` um "Leere" verhindert, dass der Compiler Hinzufügen der `My` Namespace und seine Objekte.  
+> Wenn `_MYTYPE` festgelegt ist auf "Custom", das Projekt enthält die `My` Namespace, aber es enthält keine Objekte. Jedoch festlegen `_MYTYPE` um "Leere" verhindert, dass der Compiler Hinzufügen der `My` Namespace und seine Objekte.  
   
  Diese Tabelle beschreibt die Auswirkungen der vordefinierten Werte von der `_MY` Kompilierungskonstanten.  
   
