@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 22494a87b4f6aaa6bd1a57873493f64df3b1ecb8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359730"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410263"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>Veröffentlichen von .NET Core-Apps mit der CLI
 
@@ -50,7 +50,7 @@ Wenn Sie das .NET Core SDK 2.1 verwenden, ist die frameworkabhängige Bereitstel
 
 ### <a name="native-dependencies"></a>Native Abhängigkeiten
 
-Wenn Ihre App über native Abhängigkeiten verfügt, kann sie auf anderen Betriebssystemen möglicherweise nicht ausgeführt werden. Wenn Ihre App beispielsweise die native Win32-API verwendet, kann sie nicht unter macOS oder Linux ausgeführt werden. In diesem Fall müssten Sie plattformspezifischen Code bereitstellen und eine ausführbare Datei für jede Plattform kompilieren.
+Wenn Ihre App über native Abhängigkeiten verfügt, kann sie auf anderen Betriebssystemen möglicherweise nicht ausgeführt werden. Wenn Ihre App beispielsweise die native Windows-API verwendet, kann sie nicht unter macOS oder Linux ausgeführt werden. In diesem Fall müssten Sie plattformspezifischen Code bereitstellen und eine ausführbare Datei für jede Plattform kompilieren.
 
 Beachten Sie außerdem, dass Ihre App möglicherweise nicht auf jeder Plattform ausgeführt werden kann, wenn Sie auf eine Bibliothek verwiesen haben, die eine native Abhängigkeit aufweist. Es ist jedoch möglich, dass ein NuGet-Paket, auf das Sie verweisen, plattformspezifische Versionen enthält, um die erforderlichen nativen Abhängigkeiten für Sie zu verarbeiten.
 

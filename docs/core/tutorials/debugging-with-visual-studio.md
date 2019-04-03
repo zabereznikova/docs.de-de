@@ -3,12 +3,12 @@ title: Debuggen Ihrer „Hallo Welt“-.NET Core-Anwendung mit Visual Studio 201
 description: Sie erfahren, wie Sie eine in C# oder Visual Basic geschriebene „Hallo Welt“-App mit Visual Studio 2017 debuggen.
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170664"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463422"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Debuggen einer „Hallo Welt“-.NET Core-Anwendung in C# oder Visual Basic mit Visual Studio 2017
 
@@ -39,7 +39,7 @@ Führen Sie Ihr Programm im Debugmodus aus, und probieren Sie ein paar Debugfunk
 
 1. Die Ausführung des Programms endet, wenn sie den Haltepunkt erreicht, und bevor die `Console.WriteLine`-Methode ausgeführt wird. Im Fenster **Auto** werden die Werte der im Bereich der aktuellen Zeile verwendeten Variablen angezeigt. Im Fenster **Lokal** (das Sie anzeigen können, indem Sie auf die Registerkarte **Lokal** klicken) werden die Werte von Variablen angezeigt, die in der gerade ausgeführten Methode definiert sind.
 
-   ![Visual Studio-Anwendungsfenster](./media/debugging-with-visual-studio/break.png)
+   ![Screenshot eines Breakpoints in Visual Studio](./media/debugging-with-visual-studio/breakpoint-console-window.png)
 
 1. Sie können den Wert der Variablen ändern, um zu sehen, wie sich dies auf Ihr Programm auswirkt. Wenn das **Direktfenster** nicht angezeigt wird, zeigen Sie es durch Auswahl des Menüelements **Debuggen** > **Fenster** > **Direkt** an. Das **Direktfenster** dient Ihrer Interaktion mit der Anwendung, die Sie debuggen.
 

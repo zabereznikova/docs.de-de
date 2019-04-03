@@ -1,0 +1,1007 @@
+items:
+- name: Hosting
+  href: index.md
+  items:
+  - name: Hosting-Co-Klassen
+    href: hosting-coclasses.md
+    items:
+    - name: CLRRuntimeHost-Co-Klasse
+      href: clrruntimehost-coclass.md
+    - name: ComCallUnmarshal-Co-Klasse
+      href: comcallunmarshal-coclass.md
+    - name: CorRuntimeHost-Co-Klasse
+      href: corruntimehost-coclass.md
+    - name: TypeNameFactory-Co-Klasse
+      href: typenamefactory-coclass.md
+  - name: Hosten von Enumerationen
+    href: hosting-enumerations.md
+    items:
+    - name: CLSID_RESOLUTION_FLAGS-Enumeration
+      href: clsid-resolution-flags-enumeration.md
+    - name: COR_GC_STAT_TYPES-Enumeration
+      href: cor-gc-stat-types-enumeration.md
+    - name: COR_GC_THREAD_STATS_TYPES-Enumeration
+      href: cor-gc-thread-stats-types-enumeration.md
+    - name: EApiCategories-Enumeration
+      href: eapicategories-enumeration.md
+    - name: EBindPolicyLevels-Enumeration
+      href: ebindpolicylevels-enumeration.md
+    - name: ECLRAssemblyIdentityFlags-Enumeration
+      href: eclrassemblyidentityflags-enumeration.md
+    - name: EClrEvent-Enumeration
+      href: eclrevent-enumeration.md
+    - name: EClrFailure-Enumeration
+      href: eclrfailure-enumeration.md
+    - name: EClrOperation-Enumeration
+      href: eclroperation-enumeration.md
+    - name: EClrUnhandledException-Enumeration
+      href: eclrunhandledexception-enumeration.md
+    - name: EContextType-Enumeration
+      href: econtexttype-enumeration.md
+    - name: ECustomDumpFlavor-Enumeration
+      href: ecustomdumpflavor-enumeration.md
+    - name: ECustomDumpItemKind-Enumeration
+      href: ecustomdumpitemkind-enumeration.md
+    - name: EHostApplicationPolicy-Enumeration
+      href: ehostapplicationpolicy-enumeration.md
+    - name: EHostBindingPolicyModifyFlags-Enumeration
+      href: ehostbindingpolicymodifyflags-enumeration.md
+    - name: EInitializeNewDomainFlags-Enumeration
+      href: einitializenewdomainflags-enumeration.md
+    - name: EMemoryAvailable-Enumeration
+      href: ememoryavailable-enumeration.md
+    - name: EMemoryCriticalLevel-Enumeration
+      href: ememorycriticallevel-enumeration.md
+    - name: EPolicyAction-Enumeration
+      href: epolicyaction-enumeration.md
+    - name: ESymbolReadingPolicy-Enumeration
+      href: esymbolreadingpolicy-enumeration.md
+    - name: ETaskType-Enumeration
+      href: etasktype-enumeration.md
+    - name: HOST_TYPE-Enumeration
+      href: host-type-enumeration.md
+    - name: MALLOC_TYPE-Enumeration
+      href: malloc-type-enumeration.md
+    - name: METAHOST_CONFIG_FLAGS-Enumeration
+      href: metahost-config-flags-enumeration.md
+    - name: METAHOST_POLICY_FLAGS-Enumeration
+      href: metahost-policy-flags-enumeration.md
+    - name: RUNTIME_INFO_FLAGS-Enumeration
+      href: runtime-info-flags-enumeration.md
+    - name: StackOverflowType-Enumeration
+      href: stackoverflowtype-enumeration.md
+    - name: STARTUP_FLAGS-Enumeration
+      href: startup-flags-enumeration.md
+    - name: ValidatorFlags-Enumeration
+      href: validatorflags-enumeration.md
+    - name: WAIT_OPTION-Enumeration
+      href: wait-option-enumeration.md
+  - name: Hosting – Globale statische Funktionen
+    href: hosting-global-static-functions.md
+    items:
+    - name: Hosten globaler statischer .NET Framework 4-Funktionen
+      href: net-framework-4-hosting-global-static-functions.md
+      items:
+      - name: CLRCreateInstance-Funktion
+        href: clrcreateinstance-function.md
+    - name: Veraltete CLR-Hostingfunktionen
+      href: deprecated-clr-hosting-functions.md
+      items:
+      - name: _CorDllMain-Funktion
+        href: cordllmain-function.md
+      - name: _CorExeMain-Funktion
+        href: corexemain-function.md
+      - name: _CorExeMain2-Funktion
+        href: corexemain2-function.md
+      - name: _CorImageUnloading-Funktion
+        href: corimageunloading-function.md
+      - name: _CorValidateImage-Funktion
+        href: corvalidateimage-function.md
+      - name: CallFunctionShim-Funktion
+        href: callfunctionshim-function.md
+      - name: ClrCreateManagedInstance-Funktion
+        href: clrcreatemanagedinstance-function.md
+      - name: CoEEShutDownCOM-Funktion
+        href: coeeshutdowncom-function.md
+      - name: CoInitializeCor-Funktion
+        href: coinitializecor-function.md
+      - name: CoInitializeEE-Funktion
+        href: coinitializeee-function.md
+      - name: CorBindToCurrentRuntime-Funktion
+        href: corbindtocurrentruntime-function.md
+      - name: CorBindToRuntime-Funktion
+        href: corbindtoruntime-function.md
+      - name: CorBindToRuntimeByCfg-Funktion
+        href: corbindtoruntimebycfg-function.md
+      - name: CorBindToRuntimeEx-Funktion
+        href: corbindtoruntimeex-function.md
+      - name: CorBindToRuntimeHost-Funktion
+        href: corbindtoruntimehost-function.md
+      - name: CorExitProcess-Funktion
+        href: corexitprocess-function.md
+      - name: CorLaunchApplication-Funktion
+        href: corlaunchapplication-function.md
+      - name: CorMarkThreadInThreadPool-Funktion
+        href: cormarkthreadinthreadpool-function.md
+      - name: CoUninitializeCor-Funktion
+        href: couninitializecor-function.md
+      - name: CoUninitializeEE-Funktion
+        href: couninitializeee-function.md
+      - name: CreateDebuggingInterfaceFromVersion-Funktion
+        href: createdebugginginterfacefromversion-function.md
+      - name: CreateICeeFileGen-Funktion
+        href: createiceefilegen-function.md
+      - name: DestroyICeeFileGen-Funktion
+        href: destroyiceefilegen-function.md
+      - name: FExecuteInAppDomainCallback-Funktionszeiger
+        href: fexecuteinappdomaincallback-function-pointer.md
+      - name: FLockClrVersionCallback-Funktionszeiger
+        href: flockclrversioncallback-function-pointer.md
+      - name: GetCLRIdentityManager-Funktion
+        href: getclridentitymanager-function.md
+      - name: GetCORRequiredVersion-Funktion
+        href: getcorrequiredversion-function.md
+      - name: GetCORSystemDirectory-Funktion
+        href: getcorsystemdirectory-function.md
+      - name: GetCORVersion-Funktion
+        href: getcorversion-function.md
+      - name: GetFileVersion-Funktion
+        href: getfileversion-function.md
+      - name: GetRealProcAddress-Funktion
+        href: getrealprocaddress-function.md
+      - name: GetRequestedRuntimeInfo-Funktion
+        href: getrequestedruntimeinfo-function.md
+      - name: GetRequestedRuntimeVersion-Funktion
+        href: getrequestedruntimeversion-function.md
+      - name: GetRequestedRuntimeVersionForCLSID-Funktion
+        href: getrequestedruntimeversionforclsid-function.md
+      - name: GetVersionFromProcess-Funktion
+        href: getversionfromprocess-function.md
+      - name: LoadLibraryShim-Funktion
+        href: loadlibraryshim-function.md
+      - name: LoadStringRC-Funktion
+        href: loadstringrc-function.md
+      - name: LoadStringRCEx-Funktion
+        href: loadstringrcex-function.md
+      - name: LockClrVersion-Funktion
+        href: lockclrversion-function.md
+      - name: LPOVERLAPPED_COMPLETION_ROUTINE-Funktionszeiger
+        href: lpoverlapped-completion-routine-function-pointer.md
+      - name: LPTHREAD_START_ROUTINE-Funktionszeiger
+        href: lpthread-start-routine-function-pointer.md
+      - name: RunDll32ShimW-Funktion
+        href: rundll32shimw-function.md
+      - name: WAITORTIMERCALLBACK-Funktionszeiger
+        href: waitortimercallback-function-pointer.md
+  - name: Hostingschnittstellen
+    href: hosting-interfaces.md
+    items:
+    - name: Veraltete CLR-Hostingschnittstellen und Co-Klassen
+      href: deprecated-clr-hosting-interfaces-and-coclasses.md
+      items:
+      - name: IAppDomainSetup-Schnittstelle
+        href: iappdomainsetup-interface.md
+      - name: ICeeFileGen-Klasse
+        href: iceefilegen-class.md
+      - name: ICorRuntimeHost-Schnittstelle
+        href: icorruntimehost-interface.md
+        items:
+        - name: CloseEnum-Methode
+          href: icorruntimehost-closeenum-method.md
+        - name: CreateDomain-Methode
+          href: icorruntimehost-createdomain-method.md
+        - name: CreateDomainSetup-Methode
+          href: icorruntimehost-createdomainsetup-method.md
+        - name: CreateDomainEx-Methode
+          href: icorruntimehost-createdomainex-method.md
+        - name: CreateEvidence-Methode
+          href: icorruntimehost-createevidence-method.md
+        - name: CreateLogicalThreadState-Methode
+          href: icorruntimehost-createlogicalthreadstate-method.md
+        - name: CurrentDomain-Methode
+          href: icorruntimehost-currentdomain-method.md
+        - name: DeleteLogicalThreadState-Methode
+          href: icorruntimehost-deletelogicalthreadstate-method.md
+        - name: EnumDomains-Methode
+          href: icorruntimehost-enumdomains-method.md
+        - name: GetConfiguration-Methode
+          href: icorruntimehost-getconfiguration-method.md
+        - name: GetDefaultDomain-Methode
+          href: icorruntimehost-getdefaultdomain-method.md
+        - name: LocksHeldByLogicalThread-Methode
+          href: icorruntimehost-locksheldbylogicalthread-method.md
+        - name: MapFile-Methode
+          href: icorruntimehost-mapfile-method.md
+        - name: NextDomain-Methode
+          href: icorruntimehost-nextdomain-method.md
+        - name: Start-Methode
+          href: icorruntimehost-start-method.md
+        - name: Stop-Methode
+          href: icorruntimehost-stop-method.md
+        - name: SwitchInLogicalThreadState-Methode
+          href: icorruntimehost-switchinlogicalthreadstate-method.md
+        - name: SwitchOutLogicalThreadState-Methode
+          href: icorruntimehost-switchoutlogicalthreadstate-method.md
+        - name: UnloadDomain-Methode
+          href: icorruntimehost-unloaddomain-method.md
+    - name: CLR-Hostingschnittstellen
+      href: clr-hosting-interfaces.md
+      items:
+      - name: IActionOnCLREvent-Schnittstelle
+        href: iactiononclrevent-interface.md
+        items:
+        - name: OnEvent-Methode
+          href: iactiononclrevent-onevent-method.md
+      - name: IApartmentCallback-Schnittstelle
+        href: iapartmentcallback-interface.md
+        items:
+        - name: DoCallback-Methode
+          href: iapartmentcallback-docallback-method.md
+      - name: IAppDomainBinding-Schnittstelle
+        href: iappdomainbinding-interface.md
+        items:
+        - name: OnAppDomain-Methode
+          href: iappdomainbinding-onappdomain-method.md
+      - name: ICatalogServices-Schnittstelle
+        href: icatalogservices-interface.md
+        items:
+        - name: Autodone-Methode
+          href: icatalogservices-autodone-method.md
+        - name: NotAutodone-Methode
+          href: icatalogservices-notautodone-method.md
+      - name: ICLRAssemblyIdentityManager-Schnittstelle
+        href: iclrassemblyidentitymanager-interface.md
+        items:
+        - name: GetBindingIdentityFromFile-Methode
+          href: iclrassemblyidentitymanager-getbindingidentityfromfile-method.md
+        - name: GetBindingIdentityFromStream-Methode
+          href: iclrassemblyidentitymanager-getbindingidentityfromstream-method.md
+        - name: GetCLRAssemblyReferenceList-Methode
+          href: iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md
+        - name: GetProbingAssembliesFromReference-Methode
+          href: iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md
+        - name: GetReferencedAssembliesFromFile-Methode
+          href: iclrassemblyidentitymanager-getreferencedassembliesfromfile-method.md
+        - name: GetReferencedAssembliesFromStream-Methode
+          href: iclrassemblyidentitymanager-getreferencedassembliesfromstream-method.md
+        - name: IsStronglyNamed-Methode
+          href: iclrassemblyidentitymanager-isstronglynamed-method.md
+      - name: ICLRAssemblyReferenceList-Schnittstelle
+        href: iclrassemblyreferencelist-interface.md
+        items:
+        - name: IsAssemblyReferenceInList-Methode
+          href: iclrassemblyreferencelist-isassemblyreferenceinlist-method.md
+        - name: IsStringAssemblyReferenceInList-Methode
+          href: iclrassemblyreferencelist-isstringassemblyreferenceinlist-method.md
+      - name: ICLRControl-Schnittstelle
+        href: iclrcontrol-interface.md
+        items:
+        - name: GetCLRManager-Methode
+          href: iclrcontrol-getclrmanager-method.md
+        - name: SetAppDomainManagerType-Methode
+          href: iclrcontrol-setappdomainmanagertype-method.md
+      - name: ICLRDebugManager-Schnittstelle
+        href: iclrdebugmanager-interface.md
+        items:
+        - name: BeginConnection-Methode
+          href: iclrdebugmanager-beginconnection-method.md
+        - name: EndConnection-Methode
+          href: iclrdebugmanager-endconnection-method.md
+        - name: GetDacl-Methode
+          href: iclrdebugmanager-getdacl-method.md
+        - name: IsDebuggerAttached-Methode
+          href: iclrdebugmanager-isdebuggerattached-method.md
+        - name: SetConnectionTasks-Methode
+          href: iclrdebugmanager-setconnectiontasks-method.md
+        - name: SetDacl-Methode
+          href: iclrdebugmanager-setdacl-method.md
+        - name: SetSymbolReadingPolicy-Methode
+          href: iclrdebugmanager-setsymbolreadingpolicy-method.md
+      - name: ICLRErrorReportingManager-Schnittstelle
+        href: iclrerrorreportingmanager-interface.md
+        items:
+        - name: BeginCustomDump-Methode
+          href: iclrerrorreportingmanager-begincustomdump-method.md
+        - name: EndCustomDump-Methode
+          href: iclrerrorreportingmanager-endcustomdump-method.md
+        - name: GetBucketParametersForCurrentException-Methode
+          href: iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md
+      - name: ICLRGCManager-Schnittstelle
+        href: iclrgcmanager-interface.md
+        items:
+        - name: Collect-Methode
+          href: iclrgcmanager-collect-method.md
+        - name: GetStats-Methode
+          href: iclrgcmanager-getstats-method.md
+        - name: SetGCStartupLimits-Methode
+          href: iclrgcmanager-setgcstartuplimits-method.md
+      - name: ICLRHostBindingPolicyManager-Schnittstelle
+        href: iclrhostbindingpolicymanager-interface.md
+        items:
+        - name: EvaluatePolicy-Methode
+          href: iclrhostbindingpolicymanager-evaluatepolicy-method.md
+        - name: ModifyApplicationPolicy-Methode
+          href: iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md
+      - name: ICLRHostProtectionManager-Schnittstelle
+        href: iclrhostprotectionmanager-interface.md
+        items:
+        - name: SetEagerSerializeGrantSets
+          href: iclrhostprotectionmanager-seteagerserializegrantsets-method.md
+        - name: SetProtectedCategories-Methode
+          href: iclrhostprotectionmanager-setprotectedcategories-method.md
+      - name: ICLRIoCompletionManager-Schnittstelle
+        href: iclriocompletionmanager-interface.md
+        items:
+        - name: OnComplete-Methode
+          href: iclriocompletionmanager-oncomplete-method.md
+      - name: ICLRMemoryNotificationCallback-Schnittstelle
+        href: iclrmemorynotificationcallback-interface.md
+        items:
+        - name: OnMemoryNotification-Methode
+          href: iclrmemorynotificationcallback-onmemorynotification-method.md
+      - name: ICLROnEventManager-Schnittstelle
+        href: iclroneventmanager-interface.md
+        items:
+        - name: RegisterActionOnEvent-Methode
+          href: iclroneventmanager-registeractiononevent-method.md
+        - name: UnregisterActionOnEvent-Methode
+          href: iclroneventmanager-unregisteractiononevent-method.md
+      - name: ICLRPolicyManager-Schnittstelle
+        href: iclrpolicymanager-interface.md
+        items:
+        - name: SetActionOnFailure-Methode
+          href: iclrpolicymanager-setactiononfailure-method.md
+        - name: SetActionOnTimeout-Methode
+          href: iclrpolicymanager-setactionontimeout-method.md
+        - name: SetDefaultAction-Methode
+          href: iclrpolicymanager-setdefaultaction-method.md
+        - name: SetTimeout-Methode
+          href: iclrpolicymanager-settimeout-method.md
+        - name: SetTimeoutAndAction-Methode
+          href: iclrpolicymanager-settimeoutandaction-method.md
+        - name: SetUnhandledExceptionPolicy-Methode
+          href: iclrpolicymanager-setunhandledexceptionpolicy-method.md
+      - name: ICLRProbingAssemblyEnum-Schnittstelle
+        href: iclrprobingassemblyenum-interface.md
+        items:
+        - name: Get-Methode
+          href: iclrprobingassemblyenum-get-method.md
+      - name: ICLRReferenceAssemblyEnum-Schnittstelle
+        href: iclrreferenceassemblyenum-interface.md
+        items:
+        - name: Get-Methode
+          href: iclrreferenceassemblyenum-get-method.md
+      - name: ICLRRuntimeHost-Schnittstelle
+        href: iclrruntimehost-interface.md
+        items:
+        - name: ExecuteApplication-Methode
+          href: iclrruntimehost-executeapplication-method.md
+        - name: ExecuteInAppDomain-Methode
+          href: iclrruntimehost-executeinappdomain-method.md
+        - name: ExecuteInDefaultAppDomain-Methode
+          href: iclrruntimehost-executeindefaultappdomain-method.md
+        - name: GetCLRControl-Methode
+          href: iclrruntimehost-getclrcontrol-method.md
+        - name: GetCurrentAppDomainId-Methode
+          href: iclrruntimehost-getcurrentappdomainid-method.md
+        - name: SetHostControl-Methode
+          href: iclrruntimehost-sethostcontrol-method.md
+        - name: Start-Methode
+          href: iclrruntimehost-start-method.md
+        - name: Stop-Methode
+          href: iclrruntimehost-stop-method.md
+        - name: UnloadAppDomain-Methode
+          href: iclrruntimehost-unloadappdomain-method.md
+      - name: ICLRSyncManager-Schnittstelle
+        href: iclrsyncmanager-interface.md
+        items:
+        - name: CreateRWLockOwnerIterator-Methode
+          href: iclrsyncmanager-createrwlockowneriterator-method.md
+        - name: DeleteRWLockOwnerIterator-Methode
+          href: iclrsyncmanager-deleterwlockowneriterator-method.md
+        - name: GetMonitorOwner-Methode
+          href: iclrsyncmanager-getmonitorowner-method.md
+        - name: GetRWLockOwnerNext-Methode
+          href: iclrsyncmanager-getrwlockownernext-method.md
+      - name: ICLRTask-Schnittstelle
+        href: iclrtask-interface.md
+        items:
+        - name: Abort-Methode
+          href: iclrtask-abort-method.md
+        - name: ExitTask-Methode
+          href: iclrtask-exittask-method.md
+        - name: GetMemStats-Methode
+          href: iclrtask-getmemstats-method.md
+        - name: LocksHeld-Methode
+          href: iclrtask-locksheld-method.md
+        - name: NeedsPriorityScheduling-Methode
+          href: iclrtask-needspriorityscheduling-method.md
+        - name: Reset-Methode
+          href: iclrtask-reset-method.md
+        - name: RudeAbort-Methode
+          href: iclrtask-rudeabort-method.md
+        - name: SetTaskIdentifier-Methode
+          href: iclrtask-settaskidentifier-method.md
+        - name: SwitchIn-Methode
+          href: iclrtask-switchin-method.md
+        - name: SwitchOut-Methode
+          href: iclrtask-switchout-method.md
+        - name: YieldTask-Methode
+          href: iclrtask-yieldtask-method.md
+      - name: ICLRTaskManager-Schnittstelle
+        href: iclrtaskmanager-interface.md
+        items:
+        - name: CreateTask-Methode
+          href: iclrtaskmanager-createtask-method.md
+        - name: GetCurrentTask-Methode
+          href: iclrtaskmanager-getcurrenttask-method.md
+        - name: GetCurrentTaskType-Methode
+          href: iclrtaskmanager-getcurrenttasktype-method.md
+        - name: SetLocale-Methode
+          href: iclrtaskmanager-setlocale-method.md
+        - name: SetUILocale-Methode
+          href: iclrtaskmanager-setuilocale-method.md
+      - name: ICLRValidator-Schnittstelle
+        href: iclrvalidator-interface.md
+        items:
+        - name: FormatEventInfo-Methode
+          href: iclrvalidator-formateventinfo-method.md
+        - name: Validate-Methode
+          href: iclrvalidator-validate-method.md
+      - name: ICorConfiguration-Schnittstelle
+        href: icorconfiguration-interface.md
+        items:
+        - name: AddDebuggerSpecialThread-Methode
+          href: icorconfiguration-adddebuggerspecialthread-method.md
+        - name: SetDebuggerThreadControl-Methode
+          href: icorconfiguration-setdebuggerthreadcontrol-method.md
+        - name: SetGCHostControl-Methode
+          href: icorconfiguration-setgchostcontrol-method.md
+        - name: SetGCThreadControl-Methode
+          href: icorconfiguration-setgcthreadcontrol-method.md
+      - name: ICorThreadpool-Schnittstelle
+        href: icorthreadpool-interface.md
+        items:
+        - name: CorBindIoCompletionCallback-Methode
+          href: icorthreadpool-corbindiocompletioncallback-method.md
+        - name: CorCallOrQueueUserWorkItem-Methode
+          href: icorthreadpool-corcallorqueueuserworkitem-method.md
+        - name: CorChangeTimer-Methode
+          href: icorthreadpool-corchangetimer-method.md
+        - name: CorCreateTimer-Methode
+          href: icorthreadpool-corcreatetimer-method.md
+        - name: CorDeleteTimer-Methode
+          href: icorthreadpool-cordeletetimer-method.md
+        - name: CorGetAvailableThreads-Methode
+          href: icorthreadpool-corgetavailablethreads-method.md
+        - name: CorGetMaxThreads-Methode
+          href: icorthreadpool-corgetmaxthreads-method.md
+        - name: CorQueueUserWorkItem-Methode
+          href: icorthreadpool-corqueueuserworkitem-method.md
+        - name: CorRegisterWaitForSingleObject-Methode
+          href: icorthreadpool-corregisterwaitforsingleobject-method.md
+        - name: CorSetMaxThreads-Methode
+          href: icorthreadpool-corsetmaxthreads-method.md
+        - name: CorUnregisterWait-Methode
+          href: icorthreadpool-corunregisterwait-method.md
+      - name: IDebuggerInfo-Schnittstelle
+        href: idebuggerinfo-interface.md
+        items:
+        - name: IsDebuggerAttached-Methode
+          href: idebuggerinfo-isdebuggerattached-method.md
+      - name: IDebuggerThreadControl-Schnittstelle
+        href: idebuggerthreadcontrol-interface.md
+        items:
+        - name: ReleaseAllRuntimeThreads-Methode
+          href: idebuggerthreadcontrol-releaseallruntimethreads-method.md
+        - name: StartBlockingForDebugger-Methode
+          href: idebuggerthreadcontrol-startblockingfordebugger-method.md
+        - name: ThreadIsBlockingForDebugger-Methode
+          href: idebuggerthreadcontrol-threadisblockingfordebugger-method.md
+      - name: IGCHost-Schnittstelle
+        href: igchost-interface.md
+        items:
+        - name: Collect-Methode
+          href: igchost-collect-method.md
+        - name: GetStats-Methode
+          href: igchost-getstats-method.md
+        - name: GetThreadStats-Methode
+          href: igchost-getthreadstats-method.md
+        - name: SetGCStartupLimits-Methode
+          href: igchost-setgcstartuplimits-method.md
+        - name: SetVirtualMemLimit-Methode
+          href: igchost-setvirtualmemlimit-method.md
+      - name: IGCHost2-Schnittstelle
+        href: igchost2-interface.md
+        items:
+        - name: SetGCStartupLimitsEx-Methode
+          href: igchost2-setgcstartuplimitsex-method.md
+      - name: IGCHostControl-Schnittstelle
+        href: igchostcontrol-interface.md
+        items:
+        - name: RequestVirtualMemLimit-Methode
+          href: igchostcontrol-requestvirtualmemlimit-method.md
+      - name: IGCThreadControl-Schnittstelle
+        href: igcthreadcontrol-interface.md
+        items:
+        - name: SuspensionEnding-Methode
+          href: igcthreadcontrol-suspensionending-method.md
+        - name: SuspensionStarting-Methode
+          href: igcthreadcontrol-suspensionstarting-method.md
+        - name: ThreadIsBlockingForSuspension-Methode
+          href: igcthreadcontrol-threadisblockingforsuspension-method.md
+      - name: IHostAssemblyManager-Schnittstelle
+        href: ihostassemblymanager-interface.md
+        items:
+        - name: GetAssemblyStore-Methode
+          href: ihostassemblymanager-getassemblystore-method.md
+        - name: GetNonHostStoreAssemblies-Methode
+          href: ihostassemblymanager-getnonhoststoreassemblies-method.md
+      - name: IHostAssemblyStore-Schnittstelle
+        href: ihostassemblystore-interface.md
+        items:
+        - name: ProvideAssembly-Methode
+          href: ihostassemblystore-provideassembly-method.md
+        - name: ProvideModule-Methode
+          href: ihostassemblystore-providemodule-method.md
+      - name: IHostAutoEvent-Schnittstelle
+        href: ihostautoevent-interface.md
+        items:
+        - name: Set-Methode
+          href: ihostautoevent-set-method.md
+        - name: Wait-Methode
+          href: ihostautoevent-wait-method.md
+      - name: IHostControl-Schnittstelle
+        href: ihostcontrol-interface.md
+        items:
+        - name: GetHostManager-Methode
+          href: ihostcontrol-gethostmanager-method.md
+        - name: SetAppDomainManager-Methode
+          href: ihostcontrol-setappdomainmanager-method.md
+      - name: IHostCrst-Schnittstelle
+        href: ihostcrst-interface.md
+        items:
+        - name: Enter-Methode
+          href: ihostcrst-enter-method.md
+        - name: Leave-Methode
+          href: ihostcrst-leave-method.md
+        - name: SetSpinCount-Methode
+          href: ihostcrst-setspincount-method.md
+        - name: TryEnter-Methode
+          href: ihostcrst-tryenter-method.md
+      - name: IHostGCManager-Schnittstelle
+        href: ihostgcmanager-interface.md
+        items:
+        - name: SuspensionEnding-Methode
+          href: ihostgcmanager-suspensionending-method.md
+        - name: SuspensionStarting-Methode
+          href: ihostgcmanager-suspensionstarting-method.md
+        - name: ThreadIsBlockingForSuspension-Methode
+          href: ihostgcmanager-threadisblockingforsuspension-method.md
+      - name: IHostIoCompletionManager-Schnittstelle
+        href: ihostiocompletionmanager-interface.md
+        items:
+        - name: Bind-Methode
+          href: ihostiocompletionmanager-bind-method.md
+        - name: CloseIoCompletionPort-Methode
+          href: ihostiocompletionmanager-closeiocompletionport-method.md
+        - name: CreateIoCompletionPort-Methode
+          href: ihostiocompletionmanager-createiocompletionport-method.md
+        - name: GetAvailableThreads-Methode
+          href: ihostiocompletionmanager-getavailablethreads-method.md
+        - name: GetHostOverlappedSize-Methode
+          href: ihostiocompletionmanager-gethostoverlappedsize-method.md
+        - name: GetMaxThreads-Methode
+          href: ihostiocompletionmanager-getmaxthreads-method.md
+        - name: GetMinThreads-Methode
+          href: ihostiocompletionmanager-getminthreads-method.md
+        - name: InitializeHostOverlapped-Methode
+          href: ihostiocompletionmanager-initializehostoverlapped-method.md
+        - name: SetCLRIoCompletionManager-Methode
+          href: ihostiocompletionmanager-setclriocompletionmanager-method.md
+        - name: SetMaxThreads-Methode
+          href: ihostiocompletionmanager-setmaxthreads-method.md
+        - name: SetMinThreads-Methode
+          href: ihostiocompletionmanager-setminthreads-method.md
+      - name: IHostMalloc-Schnittstelle
+        href: ihostmalloc-interface.md
+        items:
+        - name: Alloc-Methode
+          href: ihostmalloc-alloc-method.md
+        - name: DebugAlloc-Methode
+          href: ihostmalloc-debugalloc-method.md
+        - name: Free-Methode
+          href: ihostmalloc-free-method.md
+      - name: IHostManualEvent-Schnittstelle
+        href: ihostmanualevent-interface.md
+        items:
+        - name: Reset-Methode
+          href: ihostmanualevent-reset-method.md
+        - name: Set-Methode
+          href: ihostmanualevent-set-method.md
+        - name: Wait-Methode
+          href: ihostmanualevent-wait-method.md
+      - name: IHostMemoryManager-Schnittstelle
+        href: ihostmemorymanager-interface.md
+        items:
+        - name: AcquiredVirtualAddressSpace-Methode
+          href: ihostmemorymanager-acquiredvirtualaddressspace-method.md
+        - name: CreateMAlloc-Methode
+          href: ihostmemorymanager-createmalloc-method.md
+        - name: GetMemoryLoad-Methode
+          href: ihostmemorymanager-getmemoryload-method.md
+        - name: NeedsVirtualAddressSpace-Methode
+          href: ihostmemorymanager-needsvirtualaddressspace-method.md
+        - name: RegisterMemoryNotificationCallback-Methode
+          href: ihostmemorymanager-registermemorynotificationcallback-method.md
+        - name: ReleasedVirtualAddressSpace-Methode
+          href: ihostmemorymanager-releasedvirtualaddressspace-method.md
+        - name: VirtualAlloc-Methode
+          href: ihostmemorymanager-virtualalloc-method.md
+        - name: VirtualFree-Methode
+          href: ihostmemorymanager-virtualfree-method.md
+        - name: VirtualProtect-Methode
+          href: ihostmemorymanager-virtualprotect-method.md
+        - name: VirtualQuery-Methode
+          href: ihostmemorymanager-virtualquery-method.md
+      - name: IHostPolicyManager-Schnittstelle
+        href: ihostpolicymanager-interface.md
+        items:
+        - name: OnDefaultAction-Methode
+          href: ihostpolicymanager-ondefaultaction-method.md
+        - name: OnFailure-Methode
+          href: ihostpolicymanager-onfailure-method.md
+        - name: OnTimeout-Methode
+          href: ihostpolicymanager-ontimeout-method.md
+      - name: IHostSecurityContext-Schnittstelle
+        href: ihostsecuritycontext-interface.md
+        items:
+        - name: Capture-Methode
+          href: ihostsecuritycontext-capture-method.md
+      - name: IHostSecurityManager-Schnittstelle
+        href: ihostsecuritymanager-interface.md
+        items:
+        - name: GetSecurityContext-Methode
+          href: ihostsecuritymanager-getsecuritycontext-method.md
+        - name: ImpersonateLoggedOnUser-Methode
+          href: ihostsecuritymanager-impersonateloggedonuser-method.md
+        - name: OpenThreadToken-Methode
+          href: ihostsecuritymanager-openthreadtoken-method.md
+        - name: RevertToSelf-Methode
+          href: ihostsecuritymanager-reverttoself-method.md
+        - name: SetSecurityContext-Methode
+          href: ihostsecuritymanager-setsecuritycontext-method.md
+        - name: SetThreadToken-Methode
+          href: ihostsecuritymanager-setthreadtoken-method.md
+      - name: IHostSemaphore-Schnittstelle
+        href: ihostsemaphore-interface.md
+        items:
+        - name: ReleaseSemaphore-Methode
+          href: ihostsemaphore-releasesemaphore-method.md
+        - name: Wait-Methode
+          href: ihostsemaphore-wait-method.md
+      - name: IHostSyncManager-Schnittstelle
+        href: ihostsyncmanager-interface.md
+        items:
+        - name: CreateAutoEvent-Methode
+          href: ihostsyncmanager-createautoevent-method.md
+        - name: CreateCrst-Methode
+          href: ihostsyncmanager-createcrst-method.md
+        - name: CreateCrstWithSpinCount-Methode
+          href: ihostsyncmanager-createcrstwithspincount-method.md
+        - name: CreateManualEvent-Methode
+          href: ihostsyncmanager-createmanualevent-method.md
+        - name: CreateMonitorEvent-Methode
+          href: ihostsyncmanager-createmonitorevent-method.md
+        - name: CreateRWLockReaderEvent-Methode
+          href: ihostsyncmanager-createrwlockreaderevent-method.md
+        - name: CreateRWLockWriterEvent-Methode
+          href: ihostsyncmanager-createrwlockwriterevent-method.md
+        - name: CreateSemaphore-Methode
+          href: ihostsyncmanager-createsemaphore-method.md
+        - name: SetCLRSyncManager-Methode
+          href: ihostsyncmanager-setclrsyncmanager-method.md
+      - name: IHostTask-Schnittstelle
+        href: ihosttask-interface.md
+        items:
+        - name: Alert-Methode
+          href: ihosttask-alert-method.md
+        - name: GetPriority-Methode
+          href: ihosttask-getpriority-method.md
+        - name: Join-Methode
+          href: ihosttask-join-method.md
+        - name: SetCLRTask-Methode
+          href: ihosttask-setclrtask-method.md
+        - name: SetPriority-Methode
+          href: ihosttask-setpriority-method.md
+        - name: Start-Methode
+          href: ihosttask-start-method.md
+      - name: IHostTaskManager-Schnittstelle
+        href: ihosttaskmanager-interface.md
+        items:
+        - name: BeginDelayAbort-Methode
+          href: ihosttaskmanager-begindelayabort-method.md
+        - name: BeginThreadAffinity-Methode
+          href: ihosttaskmanager-beginthreadaffinity-method.md
+        - name: CallNeedsHostHook-Methode
+          href: ihosttaskmanager-callneedshosthook-method.md
+        - name: CreateTask-Methode
+          href: ihosttaskmanager-createtask-method.md
+        - name: EndDelayAbort-Methode
+          href: ihosttaskmanager-enddelayabort-method.md
+        - name: EndThreadAffinity-Methode
+          href: ihosttaskmanager-endthreadaffinity-method.md
+        - name: EnterRuntime-Methode
+          href: ihosttaskmanager-enterruntime-method.md
+        - name: GetCurrentTask-Methode
+          href: ihosttaskmanager-getcurrenttask-method.md
+        - name: GetStackGuarantee-Methode
+          href: ihosttaskmanager-getstackguarantee-method.md
+        - name: LeaveRuntime-Methode
+          href: ihosttaskmanager-leaveruntime-method.md
+        - name: ReverseEnterRuntime-Methode
+          href: ihosttaskmanager-reverseenterruntime-method.md
+        - name: ReverseLeaveRuntime-Methode
+          href: ihosttaskmanager-reverseleaveruntime-method.md
+        - name: SetCLRTaskManager-Methode
+          href: ihosttaskmanager-setclrtaskmanager-method.md
+        - name: SetLocale-Methode
+          href: ihosttaskmanager-setlocale-method.md
+        - name: SetStackGuarantee-Methode
+          href: ihosttaskmanager-setstackguarantee-method.md
+        - name: SetUILocale-Methode
+          href: ihosttaskmanager-setuilocale-method.md
+        - name: Sleep-Methode
+          href: ihosttaskmanager-sleep-method.md
+        - name: SwitchToTask-Methode
+          href: ihosttaskmanager-switchtotask-method.md
+      - name: IHostThreadPoolManager-Schnittstelle
+        href: ihostthreadpoolmanager-interface.md
+        items:
+        - name: GetAvailableThreads-Methode
+          href: ihostthreadpoolmanager-getavailablethreads-method.md
+        - name: GetMaxThreads-Methode
+          href: ihostthreadpoolmanager-getmaxthreads-method.md
+        - name: GetMinThreads-Methode
+          href: ihostthreadpoolmanager-getminthreads-method.md
+        - name: QueueUserWorkItem-Methode
+          href: ihostthreadpoolmanager-queueuserworkitem-method.md
+        - name: SetMaxThreads-Methode
+          href: ihostthreadpoolmanager-setmaxthreads-method.md
+        - name: SetMinThreads-Methode
+          href: ihostthreadpoolmanager-setminthreads-method.md
+      - name: IManagedObject-Schnittstelle
+        href: imanagedobject-interface.md
+        items:
+        - name: GetObjectIdentity-Methode
+          href: imanagedobject-getobjectidentity-method.md
+        - name: GetSerializedBuffer-Methode
+          href: imanagedobject-getserializedbuffer-method.md
+      - name: IObjectHandle-Schnittstelle
+        href: iobjecthandle-interface.md
+        items:
+        - name: Unwrap-Methode
+          href: iobjecthandle-unwrap-method.md
+      - name: ITypeName-Schnittstelle
+        href: itypename-interface.md
+        items:
+        - name: GetAssemblyName-Methode
+          href: itypename-getassemblyname-method.md
+        - name: GetModifierLength-Methode
+          href: itypename-getmodifierlength-method.md
+        - name: GetModifiers-Methode
+          href: itypename-getmodifiers-method.md
+        - name: GetNameCount-Methode
+          href: itypename-getnamecount-method.md
+        - name: GetNames-Methode
+          href: itypename-getnames-method.md
+        - name: GetTypeArgumentCount-Methode
+          href: itypename-gettypeargumentcount-method.md
+        - name: GetTypeArguments-Methode
+          href: itypename-gettypearguments-method.md
+      - name: ITypeNameBuilder-Schnittstelle
+        href: itypenamebuilder-interface.md
+        items:
+        - name: AddArray-Methode
+          href: itypenamebuilder-addarray-method.md
+        - name: AddAssemblySpec-Methode
+          href: itypenamebuilder-addassemblyspec-method.md
+        - name: AddByRef-Methode
+          href: itypenamebuilder-addbyref-method.md
+        - name: AddName-Methode
+          href: itypenamebuilder-addname-method.md
+        - name: AddPointer-Methode
+          href: itypenamebuilder-addpointer-method.md
+        - name: AddSzArray-Methode
+          href: itypenamebuilder-addszarray-method.md
+        - name: Clear-Methode
+          href: itypenamebuilder-clear-method.md
+        - name: CloseGenericArgument-Methode
+          href: itypenamebuilder-closegenericargument-method.md
+        - name: CloseGenericArguments-Methode
+          href: itypenamebuilder-closegenericarguments-method.md
+        - name: OpenGenericArgument-Methode
+          href: itypenamebuilder-opengenericargument-method.md
+        - name: OpenGenericArguments-Methode
+          href: itypenamebuilder-opengenericarguments-method.md
+        - name: ToString-Methode
+          href: itypenamebuilder-tostring-method.md
+      - name: ITypeNameFactory-Schnittstelle
+        href: itypenamefactory-interface.md
+        items:
+        - name: GetTypeNameBuilder-Methode
+          href: itypenamefactory-gettypenamebuilder-method.md
+        - name: ParseTypeName-Methode
+          href: itypenamefactory-parsetypename-method.md
+      - name: IValidator-Schnittstelle
+        href: ivalidator-interface.md
+        items:
+        - name: FormatEventInfo-Methode
+          href: ivalidator-formateventinfo-method.md
+        - name: Validate-Methode
+          href: ivalidator-validate-method.md
+    - name: In .NET Framework 4 und 4.5 hinzugefügte CLR-Hostingschnittstellen
+      href: clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md
+      items:
+      - name: ICLRAppDomainResourceMonitor-Schnittstelle
+        href: iclrappdomainresourcemonitor-interface.md
+        items:
+        - name: GetCurrentAllocated-Methode
+          href: iclrappdomainresourcemonitor-getcurrentallocated-method.md
+        - name: GetCurrentSurvived-Methode
+          href: iclrappdomainresourcemonitor-getcurrentsurvived-method.md
+        - name: GetCurrentCpuTime-Methode
+          href: iclrappdomainresourcemonitor-getcurrentcputime-method.md
+      - name: ICLRDomainManager-Schnittstelle
+        href: iclrdomainmanager-interface.md
+        items:
+        - name: SetAppDomainManagerType-Methode
+          href: iclrdomainmanager-setappdomainmanagertype-method.md
+        - name: SetPropertiesForDefaultAppDomain-Methode
+          href: iclrdomainmanager-setpropertiesfordefaultappdomain-method.md
+      - name: ICLRGCManager2-Schnittstelle
+        href: iclrgcmanager2-interface.md
+        items:
+        - name: SetGCStartupLimitsEx-Methode
+          href: iclrgcmanager2-setgcstartuplimitsex-method.md
+      - name: ICLRMetaHost-Schnittstelle
+        href: iclrmetahost-interface.md
+        items:
+        - name: EnumerateInstalledRuntimes-Methode
+          href: iclrmetahost-enumerateinstalledruntimes-method.md
+        - name: EnumerateLoadedRuntimes-Methode
+          href: iclrmetahost-enumerateloadedruntimes-method.md
+        - name: ExitProcess-Methode
+          href: iclrmetahost-exitprocess-method.md
+        - name: GetRuntime-Methode
+          href: iclrmetahost-getruntime-method.md
+        - name: GetVersionFromFile-Methode
+          href: iclrmetahost-getversionfromfile-method.md
+        - name: QueryLegacyV2RuntimeBinding-Methode
+          href: iclrmetahost-querylegacyv2runtimebinding-method.md
+        - name: RequestRuntimeLoadedNotification-Methode
+          href: iclrmetahost-requestruntimeloadednotification-method.md
+      - name: ICLRMetaHostPolicy-Schnittstelle
+        href: iclrmetahostpolicy-interface.md
+        items:
+        - name: GetRequestedRuntime-Methode
+          href: iclrmetahostpolicy-getrequestedruntime-method.md
+      - name: ICLRRuntimeInfo-Schnittstelle
+        href: iclrruntimeinfo-interface.md
+        items:
+        - name: BindAsLegacyV2Runtime-Methode
+          href: iclrruntimeinfo-bindaslegacyv2runtime-method.md
+        - name: GetDefaultStartupFlags-Methode
+          href: iclrruntimeinfo-getdefaultstartupflags-method.md
+        - name: GetInterface-Methode
+          href: iclrruntimeinfo-getinterface-method.md
+        - name: GetProcAddress-Methode
+          href: iclrruntimeinfo-getprocaddress-method.md
+        - name: GetRuntimeDirectory-Methode
+          href: iclrruntimeinfo-getruntimedirectory-method.md
+        - name: GetVersionString-Methode
+          href: iclrruntimeinfo-getversionstring-method.md
+        - name: IsLoadable-Methode
+          href: iclrruntimeinfo-isloadable-method.md
+        - name: IsLoaded-Methode
+          href: iclrruntimeinfo-isloaded-method.md
+        - name: IsStarted-Methode
+          href: iclrruntimeinfo-isstarted-method.md
+        - name: LoadErrorString-Methode
+          href: iclrruntimeinfo-loaderrorstring-method.md
+        - name: LoadLibrary-Methode
+          href: iclrruntimeinfo-loadlibrary-method.md
+        - name: SetDefaultStartupFlags-Methode
+          href: iclrruntimeinfo-setdefaultstartupflags-method.md
+      - name: ICLRStrongName-Schnittstelle
+        href: iclrstrongname-interface.md
+        items:
+        - name: GetHashFromAssemblyFile-Methode
+          href: iclrstrongname-gethashfromassemblyfile-method.md
+        - name: GetHashFromAssemblyFileW-Methode
+          href: iclrstrongname-gethashfromassemblyfilew-method.md
+        - name: GetHashFromBlob-Methode
+          href: iclrstrongname-gethashfromblob-method.md
+        - name: GetHashFromFile-Methode
+          href: iclrstrongname-gethashfromfile-method.md
+        - name: GetHashFromFileW-Methode
+          href: iclrstrongname-gethashfromfilew-method.md
+        - name: GetHashFromHandle-Methode
+          href: iclrstrongname-gethashfromhandle-method.md
+        - name: StrongNameCompareAssemblies-Methode
+          href: iclrstrongname-strongnamecompareassemblies-method.md
+        - name: StrongNameFreeBuffer-Methode
+          href: iclrstrongname-strongnamefreebuffer-method.md
+        - name: StrongNameGetBlob-Methode
+          href: iclrstrongname-strongnamegetblob-method.md
+        - name: StrongNameGetBlobFromImage-Methode
+          href: iclrstrongname-strongnamegetblobfromimage-method.md
+        - name: StrongNameGetPublicKey-Methode
+          href: iclrstrongname-strongnamegetpublickey-method.md
+        - name: StrongNameHashSize-Methode
+          href: iclrstrongname-strongnamehashsize-method.md
+        - name: StrongNameKeyDelete-Methode
+          href: iclrstrongname-strongnamekeydelete-method.md
+        - name: StrongNameKeyGen-Methode
+          href: iclrstrongname-strongnamekeygen-method.md
+        - name: StrongNameKeyGenEx-Methode
+          href: iclrstrongname-strongnamekeygenex-method.md
+        - name: StrongNameKeyInstall-Methode
+          href: iclrstrongname-strongnamekeyinstall-method.md
+        - name: StrongNameSignatureGeneration-Methode
+          href: iclrstrongname-strongnamesignaturegeneration-method.md
+        - name: StrongNameSignatureGenerationEx-Methode
+          href: iclrstrongname-strongnamesignaturegenerationex-method.md
+        - name: StrongNameSignatureSize-Methode
+          href: iclrstrongname-strongnamesignaturesize-method.md
+        - name: StrongNameSignatureVerification-Methode
+          href: iclrstrongname-strongnamesignatureverification-method.md
+        - name: StrongNameSignatureVerificationEx-Methode
+          href: iclrstrongname-strongnamesignatureverificationex-method.md
+        - name: StrongNameSignatureVerificationFromImage-Methode
+          href: iclrstrongname-strongnamesignatureverificationfromimage-method.md
+        - name: StrongNameTokenFromAssembly-Methode
+          href: iclrstrongname-strongnametokenfromassembly-method.md
+        - name: StrongNameTokenFromAssemblyEx-Methode
+          href: iclrstrongname-strongnametokenfromassemblyex-method.md
+        - name: StrongNameTokenFromPublicKey-Methode
+          href: iclrstrongname-strongnametokenfrompublickey-method.md
+      - name: ICLRStrongName2-Schnittstelle
+        href: iclrstrongname2-interface.md
+        items:
+        - name: StrongNameGetPublicKeyEx-Methode
+          href: strongnamegetpublickeyex-method.md
+        - name: StrongNameSignatureVerificationEx2-Method
+          href: strongnamesignatureverificationex2-method.md
+      - name: ICLRTask2-Schnittstelle
+        href: iclrtask2-interface.md
+        items:
+        - name: BeginPreventAsyncAbort-Methode
+          href: iclrtask2-beginpreventasyncabort-method.md
+        - name: EndPreventAsyncAbort-Methode
+          href: iclrtask2-endpreventasyncabort-method.md
+  - name: Hostingstrukturen
+    href: hosting-structures.md
+    items:
+    - name: AssemblyBindInfo-Struktur
+      href: assemblybindinfo-structure.md
+    - name: BucketParameters-Struktur
+      href: bucketparameters-structure.md
+    - name: COR_GC_STATS-Struktur
+      href: cor-gc-stats-structure.md
+    - name: COR_GC_THREAD_STATS-Struktur
+      href: cor-gc-thread-stats-structure.md
+    - name: CustomDumpItem-Struktur
+      href: customdumpitem-structure.md
+    - name: MDAInfo-Struktur
+      href: mdainfo-structure.md
+    - name: ModuleBindInfo-Struktur
+      href: modulebindinfo-structure.md
+    - name: StackOverflowInfo-Struktur
+      href: stackoverflowinfo-structure.md
+ms.openlocfilehash: c00bee82be09f0c49877ccc8aa4105e64a47f2df
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469537"

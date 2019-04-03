@@ -4,12 +4,12 @@ description: Informationen zu den neuen Funktionen in .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 5d21d2e07342d52dc438b67f9738f43fca47469a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d0f6a9faaec4d4438452054624751a40c96c8e5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679892"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464072"
 ---
 # <a name="whats-new-in-net-core-20"></a>Neuigkeiten in .NET Core 2.0
 
@@ -144,7 +144,7 @@ Weitere Informationen finden Sie unter [Live Unit Testing mit Visual Studio 2017
 
 Wenn Sie ein Projekt für mehrere Zielframeworks erstellen, können Sie nun die Zielplattform im Hauptebenenmenü auswählen. In der folgenden Abbildung ist ein Projekt namens „SCD1“ für 64-Bit-macOS X 10.11 (`osx.10.11-x64`) und 64-Bit-Windows 10/Windows Server 2016 (`win10-x64`) bestimmt. Sie können das Zielframework vor der Projektschaltfläche auswählen, in diesem Fall zum Ausführen eines Debugbuilds.
 
-![Auswahl des Zielframeworks beim Erstellen eines Projekts](media/multitarget.png)
+![Screenshot mit der Zielframeworkauswahl beim Erstellen eines Projekts](./media/dotnet-core-2-0/target-framework-selection.png)
 
 ### <a name="side-by-side-support-for-net-core-sdks"></a>Parallele Unterstützung für .NET Core-SDKs
 
