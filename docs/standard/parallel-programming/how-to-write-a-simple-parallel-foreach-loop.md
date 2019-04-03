@@ -51,7 +51,7 @@ In Visual Studio gibt es Visual Basic- und C#-Konsolenanwendungsvorlagen für Wi
 
 Sie können über die Befehlszeile entweder .NET Core und die zugehörigen CLI-Tools (z.B. `dotnet new console` oder `dotnet new console -lang vb`) nutzen oder die Datei erstellen und den Befehlszeilencompiler für eine .NET Framework-Anwendung nutzen.
 
-Bei einem .NET Core-Projekt müssen Sie auf das NuGet-Paket **System.Drawing.Common** verweisen. Verwenden Sie in Visual Studio den NuGet-Paket-Manager zum Installieren des Pakets. Alternativ können Sie in Ihrer *.* CSPROJ*- oder *.* VBPROJ*-Datei auf das Paket verweisen:
+Bei einem .NET Core-Projekt müssen Sie auf das NuGet-Paket **System.Drawing.Common** verweisen. Verwenden Sie in Visual Studio den NuGet-Paket-Manager zum Installieren des Pakets. Alternativ können Sie in Ihrer *.* CSPROJ* - oder *.* VBPROJ*-Datei auf das Paket verweisen:
  
 ```xml
 <ItemGroup>
