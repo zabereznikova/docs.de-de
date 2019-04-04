@@ -1,10 +1,15 @@
 ---
 title: Das .NET Compiler Platform SDK (Roslyn APIs)
-description: 'Erfahren Sie, wie das .NET Compiler Platform-SDK (auch als „Roslyn-APIs“ bezeichnet) verwendet wird, um den .NET-Code zu analysieren, Fehler zu erkennen und diese Fehler zu beheben.'
+description: Erfahren Sie, wie das .NET Compiler Platform-SDK (auch als „Roslyn-APIs“ bezeichnet) verwendet wird, um den .NET-Code zu analysieren, Fehler zu erkennen und diese Fehler zu beheben.
 ms.date: 10/10/2017
 ms.custom: mvc
+ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185843"
 ---
-
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform-SDK
 
 Compiler erstellen bei der Validierung der Syntax und Semantik eines Anwendungscodes ein detailliertes Modell davon. Basierend auf diesem Modell wird die ausführbare Ausgabe aus dem Quellcode erstellt. Zugriff auf dieses Modell wird durch das .NET Compiler Platform-SDK ermöglicht. Um die Produktivität zu steigern, greifen wir vermehrt auf Funktionen der integrierten Entwicklungsumgebung (IDE) zurück, wie IntelliSense, Refactoring, intelligentes Umbenennen, „Alle Verweise suchen“ und „Gehe zu Definition“. Zur Verbesserung unserer Codequalität nehmen wir Codeanalysetools und zur Unterstützung der Anwendungsentwicklung Codegeneratoren zu Hilfe. Je intelligenter diese Tools werden, desto umfangreicher wird auch der erforderliche Zugriff auf das Modell, das nur von Compilern bei der Verarbeitung des Anwendungscodes erstellt wird. Genau darin besteht das Hauptziel der Roslyn-APIs: Das Geheimnis um die Blackboxes zu lüften und Tools wie auch Endbenutzern die Nutzung der umfassenden Informationen zu ermöglichen, die bezüglich unseres Codes in den Compilern enthalten sind.

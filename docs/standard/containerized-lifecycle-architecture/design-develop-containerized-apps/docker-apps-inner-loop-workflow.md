@@ -1,17 +1,17 @@
 ---
-title: Innere Schleife Entwicklungsworkflow für Docker-apps
+title: Inner-Loop-Entwicklungsworkflow für Docker-Apps
 description: Erfahren Sie, die "innere Schleife"-Workflow für die Entwicklung von Docker-Anwendungen.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676667"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920908"
 ---
-# <a name="inner-loop-development-workflow-for-docker-apps"></a>Innere Schleife Entwicklungsworkflow für Docker-apps
+# <a name="inner-loop-development-workflow-for-docker-apps"></a>Inner-Loop-Entwicklungsworkflow für Docker-Apps
 
 Vor dem Auslösen des äußeren Schleife Workflows umfasst den gesamten DevOps-Zyklus, es beginnt alles auf dem Computer jedes Entwicklers, die app selbst zu codieren, verwenden ihren bevorzugten Sprachen oder Plattformen und diese lokal testen (Abbildung 4-21). In jedem Fall müssen Sie aber einen wichtigen Punkt gemeinsam, unabhängig davon, welche Sprache, Framework oder Plattformen, die Sie auswählen. In diesem bestimmten Workflow immer entwickeln und Testen des Docker-Containern, aber lokal.
 
@@ -105,7 +105,7 @@ In Abbildung 4-24, können Sie sehen, wie ein Docker-compose-Datei wird mithilfe
 
 **Abbildung 4-24.** Docker-Dateien hinzugefügt, mit der **Hinzufügen von Docker-Dateien auf Workspace-Befehl**
 
-Wenn Sie eine dockerfile-Datei hinzufügen, geben Sie welche Docker-Basisimage Sie verwenden (wie die Verwendung von `FROM microsoft/aspnetcore`). Erstellen Sie in der Regel Ihr benutzerdefinierte Image auf einem Basisimage, die Sie aus einem offiziellen-Repository auf erhalten die [Docker Hub-Registrierung](https://hub.docker.com/) (z. B. eine [Images für .NET Core](https://hub.docker.com/r/microsoft/dotnet/) oder der [für Node.js](https://hub.docker.com/_/node/)).
+Wenn Sie eine dockerfile-Datei hinzufügen, geben Sie welche Docker-Basisimage Sie verwenden (wie die Verwendung von `FROM mcr.microsoft.com/dotnet/core/aspnet`). Erstellen Sie in der Regel Ihr benutzerdefinierte Image auf einem Basisimage, die Sie aus einem offiziellen-Repository auf erhalten die [Docker Hub-Registrierung](https://hub.docker.com/) (z. B. eine [Images für .NET Core](https://hub.docker.com/_/microsoft-dotnet-core/) oder der [für Node.js](https://hub.docker.com/_/node/)).
 
 ***Verwenden Sie ein vorhandenes offizielles dockerimage***
 
@@ -115,7 +115,7 @@ Im folgenden finden eine DockerFile-Beispieldatei für eine .NET Core-Container:
 
 ```Dockerfile
 # Base Docker image to use  
-FROM microsoft/dotnet:2.1-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
   
 # Set the Working Directory and files to be copied to the image  
 ARG source  
@@ -129,7 +129,7 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-Das Bild in diesem Fall basiert auf Version 2.1 von der offiziellen ASP.NET Core-Docker-Image (Multi-Arch für Linux und Windows), gemäß der Zeile `FROM microsoft/dotnet:2.1-aspnetcore-runtime`. (Weitere Informationen zu diesem Thema finden Sie unter den [ASP.NET Core-Docker-Image](https://hub.docker.com/r/microsoft/aspnetcore/) Seite und die [.NET Core-Docker-Image](https://hub.docker.com/r/microsoft/dotnet/) Seite).
+Das Bild in diesem Fall basiert auf Version 2.1 von der offiziellen ASP.NET Core-Docker-Image (Multi-Arch für Linux und Windows), gemäß der Zeile `FROM mcr.microsoft.com/dotnet/core/aspnet:2.1`. (Weitere Informationen zu diesem Thema finden Sie unter den [ASP.NET Core-Docker-Image](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) Seite und die [.NET Core-Docker-Image](https://hub.docker.com/_/microsoft-dotnet-core/) Seite).
 
 In der dockerfile-Datei können Sie auch weisen Docker an zum TCP-Port zu lauschen, die Sie zur Laufzeit (z. B. Port 80) verwenden.
 
@@ -143,9 +143,9 @@ Je nach Sprache und Framework, die Sie verwenden, können Sie zusätzliche Konfi
 
 **Verwenden Sie die Repositorys für Images für mehrere Architekturen**
 
-Ein einzelnes Image-Name in einem Repository kann Plattformvarianten, z. B. ein Linux-Image und ein Windows-Image enthalten. Dieses Feature ermöglicht Anbietern wie Microsoft (basisimageentwickler), um ein Repository für mehrere Plattformen (d. h., Linux und Windows) zu erstellen. Z. B. die [Microsoft/Aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) Repository zur Verfügung, in der Docker-Hub-Registrierung bietet Unterstützung für Linux und Windows Nano Server mit denselben imagenamen ein.
+Ein einzelnes Image-Name in einem Repository kann Plattformvarianten, z. B. ein Linux-Image und ein Windows-Image enthalten. Dieses Feature ermöglicht Anbietern wie Microsoft (basisimageentwickler), um ein Repository für mehrere Plattformen (d. h., Linux und Windows) zu erstellen. Z. B. die [Dotnet/Core/Aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) Repository zur Verfügung, in der Docker-Hub-Registrierung bietet Unterstützung für Linux und Windows Nano Server mit denselben imagenamen ein.
 
-Abrufen der [Microsoft/Aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) Image von einem Windows-Host Ruft die Windows-Variante, während der gleiche ImageName von einem Linux-Host ziehen die Linux-Variante abruft.
+Abrufen der [Dotnet/Core/Aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) Image von einem Windows-Host Ruft die Windows-Variante, während der gleiche ImageName von einem Linux-Host ziehen die Linux-Variante abruft.
 
 ***Ihr Basisimage von Grund auf neu erstellen***
 

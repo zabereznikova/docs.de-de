@@ -1,11 +1,16 @@
 ---
 title: Docker DevOps-Anwendungsworkflow mit Microsoft-Tools
-description: 'Containerisierten Docker-Anwendungslebenszyklus mit Microsoft Platform und Tools, DevOps-Workflow mit Microsoft-tools'
+description: Containerisierten Docker-Anwendungslebenszyklus mit Microsoft Platform und Tools, DevOps-Workflow mit Microsoft-tools
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: a2fa1dddd68a54b7aab2ac44bf6109626689b36b
+ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56663924"
 ---
-
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Docker DevOps-Anwendungsworkflow mit Microsoft-Tools
 
 *Microsoft Visual Studio, Azure DevOps-Services, Team Foundation Server und Application Insights geben ein umfassendes Ökosystem für Entwicklungs- und IT-Betrieb, mit denen dem Team die Tools zum Verwalten von Projekten und schnell erstellen, testen und bereitstellen Anwendungen in Containern.*

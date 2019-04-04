@@ -1,11 +1,16 @@
 ---
-title: 'Ausführen, Verwalten und Überwachen von Docker-Produktionsumgebungen'
+title: Ausführen, Verwalten und Überwachen von Docker-Produktionsumgebungen
 description: Lebenszyklus von Docker-Containeranwendungen mit der Microsoft-Plattform und Tools
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 7c470a2d24b8807bdda10e1816bc5a430a5c63f1
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834939"
 ---
-
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Ausführen, Verwalten und Überwachen von Docker-Produktionsumgebungen
 
 Vision: In Unternehmen eingesetzten Anwendungen müssen mit hoher Verfügbarkeit und hoher Skalierbarkeit ausführen, Operative IT muss in der Lage, verwalten und überwachen die Umgebungen und die Anwendungen selbst.

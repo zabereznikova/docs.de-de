@@ -4,8 +4,13 @@ description: Fasst die nicht verwaltete .NET Framework-API für WMI und Informat
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377455"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows-Verwaltungsinstrumentation (WMI) und Leistungsindikatoren (Referenz zur nicht verwalteten API)
 
 Die .NET Framework-WMI und Leistungsindikatoren für die nicht verwaltete API bestehen aus einer Sammlung von Funktionen, die Aufrufe der [nativen Windows-Verwaltungsinstrumentation-API](/windows/desktop/WmiSdk/com-api-for-wmi) in einen Wrapper einschließen. Sie ermöglichen die Entwicklung von Tools und Bibliotheken, die Remotecomputersysteme verwalten und überwachen.

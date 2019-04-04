@@ -1,26 +1,26 @@
 ---
 title: Arbeiten mit Kalendern
-ms.date: 02/23/2019
+ms.date: 04/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- globalization [.NET Framework], calendars
+- globalization [.NET], calendars
 - calendars, global applications
 - global applications, calendars
 - world-ready applications, calendars
-- international applications [.NET Framework], calendars
+- international applications [.NET], calendars
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bc41f6881c8a876e77ac385c715a5517b95842c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845985"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921350"
 ---
 # <a name="working-with-calendars"></a>Arbeiten mit Kalendern
 
@@ -30,33 +30,33 @@ Obwohl ein Datums- und Uhrzeitwert eine universale zeitliche Angabe darstellt, i
 
 Alle Kalender in .NET leiten Sie von der <xref:System.Globalization.Calendar?displayProperty=nameWithType> -Klasse, die die basisimplementierung für Kalender-Implementierung bietet. Eine der Klassen, die von der <xref:System.Globalization.Calendar>-Klasse erbt, ist die <xref:System.Globalization.EastAsianLunisolarCalendar>-Klasse. Dies ist die Basisklasse für alle Mond-Sonne-Kalender. .NET umfasst folgende kalenderimplementierungen:
 
-* <xref:System.Globalization.ChineseLunisolarCalendar> stellt den chinesischen Mond-Sonne-Kalender dar.
+* <xref:System.Globalization.ChineseLunisolarCalendar>, der den chinesischen Mond-Sonne-Kalender darstellt.
 
-* <xref:System.Globalization.GregorianCalendar> stellt den gregorianischen Kalender dar. Dieser Kalender ist in weitere Untertypen unterteilt (z. B. Französisch (Naher Osten) oder Arabisch), die durch die <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType>-Enumeration definiert werden. Die <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType>-Eigenschaft gibt den Untertyp des gregorianischen Kalenders an.
+* <xref:System.Globalization.GregorianCalendar>, stellt den gregorianischen Kalender dar. Dieser Kalender ist in weitere Untertypen unterteilt (z. B. Französisch (Naher Osten) oder Arabisch), die durch die <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType>-Enumeration definiert werden. Die <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType>-Eigenschaft gibt den Untertyp des gregorianischen Kalenders an.
 
-* <xref:System.Globalization.HebrewCalendar> stellt den hebräischen Kalender dar.
+* <xref:System.Globalization.HebrewCalendar>, stellt den hebräischen Kalender dar.
 
-* <xref:System.Globalization.HijriCalendar> stellt den Hijri-Kalender dar.
+* <xref:System.Globalization.HijriCalendar>, stellt den Hijri-Kalender dar.
 
-* <xref:System.Globalization.JapaneseCalendar> stellt den japanischen Kalender dar.
+* <xref:System.Globalization.JapaneseCalendar>, stellt den japanischen Kalender dar.
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar> stellt den japanischen Mond-Sonne-Kalender dar.
+* <xref:System.Globalization.JapaneseLunisolarCalendar>, das im japanischen Mond-Sonne-Kalender darstellt.
 
-* <xref:System.Globalization.JulianCalendar> stellt den julianischen Kalender dar.
+* <xref:System.Globalization.JulianCalendar>, stellt den julianischen Kalender dar.
 
-* <xref:System.Globalization.KoreanCalendar> stellt den koreanischen Kalender dar.
+* <xref:System.Globalization.KoreanCalendar>, stellt den koreanischen Kalender dar.
 
-* <xref:System.Globalization.KoreanLunisolarCalendar> stellt den koreanischen Mond-Sonne-Kalender dar.
+* <xref:System.Globalization.KoreanLunisolarCalendar>, der den koreanischen Mond-Sonne-Kalender darstellt.
 
-* <xref:System.Globalization.PersianCalendar> stellt den persischen Kalender dar.
+* <xref:System.Globalization.PersianCalendar>, stellt den persischen Kalender dar.
 
-* <xref:System.Globalization.TaiwanCalendar> stellt den taiwanesischen Kalender dar.
+* <xref:System.Globalization.TaiwanCalendar>, stellt den taiwanesischen Kalender dar.
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar> stellt den taiwanesischen Mond-Sonne-Kalender dar.
+* <xref:System.Globalization.TaiwanLunisolarCalendar>, der den taiwanesischen Mond-Sonne-Kalender darstellt.
 
-* <xref:System.Globalization.ThaiBuddhistCalendar> stellt den buddhistischen Kalender Thailands dar.
+* <xref:System.Globalization.ThaiBuddhistCalendar>, stellt den buddhistischen Kalender dar.
 
-* <xref:System.Globalization.UmAlQuraCalendar>, der den Umm al-Qura-Kalender darstellt.
+* <xref:System.Globalization.UmAlQuraCalendar>, der den Umm Al-Qura-Kalender darstellt.
 
 Ein Kalender kann auf zwei Arten verwendet werden:
 
@@ -138,13 +138,16 @@ Es gibt jedoch eine wichtige Ausnahme. Der (nicht initialisierte) Standardwert e
 Kalender unterteilen Datumsangaben in der Regel in Zeiträume. Allerdings die <xref:System.Globalization.Calendar> Klassen in .NET unterstützen nicht alle Zeiträume, die durch einen Kalender, und die meisten definiert die <xref:System.Globalization.Calendar> Klassen unterstützen nur einen einzigen Zeitraum. Nur die Klassen <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar> unterstützen mehrere Zeiträume.
 
 > [!IMPORTANT]
->  Am 1. Mai 2019 beginnt ein neuer Zeitabschnitt im <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar>. Diese Änderung betrifft alle Anwendungen, die diese Kalender verwenden. Unter [Handling a new era in the Japanese calendar in .NET (Umgang mit einem neuen Zeitabschnitt im japanischen Kalender in .NET)](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/) finden Sie weiter Informationen und wie Sie bestimmen können, ob Ihre Anwendungen ebenfalls betroffen sind. Finden Sie unter [Vorbereiten Ihrer Anwendung auf die japanischen Zeitraum Änderung](/windows/uwp/design/globalizing/japanese-era-change) Informationen zum Testen von Anwendungen auf Windows, um sicherzustellen, dass deren Bereitschaft für den Zeitraum ändern.
+>  Der Zeitraum Reiwa, eine neue Ära in der <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar>, beginnt am 1. Mai 2019. Diese Änderung betrifft alle Anwendungen, die diese Kalender verwenden. Finden Sie unter den folgenden Artikeln Weitere Informationen:
+> - [Behandeln eine neue Ära im japanischen Kalender in .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/), Kalender mit mehreren Zeiträumen und erläutert bewährte Verfahren zu verwenden, bei der Verarbeitung mit mehreren Zeitraum Kalender in der dokumentiert sind Funktionen hinzugefügt, die zu .NET unterstützen.
+> - [Vorbereiten Ihrer Anwendung auf die japanischen Zeitraum Änderung](/windows/uwp/design/globalizing/japanese-era-change), die Informationen bereitstellt, auf das Testen von Anwendungen auf Windows, um sicherzustellen, dass deren Bereitschaft für den Zeitraum ändern.
+> - [Zusammenfassung der neuen japanischen Ära aktualisiert für .NET Framework](https://support.microsoft.com/en-us/help/4477957/new-japanese-era-updates-for-net-framework), dem .NET Framework-Updates für einzelne Windows-Versionen aufgeführt, die im Zusammenhang mit der neuen Ära der japanischen Kalender, Anmerkungen zu dieser neuen Features von .NET Framework für die Unterstützung von mehreren Zeiträumen und enthält die Dinge, die beim Testen Ihrer Anwendungen gesucht.
 
-Ein Zeitraum, in den meisten Kalendern gibt einen extrem langen Zeitraum an. Im gregorianischen Kalender umfasst mehr als zwei Millenia z. B. der aktuelle Zeitraum. Für die <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar>, die beiden Kalender, die mehrere Zeiträume unterstützen, ist dies nicht der Fall. Ein Zeitraum entspricht dem Zeitraum des ein Kaisers. Unterstützung für mehrere Zeiträume, insbesondere dann, wenn die Obergrenze des aktuellen Zeitraums unbekannt ist, beträgt besondere Herausforderungen verbunden ist. 
+Ein Zeitraum, in den meisten Kalendern gibt einen extrem langen Zeitraum an. Im gregorianischen Kalender umfasst mehr als zwei Jahrtausenden z. B. der aktuelle Zeitraum. Für die <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar>, die beiden Kalender, die mehrere Zeiträume unterstützen, ist dies nicht der Fall. Ein Zeitraum entspricht dem Zeitraum des ein Kaisers. Unterstützung für mehrere Zeiträume, insbesondere dann, wenn die Obergrenze des aktuellen Zeitraums unbekannt ist, beträgt besondere Herausforderungen verbunden ist. 
 
 ### <a name="eras-and-era-names"></a>Zeiträume und Namen
 
-In .NET Ganzzahlen, das die Zeiträume unterstützt bei einer bestimmten Implementierung darstellt, befinden sich in umgekehrter Reihenfolge in der <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> Array. Der aktuelle Zeitraum hat den Index 0 (null), und bei <xref:System.Globalization.Calendar>-Klassen, die mehrere Zeiträume unterstützen, entspricht jeder nachfolgende Index dem jeweils davorliegenden Zeitraum. Die statische <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType>-Eigenschaft definiert den Index des aktuellen Zeitraums im <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>-Array. Dies ist eine Konstante, die stets den Wert 0 (null) hat. Einzelne <xref:System.Globalization.Calendar>-Klassen beinhalten darüber hinaus auch statische Felder, die den Wert des aktuellen Zeitraums zurückgeben. Sie sind in der folgenden Tabelle aufgeführt.
+In .NET Ganzzahlen, das die Zeiträume unterstützt bei einer bestimmten Implementierung darstellt, befinden sich in umgekehrter Reihenfolge in der <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> Array. Der aktuelle Zeitraum (die den Zeitraum mit den aktuellen Zeitbereich) ist am Index 0 (null) und für <xref:System.Globalization.Calendar> Klassen, die mehrere Zeiträume unterstützen, jeder nachfolgende Index gibt den vorherigen Zeitraum. Die statische <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType>-Eigenschaft definiert den Index des aktuellen Zeitraums im <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>-Array. Dies ist eine Konstante, die stets den Wert 0 (null) hat. Einzelne <xref:System.Globalization.Calendar>-Klassen beinhalten darüber hinaus auch statische Felder, die den Wert des aktuellen Zeitraums zurückgeben. Sie sind in der folgenden Tabelle aufgeführt.
 
 | Kalenderklasse                                        | Feld für den aktuellen Zeitraum                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------------- |
@@ -162,8 +165,8 @@ In .NET Ganzzahlen, das die Zeiträume unterstützt bei einer bestimmten Impleme
 
 Der Name, der dem Zeitraum mit einer bestimmten Nummer entspricht, kann durch Übergeben der Nummer an die <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType>-Methode oder an die <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType>-Methode abgerufen werden. Im folgenden Beispiel werden diese Methoden aufgerufen, um Informationen über die Unterstützung von Zeiträumen in der <xref:System.Globalization.GregorianCalendar>-Klasse abzurufen.
 
-[!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs#7)]
-[!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb#7)]
+[!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
+[!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
 
 Darüber hinaus enthält die benutzerdefinierte Formatzeichenfolge "g" für Datum und Uhrzeit den Namen des Zeitraums eines Kalenders in der Zeichenfolgendarstellung eines Datums- und Uhrzeitwerts. Weitere Informationen finden Sie unter [Formatzeichenfolgen benutzerdefinierte Datums- und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).
 
@@ -197,7 +200,7 @@ Wenn der Zeitraum geändert wird, wird die Absicht des Codes jedoch nicht eindeu
 > [!TIP]
 > Bei der Verwendung von Kalendern, die mehrere Zeiträume unterstützen *immer* der gregorianische Kalender ein Datum zu instanziieren, oder geben Sie den Zeitraum, der beim Instanziieren einer Datums- und Uhrzeitangabe basierend auf diesen Kalender.
 
-Ein Zeitraum zum Angeben der <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> -Methode, geben Sie den Index, der den Zeitraum in des im Kalenders <xref:System.Globalization.Calendar.Eras> Eigenschaft. Bei Kalendern, deren Zeiträume geändert werden, sind jedoch diese Indizes nicht konstante Werte; der aktuelle Zeitraum ist bei Index 0, und der älteste Zeitraum am Index `Eras.Length - 1`. Wenn eine neue Ära in einem Kalender hinzugefügt wird, werden die Indizes der vorherigen Zeiträume um eins erhöhen. Sie können den entsprechenden Zeitraum Index wie folgt bereitstellen:
+Bei Angabe eines Zeitraums auf die <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)> -Methode, geben Sie den Index, der den Zeitraum in des im Kalenders <xref:System.Globalization.Calendar.Eras> Eigenschaft. Bei Kalendern, deren Zeiträume geändert werden, sind jedoch diese Indizes nicht konstante Werte; der aktuelle Zeitraum ist bei Index 0, und der älteste Zeitraum am Index `Eras.Length - 1`. Wenn eine neue Ära in einem Kalender hinzugefügt wird, werden die Indizes der vorherigen Zeiträume um eins erhöhen. Sie können den entsprechenden Zeitraum Index wie folgt bereitstellen:
 
 - Verwenden Sie für die Datumsangaben im aktuellen Zeitraum, immer des Kalenders <xref:System.Globalization.Calendar.CurrentEra> Eigenschaft.
 
@@ -205,7 +208,7 @@ Ein Zeitraum zum Angeben der <xref:System.Globalization.Calendar.ToDateTime(Syst
 
 ### <a name="calendars-eras-and-date-ranges-relaxed-range-checks"></a>Kalender, Zeiträumen und Datumsbereiche: Weniger strengen Prüfungen
 
-Sehr ähnlich wie einzelne Kalender Datumsbereiche, unterstützt haben Zeiträume in der <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar> Klassen auch, dass eine unterstützte Bereiche. Bisher wurde für .NET strict Zeitraum, für die Range überprüft, um sicherzustellen, dass ein Era-spezifische Datum innerhalb des Bereichs dieser Ära wurde verwendet. Ein Datum außerhalb des gültigen Bereichs ausgelöst, eine .NET Framework verwendet bereichsbasierte weniger strengen Überprüfung standardmäßig. D.h., wenn ein Datum außerhalb des Bereichs des angegebenen Zeitraums ist, löst die Methode eine <xref:System.ArgumentOutOfRangeException>. Updates für alle Versionen von .NET Framework eingeführt Zeitraum gelockert liegen überprüft. der Versuch zum Instanziieren einer Era-spezifische Datum, das außerhalb des Bereichs des angegebenen Zeitraums "Überlauf" in den folgenden Zeitraum ein, und keine Ausnahme ausgelöst.
+Sehr ähnlich wie einzelne Kalender Datumsbereiche, unterstützt haben Zeiträume in der <xref:System.Globalization.JapaneseCalendar> und <xref:System.Globalization.JapaneseLunisolarCalendar> Klassen auch, dass eine unterstützte Bereiche. Bisher wurde für .NET strict Zeitraum, für die Range überprüft, um sicherzustellen, dass ein Era-spezifische Datum innerhalb des Bereichs dieser Ära wurde verwendet. D.h., wenn ein Datum außerhalb des Bereichs des angegebenen Zeitraums ist, löst die Methode eine <xref:System.ArgumentOutOfRangeException>. Derzeit wird .NET verwendet, die bereichsbasierte weniger strengen Überprüfung standardmäßig. Updates für alle Versionen von .NET, gelockerte Zeitraum eingeführt liegen überprüft; der Versuch, ein Datum Era-spezifische zu instanziieren, die außerhalb des Bereichs des angegebenen Zeitraums "führt zu einem Überlauf" in den folgenden Zeitraum aus, und keine Ausnahme ausgelöst wird.
 
 Im folgenden Beispiel wird versucht, ein Datum im Jahr 65. des Zeitraums Showa, zu instanziieren, die auf 25 Dezember 1926 begann und endete am 7. Januar 1989. Dieses Datum entspricht dem 9. Januar 1990, d.h. außerhalb des Bereichs des Zeitraums Showa in die <xref:System.Globalization.JapaneseCalendar>. Wie die Ausgabe im Beispiel wird veranschaulicht, ist das Datum angezeigt, die im Beispiel am 9. Januar 1990 im zweiten Jahr im Heisei Zeitraum zurück.
 
@@ -240,7 +243,7 @@ Wenn weniger strengen Prüfungen nicht erwünscht sind, können Sie strengen Pr�
    |  |  |
    |--|--|
    |Key | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
-   |name | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
+   |Name | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
    |Typ | REG_SZ |
    |Wert | 1 |
 
@@ -315,7 +318,7 @@ Wenn dieses Verhalten bei Formatierungsvorgängen nicht erwünscht ist, können 
    |  |  |
    |--|--|
    |Key | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
-   |name | Switch.System.Globalization.FormatJapaneseFirstYearAsANumber |
+   |Name | Switch.System.Globalization.FormatJapaneseFirstYearAsANumber |
    |Typ | REG_SZ |
    |Wert | 1 |
 
@@ -353,7 +356,7 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
    |  |  |
    |--|--|  
    |Key | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
-   |name | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
+   |Name | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
    |Typ | REG_SZ |
    |Wert | 1 | 
 
@@ -361,3 +364,4 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 
 - [Vorgehensweise: Anzeigen von Datumsangaben in nicht gregorianischen Kalendern](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
 - [Beispiel: Kalender-Woche-Bereich-Hilfsprogramm](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [Kalenderklasse](xref:System.Globalization.Calendar)

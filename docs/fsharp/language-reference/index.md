@@ -1,7 +1,13 @@
 ---
-title: 'F#-Sprachreferenz'
-description: 'Suchen F# Language Featureinformationen von diesem Verweis zum sprachtoken Konzepte, Typen, Ausdrücke und Compiler-unterstütztes Konstrukt Themen.'
+title: F#-Sprachreferenz
+description: Suchen F# Language Featureinformationen von diesem Verweis zum sprachtoken Konzepte, Typen, Ausdrücke und Compiler-unterstütztes Konstrukt Themen.
 ms.date: 05/16/2016
+ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846635"
 ---
 # <a name="f-language-reference"></a>F#-Sprachreferenz
 

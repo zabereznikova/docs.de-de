@@ -4,12 +4,12 @@ description: Erfahren Sie, einige grundlegende Terminologie, die täglich verwen
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 07371bee6881b1fa7edf64b9bb50d387dcbf9dde
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 79b1c6e01c96a906925e5b81b8ea14f988becd7c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677173"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920648"
 ---
 # <a name="docker-terminology"></a>Docker-Terminologie
 
@@ -33,7 +33,7 @@ In diesem Abschnitt werden die Begriffe und Definitionen aufgelistet, mit denen 
 
 **Registrierung:** Ein Dienst, der Zugriff auf Repositorys bereitstellt. Die Standardregistrierung für die meisten öffentlichen Images ist der [Docker-Hub](https://hub.docker.com/) (im Besitz des Docker-Unternehmens). Eine Registrierung enthält in der Regel Repositorys mehrerer Teams. Unternehmen haben häufig private Registrierungen zum Speichern und Verwalten von Images, die sie erstellt haben. Azure Container Registry ist ein weiteres Beispiel.
 
-**Images für mehrere Architekturen:** Für Multi-Architektur ist ein Feature, das die Auswahl des entsprechenden Bilds vereinfacht die Plattform, auf dem Docker, z. B. ausgeführt wird Wenn eine dockerfile-Datei ein Basisimage anfordert **`FROM microsoft/dotnet:2.1-sdk`** aus der Registrierung Tatsächlich wird **`2.1-sdk-nanoserver-1709`**, **`2.1-sdk-nanoserver-1803`** oder **`2.1-sdk-alpine`** je nach Betriebssystem und Version, die dem Docker ausgeführt wird.
+**Images für mehrere Architekturen:** Für Multi-Architektur ist ein Feature, das die Auswahl des entsprechenden Bilds vereinfacht die Plattform, auf dem Docker, z. B. ausgeführt wird Wenn eine dockerfile-Datei ein Basisimage anfordert **`FROM mcr.microsoft.com/dotnet/core/sdk:2.1`** aus der Registrierung Tatsächlich wird **`2.1-nanoserver-1709`**, **`2.1-nanoserver-1803`**, **`2.1-nanoserver-1809`** oder **`2.1-stretch`**, Je nach Betriebssystem und Version, in Docker ausgeführt wird.
 
 **Docker-Hub:** Eine öffentliche Registrierung zum Hochladen von und Arbeiten mit Images. Docker-Hub bietet Docker-Imagehosts, öffentliche oder private Registrierungen, Buildtrigger, Web-Hooks und Integration mit GitHub und Bitbucket.
 
