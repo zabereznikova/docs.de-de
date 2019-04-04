@@ -1,11 +1,17 @@
 ---
-title: 'Namespaces – C#-Programmierhandbuch'
+title: Namespaces – C#-Programmierhandbuch
 ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
-  - 'C# language, namespaces'
-  - 'namespaces [C#]'
+- C# language, namespaces
+- namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
+ms.openlocfilehash: 3e05e18225b198e9e34b4b96717cc813dab836c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971272"
 ---
 # <a name="namespaces-c-programming-guide"></a><span data-ttu-id="e386f-102">Namespaces (C#-Programmierhandbuch)</span><span class="sxs-lookup"><span data-stu-id="e386f-102">Namespaces (C# Programming Guide)</span></span>
 

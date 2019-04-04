@@ -2,11 +2,17 @@
 title: Schnittstellen (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic code, interfaces'
-  - 'interfaces [Visual Basic], Visual Basic'
-  - interfaces
-  - 'interfaces [Visual Basic]'
+- Visual Basic code, interfaces
+- interfaces [Visual Basic], Visual Basic
+- interfaces
+- interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
+ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972382"
 ---
 # <a name="interfaces-visual-basic"></a><span data-ttu-id="7b6f5-102">Schnittstellen (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7b6f5-102">Interfaces (Visual Basic)</span></span>
 <span data-ttu-id="7b6f5-103">*Schnittstellen* definieren die Eigenschaften, Methoden und Ereignisse, die von Klassen implementiert werden können.</span><span class="sxs-lookup"><span data-stu-id="7b6f5-103">*Interfaces* define the properties, methods, and events that classes can implement.</span></span> <span data-ttu-id="7b6f5-104">Schnittstellen erlauben es Ihnen, Funktionen als kleine Gruppen mit verwandten Eigenschaften, Methoden und Ereignisse zu definieren. Dadurch werden Kompatibilitätsprobleme reduziert, da Sie für die Schnittstellen erweiterte Implementierungen entwickeln können, ohne vorhandenen Code zu gefährden.</span><span class="sxs-lookup"><span data-stu-id="7b6f5-104">Interfaces allow you to define features as small groups of closely related properties, methods, and events; this reduces compatibility problems because you can develop enhanced implementations for your interfaces without jeopardizing existing code.</span></span> <span data-ttu-id="7b6f5-105">Sie können neue Funktionen zu einem beliebigen Zeitpunkt hinzufügen, indem Sie weitere Schnittstellen und Implementierungen entwickeln.</span><span class="sxs-lookup"><span data-stu-id="7b6f5-105">You can add new features at any time by developing additional interfaces and implementations.</span></span>  

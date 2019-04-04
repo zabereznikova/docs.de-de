@@ -1,10 +1,16 @@
 ---
-title: "Erweitern von Windows\_Forms-Anwendungen"
+title: Erweitern von Windows Forms-Anwendungen
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'Windows Forms, enhancing'
-  - 'Windows Forms, adding features'
+- Windows Forms, enhancing
+- Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
+ms.openlocfilehash: 82847add5b35fe767d42ee88d7754f789174e434
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713552"
 ---
 # <a name="enhancing-windows-forms-applications"></a><span data-ttu-id="f5c77-102">Erweitern von Windows Forms-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="f5c77-102">Enhancing Windows Forms Applications</span></span>
 <span data-ttu-id="f5c77-103">Windows Forms enthält viele Funktionen, mit denen Sie die Leistung von Windows-basierten Anwendungen steigern und die spezifischen Anforderungen der Benutzer erfüllen können.</span><span class="sxs-lookup"><span data-stu-id="f5c77-103">Windows Forms contains many features that you can use to enhance your Windows-based applications to meet the specific needs of your users.</span></span> <span data-ttu-id="f5c77-104">Unter den folgenden Themen werden diese Funktionen und ihre Verwendung beschrieben.</span><span class="sxs-lookup"><span data-stu-id="f5c77-104">The following topics describe these features and how to use them.</span></span>  

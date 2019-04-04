@@ -1,10 +1,15 @@
 ---
 title: Schrittanleitungen für .NET Machine Learning – ML.NET
-description: 'Erfahren Sie, wie Sie bestimmte Aufgaben ausführen können, die Sie bei der Erstellung von benutzerdefinierten KI-Lösungen und Machine Learning und deren Integration in Ihre .NET-Anwendungen unterstützen.'
+description: Erfahren Sie, wie Sie bestimmte Aufgaben ausführen können, die Sie bei der Erstellung von benutzerdefinierten KI-Lösungen und Machine Learning und deren Integration in Ihre .NET-Anwendungen unterstützen.
 ms.custom: seodec18
 ms.date: 03/01/2019
+ms.openlocfilehash: 9e5bd146d636b46dcf3835c670207b647e7743c6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673052"
 ---
-
 # <a name="net-machine-learning-how-to-guides---mlnet"></a><span data-ttu-id="760b8-103">Schrittanleitungen für .NET Machine Learning – ML.NET</span><span class="sxs-lookup"><span data-stu-id="760b8-103">.NET Machine learning how-to guides - ML.NET</span></span>
 
 <span data-ttu-id="760b8-104">Der Abschnitt mit Schrittanleitungen im Leitfaden für ML.NET finden Sie schnell Antworten auf häufige Fragen.</span><span class="sxs-lookup"><span data-stu-id="760b8-104">In the How to section of the ML.NET Guide, you can find quick answers to common questions.</span></span> <span data-ttu-id="760b8-105">In manchen Fällen können Artikel in mehreren Abschnitten aufgeführt sein, damit sie einfacher zu finden sind.</span><span class="sxs-lookup"><span data-stu-id="760b8-105">In some cases, articles may be listed in multiple sections to make them easy to find.</span></span>

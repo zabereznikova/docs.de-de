@@ -2,13 +2,18 @@
 title: Arrays in Visual Basic
 ms.date: 12/06/2017
 f1_keywords:
-  - vb.Array
+- vb.Array
 helpviewer_keywords:
-  - 'arrays [Visual Basic]'
-  - 'Visual Basic, arrays'
+- arrays [Visual Basic]
+- Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
+ms.openlocfilehash: 6b131d073e10f99feaf770fe5fd3c393551fa5a3
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675964"
 ---
-
 # <a name="arrays-in-visual-basic"></a><span data-ttu-id="33ef3-102">Arrays in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="33ef3-102">Arrays in Visual Basic</span></span>
 
 <span data-ttu-id="33ef3-103">Ein Array ist ein Satz von Werten, die bezeichnet *Elemente*, die logisch miteinander verknüpft sind.</span><span class="sxs-lookup"><span data-stu-id="33ef3-103">An array is a set of values, which are termed *elements*, that are logically related to each other.</span></span> <span data-ttu-id="33ef3-104">Ein Array kann z. B. die Anzahl der Schüler/Studenten in jeder Jahrgangsstufe einer Grundschule bestehen; jedes Element des Arrays ist die Anzahl der Schüler/Studenten in eine einzelne Grade-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="33ef3-104">For example, an array may consist of the number of students in each grade in a grammar school; each element of the array is the number of students in a single grade.</span></span> <span data-ttu-id="33ef3-105">Auf ähnliche Weise kann ein Array aus einem Noten für eine Klasse bestehen; jedes Element des Arrays ist eine einzelne Grade-Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="33ef3-105">Similarly, an array may consist of a student's grades for a class; each element of the array is a single grade.</span></span>

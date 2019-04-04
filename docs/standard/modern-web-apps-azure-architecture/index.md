@@ -1,11 +1,16 @@
 ---
 title: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure
-description: 'Ein Leitfaden, der eine End-to-End-Anleitung zur Erstellung monolithischer Webanwendungen mit ASP.NET Core und Azure bietet.'
+description: Ein Leitfaden, der eine End-to-End-Anleitung zur Erstellung monolithischer Webanwendungen mit ASP.NET Core und Azure bietet.
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
+ms.openlocfilehash: 27212045d9870c9f2fc15509d76f3e9b07d8657f
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675834"
 ---
-
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a><span data-ttu-id="a39d8-103">Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure</span><span class="sxs-lookup"><span data-stu-id="a39d8-103">Architect Modern Web Applications with ASP.NET Core and Azure</span></span>
 
 ![Titelbild des Leifadens „Architect Modern Web Applications“ (Entwerfen moderner Webanwendungen)](./media/index/web-application-guide-cover-image.png)

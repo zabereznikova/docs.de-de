@@ -1,9 +1,14 @@
 ---
-title: 'Artikel zu Vorgehensweisen (C#-Handbuch)'
+title: Artikel zu Vorgehensweisen (C#-Handbuch)
 description: Eine Sammlung von einfachen Tipps und kurzen Codebeispielen
 ms.date: 12/20/2017
+ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202339"
 ---
-
 # <a name="how-to-c"></a><span data-ttu-id="b52ae-103">Vorgehensweise (C#)</span><span class="sxs-lookup"><span data-stu-id="b52ae-103">How to (C#)</span></span>
 
 <span data-ttu-id="b52ae-104">Im Abschnitt „Vorgehensweise“ des C#-Handbuchs finden Sie schnelle Antworten zu oft gestellten Fragen.</span><span class="sxs-lookup"><span data-stu-id="b52ae-104">In the How to section of the C# Guide you can find quick answers to common questions.</span></span> <span data-ttu-id="b52ae-105">In manchen Fällen können Artikel in mehreren Abschnitten aufgeführt sein.</span><span class="sxs-lookup"><span data-stu-id="b52ae-105">In some cases, articles may be listed in multiple sections.</span></span> <span data-ttu-id="b52ae-106">Diese Artikel sollten somit über verschiedene Suchwege einfach zu finden sein.</span><span class="sxs-lookup"><span data-stu-id="b52ae-106">We wanted to make them easy to find for multiple search paths.</span></span> 

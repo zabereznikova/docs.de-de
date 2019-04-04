@@ -1,8 +1,14 @@
 ---
 title: .NET Core-Migration über „project.json“
-description: 'Erfahren Sie, wie Sie ein älteres .NET Core-Projekt mithilfe von „project.json“ migrieren.'
+description: Erfahren Sie, wie Sie ein älteres .NET Core-Projekt mithilfe von „project.json“ migrieren.
 ms.date: 07/19/2017
 ms.custom: seodec18
+ms.openlocfilehash: f48728e647b57a8c5796bdc2119f72b58a49d80f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675913"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a><span data-ttu-id="2aa2b-103">Migrieren von .NET Core-Projekten über „project.json“</span><span class="sxs-lookup"><span data-stu-id="2aa2b-103">Migrating .NET Core projects from project.json</span></span>
 

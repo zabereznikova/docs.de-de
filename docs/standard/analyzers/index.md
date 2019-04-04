@@ -1,12 +1,17 @@
 ---
 title: Die auf Roslyn basierenden Analysetools – .NET
-description: 'Erfahren Sie mehr zu auf Roslyn basierenden Analysetools, die Probleme erkennen und Problembehebungen vorschlagen.'
+description: Erfahren Sie mehr zu auf Roslyn basierenden Analysetools, die Probleme erkennen und Problembehebungen vorschlagen.
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
+ms.openlocfilehash: 436cfb3904f0891f8c18bb5890563a13d65e2d1c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634244"
 ---
-
 # <a name="the-roslyn-based-analyzers"></a><span data-ttu-id="e77fa-103">Die auf Roslyn basierenden Analysetools</span><span class="sxs-lookup"><span data-stu-id="e77fa-103">The Roslyn based Analyzers</span></span>
 
 <span data-ttu-id="e77fa-104">Auf Roslyn basierende Analysetools verwenden das .NET Compiler SDK (Roslyn-APIs), um den Quellcode Ihres Projekts zu analysieren, um Probleme zu finden und Korrekturen vorzuschlagen.</span><span class="sxs-lookup"><span data-stu-id="e77fa-104">Roslyn-based analyzers use the .NET Compiler SDK (Roslyn APIs) to analyze your project's source code to find issues and suggest corrections.</span></span> <span data-ttu-id="e77fa-105">Unterschiedliche Analysetools suchen nach verschiedenen Klassen von Problemen, angefangen bei Methoden, die wahrscheinlich Fehler verursachen, bis hin zu Sicherheitsaspekten bei der API-Kompatibilität.</span><span class="sxs-lookup"><span data-stu-id="e77fa-105">Different analyzers look for different classes of issues, ranging from practices that are likely to cause bugs to security concerns to API compatibility.</span></span>

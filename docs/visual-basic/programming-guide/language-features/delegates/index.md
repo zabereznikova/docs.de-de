@@ -2,11 +2,16 @@
 title: Delegaten (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'delegates [Visual Basic]'
-  - 'Visual Basic code, delegates'
+- delegates [Visual Basic]
+- Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
+ms.openlocfilehash: b3f333f1714a66a8ff462000385af92cf343a19e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674028"
 ---
-
 # <a name="delegates-visual-basic"></a><span data-ttu-id="549fa-102">Delegaten (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="549fa-102">Delegates (Visual Basic)</span></span>
 
 <span data-ttu-id="549fa-103">Delegaten sind Objekte, die auf Methoden verweisen.</span><span class="sxs-lookup"><span data-stu-id="549fa-103">Delegates are objects that refer to methods.</span></span> <span data-ttu-id="549fa-104">Sie werden zuweilen als *typsichere Funktionszeiger* beschrieben, da sie in anderen Programmiersprachen verwendeten Funktionszeigern ähneln.</span><span class="sxs-lookup"><span data-stu-id="549fa-104">They are sometimes described as *type-safe function pointers* because they are similar to function pointers used in other programming languages.</span></span> <span data-ttu-id="549fa-105">Im Gegensatz zu Funktionszeigern sind Delegaten für Visual Basic ein Verweistyp basierend auf der Klasse sind jedoch <xref:System.Delegate?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="549fa-105">But unlike function pointers, Visual Basic delegates are a reference type based on the class <xref:System.Delegate?displayProperty=nameWithType>.</span></span> <span data-ttu-id="549fa-106">Delegaten können sowohl auf freigegebene Methoden – Methoden, die ohne eine bestimmte Instanz einer Klasse aufgerufen werden können – als auch Instanzmethoden verweisen.</span><span class="sxs-lookup"><span data-stu-id="549fa-106">Delegates can reference both shared methods — methods that can be called without a specific instance of a class — and instance methods.</span></span>

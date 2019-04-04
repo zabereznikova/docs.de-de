@@ -5,8 +5,13 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
+ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185505"
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a><span data-ttu-id="257cd-103">Komponententests in .NET Core und .NET Standard</span><span class="sxs-lookup"><span data-stu-id="257cd-103">Unit testing in .NET Core and .NET Standard</span></span>
 
 <span data-ttu-id="257cd-104">Mit .NET Core können Sie im Handumdrehen Komponententests erstellen.</span><span class="sxs-lookup"><span data-stu-id="257cd-104">.NET Core makes it easy to create unit tests.</span></span> <span data-ttu-id="257cd-105">Dieser Artikel gibt eine kurze Einführung zu Komponententests (und wie sich diese von anderen Arten von Tests unterscheiden).</span><span class="sxs-lookup"><span data-stu-id="257cd-105">This article introduces unit tests and illustrates how they differ from other kinds of tests.</span></span> <span data-ttu-id="257cd-106">Über die am Ende der Seite verlinkten Ressourcen erfahren Sie, wie Sie einer Projektmappe ein neues Testprojekt hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="257cd-106">The linked resources near the bottom of the page show you how to add a test project to your solution.</span></span> <span data-ttu-id="257cd-107">Nachdem Sie Ihre Testprojekte erstellt haben, können Sie Ihre Komponententests über die Befehlszeile oder Visual Studio durchführen.</span><span class="sxs-lookup"><span data-stu-id="257cd-107">After you set up your test project, you will be able to run your unit tests using the command line or Visual Studio.</span></span>

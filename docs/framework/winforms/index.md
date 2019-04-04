@@ -2,10 +2,16 @@
 title: Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Windows Forms
-  - user interface
-  - 'user interface [Windows Forms], forms'
+- Windows Forms
+- user interface
+- user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
+ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723113"
 ---
 # <a name="windows-forms"></a><span data-ttu-id="bc792-102">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bc792-102">Windows Forms</span></span>
 <span data-ttu-id="bc792-103">Da Formulare die Grundelemente einer Anwendung sind, ist es erforderlich, dass Sie sich deren Funktion und Entwurf genauer ansehen.</span><span class="sxs-lookup"><span data-stu-id="bc792-103">As forms are the base unit of your application, it is essential that you give some thought to their function and design.</span></span> <span data-ttu-id="bc792-104">Ein Formular ist letztlich eine leere Schiefertafel, die Sie als Entwickler mit Steuerelementen, um eine Benutzeroberfläche zu erstellen, und mit Code erweitern, um Daten zu bearbeiten.</span><span class="sxs-lookup"><span data-stu-id="bc792-104">A form is ultimately a blank slate that you, as a developer, enhance with controls to create a user interface and with code to manipulate data.</span></span> <span data-ttu-id="bc792-105">Zu diesem Zweck Visual Studio bietet eine integrierte Entwicklungsumgebung (IDE) zur Unterstützung beim Schreiben von Code sowie eine Vielzahl von Steuerelementen geschrieben wurden, mit der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="bc792-105">To that end, Visual Studio provides you with an integrated development environment (IDE) to aid in writing code, as well as a rich control set written with the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="bc792-106">Dadurch, dass Sie die Funktionalität dieser Steuerelemente mit eigenem Code ergänzen, können Sie einfach und schnell die Lösungen entwickeln, die Sie benötigen.</span><span class="sxs-lookup"><span data-stu-id="bc792-106">By complementing the functionality of these controls with your code, you can easily and quickly develop the solutions you need.</span></span>  

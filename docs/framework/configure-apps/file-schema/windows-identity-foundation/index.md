@@ -3,6 +3,12 @@ title: Windows Identity Foundation-Konfigurationsschema
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
+ms.openlocfilehash: 9c8009b4d95e5aa2c3d9bb8a8958040127a9e628
+ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.translationtype: MT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56441189"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a><span data-ttu-id="3847c-102">Windows Identity Foundation-Konfigurationsschema</span><span class="sxs-lookup"><span data-stu-id="3847c-102">Windows Identity Foundation Configuration Schema</span></span>
 <span data-ttu-id="3847c-103">Die Themen in diesem Abschnitt enthalten Informationen über das Konfigurationsschema von Windows Identity Foundation (WIF).</span><span class="sxs-lookup"><span data-stu-id="3847c-103">The topics in this section provide information about the Windows Identity Foundation (WIF) configuration schema.</span></span> <span data-ttu-id="3847c-104">Sie können auch eine Anwendung zur Verwendung von WIF durch Klassen, die verfügbar gemacht werden, durch das Framework konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="3847c-104">You can also configure an application to use WIF through classes exposed by the framework.</span></span> <span data-ttu-id="3847c-105">Diese Klassen sind in den Abschnitten aufgeführt, die die für das Schema relevanten Elemente behandeln.</span><span class="sxs-lookup"><span data-stu-id="3847c-105">These classes are noted in the sections that treat relevant elements in the schema.</span></span> <span data-ttu-id="3847c-106">Im Folgenden wird die grundlegende Struktur von XML-Tags dargestellt, die vom WIF-Konfigurationsschema verfügbar gemacht wird.</span><span class="sxs-lookup"><span data-stu-id="3847c-106">The following shows the basic XML tag structure exposed by the WIF configuration schema.</span></span> <span data-ttu-id="3847c-107">Attribute werden ausgelassen.</span><span class="sxs-lookup"><span data-stu-id="3847c-107">Attributes are omitted.</span></span> <span data-ttu-id="3847c-108">Hervorgehobene Kommentare zeigen die Hauptkomponenten des Schemas an.</span><span class="sxs-lookup"><span data-stu-id="3847c-108">Highlighted comments indicate major components of the schema.</span></span>  
