@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: b7ad8afbad212d5c79c9391bd9f6d1da7ff8fb28
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358185"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055247"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung
 
@@ -475,16 +475,16 @@ In diesem Abschnitt Aktualisieren Sie die Benutzeroberfläche für jedes Element
 
 Die folgende Abbildung zeigt die beiden Seiten von der `ExpenseIt` Anwendung mit Steuerelementen, Layout, Stilen, Datenbindung und Datenvorlagen angewendet:
 
-![Bildschirmabbildungen für ExpenseIt-Beispiel](./media/gettingstartedfigure5.png)
+![Bildschirmabbildung für ExpenseIt-Beispiel-screenshots](./media/gettingstartedfigure5.png)
 
 > [!NOTE]
 > In diesem Beispiel wird veranschaulicht, eine bestimmte Funktion von WPF und nicht alle bewährte Methoden für Aspekte wie Sicherheit, Lokalisierung und Eingabehilfen. Umfassende Behandlung von WPF und bewährte Methoden für die Anwendungsentwicklung die .NET Framework finden Sie unter den folgenden Themen:
 >
-> - [Barrierefreiheit](../../ui-automation/accessibility-best-practices.md)
+> - [Zugriff](../../ui-automation/accessibility-best-practices.md)
 >
 > - [Sicherheit](../security-wpf.md)
 >
-> - [Übersicht über WPF-Globalisierung und -Lokalisierung](../advanced/wpf-globalization-and-localization-overview.md)
+> - [WPF-Globalisierung und Lokalisierung](../advanced/wpf-globalization-and-localization-overview.md)
 >
 > - [Von WPF](../advanced/optimizing-wpf-application-performance.md)
 
@@ -493,7 +493,7 @@ Die folgende Abbildung zeigt die beiden Seiten von der `ExpenseIt` Anwendung mit
 In dieser exemplarischen Vorgehensweise haben Sie gelernt, eine Reihe von Techniken zum Erstellen einer Benutzeroberfläche mit Windows Presentation Foundation (WPF). Sie verfügen nun über einen grundlegenden Überblick über die Bausteine einer datengebundenen, .NET Framework-Anwendung. Weitere Informationen über die WPF-Architektur und -Programmiermodelle finden Sie in den folgenden Themen:
 
 - [WPF-Architektur](../advanced/wpf-architecture.md)
-- [Übersicht über XAML (WPF)](../advanced/xaml-overview-wpf.md)
+- [Übersicht über die XAML (WPF)](../advanced/xaml-overview-wpf.md)
 - [Übersicht über Abhängigkeitseigenschaften](../advanced/dependency-properties-overview.md)
 - [Layout](../advanced/layout.md)
 
@@ -501,7 +501,7 @@ Weitere Informationen zum Erstellen von Anwendungen finden Sie in den folgenden 
 
 - [Anwendungsentwicklung](../app-development/index.md)
 - [Steuerelemente](../controls/index.md)
-- [Übersicht über Datenbindung](../data/data-binding-overview.md)
+- [Übersicht über die Datenbindung](../data/data-binding-overview.md)
 - [Grafiken und multimedia](../graphics-multimedia/index.md)
 - [Dokumente in WPF](../advanced/documents-in-wpf.md)
 
@@ -510,4 +510,4 @@ Weitere Informationen zum Erstellen von Anwendungen finden Sie in den folgenden 
 - [Übersicht über Panel](../controls/panels-overview.md)
 - [Übersicht über Datenvorlagen](../data/data-templating-overview.md)
 - [Erstellen einer WPF-Anwendung](../app-development/building-a-wpf-application-wpf.md)
-- [Stile und-Vorlagen](../controls/styles-and-templates.md)
+- [Stile und Vorlagen](../controls/styles-and-templates.md)

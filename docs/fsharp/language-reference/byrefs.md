@@ -2,12 +2,12 @@
 title: Parametry
 description: Informationen Sie zu Byref und Byref-ähnlichen Typen in F#, die für die Low-Level-Programmierung verwendet werden.
 ms.date: 09/02/2018
-ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976550"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055364"
 ---
 # <a name="byrefs"></a>Parametry
 
@@ -56,9 +56,10 @@ open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-
-let dt = DateTime.Now
-f &dt // Pass a pointer to 'dt'
+    
+let usage =
+    let dt = DateTime.Now
+    f &dt // Pass a pointer to 'dt'
 ```
 
 Um auf den Zeiger mit einem `outref<'T>` oder `byref<'T>`, achten Sie auch den Wert an, Sie nehmen einen Zeiger auf `mutable`.
@@ -84,7 +85,7 @@ Wenn Sie nur den Zeiger lesen, schreiben, sollten Sie `outref<'T>` anstelle von 
 Betrachten Sie folgenden Code:
 
 ```fsharp
-let f (x: inref<SomeStruct>) = s.SomeField
+let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
 Semantisch gesehen bedeutet dies Folgendes:
@@ -113,17 +114,17 @@ C# unterstützt die `in ref` und `out ref` Schlüsselwörter, zusätzlich zu den
 |------------|---------|
 |`ref` Rückgabewert|`outref<'T>`|
 |`ref readonly` Rückgabewert|`inref<'T>`|
-|`in ref` Parameter|`inref<'T>`|
-|`out ref` Parameter|`outref<'T>`|
+|`in ref` -Parameter von|`inref<'T>`|
+|`out ref` -Parameter von|`outref<'T>`|
 
 Die folgende Tabelle zeigt, was F# ausgibt:
 
 |F#Erstellen|Ausgegebene-Konstrukt|
 |------------|-----------------|
-|`inref<'T>` Argument|`[In]` Attribut für argument|
-|`inref<'T>` zurück|`modreq` Attribut nach Wert|
+|`inref<'T>` argument|`[In]` Attribut für argument|
+|`inref<'T>` return|`modreq` Attribut nach Wert|
 |`inref<'T>` in abstrakten Slot oder Implementierung|`modreq` auf Argument- oder Rückgabetypen|
-|`outref<'T>` Argument|`[Out]` Attribut für argument|
+|`outref<'T>` argument|`[Out]` Attribut für argument|
 
 ### <a name="type-inference-and-overloading-rules"></a>Typrückschluss und Überladen von Regeln
 

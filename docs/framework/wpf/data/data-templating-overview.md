@@ -10,12 +10,12 @@ helpviewer_keywords:
 - templates [WPF], data
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
-ms.openlocfilehash: 9287656349f2a10619bfe76a36ee7855d3861cba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58d723ccf86e4195674c132f9fb1b76f689f57b2
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376103"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055338"
 ---
 # <a name="data-templating-overview"></a>Übersicht über Datenvorlagen
 Mithilfe des WPF-Datenvorlagenmodells können Sie die Darstellung Ihrer Daten flexibel definieren. WPF-Steuerelemente verfügen über integrierte Funktionen, die die Anpassung der Datendarstellung unterstützen. In diesem Thema veranschaulicht, wie definieren Sie zuerst eine <xref:System.Windows.DataTemplate> und anschließend werden weitere Datenvorlagenfeatures-vorgestellt, wie z. B. die Auswahl von Vorlagen anhand benutzerdefinierter Logik und die Unterstützung für die Anzeige hierarchischer Daten.  
@@ -41,7 +41,7 @@ Mithilfe des WPF-Datenvorlagenmodells können Sie die Darstellung Ihrer Daten fl
 ### <a name="without-a-datatemplate"></a>Ohne „DataTemplate“  
  Ohne eine <xref:System.Windows.DataTemplate>, unsere <xref:System.Windows.Controls.ListBox> derzeit sieht wie folgt aus:  
   
- ![Bildschirmfoto des Beispiels einer Datenvorlage](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
+ ![Daten-beispielscreenshot: Vorlagen](./media/datatemplatingintro-fig1.png "DataTemplatingIntro_fig1")  
   
  Was passiert ist, ohne bestimmten Anweisungen, die <xref:System.Windows.Controls.ListBox> durch Aufrufe der standardmäßigen `ToString` beim Versuch, die Objekte in der Auflistung anzuzeigen. Aus diesem Grund Wenn die `Task` -Objekt überschreibt die `ToString` -Methode, und klicken Sie dann die <xref:System.Windows.Controls.ListBox> eine Zeichenfolgendarstellung der einzelnen Quellobjekte in der zugrunde liegenden Auflistung angezeigt.  
   
@@ -52,7 +52,7 @@ Mithilfe des WPF-Datenvorlagenmodells können Sie die Darstellung Ihrer Daten fl
   
  Die <xref:System.Windows.Controls.ListBox> sieht wie folgt aus:  
   
- ![Bildschirmfoto des Beispiels einer Datenvorlage](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
+ ![Daten-beispielscreenshot: Vorlagen](./media/datatemplatingintro-fig2.png "DataTemplatingIntro_fig2")  
   
  Das ist jedoch einschränkend und unflexibel. Zudem können Sie beim Binden an [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]-Daten den `ToString`-Wert nicht überschreiben.  
   
@@ -66,7 +66,7 @@ Mithilfe des WPF-Datenvorlagenmodells können Sie die Darstellung Ihrer Daten fl
   
  Jetzt unsere <xref:System.Windows.Controls.ListBox> sieht wie folgt aus:  
   
- ![Bildschirmfoto des Beispiels einer Datenvorlage](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
+ ![Daten-beispielscreenshot: Vorlagen](./media/datatemplatingintro-fig3.png "DataTemplatingIntro_fig3")  
   
 <a name="defining_datatemplate_as_a_resource"></a>   
 ### <a name="creating-the-datatemplate-as-a-resource"></a>Erstellen der Datenvorlage als Ressource  
@@ -103,7 +103,7 @@ Mithilfe des WPF-Datenvorlagenmodells können Sie die Darstellung Ihrer Daten fl
   
  Der folgende Screenshot zeigt die <xref:System.Windows.Controls.ListBox> mit dieser Änderung <xref:System.Windows.DataTemplate>:  
   
- ![Bildschirmfoto des Beispiels einer Datenvorlage](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
+ ![Daten-beispielscreenshot: Vorlagen](./media/datatemplatingintro-fig4.png "DataTemplatingIntro_fig4")  
   
  Wir können festlegen, <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> zu <xref:System.Windows.HorizontalAlignment.Stretch> auf die <xref:System.Windows.Controls.ListBox> um sicherzustellen, dass die Breite der Elemente belegt den gesamten Speicherplatz:  
   
@@ -111,7 +111,7 @@ Mithilfe des WPF-Datenvorlagenmodells können Sie die Darstellung Ihrer Daten fl
   
  Mit der <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> -Eigenschaftensatz auf <xref:System.Windows.HorizontalAlignment.Stretch>, <xref:System.Windows.Controls.ListBox> jetzt wie folgt aussieht:  
   
- ![Bildschirmfoto des Beispiels einer Datenvorlage](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
+ ![Daten-beispielscreenshot: Vorlagen](./media/datatemplatingintro-fig5.png "DataTemplatingIntro_fig5")  
   
 <a name="DataTrigger_to_Apply_Property_Values"></a>   
 ### <a name="use-datatriggers-to-apply-property-values"></a>Anwenden von Eigenschaftswerten mit DataTrigger  
@@ -125,7 +125,7 @@ Mithilfe des WPF-Datenvorlagenmodells können Sie die Darstellung Ihrer Daten fl
   
  Die Anwendung sieht jetzt folgendermaßen aus. Private Aufgaben werden mit einem gelben Rahmen und Office-Aufgaben mit einem hellblauen Rahmen angezeigt:  
   
- ![Bildschirmfoto des Beispiels einer Datenvorlage](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
+ ![Daten-beispielscreenshot: Vorlagen](./media/datatemplatingintro-fig6.png "DataTemplatingIntro_fig6")  
   
  In diesem Beispiel die <xref:System.Windows.DataTrigger> verwendet eine <xref:System.Windows.Setter> , einen Eigenschaftswert festzulegen. Die Triggerklassen verfügen auch über die <xref:System.Windows.TriggerBase.EnterActions%2A> und <xref:System.Windows.TriggerBase.ExitActions%2A> Eigenschaften, die Sie eine Reihe von Aktionen wie z. B. Animationen starten können. Darüber hinaus steht auch eine <xref:System.Windows.MultiDataTrigger> -Klasse, die Sie zum Anwenden von Änderungen kann auf der Grundlage von mehrere Werte der datengebundenen Eigenschaft.  
   
@@ -165,7 +165,7 @@ Im vorherigen Beispiel haben wir den Trigger der <xref:System.Windows.DataTempla
   
  Mit der Vorlagenauswahl die <xref:System.Windows.Controls.ListBox> nun wie folgt angezeigt:  
   
- ![Bildschirmfoto des Beispiels einer Datenvorlage](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
+ ![Daten-beispielscreenshot: Vorlagen](./media/datatemplatingintro-fig7.png "DataTemplatingIntro_fig7")  
 
 Damit ist die Erläuterung unseres Beispiels abgeschlossen. Das vollständige Beispiel finden Sie unter [Einführung in das Datenvorlagenbeispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/DataTemplatingIntro).
 
@@ -191,11 +191,11 @@ Damit ist die Erläuterung unseres Beispiels abgeschlossen. Das vollständige Be
   
  Das Beispiel zeigt, mit der Verwendung von <xref:System.Windows.HierarchicalDataTemplate>, ganz einfach Listendaten anzuzeigen,, die andere Listen enthalten. Im Folgenden finden Sie ein Bildschirmfoto des Beispiels.  
   
- ![Bildschirmfoto des Beispiels für HierarchicalDataTemplate](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
+ ![Bildschirmabbildung für HierarchicalDataTemplate-Beispiel](./media/databinding-hierarchicaldatatemplate.png "DataBinding_HierarchicalDataTemplate")  
   
 ## <a name="see-also"></a>Siehe auch
 - [Datenbindung](../advanced/optimizing-performance-data-binding.md)
-- [Suchen von Elementen, die mit einer DataTemplate generiert wurden](how-to-find-datatemplate-generated-elements.md)
+- [Suchen von Elementen, die mit einer DataTemplate-Klasse generiert wurden](how-to-find-datatemplate-generated-elements.md)
 - [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)
-- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Übersicht über die Datenbindung](data-binding-overview.md)
 - [Übersicht über GridView-Spaltenheaderstile und -Spaltenheadervorlagen](../controls/gridview-column-header-styles-and-templates-overview.md)

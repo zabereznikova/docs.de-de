@@ -1,13 +1,13 @@
 ---
 title: 'Importdeklarationen: Das open-Schlüsselwort'
 description: Erfahren Sie mehr über F# Importdeklarationen und wie sie ein Modul oder einen Namespace angeben, dessen Elemente Sie ohne Verwendung eines vollqualifizierten Namens verweisen können.
-ms.date: 05/16/2016
-ms.openlocfilehash: 261ffdfdea2860db72b052b2ffeb5c7e5d652c24
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 04/04/2019
+ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610319"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055000"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Importdeklarationen: Die `open` Schlüsselwort
 
@@ -62,12 +62,12 @@ Einige Namespaces dienen häufig in F# Code, dass sie ohne eine explizite Import
 
 Sie können anwenden, die `AutoOpen` -Attribut auf eine Assembly, sollten Sie automatisch einen Namespace oder Modul geöffnet, wenn die Assembly verwiesen wird. Sie können auch anwenden, die `AutoOpen` -Attribut auf ein Modul das Modul automatisch geöffnet wird, wenn das übergeordnete Modul oder Namespace geöffnet wird. Weitere Informationen finden Sie unter [Core.AutoOpenAttribute-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.autoopenattribute-class-%5bfsharp%5d).
 
-## <a name="requirequalifiedaccess-attribute"></a>RequireQualifiedAccess-Attribut
+## <a name="requirequalifiedaccess-attribute"></a>RequireQualifiedAccess Attribute
 
 Einige Module, Datensätzen oder union-Typen können angeben, die `RequireQualifiedAccess` Attribut. Wenn Sie diese Module, Datensätze und Unions Elemente verweisen, müssen Sie unabhängig davon, ob Sie eine Importdeklaration enthalten einen qualifizierten Namen verwenden. Wenn Sie dieses Attribut strategisch auf verwenden verwendet Namen, Typen, die häufig zu definieren, lassen sich Namenskonflikte zu vermeiden, und machen dadurch Code stabiler gegenüber Änderungen in Bibliotheken. Weitere Informationen finden Sie unter [Core.RequireQualifiedAccessAttribute-Klasse](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-%5Bfsharp%5D).
 
 ## <a name="see-also"></a>Siehe auch
 
-- [-Sprachreferenz](index.md)
+- [F#-Sprachreferenz](index.md)
 - [Namespaces](namespaces.md)
 - [Module](modules.md)

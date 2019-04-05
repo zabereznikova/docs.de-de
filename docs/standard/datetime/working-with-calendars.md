@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921350"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055312"
 ---
 # <a name="working-with-calendars"></a>Arbeiten mit Kalendern
 
@@ -163,7 +163,7 @@ In .NET Ganzzahlen, das die Zeiträume unterstützt bei einer bestimmten Impleme
 | <xref:System.Globalization.ThaiBuddhistCalendar>      | <xref:System.Globalization.ThaiBuddhistCalendar.ThaiBuddhistEra>  |
 | <xref:System.Globalization.UmAlQuraCalendar>          | <xref:System.Globalization.UmAlQuraCalendar.UmAlQuraEra>          |
 
-Der Name, der dem Zeitraum mit einer bestimmten Nummer entspricht, kann durch Übergeben der Nummer an die <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType>-Methode oder an die <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType>-Methode abgerufen werden. Im folgenden Beispiel werden diese Methoden aufgerufen, um Informationen über die Unterstützung von Zeiträumen in der <xref:System.Globalization.GregorianCalendar>-Klasse abzurufen.
+Der Name, der dem Zeitraum mit einer bestimmten Nummer entspricht, kann durch Übergeben der Nummer an die <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType>-Methode oder an die <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType>-Methode abgerufen werden. Im folgenden Beispiel werden diese Methoden aufgerufen, um Informationen über die Unterstützung von Zeiträumen in der <xref:System.Globalization.GregorianCalendar>-Klasse abzurufen. Es zeigt das Datum des gregorianischen Kalenders, das auf den 1. Januar des zweiten Jahres des aktuellen Zeitraums entspricht, sowie das Datum des gregorianischen Kalenders, das auf den 1. Januar des zweiten Jahres des einzelnen unterstützten japanischen Kalender-Zeitraums entspricht.
 
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
@@ -172,7 +172,7 @@ Darüber hinaus enthält die benutzerdefinierte Formatzeichenfolge "g" für Datu
 
 ### <a name="instantiating-a-date-with-an-era"></a>Instanziieren eines Datums mit einem Zeitraum
 
-Für die beiden <xref:System.Globalization.Calendar> Klassen, die mehrere Zeiträume unterstützen, ein Datum, das von einem bestimmten Jahr, Monat, und Tag des Monats Werts besteht aus mehrdeutig sein kann. Z. B. alle Zeiträume, die von unterstützt die <xref:System.Globalization.JapaneseCalendar> Jahre, deren Anzahl 1 ist. Wenn kein Zeitraum angegeben ist, wird daher bei Datums-, Uhrzeit- und Klassenmethoden immer davon ausgegangen, dass die Werte zum aktuellen Zeitraum gehören. Dies gilt für die <xref:System.DateTime.%23ctor%2A> und <xref:System.DateTimeOffset.%23ctor%2A> Konstruktoren, die Parameter des Typs enthalten <xref:System.Globalization.Calendar>, als auch die [JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) und [JapaneseLunisolarCalendar.ToDateTime ](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) Methoden. Das folgende Beispiel instanziiert ein Datum, das am 1. Januar des zweiten Jahres eines Zeitabschnitts nicht angegebene darstellt. Wie die Ausgabe des Beispiels zeigt wird das Datum als Heisei-Zeit, den aktuellen Zeitraum aus, die zum Zeitpunkt des zweiten Jahres interpretiert, die in diesem Beispiel ausgeführt wurde. Der Zeitraum, 平成, steht das Jahr in der Zeichenfolge, die vom der <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> Methode und der 1. Januar 1990, im gregorianischen Kalender entspricht. (Der Bereich des Zeitraums Heisei werden von 1989 2019 im gregorianischen Kalender.)
+Für die beiden <xref:System.Globalization.Calendar> Klassen, die mehrere Zeiträume unterstützen, ein Datum, das von einem bestimmten Jahr, Monat, und Tag des Monats Werts besteht aus mehrdeutig sein kann. Z. B. alle Zeiträume, die von unterstützt die <xref:System.Globalization.JapaneseCalendar> Jahre, deren Anzahl 1 ist. Wenn kein Zeitraum angegeben ist, wird daher bei Datums-, Uhrzeit- und Klassenmethoden immer davon ausgegangen, dass die Werte zum aktuellen Zeitraum gehören. Dies gilt für die <xref:System.DateTime.%23ctor%2A> und <xref:System.DateTimeOffset.%23ctor%2A> Konstruktoren, die Parameter des Typs enthalten <xref:System.Globalization.Calendar>, als auch die [JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) und [JapaneseLunisolarCalendar.ToDateTime ](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)) Methoden. Das folgende Beispiel instanziiert ein Datum, das am 1. Januar des zweiten Jahres eines Zeitabschnitts nicht angegebene darstellt. Wenn Sie das Beispiel ausführen, bei die Reiwa Ära der aktuelle Zeitraum ist, wird das Datum als das zweite Jahr des Zeitraums Reiwa interpretiert. Der Zeitraum, 令和, steht das Jahr in der Zeichenfolge, die vom der <xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType> Methode und dem 1. Januar 2020., im gregorianischen Kalender entspricht. (Der Zeitraum Reiwa beginnt im Jahr 2019 des gregorianischen Kalenders.)
 
 [!code-csharp[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/cs/program.cs)]
 [!code-vb[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/vb/program.vb)]

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: 7a5fed66b06a070cffc6ef3789d75b529f1e0c55
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8773cac1e421ecdca036e88d79797dae16f72b17
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496507"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055078"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>Hosten von Win32-Inhalt in WPF
 
@@ -366,7 +366,7 @@ public partial class Window1 : Window {
 
 So erhalten Sie:
 
-![WPF-Anwendung Screenshot](./media/interoparch09.PNG "InteropArch09")
+![Screenshot der WPF-Anwendung](./media/interoparch09.PNG "InteropArch09")
 
 ## <a name="see-also"></a>Siehe auch
 

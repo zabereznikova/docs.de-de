@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367569"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054987"
 ---
 # <a name="tooltip"></a>QuickInfo
 Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutzer den Mauszeiger auf ein Element, beispielsweise über hält eine <xref:System.Windows.Controls.Button>.  
@@ -25,8 +25,8 @@ Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutz
  ![Screenshot der QuickInfo](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über QuickInfo](tooltip-overview.md)  
-  [Themen zu Vorgehensweisen](tooltip-how-to-topics.md)  
+ [Übersicht über die QuickInfo](tooltip-overview.md)  
+  [Gewusst wie-Themen](tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.ToolTip>  
@@ -35,4 +35,4 @@ Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutz
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Übersicht über Popups](popup-overview.md)  
-  [Themen zu Vorgehensweisen](popup-how-to-topics.md)
+  [Gewusst wie-Themen](popup-how-to-topics.md)

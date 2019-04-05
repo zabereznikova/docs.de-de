@@ -15,15 +15,15 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 580eb2c7efd00382f7fff24984f0ce6f6d8fa027
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370721"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055325"
 ---
 # <a name="styling-and-templating"></a>Erstellen von Formaten und Vorlagen
-Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stehen eine Reihe von Funktionen (Stile, Vorlagen, Trigger und Storyboards) zur Verfügung, mit denen Entwickler und Designer visuell ansprechende Effekte erzeugen und ein einheitliches Erscheinungsbild ihres Produkts erstellen können. Obwohl Entwickler und/oder Designer die Darstellung in den einzelnen Anwendungen umfassend anpassen können, ist ein starkes Stil- und Vorlagenmodell erforderlich, um die Wartung und Freigabe der Darstellung innerhalb von Anwendungen und anwendungsübergreifend zu ermöglichen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt dieses Modell bereit.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Erstellen von Formaten und Vorlagen finden Sie eine Reihe von Funktionen (Stile, Vorlagen, Trigger und Storyboards) an, mit die Entwickler und Designer visuell ansprechende Effekte erzeugen und ein konsistentes Erscheinungsbild ihres Produkts erstellen können. Obwohl Entwickler und/oder Designer die Darstellung in den einzelnen Anwendungen umfassend anpassen können, ist ein starkes Stil- und Vorlagenmodell erforderlich, um die Wartung und Freigabe der Darstellung innerhalb von Anwendungen und anwendungsübergreifend zu ermöglichen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt dieses Modell bereit.  
   
  Eine weitere Funktion des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Stilmodells ist die Trennung von Darstellung und Logik. Dies bedeutet, dass Designer die Darstellung einer Anwendung nur mithilfe von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bearbeiten können, während die Entwickler mit C# oder Visual Basic an der Programmierlogik arbeiten.  
   
@@ -45,7 +45,7 @@ Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../.
   
  [!code-xaml[StylingIntroSample_snippet#TextBlocks](~/samples/snippets/csharp/VS_Snippets_Wpf/StylingIntroSample_snippet/CSharp/Window1.xaml#textblocks)]  
   
- ![Screenshot des Stilbeispiels](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
+ ![Stil-beispielscreenshot](./media/stylingintro-textblocksbefore.PNG "StylingIntro_TextBlocksBefore")  
   
  Sie können das standardmäßige Erscheinungsbild ändern, durch Festlegen von Eigenschaften, z. B. <xref:System.Windows.Controls.Control.FontSize%2A> und <xref:System.Windows.Controls.Control.FontFamily%2A>, auf den einzelnen <xref:System.Windows.Controls.TextBlock> -Element direkt. Jedoch ggf. Ihre <xref:System.Windows.Controls.TextBlock> -Elemente einige Eigenschaften gemeinsam nutzen können Sie erstellen eine <xref:System.Windows.Style> in die `Resources` Teil Ihrer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei, wie hier gezeigt:  
   
@@ -57,7 +57,7 @@ Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../.
   
  Jetzt die <xref:System.Windows.Controls.TextBlock> Elemente wie folgt aussehen:  
   
- ![Screenshot des Stilbeispiels](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
+ ![Stil-beispielscreenshot](./media/stylingintro-textblocksbasestyle.PNG "StylingIntro_TextBlocksBaseStyle")  
   
 ### <a name="extending-styles"></a>Erweitern von Stilen  
  Vielleicht möchten Sie Ihre <xref:System.Windows.Controls.TextBlock> Elemente gemeinsam einige Eigenschaftswerte, z. B. die <xref:System.Windows.Controls.Control.FontFamily%2A> und die zentrierte <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, aber Sie möchten auch den Text "Eigene Bilder", um einige zusätzlichen Eigenschaften zu erhalten. Sie können dies durch das Erstellen einer neuen Formatvorlage, die auf dem ersten Stil basiert, wie hier gezeigt:  
@@ -165,7 +165,7 @@ Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../.
   
  In der folgenden Abbildung zeigt die Maus auf das dritte Element:  
   
- ![Screenshot des Stilbeispiels](./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
+ ![Stil-beispielscreenshot](./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
 ### <a name="multitriggers-datatriggers-and-multidatatriggers"></a>MultiTrigger, DataTrigger und MultiDataTrigger  
  Zusätzlich zu <xref:System.Windows.Trigger> und <xref:System.Windows.EventTrigger>, es gibt andere Arten von Triggern. <xref:System.Windows.MultiTrigger> können Sie Eigenschaftswerte auf Grundlage mehrerer Kriterien festlegen. Verwenden Sie <xref:System.Windows.DataTrigger> und <xref:System.Windows.MultiDataTrigger> Wenn die Eigenschaft der Bedingung datengebunden ist.  
@@ -198,5 +198,5 @@ Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../.
   
 ## <a name="see-also"></a>Siehe auch
 - [Paket-URI in WPF](../app-development/pack-uris-in-wpf.md)
-- [Vorgehensweise: Suchen von Elementen einer ControlTemplate generiert wurden](how-to-find-controltemplate-generated-elements.md)
-- [Suchen von Elementen, die mit einer DataTemplate generiert wurden](../data/how-to-find-datatemplate-generated-elements.md)
+- [Vorgehensweise: Suchen von Elementen, die mit einer ControlTemplate generiert wurden](how-to-find-controltemplate-generated-elements.md)
+- [Suchen von Elementen, die mit einer DataTemplate-Klasse generiert wurden](../data/how-to-find-datatemplate-generated-elements.md)
