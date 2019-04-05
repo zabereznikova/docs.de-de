@@ -1,11 +1,16 @@
 ---
 title: .NET-Beispiele und -Tutorials
-description: 'Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET Core und die Sprache C#, die Sie beim Erlernen von .NET unterstützen.'
+description: Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET Core und die Sprache C#, die Sie beim Erlernen von .NET unterstützen.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
+ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "57558948"
 ---
-
 # <a name="net-samples-and-tutorials"></a><span data-ttu-id="e6dbd-103">.NET-Beispiele und -Tutorials</span><span class="sxs-lookup"><span data-stu-id="e6dbd-103">.NET samples and tutorials</span></span>
 
 <span data-ttu-id="e6dbd-104">Die .NET-Dokumentation enthält einen Satz Beispiele und Tutorials zum Erlernen von .NET.</span><span class="sxs-lookup"><span data-stu-id="e6dbd-104">The .NET documentation contains a set of samples and tutorials that teach you about .NET.</span></span> <span data-ttu-id="e6dbd-105">Dieses Thema beschreibt, wie Sie Beispiele und Tutorials zu .NET Core, ASP.NET Core und C# suchen, anzeigen und herunterladen.</span><span class="sxs-lookup"><span data-stu-id="e6dbd-105">This topic describes how to find, view, and download .NET Core, ASP.NET Core, and C# samples and tutorials.</span></span> <span data-ttu-id="e6dbd-106">Ressourcen zum Erlernen der Programmiersprache F# finden Sie auf der [Website der F# Foundation](https://fsharp.org/learn.html).</span><span class="sxs-lookup"><span data-stu-id="e6dbd-106">Find resources to learn the F# programming language on the [F# Foundation's site](https://fsharp.org/learn.html).</span></span> <span data-ttu-id="e6dbd-107">Wenn Sie daran interessiert sind, C# mit einem Online-Code-Editor zu erkunden, beginnen Sie mit [diesem interaktiven Tutorial](https://www.microsoft.com/net/learn/in-browser-tutorial/1), und fahren Sie dann mit dem [interaktiven C#-Tutorial](../csharp/tutorials/intro-to-csharp/index.md) fort.</span><span class="sxs-lookup"><span data-stu-id="e6dbd-107">If you're interested in exploring C# using an online code editor, start with [this interactive tutorial](https://www.microsoft.com/net/learn/in-browser-tutorial/1) and continue with [C# interactive tutorial](../csharp/tutorials/intro-to-csharp/index.md).</span></span> <span data-ttu-id="e6dbd-108">Anweisungen zum Anzeigen und Herunterladen von Beispielcode finden Sie im Abschnitt [Anzeigen und Herunterladen von Beispielen](#viewing-and-downloading-samples).</span><span class="sxs-lookup"><span data-stu-id="e6dbd-108">For instructions on how to view and download sample code, see the [Viewing and downloading samples](#viewing-and-downloading-samples) section.</span></span>
