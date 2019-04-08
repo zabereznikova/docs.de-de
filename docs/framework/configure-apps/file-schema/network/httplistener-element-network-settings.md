@@ -1,13 +1,13 @@
 ---
-title: <httpListener>-Element (Netzwerkeinstellungen)
+title: <httpListener> -Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
-ms.openlocfilehash: ff5e4ad2788ab3df621beb52b1703647df068a7f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099741"
 ---
 # <a name="httplistener-element-network-settings"></a>\<HttpListener >-Element (Netzwerkeinstellungen)
 Passt die Parameter ein, die die <xref:System.Net.HttpListener> Klasse.  
@@ -43,7 +43,7 @@ Passt die Parameter ein, die die <xref:System.Net.HttpListener> Klasse.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
+|[Einstellungen](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die **UnescapeRequestUrl** Attribut gibt an, ob <xref:System.Net.HttpListener> verwendet den unformatierten URI ohne Escapezeichen anstelle des konvertierten URI, in dem alle Werte mit Prozentzeichen codiert konvertiert und andere Normalisierung Schritte sind.  
@@ -138,7 +138,8 @@ Passt die Parameter ein, die die <xref:System.Net.HttpListener> Klasse.
 |Leer kann sein||  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Net.Configuration.HttpListenerElement>
 - <xref:System.Net.HttpListener>
 - <xref:System.Net.HttpListenerRequest.Url%2A>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

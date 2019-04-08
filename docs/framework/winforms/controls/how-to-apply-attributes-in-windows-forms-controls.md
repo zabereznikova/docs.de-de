@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anwenden von Attributen auf Windows Forms-Steuerelemente'
+title: 'Vorgehensweise: Anwenden von Attributen auf Windows Forms-Steuerelemente'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: fd41999b1cd1cde940d182f3acc505bbb92a3aa4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e86277c06e515b28bada3331cf4fd63e536319a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718544"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079590"
 ---
-# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Vorgehensweise: Anwenden von Attributen auf Windows Forms-Steuerelemente
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Vorgehensweise: Anwenden von Attributen auf Windows Forms-Steuerelemente
 Zum Entwickeln von Komponenten und Steuerelementen, die die entwurfsumgebung ordnungsgemäß interagieren und zur Laufzeit ordnungsgemäß ausgeführt werden, müssen Sie Attribute ordnungsgemäß auf Klassen und Member anwenden.  
   
 ## <a name="example"></a>Beispiel  
@@ -78,6 +78,7 @@ Zum Entwickeln von Komponenten und Steuerelementen, die die entwurfsumgebung ord
 -   Das Formular, hostet die `AttributesDemoControl` erfordert einen Verweis auf die `AttributesDemoControl` Assembly, um zu erstellen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>
 - [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](developing-custom-windows-forms-controls.md)

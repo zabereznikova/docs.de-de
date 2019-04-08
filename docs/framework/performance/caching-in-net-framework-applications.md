@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 39fd5e7bb6e12178df0f75c6dadb575dac82c228
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a57489af2f2af59f128f5d86be844b43c9c49840
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674847"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085778"
 ---
 # <a name="caching-in-net-framework-applications"></a>Caching in .NET Framework-Anwendungen
 Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbeitsspeicher zu speichern. Wenn erneut auf die Daten zugegriffen wird, erhalten Anwendungen die Daten aus dem Zwischenspeicher, anstatt sie aus der Originalquelle abzurufen. Dies kann die Leistung und Skalierbarkeit verbessern. Darüber hinaus macht das Zwischenspeichern Daten verfügbar, wenn die Datenquelle vorübergehend nicht verfügbar ist.  
@@ -76,6 +76,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
  Weitere Informationen finden Sie im Eintrag [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://go.microsoft.com/fwlink/?LinkId=185772) (Erweiterbare Ausgabezwischenspeicherung in ASP.NET 4 (VS 2010 und .NET 4.0-Serie)) auf Scott Guthries Blog.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
 - [Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

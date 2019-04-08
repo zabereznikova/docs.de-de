@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: 12588e6aa108813b2d857f6818bd27a275d12597
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 63885e0467f79f140678ffcaa6737f40a8fa7f6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100573"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>Implementieren des Grid-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -36,7 +36,7 @@ Beispiel für ein Grid-Steuerelement mit leeren Koordinaten
   
 -   Ausgeblendete Zeilen und Spalten können je nach der Anbieterimplementierung in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur geladen werden. Daher werden sie in den Eigenschaften <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> und <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> angegeben. Wenn die ausgeblendeten Zeilen und Spalten noch nicht geladen wurden, sollten sie nicht gezählt werden.  
   
--   <xref:System.Windows.Automation.Provider.IGridProvider> ermöglicht keine aktive Bearbeitung eines Rasters. <xref:System.Windows.Automation.Provider.ITransformProvider> muss implementiert werden, um diese Funktionalität zu aktivieren.  
+-   <xref:System.Windows.Automation.Provider.IGridProvider> ermöglicht keine aktive Bearbeitung eines Rasters; <xref:System.Windows.Automation.Provider.ITransformProvider> muss implementiert werden, um diese Funktion zu aktivieren.  
   
 -   Verwenden Sie einen <xref:System.Windows.Automation.StructureChangedEventHandler> , um Änderungen an der Struktur oder am Layout des Raster zu erfassen, z. B. Zellen, die hinzugefügt, entfernt oder zusammengeführt wurden.  
   
@@ -48,9 +48,9 @@ Beispiel für ein Grid-Steuerelement mit leeren Koordinaten
   
 |Erforderliche Member|Typ|Hinweise|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|Methode|Keiner|  
   
  Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.  
   
@@ -64,6 +64,7 @@ Beispiel für ein Grid-Steuerelement mit leeren Koordinaten
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> – Wenn Sie entweder von der angeforderten Zeilen- oder Spaltenkoordinaten kleiner als 0 (null).|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

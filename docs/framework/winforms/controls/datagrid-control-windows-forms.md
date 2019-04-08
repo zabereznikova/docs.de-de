@@ -8,12 +8,12 @@ helpviewer_keywords:
 - displaying data [Windows Forms], on forms
 - data [Windows Forms], displaying on Windows Forms
 ms.assetid: 1d9d5683-43d2-42dd-b6c3-e43f4cf0de99
-ms.openlocfilehash: 60978fa952d76c5b64ffd82215eb9cda9013d285
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5f8fcd21802c52d61d354c5ba85d665bd17237db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078914"
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid-Steuerelement (Windows Forms)
 > [!NOTE]
@@ -27,28 +27,28 @@ ms.locfileid: "57720838"
  [Übersicht über das DataGrid-Steuerelement](datagrid-control-overview-windows-forms.md)  
  Beschreibt die grundlegenden Features des `DataGrid`-Steuerelements.  
   
- [Vorgehensweise: Hinzufügen von Tabellen und Spalten zu der DataGrid-Steuerelement in Windows Forms mithilfe des Designers](add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md)  
+ [Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms mithilfe des Designers](add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md)  
  Beschreibt das Hinzufügen von Tabellen und Spalten zum `DataGrid`-Steuerelement mithilfe des Designers.  
   
- [Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement von Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
+ [Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
  Beschreibt das programmgesteuerte Hinzufügen von Tabellen und Spalten zum `DataGrid`-Steuerelement.  
   
- [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle mithilfe des Designers](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
+ [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle mithilfe des Designers](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)  
  Beschreibt das Binden eines [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]-Datasets an das `DataGrid`-Steuerelement mithilfe des Designers.  
   
- [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
+ [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
  Beschreibt das Binden eines [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]-Datasets an das `DataGrid`-Steuerelement.  
   
- [Vorgehensweise: Ändern der angezeigten Daten zur Laufzeit in das DataGrid-Steuerelement in Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)  
+ [Vorgehensweise: Ändern der angezeigten Daten im DataGrid-Steuerelement in Windows Forms zur Laufzeit](change-displayed-data-at-run-time-wf-datagrid-control.md)  
  Beschreibt, wie Daten im `DataGrid`-Steuerelement programmgesteuert geändert werden.  
   
- [Vorgehensweise: Erstellen von Master-/ Detaillisten mit dem DataGrid-Steuerelement in Windows Forms mithilfe des Designers](create-master-details-lists-with-wf-datagrid-control-using-the-designer.md)  
+ [Vorgehensweise: Erstellen von Master-/Detaillisten mit dem DataGrid-Steuerelement in Windows Forms mithilfe des Designers](create-master-details-lists-with-wf-datagrid-control-using-the-designer.md)  
  Beschreibt, wie zwei Tabellen, die als übergeordnete und untergeordnete Tabelle miteinander verknüpft sind, mithilfe des Designers in zwei verschiedenen `DataGrid`-Steuerelementen angezeigt werden.  
   
  Vorgehensweise: Erstellen von Master-/ Detaillisten mit dem DataGrid-Steuerelement in Windows Forms  
  Beschreibt, wie zwei Tabellen, die als übergeordnete und untergeordnete Tabelle miteinander verknüpft sind, in zwei verschiedenen `DataGrid`-Steuerelementen angezeigt werden.  
   
- [Vorgehensweise: Löschen oder Ausblenden von Spalten im DataGrid-Steuerelement in Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
+ [Vorgehensweise: Löschen oder Ausblenden von Spalten aus dem DataGrid-Steuerelement in Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
  Beschreibt das Entfernen von Spalten im `DataGrid`-Steuerelement.  
   
  [Vorgehensweise: Formatieren des DataGrid-Steuerelements in Windows Forms mithilfe des Designers](how-to-format-the-windows-forms-datagrid-control-using-the-designer.md)  
@@ -57,13 +57,13 @@ ms.locfileid: "57720838"
  [Vorgehensweise: Formatieren des DataGrid-Steuerelements in Windows Forms](how-to-format-the-windows-forms-datagrid-control.md)  
  Beschreibt, wie die Darstellungseigenschaften des `DataGrid`-Steuerelements geändert werden.  
   
- [Tastenkombinationen für das DataGrid-Steuerelement von Windows Forms](keyboard-shortcuts-for-the-windows-forms-datagrid-control.md)  
+ [Tastenkombinationen für das DataGrid-Steuerelement von Windows Forms](keyboard-shortcuts-for-the-windows-forms-datagrid-control.md)  
  Enthält eine Liste der Tastenkombinationen für die Navigation durch das `DataGrid`-Steuerelement.  
   
- [Vorgehensweise: Reagieren Sie auf das Klicken in das DataGrid-Steuerelement in Windows Forms](how-to-respond-to-clicks-in-the-windows-forms-datagrid-control.md)  
+ [Vorgehensweise: Reagieren auf das Klicken in das DataGrid-Steuerelement in Windows Forms](how-to-respond-to-clicks-in-the-windows-forms-datagrid-control.md)  
  Beschreibt, wie festgestellt wird, auf welche Zelle im `DataGrid`-Steuerelement ein Benutzer geklickt hat.  
   
- [Vorgehensweise: Überprüfen von Eingaben mit dem DataGrid-Steuerelement in Windows Forms](how-to-validate-input-with-the-windows-forms-datagrid-control.md)  
+ [Vorgehensweise: Überprüfen von Eingaben mit dem DataGrid-Steuerelement von Windows Forms](how-to-validate-input-with-the-windows-forms-datagrid-control.md)  
  Beschreibt, wie Eingaben in das an das `DataGrid`-Steuerelement gebundene Dataset validiert werden.  
   
 ## <a name="reference"></a>Referenz  
@@ -74,9 +74,10 @@ ms.locfileid: "57720838"
  Enthält Details zur Verwendung dieser Eigenschaft zum Binden der <xref:System.Windows.Forms.DataGrid> -Steuerelement an Daten.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Datenbindung](../windows-forms-data-binding.md)  
+ [Datenbindung in Web Forms](../windows-forms-data-binding.md)  
  Enthält Links zu Themen über die Datenbindung in Windows Forms.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)
 - [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)

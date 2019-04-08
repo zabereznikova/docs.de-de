@@ -1,13 +1,13 @@
 ---
-title: <clear> des <claimTypeRequirements>-Elements
+title: <clear> der <claimTypeRequirements> Element
 ms.date: 03/30/2017
 ms.assetid: ef42fde7-f292-4610-9111-9fea382c3b5f
-ms.openlocfilehash: b20d5c1808bf41d1ecd6b3e3a61606ae45b0fbdd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 35d0391951204bd352918d3004f0cc4f9480b0e8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090322"
 ---
 # <a name="clear-of-claimtyperequirements-element"></a>\<Deaktivieren Sie > der \<ClaimTypeRequirements >-Element
 Gibt an, dass alle Anspruchstypen in den verbundenen Anmeldeinformationen entfernt werden sollen. Dadurch wird sichergestellt, dass die Auflistung beim Starten leer ist.  
@@ -44,6 +44,7 @@ Gibt an, dass alle Anspruchstypen in den verbundenen Anmeldeinformationen entfer
 |[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|Gibt eine Auflistung von erforderlichen Anspruchstypen an. Jedes Element ist vom Typ <xref:System.ServiceModel.Configuration.ClaimTypeElement>.<br /><br /> In einem verbundenen Szenario legen Dienste die Anforderungen für eingehende Anmeldeinformationen fest. Zum Beispiel müssen die eingehenden Anmeldeinformationen einen bestimmten Satz an Anspruchstypen aufweisen. Jedes Element in dieser Auflistung gibt die Typen der erforderlichen und optionalen Ansprüche an, die in verbundenen Anmeldeinformationen vorhanden sein sollen.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>

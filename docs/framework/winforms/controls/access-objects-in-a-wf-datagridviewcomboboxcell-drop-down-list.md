@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zugreifen auf Objekte in einer Windows Forms-DataGridViewComboBoxCell-Dropdownliste-Liste'
+title: 'Vorgehensweise: Zugreifen auf Objekte in einer Windows Forms-DataGridViewComboBoxCell-Dropdownliste'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 8a4731e081b31f74b4f17c2796b56cdf6b95e3e2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 221774895fa5867ad6ec870f7e293c9366e442f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080786"
 ---
-# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Vorgehensweise: Zugreifen auf Objekte in einer Windows Forms-DataGridViewComboBoxCell-Dropdownliste-Liste
+# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>Vorgehensweise: Zugreifen auf Objekte in einer Windows Forms-DataGridViewComboBoxCell-Dropdownliste
 Wie die <xref:System.Windows.Forms.ComboBox> -Steuerelement, das <xref:System.Windows.Forms.DataGridViewComboBoxColumn> und <xref:System.Windows.Forms.DataGridViewComboBoxCell> Typen ermöglichen es Ihnen, beliebige Objekte in die Dropdown-Liste hinzufügen. Mit diesem Feature können Sie komplexer Zustände in einer Dropdown-Liste darstellen, ohne entsprechenden Objekte in einer separaten Sammlung speichern zu müssen.  
   
  Im Gegensatz zu den <xref:System.Windows.Forms.ComboBox> -Steuerelement, das <xref:System.Windows.Forms.DataGridView> Typen verfügen nicht über eine <xref:System.Windows.Forms.ComboBox.SelectedItem%2A> -Eigenschaft für das aktuell ausgewählte Objekt abrufen. Stattdessen müssen Sie festlegen der <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType> oder <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType> -Eigenschaft auf den Namen einer Eigenschaft für das Business-Objekt. Wenn der Benutzer eine Auswahl trifft, legt die angegebene Eigenschaft des das Geschäftsobjekt, das die Zelle <xref:System.Windows.Forms.DataGridViewCell.Value%2A> Eigenschaft.  
@@ -69,6 +69,7 @@ Wie die <xref:System.Windows.Forms.ComboBox> -Steuerelement, das <xref:System.Wi
 -   Verweise auf die Assemblys "System" und "System.Windows.Forms".  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A?displayProperty=nameWithType>

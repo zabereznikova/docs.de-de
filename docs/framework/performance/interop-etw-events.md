@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb458958f55a3f9fb2b79d87f0ee32d4a028e457
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09b2848619256a255cc27f0268d46e5e6db8cbe4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611773"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083607"
 ---
 # <a name="interop-etw-events"></a>Interop-ETW-Ereignisse
 <a name="top"></a> Interop-Ereignisse erfassen Informationen zur MSIL-Stubgenerierung und -Zwischenspeicherung (Microsoft Intermediate Language).  
@@ -33,7 +33,7 @@ ms.locfileid: "54611773"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|Der MSIL-Stub wurde generiert.|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54611773"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|Es wurde auf den MSIL-Cache zugegriffen.|  
   
@@ -84,4 +84,5 @@ ms.locfileid: "54611773"
  [Zurück nach oben](#top)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)

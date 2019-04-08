@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07b3b3a32796b5805dbf86449921518a77e95d6b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8251d21fe535f85cc6abd0a7bc6c96ab320007f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480532"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090237"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx-Funktion
 Ruft den Anzeigenamen für die nach der Richtlinie für eine Assembly ab.  
@@ -49,7 +49,7 @@ HRESULT PreBindAssemblyEx (
  [in] Bezeichnet den Assemblynamen an.  
   
  `pAsmParent`  
- [in] Identifiziert die übergeordnete Assembly. Dieser Parameter wird ignoriert.  
+ [in] Identifiziert die übergeordnete Assembly. Konvertiert die Zeichenfolgendarstellung einer Zahl in einem angegebenen Stil und einem kulturspezifischen Format in die entsprechende 32-Bit-Ganzzahl mit Vorzeichen.  
   
  `pwzRuntimeVersion`  
  [in] Identifiziert die Runtimeversion der Common Language.  
@@ -73,4 +73,5 @@ HRESULT PreBindAssemblyEx (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Fusion: Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+
+- [Fusion – Globale statistische Funktionen](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

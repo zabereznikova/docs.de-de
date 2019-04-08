@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 17d027f7308d5f512b443dc69be815c5402f0c13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fed289b2776e8ac4a12969060cd16c6163ebed2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648900"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091966"
 ---
 # <a name="isymunmanagedbinder2getreaderforfile2-method"></a>ISymUnmanagedBinder2::GetReaderForFile2-Methode
 Gibt bei Angabe einer Metadaten-Schnittstelle und einen Dateinamen ein, den richtigen [ISymUnmanagedReader](isymunmanagedreader-interface.md) Schnittstelle, die die Debugsymbole, die dem Modul zugeordneten gelesen wird.  
@@ -66,5 +66,6 @@ HRESULT GetReaderForFile2(
  Diese Version der Methode kann die PDB-Datei, in anderen Bereichen als rechts neben dem Modul suchen. Die Richtlinie für die Suche kann gesteuert werden, durch Kombinieren von [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md). Z. B. `AllowReferencePathAccess | AllowSymbolServerAccess` sucht die PDB-Datei neben der ausführbaren Datei, und klicken Sie auf einem Symbolserver, jedoch keine Abfragen die Registrierung oder verwenden Sie den Pfad in der ausführbaren Datei. Wenn die `searchPath` -Parameter bereitgestellt wird, werden immer diese Verzeichnisse durchsucht.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ISymUnmanagedBinder2-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)
 - [GetReaderForFile-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)

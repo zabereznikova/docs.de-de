@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen des Bearbeitungsmodus für das DataGridView-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Festlegen des Bearbeitungsmodus für das DataGridView-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: 00c5bb85eb1b238371e58a631d90b69a41c49140
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7cb9278cd311d211ef95df238b930970ae472d05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725303"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080396"
 ---
-# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Vorgehensweise: Festlegen des Bearbeitungsmodus für das DataGridView-Steuerelement in Windows Forms
+# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>Vorgehensweise: Festlegen des Bearbeitungsmodus für das DataGridView-Steuerelement in Windows Forms
 Standardmäßig können Benutzer bearbeiten Sie den Inhalt des aktuellen <xref:System.Windows.Forms.DataGridView> Textfeldzelle, indem Sie darin eingeben oder F2 drücken. Dadurch wird die Zelle im Bearbeitungsmodus befindet, wenn alle der folgenden Bedingungen erfüllt sind:  
   
 -   Die zugrunde liegenden Datenquelle unterstützt die Bearbeitung.  
@@ -45,6 +45,7 @@ Standardmäßig können Benutzer bearbeiten Sie den Inhalt des aktuellen <xref:S
 -   Verweise auf die Assemblys <xref:System> und <xref:System.Windows.Forms>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>
 - [Dateneingabe im DataGridView-Steuerelement in Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)

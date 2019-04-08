@@ -8,18 +8,16 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: c8846c673e36fe64dd13c7acb600b93dedac5f3e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355076"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082177"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>Treffertests in der visuellen Ebene
 Dieses Thema enthält eine Übersicht über die Treffertestfunktionen der visuellen Ebene. Unterstützung für den Treffertest können Sie bestimmen, ob ein Geometrie- oder Punktwert Wert innerhalb des gerenderten Inhalts liegt eine <xref:System.Windows.Media.Visual>, sodass Sie Benutzeroberflächenverhalten, wie z. B. ein Positionierungsrechteck zum Auswählen von mehreren Objekten zu implementieren.  
-  
- 
-  
+
 <a name="hit_testing_scenarios"></a>   
 ## <a name="hit-testing-scenarios"></a>Treffertestszenarios  
  Die <xref:System.Windows.UIElement> -Klasse stellt die <xref:System.Windows.UIElement.InputHitTest%2A> -Methode, die Ihnen ermöglicht, einen Treffertest für ein Element mithilfe eines bestimmten Koordinatenwerts. In vielen Fällen die <xref:System.Windows.UIElement.InputHitTest%2A> Methode bietet die gewünschte Funktionalität aus, für Implementieren des Treffertests von Elementen. Es gibt jedoch mehrere Szenarios, bei denen es möglicherweise erforderlich ist, den Treffertest auf der visuellen Ebene zu implementieren.  
@@ -139,6 +137,7 @@ Reduzieren der Verzweigungen in einer visuellen Struktur
  [!code-vb[HitTestingOverview#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
 - <xref:System.Windows.Media.HitTestResult>
 - <xref:System.Windows.Media.HitTestResultCallback>
@@ -146,5 +145,5 @@ Reduzieren der Verzweigungen in einer visuellen Struktur
 - <xref:System.Windows.UIElement.IsHitTestVisible%2A>
 - [Treffertest mit DrawingVisuals-Beispiel](https://go.microsoft.com/fwlink/?LinkID=159994)
 - [Treffertests mit Win32-Interoperation](https://go.microsoft.com/fwlink/?LinkID=159995)
-- [Vorgehensweise: Treffertest für eine Geometrie in einem visuellen Objekt](how-to-hit-test-geometry-in-a-visual.md)
+- [Treffertest für eine Geometrie in einem visuellen Objekt](how-to-hit-test-geometry-in-a-visual.md)
 - [Treffertest mithilfe eines Win32-Hostcontainers](how-to-hit-test-using-a-win32-host-container.md)

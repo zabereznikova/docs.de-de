@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: cda8693ad4f061d2260d4629b774c401b0daac26
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 784072ecd133333dec13509d0ac10c69b2161cf8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080916"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Erstellen einer "DataTable" aus einer "DataView"
 Nachdem Sie Daten aus einer Datenquelle abgerufen und eine <xref:System.Data.DataTable> mit Daten gefüllt haben, möchten Sie die zurückgegebenen Daten möglicherweise sortieren, filtern oder anderweitig einschränken, ohne sie erneut abrufen zu müssen. Dies wird durch die <xref:System.Data.DataView>-Klasse ermöglicht. Darüber hinaus, wenn Sie ein neues erstellen müssen <xref:System.Data.DataTable> aus der <xref:System.Data.DataView>, können Sie die <xref:System.Data.DataView.ToTable%2A> Methode, um alle Zeilen und Spalten oder eine Teilmenge der Daten in eine neue kopieren <xref:System.Data.DataTable>. Die <xref:System.Data.DataView.ToTable%2A>-Methode stellt Überladungen für folgende Vorgänge bereit:  
@@ -206,6 +206,7 @@ Console.WriteLine();
  }  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Data.DataView.ToTable%2A>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- ["DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

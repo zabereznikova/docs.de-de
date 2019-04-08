@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: 50f180f2f3fe825f617ae441906a7414a6b8bced
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1807170b2f5df2333ec3b271a11f9b929c1e7993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707353"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087182"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Steuerelemente mit integrierter Ownerdrawing-Unterstützung
 Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeichnet, ist ein Verfahren zum Ändern der Darstellung bestimmter Steuerelemente.  
@@ -172,9 +172,9 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [Vorgehensweise: Anpassen der Darstellung von Zellen in der DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [Vorgehensweise: Anpassen der Darstellung von Zellen im DataGridView-Steuerelement von Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [Vorgehensweise: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [Vorgehensweise: Anpassen der Darstellung von Zeilen im DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip-Steuerelement  
  <xref:System.Windows.Forms.ToolStrip> und abgeleitete Steuerelemente ermöglichen Ihnen, alle Aspekte der steuerelementdarstellung anzupassen.  
@@ -185,9 +185,10 @@ Ownerdrawing in Windows Forms, das auch als benutzerdefiniertes Zeichnen bezeich
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [Vorgehensweise: Erstellen und Festlegen eines benutzerdefinierten Renderers für das ToolStrip-Steuerelement in Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [Vorgehensweise: Erstellen und Festlegen eines benutzerdefinierten Renderers für das ToolStrip-Steuerelement in Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
 -   [Vorgehensweise: Benutzerdefiniertes Zeichnen eines ToolStrip-Steuerelements](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>Siehe auch
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 3eb18a3e48c185d59879e86801a7df5e6080d7a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04526e8aea09b412de4d3a94f17938b02ad6527b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529160"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105273"
 ---
 # <a name="transport-security-overview"></a>Übersicht über die Transportsicherheit
 Transportsicherheitsmechanismen in Windows Communication Foundation (WCF) hängt davon ab, die Bindung und den Transport verwendet wird. Wenn Sie z. B. die <xref:System.ServiceModel.WSHttpBinding>-Klasse verwenden, lautet der Transportmechanismus HTTP, und der primäre Mechanismus zum Sichern des Transports ist Secure Sockets Layer (SSL) über HTTP, allgemein als HTTPS bezeichnet. Dieses Thema beschreibt die wichtigsten Sicherheitsmechanismen, die in den WCF-System bereitgestellten Bindungen verwendet.  
@@ -19,7 +19,7 @@ Transportsicherheitsmechanismen in Windows Communication Foundation (WCF) hängt
 >  Bei Verwendung der SSL-Sicherheit mit .NET Framework 3.5 und höher ein WCF-Client verwendet sowohl die Zwischenzertifikate in den Zertifikatspeicher verwendet und die Zwischenzertifikate aus, die während des SSL-Aushandlung zum Ausführen der Überprüfung der Zertifikatkette auf des Diensts erhalten das Zertifikat. Bei .NET Framework 3.0 werden nur die im lokalen Zertifikatspeicher installierten Zwischenzertifikate verwendet.  
   
 > [!WARNING]
->  Wenn die Transportsicherheit verwendet wird, kann die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>-Eigenschaft überschrieben werden. Um dies verhindern, legen die <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> zu <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> ist ein Dienstverhalten, das für die Dienstbeschreibung festgelegt werden kann.  
+>  Wenn die Transportsicherheit verwendet wird, kann die <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>-Eigenschaft überschrieben werden. Um dies verhindern, legen die <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> zu <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> ist ein Dienstverhalten, das in der dienstbeschreibung festgelegt werden kann.  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  Die <xref:System.ServiceModel.BasicHttpBinding>-Klasse bietet standardmäßig keine Sicherheit. Diese Bindung ist für die Interoperabilität mit Webdienstanbietern ausgelegt, die keine Sicherheit implementieren. Sie können jedoch die Sicherheit aktivieren, indem Sie die <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A>-Eigenschaft auf einen beliebigen Wert außer <xref:System.ServiceModel.BasicHttpSecurityMode.None> festlegen. Wenn Sie die Transportsicherheit aktivieren möchten, legen Sie die Eigenschaft auf <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> fest.  
@@ -109,7 +109,7 @@ Transportsicherheitsmechanismen in Windows Communication Foundation (WCF) hängt
 ```  
   
 ## <a name="netnamedpipebinding"></a>NetNamedPipeBinding  
- Die <xref:System.ServiceModel.NetNamedPipeBinding>-Klasse ist für eine effiziente Kommunikation zwischen verschiedenen Computern ausgerichtet, d. h. für Prozesse, die auf demselben Computer ausgeführt werden, obwohl zwischen zwei Computern im selben Netzwerk Named Pipe-Kanäle erstellt werden können. Diese Bindung bietet lediglich Sicherheit auf Transportebene. Wenn Sie mit dieser Bindung Anwendungen erstellen, müssen die Endpunktadressen "net.pipe" als Protokoll der Endpunktadresse enthalten.  
+ Die <xref:System.ServiceModel.NetNamedPipeBinding>-Klasse ist für eine effiziente Kommunikation zwischen verschiedenen Computern ausgerichtet, d. h. für Prozesse, die auf demselben Computer ausgeführt werden, obwohl zwischen zwei Computern im selben Netzwerk Named Pipe-Kanäle erstellt werden können. Diese Bindung bietet lediglich Sicherheit auf Transportebene. Wenn Sie mit dieser Bindung Anwendungen erstellen, müssen die Endpunktadressen „net.pipe“ als Protokoll der Endpunktadresse enthalten.  
   
 ## <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
  Wenn Sie Transportsicherheit verwenden, erfolgt diese Bindung mit SSL über HTTP (als HTTPS bezeichnet) und einem ausgestellten Token (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>). Weitere Informationen über verbundanwendungen finden Sie unter [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
@@ -121,4 +121,5 @@ Transportsicherheitsmechanismen in Windows Communication Foundation (WCF) hängt
  Eine vollständige Erläuterung der transportsicherheit mit Message Queuing (früher als MSMQ bezeichnet), finden Sie unter [Sichern von Nachrichten mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Programmieren der WCF-Sicherheit](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Store und Wiederverwendung von Abfragen'
+title: 'Vorgehensweise: Speichern und Wiederverwenden von Abfragen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a012bd79-1809-45e3-adea-0229532396cc
-ms.openlocfilehash: a913839ab8e6048b18270061a75ca632e2797fb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1aac20c3f9c421d353938a83b9e321d35abd244e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084192"
 ---
-# <a name="how-to-store-and-reuse-queries"></a>Vorgehensweise: Store und Wiederverwendung von Abfragen
+# <a name="how-to-store-and-reuse-queries"></a>Vorgehensweise: Speichern und Wiederverwenden von Abfragen
 Wenn eine Anwendung häufig strukturell ähnliche Abfragen ausführt, können Sie häufig die Leistung steigern, indem Sie die Abfrage einmal kompilieren und dann mehrmals mit verschiedenen Parametern ausführen. So können beispielsweise mithilfe einer Anwendung alle Kunden in einer bestimmten Stadt abgerufen werden, wobei die Stadt zur Laufzeit vom Benutzer in einem Formular festgelegt wird. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die Verwendung von *kompilierter Abfragen* für diesen Zweck.  
   
 > [!NOTE]
@@ -34,6 +34,7 @@ Wenn eine Anwendung häufig strukturell ähnliche Abfragen ausführt, können Si
  [!code-vb[DLinqQuerying#8](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQuerying/vb/Module1.vb#8)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Data.Linq.CompiledQuery>
 - [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Abfragen der Datenbank](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

@@ -2,12 +2,12 @@
 title: Vertrauenswürdiger Fassadendienst
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 78eae4a632317e8d31c64cd3c249adc7994f0d86
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4b02928224f1cb96a25dc71941273625e7d9e5e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091550"
 ---
 # <a name="trusted-facade-service"></a>Vertrauenswürdiger Fassadendienst
 Dieses Szenariobeispiel veranschaulicht, wie Informationen Identität des Aufrufers aus einem Dienst in eine andere mithilfe von Windows Communication Foundation (WCF) flow Sicherheitsinfrastruktur.  
@@ -290,4 +290,3 @@ Press <ENTER> to terminate client.
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  
-  

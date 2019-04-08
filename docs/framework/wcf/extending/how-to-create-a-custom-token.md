@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: 3367a75fc0532e3eaa312400221c662bb35146bf
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 4f2f2d3a1d4263dfc068193f832369b0d82e69fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095658"
 ---
 # <a name="how-to-create-a-custom-token"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Tokens
 In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tokens.SecurityToken>-Klasse ein benutzerdefiniertes Sicherheitstoken erstellen und in einen benutzerdefinierten Sicherheitstokenanbieter und -authentifizierer integrieren. Ein vollständiges Codebeispiel finden Sie unter den [benutzerdefinierte Token](../../../../docs/framework/wcf/samples/custom-token.md) Beispiel.  
@@ -89,11 +89,11 @@ In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tok
   
 2.  Überschreiben Sie die <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29>-Methode, die den XML-Stream mit dem <xref:System.Xml.XmlReader> liest. Diese Methode gibt `true` zurück, wenn das Sicherheitstoken für das aktuelle Element von der Implementierung des Serialisierungsprogramms deserialisiert werden kann. In diesem Beispiel überprüft die Methode, ob das aktuelle XML-Element des XML-Readers den richtigen Namen und den richtigen Namespace aufweist. Ist dies nicht der Fall, wird die Basisklassenimplementierung dieser Methode aufgerufen, um das XML-Element zu behandeln.  
   
-3.  Überschreiben Sie die <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> -Methode. Diese Methode wird zum Lesen des XML-Inhalts des Sicherheitstokens sowie zum Erstellen der entsprechenden Darstellung im Speicher verwendet. Wenn das XML-Element, das gerade vom übergebenen XML-Reader erfasst wird, von der Methode nicht erkannt wird, wird die Basisklassenimplementierung zur Verarbeitung der vom System bereitgestellten Tokentypen aufgerufen.  
+3.  Überschreiben Sie die <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29>-Methode. Diese Methode wird zum Lesen des XML-Inhalts des Sicherheitstokens sowie zum Erstellen der entsprechenden Darstellung im Speicher verwendet. Wenn das XML-Element, das gerade vom übergebenen XML-Reader erfasst wird, von der Methode nicht erkannt wird, wird die Basisklassenimplementierung zur Verarbeitung der vom System bereitgestellten Tokentypen aufgerufen.  
   
-4.  Überschreiben Sie die <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29> -Methode. Diese Methode gibt `true` zurück, wenn die (als Argument übergebene) Darstellung des Tokens im Speicher in die XML-Darstellung konvertiert werden kann. Wenn dies nicht der Fall ist, wird die Basisklassenimplementierung aufgerufen.  
+4.  Überschreiben Sie die <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29>-Methode. Diese Methode gibt `true` zurück, wenn die (als Argument übergebene) Darstellung des Tokens im Speicher in die XML-Darstellung konvertiert werden kann. Wenn dies nicht der Fall ist, wird die Basisklassenimplementierung aufgerufen.  
   
-5.  Überschreiben Sie die <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> -Methode. Diese Methode konvertiert die Darstellung eines Sicherheitstokens im Speicher in eine XML-Darstellung. Andernfalls wird die Basisklassenimplementierung aufgerufen.  
+5.  Überschreiben Sie die <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29>-Methode. Diese Methode konvertiert die Darstellung eines Sicherheitstokens im Speicher in eine XML-Darstellung. Andernfalls wird die Basisklassenimplementierung aufgerufen.  
   
      [!code-csharp[c_CustomToken#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#3)]
      [!code-vb[c_CustomToken#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#3)]  
@@ -149,6 +149,7 @@ In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tok
  In diesem Thema werden die verschiedenen Codeteile behandelt, die zur Implementierung und Verwendung benutzerdefinierter Token erforderlich sind. Um ein vollständiges Beispiel finden Sie unter zusammenarbeiten all diese Teile des Codes finden Sie unter [benutzerdefinierte Token](../../../../docs/framework/wcf/samples/custom-token.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.IdentityModel.Tokens.SecurityToken>
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters>
 - <xref:System.ServiceModel.Security.WSSecurityTokenSerializer>
@@ -161,5 +162,5 @@ In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tok
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Authentifikator](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Anbieter](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenanbieters](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)

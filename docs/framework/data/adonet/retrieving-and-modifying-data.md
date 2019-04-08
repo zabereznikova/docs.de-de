@@ -2,12 +2,12 @@
 title: Abrufen und Ändern von Daten in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: ab6aa30708140aed2f5f325c3dae9f543937fac8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097620"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Abrufen und Ändern von Daten in ADO.NET
 Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen einer Verbindung mit einer Datenquelle und das Abrufen der darin enthaltenen Daten. Die .NET Framework-Datenanbieter von ADO.NET bilden eine Brücke zwischen einer Anwendung und einer Datenquelle, sodass Sie zum Ausführen von Befehlen sowie zum Abrufen von Daten mithilfe einer **DataReader** oder **DataAdapter** . Eine Hauptfunktion jeder Datenbank ist die Fähigkeit, die in ihr gespeicherten Daten zu aktualisieren. In ADO.NET aktualisieren von Daten werden mithilfe der **DataAdapter** und <xref:System.Data.DataSet>, und **Befehl** Objekte und u. u. auch Transaktionen.  
@@ -25,7 +25,7 @@ Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen eine
  [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  Enthält Themen, in denen beschrieben wird, wie Befehlen und Befehlsgeneratoren erstellt und Parameter konfiguriert werden und welche Vorgehensweise beim Ausführen von Befehlen zum Abrufen und Bearbeiten von Daten ausgeführt werden muss.  
   
- [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ ["DataAdapters" und "DataReaders"](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  Enthält Themen, in denen DataReader, DataAdapter, Parameter und die Vorgehensweise bei DataAdapter-Ereignissen und beim Ausführen von Batchvorgängen beschrieben werden.  
   
  [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
@@ -59,8 +59,9 @@ Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen eine
  Erläutert, wie Sie Anwendungen, Streamen von Daten aus SQL Server schreiben, ohne dass es vollständig in den Arbeitsspeicher geladen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Datentypzuordnungen in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
-- [DataSets, DataTables und DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- ["DataSets", "DataTables" und "DataViews"](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server und ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

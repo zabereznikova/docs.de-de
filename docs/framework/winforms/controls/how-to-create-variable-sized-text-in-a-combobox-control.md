@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: b55a6b66416aa79427035abdfbc19d1b0e21d94e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9155893b3d47707e0e55ee33e30d7998654f9e93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707793"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085609"
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Vorgehensweise: Erstellen von Text mit variabler Größe in einem ComboBox-Steuerelement
 In diesem Beispiel wird veranschaulicht, benutzerdefinierte Zeichnungen von Text in einem <xref:System.Windows.Forms.ComboBox> Steuerelement. Wenn ein Element eine bestimmte Kriterien erfüllt, dabei handelt es sich in einer größeren Schrift gezeichnet roten aktiviert.  
@@ -68,6 +68,7 @@ End Sub
 -   Verweise auf die Namespaces <xref:System.Windows.Forms?displayProperty=nameWithType> und <xref:System.Drawing?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ComboBox.DrawItem>
 - <xref:System.Windows.Forms.DrawItemEventArgs>
 - <xref:System.Windows.Forms.ComboBox.MeasureItem>

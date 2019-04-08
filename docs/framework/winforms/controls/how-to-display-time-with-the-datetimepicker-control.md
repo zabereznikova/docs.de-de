@@ -9,19 +9,19 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - DateTimePicker control [Windows Forms], displaying time
 ms.assetid: 0c1c8b40-1b50-4301-a90c-39516775ccb1
-ms.openlocfilehash: a88b93dfe5296873fa3503fbeb020118f2606859
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5163ca3eb04732152960c86c9a7428d87c6280f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716451"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083036"
 ---
 # <a name="how-to-display-time-with-the-datetimepicker-control"></a>Vorgehensweise: Anzeigen der Zeit mithilfe des DateTimePicker-Steuerelements
 Wenn Ihre Anwendung es Benutzern gestatten soll, ein Datum und eine Uhrzeit auszuwählen, und das Datum und die Uhrzeit im angegebenen Format angezeigt werden sollen, verwenden Sie das <xref:System.Windows.Forms.DateTimePicker>-Steuerelement. Das folgende Verfahren zeigt, wie Sie mithilfe des <xref:System.Windows.Forms.DateTimePicker>-Steuerelements die Uhrzeit anzeigen.  
   
 ### <a name="to-display-the-time-with-the-datetimepicker-control"></a>So zeigen Sie die Uhrzeit mithilfe des DateTimePicker-Steuerelements an  
   
-1.  Legen Sie die <xref:System.Windows.Forms.DateTimePicker.Format%2A>-Eigenschaft auf <xref:System.Windows.Forms.DateTimePickerFormat.Time> fest.  
+1.  Legen Sie die <xref:System.Windows.Forms.DateTimePicker.Format%2A> Eigenschaft <xref:System.Windows.Forms.DateTimePickerFormat.Time>  
   
      [!code-csharp[System.Windows.Forms.DateTimePickerTimeOnly#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.DateTimePickerTimeOnly#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/VB/Form1.vb#2)]  
@@ -45,4 +45,5 @@ Wenn Ihre Anwendung es Benutzern gestatten soll, ein Datum und eine Uhrzeit ausz
  Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [DateTimePicker-Steuerelement](datetimepicker-control-windows-forms.md)

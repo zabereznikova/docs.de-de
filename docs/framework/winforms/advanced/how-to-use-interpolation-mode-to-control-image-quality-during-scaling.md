@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-ms.openlocfilehash: 93430f521904d9d38ba98f4055480583fd650114
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 75f5077c2d969f026a28834144c219f289843dd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410367"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080981"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>Vorgehensweise: Verwenden des Interpolationsmodus zum Steuern der Bildqualität während der Skalierung
 Der Interpolationsmodus eine <xref:System.Drawing.Graphics> Objekt beeinflusst die Möglichkeit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Bilder skaliert (erstreckt und Verkleinerung). Die <xref:System.Drawing.Drawing2D.InterpolationMode> -Enumeration definiert mehrere Interpolationsmodi, von denen einige sind in der folgenden Liste:  
@@ -47,5 +47,6 @@ Der Interpolationsmodus eine <xref:System.Drawing.Graphics> Objekt beeinflusst d
  Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Bilder, Bitmaps und Metadateien](images-bitmaps-and-metafiles.md)
 - [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](working-with-images-bitmaps-icons-and-metafiles.md)

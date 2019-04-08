@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-ms.openlocfilehash: 44c985cef035e33e88ba246584efcb30fe0e9b97
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 641db19cc6493a20c9f9a34622f466e3623c32ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705557"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088651"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Implementieren des virtuellen Modus mit Just-In-Time-Laden von Daten in das DataGridView-Steuerelement in Windows Forms
 Ein Grund für das Implementieren des virtuellen Modus in den <xref:System.Windows.Forms.DataGridView> Steuerelement wird zum Abrufen von Daten nur bei Bedarf ist. Dies wird als bezeichnet *just-in-Time-Datenladevorgang*.  
@@ -71,10 +71,11 @@ Ein Grund für das Implementieren des virtuellen Modus in den <xref:System.Windo
  Um die bildlaufleistung Ihrer Anwendung zu verbessern, können Sie die Menge der Daten, die lokal gespeicherten erhöhen. Zur Verbesserung der Startzeit müssen Sie jedoch vermeiden Anfangs zu viele Daten zu laden. Sie ändern möchten die `Cache` Klasse, um die Anzahl der Datenseiten zu erhöhen, kann es zu speichern. Kann bei Verwendung von mehr Datenseiten Bildlauf Effizienz verbessern, aber Sie müssen die ideale Anzahl von Zeilen in eine Datenseite, abhängig von der verfügbaren Bandbreite und die Server-Wartezeit bestimmen. Bei kleineren Seiten der Server häufiger zugegriffen wird, aber nimmt weniger Zeit in die angeforderten Daten zurück. Wenn Latenz ein Problem als Bandbreite mehr ist, können Sie größere Datenseiten verwenden möchten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
 - [Leistungsoptimierung im DataGridView-Steuerelement in Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
 - [Virtueller Modus im DataGridView-Steuerelement in Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
-- [Vorgehensweise: Implementieren des virtuellen Modus mit Just-in-Time-Daten laden in das DataGridView-Steuerelement in Windows Forms](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+- [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
+- [Vorgehensweise: Implementieren des virtuellen Modus mit Just-In-Time-Laden von Daten in das DataGridView-Steuerelement in Windows Forms](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

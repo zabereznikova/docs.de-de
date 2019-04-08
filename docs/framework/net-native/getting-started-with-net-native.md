@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576c7c10b5ce36092dae7ab9cd7d973568168260
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1ff4db5216cf984af764176fef636bb586f97c2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220951"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081488"
 ---
 # <a name="getting-started-with-net-native"></a>Erste Schritte mit .NET Native
 Unabhängig davon, ob Sie eine neue Windows-App für Windows 10 entwickeln, oder eine vorhandene Windows Store-App migrieren, können Sie dieselben Verfahren verwenden. Um eine [!INCLUDE[net_native](../../../includes/net-native-md.md)] -App zu erstellen, gehen Sie wie folgt vor:  
@@ -59,9 +59,9 @@ Unabhängig davon, ob Sie eine neue Windows-App für Windows 10 entwickeln, oder
  **Auf Reflektion beruhende Methoden**  
  In einigen Fällen ist die Verwendung von Reflektion im Code nicht offensichtlich. Einige gängige APIs oder Programmiermuster gelten nicht als Teil der Reflektions-API, aber benötigen die Reflektion, um erfolgreich ausgeführt zu werden. Dazu zählen die folgenden Methoden zur Typinstanziierung und Methodenkonstruktion:  
   
--   Die <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType>-Methode  
+-   Die <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> -Methode  
   
--   Die Methoden <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> und <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>  
+-   Die Methoden <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> und <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>   
   
 -   Die <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> -Methode.  
   
@@ -106,17 +106,18 @@ Unabhängig davon, ob Sie eine neue Windows-App für Windows 10 entwickeln, oder
   
  Einige spezifische Beispiele für das Behandeln von Ausnahmen und anderen Problemen beim Testen der App finden Sie unter:  
   
--   [Anpassen von mit VSTU Behandeln von Ausnahmen beim Binden von Daten](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [Beispiel: Behandeln von Ausnahmen beim Binden von Daten](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [Anpassen von mit VSTU Problembehandlung bei dynamischer Programmierung](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [Beispiel: Problembehandlung bei dynamischer Programmierung](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
--   [Runtime Exceptions in .NET Native Apps (Laufzeitausnahmen in .NET Native-Apps)](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
+-   [Laufzeitausnahmen in .NET Native-Apps](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>Siehe auch
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET native Einrichtung und Konfiguration](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [.NET Native and Compilation (.NET Native und Kompilierung)](../../../docs/framework/net-native/net-native-and-compilation.md)
-- [Reflection and .NET Native (Reflektion und .NET Native)](../../../docs/framework/net-native/reflection-and-net-native.md)
-- [APIs That Rely on Reflection (APIs, die die Reflektion benötigen)](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
-- [Serialization and Metadata (Serialisierung und Metadaten)](../../../docs/framework/net-native/serialization-and-metadata.md)
-- [Migrieren der Windows Store-App zu .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [.NET Native Einrichtung und Konfiguration](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET Native und Kompilierung](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [Reflektion und .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [APIs, die auf Refelktion beruhen](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
+- [Serialisierung und Metadaten](../../../docs/framework/net-native/serialization-and-metadata.md)
+- [Migrieren der Windows Store-App auf .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

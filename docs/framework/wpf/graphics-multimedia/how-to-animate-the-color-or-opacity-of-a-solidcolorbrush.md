@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Animieren der Farbe oder der Durchlässigkeit von SolidColorBrush'
+title: 'Vorgehensweise: Animieren der Farbe oder der Durchlässigkeit von einem SolidColorBrush'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - SolidColorBrush [WPF], animating color of
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - animation [WPF], opacity of SolidColorBrush
 - SolidColorBrush [WPF], animating opacity of
 ms.assetid: d9154354-843f-4713-bad1-35bb0ba6eaeb
-ms.openlocfilehash: 541835a7827467aeceb1ed72e54b69e62dc4f916
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e440cf49b8b16051361650f9659dc6006c2e7b56
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072158"
 ---
-# <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>Vorgehensweise: Animieren der Farbe oder der Durchlässigkeit von SolidColorBrush
+# <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>Vorgehensweise: Animieren der Farbe oder der Durchlässigkeit von einem SolidColorBrush
 Dieses Beispiel zeigt, wie Sie animieren der <xref:System.Windows.Media.SolidColorBrush.Color%2A> und <xref:System.Windows.Media.Brush.Opacity%2A> von einem <xref:System.Windows.Media.SolidColorBrush>.  
   
 ## <a name="example"></a>Beispiel  
@@ -35,6 +35,7 @@ Dieses Beispiel zeigt, wie Sie animieren der <xref:System.Windows.Media.SolidCol
  Verwenden Sie für Konsistenz mit anderen Animationsbeispielen die Codeversionen dieses Beispiels ein <xref:System.Windows.Media.Animation.Storyboard> Objekt zum Anwenden der Animationen. Beim Anwenden einer Animation im Code ist es jedoch einfacher, die <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> Methode anstelle einer <xref:System.Windows.Media.Animation.Storyboard>. Ein Beispiel finden Sie unter [Vorgehensweise: Animieren einer Eigenschaft ohne Storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über Storyboards](storyboards-overview.md)
 - [Beispiel für Pinsel](https://go.microsoft.com/fwlink/?LinkID=159973)
