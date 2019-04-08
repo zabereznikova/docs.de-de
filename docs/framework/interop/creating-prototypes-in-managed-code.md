@@ -19,86 +19,99 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ad93144dcb56d60f9aa688400918218ef8171df
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219567"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412330"
 ---
-# <a name="creating-prototypes-in-managed-code"></a><span data-ttu-id="1b16d-102">Erstellen von Prototypen in verwaltetem Code</span><span class="sxs-lookup"><span data-stu-id="1b16d-102">Creating Prototypes in Managed Code</span></span>
-<span data-ttu-id="1b16d-103">In diesem Thema wird der Zugriff auf nicht verwaltete Funktionen beschrieben. Zudem werden verschiedene Attributfelder eingeführt, die die Methodendefinition in verwaltetem Code mit Anmerkungen versehen.</span><span class="sxs-lookup"><span data-stu-id="1b16d-103">This topic describes how to access unmanaged functions and introduces several attribute fields that annotate method definition in managed code.</span></span> <span data-ttu-id="1b16d-104">Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](marshaling-data-with-platform-invoke.md).</span><span class="sxs-lookup"><span data-stu-id="1b16d-104">For examples that demonstrate how to construct .NET-based declarations to be used with platform invoke, see [Marshaling Data with Platform Invoke](marshaling-data-with-platform-invoke.md).</span></span>  
+# <a name="creating-prototypes-in-managed-code"></a><span data-ttu-id="7c29c-102">Erstellen von Prototypen in verwaltetem Code</span><span class="sxs-lookup"><span data-stu-id="7c29c-102">Creating Prototypes in Managed Code</span></span>
+<span data-ttu-id="7c29c-103">In diesem Thema wird der Zugriff auf nicht verwaltete Funktionen beschrieben. Zudem werden verschiedene Attributfelder eingeführt, die die Methodendefinition in verwaltetem Code mit Anmerkungen versehen.</span><span class="sxs-lookup"><span data-stu-id="7c29c-103">This topic describes how to access unmanaged functions and introduces several attribute fields that annotate method definition in managed code.</span></span> <span data-ttu-id="7c29c-104">Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](marshaling-data-with-platform-invoke.md).</span><span class="sxs-lookup"><span data-stu-id="7c29c-104">For examples that demonstrate how to construct .NET-based declarations to be used with platform invoke, see [Marshaling Data with Platform Invoke](marshaling-data-with-platform-invoke.md).</span></span>  
   
- <span data-ttu-id="1b16d-105">Bevor Sie auf eine nicht verwaltete DLL-Funktion in verwaltetem Code zugreifen können, müssen Sie den Namen der Funktion sowie den Namen der DLL kennen, die diese exportiert.</span><span class="sxs-lookup"><span data-stu-id="1b16d-105">Before you can access an unmanaged DLL function from managed code, you need to know the name of the function and the name of the DLL that exports it.</span></span> <span data-ttu-id="1b16d-106">Mit diesen Informationen können Sie damit beginnen, die verwaltete Definition für eine nicht verwaltete Funktion zu schreiben, die in einer DLL implementiert ist.</span><span class="sxs-lookup"><span data-stu-id="1b16d-106">With this information, you can begin to write the managed definition for an unmanaged function that is implemented in a DLL.</span></span> <span data-ttu-id="1b16d-107">Darüber hinaus können Sie die Art und Weise anpassen, in der die Funktion durch Plattformaufrufe erstellt wird und die Daten zur und von der Funktion gemarshallt werden.</span><span class="sxs-lookup"><span data-stu-id="1b16d-107">Furthermore, you can adjust the way that platform invoke creates the function and marshals data to and from the function.</span></span>  
+ <span data-ttu-id="7c29c-105">Bevor Sie auf eine nicht verwaltete DLL-Funktion in verwaltetem Code zugreifen können, müssen Sie den Namen der Funktion sowie den Namen der DLL kennen, die diese exportiert.</span><span class="sxs-lookup"><span data-stu-id="7c29c-105">Before you can access an unmanaged DLL function from managed code, you need to know the name of the function and the name of the DLL that exports it.</span></span> <span data-ttu-id="7c29c-106">Mit diesen Informationen können Sie damit beginnen, die verwaltete Definition für eine nicht verwaltete Funktion zu schreiben, die in einer DLL implementiert ist.</span><span class="sxs-lookup"><span data-stu-id="7c29c-106">With this information, you can begin to write the managed definition for an unmanaged function that is implemented in a DLL.</span></span> <span data-ttu-id="7c29c-107">Darüber hinaus können Sie die Art und Weise anpassen, in der die Funktion durch Plattformaufrufe erstellt wird und die Daten zur und von der Funktion gemarshallt werden.</span><span class="sxs-lookup"><span data-stu-id="7c29c-107">Furthermore, you can adjust the way that platform invoke creates the function and marshals data to and from the function.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="1b16d-108">Funktionen der Win32-API, die eine Zeichenfolge reservieren, ermöglichen es Ihnen, die Zeichenfolge mithilfe einer Methode wie `LocalFree` freizugeben.</span><span class="sxs-lookup"><span data-stu-id="1b16d-108">Win32 API functions that allocate a string enable you to free the string by using a method such as `LocalFree`.</span></span> <span data-ttu-id="1b16d-109">Der Plattformaufruf behandelt solche Parameter unterschiedlich auf andere Weise.</span><span class="sxs-lookup"><span data-stu-id="1b16d-109">Platform invoke handles such parameters differently.</span></span> <span data-ttu-id="1b16d-110">Für Plattformaufrufe verwenden Sie einen Parameter vom Typ `IntPtr` anstelle des Typs `String`.</span><span class="sxs-lookup"><span data-stu-id="1b16d-110">For platform invoke calls, make the parameter an `IntPtr` type instead of a `String` type.</span></span> <span data-ttu-id="1b16d-111">Verwenden Sie von der <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>-Klasse bereitgestellte Methoden, um den Typ manuell in eine Zeichenfolge zu konvertieren und die Zeichenfolge dann manuell freizugeben.</span><span class="sxs-lookup"><span data-stu-id="1b16d-111">Use methods that are provided by the <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> class to convert the type to a string manually and free it manually.</span></span>  
+>  <span data-ttu-id="7c29c-108">Mit Funktionen der Windows-API, die eine Zeichenfolge zuordnen, können Sie die Zeichenfolge mithilfe einer Methode wie z.B. `LocalFree` freigeben.</span><span class="sxs-lookup"><span data-stu-id="7c29c-108">Windows API functions that allocate a string enable you to free the string by using a method such as `LocalFree`.</span></span> <span data-ttu-id="7c29c-109">Der Plattformaufruf behandelt solche Parameter unterschiedlich auf andere Weise.</span><span class="sxs-lookup"><span data-stu-id="7c29c-109">Platform invoke handles such parameters differently.</span></span> <span data-ttu-id="7c29c-110">Für Plattformaufrufe verwenden Sie einen Parameter vom Typ `IntPtr` anstelle des Typs `String`.</span><span class="sxs-lookup"><span data-stu-id="7c29c-110">For platform invoke calls, make the parameter an `IntPtr` type instead of a `String` type.</span></span> <span data-ttu-id="7c29c-111">Verwenden Sie von der <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>-Klasse bereitgestellte Methoden, um den Typ manuell in eine Zeichenfolge zu konvertieren und die Zeichenfolge dann manuell freizugeben.</span><span class="sxs-lookup"><span data-stu-id="7c29c-111">Use methods that are provided by the <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> class to convert the type to a string manually and free it manually.</span></span>  
   
-## <a name="declaration-basics"></a><span data-ttu-id="1b16d-112">Grundlagen der Deklaration</span><span class="sxs-lookup"><span data-stu-id="1b16d-112">Declaration Basics</span></span>  
- <span data-ttu-id="1b16d-113">Verwaltete Definitionen für nicht verwaltete Funktionen hängen von der Sprache ab, wie Sie in den folgenden Beispielen erkennen können.</span><span class="sxs-lookup"><span data-stu-id="1b16d-113">Managed definitions to unmanaged functions are language-dependent, as you can see in the following examples.</span></span> <span data-ttu-id="1b16d-114">Ausführlichere Codebeispiele finden Sie unter [Beispiele für Plattformaufrufe](platform-invoke-examples.md).</span><span class="sxs-lookup"><span data-stu-id="1b16d-114">For more complete code examples, see [Platform Invoke Examples](platform-invoke-examples.md).</span></span>  
+## <a name="declaration-basics"></a><span data-ttu-id="7c29c-112">Grundlagen der Deklaration</span><span class="sxs-lookup"><span data-stu-id="7c29c-112">Declaration Basics</span></span>  
+ <span data-ttu-id="7c29c-113">Verwaltete Definitionen für nicht verwaltete Funktionen hängen von der Sprache ab, wie Sie in den folgenden Beispielen erkennen können.</span><span class="sxs-lookup"><span data-stu-id="7c29c-113">Managed definitions to unmanaged functions are language-dependent, as you can see in the following examples.</span></span> <span data-ttu-id="7c29c-114">Ausführlichere Codebeispiele finden Sie unter [Beispiele für Plattformaufrufe](platform-invoke-examples.md).</span><span class="sxs-lookup"><span data-stu-id="7c29c-114">For more complete code examples, see [Platform Invoke Examples](platform-invoke-examples.md).</span></span>  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-    Declare Auto Function MessageBox Lib "user32.dll" _  
-       (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-End Class  
-```  
+```vb
+Imports System
+
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+End Class
+```
   
- <span data-ttu-id="1b16d-115">Um die Felder <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> oder <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> auf eine [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)]-Deklaration anzuwenden, müssen Sie das <xref:System.Runtime.InteropServices.DllImportAttribute>-Attribut anstelle der `Declare`-Anweisung verwenden.</span><span class="sxs-lookup"><span data-stu-id="1b16d-115">To apply the <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>, or <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> fields to a [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] declaration, you must use the <xref:System.Runtime.InteropServices.DllImportAttribute> attribute instead of the `Declare` statement.</span></span>  
+ <span data-ttu-id="7c29c-115">Um die Felder <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> oder <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> auf eine [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)]-Deklaration anzuwenden, müssen Sie das <xref:System.Runtime.InteropServices.DllImportAttribute>-Attribut anstelle der `Declare`-Anweisung verwenden.</span><span class="sxs-lookup"><span data-stu-id="7c29c-115">To apply the <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>, <xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>, <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>, <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>, <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>, or <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> fields to a [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] declaration, you must use the <xref:System.Runtime.InteropServices.DllImportAttribute> attribute instead of the `Declare` statement.</span></span>  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-   <DllImport ("user32.dll", CharSet := CharSet.Auto)> _  
-   Public Shared Function MessageBox (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-   End Function  
-End Class  
-```  
+```vb
+Imports System
+Imports System.Runtime.InteropServices
+
+Friend Class WindowsAPI
+    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
+    Friend Shared Function MessageBox(
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+    End Function
+End Class
+```
   
-```csharp  
-using System.Runtime.InteropServices;  
-[DllImport("user32.dll")]  
-    public static extern IntPtr MessageBox(int hWnd, String text,   
-                                       String caption, uint type);  
-```  
+```csharp
+using System;
+using System.Runtime.InteropServices;
+
+internal static class WindowsAPI
+{
+    [DllImport("user32.dll")]
+    internal static extern int MessageBox(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
+}
+```
   
-```cpp  
-using namespace System::Runtime::InteropServices;  
-[DllImport("user32.dll")]  
-    extern "C" IntPtr MessageBox(int hWnd, String* pText,  
-    String* pCaption unsigned int uType);  
-```  
+```cpp
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+[DllImport("user32.dll")]
+extern "C" int MessageBox(
+    IntPtr hWnd, String* lpText, String* lpCaption, unsigned int uType);
+```
   
-## <a name="adjusting-the-definition"></a><span data-ttu-id="1b16d-116">Anpassen der Definition</span><span class="sxs-lookup"><span data-stu-id="1b16d-116">Adjusting the Definition</span></span>  
- <span data-ttu-id="1b16d-117">Attributfelder müssen unabhängig davon, ob Sie sie explizit festlegen, das Verhalten von verwaltetem Code definieren.</span><span class="sxs-lookup"><span data-stu-id="1b16d-117">Whether you set them explicitly or not, attribute fields are at work defining the behavior of managed code.</span></span> <span data-ttu-id="1b16d-118">Der Plattformaufruf arbeitet gemäß den für verschiedene Felder festgelegten Standardwerten, die als Metadaten in einer Assembly vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="1b16d-118">Platform invoke operates according to the default values set on various fields that exist as metadata in an assembly.</span></span> <span data-ttu-id="1b16d-119">Sie können dieses Standardverhalten ändern, indem Sie die Werte von mindestens einem Feld anpassen.</span><span class="sxs-lookup"><span data-stu-id="1b16d-119">You can alter this default behavior by adjusting the values of one or more fields.</span></span> <span data-ttu-id="1b16d-120">In vielen Fällen verwenden Sie das <xref:System.Runtime.InteropServices.DllImportAttribute>, um einen Wert festzulegen.</span><span class="sxs-lookup"><span data-stu-id="1b16d-120">In many cases, you use the <xref:System.Runtime.InteropServices.DllImportAttribute> to set a value.</span></span>  
+## <a name="adjusting-the-definition"></a><span data-ttu-id="7c29c-116">Anpassen der Definition</span><span class="sxs-lookup"><span data-stu-id="7c29c-116">Adjusting the Definition</span></span>  
+ <span data-ttu-id="7c29c-117">Attributfelder müssen unabhängig davon, ob Sie sie explizit festlegen, das Verhalten von verwaltetem Code definieren.</span><span class="sxs-lookup"><span data-stu-id="7c29c-117">Whether you set them explicitly or not, attribute fields are at work defining the behavior of managed code.</span></span> <span data-ttu-id="7c29c-118">Der Plattformaufruf arbeitet gemäß den für verschiedene Felder festgelegten Standardwerten, die als Metadaten in einer Assembly vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="7c29c-118">Platform invoke operates according to the default values set on various fields that exist as metadata in an assembly.</span></span> <span data-ttu-id="7c29c-119">Sie können dieses Standardverhalten ändern, indem Sie die Werte von mindestens einem Feld anpassen.</span><span class="sxs-lookup"><span data-stu-id="7c29c-119">You can alter this default behavior by adjusting the values of one or more fields.</span></span> <span data-ttu-id="7c29c-120">In vielen Fällen verwenden Sie das <xref:System.Runtime.InteropServices.DllImportAttribute>, um einen Wert festzulegen.</span><span class="sxs-lookup"><span data-stu-id="7c29c-120">In many cases, you use the <xref:System.Runtime.InteropServices.DllImportAttribute> to set a value.</span></span>  
   
- <span data-ttu-id="1b16d-121">In der folgenden Tabelle ist der vollständige Satz an Attributfeldern aufgeführt, die den Plattformaufruf betreffen.</span><span class="sxs-lookup"><span data-stu-id="1b16d-121">The following table lists the complete set of attribute fields that pertain to platform invoke.</span></span> <span data-ttu-id="1b16d-122">Für jedes Feld enthält die Tabelle den Standardwert und einen Link zu Informationen darüber, wie diese Felder zum Definieren nicht verwalteter DLL-Funktionen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="1b16d-122">For each field, the table includes the default value and a link to information on how to use these fields to define unmanaged DLL functions.</span></span>  
+ <span data-ttu-id="7c29c-121">In der folgenden Tabelle ist der vollständige Satz an Attributfeldern aufgeführt, die den Plattformaufruf betreffen.</span><span class="sxs-lookup"><span data-stu-id="7c29c-121">The following table lists the complete set of attribute fields that pertain to platform invoke.</span></span> <span data-ttu-id="7c29c-122">Für jedes Feld enthält die Tabelle den Standardwert und einen Link zu Informationen darüber, wie diese Felder zum Definieren nicht verwalteter DLL-Funktionen verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7c29c-122">For each field, the table includes the default value and a link to information on how to use these fields to define unmanaged DLL functions.</span></span>  
   
-|<span data-ttu-id="1b16d-123">Feld</span><span class="sxs-lookup"><span data-stu-id="1b16d-123">Field</span></span>|<span data-ttu-id="1b16d-124">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1b16d-124">Description</span></span>|  
+|<span data-ttu-id="7c29c-123">Feld</span><span class="sxs-lookup"><span data-stu-id="7c29c-123">Field</span></span>|<span data-ttu-id="7c29c-124">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7c29c-124">Description</span></span>|  
 |-----------|-----------------|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|<span data-ttu-id="1b16d-125">Aktiviert oder deaktiviert die Zuordnung mit ähnlichen Zeichen.</span><span class="sxs-lookup"><span data-stu-id="1b16d-125">Enables or disables best-fit mapping.</span></span>|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|<span data-ttu-id="1b16d-126">Gibt die Aufrufkonvention an, die bei der Übergabe von Methodenargumenten verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="1b16d-126">Specifies the calling convention to use in passing method arguments.</span></span> <span data-ttu-id="1b16d-127">Der Standardwert ist `WinAPI`, was dem `__stdcall` für Intel-basierte 32-Bit-Plattformen entspricht.</span><span class="sxs-lookup"><span data-stu-id="1b16d-127">The default is `WinAPI`, which corresponds to `__stdcall` for the 32-bit Intel-based platforms.</span></span>|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|<span data-ttu-id="1b16d-128">Die Namenszerlegung für Steuerelemente und die Art und Weise, in der Zeichenfolgenargumente an die Funktion gemarshallt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="1b16d-128">Controls name mangling and the way that string arguments should be marshaled to the function.</span></span> <span data-ttu-id="1b16d-129">Die Standardeinstellung ist `CharSet.Ansi`.</span><span class="sxs-lookup"><span data-stu-id="1b16d-129">The default is `CharSet.Ansi`.</span></span>|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>|<span data-ttu-id="1b16d-130">Gibt den aufzurufenden DLL-Einstiegspunkt an.</span><span class="sxs-lookup"><span data-stu-id="1b16d-130">Specifies the DLL entry point to be called.</span></span>|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>|<span data-ttu-id="1b16d-131">Kontrolliert, ob ein Einstiegspunkt geändert werden muss, um dem Zeichensatz zu entsprechen.</span><span class="sxs-lookup"><span data-stu-id="1b16d-131">Controls whether an entry point should be modified to correspond to the character set.</span></span> <span data-ttu-id="1b16d-132">Der Standardwert variiert je nach Programmiersprache.</span><span class="sxs-lookup"><span data-stu-id="1b16d-132">The default value varies by programming language.</span></span>|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|<span data-ttu-id="1b16d-133">Kontrolliert, ob die verwaltete Methodensignatur in eine nicht verwaltete Signatur transformiert werden soll, die ein HRESULT zurückgibt und über ein zusätzliches [out, retval]-Argument für den Rückgabewert verfügt.</span><span class="sxs-lookup"><span data-stu-id="1b16d-133">Controls whether the managed method signature should be transformed into an unmanaged signature that returns an HRESULT and has an additional [out, retval] argument for the return value.</span></span><br /><br /> <span data-ttu-id="1b16d-134">Der Standardwert ist `true` (die Signatur wird nicht transformiert).</span><span class="sxs-lookup"><span data-stu-id="1b16d-134">The default is `true` (the signature should not be transformed).</span></span>|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>|<span data-ttu-id="1b16d-135">Ermöglicht dem Aufrufer die Verwendung der `Marshal.GetLastWin32Error`-API-Funktion zur Ermittlung, ob beim Ausführen der Methode ein Fehler aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="1b16d-135">Enables the caller to use the `Marshal.GetLastWin32Error` API function to determine whether an error occurred while executing the method.</span></span> <span data-ttu-id="1b16d-136">In Visual Basic ist der Standardwert `true` In C# und C++ ist der Standardwert `false`.</span><span class="sxs-lookup"><span data-stu-id="1b16d-136">In Visual Basic, the default is `true`; in C# and C++, the default is `false`.</span></span>|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar>|<span data-ttu-id="1b16d-137">Steuert das Auslösen einer Ausnahme bei einem nicht zuzuordnenden Unicode-Zeichen, das in ein ANSI-Zeichen ("?") konvertiert wird.</span><span class="sxs-lookup"><span data-stu-id="1b16d-137">Controls throwing of an exception on an unmappable Unicode character that is converted to an ANSI "?" character.</span></span>|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|<span data-ttu-id="7c29c-125">Aktiviert oder deaktiviert die Zuordnung mit ähnlichen Zeichen.</span><span class="sxs-lookup"><span data-stu-id="7c29c-125">Enables or disables best-fit mapping.</span></span>|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|<span data-ttu-id="7c29c-126">Gibt die Aufrufkonvention an, die bei der Übergabe von Methodenargumenten verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="7c29c-126">Specifies the calling convention to use in passing method arguments.</span></span> <span data-ttu-id="7c29c-127">Der Standardwert ist `WinAPI`, was dem `__stdcall` für Intel-basierte 32-Bit-Plattformen entspricht.</span><span class="sxs-lookup"><span data-stu-id="7c29c-127">The default is `WinAPI`, which corresponds to `__stdcall` for the 32-bit Intel-based platforms.</span></span>|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|<span data-ttu-id="7c29c-128">Die Namenszerlegung für Steuerelemente und die Art und Weise, in der Zeichenfolgenargumente an die Funktion gemarshallt werden sollen.</span><span class="sxs-lookup"><span data-stu-id="7c29c-128">Controls name mangling and the way that string arguments should be marshaled to the function.</span></span> <span data-ttu-id="7c29c-129">Die Standardeinstellung ist `CharSet.Ansi`.</span><span class="sxs-lookup"><span data-stu-id="7c29c-129">The default is `CharSet.Ansi`.</span></span>|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>|<span data-ttu-id="7c29c-130">Gibt den aufzurufenden DLL-Einstiegspunkt an.</span><span class="sxs-lookup"><span data-stu-id="7c29c-130">Specifies the DLL entry point to be called.</span></span>|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>|<span data-ttu-id="7c29c-131">Kontrolliert, ob ein Einstiegspunkt geändert werden muss, um dem Zeichensatz zu entsprechen.</span><span class="sxs-lookup"><span data-stu-id="7c29c-131">Controls whether an entry point should be modified to correspond to the character set.</span></span> <span data-ttu-id="7c29c-132">Der Standardwert variiert je nach Programmiersprache.</span><span class="sxs-lookup"><span data-stu-id="7c29c-132">The default value varies by programming language.</span></span>|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|<span data-ttu-id="7c29c-133">Kontrolliert, ob die verwaltete Methodensignatur in eine nicht verwaltete Signatur transformiert werden soll, die ein HRESULT zurückgibt und über ein zusätzliches [out, retval]-Argument für den Rückgabewert verfügt.</span><span class="sxs-lookup"><span data-stu-id="7c29c-133">Controls whether the managed method signature should be transformed into an unmanaged signature that returns an HRESULT and has an additional [out, retval] argument for the return value.</span></span><br /><br /> <span data-ttu-id="7c29c-134">Der Standardwert ist `true` (die Signatur wird nicht transformiert).</span><span class="sxs-lookup"><span data-stu-id="7c29c-134">The default is `true` (the signature should not be transformed).</span></span>|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>|<span data-ttu-id="7c29c-135">Ermöglicht dem Aufrufer die Verwendung der `Marshal.GetLastWin32Error`-API-Funktion zur Ermittlung, ob beim Ausführen der Methode ein Fehler aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="7c29c-135">Enables the caller to use the `Marshal.GetLastWin32Error` API function to determine whether an error occurred while executing the method.</span></span> <span data-ttu-id="7c29c-136">In Visual Basic ist der Standardwert `true` In C# und C++ ist der Standardwert `false`.</span><span class="sxs-lookup"><span data-stu-id="7c29c-136">In Visual Basic, the default is `true`; in C# and C++, the default is `false`.</span></span>|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar>|<span data-ttu-id="7c29c-137">Steuert das Auslösen einer Ausnahme bei einem nicht zuzuordnenden Unicode-Zeichen, das in ein ANSI-Zeichen ("?") konvertiert wird.</span><span class="sxs-lookup"><span data-stu-id="7c29c-137">Controls throwing of an exception on an unmappable Unicode character that is converted to an ANSI "?" character.</span></span>|  
   
- <span data-ttu-id="1b16d-138">Detaillierte Verweisinformationen finden Sie unter <xref:System.Runtime.InteropServices.DllImportAttribute>.</span><span class="sxs-lookup"><span data-stu-id="1b16d-138">For detailed reference information, see <xref:System.Runtime.InteropServices.DllImportAttribute>.</span></span>  
+ <span data-ttu-id="7c29c-138">Detaillierte Verweisinformationen finden Sie unter <xref:System.Runtime.InteropServices.DllImportAttribute>.</span><span class="sxs-lookup"><span data-stu-id="7c29c-138">For detailed reference information, see <xref:System.Runtime.InteropServices.DllImportAttribute>.</span></span>  
   
-## <a name="platform-invoke-security-considerations"></a><span data-ttu-id="1b16d-139">Überlegungen zur Plattformaufrufsicherheit</span><span class="sxs-lookup"><span data-stu-id="1b16d-139">Platform invoke security considerations</span></span>  
- <span data-ttu-id="1b16d-140">Die Member `Assert`, `Deny` und `PermitOnly` der <xref:System.Security.Permissions.SecurityAction>-Enumeration werden als *stack walk modifier* (Stackwalkmodifizierer) bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="1b16d-140">The `Assert`, `Deny`, and `PermitOnly` members of the <xref:System.Security.Permissions.SecurityAction> enumeration are referred to as *stack walk modifiers*.</span></span> <span data-ttu-id="1b16d-141">Diese Member werden ignoriert, wenn sie als deklarative Attribute für Deklarationen von Plattformaufrufen und COM-IDL-Anweisungen (Interface Definition Language) verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="1b16d-141">These members are ignored if they are used as declarative attributes on platform invoke declarations and COM Interface Definition Language (IDL) statements.</span></span>  
+## <a name="platform-invoke-security-considerations"></a><span data-ttu-id="7c29c-139">Überlegungen zur Plattformaufrufsicherheit</span><span class="sxs-lookup"><span data-stu-id="7c29c-139">Platform invoke security considerations</span></span>  
+ <span data-ttu-id="7c29c-140">Die Member `Assert`, `Deny` und `PermitOnly` der <xref:System.Security.Permissions.SecurityAction>-Enumeration werden als *stack walk modifier* (Stackwalkmodifizierer) bezeichnet.</span><span class="sxs-lookup"><span data-stu-id="7c29c-140">The `Assert`, `Deny`, and `PermitOnly` members of the <xref:System.Security.Permissions.SecurityAction> enumeration are referred to as *stack walk modifiers*.</span></span> <span data-ttu-id="7c29c-141">Diese Member werden ignoriert, wenn sie als deklarative Attribute für Deklarationen von Plattformaufrufen und COM-IDL-Anweisungen (Interface Definition Language) verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7c29c-141">These members are ignored if they are used as declarative attributes on platform invoke declarations and COM Interface Definition Language (IDL) statements.</span></span>  
   
-### <a name="platform-invoke-examples"></a><span data-ttu-id="1b16d-142">Beispiele für Plattformaufrufe</span><span class="sxs-lookup"><span data-stu-id="1b16d-142">Platform Invoke Examples</span></span>  
- <span data-ttu-id="1b16d-143">Die Beispiele zum Plattformaufruf in diesem Abschnitt veranschaulichen die Verwendung des `RegistryPermission`-Attributs mit den Stapelmodifizierern.</span><span class="sxs-lookup"><span data-stu-id="1b16d-143">The platform invoke samples in this section illustrate the use of the `RegistryPermission` attribute with the stack walk modifiers.</span></span>  
+### <a name="platform-invoke-examples"></a><span data-ttu-id="7c29c-142">Beispiele für Plattformaufrufe</span><span class="sxs-lookup"><span data-stu-id="7c29c-142">Platform Invoke Examples</span></span>  
+ <span data-ttu-id="7c29c-143">Die Beispiele zum Plattformaufruf in diesem Abschnitt veranschaulichen die Verwendung des `RegistryPermission`-Attributs mit den Stapelmodifizierern.</span><span class="sxs-lookup"><span data-stu-id="7c29c-143">The platform invoke samples in this section illustrate the use of the `RegistryPermission` attribute with the stack walk modifiers.</span></span>  
   
- <span data-ttu-id="1b16d-144">Im folgenden Codebeispiel werden die Modifizierer <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny` und `PermitOnly` ignoriert.</span><span class="sxs-lookup"><span data-stu-id="1b16d-144">In the following code example, the <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny`, and `PermitOnly` modifiers are ignored.</span></span>  
+ <span data-ttu-id="7c29c-144">Im folgenden Codebeispiel werden die Modifizierer <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny` und `PermitOnly` ignoriert.</span><span class="sxs-lookup"><span data-stu-id="7c29c-144">In the following code example, the <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny`, and `PermitOnly` modifiers are ignored.</span></span>  
   
 ```  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -114,7 +127,7 @@ using namespace System::Runtime::InteropServices;
     private static extern bool CallRegistryPermissionDeny();  
 ```  
   
- <span data-ttu-id="1b16d-145">Der `Demand`-Modifizierer im folgenden Beispiel wird jedoch akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="1b16d-145">However, the `Demand` modifier in the following example is accepted.</span></span>  
+ <span data-ttu-id="7c29c-145">Der `Demand`-Modifizierer im folgenden Beispiel wird jedoch akzeptiert.</span><span class="sxs-lookup"><span data-stu-id="7c29c-145">However, the `Demand` modifier in the following example is accepted.</span></span>  
   
 ```  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -122,7 +135,7 @@ using namespace System::Runtime::InteropServices;
     private static extern bool CallRegistryPermissionDeny();  
 ```  
   
- <span data-ttu-id="1b16d-146"><xref:System.Security.Permissions.SecurityAction>-Modifizierer funktionieren ordnungsgemäß, wenn sie in einer Klasse positioniert werden, die den Plattformaufruf enthält (umschließt).</span><span class="sxs-lookup"><span data-stu-id="1b16d-146"><xref:System.Security.Permissions.SecurityAction> modifiers do work correctly if they are placed on a class that contains (wraps) the platform invoke call.</span></span>  
+ <span data-ttu-id="7c29c-146"><xref:System.Security.Permissions.SecurityAction>-Modifizierer funktionieren ordnungsgemäß, wenn sie in einer Klasse positioniert werden, die den Plattformaufruf enthält (umschließt).</span><span class="sxs-lookup"><span data-stu-id="7c29c-146"><xref:System.Security.Permissions.SecurityAction> modifiers do work correctly if they are placed on a class that contains (wraps) the platform invoke call.</span></span>  
   
 ```cpp  
       [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
@@ -143,7 +156,7 @@ class PInvokeWrapper
 }  
 ```  
   
- <span data-ttu-id="1b16d-147"><xref:System.Security.Permissions.SecurityAction>-Modifizierer funktionieren auch in einem geschachtelten Szenario ordnungsgemäß, in dem sie im Aufrufer des Plattformaufrufs positioniert werden:</span><span class="sxs-lookup"><span data-stu-id="1b16d-147"><xref:System.Security.Permissions.SecurityAction> modifiers also work correctly in a nested scenario where they are placed on the caller of the platform invoke call:</span></span>  
+ <span data-ttu-id="7c29c-147"><xref:System.Security.Permissions.SecurityAction>-Modifizierer funktionieren auch in einem geschachtelten Szenario ordnungsgemäß, in dem sie im Aufrufer des Plattformaufrufs positioniert werden:</span><span class="sxs-lookup"><span data-stu-id="7c29c-147"><xref:System.Security.Permissions.SecurityAction> modifiers also work correctly in a nested scenario where they are placed on the caller of the platform invoke call:</span></span>  
   
 ```cpp  
       {  
@@ -174,10 +187,10 @@ class PInvokeScenario
 }  
 ```  
   
-#### <a name="com-interop-examples"></a><span data-ttu-id="1b16d-148">Beispiele zu COM-Interop</span><span class="sxs-lookup"><span data-stu-id="1b16d-148">COM Interop Examples</span></span>  
- <span data-ttu-id="1b16d-149">Die Beispiele zu COM-Interop in diesem Abschnitt veranschaulichen die Verwendung des `RegistryPermission`-Attributs mit den Stapelmodifizierern.</span><span class="sxs-lookup"><span data-stu-id="1b16d-149">The COM interop samples in this section illustrate the use of the `RegistryPermission` attribute with the stack walk modifiers.</span></span>  
+#### <a name="com-interop-examples"></a><span data-ttu-id="7c29c-148">Beispiele zu COM-Interop</span><span class="sxs-lookup"><span data-stu-id="7c29c-148">COM Interop Examples</span></span>  
+ <span data-ttu-id="7c29c-149">Die Beispiele zu COM-Interop in diesem Abschnitt veranschaulichen die Verwendung des `RegistryPermission`-Attributs mit den Stapelmodifizierern.</span><span class="sxs-lookup"><span data-stu-id="7c29c-149">The COM interop samples in this section illustrate the use of the `RegistryPermission` attribute with the stack walk modifiers.</span></span>  
   
- <span data-ttu-id="1b16d-150">Die folgenden Deklarationen der COM-Interop-Schnittstelle ignorieren die Modifizierer `Assert`, `Deny` und `PermitOnly` auf ähnliche Weise wie die Beispiele zum Plattformaufruf im vorherigen Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="1b16d-150">The following COM interop interface declarations ignore the `Assert`, `Deny`, and `PermitOnly` modifiers, similarly to the platform invoke examples in the previous section.</span></span>  
+ <span data-ttu-id="7c29c-150">Die folgenden Deklarationen der COM-Interop-Schnittstelle ignorieren die Modifizierer `Assert`, `Deny` und `PermitOnly` auf ähnliche Weise wie die Beispiele zum Plattformaufruf im vorherigen Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="7c29c-150">The following COM interop interface declarations ignore the `Assert`, `Deny`, and `PermitOnly` modifiers, similarly to the platform invoke examples in the previous section.</span></span>  
   
 ```  
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
@@ -208,7 +221,7 @@ interface IAssertStubsItf
 }  
 ```  
   
- <span data-ttu-id="1b16d-151">Darüber hinaus wird der `Demand`-Modifizierer nicht in Deklarationsszenarien der COM-Interop-Schnittstelle akzeptiert, wie im folgenden Beispiel veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="1b16d-151">Additionally, the `Demand` modifier is not accepted in COM interop interface declaration scenarios, as shown in the following example.</span></span>  
+ <span data-ttu-id="7c29c-151">Darüber hinaus wird der `Demand`-Modifizierer nicht in Deklarationsszenarien der COM-Interop-Schnittstelle akzeptiert, wie im folgenden Beispiel veranschaulicht.</span><span class="sxs-lookup"><span data-stu-id="7c29c-151">Additionally, the `Demand` modifier is not accepted in COM interop interface declaration scenarios, as shown in the following example.</span></span>  
   
 ```  
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
@@ -221,12 +234,12 @@ interface IDemandStubsItf
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="1b16d-152">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1b16d-152">See also</span></span>
-- [<span data-ttu-id="1b16d-153">Verwenden nicht verwalteter DLL-Funktionen</span><span class="sxs-lookup"><span data-stu-id="1b16d-153">Consuming Unmanaged DLL Functions</span></span>](consuming-unmanaged-dll-functions.md)
-- [<span data-ttu-id="1b16d-154">Angeben eines Einstiegspunktes</span><span class="sxs-lookup"><span data-stu-id="1b16d-154">Specifying an Entry Point</span></span>](specifying-an-entry-point.md)
-- [<span data-ttu-id="1b16d-155">Festlegen eines Zeichensatzes</span><span class="sxs-lookup"><span data-stu-id="1b16d-155">Specifying a Character Set</span></span>](specifying-a-character-set.md)
-- [<span data-ttu-id="1b16d-156">Beispiele für Plattformaufrufe</span><span class="sxs-lookup"><span data-stu-id="1b16d-156">Platform Invoke Examples</span></span>](platform-invoke-examples.md)
-- <span data-ttu-id="1b16d-157">[Überlegungen zur Plattformaufrufsicherheit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="1b16d-157">[Platform Invoke Security Considerations](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))</span></span>
-- [<span data-ttu-id="1b16d-158">Identifizieren von Funktionen in DLLs</span><span class="sxs-lookup"><span data-stu-id="1b16d-158">Identifying Functions in DLLs</span></span>](identifying-functions-in-dlls.md)
-- [<span data-ttu-id="1b16d-159">Erstellen einer Klasse zum Halten von DLL-Funktionen</span><span class="sxs-lookup"><span data-stu-id="1b16d-159">Creating a Class to Hold DLL Functions</span></span>](creating-a-class-to-hold-dll-functions.md)
-- [<span data-ttu-id="1b16d-160">Calling a DLL Function (Aufrufen einer DLL-Funktion)</span><span class="sxs-lookup"><span data-stu-id="1b16d-160">Calling a DLL Function</span></span>](calling-a-dll-function.md)
+## <a name="see-also"></a><span data-ttu-id="7c29c-152">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7c29c-152">See also</span></span>
+- [<span data-ttu-id="7c29c-153">Verwenden nicht verwalteter DLL-Funktionen</span><span class="sxs-lookup"><span data-stu-id="7c29c-153">Consuming Unmanaged DLL Functions</span></span>](consuming-unmanaged-dll-functions.md)
+- [<span data-ttu-id="7c29c-154">Angeben eines Einstiegspunktes</span><span class="sxs-lookup"><span data-stu-id="7c29c-154">Specifying an Entry Point</span></span>](specifying-an-entry-point.md)
+- [<span data-ttu-id="7c29c-155">Festlegen eines Zeichensatzes</span><span class="sxs-lookup"><span data-stu-id="7c29c-155">Specifying a Character Set</span></span>](specifying-a-character-set.md)
+- [<span data-ttu-id="7c29c-156">Beispiele für Plattformaufrufe</span><span class="sxs-lookup"><span data-stu-id="7c29c-156">Platform Invoke Examples</span></span>](platform-invoke-examples.md)
+- <span data-ttu-id="7c29c-157">[Überlegungen zur Plattformaufrufsicherheit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="7c29c-157">[Platform Invoke Security Considerations](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))</span></span>
+- [<span data-ttu-id="7c29c-158">Identifizieren von Funktionen in DLLs</span><span class="sxs-lookup"><span data-stu-id="7c29c-158">Identifying Functions in DLLs</span></span>](identifying-functions-in-dlls.md)
+- [<span data-ttu-id="7c29c-159">Erstellen einer Klasse zum Halten von DLL-Funktionen</span><span class="sxs-lookup"><span data-stu-id="7c29c-159">Creating a Class to Hold DLL Functions</span></span>](creating-a-class-to-hold-dll-functions.md)
+- [<span data-ttu-id="7c29c-160">Calling a DLL Function (Aufrufen einer DLL-Funktion)</span><span class="sxs-lookup"><span data-stu-id="7c29c-160">Calling a DLL Function</span></span>](calling-a-dll-function.md)
