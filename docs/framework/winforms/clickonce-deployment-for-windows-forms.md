@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: 9e3e05a1327f2f1d5f4c064a7982b2d6e38940d9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1212096422f5bb10c7b781228dc54c8790ac97ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072843"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>ClickOnce-Bereitstellung für Windows Forms
 Die folgenden Themen beschreiben [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], eine Technologie für die einfache Bereitstellung von Windows Forms-Anwendungen auf Clientcomputern.  
@@ -41,7 +41,7 @@ Die folgenden Themen beschreiben [!INCLUDE[ndptecclick](../../../includes/ndptec
  [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  Veranschaulicht die Verwendung von Befehlszeilen- und SDK-Tools zum Bereitstellen einer [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendung ohne Visual Studio.  
   
- [Vorgehensweise: Hinzufügen eines vertrauenswürdigen Herausgebers zu einem Clientcomputer für ClickOnce-Anwendungen](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
+ [Vorgehensweise: Hinzufügen eines vertrauenswürdigen Herausgebers auf einen Clientcomputer für ClickOnce-Anwendungen](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  Veranschaulicht die einmalige Konfiguration von Clientcomputern, die für die Bereitstellung vertrauenswürdiger Anwendungen erforderlich ist.  
   
  [Vorgehensweise: Angeben eines anderen Speicherorts für Bereitstellungsaktualisierungen](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  
@@ -63,6 +63,7 @@ Die folgenden Themen beschreiben [!INCLUDE[ndptecclick](../../../includes/ndptec
  Veranschaulicht, wie Sie eine Datei so markieren, dass sie im [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Datenverzeichnis verfügbar ist.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Anwendungseinstellungen](./advanced/application-settings-overview.md)
 - [Veröffentlichen von ClickOnce-Anwendungen](/visualstudio/deployment/publishing-clickonce-applications)
 - [Erstellen von ClickOnce-Anwendungen über die Befehlszeile](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)

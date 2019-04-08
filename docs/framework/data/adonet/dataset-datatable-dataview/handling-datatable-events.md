@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: ef9fcd31253283248dfe773ac4dde4fcbb358a2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cd679c5bb869a648eecf9702182129d9719d141
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660982"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098922"
 ---
 # <a name="handling-datatable-events"></a>Behandeln von DataTable-Ereignissen
 Das <xref:System.Data.DataTable>-Objekt stellt eine Reihe von Ereignissen bereit, die von einer Anwendung verarbeitet werden können. Eine Beschreibung dieser `DataTable`-Ereignisse finden Sie in der folgenden Tabelle:  
   
-|Ereignis|Beschreibung|  
+|event|Beschreibung|  
 |-----------|-----------------|  
-|<xref:System.Data.DataTable.Initialized>|Tritt ein, nachdem die <xref:System.Data.DataTable.EndInit%2A>-Methode einer `DataTable` aufgerufen wurde. Dieses Ereignis ist hauptsächlich zur Unterstützung von Szenarien in der Entwurfsphase gedacht.|  
+|<xref:System.Data.DataTable.Initialized>|Tritt ein, nachdem die <xref:System.Data.DataTable.EndInit%2A>-Methode einer `DataTable` aufgerufen wurde. Dieses Ereignis ist hauptsächlich zur Unterstützung von Szenarien zur Entwurfszeit gedacht.|  
 |<xref:System.Data.DataTable.ColumnChanged>|Tritt ein, nachdem ein Wert in einer <xref:System.Data.DataColumn> erfolgreich geändert wurde.|  
 |<xref:System.Data.DataTable.ColumnChanging>|Tritt ein, wenn ein Wert für eine `DataColumn` übermittelt wurde.|  
 |<xref:System.Data.DataTable.RowChanged>|Tritt ein, nachdem ein `DataColumn`-Wert oder der <xref:System.Data.DataRow.RowState%2A> einer <xref:System.Data.DataRow> in der `DataTable` erfolgreich geändert wurde.|  
@@ -80,7 +80,8 @@ Das <xref:System.Data.DataTable>-Objekt stellt eine Reihe von Ereignissen bereit
  [!code-vb[DataWorks DataTable.Events#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTable.Events/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+
+- [Bearbeiten von Daten in einer "DataTable"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [Behandeln von DataAdapter-Ereignissen](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
-- [Handling DataSet Events (Behandeln von DataSet-Ereignissen)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
+- [Behandeln von DataSet-Ereignissen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

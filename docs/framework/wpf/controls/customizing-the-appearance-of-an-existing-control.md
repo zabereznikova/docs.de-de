@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375102"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098961"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate
 <a name="introduction"></a> Ein <xref:System.Windows.Controls.ControlTemplate> gibt an, die visuelle Struktur und das visuelle Verhalten eines Steuerelements. Sie können die Darstellung eines Steuerelements anpassen, indem Sie erhalten ein neues <xref:System.Windows.Controls.ControlTemplate>. Bei der Erstellung einer <xref:System.Windows.Controls.ControlTemplate>, ersetzen Sie die Darstellung eines vorhandenen Steuerelements, ohne seine Funktionalität zu ändern. Angenommen, Sie können festlegen, dass die Schaltflächen in Ihrer Anwendung rund und nicht standardmäßig quadratisch, die Schaltfläche wird jedoch trotzdem ausgelöst der <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
@@ -31,8 +31,7 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet
   
  ![Eine Schaltfläche mit einem roten Rahmen. ](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, und über der sich ein Mauszeiger befindet.  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Erforderliche Voraussetzungen  
  Es wird vorausgesetzt, dass Sie sich mit dem Erstellen und mit der Verwendung von Steuerelementen und Formaten auskennen. Anweisungen dazu finden Sie unter [Steuerelemente](index.md). Die in diesem Thema erläuterten Konzepte für Elemente, die von erben die <xref:System.Windows.Controls.Control> -Klasse, mit Ausnahme der <xref:System.Windows.Controls.UserControl>. Sie können nicht angewendet werden eine <xref:System.Windows.Controls.ControlTemplate> auf eine <xref:System.Windows.Controls.UserControl>.  
@@ -257,9 +256,10 @@ Eine Schaltfläche, die eine benutzerdefinierte Steuerelementvorlage verwendet, 
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>Vollständiges Beispiel  
- Das folgende Beispiel zeigt die vollständige <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.ControlTemplate> , die in diesem Thema erläutert wird.  
+ Das folgende Beispiel zeigt die vollständige <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.ControlTemplate> , die in diesem Thema erläutert wird.  
   
  [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen von Formaten und Vorlagen](styling-and-templating.md)

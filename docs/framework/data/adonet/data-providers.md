@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 0223e21702c2a108740341c331f93b85f271cf8a
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f821088375bf1df01e75de5e0c226334baca113f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074026"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework-Datenanbieter
-Mithilfe eines [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieters werden Verbindungen mit einer Datenbank hergestellt, Befehle ausgeführt und Ergebnisse abgerufen. Diese Ergebnisse werden entweder direkt verarbeitet und in einem <xref:System.Data.DataSet> -Objekt platziert, um sie dem Benutzer, kombiniert mit Daten aus mehreren Quellen, bei Bedarf verfügbar zu machen, oder sie werden an eine andere Ebene übergeben. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter sind einfach. Sie erstellen eine Ebene von minimaler Größe zwischen der Datenquelle und dem Code und erhöhen so die Leistung, ohne auf Funktionalität verzichten zu müssen.  
+Mithilfe eines [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieters werden Verbindungen mit einer Datenbank hergestellt, Befehle ausgeführt und Ergebnisse abgerufen. Diese Ergebnisse werden entweder direkt verarbeitet und in einem <xref:System.Data.DataSet> -Objekt platziert, um sie dem Benutzer, kombiniert mit Daten aus mehreren Quellen, bei Bedarf verfügbar zu machen, oder sie werden an eine andere Ebene übergeben. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter sind kompakt und, erstellen eine minimale Schicht zwischen der Datenquelle und den Code, Verbessern der Leistung ohne Einbußen bei der Funktionalität.  
   
  Die folgende Tabelle enthält eine Auflistung der Datenanbieter in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]:  
   
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter|Beschreibung|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter|Beschreibung|  
 |-------------------------------------------------------------------------------|-----------------|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für SQLServer|Ermöglicht den Datenzugriff für Microsoft SQL Server. Verwendet den <xref:System.Data.SqlClient> -Namespace.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter für OLE DB|Für Datenquellen, die mit OLE DB verfügbar gemacht werden. Verwendet den <xref:System.Data.OleDb> -Namespace.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Datenanbieter für ODBC|Für Datenquellen, die mit ODBC verfügbar gemacht werden. Verwendet den <xref:System.Data.Odbc> -Namespace.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für SQL Server|Ermöglicht den Datenzugriff für Microsoft SQL Server. Verwendet den <xref:System.Data.SqlClient> -Namespace.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für OLE DB|Für Datenquellen, die mit OLE DB verfügbar gemacht werden. Verwendet den <xref:System.Data.OleDb> -Namespace.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für ODBC|Für Datenquellen, die mit ODBC verfügbar gemacht werden. Verwendet den <xref:System.Data.Odbc> -Namespace.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für Oracle|Für Oracle-Datenquellen. Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für Oracle unterstützt Oracle-Clientsoftware der Version 8.1.7 und höher und verwendet den <xref:System.Data.OracleClient> -Namespace.|  
 |EntityClient-Anbieter|Stellt Datenzugriff für Entity Data Model (EDM)-Anwendungen bereit. Verwendet den <xref:System.Data.EntityClient> -Namespace.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für SQLServer Compact 4.0.|Ermöglicht den Datenzugriff für Microsoft SQL Server Compact 4.0. Verwendet den Namespace [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) .|  
@@ -29,22 +29,22 @@ Mithilfe eines [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -
 ## <a name="core-objects-of-net-framework-data-providers"></a>Hauptobjekte von .NET Framework-Datenanbietern  
  In der folgenden Tabelle werden die vier Hauptobjekte aufgelistet, aus denen sich ein [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter zusammensetzt.  
   
-|Objekt|Beschreibung|  
+|Object|Beschreibung|  
 |------------|-----------------|  
 |`Connection`|Stellt eine Verbindung mit einer bestimmten Datenquelle her. Die Basisklasse für alle `Connection` -Objekte ist die <xref:System.Data.Common.DbConnection> -Klasse.|  
-|`Command`|Führt einen Befehl für eine Datenquelle aus. Macht `Parameters` verfügbar und kann im Rahmen einer `Transaction` von einer `Connection` aus ausgeführt werden. Die Basisklasse für alle `Command` -Objekte ist die <xref:System.Data.Common.DbCommand> -Klasse.|  
+|`Command`|Führt einen Befehl für eine Datenquelle aus. Macht `Parameters` verfügbar und kann im Rahmen einer `Transaction` von einer `Connection`aus ausgeführt werden. Die Basisklasse für alle `Command` -Objekte ist die <xref:System.Data.Common.DbCommand> -Klasse.|  
 |`DataReader`|Liest einen schreibgeschützten Vorwärtsstream von Daten aus einer Datenquelle. Die Basisklasse für alle `DataReader` -Objekte ist die <xref:System.Data.Common.DbDataReader> -Klasse.|  
 |`DataAdapter`|Füllt ein `DataSet` auf und löst Aktualisierungen mit der Datenquelle auf. Die Basisklasse für alle `DataAdapter` -Objekte ist die <xref:System.Data.Common.DbDataAdapter> -Klasse.|  
   
- Zusätzlich zu den in der Tabelle oben aufgelisteten Hauptklassen enthält ein [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter auch die in der folgenden Tabelle aufgeführten Klassen.  
+ Zusätzlich zu den in der Tabelle oben aufgelisteten Hauptklassen enthält ein [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter auch die in der folgenden Tabelle aufgeführten Klassen.  
   
-|Objekt|Beschreibung|  
+|Object|Beschreibung|  
 |------------|-----------------|  
 |`Transaction`|Trägt Befehle in Transaktionen an der Datenquelle ein. Die Basisklasse für alle `Transaction` -Objekte ist die <xref:System.Data.Common.DbTransaction> -Klasse. ADO.NET unterstützt auch Transaktionen mit Klassen im <xref:System.Transactions> -Namespace.|  
-|`CommandBuilder`|Hilfsobjekt, das automatisch Befehlseigenschaften eines `DataAdapter` erstellt oder Parameterinformationen aus einer gespeicherten Prozedur ableitet und die `Parameters`-Auflistung eines `Command`-Objekts auffüllt. Die Basisklasse für alle `CommandBuilder` -Objekte ist die <xref:System.Data.Common.DbCommandBuilder> -Klasse.|  
+|`CommandBuilder`|Hilfsobjekt, das automatisch Befehlseigenschaften eines `DataAdapter` erstellt oder Parameterinformationen aus einer gespeicherten Prozedur ableitet und die `Parameters` -Auflistung eines `Command` -Objekts auffüllt. Die Basisklasse für alle `CommandBuilder` -Objekte ist die <xref:System.Data.Common.DbCommandBuilder> -Klasse.|  
 |`ConnectionStringBuilder`|Hilfsobjekt, das eine einfache Möglichkeit bietet, den Inhalt von Verbindungszeichenfolgen zu erstellen und zu verwalten, die von den `Connection` -Objekten verwendet werden. Die Basisklasse für alle `ConnectionStringBuilder` -Objekte ist die <xref:System.Data.Common.DbConnectionStringBuilder> -Klasse.|  
 |`Parameter`|Definiert Eingabe-, Ausgabe- und Rückgabewertparameter für Befehle und gespeicherte Prozeduren. Die Basisklasse für alle `Parameter` -Objekte ist die <xref:System.Data.Common.DbParameter> -Klasse.|  
-|`Exception`|Wird zurückgegeben, wenn in der Datenquelle ein Fehler auftritt. Wenn auf dem Client ein Fehler festgestellt wird, lösen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter eine [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Ausnahme aus. Die Basisklasse für alle `Exception` -Objekte ist die <xref:System.Data.Common.DbException> -Klasse.|  
+|`Exception`|Wird zurückgegeben, wenn in der Datenquelle ein Fehler auftritt. Wenn auf dem Client ein Fehler festgestellt wird, lösen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter eine [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Ausnahme aus. Die Basisklasse für alle `Exception` -Objekte ist die <xref:System.Data.Common.DbException> -Klasse.|  
 |`Error`|Macht die Informationen aus einer von einer Datenquelle zurückgegebenen Warnung bzw. einem von einer Datenquelle zurückgegebenen Fehler verfügbar.|  
 |`ClientPermission`|Wird für Codezugriffs-Sicherheitsattribute von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbietern bereitgestellt. Die Basisklasse für alle `ClientPermission` -Objekte ist die <xref:System.Data.Common.DBDataPermission> -Klasse.|  
   
@@ -87,9 +87,9 @@ using System.Data.SqlClient;
   
  Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB unterstützt keine OLE DB 2.5-Schnittstellen. OLE DB-Anbieter, die Unterstützung von OLE DB 2.5-Schnittstellen benötigen, funktionieren in Verbindung mit dem [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB nicht ordnungsgemäß. Dies betrifft auch den Microsoft OLE DB-Anbieter für Exchange und den Microsoft OLE DB-Anbieter für Internet Publishing.  
   
- Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB funktioniert nicht in Verbindung mit dem OLE DB-Anbieter für ODBC (MSDASQL). Wenn Sie mit [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] auf eine ODBC-Datenquelle zugreifen möchten, verwenden Sie den [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Datenanbieter für ODBC.  
+ Der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB funktioniert nicht in Verbindung mit dem OLE DB-Anbieter für ODBC (MSDASQL). Wenn Sie mit [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]auf eine ODBC-Datenquelle zugreifen möchten, verwenden Sie den [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für ODBC.  
   
- Die Klassen des[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieters für OLE DB befinden sich im <xref:System.Data.OleDb> -Namespace. Im folgenden Codebeispiel wird gezeigt, wie Sie den `System.Data.OleDb`-Namespace in Anwendungen einbinden können.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für OLE DB-Klassen befinden sich in der <xref:System.Data.OleDb> Namespace. Im folgenden Codebeispiel wird gezeigt, wie Sie den `System.Data.OleDb` -Namespace in Anwendungen einbinden können.  
   
 ```vb  
 Imports System.Data.OleDb  
@@ -110,9 +110,9 @@ using System.Data.OleDb;
 |Microsoft ODBC für Oracle|  
 |Microsoft Access Driver (*.mdb)|  
   
- Die Klassen des[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenbieters für ODBC befinden sich im <xref:System.Data.Odbc> -Namespace.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für ODBC-Klassen befinden sich in der <xref:System.Data.Odbc> Namespace.  
   
- Im folgenden Codebeispiel wird gezeigt, wie Sie den `System.Data.Odbc`-Namespace in Anwendungen einbinden können.  
+ Im folgenden Codebeispiel wird gezeigt, wie Sie den `System.Data.Odbc` -Namespace in Anwendungen einbinden können.  
   
 ```vb  
 Imports System.Data.Odbc  
@@ -130,7 +130,7 @@ using System.Data.Odbc;
   
  Für die Herstellung einer Verbindung mit der Oracle-Datenquelle benötigt der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für Oracle die Oracle-Clientsoftware (Version 8.1.7 oder höher) im System.  
   
- Die Klassen des[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieters für Oracle befinden sich im <xref:System.Data.OracleClient> -Namespace und sind in der `System.Data.OracleClient.dll` -Assembly enthalten. Beim Kompilieren einer Anwendung, die den Datenanbieter verwendet, müssen Sie auf die Dateien `System.Data.dll` und `System.Data.OracleClient.dll` verweisen.  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für Oracle-Klassen befinden sich in der <xref:System.Data.OracleClient> Namespace und sind in enthalten die `System.Data.OracleClient.dll` Assembly. Beim Kompilieren einer Anwendung, die den Datenanbieter verwendet, müssen Sie auf die Dateien `System.Data.dll` und `System.Data.OracleClient.dll` verweisen.  
   
  Im folgenden Codebeispiel wird gezeigt, wie Sie den `System.Data.OracleClient` -Namespace in Anwendungen einbinden können.  
   
@@ -149,8 +149,8 @@ using System.Data.OracleClient;
   
 |Anbieter|Hinweise|  
 |--------------|-----------|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für SQLServer|Empfohlen für Anwendungen der mittleren Ebene, die Microsoft SQL Server verwenden.<br /><br /> Es wird empfohlen, ein-Ebenen-Anwendungen, die Microsoft-Datenbank-Engine (MSDE) oder SQL Server verwenden.<br /><br /> Empfohlen bei Verwendung des OLE DB-Anbieter für SQL Server (SQLOLEDB) mit der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB.|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB|Für SQL Server die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server wird empfohlen, anstelle von diesem Anbieter.<br /><br /> Empfohlen für Anwendungen mit nur einer Ebene, die Microsoft Access-Datenbanken verwenden. Von der Verwendung einer Access-Datenbank für eine Anwendung der mittleren Ebene wird abgeraten.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für SQL Server|Empfohlen für Anwendungen der mittleren Ebene, die Microsoft SQL Server verwenden.<br /><br /> Es wird empfohlen, ein-Ebenen-Anwendungen, die Microsoft-Datenbank-Engine (MSDE) oder SQL Server verwenden.<br /><br /> Empfohlen bei Verwendung des OLE DB-Anbieter für SQL Server (SQLOLEDB) mit der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für OLE DB.|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für OLE DB|Für SQL Server die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Datenanbieter für SQL Server wird empfohlen, anstelle von diesem Anbieter.<br /><br /> Empfohlen für Anwendungen mit nur einer Ebene, die Microsoft Access-Datenbanken verwenden. Von der Verwendung einer Access-Datenbank für eine Anwendung der mittleren Ebene wird abgeraten.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für ODBC|Empfohlen für Anwendungen in der mittleren Ebene und Anwendungen mit nur einer Ebene, die ODBC-Datenquellen verwenden.|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Datenanbieter für Oracle|Empfohlen für Anwendungen in der mittleren Ebene und Anwendungen mit nur einer Ebene, die Oracle-Datenquellen verwenden.|  
   
@@ -158,6 +158,7 @@ using System.Data.OracleClient;
  Der EntityClient-Anbieter wird für den Datenzugriff basierend auf einem Entity Data Model (EDM) verwendet. Im Gegensatz zu anderen .NET Framework-Datenanbietern interagiert er nicht direkt mit einer Datenquelle. Stattdessen kommuniziert er über Entity SQL mit dem zugrunde liegenden Datenanbieter. Weitere Informationen finden Sie unter [EntityClient-Anbieter für Entity Framework](./ef/entityclient-provider-for-the-entity-framework.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

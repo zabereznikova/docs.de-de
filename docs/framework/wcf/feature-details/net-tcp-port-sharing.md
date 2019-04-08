@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: e191dc62368fc9c16bd58efd30dd1a3769d2bb88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540311"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073688"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP-Anschlussfreigabe
 Windows Communication Foundation (WCF) bietet ein neue TCP-basiertes Netzwerkprotokoll (net.tcp://) für hochleistungskommunikation. WCF stellt auch eine neue Systemkomponente, die Net.TCP-Portfreigabedienst, mit dem net.tcp-Ports für mehrfache Benutzervorgänge freigegeben werden können.  
@@ -18,7 +18,7 @@ Windows Communication Foundation (WCF) bietet ein neue TCP-basiertes Netzwerkpro
 ## <a name="background-and-motivation"></a>Hintergrund und Motivation  
  Als das TCP/IP-Protokoll erstmals eingeführt wurde, wurde es nur von einer geringen Anzahl von Anwendungsprotokollen verwendet. TCP/IP verwendete Anschlussnummern, um zwischen Anwendungen zu unterscheiden, indem es jedem Anwendungsprotokoll eine eindeutige 16-bit-Anschlussnummer zuwies. HTTP-Verkehr verwendet heute beispielsweise standardmäßig den TCP-Anschluss 80, SMTP verwendet den TCP-Anschluss 25, und FTP verwendet die TCP-Anschlüsse 20 und 21. Andere Anwendungen, die TCP als Transport verwenden, können eine weitere verfügbare Anschlussnummer wählen, entweder durch Konventionen oder durch formale Standardisierung.  
   
- Die Verwendung von Anschlussnummern zur Unterscheidung zwischen Anwendungen barg Sicherheitsprobleme. Firewalls sind in der Regel so konfiguriert, dass Sie TCP-Verkehr an allen Anschlüssen außer den wenigen wohlbekannten Eingangspunkten blockieren, sodass die Bereitstellung einer Anwendung, die einen Nicht-Standardanschluss verwendet, durch das Vorhandensein firmenspezifischer oder persönlicher Firewalls oft kompliziert oder sogar unmöglich ist. Anwendungen, die über bekannten, bereits zugelassene Standardanschlüsse kommunizieren können, verringern die Angriffsfläche für externe Angriffe. Viele Netzwerkanwendungen verwenden das HTTP-Protokoll, da die meisten Firewalls standardmäßig so konfiguriert sind, dass sie Verkehr am TCP-Anschluss&#160;80 zulassen.  
+ Die Verwendung von Anschlussnummern zur Unterscheidung zwischen Anwendungen barg Sicherheitsprobleme. Firewalls sind in der Regel so konfiguriert, dass Sie TCP-Verkehr an allen Anschlüssen außer den wenigen wohlbekannten Eingangspunkten blockieren, sodass die Bereitstellung einer Anwendung, die einen Nicht-Standardanschluss verwendet, durch das Vorhandensein firmenspezifischer oder persönlicher Firewalls oft kompliziert oder sogar unmöglich ist. Anwendungen, die über bekannten, bereits zugelassene Standardanschlüsse kommunizieren können, verringern die Angriffsfläche für externe Angriffe. Viele Netzwerkanwendungen verwenden das HTTP-Protokoll, da die meisten Firewalls standardmäßig so konfiguriert sind, dass sie Verkehr am TCP-Anschluss&amp;#160;80 zulassen.  
   
  Das HTTP.SYS-Modell, in dem der Verkehr für viele verschiedene HTTP-Anwendungen als Multiplex über einen einzelnen TCP-Anschluss geleitet wird, ist heute Standard auf der Windows-Plattform. Dies bietet Firewalladministratoren einen gemeinsamen Steuerungspunkt, und bietet zugleich Anwendungsentwicklern die Möglichkeit, die Bereitstellungskosten beim Erstellen neuer Anwendungen, die das Netzwerk verwenden können, zu minimieren.  
   
@@ -49,6 +49,7 @@ Windows Communication Foundation (WCF) bietet ein neue TCP-basiertes Netzwerkpro
  Obwohl der Net.TCP-Portfreigabedienst eine Verarbeitungsschicht zwischen Anwendungen und dem Netzwerk bereitstellt, sollten Anwendungen, die die Anschlussfreigabe nutzen, zusätzlich so gesichert werden, als würden sie das Netzwerk direkt überwachen. Insbesondere sollten Anwendungen, die die Anschlussfreigabe nutzen, die Prozessprivilegien auswerten, unter denen sie ausgeführt werden. Ziehen Sie in Betracht, die Anwendung unter dem integrierten Netzwerkdienstkonto auszuführen, das mit der minimalen Gruppe der zur Netzwerkkommunikation erforderlichen Privilegien ausgeführt wird.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Konfigurieren des Net.TCP-Portfreigabediensts](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)
 - [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)
 - [Vorgehensweise: Konfigurieren eines WCF-Diensts für die Portfreigabe](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)

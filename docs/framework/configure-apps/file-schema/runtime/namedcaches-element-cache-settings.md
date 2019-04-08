@@ -1,17 +1,17 @@
 ---
-title: <namedCaches>-Element (Cacheeinstellungen)
+title: <namedCaches> -Element (Cacheeinstellungen)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - namedCaches element
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: 1dedd3ca192b5fb0ee561ce138f0948c52581f89
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 36920a5e585c0c7581fbc4f84043d68550fbdac1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287481"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104935"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<NamedCaches >-Element (Cacheeinstellungen)
 Gibt eine Auflistung von Konfigurationseinstellungen für den benannten <xref:System.Runtime.Caching.MemoryCache> Instanzen. Die <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> -Eigenschaft verweist auf die Auflistung der Konfigurationseinstellungen von einer oder mehreren `namedCaches` Elemente der Konfigurationsdatei.  
@@ -88,4 +88,5 @@ Gibt eine Auflistung von Konfigurationseinstellungen für den benannten <xref:Sy
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [\<MemoryCache >-Element (Cacheeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

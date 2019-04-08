@@ -1,13 +1,13 @@
 ---
-title: <remove>-Element für schemeSettings (URI-Einstellungen)
+title: <remove> -Element für SchemeSettings (Uri-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
-ms.openlocfilehash: fd137c86d7373947f57364c13eb3875cba46b269
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f29ee86deaa150324b40f4fac12ead152553e50d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262624"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104974"
 ---
 # <a name="remove-element-for-schemesettings-uri-settings"></a>\<Entfernen Sie >-Element für SchemeSettings (Uri-Einstellungen)
 Entfernt eine Schema-Einstellung für einen Schemanamen an.  
@@ -41,7 +41,7 @@ Entfernt eine Schema-Einstellung für einen Schemanamen an.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<schemeSettings>-Element (URI-Einstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.|  
+|[\<SchemeSettings >-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.|  
   
 ## <a name="remarks"></a>Hinweise  
  In der Standardeinstellung die <xref:System.Uri?displayProperty=nameWithType> Klasse un-Escapezeichen % codiert Pfadtrennzeichen vor dem Ausführen der Path-Komprimierung. Dies wurde als Sicherheitsmechanismus vor Angriffen wie folgt implementiert:  
@@ -75,10 +75,11 @@ Entfernt eine Schema-Einstellung für einen Schemanamen an.
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

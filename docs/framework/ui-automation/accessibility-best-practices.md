@@ -5,12 +5,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: e320d47562ea5018a20a82ab555ec7f2db018c40
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074234"
 ---
 # <a name="accessibility-best-practices"></a>Bewährte Methoden für Eingabehilfen
 > [!NOTE]
@@ -20,11 +20,11 @@ ms.locfileid: "57676134"
   
 <a name="Programmatic_Access"></a>   
 ## <a name="programmatic-access"></a>Programmgesteuerter Zugriff  
- Beim programmgesteuerten Zugriff muss sichergestellt werden, dass alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]-Elemente eine Bezeichnung aufweisen, Eigenschaftswerte verfügbar gemacht und entsprechende Ereignisse ausgelöst werden. Für [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Standardsteuerelemente ist der größte Teil dieser Arbeit bereits über <xref:System.Windows.Automation.Peers.AutomationPeer>erfolgt. Benutzerdefinierte Steuerelemente erfordern zusätzliche Arbeit, um sicherzustellen, dass der programmgesteuerte Zugriff ordnungsgemäß implementiert wurde.  
+ Beim programmgesteuerten Zugriff muss sichergestellt werden, dass alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Elemente eine Bezeichnung aufweisen, Eigenschaftswerte verfügbar gemacht und entsprechende Ereignisse ausgelöst werden. Für [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Standardsteuerelemente ist der größte Teil dieser Arbeit bereits über <xref:System.Windows.Automation.Peers.AutomationPeer>erfolgt. Benutzerdefinierte Steuerelemente erfordern zusätzliche Arbeit, um sicherzustellen, dass der programmgesteuerte Zugriff ordnungsgemäß implementiert wurde.  
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Aktivieren des programmgesteuerten Zugriffs auf alle Elemente der Benutzeroberfläche und auf Text  
- [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] -Elemente sollten den programmgesteuerten Zugriff ermöglichen. Wenn [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ein [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Standardsteuerelement ist, ist die Unterstützung für den programmgesteuerten Zugriff im Steuerelement enthalten. Wenn das Steuerelement ein benutzerdefiniertes Steuerelement ist, d. h. ein Steuerelement, das als Unterklasse eines allgemeinen Steuerelements oder als Unterklasse von "Control" abgeleitet wurde, müssen Sie die <xref:System.Windows.Automation.Peers.AutomationPeer> -Implementierung auf Bereiche prüfen, für die möglicherweise eine Änderung erforderlich ist.  
+ [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] -Elemente sollten den programmgesteuerten Zugriff aktivieren. Wenn [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] ein [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] -Standardsteuerelement ist, ist die Unterstützung für den programmgesteuerten Zugriff im Steuerelement enthalten. Wenn das Steuerelement ein benutzerdefiniertes Steuerelement ist, d. h. ein Steuerelement, das als Unterklasse eines allgemeinen Steuerelements oder als Unterklasse von "Control" abgeleitet wurde, müssen Sie die <xref:System.Windows.Automation.Peers.AutomationPeer> -Implementierung auf Bereiche prüfen, für die möglicherweise eine Änderung erforderlich ist.  
   
  Durch Befolgen dieser bewährten Methode können [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] -Anbieter die Elemente von [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]Ihres Produkts identifizieren und ändern.  
   
@@ -131,6 +131,7 @@ ms.locfileid: "57676134"
  Geräteunabhängige Aufrufe stellen die Gleichwertigkeit zwischen Tastatur- und Mausfunktionen sicher, während für [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] die erforderlichen Informationen über die [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]bereitgestellt werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Automation.Peers>
 - [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
 - [Richtlinien zur Gestaltung einer tastaturgesteuerten Benutzeroberfläche](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

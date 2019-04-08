@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc5eddbf21e6e530279e2c85420e539e5d51a7f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9015ec35c2a3d13b986eb9524e4f2984d909eb21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098233"
 ---
 # <a name="runtime-directive-policy-settings"></a>Richtlinieneinstellungen für die Laufzeitanweisung
 > [!NOTE]
@@ -24,11 +24,11 @@ ms.locfileid: "54642567"
   
 -   Reflektionsrichtlinientypen bestimmen, welche Metadaten zur Laufzeit für Reflektion zur Verfügung gestellt werden:  
   
-    -   `Activate` steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.  
+    -   `Activate` Steuert den Laufzeitzugriff auf Konstruktoren, um die Aktivierung von Instanzen zu ermöglichen.  
   
-    -   `Browse` steuert das Abfragen von Informationen über Programmelemente.  
+    -   `Browse` Steuerelemente, die Abfragen nach Informationen über Programmelemente.  
   
-    -   `Dynamic` steuert den Laufzeitzugriff auf alle Typen und Member, um dynamische Programmierung zu ermöglichen.  
+    -   `Dynamic` Steuert den Laufzeitzugriff auf alle Typen und Member zum Aktivieren der dynamischen Programmierung.  
   
      In der folgenden Tabelle sind die Reflektionsrichtlinientypen und die Programmelemente aufgeführt, mit denen sie verwendet werden können.  
   
@@ -37,15 +37,15 @@ ms.locfileid: "54642567"
     |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
     |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
-    |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|  
-    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
+    |[\<Ereignis >](../../../docs/framework/net-native/event-element-net-native.md)||✓|✓|  
+    |[\<Feld >](../../../docs/framework/net-native/field-element-net-native.md)||✓|✓|  
     |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
-    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
+    |[\<Methode >](../../../docs/framework/net-native/method-element-net-native.md)||✓|✓|  
     |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||✓|✓|  
     |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
-    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
+    |[\<Eigenschaft >](../../../docs/framework/net-native/property-element-net-native.md)||✓|✓|  
     |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
     |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
     |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
@@ -53,13 +53,13 @@ ms.locfileid: "54642567"
   
 -   Serialisierungsrichtlinientypen bestimmen, welche Metadaten zur Laufzeit für Serialisierung und Deserialisierung zur Verfügung gestellt werden:  
   
-    -   `Serialize` steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um die Serialisierung von Typinstanzen durch Bibliotheken von Drittanbietern wie das Newtonsoft JSON-Serialisierungsprogramm zu ermöglichen.  
+    -   `Serialize` Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, damit Typinstanzen von Bibliotheken von Drittanbietern, wie das Newtonsoft JSON-Serialisierungsprogramm serialisiert werden können.  
   
-    -   `DataContractSerializer` steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um die Serialisierung von Typinstanzen durch die <xref:System.Runtime.Serialization.DataContractSerializer>-Klasse zu ermöglichen.  
+    -   `DataContractSerializer` Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, damit Typinstanzen von serialisiert werden können die <xref:System.Runtime.Serialization.DataContractSerializer> Klasse.  
   
-    -   `DataContractJsonSerializer` steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um die Serialisierung von Typinstanzen durch die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>-Klasse zu ermöglichen.  
+    -   `DataContractJsonSerializer` Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, damit Typinstanzen von serialisiert werden können die <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> Klasse.  
   
-    -   `XmlSerializer` steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, um die Serialisierung von Typinstanzen durch die <xref:System.Xml.Serialization.XmlSerializer>-Klasse zu ermöglichen.  
+    -   `XmlSerializer` Steuert den Laufzeitzugriff auf Konstruktoren, Felder und Eigenschaften, damit Typinstanzen von serialisiert werden können die <xref:System.Xml.Serialization.XmlSerializer> Klasse.  
   
      In der folgenden Tabelle sind die Serialisierungsrichtlinientypen und die Programmelemente aufgeführt, mit denen sie verwendet werden können.  
   
@@ -68,15 +68,15 @@ ms.locfileid: "54642567"
     |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|✓|  
     |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|||||  
-    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
+    |[\<Ereignis >](../../../docs/framework/net-native/event-element-net-native.md)|||||  
+    |[\<Feld >](../../../docs/framework/net-native/field-element-net-native.md)|✓||||  
     |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|||||  
+    |[\<Methode >](../../../docs/framework/net-native/method-element-net-native.md)|||||  
     |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|||||  
     |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|✓|  
-    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
+    |[\<Eigenschaft >](../../../docs/framework/net-native/property-element-net-native.md)|✓||||  
     |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|✓|  
     |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|✓|  
     |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|✓|  
@@ -84,11 +84,11 @@ ms.locfileid: "54642567"
   
 -   Interop-Richtlinientypen bestimmen, welche Metadaten zur Laufzeit verfügbar gemacht werden, um Verweistypen, Werttypen und Funktionszeiger an COM und Windows-Runtime zu übergeben:  
   
-    -   `MarshalObject` steuert das systemeigene Marshalling an COM und Windows-Runtime für Verweistypen.  
+    -   `MarshalObject` Steuert das systemeigene Marshalling an COM und Windows-Runtime für Verweistypen zulässig.  
   
-    -   `MarshalDelegate` steuert das systemeigene Marshalling von Delegattypen als Funktionszeiger.  
+    -   `MarshalDelegate` Steuert das systemeigene Marshalling von Delegattypen als Funktionszeiger.  
   
-    -   `MarshalStructure` steuert das systemeigene Marshalling an COM und Windows-Runtime für Werttypen.  
+    -   `MarshalStructure` Steuert das systemeigene Marshalling an COM und Windows-Runtime für Werttypen.  
   
      In der folgenden Tabelle sind die Interop-Richtlinientypen und die Programmelemente aufgeführt, mit denen sie verwendet werden können.  
   
@@ -97,15 +97,15 @@ ms.locfileid: "54642567"
     |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|✓|✓|✓|  
     |[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|✓|✓|✓|  
     |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|✓|✓|✓|  
-    |[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)||||  
-    |[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)||||  
+    |[\<Ereignis >](../../../docs/framework/net-native/event-element-net-native.md)||||  
+    |[\<Feld >](../../../docs/framework/net-native/field-element-net-native.md)||||  
     |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|✓|✓|✓|  
     |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|✓|✓|✓|  
-    |[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)||||  
+    |[\<Methode >](../../../docs/framework/net-native/method-element-net-native.md)||||  
     |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)||||  
     |[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|✓|✓|✓|  
     |[\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md)|✓|✓|✓|  
-    |[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)||||  
+    |[\<Eigenschaft >](../../../docs/framework/net-native/property-element-net-native.md)||||  
     |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|✓|✓|✓|  
     |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|✓|✓|✓|  
     |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|✓|✓|✓|  
@@ -114,11 +114,11 @@ ms.locfileid: "54642567"
 ## <a name="policy-settings"></a>Richtlinieneinstellungen  
  Jeder Richtlinientyp kann auf einen der in der folgenden Tabelle aufgeführten Werte festgelegt werden. Beachten Sie, dass Elemente, die Typmember darstellen, einen anderen Satz von Richtlinieneinstellungen unterstützen als andere Elemente.  
   
-|Richtlinieneinstellung|Beschreibung|`Assembly`-, `Namespace`-, `Type`- und `TypeInstantiation`-Elemente|`Event`-, `Field`-, `Method`-, `MethodInstantiation`- und `Property`-Elemente|  
+|Richtlinieneinstellung|Beschreibung|`Assembly`, `Namespace`, `Type`, und `TypeInstantiation` Elemente|`Event`, `Field`, `Method`, `MethodInstantiation`, und `Property` Elemente|  
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |`All`|Aktiviert die Richtlinie für alle Typen und Member, die die .NET Native-Toolkette nicht entfernt.|✓||  
 |`Auto`|Gibt an, dass die Standardrichtlinie für den Richtlinientyp für dieses Programmelement verwendet werden soll. Dies entspricht dem Auslassen einer Richtlinie für diesen Richtlinientyp. `Auto` wird normalerweise verwendet, um anzugeben, dass die Richtlinie von einem übergeordneten Element geerbt wird.|✓|✓|  
-|`Excluded`|Gibt an, dass die Richtlinie für ein bestimmtes Programmelement deaktiviert ist. Beispiel: Die Laufzeitdirektive:<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> gibt an, dass die Metadaten für die `BusinessClasses.Person`-Klasse zum Durchsuchen oder zum dynamischen Instanziieren und Ändern von `Person`-Objekten nicht verfügbar sind.|✓|✓|  
+|`Excluded`|Gibt an, dass die Richtlinie für ein bestimmtes Programmelement deaktiviert ist. Beispiel: Die Laufzeitanweisung:<br /><br /> `<Type Name="BusinessClasses.Person" Browse="Excluded" Dynamic="Excluded" />`<br /><br /> gibt an, dass die Metadaten für die `BusinessClasses.Person`-Klasse zum Durchsuchen oder zum dynamischen Instanziieren und Ändern von `Person`-Objekten nicht verfügbar sind.|✓|✓|  
 |`Included`|Aktiviert eine Richtlinie, wenn Metadaten für den übergeordneten Typ verfügbar sind.||✓|  
 |`Public`|Aktiviert die Richtlinie für öffentliche Typen oder Member, sofern die Toolkette nicht bestimmt, dass der Typ oder Member unnötig ist und daher entfernt wird. Diese Einstellung unterscheidet sich von der Einstellung `Required Public`, durch die sichergestellt wird, dass Metadaten für öffentliche Typen und Member immer verfügbar sind, auch wenn die Toolkette bestimmt, dass sie nicht erforderlich sind.|✓||  
 |`PublicAndInternal`|Aktiviert die Richtlinie für öffentliche und interne Typen oder Member, sofern die Toolkette nicht bestimmt, dass der Typ oder Member unnötig ist und daher entfernt wird. Diese Einstellung unterscheidet sich von der Einstellung `Required PublicAndInternal`, durch die sichergestellt wird, dass Metadaten für öffentliche und interne Typen und Member immer verfügbar sind, auch wenn die Toolkette bestimmt, dass sie nicht erforderlich sind.|✓||  
@@ -128,5 +128,6 @@ ms.locfileid: "54642567"
 |`Required All`|Fordert, dass die Toolkette alle Typen und Member unabhängig von ihrer Verwendung beibehält, und aktiviert die Richtlinie für diese.|✓||  
   
 ## <a name="see-also"></a>Siehe auch
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)

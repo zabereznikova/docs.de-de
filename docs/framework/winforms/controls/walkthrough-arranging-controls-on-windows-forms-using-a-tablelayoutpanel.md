@@ -1,19 +1,19 @@
 ---
-title: 'Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel'
+title: 'Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with TableLayoutPanel
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 8999dba110ee21b735c79ccc10c5af52dbfcdea9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 44ef0b88da5b8990ad9fde921224b6bb7101cbc2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712993"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073857"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel
 Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst entsprechend neu anordnet, wenn sich die Größe des Formulars oder des Inhalts ändert. Wenn Sie ein dynamisches Layout benötigen und <xref:System.Windows.Forms.Control.Layout> -Ereignisse nicht explizit im Code verarbeiten möchten, ziehen Sie die Verwendung eines Layoutbereichs in Erwägung.  
   
  Das <xref:System.Windows.Forms.FlowLayoutPanel> -Steuerelement und das <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement stellen intuitive Verfahren zum Anordnen von Steuerelementen auf Formularen dar. Beide bieten die Möglichkeit, die relativen Positionen der in ihnen enthaltenen untergeordneten Steuerelemente automatisch und konfigurierbar zu steuern, und beide stellen dynamische Layoutfunktionen zur Laufzeit zur Verfügung, sodass sie Größe und Position von untergeordneten Steuerelementen ändern können, wenn sich die Abmessungen des übergeordneten Formulars ändern. Layoutbereiche können in Layoutbereichen geschachtelt werden, um die Realisierung raffinierter Benutzeroberflächen zu ermöglichen.  
@@ -136,7 +136,7 @@ Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst ents
   
 2.  Nach der <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement voll ist, doppelklicken Sie auf die <xref:System.Windows.Forms.Button> Symbol in der **Toolbox** , fügen Sie einen anderen <xref:System.Windows.Forms.Button> Steuerelement. Beachten Sie, dass die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement erstellt neue Zellen für das neue Steuerelement. Fügen Sie einige weitere Steuerelemente, und beobachten Sie das Verhalten der größenanpassung.  
   
-3.  Ändern Sie den Wert der <xref:System.Windows.Forms.TableLayoutPanel> -Eigenschaft des <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> -Steuerelements in <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize>. Doppelklicken Sie auf die <xref:System.Windows.Forms.Button> Symbol in der **Toolbox** einzufügende <xref:System.Windows.Forms.Button> steuert, bis die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement ist voll. Doppelklicken Sie auf die <xref:System.Windows.Forms.Button> Symbol in der **Toolbox** erneut aus. Beachten Sie, dass Sie eine Fehlermeldung aus der **Windows Forms-Designer** Sie darüber informiert, dass zusätzliche Zeilen und Spalten können nicht erstellt werden.  
+3.  Ändern Sie den Wert der <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A>-Eigenschaft des <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelements in <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize>. Doppelklicken Sie auf die <xref:System.Windows.Forms.Button> Symbol in der **Toolbox** einzufügende <xref:System.Windows.Forms.Button> steuert, bis die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement ist voll. Doppelklicken Sie auf die <xref:System.Windows.Forms.Button> Symbol in der **Toolbox** erneut aus. Beachten Sie, dass Sie eine Fehlermeldung aus der **Windows Forms-Designer** Sie darüber informiert, dass zusätzliche Zeilen und Spalten können nicht erstellt werden.  
   
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>Einfügen eines Steuerelements durch Zeichnen seiner Kontur  
  Sie können ein Steuerelement in ein <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement einfügen und seine Größe angeben, indem Sie in einer Zelle seine Kontur zeichnen.  
@@ -179,15 +179,16 @@ Einige Anwendungen erfordern ein Formular mit einem Layout, das sich selbst ents
 -   Docken Sie das <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement am übergeordneten Formular an. Ändern Sie die Größe des Formulars, und beobachten Sie die Auswirkung auf das Layout.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Microsoft Windows-Benutzererfahrung, Official Guidelines for User Interface Developers and Designers. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers. Redmond, WA: Microsoft Press, 1999. (USBN: 0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
 - [Exemplarische Vorgehensweise: Erstellen in der Größe veränderbaren Windows Forms für die Dateneingabe](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
 - [Exemplarische Vorgehensweise: Erstellen einer lokalisierbaren Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
 - [Empfohlene Vorgehensweisen für das TableLayoutPanel-Steuerelement](best-practices-for-the-tablelayoutpanel-control.md)
 - [Übersicht über die AutoSize-Eigenschaft](autosize-property-overview.md)
-- [Vorgehensweise: Andocken von Steuerelementen in Windows Forms](how-to-dock-controls-on-windows-forms.md)
-- [Vorgehensweise: Verankern von Steuerelementen in Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Vorgehensweise: Andocken von Steuerelementen in Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Vorgehensweise: Verankern von Steuerelementen in Windows Forms](how-to-anchor-controls-on-windows-forms.md)
 - [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](windows-forms-controls-padding-autosize.md)

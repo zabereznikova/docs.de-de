@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e3b49654252ad18e9ad4d9e5128b78bd23baee6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4eb64fc0badf94c93182e7bd6875337c411bcdef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098506"
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum-Schnittstelle
 Stellt einen Enumerator für ein Array von `IAssemblyName` Objekte.  
@@ -42,5 +42,6 @@ Stellt einen Enumerator für ein Array von `IAssemblyName` Objekte.
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
 - [IAssemblyName-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

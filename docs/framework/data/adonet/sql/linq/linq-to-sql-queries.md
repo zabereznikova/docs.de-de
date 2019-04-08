@@ -2,12 +2,12 @@
 title: LINQ to SQL-Abfragen
 ms.date: 03/30/2017
 ms.assetid: f4897aaa-7f44-4c20-a471-b948c2971aae
-ms.openlocfilehash: 1390ca36ce9071a16ef21e32dfd7f7a6211644f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49106502dc58eef36ea0c910c627c9cf397f419e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689665"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076184"
 ---
 # <a name="linq-to-sql-queries"></a>LINQ to SQL-Abfragen
 Sie definieren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfragen, indem Sie die gleiche Syntax wie in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] verwenden. Der einzige Unterschied besteht darin, dass die in Abfragen referenzierten Objekte den Elementen in einer Datenbank zugeordnet werden. Weitere Informationen finden Sie unter [Introduction to LINQ queries (C#) (Einführung in LINQ-Abfragen (C#))](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
@@ -19,9 +19,9 @@ Sie definieren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md
   
  Die folgende Tabelle zeigt Ähnlichkeiten und Unterschiede zwischen den Abfrageelementen [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]-Abfrageelementen und [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfrageelementen.  
   
-|Element|LINQ-Abfrage|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfrage|  
+|Element|LINQ-Abfrage|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfrage|  
 |----------|----------------|----------------------------------------------------------------------|  
-|Rückgabetyp der lokalen Variablen, die die Abfrage (für Abfragen, die Sequenzen zurückgeben) enthält|Generisches `IEnumerable`|Generisches `IQueryable`|  
+|Rückgabetyp der lokalen Variablen, die die Abfrage (für Abfragen, die Sequenzen zurückgeben) enthält|Generisch `IEnumerable`|Generisch `IQueryable`|  
 |Angeben der Datenquelle|Verwendet die `From` (Visual Basic) oder `from` (C#)-Klausel|Gleiche Voraussetzung|  
 |Filtern|Verwendet die `Where` / `where` Klausel|Gleiche Voraussetzung|  
 |Gruppieren|Verwendet die `Group…By` / `groupby` Klausel|Gleiche Voraussetzung|  
@@ -32,7 +32,8 @@ Sie definieren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md
 |Streamingabfragen und gepufferte Abfragen|Nicht anwendbar auf ein lokales Arbeitsspeicherszenario||  
   
 ## <a name="see-also"></a>Siehe auch
-- [Introduction to LINQ Queries (C#) (Einführung in LINQ-Abfragen (C#))](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
+
+- [Einführung in LINQ-Abfragen (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)
 - [Grundlegende LINQ-Abfragevorgänge](~/docs/csharp/programming-guide/concepts/linq/basic-linq-query-operations.md)
 - [Typbeziehungen in LINQ-Abfragevorgängen](~/docs/csharp/programming-guide/concepts/linq/type-relationships-in-linq-query-operations.md)
 - [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

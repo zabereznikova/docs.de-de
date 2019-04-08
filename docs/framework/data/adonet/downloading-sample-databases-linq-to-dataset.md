@@ -2,37 +2,37 @@
 title: Herunterladen von Beispieldatenbanken (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-ms.openlocfilehash: f0fc3e8d447f82c89b3b558d95b45120db0a876d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a022380bf266997c82de43e103e7d56348447cfc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104909"
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Herunterladen von Beispieldatenbanken (LINQ to DataSet)
 Die Beispiele und exemplarischen Vorgehensweisen in der [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Dokumentation verwenden die AdventureWorks-Beispieldatenbank. Sie können dieses Produkt kostenlos von der Microsoft-Downloadsite herunterladen. Als Datenspeicher für die Beispiele und exemplarischen Vorgehensweisen in der [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Dokumentation wird SQL Server verwendet. Statt SQL Server kann als Datenspeicher auch die kostenlos erhältliche SQL Server Express Edition verwendet werden.  
   
-## <a name="downloading-and-installing-the-adventureworks-database"></a>Herunterladen und Installieren der <legacyBold>AdventureWorks</legacyBold>-Datenbank  
+## <a name="downloading-and-installing-the-adventureworks-database"></a>Herunterladen und Installieren der &lt;legacyBold&gt;AdventureWorks&lt;/legacyBold&gt;-Datenbank  
   
-#### <a name="to-download-and-install-the-adventureworks-sample-database-for-sql-server"></a>So können Sie die <legacyBold>AdventureWorks</legacyBold>-Beispieldatenbank für SQL Server herunterladen und installieren  
+#### <a name="to-download-and-install-the-adventureworks-sample-database-for-sql-server"></a>So können Sie die &lt;legacyBold&gt;AdventureWorks&lt;/legacyBold&gt;-Beispieldatenbank für SQL Server herunterladen und installieren  
   
 1.  Öffnen Sie Internet Explorer.  
   
 2.  Wechseln Sie zu der [SQL Server 2005 Samples and Sample Databases](https://go.microsoft.com/fwlink/?linkid=31046) Website.  
   
-3.  Befolgen Sie die Anweisungen zum Herunterladen der <legacyBold>AdventureWorks</legacyBold>-Beispieldatenbank für Ihren Prozessortyp (z. B. <legacyBold>AdventureWorksDB.msi</legacyBold>), und speichern Sie die MSI-Datei auf Ihrem lokalen Computer.  
+3.  Befolgen Sie die Anweisungen zum Herunterladen der AdventureWorks-Beispieldatenbank für Ihren Prozessortyp (z. B. AdventureWorksDB.msi), und speichern Sie die MSI-Datei auf Ihrem lokalen Computer.  
   
-4.  Wenn Sie bereits eine frühere <legacyBold>AdventureWorks</legacyBold>-Version heruntergeladen und installiert haben oder wenn <legacyBold>AdventureWorks</legacyBold> während der SQL-Einrichtung installiert wurde, müssen Sie diese frühere Version entfernen, bevor Sie <legacyBold>AdventureWorks.msi</legacyBold> ausführen.  
+4.  Wenn Sie bereits eine frühere &lt;legacyBold&gt;AdventureWorks&lt;/legacyBold&gt;-Version heruntergeladen und installiert haben oder wenn &lt;legacyBold&gt;AdventureWorks&lt;/legacyBold&gt; während der SQL-Einrichtung installiert wurde, müssen Sie diese frühere Version entfernen, bevor Sie &lt;legacyBold&gt;AdventureWorks.msi&lt;/legacyBold&gt; ausführen.  
   
 #### <a name="to-remove-a-previous-download-of-an-adventureworks-sample-database"></a>So entfernen Sie eine zuvor heruntergeladene und installierte "AdventureWorks"-Beispieldatenbank  
   
-1.  Trennen Sie die Verbindung zur <legacyBold>AdventureWorks</legacyBold>- bzw. <legacyBold>AdventureWorksDW</legacyBold>-Datenbank.  
+1.  Trennen Sie die Verbindung zur AdventureWorks- bzw. AdventureWorksDW-Datenbank.  
   
 2.  Von **Software**Option **AdventureWorksDB** oder **AdventureWorksBI** , und klicken Sie auf **entfernen**.  
   
 #### <a name="to-remove-an-adventureworks-sample-database-previously-installed-using-setup"></a>So entfernen Sie eine zuvor mit Setup installierte "AdventureWorks"-Beispieldatenbank  
   
-1.  Trennen Sie die Verbindung zur <legacyBold>AdventureWorks</legacyBold>- bzw. <legacyBold>AdventureWorksDW</legacyBold>-Datenbank.  
+1.  Trennen Sie die Verbindung zur AdventureWorks- bzw. AdventureWorksDW-Datenbank.  
   
 2.  Von **Software**Option **Microsoft SQL Server 2005** , und klicken Sie auf **Änderung**.  
   
@@ -52,9 +52,9 @@ Die Beispiele und exemplarischen Vorgehensweisen in der [!INCLUDE[linq_dataset](
   
 #### <a name="to-attach-the-adventureworks-sample-database-files-to-an-instance-of-sql-server"></a>So fügen Sie die "AdventureWorks"-Beispieldatenbankdateien an eine Instanz von SQL Server an  
   
-1.  Nachdem die Datei-Beispiel-Datenbank-Installer-Datei heruntergeladen wurde, doppelklicken Sie auf die **AdventureWorksDB.msi** Datei (oder die Datei, die Sie heruntergeladen haben) zum Installieren der Datenbank. Der Standardspeicherort für die Datenbank ist <legacyBold>c:\Programme\Microsoft SQL Server\MSSQL.1\MSSQL\Data</legacyBold>.  
+1.  Nachdem die Datei-Beispiel-Datenbank-Installer-Datei heruntergeladen wurde, doppelklicken Sie auf die **AdventureWorksDB.msi** Datei (oder die Datei, die Sie heruntergeladen haben) zum Installieren der Datenbank. Der Standardspeicherort für die Datenbank ist &lt;legacyBold&gt;c:\Programme\Microsoft SQL Server\MSSQL.1\MSSQL\Data&lt;/legacyBold&gt;.  
   
-2.  Fügen Sie die <legacyBold>AdventureWorks</legacyBold>-Datenbankdateien an eine Instanz von SQL Server an, indem Sie das folgende SQLCMD- oder SQL Server Management Studio-Skript ausführen:  
+2.  Fügen Sie die AdventureWorks-Datenbankdateien an eine Instanz von SQL Server an, indem Sie das folgende SQLCMD- oder SQL Server Management Studio-Skript ausführen:  
   
     ```sql
     exec sp_attach_db @dbname=N'AdventureWorks', @filename1=N'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\AdventureWorks_Data.mdf', @filename2=N'C:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\Data\AdventureWorks_log.ldf'  
@@ -74,4 +74,5 @@ Die Beispiele und exemplarischen Vorgehensweisen in der [!INCLUDE[linq_dataset](
 3.  Befolgen Sie die Installationsanleitungen auf der Website.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erste Schritte](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)

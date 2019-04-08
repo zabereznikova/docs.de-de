@@ -10,12 +10,12 @@ helpviewer_keywords:
 - professional appearance [Windows Forms], applying to elements of Windows Forms applications
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a207781b-1baa-4ce9-b788-1e951bd4b5df
-ms.openlocfilehash: 33c73bf8faa9dfafe5f4889875887dc3aef5985c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 44218ee1f3879a3f9ac5a1e1b049c28a5463820e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714111"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099832"
 ---
 # <a name="how-to-render-a-visual-style-element"></a>Vorgehensweise: Rendern eines visuellen Stilelements
 Die <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Namespace weist <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> den Windows-Benutzer darstellende – Objekte Schnittstellenelemente (UI) von visuellen Stilen unterstützt. In diesem Thema wird veranschaulicht, wie Sie mit der <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> -Klasse zum Rendern der <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> darstellt, die die **Abmelden** und **Herunterfahren** Schaltflächen des Startmenüs auf.  
@@ -44,4 +44,5 @@ Die <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Namesp
 -   Verweise auf die <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, und <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Namespaces.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Rendering von Steuerelementen mit visuellen Stilen](rendering-controls-with-visual-styles.md)

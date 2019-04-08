@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: 3ff4a3221392d6b247d0a486e4e1f0406f539362
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378859"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074656"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze-Attribut
 Legt die <xref:System.Windows.Freezable.IsFrozen%2A> Zustand `true` auf dem mit <xref:System.Windows.Freezable> Element. Standardverhalten für eine <xref:System.Windows.Freezable> ohne die `PresentationOptions:Freeze` Attribut angegeben ist, das <xref:System.Windows.Freezable.IsFrozen%2A> ist `false` am Serverantwortzeiten, Seitenladezeiten und abhängig davon, allgemeine <xref:System.Windows.Freezable> Verhalten zur Laufzeit.  
@@ -42,6 +42,7 @@ Legt die <xref:System.Windows.Freezable.IsFrozen%2A> Zustand `true` auf dem mit 
  Jeder Wert für die `Freeze` -Attribut ausschließlich `true` (ohne Beachtung von Groß-/Kleinschreibung), wird eine Ladezeitfehler generiert. (Angeben der `Freeze` als Attribut `false` ist kein Fehler, aber, der sich bereits die Standardeinstellung, also zum `false` führt keine Aktion).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Freezable>
 - [Übersicht über Freezable-Objekte](freezable-objects-overview.md)
 - [mc:Ignorable-Attribut](mc-ignorable-attribute.md)

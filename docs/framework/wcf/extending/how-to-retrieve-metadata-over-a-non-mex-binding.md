@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Abrufen von Metadaten über eine nicht - MEX-Bindung'
+title: 'Vorgehensweise: Aufrufen von Metadaten über eine Nicht-MEX-Bindung'
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: ac0a7d979e6b86933c4acd88b1a2fa11ba5bc991
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04acde96d7e712d8c6bc64988775a37fc79aaeab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689550"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074156"
 ---
-# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Vorgehensweise: Abrufen von Metadaten über eine nicht - MEX-Bindung
+# <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>Vorgehensweise: Aufrufen von Metadaten über eine Nicht-MEX-Bindung
 In diesem Thema wird beschrieben, wie Metadaten über eine Nicht-MEX-Bindung von einem MEX-Endpunkt abgerufen werden. Der Code in diesem Beispiel basiert auf der [benutzerdefinierte sicherer Metadatenendpunkt](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) Beispiel.  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>So rufen Sie Metadaten über eine Nicht-MEX-Bindung ab  
@@ -124,4 +124,5 @@ In diesem Thema wird beschrieben, wie Metadaten über eine Nicht-MEX-Bindung von
 5.  An diesem Punkt verfügen Sie über eine Auflistung von Dienstendpunkten. Weitere Informationen zum Importieren von Metadaten finden Sie unter [Vorgehensweise: Importieren von Metadaten in Dienstendpunkte](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Metadaten](../../../../docs/framework/wcf/feature-details/metadata.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9d5ed028045f14012567ecfa86ff6a5c3d419a1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 58c9d4c66af0bb9f4e66d17b18ac78ef8271bc31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072661"
 ---
 # <a name="codechunkinfo-structure"></a>CodeChunkInfo-Struktur
 
@@ -56,6 +56,7 @@ typedef struct _CodeChunkInfo {
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [GetCodeChunks-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
 - [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

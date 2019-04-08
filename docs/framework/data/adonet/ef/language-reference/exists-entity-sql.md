@@ -2,12 +2,12 @@
 title: EXISTS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
-ms.openlocfilehash: e6668fa2f978ddb785c4dac950c32d3caa2979af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76be542c64f75f27d126d7dbb6bde2baea8f6016
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552540"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078238"
 ---
 # <a name="exists-entity-sql"></a>EXISTS (Entity SQL)
 Bestimmt, ob eine Auflistung leer ist.  
@@ -22,11 +22,11 @@ Bestimmt, ob eine Auflistung leer ist.
  `expression`  
  Jeder gültige Ausdruck, der eine Auflistung zurückgibt.  
   
- NOT  
+ NICHT  
  Gibt an, dass das Ergebnis von EXISTS negiert werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`, wenn die Auflistung nicht leer ist, andernfalls `false`.  
+ `true` Wenn die Auflistung nicht leer ist; andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
  EXISTS[!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist einer der -Mengenoperatoren. Alle [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Mengenoperatoren werden von links nach rechts ausgewertet. Informationen zur Rangfolge der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Mengenoperatoren, finden Sie unter [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md).  
@@ -41,4 +41,5 @@ Bestimmt, ob eine Auflistung leer ist.
  [!code-csharp[DP EntityServices Concepts 2#EXISTS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#exists)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

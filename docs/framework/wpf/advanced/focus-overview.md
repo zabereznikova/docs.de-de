@@ -8,12 +8,12 @@ helpviewer_keywords:
 - applications [WPF], focus
 - focus in applications [WPF]
 ms.assetid: 0230c4eb-0c8a-462b-ac4b-ae3e511659f4
-ms.openlocfilehash: 5853c48ad77131d33cd0ab767c4a58ba56aaa39f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b866d714e6a77020bdb74843c3aaa0ba0c3278
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073883"
 ---
 # <a name="focus-overview"></a>Fokus - Übersicht
 In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gibt es zwei Hauptkonzepte, die den Fokus betreffen: Tastaturfokus und logischer Fokus.  Tastaturfokus bezieht sich auf das Element, das Tastatureingaben empfängt, und der logische Fokus bezieht sich auf das Element in einem Fokusbereich, der Fokus besitzt.  Diese Konzepte werden in dieser Übersicht ausführlich erläutert.  Für das Erstellen von komplexen Anwendungen, die über mehrere Bereiche verfügen, in denen Fokus abgerufen werden kann, ist es wichtig den Unterschied der Konzepte zu verstehen.  
@@ -21,9 +21,7 @@ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
  Sind die wichtigsten Klassen, die an der fokusverwaltung beteiligt sind die <xref:System.Windows.Input.Keyboard> -Klasse, die <xref:System.Windows.Input.FocusManager> -Klasse, und das Basiselement Klassen, z. B. <xref:System.Windows.UIElement> und <xref:System.Windows.ContentElement>.  Weitere Informationen zu den Basiselementen finden Sie unter [Übersicht über Basiselemente](base-elements-overview.md).  
   
  Die <xref:System.Windows.Input.Keyboard> -Klasse betrifft in erster Linie mit dem Tastaturfokus und die <xref:System.Windows.Input.FocusManager> ist in erster Linie mit den logischen Fokus, aber dies ist keine absolute Unterscheidung.  Ein Element, das über den Tastaturfokus verfügt, besitzt auch einen logischen Fokus, aber ein Element mit dem logischen Fokus muss nicht unbedingt über den Tastaturfokus verfügen.  Dies ist offensichtlich, wenn Sie verwenden die <xref:System.Windows.Input.Keyboard> Klasse das Element festgelegt werden, die über den Tastaturfokus, dafür legt auch den logischen Fokus auf das Element.  
-  
 
-  
 <a name="Keyboard_Focus"></a>   
 ## <a name="keyboard-focus"></a>Tastaturfokus  
  Der Tastaturfokus bezieht sich auf das Element, das derzeit Tastatureingaben empfängt.  Es kann nur ein Element auf dem gesamten Desktop geben, das über den Tastaturfokus verfügt.  In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], das Element, das den Tastaturfokus hat <xref:System.Windows.IInputElement.IsKeyboardFocused%2A> festgelegt `true`.  Die statische Eigenschaft <xref:System.Windows.Input.Keyboard.FocusedElement%2A> auf die <xref:System.Windows.Input.Keyboard> Klasse ruft das Element, das derzeit Tastaturfokus besitzt.  
@@ -118,6 +116,7 @@ In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.
  Die Ereignisse im Zusammenhang mit logischen Fokus sind <xref:System.Windows.UIElement.GotFocus> und <xref:System.Windows.UIElement.LostFocus>.  Diese Ereignisse werden definiert, auf die <xref:System.Windows.Input.FocusManager> als angefügte Ereignisse, aber die <xref:System.Windows.Input.FocusManager> macht keine CLR-Ereigniswrapper verfügbar.  <xref:System.Windows.UIElement> und <xref:System.Windows.ContentElement> einfacher, diese Ereignisse verfügbar zu machen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Input.FocusManager>
 - <xref:System.Windows.UIElement>
 - <xref:System.Windows.ContentElement>

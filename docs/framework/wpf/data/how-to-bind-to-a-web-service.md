@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Bindung an einen Webdienst'
+title: 'Vorgehensweise: Binden an einen Webdienst'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: b2ef0cce293913fc7bd9d59baa91bd875823cbe2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 66e91190e68d9610dd95d677edb276e117ec6abb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098572"
 ---
-# <a name="how-to-bind-to-a-web-service"></a>Vorgehensweise: Bindung an einen Webdienst
+# <a name="how-to-bind-to-a-web-service"></a>Vorgehensweise: Binden an einen Webdienst
 Dieses Beispiel zeigt, wie zum Binden an Objekte, die durch Aufrufe des Webdiensts-Methode zurückgegeben wird.  
   
 ## <a name="example"></a>Beispiel  
@@ -46,6 +46,7 @@ Dieses Beispiel zeigt, wie zum Binden an Objekte, die durch Aufrufe des Webdiens
  Informationen zur Struktur von **getContent**, finden Sie unter [Dokumentation zu Content Service](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht zur Datenbindung](data-binding-overview.md)
+
+- [Übersicht über die Datenbindung](data-binding-overview.md)
 - [Übersicht über Bindungsquellen](binding-sources-overview.md)
 - [Bereitstellen von Daten für die Bindung in XAML](how-to-make-data-available-for-binding-in-xaml.md)

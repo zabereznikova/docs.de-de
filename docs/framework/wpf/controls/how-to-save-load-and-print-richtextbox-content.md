@@ -12,12 +12,12 @@ helpviewer_keywords:
 - RichTextBox control [WPF], printing
 - RichTextBox control [WPF], loading
 ms.assetid: ffb113d3-c68a-47ca-8ac0-882283f38326
-ms.openlocfilehash: bcb368ababaac15dd92b11e43c22dfb705a7c0b3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 90581bee7815dafd44c3cae18a8af7394fee1e9a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365736"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072459"
 ---
 # <a name="how-to-save-load-and-print-richtextbox-content"></a>Vorgehensweise: Speichern, Laden und Drucken von RichTextBox-Inhalt
 Das folgende Beispiel zeigt, wie zum Speichern von Inhalt einer <xref:System.Windows.Controls.RichTextBox> in eine Datei zu laden, dieser Inhalt zurück in die <xref:System.Windows.Controls.RichTextBox>, und Drucken des Inhalts.  
@@ -34,5 +34,6 @@ Das folgende Beispiel zeigt, wie zum Speichern von Inhalt einer <xref:System.Win
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über RichTextBox](richtextbox-overview.md)
 - [Übersicht über TextBox](textbox-overview.md)

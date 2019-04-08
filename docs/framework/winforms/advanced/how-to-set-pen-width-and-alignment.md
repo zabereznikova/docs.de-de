@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen von Stiftbreite und-Ausrichtung'
+title: 'Vorgehensweise: Festlegen von Stiftbreite und -ausrichtung'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - pens [Windows Forms], setting width
 - pens [Windows Forms], setting alignment
 ms.assetid: a202af36-4d31-4401-a126-b232f51db581
-ms.openlocfilehash: b01482c059906d76ad9e506b593d580431f0ec09
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bc2ac2587554215ef3b2c2580413fbbb894aa687
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828198"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074975"
 ---
-# <a name="how-to-set-pen-width-and-alignment"></a>Vorgehensweise: Festlegen von Stiftbreite und-Ausrichtung
+# <a name="how-to-set-pen-width-and-alignment"></a>Vorgehensweise: Festlegen von Stiftbreite und -ausrichtung
 Bei der Erstellung einer <xref:System.Drawing.Pen>, Sie können die Stiftbreite als eines der Argumente an den Konstruktor bereitstellen. Sie können auch die Stiftbreite mit Ändern der <xref:System.Drawing.Pen.Width%2A> Eigenschaft der <xref:System.Drawing.Pen> Klasse.  
   
  Eine theoretische Linie hat es sich um eine Breite von 0. Wenn Sie eine Linie, die 1-Pixel breit ist zeichnen, werden die Pixel auf der theoretischen Linie zentriert. Wenn Sie eine Linie, die mehr als einem Pixel Breite ist zeichnen, wird die Pixel werden entweder auf der theoretischen Linie zentriert oder werden auf einer Seite von der theoretischen Linie. Sie können festlegen, die Stiftausrichtungseigenschaft, der eine <xref:System.Drawing.Pen> um zu bestimmen, wie die mit diesem Stift gezeichneten Pixel relativ zur theoretischen Linien positioniert werden.  
@@ -58,5 +58,6 @@ Bei der Erstellung einer <xref:System.Drawing.Pen>, Sie können die Stiftbreite 
      ![Ein Rechteck mit schwarzen Linien mit der breiten grünen Linie in gezeichnet.](./media/how-to-set-pen-width-and-alignment/green-pixels-inside-rectangle.gif)  
   
 ## <a name="see-also"></a>Siehe auch
-- [Verwenden eines Stifts zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)
+
+- [Verwenden eines Stiftes zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)

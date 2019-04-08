@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Hyperlink control type [WPF]
 ms.assetid: 3996cfe6-1dac-4835-aeb3-c719ce9cfee5
-ms.openlocfilehash: 1968e1b2730f08eb76670a477f1d2bdb0a9140bf
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 5718912e24a0697f209669b0ab4e7f4df1765ed3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408703"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076314"
 ---
 # <a name="how-to-specify-whether-a-hyperlink-is-underlined"></a>Vorgehensweise: Angeben, ob ein Hyperlink unterstrichen wird
 Die <xref:System.Windows.Documents.Hyperlink> Objekt ist ein fortlaufendes Inhaltselement, das Ihnen das Hosten von links im fortlaufenden Inhalt ermöglicht. In der Standardeinstellung <xref:System.Windows.Documents.Hyperlink> verwendet eine <xref:System.Windows.TextDecoration> Objekt, das eine Unterstreichung anzuzeigen. <xref:System.Windows.TextDecoration> Objekte können ressourcenintensiv sein, zu instanziieren, insbesondere wenn Sie viele <xref:System.Windows.Documents.Hyperlink> Objekte. Wenn Sie umfassenden Gebrauch von machen <xref:System.Windows.Documents.Hyperlink> Elemente, Sie möchten könnten eine Unterstreichung nur, wenn ein Ereignis auslösen, z. B. die <xref:System.Windows.ContentElement.MouseEnter> Ereignis.  
@@ -20,8 +20,7 @@ Die <xref:System.Windows.Documents.Hyperlink> Objekt ist ein fortlaufendes Inhal
  Im folgenden Beispiel wird die Unterstreichung für den Link "Meine MSN" dynamische, d. h. es nur angezeigt, wenn die <xref:System.Windows.ContentElement.MouseEnter> Ereignis wird ausgelöst.  
   
   ![Links mit TextDecorations](./media/how-to-specify-whether-a-hyperlink-is-underlined/text-decorations-hyperlinks.png)  
-  
-  
+
 ## <a name="example"></a>Beispiel  
  Das folgende Markup-Beispiel zeigt eine <xref:System.Windows.Documents.Hyperlink> mit und ohne Unterstreichung definiert:  
   
@@ -33,6 +32,7 @@ Die <xref:System.Windows.Documents.Hyperlink> Objekt ist ein fortlaufendes Inhal
  [!code-vb[Performance#PerformanceSnippet15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/hyperlink.xaml.vb#performancesnippet15)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.TextDecoration>
 - <xref:System.Windows.Documents.Hyperlink>
 - [Optimieren der WPF-Anwendungsleistung](optimizing-wpf-application-performance.md)
