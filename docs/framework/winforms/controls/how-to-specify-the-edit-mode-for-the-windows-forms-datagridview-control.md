@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen des Bearbeitungsmodus für das DataGridView-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Festlegen des Bearbeitungsmodus für das DataGridView-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,43 +8,44 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: 00c5bb85eb1b238371e58a631d90b69a41c49140
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7cb9278cd311d211ef95df238b930970ae472d05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725303"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080396"
 ---
-# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a><span data-ttu-id="df1b0-102">Vorgehensweise: Festlegen des Bearbeitungsmodus für das DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="df1b0-102">How to: Specify the Edit Mode for the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="df1b0-103">Standardmäßig können Benutzer bearbeiten Sie den Inhalt des aktuellen <xref:System.Windows.Forms.DataGridView> Textfeldzelle, indem Sie darin eingeben oder F2 drücken.</span><span class="sxs-lookup"><span data-stu-id="df1b0-103">By default, users can edit the contents of the current <xref:System.Windows.Forms.DataGridView> text box cell by typing in it or pressing F2.</span></span> <span data-ttu-id="df1b0-104">Dadurch wird die Zelle im Bearbeitungsmodus befindet, wenn alle der folgenden Bedingungen erfüllt sind:</span><span class="sxs-lookup"><span data-stu-id="df1b0-104">This puts the cell in edit mode if all of the following conditions are met:</span></span>  
+# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a><span data-ttu-id="bc8d9-102">Vorgehensweise: Festlegen des Bearbeitungsmodus für das DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bc8d9-102">How to: Specify the Edit Mode for the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="bc8d9-103">Standardmäßig können Benutzer bearbeiten Sie den Inhalt des aktuellen <xref:System.Windows.Forms.DataGridView> Textfeldzelle, indem Sie darin eingeben oder F2 drücken.</span><span class="sxs-lookup"><span data-stu-id="bc8d9-103">By default, users can edit the contents of the current <xref:System.Windows.Forms.DataGridView> text box cell by typing in it or pressing F2.</span></span> <span data-ttu-id="bc8d9-104">Dadurch wird die Zelle im Bearbeitungsmodus befindet, wenn alle der folgenden Bedingungen erfüllt sind:</span><span class="sxs-lookup"><span data-stu-id="bc8d9-104">This puts the cell in edit mode if all of the following conditions are met:</span></span>  
   
--   <span data-ttu-id="df1b0-105">Die zugrunde liegenden Datenquelle unterstützt die Bearbeitung.</span><span class="sxs-lookup"><span data-stu-id="df1b0-105">The underlying data source supports editing.</span></span>  
+-   <span data-ttu-id="bc8d9-105">Die zugrunde liegenden Datenquelle unterstützt die Bearbeitung.</span><span class="sxs-lookup"><span data-stu-id="bc8d9-105">The underlying data source supports editing.</span></span>  
   
--   <span data-ttu-id="df1b0-106">Die <xref:System.Windows.Forms.DataGridView> -Steuerelements aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="df1b0-106">The <xref:System.Windows.Forms.DataGridView> control is enabled.</span></span>  
+-   <span data-ttu-id="bc8d9-106">Die <xref:System.Windows.Forms.DataGridView> -Steuerelements aktiviert ist.</span><span class="sxs-lookup"><span data-stu-id="bc8d9-106">The <xref:System.Windows.Forms.DataGridView> control is enabled.</span></span>  
   
--   <span data-ttu-id="df1b0-107">Die <xref:System.Windows.Forms.DataGridView.EditMode%2A> Eigenschaftswert ist keine <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.</span><span class="sxs-lookup"><span data-stu-id="df1b0-107">The <xref:System.Windows.Forms.DataGridView.EditMode%2A> property value is not <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.</span></span>  
+-   <span data-ttu-id="bc8d9-107">Die <xref:System.Windows.Forms.DataGridView.EditMode%2A> Eigenschaftswert ist keine <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.</span><span class="sxs-lookup"><span data-stu-id="bc8d9-107">The <xref:System.Windows.Forms.DataGridView.EditMode%2A> property value is not <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>.</span></span>  
   
--   <span data-ttu-id="df1b0-108">Die `ReadOnly` Eigenschaften der Zelle, Zeile, Spalte und Steuerelement sind mit `false`.</span><span class="sxs-lookup"><span data-stu-id="df1b0-108">The `ReadOnly` properties of the cell, row, column, and control are all set to `false`.</span></span>  
+-   <span data-ttu-id="bc8d9-108">Die `ReadOnly` Eigenschaften der Zelle, Zeile, Spalte und Steuerelement sind mit `false`.</span><span class="sxs-lookup"><span data-stu-id="bc8d9-108">The `ReadOnly` properties of the cell, row, column, and control are all set to `false`.</span></span>  
   
- <span data-ttu-id="df1b0-109">Im Bearbeitungsmodus befindet kann der Benutzer ändern Sie den Zellenwert, und drücken Sie EINGABETASTE zum committen der Änderung oder die ESC-Taste, um die Zelle auf den ursprünglichen Wert zurückgesetzt.</span><span class="sxs-lookup"><span data-stu-id="df1b0-109">In edit mode, the user can change the cell value and press ENTER to commit the change or ESC to revert the cell to its original value.</span></span>  
+ <span data-ttu-id="bc8d9-109">Im Bearbeitungsmodus befindet kann der Benutzer ändern Sie den Zellenwert, und drücken Sie EINGABETASTE zum committen der Änderung oder die ESC-Taste, um die Zelle auf den ursprünglichen Wert zurückgesetzt.</span><span class="sxs-lookup"><span data-stu-id="bc8d9-109">In edit mode, the user can change the cell value and press ENTER to commit the change or ESC to revert the cell to its original value.</span></span>  
   
- <span data-ttu-id="df1b0-110">Sie können konfigurieren, eine <xref:System.Windows.Forms.DataGridView> Steuerelement, sodass eine Zelle den Bearbeitungsmodus versetzt wird, sobald sie die aktuelle Zelle wird.</span><span class="sxs-lookup"><span data-stu-id="df1b0-110">You can configure a <xref:System.Windows.Forms.DataGridView> control so that a cell enters edit mode as soon as it becomes the current cell.</span></span> <span data-ttu-id="df1b0-111">Das Verhalten der Schlüssel eingeben und die ESC-Taste wird in diesem Fall nicht geändert, aber die Zelle im Bearbeitungsmodus bleibt, nachdem der Wert ein Commit oder zurückgesetzt wird.</span><span class="sxs-lookup"><span data-stu-id="df1b0-111">The behavior of the ENTER and ESC keys is unchanged in this case, but the cell remains in edit mode after the value is committed or reverted.</span></span> <span data-ttu-id="df1b0-112">Sie können auch das Steuerelement konfigurieren, sodass Zellen Bearbeitungsmodus eingeben, nur wenn der Benutzer in der Zelle oder nur, wenn Benutzer F2 drücken.</span><span class="sxs-lookup"><span data-stu-id="df1b0-112">You can also configure the control so that cells enter edit mode only when users type in the cell or only when users press F2.</span></span> <span data-ttu-id="df1b0-113">Schließlich können Sie verhindern Zellen in den Bearbeitungsmodus wechselt, außer beim Aufrufen der <xref:System.Windows.Forms.DataGridView.BeginEdit%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="df1b0-113">Finally, you can prevent cells from entering edit mode except when you call the <xref:System.Windows.Forms.DataGridView.BeginEdit%2A> method.</span></span>  
+ <span data-ttu-id="bc8d9-110">Sie können konfigurieren, eine <xref:System.Windows.Forms.DataGridView> Steuerelement, sodass eine Zelle den Bearbeitungsmodus versetzt wird, sobald sie die aktuelle Zelle wird.</span><span class="sxs-lookup"><span data-stu-id="bc8d9-110">You can configure a <xref:System.Windows.Forms.DataGridView> control so that a cell enters edit mode as soon as it becomes the current cell.</span></span> <span data-ttu-id="bc8d9-111">Das Verhalten der Schlüssel eingeben und die ESC-Taste wird in diesem Fall nicht geändert, aber die Zelle im Bearbeitungsmodus bleibt, nachdem der Wert ein Commit oder zurückgesetzt wird.</span><span class="sxs-lookup"><span data-stu-id="bc8d9-111">The behavior of the ENTER and ESC keys is unchanged in this case, but the cell remains in edit mode after the value is committed or reverted.</span></span> <span data-ttu-id="bc8d9-112">Sie können auch das Steuerelement konfigurieren, sodass Zellen Bearbeitungsmodus eingeben, nur wenn der Benutzer in der Zelle oder nur, wenn Benutzer F2 drücken.</span><span class="sxs-lookup"><span data-stu-id="bc8d9-112">You can also configure the control so that cells enter edit mode only when users type in the cell or only when users press F2.</span></span> <span data-ttu-id="bc8d9-113">Schließlich können Sie verhindern Zellen in den Bearbeitungsmodus wechselt, außer beim Aufrufen der <xref:System.Windows.Forms.DataGridView.BeginEdit%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="bc8d9-113">Finally, you can prevent cells from entering edit mode except when you call the <xref:System.Windows.Forms.DataGridView.BeginEdit%2A> method.</span></span>  
   
-### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a><span data-ttu-id="df1b0-114">So ändern Sie den Bearbeitungsmodus des DataGridView-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="df1b0-114">To change the edit mode of a DataGridView control</span></span>  
+### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a><span data-ttu-id="bc8d9-114">So ändern Sie den Bearbeitungsmodus des DataGridView-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="bc8d9-114">To change the edit mode of a DataGridView control</span></span>  
   
--   <span data-ttu-id="df1b0-115">Legen Sie die <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> -Eigenschaft auf die entsprechende <xref:System.Windows.Forms.DataGridViewEditMode> Enumeration.</span><span class="sxs-lookup"><span data-stu-id="df1b0-115">Set the <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> property to the appropriate <xref:System.Windows.Forms.DataGridViewEditMode> enumeration.</span></span>  
+-   <span data-ttu-id="bc8d9-115">Legen Sie die <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> -Eigenschaft auf die entsprechende <xref:System.Windows.Forms.DataGridViewEditMode> Enumeration.</span><span class="sxs-lookup"><span data-stu-id="bc8d9-115">Set the <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType> property to the appropriate <xref:System.Windows.Forms.DataGridViewEditMode> enumeration.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="df1b0-116">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="df1b0-116">Compiling the Code</span></span>  
- <span data-ttu-id="df1b0-117">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="df1b0-117">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="bc8d9-116">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="bc8d9-116">Compiling the Code</span></span>  
+ <span data-ttu-id="bc8d9-117">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="bc8d9-117">This example requires:</span></span>  
   
--   <span data-ttu-id="df1b0-118">Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `dataGridView1`.</span><span class="sxs-lookup"><span data-stu-id="df1b0-118">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
+-   <span data-ttu-id="bc8d9-118">Ein <xref:System.Windows.Forms.DataGridView>-Steuerelement namens `dataGridView1`.</span><span class="sxs-lookup"><span data-stu-id="bc8d9-118">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
--   <span data-ttu-id="df1b0-119">Verweise auf die Assemblys <xref:System> und <xref:System.Windows.Forms>.</span><span class="sxs-lookup"><span data-stu-id="df1b0-119">References to the <xref:System> and <xref:System.Windows.Forms> assemblies.</span></span>  
+-   <span data-ttu-id="bc8d9-119">Verweise auf die Assemblys <xref:System> und <xref:System.Windows.Forms>.</span><span class="sxs-lookup"><span data-stu-id="bc8d9-119">References to the <xref:System> and <xref:System.Windows.Forms> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="df1b0-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="df1b0-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bc8d9-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bc8d9-120">See also</span></span>
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="df1b0-121">Dateneingabe im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="df1b0-121">Data Entry in the Windows Forms DataGridView Control</span></span>](data-entry-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="bc8d9-121">Dateneingabe im DataGridView-Steuerelement in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="bc8d9-121">Data Entry in the Windows Forms DataGridView Control</span></span>](data-entry-in-the-windows-forms-datagridview-control.md)

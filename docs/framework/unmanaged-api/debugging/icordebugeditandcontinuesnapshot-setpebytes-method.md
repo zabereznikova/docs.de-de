@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a5a7fcc495914090450c7fabad60b230c144517
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b331c3da4b09798c22efa2acfbf711e1f701d990
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097018"
 ---
-# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="f3567-102">ICorDebugEditAndContinueSnapshot::SetPEBytes-Methode</span><span class="sxs-lookup"><span data-stu-id="f3567-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
-<span data-ttu-id="f3567-103">`SetPEBytes` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="f3567-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="f3567-104">Rufen Sie diese Methode nicht.</span><span class="sxs-lookup"><span data-stu-id="f3567-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="a06f1-102">ICorDebugEditAndContinueSnapshot::SetPEBytes-Methode</span><span class="sxs-lookup"><span data-stu-id="a06f1-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
+`SetPEBytes` <span data-ttu-id="a06f1-103">ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="a06f1-103">is obsolete.</span></span> <span data-ttu-id="a06f1-104">Rufen Sie diese Methode nicht.</span><span class="sxs-lookup"><span data-stu-id="a06f1-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f3567-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f3567-105">See also</span></span>
-- [<span data-ttu-id="f3567-106">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="f3567-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="a06f1-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a06f1-105">See also</span></span>
+
+- [<span data-ttu-id="a06f1-106">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="a06f1-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
