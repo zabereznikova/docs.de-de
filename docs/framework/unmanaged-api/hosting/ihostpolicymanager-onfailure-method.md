@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b049322751c00895ca340c40274088a795f7b51f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 78d2b84598a034bf6c534745bcb99a080d039617
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100326"
 ---
-# <a name="ihostpolicymanageronfailure-method"></a><span data-ttu-id="1abf1-102">IHostPolicyManager::OnFailure-Methode</span><span class="sxs-lookup"><span data-stu-id="1abf1-102">IHostPolicyManager::OnFailure Method</span></span>
-<span data-ttu-id="1abf1-103">Benachrichtigt den Host, der die common Language Runtime (CLR) angegeben, die durch einen Aufruf der Aktion der [ICLRPolicyManager:: SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) -Methode in der Antwort auf einen Fehler bei der Belegung oder Freigabe von Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="1abf1-103">Notifies the host that the common language runtime (CLR) is about to take the action specified by a call to the [ICLRPolicyManager::SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) method in response to a resource allocation or reclamation failure.</span></span>  
+# <a name="ihostpolicymanageronfailure-method"></a><span data-ttu-id="f89f4-102">IHostPolicyManager::OnFailure-Methode</span><span class="sxs-lookup"><span data-stu-id="f89f4-102">IHostPolicyManager::OnFailure Method</span></span>
+<span data-ttu-id="f89f4-103">Benachrichtigt den Host, der die common Language Runtime (CLR) angegeben, die durch einen Aufruf der Aktion der [ICLRPolicyManager:: SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) -Methode in der Antwort auf einen Fehler bei der Belegung oder Freigabe von Ressourcen.</span><span class="sxs-lookup"><span data-stu-id="f89f4-103">Notifies the host that the common language runtime (CLR) is about to take the action specified by a call to the [ICLRPolicyManager::SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md) method in response to a resource allocation or reclamation failure.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1abf1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1abf1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f89f4-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f89f4-104">Syntax</span></span>  
   
 ```  
 HRESULT OnFailure(  
@@ -36,35 +36,36 @@ HRESULT OnFailure(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="1abf1-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="1abf1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f89f4-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="f89f4-105">Parameters</span></span>  
  `failure`  
- <span data-ttu-id="1abf1-106">[in] Eines der [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) Werte, der die Art der Fehler, der die CLR reagiert.</span><span class="sxs-lookup"><span data-stu-id="1abf1-106">[in] One of the [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) values, indicating the kind of failure to which the CLR is responding.</span></span>  
+ <span data-ttu-id="f89f4-106">[in] Eines der [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) Werte, der die Art der Fehler, der die CLR reagiert.</span><span class="sxs-lookup"><span data-stu-id="f89f4-106">[in] One of the [EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md) values, indicating the kind of failure to which the CLR is responding.</span></span>  
   
  `action`  
- <span data-ttu-id="1abf1-107">[in] Eines der [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) -Werte, der angibt, der die CLR-Aktion in Anspruch nimmt als Reaktion auf `failure`.</span><span class="sxs-lookup"><span data-stu-id="1abf1-107">[in] One of the [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values, indicating the action the CLR is taking in response to `failure`.</span></span>  
+ <span data-ttu-id="f89f4-107">[in] Eines der [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) -Werte, der angibt, der die CLR-Aktion in Anspruch nimmt als Reaktion auf `failure`.</span><span class="sxs-lookup"><span data-stu-id="f89f4-107">[in] One of the [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values, indicating the action the CLR is taking in response to `failure`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="1abf1-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="1abf1-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f89f4-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="f89f4-108">Return Value</span></span>  
   
-|<span data-ttu-id="1abf1-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1abf1-109">HRESULT</span></span>|<span data-ttu-id="1abf1-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="1abf1-110">Description</span></span>|  
+|<span data-ttu-id="f89f4-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f89f4-109">HRESULT</span></span>|<span data-ttu-id="f89f4-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f89f4-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="1abf1-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="1abf1-111">S_OK</span></span>|<span data-ttu-id="1abf1-112">`OnFailure` wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="1abf1-112">`OnFailure` returned successfully.</span></span>|  
-|<span data-ttu-id="1abf1-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="1abf1-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="1abf1-114">Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="1abf1-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="1abf1-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="1abf1-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="1abf1-116">Der Aufruf ist ein Timeout aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="1abf1-116">The call timed out.</span></span>|  
-|<span data-ttu-id="1abf1-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="1abf1-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="1abf1-118">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="1abf1-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="1abf1-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="1abf1-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="1abf1-120">Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.</span><span class="sxs-lookup"><span data-stu-id="1abf1-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="1abf1-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="1abf1-121">E_FAIL</span></span>|<span data-ttu-id="1abf1-122">Ein Unbekannter Schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="1abf1-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="1abf1-123">Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="1abf1-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="1abf1-124">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="1abf1-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="f89f4-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="f89f4-111">S_OK</span></span>|`OnFailure` <span data-ttu-id="f89f4-112">wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="f89f4-112">returned successfully.</span></span>|  
+|<span data-ttu-id="f89f4-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="f89f4-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="f89f4-114">Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="f89f4-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="f89f4-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="f89f4-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="f89f4-116">Der Aufruf ist ein Timeout aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="f89f4-116">The call timed out.</span></span>|  
+|<span data-ttu-id="f89f4-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="f89f4-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="f89f4-118">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="f89f4-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="f89f4-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="f89f4-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="f89f4-120">Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.</span><span class="sxs-lookup"><span data-stu-id="f89f4-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="f89f4-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="f89f4-121">E_FAIL</span></span>|<span data-ttu-id="f89f4-122">Ein Unbekannter Schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="f89f4-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="f89f4-123">Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f89f4-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="f89f4-124">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="f89f4-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="1abf1-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1abf1-125">Requirements</span></span>  
- <span data-ttu-id="1abf1-126">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1abf1-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f89f4-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f89f4-125">Requirements</span></span>  
+ <span data-ttu-id="f89f4-126">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f89f4-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1abf1-127">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1abf1-127">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="f89f4-127">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f89f4-127">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="1abf1-128">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="1abf1-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="f89f4-128">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="f89f4-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="1abf1-129">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1abf1-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="f89f4-129">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="f89f4-129">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="1abf1-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1abf1-130">See also</span></span>
-- [<span data-ttu-id="1abf1-131">EClrFailure-Enumeration</span><span class="sxs-lookup"><span data-stu-id="1abf1-131">EClrFailure Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
-- [<span data-ttu-id="1abf1-132">EPolicyAction-Enumeration</span><span class="sxs-lookup"><span data-stu-id="1abf1-132">EPolicyAction Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
-- [<span data-ttu-id="1abf1-133">ICLRPolicyManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1abf1-133">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [<span data-ttu-id="1abf1-134">IHostPolicyManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1abf1-134">IHostPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f89f4-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f89f4-130">See also</span></span>
+
+- [<span data-ttu-id="f89f4-131">EClrFailure-Enumeration</span><span class="sxs-lookup"><span data-stu-id="f89f4-131">EClrFailure Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)
+- [<span data-ttu-id="f89f4-132">EPolicyAction-Enumeration</span><span class="sxs-lookup"><span data-stu-id="f89f4-132">EPolicyAction Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
+- [<span data-ttu-id="f89f4-133">ICLRPolicyManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f89f4-133">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [<span data-ttu-id="f89f4-134">IHostPolicyManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f89f4-134">IHostPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)

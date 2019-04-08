@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5d8168649f6a0c75844da0ee68bf3782efc9024
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0104a52c3aa206f86daff30d9d16298e6beae324
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57483861"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099455"
 ---
-# <a name="icordebugcodegetfunction-method"></a><span data-ttu-id="27d7c-102">ICorDebugCode::GetFunction-Methode</span><span class="sxs-lookup"><span data-stu-id="27d7c-102">ICorDebugCode::GetFunction Method</span></span>
-<span data-ttu-id="27d7c-103">Ruft ab, der "ICorDebugFunction" diesem "ICorDebugCode" zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="27d7c-103">Gets the "ICorDebugFunction" associated with this "ICorDebugCode".</span></span>  
+# <a name="icordebugcodegetfunction-method"></a><span data-ttu-id="eee5a-102">ICorDebugCode::GetFunction-Methode</span><span class="sxs-lookup"><span data-stu-id="eee5a-102">ICorDebugCode::GetFunction Method</span></span>
+<span data-ttu-id="eee5a-103">Ruft ab, der "ICorDebugFunction" diesem "ICorDebugCode" zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="eee5a-103">Gets the "ICorDebugFunction" associated with this "ICorDebugCode".</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="27d7c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="27d7c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="eee5a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="eee5a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunction (  
@@ -35,21 +35,20 @@ HRESULT GetFunction (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="27d7c-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="27d7c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="eee5a-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="eee5a-105">Parameters</span></span>  
  `ppFunction`  
- <span data-ttu-id="27d7c-106">[out] Ein Zeiger auf die Adresse der Funktion.</span><span class="sxs-lookup"><span data-stu-id="27d7c-106">[out] A pointer to the address of the function.</span></span>  
+ <span data-ttu-id="eee5a-106">[out] Ein Zeiger auf die Adresse der Funktion.</span><span class="sxs-lookup"><span data-stu-id="eee5a-106">[out] A pointer to the address of the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="27d7c-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="27d7c-107">Remarks</span></span>  
- <span data-ttu-id="27d7c-108">`ICorDebugCode` und `ICorDebugFunction` eine direkte Beziehung zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="27d7c-108">`ICorDebugCode` and `ICorDebugFunction` maintain a one-to-one relationship.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="eee5a-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="eee5a-107">Remarks</span></span>  
+ `ICorDebugCode` <span data-ttu-id="eee5a-108">und `ICorDebugFunction` eine direkte Beziehung zu verwalten.</span><span class="sxs-lookup"><span data-stu-id="eee5a-108">and `ICorDebugFunction` maintain a one-to-one relationship.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="27d7c-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="27d7c-109">Requirements</span></span>  
- <span data-ttu-id="27d7c-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="27d7c-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="eee5a-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="eee5a-109">Requirements</span></span>  
+ <span data-ttu-id="eee5a-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eee5a-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="27d7c-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="27d7c-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="eee5a-111">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="eee5a-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="27d7c-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="27d7c-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="eee5a-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eee5a-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="27d7c-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="27d7c-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="eee5a-113">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="eee5a-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="27d7c-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="27d7c-114">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="eee5a-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="eee5a-114">See also</span></span>

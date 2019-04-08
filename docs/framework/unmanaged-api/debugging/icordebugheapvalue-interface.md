@@ -16,40 +16,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5263474b7b5001d561652291c23220da0a942bd1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d5fcd8c17c4006714fa9d11aece5cccc57c97087
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075495"
 ---
-# <a name="icordebugheapvalue-interface"></a><span data-ttu-id="6763a-102">ICorDebugHeapValue-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6763a-102">ICorDebugHeapValue Interface</span></span>
+# <a name="icordebugheapvalue-interface"></a><span data-ttu-id="943c1-102">ICorDebugHeapValue-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="943c1-102">ICorDebugHeapValue Interface</span></span>
 
-<span data-ttu-id="6763a-103">Eine Unterklasse von "ICorDebugValue", die ein Objekt darstellt, die von der Garbage Collector der common Language Runtime (CLR) gesammelt wurden.</span><span class="sxs-lookup"><span data-stu-id="6763a-103">A subclass of "ICorDebugValue" that represents an object that has been collected by the common language runtime (CLR) garbage collector.</span></span>  
+<span data-ttu-id="943c1-103">Eine Unterklasse von "ICorDebugValue", die ein Objekt darstellt, die von der Garbage Collector der common Language Runtime (CLR) gesammelt wurden.</span><span class="sxs-lookup"><span data-stu-id="943c1-103">A subclass of "ICorDebugValue" that represents an object that has been collected by the common language runtime (CLR) garbage collector.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="6763a-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="6763a-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="943c1-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="943c1-104">Methods</span></span>  
   
-|<span data-ttu-id="6763a-105">Methode</span><span class="sxs-lookup"><span data-stu-id="6763a-105">Method</span></span>|<span data-ttu-id="6763a-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="6763a-106">Description</span></span>|  
+|<span data-ttu-id="943c1-105">Methode</span><span class="sxs-lookup"><span data-stu-id="943c1-105">Method</span></span>|<span data-ttu-id="943c1-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="943c1-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="6763a-107">CreateRelocBreakpoint-Methode</span><span class="sxs-lookup"><span data-stu-id="6763a-107">CreateRelocBreakpoint Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-createrelocbreakpoint-method.md)|<span data-ttu-id="6763a-108">Nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="6763a-108">Not implemented.</span></span>|  
-|[<span data-ttu-id="6763a-109">IsValid-Methode</span><span class="sxs-lookup"><span data-stu-id="6763a-109">IsValid Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|<span data-ttu-id="6763a-110">Ruft einen Wert, der angibt, ob das Objekt von diesem dargestellt `ICorDebugHeapValue` ist ungültig, oder durch den Garbage Collector zurückgefordert wurde.</span><span class="sxs-lookup"><span data-stu-id="6763a-110">Gets a value that indicates whether the object represented by this `ICorDebugHeapValue` is valid, or has been reclaimed by the garbage collector.</span></span> <span data-ttu-id="6763a-111">Diese Methode wurde in .NET Framework, Version 2.0 als veraltet markiert.</span><span class="sxs-lookup"><span data-stu-id="6763a-111">This method has been deprecated in the .NET Framework version 2.0.</span></span>|  
+|[<span data-ttu-id="943c1-107">CreateRelocBreakpoint-Methode</span><span class="sxs-lookup"><span data-stu-id="943c1-107">CreateRelocBreakpoint Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-createrelocbreakpoint-method.md)|<span data-ttu-id="943c1-108">Nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="943c1-108">Not implemented.</span></span>|  
+|[<span data-ttu-id="943c1-109">IsValid-Methode</span><span class="sxs-lookup"><span data-stu-id="943c1-109">IsValid Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue-isvalid-method.md)|<span data-ttu-id="943c1-110">Ruft einen Wert, der angibt, ob das Objekt von diesem dargestellt `ICorDebugHeapValue` ist ungültig, oder durch den Garbage Collector zurückgefordert wurde.</span><span class="sxs-lookup"><span data-stu-id="943c1-110">Gets a value that indicates whether the object represented by this `ICorDebugHeapValue` is valid, or has been reclaimed by the garbage collector.</span></span> <span data-ttu-id="943c1-111">Diese Methode wurde in .NET Framework, Version 2.0 als veraltet markiert.</span><span class="sxs-lookup"><span data-stu-id="943c1-111">This method has been deprecated in the .NET Framework version 2.0.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="6763a-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6763a-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="943c1-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="943c1-112">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="6763a-113">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="6763a-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="943c1-113">Diese Schnittstelle kann weder computerübergreifend noch prozessübergreifend remote aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="943c1-113">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6763a-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6763a-114">Requirements</span></span>  
- <span data-ttu-id="6763a-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6763a-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="943c1-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="943c1-114">Requirements</span></span>  
+ <span data-ttu-id="943c1-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="943c1-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6763a-116">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6763a-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="943c1-116">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="943c1-116">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="6763a-117">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6763a-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="943c1-117">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="943c1-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="6763a-118">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6763a-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="943c1-118">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="943c1-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="6763a-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6763a-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="943c1-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="943c1-119">See also</span></span>
 
-
-
-- [<span data-ttu-id="6763a-120">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="6763a-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="943c1-120">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="943c1-120">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
