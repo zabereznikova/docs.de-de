@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: f007a2b81820a1d25a2d101b35f3a49e7794fec1
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760308"
+---
 ### <a name="workflow-checksums-changed-from-md5-to-sha1"></a>Änderung der Workflowprüfsummen von MD5 in SHA1
 
 |   |   |

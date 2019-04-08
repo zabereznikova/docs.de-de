@@ -96,7 +96,7 @@ F#verfügt außerdem über vollständige Unterstützung für Ende aufrufen, Opti
 
 Datensatz- und Union-Typen werden zwei grundlegende Datentypen in verwendet F# code, und sind im Allgemeinen die beste Möglichkeit zum Darstellen der Daten in eine F# Programm.  Auch wenn sie ähneln Klassen in anderen Sprachen dadurch, ist ihre primäre Unterschied, dass sie die strukturelle Gleichheitssemantik aufweisen.  Dies bedeutet, dass sie "nativ" vergleichbar und Gleichheit einfach ist: nur überprüfen, ob eine gleich dem anderem ist.
 
-[Datensätze](language-reference/records.md) sind ein Aggregat benannter Werte, mit optionalen Elementen (z. B. Methoden).  Wenn Sie mit c# oder Java vertraut sind, sollten klicken Sie dann diese Poco-Klassen oder POJOs - ähnelt nur mit strukturelle Gleichheit und weniger Aufwand können.
+[Datensätze](language-reference/records.md) sind ein Aggregat benannter Werte, mit optionalen Elementen (z. B. Methoden).  Wenn Sie mit C# oder Java vertraut sind, sollten klicken Sie dann diese Poco-Klassen oder POJOs - ähnelt nur mit strukturelle Gleichheit und weniger Aufwand können.
 
 [!code-fsharp[Records](../../samples/snippets/fsharp/tour.fs#L507-L559)]
 
@@ -187,7 +187,7 @@ Datensätze sind eine "Step-up" von Tupeln, dass mit dem Namen, Beschriftungen u
 
 Unterscheidungs-Unions sind vielseitig, aber die Kern-Benefit ist in der Lage, nutzen diese in Verbindung mit dem Mustervergleich berücksichtigen, die für alle möglichen "Formen", die eine Daten enthalten können.  
 
-Klassen eignen sich hervorragend für eine Vielzahl von Gründen, z. B. Wenn Sie Informationen darstellen und mit denen Sie diese Informationen an Funktionalität auch verknüpfen müssen.  Als Faustregel gilt Wenn Sie Funktionen verfügen, die im Prinzip um einige Daten gebunden ist ist mithilfe von Klassen und die Prinzipien der objektorientierten Programmierung ein großer Vorteil.  Klassen sind auch der bevorzugte Datentyp bei der Interaktion mit c# und Visual Basic, als diese Sprachen Klassen für nahezu alle verwenden.
+Klassen eignen sich hervorragend für eine Vielzahl von Gründen, z. B. Wenn Sie Informationen darstellen und mit denen Sie diese Informationen an Funktionalität auch verknüpfen müssen.  Als Faustregel gilt Wenn Sie Funktionen verfügen, die im Prinzip um einige Daten gebunden ist ist mithilfe von Klassen und die Prinzipien der objektorientierten Programmierung ein großer Vorteil.  Klassen sind auch der bevorzugte Datentyp bei der Interaktion mit C# und Visual Basic, als diese Sprachen Klassen für nahezu alle verwenden.
 
 ## <a name="next-steps"></a>Nächste Schritte
 

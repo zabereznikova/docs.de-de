@@ -242,7 +242,7 @@ Eine kostenlose eigenständige app von Microsoft, die Ihnen ermöglicht, die unt
 
 ### <a name="related-guides"></a>Verwandte Leitfäden
 
-- [Erste Schritte mit Azure Blob Storage in c#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
+- [Erste Schritte mit Azure Blob Storage in C#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
 - [Übertragen von Daten mit dem Befehlszeilenprogramm AzCopy unter Windows](/azure/storage/common/storage-use-azcopy)
 - [Übertragen von Daten mit dem Befehlszeilenprogramm AzCopy unter Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Konfigurieren von Azure Storage-Verbindungszeichenfolgen](/azure/storage/common/storage-configure-connection-string)

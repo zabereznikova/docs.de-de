@@ -11,12 +11,12 @@ helpviewer_keywords:
 - login names [Visual Basic]
 - examples [Visual Basic], accessing user data
 ms.assetid: 32492a15-ee59-4a63-a1f1-9b24cc13140a
-ms.openlocfilehash: 5ff071aadb189cec839b9cb41d510764a9187363
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5d18adcb331162a72da0adb4018d1d59ecc072e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605488"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825299"
 ---
 # <a name="accessing-user-data-visual-basic"></a>Zugreifen auf Benutzerdaten (Visual Basic)
 Dieser Abschnitt enthält Themen, die sich mit dem `My.User`-Objekt und Aufgaben befassen, die Sie mit diesem erledigen können.  
@@ -32,4 +32,5 @@ Dieser Abschnitt enthält Themen, die sich mit dem `My.User`-Objekt und Aufgaben
 |Bestimmen der Rolle des Benutzers|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>

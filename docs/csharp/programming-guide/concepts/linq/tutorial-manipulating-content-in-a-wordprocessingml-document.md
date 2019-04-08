@@ -32,4 +32,4 @@ In diesem Tutorial wird gezeigt, wie Sie mit der funktionalen Transformation und
 ## <a name="see-also"></a>Siehe auch
 
 - [Reine funktionale XML-Transformationen (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
-- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (C#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

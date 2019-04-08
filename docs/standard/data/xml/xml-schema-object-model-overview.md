@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c63a21ed871bf967674d09230f897b7ab98dfa4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cdd43f7079563be6b1377f743a84625429ba4f16
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554945"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411693"
 ---
 # <a name="xml-schema-object-model-overview"></a>Übersicht über das XML-Schemaobjektmodell (SOM)
 Das SOM (Schemaobjektmodell) in Microsoft .NET Framework ist eine umfangreiche API, mit der Sie Schemata programmgesteuert erstellen, bearbeiten und validieren können. Das SOM arbeitet mit XML-Schemadokumenten auf ähnliche Weise, wie das DOM (Document Object Model) mit XML-Dokumenten arbeitet. XML-Schemadokumente sind gültige XML-Dateien, die sobald sie in das SOM geladen werden, eine Bedeutung zur Struktur und Gültigkeit von anderen XML-Dokumenten tragen, die dem Schema entsprechen.  
@@ -34,7 +34,7 @@ Das SOM (Schemaobjektmodell) in Microsoft .NET Framework ist eine umfangreiche A
 ## <a name="the-schema-object-model"></a>Das Schemaobjektmodell (SOM)  
  Das SOM besteht aus zahlreichen Klassen im <xref:System.Xml.Schema?displayProperty=nameWithType>-Namespace, die den Elementen in einem XML-Schema entsprechen. Das `<xsd:schema>...</xsd:schema>`-Element wird beispielsweise der <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType>-Klasse zugeordnet, und alle Informationen, die in einem `<xsd:schema/>`-Element enthalten sein können, können mit der <xref:System.Xml.Schema.XmlSchema>-Klasse dargestellt werden. Auf ähnliche Weise werden das `<xsd:element>...</xsd:element>`-Element und `<xsd:attribute>...</xsd:attribute>`-Element der <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType>-Klasse bzw. der <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType>-Klasse zugeordnet. Diese Zuordnung wird für alle Elemente eines XML-Schemas vorgenommen, wodurch ein XML-Schemaobjektmodell im <xref:System.Xml.Schema>-Namespace erstellt wird. Dies wird im folgenden Diagramm veranschaulicht.  
   
- ![System.Xml.Schema-Objektmodell](../../../../docs/standard/data/xml/media/xmlschemaobjmodeloverview.gif "XMLSchemaObjModelOverview")  
+ ![System.Xml.Schema-Objektmodell](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  
   
  Weitere Informationen zu den einzelnen Klassen im <xref:System.Xml.Schema>-Namespace finden Sie in der Referenzdokumentation zum <xref:System.Xml.Schema>-Namespace in der .NET Framework-Klassenbibliothek.  
   

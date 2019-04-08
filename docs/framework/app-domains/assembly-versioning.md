@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87fb99ee8379a14a4a1d272a6eabb7fa8413bf64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbb681567090cb26d20a31e8645c0b651bef9244
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724069"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675951"
 ---
 # <a name="assembly-versioning"></a>Assemblyversionen
 Jede Version einer Assembly, die die Common Language Runtime verwendet, wird auf Assemblyebene erstellt. Die spezifische Version einer Assembly sowie die Versionen der abhängigen Assemblys sind im Assemblymanifest aufgezeichnet. Der Standardversionsrichtlinie für die Laufzeit zufolge werden Anwendungen nur in der Version ausgeführt, in der sie erstellt und getestet wurden, sofern dies nicht durch eine explizite Versionsrichtlinie in den Konfigurationsdateien (die Anwendungskonfigurationsdatei, die Herausgeberrichtliniendatei und die Administratorkonfigurationsdatei für den Computer) überschrieben wird.  
@@ -33,10 +33,9 @@ Jede Version einer Assembly, die die Common Language Runtime verwendet, wird a
   
 4.  Überprüft den globalen Assemblycache, jede in den Konfigurationsdateien angegebene CodeBase und danach das Anwendungsverzeichnis und die Unterverzeichnisse anhand der Überprüfungsregeln, die in [How the Runtime Locates Assemblies (So sucht die Runtime nach Assemblys)](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) erklärt werden.  
   
- Diese Schritte sind in der folgenden Abbildung dargestellt.  
+ Diese Schritte sind in der folgenden Abbildung dargestellt:  
   
- ![.assembly extern myAssembly](../../../docs/framework/app-domains/media/versioningover.gif "versioningover")  
-Auflösen einer Assemblybindungsanforderung  
+ ![Diagramm mit den Schritten zur Auflösung einer Assemblybindungsanforderung](./media/assembly-versioning/resolve-assembly-binding-request.gif)
   
  Weitere Informationen zum Konfigurieren von Anwendungen finden Sie unter [Configuring Apps (Konfigurieren von Apps)](../../../docs/framework/configure-apps/index.md). Weitere Informationen finden Sie unter [How the Runtime Locates Assemblies (So sucht die Runtime nach Assemblys)](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   

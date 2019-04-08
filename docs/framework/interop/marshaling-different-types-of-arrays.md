@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 147c22758c68bd3b48ab1c5cf8e26ed0afdbce09
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 56ca8e6c077d41552f85b65ba5f6b755165ee11a
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219463"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654613"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>Marshallen verschiedener Typen von Arrays
 Ein Array ist ein Verweistyp in verwaltetem Code, der ein oder mehrere Elemente des gleichen Typs enthält. Obwohl es sich bei Arrays um Verweistypen handelt, werden sie als In-Parameter an unverwaltete Funktionen übergeben. Dieses Verhalten entspricht nicht der Art und Weise, wie verwaltete Arrays an verwaltete Objekte übergeben werden, d. h. Als In-/Out-Parameter. Weitere Details finden Sie unter [Kopieren und Fixieren](copying-and-pinning.md).  
@@ -29,7 +29,7 @@ Ein Array ist ein Verweistyp in verwaltetem Code, der ein oder mehrere Elemente 
 |Aus ganzen Zahlen nach Wert (zweidimensional)|Übergibt eine Matrix aus ganzen Zahlen als In-Parameter.|  
 |Aus Zeichenfolgen nach Wert|Übergibt ein aus Zeichenfolgen bestehendes Array als In-Parameter.|  
 |Aus Strukturen mit ganzen Zahlen|Übergibt ein aus Strukturen bestehendes Array mit ganzen Zahlen als In-Parameter.|  
-|Aus Strukturen mit Zeichenfolgen|Übergibt ein aus Strukturen bestehendes Array, das nur ganze Zahlen enthält, als In-/Out-Parameter. Member des Arrays können geändert werden.|  
+|Aus Strukturen mit Zeichenfolgen|Übergibt ein aus Strukturen bestehendes Array, das nur Zeichenfolgen enthält, als In-/Out-Parameter. Member des Arrays können geändert werden.|  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie die folgenden Arraytypen übergeben werden:  

@@ -31,7 +31,7 @@ Um einen null-Wert zu interpretieren, der von einer .NET-Methode abgerufen werde
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet702.fs)]
 
-NULL-Werte für F#-Typen können auch auf andere Weise, wie z. B. bei Verwendung von generiert `Array.zeroCreate`, welche Aufrufe `Unchecked.defaultof`. Sie müssen Code zum Beibehalten der null-Werten gekapselt vorsichtig sein. In einer Bibliothek nur für F# vorgesehen sind müssen Sie keinen null-Werte in jeder Funktion überprüfen. Wenn Sie eine Bibliothek für die Interoperation mit anderen .NET-Sprachen schreiben, müssen Sie möglicherweise Hinzufügen von Überprüfungen auf Null Eingabeparametern, und lösen eine `ArgumentNullException`genau wie in c# oder Visual Basic-Code.
+NULL-Werte für F#-Typen können auch auf andere Weise, wie z. B. bei Verwendung von generiert `Array.zeroCreate`, welche Aufrufe `Unchecked.defaultof`. Sie müssen Code zum Beibehalten der null-Werten gekapselt vorsichtig sein. In einer Bibliothek nur für F# vorgesehen sind müssen Sie keinen null-Werte in jeder Funktion überprüfen. Wenn Sie eine Bibliothek für die Interoperation mit anderen .NET-Sprachen schreiben, müssen Sie möglicherweise Hinzufügen von Überprüfungen auf Null Eingabeparametern, und lösen eine `ArgumentNullException`genau wie in C# oder Visual Basic-Code.
 
 Sie können den folgenden Code verwenden, um zu überprüfen, ob ein beliebiger Wert gleich null ist.
 

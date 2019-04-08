@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 649e4456ef6a11903ab1b390baf56583f31f5562
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760842"
+---
 ### <a name="wpf-textboxpasswordbox-text-selection-does-not-follow-system-colors"></a>TextBox-/PasswordBox-Textauswahl von WPF folgt nicht den Systemfarben
 
 |   |   |

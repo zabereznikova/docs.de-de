@@ -23,7 +23,7 @@ Visual Studio unterstützt das Debuggen von [!INCLUDE[linq_dataset](../../../../
   
  Darüber hinaus bearbeiten und Fortfahren unterstützt nicht das Ändern des Typs oder der Wert einer Variablen, die verwendet wird eine [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Anweisung. Auch hier können Sie entweder die Änderungen rückgängig machen oder die Debugsitzung beenden und neu starten.  
   
- In Visual c# in Visual Studio können keine bearbeiten und Fortfahren für Code in eine Methode, enthält eine [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Abfrage.  
+ In Visual C# in Visual Studio können keine bearbeiten und Fortfahren für Code in eine Methode, enthält eine [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Abfrage.  
   
  In Visual Basic in Visual Studio können Sie bearbeiten und Fortfahren für nicht -[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Code auch in eine Methode, enthält eine [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Abfrage. Sie können hinzufügen oder Entfernen von Code vor der [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] -Anweisung, selbst wenn die Änderungen wirken sich die Nummer der Zeile auf die [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Abfrage. Für das Debugverhalten in Visual Basic nicht[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] -Code bleibt dasselbe wie vor [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] wurde eingeführt. Sie können nicht zu ändern, hinzufügen oder Entfernen einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] abzufragen, aber es sei denn, Sie beenden, Debuggen, um die Änderungen zu übernehmen.  
   

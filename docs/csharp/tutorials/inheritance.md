@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 942950570253b73cfb9896117bd22189e56389ea
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836642"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463812"
 ---
 # <a name="inheritance-in-c-and-net"></a>Vererbung in C# und .NET
 
@@ -61,7 +61,7 @@ Während alle anderen Member einer Basisklasse von abgeleiteten Klassen geerbt w
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-Abgeleitete Klassen können auch geerbte Member *überschreiben*, indem sie eine alternative Implementierung bereitstellen. Um einen Member überschreiben zu können, muss der Member in der Basisklasse mit dem Schlüsselwort [virtual](../language-reference/keywords/virtual.md) markiert sein. Standardmäßig sind Member der Basisklasse nicht als `virtual` markiert und können nicht überschrieben werden. Der Versuch, wie im folgenden Beispiel einen nicht virtuellen Member zu überschreiben, verursacht den Compilerfehler CS0506: „"<member>" : Der geerbte Member "<member>" kann nicht überschrieben werden, da er nicht als "virtual", "abstract" oder "override" markiert ist.“
+Abgeleitete Klassen können auch geerbte Member *überschreiben*, indem sie eine alternative Implementierung bereitstellen. Um einen Member überschreiben zu können, muss der Member in der Basisklasse mit dem Schlüsselwort [virtual](../language-reference/keywords/virtual.md) markiert sein. Standardmäßig sind Member der Basisklasse nicht als `virtual` markiert und können nicht überschrieben werden. Der Versuch, wie im folgenden Beispiel gezeigt einen nicht virtuellen Member zu überschreiben, verursacht den Compilerfehler CS0506: „\<member>“ : Der geerbte Member „\<member>“ kann nicht überschrieben werden, da er nicht als „virtual“, „abstract“ oder „override“ markiert ist.
 
 ```csharp
 public class A
@@ -194,7 +194,7 @@ Beim Entwurf Ihrer `Publication`-Klasse müssen Sie einige Entwurfsentscheidunge
 
  Die `Publication`-Klasse hat keine `abstract`-Methoden, ist allerdings selbst `abstract`.
 
-- Stellt eine abgeleitete Klasse die endgültige Klasse in der Vererbungshierarchie dar und kann nicht selbst als Basisklasse für weitere abgeleitete Klassen verwendet werden? Standardmäßig kann jede Klasse als Basisklasse dienen. Sie können das [sealed](../language-reference/keywords/sealed.md)-Schlüsselwort anwenden, um anzugeben, dass eine Klasse nicht als Basisklasse für zusätzliche Klassen dienen kann. Beim Versuch der Ableitung von einer versiegelten Klasse wird der Compilerfehler CS0509 generiert: „Vom versiegelten Typ <typeName> kann nicht abgeleitet werden“.
+- Stellt eine abgeleitete Klasse die endgültige Klasse in der Vererbungshierarchie dar und kann nicht selbst als Basisklasse für weitere abgeleitete Klassen verwendet werden? Standardmäßig kann jede Klasse als Basisklasse dienen. Sie können das [sealed](../language-reference/keywords/sealed.md)-Schlüsselwort anwenden, um anzugeben, dass eine Klasse nicht als Basisklasse für zusätzliche Klassen dienen kann. Beim Versuch der Ableitung von einer versiegelten Klasse wird der Compilerfehler CS0509 generiert: „Vom versiegelten Typ \<typeName> kann nicht abgeleitet werden“.
 
   Für Ihr Beispiel markieren Sie Ihre abgeleitete Klasse als `sealed`.
 

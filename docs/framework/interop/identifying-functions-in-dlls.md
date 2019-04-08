@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb1aba9e794928b0eb905722e2a5d7df84100ea4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cfe2be8784fd4baf6ce9e603da1c6e2388126b5a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729209"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409327"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identifizieren von Funktionen in DLLs
 Die Identität einer DLL-Funktion besteht aus den folgenden Elementen:  
@@ -27,15 +27,15 @@ Die Identität einer DLL-Funktion besteht aus den folgenden Elementen:
   
 -   Name der DLL-Datei, in der die Implementierung gefunden werden kann  
   
- Die Angabe der **MessageBox**-Funktion in der „User32.dll“ gibt beispielsweise die Funktion (**MessageBox**) und deren Speicherort (User32.dll, User32 oder user32) an. Die Microsoft Windows-Anwendungsprogrammierschnittstelle (Win32-API) kann zwei Versionen jeder Funktion enthalten, die Zeichen und Zeichenfolgen behandelt: eine ANSI-Version mit 1-Byte-Zeichen und eine Unicode-Version mit 2-Byte-Zeichen. Ohne Angabe wird der Zeichensatz, der durch das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>-Feld dargestellt wird, standardmäßig auf ANSI festgelegt. Einige Funktionen können über mehr als zwei Versionen verfügen.  
+ Die Angabe der **MessageBox**-Funktion in der „User32.dll“ gibt beispielsweise die Funktion (**MessageBox**) und deren Speicherort (User32.dll, User32 oder user32) an. Die Microsoft Windows-Anwendungsprogrammierschnittstelle (Windows-API) kann zwei Versionen jeder Funktion enthalten, die Zeichen und Zeichenfolgen verarbeitet: eine ANSI-Version mit 1-Byte-Zeichen und eine Unicode-Version mit 2-Byte-Zeichen. Ohne Angabe wird der Zeichensatz, der durch das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>-Feld dargestellt wird, standardmäßig auf ANSI festgelegt. Einige Funktionen können über mehr als zwei Versionen verfügen.  
   
  **MessageBoxA** ist der ANSI-Einstiegspunkt für die **MessageBox**-Funktion. **MessageBoxW** ist die Unicode-Version. Sie können Funktionsnamen für eine bestimmte DLL-Datei, z.B. „User32.dll“, auflisten, indem Sie eine Vielzahl von Befehlszeilentools ausführen. Beispielsweise können Sie `dumpbin /exports user32.dll` oder `link /dump /exports user32.dll` verwenden, um Funktionsnamen abzurufen.  
   
  Sie können eine nicht verwaltete Funktion innerhalb des Codes beliebig umbenennen, solange Sie den neuen Namen für den ursprünglichen Einstiegspunkt in der DLL zuordnen. Anweisungen zur Umbenennung einer nicht verwalteten DLL-Funktion in verwaltetem Quellcode finden Sie unter [Angeben eines Einstiegspunktes](../../../docs/framework/interop/specifying-an-entry-point.md).  
   
- Durch einen Plattformaufruf können Sie einen beträchtlichen Teil des Betriebssystems durch Aufrufen von Funktionen in der Win32-API und anderen DLLs steuern. Zusätzlich zur Win32-API stehen Ihnen über Ihren Plattformaufruf zahlreiche andere APIs und DLLs zur Verfügung.  
+ Durch einen Plattformaufruf können Sie einen beträchtlichen Teil des Betriebssystems durch Aufrufen von Funktionen in der Windows-API und anderen DLLs steuern. Zusätzlich zur Windows-API stehen Ihnen über den Plattformaufruf zahlreiche andere APIs und DLLs zur Verfügung.  
   
- Die folgende Tabelle beschreibt einige häufig verwendete DLLs in der Win32-API.  
+ Die folgende Tabelle beschreibt einige häufig verwendete DLLs in der Windows-API.  
   
 |DLL|Inhaltsbeschreibung|  
 |---------|-----------------------------|  
@@ -43,7 +43,7 @@ Die Identität einer DLL-Funktion besteht aus den folgenden Elementen:
 |Kernel32.dll|Betriebssystemfunktionen auf niedriger Ebene für die Verwaltung des Arbeitsspeichers und Ressourcenbehandlung.|  
 |User32.dll|Windows-Verwaltungsfunktionen für Meldungsbehandlung, Timer, Menüs und Kommunikation.|  
   
- Eine vollständige Dokumentation für die Win32-API finden Sie im Plattform SDK. Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+ Eine vollständige Dokumentation der Windows-API finden Sie im Plattform SDK. Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Siehe auch
 - [Verwenden nicht verwalteter DLL-Funktionen](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)

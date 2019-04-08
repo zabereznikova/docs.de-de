@@ -3,12 +3,12 @@ title: System.Delegate und das `delegate`-Schlüsselwort
 description: Informationen zu den Klassen in .NET Framework, die Delegaten unterstützen, und wie diese zum Schlüsselwort „delegate“ zugeordnet werden.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126174"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465775"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate und das `delegate`-Schlüsselwort
 
@@ -92,7 +92,7 @@ phrases.Sort(CompareLength);
 
 Beachten Sie, dass der Name der Methode ohne Klammern verwendet wird. Das Verwenden der Methode als Argument teilt dem Compiler mit, dass er den Methodenverweis in einen Verweis konvertieren soll, der als Delegataufrufziel verwendet werden kann, und diese Methode als Aufrufziel anfügen soll.
 
-Sie könnten auch explizit eine Variable vom Typ „Comparison<string>“ deklarieren und diese in der Zuordnung verwenden:
+Sie könnten auch explizit eine Variable vom Typ `Comparison<string>` deklarieren und diese zuweisen:
 
 ```csharp
 Comparison<string> comparer = CompareLength;

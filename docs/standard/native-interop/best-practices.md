@@ -4,12 +4,12 @@ description: Erfahren Sie mehr über bewährte Methoden für die Einrichtung von
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 90a707830049b5edf574b83e7ca03ec30527b001
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "56411452"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412057"
 ---
 # <a name="native-interoperability-best-practices"></a>Bewährte Methoden für native Interoperabilität
 
@@ -160,7 +160,7 @@ Denken Sie daran, dass `GCHandle` explizit freigegeben werden muss, um Arbeitssp
 
 ## <a name="common-windows-data-types"></a>Allgemeine Windows-Datentypen
 
-Hier finden Sie eine Liste der Datentypen, die in Win32-APIs häufig verwendet werden, sowie die C#-Typen, die beim Aufrufen des Win32-Codes verwendet werden sollten.
+Die folgende Liste enthält Datentypen, die in Windows-APIs häufig verwendet werden, sowie C#-Typen, die beim Aufrufen des Windows-Codes verwendet werden sollen.
 
 Die folgenden Typen weisen trotz ihrer Namen die gleiche Größe wie 32- und 64-Bit-Typen für Windows auf.
 

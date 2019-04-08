@@ -112,7 +112,7 @@ for sq in squares do
     printfn "%d" sq
 ```
 
-Wie bei der [yield-Schlüsselwort in c#](../../csharp/language-reference/keywords/yield.md), jedes Element in den Ausdruck für die Berechnung wird zurückgegeben, zurück, wie sie durchlaufen wird.
+Wie bei der [yield-Schlüsselwort in C#](../../csharp/language-reference/keywords/yield.md), jedes Element in den Ausdruck für die Berechnung wird zurückgegeben, zurück, wie sie durchlaufen wird.
 
 `yield` wird definiert, indem die `Yield(x)` Member für den Generatortyp, in denen `x` ist das Element, um wieder zu erhalten.
 

@@ -39,7 +39,7 @@ Diese exemplarische Vorgehensweise umfasst die folgenden Schritte aus:
 Am Ende dieser exemplarischen Vorgehensweise werden Sie eine eigenständigen Windows-Anwendung erstellt haben, die Benutzer spesenabrechnungen für bestimmte Personen anzeigen können. Die Anwendung besteht aus der WPF-Seiten, die in einem Fenster im Browserstil gehostet werden.
 
 > [!TIP]
-> Der Beispielcode, der verwendet wird, in dieser exemplarischen Vorgehensweise steht für Visual Basic und c# in [Introduction to Building WPF Applications](https://go.microsoft.com/fwlink/?LinkID=160008).
+> Der Beispielcode, der verwendet wird, in dieser exemplarischen Vorgehensweise steht für Visual Basic und C# in [Introduction to Building WPF Applications](https://go.microsoft.com/fwlink/?LinkID=160008).
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
@@ -51,7 +51,7 @@ Am Ende dieser exemplarischen Vorgehensweise werden Sie eine eigenständigen Win
 
 Der erste Schritt ist die Erstellung von Infrastruktur der Anwendung, die eine Anwendungsdefinition, zwei Seiten und ein Bild enthält.
 
-1. Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Basic oder Visual c# mit dem Namen **`ExpenseIt`**:
+1. Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Basic oder Visual C# mit dem Namen **`ExpenseIt`**:
 
    1. Öffnen Sie Visual Studio, und wählen Sie **Datei** > **neu** > **Projekt**.
 
@@ -68,7 +68,7 @@ Der erste Schritt ist die Erstellung von Infrastruktur der Anwendung, die eine A
    > [!NOTE]
    > Diese exemplarische Vorgehensweise verwendet die <xref:System.Windows.Controls.DataGrid> Steuerelement, das in .NET Framework 4 und höher verfügbar ist. Stellen Sie sicher, dass das Projekt auf .NET Framework 4 abzielt oder höher. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Projekten für eine bestimmte .NET Framework-Version](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
-2. Open *"Application.xaml"* (Visual Basic) oder *"App.xaml"* (c#).
+2. Open *"Application.xaml"* (Visual Basic) oder *"App.xaml"* (C#).
 
     Diese XAML-Datei definiert eine WPF-Anwendung und alle Anwendungsressourcen. Sie verwenden diese Datei auch an der Benutzeroberfläche, die automatisch, wenn zeigt die Anwendung gestartet wird. In diesem Fall *"MainWindow.xaml"*.
 
@@ -118,7 +118,7 @@ Der erste Schritt ist die Erstellung von Infrastruktur der Anwendung, die eine A
 
     Diese Datei ist eine Code-Behind-Datei Code zum Behandeln der Ereignisse, die im deklarierten mit *"MainWindow.xaml"*. Diese Datei enthält eine partielle Klasse für das in XAML definierte Fenster.
 
-7. Wenn Sie c# verwenden, ändern Sie die `MainWindow` Klasse abgeleitet <xref:System.Windows.Navigation.NavigationWindow>. (In Visual Basic geschieht dies automatisch, wenn Sie das Fenster in XAML ändern.)
+7. Wenn Sie C# verwenden, ändern Sie die `MainWindow` Klasse abgeleitet <xref:System.Windows.Navigation.NavigationWindow>. (In Visual Basic geschieht dies automatisch, wenn Sie das Fenster in XAML ändern.)
 
    Ihr Code sollte wie folgt aussehen:
 
@@ -126,7 +126,7 @@ Der erste Schritt ist die Erstellung von Infrastruktur der Anwendung, die eine A
    [!code-vb[ExpenseIt#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml.vb#3)]
 
    > [!TIP]
-   > Sie können die Codesprache des Beispielcodes zwischen c# und Visual Basic in Umschalten der **Sprache** Dropdownliste oben rechts auf der in diesem Artikel.
+   > Sie können die Codesprache des Beispielcodes zwischen C# und Visual Basic in Umschalten der **Sprache** Dropdownliste oben rechts auf der in diesem Artikel.
 
 ## <a name="add-files-to-the-application"></a>Hinzufügen von Dateien zur Anwendung
 

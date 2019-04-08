@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: affb06c62baa7f53e46e1d66b522e9ce9e74d976
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d5e5c62dc1a5fe6901ee232084a704d7d936b76
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666058"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411962"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (C#-Compileroptionen)
 Die Option **-target:winexe** bewirkt, dass der Compiler ein ausführbares Windows-Programm (EXE) erstellt.  
@@ -24,8 +24,8 @@ Die Option **-target:winexe** bewirkt, dass der Compiler ein ausführbares Windo
 -target:winexe  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Die ausführbare Datei wird mit der Dateiendung „.exe“ erstellt. Ein Windows-Programm stellt eine Benutzeroberfläche entweder aus der .NET Framework-Bibliothek oder mit den Win32-APIs bereit.  
+## <a name="remarks"></a>Anmerkungen  
+ Die ausführbare Datei wird mit der Dateiendung „.exe“ erstellt. Ein Windows-Programm stellt eine Benutzeroberfläche entweder aus der .NET Framework-Bibliothek oder mit den Windows-APIs bereit.  
   
  Verwenden Sie [-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md), um eine Konsolenanwendung zu erstellen.  
   

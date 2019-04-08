@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 384fd14a136dbd94725d7ef478c769a1dfce0c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9471d98bad9b0fbf7931f80b1e41a5e9169b2896
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654658"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466152"
 ---
 # <a name="types-of-isolation"></a>Isolationstypen
 Der Zugriff auf isolierten Speicher ist immer auf den Benutzer eingeschränkt, der ihn erstellt hat. Bei der Implementierung dieses Isolationstyps verwendet die Common Language Runtime den Begriff der Benutzeridentität, der auch vom Betriebssystem erkannt wird. Dabei handelt es sich um die Identität, die mit dem Prozess verknüpft ist, in dem der Code beim Öffnen des Speichers ausgeführt wird. Diese Identität ist eine authentifizierte Benutzeridentität, wobei ein Identitätswechsel dazu führen kann, dass sich die Identität des aktuellen Benutzers dynamisch ändert.  
@@ -46,10 +46,9 @@ Der Zugriff auf isolierten Speicher ist immer auf den Benutzer eingeschränkt, d
   
  Jede dieser Isolationen kann mit einem Roamingbenutzerprofil kombiniert werden. Weitere Informationen finden Sie im Abschnitt [Isolierter Speicher und Roaming](#Roaming).  
   
- Die folgende Abbildung zeigt, wie Speicher in verschiedenen Bereichen isoliert werden.  
+ Die folgende Abbildung zeigt, wie Speicher in verschiedenen Bereichen isoliert werden:  
   
- ![Isolation nach Benutzer und Assembly](../../../docs/standard/io/media/typesofisolation.gif "typesofisolation")  
-Typen von isoliertem Speicher  
+ ![Diagramm einer Isolation nach Benutzer und Assembly](./media/types-of-isolation/isolated-storage-types.gif)  
   
  Beachten Sie, dass isolierte Speicher (mit Ausnahme von Roamingspeichern) immer implizit nach Computer isoliert sind, da sie die Speicherfunktionen verwenden, die sich lokal auf einem bestimmten Computer befinden.  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df65f54a9a7408a22f8b558f99ab42d6c37ae55b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: aeba97a5caef8fc705a3b04496ce1fd17085ec5d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221068"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409314"
 ---
 # <a name="default-marshaling-for-strings"></a>Standardmäßiges Marshalling für Zeichenfolgen
 Die <xref:System.String?displayProperty=nameWithType>-Klasse und die <xref:System.Text.StringBuilder?displayProperty=nameWithType>-Klasse weisen ein ähnliches Marshallingverhalten auf.  
@@ -39,8 +39,7 @@ Die <xref:System.String?displayProperty=nameWithType>-Klasse und die <xref:Syste
   
 |Enumerationstyp|Beschreibung des nicht verwalteten Formats|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr` (Standard)|
-  `BSTR` im COM-Format mit vorangestellter Länge und Unicode-Zeichen.|  
+|`UnmanagedType.BStr` (Standard)|`BSTR` im COM-Format mit vorangestellter Länge und Unicode-Zeichen.|  
 |`UnmanagedType.LPStr`|Ein Zeiger auf ein mit NULL endendes Array von ANSI-Zeichen.|  
 |`UnmanagedType.LPWStr`|Ein Zeiger auf ein mit Null endendes Array von Unicode-Zeichen.|  
   
@@ -86,15 +85,12 @@ HRESULT PassStringRef4([in, out] LPWStr *s);
   
 |Enumerationstyp|Beschreibung des nicht verwalteten Formats|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.AnsiBStr`|
-  `BSTR` im COM-Format mit vorangestellter Länge und ANSI-Zeichen.|  
-|`UnmanagedType.BStr`|
-  `BSTR` im COM-Format mit vorangestellter Länge und Unicode-Zeichen.|  
+|`UnmanagedType.AnsiBStr`|`BSTR` im COM-Format mit vorangestellter Länge und ANSI-Zeichen.|  
+|`UnmanagedType.BStr`|`BSTR` im COM-Format mit vorangestellter Länge und Unicode-Zeichen.|  
 |`UnmanagedType.LPStr`|Ein Zeiger auf ein mit NULL endendes Array von ANSI-Zeichen.|  
 |`UnmanagedType.LPTStr`|Ein Zeiger auf ein mit NULL endendes Array von plattformabhängigen Zeichen.|  
 |`UnmanagedType.LPWStr`|Ein Zeiger auf ein mit Null endendes Array von Unicode-Zeichen.|  
-|`UnmanagedType.TBStr`|
-  `BSTR` im COM-Format mit vorangestellter Länge und plattformabhängigen Zeichen.|  
+|`UnmanagedType.TBStr`|`BSTR` im COM-Format mit vorangestellter Länge und plattformabhängigen Zeichen.|  
 |`VBByRefStr`|Ein Wert, der es Visual Basic .NET ermöglicht, eine Zeichenfolge in nicht verwaltetem Code zu ändern und die Ergebnisse in verwaltetem Code wiederzugeben. Dieser Wert wird nur für Plattformaufrufe unterstützt. Das ist der Standardwert in Visual Basic für `ByVal`-Zeichenfolgen.|  
   
  Diese Tabelle gilt für Zeichenfolgen. Für <xref:System.Text.StringBuilder> sind jedoch nur die Optionen `LPStr`, `LPTStr` und `LPWStr` zulässig.  
@@ -147,8 +143,7 @@ String s);
   
 |Enumerationstyp|Beschreibung des nicht verwalteten Formats|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr`|
-  `BSTR` im COM-Format mit vorangestellter Länge und Unicode-Zeichen.|  
+|`UnmanagedType.BStr`|`BSTR` im COM-Format mit vorangestellter Länge und Unicode-Zeichen.|  
 |`UnmanagedType.LPStr`|Ein Zeiger auf ein mit NULL endendes Array von ANSI-Zeichen.|  
 |`UnmanagedType.LPTStr`|Ein Zeiger auf ein mit NULL endendes Array von plattformabhängigen Zeichen.|  
 |`UnmanagedType.LPWStr`|Ein Zeiger auf ein mit Null endendes Array von Unicode-Zeichen.|  
@@ -225,7 +220,7 @@ struct StringInfoT {
   
  Die Lösung besteht darin, anstelle einer Zeichenfolge einen <xref:System.Text.StringBuilder>-Puffer als Argument zu übergeben. Ein `StringBuilder` kann durch den Aufrufer dereferenziert und geändert werden, sofern die Kapazität von `StringBuilder` nicht überschritten wird. Er kann auch mit einer festen Länge initialisiert werden. Wenn Sie beispielsweise einen `StringBuilder`-Puffer mit einer Kapazität von `N` initialisieren, stellt der Marshaller einen Puffer mit einer Größe von (`N`+1) Zeichen zur Verfügung. Durch +1 wird der Tatsache Rechnung getragen, dass die nicht verwaltete Zeichenfolge (im Gegensatz zu `StringBuilder`) über einen NULL-Terminator verfügt.  
   
- Die `GetWindowText`-Funktion der Microsoft Win32-API (in Windows.h definiert) ist beispielsweise ein Zeichenpuffer mit fester Länge, der zur Bearbeitung an nicht verwalteten Code übergeben werden muss. `LpString` zeigt auf einen vom Aufrufer reservierten Puffer der Größe `nMaxCount`. Der Aufrufer soll den Puffer reservieren und das `nMaxCount`-Argument auf die Größe des reservierten Puffers festlegen. Der folgende Code stellt die Deklaration der `GetWindowText`-Funktion entsprechend der Definition in Windows.h dar.  
+ Die `GetWindowText`-Funktion der Microsoft Windows-API (in Windows.h definiert) ist beispielsweise ein Zeichenpuffer mit fester Länge, der zur Bearbeitung an nicht verwalteten Code übergeben werden muss. `LpString` zeigt auf einen vom Aufrufer reservierten Puffer der Größe `nMaxCount`. Der Aufrufer soll den Puffer reservieren und das `nMaxCount`-Argument auf die Größe des reservierten Puffers festlegen. Der folgende Code stellt die Deklaration der `GetWindowText`-Funktion entsprechend der Definition in Windows.h dar.  
   
 ```  
 int GetWindowText(  

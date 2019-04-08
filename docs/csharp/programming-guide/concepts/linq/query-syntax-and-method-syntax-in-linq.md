@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 6333094230e09220ab5ccf462e20ae3423d42eb6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978649"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654041"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Abfragesyntax und Methodensyntax in LINQ (C#)
 Die meisten Abfragen in der einführenden Dokumentation der Language Integrated Query ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) wurden mithilfe der deklarierten Abfragesyntax von LINQ geschrieben. Die Abfragesyntax muss jedoch in Methodenaufrufe für die .NET Common Language Runtime (CLR) übersetzt werden, wenn der Code kompiliert wird. Diese Methodenaufrufe rufen die Standardabfrageoperatoren auf, die z.B. folgende Namen haben: `Where`, `Select`, `GroupBy`, `Join`, `Max` und `Average`. Sie können sie direkt mithilfe der Methodensyntax anstatt der Abfragesyntax aufrufen.  
@@ -26,7 +26,7 @@ Die meisten Abfragen in der einführenden Dokumentation der Language Integrated 
   
  Betrachten Sie die methodenbasierte Abfrage genauer, um sie besser zu verstehen. Beachten Sie, dass die `where`-Klausel auf der rechten Seite des Ausdrucks jetzt als Instanzmethode des `numbers`-Objekts ausgedrückt wird. Sie erinnern sich sicher, dass diese über einen `IEnumerable<int>`-Typ verfügt. Wenn Sie mit der generischen <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle vertraut sind, wissen Sie, dass sie über keine `Where`-Methode verfügt. Wenn Sie jedoch die IntelliSense-Vervollständigungsliste in der Visual Studio IDE aufrufen, sehen Sie nicht nur eine `Where`-Methode, sondern viele andere Methoden, z.B. `Select`, `SelectMany`, `Join` und `Orderby`. Sie sind alle Standardabfrageoperatoren.  
   
- ![Standardabfrageoperatoren in Intellisense](../../../../csharp/programming-guide/concepts/linq/media/standardqueryops.png "StandardQueryOps")  
+ ![Screenshot aller Standardabfrageoperatoren in IntelliSense](./media/query-syntax-and-method-syntax-in-linq/standard-query-operators.png)  
   
  Obwohl es so scheint, als sei <xref:System.Collections.Generic.IEnumerable%601> neu definiert worden, um diese zusätzlichen Methoden zu enthalten, ist dies tatsächlich nicht der Fall. Die Standardabfrageoperatoren werden als eine neue Methodenart, die als *Erweiterungsmethoden* bezeichnet werden, implementiert. Erweiterungsmethoden „erweitern“ einen vorhandenen Typ; sie können aufgerufen werden, als wären sie Instanzmethoden für den Typ. Die Standardabfrageoperatoren erweitern <xref:System.Collections.Generic.IEnumerable%601>, weshalb Sie `numbers.Where(...)` schreiben können.  
   

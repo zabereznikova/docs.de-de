@@ -4,18 +4,18 @@ description: Erfahren Sie, wie Generics als Codevorlagen fungieren, mit denen Si
 author: kuhlenh
 ms.author: wiwagn
 ms.date: 10/09/2018
-ms.openlocfilehash: 991e3800e1302843db0dc1c57ed3a7e4becd298e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3c1181f5be717f328ae906c6009fc8a34b904c89
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835290"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465424"
 ---
 # <a name="generic-types-overview"></a>Generische Typen – Übersicht
 
-Entwickler verwenden Generics sehr häufig in .NET, entweder implizit oder explizit. Wenn Sie LINQ in .NET verwenden: Ist Ihnen schon aufgefallen, dass Sie mit <xref:System.Collections.Generic.IEnumerable%601> arbeiten? Oder haben Sie in einem Onlinebeispiel eines „generischen Repositorys“ zur Kommunikation mit Datenbanken über Entity Framework festgestellt, dass die meisten Methoden IQueryable<T> zurückgeben? Möglicherweise haben Sie sich gefragt, wofür das **T** in diesen Beispielen steht und warum es dort ist.
+Entwickler verwenden Generics sehr häufig in .NET, entweder implizit oder explizit. Wenn Sie LINQ in .NET verwenden: Ist Ihnen schon aufgefallen, dass Sie mit <xref:System.Collections.Generic.IEnumerable%601> arbeiten? Oder haben Sie in einem Onlinebeispiel eines „generischen Repositorys“ zur Kommunikation mit Datenbanken über Entity Framework festgestellt, dass die meisten Methoden IQueryable\<T> zurückgeben? Möglicherweise haben Sie sich gefragt, wofür das **T** in diesen Beispielen steht und warum es dort ist.
 
-**Generika** wurden in .NET Framework 2.0 eingeführt und sind im Grunde eine „Codevorlage“, mit der Entwickler [typsichere](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) Datenstrukturen definieren können, ohne sich tatsächlich auf einen Datentyp festlegen zu müssen. <xref:System.Collections.Generic.List%601> ist beispielsweise eine [generische Auflistung](xref:System.Collections.Generic), die deklariert und mit beliebigen Typen wie `List<int>`, `List<string>` oder `List<Person>` verwendet werden kann.
+**Generics** wurden in .NET Framework 2.0 eingeführt und sind im Grunde eine „Codevorlage“, mit der Entwickler [typsichere](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hbzz1a9a(v=vs.100)) Datenstrukturen definieren können, ohne sich tatsächlich auf einen Datentyp festlegen zu müssen. <xref:System.Collections.Generic.List%601> ist beispielsweise eine [generische Auflistung](xref:System.Collections.Generic), die deklariert und mit beliebigen Typen wie `List<int>`, `List<string>` oder `List<Person>` verwendet werden kann.
 
 Um zu verstehen, warum Generics nützlich sind, sehen wir uns eine bestimmte Klasse an, und zwar vor und nach dem Hinzufügen von Generics: <xref:System.Collections.ArrayList>. In .NET Framework 1.0 wiesen die -`ArrayList` den Typ <xref:System.Object> auf. Das bedeutete, das jedes hinzugefügte Element im Hintergrund in ein `Object`-Element konvertiert wurde. Das Gleiche passierte beim Lesen der Elemente aus der Liste. Dieser Vorgang wird als [Boxing und Unboxing](../csharp/programming-guide/types/boxing-and-unboxing.md) bezeichnet und wirkt sich auf die Leistung aus. Wichtiger ist allerdings, dass es keine Möglichkeit gibt, den Datentyp in der Liste zur Kompilierzeit zu bestimmen. Dies beeinträchtigt die Stabilität des Codes. Generics lösen dieses Problem, indem sie den Datentyp definieren, der in jeder Instanz der Liste enthalten sind. Beispielsweise können Sie zu `List<int>` nur Ganzzahlen hinzufügen, zu `List<Person>` nur Personen.
 
@@ -68,4 +68,4 @@ Ein weiterer Vorteil: Wenn die Runtime den Typ der Generika kennt, wird das Debu
 
 ## <a name="see-also"></a>Siehe auch
 
-- [C#-Programmierhandbuch – Generika](../../docs/csharp/programming-guide/generics/index.md)
+- [C#-Programmierhandbuch – Generics](../../docs/csharp/programming-guide/generics/index.md)

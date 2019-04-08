@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9bf6972812bdf4a385b99fe34d2cd3cd8a91c8cf
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761099"
+---
 ### <a name="clickonce-supports-sha-256-on-40-targeted-apps"></a>ClickOnce unterstützt SHA-256 auf Apps, die auf 4.0 ausgerichtet sind
 
 |   |   |

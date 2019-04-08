@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 56d753c9bb4e3585049eb98929774ac810d8ed40
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2361a42ececbe12b5f61833e5a40607c8215a65d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978175"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821061"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Exemplarische Vorgehensweise: Bearbeiten von Dateien mit .NET Framework-Methoden (Visual Basic)
 In dieser exemplarischen Vorgehensweise wird gezeigt, wie man eine Datei mithilfe der Klasse <xref:System.IO.StreamReader> öffnet und liest, wie man überprüft, ob auf eine Datei zugegriffen wird, wie man innerhalb einer Datei, die mit einer Instanz der Klasse <xref:System.IO.StreamReader> gelesen wird, nach einer Zeichenfolge sucht und wie man mithilfe der Klasse <xref:System.IO.StreamWriter> in eine Datei schreibt.  
@@ -148,6 +148,7 @@ In dieser exemplarischen Vorgehensweise wird gezeigt, wie man eine Datei mithilf
  Drücken Sie zum Testen des Codes F5, um die Anwendung zu kompilieren. Klicken Sie auf **Einträge abrufen**, wählen Sie einen Eintrag aus, und klicken Sie anschließend auf **Anzeigen**. Der Eintrag wird in <xref:System.Windows.Forms.TextBox> `DisplayEntry` angezeigt. Klicken Sie auf **Edit Entry** (Eintrag bearbeiten). Der Eintrag wird in <xref:System.Windows.Forms.TextBox> `Entry` angezeigt. Bearbeiten Sie den Eintrag in <xref:System.Windows.Forms.TextBox> `Entry`, und klicken Sie auf **Bearbeitung senden**. Öffnen Sie die `MyDiary.txt`-Datei, um Ihre Korrekturen zu bestätigen. Wählen Sie jetzt einen Eintrag aus, und klicken Sie auf **Eintrag löschen**. Wenn Sie in <xref:System.Windows.Forms.MessageBox> zur Bestätigung aufgefordert werden, klicken Sie auf **OK**. Schließen Sie die Anwendung und öffnen Sie `MyDiary.txt`, um den Löschvorgang zu bestätigen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>
 - [Exemplarische Vorgehensweisen](../../../../visual-basic/walkthroughs.md)

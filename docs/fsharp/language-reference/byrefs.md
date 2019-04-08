@@ -108,7 +108,7 @@ Der Zweck der `outref<'T>` ist, um anzugeben, dass der Zeiger nur aus gelesen we
 
 ### <a name="interop-with-c"></a>Interoperabilität mit C\#
 
-C# unterstützt die `in ref` und `out ref` Schlüsselwörter, zusätzlich zu den `ref` zurückgibt. Die folgende Tabelle zeigt, wie F# interpretiert wie c# ausgibt:
+C# unterstützt die `in ref` und `out ref` Schlüsselwörter, zusätzlich zu den `ref` zurückgibt. Die folgende Tabelle zeigt, wie F# interpretiert wie C# ausgibt:
 
 |C#-Konstrukt|F#leitet ab|
 |------------|---------|

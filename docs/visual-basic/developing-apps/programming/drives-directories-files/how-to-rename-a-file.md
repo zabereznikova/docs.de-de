@@ -5,12 +5,12 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: 0fac312c4c20f57e93dc88d0d6bb6b13932f7682
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b86797018e1471590fd4c89848921e696afbc819
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966977"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814151"
 ---
 # <a name="how-to-rename-a-file-in-visual-basic"></a>Vorgehensweise: Umbenennen einer Datei in Visual Basic
 Verwenden Sie die `RenameFile`-Methode des `My.Computer.FileSystem`-Objekts, um eine Datei umzubenennen, indem Sie den aktuellen Standort, Dateinamen sowie den neuen Dateinamen bereitstellen. Diese Methode kann nicht dazu verwendet werden, um eine Datei zu verschieben; verwenden Sie die `MoveFile`-Methode, um die Datei zu verschieben und umzubenennen.  
@@ -47,6 +47,7 @@ Verwenden Sie die `RenameFile`-Methode des `My.Computer.FileSystem`-Objekts, um 
 -   Der Benutzer hat nicht die erforderliche Berechtigung (<xref:System.UnauthorizedAccessException>).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>
 - [Vorgehensweise: Verschieben von Dateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)
 - [Erstellen, Löschen und Verschieben von Dateien und Verzeichnissen](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)

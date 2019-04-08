@@ -24,7 +24,7 @@ open module-or-namespace-name
 
 ## <a name="remarks"></a>Hinweise
 
-Verweisen auf Code mit den vollqualifizierten Pfad der Namespace- oder Modulebene kann jedem Code erstellen, die schwer zu schreiben, lesen und zu verwalten. Sie können stattdessen die `open` -Schlüsselwort für häufig verwendet, Module und Namespaces, damit Sie Folgendes: Wenn Sie ein Element dieses Moduls oder dieser Namespace verweisen, können Sie die Kurzform des Namens anstelle des vollqualifizierten Namens verwenden. Dieses Schlüsselwort ist ähnlich wie die `using` -Schlüsselwort in c#, `using namespace` in Visual C++ und `Imports` in Visual Basic.
+Verweisen auf Code mit den vollqualifizierten Pfad der Namespace- oder Modulebene kann jedem Code erstellen, die schwer zu schreiben, lesen und zu verwalten. Sie können stattdessen die `open` -Schlüsselwort für häufig verwendet, Module und Namespaces, damit Sie Folgendes: Wenn Sie ein Element dieses Moduls oder dieser Namespace verweisen, können Sie die Kurzform des Namens anstelle des vollqualifizierten Namens verwenden. Dieses Schlüsselwort ist ähnlich wie die `using` -Schlüsselwort in C#, `using namespace` in Visual C++ und `Imports` in Visual Basic.
 
 Das Modul oder einen angegebenen Namespace muss sich im selben Projekt oder in einem Projekt verwiesen wird oder die Assembly sein. Wenn es nicht der Fall ist, können Sie fügen einen Verweis auf das Projekt, oder Verwenden der `-reference` Befehl`-`Befehlszeilenoption (oder dessen Abkürzung, `-r`). Weitere Informationen finden Sie unter [Compileroptionen](compiler-options.md).
 

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9aebc284e845eff229fff5bd41792e0c990a1092
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db10dda3cbb328cd143afa48e300588ccc7667a6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691359"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463071"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XSLT-Transformationen mit der XslTransform-Klasse
 
@@ -24,8 +24,7 @@ Zweck der XSLT ist es, den Inhalt eines XML-Quelldokuments in ein anderes Dokume
 
 ## <a name="overview"></a>Übersicht
 
-![XSLT-Transformationsarchitektur](media/xslttransformationswithxsltransformclass.gif "XsltTransformationsWithXslTransformClass")  
-Transformationsarchitektur
+![Diagramm der XSLT-Transformationsarchitektur](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif) 
 
 Die XSLT-Empfehlung verwendet XPath (XML Path Language) zum Auswählen von Teilen eines XML-Dokuments, wobei XPath eine Abfragesprache ist, die zum Navigieren in Knoten einer Dokumentstruktur verwendet wird. Wie in der Abbildung gezeigt, wird die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Implementierung von XPath zum Auswählen von XML-Teilen verwendet, die in mehreren Klassen gespeichert sind, z. B. ein <xref:System.Xml.XmlDocument>, ein <xref:System.Xml.XmlDataDocument> oder ein <xref:System.Xml.XPath.XPathDocument>. Ein <xref:System.Xml.XPath.XPathDocument> ist ein optimierter XSLT-Datenspeicher, der bei Verwendung zusammen mit <xref:System.Xml.Xsl.XslTransform> leistungsfähige XSLT-Transformationen ermöglicht.
 

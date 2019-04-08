@@ -6,27 +6,25 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea7a26a5b8ce0f30893e9ca66873ad61f82ff8df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395160"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654600"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Parallele Ausführung in .NET Framework
 Die parallele Ausführung bezeichnet die Möglichkeit, mehrere Versionen einer Anwendung oder einer Komponente auf demselben Computer auszuführen. Das bedeutet, dass Sie gleichzeitig mehrere Versionen der Common Language Runtime sowie mehrere Versionen von Anwendungen und Komponenten, die eine Version der Common Language Runtime verwenden, gleichzeitig auf demselben Computer ausführen können.  
   
  Die folgende Abbildung zeigt verschiedene Anwendungen, die auf demselben Computer zwei unterschiedliche Versionen der Common Language Runtime verwenden. Anwendungen A, B und C verwenden Common Language Runtime, Version 1.0, während Anwendung D die Version 1.1 verwendet.  
   
- ![Parallele Ausführung](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
-Parallele Ausführung von zwei Versionen der Common Language Runtime  
+ ![Parallele Ausführung verschiedener Laufzeitversionen](./media/side-by-side-execution/side-by-side-runtime-execution.gif)  
   
  .NET Framework besteht aus der Common Language Runtime und einer Reihe von Assemblys, die die API-Typen enthalten. Die Versionsnummern der Common Language Runtime und der .NET Framework-Assemblys sind voneinander unabhängig. So ist z. B. die Common Language Runtime Version 4.0 eigentlich Version 4.0.319, während die Version 1.0 der .NET Framework-Assemblys eigentlich Version 1.0.3300.0 ist.  
   
  Die folgende Abbildung zeigt verschiedene Anwendungen, die auf demselben Computer zwei unterschiedliche Versionen einer Komponente verwenden. Anwendungen A und B verwenden Version 1.0 der Komponente, während Anwendung C Version 2.0 der gleichen Komponente verwendet.  
   
- ![Parallele Ausführung](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
-Parallele Ausführung von zwei Versionen einer Komponente  
+ ![Diagramm der parallelen Ausführung einer Komponente](./media/side-by-side-execution/side-by-side-component-execution.gif)  
   
  Durch die parallele Ausführung können Sie besser steuern, an welche Version einer Komponente eine Anwendung gebunden wird und welche Version der Common Language Runtime eine Anwendung verwendet.  
   
@@ -113,9 +111,9 @@ publicKeyToken=...,
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Titel|description|  
+|Titel|Beschreibung|  
 |-----------|-----------------|  
-|[Gewusst wie: Aktivieren und Deaktivieren der Bindungsumleitung](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Beschreibt, wie eine Anwendung an eine bestimmte Version einer Assembly gebunden wird.|  
+|[Vorgehensweise: Aktivieren und Deaktivieren der Bindungsumleitung](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|Beschreibt, wie eine Anwendung an eine bestimmte Version einer Assembly gebunden wird.|  
 |[Konfigurieren der Umleitung der Assemblybindung](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|Erläutert, wie Assemblybindungsverweise zur einer bestimmten Version der .NET Framework-Assemblys umgeleitet werden.|  
 |[Prozessinterne parallele Ausführung](../../../docs/framework/deployment/in-process-side-by-side-execution.md)|Erläutert, wie mehrere CLR-Versionen mithilfe der prozessinternen parallelen Laufzeithostaktivierung in einem Prozess ausgeführt werden können.|  
 |[Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)|Bietet eine konzeptionelle Übersicht über Assemblys.|  

@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 65a1a58d0c70c7e788aea420006c1ad617628f93
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e41f84a79dc075de05a9e30ccbf3de38175900a2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145607"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464904"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Erstellen eines DDD-orientierten Microservices
 
@@ -39,7 +39,7 @@ Bei der Komplexität ist es wichtig, über ein Domänenmodell zu verfügen, das 
 
 In Abbildung 7-5 wird gezeigt, wie ein Entwurf mit mehreren Ebenen in die eShopOnContainers-Anwendung implementiert wird.
 
-![Die drei Ebenen in einem DDD-Microservice wie dem für Bestellungen Jede Ebene ist ein VS-Projekt: Die Anwendungsschicht ist „Ordering.API“, die Domänenebene „Ordering.Domain“ und die Infrastrukturebene „Ordering.Infrastructure“.](./media/image6.png)
+![Die drei Ebenen in einem DDD-Microservice wie dem für Bestellungen Jede Ebene stellt ein VS-Projekt dar: Die Anwendungsebene ist „Ordering.API“, die Domänenebene „Ordering.Domain“ und die Infrastrukturebene „Ordering.Infrastructure“.](./media/image6.png)
 
 **Abbildung 7-5**. DDD-Ebenen für den Microservice für Bestellungen in eShopOnContainers
 
@@ -53,7 +53,7 @@ Das System soll so entworfen werden, dass die einzelnen Ebenen nur mit bestimmte
 
 Im Buch [Domain-Driven Design](https://domainlanguage.com/ddd/) von Eric Evan steht Folgendes über die Domänenmodellebene und die Anwendungsebene.
 
-**Domänenmodellebene**: verantwortlich für die Darstellung von Konzepten des Geschäfts, Informationen zur Geschäftslage und Geschäftsregeln Der Zustand, der die Geschäftslage widerspiegelt, wird hier gesteuert und verwendet, auch wenn die technischen Details zur Speicherung an die Infrastruktur delegiert werden. Diese Ebene stellt das Kernstück von Geschäftssoftware dar.
+**Domänenmodellebene**: Ist für die Darstellung von Konzepten des Geschäfts, Informationen zur Geschäftslage und Geschäftsregeln verantwortlich. Der Zustand, der die Geschäftslage widerspiegelt, wird hier gesteuert und verwendet, auch wenn die technischen Details zur Speicherung an die Infrastruktur delegiert werden. Diese Ebene stellt das Kernstück von Geschäftssoftware dar.
 
 Auf der Domänenmodellebene wird das Geschäft zum Ausdruck gebracht. Wenn Sie die Domänenmodellebene eines Microservices in .NET implementieren, wird diese Ebene als Klassenbibliothek mit den Domänenentitäten codiert, die Daten und Verhalten (Methoden mit Logik) erfassen.
 
@@ -71,7 +71,7 @@ Dies bedeutet aber auch nicht, dass Sie ein Modell auswählen können, das für 
 
 Wir fahren nun mit der Anwendungsebene fort und können erneut aus dem Buch [Domain-Driven Design](https://domainlanguage.com/ddd/) von Eric Evan zitieren:
 
-**Anwendungsebene:** definiert die Aufträge, die von der Software ausgeführt werden sollen, und leitet die ausdrucksstarken Domänenobjekte zur Bewältigung von Problemen weiter Die Aufgaben, für die diese Ebene verantwortlich ist, sind für das Geschäft von Bedeutung bzw. für die Interaktion mit den Anwendungsebenen anderer Systeme erforderlich. Diese Ebene wird dünn gehalten. Sie enthält keine Geschäftsregeln oder Wissen, sondern koordiniert nur Aufgaben und delegiert Arbeit an Kollaborationen von Domänenobjekten auf der darunterliegenden Ebene. Sie enthält keinen Zustand, der die Geschäftslage widerspiegelt, kann aber einen Zustand aufweisen, der dem Benutzer oder dem Programm den Fortschritt einer Aufgabe anzeigt.
+**Anwendungsebene**: Definiert die Aufträge, die von der Software ausgeführt werden sollen, und leitet die ausdrucksstarken Domänenobjekte zur Behebung von Problemen weiter. Die Aufgaben, für die diese Ebene verantwortlich ist, sind für das Geschäft von Bedeutung bzw. für die Interaktion mit den Anwendungsebenen anderer Systeme erforderlich. Diese Ebene wird dünn gehalten. Sie enthält keine Geschäftsregeln oder Wissen, sondern koordiniert nur Aufgaben und delegiert Arbeit an Kollaborationen von Domänenobjekten auf der darunterliegenden Ebene. Sie enthält keinen Zustand, der die Geschäftslage widerspiegelt, kann aber einen Zustand aufweisen, der dem Benutzer oder dem Programm den Fortschritt einer Aufgabe anzeigt.
 
 Die Anwendungsebene eines Microservices in .NET wird häufig als ASP.NET Core-Web-API-Projekt codiert. Das Projekt implementiert die Interaktion des Microservices, den Remotenetzwerkzugriff und die externen Web-APIs, die über die Benutzeroberfläche oder Client-Apps verwendet werden. Es enthält Abfragen, wenn ein CQRS-Ansatz verwendet wird, vom Microservice akzeptierte Befehle und sogar die ereignisgesteuerte Kommunikation zwischen Microservices (Integrationsereignisse). Die ASP.NET Core-Web-API, die die Anwendungsebene darstellt, darf keine Geschäftsregeln oder Domänenwissen enthalten (insbesondere Domänenregeln für Transaktionen oder Updates). Diese sollten der Bibliothek der Domänenmodellklassen zugeordnet sein. Die Anwendungsebene darf nur Aufgaben koordinieren und keinen Domänenstatus enthalten oder definieren (Domänenmodell). Sie delegiert die Ausführung von Geschäftsregeln für die Domänenmodellklassen (Aggregatstämme und Domänenentitäten), wodurch die Daten schließlich innerhalb dieser Domänenentitäten aktualisiert werden.
 
@@ -96,13 +96,13 @@ Dieser Ebenenentwurf sollte bei jedem Microservice unabhängig erfolgen. Wie ber
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **DevIQ. Persistence Ignorance principle (Prinzip „Ignorieren der Persistenz“)** \
-  [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
+  [https://deviq.com/persistence-ignorance/](https://deviq.com/persistence-ignorance/)
 
 - **Oren Eini. Infrastructure Ignorance (Ignorieren der Infrastruktur)** \
-  [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
+  [https://ayende.com/blog/3137/infrastructure-ignorance](https://ayende.com/blog/3137/infrastructure-ignorance)
 
 - **Angel Lopez. Layered Architecture In Domain-Driven Design (Architektur mit Ebenen im domänengesteuerten Design)** \
-  [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
+  [https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 >[!div class="step-by-step"]
 >[Zurück](cqrs-microservice-reads.md)

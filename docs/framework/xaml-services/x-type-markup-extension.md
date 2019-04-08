@@ -44,7 +44,7 @@ Stellt die CLR <xref:System.Type> -Objekt, das die zugrunde liegende Typ für ei
 |`typeNameValue`|Erforderlich. Ein Typname, die auf den aktuellen Standard-XAML-Namespace aufgelöst werden kann; oder das angegebene Präfix Wenn `prefix` angegeben wird.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `x:Type` Markuperweiterung hat eine ähnliche Funktion für die `typeof()` -Operator in c# oder der `GetType` Operator in Microsoft Visual Basic.  
+ Die `x:Type` Markuperweiterung hat eine ähnliche Funktion für die `typeof()` -Operator in C# oder der `GetType` Operator in Microsoft Visual Basic.  
   
  Die `x:Type` Markuperweiterung gibt das Konvertierungsverhalten für Eigenschaften, die den Typ aus Zeichenfolgen <xref:System.Type>. Die Eingabe ist ein XAML-Typ. Die Beziehung zwischen der Eingabe-XAML-Typ und die Ausgabe CLR <xref:System.Type> ist, die die Ausgabe <xref:System.Type> ist die <xref:System.Xaml.XamlType.UnderlyingType%2A> der Eingabe <xref:System.Xaml.XamlType>, nach der Suche der erforderlichen <xref:System.Xaml.XamlType> basierend auf XAML-Schemakontext und der <xref:System.Windows.Markup.IXamlTypeResolver>Dienst, der den Kontext bereitstellt.  
   

@@ -3,12 +3,12 @@ title: Klassen und Objekte in C# – Überblick über C#
 description: Neu bei C#? Lesen Sie diese Übersicht über Klassen, Objekte und Vererbung.
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: c13265829c3b33d2c2cddfb3de9cd849b439fa67
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a4276e214bbb6edb3fb1b75c21c26f18bb9fdc25
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846141"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466257"
 ---
 # <a name="classes-and-objects"></a>Klassen und Objekte
 
@@ -217,7 +217,7 @@ Wie im Beispiel gezeigt, kann eine bestimmte Methode immer ausgewählt werden, i
 
 Member, die ausführbaren Code enthalten, werden als *Funktionsmember* einer Klasse bezeichnet. In den vorangegangenen Abschnitten wurden die Methoden beschrieben, die wichtigste Form der Funktionsmember. In diesem Abschnitt werden die weiteren Funktionsmember behandelt, die C# unterstützt: Konstruktoren, Eigenschaften, Indexer, Ereignisse, Operatoren und Finalizer.
 
-Das folgende Beispiel zeigt eine generische Klasse namens List<T>, die eine wachsende Liste von Objekten implementiert. Die Klasse enthält verschiedene Beispiele der gängigsten Arten von Funktionsmembern.
+Das folgende Beispiel zeigt eine generische Klasse namens List\<T>, die eine wachsende Liste von Objekten implementiert. Die Klasse enthält verschiedene Beispiele der gängigsten Arten von Funktionsmembern.
 
 [!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 

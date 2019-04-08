@@ -2,18 +2,18 @@
 title: Neues in C# 6 – C#-Leitfaden
 description: Neues zu den neuen Features in Version 6 von C#
 ms.date: 12/12/2018
-ms.openlocfilehash: d7e3392412ad6f01cd150e31cec43aa99c42b437
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084679"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654574"
 ---
 # <a name="whats-new-in-c-6"></a>Neues in C# 6
 
 Die Version 6.0 von C# enthält zahlreiche Features, die die Produktivität für Entwickler verbessern. Der Gesamteffekt dieser Features ist es, dass Sie präziseren Code schreiben, der zudem lesbarer ist. Die Syntax benötigt weniger Aufwand für viele allgemeine Methoden. Es ist einfacher, die Entwurfsabsicht mit weniger Aufwand anzuzeigen. Mit diesen Features sind Sie produktiver und können besser lesbaren Code schreiben. Zudem können Sie sich besser auf Ihre Features statt auf die Sprachkonstrukte konzentrieren.
 
-Im weiteren Verlauf dieses Artikels finden Sie eine Übersicht über die einzelnen Features, in der jeweils ein Link enthalten ist, über den Sie weitere Informationen zum Feature erhalten. Die Features werden zusätzlich in einem [interaktiven Tutorial über C# 6](../tutorials/exploration/csharp-6.yml) im Abschnitt „Tutorials“ näher erklärt.
+Im weiteren Verlauf dieses Artikels finden Sie eine Übersicht über die einzelnen Features, in der jeweils ein Link enthalten ist, über den Sie weitere Informationen zum Feature erhalten. Die Funktionen werden zusätzlich in einem [interaktiven Tutorial zur Einführung von C# 6](../tutorials/exploration/csharp-6.yml) im Abschnitt „Tutorials“ näher erklärt.
 
 ## <a name="read-only-auto-properties"></a>Schreibgeschützte Auto-Eigenschaften
 

@@ -134,7 +134,7 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Steuert, ob leere schlüsselsequenzen in zusammengesetzten Schlüsseln von XSD-schemavalidierung ignoriert werden. Weitere Informationen finden Sie unter [Entschärfung: XML-Schemaüberprüfung](../../../migration-guide/mitigation-xml-schema-validation.md).|.NET Framework 4.6|  
   
 > [!NOTE]
->  Anstatt zum Hinzufügen einer `AppContextSwitchOverrides` Element in einer Anwendungskonfigurationsdatei, Sie können auch festlegen die Switches programmgesteuert durch Aufrufen der `static` (in c#) oder `Shared` (in Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> Methode.  
+>  Anstatt zum Hinzufügen einer `AppContextSwitchOverrides` Element in einer Anwendungskonfigurationsdatei, Sie können auch festlegen die Switches programmgesteuert durch Aufrufen der `static` (in C#) oder `Shared` (in Visual Basic) <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> Methode.  
   
  Bibliotheksentwickler können auch benutzerdefinierte Schalter verwenden, um Aufrufern zum Deaktivieren der geänderten Funktionalität in höheren Versionen ihrer Bibliotheken eingeführt erlauben definieren. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.AppContext>-Klasse.  
   

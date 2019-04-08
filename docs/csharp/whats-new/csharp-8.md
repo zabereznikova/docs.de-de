@@ -2,12 +2,12 @@
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0. Dieser Artikel ist auf dem neuesten Stand mit Vorschauversion 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: d95ec3dc050f5633b4b069caa5bd2811f6b61300
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262588"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545558"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
@@ -164,22 +164,37 @@ public class Point
 }
 ```
 
-Die folgende Methode verwendet das **Positionsmuster**, um die Werte von `x` und `y` zu extrahieren. Dann wird mit einer `when`-Klausel der Quadrant des Punktes bestimmt:
+Beachten Sie zudem die folgende Enumeration, die verschiedene Positionen eines Quadranten darstellt:
 
 ```csharp
-static string Quadrant(Point p) => p switch
+public enum Quadrant
 {
-    (0, 0) => "origin",
-    (var x, var y) when x > 0 && y > 0 => "Quadrant 1",
-    (var x, var y) when x < 0 && y > 0 => "Quadrant 2",
-    (var x, var y) when x < 0 && y < 0 => "Quadrant 3",
-    (var x, var y) when x > 0 && y < 0 => "Quadrant 4",
-    (var x, var y) => "on a border",
-    _ => "unknown"
+    Unknown,
+    Origin,
+    One,
+    Two,
+    Three,
+    Four,
+    OnBorder
+}
+```
+
+Die folgende Methode verwendet das **Positionsmuster**, um die Werte von `x` und `y` zu extrahieren. Dann wird mit einer `when`-Klausel der `Quadrant` des Punktes bestimmt:
+
+```csharp
+static Quadrant GetQuadrant(Point point) => point switch
+{
+    (0, 0) => Quadrant.Origin,
+    var (x, y) when x > 0 && y > 0 => Quadrant.One,
+    var (x, y) when x < 0 && y > 0 => Quadrant.Two,
+    var (x, y) when x < 0 && y < 0 => Quadrant.Three,
+    var (x, y) when x > 0 && y < 0 => Quadrant.Four,
+    var (_, _) => Quadrant.OnBorder,
+    _ => Quadrant.Unknown
 };
 ```
 
-Das Muster der Ausschussvariable im vorherigen Switch stimmt überein, wenn entweder `x` oder `y`, aber nicht beide, 0 ist. Ein switch-Ausdruck muss entweder einen Wert erzeugen oder eine Ausnahme auslösen. Wenn keiner der Fälle übereinstimmt, löst der switch-Ausdruck eine Ausnahme aus. Der Compiler erzeugt für Sie eine Warnung, wenn Sie nicht alle möglichen Fälle in Ihrem switch-Ausdruck abdecken.
+Das Ausschussmuster im vorherigen Switch stimmt überein, wenn entweder `x` oder `y` 0 ist, jedoch nicht beide. Ein switch-Ausdruck muss entweder einen Wert erzeugen oder eine Ausnahme auslösen. Wenn keiner der Fälle übereinstimmt, löst der switch-Ausdruck eine Ausnahme aus. Der Compiler erzeugt für Sie eine Warnung, wenn Sie nicht alle möglichen Fälle in Ihrem switch-Ausdruck abdecken.
 
 In diesem [erweiterten Tutorial zum Musterabgleich](../tutorials/pattern-matching.md) erhalten Sie weitere Informationen zu Musterabgleichverfahren.
 
@@ -229,7 +244,7 @@ In beiden Fällen generiert der Compiler den Aufruf von `Dispose()`. Der Compile
 
 ## <a name="static-local-functions"></a>Statische lokale Funktionen
 
-Sie können nun den `static`-Modifikator zu lokalen Funktionen hinzufügen, um sicherzustellen, dass die lokale Funktion keine Variablen aus dem umschließenden Bereich erfasst (referenziert). Dadurch wird `CS8421` erzeugt, „Eine statische lokale Funktion kann keine Referenz auf <variable> enthalten.“ 
+Sie können nun den `static`-Modifikator zu lokalen Funktionen hinzufügen, um sicherzustellen, dass die lokale Funktion keine Variablen aus dem umschließenden Bereich erfasst (referenziert). Dadurch wird `CS8421` erzeugt: „Eine statische lokale Funktion kann keine Referenz auf \<variable> enthalten.“ 
 
 Betrachten Sie folgenden Code. Die lokale Funktion `LocalFunction` greift auf die Variable `y` zu, die im umschließenden Bereich (die Methode `M`) deklariert ist. Daher kann `LocalFunction` nicht mit dem `static`-Modifikator deklariert werden:
 

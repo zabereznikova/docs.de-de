@@ -5,17 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: 2572599071fdddd15be620e1322d2e38614182c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7cbd1a2c1a9968ae8ed4f96d503d472bbe9b32c4
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972923"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545454"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Übereinstimmungsvergleiche (C#-Programmierhandbuch)
+
 Unter bestimmten Umständen ist es erforderlich, die Gleichheit zweier Werte zu prüfen. In einigen Fällen prüfen Sie die *Wertgleichheit*, die auch als *Äquivalenz* bezeichnet wird. Das bedeutet, Sie prüfen, ob die in zwei Variablen enthaltenen Werte gleich sind. In anderen Fällen müssen Sie ermitteln, ob zwei Variablen auf das gleiche zugrunde liegende Objekt im Arbeitsspeicher verweisen. Diese Art von Gleichheit wird als *Verweisgleichheit* oder *Identität* bezeichnet. In diesem Thema werden diese zwei Arten der Gleichheit beschrieben. Außerdem finden Sie hier Links zu verwandten Themen mit weiteren Informationen.  
   
-## <a name="reference-equality"></a>Verweisgleichheit  
+## <a name="reference-equality"></a>Verweisgleichheit
+
  Verweisgleichheit ist gegeben, wenn zwei Objektverweise auf dasselbe zugrunde liegende Objekt verweisen. Die Ursache hierfür kann eine einfache Zuweisung sein, wie im folgenden Beispiel gezeigt.  
   
  [!code-csharp[csProgGuideStatements#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#18)]  
@@ -23,9 +25,10 @@ Unter bestimmten Umständen ist es erforderlich, die Gleichheit zweier Werte zu 
  In diesem Code werden zwei Objekte erstellt, nach der Zuweisungsanweisung verweisen jedoch beide Verweise auf das gleiche Objekt. Es liegt eine Verweisgleichheit vor. Verwenden Sie die <xref:System.Object.ReferenceEquals%2A>-Methode, um zu ermitteln, ob zwei Verweise auf das gleiche Objekt verweisen.  
   
  Das Konzept der Verweisgleichheit gilt nur für Verweistypen. Bei Werttypobjekten kann keine Verweisgleichheit vorliegen, da bei Zuweisung einer Werttypinstanz zu einer Variablen eine Kopie des Werts erstellt wird. Aus diesem Grund ist es unmöglich, dass zwei nicht geschachtelte Strukturen vorhanden sind, die auf die gleiche Position im Arbeitsspeicher verweisen. Wenn Sie zwei Werttypen mit der <xref:System.Object.ReferenceEquals%2A>-Methode vergleichen, ist das Ergebnis immer `false`, selbst wenn die in den Objekten enthaltenen Werte alle identisch sind. Der Grund hierfür ist, dass jede Variable in einer eigenen Objektinstanz geschachtelt ist. Weitere Informationen finden Sie unter [Vorgehensweise: Überprüfen auf Verweisgleichheit (Identität)](../../../csharp/programming-guide/statements-expressions-operators/how-to-test-for-reference-equality-identity.md).  
-  
-## <a name="value-equality"></a>Wertgleichheit  
- Eine Wertgleichheit liegt dann vor, wenn zwei Objekte den gleichen Wert bzw. die gleichen Werte enthalten. Die Prüfung auf Wertgleichheit für primitive Werttypen wie [int](../../../csharp/language-reference/keywords/int.md) oder [bool](../../../csharp/language-reference/keywords/bool.md) ist einfach. Sie können den [==](../../../csharp/language-reference/operators/equality-comparison-operator.md)-Operator verwenden, wie im folgenden Beispiel gezeigt.  
+
+## <a name="value-equality"></a>Wertgleichheit
+
+ Eine Wertgleichheit liegt dann vor, wenn zwei Objekte den gleichen Wert bzw. die gleichen Werte enthalten. Die Prüfung auf Wertgleichheit für primitive Werttypen wie [int](../../../csharp/language-reference/keywords/int.md) oder [bool](../../../csharp/language-reference/keywords/bool.md) ist einfach. Sie können den [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-)-Operator verwenden, wie im folgenden Beispiel gezeigt.  
   
 ```csharp  
 int a = GetOriginalValue();  
@@ -42,8 +45,9 @@ if( b == a)
   
  Die Äquivalenz muss jedoch nicht unbedingt auf allen Feldern in einem Typ basieren. Die Basis kann auch eine Teilmenge sein. Wenn Sie Typen von einem anderen Besitzer vergleichen, vergewissern Sie sich, wie die Gleichheit für den jeweiligen Typ definiert ist. Informationen zum Definieren von Wertgleichheit für Ihre eigenen Klassen und Strukturen finden Sie unter [ Vorgehensweise: Definieren von Wertgleichheit für einen Typ](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md).  
   
-### <a name="value-equality-for-floating-point-values"></a>Wertgleichheit für Gleitkommawerte  
- Die Übereinstimmungsprüfung für Gleitkommawerte ([double](../../../csharp/language-reference/keywords/double.md) und [float](../../../csharp/language-reference/keywords/float.md)) ist aufgrund der Ungenauigkeit der Gleitkommaarithmetik auf Computern mit Binärlogik problematisch. Weitere Informationen finden Sie in den Hinweisen im Thema <xref:System.Double?displayProperty=nameWithType>.  
+### <a name="value-equality-for-floating-point-values"></a>Wertgleichheit für Gleitkommawerte
+
+ Übereinstimmungsvergleiche für Gleitkommawerte ([double](../../../csharp/language-reference/keywords/double.md) und [float](../../../csharp/language-reference/keywords/float.md)) sind aufgrund der Ungenauigkeit der Gleitkommaarithmetik auf Computern mit Binärlogik problematisch. Weitere Informationen finden Sie in den Hinweisen im Thema <xref:System.Double?displayProperty=nameWithType>.  
   
 ## <a name="related-topics"></a>Verwandte Themen  
   

@@ -50,7 +50,7 @@ In diesem Thema veranschaulicht, wie transportsicherheit für einen Windows Comm
   
 1.  Fügen Sie den Code dieser Prozedur nach dem Code der vorherigen Prozedur ein.  
   
-2.  Erstellen Sie eine <xref:System.Type>-Variable mit der Bezeichnung `contractType`, und weisen Sie ihr den Typ der Schnittstelle (`ICalculator`) zu. Verwenden Sie bei der Verwendung von Visual Basic die `GetType` Operator ist; bei Verwendung von c#, verwenden die `typeof` Schlüsselwort.  
+2.  Erstellen Sie eine <xref:System.Type>-Variable mit der Bezeichnung `contractType`, und weisen Sie ihr den Typ der Schnittstelle (`ICalculator`) zu. Verwenden Sie bei der Verwendung von Visual Basic die `GetType` Operator ist; bei Verwendung von C#, verwenden die `typeof` Schlüsselwort.  
   
 3.  Erstellen Sie eine zweite <xref:System.Type>-Variable mit der Bezeichnung `serviceType`, und weisen Sie ihr den Typ des implementierten Vertrags (`Calculator`) zu.  
   

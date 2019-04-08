@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9cbfd608f52a11f267ade25f80bc60bdfcd89364
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 6db8f5914a325a276872ff804f679f8b3e0745a0
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221224"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653924"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Abrufen von Ressourcen in Desktop-Apps
 Bei der Arbeit mit lokalisierten Ressourcen in .NET Framework Desktop-Apps sollten Sie idealerweise die Ressourcen für die Standardkultur bzw. neutrale Kultur mit der Hauptassembly packen und eine separate Satellitenassembly für jede Sprache oder Kultur erstellen, die Ihre App unterstützt. Anschließend können Sie die <xref:System.Resources.ResourceManager> -Klasse wie im nächsten Abschnitt beschrieben für den Zugriff auf benannte Ressourcen verwenden. Wenn Sie die Ressourcen nicht in die Hauptassembly und Satellitenassemblys einbetten möchten, können Sie auch direkt auf binäre Resources-Dateien (.resources) zugreifen, wie im Abschnitt [Abrufen von Ressourcen aus Ressourcendateien](#from_file) weiter unten in diesem Artikel erläutert.  Informationen zum Abrufen von Ressourcen in [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] -Apps finden Sie unter [Erstellen und Abrufen von Ressourcen in Windows Store-Apps](https://go.microsoft.com/fwlink/p/?LinkID=241674) im Windows Developer Center.  
@@ -149,10 +149,11 @@ GetObject.exe
  Wenn Sie keine Ressourcen in Satellitenassemblys bereitstellen wollen, können Sie weiterhin ein <xref:System.Resources.ResourceManager> -Objekt für den direkten Zugriff auf Ressourcen in Ressourcendateien verwenden. Zu diesem Zweck müssen Sie die Ressourcendateien korrekt bereitstellen. Verwenden Sie dann die <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> -Methode zum Instanziieren eines <xref:System.Resources.ResourceManager> -Objekts und geben Sie das Verzeichnis an, das die eigenständigen Ressourcendateien enthält.  
   
 ### <a name="deploying-resources-files"></a>Bereitstellen von Ressourcendateien  
- Beim Einbetten von Ressourcendateien in eine Anwendungsassembly und Satellitenassemblys hat jede Satellitenassembly den gleichen Dateinamen, befindet sich jedoch in einem Unterverzeichnis, das die Kultur der Satellitenassembly wiedergibt. Wenn Sie direkt aus Ressourcendateien auf Ressourcen zugreifen, können Sie hingegen alle Ressourcendateien in einem Verzeichnis platzieren, in der Regel in einem Unterverzeichnis des Anwendungsverzeichnisses. Der Name des Standard-Ressourcendateien der App besteht nur aus einem Stammnamen ohne Angabe seiner Kultur (z.B. strings.resources). Die Ressourcen für jede lokalisierte Kultur werden in einer Datei gespeichert, deren Name aus dem Stammnamen gefolgt von der Kultur besteht (z.B. strings.ja.resources oder strings.de-DE.resources). Die folgende Abbildung zeigt, wo Ressourcendateien in der Verzeichnisstruktur platziert werden sollen.  
-  
- ![Hauptverzeichnis Ihrer Anwendung](../../../docs/framework/resources/media/resappdir.gif "resappdir")  
-Verzeichnisstruktur und Namenskonventionen für Ressourcendateien  
+ Beim Einbetten von Ressourcendateien in eine Anwendungsassembly und Satellitenassemblys hat jede Satellitenassembly den gleichen Dateinamen, befindet sich jedoch in einem Unterverzeichnis, das die Kultur der Satellitenassembly wiedergibt. Wenn Sie direkt aus Ressourcendateien auf Ressourcen zugreifen, können Sie hingegen alle Ressourcendateien in einem Verzeichnis platzieren, in der Regel in einem Unterverzeichnis des Anwendungsverzeichnisses. Der Name des Standard-Ressourcendateien der App besteht nur aus einem Stammnamen ohne Angabe seiner Kultur (z.B. strings.resources). Die Ressourcen für jede lokalisierte Kultur werden in einer Datei gespeichert, deren Name aus dem Stammnamen gefolgt von der Kultur besteht (z.B. strings.ja.resources oder strings.de-DE.resources). 
+ 
+ Die folgende Abbildung zeigt, wo Ressourcendateien in der Verzeichnisstruktur platziert werden sollen. Sie verdeutlicht auch die Benennungskonventionen für RESOURCES-Dateien.  
+
+ ![Abbildung des Hauptverzeichnisses der Anwendung](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
   
 ### <a name="using-the-resource-manager"></a>Verwenden des Ressourcen-Managers  
  Nachdem Sie Ihre Ressourcen erstellt und im richtigen Verzeichnis gespeichert haben, erstellen Sie ein <xref:System.Resources.ResourceManager> -Objekt, um die Ressourcen durch Aufrufen der <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29> -Methode zu verwenden. Der erste Parameter gibt den Stammnamen der Standard-Ressourcendatei der App an (dies wäre „strings“ für das Beispiel im vorherigen Abschnitt). Der zweite Parameter gibt den Speicherort der Ressourcen an („Resources“ im vorherigen Beispiel). Der dritte Parameter gibt die zu verwendende <xref:System.Resources.ResourceSet> -Implementierung an. Wenn der dritte Parameter `null`ist, wird das Standard-Laufzeit <xref:System.Resources.ResourceSet> verwendet.  

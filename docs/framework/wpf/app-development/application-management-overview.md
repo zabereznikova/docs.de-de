@@ -106,7 +106,7 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Abrufen der aktuellen Anwendungsdomäne  
- Da die Funktionalität der <xref:System.Windows.Application> Klasse in einer Anwendung freigegeben werden, es können nur eine Instanz vorhanden sein. die <xref:System.Windows.Application> pro Klasse <xref:System.AppDomain>. Um dies zu erzwingen die <xref:System.Windows.Application> Klasse wird als Singleton-Klasse implementiert (finden Sie unter [Implementieren von Singleton in c#](https://go.microsoft.com/fwlink/?LinkId=100567)), das eine einzelne Instanz von sich selbst erstellt und der SAS mit dem `static` <xref:System.Windows.Application.Current%2A> Diese Eigenschaft.  
+ Da die Funktionalität der <xref:System.Windows.Application> Klasse in einer Anwendung freigegeben werden, es können nur eine Instanz vorhanden sein. die <xref:System.Windows.Application> pro Klasse <xref:System.AppDomain>. Um dies zu erzwingen die <xref:System.Windows.Application> Klasse wird als Singleton-Klasse implementiert (finden Sie unter [Implementieren von Singleton in C#](https://go.microsoft.com/fwlink/?LinkId=100567)), das eine einzelne Instanz von sich selbst erstellt und der SAS mit dem `static` <xref:System.Windows.Application.Current%2A> Diese Eigenschaft.  
   
  Der folgende Code zeigt, wie Sie erhalten einen Verweis auf die <xref:System.Windows.Application> Objekt für die aktuelle <xref:System.AppDomain>.  
   

@@ -22,7 +22,7 @@ Dieser Abschnitt enthält eine Einführung in die funktionale Transformation fü
   
 |Thema|Beschreibung|  
 |-----------|-----------------|  
-|[Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (c#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|Beschreibt funktionale Transformationen und enthält entsprechende Terminologiedefinitionen.|  
+|[Introduction to Pure Functional Transformations (C#) (Einführung in reine funktionale Transformationen (C#))](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)|Beschreibt funktionale Transformationen und enthält entsprechende Terminologiedefinitionen.|  
 |[Tutorial: Verketten von Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)|Enthält ausführliche Beschreibungen der verzögerten Auswertung ("Lazy Evaluation") und der verzögerten Ausführung.|  
 |[Tutorial: Bearbeiten von Inhalten in einem WordprocessingML-Dokument (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|Veranschaulicht eine funktionale Transformation.|  
   

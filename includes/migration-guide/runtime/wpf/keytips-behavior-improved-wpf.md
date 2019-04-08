@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d7cf32eb369e2607ee540d7188cc680b9506c261
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760751"
+---
 ### <a name="keytips-behavior-improved-in-wpf"></a>Besseres KeyTips-Verhalten in WPF
 
 |   |   |

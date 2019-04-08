@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 3ec8ca932924c1b1b6750dd30750e3c1e56b7538
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4c039356e94f843c75430ff61d5fe68906c5c0ed
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130077"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633828"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Clientseitige Prüfung (Prüfung auf den Darstellungsebenen)
 
@@ -23,33 +23,33 @@ Selbst wenn Sie die clientseitige Prüfung verwenden, sollten Sie Befehle und Ei
 
 Aus diesem Grund überprüfen Sie im clientseitigen Code in der Regel die ViewModels. Sie können auch die Ausgabe-DTOs oder -befehle des Clients überprüfen, bevor sie an die Dienste gesendet werden.
 
-Die Implementierung der clientseitigen Prüfung hängt davon ab, welche Art von Clientanwendung Sie erstellen, je nachdem, ob Sie Daten in einer MVC-Webanwendung mit einem Großteil des Codes in .NET, in einer SPA-Webanwendung in JavaScript oder TypeScript oder in einer mobilen, in Xamarin und C# codierten App prüfen.
+Die Implementierung der clientseitigen Prüfung hängt davon ab, welche Art von Clientanwendung Sie erstellen, Sie kann anders ausfallen, wenn Sie Daten in einer MVC-Webanwendung mit einem Großteil des Codes in .NET, in einer SPA-Webanwendung in JavaScript oder TypeScript oder in einer mobilen, in Xamarin und C# codierten App prüfen.
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Prüfung von mobilen Xamarin-Apps
 
 - **Überprüfen von Texteingaben und Anzeigen von Fehlern** \
-  [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+  [https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 - **Validation Callback (Überprüfungsrückruf)** \
-  [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
+  [https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>Prüfung in ASP.NET Core-Apps
 
 - **Rick Anderson. Hinzufügen der Validierung** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+  [https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Prüfung in SPA-Web-Apps (Angular 2, TypeScript, JavaScript)
 
 - **Ado Kukic. Angular 2 Form Validation (Formularüberprüfung von Angular 2)** \
-  [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+  [https://scotch.io/tutorials/angular-2-form-validation](https://scotch.io/tutorials/angular-2-form-validation)
 
 - **Form Validation (Formularüberprüfung)** \
-  [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
+  [https://angular.io/docs/ts/latest/cookbook/form-validation.html](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
 - **Prüfung** Breeze-Dokumentation \
-  [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
+  [https://breeze.github.io/doc-js/validation.html](https://breeze.github.io/doc-js/validation.html)
 
 Dies sind die wichtigsten Konzepte in Bezug auf die Prüfung:
 

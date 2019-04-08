@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 396dc1dec60a6a984f9ddd0b8a8753b7293a5ab9
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: 3cb310dc6d786c3c7711f4c194c6623324c777dd
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58307862"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412395"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshallen von Daten mit Plattformaufruf
 
@@ -25,37 +25,37 @@ Zum Aufrufen von Funktionen, die aus einer unverwalteten Bibliothek exportiert w
 
 - Ersetzen Sie verwaltete Datentypen durch unverwaltete Datentypen.
 
-Sie können die mit einer unverwalteten Funktion bereitgestellten Dokumentation verwendet, um einen äquivalenten verwalteten Prototypen zu erstellen, indem Sie das Attribut mit seinen optionalen Feldern anwenden und verwaltete Datentypen durch unverwaltete Datentypen ersetzen. Anweisungen zum Anwenden von **DllImportAttribute** finden Sie unter [Consuming Unmanaged DLL Functions (Verwenden nicht verwalteter DLL-Funktionen)](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md).
+Sie können die mit einer unverwalteten Funktion bereitgestellten Dokumentation verwendet, um einen äquivalenten verwalteten Prototypen zu erstellen, indem Sie das Attribut mit seinen optionalen Feldern anwenden und verwaltete Datentypen durch unverwaltete Datentypen ersetzen. Anweisungen zur Anwendung von <xref:System.Runtime.InteropServices.DllImportAttribute> finden Sie unter [Verwenden nicht verwalteter DLL-Funktionen](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md).
 
 Dieser Abschnitt enthält Beispiele, die zeigen, wie Prototypen für verwaltete Funktionen erstellt werden, an die Argumente übergeben und von denen Werte von Funktionen zurückgegeben werden, die aus unverwalteten Bibliotheken exportiert wurden. Die Beispiele zeigen auch, wann das <xref:System.Runtime.InteropServices.MarshalAsAttribute>-Attribut und die <xref:System.Runtime.InteropServices.Marshal>-Klasse zum expliziten Marshallen von Daten verwendet werden.
 
 ## <a name="platform-invoke-data-types"></a>Datentypen für den Plattformaufruf
 
-Die folgende Tabelle listet die Datentypen auf, die in der WIN 32-API (aufgeführt in Wtypes.h) verwendet werden, und die Funktionen im C-Stil auf. Viele unverwaltete Bibliotheken enthalten Funktionen, die diese Datentypen als Parameter und Rückgabewerte übergeben. Die dritte Spalte enthält den entsprechenden in .NET Framework integrierten Werttype oder die Klasse, die Sie in verwaltetem Code verwenden. In einigen Fällen können Sie einen Typ der gleichen Größe durch den in der Tabelle aufgeführten Typ ersetzen.
+Die folgende Tabelle listet die Datentypen auf, die in Windows-APIs und in Funktionen im C-Stil verwendet werden. Viele unverwaltete Bibliotheken enthalten Funktionen, die diese Datentypen als Parameter und Rückgabewerte übergeben. Die dritte Spalte enthält den entsprechenden in .NET Framework integrierten Werttype oder die Klasse, die Sie in verwaltetem Code verwenden. In einigen Fällen können Sie einen Typ der gleichen Größe durch den in der Tabelle aufgeführten Typ ersetzen.
 
-|Unverwalteter Typ in Wtypes.h|Unverwalteter Typ in C-Sprache|Name des verwalteten Typs|Beschreibung|
+|Nicht verwalteter Typ in Windows-APIs|Unverwalteter Typ in C-Sprache|Verwalteter Typ|Beschreibung|
 |--------------------------------|-------------------------------|------------------------|-----------------|
-|**VOID**|**void**|<xref:System.Void?displayProperty=nameWithType>|Auf eine Funktion angewendet, die keinen Wert zurückgibt|
-|**HANDLE**|**void \***|<xref:System.IntPtr?displayProperty=nameWithType> oder <xref:System.UIntPtr?displayProperty=nameWithType>|32 Bit unter 32-Bit-Windows-Betriebssystemen, 64 Bit unter 64-Bit-Windows-Betriebssystemen.|
-|**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8 Bit|
-|**SHORT**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16 Bit|
-|**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|16 Bit|
-|**INT**|**int**|<xref:System.Int32?displayProperty=nameWithType>|32 Bit|
-|**UINT**|**unsigned int**|<xref:System.UInt32?displayProperty=nameWithType>|32 Bit|
-|**LONG**|**long**|<xref:System.Int32?displayProperty=nameWithType>|32 Bit|
-|**BOOL**|**long**|<xref:System.Boolean?displayProperty=nameWithType> oder <xref:System.Int32?displayProperty=nameWithType>|32 Bit|
-|**DWORD**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 Bit|
-|**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 Bit|
-|**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|Mit ANSI ergänzen.|
-|**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|Mit Unicode ergänzen.|
-|**LPSTR**|**char &ast;**|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit ANSI ergänzen.|
-|**LPCSTR**|**const char &ast;**|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit ANSI ergänzen.|
-|**LPWSTR**|**wchar_t &ast;**|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit Unicode ergänzen.|
-|**LPCWSTR**|**const wchar_t &ast;**|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit Unicode ergänzen.|
-|**FLOAT**|**float**|<xref:System.Single?displayProperty=nameWithType>|32 Bit|
-|**DOUBLE**|**double**|<xref:System.Double?displayProperty=nameWithType>|64 Bit|
+|`VOID`|`void`|<xref:System.Void?displayProperty=nameWithType>|Auf eine Funktion angewendet, die keinen Wert zurückgibt|
+|`HANDLE`|`void *`|<xref:System.IntPtr?displayProperty=nameWithType> oder <xref:System.UIntPtr?displayProperty=nameWithType>|32 Bit unter 32-Bit-Windows-Betriebssystemen, 64 Bit unter 64-Bit-Windows-Betriebssystemen.|
+|`BYTE`|`unsigned char`|<xref:System.Byte?displayProperty=nameWithType>|8 Bit|
+|`SHORT`|`short`|<xref:System.Int16?displayProperty=nameWithType>|16 Bit|
+|`WORD`|`unsigned short`|<xref:System.UInt16?displayProperty=nameWithType>|16 Bit|
+|`INT`|`int`|<xref:System.Int32?displayProperty=nameWithType>|32 Bit|
+|`UINT`|`unsigned int`|<xref:System.UInt32?displayProperty=nameWithType>|32 Bit|
+|`LONG`|`long`|<xref:System.Int32?displayProperty=nameWithType>|32 Bit|
+|`BOOL`|`long`|<xref:System.Boolean?displayProperty=nameWithType> oder <xref:System.Int32?displayProperty=nameWithType>|32 Bit|
+|`DWORD`|`unsigned long`|<xref:System.UInt32?displayProperty=nameWithType>|32 Bit|
+|`ULONG`|`unsigned long`|<xref:System.UInt32?displayProperty=nameWithType>|32 Bit|
+|`CHAR`|`char`|<xref:System.Char?displayProperty=nameWithType>|Mit ANSI ergänzen.|
+|`WCHAR`|`wchar_t`|<xref:System.Char?displayProperty=nameWithType>|Mit Unicode ergänzen.|
+|`LPSTR`|`char *`|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit ANSI ergänzen.|
+|`LPCSTR`|`const char *`|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit ANSI ergänzen.|
+|`LPWSTR`|`wchar_t *`|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit Unicode ergänzen.|
+|`LPCWSTR`|`const wchar_t *`|<xref:System.String?displayProperty=nameWithType> oder <xref:System.Text.StringBuilder?displayProperty=nameWithType>|Mit Unicode ergänzen.|
+|`FLOAT`|`float`|<xref:System.Single?displayProperty=nameWithType>|32 Bit|
+|`DOUBLE`|`double`|<xref:System.Double?displayProperty=nameWithType>|64 Bit|
 
-Informationen zu den entsprechenden Typen in [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# und C++ finden Sie unter [Einführung in die .NET Framework-Klassenbibliothek](../../../docs/standard/class-library-overview.md).
+Informationen zu den entsprechenden Typen in Visual Basic, C# und C++ finden Sie unter [Einführung in die .NET Framework-Klassenbibliothek](../../standard/class-library-overview.md#system-namespace).
 
 ## <a name="pinvokelibdll"></a>PinvokeLib.dll
 

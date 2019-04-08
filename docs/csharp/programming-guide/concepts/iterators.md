@@ -2,12 +2,12 @@
 title: Durchlaufen von Sammlungen in C#
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 386f4145c38e3a573ec04d2a0b8e260bcdc63491
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b0e1d509cf80e13d2cee3cf0ddf2021d6c84c5b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720797"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464319"
 ---
 # <a name="iterators-c"></a>Iteratoren (C#)
 
@@ -324,7 +324,7 @@ public class Stack<T> : IEnumerable<T>
 
 Ein Iterator kann als Methode oder als `get`-Zugriffsmethode vorkommen. Ein Iterator kann nicht in einem Ereignis, Instanzenkonstruktor, statischen Konstruktor oder statischen Finalizer vorkommen.
 
-Es muss eine implizite Konvertierung vom Typ des Ausdrucks in der `yield return`-Anweisung in das Typargument für das vom Iterator zurückgegebene IEnumerable<T> vorhanden sein.
+Es muss eine implizite Konvertierung vom Ausdruckstyp in der `yield return`-Anweisung in das Typargument für die vom Iterator zurückgegebene Schnittstelle „IEnumerable\<T>“ vorhanden sein.
 
 In C# kann eine Iteratormethode nicht die Parameter `in`, `ref` oder `out` aufweisen.
 
@@ -361,4 +361,4 @@ Mit Iteratoren können Sie die Einfachheit einer `foreach`-Schleife beibehalten,
 - [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)
 - [yield](../../../csharp/language-reference/keywords/yield.md)
 - [Verwenden von foreach mit Arrays](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)
-- [Generika](../../../csharp/programming-guide/generics/index.md)
+- [Generics](../../../csharp/programming-guide/generics/index.md)

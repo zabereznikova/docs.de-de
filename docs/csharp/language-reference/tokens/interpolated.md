@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 97c8580b5573348e58acb85b7368eb23927cde17
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307174"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920895"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ – Zeichenfolgeninterpolation (C#-Referenz)
 
@@ -87,7 +87,7 @@ Im folgenden Beispiel wird die implizite Konvertierung in <xref:System.Formattab
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-Wenn Sie noch nicht mit der Zeichenfolgeninterpolation vertraut sind, finden Sie weitere Informationen im interaktiven Tutorial [Zeichenfolgeninterpolation in C#](../../tutorials/intro-to-csharp/interpolated-strings.yml). Alternativ können Sie das Tutorial [Zeichenfolgeninterpolation in C# ](../../tutorials/string-interpolation.md) lokal auf Ihrem Computer verwenden.
+Wenn Sie noch nicht mit der Zeichenfolgeninterpolation vertraut sind, finden Sie weitere Informationen im interaktiven Tutorial [Zeichenfolgeninterpolation in C#](../../tutorials/exploration/interpolated-strings.yml). Alternativ können Sie das Tutorial [Zeichenfolgeninterpolation in C# ](../../tutorials/string-interpolation.md) lokal auf Ihrem Computer verwenden.
 
 ## <a name="see-also"></a>Siehe auch
 

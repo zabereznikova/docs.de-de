@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c9716193c3429d5dd3aff1734415105713d2538
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221289"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409444"
 ---
 # <a name="default-marshaling-behavior"></a>Standardmarshallingverhalten
 Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Methodenparametern zugeordnet sind, verhalten, wenn sie zwischen verwaltetem und unverwaltetem Speicher übergeben werden. Mit diesen integrierten Regeln werden Marshalling-Aktivitäten wie Datentyptransformationen gesteuert, es wird gesteuert, ob eine aufrufende Instanz die Daten ändern kann, die an sie übergeben werden, und ob diese Änderungen an den Aufrufer zurückgegeben werden, und unter welchen Umständen der Marshaller Leistungsoptimierungen bereitstellt.  
@@ -33,7 +33,7 @@ Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Me
   
 ### <a name="unmanaged-signature"></a>Nicht verwaltete Signatur  
   
-```  
+```cpp  
 BSTR MethodOne (BSTR b) {  
      return b;  
 }  
@@ -101,7 +101,7 @@ void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
   
 ### <a name="type-library-representation"></a>Darstellung der Typbibliothek  
   
-```  
+```cpp  
 importlib("mscorlib.tlb");  
 interface DelegateTest : IDispatch {  
 [id(…)] HRESULT m1([in] _Delegate* d);  
@@ -164,13 +164,13 @@ internal class DelegateTest {
 ## <a name="default-marshaling-for-value-types"></a>Standardmäßiges Marshalling für Werttypen  
  Die meisten Werttypen, wie ganze Zahlen und Gleitkommazahlen, sind [blitfähig](blittable-and-non-blittable-types.md) und müssen nicht gemarshallt werden. Andere, [nicht blitfähige](blittable-and-non-blittable-types.md) Typen werden im verwalteten und im nicht verwalteten Speicher unterschiedlich dargestellt und müssen gemarshallt werden. Wieder andere Typen erfordern eine explizite, über die Grenzen der Interoperation hinausgehende Formatierung.  
   
- Dieses Thema enthält die folgenden Informationen zu formatierten Werttypen:  
+ Dieser Abschnitt enthält Informationen zu den folgenden formatierten Werttypen:  
   
--   [Im Plattformaufruf verwendete Werttypen](#cpcondefaultmarshalingforvaluetypesanchor2)  
+-   [Im Plattformaufruf verwendete Werttypen](#value-types-used-in-platform-invoke)  
   
--   [In COM-Interop verwendete Werttypen](#cpcondefaultmarshalingforvaluetypesanchor3)  
+-   [In COM-Interop verwendete Werttypen](#value-types-used-in-com-interop)  
   
- Neben einer Beschreibung formatierter Typen befasst sich dieses Thema mit [Systemwerttypen](#cpcondefaultmarshalingforvaluetypesanchor1), die ein ungewöhnliches Marshallingverhalten aufweisen.  
+ Neben einer Beschreibung formatierter Typen befasst sich dieses Thema mit [Systemwerttypen](#system-value-types), die ein ungewöhnliches Marshallingverhalten aufweisen.  
   
  Ein formatierter Typ ist ein komplexer Typ, der Informationen enthält, mit denen explizit das Layout seiner Member im Speicher gesteuert wird. Informationen zum Memberlayout werden mit dem <xref:System.Runtime.InteropServices.StructLayoutAttribute>-Attribut bereitgestellt. Das Layout kann einen der folgenden <xref:System.Runtime.InteropServices.LayoutKind>-Enumerationswerte aufweisen:  
   
@@ -186,7 +186,6 @@ internal class DelegateTest {
   
      Gibt an, dass die Member entsprechend dem <xref:System.Runtime.InteropServices.FieldOffsetAttribute> angeordnet werden, das mit jedem Feld angegeben wird.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor2"></a>   
 ### <a name="value-types-used-in-platform-invoke"></a>Im Plattformaufruf verwendete Werttypen  
  Im folgenden Beispiel stellen die Typen `Point` und `Rect` Memberlayoutinformationen mithilfe von **StructLayoutAttribute** bereit.  
   
@@ -221,27 +220,28 @@ public struct Rect {
 }  
 ```  
   
- Beim Marshallen an nicht verwalteten Code werden diese formatierten Typen als Strukturen im C-Stil gemarshallt. Dies bietet eine einfache Möglichkeit zum Aufrufen einer nicht verwalteten API, die über Strukturargumente verfügt. So können die Strukturen `POINT` und `RECT` beispielsweise wie folgt an die **PtInRect**-Funktion der Microsoft Win32-API übergeben werden:  
+ Beim Marshallen an nicht verwalteten Code werden diese formatierten Typen als Strukturen im C-Stil gemarshallt. Dies bietet eine einfache Möglichkeit zum Aufrufen einer nicht verwalteten API, die über Strukturargumente verfügt. So können die Strukturen `POINT` und `RECT` beispielsweise folgendermaßen an die **PtInRect**-Funktion der Microsoft Windows-API übergeben werden:  
   
-```  
+```cpp  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
  Sie können Strukturen unter Verwendung der folgenden Definition des Plattformaufrufs übergeben:  
   
-```vb  
-Class Win32API      
-   Declare Auto Function PtInRect Lib "User32.dll" _  
-    (ByRef r As Rect, p As Point) As Boolean  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+        ByRef r As Rect, p As Point) As Boolean
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("User32.dll")]  
-   public static extern Bool PtInRect(ref Rect r, Point p);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("User32.dll")]
+   internal static extern bool PtInRect(ref Rect r, Point p);
+}
+```
   
  Der Werttyp `Rect` muss mit einem Verweis übergeben werden, da die nicht verwaltete API einen Zeiger auf ein `RECT` erwartet, der an die Funktion übergeben wird. Der Werttyp `Point` wird nach Wert übergeben, da die nicht verwaltete API erwartet, dass `POINT` im Stack übergeben wird. Dieser feine Unterschied ist sehr wichtig. Verweise werden als Zeiger an nicht verwalteten Code übergeben. Werte werden im Stack an nicht verwalteten Code übergeben.  
   
@@ -253,7 +253,7 @@ class Win32API {
 > [!NOTE]
 >  Wenn ein Verweistyp nicht blitfähige Typen als Member enthält, muss die Konvertierung zwei Mal erfolgen: Das erste Mal, wenn ein Argument an die nicht verwaltete Seite übergeben wird, zum zweiten Mal bei der Rückgabe aus dem Aufruf. Aufgrund dieses zusätzlichen Aufwands müssen In/Out-Parameter explizit auf ein Argument angewendet werden, wenn der Aufrufer Änderungen sehen möchte, die von der aufgerufenen Instanz vorgenommen wurden.  
   
- Im folgenden Beispiel hat die `SystemTime`-Klasse ein sequenzielles Memberlayout und kann an die **GetSystemTime**-Funktion der Win32-API übergeben werden.  
+ Im folgenden Beispiel hat die `SystemTime`-Klasse ein sequenzielles Memberlayout und kann an die **GetSystemTime**-Funktion der Windows-API übergeben werden.  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class SystemTime  
@@ -284,25 +284,26 @@ End Class
   
  Die **GetSystemTime**-Funktion ist wie folgt definiert:  
   
-```  
+```cpp  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
  Die entsprechende Definition des Plattformaufrufs für **GetSystemTime** lautet wie folgt:  
   
-```vb  
-Public Class Win32  
-   Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (ByVal sysTime _  
-   As SystemTime)  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+        ByVal sysTime As SystemTime)
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("Kernel32.dll", CharSet=CharSet.Auto)]  
-   public static extern void GetSystemTime(SystemTime st);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
+   internal static extern void GetSystemTime(SystemTime st);
+}
+```
   
  Beachten Sie, dass das `SystemTime`-Argument nicht als Verweisargument typisiert ist, da `SystemTime` eine Klasse und kein Werttyp ist. Im Gegensatz zu Werttypen werden Klassen im durch Verweis übergeben.  
   
@@ -329,13 +330,12 @@ public class Point {
 }  
 ```  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor3"></a>   
 ### <a name="value-types-used-in-com-interop"></a>In COM-Interop verwendete Werttypen  
  Formatierte Typen können auch an COM-Interop-Methodenaufrufe übergeben werden. Tatsache ist, dass Werttypen automatisch in Strukturen konvertiert werden, wenn sie in eine Typbibliothek exportiert werden. Wie im folgenden Beispiel gezeigt, wird der `Point`-Werttyp zu einer Typdefinition (typedef) mit Namen `Point`. Alle Verweise auf den `Point`-Werttyp an anderer Stelle in der Typbibliothek werden durch die `Point`-Typdefinition ersetzt.  
   
  **Darstellung der Typbibliothek**  
   
-```  
+```cpp  
 typedef struct tagPoint {  
    int x;  
    int y;  
@@ -353,7 +353,6 @@ interface _Graphics {
 > [!NOTE]
 >  Strukturen, bei denen der <xref:System.Runtime.InteropServices.LayoutKind>-Enumerationswert auf **Explicit** (Explizit) festgelegt ist, können in COM-Interop nicht verwendet werden, da die exportierte Typbibliothek kein explizites Layout darstellen kann.  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>Systemwerttypen  
  Der <xref:System>-Namespace enthält mehrere Werttypen, die für die geschaltete Form von primitiven Datentypen der Laufzeit stehen. Beispielsweise steht die Werttypstruktur <xref:System.Int32?displayProperty=nameWithType> für die geschachtelte Form von **ELEMENT_TYPE_I4**. Anstatt diese Typen als Strukturen zu marshallen, wie dies bei anderen formatierten Typen der Fall ist, marshallen Sie sie in der gleichen Weise wie die primitiven Datentypen, die sie schachteln. **System.Int32** wird daher als **ELEMENT_TYPE_I4** anstatt als eine Struktur gemarshallt, die ein einziges Mitglied vom Typ **long** enthält. Die folgende Tabelle enthält eine Liste der Werttypen im Namespace **System**, bei denen es sich um geschachtelte Darstellungen von primitiven Datentypen handelt.  
   
@@ -388,7 +387,7 @@ interface _Graphics {
   
 #### <a name="type-library-representation"></a>Darstellung der Typbibliothek  
   
-```  
+```cpp  
 typedef double DATE;  
 typedef DWORD OLE_COLOR;  
   
@@ -430,7 +429,7 @@ public interface IValueTypes {
   
 #### <a name="type-library-representation"></a>Darstellung der Typbibliothek  
   
-```  
+```cpp  
 […]  
 interface IValueTypes : IDispatch {  
    HRESULT M1([in] DATE d);  

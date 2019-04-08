@@ -45,7 +45,7 @@ In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeor
 |---------------|-----------------|
 |`compilerOptions`|Optionales Attribut.<br /><br /> Gibt zusätzliche compilerspezifische Argumente für die Kompilierung an. Die Werte für die `compilerOptions` Attribut finden Sie in der Regel in einem Compileroptionen-Thema für den Compiler.|
 |`extension`|Erforderliches Attribut.<br /><br /> Enthält eine durch Semikolons getrennte Liste der Dateinamenerweiterungen, die von Quelldateien verwendet werden, für den Sprachanbieter an. Z. B. ". cs".|
-|`language`|Erforderliches Attribut.<br /><br /> Enthält eine durch Semikolons getrennte Liste von vom Sprachanbieter unterstützten Sprachnamen. Z. B. "c#; Cs; Csharp".|
+|`language`|Erforderliches Attribut.<br /><br /> Enthält eine durch Semikolons getrennte Liste von vom Sprachanbieter unterstützten Sprachnamen. Z. B. "C#; Cs; Csharp".|
 |`type`|Erforderliches Attribut.<br /><br /> Gibt den Typnamen des Sprachanbieters, einschließlich des Namens der Assembly, die die anbieterimplementierung enthält. Der Typname muss die Anforderungen erfüllen [angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|
 |`warningLevel`|Optionales Attribut.<br /><br /> Gibt die Warnstufe des Compilers "Standard" an. Bestimmt die Ebene, die mit der des Sprachanbieters für compilerwarnungen als Fehler behandelt.|
 

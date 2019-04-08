@@ -18,7 +18,7 @@ Dieses Beispiel demonstriert, wie Sie
   
 -   <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> und <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> in einem benutzerdefinierten Vertragsverhalten bzw. Vorgangsverhalten definieren, um importierte Anmerkungen als Anmerkungen in die CodeDom für den importieren Vertrag bzw. Vorgang zu schreiben.  
   
--   Verwenden der <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> zum Herunterladen des WSDL, eine <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> WSDL mit dem benutzerdefinierten WSDL-Importer importieren und die <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> zum Generieren von Windows Communication Foundation (WCF)-Clientcode mit den WSDL-Anmerkungen als / / / und ''' Kommentare in c# und Visual Basic.  
+-   Verwenden der <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> zum Herunterladen des WSDL, eine <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> WSDL mit dem benutzerdefinierten WSDL-Importer importieren und die <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> zum Generieren von Windows Communication Foundation (WCF)-Clientcode mit den WSDL-Anmerkungen als / / / und ''' Kommentare in C# und Visual Basic.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  

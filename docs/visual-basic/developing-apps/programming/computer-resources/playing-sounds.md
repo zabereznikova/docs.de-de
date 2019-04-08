@@ -11,12 +11,12 @@ helpviewer_keywords:
 - sounds, background
 - playing sounds
 ms.assetid: f0d9e4ab-57c7-47b6-86d3-99ff07078040
-ms.openlocfilehash: 56b156545fac2aba09d32139fdaad26da711e018
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ac890a4cc6024ae43af4146d1d8f43af70ae3ff0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966215"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840341"
 ---
 # <a name="playing-sounds-visual-basic"></a>Wiedergabe von Sound (Visual Basic)
 Das `My.Computer.Audio`-Objekt stellt Methoden zur Soundwiedergabe bereit.  
@@ -66,6 +66,7 @@ Das `My.Computer.Audio`-Objekt stellt Methoden zur Soundwiedergabe bereit.
  [!code-vb[VbVbalrMyComputer#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#17)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:Microsoft.VisualBasic.Devices.Audio>
 - <xref:Microsoft.VisualBasic.Devices.Audio.Play%2A>
 - <xref:Microsoft.VisualBasic.Devices.Audio.PlaySystemSound%2A>

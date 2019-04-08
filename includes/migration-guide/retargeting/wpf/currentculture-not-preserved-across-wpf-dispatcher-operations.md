@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: cce19d6c9afa5f5ce9bb17b5b5d92f2060a08414
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761110"
+---
 ### <a name="currentculture-is-not-preserved-across-wpf-dispatcher-operations"></a>CurrentCulture wird zwischen WPF-Dispatcher-Vorgängen nicht beibehalten
 
 |   |   |

@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie eine vorhandene .NET Framework-Konsolenanwend
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 481f62b21e223a13e06fe0cb68e4276968992aca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126083"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633841"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Ausführen von Konsolenanwendungen in Windows-Containern
 
@@ -55,7 +55,9 @@ Sie müssen über Docker für Windows, Version 1.12 Beta 26 oder höher, verfüg
 ## <a name="building-the-application"></a>Erstellen der Anwendung
 Konsolenanwendungen werden üblicherweise über ein Installationsprogramm, einen FTP-Speicherort oder eine Dateifreigabe verteilt. Wenn Sie eine Anwendung in einem Container bereitstellen, müssen die Assets kompiliert und an einem Speicherort bereitgestellt werden, der beim Erstellen des Docker-Images verwendet werden kann.
 
-In *build.ps1* verwendet das Skript [MSBuild](/visualstudio/msbuild/msbuild), um die Anwendung zu kompilieren und so die Erstellung der Assets abzuschließen. Es werden einige Parameter an MSBuild übergeben, um die benötigten Assets zu finalisieren. Der Name der Projektdatei oder Projektmappe, die kompiliert werden soll, der Speicherort der Ausgabe und schließlich die Konfiguration („Release“ oder „Debug“).
+Hier finden Sie die Beispielanwendung: [ConsoleRandomAnswerGenerator](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator).
+
+In *build.ps1*<sup>[[Quelle]](https://github.com/dotnet/samples/blob/master/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator/build.ps1)</sup> verwendet das Skript [MSBuild](/visualstudio/msbuild/msbuild), um die Anwendung zu kompilieren und so die Erstellung der Assets abzuschließen. Es werden einige Parameter an MSBuild übergeben, um die benötigten Assets zu finalisieren. Der Name der Projektdatei oder Projektmappe, die kompiliert werden soll, der Speicherort der Ausgabe und schließlich die Konfiguration („Release“ oder „Debug“).
 
 Im Aufruf von `Invoke-MSBuild` ist der `OutputPath` auf **publish** festgelegt und die `Configuration` auf **Release**. 
 
