@@ -2,12 +2,12 @@
 title: C#-Tutorials
 description: Probieren Sie diese C#-Tutorials aus, um die Erstellung eines C#-Programms und die C#-Sprachfeatures zu erlernen.
 ms.date: 10/25/2018
-ms.openlocfilehash: 54c05f2fcc80d21b10cbb6a2baee37014aa62d07
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214441"
 ---
 # <a name="c-tutorials"></a>C#-Tutorials
 
@@ -61,5 +61,3 @@ Mit folgenden Tutorials können Sie C#-Programme mit [.NET Core](../../core/inde
 * [Arbeiten mit LINQ](working-with-linq.md): veranschaulicht viele der Features von LINQ und die Sprachelemente, die diese unterstützen.
 * [Verwenden von Attributen](attributes.md): veranschaulicht das Erstellen und Verwenden von Attributen in C#.
 * Im Tutorial [Zeichenfolgeninterpolation](exploration/interpolated-strings.yml) wird gezeigt, wie Sie Werte in eine Zeichenfolge einfügen. Sie erfahren, wie Sie interpolierte Zeichenfolgen mit eingebetteten C#-Ausdrücken erstellen, und wie Sie das Aussehen des Texts der Ausdrucksergebnisse in der Ergebniszeichenfolge bestimmen. Dieses Tutorial ist auch für die [lokale Ausführung auf Ihrem Computer](exploration/interpolated-strings-local.md) verfügbar.
-
-

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7666918cbff7a395a93a274629fe574ff20e170c
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545688"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308652"
 ---
 # <a name="c-operators"></a>C#-Operatoren
 
@@ -75,7 +75,7 @@ Diese Operatoren haben eine höhere Rangfolge als der nächste Abschnitt und ein
 
 [-x](subtraction-operator.md) – Numerische Negation.
 
-[\!x](logical-negation-operator.md) – logische Negation.
+[\!x](boolean-logical-operators.md#logical-negation-operator-) – logische Negation.
 
 [~x](bitwise-complement-operator.md) – Bitweises Komplement.
 
@@ -163,13 +163,13 @@ Dieser Operator hat eine höhere Rangfolge als der nächste Abschnitt und eine g
 
 Dieser Operator hat eine höhere Rangfolge als der nächste Abschnitt und eine geringere Rangfolge als der vorherige Abschnitt.
 
-[x && y](conditional-and-operator.md) – logisches AND. Wenn der erste Operand FALSE ist, wertet C# den zweiten Operand nicht aus.
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – logisches AND. Wenn der erste Operand FALSE ist, wertet C# den zweiten Operand nicht aus.
 
 ## <a name="conditional-or-operator"></a>Bedingter OR-Operator
 
 Dieser Operator hat eine höhere Rangfolge als der nächste Abschnitt und eine geringere Rangfolge als der vorherige Abschnitt.
 
-[x &#124;&#124; y](conditional-or-operator.md) – Logisches OR. Wenn der erste Operand TRUE ist, wertet C# den zweiten Operand nicht aus.
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – Logisches OR. Wenn der erste Operand TRUE ist, wertet C# den zweiten Operand nicht aus.
 
 ## <a name="null-coalescing-operator"></a>Nullzusammensetzungsoperator
 
