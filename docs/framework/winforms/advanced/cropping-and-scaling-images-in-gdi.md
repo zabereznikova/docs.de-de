@@ -15,12 +15,12 @@ helpviewer_keywords:
 - rectangles [Windows Forms], destination
 - images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
-ms.openlocfilehash: 311673c30283cdf3e0206d143daab8c01adc2bce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c3cdb06e99770808461f9266fb5f07df9074149b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718791"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183728"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>Zuschneiden und Skalieren von Bildern in GDI+
 Können Sie die <xref:System.Drawing.Graphics.DrawImage%2A> Methode der <xref:System.Drawing.Graphics> Klasse zeichnen und Positionieren von Vektor- und Rasterbildern. <xref:System.Drawing.Graphics.DrawImage%2A> eine überladene Methode, ist, damit es gibt mehrere Möglichkeiten, die Sie diese mit Argumenten bereitstellen können.  
@@ -47,5 +47,6 @@ Können Sie die <xref:System.Drawing.Graphics.DrawImage%2A> Methode der <xref:Sy
  ![Zuschneiden und Skalieren von](./media/aboutgdip03-art07.gif "AboutGdip03_Art07")  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Bilder, Bitmaps und Metadateien](images-bitmaps-and-metafiles.md)
 - [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](working-with-images-bitmaps-icons-and-metafiles.md)

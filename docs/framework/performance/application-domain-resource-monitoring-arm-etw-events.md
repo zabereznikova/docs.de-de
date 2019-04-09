@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8442b8723476984b90f740beac912688719f1791
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bb2b0dd95877fc6492f6d23a19c14688cd78f7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133821"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>ETW-Ereignisse der Anwendungsdomänen-Ressourcenüberwachung (Application Domain Resource Monitoring, ARM)
 <a name="top"></a> Diese Ereignisse bieten detaillierte Diagnoseinformationen zum Status einer Anwendungsdomäne. Sie können diese Ereignisse oder die Funktion zur Überwachung von Anwendungsdomänenressourcen (ARM) verwenden, um dieselben Informationen zu erhalten.  
@@ -42,7 +42,7 @@ ms.locfileid: "54689834"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`ThreadCreated`|85|Ein Thread wurde für die Anwendungsdomäne erstellt.|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "54689834"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`AppDomainMemAllocated`|83|Jede 4 MB des Arbeitsspeichers (ungefähr) werden in der Anwendungsdomäne zugeordnet.|  
   
@@ -93,7 +93,7 @@ ms.locfileid: "54689834"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`AppDomainMemSurvived`|84|Jede Garbage Collection wurde beendet.|  
   
@@ -119,7 +119,7 @@ ms.locfileid: "54689834"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`ThreadAppDomainEnter`|87|Ein Thread wechselt in eine Anwendungsdomäne.|  
   
@@ -144,7 +144,7 @@ ms.locfileid: "54689834"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`ThreadTerminated`|86|Ein Thread wird beendet.|  
   
@@ -157,4 +157,5 @@ ms.locfileid: "54689834"
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)

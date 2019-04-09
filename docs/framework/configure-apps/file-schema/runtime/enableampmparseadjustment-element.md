@@ -1,15 +1,15 @@
 ---
-title: <EnableAmPmParseAdjustment>-Element
+title: <EnableAmPmParseAdjustment> Element
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3316184aaa624fffdd18f472a7f3a709b42045a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 57d1a14199debbb90827c1ea95347d485a636329
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269210"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222509"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment >-Element
 Bestimmt, ob Datum und Uhrzeit-Analysemethoden verwenden einen angepassten Satz von Regeln zum Analysieren von Datumszeichenfolgen, die ein Tag, Monat, Stunde und AM/PM-Kennzeichner enthalten.  
@@ -82,5 +82,6 @@ Bestimmt, ob Datum und Uhrzeit-Analysemethoden verwenden einen angepassten Satz 
 |en-GB|5/1/2017 6:00:00|10/4/2017 6:00:00|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [\<Common Language Runtime >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
-- [\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
+- [\<Configuration >-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)

@@ -1,17 +1,17 @@
 ---
-title: Übersicht über Windows Communication Foundation-Transaktionen
+title: Übersicht über Windows-Kommunikationfoundation-Transaktionen
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF]
 - WCF, transactions
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
-ms.openlocfilehash: c58a5ebc033f75413a975e6b1de4ed71d23a141b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42276a9b450b6f0664901747239195ab13f7c44d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548481"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223107"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Übersicht über Windows-Kommunikationfoundation-Transaktionen
 Transaktionen stellen eine Möglichkeit dar, mehrere Aktionen oder Vorgänge in eine einzelne unteilbare Ausführungseinheit zu gruppieren. Eine Transaktion ist eine Auflistung von Vorgängen mit den folgenden Eigenschaften:  
@@ -20,7 +20,7 @@ Transaktionen stellen eine Möglichkeit dar, mehrere Aktionen oder Vorgänge in 
   
 -   Konsistenz. Dadurch wird sichergestellt, dass die unter einer bestimmten Transaktion vorgenommenen Änderungen eine Transformation von einem konsistenten Zustand zu einem anderen darstellen. Beispielsweise ändert eine Transaktion, bei der Geld von einem Girokonto auf ein Sparkonto überwiesen wird, die Geldmenge auf dem Bankkonto insgesamt nicht.  
   
--   Isolation Dadurch wird verhindert, dass eine Transaktion ungespeicherte Änderungen beobachtet, die zu anderen gleichzeitigen Transaktionen gehören. Isolation bietet eine Abstraktion von Parallelität und stellt gleichzeitig sicher, dass eine Transaktion keine unerwarteten Auswirkungen auf die Ausführung einer anderen Transaktion haben kann.  
+-   Isolation. Dadurch wird verhindert, dass eine Transaktion ausgecheckte Änderungen beobachtet, die zu anderen gleichzeitigen Transaktionen gehören. Isolation bietet eine Abstraktion von Parallelität und stellt gleichzeitig sicher, dass eine Transaktion keine unerwarteten Auswirkungen auf die Ausführung einer anderen Transaktion haben kann.  
   
 -   Dauerhaftigkeit. Dies bedeutet, dass Updates verwalteter Ressourcen (z. B. eines Datensatzes in einer Datenbank) nach der Ausführung bei Fehlern dauerhaft sind.  
   
@@ -41,5 +41,6 @@ Transaktionen stellen eine Möglichkeit dar, mehrere Aktionen oder Vorgänge in 
  Weitere Informationen finden Sie unter [ServiceModel-Transaktionsattribute](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ServiceModel-Transaktionsattribute](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
-- [Aktivieren des Transaktionsdatenflusses](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+- [Aktivieren des Transaktionsflusses](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)

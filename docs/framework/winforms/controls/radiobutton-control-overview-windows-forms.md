@@ -9,12 +9,12 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], determining state
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-ms.openlocfilehash: cc511a79cf70bb8df8980c8703b1ad49d15516aa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704529"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129115"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>Übersicht über das RadioButton-Steuerelement (Windows Forms)
 Windows Forms <xref:System.Windows.Forms.RadioButton> Steuerelemente enthalten eine Reihe von mindestens zwei sich gegenseitig ausschließende Auswahlmöglichkeiten für dem Benutzer. Aber Optionsfelder und Kontrollkästchen angezeigt kann auf ähnliche Weise funktionieren, es ist ein wichtiger Unterschied: Wenn ein Benutzer ein Optionsfeld auswählt, die anderen Optionsfelder in der gleichen Gruppe kann nicht ebenfalls ausgewählt sein. Im Gegensatz dazu kann eine beliebige Anzahl von Kontrollkästchen ausgewählt werden. Definieren eine Gruppe von Optionsfeldern wird dem Benutzer mitgeteilt, "Hier ist ein Satz von Optionen, die in denen Sie nur eine auswählen können."  
@@ -25,11 +25,12 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> Steuerelemente enthalten e
  Die <xref:System.Windows.Forms.RadioButton> Steuerelement angezeigt werden kann, wie eine Befehlsschaltfläche, die angezeigt wird, falls es ausgewählt wird, wenn wurden die <xref:System.Windows.Forms.RadioButton.Appearance%2A> -Eigenschaftensatz auf <xref:System.Windows.Forms.Appearance.Button>. Optionsfelder können auch anzeigen, Bilder, die mit der <xref:System.Windows.Forms.ButtonBase.Image%2A> und <xref:System.Windows.Forms.ButtonBase.ImageList%2A> Eigenschaften. Weitere Informationen finden Sie unter [Vorgehensweise: Das Bild angezeigt, die von einer Windows Forms-Steuerelement](how-to-set-the-image-displayed-by-a-windows-forms-control.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.RadioButton>
 - [Übersicht über das Panel-Steuerelement](panel-control-overview-windows-forms.md)
 - [Übersicht über das GroupBox-Steuerelement](groupbox-control-overview-windows-forms.md)
 - [Übersicht über das CheckBox-Steuerelement](checkbox-control-overview-windows-forms.md)
-- [Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Vorgehensweise: Gruppe Windows Forms-RadioButton-Steuerelementen in als Gruppe](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Vorgehensweise: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Textes](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Vorgehensweise: Gruppieren von RadioButton-Steuerelementen in Windows Forms für die Verwendung als Set](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [RadioButton-Steuerelement](radiobutton-control-windows-forms.md)

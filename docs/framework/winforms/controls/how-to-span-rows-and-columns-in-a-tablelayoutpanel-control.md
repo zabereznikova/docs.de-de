@@ -10,12 +10,12 @@ helpviewer_keywords:
 - rows [Windows Forms], spanning
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-ms.openlocfilehash: e4fc00c3966d44ba36a0c59b37ae2fa1cd431014
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2b2a46bf53dd6ec9bc93a74cca37dffaaaf79751
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703035"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193134"
 ---
 # <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>Vorgehensweise: Überspannen von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement
 Steuerelemente in einem <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement kann angrenzenden Zeilen und Spalten umfassen.  
@@ -36,4 +36,5 @@ Steuerelemente in einem <xref:System.Windows.Forms.TableLayoutPanel> Steuereleme
 5.  Legen Sie die <xref:System.Windows.Forms.Button> des Steuerelements **ColumnSpan** Eigenschaft **1**. Beachten Sie, dass die <xref:System.Windows.Forms.Button> Steuerelement in der ersten Spalte verschoben werden und umfasst die ersten und zweiten Zeile.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [TableLayoutPanel-Steuerelement](tablelayoutpanel-control-windows-forms.md)

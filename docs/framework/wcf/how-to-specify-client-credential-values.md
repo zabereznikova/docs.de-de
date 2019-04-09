@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: 110b8ffe2fb3e00d7a6787e32d066f62126ebf9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a1b2627c8e9899a122f27dc652f8c91230fed0b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617186"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225130"
 ---
 # <a name="how-to-specify-client-credential-values"></a>Vorgehensweise: Angeben der Clientanmeldeinformationswerte
 Verwenden die Windows Communication Foundation (WCF), kann der Dienst angeben, wie ein Client an den Dienst authentifiziert wird. Ein Dienst kann beispielsweise festlegen, dass der Client mit einem Zertifikat authentifiziert wird.  
@@ -92,16 +92,17 @@ Verwenden die Windows Communication Foundation (WCF), kann der Dienst angeben, w
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
 - <xref:System.ServiceModel.ClientBase%601>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [Programmieren der WCF-Sicherheit](../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
-- [Ausählen eines Anmeldeinformationentyps](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Wählen eines Typs von Anmeldeinformationen](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Arbeiten mit Zertifikaten](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [Vorgehensweise: Erstellen Sie einen Client](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [Verwenden von Zertifikaten](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Vorgehensweise: Erstellen eines Clients](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
 - [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
 - [\<message>](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)

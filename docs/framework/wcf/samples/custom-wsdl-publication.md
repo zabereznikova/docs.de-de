@@ -2,12 +2,12 @@
 title: Benutzerdefinierte WSDL-Veröffentlichung
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 211f3d80917e490748e5d0445ff3dfad9ce29047
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: beae9dfcbedabeff09f733113edbe5635d27b075
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831425"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197255"
 ---
 # <a name="custom-wsdl-publication"></a>Benutzerdefinierte WSDL-Veröffentlichung
 Dieses Beispiel demonstriert, wie Sie  
@@ -18,7 +18,7 @@ Dieses Beispiel demonstriert, wie Sie
   
 -   <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> und <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> in einem benutzerdefinierten Vertragsverhalten bzw. Vorgangsverhalten definieren, um importierte Anmerkungen als Anmerkungen in die CodeDom für den importieren Vertrag bzw. Vorgang zu schreiben.  
   
--   Verwenden der <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> zum Herunterladen des WSDL, eine <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> WSDL mit dem benutzerdefinierten WSDL-Importer importieren und die <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> zum Generieren von Windows Communication Foundation (WCF)-Clientcode mit den WSDL-Anmerkungen als / / / und ''' Kommentare in C# und Visual Basic.  
+-   Verwenden der <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> zum Herunterladen des WSDL, eine <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> WSDL mit dem benutzerdefinierten WSDL-Importer importieren und die <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> zum Generieren von Windows Communication Foundation (WCF)-Clientcode mit den WSDL-Anmerkungen als / / / und ''' Kommentare in c# und Visual Basic.  
   
 > [!NOTE]
 >  Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.  
@@ -303,4 +303,3 @@ public interface ICalculator
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
-  

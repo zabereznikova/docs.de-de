@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: c6d00271f412829cb8e030c2b9a338f73327977b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ccbb979ae7cf67dd54eb80e1d30e74078960b43d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724173"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169103"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>Exemplarische Vorgehensweise: Einfaches Objektmodell und Abfrage (Visual Basic)
 Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mit minimaler Komplexität bereit. Sie erstellen eine Entitätsklasse, die die Customers-Tabelle in der Beispieldatenbank Northwind modelliert. Sie erstellen dann eine einfache Abfrage, um Kunden aus London aufzulisten.  
@@ -91,7 +91,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 -   Sie legen die `CustomerID`-Eigenschaft zur Darstellung einer Primärschlüsselspalte in der Datenbank fest.  
   
--   Sie legen `_CustomerID`- und `_City`-Felder für den privaten Speicher fest. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kann Werte dann direkt speichern und abrufen, statt öffentliche Accessoren zu verwenden, die möglicherweise Geschäftslogik umfassen.  
+-   Sie legen `_CustomerID`- und `_City`-Felder für den privaten Speicher fest. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Speichern und können Werte direkt abrufen, statt öffentliche Accessoren, die möglicherweise Geschäftslogik umfassen.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>So stellen Sie Eigenschaften von zwei Datenbankspalten dar  
   
@@ -153,4 +153,5 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
  Wenn Sie die exemplarische Vorgehensweise zu beziehungsübergreifenden Abfragen absolvieren möchten, stellen Sie sicher, dass Sie die gerade erstellte Lösung speichern, da diese benötigt wird.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

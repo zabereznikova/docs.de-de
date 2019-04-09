@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1887d31d-7006-4491-93b3-68fd5b05f71d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f125d322a5a3e2841d6b1ba1f2f8d5fe9745870
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb42c04df6e02ff43421b7af6bf2d51b53aa3e69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569702"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181974"
 ---
 # <a name="disconnectedcontext-mda"></a>disconnectedContext-MDA
 Der `disconnectedContext`-Assistent für verwaltetes Debuggen (MDA) wird aktiviert, wenn die CLR versucht, einen Übergang zu einem getrennten Apartment oder Kontext durchzuführen, während gerade eine Anforderung für ein COM-Objekt verarbeitet wird.  
@@ -27,13 +27,13 @@ Der `disconnectedContext`-Assistent für verwaltetes Debuggen (MDA) wird aktivie
 ## <a name="cause"></a>Ursache  
  Das OLE-Apartment oder der OLE-Kontext wurde heruntergefahren, als die CLR versucht hat, darin überzugehen. Dies wird meist durch STA-Apartments verursacht, die heruntergefahren werden, bevor alle COM-Komponenten, die im Besitz des Apartments sind, vollständig freigegeben wurden. Dies kann als Ergebnis eines expliziten Aufrufs aus Benutzercode von einem RCW auftreten, oder während die CLR selbst die COM-Komponente manipuliert, z. B. wenn die CLR die COM-Komponente freigibt, nachdem für den zugeordneten RCW eine Garbage Collection durchgeführt wurde.  
   
-## <a name="resolution"></a>Lösung  
+## <a name="resolution"></a>Auflösung  
  Um dieses Problem zu vermeiden, stellen Sie sicher, dass der Thread, der das STA besitzt, nicht beendet wird, bevor die Anwendung mit allen Objekten fertig ist, die in diesem Apartment vorhanden sind. Dasselbe gilt für Kontexte. Stellen Sie sicher, dass Kontexte nicht heruntergefahren werden, bevor die Anwendung mit allen COM-Komponenten vollständig fertig ist, die in diesem Kontext vorhanden sind.  
   
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Dieser MDA hat keine Auswirkungen auf die CLR. Es werden nur Daten zu dem getrennten Kontext gemeldet.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Meldet das Kontextcookie des getrennten Apartments oder Kontexts.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -47,6 +47,7 @@ Der `disconnectedContext`-Assistent für verwaltetes Debuggen (MDA) wird aktivie
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Interop-Marshalling](../../../docs/framework/interop/interop-marshaling.md)

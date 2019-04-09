@@ -2,12 +2,12 @@
 title: Objektzustände und Änderungsverfolgung
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 89e9f44a6cd3579a5ef9cc2078609ca26e0d2ae5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683309"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191154"
 ---
 # <a name="object-states-and-change-tracking"></a>Objektzustände und Änderungsverfolgung
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Objekte weisen stets in einigen *Zustand*. Wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] z. B. ein neues Objekt erstellt, befindet sich dieses im `Unchanged`-Zustand. Ein neues Objekt, das Sie selbst erstellen, ist unbekannt, um die <xref:System.Data.Linq.DataContext> und befindet sich im `Untracked` Zustand. Nach der erfolgreichen Ausführung von <xref:System.Data.Linq.DataContext.SubmitChanges%2A> befinden sich alle [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bekannten Objekte im `Unchanged`-Zustand. (Die einzige Ausnahme besteht in Objekten, die erfolgreich aus der Datenbank gelöscht wurden und sich im `Deleted`-Zustand befinden, weshalb sie für die <xref:System.Data.Linq.DataContext>-Instanz nicht nutzbar sind.)  
@@ -63,5 +63,6 @@ ms.locfileid: "54683309"
  Wenn Sie den erforderlichen Verweis und den entsprechenden Fremdschlüssel aktualisieren, müssen Sie deren Übereinstimmung sicherstellen. Eine <xref:System.InvalidOperationException>-Ausnahme wird ausgelöst, wenn die beiden Elemente zum Zeitpunkt des Aufrufs von <xref:System.Data.Linq.DataContext.SubmitChanges%2A> nicht synchron sind. Obwohl die Werte von Fremdschlüsseln für ein Update der zugrunde liegenden Zeile ausreichen, müssen Sie die Referenz ändern, um die Konnektivität des Objektgraphen und die bidirektionale Konsistenz von Beziehungen zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [Insert-, Update- und Delete-Operationen](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

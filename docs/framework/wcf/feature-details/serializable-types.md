@@ -2,12 +2,12 @@
 title: Serialisierbare Typen
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: 0fe29d2eb2b50d2515d71745bc062255dbfb60ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608049"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160848"
 ---
 # <a name="serializable-types"></a>Serialisierbare Typen
 Standardmäßig serialisiert der <xref:System.Runtime.Serialization.DataContractSerializer> alle öffentlich sichtbaren Typen. Alle öffentlichen Lese-/Schreibeigenschaften und Felder des Typs werden serialisiert.  
@@ -27,7 +27,7 @@ Standardmäßig serialisiert der <xref:System.Runtime.Serialization.DataContract
   
 -   Schreibgeschützte Felder, Eigenschaften ohne `get`- oder `set`-Methode sowie Eigenschaften mit interner oder privater `set`- oder `get`-Methode werden nicht serialisiert. Diese Eigenschaften werden ignoriert, und es wird keine Ausnahme ausgelöst. Ausgenommen hiervon sind get-exklusive Auflistungen.  
   
--   <xref:System.Xml.Serialization.XmlSerializer>Attribute (beispielsweise `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude` usw.) werden ignoriert.  
+-   <xref:System.Xml.Serialization.XmlSerializer> Attribute (z. B. `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`usw.) werden ignoriert.  
   
 -   Wird das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut nicht auf einen angegebenen Typ angewendet, ignoriert der Serialisierer jeden Member des Typs, auf den das <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut angewendet wurde.  
   
@@ -39,6 +39,7 @@ Standardmäßig serialisiert der <xref:System.Runtime.Serialization.DataContract
  Nicht markierte Typen (Typen ohne <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut) können von Typen erben, die dieses Attribut besitzen. Der umgekehrte Vorgang ist jedoch nicht möglich: Typen mit diesem Attribut können nicht von nicht markierten Typen erben. Diese Regel wird in erster Linie deshalb erzwungen, um die Abwärtskompatibilität mit in früheren Versionen von [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] geschriebenem Code sicherzustellen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>

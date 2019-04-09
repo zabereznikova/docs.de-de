@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], From/to/by
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-ms.openlocfilehash: 40a37542d6151d05910bc033657d85c6a9f5483b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362759"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209150"
 ---
 # <a name="fromtoby-animations-overview"></a>Übersicht über From/To/By-Animationen
 Dieses Thema beschreibt, wie Sie From/To/By-Animationen verwenden, um Abhängigkeitseigenschaften zu animieren. Eine From/To/By-Animation erstellt einen Übergang zwischen zwei Werten.  
@@ -36,11 +36,11 @@ Dieses Thema beschreibt, wie Sie From/To/By-Animationen verwenden, um Abhängigk
   
  From/To/By-Animationsklassen gehören zum die <xref:System.Windows.Media.Animation> Namespace und verwenden Sie die folgende Benennungskonvention verwendet:  
   
- *\<Typ>* `Animation`  
+ *\<Type>* `Animation`  
   
  Wobei *\<Typ>* der Wertetyp ist, den die Klasse animiert.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt die folgenden From/To/By-Animationsklassen zur Verfügung.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet die folgenden From/To/By-Animationsklassen.  
   
 |Eigenschaftentyp|Entsprechende From/To/By-Animationsklassen|  
 |-------------------|------------------------------------------------|  
@@ -138,9 +138,10 @@ Dieses Thema beschreibt, wie Sie From/To/By-Animationen verwenden, um Abhängigk
   
 -   Eine Pfadanimation generiert Ausgabewerte aus einem <xref:System.Windows.Media.PathGeometry>. Weitere Informationen finden Sie unter den [Übersicht über Pfadanimationen](path-animations-overview.md).  
   
- Mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können Sie außerdem Ihre eigenen benutzerdefinierten Animationstypen erstellen. Weitere Informationen finden Sie unter den [Übersicht über benutzerdefinierte Animationen](custom-animations-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Außerdem können Sie Ihre eigenen benutzerdefinierten Animationstypen erstellen. Weitere Informationen finden Sie unter den [Übersicht über benutzerdefinierte Animationen](custom-animations-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Animation.Timeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - [Übersicht über Animationen](animation-overview.md)
@@ -148,4 +149,4 @@ Dieses Thema beschreibt, wie Sie From/To/By-Animationen verwenden, um Abhängigk
 - [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)
 - [Übersicht über Pfadanimationen](path-animations-overview.md)
 - [Übersicht über benutzerdefinierte Animationen](custom-animations-overview.md)
-- [From, To, and By Animation Target Values Sample (Beispiel für From-, To- und By-Animationszielwerte)](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [Aus, To und By Animation Target Values Sample](https://go.microsoft.com/fwlink/?LinkID=159988)

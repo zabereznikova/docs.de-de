@@ -8,18 +8,16 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: 578c8061271e08e4eac1ec5f11c84e63a3fa37bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbb3c413148bd2e2ab8de8a1a725f2d9a8acf2f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190629"
 ---
 # <a name="3-d-transformations-overview"></a>Übersicht über 3D-Transformationen
 In diesem Thema wird beschrieben, wie Transformationen im [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Grafiksystem auf 3D-Modelle angewendet werden. Mit Transformationen können Entwickler die Position und Größe von Modellen ändern und sie neu ausrichten, ohne die Basiswerte zu verändern, die sie definieren.  
-  
 
-  
 ## <a name="3-d-coordinate-space"></a>3D-Koordinatenbereich  
  In Inhalte von 3D-Grafiken [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] in ein Element gekapselt <xref:System.Windows.Controls.Viewport3D>, kann das Teil einer zweidimensionalen Elementstruktur sein. Das Grafiksystem behandelt Viewport3D als ein zweidimensionales visuelles Objekt, wie viele andere auch in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Viewport3D fungiert als Fenster – ein Anzeigebereich – in eine dreidimensionale Szene. Genauer gesagt handelt es sich um eine Oberfläche, auf die eine 3D-Szene projiziert wird.  Obwohl Sie Viewport3D mit anderen 2D-Zeichenobjekten im selben Szenegraphen verwenden können, können Sie keine 2D- und 3D-Objekte in Viewport3D durchdringen. In der folgenden Erläuterung ist der beschriebene Koordinatenraum im Viewport3D-Element enthalten.  
   
@@ -106,6 +104,7 @@ Rotationsbeispiele
  Da Kameras auch Modelle sind, können Kameraeigenschaften ebenfalls transformiert werden.  Sie können zwar die Darstellung der Szene durch die Transformation der Kameraposition oder der Ebenenabstände (also die Projektion der gesamten Szene) ändern, allerdings ergeben viele der so erzielten Effekte als auf die Modellposition angewendete Transformationen optisch kaum Sinn für den Zuschauer.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über 3D-Grafiken](3-d-graphics-overview.md)
 - [Übersicht über Transformationen](transforms-overview.md)
 - [Beispiel für 2D-Transformationen](https://go.microsoft.com/fwlink/?LinkID=158252)

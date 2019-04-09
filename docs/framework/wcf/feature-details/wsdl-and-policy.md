@@ -2,12 +2,12 @@
 title: WSDL und Richtlinie
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151904"
 ---
 # <a name="wsdl-and-policy"></a>WSDL und Richtlinie
 Dieses Thema behandelt die Windows Communication Foundation (WCF)-WSDL 1.1, WS-Policy und WS-PolicyAttachment-Implementierungsdetails, sowie zusätzliche WS-Richtlinienassertionen und WSDL 1.1-Erweiterungen, die von WCF eingeführt.  
@@ -55,7 +55,7 @@ Dieses Thema behandelt die Windows Communication Foundation (WCF)-WSDL 1.1, WS-P
 |Richtlinienassertion|Richtliniensubjekt|Beschreibung|  
 |----------------------|--------------------|-----------------|  
 |http:HttpBasicAuthentication|Endpunkt|Endpunkt verwendet die HTTP-Standardauthentifizierung.|  
-|http:HttpDigestAuthentication|Endpunkt|Endpunkt verwendet die HTTP-Digestauthentifizierung.|  
+|http:HttpDigestAuthentication|Endpunkt|Endpunkt verwendet die HTTP-Hashwertauthentifizierung.|  
 |http:HttpNegotiateAuthentication|Endpunkt|Endpunkt verwendet die HTTP-Negotiate-Authentifizierung.|  
 |http:HttpNtlmAuthentication|Endpunkt|Endpunkt verwendet die HTTP-NTLM-Authentifizierung.|  
 |msf:Streamed|Endpunkt|Endpunkt verwendet Stream-Nachrichtenrahmen. Diese Assertion wird mit dem für Transporte wie TCP bereitgestellten Message Framing-Protokoll und benannte Pipes verwendet.|  
@@ -73,6 +73,7 @@ Dieses Thema behandelt die Windows Communication Foundation (WCF)-WSDL 1.1, WS-P
 |mssp:RequireClientCertificate|Geschachtelt|Dieses optionale Element gibt die Anforderung an, dass ein Clientzertifikat als Teil des TLSNEGO-Protokolls bereitgestellt wird. Wenn diese Assertion vorhanden ist, muss ein Clientzertifikat bereitgestellt werden. Wenn diese Assertion nicht vorhanden ist, darf kein Clientzertifikat bereitgestellt werden. Diese Assertion darf nicht außerhalb von mssp:SslContextToken verwendet werden.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Benutzerdefinierte WSDL-Veröffentlichung](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [Vorgehensweise: Exportieren von benutzerdefinierter WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [Vorgehensweise: Benutzerdefinierte WSDL importieren](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [Vorgehensweise: Exportieren von benutzerdefinierten WSDL-Informationen](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [Vorgehensweise: Importieren von benutzerdefinierten WSDL-Informationen](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

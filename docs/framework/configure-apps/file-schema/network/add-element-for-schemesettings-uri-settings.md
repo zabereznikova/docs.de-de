@@ -1,13 +1,13 @@
 ---
-title: <add>-Element für schemeSettings (URI-Einstellungen)
+title: <add> -Element für SchemeSettings (Uri-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 672d279f35db64bec7f5b26bd1930d7048c406f1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e7606a1185d406384a926ca4dcb7c42586461574
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279582"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139931"
 ---
 # <a name="add-element-for-schemesettings-uri-settings"></a>\<Hinzufügen >-Element für SchemeSettings (Uri-Einstellungen)
 Fügt eine Schema-Einstellung für ein Schemaname.  
@@ -42,13 +42,13 @@ Fügt eine Schema-Einstellung für ein Schemaname.
 |genericUriParserOptions|Die Parseroptionen für dieses Schema. Der nur unterstützte Wert GenericUriParserOptions ist = "DontUnescapePathDotsAndSlashes".|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<schemeSettings>-Element (URI-Einstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.|  
+|[\<SchemeSettings >-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.|  
   
 ## <a name="remarks"></a>Hinweise  
  In der Standardeinstellung die <xref:System.Uri?displayProperty=nameWithType> Klasse un-Escapezeichen % codiert Pfadtrennzeichen vor dem Ausführen der Path-Komprimierung. Dies wurde als Sicherheitsmechanismus vor Angriffen wie folgt implementiert:  
@@ -82,10 +82,11 @@ Fügt eine Schema-Einstellung für ein Schemaname.
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

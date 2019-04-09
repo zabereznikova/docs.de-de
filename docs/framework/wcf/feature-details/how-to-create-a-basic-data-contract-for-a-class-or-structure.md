@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataContractAttribute class
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-ms.openlocfilehash: 29105b7f3177403aacf5f8e628f2dceda4e26354
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b46273c468891aa2b18c04adc1ee035c98255ded
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747868"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220512"
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>Vorgehensweise: Erstellen eines grundlegenden Datenvertrags für eine Klasse oder Struktur
 In diesem Thema werden die grundlegenden Schritte zum Erstellen eines Datenvertrags mithilfe einer Klasse oder Struktur beschrieben. Weitere Informationen über Datenverträge und deren Verwendung finden Sie unter [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -37,8 +37,9 @@ In diesem Thema werden die grundlegenden Schritte zum Erstellen eines Datenvertr
  [!code-vb[DataContractAttribute#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/datacontractattribute/vb/overview.vb#2)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Tutorial mit ersten Schritten](../../../../docs/framework/wcf/getting-started-tutorial.md)
+- [Lernprogramm 'Erste Schritte'](../../../../docs/framework/wcf/getting-started-tutorial.md)
 - [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md)

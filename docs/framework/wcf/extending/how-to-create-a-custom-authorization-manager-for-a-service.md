@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 571c1d66bcf1ea62972eb1be3fd694964581db38
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 6a168902b79bd27345c9d9e2371947cc9d64233c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156493"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst
 Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) unterstützt eine erweiterbare anspruchsbasierte Autorisierung-Modell. Ansprüche werden aus Token extrahiert, wahlweise mit benutzerdefinierten Autorisierungsrichtlinien verarbeitet und dann in einem <xref:System.IdentityModel.Policy.AuthorizationContext> platziert. Die Ansprüche im <xref:System.IdentityModel.Policy.AuthorizationContext> werden von einem Autorisierungs-Manager geprüft und als Grundlage für Autorisierungsentscheidungen herangezogen.  
@@ -33,7 +33,7 @@ Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) unt
      [!code-csharp[c_CustomAuthMgr#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#5)]
      [!code-vb[c_CustomAuthMgr#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#5)]  
   
-2.  Überschreiben Sie die <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> -Methode.  
+2.  Überschreiben Sie die <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29>-Methode.  
   
      Verwenden Sie den an die <xref:System.ServiceModel.OperationContext>-Methode übergebenen <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29>, um Autorisierungsentscheidungen zu fällen.  
   
@@ -118,5 +118,6 @@ Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) unt
  [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [Autorisierungsrichtlinie](../../../../docs/framework/wcf/samples/authorization-policy.md)

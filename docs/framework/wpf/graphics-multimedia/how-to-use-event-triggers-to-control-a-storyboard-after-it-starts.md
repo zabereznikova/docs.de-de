@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event triggers [WPF], controlling Storyboards
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-ms.openlocfilehash: d0b25f56caf3f25b6e649c05ecf1cbe50046dd93
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d444349f8bc9236e1d15f484f35b1326c77e2425
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362369"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170650"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>Vorgehensweise: Verwenden von Ereignistriggern zum Steuern eines Storyboards nach dessen Start
 Dieses Beispiel zeigt, wie Sie steuern eine <xref:System.Windows.Media.Animation.Storyboard> nachdem es gestartet wurde. Starten einer <xref:System.Windows.Media.Animation.Storyboard> mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], verwenden Sie <xref:System.Windows.Media.Animation.BeginStoryboard>, das verteilt der Animationen an die Objekte und Eigenschaften, die sie animieren, und klicken Sie dann das Storyboard gestartet wird. Wenn Sie geben <xref:System.Windows.Media.Animation.BeginStoryboard> einen Namen durch Angabe der <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> -Eigenschaft, Sie machen es ein steuerbares Storyboard. Sie können das Storyboard dann interaktiv steuern, nachdem es gestartet wurde.  
@@ -40,6 +40,7 @@ Dieses Beispiel zeigt, wie Sie steuern eine <xref:System.Windows.Media.Animation
  Weitere Beispiele finden Sie unter den [Beispielsammlung](https://go.microsoft.com/fwlink/?LinkID=159969).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Animation.ResumeStoryboard>
 - <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>
 - <xref:System.Windows.Media.Animation.SkipStoryboardToFill>

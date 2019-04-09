@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anzeigen von Fehlersymbolen für die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms'
+title: 'Vorgehensweise: Anzeigen von Fehlersymbolen für die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: f676454849c37da8c0a5f944be05c3f6c95887b4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 39dd77fee36b172f6c38746bfe970094ec9edb4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707637"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223549"
 ---
-# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Vorgehensweise: Anzeigen von Fehlersymbolen für die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms
+# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Vorgehensweise: Anzeigen von Fehlersymbolen für die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms
 Sie können ein Windows Forms <xref:System.Windows.Forms.ErrorProvider> Komponente, um ein Fehlersymbol angezeigt wird, wenn der Benutzer unzulässige Daten eingibt. Sie müssen mindestens zwei Steuerelemente im Formular aus, um zwischen diesen gewechselt und aufgerufen Validierungscode verfügen.  
   
 ### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>Um ein Fehlersymbol angezeigt wird, wenn der Wert eines Steuerelements ungültig ist.  
@@ -93,6 +93,7 @@ Sie können ein Windows Forms <xref:System.Windows.Forms.ErrorProvider> Komponen
 4.  Führen Sie das Projekt aus. Geben Sie (in diesem Beispiel nicht numerischen) ungültige Daten in das erste Steuerelement, und klicken Sie dann die zweite Registerkarte. Wenn das Symbol "Fehler" angezeigt wird, stellen Sie den Mauszeiger an den Fehlertext finden Sie unter.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
 - [Übersicht über die ErrorProvider-Komponente](errorprovider-component-overview-windows-forms.md)
-- [Vorgehensweise: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider-Komponente in Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [Vorgehensweise: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider-Komponente in Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

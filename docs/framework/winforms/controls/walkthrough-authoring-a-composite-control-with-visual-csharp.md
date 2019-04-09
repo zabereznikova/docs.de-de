@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C#'
+title: 'Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C#'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [C#]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 48d29c12407f7364794040f4fccd351156244a69
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2f8c295e961fdf62a14b7e63ab990e8f99379cfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723633"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177376"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual C\#
 Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefinierte grafische Schnittstellen erstellt und wiederverwendet werden können. Ein zusammengesetztes Steuerelement ist im wesentlichen eine Komponente mit visueller Darstellung. Daher können zusammengesetzte Steuerelemente aus einem oder mehr Windows Forms-Steuerelementen, Komponenten oder Codeblöcken bestehen. Diese erweitern die Funktionalität durch Validieren von Benutzereingaben, verändern Anzeigeeigenschaften oder führen andere vom Autor gewünschte Aufgaben aus. Zusammengesetzte Steuerelemente können genau wie andere Steuerelemente in Windows Forms platziert werden. Im ersten Teil dieser exemplarischen Vorgehensweise erstellen Sie ein einfaches zusammengesetztes Steuerelement namens `ctlClock`. Im zweiten Teil der exemplarischen Vorgehensweise erweitern Sie die Funktionalität von `ctlClock` durch Vererbung.  
@@ -30,7 +30,7 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
   
 2.  Wählen Sie aus der Liste der Visual C#-Projekten, die **Windows Forms-Steuerelementbibliothek** Projekt aus, geben `ctlClockLib` in die **Namen** ein, und klicken Sie dann auf **OK**.  
   
-     Der Projektname `ctlClockLib` wird standardmäßig auch dem Stammnamespace zugewiesen. Der Stammnamespace wird verwendet, um die Namen der Komponenten in der Assembly zu qualifizieren. Wenn z.B. zwei Assemblys Komponenten mit dem Namen `ctlClock` bereitstellen, können Sie Ihre `ctlClock`-Komponente mithilfe von `ctlClockLib.ctlClock.` überprüfen.  
+     Der Projektname `ctlClockLib` wird standardmäßig auch dem Stammnamespace zugewiesen. Der Stammnamespace wird verwendet, um die Namen der Komponenten in der Assembly zu qualifizieren. Angenommen, zwei Assemblys Komponenten mit dem Namen bereitstellen `ctlClock`, können Sie angeben, Ihre `ctlClock` Komponente `ctlClockLib.ctlClock.`  
   
 3.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **UserControl1.cs**, und klicken Sie dann auf **Umbenennen**. Ändern Sie den Dateinamen in `ctlClock.cs`. Klicken Sie auf die Schaltfläche **Ja**, wenn Sie gefragt werden, ob alle Verweise auf das Codeelement „UserControl1“ umbenannt werden sollen.  
   
@@ -250,7 +250,7 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
     |**Name**|`lblAlarm`|  
     |**Text**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
-    |**Visible**|`false`|  
+    |**Sichtbar**|`false`|  
   
 ### <a name="adding-the-alarm-functionality"></a>Hinzufügen der Wecker-Funktionalität  
  In den vorherigen Schritten haben Sie Eigenschaften und ein Steuerelement hinzugefügt, dass die Wecker-Funktionalität in Ihrem zusammengesetzten Steuerelement aktiviert. In diesem Verfahren fügen Sie Code hinzu, um die aktuelle Zeit mit der Weckzeit zu vergleichen, und bei Gleichheit einen Wecker auszulösen. Durch Überschreiben der Methode `timer1_Tick` von `ctlClock` und Hinzufügen von zusätzlichem Code erweitern Sie die Funktion von `ctlAlarmClock`, während alle geerbten Funktionen von `ctlClock` erhalten bleiben.  
@@ -405,6 +405,7 @@ Zusammengesetzte Steuerelemente bieten eine Möglichkeit, mit der benutzerdefini
      In dieser exemplarischen Vorgehensweise wurden zahlreiche wichtige Konzepte behandelt. Sie haben gelernt, ein zusammengesetztes Steuerelement zu erstellen, indem Sie Steuerelemente und Komponenten in einem Container für zusammengesetzte Steuerelemente kombiniert haben. Sie haben gelernt, Eigenschaften zu Ihrem Steuerelement hinzuzufügen und Code für das Implementieren benutzerdefinierter Funktionalität zu schreiben. Im letzten Abschnitt haben Sie gelernt, die Funktionalität eines bestimmten zusammengesetzten Steuerelements durch Vererbung zu erweitern und die Funktionalität von Host-Methoden durch außer Kraft setzen dieser Methoden zu ändern.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](varieties-of-custom-controls.md)
-- [Vorgehensweise: Anzeigen eines Steuerelements in der Toolbox-Elemente-Dialogfeld "auswählen"](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit visuellen ElementC#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+
+- [Arten von benutzerdefinierten Steuerelementen](varieties-of-custom-controls.md)
+- [Vorgehensweise: Anzeigen eines Steuerelements im Dialogfeld „Toolboxelemente auswählen“](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

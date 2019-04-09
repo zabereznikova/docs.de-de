@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 996f9af1bccb446ad4fcc6faec60b88e511262de
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c6a30dff869075a201a669d1e703bc003b011fc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474280"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196280"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>ISymUnmanagedVariable::GetStartOffset-Methode
 Ruft den Anfangsoffset dieser Variablen in seinem übergeordneten Element ab. Wenn dies eine lokale Variable innerhalb eines Bereichs ist, greift der Anfangsoffset innerhalb der Offsets für den Bereich definiert.  
@@ -45,5 +45,6 @@ HRESULT GetStartOffset(
  **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ISymUnmanagedVariable-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
 - [GetEndOffset-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)

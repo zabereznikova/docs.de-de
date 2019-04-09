@@ -2,19 +2,19 @@
 title: Übersicht über den erweiterten Schutz für die Authentifizierung
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: 5eb9e07bfd80e325a5223e6a7c6108134c4a3faa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b171644c3869df119f09ee4815a06563c4f2c160
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647809"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183676"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Übersicht über den erweiterten Schutz für die Authentifizierung
 Der erweiterte Schutz für die Authentifizierung schützt gegen sog. Man-In-The-Middle (MITM)-Angriffe, bei denen die Anmeldeinformationen eines Clients von einem Angreifer abgefangen und an einen Server weitergeleitet werden.  
   
  Betrachten wir ein Szenario mit drei Teilnehmern: einem Client, einem Server und einem Angreifer. Der Server weist die URL `https://server` auf, wohingegen der Angreifer die URL `https://attacker` verwendet. Der Angreifer gibt sich gegenüber dem Client als Server aus. Anschließend sendet der Angreifer eine Anfrage an den Server. Versucht der Angreifer auf eine sichere Ressource zuzugreifen, antwortet der Server dem Angreifer mit einem WWW-Authentifizierungsheader. Der Angreifer verfügt jedoch nicht über die Authentifizierungsinformationen. Daher sendet er den WWW-Authentifizierungsheader an den Client. Der Client sendet den Authentifizierungsheader an den Angreifer, und der Angreifer sendet den Header an den Server, wodurch er mit den Anmeldeinformationen des Clients Zugriff auf sichere Ressourcen erhält.  
   
- Aktuell wird zunächst ein Transport Level Security (TLS)-Kanal eingerichtet und eine Authentifizierung über diesen Kanal durchgeführt, wenn sich eine Clientanwendung mit Kerberos, Digest oder NTLM mit HTTPS im Server authentifiziert. Zwischen dem von Secure Sockets Layer (SSL) und dem bei der Authentifizierung erstellten Sitzungsschlüssel besteht jedoch keine Bindung. Wenn also im genannten Szenario über TLS (z. B. ein HTTPS-Kanal) kommuniziert wird, werden zwei SSL-Kanäle erstellt: einer zwischen dem Client und dem Angreifer und ein weiterer zwischen dem Angreifer und dem Server. Die Anmeldeinformationen des Clients werden zunächst über den SSL-Kanal zwischen dem Client und dem Angreifer und anschließend über den Kanal zwischen dem Angreifer und dem Server vom Client an den Server gesendet. Nachdem die Anmeldeinformationen des Clients vom Server empfangen wurden, werden die Anmeldeinformationen vom Server geprüft. Dabei bemerkt der Server nicht, dass der Kanal, über den die Anmeldeinformationen gesendet wurden, zum Angreifer und nicht zum Client führt.  
+ Aktuell wird zunächst ein Transport Level Security (TLS)-Kanal eingerichtet und eine Authentifizierung über diesen Kanal durchgeführt, wenn sich eine Clientanwendung mit Kerberos, Hashwert oder NTLM mit HTTPS im Server authentifiziert. Zwischen dem von Secure Sockets Layer (SSL) und dem bei der Authentifizierung erstellten Sitzungsschlüssel besteht jedoch keine Bindung. Wenn also im genannten Szenario über TLS (z. B. ein HTTPS-Kanal) kommuniziert wird, werden zwei SSL-Kanäle erstellt: einer zwischen dem Client und dem Angreifer und ein weiterer zwischen dem Angreifer und dem Server. Die Anmeldeinformationen des Clients werden zunächst über den SSL-Kanal zwischen dem Client und dem Angreifer und anschließend über den Kanal zwischen dem Angreifer und dem Server vom Client an den Server gesendet. Nachdem die Anmeldeinformationen des Clients vom Server empfangen wurden, werden die Anmeldeinformationen vom Server geprüft. Dabei bemerkt der Server nicht, dass der Kanal, über den die Anmeldeinformationen gesendet wurden, zum Angreifer und nicht zum Client führt.  
   
  Die Lösung besteht in der Verwendung eines TLS-gesicherten Außenkanals und eines clientauthentifizierten Innenkanals und der Übergabe eines Kanalbindungstokens (CBT) an den Server. Die CBT ist eine Eigenschaft des CBT-gesicherten Außenkanals und wird zur Bindung des Außenkanals an eine Konversation über den clientauthentifizierten Innenkanal verwendet.  
   
@@ -33,4 +33,5 @@ Der erweiterte Schutz für die Authentifizierung schützt gegen sog. Man-In-The-
  Weitere Informationen finden Sie im Beispiel zu Win7 CBT/Erweiterter Schutz.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

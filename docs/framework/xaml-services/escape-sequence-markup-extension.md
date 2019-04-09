@@ -11,14 +11,14 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: eaee0a1f92d8b7cb3810651eda21f1cc800ebf57
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 9f6743dd8a82891ac2233978550e5679130de0be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58018548"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182069"
 ---
-# <a name="-escape-sequence--markup-extension"></a>{} Escapesequenz / Markuperweiterung
+# <a name="-escape-sequence--markup-extension"></a>{}-Escapesequenz/Markuperweiterung
 Stellt die XAML-Escapesequenz für Attributwerte bereit. Die-Escapesequenz kann nachfolgende Werte im Attribut als Literal interpretiert werden soll.  
   
 ## <a name="xaml-attribute-usage"></a>Verwendung von XAML-Attributen  
@@ -59,5 +59,6 @@ Stellt die XAML-Escapesequenz für Attributwerte bereit. Die-Escapesequenz kann 
  [!code-xaml[XLINQExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Typkonverter und Markuperweiterungen für XAML](type-converters-and-markup-extensions-for-xaml.md)
 - [XML-Zeichenentitäten und XAML](xml-character-entities-and-xaml.md)

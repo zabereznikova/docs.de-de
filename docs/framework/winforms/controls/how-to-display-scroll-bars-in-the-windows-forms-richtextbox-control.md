@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Anzeigen von Bildlaufleisten in der Windows Forms-RichTextBox-Steuerelement'
+title: 'Vorgehensweise: Anzeigen von Scrollleisten im RichTextBox-Steuerelement von Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - text boxes [Windows Forms], displaying scroll bars
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 119cf736dfa7b8b8fce57b7e8fcb24dd09f01ce0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 52c33239524e76bc26b9b2375578aa46bff51bf6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142557"
 ---
-# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Anzeigen von Bildlaufleisten in der Windows Forms-RichTextBox-Steuerelement
+# <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Anzeigen von Scrollleisten im RichTextBox-Steuerelement von Windows Forms
 Standardmäßig wird die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> -Steuerelement zeigt die horizontale und vertikale Bildlaufleisten nach Bedarf. Es gibt sieben mögliche Werte für die <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> Eigenschaft der <xref:System.Windows.Forms.RichTextBox> -Steuerelement, das in der folgenden Tabelle beschrieben werden.  
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>Zum Anzeigen von Bildlaufleisten im RichTextBox-Steuerelement  
@@ -40,7 +40,8 @@ Standardmäßig wird die Windows-Formulare <xref:System.Windows.Forms.RichTextBo
     |`true` (Standard)|Text im Steuerelement wird automatisch angepasst, um die Breite des Steuerelements passt. Die horizontale Bildlaufleiste wird nicht angezeigt. Verwenden Sie diesen Wert, wenn Sie vertikale Bildlaufleisten oder none, oben, einen oder mehrere Absätze anzeigen.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox-Steuerelement](richtextbox-control-windows-forms.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

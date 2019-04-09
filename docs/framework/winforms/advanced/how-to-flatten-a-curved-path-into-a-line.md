@@ -8,12 +8,12 @@ helpviewer_keywords:
 - paths [Windows Forms], flattening
 - drawing [Windows Forms], flattening curves
 ms.assetid: e654b8de-25f4-4735-9208-42e4514a589c
-ms.openlocfilehash: d4847124c7af2e0b35d6874f53b85be4891b22df
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a151b4244e14d3704fd5fa1c55de92211981232f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711043"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215156"
 ---
 # <a name="how-to-flatten-a-curved-path-into-a-line"></a>Vorgehensweise: Abflachen eines Kurvenpfads zu einer Linie
 Ein <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt speichert eine Sequenz von Zeilen und Béziersplinekurven. Sie können mehrere Typen von Kurven (Ellipsen, Bögen kardinale Splinekurven) in einen Pfad hinzufügen, aber jede Kurve wird in eine Béziersplinekurve konvertiert, bevor er im Pfad gespeichert wird. Reduzieren einen Pfad besteht aus einzelnen Béziersplinekurve im Pfad in eine Sequenz von geraden Linien konvertieren. Die folgende Abbildung zeigt einen Pfad an, vor und nach der Vereinfachung.  
@@ -25,6 +25,7 @@ Ein <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt speichert eine Sequenz v
 -   Rufen Sie die <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> Methode eine <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt. Die <xref:System.Drawing.Drawing2D.GraphicsPath.Flatten%2A> -Methode empfängt ein Flachheitsargument, das den maximalen Abstand zwischen den abgeflachten Pfad und den ursprünglichen Pfad angibt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
 - [Linien, Kurven und Formen](lines-curves-and-shapes.md)
 - [Erstellen und Zeichnen von Pfaden](constructing-and-drawing-paths.md)

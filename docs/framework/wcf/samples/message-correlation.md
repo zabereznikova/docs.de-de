@@ -2,15 +2,15 @@
 title: Nachrichtenkorrelation
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: f60d34ba7348b75f10be326319738fd1555d42df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8db7793064cb94b21feee73353b9ab5e40290fb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520658"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157767"
 ---
 # <a name="message-correlation"></a>Nachrichtenkorrelation
-In diesem Beispiel wird veranschaulicht, wie eine Anwendung für Message Queuing (MSMQ) eine MSMQ-Nachricht an einen Windows Communication Foundation (WCF)-Dienst senden kann und wie Nachrichten zwischen Sender- und empfängeranwendungen in einem Anforderungs-/Antwort-Szenario korreliert werden können. In diesem Beispiel wird die msmqIntegrationBinding-Bindung verwendet. Der Dienst ist in diesem Fall eine selbst gehostete Konsolenanwendung, sodass Sie den Dienst beobachten können, der Nachrichten in Warteschlangen empfängt. c  
+In diesem Beispiel wird veranschaulicht, wie eine Anwendung für Message Queuing (MSMQ) eine MSMQ-Nachricht an einen Windows Communication Foundation (WCF)-Dienst senden kann und wie Nachrichten zwischen Sender- und empfängeranwendungen in einem Anforderungs-/Antwort-Szenario korreliert werden können. In diesem Beispiel wird die msmqIntegrationBinding-Bindung verwendet. Der Dienst ist in diesem Fall eine selbst gehostete Konsolenanwendung, sodass Sie den Dienst beobachten können, der Nachrichten in Warteschlangen empfängt. k  
   
  Der Dienst verarbeitet die vom Sender empfangene Nachricht und sendet eine Antwortnachricht zurück an den Sender. Der Sender korreliert die Antwort, die er auf die ursprünglich gesendete Anforderung empfangen hat. Die `MessageID`-Eigenschaft und die `CorrelationID`-Eigenschaft der Nachricht werden zum Korrelieren der Anforderungs- und Antwortnachrichten verwendet.  
   
@@ -313,5 +313,6 @@ static void DisplayOrderStatus()
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
 ## <a name="see-also"></a>Siehe auch
-- [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Message Queuing-](https://go.microsoft.com/fwlink/?LinkId=94968)
+
+- [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94968)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
-ms.openlocfilehash: 23ec06c86454938b9cdf40c7a45a305a1f61e685
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d228300e00a5c2be9cf530cd921865a01accab05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720877"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177878"
 ---
 # <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>Vorgehensweise: Hinzufügen eines Steuerelements zu ToolStripContentPanel
 Sie können ein oder mehrere Steuerelemente programmgesteuert zu einem <xref:System.Windows.Forms.ToolStripContentPanel> hinzufügen.  
@@ -31,6 +31,7 @@ Sie können ein oder mehrere Steuerelemente programmgesteuert zu einem <xref:Sys
  Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ToolStripContentPanel>
 - <xref:System.Windows.Forms.ToolStripContainer>
 - [ToolStripContainer-Steuerelement](toolstripcontainer-control.md)

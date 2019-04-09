@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 328fe08872a2b57d0bdf87ea9be9224795ca9ad9
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: f7d09e315f2ccc7ecdcf22719ca6dce1ee1411b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186289"
 ---
 # <a name="specifying-an-assemblys-location"></a>Festlegen des Speicherortes einer Assembly
 Es gibt zwei Möglichkeiten zum Angeben des Speicherortes einer Assembly:  
@@ -66,6 +66,7 @@ Es gibt zwei Möglichkeiten zum Angeben des Speicherortes einer Assembly:
  Die **PrivatePath** Attribut enthält die Verzeichnisse, die die Common Language Runtime nach Assemblys suchen soll. Wenn die Anwendung unter C:\Program Files\MyApp befindet, sucht die Runtime nach Assemblys, die keine Codebasis in c:\Programme\Microsoft Files\MyApp\Bin, c:\Programme\Microsoft Files\MyApp\Bin2\Subbin und c:\Programme\Microsoft Files\MyApp\Bin3 angeben. Die Verzeichnisse im angegebenen **PrivatePath** müssen Unterverzeichnisse des Basisverzeichnisses der Anwendung sein.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

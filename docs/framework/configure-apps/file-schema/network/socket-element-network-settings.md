@@ -1,5 +1,5 @@
 ---
-title: <socket>-Element (Netzwerkeinstellungen)
+title: <socket> -Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 3f599d6ada288db861f69fc64e6b84ee326b5830
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160159"
 ---
 # <a name="socket-element-network-settings"></a>\<Socket >-Element (Netzwerkeinstellungen)
 Gibt an, ob es sich bei Socketvorgänge Abschlussports verwenden.  
@@ -51,7 +51,7 @@ Gibt an, ob es sich bei Socketvorgänge Abschlussports verwenden.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
+|[Einstellungen](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `alwaysUseCompletionPortsForAccept` und `alwaysUseCompletionPortsForConnect` Attribute werden an das Standardverhalten in Bezug auf die Verwendung von Abschlussanschlüsse verwendet, von den Klassen in der <xref:System.Net.Sockets?displayProperty=nameWithType>.namespace. Abschlussports werden für Anwendungen mit hoher Leistungsfähigkeit Server empfohlen.  
@@ -104,9 +104,10 @@ Gibt an, ob es sich bei Socketvorgänge Abschlussports verwenden.
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Net?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.SocketOptionName.IPProtectionLevel?displayProperty=nameWithType>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

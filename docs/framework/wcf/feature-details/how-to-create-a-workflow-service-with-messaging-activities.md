@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Erstellen eines Workflowdiensts mit Messagingaktivitäten'
 ms.date: 03/30/2017
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
-ms.openlocfilehash: 83e96a91348cd8f703801252109bd474df58a679
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: d40273fe637e673456453ba72bdf6da282505488
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192821"
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Vorgehensweise: Erstellen eines Workflowdiensts mit Messagingaktivitäten
 In diesem Thema wird beschrieben, wie Sie mithilfe der Messagingaktivitäten einen einfachen Workflowdienst erstellen. Der Schwerpunkt des Themas liegt auf der Mechanik zum Erstellen eines Workflowdiensts. Der Dienst besteht ausschließlich aus Messagingaktivitäten. In einem realen Dienst enthält der Workflow noch viele andere Aktivitäten. Der Dienst implementiert einen Vorgang mit dem Namen "Echo", der eine Zeichenfolge verwendet und diese an den Aufrufer zurückgibt. Dieses Thema ist das erste von zwei Themen, die zusammengehören. Im nächsten Thema [so wird's gemacht: Zugreifen auf einen Dienst aus einer Workflowanwendung](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) wird erläutert, wie eine workflowanwendung erstellen, die den in diesem Thema erstellten Dienst aufrufen kann.  
@@ -90,6 +90,7 @@ In diesem Thema wird beschrieben, wie Sie mithilfe der Messagingaktivitäten ein
 4.  Fortfahren mit der [Vorgehensweise: Zugreifen auf einen Dienst aus einer Workflowanwendung](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) Thema, um einen workflowclient zu erstellen, die diesen Dienst aufruft.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [Übersicht über das Hosten von Workflowdiensten](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
 - [Messagingaktivitäten](../../../../docs/framework/wcf/feature-details/messaging-activities.md)

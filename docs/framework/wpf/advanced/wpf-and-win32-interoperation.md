@@ -7,18 +7,16 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: e5a044166023069cdb6e1091339044cd7f964825
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 72f05621c96f1b6938b67d19f862a8d28b6df352
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171887"
 ---
 # <a name="wpf-and-win32-interoperation"></a>Interaktion zwischen WPF und Win32
-Dieses Thema enthält eine Übersicht über die Interaktion zwischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Code und [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Code. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie allerdings bereits erheblichen Aufwand für [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-Code betrieben haben, kann es effektiver sein, zumindest einen Teil dieses Codes wiederzuverwenden.  
-  
+Dieses Thema enthält eine Übersicht über die Interaktion zwischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Code und [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Code. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie allerdings bereits erheblichen Aufwand für [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-Code betrieben haben, kann es effektiver sein, zumindest einen Teil dieses Codes wiederzuverwenden.  
 
-  
 <a name="basics"></a>   
 ## <a name="wpf-and-win32-interoperation-basics"></a>Grundlagen der Interaktion zwischen WPF und Win32  
  Es gibt zwei grundlegende Verfahren der Interaktion zwischen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Code und [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Code.  
@@ -31,7 +29,7 @@ Dieses Thema enthält eine Übersicht über die Interaktion zwischen [!INCLUDE[T
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>WPF-Interaktionsprojekte  
- Bei [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] handelt es sich um verwalteten Code, doch die meisten vorhandenen [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Programme werden in nicht verwaltetem [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] geschrieben.  Sie können [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] nicht über ein echtes, nicht verwaltetes Programm aufrufen. Durch Verwendung der `/clr`-Option mit dem [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)]-Compiler können Sie jedoch eine Mischung aus verwaltetem und nicht verwaltetem Programm erstellen und dabei verwaltete und nicht verwaltete [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]-Aufrufe nahtlos mischen.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] are managed code, but most existing [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sverwalteter Code, aber die meisten vorhandene [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Programme sind in nicht verwalteten geschrieben [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)].enSie können [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] nicht über ein echtes, nicht verwaltetes Programm aufrufen.nDurch Verwendung der `/clr`-Option mit dem [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)]-Compiler können Sie jedoch eine Mischung aus verwaltetem und nicht verwaltetem Programm erstellen und dabei verwaltete und nicht verwaltete [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]-Aufrufe nahtlos mischen.  
   
  Eine Schwierigkeit auf Projektebene besteht darin, dass Sie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]-Dateien nicht in ein [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]-Projekt kompilieren können.  Dieses Problem lässt sich durch verschiedene Verfahren zur Projektaufteilung kompensieren.  
   
@@ -122,15 +120,15 @@ Dieses Thema enthält eine Übersicht über die Interaktion zwischen [!INCLUDE[T
   
 #### <a name="notable-differences-in-output-behavior"></a>Wichtige Unterschiede im Ausgabeverhalten  
   
--   <xref:System.Windows.FrameworkElement>, die <xref:System.Windows.Interop.HwndHost>-Basisklasse, verfügt über einige Eigenschaften, die Änderungen an der Benutzeroberfläche beinhalten. Hierzu gehören Eigenschaften wie <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>, wodurch die Anordnung von Elementen innerhalb dieses Element als übergeordnetes Element geändert wird. Den meisten dieser Eigenschaften werden jedoch keine möglichen [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Entsprechungen zugeordnet, selbst wenn solche Entsprechungen vorhanden sind. Zu viele dieser Eigenschaften und ihre Bedeutungen sind zu renderingspezifisch, als dass Zuordnungen praktisch wären. Aus diesem Grund Festlegen von Eigenschaften wie z. B. <xref:System.Windows.FrameworkElement.FlowDirection%2A> auf <xref:System.Windows.Interop.HwndHost> hat keine Auswirkungen.  
+-   <xref:System.Windows.FrameworkElement>, die die <xref:System.Windows.Interop.HwndHost> Basisklasse, verfügt über einige Eigenschaften, die Änderungen an der Benutzeroberfläche beinhalten. Hierzu gehören Eigenschaften wie <xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>, wodurch die Anordnung von Elementen innerhalb dieses Element als übergeordnetes Element geändert wird. Den meisten dieser Eigenschaften werden jedoch keine möglichen [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Entsprechungen zugeordnet, selbst wenn solche Entsprechungen vorhanden sind. Zu viele dieser Eigenschaften und ihre Bedeutungen sind zu renderingspezifisch, als dass Zuordnungen praktisch wären. Aus diesem Grund Festlegen von Eigenschaften wie z. B. <xref:System.Windows.FrameworkElement.FlowDirection%2A> auf <xref:System.Windows.Interop.HwndHost> hat keine Auswirkungen.  
   
--   <xref:System.Windows.Interop.HwndHost> kann nicht gedreht, skaliert, verzerrt oder auf andere Weise durch eine Transformation geändert werden.  
+-   <xref:System.Windows.Interop.HwndHost> kann nicht gedreht, skaliert, verzerrt oder auf andere werden von einer Transformation betroffen sind.  
   
--   <xref:System.Windows.Interop.HwndHost> bietet keine Unterstützung für die <xref:System.Windows.UIElement.Opacity%2A>-Eigenschaft (Alphablending). Falls der Inhalt im <xref:System.Windows.Interop.HwndHost><xref:System.Drawing>-Vorgänge ausführt, die Alphainformationen enthalten, stellt dies an sich keine Verletzung dar, von <xref:System.Windows.Interop.HwndHost> als Ganzem wird jedoch nur eine Durchlässigkeit von 1,0 (100 %) unterstützt.  
+-   <xref:System.Windows.Interop.HwndHost> unterstützt nicht die <xref:System.Windows.UIElement.Opacity%2A> -Eigenschaft (Alphablending). Falls der Inhalt im <xref:System.Windows.Interop.HwndHost><xref:System.Drawing>-Vorgänge ausführt, die Alphainformationen enthalten, stellt dies an sich keine Verletzung dar, von <xref:System.Windows.Interop.HwndHost> als Ganzem wird jedoch nur eine Durchlässigkeit von 1,0 (100 %) unterstützt.  
   
--   <xref:System.Windows.Interop.HwndHost> wird über anderen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Elementen in demselben Fenster auf oberster Ebene angezeigt. Ein mit <xref:System.Windows.Controls.ToolTip> oder <xref:System.Windows.Controls.ContextMenu> erstelltes Menü stellt jedoch ein separates Fenster auf oberster Ebene dar und verhält sich deshalb korrekt mit <xref:System.Windows.Interop.HwndHost>.  
+-   <xref:System.Windows.Interop.HwndHost> wird angezeigt, über anderen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Elemente im selben Fenster der obersten Ebene. Ein mit <xref:System.Windows.Controls.ToolTip> oder <xref:System.Windows.Controls.ContextMenu> erstelltes Menü stellt jedoch ein separates Fenster auf oberster Ebene dar und verhält sich deshalb korrekt mit <xref:System.Windows.Interop.HwndHost>.  
   
--   <xref:System.Windows.Interop.HwndHost> berücksichtigt den Auswahlbereich seines übergeordneten <xref:System.Windows.UIElement> nicht. Dies stellt ein potenzielles Problem dar, wenn Sie versuchen, eine <xref:System.Windows.Interop.HwndHost>-Klasse in einen Bildlaufbereich oder <xref:System.Windows.Controls.Canvas> einzufügen.  
+-   <xref:System.Windows.Interop.HwndHost> berücksichtigt nicht den Ausschneidebereich des übergeordneten <xref:System.Windows.UIElement>. Dies stellt ein potenzielles Problem dar, wenn Sie versuchen, eine <xref:System.Windows.Interop.HwndHost>-Klasse in einen Bildlaufbereich oder <xref:System.Windows.Controls.Canvas> einzufügen.  
   
 #### <a name="notable-differences-in-input-behavior"></a>Wichtige Unterschiede im Eingabeverhalten  
   
@@ -157,6 +155,7 @@ Dieses Thema enthält eine Übersicht über die Interaktion zwischen [!INCLUDE[T
  Die Schnittstellen unterstützen nur Vorgänge, die den Übergang zwischen dem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Bereich und dem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Bereich betreffen. Innerhalb des [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Bereichs wird das TAB-Verhalten ggf. vollständig durch die von [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] implementierte Tabulatorreihenfolgenlogik gesteuert.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>
 - <xref:System.Windows.Interop>

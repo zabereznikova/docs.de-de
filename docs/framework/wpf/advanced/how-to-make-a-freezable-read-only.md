@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
-ms.openlocfilehash: 874724584b44c17ff6c01331295cfa1a60978d54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360350"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191438"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>Vorgehensweise: Erstellen eines schreibgeschützten Freezable-Objekts
 Dieses Beispiel zeigt, wie Sie eine <xref:System.Windows.Freezable> schreibgeschützte durch Aufrufen der <xref:System.Windows.Freezable.Freeze%2A> Methode.  
@@ -36,8 +36,9 @@ Dieses Beispiel zeigt, wie Sie eine <xref:System.Windows.Freezable> schreibgesch
  Weitere Informationen zu <xref:System.Windows.Freezable> Objekten finden Sie die [Übersicht über Freezable-Objekte](freezable-objects-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.CanFreeze%2A>
 - <xref:System.Windows.Freezable.Freeze%2A>
 - [Übersicht über Freezable-Objekte](freezable-objects-overview.md)
-- [Themen zu Vorgehensweisen](base-elements-how-to-topics.md)
+- [Gewusst wie-Themen](base-elements-how-to-topics.md)

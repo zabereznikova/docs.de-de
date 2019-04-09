@@ -1,13 +1,13 @@
 ---
-title: <endpoint>-Element
+title: <endpoint> Element
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: 94b6cc6225171d90164e6d6880e1095513f16ece
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 667086cda010daf51cb92116d636b9b526b4b34b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354730"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163409"
 ---
 # <a name="endpoint-element"></a>\<Endpunkt >-Element
 Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt an, der zur Verfügbarmachung von Diensten verwendet wird.  
@@ -85,8 +85,9 @@ Gibt die Bindung, den Vertrag und Adresseigenschaften für einen Dienstendpunkt 
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.Description.ServiceEndpoint>
 - [Endpunkte: Adressen, Bindungen und Verträge](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
-- [Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [Vorgehensweise: Erstellen eines Dienstendpunkts in einer Konfiguration](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

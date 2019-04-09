@@ -2,12 +2,12 @@
 title: Peerkanalszenarien
 ms.date: 03/30/2017
 ms.assetid: dae6e0f7-900c-45ee-8be9-3647698382fb
-ms.openlocfilehash: 05fe7f632b286876dfee36b7d5d22a77c0ae11e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 610668e5f3625c638fc1e814e0116df87970773b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147055"
 ---
 # <a name="peer-channel-scenarios"></a>Peerkanalszenarien
 Die Peerkanal-APIs unterstützen die folgenden Entwicklungsszenarien:  
@@ -25,4 +25,5 @@ Die Peerkanal-APIs unterstützen die folgenden Entwicklungsszenarien:
  Mit Peerkanal können Anwendungsentwickler serverlose Versionen ihrer Spiele erstellen, in denen Spielzüge nicht über einen zentralen Server, sondern durch einen Peer-to-Peer-Mechanismus übertragen und mit anderen Spielern synchronisiert werden. Für kleine unabhängige Softwareanbieter lassen sich so die Betriebskosten für das Bereitstellen, Warten und Bedienen von zentralen Servern einsparen. Mit einer Peer-to-Peer-Architektur entwickelte Spiele können über das Internet bzw. in drahtgebundenen oder drahtlosen lokalen Netzwerken gespielt werden. Sekundäre Spielaktivitäten wie Lobby und Chatten während des Spiels können mit einem Peer-to-Peer-Netzwerk entwickelt werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Peerkanalbegriffe](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)

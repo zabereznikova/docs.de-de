@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Kacheln einer Form mit einem Bild'
+title: 'Vorgehensweise: Anordnen einer Form neben bzw. unter einem Bild'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: d873ba717fa94852692ce395ef7da30c512aba59
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221537"
 ---
-# <a name="how-to-tile-a-shape-with-an-image"></a>Vorgehensweise: Kacheln einer Form mit einem Bild
+# <a name="how-to-tile-a-shape-with-an-image"></a>Vorgehensweise: Anordnen einer Form neben bzw. unter einem Bild
 Genau wie Kacheln ein Fußboden nebeneinander platziert werden können, können rechteckige Images Fill (Kachel) eine Form nebeneinander platziert werden. Verwenden Sie, um das Innere einer Form Kachel, eines Pinsels Textur. Beim Erstellen einer <xref:System.Drawing.TextureBrush> Objekt ist, wird eines der Argumente, die Sie an den Konstruktor übergeben, wird ein <xref:System.Drawing.Image> Objekt. Wenn Sie den Texturpinsel verwenden, um das Innere einer Form zu zeichnen, wird die Form durch wiederholte Kopien dieses Bilds gefüllt.  
   
  Der Wrap-Mode-Eigenschaft von der <xref:System.Drawing.TextureBrush> Objekt bestimmt, wie das Bild ausgerichtet ist, wie es in einem rechteckigen Raster wiederholt wird. Können Sie alles, was die Kacheln im Raster die gleiche Ausrichtung vornehmen können, oder Sie das Image von einer Rasterseite Position zum nächsten zu kippen. Die kippen möglich horizontal, vertikal oder beides. Die folgenden Beispiele veranschaulichen die Kacheln mit unterschiedlichen Arten von kippen.  
@@ -61,4 +61,5 @@ Genau wie Kacheln ein Fußboden nebeneinander platziert werden können, können 
  [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden eines Pinsels zum Ausfüllen von Formen](using-a-brush-to-fill-shapes.md)

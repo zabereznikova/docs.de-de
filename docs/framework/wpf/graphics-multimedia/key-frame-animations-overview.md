@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: a4606b73835087a406d989960d7a6e24ad218769
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191587"
 ---
 # <a name="key-frame-animations-overview"></a>Übersicht über Keyframe-Animationen
 Dieses Thema bietet eine Einführung in Keyframe-Animationen. Mit Keyframe-Animationen können Sie bei Animationen mehr als zwei Zielwerte animieren und die Interpolationsmethode einer Animation steuern.  
@@ -46,11 +46,11 @@ Dieses Thema bietet eine Einführung in Keyframe-Animationen. Mit Keyframe-Anima
   
  Die Keyframe-Animation-Klassen gehören zu den <xref:System.Windows.Media.Animation> Namespace und die folgende Benennungskonvention befolgen:  
   
- *\<Typ>* `AnimationUsingKeyFrames`  
+ *\<Type>* `AnimationUsingKeyFrames`  
   
  Wobei *\<Typ>* der Wertetyp ist, den die Klasse animiert.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet folgende Keyframe-Animationsklassen.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stellt die folgenden Keyframe-Animation-Klassen.  
   
 |Eigenschaftentyp|Entsprechende From/To/By-Animationsklassen|Unterstützte Interpolationsmethoden|  
 |-------------------|------------------------------------------------|-------------------------------------|  
@@ -79,7 +79,7 @@ Dieses Thema bietet eine Einführung in Keyframe-Animationen. Mit Keyframe-Anima
 ## <a name="target-values-key-frames-and-key-times"></a>Zielwerte (Keyframes) und Schlüsselzeiten  
  Ebenso wie es verschiedene Typen von Keyframe-Animationen zum Animieren verschiedener Eigenschaftentypen gibt, gibt es auch verschiedene Typen von Keyframe-Objekten: einen für jeden animierten Werttyp und jede unterstützte Interpolationsmethode. Keyframe-Typen entsprechen der folgenden Benennungskonvention:  
   
- *\<InterpolationMethod>\<Typ>* `KeyFrame`  
+ *\<InterpolationMethod>\<Type>* `KeyFrame`  
   
  Wobei *\<InterpolationMethod>* für die Interpolationsmethode steht, die der Keyframe verwendet, und *\<Typ>* für den Werttyp, den die Klasse animiert. Eine Keyframe-Animation, die alle drei Interpolationsmethoden unterstützt, besitzt drei Keyframe-Typen, die Sie verwenden können. Sie können z.B. drei Keyframe-Typen mit einem <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, und <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>. (Interpolationsmethoden werden in einem späteren Abschnitt ausführlich beschrieben.)  
   
@@ -284,6 +284,7 @@ Ein Spline für Keyframes mit den Kontrollpunkten (0,25, 0,5) und (0,75, 1,0)
 8.  Sortieren Sie die Keyframes in der Reihenfolge der aufgelösten Zeit (Primärschlüssel), und die Reihenfolge der Deklaration (Sekundärschlüssel), d. h., verwenden Sie eine stabile Sortierung basierend auf den aufgelösten Keyframe <xref:System.Windows.Media.Animation.KeyTime> Werte.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Animation.KeyTime>
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>
@@ -291,5 +292,5 @@ Ein Spline für Keyframes mit den Kontrollpunkten (0,25, 0,5) und (0,75, 1,0)
 - [Beispiel für KeyFrame-Animation](https://go.microsoft.com/fwlink/?LinkID=160012)
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über Storyboards](storyboards-overview.md)
-- [Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](key-frame-animation-how-to-topics.md)
+- [Themen zur Vorgehensweise mit Keyframes](key-frame-animation-how-to-topics.md)
 - [Übersicht über Zeitsteuerungsverhalten](timing-behaviors-overview.md)

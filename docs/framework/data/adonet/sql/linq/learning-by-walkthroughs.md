@@ -2,12 +2,12 @@
 title: Lernen durch exemplarische Vorgehensweisen
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: 1ddd2b8dacaccc0911a7e5a2bd684bba0fa16012
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: fdcc2db1507d8ee2c6d1b07a79c531267fbb5714
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189000"
 ---
 # <a name="learning-by-walkthroughs"></a>Lernen durch exemplarische Vorgehensweisen
 Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumentation stellt mehrere exemplarische Vorgehensweisen bereit. Dieser Abschnitt behandelt allgemeine Aspekte der exemplarischen Vorgehensweisen (einschließlich Fehlerbehebung) und bietet Links zu Vorgehensweisen für Einsteiger, die mehr über [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erfahren möchten.  
@@ -25,7 +25,7 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
 |Erstellen einer Entitätsklasse und Ausführen einer einfachen Abfrage|[Exemplarische Vorgehensweise: Einfaches Objektmodell und Abfrage (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)|[Exemplarische Vorgehensweise: Einfaches Objektmodell und Abfrage (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)|  
 |Hinzufügen einer zweiten Klasse und Ausführen einer komplexeren Abfrage<br /><br /> (Erfordert den Abschluss der vorherigen exemplarischen Vorgehensweise.)|[Exemplarische Vorgehensweise: Beziehungsübergreifendes Abfragen (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-visual-basic.md)|[Exemplarische Vorgehensweise: Beziehungsübergreifendes Abfragen (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)|  
 |Hinzufügen, Ändern und Löschen von Elementen in der Datenbank|[Exemplarische Vorgehensweise: Bearbeiten von Daten (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)|[Exemplarische Vorgehensweise: Bearbeiten von Daten (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)|  
-|Verwenden von gespeicherten Prozeduren|[Exemplarische Vorgehensweise: Ausschließliches Verwenden von gespeicherten Prozeduren (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Exemplarische Vorgehensweise: Verwenden von gespeicherten Prozeduren nur (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
+|Verwenden von gespeicherten Prozeduren|[Exemplarische Vorgehensweise: Ausschließliches Verwenden von gespeicherten Prozeduren (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)|[Exemplarische Vorgehensweise: Ausschließliches Verwenden von gespeicherten Prozeduren (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)|  
   
 ## <a name="general"></a>Allgemein  
  Die folgenden Informationen betreffen diese exemplarischen Vorgehensweisen im Allgemeinen:  
@@ -35,7 +35,7 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
 -   SQL-Module: In diesen exemplarischen Vorgehensweisen werden für die Implementierung mit SQL Server Express geschrieben. Wenn Sie nicht über SQL Server Express verfügen, können Sie diese Lösung kostenlos herunterladen. Weitere Informationen finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
-    >  Exemplarische Vorgehensweisen für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwenden einen Dateinamen als Verbindungszeichenfolge. Einfach einen Dateinamen anzugeben ist eine Annehmlichkeit, die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] für SQL Server Express-Benutzer bereitstellt. Achten Sie stets auf Sicherheitsprobleme. Weitere Informationen finden Sie unter [Sicherheit in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Exemplarische Vorgehensweisen verwenden einen Dateinamen als Verbindungszeichenfolge. Einfach einen Dateinamen anzugeben ist eine Annehmlichkeit, die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] für SQL Server Express-Benutzer bereitstellt. Achten Sie stets auf Sicherheitsprobleme. Weitere Informationen finden Sie unter [Sicherheit in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
 -   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Exemplarische Vorgehensweisen erfordern in der Regel die Beispieldatenbank Northwind. Weitere Informationen finden Sie unter [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
@@ -88,4 +88,5 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
 3.  Mit der rechten Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **Neustart**.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erste Schritte](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

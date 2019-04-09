@@ -2,12 +2,12 @@
 title: Konfigurationsbeispiel
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: b999c84fc6fd4d1a367b4e1476de8376858008a2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 6ceea71e4adc4e8c25ca624ca8adb6e08713a93b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158703"
 ---
 # <a name="configuration-sample"></a>Konfigurationsbeispiel
 In diesem Beispiel wird veranschaulicht, wie ein Dienst mithilfe einer Konfigurationsdatei erkennbar gemacht wird.  
@@ -268,4 +268,3 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 3.  Führen Sie die ausführbare Dienstdatei aus dem Buildverzeichnis aus.  
   
 4.  Führen Sie die ausführbare Clientanwendung aus. Beachten Sie, dass der Client in der Lage ist, den Dienst zu finden.  
-  

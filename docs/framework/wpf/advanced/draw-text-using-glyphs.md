@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Glyphs objects [WPF], drawing text
 - typography [WPF], Glyphs objects
 ms.assetid: 587ab17e-a419-4ad5-b6da-8933a8e83d97
-ms.openlocfilehash: 155f0b756b43ad8cfd0ddde63a5e86854f5f1624
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 55bbc50de519d6607a843fcd633f2c07db53109f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141673"
 ---
 # <a name="draw-text-using-glyphs"></a>Zeichnen von Text mit Symbolen
 In diesem Thema wird erläutert, wie Sie mit der Low-Level <xref:System.Windows.Documents.Glyphs> Objekt zum Anzeigen von Text in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -26,4 +26,5 @@ In diesem Thema wird erläutert, wie Sie mit der Low-Level <xref:System.Windows.
  [!code-xaml[GlyphsOvwSamp2#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Typografie in WPF](typography-in-wpf.md)

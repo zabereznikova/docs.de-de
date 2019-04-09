@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
-ms.openlocfilehash: e067e5c6e108a27ecaf9e4b0e3e6a33938ad0b59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11cfad81e40e76691db9f99efd1d60f5528600d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562990"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230173"
 ---
 # <a name="getschema-and-schema-collections"></a>"GetSchema" und Schemaauflistungen
 Die **Verbindung** -Klassen in jedem von der .NET Framework verwalteten Anbieter implementieren eine **GetSchema** Methode dient zum Abrufen von Schemainformationen zur Datenbank, die derzeit verbunden ist, und die Schemainformationen zurückgegeben, die von der **GetSchema** Methode kommt in Form von einem <xref:System.Data.DataTable>. Die **GetSchema** Methode ist eine überladene Methode, die optionale Parameter, die zum Angeben der zurückzugebenden schemaauflistung und zum Einschränken der zurückzugebenden Informationsmenge bereitstellt.  
@@ -105,5 +105,6 @@ class Program
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Abrufen von Datenbankschemainformationen](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

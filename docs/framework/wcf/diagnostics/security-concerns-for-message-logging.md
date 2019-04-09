@@ -2,12 +2,12 @@
 title: Sicherheitsaspekte für Nachrichtenprotokollierung
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731997"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170663"
 ---
 # <a name="security-concerns-for-message-logging"></a>Sicherheitsaspekte für Nachrichtenprotokollierung
 In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in Nachrichtenprotokollen verfügbar gemacht zu werden, wie auch Ereignisse, die von der Nachrichtenprotokollierung generiert werden.  
@@ -110,5 +110,6 @@ In diesem Thema wird beschrieben, wie Sie vertrauliche Daten davor schützen, in
  Diese Ereignisse können im Windows-integrierten Tool der Ereignisanzeige angezeigt werden. Weitere Informationen hierzu finden Sie unter [Ereignisprotokollierung](../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Nachrichtenprotokollierung](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [Sicherheitsaspekte und nützliche Tipps für die Ablaufverfolgung](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

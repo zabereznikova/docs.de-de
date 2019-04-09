@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 27ff9d027f5ff5155543097b7f0f0c2839387fe5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144546"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier-Anweisung
 XAML-Kompilierungsverhalten ändert, sodass Felder für benannte Objektverweise mit definiert werden <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> anstelle von Zugriff auf die <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> Standardverhalten.  
@@ -36,7 +36,7 @@ XAML-Kompilierungsverhalten ändert, sodass Felder für benannte Objektverweise 
   
  Der Wert für die `x:FieldModifier` -Attributs variiert je nach Programmiersprache, und ihr Zweck kann in bestimmten Frameworks variieren. Wie jede Sprache implementiert, die zu verwendende Zeichenfolge hängt die <xref:System.CodeDom.Compiler.CodeDomProvider> und der Typkonverter wird zurückgegeben, um die Bedeutung für definieren <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> und <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, und gibt an, ob die entsprechende Sprache Groß-/Kleinschreibung beachtet wird.  
   
--   Für C# und die Zeichenfolge übergeben, um zu bestimmen <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ist `public`.  
+-   Für c# und die Zeichenfolge übergeben, um zu bestimmen <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ist `public`.  
   
 -   Für Microsoft Visual Basic .NET ist die Zeichenfolge übergeben, um zu bestimmen <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ist `Public`.  
   
@@ -51,6 +51,7 @@ XAML-Kompilierungsverhalten ändert, sodass Felder für benannte Objektverweise 
  Standardmäßig ist die partielle Klasse für das Stammelement öffentlich. Allerdings können Sie es machen nicht öffentliche mithilfe der [X: ClassModifier-Anweisung](x-classmodifier-directive.md). Die [X: ClassModifier-Anweisung](x-classmodifier-directive.md) wirkt sich auch auf die Zugriffsebene der Stammelementklasse-Instanz. Sie können beide einfügen `x:Name` und `x:FieldModifier` für den Stamm-Element, aber dies nur eine Kopie öffentliches Feld das Stammelement, mit der Zugriffsebene der "true"-Klasse weiterhin benutzergesteuert [X: ClassModifier-Anweisung](x-classmodifier-directive.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [XAML- und benutzerdefinierte Klassen für WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [Code-Behind und XAML in WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [x:Name-Anweisung](x-name-directive.md)

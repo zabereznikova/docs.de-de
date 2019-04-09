@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-ms.openlocfilehash: b2023370ee248e999514090e57531eafb301c616
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6b44f63d20e0e2ed0d2486003b15a932ba939f55
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155102"
 ---
 # <a name="wsdualhttpbinding"></a>\<wsDualHttpBinding>
 Definiert eine sichere und interoperable Bindung, die für Duplexdienstverträge oder für die Kommunikation über SOAP-Vermittler geeignet ist.  
@@ -69,7 +69,7 @@ Definiert eine sichere und interoperable Bindung, die für Duplexdienstverträge
 |messageEncoding|Definiert den Encoder, der verwendet wird, um die SOAP-Nachricht zu codieren. Folgende Werte sind gültig:<br /><br /> -   Text: Verwenden Sie einen textnachrichtenencoder.<br />-Mtom: Verwenden Sie einen Encoder Message Transmission Organisation Mechanism 1.0 (MTOM).<br />– Der Standardwert ist Text.<br /><br /> Dieses Attribut ist vom Typ <xref:System.ServiceModel.WSMessageEncoding>.|  
 |Name|Eine Zeichenfolge, die den Konfigurationsnamen der Bindung enthält. Dieser Wert sollte eindeutig sein, da er von der Bindung zur Identifizierung verwendet wird. Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen. Weitere Informationen zu Standardkonfiguration und zu namenlosen Bindungen und Verhaltensweisen finden Sie unter [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Öffnungsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
-|proxyAddress|Ein URI, der die Adresse des HTTP-Proxys angibt. Wenn `useDefaultWebProxy` `true` ist, muss diese Einstellung `null` lauten. Die Standardeinstellung ist `null`.|  
+|proxyAddress|Ein URI, der die Adresse des HTTP-Proxys angibt. Wenn `useDefaultWebProxy``true` ist, muss diese Einstellung `null` lauten. Die Standardeinstellung ist `null`.|  
 |receiveTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Empfangsvorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
 |sendTimeout|Ein <xref:System.TimeSpan>-Wert, der das Zeitintervall für den Abschluss eines Sendevorgangs angibt. Dieser Wert muss größer oder gleich <xref:System.TimeSpan.Zero> sein. Der Standardwert ist 00:01:00.|  
 |textEncoding|Legt die Zeichensatzkodierung fest, die zum Ausgeben von Nachrichten über die Bindung verwendet werden soll. Folgende Werte sind gültig:<br /><br /> -BigEndianUnicode: Unicode-BigEndian-Codierung.<br />– Unicode: 16-Bit-Codierung.<br />-   UTF8: 8-Bit-Codierung<br /><br /> Der Standard ist UTF8. Dieses Attribut ist vom Typ <xref:System.Text.Encoding>.|  
@@ -91,7 +91,7 @@ Definiert eine sichere und interoperable Bindung, die für Duplexdienstverträge
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Dieses Element enthält eine Auflistung von standardmäßigen und benutzerdefinierten Bindungen.|  
   
 ## <a name="remarks"></a>Hinweise  
- Die `WSDualHttpBinding` bietet die gleiche Unterstützung für Webdienstprotokolle wie die `WSHttpBinding`, jedoch für die Verwendung mit Duplexverträgen. `WSDualHttpBinding` unterstützt ausschließlich SOAP-Sicherheit und erfordert zuverlässiges Messaging. Diese Bindung macht es erforderlich, dass der Client einen öffentlichen URI aufweist, der einen Rückrufendpunkt für den Dienst bereitstellt. Dies wird vom `clientBaseAddress`-Attribut zur Verfügung gestellt. Eine Dualbindung macht die IP-Adresse des Clients für den Dienst verfügbar. Der Client sollte Sicherheitseinstellungen verwenden, um sicherzustellen, dass nur Verbindungen zu vertrauenswürdigen Diensten hergestellt werden.  
+ Die `WSDualHttpBinding` bietet die gleiche Unterstützung für Webdienstprotokolle wie die `WSHttpBinding`, jedoch für die Verwendung mit Duplexverträgen. `WSDualHttpBinding` unterstützt ausschließlich SOAP-Sicherheit und erfordert zuverlässiges messaging. Diese Bindung macht es erforderlich, dass der Client einen öffentlichen URI aufweist, der einen Rückrufendpunkt für den Dienst bereitstellt. Dies wird vom `clientBaseAddress`-Attribut zur Verfügung gestellt. Eine Dualbindung macht die IP-Adresse des Clients für den Dienst verfügbar. Der Client sollte Sicherheitseinstellungen verwenden, um sicherzustellen, dass nur Verbindungen zu vertrauenswürdigen Diensten hergestellt werden.  
   
  Diese Bindung kann zur zuverlässigen Kommunikation über einen oder mehrere SOAP-Vermittler verwendet werden.  
   
@@ -132,6 +132,7 @@ Definiert eine sichere und interoperable Bindung, die für Duplexdienstverträge
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.WSDualHttpBinding>
 - <xref:System.ServiceModel.Configuration.WSDualHttpBindingElement>
 - [Bindungen](../../../../../docs/framework/wcf/bindings.md)

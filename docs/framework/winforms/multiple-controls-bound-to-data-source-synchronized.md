@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721384"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170338"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Vorgehensweise: Sicherstellen, dass mehrere Steuerelemente, die an die gleiche Datenquelle gebunden sind, synchronisiert bleiben
 Wenn bei der Arbeit mit Datenbindung in Windows Forms sind mehrere Steuerelemente an die gleiche Datenquelle gebunden. In einigen Fällen kann es erforderlich sein einige zusätzliche Schritte durchführen, um sicherzustellen, dass die gebundenen Eigenschaften der Steuerelemente mit miteinander und mit der Datenquelle synchronisiert bleiben. Diese Schritte sind in zwei Situationen erforderlich:  
@@ -41,7 +41,8 @@ Wenn bei der Arbeit mit Datenbindung in Windows Forms sind mehrere Steuerelement
 -   Ein Formular mit den <xref:System.Windows.Forms.Form.Load> Ereignis als behandelt und einem Aufruf an die `InitializeControlsAndDataSource` -Methode in der im Beispiel des Formulars <xref:System.Windows.Forms.Form.Load> -Ereignishandler.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Freigeben von gebundenen Daten in Formularen mithilfe der BindingSource-Komponente](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
 - [Änderungsbenachrichtigung in der Windows Forms-Datenbindung](change-notification-in-windows-forms-data-binding.md)
 - [Auf Datenbindung bezogene Schnittstellen](interfaces-related-to-data-binding.md)
-- [Windows Forms-Datenbindung](windows-forms-data-binding.md)
+- [Datenbindung in Web Forms](windows-forms-data-binding.md)

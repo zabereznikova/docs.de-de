@@ -2,12 +2,12 @@
 title: Benutzerdefinierte SQL-CLR-Typenzuordnungen
 ms.date: 03/30/2017
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
-ms.openlocfilehash: 36763be3cd4845fbbd027b448098d0dafb9e448a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc92d54cad6a977268ef3f000c684d5f195a933d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622509"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140412"
 ---
 # <a name="sql-clr-custom-type-mappings"></a>Benutzerdefinierte SQL-CLR-Typenzuordnungen
 Das Typmapping zwischen SQL Server und der Common Language Runtime (CLR) wird bei der Verwendung des SQLMetal-Befehlszeilentools oder des Object Relational Designer (O/R-Designer) automatisch festgelegt.  
@@ -32,5 +32,6 @@ Das Typmapping zwischen SQL Server und der Common Language Runtime (CLR) wird be
  Wenn Änderungen an der Datenbank auftreten, muss die DBML-Datei entsprechend aktualisiert werden. Eine Möglichkeit hierfür besteht im automatischen Erstellen einer neuen DBML-Datei und dem erneuten Anpassen des Typmappings. Sie können jedoch auch die Unterschiede zwischen der neuen DBML-Datei und der benutzerdefinierten DBML-Datei abgleichen und die benutzerdefinierte DBML-Datei manuell aktualisieren, damit diese den Datenbankänderungen entspricht.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [SQL-CLR-Typenzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
 - [Codegenerierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)

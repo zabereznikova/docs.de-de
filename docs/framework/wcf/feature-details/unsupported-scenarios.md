@@ -2,12 +2,12 @@
 title: Nicht unterstützte Szenarien
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631262"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178775"
 ---
 # <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
 Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WCF) einige bestimmte Sicherheitsszenarien nicht. Z. B. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition die SSPI- oder Kerberos-Authentifizierungsprotokolle nicht implementiert, und daher WCF unterstützt nicht das Ausführen eines Diensts mit Windows-Authentifizierung auf dieser Plattform. Andere Authentifizierungsmechanismen, wie z. B. Benutzername/Kennwort und die HTTP/HTTPS-integrierte Authentifizierung werden unterstützt, wenn WCF unter Windows XP Home Edition ausgeführt wird.  
@@ -30,7 +30,7 @@ Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WC
   
  Das statusbasierte SCT kann nur mit einer benutzerdefinierten Bindung erstellt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie einen Sicherheitskontext für eine sichere Sitzung Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) Im Code wird das Token aktiviert, indem ein Sicherheitsbindungselement erstellt wird (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> oder <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>), wobei die <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType>-Methode oder die <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>-Methode verwendet wird und der `requireCancellation`-Parameter auf `false` festgelegt wird. Der Parameter bezieht sich auf die Zwischenspeicherung des SCT. Wenn Sie den Wert auf `false` festlegen, wird die statusbasierte SCT-Funktion aktiviert.  
   
- Alternativ wird das Token in der Konfiguration aktiviert, indem eine <`customBinding`> erstellt, ein <`security`>-Element hinzugefügt, das `authenticationMode`-Attribut auf "SecureConversation" festgelegt und das `requireSecurityContextCancellation`-Attribut auf `true` festgelegt wird.  
+ Alternativ in der Konfiguration der Token aktiviert, durch das Erstellen einer <`customBinding`>, Hinzufügen einer <`security`> Element, und die Einstellung der `authenticationMode` SecureConversation Attribut und die `requireSecurityContextCancellation` -Attribut auf `true`.  
   
 > [!NOTE]
 >  Die zuvor genannten Anforderungen sind spezifisch. Beispielsweise erstellt das <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> ein Bindungselement, das zu einer Windows-Identität führt, wobei aber kein SCT eingerichtet wird. Sie können es daher mit der `Required`-Option unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)] verwenden.  
@@ -75,7 +75,7 @@ Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WC
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Nachrichtensicherheit schlägt fehlt, wenn der ASP.NET-Identitätswechsel verwendet wird und die ASP.NET-Kompatibilität erforderlich ist  
  WCF unterstützt nicht die folgende Kombination von Einstellungen, da sie auftreten der Clientauthentifizierung verhindern können:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Identitätswechsel ist aktiviert. Dies wird in der Web.config-Datei durchgeführt, indem das `impersonate`-Attribut des <`identity`>-Elements auf `true` festgelegt wird.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Identitätswechsel ist aktiviert. Dies erfolgt in der Datei "Web.config" durch Festlegen der `impersonate` Attribut der <`identity`>-Element `true`.  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] im Kompatibilitätsmodus ist aktiviert, indem die `aspNetCompatibilityEnabled` Attribut der [ \<ServiceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) zu `true`.  
   
@@ -109,9 +109,10 @@ Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WC
  Ändern Sie nach Abschluss des Importvorgangs die Bindung direkt auf dem Client, um dieses Problem zu korrigieren.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Veröffentlichung von Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Angriffe durch Rechteerweiterung](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Dienstverweigerung (Denial of Service)](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Verfälschungen](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Wiederholungsangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

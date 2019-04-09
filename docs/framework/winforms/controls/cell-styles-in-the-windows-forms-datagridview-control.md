@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: a22fc29d2cab21977c0411a440b847b426fb5915
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ec2a34deb25cd5f4cf492d92129ffc61d14001ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712276"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171521"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Zellstile im DataGridView-Steuerelement in Windows Forms
 Jede Zelle innerhalb der <xref:System.Windows.Forms.DataGridView> Steuerelement kann seinen eigenen Stil, wie z. B. Text-Format, Hintergrundfarbe, Vordergrundfarbe und Schriftart haben. In der Regel werden jedoch mehrere Zellen Stilmerkmale.  
@@ -145,6 +145,7 @@ Jede Zelle innerhalb der <xref:System.Windows.Forms.DataGridView> Steuerelement 
 >  In der Zelle gespeicherten Werte zwischenspeichern <xref:System.Windows.Forms.DataGridViewCell.Style%2A> Eigenschaft ist wichtig, unabhängig davon, ob ein bestimmter Stilwert festgelegt wird. Wenn Sie vorübergehend eine stileinstellung ersetzen, stellt sicher wiederhergestellt wird, auf den ursprünglichen Zustand von "nicht festgelegt", dass die Zelle zurückgesendet wird, erben die Style-Einstellung von einer höheren Ebene. Bei Bedarf, um zu bestimmen, das tatsächliche Format für eine Zelle, unabhängig davon, ob der Stil geerbt wird, verwenden Sie die Zelle <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> Eigenschaft.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>

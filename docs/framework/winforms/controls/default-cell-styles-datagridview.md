@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 44180c1d8e7f6fd29778ef6b9f5bd5e333c3ece2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0e5664707d12fd45c73f3585d07660fc732965fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702346"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179893"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Vorgehensweise: Festlegen von standardmäßigen Zellenstilen und Datenformaten für das DataGridView-Steuerelement in Windows Forms mithilfe des Designers
 Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Angeben von standardmäßigen Zellenstilen und Datenformaten für das gesamte Steuerelement, für bestimmte Spalten, für die Zeilen- und Spaltenüberschriften und für abwechselnde Zeilen, um einen Ledger-Effekt zu erstellen von Zellen. Die Standardstile für das gesamte Steuerelement festgelegt werden standardmäßig überschrieben, die Stile für abwechselnde Zeilen und Spalten festgelegt. Stile, die Sie im Code für die einzelnen Zeilen und Zellen festlegen wird darüber hinaus die Standardstile überschreiben.  
@@ -60,6 +60,7 @@ Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Ange
 4.  Wenn Sie binden die <xref:System.Windows.Forms.DataGridView> Steuerelement mit einer Datenquelle, die wahrscheinlich zu null-Werte enthalten, geben Sie die **Null-Wert** Textfeld. Dieser Wert wird angezeigt, wenn der Wert der Zelle ein null-Verweis entspricht (`Nothing` in Visual Basic) oder <xref:System.DBNull.Value?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
@@ -67,6 +68,6 @@ Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Ange
 - <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>
 - [Zellstile im DataGridView-Steuerelement in Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Festlegen von abwechselnden Zeilenstilen für das DataGridView-Steuerelement in Windows Forms mithilfe des Designers](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
+- [Vorgehensweise: Festlegen von abwechselnden Zeilenstilen für das Windows Forms-Steuerelement DataGridView mithilfe des Designers](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
 - [Vorgehensweise: Erstellen eines Windows Forms-Anwendungsprojekts](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md)

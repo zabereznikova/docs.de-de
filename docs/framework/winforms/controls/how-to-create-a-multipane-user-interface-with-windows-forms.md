@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms'
+title: 'Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 4db424b27af09dcb7def0051fba070fe9ccf0491
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d75d96f8db216ab78e13ba5f8409ea5aa535d685
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192692"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms
 Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die der ähnelt der Verwendung in Microsoft Outlook ist eine **Ordner** Liste eine **Nachrichten** Bereich und eine **Vorschau** Bereich. In dieser Anordnung erfolgt hauptsächlich durch Andocken von Steuerelementen mit dem Formular.  
   
  Wenn Sie ein Steuerelement andocken, legen Sie fest, welchen Rand des übergeordneten Containers ein Steuerelement angedockt ist. Folglich setzen Sie die <xref:System.Windows.Forms.SplitContainer.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Right>, dem rechten Rand des Steuerelements an den rechten Rand seines übergeordneten Steuerelements angedockt wird. Darüber hinaus wird der verankerte Rand des Steuerelements Größe des Containersteuerelements entsprechen. Weitere Informationen zur Funktionsweise des <xref:System.Windows.Forms.SplitContainer.Dock%2A> -Eigenschaft funktioniert, finden Sie unter [Vorgehensweise: Andocken von Steuerelementen in Windows Forms](how-to-dock-controls-on-windows-forms.md).  
@@ -177,6 +177,7 @@ Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die der
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer-Steuerelement](splitcontainer-control-windows-forms.md)
-- [Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms mithilfe des Designers](create-a-multipane-user-interface-with-wf-using-the-designer.md)
+- [Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms mithilfe des Designers](create-a-multipane-user-interface-with-wf-using-the-designer.md)

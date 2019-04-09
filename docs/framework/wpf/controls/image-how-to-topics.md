@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: e6e51cf9-8fa1-457e-856b-a5e513bc5caf
-ms.openlocfilehash: f55036d4fdf4576faab50be7b42cf7a4077e6a3b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c300df2c63f4fa852c8cce318a5461f3be5f226
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376272"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227560"
 ---
 # <a name="image-how-to-topics"></a>Gewusst-wie-Themen zu Image
 Die Themen in diesem Abschnitt wird beschrieben, wie die <xref:System.Windows.Controls.Image> Element.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Verwenden des Image-Elements](how-to-use-the-image-element.md)  
+ [Verwenden des Bildelements](how-to-use-the-image-element.md)  
   [Konvertieren eines Bilds in Graustufen](how-to-convert-an-image-to-greyscale.md)  
   [Zuschneiden eines Bilds](how-to-crop-an-image.md)  
   [Drehen eines Bilds](how-to-rotate-an-image.md)  
@@ -31,5 +31,6 @@ Die Themen in diesem Abschnitt wird beschrieben, wie die <xref:System.Windows.Co
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die Bildverarbeitung](../graphics-multimedia/imaging-overview.md)
-- [Themen zu Vorgehensweisen](../graphics-multimedia/imaging-how-to-topics.md)
+- [Gewusst wie-Themen](../graphics-multimedia/imaging-how-to-topics.md)

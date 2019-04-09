@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 088dc9507f073553f8a857bd11ecd016f0d94244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a12fa587d5df0ed95dd0f15ccfbe2ef886185b9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207478"
 ---
 # <a name="updating-data-in-a-data-source"></a>Aktualisieren von Daten in einer Datenquelle
 SQL-Anweisungen, mit denen Daten geändert werden (z. B. INSERT, UPDATE oder DELETE), geben keine Zeilen zurück. Ähnlich verhält es sich mit vielen gespeicherten Prozeduren, die zwar eine Aktion durchführen, jedoch keine Zeilen zurückgeben. Zum Ausführen von Befehlen, die keine Zeilen zurückgeben, erstellen Sie eine **Befehl** Objekt mit den entsprechenden SQL-Befehl und einem **Verbindung**, einschließlich der erforderlichen **Parameter**. Führen Sie den Befehl mit der **ExecuteNonQuery** Methode der **Befehl** Objekt.  
@@ -92,7 +92,8 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden von Befehlen zum Ändern von Daten](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
+- [Aktualisieren von Datenquellen mit "DataAdapters"](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
 - [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

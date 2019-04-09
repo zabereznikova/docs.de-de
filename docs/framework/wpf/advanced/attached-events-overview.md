@@ -12,18 +12,16 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 8586f09d5c12f732c63bccf4682edf94144fd47f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8f0b5109dd569791ca8f45dbe969b1c9e2f6407b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140854"
 ---
 # <a name="attached-events-overview"></a>Übersicht über angefügte Ereignisse
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] definiert eine Sprachkomponente und einen Ereignistyp mit der Bezeichnung *angefügtes Ereignis*. Mit dem Konzept eines angefügten Ereignisses können Sie einen Handler für ein bestimmtes Ereignis zu einem beliebigen Element und nicht zu einem Element, das tatsächlich das Ereignis definiert oder erbt, hinzufügen. In diesem Fall definiert oder „besitzt“ weder das Objekt, das potenziell das Ereignis auslöst, noch die Instanz der Richtungsbehandlung das Ereignis.  
-  
- 
-  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] definiert eine Sprachkomponente und den Typ des Ereignisses bezeichnet ein *angefügtes Ereignis*. Mit dem Konzept eines angefügten Ereignisses können Sie einen Handler für ein bestimmtes Ereignis zu einem beliebigen Element und nicht zu einem Element, das tatsächlich das Ereignis definiert oder erbt, hinzufügen. In diesem Fall definiert oder „besitzt“ weder das Objekt, das potenziell das Ereignis auslöst, noch die Instanz der Richtungsbehandlung das Ereignis.  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
  In diesem Thema wird davon ausgegangen, dass Sie die Artikel [Übersicht über Routingereignisse](routed-events-overview.md) und [Übersicht über XAML (WPF)](xaml-overview-wpf.md) gelesen haben.  
@@ -92,6 +90,7 @@ ms.locfileid: "57371670"
  Jedoch wenn Sie ein benutzerdefiniertes angefügtes Ereignis basierend auf definieren die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Modells angefügte Ereignisse <xref:System.Windows.RoutedEvent>, können Sie <xref:System.Windows.UIElement.RaiseEvent%2A> zum Auslösen eines angefügten Ereignisses von einem <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement>. Das Auslösen eines Routingereignisses (angefügt oder nicht) erfordert, dass Sie ein bestimmtes Element in der Elementstruktur als Ereignisquelle deklarieren. Diese Quelle wird gemeldet, als die <xref:System.Windows.UIElement.RaiseEvent%2A> Aufrufer. Das Element zu bestimmen, welches als die Quelle in der Struktur gemeldet ist, unterliegt Ihrer Verantwortung des Dienstes.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Routingereignisse](routed-events-overview.md)
 - [Ausführliche Erläuterung der XAML-Syntax](xaml-syntax-in-detail.md)
 - [XAML- und benutzerdefinierte Klassen für WPF](xaml-and-custom-classes-for-wpf.md)

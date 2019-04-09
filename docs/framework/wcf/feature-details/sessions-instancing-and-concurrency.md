@@ -2,12 +2,12 @@
 title: Sitzungen, Instanziierung und Parallelität
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 5ccd6fe5e07b2a1bc36b89d1fe14f7990dc7231d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661818"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229068"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>Sitzungen, Instanziierung und Parallelität
 Eine *Sitzung* ist die Korrelation (d.&#160;h. die Beziehung) aller zwischen zwei Endpunkten gesendeter Nachrichten. *Instanziierung* bezieht sich auf die Steuerung der Lebensdauer von benutzerdefinierten Dienstobjekten und den zugehörigen <xref:System.ServiceModel.InstanceContext> -Objekten. *Parallelität* bezeichnet die Kontrolle der Anzahl von Threads, die gleichzeitig in einem <xref:System.ServiceModel.InstanceContext> ausgeführt werden.  
@@ -29,11 +29,11 @@ Eine *Sitzung* ist die Korrelation (d.&#160;h. die Beziehung) aller zwischen zwe
   
  Wenn Sie kennen die <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> -Klasse im [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Anwendungen und die Funktionalität bietet, fallen Ihnen möglicherweise die folgenden Unterschiede zwischen dieser Art von Sitzung und WCF-Sitzungen:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Sitzungen werden immer vom Server initiiert.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Sitzungen werden immer vom Server initiiert.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Sitzungen sind implizit nicht sortiert.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Sitzungen sind implizit nicht sortiert.  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Sitzungen stellen einen allgemeinen Datenspeicher für Anforderungen bereit.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Sitzungen bieten eine allgemeine Datenspeichermechanismus für Anforderungen.  
   
  Client- und Dienstanwendungen interagieren auf unterschiedliche Weise mit Sitzungen. Clientanwendungen initiieren Sitzungen und empfangen und verarbeiten dann die innerhalb der Sitzung gesendeten Nachrichten. Dienstanwendungen können Sitzungen als Erweiterungspunkt verwenden, um zusätzliches Verhalten hinzuzufügen. Dies geschieht durch direkte Nutzung von <xref:System.ServiceModel.InstanceContext> oder durch Implementierung eines benutzerspezifischen Instanzenkontextanbieters.  
   
@@ -108,8 +108,9 @@ public class CalculatorService : ICalculatorConcurrency
 |Single|-Verhalten bei sitzungsbasiertem Kanal: Eine Sitzung und ein <xref:System.ServiceModel.InstanceContext> für alle Aufrufe.<br />-Verhalten bei nicht sitzungsbasiertem Kanal: Es wird eine Ausnahme ausgelöst.|-Verhalten bei sitzungsbasiertem Kanal: Eine Sitzung und <xref:System.ServiceModel.InstanceContext> für den erstellten bzw. den vom Benutzer angegebenen Singleton.<br />-Verhalten bei nicht sitzungsbasiertem Kanal: Ein <xref:System.ServiceModel.InstanceContext> für den erstellten bzw. den vom Benutzer angegebenen Singleton.|-Verhalten bei sitzungsbasiertem Kanal: Es wird eine Ausnahme ausgelöst.<br />-Verhalten bei nicht sitzungsbasiertem Kanal: Ein <xref:System.ServiceModel.InstanceContext> für jeden erstellten Singleton oder für den Benutzer angegebenen Singleton.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden von Sitzungen](../../../../docs/framework/wcf/using-sessions.md)
-- [Vorgehensweise: Erstellen Sie einen Dienst, der Sitzungen erfordert](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [Vorgehensweise: Erstellen eines Diensts, der Sitzungen erfordert](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
 - [Vorgehensweise: Steuern der Dienstinstanzierung](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
 - [Parallelität](../../../../docs/framework/wcf/samples/concurrency.md)
 - [Instanziierung](../../../../docs/framework/wcf/samples/instancing.md)

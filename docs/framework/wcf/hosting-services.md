@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 208841d880ffcbfb2bbeb9e235cc8cdf0fa2f041
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185535"
 ---
 # <a name="hosting-services"></a>Hosting-Dienste
 Zur Aktivierung muss der Dienst in einer Laufzeitumgebung gehostet werden, die ihn erstellt und seinen Kontext sowie seine Lebensdauer steuert. Windows Communication Foundation (WCF)-Dienste können in jedem Windows-Prozess ausgeführt werden soll, Code unterstützt verwalteten.  
@@ -34,7 +34,7 @@ Zur Aktivierung muss der Dienst in einer Laufzeitumgebung gehostet werden, die i
  Beachten Sie, dass von IIS gehostete Dienste nur den HTTP-Transport verwenden können. Mit der Implementierung in IIS&#160;5.1 wurden einige Einschränkungen in [!INCLUDE[wxp](../../../includes/wxp-md.md)]eingeführt. Die Nachrichtenbasierte Aktivierung für einen WCF-Dienst von IIS 5.1 auf bereitgestellten [!INCLUDE[wxp](../../../includes/wxp-md.md)] jeden anderen selbst gehosteten WCF-Dienst auf demselben Computer über Port 80 für die Kommunikation blockiert. WCF-Dienste können in der gleichen AppDomain/Application Pool/Worker Process wie andere Anwendungen, wenn Sie gehostet ausgeführt [!INCLUDE[iis601](../../../includes/iis601-md.md)] auf [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Aber da WCF und [!INCLUDE[iis601](../../../includes/iis601-md.md)] beide verwenden den Kernelmodus-HTTP-Protokollstapel (HTTP.sys), [!INCLUDE[iis601](../../../includes/iis601-md.md)] können Port 80 mit anderen selbst gehosteten WCF-Dienste, die auf dem gleichen Computer, im Gegensatz zu IIS 5.1, gemeinsam nutzen.  
   
 #### <a name="windows-process-activation-service-was"></a>Windows Process Activation Service (WAS)  
- Windows Process Activation Service (WAS) ist der neue Prozessaktivierungsmechanismus für [!INCLUDE[lserver](../../../includes/lserver-md.md)] , der auch unter [!INCLUDE[wv](../../../includes/wv-md.md)]verfügbar ist. In WAS wurden das bekannte [!INCLUDE[iis601](../../../includes/iis601-md.md)] -Prozessmodell (Anwendungspools und nachrichtenbasierte Prozessaktivierung) und Hostingfunktionen (z. B. schneller Ausfallschutz, Systemüberwachung und Wiederverwendung) beibehalten, jedoch wurde die Abhängigkeit von HTTP aus der Aktivierungsarchitektur getilgt. [!INCLUDE[iisver](../../../includes/iisver-md.md)] nutzt WAS zur nachrichtenbasierten Aktivierung über HTTP. Weitere WCF-Komponenten stecken Sie auch in WAS-Aktivierung bereit, über die anderen Protokolle, die von WCF unterstützt, z. B. TCP, MSMQ und named Pipes. Dies ermöglicht es Anwendungen, die mit Kommunikationsprotokollen arbeiten, die IIS-Features zu nutzen, die nur für HTTP-basierte Anwendungen verfügbar waren, beispielsweise die Prozesswiederverwendung, den schnellen Fehlerschutz und das gemeinsame Konfigurationssystem.  
+ Windows Process Activation Service (WAS) ist der neue Prozessaktivierungsmechanismus für [!INCLUDE[lserver](../../../includes/lserver-md.md)] , der auch unter [!INCLUDE[wv](../../../includes/wv-md.md)]verfügbar ist. In WAS wurden das bekannte [!INCLUDE[iis601](../../../includes/iis601-md.md)] -Prozessmodell (Anwendungspools und nachrichtenbasierte Prozessaktivierung) und Hostingfunktionen (z. B. schneller Ausfallschutz, Systemüberwachung und Wiederverwendung) beibehalten, jedoch wurde die Abhängigkeit von HTTP aus der Aktivierungsarchitektur getilgt. [!INCLUDE[iisver](../../../includes/iisver-md.md)] nutzt WAS zur nachrichtenbasierten Aktivierung über HTTP an. Weitere WCF-Komponenten stecken Sie auch in WAS-Aktivierung bereit, über die anderen Protokolle, die von WCF unterstützt, z. B. TCP, MSMQ und named Pipes. Dies ermöglicht es Anwendungen, die mit Kommunikationsprotokollen arbeiten, die IIS-Features zu nutzen, die nur für HTTP-basierte Anwendungen verfügbar waren, beispielsweise die Prozesswiederverwendung, den schnellen Fehlerschutz und das gemeinsame Konfigurationssystem.  
   
  Diese Hostingoption erfordert, dass WAS korrekt konfiguriert wurde, jedoch muss keinerlei Hostcode für die Anwendung geschrieben werden. Weitere Informationen zum Konfigurieren hostet, finden Sie unter [Vorgehensweise: Hosten eines WCF-Diensts in WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md).  
   
@@ -62,6 +62,7 @@ Zur Aktivierung muss der Dienst in einer Laufzeitumgebung gehostet werden, die i
  Sie müssen unbedingt beachten, dass die Sicherheit gefährdet wird, wenn ein Dienst oder eine Erweiterung auf einem nicht vertrauenswürdigen Host ausgeführt wird. Beachten Sie zudem, dass eine Anwendung sicherstellen muss, dass der Benutzer nicht abgemeldet wird, wenn ein <xref:System.ServiceModel.ServiceHost> mit Identitätswechsel geöffnet wird, indem beispielsweise die <xref:System.Security.Principal.WindowsIdentity> des Benutzers zwischengespeichert wird.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Systemanforderungen](../../../docs/framework/wcf/wcf-system-requirements.md)
 - [Grundlegender Programmierlebenszyklus](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [Implementieren von Dienstverträgen](../../../docs/framework/wcf/implementing-service-contracts.md)

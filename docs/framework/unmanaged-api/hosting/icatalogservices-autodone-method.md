@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63c00755c7d39160343d25f9fc83992b27719d29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c6b998bfe2c04d45b332088ad43272c8013e354
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678472"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224324"
 ---
 # <a name="icatalogservicesautodone-method"></a>ICatalogServices::Autodone-Methode
 Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.  
@@ -34,4 +34,5 @@ HRESULT Autodone ( );
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+
+- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

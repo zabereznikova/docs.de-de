@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer Suchtabelle mit der BindingSource-Komponente in Windows Forms'
+title: 'Vorgehensweise: Erstellen einer Suchtabelle mit der BindingSource-Komponente in Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - lookup tables
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b2b588a8529983699e49531f51aae8e4225e9608
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723919"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181479"
 ---
-# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Vorgehensweise: Erstellen einer Suchtabelle mit der BindingSource-Komponente in Windows Forms
+# <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Vorgehensweise: Erstellen einer Suchtabelle mit der BindingSource-Komponente in Windows Forms
 Eine Nachschlagetabelle ist eine Tabelle mit Daten, in der die Daten aus Datensätzen einer verknüpften Tabelle in einer Spalte dargestellt werden. In den folgenden Verfahren wird ein <xref:System.Windows.Forms.ComboBox>-Steuerelement für die Anzeige des Felds mit der Fremdschlüsselbeziehung von der übergeordneten zur untergeordneten Tabelle verwendet.  
   
  Zur Visualisierung dieser beiden Tabellen und dieser Beziehung finden Sie hier ein Beispiel einer über- und untergeordneten Tabelle:  
@@ -92,6 +92,7 @@ Eine Nachschlagetabelle ist eine Tabelle mit Daten, in der die Daten aus Datens�
 8.  Binden Sie die Steuerelement außer <xref:System.Windows.Forms.ComboBox> und <xref:System.Windows.Forms.BindingNavigator> an das Feld "Details" aus der <xref:System.Windows.Forms.BindingSource> der untergeordneten Tabelle (z. B. `OrdersBindingSource`), die Sie anzeigen möchten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource-Komponente](bindingsource-component.md)
 - [ComboBox-Steuerelement](combobox-control-windows-forms.md)

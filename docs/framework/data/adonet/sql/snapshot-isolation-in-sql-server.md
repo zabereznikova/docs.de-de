@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 873ec2cfdf7e4b0c743a3bcf607abe8500ec4d3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c06ecd8626b148c4f2143efdfa1e143d6ab3d6bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215936"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Momentaufnahmenisolation in SQL Server
 Die Momentaufnahmeisolation erweitert die Parallelität für OLTP-Anwendungen.  
@@ -18,7 +18,7 @@ Die Momentaufnahmeisolation erweitert die Parallelität für OLTP-Anwendungen.
 ## <a name="understanding-snapshot-isolation-and-row-versioning"></a>Informationen zur Snapshot-Isolation und Zeilenversionserstellung  
  Sobald die Snapshot-Isolation aktiviert ist, werden aktuelle Zeilenversionen für jede Transaktion in verwaltet **Tempdb**. Jede Transaktion wird durch eine Transaktionsfolgenummer gekennzeichnet, und diese eindeutigen Nummern werden für jede Zeilenversion aufgezeichnet. Für die Transaktion werden die aktuellsten Zeilenversionen verwendet, die über eine Folgenummer verfügen, die niedriger ist als diejenige der Transaktion. Aktuellere, nach dem Beginn der Transaktion erstellte Zeilenversionen werden von der Transaktion ignoriert.  
   
- Die Benennung "Momentaufnahme" gibt die Tatsache wieder, dass alle Abfragen in der Transaktion auf dieselbe Version (Momentaufnahme) der Datenbank zurückgehen, die auf dem Zustand der Datenbank zum Zeitpunkt des Beginns der Transaktion basiert. In einer Snapshot-Transaktion werden für die zugrunde liegenden Datenzeilen oder Datenseiten keine Sperren bezogen, wodurch andere Transaktionen ausgeführt werden können, ohne durch eine vorherige, nicht vollständig ausgeführte Transaktion blockiert zu werden. Transaktionen, die Daten ändern, blockieren keine Transaktionen, die Daten lesen; und Transaktionen, die Daten lesen, blockieren keine Transaktionen, die Daten schreiben. Bei der READ COMMITTED-Standardisolationsstufe in SQL Server wäre dies i. d. R. der Fall. Dieses nicht blockierende Verhalten verringert die Wahrscheinlichkeit für Deadlocks bei komplexen Transaktionen beträchtlich.  
+ Die Benennung „Momentaufnahme“ gibt die Tatsache wieder, dass alle Abfragen in der Transaktion auf dieselbe Version (Momentaufnahme) der Datenbank zurückgehen, die auf dem Zustand der Datenbank zum Zeitpunkt des Beginns der Transaktion basiert. In einer Snapshot-Transaktion werden für die zugrunde liegenden Datenzeilen oder Datenseiten keine Sperren bezogen, wodurch andere Transaktionen ausgeführt werden können, ohne durch eine vorherige, nicht vollständig ausgeführte Transaktion blockiert zu werden. Transaktionen, die Daten ändern, blockieren keine Transaktionen, die Daten lesen; und Transaktionen, die Daten lesen, blockieren keine Transaktionen, die Daten schreiben. Bei der READ COMMITTED-Standardisolationsstufe in SQL Server wäre dies i. d. R. der Fall. Dieses nicht blockierende Verhalten verringert die Wahrscheinlichkeit für Deadlocks bei komplexen Transaktionen beträchtlich.  
   
  Bei der Snapshot-Isolation wird ein Modell der vollständigen Parallelität verwendet. Wenn eine Snapshot-Transaktion versucht, Änderungen an Daten zu speichern, die seit dem Beginn der Transaktion geändert wurden, wird die Transaktion zurückgesetzt und ein Fehler ausgelöst. Dies kann durch das Verwenden von UPDLOCK-Hinweisen für SELECT-Anweisungen verhindert werden, die auf zu ändernde Daten zugreifen. Weitere Informationen finden Sie in der Onlinedokumentation zu SQL Server unter "Locking Hints".  
   
@@ -43,7 +43,7 @@ SET READ_COMMITTED_SNAPSHOT ON
   
 -   READ UNCOMMITTED ist die am wenigsten restriktive Isolationsstufe, da sie von anderen Transaktionen platzierte Sperren ignoriert. Mit READ UNCOMMITTED ausgeführte Transaktionen können geänderte Datenwerte lesen, die noch nicht von anderen Transaktionen gespeichert wurden; diese werden "unsaubere" Lesevorgänge genannt.  
   
--   READ COMMITTED ist die Standardisolationsstufe für SQL Server. Er verhindert "unsaubere" Lesevorgänge, indem festgelegt wird, dass Anweisungen keine Datenwerte lesen können, die geändert, aber noch nicht von anderen Transaktionen gespeichert wurden. Andere Transaktionen können immer noch Daten zwischen Ausführungen einzelner Anweisungen innerhalb der aktuellen Transaktion ändern, einfügen oder löschen, was zu nicht wiederholbaren Lesevorgängen oder "Phantomdaten" führt.  
+-   READ COMMITTED ist die Standardisolationsstufe für SQL Server. Er verhindert „unsaubere“ Lesevorgänge, indem festgelegt wird, dass Anweisungen keine Datenwerte lesen können, die geändert, aber noch nicht von anderen Transaktionen gespeichert wurden. Andere Transaktionen können immer noch Daten zwischen Ausführungen einzelner Anweisungen innerhalb der aktuellen Transaktion ändern, einfügen oder löschen, was zu nicht wiederholbaren Lesevorgängen oder "Phantomdaten" führt.  
   
 -   REPEATABLE READ ist eine restriktivere Isolationsstufe als READ COMMITTED. Er umfasst READ COMMITTED und gibt zusätzlich an, dass keine andere Transaktion Daten ändern oder löschen kann, die von der aktuellen Transaktion gelesen wurden, bis die aktuelle Transaktion einen Commit durchführt. Die Parallelität ist geringer als bei READ COMMITTED, da gemeinsam verwendete Sperren für gelesene Daten für die Dauer der Transaktion beibehalten und nicht am Ende jeder Anweisung zurückgegeben werden.  
   
@@ -99,7 +99,7 @@ SqlTransaction sqlTran =
   
 -   Der Code öffnet eine dritte Verbindung und initiiert eine Transaktion mit der READ COMMITED-Isolationsstufe, um die Daten in der Tabelle zu lesen. In diesem Fall kann der Code die Daten nicht lesen, weil er nicht über die Sperren hinweg lesen kann, die in der ersten Transaktion für die Tabelle platziert wurden, und löst eine Zeitüberschreitung aus. Das gleiche Ergebnis tritt auch bei den Isolationsstufen REPEATABLE READ und SERIALIZABLE auf, weil diese Isolationsstufen ebenfalls nicht über die in der ersten Transaktion platzierten Sperren hinweg lesen können.  
   
--   Der Code öffnet eine vierte Verbindung und initiiert mit der READ UNCOMMITTED-Isolationsstufe eine Transaktion, die einen "unsauberen" Lesevorgang für den nicht übernommenen Wert in sqlTransaction1 durchführt. Dieser Wert ist möglicherweise tatsächlich nie in der Datenbank vorhanden, wenn die erste Transaktion nicht übernommen wird.  
+-   Der Code öffnet eine vierte Verbindung und initiiert mit der READ UNCOMMITTED-Isolationsstufe eine Transaktion, die einen „unsauberen“ Lesevorgang für den nicht übernommenen Wert in sqlTransaction1 durchführt. Dieser Wert ist möglicherweise tatsächlich nie in der Datenbank vorhanden, wenn die erste Transaktion nicht übernommen wird.  
   
 -   Er führt einen Rollback für die erste Transaktion und Bereinigung durch, indem die **TestSnapshot** snapshot-Isolation für Tabelle und zum Ausschalten der **AdventureWorks** Datenbank.  
   
@@ -142,6 +142,7 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
  Wenn eine Anwendung viele Konflikte aufweist, stellt die Snapshot-Isolation möglicherweise nicht die optimale Vorgehensweise dar. Hinweise sollten nur verwendet werden, wenn sie wirklich erforderlich sind. Eine Anwendung sollte nicht so erstellt werden, dass ihre Ausführung stets von Sperrhinweisen abhängt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
 - [Transaktionssperren Handbuch und Zeilenversionsverwaltung](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

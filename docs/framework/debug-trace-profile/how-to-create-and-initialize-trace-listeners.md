@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee0ad6b34e30b03ec42ff793e37d0e13b448cbfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583102"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222717"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungslistenern
 Die Klassen <xref:System.Diagnostics.Debug?displayProperty=nameWithType> und <xref:System.Diagnostics.Trace?displayProperty=nameWithType> senden Nachrichten an Objekte, die Listener genannt werden, welche diese Meldungen empfangen und verarbeiten. Ein solcher Listener, der <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType>, wird bei Aktivierung der Ablaufverfolgung oder des Debuggens automatisch erstellt und initialisiert. Wenn die <xref:System.Diagnostics.Trace>- oder <xref:System.Diagnostics.Debug>-Ausgabe an zusätzliche Quellen geleitet werden soll, müssen Sie zusätzliche Ablaufverfolgungslistener erstellen und initialisieren.  
@@ -95,7 +95,8 @@ Die Klassen <xref:System.Diagnostics.Debug?displayProperty=nameWithType> und <xr
     ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Trace Listeners (Ablaufverfolgungslistener)](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+
+- [Ablaufverfolgungslistener](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Ablaufverfolgungsschalter](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

@@ -1,17 +1,17 @@
 ---
-title: 'Vorgehensweise: Binden einer TreeView an Daten mit nicht bestimmbarer Tiefe'
+title: 'Vorgehensweise: Binden eines TreeView-Objekts an Daten mit nicht bestimmbarer Tiefe'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
-ms.openlocfilehash: 6c0361674c4f6f740784a7657e018d5257c6edac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7da0a121cdb854c787c105c92cec70b7c4b3244e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214857"
 ---
-# <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Vorgehensweise: Binden einer TreeView an Daten mit nicht bestimmbarer Tiefe
+# <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>Vorgehensweise: Binden eines TreeView-Objekts an Daten mit nicht bestimmbarer Tiefe
 Es kann möglicherweise vorkommen, wenn Sie binden möchten, eine <xref:System.Windows.Controls.TreeView> mit einer Datenquelle, deren Tiefe ist nicht bekannt.  Dies kann auftreten, wenn die Daten rekursiv sind, z. B. ein Dateisystem, in dem Ordner Ordner enthalten kann, oder eines Unternehmens Organisationsstruktur, auf dem Mitarbeiter andere Mitarbeiter unterstellt sind.  
   
  Die Datenquelle muss es sich um eine hierarchische Objektmodell aufweisen. Z. B. eine `Employee` Klasse kann eine Auflistung von Employee-Objekten, die direkt unterstellten Mitarbeiter eines Mitarbeiters sind, enthalten. Wenn die Daten auf eine Weise, die nicht hierarchisch ist dargestellt werden, müssen Sie eine hierarchische Darstellung der Daten erstellen.  
@@ -26,5 +26,6 @@ Es kann möglicherweise vorkommen, wenn Sie binden möchten, eine <xref:System.W
  [!code-xaml[TreeViewWithUnknownDepth#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht zur Datenbindung](../data/data-binding-overview.md)
+
+- [Übersicht über die Datenbindung](../data/data-binding-overview.md)
 - [Übersicht über Datenvorlagen](../data/data-templating-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Binden an eine Auflistung und Anzeigen von Informationen auf Grundlage der Auswahl'
+title: 'Vorgehensweise: Binden an eine Sammlung und Anzeigen von Informationen auf Grundlage der Auswahl'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data binding [WPF], selecting data for views
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
-ms.openlocfilehash: 5ceda723ad982fc788e8d0b81e6cf92975790682
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 61ced27ed80adf8ac5d543584f71794b9ee59676
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188746"
 ---
-# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Vorgehensweise: Binden an eine Auflistung und Anzeigen von Informationen auf Grundlage der Auswahl
+# <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Vorgehensweise: Binden an eine Sammlung und Anzeigen von Informationen auf Grundlage der Auswahl
 In einem einfachen Master / Detail-Szenario haben Sie ein datengebundenes <xref:System.Windows.Controls.ItemsControl> wie z. B. eine <xref:System.Windows.Controls.ListBox>. Auf Grundlage der Benutzerauswahl, zeigen Sie weitere Informationen zum ausgewählten Element. Dieses Beispiel zeigt, wie Sie dieses Szenario zu implementieren.  
   
 ## <a name="example"></a>Beispiel  
@@ -46,8 +46,9 @@ In einem einfachen Master / Detail-Szenario haben Sie ein datengebundenes <xref:
  [!code-vb[CollectionBinding#ToString](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CollectionBinding/VisualBasic/Person.vb#tostring)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden des Master-/Detailmusters mit hierarchischen Daten](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
 - [Verwenden des Master-/Detailmusters mit hierarchischen XML-Daten](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
-- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Übersicht über die Datenbindung](data-binding-overview.md)
 - [Übersicht über Datenvorlagen](data-templating-overview.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)

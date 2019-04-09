@@ -8,12 +8,12 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 2ce4794c5f0abfc31ae9d6f813bcfd7a9d375611
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379574"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167166"
 ---
 # <a name="timing-events-overview"></a>Übersicht über Zeitsteuerungsereignisse
 In diesem Thema wird beschrieben, wie mit den fünf Zeitsteuerungsereignisse auf <xref:System.Windows.Media.Animation.Timeline> und <xref:System.Windows.Media.Animation.Clock> Objekte.  
@@ -77,6 +77,7 @@ In diesem Thema wird beschrieben, wie mit den fünf Zeitsteuerungsereignisse auf
  Beim Registrieren für die <xref:System.Windows.Media.Animation.Timeline.Completed> Ereignis auf einer Zeitachse beispielsweise veranlassen Sie das System zum Registrieren für die <xref:System.Windows.Media.Animation.Clock.Completed> -Ereignis jeder Uhr, die erstellt wird, wird für die Zeitachse. Im Code müssen Sie für dieses Ereignis vor dem Registrieren der <xref:System.Windows.Media.Animation.Clock> für diese Zeitachse; erstellt wird, andernfalls erhalten Sie keine Benachrichtigung. Dies geschieht automatisch in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; der Parser registriert sich automatisch für das Ereignis vor dem <xref:System.Windows.Media.Animation.Clock> erstellt wird.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über das Animations- und Zeitsteuerungssystem](animation-and-timing-system-overview.md)
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über Zeitsteuerungsverhalten](timing-behaviors-overview.md)

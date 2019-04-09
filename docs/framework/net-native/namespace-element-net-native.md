@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 647b1807957b611b9ba75ee90a7ac2257246d14c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150747"
 ---
 # <a name="namespace-element-net-native"></a>\<Namespace > (Element (.NET Native)
 Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem angegebenen Namespace an.  
@@ -47,7 +47,7 @@ Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem angegebenen Nam
 |`XmlSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die XML-Serialisierung, die die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>-Klasse verwendet.|  
 |`MarshalObject`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Verweistypen zu Windows-Runtime und COM.|  
 |`MarshalDelegate`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Delegattypen als Funktionszeiger zu systemeigenem Code.|  
-|`MarshalStructure`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Strukturen zu systemeigenem Code.|  
+|`MarshalStructure`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Strukturen zu nativem Code.|  
   
 ## <a name="name-attribute"></a>Namensattribut  
   
@@ -84,6 +84,7 @@ Wendet die Laufzeitreflektionsrichtlinie auf alle Typen in einem angegebenen Nam
  Wenn es sich um ein untergeordnetes Element des [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)-Elements handelt, überschreibt das `<Namespace>`-Element die Laufzeitreflektionsrichtlinie, die vom [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)-Element definiert wird.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)

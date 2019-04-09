@@ -1,21 +1,24 @@
 ---
 title: Deaktivieren Sie die DPI--Unterstützung in Visual Studio
-description: Beschreibt die Einschränkungen von Windows Forms-Designer auf HDPI-Bildschirmen und wie Sie Visual Studio als DPI-Wert ohne-Prozess ausgeführt.
-ms.date: 03/19/2019
+description: Beschreibt die Einschränkungen von Windows Forms-Designer auf die HDPI-Monitore und Visual Studio als DPI-Wert ohne Prozess ausführen.
+ms.date: 04/05/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.custom: seoapril2019
+ms.openlocfilehash: e52debea382033417afe0bd47f899af1666192bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633867"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181380"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Deaktivieren Sie die DPI--Unterstützung in Visual Studio
 
 Visual Studio ist eine Punkte pro Zoll (DPI) Anwendung, die erkennt automatisch in die Anzeige Skalierungen also. Wenn eine Anwendung gibt an, dass es nicht DPI-bewusst ist, wird das Betriebssystem die Anwendung als Bitmap skaliert. Dieses Verhalten wird auch DPI-Virtualisierung bezeichnet. Die Anwendung geht immer noch, dass er auf 100 % zu skalieren oder 96 dpi ausgeführt wird.
+
+Dieser Artikel beschreibt die Einschränkungen von Windows Forms-Designer auf HDPI-Bildschirmen und wie Sie Visual Studio als DPI-Wert ohne-Prozess ausgeführt.
 
 ## <a name="windows-forms-designer-on-hdpi-monitors"></a>Windows Forms-Designer auf die HDPI-Monitore
 
@@ -32,11 +35,15 @@ Die Nachricht liest **Skalierung auf Ihre Hauptanzeige auf 200 % (192 dpi) festg
 > [!NOTE]
 > Diese Informationsleiste wurde in Visual Studio 2017 Version 15.8 eingeführt.
 
-Wenn Sie im Designer funktionieren nicht und nicht das Layout Ihres Formulars anpassen müssen, können Sie ignorieren die Informationsleiste und weiter ausgeführt, im Code-Editor oder in anderen Typen von Designern. (Sie können auch [deaktivieren Sie Benachrichtigungen](#disable-notifications) , damit die Informationsleiste weiterhin nicht angezeigt werden.) Nur die **Windows Forms-Designer** betroffen ist. Wenn Sie in der Sie arbeiten benötigen die **Windows Forms-Designer**, im nächste Abschnitt hilft Ihnen [lösen des Problems](#to-resolve-the-problem).
+Wenn Sie im Designer funktionieren nicht und nicht das Layout Ihres Formulars anpassen müssen, können Sie ignorieren die Informationsleiste und weiter ausgeführt, im Code-Editor oder in anderen Typen von Designern. (Sie können auch [deaktivieren Sie Benachrichtigungen](#disable-notifications) , damit die Informationsleiste weiterhin nicht angezeigt werden.) Nur die **Windows Forms-Designer** betroffen ist. Wenn Sie in der Sie arbeiten benötigen die **Windows Forms-Designer**, im nächste Abschnitt hilft Ihnen [lösen des Problems](#to-resolve-the-display-problem).
 
-## <a name="to-resolve-the-problem"></a>Zum Beheben des Problems
+## <a name="to-resolve-the-display-problem"></a>Zum Beheben des Anzeigeproblems
 
-Es gibt drei Möglichkeiten zum Beheben des Problems angezeigt.
+Es gibt drei Möglichkeiten zum Beheben des Anzeigeproblems:
+
+1. [Starten Sie Visual Studio neu, als DPI-Wert ohne-Prozess](#restart-visual-studio-as-a-dpi-unaware-process)
+2. [Fügen Sie einen Registrierungseintrag hinzu.](#add-a-registry-entry)
+3. [Stellen Sie die Anzeige, Skalieren die Einstellung auf 100 %](#set-your-display-scaling-setting-to-100)
 
 ### <a name="restart-visual-studio-as-a-dpi-unaware-process"></a>Starten Sie Visual Studio neu, als DPI-Wert ohne-Prozess
 

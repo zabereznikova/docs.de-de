@@ -2,12 +2,12 @@
 title: Verteilen nach Textelement
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 376dfc0dcca3c3278ee4d4afefbe4756dd631212
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 44e70a5344d7ab0fc324c6bc5948f367227c869d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817057"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227717"
 ---
 # <a name="dispatch-by-body-element"></a>Verteilen nach Textelement
 Dieses Beispiel veranschaulicht, wie ein alternativer Algorithmus zum Zuweisen eingehender Nachrichten zu Vorgängen implementiert wird.  
@@ -34,7 +34,7 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
 }
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>-Implementierungen sind sehr einfach zu erstellen, da die Schnittstelle nur eine Methode besitzt: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Die Aufgabe dieser Methode ist, eingehende Nachrichten zu überprüfen und eine Zeichenkette zurückzugeben, die dem Namen einer Methode auf dem Dienstvertrag für den aktuellen Endpunkt entspricht.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> die Implementierungen sind sehr einfach zu erstellen, da nur eine Methode für die Schnittstelle vorhanden ist: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Die Aufgabe dieser Methode ist, eingehende Nachrichten zu überprüfen und eine Zeichenkette zurückzugeben, die dem Namen einer Methode auf dem Dienstvertrag für den aktuellen Endpunkt entspricht.  
   
  In diesem Beispiel ruft die Vorgangsauswahl mithilfe von <xref:System.Xml.XmlDictionaryReader> einen <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> für den Text der eingehenden Nachricht ab. Diese Methode setzt den Leser bereits auf das erste untergeordnete Element des Nachrichtentexts, sodass es ausreicht, den aktuellen Namen des Elements und den Namespace-URI abzurufen und diese zu einem `XmlQualifiedName` zu kombinieren, der dann für die Suche nach dem entsprechenden Vorgang aus dem Wörterbuch der Vorgangsauswahl verwendet wird.  
   
@@ -178,4 +178,3 @@ public interface IDispatchedByBody
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\AdvancedDispatchByBody`  
-  

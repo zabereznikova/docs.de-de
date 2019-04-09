@@ -7,12 +7,12 @@ helpviewer_keywords:
 - color dialog box [Windows Forms], about color dialog box
 - ColorDialog component [Windows Forms], about ColorDialog
 ms.assetid: 6dbdd8f0-f697-4728-bb09-7ea156f6d800
-ms.openlocfilehash: 7dd48c8df0a36262962df596e8efadf4de1c2cd3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 284d42218fb4fbce873325b1e45c883d51eefab8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222353"
 ---
 # <a name="colordialog-component-overview-windows-forms"></a>Übersicht über die ColorDialog-Komponente (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.ColorDialog> Komponente ist ein vorkonfiguriertes Dialogfeld, das dem Benutzer eine Farbe aus einer Palette auswählen und Hinzufügen von benutzerdefinierten Farben zu dieser Palette ermöglicht. Es entspricht dem Dialogfeld, das in anderen Windows-basierten Anwendungen zur Farbauswahl angezeigt wird. Verwenden Sie es in Ihrer auf Windows basierenden Anwendung als einfache Lösung, anstatt ein eigenes Dialogfeld zu konfigurieren.  
@@ -20,7 +20,8 @@ Die Windows-Formulare <xref:System.Windows.Forms.ColorDialog> Komponente ist ein
  Im Dialogfeld ausgewählte Farbe wird zurückgegeben, der <xref:System.Windows.Forms.ColorDialog.Color%2A> Eigenschaft. Wenn die <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> -Eigenschaftensatz auf `false`, die Schaltfläche "Benutzerdefinierte Farben" ist deaktiviert, und der Benutzer ist der vordefinierten Farben in der Palette. Wenn die <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> -Eigenschaftensatz auf `true`, der Benutzer kann nicht mit Dithering Farben auswählen. Um das Dialogfeld anzuzeigen, rufen Sie die <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> Methode.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog-Komponente](colordialog-component-windows-forms.md)
 - [Dialogfeld-Steuerelemente und -Komponenten](dialog-box-controls-and-components-windows-forms.md)
-- [Vorgehensweise: Ändern der Darstellung der ColorDialog-Komponente in Windows Forms](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)
+- [Vorgehensweise: Ändern der Darstellung der ColorDialog-Komponente in Windows Forms](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)

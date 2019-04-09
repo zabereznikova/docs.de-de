@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: SQL-Generierung'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 3210fb8872e1610c37070330082b11dddc37aa06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d88916b06dd1fc01f10889fc94d5bcf8c571c228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733440"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164579"
 ---
 # <a name="walkthrough-sql-generation"></a>Exemplarische Vorgehensweise: SQL-Generierung
 In diesem Thema veranschaulicht die SQL-Generierung in der [Beispielanbieter](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). Die folgende Entity SQL-Abfrage verwendet das im Beispielanbieter enthaltene Modell:  
@@ -126,11 +126,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
- Im nächsten Schritt wird "false" auf dem IsParentAJoin-Stapel abgelegt, und die Joinbedingung "Var(Extent1).CategoryID == Var(Extent2).CategoryID" wird verarbeitet. Var(Extent1) wird nach einer Suche in der Symboltabelle in <symbol_Extent1> aufgelöst. Da die Instanz in einem einfachen Symbol als Ergebnis der Verarbeitung Var(Extent1) aufgelöst wird. Kategorie-ID, ein SqlBuilder mit \<symbol1 >. " CategoryID"zurückgegeben. Auf ähnliche Weise wird die andere Seite des Vergleichs verarbeitet. Das Ergebnis des Zugriffs auf die Joinbedingung wird an die FROM-Klausel von SelectStatement1 angefügt, und der Wert "false" wird vom IsParentAJoin-Stapel ausgelesen.  
+ Im nächsten Schritt wird "false" auf dem IsParentAJoin-Stapel abgelegt, und die Joinbedingung "Var(Extent1).CategoryID == Var(Extent2).CategoryID" wird verarbeitet. Var(extent1) wird in < symbol_Extent1 > nach einer Suche nach oben in der Symboltabelle aufgelöst. Da die Instanz in einem einfachen Symbol als Ergebnis der Verarbeitung Var(Extent1) aufgelöst wird. Kategorie-ID, ein SqlBuilder mit \<symbol1 >. " CategoryID"zurückgegeben. Auf ähnliche Weise wird die andere Seite des Vergleichs verarbeitet. Das Ergebnis des Zugriffs auf die Joinbedingung wird an die FROM-Klausel von SelectStatement1 angefügt, und der Wert "false" wird vom IsParentAJoin-Stapel ausgelesen.  
   
  Damit wurde Join1 vollständig verarbeitet, und aus der Symboltabelle wird ein Bereich ausgelesen.  
   
- Die Steuerung wird zur Verarbeitung von Join4, dem übergeordneten Element von Join1, zurückgegeben. Da das untergeordnete Element die SELECT-Anweisung wiederverwendet hat, werden die Join1-Blöcke durch ein einzelnes Joinsymbol <joinSymbol_Join1> ersetzt. Außerdem wird der Symboltabelle ein neuer Eintrag hinzugefügt, um <joinSymbol_Join1> Join1 zuzuordnen.  
+ Die Steuerung wird zur Verarbeitung von Join4, dem übergeordneten Element von Join1, zurückgegeben. Da das untergeordnete Element die Select-Anweisung wiederverwendet hat, werden die Join1-Blöcke durch ein einzelnes joinsymbol < joinSymbol_Join1 > ersetzt. Außerdem wird der Symboltabelle in < joinSymbol_Join1 > Join1 zuzuordnen ein neuer Eintrag hinzugefügt.  
   
  Der nächste zu verarbeitende Knoten ist Join3, das zweite untergeordnete Element von Join4. Da es sich um ein rechtes untergeordnetes Element handelt, wird "false" auf dem IsParentAJoin-Stapel abgelegt. Der Zustand des Besuchers zu diesem Zeitpunkt wird in der nächsten Abbildung veranschaulicht.  
   
@@ -148,9 +148,9 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  Die nächste Abbildung zeigt den Zustand des Besuchers direkt vor der Verarbeitung des DbPropertyExpression "Var(Join2).Extent4.OrderID".  
   
- Beachten Sie, wie auf "Var(Join2).Extent4.OrderID" zugegriffen wird. Zuerst wird auf die Instanzeigenschaft "Var(Join2).Extent4" zugegriffen, bei der es sich um eine weitere DbPropertyExpression handelt, die zunächst auf ihre Instanz "Var(Join2)" zugreift. Im obersten Bereich in der Symboltabelle wird "Join2" zu <joinSymbol_join2> aufgelöst. Beachten Sie, dass in der Zugriffsmethode für DbPropertyExpression bei der Verarbeitung von "Var(Join2).Extent4" ein Joinsymbol zurückgegeben wird, wenn auf die Instanz zugegriffen wird und eine Vereinfachung erforderlich ist.  
+ Beachten Sie, wie auf "Var(Join2).Extent4.OrderID" zugegriffen wird. Zuerst wird auf die Instanzeigenschaft "Var(Join2).Extent4" zugegriffen, bei der es sich um eine weitere DbPropertyExpression handelt, die zunächst auf ihre Instanz "Var(Join2)" zugreift. Im obersten Bereich in der Symboltabelle wird "Join2" zu < joinSymbol_join2 >. Beachten Sie, dass in der Zugriffsmethode für DbPropertyExpression bei der Verarbeitung von "Var(Join2).Extent4" ein Joinsymbol zurückgegeben wird, wenn auf die Instanz zugegriffen wird und eine Vereinfachung erforderlich ist.  
   
- Da es sich um einen verschachtelten Join handelt, wird die Eigenschaft "Extent4" im NameToExtent-Wörterbuch des Joinsymbols gesucht, in <symbol_Extent4> aufgelöst und ein neues SymbolPair(<joinSymbol_join2>, <symbol_Extent4>) zurückgegeben. Da von der Verarbeitung der Instanz von "Var(Join2).Extent4.OrderID" ein Symbolpaar zurückgegeben wird, wird die Eigenschaft "OrderID" vom ColumnPart dieses Symbolpaars (<symbol_Extent4>) aufgelöst, der über eine Liste der Spalten des Blocks verfügt, den er darstellt. Daher wird "Var(Join2).Extent4.OrderID" zu { <joinSymbol_Join2>, ".", <symbol_OrderID>} aufgelöst.  
+ Da es sich um einen verschachtelten Join handelt, wir die Eigenschaft "Extent4" im NameToExtent-Wörterbuch des joinsymbols gesucht, es in < symbol_Extent4 > aufgelöst und ein neues SymbolPair zurückgegeben (< joinSymbol_join2 >, < symbol_Extent4 >). Da ein Symbolpaar, von der Verarbeitung der Instanz "var(join2)" zugreift zurückgegeben wird. Extent4.OrderID", ist die Eigenschaft"OrderID"vom ColumnPart dieses symbolpaars (< symbol_Extent4 >), die eine Liste mit den Spalten des Blocks verfügt, den es darstellt, aufgelöst. So, "Var(Join2).Extent4.OrderID" is resolved to { <joinSymbol_Join2>, ".", <symbol_OrderID>}.  
   
  Die Joinbedingung von Join4 wird auf ähnliche Weise verarbeitet. Die Steuerung wird an die VisitInputExpression-Methode zurück übergeben, die das oberste Projekt verarbeitet hat. Wenn Sie die FromExtents des zurückgegebenen SelectStatement0 betrachten, können Sie feststellen, dass die Eingabe als Join identifiziert wird, die ursprünglichen Blöcke entfernt werden und diese durch einen neuen Block, der nur das Joinsymbol enthält, ersetzt werden. Die Symboltabelle wird ebenfalls aktualisiert, und danach wird der Projektionsteil des Projekts verarbeitet. Das Auflösen der Eigenschaften und das Vereinfachen der Joinblöcke erfolgt wie oben beschrieben.  
   
@@ -195,9 +195,10 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 ### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Zweite Phase der SQL-Generierung: Generieren des Zeichenfolgenbefehls  
  In der zweiten Phase werden tatsächliche Namen für die Symbole erzeugt, und wir konzentrieren uns nur auf die Symbole, die Spalten mit dem Namen "OrderID" darstellen, da in diesem Fall ein Konflikt gelöst werden muss. Diese werden im SqlSelectStatement hervorgehoben. Beachten Sie, dass die in der Abbildung verwendeten Suffixe nur dazu verwendet werden, hervorzuheben, dass es sich um unterschiedliche Instanzen handelt. Damit sollen keine neuen Namen dargestellt werden, da die endgültigen Namen (die sich möglicherweise von den ursprünglichen Namen unterscheiden) zu diesem Zeitpunkt noch nicht zugewiesen wurden.  
   
- Das erste Symbol, das umbenannt werden muss, ist <symbol_OrderID>. Als neuer Name wird "OrderID1" zugewiesen. 1 wird als zuletzt verwendetes Suffix für "OrderID" gekennzeichnet, und das Symbol wird als Symbol gekennzeichnet, für das keine Umbenennung erforderlich ist. Danach wird die erste Verwendung von <symbol_OrderID_2> festgestellt. Es wird umbenannt, sodass das nächste verfügbare Suffix ("OrderID2") verwendet wird. Das Symbol wird wieder als Symbol gekennzeichnet, für das keine Umbenennung erforderlich ist, damit es bei der nächsten Verwendung nicht umbenannt wird. Mit <symbol_OrderID_3> wird auf dieselbe Weise verfahren.  
+ Das erste Symbol gefunden, die umbenannt werden muss, ist < Symbol_OrderID >. Als neuer Name wird "OrderID1" zugewiesen. 1 wird als zuletzt verwendetes Suffix für "OrderID" gekennzeichnet, und das Symbol wird als Symbol gekennzeichnet, für das keine Umbenennung erforderlich ist. Als Nächstes wird die erste Verwendung von < symbol_OrderID_2 > gefunden. Es wird umbenannt, sodass das nächste verfügbare Suffix ("OrderID2") verwendet wird. Das Symbol wird wieder als Symbol gekennzeichnet, für das keine Umbenennung erforderlich ist, damit es bei der nächsten Verwendung nicht umbenannt wird. Dies ist auch für < symbol_OrderID_3 > durchgeführt.  
   
  Am Ende der zweiten Phase wird die endgültige SQL-Anweisung generiert.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [SQL-Generierung im Beispielanbieter](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

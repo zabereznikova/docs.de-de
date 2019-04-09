@@ -10,17 +10,16 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: eef28a178f11ea23ac23183c9ec7eb06b7f18a29
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58af8848a6b8a5e4ded453831f5a7ef985548492
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209163"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Übersicht über Alignment, Margin und Padding
 Die <xref:System.Windows.FrameworkElement> Klasse macht mehrere Eigenschaften, die verwendet werden, um die untergeordneten Elemente präzise positionieren. In diesem Thema wird erläutert, vier der wichtigsten Eigenschaften: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, und <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Es ist wichtig, die Auswirkungen dieser Eigenschaften zu verstehen, da Sie die Grundlage für das Steuern der Position von Elementen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen bieten.  
-  
-  
+
 <a name="wcpsdk_layout_amp_introduction"></a>   
 ## <a name="introduction-to-element-positioning"></a>Einführung in die Positionierung des Elements  
  Es gibt zahlreiche Möglichkeiten, Elemente mithilfe von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zu positionieren. Jedoch erreichen ideales Layout nicht einfach Auswahl des richtigen <xref:System.Windows.Controls.Panel> Element. Genaue Steuerung der Positionierung erfordert einen Überblick über die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, und <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> Eigenschaften.  
@@ -142,10 +141,11 @@ Die <xref:System.Windows.FrameworkElement> Klasse macht mehrere Eigenschaften, d
  Zusätzliche Ressourcen sind verfügbar, die das [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Layout ausführlicher erläutern. Die [Panels Overview](../controls/panels-overview.md) Thema enthält weitere Details zu den verschiedenen <xref:System.Windows.Controls.Panel> Elemente. Das Thema [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md) stellt erweiterte Techniken, mit denen Layoutelemente Komponenten positionieren und ihre Aktionen an Datenquellen binden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.Margin%2A>
 - [Übersicht über Panel-Elemente](../controls/panels-overview.md)
 - [Layout](layout.md)
-- [Beispiel für einen WPF-Layoutkatalog](https://go.microsoft.com/fwlink/?LinkID=160054)
+- [Beispiel für WPF-Layoutkatalog](https://go.microsoft.com/fwlink/?LinkID=160054)

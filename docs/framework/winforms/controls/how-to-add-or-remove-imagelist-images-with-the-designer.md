@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-ms.openlocfilehash: 370bd05ac014b625d9581cc285daf6724f459b73
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b85b4d39235d49966b5f3c108986c8dd04bed5fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723746"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161524"
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>Vorgehensweise: Hinzufügen oder Entfernen von ImageList-Bildern mithilfe des Designers
 Sie können Bilder zum Hinzufügen einer <xref:System.Windows.Forms.ImageList> Komponente mehrere Möglichkeiten. Sie können Bilder sehr schnell hinzufügen, indem Sie mithilfe des Smarttags zugeordnet der <xref:System.Windows.Forms.ImageList>, oder wenn Sie mehrere weitere Eigenschaften für Festlegen der <xref:System.Windows.Forms.ImageList>, Umständen ist es praktischer, Hinzufügen von Bildern mit dem Fenster "Eigenschaften". Sie können auch Bilder hinzufügen, indem Sie Code. Weitere Informationen zur Vorgehensweise beim Hinzufügen von Bildern mithilfe von Code finden Sie unter [Vorgehensweise: Hinzufügen oder Entfernen von Bildern mit der Windows Forms ImageList-Komponente](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md). Füllen Sie in der Regel die <xref:System.Windows.Forms.ImageList> Komponente mit Bildern, bevor Sie mit einem Steuerelement verknüpft ist, aber dies ist nicht erforderlich.  
@@ -38,6 +38,7 @@ Sie können Bilder zum Hinzufügen einer <xref:System.Windows.Forms.ImageList> K
 4.  In der **Editor Kolekce Images** klicken Sie auf **hinzufügen** oder **entfernen** zum Hinzufügen oder Entfernen von Bildern aus der Liste.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Bilder, Bitmaps und Metadateien](../advanced/images-bitmaps-and-metafiles.md)
-- [Exemplarische Vorgehensweise: Ausführen von häufigen Aufgaben mit Smarttags Tags auf Windows Forms-Steuerelemente](performing-common-tasks-using-smart-tags-on-wf-controls.md)
+- [Exemplarische Vorgehensweise: Ausführen von häufigen Aufgaben mit Smarttags für Windows Forms-Steuerelemente](performing-common-tasks-using-smart-tags-on-wf-controls.md)
 - [ImageList-Komponente](imagelist-component-windows-forms.md)

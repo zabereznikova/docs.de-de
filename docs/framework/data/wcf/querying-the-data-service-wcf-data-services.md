@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: da015fcd20745ef67831b7133242d66392f923e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3283ec1661138a636914d6b1ca5e7adb5d5d52d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620407"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175980"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Abfragen des Datendiensts (WCF Data Services)
 Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek ermöglicht es Ihnen, Abfragen für einen Datendienst mit vertrauten [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Programmierschemas auszuführen, u. a. mithilfe von LINQ (Language Integrated Query). Die Clientbibliothek übersetzt eine Abfrage, die auf dem Client als Instanz der <xref:System.Data.Services.Client.DataServiceQuery%601>-Klasse definiert wird, in eine HTTP GET-Anforderungsnachricht. Die Bibliothek empfängt die Antwortnachricht und übersetzt sie in Instanzen von clientdatendienstklassen. Diese Klassen werden vom <xref:System.Data.Services.Client.DataServiceContext> verfolgt, zu dem <xref:System.Data.Services.Client.DataServiceQuery%601> gehört.  
@@ -63,7 +63,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  Weitere Informationen finden Sie unter [Überlegungen zu LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md).  
   
 ## <a name="adding-query-options"></a>Hinzufügen von Abfrageoptionen  
- Datendienstabfragen unterstützen alle Abfrageoptionen, die in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verfügbar sind. Sie rufen die <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>-Methode auf, um einer <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanz Abfrageoptionen hinzuzufügen. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> gibt eine neue <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanz zurück, die der ursprünglichen Abfrage entspricht, aber die neuen Abfrageoptionen enthält. Wenn die folgende Abfrage ausgeführt wird, gibt sie `Orders`-Objekte zurück, die nach dem `Freight`-Wert gefiltert und in absteigender Reihenfolge nach dem Wert von `OrderID` sortiert werden:  
+ Datendienstabfragen unterstützen alle Abfrageoptionen, die in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verfügbar sind. Sie rufen die <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>-Methode auf, um einer <xref:System.Data.Services.Client.DataServiceQuery%601>-Instanz Abfrageoptionen hinzuzufügen. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> Gibt eine neue <xref:System.Data.Services.Client.DataServiceQuery%601> -Instanz, die der ursprünglichen Abfrage entspricht, jedoch mit der neuen Abfrage Optionssatz. Wenn die folgende Abfrage ausgeführt wird, gibt sie `Orders`-Objekte zurück, die nach dem `Freight`-Wert gefiltert und in absteigender Reihenfolge nach dem Wert von `OrderID` sortiert werden:  
   
  [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionsspecific)]  
  [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionsspecific)]  
@@ -99,17 +99,17 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  Der <xref:System.Data.Services.Client.QueryOperationResponse%601> verfügt auch über die folgenden Member, die es Ihnen ermöglichen, auf weitere Informationen zu einem Abfrageergebnis zuzugreifen:  
   
--   <xref:System.Data.Services.Client.OperationResponse.Error%2A>- ruft einen vom Vorgang ausgelösten Fehler ab, sofern ein Fehler aufgetreten sind.  
+-   <xref:System.Data.Services.Client.OperationResponse.Error%2A> -Ruft ein vom Vorgang ausgelösten Fehler ab, falls aufgetreten.  
   
--   <xref:System.Data.Services.Client.OperationResponse.Headers%2A>- enthält die Sammlung der mit der Abfrageantwort verbundenen HTTP-Antwortheader.  
+-   <xref:System.Data.Services.Client.OperationResponse.Headers%2A> -enthält die Auflistung der HTTP-Antwortheader, die die Abfrageantwort zugeordnet.  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> - ruft die ursprüngliche <xref:System.Data.Services.Client.DataServiceQuery%601>-Abfrage ab, welche die <xref:System.Data.Services.Client.QueryOperationResponse%601>-Antwort erzeugte.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> -Ruft die ursprüngliche <xref:System.Data.Services.Client.DataServiceQuery%601> , generiert der <xref:System.Data.Services.Client.QueryOperationResponse%601>.  
   
--   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> - ruft den HTTP-Antwortcode für die Abfrageantwort ab.  
+-   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> -Ruft die HTTP-Antwortcode für die Abfrageantwort ab.  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A>- ruft die Gesamtzahl der Entitäten ab, die in der Entitätenmenge enthalten war, wenn die <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A>-Methode für <xref:System.Data.Services.Client.DataServiceQuery%601> aufgerufen wurde.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> -Ruft die Gesamtanzahl der Entitäten in der Entität festgelegt, wenn die <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> Methode wurde aufgerufen, auf die <xref:System.Data.Services.Client.DataServiceQuery%601>.  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A>- gibt ein <xref:System.Data.Services.Client.DataServiceQueryContinuation>-Objekt zurück, das den URI der nächsten Seite mit Ergebnissen enthält.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> -Gibt ein <xref:System.Data.Services.Client.DataServiceQueryContinuation> -Objekt, das den URI der nächsten Seite der Ergebnisse enthält.  
   
  In der Standardeinstellung [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] gibt nur Daten, die explizit von der Abfrage-URI ausgewählt ist. Dies gibt Ihnen die Möglichkeit, bei Bedarf weitere Daten explizit vom Datendienst zu laden. Jedes Mal, wenn Daten explizit aus dem Datendienst geladen werden, wird eine Anforderung an den Datendienst gesendet. Zu den Daten, die explizit geladen werden können, gehören verknüpfte Entitäten, ausgelagerte Antwortdaten und Binärdatenströme.  
   
@@ -134,13 +134,14 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  [Vorgehensweise: Hinzufügen von Abfrageoptionen zu einer Datendienstabfrage](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
   
- [Vorgehensweise: Bestimmen der Anzahl von Entitäten, die von einer Abfrage zurückgegeben werden.](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
+ [Vorgehensweise: Bestimmen der Anzahl der von einer Abfrage zurückgegebenen Entitäten](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
   
- [Vorgehensweise: Geben Sie die Anmeldeinformationen des Clients für einen Datendienst anfordern](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
+ [Vorgehensweise: Angeben von Clientanmeldeinformationen für eine Datendienstanforderung](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
   
- [Vorgehensweise: Festlegen von Headern in der Anforderung des Clients](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
+ [Vorgehensweise: Festlegen von Headern in der Clientanforderung](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
   
- [Vorgehensweise: Projekt-Abfrageergebnisse](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
+ [Vorgehensweise: Projizieren von Abfrageergebnissen](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: b38cc51cb7eaf0913ed821bb60f10cdde2430916
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9028f9f99ee22dd480d817bc8aa94c7113a15c9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676056"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223003"
 ---
 # <a name="ui-automation-properties-overview"></a>Übersicht über die Benutzeroberflächenautomatisierungs-Eigenschaften
 > [!NOTE]
@@ -22,15 +22,15 @@ ms.locfileid: "57676056"
   
 -   [Benutzeroberflächenautomatisierungs-Eigenschaften für Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
   
--   [Server-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)(Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter)  
+-   [Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>Eigenschaftsbezeichner  
  Jede Eigenschaft wird mit einer Zahl und einem Namen bezeichnet. Die Namen von Eigenschaften werden nur zum Debuggen und zu Diagnosezwecken verwendet. Anbieter verwenden die numerischen [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] , um eingehende Eigenschaftenanforderungen zu kennzeichnen. Clientanwendungen verwenden dagegen, um die abzurufenden Eigenschaften zu kennzeichnen, nur <xref:System.Windows.Automation.AutomationProperty>-Objekte, in denen die Zahl und der Name gekapselt werden.  
   
- <xref:System.Windows.Automation.AutomationProperty> -Objekte, die bestimmte Eigenschaften darstellen, sind als Felder in verschiedenen Klassen verfügbar. Aus Sicherheitsgründen rufen Benutzeroberflächenautomatisierungs-Anbieter diese Objekte aus einem separaten Satz von Klassen ab, die in „Uiautomationtypes.dll“ enthalten sind.  
+ <xref:System.Windows.Automation.AutomationProperty> Objekte, die bestimmte Eigenschaften darstellen, sind als Felder in verschiedenen Klassen verfügbar. Aus Sicherheitsgründen rufen Benutzeroberflächenautomatisierungs-Anbieter diese Objekte aus einem separaten Satz von Klassen ab, die in „Uiautomationtypes.dll“ enthalten sind.  
   
- In folgender Tabelle sind Eigenschaften anhand der Klassen kategorisiert, die die <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].  
+ In der folgende Tabelle sind die Eigenschaften kategorisiert, durch die Klassen, die enthalten die <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)].  
   
 |Arten von Eigenschaften|Clients rufen IDs ab von|Anbieter rufen IDs ab von|  
 |-------------------------|--------------------------|----------------------------|  
@@ -137,7 +137,7 @@ ms.locfileid: "57676056"
   
 <a name="Localization"></a>   
 ## <a name="localization"></a>Lokalisierung  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter sollten folgende Eigenschaften in der Sprache des Betriebssystems zur Verfügung stellen:  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter sollten die folgenden Eigenschaften in der Sprache des Betriebssystems zur Verfügung stellen:  
   
 -   <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
   
@@ -160,9 +160,10 @@ ms.locfileid: "57676056"
  Clients lauschen Ereignissen, indem sie diese abonnieren. Abonnieren von Ereignissen bedeutet, dass Delegatenmethoden erstellt werden, die Ereignisse verarbeiten können, und dass die Methoden anschließend zusammen mit den Ereignissen, die von diesen Methoden verarbeitet werden, an [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] übergeben werden. Insbesondere für Ereignisse wegen geänderter Eigenschaften müssen Clients <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>implementieren.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
 - [Benutzeroberflächenautomatisierungs-Eigenschaften für Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [Server-Side UI Automation Provider Implementation](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)(Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieter)
+- [Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
 - [Suchen eines Benutzeroberflächenautomatisierungs-Elements anhand einer Eigenschaftenbedingung](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
 - [Zurückgeben von Eigenschaften aus einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)
 - [Auslösen von Ereignissen aus einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)

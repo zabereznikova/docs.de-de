@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 6e5ede5141d2edb24a688bf700c22870c8886906
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524883"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157669"
 ---
 # <a name="securing-services"></a>Sichern von Diensten
 Die Sicherheit eines Windows Communication Foundation (WCF)-Diensts besteht aus zwei primären Anforderungen: übertragungssicherheit und Autorisierung. (Eine dritte Anforderung, Überwachung von Sicherheitsereignissen, finden Sie im [Überwachung](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) In Kürze: Übertragungssicherheit umfasst Authentifizierung (Überprüfen der Identität sowohl des Diensts als auch des Clients), Vertraulichkeit (Nachrichtenverschlüsselung) und Integrität (digitales Signieren zur Manipulationserkennung). Autorisierung ist die Steuerung des Ressourcenzugriffs, beispielsweise wird nur Benutzern mit entsprechenden Berechtigungen das Lesen einer Datei ermöglicht. Verwenden die Funktionen von WCF, die beiden primären Anforderungen problemlos implementieren.  
@@ -99,6 +99,7 @@ Die Sicherheit eines Windows Communication Foundation (WCF)-Diensts besteht aus 
  Die `ProtectionLevel` -Eigenschaft tritt auf mehreren Attributklassen (zum Beispiel der <xref:System.ServiceModel.ServiceContractAttribute> -Klasse und der <xref:System.ServiceModel.OperationContractAttribute> -Klasse) auf. Die Schutzebene ist ein Wert, der angibt, ob die Meldungen (oder Meldungsteile), die einen Dienst unterstützen, signiert, signiert und verschlüsselt oder ohne Signaturen und Verschlüsselung gesendet werden. Weitere Informationen zur Eigenschaft finden Sie unter [Verständnis Schutzebene](../../../docs/framework/wcf/understanding-protection-level.md), Programmierbeispiele finden Sie unter [Vorgehensweise: Legen Sie die ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md). Weitere Informationen zum Entwerfen eines Dienstvertrags mit dem `ProtectionLevel` im Kontext finden Sie unter [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ServiceContractAttribute>
@@ -109,10 +110,10 @@ Die Sicherheit eines Windows Communication Foundation (WCF)-Diensts besteht aus 
 - [Entwerfen von Dienstverträgen](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Sicherheit](../../../docs/framework/wcf/feature-details/security.md)
 - [Übersicht über die Sicherheit](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Vorgehensweise: Legen Sie die ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [Vorgehensweise: Sichern eines Diensts mit Windows-Anmeldeinformationen](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
 - [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [Vorgehensweise: Geben Sie den Typ der Clientanmeldeinformationen](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [Vorgehensweise: Angeben des Typs von Clientanmeldeinformationen](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
 - [Vorgehensweise: Einschränken des Zugriffs mit der PrincipalPermissionAttribute-Klasse](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [Vorgehensweise: Annehmen der Clientidentität für einen Dienst](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Vorgehensweise: Annahme der Clientidentität durch einen Dienst](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [Vorgehensweise: Prüfen des Sicherheitskontexts](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

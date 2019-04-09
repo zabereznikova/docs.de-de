@@ -5,12 +5,12 @@ helpviewer_keywords:
 - read-only TextBox controls [WPF]
 - TextBox control read-only
 ms.assetid: e707ec59-8b22-473e-b77c-3060a237517a
-ms.openlocfilehash: 3784471020210f995c8bb0a377d56a2466d97da1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f24458eb98bd669d59f15c49d1d9e3beb6833b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229835"
 ---
 # <a name="how-to-make-a-textbox-control-read-only"></a>Vorgehensweise: Erstellen eines schreibgeschützten TextBox-Steuerelements
 Dieses Beispiel zeigt, wie Sie konfigurieren eine <xref:System.Windows.Controls.TextBox> Steuerelement, damit keine Benutzereingaben oder ändern können.  
@@ -25,5 +25,6 @@ Dieses Beispiel zeigt, wie Sie konfigurieren eine <xref:System.Windows.Controls.
  Der Standardwert von <xref:System.Windows.Controls.Primitives.TextBoxBase.IsReadOnly%2A> ist **"false"**.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über TextBox](textbox-overview.md)
 - [Übersicht über RichTextBox](richtextbox-overview.md)

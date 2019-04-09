@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], about RichTextBox control
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-ms.openlocfilehash: ded2c9bb0e5b3320de700ce6126710314ed9e4f2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201597"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>Übersicht über das RichTextBox-Steuerelement (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> Steuerelement zum Anzeigen, eingeben und Bearbeiten von Text mit Formatierung verwendet wird. Die <xref:System.Windows.Forms.RichTextBox> -Steuerelement besitzt dieselben Funktionen der <xref:System.Windows.Forms.TextBox> -Steuerelement, kann jedoch auch anzeigen, Schriftarten, Farben und Links, Text und eingebettete Bilder aus einer Datei laden und nach bestimmten Zeichen suchen. Die <xref:System.Windows.Forms.RichTextBox> Steuerelement dient normalerweise zum Bereitstellen und Anzeigen von Funktionen, wie Sie Textverarbeitungsprogrammen wie Microsoft Word. Wie die <xref:System.Windows.Forms.TextBox> -Steuerelement, das <xref:System.Windows.Forms.RichTextBox> -Steuerelement Schiebeleisten können angezeigt werden, aber im Gegensatz zu der <xref:System.Windows.Forms.TextBox> -Steuerelement, die Standardeinstellung beträgt, horizontale und vertikale Scrollleisten angezeigt, je nach Bedarf und kann zusätzliche Einstellungen.  
@@ -25,6 +25,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> Steuerelement zum 
  Rückgängigmachen und wiederholen Sie die meisten Bearbeitungsvorgänge in einem <xref:System.Windows.Forms.RichTextBox> Steuerelement durch Aufrufen der <xref:System.Windows.Forms.TextBoxBase.Undo%2A> und <xref:System.Windows.Forms.RichTextBox.Redo%2A> Methoden. Die <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> Methode können Sie bestimmen, ob es sich bei der letzte Vorgang rückgängig wurde für das Steuerelement wiederhergestellt werden kann.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox-Steuerelement](richtextbox-control-windows-forms.md)
 - [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)

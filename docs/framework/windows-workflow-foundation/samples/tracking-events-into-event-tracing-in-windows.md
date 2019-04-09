@@ -2,12 +2,12 @@
 title: Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: ceb981f4fac70155f740ac482bf9d49a51ed7970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166529"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Nachverfolgen von Ereignissen in der Ereignisablaufverfolgung in Windows
 In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF) für einen Workflowdienst nachverfolgung aktivieren und die Überwachungsereignisse in Event Tracing for Windows (ETW) ausgegeben wird. In dem Beispiel wird der ETW-Überwachungsteilnehmer (<xref:System.Activities.Tracking.EtwTrackingParticipant>) zur Ausgabe von Workflowüberwachungsdatensätzen in ETW verwendet.
@@ -20,7 +20,7 @@ In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF) f�
 |Komponente|Beschreibung|
 |---------------|-----------------|
 |Überwachungslaufzeit|Stellt die Infrastruktur bereit, um Überwachungsdatensätze auszugeben.|
-|Überwachungsteilnehmer|Greift auf die Nachverfolgungsdatensätze zu. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] wird mit einem Nachverfolgungsteilnehmer geliefert, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt.|
+|Überwachungsteilnehmer|Greift auf die Nachverfolgungsdatensätze zu. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] umfasst einen Nachverfolgungsteilnehmer, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt.|
 |Überwachungsprofil|Ein Filtermechanismus, der einem Überwachungsteilnehmer das Abonnieren einer Teilmenge der Überwachungsdatensätze ermöglicht, die von einer Workflowinstanz ausgegeben werden.|
 
  In der folgenden Tabelle sind die Überwachungsdatensätze aufgeführt, die von der Workflowlaufzeit ausgegeben werden.
@@ -150,4 +150,5 @@ In diesem Beispiel wird veranschaulicht, wie Windows Workflow Foundation (WF) f�
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\EtwTracking`  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)

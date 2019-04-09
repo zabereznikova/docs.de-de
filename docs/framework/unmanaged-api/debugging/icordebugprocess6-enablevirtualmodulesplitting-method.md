@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e7733bd3-68da-47f9-82ef-477db5f2e32d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6c2a9c806b70ab33f68e3213d82ed96aca47d62
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bb41cc47351ccf22fcd522b7d4291c235312bfaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484198"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167687"
 ---
 # <a name="icordebugprocess6enablevirtualmodulesplitting-method"></a>ICorDebugProcess6::EnableVirtualModuleSplitting-Methode
 Aktiviert oder deaktiviert die virtuelle Modulteilung.  
@@ -24,7 +24,7 @@ HRESULT EnableVirtualModuleSplitting(
   
 ## <a name="parameters"></a>Parameter  
  `enableSplitting`  
- `true`, um die virtuelle Modulteilung zu aktivieren; `false`, um sie zu deaktivieren.  
+ `true` So aktivieren Sie die virtuelle modulteilung; `false` zu deaktivieren.  
   
 ## <a name="remarks"></a>Hinweise  
  Bewirkt, dass die Teilung virtueller Module [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) zur Erkennung von Modulen, die während des Buildvorgangs zusammengeführt wurden verarbeitet, und stellt sie als Gruppe von separaten Modulen und nicht als ein einziges großes Modul. Hierdurch ändert sich das Verhalten der verschiedenen [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) die unten beschriebenen Methoden.  
@@ -113,5 +113,6 @@ HRESULT EnableVirtualModuleSplitting(
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorDebugProcess6-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

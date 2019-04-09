@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DateTimePicker control [Windows Forms], about
 - date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
-ms.openlocfilehash: 1d2e286e3ce91c722be24f059a874b9db5f2ba82
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 451172b51427e4932470c53737c7bc276920271c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703174"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173593"
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>Übersicht über das DateTimePicker-Steuerelement (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.DateTimePicker> Steuerelement ermöglicht dem Benutzer, wählen Sie ein einzelnes Element aus einer Liste von Datumsangaben oder Uhrzeiten. Wenn zur Darstellung eines Datums verwendet, er wird in zwei Teilen: einer Dropdownliste ein Datum dargestellt in Text- und ein Raster, das angezeigt wird, wenn Sie auf den Dropdownpfeil neben der Liste klicken. Das Raster sieht wie der <xref:System.Windows.Forms.MonthCalendar> -Steuerelement, das für die Auswahl mehrerer Datumsangaben verwendet werden kann. Weitere Informationen zu den <xref:System.Windows.Forms.MonthCalendar> steuern, finden Sie unter [Übersicht über das MonthCalendar-Steuerelement](monthcalendar-control-overview-windows-forms.md).  
@@ -25,5 +25,6 @@ Die Windows-Formulare <xref:System.Windows.Forms.DateTimePicker> Steuerelement e
  Des Steuerelements <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> und <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> Eigenschaften bestimmen den Bereich für Datums- und Uhrzeitangaben. Die <xref:System.Windows.Forms.DateTimePicker.Value%2A> Eigenschaft enthält das aktuelle Datum und die Uhrzeit, die auf das Steuerelement festgelegt ist. Weitere Informationen finden Sie unter [Vorgehensweise: Festlegen und Zurückgeben von Datumsangaben mit dem Windows Forms DateTimePicker-Steuerelement](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md). Die Werte angezeigt werden können, in vier Formaten, die festgelegt werden, indem die <xref:System.Windows.Forms.DateTimePicker.Format%2A> Eigenschaft: <xref:System.Windows.Forms.DateTimePickerFormat.Long>, <xref:System.Windows.Forms.DateTimePickerFormat.Short>, <xref:System.Windows.Forms.DateTimePickerFormat.Time>, oder <xref:System.Windows.Forms.DateTimePickerFormat.Custom>. Wenn Sie ein benutzerdefiniertes Format ausgewählt ist, müssen Sie festlegen der <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> Eigenschaft, um eine entsprechende Zeichenfolge ein. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen eines Datums im benutzerdefinierten Format mit dem DateTimePicker-Steuerelement in Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Anzeigen eines Datums im benutzerdefinierten Format mit dem DateTimePicker-Steuerelement in Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
-- [Vorgehensweise: Festlegen und Zurückgeben von Datumsangaben mit dem DateTimePicker-Steuerelement in Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+
+- [Vorgehensweise: Anzeigen eines Datums im benutzerdefinierten Format mit dem DateTimePicker-Steuerelement in Windows Forms](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [Vorgehensweise: Festlegen und Zurückgeben von Datumsangaben mit dem DateTimePicker-Steuerelement in Windows Forms](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

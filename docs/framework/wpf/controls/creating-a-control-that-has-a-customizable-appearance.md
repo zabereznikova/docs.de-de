@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: bb82921070cb5040cd279830bafd3d0e718d1374
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 17b6fd604b5eca54d6323701dafdd38f9f6e7328
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372706"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131018"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>Erstellen eines Steuerelements mit einer anpassbaren Darstellung
 <a name="introduction"></a>
@@ -37,7 +37,7 @@ Ein benutzerdefiniertes NumericUpDown-Steuerelement
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Erforderliche Komponenten](#prerequisites)  
+-   [Vorraussetzungen](#prerequisites)  
   
 -   [Teile und Zustände-Modell](#parts_and_states_model)  
   
@@ -121,7 +121,7 @@ Ein benutzerdefiniertes NumericUpDown-Steuerelement
 ### <a name="use-the-visualstatemanager-to-manage-states"></a>Verwenden der VisualStateManager Zustände verwalten  
  Die <xref:System.Windows.VisualStateManager> verfolgt den Zuständen eines Steuerelements und führt die erforderliche Logik zum Übergang zwischen Zuständen. Beim Hinzufügen <xref:System.Windows.VisualState> Objekte die <xref:System.Windows.Controls.ControlTemplate>, fügen Sie die Objekte einer <xref:System.Windows.VisualStateGroup> und Hinzufügen der <xref:System.Windows.VisualStateGroup> auf die <xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType> angefügte Eigenschaft, damit die <xref:System.Windows.VisualStateManager> hat Zugriff auf diese.  
   
- Im folgende Beispiel wird im vorherige Beispiel, das zeigt, wiederholt der <xref:System.Windows.VisualState> Objekte, die entspricht, der `Positive` und `Negative` Zustände des Steuerelements. Die <xref:System.Windows.Media.Animation.Storyboard> in die `Negative` <xref:System.Windows.VisualState> aktiviert die <xref:System.Windows.Controls.TextBlock.Foreground%2A> von der <xref:System.Windows.Controls.TextBlock> Rot.   Wenn die `NumericUpDown` Steuerelement befindet sich in der `Negative` -Status befindet, handelt es sich bei das Storyboard in der `Negative` Zustand beginnt.  Die <xref:System.Windows.Media.Animation.Storyboard> in die `Negative` Zustand beendet wird, wenn das Steuerelement zurückgegeben der `Positive` Zustand.  Die `Positive` <xref:System.Windows.VisualState> muss nicht enthalten eine <xref:System.Windows.Media.Animation.Storyboard> da bei der <xref:System.Windows.Media.Animation.Storyboard> für die `Negative` beendet wird, die <xref:System.Windows.Controls.TextBlock.Foreground%2A> an seine ursprüngliche Farbe zurückgegeben.  
+ Im folgende Beispiel wird im vorherige Beispiel, das zeigt, wiederholt der <xref:System.Windows.VisualState> Objekte, die entspricht, der `Positive` und `Negative` Zustände des Steuerelements. Die <xref:System.Windows.Media.Animation.Storyboard> in die `Negative`<xref:System.Windows.VisualState> aktiviert die <xref:System.Windows.Controls.TextBlock.Foreground%2A> von der <xref:System.Windows.Controls.TextBlock> Rot.   Wenn die `NumericUpDown` Steuerelement befindet sich in der `Negative` -Status befindet, handelt es sich bei das Storyboard in der `Negative` Zustand beginnt.  Die <xref:System.Windows.Media.Animation.Storyboard> in die `Negative` Zustand beendet wird, wenn das Steuerelement zurückgegeben der `Positive` Zustand.  Die `Positive`<xref:System.Windows.VisualState> muss nicht enthalten eine <xref:System.Windows.Media.Animation.Storyboard> da bei der <xref:System.Windows.Media.Animation.Storyboard> für die `Negative` beendet wird, die <xref:System.Windows.Controls.TextBlock.Foreground%2A> an seine ursprüngliche Farbe zurückgegeben.  
   
  [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]  
   
@@ -156,7 +156,7 @@ Ein benutzerdefiniertes NumericUpDown-Steuerelement
   
  Wenn Sie einen Statusnamen übergeben <xref:System.Windows.VisualStateManager.GoToState%2A> Wenn das Steuerelement bereits in diesem Status wird <xref:System.Windows.VisualStateManager.GoToState%2A> nichts, weshalb Sie nicht für den aktuellen Zustand des Steuerelements zu überprüfen.  Z. B. wenn `Value` ändert sich von der eine negative Zahl in eine andere negative Zahl ist, das Storyboard für die `Negative` Zustand nicht unterbrochen, und dem Benutzer eine Änderung im Steuerelement nicht angezeigt.  
   
- Die <xref:System.Windows.VisualStateManager> verwendet <xref:System.Windows.VisualStateGroup> Objekte, um zu bestimmen, welcher Zustand beendet wird, wenn Sie aufrufen <xref:System.Windows.VisualStateManager.GoToState%2A>. Das Steuerelement ist immer in einem Status für jeden <xref:System.Windows.VisualStateGroup> , definiert ist, dessen <xref:System.Windows.Controls.ControlTemplate> und lässt nur einen Status aus, wenn er in einen anderen Zustand, aus der gleichen wechselt <xref:System.Windows.VisualStateGroup>. Z. B. die <xref:System.Windows.Controls.ControlTemplate> von der `NumericUpDown` -Steuerelement definiert die `Positive` und `Negative` <xref:System.Windows.VisualState> Objekte in einem <xref:System.Windows.VisualStateGroup> und `Focused` und `Unfocused` <xref:System.Windows.VisualState> Objekte in einer anderen. (Sehen Sie die `Focused` und `Unfocused` <xref:System.Windows.VisualState> in definiert die [vollständiges Beispiel](#complete_example) in diesem Thema, wenn das Steuerelement aus wechselt die `Positive` Zustand der `Negative` Zustand, oder umgekehrt, die Steuerung bleibt, entweder in der `Focused` oder `Unfocused` Zustand.  
+ Die <xref:System.Windows.VisualStateManager> verwendet <xref:System.Windows.VisualStateGroup> Objekte, um zu bestimmen, welcher Zustand beendet wird, wenn Sie aufrufen <xref:System.Windows.VisualStateManager.GoToState%2A>. Das Steuerelement ist immer in einem Status für jeden <xref:System.Windows.VisualStateGroup> , definiert ist, dessen <xref:System.Windows.Controls.ControlTemplate> und lässt nur einen Status aus, wenn er in einen anderen Zustand, aus der gleichen wechselt <xref:System.Windows.VisualStateGroup>. Z. B. die <xref:System.Windows.Controls.ControlTemplate> von der `NumericUpDown` -Steuerelement definiert die `Positive` und `Negative`<xref:System.Windows.VisualState> Objekte in einem <xref:System.Windows.VisualStateGroup> und `Focused` und `Unfocused`<xref:System.Windows.VisualState> Objekte in einer anderen. (Sehen Sie die `Focused` und `Unfocused`<xref:System.Windows.VisualState> definiert, der [vollständiges Beispiel](#complete_example) in diesem Thema, wenn das Steuerelement aus wechselt die `Positive` Zustand der `Negative` Zustand, oder umgekehrt, bleibt das Steuerelement entweder die `Focused` oder `Unfocused` Zustand.  
   
  Es gibt drei typische stellen, in denen der Zustand eines Steuerelements ändern können:  
   
@@ -205,13 +205,13 @@ Ein benutzerdefiniertes NumericUpDown-Steuerelement
   
  Das Steuerelement kann die folgenden Zustände aufweisen:  
   
--   In der `ValueStates`<xref:System.Windows.VisualStateGroup>  
+-   Geben Sie Feld `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Positive`  
   
     -   `Negative`  
   
--   In der `FocusStates`<xref:System.Windows.VisualStateGroup>  
+-   Geben Sie Feld `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
     -   `Focused`  
   
@@ -238,5 +238,6 @@ Ein benutzerdefiniertes NumericUpDown-Steuerelement
  [!code-vb[VSMCustomControl#ControlLogic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controllogic)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
 - [Anpassung von Steuerelementen](control-customization.md)

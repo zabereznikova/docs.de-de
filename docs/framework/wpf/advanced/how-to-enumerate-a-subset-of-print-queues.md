@@ -9,12 +9,12 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: 7cdd0ebeb03d078a952dd9ffe4d2ed7590417054
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: adcfff0196bd0430ec1ae563fbd5489062de11f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217184"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>Vorgehensweise: Auflisten einer Teilmenge von Druckwarteschlangen
 Eine gängige Situation gegenüberstehen (IT) Experten, die Verwaltung einer unternehmensweiten Gruppe der Drucker ist zum Generieren einer Liste der Drucker mit bestimmten Eigenschaften. Diese Funktionalität wird bereitgestellt, indem die <xref:System.Printing.PrintServer.GetPrintQueues%2A> Methode eine <xref:System.Printing.PrintServer> Objekt und die <xref:System.Printing.EnumeratedPrintQueueTypes> Enumeration.  
@@ -35,6 +35,7 @@ Eine gängige Situation gegenüberstehen (IT) Experten, die Verwaltung einer unt
  Sie könnten dieses Beispiel erweitern, indem Sie die `foreach` Schleife, die jeder Druckwarteschlange werden die Schritte weiter sicherheitsüberprüfungen unterzogen. Angenommen, Sie könnten blenden Sie Drucker, die nicht doppelseitiger Druck unterstützen, indem Sie den Aufruf der Schleife jeder Druckwarteschlange <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> -Methode und Testen Sie den zurückgegebenen Wert, auf das Vorhandensein von Duplexdruck.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Printing.PrintServer.GetPrintQueues%2A>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.LocalPrintServer>

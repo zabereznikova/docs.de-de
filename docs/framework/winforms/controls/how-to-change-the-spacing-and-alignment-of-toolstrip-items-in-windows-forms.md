@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ändern der Abstände und der Ausrichtung der ToolStrip-Elemente in Windows Forms'
+title: 'Vorgehensweise: Ändern der Abstände und der Ausrichtung der ToolStrip-Elemente in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 954087fa893baf3aa623c912efb081491304d3fb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2e569f7254c2436a7c05eeeb139bf75bf61f900e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719441"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213310"
 ---
-# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Vorgehensweise: Ändern der Abstände und der Ausrichtung der ToolStrip-Elemente in Windows Forms
+# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Vorgehensweise: Ändern der Abstände und der Ausrichtung der ToolStrip-Elemente in Windows Forms
 Die <xref:System.Windows.Forms.ToolStrip> Steuerelement vollständig unterstützt Funktionen wie z. B. das Ändern der Größe, des Abstands des <xref:System.Windows.Forms.ToolStripItem> Steuerelemente relativ zueinander und die Anordnung von Steuerelementen auf der <xref:System.Windows.Forms.ToolStrip>, und der Abstand der Steuerelemente relativ zu den <xref:System.Windows.Forms.ToolStrip>.  
   
  Da der Standardwert der <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> -Eigenschaft ist `true`, Steuerelemente werden automatisch angepasst, es sei denn, Sie legen die <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> Eigenschaft, um `false`.  
@@ -80,6 +80,7 @@ Die <xref:System.Windows.Forms.ToolStrip> Steuerelement vollständig unterstütz
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.Layout>
 - <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>

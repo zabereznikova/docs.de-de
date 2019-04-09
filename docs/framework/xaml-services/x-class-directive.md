@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: 8acc1ac099a71fbf624049b119ebe908f27cbb55
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 5f7b072e90e92070dd7fda2f0ad44814009268b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58031223"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199452"
 ---
 # <a name="xclass-directive"></a>x:Class-Direktive
 Konfiguriert die XAML-Markup-Kompilierung um partielle Klassen zwischen Markup und Code-Behind zu verknüpfen. Die partielle Klasse im Code wird in einer separaten Codedatei im definiert eine [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] Sprache, während die partielle Klasse im Markup durch Generierung von Code während der Kompilierung von XAML in der Regel erstellt wird.  
@@ -61,6 +61,7 @@ Konfiguriert die XAML-Markup-Kompilierung um partielle Klassen zwischen Markup u
  `x:Class` für Silverlight wird separat dokumentiert. Weitere Informationen finden Sie unter [XAML-Namespace (x:)) Sprachfunktionen (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [x:Subclass-Anweisung](x-subclass-directive.md)
 - [XAML- und benutzerdefinierte Klassen für WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [x:ClassModifier-Anweisung](x-classmodifier-directive.md)

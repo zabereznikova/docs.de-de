@@ -9,18 +9,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: 18a08c9bec8436399cd3acbf27198e0912e32d09
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148303"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen
 In diesem Thema wird beschrieben, wie Sie mit <xref:System.Windows.Media.SolidColorBrush>, <xref:System.Windows.Media.LinearGradientBrush>, und <xref:System.Windows.Media.RadialGradientBrush> Objekte zeichnen mit Volltonfarben, linearen Farbverläufen und radialen Farbverläufen.  
-  
 
-  
 <a name="solidcolor"></a>   
 ## <a name="painting-an-area-with-a-solid-color"></a>Zeichnen einen Bereich mit einer Volltonfarbe  
  Eine der am häufigsten verwendeten Vorgänge auf einer beliebigen Plattform ist zum Zeichnen eines Bereichs mit einer Volltonfarbe <xref:System.Windows.Media.Color>. Für diese Aufgabe [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet die <xref:System.Windows.Media.SolidColorBrush> Klasse. Die folgenden Abschnitte beschreiben die verschiedenen Möglichkeiten zum Zeichnen einer <xref:System.Windows.Media.SolidColorBrush>.  
@@ -148,7 +146,7 @@ RadialGradientBrushes mit unterschiedlichen GradientOrigin-, Center-, RadiusX- u
   
 <a name="argbsyntax"></a>   
 ### <a name="specifying-color-opacity-in-xaml"></a>Angeben der Deckkraft einer Farbe in „XAML“  
- In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wird die [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)]-Hexadezimalschreibweise verwendet, um die Deckkraft einzelner Farben anzugeben. Die [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)]-Hexadezimalschreibweise verwendet die folgende Syntax:  
+ In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wird die [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)]-Hexadezimalschreibweise verwendet, um die Deckkraft einzelner Farben anzugeben. [!INCLUDE[TLA2#tla_argb](../../../../includes/tla2sharptla-argb-md.md)] -Hexadezimalschreibweise verwendet die folgende Syntax:  
   
  `#` **aa** *rrggbb*  
   
@@ -169,6 +167,7 @@ RadialGradientBrushes mit unterschiedlichen GradientOrigin-, Center-, RadiusX- u
  <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, und <xref:System.Windows.Media.VisualBrush> Klassen ermöglichen es Ihnen, einen Bereich mit Bildern, Zeichnungen oder visuellen Elemente zeichnen. Informationen über Zeichnen mit Bildern, Zeichnungen und Mustern finden Sie unter [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.SolidColorBrush>
 - <xref:System.Windows.Media.LinearGradientBrush>

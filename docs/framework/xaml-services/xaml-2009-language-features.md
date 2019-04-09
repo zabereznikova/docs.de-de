@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 6de103d9b5b59ec1a47098e44e07ee95a3db166e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162279"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009-Sprachfunktionen
 XAML 2009 ist der Kurzbegriff für neue XAML-Sprachfunktionen, die die vorhandene XAML-Sprachspezifikation erweitern. XAML 2009 führt mehrere neue Richtlinien und Konstrukte ein. Dazu gehören die [X: Arguments-Direktive](x-arguments-directive.md); die [X: FactoryMethod-Direktive](x-factorymethod-directive.md); die [X: Reference Markup Extension](x-reference-markup-extension.md); die [X: TypeArguments-Direktive ](x-typearguments-directive.md); und integrierte Typen für häufige Sprachprimitive (z. B. `x:Char`).  
@@ -33,4 +33,5 @@ XAML 2009 ist der Kurzbegriff für neue XAML-Sprachfunktionen, die die vorhanden
  Für von Ereignissen unterstützte Attribute wird in XAML 2006 davon ausgegangen, dass die Markupkompilierung enthalten ist, und die Ereignisse werden zur Markupkompilierung gesendet. XAML 2009 unterstützt ein Markupformular, das einer Markuperweiterung ähnelt, die die Ereignisverknüpfung bis zur Laufzeitanalyse und dem Laden der XAML zurückstellt. Allerdings verwenden WPF-Anwendungen und XAML-Szenarien für WPF-UI in der Regel nicht diese Funktion. WPF und die XAML 2006-Implementierung verwenden für einen Großteil der Ereignisattributverarbeitung eine Kombination aus der Ereignishandlerverknüpfung für Routingereignisse definiert auf <xref:System.Windows.UIElement> -Ebene und dem Markupcompilerschritt. Der Markupcompiler führt auch eine Vorverarbeitung für alle Ereignisattribute in XAML aus, bei denen die Buildvorgänge deklarieren, dass der Markupcompiler verwendet wird.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

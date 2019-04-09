@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Benutzerdefinierte Funktionen Inline aufrufen'
+title: 'Vorgehensweise: Inline-Aufrufen von benutzerdefinierten Funktionen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
-ms.openlocfilehash: 76a41ded52ac29b4a8b597188171333a888be5cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed8071352902b8f97445cbfa5ff0ebe8fead9bb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163708"
 ---
-# <a name="how-to-call-user-defined-functions-inline"></a>Vorgehensweise: Benutzerdefinierte Funktionen Inline aufrufen
+# <a name="how-to-call-user-defined-functions-inline"></a>Vorgehensweise: Inline-Aufrufen von benutzerdefinierten Funktionen
 Obwohl Sie benutzerdefinierte Funktionen inline aufrufen können, werden in einer Abfrage enthaltene Funktionen, deren Ausführung umgeleitet wird, bis zur Ausführung der Abfrage verzögert. Weitere Informationen finden Sie unter [Introduction to LINQ queries (C#) (Einführung in LINQ-Abfragen (C#))](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
  Wenn Sie die gleiche Funktion außerhalb einer Abfrage ausführen, erstellt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] eine einfache Abfrage aus der call expression-Methode. Folgendes befindet sich in der SQL-Syntax (der `@p0`-Parameter ist an die übergebene Konstante gebunden):  
@@ -39,4 +39,5 @@ FROM [Customers] AS [t0]
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Benutzerdefinierte Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/user-defined-functions.md)

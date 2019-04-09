@@ -8,18 +8,16 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-ms.openlocfilehash: 4d3677021e38c10d38c0e5ed5e5de1824397db50
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1818718d3ca9e8f56da99d6e504b41b217bfd980
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203547"
 ---
 # <a name="contextmenu-overview"></a>Übersicht über ContextMenu
 Die <xref:System.Windows.Controls.ContextMenu> Klasse darstellt, das Element, das Funktionen verfügbar macht, indem Sie ein kontextspezifisches <xref:System.Windows.Controls.Menu>. Ein Benutzer in der Regel macht der <xref:System.Windows.Controls.ContextMenu> in die [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] mit der rechten Maustaste in der Maustaste. In diesem Thema werden die <xref:System.Windows.Controls.ContextMenu> Element und enthält Beispiele zu dessen Verwendung in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] und Code.  
-  
-  
-  
+
 <a name="contextmenu_control"></a>   
 ## <a name="contextmenu-control"></a>ContextMenu-Steuerelement  
  Ein <xref:System.Windows.Controls.ContextMenu> an ein bestimmtes Steuerelement angefügt ist. Die <xref:System.Windows.Controls.ContextMenu> Element können Sie Benutzern eine Liste von Elementen zur Verfügung stellen, die Befehle oder Optionen, die ein Steuerelement zugeordnet, z. B. sind angeben einer <xref:System.Windows.Controls.Button>. Das Menü wird mit einem Rechtsklick mit der Maus aufgerufen. Klicken Sie in der Regel eine <xref:System.Windows.Controls.MenuItem> ein Untermenü geöffnet oder bewirkt, dass eine Anwendung, einen Befehl auszuführen.  
@@ -63,6 +61,7 @@ Die <xref:System.Windows.Controls.ContextMenu> Klasse darstellt, das Element, da
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.Menu>

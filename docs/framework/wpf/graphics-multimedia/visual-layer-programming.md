@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: b49ba43a163db9e6e94b531aa99123dde9f09b4e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 599ef73e2e8c772559badb3a562a12f8311e9c60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172067"
 ---
 # <a name="visual-layer-programming"></a>Programmierung auf visueller Ebene
 Die <xref:System.Windows.Media.Visual> Objekt ist ein zentrales [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Objekt, dessen primäre Rolle Unterstützung des Rendering ist. Steuerelemente der Benutzeroberfläche, z. B. <xref:System.Windows.Controls.Button> und <xref:System.Windows.Controls.TextBox>, leiten Sie von der <xref:System.Windows.Media.Visual> Klasse, und verwenden sie zum Speichern ihrer Rendering-Daten.  
@@ -23,9 +23,10 @@ Die <xref:System.Windows.Media.Visual> Objekt ist ein zentrales [!INCLUDE[TLA2#t
  [Treffertests in der visuellen Ebene](hit-testing-in-the-visual-layer.md)  
  [Verwenden von DrawingVisual-Objekten](using-drawingvisual-objects.md)  
  [Tutorial: Hosten von visuellen Objekten in einer Win32-Anwendung](tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [Themen zu Vorgehensweisen](visual-layer-programming-how-to-topics.md)  
+ [Gewusst wie-Themen](visual-layer-programming-how-to-topics.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>

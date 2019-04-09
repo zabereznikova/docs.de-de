@@ -1,5 +1,5 @@
 ---
-title: <defaultProxy>-Element (Netzwerkeinstellungen)
+title: <defaultProxy> -Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#defaultProxy
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 9d9e96296cb764d3fbb3cdcd561e036f9ad6aa2b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ce08dadb0fb7b986c0573b1514f9ecbbe2961c3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257212"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228341"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<DefaultProxy >-Element (Netzwerkeinstellungen)
 Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).  
@@ -50,7 +50,7 @@ Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Gibt einen Satz von regulären Ausdrücken zur Beschreibung der Adressen an, die keinen Proxy verwenden.|  
 |[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|Fügt der Anwendung ein neues Proxymodul hinzu.|  
-|[proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Definiert einen Proxyserver.|  
+|[Proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|Definiert einen Proxyserver.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -61,7 +61,7 @@ Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).
 ## <a name="remarks"></a>Hinweise  
  Wenn das defaultProxy-Element leer ist, werden die Proxyeinstellungen von Internet Explorer verwendet. Dieses Verhalten unterscheidet sich von .NET Framework 1.1.  
   
- Eine Ausnahme wird ausgelöst, wenn die [Modul](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) Element gibt einen nicht öffentlichen Typ, der Typ nicht abgeleitet ist die <xref:System.Net.IWebProxy> -Klasse, eine Ausnahme vom Standardkonstruktor dieses Objekts aufgetreten ist, oder eine Ausnahme aufgetreten ist zwar das System angegebenen Standardproxys werden abgerufen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft für die Ausnahme muss zusätzliche Informationen zur Grundursache des Fehlers enthalten.  
+ Eine Ausnahme wird ausgelöst, wenn die [Modul](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md) Element gibt einen nicht öffentlichen Typ, der Typ nicht abgeleitet ist die <xref:System.Net.IWebProxy> -Klasse, eine Ausnahme vom Standardkonstruktor dieses Objekts aufgetreten ist, oder eine Ausnahme aufgetreten ist zwar das System angegebenen Standardproxys werden abgerufen. Die <xref:System.Exception.InnerException%2A>-Eigenschaft für die Ausnahme muss zusätzliche Informationen zur Fehlerursache enthalten.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.  
@@ -87,5 +87,6 @@ Konfiguriert den HTTP-Proxyserver (Hypertext Transfer Protocol).
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

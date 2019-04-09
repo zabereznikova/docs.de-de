@@ -6,18 +6,16 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 9457430ab61681ad154aba98d72850f19d30280d
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185440"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201298"
 ---
 # <a name="gridview-overview"></a>Übersicht über GridView
 <xref:System.Windows.Controls.GridView> Modus der Listenansicht ist einer der Ansichtsmodi für eine <xref:System.Windows.Controls.ListView> Steuerelement. Die <xref:System.Windows.Controls.GridView> -Klasse und die unterstützenden Klassen ermöglichen Ihnen und Ihren Benutzern um Element Auflistungen in einer Tabelle anzuzeigen, die in der Regel Schaltflächen als interaktive Spaltenheader verwendet. In diesem Thema werden die <xref:System.Windows.Controls.GridView> Klasse und ihre Verwendung erläutert.  
-  
-  
-  
+
 <a name="DefiningaListViewthatusesGridViewView"></a>   
 ## <a name="what-is-a-gridview-view"></a>Was ist eine GridView-Ansicht?  
  Die <xref:System.Windows.Controls.GridView> Ansicht Modus zeigt eine Liste von Datenelementen aus, indem Datenfelder an Spalten binden und ein Spaltenheader zur Identifizierung des Felds angezeigt. Der Standardwert <xref:System.Windows.Controls.GridView> Format implementiert Schaltflächen als Spaltenheader. Mithilfe der Schaltflächen für die Spaltenüberschriften können Sie wichtige Funktionen implementieren; Benutzer können beispielsweise die Spaltenüberschrift zum Sortieren klicken <xref:System.Windows.Controls.GridView> Daten gemäß den Inhalt einer bestimmten Spalte.  
@@ -75,30 +73,30 @@ ms.locfileid: "58185440"
   
  In der folgende Liste wird ausführlich erläutert, das die Funktionen der Verwendung von <xref:System.Windows.Controls.GridView> seitens der Benutzer:  
   
--   **Neuanordnen von Spalten mithilfe der Drag & Drop-Methode**  
+-   **Neuanordnen von Spalten mithilfe der Drag & Drop-Methode.**  
   
      Benutzer können Neuanordnen von Spalten in einer <xref:System.Windows.Controls.GridView> durch die linke Maustaste drückt, während er sich über eine Spaltenüberschrift befindet, und klicken Sie dann die Spalte in eine neue Position ziehen. Während der Benutzer den Spaltenheader zieht, wird eine schwebende Version des Headers sowie eine durchgehende schwarze Linie angezeigt, die anzeigt, wo die Spalte eingefügt wird.  
   
      Wenn Sie den Standardstil für schwebenden Version eines Headers ändern möchten, geben Sie einen <xref:System.Windows.Controls.ControlTemplate> für eine <xref:System.Windows.Controls.GridViewColumnHeader> -Typ, ausgelöst, wenn die <xref:System.Windows.Controls.GridViewColumnHeader.Role%2A> -Eigenschaftensatz auf <xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>. Weitere Informationen finden Sie unter [Erstellen eines Stils für einen gezogenen GridView-Spaltenheader](how-to-create-a-style-for-a-dragged-gridview-column-header.md).  
   
--   **Anpassen einer Spalte an ihren Inhalt**  
+-   **Ändern der Größe einer Spalteninhalts, an dessen Inhalt.**  
   
      Benutzer können durch einen Doppelklick auf die Ziehpunkte rechts neben Spaltenheadern Spalten an ihren Inhalt anpassen.  
   
     > [!NOTE]
     >  Sie können festlegen, die <xref:System.Windows.Controls.GridViewColumn.Width%2A> Eigenschaft `Double.NaN` auf dieselbe Wirkung erzielt wird.  
   
--   **Zeilenelemente auswählen**  
+-   **Zeilenelemente auswählen.**  
   
      Benutzer können ein oder mehrere Elemente in Auswählen einer <xref:System.Windows.Controls.GridView>.  
   
      Wenn Sie ändern möchten die <xref:System.Windows.Style> eines ausgewählten Elements finden Sie unter [Verwenden von Triggern zum Formatieren ausgewählter Elemente in einer ListView](how-to-use-triggers-to-style-selected-items-in-a-listview.md).  
   
--   **Scrollen Sie, um Inhalt anzuzeigen, der ursprünglich nicht auf dem Bildschirm angezeigt wurde.**  
+-   **Scrollen Sie zum Anzeigen des Inhalts, der nicht zunächst auf dem Bildschirm sichtbar ist.**  
   
      Wenn die Größe der <xref:System.Windows.Controls.GridView> ist nicht groß genug für alle Elemente anzuzeigen, Benutzer können einen horizontalen Bildlauf durchführen oder vertikale Scrollleisten verwenden, die im Lieferumfang von einer <xref:System.Windows.Controls.ScrollViewer> Steuerelement. Ein <xref:System.Windows.Controls.Primitives.ScrollBar> wird ausgeblendet, wenn der gesamte Inhalt in einer bestimmten Richtung angezeigt wird. Spaltenheader werden nur beim horizontalen Scrollen und nicht beim vertikalen Scrollen mitbewegt.  
   
--   **Interagieren mit Spalten durch Klicken auf die Spaltenheader-Schaltflächen**  
+-   **Interagieren Sie mit Spalten, indem Sie auf die Spaltenheader-Schaltflächen.**  
   
      Wenn Benutzer auf eine Spaltenheader-Schaltfläche klicken, können sie die Daten sortieren, die in der Spalte angezeigt werden. Dazu müssen Sie jedoch einen Sortieralgorithmus bereitgestellt haben.  
   
@@ -125,6 +123,7 @@ ms.locfileid: "58185440"
 -   <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Controls.GridViewColumn>
@@ -134,4 +133,4 @@ ms.locfileid: "58185440"
 - <xref:System.Windows.Controls.ViewBase>
 - [Übersicht über ListView](listview-overview.md)
 - [Sortieren einer GridView-Spalte beim Klicken auf einen Header](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [Themen zu Vorgehensweisen](listview-how-to-topics.md)
+- [Gewusst wie-Themen](listview-how-to-topics.md)

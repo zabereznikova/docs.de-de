@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c803169f87c4033d7e231e8b0243f502b9246f70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 724ee01e91f1e9f4e34d2262610152a977ed4f53
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206654"
 ---
 # <a name="iappidauthority-interface"></a>IAppIdAuthority-Schnittstelle
 Stellt Methoden, die zum Generieren und Vergleichen von Schlüsseln für Anwendungsidentitäten und Verweise bereit.  
@@ -55,4 +55,5 @@ Stellt Methoden, die zum Generieren und Vergleichen von Schlüsseln für Anwendu
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

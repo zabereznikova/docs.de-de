@@ -2,12 +2,12 @@
 title: <serviceCertificate> von <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 597ae6d5-4938-4950-9f5e-b2280e816182
-ms.openlocfilehash: bd2d59218ce40639ac04aa7c5cc157fe37eb9937
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 086b700b94198aa36e61289178ebbed75d33da98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373802"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173562"
 ---
 # <a name="servicecertificate-of-servicecredentials"></a>\<ServiceCertificate > von \<ServiceCredentials >
 Geben Sie ein X.509-Zertifikat an, mit dem der Dienst gegenüber Clients im Nachrichtensicherheitsmodus authentifiziert wird.  
@@ -41,7 +41,7 @@ Geben Sie ein X.509-Zertifikat an, mit dem der Dienst gegenüber Clients im Nach
 |`x509FindType`|Definiert den Typ der X.509-Suche, die ausgeführt werden soll. Folgende Werte sind gültig:<br /><br /> -   FindByThumbprint<br />-FindBySubjectName<br />-FindBySubjectDistinguishedName<br />-FindByIssuerName<br />-FindByIssuerDistinguishedName<br />-FindBySerialNumber<br />-   FindByTimeValid<br />-   FindByTimeNotYetValid<br />-   FindByTemplateName<br />-FindByApplicationPolicy<br />-FindByCertificatePolicy<br />-FindByExtension<br />-   FindByKeyUsage<br />-   FindBySubjectKeyIdentifier<br /><br /> Der im `findValue`-Attribut enthaltene Typ muss die Anforderungen in X509FindType erfüllen.<br /><br /> Der Standardwert ist FindBySubjectDistinguishedName.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -55,6 +55,7 @@ Geben Sie ein X.509-Zertifikat an, mit dem der Dienst gegenüber Clients im Nach
  Weitere Informationen zum Verwenden des Elements finden Sie unter [Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.X509RecipientCertificateServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ServiceCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>

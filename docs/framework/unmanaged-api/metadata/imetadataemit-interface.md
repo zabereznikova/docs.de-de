@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f28facc8acb430de4aa255208a62c5fc61f12cd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10942541b781d367820301588656b2f1fc2fd006
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727663"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184417"
 ---
 # <a name="imetadataemit-interface"></a>IMetaDataEmit-Schnittstelle
 Stellt Methoden zum Erstellen, ändern und Speichern von Metadaten über die Assembly im momentan definierten Bereich. Die Metadaten im Arbeitsspeicher gespeichert, oder auf dem Datenträger gespeichert werden kann.  
@@ -90,5 +90,6 @@ Stellt Methoden zum Erstellen, ändern und Speichern von Metadaten über die Ass
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

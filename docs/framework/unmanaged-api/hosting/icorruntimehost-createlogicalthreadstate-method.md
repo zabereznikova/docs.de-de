@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6761479f8dcf51095b91033aa6038bac0047d1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d667013b23da3fb53ab87069748f6f5f646efeeb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203924"
 ---
 # <a name="icorruntimehostcreatelogicalthreadstate-method"></a>ICorRuntimeHost::CreateLogicalThreadState-Methode
 Diese Methode unterstützt die .NET Framework-Infrastruktur und ist nicht für eine direkte Verwendung im Code vorgesehen.  
@@ -43,4 +43,5 @@ HRESULT CreateLogicalThreadState ( );
  **.NET Framework Version:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorRuntimeHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

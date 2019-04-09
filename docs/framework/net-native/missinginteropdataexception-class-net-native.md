@@ -7,12 +7,12 @@ dev_langs:
 ms.assetid: eab4bcf8-9f5f-4731-87d8-842748a6062a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a6d5755507ca00de612677235912d86caf98553
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31208a63caaf9158f12742f1547b0e1e2781de4c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698062"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137955"
 ---
 # <a name="missinginteropdataexception-class-net-native"></a>MissingInteropDataException-Klasse (.NET Native)
 **.NET für Windows-Apps für Windows 10, nur [!INCLUDE[net_native](../../../includes/net-native-md.md)]**  
@@ -41,7 +41,7 @@ ms.locfileid: "54698062"
 |Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`public IDictionary Data { get; }`|Ruft eine Auflistung von Schlüssel-Wert-Paaren ab, die zusätzliche benutzerdefinierte Informationen über die Ausnahme bereitstellen. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
-|`public string HelpLink { get; set; }`|Ruft einen Link zu der mit dieser Ausnahme verbundenen Hilfedatei ab oder legt diesen fest. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public string HelpLink { get; set; }`|Ruft einen Link zur Hilfedatei ab, die dieser Ausnahme zugeordnet ist, oder legt einen Link fest. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
 |`public int HResult { get; protected set; }`|Ruft `HRESULT`, einen codierten numerischen Wert, der einer bestimmten Ausnahme zugewiesen ist, ab oder legt ihn fest. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
 |`public Exception InnerException { get; }`|Ruft die Ausnahme ab, die die aktuelle Ausnahme verursacht hat. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
 |`public string Message { get; }`|Ruft eine Meldung ab, die die aktuelle Ausnahme beschreibt. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
@@ -56,7 +56,7 @@ ms.locfileid: "54698062"
 |------------|-----------------|  
 |`public bool Equals(Object obj)`|Bestimmt, ob das angegebene Objekt mit dem aktuellen Objekt identisch ist.  (Geerbt von <xref:System.Object>.)|  
 |`protected void Finalize()`|Gibt einem Objekt Gelegenheit zu dem Versuch, Ressourcen freizugeben und andere Bereinigungen durchzuführen, bevor es von der Garbage Collection freigegeben wird. (Geerbt von <xref:System.Object>.)|  
-|`public Exception GetBaseException()`|Gibt die Ausnahme zurück, die die Ursache für eine oder mehrere nachfolgende Ausnahmen ist. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
+|`public Exception GetBaseException()`|Gibt die Ausnahme zurück, die die Grundursache für eine oder mehrere nachfolgende Ausnahmen ist. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
 |`public int GetHashCode()`|Gibt einen Hashcode für eine `MissingInteropDataException`-Instanz zurück.   (Geerbt von <xref:System.Object>.)|  
 |`public void GetObjectData(SerializationInfo info, StreamingContext context)`|Legt ein <xref:System.Runtime.Serialization.SerializationInfo>-Objekt mit Informationen über die Ausnahme fest.  (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
 |`public Type GetType()`|Ruft den Laufzeittyp der aktuellen Instanz ab. (Geerbt von <xref:System.Exception?displayProperty=nameWithType>.)|  
@@ -72,14 +72,15 @@ ms.locfileid: "54698062"
 ## <a name="usage-details"></a>Details zur Verwendung  
  Die `MissingInteropDataException`-Ausnahme wird ausgelöst, wenn ein Methodenaufruf an eine COM- oder Windows-Runtime-Komponente nicht erfolgreich ausgeführt werden kann, weil Typinformationen nicht zur Verfügung stehen.  
   
- Die Metadaten, die einer App zur Laufzeit zur Verfügung stehen, werden durch die Laufzeitdirektivendatei (XML-Konfiguration) *.rd.xml definiert. Um das Auslösen dieser Ausnahme durch die App zu verhindern, müssen Sie diese Datei ändern und die Metadaten definieren, die zur Laufzeit vorhanden sein müssen. In den meisten Fällen beheben Sie diesen Fehler, indem Sie einem geeigneten Programmelement in der Laufzeitanweisungsdatei ein `MarshalObject`-, `MarshalDelegate`- oder `MarshalStructure`-Attribut hinzufügen. Informationen zum Format von Laufzeitanweisungen finden Sie unter [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
+ Die Metadaten, die einer App zur Laufzeit zur Verfügung stehen, werden durch die Laufzeitanweisungsdatei (XML-Konfiguration) *.rd.xml definiert. Um das Auslösen dieser Ausnahme durch die App zu verhindern, müssen Sie diese Datei ändern und die Metadaten definieren, die zur Laufzeit vorhanden sein müssen. In den meisten Fällen beheben Sie diesen Fehler, indem Sie einem geeigneten Programmelement in der Laufzeitanweisungsdatei ein `MarshalObject`-, `MarshalDelegate`- oder `MarshalStructure`-Attribut hinzufügen. Informationen zum Format von Laufzeitanweisungen finden Sie unter [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 > [!IMPORTANT]
->  Da diese Ausnahme anzeigt, dass von der Anwendung benötigte Metadaten zur Laufzeit nicht verfügbar sind, sollten Sie diese Ausnahme nicht in einem `try`/`catch`-Block behandeln. Stattdessen sollten Sie die Ursache der Ausnahme ermitteln und durch Hinzufügen des entsprechenden Eintrags zu einer Laufzeitanweisungsdatei beseitigen.  
+>  Da diese Ausnahme anzeigt, dass von der Anwendung benötigte Metadaten zur Laufzeit nicht verfügbar sind, sollten Sie diese Ausnahme nicht in einem `try`/`catch`-Block behandeln. Stattdessen sollten Sie die Ursache der Ausnahme ermitteln und durch Hinzufügen des entsprechenden Eintrags zu einer Laufzeitdirektivendatei beseitigen.  
   
  Die `MissingInteropDataException`-Klasse enthält einen einzelnen eindeutigen Member, die `MissingType`-Eigenschaft, die den Typ angibt, dessen Metadaten für einen erfolgreichen Aufruf benötigt werden. Alle anderen Eigenschaften werden von der Basisklasse <xref:System.Exception?displayProperty=nameWithType> geerbt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Exception?displayProperty=nameWithType>
 - [MissingMetadataException-Klasse](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

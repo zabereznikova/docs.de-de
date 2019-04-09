@@ -7,20 +7,19 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: f5d6ae2d21058e7e6dd9fa9736800237082766d1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: d736d80a05469dafecbdaf196701c14528ee7d26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364748"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230017"
 ---
 # <a name="xaml-resources"></a>XAML-Ressourcen
 Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung erneut verwendet werden kann. Beispiele für Ressourcen sind Pinsel und Stile. In dieser Übersicht wird beschrieben, wie Ressourcen in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Sie können auch Zugriff auf Ressourcen mithilfe von Code oder abwechselnd zwischen Code und [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Weitere Informationen finden Sie unter [Ressourcen und Code](resources-and-code.md).  
   
 > [!NOTE]
 >  Die in diesem Thema beschriebenen Ressourcendateien unterscheiden, als die Ressourcendateien im beschrieben [WPF-Anwendungsressource, Inhalt und Datendateien](../app-development/wpf-application-resource-content-and-data-files.md) und unterscheidet sich die eingebetteten oder verknüpften Ressourcen, die in beschriebenen [verwalten Ressourcen der Anwendung (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
-  
-  
+
 <a name="usingresources"></a>   
 ## <a name="using-resources-in-xaml"></a>Verwendung von Ressourcen in XAML  
  Das folgende Beispiel definiert eine <xref:System.Windows.Media.SolidColorBrush> als Ressource für das Stammelement einer Seite. Anschließend verweist auf die Ressource und wird verwendet, um die Eigenschaften mehrerer untergeordneter Elemente, einschließlich einer <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Controls.TextBlock>, und ein <xref:System.Windows.Controls.Button>.  
@@ -129,7 +128,7 @@ Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung
   
 -   Die festzulegende Eigenschaft muss eine Eigenschaft auf einen <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement>. Dass die Eigenschaft gesichert werden muss, indem eine <xref:System.Windows.DependencyProperty>.  
   
--   Der Verweis bezieht sich auf einen Wert innerhalb einer <xref:System.Windows.Style> <xref:System.Windows.Setter>.  
+-   Der Verweis bezieht sich auf einen Wert innerhalb einer <xref:System.Windows.Style><xref:System.Windows.Setter>.  
   
 -   Die festzulegende Eigenschaft muss eine Eigenschaft auf eine <xref:System.Windows.Freezable> , dient als Wert eine <xref:System.Windows.FrameworkElement> oder <xref:System.Windows.FrameworkContentElement> -Eigenschaft oder ein <xref:System.Windows.Setter> Wert.  
   
@@ -145,7 +144,7 @@ Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- Dieser Stil verfügt tatsächlich über einen Schlüssel: den impliziten Schlüssel `typeof(` <xref:System.Windows.Controls.Button> `)`. Im Markup können Sie angeben einer <xref:System.Windows.Style.TargetType%2A> direkt als Typ benannt (oder Sie können optional [{X: Type...}](../../xaml-services/x-type-markup-extension.md) Zurückgeben einer <xref:System.Type>.  
+ Dieser Stil verfügt tatsächlich über einen Schlüssel: den impliziten Schlüssel `typeof(`<xref:System.Windows.Controls.Button>`)`. Im Markup können Sie angeben einer <xref:System.Windows.Style.TargetType%2A> direkt als Typ benannt (oder Sie können optional [{X: Type...}](../../xaml-services/x-type-markup-extension.md) Zurückgeben einer <xref:System.Type>.  
   
  Mithilfe der standardmäßigen Design Stil Mechanismen ein, die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], dass der Stil angewendet wird, als der Stil für die Laufzeit von ein <xref:System.Windows.Controls.Button> auf der Seite, obwohl die <xref:System.Windows.Controls.Button> selbst wird nicht versucht, an die <xref:System.Windows.FrameworkElement.Style%2A> Eigenschaft oder eine bestimmte Ressource Ein Verweis auf das Format. Die Formatvorlage definiert wird, auf der Seite befindet sich weiter oben in der Suchsequenz als Wörterbuch Designstil, mit dem gleichen Schlüssel, den dem Wörterbuch Designstil verfügt. Geben Sie einfach `<Button>Hello</Button>` an einer beliebigen Stelle in der Seite und den Stil, die Sie mit definiert <xref:System.Windows.Style.TargetType%2A> von `Button` würde auf diese Schaltfläche angewendet. Wenn Sie möchten, können Sie dennoch einen expliziten Schlüssel für den Stil mit demselben Typwert wie <xref:System.Windows.Style.TargetType%2A>für Klarheit in das Markup, aber dies optional ist.  
   
@@ -154,6 +153,7 @@ Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung
  <xref:System.Windows.DataTemplate> Außerdem verfügt über einen impliziten Schlüssel ein. Der implizite Schlüssel für eine <xref:System.Windows.DataTemplate> ist die <xref:System.Windows.DataTemplate.DataType%2A> -Eigenschaftswert. <xref:System.Windows.DataTemplate.DataType%2A> kann auch als Name des Typs angegeben werden, nicht explizit mit [{X: Type...} ](../../xaml-services/x-type-markup-extension.md). Weitere Informationen finden Sie unter [Übersicht über Datenvorlagen](../data/data-templating-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.ResourceDictionary>
 - [Anwendungsressourcen](optimizing-performance-application-resources.md)
 - [Ressourcen und Code](resources-and-code.md)

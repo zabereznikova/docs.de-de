@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reenabling spell checking in a text box [WPF]
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
-ms.openlocfilehash: 38d41aa6710fd13ffd2a5d13a6900a1a05303f35
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72b24c386eb99140c9c2729688994b81f92e1a6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377806"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192978"
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>Vorgehensweise: Verwenden der Rechtschreibprüfung mit einem Kontextmenü
 Standardmäßig werden beim Aktivieren der Rechtschreibprüfung in einem Bearbeitungssteuerelement wie <xref:System.Windows.Controls.TextBox> oder <xref:System.Windows.Controls.RichTextBox>, erhalten Sie die Optionen im Kontextmenü. Beispielsweise Benutzern ein falsch geschriebenes Wort mit der rechten Maustaste, erhalten sie einen Satz von Rechtschreibvorschläge oder die Option zum **alle ignorieren**. Wenn Sie das Standard-Kontextmenü mit Ihr eigenes benutzerdefiniertes Kontextmenü überschreiben, jedoch dieser Funktionalität verloren gegangen ist, und Sie Code schreiben, um die Rechtschreibprüfung-Funktion im Kontextmenü erneut aktivieren möchten. Das folgende Beispiel zeigt, wie Sie dies aktivieren, auf eine <xref:System.Windows.Controls.TextBox>.  
@@ -39,7 +39,8 @@ Standardmäßig werden beim Aktivieren der Rechtschreibprüfung in einem Bearbei
  `spellingError = myRichTextBox.GetSpellingError(myRichTextBox.CaretPosition);`  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über TextBox](textbox-overview.md)
 - [Übersicht über RichTextBox](richtextbox-overview.md)
 - [Aktivieren der Rechtschreibprüfung in einem Textbearbeitungssteuerelement](how-to-enable-spell-checking-in-a-text-editing-control.md)
-- [Verwenden eines benutzerdefinierten Kontextmenüs mit "TextBox"](how-to-use-a-custom-context-menu-with-a-textbox.md)
+- [Verwenden eines benutzerdefinierten Kontextmenüs mit einem TextBox-Objekt](how-to-use-a-custom-context-menu-with-a-textbox.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5651415b9565f71e7c899996708c0b263bf0154a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7cb1f55e1d8643feb2750e8ea468f608dc3d5d40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212062"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx-Methode
 Ruft den öffentlichen Schlüssel aus einem öffentlichen/privaten Schlüsselpaar und ein Hash-Algorithmus und eines Signaturalgorithmus angibt.  
@@ -76,9 +76,9 @@ HRESULT StrongNameGetPublicKey (
 ## <a name="remarks"></a>Hinweise  
  Die folgende Tabelle zeigt den Satz von zulässigen Werten für die `uHashAlgId` Parameter.  
   
-|name|Wert|  
+|Name|Wert|  
 |----------|-----------|  
-|Keine|0|  
+|Keiner|0|  
 |SHA-1|0x8004|  
 |SHA-256|0x800c|  
 |SHA-384|0x800d|  
@@ -94,6 +94,7 @@ HRESULT StrongNameGetPublicKey (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [StrongNameTokenFromPublicKey-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
 - [PublicKeyBlob-Struktur](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
 - [ICLRStrongName-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

@@ -3,12 +3,12 @@ title: WIF und Webfarmen
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 85fbebcd210e7df17212d39b8e3aca9bf76bfb67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543054"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135355"
 ---
 # <a name="wif-and-web-farms"></a>WIF und Webfarmen
 Wenn Sie Windows Identity Foundation (WIF) verwenden, um die Ressourcen von einer Anwendung der vertrauenden Seite zu sichern, die in einer Webfarm bereitgestellt wird, müssen Sie bestimmte Schritte durchführen, um sicherzustellen, dass WIF Token von Instanzen der Anwendung der vertrauenden Seite verarbeiten kann. Diese Anwendung wird auf verschiedenen Computern in der Farm ausgeführt. Diese Verarbeitung beinhaltet die Überprüfung von Signaturen der Sitzungstokens, die Verschlüsselung, Entschlüsselung und Zwischenspeicherung der Sitzungstoken, und die Erkennung von wiedergegebenen Sicherheitstoken.  
@@ -251,6 +251,7 @@ namespace CacheLibrary
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>

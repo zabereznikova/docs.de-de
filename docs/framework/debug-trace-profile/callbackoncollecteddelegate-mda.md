@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31aa9f18729bf5d85e28d484f5fd1f5aac762470
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 459465064fe9db9f2f0aebb4153a3caea173af4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223640"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>CallbackOnCollectedDelegate-MDA
 Der `callbackOnCollectedDelegate`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn das Marshalling eines Delegaten von verwaltetem zu nicht verwaltetem Code als Funktionszeiger durchgeführt wird und nach der Garbage Collection des Delegaten ein Rückruf mit diesem Funktionszeiger erfolgt.  
@@ -38,13 +38,13 @@ Der `callbackOnCollectedDelegate`-MDA (Managed Debugging Assistant, Assistent f�
   
  Die Fehlerwahrscheinlichkeit hängt vom Zeitraum zwischen dem Marshalling des Delegaten und dem Rückruf mithilfe des Funktionszeigers sowie von der Häufigkeit der Garbage Collection ab. Der Fehler tritt sporadisch auf, wenn der Zeitraum zwischen dem Marshalling des Delegaten und dem folgenden Rückruf kurz ist. Dies ist gewöhnlich der Fall, wenn die nicht verwaltete Methode, der der Funktionszeiger übergeben wird, diesen nicht zur späteren Verwendung speichert, sondern mit ihm sofort einen Rückruf ausführt, um den entsprechenden Vorgang vor dem Verlassen der Methode abzuschließen. Die Häufigkeit der Garbage Collection erhöht sich auch, wenn ein System stark ausgelastet ist. Dabei steigt die Wahrscheinlichkeit, dass vor dem Rückruf eine Garbage Collection erfolgt.  
   
-## <a name="resolution"></a>Lösung  
+## <a name="resolution"></a>Auflösung  
  Nach dem Marshalling eines Delegaten in einen nicht verwalteten Funktionszeiger ist es für den Garbage Collector unmöglich, dessen Lebensdauer zu überwachen. Stattdessen muss der Programmcode für die Lebensdauer des nicht verwalteten Funktionszeigers einen Verweis auf den Delegaten aufbewahren. Bevor dies jedoch möglich ist, müssen Sie zuerst ermitteln, welcher Delegat durch die Garbage Collection bereinigt wurde. Wenn der MDA aktiviert wird, stellt er den Typnamen des Delegaten bereit. Durchsuchen Sie mithilfe dieses Namens den Programmcode nach Plattformaufruf- oder COM-Signaturen, die einen Delegaten an nicht verwalteten Code übergeben. Der problematische Delegat wird über einen dieser Aufrufsites übergeben. Sie können auch den `gcUnmanagedToManaged`-MDA aktivieren, um vor jedem Rückruf in die CLR eine Garbage Collection zu erzwingen. Auf diese Weise wird die durch die Garbage Collection bedingte Ungewissheit beseitigt, indem sichergestellt wird, dass vor dem Rückruf stets eine Garbage Collection erfolgt. Nachdem Sie ermittelt haben, welcher Delegat durch die Garbage Collection erfasst wurde, ändern Sie den Programmcode so, dass für die Lebensdauer des gemarshallten nicht verwalteten Funktionszeigers ein Verweis auf diesen Delegaten auf der verwalteten Seite verbleibt.  
   
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Beim Marshalling von Delegaten als Funktionszeiger wird von der CLR ein Thunk zugeordnet, der für den Übergang vom nicht verwalteten zum verwalteten Code sorgt. Der nicht verwaltete Code ruft dann diesen Thunk auf, bevor schließlich der verwaltete Delegat aufgerufen wird. Ohne aktivierten `callbackOnCollectedDelegate`-MDA wird der nicht verwaltete Marshallingcode gelöscht, wenn für den Delegaten die Garbage Collection erfolgt. Mit aktiviertem `callbackOnCollectedDelegate`-MDA wird der nicht verwaltete Marshallingcode nicht sofort gelöscht, wenn für den Delegaten die Garbage Collection erfolgt. Vielmehr werden standardmäßig die letzten 1.000 Instanzen aufbewahrt und geändert, um bei einem Aufruf den MDA zu aktivieren. Der Thunk wird schließlich gelöscht, nachdem für weitere 1.001 gemarshallte Delegaten die Garbage Collection erfolgte.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Der MDA meldet den Typnamen des Delegaten, für den vor einem Rückruf mithilfe des entsprechenden nicht verwalteten Funktionszeigers eine Garbage Collection erfolgte.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -112,7 +112,8 @@ public class Entry
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Interop-Marshalling](../../../docs/framework/interop/interop-marshaling.md)
 - [gcUnmanagedToManaged](../../../docs/framework/debug-trace-profile/gcunmanagedtomanaged-mda.md)

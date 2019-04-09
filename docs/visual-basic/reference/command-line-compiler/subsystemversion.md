@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: 5254907147444f7c02b2bf0141af02d0efd4159b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c9920869a660bc6144749cc7584275be4608a7c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228808"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-Subsystemversion (Visual Basic)
 Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei ausführen kann. Dabei bestimmt sie die Version von Windows, auf der die ausführbare Datei ausgeführt werden kann. In den meisten Fällen stellt diese Option sicher, dass die ausführbare Datei bestimmte Sicherheitsfunktionen nutzt, die nicht in älteren Versionen von Windows verfügbar sind.  
@@ -41,7 +41,7 @@ Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei a
 |Windows Server 2003|5.02|  
 |Windows Vista|6.00|  
 |Windows 7|6.01|  
-|Windows Server 2008|6.01|  
+|Windows Server 2008|6.01|  
 |[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|  
   
 ## <a name="default-values"></a>Standardwerte  
@@ -49,9 +49,9 @@ Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei a
   
 -   Der Standardwert ist 6,02, wenn jede Compileroption in der folgenden Liste festgelegt ist:  
   
-    -   [/target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)  
+    -   [-target:appcontainerexe](../../../visual-basic/reference/command-line-compiler/target.md)  
   
-    -   [/target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)  
+    -   [-target:winmdobj](../../../visual-basic/reference/command-line-compiler/target.md)  
   
     -   [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)  
   
@@ -61,9 +61,7 @@ Gibt die Mindestversion des Subsystems an, das die erzeugte ausführbare Datei a
   
 ## <a name="setting-this-option"></a>Festlegen dieser Option  
  Festlegen der **- Subsystemversion** -Compileroption in Visual Studio müssen Sie die VBPROJ-Datei zu öffnen und geben Sie einen Wert für die `SubsystemVersion` Eigenschaft in der MSBuild-XML. Diese Option kann nicht in der Visual Studio-IDE festgelegt werden. Weitere Informationen finden Sie unter „Standardwerte“ weiter oben in diesem Thema oder unter [Häufige MSBuild-Projekteigenschaften](/visualstudio/msbuild/common-msbuild-project-properties).  
-  
 
-  
 ## <a name="see-also"></a>Siehe auch
 
 - [Visual Basic-Befehlszeilencompiler](../../../visual-basic/reference/command-line-compiler/index.md)

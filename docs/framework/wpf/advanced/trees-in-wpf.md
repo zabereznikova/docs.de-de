@@ -6,18 +6,16 @@ helpviewer_keywords:
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 581bd29de07697794e1e752c02068d31db9e0de8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f9b507c874dfe0ab3feca19e7fcf79df5af93e10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197684"
 ---
 # <a name="trees-in-wpf"></a>Strukturen in WPF
-In vielen Technologien werden Elemente und Komponenten in einer Baumstruktur organisiert, in denen Entwickler die Objektknoten direkt in der Struktur bearbeiten, um das Rendering oder das Verhalten einer Anwendung zu beeinflussen. Außerdem verwendet [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] mehrere Baumstrukturmetaphern, um Beziehungen zwischen Programmelementen festzulegen. Da die WPF-Entwickler meist eine Anwendung im Code erstellen können oder Teile der Anwendung in XAML festlegen, obwohl sie konzeptionell über die Baumstrukturobjektmetapher denken, rufen sie trotzdem eine bestimmte API auf oder verwenden bestimmte Markups, um dies zu tun, anstatt einige allgemeine API-Strukturobjektmanipulationen vorzunehmen, wie Sie sie möglicherweise im XML-DOM verwenden. WPF zeigt zwei hilfsprogrammklassen, die eine strukturmetapheransicht bereitstellen <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>. Die Begriffe „visuelle Struktur“ und „logische Struktur“ werden auch in der WPF-Dokumentation verwendet, da diese Strukturen für das Verstehen des Verhaltens bestimmter WPF-Schlüsselfunktionen hilfreich sind. In diesem Thema definiert, was die visuelle Struktur und die logische Struktur darstellen, wird erläutert, wie sich diese Strukturen auf ein allgemeines Objektstrukturkonzept beziehen und führt <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>s.  
-  
+In vielen Technologien werden Elemente und Komponenten in einer Baumstruktur organisiert, in denen Entwickler die Objektknoten direkt in der Struktur bearbeiten, um das Rendering oder das Verhalten einer Anwendung zu beeinflussen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] verwendet auch mehrere baumstrukturmetaphern, um Beziehungen zwischen Programmelementen zu definieren. Da die WPF-Entwickler meist eine Anwendung im Code erstellen können oder Teile der Anwendung in XAML festlegen, obwohl sie konzeptionell über die Baumstrukturobjektmetapher denken, rufen sie trotzdem eine bestimmte API auf oder verwenden bestimmte Markups, um dies zu tun, anstatt einige allgemeine API-Strukturobjektmanipulationen vorzunehmen, wie Sie sie möglicherweise im XML-DOM verwenden. WPF zeigt zwei hilfsprogrammklassen, die eine strukturmetapheransicht bereitstellen <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>. Die Begriffe „visuelle Struktur“ und „logische Struktur“ werden auch in der WPF-Dokumentation verwendet, da diese Strukturen für das Verstehen des Verhaltens bestimmter WPF-Schlüsselfunktionen hilfreich sind. In diesem Thema definiert, was die visuelle Struktur und die logische Struktur darstellen, wird erläutert, wie sich diese Strukturen auf ein allgemeines Objektstrukturkonzept beziehen und führt <xref:System.Windows.LogicalTreeHelper> und <xref:System.Windows.Media.VisualTreeHelper>s.  
 
-  
 <a name="element_tree"></a>   
 ## <a name="trees-in-wpf"></a>Strukturen in WPF  
  Die umfassendste Struktur in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ist die Objektstruktur. Wenn Sie eine Anwendungsseite in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] festlegen und anschließend [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] laden, wird die Baumstruktur basierend auf den Schachtelungsbeziehungen der Elemente im Markup erstellt. Wenn Sie eine Anwendung oder einen Teil der Anwendung im Code festlegen, wird die Baumstruktur basierend darauf erstellt, wie Sie Eigenschaftswerte für Eigenschaften zuweisen, die das Inhaltsmodell für ein bestimmtes Objekt implementieren. In [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] gibt es zwei Möglichkeiten, wie die vollständige Objektstruktur konzipiert wird und an die öffentliche API gemeldet werden kann: Als logische Struktur und als visuelle Struktur. Die Unterschiede zwischen logischer Struktur und visueller Struktur sind nicht immer unbedingt wichtig, aber sie können gelegentlich Probleme mit bestimmten [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Subsystemen verursachen und Auswählen im Markup oder im Code beeinträchtigen.  
@@ -87,6 +85,7 @@ In vielen Technologien werden Elemente und Komponenten in einer Baumstruktur org
  Die Ressourcensuche kann jedoch auch über die unmittelbare logische Struktur hinaus erweitert werden. Bei Anwendungsmarkups kann die Ressourcensuche auf Anwendungsebene von Ressourcenwörterbüchern weitergeführt werden, und anschließend bei der Designunterstützung und den Systemwerten fortgesetzt werden, die als statische Eigenschaften oder Schlüssel referenziert werden. Designs selbst können auch auf Systemwerte außerhalb der logischen Struktur des Designs verweisen, wenn die Ressourcenverweise dynamisch sind. Weitere Informationen zu Ressourcenwörterbüchern und der Suchlogik, finden Sie unter [XAML-Ressourcen](xaml-resources.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die Eingabe](input-overview.md)
 - [Übersicht über das WPF-Grafikrendering](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [Übersicht über Routingereignisse](routed-events-overview.md)

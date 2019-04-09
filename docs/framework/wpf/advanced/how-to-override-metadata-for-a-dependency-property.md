@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dependency properties [WPF], overriding metadata for
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-ms.openlocfilehash: 5d2d692984bef34569b2c4bb80c3fb072e4c3f79
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f20708722660aa4f86462efd50939935f840613
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209436"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Vorgehensweise: Überschreiben von Metadaten für eine Abhängigkeitseigenschaft
 Dieses Beispiel zeigt, wie Sie die standardmäßigen Metadaten von Abhängigkeitseigenschaften überschreiben, die durch den Aufruf einer geerbten Klasse stammen die <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> -Methode und typspezifische Metadaten bereitgestellt.  
@@ -32,7 +32,8 @@ Dieses Beispiel zeigt, wie Sie die standardmäßigen Metadaten von Abhängigkeit
 [!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.DependencyProperty>
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
 - [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
-- [Themen zu Vorgehensweisen](properties-how-to-topics.md)
+- [Gewusst wie-Themen](properties-how-to-topics.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: b03c450b84a376de5c5c7d3582c01a31bc417a11
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 5ec401aea139a868b3633afce4c74558aafcaa1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165437"
 ---
 # <a name="property-animation-techniques-overview"></a>Übersicht über die Verfahren zur Animation von Eigenschaften
 Dieses Thema beschreibt die unterschiedlichen Ansätze zum Animieren von Eigenschaften: Storyboards, lokale Animationen, Uhren und Pro-Frame-Animationen.  
@@ -59,7 +59,7 @@ Dieses Thema beschreibt die unterschiedlichen Ansätze zum Animieren von Eigensc
 |<xref:System.Windows.Media.Animation.BeginStoryboard> und ein <xref:System.Windows.EventTrigger>|Ja|Ja|Ja|Ja|[Animieren einer Eigenschaft unter Verwendung eines Storyboards](how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> und eine Eigenschaft <xref:System.Windows.Trigger>|Nein|Ja|Ja|Ja|[Auslösen einer Animation, wenn sich eine Eigenschaft ändert](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> und ein <xref:System.Windows.DataTrigger>|Nein|Ja|Ja|Ja|[Vorgehensweise: Auslösen einer Animation bei Änderung von Daten](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>-Methode|Ja|Nein|Nein|Nein|[Animieren einer Eigenschaft unter Verwendung eines Storyboards](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> Methode|Ja|Nein|Nein|Nein|[Animieren einer Eigenschaft unter Verwendung eines Storyboards](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Weitere Informationen zu <xref:System.Windows.Media.Animation.Storyboard> Objekten finden Sie die [Übersicht über Storyboards](storyboards-overview.md).  
   
@@ -122,6 +122,7 @@ Dieses Thema beschreibt die unterschiedlichen Ansätze zum Animieren von Eigensc
  Weitere Informationen finden Sie unter den <xref:System.Windows.Media.CompositionTarget.Rendering> Seite.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über Storyboards](storyboards-overview.md)
 - [Übersicht über das Animations- und Zeitsteuerungssystem](animation-and-timing-system-overview.md)

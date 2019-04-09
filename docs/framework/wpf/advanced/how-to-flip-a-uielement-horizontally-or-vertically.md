@@ -5,12 +5,12 @@ helpviewer_keywords:
 - flipping UIElements [WPF]
 - UIElements [WPF], flipping
 ms.assetid: 02c6730f-65c0-40d5-a553-4cb663721882
-ms.openlocfilehash: 3dd9a8e2a94acf62973701094e8966c8ebff15c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6b3da322493d17e4f8e36a35b9a0e40fdc9dc685
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356350"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215520"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>Vorgehensweise: Horizontales oder vertikales Kippen eines UIElement
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.ScaleTransform> So kippen Sie ein <xref:System.Windows.UIElement> horizontal oder vertikal. In diesem Beispiel eine <xref:System.Windows.Controls.Button> Steuerelement (eine Art von <xref:System.Windows.UIElement>) gekippt wird, durch Anwenden einer <xref:System.Windows.Media.ScaleTransform> zu seine <xref:System.Windows.UIElement.RenderTransform%2A> Eigenschaft.  
@@ -50,4 +50,5 @@ Die Schaltfläche mit einem RenderTransformOrigin von 0,5, 0,5
 Die Schaltfläche "vertikal gekippt."  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Transformationen](../graphics-multimedia/transforms-overview.md)

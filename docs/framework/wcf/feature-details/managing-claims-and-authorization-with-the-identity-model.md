@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 1f9881cd1a63e00aaf414f93c91885e57ea0b145
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155089"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell
 Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche Entitäten berechtigt sind, eine Computerressource zu ändern, anzuzeigen oder anderweitig darauf zuzugreifen. In einem Unternehmen sind beispielsweise nur Manager berechtigt, auf die Dateien ihrer Mitarbeiter zuzugreifen. Windows Communication Foundation (WCF) unterstützt zwei Mechanismen für den Autorisierungsprozess. Der erste Mechanismus ermöglicht Ihnen, die Autorisierung mit vorhandenen CLR-Konstrukten (Common Language Runtime) zu kontrollieren. Die zweite ist ein anspruchsbasiertes Modell, bekannt als die *Identitätsmodell*. WCF verwendet das Identitätsmodell zum Erstellen von Ansprüchen aus eingehenden Nachrichten. Modellklassen für die Identität können zur Unterstützung neuer Anspruchstypen für benutzerdefinierte Autorisierungsschemas erweitert werden. Dieses Thema bietet eine Übersicht über die wichtigsten Programmierkonzepte der Identitätsmodellfunktion sowie eine Auflistung der wichtigsten von dieser Funktion verwendeten Klassen.  
@@ -155,11 +155,12 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
   
 |Member|Beschreibung|  
 |------------|-----------------|  
-|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Abgeleitete Klassen implementieren diese Methode zur Durchführung von anspruchsbasierten Zugriffsprüfungen, bevor Vorgänge in einem Dienst ausgeführt werden. Alle Informationen im bereitgestellten <xref:System.ServiceModel.OperationContext> oder anderswo können untersucht werden, wenn die Zugriffsprüfungsentscheidung getroffen wird. Wenn <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>`true` zurückgibt, wird der Zugriff erteilt und der Vorgang darf ausgeführt werden. Gibt `CheckAccessCore` `false` zurück, wird der Zugriff verweigert und der Vorgang wird nicht ausgeführt. Ein Beispiel finden Sie unter [Gewusst wie: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
+|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|Abgeleitete Klassen implementieren diese Methode zur Durchführung von anspruchsbasierten Zugriffsprüfungen, bevor Vorgänge in einem Dienst ausgeführt werden. Alle Informationen im bereitgestellten <xref:System.ServiceModel.OperationContext> oder anderswo können untersucht werden, wenn die Zugriffsprüfungsentscheidung getroffen wird. Wenn <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>`true` zurückgibt, wird der Zugriff erteilt und der Vorgang darf ausgeführt werden. Gibt `CheckAccessCore``false` zurück, wird der Zugriff verweigert und der Vorgang wird nicht ausgeführt. Ein Beispiel finden Sie unter [Gewusst wie: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md).|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|Gibt den <xref:System.ServiceModel.ServiceAuthorizationManager> für den Dienst zurück. Der <xref:System.ServiceModel.ServiceAuthorizationManager> ist für Autorisierungsentscheidungen verantwortlich.|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|Die Sammlung benutzerdefinierter Autorisierungsrichtlinien, die für den Dienst angegeben sind. Diese Richtlinien werden zusätzlich zu den Richtlinien evaluiert, die mit den Anmeldeinformationen in eingehenden Nachrichten verbunden sind.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Policy.EvaluationContext>
@@ -174,8 +175,8 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
 - [Ansprüche und das Verweigern des Zugriffs auf Ressourcen](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
 - [Erstellen von Ansprüchen und Ressourcenwerte](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
 - [Vorgehensweise: Erstellen eines benutzerdefinierten Anspruchs](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
-- [Vorgehensweise: Ansprüche vergleichen](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Vorgehensweise: Erstellen Sie eine benutzerdefinierte Autorisierungsrichtlinie](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [Vorgehensweise: Vergleichen von Ansprüchen](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Vorgehensweise: Erstellen einer benutzerdefinierten Autorisierungsrichtlinie](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
 - [Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

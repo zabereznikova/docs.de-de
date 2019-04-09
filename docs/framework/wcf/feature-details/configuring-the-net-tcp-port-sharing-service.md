@@ -2,12 +2,12 @@
 title: Konfigurieren des Net.TCP-Portfreigabediensts
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: 9bc625f9e998f27b6227a5951f11c7d85220ae7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbc27f0f15be41c5384d8a1f73f0226c3f0f83ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206810"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Konfigurieren des Net.TCP-Portfreigabediensts
 Selbst gehostete Dienste, die den Net.TCP-Transport verwenden, können erweiterte Einstellungen festlegen, etwa `ListenBacklog` und `MaxPendingAccepts`, die das Verhalten des zugrunde liegenden, für die Netzwerkkommunikation verwendeten TCP-Sockets bestimmen. Diese Einstellungen werden auf Bindungsebene jedoch nur für jeden Socket wirksam, wenn die Transportbindung die standardmäßig aktivierte Anschlussfreigabe deaktiviert hat.  
@@ -51,7 +51,7 @@ Selbst gehostete Dienste, die den Net.TCP-Transport verwenden, können erweitert
 ## <a name="when-to-modify-smsvchostexeconfig"></a>Wann SMSvcHost.exe.config zu ändern ist  
  Im Allgemeinen sollten Sie vorsichtig sein, wenn Sie den Inhalt der Datei SMSvcHost.exe.config ändern, weil jede in dieser Datei angegebene Konfigurationseinstellung alle Dienste eines Computers betrifft, die den Net.TCP-Portfreigabedienst verwenden. Dies schließt Anwendungen unter [!INCLUDE[wv](../../../../includes/wv-md.md)] ein, die die TCP-Aktivierungsfunktionen von WAS (Windows Process Activation Service) verwenden.  
   
- Sie müssen jedoch möglicherweise manchmal die Standardkonfiguration für den Net.TCP-Portfreigabedienst ändern. Beispielsweise ist der Standardwert für `maxPendingAccepts` 4 * Anzahl von Prozessoren. Auf Servern, die eine große Anzahl von Diensten hosten, die die Portfreigabe verwenden, kann dieser Wert erhöht werden, um einen höheren Maximaldurchsatz zu erzielen. Der Standardwert von `maxPendingConnections` ist 100. Sie können diesen Wert auch erhöhen, wenn der Dienst von mehreren Clients gleichzeitig aufgerufen wird und Clientverbindungen verloren gehen.  
+ Sie müssen jedoch möglicherweise manchmal die Standardkonfiguration für den Net.TCP-Portfreigabedienst ändern. Beispielsweise ist der Standardwert für `maxPendingAccepts` 4 * Anzahl von Prozessoren. Auf Servern, die eine große Anzahl von Diensten hosten, die die Portfreigabe verwenden, kann dieser Wert erhöht werden, um einen höheren Maximaldurchsatz zu erzielen. Der Standardwert von `maxPendingConnections` ist 100. Sie können diesen Wert auch erhöhen, wenn der Dienst von mehreren Clients gleichzeitig aufgerufen wird und Clientverbindungen getrennt werden.  
   
  SMSvcHost.exe.config enthält auch Informationen über die Prozessidentitäten, die möglicherweise den Anschlussfreigabedienst nutzen. Wenn ein Prozess eine Verbindung zu einem Anschlussfreigabedienst herstellt, um einen freigegebenen TCP-Anschluss zu verwenden, wird die Prozessidentität des verbindenden Prozesses mit einer Liste der Identitäten verglichen, die den Anschlussfreigabedienst verwenden dürfen. Diese Identitäten werden als Sicherheits-IDs (SIDs) angegeben, der \<AllowAccounts >-Abschnitt der Datei "SMSvcHost.exe.config". Die Berechtigung, den Anschlussfreigabedienst verwenden zu dürfen, wird standardmäßig Systemkonten (LocalService, LocalSystem und NetworkService) sowie Mitgliedern der Administratorgruppe gewährt. Anwendungen, die einem Prozess erlauben, mit einer anderen Identität (beispielsweise einer Benutzeridentität) die Verbindung mit dem Anschlussfreigabedienst herzustellen, müssen die entsprechende SID explizit in die Datei SMSvcHost.exe.config aufnehmen (diese Änderungen werden erst durch einen Neustart des SMSvc.exe-Prozesses wirksam).  
   
@@ -62,4 +62,5 @@ Selbst gehostete Dienste, die den Net.TCP-Transport verwenden, können erweitert
 >  In der Standarddatei SMSvcHost.exe.config wird eine benutzerdefinierte `etwProviderId` angeben, um zu verhindern, dass Konflikte zwischen der SMSvcHost.exe-Ablaufverfolgung und Dienstablaufverfolgungen auftreten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [\<net.tcp>](../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)

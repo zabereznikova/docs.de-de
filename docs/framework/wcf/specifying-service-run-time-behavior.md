@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 759a5dd4cecbaf804d1ccf29fa504c2f5e1ad7f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fa6e4114e9579079705700708840f2814b03b99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186874"
 ---
 # <a name="specifying-service-run-time-behavior"></a>Angeben des Dienstlaufzeitverhaltens
 Nachdem Sie einen Dienstvertrag entworfen ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) und implementiert ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) haben, können Sie das Vorgangsverhalten der Dienstlaufzeit konfigurieren. In diesem Thema werden vom System bereitgestellte Dienste und Vorhangsverhalten erörtert und beschrieben, wo Sie weitere Informationen zur Erstellung neuer Verhalten finden. Einige Verhalten werden als Attribute angewendet, aber viele Verhalten werden mithilfe einer Konfigurationsdatei oder programmgesteuert angewendet. Weitere Informationen zum Konfigurieren der Service-Anwendung finden Sie unter [Configuring Services](../../../docs/framework/wcf/configuring-services.md).  
@@ -77,49 +77,50 @@ Nachdem Sie einen Dienstvertrag entworfen ([Designing Service Contracts](../../.
 ### <a name="service-behaviors"></a>Dienstverhalten  
  Die folgenden Verhalten wirken sich auf Dienste aus.  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. Angewendet auf einen WCF-Dienst, um anzugeben, ob dieser Dienst kann, im ausgeführt werden [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] im Kompatibilitätsmodus.  
+-   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>sein. Angewendet auf einen WCF-Dienst, um anzugeben, ob dieser Dienst kann, im ausgeführt werden [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] im Kompatibilitätsmodus.  
   
--   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. Steuert, wie der Dienst Clientansprüche autorisiert.  
+-   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>sein. Steuert, wie der Dienst Clientansprüche autorisiert.  
   
--   <xref:System.ServiceModel.Description.ServiceCredentials>. Konfiguriert Dienstanmeldeinformationen. Verwenden Sie diese Klasse, um die Anmeldeinformationen für den Dienst anzugeben, beispielsweise ein X.509-Zertifikat.  
+-   <xref:System.ServiceModel.Description.ServiceCredentials>sein. Konfiguriert Dienstanmeldeinformationen. Verwenden Sie diese Klasse, um die Anmeldeinformationen für den Dienst anzugeben, beispielsweise ein X.509-Zertifikat.  
   
--   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. Aktiviert Debugging- und Hilfeinformationsfunktionen für einen WCF-Dienst.  
+-   <xref:System.ServiceModel.Description.ServiceDebugBehavior>sein. Aktiviert Debugging- und Hilfeinformationsfunktionen für einen WCF-Dienst.  
   
--   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. Steuert die Veröffentlichung von Dienstmetadaten und zugehörigen Informationen.  
+-   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>sein. Steuert die Veröffentlichung von Dienstmetadaten und zugehörigen Informationen.  
   
--   <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>. Legt das Überwachungsverhalten für Sicherheitsereignisse fest.  
+-   <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>sein. Legt das Überwachungsverhalten für Sicherheitsereignisse fest.  
   
--   <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>. Konfiguriert Laufzeitdurchsatzeinstellungen, die es Ihnen ermöglichen, die Dienstleistung zu optimieren.  
+-   <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>sein. Konfiguriert Laufzeitdurchsatzeinstellungen, die es Ihnen ermöglichen, die Dienstleistung zu optimieren.  
   
 ### <a name="endpoint-behaviors"></a>Endpunktverhalten  
  Die folgenden Verhalten wirken sich auf Endpunkte aus. Viele dieser Verhalten werden in Clientanwendungen verwendet.  
   
--   <xref:System.ServiceModel.CallbackBehaviorAttribute>. Konfiguriert eine Rückrufdienstimplementierung in einer Duplexclientanwendung.  
+-   <xref:System.ServiceModel.CallbackBehaviorAttribute>sein. Konfiguriert eine Rückrufdienstimplementierung in einer Duplexclientanwendung.  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior>. Aktiviert das dienstdebugging für ein WCF-Rückrufobjekt.  
+-   <xref:System.ServiceModel.Description.CallbackDebugBehavior>sein. Aktiviert das dienstdebugging für ein WCF-Rückrufobjekt.  
   
--   <xref:System.ServiceModel.Description.ClientCredentials>. Ermöglicht es dem Benutzer, die Client- und Dienstanmeldeinformationen sowie die auf dem Client zu verwendenden Authentifizierungseinstellungen für die Dienstanmeldeinformationen zu konfigurieren.  
+-   <xref:System.ServiceModel.Description.ClientCredentials>sein. Ermöglicht es dem Benutzer, die Client- und Dienstanmeldeinformationen sowie die auf dem Client zu verwendenden Authentifizierungseinstellungen für die Dienstanmeldeinformationen zu konfigurieren.  
   
--   <xref:System.ServiceModel.Description.ClientViaBehavior>. Wird von Clients verwendet, um den URI (Uniform Resource Identifier) anzugeben, für den der Transportkanal erstellt werden soll.  
+-   <xref:System.ServiceModel.Description.ClientViaBehavior>sein. Wird von Clients verwendet, um den URI (Uniform Resource Identifier) anzugeben, für den der Transportkanal erstellt werden soll.  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. Weist WCF an, deaktivieren Sie die `MustUnderstand` verarbeiten.  
+-   <xref:System.ServiceModel.Description.MustUnderstandBehavior>sein. Weist WCF an, deaktivieren Sie die `MustUnderstand` verarbeiten.  
   
--   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. Weist das Laufzeitmodul an, für Kanäle einen synchronen Empfangsprozess zu verwenden.  
+-   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>sein. Weist das Laufzeitmodul an, für Kanäle einen synchronen Empfangsprozess zu verwenden.  
   
--   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. Optimiert die Empfangsvorgänge für Transporte, die transaktionale Empfangsprozesse unterstützen.  
+-   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>sein. Optimiert die Empfangsvorgänge für Transporte, die transaktionale Empfangsprozesse unterstützen.  
   
 ### <a name="contract-behaviors"></a>Vertragsverhalten  
- <xref:System.ServiceModel.DeliveryRequirementsAttribute>. Gibt die Feature-Anforderungen an, die Bindungen für die Dienst- oder Client-Implementierung liefern müssen.  
+ <xref:System.ServiceModel.DeliveryRequirementsAttribute>sein. Gibt die Feature-Anforderungen an, die Bindungen für die Dienst- oder Client-Implementierung liefern müssen.  
   
 ### <a name="operation-behaviors"></a>Vorgangsverhalten  
  Die folgenden Vorgangsverhalten geben die Serialisierungs- und Transaktionssteuermechanismen für Vorgänge an.  
   
--   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. Stellt das Laufzeitverhalten des <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>dar.  
+-   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>sein. Stellt das Laufzeitverhalten des <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>dar.  
   
--   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. Steuert das Laufzeitverhalten vom `XmlSerializer` und ordnet es einem Vorgang zu.  
+-   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>sein. Steuert das Laufzeitverhalten vom `XmlSerializer` und ordnet es einem Vorgang zu.  
   
--   <xref:System.ServiceModel.TransactionFlowAttribute>. Gibt die Ebene an, auf der ein Dienstvorgang einen Transaktionsheader akzeptiert.  
+-   <xref:System.ServiceModel.TransactionFlowAttribute>sein. Gibt die Ebene an, auf der ein Dienstvorgang einen Transaktionsheader akzeptiert.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Konfigurieren von Diensten](../../../docs/framework/wcf/configuring-services.md)
 - [Vorgehensweise: Steuern der Dienstinstanzierung](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4789d5cad8bbb4f7dc6f5fcedc56be3bf74703b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 213fa9fda6b154d4548b4163cc7b5890bfcfb49c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186991"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo-Schnittstelle
 Bietet Methoden, die Informationen zu einer bestimmten common Language Runtime (CLR), einschließlich Version, Verzeichnis und Ladestatus zurückgeben. Diese Schnittstelle bietet auch Common Language Runtime-spezifische Funktionen, ohne die persistenzwarteschlange. Es enthält die Common Language Runtime-Relative [LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) -Methode, die Laufzeit modulspezifischen [GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) -Methode, und die Common Language Runtime bereitgestellten Schnittstellen durch die [GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)Methode.  
@@ -53,5 +53,6 @@ Bietet Methoden, die Informationen zu einer bestimmten common Language Runtime (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+
+- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

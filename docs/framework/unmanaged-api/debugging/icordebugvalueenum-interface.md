@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecbf1afb4443cd7c2b7a69028bc2baa42d1055ce
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9484f211ff31c4fa71692db646ef3c556df0acad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975640"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171937"
 ---
 # <a name="icordebugvalueenum-interface"></a>ICorDebugValueEnum-Schnittstelle
 Implementiert "ICorDebugEnum"-Methoden und listet "ICorDebugValue"-Arrays.  
@@ -48,5 +48,4 @@ Implementiert "ICorDebugEnum"-Methoden und listet "ICorDebugValue"-Arrays.
   
 ## <a name="see-also"></a>Siehe auch
 
-
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

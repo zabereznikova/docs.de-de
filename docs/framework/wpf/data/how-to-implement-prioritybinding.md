@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Implementieren von PriorityBinding'
+title: 'Vorgehensweise: Implementieren einer PriorityBinding-Klasse'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: cf21041a7f3d5b75803378cf05768ee6f1008fdd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: aaf2caff1e2684e08c7eb65125536f1070203d70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207564"
 ---
-# <a name="how-to-implement-prioritybinding"></a>Vorgehensweise: Implementieren von PriorityBinding
+# <a name="how-to-implement-prioritybinding"></a>Vorgehensweise: Implementieren einer PriorityBinding-Klasse
 <xref:System.Windows.Data.PriorityBinding> in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funktioniert, indem Sie eine Liste der Bindungen angeben. Die Liste der Bindungen ist von der höchsten zur niedrigsten Priorität geordnet. Wenn die höchste Priorität Bindung einen Wert zurückgibt erfolgreich bei der Verarbeitung wird besteht nie die anderen Bindungen in der Liste verarbeitet werden muss. Es könnte den Fall, den die höchste Priorität Bindung sehr lange dauert, die ausgewertet werden, die nächstniedrigeren Priorität, die einen Wert, erfolgreich zurückgibt verwendet werden, bis eine Bindung mit einer höheren Priorität erfolgreich einen Wert zurückgibt.  
   
 ## <a name="example"></a>Beispiel  
@@ -45,6 +45,7 @@ ms.locfileid: "57354595"
  Finden Sie unter <xref:System.Windows.Data.PriorityBinding> Informationen, was einen erfolgreiche Rückgabewert aus einer Bindung gilt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
-- [Übersicht zur Datenbindung](data-binding-overview.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)

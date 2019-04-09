@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: b5535343b5ac40b12aa06ffb5b587e114f5cd757
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222665"
 ---
 # <a name="null-comparisons"></a>NULL-Vergleiche
 Ein `null`-Wert in der Datenquelle gibt an, dass der Wert unbekannt ist. Sie können in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfragen auf NULL-Werte überprüfen, damit bestimmte Berechnungen oder Vergleiche nur für Zeilen mit gültigen Daten bzw. Daten, die nicht den Wert NULL haben, ausgeführt werden. Die NULL-Semantik der CLR unterscheidet sich jedoch möglicherweise von der NULL-Semantik der Datenquelle. Die meisten Datenbanken verwenden eine Logikversion mit einer dritten Möglichkeit der Auswertung, um NULL-Vergleiche zu behandeln. D. h. ein Vergleich mit einem null-Wert nicht als `true` oder `false`, ist er `unknown`. Oft ist dies eine Implementierung von ANSI-Nullen, das ist jedoch nicht immer der Fall.  
@@ -47,4 +47,5 @@ WHERE h.ShipDate IS Null
  In [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], wenn Sie eine Sammlung übergeben, die unterstützt `IQueryable` für eine Aggregatfunktion, aggregierte Operationen in der Datenbank ausgeführt werden. Möglicherweise gibt es Unterschiede in den Ergebnissen einer Abfrage, die im Arbeitsspeicher ausgeführt wurde und eine Abfrage, die in der Datenbank ausgeführt wurde. Wenn keine Übereinstimmungen vorhanden sind, gibt die Abfrage mit einer in-Memory-Abfrage 0 (null) zurück. Bei der Datenbankabfrage gibt die gleiche Abfrage `null` zurück. Wenn eine `null` Wert an eine LINQ-Aggregatfunktion übergeben wird, wird eine Ausnahme ausgelöst. Mögliche akzeptieren `null` Werte umgewandelt, die Typen und die Eigenschaften der Typen, die Abfrageergebnisse in NULL-Werte zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Ausdrücke in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

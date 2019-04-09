@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: e70624a43945d29c1690fbed6e39da4f8da6cfe4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bdcdce58d78a305493bd698cf4d849e640f14ce0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230992"
 ---
 # <a name="database-mirroring-in-sql-server"></a>Datenbankspiegelungen in SQL Server
 Mithilfe der Datenbankspiegelung in SQL Server können Sie eine Kopie, oder auch ein Spiegelbild, einer SQL Server-Datenbank auf einem Standbyserver speichern. Durch das Spiegeln wird sichergestellt, dass jederzeit zwei separate Kopien der Daten vorhanden sind. Dies gewährleistet Hochverfügbarkeit und vollständige Datenredundanz. Der .NET-Datenanbieter für SQL Server stellt implizite Unterstützung für die Datenbankspiegelung bereit. Daher muss der Entwickler keine weiteren Schritte ausführen oder Code programmieren, nachdem die Spiegelung für eine SQL Server-Datenbank konfiguriert wurde. Außerdem unterstützt das <xref:System.Data.SqlClient.SqlConnection>-Objekt einen expliziten Verbindungsmodus, über den der Name eines Failover-Partnerservers im <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> angegeben werden kann.  
@@ -61,7 +61,8 @@ string activeServer = connection.DataSource;
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Die Datenbankspiegelung](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Beschreibt, wie die Spiegelung in SQL Server eingerichtet und konfiguriert wird.|  
+|[Datenbankspiegelung](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|Beschreibt, wie die Spiegelung in SQL Server eingerichtet und konfiguriert wird.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

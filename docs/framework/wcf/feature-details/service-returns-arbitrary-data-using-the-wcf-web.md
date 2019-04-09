@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Erstellen eines Diensts, das beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zurückgibt'
+title: 'Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zurückgibt'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 187db6d3c19373270b25000029f51aa70a81afd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f5735f4d596e17afc32b1419e9f41fd8a56af410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157482"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Vorgehensweise: Erstellen eines Diensts, das beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zurückgibt
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zurückgibt
 Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmöglichkeiten für die Rückgabe der Daten durch einen Dienstvorgang. Dies ist der Fall, wenn ein Dienstvorgang Daten in einem nicht von WCF unterstützten Format zurückgeben muss. In diesem Thema wird erläutert, mit den WCF-HTTP-Webprogrammierungsmodell zum Erstellen eines solchen Diensts. Dieser Dienst besitzt einen Vorgang, durch den ein Stream zurückgegeben wird.  
   
 ### <a name="to-implement-the-service-contract"></a>So implementieren Sie den Dienstvertrag  
@@ -51,7 +51,7 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
        }  
     ```  
   
-     Beachten Sie die vorvorletzte Codezeile: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     Beachten Sie die letzte Codezeile: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
      Hierdurch wird der ContentType-Header auf `"image/jpeg"` festgelegt. Zwar wird in diesem Beispiel das Zurückgeben einer JPG-Datei veranschaulicht, das Beispiel kann jedoch zum Zurückgeben eines beliebigen Datentyps in einem beliebigen Format angepasst werden. Die Daten müssen durch den Vorgang abgerufen oder erstellt und anschließend in den Stream geschrieben werden.  
   
@@ -176,4 +176,5 @@ namespace RawImageService
 -   Verweisen Sie beim Kompilieren des Beispielcodes auf "System.ServiceModel.dll" und "System.ServiceModel.Web.dll".  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

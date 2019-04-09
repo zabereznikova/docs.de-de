@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Konfigurieren von WCF-Diensten für die Zusammenarbeit mit WSE 3.0-Clients'
+title: 'Vorgehensweise: Konfigurieren von WCF-Diensten für die Zusammenarbeit mit WSE3.0-Clients'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: d42e2d4c0bf4c708f2dbb27d14d1adddc3fead41
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 24c44f415eff8518bcd73696c5cd9302371ad0c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635792"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177293"
 ---
-# <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Vorgehensweise: Konfigurieren von WCF-Diensten für die Zusammenarbeit mit WSE 3.0-Clients
+# <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Vorgehensweise: Konfigurieren von WCF-Diensten für die Zusammenarbeit mit WSE3.0-Clients
 Windows Communication Foundation (WCF)-Dienste sind auf niedriger Ebene mit Web Services Enhancements 3.0 für Microsoft .NET (WSE)-Clients kompatibel, wenn WCF-Dienste konfiguriert sind, mit der Version vom August 2004 von WS-Addressing-Spezifikation.  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>So konfigurieren Sie einen WCF-Dienst für die Zusammenarbeit mit WSE3.0-Clients  
@@ -91,4 +91,5 @@ Windows Communication Foundation (WCF)-Dienste sind auf niedriger Ebene mit Web 
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Anpassen einer vom System bereitgestellten Bindung](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)

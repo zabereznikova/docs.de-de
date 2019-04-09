@@ -2,12 +2,12 @@
 title: Fehlervertrag
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 64d02ae6b45cd0e538509d2c7186ac63b9844c14
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 0729bae4e8630687a0df10ed4be49261225cd663
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218263"
 ---
 # <a name="fault-contract"></a>Fehlervertrag
 Im Fehlervertragsbeispiel wird veranschaulicht, wie Fehlerinformationen von einem Dienst zu einem Client übermittelt werden. Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), wurde dabei zusätzlicher Code hinzugefügt, mit dem Dienst um eine interne Ausnahme in einen Fehler zu konvertieren. Der Client versucht, eine Division durch 0 (null) auszuführen, um einen Fehlerzustand beim Dienst zu erzwingen.  
@@ -98,7 +98,7 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- In der Standardeinstellung werden Details zu unerwarteten Ausnahmen nicht an den Client gesendet, damit verhindert wird, dass Informationen zur Dienstimplementierung die sichere Begrenzung des Diensts verlassen. `FaultContract` stellt eine Möglichkeit bereit, um Fehler in einem Vertrag so zu beschreiben und bestimmte Arten von Ausnahmen so zu kennzeichnen, dass sie für die Übertragung an den Client geeignet sind. `FaultException<T>` stellt einen Laufzeitmechanismus zum Senden von Fehlern an den Consumer bereit.  
+ In der Standardeinstellung werden Details zu unerwarteten Ausnahmen nicht an den Client gesendet, damit verhindert wird, dass Informationen zur Dienstimplementierung die sichere Begrenzung des Diensts verlassen. `FaultContract` bietet eine Möglichkeit zum Beschreiben von Fehlern in einem Vertrag und bestimmte Arten von Ausnahmen, für die Übertragung an den Client zu kennzeichnen. `FaultException<T>` Stellt den Mechanismus zur Laufzeit für das Senden von Fehlern an den Consumer.  
   
  Es ist jedoch hilfreich, die internen Details eines Dienstfehlers beim Debuggen anzuzeigen. Zum Deaktivieren des oben beschriebenen sicheren Verhaltens können Sie angeben, dass die Details zu allen unbehandelten Ausnahmen auf dem Server in den Fehler eingeschlossen werden sollen, der an den Client gesendet wird. Dies wird durch Festlegen von <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> auf `true` erreicht. Sie können dies im Code festlegen oder in der Konfiguration, wie im folgenden Beispiel gezeigt.  
   
@@ -135,4 +135,3 @@ catch (FaultException<MathFault> e)
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  
-  

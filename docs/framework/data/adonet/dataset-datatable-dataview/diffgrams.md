@@ -2,12 +2,12 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 573da0b608b3f74b9cf789a27a10183f3320f908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1324e6536390b598ca9ef1f0cd3102f8ec49d45a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513652"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197996"
 ---
 # <a name="diffgrams"></a>DiffGrams
 Ein DiffGram ist ein XML-Format, das aktuelle und ursprüngliche Versionen von Datenelementen angibt. <xref:System.Data.DataSet> verwendet das DiffGram-Format, um seinen Inhalt zu laden und beizubehalten und um seinen Inhalt für die Übertragung über eine Netzwerkverbindung zu serialisieren. Wenn eine <xref:System.Data.DataSet> wird als DiffGram geschrieben, füllt es das DiffGram mit allen erforderlichen Informationen, um genau den Inhalt, jedoch nicht mit das Schema, der neu zu erstellen die <xref:System.Data.DataSet>, einschließlich Spaltenwerten aus der **ursprünglichen** und **aktuelle** Zeilenversionen, Zeilenfehlerinformationen und Zeilenreihenfolgen.  
@@ -83,7 +83,7 @@ Ein DiffGram ist ein XML-Format, das aktuelle und ursprüngliche Versionen von D
   
 |Anmerkung|Beschreibung|  
 |----------------|-----------------|  
-|**ID**|Verwendet, um die Elemente in der  **\<Diffgr: vor dem >** und  **\<diffgr: errors >** Blöcke, um Elemente in der **\<** ***DataInstance*** **>** Block. Werte mit den **diffgr: ID** -Anmerkung haben das Format *[Tabellenname] [Zeilenbezeichner]*. Beispiel: `<Customers diffgr:id="Customers1">`.|  
+|**id**|Verwendet, um die Elemente in der  **\<Diffgr: vor dem >** und  **\<diffgr: errors >** Blöcke, um Elemente in der **\<** ***DataInstance*** **>** Block. Werte mit den **diffgr: ID** -Anmerkung haben das Format *[Tabellenname] [Zeilenbezeichner]*. Beispiel: `<Customers diffgr:id="Customers1">`.|  
 |**parentId**|Gibt an, welches Element aus der **\<** ***DataInstance*** **>** Block ist das übergeordnete Element des aktuellen Elements. Werte mit den **diffgr: parentId** -Anmerkung haben das Format *[Tabellenname] [Zeilenbezeichner]*. Beispiel: `<Orders diffgr:parentId="Customers1">`.|  
 |**hasChanges**|Identifiziert eine Zeile in der **\<** ***DataInstance*** **>** -Block als geändert. Die **HasChanges** -Anmerkung kann einen der folgenden zwei Werte aufweisen:<br /><br /> **inserted**<br /> Identifiziert eine **Added** Zeile.<br /><br /> **modified**<br /> Identifiziert eine **"geändert"** Zeile mit einer **ursprünglichen** Zeilenversion in der  **\<Diffgr: vor dem >** Block. Beachten Sie, dass **gelöschte** Zeilen müssen eine **ursprünglichen** Zeilenversion in der  **\<Diffgr: vor dem >** blockieren, aber es ist kein Element mit Anmerkungen in der **\<** ***DataInstance*** **>** Block.|  
 |**hasErrors**|Identifiziert eine Zeile in der **\<** ***DataInstance*** **>** -block mit einer **RowError**. Das Fehlerelement wird der  **\<diffgr: errors >** Block.|  
@@ -132,8 +132,9 @@ Ein DiffGram ist ein XML-Format, das aktuelle und ursprüngliche Versionen von D
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Laden eines DataSet aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+
+- [Verwenden von XML in einem "DataSet"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [Laden eines "DataSets" aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
 - [Schreiben von DataSet-Inhalten als XML-Daten](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
-- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- ["DataSets", "DataTables" und "DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen von QuickInfos für Steuerelemente in Windows Forms zur Entwurfszeit'
+title: 'Vorgehensweise: Festlegen von QuickInfos für Steuerelemente auf einem Windows Form zur Entwurfszeit'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 541e50a8ee9c5338acc7c5e347549fd03a0f6323
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d2bca517e98a8258d4f510c64593de2ad9646e13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157599"
 ---
-# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Vorgehensweise: Festlegen von QuickInfos für Steuerelemente in Windows Forms zur Entwurfszeit
+# <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Vorgehensweise: Festlegen von QuickInfos für Steuerelemente auf einem Windows Form zur Entwurfszeit
 Sie können festlegen, eine <xref:System.Windows.Forms.ToolTip> Zeichenfolge im Code oder in der Windows Forms-Designer. Weitere Informationen zu den <xref:System.Windows.Forms.ToolTip> Komponente finden Sie unter [Übersicht über die ToolTip-Komponente](tooltip-component-overview-windows-forms.md).  
   
 > [!NOTE]
@@ -77,6 +77,7 @@ Sie können festlegen, eine <xref:System.Windows.Forms.ToolTip> Zeichenfolge im 
 2.  In der **Eigenschaften** Fenster, löschen Sie den Text in die **QuickInfo auf ToolTip1**.  
 
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die ToolTip-Komponente](tooltip-component-overview-windows-forms.md)
-- [Vorgehensweise: Ändern der Verzögerung der ToolTip-Komponente von Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+- [Vorgehensweise: Ändern der Verzögerung der ToolTip-Komponente in Windows Forms](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
 - [ToolTip-Komponente](tooltip-component-windows-forms.md)

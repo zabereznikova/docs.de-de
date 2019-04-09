@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: c0391099d02933cb8a32a2e134dad949034138ad
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371631"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218380"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit
 <a name="introduction"></a> Im Allgemeinen sollte der direkte Zugriff von Internetanwendungen auf wichtige Systemressourcen eingeschränkt werden, um böswillige Schäden zu vermeiden. In der Standardeinstellung [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] und clientseitige Skriptsprachen nicht auf wichtige Systemressourcen zugreifen. Da Windows Presentation Foundation (WPF)-Browser-gehostete Anwendungen aus dem Browser gestartet werden können, müssen sie eine ähnliche Reihe von Einschränkungen entsprechen. Um diese Einschränkungen zu erzwingen [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sowohl [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] und [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (finden Sie unter [WPF-Sicherheitsstrategie – Plattformsicherheit](wpf-security-strategy-platform-security.md)). Standardmäßig fordern im Browser gehostete Anwendungen die Internetzone [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] Satz von Berechtigungen, unabhängig davon, ob sie über das Internet, lokales Intranet oder dem lokalen Computer gestartet werden. Für Anwendungen, die nicht mit dem vollständigen, sondern einem eingeschränkten Berechtigungssatz ausgeführt werden, wird formuliert, dass sie mit teilweiser Vertrauenswürdigkeit ausgeführt werden.  
@@ -131,7 +131,7 @@ ms.locfileid: "57371631"
 |Berechtigung|Attribut|LocalIntranet|Internet|  
 |----------------|---------------|-------------------|--------------|  
 |DNS|Zugriff auf DNS-Server|Ja|Nein|  
-|Umgebungsvariablen|Thema|Ja|Nein|  
+|Umgebungsvariablen|Lesen|Ja|Nein|  
 |Dateidialogfelder|Öffnen|Ja|Ja|  
 |Dateidialogfelder|Uneingeschränkt|Ja|Nein|  
 |Isolierte Speicherung|Assemblyisolation durch Benutzer|Ja|Nein|  
@@ -164,6 +164,7 @@ ms.locfileid: "57371631"
  Alternativ können Sie das ClickOnce-Modell für vertrauenswürdige Bereitstellung für eine Bereitstellung mit voller Vertrauenswürdigkeit aus einer beliebigen Sicherheitszone verwenden. Weitere Informationen finden Sie unter [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview) und [Sicherheit](security-wpf.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sicherheit](security-wpf.md)
 - [WPF-Sicherheitsstrategie – Plattformsicherheit](wpf-security-strategy-platform-security.md)
 - [WPF-Sicherheitsstrategie – Sicherheitsentwicklung](wpf-security-strategy-security-engineering.md)

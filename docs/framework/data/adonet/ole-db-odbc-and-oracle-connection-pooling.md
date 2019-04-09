@@ -2,12 +2,12 @@
 title: OLE DB-, ODBC- und Oracle-Verbindungspooling
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: bc07d4d33f2a568ef0fb4dd9806832222a13ca6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c17863facd962583e0da03e810c9a8150cda0a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692742"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208890"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB-, ODBC- und Oracle-Verbindungspooling
 Durch Verbindungspooling kann die Leistung und Skalierbarkeit einer Anwendung wesentlich erhöht werden. In diesem Abschnitt wird das Verbindungspooling für die .NET Framework-Datenanbieter für OLE DB, ODBC und Oracle erläutert.  
@@ -62,13 +62,14 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
   
 |Name|Standard|Beschreibung|  
 |----------|-------------|-----------------|  
-|`Connection Lifetime`|0|Wenn eine Verbindung an den Pool zurückgegeben wird, wird die Erstellungszeit mit der aktuellen Zeit verglichen. Wenn diese Zeitspanne (in Sekunden) größer ist als der für die `Connection Lifetime` angegebene Wert, wird die Verbindung getrennt. Dies ist hilfreich bei Gruppenkonfigurationen, um einen Lastenausgleich zwischen einem bereits aktiven Server und einem Server zu erzwingen, der gerade erst online gegangen ist.<br /><br /> Der Wert 0 (null) bewirkt, dass an den Pool zurückgegebene Verbindungen den maximalen Timeout besitzen.|  
+|`Connection Lifetime`|0|Wenn eine Verbindung an den Pool zurückgegeben wird, wird die Erstellungszeit mit der aktuellen Zeit verglichen. Wenn diese Zeitspanne (in Sekunden) größer ist als der für die `Connection Lifetime` angegebene Wert, wird die Verbindung zerstört. Dies ist hilfreich bei Gruppenkonfigurationen, um einen Lastenausgleich zwischen einem bereits aktiven Server und einem Server zu erzwingen, der gerade erst online gegangen ist.<br /><br /> Der Wert 0 (null) bewirkt, dass an den Pool zurückgegebene Verbindungen den maximalen Timeout besitzen.|  
 |`Enlist`|"true"|Im Falle von `true` wird die Verbindung automatisch von der Poolfunktion im aktuellen Transaktionskontext des Erstellungsthreads aufgelistet, wenn ein Transaktionskontext vorhanden ist.|  
 |`Max Pool Size`|100|Die maximale Anzahl der im Pool zulässigen Verbindungen.|  
 |`Min Pool Size`|0|Die minimale Anzahl der im Pool beibehaltenen Verbindungen.|  
 |`Pooling`|"true"|Im Falle von `true` wird die Verbindung aus dem entsprechenden Pool entnommen oder bei Bedarf erstellt und dem entsprechenden Pool hinzugefügt.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verbindungspooling](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [Leistungsindikatoren](../../../../docs/framework/data/adonet/performance-counters.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

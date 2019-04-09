@@ -2,12 +2,12 @@
 title: Beispiel zum UriTemplate-Tabellenverteiler
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
-ms.openlocfilehash: af988a400361551dd11b74f781cf1ba108a3f5c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ff697a205ce47960275b51153d415af717f81222
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498488"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156012"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>Beispiel zum UriTemplate-Tabellenverteiler
 Die <xref:System.UriTemplateTable>-Klasse stellt eine wörterbuchähnliche assoziative Tabellenstruktur zum Arbeiten mit einem Satz von <xref:System.UriTemplate>-Instanzen bereit. Dieses Beispiel demonstriert eine grundlegende, mit `UriTemplateTable` erstellte Verteiler-Engine, ein allgemeines Verwendungsszenario für die `UriTemplateTable`-Klasse.  
@@ -36,5 +36,6 @@ Die <xref:System.UriTemplateTable>-Klasse stellt eine wörterbuchähnliche assoz
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\UriTemplateDispatcher`  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [UriTemplate-Tabelle](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
 - [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)

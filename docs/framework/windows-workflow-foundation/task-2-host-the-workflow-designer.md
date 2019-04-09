@@ -1,15 +1,15 @@
 ---
-title: 'Aufgabe 2: Hosten des Workflowdesigners'
+title: 'Aufgabe 2: Hosten des Workflow-Designers'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708638"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218705"
 ---
-# <a name="task-2-host-the-workflow-designer"></a>Aufgabe 2: Hosten des Workflowdesigners
+# <a name="task-2-host-the-workflow-designer"></a>Aufgabe 2: Hosten des Workflow-Designers
 Dieses Thema beschreibt das Verfahren zum Hosten einer Instanz von der [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] in einer Windows Presentation Foundation (WPF)-Anwendung.  
   
  Die Prozedur konfiguriert das **Raster** -Steuerelement, das den Designer enthält erstellt programmgesteuert eine Instanz des der <xref:System.Activities.Presentation.WorkflowDesigner> , die einen Standardbefehl enthält <xref:System.Activities.Statements.Sequence> -Aktivität, registriert die Designermetadaten bereitstellen designerunterstützung für alle integrierten Aktivitäten und -Hosts die [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] in die [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] Anwendung.  
@@ -122,6 +122,7 @@ Dieses Thema beschreibt das Verfahren zum Hosten einer Instanz von der [!INCLUDE
 10. Finden Sie unter [Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche](task-3-create-the-toolbox-and-propertygrid-panes.md) erfahren, wie hinzufügen **Toolbox** und **PropertyGrid** zu Ihrem neu gehosteten Workflow-Designer unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erneutes Hosten des Workflow-Designers](rehosting-the-workflow-designer.md)
 - [Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung](task-1-create-a-new-wpf-app.md)
 - [Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche](task-3-create-the-toolbox-and-propertygrid-panes.md)

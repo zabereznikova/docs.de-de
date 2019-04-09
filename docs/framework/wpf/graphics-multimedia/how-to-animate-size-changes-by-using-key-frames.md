@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: 967537bb1828d323f1dcaa8d049604a1a6e30fa4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a7adb16297f50e191628344d7e25d41f38a97861
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374185"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180231"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>Vorgehensweise: Animieren von Größenänderungen mithilfe von Keyframes
 In diesem Beispiel wird das Animieren von Größenänderungen mithilfe von Keyframes veranschaulicht.  
@@ -30,6 +30,7 @@ In diesem Beispiel wird das Animieren von Größenänderungen mithilfe von Keyfr
  Das vollständige Beispiel finden Sie unter [Beispiel für eine KeyFrame-Animation](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>
 - <xref:System.Windows.Media.ArcSegment.Size%2A>
 - <xref:System.Windows.Media.ArcSegment>
@@ -37,4 +38,4 @@ In diesem Beispiel wird das Animieren von Größenänderungen mithilfe von Keyfr
 - <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>
 - <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>
 - [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)
-- [Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](key-frame-animation-how-to-topics.md)
+- [Themen zur Vorgehensweise mit Keyframes](key-frame-animation-how-to-topics.md)

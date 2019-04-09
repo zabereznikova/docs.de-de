@@ -9,12 +9,12 @@ helpviewer_keywords:
 - task_core_add_class_handling_routed_properties [WPF]
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
-ms.openlocfilehash: 8c973871336c3389161ce25ae52d2dfaef9c53a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224270"
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Vorgehensweise: Hinzufügen einer Klassenbehandlung für ein Routingereignis
 Routingereignisse können entweder durch die Klasse oder Instanzhandler auf einen beliebigen Knoten in der Route verarbeitet werden. Klassenhandler werden zuerst aufgerufen werden kann, und können von Klasse-Implementierungen verwendet werden, unterdrücken Ereignisse aus der Instanz behandeln, oder führen andere Ereignis bestimmter Verhaltensweisen zu Ereignissen, die von Basisklassen gehören. Dieses Beispiel zeigt zwei eng miteinander verwandte Techniken zum Implementieren von Klassen-Handler.  
@@ -33,6 +33,7 @@ Routingereignisse können entweder durch die Klasse oder Instanzhandler auf eine
  [!code-vb[ClassHandling#StaticAndRegisterClassHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.EventManager>
 - [Markieren von Routingereignissen als behandelt und Klassenbehandlung](marking-routed-events-as-handled-and-class-handling.md)
 - [Behandeln eines Routingereignisses](how-to-handle-a-routed-event.md)

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: c4c6c01839294e134b0961059a4c165a67c1ecf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176929"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>Filtern mit DataView (LINQ to DataSet)
-Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein UI-Steuerelement für einen Client bereitzustellen, ist ein wichtiger Aspekt der Datenbindung. <xref:System.Data.DataView> bietet mehrere Möglichkeiten, Daten zu filtern und Teilmengen von Datenzeilen, die bestimmte Filterkriterien erfüllen, zurückzugeben. Neben den zeichenfolgenbasierten Filterfunktionen <xref:System.Data.DataView> bietet außerdem die Möglichkeit, [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Ausdrücke für den Filterkriterien. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] -Ausdrücke ermöglichen wesentlich komplexere und leistungsfähigere Filteroperationen als die zeichenfolgenbasierte Filterung.  
+Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein UI-Steuerelement für einen Client bereitzustellen, ist ein wichtiger Aspekt der Datenbindung. <xref:System.Data.DataView> bietet verschiedene Möglichkeiten zum Filtern von Daten und das Zurückgeben von Teilmengen von Datenzeilen bei bestimmten Filterkriterien entsprechen. Neben den zeichenfolgenbasierten Filterfunktionen <xref:System.Data.DataView> bietet außerdem die Möglichkeit, [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Ausdrücke für den Filterkriterien. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] -Ausdrücke ermöglichen wesentlich komplexere und leistungsfähigere Filteroperationen als die zeichenfolgenbasierte Filterung.  
   
  Es gibt zwei Möglichkeiten, Daten mit einer <xref:System.Data.DataView> zu filtern:  
   
@@ -30,7 +30,7 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein 
 >  In den meisten Fällen dürften die für die Filterung verwendeten Ausdrücke keine Nebenwirkungen haben. Sie müssen deterministisch sein. Die Ausdrücke dürfen darüber hinaus keine Logik enthalten, die auf einer festgelegten Anzahl von Ausführungen beruht, da die Filteroperationen unbegrenzt oft ausgeführt werden können sollen.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel werden aus der <legacyBold>SalesOrderDetail</legacyBold>-Tabelle alle Aufträge mit einer Menge größer als 2 und kleiner als 6 abgerufen. Dann wird aus dieser Abfrage eine <xref:System.Data.DataView> erstellt. Die <xref:System.Data.DataView> wird anschließend an eine <xref:System.Windows.Forms.BindingSource> gebunden:  
+ Im folgenden Beispiel werden aus der &lt;legacyBold&gt;SalesOrderDetail&lt;/legacyBold&gt;-Tabelle alle Aufträge mit einer Menge größer als 2 und kleiner als 6 abgerufen. Dann wird aus dieser Abfrage eine <xref:System.Data.DataView> erstellt. Die <xref:System.Data.DataView> wird anschließend an eine <xref:System.Windows.Forms.BindingSource> gebunden:  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhere](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywhere)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhere](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywhere)]  
@@ -48,7 +48,7 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein 
  [!code-vb[DP DataView Samples#LDVFromQueryWhereOrderByThenBy](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywhereorderbythenby)]  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird der SoundEx-Algorithmus verwendet, um Kontakte zu suchen, deren Nachname "Zhu" ähnlich ist. Der SoundEx-Algorithmus ist in der <legacyBold>SoundEx</legacyBold>-Methode implementiert.  
+ Im folgenden Beispiel wird der SoundEx-Algorithmus verwendet, um Kontakte zu suchen, deren Nachname "Zhu" ähnlich ist. Der SoundEx-Algorithmus ist in der &lt;legacyBold&gt;SoundEx&lt;/legacyBold&gt;-Methode implementiert.  
   
  [!code-csharp[DP DataView Samples#LDVSoundExFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvsoundexfilter)]
  [!code-vb[DP DataView Samples#LDVSoundExFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvsoundexfilter)]  
@@ -61,7 +61,7 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein 
 ## <a name="using-the-rowfilter-property"></a>Verwenden der "RowFilter"-Eigenschaft  
  Die bisherige zeichenfolgenbasierte Filterfunktionalität von <xref:System.Data.DataView> funktioniert auch im [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Kontext noch. Weitere Informationen zur zeichenfolgenbasierten <xref:System.Data.DataView.RowFilter%2A> filtern, finden Sie [sortieren und Filtern von Daten](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md).  
   
- Im folgenden Beispiel wird eine <xref:System.Data.DataView> auf der Grundlage der <legacyBold>Contact</legacyBold>-Tabelle erstellt und dann die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft so eingerichtet, dass alle Zeilen zurückgegeben werden, bei denen der Nachname des Kontakts "Zhu" lautet:  
+ Im folgenden Beispiel wird eine <xref:System.Data.DataView> auf der Grundlage der &lt;legacyBold&gt;Contact&lt;/legacyBold&gt;-Tabelle erstellt und dann die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft so eingerichtet, dass alle Zeilen zurückgegeben werden, bei denen der Nachname des Kontakts "Zhu" lautet:  
   
  [!code-csharp[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvrowfilter)]
  [!code-vb[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvrowfilter)]  
@@ -76,7 +76,7 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein 
 ## <a name="clearing-the-filter"></a>Löschen des Filters  
  Der Filter für eine <xref:System.Data.DataView> kann gelöscht werden, nachdem die Filterung mit der <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft eingerichtet wurde. Das Löschen des Filters für eine <xref:System.Data.DataView> kann auf zweierlei Art und Weise erfolgen:  
   
--   Legen Sie die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft auf `null` fest.  
+-   Legen Sie die <xref:System.Data.DataView.RowFilter%2A> -Eigenschaft auf `null`fest.  
   
 -   indem für die <xref:System.Data.DataView.RowFilter%2A>-Eigenschaft eine leere Zeichenfolge festgelegt wird  
   
@@ -93,5 +93,6 @@ Die Möglichkeit, Daten nach bestimmten Kriterien zu filtern und dann über ein 
  [!code-vb[DP DataView Samples#LDVClearRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvclearrowfilter)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Datenbindung und LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
 - [Sortieren mit DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

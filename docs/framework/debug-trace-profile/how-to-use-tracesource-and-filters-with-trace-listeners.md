@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e87e9d82ec16c9bcb1621c14756f401bd4f7b8a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d51092aebad340a7549acef248d009518314505d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157468"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Vorgehensweise: Verwenden von TraceSource und Filtern für Ablaufverfolgungslistener
-Eine der neuen Funktionen in .NET Framework, Version 2.0, ist ein verbessertes Ablaufverfolgungssystem. Die Grundlage bleibt unverändert: Ablaufverfolgungsmeldungen werden mithilfe von Schaltern an Listener gesendet, die die Daten an das jeweilige zugeordnete Ausgabemedium weiterleiten. Ein wichtiger Unterschied in Version 2.0 ist, dass die Ablaufverfolgung mithilfe von Instanzen der <xref:System.Diagnostics.TraceSource>-Klasse eingeleitet werden kann. <xref:System.Diagnostics.TraceSource> ist als verbessertes System zur Ablaufverfolgung vorgesehen; die Klasse kann statt den statischen Methoden der älteren <xref:System.Diagnostics.Trace>-Klasse und der <xref:System.Diagnostics.Debug>-Klasse verwendet werden. Die vertrauten <xref:System.Diagnostics.Trace>- und <xref:System.Diagnostics.Debug>-Klassen sind immer noch vorhanden, es wird jetzt jedoch empfohlen, die <xref:System.Diagnostics.TraceSource>-Klasse für die Ablaufverfolgung zu verwenden.  
+Eine der neuen Funktionen in .NET Framework, Version 2.0, ist ein verbessertes Ablaufverfolgungssystem. Die Grundlage bleibt unverändert: Ablaufverfolgungsmeldungen werden mithilfe von Schaltern an Listener gesendet, die die Daten an das jeweilige zugeordnete Ausgabemedium weiterleiten. Ein wichtiger Unterschied in Version 2.0 ist, dass die Ablaufverfolgung mithilfe von Instanzen der <xref:System.Diagnostics.TraceSource>-Klasse eingeleitet werden kann. <xref:System.Diagnostics.TraceSource> als ein verbessertes Ablaufverfolgungssystem fungieren soll, und kann verwendet werden, anstelle der statischen Methoden der älteren <xref:System.Diagnostics.Trace> und <xref:System.Diagnostics.Debug> Ablaufverfolgungsklassen. Die vertrauten <xref:System.Diagnostics.Trace>- und <xref:System.Diagnostics.Debug>-Klassen sind immer noch vorhanden, es wird jetzt jedoch empfohlen, die <xref:System.Diagnostics.TraceSource>-Klasse für die Ablaufverfolgung zu verwenden.  
   
  In diesem Thema wird die Verwendung von <xref:System.Diagnostics.TraceSource> zusammen mit einer Anwendungskonfigurationsdatei erläutert.  Es ist möglich, die Ablaufverfolgung unter Verwendung von <xref:System.Diagnostics.TraceSource> ohne Konfigurationsdatei durchzuführen. Dies wird jedoch nicht empfohlen. Weitere Informationen über die Ablaufverfolgung ohne Konfigurationsdatei finden Sie unter [Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungsquellen](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
   
@@ -164,9 +164,10 @@ Eine der neuen Funktionen in .NET Framework, Version 2.0, ist ein verbessertes A
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
 - [Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungsquellen](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [Trace Listeners (Ablaufverfolgungslistener)](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Ablaufverfolgungslistener](../../../docs/framework/debug-trace-profile/trace-listeners.md)

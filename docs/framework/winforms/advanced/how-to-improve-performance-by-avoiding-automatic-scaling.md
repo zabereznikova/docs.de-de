@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verbessern der Leistung durch Vermeiden der automatischen Skalierung'
+title: 'Vorgehensweise: Verbessern der Leistung durch das Vermeiden der automatischen Skalierung'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 49ec491308cc6a9fd81e74bff213029389137b88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653794"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163591"
 ---
-# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Vorgehensweise: Verbessern der Leistung durch Vermeiden der automatischen Skalierung
+# <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Vorgehensweise: Verbessern der Leistung durch das Vermeiden der automatischen Skalierung
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ein Bild kann automatisch skaliert werden, wie Sie es zeichnen, die Leistung verringern würden. Alternativ können Sie steuern die Skalierung des Bilds durch die Maße des Zielrechtecks zum Übergeben der <xref:System.Drawing.Graphics.DrawImage%2A> Methode.  
   
  Beispielsweise der folgende Aufruf von der <xref:System.Drawing.Graphics.DrawImage%2A> Methode gibt eine linke obere Ecke des (50, 30), aber nicht über ein Zielrechteck angibt.  
@@ -41,5 +41,6 @@ ms.locfileid: "58653794"
  Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Ersetzen Sie Texture.jpg mit einem Image-Name und Pfad, der auf Ihrem System gültig sind.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Bilder, Bitmaps und Metadateien](images-bitmaps-and-metafiles.md)
 - [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](working-with-images-bitmaps-icons-and-metafiles.md)

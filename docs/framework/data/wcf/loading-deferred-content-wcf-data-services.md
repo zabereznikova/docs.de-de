@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: 3c522cd9f360430bde8a008c4c9702f01887d948
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 905cf9933b726ba570c16719c8d1883a8588254d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554997"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227170"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Laden von verzögerten Inhalten (WCF Data Services)
 Standardmäßig schränkt [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] die Datenmenge ein, die eine Abfrage zurückgibt. Sie können jedoch explizit weitere Daten aus dem Datendienst laden, einschließlich verknüpfter Entitäten, ausgelagerter Antwortdaten und binärer Datenströme, wenn sie benötigt werden. In diesem Thema wird beschrieben, wie dieser verzögerte Inhalt in die Anwendung geladen wird.  
@@ -27,7 +27,7 @@ Standardmäßig schränkt [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#expandorderdetailsspecific)]  
   
-     [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] beschränkt die Anzahl von Entitätenmengen, die mit der `$expand`-Abfrageoption in einer einzelnen Abfrage enthalten sein können, auf 12.  
+     [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] beschränkt auf 12 die Anzahl der Entitätenmengen, die in einer einzelnen Abfrage enthalten sein können die `$expand` Abfrageoption.  
   
 -   **Explizites Laden**: Rufen Sie die <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> Methode für die <xref:System.Data.Services.Client.DataServiceContext> Instanz, um verknüpfte Entitäten explizit zu laden. Jeder Aufruf der <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A>-Methode erstellt eine separate Anforderung an den Datendienst. Im folgenden Beispiel werden `Order_Details` für eine `Orders`-Entität explizit geladen:  
   
@@ -55,8 +55,9 @@ Standardmäßig schränkt [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md
  Weitere Informationen finden Sie unter [Vorgehensweise: Laden von ausgelagerten Ergebnissen](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md).  
   
 ## <a name="binary-data-streams"></a>Binäre Datenströme  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht es Ihnen, auf BLOB (Binary Large Object)-Daten als Datenstrom zuzugreifen. Streaming verzögert das Laden binärer Daten, bis sie benötigt werden, und der Client kann diese Daten effizienter verarbeiten. Um diese Funktionalität zu nutzen, muss der Datendienst den <xref:System.Data.Services.Providers.IDataServiceStreamProvider>-Anbieter implementieren. Weitere Informationen finden Sie unter [Streaminganbieter](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md). Wenn Streaming aktiviert ist, werden Entitätstypen ohne die verknüpften binären Daten zurückgegeben. In diesem Fall müssen Sie verwenden die <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> Methode der <xref:System.Data.Services.Client.DataServiceContext> Klasse, um den Datenstrom für die binären Daten aus dem Dienst zuzugreifen. Verwenden Sie entsprechend die <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>-Methode, um binäre Daten für eine Entität als Datenstrom hinzuzufügen oder zu ändern. Weitere Informationen finden Sie unter [arbeiten mit Binärdaten](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht es Ihnen, binary large Object (BLOB) Daten als Datenstrom zuzugreifen. Streaming verzögert das Laden binärer Daten, bis sie benötigt werden, und der Client kann diese Daten effizienter verarbeiten. Um diese Funktionalität zu nutzen, muss der Datendienst den <xref:System.Data.Services.Providers.IDataServiceStreamProvider>-Anbieter implementieren. Weitere Informationen finden Sie unter [Streaminganbieter](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md). Wenn Streaming aktiviert ist, werden Entitätstypen ohne die verknüpften binären Daten zurückgegeben. In diesem Fall müssen Sie verwenden die <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> Methode der <xref:System.Data.Services.Client.DataServiceContext> Klasse, um den Datenstrom für die binären Daten aus dem Dienst zuzugreifen. Verwenden Sie entsprechend die <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>-Methode, um binäre Daten für eine Entität als Datenstrom hinzuzufügen oder zu ändern. Weitere Informationen finden Sie unter [arbeiten mit Binärdaten](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

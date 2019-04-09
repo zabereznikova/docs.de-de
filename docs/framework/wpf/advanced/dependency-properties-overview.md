@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 0d336a55ee849ea3e9584cdcfd87e5d6c4befe25
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188642"
 ---
 # <a name="dependency-properties-overview"></a>Übersicht über Abhängigkeitseigenschaften
 
@@ -36,7 +36,7 @@ Abhängigkeitseigenschaften dienen der Berechnung des Werts einer Eigenschaft an
 Anhand der SDK-Referenz können Sie ermitteln, welche Eigenschaft eine Abhängigkeitseigenschaft ist, wenn diese im Abschnitt „Informationen zur Abhängigkeitseigenschaft“ auf der verwalteten Referenzseite für diese Eigenschaft vorhanden ist. Der Abschnitt mit den Informationen zur Abhängigkeitseigenschaft enthält einen Link zum <xref:System.Windows.DependencyProperty>-Bezeichner für diese Abhängigkeitseigenschaft und eine Liste der Metadatenoptionen für diese Eigenschaft, der Informationen für das Überschreiben pro Klasse und anderer Details.
 
 ## <a name="dependency-properties-back-clr-properties"></a>Abhängigkeitseigenschaften unterstützen CLR-Eigenschaften
-Abhängigkeitseigenschaften und das WPF-Eigenschaftensystem erweitern die Funktionalität von Eigenschaften durch die Bereitstellung eines Typs, der eine Eigenschaft als eine alternative Implementierung zum Standardmuster unterstützt, bei dem die Eigenschaft mit einem privaten Feld unterstützt wird. Der Name dieses Typs lautet <xref:System.Windows.DependencyProperty>. Der andere wichtige Typ, der das WPF-Eigenschaftensystem definiert, ist <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> definiert die Basisklasse, die eine Abhängigkeitseigenschaft registrieren und besitzen kann.
+Abhängigkeitseigenschaften und das WPF-Eigenschaftensystem erweitern die Funktionalität von Eigenschaften durch die Bereitstellung eines Typs, der eine Eigenschaft als eine alternative Implementierung zum Standardmuster unterstützt, bei dem die Eigenschaft mit einem privaten Feld unterstützt wird. Der Name dieses Typs lautet <xref:System.Windows.DependencyProperty>. Der andere wichtige Typ, der das WPF-Eigenschaftensystem definiert, ist <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> definiert die Basisklasse, die registrieren und besitzen eine Abhängigkeitseigenschaft kann an.
 
 Nachfolgend ist die Terminologie aufgeführt, die mit Abhängigkeitseigenschaften verwendet wird:
 
@@ -97,7 +97,7 @@ Eine Abhängigkeitseigenschaft stellt Funktionen bereit, die die Funktionalität
 
 - [Vererbung von Eigenschaftswerten](#property-value-inheritance)
 
-- [WPF-Designer-Integration](#wpf-designer-integration)
+- [WPF-Designer-integration](#wpf-designer-integration)
 
 ### <a name="resources"></a>Ressourcen
 Ein Wert einer Abhängigkeitseigenschaft kann durch Verweisen auf eine Ressource festgelegt werden. Ressourcen werden in der Regel als der `Resources`-Eigenschaftswert eines Seitenstammelements oder der Anwendung angegeben (diese Positionen ermöglichen den einfachsten Zugriff auf die Ressource). Das folgende Beispiel veranschaulicht, wie Sie eine <xref:System.Windows.Media.SolidColorBrush>-Ressource definieren.
@@ -197,6 +197,7 @@ In der Regel sollen Stile nicht immer gelten und sogar einen lokal festgelegten 
 - Abhängigkeitseigenschaften sollten im Allgemeinen als öffentliches Eigentum gelten, das zugänglich oder zumindest für alle Aufrufer mit Zugriff auf eine Instanz erkennbar sein. Weitere Informationen finden Sie unter [Sicherheit von Abhängigkeitseigenschaften](dependency-property-security.md).
 
 ## <a name="see-also"></a>Siehe auch
+
 - [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
 - [Schreibgeschützte Abhängigkeitseigenschaften](read-only-dependency-properties.md)
 - [Übersicht über XAML (WPF)](xaml-overview-wpf.md)

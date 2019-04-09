@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Annehmen der Clientidentität für einen Dienst'
+title: 'Vorgehensweise: Annahme der Clientidentität durch einen Dienst'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: 260ff8b2131e1ee3c42197187f7067ab9c1328d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0c414d0af033d9d703fcf947d008aeefcef5b876
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497503"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169116"
 ---
-# <a name="how-to-impersonate-a-client-on-a-service"></a>Vorgehensweise: Annehmen der Clientidentität für einen Dienst
+# <a name="how-to-impersonate-a-client-on-a-service"></a>Vorgehensweise: Annahme der Clientidentität durch einen Dienst
 Identität eines Clients auf einem Windows Communication Foundation (WCF)-Dienst ermöglicht dem Dienst zum Ausführen von Aktionen im Auftrag des Clients. Bei Aktionen, die einer ACL-Überprüfung (ACL = Access Control List, Zugriffssteuerungsliste) unterliegen, wie der Zugriff auf Verzeichnisse und Dateien auf einem Computer oder der Zugriff auf eine SQL&#160;Server-Datenbank, wird die ACL-Überprüfung für das Clientbenutzerkonto durchgeführt. In diesem Thema werden die grundlegenden Schritte vorgestellt, die für die Aktivierung eines Clients in einer Windows-Domäne erforderlich sind, damit eine Ebene für den Clientidentitätswechsel festgelegt werden kann. Ein funktionsfähiges Beispiel hierfür finden Sie unter [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md). Weitere Informationen zum Clientidentitätswechsel finden Sie unter [Delegierung und Identitätswechsel](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 > [!NOTE]
@@ -46,6 +46,7 @@ Identität eines Clients auf einem Windows Communication Foundation (WCF)-Dienst
      [!code-vb[c_SimpleImpersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.Security.Principal.TokenImpersonationLevel>
 - [Durchführen eines Identitätswechsels für den Client](../../../docs/framework/wcf/samples/impersonating-the-client.md)

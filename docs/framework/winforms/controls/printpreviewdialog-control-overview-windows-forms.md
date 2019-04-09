@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 32fbdd222e34f642d29255e6c594076b6d2a91e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711277"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188837"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>Übersicht über das PrintPreviewDialog-Steuerelement (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement ist ein vorkonfiguriertes Dialogfeld zum Anzeigen verwendet wie ein [PrintDocument](printdocument-component-windows-forms.md) wird angezeigt, gedruckt. Verwenden Sie es in Ihrer Windows-basierte Anwendung als einfache Lösung anstatt ein eigenes Dialogfeld zu konfigurieren. Das Steuerelement enthält Schaltflächen zum Drucken, Vergrößern, Anzeigen mindestens einer Seite und Schließen des Dialogfelds.  
@@ -52,6 +52,7 @@ Wenn der Switch nicht vorhanden ist, oder wenn sie auf einen anderen Wert festge
 Bei Verwendung der <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> Ereignis zum Ändern von Druckereinstellungen fest, die Leistung der <xref:System.Windows.Forms.PrintPreviewDialog> Steuerelement wird nicht verbessert werden, auch wenn eine Optimierung Konfigurationsschalters festgelegt ist.  
 
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [Übersicht über das PrintPreviewControl-Steuerelement](printpreviewcontrol-control-overview-windows-forms.md)
 - [PrintPreviewDialog-Steuerelement](printpreviewdialog-control-windows-forms.md)

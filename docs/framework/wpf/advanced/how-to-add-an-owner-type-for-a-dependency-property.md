@@ -8,12 +8,12 @@ helpviewer_keywords:
 - classes [WPF], adding as owners of dependency properties
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
-ms.openlocfilehash: 03ffec87c98c88452aa8fde89c64646eaf48a8da
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369590"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217093"
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>Vorgehensweise: Hinzufügen eines Besitzertyps für eine Abhängigkeitseigenschaft
 Dieses Beispiel zeigt, wie Sie eine Klasse hinzugefügt werden, als Besitzer einer Abhängigkeitseigenschaft, die für einen anderen Typ registriert. Auf diese Weise die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Reader und Eigenschaftensystem sind beide erkennen, die Klasse als weiteren Besitzer der Eigenschaft. Optional als Besitzer hinzufügen, können die hinzufügende Klasse um typspezifische Metadaten bereitzustellen.  
@@ -31,5 +31,6 @@ Dieses Beispiel zeigt, wie Sie eine Klasse hinzugefügt werden, als Besitzer ein
 [!code-vb[PropertySystemEsoterics#UnrelatedStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#unrelatedstatecontrol)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)

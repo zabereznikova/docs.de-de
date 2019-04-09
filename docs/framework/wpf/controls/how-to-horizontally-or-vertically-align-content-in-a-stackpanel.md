@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Horizontales oder vertikales Ausrichten von Inhalt in einem StackPanel'
+title: 'Vorgehensweise: Horizontales oder vertikales Ausrichten von Inhalt in einem StackPanel-Objekt'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - content alignment [WPF]
 - aligning [WPF], content
 ms.assetid: c1e8f962-72c8-4e7a-8670-7a2d7e021791
-ms.openlocfilehash: 6605a6a56fba587678227f5826982ec3266b153c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 03348aa0eb5b6c1791c27683c1c6c6a5d4a8a9d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356292"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186042"
 ---
-# <a name="how-to-horizontally-or-vertically-align-content-in-a-stackpanel"></a>Vorgehensweise: Horizontales oder vertikales Ausrichten von Inhalt in einem StackPanel
+# <a name="how-to-horizontally-or-vertically-align-content-in-a-stackpanel"></a>Vorgehensweise: Horizontales oder vertikales Ausrichten von Inhalt in einem StackPanel-Objekt
 Dieses Beispiel zeigt, wie Sie Anpassen der <xref:System.Windows.Controls.StackPanel.Orientation%2A> des Inhalts in einer <xref:System.Windows.Controls.StackPanel> -Element sowie Gewusst wie: Anpassen der <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> und <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> von untergeordnetem Inhalt.  
   
 ## <a name="example"></a>Beispiel  
@@ -30,6 +30,7 @@ Dieses Beispiel zeigt, wie Sie Anpassen der <xref:System.Windows.Controls.StackP
  [!code-vb[StackPanelIntroSamp#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/StackPanelIntroSamp/VisualBasic/Window1.xaml.vb#2)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.StackPanel>
 - <xref:System.Windows.Controls.ListBox>
 - <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>

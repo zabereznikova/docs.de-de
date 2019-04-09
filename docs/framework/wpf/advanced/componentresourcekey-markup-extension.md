@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 89459223108c0190a485b25193e44d379a1e1c19
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379028"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169753"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey-Markuperweiterung
 Definiert und verweist auf die Schlüssel für Ressourcen, die aus externen Assemblys geladen werden. Dies ermöglicht eine Ressourcensuche einen Zieltyp in einer Assembly, anstatt explizit ein Ressourcenwörterbuch in eine Assembly oder auf eine Klasse angeben.  
@@ -75,6 +75,7 @@ Definiert und verweist auf die Schlüssel für Ressourcen, die aus externen Asse
  `ComponentResourceKey` ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll. Alle Markuperweiterungen in XAML verwenden die Zeichen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] und [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] in der Attributsyntax. Dies ist die Konvention, anhand der ein XAML-Prozessor erkennt, dass das Attribut von einer Markuperweiterung verarbeitet werden muss. Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.ComponentResourceKey>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md)

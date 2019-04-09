@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: d02705422b088800d9f2e081d6a28924d9b84078
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 57802cad0a75ed21bba02a11fec39f821835c5ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710731"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157760"
 ---
 # <a name="events-overview-windows-forms"></a>Übersicht über Ereignisse (Windows Forms)
 Ein Ereignis ist eine Aktion, auf die Sie antworten oder im Code „behandeln“ können. Ereignisse können durch eine Benutzeraktion generiert werden, z. B. durch Klicken mit der Maus oder Drücken auf eine Taste; durch Programmcode; oder durch das System.  
@@ -44,5 +44,6 @@ Ein Ereignis ist eine Aktion, auf die Sie antworten oder im Code „behandeln“
  Der mit Delegaten verwendete Bindungsmechanismus ist dynamisch: ein Delegat kann zur Laufzeit an jede Methode gebunden werden, dessen Signatur mit der des Ereignishandlers übereinstimmt. Mit dieser Funktion können Sie die gebundene Methode abhängig von einer Bedingung einrichten oder ändern und einen Ereignishandler dynamisch an ein Steuerelement anfügen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen von Ereignishandlern in Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Übersicht über Ereignishandler](event-handlers-overview-windows-forms.md)

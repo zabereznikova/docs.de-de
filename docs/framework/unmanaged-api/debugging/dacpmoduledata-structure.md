@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: db3fdaa768e3d1b445f08c3964521570631f0965
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 752d87c5f4a6b8d854a06be8962ee754cdd4622d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828621"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132001"
 ---
 # <a name="dacpmoduledata-structure"></a>DacpModuleData-Struktur
 
@@ -49,17 +49,17 @@ struct DacpModuleData
 | `ilBase`  | Die Adresse des geladenen Bilds der Basiswert.                                 |
 | `payLoad` | Ein Puffer Nutzlast zusätzlicher Module-Informationen, die von der Laufzeit verwendet wird. |
 
-
 ## <a name="remarks"></a>Hinweise
 
 Diese Struktur befindet sich in der Common Language Runtime und nicht über Header oder Bibliotheksdateien verfügbar gemacht. Definieren Sie die Struktur wie oben angegeben, um es zu verwenden.
 
 ## <a name="requirements"></a>Anforderungen
 **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keine  
-**Bibliothek:** Keine  
+**Header:** Keiner  
+**Bibliothek:** Keiner  
 **.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>Siehe auch
+
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

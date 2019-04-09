@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rotating objects [WPF]
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
-ms.openlocfilehash: 49de419f22980ab9101c388079e0348b4c1113f4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d1c4700a5dc8f6ed99043552999d8f014116da8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360367"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189642"
 ---
 # <a name="how-to-rotate-an-object"></a>Vorgehensweise: Drehen eines Objekts
 Dieses Beispiel zeigt, wie ein Objekt gedreht wird. Das Beispiel erstellt zuerst eine <xref:System.Windows.Media.RotateTransform> und gibt dann die <xref:System.Windows.Media.RotateTransform.Angle%2A> in Grad.  
@@ -45,6 +45,7 @@ Zwei Objekte, die um unterschiedliche Drehpunkte um 45 Grad gedreht werden
  Das vollständige Beispiel finden Sie im [Beispiel einer 2D-Transformation](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Transform>
 - [Übersicht über Transformationen](transforms-overview.md)
-- [Themen zu Vorgehensweisen](transformations-how-to-topics.md)
+- [Gewusst wie-Themen](transformations-how-to-topics.md)

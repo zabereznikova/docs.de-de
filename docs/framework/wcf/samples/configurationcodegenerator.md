@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: a481fe1e3c3aedd74f0e1546259b4eeeb9bed118
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 7625060cd0512bb7498a931d7b93a731e52c9f00
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195188"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 Der ConfigurationCodeGenerator ist ein Tool, mit dem Sie Ihre Implementierungen von benutzerdefinierten Kanälen für das Konfigurationssystem verfügbar machen können. Auf diese Weise können Benutzer den benutzerdefinierten Kanal wie bei vom System bereitgestellten Bindungen (wie `NetTcpBinding`) oder benutzerdefinierten Bindungen mit dem `TcpTransportBindingElement` mithilfe einer .config-Datei konfigurieren.  
@@ -49,4 +49,3 @@ Der ConfigurationCodeGenerator ist ein Tool, mit dem Sie Ihre Implementierungen 
          Wenn Sie die /sb angegeben: der CodeToAddTo option\<*Ihrestdbindung*> .cs enthält Code, der Sie manuell in die Klasse einfügen müssen, die Ihre standardbindung implementiert.  
   
      Die Datei "SampleConfig.xml" enthält den Konfigurationscode, den Sie der Konfigurationsdatei hinzufügen müssen, die die oben in Schritt 1 oder 2 definierten Handler registriert.  
-  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], progress bars
 - progress controls [Windows Forms]
 ms.assetid: cb3eb0a8-60b1-483e-a03f-93b0b1351dae
-ms.openlocfilehash: 3b56d31cab84a43a488499748710355671980ad0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 03f078da96a48ed0f53697661cb2add1d6c01901
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711876"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158963"
 ---
 # <a name="toolstripprogressbar-control"></a>ToolStripProgressBar-Steuerelement
 Die <xref:System.Windows.Forms.ToolStripProgressBar> kombiniert <xref:System.Windows.Forms.ToolStrip> Rendern und das rafting von Features mit seinen Funktionen der typische Prozess nachverfolgen.  
@@ -29,4 +29,5 @@ Die <xref:System.Windows.Forms.ToolStripProgressBar> kombiniert <xref:System.Win
  Enthält die Referenzdokumentation für das <xref:System.Windows.Forms.ToolStripProgressBar>-Steuerelement.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

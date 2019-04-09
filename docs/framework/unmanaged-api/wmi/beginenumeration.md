@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11002ac57a37b3c9ab0badfab49bb9049b0dfa79
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4221dbea2b5ad98f889e04eb8a9b6d992b59066e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212296"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration-Funktion
 Setzt einen Enumerator zurück zum Anfang der Enumeration zurück.  
@@ -96,7 +96,6 @@ Konstante  |Wert  |Beschreibung  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Beschränken Sie die Enumeration auf Eigenschaften, die definiert, oder in der Klasse selbst geändert werden. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Beschränken Sie die Enumeration auf Eigenschaften, die von Klassen geerbt werden. |
-
 
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  

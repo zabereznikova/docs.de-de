@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zugänglichmachen von x. 509-Zertifikate für WCF'
+title: 'Vorgehensweise: Zugänglichmachen von X.509-Zertifikaten für WCF'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 7c90d5b0541edfc11145d9373c2554ee4595a7b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 85f572f021f1613e0a2bb70cc090f58d2833182e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219914"
 ---
-# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Vorgehensweise: Zugänglichmachen von x. 509-Zertifikate für WCF
+# <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Vorgehensweise: Zugänglichmachen von X.509-Zertifikaten für WCF
 Damit ein x. 509-Zertifikat für Windows Communication Foundation (WCF) zugreifen können, muss die Anwendungscode der Name des Zertifikatspeichers und Speicherort angeben. In bestimmten Fällen benötigt die Prozessidentität Zugriff auf die Datei, die den zugeordneten privaten Schlüssel für das X.509-Zertifikat enthält. Zum Abrufen des privaten Schlüssels mit einem x. 509-Zertifikat im Zertifikatspeicher verknüpft ist, muss WCF dazu berechtigt. Standardmäßig können nur der Besitzer und das Systemkonto auf den privaten Schlüssel eines Zertifikats zugreifen.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>So machen Sie X.509-Zertifikate für WCF zugänglich  
@@ -71,6 +71,7 @@ Damit ein x. 509-Zertifikat für Windows Communication Foundation (WCF) zugreife
         ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
 - [Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
-- [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

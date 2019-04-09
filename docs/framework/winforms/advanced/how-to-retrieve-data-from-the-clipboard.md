@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: 0ed79197190e9f646b5f94ff56e62b19fe4f366a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: aca110339c94afd5442aed5a2481964b456154f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201610"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>Vorgehensweise: Abrufen von Daten aus der Zwischenablage
 Die <xref:System.Windows.Forms.Clipboard> -Klasse bietet Methoden, die Sie für die Interaktion mit der Windows-Betriebssystem-Zwischenablage-Funktion verwenden können. Viele Anwendungen verwenden die Zwischenablage als temporäre Repository für Daten. Beispielsweise werden die Zwischenablage von Textverarbeitungsprogrammen während Ausschneiden und Einfügen-Vorgänge verwenden. Die Zwischenablage ist auch nützlich für die Übertragung von Informationen von einer Anwendung in eine andere.  
@@ -57,5 +57,6 @@ Die <xref:System.Windows.Forms.Clipboard> -Klasse bietet Methoden, die Sie für 
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Drag & Drop-Vorgänge und Unterstützung der Zwischenablage](drag-and-drop-operations-and-clipboard-support.md)
-- [Vorgehensweise: Hinzufügen von Daten in die Zwischenablage](how-to-add-data-to-the-clipboard.md)
+
+- [Drag &amp; Drop-Operationen und Unterstützung der Zwischenablage](drag-and-drop-operations-and-clipboard-support.md)
+- [Vorgehensweise: Hinzufügen von Daten zur Zwischenablage](how-to-add-data-to-the-clipboard.md)

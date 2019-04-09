@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Sortieren und Filtern von ADO.NET-Daten mit der Windows Forms-BindingSource-Komponente'
+title: 'Vorgehensweise: Sortieren und Filtern von ADO.NET-Daten mit der BindingSource-Komponente in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data [Windows Forms], sorting
 - ADO.NET [Windows Forms]
 ms.assetid: 6c206daf-d706-4602-9dbe-435343052063
-ms.openlocfilehash: 65be2367091144945e9540c848e6131deac9d725
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1f8a5e9be40c8a2d00b05ea42097e397afd0e1b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703100"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163253"
 ---
-# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Vorgehensweise: Sortieren und Filtern von ADO.NET-Daten mit der Windows Forms-BindingSource-Komponente
+# <a name="how-to-sort-and-filter-adonet-data-with-the-windows-forms-bindingsource-component"></a>Vorgehensweise: Sortieren und Filtern von ADO.NET-Daten mit der BindingSource-Komponente in Windows Forms
 Sie können das Sortieren und Filtern von Funktion verfügbar machen <xref:System.Windows.Forms.BindingSource> steuern, über die <xref:System.Windows.Forms.BindingSource.Sort%2A> und <xref:System.Windows.Forms.BindingSource.Filter%2A> Eigenschaften. Sie können anwenden, einfache Sortierung, wenn die zugrunde liegende Datenquelle ist ein <xref:System.ComponentModel.IBindingList>, und Sie können Filter anwenden und erweiterte Sortierung, wenn die Datenquelle ist ein <xref:System.ComponentModel.IBindingListView>. Die <xref:System.Windows.Forms.BindingSource.Sort%2A> Eigenschaft ist erforderlich, Standard [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] Syntax: eine Zeichenfolge, die den Namen einer Spalte mit Daten in der Datenquelle darstellt, gefolgt von `ASC` oder `DESC` an, ob die Liste in aufsteigender oder absteigender Reihenfolge sortiert werden sollen. Sie können erweiterte Sortierung oder mehrere Spalten zu sortieren, nach jeder Spalte durch ein Komma als Trennzeichen trennen festlegen. Die <xref:System.Windows.Forms.BindingSource.Filter%2A> Eigenschaft akzeptiert einen Zeichenfolgenausdruck.  
   
 > [!NOTE]
@@ -54,6 +54,7 @@ Sie können das Sortieren und Filtern von Funktion verfügbar machen <xref:Syste
  Um dieses Beispiel auszuführen, fügen Sie den Code in ein Formular enthält ein <xref:System.Windows.Forms.BindingSource> mit dem Namen `BindingSource1` und <xref:System.Windows.Forms.DataGridView> mit dem Namen `dataGridView1`. Behandeln der <xref:System.Windows.Forms.Form.Load> -Ereignis für das Formular, und rufen `InitializeSortedFilteredBindingSource` in die Load-Ereignishandlermethode.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>
 - [Vorgehensweise: Installieren von Beispieldatenbanken](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/8b6y4c7s(v=vs.120))

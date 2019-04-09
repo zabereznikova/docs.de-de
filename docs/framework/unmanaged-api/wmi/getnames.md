@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0065b2cbbd17c5bb3dca6773951cdb8729e59fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f664edf29e5d2f9ec4e523aa7f7b204cf999e01b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583560"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202650"
 ---
 # <a name="getnames-function"></a>GetNames-Funktion
 Ruft eine Teilmenge oder alle Namen der Eigenschaften eines Objekts ab. 
@@ -80,7 +80,6 @@ Der benannte zurückgegeben werden durch eine Kombination von Flags und Paramete
 
 Das Flag-Werte im `lFlags` Bitfelder werden
 
-
 Die Flags, die als übergeben werden können die `lEnumFlags` Argument sind Bitfeldern, die in definierten die *WbemCli.h* Header-Datei, und Sie können definieren sie als Konstanten in Ihrem Code.  Sie können einen Flag aus jeder Gruppe mit einem Flag aus einer anderen Gruppe kombinieren. Allerdings sind Flags aus der gleichen Gruppe sich gegenseitig ausschließende. 
 
 | Gruppe 1-flags |Wert  |Beschreibung  |
@@ -112,4 +111,5 @@ Die Funktion weist immer einen neuen `SAFEARRAY` zurückgegeben `WBEM_S_NO_ERROR
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WMI und Leistungsindikatoren (Referenz zur nicht verwalteten API)](index.md)

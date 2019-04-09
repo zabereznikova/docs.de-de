@@ -2,12 +2,12 @@
 title: Analysieren von LINQ to SQL-Quellcode
 ms.date: 03/30/2017
 ms.assetid: cba3eef8-e108-4478-b588-ad59580e133e
-ms.openlocfilehash: 4b1d2d2c54ae99a65f60c96b6330e3f94db6beb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1110e64d16a6c2790939cc695ecd67e37ec109e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696853"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203287"
 ---
 # <a name="analyzing-linq-to-sql-source-code"></a>Analysieren von LINQ to SQL-Quellcode
 Mithilfe der folgenden Schritte können Sie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Quellcode aus der Beispieldatenbank Northwind erstellen. Sie können Elemente des Objektmodells mit Datenbankelementen vergleichen, um zu ermitteln, wie die Zuweisung erfolgt.  
@@ -24,5 +24,6 @@ Mithilfe der folgenden Schritte können Sie [!INCLUDE[vbtecdlinq](../../../../..
     -   `sqlmetal /code:northwind.cs /language:csharp "c:\northwnd.mdf" /sprocs /functions /pluralize`  
   
 ## <a name="see-also"></a>Siehe auch
-- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+
+- [Referenz](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

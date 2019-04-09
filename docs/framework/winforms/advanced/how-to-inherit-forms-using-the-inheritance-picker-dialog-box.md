@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Erben von Formularen mithilfe des Dialogfelds-Auswahl'
+title: 'Vorgehensweise: Erben von Formularen mithilfe des Dialogfelds „Vererbungsauswahl“'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 4b3e7a3994423c962866b643ffc5173669e3a2e5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 74dfd1bb2c47a8e377a2ed74934f742dff6cd64a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212283"
 ---
-# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Vorgehensweise: Erben von Formularen mithilfe des Dialogfelds-Auswahl
+# <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Vorgehensweise: Erben von Formularen mithilfe des Dialogfelds „Vererbungsauswahl“
 Das Dialogfeld **Vererbungsauswahl** bietet die einfachste Möglichkeit, ein Formular oder ein anderes Objekt zu erben. Mithilfe dieser Option können Sie die Vorteile von Codezeichenfolgen oder Benutzeroberflächen (UI) nutzen, die Sie bereits in anderen Projektmappen erstellt haben.  
   
 > [!NOTE]
@@ -57,7 +57,8 @@ Das Dialogfeld **Vererbungsauswahl** bietet die einfachste Möglichkeit, ein For
     >  Wenn Sie geerbte Steuerelemente und Komponenten mit standardmäßigen Steuerelementen und Komponenten in Windows Forms kombinieren, treten möglicherweise Konflikte hinsichtlich der Z-Reihenfolge auf. Sie können diese Probleme lösen, indem Sie die Z-Reihenfolge ändern. Zeigen Sie hierzu im Menü **Format** auf **Reihenfolge** und klicken Sie anschließend auf **In den Vordergrund** oder **In den Hintergrund**. Weitere Informationen zur Z-Reihenfolge von Steuerelementen finden Sie unter [Vorgehensweise: Überlagern von Objekten in Windows Forms](../controls/how-to-layer-objects-on-windows-forms.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Inherits-Anweisung](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+
+- [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
 - [Auswirkungen beim Ändern der Darstellung von Basisformularen](effects-of-modifying-base-form-appearance.md)
-- [Visuelle Vererbung in Windows Forms](windows-forms-visual-inheritance.md)
+- [Visuelle Vererbung in Windows Forms](windows-forms-visual-inheritance.md)

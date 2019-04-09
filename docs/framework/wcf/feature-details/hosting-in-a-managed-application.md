@@ -2,12 +2,12 @@
 title: Hosten in einer verwalteten Anwendung
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: 0210f608be8ef7ff8b2af4b0cc36b308cd3ddbe8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218796"
 ---
 # <a name="hosting-in-a-managed-application"></a>Hosten in einer verwalteten Anwendung
 Windows Communication Foundation (WCF)-Dienste können in einem gehostet werden [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Anwendung. Die Selbsthosting-Option ist die flexibelste Option, da sie für die Bereitstellung die geringsten Anforderungen an die Infrastruktur stellt. Es ist jedoch auch die am wenigsten robuste Hostingoption, da verwaltete Anwendungen keine erweiterten hosten und Verwaltungsfunktionen von anderen Hostingoptionen in WCF, z. B. Internet Information Services (IIS) und Windows-Dienste bereitstellen.  
@@ -25,5 +25,6 @@ Windows Communication Foundation (WCF)-Dienste können in einem gehostet werden 
  Andere allgemeine Szenarien, in denen Selbsthosting geeignete rich Client-Anwendungen, z. B. jene auf Grundlage von Windows Presentation Foundation (WPF) oder Windows Forms (WinForms) sind. Diese Hostingoption erleichtert es Rich&#160;Client-Anwendungen, wie [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] - und WinForms-Anwendungen, mit der Außenwelt zu kommunizieren. Beispielsweise ein Zusammenarbeitsclient-Peer-zu-Peer-, verwendet [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] für seine Benutzeroberfläche und hostet außerdem einen WCF-Dienst, der ermöglicht es anderen Clients, die dem Cache herstellen und Informationen austauschen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Hosting-Dienste](../../../../docs/framework/wcf/hosting-services.md)
-- [Tutorial mit ersten Schritten](../../../../docs/framework/wcf/getting-started-tutorial.md)
+- [Lernprogramm 'Erste Schritte'](../../../../docs/framework/wcf/getting-started-tutorial.md)

@@ -9,18 +9,16 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 3589ba1d13c4ec57cfcec8c52b61556344e8def2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 51ff0317172d545c746d35808d7c672e9586eeae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144026"
 ---
 # <a name="drawing-objects-overview"></a>Übersicht über Zeichnungsobjekte
 In diesem Thema werden <xref:System.Windows.Media.Drawing> Objekte und beschreibt, wie Sie diese verwenden, um effizient Zeichnen von Formen, Bitmaps, Text und Medien. Verwenden Sie <xref:System.Windows.Media.Drawing> Zeichnen von Objekten, die bei der Erstellung von ClipArt-Objekt, mit einem <xref:System.Windows.Media.DrawingBrush>, oder verwenden Sie <xref:System.Windows.Media.Visual> Objekte.  
-  
- 
-  
+
 <a name="whatisadrawingsection"></a>   
 ## <a name="what-is-a-drawing-object"></a>Was ist ein Zeichnungsobjekt?  
  Ein <xref:System.Windows.Media.Drawing> -Objekt beschreibt sichtbaren Inhalt, z. B. eine Form, Bitmap, Video oder eine Textzeile. Verschiedene Arten von Zeichnungen beschreiben verschiedene Arten von Inhalten. Im Folgenden finden Sie eine Liste der unterschiedlichen Typen von Zeichnungsobjekten.  
@@ -234,12 +232,13 @@ Eine mit einem DrawingBrush verwendete GeometryDrawing
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.DrawingGroup>
 - [2D-Grafiken und Bildverarbeitung](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md)
-- [Übersicht über Geometrien](geometry-overview.md)
+- [Übersicht über die Geometrie](geometry-overview.md)
 - [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Übersicht über das WPF-Grafikrendering](wpf-graphics-rendering-overview.md)
 - [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md)
-- [Themen zu Vorgehensweisen](drawings-how-to-topics.md)
+- [Gewusst wie-Themen](drawings-how-to-topics.md)

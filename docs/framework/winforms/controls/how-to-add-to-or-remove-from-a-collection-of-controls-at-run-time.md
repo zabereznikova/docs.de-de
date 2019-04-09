@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Hinzufügen oder Entfernen aus einer Auflistung von Steuerelementen zur Laufzeit'
+title: 'Vorgehensweise: Hinzufügen bzw. Entfernen von Steuerelementen zu bzw. aus einer Auflistung von Steuerelementen zur Laufzeit'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 6ec4e41f5a3bee6302996f21afa81f2b5eeb9568
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5c963976dd787b40c3e5c6180538051cfe419540
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143142"
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Vorgehensweise: Hinzufügen oder Entfernen aus einer Auflistung von Steuerelementen zur Laufzeit
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>Vorgehensweise: Hinzufügen bzw. Entfernen von Steuerelementen zu bzw. aus einer Auflistung von Steuerelementen zur Laufzeit
 Häufige Aufgaben bei der Entwicklung von Anwendungen Steuerelemente hinzufügen und Entfernen von Steuerelementen aus einem beliebigen Containersteuerelement in Formularen (wie z. B. die <xref:System.Windows.Forms.Panel> oder <xref:System.Windows.Forms.GroupBox> Steuerelement oder sogar das Formular selbst). Zur Entwurfszeit können Steuerelemente direkt auf ein Panel oder Gruppenfeld gezogen werden. Zur Laufzeit verwalten diese Steuerelemente eine `Controls`-Auflistung, die protokolliert, welche Steuerelemente darauf platziert werden.  
   
 > [!NOTE]
@@ -101,5 +101,6 @@ Häufige Aufgaben bei der Entwicklung von Anwendungen Steuerelemente hinzufügen
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.Panel>
 - [Panel-Steuerelement](panel-control-windows-forms.md)

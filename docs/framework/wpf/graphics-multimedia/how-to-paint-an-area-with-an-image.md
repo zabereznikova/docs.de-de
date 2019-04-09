@@ -9,12 +9,12 @@ helpviewer_keywords:
 - painting [WPF], with images
 - brushes [WPF], painting with images
 ms.assetid: 3432c533-1fc7-492d-94ee-0b13d60125ae
-ms.openlocfilehash: c1db803aacad85ce90fec519b5eabdd8df7bb584
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2b88982e7a8d196c31869dc74aac636d78f68386
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207811"
 ---
 # <a name="how-to-paint-an-area-with-an-image"></a>Vorgehensweise: Zeichnen eines Bereichs mit einem Bild
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.ImageBrush> -Klasse zum Zeichnen eines Bereichs mit einem Bild. Ein <xref:System.Windows.Media.ImageBrush> zeigt ein einzelnes Bild, das angegebenen seine <xref:System.Windows.Media.ImageBrush.ImageSource%2A> Eigenschaft.  
@@ -36,4 +36,5 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.ImageBrush> -K
  Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Windows.Media.ImageBrush> Klasse. Das vollständige Beispiel finden Sie unter [Beispiel zu ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md)

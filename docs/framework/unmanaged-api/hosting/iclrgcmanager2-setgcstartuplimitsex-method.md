@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 708dd1e13fd999f9a3a11ce36248e82c15000bfc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6cba7b4a34835eb2f394aa71be8b907973cb1cd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479050"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204717"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>ICLRGCManager2::SetGCStartupLimitsEx-Methode
 Legt die Größe der eine Garbage Collection-Segment und die maximale Größe der Garbage Collection-Systems die Generation 0 fest.  
@@ -73,7 +73,8 @@ HRESULT SetGCStartupLimitsEx (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Automatische Speicherverwaltung](../../../../docs/standard/automatic-memory-management.md)
+
+- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
 - [Garbage Collection](../../../../docs/standard/garbage-collection/index.md)
 - [ICLRControl-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRGCManager2-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)

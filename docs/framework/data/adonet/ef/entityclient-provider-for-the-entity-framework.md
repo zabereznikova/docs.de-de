@@ -2,12 +2,12 @@
 title: EntityClient-Anbieter für Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: ac14840145fb3faca0f6243037c8b27be31f5c7f
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: b8de4e36351a93858104a99045c5aeecce9d2997
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583978"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169675"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>EntityClient-Anbieter für Entity Framework
 Der EntityClient-Anbieter ist ein von Entity Framework-Anwendungen verwendeter Datenanbieter für den Zugriff auf Daten, die in einem konzeptionellen Modell beschrieben sind. Weitere Informationen zu konzeptionellen Modellen finden Sie unter [modellieren und zuordnen](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). EntityClient greift mithilfe von anderen .NET Framework-Datenanbietern auf die Datenquelle zu. Beim Zugreifen (SqlClient) auf eine SQL Server-Datenbank verwendet EntityClient z. B. den .NET Framework-Datenanbieter für SQL Server. Weitere Informationen zu den SqlClient-Anbieter, finden Sie unter [SqlClient für Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). Der EntityClient-Anbieter ist im <xref:System.Data.EntityClient>-Namespace implementiert.  
@@ -54,15 +54,16 @@ cmd.CommandText = @"SELECT VALUE p
   
  [Vorgehensweise: Ausführen einer Abfrage, die geschachtelte Auflistungen zurückgibt](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-nested-collections.md)  
   
- [Vorgehensweise: Ausführen einer parametrisierten Entity SQL-Abfrage mithilfe von EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
+ [Vorgehensweise: Ausführen einer parametrisierten Entity SQL-Abfrage mithilfe von „EntityCommand“](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md)  
   
- [Vorgehensweise: Ausführen einer parametrisierten gespeicherten Prozedur mithilfe von EntityCommand](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
+ [Vorgehensweise: Ausführen einer parametrisierten gespeicherten Prozedur mithilfe von „EntityCommand“](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md)  
   
  [Vorgehensweise: Ausführen einer polymorphen Abfrage](../../../../../docs/framework/data/adonet/ef/how-to-execute-a-polymorphic-query.md)  
   
  [Vorgehensweise: Navigieren in Beziehungen mit dem Navigate-Operator](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwalten von Verbindungen und Transaktionen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Sprachreferenz](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)

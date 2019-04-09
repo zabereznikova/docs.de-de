@@ -10,12 +10,12 @@ helpviewer_keywords:
 - paths [Windows Forms], drawing
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
-ms.openlocfilehash: b6f0ebd500aa3503c0c0d473ebe21a61f4438862
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720422"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140503"
 ---
 # <a name="graphics-paths-in-gdi"></a>Grafikpfade in GDI+
 Pfade werden durch die Kombination von Linien, Rechtecke und einfache Kurven gebildet. Erinnern Sie sich an den [Übersicht über Vektorgrafiken](vector-graphics-overview.md) , dass die folgenden grundlegenden Bausteine der am häufigsten für das Zeichnen von Bildern nützlich erwiesen haben:  
@@ -67,6 +67,7 @@ Pfade werden durch die Kombination von Linien, Rechtecke und einfache Kurven geb
  ![Paths](./media/aboutgdip02-art16.gif "Aboutgdip02_Art16")  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
 - <xref:System.Drawing.Point?displayProperty=nameWithType>
 - [Linien, Kurven und Formen](lines-curves-and-shapes.md)

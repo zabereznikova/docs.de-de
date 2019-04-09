@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11fc4bf6feb2a90c0b54c4410ed807c5b7e3eb5b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fba970de6e5882d3cbe9be17b5b49be5a3e81aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171651"
 ---
 # <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual-Methode
 Schreibt Speicher in den Prozessadressraum.  
@@ -34,7 +34,7 @@ HRESULT WriteVirtual(
  [in] Die Anzahl von Bytes in `pBuffer`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `S_OK` bei erfolgreichem Verlauf oder ein anderes `HRESULT` im Fall eines Fehlers.  
+ `S_OK` auf Erfolg oder einen anderen `HRESULT` bei einem Fehler.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Bytes nicht geschrieben werden können, tritt ein Fehler beim Methodenaufruf auf, und es werden keine Bytes im Zieladressraum geändert. (Andernfalls würde sich das Ziel in einem inkonsistenten Zustand befinden, wodurch ein weiteres Debuggen unzuverlässig wäre.)  
@@ -49,5 +49,6 @@ HRESULT WriteVirtual(
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorDebugMutableDataTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmutabledatatarget-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

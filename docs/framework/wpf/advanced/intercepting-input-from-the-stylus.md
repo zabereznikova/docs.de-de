@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
-ms.openlocfilehash: 0568e72e6d686ce08e6bd802f273e45dd623524b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374309"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218770"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Abfangen von Tablettstifteingaben
 Die <xref:System.Windows.Input.StylusPlugIns> Architektur bietet einen Mechanismus zum Implementieren der Steuerung auf niedriger Ebene über <xref:System.Windows.Input.Stylus> sowie die Erstellung von digitaler Tinte <xref:System.Windows.Ink.Stroke> Objekte. Die <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> -Klasse bietet einen Mechanismus für die Sie benutzerdefiniertes Verhalten implementieren, und klicken Sie auf die vom Tablettstift für eine optimale Leistung eingehenden Datenstrom anzuwenden.  
@@ -28,7 +28,7 @@ Die <xref:System.Windows.Input.StylusPlugIns> Architektur bietet einen Mechanism
   
 -   [Hinzufügen eines Plug-Ins an ein InkCanvas-Steuerelement](#AddingYourPluginToAnInkCanvas)  
   
--   [Schlussfolgerung](#Conclusion)  
+-   [Schlussbemerkung](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>Architektur  
@@ -71,5 +71,6 @@ Die <xref:System.Windows.Input.StylusPlugIns> Architektur bietet einen Mechanism
  Durch Ableiten von Ihren eigenen <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klassen und Einfügen in <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> Auflistungen, Sie können das Verhalten von digitaler Tinte erheblich verbessern. Sie haben Zugriff auf die <xref:System.Windows.Input.StylusPoint> Daten generiert, haben Sie die Möglichkeit zum Anpassen der <xref:System.Windows.Input.Stylus> Eingabe. Da diesen Low-Level-Zugriff auf die <xref:System.Windows.Input.StylusPoint> Daten, Sie können die Freihandeingaben und das Rendering mit optimaler Leistung für Ihre Anwendung implementieren.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erweiterte Behandlung von Freihandeingaben](advanced-ink-handling.md)
 - [Zugreifen auf und Bearbeiten von Stifteingabe](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

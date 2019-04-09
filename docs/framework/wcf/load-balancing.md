@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 2a0644ea17db2923f5729feda40f3b2bff364231
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660748"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228632"
 ---
 # <a name="load-balancing"></a>Lastenausgleich
 Eine Möglichkeit zum Erhöhen der Kapazität von Windows Communication Foundation (WCF)-Anwendungen besteht darin, skalieren und in einer Serverfarm mit Lastenausgleich. WCF-Anwendungen können mithilfe von Standardverfahren zum, dazu gehören softwarelastenausgleichsmodule wie Windows Network Load Balancing sowie hardwarebasierte Load ausgeglichen werden.  
@@ -92,4 +92,5 @@ Eine Möglichkeit zum Erhöhen der Kapazität von Windows Communication Foundati
  Erwägen Sie, für die optimale Leistung in Lastenausgleichsszenarien <xref:System.ServiceModel.NetTcpSecurity> ( <xref:System.ServiceModel.SecurityMode.Transport> oder <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>) zu verwenden.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Bewährte Methoden für das Hosten in IIS (Internetinformationsdienste)](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+
+- [Empfohlene Vorgehensweisen für das Hosten in Internetinformationsdiensten](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

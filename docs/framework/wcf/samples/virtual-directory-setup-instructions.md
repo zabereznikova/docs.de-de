@@ -2,12 +2,12 @@
 title: Anleitung zum Einrichten eines virtuellen Verzeichnisses
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 0f32fd6d65db529ba1015dedd98f99efd7f408c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7999a040dc14d75a34b75f320982dd3118eae670
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225585"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Anleitung zum Einrichten eines virtuellen Verzeichnisses
 Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von eines gemeinsamen virtuellen Verzeichnis mit dem Namen Servicemodelsamples, die das das dem Ordner %SystemDrive%\inetpub\wwwroot\servicemodelsamples zugeordnet ist.  
@@ -59,9 +59,9 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
   
 7.  Standardmäßig werden die folgenden Kontrollkästchen aktiviert:  
   
-    -   **Read**  
+    -   **Lesen**  
   
-    -   **Ausführen von Skripts (z. B. ASP)**  
+    -   **Skripts ausführen (z. B. ASP)**  
   
 8.  Klicken Sie auf **Weiter**, und klicken Sie dann auf **Fertig stellen** um den Assistenten abzuschließen.  
   
@@ -84,11 +84,11 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
   
 2.  Standardmäßig werden die folgenden Kontrollkästchen aktiviert:  
   
-    -   **Read**  
+    -   **Lesen**  
   
-    -   **Besuche protokollieren**  
+    -   **Protokollieren von Besuchen**  
   
-    -   **Ressource indizieren**  
+    -   **Indizieren dieser Ressource**  
   
 3.  Wählen Sie die **Verzeichnissuche** Kontrollkästchen. So können Sie über Internet Explorer auf das Verzeichnis zugreifen, was beim Debuggen eines Diensts hilfreich ist.  
   
@@ -191,4 +191,5 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
     3.  In der **Gruppe** Spalte überprüfen, ob der Wert für **ASPNET** ist "Benutzer".  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Hostinganweisungen des Internetinformationsdiensts](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

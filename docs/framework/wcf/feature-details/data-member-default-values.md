@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: 30836f7f1cbf742c621254ef92314d20a4fffd83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715067"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185691"
 ---
 # <a name="data-member-default-values"></a>Standardwerte der Datenelemente
 In der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], besitzen Typen ein Konzept von *Standardwerte*. Für jeden Referenztyp ist der Standardwert beispielsweise  `null`, und für einen Integertyp ist er 0 (null). Von Zeit zu Zeit ist es empfehlenswert, ein Datenelement aus serialisierten Daten zu entfernen, wenn es auf seinen Standardwert festgelegt ist. Da das Element seinen Standardwert besitzt, braucht kein tatsächlicher Wert serialisiert werden; dies führt zu einem Leistungsvorteil.  
@@ -57,5 +57,6 @@ In der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], besitzen
  Beim schemenimport der <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> Eigenschaft wird automatisch festgelegt, um `false` jedes Mal, wenn die WCF-spezifische Anmerkung erwähnt zuvor erkannt wird. Außerdem wird sie für Referenztypen auf `false` festgelegt, deren Eigenschaft `nillable` auf  `false` festgelegt ist, um spezielle Interoperabilitätsszenarien zu unterstützen, die häufig bei der Nutzung von [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webdiensten auftreten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>

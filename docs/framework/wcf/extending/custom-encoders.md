@@ -2,12 +2,12 @@
 title: Benutzerdefinierte Encoder
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 7b68725346a2de23d405ed21ead93e3a6a8374e6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190573"
 ---
 # <a name="custom-encoders"></a>Benutzerdefinierte Encoder
 In diesem Thema wird das Erstellen benutzerdefinierter Encoder behandelt.  
@@ -16,8 +16,7 @@ In diesem Thema wird das Erstellen benutzerdefinierter Encoder behandelt.
   
  Ein Bindungselement für die Nachrichtencodierung dient zum Serialisieren einer ausgehenden <xref:System.ServiceModel.Channels.Message>. Anschließend wird die Nachricht an den Transport übergeben, oder die serialisierte Form einer Nachricht wird vom Transport empfangen und an die Protokollebene übergeben. Ist die Protokollebene nicht vorhanden, erfolgt die Übergabe an die Anwendung.  
   
- 
-  <xref:System.ServiceModel.Channels.Message>-Instanzen werden von Nachrichtenencodern in und aus Übertragungsdarstellungen transformiert. Obgleich Encoder als Elemente beschrieben werden, die der Transportebene des Kanalstapels übergeordnet sind, befinden sie sich eigentlich auf der Transportebene. Von Transporten (beispielsweise HTTP) wird die Nachricht gemäß den Anforderungen des Transportstandards formatiert. Die Encoder (beispielsweise Text-XML) dienen lediglich zum Codieren der Nachricht.  
+ <xref:System.ServiceModel.Channels.Message>-Instanzen werden von Nachrichtenencodern in und aus Übertragungsdarstellungen transformiert. Obgleich Encoder als Elemente beschrieben werden, die der Transportebene des Kanalstapels übergeordnet sind, befinden sie sich eigentlich auf der Transportebene. Von Transporten (beispielsweise HTTP) wird die Nachricht gemäß den Anforderungen des Transportstandards formatiert. Die Encoder (beispielsweise Text-XML) dienen lediglich zum Codieren der Nachricht.  
   
  Beim Herstellen einer Verbindung mit einem vorhandenen Client oder Server muss möglicherweise eine bestimmte Nachrichtencodierung verwendet werden. WCF-Dienste können jedoch auch über mehrere Endpunkte, die jeweils über eine andere nachrichtencodierung vorgenommen werden. Wenn ein einzelner Encoder nicht für alle Zielbenutzer des Diensts ausreicht, können Sie den Dienst über mehrere Endpunkte hinweg verfügbar machen. Somit kann von Clientanwendungen der optimale Endpunkt gewählt werden. Die Verwendung mehrerer Endpunkte ermöglicht es Ihnen, die Vorteile anderer Nachrichtencodierungen mit anderen Bindungselementen zu kombinieren.  
   
@@ -51,7 +50,7 @@ In diesem Thema wird das Erstellen benutzerdefinierter Encoder behandelt.
 ### <a name="pooling"></a>Pooling  
  Für jede der Encoderimplementierungen wird versucht, ein Höchstmaß an Pooling zu erzielen. Eine geeignete Vorgehensweise zum Verbessern der Leistung verwalteten Codes besteht im Verringern der Speicherbelegung. Für das Pooling wird von den Implementierungen die `SynchronizedPool`-Klasse verwendet. Die C#-Datei enthält eine Beschreibung der zusätzlichen, von dieser Klasse verwendeten Optimierungen.  
   
- Die Instanzen <xref:System.Xml.XmlDictionaryReader> und <xref:System.Xml.XmlDictionaryWriter> werden in einem Pool zusammengefasst und neu initialisiert, um eine Neuzuordnung von Instanzen für jede Nachricht zu unterbinden. Bei einem Reader wird dieser mithilfe eines `OnClose`-Rückrufs zurückgefordert, wenn `Close()` aufgerufen wird. Vom Encoder werden auch einige Nachrichtenzustandsobjekte wiederverwendet, die bei der Nachrichtenerstellung verwendet wurden. Die Größe dieser Pools kann über die Eigenschaften `MaxReadPoolSize` und `MaxWritePoolSize` für jede der drei von <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> abgeleiteten Klassen konfiguriert werden.  
+ <xref:System.Xml.XmlDictionaryReader> und <xref:System.Xml.XmlDictionaryWriter> -Instanzen in einem Pool zusammengefasst und initialisiert, um zu verhindern, dass neue Token für jede Nachricht zuordnen. Bei einem Reader wird dieser mithilfe eines `OnClose`-Rückrufs zurückgefordert, wenn `Close()` aufgerufen wird. Vom Encoder werden auch einige Nachrichtenzustandsobjekte wiederverwendet, die bei der Nachrichtenerstellung verwendet wurden. Die Größe dieser Pools kann über die Eigenschaften `MaxReadPoolSize` und `MaxWritePoolSize` für jede der drei von <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> abgeleiteten Klassen konfiguriert werden.  
   
 ### <a name="binary-encoding"></a>Binärcodierung  
  Werden bei der Binärcodierung Sitzungen verwendet, muss die dynamische Wörterbuchzeichenfolge an den Empfänger der Nachricht übermittelt werden. Hierzu werden der Nachricht die dynamischen Wörterbuchzeichenfolgen als Präfix hinzugefügt. Vom Empfänger werden die Zeichenfolgen entfernt und der Sitzung hinzugefügt. Anschließend wird die Nachricht verarbeitet. Für die ordnungsgemäße Übergabe der Wörterbuchzeichenfolgen muss der Transport gepuffert werden.  
@@ -80,9 +79,9 @@ In diesem Thema wird das Erstellen benutzerdefinierter Encoder behandelt.
   
 -   Folgende Schlüsselmethoden dieser Klasse müssen außer Kraft gesetzt werden:  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>: nimmt ein <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>-Objekt an und schreibt es in ein <xref:System.IO.Stream>-Objekt.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> nimmt eine <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> Objekt und schreibt es in einem <xref:System.IO.Stream> Objekt.  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>: nimmt ein <xref:System.IO.Stream>-Objekt sowie eine maximale Headergröße an und gibt ein <xref:System.ServiceModel.Channels.Message>-Objekt zurück.  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> nimmt eine <xref:System.IO.Stream> -Objekt sowie eine maximale Headergröße an und gibt eine <xref:System.ServiceModel.Channels.Message> Objekt.  
   
  Die Umwandlung zwischen dem standardmäßigen Transportprotokoll und der benutzerdefinierten Codierung wird anhand des in diese Methoden geschriebenen Codes behandelt.  
   
@@ -93,9 +92,10 @@ In diesem Thema wird das Erstellen benutzerdefinierter Encoder behandelt.
  Es gibt zwei Beispiele zur Verfügung, die mit WCF, die diesen Prozess mit Beispielcode veranschaulichen: [Benutzerdefinierter Nachrichtenencoder: Benutzerdefinierter Textencoder](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md) und [benutzerdefinierter Nachrichtenencoder: Komprimierungsencoder](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.MessageEncoderFactory>
 - <xref:System.ServiceModel.Channels.MessageEncoder>
-- [Datenübertragungsarchitektur: Übersicht](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
+- [Datenübertragungsarchitektur - Übersicht](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)
 - [Auswählen eines Nachrichtenencoders](../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [Auswählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)

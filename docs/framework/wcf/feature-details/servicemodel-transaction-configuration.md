@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transactions [WCF], ServiceModel configuration
 ms.assetid: 5636067a-7fbd-4485-aaa2-8141c502acf3
-ms.openlocfilehash: ee35b6c02637c3013a42303dcd7aa7c813bd183c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5bb81c618e3b27df32763948dbe56c9b37995e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693161"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188974"
 ---
 # <a name="servicemodel-transaction-configuration"></a>ServiceModel-Transaktionskonfiguration
 Windows Communication Foundation (WCF) bietet drei Attribute zum Konfigurieren von Transaktionen für einen Dienst: `transactionFlow`, `transactionProtocol`, und `transactionTimeout`.  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) bietet drei Attribute zum Konfigurieren v
 ## <a name="configuring-transactionprotocol"></a>Konfigurieren des transactionProtocol-Attributs  
  Das `transactionProtocol`-Attribut gibt das Transaktionsprotokoll an, das für die Dienstendpunkte verwendet werden soll, die die Bindung verwenden.  
   
- Nachstehend finden Sie ein Beispiel für einen Konfigurationsabschnitt, mit dem die angegebene Bindung so konfiguriert wird, dass der Transaktionsfluss unterstützt und das WS-AtomicTransaction-Protokoll verwendet wird.  
+ Nachstehend finden Sie ein Beispiel für einen Konfigurationsabschnitt, mit dem die angegebene Bindung so konfiguriert wird, dass der Transaktionsfluss unterstützt und das WS-Atomic-Transaktionsprotokoll verwendet wird.  
   
 ```xml  
 <netNamedPipeBinding>  
@@ -63,5 +63,6 @@ Windows Communication Foundation (WCF) bietet drei Attribute zum Konfigurieren v
  Beachten Sie, dass als Timeoutwert der kleinere Wert von dieser `transactionTimeout`-Konfigurationseinstellung und allen <xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionTimeout%2A>-Eigenschaften verwendet wird.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [\<binding>](../../../../docs/framework/misc/binding.md)
-- [WCF Configuration Schema (Schema zur WCF-Konfiguration)](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)
+- [WCF-Konfigurationsschema](../../../../docs/framework/configure-apps/file-schema/wcf/index.md)

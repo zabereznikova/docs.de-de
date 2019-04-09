@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event handling [Windows Forms], context menus
 - shortcut menus [Windows Forms], event handling
 ms.assetid: b661b3dd-7815-4cc2-a1aa-a9a391ab3427
-ms.openlocfilehash: 179411da96362fd9ba42e2b97682f335beb894c1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3001480959ef90cb31048cbcf70aeff1632979fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170715"
 ---
 # <a name="how-to-handle-the-contextmenustrip-opening-event"></a>Vorgehensweise: Behandeln des Opening-Ereignisses von ContextMenuStrip
 Sie können das Verhalten anpassen Ihrer <xref:System.Windows.Forms.ContextMenuStrip> -Steuerelements durch Behandeln der <xref:System.Windows.Forms.ToolStripDropDown.Opening> Ereignis.  
@@ -30,6 +30,7 @@ Sie können das Verhalten anpassen Ihrer <xref:System.Windows.Forms.ContextMenuS
  Legen Sie die <xref:System.ComponentModel.CancelEventArgs.Cancel%2A?displayProperty=nameWithType> Eigenschaft `true` um zu verhindern, dass Sie im Menü öffnen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>
 - <xref:System.Windows.Forms.ToolStripDropDown>

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 03b37dae72be0ffa589159b2aedc2ac16e35139e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194525"
 ---
 # <a name="accessing-services-using-a-client"></a>Zugreifen auf Dienste mithilfe eines Clients
 Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF-Client- oder kanalobjekt-Objekte mit Diensten kommunizieren. Die [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) Thema bietet eine Übersicht über die Objekte und Schritte zum Erstellen von Objekten für grundlegende Client- und kanalobjekten und deren Verwendung.  
@@ -43,7 +43,7 @@ Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF-Client-
  Die meisten der vom System bereitgestellten Bindungen (die Kanäle für die Anwendungsebene verfügbar machen) verwenden standardmäßig Sitzungen, <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> jedoch nicht. Weitere Informationen finden Sie unter [mithilfe von Sitzungen](../../../../docs/framework/wcf/using-sessions.md).  
   
 ### <a name="the-proper-use-of-sessions"></a>Richtige Verwendung von Sitzungen  
- Sitzungen bieten die Möglichkeit festzustellen, ob der gesamte Nachrichtenaustausch vollständig ist und von beiden Seiten als erfolgreich betrachtet wurde. Es wird empfohlen, dass eine aufrufende Anwendung den Kanal innerhalb eines Try-Blocks öffnet, verwendet und schließt. Wenn ein Sitzungskanal geöffnet ist, die <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>-Methode einmal aufgerufen wird und dieser Aufruf erfolgreich beendet wurde, war die Sitzung erfolgreich. Erfolgreich bedeutet in diesem Fall, dass alle von der Bindung angegebenen Zustellungsgarantien d erfüllt wurden und die andere Seite auf dem Kanal nicht <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> vor dem Aufrufen von <xref:System.ServiceModel.ICommunicationObject.Close%2A> aufgerufen hat.  
+ Sitzungen bieten die Möglichkeit festzustellen, ob der gesamte Nachrichtenaustausch vollständig ist und von beiden Seiten als erfolgreich betrachtet wurde. Es wird empfohlen, dass eine aufrufende Anwendung den Kanal innerhalb eines Try-Blocks öffnet, verwendet und schließt. Wenn ein Sitzungskanal geöffnet ist, die <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType>-Methode einmal aufgerufen wird und dieser Aufruf erfolgreich beendet wurde, war die Sitzung erfolgreich. Erfolgreich bedeutet in diesem Fall, dass alle von der Bindung angegebenen Zustellungsgarantien erfüllt wurden und die andere Seite auf dem Kanal nicht <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> vor dem Aufrufen von <xref:System.ServiceModel.ICommunicationObject.Close%2A> aufgerufen hat.  
   
  Der folgende Abschnitt enthält ein Beispiel für diesen Clientansatz.  
   
@@ -94,10 +94,11 @@ Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF-Client-
  Anwendungen, die den impliziten Ansatz verwenden, rufen die Initialisierer der Benutzeroberfläche auf, aber wenn der Benutzer nicht innerhalb des Sendetimeouts der Bindung antwortet, wird bei Zurückgeben der Benutzeroberfläche eine Ausnahme ausgelöst.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Duplexdienste](../../../../docs/framework/wcf/feature-details/duplex-services.md)
 - [Vorgehensweise: Zugreifen auf Dienste mit unidirektionalen und Anforderung-Antwort-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [Vorgehensweise: Von Access Services mit einem Duplexvertrag](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [Vorgehensweise: Zugriff auf einen WSE 3.0 Service](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [Vorgehensweise: Verwenden von ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Vorgehensweise: Zugreifen auf Dienste mit einem Duplexvertrag](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [Vorgehensweise: Zugriff auf einen WSE3.0-Dienst](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [Vorgehensweise: Verwenden der ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
 - [Vorgehensweise: Asynchrones Aufrufen von Dienstvorgängen](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
-- [Clientanwendungen der mittleren Schicht](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)
+- [Clientanwendungen mittlerer Ebene](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

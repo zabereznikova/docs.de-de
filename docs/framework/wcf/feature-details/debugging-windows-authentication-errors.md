@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 45f4185df1c55ff40fce3e33fe5e0e497fa54654
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228257"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Debuggen von Windows-Authentifizierungsfehlern
 Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt die Security Support Provider-Schnittstelle (SSPI) Sicherheitsprozesse ab. Wenn Sicherheitsfehler auf der SSPI-Schicht auftreten, werden sie von Windows Communication Foundation (WCF) angegeben. Dieses Thema enthält ein Framework und eine Reihe von Fragen zur Diagnose der Fehler.  
@@ -91,7 +91,7 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
   
 3.  Legen Sie fest, dass die SSPI-Aushandlung Kerberos verwenden muss, indem Sie die Verwendung von NTLM nicht zulasssen:  
   
-    1.  Führen Sie dies mit der folgenden Anweisung in Code aus: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1.  Führen Sie dies im Code, durch die folgende Anweisung aus: `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
     2.  Sie können diese Einstellung auch in der Konfigurationsdatei vornehmen, indem Sie das `allowNtlm`-Attribut auf `false` festlegen. Dieses Attribut ist Bestandteil der [ \<Windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md).  
   
@@ -142,9 +142,10 @@ Bei Verwendung der Windows-Authentifizierung als Sicherheitsmechanismus wickelt 
  Die folgenden Betriebssysteme bieten keine Unterstützung für Windows-Authentifizierung bei der Verwendung als Server: [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Media Center Edition und [!INCLUDE[wv](../../../../includes/wv-md.md)]Home-Editionen.  
   
 #### <a name="developing-and-deploying-with-different-identities"></a>Entwickeln und Bereitstellen mit unterschiedlichen Identitäten  
- Wenn Sie Ihre Anwendung auf einem bestimmten Computer entwickeln, die Anwendung anschließend auf einem anderen Computer bereitstellen und dabei unterschiedliche Kontotypen für die Authentifizierung verwenden, kann es vorkommen, dass sich das Verhalten von Computer zu Computer unterscheidet. Ein Beispiel: Angenommen, Sie entwickeln Ihre Anwendung auf einem Computer unter Windows&#160;XP&#160;Pro und verwenden dabei den `SSPI Negotiated`-Authentifizierungsmodus. Wenn die Authentifizierung unter Verwendung eines lokalen Benutzerkontos erfolgt, wird das NTLM-Protokoll verwendet. Nachdem die Entwicklung der Anwendung abgeschlossen ist, stellen Sie den Dienst für einen Computer unter Windows Server&#160;2003 bereit, wo er im Rahmen eines Domänenkontos ausgeführt wird. Der Dienst kann nun nicht mehr vom Client authentifiziert werden, da nun Kerberos und ein Domänencontroller verwendet werden.  
+ Wenn Sie Ihre Anwendung auf einem bestimmten Computer entwickeln, die Anwendung anschließend auf einem anderen Computer bereitstellen und dabei unterschiedliche Kontotypen für die Authentifizierung verwenden, kann es vorkommen, dass sich das Verhalten von Computer zu Computer unterscheidet. Ein Beispiel: Angenommen, Sie entwickeln Ihre Anwendung auf einem Computer unter Windows&amp;#160;XP&amp;#160;Pro und verwenden dabei den `SSPI Negotiated`-Authentifizierungsmodus. Wenn die Authentifizierung unter Verwendung eines lokalen Benutzerkontos erfolgt, wird das NTLM-Protokoll verwendet. Nachdem die Entwicklung der Anwendung abgeschlossen ist, stellen Sie den Dienst für einen Computer unter Windows Server&amp;#160;2003 bereit, wo er im Rahmen eines Domänenkontos ausgeführt wird. Der Dienst kann nun nicht mehr vom Client authentifiziert werden, da nun Kerberos und ein Domänencontroller verwendet werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>

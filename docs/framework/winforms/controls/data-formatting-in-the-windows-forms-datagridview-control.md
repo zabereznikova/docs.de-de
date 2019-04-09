@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data [Windows Forms], formatting in grids
 - data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
-ms.openlocfilehash: 60fc567a700bdfc8cfe088f4d31a68fd5de9aa29
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b5c055bdd12a4bede6e77233726c697de424a055
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158639"
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Datenformatierung im DataGridView-Steuerelement in Windows Forms
 Die <xref:System.Windows.Forms.DataGridView> Steuerelement ermöglicht die automatische Konvertierung zwischen Zellen und die Datentypen, die die übergeordneten Spalten angezeigt. Text-Feld-Spalten, z. B. zeichenfolgenentsprechungen von Datums-, Uhrzeit, Zahl und Enumerationswerte anzuzeigen, und Konvertieren der freien Eingabe Zeichenfolgenwerte in der Typen, die vom Datenspeicher erforderlich.  
@@ -32,9 +32,10 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement ermöglicht die autom
  Wenn die Standard-Analyse von Benutzer angegebene Werte nicht Ihre Anforderungen erfüllt, können Sie behandeln die <xref:System.Windows.Forms.DataGridView.CellParsing> Ereignis die <xref:System.Windows.Forms.DataGridView> Steuerelement zum Analysieren von benutzerdefinierten zu ermöglichen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - [Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Zellstile im DataGridView-Steuerelement in Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Formatieren von Daten in der Windows Forms-DataGridView-Steuerelement](how-to-format-data-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Formatieren von Daten im DataGridView-Steuerelement in Windows Forms](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

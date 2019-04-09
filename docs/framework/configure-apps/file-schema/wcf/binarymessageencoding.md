@@ -2,12 +2,12 @@
 title: <binaryMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-ms.openlocfilehash: b6914a195ba0e1934f7a586f5f6bae703a4bb1f9
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: e02ed6ef79fcf52bbe9c33bd9b36a14113e19d1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228379"
 ---
 # <a name="binarymessageencoding"></a>\<binaryMessageEncoding>
 Definiert einen Binärnachrichtenencoder, der die Windows Communication Foundation (WCF)-Nachrichten bei der Übertragung im Binärformat verschlüsselt.  
@@ -65,11 +65,12 @@ Definiert einen Binärnachrichtenencoder, der die Windows Communication Foundati
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.BinaryMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
-- [Nachrichtencodierung](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [Nachrichtenverschlüsselung](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
 - [Auswählen eines Nachrichtenencoders](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
 - [Bindungen](../../../../../docs/framework/wcf/bindings.md)
 - [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)

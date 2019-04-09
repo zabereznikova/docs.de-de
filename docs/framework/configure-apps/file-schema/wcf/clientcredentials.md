@@ -2,12 +2,12 @@
 title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: 7ee49d6960864826dc74fbff629f502fcc70b4bf
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ebe976df9af0c316e95a1e089412e57a575a6df1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157234"
 ---
 # <a name="clientcredentials"></a>\<clientCredentials>
 Gibt die zum Authentifizieren des Clients an einem Dienst verwendeten Anmeldeinformationen an.  
@@ -69,6 +69,7 @@ Gibt die zum Authentifizieren des Clients an einem Dienst verwendeten Anmeldeinf
  Durch die Clientanmeldeinformationen wird der Client bei den Diensten authentifiziert, wenn eine gegenseitige Authentifizierung erforderlich ist. Dieser Konfigurationsabschnitt kann auch zur Angabe von Dienstzertifikaten in Szenarien verwendet werden, bei denen der Client seine Nachrichten an einen Dienst mithilfe des Dienstzertifikats schützen muss.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - [Sicherheitsverhalten](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

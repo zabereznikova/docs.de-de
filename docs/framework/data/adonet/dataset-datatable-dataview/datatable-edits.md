@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: 473ea9963ce192f42e418bebc8e38971019350e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0300ceab16d9a94bd04468f7acd105e69d13e643
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548559"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150942"
 ---
 # <a name="datatable-edits"></a>Bearbeitungen von "DataTable"
 Wenn Sie Änderungen der Spaltenwerte in einer <xref:System.Data.DataRow> vornehmen, werden die Änderungen sofort im aktuellen Zustand der Zeile platziert. Die <xref:System.Data.DataRowState> legen Sie dann auf **"geändert"**, und die Änderungen werden akzeptiert oder abgelehnt wird, mit der <xref:System.Data.DataRow.AcceptChanges%2A> oder <xref:System.Data.DataRow.RejectChanges%2A> Methoden der **DataRow**. Die **DataRow** stellt auch drei Methoden, mit denen Sie den Zustand der Zeile angehalten, während Sie es bearbeiten. Diese Methoden sind <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> und <xref:System.Data.DataRow.CancelEdit%2A>.  
@@ -87,9 +87,10 @@ protected static void OnColumnChanged(
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataRowVersion>
-- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Bearbeiten von Daten in einer "DataTable"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [Behandeln von DataTable-Ereignissen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

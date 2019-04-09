@@ -9,19 +9,19 @@ helpviewer_keywords:
 - images [WPF]
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
-ms.openlocfilehash: b59cd1c1ec2ee058811996c92e4b215c8872ff0b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372814"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194980"
 ---
 # <a name="images"></a>Bilder
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet integrierte Unterstützung für mehrere Bildformate, hochwertiges Bildrendering und Codec-Erweiterbarkeit.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die Bildverarbeitung](imaging-overview.md)  
- [Vorgehensweise-Themen](imaging-how-to-topics.md)  
+ [Gewusst wie-Themen](imaging-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Image>  
@@ -31,5 +31,6 @@ ms.locfileid: "57372814"
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [2D-Grafiken und Bildverarbeitung](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Grafiken und Multimedia](index.md)

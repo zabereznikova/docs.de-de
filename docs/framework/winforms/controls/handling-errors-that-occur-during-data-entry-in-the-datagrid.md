@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement von Windows Forms auftreten'
+title: 'Exemplarische Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement in Windows Forms auftreten'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - error handling [Windows Forms], data entry
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 30a68b85-d3af-4946-83c1-1e2d010d0511
-ms.openlocfilehash: a8eb4584060924684eacc99d46b88408451f1c82
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: dfd0753895a937ccef9a8bc14b2f692219eb7f06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230472"
 ---
-# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement von Windows Forms auftreten
+# <a name="walkthrough-handling-errors-that-occur-during-data-entry-in-the-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement in Windows Forms auftreten
 Behandeln von Fehlern aus dem zugrunde liegenden Datenspeicher ist eine erforderliche Funktion für eine Anwendung für die Eingabe von Daten. Die Windows-Formulare <xref:System.Windows.Forms.DataGridView> Steuerelement erleichtert dies durch das Verfügbarmachen von der <xref:System.Windows.Forms.DataGridView.DataError> -Ereignis, das ausgelöst wird, wenn der Datenspeicher Verletzung einer Einschränkung oder eine Geschäftsregel erkennt.  
   
  In dieser exemplarischen Vorgehensweise rufen Sie Zeilen aus der `Customers` -Tabelle in der Beispieldatenbank Northwind aus, und zeigen Sie sie in einem <xref:System.Windows.Forms.DataGridView> Steuerelement. Wenn ein Duplikat `CustomerID` Wert wird erkannt, in einer neuen oder vorhandenen bearbeiteten Zeile der <xref:System.Windows.Forms.DataGridView.DataError> -Ereignis ausgelöst, wird durch das Anzeigen von behandelt werden eine <xref:System.Windows.Forms.MessageBox> , der die Ausnahme beschreibt.  
@@ -89,9 +89,10 @@ Behandeln von Fehlern aus dem zugrunde liegenden Datenspeicher ist eine erforder
 -   Anpassen der Darstellung von Zellen an. Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen der Darstellung von Zellen in der DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) und [Vorgehensweise: Festlegen von Standardzellenformaten für das Windows-DataGridView-Steuerelement Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Dateneingabe im DataGridView-Steuerelement in Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement von Windows Forms auftreten](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
-- [Exemplarische Vorgehensweise: Überprüfen von Daten in das DataGridView-Steuerelement in Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
-- [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../data/adonet/protecting-connection-information.md)
+- [Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement in Windows Forms auftreten](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Exemplarische Vorgehensweise: Überprüfen von Daten im DataGridView-Steuerelement in Windows Forms](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)
+- [Schützen von Verbindungsinformationen](../../data/adonet/protecting-connection-information.md)

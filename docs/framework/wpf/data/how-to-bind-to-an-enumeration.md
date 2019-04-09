@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], enumeration
 - enumeration [WPF]
 ms.assetid: b9091eba-1119-424e-868b-d1a4168b3732
-ms.openlocfilehash: df26d2bd08e4691837f739a4e71d3bb1a25bdd00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5026261366d6abde82790f05780d8ba2c29c4a49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377793"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210021"
 ---
 # <a name="how-to-bind-to-an-enumeration"></a>Vorgehensweise: Binden an eine Enumeration
 Dieses Beispiel zeigt, wie an eine Enumeration, durch Bindung an eine Methode für die Enumeration des GetValues gebunden wird.  
@@ -22,6 +22,7 @@ Dieses Beispiel zeigt, wie an eine Enumeration, durch Bindung an eine Methode f�
  [!code-xaml[BindToEnum#BindToEnum](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToEnum/CS/Window1.xaml#bindtoenum)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Binden an eine Methode](how-to-bind-to-a-method.md)
-- [Übersicht zur Datenbindung](data-binding-overview.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)

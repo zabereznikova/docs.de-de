@@ -9,12 +9,12 @@ helpviewer_keywords:
 - video [WPF], painting with
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
-ms.openlocfilehash: 0756a9e87840648b55ecad4b3f1ce6e0e5452eb7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363292"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151176"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Vorgehensweise: Zeichnen eines Bereichs mit einem Video
 Dieses Beispiel zeigt, wie Sie das Zeichnen eines Bereichs mit Media. Eine Möglichkeit zum Zeichnen eines Bereichs mit Medien ist die Verwendung einer <xref:System.Windows.Controls.MediaElement> zusammen mit einem <xref:System.Windows.Media.VisualBrush>. Verwenden der <xref:System.Windows.Controls.MediaElement> laden und Wiedergeben der Medien und verwenden dieses dann zum Festlegen der <xref:System.Windows.Media.VisualBrush.Visual%2A> Eigenschaft der <xref:System.Windows.Media.VisualBrush>. Anschließend können Sie die <xref:System.Windows.Media.VisualBrush> zum Zeichnen eines Bereichs mit den geladenen Medien.  
@@ -38,6 +38,7 @@ Dieses Beispiel zeigt, wie Sie das Zeichnen eines Bereichs mit Media. Eine Mögl
  Informationen zur Vorgehensweise beim Hinzufügen einer Inhaltsdatei, z. B. eine Mediendatei an Ihre Anwendung finden Sie unter [WPF-Anwendungsressource, Inhalt und Datendateien](../app-development/wpf-application-resource-content-and-data-files.md). Wenn Sie eine Mediendatei hinzufügen, müssen Sie es als eine Datei mit Inhalt und nicht als eine Ressourcendatei hinzufügen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.VisualBrush>
 - [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md)
 - [Übersicht über TileBrush](tilebrush-overview.md)

@@ -2,12 +2,12 @@
 title: <behaviors>
 ms.date: 03/30/2017
 ms.assetid: 0e5da4e6-1aa5-466c-924e-f10efee57f0b
-ms.openlocfilehash: b9d30d7e1c9d211cd57982a0f03fe855a6b53c12
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 108c349a44ed3ac902652f86241c1e96a622549b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204236"
 ---
 # <a name="behaviors"></a>\<behaviors>
 Dieses Element definiert zwei untergeordnete Auflistungen mit dem Namen `endpointBehaviors` und `serviceBehaviors`.  Jede Auflistung definiert von Endpunkten und Diensten verwendete Verhaltenselemente. Jedes Verhaltenselement wird durch seinen eindeutigen `name` identifiziert. Ab [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] müssen Bindungen und Verhalten keinen Namen aufweisen. Weitere Informationen zu Standardkonfiguration und zu namenlosen Bindungen und Verhaltensweisen finden Sie unter [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
@@ -29,7 +29,7 @@ Dieses Element definiert zwei untergeordnete Auflistungen mit dem Namen `endpoin
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine  
+ Keiner  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -48,6 +48,7 @@ Dieses Element definiert zwei untergeordnete Auflistungen mit dem Namen `endpoin
  Sie können das `<remove>`-Element verwenden, um ein bestimmtes Verhalten aus der Auflistung zu entfernen. Geben Sie hierzu im `name`-Attribut des `<remove>`-Elements den Namen des zu entfernenden Verhaltens an.  Sie können auch das `<clear>`-Element verwenden, um sicherzustellen, dass eine Verhaltensauflistung zu Beginn leer ist, indem Sie den gesamten Inhalt der Auflistung entfernen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.BehaviorsSection>
 - <xref:System.ServiceModel.Configuration.EndpointBehaviorElementCollection>
 - <xref:System.ServiceModel.Configuration.EndpointBehaviorElement>

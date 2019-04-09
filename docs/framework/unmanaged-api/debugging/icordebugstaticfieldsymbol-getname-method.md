@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e2be4af2-15d1-4e6a-8b68-1d78c93294a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ffcd6971a3229423f055765b0d64258a2dfa2aa3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b5f52999c3f680fbccefe4681f83d473cdb86306
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206485"
 ---
 # <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol::GetName-Methode
 Ruft den Namen des statischen Felds ab.  
@@ -49,5 +49,6 @@ HRESULT GetName(
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorDebugStaticFieldSymbol-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - change notifications [WPF]
 - properties [WPF], change notifications
 ms.assetid: 30b59d9e-8c3a-4349-aa82-4be837e841cf
-ms.openlocfilehash: 93a291b6dd35f9cc13c3c6f88aca5dc376b8bc1b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d37d468acc94470be8c2afdc495b40168932ec83
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204353"
 ---
 # <a name="how-to-implement-property-change-notification"></a>Vorgehensweise: Implementieren von Benachrichtigungen bei Eigenschaftenänderungen
 Zur Unterstützung <xref:System.Windows.Data.BindingMode.OneWay> oder <xref:System.Windows.Data.BindingMode.TwoWay> Binden an die bindungszieleigenschaften automatisch entsprechend der dynamischen Änderungen der Bindungsquelle (z. B. der Vorschaubereich automatisch aktualisiert, wenn der Benutzer ein Formular bearbeitet haben), aktivieren Sie die Klasse Benachrichtigungen bei der richtigen eigenschaftenänderungen bereitstellen muss. Dieses Beispiel zeigt, wie Sie eine Klasse erstellen, die implementiert <xref:System.ComponentModel.INotifyPropertyChanged>.  
@@ -29,6 +29,7 @@ Zur Unterstützung <xref:System.Windows.Data.BindingMode.OneWay> oder <xref:Syst
  Finden Sie ein Beispiel dafür, wie die `Person` Klasse kann verwendet werden, um die Unterstützung von <xref:System.Windows.Data.BindingMode.TwoWay> Bindung, finden Sie unter [steuern, wann der TextBox-Text die Quelle aktualisiert](how-to-control-when-the-textbox-text-updates-the-source.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Bindungsquellen](binding-sources-overview.md)
-- [Übersicht zur Datenbindung](data-binding-overview.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)

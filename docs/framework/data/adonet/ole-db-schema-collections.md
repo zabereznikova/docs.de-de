@@ -2,12 +2,12 @@
 title: OLE DB-Schemaauflistungen
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: f753f35aab0a0200da5de463a73abb9813253d11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658454"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164683"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB-Schemaauflistungen
 In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC-Anbieter für Microsoft SQL Server, Oracle und Microsoft Jet diskutiert.  
@@ -17,7 +17,7 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
   
 -   Tabellen  
   
--   Columns  
+-   Spalten  
   
 -   Verfahren  
   
@@ -25,7 +25,7 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
   
 -   Catalog  
   
--   Indexes  
+-   Indizes  
   
 ### <a name="tables"></a>Tabellen  
   
@@ -35,13 +35,13 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |TABLE_SCHEMA|Zeichenfolge|  
 |TABLE_NAME|Zeichenfolge|  
 |TABLE_TYPE|Zeichenfolge|  
-|TABLE_GUID|Guid|  
-|DESCRIPTION|Zeichenfolge|  
+|TABLE_GUID|GUID|  
+|BESCHREIBUNG|Zeichenfolge|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>Spalten  
   
 |Spaltenname|DataType|  
 |----------------|--------------|  
@@ -49,15 +49,15 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |TABLE_SCHEMA|Zeichenfolge|  
 |TABLE_NAME|Zeichenfolge|  
 |COLUMN_NAME|Zeichenfolge|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_HASDEFAULT|Boolesch|  
 |COLUMN_DEFAULT|Zeichenfolge|  
 |COLUMN_FLAGS|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|Boolesch|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -72,12 +72,12 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |DOMAIN_CATALOG|Zeichenfolge|  
 |DOMAIN_SCHEMA|Zeichenfolge|  
 |DOMAIN_NAME|Zeichenfolge|  
-|DESCRIPTION|Zeichenfolge|  
+|BESCHREIBUNG|Zeichenfolge|  
 |COLUMN_LCID|Int32|  
 |COLUMN_COMPFLAGS|Int32|  
 |COLUMN_SORTID|Int32|  
 |COLUMN_TDSCOLLATION|Byte[]|  
-|IS_COMPUTED|Boolean|  
+|IS_COMPUTED|Boolesch|  
   
 ### <a name="procedures"></a>Verfahren  
   
@@ -88,7 +88,7 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |PROCEDURE_NAME|Zeichenfolge|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|Zeichenfolge|  
-|DESCRIPTION|Zeichenfolge|  
+|BESCHREIBUNG|Zeichenfolge|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -102,15 +102,15 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |PARAMETER_NAME|Zeichenfolge|  
 |ORDINAL_POSITION|Int32|  
 |PARAMETER_TYPE|Int32|  
-|PARAMETER_HASDEFAULT|Boolean|  
+|PARAMETER_HASDEFAULT|Boolesch|  
 |PARAMETER_DEFAULT|Zeichenfolge|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|Boolesch|  
 |DATA_TYPE|Int32|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|DESCRIPTION|Zeichenfolge|  
+|BESCHREIBUNG|Zeichenfolge|  
 |TYPE_NAME|Zeichenfolge|  
 |LOCAL_TYPE_NAME|Zeichenfolge|  
   
@@ -119,9 +119,9 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |Spaltenname|DataType|  
 |----------------|--------------|  
 |CATALOG_NAME|Zeichenfolge|  
-|DESCRIPTION|Zeichenfolge|  
+|BESCHREIBUNG|Zeichenfolge|  
   
-### <a name="indexes"></a>Indexes  
+### <a name="indexes"></a>Indizes  
   
 |Spaltenname|DataType|  
 |----------------|--------------|  
@@ -131,32 +131,32 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |INDEX_CATALOG|Zeichenfolge|  
 |INDEX_SCHEMA|Zeichenfolge|  
 |INDEX_NAME|Zeichenfolge|  
-|PRIMARY_KEY|Boolean|  
-|UNIQUE|Boolean|  
-|CLUSTERED|Boolean|  
+|PRIMARY_KEY|Boolesch|  
+|UNIQUE|Boolesch|  
+|CLUSTERED|Boolesch|  
 |TYPE|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT_BOOKMARKS|Boolean|  
-|AUTO_UPDATE|Boolean|  
+|SORT_BOOKMARKS|Boolesch|  
+|AUTO_UPDATE|Boolesch|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|Zeichenfolge|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal|  
 |PAGES|Int32|  
 |FILTER_CONDITION|Zeichenfolge|  
-|INTEGRATED|Boolean|  
+|INTEGRATED|Boolesch|  
   
 ## <a name="microsoft-oracle-ole-db-provider"></a>Microsoft Oracle-OLE DB-Anbieter  
  Der Microsoft Oracle OLE DB-Treiber unterstützt neben den allgemeinen Schemaauflistungen auch die folgenden spezifischen Schemaauflistungen:  
   
 -   Tabellen  
   
--   Columns  
+-   Spalten  
   
 -   Verfahren  
   
@@ -166,7 +166,7 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
   
 -   Ansichten  
   
--   Indexes  
+-   Indizes  
   
 ### <a name="tables"></a>Tabellen  
   
@@ -176,13 +176,13 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |TABLE_SCHEMA|Zeichenfolge|  
 |TABLE_NAME|Zeichenfolge|  
 |TABLE_TYPE|Zeichenfolge|  
-|TABLE_GUID|Guid|  
-|DESCRIPTION|Zeichenfolge|  
+|TABLE_GUID|GUID|  
+|BESCHREIBUNG|Zeichenfolge|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>Spalten  
   
 |Spaltenname|DataType|  
 |----------------|--------------|  
@@ -190,15 +190,15 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |TABLE_SCHEMA|Zeichenfolge|  
 |TABLE_NAME|Zeichenfolge|  
 |COLUMN_NAME|Zeichenfolge|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_HASDEFAULT|Boolesch|  
 |COLUMN_DEFAULT|Zeichenfolge|  
 |COLUMN_FLAGS|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|Boolesch|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -213,7 +213,7 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |DOMAIN_CATALOG|Zeichenfolge|  
 |DOMAIN_SCHEMA|Zeichenfolge|  
 |DOMAIN_NAME|Zeichenfolge|  
-|DESCRIPTION|Zeichenfolge|  
+|BESCHREIBUNG|Zeichenfolge|  
   
 ### <a name="procedures"></a>Verfahren  
   
@@ -224,7 +224,7 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |PROCEDURE_NAME|Zeichenfolge|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|Zeichenfolge|  
-|DESCRIPTION|Zeichenfolge|  
+|BESCHREIBUNG|Zeichenfolge|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -236,18 +236,18 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |PROCEDURE_SCHEMA|Zeichenfolge|  
 |PROCEDURE_NAME|Zeichenfolge|  
 |COLUMN_NAME|Zeichenfolge|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ROWSET_NUMBER|Int64|  
 |ORDINAL_POSITION|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|Boolesch|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
 |NUMERIC_SCALE|Int16|  
-|DESCRIPTION|Zeichenfolge|  
+|BESCHREIBUNG|Zeichenfolge|  
 |OVERLOAD|Int16|  
   
 ### <a name="views"></a>Ansichten  
@@ -258,13 +258,13 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |TABLE_SCHEMA|Zeichenfolge|  
 |TABLE_NAME|Zeichenfolge|  
 |VIEW_DEFINITION|Zeichenfolge|  
-|CHECK_OPTION|Boolean|  
-|IS_UPDATABLE|Boolean|  
-|DESCRIPTION|Zeichenfolge|  
+|CHECK_OPTION|Boolesch|  
+|IS_UPDATABLE|Boolesch|  
+|BESCHREIBUNG|Zeichenfolge|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="indexes"></a>Indexes  
+### <a name="indexes"></a>Indizes  
   
 |Spaltenname|DataType|  
 |----------------|--------------|  
@@ -274,38 +274,38 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |INDEX_CATALOG|Zeichenfolge|  
 |INDEX_SCHEMA|Zeichenfolge|  
 |INDEX_NAME|Zeichenfolge|  
-|PRIMARY_KEY|Boolean|  
-|UNIQUE|Boolean|  
-|CLUSTERED|Boolean|  
+|PRIMARY_KEY|Boolesch|  
+|UNIQUE|Boolesch|  
+|CLUSTERED|Boolesch|  
 |TYPE|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT_BOOKMARKS|Boolean|  
-|AUTO_UPDATE|Boolean|  
+|SORT_BOOKMARKS|Boolesch|  
+|AUTO_UPDATE|Boolesch|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|Zeichenfolge|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal|  
 |PAGES|Int32|  
 |FILTER_CONDITION|Zeichenfolge|  
-|INTEGRATED|Boolean|  
+|INTEGRATED|Boolesch|  
   
 ## <a name="microsoft-jet-ole-db-provider"></a>Microsoft Jet OLE DB-Anbieter  
  Der Microsoft Jet OLE DB-Treiber unterstützt neben den allgemeinen Schemaauflistungen auch die folgenden spezifischen Schemaauflistungen:  
   
 -   Tabellen  
   
--   Columns  
+-   Spalten  
   
 -   Verfahren  
   
 -   Ansichten  
   
--   Indexes  
+-   Indizes  
   
 ### <a name="tables"></a>Tabellen  
   
@@ -315,13 +315,13 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |TABLE_SCHEMA|Zeichenfolge|  
 |TABLE_NAME|Zeichenfolge|  
 |TABLE_TYPE|Zeichenfolge|  
-|TABLE_GUID|Guid|  
-|DESCRIPTION|Zeichenfolge|  
+|TABLE_GUID|GUID|  
+|BESCHREIBUNG|Zeichenfolge|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>Spalten  
   
 |Spaltenname|DataType|  
 |----------------|--------------|  
@@ -329,15 +329,15 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |TABLE_SCHEMA|Zeichenfolge|  
 |TABLE_NAME|Zeichenfolge|  
 |COLUMN_NAME|Zeichenfolge|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
-|COLUMN_HASDEFAULT|Boolean|  
+|COLUMN_HASDEFAULT|Boolesch|  
 |COLUMN_DEFAULT|Zeichenfolge|  
 |COLUMN_FLAGS|Int64|  
-|IS_NULLABLE|Boolean|  
+|IS_NULLABLE|Boolesch|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -352,7 +352,7 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |DOMAIN_CATALOG|Zeichenfolge|  
 |DOMAIN_SCHEMA|Zeichenfolge|  
 |DOMAIN_NAME|Zeichenfolge|  
-|DESCRIPTION|Zeichenfolge|  
+|BESCHREIBUNG|Zeichenfolge|  
   
 ### <a name="procedures"></a>Verfahren  
   
@@ -363,7 +363,7 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |PROCEDURE_NAME|Zeichenfolge|  
 |PROCEDURE_TYPE|Int16|  
 |PROCEDURE_DEFINITION|Zeichenfolge|  
-|DESCRIPTION|Zeichenfolge|  
+|BESCHREIBUNG|Zeichenfolge|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
@@ -375,13 +375,13 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |TABLE_SCHEMA|Zeichenfolge|  
 |TABLE_NAME|Zeichenfolge|  
 |VIEW_DEFINITION|Zeichenfolge|  
-|CHECK_OPTION|Boolean|  
-|IS_UPDATABLE|Boolean|  
-|DESCRIPTION|Zeichenfolge|  
+|CHECK_OPTION|Boolesch|  
+|IS_UPDATABLE|Boolesch|  
+|BESCHREIBUNG|Zeichenfolge|  
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="indexes"></a>Indexes  
+### <a name="indexes"></a>Indizes  
   
 |Spaltenname|DataType|  
 |----------------|--------------|  
@@ -391,19 +391,19 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |INDEX_CATALOG|Zeichenfolge|  
 |INDEX_SCHEMA|Zeichenfolge|  
 |INDEX_NAME|Zeichenfolge|  
-|PRIMARY_KEY|Boolean|  
-|UNIQUE|Boolean|  
-|CLUSTERED|Boolean|  
+|PRIMARY_KEY|Boolesch|  
+|UNIQUE|Boolesch|  
+|CLUSTERED|Boolesch|  
 |TYPE|Int32|  
 |FILL_FACTOR|Int32|  
 |INITIAL_SIZE|Int32|  
 |NULLS|Int32|  
-|SORT_BOOKMARKS|Boolean|  
-|AUTO_UPDATE|Boolean|  
+|SORT_BOOKMARKS|Boolesch|  
+|AUTO_UPDATE|Boolesch|  
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|Zeichenfolge|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal|  
@@ -412,4 +412,5 @@ In diesem Abschnitt wird die Unterstützung von Schemaauflistungen für die ODBC
 |INTEGRATED|Boolesch|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Sichern von Nachrichten mithilfe der Nachrichtensicherheit
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: 4432540bfb6238be5b3e102283d6b67bebad07bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf014c8aa972c45140a523573b9806996062b40f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172002"
 ---
 # <a name="securing-messages-using-message-security"></a>Sichern von Nachrichten mithilfe der Nachrichtensicherheit
 Dieser Abschnitt beschreibt die WCF-nachrichtensicherheit bei Verwendung <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -64,6 +64,7 @@ Dieser Abschnitt beschreibt die WCF-nachrichtensicherheit bei Verwendung <xref:S
  Wenn die Transportsicherheit und die Nachrichtensicherheit verwendet werden, muss das auf der Transportebene zum Sichern der Nachricht verwendete Zertifikat mit dem auf der SOAP-Nachrichtenebene verwendeten Zertifikat identisch sein.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von Nachrichten mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [Nachrichtensicherheit über Message Queuing](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
 - [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)

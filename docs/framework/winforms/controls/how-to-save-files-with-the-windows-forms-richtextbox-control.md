@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Speichern von Dateien mit dem RichTextBox-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Speichern von Dateien mit dem RichTextBox-Steuerelement von Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: c9a5d471a58c646c786cf441ee7d7ec235788f10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a646d9b04bbe824d093b106f5cfcb0f1703c6e21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723024"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213531"
 ---
-# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Speichern von Dateien mit dem RichTextBox-Steuerelement in Windows Forms
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Speichern von Dateien mit dem RichTextBox-Steuerelement von Windows Forms
 Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> Steuerelement kann schreiben, die Informationen, die in verschiedenen Formaten angezeigt:  
   
 -   Nur-Text  
@@ -88,7 +88,8 @@ Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> Steuerelement kann
     >  Mit diesem Beispiel wird eine neue Datei erstellt, wenn diese noch nicht vorhanden ist. Wenn eine Anwendung eine Datei zu erstellen muss, benötigt die Anwendung erstellen-Zugriff für den Ordner an. Berechtigungen werden mithilfe von Zugriffssteuerungslisten festgelegt. Wenn die Datei bereits vorhanden ist, benötigt die Anwendung nur Schreibzugriff auf, einer geringeren Berechtigung entspricht. Wenn möglich, ist es sicherer, erstellen Sie die Datei während der Bereitstellung, und nur Lesezugriff auf eine einzelne Datei, anstatt den Zugriff für einen Ordner zu erstellen. Darüber hinaus ist es sicherer, Daten in Benutzerordner statt in Stammordner oder den Ordner „Programme“ zu schreiben.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox-Steuerelement](richtextbox-control-windows-forms.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

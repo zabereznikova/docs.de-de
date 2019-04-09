@@ -11,18 +11,16 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 95a40b4a357b1a601eced6c8e5214871b95fcbd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219810"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Rückrufe und Validierung von Abhängigkeitseigenschaften
 Dieses Thema beschreibt die Erstellung von Abhängigkeitseigenschaften mithilfe alternativer benutzerdefinierter Implementierungen für eigenschaftenbezogene Funktionen wie die Überprüfungsbestimmung, Rückrufe, die immer dann aufgerufen werden, wenn der effektive Wert der Eigenschaft geändert wird, und das Überschreiben möglicher externer Einflüsse auf die Wertbestimmung. Dieses Thema enthält auch Szenarios, in denen das Erweitern des Standardverhaltens des Eigenschaftensystems mithilfe dieser Techniken geeignet ist.  
-  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Bei diesem Thema wird davon ausgegangen, dass Sie die grundlegenden Szenarien zum Implementieren einer Abhängigkeitseigenschaft verstehen, und Metadaten für eine benutzerdefinierte Abhängigkeitseigenschaft anwenden. Weitere Informationen finden Sie unter [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md) und [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md).  
@@ -81,6 +79,7 @@ Dieses Thema beschreibt die Erstellung von Abhängigkeitseigenschaften mithilfe 
  Das Eigenschaftensystem behandelt jeden <xref:System.Windows.CoerceValueCallback> , die den Wert zurückgibt <xref:System.Windows.DependencyProperty.UnsetValue> als Sonderfall. Diesem spezielle Fall bedeutet, dass die Änderung der Eigenschaft mit der die <xref:System.Windows.CoerceValueCallback> aufgerufenen vom Eigenschaftensystem abgelehnt werden sollte, und das Eigenschaftensystem sollten stattdessen den vorherigen Wert der Eigenschaft melden. Dieser Mechanismus kann bei der Überprüfung hilfreich sein, dass asynchron initiierte Änderungen an einer Eigenschaft für den aktuellen Objektzustand noch gültig sind, sowie bei der Unterdrückung dieser Änderungen, sofern sie nicht gültig sind. Ein anderes mögliches Szenario ist die selektive Unterdrückung eines Werts, je nachdem welche der Komponenten der Eigenschaftswertermittlung für den gemeldeten Wert verantwortlich ist. Zu diesem Zweck können Sie die <xref:System.Windows.DependencyProperty> übergebenen Rückruf und den Eigenschaftenbezeichner als Eingabe für <xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>, und klicken Sie dann verarbeiten die <xref:System.Windows.ValueSource>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
 - [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md)
 - [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
