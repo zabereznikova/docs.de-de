@@ -11,58 +11,58 @@ helpviewer_keywords:
 ms.assetid: 28876047-58bd-4fed-9452-c7da346d67c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4dc09f3e8cb926d31b21f0cc2a6442c7a6b8dec9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4bdb2035906b9383342201017b58d1d0050113b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084556"
 ---
-# <a name="invalidoverlappedtopinvoke-mda"></a><span data-ttu-id="e31f4-102">invalidOverlappedToPinvoke-MDA</span><span class="sxs-lookup"><span data-stu-id="e31f4-102">invalidOverlappedToPinvoke MDA</span></span>
-<span data-ttu-id="e31f4-103">Der `invalidOverlappedToPinvoke`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn ein überlappender Zeiger, der nicht auf dem Garbage Collection-Heap erstellt wurde, an spezifische Win32-Funktionen übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="e31f4-103">The `invalidOverlappedToPinvoke` managed debugging assistant (MDA) is activated when an overlapped pointer that was not created on the garbage collection heap is passed to specific Win32 functions.</span></span>  
+# <a name="invalidoverlappedtopinvoke-mda"></a><span data-ttu-id="2871e-102">invalidOverlappedToPinvoke-MDA</span><span class="sxs-lookup"><span data-stu-id="2871e-102">invalidOverlappedToPinvoke MDA</span></span>
+<span data-ttu-id="2871e-103">Der `invalidOverlappedToPinvoke`-MDA (Managed Debugging Assistant, Assistent für verwaltetes Debuggen) wird aktiviert, wenn ein überlappender Zeiger, der nicht auf dem Garbage Collection-Heap erstellt wurde, an spezifische Win32-Funktionen übergeben wird.</span><span class="sxs-lookup"><span data-stu-id="2871e-103">The `invalidOverlappedToPinvoke` managed debugging assistant (MDA) is activated when an overlapped pointer that was not created on the garbage collection heap is passed to specific Win32 functions.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="e31f4-104">Dieser MDA wird standardmäßig nur aktiviert, wenn der Plattformaufruf im Code definiert wurde und der Debugger den JustMyCode-Status der einzelnen Methoden anzeigt.</span><span class="sxs-lookup"><span data-stu-id="e31f4-104">By default, this MDA is activated only if the platform invoke call is defined in your code and the debugger reports the JustMyCode status of each method.</span></span> <span data-ttu-id="e31f4-105">Dieser MDA wird von Debuggern, die JustMyCode nicht interpretieren können (z. B. MDbg.exe ohne Erweiterungen) nicht aktiviert.</span><span class="sxs-lookup"><span data-stu-id="e31f4-105">A debugger that does not understand JustMyCode (such as MDbg.exe with no extensions) will not activate this MDA.</span></span> <span data-ttu-id="e31f4-106">Dieser MDA kann für diese Debugger mithilfe einer Konfigurationsdatei aktiviert werden, indem `justMyCode="false"` in der Datei ".mda.config" explizit festgelegt wird: `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`.</span><span class="sxs-lookup"><span data-stu-id="e31f4-106">This MDA can be enabled for those debuggers by using a configuration file and explicitly settting `justMyCode="false"` in the .mda.config file `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`).</span></span>  
+>  <span data-ttu-id="2871e-104">Dieser MDA wird standardmäßig nur aktiviert, wenn der Plattformaufruf im Code definiert wurde und der Debugger den JustMyCode-Status der einzelnen Methoden anzeigt.</span><span class="sxs-lookup"><span data-stu-id="2871e-104">By default, this MDA is activated only if the platform invoke call is defined in your code and the debugger reports the JustMyCode status of each method.</span></span> <span data-ttu-id="2871e-105">Dieser MDA wird von Debuggern, die JustMyCode nicht interpretieren können (z. B. MDbg.exe ohne Erweiterungen) nicht aktiviert.</span><span class="sxs-lookup"><span data-stu-id="2871e-105">A debugger that does not understand JustMyCode (such as MDbg.exe with no extensions) will not activate this MDA.</span></span> <span data-ttu-id="2871e-106">Dieser MDA kann für diese Debugger mithilfe einer Konfigurationsdatei aktiviert werden, indem `justMyCode="false"` in der Datei ".mda.config" explizit festgelegt wird: `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`.</span><span class="sxs-lookup"><span data-stu-id="2871e-106">This MDA can be enabled for those debuggers by using a configuration file and explicitly settting `justMyCode="false"` in the .mda.config file `(<invalidOverlappedToPinvoke enable="true" justMyCode="false"/>`).</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="e31f4-107">Symptome</span><span class="sxs-lookup"><span data-stu-id="e31f4-107">Symptoms</span></span>  
- <span data-ttu-id="e31f4-108">Abstürze oder unerklärliche Heapbeschädigungen.</span><span class="sxs-lookup"><span data-stu-id="e31f4-108">Crashes or unexplainable heap corruptions.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="2871e-107">Symptome</span><span class="sxs-lookup"><span data-stu-id="2871e-107">Symptoms</span></span>  
+ <span data-ttu-id="2871e-108">Abstürze oder unerklärliche Heapbeschädigungen.</span><span class="sxs-lookup"><span data-stu-id="2871e-108">Crashes or unexplainable heap corruptions.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="e31f4-109">Ursache</span><span class="sxs-lookup"><span data-stu-id="e31f4-109">Cause</span></span>  
- <span data-ttu-id="e31f4-110">Ein überlappender Zeiger, der nicht auf dem Garbage Collection-Heap erstellt wurde, wird an spezifische Betriebssystemfunktionen übergeben.</span><span class="sxs-lookup"><span data-stu-id="e31f4-110">An overlapped pointer that was not created on the garbage collection heap is passed to specific operating system functions.</span></span>  
+## <a name="cause"></a><span data-ttu-id="2871e-109">Ursache</span><span class="sxs-lookup"><span data-stu-id="2871e-109">Cause</span></span>  
+ <span data-ttu-id="2871e-110">Ein überlappender Zeiger, der nicht auf dem Garbage Collection-Heap erstellt wurde, wird an spezifische Betriebssystemfunktionen übergeben.</span><span class="sxs-lookup"><span data-stu-id="2871e-110">An overlapped pointer that was not created on the garbage collection heap is passed to specific operating system functions.</span></span>  
   
- <span data-ttu-id="e31f4-111">In der folgenden Tabelle werden die Funktionen gezeigt, die von diesem MDA überwacht werden.</span><span class="sxs-lookup"><span data-stu-id="e31f4-111">The following table shows the functions that this MDA tracks.</span></span>  
+ <span data-ttu-id="2871e-111">In der folgenden Tabelle werden die Funktionen gezeigt, die von diesem MDA überwacht werden.</span><span class="sxs-lookup"><span data-stu-id="2871e-111">The following table shows the functions that this MDA tracks.</span></span>  
   
-|<span data-ttu-id="e31f4-112">Modul</span><span class="sxs-lookup"><span data-stu-id="e31f4-112">Module</span></span>|<span data-ttu-id="e31f4-113">Funktion</span><span class="sxs-lookup"><span data-stu-id="e31f4-113">Function</span></span>|  
+|<span data-ttu-id="2871e-112">Modul</span><span class="sxs-lookup"><span data-stu-id="2871e-112">Module</span></span>|<span data-ttu-id="2871e-113">Funktion</span><span class="sxs-lookup"><span data-stu-id="2871e-113">Function</span></span>|  
 |------------|--------------|  
-|<span data-ttu-id="e31f4-114">HttpApi.dll</span><span class="sxs-lookup"><span data-stu-id="e31f4-114">HttpApi.dll</span></span>|`HttpReceiveHttpRequest`|  
-|<span data-ttu-id="e31f4-115">IpHlpApi.dll</span><span class="sxs-lookup"><span data-stu-id="e31f4-115">IpHlpApi.dll</span></span>|`NotifyAddrChange`|  
-|<span data-ttu-id="e31f4-116">kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="e31f4-116">kernel32.dll</span></span>|`ReadFile`|  
-|<span data-ttu-id="e31f4-117">kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="e31f4-117">kernel32.dll</span></span>|`ReadFileEx`|  
-|<span data-ttu-id="e31f4-118">kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="e31f4-118">kernel32.dll</span></span>|`WriteFile`|  
-|<span data-ttu-id="e31f4-119">kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="e31f4-119">kernel32.dll</span></span>|`WriteFileEx`|  
-|<span data-ttu-id="e31f4-120">kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="e31f4-120">kernel32.dll</span></span>|`ReadDirectoryChangesW`|  
-|<span data-ttu-id="e31f4-121">kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="e31f4-121">kernel32.dll</span></span>|`PostQueuedCompletionStatus`|  
-|<span data-ttu-id="e31f4-122">MSWSock.dll</span><span class="sxs-lookup"><span data-stu-id="e31f4-122">MSWSock.dll</span></span>|`ConnectEx`|  
-|<span data-ttu-id="e31f4-123">WS2_32.dll</span><span class="sxs-lookup"><span data-stu-id="e31f4-123">WS2_32.dll</span></span>|`WSASend`|  
-|<span data-ttu-id="e31f4-124">WS2_32.dll</span><span class="sxs-lookup"><span data-stu-id="e31f4-124">WS2_32.dll</span></span>|`WSASendTo`|  
-|<span data-ttu-id="e31f4-125">WS2_32.dll</span><span class="sxs-lookup"><span data-stu-id="e31f4-125">WS2_32.dll</span></span>|`WSARecv`|  
-|<span data-ttu-id="e31f4-126">WS2_32.dll</span><span class="sxs-lookup"><span data-stu-id="e31f4-126">WS2_32.dll</span></span>|`WSARecvFrom`|  
-|<span data-ttu-id="e31f4-127">MQRT.dll</span><span class="sxs-lookup"><span data-stu-id="e31f4-127">MQRT.dll</span></span>|`MQReceiveMessage`|  
+|<span data-ttu-id="2871e-114">HttpApi.dll</span><span class="sxs-lookup"><span data-stu-id="2871e-114">HttpApi.dll</span></span>|`HttpReceiveHttpRequest`|  
+|<span data-ttu-id="2871e-115">IpHlpApi.dll</span><span class="sxs-lookup"><span data-stu-id="2871e-115">IpHlpApi.dll</span></span>|`NotifyAddrChange`|  
+|<span data-ttu-id="2871e-116">kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="2871e-116">kernel32.dll</span></span>|`ReadFile`|  
+|<span data-ttu-id="2871e-117">kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="2871e-117">kernel32.dll</span></span>|`ReadFileEx`|  
+|<span data-ttu-id="2871e-118">kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="2871e-118">kernel32.dll</span></span>|`WriteFile`|  
+|<span data-ttu-id="2871e-119">kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="2871e-119">kernel32.dll</span></span>|`WriteFileEx`|  
+|<span data-ttu-id="2871e-120">kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="2871e-120">kernel32.dll</span></span>|`ReadDirectoryChangesW`|  
+|<span data-ttu-id="2871e-121">kernel32.dll</span><span class="sxs-lookup"><span data-stu-id="2871e-121">kernel32.dll</span></span>|`PostQueuedCompletionStatus`|  
+|<span data-ttu-id="2871e-122">MSWSock.dll</span><span class="sxs-lookup"><span data-stu-id="2871e-122">MSWSock.dll</span></span>|`ConnectEx`|  
+|<span data-ttu-id="2871e-123">WS2_32.dll</span><span class="sxs-lookup"><span data-stu-id="2871e-123">WS2_32.dll</span></span>|`WSASend`|  
+|<span data-ttu-id="2871e-124">WS2_32.dll</span><span class="sxs-lookup"><span data-stu-id="2871e-124">WS2_32.dll</span></span>|`WSASendTo`|  
+|<span data-ttu-id="2871e-125">WS2_32.dll</span><span class="sxs-lookup"><span data-stu-id="2871e-125">WS2_32.dll</span></span>|`WSARecv`|  
+|<span data-ttu-id="2871e-126">WS2_32.dll</span><span class="sxs-lookup"><span data-stu-id="2871e-126">WS2_32.dll</span></span>|`WSARecvFrom`|  
+|<span data-ttu-id="2871e-127">MQRT.dll</span><span class="sxs-lookup"><span data-stu-id="2871e-127">MQRT.dll</span></span>|`MQReceiveMessage`|  
   
- <span data-ttu-id="e31f4-128">Unter dieser Bedingung besteht eine hohe Wahrscheinlichkeit von Heapbeschädigungen, da die <xref:System.AppDomain>, die den Aufruf durchführt, möglicherweise entladen wird.</span><span class="sxs-lookup"><span data-stu-id="e31f4-128">The potential for heap corruption is high for this condition because the <xref:System.AppDomain> making the call might unload.</span></span> <span data-ttu-id="e31f4-129">Falls die <xref:System.AppDomain> entladen wird, gibt der Anwendungscode den Speicher für den überlappenden Zeiger frei, was beim Ende des Vorgangs zu Beschädigungen führt, oder der Code verursacht einen Speicherverlust, was später zu Schwierigkeiten führt.</span><span class="sxs-lookup"><span data-stu-id="e31f4-129">If the <xref:System.AppDomain> unloads, the application code will either free the memory for the overlapped pointer, causing corruption when the operation finishes, or the code will leak the memory, causing difficulties later.</span></span>  
+ <span data-ttu-id="2871e-128">Unter dieser Bedingung besteht eine hohe Wahrscheinlichkeit von Heapbeschädigungen, da die <xref:System.AppDomain>, die den Aufruf durchführt, möglicherweise entladen wird.</span><span class="sxs-lookup"><span data-stu-id="2871e-128">The potential for heap corruption is high for this condition because the <xref:System.AppDomain> making the call might unload.</span></span> <span data-ttu-id="2871e-129">Falls die <xref:System.AppDomain> entladen wird, gibt der Anwendungscode den Speicher für den überlappenden Zeiger frei, was beim Ende des Vorgangs zu Beschädigungen führt, oder der Code verursacht einen Speicherverlust, was später zu Schwierigkeiten führt.</span><span class="sxs-lookup"><span data-stu-id="2871e-129">If the <xref:System.AppDomain> unloads, the application code will either free the memory for the overlapped pointer, causing corruption when the operation finishes, or the code will leak the memory, causing difficulties later.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="e31f4-130">Auflösung</span><span class="sxs-lookup"><span data-stu-id="e31f4-130">Resolution</span></span>  
- <span data-ttu-id="e31f4-131">Verwenden Sie ein <xref:System.Threading.Overlapped>-Objekt mit einem Aufruf der <xref:System.Threading.Overlapped.Pack%2A>-Methode, um eine <xref:System.Threading.NativeOverlapped>-Struktur abzurufen, die an die Funktion übergeben werden kann.</span><span class="sxs-lookup"><span data-stu-id="e31f4-131">Use an <xref:System.Threading.Overlapped> object, calling the <xref:System.Threading.Overlapped.Pack%2A> method to get a <xref:System.Threading.NativeOverlapped> structure that can be passed to the function.</span></span> <span data-ttu-id="e31f4-132">Wenn die <xref:System.AppDomain> entladen wird, wartet die CLR auf den Abschluss des asynchronen Vorgangs, bevor der Zeiger freigegeben wird.</span><span class="sxs-lookup"><span data-stu-id="e31f4-132">If the <xref:System.AppDomain> unloads, the CLR waits until the asynchronous operation completes before freeing the pointer.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="2871e-130">Auflösung</span><span class="sxs-lookup"><span data-stu-id="2871e-130">Resolution</span></span>  
+ <span data-ttu-id="2871e-131">Verwenden Sie ein <xref:System.Threading.Overlapped>-Objekt mit einem Aufruf der <xref:System.Threading.Overlapped.Pack%2A>-Methode, um eine <xref:System.Threading.NativeOverlapped>-Struktur abzurufen, die an die Funktion übergeben werden kann.</span><span class="sxs-lookup"><span data-stu-id="2871e-131">Use an <xref:System.Threading.Overlapped> object, calling the <xref:System.Threading.Overlapped.Pack%2A> method to get a <xref:System.Threading.NativeOverlapped> structure that can be passed to the function.</span></span> <span data-ttu-id="2871e-132">Wenn die <xref:System.AppDomain> entladen wird, wartet die CLR auf den Abschluss des asynchronen Vorgangs, bevor der Zeiger freigegeben wird.</span><span class="sxs-lookup"><span data-stu-id="2871e-132">If the <xref:System.AppDomain> unloads, the CLR waits until the asynchronous operation completes before freeing the pointer.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="e31f4-133">Auswirkungen auf die Laufzeit</span><span class="sxs-lookup"><span data-stu-id="e31f4-133">Effect on the Runtime</span></span>  
- <span data-ttu-id="e31f4-134">Dieser MDA hat keine Auswirkungen auf die CLR.</span><span class="sxs-lookup"><span data-stu-id="e31f4-134">This MDA had no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="2871e-133">Auswirkungen auf die Laufzeit</span><span class="sxs-lookup"><span data-stu-id="2871e-133">Effect on the Runtime</span></span>  
+ <span data-ttu-id="2871e-134">Dieser MDA hat keine Auswirkungen auf die CLR.</span><span class="sxs-lookup"><span data-stu-id="2871e-134">This MDA had no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="e31f4-135">Output</span><span class="sxs-lookup"><span data-stu-id="e31f4-135">Output</span></span>  
- <span data-ttu-id="e31f4-136">Im Folgenden finden Sie ein Beispiel für die Ausgabe dieses MDA.</span><span class="sxs-lookup"><span data-stu-id="e31f4-136">The following is an example of output from this MDA.</span></span>  
+## <a name="output"></a><span data-ttu-id="2871e-135">Output</span><span class="sxs-lookup"><span data-stu-id="2871e-135">Output</span></span>  
+ <span data-ttu-id="2871e-136">Im Folgenden finden Sie ein Beispiel für die Ausgabe dieses MDA.</span><span class="sxs-lookup"><span data-stu-id="2871e-136">The following is an example of output from this MDA.</span></span>  
   
  `An overlapped pointer (0x00ea3430) that was not allocated on the GC heap was passed via Pinvoke to the Win32 function 'WriteFile' in module 'KERNEL32.DLL'. If the AppDomain is shut down, this can cause heap corruption when the async I/O completes. The best solution is to pass a NativeOverlapped structure retrieved from a call to System.Threading.Overlapped.Pack(). If the AppDomain exits, the CLR will keep this structure alive and pinned until the I/O completes.`  
   
-## <a name="configuration"></a><span data-ttu-id="e31f4-137">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="e31f4-137">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="2871e-137">Konfiguration</span><span class="sxs-lookup"><span data-stu-id="2871e-137">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -72,7 +72,8 @@ ms.locfileid: "54714778"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e31f4-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e31f4-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2871e-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2871e-138">See also</span></span>
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="e31f4-139">Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)</span><span class="sxs-lookup"><span data-stu-id="e31f4-139">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="e31f4-140">Interop Marshaling (Interop-Marshalling)</span><span class="sxs-lookup"><span data-stu-id="e31f4-140">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="2871e-139">Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen</span><span class="sxs-lookup"><span data-stu-id="2871e-139">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="2871e-140">Interop-Marshalling</span><span class="sxs-lookup"><span data-stu-id="2871e-140">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
