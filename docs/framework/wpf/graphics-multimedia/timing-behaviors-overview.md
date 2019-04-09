@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: f7c1aa81a5d3c283fdea06dd812f879f096c2ee2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355518"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129589"
 ---
 # <a name="timing-behaviors-overview"></a>Übersicht über Zeitsteuerungsverhalten
 Dieses Thema beschreibt das Zeitsteuerungsverhalten von Animationen und andere <xref:System.Windows.Media.Animation.Timeline> Objekte.  
@@ -42,7 +42,7 @@ Dieses Thema beschreibt das Zeitsteuerungsverhalten von Animationen und andere <
 |----------|-----------------|----------------|-|-|-|  
 |Einfache Dauer|Zeitspanne, die eine Zeitachse für eine Vorwärtsiteration benötigt.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
 |Eine Wiederholung|Die Zeitspanne für eine Zeitachse vorwärts nach und bei Spielen dauert die <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> -Eigenschaft "true" ist, einmal rückwärts abgespielt.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
-|Aktiver Zeitraum|Die Zeitdauer für ein Timeline alle angegebenen von Wiederholungen ausführen dauert seine <xref:System.Windows.Media.Animation.RepeatBehavior> Eigenschaft.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
+|Aktiver Zeitraum|Die Zeitdauer für ein Timeline alle angegebenen von Wiederholungen ausführen dauert seine <xref:System.Windows.Media.Animation.RepeatBehavior> Eigenschaft.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>ist <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>ist <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
   
 <a name="duration"></a>   
 ### <a name="the-duration-property"></a>Die Duration-Eigenschaft  
@@ -123,8 +123,9 @@ Dieses Thema beschreibt das Zeitsteuerungsverhalten von Animationen und andere <
 -   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -Legt den prozentualen Anteil der <xref:System.Windows.Media.Animation.Timeline.Duration%2A> einer Zeitachse für die Verlangsamung aufgewendet. Ein Beispiel finden Sie unter [Gewusst wie: Beschleunigen oder verlangsamen einer Animation](how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über das Animations- und Zeitsteuerungssystem](animation-and-timing-system-overview.md)
 - [Übersicht über Zeitsteuerungsereignisse](timing-events-overview.md)
-- [Themen zu Vorgehensweisen](animation-and-timing-how-to-topics.md)
-- [Beispiel zum Verhalten der Animationszeitsteuerung](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Gewusst wie-Themen](animation-and-timing-how-to-topics.md)
+- [Beispiel zu Textanimation Timing Verhalten](https://go.microsoft.com/fwlink/?LinkID=159970)

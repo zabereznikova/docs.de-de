@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145625"
 ---
 # <a name="service-identity-and-authentication"></a>Dienstidentität und Authentifizierung
 Eines Diensts *Endpunktidentität* ist ein Wert aus dem Web Services Description Language (WSDL)-Dienst generiert. Dieser an jeden Client weitergegebene Wert wird zum Authentifizieren des Diensts verwendet. Nachdem der Client eine Kommunikation mit einem Endpunkt initiiert und der Dienst sich gegenüber dem Client authentifiziert hat, vergleicht der Client den Wert der Endpunktidentität mit dem tatsächlichen Wert, den der Vorgang der Authentifizierung des Endpunkts zurückgegeben hat. Stimmen sie überein, kann der Client sicher sein, dass er Kontakt zu dem erwarteten Dienstendpunkt hergestellt hat. Diese fungiert als ein Schutz gegen *Phishing* durch die verhindert, dass eines Clients an einem von einem böswilligen Dienst gehosteten Endpunkt umgeleitet wird.  
@@ -54,13 +54,9 @@ Eines Diensts *Endpunktidentität* ist ein Wert aus dem Web Services Description
   
 ## <a name="using-the-identity-element-in-configuration"></a>Mithilfe der \<Identity >-Element in der Konfiguration  
  Wenn Sie den Clientanmeldeinformationstyp in der zuvor gezeigten Bindung in `Certificate,` ändern, enthält die generierte WSDL ein serialisiertes Base64-X.509-Zertifikat als Identitätswert, wie im folgenden Code gezeigt. Dies ist der Standard für alle Clientanmeldeinformationstypen außer Windows.  
-  
-  
-  
+
  Sie können den Wert der standardmäßigen Dienstidentität oder ändern den Typ der Identität mit der `<identity>` Element in der Konfiguration oder durch Festlegen der Identität im Code. Der folgende Konfigurationscode legt eine DNS-Identität (Domain Name System) mit dem Wert `contoso.com` fest.  
-  
-  
-  
+
 ## <a name="setting-identity-programmatically"></a>Programmgesteuertes Festlegen der Identität  
  Ihr Dienst verfügt nicht explizit eine Identität angeben, da WCF automatisch bestimmt. WCF können Sie eine Identität für einen Endpunkt angeben möchten jedoch bei Bedarf. Mit dem folgenden Code wird ein neuer Dienstendpunkt mit einer bestimmten DNS-Identität hinzugefügt.  
   
@@ -69,16 +65,12 @@ Eines Diensts *Endpunktidentität* ist ein Wert aus dem Web Services Description
   
 ## <a name="specifying-identity-at-the-client"></a>Angeben der Identität für einen Client  
  Zur Entwurfszeit verwendet ein Cliententwickler in der Regel die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Clientkonfiguration zu generieren. Die generierte Konfigurationsdatei (vorgesehen für die Verwendung durch den Client) enthält die Identität des Servers. Der folgende Code wurde z.&amp;#160;B. von einem Dienst generiert, der eine DNS-Identität angibt, wie im vorangehenden Beispiel gezeigt. Beachten Sie, dass der Endpunktidentitätswert des Clients dem des Diensts entspricht. Wenn in diesem Fall der Client die Windows (Kerberos)-Anmeldeinformationen für den Dienst erhält, erwartet er den Wert `contoso.com`.  
-  
-  
-  
+
  Wenn der Dienst statt Windows ein Zertifikat als Clientanmeldeinformationstyp angibt, wird erwartet, dass die DNS-Eigenschaft des Zertifikats den Wert `contoso.com` hat. (Wenn aber die DNS-Eigenschaft den Wert `null` hat, muss der Antragstellername des Zertifikats `contoso.com` lauten.)  
   
 #### <a name="using-a-specific-value-for-identity"></a>Verwenden eines bestimmten Werts für die Identität  
  Die folgende Clientkonfigurationsdatei zeigt, wie erwartet wird, dass die Identität des Diensts ein bestimmter Wert ist. Im folgenden Beispiel kann der Client mit zwei Endpunkten kommunizieren. Das erste wird mit einem Zertifikatsfingerabdruck, der zweite mit dem RSA-Schlüssel eines Zertifikats identifiziert. Somit also durch ein Zertifikat, das nur ein privates/öffentliches Schlüsselpaar enthält, jedoch nicht von einer vertrauenswürdige Stelle ausgegeben wurde.  
-  
-  
-  
+
 ## <a name="identity-checking-at-run-time"></a>Identitätsprüfung zur Laufzeit  
  Zur Entwurfszeit bestimmt ein Cliententwickler die Identität des Servers durch dessen Metadaten. Zur Laufzeit wird die Identitätsprüfung ausgeführt, bevor irgendwelche Endpunkte auf dem Dienst aufgerufen werden.  
   
@@ -113,11 +105,12 @@ Eines Diensts *Endpunktidentität* ist ein Wert aus dem Web Services Description
  Weitere Informationen über das stack-Bindung Elemente ordnungsgemäß für eine benutzerdefinierte Bindung, finden Sie unter [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). Weitere Informationen zum Erstellen einer benutzerdefinierten Bindung mit der <xref:System.ServiceModel.Channels.SecurityBindingElement>, finden Sie unter [Vorgehensweise: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [Vorgehensweise: Erstellen eines SecurityBindingElement für einen angegebenen Authentifizierungsmodus](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
 - [Vorgehensweise: Erstellen einer benutzerdefinierten Clientidentitätsüberprüfung](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
-- [Ausählen eines Anmeldeinformationentyps](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Wählen eines Typs von Anmeldeinformationen](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [Erstellen benutzerdefinierter Bindungen](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
 - [Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ellipses
 - drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
-ms.openlocfilehash: 9f6969f9ad838ae913f049c4fc65d987e1aff9fa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8bbc2eda6450128eac55576259880e83f07099ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718479"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117455"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>Ellipsen und Bögen in GDI+
 Sie können problemlos zeichnen, Ellipsen und Bögen mithilfe der <xref:System.Drawing.Graphics.DrawEllipse%2A> und <xref:System.Drawing.Graphics.DrawArc%2A> Methoden der <xref:System.Drawing.Graphics> Klasse.  
@@ -48,9 +48,10 @@ Sie können problemlos zeichnen, Ellipsen und Bögen mithilfe der <xref:System.D
  ![Ellipsen und Bögen](./media/aboutgdip02-art06.gif "Aboutgdip02_art06")  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [Linien, Kurven und Formen](lines-curves-and-shapes.md)
 - [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](how-to-create-graphics-objects-for-drawing.md)
 - [Vorgehensweise: Erstellen eines Stifts](how-to-create-a-pen.md)
-- [Vorgehensweise: Zeichnen der Kontur eine Form](how-to-draw-an-outlined-shape.md)
+- [Vorgehensweise: Zeichnen der Kontur einer Form](how-to-draw-an-outlined-shape.md)

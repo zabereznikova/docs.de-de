@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 023759ea3d1401dbc166873d14d2c51502a1a96c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd02320f9b899f339efa149838547fd05d1b4079
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139177"
 ---
 # <a name="net-native-and-compilation"></a>.NET Native und Kompilierung
-Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Desktop-Anwendungen sind in einer bestimmten Programmiersprache geschrieben und in eine Zwischensprache (Intermediate Language, IL) kompiliert. Zur Laufzeit ist ein JIT-Compiler (Just-In-Time) dafür zuständig, die Zwischensprache für den lokalen Computer in nativen Code zu kompilieren, unmittelbar bevor eine Methode zum ersten Mal ausgeführt wird. Im Gegensatz dazu konvertiert die .NET Native-Toolkette den Quellcode zur Kompilierzeit in systemeigenen Code. In diesem Abschnitt wird .NET Native mit anderen Kompilierungsverfahren verglichen, die für .NET Framework-Apps verfügbar sind. Zudem enthält dieser Abschnitt einen konkreten Überblick über die Erzeugung von nativem Code mit .NET Native, der Ihnen dabei helfen kann zu verstehen, warum Ausnahmen nicht im JIT-kompilierten Code auftreten, die hingegen in Code auftreten, der mit .NET Native kompiliert wurde.  
+Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Desktop-Anwendungen sind in einer bestimmten Programmiersprache geschrieben und in eine Zwischensprache (Intermediate Language, IL) kompiliert. Zur Laufzeit ist ein JIT-Compiler (Just-In-Time) dafür zuständig, die Zwischensprache für den lokalen Computer in systemeigenen Code zu kompilieren, unmittelbar bevor eine Methode zum ersten Mal ausgeführt wird. Im Gegensatz dazu konvertiert die .NET Native-Toolkette den Quellcode zur Kompilierzeit in systemeigenen Code. In diesem Abschnitt wird .NET Native mit anderen Kompilierungsverfahren verglichen, die für .NET Framework-Apps verfügbar sind. Zudem enthält dieser Abschnitt einen konkreten Überblick über die Erzeugung von nativem Code mit .NET Native, der Ihnen dabei helfen kann zu verstehen, warum Ausnahmen nicht im JIT-kompilierten Code auftreten, die hingegen in Code auftreten, der mit .NET Native kompiliert wurde.  
   
 ## <a name="net-native-generating-native-binaries"></a>.NET Native: Generieren von systemeigenen Binärdateien  
  Eine Anwendung, die auf das .NET Framework ausgerichtet ist und nicht mithilfe der .NET Native-Toolkette kompiliert wurde, besteht aus Ihrer Anwendungsassembly, die Folgendes umfasst:  
@@ -39,9 +39,9 @@ Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Deskt
 >   
 >  Kategorien von Tools, die die Zwischensprache ändern und dadurch die .NET-Toolkette daran hindern, die Zwischensprache einer App zu analysieren, werden jedoch nicht unterstützt. Obfuskatoren sind die bemerkenswertesten Tools dieses Typs.  
   
- Beim Konvertieren einer App aus der Zwischensprache in systemeigenen Code führt die .NET Native-Toolkette Vorgänge wie die Folgenden aus:  
+ Beim Konvertieren einer App aus der Zwischensprache in nativen Code führt die .NET Native-Toolkette Vorgänge wie die Folgenden aus:  
   
--   Für bestimmte Codepfade wird Code ersetzt, der auf Reflektion und Metadaten mit statischem systemeigenem Code beruht. Wenn ein Werttyp z. B. die <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>-Methode nicht außer Kraft setzt, verwendet der Standardtest zur Ermittlung der Gleichheit die Reflektion, um <xref:System.Reflection.FieldInfo>-Objekte abzurufen, die die Felder des Werttyps darstellen. Anschließend werden die Feldwerte von zwei Instanzen verglichen. Beim Kompilieren in systemeigenen Code ersetzt die .NET Native-Toolkette den Reflektionscode und die Metadaten durch einen statischen Vergleich der Feldwerte.  
+-   Für bestimmte Codepfade wird Code ersetzt, der auf Reflektion und Metadaten mit statischem systemeigenem Code beruht. Wenn ein Werttyp z. B. die <xref:System.ValueType.Equals%2A?displayProperty=nameWithType>-Methode nicht außer Kraft setzt, verwendet der Standardtest zur Ermittlung der Gleichheit die Reflektion, um <xref:System.Reflection.FieldInfo>-Objekte abzurufen, die die Felder des Werttyps darstellen. Anschließend werden die Feldwerte von zwei Instanzen verglichen. Beim Kompilieren in nativen Code ersetzt die .NET Native-Toolkette den Reflektionscode und die Metadaten durch einen statischen Vergleich der Feldwerte.  
   
 -   Dabei wird nach Möglichkeit versucht, alle Metadaten zu beseitigen.  
   
@@ -53,9 +53,9 @@ Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Deskt
     >  .NET Native verwendet denselben Garbage Collector als Standard-CLR (Common Language Runtime). Beim .NET Native Garbage Collector ist die Garbage Collection im Hintergrund standardmäßig aktiviert. Weitere Informationen zur Garbage Collection finden Sie unter [Grundlagen der Garbage Collection](../../../docs/standard/garbage-collection/fundamentals.md).  
   
 > [!IMPORTANT]
->  .NET Native kompiliert eine gesamte Anwendung in eine systemeigene Anwendung. Es ist Ihnen dabei nicht gestattet, einzelne Assemblys, die eine Klassenbibliothek enthalten, in systemeigenen Code zu kompilieren, damit diese unabhängig vom verwalteten Code aufgerufen werden können.  
+>  .NET Native kompiliert eine gesamte Anwendung in eine systemeigene Anwendung. Es ist Ihnen dabei nicht gestattet, einzelne Assemblys, die eine Klassenbibliothek enthalten, in nativen Code zu kompilieren, damit diese unabhängig vom verwalteten Code aufgerufen werden können.  
   
- Die von der .NET Native-Toolkette erzeugte resultierende App wird im Debug- oder Versionsverzeichnis Ihres Projektverzeichnisses in ein Verzeichnis namens "ilc.out" geschrieben. Die App besteht aus den folgenden Dateien:  
+ Die von der .NET Native-Toolkette erzeugte resultierende App wird im Debug- oder Releaseverzeichnis Ihres Projektverzeichnisses in ein Verzeichnis namens „ilc.out“ geschrieben. Die App besteht aus den folgenden Dateien:  
   
 -   *\<Anwendungsname>*.exe: Eine ausführbare Stubdatei, die die Kontrolle an einen speziellen `Main`-Export in der Datei *\<Anwendungsname>*.dll übergibt.  
   
@@ -71,7 +71,7 @@ Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Deskt
   
  Da die .NET Native-Toolkette den Implementierungscode in Ihrer App nur verknüpft, wenn ihr bekannt ist, dass die App den Code tatsächlich aufruft, werden die Metadaten oder der Implementierungscode möglicherweise nicht in die App einbezogen, die in den folgenden Szenarien erforderlich sind:  
   
--   Reflektion  
+-   Reflektion.  
   
 -   Dynamischer oder spät gebundener Aufruf  
   
@@ -79,7 +79,7 @@ Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Deskt
   
 -   COM-Interop  
   
- Fehlen die erforderlichen Metadaten oder der Implementierungscode zur Laufzeit, löst die .NET Native Common Language Runtime eine Ausnahme aus. Sie können diese Ausnahmen verhindern und sicherstellen, dass die .NET Native-Toolkette die erforderlichen Metadaten und den Implementierungscode enthält, indem Sie eine [Laufzeitanweisungsdatei](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) (eine XML-Datei) verwenden, die die Programmelemente bezeichnet, deren Metadaten oder Implementierungscode zur Laufzeit verfügbar sein müssen, und ihnen eine Laufzeitrichtlinie zuweist. Nachfolgend finden Sie die standardmäßige Laufzeitanweisungsdatei, die zu einem Windows Store-Projekt hinzugefügt wird, das von der .NET Native-Toolkette kompiliert wird:  
+ Fehlen die erforderlichen Metadaten oder der Implementierungscode zur Laufzeit, löst die .NET Native Common Language Runtime eine Ausnahme aus. Sie können diese Ausnahmen verhindern und sicherstellen, dass die .NET Native-Toolkette die erforderlichen Metadaten und den Implementierungscode enthält, indem Sie eine [Laufzeitanweisungsdatei](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md) (eine XML-Datei) verwenden, die die Programmelemente bezeichnet, deren Metadaten oder Implementierungscode zur Laufzeit verfügbar sein müssen, und ihnen eine Laufzeitrichtlinie zuweist. Nachfolgend finden Sie die standardmäßige Laufzeitdirektivendatei, die zu einem Windows Store-Projekt hinzugefügt wird, das von der .NET Native-Toolkette kompiliert wird:  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -92,7 +92,7 @@ Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Deskt
  Auf diese Weise werden sämtliche Typen und ihre Member in allen Assemblys im Anwendungspaket für die Reflektion und den dynamischen Aufruf aktiviert. Die Reflektion oder dynamische Aktivierung von Typen in Assemblys der .NET Framework-Klassenbibliothek werden jedoch nicht aktiviert. In vielen Fällen ist dies ausreichend.  
   
 ## <a name="net-native-and-ngen"></a>.NET Native und NGEN  
- Der [Native Image Generator](../../../docs/framework/tools/ngen-exe-native-image-generator.md) (NGEN) kompiliert Assemblys in nativen Code und installiert sie auf dem lokalen Computer im nativen Imagecache. Obwohl NGEN wie .NET Native nativen Code erzeugt, unterscheidet sich NGEN jedoch in einigen entscheidenden Punkten von .NET Native:  
+ Der [Native Image Generator](../../../docs/framework/tools/ngen-exe-native-image-generator.md) (NGEN) kompiliert Assemblys in nativen Code und installiert sie auf dem lokalen Computer im nativen Imagecache. Obwohl NGEN wie .NET Native systemeigenen Code erzeugt, unterscheidet sich NGEN jedoch in einigen entscheidenden Punkten von .NET Native:  
   
 -   Wenn für eine bestimmte Methode kein systemeigenes Image verfügbar ist, greift NGEN für den Code auf den JIT-Compiler zurück. Das bedeutet, dass systemeigene Images für den Fall weiterhin Metadaten und die Zwischensprache (Intermediate Language, IL) einbeziehen müssen, dass NGEN auf die JIT-Kompilierung zurückgreift. .NET Native erzeugt im Gegensatz dazu nur systemeigene Images und greift nicht auf die JIT-Kompilierung zurück. Daher müssen nur Metadaten erhalten bleiben, die für einige Reflektions-, Serialisierungs- und Interop-Szenarien erforderlich sind.  
   
@@ -101,7 +101,8 @@ Die meisten auf das .NET Framework ausgerichteten Windows 8.1- und Windows Deskt
 -   NGEN-Images sind eher anfällig. Ein Patch oder eine Änderung für eine Abhängigkeit erfordert z. B. in der Regel, dass NGEN für die Assemblys, die diese verwenden, ebenfalls erneut durchgeführt wird. Dies gilt insbesondere für Systemassemblys in der .NET Framework-Klassenbibliothek. Im Gegensatz dazu gestattet .NET Native, dass Anwendungen unabhängig voneinander bereitgestellt werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Metadaten und selbstbeschreibende Komponenten](../../../docs/standard/metadata-and-self-describing-components.md)
 - [Inside .NET Native (Channel 9-Video)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)
-- [Reflection and .NET Native (Reflektion und .NET Native)](../../../docs/framework/net-native/reflection-and-net-native.md)
+- [Reflektion und .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [.NET Native Allgemeine Problembehandlung](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

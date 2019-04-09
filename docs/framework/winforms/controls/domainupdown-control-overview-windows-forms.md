@@ -7,12 +7,12 @@ helpviewer_keywords:
 - spin button control [Windows Forms], about spin button
 - DomainUpDown control [Windows Forms], about DomainUpDown control
 ms.assetid: 3f40f9c1-20ad-4331-b9b5-b0127eb36eb3
-ms.openlocfilehash: 851c02747a2414e34a5e9d35bdc7d1df916efce0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bfe3e7239f77c6f1a0d9bb46a96c704653b43364
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718895"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102855"
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>Übersicht über das DomainUpDown-Steuerelement (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.DomainUpDown> Steuerelement ist im Wesentlichen eine Kombination aus einem Textfeld und einem Paar von Schaltflächen für das Durchlaufen einer Liste oben oder unten verschieben. Das Steuerelement zeigt an, und legt eine Zeichenfolge aus einer Liste von Optionen. Der Benutzer kann die Zeichenfolge auswählen, indem Sie auf nach oben oder unten Schaltflächen zum Navigieren durch eine Liste, durch Drücken der nach-oben und nach-unten-Pfeiltasten oder durch Eingabe einer Zeichenfolge, die ein Element in der Liste entspricht. Eine Verwendungsmöglichkeit für dieses Steuerelement ist für das Auswählen von Elementen aus eine alphabetisch sortierte Liste von Namen.  
@@ -28,5 +28,6 @@ Die Windows-Formulare <xref:System.Windows.Forms.DomainUpDown> Steuerelement ist
  Dieses Steuerelement zeigt nur Textzeichenfolgen. Wenn Sie verwenden möchten, in dem numerische Werte angezeigt, verwenden Sie die <xref:System.Windows.Forms.NumericUpDown> Steuerelement. Weitere Informationen finden Sie unter [Übersicht über das NumericUpDown-Steuerelement](numericupdown-control-overview-windows-forms.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DomainUpDown>
 - [DomainUpDown-Steuerelement](domainupdown-control-windows-forms.md)

@@ -2,15 +2,15 @@
 title: Verteilte Transaktionen
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
-ms.openlocfilehash: 002ed52b0f760376e813b15d0344a349da669f4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150201"
 ---
 # <a name="distributed-transactions"></a>Verteilte Transaktionen
-Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgaben, die entweder in ihrer Gesamtheit erfolgreich abgeschlossen werden (Commit) oder nicht (Abort). Ein *verteilte Transaktion* ist eine Transaktion, die sich auf verschiedene Ressourcen auswirkt. Damit ein Commit einer verteilten Transaktion erfolgreich ausgeführt werden kann, müssen alle Beteiligten gewährleisten, dass jede vorgenommene Datenänderung dauerhaft ist. Änderungen müssen auch im Fall von Systemausfällen oder anderen unvorhergesehenen Ereignissen dauerhaft sein. Sobald auch nur ein Beteiligter dies nicht gewährleisten kann, kann die gesamte Transaktion nicht ausgeführt werden, und sämtliche im Zuge der Transaktion durchgeführten Datenänderungen werden in einem Rollback zurückgenommen.  
+Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgaben, die entweder in ihrer Gesamtheit erfolgreich abgeschlossen werden (Commit) oder nicht (Abort). Ein *verteilte Transaktion* ist eine Transaktion, die sich auf verschiedene Ressourcen auswirkt. Damit ein Commit einer verteilten Transaktion erfolgreich ausgeführt werden kann, müssen alle Beteiligten gewährleisten, dass jede vorgenommene Datenänderung dauerhaft ist. Änderungen müssen auch im Fall von Systemausfällen oder anderen unvorhergesehenen Ereignissen dauerhaft sein. Sobald auch nur ein Beteiligter dies nicht gewährleisten kann, kann die gesamte Transaktion nicht ausgeführt werden, und sämtliche im Zuge der Transaktion durchgeführten Datenänderungen werden in einem Rollback zurückgenommen.  
   
 > [!NOTE]
 >  Wenn Sie versuchen, einen Commit oder Rollback für eine Transaktion auszuführen, wenn ein `DataReader` gestartet wird und die Transaktion aktiv ist, wird eine Ausnahme ausgelöst.  
@@ -39,7 +39,7 @@ Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgabe
 >  Nachdem eine Verbindung ausdrücklich in eine Transaktion eingetragen wurde, kann sie solange nicht ausgetragen oder in eine andere Transaktion eingetragen werden, bis die erste Transaktion beendet wurde.  
   
 > [!CAUTION]
->  Die `EnlistTransaction`-Methode löst eine Ausnahme aus, wenn die Verbindung bereits mithilfe ihrer <xref:System.Data.Common.DbConnection.BeginTransaction%2A>-Methode eine Transaktion begonnen hat. Wenn es sich bei der Transaktion jedoch um eine lokale Transaktion handelt, die an der Datenquelle begonnen wurde (z. B. die explizite Ausführung der BEGIN TRANSACTION-ANWEISUNG mithilfe eines <xref:System.Data.SqlClient.SqlCommand>), führt die `EnlistTransaction`-Methode einen Rollback der lokalen Transaktion durch und trägt sich selbst wie angefordert in die vorhandene verteilte Transaktion ein. Sie werden nicht über den Rollback der lokalen Transaktion benachrichtigt und müssen nicht begonnene lokale Transaktionen mithilfe der <xref:System.Data.Common.DbConnection.BeginTransaction%2A>-Methode verwalten. Wenn Sie den .NET Framework-Datenanbieter für SQL Server (`SqlClient`) mit SQL Server verwenden, wird beim Eintragen eine Ausnahme ausgelöst. Alle anderen Fälle bleiben unerkannt.  
+>  `EnlistTransaction` löst eine Ausnahme aus, wenn die Verbindung mithilfe der Verbindungs eine Transaktion bereits begonnen wurde <xref:System.Data.Common.DbConnection.BeginTransaction%2A> Methode. Wenn es sich bei der Transaktion jedoch um eine lokale Transaktion handelt, die an der Datenquelle begonnen wurde (z. B. die explizite Ausführung der BEGIN TRANSACTION-ANWEISUNG mithilfe eines <xref:System.Data.SqlClient.SqlCommand>), führt die `EnlistTransaction`-Methode einen Rollback der lokalen Transaktion durch und trägt sich selbst wie angefordert in die vorhandene verteilte Transaktion ein. Sie werden nicht über den Rollback der lokalen Transaktion benachrichtigt und müssen nicht begonnene lokale Transaktionen mithilfe der <xref:System.Data.Common.DbConnection.BeginTransaction%2A>-Methode verwalten. Wenn Sie den .NET Framework-Datenanbieter für SQL Server (`SqlClient`) mit SQL Server verwenden, wird beim Eintragen eine Ausnahme ausgelöst. Alle anderen Fälle bleiben unerkannt.  
   
 ## <a name="promotable-transactions-in-sql-server"></a>Heraufstufbare Transaktionen in SQL Server  
  SQL Server unterstützt heraufstufbare Transaktionen, bei denen eine lokale kompakte Transaktion nur bei Bedarf automatisch zu einer verteilten Transaktion heraufgestuft werden kann. Eine heraufstufbare Transaktion ruft den zusätzlichen Aufwand einer verteilten Transaktion nur hervor, wenn dieser erforderlich ist. Weitere Informationen und ein Codebeispiel finden Sie [System.Transactions-Integration in SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md).  
@@ -48,6 +48,7 @@ Bei einer Transaktion handelt es sich u. a. um mehrere zusammenhängende Aufgabe
  Möglicherweise müssen Sie MS DTC über das Netzwerk aktivieren, um verteilte Transaktionen zu verwenden. Wenn die Windows-Firewall aktiviert ist, müssen Sie dem MS DTC-Dienst die Erlaubnis erteilen, das Netzwerk zu verwenden, oder den MS DTC-Port öffnen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [System.Transactions-Integration in SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

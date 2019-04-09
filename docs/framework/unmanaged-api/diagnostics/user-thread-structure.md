@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: acc4da79796e975d349d1cb33c301c25c4791cb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11551221732e454e48111d48d60ca9b72f7f9b66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127154"
 ---
 # <a name="userthread-structure"></a>USER_THREAD-Struktur
 Enthält Informationen für einen Debugger über einen Thread. Weitere Informationen finden Sie unter den [INotifySource2:: SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) Methode.  
@@ -49,5 +49,6 @@ typedef struct tagUSER_THREAD
  **Header:** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [SetNotifyFilter-Methode](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)
 - [Diagnosesymbolspeicher-Strukturen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 58aab611-7e6f-4749-b983-28ab7ae87dbe
-ms.openlocfilehash: 31bd23d854afd10d0c292042ac3963978de5fd4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 759b2f36f9d38cdac0cfe4ff8e451b38012493e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143831"
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a>"DbConnection", "DbCommand" und "DbException"
 Wenn Sie eine <xref:System.Data.Common.DbProviderFactory> und eine <xref:System.Data.Common.DbConnection> erstellt haben, können Sie mithilfe von Befehlen und Datenlesern Daten aus der Datenquelle abrufen.  
   
 ## <a name="retrieving-data-example"></a>Abrufen eines Datenbeispiels  
- In diesem Beispiel wird ein `DbConnection`-Objekt als Argument verwendet. Zum Auswählen der Daten aus der <legacyBold>Categories</legacyBold>-Tabelle wird ein <xref:System.Data.Common.DbCommand> erstellt. Dazu wird der <xref:System.Data.Common.DbCommand.CommandText%2A> auf eine SQL SELECT-Anweisung gesetzt. Der Code geht davon aus, dass die <legacyBold>Categories</legacyBold>-Tabelle in der Datenquelle vorhanden ist. Die Verbindung wird geöffnet, und die Daten werden mit einem <xref:System.Data.Common.DbDataReader> abgerufen.  
+ In diesem Beispiel wird ein `DbConnection`-Objekt als Argument verwendet. Zum Auswählen der Daten aus der &lt;legacyBold&gt;Categories&lt;/legacyBold&gt;-Tabelle wird ein <xref:System.Data.Common.DbCommand> erstellt. Dazu wird der <xref:System.Data.Common.DbCommand.CommandText%2A> auf eine SQL SELECT-Anweisung gesetzt. Der Code geht davon aus, dass die &lt;legacyBold&gt;Categories&lt;/legacyBold&gt;-Tabelle in der Datenquelle vorhanden ist. Die Verbindung wird geöffnet, und die Daten werden mit einem <xref:System.Data.Common.DbDataReader> abgerufen.  
   
  [!code-csharp[DataWorks DbProviderFactories.DbCommandData#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbCommandData/CS/source.cs#1)]
  [!code-vb[DataWorks DbProviderFactories.DbCommandData#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbCommandData/VB/source.vb#1)]  
   
 ## <a name="executing-a-command-example"></a>Ausführen eines Befehlsbeispiels  
- In diesem Beispiel wird ein `DbConnection`-Objekt als Argument verwendet. Wenn die `DbConnection` gültig ist, wird die Verbindung geöffnet, und es wird ein <xref:System.Data.Common.DbCommand> erstellt und ausgeführt. Der <xref:System.Data.Common.DbCommand.CommandText%2A> wird auf eine SQL INSERT-Anweisung gesetzt, die in der <legacyBold>Categories</legacyBold>-Tabelle der <legacyBold>Northwind</legacyBold>-Datenbank eine Einfügung vornimmt. Der Code geht davon aus, dass die <legacyBold>Northwind</legacyBold>-Datenbank in der Datenquelle vorhanden und die in der INSERT-Anweisung verwendete SQL-Syntax für den angegebenen Anbieter gültig ist. Fehler, die in der Datenquelle auftreten, werden vom <xref:System.Data.Common.DbException>-Codeblock behandelt, alle anderen Ausnahmen im <xref:System.Exception>-Block.  
+ In diesem Beispiel wird ein `DbConnection`-Objekt als Argument verwendet. Wenn die `DbConnection` gültig ist, wird die Verbindung geöffnet, und es wird ein <xref:System.Data.Common.DbCommand> erstellt und ausgeführt. Der <xref:System.Data.Common.DbCommand.CommandText%2A> wird auf eine SQL INSERT-Anweisung gesetzt, die in der &lt;legacyBold&gt;Categories&lt;/legacyBold&gt;-Tabelle der &lt;legacyBold&gt;Northwind&lt;/legacyBold&gt;-Datenbank eine Einfügung vornimmt. Der Code geht davon aus, dass die Northwind-Datenbank in der Datenquelle vorhanden und die in der INSERT-Anweisung verwendete SQL-Syntax für den angegebenen Anbieter gültig ist. Fehler, die in der Datenquelle auftreten, werden vom <xref:System.Data.Common.DbException>-Codeblock behandelt, alle anderen Ausnahmen im <xref:System.Exception>-Block.  
   
  [!code-csharp[DataWorks DbProviderFactories.DbCommand#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbCommand/CS/source.cs#1)]
  [!code-vb[DataWorks DbProviderFactories.DbCommand#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbCommand/VB/source.vb#1)]  
@@ -64,7 +64,8 @@ finally
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Abrufen einer DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
-- [Ändern von Daten mit DbDataAdapter](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
+- [Abrufen einer "DbProviderFactory"](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
+- [Ändern von Daten mit "DbDataAdapter"](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

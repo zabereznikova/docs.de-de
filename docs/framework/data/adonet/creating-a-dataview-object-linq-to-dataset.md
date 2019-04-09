@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: 3f53c9889e1fdae6c582e8d4a17f640e425e6594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121653"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Erstellen eines DataView-Objekts (LINQ to DataSet)
 Es gibt zwei Möglichkeiten, im <xref:System.Data.DataView>-Kontext eine [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zu erstellen. Sie können das <xref:System.Data.DataView>-Objekt auf der Grundlage einer [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Abfrage einer <xref:System.Data.DataTable> erstellen, oder Sie können es auf der Grundlage einer typisierten oder nicht typisierten <xref:System.Data.DataTable> erstellen. In beiden Fällen erstellen Sie die <xref:System.Data.DataView> mithilfe eines der <xref:System.Data.DataTableExtensions.AsDataView%2A> Erweiterungsmethoden. <xref:System.Data.DataView> konstruierbar ist; nicht direkt in die [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Kontext.  
   
  Nachdem die <xref:System.Data.DataView> erstellt wurde, können Sie sie an ein Benutzeroberflächensteuerelement in einer Windows Forms-Anwendung oder einer ASP.NET-Anwendung binden oder die Filter- und Sortiereinstellungen ändern.  
   
- <xref:System.Data.DataView> erstellt einen Index, der bei Operationen, die diesen Index einsetzen können, wie beim Filtern und Sortieren, zu beträchtlichen Leistungssteigerungen führt. Der Index für eine <xref:System.Data.DataView> wird sowohl dann generiert, wenn die <xref:System.Data.DataView> erstellt wird, als auch dann, wenn Änderungen an den Sortier- oder Filterinformationen vorgenommen werden. Wenn Sie eine <xref:System.Data.DataView> erstellen, ohne gleich auch die Sortier- und Filterinformationen festzulegen, wird der Index mindestens zweimal generiert: das erste Mal, wenn die <xref:System.Data.DataView> erstellt wird, und das zweite Mal, sobald eine der Sortier- oder Filtereigenschaften geändert wird.  
+ <xref:System.Data.DataView> erstellt einen Index, erheblich die Leistung von Vorgängen erhöht wird, die den Index, z. B. Filtern und Sortieren verwenden kann. Der Index für eine <xref:System.Data.DataView> wird sowohl dann generiert, wenn die <xref:System.Data.DataView> erstellt wird, als auch dann, wenn Änderungen an den Sortier- oder Filterinformationen vorgenommen werden. Wenn Sie eine <xref:System.Data.DataView> erstellen, ohne gleich auch die Sortier- und Filterinformationen festzulegen, wird der Index mindestens zweimal generiert: das erste Mal, wenn die <xref:System.Data.DataView> erstellt wird, und das zweite Mal, sobald eine der Sortier- oder Filtereigenschaften geändert wird.  
   
  Weitere Informationen zu filtern und Sortieren mit <xref:System.Data.DataView>, finden Sie unter [Filtern mit DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) und [Sortieren mit DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
   
@@ -58,12 +58,12 @@ Es gibt zwei Möglichkeiten, im <xref:System.Data.DataView>-Kontext eine [!INCLU
 ## <a name="creating-a-dataview-from-a-datatable"></a>Erstellen einer "DataView" aus einer "DataTable"  
  Zusätzlich zu erstellenden aus eine [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Abfrage eine <xref:System.Data.DataView> Objekt kann erstellt werden, aus einer <xref:System.Data.DataTable> mithilfe der <xref:System.Data.DataTableExtensions.AsDataView%2A> Methode.  
   
- Im folgenden Beispiel wird eine <xref:System.Data.DataView> auf der Grundlage der <legacyBold>SalesOrderDetail</legacyBold>-Tabelle erstellt und dann als Datenquelle eines <xref:System.Windows.Forms.BindingSource>-Objekts festgelegt. Dieses Objekt fungiert als Proxy für ein <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
+ Im folgenden Beispiel wird eine <xref:System.Data.DataView> auf der Grundlage der &lt;legacyBold&gt;SalesOrderDetail&lt;/legacyBold&gt;-Tabelle erstellt und dann als Datenquelle eines <xref:System.Windows.Forms.BindingSource>-Objekts festgelegt. Dieses Objekt fungiert als Proxy für ein <xref:System.Windows.Forms.DataGridView>-Steuerelement.  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromTable](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromtable)]
  [!code-vb[DP DataView Samples#CreateLDVFromTable](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromtable)]  
   
- Nachdem die <xref:System.Data.DataView> auf der Grundlage einer <xref:System.Data.DataTable> erstellt wurde, können Filter- und Sortiereigenschaften für sie festgelegt werden. Im folgenden Beispiel wird eine <xref:System.Data.DataView> auf der Grundlage der <legacyBold>Contact</legacyBold>-Tabelle erstellt und dann die <xref:System.Data.DataView.Sort%2A>-Eigenschaft so eingerichtet, dass die Nachnamen in aufsteigender und dann die Vornamen in absteigender Reihenfolge sortiert werden:  
+ Nachdem die <xref:System.Data.DataView> auf der Grundlage einer <xref:System.Data.DataTable> erstellt wurde, können Filter- und Sortiereigenschaften für sie festgelegt werden. Im folgenden Beispiel wird eine <xref:System.Data.DataView> auf der Grundlage der Contact<xref:System.Data.DataView.Sort%2A>-Tabelle erstellt und dann die -Eigenschaft so eingerichtet, dass die Nachnamen in aufsteigender und dann die Vornamen in absteigender Reihenfolge sortiert werden:  
   
  [!code-csharp[DP DataView Samples#LDVStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvstringsort)]
  [!code-vb[DP DataView Samples#LDVStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvstringsort)]  
@@ -71,6 +71,7 @@ Es gibt zwei Möglichkeiten, im <xref:System.Data.DataView>-Kontext eine [!INCLU
  Wenn die <xref:System.Data.DataView.RowFilter%2A> auf der Grundlage einer Abfrage erstellt wurde, kommt es jedoch beim Einrichten der Eigenschaft <xref:System.Data.DataView.Sort%2A> bzw. <xref:System.Data.DataView> zu einem Leistungsabfall, weil <xref:System.Data.DataView> einen Index generiert, um die Filter- und Sortieroperationen zu unterstützen. Wenn Sie die Eigenschaft <xref:System.Data.DataView.RowFilter%2A> oder <xref:System.Data.DataView.Sort%2A> festlegen, wird der Index für die Daten neu erstellt, wodurch zusätzlicher Verwaltungsmehraufwand für die Anwendung entsteht und die Arbeitsgeschwindigkeit verringert wird. Es ist daher empfehlenswert, die Filter- und Sortierinformationen schon beim Erstellen der <xref:System.Data.DataView> einzurichten und nachträgliche Änderungen zu vermeiden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Datenbindung und LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)
 - [Filtern mit DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)
 - [Sortieren mit DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)

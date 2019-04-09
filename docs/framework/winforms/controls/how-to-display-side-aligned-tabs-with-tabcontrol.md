@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anzeigen von seitlich ausgerichteten Registerkarten mit TabControl-Steuerelement'
+title: 'Vorgehensweise: Anzeigen von seitlich ausgerichteten Registerkarten mit TabControl'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - tabs [Windows Forms], displaying side-aligned tabs
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
-ms.openlocfilehash: 8715cb1a1f0d5795afc4003afcecdb3fb89912c3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ce0c7d48f053094d0026348fea8221ea80ccca59
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705185"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142895"
 ---
-# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Vorgehensweise: Anzeigen von seitlich ausgerichteten Registerkarten mit TabControl-Steuerelement
+# <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>Vorgehensweise: Anzeigen von seitlich ausgerichteten Registerkarten mit TabControl
 Die <xref:System.Windows.Forms.TabControl.Alignment%2A>-Eigenschaft des <xref:System.Windows.Forms.TabControl> unterstützt das vertikale Anzeigen von Registerkarten (entlang des linken oder rechten Rands des Steuerelements), im Gegensatz zu horizontal (am oberen oder unteren Rand des Steuerelements). Standardmäßig führt diese vertikale Anzeige zu einer wenig benutzerfreundlichen Oberfläche, weil die <xref:System.Windows.Forms.TabPage.Text%2A>-Eigenschaft des <xref:System.Windows.Forms.TabPage>-Objekts nicht auf der Registerkarte angezeigt wird, wenn visuelle Stile aktiviert sind. Es ist außerdem keine direkte Möglichkeit zur Steuerung der Richtung des Texts auf der Registerkarte. Sie können Ownerdrawn in <xref:System.Windows.Forms.TabControl> verwenden, um die Oberfläche zu verbessern.  
   
- Das folgende Verfahren zeigt, wie rechtsbündig ausgerichtete Registerkarten gerendert werden, wobei der Registerkartentext von links nach rechts verläuft, indem Sie die Funktion "Ownerdrawn" verwenden.  
+ Das folgende Verfahren zeigt, wie rechtsbündig ausgerichtete Registerkarten gerendert werden, wobei der Registerkartentext von links nach rechts verläuft, indem Sie die Funktion „Ownerdrawn“ verwenden.  
   
 ### <a name="to-display-right-aligned-tabs"></a>So zeigen Sie rechtsbündig ausgerichtete Registerkarten an  
   
-1.  Fügen Sie Ihrem Formular ein <xref:System.Windows.Forms.TabControl> hinzu.  
+1.  Fügen Sie Ihrem Formular einen <xref:System.Windows.Forms.TabControl> hinzu.  
   
-2.  Legen Sie die <xref:System.Windows.Forms.TabControl.Alignment%2A>-Eigenschaft auf <xref:System.Windows.Forms.TabAlignment.Right> fest.  
+2.  Legen Sie die <xref:System.Windows.Forms.TabControl.Alignment%2A> -Eigenschaft auf <xref:System.Windows.Forms.TabAlignment.Right>fest.  
   
 3.  Legen Sie die <xref:System.Windows.Forms.TabControl.SizeMode%2A>-Eigenschaft auf <xref:System.Windows.Forms.TabSizeMode.Fixed> fest, damit alle Registerkarten gleich breit sind.  
   
@@ -33,7 +33,7 @@ Die <xref:System.Windows.Forms.TabControl.Alignment%2A>-Eigenschaft des <xref:Sy
   
      Für ein optimales Ergebnis mit dem folgenden Codebeispiel legen Sie die <xref:System.Drawing.Size.Width%2A> der Registerkarten auf 25 und die <xref:System.Drawing.Size.Height%2A> auf 100 fest.  
   
-5.  Legen Sie die <xref:System.Windows.Forms.TabControl.DrawMode%2A>-Eigenschaft auf <xref:System.Windows.Forms.TabDrawMode.OwnerDrawFixed> fest.  
+5.  Legen Sie die <xref:System.Windows.Forms.TabControl.DrawMode%2A> -Eigenschaft auf <xref:System.Windows.Forms.TabDrawMode.OwnerDrawFixed>fest.  
   
 6.  Definieren Sie einen Ereignishandler für das <xref:System.Windows.Forms.TabControl.DrawItem>-Ereignis des <xref:System.Windows.Forms.TabControl>, das den Text von links nach rechts rendert.  
   
@@ -41,4 +41,5 @@ Die <xref:System.Windows.Forms.TabControl.Alignment%2A>-Eigenschaft des <xref:Sy
      [!code-vb[TabControl.RightAlignedTabs#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/TabControl.RightAlignedTabs/VB/Form1.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [TabControl-Steuerelement](tabcontrol-control-windows-forms.md)

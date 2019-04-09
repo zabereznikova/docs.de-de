@@ -11,12 +11,12 @@ helpviewer_keywords:
 - linear gradient brush [WPF]
 - typography [WPF], outline effects
 ms.assetid: 4aa3cf6e-1953-4f26-8230-7c1409e5f28d
-ms.openlocfilehash: 5de1068401dac61c5de5b86604da9417e18a94ae
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 237bdc097cd2a3fbfff6dd79bce401c2d091e211
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125940"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162227"
 ---
 # <a name="how-to-create-outlined-text"></a>Vorgehensweise: Erstellen von Text mit Kontur
 In den meisten Fällen, wenn Sie Textzeichenfolgen in Verzierung Hinzufügen Ihrer [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -Anwendung können Sie Text im Hinblick auf eine Auflistung von diskreten Zeichen oder Symbole verwenden. Beispielsweise Sie Pinsels mit linearem Farbverlauf zu erstellen und anwenden, können die <xref:System.Windows.Controls.Control.Foreground%2A> Eigenschaft eine <xref:System.Windows.Controls.TextBox> Objekt. Wenn Sie anzeigen oder bearbeiten das Textfeld ein, wird Pinsels mit linearem Farbverlauf automatisch auf den aktuellen Satz von Zeichen in der Textzeichenfolge angewendet.  
@@ -55,4 +55,5 @@ In den meisten Fällen, wenn Sie Textzeichenfolgen in Verzierung Hinzufügen Ihr
   Die Quelle des Objekts Beispiel benutzerdefiniertes Steuerelement, finden Sie unter [OutlineTextControl.cs für C# ](https://github.com/dotnet/samples/blob/master/snippets/csharp/VS_Snippets_Wpf/OutlineTextControlViewer/CSharp/OutlineTextControl.cs) und [OutlineTextControl.vb für Visual Basic](https://github.com/dotnet/samples/blob/master/snippets/visualbasic/VS_Snippets_Wpf/OutlineTextControlViewer/visualbasic/outlinetextcontrol.vb). 
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Zeichnen von formatiertem Text](drawing-formatted-text.md)

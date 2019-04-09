@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Darstellen von Spalten als datenbankgeneriert'
 ms.date: 03/30/2017
 ms.assetid: 6524b8a6-e5d2-4a3b-8e08-beafc4a84fd2
-ms.openlocfilehash: 572da93c216694b496dc5220af66bc00229ccd00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2fca0c2fb1d28b5e83902f8664d1c7331774718b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148251"
 ---
 # <a name="how-to-represent-columns-as-database-generated"></a>Vorgehensweise: Darstellen von Spalten als datenbankgeneriert
 Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> Eigenschaft für die <xref:System.Data.Linq.Mapping.ColumnAttribute> Attribut, um ein Feld oder eine Eigenschaft als Darstellung einer datenbankgenerierten Spalte zu bestimmen.  
@@ -21,5 +21,6 @@ Verwenden der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)
 2.  Legen Sie den Wert der Eigenschaft auf `true` fest.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Das LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
 - [Vorgehensweise: Anpassen von Entitätsklassen mit dem Code-Editor](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: b98735b111d634584ec019a75d942f39e38cc8c5
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101132"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients
 > [!NOTE]
@@ -34,47 +34,48 @@ ms.locfileid: "57679579"
   
 |Steuerelementtyp|Unterstützt|Bedingte Unterstützung|Nicht unterstützt|  
 |------------------|---------------|-------------------------|-------------------|  
-|Schaltfläche|Keine|Aufrufen, Ein-/ausschalten, Erweitern Reduzieren|Keine|  
+|Schaltfläche|Keiner|Aufrufen, Ein-/ausschalten, Erweitern Reduzieren|Keiner|  
 |Kalender|Raster, Tabelle|Auswahl, Scroll|Wert|  
-|Kontrollkästchen|Ein-/ausschalten|Keine|Keine|  
+|Kontrollkästchen|Ein-/ausschalten|Keiner|Keiner|  
 |Kombinationsfeld|Erweitern Reduzieren|Auswahl, Wert|Scroll|  
-|DataGrid|Raster|Scroll, Auswahl, Tabelle|Keine|  
-|Datenelement|SelectionItem|Erweitern Reduzieren, Rasterelement, Scroll-Element, Tabelle, Ein-/ausschalten, Wert|Keine|  
-|Dokument|Text|Scroll, Wert|Keine|  
-|Bearbeiten|Keine|Text, Bereichswert, Wert|Keine|  
-|Gruppieren|Keine|Erweitern Reduzieren|Keine|  
-|Header|Keine|Transformation|Keine|  
-|Headerelement|Keine|Transformation, Aufrufen|Keine|  
-|Link|Aufrufen|Wert|Keine|  
-|Bild|Keine|Rasterelement, Tabellenelement|Aufrufen, Auswahlelement|  
-|Liste|Keine|Raster, mehrere Ansichten, Scroll, Auswahl|Tabelle|  
-|Listenelement|SelectionItem|Erweitern Reduzieren, Rasterelement, Aufrufen, Ein-/ausschalten, Wert|Keine|  
-|Menü|Keine|Keiner|Keine|  
-|Menüleiste|Keine|Erweitern Reduzieren, Andocken, Transformation|Keine|  
-|Menübefehl|Keine|Erweitern Reduzieren, Aufrufen, Auswahlelement, Ein-/ausschalten|Keine|  
-|Bereich|Keine|Andocken Scroll, Transformation|Fenster|  
-|Statusanzeige|Keine|Bereichswert, Wert|Keine|  
-|Radio Button|SelectionItem|Keine|Ein-/ausschalten|  
-|Bildlaufleiste|Keine|Bereichswert|Scroll|  
-|Trennzeichen|Keine|Keiner|Keine|  
-|Slider|Keine|Bereichswert, Auswahl, Wert|Keine|  
-|Spinner|Keine|Bereichswert, Auswahl, Wert|Keine|  
-|Unterteilte Schaltfläche|Aufrufen, Erweitern Reduzieren|Keine|Keine|  
-|Statusleiste|Keine|Raster|Keine|  
-|Registerkarte|Auswahl|Scroll|Keine|  
-|TabItem|SelectionItem|Keine|Aufrufen|  
-|Tabelle|Raster, Rasterelement, Tabelle, Tabellenelement|Keine|Keine|  
-|Text|Keine|Rasterelement, Tabellenelement, Text|Wert|  
-|Ziehpunkt|Transformation|Keine|Keine|  
-|Titelleiste|Keine|Keiner|Keine|  
-|Symbolleiste|Keine|Andocken, Erweitern Reduzieren, Transformation|Keine|  
-|QuickInfo|Keine|Text, Fenster|Keine|  
-|Struktur|Keine|Scroll, Auswahl|Keine|  
-|Strukturelement|Erweitern Reduzieren|Aufrufen, Scroll-Element, Auswahlelement, Ein-/ausschalten|Keine|  
-|Fenster|Transformation, Fenster|Andocken|Keine|  
+|DataGrid|Raster|Scroll, Auswahl, Tabelle|Keiner|  
+|Datenelement|SelectionItem|Erweitern Reduzieren, Rasterelement, Scroll-Element, Tabelle, Ein-/ausschalten, Wert|Keiner|  
+|Dokument|Text|Scroll, Wert|Keiner|  
+|Bearbeiten|Keiner|Text, Bereichswert, Wert|Keiner|  
+|Gruppieren|Keiner|Erweitern Reduzieren|Keiner|  
+|Header|Keiner|Transformation|Keiner|  
+|Headerelement|Keiner|Transformation, Aufrufen|Keiner|  
+|Link|Aufrufen|Wert|Keiner|  
+|Bild|Keiner|Rasterelement, Tabellenelement|Aufrufen, Auswahlelement|  
+|Liste|Keiner|Raster, mehrere Ansichten, Scroll, Auswahl|Tabelle|  
+|Listenelement|SelectionItem|Erweitern Reduzieren, Rasterelement, Aufrufen, Ein-/ausschalten, Wert|Keiner|  
+|Menü|Keiner|Keiner|Keiner|  
+|Menüleiste|Keiner|Erweitern Reduzieren, Andocken, Transformation|Keiner|  
+|Menübefehl|Keiner|Erweitern Reduzieren, Aufrufen, Auswahlelement, Ein-/ausschalten|Keiner|  
+|Bereich|Keiner|Andocken Scroll, Transformation|Fenster|  
+|Statusanzeige|Keiner|Bereichswert, Wert|Keiner|  
+|Radio Button|SelectionItem|Keiner|Ein-/ausschalten|  
+|Bildlaufleiste|Keiner|Bereichswert|Scroll|  
+|Trennzeichen|Keiner|Keiner|Keiner|  
+|Slider|Keiner|Bereichswert, Auswahl, Wert|Keiner|  
+|Spinner|Keiner|Bereichswert, Auswahl, Wert|Keiner|  
+|Unterteilte Schaltfläche|Aufrufen, Erweitern Reduzieren|Keiner|Keiner|  
+|Statusleiste|Keiner|Raster|Keiner|  
+|Registerkarte|Auswahl|Scroll|Keiner|  
+|TabItem|SelectionItem|Keiner|Aufrufen|  
+|Tabelle|Raster, Rasterelement, Tabelle, Tabellenelement|Keiner|Keiner|  
+|Text|Keiner|Rasterelement, Tabellenelement, Text|Wert|  
+|Ziehpunkt|Transformation|Keiner|Keiner|  
+|Titelleiste|Keiner|Keiner|Keiner|  
+|Symbolleiste|Keiner|Andocken, Erweitern Reduzieren, Transformation|Keiner|  
+|QuickInfo|Keiner|Text, Fenster|Keiner|  
+|Struktur|Keiner|Scroll, Auswahl|Keiner|  
+|Strukturelement|Erweitern Reduzieren|Aufrufen, Scroll-Element, Auswahlelement, Ein-/ausschalten|Keiner|  
+|Fenster|Transformation, Fenster|Andocken|Keiner|  
   
 > [!NOTE]
 >  Wenn für einen Steuerelementtyp keine unterstützten Steuerelementmuster aufgeführt sind, es aber über mindestens ein bedingt unterstütztes Steuerelementmuster verfügt, dann wird eines dieser bedingten Steuerelementmuster jederzeit unterstützt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-overview.md)

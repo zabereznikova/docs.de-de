@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7bb78b05be7b3edc4471bc276010eabd92a07a14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58050596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145235"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>Systeminterner x:Code-XAML-Typ
 Ermöglicht die Platzierung von Code innerhalb einer XAML-Produktion. Dieser Code kann entweder von einer Implementierung der XAML-Prozessor kompiliert werden, die XAML, oder von links in der XAML-Produktion zur späteren Verwendung für z.B. Interpretation von einer Runtime kompiliert wird.  
@@ -49,6 +49,7 @@ Ermöglicht die Platzierung von Code innerhalb einer XAML-Produktion. Dieser Cod
 -   Verweise auf Entitäten außerhalb der partiellen Klasse CLR-Namespace müssen alle vollqualifiziert sein. Wenn Mitglieder, die deklariert wird, überschreibungen, um die partielle Klasse überschreibbare Member sind, muss dies mit dem sprachspezifischen Override-Schlüsselwort angegeben werden. Wenn Sie im Member deklariert `x:Code` Bereich in Konflikt mit Membern der partiellen Klasse aus dem XAML erstellt, so, dass der Compiler den Konflikt, meldet die XAML-Datei kann nicht kompiliert oder geladen.  
   
 ## <a name="see-also"></a>Siehe auch
-- [x:Class-Anweisung](x-class-directive.md)
+
+- [x:Class-Direktive](x-class-directive.md)
 - [Code-Behind und XAML in WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [Übersicht über XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)

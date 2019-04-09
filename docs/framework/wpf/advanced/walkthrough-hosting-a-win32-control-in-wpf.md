@@ -8,19 +8,18 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 13845eb662064e0ac1db913bedc0b21214292db5
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412317"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160692"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Exemplarische Vorgehensweise: Hosten eines Win32-Steuerelements in WPF
 Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erstellen von Anwendungen. Jedoch wenn Sie eine erhebliche Investition in Win32-Code verfügen, es möglicherweise effektiver sein, mindestens einige wiederzuverwenden, Programmieren Sie in der WPF-Anwendung anstatt ihn vollständig neu zu schreiben. WPF bietet ein einfaches Verfahren zum Hosten eines Win32-Fensters, in einer WPF-Seite.  
   
  Dieses Thema führt Sie durch eine Anwendung, [Hosten eines Win32-ListBox-Steuerelements in WPF-Beispiel](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control), ein Listenfeld, das Win32-Hosts zu steuern. Dieses allgemeine Verfahren kann erweitert werden, für das Hosten von jeder Win32-Fensters.  
-  
-  
+
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Anforderungen  
  In diesem Thema wird davon ausgegangen, sowohl WPF als auch Windows-API-Programmierung vertraut sind. Eine grundlegende Einführung in WPF-Programmierung, finden Sie unter [Einstieg](../getting-started/index.md). Eine Einführung in Windows-API programmieren, finden Sie in zahlreichen Büchern zu diesem Thema, insbesondere *Programming Windows* von Charles Petzold.  
@@ -154,6 +153,7 @@ Windows Presentation Foundation (WPF) bietet eine umfangreiche Umgebung zum Erst
  Legen Sie schließlich `handled` zu `true` , um anzugeben, dass die Nachricht verarbeitet wurde.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Interop.HwndHost>
 - [Interaktion zwischen WPF und Win32](wpf-and-win32-interoperation.md)
-- [Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

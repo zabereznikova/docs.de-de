@@ -2,20 +2,20 @@
 title: Verwenden von System.Transactions in ASP.NET
 ms.date: 03/30/2017
 ms.assetid: 1982c300-7ea6-4242-95ed-dc28ccfacac9
-ms.openlocfilehash: 96ec8481bd43702058a435ab480a7e9d6a868072
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: df9a9f1878b2268d1d6bc3d9b05d0ad8d7bcc3f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093332"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134580"
 ---
 # <a name="using-systemtransactions-in-aspnet"></a>Verwenden von System.Transactions in ASP.NET
 In diesem Thema wird beschrieben, wie Sie <xref:System.Transactions> erfolgreich in einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung verwenden können.  
   
 ## <a name="enable-distributedtransactionpermission-in-aspnet"></a>Aktivieren von DistributedTransactionPermission in ASP.NET  
- <xref:System.Transactions> unterstützt teilweise vertrauenswürdige Aufrufer und wird mit dem **AllowPartiallyTrustedCallers** -Attribut (APTCA) markiert. Die Vertrauensebenen für <xref:System.Transactions> werden auf der Basis der Ressourcentypen (beispielsweise Systemspeicher, freigegebene prozessübergreifende Ressourcen, systemweite Ressourcen und andere Ressourcen) definiert, die <xref:System.Transactions> verfügbar macht, und auf der Basis der Vertrauensebene, die erforderlich sein soll, um auf diese Ressourcen zuzugreifen. In einer teilweise vertrauenswürdigen Umgebung kann eine nicht vollständig vertrauenswürdige Assembly Transaktionen nur innerhalb der Anwendungsdomäne nutzen (in diesem Fall ist die einzige geschützte Ressource der Systemspeicher), sofern ihr nicht die <xref:System.Transactions.DistributedTransactionPermission>erteilt wird.  
+ <xref:System.Transactions> unterstützt teilweise vertrauenswürdige Aufrufer und ist mit markiert die **AllowPartiallyTrustedCallers** -Attribut (APTCA). Die Vertrauensebenen für <xref:System.Transactions> werden auf der Basis der Ressourcentypen (beispielsweise Systemspeicher, freigegebene prozessübergreifende Ressourcen, systemweite Ressourcen und andere Ressourcen) definiert, die <xref:System.Transactions> verfügbar macht, und auf der Basis der Vertrauensebene, die erforderlich sein soll, um auf diese Ressourcen zuzugreifen. In einer teilweise vertrauenswürdigen Umgebung kann eine nicht vollständig vertrauenswürdige Assembly Transaktionen nur innerhalb der Anwendungsdomäne nutzen (in diesem Fall ist die einzige geschützte Ressource der Systemspeicher), sofern ihr nicht die <xref:System.Transactions.DistributedTransactionPermission>erteilt wird.  
   
- <xref:System.Transactions.DistributedTransactionPermission> wird immer dann gefordert, wenn die Transaktionsverwaltung eskaliert wird, um vom Microsoft Distributed Transaction Coordinator (MSDTC) verwaltet zu werden. Diese Art des Szenarios verwendet prozessübergreifende Ressourcen und insbesondere eine globale Ressource, bei der es sich um den reservierten Speicherplatz im MSDTC-Protokoll handelt. Ein Beispiel für diese Verwendung ist das Web-Front-End einer Datenbank oder Anwendung, die eine Datenbank nutzt, die zu den von ihr bereitgestellten Diensten gehört.  
+ <xref:System.Transactions.DistributedTransactionPermission> wird gefordert, wenn die transaktionsverwaltung eskaliert wird, von der Microsoft Distributed Transaction Coordinator (MSDTC) verwaltet werden. Diese Art des Szenarios verwendet prozessübergreifende Ressourcen und insbesondere eine globale Ressource, bei der es sich um den reservierten Speicherplatz im MSDTC-Protokoll handelt. Ein Beispiel für diese Verwendung ist das Web-Front-End einer Datenbank oder Anwendung, die eine Datenbank nutzt, die zu den von ihr bereitgestellten Diensten gehört.  
   
  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] verfügt über einen eigenen Satz Vertrauensebenen und ordnet diesen Vertrauensebenen über Richtliniendateien einen spezifischen Satz Berechtigungen zu. Weitere Informationen finden Sie unter [ASP.NET Trust Levels and Policy Files](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100)). Wenn Sie das Windows-SDK installieren, werden die [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Standardrichtliniendateien nicht <xref:System.Transactions.DistributedTransactionPermission>zugeordnet. Wenn Ihre Transaktion in einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Anwendung eskaliert wird, um vom MSDTC verwaltet zu werden, schlägt die Eskalation mit einer <xref:System.Security.SecurityException> fehl, sobald die <xref:System.Transactions.DistributedTransactionPermission>angefordert wird. Um die Transaktionseskalation in einer teilweise vertrauenswürdigen [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Umgebung zu ermöglichen, müssen Sie die <xref:System.Transactions.DistributedTransactionPermission> auf denselben Standardvertrauensebenen erteilen wie <xref:System.Data.SqlClient.SqlClientPermission>. Sie können entweder Ihre eigene benutzerdefinierte Vertrauensebene und Richtliniendatei konfigurieren, um die Eskalation zu ermöglichen, oder die Standardrichtliniendateien **Web_hightrust.config** und **Web_mediumtrust.config**ändern.  
   
@@ -60,6 +60,7 @@ In diesem Thema wird beschrieben, wie Sie <xref:System.Transactions> erfolgreich
  Weitere Informationen finden Sie unter [add-Element für zu kompilierende ((ASP.NET Einstellungsschema) Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/37e2zyhb(v=vs.100)).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ASP.NET Trust Levels and Policy Files](https://docs.microsoft.com/previous-versions/aspnet/wyts434y(v=vs.100))
-- [SecurityPolicy-Element ((ASP.NET Einstellungsschema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100))
+- [securityPolicy-Element (ASP.NET-Einstellungsschema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/zhs35b56(v=vs.100))
 - [Eskalation der Transaktionsverwaltung](../../../../docs/framework/data/transactions/transaction-management-escalation.md)

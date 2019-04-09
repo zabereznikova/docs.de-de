@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d5fe4c92f0d456942219bc3f7014f09a005aa5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494443"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107847"
 ---
 # <a name="choosing-a-transport"></a>Wählen eines Transports
 In diesem Thema erläutert die Kriterien für die Auswahl einer der drei Transportarten, die in Windows Communication Foundation (WCF) enthalten sind: HTTP, TCP und named Pipes. WCF enthält außerdem einen Message queuing (auch bekannt als MSMQ)-transport, aber in diesem Dokument wird das Message queuing nicht behandelt.  
@@ -52,8 +52,8 @@ In diesem Thema erläutert die Kriterien für die Auswahl einer der drei Transpo
   
 |Attribut|Beschreibung|Häufig verwendete Transporte|  
 |---------------|-----------------|------------------------|  
-|Diagnose|Die Diagnose ermöglicht es Ihnen, Probleme mit der Transportkonnektivität automatisch zu erkennen. Alle Transporte unterstützen die Fähigkeit, Fehlerinformationen zurückzusenden, die die Konnektivität beschreiben. WCF umfasst jedoch keine Diagnosetools zum Untersuchen von Netzwerkproblemen.|Keine|  
-|Hosting|Alle WCF-Endpunkte müssen innerhalb einer Anwendung gehostet werden. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] und ältere Versionen unterstützen nur Hostanwendungen, die den HTTP-Transport verwenden. Auf [!INCLUDE[wv](../../../../includes/wv-md.md)], Unterstützung hinzugefügt, für das Hosten von allen WCF-Transporte, die auch von TCP und named Pipes verwenden. Weitere Informationen finden Sie unter [Hosting in Internetinformationsdiensten](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) und [Hosten in Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
+|Diagnose|Die Diagnose ermöglicht es Ihnen, Probleme mit der Transportkonnektivität automatisch zu erkennen. Alle Transporte unterstützen die Fähigkeit, Fehlerinformationen zurückzusenden, die die Konnektivität beschreiben. WCF umfasst jedoch keine Diagnosetools zum Untersuchen von Netzwerkproblemen.|Keiner|  
+|Hosting|Alle WCF-Endpunkte müssen innerhalb einer Anwendung gehostet werden. [!INCLUDE[iis601](../../../../includes/iis601-md.md)] und ältere Versionen unterstützen nur hostanwendungen, die den HTTP-Transport verwenden. Auf [!INCLUDE[wv](../../../../includes/wv-md.md)], Unterstützung hinzugefügt, für das Hosten von allen WCF-Transporte, die auch von TCP und named Pipes verwenden. Weitere Informationen finden Sie unter [Hosting in Internetinformationsdiensten](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md) und [Hosten in Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).|HTTP|  
 |Inspektion|Die Inspektion ist die Fähigkeit, während der Übertragung Informationen aus Nachrichten zu extrahieren und zu verarbeiten. Das HTTP-Protokoll trennt Routing- und Steuerungsinformationen von den Daten, um das Erstellen von Tools zu vereinfachen, die Nachrichten untersuchen und analysieren. Transporte, die leicht zu überprüfen sind, erfordern ggf. auch weniger Verarbeitungsleistung in Netzwerkeinrichtungen. Die verwendete Sicherheitsebene wirkt sich darauf aus, ob Nachrichten überprüft werden können.|HTTP|  
 |Wartezeit|Die Wartezeit ist die Mindestmenge an Zeit, die erforderlich ist, um einen Austausch von Nachrichten durchzuführen. Alle Netzwerkvorgänge weisen je nach gewähltem Transport mehr oder weniger Wartezeit (Latenz) auf. Das Verwenden der Duplexkommunikation oder unidirektionalen Kommunikation mit einem Transport, der das systemeigene Nachrichtenaustauschmuster Anforderung/Antwort verwendet, zum Beispiel HTTP, kann zu einer längeren Wartezeit führen, da die Korrelation von Nachrichten erforderlich ist. Erwägen Sie in dieser Situation, einen Transport zu verwenden, der als systemeigenes Nachrichtenaustauschmuster Duplex verwendet, zum Beispiel TCP.|TCP, Named<br /><br /> Pipe|  
 |Reichweite|Die Reichweite eines Transports gibt an, in welchem Umfang der Transport eine Verbindung zu anderen Systemen herstellen kann. Der Transport mittels benannter Pipes besitzt nur eine geringe Reichweite. Er kann nur eine Verbindung zu Diensten herstellen, die auf dem gleichen Computer ausgeführt werden. Die Transportarten TCP und HTTP verfügen jeweils über eine ausgezeichnete Reichweite und können auch einige NAT- und Firewallkonfigurationen durchdringen. Weitere Informationen finden Sie unter [arbeiten mit NATs und Firewalls](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md).|HTTP, TCP|  
@@ -62,6 +62,7 @@ In diesem Thema erläutert die Kriterien für die Auswahl einer der drei Transpo
 |Tools|Die Tools umfassen die Unterstützung für Drittanbieteranwendungen für ein Protokoll, mit dem die Entwicklung, die Diagnose, das Hosten und andere Aktivitäten durchgeführt werden können. Entwicklungstools und Softwareanwendungen, die in Verbindung mit dem HTTP-Protokoll verwendet werden können, stellen eine besonders hohe Investition dar.|HTTP|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSDualHttpBinding>

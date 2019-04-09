@@ -15,12 +15,12 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055325"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132293"
 ---
 # <a name="styling-and-templating"></a>Erstellen von Formaten und Vorlagen
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Erstellen von Formaten und Vorlagen finden Sie eine Reihe von Funktionen (Stile, Vorlagen, Trigger und Storyboards) an, mit die Entwickler und Designer visuell ansprechende Effekte erzeugen und ein konsistentes Erscheinungsbild ihres Produkts erstellen können. Obwohl Entwickler und/oder Designer die Darstellung in den einzelnen Anwendungen umfassend anpassen können, ist ein starkes Stil- und Vorlagenmodell erforderlich, um die Wartung und Freigabe der Darstellung innerhalb von Anwendungen und anwendungsübergreifend zu ermöglichen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt dieses Modell bereit.  
@@ -197,6 +197,7 @@ ms.locfileid: "59055325"
  Wenn Sie ein Design für Ihr ein benutzerdefiniertes Steuerelement erstellen, finden Sie im Abschnitt zur externen Steuerelementbibliothek im Artikel [Übersicht über das Erstellen von Steuerelementen](control-authoring-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Paket-URI in WPF](../app-development/pack-uris-in-wpf.md)
 - [Vorgehensweise: Suchen von Elementen, die mit einer ControlTemplate generiert wurden](how-to-find-controltemplate-generated-elements.md)
 - [Suchen von Elementen, die mit einer DataTemplate-Klasse generiert wurden](../data/how-to-find-datatemplate-generated-elements.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
-ms.openlocfilehash: 351c1e42bb775331cbe0e2005b6bea284716de75
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0eb39f0ecd8fcd12918b38bd77fed2ff32cac1d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124149"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Benutzereingabe in einer Windows Forms-Anwendung
 In Windows Forms wird eine Benutzereingabe an Anwendungen in Form von Windows-Nachrichten gesendet. Eine Reihe von überschreibbaren Methoden verarbeitet diese Nachrichten in der Anwendung, die Form, und steuern. Wenn diese Methoden Maus-und tastaturmeldungen erhalten, auslösen diese Ereignisse, die zum Abrufen von Informationen über die Maus oder Tastatur Eingabe behandelt werden können. In vielen Fällen werden Windows Forms-Anwendungen können alle Benutzereingaben zu verarbeiten, indem Sie einfach die Bearbeitung dieser Ereignisse. In anderen Fällen kann eine Anwendung muss, um eine der Methoden überschreiben, die Verarbeitung von Nachrichten aus, um eine bestimmte Nachricht abzufangen, bevor sie von der Anwendung, Formular oder Steuerelement empfangen wird.  
@@ -31,6 +31,7 @@ In Windows Forms wird eine Benutzereingabe an Anwendungen in Form von Windows-Na
  Tastatur und Maus-Nachrichten werden ebenfalls durch einen zusätzlichen Satz von überschreibbaren Methoden verarbeitet, die den Typen von Nachrichten spezifisch sind. Weitere Informationen finden Sie unter [Funktionsweise von Tastatureingaben](how-keyboard-input-works.md) und [Maus Funktionsweise in Windows Forms](how-mouse-input-works-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Benutzereingaben in Windows Forms](user-input-in-windows-forms.md)
 - [Tastatureingaben in einer Windows Forms-Anwendung](keyboard-input-in-a-windows-forms-application.md)
 - [Mauseingabe in einer Windows Forms-Anwendung](mouse-input-in-a-windows-forms-application.md)

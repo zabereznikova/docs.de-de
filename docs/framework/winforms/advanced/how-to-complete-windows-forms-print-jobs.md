@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Vollständige Windows Forms-Druckaufträge'
+title: 'Vorgehensweise: Fertigstellen von Druckaufträgen in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: 1ae20e4fdc3a4fc3de8c462c355bcc700eddf22e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f8d0f1f067efbae6e2b667328e75996179b91737
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159821"
 ---
-# <a name="how-to-complete-windows-forms-print-jobs"></a>Vorgehensweise: Vollständige Windows Forms-Druckaufträge
+# <a name="how-to-complete-windows-forms-print-jobs"></a>Vorgehensweise: Fertigstellen von Druckaufträgen in Windows Forms
 In vielen Fällen bieten textverarbeitungs- und andere Anwendungen, bei denen Drucken die Möglichkeit, Benutzern eine Meldung angezeigt, dass ein Auftrag abgeschlossen ist. Sie können diese Funktionalität in Windows Forms bereitstellen, durch Behandeln der <xref:System.Drawing.Printing.PrintDocument.EndPrint> Ereignis die <xref:System.Drawing.Printing.PrintDocument> Komponente.  
   
  Das folgende Verfahren ist erforderlich, nach der Erstellung eine Windows-basierten Anwendung mit einem <xref:System.Drawing.Printing.PrintDocument> -Komponente auf, ist die Standardmethode zum Drucken aus einer Windows-basierten Anwendung aktivieren. Weitere Informationen zum Drucken von Windows Forms mithilfe der <xref:System.Drawing.Printing.PrintDocument> Komponente finden Sie unter [Vorgehensweise: Erstellen von standardmäßigen Windows Forms-Druckaufträge](how-to-create-standard-windows-forms-print-jobs.md).  
@@ -81,5 +81,6 @@ In vielen Fällen bieten textverarbeitungs- und andere Anwendungen, bei denen Dr
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)
+- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)

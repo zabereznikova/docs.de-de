@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 12eafa006e65527a70245c4332a34eb55f7d8af0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525260"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136954"
 ---
 # <a name="security-overview"></a>Übersicht über die Sicherheit
 Windows Communication Foundation (WCF) ist eine SOAP-Nachrichten basierende verteilte Programmierplattform, und Sichern von Nachrichten zwischen Clients und Diensten ist wichtig, um Daten zu schützen. WCF bietet eine vielseitige und interoperable Plattform für den Austausch sicherer Nachrichten auf Grundlage der vorhandenen Sicherheitsinfrastruktur und der anerkannten Sicherheitsstandards für SOAP-Nachrichten.  
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) ist eine SOAP-Nachrichten basierende vert
   
  WCF unterstützt eine Vielzahl von Interoperabilitätsszenarien von Bedeutung. Die <xref:System.ServiceModel.BasicHttpBinding>-Klasse bezieht sich auf das Basic Security Profile (BSP), und die <xref:System.ServiceModel.WSHttpBinding>-Klasse bezieht sich auf die aktuellen Sicherheitsstandards (zum Beispiel WS-Security 1.1 und WS-SecureConversation). Durch diese Standards einhalten, kann WCF-Sicherheit zusammenarbeiten und integrieren in Web Services, die von Betriebssystemen und Plattformen als Microsoft Windows gehostet werden.  
   
-## <a name="wcf-security-functional-areas"></a>WCF-Sicherheit &#8211; Funktionsbereiche  
+## <a name="wcf-security-functional-areas"></a>WCF-Sicherheit &amp;#8211; Funktionsbereiche  
  WCF-Sicherheit ist in drei funktionale Bereiche unterteilt: übertragungssicherheit, Zugriffssteuerung und Überwachung. In den folgenden Abschnitten finden Sie eine kurze Erläuterung dieser Bereiche und Links auf weitere Informationen.  
   
 ### <a name="transfer-security"></a>Übertragungssicherheit  
@@ -98,6 +98,7 @@ Windows Communication Foundation (WCF) ist eine SOAP-Nachrichten basierende vert
  *Überwachung* ist die Protokollierung von Sicherheitsereignissen in das Windows-Ereignisprotokoll. Sie können sicherheitsbezogene Ereignisse protokollieren, z. B. Authentifizierungsfehler (oder erfolgreiche Authentifizierungen). Weitere Informationen finden Sie unter [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Ausführliche Informationen zur Programmierung, finden Sie unter [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [Sichern von Diensten](../../../../docs/framework/wcf/securing-services.md)
 - [Häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
@@ -107,7 +108,7 @@ Windows Communication Foundation (WCF) ist eine SOAP-Nachrichten basierende vert
 - [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Sicherheitsleitfaden und bewährte Methoden](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
+- [Sicherheitsleitfaden und empfohlene Vorgehensweisen](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
 - [Konfigurieren von Diensten mit Konfigurationsdateien](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Übersicht über die Endpunkterstellung](../../../../docs/framework/wcf/endpoint-creation-overview.md)

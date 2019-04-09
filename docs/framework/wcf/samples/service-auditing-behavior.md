@@ -2,12 +2,12 @@
 title: Dienstüberwachungsverhalten
 ms.date: 03/30/2017
 ms.assetid: 59bf0cda-e496-4418-a3a1-2f0f6e85f8ce
-ms.openlocfilehash: e92f50005870b1c02571cebe0f532bd1810a40dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5fdc213551b5a7b3474321551d7c2cb149ca978d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151423"
 ---
 # <a name="service-auditing-behavior"></a>Dienstüberwachungsverhalten
 Dieses Beispiel zeigt, wie das <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> verwendet werden kann, um die Überwachung von Sicherheitsereignissen während Dienstvorgängen zu aktivieren. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md). Der Dienst und der Client konfiguriert wurden mithilfe der [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). Die `mode` Attribut der [ \<Sicherheit >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) festgelegt wurde `Message` und `clientCredentialType` festgelegt wurde `Windows`. In diesem Beispiel ist der Client eine Konsolenanwendung (.exe), und der Dienst wird von IIS (Internet Information Services, Internetinformationsdienste) gehostet.  
@@ -34,7 +34,7 @@ Dieses Beispiel zeigt, wie das <xref:System.ServiceModel.Description.ServiceSecu
   
  Wenn Sie das Beispiel ausführen, werden die Anforderungen und Antworten für den Vorgang im Clientkonsolenfenster angezeigt. Drücken Sie im Konsolenfenster die EINGABETASTE, um den Client zu schließen.  
   
- Die resultierenden Überwachungsprotokolle können in der Ereignisanzeige angezeigt werden. Standardmäßig können die Überwachungsereignisse unter Windows XP im Anwendungsprotokoll und unter Windows Server 2003 und Windows Vista im Sicherheitsprotokoll angezeigt werden. Unter Windows Server 2008 und Windows 7 können die Überwachungsereignisse standardmäßig in den Anwendungs- und Dienstprotokollen eingesehen werden. Der Speicherort für Überwachungsereignisse kann angegeben werden, durch Festlegen der `auditLogLocation` -Attributs auf "Application" oder "Sicherheit". Weitere Informationen finden Sie unter [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md). Wenn die Ereignisse in das Sicherheitsprotokoll geschrieben werden, sollte LocalSecurityPolicy-> Objektzugriff aktivieren auf "Erfolg" und "Fehler" eingestellt werden.  
+ Die resultierenden Überwachungsprotokolle können in der Ereignisanzeige angezeigt werden. Standardmäßig können die Überwachungsereignisse unter Windows XP im Anwendungsprotokoll und unter Windows Server 2003 und Windows Vista im Sicherheitsprotokoll angezeigt werden. Unter Windows Server 2008 und Windows 7 können die Überwachungsereignisse standardmäßig in den Anwendungs- und Dienstprotokollen eingesehen werden. Der Speicherort für Überwachungsereignisse kann angegeben werden, durch Festlegen der `auditLogLocation` -Attributs auf "Application" oder "Sicherheit". Weitere Informationen finden Sie unter [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md). Wenn die Ereignisse geschrieben werden in das Sicherheitsprotokoll aus, die LocalSecurityPolicy -> Objektzugriff aktivieren für "Erfolg" und "Failure" festgelegt werden soll.  
   
  Im Ereignisprotokoll ist die Quelle der Überwachungsereignisse "ServiceModel Audit 3.0.0.0". Datensätze zur nachrichtenauthentifizierungsüberwachung weisen die Kategorie "Messageauthentication", während dienstautorisierungsüberwachungs-Datensätze die Kategorie "ServiceAuthorization" aufweisen.  
   
@@ -51,5 +51,6 @@ Dieses Beispiel zeigt, wie das <xref:System.ServiceModel.Description.ServiceSecu
 3.  Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
 - [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)

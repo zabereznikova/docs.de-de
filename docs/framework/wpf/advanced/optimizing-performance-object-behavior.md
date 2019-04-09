@@ -1,5 +1,5 @@
 ---
-title: 'Optimieren der Leistung: Projektverhalten'
+title: 'Optimieren der Leistung: Objektverhalten'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,23 +11,21 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-ms.openlocfilehash: 5548292480f07fa192985800931f9d0262f2b791
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 49318059435c5f5669510f7cf3fb7c93a4bc05e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137435"
 ---
-# <a name="optimizing-performance-object-behavior"></a>Optimieren der Leistung: Projektverhalten
+# <a name="optimizing-performance-object-behavior"></a>Optimieren der Leistung: Objektverhalten
 Wenn Sie das Verhalten von systeminternen [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Objekten verstehen, können Sie Funktionalität und Leistung optimal miteinander vereinen.  
-  
 
-  
 <a name="Not_Removing_Event_Handlers"></a>   
 ## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>Wenn Ereignishandler nicht aus Objekten entfernt werden, bleiben diese möglicherweise aktiv  
  Der Delegat, den ein Objekt an sein Ereignis übergibt, ist gewissermaßen ein Verweis auf dieses Objekt. Aufgrund von Ereignishandlern können Objekte länger als erwartet aktiv sein. Wenn sie ein Objekt bereinigen, das registriert wurde, um auf ein Ereignis eines Objekts zu lauschen, ist es erforderlich, dass Sie diesen Delegaten entfernen, bevor Sie das Objekt freigeben. Wenn nicht benötigte Objekte weiter aktiv sind, erhöht dies die Speicherauslastung Ihrer Anwendung. Dies ist insbesondere dann der Fall, wenn das Objekt der Stamm einer logischen oder visuellen Struktur ist.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] führt ein schwaches Ereignislistenermuster für Ereignisse ein, das dann nützlich sein kann, wenn die Beziehungen der Objektlebensdauer zwischen Quelle und Listener schwierig zu überwachen sind. Einige vorhandene [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Ereignisse verwenden dieses Muster. Wenn Sie Objekte mit benutzerdefinierten Ereignissen implementieren, kann dieses Muster für Sie nützlich sein. Weitere Informationen finden Sie unter [Schwache Ereignismuster](weak-event-patterns.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stellt ein Muster für schwache Ereignisse Listener für Ereignisse, die in Situationen nützlich sein können, in denen die Beziehungen der Objektlebensdauer zwischen Quelle und Listener schwierig zu verfolgen sind. Einige vorhandene [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Ereignisse verwenden dieses Muster. Wenn Sie Objekte mit benutzerdefinierten Ereignissen implementieren, kann dieses Muster für Sie nützlich sein. Weitere Informationen finden Sie unter [Schwache Ereignismuster](weak-event-patterns.md).  
   
  Es gibt mehrere Tools, wie z.B. den CLR-Profiler und den Workingset-Viewer, die Informationen zur Speicherauslastung eines angegebenen Prozesses zur Verfügung stellen können. Der CLR-Profiler umfasst eine Reihe sehr nützlicher Ansichten des Belegungsprofils, darunter z.B. ein Histogramm der zugewiesenen Typen, Zuordnungs- und Aufrufdiagramme, eine Zeitachse mit den automatische Speicherbereinigungen verschiedener Generationen und der daraus entstehende Status des verwalteten Heaps nach diesen Bereinigungen sowie eine Aufrufstruktur, die Zuweisungen und Laden von Assemblys für jede Methode veranschaulicht. Weitere Informationen finden Sie unter [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=117435).  
   
@@ -67,7 +65,7 @@ Wenn Sie das Verhalten von systeminternen [!INCLUDE[TLA2#tla_winclient](../../..
   
  Sperren einer <xref:System.Windows.Freezable> kann dessen Leistung verbessern, da sie nicht mehr Ressourcen für änderungsbenachrichtigungen aufwenden muss. Die folgende Tabelle zeigt die Größe einer einfachen <xref:System.Windows.Media.SolidColorBrush> bei dessen <xref:System.Windows.Freezable.IsFrozen%2A> -Eigenschaftensatz auf `true`, im Vergleich zu, wenn es nicht ist. Dies setzt voraus, einen Pinsel Anwenden der <xref:System.Windows.Shapes.Shape.Fill%2A> -Eigenschaft von zehn <xref:System.Windows.Shapes.Rectangle> Objekte.  
   
-|**Zustand**|**Size**|  
+|**Zustand**|**Größe**|  
 |---------------|--------------|  
 |Fixiert <xref:System.Windows.Media.SolidColorBrush>|212 Bytes|  
 |Nicht fixierte <xref:System.Windows.Media.SolidColorBrush>|972 Bytes|  
@@ -105,15 +103,16 @@ Wenn Sie das Verhalten von systeminternen [!INCLUDE[TLA2#tla_winclient](../../..
   
  Die folgende Tabelle zeigt die verstrichene Zeit hinzufügen und Rendern von 5000 <xref:System.Windows.Controls.TextBlock> Elementen, die eine <xref:System.Windows.Controls.StackPanel> und <xref:System.Windows.Controls.VirtualizingStackPanel>. In diesem Szenario die Messwerte repräsentieren die Zeit zwischen dem Anfügen einer Textzeichenfolge, die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> Eigenschaft eine <xref:System.Windows.Controls.ItemsControl> Objekt, das die Zeit, wenn das Panel-Elemente die Textzeichenfolge anzeigen.  
   
-|**Hostpanel**|**Renderingzeit (in ms)**|  
+|**Hostpanel**|**Renderingzeit (ms)**|  
 |--------------------|----------------------------|  
 |<xref:System.Windows.Controls.StackPanel>|3210|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Optimieren der WPF-Anwendungsleistung](optimizing-wpf-application-performance.md)
 - [Planen der Anwendungsleistung](planning-for-application-performance.md)
-- [Vorteile der Hardware nutzen](optimizing-performance-taking-advantage-of-hardware.md)
+- [Nutzen der Vorteile der Hardware](optimizing-performance-taking-advantage-of-hardware.md)
 - [Layout und Entwurf](optimizing-performance-layout-and-design.md)
 - [2D-Grafiken und Bildverarbeitung](optimizing-performance-2d-graphics-and-imaging.md)
 - [Anwendungsressourcen](optimizing-performance-application-resources.md)

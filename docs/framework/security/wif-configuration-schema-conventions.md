@@ -3,12 +3,12 @@ title: WIF-Konfigurationsschemakonventionen
 ms.date: 03/30/2017
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 author: BrucePerlerMS
-ms.openlocfilehash: acdce1f0ae35713dd4955e1353e0a83000898408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39ed32bb7e926f275e996b09e746c879c6d3fe9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120873"
 ---
 # <a name="wif-configuration-schema-conventions"></a>WIF-Konfigurationsschemakonventionen
 In diesem Thema werden Konventionen erläutert, die in den Themen zur Konfiguration von Windows Identity Foundation (WIF) verwendet werden, sowie einige allgemeine Funktionen und Attribute beschrieben, die in den Abschnitten [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) und [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) verwendet werden.  
@@ -45,5 +45,6 @@ In diesem Thema werden Konventionen erläutert, die in den Themen zur Konfigurat
  Benutzerdefinierte Typen müssen aus dem angegebenen Typ abgeleitet werden und einen `public`-Standardkonstruktor (0-Argument) bereitstellen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)
 - [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)

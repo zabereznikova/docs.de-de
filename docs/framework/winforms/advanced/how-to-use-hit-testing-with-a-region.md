@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Trefferüberprüfung mit einem Bereich'
+title: 'Vorgehensweise: Verwenden von Treffertests mit einem Bereich'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hit tests [Windows Forms], using regions
 - regions [Windows Forms], hit testing
 ms.assetid: 3a4c07cb-a40a-4d14-ad35-008f531910a8
-ms.openlocfilehash: a9435724e7674fd196ad70bdfd0ab43808a53058
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 136f15f1364fb2aed791b4a61d0f11411b055967
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709744"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150500"
 ---
-# <a name="how-to-use-hit-testing-with-a-region"></a>Vorgehensweise: Trefferüberprüfung mit einem Bereich
+# <a name="how-to-use-hit-testing-with-a-region"></a>Vorgehensweise: Verwenden von Treffertests mit einem Bereich
 Für den Treffertest dient zu bestimmen, ob der Cursor über ein bestimmtes Objekt, z. B. ein Symbol oder eine Schaltfläche befindet.  
   
 ## <a name="example"></a>Beispiel  
@@ -25,9 +25,10 @@ Für den Treffertest dient zu bestimmen, ob der Cursor über ein bestimmtes Obje
  [!code-vb[System.Drawing.MiscLegacyTopics#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert die <xref:System.Windows.Forms.PaintEventArgs> `e`-Klasse, die ein Parameter von <xref:System.Windows.Forms.PaintEventHandler> ist.  
+ Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, d.h. ein Parameter vom <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.Region>
 - [Bereiche in GDI+](regions-in-gdi.md)
-- [Vorgehensweise: Verwenden von Clipping mit einer Region](how-to-use-clipping-with-a-region.md)
+- [Vorgehensweise: Verwenden von Ausschneiden mit einem Bereich](how-to-use-clipping-with-a-region.md)

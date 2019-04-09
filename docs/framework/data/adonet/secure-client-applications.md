@@ -2,12 +2,12 @@
 title: Sichere Clientanwendungen
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
-ms.openlocfilehash: c8efdf4c4baceb22ee60bdcf333ad1fec9ebd2d0
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119612"
 ---
 # <a name="secure-client-applications"></a>Sichere Clientanwendungen
 Anwendungen bestehen in der Regel aus vielen Teilen, die alle so geschützt werden müssen, dass keine Daten verloren gehen oder das System nicht anderweitig gefährdet wird. Durch das Erstellen sicherer Benutzeroberflächen lassen sich viele Probleme vermeiden, weil Angreifer damit bereits blockiert werden, bevor sie überhaupt auf Daten oder Systemressourcen zugreifen können.  
@@ -27,13 +27,13 @@ Anwendungen bestehen in der Regel aus vielen Teilen, die alle so geschützt werd
  [Benutzereingaben in Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
  Enthält Links und Informationen zum Validieren von Eingaben mit Maus und Tastatur in einer Windows Forms-Anwendung.  
   
- [Reguläre Ausdrücke von .NET Framework](../../../../docs/standard/base-types/regular-expressions.md)  
+ [Reguläre Ausdrücke von .NET Framework](../../../../docs/standard/base-types/regular-expressions.md)  
  Beschreibt die Verwendung der <xref:System.Text.RegularExpressions.Regex>-Klasse, mit der die Gültigkeit der Benutzereingabe geprüft werden kann.  
   
 ## <a name="windows-applications"></a>Windows-Anwendungen  
  In der Vergangenheit wurden Windows-Anwendungen i. d. R. mit vollständigen Berechtigungen ausgeführt. .NET Framework stellt mit der Codezugriffssicherheit (Code Access Security, CAS) die Infrastruktur bereit, die erforderlich ist, um die Ausführung von Code in Windows-Anwendungen zu beschränken. CAS allein reicht aber zum Schutz Ihrer Anwendung nicht aus.  
   
- [Sicherheit in Windows Forms](../../../../docs/framework/winforms/windows-forms-security.md)  
+ [Sicherheit in Windows Forms](../../../../docs/framework/winforms/windows-forms-security.md)  
  Erläutert das Sichern von Windows Forms-Anwendungen und stellt Links zu verwandten Themen bereit.  
   
  [Windows Forms und nicht verwaltete Anwendungen](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
@@ -52,7 +52,7 @@ Anwendungen bestehen in der Regel aus vielen Teilen, die alle so geschützt werd
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
 |[Sichern von ASP.NET-Websites](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))|Erläutert das Sichern von ASP.NET-Anwendungen.|  
-|[Sichern von mit ASP.NET erstellten XML-Webdienste](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|Veranschaulicht das Implementieren von Sicherheit für einen ASP.NET-Webdienst.|  
+|[Sichern von mit ASP.NET erstellten XML-Webdiensten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|Veranschaulicht das Implementieren von Sicherheit für einen ASP.NET-Webdienst.|  
 |[Übersicht über Skriptangriffe](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Erläutert, wie Sie sich vor Angriffen mit Skriptexploits schützen können, bei denen versucht wird, bösartige Zeichen in eine Webseite einzufügen.|  
 |[Grundlegende Sicherheitsmaßnahmen für Webanwendungen](https://docs.microsoft.com/previous-versions/aspnet/zdh19h94(v=vs.100))|Enthält allgemeine Sicherheitsinformationen und Links zu weiteren Erläuterungen.|  
   
@@ -63,11 +63,12 @@ Anwendungen bestehen in der Regel aus vielen Teilen, die alle so geschützt werd
 |--------------|-----------------|  
 |[Konfiguration von Remoteanwendungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b8tysty8(v=vs.100))|Erläutert, wie Sie Remoting-Anwendungen so konfigurieren können, dass allgemeine Probleme vermieden werden.|  
 |[Sicherheit beim Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/9hwst9th(v=vs.100))|Beschreibt die Authentifizierung und Verschlüsselung und enthält darüber hinaus weitere Sicherheitsthemen im Zusammenhang mit Remoting.|  
-|[Remoting Überlegungen zu Sicherheit und](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Beschreibt Sicherheitsprobleme mit geschützten Objekten und dem anwendungsdomänenübergreifenden Arbeiten.|  
+|[Überlegungen zu Sicherheit und Remoting](../../../../docs/framework/misc/security-and-remoting-considerations.md)|Beschreibt Sicherheitsprobleme mit geschützten Objekten und dem anwendungsdomänenübergreifenden Arbeiten.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Empfehlungen für Strategien für den Datenzugriff](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [Sichern von Anwendungen](/visualstudio/ide/securing-applications)
-- [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [Schützen von Verbindungsinformationen](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

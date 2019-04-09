@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verbessern der Leistung von TreeView'
+title: 'Vorgehensweise: Verbessern der Leistung eines TreeView-Objekts'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - TreeView control [WPF], improving the performance
 ms.assetid: b792c740-cf2b-4da8-8ba8-3d2e5a821874
-ms.openlocfilehash: d04d5997e6f02a4227704b668fdf19324ea20f26
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de1b46da2a7c6c3db0c0c19cdbb654fcf2fbbd6c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153438"
 ---
-# <a name="how-to-improve-the-performance-of-a-treeview"></a>Vorgehensweise: Verbessern der Leistung von TreeView
+# <a name="how-to-improve-the-performance-of-a-treeview"></a>Vorgehensweise: Verbessern der Leistung eines TreeView-Objekts
 Wenn eine <xref:System.Windows.Controls.TreeView> viele Elemente enthält, die Zeitspanne, die zum Laden benötigt möglicherweise eine erhebliche Verzögerung eintreten, in der Benutzeroberfläche. Sie können die Ladezeit verbessern, indem Sie die Einstellung der `VirtualizingStackPanel.IsVirtualizing` angefügte Eigenschaft zu `true`.  Die Benutzeroberfläche langsam reagiert, wenn ein Benutzer einen Bildlauf möglicherweise auch die <xref:System.Windows.Controls.TreeView> durch das Mausrad verwenden, oder ziehen das Thumb-Steuerelement eine Bildlaufleiste. Sie können die Leistung verbessern die <xref:System.Windows.Controls.TreeView> Wenn der Benutzer scrollt durch Festlegen der `VirtualizingStackPanel.VirtualizationMode` angefügte Eigenschaft zu <xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>.  
   
 ## <a name="example"></a>Beispiel  
@@ -31,4 +31,5 @@ Das folgende Beispiel erstellt eine <xref:System.Windows.Controls.TreeView> fest
  [!code-vb[RecycleItemContainerShippets#TreeViewData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RecycleItemContainerShippets/visualbasic/window1.xaml.vb#treeviewdata)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Steuerelemente](../advanced/optimizing-performance-controls.md)

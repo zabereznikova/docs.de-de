@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 19849f318d07a11fe0d894f7f0a68cd37f1ee249
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 29980450bd75c6ba0992ad7fd3165f6f2d5f32bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129687"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es Entwicklern ermöglicht, in Visual Basic oder Visual C# Abfragen für das konzeptionelle Modell im Entity Framework zu schreiben. Abfragen für das Entity Framework werden als Befehlsstrukturabfragen dargestellt, die für den Objektkontext ausgeführt werden. LINQ to Entities wandelt LINQ (Language-Integrated Queries)-Abfragen in Befehlsstrukturabfragen um, führt die Abfragen für das Entity Framework aus und gibt Objekte zurück, die sowohl vom Entity Framework als auch von LINQ verwendet werden können. Mit folgendem Vorgang können Sie eine LINQ to Entities-Abfrage erstellen und ausführen:  
@@ -35,7 +35,7 @@ LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es 
 ## <a name="query-conversion"></a>Konvertieren von Abfragen  
  Um eine LINQ to Entities-Abfrage für das Entity Framework auszuführen, muss die LINQ-Abfrage in eine Befehlsstrukturdarstellung umgewandelt werden, die für das Entity Framework ausgeführt werden kann.  
   
- LINQ to Entities-Abfragen bestehen aus LINQ-Standardabfrageoperatoren (wie <xref:System.Linq.Queryable.Select%2A>, <xref:System.Linq.Queryable.Where%2A> und <xref:System.Linq.Queryable.GroupBy%2A>) sowie Ausdrücken (x > 10, Contact.LastName usw.). LINQ-Operatoren werden nicht von einer Klasse definiert, sondern sind Methoden für eine Klasse. In LINQ können Ausdrücke alles enthalten, was für Typen im <xref:System.Linq.Expressions>-Namespace zulässig ist, und durch Erweiterung alles, was als Lambda-Funktion dargestellt werden kann. Damit sind sie den Ausdrücken übergeordnet, die im Entity Framework verwendet werden können. Diese sind per Definition auf Operationen beschränkt, die auf der Datenbank zulässig sind und von <xref:System.Data.Objects.ObjectQuery%601> unterstützt werden.  
+ LINQ to Entities-Abfragen bestehen aus LINQ-Standardabfrageoperatoren (wie z. B. <xref:System.Linq.Queryable.Select%2A>, <xref:System.Linq.Queryable.Where%2A>, und <xref:System.Linq.Queryable.GroupBy%2A>) sowie Ausdrücken (x > 10, Contact.LastName usw.). LINQ-Operatoren werden nicht von einer Klasse definiert, sondern sind Methoden für eine Klasse. In LINQ können Ausdrücke alles enthalten, was für Typen im <xref:System.Linq.Expressions>-Namespace zulässig ist, und durch Erweiterung alles, was als Lambda-Funktion dargestellt werden kann. Damit sind sie den Ausdrücken übergeordnet, die im Entity Framework verwendet werden können. Diese sind per Definition auf Operationen beschränkt, die auf der Datenbank zulässig sind und von <xref:System.Data.Objects.ObjectQuery%601> unterstützt werden.  
   
  Im Entity Framework werden sowohl Operatoren als auch Ausdrücke in einer einzigen Typhierarchie dargestellt, die anschließend in die Befehlsstruktur eingefügt wird. Mithilfe der Befehlsstruktur führt das Entity Framework die Abfrage aus. Wenn die LINQ-Abfrage nicht als Befehlsstruktur ausgedrückt werden kann, wird beim Konvertieren der Abfrage eine Ausnahme ausgelöst. Zur Konvertierung von LINQ to Entities-Abfragen gehören die folgenden zwei untergeordneten Konvertierungen: die Umwandlung der Standardabfrageoperatoren und die Konvertierung der Ausdrücke.  
   
@@ -89,6 +89,7 @@ LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es 
  [Bekannte Probleme von und Überlegungen zu LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Bekannte Probleme von und Überlegungen zu LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
 - [Language-Integrated Query (LINQ) - C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
 - [Language-Integrated Query (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)

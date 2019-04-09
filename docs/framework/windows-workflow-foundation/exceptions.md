@@ -2,12 +2,12 @@
 title: Ausnahmen
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-ms.openlocfilehash: 94a0a2430ffe7db47152517c742aed1c18a39e64
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 64a8338133c265ee1b4c7acbd9b4d168318b66a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145989"
 ---
 # <a name="exceptions"></a>Ausnahmen
 Die <xref:System.Activities.Statements.TryCatch>-Aktivität kann zur Behandlung von Ausnahmen verwendet werden, die während der Ausführung eines Workflows ausgelöst werden. Diese Ausnahmen können behandelt oder mit der <xref:System.Activities.Statements.Rethrow>-Aktivität erneut ausgelöst werden. Aktivitäten im Abschnitt <xref:System.Activities.Statements.TryCatch.Finally%2A> werden nach Abschluss des Abschnitts <xref:System.Activities.Statements.TryCatch.Try%2A> oder des Abschnitts <xref:System.Activities.Statements.TryCatch.Catches%2A> ausgeführt. Gehostete Workflows, indem eine <xref:System.Activities.WorkflowApplication> Instanz können Sie auch die <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> Ereignishandler zur Behandlung von Ausnahmen, die nicht vom behandelt werden eine <xref:System.Activities.Statements.TryCatch> Aktivität.  
@@ -51,6 +51,7 @@ Die <xref:System.Activities.Statements.TryCatch>-Aktivität kann zur Behandlung 
  Der Unterschied zwischen Ausnahmebehandlung und Kompensierung besteht darin, dass die Ausnahmebehandlung während der Ausführung einer Aktivität erfolgt. Die Kompensierung erfolgt, nachdem eine Aktivität erfolgreich abgeschlossen wurde. Die Ausnahmebehandlung bietet eine Möglichkeit, nach dem Auslösen der Ausnahme durch die Aktivität eine Bereinigung durchzuführen. Die Kompensierung dagegen stellt einen Mechanismus bereit, mit dem die erfolgreich abgeschlossene Arbeit einer zuvor abgeschlossenen Aktivität rückgängig gemacht werden kann. Weitere Informationen finden Sie unter [Kompensierung](compensation.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Activities.Statements.TryCatch>
 - <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>
 - <xref:System.Activities.Statements.CompensableActivity>

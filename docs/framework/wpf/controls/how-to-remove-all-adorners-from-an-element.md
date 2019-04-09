@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], removing
 ms.assetid: fe5303a3-b76e-4643-aafb-51419032b47b
-ms.openlocfilehash: 6b2b1832898a847f54f11cca26ecd50dbd7285ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8504bb1ec70de188033b2b092bbb66cf9da3dc11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116793"
 ---
 # <a name="how-to-remove-all-adorners-from-an-element"></a>Vorgehensweise: Entfernen aller Adorner aus einem Element
 Dieses Beispiel zeigt, wie Sie das Entfernen aller Adorner aus einem angegebenen programmgesteuert <xref:System.Windows.UIElement>.  
@@ -30,4 +30,5 @@ Dieses Beispiel zeigt, wie Sie das Entfernen aller Adorner aus einem angegebenen
  [!code-vb[AdornersMiscCode#_RemoveAllAdornersShort](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removealladornersshort)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Adorner](adorners-overview.md)

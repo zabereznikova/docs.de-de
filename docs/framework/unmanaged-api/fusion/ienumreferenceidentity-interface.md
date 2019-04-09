@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f2ea9d0e20cb67cc36d0b5883e483ce98941b2f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 766b17bae0c58d9872ff9c118f330ebc3220257e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743217"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123486"
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity-Schnittstelle
 Dient als Enumerator für eine Auflistung von `IReferenceIdentity` Objekte.  
@@ -43,5 +43,6 @@ Dient als Enumerator für eine Auflistung von `IReferenceIdentity` Objekte.
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
 - [IReferenceIdentity-Schnittstelle](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)

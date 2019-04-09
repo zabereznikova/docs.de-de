@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409457"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130402"
 ---
 # <a name="expander-overview"></a>Übersicht über Expander-Steuerelemente
 Ein <xref:System.Windows.Controls.Expander> -Steuerelement bietet eine Möglichkeit zum Bereitstellen von Inhalt in einem erweiterbaren Bereich, der einem Fenster ähnelt und einen Header enthält.  
-  
-  
+
 <a name="CreatinganExpanderinXAML"></a>   
 ## <a name="creating-a-simple-expander"></a>Erstellen einer einfachen Expanders  
  Das folgende Beispiel zeigt, wie zum Erstellen eines einfachen <xref:System.Windows.Controls.Expander> Steuerelement. In diesem Beispiel wird ein <xref:System.Windows.Controls.Expander> sieht in der vorherige Abbildung.  
@@ -29,7 +28,7 @@ Ein <xref:System.Windows.Controls.Expander> -Steuerelement bietet eine Möglichk
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
 ## <a name="setting-the-direction-of-the-expanding-content-area"></a>Festlegen der Erweiterungsrichtung des Inhaltsbereichs  
- Sie können festlegen, den Inhaltsbereich ein <xref:System.Windows.Controls.Expander> Steuerelement erweitern in eine von vier Richtungen (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, oder <xref:System.Windows.Controls.ExpandDirection.Right>) mithilfe der <xref:System.Windows.Controls.ExpandDirection> Eigenschaft. Wenn der Inhaltsbereich reduziert ist, werden nur die <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A> und entsprechenden Umschaltfläche angezeigt. Ein <xref:System.Windows.Controls.Button> -Steuerelement, das ein Richtungspfeil dargestellt wird als eine Umschaltfläche zum Erweitern oder reduzieren den Inhaltsbereich verwendet. Wenn die Kategorie erweitert ist, die <xref:System.Windows.Controls.Expander> versucht, den gesamten Inhalt in einem Fenster-ähnlichen Bereich anzuzeigen.  
+ Sie können festlegen, den Inhaltsbereich ein <xref:System.Windows.Controls.Expander> Steuerelement erweitern in eine von vier Richtungen (<xref:System.Windows.Controls.ExpandDirection.Down>, <xref:System.Windows.Controls.ExpandDirection.Up>, <xref:System.Windows.Controls.ExpandDirection.Left>, oder <xref:System.Windows.Controls.ExpandDirection.Right>) mithilfe der <xref:System.Windows.Controls.ExpandDirection> Eigenschaft. Wenn der Inhaltsbereich reduziert ist, werden nur die <xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A> und entsprechenden Umschaltfläche angezeigt. Ein <xref:System.Windows.Controls.Button> -Steuerelement, das ein Richtungspfeil dargestellt wird als eine Umschaltfläche zum Erweitern oder reduzieren den Inhaltsbereich verwendet. Wenn die Kategorie erweitert ist, die <xref:System.Windows.Controls.Expander> versucht, den gesamten Inhalt in einem Fenster-ähnlichen Bereich anzuzeigen.  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
 ## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>Steuerung der Größe eines Expanders in einem Panel  
@@ -43,7 +42,7 @@ Ein <xref:System.Windows.Controls.Expander> -Steuerelement bietet eine Möglichk
 ## <a name="creating-scrollable-content"></a>Erstellen vom bildlauffähigem Inhalt  
  Wenn der Inhalt für die Größe des Inhaltsbereichs zu groß ist, können Sie den Inhalt des umschließen einer <xref:System.Windows.Controls.Expander> in einer <xref:System.Windows.Controls.ScrollViewer> um bildlauffähigem Inhalt bereitzustellen. Die <xref:System.Windows.Controls.Expander> Steuerelement stellt die Bildlauf-Funktion nicht automatisch bereit. Die folgende Abbildung zeigt ein <xref:System.Windows.Controls.Expander> -Steuerelement, enthält eine <xref:System.Windows.Controls.ScrollViewer> Steuerelement.  
   
- **Expander-Steuerelement in einem ScrollViewer**  
+ **Expander-Steuerelement in ein ScrollViewer-Element**  
   
  ![Screenshot mit einem Expander mit ScrollBar.](./media/expander-overview/expander-scrollbar-control.jpg)  
   
@@ -60,6 +59,7 @@ Ein <xref:System.Windows.Controls.Expander> -Steuerelement bietet eine Möglichk
  Sie können Inhalte ausrichten, durch Festlegen der <xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A> und <xref:System.Windows.Controls.Control.VerticalContentAlignment%2A> Eigenschaften für die <xref:System.Windows.Controls.Expander> Steuerelement. Wenn Sie diese Eigenschaften festlegen, wird die Ausrichtung sowohl auf den Header, als auch auf den erweiterten Inhalt angewendet.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [Themen zu Vorgehensweisen](expander-how-to-topics.md)
+- [Gewusst wie-Themen](expander-how-to-topics.md)
