@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verwenden eines Dienstmonikers mit WSDL-Verträgen'
 ms.date: 03/30/2017
 ms.assetid: a88d9650-bb50-4f48-8c85-12f5ce98a83a
-ms.openlocfilehash: 9e9d4b49904f555d790c4b5fde760c004eb1820a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8729055c82e3ce1273e8a0cfae53a1f6d3c14e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081667"
 ---
 # <a name="how-to-use-a-service-moniker-with-wsdl-contracts"></a>Vorgehensweise: Verwenden eines Dienstmonikers mit WSDL-Verträgen
 Es gibt Situationen, in denen Sie sich möglicherweise einen vollständig unabhängigen COM Interop-Client wünschen. Der Dienst, den Sie aufrufen möchten, stellt vielleicht keinen MEX-Endpunkt bereit, oder die WCF-Client-DLL ist nicht für COM-Interop registriert. In diesen Fällen können Sie eine WSDL-Datei erstellen, die den Dienst beschreibt, und die Datei an den WCF-Dienstmoniker übergeben. In diesem Thema wird beschrieben, wie das Beispiel für Erste Schritte mit WCF zur Verwendung eines WSDL-Monikers in WCF aufgerufen wird.  
@@ -22,10 +22,8 @@ Es gibt Situationen, in denen Sie sich möglicherweise einen vollständig unabh�
   
      [!code-csharp[S_WSDL_Client#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wsdl_client/cs/service.cs#0)]  
   
-4.  Fügen Sie der Datei „App.config“ des Diensts einen Bindungsnamespace hinzu:  
-  
-  
-  
+4.  Fügen Sie dem Dienst App.config einen Bindungsnamespace hinzu:  
+
 5.  Erstellen Sie eine WSDL-Datei, die von der Anwendung gelesen wird. Da die Namespaces in den Schritten 3 und 4 hinzugefügt wurden, können Sie Internet Explorer verwenden, für die gesamte WSDL-Beschreibung des Diensts Abfragen, indem Sie zu `http://localhost/ServiceModelSamples/Service.svc?wsdl`. Sie können die Datei dann in Internet Explorer als serviceWSDL.xml speichern. Wenn Sie die Namespaces nicht in den Schritten 3 und 4 angeben, ist das von der Abfrage der obigen URL zurückgegebene WSDL-Dokument nicht vollständig. Das zurückgegebene WSDL-Dokument enthält verschiedene Importanweisungen, die andere WSDL-Dokumente importieren. Sie müssen dann die einzelnen Importanweisungen durchgehen und das vollständige WSDL-Dokument erstellen, wobei Sie das vom Dienst zurückgegebene WSDL mit dem importierten WSDL kombinieren.  
   
 6.  Öffnen Sie Visual Basic 6.0, und erstellen Sie eine neue Standard-EXE-Datei. Fügen Sie dem Formular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um dem Click-Handler den folgenden Code hinzuzufügen.  
@@ -57,5 +55,6 @@ Es gibt Situationen, in denen Sie sich möglicherweise einen vollständig unabh�
 7.  Führen Sie die Visual Basic-Anwendung aus. Ein Meldungsfeld wird mit den Ergebnissen des Aufrufs Subtract(145, 76.54) angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erste Schritte](../../../../docs/framework/wcf/samples/getting-started-sample.md)
 - [Übersicht über die Integration von COM-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

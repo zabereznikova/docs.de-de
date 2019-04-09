@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Font dialog box
 - FontDialog component [Windows Forms], about FontDialog component
 ms.assetid: daf46e57-1b4b-4b7a-bad0-b50ca7ba75dc
-ms.openlocfilehash: 26bfb561c1050438b78c4ae0a3e6e8da32458cdd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7f140807bf4b42e530302190042e729c59248e7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725037"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098558"
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>Übersicht über die FontDialog-Komponente (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.FontDialog> Komponente ist ein vorkonfiguriertes Dialogfeld, wird die standardmäßige Windows **Schriftart** Dialogfeld verwendet, um die Schriftarten verfügbar zu machen, die derzeit auf dem System installiert sind. Verwenden Sie es in Ihrer Windows-basierten Anwendung als einfache Lösung für die Schriftartauswahl, anstatt ein eigenes Dialogfeld zu konfigurieren.  
@@ -24,5 +24,6 @@ Die Windows-Formulare <xref:System.Windows.Forms.FontDialog> Komponente ist ein 
  Die Komponente muss es sich um eine Reihe von Eigenschaften, die die Darstellung zu konfigurieren. Die Eigenschaften, die im Dialogfeld Optionen festgelegt, werden <xref:System.Windows.Forms.FontDialog.Font%2A> und <xref:System.Windows.Forms.FontDialog.Color%2A>. Die <xref:System.Windows.Forms.FontDialog.Font%2A> Eigenschaft legt fest, die Schriftart, Stil, Größe, Skripts und Effekte; z. B. `Arial, 10pt, style=Italic, Strikeout`.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.FontDialog>
 - [FontDialog-Komponente](fontdialog-component-windows-forms.md)

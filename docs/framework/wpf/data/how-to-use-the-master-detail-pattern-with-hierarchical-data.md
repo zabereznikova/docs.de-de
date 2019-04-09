@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: e18bc7d60b47b083a0b102938634473d85b39882
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3a17d6cd5b723dcde4d8dc7059c9f416308f73db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463318"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082658"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>Vorgehensweise: Verwenden des Master-/Detailmusters mit hierarchischen Daten
 Dieses Beispiel zeigt, wie Sie das Master / Detail-Szenario zu implementieren.  
@@ -34,8 +34,9 @@ Dieses Beispiel zeigt, wie Sie das Master / Detail-Szenario zu implementieren.
  Das Verfahren unterscheidet sich geringfügig bei Verwendung von [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] Daten. Ein Beispiel finden Sie unter [verwenden Sie die Master-/ Detailmusters mit hierarchischen XML-Daten](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.HierarchicalDataTemplate>
-- [Binden an eine Auflistung und Anzeigen von Informationen auf Grundlage der Auswahl](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
-- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Binden an eine Sammlung und Anzeigen von Informationen auf Grundlage der Auswahl](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
+- [Übersicht über die Datenbindung](data-binding-overview.md)
 - [Übersicht über Datenvorlagen](data-templating-overview.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)

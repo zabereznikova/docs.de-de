@@ -8,12 +8,12 @@ helpviewer_keywords:
 - calendar controls [Windows Forms], Windows Forms
 - MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
-ms.openlocfilehash: a081c4e6d8210a6bb65fa14b31d12d4295931d53
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8928a78735392920d893661c70554bd35eba2886
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106235"
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>Übersicht über das MonthCalendar-Steuerelement (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.MonthCalendar> Steuerelement stellt eine intuitive grafische Benutzeroberfläche für Benutzer anzeigen und Festlegen von Datumsinformationen. Das Steuerelement zeigt einen Kalender: ein Raster mit die nummerierten Tage des Monats, um unter den Tagen der Woche mit den ausgewählten Datumsbereich hervorgehoben in Spalten angeordnet. Sie können einen anderen Monat auswählen, indem Sie auf die Pfeilschaltflächen auf beiden Seiten der Monat Beschriftung. Anders als die ähnliche <xref:System.Windows.Forms.DateTimePicker> -Steuerelement, können Sie mehr als ein Datum mit diesem Steuerelement auswählen. Weitere Informationen zu den <xref:System.Windows.Forms.DateTimePicker> steuern, finden Sie unter [DateTimePicker-Steuerelement](datetimepicker-control-windows-forms.md).  
@@ -26,5 +26,6 @@ Die Windows-Formulare <xref:System.Windows.Forms.MonthCalendar> Steuerelement st
  Die wichtigste Eigenschaft von der <xref:System.Windows.Forms.MonthCalendar> Steuerelement <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>, den Datumsbereich, der im Steuerelement ausgewählt. Die <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> Wert darf nicht, überschreiten die maximale Anzahl von Tagen an, die ausgewählt werden können, legen Sie in der <xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> Eigenschaft. Die frühesten und späteste Datumsangaben, die der Benutzer auswählen kann, hängen von der <xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> und <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> Eigenschaften.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.MonthCalendar>
 - [MonthCalendar-Steuerelement](monthcalendar-control-windows-forms.md)

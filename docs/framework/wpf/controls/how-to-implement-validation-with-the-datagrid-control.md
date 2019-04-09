@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: e3be25fecc58ba41dbb5b2e904eddcb9c2b3c98a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086805"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Vorgehensweise: Implementieren von Validierung mit dem DataGrid-Steuerelement
 Die <xref:System.Windows.Controls.DataGrid> -Steuerelement können Sie eine Überprüfung auf die Zelle und die Zeile Ebene durchführen. Überprüfen Sie mit Überprüfung auf Zellenebene einzelne Eigenschaften eines Objekts an Sie gebundenen Daten aus, wenn ein Benutzer einen Wert aktualisiert. Überprüfen Sie mit Überprüfung auf Zeilenebene gesamte Datenobjekte aus, wenn ein Benutzer auf eine Zeile Änderungen ein Commit ausgeführt. Sie können auch benutzerdefinierte visuelles Feedback für Validierungsfehler oder verwenden Sie das standardmäßige visuelle Feedback, das die <xref:System.Windows.Controls.DataGrid> gesteuert.  
@@ -91,6 +91,7 @@ Die <xref:System.Windows.Controls.DataGrid> -Steuerelement können Sie eine Übe
  [!code-xaml[DataGrid_Validation#FullXaml](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml#fullxaml)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.DataGrid>
 - [DataGrid](datagrid.md)
 - [Datenbindung](../data/data-binding-wpf.md)

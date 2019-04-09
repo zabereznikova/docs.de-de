@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
-ms.openlocfilehash: 36a71213b2c96d2ea1aa7597216f420f47493f43
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f64431e7804ba6e068a3d05f512c6ead089d7712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360510"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079317"
 ---
 # <a name="animation-and-timing-system-overview"></a>Übersicht über das Animations- und Zeitsteuerungssystem
 In diesem Thema wird beschrieben, wie das Zeitsteuerungssystem die Animation verwendet <xref:System.Windows.Media.Animation.Timeline>, und <xref:System.Windows.Media.Animation.Clock> Klassen zum Animieren von Eigenschaften.  
@@ -83,6 +83,7 @@ Eine Kompositionskette
  Wenn Sie eine Eigenschaft animieren der <xref:System.Windows.Media.Animation.AnimationClock> legt die Eigenschaft des *aktuelle* Wert. Abrufen des Eigenschaftswerts über dessen CLR-Accessor oder <xref:System.Windows.DependencyObject.GetValue%2A> Methode wird die Ausgabe von der <xref:System.Windows.Media.Animation.AnimationClock> bei der <xref:System.Windows.Media.Animation.AnimationClock> ist <xref:System.Windows.Media.Animation.ClockState.Active> oder <xref:System.Windows.Media.Animation.ClockState.Filling>. Sie können den Basiswert der Eigenschaft abrufen, mithilfe der <xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A> Methode.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über Zeitsteuerungsereignisse](timing-events-overview.md)
 - [Übersicht über Zeitsteuerungsverhalten](timing-behaviors-overview.md)

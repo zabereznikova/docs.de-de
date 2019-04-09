@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: fb804e6596de14d93ec6f0405480b60c03c7cbf9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711316"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076678"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validierung von Benutzereingaben in Windows Forms
 Wenn Benutzer Daten in Ihre Anwendung eingeben, empfiehlt es sich um sicherzustellen, dass die Daten gültig sind, bevor Sie Ihre Anwendung verwendet. Sie erfordern, dass bestimmte Textfelder nicht mit der Länge Null, ein Feld als eine Telefonnummer oder andere Art von wohlgeformte Daten formatiert werden, oder, dass eine Zeichenfolge keine unsicheren Zeichen enthalten, die zur Beeinträchtigung der Sicherheit einer Datenbank verwendet werden können. Windows Forms bietet mehrere Möglichkeiten zum Überprüfen der Eingabe in Ihrer Anwendung.  
@@ -91,6 +91,7 @@ Wenn Benutzer Daten in Ihre Anwendung eingeben, empfiehlt es sich um sicherzuste
 >  Wenn Sie das Formular, um auf diese Weise schließen erzwingen, bleibt Daten in den Steuerelementen des Formulars, die noch nicht gespeichert wurde. Darüber hinaus überprüfen modale Formulare nicht den Inhalt der Steuerelemente, wenn sie geschlossen werden. Sie können die Validierung von Steuerelementen weiterhin verwenden, um den Fokus auf ein Steuerelement zu sperren, aber Sie müssen keine Gedanken über das Verhalten für das Formular geschlossen werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
 - <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>

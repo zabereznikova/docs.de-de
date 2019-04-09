@@ -5,22 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 8c0807a7b811cf2cb3a13576018373d135e3e5cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5a32220ad1f638bf2e93051e9b436d8270aec2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082190"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>Überschreiben der Identität eines Dienstes zur Authentifizierung
 In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da die Auswahl eines Clientanmeldeinformationstyps über den in den Dienstmetadaten angezeigten Identitätstyp entscheidet. Der folgende Konfigurationscode verwendet beispielsweise die [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) -Element und legt die `clientCredentialType` -Attribut auf Windows.  
-  
-  
-  
+
  Das folgende Web Services Description Language (WSDL)-Fragment zeigt die Identität für den zuvor definierten Endpunkt an. In diesem Beispiel ist der Dienst ausgeführt wird, wie ein selbst gehosteter Dienst unter einem bestimmten Benutzerkonto (username@contoso.com) und daher die Identität des Benutzers Benutzerprinzipalnamen (UPN) der Kontoname enthält. Der UPN wird in einer Windows-Domäne auch als Benutzeranmeldename bezeichnet.  
-  
-  
-  
+
  Eine beispielanwendung, die identitätseinstellung veranschaulicht, finden Sie unter [Dienstidentitätsbeispiel](../../../../docs/framework/wcf/samples/service-identity-sample.md). Weitere Informationen zur Dienstidentität finden Sie unter [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos-Authentifizierung und Identität  
@@ -52,13 +48,9 @@ In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da di
   
 ### <a name="using-the-identity-element-in-configuration"></a>Mithilfe der \<Identity >-Element in der Konfiguration  
  Wenn Sie den Clientanmeldeinformationstyp in der zuvor gezeigten Bindung zu Certificate`,` ändern, enthält die generierte WSDL ein serialisiertes Base64-X.509-Zertifikat als Identitätswert, wie im folgenden Code gezeigt. Dies ist der Standard für alle Clientanmeldeinformationstypen außer Windows.  
-  
-  
-  
- Sie können den Wert der standardmäßigen Dienstidentität oder den Typ der Identität mit dem <`identity`>-Element bei der Konfiguration oder durch Festlegen der Identität im Code ändern. Der folgende Konfigurationscode legt eine DNS-Identität (Domain Name System) mit dem Wert `contoso.com` fest.  
-  
-  
-  
+
+ Können Sie ändern den Wert der standardmäßigen Dienstidentität oder ändern Sie den Typ der Identität mit der <`identity`>-Element in der Konfiguration oder durch Festlegen der Identität im Code. Der folgende Konfigurationscode legt eine DNS-Identität (Domain Name System) mit dem Wert `contoso.com` fest.  
+
 ### <a name="setting-identity-programmatically"></a>Programmgesteuertes Festlegen der Identität  
  Ihr Dienst verfügt nicht explizit eine Identität angeben, da WCF automatisch bestimmt. WCF können Sie eine Identität für einen Endpunkt angeben möchten jedoch bei Bedarf. Mit dem folgenden Code wird ein neuer Dienstendpunkt mit einer bestimmten DNS-Identität hinzugefügt.  
   
@@ -66,5 +58,6 @@ In der Regel müssen Sie die Identität für einen Dienst nicht festlegen, da di
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Erstellen einer benutzerdefinierten Clientidentitätsüberprüfung](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

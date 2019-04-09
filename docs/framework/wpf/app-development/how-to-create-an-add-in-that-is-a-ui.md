@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche ist'
+title: 'Vorgehensweise: Erstellen eines Add-Ins, bei dem es sich um eine Benutzeroberfläche handelt'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - creating an add-in that is a UI [WPF]
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366386"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100300"
 ---
-# <a name="how-to-create-an-add-in-that-is-a-ui"></a>Vorgehensweise: Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche ist
+# <a name="how-to-create-an-add-in-that-is-a-ui"></a>Vorgehensweise: Erstellen eines Add-Ins, bei dem es sich um eine Benutzeroberfläche handelt
 Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentation Foundation (WPF) ist der von der eine eigenständige WPF-Anwendung gehostet wird.  
   
  Ist das Add-in eine Benutzeroberfläche, die ein WPF-Benutzersteuerelement ist. Der Inhalt des Benutzersteuerelements ist eine einzelne Schaltfläche, bei der ein Meldungsfeld angezeigt wird, wenn Benutzer darauf klicken. Die eigenständige WPF-Anwendung hostet den Benutzeroberflächen-Add-in als Inhalt des Hauptfensters der Anwendung.  
   
- **Erforderliche Komponenten**  
+ **Vorraussetzungen**  
   
  In diesem Beispiel hebt die WPF-Erweiterungen für die Add-In-Modell von .NET Framework, die dieses Szenario zu aktivieren, und es wird Folgendes vorausgesetzt:  
   
@@ -31,8 +31,7 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
   
 ## <a name="example"></a>Beispiel  
  Um ein Add-in zu erstellen, die eine WPF-UI ist spezieller Code für die einzelnen Pipelinesegmente, das Add-in und die hostanwendung erforderlich.  
-    
-  
+
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>Implementieren des Vertragspipelinesegments  
  Wenn ein Add-in eine Benutzeroberfläche ist, muss der Vertrag für das Add-in implementieren <xref:System.AddIn.Contract.INativeHandleContract>. Im Beispiel `IWPFAddInContract` implementiert <xref:System.AddIn.Contract.INativeHandleContract>, wie im folgenden Code gezeigt.  
@@ -63,17 +62,13 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
 <a name="HostViewPipeline"></a>   
 ## <a name="implementing-the-host-view-pipeline-segment"></a>Implementieren des Host-Ansichtspipelinesegments  
  In diesem Modell wird die hostanwendung erwartet in der Regel werden die Hostansicht eine <xref:System.Windows.FrameworkElement> Unterklasse. Der hostseitige Adapter muss konvertieren die <xref:System.AddIn.Contract.INativeHandleContract> auf eine <xref:System.Windows.FrameworkElement> nach der <xref:System.AddIn.Contract.INativeHandleContract> überschreitet die Isolationsgrenze hinweg. Da von der hostanwendung zum Abrufen eine Methode aufgerufen wird die <xref:System.Windows.FrameworkElement>, der die Hostansicht muss vom Typ "return" die <xref:System.Windows.FrameworkElement> indem es darin enthalten. Daher muss die hostanwendung die Hostansicht abgeleitet, von einer Unterklasse von <xref:System.Windows.FrameworkElement> enthalten können andere [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)], z. B. <xref:System.Windows.Controls.UserControl>. Der folgende Code zeigt die hostanwendung die Hostansicht des Vertrags, als implementiert die `WPFAddInHostView` Klasse.  
-  
-  
-  
+
 <a name="HostSideAdapter"></a>   
 ## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>Implementieren des hostseitigen Adapterpipelinesegments  
  Während der Vertrag ist eine <xref:System.AddIn.Contract.INativeHandleContract>, die hostanwendung erwartet eine <xref:System.Windows.Controls.UserControl> (wie durch die Hostansicht festgelegt). Daher die <xref:System.AddIn.Contract.INativeHandleContract> konvertiert werden muss, um eine <xref:System.Windows.FrameworkElement> nach dem Überschreiten der Isolationsgrenze, bevor er als Inhalt der Hostansicht festgelegt (die sich daraus ableitet <xref:System.Windows.Controls.UserControl>).  
   
  Dieser Vorgang wird vom hostseitigen Adapter ausgeführt, wie im folgenden Code gezeigt.  
-  
-  
-  
+
  Wie Sie sehen, ruft der hostseitige Adapter die <xref:System.AddIn.Contract.INativeHandleContract> durch Aufrufen des Add-In-seitigen Adapters <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> Methode (Dies ist der Punkt, in denen die <xref:System.AddIn.Contract.INativeHandleContract> überschreitet die Isolationsgrenze hinweg).  
   
  Der hostseitige Adapter anschließend konvertiert der <xref:System.AddIn.Contract.INativeHandleContract> auf eine <xref:System.Windows.FrameworkElement> durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>. Zum Schluss die <xref:System.Windows.FrameworkElement> als Inhalt der Hostansicht festgelegt ist.  
@@ -81,29 +76,24 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
 <a name="AddIn"></a>   
 ## <a name="implementing-the-add-in"></a>Implementieren des Add-Ins  
  Sind der Add-In-seitige Adapter und die Add-In-Ansicht eingerichtet, kann das Add-In durch Ableiten von der Add-In-Ansicht implementiert werden, wie in folgendem Code gezeigt.  
-  
-  
-  
-  
-  
+
  In diesem Beispiel sehen Sie einen interessanten Vorteil dieses Modells: Add-In-Entwickler müssen nur das Add-in (da es auch die Benutzeroberfläche ist), anstatt eine Add-in-Klasse sowohl eine Add-in-Benutzeroberfläche zu implementieren.  
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>Implementieren der Hostanwendung  
  Der hostseitige Adapter und die Hostansicht erstellt wurden, können die hostanwendung die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Add-In-Modell, um die Pipeline zu öffnen und eine Hostansicht des Add-Ins abzurufen. Diese Schritte werden im folgenden Code gezeigt.  
-  
-  
-  
+
  Die hostanwendung verwendet typischen Code von .NET Framework-Add-in-Modell, aktivieren Sie das Add-in, das die hostanwendung die Hostansicht implizit an die hostanwendung zurückgibt. Die hostanwendung zeigt anschließend die Hostansicht (d.h. eine <xref:System.Windows.Controls.UserControl>) aus einer <xref:System.Windows.Controls.Grid>.  
   
  Der Code zum Verarbeiten von Interaktionen mit der Add-in-Benutzeroberfläche, die in das Add-in der Anwendungsdomäne ausgeführt werden. Diese Interaktionen umfassen Folgendes:  
   
--   Behandeln der <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
+-   Behandeln der <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
   
 -   Zeigt die <xref:System.Windows.MessageBox>.  
   
  Diese Aktivität ist von der Hostanwendung vollständig isoliert.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Übersicht über WPF-Add-Ins](wpf-add-ins-overview.md)

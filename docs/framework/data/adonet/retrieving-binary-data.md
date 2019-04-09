@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 56c5a9e3-31f1-482f-bce0-ff1c41a658d0
-ms.openlocfilehash: 7b0cfb9273603850d2451245b81f1bb651f16d56
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 068b84e8704b54e6aea148ec5fc5bf9f0c4cb958
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094060"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085973"
 ---
 # <a name="retrieving-binary-data"></a>Abrufen von Binärdaten
 In der Standardeinstellung die **DataReader** eingehende Daten als eine Zeile geladen wird, sobald eine ganze Datenzeile verfügbar ist. BLOBs (Binary Large Objects) müssen jedoch anders behandelt werden, da sie mehrere Gigabyte an Daten umfassen können, die nicht in eine einzelne Zeile passen. Die **Command.ExecuteReader** Methode verfügt über eine Überladung auf, eine <xref:System.Data.CommandBehavior> Argument so ändern Sie das Standardverhalten der **DataReader**. Können Sie übergeben <xref:System.Data.CommandBehavior.SequentialAccess> auf die **"ExecuteReader"** Methode, um das Standardverhalten ändern der **DataReader** , damit anstelle von Zeilen mit Daten werden geladen, Daten sequenziell geladen werden, wie sie empfangen wird. Diese Methode eignet sich hervorragend zum Laden von BLOBs oder anderen großen Datenstrukturen. Beachten Sie, dass dieses Verhalten je nach Datenquelle verschieden sein kann. Wenn beispielsweise ein BLOB von Microsoft Access zurückgegeben wird, werden die Daten beim Empfang nicht sequenziell geladen, sondern das BLOB wird vollständig in den Speicher geladen.  
@@ -154,5 +154,6 @@ connection.Close();
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+
+- [Binäre Daten und Daten mit umfangreichen Werten in SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

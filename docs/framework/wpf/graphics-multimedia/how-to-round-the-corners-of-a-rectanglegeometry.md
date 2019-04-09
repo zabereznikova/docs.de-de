@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], rounding corners of RectangleGeometry objects [WPF]
 - rounding corners of RectangleGeometry objects [WPF]
 ms.assetid: 926644bc-1357-4c0b-ac81-694bd090ae87
-ms.openlocfilehash: f00d7a7cd6117318efb17645bbb9df279c97adff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: eb2f173bedb903e12b2795264c684524cfa09825
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089132"
 ---
 # <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>Vorgehensweise: Abrunden der Ecken einer RectangleGeometry
 Zum Abrunden der Ecken des eine <xref:System.Windows.Media.RectangleGeometry>legen die <xref:System.Windows.Media.RectangleGeometry.RadiusX%2A> und <xref:System.Windows.Media.RectangleGeometry.RadiusY%2A> Eigenschaften, die einen Wert größer als 0 (null). Je größer die Werte, desto runder die Ecken des Rechtecks.  
@@ -26,6 +26,7 @@ Zum Abrunden der Ecken des eine <xref:System.Windows.Media.RectangleGeometry>leg
 Rechtecke mit abgerundeten Ecken  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht über Geometrien](geometry-overview.md)
+
+- [Übersicht über die Geometrie](geometry-overview.md)
 - [Erstellen einer zusammengesetzten Form](how-to-create-a-composite-shape.md)
-- [Erstellen einer Form mithilfe von PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)
+- [Erstellen einer Form mithilfe einer PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)
