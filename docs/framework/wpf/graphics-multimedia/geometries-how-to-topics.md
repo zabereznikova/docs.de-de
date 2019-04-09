@@ -6,35 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - geometry classes [WPF]
 ms.assetid: 83873331-b013-472e-8197-8ba993dd242f
-ms.openlocfilehash: f2a45cf48c1d0cc097cea956d22fed2079e657a8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3afee770e36b7daea754775f64dd7f1030659267
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361641"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096237"
 ---
-# <a name="geometries-how-to-topics"></a><span data-ttu-id="65e32-102">Gewusst-wie-Themen zu Geometrien</span><span class="sxs-lookup"><span data-stu-id="65e32-102">Geometries How-to Topics</span></span>
-<span data-ttu-id="65e32-103">Die Themen in diesem Abschnitt veranschaulichen, wie <xref:System.Windows.Media.Geometry> Objekte in Ihren Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="65e32-103">The topics in this section demonstrate how to use <xref:System.Windows.Media.Geometry> objects in your applications.</span></span>  
+# <a name="geometries-how-to-topics"></a><span data-ttu-id="c41f4-102">Gewusst-wie-Themen zu Geometrien</span><span class="sxs-lookup"><span data-stu-id="c41f4-102">Geometries How-to Topics</span></span>
+<span data-ttu-id="c41f4-103">Die Themen in diesem Abschnitt veranschaulichen, wie <xref:System.Windows.Media.Geometry> Objekte in Ihren Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="c41f4-103">The topics in this section demonstrate how to use <xref:System.Windows.Media.Geometry> objects in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="65e32-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="65e32-104">In This Section</span></span>  
- [<span data-ttu-id="65e32-105">Animieren eines EllipseGeometry</span><span class="sxs-lookup"><span data-stu-id="65e32-105">Animate an EllipseGeometry</span></span>](how-to-animate-an-ellipsegeometry.md)  
- [<span data-ttu-id="65e32-106">Animieren der Größe eines ArcSegment</span><span class="sxs-lookup"><span data-stu-id="65e32-106">Animate the Size of an ArcSegment</span></span>](how-to-animate-the-size-of-an-arcsegment.md)  
- [<span data-ttu-id="65e32-107">Steuern des Ausfüllens einer zusammengesetzten Form</span><span class="sxs-lookup"><span data-stu-id="65e32-107">Control the Fill of a Composite Shape</span></span>](how-to-control-the-fill-of-a-composite-shape.md)  
- [<span data-ttu-id="65e32-108">Erstellen von kombinierten Geometrien</span><span class="sxs-lookup"><span data-stu-id="65e32-108">Create a Combined Geometry</span></span>](how-to-create-a-combined-geometry.md)  
- [<span data-ttu-id="65e32-109">Erstellen einer zusammengesetzten Form</span><span class="sxs-lookup"><span data-stu-id="65e32-109">Create a Composite Shape</span></span>](how-to-create-a-composite-shape.md)  
- [<span data-ttu-id="65e32-110">Erstellen Sie eine kubische Bezier-Kurve</span><span class="sxs-lookup"><span data-stu-id="65e32-110">Create a Cubic Bezier Curve</span></span>](how-to-create-a-cubic-bezier-curve.md)  
- [<span data-ttu-id="65e32-111">Erstellen einer Linie mit einer LineGeometry</span><span class="sxs-lookup"><span data-stu-id="65e32-111">Create a Line Using a LineGeometry</span></span>](how-to-create-a-line-using-a-linegeometry.md)  
- [<span data-ttu-id="65e32-112">Erstellen eines LineSegment in einer PathGeometry</span><span class="sxs-lookup"><span data-stu-id="65e32-112">Create a LineSegment in a PathGeometry</span></span>](how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [<span data-ttu-id="65e32-113">Erstellen einer Form mithilfe von PathGeometry</span><span class="sxs-lookup"><span data-stu-id="65e32-113">Create a Shape by Using a PathGeometry</span></span>](how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [<span data-ttu-id="65e32-114">Erstellen eines Shapes mit einer StreamGeometry</span><span class="sxs-lookup"><span data-stu-id="65e32-114">Create a Shape Using a StreamGeometry</span></span>](how-to-create-a-shape-using-a-streamgeometry.md)  
- [<span data-ttu-id="65e32-115">Erstellen einer quadratischen Bezier-Kurve</span><span class="sxs-lookup"><span data-stu-id="65e32-115">Create a Quadratic Bezier Curve</span></span>](how-to-create-a-quadratic-bezier-curve.md)  
- [<span data-ttu-id="65e32-116">Erstellen eines elliptischen Bogens</span><span class="sxs-lookup"><span data-stu-id="65e32-116">Create an Elliptical Arc</span></span>](how-to-create-an-elliptical-arc.md)  
- [<span data-ttu-id="65e32-117">Erstellen von mehreren untergeordneten Pfaden innerhalb einer PathGeometry</span><span class="sxs-lookup"><span data-stu-id="65e32-117">Create Multiple Subpaths Within a PathGeometry</span></span>](how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
- [<span data-ttu-id="65e32-118">Definieren eines Rechtecks mit RectangleGeometry</span><span class="sxs-lookup"><span data-stu-id="65e32-118">Define a Rectangle Using a RectangleGeometry</span></span>](how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
- [<span data-ttu-id="65e32-119">Abrunden der Ecken einer RectangleGeometry</span><span class="sxs-lookup"><span data-stu-id="65e32-119">Round the Corners of a RectangleGeometry</span></span>](how-to-round-the-corners-of-a-rectanglegeometry.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c41f4-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="c41f4-104">In This Section</span></span>  
+ [<span data-ttu-id="c41f4-105">Animieren einer EllipseGeometry</span><span class="sxs-lookup"><span data-stu-id="c41f4-105">Animate an EllipseGeometry</span></span>](how-to-animate-an-ellipsegeometry.md)  
+ [<span data-ttu-id="c41f4-106">Animieren der Größe eines ArcSegment-Objekts</span><span class="sxs-lookup"><span data-stu-id="c41f4-106">Animate the Size of an ArcSegment</span></span>](how-to-animate-the-size-of-an-arcsegment.md)  
+ [<span data-ttu-id="c41f4-107">Steuern des Ausfüllens einer zusammengesetzten Form</span><span class="sxs-lookup"><span data-stu-id="c41f4-107">Control the Fill of a Composite Shape</span></span>](how-to-control-the-fill-of-a-composite-shape.md)  
+ [<span data-ttu-id="c41f4-108">Erstellen von kombinierten Geometrien</span><span class="sxs-lookup"><span data-stu-id="c41f4-108">Create a Combined Geometry</span></span>](how-to-create-a-combined-geometry.md)  
+ [<span data-ttu-id="c41f4-109">Erstellen einer zusammengesetzten Form</span><span class="sxs-lookup"><span data-stu-id="c41f4-109">Create a Composite Shape</span></span>](how-to-create-a-composite-shape.md)  
+ [<span data-ttu-id="c41f4-110">Erstellen einer kubischen Bézierkurve</span><span class="sxs-lookup"><span data-stu-id="c41f4-110">Create a Cubic Bezier Curve</span></span>](how-to-create-a-cubic-bezier-curve.md)  
+ [<span data-ttu-id="c41f4-111">Erstellen einer Linie mit einer LineGeometry</span><span class="sxs-lookup"><span data-stu-id="c41f4-111">Create a Line Using a LineGeometry</span></span>](how-to-create-a-line-using-a-linegeometry.md)  
+ [<span data-ttu-id="c41f4-112">Erstellen eines LineSegment in einer PathGeometry</span><span class="sxs-lookup"><span data-stu-id="c41f4-112">Create a LineSegment in a PathGeometry</span></span>](how-to-create-a-linesegment-in-a-pathgeometry.md)  
+ [<span data-ttu-id="c41f4-113">Erstellen einer Form mithilfe einer PathGeometry</span><span class="sxs-lookup"><span data-stu-id="c41f4-113">Create a Shape by Using a PathGeometry</span></span>](how-to-create-a-shape-by-using-a-pathgeometry.md)  
+ [<span data-ttu-id="c41f4-114">Erstellen eines Shapes mit einer StreamGeometry</span><span class="sxs-lookup"><span data-stu-id="c41f4-114">Create a Shape Using a StreamGeometry</span></span>](how-to-create-a-shape-using-a-streamgeometry.md)  
+ [<span data-ttu-id="c41f4-115">Erstellen einer quadratischen Bézierkurve</span><span class="sxs-lookup"><span data-stu-id="c41f4-115">Create a Quadratic Bezier Curve</span></span>](how-to-create-a-quadratic-bezier-curve.md)  
+ [<span data-ttu-id="c41f4-116">Erstellen eines elliptischen Bogens</span><span class="sxs-lookup"><span data-stu-id="c41f4-116">Create an Elliptical Arc</span></span>](how-to-create-an-elliptical-arc.md)  
+ [<span data-ttu-id="c41f4-117">Erstellen von mehreren untergeordneten Pfaden innerhalb einer PathGeometry</span><span class="sxs-lookup"><span data-stu-id="c41f4-117">Create Multiple Subpaths Within a PathGeometry</span></span>](how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
+ [<span data-ttu-id="c41f4-118">Definieren eines Rechtecks mit einer RectangleGeometry</span><span class="sxs-lookup"><span data-stu-id="c41f4-118">Define a Rectangle Using a RectangleGeometry</span></span>](how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
+ [<span data-ttu-id="c41f4-119">Abrunden der Ecken einer RectangleGeometry</span><span class="sxs-lookup"><span data-stu-id="c41f4-119">Round the Corners of a RectangleGeometry</span></span>](how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
-## <a name="see-also"></a><span data-ttu-id="65e32-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="65e32-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c41f4-120">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c41f4-120">See also</span></span>
+
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
-- [<span data-ttu-id="65e32-121">Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF</span><span class="sxs-lookup"><span data-stu-id="65e32-121">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
-- [<span data-ttu-id="65e32-122">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="65e32-122">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="c41f4-121">Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF</span><span class="sxs-lookup"><span data-stu-id="c41f4-121">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="c41f4-122">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="c41f4-122">Graphics and Multimedia</span></span>](index.md)
