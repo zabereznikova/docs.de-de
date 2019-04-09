@@ -5,32 +5,32 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: dceda9dce794e0a08cc9cd7905cf3cd0685898d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211230"
 ---
-# <a name="retrieving-objects-from-the-identity-cache"></a><span data-ttu-id="0e150-102">Abrufen von Objekten aus dem Identitätscache</span><span class="sxs-lookup"><span data-stu-id="0e150-102">Retrieving Objects from the Identity Cache</span></span>
-<span data-ttu-id="0e150-103">In diesem Thema werden die Typen von LINQ to SQL-Abfragen beschrieben, die Objekte aus dem Identitäts-Cache abrufen, der vom <xref:System.Data.Linq.DataContext> verwaltet wird.</span><span class="sxs-lookup"><span data-stu-id="0e150-103">This topic describes the types of LINQ to SQL queries that return an object from the identity cache that is managed by the <xref:System.Data.Linq.DataContext>.</span></span>  
+# <a name="retrieving-objects-from-the-identity-cache"></a><span data-ttu-id="3989b-102">Abrufen von Objekten aus dem Identitätscache</span><span class="sxs-lookup"><span data-stu-id="3989b-102">Retrieving Objects from the Identity Cache</span></span>
+<span data-ttu-id="3989b-103">In diesem Thema werden die Typen von LINQ to SQL-Abfragen beschrieben, die Objekte aus dem Identitäts-Cache abrufen, der vom <xref:System.Data.Linq.DataContext> verwaltet wird.</span><span class="sxs-lookup"><span data-stu-id="3989b-103">This topic describes the types of LINQ to SQL queries that return an object from the identity cache that is managed by the <xref:System.Data.Linq.DataContext>.</span></span>  
   
- <span data-ttu-id="0e150-104">In LINQ to SQL besteht eine der Methoden zur <xref:System.Data.Linq.DataContext>-Objektverwaltung darin, Objektidentitäten in einem Identitäts-Cache zu protokollieren, während Abfragen ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="0e150-104">In LINQ to SQL, one of the ways in which the <xref:System.Data.Linq.DataContext> manages objects is by logging object identities in an identity cache as queries are executed.</span></span> <span data-ttu-id="0e150-105">In einigen Fällen versucht LINQ to SQL, vor dem Ausführen einer Datenbankabfrage ein Objekt aus dem Identitäts-Cache abzurufen.</span><span class="sxs-lookup"><span data-stu-id="0e150-105">In some cases, LINQ to SQL will attempt to retrieve an object from the identity cache before executing a query in the database.</span></span>  
+ <span data-ttu-id="3989b-104">In LINQ to SQL besteht eine der Methoden zur <xref:System.Data.Linq.DataContext>-Objektverwaltung darin, Objektidentitäten in einem Identitäts-Cache zu protokollieren, während Abfragen ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="3989b-104">In LINQ to SQL, one of the ways in which the <xref:System.Data.Linq.DataContext> manages objects is by logging object identities in an identity cache as queries are executed.</span></span> <span data-ttu-id="3989b-105">In einigen Fällen versucht LINQ to SQL, vor dem Ausführen einer Datenbankabfrage ein Objekt aus dem Identitäts-Cache abzurufen.</span><span class="sxs-lookup"><span data-stu-id="3989b-105">In some cases, LINQ to SQL will attempt to retrieve an object from the identity cache before executing a query in the database.</span></span>  
   
- <span data-ttu-id="0e150-106">Damit eine LINQ to SQL-Abfrage ein Objekt aus dem Identitäts-Cache zurückgibt, muss die Abfrage im Regelfall auf dem Primärschlüssel eines Objekts basieren und ein einzelnes Objekt zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="0e150-106">In general, for a LINQ to SQL query to return an object from the identity cache, the query must be based on the primary key of an object and must return a single object.</span></span> <span data-ttu-id="0e150-107">Die Abfrage muss eine der im Folgenden gezeigten allgemeinen Formen aufweisen.</span><span class="sxs-lookup"><span data-stu-id="0e150-107">In particular, the query must be in one of the general forms shown below.</span></span>  
+ <span data-ttu-id="3989b-106">Damit eine LINQ to SQL-Abfrage ein Objekt aus dem Identitäts-Cache zurückgibt, muss die Abfrage im Regelfall auf dem Primärschlüssel eines Objekts basieren und ein einzelnes Objekt zurückgeben.</span><span class="sxs-lookup"><span data-stu-id="3989b-106">In general, for a LINQ to SQL query to return an object from the identity cache, the query must be based on the primary key of an object and must return a single object.</span></span> <span data-ttu-id="3989b-107">Die Abfrage muss eine der im Folgenden gezeigten allgemeinen Formen aufweisen.</span><span class="sxs-lookup"><span data-stu-id="3989b-107">In particular, the query must be in one of the general forms shown below.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0e150-108">Vorkompilierte Abfrage geben keine Objekte aus dem Identitäts-Cache zurück.</span><span class="sxs-lookup"><span data-stu-id="0e150-108">Pre-compiled queries will not return objects from the identity cache.</span></span> <span data-ttu-id="0e150-109">Weitere Informationen über vorkompilierte Abfragen finden Sie unter <xref:System.Data.Linq.CompiledQuery> und [Vorgehensweise: Store und Wiederverwenden von Abfragen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).</span><span class="sxs-lookup"><span data-stu-id="0e150-109">For more information about pre-compiled queries, see <xref:System.Data.Linq.CompiledQuery> and [How to: Store and Reuse Queries](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).</span></span>  
+>  <span data-ttu-id="3989b-108">Vorkompilierte Abfrage geben keine Objekte aus dem Identitäts-Cache zurück.</span><span class="sxs-lookup"><span data-stu-id="3989b-108">Pre-compiled queries will not return objects from the identity cache.</span></span> <span data-ttu-id="3989b-109">Weitere Informationen über vorkompilierte Abfragen finden Sie unter <xref:System.Data.Linq.CompiledQuery> und [Vorgehensweise: Store und Wiederverwenden von Abfragen](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).</span><span class="sxs-lookup"><span data-stu-id="3989b-109">For more information about pre-compiled queries, see <xref:System.Data.Linq.CompiledQuery> and [How to: Store and Reuse Queries](../../../../../../docs/framework/data/adonet/sql/linq/how-to-store-and-reuse-queries.md).</span></span>  
   
- <span data-ttu-id="0e150-110">Eine Abfrage muss eine der folgenden allgemeinen Formen aufweisen, um ein Objekt aus dem Identitäts-Cache abzurufen:</span><span class="sxs-lookup"><span data-stu-id="0e150-110">A query must be in one of the following general forms to retrieve an object from the identity cache:</span></span>  
+ <span data-ttu-id="3989b-110">Eine Abfrage muss eine der folgenden allgemeinen Formen aufweisen, um ein Objekt aus dem Identitäts-Cache abzurufen:</span><span class="sxs-lookup"><span data-stu-id="3989b-110">A query must be in one of the following general forms to retrieve an object from the identity cache:</span></span>  
   
--   <span data-ttu-id="0e150-111"><xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`</span><span class="sxs-lookup"><span data-stu-id="0e150-111"><xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`</span></span>  
+-   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
   
--   <span data-ttu-id="0e150-112"><xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`</span><span class="sxs-lookup"><span data-stu-id="0e150-112"><xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`</span></span>  
+-   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
   
- <span data-ttu-id="0e150-113">In diesen allgemeinen Formen werden `Function1`, `Function2` und `predicate` wie folgt definiert.</span><span class="sxs-lookup"><span data-stu-id="0e150-113">In these general forms, `Function1`, `Function2`, and `predicate` are defined as follows.</span></span>  
+ <span data-ttu-id="3989b-111">In diesen allgemeinen Formen werden `Function1`, `Function2` und `predicate` wie folgt definiert.</span><span class="sxs-lookup"><span data-stu-id="3989b-111">In these general forms, `Function1`, `Function2`, and `predicate` are defined as follows.</span></span>  
   
- <span data-ttu-id="0e150-114">`Function1` kann eine der folgenden Formen haben:</span><span class="sxs-lookup"><span data-stu-id="0e150-114">`Function1` can be any of the following:</span></span>  
+ `Function1` <span data-ttu-id="3989b-112">Dabei kann es sich um eine der folgenden sein:</span><span class="sxs-lookup"><span data-stu-id="3989b-112">can be any of the following:</span></span>  
   
 -   <xref:System.Linq.Queryable.Where%2A>  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54569153"
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- <span data-ttu-id="0e150-115">`Function2` kann eine der folgenden Formen haben:</span><span class="sxs-lookup"><span data-stu-id="0e150-115">`Function2` can be any of the following:</span></span>  
+ `Function2` <span data-ttu-id="3989b-113">Dabei kann es sich um eine der folgenden sein:</span><span class="sxs-lookup"><span data-stu-id="3989b-113">can be any of the following:</span></span>  
   
 -   <xref:System.Linq.Queryable.First%2A>  
   
@@ -52,20 +52,21 @@ ms.locfileid: "54569153"
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- <span data-ttu-id="0e150-116">`predicate` muss ein Ausdruck sein, in dem die Primärschlüsseleigenschaft des Objekts auf einen konstanten Wert festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="0e150-116">`predicate` must be an expression in which the object's primary key property is set to a constant value.</span></span> <span data-ttu-id="0e150-117">Wenn der Primärschlüssel eines Objekts von mehreren Eigenschaften definiert wird, muss jede dieser Eigenschaften auf einen konstanten Wert festgelegt sein.</span><span class="sxs-lookup"><span data-stu-id="0e150-117">If an object has a primary key defined by more than one property, each primary key property must be set to a constant value.</span></span> <span data-ttu-id="0e150-118">Hier einige Beispiele der Form, die `predicate` aufweisen muss:</span><span class="sxs-lookup"><span data-stu-id="0e150-118">The following are examples of the form `predicate` must take:</span></span>  
+ `predicate` <span data-ttu-id="3989b-114">Ein Ausdruck muss sein, in dem Primärschlüsseleigenschaft des Objekts auf einen konstanten Wert festgelegt ist.</span><span class="sxs-lookup"><span data-stu-id="3989b-114">must be an expression in which the object's primary key property is set to a constant value.</span></span> <span data-ttu-id="3989b-115">Wenn der Primärschlüssel eines Objekts von mehreren Eigenschaften definiert wird, muss jede dieser Eigenschaften auf einen konstanten Wert festgelegt sein.</span><span class="sxs-lookup"><span data-stu-id="3989b-115">If an object has a primary key defined by more than one property, each primary key property must be set to a constant value.</span></span> <span data-ttu-id="3989b-116">Hier einige Beispiele der Form, die `predicate` aufweisen muss:</span><span class="sxs-lookup"><span data-stu-id="3989b-116">The following are examples of the form `predicate` must take:</span></span>  
   
 -   `c => c.PK == constant_value`  
   
 -   `c => c.PK1 == constant_value1 && c=> c.PK2 == constant_value2`  
   
-## <a name="example"></a><span data-ttu-id="0e150-119">Beispiel</span><span class="sxs-lookup"><span data-stu-id="0e150-119">Example</span></span>  
- <span data-ttu-id="0e150-120">Der folgende Code stellt Beispiele für die Typen von LINQ to SQL-Abfragen dar, die ein Objekt aus dem Identitäts-Cache abrufen.</span><span class="sxs-lookup"><span data-stu-id="0e150-120">The following code provides examples of the types of LINQ to SQL queries that retrieve an object from the identity cache.</span></span>  
+## <a name="example"></a><span data-ttu-id="3989b-117">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3989b-117">Example</span></span>  
+ <span data-ttu-id="3989b-118">Der folgende Code stellt Beispiele für die Typen von LINQ to SQL-Abfragen dar, die ein Objekt aus dem Identitäts-Cache abrufen.</span><span class="sxs-lookup"><span data-stu-id="3989b-118">The following code provides examples of the types of LINQ to SQL queries that retrieve an object from the identity cache.</span></span>  
   
  [!code-csharp[L2S_QueryCache#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/l2s_querycache/cs/program.cs#1)]
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="0e150-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0e150-121">See also</span></span>
-- [<span data-ttu-id="0e150-122">Abfragekonzepte</span><span class="sxs-lookup"><span data-stu-id="0e150-122">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [<span data-ttu-id="0e150-123">Objektidentität</span><span class="sxs-lookup"><span data-stu-id="0e150-123">Object Identity</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
-- [<span data-ttu-id="0e150-124">Hintergrundinformationen</span><span class="sxs-lookup"><span data-stu-id="0e150-124">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [<span data-ttu-id="0e150-125">Objektidentität</span><span class="sxs-lookup"><span data-stu-id="0e150-125">Object Identity</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+## <a name="see-also"></a><span data-ttu-id="3989b-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3989b-119">See also</span></span>
+
+- [<span data-ttu-id="3989b-120">Abfragekonzepte</span><span class="sxs-lookup"><span data-stu-id="3989b-120">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+- [<span data-ttu-id="3989b-121">Objektidentität</span><span class="sxs-lookup"><span data-stu-id="3989b-121">Object Identity</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [<span data-ttu-id="3989b-122">Hintergrundinformationen</span><span class="sxs-lookup"><span data-stu-id="3989b-122">Background Information</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
+- [<span data-ttu-id="3989b-123">Objektidentität</span><span class="sxs-lookup"><span data-stu-id="3989b-123">Object Identity</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

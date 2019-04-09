@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 42c677ae5aeb1e1b70ab68be8920fc71215cfe63
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: db119a94cb7df29697836ffda240c29a86922d60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214772"
 ---
-# <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a><span data-ttu-id="7ddc6-102">ISymENCUnmanagedMethod::GetDocumentsForMethod-Methode</span><span class="sxs-lookup"><span data-stu-id="7ddc6-102">ISymENCUnmanagedMethod::GetDocumentsForMethod Method</span></span>
-<span data-ttu-id="7ddc6-103">Ruft ab, die Dokumente, die diese Methode in Zeilen umfasst.</span><span class="sxs-lookup"><span data-stu-id="7ddc6-103">Gets the documents that this method has lines in.</span></span>  
+# <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a><span data-ttu-id="9112f-102">ISymENCUnmanagedMethod::GetDocumentsForMethod-Methode</span><span class="sxs-lookup"><span data-stu-id="9112f-102">ISymENCUnmanagedMethod::GetDocumentsForMethod Method</span></span>
+<span data-ttu-id="9112f-103">Ruft ab, die Dokumente, die diese Methode in Zeilen umfasst.</span><span class="sxs-lookup"><span data-stu-id="9112f-103">Gets the documents that this method has lines in.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7ddc6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7ddc6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9112f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9112f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDocumentsForMethod(  
@@ -36,21 +36,22 @@ HRESULT GetDocumentsForMethod(
     [in, size_is(cDocs)] ISymUnmanagedDocument* documents[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7ddc6-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="7ddc6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9112f-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="9112f-105">Parameters</span></span>  
  `cDocs`  
- <span data-ttu-id="7ddc6-106">[in] Die Länge des Puffers verweist `pcDocs`.</span><span class="sxs-lookup"><span data-stu-id="7ddc6-106">[in] The length of the buffer pointed to by `pcDocs`.</span></span>  
+ <span data-ttu-id="9112f-106">[in] Die Länge des Puffers verweist `pcDocs`.</span><span class="sxs-lookup"><span data-stu-id="9112f-106">[in] The length of the buffer pointed to by `pcDocs`.</span></span>  
   
  `pcDocs`  
- <span data-ttu-id="7ddc6-107">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des für die Dokumente enthalten die erforderlichen Puffers in Zeichen.</span><span class="sxs-lookup"><span data-stu-id="7ddc6-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.</span></span>  
+ <span data-ttu-id="9112f-107">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des für die Dokumente enthalten die erforderlichen Puffers in Zeichen.</span><span class="sxs-lookup"><span data-stu-id="9112f-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.</span></span>  
   
  `documents`  
- <span data-ttu-id="7ddc6-108">[in] Der Puffer, der die Dokumente enthält.</span><span class="sxs-lookup"><span data-stu-id="7ddc6-108">[in] The buffer that contains the documents.</span></span>  
+ <span data-ttu-id="9112f-108">[in] Der Puffer, der die Dokumente enthält.</span><span class="sxs-lookup"><span data-stu-id="9112f-108">[in] The buffer that contains the documents.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7ddc6-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="7ddc6-109">Return Value</span></span>  
- <span data-ttu-id="7ddc6-110">S_OK, wenn die Methode erfolgreich ist; andernfalls ein Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="7ddc6-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="9112f-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="9112f-109">Return Value</span></span>  
+ <span data-ttu-id="9112f-110">S_OK, wenn die Methode erfolgreich ist; andernfalls ein Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="9112f-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7ddc6-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7ddc6-111">Requirements</span></span>  
- <span data-ttu-id="7ddc6-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7ddc6-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9112f-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9112f-111">Requirements</span></span>  
+ <span data-ttu-id="9112f-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9112f-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7ddc6-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7ddc6-113">See also</span></span>
-- [<span data-ttu-id="7ddc6-114">ISymENCUnmanagedMethod-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7ddc6-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9112f-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9112f-113">See also</span></span>
+
+- [<span data-ttu-id="9112f-114">ISymENCUnmanagedMethod-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9112f-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

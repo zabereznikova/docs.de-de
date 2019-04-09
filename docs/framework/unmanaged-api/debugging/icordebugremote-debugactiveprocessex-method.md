@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eba0ff6e545a5da5d7733a157b73ddd66e717de9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 45b919d90454c9424cadb1d4dfc3b0dfb09e5053
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477113"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209449"
 ---
-# <a name="icordebugremotedebugactiveprocessex-method"></a><span data-ttu-id="45513-102">ICorDebugRemote::DebugActiveProcessEx-Methode</span><span class="sxs-lookup"><span data-stu-id="45513-102">ICorDebugRemote::DebugActiveProcessEx Method</span></span>
-<span data-ttu-id="45513-103">Startet einen Prozess auf einem Remotecomputer unter dem Debugger.</span><span class="sxs-lookup"><span data-stu-id="45513-103">Launches a process on a remote machine under the debugger.</span></span>  
+# <a name="icordebugremotedebugactiveprocessex-method"></a><span data-ttu-id="ab22a-102">ICorDebugRemote::DebugActiveProcessEx-Methode</span><span class="sxs-lookup"><span data-stu-id="ab22a-102">ICorDebugRemote::DebugActiveProcessEx Method</span></span>
+<span data-ttu-id="ab22a-103">Startet einen Prozess auf einem Remotecomputer unter dem Debugger.</span><span class="sxs-lookup"><span data-stu-id="ab22a-103">Launches a process on a remote machine under the debugger.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="45513-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="45513-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ab22a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ab22a-104">Syntax</span></span>  
   
 ```  
 HRESULT DebugActiveProcessEx (  
@@ -38,40 +38,41 @@ HRESULT DebugActiveProcessEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="45513-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="45513-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ab22a-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ab22a-105">Parameters</span></span>  
  `pRemoteTarget`  
- <span data-ttu-id="45513-106">[in] Zeiger auf eine [ICorDebugRemoteTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md).</span><span class="sxs-lookup"><span data-stu-id="45513-106">[in] Pointer to an [ICorDebugRemoteTarget Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md).</span></span> <span data-ttu-id="45513-107">Dieser Parameter wird verwendet, um den Computer zu ermitteln, auf dem der Prozess ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="45513-107">This parameter is used to determine the machine on which the process is running.</span></span>  
+ <span data-ttu-id="ab22a-106">[in] Zeiger auf eine [ICorDebugRemoteTarget-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md).</span><span class="sxs-lookup"><span data-stu-id="ab22a-106">[in] Pointer to an [ICorDebugRemoteTarget Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md).</span></span> <span data-ttu-id="ab22a-107">Dieser Parameter wird verwendet, um den Computer zu ermitteln, auf dem der Prozess ausgeführt wird.</span><span class="sxs-lookup"><span data-stu-id="ab22a-107">This parameter is used to determine the machine on which the process is running.</span></span>  
   
  `id`  
- <span data-ttu-id="45513-108">[in] Die ID des Prozesses, für die der Debugger wird angefügt werden.</span><span class="sxs-lookup"><span data-stu-id="45513-108">[in] The ID of the process to which the debugger is to be attached.</span></span>  
+ <span data-ttu-id="ab22a-108">[in] Die ID des Prozesses, für die der Debugger wird angefügt werden.</span><span class="sxs-lookup"><span data-stu-id="ab22a-108">[in] The ID of the process to which the debugger is to be attached.</span></span>  
   
  `win32Attach`  
- <span data-ttu-id="45513-109">[in] `true` Wenn der Debugger sollte sich so wie Win32-Debugger für den Prozess Verhalten und die nicht verwalteten Rückrufe; anderenfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="45513-109">[in] `true` if the debugger should behave as the Win32 debugger for the process and dispatch the unmanaged callbacks; otherwise, `false`.</span></span>  
+ <span data-ttu-id="ab22a-109">[in] `true` Wenn der Debugger sollte sich so wie Win32-Debugger für den Prozess Verhalten und die nicht verwalteten Rückrufe; anderenfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="ab22a-109">[in] `true` if the debugger should behave as the Win32 debugger for the process and dispatch the unmanaged callbacks; otherwise, `false`.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="45513-110">[out] Ein Zeiger auf die Adresse ein "ICorDebugProcess"-Objekt, das den Prozess darstellt, an dem der Debugger angefügt wurde.</span><span class="sxs-lookup"><span data-stu-id="45513-110">[out] A pointer to the address of an "ICorDebugProcess" object that represents the process to which the debugger has been attached.</span></span>  
+ <span data-ttu-id="ab22a-110">[out] Ein Zeiger auf die Adresse ein "ICorDebugProcess"-Objekt, das den Prozess darstellt, an dem der Debugger angefügt wurde.</span><span class="sxs-lookup"><span data-stu-id="ab22a-110">[out] A pointer to the address of an "ICorDebugProcess" object that represents the process to which the debugger has been attached.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="45513-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="45513-111">Return Value</span></span>  
- <span data-ttu-id="45513-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="45513-112">S_OK</span></span>  
- <span data-ttu-id="45513-113">Erfolgreich an den Prozess auf dem Remotecomputer angefügt.</span><span class="sxs-lookup"><span data-stu-id="45513-113">Successfully attached to the process on the remote machine.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ab22a-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="ab22a-111">Return Value</span></span>  
+ <span data-ttu-id="ab22a-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="ab22a-112">S_OK</span></span>  
+ <span data-ttu-id="ab22a-113">Erfolgreich an den Prozess auf dem Remotecomputer angefügt.</span><span class="sxs-lookup"><span data-stu-id="ab22a-113">Successfully attached to the process on the remote machine.</span></span>  
   
- <span data-ttu-id="45513-114">E_FAIL (oder andere E_-Rückgabecodes)</span><span class="sxs-lookup"><span data-stu-id="45513-114">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="45513-115">Anfügen an den Prozess auf dem Remotecomputer nicht möglich.</span><span class="sxs-lookup"><span data-stu-id="45513-115">Unable to attach to the process on the remote machine.</span></span>  
+ <span data-ttu-id="ab22a-114">E_FAIL (oder andere E_-Rückgabecodes)</span><span class="sxs-lookup"><span data-stu-id="ab22a-114">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="ab22a-115">Anfügen an den Prozess auf dem Remotecomputer nicht möglich.</span><span class="sxs-lookup"><span data-stu-id="ab22a-115">Unable to attach to the process on the remote machine.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="45513-116">Hinweise</span><span class="sxs-lookup"><span data-stu-id="45513-116">Remarks</span></span>  
- <span data-ttu-id="45513-117">Debuggen im gemischten Modus wird in Silverlight nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="45513-117">Mixed-mode debugging is not supported in Silverlight.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ab22a-116">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ab22a-116">Remarks</span></span>  
+ <span data-ttu-id="ab22a-117">Debuggen im gemischten Modus wird in Silverlight nicht unterstützt.</span><span class="sxs-lookup"><span data-stu-id="ab22a-117">Mixed-mode debugging is not supported in Silverlight.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="45513-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="45513-118">Requirements</span></span>  
- <span data-ttu-id="45513-119">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="45513-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ab22a-118">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ab22a-118">Requirements</span></span>  
+ <span data-ttu-id="ab22a-119">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ab22a-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="45513-120">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="45513-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ab22a-120">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ab22a-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="45513-121">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="45513-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ab22a-121">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ab22a-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="45513-122">**.NET Framework-Versionen:** 4.5, 4, 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="45513-122">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
+ <span data-ttu-id="ab22a-122">**.NET Framework-Versionen:** 4.5, 4, 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="ab22a-122">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="45513-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="45513-123">See also</span></span>
-- [<span data-ttu-id="45513-124">ICorDebugRemote-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="45513-124">ICorDebugRemote Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [<span data-ttu-id="45513-125">ICorDebug-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="45513-125">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ab22a-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ab22a-123">See also</span></span>
 
-- [<span data-ttu-id="45513-126">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="45513-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="ab22a-124">ICorDebugRemote-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ab22a-124">ICorDebugRemote Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [<span data-ttu-id="ab22a-125">ICorDebug-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ab22a-125">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [<span data-ttu-id="ab22a-126">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="ab22a-126">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

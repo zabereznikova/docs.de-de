@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Definieren des Größen- und Positionsänderungen Verhalten in einem geteilten Fenster'
+title: 'Vorgehensweise: Definieren des Verhaltens bei Größen- und Positionsänderungen in einem geteilten Fenster'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,31 +9,31 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: a0e16a1961e5eb7fcb81503d0ccead38e08974dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4ed1d2a5230502bc598906da0db5164396986e66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217067"
 ---
-# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a><span data-ttu-id="24514-102">Vorgehensweise: Definieren des Größen- und Positionsänderungen Verhalten in einem geteilten Fenster</span><span class="sxs-lookup"><span data-stu-id="24514-102">How to: Define Resize and Positioning Behavior in a Split Window</span></span>
-<span data-ttu-id="24514-103">Die Bereiche von den <xref:System.Windows.Forms.SplitContainer> Steuerelement eignen sich gut für das wird ein, angepasst und die vom Benutzer bearbeitet.</span><span class="sxs-lookup"><span data-stu-id="24514-103">The panels of the <xref:System.Windows.Forms.SplitContainer> control lend themselves well to being resized and manipulated by users.</span></span> <span data-ttu-id="24514-104">Es werden jedoch Situationen wird den Splitter programmgesteuert –, wo es positioniert ist und in welchem Ausmaß verschoben werden.</span><span class="sxs-lookup"><span data-stu-id="24514-104">However, there will be times when you will want to programmatically control the splitter—where it is positioned and to what degree it can be moved.</span></span>  
+# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a><span data-ttu-id="32180-102">Vorgehensweise: Definieren des Verhaltens bei Größen- und Positionsänderungen in einem geteilten Fenster</span><span class="sxs-lookup"><span data-stu-id="32180-102">How to: Define Resize and Positioning Behavior in a Split Window</span></span>
+<span data-ttu-id="32180-103">Die Bereiche von den <xref:System.Windows.Forms.SplitContainer> Steuerelement eignen sich gut für das wird ein, angepasst und die vom Benutzer bearbeitet.</span><span class="sxs-lookup"><span data-stu-id="32180-103">The panels of the <xref:System.Windows.Forms.SplitContainer> control lend themselves well to being resized and manipulated by users.</span></span> <span data-ttu-id="32180-104">Es werden jedoch Situationen wird den Splitter programmgesteuert –, wo es positioniert ist und in welchem Ausmaß verschoben werden.</span><span class="sxs-lookup"><span data-stu-id="32180-104">However, there will be times when you will want to programmatically control the splitter—where it is positioned and to what degree it can be moved.</span></span>  
   
- <span data-ttu-id="24514-105">Die <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> -Eigenschaft und die anderen Eigenschaften auf der <xref:System.Windows.Forms.SplitContainer> -Steuerelement bietet eine präzise Kontrolle über das Verhalten der Benutzeroberfläche an Ihre Anforderungen anpassen.</span><span class="sxs-lookup"><span data-stu-id="24514-105">The <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> property and the other properties on the <xref:System.Windows.Forms.SplitContainer> control give you precise control over the behavior of your user interface to suit your needs.</span></span> <span data-ttu-id="24514-106">Diese Eigenschaften sind in der folgenden Tabelle aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="24514-106">These properties are listed in the following table.</span></span>  
+ <span data-ttu-id="32180-105">Die <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> -Eigenschaft und die anderen Eigenschaften auf der <xref:System.Windows.Forms.SplitContainer> -Steuerelement bietet eine präzise Kontrolle über das Verhalten der Benutzeroberfläche an Ihre Anforderungen anpassen.</span><span class="sxs-lookup"><span data-stu-id="32180-105">The <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> property and the other properties on the <xref:System.Windows.Forms.SplitContainer> control give you precise control over the behavior of your user interface to suit your needs.</span></span> <span data-ttu-id="32180-106">Diese Eigenschaften sind in der folgenden Tabelle aufgeführt.</span><span class="sxs-lookup"><span data-stu-id="32180-106">These properties are listed in the following table.</span></span>  
   
-|<span data-ttu-id="24514-107">name</span><span class="sxs-lookup"><span data-stu-id="24514-107">Name</span></span>|<span data-ttu-id="24514-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="24514-108">Description</span></span>|  
+|<span data-ttu-id="32180-107">Name</span><span class="sxs-lookup"><span data-stu-id="32180-107">Name</span></span>|<span data-ttu-id="32180-108">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="32180-108">Description</span></span>|  
 |----------|-----------------|  
-|<span data-ttu-id="24514-109"><xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> -Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="24514-109"><xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> property</span></span>|<span data-ttu-id="24514-110">Bestimmt, ob der Splitter mithilfe der Tastatur oder Maus verschoben ist.</span><span class="sxs-lookup"><span data-stu-id="24514-110">Determines if the splitter is movable by means of the keyboard or mouse.</span></span>|  
-|<span data-ttu-id="24514-111"><xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> -Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="24514-111"><xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> property</span></span>|<span data-ttu-id="24514-112">Legt den Abstand in Pixel vom linken oder oberen Rand auf die Splitterleiste verschiebbar.</span><span class="sxs-lookup"><span data-stu-id="24514-112">Determines the distance in pixels from the left or upper edge to the movable splitter bar.</span></span>|  
-|<span data-ttu-id="24514-113"><xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> -Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="24514-113"><xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> property</span></span>|<span data-ttu-id="24514-114">Bestimmt die minimale Entfernung in Pixeln, des Splitters vom Benutzer verschoben werden kann.</span><span class="sxs-lookup"><span data-stu-id="24514-114">Determines the minimum distance, in pixels, that the splitter can be moved by the user.</span></span>|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> <span data-ttu-id="32180-109">property</span><span class="sxs-lookup"><span data-stu-id="32180-109">property</span></span>|<span data-ttu-id="32180-110">Bestimmt, ob der Splitter mithilfe der Tastatur oder Maus verschoben ist.</span><span class="sxs-lookup"><span data-stu-id="32180-110">Determines if the splitter is movable by means of the keyboard or mouse.</span></span>|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> <span data-ttu-id="32180-111">property</span><span class="sxs-lookup"><span data-stu-id="32180-111">property</span></span>|<span data-ttu-id="32180-112">Legt den Abstand in Pixel vom linken oder oberen Rand auf die Splitterleiste verschiebbar.</span><span class="sxs-lookup"><span data-stu-id="32180-112">Determines the distance in pixels from the left or upper edge to the movable splitter bar.</span></span>|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> <span data-ttu-id="32180-113">property</span><span class="sxs-lookup"><span data-stu-id="32180-113">property</span></span>|<span data-ttu-id="32180-114">Bestimmt die minimale Entfernung in Pixeln, des Splitters vom Benutzer verschoben werden kann.</span><span class="sxs-lookup"><span data-stu-id="32180-114">Determines the minimum distance, in pixels, that the splitter can be moved by the user.</span></span>|  
   
- <span data-ttu-id="24514-115">Im folgenden Beispiel ändert die <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Eigenschaft, um einen Effekt "Andocken Splitter"; zu erstellen, wenn der Benutzer den Splitter zieht, inkrementiert in Einheiten von 10 Pixel und nicht der Standardwert 1.</span><span class="sxs-lookup"><span data-stu-id="24514-115">The example below modifies the <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> property to create a "snapping splitter" effect; when the user drags the splitter, it increments in units of 10 pixels rather than the default 1.</span></span>  
+ <span data-ttu-id="32180-115">Im folgenden Beispiel ändert die <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Eigenschaft, um einen Effekt "Andocken Splitter"; zu erstellen, wenn der Benutzer den Splitter zieht, inkrementiert in Einheiten von 10 Pixel und nicht der Standardwert 1.</span><span class="sxs-lookup"><span data-stu-id="32180-115">The example below modifies the <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> property to create a "snapping splitter" effect; when the user drags the splitter, it increments in units of 10 pixels rather than the default 1.</span></span>  
   
-### <a name="to-define-splitcontainer-resize-behavior"></a><span data-ttu-id="24514-116">Verhalten bei Größenänderung SplitContainer definieren</span><span class="sxs-lookup"><span data-stu-id="24514-116">To define SplitContainer resize behavior</span></span>  
+### <a name="to-define-splitcontainer-resize-behavior"></a><span data-ttu-id="32180-116">Verhalten bei Größenänderung SplitContainer definieren</span><span class="sxs-lookup"><span data-stu-id="32180-116">To define SplitContainer resize behavior</span></span>  
   
-1.  <span data-ttu-id="24514-117">Legen Sie in einer Prozedur die <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Eigenschaft, um die gewünschte Größe, damit der "springende" Verhalten des Splitters erreicht wird.</span><span class="sxs-lookup"><span data-stu-id="24514-117">In a procedure, set the <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> property to the desired size, so that the 'snapping' behavior of the splitter is achieved.</span></span>  
+1.  <span data-ttu-id="32180-117">Legen Sie in einer Prozedur die <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Eigenschaft, um die gewünschte Größe, damit der "springende" Verhalten des Splitters erreicht wird.</span><span class="sxs-lookup"><span data-stu-id="32180-117">In a procedure, set the <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> property to the desired size, so that the 'snapping' behavior of the splitter is achieved.</span></span>  
   
-     <span data-ttu-id="24514-118">Das folgende Codebeispiel zeigt, innerhalb des Formulars <xref:System.Windows.Forms.Form.Load> Ereignis, das der Splitter innerhalb der <xref:System.Windows.Forms.SplitContainer> -Steuerelement so eingestellt ist, dass 10 Pixel beim gezogen.</span><span class="sxs-lookup"><span data-stu-id="24514-118">In the following code example, within the form's <xref:System.Windows.Forms.Form.Load> event, the splitter within the <xref:System.Windows.Forms.SplitContainer> control is set to jump 10 pixels when dragged.</span></span>  
+     <span data-ttu-id="32180-118">Das folgende Codebeispiel zeigt, innerhalb des Formulars <xref:System.Windows.Forms.Form.Load> Ereignis, das der Splitter innerhalb der <xref:System.Windows.Forms.SplitContainer> -Steuerelement so eingestellt ist, dass 10 Pixel beim gezogen.</span><span class="sxs-lookup"><span data-stu-id="32180-118">In the following code example, within the form's <xref:System.Windows.Forms.Form.Load> event, the splitter within the <xref:System.Windows.Forms.SplitContainer> control is set to jump 10 pixels when dragged.</span></span>  
   
     ```vb  
     Private Sub Form1_Load(ByVal sender As System.Object, _  
@@ -55,14 +55,15 @@ ms.locfileid: "54628252"
     }  
     ```  
   
-     <span data-ttu-id="24514-119">(Visual C#) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.</span><span class="sxs-lookup"><span data-stu-id="24514-119">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="32180-119">(Visual C#) Platzieren Sie den folgenden Code im Konstruktor des Formulars, um den Ereignishandler zu registrieren.</span><span class="sxs-lookup"><span data-stu-id="32180-119">(Visual C#) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.Load += new System.EventHandler(this.Form1_Load);  
     ```  
   
-     <span data-ttu-id="24514-120">Den Splitter etwas nach links oder rechts verschieben, wird keine erkennbaren Auswirkungen haben; Wenn der Mauszeiger über 10 Pixel in beide Richtungen überschreitet, wird der Splitter jedoch auf die neue Position ausrichten.</span><span class="sxs-lookup"><span data-stu-id="24514-120">Moving the splitter slightly to the left or right will have no discernible effect; however, when the mouse pointer goes 10 pixels in either direction, the splitter will snap to the new position.</span></span>  
+     <span data-ttu-id="32180-120">Den Splitter etwas nach links oder rechts verschieben, wird keine erkennbaren Auswirkungen haben; Wenn der Mauszeiger über 10 Pixel in beide Richtungen überschreitet, wird der Splitter jedoch auf die neue Position ausrichten.</span><span class="sxs-lookup"><span data-stu-id="32180-120">Moving the splitter slightly to the left or right will have no discernible effect; however, when the mouse pointer goes 10 pixels in either direction, the splitter will snap to the new position.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24514-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="24514-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="32180-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="32180-121">See also</span></span>
+
 - <xref:System.Windows.Forms.SplitContainer>
 - <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>
