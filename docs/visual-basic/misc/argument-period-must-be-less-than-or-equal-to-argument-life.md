@@ -4,21 +4,20 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_PeriodLELife
 ms.assetid: dc575d41-b376-4b05-bbbe-6de1e98385f1
-ms.openlocfilehash: 29945e72dfcd93910a96d14d840a0052ce9f40d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcf343a224efd7fac3767dd37d93136c95242b08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605642"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152190"
 ---
-# <a name="argument-period-must-be-less-than-or-equal-to-argument-life"></a><span data-ttu-id="2cd8e-102">Das Argument 'Period' muss kleiner als oder gleich groß wie das Argument 'Life' sein</span><span class="sxs-lookup"><span data-stu-id="2cd8e-102">Argument 'Period' must be less than or equal to argument 'Life'</span></span>
-<span data-ttu-id="2cd8e-103">Der Wert des `Period` -Arguments, das den Zeitraum angibt, für den das Veralten von Ressourcen berechnet wird, ist größer als der Wert des `Life` -Arguments.</span><span class="sxs-lookup"><span data-stu-id="2cd8e-103">The value of the `Period` argument, which specifies the period for which asset depreciation is calculated, is greater than the value of the `Life` argument.</span></span>  
+# <a name="argument-period-must-be-less-than-or-equal-to-argument-life"></a><span data-ttu-id="b7f16-102">Das Argument 'Period' muss kleiner als oder gleich groß wie das Argument 'Life' sein</span><span class="sxs-lookup"><span data-stu-id="b7f16-102">Argument 'Period' must be less than or equal to argument 'Life'</span></span>
+<span data-ttu-id="b7f16-103">Der Wert des `Period` -Arguments, das den Zeitraum angibt, für den das Veralten von Ressourcen berechnet wird, ist größer als der Wert des `Life` -Arguments.</span><span class="sxs-lookup"><span data-stu-id="b7f16-103">The value of the `Period` argument, which specifies the period for which asset depreciation is calculated, is greater than the value of the `Life` argument.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="2cd8e-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="2cd8e-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="b7f16-104">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="b7f16-104">To correct this error</span></span>  
   
--   <span data-ttu-id="2cd8e-105">Stellen Sie sicher, dass die Argumente `Life` und `Period` in den gleichen Einheiten ausgedrückt werden.</span><span class="sxs-lookup"><span data-stu-id="2cd8e-105">Ensure that the `Life` and `Period` arguments are expressed in the same units.</span></span> <span data-ttu-id="2cd8e-106">Wenn beispielsweise `Life` in Monaten gemessen wird, sollte das auch auf `Period` zutreffen.</span><span class="sxs-lookup"><span data-stu-id="2cd8e-106">For example, if `Life` is measured in months, `Period` should be as well.</span></span>  
+-   <span data-ttu-id="b7f16-105">Stellen Sie sicher, dass die Argumente `Life` und `Period` in den gleichen Einheiten ausgedrückt werden.</span><span class="sxs-lookup"><span data-stu-id="b7f16-105">Ensure that the `Life` and `Period` arguments are expressed in the same units.</span></span> <span data-ttu-id="b7f16-106">Wenn beispielsweise `Life` in Monaten gemessen wird, sollte das auch auf `Period` zutreffen.</span><span class="sxs-lookup"><span data-stu-id="b7f16-106">For example, if `Life` is measured in months, `Period` should be as well.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2cd8e-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2cd8e-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b7f16-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b7f16-107">See also</span></span>
 
-
-- [<span data-ttu-id="2cd8e-108">Übergeben von Argumenten als Wert und als Verweis</span><span class="sxs-lookup"><span data-stu-id="2cd8e-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [<span data-ttu-id="b7f16-108">Übergeben von Argumenten als Wert und als Verweis</span><span class="sxs-lookup"><span data-stu-id="b7f16-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

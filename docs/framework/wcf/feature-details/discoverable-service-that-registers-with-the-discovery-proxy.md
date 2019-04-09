@@ -1,37 +1,37 @@
 ---
-title: 'Vorgehensweise: Implementieren eines ermittelbaren Diensts, das beim Suchproxy registriert.'
+title: 'Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist'
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
-ms.openlocfilehash: c708942265ae39ee6e4f198118741068a37512ba
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
-ms.translationtype: MT
+ms.openlocfilehash: 6cfafbc06fc4a7c37805fa1d158a41625390174a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262404"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177826"
 ---
-# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a><span data-ttu-id="72bed-102">Vorgehensweise: Implementieren eines ermittelbaren Diensts, das beim Suchproxy registriert.</span><span class="sxs-lookup"><span data-stu-id="72bed-102">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>
-<span data-ttu-id="72bed-103">Dieses Thema ist das zweite von vier Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren.</span><span class="sxs-lookup"><span data-stu-id="72bed-103">This topic is the second of four topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="72bed-104">Im vorherigen Thema [Vorgehensweise: Implementieren eines Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Sie einen suchproxy implementiert.</span><span class="sxs-lookup"><span data-stu-id="72bed-104">In the previous topic, [How to: Implement a Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), you implemented a discovery proxy.</span></span> <span data-ttu-id="72bed-105">In diesem Thema erstellen Sie einen WCF-Dienst, der ankündigungsnachrichten sendet (`Hello` und `Bye`) an den suchproxy, aufgrund dessen an-und Abmelden selbst mit den suchproxy.</span><span class="sxs-lookup"><span data-stu-id="72bed-105">In this topic, you create a WCF service that sends announcement messages (`Hello` and `Bye`) to the discovery proxy, causing it to register and unregister itself with the discovery proxy.</span></span>
+# <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a><span data-ttu-id="06fb0-102">Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist</span><span class="sxs-lookup"><span data-stu-id="06fb0-102">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>
+<span data-ttu-id="06fb0-103">Dieses Thema ist das zweite von vier Themen, in denen erläutert wird, wie sie einen Suchproxy implementieren.</span><span class="sxs-lookup"><span data-stu-id="06fb0-103">This topic is the second of four topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="06fb0-104">Im vorherigen Thema [Vorgehensweise: Implementieren eines Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), Sie einen suchproxy implementiert.</span><span class="sxs-lookup"><span data-stu-id="06fb0-104">In the previous topic, [How to: Implement a Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md), you implemented a discovery proxy.</span></span> <span data-ttu-id="06fb0-105">In diesem Thema erstellen Sie einen WCF-Dienst, der ankündigungsnachrichten sendet (`Hello` und `Bye`) an den suchproxy, aufgrund dessen an-und Abmelden selbst mit den suchproxy.</span><span class="sxs-lookup"><span data-stu-id="06fb0-105">In this topic, you create a WCF service that sends announcement messages (`Hello` and `Bye`) to the discovery proxy, causing it to register and unregister itself with the discovery proxy.</span></span>
 
-### <a name="to-define-the-service-contract"></a><span data-ttu-id="72bed-106">So definieren Sie den Dienstvertrag</span><span class="sxs-lookup"><span data-stu-id="72bed-106">To define the service contract</span></span>
+### <a name="to-define-the-service-contract"></a><span data-ttu-id="06fb0-106">So definieren Sie den Dienstvertrag</span><span class="sxs-lookup"><span data-stu-id="06fb0-106">To define the service contract</span></span>
 
-1.  <span data-ttu-id="72bed-107">Fügen Sie der Projektmappe `DiscoveryProxyExample` ein neues Konsolenanwendungsprojekt mit dem Namen `Service` hinzu.</span><span class="sxs-lookup"><span data-stu-id="72bed-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Service`.</span></span>
+1.  <span data-ttu-id="06fb0-107">Fügen Sie der Projektmappe `DiscoveryProxyExample` ein neues Konsolenanwendungsprojekt mit dem Namen `Service` hinzu.</span><span class="sxs-lookup"><span data-stu-id="06fb0-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Service`.</span></span>
 
-2.  <span data-ttu-id="72bed-108">Fügen Sie Verweise auf die folgenden Assemblys hinzu:</span><span class="sxs-lookup"><span data-stu-id="72bed-108">Add references to the following assemblies:</span></span>
+2.  <span data-ttu-id="06fb0-108">Fügen Sie Verweise auf die folgenden Assemblys hinzu:</span><span class="sxs-lookup"><span data-stu-id="06fb0-108">Add references to the following assemblies:</span></span>
 
-    1.  <span data-ttu-id="72bed-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="72bed-109">System.ServiceModel</span></span>
+    1.  <span data-ttu-id="06fb0-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="06fb0-109">System.ServiceModel</span></span>
 
-    2.  <span data-ttu-id="72bed-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="72bed-110">System.ServiceModel.Discovery</span></span>
+    2.  <span data-ttu-id="06fb0-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="06fb0-110">System.ServiceModel.Discovery</span></span>
 
-3.  <span data-ttu-id="72bed-111">Fügen Sie dem `CalculatorService`-Projekt eine neue Klasse hinzu.</span><span class="sxs-lookup"><span data-stu-id="72bed-111">Add a new class to the project called `CalculatorService`.</span></span>
+3.  <span data-ttu-id="06fb0-111">Fügen Sie dem `CalculatorService`-Projekt eine neue Klasse hinzu.</span><span class="sxs-lookup"><span data-stu-id="06fb0-111">Add a new class to the project called `CalculatorService`.</span></span>
 
-4.  <span data-ttu-id="72bed-112">Fügen Sie die folgenden using-Anweisungen hinzu.</span><span class="sxs-lookup"><span data-stu-id="72bed-112">Add the following using statements.</span></span>
+4.  <span data-ttu-id="06fb0-112">Fügen Sie die folgenden using-Anweisungen hinzu.</span><span class="sxs-lookup"><span data-stu-id="06fb0-112">Add the following using statements.</span></span>
 
     ```csharp
     using System;
     using System.ServiceModel;
     ```
 
-5.  <span data-ttu-id="72bed-113">Definieren Sie den Dienstvertrag innerhalb der Datei CalculatorService.cs.</span><span class="sxs-lookup"><span data-stu-id="72bed-113">Within CalculatorService.cs, define the service contract.</span></span>
+5.  <span data-ttu-id="06fb0-113">Definieren Sie den Dienstvertrag innerhalb der Datei CalculatorService.cs.</span><span class="sxs-lookup"><span data-stu-id="06fb0-113">Within CalculatorService.cs, define the service contract.</span></span>
 
     ```csharp
     // Define a service contract.
@@ -49,7 +49,7 @@ ms.locfileid: "58262404"
     }
     ```
 
-6.  <span data-ttu-id="72bed-114">Implementieren Sie in der Datei CalculatorService.cs auch den Dienstvertrag.</span><span class="sxs-lookup"><span data-stu-id="72bed-114">Also within CalculatorService.cs, implement the service contract.</span></span>
+6.  <span data-ttu-id="06fb0-114">Implementieren Sie in der Datei CalculatorService.cs auch den Dienstvertrag.</span><span class="sxs-lookup"><span data-stu-id="06fb0-114">Also within CalculatorService.cs, implement the service contract.</span></span>
 
     ```csharp
     // Service class which implements the service contract.
@@ -89,11 +89,11 @@ ms.locfileid: "58262404"
     }
     ```
 
-### <a name="to-host-the-service"></a><span data-ttu-id="72bed-115">So hosten Sie den Dienst</span><span class="sxs-lookup"><span data-stu-id="72bed-115">To host the service</span></span>
+### <a name="to-host-the-service"></a><span data-ttu-id="06fb0-115">So hosten Sie den Dienst</span><span class="sxs-lookup"><span data-stu-id="06fb0-115">To host the service</span></span>
 
-1.  <span data-ttu-id="72bed-116">Öffnen Sie die Datei Program.cs, die generiert wurde, als Sie das Projekt erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="72bed-116">Open the Program.cs file that was generated when you created the project.</span></span>
+1.  <span data-ttu-id="06fb0-116">Öffnen Sie die Datei Program.cs, die generiert wurde, als Sie das Projekt erstellt haben.</span><span class="sxs-lookup"><span data-stu-id="06fb0-116">Open the Program.cs file that was generated when you created the project.</span></span>
 
-2.  <span data-ttu-id="72bed-117">Fügen Sie die folgenden using-Anweisungen hinzu.</span><span class="sxs-lookup"><span data-stu-id="72bed-117">Add the following using statements.</span></span>
+2.  <span data-ttu-id="06fb0-117">Fügen Sie die folgenden using-Anweisungen hinzu.</span><span class="sxs-lookup"><span data-stu-id="06fb0-117">Add the following using statements.</span></span>
 
     ```csharp
     using System;
@@ -102,7 +102,7 @@ ms.locfileid: "58262404"
     using System.ServiceModel.Discovery;
     ```
 
-3.  <span data-ttu-id="72bed-118">Fügen Sie in der `Main()`-Methode den folgenden Code hinzu:</span><span class="sxs-lookup"><span data-stu-id="72bed-118">Within the `Main()` method, add the following code:</span></span>
+3.  <span data-ttu-id="06fb0-118">Fügen Sie in der `Main()`-Methode den folgenden Code hinzu:</span><span class="sxs-lookup"><span data-stu-id="06fb0-118">Within the `Main()` method, add the following code:</span></span>
 
     ```csharp
     // Define the base address of the service
@@ -156,10 +156,10 @@ ms.locfileid: "58262404"
     }
     ```
 
-<span data-ttu-id="72bed-119">Sie haben die Implementierung eines erkennbaren Diensts abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="72bed-119">You have completed implementing a discoverable service.</span></span> <span data-ttu-id="72bed-120">Fortfahren mit [Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span><span class="sxs-lookup"><span data-stu-id="72bed-120">Continue on to [How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span></span>
+<span data-ttu-id="06fb0-119">Sie haben die Implementierung eines erkennbaren Diensts abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="06fb0-119">You have completed implementing a discoverable service.</span></span> <span data-ttu-id="06fb0-120">Fortfahren mit [Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span><span class="sxs-lookup"><span data-stu-id="06fb0-120">Continue on to [How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md).</span></span>
 
-## <a name="example"></a><span data-ttu-id="72bed-121">Beispiel</span><span class="sxs-lookup"><span data-stu-id="72bed-121">Example</span></span>
- <span data-ttu-id="72bed-122">Dies ist die vollständige Codeauflistung für dieses Thema.</span><span class="sxs-lookup"><span data-stu-id="72bed-122">This is the full listing of the code used in this topic.</span></span>
+## <a name="example"></a><span data-ttu-id="06fb0-121">Beispiel</span><span class="sxs-lookup"><span data-stu-id="06fb0-121">Example</span></span>
+ <span data-ttu-id="06fb0-122">Dies ist die vollständige Codeauflistung für dieses Thema.</span><span class="sxs-lookup"><span data-stu-id="06fb0-122">This is the full listing of the code used in this topic.</span></span>
 
 ```csharp
 // CalculatorService.cs
@@ -289,7 +289,8 @@ namespace Microsoft.Samples.Discovery
 }
 ```
 
-## <a name="see-also"></a><span data-ttu-id="72bed-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="72bed-123">See also</span></span>
-- [<span data-ttu-id="72bed-124">WCF-Suche</span><span class="sxs-lookup"><span data-stu-id="72bed-124">WCF Discovery</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
-- [<span data-ttu-id="72bed-125">Vorgehensweise: Implementieren eines Suchproxys</span><span class="sxs-lookup"><span data-stu-id="72bed-125">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [<span data-ttu-id="72bed-126">Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet</span><span class="sxs-lookup"><span data-stu-id="72bed-126">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+## <a name="see-also"></a><span data-ttu-id="06fb0-123">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="06fb0-123">See also</span></span>
+
+- [<span data-ttu-id="06fb0-124">WCF-Suche</span><span class="sxs-lookup"><span data-stu-id="06fb0-124">WCF Discovery</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- [<span data-ttu-id="06fb0-125">Vorgehensweise: Implementieren eines Suchproxys</span><span class="sxs-lookup"><span data-stu-id="06fb0-125">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [<span data-ttu-id="06fb0-126">Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet</span><span class="sxs-lookup"><span data-stu-id="06fb0-126">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

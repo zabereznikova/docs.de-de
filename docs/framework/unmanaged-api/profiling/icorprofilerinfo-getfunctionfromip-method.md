@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fec1d1effbf900974327247078b65f60fef7e21
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 23fb9c58f2eac904b63294434654f3caf1ba9f41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466426"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107964"
 ---
-# <a name="icorprofilerinfogetfunctionfromip-method"></a><span data-ttu-id="3bb47-102">ICorProfilerInfo::GetFunctionFromIP-Methode</span><span class="sxs-lookup"><span data-stu-id="3bb47-102">ICorProfilerInfo::GetFunctionFromIP Method</span></span>
-<span data-ttu-id="3bb47-103">Ordnet einen verwalteten Code Anweisungszeiger auf einen `FunctionID`.</span><span class="sxs-lookup"><span data-stu-id="3bb47-103">Maps a managed code instruction pointer to a `FunctionID`.</span></span>  
+# <a name="icorprofilerinfogetfunctionfromip-method"></a><span data-ttu-id="90651-102">ICorProfilerInfo::GetFunctionFromIP-Methode</span><span class="sxs-lookup"><span data-stu-id="90651-102">ICorProfilerInfo::GetFunctionFromIP Method</span></span>
+<span data-ttu-id="90651-103">Ordnet einen verwalteten Code Anweisungszeiger auf einen `FunctionID`.</span><span class="sxs-lookup"><span data-stu-id="90651-103">Maps a managed code instruction pointer to a `FunctionID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3bb47-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="3bb47-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="90651-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="90651-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionFromIP(  
@@ -35,21 +35,22 @@ HRESULT GetFunctionFromIP(
     [out] FunctionID *pFunctionId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3bb47-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="3bb47-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="90651-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="90651-105">Parameters</span></span>  
  `ip`  
- <span data-ttu-id="3bb47-106">[in] Der Anweisungszeiger in verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="3bb47-106">[in] The instruction pointer in managed code.</span></span>  
+ <span data-ttu-id="90651-106">[in] Der Anweisungszeiger in verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="90651-106">[in] The instruction pointer in managed code.</span></span>  
   
  `pFunctionId`  
- <span data-ttu-id="3bb47-107">[out] Der zurückgegebene Funktions-ID</span><span class="sxs-lookup"><span data-stu-id="3bb47-107">[out] The returned function ID.</span></span>  
+ <span data-ttu-id="90651-107">[out] Der zurückgegebene Funktions-ID</span><span class="sxs-lookup"><span data-stu-id="90651-107">[out] The returned function ID.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3bb47-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="3bb47-108">Requirements</span></span>  
- <span data-ttu-id="3bb47-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3bb47-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="90651-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="90651-108">Requirements</span></span>  
+ <span data-ttu-id="90651-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="90651-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3bb47-110">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="3bb47-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="90651-110">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="90651-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="3bb47-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3bb47-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="90651-111">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="90651-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3bb47-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3bb47-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="90651-112">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="90651-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="3bb47-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3bb47-113">See also</span></span>
-- [<span data-ttu-id="3bb47-114">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="3bb47-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="90651-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="90651-113">See also</span></span>
+
+- [<span data-ttu-id="90651-114">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="90651-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
