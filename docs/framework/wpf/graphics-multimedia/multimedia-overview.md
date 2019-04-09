@@ -5,18 +5,16 @@ helpviewer_keywords:
 - multimedia [WPF]
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
-ms.openlocfilehash: 09b830562444bd51e931a1b5013d2a803319e336
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: ffdcb58cdd332f9c730e7ed367e0f8bcc56da459
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222093"
 ---
 # <a name="multimedia-overview"></a>Übersicht über Multimedia
 Die Multimediafunktionen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ermöglichen Ihnen die Integration von Audio- und Videoinhalten in Ihre Anwendungen, um die Benutzerfreundlichkeit zu verbessern. In diesem Thema werden die Multimediafunktionen von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] vorgestellt.  
-  
- 
-  
+
 <a name="mediaapi"></a>   
 ## <a name="media-api"></a>Medien-API  
  Die <xref:System.Windows.Controls.MediaElement> und <xref:System.Windows.Media.MediaPlayer> Klassen werden verwendet, um Audio-und Videoinhalte zu präsentieren. Diese Klassen können interaktiv oder durch eine Uhr gesteuert werden. Die Klassen können für das [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] 10-Steuerelement zur Medienwiedergabe verwendet werden. Welche Klasse Sie verwenden, hängt vom Szenario ab.  
@@ -79,11 +77,11 @@ Die Multimediafunktionen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tl
   
  Die <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> und <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> Eigenschaften sind nicht die einzige Möglichkeit zum Steuern der Medienwiedergabe. Im Uhrmodus befindet, kann die Uhr steuern die <xref:System.Windows.Controls.MediaElement> und haben die interaktive Steuerung Methoden steuern, wann die <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> ist <xref:System.Windows.Controls.MediaState.Manual>. <xref:System.Windows.Controls.MediaElement> behandelt diese Konkurrenz bei der Steuerung durch die folgenden Prioritäten ausgewertet.  
   
-1.  <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>. Vorhanden, wenn Medien entladen werden. Dadurch wird sichergestellt, dass alle Medienressourcen standardmäßig freigegeben werden, auch wenn eine <xref:System.Windows.Media.MediaClock> zugeordnet ist die <xref:System.Windows.Controls.MediaElement>.  
+1.  <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>sein. Vorhanden, wenn Medien entladen werden. Dadurch wird sichergestellt, dass alle Medienressourcen standardmäßig freigegeben werden, auch wenn eine <xref:System.Windows.Media.MediaClock> zugeordnet ist die <xref:System.Windows.Controls.MediaElement>.  
   
-2.  <xref:System.Windows.Media.MediaClock>. Vorhanden, wenn die Medien ein <xref:System.Windows.Controls.MediaElement.Clock%2A>. Wenn Medien entladen wurde, werden die <xref:System.Windows.Media.MediaClock> werden wirksam, solange die <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> ist <xref:System.Windows.Controls.MediaState.Manual>. Der Uhrmodus überschreibt immer das geladene Verhalten für die <xref:System.Windows.Controls.MediaElement>.  
+2.  <xref:System.Windows.Media.MediaClock>sein. Vorhanden, wenn die Medien ein <xref:System.Windows.Controls.MediaElement.Clock%2A>. Wenn Medien entladen wurde, werden die <xref:System.Windows.Media.MediaClock> werden wirksam, solange die <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> ist <xref:System.Windows.Controls.MediaState.Manual>. Der Uhrmodus überschreibt immer das geladene Verhalten für die <xref:System.Windows.Controls.MediaElement>.  
   
-3.  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>. Vorhanden, wenn Medien entladen werden.  
+3.  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>sein. Vorhanden, wenn Medien entladen werden.  
   
 4.  Interaktive Steuerelementmethoden. Vorhanden, wenn <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> ist <xref:System.Windows.Controls.MediaState.Manual>. Die verfügbaren Steuerelementmethoden sind <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, <xref:System.Windows.Controls.MediaElement.Close%2A>, und <xref:System.Windows.Controls.MediaElement.Stop%2A>.  
   
@@ -101,9 +99,9 @@ Die Multimediafunktionen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tl
 ### <a name="controlling-mediaplayer"></a>Steuern des MediaPlayer  
  Da <xref:System.Windows.Media.MediaPlayer> ist statusfrei, stehen nur zwei Möglichkeiten zum Steuern der Medienwiedergabe.  
   
-1.  Interaktive Steuerelementmethoden. Im unabhängigen Modus vorhanden (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> Eigenschaft).  
+1.  Interaktive Steuerelementmethoden. Im unabhängigen Modus vorhanden (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A> Eigenschaft).  
   
-2.  <xref:System.Windows.Media.MediaClock>. Vorhanden, wenn die Medien ein <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
+2.  <xref:System.Windows.Media.MediaClock>sein. Vorhanden, wenn die Medien ein <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
   
 ### <a name="displaying-a-mediaplayer"></a>Anzeigen eines MediaElement  
  Technisch gesehen eine <xref:System.Windows.Media.MediaPlayer> kann nicht angezeigt werden, da es keine physische Darstellung vorhanden ist. Es kann jedoch verwendet werden, zur Darstellung von Medien in einem <xref:System.Windows.Media.Drawing> mithilfe der <xref:System.Windows.Media.VideoDrawing> Klasse. Das folgende Beispiel zeigt die Verwendung von einem <xref:System.Windows.Media.VideoDrawing> Medien angezeigt.  
@@ -113,6 +111,7 @@ Die Multimediafunktionen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tl
  Finden Sie unter den [Übersicht über Zeichnungsobjekte](drawing-objects-overview.md) für Weitere Informationen zu <xref:System.Windows.Media.Drawing> Objekte.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.DrawingGroup>
 - [Layout](../advanced/layout.md)
-- [Themen zu Vorgehensweisen](audio-and-video-how-to-topics.md)
+- [Gewusst wie-Themen](audio-and-video-how-to-topics.md)
