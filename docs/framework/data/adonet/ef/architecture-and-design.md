@@ -2,12 +2,12 @@
 title: Architektur und Entwurf
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576329"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096136"
 ---
 # <a name="architecture-and-design"></a>Architektur und Entwurf
 Das SQL-Generierungsmodul im der [Beispielanbieter](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) wird implementiert, als Besucher für die Ausdrucksbaumstruktur, die die Befehlsstruktur darstellt. Die Generierung erfolgt, indem die Ausdrucksbaumstruktur einmal durchlaufen wird.  
@@ -20,7 +20,7 @@ Das SQL-Generierungsmodul im der [Beispielanbieter](https://code.msdn.microsoft.
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
- In der ersten Phase während des Zugriffs auf die Ausdrucksbaumstruktur werden Ausdrücke in SqlSelectStatements gruppiert sowie Joins und Joinaliase vereinfacht. Während dieses Durchgangs stellen Symbolobjekte Spalten oder Eingabealiase dar, die möglicherweise umbenannt werden.  
+ In der ersten Phase während des Zugriffs auf die Ausdrucksstruktur werden Ausdrücke in SqlSelectStatements gruppiert sowie Joins und Joinaliase vereinfacht. Während dieses Durchgangs stellen Symbolobjekte Spalten oder Eingabealiase dar, die möglicherweise umbenannt werden.  
   
  In der zweiten Phase, während die tatsächliche Zeichenfolge erzeugt wird, werden Aliase umbenannt.  
   
@@ -214,13 +214,13 @@ private bool IsParentAJoin{get}
   
  Um eine Erklärung der eingabealiasumleitung finden Sie im ersten Beispiel in [Generieren von SQL aus Befehlsstrukturen – Best Practices](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md).  Dort musste "a" in der Projektion zu "b" umgeleitet werden.  
   
- Wenn ein SqlSelectStatement-Objekt erstellt wird, wird der Block, der als Eingabe für den Knoten dient, in die From-Eigenschaft des SqlSelectStatements eingefügt. Ein Symbol (<symbol_b>) wird auf Grundlage des Eingabebindungsnamens ("b") erstellt, um diesen Block darzustellen, und "AS  " +  <symbol_b> werden an die From-Klausel angefügt.  Das Symbol wird außerdem der FromExtents-Eigenschaft hinzugefügt.  
+ Wenn ein SqlSelectStatement-Objekt erstellt wird, wird der Block, der als Eingabe für den Knoten dient, in die From-Eigenschaft des SqlSelectStatements eingefügt. Erstellt ein Symbol (< Symbol_b >) basierend auf den eingabebindungsnamen ("b") um diesen Block darzustellen und "AS" + < Symbol_b > wird an die From-Klausel angefügt.  Das Symbol wird außerdem der FromExtents-Eigenschaft hinzugefügt.  
   
- Das Symbol wird auch zur Symboltabelle hinzugefügt, um den Eingabebindungsnamen damit zu verknüpfen ("b", <symbol_b>).  
+ Das Symbol wird auch der Symboltabelle, verknüpfen Sie den eingabebindungsnamen damit ("b", < Symbol_b >) hinzugefügt.  
   
  Wenn ein nachfolgender Knoten dieses SqlSelectStatement wiederverwendet, fügt es der Symboltabelle einen Eintrag hinzu, um seinen Eingabebindungsnamen mit diesem Symbol zu verknüpfen. In unserem Beispiel würde der DbProjectExpression mit dem eingabebindungsnamen "a" das SqlSelectStatement wiederverwenden und hinzufügen ("a", \< Symbol_b >) auf die Tabelle.  
   
- Wenn Ausdrücke auf den Eingabebindungsnamen des Knotens verweisen, der das SqlSelectStatement wiederverwendet, wird dieser Verweis mithilfe der Symboltabelle in das richtige umgeleitete Symbol aufgelöst. Wenn "a" von "a.x" beim Zugriff auf DbVariableReferenceExpression, der "a" darstellt, aufgelöst wird, wird es in das Symbol <symbol_b> aufgelöst.  
+ Wenn Ausdrücke auf den Eingabebindungsnamen des Knotens verweisen, der das SqlSelectStatement wiederverwendet, wird dieser Verweis mithilfe der Symboltabelle in das richtige umgeleitete Symbol aufgelöst. Wenn "a" von "a.x" aufgelöst wird während des Zugriffs auf den DbVariableReferenceExpression, der angibt wird "a" It auf das Symbol < Symbol_b > aufgelöst.  
   
 ### <a name="join-alias-flattening"></a>Joinaliasvereinfachung  
  Im Abschnitt mit dem Titel "DbPropertyExpression" wird beschrieben, wie beim Zugriff auf einen DbPropertyExpression die Joinaliasvereinfachung erreicht wird.  
@@ -389,7 +389,7 @@ All(input, x) => Not Exists(Filter(input, not(x))
 ```  
   
 ### <a name="dbnotexpression"></a>DbNotExpression  
- In einigen Fällen ist es möglich, die Übersetzung von DbNotExpression mit seinem Eingabeausdruck zu reduzieren. Beispiel:  
+ In einigen Fällen ist es möglich, die Übersetzung von DbNotExpression mit seinem Eingabeausdruck zu reduzieren. Zum Beispiel:  
   
 ```  
 Not(IsNull(a)) =>  "a IS NOT NULL"  
@@ -412,7 +412,8 @@ IsEmpty(inut) = Not Exists(input)
   
  Die Umbenennung von Spalten erfolgt beim Schreiben eines Symbol-Objekts in eine Zeichenfolge. AddDefaultColumns hat in der ersten Phase festgestellt, ob ein bestimmtes Spaltensymbol umbenannt werden muss. In der zweiten Phase wird nur die Umbenennung vorgenommen, um sicherzustellen, dass kein Konflikt zwischen dem erzeugten Namen und einem in AllColumnNames verwendeten Namen auftritt.  
   
- Um eindeutige Namen sowohl für Blockaliase als auch für Spalten zu generieren, müssen Sie <existing_name>_n verwenden, wobei n der kleinste Alias ist, der noch nicht verwendet wurde. Die globale Liste aller Aliase erhöht den Bedarf an wiederholten Umbenennungen.  
+ Verwenden Sie < Existing_name > _n um eindeutige Namen sowohl für blockaliase als auch für Spalten zu erstellen, wobei n der kleinste Alias ist, der noch nicht verwendet wurde. Die globale Liste aller Aliase erhöht den Bedarf an wiederholten Umbenennungen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [SQL-Generierung im Beispielanbieter](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

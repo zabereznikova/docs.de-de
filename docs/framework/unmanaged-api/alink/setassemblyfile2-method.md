@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 41e10855a7254da4124ac0bf9aa247b90311632b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 59bfc6785d3ad195e219afc323b7fdb513d8fefc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092564"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2-Methode
 Legt fest, den Namen und die Optionen für eine neue Assembly. Rufen Sie diese Methode nicht, wenn Sie die ungebundene Modulen erstellen.  
@@ -57,6 +57,7 @@ HRESULT SetAssemblyFile2(
  Erfordert alink.h an.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)

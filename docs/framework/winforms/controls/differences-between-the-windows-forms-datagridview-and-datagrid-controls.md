@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], DataGridView control compared
 - DataGridView control [Windows Forms], DataGrid control compared
 ms.assetid: d412c786-140e-4210-8a56-a68467530a55
-ms.openlocfilehash: b7d97431bfdbdafd5e87bfbfb9c5badd9ba273ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6802ef375d8d15826725e68f5065317192523178
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095671"
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms
 Die <xref:System.Windows.Forms.DataGridView> Steuerelement ist ein neues Steuerelement, das ersetzt die <xref:System.Windows.Forms.DataGrid> Steuerelement. Die <xref:System.Windows.Forms.DataGridView> -Steuerelement stellt zahlreiche grundlegenden und erweiterten Features, die fehlen in der <xref:System.Windows.Forms.DataGrid> Steuerelement. Darüber hinaus die Architektur der <xref:System.Windows.Forms.DataGridView> Steuerelement erleichtert das Erweitern und anpassen, die als die <xref:System.Windows.Forms.DataGrid> Steuerelement.  
@@ -33,6 +33,7 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement ist ein neues Steuere
  Da die <xref:System.Windows.Forms.DataGridView> Steuerelement verfügt über eine völlig neue Architektur, gibt es keine einfache konvertierungspfad, mit denen Sie verwenden kann <xref:System.Windows.Forms.DataGrid> Anpassungen, mit der <xref:System.Windows.Forms.DataGridView> Steuerelement. Viele <xref:System.Windows.Forms.DataGrid> Anpassungen sind nicht erforderlich, mit der <xref:System.Windows.Forms.DataGridView> zu steuern, jedoch aufgrund der integrierten Features, die in das neue Steuerelement verfügbar. Bei der Erstellung benutzerdefinierter Spaltentypen für die <xref:System.Windows.Forms.DataGrid> -Steuerelement, das Sie mit der verwenden möchten die <xref:System.Windows.Forms.DataGridView> -Steuerelement, müssen Sie sie erneut mit der neuen Architektur zu implementieren. Weitere Informationen finden Sie unter [Anpassen des DataGridView-Steuerelements in Windows Forms](customizing-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Windows.Forms.BindingSource>
@@ -44,6 +45,6 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement ist ein neues Steuere
 - [Datenanzeigemodi im DataGridView-Steuerelement in Windows Forms](data-display-modes-in-the-windows-forms-datagridview-control.md)
 - [Datenformatierung im DataGridView-Steuerelement in Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
 - [Größenänderungsoptionen im DataGridView-Steuerelement in Windows Forms](sizing-options-in-the-windows-forms-datagridview-control.md)
-- [Spaltensortiermodi im DataGridView-Steuerelement von Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
+- [Spaltenssortiermodi im DataGridView-Steuerelement von Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
 - [Auswahlmodi im DataGridView-Steuerelement von Windows Forms](selection-modes-in-the-windows-forms-datagridview-control.md)
 - [Anpassen des DataGridView-Steuerelements von Windows Forms](customizing-the-windows-forms-datagridview-control.md)

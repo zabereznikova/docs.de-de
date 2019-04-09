@@ -1,13 +1,13 @@
 ---
-title: <schemeSettings>-Element (Uri-Einstellungen)
+title: <schemeSettings> -Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 06cb07b1620a603f0c0cf67a9236be143c2ec4a2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8dc505d8a9de4e8939372af61b23652551c36530
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260191"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094230"
 ---
 # <a name="schemesettings-element-uri-settings"></a>\<SchemeSettings >-Element (Netzwerkeinstellungen)
 Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.  
@@ -27,14 +27,14 @@ Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine  
+ Keiner  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Fügt eine Schema-Einstellung für ein Schemaname.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Löscht alle vorhandenen Schema-Einstellungen.|  
+|[Hinzufügen](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|Fügt eine Schema-Einstellung für ein Schemaname.|  
+|[nicht aktiviert](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|Löscht alle vorhandenen Schema-Einstellungen.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|Entfernt eine Schema-Einstellung für einen Schemanamen an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -84,10 +84,11 @@ Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.
 |Leer kann sein||  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

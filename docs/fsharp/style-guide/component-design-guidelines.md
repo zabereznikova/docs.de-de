@@ -748,7 +748,7 @@ type Point1 =
     member Radius : double
 ```
 
-Sehen wir uns an, wie dies F# Typ angezeigt wird, um ein Programmierer, die mithilfe einer anderen .NET-Sprache. Beispielsweise ist die ungefähre c# "Signatur" wie folgt:
+Sehen wir uns an, wie dies F# Typ angezeigt wird, um ein Programmierer, die mithilfe einer anderen .NET-Sprache. Beispielsweise ist die ungefähre C# "Signatur" wie folgt:
 
 ```csharp
 // C# signature for the unadjusted Point1 class

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f8e189dce2e5141f7a0743b37ed892540f3bb46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3846e9e00158efbd4828053411b604dafc56e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091329"
 ---
 # <a name="controlling-net-framework-logging"></a>Steuern der Protokollierung in .NET Framework
 Sie können mithilfe der Ereignisablaufverfolgung für Windows (ETW) Common Language Runtime (CLR)-Ereignisse aufzeichnen. Sie können Ablaufverfolgungen mit den folgenden Tools erstellen und anzeigen:  
@@ -53,9 +53,9 @@ Provider                                 GUID
   
     -   Durch den `-p`-Parameter wird die Anbieter-GUID identifiziert.  
   
-    -   `0x1CCBD` gibt die Kategorien der Ereignisse an, die ausgelöst werden.  
+    -   `0x1CCBD` Gibt die Kategorien von Ereignissen, die ausgelöst wird.  
   
-    -   `0x5` legt die Ebene der Protokollierung fest (in diesem Fall "Ausführlich" (5)).  
+    -   `0x5` Legt fest, den Umfang der Protokollierung (in diesem Fall "ausführlich" (5)).  
   
     -   Mit dem `-ets`-Parameter wird Logman angewiesen, Befehle an Ereignisablaufverfolgungs-Sitzungen zu senden.  
   
@@ -109,5 +109,6 @@ Provider                                 GUID
      Dieser Befehl bewirkt, dass XPerf die Ereignisse als CSV-Datei (CSV) sichert, die Sie anzeigen können. Da für unterschiedliche Ereignisse auch unterschiedliche Felder verfügbar sind, enthält diese CSV-Datei vor den Daten mehrere Headerzeilen. Das erste Feld jeder Zeile ist für den Ereignistyp vorgesehen, der den Header angibt, der zum Ermitteln der weiteren Felder verwendet werden soll.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Windows Performance Toolkit](/windows-hardware/test/wpt/)
-- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 74c4e10e8f28fb00a5528c1ab860b88d0caa4303
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 5df6d39bef137bd4005316eac252ca0952df5e7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098779"
 ---
 # <a name="use-automatic-layout-overview"></a>Übersicht über die Verwendung eines automatischen Layouts
 In diesem Thema werden Richtlinien für Entwickler zum Schreiben von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -Anwendungen mit lokalisierbarem [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. In der Vergangenheit nahm die Lokalisierung einer Benutzeroberfläche viel Zeit in Anspruch. Jede Sprache, die für die Benutzeroberfläche angepasst wurde, benötigt eine pixelweise Anpassung. Sofort mit dem richtigen Entwurfs- und Codierungsstandards können [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] konstruiert werden kann, sodass Lokalisierer Ändern der Größe und die neupositionierung vorhanden sind. Der Ansatz zum Schreiben von Anwendungen, die einfacher geändert und neu positioniert werden können ist als automatisches Layout bezeichnet und kann erreicht werden, indem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungsentwurf.  
@@ -107,6 +107,7 @@ Raster
  **Beachten Sie** das vollständige Codebeispiel finden Sie unter [Freigabe Sizing Eigenschaften zwischen Grids](../controls/how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Globalisierung für WPF](globalization-for-wpf.md)
 - [Verwenden des automatischen Layouts zum Erstellen einer Schaltfläche](how-to-use-automatic-layout-to-create-a-button.md)
 - [Verwenden eines Rasters für automatisches Layout](how-to-use-a-grid-for-automatic-layout.md)
