@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
-ms.openlocfilehash: 8ca003257f9e16075262a715aec4941d9aa4073b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564629"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096048"
 ---
 # <a name="understanding-protection-level"></a>Grundlagen der Schutzebene
 Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B. die <xref:System.ServiceModel.ServiceContractAttribute>-Klasse und die <xref:System.ServiceModel.OperationContractAttribute>-Klasse. Die Eigenschaft steuert, wie eine Nachricht zum Teil (oder ganz) geschützt wird. In diesem Thema wird erläutert, die Windows Communication Foundation (WCF)-Funktion und wie es funktioniert.  
@@ -28,11 +28,11 @@ Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B
   
 -   Drei grundlegende Ebenen des Schutzes sind für jeden Teil einer Nachricht vorhanden. Die Eigenschaft wird (bei jedem Auftreten) auf einen der <xref:System.Net.Security.ProtectionLevel>-Enumerationswerte festgelegt. In aufsteigender Reihenfolge des Schutzes umfassen sie:  
   
-    -   `None`.  
+    -   `None`sein.  
   
-    -   `Sign`. Der geschützte Teil wird digital signiert. Dies stellt sicher, dass eine Manipulation am Nachrichtenteil erkannt wird.  
+    -   `Sign`sein. Der geschützte Teil wird digital signiert. Dies stellt sicher, dass eine Manipulation am Nachrichtenteil erkannt wird.  
   
-    -   `EncryptAndSign`. Der Nachrichtenteil wird verschlüsselt, um Vertraulichkeit sicherzustellen, bevor er signiert wird.  
+    -   `EncryptAndSign`sein. Der Nachrichtenteil wird verschlüsselt, um Vertraulichkeit sicherzustellen, bevor er signiert wird.  
   
 -   Sie können schutzanforderungen nur für festlegen *Anwendungsdaten* mit diesem Feature. WS-Adressierungsheader sind z. B. Infrastrukturdaten und werden deshalb nicht vom `ProtectionLevel` beeinflusst.  
   
@@ -95,6 +95,7 @@ Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B
  Wenn der Client die `Price`-Methode aufruft, wird eine Ausnahme ausgelöst, sobald eine Antwort vom Dienst eingeht. Der Grund hierfür liegt darin, dass der Client keine `ProtectionLevel` im `ServiceContractAttribute` angibt und daher den Standardwert (<xref:System.Net.Security.ProtectionLevel.EncryptAndSign>) für alle Methoden, einschließlich der `Price`-Methode, verwendet. Der Dienst gibt jedoch den Wert unter Verwendung der <xref:System.Net.Security.ProtectionLevel.Sign>-Ebene zurück, da der Dienstvertrag eine einzelne Methode definiert, deren Schutzebene auf <xref:System.Net.Security.ProtectionLevel.Sign> festgelegt ist. In diesem Fall löst der Client einen Fehler aus, wenn er die Antwort vom Dienst überprüft.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>
@@ -103,6 +104,6 @@ Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
 - <xref:System.Net.Security.ProtectionLevel>
 - [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md)
-- [Vorgehensweise: Legen Sie die ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [Verwenden von Nachrichtenverträgen](../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+- [Verwendung von Nachrichtenverträgen](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

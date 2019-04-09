@@ -2,15 +2,15 @@
 title: Arbeiten mit Datenanbietern
 ms.date: 03/30/2017
 ms.assetid: b6ae53f4-34f8-4510-ad98-ff1e46621526
-ms.openlocfilehash: ef1569701b80914a46883947f700a202e75b3dd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7fc40eb66b1885e3e4964bd216f996b34d96dbf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672785"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093734"
 ---
 # <a name="working-with-data-providers"></a>Arbeiten mit Datenanbietern
-In den Themen in diesem Abschnitt werden die Dienste und Datenanbieter erläutert, die Abfragen für ein konzeptionelles Modell in nativen Abfragen einer von Entity Framework unterstützten Datenquelle transformieren.  
+In den Themen in diesem Abschnitt werden die Dienste und Datenanbieter erläutert, die Abfragen für ein konzeptionelles Modell in systemeigene Abfragen einer von Entity Framework unterstützten Datenquelle umwandeln.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Verbindungszeichenfolgen](../../../../../docs/framework/data/adonet/ef/connection-strings.md)  
@@ -20,5 +20,6 @@ In den Themen in diesem Abschnitt werden die Dienste und Datenanbieter erläuter
  [Schreiben eines Entity Framework-Datenanbieters](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)  
   
 ## <a name="see-also"></a>Siehe auch
-- [Entity SQL Language (Entity SQL-Sprache)](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+
+- [Entity SQL-Sprache](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen eines benutzerdefinierten Ansichtsmodus für eine ListView'
+title: 'Vorgehensweise: Erstellen eines benutzerdefinierten Ansichtsmodus für ein ListView-Objekt'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-ms.openlocfilehash: 609781e9ac2db9c9beef049886617e541199e5dd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de11250a2e7529fba3b262e42b6714262738fa90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092889"
 ---
-# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Ansichtsmodus für eine ListView
+# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Ansichtsmodus für ein ListView-Objekt
 In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte <xref:System.Windows.Controls.ListView.View%2A> Modus für eine <xref:System.Windows.Controls.ListView> Steuerelement.  
   
 ## <a name="example"></a>Beispiel  
@@ -43,8 +43,9 @@ In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte <xref:System.Window
  Das vollständige Beispiel finden Sie unter [ListView mit mehreren Ansichten (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp) oder [ListView mit mehreren Views(Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Themen zu Vorgehensweisen](listview-how-to-topics.md)
+- [Gewusst wie-Themen](listview-how-to-topics.md)
 - [Übersicht über ListView](listview-overview.md)
 - [Übersicht über GridView](gridview-overview.md)

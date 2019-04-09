@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: 3c96275f3e5db24446b030ec007f23e9035242c8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703685"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095489"
 ---
 # <a name="data-binding-and-windows-forms"></a>Datenbindung und Windows Forms
 In Windows Forms können Sie nicht nur an herkömmliche Datenquellen binden, sondern auch an beinahe alle Strukturen, die Daten enthalten. Sie können an ein Array von Werten binden, die Sie zur Laufzeit berechnen, aus einer Datei lesen oder aus den Werten anderer Steuerelemente ableiten.  
@@ -41,7 +41,7 @@ In Windows Forms können Sie nicht nur an herkömmliche Datenquellen binden, son
 |Komplexe Datenbindung|Die Fähigkeit eines Steuerelements zur Bindung an mehr als ein Datenelement, in der Regel mehr als ein Datensatz in einer Datenbank. Komplexe Bindung wird auch als listenbasierte Bindung bezeichnet. Beispiele für Steuerelemente, die komplexe Bindung unterstützen, sind die Steuerelemente <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.ListBox> und <xref:System.Windows.Forms.ComboBox>. Ein Beispiel für komplexe Datenbindung, finden Sie unter [Vorgehensweise: Binden eines Windows Forms-Kombinationsfeld oder das ListBox-Steuerelement an Daten](./controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md).|  
   
 ## <a name="bindingsource-component"></a>BindingSource-Komponente  
- Um die Datenbindung zu vereinfachen, ermöglicht Ihnen Windows Forms das Binden einer Datenquelle an die <xref:System.Windows.Forms.BindingSource>-Komponente und dann das Binden von Steuerelementen an die <xref:System.Windows.Forms.BindingSource>. Sie können die <xref:System.Windows.Forms.BindingSource> in einfachen oder komplexen Bindungsszenarios verwenden. In beiden Fällen fungiert die <xref:System.Windows.Forms.BindingSource> als Mittler zwischen der Datenquelle und gebundenen Steuerelementen und stellt Änderungsbenachrichtigung, Währungsverwaltung und andere Dienste bereit.  
+ Um die Datenbindung zu vereinfachen, ermöglicht Ihnen Windows Forms die Bindung einer Datenquelle an die <xref:System.Windows.Forms.BindingSource>-Komponente und dann das Binden von Steuerelementen an die <xref:System.Windows.Forms.BindingSource>. Sie können die <xref:System.Windows.Forms.BindingSource> in einfachen oder komplexen Bindungsszenarios verwenden. In beiden Fällen fungiert die <xref:System.Windows.Forms.BindingSource> als Mittler zwischen der Datenquelle und gebundenen Steuerelementen und stellt Änderungsbenachrichtigung, Währungsverwaltung und andere Dienste bereit.  
   
 ## <a name="common-scenarios-that-employ-data-binding"></a>Allgemeine Szenarien, die Datenbindung nutzen  
  Fast jede kommerzielle Anwendung liest Informationen aus Datenquellen der einen oder anderen Art, in der Regel durch Datenbindung. Die folgende Liste zeigt einige der häufigsten Szenarien, die die Datenbindung als Methode zur Darstellung und Bearbeitung von Daten nutzen.  
@@ -54,7 +54,8 @@ In Windows Forms können Sie nicht nur an herkömmliche Datenquellen binden, son
 |Suchtabelle|Ein weiteres gängiges Szenario für die Datenanzeige und -bearbeitung ist die Suchtabelle. Häufig wird als Teil einer größeren Datenanzeige ein <xref:System.Windows.Forms.ComboBox>-Steuerelement zum Anzeigen und Bearbeiten von Daten verwendet. Wichtig ist, dass sich die Daten, die im <xref:System.Windows.Forms.ComboBox>-Steuerelement angezeigt werden, von den Daten unterscheiden, die in die Datenbank geschrieben werden. Angenommen, Sie haben ein <xref:System.Windows.Forms.ComboBox>-Steuerelement, das die in einem Lebensmittelladen verfügbaren Artikel anzeigt. In diesem Fall würden Sie auch gerne die Bezeichnungen der Produkte (Brot, Milch, Eier) sehen. Um das Abrufen von Informationen innerhalb der Datenbank und die Datenbanknormalisierung zu vereinfachen, würden Sie die Informationen für die einzelnen Elemente einer bestimmten Bestellung aber wahrscheinlich als Artikelnummern (#501, #603 usw.) speichern. Dadurch besteht eine implizite Verbindung zwischen dem "Anzeigenamen" des Lebensmittels im <xref:System.Windows.Forms.ComboBox>-Steuerelement des Formulars und der verknüpften Artikelnummer in einer Bestellung. Dies ist der zentrale Aspekt der Tabellensuche. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen einer Suchtabelle mit der BindingSource-Komponente in Windows Forms](./controls/how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md).|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.Binding>
-- [Windows Forms-Datenbindung](windows-forms-data-binding.md)
-- [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Datenbindung in Web Forms](windows-forms-data-binding.md)
+- [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](./controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [BindingSource-Komponente](./controls/bindingsource-component.md)
