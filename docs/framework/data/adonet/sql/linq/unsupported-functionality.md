@@ -2,29 +2,30 @@
 title: Nicht unterstützte Funktionalität
 ms.date: 03/30/2017
 ms.assetid: e480cfb5-697e-42c8-bed5-9264c945c4f9
-ms.openlocfilehash: 5022c9011c2aac5b3272e359f991c40236a5673f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18a1a8f33a9360b4299648bcd329f4c5f2e7de88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686700"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097872"
 ---
-# <a name="unsupported-functionality"></a><span data-ttu-id="8b8e7-102">Nicht unterstützte Funktionalität</span><span class="sxs-lookup"><span data-stu-id="8b8e7-102">Unsupported Functionality</span></span>
-<span data-ttu-id="8b8e7-103">In LINQ to SQL können die folgenden SQL-Funktionen nicht durch Übersetzung von vorhandenen CLR- und .NET Framework-Konstrukten genutzt werden:</span><span class="sxs-lookup"><span data-stu-id="8b8e7-103">In LINQ to SQL, the following SQL functionality cannot be exposed through translation of existing common language runtime (CLR) and .NET Framework constructs:</span></span>  
+# <a name="unsupported-functionality"></a><span data-ttu-id="ededc-102">Nicht unterstützte Funktionalität</span><span class="sxs-lookup"><span data-stu-id="ededc-102">Unsupported Functionality</span></span>
+<span data-ttu-id="ededc-103">In LINQ to SQL können die folgenden SQL-Funktionen nicht durch Übersetzung von vorhandenen CLR- und .NET Framework-Konstrukten genutzt werden:</span><span class="sxs-lookup"><span data-stu-id="ededc-103">In LINQ to SQL, the following SQL functionality cannot be exposed through translation of existing common language runtime (CLR) and .NET Framework constructs:</span></span>  
   
 -   `STDDEV`  
   
 -   `LIKE`  
   
-     <span data-ttu-id="8b8e7-104">Obwohl `LIKE` nicht durch direkte Übersetzung unterstützt wird, ist eine ähnliche Funktionalität in der <xref:System.Data.Linq.SqlClient.SqlMethods>-Klasse vorhanden.</span><span class="sxs-lookup"><span data-stu-id="8b8e7-104">Although `LIKE` is not supported through direct translation, similar functionality exists in the <xref:System.Data.Linq.SqlClient.SqlMethods> class.</span></span> <span data-ttu-id="8b8e7-105">Weitere Informationen finden Sie unter <xref:System.Data.Linq.SqlClient.SqlMethods.Like%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="8b8e7-105">For more information, see <xref:System.Data.Linq.SqlClient.SqlMethods.Like%2A?displayProperty=nameWithType>.</span></span>  
+     <span data-ttu-id="ededc-104">Obwohl `LIKE` nicht durch direkte Übersetzung unterstützt wird, ist eine ähnliche Funktionalität in der <xref:System.Data.Linq.SqlClient.SqlMethods>-Klasse vorhanden.</span><span class="sxs-lookup"><span data-stu-id="ededc-104">Although `LIKE` is not supported through direct translation, similar functionality exists in the <xref:System.Data.Linq.SqlClient.SqlMethods> class.</span></span> <span data-ttu-id="ededc-105">Weitere Informationen finden Sie unter <xref:System.Data.Linq.SqlClient.SqlMethods.Like%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="ededc-105">For more information, see <xref:System.Data.Linq.SqlClient.SqlMethods.Like%2A?displayProperty=nameWithType>.</span></span>  
   
 -   `DATEDIFF`  
   
-     <span data-ttu-id="8b8e7-106">LINQ to SQL unterstützt `DATEDIFF` nur eingeschränkt.</span><span class="sxs-lookup"><span data-stu-id="8b8e7-106">LINQ to SQL has limited support for `DATEDIFF`.</span></span> <span data-ttu-id="8b8e7-107">Ähnliche Funktionalität ist in der <xref:System.Data.Linq.SqlClient.SqlMethods>-Klasse vorhanden.</span><span class="sxs-lookup"><span data-stu-id="8b8e7-107">Similar functionality exists in the <xref:System.Data.Linq.SqlClient.SqlMethods> class.</span></span>  
+     <span data-ttu-id="ededc-106">LINQ to SQL unterstützt `DATEDIFF` nur eingeschränkt.</span><span class="sxs-lookup"><span data-stu-id="ededc-106">LINQ to SQL has limited support for `DATEDIFF`.</span></span> <span data-ttu-id="ededc-107">Ähnliche Funktionalität ist in der <xref:System.Data.Linq.SqlClient.SqlMethods>-Klasse vorhanden.</span><span class="sxs-lookup"><span data-stu-id="ededc-107">Similar functionality exists in the <xref:System.Data.Linq.SqlClient.SqlMethods> class.</span></span>  
   
 -   `ROUND`  
   
-     <span data-ttu-id="8b8e7-108">LINQ to SQL unterstützt `ROUND` nur eingeschränkt.</span><span class="sxs-lookup"><span data-stu-id="8b8e7-108">LINQ to SQL has limited support for `ROUND`.</span></span> <span data-ttu-id="8b8e7-109">Weitere Informationen finden Sie unter [System.Math-Methoden](system-math-methods.md).</span><span class="sxs-lookup"><span data-stu-id="8b8e7-109">For more information, see [System.Math Methods](system-math-methods.md).</span></span>  
+     <span data-ttu-id="ededc-108">LINQ to SQL unterstützt `ROUND` nur eingeschränkt.</span><span class="sxs-lookup"><span data-stu-id="ededc-108">LINQ to SQL has limited support for `ROUND`.</span></span> <span data-ttu-id="ededc-109">Weitere Informationen finden Sie unter [System.Math-Methoden](system-math-methods.md).</span><span class="sxs-lookup"><span data-stu-id="ededc-109">For more information, see [System.Math Methods](system-math-methods.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8b8e7-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8b8e7-110">See also</span></span>
-- [<span data-ttu-id="8b8e7-111">Datentypen und Funktionen</span><span class="sxs-lookup"><span data-stu-id="8b8e7-111">Data Types and Functions</span></span>](data-types-and-functions.md)
+## <a name="see-also"></a><span data-ttu-id="ededc-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ededc-110">See also</span></span>
+
+- [<span data-ttu-id="ededc-111">Datentypen und Funktionen</span><span class="sxs-lookup"><span data-stu-id="ededc-111">Data Types and Functions</span></span>](data-types-and-functions.md)
