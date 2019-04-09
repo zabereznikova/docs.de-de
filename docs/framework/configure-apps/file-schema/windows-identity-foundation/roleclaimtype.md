@@ -3,12 +3,12 @@ title: <roleClaimType>
 ms.date: 03/30/2017
 ms.assetid: 69a49deb-6369-41ba-806b-ae8d21fac64b
 author: BrucePerlerMS
-ms.openlocfilehash: 812d44ef947d27b0f73d9dc2172494e89ee56d72
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8c7b7c9b42ac72b878aed4e12298dc3655f1e707
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270868"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115595"
 ---
 # <a name="roleclaimtype"></a>\<roleClaimType>
 Gibt an, den Anspruchstyp, der die Rollenansprüche für den Typ in der Auflistung definiert <xref:System.Security.Claims.ClaimsIdentity> zurückgegebenen Objekte die <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> Methode der Tokenhandler.  
@@ -47,7 +47,7 @@ Gibt an, den Anspruchstyp, der die Rollenansprüche für den Typ in der Auflistu
 |Wert|Eine Zeichenfolge, die den URI an, der den Anspruchstyp des Anspruchs, verwenden Sie für den Anspruchstyp "Rolle" darstellt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -69,4 +69,5 @@ Gibt an, den Anspruchstyp, der die Rollenansprüche für den Typ in der Auflistu
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement.RoleClaimType%2A>

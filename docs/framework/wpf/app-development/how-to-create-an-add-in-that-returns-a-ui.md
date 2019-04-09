@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche zurückgibt'
+title: 'Vorgehensweise: Erstellen eines Add-Ins, das eine Benutzeroberfläche zurückgibt'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: bf69a22f60724513122b5f17c5dd55bffc1fe561
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115751"
 ---
-# <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Vorgehensweise: Gewusst wie: Erstellen eines Add-Ins, das eine Benutzeroberfläche zurückgibt
+# <a name="how-to-create-an-add-in-that-returns-a-ui"></a>Vorgehensweise: Erstellen eines Add-Ins, das eine Benutzeroberfläche zurückgibt
 Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentation Foundation (WPF) auf einem Host eigenständige WPF-Anwendung zurückgibt.  
   
  Gibt das Add-in eine Benutzeroberfläche, die ein WPF-Benutzersteuerelement ist. Der Inhalt des Benutzersteuerelements ist eine einzelne Schaltfläche, bei der ein Meldungsfeld angezeigt wird, wenn Benutzer darauf klicken. Die eigenständige WPF-Anwendung hostet das Add-in und das Benutzersteuerelement (zurückgegeben durch das Add-in) zeigt, wie der Inhalt des Hauptfensters der Anwendung.  
   
- **Erforderliche Komponenten**  
+ **Vorraussetzungen**  
   
  In diesem Beispiel hebt die WPF-Erweiterungen für die Add-In-Modell von .NET Framework, die dieses Szenario zu aktivieren, und es wird Folgendes vorausgesetzt:  
   
@@ -31,8 +31,7 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
   
 ## <a name="example"></a>Beispiel  
  Um ein Add-in zu erstellen, die eine WPF-UI zurückgibt ist spezieller Code für die einzelnen Pipelinesegmente, das Add-in und die hostanwendung erforderlich.  
-    
-  
+
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>Implementieren des Vertragspipelinesegments  
  Eine Methode muss durch den Vertrag für die Rückgabe einer Benutzeroberflächenautomatisierungs definiert werden, und der Rückgabewert muss vom Typ <xref:System.AddIn.Contract.INativeHandleContract>. Dies wird veranschaulicht, durch die `GetAddInUI` Methode der `IWPFAddInContract` Datenvertrag in den folgenden Code.  
@@ -90,5 +89,6 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Übersicht über WPF-Add-Ins](wpf-add-ins-overview.md)

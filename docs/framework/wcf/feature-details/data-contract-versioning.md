@@ -9,12 +9,12 @@ helpviewer_keywords:
 - versioning [WCF]
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
-ms.openlocfilehash: e8a2f00458614367bbb661dd8ff74e88069d2dc0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53080975c03430a6c05bf72f58610b328430a3c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646918"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118026"
 ---
 # <a name="data-contract-versioning"></a>Datenvertragsversionsverwaltung
 Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die Datenverträge ändern, die die Dienste verwenden. Dieses Thema erklärt, wie man die Versionsverwaltung von Datenverträgen durchführt. In diesem Thema werden die Datenvertragsversionsmechanismen beschrieben. Eine vollständige Übersicht und normative versionsverwaltungsanleitung finden Sie unter [Best Practices: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  
@@ -65,7 +65,7 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
 </Car>  
 ```  
   
- Das Deserialisierungsmodul auf V1 findet kein entsprechendes Datenelement für das Feld `HorsePower` und verwirft die Daten.  
+ Die Deserialisierungs-Engine auf V1 findet kein entsprechendes Datenelement für das Feld `HorsePower` und verwirft die Daten.  
   
  Außerdem kann der Version 1-Endpunkt Daten erfolgreich an den Version 2-Endpunkt senden. Eine Serialisierung von Version 1 des `Car`-Datenvertrags führt zu einer der folgenden ähnlichen XML-Darstellung.  
   
@@ -92,7 +92,7 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
   
 -   Ein Datenvertrag mit einem Datenelement, das in einer Version erforderlich ist, kann keine Standarddaten (NULL oder 0(null)) von einer anderen Version erhalten, in der das Datenelement `EmitDefaultValue` auf `false` festgelegt hat.  
   
--   Ein erforderliches Datenelement, dessen `EmitDefaultValue` auf `false` festgelegt ist, kann nicht verwendet werden, um seinen Standardwert (NULL oder 0 (null)) zu deserialisieren, aber es kann bei der Deserialisierung einen derartigen Wert erhalten. Dies schafft ein Round-Tripping-Problem (Daten können eingelesen werden, aber die gleichen Daten können nicht ausgegeben werden). Wenn daher in einer Version `IsRequired` `true` und `EmitDefaultValue`  `false` ist, sollte die gleiche Kombination für alle anderen Versionen gelten, damit keine Version des Datenvertrags einen Wert produzieren kann, der nicht zu einem Roundtrip führt.  
+-   Ein erforderliches Datenelement, dessen `EmitDefaultValue` auf `false` festgelegt ist, kann nicht verwendet werden, um seinen Standardwert (NULL oder 0 (null)) zu deserialisieren, aber es kann bei der Deserialisierung einen derartigen Wert erhalten. Dies schafft ein Round-Tripping-Problem (Daten können eingelesen werden, aber die gleichen Daten können nicht ausgegeben werden). Wenn daher in einer Version `IsRequired``true` und `EmitDefaultValue``false` ist, sollte die gleiche Kombination für alle anderen Versionen gelten, damit keine Version des Datenvertrags einen Wert produzieren kann, der nicht zu einem Roundtrip führt.  
   
 ## <a name="schema-considerations"></a>Schemaüberlegungen  
  Eine Erklärung, welches Schema für Datenvertragstypen produziert wird, finden Sie unter [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
@@ -116,6 +116,7 @@ Durch die Weiterentwicklung der Anwendungen müssen Sie möglicherweise auch die
 Natürlich ist die Änderung des Datenvertrags der Inhalte einer Sammlung (z. B. die Änderung von einer Liste ganzer Zahlen zu einer Liste von Zeichenfolgen) ein "Breaking Change".  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute.Name%2A>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>
@@ -125,7 +126,7 @@ Natürlich ist die Änderung des Datenvertrags der Inhalte einer Sammlung (z. B
 - <xref:System.Runtime.Serialization.SerializationException>
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - [Versionstolerante Serialisierungsrückrufe](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
-- [Bewährte Methoden: Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [Bewährte Methoden: Datenvertragsversionsverwaltung](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
 - [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)

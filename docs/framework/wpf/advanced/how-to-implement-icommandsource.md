@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-ms.openlocfilehash: 42395d2916d58b2119cfe41ca154f258c3b0ec58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 218a17f221598ac29213bd28a0f04adb16bc933b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361459"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107366"
 ---
 # <a name="how-to-implement-icommandsource"></a>Vorgehensweise: Implementieren von ICommandSource
 Dieses Beispiel zeigt, wie eine Befehlsquelle implementieren <xref:System.Windows.Input.ICommandSource>.  Eine Befehlsquelle ist ein Objekt, das weiß, wie Sie einen Befehl aufzurufen.  Die <xref:System.Windows.Input.ICommandSource> Schnittstelle verfügt über drei Methoden: <xref:System.Windows.Input.ICommandSource.Command%2A>, <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>, und <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>.  <xref:System.Windows.Input.ICommandSource.Command%2A> ist der Befehl, der aufgerufen wird. Die <xref:System.Windows.Input.ICommandSource.CommandParameter%2A> ein benutzerdefinierten Datentyp, der von der Befehlsquelle an die Methode übergeben wird, die den Befehl verarbeitet wird. Die <xref:System.Windows.Input.ICommandSource.CommandTarget%2A> ist das Objekt, das auf der Befehl ausgeführt wird.  
@@ -59,6 +59,7 @@ Dieses Beispiel zeigt, wie eine Befehlsquelle implementieren <xref:System.Window
  [!code-vb[ImplementICommandSource#ImplementICommandExecute](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Input.ICommandSource>
 - <xref:System.Windows.Input.ICommand>
 - <xref:System.Windows.Input.RoutedCommand>

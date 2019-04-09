@@ -2,12 +2,12 @@
 title: Proben
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: 840aeaee70df02dc07033490db5bd081de5500cf
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: d06fe74280b713130142d6d7a881c97849598ce4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107171"
 ---
 # <a name="samples"></a>Proben
 Dieses Thema enthält Links zu den Visual Basic und C#-Lösungen, die enthalten [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Beispielcode.  
@@ -28,5 +28,6 @@ Dieses Thema enthält Links zu den Visual Basic und C#-Lösungen, die enthalten 
 -   Untersuchen Sie das White Paper mit Details zur [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Technologie sowie Beispiele für Visual Basic und C#-Code. Weitere Informationen finden Sie unter [LINQ to SQL: .NET Language-Integrated Query for Relational Data](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)
-- [LINQ to SQL Walkthroughs (Exemplarische Vorgehensweisen für LINQ to SQL)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))
+- [LINQ to SQL Walkthroughs](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))

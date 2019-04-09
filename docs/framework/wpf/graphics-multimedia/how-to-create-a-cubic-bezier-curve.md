@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], cubic Bezier curves
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
-ms.openlocfilehash: da5472408caf8db92fd025730de48b820397f372
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 36544abc774b7fe82c2ff47483cfedd6fb13e344
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115569"
 ---
 # <a name="how-to-create-a-cubic-bezier-curve"></a>Vorgehensweise: Erstellen einer kubischen Bézierkurve
 Dieses Beispiel zeigt, wie Sie eine kubische Bezier-Kurve zu erstellen. Verwenden Sie zum Erstellen einer kubischen Bezier-Kurve der <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, und <xref:System.Windows.Media.BezierSegment> Klassen.  Verwenden Sie zum Anzeigen der resultierenden Geometrie eine <xref:System.Windows.Shapes.Path> -Element, oder verwenden Sie es mit einer <xref:System.Windows.Media.GeometryDrawing> oder ein <xref:System.Windows.Media.DrawingContext>. In den folgenden Beispielen wird von eine kubische Bezier-Kurve gezeichnet (10, 100), (300, 100). Die Kurve hat der Control-Punkte ("100", "0") und (200, 200).  
@@ -33,7 +33,8 @@ Dieses Beispiel zeigt, wie Sie eine kubische Bezier-Kurve zu erstellen. Verwende
  Dieses Beispiel ist Teil eines größeren Beispiels. Das vollständige Beispiel finden Sie unter [Beispiel für Geometrien](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen eines elliptischen Bogens](how-to-create-an-elliptical-arc.md)
 - [Erstellen eines LineSegment in einer PathGeometry](how-to-create-a-linesegment-in-a-pathgeometry.md)
-- [Erstellen Sie eine kubische Bezier-Kurve](how-to-create-a-cubic-bezier-curve.md)
-- [Erstellen einer quadratischen Bezier-Kurve](how-to-create-a-quadratic-bezier-curve.md)
+- [Erstellen einer kubischen Bézierkurve](how-to-create-a-cubic-bezier-curve.md)
+- [Erstellen einer quadratischen Bézierkurve](how-to-create-a-quadratic-bezier-curve.md)

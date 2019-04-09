@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: a7ed16690172f2720424807325150ea3db5d5caa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372827"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110057"
 ---
 # <a name="base-elements-overview"></a>Übersicht über Basiselemente
 Ein hoher Prozentsatz der Klassen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stammen von vier Klassen ab, die häufig in der [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]-Dokumentation als Basiselementklassen bezeichnet werden. Diese Klassen sind <xref:System.Windows.UIElement>, <xref:System.Windows.FrameworkElement>, <xref:System.Windows.ContentElement>, und <xref:System.Windows.FrameworkContentElement>. Die <xref:System.Windows.DependencyObject> -Klasse auch bezieht, da es sich um eine allgemeine Basisklasse von beiden ist <xref:System.Windows.UIElement> und <xref:System.Windows.ContentElement>  
- 
-  
+
 <a name="base_apis"></a>   
 ## <a name="base-element-apis-in-wpf-classes"></a>Basiselement-APIs in WPF-Klassen  
  Beide <xref:System.Windows.UIElement> und <xref:System.Windows.ContentElement> davon abgeleitet sind <xref:System.Windows.DependencyObject>, über etwas andere Pfade. Die Aufteilung auf dieser Ebene befasst sich mit einem <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> in einer Benutzeroberfläche und zu welchem Zweck sie dienen in einer Anwendung verwendet werden. <xref:System.Windows.UIElement> verfügt auch über <xref:System.Windows.Media.Visual> in der Klassenhierarchie, d.h. eine Klasse, die die Low-Level-grafikunterstützung macht die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. <xref:System.Windows.Media.Visual> bietet ein Rendering-Framework durch definieren unabhängiger rechteckiger Bildschirmbereiche. In der Praxis <xref:System.Windows.UIElement> ist für Elemente, die ein größeres Objektmodell unterstützen, sind vorgesehen, die zum Rendern und Regionen, die als rechteckige Bildschirmbereiche beschrieben werden können und, wo das Inhaltsmodell bewusst mehr geöffnet ist, können verschiedene, Layouts Kombinationen von Elementen. <xref:System.Windows.ContentElement> nicht von abgeleitet <xref:System.Windows.Media.Visual>; das Modell ist, die eine <xref:System.Windows.ContentElement> von etwas anderem, wie z. B. einen Reader oder Viewer, die dann die Elemente zu interpretieren und erzeugt die vollständige verwendet <xref:System.Windows.Media.Visual> für [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nutzen. Bestimmte <xref:System.Windows.UIElement> -Klassen sollen Inhaltshosts sein: sie bieten das hosting und Rendering für eine oder mehrere <xref:System.Windows.ContentElement> Klassen (<xref:System.Windows.Controls.DocumentViewer> ist ein Beispiel einer solchen Klasse). <xref:System.Windows.ContentElement> Dient als Basisklasse für Elemente mit kleineren Objektmodellen und mehr auf den Text, die Informationen oder den Dokumentinhalt, die in gehostet werden, können ein <xref:System.Windows.UIElement>.  
@@ -98,6 +97,7 @@ Ein hoher Prozentsatz der Klassen in [!INCLUDE[TLA#tla_winclient](../../../../in
  <xref:System.Windows.Controls.Control> ist die Basisklasse für den Typ des Objekts, das unterschiedlich Steuerelement oder eine Komponente, je nach Technologie bezeichnet wird. Im allgemeinen sind [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Steuerelementklassen Klassen, die entweder direkt ein UI-Steuerelement darstellen oder in der Zusammenstellung der Steuerelemente eng beteiligt sind. Die Hauptfunktionalität, <xref:System.Windows.Controls.Control> zulässt, sind Steuerelementvorlagen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.Control>
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
 - [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md)

@@ -2,12 +2,12 @@
 title: N-Schicht-LINQ to SQL mit Webdiensten
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: e621063a2bd38b8ed473b8092c65a2aa9a645511
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092721"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107405"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N-Schicht-LINQ to SQL mit Webdiensten
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dient speziell zur Verwendung auf der mittleren Ebene in einer lose gekoppelten Datenzugriffsebene (DAL) wie z. B. einen Webdienst. Wenn es sich bei der Präsentationsebene um eine ASP.NET-Webseite handelt, können Sie die Datenübertragung zwischen der Benutzeroberfläche und <xref:System.Web.UI.WebControls.LinqDataSource> auf der mittleren Ebene mithilfe des [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Webserversteuerelements verwalten. Wenn es sich bei der Präsentationsebene nicht um eine ASP.NET-Seite handelt, müssen sowohl die mittlere Ebene als auch die Präsentationsebene zusätzliche Arbeit leisten, um die Serialisierung und Deserialisierung von Daten zu verwalten.  
@@ -30,12 +30,13 @@ ms.locfileid: "56092721"
  Bein Einfügen von Daten kann die Präsentationsebene ein neues Objekt erstellen und es an die mittlere Ebene senden, oder sie kann das Objekt von der mittleren Ebene auf der Grundlage der von ihr gelieferten Daten erstellen lassen. Im Allgemeinen unterscheidet sich das Abrufen und Einfügen von Daten in N-Tier-Anwendungen nicht von der Vorgehensweise in 2-Tier-Anwendungen. Weitere Informationen finden Sie unter [Datenbankabfrage](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md) und [zu erstellen und Übermitteln von Datenänderungen](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md).  
   
 ## <a name="tracking-changes-for-updates-and-deletes"></a>Nachverfolgen von Änderungen für Update- und Löschvorgänge  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt vollständige Parallelität auf der Basis von Timestamps (auch als RowVersions bezeichnet) und ursprünglichen Werten. Wenn die Datenbanktabellen über Timestamps verfügen, ist auf der mittleren oder Präsentationsebene wenig zusätzliche Arbeit für Update- und Löschvorgänge erforderlich. Wenn Sie für Überprüfungen auf vollständige Parallelität jedoch Originalwerte verwenden müssen, ist die Präsentationsebene dafür verantwortlich, diese Werte zu verfolgen und sie bei der Ausführung von Updates zurückzusenden. Dies liegt daran, dass Änderungen, die an Entitäten auf der Präsentationsebene vorgenommen wurden, nicht auf der mittleren Ebene verfolgt werden. Tatsächlich werden das ursprüngliche Abrufen einer Entität und das endgültig vorgenommene Update normalerweise von zwei vollständig getrennten <xref:System.Data.Linq.DataContext>-Instanzen ausgeführt.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt optimistische Parallelität, die basierend auf Timestamps (auch als RowVersions bezeichnet) und ursprünglichen Werte. Wenn die Datenbanktabellen über Timestamps verfügen, ist auf der mittleren oder Präsentationsebene wenig zusätzliche Arbeit für Update- und Löschvorgänge erforderlich. Wenn Sie für Überprüfungen auf vollständige Parallelität jedoch Originalwerte verwenden müssen, ist die Präsentationsebene dafür verantwortlich, diese Werte zu verfolgen und sie bei der Ausführung von Updates zurückzusenden. Dies liegt daran, dass Änderungen, die an Entitäten auf der Präsentationsebene vorgenommen wurden, nicht auf der mittleren Ebene verfolgt werden. Tatsächlich werden das ursprüngliche Abrufen einer Entität und das endgültig vorgenommene Update normalerweise von zwei vollständig getrennten <xref:System.Data.Linq.DataContext>-Instanzen ausgeführt.  
   
  Je größer die Anzahl der Änderungen ist, die von der Präsentationsebene vorgenommen werden, desto komplexer ist das Verfolgen dieser Änderungen und das Zurückpacken auf die mittlere Ebene. Die Implementierung eines Mechanismus zum Kommunizieren von Änderungen liegt vollständig in der Zuständigkeit der Anwendung. Die einzige Anforderung besteht darin, dass die ursprünglichen Werte, die für Überprüfungen auf vollständige Parallelität erforderlich sind, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zur Verfügung gestellt werden müssen.  
   
  Weitere Informationen finden Sie unter [Datenabruf und CUD-Vorgänge in N-Tier-Anwendungen (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [N-schichtige Anwendungen und Remoteanwendungen mit LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
 - [Übersicht über LinqDataSource Webserver-Steuerelement](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))

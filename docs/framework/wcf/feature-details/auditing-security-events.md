@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: a2349fa82b790182fa5d160bd29091c7524e2cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101293"
 ---
 # <a name="auditing-security-events"></a>Überwachen von Sicherheitsereignissen
 Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mit der Überwachungsfunktion Sicherheitsereignisse (Erfolg, Fehler, oder beides) protokollieren. Die Ereignisse werden in das Ereignisprotokoll von Windows geschrieben und können in der Ereignisanzeige untersucht werden.  
@@ -32,7 +32,7 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mi
   
  Zum Schreiben in das Sicherheitsprotokoll ist die Berechtigungsstufe `SeAuditPrivilege` erforderlich. Standardmäßig verfügen nur die Konten "Lokales System" und "Netzwerkdienst" über diese Berechtigung. Zum Verwalten der Sicherheitsprotokollfunktionen `read` und `delete` ist die Berechtigungsstufe `SeSecurityPrivilege` erforderlich. Standardmäßig verfügen nur Administratoren über diese Berechtigung.  
   
- Authentifizierte Benutzer dagegen dürfen das Anwendungsprotokoll anzeigen und in dieses Protokoll schreiben. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] schreibt standardmäßig Überwachungsereignisse in das Anwendungsprotokoll. Dieses Protokoll kann auch persönliche Daten enthalten, die allen authentifizierten Benutzern zugänglich sind.  
+ Authentifizierte Benutzer dagegen dürfen das Anwendungsprotokoll anzeigen und in dieses Protokoll schreiben. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Schreibvorgänge Überwachungsereignisse in das Anwendungsprotokoll wird standardmäßig ein. Dieses Protokoll kann auch persönliche Daten enthalten, die allen authentifizierten Benutzern zugänglich sind.  
   
 ## <a name="suppressing-audit-failures"></a>Unterdrücken von Überwachungsfehlern  
  Eine weitere Option bei der Überwachung ist die Unterdrückung von Überwachungsfehlern. Standardmäßig wirken sich Überwachungsfehler nicht auf die Anwendung aus. Bei Bedarf können Sie diese Option jedoch auf `false` setzen. In diesem Fall wird eine Ausnahme ausgelöst.  
@@ -88,7 +88,7 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mi
 |System|Anwendungsprotokoll|Sicherheitsprotokoll|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] oder höher|Unterstützt|Nicht unterstützt|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] und [!INCLUDE[wv](../../../../includes/wv-md.md)]|Unterstützt|Threadkontext muss `SeAuditPrivilege` verarbeiten|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] und [!INCLUDE[wv](../../../../includes/wv-md.md)]|Unterstützt|Threadkontext muss verfügen. `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Andere Faktoren  
  Neben dem Betriebssystem wird die Aktivierung der Protokollierung noch durch andere, in der folgenden Tabelle beschriebene Einstellungen gesteuert.  
@@ -99,10 +99,11 @@ Anwendungen, die mit Windows Communication Foundation (WCF) erstellt, können mi
 |Standardmäßige Benutzerfreundlichkeit|Alle authentifizierten Benutzer können in das Anwendungsprotokoll schreiben, es sind also für Anwendungsprozesse keine weiteren Berechtigungsschritte erforderlich.|Der Anwendungsprozess (Kontext) muss über die `SeAuditPrivilege`-Berechtigung verfügen.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>
 - [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Basis-WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Vorgehensweise: Überwachen von Sicherheitsereignissen](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

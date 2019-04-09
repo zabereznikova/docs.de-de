@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a07442d990694099c9402989b41c937360842316
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dbb39eb768069a737f3f89c771bf02fd6bc0c3b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569874"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102400"
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR-Enumeration
-Enthält Werte, die zur Angabe von Verhalten, Funktionen oder Ereignissen verwendet werden, die der Profiler abonnieren möchte.  
+Enthält Werte, die zum Angeben von Verhalten, Funktionen oder Ereignissen verwendet werden, die der Profiler abonnieren muss.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -104,13 +104,13 @@ typedef enum {
   
 -   [Keine Flags festgelegt](#None)  
   
--   [Rückruf-flags](#Callback)  
+-   [Rückruf-Flags](#Callback)  
   
--   [Flags zur Aktivierung von Feature](#Feature)  
+-   [Flags zur Aktivierung von Funktionen](#Feature)  
   
 -   [Konfigurationsflags](#Config)  
   
--   [Kombinierte flags](#Composite)  
+-   [Kombinierte Flags](#Composite)  
   
 <a name="None"></a>   
 ### <a name="no-flags-set"></a>Keine Flags festgelegt  
@@ -167,7 +167,7 @@ typedef enum {
 |`COR_PRF_DISABLE_ALL_NGEN_IMAGES`|Bewirkt, dass die systemeigene Abbildsuche nach Abbildern (einschließlich durch Profiler verbesserte) sucht.  Wenn dieses Flag und das `COR_PRF_USE_PROFILE_IMAGES`-Flag beide angegeben sind, wird `COR_PRF_DISABLE_ALL_NGEN_IMAGES` verwendet.|  
 |`COR_PRF_DISABLE_INLINING`|Deaktiviert das gesamte Inlining.|  
 |`COR_PRF_DISABLE_OPTIMIZATIONS`|Deaktiviert alle Codeoptimierungen.|  
-|`COR_PRF_DISABLE_TRANSPARENCY_CHECKS_UNDER_FULL_TRUST`|Deaktiviert Sicherheitstransparenzprüfungen, die normalerweise während Just-In-Time (JIT)-Kompilierungen und dem Laden von Klassen für vollständig vertrauenswürdige Assemblys durchgeführt werden. Dies kann die Ausführung einiger Instrumentationsvorgänge erleichtern.|  
+|`COR_PRF_DISABLE_TRANSPARENCY_CHECKS_UNDER_FULL_TRUST`|Deaktiviert Sicherheitstransparenzprüfungen, die normalerweise während Just-In-Time (JIT)-Kompilierungen und dem Laden von Klassen für vollständig vertrauenswürdige Assemblys durchgeführt werden. Dies kann die Ausführung einiger Instrumentierungsvorgänge erleichtern.|  
 |`COR_PRF_USE_PROFILE_IMAGES`|Bewirkt, dass die systemeigene Abbildsuche nach durch Profiler verbesserten Abbildern sucht. Wenn für eine Assembly kein durch Profiler verbessertes Bild gefunden wird, greift die Common Language Runtime für die betreffende Assembly wieder auf JIT zurück. Wenn dieses Flag und das `COR_PRF_DISABLE_ALL_NGEN_IMAGES`-Flag beide angegeben sind, wird `COR_PRF_DISABLE_ALL_NGEN_IMAGES` verwendet.|  
   
 <a name="Composite"></a>   
@@ -194,6 +194,7 @@ typedef enum {
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
 - [GetEventMask-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)
 - [SetEventMask-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69914bce7ed322d90cfbd03dd611e2b745dfe066
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 67073f04cfe981dd383369029d9a4b436929a0a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117844"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute-Methode
 Der Aufruf zum Festlegen der benutzerdefinierten Attribute auf Assemblyebene.  
@@ -70,6 +70,7 @@ HRESULT EmitAssemblyCustomAttribute(
  Erfordert alink.h  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
