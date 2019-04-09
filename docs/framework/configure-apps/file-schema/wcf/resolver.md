@@ -2,23 +2,23 @@
 title: <resolver>
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: f3d4b049afe55fb9fb80cbad56c49e8ec13e60db
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 39dcb868bd3ff25451509616e1dac7d41f94cfa1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758741"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075874"
 ---
-# <a name="resolver"></a><span data-ttu-id="680cb-101">\<resolver></span><span class="sxs-lookup"><span data-stu-id="680cb-101">\<resolver></span></span>
-<span data-ttu-id="680cb-102">Gibt einen Peerresolver an, der zum Auflösen einer Peermesh-ID in einen Satz von Peerknotenadressen verwendet wird, die verschiedene Knoten im Mesh angeben.</span><span class="sxs-lookup"><span data-stu-id="680cb-102">Specifies a peer resolver that is used to resolve a peer mesh ID to a set of peer node addresses that represents several nodes that participate in the mesh.</span></span>  
+# <a name="resolver"></a><span data-ttu-id="f8109-101">\<resolver></span><span class="sxs-lookup"><span data-stu-id="f8109-101">\<resolver></span></span>
+<span data-ttu-id="f8109-102">Gibt einen Peerresolver an, der zum Auflösen einer Peermesh-ID in einen Satz von Peerknotenadressen verwendet wird, die verschiedene Knoten im Mesh angeben.</span><span class="sxs-lookup"><span data-stu-id="f8109-102">Specifies a peer resolver that is used to resolve a peer mesh ID to a set of peer node addresses that represents several nodes that participate in the mesh.</span></span>  
   
- <span data-ttu-id="680cb-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="680cb-103">\<system.ServiceModel></span></span>  
-<span data-ttu-id="680cb-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="680cb-104">\<bindings></span></span>  
-<span data-ttu-id="680cb-105">\<netPeerBinding></span><span class="sxs-lookup"><span data-stu-id="680cb-105">\<netPeerBinding></span></span>  
-<span data-ttu-id="680cb-106">\<binding></span><span class="sxs-lookup"><span data-stu-id="680cb-106">\<binding></span></span>  
-<span data-ttu-id="680cb-107">\<resolver></span><span class="sxs-lookup"><span data-stu-id="680cb-107">\<resolver></span></span>  
+ <span data-ttu-id="f8109-103">\<system.ServiceModel></span><span class="sxs-lookup"><span data-stu-id="f8109-103">\<system.ServiceModel></span></span>  
+<span data-ttu-id="f8109-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="f8109-104">\<bindings></span></span>  
+<span data-ttu-id="f8109-105">\<netPeerBinding></span><span class="sxs-lookup"><span data-stu-id="f8109-105">\<netPeerBinding></span></span>  
+<span data-ttu-id="f8109-106">\<binding></span><span class="sxs-lookup"><span data-stu-id="f8109-106">\<binding></span></span>  
+<span data-ttu-id="f8109-107">\<resolver></span><span class="sxs-lookup"><span data-stu-id="f8109-107">\<resolver></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="680cb-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="680cb-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8109-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="f8109-108">Syntax</span></span>  
   
 ```xml  
 <resolver mode="Auto/Custom/Pnrp"
@@ -26,36 +26,37 @@ ms.locfileid: "55758741"
 </resolver>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="680cb-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="680cb-109">Attributes and Elements</span></span>  
- <span data-ttu-id="680cb-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="680cb-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f8109-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="f8109-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="f8109-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="f8109-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="680cb-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="680cb-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f8109-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="f8109-111">Attributes</span></span>  
   
-|<span data-ttu-id="680cb-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="680cb-112">Attribute</span></span>|<span data-ttu-id="680cb-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="680cb-113">Description</span></span>|  
+|<span data-ttu-id="f8109-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="f8109-112">Attribute</span></span>|<span data-ttu-id="f8109-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f8109-113">Description</span></span>|  
 |---------------|-----------------|  
-|`mode`|<span data-ttu-id="680cb-114">Eine Zeichenfolge, die angibt, ob die diesem Dienst zugeordnete Peerresolverinstanz PNRP-spezifisch ist, ein benutzerdefinierter Resolver ist oder automatisch festgelegt wird.</span><span class="sxs-lookup"><span data-stu-id="680cb-114">A string that specifies whether the peer resolver instance associated with this service is either PNRP-specific, a custom resolver, or automatically determined.</span></span> <span data-ttu-id="680cb-115">Dieses Attribut ist vom Typ <xref:System.ServiceModel.PeerResolvers.PeerResolverMode>.</span><span class="sxs-lookup"><span data-stu-id="680cb-115">This attribute is of type <xref:System.ServiceModel.PeerResolvers.PeerResolverMode>.</span></span>|  
-|`referralPolicy`|<span data-ttu-id="680cb-116">Eine Zeichenfolge, die angibt, wie Verweise unter Peers freigegeben werden.</span><span class="sxs-lookup"><span data-stu-id="680cb-116">A string that specifies the way referrals are shared among peers.</span></span> <span data-ttu-id="680cb-117">Dieses Attribut ist vom Typ <xref:System.ServiceModel.PeerResolvers.PeerReferralPolicy>.</span><span class="sxs-lookup"><span data-stu-id="680cb-117">This attribute is of type <xref:System.ServiceModel.PeerResolvers.PeerReferralPolicy>.</span></span>|  
+|`mode`|<span data-ttu-id="f8109-114">Eine Zeichenfolge, die angibt, ob die diesem Dienst zugeordnete Peerresolverinstanz PNRP-spezifisch ist, ein benutzerdefinierter Resolver ist oder automatisch festgelegt wird.</span><span class="sxs-lookup"><span data-stu-id="f8109-114">A string that specifies whether the peer resolver instance associated with this service is either PNRP-specific, a custom resolver, or automatically determined.</span></span> <span data-ttu-id="f8109-115">Dieses Attribut ist vom Typ <xref:System.ServiceModel.PeerResolvers.PeerResolverMode>.</span><span class="sxs-lookup"><span data-stu-id="f8109-115">This attribute is of type <xref:System.ServiceModel.PeerResolvers.PeerResolverMode>.</span></span>|  
+|`referralPolicy`|<span data-ttu-id="f8109-116">Eine Zeichenfolge, die angibt, wie Verweise unter Peers freigegeben werden.</span><span class="sxs-lookup"><span data-stu-id="f8109-116">A string that specifies the way referrals are shared among peers.</span></span> <span data-ttu-id="f8109-117">Dieses Attribut ist vom Typ <xref:System.ServiceModel.PeerResolvers.PeerReferralPolicy>.</span><span class="sxs-lookup"><span data-stu-id="f8109-117">This attribute is of type <xref:System.ServiceModel.PeerResolvers.PeerReferralPolicy>.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="680cb-118">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="680cb-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f8109-118">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="f8109-118">Child Elements</span></span>  
   
-|<span data-ttu-id="680cb-119">Element</span><span class="sxs-lookup"><span data-stu-id="680cb-119">Element</span></span>|<span data-ttu-id="680cb-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="680cb-120">Description</span></span>|  
+|<span data-ttu-id="f8109-119">Element</span><span class="sxs-lookup"><span data-stu-id="f8109-119">Element</span></span>|<span data-ttu-id="f8109-120">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f8109-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="680cb-121">\<headers></span><span class="sxs-lookup"><span data-stu-id="680cb-121">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|<span data-ttu-id="680cb-122">Gibt die spezifischen Einstellungen für einen benutzerdefinierten Peerresolverdienst an.</span><span class="sxs-lookup"><span data-stu-id="680cb-122">Specifies settings for a custom peer resolver service.</span></span>|  
+|[<span data-ttu-id="f8109-121">\<headers></span><span class="sxs-lookup"><span data-stu-id="f8109-121">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|<span data-ttu-id="f8109-122">Gibt die spezifischen Einstellungen für einen benutzerdefinierten Peerresolverdienst an.</span><span class="sxs-lookup"><span data-stu-id="f8109-122">Specifies settings for a custom peer resolver service.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="680cb-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="680cb-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f8109-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="f8109-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="680cb-124">Element</span><span class="sxs-lookup"><span data-stu-id="680cb-124">Element</span></span>|<span data-ttu-id="680cb-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="680cb-125">Description</span></span>|  
+|<span data-ttu-id="f8109-124">Element</span><span class="sxs-lookup"><span data-stu-id="f8109-124">Element</span></span>|<span data-ttu-id="f8109-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f8109-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="680cb-126">\<binding></span><span class="sxs-lookup"><span data-stu-id="680cb-126">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="680cb-127">Definiert alle bindungsfähigkeiten von der [ \<NetPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="680cb-127">Defines all binding capabilities of the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>|  
+|[<span data-ttu-id="f8109-126">\<binding></span><span class="sxs-lookup"><span data-stu-id="f8109-126">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="f8109-127">Definiert alle bindungsfähigkeiten von der [ \<NetPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span><span class="sxs-lookup"><span data-stu-id="f8109-127">Defines all binding capabilities of the [\<netPeerTcpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="680cb-128">Hinweise</span><span class="sxs-lookup"><span data-stu-id="680cb-128">Remarks</span></span>  
- <span data-ttu-id="680cb-129">Ein Peernamensresolver ist ein Ermittlungsdienst, der von Peerkanälen zum Suchen von Peerknoten in einem Peermesh verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="680cb-129">A peer name resolver is a discovery service used by peer channels to find peer nodes that participate in a peer mesh.</span></span> <span data-ttu-id="680cb-130">Außerdem wird er verwendet, um einen Knoten in einem Peermesh zu registrieren, wodurch der Peerknoten erkannt und im Peermesh verfügbar wird.</span><span class="sxs-lookup"><span data-stu-id="680cb-130">It is also used to "register" a node with a peer mesh, the mechanism by which the peer node becomes known and available from the peer mesh.</span></span> <span data-ttu-id="680cb-131">Weitere Informationen über PeerResolver finden Sie unter [PeerResolver](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).</span><span class="sxs-lookup"><span data-stu-id="680cb-131">For more information on peer resolvers, see [Peer Resolvers](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f8109-128">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f8109-128">Remarks</span></span>  
+ <span data-ttu-id="f8109-129">Ein Peernamensresolver ist ein Ermittlungsdienst, der von Peerkanälen zum Suchen von Peerknoten in einem Peermesh verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="f8109-129">A peer name resolver is a discovery service used by peer channels to find peer nodes that participate in a peer mesh.</span></span> <span data-ttu-id="f8109-130">Außerdem wird er verwendet, um einen Knoten in einem Peermesh zu registrieren, wodurch der Peerknoten erkannt und im Peermesh verfügbar wird.</span><span class="sxs-lookup"><span data-stu-id="f8109-130">It is also used to "register" a node with a peer mesh, the mechanism by which the peer node becomes known and available from the peer mesh.</span></span> <span data-ttu-id="f8109-131">Weitere Informationen über PeerResolver finden Sie unter [PeerResolver](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).</span><span class="sxs-lookup"><span data-stu-id="f8109-131">For more information on peer resolvers, see [Peer Resolvers](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="680cb-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="680cb-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f8109-132">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f8109-132">See also</span></span>
+
 - <xref:System.ServiceModel.PeerResolver>
 - <xref:System.ServiceModel.PeerResolvers.PeerResolverSettings>
 - <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Resolver%2A>
 - <xref:System.ServiceModel.Configuration.PeerResolverElement>
-- [<span data-ttu-id="680cb-133">Peerresolver</span><span class="sxs-lookup"><span data-stu-id="680cb-133">Peer Resolvers</span></span>](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
-- <span data-ttu-id="680cb-134">[Hinzufügen eines benutzerdefinierten Konfliktlösers zu einer PeerChannel-Anwendung](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="680cb-134">[Adding a Custom Resolver to a PeerChannel Application](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))</span></span>
+- [<span data-ttu-id="f8109-133">Peerresolver</span><span class="sxs-lookup"><span data-stu-id="f8109-133">Peer Resolvers</span></span>](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+- [<span data-ttu-id="f8109-134">Hinzufügen einer benutzerdefinierten Auflösung zu einer PeerChannel-Anwendung</span><span class="sxs-lookup"><span data-stu-id="f8109-134">Adding a Custom Resolver to a PeerChannel Application</span></span>](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))
