@@ -8,12 +8,12 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: eba21519e6ea6cf4a2a412750fd305d7af620c1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720789"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173614"
 ---
 # <a name="how-to-read-image-metadata"></a>Vorgehensweise: Lesen von Bildmetadaten
 Einige Bilddateien enthalten Metadaten, die Sie lesen können, um zu bestimmen, Features des Abbilds an. Beispielsweise kann eine digitale Fotografie Metadaten enthalten, die Sie lesen können, um zu bestimmen, die Marke und Modell der Kamera verwendet, um das Image zu erfassen. Mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], Sie können die vorhandenen Metadaten lesen und Sie können auch neue Metadaten in Bilddateien schreiben.  
@@ -40,7 +40,7 @@ Einige Bilddateien enthalten Metadaten, die Sie lesen können, um zu bestimmen, 
   
 |Numerischer Wert|Beschreibung|  
 |-------------------|-----------------|  
-|1|Eine `Byte`|  
+|1|A `Byte`|  
 |2|Ein Array von `Byte` als ASCII-codierte Objekte|  
 |3|Eine 16-Bit-Ganzzahl|  
 |4|Eine 32-Bit-Ganzzahl|  
@@ -121,8 +121,9 @@ Einige Bilddateien enthalten Metadaten, die Sie lesen können, um zu bestimmen, 
  [!code-vb[System.Drawing.WorkingWithImages#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#51)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers. Behandeln Sie das <xref:System.Windows.Forms.Control.Paint> Ereignis und fügen Sie diesen Code in Paint-Ereignishandler. Ersetzen Sie `FakePhoto.jpg` mit einem Image-Name und Pfad gültig ist, auf Ihrem System und Importieren der `System.Drawing.Imaging` Namespace.  
+ Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Behandeln Sie das <xref:System.Windows.Forms.Control.Paint> Ereignis und fügen Sie diesen Code in Paint-Ereignishandler. Ersetzen Sie `FakePhoto.jpg` mit einem Image-Name und Pfad gültig ist, auf Ihrem System und Importieren der `System.Drawing.Imaging` Namespace.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Bilder, Bitmaps und Metadateien](images-bitmaps-and-metafiles.md)
 - [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](working-with-images-bitmaps-icons-and-metafiles.md)

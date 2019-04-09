@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d2d7f9b459e5a46793d44728a9fea269ca47887
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5cd6b74ce2871cfafc0dc2260be3f758f6a28704
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492386"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168687"
 ---
 # <a name="imetadataimportfindtypedefbyname-method"></a>IMetaDataImport::FindTypeDefByName-Methode
 Ruft einen Zeiger auf die Metadaten der TypeDef-token für die <xref:System.Type> mit dem angegebenen Namen.  
@@ -57,5 +57,6 @@ HRESULT FindTypeDefByName
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

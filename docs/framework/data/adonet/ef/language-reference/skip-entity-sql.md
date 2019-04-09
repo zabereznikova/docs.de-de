@@ -2,12 +2,12 @@
 title: SKIP (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
-ms.openlocfilehash: b17f73f97d32f151ed4f51b025c0c5a7a97393bb
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: e8ef529ea8d2be2ef8eb3a2eb606e7ca8bf13f0a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147874"
 ---
 # <a name="skip-entity-sql"></a>SKIP (Entity SQL)
 Physisches Paging kann mithilfe der SKIP-Unterklausel in der ORDER BY-Klausel durchgeführt werden. SKIP kann nicht ohne die ORDER BY-Klausel verwendet werden.  
@@ -36,6 +36,7 @@ Physisches Paging kann mithilfe der SKIP-Unterklausel in der ORDER BY-Klausel du
  Die [!INCLUDE[esql](../../../../../../includes/esql-md.md)] -Abfrage im [Vorgehensweise: Seite über Abfrageergebnisse](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100)) den ORDER BY-Operator mit SKIP verwendet, um die in einer SELECT-Anweisung zurückgegebenen Objekte zu verwendende Sortierreihenfolge anzugeben.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)
 - [Vorgehensweise: Seitenweise Abfrageresultate durch Navigieren](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))
 - [Paging](../../../../../../docs/framework/data/adonet/ef/language-reference/paging-entity-sql.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Hyperlink control type
 - control types, Hyperlink
 ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
-ms.openlocfilehash: f0d9e6b4823e62f67d4d0966cb78df260a819a71
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e239919426297d879a9ac90928481b554157e7e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676706"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186276"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Hyperlink-Steuerelementtyp
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "57676706"
 ## <a name="required-ui-automation-properties"></a>Erforderliche Benutzeroberflächenautomatisierungs-Eigenschaften  
  Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften, deren Werte oder Definitionen für den Linksteuerelementtyp besonders relevant sind. Weitere Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften finden Sie [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|Wert|Hinweise|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaft|Wert|Hinweise|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Siehe Hinweise.|Der Wert dieser Eigenschaft muss für alle Steuerelemente in einer Anwendung eindeutig sein.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Siehe Hinweise.|Das äußere Rechteck, das das gesamte Steuerelement enthält.|  
@@ -57,22 +57,23 @@ ms.locfileid: "57676706"
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|Ja|Alle Linksteuerelemente müssen das Invoke-Muster unterstützen.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Variabel|Linksteuerelemente sollten das Value-Steuerelementmuster unterstützen, wenn der Link für den Benutzer nutzbare und sinnvolle Informationen enthält.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Beispiel: `"https://www...."`|Eine URL für eine Internet- oder Intranetadresse ist ein Beispiel für einen Link, der für den Benutzer sinnvolle Informationen enthält. Ein programmgesteuerter Link ist dagegen nur für eine Anwendung sinnvoll und wird für die Value-Eigenschaft nicht empfohlen.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Ein auf ein Objekt angewendeter `"https://www...."`|Eine URL für eine Internet- oder Intranetadresse ist ein Beispiel für einen Link, der für den Benutzer sinnvolle Informationen enthält. Ein programmgesteuerter Link ist dagegen nur für eine Anwendung sinnvoll und wird für die Value-Eigenschaft nicht empfohlen.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Erforderliche Benutzeroberflächenautomatisierungs-Ereignisse  
  Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse, die von allen Linksteuerelementen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis|Unterstützung|Hinweise|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event|Unterstützung|Hinweise|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Erforderlich|Keine|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keine|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keine|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keine|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Erforderlich|Keine|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Erforderlich|Keine|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Erforderlich|Keiner|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Automation.ControlType.Hyperlink>
 - [Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [Übersicht über die Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-overview.md)

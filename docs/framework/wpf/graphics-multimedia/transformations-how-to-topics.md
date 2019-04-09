@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: 0a6fb777502db021b7b4d5f9403f4cd1d6d7f85a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6e630b76e05803ffc4ac3c69c403d1ea2741b112
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361355"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140867"
 ---
 # <a name="transformations-how-to-topics"></a>Gewusst-wie-Themen zu Transformationen
 Die Themen in diesem Abschnitt wird beschrieben, wie verschiedene Transformationen auf Objekte angewendet.  
@@ -28,9 +28,10 @@ Die Themen in diesem Abschnitt wird beschrieben, wie verschiedene Transformation
  [Neigen eines Elements](how-to-skew-an-element.md)  
  [Angeben des Ursprungs einer Transformation mithilfe von relativen Werten](how-to-specify-the-origin-of-a-transform-by-using-relative-values.md)  
  [Übersetzen eines Elements](how-to-translate-an-element.md)  
- [Verwenden von MatrixTransform zum Erstellen benutzerdefinierter Transformationen](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
+ [Verwenden eines MatrixTransform-Objekts zum Erstellen benutzerdefinierter Transformationen](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Transform>
 - [Grafiken und Multimedia](index.md)
 - [Übersicht über das WPF-Grafikrendering](wpf-graphics-rendering-overview.md)

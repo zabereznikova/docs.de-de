@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd3813d977f94db4168da8c888485b323f4072ad
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2a49252d00f75b4d0b6325aeae0aab22f8ada5e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471276"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191379"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies-Funktion
 Bestimmt, ob sich zwei Assemblys nur durch die Signaturen ihrer starken Namen unterscheiden.  
@@ -72,5 +72,6 @@ BOOLEAN StrongNameCompareAssemblies (
  Wenn die `StrongNameCompareAssemblies` Funktion nicht erfolgreich abgeschlossen wurde, rufen Sie die [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) Funktion, um den letzten generierten Fehler abzurufen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [StrongNameCompareAssemblies-Methode](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamecompareassemblies-method.md)
 - [ICLRStrongName-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

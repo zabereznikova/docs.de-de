@@ -1,19 +1,19 @@
 ---
-title: <Uri>-Element (Uri-Einstellungen)
+title: <Uri> -Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
-ms.openlocfilehash: f432be7594b1659dfcae0c6eee706358230f2cbb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1f3573babd2e363a78f0ad454f0ba36c87ba6390
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269249"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212140"
 ---
 # <a name="uri-element-uri-settings"></a>\<URI >-Elements (Netzwerkeinstellungen)
 Enthält Einstellungen, die angeben, wie .NET Framework Webadressen, die mithilfe von uniform Resource Identifier (URIs) ausgedrückt verarbeitet.  
   
 ## <a name="schema-hierarchy"></a>Schemahierarchie  
- [\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<Configuration >-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<uri>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -42,7 +42,7 @@ Enthält Einstellungen, die angeben, wie .NET Framework Webadressen, die mithilf
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Enthält Einstellungen für alle Namespaces.|  
+|[Konfiguration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Enthält Einstellungen für alle Namespaces.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `uri` Element enthält Einstellungen für Mitglieder der <xref:System.Uri> Klasse, die vom Klassen in der <xref:System.Net> Namespace. Die Einstellungen Konfigurieren der Unterstützung für IRI und IDN.  
@@ -68,4 +68,5 @@ Enthält Einstellungen, die angeben, wie .NET Framework Webadressen, die mithilf
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+
+- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

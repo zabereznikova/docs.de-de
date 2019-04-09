@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], TextBox
 - TextBox [WPF], styles and templates
 ms.assetid: aa99130c-43a1-450f-9b46-c40ae0db0cca
-ms.openlocfilehash: 16f087051e438fa0dbe248c46b0ec555c07cc06c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ccc89e0e0c8977398ed162b246ff6cdede3b8351
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367907"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177943"
 ---
 # <a name="textbox-styles-and-templates"></a>TextBox-Stile und -Vorlagen
 In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.TextBox> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -53,6 +53,7 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
  Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)

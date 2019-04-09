@@ -9,12 +9,12 @@ helpviewer_keywords:
 - states [WPF], TabControl
 - templates [WPF], TabControl
 ms.assetid: f6b19a30-f10e-4fa1-96ce-f17a54092ab6
-ms.openlocfilehash: ac8349453eaef2167746de639a7e2c111a019b86
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e38756c5f266abc16b99f2359f8a87460d5d9450
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356311"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155375"
 ---
 # <a name="tabcontrol-styles-and-templates"></a>TabControl-Formate und -Vorlagen
 In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.TabControl> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -70,6 +70,7 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
  Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)

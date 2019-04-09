@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a4cc17bdcaea5099d0d2b0195ae4fa28e3d4744
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2f71a277484adbbfe3628222c635528cdab03e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744603"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156129"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions-Enumeration
 Enthält Flagwerte, die das Verhalten beim Import einer Assembly außerhalb des aktuellen Bereichs steuern.  
@@ -66,4 +66,5 @@ typedef enum CorImportOptions {
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

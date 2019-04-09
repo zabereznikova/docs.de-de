@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anpassen der Sortierung im DataGridView-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Anpassen der Sortierung im DataGridView-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sorting
 - data grids [Windows Forms], customizing sorting
 ms.assetid: 92fb5c14-afab-4cf5-a97e-924fd9cb99f5
-ms.openlocfilehash: 18d3ec4aa2c8c4a9bfd769b8d922bc76e7dac4a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0e7dffa45dc8d3ac467129d44a7c73a8c4b4bfa2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192913"
 ---
-# <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Anpassen der Sortierung im DataGridView-Steuerelement in Windows Forms
+# <a name="how-to-customize-sorting-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Anpassen der Sortierung im DataGridView-Steuerelement in Windows Forms
 Das <xref:System.Windows.Forms.DataGridView>-Steuerelement ermöglicht die automatische Sortierung. Je nach Ihren Anforderungen müssen Sie die Sortiervorgänge jedoch möglicherweise anpassen. Sie können beispielsweise mit der programmgesteuerten Sortierung eine alternative Benutzeroberfläche (UI) erstellen. Alternativ können Sie das <xref:System.Windows.Forms.DataGridView.SortCompare>-Ereignis behandeln oder die `Sort(IComparer)`-Überladung der <xref:System.Windows.Forms.DataGridView.Sort%2A>-Methode aufrufen, um flexibler sortieren zu können, z. B. beim Sortieren mehrerer Spalten.  
   
  In den folgenden Codebeispielen werden diese drei Ansätze der benutzerdefinierten Sortierung veranschaulicht. Weitere Informationen finden Sie unter [Spaltenssortiermodi im DataGridView-Steuerelement von Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md).  
@@ -47,7 +47,8 @@ Das <xref:System.Windows.Forms.DataGridView>-Steuerelement ermöglicht die autom
  Informationen zum Erstellen dieser Beispiele über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
-- [Sortieren von Daten im DataGridView-Steuerelement in Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Spaltensortiermodi im DataGridView-Steuerelement von Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Festlegen der Sortierungsmodi für Spalten im DataGridView-Steuerelement in Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [Sortieren von Daten im DataGridView-Steuerelement in Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [Spaltenssortiermodi im DataGridView-Steuerelement von Windows Forms](column-sort-modes-in-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Festlegen der Sortierungsmodi für Spalten im DataGridView-Steuerelement in Windows Forms](set-the-sort-modes-for-columns-wf-datagridview-control.md)

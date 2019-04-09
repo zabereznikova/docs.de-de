@@ -2,12 +2,12 @@
 title: Bidirektionale Kommunikation
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: 3aa01140ef62bd3658696e889038e099ed76da20
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: a74d40fc8c8d4bfb547bd6b21609b59a42891dfa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148940"
 ---
 # <a name="two-way-communication"></a>Bidirektionale Kommunikation
 Dieses Beispiel veranschaulicht das Ausführen der transaktiven bidirektionalen Warteschlangenkommunikation über MSMQ. In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist in diesem Fall eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.  
@@ -227,7 +227,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
     > [!NOTE]
     >  Wenn Sie zur Neugenerierung der Konfiguration für dieses Beispiel die Datei "Svcutil.exe" verwenden, müssen Sie die Endpunktnamen in der Clientkonfiguration ändern, sodass sie mit dem Clientcode übereinstimmen.  
   
- Standardmäßig wird mit <xref:System.ServiceModel.NetMsmqBinding> die Transportsicherheit aktiviert. Es gibt zwei relevante Eigenschaften für MSMQ-transportsicherheit: <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> und <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` standardmäßig der Authentifizierungsmodus festgelegt ist, um `Windows` und die Schutzebene auf `Sign`. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es Teil einer Domäne sein, und die Active Directory-Integrationsoption für MSMQ muss installiert sein. Wenn Sie dieses Beispiel auf einem Computer ausführen, der diese Kriterien nicht erfüllt, tritt ein Fehler auf.  
+ Standardmäßig wird mit <xref:System.ServiceModel.NetMsmqBinding> die Transportsicherheit aktiviert. Es gibt zwei relevante Eigenschaften für MSMQ-transportsicherheit: <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> und <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` standardmäßig der Authentifizierungsmodus festgelegt ist, um `Windows` und die Schutzebene auf `Sign`. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es Teil einer Domäne sein, und die Active Directory-Integrationsoption für MSMQ muss installiert sein. Wenn Sie dieses Beispiel auf einem Computer ausführen, der diese Kriterien nicht erfüllt, tritt ein Fehler auf.  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>So führen Sie das Beispiel auf einem Computer aus, der sich in einer Arbeitsgruppe befindet oder über keine Active Directory-Integration verfügt  
   
@@ -330,4 +330,3 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
-  

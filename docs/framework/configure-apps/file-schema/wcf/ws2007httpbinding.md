@@ -2,12 +2,12 @@
 title: <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 01b8f20607de1cdd9c6b1ad9fc030c1d050ed749
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9caba8dfc848a2463b1fa482ccaf55288d96af29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410640"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182136"
 ---
 # <a name="ws2007httpbinding"></a>\<ws2007HttpBinding>
 Definiert eine interoperable Bindung, die Unterstützung für die entsprechenden Versionen der Bindungselemente <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession> und <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> bereitstellt.  
@@ -136,6 +136,7 @@ Definiert eine interoperable Bindung, die Unterstützung für die entsprechenden
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.WS2007HttpBinding>
 - <xref:System.ServiceModel.Configuration.WS2007HttpBindingElement>
 - [Bindungen](../../../../../docs/framework/wcf/bindings.md)

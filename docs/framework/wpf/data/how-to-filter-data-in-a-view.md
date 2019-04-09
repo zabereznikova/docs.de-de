@@ -9,12 +9,12 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: 51f95834556153448d416157460cf63da0d409e1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a31c07e6be26f67cc29813a14745ecf4a83ab98a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373945"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147471"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>Vorgehensweise: Filtern von Daten in einer Ansicht
 Dieses Beispiel zeigt, wie Sie Daten in einer Ansicht zu filtern.  
@@ -48,8 +48,9 @@ Dieses Beispiel zeigt, wie Sie Daten in einer Ansicht zu filtern.
  [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Data.CollectionView.CanFilter%2A>
 - <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>
-- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Übersicht über die Datenbindung](data-binding-overview.md)
 - [Sortieren von Daten in einer Ansicht](how-to-sort-data-in-a-view.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)

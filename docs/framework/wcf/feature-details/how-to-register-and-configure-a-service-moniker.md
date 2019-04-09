@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 2f8f19e70b3345b61f1f5caba2fc6f764b58cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 364329954591199c4b0d3123c662c4e124c242fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141920"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Vorgehensweise: Registrieren und Konfigurieren eines Dienstmonikers
 Vor der Verwendung des Windows Communication Foundation (WCF)-dienstmonikers in COM-Anwendung mit einem typisierten Vertrag, müssen Sie die erforderlichen attributierten Typen bei COM registriert werden, und konfigurieren die COM-Anwendung sowie der Moniker mit der erforderlichen Bindung die Konfiguration.  
@@ -98,4 +98,5 @@ Vor der Verwendung des Windows Communication Foundation (WCF)-dienstmonikers in 
      Dadurch wird die importierte Schnittstellendefinitionen geändert, sodass von allen Methoden `HResult` zurückgegeben wird. Alle anderen Rückgabewerte werden zu out-Parametern umgewandelt. An der Ausführung der Methoden ändert das nichts. Dies ermöglicht es Ihnen, beim Aufrufen einer Methode auf dem Proxy die Ursache einer Ausnahme zu bestimmen. Diese Funktion ist ausschließlich in C++-Code verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

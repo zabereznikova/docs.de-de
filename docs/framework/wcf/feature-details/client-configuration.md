@@ -2,12 +2,12 @@
 title: Clientkonfiguration
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 1cd7a066622c7d317b1a9c62658531521082c964
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: b9975c6caeedc94bf4a7773e71a95eb0d8c7aed2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261803"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144689"
 ---
 # <a name="client-configuration"></a>Clientkonfiguration
 Sie können die Windows Communication Foundation (WCF) Clientkonfiguration verwenden, an die Adresse, Bindung, Verhalten und Vertrag, der Eigenschaften "ABC" den Clientendpunkt an, welche Clients verwenden, um den Dienstendpunkten herstellen. Die [ \<Client >](../../configure-apps/file-schema/wcf/client.md) Element verfügt über eine [ \<Endpunkt >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) Element, dessen Attribute werden zum Konfigurieren des Endpunkts abc. Diese Attribute werden in erläutert die [Konfigurieren von Endpunkten](#configuring-endpoints) Abschnitt.  
@@ -94,5 +94,6 @@ Sie können die Windows Communication Foundation (WCF) Clientkonfiguration verwe
  Die [ \<Metadaten >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) Element wird verwendet, um die Einstellungen zur Registrierung von metadatenimporterweiterungen angegeben. Weitere Informationen zum Erweitern des metadatensystems finden Sie unter [Erweitern des Metadatensystems](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Endpunkte: Adressen, Bindungen und Verträge](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [Konfigurieren von Clientverhalten](../../../../docs/framework/wcf/configuring-client-behaviors.md)

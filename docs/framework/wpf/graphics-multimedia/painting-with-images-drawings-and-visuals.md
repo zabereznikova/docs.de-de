@@ -12,17 +12,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: bb66c34a847f78f7921ae925d0c3d0640c11aeec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204197"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Zeichnen mit Bildern, Zeichnungen und visuellen Elementen
 In diesem Thema wird beschrieben, wie Sie mit <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, und <xref:System.Windows.Media.VisualBrush> Objekte zum Zeichnen eines Bereichs mit einem Bild, ein <xref:System.Windows.Media.Drawing>, oder ein <xref:System.Windows.Media.Visual>.  
-    
-  
+
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Als Voraussetzung für dieses Thema sollten Sie mit den von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bereitgestellten unterschiedlichen Pinseltypen und ihren grundlegenden Funktionen vertraut sein. Eine Einführung finden Sie unter [Übersicht über WPF-Pinsel](wpf-brushes-overview.md).  
@@ -135,6 +134,7 @@ Komponente eines TileBrush mit mehreren Kacheln
  Weitere Informationen über das Kacheln von <xref:System.Windows.Media.TileBrush> Objekten finden Sie die [Übersicht über TileBrush](tilebrush-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>

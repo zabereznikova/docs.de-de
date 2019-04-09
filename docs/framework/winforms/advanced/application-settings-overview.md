@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: eac8c932e9f661933f943a507485a170dc6b6132
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713060"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203625"
 ---
 # <a name="application-settings-overview"></a>Übersicht über Anwendungseinstellungen
 In diesem Thema wird erläutert, wie Einstellungsdaten für Ihre Anwendung und deren Benutzer erstellt und gespeichert werden.  
@@ -48,13 +48,14 @@ In diesem Thema wird erläutert, wie Einstellungsdaten für Ihre Anwendung und d
  Sie können auch die <xref:System.Windows.Forms.Binding> -Klasse verwenden, um Einstellungen programmgesteuert an Eigenschaften in Formularen und Steuerelementen zu binden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - <xref:System.Configuration.IPersistComponentSettings>
 - [Vorgehensweise: Überprüfen von Anwendungseinstellungen](how-to-validate-application-settings.md)
 - [Verwalten von Anwendungseinstellungen (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [How To: Lesen von Einstellungen zur Laufzeit mitC#](how-to-read-settings-at-run-time-with-csharp.md)
+- [Vorgehensweise: Lesen von Einstellungen zur Laufzeit mit C#](how-to-read-settings-at-run-time-with-csharp.md)
 - [Verwenden von Anwendungseinstellungen und Benutzereinstellungen](using-application-settings-and-user-settings.md)
 - [Architektur der Anwendungseinstellungen](application-settings-architecture.md)
-- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
+- [Anwendungseinstellungen für benutzerdefinierte Steuerelemente](application-settings-for-custom-controls.md)

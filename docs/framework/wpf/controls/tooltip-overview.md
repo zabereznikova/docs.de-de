@@ -8,18 +8,16 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: 745ac23d65248302940eed6db3b8b19748dfc00d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 08b30d8be83ef9d814d17c5d4ec0c95a26bacdad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170104"
 ---
 # <a name="tooltip-overview"></a>Übersicht über die QuickInfo
 Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutzer den Mauszeiger auf ein Element, beispielsweise über hält eine <xref:System.Windows.Controls.Button>. In diesem Thema wird die QuickInfo vorgestellt und das Erstellen und Anpassen von QuickInfo-Inhalten erläutert.  
-  
- 
-  
+
 <a name="what_is_a_tooltip"></a>   
 ## <a name="what-is-a-tooltip"></a>Was ist eine QuickInfo?  
  Wenn ein Benutzer den Mauszeiger über ein Element mit einer QuickInfo bewegt, wird für einen festgelegten Zeitraum ein Fenster mit dem Inhalt dieser QuickInfo angezeigt. Dabei kann es sich z.B. um Text handeln, der die Funktion eines Steuerelements beschreibt. Wenn der Benutzer den Mauszeiger vom Steuerelement wegbewegt, wird das Fenster nicht mehr angezeigt, da der Inhalt der QuickInfo keinen Fokus erhalten kann.  
@@ -76,8 +74,9 @@ Eine QuickInfo ist ein kleines Popupfenster, das angezeigt wird, wenn ein Benutz
  [!code-xaml[ToolTipService#ToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#tooltip)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.ToolTipService>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipEventArgs>
 - <xref:System.Windows.Controls.ToolTipEventHandler>
-- [Themen zu Vorgehensweisen](tooltip-how-to-topics.md)
+- [Gewusst wie-Themen](tooltip-how-to-topics.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 87728ea52bc257920041acc2e2ecfc040cdbbfb0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1ee737f4c6d34e77996f5ba08ce4d84132a99238
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207330"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion-Funktion
 Ruft die Versionsnummer der von der angegebenen Anwendung angeforderten die common Language Runtime (CLR) ab. Wenn diese Version nicht installiert ist, wird die letzte installierte Version vor der angeforderten Version abgerufen.  
@@ -60,7 +60,7 @@ HRESULT GetRequestedRuntimeVersion (
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
 |ERROR_INSUFFICIENT_BUFFER|Die Version-Puffer ist nicht groß genug zum Speichern der Versionszeichenfolge.|  
-|E_POINTER|`pdwLength` ist NULL.|  
+|E_POINTER|`pdwLength` ist null.|  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -72,6 +72,7 @@ HRESULT GetRequestedRuntimeVersion (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [GetRequestedRuntimeInfo-Funktion](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
 - [GetVersionFromProcess-Funktion](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
 - [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

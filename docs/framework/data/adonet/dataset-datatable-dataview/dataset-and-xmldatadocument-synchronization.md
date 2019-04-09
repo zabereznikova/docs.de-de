@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 5360a7bce1b5470271bc6b512484964ebb9fd8d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587777"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164735"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet- und XmlDataDocument-Synchronisierung
 Das ADO.NET-<xref:System.Data.DataSet> stellt Daten relational dar. Für einen hierarchischen Datenzugriff können Sie die in .NET Framework verfügbaren XML-Klassen verwenden. Diese beiden Datendarstellungen wurden bisher immer separat verwendet. Allerdings ermöglicht .NET Framework einen synchronen Echtzeitzugriff auf die relationale und hierarchische Darstellung von Daten mithilfe der **DataSet** Objekt und die <xref:System.Xml.XmlDataDocument> Zielabhängigkeitsobjekt.  
@@ -90,7 +90,7 @@ Das ADO.NET-<xref:System.Data.DataSet> stellt Daten relational dar. Für einen h
  Bei der Synchronisierung ein **DataSet** mit einer **XmlDataDocument**, Ergebnisse hängen davon ab, ob Ihre <xref:System.Data.DataRelation> -Objekte geschachtelt sind. Weitere Informationen finden Sie unter [Schachteln von DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Synchronisieren eines DataSet mit einem XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ [Synchronisieren eines "DataSet "mit einem "XmlDataDocument"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
  Demonstriert die Synchronisierung eine stark typisierte **DataSet**, mit dem Schema "minimal", mit einem **XmlDataDocument**.  
   
  [Ausführen einer XPath-Abfrage für ein DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
@@ -100,17 +100,18 @@ Das ADO.NET-<xref:System.Data.DataSet> stellt Daten relational dar. Für einen h
  Veranschaulicht die Anwendung einer XSLT-Transformation auf den Inhalt einer **DataSet**.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Verwenden von XML in einem "DataSet"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Beschreibt, wie die **DataSet** interagiert mit XML als Datenquelle, einschließlich des Ladens und Beibehaltens des Inhalts einer **DataSet** als XML-Daten.  
   
- [Schachteln von DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ [Verschachteln von "DataRelations"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  Erläutert die Bedeutung geschachtelter **DataRelation** -Objekte beim Darstellen des Inhalts einer **DataSet** als XML-Daten, und beschreibt, wie diese Beziehungen zu erstellen.  
   
- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ ["DataSets", "DataTables" und "DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  Beschreibt die **DataSet** und wie Sie es verwenden, um Anwendungsdaten zu verwalten und für die Interaktion mit Datenquellen, einschließlich relationaler Datenbanken und XML.  
   
  <xref:System.Xml.XmlDataDocument>  
  Enthält Referenzinformationen zu den **XmlDataDocument** Klasse.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

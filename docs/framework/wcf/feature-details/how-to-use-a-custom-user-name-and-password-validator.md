@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden Sie einen benutzerdefinierten Benutzernamen und das Kennwort-Validierungssteuerelement'
+title: 'Vorgehensweise: Verwenden eines benutzerdefinierten Benutzernamens und eines Kennwort-Validierungssteuerelements'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 619d3e80a8206ae3ceef2d7ff822dc3bfa8f65be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0c5f5783f4f302b7a33c6d960049d68ed18dac91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700532"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160250"
 ---
-# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Vorgehensweise: Verwenden Sie einen benutzerdefinierten Benutzernamen und das Kennwort-Validierungssteuerelement
+# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Vorgehensweise: Verwenden eines benutzerdefinierten Benutzernamens und eines Kennwort-Validierungssteuerelements
 Wenn einen Benutzernamen und ein Kennwort für die Authentifizierung verwendet wird, verwendet Windows Communication Foundation (WCF) standardmäßig Windows um den Benutzernamen und das Kennwort zu überprüfen. WCF ermöglicht jedoch für die benutzerdefinierten Benutzernamen- und Kennwort-Authentifizierungsschemas, auch bekannt als *Validierungssteuerelemente*. Zum Verwenden eines benutzerdefinierten Benutzernamen- und Kennwort-Validierungssteuerelements erstellen und konfigurieren Sie eine Klasse, die sich von <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> ableitet.  
   
  Eine beispielanwendung finden Sie unter [Benutzernamen-und Kennwort-Validierungssteuerelement](../../../../docs/framework/wcf/samples/user-name-password-validator.md).  
@@ -118,6 +118,7 @@ Wenn einen Benutzernamen und ein Kennwort für die Authentifizierung verwendet w
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
 - [Vorgehensweise: Verwenden des ASP.NET-Mitgliedschaftsanbieters](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
 - [Authentifizierung](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

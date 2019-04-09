@@ -2,12 +2,12 @@
 title: Benutzerdefinierte Nachverfolgung
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: a03c36c2f060651dd7b8b9e9aff103ad2a600a4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ca53d74f31059532118f3b5d96760a25ed72b3d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161844"
 ---
 # <a name="custom-tracking"></a>Benutzerdefinierte Nachverfolgung
 Anhand dieses Beispiels wird veranschaulicht, wie eine benutzerdefinierte Nachverfolgungskomponente erstellt und der Inhalt der Nachverfolgungsdaten in die Konsole geschrieben wird. Außerdem wird veranschaulicht, wie mit benutzerdefinierten Daten aufgefüllte <xref:System.Activities.Tracking.CustomTrackingRecord>-Objekte ausgegeben werden. Die konsolenbasierte Nachverfolgungskomponente filtert die vom Workflow ausgegebenen <xref:System.Activities.Tracking.TrackingRecord>-Objekte mit einem im Code erstellten Nachverfolgungsprofilobjekt.
@@ -18,7 +18,7 @@ Anhand dieses Beispiels wird veranschaulicht, wie eine benutzerdefinierte Nachve
 |Komponente|Beschreibung|
 |---------------|-----------------|
 |Überwachungslaufzeit|Stellt die Infrastruktur bereit, um Überwachungsdatensätze auszugeben.|
-|Überwachungsteilnehmer|Verarbeitet die Nachverfolgungsdatensätze. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] wird mit einem Nachverfolgungsteilnehmer geliefert, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt.|
+|Überwachungsteilnehmer|Verarbeitet die Nachverfolgungsdatensätze. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] umfasst einen Nachverfolgungsteilnehmer, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt.|
 |Überwachungsprofil|Ein Filtermechanismus, der einem Überwachungsteilnehmer das Abonnieren einer Teilmenge der Überwachungsdatensätze ermöglicht, die von einer Workflowinstanz ausgegeben werden.|
 
  In der folgenden Tabelle sind die Überwachungsdatensätze aufgeführt, die von der Workflowlaufzeit ausgegeben werden.
@@ -149,4 +149,5 @@ context.Track(customRecord);
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)

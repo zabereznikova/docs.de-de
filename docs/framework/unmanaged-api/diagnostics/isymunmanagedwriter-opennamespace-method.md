@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4cf0fbcbf6af53c6a7865e2a2cf7874ea44581e4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1585acce8bba0dff327c961f5e32ef6b46794401
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474617"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126333"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>ISymUnmanagedWriter::OpenNamespace-Methode
 Öffnet einen neuen Namespace. Rufen Sie diese Methode vor dem Definieren von Methoden und Variablen, die einen Namespace zu belegen. Namespaces können geschachtelt werden.  
@@ -45,5 +45,6 @@ HRESULT OpenNamespace(
  **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [CloseNamespace-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)

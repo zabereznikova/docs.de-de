@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a6f2e428366d2fe96313879ef1256d7b86ddd29
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 88cd08b4290739808079bc8ecb713a5c5ea96584
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172561"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField-Methode
 Ruft einen Zeiger auf das FieldDef token für das Feld, das eingeschlossen wird durch das angegebene <xref:System.Type> und dem angegebenen Namen und Metadaten aufweist.  
@@ -72,5 +72,6 @@ HRESULT FindField (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

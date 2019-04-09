@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f17552a98683e4278dbdfbfa927ca3b075b225
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af71c4916a2abdeb019e538a33ad05efa727e720
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137890"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Beispiel: Problembehandlung bei dynamischer Programmierung
 > [!NOTE]
@@ -42,7 +42,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 AppViewModel.Current.LayoutVM.PageMap  
 ```  
   
- In diesem Fall war die `LayoutVM`-Eigenschaft für `AppViewModel.Current` **NULL**.  Das Fehlen einiger Metadaten hat ein leicht unterschiedliches Verhalten verursacht und dazu geführt, dass eine Eigenschaft anstatt eines Sets nicht initialisiert wurde, wie die App erwartet hat.  Zum Verstehen der Situation könnte es helfen, einen Haltepunkt im Code an der Stelle festzulegen, an der `LayoutVM` initialisiert werden sollte.  Beachten Sie jedoch, dass der Typ von `LayoutVM` `App.Core.ViewModels.Layout.LayoutApplicationVM` lautet.  Die einzige bisher in der Datei "rd.xml" vorhandene Metadatenrichtlinnie ist:  
+ In diesem Fall war die `LayoutVM`-Eigenschaft für `AppViewModel.Current` **NULL**.  Das Fehlen einiger Metadaten hat ein leicht unterschiedliches Verhalten verursacht und dazu geführt, dass eine Eigenschaft anstatt eines Sets nicht initialisiert wurde, wie die App erwartet hat.  Zum Verstehen der Situation könnte es helfen, einen Haltepunkt im Code an der Stelle festzulegen, an der `LayoutVM` initialisiert werden sollte.  Beachten Sie jedoch, dass der Typ von `LayoutVM``App.Core.ViewModels.Layout.LayoutApplicationVM` lautet.  Die einzige bisher in der Datei "rd.xml" vorhandene Metadatenrichtlinnie ist:  
   
 ```xml  
 <Namespace Name="App.ViewModels" Browse="Required Public" Dynamic="Required Public" />  
@@ -55,11 +55,12 @@ AppViewModel.Current.LayoutVM.PageMap
  In der dynamischen Programmierung empfiehlt sich bei Verwendung von Reflektions-APIs unter [!INCLUDE[net_native](../../../includes/net-native-md.md)] die Verwendung der <xref:System.Type.GetType%2A?displayProperty=nameWithType>-Überladungen, die bei einem Fehler eine Ausnahme ausgelösen.  
   
 ## <a name="is-this-an-isolated-case"></a>Handelt es sich um einen Einzelfall?  
- Andere Probleme können mit `App.Core.ViewModels` ebenfalls auftreten.  Sie müssen entscheiden, ob es sich lohnt, jede Ausnahme aufgrund von fehlenden Metadaten zu identifizieren und zu lösen, oder ob Sie Zeit sparen und Richtlinien für eine größere Typenklasse hinzufügen möchten.  Hier ist das Hinzufügen von `dynamic`-Metadaten für `App.Core.ViewModels` möglicherweise der beste Ansatz, wenn die daraus resultierende Größenzunahme der Ausgabebinärdatei kein Problem ist.  
+ Andere Probleme können mit `App.Core.ViewModels` ebenfalls auftreten.  Sie müssen entscheiden, ob es sich lohnt, jede Ausnahme aufgrund von fehlenden Metadaten zu identifizieren und zu lösen, oder ob Sie Zeit sparen und Anweisungen für eine größere Typenklasse hinzufügen möchten.  Hier ist das Hinzufügen von `dynamic`-Metadaten für `App.Core.ViewModels` möglicherweise der beste Ansatz, wenn die daraus resultierende Größenzunahme der Ausgabebinärdatei kein Problem ist.  
   
 ## <a name="could-the-code-be-rewritten"></a>Könnte der Code neu geschrieben werden?  
  Hätte die App `typeof(LayoutApplicationVM)` anstelle von `Type.GetType("LayoutApplicationVM")` verwendet, hätte die Toolkette `browse`-Metadaten beibehalten können.  Jedoch wären immer noch keine `invoke`-Metadaten erstellt worden, was zu einer [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)-Ausnahme beim Instanziieren des Typs geführt hätte. Um die Ausnahme zu verhindern, müssten Sie eine Laufzeitanweisung für den Namespace oder den Typ hinzufügen, der die `dynamic`-Richtlinie angibt. Informationen zu Laufzeitanweisungen finden Sie unter [Runtime Directives (rd.xml) Configuration File Reference (Verweis auf die Konfigurationsdatei der Laufzeitanweisungen (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erste Schritte](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Anpassen von mit VSTU Behandeln von Ausnahmen beim Binden von Daten](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)
+- [Beispiel: Behandeln von Ausnahmen beim Binden von Daten](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)

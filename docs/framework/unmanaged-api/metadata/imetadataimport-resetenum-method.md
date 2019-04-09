@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5543313a8d7a5589e115d609923aa0e75d3e275
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 143b11f0a99081b7d49bfbb68b635d92cf1e9ba3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484965"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163877"
 ---
 # <a name="imetadataimportresetenum-method"></a>IMetaDataImport::ResetEnum-Methode
 Setzt den angegebenen Enumerator auf die der angegebene Position zurück.  
@@ -53,5 +53,6 @@ HRESULT ResetEnum (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

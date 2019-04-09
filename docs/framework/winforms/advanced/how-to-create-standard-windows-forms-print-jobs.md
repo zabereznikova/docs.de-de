@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen von Druckaufträgen in Standard-Windows Forms'
+title: 'Vorgehensweise: Erstellen von standardmäßigen Druckaufträgen in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: b0568472dadceb46257a8d35211034a718aef74c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 7ccebf128d533a0e0cf0a17e5702807371e1bea7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170975"
 ---
-# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Vorgehensweise: Erstellen von Druckaufträgen in Standard-Windows Forms
+# <a name="how-to-create-standard-windows-forms-print-jobs"></a>Vorgehensweise: Erstellen von standardmäßigen Druckaufträgen in Windows Forms
 Die Grundlage für das Drucken in Windows Forms ist die <xref:System.Drawing.Printing.PrintDocument> Komponente – genauer gesagt die <xref:System.Drawing.Printing.PrintDocument.PrintPage> Ereignis. Durch das Schreiben von Code zum Behandeln der <xref:System.Drawing.Printing.PrintDocument.PrintPage> Ereignis können Sie angeben, was gedruckt und wie es gedruckt.  
   
 ### <a name="to-create-a-print-job"></a>Um einen Druckauftrag zu erstellen.  
@@ -77,5 +77,6 @@ Die Grundlage für das Drucken in Windows Forms ist die <xref:System.Drawing.Pri
      Weitere Informationen zu den Besonderheiten von Windows Forms Druckaufträge, wie Sie einen Druckauftrag programmgesteuert erstellen finden Sie unter <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)
+- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)

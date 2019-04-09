@@ -2,12 +2,12 @@
 title: <security> von <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 06c4b537c336804c28492124e6a4fa8cc4ff3091
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6348bc6f6c0d3a9656fbe57bf71f531d1287a949
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170091"
 ---
 # <a name="security-of-netpeerbinding"></a>\<security> of \<netPeerBinding>
 Definiert die Sicherheitseinstellungen der [ \<NetPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), z. B. den Typ der Authentifizierung verwendet und die Sicherheit für den Nachrichtentransport verwendet.  
@@ -44,7 +44,7 @@ Definiert die Sicherheitseinstellungen der [ \<NetPeerTcpBinding >](../../../../
 |Wert|Beschreibung|  
 |-----------|-----------------|  
 |Meldung|Durch die SOAP-Sicherheit werden Authentifizierung, Integrität und Vertraulichkeit bereitgestellt.|  
-|Keine|Die Sicherheitsfunktionen sind deaktiviert.|  
+|Keiner|Die Sicherheitsfunktionen sind deaktiviert.|  
 |Transport|Die Sicherheit wird über HTTPS bereitgestellt.|  
 |TransportWithMessageCredential|HTTPS stellt Authentifizierung und Vertraulichkeit bereit. Die SOAP-Nachrichten bieten umfassende Anmeldeinformationstypen.|  
   
@@ -64,12 +64,13 @@ Definiert die Sicherheitseinstellungen der [ \<NetPeerTcpBinding >](../../../../
  Sicherheit kann entweder nachrichten- oder transportspezifisch sein.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement>
 - <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Security%2A>
 - <xref:System.ServiceModel.PeerSecuritySettings>
 - [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Ausählen eines Anmeldeinformationentyps](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Wählen eines Typs von Anmeldeinformationen](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Bindungen](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

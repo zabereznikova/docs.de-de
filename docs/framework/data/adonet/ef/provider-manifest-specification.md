@@ -2,12 +2,12 @@
 title: Anbietermanifestspezifikation
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 409653fa415e62ff0591e09ad4771c5951689b24
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904612"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169909"
 ---
 # <a name="provider-manifest-specification"></a>Anbietermanifestspezifikation
 In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und Funktionen im Datenspeicher unterstützen kann.  
@@ -68,7 +68,7 @@ In diesem Abschnitt wird erläutert, wie ein Datenspeicheranbieter die Typen und
 ### <a name="provider-manifest-token"></a>Anbietermanifesttoken  
  Beim Öffnen einer Datenspeicherverbindung kann der Anbieter Informationen abfragen, um das richtige Manifest zurückzugeben. Dies kann in Offlineszenarien unmöglich sein, in denen entweder die Verbindungsinformationen nicht zur Verfügung stehen oder keine Verbindung mit dem Datenspeicher hergestellt werden kann. Identifizieren Sie das Manifest mit dem `ProviderManifestToken`-Attribut des `Schema`-Elements in der SSDL-Datei. Es gibt kein erforderliches Format für dieses Attribut. Der Anbieter wählt die Mindestinformationen aus, die erforderlich sind, um ein Manifest zu identifizieren, ohne eine Verbindung mit dem Speicher zu öffnen.  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```xml  
 <Schema Namespace="Northwind" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:edm="http://schemas.microsoft.com/ado/2006/04/edm/ssdl" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">  
@@ -250,21 +250,21 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |Attributname|Datentyp|Erforderlich|Standardwert|Beschreibung|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|Zeichenfolge|Ja|nicht verfügbar|Anbieterspezifischer Datentypname|  
-|PrimitiveTypeKind|PrimitiveTypeKind|Ja|nicht verfügbar|EDM-Typenname|  
+|Name|Zeichenfolge|Ja|n/v|Anbieterspezifischer Datentypname|  
+|PrimitiveTypeKind|PrimitiveTypeKind|Ja|n/v|EDM-Typenname|  
   
 ###### <a name="function-node"></a>Funktionsknoten  
  Jede Funktion definiert eine einzelne, über den Anbieter verfügbare Funktion.  
   
 |Attributname|Datentyp|Erforderlich|Standardwert|Beschreibung|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|Zeichenfolge|Ja|nicht verfügbar|Bezeichner/Name der Funktion|  
+|Name|Zeichenfolge|Ja|n/v|Bezeichner/Name der Funktion|  
 |ReturnType|Zeichenfolge|Nein|Void|Der EDM-Rückgabetyp der Funktion|  
-|Aggregat|Boolean|Nein|False|"True", wenn es sich bei der Funktion um eine Aggregatfunktion handelt.|  
-|BuiltIn|Boolean|Nein|True|"True", wenn die Funktion in den Datenspeicher integriert ist.|  
+|Aggregat|Boolesch|Nein|False|"True", wenn es sich bei der Funktion um eine Aggregatfunktion handelt.|  
+|BuiltIn|Boolesch|Nein|True|"True", wenn die Funktion in den Datenspeicher integriert ist.|  
 |StoreFunctionName|Zeichenfolge|Nein|\<Name>|Funktionsname im Datenspeicher.  Ermöglicht eine Umleitungsebene für Funktionsnamen.|  
-|NiladicFunction|Boolean|Nein|False|"True", wenn die Funktion keine Parameter erfordert und ohne Parameter aufgerufen wird.|  
-|ParameterType<br /><br /> Semantik|ParameterSemantics|Nein|AllowImplicit<br /><br /> Conversion|Hiermit kann ausgewählt werden, wie die Abfragepipeline mit Parametertypersetzung umgehen soll:<br /><br /> -   ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
+|NiladicFunction|Boolesch|Nein|False|"True", wenn die Funktion keine Parameter erfordert und ohne Parameter aufgerufen wird.|  
+|ParameterType<br /><br /> Semantik|ParameterSemantics|Nein|AllowImplicit<br /><br /> Umwandeln|Hiermit kann ausgewählt werden, wie die Abfragepipeline mit Parametertypersetzung umgehen soll:<br /><br /> -   ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
   
  **Parameterknoten**  
   
@@ -272,12 +272,13 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |Attributname|Datentyp|Erforderlich|Standardwert|Beschreibung|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|Name|Zeichenfolge|Ja|nicht verfügbar|Bezeichner/Name des Parameters.|  
-|Typ|Zeichenfolge|Ja|nicht verfügbar|Der EDM-Typ des Parameters.|  
-|Modus|Parameter<br /><br /> Richtung|Ja|nicht verfügbar|Richtung des Parameters:<br /><br /> -in<br />-out<br />-inout|  
+|Name|Zeichenfolge|Ja|n/v|Bezeichner/Name des Parameters.|  
+|Typ|Zeichenfolge|Ja|n/v|Der EDM-Typ des Parameters.|  
+|Modus|Parameter<br /><br /> Richtung|Ja|n/v|Richtung des Parameters:<br /><br /> -in<br />-out<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Namespace-Attribut  
  Jeder Datenspeicheranbieter muss einen Namespace oder eine Gruppe von Namespaces für die im Manifest definierten Informationen definieren. Dieser Namespace kann in Entity SQL-Abfragen verwendet werden, um Namen von Funktionen und Typen aufzulösen. Zum Beispiel: SqlServer. Dieser Namespace muss sich vom kanonischen Namespace "EDM" unterscheiden, der von den Entitätsdiensten für Standardfunktionen definiert wird, die von Entity SQL-Abfragen unterstützt werden sollen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Schreiben eines Entity Framework-Datenanbieters](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

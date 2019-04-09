@@ -2,12 +2,12 @@
 title: <security> von <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: 552b28c4e4368ec4a01502a1df65cb46aa17c05d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ffe791d495a4e06c9649dd0c37d0fd010e2c64bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258057"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182038"
 ---
 # <a name="security-of-custombinding"></a>\<security> of \<customBinding>
 Gibt die Sicherheitsoptionen für eine benutzerdefinierte Bindung an.  
@@ -57,7 +57,7 @@ Gibt die Sicherheitsoptionen für eine benutzerdefinierte Bindung an.
 |requireDerivedKeys|Ein boolescher Wert, der angibt, ob Schlüssel von den Originalprüfschlüsseln abgeleitet werden können. Die Standardeinstellung ist `true`.|  
 |requireSecurityContextCancellation|Dies ist optional. Ein boolescher Wert, der angibt, ob ein Sicherheitskontext abgebrochen und beendet werden soll, wenn er nicht mehr benötigt wird. Die Standardeinstellung ist `true`.|  
 |requireSignatureConfirmation|Dies ist optional. Ein boolescher Wert, der angibt, ob die WS-Security-Signaturbestätigung aktiviert ist. Bei der Einstellung `true` werden Nachrichtensignaturen vom Beantworter bestätigt.  Wenn die benutzerdefinierte Bindung für gegenseitige Zertifikate oder für die Verwendung ausgestellter Token konfiguriert ist (WSS 1.1-Bindungen), ist dieses Attribut standardmäßig `true`. Andernfalls ist `false` der Standardwert.<br /><br /> Mit der Signaturbestätigung wird bestätigt, dass der Dienst unter vollständiger Berücksichtigung einer Anforderung antwortet.|  
-|securityHeaderLayout|Dies ist optional. Gibt die Reihenfolge der Elemente im Sicherheitsheader an. Folgende Werte sind gültig:<br /><br /> -   `Strict`: Gemäß dem Prinzip „declare before use“ werden die Elemente deklariert, bevor sie dem Sicherheitsheader hinzugefügt werden.<br />-   `Lax`: Elemente werden dem Sicherheitsheader in einer beliebigen Reihenfolge hinzugefügt, der WSS: SOAP-Nachrichtensicherheit gewährleistet.<br />-   `LaxWithTimestampFirst`: Elemente werden dem Sicherheitsheader in einer beliebigen Reihenfolge hinzugefügt, der WSS: SOAP-nachrichtensicherheit, mit dem Unterschied, dass das erste Element im Sicherheitsheader ein wsse: Timestamp-Element sein muss.<br />-   `LaxWithTimestampLast`: Elemente werden dem Sicherheitsheader in einer beliebigen Reihenfolge hinzugefügt, der WSS: SOAP-nachrichtensicherheit, mit dem Unterschied, dass das letzte Element im Sicherheitsheader ein wsse: Timestamp-Element sein muss.<br /><br /> Die Standardeinstellung ist `Strict`.<br /><br /> Dieses Element ist vom Typ <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
+|securityHeaderLayout|Dies ist optional. Gibt die Reihenfolge der Elemente im Sicherheitsheader an. Folgende Werte sind gültig:<br /><br /> -   `Strict`: Gemäß dem Prinzip „declare before use“ werden die Elemente deklariert, bevor sie dem Sicherheitsheader hinzugefügt werden.<br />-   `Lax`: Die Elemente werden dem Sicherheitsheader in einer beliebigen Reihenfolge hinzugefügt gemäß der WSS: SOAP Message Security-Spezifikation.<br />-   `LaxWithTimestampFirst`: Die Elemente werden dem Sicherheitsheader in einer beliebigen Reihenfolge hinzugefügt gemäß der WSS: SOAP Message Security, nur dass das erste Element im Sicherheitsheader ein wsse:Timestamp-Element sein muss.<br />-   `LaxWithTimestampLast`: Die Elemente werden dem Sicherheitsheader in einer beliebigen Reihenfolge hinzugefügt gemäß der WSS: SOAP Message Security, nur dass das letzte Element im Sicherheitsheader ein wsse:Timestamp-Element sein muss.<br /><br /> Die Standardeinstellung ist `Strict`.<br /><br /> Dieses Element ist vom Typ <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
   
 ## <a name="authenticationmode-attribute"></a>authenticationMode-Attribut  
   
@@ -167,6 +167,7 @@ Gibt die Sicherheitsoptionen für eine benutzerdefinierte Bindung an.
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.SecurityElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

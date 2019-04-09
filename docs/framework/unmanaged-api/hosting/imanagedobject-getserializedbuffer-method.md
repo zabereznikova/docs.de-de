@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7930e993640e1ae88ce65b6c2025a5b62a0d0999
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cb9242160b684b3c7b90756d7b20811ad162fc30
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156142"
 ---
 # <a name="imanagedobjectgetserializedbuffer-method"></a>IManagedObject::GetSerializedBuffer-Methode
 Ruft eine Zeichenfolgendarstellung von diesem verwalteten Objekt ab.  
@@ -52,4 +52,5 @@ HRESULT GetSerializedBuffer (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IManagedObject-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)

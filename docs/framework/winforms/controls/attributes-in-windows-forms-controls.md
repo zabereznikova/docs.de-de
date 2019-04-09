@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: 8e845df7eb83f01adb2086025cf47e7fdc896ba6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9dd4c2aabe1517b66d8e499de3cf2671bb94e0d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213602"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Attribute in Windows Forms-Steuerelementen
 Das .NET Framework bietet eine Vielzahl von Attributen, die Sie auf die Member der benutzerdefinierten Steuerelemente und Komponenten anwenden können. Einige dieser Attribute haben Auswirkungen auf das Laufzeitverhalten einer Klasse, während andere Auswirkungen auf das Entwurfszeitverhalten haben.  
@@ -61,7 +61,8 @@ Das .NET Framework bietet eine Vielzahl von Attributen, die Sie auf die Member d
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|Gibt die Filterzeichenfolge und den Filtertyp an, die für ein Werkzeugkastenelement verwendet werden sollen.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Attribute>
-- [Vorgehensweise: Anwenden von Attributen auf Windows Forms-Steuerelemente](how-to-apply-attributes-in-windows-forms-controls.md)
+- [Vorgehensweise: Anwenden von Attributen auf Windows Forms-Steuerelemente](how-to-apply-attributes-in-windows-forms-controls.md)
 - [Erweitern der Entwurfszeitunterstützung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](developing-custom-windows-forms-controls.md)

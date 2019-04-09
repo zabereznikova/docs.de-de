@@ -9,12 +9,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], using texture
 - shapes [Windows Forms], filling with images
 ms.assetid: 508da5a6-2433-4d2b-9680-eaeae4e96e3b
-ms.openlocfilehash: 89ebad6773b076514f5a745db653e0e0a18d4b48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 099bc9f5359f19439f308f28a6766d470956daea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708443"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177319"
 ---
 # <a name="how-to-fill-a-shape-with-an-image-texture"></a>Vorgehensweise: Ausfüllen einer Form mit einer Bildstruktur
 Sie können eine geschlossene Form mit einer Textur eingeben, mit der <xref:System.Drawing.Image> Klasse und die <xref:System.Drawing.TextureBrush> Klasse.  
@@ -31,7 +31,8 @@ Sie können eine geschlossene Form mit einer Textur eingeben, mit der <xref:Syst
  [!code-vb[System.Drawing.UsingABrush#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers.  
+ Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden eines Pinsels zum Ausfüllen von Formen](using-a-brush-to-fill-shapes.md)

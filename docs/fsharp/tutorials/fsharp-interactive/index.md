@@ -2,12 +2,12 @@
 title: F# Interactive-Referenz (fsi.exe)
 description: Erfahren Sie, wie F# Interactive (fsi.exe) wird verwendet, um die Ausführung F# code interaktiv in der Konsole oder auszuführende F# Skripts.
 ms.date: 05/16/2016
-ms.openlocfilehash: dde65a4fa4bd41895716344fc67823366c73c5d4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9ec780ca51eaa5ae0aa791eb509d8ad0865dc26f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172262"
 ---
 # <a name="interactive-programming-with-f"></a>Interaktive Programmierung mit F\#
 
@@ -43,10 +43,8 @@ Wenn Sie ein Projekt geöffnet haben, das auf einige Bibliotheken verweist, kön
 
 Sie können die Befehlszeilenargumente (Optionen) von F# Interactive steuern, indem Sie die Einstellungen anpassen. Wählen Sie im Menü **Extras** den Eintrag **Optionen** aus, und erweitern Sie anschließend **F#-Tools**. Die beiden Einstellungen, die Sie ändern können, sind die F# Interactive-Optionen und die Einstellung **64-Bit-F# Interactive**, die nur relevant ist, wenn Sie F# Interactive auf einem 64-Bit-Computer ausführen. Mit dieser Einstellung legen Sie fest, ob Sie die dedizierte 64-Bit-Version von fsi.exe oder aber fsianycpu.exe ausführen möchten, die anhand der Computerarchitektur ermittelt, ob sie als 32-Bit- oder 64-Bit-Prozess ausgeführt werden soll.
 
-
 ## <a name="scripting-with-f"></a>Skripterstellung mit F\#
 Für Skripts wird die Dateierweiterung **.fsx** oder **.fsscript** verwendet. Statt Quellcode zu kompilieren und später die kompilierte Assembly auszuführen, können Sie einfach **fsi.exe** ausführen und den Dateinamen des Skripts mit dem F#-Quellcode angeben. F# Interactive liest dann den Code und führt ihn in Echtzeit aus.
-
 
 ## <a name="differences-between-the-interactive-scripting-and-compiled-environments"></a>Unterschiede zwischen interaktiven, Skripterstellungs- und Kompilierungsumgebungen
 Wenn Sie Code in F# Interactive kompilieren, unabhängig davon, ob die Ausführung interaktiv oder über ein Skript erfolgt, ist das Symbol **INTERACTIVE** definiert. Beim Kompilieren von Code im Compiler ist das Symbol **COMPILED** definiert. Wenn Code im Kompilierungsmodus und interaktiven Modus unterschiedlich sein muss, können Sie mithilfe von Präprozessoranweisungen für die bedingte Kompilierung bestimmen, welcher Code verwendet werden soll.

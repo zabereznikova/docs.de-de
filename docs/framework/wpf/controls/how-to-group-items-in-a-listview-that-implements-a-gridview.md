@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Gruppieren von Elementen in einem ListView, in dem ein GridView implementiert ist'
+title: 'Vorgehensweise: Gruppieren von Elementen in einem ListView-Objekt, in dem ein GridView-Objekt implementiert ist'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], grouping items with GridViews
 - grouping items in ListViews implementing GridViews [WPF]
 - GridView controls [WPF], grouping items
 ms.assetid: eebef25b-ddc6-424e-a66d-ea228d1bf33d
-ms.openlocfilehash: 3989f0fcdaf2e3d3003aca9feb27cbf02f949389
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b3dd6891976a942b299c87fca25e430e9ee59a51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364473"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177670"
 ---
-# <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a>Vorgehensweise: Gruppieren von Elementen in einem ListView, in dem ein GridView implementiert ist
+# <a name="how-to-group-items-in-a-listview-that-implements-a-gridview"></a>Vorgehensweise: Gruppieren von Elementen in einem ListView-Objekt, in dem ein GridView-Objekt implementiert ist
 Dieses Beispiel zeigt die Vorgehensweise beim Anzeigen von Gruppen von Elementen auf der <xref:System.Windows.Controls.GridView> Ansichtsmodus des eine <xref:System.Windows.Controls.ListView> Steuerelement.  
   
 ## <a name="example"></a>Beispiel  
@@ -27,8 +27,9 @@ Dieses Beispiel zeigt die Vorgehensweise beim Anzeigen von Gruppen von Elementen
 [!code-xaml[GridViewWithGroups#ListViewEnd](~/samples/snippets/csharp/VS_Snippets_Wpf/GridViewWithGroups/CS/Window1.xaml#listviewend)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [Themen zu Vorgehensweisen](listview-how-to-topics.md)
+- [Gewusst wie-Themen](listview-how-to-topics.md)
 - [Übersicht über ListView](listview-overview.md)
 - [Übersicht über GridView](gridview-overview.md)

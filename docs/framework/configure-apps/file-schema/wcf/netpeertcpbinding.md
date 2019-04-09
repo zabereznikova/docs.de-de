@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netPeerBinding element
 ms.assetid: 2dd77ada-a176-47c7-a740-900b279f1aad
-ms.openlocfilehash: 3a41cb85ac2917f34bd7e5f33e241853777f045f
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: b35e2f365e82291d3f8b827850fdebfe8fa2237d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759170"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152840"
 ---
 # <a name="netpeertcpbinding"></a>\<netPeerTcpBinding>
 Definiert eine Bindung für Peerkanal-spezifisches TCP-Messaging.  
@@ -101,11 +101,12 @@ Definiert eine Bindung für Peerkanal-spezifisches TCP-Messaging.
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.NetPeerTcpBinding>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement>
 - [Bindungen](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](../../../../../docs/framework/misc/binding.md)
-- [NET-Peer-TCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))
+- [Net-Peer-TCP](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751426(v=vs.90))
 - [Peer-to-Peer-Netzwerke](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)

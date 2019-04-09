@@ -2,12 +2,12 @@
 title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: 1e2b3eacbc845ad40030f3a48be2ef93c4ddbd8c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b0a6c604b5741c1355c35fca510cd10544dab9f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262426"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135732"
 ---
 # <a name="backuplist"></a>\<backupList>
 Stellt einen Konfigurationsabschnitt zum Definieren einer Sicherungsliste mit einem Satz von Endpunkten, die Sie möchten den Routingdienst verwenden soll, falls der primäre Endpunkt nicht erreicht werden kann. Wenn der erste Endpunkt in der Liste ausgefallen ist, führt der Routingdienst automatisch ein Failover zum nächsten Endpunkt in der Liste aus.  So können Sie die Zuverlässigkeit einer Anwendung schnell verbessern, wobei die Clientanwendung weder komplexe Muster behandeln noch den Bereitstellungsort aller Dienste kennen muss.  
@@ -74,4 +74,5 @@ Stellt einen Konfigurationsabschnitt zum Definieren einer Sicherungsliste mit ei
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>

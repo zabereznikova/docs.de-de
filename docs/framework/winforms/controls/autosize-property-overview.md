@@ -7,12 +7,12 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 62fd82a2-9565-4f65-925b-9d1e66dc4e7d
-ms.openlocfilehash: 2fc06bef2434e87b7fbd3ec79e7671c4e32b7b3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d5c4a22f186ddc5811c4a4d5e79776decea9e50
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173627"
 ---
 # <a name="autosize-property-overview"></a>Übersicht über die AutoSize-Eigenschaft
 Die <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft mit der ein Steuerelement so ändern Sie die Größe bei Bedarf, um den vom angegebenen Wert erreicht die <xref:System.Windows.Forms.Control.PreferredSize%2A> Eigenschaft. Sie stellen das Größenanpassungsverhalten für bestimmte Steuerelemente, durch Festlegen der `AutoSizeMode` Eigenschaft.  
@@ -67,6 +67,7 @@ Die <xref:System.Windows.Forms.Control.AutoSize%2A> Eigenschaft mit der ein Steu
 >  Zum Maximieren der Produktivität "," Schatten auf der Windows Forms-Designer die <xref:System.Windows.Forms.Control.AutoSize%2A> -Eigenschaft für die <xref:System.Windows.Forms.Form> Klasse. Zur Entwurfszeit verhält sich das Formular als ob die <xref:System.Windows.Forms.Control.AutoSize%2A> -Eigenschaftensatz auf `false`, unabhängig von der tatsächlichen Einstellung. Zur Laufzeit keine spezielle Einrichtung vorgenommen wird, und die <xref:System.Windows.Forms.Control.AutoSize%2A> -Eigenschaft angewendet wird gemäß der Einstellung der Eigenschaft.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.PreferredSize%2A>
 - <xref:System.Windows.Forms.Control.GetPreferredSize%2A>

@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Testen des Suchproxys'
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
-ms.openlocfilehash: 3c159481813266386706b34d172bbf9614a8253d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 13d2e8ca46e634e3b27c8eb967d89d860df1c72d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590512"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176279"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>Vorgehensweise: Testen des Suchproxys
 Dies ist das vierte von vier Themen, in denen beschrieben wird, wie Sie einen Suchproxy implementieren. Im vorherigen Thema [Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md), Sie eine WCF-Clientanwendung, die den suchproxy zum Suchen nach einem Dienst verwendet, und ruft dann den Dienst implementiert. In diesem Thema wird beschrieben, wie Sie überprüfen, ob der Suchproxy, der Dienst und die Clientanwendung ordnungsgemäß funktionieren.  
@@ -51,7 +51,8 @@ Dies ist das vierte von vier Themen, in denen beschrieben wird, wie Sie einen Su
 3.  Fahren Sie den Suchproxy herunter.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [Vorgehensweise: Implementieren eines Suchproxys](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [Vorgehensweise: Implementieren eines ermittelbaren Diensts, das beim Suchproxy registriert.](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [Vorgehensweise: Implementieren eines ermittelbaren Diensts, der beim Suchproxy registriert ist](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
 - [Vorgehensweise: Implementieren einer Clientanwendung, die den Suchproxy zum Suchen nach einem Dienst verwendet](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

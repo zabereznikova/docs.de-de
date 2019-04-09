@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 932df915ab55d8141e64836961dd636d3d5da241
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816316"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174602"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Exemplarische Vorgehensweise: Demonstrieren der visuellen Vererbung
 Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anzeigen und neue Steuerelemente hinzufügen. In dieser exemplarischen Vorgehensweise erstellen Sie ein Basisformular und kompilieren es in eine Klassenbibliothek. Sie importieren diese Klassenbibliothek in ein anderes Projekt und erstellen ein neues Formular, das vom Basisformular erbt. Bei dieser exemplarischen Vorgehensweise lernen Sie Folgendes:  
@@ -161,9 +161,10 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
 12. Drücken Sie F5, um die Anwendung auszuführen, und beobachten Sie das Verhalten des geerbten Formulars.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Die Vererbung bei Benutzersteuerelementen funktioniert größtenteils auf die gleiche Weise. Öffnen Sie ein neues Klassenbibliotheksprojekt, und fügen Sie ein Benutzersteuerelement hinzu. Platzieren Sie konstituierende Steuerelemente darauf, und kompilieren Sie das Projekt. Öffnen Sie ein weiteres, neues Klassenbibliotheksprojekt, und fügen Sie einen Verweis auf die kompilierte Klassenbibliothek hinzu. Auch versuchen, ein geerbtes Steuerelement hinzuzufügen (über die **neue Elemente hinzufügen** Dialogfeld) für das Projekt und die **Vererbungsauswahl**. Fügen Sie ein Benutzersteuerelement hinzu, und Ändern der `Inherits` (`:` in Visual C#)-Anweisung. Weitere Informationen finden Sie unter [Vorgehensweise: Erben von Windows Forms](how-to-inherit-windows-forms.md).  
+ Die Vererbung bei Benutzersteuerelementen funktioniert größtenteils auf die gleiche Weise. Öffnen Sie ein neues Klassenbibliotheksprojekt, und fügen Sie ein Benutzersteuerelement hinzu. Platzieren Sie konstituierende Steuerelemente darauf, und kompilieren Sie das Projekt. Öffnen Sie ein weiteres, neues Klassenbibliotheksprojekt, und fügen Sie einen Verweis auf die kompilierte Klassenbibliothek hinzu. Auch versuchen, ein geerbtes Steuerelement hinzuzufügen (über die **neue Elemente hinzufügen** Dialogfeld) für das Projekt und die **Vererbungsauswahl**. Fügen Sie ein Benutzersteuerelement hinzu, und Ändern der `Inherits` (`:` in Visual c#)-Anweisung. Weitere Informationen finden Sie unter [Vorgehensweise: Erben von Windows Forms](how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Erben von Windows Forms](how-to-inherit-windows-forms.md)
-- [Visuelle Vererbung in Windows Forms](windows-forms-visual-inheritance.md)
+
+- [Vorgehensweise: Erben von Windows Forms](how-to-inherit-windows-forms.md)
+- [Visuelle Vererbung in Windows Forms](windows-forms-visual-inheritance.md)
 - [Windows Forms](../index.md)

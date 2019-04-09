@@ -2,12 +2,12 @@
 title: Behandeln von Setup-Problemen
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 69cc6bce08f3d98d3d63570005582bc6f50240bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 41e266ba5b54bfb37313f9588515f7ae9cc6f79d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532551"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153074"
 ---
 # <a name="troubleshooting-setup-issues"></a>Behandeln von Setup-Problemen
 In diesem Thema wird beschrieben, wie Windows Communication Foundation (WCF) richten Sie Probleme behandeln werden.  
@@ -27,7 +27,7 @@ In diesem Thema wird beschrieben, wie Windows Communication Foundation (WCF) ric
   
  Die Schlüssel werden nicht neu erstellt, wenn das Ausführen von Repair, mit dem .NET Framework 3.0-Installationsprogramm aus gestartet der **Programme hinzufügen/entfernen** -Applet in **Systemsteuerung**. Um diese Schlüssel ordnungsgemäß neu zu erstellen, muss der Benutzer .NET Framework 3.0 deinstallieren und anschließend neu installieren.  
   
-## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>WMI Service Corruption blockiert möglicherweise die Installation des Windows Communication Foundation-WMI-Anbieters während der Installation des .NET Framework&#160;3.0-Pakets.  
+## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>WMI Service Corruption blockiert möglicherweise die Installation des Windows Communication Foundation-WMI-Anbieters während der Installation des .NET Framework&amp;#160;3.0-Pakets.  
  WMI Service Corruption blockiert möglicherweise die Installation des Windows Communication Foundation-WMI-Anbieters. Während der Installation kann das Windows Communication Foundation-Installationsprogramm die WCF-.mof-Datei nicht mit der mofcomp.exe-Komponente registrieren. Im Folgenden erhalten Sie eine Liste der Symptome:  
   
 1.  Die .NET Framework 3.0-Installation wird erfolgreich abgeschlossen, aber der WCF WMI-Anbieter wird nicht registriert.  
@@ -56,12 +56,12 @@ In diesem Thema wird beschrieben, wie Windows Communication Foundation (WCF) ric
   
  Reparieren Sie die .NET Framework 3.0-Installation mithilfe der **Programme hinzufügen/entfernen** Applet befindet sich in **Systemsteuerung**, oder .NET Framework 3.0 deinstallieren und neu installieren.  
   
-## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>Durch eine Reparatur von .NET Framework&#160;3.0 nach der .NET Framework&#160;3.5-Installation werden Konfigurationselemente entfernt, die von .NET Framework&#160;3.5 in machine.config eingefügt wurden  
- Wenn Sie .NET Framework&#160;3.0 reparieren, nachdem [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] installiert wurde, werden Konfigurationselemente entfernt, die von [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] in die Datei machine.config eingefügt wurden. Die Datei web.config bleibt jedoch intakt. Die problemumgehung besteht darin, reparieren Sie [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] danach über ARP, oder verwenden Sie die [Registrierungstool für Workflowdienste (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) mit der `/c` wechseln.  
+## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>Durch eine Reparatur von .NET Framework&amp;#160;3.0 nach der .NET Framework&amp;#160;3.5-Installation werden Konfigurationselemente entfernt, die von .NET Framework&amp;#160;3.5 in machine.config eingefügt wurden  
+ Wenn Sie .NET Framework&amp;#160;3.0 reparieren, nachdem [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] installiert wurde, werden Konfigurationselemente entfernt, die von [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] in die Datei machine.config eingefügt wurden. Die Datei web.config bleibt jedoch intakt. Die problemumgehung besteht darin, reparieren Sie [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] danach über ARP, oder verwenden Sie die [Registrierungstool für Workflowdienste (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) mit der `/c` wechseln.  
   
  [Registrierungstool für Workflowdienste (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) finden Sie unter dem Ordner %windir%\Microsoft.NET\framework\v3.5\ oder %windir%\Microsoft.NET\framework64\v3.5\  
   
-## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Korrektes Konfigurieren von IIS für WCF-/WF-Webhost nach der Installation von .NET Framework&#160;3.5  
+## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Korrektes Konfigurieren von IIS für WCF-/WF-Webhost nach der Installation von .NET Framework&amp;#160;3.5  
  Wenn [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] Installation schlägt fehl, so konfigurieren Sie zusätzliche WCF-bezogene IIS-Konfigurationseinstellungen, protokolliert einen Fehler im Installationsprotokoll und wird fortgesetzt. Jeder Versuch, WorkflowServices-Anwendungen auszuführen, schlägt fehl, da die erforderlichen Konfigurationseinstellungen fehlen. Zum Beispiel kann das Laden eines XOML- oder RULES-Diensts fehlschlagen.  
   
  Zur Umgehung dieses Problems verwenden die [Registrierungstool für Workflowdienste (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) mit der `/c` wechseln Sie zur IIS-Skriptzuordnungen auf dem Computer ordnungsgemäß zu konfigurieren. [Registrierungstool für Workflowdienste (WFServicesReg.exe)](../../../docs/framework/wcf/workflow-service-registration-tool-wfservicesreg-exe.md) finden Sie unter dem Ordner %windir%\Microsoft.NET\framework\v3.5\ oder %windir%\Microsoft.NET\framework64\v3.5\  
@@ -74,4 +74,5 @@ aspnet_regiis.exe -i -enable
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Setupanweisungen](../../../docs/framework/wcf/samples/set-up-instructions.md)

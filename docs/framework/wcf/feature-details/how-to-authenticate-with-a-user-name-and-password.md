@@ -1,17 +1,17 @@
 ---
-title: 'Vorgehensweise: Authentifizierung mit Benutzername und Kennwort'
+title: 'Vorgehensweise: Authentifizierung mit Benutzernamen und Kennwort'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: f6939659249ea40e97f340771017d0587ec6a08f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174134"
 ---
-# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Vorgehensweise: Authentifizierung mit Benutzername und Kennwort
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a>Vorgehensweise: Authentifizierung mit Benutzernamen und Kennwort
 
 Dieses Thema veranschaulicht, wie Sie einen Windows Communication Foundation (WCF)-Dienst zum Authentifizieren eines Clients mit einer Windows-Domänenbenutzernamen und Ihr Kennwort zu aktivieren. Es wird davon ausgegangen, dass Sie über einen funktionsfähigen selbst gehosteten WCF-Dienst verfügen. Ein Beispiel zum Erstellen einer grundlegenden selbst gehosteten WCF-Dienst finden Sie unter [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md). In diesem Thema wird davon ausgegangen, dass der Dienst im Code konfiguriert ist. Wenn Sie möchten, finden ein Beispiel zum Konfigurieren eines ähnlichen Diensts mit einer Konfigurationsdatei finden Sie unter [Nachrichtensicherheit – Benutzername](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
@@ -83,6 +83,7 @@ Dieses Thema veranschaulicht, wie Sie einen Windows Communication Foundation (WC
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSHttpSecurity>
 - <xref:System.ServiceModel.SecurityMode>

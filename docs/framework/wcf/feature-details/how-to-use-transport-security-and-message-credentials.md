@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: 7af670210b39da93e9f3efb37a0bfddce84ed2a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ea57012f9c09394824b7dbf919930c22fc17bd3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731867"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186809"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Vorgehensweise: Verwenden von Transportsicherheit und Nachrichtenanmeldeinformationen
 Absichern eines Diensts mit sowohl Transport- und nachrichtenanmeldeinformationen vereint die Vorteile der Transport- und Sicherheitsmodi, in Windows Communication Foundation (WCF) auf. Während die Transport Layer Security (TLS) Integrität und Vertraulichkeit bietet, stellt die Message Layer Security (MLS) verschiedene Anmeldeinformationen bereit, die bei reinen Transportsicherheitsmechanismen nicht verfügbar sind. In diesem Thema werden die grundlegenden Schritte zur Implementierung des Transports mit Nachrichtenanmeldeinformationen mithilfe der Bindungen <xref:System.ServiceModel.WSHttpBinding> und <xref:System.ServiceModel.NetTcpBinding> veranschaulicht. Weitere Informationen zum Festlegen des Sicherheitsmodus finden Sie unter [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
@@ -161,6 +161,7 @@ Absichern eines Diensts mit sowohl Transport- und nachrichtenanmeldeinformatione
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
 - [Sichern von Diensten](../../../../docs/framework/wcf/securing-services.md)
 - [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

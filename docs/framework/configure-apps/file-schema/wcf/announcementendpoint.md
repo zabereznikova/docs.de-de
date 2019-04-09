@@ -2,12 +2,12 @@
 title: <announcementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: 8977a36d9eee48505a65fa52272a95665fea7972
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4f3cf2748acc75b0ec83732664c5f97114f3663a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267091"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195123"
 ---
 # <a name="announcementendpoint"></a>\<announcementEndpoint>
 Dieses Konfigurationselement definiert einen Standardendpunkt mit einem festen Ankündigungsvertrag. Die Verfügbarkeit eines Diensts kann optional angekündigt werden, indem beim Öffnen bzw. Schließen des Diensts eine Online- bzw. Offline-Ankündigungsnachricht gesendet wird. Ein Windows Communication Foundation (WCF)-Dienst gibt die ankündigungsendpunkte im an die [ \<ServiceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) Element und das announcementclient-Ankündigungen ausführen. Ein Client, der zum Lauschen auf die Ankündigungen von anderen Diensten fungiert als WCF-Dienst tatsächlich; Daher müssen Sie die ankündigungsendpunkte für diesen Client im Konfigurieren der [ \<Services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) Abschnitt.  
@@ -79,4 +79,5 @@ Dieses Konfigurationselement definiert einen Standardendpunkt mit einem festen A
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>

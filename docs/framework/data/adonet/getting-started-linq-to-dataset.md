@@ -2,12 +2,12 @@
 title: Erste Schritte (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 97522119-f6a3-434c-a1ec-17396b74a556
-ms.openlocfilehash: 743b99aeaaf4e0ce0f3049dd582ab396570ca295
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: cb9e2ddc3fa667d93d724740281fb61974e623a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208331"
 ---
 # <a name="getting-started-linq-to-dataset"></a>Erste Schritte (LINQ to DataSet)
 Dieser Abschnitt enthält einführende Informationen über das Programmieren mit [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  
@@ -19,10 +19,10 @@ Dieser Abschnitt enthält einführende Informationen über das Programmieren mit
  [Laden von Daten in ein DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)  
  Enthält ein Beispiel für das Auffüllen eines <xref:System.Data.DataSet>. In diesem Beispiel wird <xref:System.Data.Common.DataAdapter> verwendet, um Daten aus einer Datenbank abzurufen.  
   
- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../docs/framework/data/adonet/downloading-sample-databases-linq-to-dataset.md)  
- Enthält Informationen zum Herunterladen der <legacyBold>AdventureWorks</legacyBold>-Beispieldatenbank, die in den Beispielen im Abschnitt [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] verwendet wird.  
+ [Herunterladen von Beispieldatenbanken](../../../../docs/framework/data/adonet/downloading-sample-databases-linq-to-dataset.md)  
+ Enthält Informationen zum Herunterladen der AdventureWorks[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Beispieldatenbank, die in den Beispielen im Abschnitt  verwendet wird.  
   
- [Vorgehensweise: Erstellen Sie eine LINQ to DataSet-Projekt In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)  
+ [Vorgehensweise: Erstellen eines LINQ to DataSet-Projekts in Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)  
  Enthält Informationen über das Erstellen eines [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Projekts in Visual Studio.  
   
 ## <a name="reference"></a>Referenz  
@@ -33,6 +33,7 @@ Dieser Abschnitt enthält einführende Informationen über das Programmieren mit
  <xref:System.Data.DataTableExtensions>  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [LINQ und ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [Language-Integrated Query (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
 - [Language-Integrated Query (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  

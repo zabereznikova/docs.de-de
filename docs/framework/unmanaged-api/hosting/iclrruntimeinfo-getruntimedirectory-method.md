@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 159e9b3d81db5b416eb98e1b7587712ba14033c5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5c09f57ad805b4ba17b4bdafd3ced533199277a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196683"
 ---
 # <a name="iclrruntimeinfogetruntimedirectory-method"></a>ICLRRuntimeInfo::GetRuntimeDirectory-Methode
 Ruft das Installationsverzeichnis von dieser Schnittstelle zugeordnet die common Language Runtime (CLR) ab.  
@@ -50,7 +50,7 @@ HRESULT GetRuntimeDirectory(
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_POINTER|`pwzBuffer` oder `pchBuffer` ist NULL.|  
+|E_POINTER|`pwzBuffer` oder `pchBuffer` ist null.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -64,5 +64,6 @@ HRESULT GetRuntimeDirectory(
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICLRRuntimeInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

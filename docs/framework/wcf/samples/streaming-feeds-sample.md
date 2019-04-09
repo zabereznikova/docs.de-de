@@ -2,12 +2,12 @@
 title: Beispiel zum Streaming von Feeds
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: a2bbc51593b4f1c3655d2e1d0df7f14d0005d68c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cc09d4c7d0e9ff75806c1c5e9d3ec1ef77507638
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631359"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172444"
 ---
 # <a name="streaming-feeds-sample"></a>Beispiel zum Streaming von Feeds
 In diesem Beispiel wird veranschaulicht, wie Syndication-Feeds verwaltet werden, die eine große Anzahl von Elementen enthalten. Auf dem Server zeigt das Beispiel, wie die Erstellung einzelner <xref:System.ServiceModel.Syndication.SyndicationItem>-Objekte innerhalb des Feeds bis unmittelbar vor den Zeitpunkt verzögert werden kann, zu dem das Element in den Netzwerkstream geschrieben wird.  
@@ -99,7 +99,7 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
   
  Demzufolge werden die einzelnen Elemente erst dann aus dem Netzwerk gelesen, wenn die Clientanwendung, die die Ergebnisse von `ReadItems()` durchläuft, bereit ist, sie zu verwenden. Sie können dieses Verhalten beobachten, indem das Festlegen eines Haltepunkts für die `yield return` -Anweisung in der `StreamedAtom10FeedFormatter.DelayReadItems()` und bemerken, dass dieser Haltepunkt, zum ersten Mal nach dem Aufruf von erreicht wird `ReadFrom()` abgeschlossen ist.  
   
- Die folgenden Anweisungen zeigen, wie das Beispiel erstellt und ausgeführt wird. Obwohl der Server keine Elemente mehr generiert, nachdem der Client 10 Elemente gelesen hat, zeigt die Ausgabe, dass der Client bedeutend mehr als 10 Elemente liest. Das liegt daran, dass die im Beispiel verwendete Netzwerkbindung Daten in Vier-Kilobyte-Segmenten übermittelt. Daher empfängt der Client 4&#160;KB Elementdaten, bevor er die Gelegenheit hat, auch nur ein einziges Element zu lesen. Dieses Verhalten ist normal (wenn gestreamte HTTP-Daten in Segmenten einer vernünftigen Größe gesendet werden, ist das Leistungsverhalten besser).  
+ Die folgenden Anweisungen zeigen, wie das Beispiel erstellt und ausgeführt wird. Obwohl der Server keine Elemente mehr generiert, nachdem der Client 10 Elemente gelesen hat, zeigt die Ausgabe, dass der Client bedeutend mehr als 10 Elemente liest. Das liegt daran, dass die im Beispiel verwendete Netzwerkbindung Daten in Vier-Kilobyte-Segmenten übermittelt. Daher empfängt der Client 4&amp;#160;KB Elementdaten, bevor er die Gelegenheit hat, auch nur ein einziges Element zu lesen. Dieses Verhalten ist normal (wenn gestreamte HTTP-Daten in Segmenten einer vernünftigen Größe gesendet werden, ist das Leistungsverhalten besser).  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
@@ -119,4 +119,5 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Eigenständiger Diagnosefeed](../../../../docs/framework/wcf/samples/stand-alone-diagnostics-feed-sample.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 5ec801e1e20fdb495537505a71ddaef6218ad5fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521373"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122147"
 ---
 # <a name="bindings-and-security"></a>Bindungen und Sicherheit
 Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (WCF) bieten eine schnelle Möglichkeit zum Programmieren von WCF-Anwendungen. Mit einer Ausnahme haben alle Bindungen ein standardmäßig aktiviertes Sicherheitsschema. Dieses Thema hilft Ihnen, die richtige Bindung für die benötigte Sicherheit auszuwählen.  
@@ -43,7 +43,7 @@ Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (
   
 -   Standardsicherheitsprofil gemäß der Definition in WS-I.  
   
- Standardmäßig ist diese Bindung nicht sicher. Sie ist darauf ausgelegt, mit ASMX-Diensten zusammenzuarbeiten. Wenn die Sicherheit aktiviert ist, ist die Bindung für eine nahtlose Interoperabilität mit Internet Information Services (IIS)-Sicherheitsmechanismen ausgelegt, z. B. Standardauthentifizierung, Digest und integrierte Windows-Sicherheit. Weitere Informationen finden Sie unter [Transport Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Diese Bindung unterstützt Folgendes:  
+ Standardmäßig ist diese Bindung nicht sicher. Sie ist darauf ausgelegt, mit ASMX-Diensten zusammenzuarbeiten. Wenn die Sicherheit aktiviert ist, ist die Bindung für eine nahtlose Interoperabilität mit Internet Information Services (IIS)-Sicherheitsmechanismen ausgelegt, z. B. Standardauthentifizierung, Hashwert und integrierte Windows-Sicherheit. Weitere Informationen finden Sie unter [Transport Sicherheitsübersicht](../../../../docs/framework/wcf/feature-details/transport-security-overview.md). Diese Bindung unterstützt Folgendes:  
   
 -   HTTPS-Transportsicherheit.  
   
@@ -51,7 +51,7 @@ Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (
   
 -   WS-Sicherheit.  
   
- Weitere Informationen finden Sie unter <xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType> und <xref:System.ServiceModel.BasicHttpSecurityMode>.  
+ Weitere Informationen finden Sie unter<xref:System.ServiceModel.BasicHttpSecurity>, <xref:System.ServiceModel.BasicHttpMessageSecurity>, <xref:System.ServiceModel.BasicHttpMessageCredentialType>und <xref:System.ServiceModel.BasicHttpSecurityMode>.  
   
 ### <a name="wshttpbinding"></a>WSHttpBinding  
  Verwenden Sie im Code die <xref:System.ServiceModel.WSHttpBinding> Klasse; verwenden Sie in der Konfiguration der [ \<WsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -186,7 +186,7 @@ Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (
 |Meldung|Serverauthentifizierung<br /><br /> Clientauthentifizierung<br /><br /> End-to-End-Sicherheit<br /><br /> Interoperabilität<br /><br /> Rich Claims<br /><br /> Verbund<br /><br /> Mehrfaktoren-Authentifizierung<br /><br /> Benutzerdefinierte Token<br /><br /> Notar-/Timestampdienst<br /><br /> Hohe-Wartezeit-Anwendungen<br /><br /> Beständigkeit von Nachrichtensignaturen|  
 |TransportWithMessageCredential|Serverauthentifizierung<br /><br /> Clientauthentifizierung<br /><br /> Point-to-Point-Sicherheit<br /><br /> Interoperabilität<br /><br /> Hardwarebeschleunigung.<br /><br /> Hoher Durchsatz<br /><br /> Rich Client-Claims<br /><br /> Verbund<br /><br /> Mehrfaktoren-Authentifizierung<br /><br /> Benutzerdefinierte Token<br /><br /> Sichere Firewall<br /><br /> Hohe-Wartezeit-Anwendungen<br /><br /> Wiederverschlüsselung über mehrere Hops|  
   
- In der folgenden Tabelle werden die Bindungen, die die verschiedenen Moduseinstellungen unterstützen, aufgeführt. Wählen Sie eine Bindung aus der Tabelle aus, die verwendet werden soll, um den Dienstendpunkt zu erstellen.  
+ In der folgenden Tabelle werden die Bindungen aufgeführt, die die verschiedenen Moduseinstellungen unterstützen. Wählen Sie eine Bindung aus der Tabelle aus, die verwendet werden soll, um den Dienstendpunkt zu erstellen.  
   
 |Bindung|Transportmodus-Support|Nachrichtenmodus-Support|TransportWithMessageCredential-Unterstützung|  
 |-------------|----------------------------|--------------------------|--------------------------------------------|  
@@ -204,7 +204,7 @@ Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (
   
 |Typ|Beschreibung|  
 |----------|-----------------|  
-|Keine|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|  
+|Keiner|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|  
 |Standard|Standardauthentifizierung. Weitere Informationen finden Sie unter RFC 2617 – HTTP Authentication: Grundlegende und Digestauthentifizierung, verfügbar unter [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
 |Digest|Hashwertauthentifizierung. Weitere Informationen finden Sie unter RFC 2617 – HTTP Authentication: Grundlegende und Digestauthentifizierung, verfügbar unter [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
 |NTLM|NT-LAN-Manager (NTLM)-Authentifizierung.|  
@@ -217,16 +217,17 @@ Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (
   
 |Typ|Beschreibung|  
 |----------|-----------------|  
-|Keine|Ermöglicht dem Dienst die Interaktion mit anonymen Clients.|  
+|Keiner|Ermöglicht dem Dienst die Interaktion mit anonymen Clients.|  
 |Windows|Ermöglicht SOAP-Nachrichtenaustausch im Rahmen des authentifizierten Kontexts von Windows-Anmeldeinformationen.|  
 |UserName|Ermöglicht dem Dienst die Forderung an den Client, sich über eine Benutzernamen-Anmeldeinformation zu authentifizieren. Beachten Sie, dass, wenn der Sicherheitsmodus, um festgelegt ist `TransportWithMessageCredential`, WCF unterstützt das Senden eines kennwortdigests oder das Ableiten von Schlüsseln anhand des Kennworts und die Verwendung solcher Schlüssel für die nachrichtenmodussicherheit nicht. Daher setzt WCF an, dass der Transport geschützt wird, wenn der Identitätsnachweis über den Benutzernamen.|  
 |Zertifikat|Ermöglicht dem Dienst, die Forderung zu stellen, dass der Client über ein Zertifikat authentifiziert werden muss.|  
 |IssuedToken|Ermöglicht es dem Dienst, einen Sicherheitstokendienst zu verwenden, um ein benutzerdefiniertes Token zu liefern.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Ausählen eines Anmeldeinformationentyps](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Wählen eines Typs von Anmeldeinformationen](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Sicherheitsverhalten](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: ca67a01d8f1bc76773a7794169e93d026fe222d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717962"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191327"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>Bekannte Probleme von und Überlegungen zu LINQ to Entities
 Dieser Abschnitt enthält Informationen zu bekannten Problemen bei [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfragen.  
   
--   [LINQ-Abfragen, können nicht zwischengespeichert werden](#LINQQueriesThatAreNotCached)  
+-   [LINQ-Abfragen, die nicht zwischengespeichert werden können](#LINQQueriesThatAreNotCached)  
   
 -   [Fehlende Sortierung](#OrderingInfoLost)  
   
--   [Ganzzahlen ohne Vorzeichen, die nicht unterstützt](#UnsignedIntsUnsupported)  
+-   [Keine Unterstützung von ganzen Zahlen ohne Vorzeichen](#UnsignedIntsUnsupported)  
   
--   [Fehler bei der Datentypkonvertierung](#TypeConversionErrors)  
+-   [Typkonvertierungsfehler](#TypeConversionErrors)  
   
--   [Verweisen auf nicht skalare Variablen werden nicht unterstützt](#RefNonScalarClosures)  
+-   [Keine Unterstützung von Verweisen auf nicht skalare Variablen](#RefNonScalarClosures)  
   
--   [Geschachtelte Abfragen schlagen möglicherweise mit SQLServer 2000 fehl.](#NestedQueriesSQL2000)  
+-   [Geschachtelte Abfragen schlagen mit SQL Server 2000 möglicherweise fehl](#NestedQueriesSQL2000)  
   
 -   [Projizieren auf einen anonymen Typ](#ProjectToAnonymousType)  
   
@@ -80,4 +80,5 @@ Dieser Abschnitt enthält Informationen zu bekannten Problemen bei [!INCLUDE[lin
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

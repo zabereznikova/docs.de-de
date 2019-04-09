@@ -2,12 +2,12 @@
 title: Filtern
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 735fd4252bb1740c149659f6c6fe81f18285914a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 667cc1cc95208c5c653ec4088d69ae105a2f8889
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626107"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214597"
 ---
 # <a name="filtering"></a>Filtern
 Die Windows Communication Foundation (WCF) Filtersystem können deklarative Filtern Nachrichten vergleichen und funktionsbezogene Entscheidungen treffen zu können. Sie können anhand von Filtern einen Teil der Nachricht untersuchen und so bestimmen, was mit der Nachricht geschehen soll. Ein Warteschlangenprozess kann beispielsweise eine XPath 1.0-Abfrage verwenden, um das Prioritätselement eines bekannten Headers im Hinblick darauf zu prüfen, ob eine Nachricht in der Warteschlange an den Anfang verschoben werden soll.  
@@ -84,4 +84,5 @@ Die Windows Communication Foundation (WCF) Filtersystem können deklarative Filt
 -   den übrigen Endpunktparametern in der `EndpointAddress`, wie in <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> angegeben  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Datenübertragung und Serialisierung](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

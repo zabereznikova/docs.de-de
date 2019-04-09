@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 12671c62a887f863bfb423cf67d7a25eed4118b2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362603"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132209"
 ---
 # <a name="wpf-brushes-overview"></a>Übersicht über WPF-Pinsel
 Alles, was auf dem Bildschirm sichtbar ist sichtbar, da es mit einem Pinsel gezeichnet wurde. Beispielsweise wird ein Pinsel verwendet, um den Hintergrund einer Schaltfläche, die Vordergrundfarbe des Texts und des Ausfüllens einer Form zu beschreiben. In diesem Thema werden die Konzepte Zeichnen mit [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Pinsel und stellt Beispiele bereit. Mithilfe von Pinseln können Sie [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]-Objekte, angefangen von einfachen Objekten, über Objekte in Volltonfarbe bis hin zu Objekten mit komplexen von Mustern und Bildern, zeichnen.  
@@ -161,6 +161,7 @@ Ein mit einem VisualBrush gezeichnetes Rechteck
  Weitere Informationen zu den Gründen <xref:System.Windows.Media.VisualBrush> -Objekte können nicht fixiert ist, finden Sie in der <xref:System.Windows.Media.VisualBrush> Seite.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
 - [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](painting-with-solid-colors-and-gradients-overview.md)
@@ -169,5 +170,5 @@ Ein mit einem VisualBrush gezeichnetes Rechteck
 - [Beispiel für Pinsel](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [Beispiel zu ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Themen zu Vorgehensweisen](brushes-how-to-topics.md)
+- [Gewusst wie-Themen](brushes-how-to-topics.md)
 - [Weitere Leistungsempfehlungen](../advanced/optimizing-performance-other-recommendations.md)

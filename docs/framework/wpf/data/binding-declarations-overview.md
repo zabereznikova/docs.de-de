@@ -12,18 +12,16 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: 2ef632ee1335d1ee0e94eaa1a7f25cbe34ed4e6f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363411"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165268"
 ---
 # <a name="binding-declarations-overview"></a>Übersicht über Bindungsdeklarationen
 In diesem Thema werden die verschiedenen Möglichkeiten zum Deklarieren einer Bindung erläutert.  
-  
- 
-  
+
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Bevor Sie dieses Thema lesen, ist es wichtig, dass Sie mit dem Konzept und der Verwendung von Markuperweiterungen vertraut sind. Weitere Informationen über Markuperweiterungen finden Sie unter [Markuperweiterungen und WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md).  
@@ -81,7 +79,7 @@ In diesem Thema werden die verschiedenen Möglichkeiten zum Deklarieren einer Bi
   
 -   Indexer einer Eigenschaft können durch eckige Klammern nach dem Namen der indizierten Eigenschaft angegeben werden. So legt zum Beispiel die `Path=ShoppingCart[0]`-Klausel die Bindung auf den Index fest, der der Art und Weise entspricht, wie die interne Indizierung der Eigenschaft das Zeichenfolgenliteral „0“ handhabt. Geschachtelte Indexer werden ebenfalls unterstützt.  
   
--   Indexer und untergeordnete Eigenschaften können in einer `Path`-Klausel kombiniert werden, z. B. `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`.  
+-   Indexer und untergeordnete Eigenschaften können im gemischt werden eine `Path` Klausel, z. B. `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
   
 -   Indexer können mehrere durch Kommata (,) getrennte Indexer-Parameter aufweisen. Der Typ der einzelnen Parameter kann in Klammern angegeben werden. Sie können beispielsweise über `Path="[(sys:Int32)42,(sys:Int32)24]"` verfügen, wobei `sys` dem `System`-Namespace zugeordnet ist.  
   
@@ -126,7 +124,8 @@ In diesem Thema werden die verschiedenen Möglichkeiten zum Deklarieren einer Bi
 -   Der Standardwert <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> -Wert variiert zwischen <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> und <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> abhängig von der gebundenen Abhängigkeitseigenschaft ebenfalls. Der Standardwert für die meisten Abhängigkeitseigenschaften ist <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, während die <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>-Eigenschaft den Standardwert <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> aufweist.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht zur Datenbindung](data-binding-overview.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+
+- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)
 - [Datenbindung](../advanced/optimizing-performance-data-binding.md)
 - [XAML-Syntax von PropertyPath](../advanced/propertypath-xaml-syntax.md)

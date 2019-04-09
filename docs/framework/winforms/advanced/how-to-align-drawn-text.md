@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text [Windows Forms], aligning
 - Windows Forms, aligning drawn text
 ms.assetid: 83c10a81-1a90-4b5c-98aa-2c6c4b280079
-ms.openlocfilehash: ab97ab713067af26455fa4261bbddaf900ec91b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5214ef2c69349514f05ba68cc023a7622e119e3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725258"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210450"
 ---
 # <a name="how-to-align-drawn-text"></a>Vorgehensweise: Ausrichten von gezeichnetem Text
 Wenn Sie eine benutzerdefinierte Zeichnung durchführen, sollten Sie häufig gezeichnetem Text in einem Formular oder Steuerelement zu zentrieren. Sie können problemlos mit gezeichneter Text Ausrichten der <xref:System.Drawing.Graphics.DrawString%2A> oder <xref:System.Windows.Forms.TextRenderer.DrawText%2A> Methoden, mit der richtigen Formatierungsobjekt erstellen und Festlegen von Flags für die Kultur spezifische Format.  
@@ -33,9 +33,10 @@ Wenn Sie eine benutzerdefinierte Zeichnung durchführen, sollten Sie häufig gez
      [!code-vb[System.Drawing.AlignDrawnText#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#20)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Die vorherigen Codebeispiele für den Einsatz mit Windows Forms konzipiert und erfordern <xref:System.Windows.Forms.PaintEventArgs> `e`, d.h. ein Parameter vom <xref:System.Windows.Forms.PaintEventHandler>.  
+ Die vorherigen Codebeispiele für den Einsatz mit Windows Forms konzipiert und erfordern <xref:System.Windows.Forms.PaintEventArgs>`e`, d.h. ein Parameter vom <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Zeichnen von Text mit GDI](how-to-draw-text-with-gdi.md)
 - [Verwenden von Schriftarten und Text](using-fonts-and-text.md)
 - [Vorgehensweise: Erstellen von Schriftartfamilien und Schriftarten](how-to-construct-font-families-and-fonts.md)

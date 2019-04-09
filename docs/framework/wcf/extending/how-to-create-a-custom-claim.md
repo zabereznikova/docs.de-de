@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: bb7b4c06b87c8c214a6f3ed99a89707ccd0d626e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: fa04b883e37cc287e6bd52ce9f206b2b24fe905f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464306"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167426"
 ---
 # <a name="how-to-create-a-custom-claim"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Anspruchs
 Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) bietet eine Reihe von integrierten Anspruchstypen und-Rechte mit den Hilfsfunktionen zum Erstellen von <xref:System.IdentityModel.Claims.Claim> -Instanzen mit diesen Typen und rechten. Diese integrierten Ansprüche sind Informationen zum Modell finden Sie in Typen von Clientanmeldeinformationen, die weiterhin WCF unterstützt standardmäßig soll. In vielen Fällen sind die integrierten Ansprüche ausreichend; für einige Anwendungen sind jedoch unter Umständen benutzerdefinierte Ansprüche erforderlich. Ein Anspruch besteht aus dem Anspruchstyp, der Ressource, für die der Anspruch gilt, und dem Recht, das über diese Ressource gewährt wird. In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Anspruch erstellen.  
@@ -75,6 +75,7 @@ Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) bie
  [!code-vb[c_CustomClaim#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#0)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>
 - <xref:System.IdentityModel.Claims.ClaimTypes>

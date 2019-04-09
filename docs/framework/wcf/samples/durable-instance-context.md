@@ -2,12 +2,12 @@
 title: Permanenter Instanzkontext
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 9981c4293f651bce3a0abaa3e0243d0d656ff257
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 74b2d42900b032936734884ceb19472d70b56b43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841448"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160965"
 ---
 # <a name="durable-instance-context"></a>Permanenter Instanzkontext
 Dieses Beispiel veranschaulicht das Anpassen die Windows Communication Foundation (WCF)-Runtime, um permanente instanzkontexte zu aktivieren. Dabei wird als Sicherungsspeicher SQL Server 2005 (in diesem Fall SQL Server 2005 Express) verwendet. Aber es bietet auch eine Möglichkeit, auf benutzerdefinierte Speichermechanismen zuzugreifen.  
@@ -459,4 +459,3 @@ Press ENTER to shut down client
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
-  

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle'
+title: 'Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 5da74abb107bc93bff496a35ecfc7a1233e5a76d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 80edd3718195fa3c47f7073136031cbddb13168b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702957"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176682"
 ---
-# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle
+# <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -104,7 +104,8 @@ ms.locfileid: "57702957"
 3.  (Optional) Fügen Sie die geeigneten Tabellen- und Spaltenformate zum Raster an. Wenn es keine Tabellenformate sind, sehen Sie in der Tabelle, jedoch mit minimaler Formatierung und alle Spalten angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über das DataGrid-Steuerelement](datagrid-control-overview-windows-forms.md)
-- [Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement von Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)
-- [Windows Forms-Datenbindung](../windows-forms-data-binding.md)
+- [Datenbindung in Web Forms](../windows-forms-data-binding.md)

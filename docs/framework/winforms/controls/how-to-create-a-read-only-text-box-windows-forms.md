@@ -6,12 +6,12 @@ helpviewer_keywords:
 - read-only text boxes
 - text boxes [Windows Forms], read-only
 ms.assetid: 60baa9ab-fa57-44ad-bb7c-61b05aa64296
-ms.openlocfilehash: 0a29e1c4dcb0bcc8e7d292725e64ea967e160d06
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: be85eedf272e596ceb10e7510b8c99ce6aed0727
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707754"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130727"
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a>Vorgehensweise: Erstellen eines schreibgeschützten Textfelds (Windows Forms)
 Sie können ein bearbeitbares Windows Forms-Text-Feld in ein schreibgeschütztes Steuerelement umwandeln. Beispielsweise kann im Textfeld einen Wert angezeigt, der in der Regel bearbeitet wird, aber möglicherweise nicht aktuell, aufgrund des Zustands der Anwendung.  
@@ -24,11 +24,12 @@ Sie können ein bearbeitbares Windows Forms-Text-Feld in ein schreibgeschütztes
     >  Die <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> Eigenschaft wirkt sich nur auf eine Benutzerinteraktion bei der Ausführung. Sie können weiterhin textfeldinhalte programmgesteuert ändern zur Laufzeit durch Ändern der <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft des Textfelds.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.TextBox>
 - [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)
-- [Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Vorgehensweise: Erstellen Sie ein Kennwort-Textfeld mit dem TextBox-Steuerelement in Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Vorgehensweise: Erstellen eines Kennwort-Textfelds mit dem TextBox-Steuerelement in Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [Vorgehensweise: Setzen von Anführungszeichen in Zeichenfolgen](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Vorgehensweise: Wählen Sie Text im TextBox-Steuerelement von Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Vorgehensweise: Zeigen Sie mehrerer Zeilen in der TextBox-Steuerelement in Windows Forms an](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Programmgesteuertes Auswählen von Text im TextBox-Steuerelement in Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox-Steuerelement](textbox-control-windows-forms.md)

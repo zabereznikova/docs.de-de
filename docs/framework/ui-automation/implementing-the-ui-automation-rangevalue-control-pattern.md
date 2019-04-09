@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: 34044b337dfb7498fd75f7f9a8bd17c2db9eb7d2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: aeb14bddf98adf53a52c8897994bd0fb6fa498ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680112"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175791"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>Implementieren des RangeValue-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -37,13 +37,13 @@ Beispiel für eine Statusanzeige, in der der Wert eine ganze Zahl ist und die mi
   
 |Erforderliche Member|Memberart|Hinweise|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Methoden|Keine|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Methoden|Keiner|  
   
  Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.  
   
@@ -53,9 +53,10 @@ Beispiel für eine Statusanzeige, in der der Wert eine ganze Zahl ist und die mi
   
 |Ausnahmetyp|Bedingung|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> wird mit einem Wert aufgerufen, der entweder größer als <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> oder kleiner als <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>ist.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> wird aufgerufen, mit dem Wert, der entweder größer als <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> oder kleiner als <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

@@ -7,12 +7,12 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: f93ef787c74a4581d45c24c5a704cc5fb044bd46
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a1908339460191fcb81d03d45c56dd57b2cf4c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409964"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228392"
 ---
 # <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Tutorial: Definieren eines Windows Communication Foundation-Dienstvertrags
 
@@ -29,10 +29,9 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 > - Erstellen Sie eine **WCF-Dienstbibliothek** Projekt.
 > - Definieren Sie eine dienstvertragsschnittstelle.
 
-
 ## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>Erstellen Sie ein Projekt für die WCF-Dienstbibliothek und definieren eine dienstvertragsschnittstelle
 
-1. Öffnen Sie Visual Studio als Administrator an. Zu diesem Zweck wählen Sie das Visual Studio-Programm in der **starten** Menü, und wählen Sie dann **weitere** > **als Administrator ausführen** aus dem Kontextmenü.
+1. Öffnen Sie Visual Studio als Administrator. Zu diesem Zweck wählen Sie das Visual Studio-Programm in der **starten** Menü, und wählen Sie dann **weitere** > **als Administrator ausführen** aus dem Kontextmenü.
 
 2. Erstellen Sie eine **WCF-Dienstbibliothek** Projekt.
 
@@ -54,7 +53,6 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
       > [!NOTE]
       > Wenn Sie Visual Studio mit Visual Basic-entwicklereinstellungen Umgebung installiert haben, kann die Lösung ausgeblendet werden. Wenn dies der Fall ist, wählen Sie **Optionen** aus der **Tools** Menü Wählen Sie dann **Projekte und Projektmappen** > **allgemeine** in die **Optionen** Fenster. Wählen Sie **Projektmappe immer anzeigen**. Darüber hinaus überprüfen Sie, ob **neue Projekte beim Erstellen speichern** ausgewählt ist.
-
 
 3. Von **Projektmappen-Explorer**öffnen die **IService1.cs** oder **"IService1.vb"** Datei aus, und Ersetzen Sie den Code durch den folgenden Code:
 

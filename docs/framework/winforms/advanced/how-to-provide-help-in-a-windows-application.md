@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5cda0517e8653e89aabde3a9c0459a2dbae61616
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129479"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Vorgehensweise: Bereitstellen von Hilfe in einer Windows-Anwendung
 Sie verwenden können, der die <xref:System.Windows.Forms.HelpProvider> Komponente, um Hilfethemen in einer Hilfedatei bestimmten Steuerelementen in Windows Forms zuzuordnen. Die Hilfedatei kann entweder im Format HTML oder HTMLHelp 1.x oder höher vorliegen.  
@@ -56,6 +56,7 @@ Sie verwenden können, der die <xref:System.Windows.Forms.HelpProvider> Komponen
  Sie können auch die <xref:System.Windows.Forms.HelpProvider> Komponente zum Anzeigen der kontextbezogenen Hilfe, selbst wenn Sie so konfiguriert, dass die Hilfedateien für die auf Windows Forms-Steuerelemente anzuzeigen. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen der kontextbezogenen Hilfe](how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Anzeigen der kontextbezogenen Hilfe](how-to-display-pop-up-help.md)
 - [Benutzerführung mithilfe von QuickInfos](control-help-using-tooltips.md)
 - [Integrieren von Benutzerhilfe in Windows Forms](integrating-user-help-in-windows-forms.md)

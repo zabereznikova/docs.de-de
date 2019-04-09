@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: b4f4297fdc5c49270ac97513295fc5aa2e0f2213
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f5d54b892f61bfb1804b3c4c561533e5aa549d0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209736"
 ---
 # <a name="typography-how-to-topics"></a>Gewusst-wie-Themen zur Typografie
 Die Themen in diesem Abschnitt wird beschrieben, wie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] für umfassende Darstellung von Text in Ihren Anwendungen zu unterstützen.  
@@ -28,6 +28,7 @@ Die Themen in diesem Abschnitt wird beschrieben, wie [!INCLUDE[TLA#tla_winclient
  [Verwenden von Sonderzeichen in XAML](how-to-use-special-characters-in-xaml.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Documents.Typography>
 - [Dokumente in WPF](documents-in-wpf.md)
 - [Features für OpenType-Schriftarten](opentype-font-features.md)

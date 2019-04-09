@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen von Einzügen, hängenden Einzügen und Absätzen mit Aufzählungszeichen mit dem RichTextBox-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Festlegen von Einzügen, hängenden Einzügen und Absätzen mit Aufzählungszeichen mit dem RichTextBox-Steuerelement von Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: b2173769634ddc4b7b42c822c3f60212eb8d8886
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4cb9b351b5ed1ab9cd05be0763d967000791fb46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713028"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140646"
 ---
-# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Festlegen von Einzügen, hängenden Einzügen und Absätzen mit Aufzählungszeichen mit dem RichTextBox-Steuerelement in Windows Forms
+# <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Festlegen von Einzügen, hängenden Einzügen und Absätzen mit Aufzählungszeichen mit dem RichTextBox-Steuerelement von Windows Forms
 Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> Steuerelement verfügt über zahlreiche Optionen zum Formatieren des Texts angezeigt. Sie können markierte Absätze als Aufzählungen formatieren, durch Festlegen der <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> Eigenschaft. Sie können auch die <xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>, <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>, und <xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A> Eigenschaften den Einzug der Absätze relativ zum linken und rechten Rand des Steuerelements und dem linken Rand anderer Textzeilen festlegen.  
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>So formatieren Sie einen Absatz als Aufzählung  
@@ -69,6 +69,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.RichTextBox> Steuerelement verf
     >  Alle genannten Eigenschaften wirken sich auf sämtliche Absätze, in denen Text markiert ist, sowie auf nach der aktuellen Einfügemarke eingegebenen Text aus. Wenn ein Benutzer beispielsweise ein Wort in einem Absatz markiert und dann den Einzug anpasst, wird die neue Einstellung auf den gesamten Absatz, in dem dieses Wort steht, und auf alle Absätze angewendet, die hinter diesem Absatz eingegeben werden. Informationen zum Auswählen von Text programmgesteuert, finden Sie unter <xref:System.Windows.Forms.TextBoxBase.Select%2A>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox-Steuerelement](richtextbox-control-windows-forms.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

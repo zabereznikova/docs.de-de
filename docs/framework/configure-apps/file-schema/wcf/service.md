@@ -2,12 +2,12 @@
 title: <service>
 ms.date: 03/30/2017
 ms.assetid: 13123dd6-c4a9-4a04-a984-df184b851788
-ms.openlocfilehash: 57fbdd2cf7c398e611f835eeb4e924fb4f3e0c9e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 68bddc01b02d9885b3f0fc4c2cbc5c3249de03f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270302"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197957"
 ---
 # <a name="service"></a>\<service>
 Das `service`-Element enthält die Einstellungen für einen Windows Communication Foundation (WCF)-Dienst. Es enthält außerdem Endpunkte, die den Dienst verfügbar machen.  
@@ -32,7 +32,7 @@ Das `service`-Element enthält die Einstellungen für einen Windows Communicatio
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
 |behaviorConfiguration|Eine Zeichenfolge mit dem Namen des Verhaltens, das zum Instanziieren des Diensts verwendet werden soll. Der Verhaltensname muss sich bei der Dienstdefinition im Gültigkeitsbereich befinden. Der Standardwert ist eine leere Zeichenfolge.|  
-|Name|Erforderliches Zeichenfolgenattribut, das den Typ des zu instanziierenden Diensts angibt. Diese Einstellung muss einem gültigen Typ entsprechen. Das Format muss `Namespace.Class.` lauten.|  
+|Name|Erforderliches Zeichenfolgenattribut, das den Typ des zu instanziierenden Diensts angibt. Diese Einstellung muss einem gültigen Typ entsprechen. Das Format sollte sein `Namespace.Class.`|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -69,5 +69,6 @@ Das `service`-Element enthält die Einstellungen für einen Windows Communicatio
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.ServiceElement>
 - [Konfigurieren von Diensten](../../../../../docs/framework/wcf/configuring-services.md)

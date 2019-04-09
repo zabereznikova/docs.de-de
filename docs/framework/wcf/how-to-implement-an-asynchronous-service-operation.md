@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: 8d11f39942793414e9e800b4e180d4d5ed5b2a3a
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: ec1c6549c4a386f529ca2191e1876975b2bf5dcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055156"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186848"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Vorgehensweise: Implementieren eines asynchronen Dienstvorgangs
 In Windows Communication Foundation (WCF)-Anwendungen kann ein Dienstvorgang asynchron oder synchron implementiert werden ohne dem Client vorzuschreiben, wie er ihn aufzurufen. Z. B. asynchrone Dienstvorgänge synchron aufgerufen werden können, und synchrone Dienstvorgänge können asynchron aufgerufen werden. Ein Beispiel, das asynchron aufrufen eines Vorgangs in einer Clientanwendung veranschaulicht, finden Sie unter [Vorgehensweise: Asynchrones Aufrufen von Dienstvorgängen](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Weitere Informationen zu synchronen und asynchronen Vorgängen, finden Sie unter [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) und [synchrone und asynchrone Vorgänge](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). In diesem Thema wird die grundlegende Struktur eines asynchronen Dienstvorgangs beschrieben (der Code ist nicht vollständig). Ein vollständiges Beispiel der Seiten für den Dienst und Client finden Sie unter [asynchrone](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100)).  
@@ -46,5 +46,6 @@ In Windows Communication Foundation (WCF)-Anwendungen kann ein Dienstvorgang asy
  [!code-vb[C_SyncAsyncClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_syncasyncclient/vb/services.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Entwerfen von Dienstverträgen](../../../docs/framework/wcf/designing-service-contracts.md)
 - [Synchrone und asynchrone Vorgänge](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)

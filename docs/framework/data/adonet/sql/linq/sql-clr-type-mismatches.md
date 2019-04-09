@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 0abb1bd25c40ba55806fe80b39db1ac418f3f308
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77090a9f22dcf3d55739aa03535bee863793d858
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172886"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL-CLR-Typenkonflikte
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatisiert einen Großteil des Übersetzungsprozesses zwischen dem Objektmodell und SQL Server. Trotzdem verhindern einige Situationen die genaue Übersetzung. In den folgenden Abschnitten werden diese wichtigen Konflikte zwischen den CLR (Common Language Runtime)-Typen und den SQL Server-Datenbanktypen zusammengefasst. Sie finden weitere Informationen zu bestimmten Typmappings und funktionsübersetzungen am [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) und [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatisiert die Großteil des Übersetzungsprozesses zwischen dem Objektmodell und SQL Server. Trotzdem verhindern einige Situationen die genaue Übersetzung. In den folgenden Abschnitten werden diese wichtigen Konflikte zwischen den CLR (Common Language Runtime)-Typen und den SQL Server-Datenbanktypen zusammengefasst. Sie finden weitere Informationen zu bestimmten Typmappings und funktionsübersetzungen am [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) und [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
   
 ## <a name="data-types"></a>Datentypen  
  Eine Übersetzung zwischen CLR und SQL Server wird ausgeführt, wenn eine Abfrage an die Datenbank gesendet und die Ergebnisse an das Objektmodell zurückgesendet werden. Zum Beispiel erfordert folgende Transact-SQL-Abfrage zwei Wertekonvertierungen:  
@@ -114,11 +114,11 @@ or col1 != col2
  Der Wert von `null` (`nothing`) in der Zusammenstellung wird von SQL Server definiert. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ändert die Zusammenstellung nicht.  
   
 ### <a name="type-conversion-and-promotion"></a>Typkonvertierung und Heraufstufung  
- SQL unterstützt einen umfangreichen Satz impliziter Konvertierungen in Ausdrücken. Ähnliche Ausdrücke in C# würden eine explizite Umwandlung erfordern. Beispiel:  
+ SQL unterstützt einen umfangreichen Satz impliziter Konvertierungen in Ausdrücken. Ähnliche Ausdrücke in C# würden eine explizite Umwandlung erfordern. Zum Beispiel:  
   
--   Der `Nvarchar`-Typ und der `DateTime`-Typ können in SQL ohne explizite Umwandlungen verglichen werden. C# erfordert explizite Konvertierung.  
+-   `Nvarchar` und `DateTime` Typen in SQL ohne expliziten Umwandlungen; verglichen werden können C# erfordert explizite Konvertierung.  
   
--   `Decimal` wird in SQL implizit in `DateTime` konvertiert. C# ermöglicht keine implizite Konvertierung.  
+-   `Decimal` wird implizit in konvertiert `DateTime` in SQL. C# ermöglicht keine implizite Konvertierung.  
   
  In gleicher Weise unterscheidet sich die Typreihenfolge in Transact-SQL von derjenigen in C#, da der zu Grunde liegende Typsatz abweicht. In der Tat gibt es keine klare Teilmenge-Obermenge-Beziehung zwischen den Rangfolgenlisten. Beispielsweise führt der Vergleich von `nvarchar` mit `varchar` zur impliziten Konvertierung des `varchar`-Ausdrucks in `nvarchar`. CLR bietet keine äquivalente Heraufstufung.  
   
@@ -146,10 +146,10 @@ Where Col1 = Col2
   
  Die Sortierreihenfolge-Unterklausel aktiviert ist, erstellt eine *beschränkten Typ* , die nicht ersetzbar ist.  
   
- Auf ähnliche Weise kann die Sortierreihenfolge über Typsysteme hinweg deutlich abweichen. Dieser Unterschied wirkt sich auf die Ergebnissortierung aus. <xref:System.Guid> wird über alle 16 Bytes hinweg in lexikografischer Reihenfolge (`IComparable()`), sortiert. T-SQL hingegen vergleicht GUIDs in folgender Reihenfolge: node(10-15), clock-seq(8-9), time-high(6-7), time-mid(4-5), time-low(0-3). Diese Sortierung wurde in SQL 7.0 erstellt, als von NT erstellte GUIDs eine entsprechende Oktettreihenfolge hatten. Dieser Ansatz stellte sicher, dass auf dem gleichen Node-Cluster erzeugte GUIDs nach Timestamp in sequenzieller Reihenfolge zusammengestellt wurden. Der Ansatz war auch für die Erstellung von Indizes nützlich (inserts werden nicht zu zufälligen E/As, sondern zu appends). Die Reihenfolge wurde aufgrund von Datenschutzaspekten später in Windows durcheinander gebracht, SQL muss jedoch kompatibel bleiben. Dieses Problem zu umgehen ist die Verwendung <xref:System.Data.SqlTypes.SqlGuid> anstelle von <xref:System.Guid>.  
+ Auf ähnliche Weise kann die Sortierreihenfolge über Typsysteme hinweg deutlich abweichen. Dieser Unterschied wirkt sich auf die Ergebnissortierung aus. <xref:System.Guid> wird über alle 16 Bytes nach der lexikografischen Reihenfolge sortiert (`IComparable()`), während die T-SQL vergleicht GUIDs in der folgenden Reihenfolge: node(10-15), clock-seq(8-9), time-high(6-7), time-mid(4-5), time-low(0-3). Diese Sortierung wurde in SQL 7.0 erstellt, als von NT erstellte GUIDs eine entsprechende Oktettreihenfolge hatten. Dieser Ansatz stellte sicher, dass auf dem gleichen Node-Cluster erzeugte GUIDs nach Timestamp in sequenzieller Reihenfolge zusammengestellt wurden. Der Ansatz war auch für die Erstellung von Indizes nützlich (inserts werden nicht zu zufälligen E/As, sondern zu appends). Die Reihenfolge wurde aufgrund von Datenschutzaspekten später in Windows durcheinander gebracht, SQL muss jedoch kompatibel bleiben. Dieses Problem zu umgehen ist die Verwendung <xref:System.Data.SqlTypes.SqlGuid> anstelle von <xref:System.Guid>.  
   
 ### <a name="operator-and-function-differences"></a>Unterschiede zwischen Operatoren und Funktionen  
- Im Wesentlichen vergleichbare Operatoren und Funktionen verfügen über eine leicht andere Semantik. Beispiel:  
+ Im Wesentlichen vergleichbare Operatoren und Funktionen verfügen über eine leicht andere Semantik. Zum Beispiel:  
   
 -   C# gibt auf der Grundlage der lexikalischen Reihenfolge von Operanden für logische Operatoren `&&` und `||` als Kurzschlusssemantik an. SQL wurde andererseits für satzbasierte Abfragen definiert und bietet daher mehr Optimierungsfreiheit hinsichtlich der Ausführungsreihenfolge. Einige der Auswirkungen schließen Folgendes ein:  
   
@@ -157,7 +157,7 @@ Where Col1 = Col2
   
     -   Eine freie Übersetzung in `AND` / `OR` Operatoren können unerwartete Fehler verursachen, wenn die C# Ausdruck basiert auf die Auswertung den zweiten Operand wird basierend auf dem Ergebnis der Auswertung des ersten Operanden.  
   
--   Die `Round()`-Funktion weist in [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] und in T-SQL unterschiedliche Semantiken auf.  
+-   `Round()` Funktion hat eine andere Semantik [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] und in T-SQL.  
   
 -   Der Startindex für Zeichenfolgen in CLR ist 0, in SQL jedoch 1. Aus diesem Grund muss jede Funktion mit einem Index übersetzt werden.  
   
@@ -202,7 +202,7 @@ Where Col1 = Col2
  [!code-csharp[DLinqMismatch#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#6)]
  [!code-vb[DLinqMismatch#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#6)]  
   
--   Operatoren/Funktionen, die in SQL auf Argumente des Typs mit Zeichen fester Länge angewendet werden, weisen eine deutlich andere Semantik auf als die gleichen Operatoren/Funktionen, die auf eine CLR-<xref:System.String?displayProperty=nameWithType> angewendet werden. Dies kann auch als Erweiterung der Problematik fehlender Gegenstücke angesehen werden, die in den Abschnitten zu Typen behandelt wird.  
+-   Operatoren/Funktionen, die in SQL auf Typargumente mit Zeichen fester Länge angewendet werden, weisen eine deutlich andere Semantik auf als die gleichen Operatoren/Funktionen, die auf eine CLR-<xref:System.String?displayProperty=nameWithType> angewendet werden. Dies kann auch als Erweiterung der Problematik fehlender Gegenstücke angesehen werden, die in den Abschnitten zu Typen behandelt wird.  
   
     ```  
     create table T4 (  
@@ -265,7 +265,7 @@ Where Col1 + Col2 > 4
   
 -   Typkonvertierungen durch einen CLR-Compiler oder durch eine objektrelationale Abfrageimplementierung können zu Problemen bei der Indexverwendung führen.  
   
-     Beispiel:  
+     Ein auf ein Objekt angewendeter  
   
     ```  
     -- Table DDL  
@@ -294,4 +294,5 @@ Where Col1 + Col2 > 4
  Zusätzlich zu Semantikunterschieden müssen bei Schnittstellen der Typsysteme von SQL Server und CLR Auswirkungen auf die Leistung berücksichtigt werden. Bei großen Datensätzen können solche Leistungsprobleme aufzeigen, ob eine Anwendung zur Bereitstellung geeignet ist.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

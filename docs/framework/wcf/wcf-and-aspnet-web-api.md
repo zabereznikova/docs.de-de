@@ -2,12 +2,12 @@
 title: WCF und ASP.NET-Web-API
 ms.date: 03/30/2017
 ms.assetid: 08ceded3-fd9a-4467-9715-c4cbd9c7228e
-ms.openlocfilehash: 460c2d6d3acfd857c3f11db313a2ebb894a14cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d805c09bef45932ba006a213343429ae7c9303df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192003"
 ---
 # <a name="wcf-and-aspnet-web-api"></a>WCF und ASP.NET-Web-API
 WCF ist das einheitliche Programmiermodell von Microsoft, mit dem dienstorientierte Anwendungen erstellt werden können. Es ermöglicht Entwicklern das Erstellen sicherer, zuverlässiger und transaktiver Lösungen für die plattformübergreifende Integration und bietet unfassende Interoperabilität mit vorhandenen Investitionen. [ASP.NET Web-API](https://www.asp.net/web-api) ist ein Framework, die HTTP-Dienste erstellen, die eine breit Palette von Clients gefächerte, einschließlich Browsern und mobilen Geräten erleichtert. Die ASP.NET-Web-API ist eine ideale Plattform zum Erstellen von RESTful-Anwendungen in .NET Framework. Die Informationen in diesem Thema sollen Sie dabei unterstützen, die für Ihre Anforderungen optimal geeignete Technologie zu finden.  
@@ -27,5 +27,6 @@ WCF ist das einheitliche Programmiermodell von Microsoft, mit dem dienstorientie
  Verwenden Sie WCF, um zuverlässige und sichere Webdienste erstellen, die über eine Vielzahl von Transporten zugegriffen werden kann. Verwenden Sie die ASP.NET-Web-API zum Erstellen HTTP-basierter Dienste, auf die von vielen verschiedenen Clients zugegriffen werden kann. Verwenden Sie die ASP.NET-Web-API, wenn Sie neue REST-Dienste entwerfen und erstellen. Obwohl WCF das Schreiben von REST-Diensten bis zu einem gewissen Grad unterstützt, bietet die ASP.NET-Web-API umfassendere REST-Unterstützung. Darüber hinaus werden zukünftige Optimierungen an REST-Funktionen in der ASP.NET-Web-API vorgenommen. Wenn Sie bei einem vorhandenen WCF-Dienst zusätzliche REST-Endpunkte verfügbar machen möchten, verwenden Sie WCF und <xref:System.ServiceModel.WebHttpBinding>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Was ist die Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)
 - [Wesentliche Windows Communication Foundation-Begriffe](../../../docs/framework/wcf/fundamental-concepts.md)

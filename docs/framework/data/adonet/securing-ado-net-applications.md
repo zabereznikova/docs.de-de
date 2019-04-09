@@ -2,12 +2,12 @@
 title: Sichern von ADO.NET-Anwendungen
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 7429393df980757e5fea326489d84cec8b6c131a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092240"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149382"
 ---
 # <a name="securing-adonet-applications"></a>Sichern von ADO.NET-Anwendungen
 Beim Schreiben von sicheren ADO.NET-Anwendungen gilt es nicht nur, häufige Fallstricke bei der Codierung zu umgehen, wie die Nichtvalidierung von Benutzereingaben. Eine Anwendung, die auf Daten zugreift, verfügt über viele mögliche Schwachstellen, über die ein Hacker vertrauliche Daten abrufen, manipulieren oder vernichten kann. Es ist daher unerlässlich, alle Sicherheitsaspekte zu verstehen, und zwar beginnend bei der Erstellung von Gefahrenmodellen während des Anwendungsentwurfs bis hin zur eigentlichen Bereitstellung der Anwendung und ihrem laufenden Betrieb.  
@@ -33,7 +33,7 @@ Beim Schreiben von sicheren ADO.NET-Anwendungen gilt es nicht nur, häufige Fall
  Beschreibt Verschlüsselungsmöglichkeiten für ADO.NET-Anwendungen.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [SQL Server Security (SQL Server-Sicherheit)](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
+ [SQL Server-Sicherheit](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  Beschreibt SQL Server-Sicherheitsfunktionen aus Entwicklersicht.  
   
  [Sicherheitsüberlegungen](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
@@ -52,5 +52,6 @@ Beim Schreiben von sicheren ADO.NET-Anwendungen gilt es nicht nur, häufige Fall
  Enthält Links zu externen Ressourcen, die online und in Druckversion verfügbar sind.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: aa3548ce8f785f7c8b1adddf54dde0cd07482749
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 988121bce1fd63c9560fb77fea6dedddd318c4ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712694"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168063"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Problembehandlung beim Erstellen von Komponenten und Steuerelementen
 Dieses Thema listet die folgenden allgemeinen Probleme auf, die beim Entwickeln von Komponenten und Steuerelementen auftreten. Weitere Informationen finden Sie unter [Programmieren mit Komponenten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
@@ -108,9 +108,10 @@ Dieses Thema listet die folgenden allgemeinen Probleme auf, die beim Entwickeln 
  Bei Verwendung von <xref:System.Drawing.ToolboxBitmapAttribute> um ein Symbol mit der benutzerdefinierten Komponente zu verknüpfen, wird die Bitmap nicht in der Toolbox für automatisch generierte Komponenten angezeigt. Laden Sie das Steuerelement mithilfe des Dialogfelds **Toolboxelemente auswählen** neu, um die Bitmap anzuzeigen. Weitere Informationen finden Sie unter [Vorgehensweise: Bereitstellen einer Toolboxbitmap für ein Steuerelement](how-to-provide-a-toolbox-bitmap-for-a-control.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](developing-windows-forms-controls-at-design-time.md)
 - [Exemplarische Vorgehensweise: Automatisches Füllen der Toolbox mit benutzerdefinierten Komponenten](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [Vorgehensweise: Testen Sie das Laufzeitverhalten eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
-- [Komponentenerstellung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/5dya64wy(v=vs.120))
+- [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+- [Erstellen von Komponenten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/5dya64wy(v=vs.120))
 - [Problembehandlung bei der Entwurfszeitentwicklung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))

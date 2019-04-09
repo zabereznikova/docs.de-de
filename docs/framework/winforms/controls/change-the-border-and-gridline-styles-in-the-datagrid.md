@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ändern Sie die Rahmen- und Rasterlinienstils im DataGridView-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Ändern des Rahmen- und Rasterlinienstils im DataGridView-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-ms.openlocfilehash: b4984dca6fb7dc8575b00758f0d61d9ff011e1ca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d24adb98c339f911d6bea0312bce4d4b4f198a61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224988"
 ---
-# <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Ändern Sie die Rahmen- und Rasterlinienstils im DataGridView-Steuerelement in Windows Forms
+# <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Ändern des Rahmen- und Rasterlinienstils im DataGridView-Steuerelement in Windows Forms
 Mit der <xref:System.Windows.Forms.DataGridView> -Steuerelement, können Sie die Darstellung von Rahmen und Gitternetzlinien auf die Verbesserung der benutzerfreundlichkeit des Steuerelements anpassen. Sie können die Farbe der Gitternetzlinien und die Steuerelement-Rahmenart zusätzlich die Rahmenarten für die Zellen innerhalb des Steuerelements zu ändern. Sie können auch andere Zelle Rahmenarten für die normalen Zellen Zeilenheaderzellen und Spaltenheaderzellen anwenden.  
   
 > [!NOTE]
@@ -57,6 +57,7 @@ Mit der <xref:System.Windows.Forms.DataGridView> -Steuerelement, können Sie die
 -   Verweise auf die Assemblys <xref:System?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType> und <xref:System.Drawing?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.BorderStyle>
 - <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A?displayProperty=nameWithType>

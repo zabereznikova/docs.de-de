@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b52b12df9953dbafaeebfe223313288de0e559b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143948"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost-Schnittstelle
 Enthält Methoden, die eine bestimmte Version der common Language Runtime (CLR) basierend auf ihrer Versionsnummer zurückgeben, alle installierten clrs, Listen Sie alle Laufzeiten, die in einem angegebenen Prozess geladen werden, ermitteln die CLR-Version, die zum Kompilieren einer Assembly, einen Prozess beenden mit einer sauberen Runtime beendet, und die legacy-API abfragebindung.  
@@ -57,5 +57,6 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+
+- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

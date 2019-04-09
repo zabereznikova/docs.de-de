@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: d540715c0b4c69b2981cc65f55b0fa950c5a4eaf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a6b63e5e48e64491e5f33e7aec4abf92ccf48708
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721241"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166399"
 ---
 # <a name="how-to-create-application-settings"></a>Vorgehensweise: Erstellen von Anwendungseinstellungen
 Mithilfe von verwaltetem Code können Sie neue Anwendungseinstellungen erstellen und diese an Eigenschaften für Ihr Formular oder die Steuerelemente Ihres Formulars binden, damit diese Einstellungen zur Laufzeit automatisch geladen und gespeichert werden.  
@@ -47,6 +47,7 @@ Mithilfe von verwaltetem Code können Sie neue Anwendungseinstellungen erstellen
  Der Standardeinstellungsanbieter (<xref:System.Configuration.LocalFileSettingsProvider>) speichert Informationen in Konfigurationsdateien als Nur-Text persistent. Auf diese Weise wird die Sicherheit für die Dateizugriffssicherheit eingeschränkt, die vom Betriebssystem für den aktuellen Benutzer bereitgestellt wird. Aus diesem Grund müssen die Informationen, die in Konfigurationsdateien gespeichert werden, sorgfältig ausgewählt werden. Häufig werden z. B. Anwendungseinstellungen zum Speichern von Verbindungszeichenfolgen verwendet, die auf den Datenspeicher der Anwendung zeigen. Allerdings sollten diese Zeichenfolgen aus Sicherheitsgründen keine Kennwörter enthalten. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter <xref:System.Configuration.SpecialSetting>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [Übersicht über Anwendungseinstellungen](application-settings-overview.md)

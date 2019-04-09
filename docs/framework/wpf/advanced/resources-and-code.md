@@ -11,18 +11,16 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: 12f9acccfc23364795cd18ef1da2ced5b442c6f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d36d30dd336bbe50b192b10a6a60d2c7e382adb8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367978"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137708"
 ---
 # <a name="resources-and-code"></a>Ressourcen und Code
 Diese Übersicht konzentriert sich darauf, wie auf [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Ressourcen zugegriffen werden kann oder wie sie mithilfe eines Codes erstellt werden können, anstatt mit [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]-Syntax. Weitere Informationen über die allgemeine Ressourcenverwendung und Ressourcen aus einer [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Syntaxperspektive finden Sie unter [XAML-Ressourcen](xaml-resources.md).  
-  
-  
-  
+
 <a name="accessing"></a>   
 ## <a name="accessing-resources-from-code"></a>Zugreifen auf Ressourcen aus dem Code  
  Die Schlüssel, die Ressourcen identifizieren, wenn sie über [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] festgelegt sind, werden auch verwendet, um bestimmte Ressourcen abrufen, wenn Sie die Ressource im Code anfordern. Die einfachste Möglichkeit, eine Ressource aus dem Code abzurufen, rufen Sie entweder ist die <xref:System.Windows.FrameworkElement.FindResource%2A> oder <xref:System.Windows.FrameworkElement.TryFindResource%2A> aus auf Frameworkebene-Objekte in der Anwendung. Der Verhaltensunterschiede zwischen diesen Methoden ist: Was geschieht, wenn der angeforderte Schlüssel nicht gefunden wird. <xref:System.Windows.FrameworkElement.FindResource%2A> löst eine Ausnahme aus; <xref:System.Windows.FrameworkElement.TryFindResource%2A> löst eine Ausnahme aus, aber gibt keine `null`. Jede Methode verwendet den Ressourcenschlüssel als Eingabeparameter und gibt ein lose typisiertes Objekt zurück. In der Regel ist der Ressourcenschlüssel eine Zeichenfolge, aber es gibt gelegentlich Objektressourcenverwendungen; mehr dazu finden Sie unter dem Abschnitt [Verwendung von Objekten als Schlüssel](#objectaskey). In der Regel wandeln Sie das zurückgegebene Objekt, durch die Eigenschaft, die Sie beim Anfordern der Ressourcen festlegen, in den erforderlichen Typ um. Die Suchlogik für die Coderessourcenauflösung ist identisch mit dem dynamischen [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Ressourcenverweisfall. Die Suche nach Ressourcen beginnt beim aufrufenden Element und wird anschließend bei aufeinanderfolgenden, übergeordneten Elementen in der logischen Struktur fortgesetzt. Die Suche wird in den Anwendungsressourcen, Designs und bei Bedarf in den Systemressourcen fortgesetzt. Eine Codeanforderung für eine Ressource wird Laufzeitänderungen in Ressourcenwörterbüchern ordnungsgemäß erfassen, die möglicherweise anschließend von diesem Ressourcenverzeichnis erfolgen, das von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aus geladen wurde, und auch für die Echtzeit-Systemressourcenänderungen.  
@@ -47,5 +45,6 @@ Diese Übersicht konzentriert sich darauf, wie auf [!INCLUDE[TLA#tla_winclient](
  Die meisten Ressourcenverwendungen werden den Schlüssel der Ressource als eine Zeichenfolge festlegen. Verschiedene [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Funktionen verwenden jedoch absichtlich keinen Zeichenfolgetyp, um Schlüssel anzugeben, stattdessen ist dieser Parameter ein Objekt. Die Fähigkeit, die Ressource mit einem Objekt zu verschlüsseln, wird vom [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Stil und der Designunterstützung verwendet. Die Stile in Designs, werden von den Standardstil für ein ansonsten nicht formatiertes Steuerelement, sind jeweils nach Argumentnamen geordnet sind die <xref:System.Type> des Steuerelements, das auf sie angewendet werden soll. Die Verschlüsselung nach dem Typ bietet einen zuverlässigen Suchmechanismus, der in den Standardinstanzen jedes Steuerelementtyps funktioniert, und der Typ kann durch Reflektion ermittelt und für die Formatierung abgeleiteter Klassen verwendet werden, obwohl der abgeleitete Typ andernfalls kein Standardformat hat. Können Sie angeben, ein <xref:System.Type> Schlüssel für eine Ressource, die in definierten [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] mithilfe der [X: Type-Markuperweiterung](../../xaml-services/x-type-markup-extension.md). Ähnliche Erweiterungen sind für andere Schlüsselverwendungen vorhanden, die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Funktionen, wie z.B. [ComponentResourceKey-Markuperweiterungen](componentresourcekey-markup-extension.md), unterstützen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [XAML-Ressourcen](xaml-resources.md)
 - [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)

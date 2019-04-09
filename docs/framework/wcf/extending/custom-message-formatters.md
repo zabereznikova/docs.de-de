@@ -2,12 +2,12 @@
 title: Benutzerdefinierte Nachrichtenformatierung
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-ms.openlocfilehash: e1633bdd3959ba812251ef1b78bcd0e83b2060c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af1596c65fc87a68bc3dc2ab5ab2d82133e0fed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196241"
 ---
 # <a name="custom-message-formatters"></a>Benutzerdefinierte Nachrichtenformatierung
 Der Inhalt einer Nachricht weist häufig das XML-Format auf, also kein gängiges Format für eine Anwendung. Anwendungen bearbeiten Objekte, indem sie ihre Eigenschaften abrufen und festlegen. Windows Communication Foundation (WCF) verwendet die *Datenvertrag* konvertieren eine <xref:System.ServiceModel.Channels.Message> Objekt in ein Objekt, das von einer Anwendung auf einfache Weise verarbeitet. Diese Prozesse werden als Serialisierung und Deserialisierung bezeichnet. Beachten Sie, dass diese Begriffe auch verwendet werden, um die Serialisierung und Deserialisierung einer Transportebene in das bzw. aus dem Nachrichtensendeformat zu beschreiben. Dabei handelt es sich um einen nicht verwandten Prozess.  
@@ -33,6 +33,7 @@ Der Inhalt einer Nachricht weist häufig das XML-Format auf, also kein gängiges
  Um die benutzerdefinierte Formatierung in die Dienstanwendung einzufügen, müssen Sie das <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>-Objekt der <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A>-Eigenschaft zuweisen, indem Sie ein Vorgangsverhalten verwenden. Weitere Informationen zu Verhalten finden Sie unter [konfigurieren und Erweitern der Laufzeit mit Verhalten](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>
 - [Konfigurieren und Erweitern der Laufzeit mit Verhalten](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

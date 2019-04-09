@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: ff68a8bee17b55f7865d6f6c289ba514729be70d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093442"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155934"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Verwenden eines Datendiensts in einer Clientanwendung (WCF Data Services)
 Sie können auf zugreifen, einen Dienst, der verfügbar macht eine [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed zu, indem Sie einen URI auf einen Webbrowser angeben. Der URI stellt die Adresse einer Ressource bereit, und Anforderungsnachrichten werden an diese Adressen gesendet, um auf die zugrunde liegenden Daten, die die Ressource darstellt, zuzugreifen oder um diese zu ändern. Der Browser gibt einen HTTP GET-Befehl aus und gibt die angeforderte Ressource als [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed zurück. Weitere Informationen finden Sie unter [Zugriff auf den Dienst über einen Webbrowser](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -21,7 +21,7 @@ Sie können auf zugreifen, einen Dienst, der verfügbar macht eine [!INCLUDE[ssO
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt die Gewährleistung der Interoperabilität zwischen Diensten, die verfügbar machen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Feeds bzw. Anwendungen, die nutzen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -feeds. Anwendungen Zugriff auf und Ändern von Daten in eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Diensts durch Senden von Anforderungsnachrichten einer bestimmten HTTP-Aktion und mit einem URI, der eine Entitätsressource adressiert, für die die Aktion ausgeführt werden soll. Erforderliche Entitätsdaten werden als speziell codierte Nutzlast im Nachrichtentext angegeben.  
   
 ### <a name="http-actions"></a>HTTP-Aktionen  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt die folgenden HTTP-Aktionen zum Erstellen, Lesen, Aktualisieren und Löschen von Entitätsdaten, die die adressierte Ressource darstellt:  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt die folgenden HTTP-Aktionen zum Erstellen, lesen, aktualisieren und Löschen von Entitätsdaten, die die adressierte Ressource darstellt:  
   
 -   **HTTP GET** – Dies ist die Standardaktion, wenn eine Ressource über einen Browser zugegriffen wird. In der Anforderungsnachricht wird keine Nutzlast angegeben, und es wird eine Antwortmethode mit einer Nutzlast zurückgegeben, die die angeforderten Daten enthält.  
   
@@ -52,5 +52,6 @@ Sie können auf zugreifen, einen Dienst, der verfügbar macht eine [!INCLUDE[ssO
  Es stehen Programmierbibliotheken zur Verfügung, Sie verwenden können, nutzen eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in anderen Arten von Clientanwendungen. Weitere Informationen finden Sie unter den [OData SDK](https://go.microsoft.com/fwlink/?LinkId=185796).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Zugreifen auf Datendienstressourcen](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
 - [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

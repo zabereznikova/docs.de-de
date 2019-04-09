@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e367fc772c5b673795c8229f9084fac850d53a8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b16cc6a899b1ad5c814c29a93c6125250ca8186d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474792"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133574"
 ---
 # <a name="iclrpolicymanagersettimeout-method"></a>ICLRPolicyManager::SetTimeout-Methode
 Legt einen Timeoutwert für den angegebenen Vorgang fest.  
@@ -73,6 +73,7 @@ HRESULT SetTimeout (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [EClrOperation-Enumeration](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
 - [ICLRControl-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRPolicyManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)

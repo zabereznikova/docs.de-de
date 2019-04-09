@@ -2,12 +2,12 @@
 title: <mexHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: e50b2e1f-9668-41a5-8077-dee7abff9f0f
-ms.openlocfilehash: 9d37a4918101b18c3002f2dcb926b9a03e0057a2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1aa9512c3d0d52f8cc3c7bd7b82bcfd37c418ce7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151241"
 ---
 # <a name="mexhttpbinding"></a>\<mexHttpBinding>
 Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Nachrichtenaustausch (WS-MEX) über HTTP verwendet wird.  
@@ -55,6 +55,7 @@ Gibt die Einstellungen für eine Bindung an, die für den WS-MetadataExchange-Na
  Diese Bindung ist im Grunde eine `WSHttpBinding`-Bindung mit deaktivierter Sicherheit. Sie unterstützt die meisten Metadatenanforderungen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Description.MetadataExchangeBindings.CreateMexHttpBinding%2A>
 - <xref:System.ServiceModel.Configuration.MexHttpBindingElement>
 - [Vorgehensweise: Veröffentlichen von Metadaten für einen Dienst mithilfe einer Konfigurationsdatei](../../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

@@ -2,15 +2,15 @@
 title: Erstellen von WCF-Diensten für ASP.NET AJAX
 ms.date: 03/30/2017
 ms.assetid: 04c0402c-e617-4ba5-aedf-d17692234776
-ms.openlocfilehash: d6d00b5b8839d519ffa3609eafffd4b086689449
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f98a27197115c56686d593105f438fee633f34a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174147"
 ---
 # <a name="creating-wcf-services-for-aspnet-ajax"></a>Erstellen von WCF-Diensten für ASP.NET AJAX
-Microsoft ASP.NET AJAX ermöglicht es Ihnen, zügig Webseiten zu erstellen, die mit reaktionsschnellen und vertrauten Benutzeroberflächenelementen eine hohe Benutzerfreundlichkeit bieten. ASP.NET AJAX bietet Bibliotheken mit Clientskripts, in denen browserübergreifende ECMAScript (JavaScript)- und Dynamic&#160;HTML (DHTML)-Technologien integriert sind. Außerdem sind diese Funktionen in die serverbasierte ASP.NET&#160;2.0-Entwicklungsplattform integriert. Durch die Verwendung von ASP.NET AJAX können Sie die Benutzerfreundlichkeit und die Effizienz Ihrer Webanwendungen verbessern.  
+Microsoft ASP.NET AJAX ermöglicht es Ihnen, zügig Webseiten zu erstellen, die mit reaktionsschnellen und vertrauten Benutzeroberflächenelementen eine hohe Benutzerfreundlichkeit bieten. ASP.NET AJAX bietet Bibliotheken mit Clientskripts, in denen browserübergreifende ECMAScript (JavaScript)- und Dynamic&amp;#160;HTML (DHTML)-Technologien integriert sind. Außerdem sind diese Funktionen in die serverbasierte ASP.NET&amp;#160;2.0-Entwicklungsplattform integriert. Durch die Verwendung von ASP.NET AJAX können Sie die Benutzerfreundlichkeit und die Effizienz Ihrer Webanwendungen verbessern.  
   
  ASP.NET AJAX besteht aus Clientskriptbibliotheken und Serverkomponenten, die zu einem robusten Entwicklungsframework integriert sind. So greifen Sie über eine ASP.NET-Seite auf einen Dienst zu: Sobald die Dienst-URL des ASP.NET Script Manager-Steuerelements auf der Seite hinzugefügt wurde, können Dienstvorgänge anhand von JavaScript-Code aufgerufen werden. Dieser Code gleicht einem normalen JavaScript-Funktionsaufruf. Finden Sie unter [Learn ASP.NET AJAX](https://go.microsoft.com/fwlink/?LinkId=186475) zur Verwendung von Webdiensten innerhalb des AJAX-Framework.  
   
@@ -18,7 +18,7 @@ Microsoft ASP.NET AJAX ermöglicht es Ihnen, zügig Webseiten zu erstellen, die 
   
  Wenn Sie Visual Studio verwenden, können Sie eine vorgefertigte Vorlage für AJAX-aktivierten WCF-Dienste zur Verfügung, in der **neues Element hinzufügen** Dialogfeld bei der Arbeit mit ASP.NET-Websites oder Webanwendungen.  
   
- Wenn Sie die Visual&#160;Studio-Vorlagen nicht verwenden, gibt es zwei Möglichkeiten, einen ASP.NET AJAX-Endpunkt zu erstellen:  
+ Wenn Sie die Visual&amp;#160;Studio-Vorlagen nicht verwenden, gibt es zwei Möglichkeiten, einen ASP.NET AJAX-Endpunkt zu erstellen:  
   
 -   Erstellen Sie den Endpunkt mithilfe dynamischer Hostaktivierung, ohne eine Konfiguration zu verwenden. Dies ist der einfachste Ansatz, wenn Sie mit dem WCF-Konfigurationssystem nicht vertraut sind. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen ein ASP.NET AJAX-Endpunkts ohne Verwendung einer Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md).  
   
@@ -58,7 +58,8 @@ Microsoft ASP.NET AJAX ermöglicht es Ihnen, zügig Webseiten zu erstellen, die 
  AJAX-Endpunkte in WCF können auch ohne Verwendung des ASP.NET AJAX-Frameworks verwendet werden. Hierzu müssen einen Überblick über die Unterstützungsarchitektur der AJAX-Unterstützung in WCF. Eine Erläuterung dieser Architektur, finden Sie unter [WCF-HTTP-Objekt Webprogrammiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md). Ein Codebeispiel, das diesen Ansatz veranschaulicht, finden Sie unter den [AJAX-Dienst mit JSON und XML](../../../../docs/framework/wcf/samples/ajax-service-with-json-and-xml-sample.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [Vorgehensweise: Hinzufügen eines ASP.NET AJAX-Endpunkts ohne Verwendung einer Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-add-an-aspnet-ajax-endpoint-without-using-configuration.md)
 - [Vorgehensweise: Verwenden der Konfiguration zum Hinzufügen eines ASP.NET AJAX-Endpunkts](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
-- [Vorgehensweise: Wählen Sie zwischen HTTP POST- und GET HTTP-Anforderungen für ASP.NET AJAX-Endpunkte](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)
+- [Vorgehensweise: Auswählen zwischen HTTP POST- und HTTP GET-Anforderungen für ASP.NET AJAX-Endpunkte](../../../../docs/framework/wcf/feature-details/http-post-and-http-get-requests-for-aspnet-ajax-endpoints.md)

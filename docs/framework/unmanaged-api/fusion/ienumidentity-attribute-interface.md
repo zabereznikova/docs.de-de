@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ae940946c56cbc858690cccce61597d0016e40c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d725228f2a7359d415673fdcb90d0cabae1a40be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175525"
 ---
 # <a name="ienumidentityattribute-interface"></a>IEnumIDENTITY_ATTRIBUTE-Schnittstelle
 Dient als ein Enumerator für die Attribute des Codeobjekts im aktuellen Bereich.  
@@ -44,4 +44,5 @@ Dient als ein Enumerator für die Attribute des Codeobjekts im aktuellen Bereich
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], Transform property
 - rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
-ms.openlocfilehash: 990c82b4844ce3ca7f5b553b180280b6b37496ca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a83f3b1c046e94faa8816e8c310f438b4711048a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162999"
 ---
 # <a name="how-to-transform-a-brush"></a>Vorgehensweise: Transformieren eines Pinsels
 Dieses Beispiel zeigt, wie Sie transformieren <xref:System.Windows.Media.Brush> Objekte mithilfe von zwei Transformationseigenschaften: <xref:System.Windows.Media.Brush.RelativeTransform%2A> und <xref:System.Windows.Media.Brush.Transform%2A>.  
@@ -45,6 +45,7 @@ Dieses Beispiel zeigt, wie Sie transformieren <xref:System.Windows.Media.Brush> 
  Das vollständige Beispiel finden Sie unter [Beispiel für Pinsel](https://go.microsoft.com/fwlink/?LinkID=159973). Weitere Informationen über Pinsel finden Sie unter [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](painting-with-solid-colors-and-gradients-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Pinseltransformationen](brush-transformation-overview.md)
 - [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](painting-with-solid-colors-and-gradients-overview.md)
 - [Übersicht über Transformationen](transforms-overview.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 0ba4ca2589a61a9331308a816da6ddb5276adbc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cb06aa6bfa960a493090b67c8baa4d7b3b46756a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703659"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149083"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Exemplarische Vorgehensweise: Ausführen eines Vorgangs im Hintergrund
 Gibt es einen Vorgang, der bis zu seinem Abschluss eine lange Zeit in Anspruch nimmt, und Sie möchten keine Verzögerungen in der Benutzeroberfläche verursachen, können Sie die <xref:System.ComponentModel.BackgroundWorker>-Klasse dazu verwenden, den Vorgang über einen anderen Thread auszuführen.  
@@ -32,10 +32,10 @@ Gibt es einen Vorgang, der bis zu seinem Abschluss eine lange Zeit in Anspruch n
   
 1.  Mit dem Formular in der Windows Forms-Designer aktiv ist, ziehen Sie zwei <xref:System.Windows.Forms.Button> -Steuerelemente aus der **Toolbox** auf das Formular, und legen Sie dann die `Name` und <xref:System.Windows.Forms.Control.Text%2A> Eigenschaften der Schaltflächen entsprechend der folgenden Tabelle.  
   
-    |Schaltfläche|name|Text|  
+    |Schaltfläche|Name|Text|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**Starten**|  
-    |`button2`|`cancelBtn`|**Kündigung**|  
+    |`button2`|`cancelBtn`|**Abbrechen**|  
   
 2.  Öffnen der **Toolbox**, klicken Sie auf die **Komponenten** Registerkarte, und ziehen Sie dann die <xref:System.ComponentModel.BackgroundWorker> -Komponente auf das Formular.  
   
@@ -101,6 +101,7 @@ Gibt es einen Vorgang, der bis zu seinem Abschluss eine lange Zeit in Anspruch n
 -   Implementieren Sie eine Klasse, die das asynchrone Muster für Komponenten unterstützt. Weitere Informationen finden Sie unter [Implementieren des ereignisbasierten asynchronen Entwurfsmusters](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
 - [Vorgehensweise: Implementieren eines Formulars, das eine Hintergrundoperation verwendet](how-to-implement-a-form-that-uses-a-background-operation.md)

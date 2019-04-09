@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - behavior [WCF], service performance
 ms.assetid: f9dc120c-dc24-49d5-930e-b22f5bc73423
-ms.openlocfilehash: 77fe2d3bb7f0e9c9d2e2defd4aa8c0053799406b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e42f44b5fa103d5c083bdce3086b6499c5bb3673
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211516"
 ---
 # <a name="using-servicethrottlingbehavior-to-control-wcf-service-performance"></a>Verwenden von ServiceThrottlingBehavior zur Steuerung der Leistung des WCF-Diensts
 Mit der <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>-Klasse werden Eigenschaften verfügbar gemacht, mit denen die Anzahl der Instanzen oder Sitzungen begrenzt wird, die auf Anwendungsebene erstellt werden dürfen. Mit diesem Verhalten können Sie die Leistung Ihrer Windows Communication Foundation (WCF)-Anwendung optimieren.  
@@ -28,5 +28,6 @@ Mit der <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>-Klasse 
  Ausführliche Informationen finden Sie unter <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentCalls%2A> und <xref:System.ServiceModel.Description.ServiceThrottlingBehavior.MaxConcurrentInstances%2A>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
 - <xref:System.ServiceModel.NetTcpBinding.MaxConnections%2A>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, endpoints
 - Windows Communication Foundation, configuration
 ms.assetid: 58532b6d-4eea-4a4f-854f-a1c8c842564d
-ms.openlocfilehash: e3954e90ed091d03656f25ce1a9b1ff35ffaa9ea
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 314409f5ac4ecb4b18f3b8d3f2aeb08a507ec9e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260724"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207265"
 ---
 # <a name="custom-bindings"></a>Benutzerdefinierte Bindungen
 Verwenden Sie die <xref:System.ServiceModel.Channels.CustomBinding>-Klasse, wenn eine der vom System bereitgestellten Bindungen die Anforderungen für Ihren Dienst nicht erfüllt. Alle Bindungen werden anhand einer geordneten Menge von Bindungselementen erstellt. Benutzerdefinierte Bindungen können alleine aus systemeigenen Bindungselementen erstellt werden oder auch benutzerspezifische Bindungselemente umfassen. So können Sie mithilfe von benutzerdefinierten Bindungselementen beispielsweise die Verwendung neuer Transporte oder Encoder an einem Dienstendpunkt aktivieren. Arbeitsbeispiele finden Sie unter [Beispiele für die benutzerdefinierte Bindung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751479(v=vs.90)). Weitere Informationen finden Sie unter [ \<CustomBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md).  
@@ -73,6 +73,7 @@ Verwenden Sie die <xref:System.ServiceModel.Channels.CustomBinding>-Klasse, wenn
  Zusätzlich können Sie Ihre eigenen Bindungselemente definieren und diese zwischen den vorangehenden definierten Ebenen einsetzen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die Endpunkterstellung](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)

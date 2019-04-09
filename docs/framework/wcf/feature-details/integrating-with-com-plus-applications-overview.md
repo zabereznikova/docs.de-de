@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 708c23f80dc3ed0a5b134295a16a20747d555be4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153243"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Übersicht über die Integration von COM+-Anwendungen
 Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Erstellen von verteilten Anwendungen. Wenn Sie bereits komponentenbasierte Anwendungslogik, die in COM+ gehostet verwenden, können Sie WCF, erweitern Sie Ihre vorhandenen Logik, anstatt sie neu zu schreiben. Ein häufiges Szenario ist das Verfügbarmachen vorhandener COM+- oder Enterprise Services-Geschäftslogik über Webdienste.  
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Ers
 ### <a name="limited-object-reference-support"></a>Beschränkte Objektverweisunterstützung  
  Da einige bereitgestellte COM+-Komponenten Objekte als Verweisparameter verwenden, wie Rückgabe eines ADO-Recordset-Objekts, schließt die COM+-Integration beschränkte Unterstützung für Objektverweisparameter ein. Die Unterstützung ist auf Objekte beschränkt, die die `IPersistStream`-COM-Schnittstelle implementieren. Sie schließt ADO-Recordset-Objekte ein und kann für anwendungsspezifische COM-Objekte implementiert werden.  
   
- Zum Aktivieren dieser Unterstützung stellt das Tool ComSvcConfig.exe der **Allowreferences** Switch, der den regulären methodensignaturparameter deaktiviert und stellt sicher, dass das Tool ausgeführt wird, um sicherzustellen, dass Objektverweisparameter nicht verwendet werden . Darüber hinaus müssen die übergebenen Objekttypen benannt und innerhalb des <`persistableTypes`>-Konfigurationselements identifiziert werden, das ein untergeordnetes Elements des <`comContract`>-Elements ist.  
+ Zum Aktivieren dieser Unterstützung stellt das Tool ComSvcConfig.exe der **Allowreferences** Switch, der den regulären methodensignaturparameter deaktiviert und stellt sicher, dass das Tool ausgeführt wird, um sicherzustellen, dass Objektverweisparameter nicht verwendet werden . Darüber hinaus die Objekttypen, die Sie als Parameter übergeben müssen benannt werden und innerhalb von identifiziert die <`persistableTypes`> Konfigurationselement, das ein untergeordnetes Element der <`comContract`> Element.  
   
  Wenn diese Funktion verwendet wird, nutzt der COM+-Integrationsdienst die `IPersistStream`-Schnittstelle zum Serialisieren oder Deserialisieren der Objektinstanz. Wenn die Objektinstanz `IPersistStream` nicht unterstützt, wird eine Ausnahme ausgelöst.  
   
@@ -102,4 +102,5 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Ers
  Die COM+-Funktionen zur Prozesswiederverwendung können für integrierte Anwendungen nicht verwendet werden. Wenn die Anwendung für die Verwendung der Prozesswiederverwendung konfiguriert ist und die Komponenten in einem COM+-gehosteten Prozess ausgeführt werden, tritt beim Start des Dienstes ein Fehler auf. Diese Anforderung schließt Dienste nicht ein, die den Modus „Prozessintern im Internet gehostet“ verwenden, da die Einstellungen für die Prozesswiederverwendung nicht angewendet werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die Integration von COM-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

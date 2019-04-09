@@ -2,12 +2,12 @@
 title: <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 120b3f37-7331-4816-b712-d6aab39655a4
-ms.openlocfilehash: 6b40bd6edd27f4c3b4b530387417311e1f93a921
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6bdf56e3d2084dec8d44e1c4d3f0c1e50b711b92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153139"
 ---
 # <a name="issuedtokenparameters"></a>\<issuedTokenParameters>
 Gibt die Parameter für einen Sicherheitstoken an, der in einem verbundenen Sicherheitsszenario ausgegeben wird.  
@@ -71,6 +71,7 @@ Gibt die Parameter für einen Sicherheitstoken an, der in einem verbundenen Sich
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Gibt die Sicherheitsoptionen für eine benutzerdefinierte Bindung an.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.IssuedTokenParameters%2A>

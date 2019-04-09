@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Timelines [WPF], description
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
-ms.openlocfilehash: 83f87e911d9d5412eaba1eb88aea74b9325bc899
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bdae1689ffeb8c54d756b9debbd26d57a052892d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351625"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198789"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>Vorgehensweise: Festlegen einer Dauer für eine Animation
 Ein <xref:System.Windows.Media.Animation.Timeline> stellt einen Zeitabschnitt und die Länge dieses Abschnitts sich nach der Zeitachse richtet <xref:System.Windows.Duration>. Wenn eine <xref:System.Windows.Media.Animation.Timeline> Erreichen des Endes des seine Dauer, stoppt Sie die Wiedergabe. Wenn die <xref:System.Windows.Media.Animation.Timeline> untergeordnete Zeitachsen, hat sie die Wiedergabe ebenfalls beendet. Bei einer Animation die <xref:System.Windows.Duration> gibt an, wie lange die Animation einen Übergang vom Startwert zum Endwert benötigt.  
@@ -24,5 +24,6 @@ Ein <xref:System.Windows.Media.Animation.Timeline> stellt einen Zeitabschnitt un
  [!code-xaml[timingbehaviors_snip#DurationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/DurationExample.xaml#durationexamplewholepage)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Duration>
 - [Übersicht über Animationen](animation-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente'
+title: 'Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: 5713bc9fa02e6122cc42348160dbe9315e023bc4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fefd322afb938453ec1ea23e8ff6de9f9ae2a851
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708001"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141634"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente
 Ein *Zugriffsschlüssel* ist ein unterstrichenes Zeichen im Text eines Menüs, Menüelement oder die Bezeichnung eines Steuerelements wie einer Schaltfläche. Zusammen mit einer Zugriffstaste kann der Benutzer "eine Schaltfläche klicken Sie auf" durch Drücken der ALT-Taste in Kombination mit dem vordefinierten Zugriffsschlüssel. Angenommen, eine Schaltfläche eine Prozedur zum Drucken eines Formulars ausführt und daher seine `Text` -Eigenschaftensatz auf "Print", ein kaufmännisches und-Zeichen vor der Buchstaben "P" den Buchstaben "P" in den Text der Schaltfläche unterstrichen werden, zur Laufzeit bewirkt, dass. Der Benutzer kann den Befehl mit der Schaltfläche durch Drücken von ALT + P verknüpften ausführen. Sie keine Zugriffstaste für ein Steuerelement, die keinen Fokus erhalten kann.  
   
 ### <a name="to-create-an-access-key-for-a-control"></a>Um einen Zugriffsschlüssel für ein Steuerelement zu erstellen.  
@@ -53,7 +53,8 @@ Ein *Zugriffsschlüssel* ist ein unterstrichenes Zeichen im Text eines Menüs, M
     >  Wenn ein kaufmännisches und-Zeichen in einer Beschriftung einschließen möchten, ohne eine Tastenkombination erstellen, umfassen zwei kaufmännische und-Zeichen (& &). Ein einzelnes kaufmännisches und-Zeichen in der Beschriftung angezeigt, und es werden keine Zeichen unterstrichen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.Button>
-- [Vorgehensweise: Reagieren Sie auf eine Windows Forms-Schaltfläche geklickt](how-to-respond-to-windows-forms-button-clicks.md)
-- [Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Vorgehensweise: Reagieren auf das Anklicken von Schaltflächen in Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Vorgehensweise: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Textes](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

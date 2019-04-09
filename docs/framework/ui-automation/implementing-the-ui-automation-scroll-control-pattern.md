@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-ms.openlocfilehash: 8efbe02098041b2037da94925e56244a28895e0b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: bb473b7f10aa400dc42303e1acc15c2bdcd34516
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677512"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154530"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>Implementieren des Scroll-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -48,14 +48,14 @@ Beispiel für ein Bildlaufsteuerelement, das keine Bildlaufleisten verwendet
   
 |Erforderliche Member|Memberart|Hinweise|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|Methode|Keine|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|Methode|Keiner|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|Methode|Keiner|  
   
  Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.  
   
@@ -65,12 +65,13 @@ Beispiel für ein Bildlaufsteuerelement, das keine Bildlaufleisten verwendet
   
 |Ausnahmetyp|Bedingung|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> löst diese Ausnahme aus, wenn ein Steuerelement <xref:System.Windows.Automation.ScrollAmount.SmallIncrement> -Werte ausschließlich für horizontale oder vertikale Bildläufe unterstützt, aber ein <xref:System.Windows.Automation.ScrollAmount.LargeIncrement> -Wert übergeben wird.|  
-|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> löst diese Ausnahme aus, wenn ein Wert, der nicht in einen Double-Wert konvertiert werden kann, übergeben wird.|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> löst diese Ausnahme aus, wenn ein Wert größer 100 oder kleiner 0 übergeben wird (außer bei -1, was <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>entspricht).|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> löst diese Ausnahme aus, wenn ein Steuerelement unterstützt <xref:System.Windows.Automation.ScrollAmount.SmallIncrement> -Werte ausschließlich für horizontales oder vertikales scrollen, aber ein <xref:System.Windows.Automation.ScrollAmount.LargeIncrement> Wert übergeben.|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> löst diese Ausnahme aus, wenn ein Wert, der in einen Double-Wert konvertiert werden, kann nicht übergeben wird.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> löst diese Ausnahme aus, wenn ein Wert größer als 100 oder kleiner als 0 übergeben wird (mit Ausnahme von-1 entspricht <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>).|  
 |<xref:System.InvalidOperationException>|Sowohl <xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> als auch <xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> lösen diese Ausnahme aus, wenn versucht wird, in eine nicht unterstützte Richtung zu scrollen.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

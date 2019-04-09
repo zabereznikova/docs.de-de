@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: f909b987da31a0a4af605d603d1c7b7a35615f19
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151501"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation-Datenschutzinformationen
 Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulich zu behandeln. Bei der Erstellung einer Anwendung mithilfe von Windows Communication Foundation (WCF), Version 3.0, kann Ihre Anwendung Datenschutz der Endbenutzer beeinträchtigen. Die Anwendung erfasst z. B. unter Umständen explizit Kontaktinformationen des Benutzers oder fordert Informationen an und sendet diese über das Internet an Ihre Website. Wenn Sie Microsoft-Technologie in Ihre Anwendung einbetten, kann sich das Verhalten dieser Technologie ebenfalls auf den Datenschutz auswirken. WCF sendet nicht an Microsoft aus Ihrer Anwendung Informationen, sofern Ihnen oder dem Endbenutzer Sie uns senden möchten.  
@@ -40,14 +40,14 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
 -   Bei der SOAP-Nachrichtensicherheit erfolgt die Authentifizierung durch Anmeldeinformationen wie Benutzername/Kennwörter, X.509-Zertifikate, Kerberos-Tickets und SAML-Token, die alle je nach Aussteller persönliche Daten enthalten können.  
   
--   Bei der Transportsicherheit erfolgt die Authentifizierung durch herkömmliche Transportauthentifizierungsmechanismen wie HTTP-Authentifizierungsschemas (Basic, Digest, Negotiate, Integrierte Windows-Authentifizierung, NTLM, Keine, Anonym) und Formularauthentifizierung.  
+-   Bei der Transportsicherheit erfolgt die Authentifizierung durch herkömmliche Transportauthentifizierungsmechanismen wie HTTP-Authentifizierungsschemas (Basic, Hashwert, Negotiate, Integrierte Windows-Authentifizierung, NTLM, Keine, Anonym) und Formularauthentifizierung.  
   
  Die Authentifizierung kann zu einer sicheren Sitzung zwischen den kommunizierenden Endpunkten führen. Die Sitzung wird durch eine GUID identifiziert, die über die Lebensdauer der Sicherheitssitzung reicht. Die folgende Tabelle zeigt, welche Elemente wo gespeichert werden.  
   
 |Daten|Speicher|  
 |----------|-------------|  
 |Präsentationsanmeldeinformationen, z. B. Benutzername, X.509-Zertifikate, Kerberos-Token und Verweise auf Anmeldeinformationen.|Standardmäßige Windows-Verwaltungsmechanismen für Anmeldeinformationen, z. B. der Windows-Zertifikatspeicher.|  
-|Benutzermitgliedschaftsinformationen, z. B. Benutzernamen und Kennwörter.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Mitgliedschaftsanbieter.|  
+|Benutzermitgliedschaftsinformationen, z. B. Benutzernamen und Kennwörter.|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Mitgliedschaftsanbieter.|  
 |Identitätsinformationen über den Dienst zum Authentifizieren des Diensts gegenüber Clients.|Endpunktadresse des Diensts.|  
 |Aufruferdaten.|Überwachungsprotokolle.|  
   
@@ -61,9 +61,9 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  Bei der Transaktionsweitergabe verwendete Transaktionsheader enthalten möglicherweise Transaktions-IDs oder Eintragung-IDs, die GUIDs sind.  
   
- Das Tansaktionsfeature verwendet den MSDTC (Microsoft Distributed Transaction Coordinator)-Transaktions-Manager (eine Windows-Komponente) zum Verwalten des Transaktionszustands. Standardmäßig sind Kommunikationen zwischen Transaktions-Managern verschlüsselt. Transaktions-Manager protokollieren möglicherweise Endpunktverweise, Transaktions-IDs und Eintragung-IDs als Teil ihres permanenten Zustands. Die Lebensdauer dieses Zustands wird von der Lebensdauer der Protokolldatei des Transaktions-Managers bestimmt. Der MSDTC-Dienst besitzt dieses Protokoll und behält es bei.  
+ Das Transaktionsfeature verwendet den MSDTC (Microsoft Distributed Transaction Coordinator)-Transaktions-Manager (eine Windows-Komponente) zum Verwalten des Transaktionszustands. Standardmäßig sind Kommunikationen zwischen Transaktions-Managern verschlüsselt. Transaktions-Manager protokollieren möglicherweise Endpunktverweise, TransaktionsIDs und Eintragung-IDs als Teil ihres permanenten Zustands. Die Lebensdauer dieses Zustands wird von der Lebensdauer der Protokolldatei des Transaktions-Managers bestimmt. Der MSDTC-Dienst besitzt dieses Protokoll und behält es bei.  
   
- Die Transaktionsfunktion implementiert die Standards WS-Coordination und WS-Atomic Transaction.  
+ Die Transaktionsfunktion implementiert die Standards WS-Coordination und WS-Atomic-Transaktion.  
   
 ## <a name="reliable-sessions"></a>Zuverlässige Sitzungen  
  Zuverlässige Sitzungen in WCF bieten die Übertragung von Nachrichten an, wenn Transport- oder Vermittler Fehler auftreten. Sie bieten auch dann genau eine Übertragung von Nachrichten, wenn die Verbindung zum zugrunde liegenden Transport unterbrochen wird (z. B. eine TCP-Verbindung in einem drahtlosen Netzwerk) oder eine Nachricht verloren geht (ein HTTP-Proxy verwirft eine aus- oder eingehende Nachricht). Zuverlässige Sitzungen heben außerdem die Neuordnung von Nachrichten auf (z. B. beim Multipfad-Routing), wodurch die Reihenfolge beibehalten wird, in der die Nachrichten gesendet wurden.  
@@ -77,7 +77,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
   
  Das Feature für in der Warteschlange stehende Kanäle fügt einer Nachricht keine Header hinzu. Es erstellt stattdessen eine Message Queuing-Nachricht mit entsprechenden Einstellungen und ruft Message Queuing-Methoden zum Platzieren der Nachricht in die Message Queuing-Warteschlange auf. Message Queuing ist eine in Windows enthaltene optionale Komponente.  
   
- Durch dieses Feature werden auf dem Computer des Endbenutzers keine Informationen beibehalten, da es Message Queuing als Warteschlangeninfrastruktur verwendet.  
+ Durch diese Funktion werden auf dem Computer des Endbenutzers keine Informationen beibehalten, da es Message Queuing als Warteschlangeninfrastruktur verwendet.  
   
 ## <a name="com-integration"></a>COM+-Integration  
  Diese Funktion schließt vorhandene COM- und COM+-Funktionen zum Erstellen von Diensten, die mit WCF-Diensten kompatibel sind. Diese Funktion verwendet keine bestimmten Header, und es behält keine Daten auf dem Computer des Endbenutzers bei.  
@@ -362,7 +362,7 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
  Bei aktivierter Nachrichtenprotokollierung sind persönliche Informationen in anwendungsspezifischen Headern und Textdaten unter Umständen in den Protokollen sichtbar. Der Anwendungsbereitsteller ist für das Festlegen der ACLs für die Konfigurations- und Protokolldateien verantwortlich. Er kann auch die Protokollierung deaktivieren, wenn diese Informationen nicht sichtbar sein sollen, oder diese Informationen aus den Protokolldateien herausfiltern.  
   
 ### <a name="service-model-tracing"></a>Dienstmodell-Ablaufverfolgung  
- Die Dienstmodell-Ablaufverfolgungsquelle (<xref:System.ServiceModel>) aktiviert die Ablaufverfolgung von mit der Nachrichtenverarbeitung verknüpften Aktivitäten und Ereignissen. Dieses Feature verwendet die .NET Framework-Diagnosefunktionalität von <xref:System.Diagnostics>. Wie bei der <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>-Eigenschaft können der Speicherort und die ACL mit den Konfigurationsdateien der .NET Framework-Anwendung vom Benutzer konfiguriert werden. Wie bei der Nachrichtenprotokollierung wird der Speicherort der Datei immer konfiguriert, wenn der Administrator die Ablaufverfolgung aktiviert; der Administrator steuert also die ACL.  
+ Die Dienstmodell-Ablaufverfolgungsquelle (<xref:System.ServiceModel>) aktiviert die Ablaufverfolgung von mit der Nachrichtenverarbeitung verknüpften Aktivitäten und Ereignissen. Diese Funktion verwendet die .NET Framework-Diagnosefunktionalität von <xref:System.Diagnostics>. Wie bei der <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>-Eigenschaft können der Speicherort und die ACL mit den Konfigurationsdateien der .NET Framework-Anwendung vom Benutzer konfiguriert werden. Wie bei der Nachrichtenprotokollierung wird der Speicherort der Datei immer konfiguriert, wenn der Administrator die Ablaufverfolgung aktiviert; der Administrator steuert also die ACL.  
   
  Ablaufverfolgungen enthalten Nachrichtenheader, wenn sich eine Nachricht im Gültigkeitsbereich befindet. Dabei gilt die gleiche Regel für das Ausblenden möglicher persönlicher Informationen in Nachrichtenheadern wie im vorherigen Abschnitt: Die zuvor identifizierten persönlichen Informationen werden standardmäßig aus den Headern in Ablaufverfolgungen entfernt. Der Computeradministrator und der Anwendungsbereitsteller müssen die Konfiguration ändern, damit mögliche persönliche Informationen protokolliert werden. Allerdings werden in anwendungsspezifischen Headern enthaltene persönliche Informationen in Ablaufverfolgungen protokolliert. Der Anwendungsbereitsteller ist für das Festlegen der ACLs für die Konfigurations- und Ablaufverfolgungsdateien verantwortlich. Er kann auch die Ablaufverfolgung deaktivieren, wenn diese Informationen nicht sichtbar sein sollen, oder diese Informationen nach der Protokollierung aus den Ablaufverfolgungsdateien herausfiltern.  
   
@@ -393,8 +393,8 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
 #### <a name="wsatconfigexe-and-wsatuidll"></a>WSATConfig.exe und WSATUI.dll  
  Mit diesen Tools können IT-Experten interoperable WS-AtomicTransaction Netzwerkunterstützung in WCF zu konfigurieren. Mithilfe der Tools kann der Benutzer die Werte der in der Registrierung gespeicherten am häufigsten verwendeten WS-AtomicTransaction-Einstellungen anzeigen und ändern.  
   
-## <a name="cross-cutting-features"></a>Querschnittliche Features  
- Die folgenden Features sind querschnittliche Features. Das heißt, sie können mit allen vorangehenden Features zusammengesetzt werden.  
+## <a name="cross-cutting-features"></a>Querschnittliche Funktionen  
+ Die folgenden Features sind querschnittliche Features. Das heißt, sie können mit allen vorangehenden Funktionen zusammengesetzt werden.  
   
 ### <a name="service-framework"></a>Dienstframework  
  Header können eine Instanz-ID enthalten; dies ist eine GUID, die eine Nachricht einer Instanz einer CLR-Klasse zuordnet.  
@@ -402,5 +402,6 @@ Microsoft verpflichtet sich, die persönlichen Daten von Endbenutzern vertraulic
  Die WSDL (Web Services Description Language) enthält eine Definition des Anschlusses. Jeder Anschluss verfügt über eine Endpunktadresse und eine Bindung, die die von der Anwendung verwendeten Dienste darstellt. Das Verfügbarmachen der WSDL kann mithilfe der Konfiguration deaktiviert werden. Auf dem Computer werden keine Informationen beibehalten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Windows Communication Foundation](index.md)
 - [Sicherheit](../../../docs/framework/wcf/feature-details/security.md)

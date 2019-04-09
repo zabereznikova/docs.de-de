@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 2d835b055eba6ca66b64555b44cbde64134e743f
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
-ms.translationtype: MT
+ms.openlocfilehash: 1d1d0ad559442ecfc595dfb8cdee112a22a77479
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168129"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Schnelleinstieg zur Problembehandlung in WCF
 In diesem Thema wird eine Reihe bekannter Probleme aufgeführt, denen Kunden beim Entwickeln von WCF-Clients und -Diensten begegnet sind. Wenn Ihr spezifisches Problem nicht in dieser Liste enthalten ist, sollten Sie die Ablaufverfolgung für den Dienst konfigurieren. Dadurch wird eine Ablaufverfolgungsdatei generiert, die Sie im Ablaufverfolgungsdatei-Viewer anzeigen können, um detaillierte Informationen zu Ausnahmen im Dienst zu erhalten. Weitere Informationen zum Konfigurieren der Ablaufverfolgung finden Sie unter: [Konfigurieren der Ablaufverfolgung](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Weitere Informationen zum Ablaufverfolgungsdatei-Viewer finden Sie unter: [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -21,7 +21,7 @@ In diesem Thema wird eine Reihe bekannter Probleme aufgeführt, denen Kunden bei
   
 2.  [Manchmal wird eine MessageSecurityException bei der zweiten Anforderung ausgelöst, wenn sich der Client nach der ersten Anforderung eine Weile im Leerlauf befunden hat. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
   
-3.  [Der Dienst lehnt nach einer Interaktion mit ungefähr 10 Clients weitere Clients ab. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
+3.  [Der Dienst lehnt nach einer Interaktion mit ungefähr 10 Clients weitere Clients ab. Woran liegt das?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
   
 4.  [Kann ich die Dienstkonfiguration aus einer anderen Quelle laden als der Konfigurationsdatei der WCF-Anwendung?](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
   
@@ -166,7 +166,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q88"></a>   
 ## <a name="i-changed-the-first-parameter-of-an-operation-from-uppercase-to-lowercase-now-my-client-throws-an-exception-whats-happening"></a>Ich habe den ersten Parameter eines Vorgangs von Groß- in Kleinbuchstaben geändert, und der Client löst nun eine Ausnahme aus. Woran liegt das?  
- Die Werte der Parameternamen in der Vorgangssignatur sind Teil des Vertrags und werden nach Groß- und Kleinschreibung unterschieden. Verwenden Sie das <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>-Attribut, wenn der lokale Parametername von den Metadaten unterschieden werden muss, die den Vorgang für Clientanwendungen beschreiben.  
+ Die Werte der Parameternamen in der Vorgangssignatur sind Teil des Vertrags und werden nach Groß- und Kleinschreibung unterschieden. Verwenden Sie das <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType> -Attribut, wenn der lokale Parametername von den Metadaten unterschieden werden muss, die den Vorgang für Clientanwendungen beschreiben.  
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>Bei der Verwendung eines meiner Ablaufverfolgungstools wird EndpointNotFoundException ausgelöst. Woran liegt das?  
@@ -250,4 +250,5 @@ public string Echo(string input)
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Debuggen von Windows-Authentifizierungsfehlern](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)

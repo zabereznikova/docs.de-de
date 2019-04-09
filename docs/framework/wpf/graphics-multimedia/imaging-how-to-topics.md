@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Imaging API [WPF]
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
-ms.openlocfilehash: 80659117ab96a6bdb9a9536d3eba47d13a2c395f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70294aff4c40bd5ae14b61e6a847155a10d675a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183039"
 ---
 # <a name="imaging-how-to-topics"></a>Gewusst-wie-Themen zur Bildverarbeitung
 Die Themen in diesem Abschnitt veranschaulichen, wie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zum Anzeigen oder Ändern von Bitmapbildern.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Verwenden eines BitmapImage in XAML](how-to-use-a-bitmapimage.md)  
+ [Verwenden eines BitmapImage-Objekts in XAML](how-to-use-a-bitmapimage.md)  
  [Laden eines Bilds als Miniaturansicht](how-to-load-an-image-as-a-thumbnail.md)  
  [Anwenden einer Transformation auf ein Bitmapbild](how-to-apply-a-transform-to-a-bitmapimage.md)  
  [Erstellen einer Bitmap aus einem visuellen Element](how-to-create-a-bitmap-from-a-visual.md)  
  [Codieren eines Visual-Objekts in einer Bilddatei](how-to-encode-a-visual-to-an-image-file.md)  
  [Erstellen einer neuen BitmapSource](how-to-create-a-new-bitmapsource.md)  
  [Verketten von BitmapSource-Objekten](how-to-chain-bitmapsource-objects-together.md)  
- [Konvertieren einer BitmapSource in ein anderes PixelFormat](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
+ [Konvertieren einer BitmapSource in ein anderes Pixelformat](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
  [Konvertieren einer BitmapSource in ein indiziertes Pixelformat](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
  [Codieren und Decodieren eines JPEG-Bilds](how-to-encode-and-decode-a-jpeg-image.md)  
  [Codieren und Decodieren eines BMP-Bilds](how-to-encode-and-decode-a-bmp-image.md)  
@@ -44,4 +44,5 @@ Die Themen in diesem Abschnitt veranschaulichen, wie [!INCLUDE[TLA#tla_winclient
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die Bildverarbeitung](imaging-overview.md)

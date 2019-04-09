@@ -6,12 +6,12 @@ helpviewer_keywords:
 - composite drawings [WPF]
 - graphics [WPF], composite drawings
 ms.assetid: 066eb0ab-5f0e-439d-85c6-dca60af269fc
-ms.openlocfilehash: ec71fb3e2f92444d33e15da38f0c88acc715c46d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0af7fbca593627ebe8cd102a02617a27eac50aa5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374140"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132469"
 ---
 # <a name="how-to-create-a-composite-drawing"></a>Vorgehensweise: Erstellen einer zusammengesetzten Zeichnung
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.DrawingGroup> komplexe Zeichnungen erstellen, durch die Kombination mehrerer <xref:System.Windows.Media.Drawing> Objekte in einer zusammengesetzten Zeichnung.  
@@ -42,6 +42,7 @@ Zusammengesetzte Zeichnung, die über mehrere DrawingGroup-Objekte verfügt.
  Weitere Informationen zu <xref:System.Windows.Media.Drawing> Objekten finden Sie [Übersicht über Zeichnungsobjekte](drawing-objects-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.DrawingGroup.BitmapEffect%2A>
 - <xref:System.Windows.Media.DrawingGroup.Transform%2A>
 - <xref:System.Windows.Media.DrawingGroup.OpacityMask%2A>

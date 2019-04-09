@@ -2,12 +2,12 @@
 title: Objektbesitz und Trennung von Benutzer und Schema in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 68a65cb950c54be9a4f9354a6ca20cbeeaafb938
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b56a2c6f1211a11d2aa55de0cc101f6b90f7f83d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221859"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Objektbesitz und Trennung von Benutzer und Schema in SQL Server
 Eines der Hauptkonzepte der SQL Server-Sicherheit besteht darin, dass die Besitzer von Objekten unwiderrufbare Berechtigungen für deren Verwaltung besitzen. Es ist nicht möglich, dem Besitzer eines Objekts dessen Privilegien zu entziehen, und Sie können auch keine Besitzer aus der Datenbank entfernen, wenn diese Objekte in der Datenbank besitzen.  
@@ -58,6 +58,7 @@ Server.Database.DatabaseSchema.DatabaseObject
 |[Trennung von Benutzer und Schema](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|Beschreibt die Änderungen, die die Trennung von Benutzer und Schema zur Folge hat. Enthält Informationen zum neuen Verhalten, seinen Auswirkungen auf den Objektbesitz, zu Katalogsichten und zu Berechtigungen.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Authentifizierung in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)

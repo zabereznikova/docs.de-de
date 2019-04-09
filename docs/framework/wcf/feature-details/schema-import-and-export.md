@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 0529f112192fa64746d8c6dc7a49433b33bafbf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133779"
 ---
 # <a name="schema-import-and-export"></a>Import und Export von Schemas
 Windows Communication Foundation (WCF) umfasst eine neue Serialisierungs-Engine, die <xref:System.Runtime.Serialization.DataContractSerializer>. `DataContractSerializer` übersetzt zwischen [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Objekten und XML (in beide Richtungen). Zusätzlich zum Serialisierungsprogramm selbst enthält WCF zugeordneten Schema-Import / Export-Mechanismen Schema. *Schema* ist eine formale, genaue und maschinenlesbare Beschreibung der Form des XML-Codes, die das Serialisierungsprogramm erstellt oder auf das Deserialisierungsprogramm zugreifen kann. WCF verwendet die World Wide Web Consortium (W3C) XML-Schemadefinitionssprache (XSD) als schemadarstellung, die mit zahlreichen Plattformen von Drittanbietern weitgehend interoperabel ist.  
@@ -51,7 +51,7 @@ Windows Communication Foundation (WCF) umfasst eine neue Serialisierungs-Engine,
   
  [!code-xml[c_SchemaImportExport#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#9)]  
   
- Weitere Informationen finden Sie unter [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Wenn ein Schema den Datenvertragsregeln nicht entspricht, verwenden Sie eine andere Serialisierungs-Engine. <xref:System.Xml.Serialization.XmlSerializer> verwendet z. B. einen eigenen separaten Schemaimportmechanismus. Außerdem gibt es einen speziellen Importmodus, der die Bandbreite unterstützter Schemata erweitert. Weitere Informationen finden Sie im Abschnitt zum Generieren von <xref:System.Xml.Serialization.IXmlSerializable> Typen im [Importieren von Schemas zum Generieren von Klassen](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
+ Weitere Informationen finden Sie unter [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Wenn ein Schema den Datenvertragsregeln nicht entspricht, verwenden Sie eine andere Serialisierungs-Engine. <xref:System.Xml.Serialization.XmlSerializer> verwendet z. B. einen eigenen separaten Schemaimportmechanismus. Außerdem gibt es einen speziellen Importmodus, durch den weitere Schemas unterstützt werden. Weitere Informationen finden Sie im Abschnitt zum Generieren von <xref:System.Xml.Serialization.IXmlSerializable> Typen im [Importieren von Schemas zum Generieren von Klassen](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md).  
   
  `XsdDataContractExporter` unterstützt alle [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Typen, die mit `DataContractSerializer` serialisiert werden können. Weitere Informationen finden Sie unter [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md). Beachten Sie, dass mit `XsdDataContractExporter` generierte Schemas normalerweise gültige Daten sind, die von `XsdDataContractImporter` verwendet werden können (sofern <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> nicht zur Anpassung des Schemas verwendet wird).  
   
@@ -60,6 +60,7 @@ Windows Communication Foundation (WCF) umfasst eine neue Serialisierungs-Engine,
  Weitere Informationen zur Verwendung der <xref:System.Runtime.Serialization.XsdDataContractExporter>, finden Sie unter [Exportieren von Schemas aus Klassen](../../../../docs/framework/wcf/feature-details/exporting-schemas-from-classes.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>

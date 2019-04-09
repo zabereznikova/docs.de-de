@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c406edcef393d3c2b9e4cf6dbeee9d572c0951f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173672"
 ---
 # <a name="securing-exception-handling"></a>Sichern der Ausnahmebehandlung
 In Visual C++ und Visual Basic können ein Filterausdruck weiter oben im Stapel ausgeführt wird, vor allen **schließlich** Anweisung. Die **catch** Block zugeordnet ist, dass der Filter ausgeführt wird, nachdem die **schließlich** Anweisung. Weitere Informationen finden Sie unter [Verwenden benutzergefilterter Ausnahmen](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md). In diesem Abschnitt werden die Sicherheitsaspekte bei der angegebenen Reihenfolge untersucht. Betrachten Sie das folgende Pseudocodebeispiel, die die Reihenfolge, in welche filteranweisungen veranschaulicht und **schließlich** Anweisungen ausführen.  
@@ -161,4 +161,5 @@ YourObject.YourMethod()
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)

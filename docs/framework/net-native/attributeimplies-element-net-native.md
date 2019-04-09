@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 82db7193-a860-418b-84fc-fff2fdf2e025
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be5412e323b1c4930d7e17d09faa174885611884
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d59f1f48be19a21ccc7ee5bb73cebfffc387fec2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254976"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165060"
 ---
 # <a name="attributeimplies-element-net-native"></a>\<AttributeImplies > (Element (.NET Native)
 Definiert die Richtlinie für Codeelemente, auf die das enthaltende Attribut angewendet wird.  
@@ -68,7 +68,8 @@ Definiert die Richtlinie für Codeelemente, auf die das enthaltende Attribut ang
  Die Reflektions-, Serialisierungs- und Interop-Attribute sind optional, obwohl mindestens eines vorhanden sein sollte.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [\<Type >-Element](../../../docs/framework/net-native/type-element-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

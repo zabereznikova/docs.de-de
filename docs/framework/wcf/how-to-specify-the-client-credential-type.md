@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Geben Sie den Typ der Clientanmeldeinformationen'
+title: 'Vorgehensweise: Angeben des Typs von Clientanmeldeinformationen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: 9fe999c4ee27d4a78bfad185fa3bcc065d74708a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1138f0fe955782c71076d5c15c236d1d4ebbec01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185054"
 ---
-# <a name="how-to-specify-the-client-credential-type"></a>Vorgehensweise: Geben Sie den Typ der Clientanmeldeinformationen
+# <a name="how-to-specify-the-client-credential-type"></a>Vorgehensweise: Angeben des Typs von Clientanmeldeinformationen
 Nach dem Festlegen eines Sicherheitsmodus (entweder Transport oder Nachricht) haben Sie die Möglichkeit, den Typ der Clientanmeldeinformationen anzugeben. Diese Eigenschaft gibt an, welchen Anmeldeinformationstyp der Client dem Dienst zur Authentifizierung bereitstellen muss. Weitere Informationen zum Festlegen des Sicherheitsmodus (ein notwendiger Schritt vor dem Festlegen des Typ der Clientanmeldeinformationen) finden Sie unter [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>So legen Sie den Clientanmeldeinformationstyp in Code fest  
@@ -58,5 +58,6 @@ Nach dem Festlegen eines Sicherheitsmodus (entweder Transport oder Nachricht) ha
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md)
 - [Vorgehensweise: Festlegen des Sicherheitsmodus](../../../docs/framework/wcf/how-to-set-the-security-mode.md)

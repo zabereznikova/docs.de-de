@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49521e4b4ff5f8c364827b233759e163aca43e39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12a114ea65aca544d653704cdfb01ed15d19c581
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143220"
 ---
 # <a name="cordebugblockingobject-structure"></a>CorDebugBlockingObject-Struktur
 Definiert ein Objekt, das blockiert einen Thread und die spezifische Ursache, dass der Thread blockiert ist.  
@@ -57,5 +57,6 @@ CorDebugBlockingReason blockingReason;
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Debuggen von Strukturen](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 47819740207ae94b814b3009708c2fd247688661
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5409d1b89ba3e50c4ae17ed5aa6bf063cf6c93cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136967"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity-Enumeration
 Gibt die Sicherheitsaktionen an, die mit deklarativer Sicherheit ausgeführt werden können.  
@@ -90,4 +90,5 @@ typedef enum CorDeclSecurity {
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

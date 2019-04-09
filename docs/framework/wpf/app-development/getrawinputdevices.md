@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - raw input [WPF]
 ms.assetid: c4d37ecd-065a-4d1c-9e6c-26804ae968ca
-ms.openlocfilehash: 763767514f5f157c676f2e5c86ff9b1e4e64f233
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3531ff9f42289a3ad3b029f090f2dd4987e5886c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199403"
 ---
 # <a name="getrawinputdevices"></a>GetRawInputDevices
 Ermöglicht es der Datei "PresentationHost.exe", Geräte für die Eingabe von Rohdaten (Eingabegeräte, Human Interface Devices) zu erkennen, die für die Hostanwendung interessant sind.  
@@ -38,5 +38,6 @@ HRESULT GetRawInputDevices( [out] IEnumRAWINPUTDEVICE **ppEnum );
  Nachdem die Liste der Eingabegeräte für Rohdaten abgerufen wurde, registriert "PresentationHost.exe" diese Geräte, um WM_INPUT-Benachrichtigungen zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [GetRawInputDeviceList](/windows/desktop/api/winuser/nf-winuser-getrawinputdevicelist)
 - [FilterInputMessage](filterinputmessage.md)

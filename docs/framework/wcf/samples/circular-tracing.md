@@ -2,12 +2,12 @@
 title: Zirkuläre Ablaufverfolgung
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
-ms.openlocfilehash: eaecf2205e7618f02a66f8c35fc88ca5a59947b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2339cb780cd09a98dd0cb77eefd66b2473597860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152372"
 ---
 # <a name="circular-tracing"></a>Zirkuläre Ablaufverfolgung
 Dieses Beispiel veranschaulicht die Implementierung eines zirkulären Puffer-Ablaufverfolgungslisteners. Ein gängiges Szenario bei Produktionsdiensten besteht darin, dass Dienste vorhanden sind, die für längere Zeiträume verfügbar sind, und dass die Ablaufverfolgung auf einer unteren Ebene aktiviert ist. Diese Dienste belegen viel Speicherplatz. Bei der Problembehandlung sind zum Lösen eines Problems bei einem Dienst die aktuellsten Daten aus dem Ablaufverfolgungsprotokoll relevant. Dieses Beispiel zeigt die Implementierung eines zirkulären Puffer-Ablaufverfolgungslisteners, bei der nur die neuesten Ablaufverfolgungen bis zu einer zu konfigurierenden Datenmenge auf der Festplatte aufbewahrt werden. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) und einen benutzerdefinierten Ablaufverfolgungslistener enthält.  
@@ -60,4 +60,5 @@ Dieses Beispiel veranschaulicht die Implementierung eines zirkulären Puffer-Abl
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)

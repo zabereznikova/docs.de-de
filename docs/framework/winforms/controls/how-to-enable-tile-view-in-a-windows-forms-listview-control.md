@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Aktivieren der Tile-Ansicht in ein ListView-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Aktivieren der Tile-Ansicht in einem ListView-Steuerelement von Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: ad0a925601d3cfaebcd21a2082e3d208d82151bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0d47eddbc1d9a4efc7f1e4644136ac6621088396
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215026"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Vorgehensweise: Aktivieren der Tile-Ansicht in ein ListView-Steuerelement in Windows Forms
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Vorgehensweise: Aktivieren der Tile-Ansicht in einem ListView-Steuerelement von Windows Forms
 Mit dem Feature für "Ansicht 'Nebeneinander'" des <xref:System.Windows.Forms.ListView>-Steuerelements können Sie eine visuelle Balance zwischen grafischen und textbasierten Daten herstellen. Die textbasierten Daten, die für ein Element in der Ansicht "Nebeneinander" angezeigt werden, sind die gleichen wie die Spalteninformationen, die für die Detailansicht definiert wurden. Die Ansicht "Nebeneinander" funktioniert in Kombination mit den Features "Gruppieren" oder "Einfügemarke" des <xref:System.Windows.Forms.ListView>-Steuerelements.  
   
  Für die Ansicht "Nebeneinander" wird ein 32 x 32 Pixel großes Symbol mit mehreren Textzeilen verwendet, wie in den folgenden Abbildungen dargestellt.  
@@ -59,6 +59,7 @@ Mit dem Feature für "Ansicht 'Nebeneinander'" des <xref:System.Windows.Forms.Li
  Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [ListView-Steuerelement](listview-control-windows-forms.md)

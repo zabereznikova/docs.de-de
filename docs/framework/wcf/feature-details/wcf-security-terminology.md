@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-ms.openlocfilehash: 53b6abc41dda0ebbbe28afc5b631efcfc0a60668
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0d5ecccdd48da2799e3299406f219a10f47e84d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158742"
 ---
 # <a name="wcf-security-terminology"></a>WCF-Sicherheitsterminologie
 Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung sind, sind möglicherweise nicht allgemein bekannt. In diesem Thema werden daher einige Sicherheitsbegriffe kurz erläutert, ohne alle Facetten des jeweiligen Begriffs zu beleuchten.  
@@ -98,7 +98,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Private Schlüssel  
  Der geheime Teil eines Schlüsselpaars, das in einem Algorithmus für öffentliche Schlüssel verwendet wird. Private Schlüssel werden normalerweise zur Verschlüsselung von symmetrischen Sitzungsschlüsseln, zur digitalen Signierung von Nachrichten oder zur Entschlüsselung von Nachrichten, die mit dem entsprechenden öffentlichen Schlüssel verschlüsselt wurden, verwendet. Siehe auch "Öffentlicher Schlüssel".  
   
- process  
+ Prozess  
  Der Sicherheitskontext, in dem eine Anwendung ausgeführt wird. Der Sicherheitskontext ist normalerweise einem Benutzer zugeordnet, sodass alle Anwendungen, die unter einem bestimmten Prozess ausgeführt werden, die Rechte und Berechtigungen des entsprechenden Benutzers übernehmen.  
   
  Paar aus privatem und öffentlichem Schlüssel  
@@ -182,6 +182,7 @@ Einige der Begriffe, die im Zusammenhang mit Sicherheitsaspekten von Bedeutung s
  Ein international anerkannter Zertifikatstandard zur Definition erforderlicher Bestandteile.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Wesentliche Windows Communication Foundation-Begriffe](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [Begriffe der Sicherheit](../../../../docs/framework/wcf/feature-details/security-concepts.md)
 - [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

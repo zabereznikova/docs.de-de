@@ -2,12 +2,12 @@
 title: SQL Server-Datenvorgänge in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-ms.openlocfilehash: 66e7a33edfc053760109ded4c18c84950869b4af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2dd4430e5b7f86253966f2778abe7d9ba58661a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143506"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>SQL Server-Datenvorgänge in ADO.NET
 In diesem Abschnitt werden SQL Server-Funktionen und -verhaltensweisen beschrieben, die für den .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) spezifisch sind.  
@@ -26,6 +26,7 @@ In diesem Abschnitt werden SQL Server-Funktionen und -verhaltensweisen beschrieb
  Beschreibt die Arbeit mit den in SQL Server 2008 eingeführten Tabellenwertparametern.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

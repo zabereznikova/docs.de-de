@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 548c6007d4ed685c521676de87c5a98f56a222a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8786892d591a98ddcd7f51eddf86fdbcf50f2197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214870"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi-Funktion
 Erstellt über DCOM eine Verbindung mit einem WMI-Namespace auf einem angegebenen Computer.
@@ -105,7 +105,6 @@ Diese Funktion umschließt einen Aufruf der [IWbemLocator::ConnectServer](/windo
 Für den lokalen Zugriff auf den Standardnamespace `strNetworkResource` kann ein einfaches Objekt-Pfad: "Root\default" oder "\\.\root\default". Für den Zugriff auf den Standardnamespace auf einem Remotecomputer mithilfe der COM- oder Microsoft-kompatiblen-Netzwerken, den Namen des Computers enthalten: "\\Myserver\root\default". Den Namen des Computers kann auch einen DNS-Namen oder die IP-Adresse sein. Die `ConnectServerWmi` Funktion kann auch eine Verbindung herstellen mit IPv6-Computern mit einer IPv6-Adresse.
 
 `strUser` eine leere Zeichenfolge darf nicht sein. Wenn in die Domäne angegeben ist `strAuthority`, er darf nicht auch enthalten sein `strUser`, oder die Funktion gibt `WBEM_E_INVALID_PARAMETER`.
-
 
 ## <a name="requirements"></a>Anforderungen
 

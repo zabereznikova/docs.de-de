@@ -2,12 +2,12 @@
 title: Zuordnungssatz
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-ms.openlocfilehash: 2eaa4d3c70e0efbf9705b4285d1abd4753bd1db9
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: af9297d9c827b12ed8611e99930234511f7f661c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204483"
 ---
 # <a name="association-set"></a>Zuordnungssatz
 Ein *Zuordnungssatz* ist ein logischer Container für [Zuordnung](../../../../docs/framework/data/adonet/association-type.md) Instanzen des gleichen Typs. Ein Zuordnungssatz ist keine Datenmodellkonstruktion; das heißt, er beschreibt nicht die Struktur von Daten oder Beziehungen. Vielmehr stellt ein Zuordnungssatz eine Konstruktion für eine Hosting- oder Speicherumgebung (z. B. die Common Language Runtime oder eine SQL Server-Datenbank) zum Gruppieren von Zuordnungsinstanzen bereit, damit diese einem Datenspeicher zugeordnet werden können.  
@@ -40,6 +40,7 @@ Ein *Zuordnungssatz* ist ein logischer Container für [Zuordnung](../../../../do
  [!code-xml[EDM_Example_Model#MultipleAssociationSets](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#multipleassociationsets)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
 - [Fremdschlüsseleigenschaft](../../../../docs/framework/data/adonet/foreign-key-property.md)

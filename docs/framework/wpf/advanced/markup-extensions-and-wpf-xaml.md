@@ -15,17 +15,16 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: e678dcf9606c3ad545e93a4389bccb3d49423dec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148095"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Markuperweiterungen und WPF-XAML
 Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XAML und enthält eine Erläuterung der Syntaxregeln, des Zweck und des zugrunde liegenden Klassenobjektmodels. Markuperweiterungen sind eine allgemeine Funktion der XAML-Sprache und der .NET-Implementierung von XAML-Diensten. In diesem Thema werden speziell Markuperweiterungen zur Verwendung in WPF XAML beschrieben.  
-  
-  
+
 <a name="XAML_Processors_and_Markup_Extensions"></a>   
 ## <a name="xaml-processors-and-markup-extensions"></a>XAML-Prozessoren und Markuperweiterungen  
  Im Allgemeinen kann ein XAML-Parser einen Attributwert entweder als Literalzeichenfolge interpretieren, die in eine Primitive konvertiert werden kann, oder auf bestimmte Weise in ein Objekt konvertieren. Eine Möglichkeit ist das Verweisen auf einen Typkonverter; dies wird im Thema [TypeConverter und XAML](typeconverters-and-xaml.md) dokumentiert. Bestimmte Szenarios erfordern jedoch ein anderes Verhalten. Ein XAML-Prozessor kann z.B. angewiesen werden, dass der Wert eines Attributs nicht zu einem neuen Objekt im Objektdiagramm führen soll. Stattdessen soll das Attribut ein Objektdiagramm ergeben, das auf ein bereits erstelltes Objekt in einem anderen Teil des Diagramms oder auf ein statisches Objekt verweist. Ein anderes Szenario ist, dass ein XAML-Prozessor angewiesen werden kann, Syntax zu verwenden, die für den Konstruktor eines Objekts nicht standardmäßige Argumente bereitstellt. Bei derartigen Szenarios eine Markuperweiterung die Lösung sein.  
@@ -42,13 +41,13 @@ Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XA
 ## <a name="xaml-defined-markup-extensions"></a>XAML-definierte Markuperweiterungen  
  Es gibt mehrere Markuperweiterungen, die nicht spezifisch für die WPF-Implementierung von XAML gelten, sondern Implementierungen für Interna oder Funktionen von XAML als Sprache sind. Diese Markuperweiterungen werden als Teil der allgemeinen .NET Framework-XAML-Dienste in der System.Xaml-Assembly implementiert und sind im XAML-Sprachnamespace enthalten. Im Hinblick auf die allgemeine Markupverwendung sind diese Markuperweiterungen in der Regel durch das `x:`-Präfix in der Verwendung identifizierbar. Die <xref:System.Windows.Markup.MarkupExtension> Basisklasse (auch in System.Xaml definiert) stellt das Muster, das alle Markuperweiterungen verwendet werden soll, damit er in der XAML-Readern und XAML-Writern, einschließlich in WPF XAML unterstützt werden.  
   
--   `x:Type` stellt das <xref:System.Type> -Objekt für den benannten Typ bereit. Diese Funktion wird am häufigsten in Stilen und Vorlagen verwendet. Weitere Informationen finden Sie unter [x:Type-Markuperweiterung](../../xaml-services/x-type-markup-extension.md).  
+-   `x:Type` Stellt die <xref:System.Type> Objekt für den benannten Typ. Diese Funktion wird am häufigsten in Stilen und Vorlagen verwendet. Weitere Informationen finden Sie unter [x:Type-Markuperweiterung](../../xaml-services/x-type-markup-extension.md).  
   
 -   `x:Static` erzeugt statische Werte. Die Werte stammen aus Wert-Typ-Codeentitäten, die nicht direkt dem Typ eines Zieleigenschaftswerts entsprechen, jedoch diesem Typ entsprechend ausgewertet werden können. Weitere Informationen finden Sie unter [x:Statische Markuperweiterung](../../xaml-services/x-static-markup-extension.md).  
   
--   `x:Null` gibt `null` als Wert für eine Eigenschaft an und kann für Attribute oder Eigenschaftenelementwerte verwendet werden. Weitere Informationen finden Sie unter [x:Null-Markuperweiterung](../../xaml-services/x-null-markup-extension.md).  
+-   `x:Null` Gibt an, `null` als Wert für eine Eigenschaft und kann für Attribute oder Eigenschaftenelementwerte verwendet werden. Weitere Informationen finden Sie unter [x:Null-Markuperweiterung](../../xaml-services/x-null-markup-extension.md).  
   
--   `x:Array` bietet Unterstützung für die Erstellung von allgemeinen Arrays in XAML-Syntax, wenn die Auflistungsunterstützung von WPF-Basiselementen und Steuerelementmodellen bewusst nicht verwendet wird. Weitere Informationen finden Sie unter [x:Array-Markuperweiterung](../../xaml-services/x-array-markup-extension.md).  
+-   `x:Array` bietet Unterstützung für die Erstellung von allgemeinen Arrays in XAML-Syntax ist für Fälle, in denen die auflistungsunterstützung von WPF-Basiselementen und Steuerelementmodellen bewusst nicht verwendet. Weitere Informationen finden Sie unter [x:Array-Markuperweiterung](../../xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
 >  Das `x:`-Präfix wird für die typische XAML-Namespacezuordnung der systeminternen XAML-Sprache im Stammelement einer XAML-Datei oder Produktion verwendet. Beispielsweise initiieren die Visual Studio-Vorlagen für WPF-Anwendungen eine XAML-Datei, die mithilfe dieser `x:` Zuordnung. Sie können ein anderes Präfixtoken in Ihrer eigenen XAML-Namespacezuordnung auswählen, dieser Dokumentation wird jedoch die `x:`-Standardzuordnung für die Identifizierung der Entitäten zugrunde gelegt, die als Teil des XAML-Sprachnamespace definiert sind (im Gegensatz zu einem standardmäßigen WPF-Namespace oder anderen XAML-Namespaces, die keinem bestimmten Framework zugeordnet sind).  
@@ -57,15 +56,15 @@ Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XA
 ## <a name="wpf-specific-markup-extensions"></a>WPF-spezifische Markuperweiterungen  
  Bei der WPF-Programmierung werden am häufigsten die Markuperweiterungen mit Unterstützung für Ressourcenverweise (`StaticResource` und `DynamicResource`), und mit Unterstützung für Datenbindung verwendet (`Binding`).  
   
--   `StaticResource` stellt einen Wert für eine Eigenschaft bereit, indem der Wert einer bereits definierten Ressource ersetzt wird. Schließlich wird eine `StaticResource`-Auswertung zur der XAML-Ladezeit vorgenommen, die während der tatsächlichen Laufzeit keinen Zugriff auf das Objektdiagramm hat. Weitere Informationen finden Sie unter [StaticResource-Markuperweiterung](staticresource-markup-extension.md)  
+-   `StaticResource` Stellt einen Wert für eine Eigenschaft bereit, indem der Wert einer bereits definierten Ressource ersetzt wird. Schließlich wird eine `StaticResource`-Auswertung zur der XAML-Ladezeit vorgenommen, die während der tatsächlichen Laufzeit keinen Zugriff auf das Objektdiagramm hat. Weitere Informationen finden Sie unter [StaticResource-Markuperweiterung](staticresource-markup-extension.md)  
   
--   `DynamicResource` stellt einen Wert für eine Eigenschaft bereit, indem dieser Wert als Laufzeitverweis auf eine Ressource verwendet wird. Ein dynamischer Ressourcenverweis erzwingt jedes Mal eine neue Suche, wenn auf eine solche Ressource zugegriffen wird und diese zur Laufzeit Zugriff auf das Objektdiagramm hat. Um diesen Zugriff abzurufen, wird das `DynamicResource` Konzept von Abhängigkeitseigenschaften im WPF-Eigenschaftensystem und ausgewerteten Ausdrücken unterstützt. Daher kann `DynamicResource` nur für ein Abhängigkeitseigenschaftsziel verwendet werden. Weitere Informationen finden Sie unter [DynamicResource-Markuperweiterung](dynamicresource-markup-extension.md)  
+-   `DynamicResource` Stellt einen Wert für eine Eigenschaft bereit, um ein Laufzeit-Verweis auf eine Ressource werden indem bereit. Ein dynamischer Ressourcenverweis erzwingt jedes Mal eine neue Suche, wenn auf eine solche Ressource zugegriffen wird und diese zur Laufzeit Zugriff auf das Objektdiagramm hat. Um diesen Zugriff abzurufen, wird das `DynamicResource` Konzept von Abhängigkeitseigenschaften im WPF-Eigenschaftensystem und ausgewerteten Ausdrücken unterstützt. Daher kann `DynamicResource` nur für ein Abhängigkeitseigenschaftsziel verwendet werden. Weitere Informationen finden Sie unter [DynamicResource-Markuperweiterung](dynamicresource-markup-extension.md)  
   
--   `Binding` stellt einen datengebundenen Wert für eine Eigenschaft bereit, indem der Datenkontext verwendet wird, der zur Laufzeit für das übergeordnete Objekt gilt. Diese Markuperweiterung ist relativ komplex, da eine komplexe Inlinesyntax für die Angabe einer Datenbindung aktiviert wird. Weitere Informationen finden Sie unter [Binding als Markuperweiterung](binding-markup-extension.md).  
+-   `Binding` Stellt einen datengebundenen Wert für eine Eigenschaft, indem der Datenkontext, der zur Laufzeit auf das übergeordnete Objekt gilt. Diese Markuperweiterung ist relativ komplex, da eine komplexe Inlinesyntax für die Angabe einer Datenbindung aktiviert wird. Weitere Informationen finden Sie unter [Binding als Markuperweiterung](binding-markup-extension.md).  
   
 -   `RelativeSource` Stellt Quellinformationen für eine <xref:System.Windows.Data.Binding> können, die mehrere mögliche Beziehungen in der Laufzeit-Objektstruktur navigieren. Hierdurch werden spezielle Quellbezüge für Bindungen bereitgestellt, die ohne vollständige Kenntnis der umgebenden Objektstruktur in Mehrzweckvorlagen oder in Code erstellt werden. Weitere Informationen finden Sie unter [RelativeSource-Markuperweiterungen](relativesource-markupextension.md).  
   
--   `TemplateBinding` ermöglicht die Verwendung von Vorlage-Eigenschaftswerten in Steuerelementvorlagen, die von den durch das Objektmodell definierten Eigenschaften der Klasse stammen, die die Vorlage verwenden werden. Dies bedeutet, dass die Eigenschaft in der Vorlagendefinition auf einen Kontext zugreifen kann, der erst vorhanden ist, wenn die Vorlage angewendet wird. Weitere Informationen finden Sie unter [TemplateBinding Markuperweiterung](templatebinding-markup-extension.md). Weitere Informationen über die praktische Verwendung von `TemplateBinding`, finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+-   `TemplateBinding` ermöglicht eine Steuerelementvorlage, um Werte für auf Vorlagen basierende Eigenschaften zu verwenden, die das Modell definierten Eigenschaften der Klasse stammen, die die Vorlage verwendet werden. Dies bedeutet, dass die Eigenschaft in der Vorlagendefinition auf einen Kontext zugreifen kann, der erst vorhanden ist, wenn die Vorlage angewendet wird. Weitere Informationen finden Sie unter [TemplateBinding Markuperweiterung](templatebinding-markup-extension.md). Weitere Informationen über die praktische Verwendung von `TemplateBinding`, finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 -   `ColorConvertedBitmap` unterstützt ein relativ komplexes Bildverarbeitungsszenario. Weitere Informationen finden Sie unter [ColorConvertedBitmap-Markuperweiterung](colorconvertedbitmap-markup-extension.md)  
   
@@ -118,8 +117,9 @@ Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XA
  Die meisten Markuperweiterungen würden keinen Inhalt oder weitere Eigenschaftenelementsyntax aufweisen, wenn sie in der Objektelementsyntax in ein Eigenschaftenelement geladen werden. Deshalb würden Sie das Objektelementtag schließen und keine untergeordneten Elemente bereitstellen. Wenn ein Objektelement von einem XAML-Prozessor erkannt wird, wird der Konstruktor für diese Klasse aufgerufen, die das aus dem analysierten Element erstellte Objekt instanziiert. Dies gilt auch für Markuperweiterungsklassen. Wenn Sie die Markuperweiterung in Objektelementsyntax verwenden möchten, müssen Sie einen Standardkonstruktor angeben. Einige vorhandene Markuperweiterungen verfügen über mindestens einen erforderlichen Eigenschaftswert, der für die effektive Initialisierung angegeben werden muss. Wenn dies der Fall ist, wird dieser Eigenschaftswert in der Regel als Eigenschaftenattribut für das Objektelement angegeben. In der [XAML-Namespace (x:)) Sprachfunktionen](../../xaml-services/xaml-namespace-x-language-features.md) und [WPF-XAML-Erweiterungen](wpf-xaml-extensions.md) auf den Referenzseiten Markup Extensions, die erforderlichen Eigenschaften (und die Namen der erforderlichen Eigenschaften) gekennzeichnet. Des Weiteren wird auf den Referenzseiten darauf hingewiesen, wenn Objektelementsyntax oder Attributsyntax von einer Markuperweiterung nicht unterstützt werden. Ein wichtiger Fall ist [X: Array-Markuperweiterung](../../xaml-services/x-array-markup-extension.md), die Attributsyntax nicht unterstützt, da der Inhalt des Arrays innerhalb der Tags als Inhalt angegeben werden muss. Die Arrayinhalte werden als allgemeine Objekte behandelt, sodass kein Standardtypkonverter für das Attribut zulässig ist. Außerdem erfordert [X: Array-Markuperweiterung](../../xaml-services/x-array-markup-extension.md) einen `type`-Parameter.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über XAML (WPF)](xaml-overview-wpf.md)
-- [XAML-Namespace (x:)) Sprachfunktionen](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML-Namespace (x:) Sprachfunktionen](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF-XAML-Erweiterungen](wpf-xaml-extensions.md)
 - [StaticResource-Markuperweiterung](staticresource-markup-extension.md)
 - [Bindung als Markuperweiterung](binding-markup-extension.md)

@@ -2,12 +2,12 @@
 title: <transactionFlow>
 ms.date: 03/30/2017
 ms.assetid: 8c7b4c5b-ace3-4fe3-89ff-7b13c9aacd13
-ms.openlocfilehash: ef3d92e07aaf4d4ba9d90e381017db104f2cc8fe
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 626ae03d622221ab3e956bd03898b6cc30482c98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356584"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179152"
 ---
 # <a name="transactionflow"></a>\<transactionFlow>
 Gibt die Transaktionsflussunterstützung für die benutzerdefinierte Bindung an.  
@@ -49,11 +49,12 @@ Gibt die Transaktionsflussunterstützung für die benutzerdefinierte Bindung an.
 >  Bei Verwendung des `OleTransactions`-Protokolls für den Transaktionsfluss von Endpunkt zu Endpunkt kann das Transaktionstimeout verloren gehen, wenn der Zielendpunkt mit einem anderen Protokoll als `OleTransactions` versucht, die Transaktion erneut weiterzugeben. Dies kann dazu führen, dass alle Knoten auf den unteren Ebenen nach dem OleTransactions-Hop später als erwartet das Timeout erreichen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.TransactionFlowElement>
 - <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [ServiceModel-Transaktionskonfiguration](../../../../../docs/framework/wcf/feature-details/servicemodel-transaction-configuration.md)
-- [Aktivieren des Transaktionsdatenflusses](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+- [Aktivieren des Transaktionsflusses](../../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
 - [Bindungen](../../../../../docs/framework/wcf/bindings.md)
 - [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)

@@ -1,13 +1,13 @@
 ---
-title: <localClientSettings>-Element
+title: <localClientSettings> Element
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: e43a03258f4a76c1d19c7bdcff99fcb1d1db19ac
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c5caf183e37edda6efc79ec81f1628180379fd46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163097"
 ---
 # <a name="localclientsettings-element"></a>\<localClientSettings> element
 Legt die Sicherheitseinstellungen für einen lokalen Client für diese Bindung fest.  
@@ -56,7 +56,7 @@ Legt die Sicherheitseinstellungen für einen lokalen Client für diese Bindung f
 |`timestampValidityDuration`|Eine positive <xref:System.TimeSpan>, die die Dauer angibt, in der ein Zeitstempel gültig ist. Der Standardwert ist "00:15:00".|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -69,6 +69,7 @@ Legt die Sicherheitseinstellungen für einen lokalen Client für diese Bindung f
  Die Einstellungen sind lokal, da sie nicht von der Sicherheitsrichtlinie des Diensts abgeleitet werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalClientSettings%2A>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>

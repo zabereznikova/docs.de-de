@@ -2,12 +2,12 @@
 title: Metadaten abrufen
 ms.date: 03/30/2017
 ms.assetid: e8a6ef8c-a195-495a-a15e-7d92bdf0b28c
-ms.openlocfilehash: 24fd2a7f3a511921354e43141b8384bdf55bbc65
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: f35bb14b9338197828189a1d91d5653fd1680b86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208682"
 ---
 # <a name="retrieve-metadata"></a>Metadaten abrufen
 Dieses Beispiel veranschaulicht, wie ein Client implementiert werden kann, der Metadaten dynamisch von einem Dienst abruft, um einen Endpunkt für die Kommunikation auszuwählen. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md). Der Dienst wurde geändert, um zwei Endpunkte verfügbar gemacht – ein Endpunkt an der Basisadresse mit der `basicHttpBinding` Bindung und ein sicherer Endpunkt unter {*Baseaddress*} / secure mit der `wsHttpBinding` Bindung. Anstatt den Client mit den Endpunktadressen und -bindungen zu konfigurieren, ruft der Client mithilfe der Klasse  <xref:System.ServiceModel.Description.MetadataExchangeClient> dynamisch die Metadaten für den Dienst ab und importiert sie danach als <xref:System.ServiceModel.Description.ServiceEndpointCollection> mithilfe der <xref:System.ServiceModel.Description.WsdlImporter>-Klasse.  
@@ -68,4 +68,3 @@ foreach (ServiceEndpoint ep in endpoints)
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\RetrieveMetadata`  
-  

@@ -2,12 +2,12 @@
 title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: eb5459625cf58feeef5ba29d76e74691a4f87cc8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ce12d0a82c8a443994559ed772496897f359b4e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364696"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166672"
 ---
 # <a name="dns"></a>\<dns>
 Gibt die erwartete Identität des Servers an. Diese Identität ist für den X.509-Zertifikat-Authentifizierungsmodus gültig, wenn das Serverzertifikat eine DNS mit dem gleichen Wert enthält. Sie ist auch für den Windows-Authentifizierungsmodus gültig, wenn der SPN den gleichen Wert hat.  
@@ -51,6 +51,7 @@ Gibt die erwartete Identität des Servers an. Diese Identität ist für den X.50
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>

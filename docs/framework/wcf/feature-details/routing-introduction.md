@@ -2,12 +2,12 @@
 title: Einführung in das Routing
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 12eb58c53749fb76da9352947f07df32e09bf5a2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409847"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158677"
 ---
 # <a name="routing-introduction"></a>Einführung in das Routing
 Der Routingdienst stellt einen generischen austauschbaren SOAP-Vermittler bereit, der Nachrichten basierend auf dem Nachrichteninhalts weiterleiten kann. Mit dem Routingdienst können Sie eine komplexe Routinglogik erstellen, mit der Sie Szenarios wie Dienstaggregation, Dienstversionsverwaltung, Prioritätsrouting und Multicastrouting implementieren können. Außerdem stellt der Routingdienst eine Fehlerbehandlung bereit. Damit können Sie Listen von Sicherungsendpunkten einrichten, an die Nachrichten gesendet werden, falls beim Senden an den primären Zielendpunkt ein Fehler auftritt.  
@@ -209,7 +209,7 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
 -   Geben Sie die neue Anforderungsnachricht zurück.  
   
- **Antworten zu verarbeiten**  
+ **Verarbeiten der Antwort**  
   
 -   Abrufen der **MessageVersion** der ursprünglichen Anforderungsnachricht.  
   
@@ -402,6 +402,7 @@ using (ServiceHost serviceHost =
  Um Windows-Anmeldeinformationen mit dem Routingdienst zu verwenden, müssen Sie sowohl die Anmeldeinformationen als auch den Dienst konfigurieren. Das Objekt für Clientanmeldeinformationen (<xref:System.ServiceModel.Security.WindowsClientCredential>, auf das von der <xref:System.ServiceModel.ChannelFactory> zugegriffen werden kann) definiert eine <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A>-Eigenschaft, die festgelegt werden muss, um den Identitätswechsel zu ermöglichen. Schließlich müssen Sie für den Dienst das <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>-Verhalten konfigurieren, um `ImpersonateCallerForAllOperations` auf `true` festzulegen. Der Routingdienst verwendet dieses Flag, um zu entscheiden, ob die Clients zum Weiterleiten von Nachrichten mit aktiviertem Identitätswechsel erstellt werden sollen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Nachrichtenfilter](message-filters.md)
 - [Routingverträge](routing-contracts.md)
 - [Auswählen eines Filters](choosing-a-filter.md)

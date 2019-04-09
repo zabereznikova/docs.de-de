@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Anzeigen einer Webseite über ein Windows Forms LinkLabel-Steuerelement (Visual Basic)'
+title: 'Vorgehensweise: Anzeigen einer Webseite über ein LinkLabel-Steuerelement in Windows Forms (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: 7e80dba9cd43385be016506ac2a7e887a68dedf2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1be9ff06e749d14b46946e899c6ffb6c3a950d65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705228"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170026"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Vorgehensweise: Anzeigen einer Webseite über ein Windows Forms LinkLabel-Steuerelement (Visual Basic)
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>Vorgehensweise: Anzeigen einer Webseite über ein LinkLabel-Steuerelement in Windows Forms (Visual Basic)
 In diesem Beispiel wird eine Webseite im Standardbrowser, klickt ein Benutzer ein Windows Forms <xref:System.Windows.Forms.LinkLabel> Steuerelement.  
   
 ## <a name="example"></a>Beispiel  
@@ -50,5 +50,6 @@ End Sub
  Der Aufruf der <xref:System.Diagnostics.Process.Start%2A> Methode erfordert volles Vertrauen. Weitere Informationen finden Sie unter <xref:System.Security.SecurityException>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.LinkLabel>
 - [LinkLabel-Steuerelement](linklabel-control-windows-forms.md)

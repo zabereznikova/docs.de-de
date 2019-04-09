@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: 04d1a8b1c6f05537f12c3df79fda007332621264
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 850e266aed6fc2d69722ba6dac3baa3e115678a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58049457"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147796"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>Für Typkonverter und Markuperweiterungen verfügbare Dienstkontexte
 Autoren der Typen, die Typ-Konverter und Markuperweiterungsverwendungen erfordern häufig Kontextinformationen dazu, wo sich eine Verwendung im Markup oder in der umgebenden Objektdiagrammstruktur befindet. Informationen können erforderlich sein, damit das bereitgestellte Objekt ordnungsgemäß instanziiert wird oder Objektverweise zu vorhandenen Objekten im Objektdiagramm hergestellt werden können. Wenn Sie .NET Framework-XAML-Dienste verwenden, wird der Kontext, der möglicherweise als eine Reihe von Dienstschnittstellen verfügbar gemacht werden muss. Der Typkonverter oder der Markuperweiterungsunterstützungscode können eine Abfrage für einen Dienstkontext für Anbieter ausführen, die verfügbar ist und von <xref:System.Xaml.XamlObjectWriter> oder verwandten Typen übergeben wird. Der XAML-Schemakontext ist direkt über einen solchen Dienst verfügbar. In diesem Thema wird beschrieben, wie von einer Wertkonverterimplementierung auf Dienstkontexte zugegriffen werden kann, außerdem werden normalerweise verfügbare Dienste und ihre Rollen aufgeführt.  
@@ -20,7 +20,7 @@ Autoren der Typen, die Typ-Konverter und Markuperweiterungsverwendungen erforder
   
 <a name="services_for_a_markup_extension"></a>   
 ## <a name="services-for-a-markup-extension"></a>Dienste für eine Markuperweiterung  
- <xref:System.Windows.Markup.MarkupExtension> verfügt nur über eine virtuelle Methode, <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>. Der Zweck des `serviceProvider` -Eingabeparameters besteht darin, zu definieren, wie die Dienste an Implementierungen kommuniziert werden, wenn die Markuperweiterung von einem XAML-Prozessor aufgerufen wird. Der folgende Pseudocode veranschaulicht, wie eine Markuperweiterungsimplementierung Dienste in <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>abfragen kann:  
+ <xref:System.Windows.Markup.MarkupExtension> verfügt über nur eine virtuelle Methode, <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>. Der Zweck des `serviceProvider` -Eingabeparameters besteht darin, zu definieren, wie die Dienste an Implementierungen kommuniziert werden, wenn die Markuperweiterung von einem XAML-Prozessor aufgerufen wird. Der folgende Pseudocode veranschaulicht, wie eine Markuperweiterungsimplementierung Dienste in <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>abfragen kann:  
   
 ```  
 public override object ProvideValue(IServiceProvider serviceProvider)  
@@ -42,7 +42,7 @@ public override object ProvideValue(IServiceProvider serviceProvider)
   
 <a name="services_for_a_type_converter"></a>   
 ## <a name="services-for-a-type-converter"></a>Dienste für einen Typkonverter  
- <xref:System.ComponentModel.TypeConverter> verfügt über vier virtuelle Methoden, die einen Dienstkontext verwenden und XAML-Verwendungen unterstützen. Jede dieser Methoden übergibt einen `context` -Eingabeparameter. Dieser Parameter ist vom Typ <xref:System.ComponentModel.ITypeDescriptorContext>, diese Schnittstelle erbt jedoch <xref:System.IServiceProvider>, und es ist daher eine <xref:System.IServiceProvider.GetService%2A> -Methode, die für Typkonverterimplementierungen verfügbar sind.  
+ <xref:System.ComponentModel.TypeConverter> verfügt über vier virtuelle Methoden, die einen Dienstkontext verwenden und die XAML-Verwendungen unterstützen. Jede dieser Methoden übergibt einen `context` -Eingabeparameter. Dieser Parameter ist vom Typ <xref:System.ComponentModel.ITypeDescriptorContext>, diese Schnittstelle erbt jedoch <xref:System.IServiceProvider>, und es ist daher eine <xref:System.IServiceProvider.GetService%2A> -Methode, die für Typkonverterimplementierungen verfügbar sind.  
   
  Der folgende Pseudocode veranschaulicht, wie eine Typkonverter-Implementierung für XAML-Verwendungen Dienste in einer seiner Überschreibungen abfragen kann, in diesem Fall <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>:  
   
@@ -80,7 +80,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ### <a name="itypedescriptorcontext"></a>ITypeDescriptorContext  
  **Referenzdokumentation**: <xref:System.ComponentModel.ITypeDescriptorContext>  
   
- Wird von <xref:System.IServiceProvider>abgeleitet. Diese Klasse stellt den Kontext in den <xref:System.ComponentModel.TypeConverter> -Standardsignaturen dar; <xref:System.ComponentModel.TypeConverter> ist eine Klasse, die seit .NET Framework 1.0 vorhanden ist. Es ist ein Vorläufer des XAML- und XAML- <xref:System.ComponentModel.TypeConverter> -Szenarios für die Zeichenfolgewert-Typkonvertierung. Im .NET Framework-XAML-Dienste-Kontext werden Methoden von <xref:System.ComponentModel.TypeConverter> explizit implementiert. Das explizite Verhalten der Implementierung gibt Aufrufern an, dass die <xref:System.ComponentModel.ITypeDescriptorContext> -API für XAML-Typsysteme oder zum Lesen oder Schreiben von Objekten aus XAML nicht relevant ist. <xref:System.ComponentModel.ITypeDescriptorContext.Container%2A>, <xref:System.ComponentModel.ITypeDescriptorContext.Instance%2A>, und <xref:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor%2A> geben in der Regel `null` aus den .NET Framework-XAML-Dienste-Kontexten zurück.  
+ Wird von <xref:System.IServiceProvider>abgeleitet. Diese Klasse stellt den Kontext in den <xref:System.ComponentModel.TypeConverter> -Standardsignaturen dar; <xref:System.ComponentModel.TypeConverter> ist eine Klasse, die seit .NET Framework 1.0 vorhanden ist. Es ist ein Vorläufer des XAML- und XAML- <xref:System.ComponentModel.TypeConverter> -Szenarios für die Zeichenfolgewert-Typkonvertierung. Im .NET Framework-XAML-Dienste-Kontext werden Methoden von <xref:System.ComponentModel.TypeConverter> explizit implementiert. Das explizite Verhalten der Implementierung gibt Aufrufern an, dass die <xref:System.ComponentModel.ITypeDescriptorContext> -API für XAML-Typsysteme oder zum Lesen oder Schreiben von Objekten aus XAML nicht relevant ist. <xref:System.ComponentModel.ITypeDescriptorContext.Container%2A>, <xref:System.ComponentModel.ITypeDescriptorContext.Instance%2A>, und <xref:System.ComponentModel.ITypeDescriptorContext.PropertyDescriptor%2A> im Allgemeinen zurück `null` aus .NET Framework-XAML-Dienste-Kontexten.  
   
 ### <a name="ivalueserializercontext"></a>IValueSerializerContext  
  **Referenzdokumentation**: <xref:System.Windows.Markup.IValueSerializerContext>  
@@ -96,7 +96,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Dienst-API:**  <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A>  
   
- Kann die XAML-zu-CLR-Typzuordnung beeinflussen, die erforderlich ist, wenn der XAML-Writer ein CLR-Objekt in einem Objektdiagramm erstellt. <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A> verarbeitet eine potenziell durch ein Präfix qualifizierte Zeichenfolge, die einem XAML-Typnamen (<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>) entspricht, und gibt eine CLR <xref:System.Type>zurück. Das Auflösen von Typen hängt in der Regel stark vom XAML-Schemakontext ab. Nur der XAML-Schemakontext beachtet Überlegungen wie z. B. welche Assemblys geladen werden und auf welche dieser Assemblys zur Typauflösung zugegriffen werden soll.  
+ Kann die XAML-zu-CLR-Typzuordnung beeinflussen, die erforderlich ist, wenn der XAML-Writer ein CLR-Objekt in einem Objektdiagramm erstellt. <xref:System.Windows.Markup.IXamlTypeResolver.Resolve%2A> verarbeitet eine potenziell durch ein Präfix qualifizierte Zeichenfolge, die einen XAML-Typnamen entspricht (<xref:System.Xaml.XamlType.Name%2A?displayProperty=nameWithType>), und gibt eine CLR <xref:System.Type>. Das Auflösen von Typen hängt in der Regel stark vom XAML-Schemakontext ab. Nur der XAML-Schemakontext beachtet Überlegungen wie z. B. welche Assemblys geladen werden und auf welche dieser Assemblys zur Typauflösung zugegriffen werden soll.  
   
 ### <a name="iuricontext"></a>IUriContext  
  **Referenzdokumentation**: <xref:System.Windows.Markup.IUriContext>  
@@ -151,7 +151,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Dienst-API:** <xref:System.Xaml.IXamlNamespaceResolver.GetNamespace%2A> für den Ladepfad, <xref:System.Xaml.IXamlNamespaceResolver.GetNamespacePrefixes%2A> für den Speicherpfad.  
   
- <xref:System.Xaml.IXamlNamespaceResolver> ist ein Dienst, der einen XAML-Namespacebezeichner zurückgeben kann/URI basierend auf dem Präfix, wie in dem ursprünglichen XAML-Markup zugeordnet.  
+ <xref:System.Xaml.IXamlNamespaceResolver> ist ein Dienst, der einen XAML-Namespacebezeichner zurückgeben kann / URI basierend auf dem Präfix, wie in der ursprünglichen XAML-Markup zugeordnet.  
   
 ### <a name="iprovidevaluetarget"></a>IProvideValueTarget  
  **Referenzdokumentation**: <xref:System.Windows.Markup.IProvideValueTarget>  
@@ -162,7 +162,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **Dienste-APIs:**  <xref:System.Windows.Markup.IProvideValueTarget.TargetObject%2A>, <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A>.  
   
- Mit<xref:System.Windows.Markup.IProvideValueTarget> kann ein Typkonverter oder die Markuperweiterung den Kontext dazu abrufen, wo sie zur Ladezeit fungieren. Implementierungen könnten diesen Kontext verwenden, um eine Verwendung ungültig zu machen. WPF verfügt innerhalb einiger der  Markuperweiterungen wie z. B. <xref:System.Windows.DynamicResourceExtension>über eine Logik. Die Logik überprüft die <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A> , um sicherzustellen, dass die Erweiterung nur zum Festlegen von Abhängigkeitseigenschaften (oder eine kurze Liste mit anderen Eigenschaften ohne Abhängigkeiten) verwendet wird.  
+ <xref:System.Windows.Markup.IProvideValueTarget> ermöglicht eine Erweiterung des Typkonverter oder die Markuperweiterung Kontext dazu, wo er zur Ladezeit fungiert abrufen. Implementierungen könnten diesen Kontext verwenden, um eine Verwendung ungültig zu machen. WPF verfügt innerhalb einiger der  Markuperweiterungen wie z. B. <xref:System.Windows.DynamicResourceExtension>über eine Logik. Die Logik überprüft die <xref:System.Windows.Markup.IProvideValueTarget.TargetProperty%2A> , um sicherzustellen, dass die Erweiterung nur zum Festlegen von Abhängigkeitseigenschaften (oder eine kurze Liste mit anderen Eigenschaften ohne Abhängigkeiten) verwendet wird.  
   
 ### <a name="ixamlnameresolver"></a>IXamlNameResolver  
  **Referenzdokumentation**: <xref:System.Xaml.IXamlNameResolver>  
@@ -187,6 +187,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
  Weitere Informationen finden Sie unter <xref:System.Xaml.IDestinationTypeProvider>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
 - [Übersicht über Markuperweiterungen für XAML](markup-extensions-for-xaml-overview.md)

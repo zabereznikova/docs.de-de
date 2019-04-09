@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-ms.openlocfilehash: 6cd09295f9dac26011652d6b0a33318841b04072
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648361"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162671"
 ---
 # <a name="xaml-security-considerations"></a>XAML-Sicherheitsüberlegungen
 Dieses Thema beschreibt bewährte Methoden für die Sicherheit in Anwendungen, bei der Verwendung von XAML und .NET Framework-XAML-Dienste-API.  
@@ -42,4 +42,5 @@ Dieses Thema beschreibt bewährte Methoden für die Sicherheit in Anwendungen, b
  XAML unterstützt eine eigene Typsystem, das in vielerlei Hinsicht gleichberechtigt ist, wie die CLR die einfache CLR-Typsystems implementiert. Für bestimmte Aspekte Typ wissen, wo Sie Entscheidungen zur Vertrauenswürdigkeit zu einem Typ, der basierend auf seine Typinformationen vornehmen, sollten Sie jedoch, um die Typinformationen in der CLR Unterstützungstypen verzögern. Dies ist, da einige der spezifischen reporting-Funktionen des XAML-Typsystems als virtuelle Methoden offen gelassen werden und sind daher nicht vollständig unter der Kontrolle der ursprünglichen Implementierungen von .NET Framework-XAML-Dienste. Diese Erweiterungspunkte vorhanden sein, da das XAML-Typsystem entsprechend der Erweiterbarkeit des XAML selbst und seine möglichen Alternativen Typzuordnung Strategien im Vergleich zu den CLR-gesicherten Standardimplementierung und XAML-Standardschemakontext erweiterbar ist. Weitere Informationen finden Sie unter der Hinweise auf einige der Eigenschaften von <xref:System.Xaml.XamlType> und <xref:System.Xaml.XamlMember>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Xaml.Permissions.XamlAccessLevel>

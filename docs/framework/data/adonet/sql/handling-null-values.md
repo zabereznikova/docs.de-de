@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: cd3a9cd8cf7862bfa3128b81f5ecf6d380e20c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554685"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191470"
 ---
 # <a name="handling-null-values"></a>Behandeln von NULL-Werten
 Wenn der Wert in einer Spalte unbekannt ist oder fehlt, wird in einer relationalen Datenbank ein NULL-Wert verwendet. NULL ist weder eine leere Zeichenfolge (für Zeichen- oder Datetime-Datentypen) noch ein Wert 0 (null) (für numerische Datentypen). Die ANSI SQL-92-Spezifikation legt fest, dass NULL für alle Datentypen gleich sein muss, sodass alle NULL-Werte einheitlich behandelt werden können. Der <xref:System.Data.SqlTypes>-Namespace stellt durch Implementieren der <xref:System.Data.SqlTypes.INullable>-Schnittstelle eine NULL-Semantik bereit. Jeder Datentyp in <xref:System.Data.SqlTypes> besitzt eine eigene `IsNull`-Eigenschaft und einen `Null`-Wert. Diese können einer Instanz dieses Datentyps zugewiesen werden.  
@@ -35,7 +35,7 @@ Wenn der Wert in einer Spalte unbekannt ist oder fehlt, wird in einer relational
  ![Wahrheitstabelle](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>Informationen zur ANSI_NULLS-Option  
- Mit <xref:System.Data.SqlTypes> wird dieselbe Semantik bereitgestellt wie bei aktivierter ANSI_NULLS-Option in SQL Server. Alle arithmetischen Operatoren (+, -, *, /, %), bitweise Operatoren (~, &, &#124;), und die meisten Funktionen null zurück, wenn einer der Operanden oder Argumente null ist, außer für die Eigenschaft `IsNull`.  
+ <xref:System.Data.SqlTypes> Stellt die gleiche Semantik wie bereit, wenn die ANSI_NULLS-Option in SQL Server auf festgelegt ist. Alle arithmetischen Operatoren (+, -, *, /, %), bitweise Operatoren (~, &, &#124;), und die meisten Funktionen null zurück, wenn einer der Operanden oder Argumente null ist, außer für die Eigenschaft `IsNull`.  
   
  Der ANSI SQL-92-Standard unterstützt keine *ColumnName* = NULL in einer WHERE-Klausel. In SQL Server steuert die ANSI_NULLS-Option die Fähigkeit, in der Standardeinstellung NULL-Werte in der Datenbank zuzulassen sowie die Auswertung von Vergleichen mit NULL-Werten. Wenn ANSI_NULLS aktiviert ist (Standardeinstellung), muss der IS NULL-Operator beim Testen auf NULL-Werte in Ausdrücken verwendet werden. Der folgende Vergleich ergibt z. B. immer "Unknown", wenn ANSI_NULLS aktiviert ist:  
   
@@ -83,7 +83,7 @@ WHERE TerritoryID IN (1, 2, 3)
 >  Die `Nullable<T>`-Struktur und die <xref:System.Nullable>-Struktur werden im `DataSet` derzeit nicht unterstützt.  
   
 ### <a name="multiple-column-row-assignment"></a>Zuweisung mehrerer Spalten (Zeilen)  
- `DataTable.Add`, `DataTable.LoadDataRow` oder andere APIs, die ein <xref:System.Data.DataRow.ItemArray%2A> akzeptieren, das einer Reihe zugeordnet wird, ordnen dem Standardwert der <legacyBold>DataColumn</legacyBold> 'NULL' zu. Wenn ein Objekt im Array `DbNull.Value` oder dessen stark typisierte Entsprechung enthält, gelten dieselben Regeln wie oben beschrieben.  
+ `DataTable.Add`, `DataTable.LoadDataRow`, oder andere APIs, akzeptieren ein <xref:System.Data.DataRow.ItemArray%2A> an einer Zeile zugeordnet wird, ordnen Sie auf DataColumns-Standardwert ' null'. Wenn ein Objekt im Array `DbNull.Value` oder dessen stark typisierte Entsprechung enthält, gelten dieselben Regeln wie oben beschrieben.  
   
  Darüber hinaus gelten für Instanzen von `DataRow.["columnName"]`-NULL-Zuweisungen die folgenden Regeln:  
   
@@ -118,7 +118,7 @@ isColumnNull=True, ID=Null, Description=Null
 ```  
   
 ## <a name="comparing-null-values-with-sqltypes-and-clr-types"></a>Vergleichen von NULL-Werten mit "SqlTypes" und CLR-Typen  
- Beim Vergleichen von NULL-Werten ist es wichtig zu verstehen, wie die `Equals`-Methode NULL-Werte in <xref:System.Data.SqlTypes> auswertet und wie sie im Unterschied dazu bei CLR-Typen vorgeht. Alle der <xref:System.Data.SqlTypes> `Equals` -Methoden für die Bewertung von null-Werte verwenden: Wenn eine oder beide Werte null ist, ergibt der Vergleich Null. Andererseits ergibt die Anwendung der CLR-`Equals`-Methode auf zwei <xref:System.Data.SqlTypes> <legacyBold>true</legacyBold>, wenn beide NULL sind. Dies spiegelt den Unterschied zwischen der Verwendung einer Instanzmethode wie der CLR-`String.Equals`-Methode und der Verwendung der <legacyBold>static</legacyBold>/<legacyBold>shared</legacyBold>-Methode `SqlString.Equals` wider.  
+ Beim Vergleichen von NULL-Werten ist es wichtig zu verstehen, wie die `Equals`-Methode NULL-Werte in <xref:System.Data.SqlTypes> auswertet und wie sie im Unterschied dazu bei CLR-Typen vorgeht. Alle der <xref:System.Data.SqlTypes>`Equals` -Methoden für die Bewertung von null-Werte verwenden: Wenn eine oder beide Werte null ist, ergibt der Vergleich Null. Andererseits ergibt die Anwendung der CLR-`Equals`-Methode auf zwei <xref:System.Data.SqlTypes> <legacyBold>true</legacyBold>, wenn beide NULL sind. Dies spiegelt den Unterschied zwischen der Verwendung einer Instanzmethode wie der CLR-`String.Equals`-Methode und der Verwendung der <legacyBold>static</legacyBold>/<legacyBold>shared</legacyBold>-Methode `SqlString.Equals` wider.  
   
  Das folgende Beispiel zeigt den Unterschied in den Ergebnissen zwischen der `SqlString.Equals`-Methode und der `String.Equals`-Methode, wenn beiden Methoden ein Paar von NULL-Werten und dann ein Paar leerer Zeichenfolgen übergeben wird.  
   
@@ -142,5 +142,6 @@ String.Equals instance method:
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+
+- [SQL Server-Datentypen und ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

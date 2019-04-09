@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 19b09c9ec789419f2774207b051b8ee488b6725d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9a7bd1d67d9730c75e3f3f3b1eeb59f5d2d3c49a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625548"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204834"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Vorgehensweise: Asynchrones Aufrufen von WCF-Dienstvorgänge
 In diesem Thema wird beschrieben, wie ein Client auf einen Dienstvorgang asynchron zugreifen kann. Der in diesem Thema behandelte Dienst implementiert die `ICalculator`-Schnittstelle. Der Client kann mithilfe des ereignisgesteuerten asynchronen Aufrufmodells die Vorgänge asynchron an dieser Schnittstelle aufrufen. (Weitere Informationen über den ereignisbasierten asynchronen aufrufmodells finden Sie unter [Multithreadprogrammierung mit dem ereignisbasierten asynchronen Muster](https://go.microsoft.com/fwlink/?LinkId=248184)). Ein Beispiel, wie Sie das asynchrone Implementieren eines Vorgangs in einem Dienst veranschaulicht, finden Sie unter [Vorgehensweise: Implementieren ein asynchronen Dienstvorgangs](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Weitere Informationen zu synchronen und asynchronen Vorgängen, finden Sie unter [synchrone und asynchrone Vorgänge](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
@@ -64,4 +64,5 @@ In diesem Thema wird beschrieben, wie ein Client auf einen Dienstvorgang asynchr
  [!code-vb[EventAsync#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#6)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Implementieren eines asynchronen Dienstvorgangs](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)

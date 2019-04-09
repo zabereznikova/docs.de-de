@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: fec3ec38a19b552e988d26ea57c6f9beed6ce06e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 47f671f493e7b379c36f9bf4b50ec9d185d10b8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144962"
 ---
 # <a name="how-to-skew-an-element"></a>Vorgehensweise: Neigen eines Elements
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.SkewTransform> auf ein Element zu neigen. Eine Neigung ist eine Transformation, die den Koordinatenraum auf ungleichmäßige Art ausdehnt. Eine typische Verwendung einer <xref:System.Windows.Media.SkewTransform> ist das simulieren [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] Tiefe [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] Objekte.  
@@ -43,7 +43,8 @@ Die drei SkewTransform-Beispiele veranschaulicht
  Das vollständige Beispiel finden Sie im [Beispiel einer 2D-Transformation](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.SkewTransform>
 - [Übersicht über Transformationen](transforms-overview.md)
-- [Themen zu Vorgehensweisen](transformations-how-to-topics.md)
+- [Gewusst wie-Themen](transformations-how-to-topics.md)

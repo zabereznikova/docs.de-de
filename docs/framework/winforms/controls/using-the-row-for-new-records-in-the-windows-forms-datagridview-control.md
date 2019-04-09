@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703919"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184820"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Verwenden der Zeile für neue Datensätze im DataGridView-Steuerelement in Windows Forms
 Bei Verwendung einer <xref:System.Windows.Forms.DataGridView> für die Bearbeitung von Daten in Ihrer Anwendung häufig möchten geben Sie Ihren Benutzern die Möglichkeit, neue Zeilen mit Daten im Datenspeicher hinzuzufügen. Die <xref:System.Windows.Forms.DataGridView> -Steuerelement unterstützt diese Funktion durch die Bereitstellung einer Zeile für neue Datensätze, die immer als letzte Zeile angezeigt wird. Er ist mit einem Sternchen (*) im Zeilenkopf gekennzeichnet. Den folgenden Abschnitten werden einige der Dinge, die Sie berücksichtigen sollten, wenn das Programm mit der Zeile für neue Datensätze aktiviert.  
@@ -58,7 +58,8 @@ Bei Verwendung einer <xref:System.Windows.Forms.DataGridView> für die Bearbeitu
  Wenn Sie virtuellen Modus implementieren, müssen Sie nachverfolgen, wenn eine Zeile für neue Datensätze in das Datenmodell und wann das Hinzufügen der Zeile ein Rollback erforderlich ist. Die genaue Implementierung dieser Funktionalität der Implementierung abhängig von dem Datenmodell und die Transaktionssemantik z. B., ob die Commit-Bereich auf die Zelle oder Zeile ist. Weitere Informationen finden Sie unter [Virtueller Modus im DataGridView-Steuerelement von Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
 - [Dateneingabe im DataGridView-Steuerelement in Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Angeben von Standardwerten für neue Zeilen im DataGridView-Steuerelement in Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Vorgehensweise: Angeben von Standardwerten für neue Zeilen im DataGridView-Steuerelement in Windows Forms](specify-default-values-for-new-rows-in-the-datagrid.md)

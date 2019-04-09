@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
-ms.openlocfilehash: 8b30e6226b7663761b520258a37df0ebdda81fa6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f04726bc12fdfbca530ee5533d5b8969addf962e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739101"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208136"
 ---
 # <a name="how-to-connect-to-a-database"></a>Vorgehensweise: Herstellen einer Verbindung mit einer Datenbank
 Der <xref:System.Data.Linq.DataContext> ist die "Hauptleitung" für die Verbindung zu einer Datenbank, für das Abrufen von Objekten und für das Übergeben von Änderungen. Sie verwenden die <xref:System.Data.Linq.DataContext> genauso verwenden würden, wie ein [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] <xref:System.Data.SqlClient.SqlConnection>. Tatsächlich wird der <xref:System.Data.Linq.DataContext> mit einer von Ihnen angegebenen Verbindung oder Verbindungszeichenfolge initialisiert. Weitere Informationen finden Sie unter [DataContext-Methoden (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  
@@ -40,4 +40,5 @@ Der <xref:System.Data.Linq.DataContext> ist die "Hauptleitung" für die Verbindu
  [!code-vb[DLinqCommunicatingWithDatabase#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Kommunizieren mit der Datenbank](../../../../../../docs/framework/data/adonet/sql/linq/communicating-with-the-database.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 962a49d1-cc11-4b96-bc7d-071dd6607d6c
-ms.openlocfilehash: b6dfa95755cc98d30725cecb8669ae4df3aca012
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9f74f025af6dfc5737ea9f4971f68c5ad913e8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133600"
 ---
 # <a name="batching-operations-wcf-data-services"></a>Batchvorgänge (WCF Data Services)
 Die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] unterstützt die Batchverarbeitung von Anforderungen an eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Dienst. Weitere Informationen finden Sie unter [OData: Batchverarbeitung](https://go.microsoft.com/fwlink/?LinkId=186075). In [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], jeder Vorgang, der verwendet die <xref:System.Data.Services.Client.DataServiceContext>, z. B. Ausführen einer Abfrage oder das Speichern von Änderungen, die Ergebnisse in eine separate Anforderung an den Datendienst gesendet werden. Sie können Vorgangsbatches explizit definieren, um einen logischen Bereich für mehrere Vorgänge beizubehalten. Dadurch wird sichergestellt, dass alle Vorgänge im Batch an den Datendienst in einer einzelnen HTTP-Anforderung gesendet werden, kann der Server den Vorgang atomar zu verarbeiten und die Anzahl der Roundtrips zum Datendienst verringert.  
@@ -25,4 +25,5 @@ Die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] unterstützt
  Sie können zusammengefasste Änderungen auch asynchron speichern. Weitere Informationen finden Sie unter [asynchrone Vorgänge](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

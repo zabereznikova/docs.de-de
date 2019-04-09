@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: 9af19f2ef552c5871d488c968368a9192bae9edb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d14a1be3cd40ace2e31fec6f44a86707e5c4476
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230199"
 ---
 # <a name="wcf-data-services-client-library"></a>WCF Data Services-Clientbibliothek
 Mit einem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-basierten Datendienst kann jede Anwendung interagieren, die HTTP-Anforderungen senden und den von einem Datendienst zurückgegebenen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feed verarbeiten kann. Diese Interoperabilität ermöglicht es Ihnen, aus einer Vielzahl webbasierter Anwendungen auf [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierte Dienste zuzugreifen. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] enthält Clientbibliotheken, die umfangreichere Programmierfunktionen bieten, wenn Sie nutzen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeds aus .NET Framework- oder Silverlight-basierten Anwendungen.  
@@ -21,7 +21,7 @@ Mit einem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-basier
  In diesem Abschnitt wird beschrieben, wie Sie mit Clientbibliotheken von einer .NET Framework-Clientanwendung auf Daten zugreifen und diese ändern. Weitere Informationen zur Verwendung der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliothek mit einer Silverlight-basierten Anwendung finden Sie unter [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=186016). Andere Clientbibliotheken sind verfügbar, mit denen Sie nutzen eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in anderen Arten von Anwendungen. Weitere Informationen finden Sie unter den [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185796).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Generieren der Datendienst-Clientbibliothek](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
+ [Generieren der Datendienstclientbibliothek](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
  Beschreibt, wie Sie generiert eine Clientbibliothek und clientdatendienstklassen auf der Grundlage von [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -feeds.  
   
  [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
@@ -52,5 +52,6 @@ Mit einem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-basier
  Beschreibt, wie auf vom Datendienst zurückgegebene Binärdaten als Datenstrom zugegriffen wird und wie diese geändert werden.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+
+- [Definieren von WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Erste Schritte](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

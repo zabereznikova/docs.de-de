@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Binding markup extensions [WPF]
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
-ms.openlocfilehash: 960bc953345e3f6ed632b7a136b626978c8a9bce
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379184"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170312"
 ---
 # <a name="binding-markup-extension"></a>Bindung als Markuperweiterung
 Verzögert einen Eigenschaftenwert, um einen datengebundenen Wert, Erstellen eines intermediären Ausdrucks-Objekts und interpretieren den Datenkontext, der für das Element und seine Bindung zur Laufzeit gilt.  
@@ -123,7 +123,8 @@ Verzögert einen Eigenschaftenwert, um einen datengebundenen Wert, Erstellen ein
  `Binding` ist eine ungewöhnliche Markuperweiterung in, das die <xref:System.Windows.Data.Binding> Klasse, die die Funktionalität von Erweiterungen für WPF XAML-Implementierung implementiert implementiert auch einige andere Methoden und Eigenschaften, die nicht mit XAML verknüpft sind. Die anderen Mitglieder machen sollen <xref:System.Windows.Data.Binding> eine vielseitigere und eigenständige-Klasse, die zusätzlich zu Ihrer Funktion als eine XAML-Markuperweiterung viele Datenbindungsszenarien behandeln kann.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Data.Binding>
-- [Übersicht zur Datenbindung](../data/data-binding-overview.md)
+- [Übersicht über die Datenbindung](../data/data-binding-overview.md)
 - [Übersicht über XAML (WPF)](xaml-overview-wpf.md)
 - [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md)

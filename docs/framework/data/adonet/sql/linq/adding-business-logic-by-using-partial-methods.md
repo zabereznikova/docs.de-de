@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
-ms.openlocfilehash: 082994085a3cbb9a229ae6c6eea30f15b796fc20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea7dbc4f760a446440cb7291413d69b1202f80e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543940"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162658"
 ---
 # <a name="adding-business-logic-by-using-partial-methods"></a>Hinzufügen von Geschäftslogik durch Verwenden partieller Methoden
 Sie können anpassen, dass Visual Basic und C# erzeugten Code in Ihre [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Projekte mit *partielle Methoden*. Der von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erzeugte Code definiert Signaturen als einen Teil einer partiellen Methode. Wenn Sie die Methode implementieren möchten, können Sie eine eigene partielle Methode hinzufügen. Wenn Sie keine eigene Implementierung hinzufügen, verwirft der Compiler die partielle Methodensignatur und ruft die Standardmethoden in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] auf.  
@@ -51,5 +51,6 @@ Sie können anpassen, dass Visual Basic und C# erzeugten Code in Ihre [!INCLUDE[
  [!code-vb[DLinqOverrideDefault#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefault/vb/northwind.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vornehmen und Übergeben von Datenänderungen](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
 - [Anpassen von Insert-, Update- und Delete-Operationen](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

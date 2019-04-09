@@ -2,12 +2,12 @@
 title: <connectionPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 6fa7fa65-2c6e-4eab-b8cf-7690112c0be5
-ms.openlocfilehash: 76b8a0feaf51b39c9c988d853db7e3bf96244905
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b1ff302a46605cb78fe567a63f66723ed757f147
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284582"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169987"
 ---
 # <a name="connectionpoolsettings"></a>\<connectionPoolSettings>
 Gibt zusätzliche Verbindungspooleinstellungen für eine Named Pipe-Bindung an.  
@@ -48,13 +48,14 @@ Gibt zusätzliche Verbindungspooleinstellungen für eine Named Pipe-Bindung an.
 |[\<namedPipeTransport>](../../../../../docs/framework/configure-apps/file-schema/wcf/namedpipetransport.md)|Definiert einen Transport, der bewirkt, dass ein Kanal Nachrichten mithilfe von benannten Pipes überträgt.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.NamedPipeConnectionPoolSettingsElement>
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement.ConnectionPoolSettings%2A>
 - <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Wählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Bindungen](../../../../../docs/framework/wcf/bindings.md)
 - [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)

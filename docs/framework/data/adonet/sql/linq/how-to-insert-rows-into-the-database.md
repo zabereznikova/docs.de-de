@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Einfügen von Zeilen in der Datenbank'
+title: 'Vorgehensweise: Einfügen von Zeilen in die Datenbank'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: 7c685d6e077c255c31d7aeec0594db9df721a21f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cc9f276cc278d4a9c376d72f1ab38d89ea6dd5b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169597"
 ---
-# <a name="how-to-insert-rows-into-the-database"></a>Vorgehensweise: Einfügen von Zeilen in der Datenbank
+# <a name="how-to-insert-rows-into-the-database"></a>Vorgehensweise: Einfügen von Zeilen in die Datenbank
 Einfügen von Zeilen in einer Datenbank durch Hinzufügen von Objekten an die zugeordnete [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> Sammlung und übermitteln Sie dann die Änderungen an der Datenbank. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt Ihre Änderungen in die entsprechenden SQL `INSERT` Befehle.  
   
 > [!NOTE]
@@ -37,6 +37,7 @@ Einfügen von Zeilen in einer Datenbank durch Hinzufügen von Objekten an die zu
  [!code-vb[System.Data.Linq.Table#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.table/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Verwalten von Änderungskonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
 - [DataContext-Methoden (O/R-Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
 - [Vorgehensweise: Zuweisen von gespeicherten Prozeduren zum Durchführen von Aktionen zum Aktualisieren, Einfügen und Löschen (O/R-Designer)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)

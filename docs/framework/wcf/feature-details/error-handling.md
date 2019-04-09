@@ -2,12 +2,12 @@
 title: Fehlerbehandlung
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: ddc3921fbb6b453db43ed3939134650395ade670
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261151"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136434"
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
 ## <a name="error-handling-in-windows-communication-foundation"></a>Fehlerbehandlung in Windows Communication Foundation  
@@ -18,7 +18,7 @@ ms.locfileid: "56261151"
 ### <a name="the-microsoft-enterprise-library"></a>Die Microsoft Enterprise Library  
  Der Ausnahmebehandlungs-Anwendungsblock der Microsoft Enterprise Library erleichtert das Implementieren häufiger Entwurfsmuster und das Erstellen einer einheitlichen Strategie für die Verarbeitung von Ausnahmen, die auf allen Architekturebenen einer Unternehmensanwendung auftreten. Er unterstützt den typischen Code in den Catch-Anweisungen von Anwendungskomponenten. Statt diesen Code (z. B. Code zum Protokollieren von Ausnahmeinformationen) in der gesamten Anwendung in identischen Catch-Blöcken zu wiederholen, ermöglicht der Ausnahmebehandlungs-Anwendungsblock Entwicklern das Kapseln dieser Logik als wiederverwendbare Ausnahmehandler.  
   
- Diese Bibliothek enthält standardmäßig einen Fehlervertragsausnahmehandler. Dieser Ausnahmehandler ist für die Verwendung an den Grenzen des WCF-Diensts (Windows® Communication Foundation) vorgesehen und generiert aus der Ausnahme einen neuen Fehlervertrag.  
+ Diese Bibliothek enthält standardmäßig einen Fehlervertragsausnahmehandler. Dieser Ausnahmehandler ist für die Verwendung an den Grenzen des WCF (Windows® Communication Foundation)-Diensts vorgesehen, und er generiert aus der Ausnahme einen neuen Fehlervertrag.  
   
  Anwendungsblöcke enthalten in der Regel häufig verwendete bewährte Methoden und bieten eine allgemeine Vorgehensweise für die Ausnahmebehandlung in der gesamten Anwendung. Jedoch können benutzerdefinierte Fehlerhandler und Fehlerverträge, die selbst entwickelt wurden, ebenfalls sehr hilfreich sein. Beispielsweise bieten Benutzerdefinierte Fehlerhandler eine ausgezeichnete Gelegenheit, automatisch alle Ausnahmen FaultExceptions höher stufen und Hinzufügen von Protokollierfunktionen zu Ihrer Anwendung.  
   
@@ -65,7 +65,8 @@ ms.locfileid: "56261151"
   
  Wenn jedoch die Konvertierung fehlschlägt, gibt es keine Möglichkeit, dies dem Vorgang zu signalisieren. Stattdessen wird für die Typkonvertierung ein Verteilungsfehler ausgegeben.  
   
- Ein Typkonvertierungs-Verteilungsfehler kann wie viele andere Typen von Verteilungsfehlern durch das Installieren eines Fehlerhandlers überprüft werden. Der "IErrorHandler"-Erweiterungspunkt wird aufgerufen, um auf Dienstebene aufgetretene Ausnahmen zu behandeln. Dort kann die an den Aufrufer zurückzusendende Antwort ausgewählt werden, und es lassen sich benutzerdefinierte Aufgaben ausführen und Berichte erstellen.  
+ Ein Typkonvertierungs-Verteilungsfehler kann wie viele andere Typen von Verteilungsfehlern durch das Installieren eines Fehlerhandlers überprüft werden. Der IErrorHandler-Erweiterungspunkt wird aufgerufen, um auf Dienstebene aufgetretene Ausnahmen zu behandeln. Dort kann die an den Aufrufer zurückzusendende Antwort ausgewählt werden, und es lassen sich benutzerdefinierte Aufgaben ausführen und Berichte erstellen.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Einfache WCF-Programmierung](../basic-wcf-programming.md)
+
+- [Basis-WCF-Programmierung](../basic-wcf-programming.md)

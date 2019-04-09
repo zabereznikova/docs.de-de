@@ -2,12 +2,12 @@
 title: <transport> von <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: 9bcaae68051be2976b97989657efe53cf7a2718a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a6d3dd2c24e90bdcdc6520e62dcc1dbe7ce797f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263451"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199825"
 ---
 # <a name="transport-of-netnamedpipebinding"></a>\<Transport > von \<NetNamedPipeBinding >
 Definiert die Transportsicherheitseinstellungen für eine benannte Pipe.  
@@ -41,7 +41,7 @@ Definiert die Transportsicherheitseinstellungen für eine benannte Pipe.
 |protectionLevel|Definiert die Schutzebene der benannten Pipe. Durch das Signieren von Nachrichten wird das Risiko reduziert, dass ein Dritter während der Übertragung auf die Nachricht zugreifen kann. Die Verschlüsselung sorgt während des Transports für Datenebenensicherheit. Folgende Werte sind gültig:<br /><br /> – None: Kein Schutz.<br />-Anmeldung: Nachrichten werden signiert.<br />-   EncryptAndSign: Nachrichten werden verschlüsselt und signiert.<br /><br /> Der Standardwert ist EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -50,6 +50,7 @@ Definiert die Transportsicherheitseinstellungen für eine benannte Pipe.
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netnamedpipebinding.md)|Definiert die Sicherheitseinstellungen für eine Bindung.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.NamedPipeTransportSecurity>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetNamedPipeSecurity.Transport%2A>

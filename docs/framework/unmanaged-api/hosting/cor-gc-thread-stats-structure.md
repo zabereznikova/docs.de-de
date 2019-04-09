@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f453867f6b46265fdbf567b4374ddc64b4efe84
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f60a4b56270318a05d0e5a480fdb56eb45593d5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563894"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177735"
 ---
 # <a name="corgcthreadstats-structure"></a>COR_GC_THREAD_STATS-Struktur
 Enthält pro-Thread-Statistiken, die Garbagecollection betreffen.  
@@ -55,5 +55,6 @@ typedef struct _COR_GC_THREAD_STATS {
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Hosten von Strukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+
+- [Hostingstrukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [IHostTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

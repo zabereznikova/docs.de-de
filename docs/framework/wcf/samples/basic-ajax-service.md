@@ -2,12 +2,12 @@
 title: Einfacher AJAX-Dienst
 ms.date: 03/30/2017
 ms.assetid: d66d0c91-0109-45a0-a901-f3e4667c2465
-ms.openlocfilehash: 5efee4f65cc223d357d1ce1cd01a78292c7d6ea9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8bcfb9a751670d3d1c32de6d8e6f7dc1b84ea30d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819722"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146995"
 ---
 # <a name="basic-ajax-service"></a>Einfacher AJAX-Dienst
 In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (WCF) zu verwenden, um das Erstellen eines einfachen (ASP.NET Asynchronous JavaScript and XML (AJAX)-Diensts (ein Dienst, die Sie mithilfe von JavaScript-Codes über einen Webbrowserclient zugreifen können). Der Dienst nutzt das <xref:System.ServiceModel.Web.WebGetAttribute>-Attribut, um sicherzustellen, dass der Dienst auf HTTP GET-Anforderungen antwortet und für die Verwendung von JSON-Daten (JavaScript Object Notation) für Antworten konfiguriert ist.  
@@ -86,4 +86,3 @@ function onSuccess(mathResult){
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Ajax\SimpleAjaxService`  
-  

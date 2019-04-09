@@ -2,12 +2,12 @@
 title: Dienstbeschreibung
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: 3f6595bae8b27bb6dfb43474be0d9ebc249e88e6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: a1288329283eb611fa82733a2557af73a019796f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159801"
 ---
 # <a name="service-description"></a>Dienstbeschreibung
 Im Beispiel "Dienstbeschreibung" wird veranschaulicht, wie ein Dienst seine Dienstbeschreibungsinformationen zur Laufzeit abrufen kann. Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), mit einen zusätzlichen Dienstvorgang definiert, um beschreibende Informationen über den Dienst zurückzugeben. Die zurückgegebenen Informationen enthalten die Basisadressen und Endpunkte für den Dienst. Der Dienst stellt diese Informationen mithilfe der Klassen <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost> und <xref:System.ServiceModel.Description.ServiceDescription> bereit.  
@@ -101,4 +101,3 @@ Press <ENTER> to terminate client.
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ServiceDescription`  
-  

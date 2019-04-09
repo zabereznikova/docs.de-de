@@ -5,12 +5,12 @@ helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 5da7f1a53412cf30a5898fec096aaa01e3aa65d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 120a7d45e01b0460f0c5e50896f58d026c4c3b9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722983"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216313"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>Vorgehensweise: Erstellen von übergeordneten MDI-Formularen
 > [!IMPORTANT]
@@ -36,6 +36,7 @@ ms.locfileid: "57722983"
 4.  Drücken Sie **F5**, um die Anwendung auszuführen. Informationen zum Erstellen von untergeordneten MDI-Fenstern, innerhalb von übergeordneten MDI-Formulars verwendet werden, finden Sie unter [Vorgehensweise: Erstellen von untergeordneten MDI-Formularen](how-to-create-mdi-child-forms.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [MDI-Anwendungen (Multiple Document Interface)](multiple-document-interface-mdi-applications.md)
 - [Vorgehensweise: Erstellen von untergeordneten MDI-Formularen](how-to-create-mdi-child-forms.md)
 - [Vorgehensweise: Bestimmen des aktiven untergeordneten MDI-Elements](how-to-determine-the-active-mdi-child.md)

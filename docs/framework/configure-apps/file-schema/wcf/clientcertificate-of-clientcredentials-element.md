@@ -2,12 +2,12 @@
 title: <clientCertificate> der <clientCredentials> Element
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: 1ca2973b4c0e745f13c1364b2284909d07da738c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5abf0a99beff1b9fb3655cb82d74484f3b88237f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273128"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216456"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<ClientCertificate > von \<ClientCredentials >-Element
 Definiert ein X.509-Zertifikat, das zum Authentifizieren eines Clients bei einem Dienst verwendet wird.  
@@ -53,6 +53,7 @@ Definiert ein X.509-Zertifikat, das zum Authentifizieren eines Clients bei einem
  Dieses Konfigurationselement gibt das Zertifikat an, das verwendet wird, um den Client mit diesem Element zu authentifizieren. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials>
@@ -62,5 +63,5 @@ Definiert ein X.509-Zertifikat, das zum Authentifizieren eines Clients bei einem
 - [Sicherheitsverhalten](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [Sichern von Clients](../../../../../docs/framework/wcf/securing-clients.md)
-- [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Verwenden von Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

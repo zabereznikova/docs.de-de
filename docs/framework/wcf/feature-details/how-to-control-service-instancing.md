@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e0b12b34-8004-443a-a46d-83a5c00f2601
-ms.openlocfilehash: 06324b30d2fbd68a12619375024b9f86019adbb1
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 1c1a08c702ab1bdc4579cb05359db1681e7203b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260963"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135017"
 ---
 # <a name="how-to-control-service-instancing"></a>Vorgehensweise: Steuern der Dienstinstanzierung
 Durch das Festlegen des Instanzmodus eines Dienstes können Sie angeben, wann ein <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (und das zugeordnete benutzerdefinierte Dienstobjekt) erstellt wird. Mögliche Modi finden Sie in der <xref:System.ServiceModel.InstanceContextMode>-Enumeration. Weitere Informationen zu Verhalten finden Sie unter [konfigurieren und Erweitern der Laufzeit mit Verhalten](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md). Arbeitsbeispiele finden Sie unter [Verhaltensweisen](../../../../docs/framework/wcf/samples/behaviors.md).  
@@ -31,6 +31,7 @@ Durch das Festlegen des Instanzmodus eines Dienstes können Sie angeben, wann ei
  [!code-vb[c_ControlServiceInstancing#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_controlserviceinstancing/vb/source.vb#2)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.ServiceBehaviorAttribute>
 - <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>
 - <xref:System.ServiceModel.InstanceContextMode>

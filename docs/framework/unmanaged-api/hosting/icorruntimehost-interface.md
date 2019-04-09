@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0182de9b998b7eb88a3bd003543bee876398633
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: ec893c898a6cd4abffd525056ed0d0169fcbb288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304647"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184781"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost-Schnittstelle
 Bietet Methoden, mit denen der Host zum Starten und beenden die common Language Runtime (CLR) explizit zum Erstellen und Konfigurieren von Anwendungsdomänen, die Zugriff auf die Standarddomäne und zum Aufzählen von allen Domänen, die im Prozess ausgeführt wird.  
@@ -62,9 +62,10 @@ Bietet Methoden, mit denen der Host zum Starten und beenden die common Language 
  **.NET Framework-Versionen:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.AppDomain>
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
 - [ICLRRuntimeHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
 - [Laufzeithosts](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [CorRuntimeHost-Co-Klasse](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

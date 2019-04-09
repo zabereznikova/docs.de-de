@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Das Bild angezeigt, die von einer Windows Forms-Steuerelement mithilfe des Designers'
+title: 'Vorgehensweise: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Bildes mithilfe des Designers'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], images
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 265fc88fb2bb9aef0696ea0d7e707ae07084df1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2e0837e4a3058db7f1086d6a8ed53136ec86c7ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702256"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153490"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Vorgehensweise: Das Bild angezeigt, die von einer Windows Forms-Steuerelement mithilfe des Designers
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Vorgehensweise: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Bildes mithilfe des Designers
 Mehrerer Windows Forms-Steuerelemente können Bilder anzeigen. Das Bild kann ein Symbol, das den Zweck des Steuerelements, z. B. auf eine Schaltfläche, ein Datenträgersymbol wird ermittelt, werden die **speichern** Befehl. Alternativ kann das Symbol ein Hintergrundbild auf dem Steuerelement der gewünschten Eindruck sein.  
   
 > [!NOTE]
@@ -33,7 +33,8 @@ Mehrerer Windows Forms-Steuerelemente können Bilder anzeigen. Das Bild kann ein
 2.  Wählen Sie das Bild, die, das Sie anzeigen möchten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

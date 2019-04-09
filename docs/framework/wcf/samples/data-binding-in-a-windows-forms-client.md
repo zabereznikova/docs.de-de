@@ -2,12 +2,12 @@
 title: Datenbindung in einem Windows Forms-Client
 ms.date: 03/30/2017
 ms.assetid: a2a30b37-d6e2-4552-820e-e60b2bbe8829
-ms.openlocfilehash: d41310108bfffedc38297f2c981e90007b59fb9a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e3f4134544076bc7e8d21da67172551f6f64c16c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832150"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167088"
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Datenbindung in einem Windows Forms-Client
 In diesem Beispiel wird veranschaulicht, wie zum Binden an Daten, die von einem Windows Communication Foundation (WCF)-Dienst in einer Windows Forms-Anwendung zurückgegeben wird.  
@@ -37,4 +37,3 @@ In diesem Beispiel wird veranschaulicht, wie zum Binden an Daten, die von einem 
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WindowsForms`  
-  

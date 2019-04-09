@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 3ed1fb6a9a7fc8e7ded6ae0e124ca7dcbf0f3c98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716958"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144013"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Vorgehensweise: Erstellen von Miniaturbildern
 Eine Miniaturansicht ist eine kleine Version eines Bilds. Sie können ein Miniaturbild erstellen, durch den Aufruf der <xref:System.Drawing.Image.GetThumbnailImage%2A> Methode eine <xref:System.Drawing.Image> Objekt.  
@@ -32,7 +32,7 @@ Eine Miniaturansicht ist eine kleine Version eines Bilds. Sie können ein Miniat
  [!code-vb[System.Drawing.WorkingWithImages#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers. Um das Beispiel auszuführen, gehen Sie folgendermaßen vor:  
+ Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Um das Beispiel auszuführen, gehen Sie folgendermaßen vor:  
   
 1.  Erstellen Sie eine neue Windows Forms-Anwendung.  
   
@@ -51,5 +51,6 @@ Eine Miniaturansicht ist eine kleine Version eines Bilds. Sie können ein Miniat
      Eine Miniaturansicht 100 x 100 wird im Formular angezeigt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Bilder, Bitmaps und Metadateien](images-bitmaps-and-metafiles.md)
 - [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](working-with-images-bitmaps-icons-and-metafiles.md)

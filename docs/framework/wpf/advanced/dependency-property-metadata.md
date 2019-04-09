@@ -7,18 +7,16 @@ helpviewer_keywords:
 - metadata [WPF], for dependency properties
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
-ms.openlocfilehash: 7a9f4c2c8c9ff6c315b9d7189d5e859a902c3e4d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170364"
 ---
 # <a name="dependency-property-metadata"></a>Metadaten für Abhängigkeitseigenschaften
 Das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystem enthält ein Metadatenberichtssystem, das die Berichtsmöglichkeiten mithilfe von Reflektion oder allgemeinen [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Merkmalen weit übertrifft. Metadaten für eine Abhängigkeitseigenschaft können auch eindeutig durch die Klasse zugewiesen werden, die eine Abhängigkeitseigenschaft definiert, sie können geändert werden, wenn die Abhängigkeitseigenschaft zu einer anderen Klasse hinzugefügt wird, und sie können gezielt von allen abgeleiteten Klassen überschrieben werden, die die Abhängigkeitseigenschaft von der definierenden Basisklasse erben.  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Dieses Thema setzt voraus, dass Sie Abhängigkeitseigenschaften vorhandener Abhängigkeitseigenschaften von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Klassen aus Sicht eines Kunden verstehen und die [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md) gelesen haben. Um den Beispielen in diesem Thema folgen zu können, sollten Sie zudem mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] vertraut sein und wissen, wie Sie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen schreiben.  
@@ -92,6 +90,7 @@ Das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.m
  Rufen Sie <xref:System.Windows.DependencyProperty.AddOwner%2A> für eine Abhängigkeitseigenschaft, die durch die Besitzerklasse als angefügte Eigenschaft definiert ist. Der Zweck liegt im Allgemeinen darin, die zuvor angefügte Eigenschaft als nicht angefügte Abhängigkeitseigenschaft verfügbar zu machen. Sie wird verfügbar machen die <xref:System.Windows.DependencyProperty.AddOwner%2A> Rückgabewert als ein `public static readonly` Feld für die Verwendung als Bezeichner der Abhängigkeitseigenschaft und entsprechenden Wrapper-Eigenschaften definieren, damit die Eigenschaft in der Membertabelle erscheint und nicht angefügte Eigenschaft unterstützt die Verwendung in Ihrer Klasse.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.PropertyMetadata>
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>

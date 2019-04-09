@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-ms.openlocfilehash: 1f024ddd0be023f77408e3106bc0a4465d068074
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2d51f06da31482c46b04d1eb86172c3eda246c20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358287"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145365"
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>Vorgehensweise: Bereitstellen von Daten für die Bindung in XAML
 In diesem Thema wird erläutert, verschiedene Möglichkeiten, können Sie Daten verfügbar machen für die Bindung in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]– je nach den Anforderungen Ihrer Anwendung.  
@@ -43,5 +43,6 @@ In diesem Thema wird erläutert, verschiedene Möglichkeiten, können Sie Daten 
  Informationen zu viele Möglichkeiten, die Sie können angeben, die Daten, die Sie möchten binden, finden Sie [angeben der Bindungsquelle](how-to-specify-the-binding-source.md). Weitere Informationen welche Arten von Daten an Sie gebunden werden können und die Implementierungsweise einer eigenen [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] Objekte für die Bindung, finden Sie unter [Übersicht über Bindungsquellen](binding-sources-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht zur Datenbindung](data-binding-overview.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+
+- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)

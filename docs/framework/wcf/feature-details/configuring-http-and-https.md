@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 25ca96104ef8a63a7c6988f6dfba309e9aa44a9b
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 3decf955748b156b8eff4b5286a70e67d8ac14ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195149"
 ---
 # <a name="configuring-http-and-https"></a>Konfigurieren von HTTP und HTTPS
 WCF-Dienste und -Clients können über HTTP und HTTPS kommunizieren. Die HTTP/HTTPS-Einstellungen werden mit Internetinformationsdienste (IIS) oder mit einem Befehlszeilentool konfiguriert. Wenn ein WCF-Dienst unter IIS gehostet wird, können die HTTP- oder HTTPS-Einstellungen in IIS konfiguriert werden (mit dem Tool "inetmgr.exe"). Bei einem selbst gehosteten WCF-Dienst werden die HTTP- oder HTTPS-Einstellungen mit einem Befehlszeilentool konfiguriert.  
@@ -18,7 +18,7 @@ WCF-Dienste und -Clients können über HTTP und HTTPS kommunizieren. Die HTTP/HT
   
  Welches Tool zum Konfigurieren der HTTP-Einstellungen verwendet wird, hängt vom Betriebssystem des Computers ab.  
   
- Bei der Ausführung [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)], verwenden Sie das HttpCfg.exe-Tool. Dieses Tool wird von [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] automatisch installiert. Bei der Ausführung [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Sie können das Tool unter [Windows XP Service Pack 2-Supporttools](https://go.microsoft.com/fwlink/?LinkId=88606). Weitere Informationen finden Sie unter [Httpcfg-Übersicht](https://go.microsoft.com/fwlink/?LinkId=88605).  
+ Bei der Ausführung [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] oder [!INCLUDE[wxp](../../../../includes/wxp-md.md)], verwenden Sie das HttpCfg.exe-Tool. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] Dieses Tool wird automatisch installiert. Bei der Ausführung [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Sie können das Tool unter [Windows XP Service Pack 2-Supporttools](https://go.microsoft.com/fwlink/?LinkId=88606). Weitere Informationen finden Sie unter [Httpcfg-Übersicht](https://go.microsoft.com/fwlink/?LinkId=88605).  
   
  Bei der Ausführung [!INCLUDE[wv](../../../../includes/wv-md.md)] oder Windows 7, konfigurieren Sie diese Einstellungen, mit dem Netsh.exe-Tool.  
   
@@ -27,7 +27,7 @@ WCF-Dienste und -Clients können über HTTP und HTTPS kommunizieren. Die HTTP/HT
   
  Eine laufende Anwendung kann eine ähnliche Anforderung stellen, um Namespaceregistrierungen hinzuzufügen. Registrierungen und Reservierungen konkurrieren um Teile des Namespaces. Eine Reservierung kann haben Vorrang vor einer Registrierung entsprechend der Auflösungsreihenfolge die [Auflösungsreihenfolge von Namespace-Ansprüche, die Platzhalter verwenden](https://go.microsoft.com/fwlink/?LinkId=94841). In diesem Fall blockiert die Reservierung in der laufenden Anwendung den Empfang von Anforderungen.  
   
-### <a name="running-windows-xp-or-server-2003"></a>Unter Windows&#160;XP oder Windows Server&#160;2003  
+### <a name="running-windows-xp-or-server-2003"></a>Unter Windows&amp;#160;XP oder Windows Server&amp;#160;2003  
  Verwenden der `httpcfg.exe set urlacl` Befehl aus, um Namespacereservierungen zu ändern. Die [Dokumentation der Windows-Supporttools](https://go.microsoft.com/fwlink/?LinkId=94840) erklärt die Syntax für das Httpcfg.exe-Tool. Zur Änderung der Reservierungsrechte für einen Teil des Namespaces sind entweder Administratorrechte oder der Besitz dieses Teils des Namespaces erforderlich. Anfänglich gehört der gesamte HTTP-Namespace dem lokalen Administrator.  
   
  Hier die Syntax des Befehls Httpcfg mit der `set urlacl`-Option  
@@ -68,7 +68,7 @@ netsh http add urlacl url=http://+:80/MyUri user=DOMAIN\user
 ## <a name="configuring-the-ip-listen-list"></a>Konfigurieren der IP-Lauschliste  
  Die HTTP-Server-API stellt erst dann eine Bindung mit einer IP-Adresse und einem Port her, wenn ein Benutzer eine URL registriert. Standardmäßig verbindet die HTTP-Server-API mit dem Anschluss in der URL für alle IP-Adressen des Computers. Ein Konflikt tritt auf, wenn eine Anwendung, die die HTTP-Server-API nicht verwendet, sich vorher mit dieser Kombination von IP-Adresse und -Anschluss verbunden hat. Die IP-Lauschliste ermöglicht WCF-Dienste mit Anwendungen zu koexistieren, die einen Port für einige der IP-Adressen des Computers zu verwenden. Enthält die IP-Lauschliste irgendwelche Einträge, verbindet die HTTP-Server-API nur mit den IP-Adressen, die in der Liste angegeben sind. Die Änderung der IP-Lauschliste erfordert Administratorrechte.  
   
-### <a name="running-windows-xp-or-server-2003"></a>Unter Windows&#160;XP oder Windows Server&#160;2003  
+### <a name="running-windows-xp-or-server-2003"></a>Unter Windows&amp;#160;XP oder Windows Server&amp;#160;2003  
  Verwenden Sie das httpcfg-Tool, um die IP-Lauschliste zu ändern, wie im folgenden Beispiel gezeigt. Die [Dokumentation der Windows-Supporttools](https://go.microsoft.com/fwlink/?LinkId=94840) erklärt die Syntax für das httpcfg.exe-Tool.  
   
 ```console  
@@ -88,8 +88,9 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
  Die HTTP-Server-API bietet einige erweiterte Konfigurationseinstellungen, die über HttpCfg nicht verfügbar sind. Diese Einstellungen sind in der Registrierung gespeichert und gelten für alle Anwendungen, die auf Systemen laufen, die HTTP-Server-APIs verwenden. Weitere Informationen zu diesen Einstellungen finden Sie unter [Http.sys-registrierungseinstellungen für IIS](https://go.microsoft.com/fwlink/?LinkId=94843). Die meisten Benutzer sollten diese Einstellungen nicht ändern müssen.  
   
 ## <a name="issues-specific-to-windows-xp"></a>Probleme bezüglich Windows XP  
- IIS unterstützt keine Anschlussfreigabe unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Wenn IIS ausgeführt wird, und ein WCF-Dienst versucht, einen Namespace mit dem gleichen Anschluss zu verwenden, kann der WCF-Dienst gestartet. IIS und WCF, die standardmäßig auf Port 80 verwenden. Ändern Sie die anschlusszuweisung für einen der Dienste oder verwenden Sie die IP-Lauschliste, um einen Netzwerkadapter, die nicht von IIS verwendet den WCF-Dienst zuweisen. IIS&#160;6.0 und höher wurde für die Verwendung der HTTP-Server-APIs neu konzipiert.  
+ IIS unterstützt keine Anschlussfreigabe unter [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Wenn IIS ausgeführt wird, und ein WCF-Dienst versucht, einen Namespace mit dem gleichen Anschluss zu verwenden, kann der WCF-Dienst gestartet. IIS und WCF, die standardmäßig auf Port 80 verwenden. Ändern Sie die anschlusszuweisung für einen der Dienste oder verwenden Sie die IP-Lauschliste, um einen Netzwerkadapter, die nicht von IIS verwendet den WCF-Dienst zuweisen. IIS&amp;#160;6.0 und höher wurde für die Verwendung der HTTP-Server-APIs neu konzipiert.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.WSDualHttpBinding>
 - [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)

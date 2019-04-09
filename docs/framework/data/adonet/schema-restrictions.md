@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
-ms.openlocfilehash: 7bc5f3fc1c87b8acbbfeb0bad0c7766c0a2ef1dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5044d39d1dc5d2fa7d2ce691cdda7075fa0e32a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151202"
 ---
 # <a name="schema-restrictions"></a>Schemaeinschränkungen
 Der zweite optionale Parameter, der die **GetSchema** Methode ist, die Einschränkungen, die verwendet werden, um die Schemainformationen begrenzen zurückgegeben werden soll, und es wird zum Übergeben der **GetSchema** -Methode, wie ein Array von Zeichenfolgen . Die Position im Array bestimmt die Werte, die zurückgegeben werden können. Dies entspricht der Anzahl der Einschränkungen.  
@@ -143,7 +143,7 @@ class Program
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|name|@Name|name|1|  
+|Name|@Name|Name|1|  
   
 ### <a name="tables"></a>Tabellen  
   
@@ -154,7 +154,7 @@ class Program
 |Tabelle|@Name|TABLE_NAME|3|  
 |TableType|@TableType|TABLE_TYPE|4|  
   
-### <a name="columns"></a>Columns  
+### <a name="columns"></a>Spalten  
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
@@ -195,7 +195,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Besitzer|@Owner|SPECIFIC_SCHEMA|2|  
-|name|@Name|SPECIFIC_NAME|3|  
+|Name|@Name|SPECIFIC_NAME|3|  
 |Parameter|@Parameter|PARAMETER_NAME|4|  
   
 ### <a name="procedures"></a>Verfahren  
@@ -204,7 +204,7 @@ class Program
 |----------------------|--------------------|-------------------------|------------------------|  
 |Catalog|@Catalog|SPECIFIC_CATALOG|1|  
 |Besitzer|@Owner|SPECIFIC_SCHEMA|2|  
-|name|@Name|SPECIFIC_NAME|3|  
+|Name|@Name|SPECIFIC_NAME|3|  
 |Typ|@Type|ROUTINE_TYPE|4|  
   
 ### <a name="indexcolumns"></a>IndexColumns  
@@ -217,7 +217,7 @@ class Program
 |ConstraintName|@ConstraintName|x.name|4|  
 |Spalte|@Column|c.name|5|  
   
-### <a name="indexes"></a>Indexes  
+### <a name="indexes"></a>Indizes  
   
 |Einschränkungsname|Parametername|Einschränkungsstandard|Einschränkungsnummer|  
 |----------------------|--------------------|-------------------------|------------------------|  
@@ -239,7 +239,7 @@ class Program
 |Catalog|@Catalog|CONSTRAINT_CATALOG|1|  
 |Besitzer|@Owner|CONSTRAINT_SCHEMA|2|  
 |Tabelle|@Table|TABLE_NAME|3|  
-|name|@Name|CONSTRAINT_NAME|4|  
+|Name|@Name|CONSTRAINT_NAME|4|  
   
 ## <a name="sql-server-2008-schema-restrictions"></a>SQL Server 2008-Schemabeschränkungen  
  In den folgenden Tabellen sind die Beschränkungen für SQL Server 2008-Schemaauflistungen aufgeführt. Diese Beschränkungen gelten ab Version 3.5 SP1 von .NET Framework und SQL Server 2008. Sie werden in früheren Versionen von .NET Framework und SQL Server nicht unterstützt.  
@@ -262,4 +262,5 @@ class Program
 |Spalte|@Column|COLUMN_NAME|4|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

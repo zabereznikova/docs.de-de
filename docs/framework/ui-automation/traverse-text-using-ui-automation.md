@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text, traversing
 - traversing text
 ms.assetid: 3ddb3b7b-1d6b-4dba-8678-5a68e868aadb
-ms.openlocfilehash: 11f1b189d16d572ac1661e2b175f15ecae2f039f
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d73ae4ca11d6f5417bb5cb768eae4e586538bd92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678201"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154790"
 ---
 # <a name="traverse-text-using-ui-automation"></a>Durchlaufen von Text mit Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -38,6 +38,7 @@ ms.locfileid: "57678201"
  Jede Methode, die <xref:System.Windows.Automation.Text.TextUnit> verwendet, wird bis zur nächstgrößeren unterstützten <xref:System.Windows.Automation.Text.TextUnit> zurückgestellt, wenn die angegebene <xref:System.Windows.Automation.Text.TextUnit> vom Steuerelement nicht unterstützt wird.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über TextPattern für die Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
 - [Hinzufügen von Inhalt in einem Textfeld mithilfe von Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
 - [Suchen und Hervorheben von Text durch Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)

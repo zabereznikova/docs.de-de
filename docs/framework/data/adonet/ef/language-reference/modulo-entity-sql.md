@@ -2,12 +2,12 @@
 title: (Modulo) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
-ms.openlocfilehash: 543c35c56955fb0a9909fced23357444bc78197a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b08689b6f5b17950738c557e02f995fa85aeb35e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160484"
 ---
 # <a name="modulo-entity-sql"></a>(Modulo) (Entity SQL)
 Gibt den Rest der Division eines Ausdrucks durch einen anderen zurück.  
@@ -20,10 +20,10 @@ dividend % divisor
   
 ## <a name="arguments"></a>Argumente  
  `dividend`  
- Der zu dividierende numerische Ausdruck. `dividend` ist jeder gültige Ausdruck eines der numerischen Datentypen.  
+ Der zu dividierende numerische Ausdruck. `dividend` ist jeder gültiger Ausdruck eines beliebigen numerischen Datentyps sein.  
   
  `divisor`  
- Der numerische Ausdruck, durch den der Dividend geteilt werden soll. `divisor` ist jeder gültige Ausdruck eines der numerischen Datentypen.  
+ Der numerische Ausdruck, durch den der Dividend geteilt werden soll. `divisor` ist jeder gültiger Ausdruck eines beliebigen numerischen Datentyps sein.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  Edm.Int32  
@@ -38,4 +38,5 @@ dividend % divisor
  [!code-csharp[DP EntityServices Concepts 2#MODULO](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#modulo)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

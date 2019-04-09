@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data navigation
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb
-ms.openlocfilehash: 5fd1caabbc876d5b71deae2d9b1b9cf232d17700
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fe1d037d7d72f41b602abe823a26655750338d85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723243"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202156"
 ---
 # <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Vorgehensweise: Datennavigation mithilfe des BindingNavigator-Steuerelements in Windows Forms
 Die Einführung des <xref:System.Windows.Forms.BindingNavigator>-Steuerelements in Windows Forms ermöglicht es Entwicklern, Endbenutzern eine einfache Benutzeroberfläche für die Datennavigation und -bearbeitung auf den Formularen bereitzustellen, die sie erstellen.  
@@ -54,6 +54,7 @@ Die Einführung des <xref:System.Windows.Forms.BindingNavigator>-Steuerelements 
  Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - [BindingNavigator-Steuerelement](bindingnavigator-control-windows-forms.md)
 - [ToolStrip-Steuerelement](toolstrip-control-windows-forms.md)

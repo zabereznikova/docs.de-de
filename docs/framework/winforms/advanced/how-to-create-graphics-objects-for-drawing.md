@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709049"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223627"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen
 Bevor Sie Linien und Formen zeichnen können, Rendern von Text oder anzeigen und Bearbeiten von Bildern mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], müssen Sie erstellen eine <xref:System.Drawing.Graphics> Objekt. Die <xref:System.Drawing.Graphics> -Objekt stellt eine [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Zeichenoberfläche und ist das Objekt, das zum Erstellen von Grafiken verwendet wird.  
@@ -165,13 +165,14 @@ Bevor Sie Linien und Formen zeichnen können, Rendern von Text oder anzeigen und
   
     |Zum Rendern|Siehe|  
     |---------------|---------|  
-    |Linien|[Vorgehensweise: Zeichnen einer Linie in einem Windows Form](how-to-draw-a-line-on-a-windows-form.md)|  
-    |Formen|[Vorgehensweise: Zeichnen der Kontur eine Form](how-to-draw-an-outlined-shape.md)|  
-    |Text|[Vorgehensweise: Zeichnen von Text in einem Windows Form](how-to-draw-text-on-a-windows-form.md)|  
-    |Bilder|[Vorgehensweise: Darstellen von Bildern mit GDI +](how-to-render-images-with-gdi.md)|  
+    |Linien|[Vorgehensweise: Zeichnen einer Linie in Windows Forms](how-to-draw-a-line-on-a-windows-form.md)|  
+    |Formen|[Vorgehensweise: Zeichnen der Kontur einer Form](how-to-draw-an-outlined-shape.md)|  
+    |Text|[Vorgehensweise: Zeichnen von Text in einem Windows Form](how-to-draw-text-on-a-windows-form.md)|  
+    |Bilder|[Vorgehensweise: Darstellen von Bildern mit GDI+](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Siehe auch
-- [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)
+
+- [Erste Schritte mit der Grafikprogrammierung](getting-started-with-graphics-programming.md)
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Linien, Kurven und Formen](lines-curves-and-shapes.md)
-- [Vorgehensweise: Darstellen von Bildern mit GDI +](how-to-render-images-with-gdi.md)
+- [Vorgehensweise: Darstellen von Bildern mit GDI+](how-to-render-images-with-gdi.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], adding to shapes
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
-ms.openlocfilehash: 8bc782f9496a9c1562bad2df1ba196fb39572e68
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d6fe7a252029ff80f21d99f7342fabb1d29fbe24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211672"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>Vorgehensweise: Ausfüllen einer Form mit einer Volltonfarbe
 Um eine Form mit einer Volltonfarbe zu füllen, erstellen Sie eine <xref:System.Drawing.SolidBrush> Objekt, und klicken Sie dann übergeben, die <xref:System.Drawing.SolidBrush> Objekt als Argument an eine der Füllmethoden der der <xref:System.Drawing.Graphics> Klasse. Das folgende Beispiel zeigt, wie Sie eine Ellipse mit der Farbe Rot zu füllen.  
@@ -27,7 +27,8 @@ Um eine Form mit einer Volltonfarbe zu füllen, erstellen Sie eine <xref:System.
  [!code-vb[System.Drawing.UsingABrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers.  
+ Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden eines Pinsels zum Ausfüllen von Formen](using-a-brush-to-fill-shapes.md)

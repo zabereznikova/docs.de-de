@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: f4aeb3dd60186a4060f7825257c7adb274fc8b24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363149"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154413"
 ---
 # <a name="controls"></a>Steuerelemente
 <a name="introduction"></a>
@@ -95,15 +95,15 @@ ms.locfileid: "57363149"
   
 -   <xref:System.Windows.Controls.HeaderedItemsControl>: Einige Beispiele für Klassen, die von dieser Klasse erben sind <xref:System.Windows.Controls.MenuItem>, <xref:System.Windows.Controls.TreeViewItem>, und <xref:System.Windows.Controls.ToolBar>.  
 
-  
  Weitere Informationen zu diesen Basisklassen finden Sie unter [WPF-Inhaltsmodell](wpf-content-model.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
 - [Kategorien von Steuerelementen](controls-by-category.md)
 - [Steuerelementbibliothek](control-library.md)
 - [Übersicht über Datenvorlagen](../data/data-templating-overview.md)
-- [Übersicht zur Datenbindung](../data/data-binding-overview.md)
+- [Übersicht über die Datenbindung](../data/data-binding-overview.md)
 - [Eingabe](../advanced/input-wpf.md)
 - [Aktivieren eines Befehls](../advanced/how-to-enable-a-command.md)
 - [Exemplarische Vorgehensweisen: Erstellen einer benutzerdefinierten animierten Schaltfläche](walkthroughs-create-a-custom-animated-button.md)

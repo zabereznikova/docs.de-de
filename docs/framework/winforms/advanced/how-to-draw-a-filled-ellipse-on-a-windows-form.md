@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zeichnen einer ausgefüllten Ellipse in einem Windows Form'
+title: 'Vorgehensweise: Zeichnen einer ausgefüllten Ellipse in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], drawing
 - forms [Windows Forms], drawing ellipses
 ms.assetid: 781db806-950d-4c5b-b022-493f7fd0c4a8
-ms.openlocfilehash: 42316cd0d55b5154b21b4462157e044b30674ebd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2e7be3f2c4c710bb24568dd2e70f6f5cc4706c63
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716283"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171003"
 ---
-# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>Vorgehensweise: Zeichnen einer ausgefüllten Ellipse in einem Windows Form
+# <a name="how-to-draw-a-filled-ellipse-on-a-windows-form"></a>Vorgehensweise: Zeichnen einer ausgefüllten Ellipse in Windows Forms
 In diesem Beispiel zeichnet eine ausgefüllte Ellipse in einem Formular.  
   
 ## <a name="example"></a>Beispiel  
@@ -37,7 +37,8 @@ In diesem Beispiel zeichnet eine ausgefüllte Ellipse in einem Formular.
  Sie sollten immer Aufrufen <xref:System.IDisposable.Dispose%2A> auf alle Objekte, die Systemressourcen, z. B. beanspruchen <xref:System.Drawing.Brush> und <xref:System.Drawing.Graphics> Objekte.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)
+- [Erste Schritte mit der Grafikprogrammierung](getting-started-with-graphics-programming.md)
 - [Alphablending von Linien und Füllungen](alpha-blending-lines-and-fills.md)
 - [Verwenden eines Pinsels zum Ausfüllen von Formen](using-a-brush-to-fill-shapes.md)

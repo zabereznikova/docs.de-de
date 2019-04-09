@@ -5,15 +5,15 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
-ms.openlocfilehash: 42d695a521e1d320c8287dba141afd2aade710b9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e4146cf1897a2d83128a97fc3900aa7a10d59109
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708152"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159691"
 ---
 # <a name="statusstrip-control"></a>StatusStrip-Steuerelement
-Das Windows Forms-Steuerelement `StatusStrip` wird auf Formularen als Bereich verwendet, der in der Regel am unteren Rand eines Fensters angezeigt wird, in dem eine Anwendung verschiedene Arten von Statusinformationen anzeigen kann. `StatusStrip`-Steuerelemente verfügen in der Regel über `ToolStripStatusLabel`-Steuerelemente, die Text oder Symbole zum Angeben des Status anzeigen, oder über ein <xref:System.Windows.Forms.ToolStripProgressBar>-Steuerelement, das den Abschlussstatus eines Prozesses grafisch anzeigt.  
+Das Windows Forms-Steuerelement `StatusStrip` wird auf Formularen als Bereich verwendet, der in der Regel am unteren Rand eines Fensters angezeigt wird, in dem eine Anwendung verschiedene Arten von Statusinformationen anzeigen kann. `StatusStrip` Steuerelemente in der Regel haben `ToolStripStatusLabel` Steuerelemente, die Text oder Symbole zum Angeben des Status anzeigen oder ein <xref:System.Windows.Forms.ToolStripProgressBar> den Abschlussstatus eines Prozesses grafisch anzeigt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über das StatusStrip-Steuerelement](statusstrip-control-overview.md)  
@@ -32,4 +32,5 @@ Das Windows Forms-Steuerelement `StatusStrip` wird auf Formularen als Bereich ve
  Enthält Referenzinformationen zur Klasse und zu ihren Membern.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

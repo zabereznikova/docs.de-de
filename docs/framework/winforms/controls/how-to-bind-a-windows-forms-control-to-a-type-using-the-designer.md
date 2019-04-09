@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Binden eines Windows Forms-Steuerelements in einen Typ mithilfe des Designers'
+title: 'Vorgehensweise: Binden eines Windows Forms-Steuerelements an einen Typ mithilfe des Designers'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding to a type
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: 29a28052b149f565e47a2e0366ed6845b83234ba
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b2b10b443581a261a753c9f9d940a774159dc9d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202299"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Vorgehensweise: Binden eines Windows Forms-Steuerelements in einen Typ mithilfe des Designers
+# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Vorgehensweise: Binden eines Windows Forms-Steuerelements an einen Typ mithilfe des Designers
 Beim Erstellen von Steuerelementen, die mit Daten interagieren, ist es manchmal erforderlich, ein Steuerelement an einen Typ statt an ein Objekt zu binden. Sie müssen normalerweise ein Steuerelement zur Entwurfszeit an einen Typ binden, wenn Daten möglicherweise nicht verfügbar sind, aber die datengebundenen Steuerelemente dennoch Daten von der öffentlichen Schnittstelle eines Typs anzeigen sollen. Die folgenden Verfahren wird veranschaulicht, wie zum Erstellen eines neuen <xref:System.Windows.Forms.BindingSource> , an einen Typ gebunden, und klicken Sie dann eine der Eigenschaften des Typs zu binden der <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft eine <xref:System.Windows.Forms.TextBox>.  
   
 ### <a name="to-bind-the-bindingsource-to-a-type"></a>So binden Sie die BindingSource an einen Typen  
@@ -52,6 +52,7 @@ Beim Erstellen von Steuerelementen, die mit Daten interagieren, ist es manchmal 
 4.  In der **DataSource UI Type Editor**, erweitern Sie den Knoten für die <xref:System.Windows.Forms.BindingSource> zuvor hinzugefügt werden soll, und wählen Sie die Eigenschaft des gebundenen Typen Sie binden möchten die <xref:System.Windows.Forms.TextBox.Text%2A> Eigenschaft der <xref:System.Windows.Forms.TextBox>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [BindingSource-Komponente](bindingsource-component.md)
 - [Vorgehensweise: Binden eines Windows Forms-Steuerelements an einen Typ](how-to-bind-a-windows-forms-control-to-a-type.md)
 - [Binden von Steuerelementen an Daten in Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

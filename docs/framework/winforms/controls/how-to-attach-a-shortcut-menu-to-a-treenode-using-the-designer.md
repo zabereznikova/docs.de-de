@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], attaching to TreeNodes
 - TreeNode [Windows Forms], attaching a shortcut menu using Designer
 ms.assetid: 8e45e184-1313-4f8f-90ff-2cd5789b2268
-ms.openlocfilehash: aa161af65b7e8e1f3636398cd02139b5623eb154
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1cc90ed9a103c41dbf85e39a43d307b1c0422603
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721982"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191437"
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>Vorgehensweise: Anfügen eines Kontextmenüs an einen TreeNode mithilfe des Designers
 Die Windows-Formulare <xref:System.Windows.Forms.TreeView> Steuerelement wird eine Hierarchie von Knoten, ähnlich wie die Dateien und Ordner im linken Bereich des Windows-Explorer-Features in Windows-Betriebssysteme angezeigt. Durch Festlegen der <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> -Eigenschaft, Sie bieten kontextbezogene Vorgänge für den Benutzer sie mit der rechten Maustaste die <xref:System.Windows.Forms.TreeView> Steuerelement. Durch Zuordnen einer <xref:System.Windows.Forms.ContextMenuStrip> Komponente mit individuellen <xref:System.Windows.Forms.TreeNode> Elemente, Sie können eine benutzerdefinierte Ebene Verknüpfung im Menü-Funktionen zum Hinzufügen Ihrer <xref:System.Windows.Forms.TreeView> Steuerelemente.  
@@ -31,6 +31,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.TreeView> Steuerelement wird ei
      Darüber hinaus sollten Sie zum Schreiben von Code zum Behandeln von der <xref:System.Windows.Forms.ToolStripItem.Click> Ereignisse für diese Menüelemente.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [TreeView-Steuerelement](treeview-control-windows-forms.md)
 - [Übersicht über das TreeView-Steuerelement](treeview-control-overview-windows-forms.md)
 - [ContextMenuStrip-Steuerelement](contextmenustrip-control.md)

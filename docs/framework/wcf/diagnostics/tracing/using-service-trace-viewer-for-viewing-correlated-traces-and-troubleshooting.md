@@ -2,12 +2,12 @@
 title: Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: fc1b75d7f2d97103f99b9dbf0fa8cbbfbe2270cd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465060"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160666"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung
 In diesem Thema wird das Format von Ablaufverfolgungsdaten und ihre Verwendung beschrieben. Dabei wird auch auf die Verwendung von Service Trace Viewer zur Problembehandlung in einer Anwendung eingegangen.  
@@ -45,7 +45,7 @@ In diesem Thema wird das Format von Ablaufverfolgungsdaten und ihre Verwendung b
   
 -   `<SubType>` (Ablaufverfolgungsebene).  
   
--   `<TimeCreated>`.  
+-   `<TimeCreated>`sein.  
   
 -   `<Source>` (Name der Ablaufverfolgungsquelle).  
   
@@ -53,7 +53,7 @@ In diesem Thema wird das Format von Ablaufverfolgungsdaten und ihre Verwendung b
   
 -   `<Execution>` (Prozess- und Thread-Id).  
   
--   `<Computer>`.  
+-   `<Computer>`sein.  
   
 -   `<ExtendedData>`, einschließlich `<Action>`, `<MessageID>` und `<ActivityId>` im Nachrichtenheader festgelegt wird, wenn eine Nachricht gesendet wird.  
   
@@ -169,8 +169,7 @@ Die folgende Abbildung zeigt die WCF-Clientaktivitäten nach Erstellungszeit (li
  Die folgende Abbildung zeigt eine Diagrammansicht der WCF-Dienstaktivitäten:   
 
  ![Screenshot des Trace Viewer zeigt eine Liste der WCF-Dienstaktivitäten](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-service-activities.gif)  
-  
-  
+
  Der folgende Screenshot zeigt die Aktivitäten sowohl des Clients als auch des Diensts. Die Process Action Add-Aktivität ist orange hervorgehoben. Pfeile verknüpfen die Anforderungs- und die Antwortnachrichten, die vom Client und vom Dienst gesendet und empfangen werden. Die ProcessAction-Ablaufverfolgungen sind über Prozesse im Diagramm verteilt, werden im oberen rechten Bereich jedoch als Teil derselben Aktivität angezeigt. In diesem Bereich sind Clientablaufverfolgungen für gesendete Nachrichten gefolgt von Dienstablaufverfolgungen für empfangene und verarbeitete Nachrichten zu sehen.  
   
  Die folgenden Abbildungen wird eine Diagrammansicht des beide WCF-Client und Dienst-Aktivitäten  
@@ -189,8 +188,7 @@ Dienst- und clientübergreifende Fehlerkorrelation
   
   Die folgende Abbildung zeigt die zum Auswählen einer roten oder gelben Aktivität um die Ursache des Problems zu suchen.   
  ![Screenshot des roten oder gelben Aktivitäten für die Suche nach der Ursache des Problems.](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)  
- 
-  
+
  Im oberen rechten Bereich können Sie Ablaufverfolgungen für die Aktivität prüfen, die Sie auf der linken Seite ausgewählt haben. Sie können dann rote oder gelbe Ablaufverfolgungen in diesem Bereich prüfen und sehen, wie sie korrelieren. Im vorangehenden Diagramm sind Warnungsablaufverfolgungen sowohl für den Client als auch für den Dienst in derselben Process Action-Aktivität erkennbar.  
   
  Wenn diese Ablaufverfolgungen nicht auf die Grundursache des Fehlers schließen lassen, können Sie auf die ausgewählte Aktivität im linken Bereich doppelklicken (hier Process Action). Das Diagramm mit den zugehörigen Aktivitäten wird dann angezeigt. Sie können die verknüpften Aktivitäten dann erweitern, (durch Klicken auf die Zeichen "+") um die erste ausgegebene Ablaufverfolgung in Rot oder Gelb in einer verknüpften Aktivität zu suchen. Erweitern Sie nach und nach die Aktivitäten, die direkt vor der betreffenden roten oder gelben Ablaufverfolgung ausgeführt wurden, und verfolgen Sie die Übertragungen zu verknüpften Aktivitäten oder Nachrichtenflüsse über Endpunkte hinweg, bis Sie die Grundursache des Problems gefunden haben.  
@@ -207,6 +205,7 @@ Erweitern von Aktivitäten zur Ermittlung der Ursache eines Problems
 Um mit der Problembehandlung beginnen, können Sie auch eine rote oder gelbe nachrichtenablaufverfolgung auswählen und doppelklicken, um die Grundursache zu ermitteln.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [End-to-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

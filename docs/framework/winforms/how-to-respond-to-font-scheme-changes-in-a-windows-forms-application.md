@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Reagieren Sie auf Änderungen des Schriftartenschemas in einer Windows Forms-Anwendung'
+title: 'Vorgehensweise: Reagieren auf Änderungen des Schriftartenschemas in einer Windows Forms-Anwendung'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 4c34a65ed8ddabfb99451e055048502cb7617e4f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 85770687ecfad690a251eafec9051c4c20f45dd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715970"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182103"
 ---
-# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Vorgehensweise: Reagieren Sie auf Änderungen des Schriftartenschemas in einer Windows Forms-Anwendung
+# <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Vorgehensweise: Reagieren auf Änderungen des Schriftartenschemas in einer Windows Forms-Anwendung
 In der Windows-Betriebssystemen kann ein Benutzer die systemweite schriftarteinstellungen, um die Standardschriftart angezeigt werden, vergrößert oder verkleinert werden ändern. Ändern der schriftarteinstellungen ist wichtig für Benutzer, die sehbehinderte und größeren Typ zum Lesen des Texts auf ihren Bildschirmen erfordern. Sie können Ihre Windows Forms-Anwendung, um diese Änderungen zu reagieren durch erhöhen oder verringern die Größe des Formulars und alle darin enthaltenen Text ein, wenn des Schriftartenschemas Änderungen anpassen. Wenn Sie das Formular aus, um Änderungen in Schriftgrade Ihren Bedürfnissen entsprechend dynamisch zu berücksichtigen möchten, können Sie Code zum Formular hinzufügen.  
   
  In der Regel ist die Standardschriftart, die von Windows Forms verwendet die Schriftart, die zurückgegeben werden, indem die <xref:Microsoft.Win32> Namespace beim Aufrufen von `GetStockObject(DEFAULT_GUI_FONT)`. Die Schriftart, die durch diesen Aufruf zurückgegeben wird nur geändert, wenn die Bildschirmauflösung ändert. Wie im folgenden Verfahren dargestellt wird, muss den Code der Standardschriftart ändern <xref:System.Drawing.SystemFonts.IconTitleFont%2A> Reaktion auf Änderungen in der Schriftgrad.  
@@ -65,5 +65,6 @@ In der Windows-Betriebssystemen kann ein Benutzer die systemweite schriftarteins
  Der Konstruktor in diesem Codebeispiel enthält einen Aufruf von `InitializeComponent`, die definiert, wenn Sie ein neues Windows Forms-Projekt in Visual Studio erstellen. Entfernen Sie diese Codezeile aus, wenn Sie Ihre Anwendung in der Befehlszeile erstellen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - [Automatische Skalierung in Windows Forms](automatic-scaling-in-windows-forms.md)

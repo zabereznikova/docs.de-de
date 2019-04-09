@@ -2,12 +2,12 @@
 title: Autorisierung und Berechtigungen in SQL Server
 ms.date: 03/30/2017
 ms.assetid: d340405c-91f4-4837-a3cc-a238ee89888a
-ms.openlocfilehash: 5d1ea7a9ad451db67e7a51c3485f98e03fd40690
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 398041d678ba3e4ae5a36dd7714fd2a9bfee1b40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510012"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185860"
 ---
 # <a name="authorization-and-permissions-in-sql-server"></a>Autorisierung und Berechtigungen in SQL Server
 Beim Erstellen von Datenbankobjekten müssen Sie Berechtigungen explizit gewähren, damit die Benutzer auch auf die Datenbankobjekte zugreifen können. Jedes sicherungsfähige Objekt verfügt über Berechtigungen, die einem Prinzipal mithilfe von Berechtigungsanweisungen gewährt werden können.  
@@ -59,6 +59,7 @@ Beim Erstellen von Datenbankobjekten müssen Sie Berechtigungen explizit gewähr
 |[Berechtigungen](/sql/relational-databases/security/permissions-database-engine)|Enthält Themen, in denen die Berechtigungshierarchie, Katalogsichten und Berechtigungen fester Serverrollen und fester Datenbankrollen beschrieben werden.|
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Authentifizierung in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)

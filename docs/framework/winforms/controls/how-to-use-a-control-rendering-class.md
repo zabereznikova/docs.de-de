@@ -10,12 +10,12 @@ helpviewer_keywords:
 - visual themes [Windows Forms], applying to Windows Forms controls
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: c0125e34-cd74-4c35-818c-3e40f462b0a3
-ms.openlocfilehash: d9da43b1686f416cf2149cef07665b0a726c3b0c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7115c227cb24cf12a50073d0dc587524abf0cbb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723152"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163571"
 ---
 # <a name="how-to-use-a-control-rendering-class"></a>Vorgehensweise: Verwenden einer Steuerelementwiedergabeklasse
 In diesem Beispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.ComboBoxRenderer> Klasse auf den Dropdownpfeil neben einem Kombinationsfeld-Steuerelement zu rendern. Das Beispiel besteht aus den <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode der ein einfaches benutzerdefiniertes Steuerelement. Die <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType> Eigenschaft wird verwendet, um zu bestimmen, ob visuelle Stile im Clientbereich von Anwendungsfenstern aktiviert sind. Wenn visuelle Stile aktiviert sind, gibt die <xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType> Methode rendert den Dropdown-Pfeil mit visuellen Stilen; andernfalls der <xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType> Methode rendert den Dropdown-Pfeil in der klassischen Windows-Stil.  
@@ -35,4 +35,5 @@ In diesem Beispiel wird veranschaulicht, wie die <xref:System.Windows.Forms.Comb
 -   Verweise auf die <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, und <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Namespaces.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Rendering von Steuerelementen mit visuellen Stilen](rendering-controls-with-visual-styles.md)

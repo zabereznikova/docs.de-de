@@ -2,12 +2,12 @@
 title: <authentication> der <clientCertificate> Element
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 6b07eae96367222907dd23968d445efd75906ea7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e232cde8f6838de734e37aeee3f52cd7f7e7502d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221201"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<Authentication > des \<ClientCertificate >-Element
 Gibt die Authentifizierungsverhalten für Clientzertifikate an, die von einem Dienst verwendet werden.  
@@ -105,11 +105,12 @@ Gibt die Authentifizierungsverhalten für Clientzertifikate an, die von einem Di
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>
 - <xref:System.ServiceModel.Security.X509CertificateValidationMode>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>
 - <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>
 - [Sicherheitsverhalten](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Vorgehensweise: Erstellen Sie einen Dienst, der ein benutzerdefiniertes Zertifikatvalidierungssteuerelement verwendet](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
-- [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Vorgehensweise: Erstellen eines Diensts, der ein benutzerdefiniertes Zertifikatsvalidierungssteuerelement verwendet](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [Verwenden von Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

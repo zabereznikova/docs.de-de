@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709673"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158443"
 ---
 # <a name="user-drawn-controls"></a>Benutzerdefinierte Steuerelemente
 .NET Framework bietet die Möglichkeit, eigene Steuerelemente problemlos zu entwickeln. Können Sie ein Benutzersteuerelement, das einen Satz der Standardsteuerelemente, die zusammen mit Code gebunden ist, erstellen, oder Sie können Ihr eigenes Steuerelement von Grund auf neu entwerfen, einrichten. Sie können auch die Vererbung verwenden, erstellen ein Steuerelement, das von einem vorhandenen Steuerelement erbt und die gesamte Funktionalität hinzufügen. Für welchen Ansatz Sie verwenden, bietet .NET Framework-Funktionen um eine benutzerdefinierte grafische Benutzeroberfläche für jedes Steuerelement zu zeichnen, die Sie erstellen.  
@@ -76,6 +76,7 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 >  Verwenden der <xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType> Eigenschaft, um ein nicht rechteckiges Steuerelement zu implementieren.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.Control.Region%2A>
 - <xref:System.Windows.Forms.ControlStyles>
 - <xref:System.Drawing.Graphics>
@@ -83,4 +84,4 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 - <xref:System.Windows.Forms.PaintEventArgs>
 - [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](../advanced/how-to-create-graphics-objects-for-drawing.md)
 - [Konstituierende Steuerelemente](constituent-controls.md)
-- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](varieties-of-custom-controls.md)
+- [Arten von benutzerdefinierten Steuerelementen](varieties-of-custom-controls.md)

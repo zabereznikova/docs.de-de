@@ -2,12 +2,12 @@
 title: Datenbindung in einem Windows Presentation Foundation-Client
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: c8382df188c7a2e47394ec73741c1e583f46fba6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 2687e406743a8f503175a8775b25c76630aea9b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223172"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Datenbindung in einem Windows Presentation Foundation-Client
 In diesem Beispiel wird die Verwendung der Datenbindung in einem Windows Presentation Foundation (WPF)-Client veranschaulicht. Das Beispiel verwendet einen Windows Communication Foundation (WCF)-Dienst, der ein Array von Alben, an den Client zurück nach dem Zufallsprinzip generiert. Jedes Album hat einen Namen, einen Preis und eine Liste von Albumtiteln. Die Albumtitel haben einen Namen und eine Dauer. Die Informationen, die vom Dienst zurückgegeben wird, wird automatisch mit der Benutzeroberfläche (UI) des Clients für Windows Presentation Foundation (WPF) gebunden.  
@@ -81,4 +81,3 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
-  

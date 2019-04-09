@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Definieren eines Symbols für eine Symbolleisten-Schaltfläche'
+title: 'Vorgehensweise: Definieren eines Symbols für eine Symbolleistenschaltfläche'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: fb4a492b081cd9f9e3ccc1d47a4120c705058dd0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0d4a17528ca3eb81f93419491766e370be551b1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712746"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153126"
 ---
-# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Vorgehensweise: Definieren eines Symbols für eine Symbolleisten-Schaltfläche
+# <a name="how-to-define-an-icon-for-a-toolbar-button"></a>Vorgehensweise: Definieren eines Symbols für eine Symbolleistenschaltfläche
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.ToolStrip>-Steuerelement das <xref:System.Windows.Forms.ToolBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.  
   
@@ -116,7 +116,8 @@ ms.locfileid: "57712746"
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Vorgehensweise: Trigger Menüereignissen für Symbolleistenschaltflächen](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Vorgehensweise: Auslösen von Menüereignissen für Symbolleistenschaltflächen](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar-Steuerelement](toolbar-control-windows-forms.md)
 - [ImageList-Komponente](imagelist-component-windows-forms.md)

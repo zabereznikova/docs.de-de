@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 22af8cd6a8bdce590736ee14705f73bef1dc4d16
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261101"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220434"
 ---
 # <a name="endpoint-addresses"></a>Endpunktadressen
 Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifizieren zu können. Diese Adresse besteht hauptsächlich aus einem Uniform Resource Identifier (URI), der den Speicherort des Endpunkts angibt. Die Adresse des Endpunkts wird dargestellt, in der Windows Communication Foundation (WCF)-Programmiermodell von der <xref:System.ServiceModel.EndpointAddress> -Klasse, die ein optionales enthält <xref:System.ServiceModel.EndpointAddress.Identity%2A> -Eigenschaft, die die Authentifizierung des Endpunkts durch andere Endpunkte ermöglicht, austauschen, mit denen er Meldungen und einen Satz Optionaler <xref:System.ServiceModel.EndpointAddress.Headers%2A> Eigenschaften, die alle anderen zum Erreichen des Diensts erforderlichen SOAP-Header festlegen. Die optionalen Header stellen zusätzliche und ausführlichere Adressinformationen bereit, um den Dienstendpunkt zu identifizieren oder mit ihm zu interagieren. Die Adresse eines Endpunkts wird während der Übertragung als WS-Adressierungsendpunktverweis (Endpoint Reference, EPR) dargestellt.  
@@ -138,5 +138,6 @@ Jedem Endpunkt ist eine Adresse zugeordnet, um den Endpunkt suchen und identifiz
  In einigen Szenarien empfängt ein Endpunkt alle Nachrichten, die mit dem zugrunde liegenden Transport ankommen, und nicht nur die mit dem entsprechenden `To`-Header. Um dies zu aktivieren, kann der Benutzer die <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>-Klasse verwenden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Angeben einer Endpunktadresse](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
 - [Dienstidentität und Authentifizierung](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

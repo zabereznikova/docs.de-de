@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d00f0efa-9084-4c17-843f-54904fcb4204
-ms.openlocfilehash: 2251279fb5b07d64925c245f537fe040ec78679e
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 700c29222d10177774e118e53fb51f177b723679
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176903"
 ---
 # <a name="method-based-query-syntax-examples-join-operators"></a>Beispiele für die methodenbasierte Abfragesyntax: Joinoperatoren
 In diesem Thema wird gezeigt, wie mit der <xref:System.Linq.Enumerable.Join%2A> und <xref:System.Linq.Enumerable.GroupJoin%2A> Methoden zum Abfragen der [AdventureWorks Sales-Modell](https://archive.codeplex.com/?p=msftdbprodsamples) mit der methodenbasierten Abfragesyntax. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
@@ -49,4 +49,5 @@ In diesem Thema wird gezeigt, wie mit der <xref:System.Linq.Enumerable.Join%2A> 
  [!code-vb[DP L2E Examples#JoinWithGroupedResults_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#joinwithgroupedresults_mq)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Abfragen in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

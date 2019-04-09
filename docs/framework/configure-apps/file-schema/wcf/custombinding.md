@@ -2,12 +2,12 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 0754991fe8a427dbaaa2b7fbafe4387e6bc6df2a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9ed5f25a9297edc5f921305edc009edf5076672b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366672"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159743"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
@@ -190,7 +190,7 @@ In den folgenden Abschnitten werden Attribute, untergeordnete Elemente sowie üb
 
 |Element|Beschreibung|
 |-------------|-----------------|
-|[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Legt bidirektionales Messaging für die benutzerdefinierte Bindung fest. Das Element wird mit Transporten verwendet, die keine systemseitige Duplexkommunikation ermöglichen, z.&#160;B. HTTP. Im Gegensatz dazu ermöglicht das TCP-Protokoll die systemseitige Duplexkommunikation, ohne dass das Bindungselement für den Dienst zum Senden von Nachrichten an den Client benötigt wird. <br /><br /> Der Client muss eine Adresse für den Dienst verfügbar machen, um den Kontakt herzustellen und eine Verbindung aufzubauen. Die Clientadresse wird vom `ClientBaseAddress`-Attribut bereitgestellt.<br /><br /> Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
+|[\<compositeDuplex>](../../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md)|Legt bidirektionales Messaging für die benutzerdefinierte Bindung fest. Das Element wird mit Transporten verwendet, die keine systemseitige Duplexkommunikation ermöglichen, z.&amp;#160;B. HTTP. Im Gegensatz dazu ermöglicht das TCP-Protokoll die systemseitige Duplexkommunikation, ohne dass das Bindungselement für den Dienst zum Senden von Nachrichten an den Client benötigt wird. <br /><br /> Der Client muss eine Adresse für den Dienst verfügbar machen, um den Kontakt herzustellen und eine Verbindung aufzubauen. Die Clientadresse wird vom `ClientBaseAddress`-Attribut bereitgestellt.<br /><br /> Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
 |[\<pnrpPeerResolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/pnrppeerresolver.md)|Gibt einen PNRP (Peer Name Resolution-Protokoll)-Peernamenresolver an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
 |[\<reliableSession>](../../../../../docs/framework/configure-apps/file-schema/wcf/reliablesession.md)|Legt die Einstellung für WS-Reliable Messaging fest. Wenn dieses Element einer benutzerdefinierten Bindung hinzugefügt wird, kann der resultierende Kanal ExactlyOnce-Zustellungszusicherungen unterstützen. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Gibt die Sicherheitsoptionen für die benutzerdefinierte Bindung an. Dieses Element ist vom Typ <xref:System.ServiceModel.Configuration.SecurityElement>.|
@@ -291,7 +291,6 @@ In der folgenden Tabelle werden die Optionen für jede Ebene zusammengefasst.
 Zusätzlich können Sie Ihre eigenen Bindungselemente definieren und diese zwischen den vorangehenden definierten Ebenen einsetzen.
 
 Eine Erläuterung zur Verwendung eine benutzerdefinierten Bindung für eine vom System bereitgestellte Bindung zu ändern, finden Sie unter [Vorgehensweise: Anpassen einer vom System bereitgestellten Bindung](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).
-
 
 ## <a name="see-also"></a>Siehe auch
 

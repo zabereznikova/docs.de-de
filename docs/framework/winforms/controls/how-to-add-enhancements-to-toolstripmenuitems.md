@@ -24,12 +24,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: 68a926eba184d12d58e537d8db0a5baefb0fbe95
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 458347df7e17aabc1e9e21d66ad1b5a96200fe28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198555"
 ---
 # <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Vorgehensweise: Hinzufügen von Erweiterungen zu ToolStripMenuItems
 Sie können die benutzerfreundlichkeit verbessern <xref:System.Windows.Forms.MenuStrip> und <xref:System.Windows.Forms.ContextMenuStrip> Steuerelemente es gibt folgende Möglichkeiten:  
@@ -114,6 +114,7 @@ Sie können die benutzerfreundlichkeit verbessern <xref:System.Windows.Forms.Men
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [Übersicht über das MenuStrip-Steuerelement](menustrip-control-overview-windows-forms.md)

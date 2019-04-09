@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bbeebc766d6e8048843a74691addd1dee90623ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 646c4e37a7fab503a26557f9fdfc926b1186b17b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621702"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216703"
 ---
 # <a name="corprfgcgenerationrange-structure"></a>COR_PRF_GC_GENERATION_RANGE-Struktur
 Beschreibt einen Bereich (d. h. einen Block) des Speichers, der einer Garbage Collection unterzogen wird.  
@@ -59,4 +59,5 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Profilerstellungsstrukturen](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

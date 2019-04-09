@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 52f93acacec434ce6f7ba93678615c104aa94b24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 009011100af86e315aa41beb822b1448e2f21b25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704042"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150448"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Konfigurieren von Bindungen für Windows Communication Foundation-Dienste
 Beim Erstellen einer Anwendung möchten Sie dem Administrator nach Bereitstellung der Anwendung möglicherweise Entscheidungen mitteilen. Beispielsweise wissen Sie häufig nicht im Voraus, welche Dienstadresse oder welcher URI (Uniform Resource Identifier) verwendet wird. Anstatt eine Adresse fest zu programmieren, sollte diese Aufgabe einem Administrator nach dem Erstellen eines Diensts übergeben werden. Diese Flexibilität wird durch Konfiguration ermöglicht.  
@@ -58,7 +58,7 @@ Beim Erstellen einer Anwendung möchten Sie dem Administrator nach Bereitstellun
 </service>  
 ```  
   
- In diesem Beispiel gibt das `name`-Attribut an, für welchen Diensttyp die Konfiguration verwendet wird. Wenn Sie in Ihrem Code einen Dienst mit dem `HelloWorld`-Vertrag erstellen, wird er mit allen in der Beispielkonfiguration definierten Endpunkten initialisiert. Wenn die Assembly nur einen Dienstvertrag implementiert die `name` -Attribut ausgelassen werden, da der Dienst den einzigen verfügbaren Typ verwendet. Das Attribut nimmt eine Zeichenfolge, die im Format `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null` vorliegen muss  
+ In diesem Beispiel gibt das `name`-Attribut an, für welchen Diensttyp die Konfiguration verwendet wird. Wenn Sie in Ihrem Code einen Dienst mit dem `HelloWorld`-Vertrag erstellen, wird er mit allen in der Beispielkonfiguration definierten Endpunkten initialisiert. Wenn die Assembly nur einen Dienstvertrag implementiert die `name` -Attribut ausgelassen werden, da der Dienst den einzigen verfügbaren Typ verwendet. Das Attribut nimmt eine Zeichenfolge, die das Format muss übereinstimmen `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
   
  Das `address`-Attribut gibt den URI an, den andere Endpunkte für die Kommunikation mit dem Dienst verwenden. Der URI kann entweder ein absoluter oder relativer Pfad sein. Bei Bereitstellung einer relativen Adresse wird vom Host erwartet, dass er eine Basisadresse bereitstellt, die für das in der Bindung verwendete Transportschema geeignet ist. Wenn keine Adresse konfiguriert wird, wird angenommen, dass die Basisadresse der Adresse für diesen Endpunkt entspricht.  
   
@@ -162,6 +162,7 @@ Beim Erstellen einer Anwendung möchten Sie dem Administrator nach Bereitstellun
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vereinfachte Konfiguration](../../../docs/framework/wcf/simplified-configuration.md)
 - [Vom System bereitgestellte Bindungen](../../../docs/framework/wcf/system-provided-bindings.md)
 - [Übersicht über die Endpunkterstellung](../../../docs/framework/wcf/endpoint-creation-overview.md)

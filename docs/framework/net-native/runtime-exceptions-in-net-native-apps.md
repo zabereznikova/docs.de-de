@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5f050181-8fdd-4a4e-9d16-f84c22a88a97
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed019dc4f1e6b99c9fa1d001c94af45802336ba6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06e07c41d398c0792094b4481a38c69b2ba73004
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208279"
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Laufzeitausnahmen in .NET Native-Apps
 Es ist wichtig, die Releasebuilds Ihrer App für die universelle Windows-Plattform auf den Zielplattformen zu testen, da die Debug- und Releasekonfigurationen völlig unterschiedlich sind. Die Debugkonfiguration verwendet standardmäßig die .NET Core-Laufzeit zum Kompilieren der App, während die Releasekonfiguration .NET Native verwendet, um die App in systemeigenen Code zu kompilieren.  
@@ -60,5 +60,6 @@ Additional information: Value does not fall within the expected range.
  Um die vollständige Aufrufliste zu erhalten, führen Sie stattdessen den Debugbuild aus.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Debuggen von .NET Native Windows Universal-Apps](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
+
+- [Debuggen universeller Windows-Apps, die in .NET Native kompiliert wurden](https://devblogs.microsoft.com/devops/debugging-net-native-windows-universal-apps/)
 - [Erste Schritte](../../../docs/framework/net-native/getting-started-with-net-native.md)

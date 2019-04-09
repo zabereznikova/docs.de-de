@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3908663a12f0e4edd8024c7f53f21b2e82bb8dbd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 876f0fe3c40cb6754b4ba714833dd160dc4de3a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176955"
 ---
 # <a name="invalidgchandlecookie-mda"></a>invalidGCHandleCookie-MDA
 Der `invalidGCHandleCookie`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn eine Konvertierung von einem ungültigen <xref:System.IntPtr>-Cookie in ein <xref:System.Runtime.InteropServices.GCHandle> versucht wird.  
@@ -46,6 +46,7 @@ Der `invalidGCHandleCookie`-MDA (Assistent für verwaltetes Debuggen) wird aktiv
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>
 - <xref:System.Runtime.InteropServices.GCHandle>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

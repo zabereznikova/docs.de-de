@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parts [WPF], StatusBar
 - StatusBar [WPF], styles and templates
 ms.assetid: 9f5e1c25-81eb-4756-a0ac-d9e1fbe33ee2
-ms.openlocfilehash: 42bf7aa672addadbc4205c796c09914fe8f3054d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 64b5b66f7f32ea31b51b4da990ceede4078c27cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372476"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177722"
 ---
 # <a name="statusbar-styles-and-templates"></a>StatusBar-Stile und -Vorlagen
 In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.Primitives.StatusBar> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -55,6 +55,7 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
  Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)

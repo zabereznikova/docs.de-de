@@ -5,12 +5,12 @@ ms.assetid: b27c779b-9355-4dc7-b95f-7dfd504b6e48
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: ad945cfe476441a92e8af9527b08e66f3e6e52c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f75c7fe701c4a2fab1f993517828b38e5a26e2bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734025"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138085"
 ---
 # <a name="how-to-map-inheritance-hierarchies"></a>Vorgehensweise: Zuordnen von Vererbungshierarchien
 Zur Implementierung dieser Zuordnung in [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] müssen Sie die Attribute in der Stammklasse der Vererbungshierarchie angeben. Führen Sie dazu die folgenden Schritte aus. Können Entwickler mithilfe von Visual Studio die [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] um Vererbungshierarchien zuzuordnen. Weitere Informationen finden Sie unter [How to: Configure inheritance by using the O/R Designer (Vorgehensweise: Konfigurieren der Vererbung mit dem O/R-Designer)](/visualstudio/data-tools/how-to-configure-inheritance-by-using-the-o-r-designer).  
@@ -51,5 +51,6 @@ Zur Implementierung dieser Zuordnung in [!INCLUDE[vbteclinq](../../../../../../i
  [!code-vb[DLinqCustomize#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#4)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Unterstützung von Vererbung](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)
 - [Vorgehensweise: Anpassen von Entitätsklassen mit dem Code-Editor](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 86d4d4628313ff248618f37637b0a25e80820b06
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903623"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191912"
 ---
 # <a name="adonet"></a>ADO.NET
 Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste für .NET Framework-Programmierer verfügbar machen. ADO.NET umfasst eine Vielzahl von Komponenten zum Erstellen von verteilten Anwendungen mit Datenfreigabe. Es ist in .NET Framework integriert und ermöglicht den Zugriff auf relationale, XML- und Anwendungsdaten. ADO.NET unterstützt eine Reihe von Entwicklungsanforderungen, z. B. das Erstellen von Front-End-Datenbankclients und Geschäftsobjekten mittlerer Ebene, die von Anwendungen, Tools, Sprachen oder Internetbrowsern verwendet werden.  
@@ -28,7 +28,7 @@ Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste 
  [Datentypzuordnungen in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  Beschreibt Datentypzuordnungen zwischen .NET Framework-Datentypen und den .NET Framework-Datenanbietern.  
   
- [DataSets, DataTables und DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ ["DataSets", "DataTables" und "DataViews"](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  Beschreibt das Erstellen und Verwenden von `DataSets`, typisierten `DataSets`, `DataTables` und `DataViews`.  
   
  [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
@@ -60,5 +60,6 @@ Bei ADO.NET handelt es sich um einen Satz von Klassen, die Datenzugriffsdienste 
  Enthält eine Liste von .NET Beispiele und Tutorials.
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Zugreifen auf Daten in Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

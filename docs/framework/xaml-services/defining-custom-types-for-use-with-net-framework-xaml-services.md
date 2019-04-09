@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-ms.openlocfilehash: fa341b7df32823c653df25ddb0dabcb4658b72b5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042628"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164436"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>Definieren von benutzerdefinierten Typen für die Verwendung mit .NET Framework-XAML-Diensten
 Beim Definieren von benutzerdefinierten Typen, die Geschäftsobjekte sind oder sind Typen, die nicht über eine Abhängigkeit auf bestimmten Frameworks verfügen, gibt es einige bewährten Methoden für XAML, die Sie ausführen können. Wenn Sie diese Vorgehensweisen ausführen, können .NET Framework-XAML-Dienste und die XAML-Readern und XAML-Writer die XAML-Eigenschaften des Typs ermitteln und geben sie entsprechende Darstellung in einem XAML-Knotenstream verwenden das XAML-Typsystem. Dieses Thema beschreibt bewährte Methoden für die Typdefinitionen, die Memberdefinitionen und CLR-Attributieren von Typen oder Member.  
@@ -115,5 +115,6 @@ Beim Definieren von benutzerdefinierten Typen, die Geschäftsobjekte sind oder s
  In der Terminologie von WPF XAML ein *interner Typ* ist ein Typ, der von der gleichen Assembly definiert ist, die auch die verweisende XAML enthält. Ein solchen Typ zugeordnet werden kann, bis ein XAML-Namespace, der die Assembly absichtlich ausgelassen = Teil einer Zuordnung, z. B. `xmlns:local="clr-namespace:WPFApplication1"`.  Wenn BAML einen internen Typ verweist und Typ verfügt über `internal` Zugriffsebene generiert eine `GeneratedInternalTypeHelper` -Klasse für die Assembly. Wenn Sie vermeiden möchten `GeneratedInternalTypeHelper`, entweder hierarchieverwaltungstools `public` Zugriffsebene oder berücksichtigen Sie die relevante Klasse in einer separaten Assembly und müssen diese als abhängige Assembly.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [XAML-bezogene CLR-Attribute für benutzerdefinierte Typen und Bibliotheken](xaml-related-clr-attributes-for-custom-types-and-libraries.md)
-- [XAML Services](index.md) (XAML-Dienste)
+- [XAML-Dienste](index.md)

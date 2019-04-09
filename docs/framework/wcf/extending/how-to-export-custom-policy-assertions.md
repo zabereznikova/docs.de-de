@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: 0fe97e381bea19458df50e1eb94f2027a6a95d4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4e3835b0d699d58eb55e06ed3ade1328ec30b2ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213608"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Vorgehensweise: Exportieren von benutzerdefinierten Richtlinienassertionen
 Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienstendpunkts. Dienstanwendungen können benutzerdefinierte Richtlinienassertionen in Dienstmetadaten verwenden, um Endpunkt-, Bindungs- oder Vertragsanpassungsinformationen an die Clientanwendung zu übermitteln. Sie können die Windows Communication Foundation (WCF) verwenden, zum Exportieren von Assertionen in WSDL-Bindungen auf den Endpunkt, Vorgang oder Nachrichtenbetreffs, abhängig von den Funktionen oder Anforderungen, die Sie kommunizieren angefügt.  
@@ -50,6 +50,7 @@ Richtlinienassertionen beschreiben die Funktionen und Anforderungen eines Dienst
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
 - [Vorgehensweise: Importieren von benutzerdefinierten Richtlinienassertionen](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

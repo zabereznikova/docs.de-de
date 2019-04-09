@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa1fa59bf3bb33e115989eae9095752eea00a041
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 83dec9b6ed3b1e538e0f1b7d13a33b8bdbc1cf54
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487641"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200804"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps-Methode
 Ruft ab, in den Metadaten für eine angegebenen Member-Definition, einschließlich Name, binäre Signatur und relative virtuelle Adresse des gespeicherten Informationen dem <xref:System.Type> Member vom angegebenen Metadatentoken verwiesen wird. Dies ist eine einfache Hilfsmethode: Wenn *mb* MethodDef, dann ist **GetMethodProps** aufgerufen, wenn *mb* ist ein FieldDef, **GetFieldProps** wird aufgerufen. Finden Sie unter diesen anderen Methoden für Details. 
@@ -97,5 +97,6 @@ HRESULT GetMemberProps (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

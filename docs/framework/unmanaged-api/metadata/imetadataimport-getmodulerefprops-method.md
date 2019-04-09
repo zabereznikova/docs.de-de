@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b00fdaa6dacaf9a7eefa1a1ac1192f7c18fde95
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e948644e4f2d91b2f1e3e3627f7adbe204dee9d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465906"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155414"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps-Methode
 Ruft den Namen des Moduls ab, auf das vom angegebenen Metadatentoken verwiesen wird.  
@@ -61,5 +61,6 @@ HRESULT GetModuleRefProps (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

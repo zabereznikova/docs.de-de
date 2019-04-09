@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cd5a7696e7630b21c8bdfa7e4d2f902d6f36995
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7fa90aff73d94baf2cbf7d01f41710cb2aa10213
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490254"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178736"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject-Methode
 Ruft einen Schnittstellenzeiger auf die common Language Runtime (CLR)-Thread ab.  
@@ -49,4 +49,5 @@ HRESULT GetObject (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Threading.Thread>

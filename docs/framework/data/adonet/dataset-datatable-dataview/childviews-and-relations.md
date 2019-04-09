@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: 72ab53c9b7687246e1ab219774a67b7b1d42938f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e56b97ad7b375c69184e0f1928183612abfef42
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666825"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207499"
 ---
 # <a name="childviews-and-relations"></a>"ChildViews" und Beziehungen
 Wenn zwischen Tabellen in einem <xref:System.Data.DataSet> Beziehungen vorhanden sind, können Sie eine <xref:System.Data.DataView> mit Zeilen aus der verwandten untergeordneten Tabelle erstellen, indem Sie die <xref:System.Data.DataRowView.CreateChildView%2A>-Methode der <xref:System.Data.DataRowView> für die Zeilen in der übergeordneten Tabelle verwenden. Das folgende Codebeispiel zeigt **Kategorien** und den zugehörigen **Produkte** in alphabetischer Reihenfolge nach sortiert **"CategoryName"** und **ProductName** .  
@@ -74,8 +74,9 @@ foreach (DataRowView catDRV in catView)
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
-- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- ["DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: 3ce388da75711ab1378ce59575c067cf828089e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be4798663d0b39301ec496df45a4a7a5bf9c88e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203976"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Vorgehensweise: Verwenden des Windows Communication Foundation-Dienstmonikers ohne Registrierung
 Um eine Verbindung mit herstellen und mit einem Windows Communication Foundation (WCF)-Dienst kommunizieren, benötigen eine WCF-Clientanwendung die Details der Adresse des Diensts, die Bindungskonfiguration und die den Dienstvertrag.  
@@ -58,4 +58,5 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
 >  Ist der Moniker nicht ordnungsgemäß formatiert oder der Dienst nicht verfügbar, wird nach dem `GetObject`-Aufruf ein Syntaxfehler zurückgegeben. Vergewissern Sie sich bei Auftreten dieses Fehlers, dass der verwendete Moniker korrekt und der Dienst verfügbar ist.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Registrieren und Konfigurieren eines Dienstmonikers](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

@@ -2,12 +2,12 @@
 title: <transport> von <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 49462e0a-66e1-463f-b3e1-c83a441673c6
-ms.openlocfilehash: de1f87d8074bbf3d85f6092a4ac316f5fd20052c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 97139b6bea21e4d908c06f5210e54756865d3c46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355591"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217795"
 ---
 # <a name="transport-of-nettcpbinding"></a>\<transport> of \<netTcpBinding>
 Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen Endpunkt konfiguriert, mit der [ \<NetTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -55,7 +55,7 @@ Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen E
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Keine|Der Client ist anonym. Dies erfordert ein Zertifikat für den Dienst.|  
+|Keiner|Der Client ist anonym. Dies erfordert ein Zertifikat für den Dienst.|  
 |Windows|Gibt die Windows-Authentifizierung des Clients mit SP-Aushandlung (Kerberos-Aushandlung) an.|  
 |Zertifikat|Der Client wird mit einem Zertifikat authentifiziert. Dabei wird SSL-Aushandlung verwendet und ein Zertifikat für den Dienst angefordert.|  
   
@@ -63,12 +63,12 @@ Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen E
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Keine|Kein Schutz.|  
+|Keiner|Kein Schutz.|  
 |Sign|Nachrichten werden signiert.|  
 |EncryptAndSign|-Nachrichten werden verschlüsselt und signiert.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -80,6 +80,7 @@ Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen E
  Verwenden Sie Transportsicherheit für die Integrität und Vertraulichkeit der SOAP-Nachricht und für gegenseitige Authentifizierung. Wurde dieser Sicherheitsmodus für eine Bindung ausgewählt, wird der Kanalstapel mit einem geschützten Transport konfiguriert, und die SOAP-Nachrichten werden mit Transportsicherheit geschützt, wie zum Beispiel Windows (Aushandeln) oder SSL über TCP.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.TcpTransportSecurity>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Transport%2A>

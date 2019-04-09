@@ -2,12 +2,12 @@
 title: Details der WCF Data Services-Protokollimplementierung
 ms.date: 03/30/2017
 ms.assetid: 712d689b-fada-4cbb-bcdb-d65a3ef83b4c
-ms.openlocfilehash: fdaaa95bdcffa3ae053cc856753faa1a224eebc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fcef8778707f2bac68755762143f4a7528f0bf1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728751"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152853"
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>Details der WCF Data Services-Protokollimplementierung
 ## <a name="odata-protocol-implementation-details"></a>Details der OData-Protokollimplementierung  
@@ -23,5 +23,6 @@ ms.locfileid: "54728751"
  Wenn eine Abfrageanforderung, die an den Datendienst gesendet wird, eine `$top`-Systemabfrageoption oder eine `$skip`-Systemabfrageoption einschließt und die `$orderby`-Systemabfrageoption nicht einschließt, wird der zurückgegebene Feed nach den Schlüsseleigenschaften in aufsteigender Reihenfolge sortiert. Das liegt daran, dass die Reihenfolge erforderlich ist, um das richtige Paging von Ergebnissen sicherzustellen. Hierzu fügt der Datendienst der Abfrage einen Reihenfolgenausdruck hinzu. Dieses Verhalten tritt auch auf, wenn servergesteuertes Paging im Datendienst aktiviert wird. Weitere Informationen finden Sie unter [Konfigurieren des Datendiensts](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md). Um die Reihenfolge des zurückgegebenen Feeds zu steuern, aufzunehmen `$orderby` im Abfrage-URI.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+
+- [Definieren von WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

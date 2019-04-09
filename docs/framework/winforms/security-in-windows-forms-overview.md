@@ -8,19 +8,19 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 8a1a7fe9f7b356f318a99dfecb425a66c1f70bd6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fcb450b86066e24fba9c6a33f7abe0d4749d2c8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193708"
 ---
 # <a name="security-in-windows-forms-overview"></a>Übersicht über die Sicherheit in Windows Forms
 Bevor [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] freigegeben wurde, hatte jeglicher Code, der auf dem Computer eines Benutzers ausgeführt wurde, dieselben Berechtigungen für Zugriffe auf Ressourcen, wie der Benutzer auf dem Computer hatte. Wenn der Benutzer beispielsweise berechtigt war, auf das Dateisystem zuzugreifen, war auch der Code berechtigt, auf das Dateisystem zuzugreifen. Wenn der Benutzer Zugriffsrechte für eine Datenbank hatte, konnte der Code ebenfalls auf diese Datenbank zugreifen. Diese Berechtigungen können für Code in ausführbaren Dateien akzeptabel sein, die der Benutzer explizit auf dem lokalen Computer installiert hat. Sie sind aber wahrscheinlich nicht für potenzielle Schadsoftware akzeptabel, der aus dem Internet oder einem lokalen Intranet stammt. Dieser Code darf nicht ohne Berechtigung auf Computerressourcen des Benutzers zugreifen können.  
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt eine als Codezugriffssicherheit bezeichnete Infrastruktur bereit, die es Ihnen ermöglicht, zwischen den Berechtigungen, die Code hat, und den Berechtigungen zu unterscheiden, die der Benutzer hat. Standardmäßig kann Code, der aus dem Internet oder dem Intranet stammt, nur in der Umgebung ausgeführt werden, die als teilweise vertrauenswürdige Umgebung bezeichnet wird. Teilweise Vertrauenswürdigkeit bedingt für eine Anwendung eine Reihe von Beschränkungen: Neben anderen Aspekten kann eine Anwendung weder auf die lokale Festplatte zugreifen noch nicht verwalteten Code ausführen. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] steuert anhand der Identität dieses Codes, auf welche Ressourcen er zugreifen darf: Woher stammt der Code, hat er [Assemblys mit starken Namen](../app-domains/strong-named-assemblies.md), ist er mit einem Zertifikat signiert usw.  
   
- Die [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Technologie, mit der Sie Windows Forms-Anwendungen bereitstellen, erleichtert Ihnen das Entwickeln von Anwendungen, die mit teilweiser Vertrauenswürdigkeit, voller Vertrauenswürdigkeit oder teilweiser Vertrauenswürdigkeit mit erweiterten Berechtigungen ausgeführt werden. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] bietet Funktionalität wie Berechtigungserweiterung und Bereitstellung vertrauenswürdiger Anwendungen, sodass Ihre Anwendung bei Bedarf volle Vertrauenswürdigkeit bzw. erweiterte Berechtigungen vom lokalen Benutzer anfordern kann.  
+ [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] -Technologie, die Sie zum Bereitstellen von Windows Forms-Anwendungen verwenden, erleichtert Ihnen zum Entwickeln von Anwendungen, die bei teilweiser Vertrauenswürdigkeit, voller Vertrauenswürdigkeit oder teilweiser Vertrauenswürdigkeit mit erweiterten Berechtigungen ausgeführt. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] bietet wie Berechtigungserweiterung und Bereitstellung einer vertrauenswürdigen Anwendung, damit Ihre Anwendung volle Vertrauenswürdigkeit bzw. erweiterte Berechtigungen vom lokalen Benutzer Bedarf anfordern kann.  
   
 ## <a name="understanding-security-in-the-net-framework"></a>Grundlegendes zur Sicherheit in .NET Framework  
  Mithilfe der Codezugriffssicherheit können für Code anhand seines Ursprungs und weiterer Aspekte seiner Identität verschiedene Vertrauensebenen festgelegt werden. Weitere Informationen zu den Beweisen, die Common Language Runtime zum Ermitteln der Sicherheitsrichtlinien verwendet, finden Sie unter [Beweis](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100)). Sie unterstützt dabei, Computersysteme vor Schadsoftware zu schützen, und sie schützt vertrauenswürdigen Code davor, absichtlich oder versehentlich die Sicherheit zu gefährden. Codezugriffssicherheit gibt Ihnen außerdem mehr Kontrolle über die Aktionen, die Ihre Anwendung ausführen kann, weil Sie die Möglichkeit haben, nur die Berechtigungen anzugeben, die für die Anwendung benötigt werden. Codezugriffssicherheit betrifft den gesamten verwalteten Code, der auf der Common Language Runtime aufsetzt, selbst wenn dieser Code keine einzige Berechtigungsüberprüfung für Codezugriffssicherheit ausführt. Weitere Informationen zur Sicherheit in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] finden Sie unter [Schlüsselbegriffe der Sicherheit](../../standard/security/key-security-concepts.md) und [Grundlagen der Codezugriffssicherheit](../misc/code-access-security-basics.md).  
@@ -62,9 +62,9 @@ Bevor [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] freigegeben w
 -  
   
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>Bereitstellen einer Anwendung mit den entsprechenden Berechtigungen  
- Die häufigste Methode der Bereitstellung einer Windows Forms-Anwendung für einen Clientcomputer ist [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], eine Bereitstellungstechnologie, mit der alle Komponenten beschrieben werden, die Ihre Anwendung zur Ausführung benötigt. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] verwendet XML-Dateien, die als Manifeste bezeichnet werden. In diesen XML-Dateien sind die Assemblys und Dateien, aus denen Ihre Anwendung besteht, sowie die Berechtigungen beschrieben, die für die Anwendung erforderlich sind.  
+ Die häufigste Methode der Bereitstellung einer Windows Forms-Anwendung für einen Clientcomputer ist [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], eine Bereitstellungstechnologie, mit der alle Komponenten beschrieben werden, die Ihre Anwendung zur Ausführung benötigt. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] verwendet XML-Dateien als Manifeste beschreiben die Assemblys und Dateien, aus denen Ihre Anwendung bezeichnet, und auch die Berechtigungen für Ihre Anwendung erfordert.  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] verwendet zwei Technologien zum Anfordern von erweiterten Berechtigungen auf einem Clientcomputer. Beide Technologien basieren auf der Verwendung von Authenticode-Zertifikaten. Die Zertifikate können den Benutzern ein gewisses Maß an Sicherheit geben, dass die Anwendung von einer vertrauenswürdigen Quelle stammt.  
+ [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] verfügt über zwei Technologien zum Anfordern von erhöhten Berechtigungen auf einem Clientcomputer aus. Beide Technologien basieren auf der Verwendung von Authenticode-Zertifikaten. Die Zertifikate können den Benutzern ein gewisses Maß an Sicherheit geben, dass die Anwendung von einer vertrauenswürdigen Quelle stammt.  
   
  In der folgenden Liste sind diese Technologien beschrieben.  
   
@@ -83,7 +83,8 @@ Bevor [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] freigegeben w
  Wenn Sie Ihre Windows Forms-Anwendung mit Visual Studio bereitgestellt haben, können Sie das Debuggen in teilweiser Vertrauenswürdigkeit oder in einem eingeschränkten Berechtigungssatz aus der Entwicklungsumgebung aktivieren.  Weitere Informationen hierzu finden Sie auch unter [Gewusst wie: Debuggen einer ClickOnce-Anwendung mit eingeschränkten Berechtigungen](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Sicherheit in Windows Forms](windows-forms-security.md)
+
+- [Sicherheit in Windows Forms](windows-forms-security.md)
 - [Grundlagen der Codezugriffssicherheit](../misc/code-access-security-basics.md)
 - [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Überblick über die Bereitstellung vertrauenswürdiger Anwendungen](/visualstudio/deployment/trusted-application-deployment-overview)

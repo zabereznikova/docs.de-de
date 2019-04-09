@@ -2,12 +2,12 @@
 title: Verfahrensworkflows
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
-ms.openlocfilehash: fcf50296a8ce3e7e2e0631057467af8a8efd9215
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 05942418038ca4349e32973aeefdfc4a50e49f46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164748"
 ---
 # <a name="procedural-workflows"></a>Verfahrensworkflows
 Verfahrensworkflows verwenden Flusssteuerungsmethoden ähnlich jenen, die in verfahrensorientierten Sprachen verwendet werden. Hierzu zählen u. a. `While` und `If`. Diese Workflows können mit anderen Flusssteuerungsaktivitäten wie <xref:System.Activities.Statements.Flowchart> und <xref:System.Activities.Statements.Sequence> frei zusammengefasst werden.  
@@ -37,4 +37,5 @@ Verfahrensworkflows verwenden Flusssteuerungsmethoden ähnlich jenen, die in ver
 >  Wenn [!INCLUDE[dublin](../../../includes/dublin-md.md)] zum Hosten von Workflows in einer Webfarm verwendet wird, verschiebt AppFabric Instanzen zwischen unterschiedlichen AppFabric-Servern. Dies erfordert, dass die Ressourcen von allen Knoten gemeinsam genutzt werden können.  Keine der standardmäßigen .NET 4-Workflowaktivitäten enthalten Vorgänge, die auf lokale Ressourcen zugreifen. Da AppFabric keinen Mechanismus bietet, um einen Workflow als "nicht verschiebbar" zu markieren, darf ein Entwickler keine benutzerdefinierten Aktivitäten erstellen, die fehlschlagen, wenn ein Workflow verschoben wird.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Flussdiagrammworkflows](flowchart-workflows.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MenuStrip control [Windows Forms]
 ms.assetid: eb584e71-59da-4012-aaca-dbe1c7c7a156
-ms.openlocfilehash: 881590f74805c0acdac80a1c2779cd978af39b90
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 80a6b5a7e3ce354abdfbe330a378566d47c011ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170897"
 ---
 # <a name="how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls"></a>Vorgehensweise: Aktivieren des Aktivierungs- und Bildrands in ContextMenuStrip-Steuerelementen
 Sie können die <xref:System.Windows.Forms.ToolStripMenuItem>-Objekte in Ihrem <xref:System.Windows.Forms.MenuStrip>-Steuerelement mit Häkchen und benutzerdefinierten Bildern anpassen.  
@@ -39,6 +39,7 @@ Sie können die <xref:System.Windows.Forms.ToolStripMenuItem>-Objekte in Ihrem <
  Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - <xref:System.Windows.Forms.ToolStripDropDownMenu>
 - <xref:System.Windows.Forms.MenuStrip>

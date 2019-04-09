@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22a783b7564c3545edea93bf4faca1fc40b54cec
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 266219894ffefa0d4066c6ca68c7cadf6265e098
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175811"
 ---
 # <a name="icorprofilerinfo5seteventmask2-method"></a>ICorProfilerInfo5::SetEventMask2-Methode
 [Wird nur in .NET Framework 4.5.2 und neueren Versionen unterstützt]  
@@ -55,5 +55,6 @@ HRESULT SetEventMask2(        [in] DWORD dwEventsLow,        [in] DWORD dwEvents
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorProfilerInfo5-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md)
 - [GetEventMask2-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)

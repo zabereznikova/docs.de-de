@@ -5,18 +5,16 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379003"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162422"
 ---
 # <a name="read-only-dependency-properties"></a>Schreibgeschützte Abhängigkeitseigenschaften
 Dieses Thema beschreibt die schreibgeschützten Abhängigkeitseigenschaften, einschließlich vorhandener schreibgeschützter Abhängigkeitseigenschaften und die Szenarien und Verfahren zum Erstellen einer benutzerdefinierten, schreibgeschützten Abhängigkeitseigenschaft.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Bei diesem Thema wird davon ausgegangen, dass Sie die grundlegenden Szenarien zum Implementieren einer Abhängigkeitseigenschaft verstehen, und Metadaten für eine benutzerdefinierte Abhängigkeitseigenschaft anwenden. Mehr dazu finden Sie unter [benutzerdefinierten Abhängigkeitseigenschaften](custom-dependency-properties.md) und [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md).  
@@ -44,6 +42,7 @@ Dieses Thema beschreibt die schreibgeschützten Abhängigkeitseigenschaften, ein
  Da die <xref:System.Windows.DependencyPropertyKey> privat ist und nicht weitergegeben wird vom Eigenschaftensystem außerhalb des Codes, eine schreibgeschützte Abhängigkeitseigenschaft besitzt eine bessere einstellungssicherheit, als eine Abhängigkeitseigenschaft mit Lese-/ Schreibzugriff. Für eine Abhängigkeitseigenschaft, die gelesen und bearbeitet werden kann, ist das identifizierende Feld explizit oder implizit öffentlich und daher kann die Eigenschaft umfassend festgelegt werden. Ausführlichere Informationen dazu finden Sie unter [Sicherheit von Abhängigkeitseigenschaften](dependency-property-security.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
 - [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
 - [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)

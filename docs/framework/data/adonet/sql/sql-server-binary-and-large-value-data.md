@@ -2,12 +2,12 @@
 title: Binäre Daten und Daten mit umfangreichen Werten in SQL Server
 ms.date: 03/30/2017
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
-ms.openlocfilehash: f6bd62d2e9d2f87947e01b7964c5d151690b62bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b7a3f16726d6363cd702fb912bb7be281a25000
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192965"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>Binäre Daten und Daten mit umfangreichen Werten in SQL Server
 SQL Server umfasst den `max`-Bezeichner, der die Speicherkapazität für die Datentypen `varchar`, `nvarchar` und `varbinary` erhöht. `varchar(max)`, `nvarchar(max)`, und `varbinary(max)` werden zusammenfassend als bezeichnet *Datentypen mit umfangreichen Werten*. Sie können die Datentypen mit umfangreichen Werten zum Speichern von bis zu 2^31-1 Bytes an Daten verwenden.  
@@ -22,7 +22,8 @@ SQL Server umfasst den `max`-Bezeichner, der die Speicherkapazität für die Dat
  Beschreibt die Verwendung von Datentypen für große Werte, die mit dem FILESTREAM-Attribut in SQL Server 2008 gespeichert wurden.  
   
 ## <a name="see-also"></a>Siehe auch
-- [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [SQL Server Data Operations in ADO.NET (SQL Server-Datenvorgänge in ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+
+- [SQL Server-Datentypen und ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [SQL Server-Datenvorgänge in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
 - [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

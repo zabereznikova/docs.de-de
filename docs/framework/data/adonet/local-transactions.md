@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: 9cad6c798856fb77023bb52c528b9294f5f6d0bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 30dd3a54092c5b30cdd8dfd2917b6ea57edd7086
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153620"
 ---
 # <a name="local-transactions"></a>Lokale Transaktionen
-Transaktionen werden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] verwendet, wenn mehrere Aufgaben miteinander verbunden werden sollen, damit sie als eine einzelne Verarbeitungseinheit ausgeführt werden können. Stellen Sie sich z.&#160;B. vor, dass eine Anwendung zwei Aufgaben ausführt. Zum einen aktualisiert sie eine Tabelle mit Bestellinformationen. Zum anderen aktualisiert sie eine Tabelle mit Bestandsinformationen und bucht die bestellten Artikel ab. Wenn der Task entweder ein Fehler auftritt, werden beide Aktualisierungen ein Rollback ausgeführt.  
+Transaktionen werden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] verwendet, wenn mehrere Aufgaben miteinander verbunden werden sollen, damit sie als eine einzelne Verarbeitungseinheit ausgeführt werden können. Stellen Sie sich z.&amp;#160;B. vor, dass eine Anwendung zwei Aufgaben ausführt. Zum einen aktualisiert sie eine Tabelle mit Bestellinformationen. Zum anderen aktualisiert sie eine Tabelle mit Bestandsinformationen und bucht die bestellten Artikel ab. Wenn der Task entweder ein Fehler auftritt, werden beide Aktualisierungen ein Rollback ausgeführt.  
   
 ## <a name="determining-the-transaction-type"></a>Bestimmen des Transaktionstyps  
  Um eine lokale Transaktion zu sein, wenn es eine Phase hat nur und direkt von der Datenbank behandelt wird, wird als Transaktion betrachtet. In einer verteilten Transaktion zu sein, wenn er von einem Transaktionsmonitor koordiniert ist und verwendet für die transaktionsauflösung ausfallsichere Mechanismen verwenden (z. B. Zweiphasen-Commit), wird als Transaktion betrachtet.  
@@ -48,6 +48,7 @@ Transaktionen werden in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)
  [!code-vb[DataWorks SqlTransaction.Local#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTransaction.Local/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [Verteilte Transaktionen](../../../../docs/framework/data/adonet/distributed-transactions.md)
 - [System.Transactions-Integration in SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)

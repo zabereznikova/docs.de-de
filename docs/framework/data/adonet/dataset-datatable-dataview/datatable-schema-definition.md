@@ -2,12 +2,12 @@
 title: DataTable-Schemadefinition
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
-ms.openlocfilehash: aa275e0a9cbd4f8fb3e851865b9de49eca327727
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8710e7d92558f525a6feaedf8d0635c5ce6e2c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163071"
 ---
 # <a name="datatable-schema-definition"></a>DataTable-Schemadefinition
 Das Schema oder die Struktur einer Tabelle wird durch Spalten und Einschränkungen dargestellt. Das Schema einer <xref:System.Data.DataTable> wird mit <xref:System.Data.DataColumn>-Objekten sowie <xref:System.Data.ForeignKeyConstraint>-Objekten und <xref:System.Data.UniqueConstraint>-Objekten definiert. Die Spalten einer Tabelle können Spalten in einer Datenquelle zugeordnet sein, berechnete Werte aus Ausdrücken enthalten, Werte automatisch erhöhen oder primäre Schlüsselwerte enthalten.  
@@ -20,7 +20,7 @@ Das Schema oder die Struktur einer Tabelle wird durch Spalten und Einschränkung
 >  Die <xref:System.Data.DataTable.CaseSensitive%2A> Eigenschaft der **DataTable** wirkt sich nicht auf dieses Verhalten. Die **CaseSensitive** -Eigenschaft angewendet wird, die Daten in einer Tabelle und wirkt sich auf Sortieren, suchen, filtern, erzwingen von Einschränkungen usw., jedoch keine Verweise auf Spalten, Beziehungen und Einschränkungen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Hinzufügen von Spalten zu einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ [Hinzufügen von Spalten zu einer "DataTable"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
  Beschreibt, wie Sie definieren die Spalten einer Tabelle mit **DataColumn** Objekte.  
   
  [Erstellen von Ausdrucksspalten](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
@@ -36,5 +36,6 @@ Das Schema oder die Struktur einer Tabelle wird durch Spalten und Einschränkung
  Beschreibt, wie Fremdschlüsseleinschränkungen und eindeutige Einschränkungen für Spalten in einer Tabelle definiert werden.  
   
 ## <a name="see-also"></a>Siehe auch
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+
+- ["DataTables"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

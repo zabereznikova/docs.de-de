@@ -2,12 +2,12 @@
 title: Webhosting einer Anwendung mit Queuing
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: 957a97c263f44302b66b6fb57b8330f63a178fa1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c44a6b5059f5294646d95b4281dcf7845b369929
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700207"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126021"
 ---
 # <a name="web-hosting-a-queued-application"></a>Webhosting einer Anwendung mit Queuing
 Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Lebensdauer der Arbeitsprozesse, die Anwendungen, die Hostdienste Windows Communication Foundation (WCF) enthalten. Das WAS-Prozessmodell verallgemeinert das [!INCLUDE[iis601](../../../../includes/iis601-md.md)]-Prozessmodell für den HTTP-Server durch das Entfernen der Abhängigkeit von HTTP. Dadurch wird ein WCF-Diensten für die Verwendung von HTTP- und nicht-HTTP-Protokolle, z. B. net.msmq und msmq.formatname in einer hostumgebung, die Nachrichtenbasierte Aktivierung unterstützt und bietet die Möglichkeit, eine große Anzahl von Anwendungen auf einem Computer hosten.  
@@ -19,7 +19,7 @@ Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Leben
 ## <a name="queue-addressing-in-was"></a>Adressieren von Warteschlangen in WAS  
  WAS-Anwendungen weisen Uniform Resource Identifier (URI)-Adressen auf. Anwendungsadressen haben zwei Teile: einen Basis-URI-Präfix und eine anwendungsspezifische, relative Adresse (Pfad). Diese beiden Teile stellen beim Zusammenfügen die externe Adresse für eine Anwendung bereit. Die base-URI-Präfix wird aus der sitebindung erstellt und wird für alle Anwendungen auf der Website, z. B. "MSMQ://localhost", "Formatname://localhost" oder "Net. TCP://localhost" verwendet. Anwendungsadressen werden anschließend mithilfe einer anwendungsspezifischen Pfad-Fragmente erstellt (z. B. "/ ApplicationOne") und Anfügen an den Basis-URI-Präfix, das den vollständigen Anwendungs-URI, z. B. erreichen "MSMQ://localhost/applicationone".  
   
- Der MSMQ-Aktivierungsdienst verwendet den Anwendungs-URI zum Abgleichen der Warteschlange, die der MSMQ-Aktivierungsdienst auf Nachrichten überwachen muss. Wenn der MSMQ-Aktivierungsdienst startet, listet er alle öffentlichen und privaten Warteschlangen auf dem Computer auf, für deren Empfang er konfiguriert ist, und überwacht ihn auf Nachrichten. Alle 10 Minuten aktualisiert der MSMQ-Aktivierungsdienst die Liste der zu überwachenden Warteschlangen. Wenn in einer Warteschlange eine Nachricht gefunden wird, gleicht der Aktivierungsdienst den Warteschlangennamen entsprechend dem längsten übereinstimmenden Anwendungs-URI für die Bindung net.msmq ab, und aktiviert die Anwendung.  
+ Der MSMQ-Aktivierungsdienst verwendet den Anwendungs-URI zum Abgleichen der Warteschlange, die der MSMQ-Aktivierungsdienst auf Nachrichten überwachen muss. Wenn der MSMQ-Aktivierungsdienst startet, listet er alle öffentlichen und privaten Warteschlangen auf dem Computer auf, für deren Empfang er konfiguriert ist, und überwacht ihn auf Nachrichten. Alle 10 Minuten aktualisiert der MSMQ-Aktivierungsdienst die Liste der zu überwachenden Warteschlangen. Wenn in einer Warteschlange eine Nachricht gefunden wird, gleicht der Aktivierungsdienst den Warteschlangennamen entsprechend dem längsten übereinstimmenden Anwendungs-URI für die Bindung „net.msmq“ ab und aktiviert die Anwendung.  
   
 > [!NOTE]
 >  Die aktivierte Anwendung muss mit dem Präfix des Warteschlangennamens übereinstimmen (längstmögliche Übereinstimmung).  
@@ -42,5 +42,6 @@ Der Windows Process Activation Service (WAS) verwaltet die Aktivierung und Leben
  Eine in WAS gehostete Anwendungen kann in einer Systemwarteschlange wie der systemweiten Warteschlange für unzustellbare Nachrichten oder in Unterwarteschlangen wie der Unterwarteschlange für potenziell schädliche Nachrichten nicht basierend auf Nachrichten aktiviert werden. Dies ist eine Einschränkung für diese Produktversion.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Behandlung nicht verarbeitbarer Nachrichten](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
 - [Dienstendpunkte und Adressieren von Warteschlangen](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Timelines RepeatBehavior property [WPF]
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
-ms.openlocfilehash: a098c912289f59f8be48edeec0f066b7f94b9fda
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a80f72b0e67c13890d4befcbd5ab7c4a92a93fe7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354000"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150539"
 ---
 # <a name="how-to-repeat-an-animation"></a>Vorgehensweise: Wiederholen einer Animation
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A> Eigenschaft eine <xref:System.Windows.Media.Animation.Timeline> um das Wiederholungsverhalten einer Animation steuern.  
@@ -29,8 +29,9 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.Time
  Das vollständige Beispiel finden Sie unter [Animation Timing Verhalten Sample](https://go.microsoft.com/fwlink/?LinkID=159970).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sammeln von Animationen während Wiederholungszyklen](how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [Festlegen, ob eine Zeitachse automatisch umgekehrt wird](how-to-specify-whether-a-timeline-automatically-reverses.md)
-- [Das Animations- und Zeitsteuerungssystem Gewusst-wie-Themen](animation-and-timing-how-to-topics.md)
+- [Gewusst-wie-Themen zu Animation und Zeitsteuerung](animation-and-timing-how-to-topics.md)
 - [Übersicht über Animationen](animation-overview.md)
-- [Beispiel zum Verhalten der Animationszeitsteuerung](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Beispiel zu Textanimation Timing Verhalten](https://go.microsoft.com/fwlink/?LinkID=159970)

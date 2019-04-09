@@ -7,17 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: d60b6babebd69e45335ab4c12cb797126ec6b6a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 706999cb403ecf32f5dfe8443e00dd84efdebd23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364293"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184482"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Erstellen einer WPF-Anwendung (WPF)
 Windows Presentation Foundation (WPF)-Anwendungen erstellt werden können, als [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ausführbare Dateien (.exe), Libraries (DLL) oder eine Kombination beider Typen von Assemblys. In diesem Thema wird beschrieben, wie [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen erstellt werden, und die wichtigsten Schritte im Buildprozess werden erläutert.  
-  
-  
+
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
 ## <a name="building-a-wpf-application"></a>Erstellen einer WPF-Anwendung  
  Zum Kompilieren einer WPF-Anwendung stehen folgende Methoden zur Verfügung:  
@@ -102,7 +101,7 @@ End Sub
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>Markupkompilierungsdurchlauf 2  
- Während des Durchlaufs 1 der Markupkompilierung werden nicht alle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Seiten kompiliert. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Dateien, die lokal definierte Typverweise aufweisen (Verweise auf Typen, die im Code an anderer Stelle im selben Projekt definiert sind), werden derzeit von der Kompilierung ausgenommen. Das liegt daran, dass diese lokal definierten Typen nur im Quellcode existieren und noch nicht kompiliert wurden. Um dies zu bestimmen, verwendet der Parser heuristische Verfahren, die das Suchen nach Elementen umfassen, z. B. `x:Name` in der Markupdatei. Wird eine solche Instanz gefunden, wird die Kompilierung der Markupdatei bis zur Kompilierung der Codedateien zurückgestellt. Anschließend werden diese Dateien im zweiten Durchlauf der Markupkompilierung verarbeitet.  
+ Während des Durchlaufs 1 der Markupkompilierung werden nicht alle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Seiten kompiliert. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Dateien mit den lokal Typverweise (Verweise auf Typen, die im Code an anderer Stelle im selben Projekt definiert definierten) sind von der Kompilierung zu diesem Zeitpunkt ausgenommen. Das liegt daran, dass diese lokal definierten Typen nur im Quellcode existieren und noch nicht kompiliert wurden. Um dies zu bestimmen, verwendet der Parser heuristische Verfahren, die das Suchen nach Elementen umfassen, z. B. `x:Name` in der Markupdatei. Wird eine solche Instanz gefunden, wird die Kompilierung der Markupdatei bis zur Kompilierung der Codedateien zurückgestellt. Anschließend werden diese Dateien im zweiten Durchlauf der Markupkompilierung verarbeitet.  
   
 <a name="File_Classification"></a>   
 ### <a name="file-classification"></a>Dateiklassifizierung  
@@ -167,6 +166,7 @@ End Sub
 -   Nichts wird neu kompiliert (es hat keine Änderung im Projekt stattgefunden).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Bereitstellen von WPF-Anwendungen](deploying-a-wpf-application-wpf.md)
 - [WPF-MSBuild-Referenz](/visualstudio/msbuild/wpf-msbuild-reference)
 - [Paket-URI in WPF](pack-uris-in-wpf.md)

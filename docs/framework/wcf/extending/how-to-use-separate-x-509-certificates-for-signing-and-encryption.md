@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden von separaten x. 509-Zertifikate für die Signierung und Verschlüsselung'
+title: 'Vorgehensweise: Verwenden von separaten X.509-Zertifikaten zum Signieren und Verschlüsseln'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: 6910b7abeb6a97cce1da9655fdab99b5295cc346
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9a6b043420554e41d0804e32313b87f05cf54631
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160939"
 ---
-# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Vorgehensweise: Verwenden von separaten x. 509-Zertifikate für die Signierung und Verschlüsselung
+# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Vorgehensweise: Verwenden von separaten X.509-Zertifikaten zum Signieren und Verschlüsseln
 In diesem Thema zeigt, wie so konfigurieren Sie Windows Communication Foundation (WCF), um verschiedene Zertifikate für die nachrichtensignierung und-Verschlüsselung auf dem Client und dem Dienst verwendet wird.  
   
  Damit können verschiedene Zertifikate für Signierung und Verschlüsselung verwendet werden, müssen bei einem benutzerdefinierten Client oder Dienst Anmeldeinformationen (oder beides) erstellt werden, da WCF nicht über eine API zum Festlegen von mehreren Client- oder Dienstzertifikate bietet. Außerdem muss ein Sicherheitstokenmanager zur Verfügung gestellt werden, um die Informationen der Zertifikate zu nutzen und einen entsprechenden Sicherheitstokenanbieter für die angegebene Schlüsselverwendung und Nachrichtenrichtung zu erstellen.  
   
  Das folgende Diagramm enthält die wichtigsten verwendeten Klassen, die Klassen, von denen geerbt wird (gekennzeichnet durch einen Aufwärtspfeil), sowie die Rückgabetypen bestimmter Methoden und Eigenschaften.  
   
--   `MyClientCredentials` ist eine benutzerdefinierte Implementierung von <xref:System.ServiceModel.Description.ClientCredentials>.  
+-   `MyClientCredentials` ist eine benutzerdefinierte Implementierung der <xref:System.ServiceModel.Description.ClientCredentials>.  
   
     -   Alle im Diagramm enthaltenen Eigenschaften geben Instanzen von <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> zurück.  
   
     -   Von der <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A>-Methode wird eine Instanz von `MyClientCredentialsSecurityTokenManager` zurückgegeben.  
   
--   `MyClientCredentialsSecurityTokenManager` ist eine benutzerdefinierte Implementierung von <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
+-   `MyClientCredentialsSecurityTokenManager` ist eine benutzerdefinierte Implementierung der <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>.  
   
     -   Von der <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>-Methode wird eine Instanz von <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider> zurückgegeben.  
   
@@ -90,6 +90,7 @@ In diesem Thema zeigt, wie so konfigurieren Sie Windows Communication Foundation
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>

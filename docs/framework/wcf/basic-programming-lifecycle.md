@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
-ms.openlocfilehash: d5322dfca1aa006ba2fc85b5dedebd09941f9c0e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 32586ad3ec62630e6abafd33b385788c20155b28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178489"
 ---
 # <a name="basic-programming-lifecycle"></a>Grundlegender Programmierlebenszyklus
 Windows Communication Foundation (WCF) ermöglicht Anwendungen das kommunizieren, ob diese auf demselben Computer ausführen, über das Internet oder auf verschiedenen Anwendungsplattformen sind. Dieses Thema beschreibt die Aufgaben, die zum Erstellen einer WCF-Anwendung erforderlich sind. Eine funktionierende beispielanwendung finden Sie unter [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md).  
@@ -32,4 +32,5 @@ Windows Communication Foundation (WCF) ermöglicht Anwendungen das kommunizieren
  Sobald Sie mit der Entwicklung von Dienstverträgen vertraut sind, lesen Sie bitte auch [Einführung in die Erweiterbarkeit](../../../docs/framework/wcf/introduction-to-extensibility.md). Wenn Sie Probleme mit Ihrem Dienst haben, überprüfen Sie [Schnelleinstieg zur Problembehandlung in WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md) um festzustellen, ob andere die gleichen oder ähnliche Probleme haben.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Implementieren von Dienstverträgen](../../../docs/framework/wcf/implementing-service-contracts.md)

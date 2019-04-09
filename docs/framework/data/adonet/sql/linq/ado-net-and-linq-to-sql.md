@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: bbcdd544e79197c9cb35d13bd09cffde9962030d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10e60ebd71c4615354c25d3a61a04e9d12d7c800
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167192"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET und LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ist Teil der [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] Technologiefamilie. Es basiert auf den vom [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]-Anbietermodell bereitgestellten Diensten. Sie können daher kombinieren [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Code mit vorhandenen [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] Anwendungen und migrieren Sie aktuelle [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] Lösungen für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Die folgende Abbildung stellt eine allgemeine Ansicht der Beziehung dar.  
@@ -55,8 +55,9 @@ ms.locfileid: "54553671"
  [!code-vb[DlinqAdoNet#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#4)]  
   
 > [!NOTE]
->  Parameter werden im Abfragetext mithilfe der gleichen verschachtelten Schreibweise wie in `Console.WriteLine()` und `String.Format()` ausgedrückt. `String.Format()` ersetzt die verschachtelten Parameter der angegebenen Abfragezeichenfolge durch generierte Parameternamen, wie z. B. `@p0`, `@p1` …, `@p(n)`.  
+>  Parameter werden im Abfragetext mithilfe der gleichen verschachtelten Schreibweise wie in `Console.WriteLine()` und `String.Format()` ausgedrückt. `String.Format()` übernimmt Ihre Abfragezeichenfolge und ersetzt die verschachtelten Parameter durch erzeugte Parameternamen wie z. B. `@p0`, `@p1` ..., `@p(n)`.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [Vorgehensweise: Wiederverwenden einer Verbindung zwischen einem ADO.NET-Befehl und einem "DataContext"](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+- [Vorgehensweise: Wiederverwenden einer Verbindung zwischen einem ADO.NET-Befehl und einem DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

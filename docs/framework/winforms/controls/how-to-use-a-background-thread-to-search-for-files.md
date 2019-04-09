@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723165"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157751"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Vorgehensweise: Verwenden eines Hintergrundthreads zur Dateisuche
 Die <xref:System.ComponentModel.BackgroundWorker> Komponente ersetzt und funktionell erweitert die <xref:System.Threading> Namespace, aber die <xref:System.Threading> Namespace wird für Abwärtskompatibilität und zur künftigen Verwendung beibehalten, falls gewünscht. Weitere Informationen finden Sie unter [Übersicht über die BackgroundWorker-Komponente](backgroundworker-component-overview.md).  
@@ -763,6 +763,7 @@ namespace SampleUsage
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - [Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework](developing-custom-windows-forms-controls.md)
-- [Event-based Asynchronous Pattern Overview (Übersicht über ereignisbasierte asynchrone Muster)](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Übersicht über ereignisbasierte asynchrone Muster](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

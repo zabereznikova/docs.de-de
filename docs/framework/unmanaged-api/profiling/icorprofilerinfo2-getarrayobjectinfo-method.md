@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7fe86fbe7ee51e5f53eeea74d7d5a56046de5e00
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5276c69da05cedcd3195a09da12ddc5b2d0fed67
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201272"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>ICorProfilerInfo2::GetArrayObjectInfo-Methode
 Ruft detaillierte Informationen zu einem Arrayobjekt.  
@@ -52,7 +52,7 @@ HRESULT GetArrayObjectInfo(
  [out] Ein Array mit ganzen Zahlen, die jeweils die untere darstellen einer Dimension des Arrays gebunden werden.  
   
  `ppData`  
- [out] Ein Zeiger auf die Adresse des den unformatierten Puffer für das Array, das gemäß der Konvention C++ angeordnet ist.  
+ [out] Ein Zeiger auf den unformatierten Puffer für das Array, das entsprechend angeordnet ist die Adresse der C++ Konvention.  
   
 ## <a name="remarks"></a>Hinweise  
  Die `pDimensionSizes` und `pDimensionLowerBounds` sind parallele Arrays, also die Elemente im gleichen Index in jedem Array Merkmale der gleichen Entität.  
@@ -67,5 +67,6 @@ HRESULT GetArrayObjectInfo(
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

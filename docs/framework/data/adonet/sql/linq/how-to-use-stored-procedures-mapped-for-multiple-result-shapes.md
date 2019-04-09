@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 6ea318e89cf91dcbf16747117b8000dfa3f9571d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 406e44a0ee3b086ceb47b25a80c4fd0ff5a92607
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164670"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Vorgehensweise: Verwenden von gespeicherten Prozeduren, die mehreren Ergebnisformen zugeordnet sind
 Wenn eine gespeicherte Prozedur mehrere Ergebnisformen zurückgeben kann, lässt sich der Rückgabetyp nicht auf eine einzige Projektionsform festlegen. Obwohl [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] können alle möglichen Projektionstypen generieren, die Reihenfolge, in dem sie zurückgegeben werden, nicht bekannt.  
@@ -44,4 +44,5 @@ else if(@shape = 2)
  [!code-vb[DLinqSprox#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Gespeicherte Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Hinzufügen von Anwendungssymbolen zur Taskleiste mit der NotifyIcon-Komponente in Windows Forms'
+title: 'Vorgehensweise: Hinzufügen von Anwendungssymbolen zur Taskleiste mit der NotifyIcon-Komponente in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 04f6b98a2206371a2838b3a6952feeafcd788309
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 18a78b7ecb5268463607508869e77fa163cbd06f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714254"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146444"
 ---
-# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Vorgehensweise: Hinzufügen von Anwendungssymbolen zur Taskleiste mit der NotifyIcon-Komponente in Windows Forms
+# <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Vorgehensweise: Hinzufügen von Anwendungssymbolen zur Taskleiste mit der NotifyIcon-Komponente in Windows Forms
 Die Windows-Formulare <xref:System.Windows.Forms.NotifyIcon> Komponente zeigt ein einzelnes Symbol im Statusbereich der Taskleiste. Wenn mehrere Symbole im Statusbereich anzeigen zu können, benötigen Sie mehrere <xref:System.Windows.Forms.NotifyIcon> Komponenten auf Ihrem Formular. Um das Symbol angezeigt, die für ein Steuerelement festzulegen, verwenden die <xref:System.Windows.Forms.NotifyIcon.Icon%2A> Eigenschaft. Sie können auch Code schreiben, der <xref:System.Windows.Forms.NotifyIcon.DoubleClick> -Ereignishandler so, dass etwas passiert, wenn der Benutzer das Symbol doppelklickt. Sie können z. B. ein Dialogfeld, das für den Benutzer so konfigurieren Sie den Hintergrundprozess, der durch das Symbol angezeigt vornehmen.  
   
 > [!NOTE]
@@ -72,8 +72,9 @@ Die Windows-Formulare <xref:System.Windows.Forms.NotifyIcon> Komponente zeigt ei
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [Vorgehensweise: Zuordnen eines Kontextmenüs mit einer NotifyIcon-Komponente in Windows Forms](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
+- [Vorgehensweise: Zuordnen eines Kontextmenüs zu einer NotifyIcon-Komponente in Windows Forms](how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)
 - [NotifyIcon-Komponente](notifyicon-component-windows-forms.md)
 - [Übersicht über die NotifyIcon-Komponente](notifyicon-component-overview-windows-forms.md)

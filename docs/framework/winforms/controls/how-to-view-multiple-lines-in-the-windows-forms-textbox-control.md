@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zeigen Sie mehrerer Zeilen in der TextBox-Steuerelement in Windows Forms an'
+title: 'Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - newline
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: d80a0262455b9b5e0e8535d88eb6292ab60e3ea8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f7a0e3a14d14f0629bd9995dbecd3f0b98bea1d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190911"
 ---
-# <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Vorgehensweise: Zeigen Sie mehrerer Zeilen in der TextBox-Steuerelement in Windows Forms an
+# <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>Vorgehensweise: Anzeigen mehrerer Zeilen im TextBox-Steuerelement in Windows Forms
 Standardmäßig wird die Windows-Formulare <xref:System.Windows.Forms.TextBox> -Steuerelement zeigt eine einzelne Textzeile an und zeigt keine Bildlaufleisten. Wenn der Text länger als der verfügbare Speicherplatz ist, ist nur ein Teil des Texts angezeigt. Sie können dieses Standardverhalten ändern, durch Festlegen der <xref:System.Windows.Forms.TextBox.Multiline%2A>, <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>, und <xref:System.Windows.Forms.TextBox.ScrollBars%2A> Eigenschaften auf die entsprechenden Werte.  
   
 ### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>Um einen Wagenrücklauf in der TextBox-Steuerelement anzuzeigen.  
@@ -47,11 +47,12 @@ Standardmäßig wird die Windows-Formulare <xref:System.Windows.Forms.TextBox> -
     |`true` (Standard)|Die horizontale Bildlaufleiste wird nicht angezeigt. Wenn Sie ausgewählt haben, verwenden Sie diesen Wert <xref:System.Windows.Forms.ScrollBars.Vertical> Scrollleisten oder <xref:System.Windows.Forms.ScrollBars.None>weiter oben, um einen oder mehrere Absätze anzuzeigen.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.TextBox>
 - [Übersicht über das TextBox-Steuerelement](textbox-control-overview-windows-forms.md)
-- [Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Vorgehensweise: Erstellen Sie ein Kennwort-Textfeld mit dem TextBox-Steuerelement in Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Steuern der Einfügemarke in einem TextBox-Steuerelement in Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Vorgehensweise: Erstellen eines Kennwort-Textfelds mit dem TextBox-Steuerelement in Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
 - [Vorgehensweise: Erstellen eines schreibgeschützten Textfelds](how-to-create-a-read-only-text-box-windows-forms.md)
 - [Vorgehensweise: Setzen von Anführungszeichen in Zeichenfolgen](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [Vorgehensweise: Wählen Sie Text im TextBox-Steuerelement von Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Vorgehensweise: Programmgesteuertes Auswählen von Text im TextBox-Steuerelement in Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
 - [TextBox-Steuerelement](textbox-control-windows-forms.md)

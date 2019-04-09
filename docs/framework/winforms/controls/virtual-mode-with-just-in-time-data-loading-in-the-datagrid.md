@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Implementieren des virtuellen Modus mit Just-in-Time-Daten laden in das DataGridView-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Implementieren des virtuellen Modus mit Just-In-Time-Laden von Daten in das DataGridView-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: 33825f92-7a22-40ee-86d9-9a2ed1ead7b7
-ms.openlocfilehash: 0aeba7c39bb19de0300e166936e3f8b8f70f83b0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6fdf2bd16297820026fa84bdaefe61cc495cea4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169883"
 ---
-# <a name="how-to-implement-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Implementieren des virtuellen Modus mit Just-in-Time-Daten laden in das DataGridView-Steuerelement in Windows Forms
+# <a name="how-to-implement-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Implementieren des virtuellen Modus mit Just-In-Time-Laden von Daten in das DataGridView-Steuerelement in Windows Forms
 Im folgenden Codebeispiel wird gezeigt, wie der virtuelle Modus im <xref:System.Windows.Forms.DataGridView>-Steuerelement mit einem Datencache verwendet wird, der nur bei Bedarf die Daten von einem Server lädt. In diesem Beispiel wird ausführlich beschrieben [Implementieren des virtuellen Modus mit Just-in-Time-Laden von Daten im DataGridView-Steuerelement in Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md).  
   
 ## <a name="example"></a>Beispiel  
@@ -39,6 +39,7 @@ Im folgenden Codebeispiel wird gezeigt, wie der virtuelle Modus im <xref:System.
  Das Speichern vertraulicher Informationen (z. B. eines Kennworts) innerhalb der Verbindungszeichenfolge kann die Sicherheit einer Anwendung beeinträchtigen. Der Zugriff auf eine Datenbank lässt sich mithilfe der Windows-Authentifizierung (wird auch als integrierte Sicherheit bezeichnet) sicherer steuern. Weitere Informationen finden Sie unter [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../data/adonet/protecting-connection-information.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
 - <xref:System.Windows.Forms.DataGridView.CellValueNeeded>

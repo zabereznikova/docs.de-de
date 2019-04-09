@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 1e0050dbf6ec5ade22e3f09ceee66f69826e56df
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163175"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>Optimieren der Leistung: Nutzen der Vorteile der Hardware
 Die interne Architektur des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verfügt über zwei Renderingpipelines, Hardware und Software. Dieses Thema enthält Informationen über diese Renderingpipelines, die Ihnen bei Ihren Entscheidungen zur leistungsoptimierung von Anwendungen helfen.  
@@ -55,6 +55,7 @@ Die interne Architektur des [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
  Weitere Informationen zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Renderingebenen finden Sie [Renderingebenen für Grafiken](graphics-rendering-tiers.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Optimieren der WPF-Anwendungsleistung](optimizing-wpf-application-performance.md)
 - [Planen der Anwendungsleistung](planning-for-application-performance.md)
 - [Layout und Entwurf](optimizing-performance-layout-and-design.md)

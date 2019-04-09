@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement von Windows Forms'
+title: 'Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: e222227d6283555fa4ec25fe1e5d8e661296034f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 55a8d28d04dd05d4dba7ab2b1edbcfbcce97cecb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709158"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222041"
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement von Windows Forms
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -96,5 +96,6 @@ ms.locfileid: "57709158"
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)
-- [Vorgehensweise: Löschen oder Ausblenden von Spalten im DataGrid-Steuerelement in Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Vorgehensweise: Löschen oder Ausblenden von Spalten aus dem DataGrid-Steuerelement in Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

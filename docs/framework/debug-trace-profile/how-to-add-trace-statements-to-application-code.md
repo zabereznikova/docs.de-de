@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a347919617e495ace19ca12eebc9b9a77f613ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1f45259623d4a481e635ac1b54ecb9a17497ab5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684373"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204093"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode
 Die für die Ablaufverfolgung am häufigsten verwendeten Methoden sind die Methoden zum Schreiben von Ausgaben in Listener: **Schreiben von**, **WriteIf**, **WriteLine**, **WriteLineIf**, **Assert**, und **fehlschlagen**. Diese Methoden können in zwei Kategorien unterteilt werden: **Schreiben von**, **WriteLine**, und **fehlschlagen** alle ausgeben bedingungslos während **WriteIf**, **WriteLineIf**, und  **Assert-** eine boolesche Bedingung testen und zu schreiben bzw. Schreiben nicht basierend auf dem Wert der Bedingung. **WriteIf** und **WriteLineIf** führen zu einer Ausgabe, wenn die Bedingung `true` entspricht. **Assert** führt zu einer Ausgabe, wenn die Bedingung `false` entspricht.  
@@ -85,11 +85,12 @@ Die für die Ablaufverfolgung am häufigsten verwendeten Methoden sind die Metho
     >  Sie können **Assert** bei der Ablaufverfolgung und beim Debuggen verwenden. In diesem Beispiel wird die Aufrufliste an alle Listener in der **Listener**-Auflistung ausgegeben. Weitere Informationen finden Sie unter [Assertionen in verwaltetem Code](/visualstudio/debugger/assertions-in-managed-code) und <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Diagnostics.Debug.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Debug.WriteLineIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteIf%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.Trace.WriteLineIf%2A?displayProperty=nameWithType>
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Vorgehensweise: Erstellen, initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Ablaufverfolgungsschalter](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Trace Listeners (Ablaufverfolgungslistener)](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Ablaufverfolgungslistener](../../../docs/framework/debug-trace-profile/trace-listeners.md)

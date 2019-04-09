@@ -7,12 +7,12 @@ helpviewer_keywords:
 - customizing controls [WPF]
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
-ms.openlocfilehash: 80873f7a08d241c80dd663ee09d2ea0180fb505d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b70a6654e5c3722ad1ef1d926ee3a441d24d9e68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135381"
 ---
 # <a name="control-customization"></a>Anpassung von Steuerelementen
 Diese Kategorie behandelt die verschiedenen Basisklassen, Schnittstellen und andere Elemente und bei der Erstellung eines voll funktionsfähigen verwendeten Konzepte [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Steuerelement.  
@@ -20,9 +20,10 @@ Diese Kategorie behandelt die verschiedenen Basisklassen, Schnittstellen und and
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über das Erstellen von Steuerelementen](control-authoring-overview.md)  
  [Richtlinien zum Entwerfen formatierbarer Steuerelemente](guidelines-for-designing-stylable-controls.md)  
- [Adorner](adorners.md)  
+ [Funktionsindikatoren](adorners.md)  
  [Steuerelementformate und -vorlagen](control-styles-and-templates.md)  
  [Benutzeroberflächenautomatisierung eines benutzerdefinierten WPF-Steuerelements](ui-automation-of-a-wpf-custom-control.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen von Formaten und Vorlagen](styling-and-templating.md)

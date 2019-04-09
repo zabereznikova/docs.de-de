@@ -2,12 +2,12 @@
 title: <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
-ms.openlocfilehash: 8962a0c018442ed590b62e53ea8323d80e334df7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6765259f290047a4199a422b4ad0cced2ffee9ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55290094"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179828"
 ---
 # <a name="peertransport"></a>\<peerTransport>
 Definiert einen Peertransport für eine benutzerdefinierte Bindung.  
@@ -58,12 +58,13 @@ Definiert einen Peertransport für eine benutzerdefinierte Bindung.
  Dieser Transport kann nicht mit Verträgen verwendet werden, die Anforderungs-/Antwortvorgänge enthalten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.PeerTransportElement>
 - <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Wählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Bindungen](../../../../../docs/framework/wcf/bindings.md)
 - [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)

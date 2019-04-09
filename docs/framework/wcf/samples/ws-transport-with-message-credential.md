@@ -2,12 +2,12 @@
 title: WS-Transport mit Nachrichtenanmeldeinformationen
 ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
-ms.openlocfilehash: 31c1ed5d4b62c0f0b4c0c149629bb84a7dab6f01
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 3afa13b90bc4ad85eed818212d8e307fb2c5fa68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826209"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172457"
 ---
 # <a name="ws-transport-with-message-credential"></a>WS-Transport mit Nachrichtenanmeldeinformationen
 In diesem Beispiel wird die Verwendung der SSL-Transportsicherheit in Verbindung mit Clientanmeldeinformationen veranschaulicht, die in der Nachricht übertragen werden. In diesem Beispiel wird die `wsHttpBinding`-Bindung verwendet.  
@@ -96,4 +96,3 @@ Press <ENTER> to terminate client.
 3.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
 4.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  

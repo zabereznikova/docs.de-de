@@ -8,12 +8,12 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
-ms.openlocfilehash: 61a8d4baba35a7a8a8ae221b054029eb59107d0e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 485e7a17073d72618b9599113179cddde748e697
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716256"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181180"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>Übersicht über die ErrorProvider-Komponente (Windows Forms)
 Die Windows-Formulare [ErrorProvider](errorprovider-component-windows-forms.md) Komponente dient zum Überprüfen von Benutzereingaben in einem Formular oder Steuerelement. Es wird in der Regel in Verbindung mit der Überprüfung von Benutzereingaben in einem Formular oder Anzeigen von Fehlern in einem Dataset verwendet. Ein Fehleranbieter ist eine bessere Alternative als die folgende Fehlermeldung in einem Meldungsfeld angezeigt, da nach der ein Meldungsfeld geschlossen, wird die Fehlermeldung nicht mehr sichtbar ist. Die <xref:System.Windows.Forms.ErrorProvider> Komponente zeigt ein Fehlersymbol (![Symbol "ErrorProvider"](./media/vberrorprovidericon.gif "VbErrorProviderIcon")) neben dem entsprechenden Steuerelement, z. B. ein Textfeld, wenn der Benutzer den Mauszeiger über positioniert die Fehlersymbol, wird eine QuickInfo zeigt die fehlermeldungs-Zeichenfolge.  
@@ -27,6 +27,7 @@ Die Windows-Formulare [ErrorProvider](errorprovider-component-windows-forms.md) 
 >  Die <xref:System.Windows.Forms.ErrorProvider> Komponente bietet keine integrierten Unterstützung für Eingabehilfen-Clients. Um die Anwendung zugreifen können, wenn Sie diese Komponente verwenden, müssen Sie einen zusätzliche, gut erreichbaren Feedbackmechanismus angeben.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ErrorProvider>
-- [Vorgehensweise: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider-Komponente in Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
-- [Vorgehensweise: Anzeigen von Fehlersymbolen für die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [Vorgehensweise: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider-Komponente in Windows Forms](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [Vorgehensweise: Anzeigen von Fehlersymbolen für die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms](display-error-icons-for-form-validation-with-wf-errorprovider.md)

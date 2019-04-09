@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Reagieren Sie auf Windows Forms das Klicken auf Kontrollkästchen'
+title: 'Vorgehensweise: Reagieren auf das Klicken auf Kontrollkästchen in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: fff08bebf4e0eeea7dff8146ed8805e9d71247da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 77f93dae2a91f282c6746c3fec3fb5f567cae2e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724501"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211984"
 ---
-# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Vorgehensweise: Reagieren Sie auf Windows Forms das Klicken auf Kontrollkästchen
+# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Vorgehensweise: Reagieren auf das Klicken auf Kontrollkästchen in Windows Forms
 Jedes Mal, wenn ein Benutzer klickt ein Windows Forms <xref:System.Windows.Forms.CheckBox> -Steuerelement, das <xref:System.Windows.Forms.Control.Click> Ereignis auftritt. Sie können Ihre Anwendung zum Ausführen einer Aktion, die je nach Zustand des Kontrollkästchens programmieren.  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>Um auf das Klicken auf Kontrollkästchen zu reagieren  
@@ -136,7 +136,8 @@ Jedes Mal, wenn ein Benutzer klickt ein Windows Forms <xref:System.Windows.Forms
     >  Wenn die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> -Eigenschaftensatz auf `true`, <xref:System.Windows.Forms.CheckBox.Checked%2A> -Eigenschaft gibt `true` für beide <xref:System.Windows.Forms.CheckState.Checked> und <xref:System.Windows.Forms.CheckState.Indeterminate>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.CheckBox>
 - [Übersicht über das CheckBox-Steuerelement](checkbox-control-overview-windows-forms.md)
-- [Vorgehensweise: Festlegen von Optionen mit CheckBox-Steuerelementen für Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [Vorgehensweise: Festlegen von Optionen mit CheckBox-Steuerelementen in Windows Forms](how-to-set-options-with-windows-forms-checkbox-controls.md)
 - [CheckBox-Steuerelement](checkbox-control-windows-forms.md)

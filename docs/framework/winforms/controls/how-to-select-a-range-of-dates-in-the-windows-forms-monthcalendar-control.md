@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Auswählen eines Datumsbereichs in das Windows Forms-MonthCalendar-Steuerelement'
+title: 'Vorgehensweise: Auswählen eines Datumsbereichs mithilfe des MonthCalendar-Steuerelements in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - calendars [Windows Forms], selecting date range
 - MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
-ms.openlocfilehash: 21cda9fb11edd3f6148d7128621fbde8d3ff913c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0e032a6285c43d7e96c7d59444da6d6598bd8100
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129947"
 ---
-# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Vorgehensweise: Auswählen eines Datumsbereichs in das Windows Forms-MonthCalendar-Steuerelement
+# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>Vorgehensweise: Auswählen eines Datumsbereichs mithilfe des MonthCalendar-Steuerelements in Windows Forms
 Eine wichtige Funktion von der Windows Forms <xref:System.Windows.Forms.MonthCalendar> Steuerelement ist, dass der Benutzer einen Bereich von Datumswerten auswählen kann. Diese Funktion ist eine Verbesserung gegenüber der Auswahl des dem <xref:System.Windows.Forms.DateTimePicker> -Steuerelement, das nur der Benutzer einen einzelnes Datum/Uhrzeit-Wert auswählen kann. Sie können einen Datumsbereich festlegen oder einen Auswahlbereich, die vom Benutzer festgelegt werden, mithilfe von Eigenschaften zu erhalten die <xref:System.Windows.Forms.MonthCalendar> Steuerelement. Im folgenden Codebeispiel wird veranschaulicht, wie Sie einen Auswahlbereich festgelegt wird.  
   
 ### <a name="to-select-a-range-of-dates"></a>Um einen Datumsbereich auszuwählen.  
@@ -75,7 +75,8 @@ Eine wichtige Funktion von der Windows Forms <xref:System.Windows.Forms.MonthCal
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [MonthCalendar-Steuerelement](monthcalendar-control-windows-forms.md)
-- [Vorgehensweise: Ändern Sie die Windows Forms MonthCalendar Darstellung des Steuerelements](how-to-change-monthcalendar-control-appearance.md)
-- [Vorgehensweise: Anzeige bestimmte Tage im mit der Windows Bold Forms-MonthCalendar-Steuerelement](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [Vorgehensweise: Anzeigen von mehr als einen Monat in der Windows Forms-MonthCalendar-Steuerelement](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Vorgehensweise: Ändern der Darstellung des MonthCalendar-Steuerelements in Windows Forms](how-to-change-monthcalendar-control-appearance.md)
+- [Vorgehensweise: Anzeigen einzelner Tage in Fettschrift mit dem MonthCalendar-Steuerelement in Windows Forms](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [Vorgehensweise: Anzeigen mehrerer Monate mit dem MonthCalendar-Steuerelement in Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)

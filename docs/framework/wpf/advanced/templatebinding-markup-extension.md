@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], TemplateBinding markup extension
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
-ms.openlocfilehash: 1e4adc4c0b5579ca6c75324f358e70edd48273cc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c004560a0b7ab367fbf4fbb48b0e8d8b63f3d8f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372229"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155999"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding-Markuperweiterung
 Verknüpft den Wert einer Eigenschaft in einer Steuerelementvorlage so, dass er der Wert einer anderen Eigenschaft des Steuerelements mit Vorlagen ist.  
@@ -34,7 +34,7 @@ Verknüpft den Wert einer Eigenschaft in einer Steuerelementvorlage so, dass er 
   
 |||  
 |-|-|  
-|`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> der Eigenschaft, der in der Setter-Syntax festgelegt wird.|  
+|`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> die Eigenschaft, die in der Setter-Syntax festgelegt wird.|  
 |`sourceProperty`|Eine weitere Abhängigkeitseigenschaft für den auf Vorlagen basierenden Typ, die durch ihren <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> angegeben wird.<br /><br /> - oder -<br /><br /> Ein Eigenschaftenname in Punktnotation, der durch einen anderen Typ als den auf Vorlagen basierenden Zieltyp definiert wird. Hierbei handelt es sich eigentlich um einen <xref:System.Windows.PropertyPath>. Finden Sie unter ["PropertyPath"-XAML-Syntax](propertypath-xaml-syntax.md).|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -46,9 +46,9 @@ Verknüpft den Wert einer Eigenschaft in einer Steuerelementvorlage so, dass er 
   
  Die Attributsyntax ist die mit dieser Markuperweiterung am häufigsten verwendete Syntax. Das Zeichenfolgentoken, das auf die `TemplateBinding`-Bezeichnerzeichenfolge folgt, wird als <xref:System.Windows.TemplateBindingExtension.Property%2A>-Wert der zugrunde liegenden <xref:System.Windows.TemplateBindingExtension>-Erweiterungsklasse zugeordnet.  
   
- Die Objektelementsyntax ist zwar möglich, wird jedoch nicht gezeigt, da sie keine realistische Anwendung hat. `TemplateBinding` wird verwendet, um Werte mithilfe von ausgewerteten Ausdrücken innerhalb von Settern zu füllen. Die Verwendung der Objektelementsyntax für `TemplateBinding` zum Füllen der `<Setter.Property>`-Eigenschaftenelementsyntax ist unnötig ausführlich.  
+ Die Objektelementsyntax ist zwar möglich, wird jedoch nicht gezeigt, da sie keine realistische Anwendung hat. `TemplateBinding` wird verwendet, um Werte innerhalb von Settern mit ausgewertet, Ausdrücke zu füllen und mithilfe von Objektelementsyntax für `TemplateBinding` zum Ausfüllen `<Setter.Property>` -Eigenschaftenelementsyntax ist unnötig ausführlich.  
   
- `TemplateBinding` kann zudem in einer ausführlichen Attributverwendung verwendet werden, die die <xref:System.Windows.TemplateBindingExtension.Property%2A>-Eigenschaft als Eigenschaft=Wert-Paar angibt:  
+ `TemplateBinding` kann auch verwendet werden, in einer ausführlichen Attributverwendung, der angibt, die <xref:System.Windows.TemplateBindingExtension.Property%2A> Eigenschaft als Eigenschaft = Wert-Paar:  
   
 ```xml  
 <object property="{TemplateBinding Property=sourceProperty}" .../>  
@@ -61,6 +61,7 @@ Verknüpft den Wert einer Eigenschaft in einer Steuerelementvorlage so, dass er 
  `TemplateBinding` ist eine Markuperweiterung. Markuperweiterungen werden in der Regel implementiert, wenn Attributwerte mit Escapezeichen versehen werden müssen, damit diese nicht als literale Werte oder als Handlernamen betrachtet werden, und diese Anforderung eher global und nicht nur durch den Einsatz von Typkonvertern für bestimmte Typen oder Eigenschaften erfüllt werden soll. Alle Markuperweiterungen in XAML verwenden die `{` und `}` Zeichen in der Attributsyntax, dies ist die Konvention mit dem ein XAML-Prozessor erkannt wird, dass das Attribut von eine Markuperweiterung verarbeitet werden muss. Weitere Informationen finden Sie unter [Markuperweiterungen und WPF-XAML](markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Style>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)

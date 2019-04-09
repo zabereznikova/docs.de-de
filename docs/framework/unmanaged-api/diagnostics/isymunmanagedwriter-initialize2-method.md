@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 71eeeefc594c450d5fb95ebae17e3c1316301278
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e645f79018d4ad41451faa07eba860e68b917539
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187017"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>ISymUnmanagedWriter::Initialize2-Methode
 Legt die Metadatenemitter-Schnittstelle mit der dieser Writer zugewiesen werden soll, und den Namen der Ausgabedatei, die Debugsymbole geschrieben werden. Mit dieser Methode können auch den endgültigen Speicherort, der die Programmdatenbankdatei (PDB) festgelegt.  
@@ -61,5 +61,6 @@ HRESULT Initialize2(
  **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [Initialize-Methode](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-initialize-method.md)

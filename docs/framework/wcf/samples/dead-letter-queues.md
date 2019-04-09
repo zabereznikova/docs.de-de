@@ -2,12 +2,12 @@
 title: Warteschlangen für unzustellbare Meldungen
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 5877d7ae0c38b82053da87907c54c70ef11bd543
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 2a6ed86b04cd110dcf71efb1a6b0560fc5d45467
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837857"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177930"
 ---
 # <a name="dead-letter-queues"></a>Warteschlangen für unzustellbare Meldungen
 Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mit Fehlern bei der Zustellung. Es basiert auf der [Binden von MSMQ transaktive](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) Beispiel. In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.
@@ -24,7 +24,7 @@ Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mi
 
  Die Warteschlange für unzustellbare Nachrichten in der `NetMsmqBinding`-Bindung wird in den folgenden Eigenschaften ausgedrückt:
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>-Eigenschaft, um die vom Client benötigte Art der Warteschlange für unzustellbare Nachrichten auszudrücken. Diese Enumeration verfügt über folgende Werte:
+-   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> die Eigenschaft, die Art der Dead Letter-Warteschlange, die vom Client benötigten auszudrücken. Diese Enumeration verfügt über folgende Werte:
 
 -   `None`: Der Client ist keine Warteschlange für unzustellbare Nachrichten erforderlich.
 
@@ -32,7 +32,7 @@ Dieses Beispiel veranschaulicht das Behandeln und Verarbeiten von Nachrichten mi
 
 -   `Custom`: Eine benutzerdefinierte Dead Letter-Warteschlange angegeben, mit der <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> Eigenschaft wird verwendet, um unzustellbare Nachrichten zu speichern. Diese Funktion ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar. Dieser Wert wird verwendet, wenn die Anwendung ihre eigene Warteschlange für unzustellbare Nachrichten verwenden muss und diese nicht mit anderen Anwendungen auf dem gleichen Computer gemeinsam verwenden kann.
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>-Eigenschaft, um die spezifische Warteschlange für unzustellbare Nachrichten anzugeben. Diese ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar.
+-   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> die Eigenschaft, die betreffende Warteschlange für die Verwendung als Warteschlange für unzustellbare Nachrichten auszudrücken. Diese ist nur unter [!INCLUDE[wv](../../../../includes/wv-md.md)] verfügbar.
 
  In diesem Beispiel sendet der Client einen Stapel von Nachrichten aus dem Bereich der Transaktion an den Dienst und legt einen willkürlichen niedrigen Wert für die Gültigkeitsdauer für diese Nachrichten fest (ca. 2 Sekunden). Der Client gibt auch eine benutzerdefinierte Warteschlange für unzustellbare Nachrichten an, in der abgelaufene Nachrichten abgelegt werden.
 
@@ -360,4 +360,3 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
-  

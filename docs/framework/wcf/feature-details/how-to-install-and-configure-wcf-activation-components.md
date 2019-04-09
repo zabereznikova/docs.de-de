@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bcd725963986d8a70584409e1ef15c42f04f0033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199218"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Vorgehensweise: Installieren und Konfigurieren von WCF-Aktivierungskomponenten
 Dieses Thema beschreibt die erforderlichen Schritte zum Einrichten der Windows Process Activation Service (auch bekannt als "WAS") auf [!INCLUDE[wv](../../../../includes/wv-md.md)] zum Hosten von Windows Communication Foundation (WCF) Dienste, die nicht über HTTP kommunizieren die Netzwerkprotokolle. In den folgenden Abschnitten werden die für diese Konfiguration erforderlichen Schritte kurz beschrieben:  
@@ -101,6 +101,7 @@ Dieses Thema beschreibt die erforderlichen Schritte zum Einrichten der Windows P
     >  Dieser Befehl ist eine einzelne Textzeile.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [TCP-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [MSMQ-Aktivierung](../../../../docs/framework/wcf/samples/msmq-activation.md)
 - [NamedPipe-Aktivierung](../../../../docs/framework/wcf/samples/namedpipe-activation.md)

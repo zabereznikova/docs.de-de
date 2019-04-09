@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 259b8e6df9b302ec50fe84a3b57d4597821bdcc8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8b2f195b2cb4c365693dc0f250a577a93cf25eee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181531"
 ---
 # <a name="large-udts"></a>Große UDTs
 Mithilfe benutzerdefinierter Typen (User-Defined Types, UDTs) können Entwickler das Skalartypsystem des Servers erweitern, indem sie CLR (Common Language Runtime)-Objekte in einer SQL Server-Datenbank speichern. UDTs können mehrere Elemente enthalten und Verhaltensweisen aufweisen, wodurch sie sich von den herkömmlichen Aliasdatentypen unterscheiden, die nur aus einem SQL Server-Systemdatentyp bestehen.  
@@ -22,7 +22,7 @@ Mithilfe benutzerdefinierter Typen (User-Defined Types, UDTs) können Entwickler
   
  Eine vollständige Dokumentation zu benutzerdefinierten Typen finden Sie in der SQL Server-Onlinedokumentation für die von Ihnen verwendete SQL Server-Version.  
   
- **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
+ **SQL Server-Onlinedokumentation**  
   
 1.  [Benutzerdefinierte CLR-Typen](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
@@ -132,8 +132,9 @@ End Using
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Abrufen von Datenbankschemainformationen](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [SQL Server-Datentypzuordnungen](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [Binäre Daten und Daten mit umfangreichen Werten in SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

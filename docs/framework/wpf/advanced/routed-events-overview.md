@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: b0db690bfd1a0cabf3060067ea23cf01acf3251d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379210"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171157"
 ---
 # <a name="routed-events-overview"></a>Übersicht über Routingereignisse
 Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Das Thema definiert die Terminologie von Routingereignissen, beschreibt, wie Routingereignisse anhand einer Struktur von Elementen weitergeleitet werden und führt Sie in das Erstellen Ihrer eigenen, benutzerdefinierten Routingereignisse ein.
@@ -195,7 +195,7 @@ Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_
 ## <a name="wpf-input-events"></a>Eingabeereignisse in WPF  
  Routingereignisse werden auf der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Plattform häufig für Eingabeereignisse verwendet. In [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] erhalten Namen von Tunnelingroutingereignissen per Konvention das Wort „Preview“ (Vorschau) als Präfix. Eingabeereignisse treten oft paarweise auf – wobei das eine ein Bubblingereignis und das andere ein Tunnelingereignis ist. Z. B. die <xref:System.Windows.ContentElement.KeyDown> Ereignis und die <xref:System.Windows.ContentElement.PreviewKeyDown> Ereignis haben die gleiche Signatur, wobei ersteres das Bubbling- und letzteres das tunneling von Eingabeereignissen. Manchmal haben Eingabeereignisse nur eine Bubblingversion oder nur eine direkte Routingversion. In der Dokumentation verweisen die Themen zu Routingereignissen auf ähnliche Routingereignisse mit alternativen Routingstrategien, falls derartige Routingereignisse vorhanden sind; Abschnitte auf den Seiten zu verwalteten Referenzen erläutern die Routingstrategien jedes Routingelements.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eingabeereignisse, die paarweise auftreten, werden implementiert, damit eine einzelne Benutzereingabeaktion, wie z.B. das Drücken einer Maustaste, beide Routingereignisse des Paars in der Sequenz auslöst. Zunächst wird das Tunnelingereignis ausgelöst und durchläuft seine Route. Anschließend wird das Bubblingereignis ausgelöst und durchläuft seine Route. Die beiden Ereignisse verwenden die gleiche Instanz der Ereignisdaten, da die <xref:System.Windows.UIElement.RaiseEvent%2A> Methodenaufruf in der implementierenden Klasse, die das Bubblingereignis auslöst überwacht für die Ereignisdaten des tunnelingereignisses und in neuen, ausgelösten Ereignis. Listener mit Handlern für das Tunnelingereignis haben als Erstes die Möglichkeit, das Routingereignis als „handled“ zu markieren (zuerst Klassenhandler, anschließend Instanzhandler). Wenn ein Element entlang der Tunnelingroute das Routingereignis als „handled“ markiert, werden die bereits behandelten Daten des Bubblingereignisses gesendet, und typische angefügte Handler für das entsprechende Bubblingeingabeereignis werden nicht aufgerufen. Nach außen wirkt dies so, als sei das behandelte Bubblingereignis nicht einmal ausgelöst worden. Dieses Behandlungsverhalten ist beim Zusammensetzen von Steuerelementen nützlich; hier möchten Sie möglicherweise, dass alle treffertestbasierten oder fokusbasierten Eingabeereignisse von Ihrem endgültigen Steuerelement gemeldet werden, und nicht von dessen einzelnen Komponenten. Das endgültige Steuerelement ist in der Zusammensetzung näher am Stamm, weshalb es das Tunnelingereignis zunächst in einer Klasse behandeln und eventuell sogar dieses Routingereignis durch ein steuerelementspezifischeres Ereignis „ersetzen“ kann – als Teil des Codes, der die Steuerelementklasse unterstützt.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Eingabeereignisse, die paarweise auftreten werden implementiert, sodass eine einzelne Benutzeraktion aus der Eingabe, z. B. eine Schaltfläche Drücken der Maustaste, beide Routingereignisse des Paars in der Sequenz auslöst wird. Zunächst wird das Tunnelingereignis ausgelöst und durchläuft seine Route. Anschließend wird das Bubblingereignis ausgelöst und durchläuft seine Route. Die beiden Ereignisse verwenden die gleiche Instanz der Ereignisdaten, da die <xref:System.Windows.UIElement.RaiseEvent%2A> Methodenaufruf in der implementierenden Klasse, die das Bubblingereignis auslöst überwacht für die Ereignisdaten des tunnelingereignisses und in neuen, ausgelösten Ereignis. Listener mit Handlern für das Tunnelingereignis haben als Erstes die Möglichkeit, das Routingereignis als „handled“ zu markieren (zuerst Klassenhandler, anschließend Instanzhandler). Wenn ein Element entlang der Tunnelingroute das Routingereignis als „handled“ markiert, werden die bereits behandelten Daten des Bubblingereignisses gesendet, und typische angefügte Handler für das entsprechende Bubblingeingabeereignis werden nicht aufgerufen. Nach außen wirkt dies so, als sei das behandelte Bubblingereignis nicht einmal ausgelöst worden. Dieses Behandlungsverhalten ist beim Zusammensetzen von Steuerelementen nützlich; hier möchten Sie möglicherweise, dass alle treffertestbasierten oder fokusbasierten Eingabeereignisse von Ihrem endgültigen Steuerelement gemeldet werden, und nicht von dessen einzelnen Komponenten. Das endgültige Steuerelement ist in der Zusammensetzung näher am Stamm, weshalb es das Tunnelingereignis zunächst in einer Klasse behandeln und eventuell sogar dieses Routingereignis durch ein steuerelementspezifischeres Ereignis „ersetzen“ kann – als Teil des Codes, der die Steuerelementklasse unterstützt.  
   
  Das folgende Beispiel für ein Eingabeereignis veranschaulicht das Verarbeiten von Eingabeereignissen. Im folgenden Baumdiagramm ist `leaf element #2` sowohl die Quelle eines `PreviewMouseDown`- als auch eines `MouseDown`-Ereignisses.  
   
@@ -204,17 +204,17 @@ Bubbling und Tunneling eines Eingabeereignisses
   
  Ein Ereignis wird in folgender Reihenfolge verarbeitet:  
   
-1.  `PreviewMouseDown` (Tunnel) auf dem Stammelement (root element)  
+1.  `PreviewMouseDown` (tunnel) auf dem Stammelement.  
   
-2.  `PreviewMouseDown` (Tunnel) auf dem ersten Zwischenelement (intermediate element #1)  
+2.  `PreviewMouseDown` (tunnel) auf dem intermediate Element #1.  
   
-3.  `PreviewMouseDown` (Tunnel) auf dem zweiten Zwischenelement (intermediate element #2)  
+3.  `PreviewMouseDown` (tunnel) auf dem Source-Element #2.  
   
-4.  `MouseDown` (Bubble) auf dem zweiten Quellelement (source element #2)  
+4.  `MouseDown` (bubble) auf dem Source-Element #2.  
   
-5.  `MouseDown` (Bubble) auf dem ersten Zwischenelement (intermediate element #1)  
+5.  `MouseDown` (bubble) auf dem intermediate Element #1.  
   
-6.  `MouseDown` (Bubble) auf dem Stammelement (root element)  
+6.  `MouseDown` (bubble) auf dem Stammelement.  
   
  Ein Delegat eines Routingereignishandlers enthält Verweise auf zwei Objekte: auf das Objekt, das das Ereignis ausgelöst hat und das Objekt, auf dem der Handler aufgerufen wurde. Das Objekt, auf dem der Handler aufgerufen wurde, ist das Objekt, das vom `sender`-Parameter gemeldet wurde. Das Objekt, in dem das Ereignis erstmals ausgelöst, wird gemeldet, durch die <xref:System.Windows.RoutedEventArgs.Source%2A> Eigenschaft in den Ereignisdaten. Ein Ereignis dennoch ausgelöst und verarbeitet werden kann durch das gleiche Objekt in diesem Fall `sender` und <xref:System.Windows.RoutedEventArgs.Source%2A> identisch sind (Dies ist der Fall mit Schritt 3 und 4, die Verarbeitung in dieser Liste mit Beispielen).  
   
@@ -245,6 +245,7 @@ Bubbling und Tunneling eines Eingabeereignisses
  In diesem Thema werden hauptsächlich die grundlegenden Konzepte von Routingereignissen erläutert; zudem bietet er Ihnen eine Orientierung, wann Sie auf Routingereignisse reagieren sollten, die bereits in den verschieden Basiselementen und -steuerelementen vorhanden sind. Allerdings können Sie eigene Routingereignis für Ihre benutzerdefinierte Klasse mit den notwendigen Hilfsmitteln, wie z. B. spezialisierte Ereignisdatenklassen und Delegaten, erstellen. Eigentümer des Routingereignisses kann jede Klasse sein, aber die Routingereignisse müssen ausgelöst und behandelt, indem <xref:System.Windows.UIElement> oder <xref:System.Windows.ContentElement> abgeleiteten Klassen, damit Sie nützlich ist. Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Erstellen eines benutzerdefinierten Routingereignisses](how-to-create-a-custom-routed-event.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.EventManager>
 - <xref:System.Windows.RoutedEvent>
 - <xref:System.Windows.RoutedEventArgs>

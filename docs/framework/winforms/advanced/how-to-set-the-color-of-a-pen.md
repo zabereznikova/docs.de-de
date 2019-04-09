@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Legen Sie die Farbe eines Stiftes'
+title: 'Vorgehensweise: Festlegen der Farbe eines Stiftes'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - pens [Windows Forms], setting color
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
-ms.openlocfilehash: a2645112950be88cbc569e0be7889c0f1019223d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213414"
 ---
-# <a name="how-to-set-the-color-of-a-pen"></a>Vorgehensweise: Legen Sie die Farbe eines Stiftes
+# <a name="how-to-set-the-color-of-a-pen"></a>Vorgehensweise: Festlegen der Farbe eines Stiftes
 In diesem Beispiel ändert sich die Farbe einer bereits vorhandenen <xref:System.Drawing.Pen> Objekt  
   
 ## <a name="example"></a>Beispiel  
@@ -33,8 +33,9 @@ In diesem Beispiel ändert sich die Farbe einer bereits vorhandenen <xref:System
  Rufen Sie <xref:System.Drawing.Pen.Dispose%2A> für Objekte, die Systemressourcen (z. B. <xref:System.Drawing.Pen> Objekte) nach deren Verwendung.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.Pen>
-- [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)
+- [Erste Schritte mit der Grafikprogrammierung](getting-started-with-graphics-programming.md)
 - [Vorgehensweise: Erstellen eines Stifts](how-to-create-a-pen.md)
-- [Verwenden eines Stifts zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)
+- [Verwenden eines Stiftes zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)
 - [Stifte, Linien und Rechtecke in GDI+](pens-lines-and-rectangles-in-gdi.md)

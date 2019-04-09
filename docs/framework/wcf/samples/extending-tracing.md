@@ -2,12 +2,12 @@
 title: Erweitern der Ablaufverfolgung
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: ff110a4b293a987ac07c29e3e4c1d52fe2d08294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 829ebd2f935135b8765ccd48532d357bf95f805a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653895"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208240"
 ---
 # <a name="extending-tracing"></a>Erweitern der Ablaufverfolgung
 In diesem Beispiel wird veranschaulicht, wie die Ablaufverfolgungsfunktion von Windows Communication Foundation (WCF) zu erweitern, indem Sie das Schreiben von benutzerdefinierten aktivitätsablaufverfolgungen im Client- und Dienstcode. Dies ermöglicht es dem Benutzer, Ablaufverfolgungsaktivitäten zu erstellen und Ablaufverfolgungen in logischen Arbeitseinheiten zu gruppieren. Es ist auch möglich, Aktivitäten über Übertragungen (innerhalb desselben Endpunkts) und Weitergabe (über verschiedene Endpunkte) zu korrelieren. In diesem Beispiel wird Ablaufverfolgung sowohl für den Client als auch den Dienst aktiviert. Weitere Informationen zum Aktivieren der Ablaufverfolgung in Client und Dienst-Konfigurationsdateien finden Sie unter [Ablaufverfolgung und Nachrichtenprotokollierung](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
@@ -97,4 +97,5 @@ In diesem Beispiel wird veranschaulicht, wie die Ablaufverfolgungsfunktion von W
 3.  Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0d3da389-6b7b-40f6-a877-fac546d6019c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 07932a12916138dd7cbee2576e4fc747898b8063
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd322d25d91bb277a4c817594c968c28a6d61d68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610842"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136135"
 ---
 # <a name="exception-thrownv1-etw-event"></a>ExceptionThrown_V1-ETW-Ereignis
 Dieses Ereignis erfasst Informationen über die ausgelösten Ausnahmen.  
@@ -41,4 +41,5 @@ Dieses Ereignis erfasst Informationen über die ausgelösten Ausnahmen.
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)

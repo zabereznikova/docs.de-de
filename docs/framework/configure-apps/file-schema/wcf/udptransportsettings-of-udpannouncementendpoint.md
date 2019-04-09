@@ -2,12 +2,12 @@
 title: <udpTransportSettings> von <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-ms.openlocfilehash: 1e7cdff1b26afcbea94424ecad5d8d0d9438b54d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 901b7e1429c3afc19e9b609026dc632730c35024
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148329"
 ---
 # <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udpTransportSettings> of \<udpAnnouncementEndpoint>
 Dieses Konfigurationselement macht UDP-transporteinstellungen für [ \<UdpAnnouncementEndpoint >](udpannouncementendpoint.md).  
@@ -47,7 +47,7 @@ Dieses Konfigurationselement macht UDP-transporteinstellungen für [ \<UdpAnnoun
 |---------------|-----------------|  
 |duplicateMessageHistoryLength|Eine ganze Zahl, die die maximale Anzahl an Nachrichtenhashes angibt, die vom Transport zum Identifizieren von doppelten Nachrichten verwendet werden.  Die Erkennung doppelter Nachrichten wird auf TransportManager-Ebene ausgeführt. Mit dem Wert 0 wird die Erkennung doppelter Nachrichten deaktiviert.<br /><br /> Dieses Attribut ermöglicht Systemadministratoren und Entwicklern, Algorithmen zur Erkennung doppelter Nachrichten zu deaktivieren. Dies kann nützlich sein, wenn Sie einen eigenen Algorithmus zur Erkennung doppelter Nachrichten implementieren möchten.<br /><br /> Der Standard ist 4112.|  
 |maxBufferPoolSize|Eine ganze Zahl, die die maximale Größe von Pufferpools angibt, die vom Transport verwendet werden.|  
-|maxMulticastRetransmitCount|Eine ganze Zahl, die die maximale Anzahl angibt, die eine Nachricht (zusätzlich zum ersten Senden) neu gesendet werden soll.<br /><br /> Der Standard ist 2.|  
+|maxMulticastRetransmitCount|Eine ganze Zahl, die die maximale Anzahl angibt, die eine Nachricht (zusätzlich zum ersten Senden) neu gesendet werden soll.<br /><br /> Der Standardwert ist&amp;#160;2.|  
 |maxPendingMessageCount|Eine ganze Zahl, die die maximale Anzahl an Nachrichten angibt, die empfangen, jedoch noch nicht aus dem InputQueue-Element für eine einzelne Channelinstanz entfernt wurden.  Wenn das InputQueue-Element das Limit für die Anzahl ausstehender Nachrichten erreicht hat, wird die Nachricht verworfen.<br /><br /> Der Standard ist 32.|  
 |maxReceivedMessageSize|Eine ganze Zahl, die die maximale Größe einer Nachricht angibt, die von der Bindung verarbeitet werden kann.<br /><br /> Der Standardwert ist 65507.|  
 |maxUnicastRetransmitCount|Eine ganze Zahl, die die maximale Anzahl angibt, die eine Nachricht (zusätzlich zum ersten Senden) neu gesendet werden soll.  Wenn die Nachricht an eine Unicastadresse gesendet und eine Antwortnachricht mit einem entsprechenden RelatesTo-Header empfangen wird, dann wird die Neuübertragung möglicherweise frühzeitig beendet (bevor die Nachricht die konfigurierte Anzahl an Malen neu gesendet wurde).<br /><br /> Der Standardwert ist 1.|  
@@ -65,4 +65,5 @@ Dieses Konfigurationselement macht UDP-transporteinstellungen für [ \<UdpAnnoun
 |[\<udpAnnouncementEndpoint>](udpannouncementendpoint.md)|Ein Standardendpunkt mit festem Ankündigungsvertrag und fester UDP-Transportbindung.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Discovery.UdpTransportSettings>

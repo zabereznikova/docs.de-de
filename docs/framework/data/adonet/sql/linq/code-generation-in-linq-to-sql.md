@@ -2,12 +2,12 @@
 title: Codegenerierung in LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 01ba89f2161430b046eb6f3151bc33dbd659b0d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 48035b0f7b4a8c9a37fade5dfc2e2c45ea779dba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174888"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>Codegenerierung in LINQ to SQL
 Sie können Code zur Darstellung einer Datenbank generieren, indem Sie entweder den [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] oder das SQLMetal-Befehlszeilentool verwenden. Die End-to-End-Codegenerierung findet grundsätzlich in drei Phasen statt:  
@@ -270,8 +270,9 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [External Mapping (Externe Zuordnung)](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [Vorgehensweise: Generieren des Objektmodells als externe Datei](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
-- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Referenz](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

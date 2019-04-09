@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Verwenden von Svcutil.exe zum Herunterladen von Metadatendokumenten'
+title: 'Vorgehensweise: Verwenden von „Svcutil.exe“ zum Herunterladen von Metadatendokumenten'
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: dc3a1d402a9f6ffb69c1f692800698609f9fa84b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 01a27c21948e3030059ddd1416d8c7727ac6435c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194460"
 ---
-# <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Vorgehensweise: Verwenden von Svcutil.exe zum Herunterladen von Metadatendokumenten
+# <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Vorgehensweise: Verwenden von „Svcutil.exe“ zum Herunterladen von Metadatendokumenten
 Svcutil.exe kann verwendet werden, um Metadaten aus ausgeführten Diensten herunterzuladen und die Metadaten in lokalen Dateien zu speichern. Bei HTTP und HTTPS-URL-Schemas versucht Svcutil.exe zum Abrufen von Metadaten mit WS-MetadataExchange und [XML-Webdienstsuche](https://go.microsoft.com/fwlink/?LinkId=94950). Bei allen anderen URL-Schemas verwendet Svcutil.exe nur WS-MetadataExchange.  
   
  Standardmäßig verwendet Svcutil.exe die in der <xref:System.ServiceModel.Description.MetadataExchangeBindings>-Klasse definierten Bindungen. Wenn Sie die für WS-MetadataExchange verwendete Bindung konfigurieren möchten, müssen Sie einen Clientendpunkt in der Konfigurationsdatei für „Svcutil.exe“ (svcutil.exe.config) definieren, der den `IMetadataExchange`-Vertrag verwendet und über dasselbe URI-Schema der Metadaten-Endpunktadresse verfügt.  
@@ -47,4 +47,5 @@ svcutil /t:metadata http://service/metadataEndpoint
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

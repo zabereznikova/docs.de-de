@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Deaktivieren von Sicherheitssitzungen auf einer WSFederationHttpBinding'
+title: 'Vorgehensweise: Deaktivieren sicherer Sitzungen auf einer WSFederationHttpBinding'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
-ms.openlocfilehash: 8c03bb9601ecbaaf8694d1df26ba43e34434ac47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 809626d0d6d69d22f09b0f10210cfda7a033ac3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720027"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211802"
 ---
-# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Vorgehensweise: Deaktivieren von Sicherheitssitzungen auf einer WSFederationHttpBinding
+# <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Vorgehensweise: Deaktivieren sicherer Sitzungen auf einer WSFederationHttpBinding
 Für einige Dienste sind möglicherweise verbundene Anmeldeinformationen notwendig, sichere Sitzungen werden jedoch nicht unterstützt. In diesem Fall müssen Sie die Funktion für sichere Sitzungen deaktivieren. Im Gegensatz zu <xref:System.ServiceModel.WSHttpBinding> bietet die <xref:System.ServiceModel.WSFederationHttpBinding>-Klasse keinen Weg, um sichere Sitzungen bei der Kommunikation mit einem Dienst zu deaktivieren. Sie müssen vielmehr eine benutzerdefinierte Bindung erstellen, die die Einstellungen der sicheren Sitzung durch einen Bootstrap ersetzen.  
   
  In diesem Thema wird veranschaulicht, wie Sie das Bindungselement, das sich in einer <xref:System.ServiceModel.WSFederationHttpBinding> befindet, ändern können, um eine benutzerdefinierte Bindung zu erstellen. Das Ergebnis entspricht <xref:System.ServiceModel.WSFederationHttpBinding> mit Ausnahme der Tatsache, dass keine sicheren Sitzungen verwendet werden.  
@@ -43,4 +43,5 @@ Für einige Dienste sind möglicherweise verbundene Anmeldeinformationen notwend
 -   Um das Codebeispiel zu kompilieren, erstellen Sie ein Projekt, das auf die System.ServiceModel.dll-Assembly verweist.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

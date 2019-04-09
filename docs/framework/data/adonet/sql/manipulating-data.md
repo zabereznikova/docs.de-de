@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: e41d2146c07655548ad36de8ffc7041ed63ee5be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb71fe7abb5f70022e39808369779274eda2a7f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213948"
 ---
 # <a name="manipulating-data"></a>Bearbeiten von Daten
 Vor der Einführung von MARS (Multiple Active Result Set) mussten Entwickler zum Lösen bestimmter Szenarien entweder mehrere Verbindungen oder serverseitige Cursor verwenden. Darüber hinaus, wenn mehrere Verbindungen in einem Transaktionskontext verwendet wurden, gebundene Verbindungen (mit **Sp_getbindtoken** und **Sp_bindsession**) waren erforderlich. In den folgenden Szenarien wird veranschaulicht, wie eine Verbindung mit aktivierter MARS-Funktion anstelle mehrerer Verbindungen verwendet werden kann.  
@@ -403,5 +403,6 @@ private static string GetConnectionString()
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Multiple Active Result Sets (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

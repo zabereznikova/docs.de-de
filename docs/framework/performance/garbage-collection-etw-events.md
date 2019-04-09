@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 95762cbda4a1a251dd64fd33b2815d474f1fe2b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149733"
 ---
 # <a name="garbage-collection-etw-events"></a>Garbage Collection-ETW-Ereignisse
 <a name="top"></a> Diese Ereignisse sammeln Informationen, die die Garbage Collection betreffen. Sie helfen beim Analysieren und Debuggen, einschließlich der Ermittlung, wie oft die Garbage Collection durchgeführt wurde, wie viel Arbeitsspeicher während der Garbage Collection freigegeben wurde usw.  
@@ -58,7 +58,7 @@ ms.locfileid: "54685216"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`GCStart_V1`|1|Eine Garbage Collection gestartet wurde.|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "54685216"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`GCEnd_V1`|2|Die Garbage Collection beendet wurde.|  
   
@@ -108,7 +108,7 @@ ms.locfileid: "54685216"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Beschreibung|  
+|event|Ereignis-ID|Beschreibung|  
 |-----------|--------------|-----------------|  
 |`GCHeapStats_V1`|4|Zeigt die Heapstatistik am Ende jeder Garbage Collection an.|  
   
@@ -143,7 +143,7 @@ ms.locfileid: "54685216"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`GCCreateSegment_V1`|5|Neues Garbage Collection-Segment wurde erstellt. Darüber hinaus wird dieses Ereignis für jedes vorhandene Segment ausgelöst, wenn die Ablaufverfolgung für einen Prozess aktiviert ist, der bereits ausgeführt wird.|  
   
@@ -170,7 +170,7 @@ ms.locfileid: "54685216"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`GCFreeSegment_V1`|6|Ein Garbage Collection-Segment freigegeben wurde.|  
   
@@ -193,7 +193,7 @@ ms.locfileid: "54685216"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`GCRestartEEBegin_V1`|7|Die Wiederaufnahme der Common Language Runtime-Unterbrechung begonnen hat.|  
   
@@ -211,7 +211,7 @@ ms.locfileid: "54685216"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`GCRestartEEEnd_V1`|3|Die Wiederaufnahme der Common Language Runtime-Unterbrechung beendet wurde.|  
   
@@ -229,7 +229,7 @@ ms.locfileid: "54685216"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`GCSuspendEE_V1`|9|Die Unterbrechung der Ausführungs-Engine für die Garbage Collection gestartet wurde.|  
   
@@ -253,7 +253,7 @@ ms.locfileid: "54685216"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an:  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`GCSuspendEEEnd_V1`|8|Die Unterbrechung der Ausführungs-Engine für die Garbage Collection beendet wurde.|  
   
@@ -271,7 +271,7 @@ ms.locfileid: "54685216"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`GCAllocationTick_V2`|10|Jedes Mal werden ungefähr 100 KB zugeordnet.|  
   
@@ -299,7 +299,7 @@ ms.locfileid: "54685216"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`GCFinalizersBegin_V1`|14|Die Ausführung von Finalizern gestartet wird.|  
   
@@ -317,7 +317,7 @@ ms.locfileid: "54685216"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`GCFinalizersEnd_V1`|13|Die Ausführung von Finalizern beendet wird.|  
   
@@ -341,7 +341,7 @@ ms.locfileid: "54685216"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`GCCreateConcurrentThread_V1`|11|Thread für parallele Garbage Collection erstellt wurde.|  
   
@@ -360,11 +360,12 @@ ms.locfileid: "54685216"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`GCTerminateConcurrentThread_V1`|12|Thread für parallele Garbage Collection beendet wurde.|  
   
  Keine Ereignisdaten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)

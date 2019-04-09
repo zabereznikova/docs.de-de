@@ -1,13 +1,13 @@
 ---
-title: <certificate>-Element
+title: <certificate> Element
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
-ms.openlocfilehash: f0cec2ad0e7747ddbc0ef566b4e8cbc7f8795b02
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: eea8130911ca3780a6e4e753c17877e58c50b139
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675386"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164267"
 ---
 # <a name="certificate-element"></a>\<Zertifikat >-Element
 Gibt ein X.509-Zertifikat an, das zum Signieren und Verschlüsseln von Nachrichten für Peer-to-Peer-Clients verwendet wird.  
@@ -75,12 +75,13 @@ Gibt ein X.509-Zertifikat an, das zum Signieren und Verschlüsseln von Nachricht
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement>
 - <xref:System.ServiceModel.Configuration.PeerCredentialElement.Certificate%2A>
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateElement>
 - <xref:System.ServiceModel.Security.PeerCredential.Certificate%2A>
-- [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Verwenden von Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Peer-to-Peer-Netzwerke](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
 - [Peerkanal-Nachrichtenauthentifizierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
-- [Benutzerdefinierter Peerkanal-Authentifizierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
+- [Benutzerdefinierte Peerkanal-Authentifizierung](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
 - [Sichern von Peerkanalanwendungen](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

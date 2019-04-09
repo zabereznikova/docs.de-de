@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - federation [WCF], and trust
 ms.assetid: 4bdec4f2-f8a2-4512-bdcf-14ef54b5877a
-ms.openlocfilehash: 1f0872c9aea11a54860fe3075d2756691590e0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e1529db6cc52b6b8cc8881d2b2a35a754b4b311
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532421"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225338"
 ---
 # <a name="federation-and-trust"></a>Verbund und Vertrauenswürdigkeit
 In diesem Thema werden verschiedene Aspekte im Zusammenhang mit verbundanwendungen, Vertrauensgrenzen und Konfiguration und Verwendung von ausgestellten Token in der Windows Communication Foundation (WCF) behandelt.  
@@ -38,7 +38,8 @@ In diesem Thema werden verschiedene Aspekte im Zusammenhang mit verbundanwendung
  Ob ein ausgestelltes Token in einer Nachricht, die von einem Client an einen Verbundendpunkt gesendet wird, serialisiert wird, hängt von der Einstellung der Eigenschaft <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InclusionMode%2A> der Klasse <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> ab. Diese Eigenschaft kann auf einen der <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>-Enumerationwerte festgelegt werden, ist aber in den meisten Verbundszenarien nutzlos. Die Werte `SecurityTokenInclusionMode.Never` und `SecurityTokenInclusionMode.AlwaysToInitiator` sorgen dafür, dass der Client einen Bezug an das Token sendet, das der Sicherheitstokendienst der vertrauenden Seite ausgestellt hat. Wenn die vertrauende Seite keine Kopie des ausgestellten Tokens besitzt, schlägt die Authentifizierung fehl, da der Tokenverweis nicht aufgelöst werden kann. WCF behandelt `SecurityTokenInclusionMode.Once` als gleichwertig zu `SecurityTokenInclusionMode.AlwaysToRecipient`.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Security.Tokens.SecurityTokenInclusionMode>
 - [Vorgehensweise: Erstellen eines Verbundclients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Vorgehensweise: Konfigurieren von Anmeldeinformationen für einen Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Vorgehensweise: Erstellen einer WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)

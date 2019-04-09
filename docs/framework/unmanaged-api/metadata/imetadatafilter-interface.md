@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e1975a5063217299ddbcdce6f625d5a1285d5b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4196ff2cb2d4ebc401076f603a8a7fdc9b9c76ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642554"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143792"
 ---
 # <a name="imetadatafilter-interface"></a>IMetaDataFilter-Schnittstelle
 Stellt Methoden zum Markieren und Filtern von Metadatentoken bereit, um wiederkehrende Aktionen zu vermeiden, die bereits ausgeführt wurden.  
@@ -44,4 +44,5 @@ Stellt Methoden zum Markieren und Filtern von Metadatentoken bereit, um wiederke
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

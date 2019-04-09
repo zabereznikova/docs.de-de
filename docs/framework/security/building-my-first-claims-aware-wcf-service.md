@@ -3,12 +3,12 @@ title: Erstellen meines ersten Ansprüche unterstützenden WCF-Diensts
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: c982fae4fdbdd4963c92b17b609d517056c34b95
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 82ce5441463989507872750eb025899b8f80adee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144461"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Erstellen meines ersten Ansprüche unterstützenden WCF-Diensts
 ## <a name="applies-to"></a>Gilt für  
@@ -41,4 +41,5 @@ ms.locfileid: "58825767"
  Zum Erstellen Ihres ersten Ansprüche unterstützenden WCF-Diensts, die mithilfe von WIF finden Sie unter [so wird's gemacht: Aktivieren von WIF für eine WCF-Webdienstanwendung](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erste Schritte mit WIF](../../../docs/framework/security/getting-started-with-wif.md)

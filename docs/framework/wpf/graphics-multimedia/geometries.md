@@ -9,22 +9,23 @@ helpviewer_keywords:
 - clipping regions defined [WPF]
 - hit-test objects [WPF]
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
-ms.openlocfilehash: 8683b3ba55f3b9d5425c865af7e18127b55be02d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 57e32d3e56c3f319f7ee8aa58020d37e46a6454d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363653"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140217"
 ---
 # <a name="geometries"></a>Geometrien
 <xref:System.Windows.Media.Geometry> ist eine vielseitige Klasse, die zum Rendern verwendet [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] Grafiken, Treffertests für Objekte, und definieren Ausschneidebereiche  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Pfadmarkupsyntax](path-markup-syntax.md)  
- [Übersicht über Geometrien](geometry-overview.md)  
- [Themen zu Vorgehensweisen](geometries-how-to-topics.md)  
+ [Übersicht über die Geometrie](geometry-overview.md)  
+ [Gewusst wie-Themen](geometries-how-to-topics.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Brushes>
 - <xref:System.Windows.Shapes.Shape>
 - [2D-Grafiken und Bildverarbeitung](../advanced/optimizing-performance-2d-graphics-and-imaging.md)

@@ -2,12 +2,12 @@
 title: <transport> von <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: b8f84d0ed6c6248e72e3353675c9da96a0678ae6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1540b53d4af76141c1daee60a6bddbbecd9d6da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273305"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153867"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<Transport > von \<ws2007HttpBinding >
 Definiert die Authentifizierungseinstellungen für den HTTP-Transport.  
@@ -39,13 +39,13 @@ Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
 |---------------|-----------------|  
 |`clientCredentialType`|Gibt die zum Authentifizieren des Clients beim Dienst verwendeten Anmeldeinformationen an. Dieses Attribut ist vom Typ <xref:System.ServiceModel.HttpClientCredentialType>.|  
 |`proxyCredentialType`|Gibt die Anmeldeinformationen an, die verwendet werden, um den Client bei einem Domänenproxy zu authentifizieren. Dieses Attribut ist vom Typ <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|`realm`|Der Authentifizierungsbereich für die Digest- oder Basisauthentifizierung. Der Standardwert ist eine leere Zeichenfolge.<br /><br /> Ein Authentifizierungsbereich gibt mindestens den Namen des Hosts an, der die Authentifizierung durchführt. Er kann auch eine Auflistung von Benutzern angeben, die Zugriff haben. Ein Benutzer kann den Authentifizierungsbereich abfragen, um zu bestimmen, welche der verschiedenen möglichen Benutzernamen und Kennwörter verwendet werden können.|  
+|`realm`|Der Authentifizierungsbereich für die Hashwert- oder Basisauthentifizierung. Der Standardwert ist eine leere Zeichenfolge.<br /><br /> Ein Authentifizierungsbereich gibt mindestens den Namen des Hosts an, der die Authentifizierung durchführt. Er kann auch eine Auflistung von Benutzern angeben, die Zugriff haben. Ein Benutzer kann den Authentifizierungsbereich abfragen, um zu bestimmen, welche der verschiedenen möglichen Benutzernamen und Kennwörter verwendet werden können.|  
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType-Attribut  
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Keine|Die Sicherheitsfunktionen sind deaktiviert.|  
+|Keiner|Die Sicherheitsfunktionen sind deaktiviert.|  
 |Standard|Verwendet die Standardauthentifizierung.|  
 |Digest|Verwendet Digestauthentifizierung.|  
 |Ntlm|Verwendet als Ausweichlösung die NTLM-Authentifizierung für eine Windows-Domäne.|  
@@ -56,7 +56,7 @@ Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Keine|Die Sicherheitsfunktionen sind deaktiviert.|  
+|Keiner|Die Sicherheitsfunktionen sind deaktiviert.|  
 |Standard|Verwendet die Standardauthentifizierung.|  
 |Digest|Verwendet Digestauthentifizierung.|  
 |Ntlm|Verwendet als Ausweichlösung NTLM für eine Windows-Domäne.|  
@@ -64,7 +64,7 @@ Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
 |Zertifikat|Verwendet X.509-Zertifikate zum Authentifizieren des Clients.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -73,6 +73,7 @@ Definiert die Authentifizierungseinstellungen für den HTTP-Transport.
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Gibt die Sicherheitsfunktionen von der [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) Element.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.HttpTransportSecurity>
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>

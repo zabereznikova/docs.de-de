@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-ms.openlocfilehash: e60df2b576980ecd1ff92af78cef36f025b71417
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: e7e7ba379f6f92f3ba8fba55f22c8eaec81ab1cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903794"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133886"
 ---
 # <a name="performance-counters-in-adonet"></a>Leistungsindikatoren in ADO.NET
 Neu in ADO.NET 2.0 ist die erweiterte Unterstützung für Leistungsindikatoren. Dazu gehört auch die Unterstützung für <xref:System.Data.SqlClient> und <xref:System.Data.OracleClient>. Die in früheren ADO.NET-Versionen verfügbaren <xref:System.Data.SqlClient>-Leistungsindikatoren wurden durch neue Leistungsindikatoren ersetzt, die in diesem Thema beschrieben werden. Mit den ADO.NET-Leistungsindikatoren können Sie den Status Ihrer Anwendung und die Verbindungsressourcen überwachen, die die Anwendung verwendet. Für die Überwachung der Leistungsindikatoren kann der Windows-Leistungsmonitor verwendet werden, und die <xref:System.Diagnostics.PerformanceCounter>-Klasse im <xref:System.Diagnostics>-Namespace ermöglicht den programmgesteuerten Zugriff auf diese Indikatoren.  
@@ -55,7 +55,7 @@ Neu in ADO.NET 2.0 ist die erweiterte Unterstützung für Leistungsindikatoren.
  Die folgende Konsolenanwendung zeigt, wie Sie in Ihrer Anwendung Leistungsindikatorwerte abrufen können. Die Verbindungen müssen offen und aktiv sein, damit Informationen für alle ADO.NET-Leistungsindikatoren zurückgegeben werden.  
   
 > [!NOTE]
->  Dieses Beispiel verwendet das Beispiel **AdventureWorks** Datenbank in SQL Server enthalten. In der Verbindungszeichenfolge im Beispielcode wird davon ausgegangen, dass die Datenbank auf dem lokalen Computer installiert und mit dem Instanznamen <legacyBold>SqlExpress</legacyBold> verfügbar ist. Außerdem wird davon ausgegangen, dass Sie SQL Server-Anmeldungen erstellt haben, die mit denen in den Verbindungszeichenfolgen übereinstimmen. Falls Ihr Server mit den Standardsicherheitseinstellungen konfiguriert ist, die nur die Windows-Authentifizierung zulassen, müssen Sie die SQL Server-Anmeldungen u. U. erst aktivieren. Passen Sie die Verbindungszeichenfolgen an Ihre Umgebung an.  
+>  Dieses Beispiel verwendet das Beispiel **AdventureWorks** Datenbank in SQL Server enthalten. In der Verbindungszeichenfolge im Beispielcode wird davon ausgegangen, dass die Datenbank auf dem lokalen Computer installiert und mit dem Instanznamen SqlExpress verfügbar ist. Außerdem wird davon ausgegangen, dass Sie SQL Server-Anmeldungen erstellt haben, die mit denen in den Verbindungszeichenfolgen übereinstimmen. Falls Ihr Server mit den Standardsicherheitseinstellungen konfiguriert ist, die nur die Windows-Authentifizierung zulassen, müssen Sie die SQL Server-Anmeldungen u. U. erst aktivieren. Passen Sie die Verbindungszeichenfolgen an Ihre Umgebung an.  
   
 ### <a name="example"></a>Beispiel  
   
@@ -395,6 +395,7 @@ class Program
 ```  
 
 ## <a name="see-also"></a>Siehe auch
+
 - [Aufbauen der Verbindung zu einer Datenquelle](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [OLE DB-, ODBC- und Oracle-Verbindungspooling](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
 - [Leistungsindikatoren für ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/fxk122b4(v=vs.100))

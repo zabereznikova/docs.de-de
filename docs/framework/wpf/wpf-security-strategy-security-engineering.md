@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: bddb9bb2cf9a601ce7796d17483c1ab8fa6d7aa1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: c840912f755e1d6bf76720ad0178057c50e4cfd9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378958"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186145"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF-Sicherheitsstrategie – Sicherheitsentwicklung
 Trustworthy Computing ist eine Microsoft-Initiative, die sicherstellen soll, dass sicherer Code entwickelt wird. Ein Schlüsselelement der Trustworthy Computing-Initiative ist der [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. Der [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] ist ein Entwicklungsverfahren, das in Verbindung mit standardmäßigen Entwicklungsprozessen verwendet wird, um die Erstellung von sicherem Code zu erleichtern. Der [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] besteht aus zehn Phasen, die bewährte Methoden mit Formalisierung, Messbarkeit und zusätzlichen Strukturen kombinieren, darunter:  
@@ -75,7 +75,7 @@ Trustworthy Computing ist eine Microsoft-Initiative, die sicherstellen soll, das
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>Testverfahren  
- [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] verwendet eine Reihe von Techniken zum Testen der Sicherheit, darunter:  
+ [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] verwendet eine Vielzahl von sicherheitsanforderungen Testverfahren, die enthalten:  
   
 -   **Whiteboxtests**: Tester Anzeigen von Quellcode und entwickeln dann exploittests  
   
@@ -90,6 +90,7 @@ Trustworthy Computing ist eine Microsoft-Initiative, die sicherstellen soll, das
  Für [!INCLUDE[TLA#tla_xbap#plural](../../../includes/tlasharptla-xbapsharpplural-md.md)], [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] erstellt eine Sicherheitssandbox mithilfe von .NET Framework-Unterstützung für das kennzeichnen und Nachverfolgen von sicherheitskritischem Code, der Berechtigungen heraufstuft (siehe **sicherheitsrelevante Methode** in [WPF -Sicherheitsstrategie – Plattformsicherheit](wpf-security-strategy-platform-security.md)). Angesichts der hohen Qualitätsanforderungen bei sicherheitskritischem Code wird derartiger Code durch eine zusätzliche Ebene der Quellcodeverwaltung und Sicherheitsüberwachung geschützt. Annähernd 5 % bis 10 % von [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] bestehen aus sicherheitskritischem Code, der von einem dedizierten Team überprüft wird. Der Quellcode und der Eincheckvorgang werden verwaltet, indem sicherheitskritischer Code nachverfolgt und jede kritischen Entität (d. h. eine Methode, die kritischen Code enthält) ihrem abgezeichneten Zustand zugeordnet wird. Der abgezeichnete Zustand schließt die Namen eines oder mehrerer Prüfer ein. Bei jedem täglichen Build von [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] wird der kritische Code mit dem in vorhergehenden Builds verglichen, um nicht genehmigte Änderungen aufzuspüren. Wenn ein Programmierer kritischen Code ohne Genehmigung des Prüferteams ändert, wird der betreffende Code erkannt und sofort ersetzt. Dieses Vorgehen ermöglicht die Anwendung und Aufrechterhaltung eines sehr hohen Maßes an Genauigkeit bei [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]-Sandboxcode.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sicherheit](security-wpf.md)
 - [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](wpf-partial-trust-security.md)
 - [WPF-Sicherheitsstrategie – Plattformsicherheit](wpf-security-strategy-platform-security.md)

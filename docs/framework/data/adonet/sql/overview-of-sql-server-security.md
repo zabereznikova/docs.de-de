@@ -2,12 +2,12 @@
 title: Übersicht über die SQL Server-Sicherheit
 ms.date: 03/30/2017
 ms.assetid: ae66dd75-5c16-4cc0-9e12-774dd26d3fb9
-ms.openlocfilehash: 8000e88de70706c7bb8ec39a05beea4605208b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de0c79a95a786f33b05c88ce4ed298837f2a6923
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148589"
 ---
 # <a name="overview-of-sql-server-security"></a>Übersicht über die SQL Server-Sicherheit
 Sicherheitsbedrohungen können Sie am besten mit einer tiefgestaffelten Verteidigungsstrategie mit sich überschneidenden Sicherheitsebenen begegnen. SQL Server bietet eine Sicherheitsarchitektur, die es Datenbankadministratoren und Entwicklern erlaubt, sichere Datenbankanwendungen zu erstellen und ihre Anwendungen vor Sicherheitsrisiken zu schützen. Jede neue SQL Server-Version ist durch die Einführung neuer Funktionen und Funktionalität besser als die vorherige Version. Aber Sicherheit gibt es nicht einfach ab Fabrik. Jede Anwendung hat ihre eigenen Sicherheitsanforderungen. Entwickler müssen ein klares Bild davon haben, welche Kombination aus Funktionen und Funktionalität sich zur Abwehr der bekannten Risiken am besten eignet, und sie müssen zukünftig auftretende Risiken vorhersehen können.  
@@ -40,7 +40,8 @@ Sicherheitsbedrohungen können Sie am besten mit einer tiefgestaffelten Verteidi
  Enthält Links zu Ressourcen zum Thema CLR-Integrationssicherheit.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server Security (SQL Server-Sicherheit)](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [SQL Server-Sicherheit](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

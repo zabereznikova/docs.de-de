@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 85b24196-b6c6-4bda-9de3-47180bd6ff96
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b588ec9dffcc4e759b40c7c472f48ab325167943
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc33018f68f9634a29e2f5c52123a0215b446de7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228964"
 ---
 # <a name="icordebugsymbolprovider-interface"></a>ICorDebugSymbolProvider-Schnittstelle
 Stellt Methoden bereit, die zum Abrufen von Debugsymbolinformationen verwendet werden können.  
@@ -27,8 +27,8 @@ Stellt Methoden bereit, die zum Abrufen von Debugsymbolinformationen verwendet w
 |[GetMethodParameterSymbols-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodparametersymbols-method.md)|Ruft die Parametersymbole einer Methode ab, wenn die relative virtuelle Adresse (RVA) der Methode angegeben ist.|  
 |[GetMethodProps-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getmethodprops-method.md)|Gibt Informationen zu Methodeneigenschaften wie das Metadatentoken der Methode und Informationen zu den generischen Parametern der Methode zurück, wenn eine relative virtuelle Adresse (RVA) in der Methode angegeben ist.|  
 |[GetObjectSize-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getobjectsize-method.md)|Gibt die Objektgröße eines Objekts basierend auf seiner TypeSpec-Signatur zurück.|  
-|[GetStaticFieldSymbols-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getstaticfieldsymbols-method.md)|Ruft die statischen Feldsymbole ab, die einer typespec-Signatur entsprechen.|  
-|[GetTypeProps-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-gettypeprops-method.md)|Gibt Informationen zu den Eigenschaften eines Typs wie die Anzahl der Signaturen der generischen Parameter zurück, wenn eine relative virtuelle Adresse (RVA) in einer Vtable angegeben ist.|  
+|[GetStaticFieldSymbols-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getstaticfieldsymbols-method.md)|Ruft die statischen Feldsymbole ab, die einer TypeSpec-Signatur entsprechen.|  
+|[GetTypeProps-Methode](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-gettypeprops-method.md)|Gibt anhand einer relativen virtuellen Adresse (RVA) in einem VTable Informationen zu den Eigenschaften eines Typs wie die Anzahl der Signaturen der generischen Parameter zurück.|  
   
 ## <a name="remarks"></a>Hinweise  
   
@@ -45,5 +45,6 @@ Stellt Methoden bereit, die zum Abrufen von Debugsymbolinformationen verwendet w
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

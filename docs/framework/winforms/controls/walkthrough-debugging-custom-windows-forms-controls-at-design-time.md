@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit'
+title: 'Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 9bd3f822e5a1f8572ebb7f5991abccde904150b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b5c54acc89317104eddc3b1f5b350edcb263d208
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213688"
 ---
-# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit
+# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Exemplarische Vorgehensweise: Debuggen von benutzerdefinierten Windows Forms-Steuerelementen zur Entwurfszeit
 Wenn Sie ein benutzerdefiniertes Steuerelement erstellen, werden häufig finden Sie es erforderlich, um das Verhalten während der Entwurfszeit zu debuggen. Dies ist insbesondere dann, wenn Sie einen benutzerdefinierten Designer für das benutzerdefinierte Steuerelement erstellen. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen eine Windows Forms-Steuerelement, das Visual Studio-Entwurfszeitfunktionen nutzt](creating-a-wf-control-design-time-features.md).  
   
  Sie können Ihre benutzerdefinierten Steuerelemente mithilfe von Visual Studio debuggen, ebenso wie alle anderen .NET Framework-Klassen Sie debuggen. Der Unterschied besteht darin, dass Sie eine separate Instanz von Visual Studio debuggen, die das benutzerdefinierte Steuerelement Code ausgeführt wird  
@@ -173,6 +173,7 @@ Wenn Sie ein benutzerdefiniertes Steuerelement erstellen, werden häufig finden 
 -   Sie können einen benutzerdefinierten Designer für das benutzerdefinierte Steuerelement schreiben. Dies bietet Ihnen vollständige Kontrolle über die entwurfsumgebung, die mithilfe der erweiterbaren Designer-Infrastruktur, die von Visual Studio verfügbar gemacht werden. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Erstellen eine Windows Forms-Steuerelement, das Visual Studio-Entwurfszeitfunktionen nutzt](creating-a-wf-control-design-time-features.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das von Visual Studio-Entwurfszeitfunktionen nutzt](creating-a-wf-control-design-time-features.md)
+
+- [Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktionen nutzt](creating-a-wf-control-design-time-features.md)
 - [Vorgehensweise: Während der Entwurfszeit von Access Services](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
 - [Vorgehensweise: Zugriff während der Entwurfszeit-Unterstützung in Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))

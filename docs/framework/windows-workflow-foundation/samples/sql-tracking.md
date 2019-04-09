@@ -2,12 +2,12 @@
 title: SQL-Nachverfolgung
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: e2cb86a92e075d9117f2fe208f2044d4bc30dac9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 6d3974cbf181734f2a3cab0fbc7d8f32c16699bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146340"
 ---
 # <a name="sql-tracking"></a>SQL-Nachverfolgung
 In diesem Beispiel wird veranschaulicht, wie ein benutzerdefinierter SQL-Nachverfolgungsteilnehmer, der Nachverfolgungsdatensätze in eine SQL-Datenbank schreibt, geschrieben wird. Windows Workflow Foundation (WF) stellt die workflownachverfolgung um Einblick in die Ausführung einer Workflowinstanz zu erhalten. Die Überwachungslaufzeit gibt während der Ausführung des Workflows Workflowüberwachungsdatensätze aus. Weitere Informationen zur workflownachverfolgung finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../workflow-tracking-and-tracing.md).
@@ -60,4 +60,5 @@ In diesem Beispiel wird veranschaulicht, wie ein benutzerdefinierter SQL-Nachver
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 7c8c1697ff18e919711e84e724b5b8698dfe088e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
-ms.translationtype: MT
+ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125602"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161511"
 ---
 # <a name="structured-navigation-overview"></a>Übersicht über die strukturierte Navigation
 Inhalt, der von gehostet werden kann eine [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, oder ein <xref:System.Windows.Navigation.NavigationWindow> besteht aus Seiten, die vom Pack identifiziert werden können [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] und über Links aufgerufen. Die Struktur der Seiten und die durch Links definierte Navigation in ihnen werden als Navigationstopologie bezeichnet. Eine solche Topologie kann für unterschiedliche Anwendungstypen eingesetzt werden, insbesondere für die Navigation in Dokumenten. In diesen Anwendungen kann der Benutzer von einer Seite zu einer anderen Seite navigieren, ohne dass die Seite Informationen zu der anderen Seite enthält.  
@@ -20,9 +20,7 @@ Inhalt, der von gehostet werden kann eine [!INCLUDE[TLA#tla_xbap](../../../../in
  In anderen Anwendungstypen ist es hingegen erforderlich, dass die Seiten Informationen über den Navigationsverlauf beinhalten. Beispiel: Eine Personalanwendung enthält eine Seite, auf der alle Mitarbeiter eines Unternehmens aufgelistet sind (die „Mitarbeiterliste“). Auf dieser Seite können Benutzer mithilfe eines Links einen neuen Mitarbeiter hinzufügen. Wenn der Benutzer auf diesen Link klickt, navigiert die Seite zu der Seite „Mitarbeiter hinzufügen“, auf der die Daten des neuen Mitarbeiters erfasst werden. Anschließend wird die Seite „Mitarbeiterliste“ wieder aufgerufen, um den neuen Mitarbeiter zu erstellen und die Liste zu aktualisieren. Diese Art der Navigation entspricht dem Aufruf einer Methode, um bestimmte Verarbeitungsschritte auszuführen und einen Wert zurückzugeben, was auch als strukturierte Programmierung bezeichnet wird. Dementsprechend wird diese Art der Navigation als *strukturierte Navigation* bezeichnet.  
   
  Die <xref:System.Windows.Controls.Page> Klasse implementiert keine Unterstützung für die strukturierte Navigation. Stattdessen die <xref:System.Windows.Navigation.PageFunction%601> Klasse leitet sich von <xref:System.Windows.Controls.Page> und erweitert ihn dann mit der grundlegenden Konstrukte für die strukturierte Navigation. In diesem Thema wird gezeigt, wie strukturierte Navigation mit herstellen <xref:System.Windows.Navigation.PageFunction%601>.  
-  
- 
-  
+
 <a name="Structured_Navigation"></a>   
 ## <a name="structured-navigation"></a>Strukturierte Navigation  
  Wenn eine Seite in einer strukturierten Navigation eine andere Seite aufruft, sind die folgenden Verhaltensweisen ganz oder teilweise erforderlich:  
@@ -170,6 +168,7 @@ Inhalt, der von gehostet werden kann eine [!INCLUDE[TLA#tla_xbap](../../../../in
  In anderen Situationen weisen Anwendungen möglicherweise komplexe Navigationstopologien auf, für deren effektive Ausführung eine strukturierte Navigation erforderlich ist. Weitere Informationen finden Sie unter [Übersicht über Navigationstopologien](navigation-topologies-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>
 - [Übersicht über Navigationstopologien](navigation-topologies-overview.md)

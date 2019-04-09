@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Erstellen Sie einen Dienst mit einer Vertragsschnittstelle'
+title: 'Vorgehensweise: Erstellen eines Diensts mit einer Vertragsschnittstelle'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7b6803f6-d6f9-4cc2-9f1b-6f4c920475d5
-ms.openlocfilehash: cd0ae76040f235b4573a90764566205a2d5d81e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c31a954d659b3f686f8b9780276a4719064e60cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536723"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128712"
 ---
-# <a name="how-to-create-a-service-with-a-contract-interface"></a>Vorgehensweise: Erstellen Sie einen Dienst mit einer Vertragsschnittstelle
+# <a name="how-to-create-a-service-with-a-contract-interface"></a>Vorgehensweise: Erstellen eines Diensts mit einer Vertragsschnittstelle
 Die bevorzugte Methode zum Erstellen eines Windows Communication Foundation (WCF)-Vertrags ist mithilfe einer Schnittstelle. Dieser Vertrag gibt die Auflistung und Struktur von Nachrichten an, die erforderlich sind, um auf die Vorgänge zuzugreifen, die der Dienst anbietet. Diese Schnittstelle definiert die Eingabe- und Ausgabetypen durch Anwenden der <xref:System.ServiceModel.ServiceContractAttribute>-Klasse auf die Schnittstelle und der <xref:System.ServiceModel.OperationContractAttribute>-Klasse auf die Methoden, die verfügbar gemacht werden sollen.  
   
  Weitere Informationen zu Dienstverträgen finden Sie unter [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md).  
@@ -36,5 +36,6 @@ Die bevorzugte Methode zum Erstellen eines Windows Communication Foundation (WCF
  Die Methoden, auf die die <xref:System.ServiceModel.OperationContractAttribute>-Klasse angewendet wird, verwenden standardmäßig ein Anforderung-Antwort-Nachrichtenmuster. Weitere Informationen zu diesem Nachrichtenmuster finden Sie unter [Vorgehensweise: Erstellen Sie einen Anforderung-Antwort-Vertrag](../../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md). Sie können auch andere Nachrichtenmuster erstellen und verwenden, indem Sie die Eigenschaften des Attributs festlegen. Weitere Beispiele finden Sie unter [Vorgehensweise: Erstellen eines unidirektionalen Vertrags](../../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md) und [Vorgehensweise: Erstellen eines Duplexvertrags](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>

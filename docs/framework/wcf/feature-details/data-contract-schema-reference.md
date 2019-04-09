@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: decde09c2225da0af420813b477b86f4564d42f7
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a4ddaaea2133a8adf5271628f442644194a7f453
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411797"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131936"
 ---
 # <a name="data-contract-schema-reference"></a>Datenvertrags-Schemareferenz
 In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSerializer> zur Beschreibung der Common Language Runtime (CLR)-Typen für die XML-Serialisierung verwendete Teilmenge des XML-Schemas (XSD) beschrieben.  
@@ -54,15 +54,15 @@ In diesem Thema wird die von <xref:System.Runtime.Serialization.DataContractSeri
   
 |Inhalt|Schema|  
 |--------------|------------|  
-|`include`|Unterstützt. `DataContractSerializer` unterstützt xs:include und xs:import. Svcutil.exe schränkt jedoch darauf folgende `xs:include/@schemaLocation` - und `xs:import/@location` -Verweise ein, wenn Metadaten aus einer lokalen Datei geladen werden. Die Liste der Schemadateien muss in diesem Fall über einen Out-of-Band-Mechanismus und nicht mittels `include` übergeben werden. Mit `include`angegebene Schemadokumente werden ignoriert.|  
+|`include`|Unterstützt. `DataContractSerializer` unterstützt Xs: enthalten und xs: Import. Svcutil.exe schränkt jedoch darauf folgende `xs:include/@schemaLocation` - und `xs:import/@location` -Verweise ein, wenn Metadaten aus einer lokalen Datei geladen werden. Die Liste der Schemadateien muss in diesem Fall über einen Out-of-Band-Mechanismus und nicht mittels `include` übergeben werden. Mit `include`angegebene Schemadokumente werden ignoriert.|  
 |`redefine`|Unzulässig. Die Verwendung von `xs:redefine` durch `DataContractSerializer` ist aus Sicherheitsgründen unzulässig: `x:redefine` erfordert, dass `schemaLocation` befolgt wird. Unter bestimmten Umständen schränkt Svcutil.exe mit DataContract die Verwendung von `schemaLocation`ein.|  
 |`import`|Unterstützt. `DataContractSerializer` unterstützt `xs:include` und `xs:import`. Svcutil.exe schränkt jedoch darauf folgende `xs:include/@schemaLocation` - und `xs:import/@location` -Verweise ein, wenn Metadaten aus einer lokalen Datei geladen werden. Die Liste der Schemadateien muss in diesem Fall über einen Out-of-Band-Mechanismus und nicht mittels `include` übergeben werden. Mit `include`angegebene Schemadokumente werden ignoriert.|  
 |`simpleType`|Unterstützt. Siehe den Abschnitt `xs:simpleType` .|  
 |`complexType`|Unterstützt, wird Datenverträgen zugeordnet. Siehe den Abschnitt `xs:complexType` .|  
-|`group`|Ignoriert. `DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup`und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema`ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
-|`attributeGroup`|Ignoriert. `DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup`und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema`ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
+|`group`|Ignoriert. `DataContractSerializer` unterstützt nicht die Verwendung von `xs:group`, `xs:attributeGroup`, und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema`ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
+|`attributeGroup`|Ignoriert. `DataContractSerializer` unterstützt nicht die Verwendung von `xs:group`, `xs:attributeGroup`, und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema`ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
 |`element`|Unterstützt. Siehe Globale Elementdeklaration (GED).|  
-|`attribute`|Ignoriert. `DataContractSerializer` bietet keine Unterstützung für `xs:group`, `xs:attributeGroup`und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema`ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
+|`attribute`|Ignoriert. `DataContractSerializer` unterstützt nicht die Verwendung von `xs:group`, `xs:attributeGroup`, und `xs:attribute`. Diese Deklarationen werden als untergeordnete Elemente von `xs:schema`ignoriert; auf sie kann jedoch nicht innerhalb von `complexType` oder anderer unterstützter Konstrukte verwiesen werden.|  
 |`notation`|Ignoriert.|  
   
 ## <a name="complex-types--xscomplextype"></a>Komplexe Typen – \<xs: complexType >  
@@ -329,7 +329,7 @@ public enum MyEnum
 ```  
   
 ### <a name="xslist"></a>\<xs:list>  
- `DataContractSerializer` ordnet mit `System.FlagsAttribute` markierte Enumerationstypen einer von `xs:list` abgeleiteten `xs:string`zu. Andere `xs:list` -Variationen werden nicht unterstützt.  
+ `DataContractSerializer` Zuordnungen von Enumerationstypen mit markiert `System.FlagsAttribute` zu `xs:list` abgeleitet `xs:string`. Andere `xs:list` -Variationen werden nicht unterstützt.  
   
 ### <a name="xslist-attributes"></a>\<xs:list>: attributes  
   
@@ -475,55 +475,55 @@ public class Employee : Person
   
 |XSD-Typ|.NET-Typ|  
 |--------------|---------------|  
-|`anyType`|<xref:System.Object>.|  
-|`anySimpleType`|<xref:System.String>|  
-|`duration`|<xref:System.TimeSpan>|  
-|`dateTime`|<xref:System.DateTime>.|  
+|`anyType`|<xref:System.Object>sein.|  
+|`anySimpleType`|<xref:System.String>sein.|  
+|`duration`|<xref:System.TimeSpan>sein.|  
+|`dateTime`|<xref:System.DateTime>sein.|  
 |`dateTimeOffset`|<xref:System.DateTime> und <xref:System.TimeSpan> für den Offset. Siehe DateTimeOffset-Serialisierung (unten).|  
-|`time`|<xref:System.String>.|  
-|`date`|<xref:System.String>|  
-|`gYearMonth`|<xref:System.String>|  
-|`gYear`|<xref:System.String>|  
-|`gMonthDay`|<xref:System.String>|  
-|`gDay`|<xref:System.String>|  
-|`gMonth`|<xref:System.String>.|  
+|`time`|<xref:System.String>sein.|  
+|`date`|<xref:System.String>sein.|  
+|`gYearMonth`|<xref:System.String>sein.|  
+|`gYear`|<xref:System.String>sein.|  
+|`gMonthDay`|<xref:System.String>sein.|  
+|`gDay`|<xref:System.String>sein.|  
+|`gMonth`|<xref:System.String>sein.|  
 |`boolean`|<xref:System.Boolean>|  
-|`base64Binary`|<xref:System.Byte> -Array.|  
-|`hexBinary`|<xref:System.String>.|  
-|`float`|<xref:System.Single>|  
-|`double`|<xref:System.Double>|  
-|`anyURI`|<xref:System.Uri>|  
-|`QName`|<xref:System.Xml.XmlQualifiedName>|  
-|`string`|<xref:System.String>|  
-|`normalizedString`|<xref:System.String>|  
-|`token`|<xref:System.String>|  
-|`language`|<xref:System.String>|  
-|`Name`|<xref:System.String>|  
-|`NCName`|<xref:System.String>|  
-|`ID`|<xref:System.String>|  
-|`IDREF`|<xref:System.String>|  
-|`IDREFS`|<xref:System.String>|  
-|`ENTITY`|<xref:System.String>|  
-|`ENTITIES`|<xref:System.String>|  
-|`NMTOKEN`|<xref:System.String>|  
-|`NMTOKENS`|<xref:System.String>|  
-|`decimal`|<xref:System.Decimal>|  
-|`integer`|<xref:System.Int64>|  
-|`nonPositiveInteger`|<xref:System.Int64>|  
-|`negativeInteger`|<xref:System.Int64>|  
-|`long`|<xref:System.Int64>|  
-|`int`|<xref:System.Int32>|  
-|`short`|<xref:System.Int16>|  
-|`Byte`|<xref:System.SByte>|  
-|`nonNegativeInteger`|<xref:System.Int64>|  
-|`unsignedLong`|<xref:System.UInt64>|  
-|`unsignedInt`|<xref:System.UInt32>|  
-|`unsignedShort`|<xref:System.UInt16>|  
-|`unsignedByte`|<xref:System.Byte>|  
-|`positiveInteger`|<xref:System.Int64>.|  
+|`base64Binary`|<xref:System.Byte> Array.|  
+|`hexBinary`|<xref:System.String>sein.|  
+|`float`|<xref:System.Single>sein.|  
+|`double`|<xref:System.Double>sein.|  
+|`anyURI`|<xref:System.Uri>sein.|  
+|`QName`|<xref:System.Xml.XmlQualifiedName>sein.|  
+|`string`|<xref:System.String>sein.|  
+|`normalizedString`|<xref:System.String>sein.|  
+|`token`|<xref:System.String>sein.|  
+|`language`|<xref:System.String>sein.|  
+|`Name`|<xref:System.String>sein.|  
+|`NCName`|<xref:System.String>sein.|  
+|`ID`|<xref:System.String>sein.|  
+|`IDREF`|<xref:System.String>sein.|  
+|`IDREFS`|<xref:System.String>sein.|  
+|`ENTITY`|<xref:System.String>sein.|  
+|`ENTITIES`|<xref:System.String>sein.|  
+|`NMTOKEN`|<xref:System.String>sein.|  
+|`NMTOKENS`|<xref:System.String>sein.|  
+|`decimal`|<xref:System.Decimal>sein.|  
+|`integer`|<xref:System.Int64>sein.|  
+|`nonPositiveInteger`|<xref:System.Int64>sein.|  
+|`negativeInteger`|<xref:System.Int64>sein.|  
+|`long`|<xref:System.Int64>sein.|  
+|`int`|<xref:System.Int32>sein.|  
+|`short`|<xref:System.Int16>sein.|  
+|`Byte`|<xref:System.SByte>sein.|  
+|`nonNegativeInteger`|<xref:System.Int64>sein.|  
+|`unsignedLong`|<xref:System.UInt64>sein.|  
+|`unsignedInt`|<xref:System.UInt32>sein.|  
+|`unsignedShort`|<xref:System.UInt16>sein.|  
+|`unsignedByte`|<xref:System.Byte>sein.|  
+|`positiveInteger`|<xref:System.Int64>sein.|  
   
 ## <a name="iserializable-types-mapping"></a>Zuordnung von ISerializable-Typen  
- In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version&#160;1.0 wurde <xref:System.Runtime.Serialization.ISerializable> als ein allgemeiner Mechanismus für die Serialisierung von Objekten für persistente Speicherung oder die Datenübertragung eingeführt. Es gibt viele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Typen, die `ISerializable` implementieren und zwischen Anwendungen übergeben werden können. <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt von sich aus `ISerializable` -Klassen. Der `DataContractSerializer` ordnet `ISerializable` -Implementierungsschematypen zu, die sich nur durch den qualifizierten Namen (QName) des Typs unterscheiden und tatsächlich Eigenschaftenauflistungen sind. Z. B. die `DataContractSerializer` ordnet <xref:System.Exception> in den folgenden XSD-Typ in der `http://schemas.datacontract.org/2004/07/System` Namespace.  
+ In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version&#160;1.0 wurde <xref:System.Runtime.Serialization.ISerializable> als ein allgemeiner Mechanismus für die Serialisierung von Objekten für persistente Speicherung oder die Datenübertragung eingeführt. Es gibt viele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Typen, die `ISerializable` implementieren und zwischen Anwendungen übergeben werden können. <xref:System.Runtime.Serialization.DataContractSerializer> Natürlich bietet Unterstützung für `ISerializable` Klassen. Der `DataContractSerializer` ordnet `ISerializable` -Implementierungsschematypen zu, die sich nur durch den qualifizierten Namen (QName) des Typs unterscheiden und tatsächlich Eigenschaftenauflistungen sind. Z. B. die `DataContractSerializer` ordnet <xref:System.Exception> in den folgenden XSD-Typ in der `http://schemas.datacontract.org/2004/07/System` Namespace.  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -609,14 +609,14 @@ public class Employee : Person
   
  Auf Folgendes sollte geachtet werden:  
   
--   `ser:char` wurde eingeführt, um Unicode-Zeichen des Typs <xref:System.Char>darzustellen.  
+-   `ser:char` wird zur Darstellung von Unicode-Zeichen vom Typ eingeführt <xref:System.Char>.  
   
 -   Der `valuespace` von `xs:duration` wurde zu einer geordneten Menge reduziert, damit diese einem <xref:System.TimeSpan>zugeordnet werden kann.  
   
--   `FactoryType` wird in Schemas verwendet, die von Typen exportiert werden, die von <xref:System.Runtime.Serialization.ISerializable>abgeleitet wurden.  
+-   `FactoryType` wird verwendet, in Schemas von Typen, die von abgeleitet werden exportiert <xref:System.Runtime.Serialization.ISerializable>.  
   
 ## <a name="importing-non-datacontract-schemas"></a>Importieren von Nicht-DataContract-Schemas  
- `DataContractSerializer` verfügt über die `ImportXmlTypes` -Option, die den Import von Schemas erlaubt, die dem `DataContractSerializer` -XSD-Profil nicht entsprechen (siehe die <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> -Eigenschaft). Die Festlegung dieser Option auf `true` aktiviert die Akzeptanz nicht-konformer Schematypen und ihre Zuordnung zu der folgenden Implementierung, wobei <xref:System.Xml.Serialization.IXmlSerializable> ein Array von <xref:System.Xml.XmlNode> einschließt (nur der Klassenname unterscheidet sich).  
+ `DataContractSerializer` hat die `ImportXmlTypes` Option aus, um den Import von Schemas erlaubt, die nicht entsprechen den `DataContractSerializer` XSD-Profil (finden Sie unter den <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> Eigenschaft). Die Festlegung dieser Option auf `true` aktiviert die Akzeptanz nicht-konformer Schematypen und ihre Zuordnung zu der folgenden Implementierung, wobei <xref:System.Xml.Serialization.IXmlSerializable> ein Array von <xref:System.Xml.XmlNode> einschließt (nur der Klassenname unterscheidet sich).  
   
 ```csharp  
 [GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]  
@@ -682,6 +682,7 @@ new XmlQualifiedName("Person","http://Microsoft.ServiceModel.Samples");
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>

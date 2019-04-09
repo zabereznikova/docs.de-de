@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Bedingtes Kompilieren Sie mit Ablaufverfolgung und Debuggen'
+title: 'Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1738d73cf99c8b5a8131bd5e018a799c3a7780c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 76e442536e4c863031072adfb4d8716ca7a19aff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523557"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158645"
 ---
-# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Vorgehensweise: Bedingtes Kompilieren Sie mit Ablaufverfolgung und Debuggen
+# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen
 Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufverfolgungsausgabe als auch die Debugausgabe im Ausgabefenster von Visual Studio angezeigt. Allerdings müssen Sie Ihre instrumentierten Anwendungen mit aktivierter **TRACE**-Compilerdirektive kompilieren, um Ablaufverfolgungsfunktionen in eine bereitgestellte Anwendung aufzunehmen. Dadurch kann der Ablaufverfolgungscode in die Releaseversion der Anwendung kompiliert werden. Wenn Sie die **TRACE**-Anweisung nicht aktivieren, wird der gesamte Ablaufverfolgungscode bei der Kompilierung ignoriert und nicht in den ausführbaren Code aufgenommen, den Sie bereitstellen.  
   
  Sowohl die Ablaufverfolgungsmethoden als auch die Debugmethoden weisen zugeordnete Conditional-Attribute auf. Wenn das Conditional-Attribut für die Ablaufverfolgung beispielsweise **TRUE** ist, werden alle Ablaufverfolgungsanweisungen in eine Assembly (eine kompilierte EXE- oder DLL-Datei) aufgenommen. Ist das Conditional-Attribut **TRACE** hingegen **FALSE**, werden die Ablaufverfolgungsanweisungen nicht aufgenommen.  
@@ -80,13 +80,13 @@ Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufver
     ||**#CONST DEBUG = true**|Aktiviert das Debuggen|  
     ||**#CONST DEBUG = false**|Deaktiviert das Debuggen|  
     |**C#**|**#define TRACE**|Aktiviert die Ablaufverfolgung|  
-    ||**#undefine TRACE**|Deaktiviert die Ablaufverfolgung|  
+    ||**#undef TRACE**|Deaktiviert die Ablaufverfolgung|  
     ||**#define DEBUG**|Aktiviert das Debuggen|  
-    ||**#undefine DEBUG**|Deaktiviert das Debuggen|  
+    ||**#undef DEBUG**|Deaktiviert das Debuggen|  
   
 ### <a name="to-disable-tracing-or-debugging"></a>So deaktivieren Sie die Ablaufverfolgung oder das Debuggen  
   
-Löschen Sie die Compileranweisung aus dem Quellcode.  
+Löschen Sie die Compilerdirektive aus dem Quellcode.  
   
 \- oder –  
   
@@ -96,10 +96,11 @@ Kommentieren Sie die Compileranweisung aus.
 >  Wenn Sie kompilieren möchten, können Sie entweder **Erstellen** aus dem Menü **Erstellen** auswählen oder die Befehlszeilenmethode verwenden, allerdings ohne Eingabe von **d:** zum Definieren der Symbole für bedingte Kompilierung.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Vorgehensweise: Erstellen, initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Ablaufverfolgungsschalter](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Trace Listeners (Ablaufverfolgungslistener)](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Ablaufverfolgungslistener](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [Vorgehensweise: Aufrufen des Befehlszeilencompilers](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

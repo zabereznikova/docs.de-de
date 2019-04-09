@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a7abcda5ecf56602e884e4d66e1c6900f17b4c6
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 4cd3012d966c777749eb800b8986974a4e8d401f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154166"
 ---
 # <a name="ihosttaskmanagerreverseleaveruntime-method"></a>IHostTaskManager::ReverseLeaveRuntime-Methode
 Benachrichtigt den Host, dass das Steuerelement verlässt die common Language Runtime (CLR) und Eingabe eine nicht verwaltete Funktion, die wiederum aus verwaltetem Code aufgerufen wurde.  
@@ -58,6 +58,7 @@ HRESULT ReverseLeaveRuntime ();
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [CallNeedsHostHook-Methode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-callneedshosthook-method.md)
 - [EnterRuntime-Methode](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)
 - [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)

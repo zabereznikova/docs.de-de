@@ -2,12 +2,12 @@
 title: Schützen von Verbindungsinformationen
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 4c8992abc30690be8e9ef9c208b0a0bd3ddf6116
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ccb039a79c76c31b905783b81710571d8c5ab82b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184443"
 ---
 # <a name="protecting-connection-information"></a>Schützen von Verbindungsinformationen
 Eines der wichtigsten Ziele beim Sichern einer Anwendung besteht darin, den Zugriff auf die Datenquelle zu schützen. Eine Verbindungszeichenfolge stellt ein potenzielles Sicherheitsrisiko dar, wenn sie nicht gesichert wird. Das Speichern von Verbindungsinformationen als Klartext oder das Aufbewahren dieser Informationen im Arbeitsspeicher gefährdet Ihr gesamtes System. In Ihrem Quellcode eingebettete Verbindungszeichenfolgen können gelesen werden, mithilfe der [Ildasm.exe (IL Disassembler)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) um Microsoft intermediate Language (MSIL) in einer kompilierten Assembly anzuzeigen.  
@@ -40,6 +40,7 @@ Eines der wichtigsten Ziele beim Sichern einer Anwendung besteht darin, den Zugr
  Sie können die Verbindungszeichenfolgen auch in Konfigurationsdateien speichern. Damit erübrigt sich die Notwendigkeit, die Verbindungszeichenfolgen in den Code Ihrer Anwendung einzubetten. Konfigurationsdateien sind Standard-XML-Dateien, für die .NET Framework einen allgemeinen Satz von Elementen definiert hat. Verbindungszeichenfolgen in Konfigurationsdateien befinden sich in der Regel innerhalb der  **\<ConnectionStrings >** Element in der **"App.config"** für eine Windows-Anwendung oder der  **"Web.config"** -Datei für eine ASP.NET-Anwendung. Weitere Informationen zu den Grundlagen der speichern, abrufen und Verschlüsseln von Verbindungszeichenfolgen in Konfigurationsdateien finden Sie unter [Verbindungszeichenfolgen und Konfigurationsdateien](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Verschlüsseln von Konfigurationsinformationen mithilfe der geschützten Konfiguration](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100))
 - [Sicherheit in .NET](../../../standard/security/index.md)

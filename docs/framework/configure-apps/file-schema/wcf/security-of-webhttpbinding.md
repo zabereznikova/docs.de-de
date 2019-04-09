@@ -2,12 +2,12 @@
 title: <security> von <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 7f714ffb89d5ff990239bd1a02ffaeead4ad7d91
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6375a64ea157df01f903901e0414a2989287aee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360775"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132292"
 ---
 # <a name="security-of-webhttpbinding"></a>\<security> of \<webHttpBinding>
 Gibt an, der die sicherheitsanforderungen für einen Endpunkt konfiguriert, die mit einem [ \<WsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -49,7 +49,7 @@ Gibt an, der die sicherheitsanforderungen für einen Endpunkt konfiguriert, die 
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Keine|Die Sicherheitsfunktionen sind deaktiviert.|  
+|Keiner|Die Sicherheitsfunktionen sind deaktiviert.|  
 |Transport|Die Sicherheit wird über HTTPS bereitgestellt. Der Dienst muss mit SSL-Zertifikaten konfiguriert werden. Die Nachricht wird vollständig über HTTPS gesichert, und der Dienst wird vom Client über das SSL-Zertifikat des Diensts authentifiziert. Die Clientauthentifizierung wird durch die `ClientCredentialType` Attribut der [ \<Transport >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-webhttpbinding.md).|  
 |TransportCredentialOnly|Dieser Modus stellt keine Nachrichtenintegrität und Vertraulichkeit bereit. Er bietet dagegen HTTP-basierte Clientauthentifizierung. Dieser Modus sollte mit Vorsicht angewendet werden. Es sollte verwendet werden in Umgebungen, in denen die transportsicherheit durch andere Mittel (z. B. IPSec) bereitgestellt wird und nur die Clientauthentifizierung wird durch die WCF-Infrastruktur bereitgestellt.|  
   
@@ -66,13 +66,14 @@ Gibt an, der die sicherheitsanforderungen für einen Endpunkt konfiguriert, die 
 |[\<webHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md)|Ein Bindungselement, das verwendet wird, zum Konfigurieren von Endpunkten für Windows Communication Foundation (WCF)-, die auf HTTP-Anforderungen und nicht auf SOAP-Nachrichten reagieren Webdienste.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.WebHttpBindingElement>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>
 - <xref:System.ServiceModel.WebHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.WebHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.WebHttpSecurity>
 - [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Ausählen eines Anmeldeinformationentyps](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Wählen eines Typs von Anmeldeinformationen](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Bindungen](../../../../../docs/framework/wcf/bindings.md)
 - [Konfigurieren der vom System bereitgestellten Bindungen](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

@@ -2,12 +2,12 @@
 title: 'Transport: Benutzerdefinierte Transaktionen über UDP-Beispiel'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 931cedfeb5604b00ec1cf3f4d2742e2dff2eacca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 283e35b7701a6f95aa000cdd0acabaad81142bc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174277"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transport: Benutzerdefinierte Transaktionen über UDP-Beispiel
 Dieses Beispiel basiert auf der [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel in der Windows Communication Foundation (WCF)[Transporterweiterbarkeit](../../../../docs/framework/wcf/samples/transport-extensibility.md). Es erweitert das Beispiel für den UDP-Transport, um einen benutzerdefinierten Transaktionsfluss zu unterstützen, und veranschaulicht die Verwendung der <xref:System.ServiceModel.Channels.TransactionMessageProperty>-Eigenschaft.  
@@ -46,7 +46,7 @@ byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMes
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- Bei `TransactionMessageBuffer.WriteTransactionMessageBuffer` handelt es sich um eine Hilfsmethode mit einer neuen Funktionalität, mit der das Weitergabetoken für die aktuelle Transaktion mit der Nachrichtenentität zusammengeführt und in einem Puffer platziert wird.  
+ `TransactionMessageBuffer.WriteTransactionMessageBuffer` ist eine Hilfsmethode, die neuen Funktionen, um das Weitergabetoken für die aktuelle Transaktion mit der Nachrichtenentität zusammengeführt, und platzieren Sie es in einen Puffer enthält.  
   
  Für die Übertragung über einen benutzerdefinierten Transaktionsfluss muss die Clientimplementierung wissen, welche Dienstvorgänge einen Transaktionsfluss erfordern, und übergeben diese Informationen zu WCF. Es sollte auch ein Mechanismus zum Senden der Benutzertransaktion an die Transportebene vorhanden sein. In diesem Beispiel wird "WCF-nachrichteninspektoren" verwendet, um diese Informationen abzurufen. Der hier implementierte Clientnachrichteninspektor mit der Bezeichnung `TransactionFlowInspector` führt die folgenden Aufgaben aus:  
   
@@ -159,7 +159,7 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- `TransactionMessageBuffer.ReadTransactionMessageBuffer()` ist die Hilfsmethode, die den von `TransactionMessageBuffer.WriteTransactionMessageBuffer()` ausgeführten Serialisierungsprozess umkehrt.  
+ `TransactionMessageBuffer.ReadTransactionMessageBuffer()` ist eine Hilfsmethode, die den vom ausgeführten Serialisierungsprozess umkehrt `TransactionMessageBuffer.WriteTransactionMessageBuffer()`.  
   
  Wenn ein Transaktionsfluss erfolgte, wird die Transaktion an die Nachricht in `TransactionMessageProperty` angehängt.  
   
@@ -237,7 +237,7 @@ if (transaction != null)
     svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport.dll /svcutilConfig:svcutil.exe.config  
     ```  
   
-10. Beachten Sie, dass Svcutil.exe nicht die Bindungserweiterungskonfiguration für `sampleProfileUdpBinding` generiert. Sie müssen diese manuell hinzufügen.  
+10. Beachten Sie, dass „Svcutil.exe“ nicht die Bindungserweiterungskonfiguration für `sampleProfileUdpBinding` generiert. Sie müssen diese manuell hinzufügen.  
   
     ```xml  
     <configuration>  
@@ -263,4 +263,5 @@ if (transaction != null)
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

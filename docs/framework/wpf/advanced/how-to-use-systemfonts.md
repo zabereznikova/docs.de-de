@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 5ed44da316ddee5ea3a83262f913da571bf75276
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5976bc0cb8b34e68d5e89dd70a608d7e52ded332
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216781"
 ---
 # <a name="how-to-use-systemfonts"></a>Vorgehensweise: Verwenden von SystemFonts
 Dieses Beispiel zeigt, wie Sie mit der statischen Ressourcen der der <xref:System.Windows.SystemFonts> Klasse zum Formatieren oder Anpassen einer Schaltfläche.  
@@ -37,11 +37,12 @@ Dieses Beispiel zeigt, wie Sie mit der statischen Ressourcen der der <xref:Syste
  [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.SystemFonts>
 - [Zeichnen eines Bereichs mit einem Systempinsel](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [Verwenden von SystemParameters](how-to-use-systemparameters.md)
 - [Verwenden von Systemschriftartschlüsseln](how-to-use-system-fonts-keys.md)
-- [Themen zu Vorgehensweisen](resources-how-to-topics.md)
+- [Gewusst wie-Themen](resources-how-to-topics.md)
 - [x:Statische Markuperweiterung](../../xaml-services/x-static-markup-extension.md)
 - [XAML-Ressourcen](xaml-resources.md)
 - [DynamicResource-Markuperweiterung](dynamicresource-markup-extension.md)

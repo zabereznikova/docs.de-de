@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3b263efa95936190ed771e811a84886b11be75b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.openlocfilehash: 571a676496683ba3251f13c41600bb017e1ced5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465749"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156103"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion-Funktion
 Ermöglicht dem Host, um zu bestimmen, welche Version der common Language Runtime (CLR) innerhalb des Prozesses verwendet werden soll, bevor die CLR explizit initialisiert wird.  
@@ -94,4 +94,5 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

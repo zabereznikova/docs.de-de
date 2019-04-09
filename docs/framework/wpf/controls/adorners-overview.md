@@ -7,18 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
-ms.translationtype: MT
+ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634530"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227690"
 ---
 # <a name="adorners-overview"></a>Übersicht über Adorner
 Adorner sind eine besondere Art von <xref:System.Windows.FrameworkElement>verwendet, um visuelle Hinweise zu einem Benutzer angezeigt werden. Adorner können unter anderem verwendet werden, um Elementen funktionale Ziehpunkte hinzuzufügen oder Zustandsinformationen über Steuerelemente bereitzustellen.  
-  
-  
-  
+
 <a name="about_Adorners"></a>   
 ## <a name="about-adorners"></a>Informationen über Adorner  
  Ein <xref:System.Windows.Documents.Adorner> ist eine benutzerdefinierte <xref:System.Windows.FrameworkElement> Bindung an eine <xref:System.Windows.UIElement>. Adorner gerendert werden, eine <xref:System.Windows.Documents.AdornerLayer>, d.h. eine Renderingoberfläche, die immer über dem verzierten Element oder eine Auflistung von verzierten Elemente ist. Rendering eines Adorners erfolgt unabhängig vom Rendering aus, der die <xref:System.Windows.UIElement> , das der Adorner gebunden wird. Ein Adorner wird in der Regel relativ zum Element positioniert, an das er gebunden ist. Dazu wird ein 2D-Standardkoordinatenursprung verwendet, der sich in der oberen linken Ecke des verzierten Elements befindet.  
@@ -33,7 +31,7 @@ Adorner sind eine besondere Art von <xref:System.Windows.FrameworkElement>verwen
   
 -   Visuelles Maskieren oder überschreiben oder teilweise ein <xref:System.Windows.UIElement>.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt ein grundlegendes Framework zum Verzieren von visuellen Elementen bereit. In der folgenden Tabelle sind die zum Verzieren von Objekten verwendeten primären Typen samt deren Zweck aufgelistet. Es folgen mehrere Verwendungsbeispiele.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Stellt ein grundlegendes Framework zum Verzieren von visuellen Elementen bereit. In der folgenden Tabelle sind die zum Verzieren von Objekten verwendeten primären Typen samt deren Zweck aufgelistet. Es folgen mehrere Verwendungsbeispiele.  
   
 |||  
 |-|-|  
@@ -102,8 +100,9 @@ Adorner sind eine besondere Art von <xref:System.Windows.FrameworkElement>verwen
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.AdornerHitTestResult>
 - [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
 - [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
 - [Übersicht über Zeichnungsobjekte](../graphics-multimedia/drawing-objects-overview.md)
-- [Themen zu Vorgehensweisen](adorners-how-to-topics.md)
+- [Gewusst wie-Themen](adorners-how-to-topics.md)

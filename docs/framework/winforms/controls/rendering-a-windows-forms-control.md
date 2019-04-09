@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: c32d6bff7171bb43d1f288500c9b24e8b288340b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8de87e17d1baedccfe18bfded3ccab7ab59f0a09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712161"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125683"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Wiedergeben eines Windows Forms-Steuerelements
 Rendering bezieht sich auf den Prozess der Erstellung einer visuellen Darstellung auf dem Bildschirm des Benutzers. Windows Forms verwendet [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (die neue Windows-Grafikbibliothek) für das Rendering. Die verwalteten Klassen, die Zugriff auf ermöglichen [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] befinden sich in der <xref:System.Drawing?displayProperty=nameWithType> Namespace und dessen untergeordneten Namespaces.  
@@ -118,4 +118,5 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
  [!code-vb[System.Windows.Forms.FlashTrackBar#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#3)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das ausgeführt wird.](how-to-create-a-windows-forms-control-that-shows-progress.md)
+
+- [Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das den Fortschritt anzeigt](how-to-create-a-windows-forms-control-that-shows-progress.md)

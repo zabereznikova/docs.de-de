@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ee3e96a25a224fb5b025e22fa43169a64f6c0d2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 8ffcc3a079e7e9a9d69622dc6666bb0e7641d4e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155466"
 ---
 # <a name="isymunmanagedwritersetsymattribute-method"></a>ISymUnmanagedWriter::SetSymAttribute-Methode
 Definiert ein benutzerdefiniertes Attribut anhand seines Namens an. Diese Attribute sind in den Symbolspeicher im Gegensatz zu benutzerdefinierten Metadaten-Attribute enthalten.  
@@ -57,4 +57,5 @@ HRESULT SetSymAttribute(
  **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ISymUnmanagedWriter-Schnittstelle](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

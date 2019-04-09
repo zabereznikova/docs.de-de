@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control patterns, Toggle
 - UI Automation, Toggle control pattern
 ms.assetid: 3cfe875f-b0c0-413d-9703-5f14e6a1a30e
-ms.openlocfilehash: 75659182fae64c548fe67090b13d43a212e6abae
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cd14a20920b11cb198cfc91fd9be6ef83ca05c17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679033"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182149"
 ---
 # <a name="implementing-the-ui-automation-toggle-control-pattern"></a>Implementieren des Toggle-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "57679033"
   
 -   Ein Steuerelement muss seinen <xref:System.Windows.Automation.ToggleState> in der folgenden Reihenfolge durchlaufen: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> und <xref:System.Windows.Automation.ToggleState.Indeterminate>(sofern unterstützt).  
   
--   <xref:System.Windows.Automation.TogglePattern> bietet aufgrund der Probleme im Rahmen der direkten Einstellung eines CheckBox-Steuerelements mit drei Zuständen ohne Durchlaufen seiner entsprechenden <xref:System.Windows.Automation.ToggleState> -Sequenz keine „SetState(newState)“-Methode.  
+-   <xref:System.Windows.Automation.TogglePattern> bietet eine Methode SetState(newState) aufgrund von Problemen im Zusammenhang mit der direkten Einstellung eines Kontrollkästchens Zuständen ohne durchlaufen seiner entsprechenden keine <xref:System.Windows.Automation.ToggleState> Sequenz.  
   
 -   Das RadioButton-Steuerelement implementiert <xref:System.Windows.Automation.Provider.IToggleProvider>nicht, da es seine gültigen Zustände nicht durchlaufen kann.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "57679033"
   
 |Erforderliche Member|Memberart|Hinweise|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Methode|Keine|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Eigenschaft|Keine|  
+|<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Methode|Keiner|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Eigenschaft|Keiner|  
   
  Diesem Steuerelementmuster sind keine Ereignisse zugeordnet.  
   
@@ -49,6 +49,7 @@ ms.locfileid: "57679033"
  Diesem Steuerelementmuster sind keine Ausnahmen zugeordnet.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

@@ -10,20 +10,19 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 20d90f96647989be35bf2c9cdf6243e8e868cd1e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361368"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169610"
 ---
 # <a name="documents-in-wpf"></a>Dokumente in WPF
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet eine große Auswahl an Dokumentfunktionen zum Erstellen von Inhalten mit hoher Wiedergabetreue, auf die im Vergleich zu früheren Generationen von [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] leichter zugegriffen werden kann und die auch leichter zu lesen sind. Neben erweiterten Funktionen und verbesserter Qualität bietet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] auch integrierte Dienste für Dokumentanzeige, Packen und Sicherheit. Dieses Thema enthält eine Einführung zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Dokumenttypen und dem Packen von Dokumenten.  
-  
-  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet eine große Auswahl an Dokumentfunktionen, mit denen die Erstellung von Inhalten mit hoher Wiedergabetreue, leichter zugegriffen wird und als in früheren Generationen von gelesen werden sollen [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Neben erweiterten Funktionen und verbesserter Qualität bietet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] auch integrierte Dienste für Dokumentanzeige, Packen und Sicherheit. Dieses Thema enthält eine Einführung zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Dokumenttypen und dem Packen von Dokumenten.  
+
 <a name="types_of_documents"></a>   
 ## <a name="types-of-documents"></a>Dokumenttypen  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] teilt Dokumente hinsichtlich ihres Verwendungszwecks in zwei große Kategorien: „fixierte Dokumente“ und „Flussdokumente“.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] unterteilt Dokumente in zwei große Kategorien basierend auf deren beabsichtigte Verwendung an. Diese Dokumentkategorien bezeichnet "fixierte Dokumente" und "Flussdokumente".  
   
  Fixierte Dokumente werden für Anwendungen verwendet, die unabhängig von der verwendeten Anzeige- oder Druckerhardware eine genaue [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)]-Darstellung erfordern. Typische Verwendungen für fixierte Dokumente sind Desktoppublishing, Textverarbeitung und Formularlayout, bei denen die Beibehaltung des ursprünglichen Seitenentwurfs sehr wichtig ist. Ein fixiertes Dokument behält die exakte Positionierung von Inhaltselementen als Teil seines Layouts bei, unabhängig davon, welches Anzeige- oder Druckgerät verwendet wird. Beispielsweise wird die Seite eines fixierten Dokuments auf einem 96-DPI-Anzeigegerät genau gleich angezeigt wie bei einem Laserdrucker mit 600-DPI-Auflösung oder in einem 4800-DPI-Fotosatz. Das Seitenlayout bleibt in allen Fällen gleich, während die Qualität des Dokuments entsprechend der Funktionen der einzelnen Geräte maximiert wird.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "57361368"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>Text in der Benutzeroberfläche  
- Text kann nicht nur Dokumenten hinzugefügt werden, sondern wird auch in Benutzeroberflächen von Anwendungen, wie z.B. Formularen, verwendet. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enthält zahlreiche Steuerelemente zum Zeichnen von Text auf dem Bildschirm. Jedes Steuerelement ist einem bestimmten Szenario zugeordnet und besitzt eine eigene Liste von Funktionen und Einschränkungen. Im Allgemeinen die <xref:System.Windows.Controls.TextBlock> Element sollte verwendet werden, wenn nur eingeschränkte Textelemente-Unterstützung erforderlich ist, z. B. einem kurzen Satz in einem [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> kann verwendet werden, wenn nur minimale textunterstützung erforderlich ist. Weitere Informationen finden Sie unter [Übersicht über TextBlock](../controls/textblock-overview.md).  
+ Text kann nicht nur Dokumenten hinzugefügt werden, sondern wird auch in Benutzeroberflächen von Anwendungen, wie z.B. Formularen, verwendet. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enthält mehrere Steuerelemente, die zum Zeichnen von Text auf dem Bildschirm. Jedes Steuerelement ist einem bestimmten Szenario zugeordnet und besitzt eine eigene Liste von Funktionen und Einschränkungen. Im Allgemeinen die <xref:System.Windows.Controls.TextBlock> Element sollte verwendet werden, wenn nur eingeschränkte Textelemente-Unterstützung erforderlich ist, z. B. einem kurzen Satz in einem [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> kann verwendet werden, wenn nur minimale textunterstützung erforderlich ist. Weitere Informationen finden Sie unter [Übersicht über TextBlock](../controls/textblock-overview.md).  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>Packen von Dokumenten  
@@ -62,7 +61,7 @@ ms.locfileid: "57361368"
   
  Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Paketarchitektur dient als Grundlage für eine Vielzahl von wichtigen Technologien:  
   
--   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Dokumente, die [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] entsprechen  
+-   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] Dokumente, die mit der [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)].  
   
 -   Microsoft Office „12“-Dokumente im Open XML-Format (.docx)  
   
@@ -124,7 +123,7 @@ ms.locfileid: "57361368"
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>XPS-Dokumente  
- Ein [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]-Dokument ist ein Paket mit einem oder mehreren fixierten Dokumenten sowie allen zum Rendern notwendigen Ressourcen und Informationen.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ist außerdem das native [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]-Druckerspooler-Dateiformat.  Ein <xref:System.Windows.Xps.Packaging.XpsDocument> ist im standard-ZIP-Dataset gespeichert und kann eine Kombination aus XML- und binären Komponenten, z. B. Bild-und Schriftartdateien enthalten. [PackageRelationships](#PackageRelationships) werden zum Definieren der Abhängigkeiten zwischen Inhalt und Ressourcen verwendet, die zum vollständigen Rendern eines Dokuments erforderlich sind.  Die <xref:System.Windows.Xps.Packaging.XpsDocument> Entwurf bietet eine einzelne, High-Fidelity-Document-Projektmappe, die zahlreiche Verwendungen unterstützt:  
+ [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] Dokument ist ein Paket mit einem oder mehreren fixierten Dokumenten sowie alle Ressourcen und Informationen, die zum Rendern erforderlich.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ist außerdem das Native [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] Druckerspooler-Dateiformat.  Ein <xref:System.Windows.Xps.Packaging.XpsDocument> ist im standard-ZIP-Dataset gespeichert und kann eine Kombination aus XML- und binären Komponenten, z. B. Bild-und Schriftartdateien enthalten. [PackageRelationships](#PackageRelationships) werden zum Definieren der Abhängigkeiten zwischen Inhalt und Ressourcen verwendet, die zum vollständigen Rendern eines Dokuments erforderlich sind.  Die <xref:System.Windows.Xps.Packaging.XpsDocument> Entwurf bietet eine einzelne, High-Fidelity-Document-Projektmappe, die zahlreiche Verwendungen unterstützt:  
   
 -   Lesen, Schreiben und Speichern der Inhalte und Ressourcen von fixierten Dokumenten als eine einzelne, portable und leicht zu verteilende Datei  
   
@@ -135,6 +134,7 @@ ms.locfileid: "57361368"
 -   Direktes Weiterleiten von Dokumenten an einen [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-kompatiblen Drucker  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Documents.FixedDocument>
 - <xref:System.Windows.Documents.FlowDocument>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>

@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Erstellen Sie einen Dienst, der Sitzungen erfordert'
+title: 'Vorgehensweise: Erstellen eines Diensts, der Sitzungen erfordert'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
-ms.openlocfilehash: fa151d472dbd27a62f91cd3a43339c66787dc456
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c104798fa3ef0e8b9dc43ad9cc68599b71de4011
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615441"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140490"
 ---
-# <a name="how-to-create-a-service-that-requires-sessions"></a>Vorgehensweise: Erstellen Sie einen Dienst, der Sitzungen erfordert
+# <a name="how-to-create-a-service-that-requires-sessions"></a>Vorgehensweise: Erstellen eines Diensts, der Sitzungen erfordert
 Sitzungen erstellen einen Freigabezustand zwischen zwei oder mehr Endpunkten, der nützliche Funktionen wie Rückrufe, Multi-Hop-Sicherheit und Zuordnungen zwischen Clients und Dienstinstanzen ermöglicht. Weitere Informationen zu Sitzungen in Windows Communication Foundation (WCF)-Anwendungen finden Sie unter [mithilfe von Sitzungen](../../../../docs/framework/wcf/using-sessions.md).  
   
 ### <a name="to-specify-that-a-contract-require-its-binding-to-support-sessions"></a>So geben Sie an, dass die Bindung eines Vertrags Sitzungen unterstützen muss  
@@ -21,11 +21,11 @@ Sitzungen erstellen einen Freigabezustand zwischen zwei oder mehr Endpunkten, de
   
 2.  Ändern Sie <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>, das den Vertrag deklariert, durch Festlegen der <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType>-Eigenschaft auf einen der folgenden Werte:  
   
-    -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>, wenn dieser Vertrag innerhalb einer Sitzung ausgeführt werden muss.  
+    -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> Wenn dieser Vertrag innerhalb einer Sitzung ausgeführt werden muss.  
   
-    -   <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType>, wenn dieser Vertrag innerhalb einer Sitzung ausgeführt werden kann.  
+    -   <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> Wenn dieser Vertrag innerhalb einer Sitzung ausgeführt werden kann.  
   
-    -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType>, wenn dieser Vertrag nicht innerhalb einer Sitzung ausgeführt werden darf.  
+    -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> Wenn dieser Vertrag innerhalb einer Sitzung nicht ausgeführt werden muss.  
   
 3.  Konfigurieren Sie den Dienstendpunkt so, dass er eine Bindung verwendet, die Sitzungen unterstützt. Im folgenden Konfigurationsbeispiel wird die Verwendung von <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType> veranschaulicht, die eine WS`-`ReliableMessaging-Sitzung unterstützt.  
   
@@ -39,6 +39,7 @@ Sitzungen erstellen einen Freigabezustand zwischen zwei oder mehr Endpunkten, de
  [!code-xml[SCA.Session#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/sca.session/cs/hostapplication.exe.config#2)]     
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-ms.openlocfilehash: 35eca2fc0fe40db1b590f4c599baee01c9a9faf3
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: ae6ceb2ca3e541be1d7dd3e5a61a6e52b27e93c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152788"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>Vorgehensweise: Zeichnen von umbrochenem Text in einem Rechteck
 Sie können die umbrochenen Text in ein Rechteck zeichnen, mit der <xref:System.Drawing.Graphics.DrawString%2A> überladene Methode, die von der <xref:System.Drawing.Graphics> Klasse, die akzeptiert eine <xref:System.Drawing.Rectangle> oder <xref:System.Drawing.RectangleF> Parameter. Sie können auch eine <xref:System.Drawing.Brush> und <xref:System.Drawing.Font>.  
@@ -45,6 +45,7 @@ Sie können die umbrochenen Text in ein Rechteck zeichnen, mit der <xref:System.
 -   <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Zeichnen von Text mit GDI](how-to-draw-text-with-gdi.md)
 - [Verwenden von Schriftarten und Text](using-fonts-and-text.md)
 - [Vorgehensweise: Erstellen von Schriftartfamilien und Schriftarten](how-to-construct-font-families-and-fonts.md)

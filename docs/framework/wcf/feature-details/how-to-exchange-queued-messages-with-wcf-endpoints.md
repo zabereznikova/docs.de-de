@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Austauschen von Nachrichten in der Warteschlange mit wcd-Endpunkten'
+title: 'Vorgehensweise: Austauschen von Nachrichten in einer Warteschlange mit WCF-Endpunkten'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: ea052a2dd843205a8108ea48f17ea84577817215
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 98cb62c0d3f82a90ee96797a34600473dbe4dc11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179165"
 ---
-# <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Vorgehensweise: Austauschen von Nachrichten in der Warteschlange mit wcd-Endpunkten
+# <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Vorgehensweise: Austauschen von Nachrichten in einer Warteschlange mit WCF-Endpunkten
 Warteschlangen stellen Sie sicher, dass zuverlässiges messaging zwischen einem Client und einen Windows Communication Foundation (WCF)-Dienst auftreten kann, selbst wenn der Dienst zum Zeitpunkt der Kommunikation nicht verfügbar ist. Die folgenden Verfahren zeigen, wie Sie sicherstellen, stabile Kommunikation zwischen einem Client und einem Dienst mit den standardmäßigen Bindung in der Warteschlange beim Implementieren des WCF-Diensts.  
   
  In diesem Abschnitt wird erläutert, wie Sie mit <xref:System.ServiceModel.NetMsmqBinding> für die Kommunikation zwischen einem WCF-Client und einem WCF-Dienst in der Warteschlange.  
@@ -42,9 +42,7 @@ Warteschlangen stellen Sie sicher, dass zuverlässiges messaging zwischen einem 
      [!code-vb[S_Msmq_Transacted#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#4)]  
   
 5.  Definieren Sie einen <xref:System.ServiceModel.Description.ServiceEndpoint> in einer Konfiguration, der die Dienstadresse festlegt und die Standard-<xref:System.ServiceModel.NetMsmqBinding>-Bindung verwendet. Weitere Informationen zur Verwendung von WCF-Konfiguration finden Sie unter [Konfigurieren von WCF-Dienste](../configuring-services.md).  
-  
-  
-  
+
 6.  Erstellen Sie einen Host für den `OrderProcessing`-Dienst mit <xref:System.ServiceModel.ServiceHost>, der Nachrichten aus der Warteschlange liest und sie verarbeitet. Öffnen Sie den Diensthost, um den Dienst verfügbar zu machen. Zeigen Sie eine Meldung an, die den Benutzer darüber informiert, dass er den Dienst durch Drücken einer beliebigen Taste beenden kann. Rufen Sie `ReadLine` auf, damit auf das Drücken einer Taste gewartet und dann der Dienst geschlossen wird.  
   
      [!code-csharp[S_Msmq_Transacted#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#6)]
@@ -59,9 +57,7 @@ Warteschlangen stellen Sie sicher, dass zuverlässiges messaging zwischen einem 
     ```  
   
 2.  Definieren Sie einen <xref:System.ServiceModel.Description.ServiceEndpoint> in einer Konfiguration, die die Adresse festlegt und die Standard-<xref:System.ServiceModel.NetMsmqBinding>-Bindung verwendet, wie im folgenden Beispiel gezeigt.  
-  
-  
-  
+
 3.  Erstellen Sie einen Transaktionsbereich zum Schreiben in die Transaktionswarteschlange, rufen die `SubmitPurchaseOrder` Vorgang und Schließen des WCF-Clients, wie im folgenden Beispiel gezeigt.  
   
      [!code-csharp[S_Msmq_Transacted#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#8)]
@@ -75,19 +71,16 @@ Warteschlangen stellen Sie sicher, dass zuverlässiges messaging zwischen einem 
   
  [!code-csharp[S_Msmq_Transacted#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/hostapp.cs#10)]
  [!code-vb[S_Msmq_Transacted#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/hostapp.vb#10)]  
-  
-  
-  
+
  [!code-csharp[S_Msmq_Transacted#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/client.cs#12)]
  [!code-vb[S_Msmq_Transacted#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/client.vb#12)]  
-  
-  
-  
+
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.NetMsmqBinding>
 - [Abgewickelte MSMQ-Bindung](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)
-- [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [Vorgehensweise: Austauschen von Nachrichten mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Vorgehensweise: Nachrichtenaustausch mit WCF-Endpunkten und Message Queuing-Anwendungen](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Windows Communication Foundation zu Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [Installieren von Message Queuing (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [Message Queuing zu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)

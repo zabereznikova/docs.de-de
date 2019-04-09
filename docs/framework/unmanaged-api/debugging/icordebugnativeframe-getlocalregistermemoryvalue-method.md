@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3a174953877d70a295e659220e71c337e45f392
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 26cd30be591c4167fa6a6e4d19ba9d1c909c6428
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495233"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145768"
 ---
 # <a name="icordebugnativeframegetlocalregistermemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalRegisterMemoryValue-Methode
 Ruft den Wert eines Arguments oder lokale Variable, die das niedrige Word und das hohe Word, werden in der Speicheradresse gespeichert, und registrieren Sie sich, bzw. für diese systemeigene Rahmen angegeben.  
@@ -65,4 +65,3 @@ HRESULT GetLocalRegisterMemoryValue (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-

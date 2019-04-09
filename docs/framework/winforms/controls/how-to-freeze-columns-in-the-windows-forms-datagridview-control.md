@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Einfrieren von Spalten im DataGridView-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Fixieren von Spalten im DataGridView-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: 640b6a9128758edfc22b5c9be971034c9e45fc70
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a0b77a7356b09a5cc95ec165a62c45852f542b8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723867"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187421"
 ---
-# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Einfrieren von Spalten im DataGridView-Steuerelement in Windows Forms
+# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Fixieren von Spalten im DataGridView-Steuerelement in Windows Forms
 Wenn Benutzer Daten anzeigen, die in einem <xref:System.Windows.Forms.DataGridView>-Steuerelement in Windows Forms angezeigt werden, müssen sie mitunter häufig auf eine bestimmte Spalte oder Gruppe von Spalten zugreifen. Wenn Sie beispielsweise eine Tabelle mit Kundendaten anzeigen, die viele Spalten enthält, ist es hilfreich, wenn die Namen der Kunden immer angezeigt werden, während andere Spalten außerhalb des sichtbaren Bereichs liegen.  
   
  Zu diesem Zweck können Sie Spalten im Steuerelement fixieren. Wenn Sie eine Spalte fixieren, werden automatisch auch alle Spalten links daneben (bzw. rechts daneben in von rechts nach links geschriebenen Sprachen) fixiert. Fixierte Spalten behalten ihre Position bei, während alle anderen Spalten bei einem Bildlauf mitwandern.  
@@ -43,6 +43,7 @@ Wenn Benutzer Daten anzeigen, die in einem <xref:System.Windows.Forms.DataGridVi
 -   Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
 - [Grundlegende Spalten-, Zeilen- und Zellfunktionen im DataGridView-Steuerelement in Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)

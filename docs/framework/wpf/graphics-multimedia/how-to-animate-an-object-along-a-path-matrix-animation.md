@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Animieren eines Objekts auf einem Pfad (MatrixAnimation)'
+title: 'Vorgehensweise: Animieren eines Objekts auf einem Pfad (Matrixanimation)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation)
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
-ms.openlocfilehash: c0c4f1fad5ab6b8d30e6809aa866b4629d08af23
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab15126680b7d8c6936246a7dae2f67c7541233b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363734"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190924"
 ---
-# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Vorgehensweise: Animieren eines Objekts auf einem Pfad (MatrixAnimation)
+# <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Vorgehensweise: Animieren eines Objekts auf einem Pfad (Matrixanimation)
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> Klasse, um ein Objekt entlang eines Pfads zu animieren, die von definiert ist eine <xref:System.Windows.Media.PathGeometry>.  
   
 ## <a name="example"></a>Beispiel  
@@ -35,6 +35,7 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.Matr
  Das vollständige Beispiel finden Sie unter [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028). Weitere Informationen zu geometrischen Pfaden finden Sie unter den [Übersicht über die Geometrie](geometry-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Animationen](animation-overview.md)
 - [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](path-animation-how-to-topics.md)
+- [Gewusst-wie-Themen zur Pfadanimation](path-animation-how-to-topics.md)

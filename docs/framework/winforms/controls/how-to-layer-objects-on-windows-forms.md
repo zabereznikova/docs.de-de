@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Überlagern von Objekten in Windows Forms'
+title: 'Vorgehensweise: Überlagern von Objekten in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: ea97e26d31d2cdda353b6ada554cac27c5b56c62
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2b02e5e1a4d9872cc89a26b25a44c226ee545a88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166009"
 ---
-# <a name="how-to-layer-objects-on-windows-forms"></a>Vorgehensweise: Überlagern von Objekten in Windows Forms
+# <a name="how-to-layer-objects-on-windows-forms"></a>Vorgehensweise: Überlagern von Objekten in Windows Forms
 Beim Erstellen einer komplexen Benutzeroberfläche, oder mit einem Formular der multiple Document Interface (MDI) arbeiten, sollten Sie häufig layer-Steuerelemente und untergeordnete Formulare komplexere Benutzeroberflächen (UI) erstellen. Zum Verschieben und das Verfolgen von Steuerelemente und Fenster innerhalb des Kontexts einer Gruppe, bearbeiten Sie die Z-Reihenfolge. *Z-Reihenfolge* ist die Schichtung der Steuerelemente in einem Formular entlang des Formulars z-Achse (Tiefe). Das Fenster am Anfang der Z-Reihenfolge überschneidet sich mit allen anderen Fenstern. Alle anderen Fenster überlappen, das Fenster am unteren Rand der Z-Reihenfolge.  
   
 > [!NOTE]
@@ -53,8 +53,9 @@ Beim Erstellen einer komplexen Benutzeroberfläche, oder mit einem Formular der 
 >  Windows Forms unterstützt *steuerelementkapselung*. Steuerelementkapselung umfasst eine Reihe von Steuerelementen in einem enthaltenden Steuerelement, z. B. eine Anzahl von platzieren <xref:System.Windows.Forms.RadioButton> -Steuerelementen innerhalb einer <xref:System.Windows.Forms.GroupBox> Steuerelement. Sie können dann die Steuerelemente innerhalb des enthaltenden Steuerelements zusätzliche. Die Steuerelemente, verschieben das Gruppenfeld verschoben werden, da sie darin enthalten sind.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Windows Forms-Steuerelemente](index.md)
-- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
-- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
-- [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)
+- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
+- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
+- [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3714f31d0ab58584a8671055cf4c607f04a832c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4067c1fbcf99c903c892eaec58262d95569114b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611058"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173419"
 ---
 # <a name="ihostassemblystore-interface"></a>IHostAssemblyStore-Schnittstelle
 Enthält Methoden, die einen Host zum Laden von Assemblys und Modulen unabhängig von der die common Language Runtime (CLR) zu ermöglichen.  
@@ -54,6 +54,7 @@ Enthält Methoden, die einen Host zum Laden von Assemblys und Modulen unabhängi
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICLRAssemblyReferenceList-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
