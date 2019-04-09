@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8904f816f075b2c837f5c591ddb6697ba5a241f6
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 39ce3e8329c4ff32b55341127f68a800246677df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478560"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169948"
 ---
-# <a name="icordebugmanagedcallbackloadclass-method"></a><span data-ttu-id="4cd15-102">ICorDebugManagedCallback::LoadClass-Methode</span><span class="sxs-lookup"><span data-stu-id="4cd15-102">ICorDebugManagedCallback::LoadClass Method</span></span>
-<span data-ttu-id="4cd15-103">Benachrichtigt den Debugger, dass eine Klasse geladen wurde.</span><span class="sxs-lookup"><span data-stu-id="4cd15-103">Notifies the debugger that a class has been loaded.</span></span>  
+# <a name="icordebugmanagedcallbackloadclass-method"></a><span data-ttu-id="58d84-102">ICorDebugManagedCallback::LoadClass-Methode</span><span class="sxs-lookup"><span data-stu-id="58d84-102">ICorDebugManagedCallback::LoadClass Method</span></span>
+<span data-ttu-id="58d84-103">Benachrichtigt den Debugger, dass eine Klasse geladen wurde.</span><span class="sxs-lookup"><span data-stu-id="58d84-103">Notifies the debugger that a class has been loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4cd15-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4cd15-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="58d84-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="58d84-104">Syntax</span></span>  
   
 ```  
 HRESULT LoadClass (  
@@ -36,27 +36,28 @@ HRESULT LoadClass (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="4cd15-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="4cd15-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="58d84-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="58d84-105">Parameters</span></span>  
  `pAppDomain`  
- <span data-ttu-id="4cd15-106">[in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in der die Klasse geladen wurde.</span><span class="sxs-lookup"><span data-stu-id="4cd15-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the class has been loaded.</span></span>  
+ <span data-ttu-id="58d84-106">[in] Ein Zeiger auf ein ICorDebugAppDomain-Objekt, das die Anwendungsdomäne darstellt, in der die Klasse geladen wurde.</span><span class="sxs-lookup"><span data-stu-id="58d84-106">[in] A pointer to an ICorDebugAppDomain object that represents the application domain into which the class has been loaded.</span></span>  
   
  `c`  
- <span data-ttu-id="4cd15-107">[in] Ein Zeiger auf ein ICorDebugClass-Objekt, das die Klasse darstellt.</span><span class="sxs-lookup"><span data-stu-id="4cd15-107">[in] A pointer to an ICorDebugClass object that represents the class.</span></span>  
+ <span data-ttu-id="58d84-107">[in] Ein Zeiger auf ein ICorDebugClass-Objekt, das die Klasse darstellt.</span><span class="sxs-lookup"><span data-stu-id="58d84-107">[in] A pointer to an ICorDebugClass object that represents the class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4cd15-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4cd15-108">Remarks</span></span>  
- <span data-ttu-id="4cd15-109">Dieser Rückruf erfolgt nur, wenn Laden von Klassen für das Modul aktiviert wurde, die die Klasse enthält.</span><span class="sxs-lookup"><span data-stu-id="4cd15-109">This callback occurs only if class loading has been enabled for the module that contains the class.</span></span> <span data-ttu-id="4cd15-110">Laden von Klassen ist bei dynamischen Modulen immer aktiviert.</span><span class="sxs-lookup"><span data-stu-id="4cd15-110">Class loading is always enabled for dynamic modules.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="58d84-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="58d84-108">Remarks</span></span>  
+ <span data-ttu-id="58d84-109">Dieser Rückruf erfolgt nur, wenn Laden von Klassen für das Modul aktiviert wurde, die die Klasse enthält.</span><span class="sxs-lookup"><span data-stu-id="58d84-109">This callback occurs only if class loading has been enabled for the module that contains the class.</span></span> <span data-ttu-id="58d84-110">Laden von Klassen ist bei dynamischen Modulen immer aktiviert.</span><span class="sxs-lookup"><span data-stu-id="58d84-110">Class loading is always enabled for dynamic modules.</span></span>  
   
- <span data-ttu-id="4cd15-111">Die `LoadClass` Rückruf stellt einen geeigneten Zeitpunkt zum Binden von Haltepunkten an neu generierten Klassen in dynamischen Modulen.</span><span class="sxs-lookup"><span data-stu-id="4cd15-111">The `LoadClass` callback provides an appropriate time to bind breakpoints to newly generated classes in dynamic modules.</span></span>  
+ <span data-ttu-id="58d84-111">Die `LoadClass` Rückruf stellt einen geeigneten Zeitpunkt zum Binden von Haltepunkten an neu generierten Klassen in dynamischen Modulen.</span><span class="sxs-lookup"><span data-stu-id="58d84-111">The `LoadClass` callback provides an appropriate time to bind breakpoints to newly generated classes in dynamic modules.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4cd15-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4cd15-112">Requirements</span></span>  
- <span data-ttu-id="4cd15-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4cd15-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="58d84-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="58d84-112">Requirements</span></span>  
+ <span data-ttu-id="58d84-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="58d84-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4cd15-114">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4cd15-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="58d84-114">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="58d84-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4cd15-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4cd15-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="58d84-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="58d84-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4cd15-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4cd15-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="58d84-116">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="58d84-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="4cd15-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4cd15-117">See also</span></span>
-- [<span data-ttu-id="4cd15-118">UnloadClass-Methode</span><span class="sxs-lookup"><span data-stu-id="4cd15-118">UnloadClass Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)
-- [<span data-ttu-id="4cd15-119">ICorDebugManagedCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="4cd15-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="58d84-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="58d84-117">See also</span></span>
+
+- [<span data-ttu-id="58d84-118">UnloadClass-Methode</span><span class="sxs-lookup"><span data-stu-id="58d84-118">UnloadClass Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-unloadclass-method.md)
+- [<span data-ttu-id="58d84-119">ICorDebugManagedCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="58d84-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

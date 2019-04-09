@@ -9,25 +9,26 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: cbed07ac08005e801b56b9538f46361df723bcb0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5e8b1b30fc50318882ca7a7f5ed2a4827d5446c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367110"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128660"
 ---
-# <a name="scrollviewer"></a><span data-ttu-id="c91e6-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="c91e6-102">ScrollViewer</span></span>
-<span data-ttu-id="c91e6-103">Die <xref:System.Windows.Controls.ScrollViewer> Steuerelement erstellt einen bildlauffähigen Bereich, in dem Inhalte horizontal oder vertikal Bildlauf möglich.</span><span class="sxs-lookup"><span data-stu-id="c91e6-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
+# <a name="scrollviewer"></a><span data-ttu-id="08a19-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="08a19-102">ScrollViewer</span></span>
+<span data-ttu-id="08a19-103">Die <xref:System.Windows.Controls.ScrollViewer> Steuerelement erstellt einen bildlauffähigen Bereich, in dem Inhalte horizontal oder vertikal Bildlauf möglich.</span><span class="sxs-lookup"><span data-stu-id="08a19-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c91e6-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="c91e6-104">In This Section</span></span>  
- [<span data-ttu-id="c91e6-105">Übersicht über ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="c91e6-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
- [<span data-ttu-id="c91e6-106">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="c91e6-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="08a19-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="08a19-104">In This Section</span></span>  
+ [<span data-ttu-id="08a19-105">Übersicht über ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="08a19-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
+ [<span data-ttu-id="08a19-106">Gewusst wie-Themen</span><span class="sxs-lookup"><span data-stu-id="08a19-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="c91e6-107">Referenz</span><span class="sxs-lookup"><span data-stu-id="c91e6-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="08a19-107">Referenz</span><span class="sxs-lookup"><span data-stu-id="08a19-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="c91e6-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c91e6-108">See also</span></span>
-- [<span data-ttu-id="c91e6-109">Übersicht über Panel-Elemente</span><span class="sxs-lookup"><span data-stu-id="c91e6-109">Panels Overview</span></span>](panels-overview.md)
-- [<span data-ttu-id="c91e6-110">Layout</span><span class="sxs-lookup"><span data-stu-id="c91e6-110">Layout</span></span>](../advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="08a19-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="08a19-108">See also</span></span>
+
+- [<span data-ttu-id="08a19-109">Übersicht über Panel-Elemente</span><span class="sxs-lookup"><span data-stu-id="08a19-109">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="08a19-110">Layout</span><span class="sxs-lookup"><span data-stu-id="08a19-110">Layout</span></span>](../advanced/layout.md)

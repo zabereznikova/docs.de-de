@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 90d993bc6b947d309ce1a0fb10ad231a429be567
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3106c6680750826306cffb31e599ee2260bf4ad7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136447"
 ---
-# <a name="isymencunmanagedmethodgetlinefromoffset-method"></a><span data-ttu-id="567b0-102">ISymENCUnmanagedMethod::GetLineFromOffset-Methode</span><span class="sxs-lookup"><span data-stu-id="567b0-102">ISymENCUnmanagedMethod::GetLineFromOffset Method</span></span>
-<span data-ttu-id="567b0-103">Ruft die Zeileninformationen, die ein Offset zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="567b0-103">Gets the line information associated with an offset.</span></span> <span data-ttu-id="567b0-104">Wenn der Offsetparameter (`dwOffset`) ein Sequenzpunkt ist diese Methode ruft die Zeileninformationen ab dem Offset des vorherigen zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="567b0-104">If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.</span></span>  
+# <a name="isymencunmanagedmethodgetlinefromoffset-method"></a><span data-ttu-id="ac453-102">ISymENCUnmanagedMethod::GetLineFromOffset-Methode</span><span class="sxs-lookup"><span data-stu-id="ac453-102">ISymENCUnmanagedMethod::GetLineFromOffset Method</span></span>
+<span data-ttu-id="ac453-103">Ruft die Zeileninformationen, die ein Offset zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ac453-103">Gets the line information associated with an offset.</span></span> <span data-ttu-id="ac453-104">Wenn der Offsetparameter (`dwOffset`) ein Sequenzpunkt ist diese Methode ruft die Zeileninformationen ab dem Offset des vorherigen zugeordnet.</span><span class="sxs-lookup"><span data-stu-id="ac453-104">If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="567b0-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="567b0-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ac453-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="ac453-105">Syntax</span></span>  
   
 ```  
 HRESULT GetLineFromOffset(  
@@ -39,30 +39,31 @@ HRESULT GetLineFromOffset(
      [out] ULONG32*  pdwStartOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="567b0-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="567b0-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ac453-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="ac453-106">Parameters</span></span>  
  `dwOffset`  
- <span data-ttu-id="567b0-107">[in] Ein `ULONG32` , der den Offset enthält.</span><span class="sxs-lookup"><span data-stu-id="567b0-107">[in] A `ULONG32` that contains the offset.</span></span>  
+ <span data-ttu-id="ac453-107">[in] Ein `ULONG32` , der den Offset enthält.</span><span class="sxs-lookup"><span data-stu-id="ac453-107">[in] A `ULONG32` that contains the offset.</span></span>  
   
  `pline`  
- <span data-ttu-id="567b0-108">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Zeile.</span><span class="sxs-lookup"><span data-stu-id="567b0-108">[out] A pointer to a `ULONG32` that receives the line.</span></span>  
+ <span data-ttu-id="ac453-108">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Zeile.</span><span class="sxs-lookup"><span data-stu-id="ac453-108">[out] A pointer to a `ULONG32` that receives the line.</span></span>  
   
  `pcolumn`  
- <span data-ttu-id="567b0-109">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Spalte.</span><span class="sxs-lookup"><span data-stu-id="567b0-109">[out] A pointer to a `ULONG32` that receives the column.</span></span>  
+ <span data-ttu-id="ac453-109">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Spalte.</span><span class="sxs-lookup"><span data-stu-id="ac453-109">[out] A pointer to a `ULONG32` that receives the column.</span></span>  
   
  `pendLine`  
- <span data-ttu-id="567b0-110">[out] Ein Zeiger auf eine `ULONG32` , empfängt die letzte Zeile.</span><span class="sxs-lookup"><span data-stu-id="567b0-110">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
+ <span data-ttu-id="ac453-110">[out] Ein Zeiger auf eine `ULONG32` , empfängt die letzte Zeile.</span><span class="sxs-lookup"><span data-stu-id="ac453-110">[out] A pointer to a `ULONG32` that receives the end line.</span></span>  
   
  `pendColumn`  
- <span data-ttu-id="567b0-111">[out] Ein Zeiger auf eine `ULONG32` , empfängt die letzte Spalte.</span><span class="sxs-lookup"><span data-stu-id="567b0-111">[out] A pointer to a `ULONG32` that receives the end column.</span></span>  
+ <span data-ttu-id="ac453-111">[out] Ein Zeiger auf eine `ULONG32` , empfängt die letzte Spalte.</span><span class="sxs-lookup"><span data-stu-id="ac453-111">[out] A pointer to a `ULONG32` that receives the end column.</span></span>  
   
  `pdwStartOffset`  
- <span data-ttu-id="567b0-112">[out] Ein Zeiger auf eine `ULONG32` , das den zugeordneten Sequenzpunkt empfängt.</span><span class="sxs-lookup"><span data-stu-id="567b0-112">[out] A pointer to a `ULONG32` that receives the associated sequence point.</span></span>  
+ <span data-ttu-id="ac453-112">[out] Ein Zeiger auf eine `ULONG32` , das den zugeordneten Sequenzpunkt empfängt.</span><span class="sxs-lookup"><span data-stu-id="ac453-112">[out] A pointer to a `ULONG32` that receives the associated sequence point.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="567b0-113">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="567b0-113">Return Value</span></span>  
- <span data-ttu-id="567b0-114">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="567b0-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ac453-113">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="ac453-113">Return Value</span></span>  
+ <span data-ttu-id="ac453-114">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="ac453-114">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="567b0-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="567b0-115">Requirements</span></span>  
- <span data-ttu-id="567b0-116">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="567b0-116">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ac453-115">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ac453-115">Requirements</span></span>  
+ <span data-ttu-id="ac453-116">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ac453-116">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="567b0-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="567b0-117">See also</span></span>
-- [<span data-ttu-id="567b0-118">ISymENCUnmanagedMethod-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="567b0-118">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ac453-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ac453-117">See also</span></span>
+
+- [<span data-ttu-id="ac453-118">ISymENCUnmanagedMethod-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ac453-118">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
