@@ -17,32 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b0acee31017fd02ac3e51f9e585669b9c90ec48
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7ec6e25452a40ae67570badde8a883878d103f95
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467015"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187399"
 ---
-# <a name="isymunmanagedmethodgettoken-method"></a><span data-ttu-id="9dcaf-102">ISymUnmanagedMethod::GetToken-Methode</span><span class="sxs-lookup"><span data-stu-id="9dcaf-102">ISymUnmanagedMethod::GetToken Method</span></span>
-<span data-ttu-id="9dcaf-103">Gibt das Metadatentoken für diese Methode zurück.</span><span class="sxs-lookup"><span data-stu-id="9dcaf-103">Returns the metadata token for this method.</span></span>  
+# <a name="isymunmanagedmethodgettoken-method"></a><span data-ttu-id="d0993-102">ISymUnmanagedMethod::GetToken-Methode</span><span class="sxs-lookup"><span data-stu-id="d0993-102">ISymUnmanagedMethod::GetToken Method</span></span>
+<span data-ttu-id="d0993-103">Gibt das Metadatentoken für diese Methode zurück.</span><span class="sxs-lookup"><span data-stu-id="d0993-103">Returns the metadata token for this method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9dcaf-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9dcaf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0993-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d0993-104">Syntax</span></span>  
   
 ```  
 HRESULT GetToken(  
    [out, retval]  mdMethodDef  *pToken);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9dcaf-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="9dcaf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d0993-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d0993-105">Parameters</span></span>  
  `pToken`  
- <span data-ttu-id="9dcaf-106">[out] Ein Zeiger auf eine `mdMethodDef` , empfängt die Größe in Zeichen des Puffers erforderlich, um die Metadaten enthalten.</span><span class="sxs-lookup"><span data-stu-id="9dcaf-106">[out] A pointer to a `mdMethodDef` that receives the size, in characters, of the buffer required to contain the metadata.</span></span>  
+ <span data-ttu-id="d0993-106">[out] Ein Zeiger auf eine `mdMethodDef` , empfängt die Größe in Zeichen des Puffers erforderlich, um die Metadaten enthalten.</span><span class="sxs-lookup"><span data-stu-id="d0993-106">[out] A pointer to a `mdMethodDef` that receives the size, in characters, of the buffer required to contain the metadata.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9dcaf-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="9dcaf-107">Return Value</span></span>  
- <span data-ttu-id="9dcaf-108">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="9dcaf-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d0993-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="d0993-107">Return Value</span></span>  
+ <span data-ttu-id="d0993-108">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="d0993-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9dcaf-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9dcaf-109">Requirements</span></span>  
- <span data-ttu-id="9dcaf-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9dcaf-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0993-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d0993-109">Requirements</span></span>  
+ <span data-ttu-id="d0993-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d0993-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9dcaf-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9dcaf-111">See also</span></span>
-- [<span data-ttu-id="9dcaf-112">ISymUnmanagedMethod-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="9dcaf-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d0993-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d0993-111">See also</span></span>
+
+- [<span data-ttu-id="d0993-112">ISymUnmanagedMethod-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d0993-112">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

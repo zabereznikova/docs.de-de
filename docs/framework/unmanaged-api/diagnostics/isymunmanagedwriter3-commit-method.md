@@ -17,27 +17,28 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38d9c3eeb5cdb8b15ef5306a641910f2f4bcc9cf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f531b96211a1dd6072d62937b9f93fc17f105d4d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372346"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149044"
 ---
-# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="16f74-102">ISymUnmanagedWriter3::Commit-Methode</span><span class="sxs-lookup"><span data-stu-id="16f74-102">ISymUnmanagedWriter3::Commit Method</span></span>
-<span data-ttu-id="16f74-103">Übernimmt die Änderungen, die bisher in den Stream geschrieben.</span><span class="sxs-lookup"><span data-stu-id="16f74-103">Commits the changes written so far to the stream.</span></span>  
+# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="8570c-102">ISymUnmanagedWriter3::Commit-Methode</span><span class="sxs-lookup"><span data-stu-id="8570c-102">ISymUnmanagedWriter3::Commit Method</span></span>
+<span data-ttu-id="8570c-103">Übernimmt die Änderungen, die bisher in den Stream geschrieben.</span><span class="sxs-lookup"><span data-stu-id="8570c-103">Commits the changes written so far to the stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16f74-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="16f74-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8570c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="8570c-104">Syntax</span></span>  
   
 ```  
 HRESULT Commit();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="16f74-105">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="16f74-105">Return Value</span></span>  
- <span data-ttu-id="16f74-106">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="16f74-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8570c-105">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="8570c-105">Return Value</span></span>  
+ <span data-ttu-id="8570c-106">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="8570c-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="16f74-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="16f74-107">Requirements</span></span>  
- <span data-ttu-id="16f74-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="16f74-108">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8570c-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8570c-107">Requirements</span></span>  
+ <span data-ttu-id="8570c-108">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8570c-108">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16f74-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="16f74-109">See also</span></span>
-- [<span data-ttu-id="16f74-110">ISymUnmanagedWriter3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="16f74-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8570c-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8570c-109">See also</span></span>
+
+- [<span data-ttu-id="8570c-110">ISymUnmanagedWriter3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8570c-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

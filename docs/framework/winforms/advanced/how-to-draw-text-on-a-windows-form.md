@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zeichnen von Text in einem Windows Form'
+title: 'Vorgehensweise: Zeichnen von Text in einem Windows Form'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,35 +9,36 @@ helpviewer_keywords:
 - forms [Windows Forms], drawing text
 - text [Windows Forms], drawing
 ms.assetid: 5d2447a9-21a1-4adc-b954-5516f2bb9b2c
-ms.openlocfilehash: ed7aa89c3bd3751ed93f5bda33a26a8309d39143
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ae7749deedba03f0a63bb74099d071d5da4fe27e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703503"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172977"
 ---
-# <a name="how-to-draw-text-on-a-windows-form"></a><span data-ttu-id="f5e25-102">Vorgehensweise: Zeichnen von Text in einem Windows Form</span><span class="sxs-lookup"><span data-stu-id="f5e25-102">How to: Draw Text on a Windows Form</span></span>
-<span data-ttu-id="f5e25-103">Im folgenden Codebeispiel wird veranschaulicht, wie Sie mit der <xref:System.Drawing.Graphics.DrawString%2A> Methode der <xref:System.Drawing.Graphics> zum Zeichnen von Text in einem Formular.</span><span class="sxs-lookup"><span data-stu-id="f5e25-103">The following code example shows how to use the <xref:System.Drawing.Graphics.DrawString%2A> method of the <xref:System.Drawing.Graphics> to draw text on a form.</span></span> <span data-ttu-id="f5e25-104">Alternativ können Sie <xref:System.Windows.Forms.TextRenderer> zum Zeichnen von Text in einem Formular.</span><span class="sxs-lookup"><span data-stu-id="f5e25-104">Alternatively, you can use <xref:System.Windows.Forms.TextRenderer> for drawing text on a form.</span></span> <span data-ttu-id="f5e25-105">Weitere Informationen finden Sie unter [Vorgehensweise: Zeichnen von Text mit GDI](how-to-draw-text-with-gdi.md).</span><span class="sxs-lookup"><span data-stu-id="f5e25-105">For more information, see [How to: Draw Text with GDI](how-to-draw-text-with-gdi.md).</span></span>  
+# <a name="how-to-draw-text-on-a-windows-form"></a><span data-ttu-id="b6541-102">Vorgehensweise: Zeichnen von Text in einem Windows Form</span><span class="sxs-lookup"><span data-stu-id="b6541-102">How to: Draw Text on a Windows Form</span></span>
+<span data-ttu-id="b6541-103">Im folgenden Codebeispiel wird veranschaulicht, wie Sie mit der <xref:System.Drawing.Graphics.DrawString%2A> Methode der <xref:System.Drawing.Graphics> zum Zeichnen von Text in einem Formular.</span><span class="sxs-lookup"><span data-stu-id="b6541-103">The following code example shows how to use the <xref:System.Drawing.Graphics.DrawString%2A> method of the <xref:System.Drawing.Graphics> to draw text on a form.</span></span> <span data-ttu-id="b6541-104">Alternativ können Sie <xref:System.Windows.Forms.TextRenderer> zum Zeichnen von Text in einem Formular.</span><span class="sxs-lookup"><span data-stu-id="b6541-104">Alternatively, you can use <xref:System.Windows.Forms.TextRenderer> for drawing text on a form.</span></span> <span data-ttu-id="b6541-105">Weitere Informationen finden Sie unter [Vorgehensweise: Zeichnen von Text mit GDI](how-to-draw-text-with-gdi.md).</span><span class="sxs-lookup"><span data-stu-id="b6541-105">For more information, see [How to: Draw Text with GDI](how-to-draw-text-with-gdi.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f5e25-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f5e25-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b6541-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="b6541-106">Example</span></span>  
  [!code-cpp[System.Drawing.ConceptualHowTos#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#7)]
  [!code-csharp[System.Drawing.ConceptualHowTos#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#7)]
  [!code-vb[System.Drawing.ConceptualHowTos#7](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#7)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f5e25-107">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="f5e25-107">Compiling the Code</span></span>  
- <span data-ttu-id="f5e25-108">Sie können nicht aufgerufen werden die <xref:System.Drawing.Graphics.DrawString%2A> -Methode in der die <xref:System.Windows.Forms.Form.Load> -Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="f5e25-108">You cannot call the <xref:System.Drawing.Graphics.DrawString%2A> method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="f5e25-109">Der gezeichnete Inhalt wird nicht neu gezeichnet werden, wenn das Formular vergrößert bzw. verkleinert oder durch eine andere Form verdeckt.</span><span class="sxs-lookup"><span data-stu-id="f5e25-109">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="f5e25-110">Sie sollten damit wird den Inhalt automatisch neu gezeichnet, überschreiben die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="f5e25-110">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="b6541-107">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="b6541-107">Compiling the Code</span></span>  
+ <span data-ttu-id="b6541-108">Sie können nicht aufgerufen werden die <xref:System.Drawing.Graphics.DrawString%2A> -Methode in der die <xref:System.Windows.Forms.Form.Load> -Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="b6541-108">You cannot call the <xref:System.Drawing.Graphics.DrawString%2A> method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="b6541-109">Der gezeichnete Inhalt wird nicht neu gezeichnet werden, wenn das Formular vergrößert bzw. verkleinert oder durch eine andere Form verdeckt.</span><span class="sxs-lookup"><span data-stu-id="b6541-109">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="b6541-110">Sie sollten damit wird den Inhalt automatisch neu gezeichnet, überschreiben die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="b6541-110">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="f5e25-111">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="f5e25-111">Robust Programming</span></span>  
- <span data-ttu-id="f5e25-112">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="f5e25-112">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="b6541-111">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="b6541-111">Robust Programming</span></span>  
+ <span data-ttu-id="b6541-112">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="b6541-112">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="f5e25-113">Die Schriftart Arial ist nicht installiert.</span><span class="sxs-lookup"><span data-stu-id="f5e25-113">The Arial font is not installed.</span></span>  
+-   <span data-ttu-id="b6541-113">Die Schriftart Arial ist nicht installiert.</span><span class="sxs-lookup"><span data-stu-id="b6541-113">The Arial font is not installed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f5e25-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f5e25-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b6541-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b6541-114">See also</span></span>
+
 - <xref:System.Drawing.Graphics.DrawString%2A>
 - <xref:System.Windows.Forms.TextRenderer.DrawText%2A>
 - <xref:System.Drawing.StringFormat.FormatFlags%2A>
 - <xref:System.Drawing.StringFormatFlags>
 - <xref:System.Windows.Forms.TextFormatFlags>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
-- [<span data-ttu-id="f5e25-115">Erste Schritte mit Grafikprogrammierung</span><span class="sxs-lookup"><span data-stu-id="f5e25-115">Getting Started with Graphics Programming</span></span>](getting-started-with-graphics-programming.md)
-- [<span data-ttu-id="f5e25-116">Vorgehensweise: Zeichnen von Text mit GDI</span><span class="sxs-lookup"><span data-stu-id="f5e25-116">How to: Draw Text with GDI</span></span>](how-to-draw-text-with-gdi.md)
+- [<span data-ttu-id="b6541-115">Erste Schritte mit der Grafikprogrammierung</span><span class="sxs-lookup"><span data-stu-id="b6541-115">Getting Started with Graphics Programming</span></span>](getting-started-with-graphics-programming.md)
+- [<span data-ttu-id="b6541-116">Vorgehensweise: Zeichnen von Text mit GDI</span><span class="sxs-lookup"><span data-stu-id="b6541-116">How to: Draw Text with GDI</span></span>](how-to-draw-text-with-gdi.md)

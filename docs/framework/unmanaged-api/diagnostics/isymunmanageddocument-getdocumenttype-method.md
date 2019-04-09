@@ -17,29 +17,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 107039643e097ada1756054b2d14fcf0cbb71c00
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7694c9b736700466ac1299b9632440e133109288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493374"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154075"
 ---
-# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="652da-102">ISymUnmanagedDocument::GetDocumentType-Methode</span><span class="sxs-lookup"><span data-stu-id="652da-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
-<span data-ttu-id="652da-103">Ruft den Dokumenttyp dieses Dokuments ab.</span><span class="sxs-lookup"><span data-stu-id="652da-103">Gets the document type of this document.</span></span>  
+# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="11130-102">ISymUnmanagedDocument::GetDocumentType-Methode</span><span class="sxs-lookup"><span data-stu-id="11130-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
+<span data-ttu-id="11130-103">Ruft den Dokumenttyp dieses Dokuments ab.</span><span class="sxs-lookup"><span data-stu-id="11130-103">Gets the document type of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="652da-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="652da-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="11130-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="11130-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDocumentType(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="652da-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="652da-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="11130-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="11130-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="652da-106">[out] Zeiger auf eine Variable, die den Dokumenttyp empfängt.</span><span class="sxs-lookup"><span data-stu-id="652da-106">[out] Pointer to a variable that receives the document type.</span></span>  
+ <span data-ttu-id="11130-106">[out] Zeiger auf eine Variable, die den Dokumenttyp empfängt.</span><span class="sxs-lookup"><span data-stu-id="11130-106">[out] Pointer to a variable that receives the document type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="652da-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="652da-107">Return Value</span></span>  
- <span data-ttu-id="652da-108">S_OK, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="652da-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="11130-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="11130-107">Return Value</span></span>  
+ <span data-ttu-id="11130-108">S_OK, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="11130-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="652da-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="652da-109">See also</span></span>
-- [<span data-ttu-id="652da-110">ISymUnmanagedDocument-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="652da-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="11130-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="11130-109">See also</span></span>
+
+- [<span data-ttu-id="11130-110">ISymUnmanagedDocument-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="11130-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

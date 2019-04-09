@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7d1273c51dcfb63e3671b7b9d893e1022d55247
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2bcc837fede7e7db59bdf88a0b5434a7c1924335
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210944"
 ---
-# <a name="icorprofilerobjectenumskip-method"></a><span data-ttu-id="04d0d-102">ICorProfilerObjectEnum::Skip-Methode</span><span class="sxs-lookup"><span data-stu-id="04d0d-102">ICorProfilerObjectEnum::Skip Method</span></span>
-<span data-ttu-id="04d0d-103">Setzt den Cursor über dieser Enumerator aus seiner aktuellen Position an, damit an, dass die angegebene Anzahl von Elementen übersprungen wird.</span><span class="sxs-lookup"><span data-stu-id="04d0d-103">Advances the cursor of this enumerator from its current position so that the specified number of elements are skipped.</span></span>  
+# <a name="icorprofilerobjectenumskip-method"></a><span data-ttu-id="e07d3-102">ICorProfilerObjectEnum::Skip-Methode</span><span class="sxs-lookup"><span data-stu-id="e07d3-102">ICorProfilerObjectEnum::Skip Method</span></span>
+<span data-ttu-id="e07d3-103">Setzt den Cursor über dieser Enumerator aus seiner aktuellen Position an, damit an, dass die angegebene Anzahl von Elementen übersprungen wird.</span><span class="sxs-lookup"><span data-stu-id="e07d3-103">Advances the cursor of this enumerator from its current position so that the specified number of elements are skipped.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="04d0d-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="04d0d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e07d3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e07d3-104">Syntax</span></span>  
   
 ```  
 HRESULT Skip (  
@@ -35,21 +35,22 @@ HRESULT Skip (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="04d0d-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="04d0d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e07d3-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="e07d3-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="04d0d-106">[in] Die Anzahl von Elementen übersprungen werden soll.</span><span class="sxs-lookup"><span data-stu-id="04d0d-106">[in] The number of elements to be skipped.</span></span>  
+ <span data-ttu-id="e07d3-106">[in] Die Anzahl von Elementen übersprungen werden soll.</span><span class="sxs-lookup"><span data-stu-id="e07d3-106">[in] The number of elements to be skipped.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="04d0d-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="04d0d-107">Remarks</span></span>  
- <span data-ttu-id="04d0d-108">Die neue Position der Cursor des Enumerators: (aktuelle Position) + `celt` .</span><span class="sxs-lookup"><span data-stu-id="04d0d-108">The new position of this enumerator's cursor is: (current position) + `celt` .</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e07d3-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e07d3-107">Remarks</span></span>  
+ <span data-ttu-id="e07d3-108">Die neue Position der Cursor des Enumerators: (aktuelle Position) + `celt` .</span><span class="sxs-lookup"><span data-stu-id="e07d3-108">The new position of this enumerator's cursor is: (current position) + `celt` .</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="04d0d-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="04d0d-109">Requirements</span></span>  
- <span data-ttu-id="04d0d-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="04d0d-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e07d3-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e07d3-109">Requirements</span></span>  
+ <span data-ttu-id="e07d3-110">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e07d3-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="04d0d-111">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="04d0d-111">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e07d3-111">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e07d3-111">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="04d0d-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="04d0d-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e07d3-112">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e07d3-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="04d0d-113">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="04d0d-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="e07d3-113">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="e07d3-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="04d0d-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="04d0d-114">See also</span></span>
-- [<span data-ttu-id="04d0d-115">ICorProfilerObjectEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="04d0d-115">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+## <a name="see-also"></a><span data-ttu-id="e07d3-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e07d3-114">See also</span></span>
+
+- [<span data-ttu-id="e07d3-115">ICorProfilerObjectEnum-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e07d3-115">ICorProfilerObjectEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)

@@ -17,32 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 571db05b5ec33a0bee310afadf205ac236f7048c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ef1b8dce5c84382a9039787d2205f1ac8ccbc5bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471536"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166464"
 ---
-# <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a><span data-ttu-id="6f0c1-102">ISymENCUnmanagedMethod::GetDocumentsForMethodCount-Methode</span><span class="sxs-lookup"><span data-stu-id="6f0c1-102">ISymENCUnmanagedMethod::GetDocumentsForMethodCount Method</span></span>
-<span data-ttu-id="6f0c1-103">Ruft die Anzahl der Dokumente, die diese Methode in Zeilen umfasst.</span><span class="sxs-lookup"><span data-stu-id="6f0c1-103">Gets the number of documents that this method has lines in.</span></span>  
+# <a name="isymencunmanagedmethodgetdocumentsformethodcount-method"></a><span data-ttu-id="f8319-102">ISymENCUnmanagedMethod::GetDocumentsForMethodCount-Methode</span><span class="sxs-lookup"><span data-stu-id="f8319-102">ISymENCUnmanagedMethod::GetDocumentsForMethodCount Method</span></span>
+<span data-ttu-id="f8319-103">Ruft die Anzahl der Dokumente, die diese Methode in Zeilen umfasst.</span><span class="sxs-lookup"><span data-stu-id="f8319-103">Gets the number of documents that this method has lines in.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6f0c1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6f0c1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f8319-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f8319-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDocumentsForMethodCount(  
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6f0c1-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="6f0c1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="f8319-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="f8319-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="6f0c1-106">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des Puffers erforderlich, um die Dokumente enthalten.</span><span class="sxs-lookup"><span data-stu-id="6f0c1-106">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the documents.</span></span>  
+ <span data-ttu-id="f8319-106">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des Puffers erforderlich, um die Dokumente enthalten.</span><span class="sxs-lookup"><span data-stu-id="f8319-106">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the documents.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6f0c1-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="6f0c1-107">Return Value</span></span>  
- <span data-ttu-id="6f0c1-108">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="6f0c1-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="f8319-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="f8319-107">Return Value</span></span>  
+ <span data-ttu-id="f8319-108">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="f8319-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6f0c1-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6f0c1-109">Requirements</span></span>  
- <span data-ttu-id="6f0c1-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="6f0c1-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f8319-109">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f8319-109">Requirements</span></span>  
+ <span data-ttu-id="f8319-110">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f8319-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6f0c1-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6f0c1-111">See also</span></span>
-- [<span data-ttu-id="6f0c1-112">ISymENCUnmanagedMethod-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6f0c1-112">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="f8319-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f8319-111">See also</span></span>
+
+- [<span data-ttu-id="f8319-112">ISymENCUnmanagedMethod-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="f8319-112">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

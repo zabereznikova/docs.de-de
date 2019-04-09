@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 101e1c83d040f2f6db4585e76e4b353270dd1de1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2c3ff0c91713a6bb7449791bae6a754c43659335
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484978"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225273"
 ---
-# <a name="icorruntimehostnextdomain-method"></a><span data-ttu-id="7a632-102">ICorRuntimeHost::NextDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="7a632-102">ICorRuntimeHost::NextDomain Method</span></span>
-<span data-ttu-id="7a632-103">Ruft einen Schnittstellenzeiger auf die nächste Domäne in der Enumeration.</span><span class="sxs-lookup"><span data-stu-id="7a632-103">Gets an interface pointer to the next domain in the enumeration.</span></span>  
+# <a name="icorruntimehostnextdomain-method"></a><span data-ttu-id="419e2-102">ICorRuntimeHost::NextDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="419e2-102">ICorRuntimeHost::NextDomain Method</span></span>
+<span data-ttu-id="419e2-103">Ruft einen Schnittstellenzeiger auf die nächste Domäne in der Enumeration.</span><span class="sxs-lookup"><span data-stu-id="419e2-103">Gets an interface pointer to the next domain in the enumeration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7a632-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="7a632-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="419e2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="419e2-104">Syntax</span></span>  
   
 ```  
 HRESULT NextDomain (  
@@ -36,32 +36,33 @@ HRESULT NextDomain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7a632-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="7a632-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="419e2-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="419e2-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="7a632-106">[in] Der Enumerator, der durch einen Aufruf von erhaltene [EnumDomains](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md).</span><span class="sxs-lookup"><span data-stu-id="7a632-106">[in] The enumerator that was obtained through a call to [EnumDomains](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md).</span></span>  
+ <span data-ttu-id="419e2-106">[in] Der Enumerator, der durch einen Aufruf von erhaltene [EnumDomains](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md).</span><span class="sxs-lookup"><span data-stu-id="419e2-106">[in] The enumerator that was obtained through a call to [EnumDomains](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-enumdomains-method.md).</span></span>  
   
  `pAppDomain`  
- <span data-ttu-id="7a632-107">[out] Einen Schnittstellenzeiger auf das <xref:System._AppDomain?displayProperty=nameWithType> Typ, der die nächste Domäne in der Enumeration oder Null darstellt, wenn keine weitere Domänen vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="7a632-107">[out] An interface pointer to the <xref:System._AppDomain?displayProperty=nameWithType> type that represents the next domain in the enumeration, or null, if no more domains exist.</span></span>  
+ <span data-ttu-id="419e2-107">[out] Einen Schnittstellenzeiger auf das <xref:System._AppDomain?displayProperty=nameWithType> Typ, der die nächste Domäne in der Enumeration oder Null darstellt, wenn keine weitere Domänen vorhanden sind.</span><span class="sxs-lookup"><span data-stu-id="419e2-107">[out] An interface pointer to the <xref:System._AppDomain?displayProperty=nameWithType> type that represents the next domain in the enumeration, or null, if no more domains exist.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7a632-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="7a632-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="419e2-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="419e2-108">Return Value</span></span>  
   
-|<span data-ttu-id="7a632-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7a632-109">HRESULT</span></span>|<span data-ttu-id="7a632-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="7a632-110">Description</span></span>|  
+|<span data-ttu-id="419e2-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="419e2-109">HRESULT</span></span>|<span data-ttu-id="419e2-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="419e2-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="7a632-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="7a632-111">S_OK</span></span>|<span data-ttu-id="7a632-112">Der Vorgang war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="7a632-112">The operation was successful.</span></span>|  
-|<span data-ttu-id="7a632-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="7a632-113">S_FALSE</span></span>|<span data-ttu-id="7a632-114">Der Vorgang konnte nicht abgeschlossen, oder es gibt keine weiteren Domänen in der Enumeration.</span><span class="sxs-lookup"><span data-stu-id="7a632-114">The operation failed to complete, or there are no more domains in the enumeration.</span></span>|  
-|<span data-ttu-id="7a632-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="7a632-115">E_FAIL</span></span>|<span data-ttu-id="7a632-116">Ein Unbekannter, schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="7a632-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="7a632-117">Wenn eine Methode E_FAIL zurückgegeben wird, ist die common Language Runtime (CLR) nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="7a632-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="7a632-118">Nachfolgende Aufrufe von hosting-APIs HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="7a632-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="7a632-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="7a632-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="7a632-120">Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="7a632-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="419e2-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="419e2-111">S_OK</span></span>|<span data-ttu-id="419e2-112">Der Vorgang war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="419e2-112">The operation was successful.</span></span>|  
+|<span data-ttu-id="419e2-113">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="419e2-113">S_FALSE</span></span>|<span data-ttu-id="419e2-114">Der Vorgang konnte nicht abgeschlossen, oder es gibt keine weiteren Domänen in der Enumeration.</span><span class="sxs-lookup"><span data-stu-id="419e2-114">The operation failed to complete, or there are no more domains in the enumeration.</span></span>|  
+|<span data-ttu-id="419e2-115">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="419e2-115">E_FAIL</span></span>|<span data-ttu-id="419e2-116">Ein Unbekannter, schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="419e2-116">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="419e2-117">Wenn eine Methode E_FAIL zurückgegeben wird, ist die common Language Runtime (CLR) nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="419e2-117">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="419e2-118">Nachfolgende Aufrufe von hosting-APIs HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="419e2-118">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="419e2-119">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="419e2-119">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="419e2-120">Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="419e2-120">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="7a632-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="7a632-121">Requirements</span></span>  
- <span data-ttu-id="7a632-122">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7a632-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="419e2-121">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="419e2-121">Requirements</span></span>  
+ <span data-ttu-id="419e2-122">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="419e2-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7a632-123">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7a632-123">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="419e2-123">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="419e2-123">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="7a632-124">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="7a632-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="419e2-124">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="419e2-124">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7a632-125">**.NET Framework-Versionen:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="7a632-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="419e2-125">**.NET Framework-Versionen:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="419e2-125">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7a632-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7a632-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="419e2-126">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="419e2-126">See also</span></span>
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [<span data-ttu-id="7a632-127">ICorRuntimeHost-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="7a632-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="419e2-127">ICorRuntimeHost-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="419e2-127">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

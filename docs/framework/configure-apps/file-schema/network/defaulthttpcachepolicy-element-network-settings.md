@@ -1,5 +1,5 @@
 ---
-title: <defaultHttpCachePolicy>-Element (Netzwerkeinstellungen)
+title: <defaultHttpCachePolicy> -Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: a48fa5e4a5768f97d3aeabebe4d594ec9f498ca2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 20d9b92ca2bbffd6b98b8641e5cef5e567cb84cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177377"
 ---
-# <a name="defaulthttpcachepolicy-element-network-settings"></a><span data-ttu-id="3f09a-102">\<DefaultHttpCachePolicy >-Element (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="3f09a-102">\<defaultHttpCachePolicy> Element (Network Settings)</span></span>
-<span data-ttu-id="3f09a-103">Beschreibt, ob HTTP-Zwischenspeicherung aktiv ist und die Standardcachingrichtlinie beschreibt.</span><span class="sxs-lookup"><span data-stu-id="3f09a-103">Describes whether HTTP caching is active and describes the default caching policy.</span></span>  
+# <a name="defaulthttpcachepolicy-element-network-settings"></a><span data-ttu-id="f7b15-102">\<DefaultHttpCachePolicy >-Element (Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="f7b15-102">\<defaultHttpCachePolicy> Element (Network Settings)</span></span>
+<span data-ttu-id="f7b15-103">Beschreibt, ob HTTP-Zwischenspeicherung aktiv ist und die Standardcachingrichtlinie beschreibt.</span><span class="sxs-lookup"><span data-stu-id="f7b15-103">Describes whether HTTP caching is active and describes the default caching policy.</span></span>  
   
- <span data-ttu-id="3f09a-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="3f09a-104">\<configuration></span></span>  
-<span data-ttu-id="3f09a-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="3f09a-105">\<system.net></span></span>  
-<span data-ttu-id="3f09a-106">\<requestCaching></span><span class="sxs-lookup"><span data-stu-id="3f09a-106">\<requestCaching></span></span>  
-<span data-ttu-id="3f09a-107">\<defaultHttpCachePolicy></span><span class="sxs-lookup"><span data-stu-id="3f09a-107">\<defaultHttpCachePolicy></span></span>  
+ <span data-ttu-id="f7b15-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f7b15-104">\<configuration></span></span>  
+<span data-ttu-id="f7b15-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="f7b15-105">\<system.net></span></span>  
+<span data-ttu-id="f7b15-106">\<requestCaching></span><span class="sxs-lookup"><span data-stu-id="f7b15-106">\<requestCaching></span></span>  
+<span data-ttu-id="f7b15-107">\<defaultHttpCachePolicy></span><span class="sxs-lookup"><span data-stu-id="f7b15-107">\<defaultHttpCachePolicy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3f09a-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="3f09a-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f7b15-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="f7b15-108">Syntax</span></span>  
   
 ```xml  
 <defaultHttpCachePolicy  
@@ -34,37 +34,37 @@ ms.locfileid: "55260670"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="3f09a-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="3f09a-109">Attributes and Elements</span></span>  
- <span data-ttu-id="3f09a-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="3f09a-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f7b15-109">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="f7b15-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="f7b15-110">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="f7b15-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="3f09a-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="3f09a-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f7b15-111">Attribute</span><span class="sxs-lookup"><span data-stu-id="f7b15-111">Attributes</span></span>  
   
-|<span data-ttu-id="3f09a-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="3f09a-112">Attribute</span></span>|<span data-ttu-id="3f09a-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3f09a-113">Description</span></span>|  
+|<span data-ttu-id="f7b15-112">Attribut</span><span class="sxs-lookup"><span data-stu-id="f7b15-112">Attribute</span></span>|<span data-ttu-id="f7b15-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f7b15-113">Description</span></span>|  
 |---------------|-----------------|  
-|`maximumAge`|<span data-ttu-id="3f09a-114">Gibt das maximale Zeitintervall an, bevor ein zwischengespeichertes Objekt als abgelaufen gekennzeichnet wird.</span><span class="sxs-lookup"><span data-stu-id="3f09a-114">Specifies the maximum time interval before a cached object is marked as expired.</span></span>|  
-|`maximumStale`|<span data-ttu-id="3f09a-115">Gibt die maximale Zeit nach der berechneten Aktualitätszeit, bevor ein zwischengespeichertes Objekt als abgelaufen gekennzeichnet wird.</span><span class="sxs-lookup"><span data-stu-id="3f09a-115">Specifies the maximum time past the computed freshness time before a cached object is marked as expired.</span></span>|  
-|`minimumFresh`|<span data-ttu-id="3f09a-116">Gibt die minimale Zeit für ein zwischengespeichertes Objekt, das als aktuell angesehen.</span><span class="sxs-lookup"><span data-stu-id="3f09a-116">Specifies the minimum time for a cached object to be considered fresh.</span></span>|  
-|`policyLevel`|<span data-ttu-id="3f09a-117">Gibt an, ob die Cachingrichtlinie für automatische oder gibt an, ob der Cache umgangen wird.</span><span class="sxs-lookup"><span data-stu-id="3f09a-117">Specifies whether the caching policy is automatic, or whether the cache is bypassed.</span></span> <span data-ttu-id="3f09a-118">Der Standardwert ist `BypassCache`.</span><span class="sxs-lookup"><span data-stu-id="3f09a-118">The default value is `BypassCache`.</span></span>|  
+|`maximumAge`|<span data-ttu-id="f7b15-114">Gibt das maximale Zeitintervall an, bevor ein zwischengespeichertes Objekt als abgelaufen gekennzeichnet wird.</span><span class="sxs-lookup"><span data-stu-id="f7b15-114">Specifies the maximum time interval before a cached object is marked as expired.</span></span>|  
+|`maximumStale`|<span data-ttu-id="f7b15-115">Gibt die maximale Zeit nach der berechneten Aktualitätszeit, bevor ein zwischengespeichertes Objekt als abgelaufen gekennzeichnet wird.</span><span class="sxs-lookup"><span data-stu-id="f7b15-115">Specifies the maximum time past the computed freshness time before a cached object is marked as expired.</span></span>|  
+|`minimumFresh`|<span data-ttu-id="f7b15-116">Gibt die minimale Zeit für ein zwischengespeichertes Objekt, das als aktuell angesehen.</span><span class="sxs-lookup"><span data-stu-id="f7b15-116">Specifies the minimum time for a cached object to be considered fresh.</span></span>|  
+|`policyLevel`|<span data-ttu-id="f7b15-117">Gibt an, ob die Cachingrichtlinie für automatische oder gibt an, ob der Cache umgangen wird.</span><span class="sxs-lookup"><span data-stu-id="f7b15-117">Specifies whether the caching policy is automatic, or whether the cache is bypassed.</span></span> <span data-ttu-id="f7b15-118">Der Standardwert ist `BypassCache`.</span><span class="sxs-lookup"><span data-stu-id="f7b15-118">The default value is `BypassCache`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="3f09a-119">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="3f09a-119">Child Elements</span></span>  
- <span data-ttu-id="3f09a-120">Keine</span><span class="sxs-lookup"><span data-stu-id="3f09a-120">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f7b15-119">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="f7b15-119">Child Elements</span></span>  
+ <span data-ttu-id="f7b15-120">Keiner</span><span class="sxs-lookup"><span data-stu-id="f7b15-120">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="3f09a-121">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="3f09a-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f7b15-121">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="f7b15-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="3f09a-122">Element</span><span class="sxs-lookup"><span data-stu-id="3f09a-122">Element</span></span>|<span data-ttu-id="3f09a-123">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="3f09a-123">Description</span></span>|  
+|<span data-ttu-id="f7b15-122">Element</span><span class="sxs-lookup"><span data-stu-id="f7b15-122">Element</span></span>|<span data-ttu-id="f7b15-123">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f7b15-123">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="3f09a-124">requestCaching</span><span class="sxs-lookup"><span data-stu-id="3f09a-124">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="3f09a-125">Steuert den Zwischenspeichermechanismus für netzwerkanforderungen.</span><span class="sxs-lookup"><span data-stu-id="3f09a-125">Controls the caching mechanism for network requests.</span></span>|  
+|[<span data-ttu-id="f7b15-124">requestCaching</span><span class="sxs-lookup"><span data-stu-id="f7b15-124">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="f7b15-125">Steuert den Zwischenspeichermechanismus für netzwerkanforderungen.</span><span class="sxs-lookup"><span data-stu-id="f7b15-125">Controls the caching mechanism for network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3f09a-126">Hinweise</span><span class="sxs-lookup"><span data-stu-id="3f09a-126">Remarks</span></span>  
- <span data-ttu-id="3f09a-127">Der Wert für die `policyLevel` -Attribut ist entweder `BypassCache` oder `Default`.</span><span class="sxs-lookup"><span data-stu-id="3f09a-127">The value for the `policyLevel` attribute is either `BypassCache` or `Default`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f7b15-126">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f7b15-126">Remarks</span></span>  
+ <span data-ttu-id="f7b15-127">Der Wert für die `policyLevel` -Attribut ist entweder `BypassCache` oder `Default`.</span><span class="sxs-lookup"><span data-stu-id="f7b15-127">The value for the `policyLevel` attribute is either `BypassCache` or `Default`.</span></span>  
   
- <span data-ttu-id="3f09a-128">Werte für die `maximumAge`, `maximumStale`, und `minimumFresh` Elemente sind ein explizites Zeitintervall im Format *d*. *Hh*:*mm*:*ss* (Tage, Stunden, Minuten und Sekunden), oder die Konstanten `minValue` oder `maxValue`je nach Bedarf.</span><span class="sxs-lookup"><span data-stu-id="3f09a-128">Values for the `maximumAge`, `maximumStale`, and `minimumFresh` elements are either an explicit time interval with a format of *d*.*hh*:*mm*:*ss* (days, hours, minutes, and seconds), or the constants `minValue` or `maxValue`, as appropriate.</span></span>  
+ <span data-ttu-id="f7b15-128">Werte für die `maximumAge`, `maximumStale`, und `minimumFresh` Elemente sind ein explizites Zeitintervall im Format *d*. *Hh*:*mm*:*ss* (Tage, Stunden, Minuten und Sekunden), oder die Konstanten `minValue` oder `maxValue`je nach Bedarf.</span><span class="sxs-lookup"><span data-stu-id="f7b15-128">Values for the `maximumAge`, `maximumStale`, and `minimumFresh` elements are either an explicit time interval with a format of *d*.*hh*:*mm*:*ss* (days, hours, minutes, and seconds), or the constants `minValue` or `maxValue`, as appropriate.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="3f09a-129">Konfigurationsdateien</span><span class="sxs-lookup"><span data-stu-id="3f09a-129">Configuration Files</span></span>  
- <span data-ttu-id="3f09a-130">Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="3f09a-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="f7b15-129">Konfigurationsdateien</span><span class="sxs-lookup"><span data-stu-id="f7b15-129">Configuration Files</span></span>  
+ <span data-ttu-id="f7b15-130">Dieses Element kann in der Anwendungskonfigurationsdatei oder in der Computerkonfigurationsdatei ("Machine.config") verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="f7b15-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3f09a-131">Beispiel</span><span class="sxs-lookup"><span data-stu-id="3f09a-131">Example</span></span>  
- <span data-ttu-id="3f09a-132">Das folgende Beispiel zeigt, wie Sie eine neue Zeit von sechs Stunden, ein maximales Alter zwei Tage, bis eine maximale veraltete Zeit von vier Stunden angeben.</span><span class="sxs-lookup"><span data-stu-id="3f09a-132">The following example shows how to specify a minimum fresh time of six hours, a maximum age time of two days, and a maximum stale time of four hours.</span></span>  
+## <a name="example"></a><span data-ttu-id="f7b15-131">Beispiel</span><span class="sxs-lookup"><span data-stu-id="f7b15-131">Example</span></span>  
+ <span data-ttu-id="f7b15-132">Das folgende Beispiel zeigt, wie Sie eine neue Zeit von sechs Stunden, ein maximales Alter zwei Tage, bis eine maximale veraltete Zeit von vier Stunden angeben.</span><span class="sxs-lookup"><span data-stu-id="f7b15-132">The following example shows how to specify a minimum fresh time of six hours, a maximum age time of two days, and a maximum stale time of four hours.</span></span>  
   
 ```xml  
 <configuration>  
@@ -80,8 +80,9 @@ ms.locfileid: "55260670"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="3f09a-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3f09a-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f7b15-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f7b15-133">See also</span></span>
+
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>
-- [<span data-ttu-id="3f09a-134">Network Settings Schema (Schema für Netzwerkeinstellungen)</span><span class="sxs-lookup"><span data-stu-id="3f09a-134">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="f7b15-134">Netzwerkeinstellungsschema</span><span class="sxs-lookup"><span data-stu-id="f7b15-134">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
