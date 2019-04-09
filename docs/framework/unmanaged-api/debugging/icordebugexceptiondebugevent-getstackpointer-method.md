@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: d8f66a1c-16be-4264-afc5-bc2dfbb4a682
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f5ea632ad8a7dd2e24e71742223936b01298f31
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d9d4c0a1938edd3e2fe88ea6e418b3430f1b5cb8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485152"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163201"
 ---
-# <a name="icordebugexceptiondebugeventgetstackpointer-method"></a><span data-ttu-id="0a0a6-102">ICorDebugExceptionDebugEvent::GetStackPointer-Methode</span><span class="sxs-lookup"><span data-stu-id="0a0a6-102">ICorDebugExceptionDebugEvent::GetStackPointer Method</span></span>
-<span data-ttu-id="0a0a6-103">Ruft den Stapelzeiger für dieses Ausnahmedebugereignis ab.</span><span class="sxs-lookup"><span data-stu-id="0a0a6-103">Gets the stack pointer for this exception debug event.</span></span>  
+# <a name="icordebugexceptiondebugeventgetstackpointer-method"></a><span data-ttu-id="e768f-102">ICorDebugExceptionDebugEvent::GetStackPointer-Methode</span><span class="sxs-lookup"><span data-stu-id="e768f-102">ICorDebugExceptionDebugEvent::GetStackPointer Method</span></span>
+<span data-ttu-id="e768f-103">Ruft den Stapelzeiger für dieses Ausnahmedebugereignis ab.</span><span class="sxs-lookup"><span data-stu-id="e768f-103">Gets the stack pointer for this exception debug event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a0a6-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0a0a6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e768f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e768f-104">Syntax</span></span>  
   
 ```  
 HRESULT GetStackPointer(  
@@ -22,34 +22,35 @@ HRESULT GetStackPointer(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0a0a6-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="0a0a6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e768f-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="e768f-105">Parameters</span></span>  
  `pStackPointer`  
- <span data-ttu-id="0a0a6-106">[out] Ein Zeiger auf die Adresse des Stapelzeigers für dieses Ausnahmedebugereignis.</span><span class="sxs-lookup"><span data-stu-id="0a0a6-106">[out] A pointer to the address of the stack pointer for this exception debug event.</span></span> <span data-ttu-id="0a0a6-107">Weitere Informationen finden Sie im Abschnitt Hinweise.</span><span class="sxs-lookup"><span data-stu-id="0a0a6-107">See the Remarks section for more information.</span></span>  
+ <span data-ttu-id="e768f-106">[out] Ein Zeiger auf die Adresse des Stapelzeigers für dieses Ausnahmedebugereignis.</span><span class="sxs-lookup"><span data-stu-id="e768f-106">[out] A pointer to the address of the stack pointer for this exception debug event.</span></span> <span data-ttu-id="e768f-107">Weitere Informationen finden Sie im Abschnitt Hinweise.</span><span class="sxs-lookup"><span data-stu-id="e768f-107">See the Remarks section for more information.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="0a0a6-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="0a0a6-108">Remarks</span></span>  
- <span data-ttu-id="0a0a6-109">Die Bedeutung dieses Stapelzeigers hängt (wie in der folgenden Tabelle gezeigt) vom Ereignistyp ab.</span><span class="sxs-lookup"><span data-stu-id="0a0a6-109">The meaning of this stack pointer depends on the event type, as shown in the following table.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e768f-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="e768f-108">Remarks</span></span>  
+ <span data-ttu-id="e768f-109">Die Bedeutung dieses Stapelzeigers hängt (wie in der folgenden Tabelle gezeigt) vom Ereignistyp ab.</span><span class="sxs-lookup"><span data-stu-id="e768f-109">The meaning of this stack pointer depends on the event type, as shown in the following table.</span></span>  
   
-|<span data-ttu-id="0a0a6-110">Ereignistyp</span><span class="sxs-lookup"><span data-stu-id="0a0a6-110">Event type</span></span>|<span data-ttu-id="0a0a6-111">Bedeutung des `pStackPointer`-Werts</span><span class="sxs-lookup"><span data-stu-id="0a0a6-111">Meaning of `pStackPointer` value</span></span>|  
+|<span data-ttu-id="e768f-110">Ereignistyp</span><span class="sxs-lookup"><span data-stu-id="e768f-110">Event type</span></span>|<span data-ttu-id="e768f-111">Bedeutung des `pStackPointer`-Werts</span><span class="sxs-lookup"><span data-stu-id="e768f-111">Meaning of `pStackPointer` value</span></span>|  
 |----------------|--------------------------------------|  
-|[<span data-ttu-id="0a0a6-112">MANAGED_EXCEPTION_FIRST_CHANCE</span><span class="sxs-lookup"><span data-stu-id="0a0a6-112">MANAGED_EXCEPTION_FIRST_CHANCE</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|<span data-ttu-id="0a0a6-113">Der Stapelzeiger des Frames, der die Ausnahme ausgelöst hat.</span><span class="sxs-lookup"><span data-stu-id="0a0a6-113">The stack pointer for the frame that threw the exception.</span></span>|  
-|[<span data-ttu-id="0a0a6-114">MANAGED_EXCEPTION_USER_FIRST_CHANCE</span><span class="sxs-lookup"><span data-stu-id="0a0a6-114">MANAGED_EXCEPTION_USER_FIRST_CHANCE</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|<span data-ttu-id="0a0a6-115">Der Stapelzeiger des Benutzercode-Frames, der dem Punkt der ausgelösten Ausnahme am nächsten ist.</span><span class="sxs-lookup"><span data-stu-id="0a0a6-115">The stack pointer for the user-code frame closest to the point of the thrown exception.</span></span>|  
-|[<span data-ttu-id="0a0a6-116">MANAGED_EXCEPTION_CATCH_HANDLER_FOUND</span><span class="sxs-lookup"><span data-stu-id="0a0a6-116">MANAGED_EXCEPTION_CATCH_HANDLER_FOUND</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|<span data-ttu-id="0a0a6-117">Der Stapelzeiger des Frames, der den Catch-Handler enthält.</span><span class="sxs-lookup"><span data-stu-id="0a0a6-117">The stack pointer for the frame that contains the catch handler.</span></span>|  
-|[<span data-ttu-id="0a0a6-118">MANAGED_EXCEPTION_UNHANDLED</span><span class="sxs-lookup"><span data-stu-id="0a0a6-118">MANAGED_EXCEPTION_UNHANDLED</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|<span data-ttu-id="0a0a6-119">`pStackPointer` ist **NULL**.</span><span class="sxs-lookup"><span data-stu-id="0a0a6-119">`pStackPointer` is **null**.</span></span>|  
+|[<span data-ttu-id="e768f-112">MANAGED_EXCEPTION_FIRST_CHANCE</span><span class="sxs-lookup"><span data-stu-id="e768f-112">MANAGED_EXCEPTION_FIRST_CHANCE</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|<span data-ttu-id="e768f-113">Der Stapelzeiger des Frames, der die Ausnahme ausgelöst hat.</span><span class="sxs-lookup"><span data-stu-id="e768f-113">The stack pointer for the frame that threw the exception.</span></span>|  
+|[<span data-ttu-id="e768f-114">MANAGED_EXCEPTION_USER_FIRST_CHANCE</span><span class="sxs-lookup"><span data-stu-id="e768f-114">MANAGED_EXCEPTION_USER_FIRST_CHANCE</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|<span data-ttu-id="e768f-115">Der Stapelzeiger des Benutzercode-Frames, der dem Punkt der ausgelösten Ausnahme am nächsten ist.</span><span class="sxs-lookup"><span data-stu-id="e768f-115">The stack pointer for the user-code frame closest to the point of the thrown exception.</span></span>|  
+|[<span data-ttu-id="e768f-116">MANAGED_EXCEPTION_CATCH_HANDLER_FOUND</span><span class="sxs-lookup"><span data-stu-id="e768f-116">MANAGED_EXCEPTION_CATCH_HANDLER_FOUND</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|<span data-ttu-id="e768f-117">Der Stapelzeiger des Frames, der den Catch-Handler enthält.</span><span class="sxs-lookup"><span data-stu-id="e768f-117">The stack pointer for the frame that contains the catch handler.</span></span>|  
+|[<span data-ttu-id="e768f-118">MANAGED_EXCEPTION_UNHANDLED</span><span class="sxs-lookup"><span data-stu-id="e768f-118">MANAGED_EXCEPTION_UNHANDLED</span></span>](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|`pStackPointer` <span data-ttu-id="e768f-119">ist **null**.</span><span class="sxs-lookup"><span data-stu-id="e768f-119">is **null**.</span></span>|  
   
 > [!NOTE]
->  <span data-ttu-id="0a0a6-120">Diese Methode ist nur mit .NET Native verfügbar.</span><span class="sxs-lookup"><span data-stu-id="0a0a6-120">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="e768f-120">Diese Methode ist nur mit .NET Native verfügbar.</span><span class="sxs-lookup"><span data-stu-id="e768f-120">This method is available with .NET Native only.</span></span>  
   
- <span data-ttu-id="0a0a6-121">Der Ereignistyp ist verfügbar, aus der [icordebugdebugevent:: Geteventkind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="0a0a6-121">The event type is available from the [ICorDebugDebugEvent::GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) method.</span></span>  
+ <span data-ttu-id="e768f-121">Der Ereignistyp ist verfügbar, aus der [icordebugdebugevent:: Geteventkind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="e768f-121">The event type is available from the [ICorDebugDebugEvent::GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0a0a6-122">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0a0a6-122">Requirements</span></span>  
- <span data-ttu-id="0a0a6-123">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0a0a6-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e768f-122">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e768f-122">Requirements</span></span>  
+ <span data-ttu-id="e768f-123">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e768f-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0a0a6-124">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0a0a6-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e768f-124">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e768f-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0a0a6-125">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0a0a6-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e768f-125">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e768f-125">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0a0a6-126">**.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a0a6-126">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
+ **<span data-ttu-id="e768f-126">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="e768f-126">.NET Framework Versions:</span></span>** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="0a0a6-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0a0a6-127">See also</span></span>
-- [<span data-ttu-id="0a0a6-128">ICorDebugExceptionDebugEvent-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0a0a6-128">ICorDebugExceptionDebugEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)
-- [<span data-ttu-id="0a0a6-129">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="0a0a6-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="e768f-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e768f-127">See also</span></span>
+
+- [<span data-ttu-id="e768f-128">ICorDebugExceptionDebugEvent-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e768f-128">ICorDebugExceptionDebugEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)
+- [<span data-ttu-id="e768f-129">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="e768f-129">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0fcd03fde49622a8c388bb821549cec2cf3a154
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfec360dc7817864c57ae99c9d1648c805f524b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531014"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154466"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="62992-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA-Methode</span><span class="sxs-lookup"><span data-stu-id="62992-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
-<span data-ttu-id="62992-103">`GetRoDataRVA` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="62992-103">`GetRoDataRVA` is obsolete.</span></span> <span data-ttu-id="62992-104">Rufen Sie diese Methode nicht.</span><span class="sxs-lookup"><span data-stu-id="62992-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="3bc2d-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA-Methode</span><span class="sxs-lookup"><span data-stu-id="3bc2d-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
+`GetRoDataRVA` <span data-ttu-id="3bc2d-103">ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="3bc2d-103">is obsolete.</span></span> <span data-ttu-id="3bc2d-104">Rufen Sie diese Methode nicht.</span><span class="sxs-lookup"><span data-stu-id="3bc2d-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="62992-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="62992-105">See also</span></span>
-- [<span data-ttu-id="62992-106">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="62992-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="3bc2d-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="3bc2d-105">See also</span></span>
+
+- [<span data-ttu-id="3bc2d-106">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="3bc2d-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

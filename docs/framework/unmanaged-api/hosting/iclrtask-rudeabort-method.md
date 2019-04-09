@@ -17,47 +17,48 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e2145f321d2850468eaa73cc35a9dbd19af0480
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2db47f90e73922858013885e99e953ddcacbd450
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649477"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147614"
 ---
-# <a name="iclrtaskrudeabort-method"></a><span data-ttu-id="2bab7-102">ICLRTask::RudeAbort-Methode</span><span class="sxs-lookup"><span data-stu-id="2bab7-102">ICLRTask::RudeAbort Method</span></span>
-<span data-ttu-id="2bab7-103">Weist die common Language Runtime (CLR) zum Abbrechen der Aufgabe, die vom aktuellen [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) Instanz sofort und ohne Bedingung.</span><span class="sxs-lookup"><span data-stu-id="2bab7-103">Instructs the common language runtime (CLR) to abort the task represented by the current [ICLRTask Interface](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance immediately and unconditionally.</span></span>  
+# <a name="iclrtaskrudeabort-method"></a><span data-ttu-id="82933-102">ICLRTask::RudeAbort-Methode</span><span class="sxs-lookup"><span data-stu-id="82933-102">ICLRTask::RudeAbort Method</span></span>
+<span data-ttu-id="82933-103">Weist die common Language Runtime (CLR) zum Abbrechen der Aufgabe, die vom aktuellen [ICLRTask-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) Instanz sofort und ohne Bedingung.</span><span class="sxs-lookup"><span data-stu-id="82933-103">Instructs the common language runtime (CLR) to abort the task represented by the current [ICLRTask Interface](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) instance immediately and unconditionally.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2bab7-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="2bab7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="82933-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="82933-104">Syntax</span></span>  
   
 ```  
 HRESULT RudeAbort ();   
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="2bab7-105">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="2bab7-105">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="82933-105">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="82933-105">Return Value</span></span>  
   
-|<span data-ttu-id="2bab7-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2bab7-106">HRESULT</span></span>|<span data-ttu-id="2bab7-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2bab7-107">Description</span></span>|  
+|<span data-ttu-id="82933-106">HRESULT</span><span class="sxs-lookup"><span data-stu-id="82933-106">HRESULT</span></span>|<span data-ttu-id="82933-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="82933-107">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="2bab7-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="2bab7-108">S_OK</span></span>|<span data-ttu-id="2bab7-109">`RudeAbort` wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="2bab7-109">`RudeAbort` returned successfully.</span></span>|  
-|<span data-ttu-id="2bab7-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="2bab7-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="2bab7-111">Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="2bab7-111">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="2bab7-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="2bab7-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="2bab7-113">Der Aufruf ist ein Timeout aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="2bab7-113">The call timed out.</span></span>|  
-|<span data-ttu-id="2bab7-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="2bab7-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="2bab7-115">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="2bab7-115">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="2bab7-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="2bab7-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="2bab7-117">Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.</span><span class="sxs-lookup"><span data-stu-id="2bab7-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="2bab7-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="2bab7-118">E_FAIL</span></span>|<span data-ttu-id="2bab7-119">Ein Unbekannter Schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="2bab7-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="2bab7-120">Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2bab7-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="2bab7-121">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="2bab7-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="82933-108">S_OK</span><span class="sxs-lookup"><span data-stu-id="82933-108">S_OK</span></span>|`RudeAbort` <span data-ttu-id="82933-109">wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="82933-109">returned successfully.</span></span>|  
+|<span data-ttu-id="82933-110">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="82933-110">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="82933-111">Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="82933-111">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="82933-112">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="82933-112">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="82933-113">Der Aufruf ist ein Timeout aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="82933-113">The call timed out.</span></span>|  
+|<span data-ttu-id="82933-114">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="82933-114">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="82933-115">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="82933-115">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="82933-116">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="82933-116">HOST_E_ABANDONED</span></span>|<span data-ttu-id="82933-117">Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.</span><span class="sxs-lookup"><span data-stu-id="82933-117">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="82933-118">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="82933-118">E_FAIL</span></span>|<span data-ttu-id="82933-119">Ein Unbekannter Schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="82933-119">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="82933-120">Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="82933-120">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="82933-121">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="82933-121">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="2bab7-122">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2bab7-122">Remarks</span></span>  
- <span data-ttu-id="2bab7-123">Ein Host ruft `RudeAbort` eine Aufgabe sofort abgebrochen.</span><span class="sxs-lookup"><span data-stu-id="2bab7-123">A host calls `RudeAbort` to abort a task immediately.</span></span> <span data-ttu-id="2bab7-124">Finalizer und Ausnahmebehandlungsroutinen werden nicht unbedingt ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="2bab7-124">Finalizers and exception handling routines are not guaranteed to be executed.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="82933-122">Hinweise</span><span class="sxs-lookup"><span data-stu-id="82933-122">Remarks</span></span>  
+ <span data-ttu-id="82933-123">Ein Host ruft `RudeAbort` eine Aufgabe sofort abgebrochen.</span><span class="sxs-lookup"><span data-stu-id="82933-123">A host calls `RudeAbort` to abort a task immediately.</span></span> <span data-ttu-id="82933-124">Finalizer und Ausnahmebehandlungsroutinen werden nicht unbedingt ausgeführt werden.</span><span class="sxs-lookup"><span data-stu-id="82933-124">Finalizers and exception handling routines are not guaranteed to be executed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2bab7-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2bab7-125">Requirements</span></span>  
- <span data-ttu-id="2bab7-126">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2bab7-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="82933-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="82933-125">Requirements</span></span>  
+ <span data-ttu-id="82933-126">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="82933-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2bab7-127">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2bab7-127">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="82933-127">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="82933-127">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="2bab7-128">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="2bab7-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="82933-128">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="82933-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2bab7-129">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2bab7-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="82933-129">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="82933-129">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="2bab7-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2bab7-130">See also</span></span>
-- [<span data-ttu-id="2bab7-131">ICLRTask-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2bab7-131">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [<span data-ttu-id="2bab7-132">ICLRTaskManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2bab7-132">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [<span data-ttu-id="2bab7-133">IHostTask-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2bab7-133">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [<span data-ttu-id="2bab7-134">IHostTaskManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2bab7-134">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="82933-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="82933-130">See also</span></span>
+
+- [<span data-ttu-id="82933-131">ICLRTask-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="82933-131">ICLRTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
+- [<span data-ttu-id="82933-132">ICLRTaskManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="82933-132">ICLRTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
+- [<span data-ttu-id="82933-133">IHostTask-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="82933-133">IHostTask Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
+- [<span data-ttu-id="82933-134">IHostTaskManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="82933-134">IHostTaskManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
