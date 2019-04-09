@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c0b93609-631e-4b15-878a-189ede922631
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0415e622ebba76d0af7d58fc3b59c4bdb47e0043
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 382f3fc9377c25379809badac0bc580c3593cbde
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103895"
 ---
 # <a name="icordebugstaticfieldsymbol-interface"></a>ICorDebugStaticFieldSymbol-Schnittstelle
 Stellt die Debugsymbolinformationen für ein statisches Feld dar.  
@@ -38,6 +38,7 @@ Stellt die Debugsymbolinformationen für ein statisches Feld dar.
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorDebugInstanceFieldSymbol-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

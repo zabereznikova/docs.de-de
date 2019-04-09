@@ -2,12 +2,12 @@
 title: Standard-XAML-Schemakontext und WPF-XAML-Schemakontext
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: a916d202ab256789a73c713bee49e502ea49ffd3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.openlocfilehash: 1312541321e74668e6527c6c54e712342fbb3a17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58018518"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124695"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Standard-XAML-Schemakontext und WPF-XAML-Schemakontext
 Ein XAML-Schemakontext ist eine konzeptionelle Entität, die beschreibt, wie eine XAML-Produktion, die ein bestimmtes XAML-Vokabular verwendet interagiert mit dem Schreiben von Verhalten führen, einschließlich wie Zuordnung eines Typs aufgelöst wird, wie Assemblys geladen werden, wie bestimmte Reader- und Writer-Objekt Einstellungen werden interpretiert. Dieses Thema beschreibt die Funktionen von .NET Framework-XAML-Dienste und der zugeordnetes standardmäßiges XAML-Schemakontext, basierend auf der CLR-Typsystems. Dieses Thema beschreibt auch die XAML-Schemakontext, der für WPF verwendet wird.  
@@ -89,4 +89,5 @@ Ein XAML-Schemakontext ist eine konzeptionelle Entität, die beschreibt, wie ein
     -   Verwenden Sie zum Aufrufen Kurzname und das Token des öffentlichen Schlüssels <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Grundlagen zu XAML-Knotenstreamstrukturen und -konzepten](understanding-xaml-node-stream-structures-and-concepts.md)

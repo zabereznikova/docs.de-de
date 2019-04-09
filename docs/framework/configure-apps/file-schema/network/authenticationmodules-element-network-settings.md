@@ -1,5 +1,5 @@
 ---
-title: <authenticationModules>-Element (Netzwerkeinstellungen)
+title: <authenticationModules> -Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#authenticationModules
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-ms.openlocfilehash: 1e40ee4a0bb0731c78d27b7ba9994884ef9ff447
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8878bcbdf8b3613677231db3e91a6d71dfa10bae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271589"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143337"
 ---
 # <a name="authenticationmodules-element-network-settings"></a>\<AuthenticationModules >-Element (Netzwerkeinstellungen)
 Gibt die Module, die zum Authentifizieren von netzwerkanforderungen.  
@@ -39,8 +39,8 @@ Gibt die Module, die zum Authentifizieren von netzwerkanforderungen.
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|Ein Modul für die Authentifizierung hinzugefügt der Anwendung.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|Löscht alle Authentifizierungsmodule aus der Anwendung an.|  
+|[Hinzufügen](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|Ein Modul für die Authentifizierung hinzugefügt der Anwendung.|  
+|[nicht aktiviert](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|Löscht alle Authentifizierungsmodule aus der Anwendung an.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|Entfernt ein Authentifizierungsmodul aus der Anwendung an.|  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
@@ -70,6 +70,7 @@ Gibt die Module, die zum Authentifizieren von netzwerkanforderungen.
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

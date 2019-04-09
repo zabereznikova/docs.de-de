@@ -5,24 +5,24 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: 9c8580f61bcb311ca6b2e1cc2a11b4d4a4dbe79c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 437b632706b27cd487d60c2ad23db3f9a3c96c09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719415"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108016"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Drag &amp; Drop-Funktionen in Windows Forms
 Windows Forms umfasst eine Reihe von Methoden, Ereignissen und Klassen, die das Drag &amp; Drop-Verhalten implementieren. Dieses Thema enthält eine Übersicht über die Drag &amp; Drop-Unterstützung in Windows Forms.  Siehe auch [Drag & Drop-Operationen und Unterstützung der Zwischenablage](./advanced/drag-and-drop-operations-and-clipboard-support.md).  
   
 ## <a name="performing-drag-and-drop-operations"></a>Ausführen von Drag &amp; Drop-Vorgängen  
- Um einen Drag & Drop-Vorgang auszuführen, verwenden Sie die <xref:System.Windows.Forms.Control.DoDragDrop%2A>-Methode der <xref:System.Windows.Forms.Control>-Klasse. Weitere Informationen, wie ein Drag & Drop-Vorgang ausgeführt wird, finden Sie unter <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Um das Rechteck abzurufen, über das der Mauszeiger gezogen werden muss, bevor ein Drag & Drop-Vorgang beginnt, verwenden Sie die <xref:System.Windows.Forms.SystemInformation.DragSize%2A>-Eigenschaft der <xref:System.Windows.Forms.SystemInformation>-Klasse.  
+ Um einen Drag &amp; Drop-Vorgang auszuführen, verwenden Sie die <xref:System.Windows.Forms.Control.DoDragDrop%2A>-Methode der <xref:System.Windows.Forms.Control>-Klasse. Weitere Informationen, wie ein Drag &amp; Drop-Vorgang ausgeführt wird, finden Sie unter <xref:System.Windows.Forms.Control.DoDragDrop%2A>. Um das Rechteck abzurufen, über das der Mauszeiger gezogen werden muss, bevor ein Drag &amp; Drop-Vorgang beginnt, verwenden Sie die <xref:System.Windows.Forms.SystemInformation.DragSize%2A>-Eigenschaft der <xref:System.Windows.Forms.SystemInformation>-Klasse.  
   
-## <a name="events-related-to-drag-and-drop-operations"></a>Ereignisse im Zusammenhang mit Drag & Drop-Vorgängen  
- Es gibt zwei Kategorien von Ereignissen in einem Drag & Drop-Vorgang: Ereignisse, die im aktuellen Ziel des Drag & Drop-Vorgangs auftreten, und Ereignisse, die in der Quelle des Drag & Drop-Vorgangs auftreten.  
+## <a name="events-related-to-drag-and-drop-operations"></a>Ereignisse im Zusammenhang mit Drag &amp; Drop-Vorgängen  
+ Es gibt zwei Kategorien von Ereignissen in einem Drag &amp; Drop-Vorgang: Ereignisse, die im aktuellen Ziel des Drag &amp; Drop-Vorgangs auftreten, und Ereignisse, die in der Quelle des Drag &amp; Drop-Vorgangs auftreten.  
   
 ### <a name="events-on-the-current-target"></a>Ereignisse im aktuellen Ziel  
- Die folgende Tabelle zeigt die Ereignisse, die im aktuellen Ziel eines Drag & Drop--Vorgangs auftreten.  
+ Die folgende Tabelle zeigt die Ereignisse, die im aktuellen Ziel eines Drag &amp; Drop--Vorgangs auftreten.  
   
 |Mausereignis|Beschreibung|  
 |-----------------|-----------------|  
@@ -34,14 +34,15 @@ Windows Forms umfasst eine Reihe von Methoden, Ereignissen und Klassen, die das 
  Die <xref:System.Windows.Forms.DragEventArgs>-Klasse stellt die Position des Mauszeigers, den aktuellen Zustand der Maustasten und der Zusatztasten der Tastatur, die gezogenen Daten und die <xref:System.Windows.Forms.DragDropEffects>-Werte bereit, die die Vorgänge, die für die Quelle des Ziehereignisses zulässig sind, sowie den Zielablegeeffekt für den Vorgang angeben.  
   
 ### <a name="events-on-the-source"></a>Ereignisse in der Quelle  
- Die folgende Tabelle zeigt die Ereignisse, die in der Quelle eines Drag & Drop-Vorgangs auftreten.  
+ Die folgende Tabelle zeigt die Ereignisse, die in der Quelle eines Drag &amp; Drop-Vorgangs auftreten.  
   
 |Mausereignis|Beschreibung|  
 |-----------------|-----------------|  
-|<xref:System.Windows.Forms.Control.GiveFeedback>|Dieses Ereignis tritt während eines Ziehvorgangs auf. Es bietet die Möglichkeit, dem Benutzer einen visuellen Hinweis zu geben, dass der Drag & Drop-Vorgang auftritt, z. B. Ändern des Mauszeigers. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.GiveFeedbackEventArgs>.|  
+|<xref:System.Windows.Forms.Control.GiveFeedback>|Dieses Ereignis tritt während eines Ziehvorgangs auf. Es bietet die Möglichkeit, dem Benutzer einen visuellen Hinweis zu geben, dass der Drag &amp; Drop-Vorgang auftritt, z. B. Ändern des Mauszeigers. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.GiveFeedbackEventArgs>.|  
 |<xref:System.Windows.Forms.Control.QueryContinueDrag>|Dieses Ereignis wird während eines Drag &amp; Drop-Vorgangs ausgelöst. Dadurch kann die Quelle des Ziehvorgangs bestimmen, ob der Drag &amp; Drop-Vorgang abgebrochen werden soll. Der Handler für dieses Ereignis empfängt ein Argument des Typs <xref:System.Windows.Forms.QueryContinueDragEventArgs>.|  
   
  Die <xref:System.Windows.Forms.QueryContinueDragEventArgs>-Klasse stellt Folgendes bereit: den aktuellen Zustand der Maus und der Zusatztasten der Tastatur, einen Wert, der angibt, ob die ESC-Taste gedrückt wurde, und einen <xref:System.Windows.Forms.DragAction>-Wert, der festgelegt werden kann, um anzugeben, ob der Drag &amp; Drop-Vorgang fortgesetzt werden soll.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Mauseingabe in einer Windows Forms-Anwendung](mouse-input-in-a-windows-forms-application.md)

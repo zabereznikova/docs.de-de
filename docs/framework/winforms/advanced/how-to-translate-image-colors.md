@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 8b2e28cab2d2d04f7c99880f2b35a02ebe80dcd8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 04e61383ef79b17ea6e1523588cd9593ec9b082c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464462"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132638"
 ---
 # <a name="how-to-translate-image-colors"></a>Vorgehensweise: Verschieben von Bildfarben
 Eine Übersetzung Fügt einen Wert an eine oder mehrere der vier Farbkomponenten. Die Farbe Matrix Einträge von Übersetzungen werden in der folgenden Tabelle angegeben.  
@@ -46,10 +46,11 @@ Eine Übersetzung Fügt einen Wert an eine oder mehrere der vier Farbkomponenten
  [!code-vb[System.Drawing.RecoloringImages#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs>`e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers. Ersetzen Sie dies `ColorBars.bmp` mit einer Bilddateinamen und den Pfad, die auf Ihrem System gültig sind.  
+ Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs>`e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Ersetzen Sie dies `ColorBars.bmp` mit einer Bilddateinamen und den Pfad, die auf Ihrem System gültig sind.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Neufärben von Bildern](recoloring-images.md)
+- [Neueinfärben von Bildern](recoloring-images.md)

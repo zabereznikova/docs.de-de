@@ -2,12 +2,12 @@
 title: Nachrichtenübertragung per Stream
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 5a146b9f0bd2eb74b5ef4b5877e6cb925d386abc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643818"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136876"
 ---
 # <a name="streaming-message-transfer"></a>Nachrichtenübertragung per Stream
 Windows Communication Foundation (WCF)--Transporte unterstützen zwei Modi zum Übertragen von Nachrichten:  
@@ -47,4 +47,5 @@ Windows Communication Foundation (WCF)--Transporte unterstützen zwei Modi zum �
  Durch das Ändern des Übertragungsmodus von gepuffert in gestreamt wird auch die systemeigene Kanalform von TCP- und Named Pipe-Transporten geändert. Die systemeigene Kanalform für gepufferte Übertragungen ist <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Die systemeigenen Kanäle für Streamingübertragungen sind <xref:System.ServiceModel.Channels.IRequestChannel> und <xref:System.ServiceModel.Channels.IReplyChannel>. Wenn Sie den Übertragungsmodus in einer bestehenden Anwendung ändern möchten, die diese Transporte unmittelbar (d. h. nicht über einen Dienstvertrag) verwendet, müssen Sie die erwartete Kanalform für Kanalfactorys und -listener ändern.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Aktivieren des Streamens](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [Vorgehensweise: Aktivieren des Streamingmodus](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

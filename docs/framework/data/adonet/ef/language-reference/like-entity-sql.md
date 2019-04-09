@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 406e660efcc351df3fd2720a5d13d8398d1a8216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8f210c83a8220f11a5e0a461c8b72466f00a4e37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536970"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197710"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 Ermittelt, ob ein bestimmter Zeichen-`String` mit einem angegebenen Muster übereinstimmt.  
@@ -28,11 +28,11 @@ match [NOT] LIKE pattern [ESCAPE escape]
  `escape`  
  Ein Escapezeichen.  
   
- NOT  
+ NICHT  
  Legt fest, dass das Ergebnis von LIKE negiert werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`, wenn `string` mit dem Muster übereinstimmt, andernfalls `false`.  
+ `true` Wenn die `string` mit dem Muster übereinstimmt, andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Ausdrücke, die den LIKE-Operator werden im Wesentlichen die gleiche Weise wie Ausdrücke ausgewertet, die auf Gleichheit als Filterkriterium verwenden. Allerdings [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Ausdrücke, die den LIKE-Operator verwenden können sowohl Literale als auch Platzhalterzeichen enthalten.  
@@ -57,7 +57,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 >  Bei Abfragen für einen bestimmten Anbieter können anbieterspezifische Erweiterungen verwendet werden. Solche Konstrukte können jedoch von anderen Anbietern anders behandelt werden. SqlServer unterstützt beispielsweise Muster der Form [erstes Zeichen-letztes Zeichen] und [^erstes Zeichen-letztes Zeichen], wobei die erste Form mit genau einem Zeichen zwischen "erstes Zeichen" und "letztes Zeichen" und die zweite Form mit genau einem Zeichen, das nicht zwischen "erstes Zeichen" und "letztes Zeichen" liegt, übereinstimmt.  
   
 ### <a name="escape"></a>Escape  
- Mithilfe der ESCAPE-Klausel kann nach Zeichenfolgen gesucht werden, die einen oder mehrere der im vorherigen Abschnitt beschriebenen speziellen Platzhalterzeichen enthalten. Nehmen Sie z. B. an, dass im Titel mehrerer Dokumente das Literal "100%" enthalten ist und Sie diese Dokumente finden möchten. Da das Prozentzeichen (%) Zeichen ein Platzhalterzeichen ist, müssen Sie mit Escapezeichen der [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ESCAPE-Klausel, um die Suche erfolgreich ausgeführt. Im Folgenden sehen Sie ein Beispiel für diesen Filter.  
+ Mithilfe der ESCAPE-Klausel kann nach Zeichenfolgen gesucht werden, die einen oder mehrere der im vorherigen Abschnitt beschriebenen speziellen Platzhalterzeichen enthalten. Nehmen Sie z. B. an, dass im Titel mehrerer Dokumente das Literal "100%" enthalten ist und Sie diese Dokumente finden möchten. Da das Prozentzeichen (%) Zeichen ist ein Platzhalterzeichen, Sie müssen mit Escapezeichen versehen die [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ESCAPE-Klausel, um die Suche erfolgreich ausgeführt. Im Folgenden sehen Sie ein Beispiel für diesen Filter.  
   
 ```  
 "title like '%100!%%' escape '!'"  
@@ -75,4 +75,5 @@ match [NOT] LIKE pattern [ESCAPE escape]
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

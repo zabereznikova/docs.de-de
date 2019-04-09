@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6999de3e1bf1da2d306cf063647b47a2be166781
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 55934ef08b10764bb705d7c166621ec7cfcadd0a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364415"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108515"
 ---
 # <a name="coropenflags-enumeration"></a>CorOpenFlags-Enumeration
 Enthält Flagwerte, die das Verhalten von Metadaten beim Öffnen von Manifestdateien steuern.  
@@ -61,7 +61,7 @@ typedef enum CorOpenFlags
 |`ofReadOnly`|Gibt an, dass die Datei zum Lesen und, die geöffnet werden darf einen Aufruf von `QueryInterface` für eine [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) kann nicht hergestellt werden.|  
 |`ofTakeOwnership`|Gibt an, dass der Speicher belegt wurde über einen Aufruf an [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) und von den Metadaten freigegeben wird.|  
 |`ofNoTypeLib`|Veraltet. Dieses Flag wird ignoriert.|  
-|`ofNoTransform`|Gibt an, dass automatische Umwandlungen von .winmd-Dateien deaktiviert sein sollten. Anders ausgedrückt: Die Projektion eines Windows Runtime-Typs auf einen .NET Framework-Typ sollte deaktiviert sein. Weitere Informationen finden Sie unter [Windows-Runtime und CLR - darunter das System mit .NET und die Windows-Runtime](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
+|`ofNoTransform`|Gibt an, dass automatische Transformationen von .winmd-Dateien deaktiviert sein sollten. Anders ausgedrückt: Die Projektion eines Windows Runtime-Typs auf einen .NET Framework-Typ sollte deaktiviert sein. Weitere Informationen finden Sie unter [Windows-Runtime und CLR - darunter das System mit .NET und die Windows-Runtime](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|Für die interne Verwendung vorgesehen.|  
 |`ofReserved2`|Für die interne Verwendung vorgesehen.|  
 |`ofReserved`|Für die interne Verwendung vorgesehen.|  
@@ -74,4 +74,5 @@ typedef enum CorOpenFlags
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Metadatenenumerationen](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

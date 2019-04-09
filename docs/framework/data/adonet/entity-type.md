@@ -2,12 +2,12 @@
 title: Entitätstyp
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: cb542a1750a6b45dd2fca4d32501719470d9a78a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 026b0aef7cf2de8fe222721191afa459859701ee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108263"
 ---
 # <a name="entity-type"></a>Entitätstyp
 Die *Entitätstyp* ist der wesentliche Baustein zum Beschreiben der Datenstruktur mit dem Entity Data Model (EDM). In einem konzeptionellen Modell stellt ein Entitätstyp die Struktur von Konzepten der obersten Ebene dar, z. B. Kunden oder Bestellungen. Ein Entitätstyp ist eine Vorlage für Entitätstypinstanzen. Jede Vorlage enthält die folgenden Informationen:  
@@ -36,6 +36,7 @@ Die *Entitätstyp* ist der wesentliche Baustein zum Beschreiben der Datenstruktu
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [facet](../../../../docs/framework/data/adonet/facet.md)
+- [Facet](../../../../docs/framework/data/adonet/facet.md)

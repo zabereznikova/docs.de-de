@@ -2,12 +2,12 @@
 title: Unidirektional
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: e4b8a805fdbe4f330496233d5234abc0169b8c6e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 53718b6523bb76e30233540323d5f4f87d466fed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131325"
 ---
 # <a name="one-way"></a>Unidirektional
 In diesem Beispiel wird ein Dienstvertrag mit unidirektionalen Dienstvorgängen veranschaulicht. Der Client wartet nicht darauf, dass Dienstvorgänge abgeschlossen sind, wie es bei bidirektionalen Dienstvorgängen der Fall ist. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) und verwendet die `wsHttpBinding` Bindung. Der Dienst ist in diesem Beispiel eine selbst gehostete Konsolenanwendung, sodass Sie den Dienst beobachten können, der Nachrichten empfängt und verarbeitet. Der Client ist auch eine Konsolenanwendung.  
@@ -84,7 +84,7 @@ Processing Divide(22,7) - result: 3.14285714285714
 ```  
   
 > [!NOTE]
->  HTTP ist per Definition ein Anforderungs-/Antwortprotokoll: wenn eine Anforderung gestellt wird, wird eine Antwort zurückgegeben. Dies gilt sogar für einen unidirektionalen Dienstvorgang, der über HTTP verfügbar gemacht wird. Wenn der Vorgang aufgerufen wird, gibt der Dienst den HTTP-Statuscode 202 zurück, bevor der Dienstvorgang ausgeführt wird. Dieser Statuscode bedeutet, dass die Anforderung zur Verarbeitung akzeptiert, die Verarbeitung jedoch noch nicht abgeschlossen wurde. Der den Vorgang aufrufende Client wird so lange blockiert, bis er die 202-Antwort vom Dienst empfängt. Dadurch kann es zu unerwartetem Verhalten kommen, wenn mehrere unidirektionale Nachrichten mithilfe einer Bindung gesendet werden, die für die Verwendung von Sitzungen konfiguriert ist. Die in diesem Beispiel verwendete `wsHttpBinding`-Bindung wird so konfiguriert, dass standardmäßig Sitzungen verwendet werden, um einen Sicherheitskontext herzustellen. Standardmäßig treffen Nachrichten in einer Sitzung in der Reihenfolge ihres Versands ein. Aus diesem Grund wird die zweite Nachricht in einer Sitzung beim Senden erst nach dem Verarbeiten der ersten Nachricht verarbeitet. Das führt dazu, dass der Client erst dann die 202-Antwort für eine Nachricht empfängt, wenn die Verarbeitung der vorhergehenden Nachricht abgeschlossen wurde. Der Client scheint daher bei jedem nachfolgenden Vorgangsaufruf zu blockieren. Um dieses Verhalten zu vermeiden, wird in diesem Beispiel die Laufzeit so konfiguriert, dass Nachrichten gleichzeitig an unterschiedliche Instanzen zur Verarbeitung gesendet werden. Im Beispiel wird <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> auf `PerCall` festgelegt, sodass jede Nachricht von einer anderen Instanz verarbeitet werden kann. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> ist auf `Multiple` festgelegt, damit mehrere Threads gleichzeitig Nachrichten senden können.  
+>  HTTP ist per Definition ein Anforderungs-/Antwortprotokoll: wenn eine Anforderung gestellt wird, wird eine Antwort zurückgegeben. Dies gilt sogar für einen unidirektionalen Dienstvorgang, der über HTTP verfügbar gemacht wird. Wenn der Vorgang aufgerufen wird, gibt der Dienst den HTTP-Statuscode 202 zurück, bevor der Dienstvorgang ausgeführt wird. Dieser Statuscode bedeutet, dass die Anforderung zur Verarbeitung akzeptiert, die Verarbeitung jedoch noch nicht abgeschlossen wurde. Der den Vorgang aufrufende Client wird so lange blockiert, bis er die 202-Antwort vom Dienst empfängt. Dadurch kann es zu unerwartetem Verhalten kommen, wenn mehrere unidirektionale Nachrichten mithilfe einer Bindung gesendet werden, die für die Verwendung von Sitzungen konfiguriert ist. Die in diesem Beispiel verwendete `wsHttpBinding`-Bindung wird so konfiguriert, dass standardmäßig Sitzungen verwendet werden, um einen Sicherheitskontext herzustellen. Standardmäßig treffen Nachrichten in einer Sitzung in der Reihenfolge ihres Versands ein. Aus diesem Grund wird die zweite Nachricht in einer Sitzung beim Senden erst nach dem Verarbeiten der ersten Nachricht verarbeitet. Das führt dazu, dass der Client erst dann die 202-Antwort für eine Nachricht empfängt, wenn die Verarbeitung der vorhergehenden Nachricht abgeschlossen wurde. Der Client scheint daher bei jedem nachfolgenden Vorgangsaufruf zu blockieren. Um dieses Verhalten zu vermeiden, wird in diesem Beispiel die Laufzeit so konfiguriert, dass Nachrichten gleichzeitig an unterschiedliche Instanzen zur Verarbeitung gesendet werden. Im Beispiel wird <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> auf `PerCall` festgelegt, sodass jede Nachricht von einer anderen Instanz verarbeitet werden kann. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> nastaven NA hodnotu `Multiple` auf mehrere Threads gleichzeitig Nachrichten senden können.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
@@ -105,4 +105,3 @@ Processing Divide(22,7) - result: 3.14285714285714
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
-  

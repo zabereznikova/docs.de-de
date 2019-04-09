@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bitmaps [WPF], rendering from visuals
 - visuals [WPF], rendering to bitmaps
 ms.assetid: 103fc7f5-7306-4026-9d61-2005e79959f3
-ms.openlocfilehash: 429aacc99d8ead5a18e9be7602b19a74773b419a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a622d99f7c477f8654526ed399f1eb37288682fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362863"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189876"
 ---
 # <a name="how-to-create-a-bitmap-from-a-visual"></a>Vorgehensweise: Erstellen einer Bitmap aus einem visuellen Element
 Dieses Beispiel zeigt, wie Sie eine Bitmap aus erstellen können eine <xref:System.Windows.Media.Visual>. Ein <xref:System.Windows.Media.DrawingVisual> wird mit gerendert <xref:System.Windows.Media.FormattedText>. Die <xref:System.Windows.Media.Visual> wird dann gerendert werden, um die <xref:System.Windows.Media.Imaging.RenderTargetBitmap> Erstellen eines Bitmaps des angegebenen Texts.  
@@ -23,6 +23,7 @@ Dieses Beispiel zeigt, wie Sie eine Bitmap aus erstellen können eine <xref:Syst
  [!code-vb[ImagingSnippetGallery_procedural_snip#CreateRTBImage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/RenderTargetBitmapExample.vb#creatertbimage)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.DrawingContext>
 - [Übersicht über die Bildverarbeitung](imaging-overview.md)
 - [Übersicht über Zeichnungsobjekte](drawing-objects-overview.md)

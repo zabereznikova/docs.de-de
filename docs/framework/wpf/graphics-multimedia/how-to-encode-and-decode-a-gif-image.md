@@ -13,12 +13,12 @@ helpviewer_keywords:
 - GIF decoding [WPF]
 - GIF encoding [WPF]
 ms.assetid: 9cdd9ec7-71eb-444b-b9e3-991958461163
-ms.openlocfilehash: 245cc2db2c3cd0187c17bc992343eb8ab30da2ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 35bd08f0d5e4d2ee9b8731706c9f1d770d67f633
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353412"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124735"
 ---
 # <a name="how-to-encode-and-decode-a-gif-image"></a>Vorgehensweise: Codieren und Decodieren eines GIF-Bilds
 Die folgenden Beispiele zeigen, wie Sie decodieren und Codieren einer [!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)] -Bild mithilfe der spezifischen <xref:System.Windows.Media.Imaging.GifBitmapDecoder> und <xref:System.Windows.Media.Imaging.GifBitmapEncoder> Objekte.  
@@ -38,4 +38,5 @@ Die folgenden Beispiele zeigen, wie Sie decodieren und Codieren einer [!INCLUDE[
  [!code-vb[GifBitmapDecoderEncoder#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GifBitmapDecoderEncoder/VB/GifEncoderDecoder.vb#4)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die Bildverarbeitung](imaging-overview.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cd5e660778b852cfee84359bb4d7253ca8f118d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11a19dce496423883e5fed62375c6db8ed5efdb1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608075"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134029"
 ---
 # <a name="security-etw-events"></a>ETW-Sicherheitsereignisse
 <a name="top"></a> Sicherheitsereignisse werden während der Überprüfung mit starkem Namen und bei der Authenticodeüberprüfung ausgelöst.  
@@ -29,11 +29,11 @@ ms.locfileid: "54608075"
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword` (0 x 400)|Information (4)|  
+|`SecurityKeyword` (0x400)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`StrongNameVerificationStart_V1`|181|Beginn der Überprüfung mit starkem Namen.|  
 |`StrongNameVerificationStop_V1`|182|Ende der Überprüfung mit starkem Namen.|  
@@ -55,11 +55,11 @@ ms.locfileid: "54608075"
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword` (0 x 400)|Information (4)|  
+|`SecurityKeyword` (0x400)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`AuthenticodeVerificationStart_V1`|183|Beginn der Authenticodeüberprüfung.|  
 |`AuthenticodeVerificationStop_V1`|184|Ende der Authenticodeüberprüfung.|  
@@ -74,4 +74,5 @@ ms.locfileid: "54608075"
 |ClrInstanceID|win:UInt16|Eindeutige ID für die Instanz von CLR oder CoreCLR.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)

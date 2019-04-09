@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], copying and pasting
 ms.assetid: 17ef4207-e92e-4db2-b648-27246e6517ad
-ms.openlocfilehash: 18077f542b1b49f8e81e68fc1e7a5d3e1e417a21
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 94dc1271468661801d07b341214b03bc31bb3099
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713877"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116349"
 ---
 # <a name="how-to-copy-toolstripmenuitems"></a>Vorgehensweise: Kopieren von ToolStripMenuItems
 Zur Entwurfszeit können Sie ganze Menüs der obersten Ebene und ihre Untermenüelemente an eine andere Stelle auf dem <xref:System.Windows.Forms.MenuStrip>kopieren. Die können auch einzelne Menüelemente zwischen Menüs der obersten Ebene kopieren oder die Position von Menüelementen innerhalb eines Menüs ändern.  
@@ -43,6 +43,7 @@ Zur Entwurfszeit können Sie ganze Menüs der obersten Ebene und ihre Untermenü
      Das kopierte Untermenüelement wird vor dem ausgewählten Untermenüelement eingefügt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [Übersicht über das MenuStrip-Steuerelement](menustrip-control-overview-windows-forms.md)

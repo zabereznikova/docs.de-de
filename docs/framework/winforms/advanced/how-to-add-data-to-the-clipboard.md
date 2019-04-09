@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Hinzufügen von Daten in die Zwischenablage'
+title: 'Vorgehensweise: Hinzufügen von Daten zur Zwischenablage'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 1f04203cd5c006f778d09ddc3fef3cfa1be4666e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 896f5bd503c53041e2fed1401fd4455049e62449
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109095"
 ---
-# <a name="how-to-add-data-to-the-clipboard"></a>Vorgehensweise: Hinzufügen von Daten in die Zwischenablage
+# <a name="how-to-add-data-to-the-clipboard"></a>Vorgehensweise: Hinzufügen von Daten zur Zwischenablage
 Die <xref:System.Windows.Forms.Clipboard> -Klasse bietet Methoden, die Sie für die Interaktion mit der Windows-Betriebssystem-Zwischenablage-Funktion verwenden können. Viele Anwendungen verwenden die Zwischenablage als temporäre Repository für Daten. Beispielsweise werden die Zwischenablage von Textverarbeitungsprogrammen während Ausschneiden und Einfügen-Vorgänge verwenden. Die Zwischenablage eignet sich auch zum Übertragen von Daten aus einer Anwendung in eine andere.  
   
  Wenn Sie Daten in die Zwischenablage hinzufügen, können Sie das Format der Daten, die angeben, damit andere Anwendungen die Daten erkennen können, wenn sie dieses Format verwenden können. Sie können auch Daten hinzufügen, in die Zwischenablage in mehreren verschiedenen Formaten, um die Anzahl von anderen Anwendungen zu erhöhen, die möglicherweise die Daten verwenden können.  
@@ -61,5 +61,6 @@ Die <xref:System.Windows.Forms.Clipboard> -Klasse bietet Methoden, die Sie für 
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Drag & Drop-Vorgänge und Unterstützung der Zwischenablage](drag-and-drop-operations-and-clipboard-support.md)
+
+- [Drag &amp; Drop-Operationen und Unterstützung der Zwischenablage](drag-and-drop-operations-and-clipboard-support.md)
 - [Vorgehensweise: Abrufen von Daten aus der Zwischenablage](how-to-retrieve-data-from-the-clipboard.md)

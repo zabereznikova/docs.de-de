@@ -5,12 +5,12 @@ helpviewer_keywords:
 - graphics [WPF], spinning elements
 - spinning elements [WPF]
 ms.assetid: 1f011976-8b07-4c31-9faf-019e0ddaa24c
-ms.openlocfilehash: 2eaca5ba75eb8ac2eeb375a177c08659a65af2db
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: aca9bd577f2882e31e8d49abe5eeb5ade86f95f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371501"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110663"
 ---
 # <a name="how-to-make-an-element-spin-in-place"></a>Vorgehensweise: Drehen von Elementen ohne Positionierung
 Dieses Beispiel zeigt, wie Sie ein Element, das Starten mit einem <xref:System.Windows.Media.RotateTransform> und <xref:System.Windows.Media.Animation.DoubleAnimation>.  
@@ -23,5 +23,6 @@ Dieses Beispiel zeigt, wie Sie ein Element, das Starten mit einem <xref:System.W
  Enthält weitere Beispiele für die Transformation für das vollständige Beispiel finden Sie unter [2D-Transformationen Beispiel](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über Transformationen](transforms-overview.md)

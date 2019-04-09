@@ -2,12 +2,12 @@
 title: Sperre der PII-Sicherheit
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 3537f50c8695838b69d1920cfd953c8b1196d830
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 38ca91ab969624ab2128e3cfad1d8151cb8d1f88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122056"
 ---
 # <a name="pii-security-lockdown"></a>Sperre der PII-Sicherheit
 In diesem Beispiel wird veranschaulicht, wie mehrere sicherheitsbezogene Funktionen eines Windows Communication Foundation (WCF)-Diensts, indem gesteuert wird:  
@@ -41,7 +41,7 @@ In diesem Beispiel wird veranschaulicht, wie mehrere sicherheitsbezogene Funktio
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>So verschlüsseln Sie die Werte im Abschnitt appSettings in Web.config für das Beispiel  
   
-1.  Öffnen Sie eine Eingabeaufforderung über "Start->Ausführen". Geben Sie in `cmd` , und klicken Sie auf **OK**.  
+1.  Öffnen Sie eine Eingabeaufforderung mithilfe des Start -> ausführen... Geben Sie in `cmd` , und klicken Sie auf **OK**.  
   
 2.  Navigieren Sie zum aktuellen .NET Framework-Verzeichnis, indem Sie folgenden Befehl ausgeben: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
   
@@ -126,7 +126,7 @@ In diesem Beispiel wird veranschaulicht, wie mehrere sicherheitsbezogene Funktio
   
 -   [Erstellen von Secure ASP.NET-Anwendungen: Authentifizierung, Autorisierung und sichere Kommunikation](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [How To: Verschlüsseln von Konfigurationsabschnitten in ASP.NET 2.0 mithilfe von RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
+-   [Vorgehensweise: Verschlüsseln von Konfigurationsabschnitten in ASP.NET 2.0 mithilfe von RSA](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So richten Sie das Beispiel ein, erstellen es und führen es aus  
   
@@ -143,4 +143,5 @@ In diesem Beispiel wird veranschaulicht, wie mehrere sicherheitsbezogene Funktio
 1.  Bearbeiten Sie Machine.config, und legen Sie `enableLoggingKnownPii`-Attribut auf `false` fest.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [AppFabric-Überwachungsbeispiele](https://go.microsoft.com/fwlink/?LinkId=193959)

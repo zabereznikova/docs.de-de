@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 2f6879f5e46e62db29e482444d55680d39dd8ccc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587176"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164371"
 ---
 # <a name="specifying-client-run-time-behavior"></a>Angeben des Clientlaufzeitverhaltens
 Windows Communication Foundation (WCF)-Clients, wie Windows Communication Foundation (WCF)-Dienste können konfiguriert werden, um das Laufzeitverhalten die Clientanwendung entsprechend zu ändern. Drei Attribute sind zum Angeben des Clientlaufzeitverhaltens verfügbar. Duplexclient-Rückrufobjekte können das <xref:System.ServiceModel.CallbackBehaviorAttribute>-Attribut und das <xref:System.ServiceModel.Description.CallbackDebugBehavior>-Attribut verwenden, um ihr Laufzeitverhalten zu ändern. Das andere Attribut, <xref:System.ServiceModel.Description.ClientViaBehavior>, kann verwendet werden, um das logische Ziel vom unmittelbaren Netzwerkziel zu trennen. Außerdem können Duplexclient-Rückruftypen Teile des Dienstseitenverhaltens verwenden. Weitere Informationen finden Sie unter [Run-Time-Dienstverhalten angeben](../../../docs/framework/wcf/specifying-service-run-time-behavior.md).  
@@ -44,4 +44,5 @@ Windows Communication Foundation (WCF)-Clients, wie Windows Communication Founda
  Sie können mit dem <xref:System.ServiceModel.Description.ClientViaBehavior>-Verhalten den URI (Uniform Resource Identifier) angeben, für den der Transportkanal erstellt werden soll. Verwenden Sie dieses Verhalten, wenn das unmittelbare Netzwerkziel nicht der gewünschte Prozessor der Nachricht ist. Dies ermöglicht Konversationen über mehrere Hops, wenn die aufrufende Anwendung das endgültige Ziel nicht unbedingt kennt oder wenn der `Via`-Header des Ziels keine Adresse ist.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Angeben des Dienstlaufzeitverhaltens](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

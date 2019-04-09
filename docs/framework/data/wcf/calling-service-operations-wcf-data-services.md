@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: c11fe4176ee770e39abcab612e26e496aa2a1457
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ef00861624531e68ad5b8a3b080810040ae3ff6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543512"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109472"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Aufrufen von Dienstvorgängen (WCF Data Services)
 Der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiert Dienstvorgänge für einen Datendienst. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht es Ihnen, solche Vorgänge als Methoden im Datendienst zu definieren. Wie andere Datendienstressourcen werden diese Dienstvorgänge durch URIs adressiert. Ein Dienstvorgang kann Auflistungen von Entitätstypen, einzelnen Entitätstypinstanzen und primitiven Typen zurückgeben, z. B. ganze Zahl und Zeichenfolge. Ein Dienstvorgang kann auch `null` (`Nothing` in Visual Basic) zurückgeben. Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek kann verwendet werden, um auf Dienstvorgänge zuzugreifen, die HTTP-GET-Anforderungen unterstützen. Diese Arten von Dienstvorgängen werden als Methoden definiert, die über das <xref:System.ServiceModel.Web.WebGetAttribute> verfügen. Weitere Informationen finden Sie unter [Dienstvorgänge](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
@@ -34,7 +34,7 @@ Der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiert Di
   
 -   Ziehen Sie das Erstellen einer Erweiterungsmethode in der stark typisierten <xref:System.Data.Services.Client.DataServiceContext>-Teilklasse in Betracht, die von den Tools generiert wird und entweder die <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>-Methode oder die <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>-Methode zum Aufrufen eines Dienstvorgangs verwendet. Dies ermöglicht es Ihnen, Dienstvorgänge direkt aus dem Kontext heraus aufzurufen. Weitere Informationen finden Sie im Blogbeitrag [Dienstvorgänge und der WCF Data Services-Client](https://go.microsoft.com/fwlink/?LinkId=215668).  
   
--   Wenn Sie mithilfe von <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> einen Dienstvorgang aufrufen, versieht die Clientbibliothek automatisch an <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> übergebene Zeichen mit Escapezeichen, indem eine Prozentcodierung der reservierten Zeichen wie das kaufmännische Und-Zeichen (&) durchgeführt wird, sowie einfache Anführungszeichen in Zeichenfolgen. Allerdings beim Aufruf eines der *Execute* Methoden zum Aufrufen eines Dienstvorgangs, denken Sie daran, mit Escapezeichen vom Benutzer bereitgestellte Zeichenfolgenwerte. Einfache Anführungszeichen in URIs werden als Paare einfacher Anführungszeichen mit Escapezeichen versehen.  
+-   Bei Verwendung von <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> um einen Dienstvorgang aufzurufen, die Clientbibliothek automatisch mit Escapezeichen versieht Zeichen angegeben wird, um die <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> indem eine prozentcodierung der reservierten Zeichen wie das kaufmännische und-Zeichen (&), und einfache Anführungszeichen in Escapezeichen Zeichenfolgen. Allerdings beim Aufruf eines der *Execute* Methoden zum Aufrufen eines Dienstvorgangs, denken Sie daran, mit Escapezeichen vom Benutzer bereitgestellte Zeichenfolgenwerte. Einfache Anführungszeichen in URIs werden als Paare einfacher Anführungszeichen mit Escapezeichen versehen.  
   
 ## <a name="examples-of-calling-service-operations"></a>Beispiele für das Aufrufen von Dienstvorgängen  
  Dieser Abschnitt enthält die folgenden Beispiele zum Aufrufen von Dienstvorgängen mit der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek:  
@@ -49,9 +49,9 @@ Der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiert Di
   
 -   [Aufrufen von Execute&lt;T&gt; zum Zurückgeben eines einzelnen primitiven Werts](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
   
--   [Aufrufen eines Dienstvorgangs, der zurückgibt keine Daten](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteVoid)  
+-   [Aufrufen eines Dienstvorgangs, der keine Daten zurückgibt](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteVoid)  
   
--   [Asynchrones Aufrufen eines Dienstvorgangs](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteAsync)  
+-   [Asynchrones Aufrufen von Dienstvorgängen](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteAsync)  
   
 <a name="ExecuteIQueryable"></a>   
 ### <a name="calling-executet-to-return-a-collection-of-entities"></a>Aufrufen von Execute\<T > zum Zurückgeben einer Auflistung von Entitäten  
@@ -125,4 +125,5 @@ Der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiert Di
  [!code-vb[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#onasyncqueryexecutioncomplete)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

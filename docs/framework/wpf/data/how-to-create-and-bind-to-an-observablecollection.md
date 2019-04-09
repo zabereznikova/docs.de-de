@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen und Binden an ObservableCollection'
+title: 'Vorgehensweise: Erstellen und Binden eine ObservableCollection-Klasse'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [WPF], ObservableCollection class
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
-ms.openlocfilehash: 10cea133651739df8bb8e27c58221b34067782f5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188434"
 ---
-# <a name="how-to-create-and-bind-to-an-observablecollection"></a>Vorgehensweise: Erstellen und Binden an ObservableCollection
+# <a name="how-to-create-and-bind-to-an-observablecollection"></a>Vorgehensweise: Erstellen und Binden eine ObservableCollection-Klasse
 Dieses Beispiel zeigt das Erstellen und Binden an eine Auflistung, die von abgeleitet ist die <xref:System.Collections.ObjectModel.ObservableCollection%601> Klasse, die eine Auflistungsklasse, die Benachrichtigungen bereitstellt, wenn Elemente hinzugefügt oder entfernt werden.  
   
 ## <a name="example"></a>Beispiel  
@@ -141,8 +141,9 @@ End Class
  Weitere Informationen finden Sie in der [Übersicht über die Datenbindung](data-binding-overview.md) unter „Binden an Auflistungen“.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sortieren von Daten in einer Ansicht](how-to-sort-data-in-a-view.md)
 - [Filtern von Daten in einer Ansicht](how-to-filter-data-in-a-view.md)
 - [Sortieren und Gruppieren von Daten mit einer Ansicht in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Übersicht zur Datenbindung](data-binding-overview.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)

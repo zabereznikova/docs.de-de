@@ -1,18 +1,18 @@
 ---
-title: 'Beispiele für die Abfrageausdruckssyntax: Aggregierungsoperatoren'
+title: 'Beispiele für die Abfrageausdruckssyntax: Aggregatoperatoren'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d729120c-4c1b-4f34-bbe9-33694fca2dde
-ms.openlocfilehash: bc3a6de1101b3e7626312197bc2d1ba37f7e04a4
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d9d53e91f5252a0ac44822ac6252ce02e9697d33
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130584"
 ---
-# <a name="query-expression-syntax-examples-aggregate-operators"></a>Beispiele für die Abfrageausdruckssyntax: Aggregierungsoperatoren
+# <a name="query-expression-syntax-examples-aggregate-operators"></a>Beispiele für die Abfrageausdruckssyntax: Aggregatoperatoren
 In diesem Thema wird gezeigt, wie mit der <xref:System.Linq.Enumerable.Average%2A>, <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Max%2A>, <xref:System.Linq.Enumerable.Min%2A>, und <xref:System.Linq.Enumerable.Sum%2A> Methoden zum Abfragen der [AdventureWorks Sales-Modell](https://archive.codeplex.com/?p=msftdbprodsamples) mithilfe der Abfrageausdruckssyntax Abfragen. Für das in den Beispielen verwendete "AdventureWorks Sales"-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der "AdventureWorks"-Beispieldatenbank zurückgegriffen.  
   
  In die Beispielen in diesem Thema verwenden Sie die folgenden `using` / `Imports` Anweisungen:  
@@ -54,7 +54,7 @@ In diesem Thema wird gezeigt, wie mit der <xref:System.Linq.Enumerable.Average%2
  [!code-csharp[DP L2E Examples#CountGrouped](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#countgrouped)]
  [!code-vb[DP L2E Examples#CountGrouped](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#countgrouped)]  
   
-## <a name="max"></a>Max  
+## <a name="max"></a>Max.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die <xref:System.Linq.Enumerable.Max%2A>-Methode verwendet, um für jede Kontakt-ID den größten fälligen Gesamtbetrag abzurufen.  
@@ -68,7 +68,7 @@ In diesem Thema wird gezeigt, wie mit der <xref:System.Linq.Enumerable.Average%2
  [!code-csharp[DP L2E Examples#MaxElements_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#maxelements_mq)]
  [!code-vb[DP L2E Examples#MaxElements_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#maxelements_mq)]  
   
-## <a name="min"></a>Min  
+## <a name="min"></a>Min.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die <xref:System.Linq.Enumerable.Min%2A>-Methode verwendet, um für jede Kontakt-ID den kleinsten fälligen Gesamtbetrag abzurufen.  
@@ -91,4 +91,5 @@ In diesem Thema wird gezeigt, wie mit der <xref:System.Linq.Enumerable.Average%2
  [!code-vb[DP L2E Examples#SumGrouped_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#sumgrouped_mq)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Abfragen in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

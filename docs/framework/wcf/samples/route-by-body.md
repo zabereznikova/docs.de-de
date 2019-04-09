@@ -2,12 +2,12 @@
 title: Routen nach Text
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-ms.openlocfilehash: fe201161ebed66b8444c23229a6907be329d3641
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 3f6be962db2d07bef3a7adc714e9f4e72d621d37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835127"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172314"
 ---
 # <a name="route-by-body"></a>Routen nach Text
 In diesem Beispiel wird das Implementieren eines Diensts veranschaulicht, der Nachrichtenobjekte mit einer beliebigen SOAP-Aktion annimmt. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md) , das einen rechnerdienst implementiert. Der Dienst implementiert einen einzelnen `Calculate`-Vorgang, der einen <xref:System.ServiceModel.Channels.Message>-Anforderungsparameter annimmt und eine <xref:System.ServiceModel.Channels.Message>-Antwort zurückgibt.  
@@ -35,7 +35,7 @@ In diesem Beispiel wird das Implementieren eines Diensts veranschaulicht, der Na
     }  
 ```  
   
- Wenn ein Vertrag vorliegt, erfordert ein Dienst das benutzerdefinierte Sendeverhalten `DispatchByBodyBehavior`, damit die Nachrichten zwischen Vorgängen gesendet werden können. Dieses Sendeverhalten initialisiert die `DispatchByBodyElementOperationSelector` benutzerdefinierte Vorgangsauswahl mit einer Tabelle der Vorgangsnamen, die nach Argumentnamen geordnet QName der entsprechenden Elemente. `DispatchByBodyElementOperationSelector` prüft das Starttag des ersten untergeordneten Elements von Body und wählt den Vorgang anhand der zuvor erwähnten Tabelle aus.  
+ Wenn ein Vertrag vorliegt, erfordert ein Dienst das benutzerdefinierte Sendeverhalten `DispatchByBodyBehavior`, damit die Nachrichten zwischen Vorgängen gesendet werden können. Dieses Sendeverhalten initialisiert die `DispatchByBodyElementOperationSelector` benutzerdefinierte Vorgangsauswahl mit einer Tabelle der Vorgangsnamen, die nach Argumentnamen geordnet QName der entsprechenden Elemente. `DispatchByBodyElementOperationSelector` Sucht nach dem Starttag des ersten untergeordneten Elements des Texts, und wählt den Vorgang anhand der zuvor erwähnten Tabelle.  
   
  Der Client verwendet einen Proxy aus der vom Dienst mit exportierten WSDL automatisch generierten [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
@@ -72,4 +72,3 @@ Press <ENTER> to terminate client.
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  
-  

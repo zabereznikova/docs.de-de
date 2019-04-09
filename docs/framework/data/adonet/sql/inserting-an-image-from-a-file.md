@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: 8df63cb425f8e113a73fee1b0a6bd61683ed27ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2bc67b4130633fba3a6e42e2b6925fc09f835c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578843"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116229"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Einfügen eines Bilds aus einer Datei
 Je nach Feldtyp in der Datenquelle können Sie ein Binary Large Object (BLOB) entweder als Binär- oder Zeichendaten in eine Datenbank schreiben. BLOB ist ein generischer Begriff und verweist auf die Datentypen `text`, `ntext` und `image`, die in der Regel Dokumente und Bilder enthalten.  
@@ -18,7 +18,7 @@ Je nach Feldtyp in der Datenquelle können Sie ein Binary Large Object (BLOB) en
  Um einen BLOB-Wert in der Datenbank zu schreiben, geben Sie die entsprechende INSERT- oder UPDATE-Anweisung aus, und übergeben Sie den BLOB-Wert als Eingabeparameter (finden Sie unter [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)). Wenn das BLOB als Text gespeichert ist (z. B. ein SQL Server-Feld vom Typ `text`), können Sie das BLOB als Zeichenfolgenparameter übergeben. Wenn das BLOB im Binärformat gespeichert ist (z. B. ein SQL Server-Feld vom Typ `image`), können Sie ein Array vom Typ `byte` als Binärparameter übergeben.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Codebeispiel werden der Tabelle Employees in der Northwind-Datenbank Mitarbeiterinformationen hinzugefügt. Ein Foto des Mitarbeiters wird aus einer Datei geladen und dem <legacyBold>Photo</legacyBold>-Feld der Tabelle, einem Bildfeld, hinzugefügt.  
+ Im folgenden Codebeispiel werden der Tabelle Employees in der Northwind-Datenbank Mitarbeiterinformationen hinzugefügt. Ein Foto des Mitarbeiters wird aus einer Datei geladen und dem Photo-Feld der Tabelle, einem Bildfeld, hinzugefügt.  
   
 ```vb  
 Public Shared Sub AddEmployee( _  
@@ -131,8 +131,9 @@ public static byte[] GetPhoto(string filePath)
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden von Befehlen zum Ändern von Daten](../../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
 - [Abrufen von Binärdaten](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)
-- [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [Binäre Daten und Daten mit umfangreichen Werten in SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [SQL Server-Datentypzuordnungen](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

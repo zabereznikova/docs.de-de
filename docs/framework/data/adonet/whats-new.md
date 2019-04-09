@@ -2,12 +2,12 @@
 title: Neues in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 2acbd6a766d91e31db71ce193bcc4081e5f32c9d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 90352d3e3d52430d515460cdcc9b6d177976c0b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191443"
 ---
 # <a name="whats-new-in-adonet"></a>Neues in ADO.NET
 Die folgenden Funktionen sind neu in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] in [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
@@ -41,9 +41,9 @@ Die folgenden Funktionen sind neu in [!INCLUDE[vstecado](../../../../includes/vs
   
 -   SqlClient unterstützt Verbindungen mit LocalDB-Datenbanken. Weitere Informationen finden Sie unter [SqlClient-Unterstützung für LocalDB](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md).  
   
--   `Type System Version=SQL Server 2012;` ist der neue Wert, der an die `Type System Version`-Verbindungseigenschaft übergeben wird. Der `Type System Version=Latest;`-Wert ist jetzt veraltet und wurde `Type System Version=SQL Server 2008;` angeglichen. Weitere Informationen finden Sie unter <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+-   `Type System Version=SQL Server 2012;` neue Wert für die Übergabe an die `Type System Version` Connection-Eigenschaft. Der `Type System Version=Latest;`-Wert ist jetzt veraltet und wurde `Type System Version=SQL Server 2008;` angeglichen. Weitere Informationen finden Sie unter <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
--   SqlClient bietet zusätzliche Unterstützung für Spalten mit geringer Dichte, eine Funktion, die in SQL Server 2008 hinzugefügt wurde. Wenn die Anwendung bereits auf Daten in einer Tabelle zugreift, die Spalten mit geringer Dichte verwendet, sollten Sie eine Leistungsverbesserung feststellen. Die IsColumnSet-Spalte von <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> gibt an, ob eine Spalte eine Sparsespalte ist und einem Spaltensatz angehört. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Gibt an, ob eine Spalte eine sparsespalte ist (siehe [SQL Server-Schemaauflistungen](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) Informationen). Weitere Informationen zu sparsespalten finden Sie unter [Verwenden von Sparsespalten](https://go.microsoft.com/fwlink/?LinkId=224244).  
+-   SqlClient bietet zusätzliche Unterstützung für Sparsespalten, eine Funktion, die in SQL Server 2008 hinzugefügt wurde. Wenn die Anwendung bereits auf Daten in einer Tabelle zugreift, die Sparsespalten verwendet, sollten Sie eine Leistungsverbesserung feststellen. Die IsColumnSet-Spalte von <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> gibt an, ob eine Spalte eine Sparsespalte ist und einem Spaltensatz angehört. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Gibt an, ob eine Spalte eine sparsespalte ist (siehe [SQL Server-Schemaauflistungen](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) Informationen). Weitere Informationen zu sparsespalten finden Sie unter [Verwenden von Sparsespalten](https://go.microsoft.com/fwlink/?LinkId=224244).  
   
 -   Für die Microsoft.SqlServer.Types.dll-Assembly, die die räumlichen Datentypen enthält, wurde ein Upgrade von Version 10.0 auf Version 11.0 vorgenommen. Anwendungen, die auf diese Assembly verweisen, schlagen möglicherweise fehl. Weitere Informationen finden Sie unter [wichtige Änderungen an Funktionen der Datenbank-Engine](https://go.microsoft.com/fwlink/?LinkId=224367).  
   
@@ -51,6 +51,7 @@ Die folgenden Funktionen sind neu in [!INCLUDE[vstecado](../../../../includes/vs
  Durch [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] werden APIs hinzugefügt, die bei Verwendung von Entity Framework 5.0 neue Szenarien ermöglichen. Weitere Informationen zu Verbesserungen und Funktionen, die Entity Framework 5.0 hinzugefügt wurden, finden Sie unter den folgenden Themen: [Neues](https://go.microsoft.com/fwlink/?LinkID=251106) und [Entity Framework-Versionen und Versionsverwaltung](https://go.microsoft.com/fwlink/?LinkId=234899).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
 - [Übersicht über ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [SQL Server und ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)

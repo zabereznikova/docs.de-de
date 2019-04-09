@@ -1,13 +1,13 @@
 ---
-title: <message> Element <netTcpBinding>
+title: <message> von <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 09ff567e73791151350288f6e5ddb5f9aff36e80
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ac6977a8422055f998c7ed932c853992b7809911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276925"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161017"
 ---
 # <a name="message-element-of-nettcpbinding"></a>\<Message >-Element der \<NetTcpBinding >
 Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen Endpunkt konfiguriert, mit der [ \<NetTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -33,7 +33,7 @@ Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen E
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|`algorithmSuite`|Legt die Nachrichtenverschlüsselungs- und Key Wrap-Algorithmen fest. Die Algorithmen und die Schlüsselgröße werden durch die <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-Klasse ermittelt. Diese Algorithmen entsprechen den in der Security Policy Language (WS-SecurityPolicy)-Spezifikation angegebenen Algorithmen.<br /><br /> Mögliche Werte werden in der folgenden Tabelle angezeigt. Der Standardwert ist `Basic256`.<br /><br /> Wenn die Dienstbindung einen `algorithmSuite`-Wert angibt, der nicht gleich dem Standardwert ist, und Sie die Konfigurationsdatei mithilfe von Svcutil.exe erstellen, dann wird diese Datei nicht korrekt generiert, und Sie müssen die Konfigurationsdatei manuell bearbeiten, um dieses Attribut auf den gewünschten Wert festzulegen.|  
+|`algorithmSuite`|Legt die Nachrichtenverschlüsselungs- und Key Wrap-Algorithmen fest. Die Algorithmen und die Schlüsselgröße werden durch die <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>-Klasse ermittelt. Diese Algorithmen entsprechen den in der Security Policy Language (WS-SecurityPolicy)-Spezifikation angegebenen Algorithmen.<br /><br /> Mögliche Werte werden in der folgenden Tabelle angezeigt. Der Standardwert ist `Basic256`.<br /><br /> Wenn die Dienstbindung einen `algorithmSuite`-Wert angibt, der nicht gleich dem Standardwert ist, und Sie die Konfigurationsdatei mithilfe von „Svcutil.exe“ erstellen, dann wird diese Datei nicht korrekt generiert, und Sie müssen die Konfigurationsdatei manuell bearbeiten, um dieses Attribut auf den gewünschten Wert festzulegen.|  
 |`clientCredentialType`|Gibt den Typ der Anmeldeinformationen an, die beim Durchführen der Clientauthentifizierung mit nachrichtenbasierter Sicherheit verwendet werden. Mögliche Werte werden in der folgenden Tabelle angezeigt. Der Standardwert ist `UserName`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.MessageCredentialType>.|  
   
 ## <a name="algorithmsuite-attribute"></a>algorithmSuite-Attribut  
@@ -61,14 +61,14 @@ Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen E
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Keine|Dies ermöglicht dem Dienst, mit anonymen Clients zu interagieren. Auf Dienstseite wird dadurch angegeben, dass der Dienst keine Clientanmeldeinformationen erfordert. Auf Clientseite wird dadurch angegeben, dass der Client keine Clientanmeldeinformationen bereitstellt.|  
+|Keiner|Dies ermöglicht dem Dienst, mit anonymen Clients zu interagieren. Auf Dienstseite wird dadurch angegeben, dass der Dienst keine Clientanmeldeinformationen erfordert. Auf Clientseite wird dadurch angegeben, dass der Client keine Clientanmeldeinformationen bereitstellt.|  
 |Windows|Dies ermöglicht SOAP-Austausch im Rahmen des authentifizierten Kontexts von Windows-Anmeldeinformationen.|  
 |UserName|Ermöglicht es dem Dienst, vom Client zu fordern, sich über eine UserName-Anmeldeinformation zu authentifizieren. Senden von kennwortdigests oder das Ableiten der Schlüssel mit Kennwörtern sowie die Verwendung solcher Schlüssel für die nachrichtensicherheit unterstützt WCF nicht. Daher setzt WCF an, dass der Transport geschützt wird, wenn UserName-Anmeldeinformationen verwendet. Dieser Modus führt entweder zu einem interoperablen Austausch oder zu einer nicht interoperablen Aushandlung basierend auf dem `negotiateServiceCredential`-Attribut.|  
 |Zertifikat|Ermöglicht dem Dienst, die Forderung zu stellen, dass der Client über ein Zertifikat authentifiziert werden muss. Wenn der Nachrichtensicherheitsmodus verwendet wird und das `negotiateServiceCredential`-Attribut auf `false` festgelegt ist, muss dem Client das Dienstzertifikat zur Verfügung gestellt werden.|  
 |IssuedToken|Gibt ein benutzerdefiniertes Token an, das in der Regel von einem Sicherheitstokendienst ausgegeben wird.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -80,6 +80,7 @@ Definiert den Typ der sicherheitsanforderungen auf Nachrichtenebene für einen E
  Die Nachricht verwendet Sicherheit auf Nachrichtenebene für die Integrität und die Vertraulichkeit der SOAP-Nachricht und für die gegenseitige Authentifizierung der Kommunikationspeers. Wurde dieser Sicherheitsmodus für eine Bindung ausgewählt, wird der Kanalstapel mit Nachrichtensicherheits-Bindungselementen konfiguriert, und die SOAP-Nachrichten werden gemäß der WS-Security*-Standards geschützt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.MessageSecurityOverTcp>
 - <xref:System.ServiceModel.Configuration.NetTcpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.NetTcpSecurity.Message%2A>

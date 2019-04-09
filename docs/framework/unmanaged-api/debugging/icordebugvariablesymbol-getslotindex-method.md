@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c7b70638b963968fb3ed7e294f1767718f9bc34
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: affe67006c9e37d55b0f9d107c92441da44c9ab8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138788"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol::GetSize-Methode
 Ruft den verwalteten Slotindex einer lokalen Variablen ab.  
@@ -27,7 +27,7 @@ HRESULT GetSlotIndex(
  [out] Ein Zeiger auf den Slotindex der lokalen Variablen.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Bei Erfolg `S_OK`. `E_FAIL`, wenn die Variable ein Funktionsargument ist.  
+ `S_OK` Bei erfolgreicher Ausführung. `E_FAIL` Wenn die Variable ein Funktionsargument ist.  
   
 ## <a name="remarks"></a>Hinweise  
  Der verwaltete Slotindex einer lokalen Variablen kann zum Abrufen der Metadateninformationen der Variablen verwendet werden.  
@@ -45,5 +45,6 @@ HRESULT GetSlotIndex(
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorDebugVariableSymbol-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

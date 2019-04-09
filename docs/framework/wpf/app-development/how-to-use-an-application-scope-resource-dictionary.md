@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden eines Ressourcenwörterbuchs für den Anwendungsbereich'
+title: 'Vorgehensweise: Verwenden eines anwendungsspezifischen Ressourcenverzeichnisses'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-ms.openlocfilehash: a2453ae7fad56205ae06835d8710ca126bba17c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 589e28b3c05496e3fc17055b98240e389faed068
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125375"
 ---
-# <a name="how-to-use-an-application-scope-resource-dictionary"></a>Vorgehensweise: Verwenden eines Ressourcenwörterbuchs für den Anwendungsbereich
+# <a name="how-to-use-an-application-scope-resource-dictionary"></a>Vorgehensweise: Verwenden eines anwendungsspezifischen Ressourcenverzeichnisses
 In diesem Beispiel wird gezeigt, wie ein benutzerdefiniertes Ressourcenverzeichnis für den Anwendungsbereich definiert und verwendet wird.  
   
 ## <a name="example"></a>Beispiel  
@@ -42,7 +42,8 @@ In diesem Beispiel wird gezeigt, wie ein benutzerdefiniertes Ressourcenverzeichn
  Es gibt zwei Überlegungen, die bei der Verwendung <xref:System.Windows.Application.Resources%2A>. Zuerst wird das Wörterbuch *Schlüssel* ist ein Objekt, aus, sodass Sie genau die gleiche Objektinstanz beim Festlegen und Abrufen eines Eigenschaftswerts verwenden müssen. (Beachten Sie, dass beim Verwenden einer Zeichenfolge beim Schlüssel die Groß-/Kleinschreibung beachtet wird.) Anderen ist der *Wert* ist ein Objekt, aus, sodass Sie den Wert in den gewünschten Typ zu konvertieren, wenn einen Eigenschaftswert abgerufen werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.ResourceDictionary>
 - <xref:System.Windows.Application.Resources%2A>
 - [XAML-Ressourcen](../advanced/xaml-resources.md)
-- [Zusammengeführte Ressourcenverzeichnisse](../advanced/merged-resource-dictionaries.md)
+- [Zusammengeführte Ressourcenwörterbücher](../advanced/merged-resource-dictionaries.md)

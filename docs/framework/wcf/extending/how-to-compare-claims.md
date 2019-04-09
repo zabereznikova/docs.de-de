@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ansprüche vergleichen'
+title: 'Vorgehensweise: Vergleichen von Ansprüchen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: b375251e1ff083a527249da51dfe12ae9165dd55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c6230d7618b7885d72ddfebc67157bb48ff9cb38
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720248"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122017"
 ---
-# <a name="how-to-compare-claims"></a>Vorgehensweise: Ansprüche vergleichen
+# <a name="how-to-compare-claims"></a>Vorgehensweise: Vergleichen von Ansprüchen
 Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) wird verwendet, um die autorisierungsüberprüfung auszuführen. Eine gängige Aufgabe besteht darin, die Ansprüche im Autorisierungskontext mit den Ansprüchen zu vergleichen, die erforderlich sind, um die angeforderte Aktion auszuführen oder auf die angeforderte Ressource zuzugreifen. In diesem Thema wird beschrieben, wie Ansprüche verglichen werden, einschließlich integrierter und benutzerdefinierter Anspruchstypen. Weitere Informationen über die identitätsmodellinfrastruktur finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
  Der Vergleich von Ansprüchen umfasst das Vergleichen der drei Bestandteile des Anspruchs (Typ, Recht und Ressource) mit den entsprechenden Teilen eines anderen Anspruchs, um festzustellen, ob sie identisch sind. Weitere Informationen finden Sie im folgenden Beispiel.  
@@ -71,5 +71,6 @@ Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) wir
  [!code-vb[c_CustomClaimComparison#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#0)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [Vorgehensweise: Erstellen eines benutzerdefinierten Anspruchs](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

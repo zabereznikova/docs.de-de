@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], world transformation
 - world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
-ms.openlocfilehash: cc6bcca42e84580199f75c64087af6d98f476d4b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f40d7e8cb814344365e8b88c2659751903b79d77
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715697"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139957"
 ---
 # <a name="using-the-world-transformation"></a>Verwenden der globalen Transformation
 Die globale Transformation ist eine Eigenschaft der <xref:System.Drawing.Graphics> Klasse. Die Zahlen, die die globale Transformation angeben, befinden sich in einem <xref:System.Drawing.Drawing2D.Matrix> -Objekt, das eine 3 x 3-Matrix darstellt. Die <xref:System.Drawing.Drawing2D.Matrix> und <xref:System.Drawing.Graphics> Klassen verfügen über mehrere Methoden zum Festlegen der Zahlen in die globale Transformationsmatrix.  
@@ -42,6 +42,7 @@ Die globale Transformation ist eine Eigenschaft der <xref:System.Drawing.Graphic
  [!code-vb[System.Drawing.MiscLegacyTopics#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.Drawing2D.Matrix>
 - [Koordinatensysteme und Transformationen](coordinate-systems-and-transformations.md)
 - [Verwenden von Transformationen in Managed GDI+](using-transformations-in-managed-gdi.md)

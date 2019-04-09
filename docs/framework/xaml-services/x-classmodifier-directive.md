@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: cc9e866f859192e1fa13ead24dc44a7b9d286877
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: fdbc69634e86992e71cfccdc080829b6b45f963c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58026783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100920"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier-Anweisung
 Ändert die XAML-Kompilierungsverhalten beim `x:Class` wird ebenfalls bereitgestellt. Insbesondere statt einer partiellen `class` , bei dem ein `Public` Zugriffsebene (Standard), der bereitgestellten `x:Class` wird erstellt, mit einer `NotPublic` Zugriffsebene. Dieses Verhalten wirkt sich auf die Zugriffsebene für die Klasse in der generierten Assemblys.  
@@ -40,21 +40,22 @@ ms.locfileid: "58026783"
 ## <a name="remarks"></a>Hinweise  
  Der Wert des `x:ClassModifier` Nutzung in .NET Framework-XAML-Diensten variiert je nach Programmiersprache. Wie jede Sprache implementiert, die zu verwendende Zeichenfolge hängt die <xref:System.CodeDom.Compiler.CodeDomProvider> und der Typkonverter wird zurückgegeben, um die Bedeutung für definieren <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> und <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>, und gibt an, ob die entsprechende Sprache Groß-/Kleinschreibung beachtet wird.  
   
--   Für C# und die Zeichenfolge übergeben, um zu bestimmen <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> ist `internal`.  
+-   Für c# und die Zeichenfolge übergeben, um zu bestimmen <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> ist `internal`.  
   
 -   Für Microsoft Visual Basic .NET ist die Zeichenfolge übergeben, um zu bestimmen <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> ist `Friend`.  
   
 -   Für [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)], keine Ziele vorhanden sind, die Kompilierung von XAML unterstützen; aus diesem Grund ist der zu übergebende Wert nicht angegeben.  
   
- Sie können auch angeben, <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> (`public` in C# `Public` in Visual Basic), aber angeben <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> selten geschieht, da <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ist bereits das Standardverhalten.  
+ Sie können auch angeben, <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> (`public` in c# `Public` in Visual Basic), aber angeben <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> selten geschieht, da <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> ist bereits das Standardverhalten.  
   
- Andere Werte durch entsprechende Benutzercode Zugriffsebene Einschränkungen, z. B. `private` in C# sind nicht relevant für `x:ClassModifier` da geschachtelte Klassenverweise in XAML, nicht unterstützt werden und somit die <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> Modifizierer hat dieselbe Wirkung.  
+ Andere Werte durch entsprechende Benutzercode Zugriffsebene Einschränkungen, z. B. `private` in c# sind nicht relevant für `x:ClassModifier` da geschachtelte Klassenverweise in XAML, nicht unterstützt werden und somit die <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> Modifizierer hat dieselbe Wirkung.  
   
 ## <a name="security-notes"></a>Sicherheitshinweise  
  Die Zugriffsebene, die gemäß der Deklaration in `x:ClassModifier` interpretiert wird, weiterhin von bestimmten Frameworks und ihre Funktionen. WPF enthält Funktionen zum Laden und Instanziieren von Typen, in denen `x:ClassModifier` ist `internal`, wenn die Klasse aus einer WPF-Ressource über einen Paket-URI-Verweis verwiesen wird. Als Folge dieses Falls und potenziell andere wie es von anderen Frameworks implementiert, verlassen Sie sich nicht ausschließlich auf `x:ClassModifier` versucht, alle möglichen Instanziierung zu blockieren.  
   
 ## <a name="see-also"></a>Siehe auch
-- [x:Class-Anweisung](x-class-directive.md)
+
+- [x:Class-Direktive](x-class-directive.md)
 - [Code-Behind und XAML in WPF](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [x:FieldModifier-Anweisung](x-fieldmodifier-directive.md)
 - [Sicherheit (WPF)](../wpf/security-wpf.md)

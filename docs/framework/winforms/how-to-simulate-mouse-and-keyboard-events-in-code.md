@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: bb51cd5ac3c4961381ceff89054d79dc52531627
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: aa0139c4b51bf33f9156eeb9dab6b9b6093524d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123447"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Vorgehensweise: Simulieren von Maus- und Tastaturereignissen in Code
 Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Maus- und Tastatureingaben bereit. Dieses Thema enthält eine Übersicht über diese Optionen.  
@@ -90,4 +90,5 @@ Windows Forms stellt mehrere Optionen zur programmgesteuerten Simulation von Mau
  Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Benutzereingaben in Windows Forms](user-input-in-windows-forms.md)

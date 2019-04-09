@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c29859a54b89956e017f06b8eeb97a6171eabbb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0cf0065f1ed12ad3a37819b0a15d734a2b51ff5b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125605"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach-Methode
 Gibt ein HRESULT, der angibt, ob ein neuer Prozess gestartet oder an den angegebenen vorhandenen Prozess anfügen innerhalb des Kontexts der aktuellen Computer und -Runtime-Konfiguration möglich ist.  
@@ -69,4 +69,5 @@ HRESULT CanLaunchOrAttach (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

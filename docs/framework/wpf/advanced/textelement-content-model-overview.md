@@ -9,17 +9,16 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: 935d86195acaca94b0115a8cdcf7289c23613f7f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369759"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125119"
 ---
 # <a name="textelement-content-model-overview"></a>Übersicht über das TextElement-Inhaltsmodell
 Dieser Inhaltsmodellübersicht beschreibt die unterstützte Inhalte für eine <xref:System.Windows.Documents.TextElement>. Die <xref:System.Windows.Documents.Paragraph> Klasse ist eine Art von <xref:System.Windows.Documents.TextElement>. Ein Inhaltsmodell beschreibt, welche Objekte/Elemente in anderen enthalten sein können. Diese Übersicht fasst das Inhaltsmodell für abgeleitete Objekte verwendet <xref:System.Windows.Documents.TextElement>. Weitere Informationen finden Sie unter [Übersicht über Flussdokumente](flow-document-overview.md).  
-  
-  
+
 <a name="text_element_classes"></a>   
 ## <a name="content-model-diagram"></a>Inhaltsmodelldiagramm  
  Das folgende Diagramm fasst das Inhaltsmodell für Klassen von abgeleitete <xref:System.Windows.Documents.TextElement> sowie wie andere nicht- `TextElement` Klassen, die in dieses Modell passen.  
@@ -58,9 +57,9 @@ Dieser Inhaltsmodellübersicht beschreibt die unterstützte Inhalte für eine <x
 ## <a name="working-with-textelement-content-programmatically"></a>Programmgesteuertes Arbeiten mit TextElement-Inhalt  
  Den Inhalt einer <xref:System.Windows.Documents.TextElement> besteht aus Sammlungen und daher programmgesteuert bearbeiten des Inhalts der <xref:System.Windows.Documents.TextElement> Objekte erfolgt durch die Arbeit mit diesen Sammlungen. Es gibt drei verschiedene Auflistungen von verwendeten <xref:System.Windows.Documents.TextElement> -abgeleitete Klassen:  
   
--   <xref:System.Windows.Documents.InlineCollection>: Stellt eine Auflistung von <xref:System.Windows.Documents.Inline>-Elementen dar. <xref:System.Windows.Documents.InlineCollection> definiert den zulässigen untergeordneten Inhalt der Elemente <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span> und <xref:System.Windows.Controls.TextBlock>.  
+-   <xref:System.Windows.Documents.InlineCollection>: Stellt eine Auflistung von <xref:System.Windows.Documents.Inline>-Elementen dar. <xref:System.Windows.Documents.InlineCollection> definiert den zulässigen untergeordneten Inhalt, der die <xref:System.Windows.Documents.Paragraph>, <xref:System.Windows.Documents.Span>, und <xref:System.Windows.Controls.TextBlock> Elemente.  
   
--   <xref:System.Windows.Documents.BlockCollection>: Stellt eine Auflistung von <xref:System.Windows.Documents.Block>-Elementen dar. <xref:System.Windows.Documents.BlockCollection> definiert den zulässigen untergeordneten Inhalt der Elemente <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater> und <xref:System.Windows.Documents.Figure>.  
+-   <xref:System.Windows.Documents.BlockCollection>: Stellt eine Auflistung von <xref:System.Windows.Documents.Block>-Elementen dar. <xref:System.Windows.Documents.BlockCollection> definiert den zulässigen untergeordneten Inhalt, der die <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Section>, <xref:System.Windows.Documents.ListItem>, <xref:System.Windows.Documents.TableCell>, <xref:System.Windows.Documents.Floater>, und <xref:System.Windows.Documents.Figure> Elemente.  
   
 -   <xref:System.Windows.Documents.ListItemCollection>: Ein fortlaufendes Inhaltselement, das ein bestimmtes Inhaltselement in einer geordneten darstellt oder die ungeordneten <xref:System.Windows.Documents.List>.  
   
@@ -102,6 +101,7 @@ Dieser Inhaltsmodellübersicht beschreibt die unterstützte Inhalte für eine <x
  Finden Sie unter [WPF-Inhaltsmodell](../controls/wpf-content-model.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Bearbeiten von einem FlowDocument mit der Blocks-Eigenschaft](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
 - [Bearbeiten von fortlaufenden Inhaltselementen mit der Blocks-Eigenschaft](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)
 - [Bearbeiten von einem FlowDocument mit der Blocks-Eigenschaft](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)

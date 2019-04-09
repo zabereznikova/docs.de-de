@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 2de3c2eba534618f6bd6dee0b2c23758f9e15f3f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378211"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115075"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Gemeinsame Verwendung von Nachrichtenschleifen zwischen Win32 und WPF
 In diesem Thema wird beschrieben, wie eine Nachrichtenschleife für die Interoperation mit implementieren [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], entweder durch Nutzung vorhandener message Loop-Präsenz im <xref:System.Windows.Threading.Dispatcher> oder erstellen eine separate Nachrichtenschleife für den [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] -Seite der interoperation Code.  
@@ -62,8 +62,9 @@ In diesem Thema wird beschrieben, wie eine Nachrichtenschleife für die Interope
  Eine Nachricht, die auf der Tastatursenke geht möglicherweise nicht an das HWND gesendet werden, wenn Sie mithilfe von Hooks für diese Nachricht hinzugefügt der <xref:System.Windows.Interop.HwndSource.AddHook%2A> Methode. Die Nachricht möglicherweise behandelt wurden auf Nachrichtenebene für die Datapump direkt und nicht übermittelt werden, um die `DispatchMessage` Funktion.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
 - [Interaktion zwischen WPF und Win32](wpf-and-win32-interoperation.md)
-- [Threadmodell](threading-model.md)
+- [Threading-Modell](threading-model.md)
 - [Übersicht über die Eingabe](input-overview.md)

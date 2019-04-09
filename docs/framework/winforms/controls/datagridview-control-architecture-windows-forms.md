@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-ms.openlocfilehash: 81ac17c9f78baa71d005883c9dd928e398b10a33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 892168ec282fbf168c43515e0718fe5486a345a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130259"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>Architektur des DataGridView-Steuerelements (Windows Forms)
 Die <xref:System.Windows.Forms.DataGridView> Steuerelement und seinen verwandten Klassen dienen als ein flexibles, erweiterbares System zum Anzeigen und Bearbeiten von Tabellendaten. Diese Klassen sind in enthalten die <xref:System.Windows.Forms?displayProperty=nameWithType> -Namespace, und sie sind alle mit dem Namen mit dem Präfix "DataGridView".  
@@ -137,6 +137,7 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement und seinen verwandten
  Wenn Sie aktivieren die <xref:System.Windows.Forms.DataGridView> des Steuerelements <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> -Eigenschaft, eine spezielle Zeile für neue Zeilen hinzugefügt, die als letzte Zeile angezeigt wird. Diese Zeile ist Teil der <xref:System.Windows.Forms.DataGridView.Rows%2A> -Auflistung, aber es verfügt über spezielle Funktionen, die möglicherweise Ihre Aufmerksamkeit erfordern. Weitere Informationen finden Sie unter [verwenden die Zeile für neue Datensätze im DataGridView-Steuerelement in Windows Forms](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über das DataGridView-Steuerelement](datagridview-control-overview-windows-forms.md)
 - [Anpassen des DataGridView-Steuerelements von Windows Forms](customizing-the-windows-forms-datagridview-control.md)
 - [Verwenden der Zeile für neue Datensätze im DataGridView-Steuerelement in Windows Forms](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

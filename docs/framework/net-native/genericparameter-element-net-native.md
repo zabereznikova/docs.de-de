@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db9876727244d528ec3b7f1c3c9875bb5ca645b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111656"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter > (Element (.NET Native)
 Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer generischen Methode an.  
@@ -68,7 +68,7 @@ Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer gen
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Laufzeitreflektionsrichtlinie auf einen Konstruktor oder eine Methode an.|  
+|[\<Methode >](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Laufzeitreflektionsrichtlinie auf einen Konstruktor oder eine Methode an.|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Wendet eine Laufzeitreflektionsrichtlinie auf einen bestimmten Typ, z. B. eine Klasse oder Struktur, an.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -87,8 +87,9 @@ Wendet die Richtlinie auf den Parametertyp eines generischen Typs oder einer gen
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [\<Method> Element (Element <Method>)](../../../docs/framework/net-native/method-element-net-native.md)
+
+- [\<Methode > Element](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<Type >-Element](../../../docs/framework/net-native/type-element-net-native.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)

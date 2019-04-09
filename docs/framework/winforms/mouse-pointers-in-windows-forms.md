@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e9b572ba40618a72b8db58917008ebd61a23de79
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122784"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Mauszeiger in Windows Forms
 Die Maus *Zeiger*, der als der Cursor, bezeichnet wird eine Bitmap, die auf dem Bildschirm für die Benutzereingabe mit der Maus einen Fokuspunkt festlegt wird. Dieses Thema bietet einen Überblick über der Mauszeiger in Windows Forms und beschreibt einige der Möglichkeiten, ändern und steuern den Mauszeiger auf.  
@@ -31,6 +31,7 @@ Die Maus *Zeiger*, der als der Cursor, bezeichnet wird eine Bitmap, die auf dem 
  Der einfachste Weg zum Ändern des Mauszeigers wird durch Festlegen der <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> oder <xref:System.Windows.Forms.Control.DefaultCursor%2A> Eigenschaft eines Steuerelements zu einem neuen <xref:System.Windows.Forms.Cursor>. Beispiele für Ändern des Mauszeigers, finden Sie im Codebeispiel in die <xref:System.Windows.Forms.Cursor> Klasse. Darüber hinaus die <xref:System.Windows.Forms.Cursors> Klasse macht eine Reihe von <xref:System.Windows.Forms.Cursor> Objekte für viele verschiedene Arten von Zeigern, z. B. ein Zeiger, der einer Hand ähnelt. Um die Wait-Zeiger ist, anzuzeigen, der eine Sanduhr angezeigt, wie es aussieht, wenn der Mauszeiger auf dem Steuerelement befindet, verwenden Sie die <xref:System.Windows.Forms.Control.UseWaitCursor%2A> Eigenschaft der <xref:System.Windows.Forms.Control> Klasse.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.Cursor>
 - [Mauseingabe in einer Windows Forms-Anwendung](mouse-input-in-a-windows-forms-application.md)
-- [Drag & Drop-Funktionen in Windows Forms](drag-and-drop-functionality-in-windows-forms.md)
+- [Drag &amp; Drop-Funktionen in Windows Forms](drag-and-drop-functionality-in-windows-forms.md)

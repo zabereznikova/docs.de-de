@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: c00a12000dd10ba32bd550186377547b3ef72d25
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: f113516fd96b88ea04b5ee155f808200dd2c893d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372723"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114295"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Vorgehensweise: Programmgesteuertes Drucken von XPS-Dateien
 Können Sie eine Überladung von der <xref:System.Printing.PrintQueue.AddJob%2A> Methode zum Drucken [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] Dateien ohne Öffnen eine <xref:System.Windows.Controls.PrintDialog> oder, im Prinzip alle [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] überhaupt.  
@@ -59,13 +59,14 @@ Können Sie eine Überladung von der <xref:System.Printing.PrintQueue.AddJob%2A>
  **Beachten Sie** der Einfachheit halber das obige Beispiel verwendet das Vorhandensein einer \*.xps Erweiterung als Beleg dafür, die eine Datei ist [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]. [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Dateien müssen diese Erweiterung jedoch nicht haben. [isXPS.exe (isXPS-Tool für Übereinstimmungstests)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100)) ist eine Möglichkeit, eine Datei auf [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-Gültigkeit zu testen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Printing.PrintQueue>
 - <xref:System.Printing.PrintQueue.AddJob%2A>
 - <xref:System.Threading.ApartmentState>
 - <xref:System.STAThreadAttribute>
 - [XPS-Dokumente](/windows/desktop/printdocs/documents)
 - [Drucken eines XPS-Dokuments](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771525(v=vs.90))
-- [Verwaltete und nicht verwaltetes Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [Verwaltetes und nicht verwaltetes Threading](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
 - [isXPS.exe (isXPS-Tool für Übereinstimmungstests)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))
 - [Dokumente in WPF](documents-in-wpf.md)
 - [Übersicht über das Drucken](printing-overview.md)

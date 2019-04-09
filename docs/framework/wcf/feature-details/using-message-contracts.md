@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 34f1c761a127fe00612259a79dae47d1c9d5512f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534419"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121978"
 ---
 # <a name="using-message-contracts"></a>Verwendung von Nachrichtenverträgen
 In der Regel beim Erstellen von Windows Communication Foundation (WCF)-Anwendungen, Entwickler Achten Sie besonders auf die Datenstrukturen und serialisierungsprobleme und müssen nicht auf die Struktur der Nachrichten achten, in denen die Daten transportiert werden. Für diese Anwendungen ist die Erstellung von Datenverträgen für die Parameter oder Rückgabewerte ein einfacher Vorgang. (Weitere Informationen finden Sie unter [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -105,7 +105,7 @@ public class BankingTransaction
  Das <xref:System.ServiceModel.MessageContractAttribute> ermöglicht Ihnen das Angeben des WrapperName-Attributs und des WrapperNamespace-Attributs, die den Namen des Wrapperelements im Textkörper der SOAP-Nachricht steuern. Standardmäßig wird der Name des Typs des Nachrichtenvertrags für den Wrapper verwendet, und der Namespace, in dem der Nachrichtenvertrag `http://tempuri.org/` definiert ist, fungiert als Standardnamespace.  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribute werden in Nachrichtenverträgen ignoriert. Ist ein <xref:System.Runtime.Serialization.KnownTypeAttribute> erforderlich, platzieren Sie es auf dem Vorgang, der den in Frage kommenden Nachrichtenvertrag nutzt.  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute> Attribute werden in Nachrichtenverträgen ignoriert. Ist ein <xref:System.Runtime.Serialization.KnownTypeAttribute> erforderlich, platzieren Sie es auf dem Vorgang, der den in Frage kommenden Nachrichtenvertrag nutzt.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Kontrollieren von Header- und Textteilnamen und Namespaces  
  In der SOAP-Darstellung eines Nachrichtenvertrags wird jeder Header und jeder Textteil einem XML-Element zugeordnet, das über einen Namen und einen Namespace verfügt.  
@@ -448,5 +448,6 @@ public class OperationDetails
  Wenn das Nachrichtenobjekt in der `Result`-Eigenschaft und die Rückgabewerte als Eigenschaften dieses Objekts übermittelt werden sollen, verwenden Sie die Befehlsoption `/messageContract`. Damit wird eine Signatur generiert, bei der die Antwortnachricht in der `Result`-Eigenschaft des <xref:System.EventArgs>-Objekts zurückgegeben wird. Alle internen Rückgabewerte sind dann Eigenschaften des Antwortnachrichtenobjekts.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [Entwerfen und Implementieren von Diensten](../../../../docs/framework/wcf/designing-and-implementing-services.md)

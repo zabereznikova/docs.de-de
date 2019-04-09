@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 632f19e0ead57d5508265fece578bb22f18ba54a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edd83e62b08aa7892c01577cd8c46f9d965c0894
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722724"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163019"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll-Funktion
 Sucht und lädt die Meldungs-DLL. Gibt 0 zurück, wenn die Meldungs-DLL nicht gefunden oder geladen werden konnte. Die Meldungs-DLL muss in einem Unterverzeichnis, deren Name eine Sprachen-ID ist, oder im aktuellen Verzeichnis.  
@@ -39,4 +39,5 @@ HINSTANCE WINAPI GetALinkMessageDll();
  **Bibliothek**: alink.dll  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

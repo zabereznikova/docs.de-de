@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Steuern eines MediaElement (Wiedergeben, Anhalten, Stoppen, Lautstärke und Geschwindigkeit)'
+title: 'Vorgehensweise: Steuern eines MediaElement-Objekts (Wiedergeben, Anhalten, Stoppen, Lautstärke und Geschwindigkeit)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - multimedia [WPF], controlling playback of media
 - media [WPF], controlling playback of
 ms.assetid: 6885a730-e054-4c16-8c1e-ffe17b1f7c32
-ms.openlocfilehash: 7fe8107f7b5b65f00f2c5ac029f806aeba758d20
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bb7319fc7ccec0220cbd79a32d5d015f9f2422d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368505"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182857"
 ---
-# <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Vorgehensweise: Steuern eines MediaElement (Wiedergeben, Anhalten, Stoppen, Lautstärke und Geschwindigkeit)
+# <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>Vorgehensweise: Steuern eines MediaElement-Objekts (Wiedergeben, Anhalten, Stoppen, Lautstärke und Geschwindigkeit)
 Das folgende Beispiel zeigt, wie Sie steuern die Wiedergabe von Medien mit einer <xref:System.Windows.Controls.MediaElement>. Das Beispiel erstellt einen einfachen MediaPlayer, mit dem Sie wiedergeben, anhalten, beenden, und überspringen hin und her, auf dem Medium als auch das Verhältnis Lautstärke und Geschwindigkeit anpassen.  
   
 ## <a name="example"></a>Beispiel  
@@ -35,4 +35,5 @@ Das folgende Beispiel zeigt, wie Sie steuern die Wiedergabe von Medien mit einer
  [!code-vb[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml.vb#codebehindmediaelementexamplewholepage)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Steuern eines MediaElement mit einem Storyboard](how-to-control-a-mediaelement-by-using-a-storyboard.md)
+
+- [Steuern eines MediaElement-Objekts mit einem Storyboard](how-to-control-a-mediaelement-by-using-a-storyboard.md)

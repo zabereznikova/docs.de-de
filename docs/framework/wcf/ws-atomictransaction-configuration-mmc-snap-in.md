@@ -2,12 +2,12 @@
 title: WS-AtomicTransaction-Konfiguration-MMC-Snap-In
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 8dfb9c9a9f6a007e65dbf819d347f335a93d1749
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1d86fa57b31d1f9be12f76c28f9d042e7e28e24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138205"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>WS-AtomicTransaction-Konfiguration-MMC-Snap-In
 Das MMC-Snap-In für die WS-AtomicTransaction-Konfiguration wird zur Konfiguration eines Teils der WS-AtomicTransaction-Einstellungen auf lokalen und Remotecomputern eingesetzt.  
@@ -21,7 +21,7 @@ Das MMC-Snap-In für die WS-AtomicTransaction-Konfiguration wird zur Konfigurati
   
  Zum Verwenden der Benutzeroberfläche des Tools müssen Sie zuerst die Datei WsatUI.dll im folgenden Pfad registrieren:  
   
- **%PROGRAMFILES%\Microsoft SDKs\Windows\v6.0\Bin\WsatUI.dll**  
+ **%PROGRAMFILES%\Microsoft SDKs\Windows\v6.0 \Bin\WsatUI.dll**  
   
  Die Registrierung kann mit folgendem Befehl vorgenommen werden:  
   
@@ -43,9 +43,9 @@ regasm.exe /codebase WsatUI.dll
  Vor der Aktivierung dieses Kontrollkästchens sollten Sie sicherstellen, dass der DTC-Netzwerkzugriff mit eingehender oder/und ausgehender Kommunikation aktiviert ist. Dieser Wert kann überprüft werden, der **Sicherheit** Registerkarte des MSDTC-Snap-Ins.  
   
 #### <a name="network-group-box"></a>Netzwerkgruppenfeld  
- Sie können den HTTPS-Anschluss und zusätzliche Sicherheitseinstellungen, wie z.&#160;B. SSL-Verschlüsselung, in der Netzwerkgruppe angeben. Diese Gruppe ist deaktiviert (abgeblendet), wenn DTC-Netzwerktransaktionen nicht aktiviert sind.  
+ Sie können den HTTPS-Anschluss und zusätzliche Sicherheitseinstellungen, wie z.&amp;#160;B. SSL-Verschlüsselung, in der Netzwerkgruppe angeben. Diese Gruppe ist deaktiviert (abgeblendet), wenn DTC-Netzwerktransaktionen nicht aktiviert sind.  
   
- **HTTPS-Port**  
+ **HTTPS-Anschluss**  
   
  Dies ist der Wert des für WS-AT verwendeten HTTPS-Anschlusses. Der Wert muss eine Zahl im Bereich von 1 bis 65535 sein (um einen gültigen Anschluss darzustellen). Durch das Ändern des HTTP-Anschlusses wird die HTTP-Dienstkonfiguration geändert, was bedeutet, dass die zuvor verwendete WS-AT-Dienstadresse freigegeben wird und eine neue WS-AT-Dienstadresse basierend auf dem neuen Anschluss registriert wird. Außerdem wird der neu ausgewählte Anschluss mit dem derzeit ausgewählten Zertifikat für die SSL-Verschlüsselung verschlüsselt.  
   
@@ -87,6 +87,7 @@ regasm.exe /codebase WsatUI.dll
  Weitere Informationen zu Protokollierung und Ablaufverfolgung, finden Sie unter [Verwaltung und Diagnose](../../../docs/framework/wcf/diagnostics/index.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Konfigurieren der Unterstützung von WS-Atomic-Transaction](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
-- [WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+
+- [Konfigurieren der WS-AtomicTransaction-Unterstützung](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+- [WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
 - [Verwaltung und Diagnose](../../../docs/framework/wcf/diagnostics/index.md)

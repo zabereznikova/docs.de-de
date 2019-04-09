@@ -1,5 +1,5 @@
 ---
-title: <remove>-Element für authenticationModules (Netzwerkeinstellungen)
+title: <remove> -Element für AuthenticationModules (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/remove
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: a8afdf442f8dc4e57a407583ea6c452330dae53f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0eb3ef7db422d5cbbe70bd5633798b8d3787452d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281020"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125252"
 ---
 # <a name="remove-element-for-authenticationmodules-network-settings"></a>\<Entfernen Sie >-Element für AuthenticationModules (Netzwerkeinstellungen)
 Entfernt ein Authentifizierungsmodul aus der Anwendung an.  
@@ -73,6 +73,7 @@ Entfernt ein Authentifizierungsmodul aus der Anwendung an.
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

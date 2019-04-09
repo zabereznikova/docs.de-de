@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: 5f1d22d2f7070bb93d175c28c166c434ff16ae19
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d304a411a92272315506a08a714ae1a5f9b6a000
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150162"
 ---
 # <a name="shapes-how-to-topics"></a>Gewusst-wie-Themen zu Formen
 Die Themen in diesem Abschnitt veranschaulichen, wie <xref:System.Windows.Shapes.Shape> Objekte, die grundlegende Formen auf dem Bildschirm gezeichnet.  
@@ -28,5 +28,6 @@ Die Themen in diesem Abschnitt veranschaulichen, wie <xref:System.Windows.Shapes
  [Ändern des Endes einer Zeile oder eines Segments](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Shapes.Shape>
 - [Grafiken und Multimedia](index.md)

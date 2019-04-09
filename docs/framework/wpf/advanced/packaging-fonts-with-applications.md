@@ -10,21 +10,19 @@ helpviewer_keywords:
 - typography [WPF], packaging fonts with applications
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
-ms.openlocfilehash: e66841fe72281bf0562b2ce50925a5c3a6bb9b54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378868"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123789"
 ---
 # <a name="packaging-fonts-with-applications"></a>Verpacken von Schriftarten mit Anwendungen
 Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit Ihrem [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendung.  
   
 > [!NOTE]
 >  Wie die meisten Arten von Software werden Schriftartdateien eher lizenziert als verkauft. Lizenzen, die die Verwendung von Schriftarten steuern, sind von Anbieter zu Anbieter jedoch im Allgemeinen die meisten Lizenzen, darunter auch die Schriftarten unterschiedlich [!INCLUDE[TLA#tla_ms#initcap](../../../../includes/tlasharptla-mssharpinitcap-md.md)] bereitstellt, mit Anwendungen und [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)], lassen sich nicht auf die Schriftarten eingebettet in Anwendungen oder auf andere sein neu verteilt. Deshalb liegt es in Ihrer Verantwortung als Entwickler sicherzustellen, dass Sie über die erforderlichen Lizenzrechte für alle Schriftarten verfügen, die Sie in eine Anwendung einbetten oder anderweitig verbreiten.  
-  
 
-  
 <a name="introduction_to_packaging_fonts"></a>   
 ## <a name="introduction-to-packaging-fonts"></a>Einführung in das Verpacken von Schriftarten  
  Sie können Schriftarten problemlos als Ressourcen in Verpacken Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] basierende Anwendungen zum Anzeigen von Text der Benutzeroberfläche und anderen Typen von Text-Inhalt. Die Schriftarten können getrennt von den Assemblydateien oder eingebettet in die Assemblydateien der Anwendung vorkommen. Sie können auch eine Schriftartenbibliothek nur für Ressourcen erstellen, auf die die Anwendung verweisen kann.  
@@ -173,6 +171,7 @@ Dieses Thema enthält eine Übersicht über das Verpacken von Schriftarten mit I
 -   Bei einem falschen Verweis greift die Anwendung auf eine verfügbare Schriftart zurück.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Documents.Typography>
 - <xref:System.Windows.Media.FontFamily>
 - [Microsoft-Typografie: Links, Neuigkeiten und Kontakte](https://docs.microsoft.com/typography/)

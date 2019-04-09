@@ -7,12 +7,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing with double buffering
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
-ms.openlocfilehash: 71463d7db6ae18a3dd21d6a467f3963d836fc086
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707702"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103440"
 ---
 # <a name="double-buffered-graphics"></a>Doppelt gepufferte Grafiken
 Flimmern ist ein häufiges Problem beim Programmieren von Grafiken. Grafikoperationen, die mehrere komplexe Zeichenvorgänge erfordern, können dazu führen, dass gerenderte Bilder flimmern oder anderweitig nicht ordnungsgemäß dargestellt werden. Um diese Probleme zu beheben, stellt .NET Framework Zugriff auf doppelte Pufferung bereit.  
@@ -33,6 +33,7 @@ Flimmern ist ein häufiges Problem beim Programmieren von Grafiken. Grafikoperat
  Weitere Informationen zur Verwendung der <xref:System.Drawing.BufferedGraphics> Klasse, finden Sie unter [Manuelles Rendern von gepufferten Grafiken](how-to-manually-render-buffered-graphics.md). Weitere Informationen zum Rendern von Grafiken finden Sie unter [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>

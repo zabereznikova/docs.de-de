@@ -5,18 +5,16 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 4d480adbbd35084b30e2ca1c74d7392814b87783
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358469"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102777"
 ---
 # <a name="popup-overview"></a>Übersicht über Popups
 Die <xref:System.Windows.Controls.Primitives.Popup> Steuerelement bietet eine Möglichkeit, Inhalt in einem separaten Fenster angezeigt, die über relativ zu einer festgelegten Element- oder Bildschirmkoordinate das aktuelle Anwendungsfenster gleitet. In diesem Thema werden die <xref:System.Windows.Controls.Primitives.Popup> steuern und Informationen zu dessen Verwendung enthält.  
-  
- 
-  
+
 <a name="What_Is_a_Popup_"></a>   
 ## <a name="what-is-a-popup"></a>Was ist ein Popup?  
  Ein <xref:System.Windows.Controls.Primitives.Popup> -Steuerelement zeigt Inhalt in einem separaten Fenster relativ zu einem Element oder einen Punkt auf dem Bildschirm. Wenn die <xref:System.Windows.Controls.Primitives.Popup> angezeigt wird, die <xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A> -Eigenschaftensatz auf `true`.  
@@ -36,13 +34,13 @@ Die <xref:System.Windows.Controls.Primitives.Popup> Steuerelement bietet eine M�
 ## <a name="controls-that-implement-a-popup"></a>Steuerelemente, die ein Popup implementieren  
  Sie können erstellen <xref:System.Windows.Controls.Primitives.Popup> Steuerelemente in anderen Steuerelementen. Die folgenden Steuerelemente implementieren das <xref:System.Windows.Controls.Primitives.Popup> -Steuerelement für bestimmte Verwendungsmöglichkeiten:  
   
--   <xref:System.Windows.Controls.ToolTip>. Wenn Sie eine QuickInfo für ein Element erstellen möchten, verwenden Sie die <xref:System.Windows.Controls.ToolTip> und <xref:System.Windows.Controls.ToolTipService> Klassen. Weitere Informationen finden Sie unter [Übersicht über die QuickInfo](tooltip-overview.md).  
+-   <xref:System.Windows.Controls.ToolTip>sein. Wenn Sie eine QuickInfo für ein Element erstellen möchten, verwenden Sie die <xref:System.Windows.Controls.ToolTip> und <xref:System.Windows.Controls.ToolTipService> Klassen. Weitere Informationen finden Sie unter [Übersicht über die QuickInfo](tooltip-overview.md).  
   
--   <xref:System.Windows.Controls.ContextMenu>. Wenn Sie ein Kontextmenü für ein Element erstellen möchten, verwenden Sie die <xref:System.Windows.Controls.ContextMenu> Steuerelement. Weitere Informationen finden Sie unter [Übersicht über ContextMenu](contextmenu-overview.md).  
+-   <xref:System.Windows.Controls.ContextMenu>sein. Wenn Sie ein Kontextmenü für ein Element erstellen möchten, verwenden Sie die <xref:System.Windows.Controls.ContextMenu> Steuerelement. Weitere Informationen finden Sie unter [Übersicht über ContextMenu](contextmenu-overview.md).  
   
--   <xref:System.Windows.Controls.ComboBox>. Wenn Sie möchten ein Auswahlsteuerelement mit einer Dropdown-Listenfeld, das ein- oder ausgeblendet ist, verwendet werden können, erstellen die <xref:System.Windows.Controls.ComboBox> Steuerelement.  
+-   <xref:System.Windows.Controls.ComboBox>sein. Wenn Sie möchten ein Auswahlsteuerelement mit einer Dropdown-Listenfeld, das ein- oder ausgeblendet ist, verwendet werden können, erstellen die <xref:System.Windows.Controls.ComboBox> Steuerelement.  
   
--   <xref:System.Windows.Controls.Expander>. Wenn ein Steuerelement zu erstellen, das eine Kopfzeile mit einem reduzierbaren Bereich anzeigt werden soll, Inhalt angezeigt, verwenden Sie die <xref:System.Windows.Controls.Expander> Steuerelement. Weitere Informationen finden Sie unter [Übersicht über Expander-Steuerelemente](expander-overview.md).  
+-   <xref:System.Windows.Controls.Expander>sein. Wenn ein Steuerelement zu erstellen, das eine Kopfzeile mit einem reduzierbaren Bereich anzeigt werden soll, Inhalt angezeigt, verwenden Sie die <xref:System.Windows.Controls.Expander> Steuerelement. Weitere Informationen finden Sie unter [Übersicht über Expander-Steuerelemente](expander-overview.md).  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Popup-Verhalten und -Darstellung  
@@ -89,6 +87,7 @@ Die <xref:System.Windows.Controls.Primitives.Popup> Steuerelement bietet eine M�
  Die <xref:System.Windows.Controls.Primitives.Popup> -Steuerelement behält einen Verweis auf die <xref:System.Windows.Controls.Primitives.Popup.Child%2A> Inhalte als ein untergeordnetes logisches Element. Wenn das neue Fenster erstellt wird, wird den Inhalt des <xref:System.Windows.Controls.Primitives.Popup> wird zu einem visuellen untergeordneten Element des Fensters und bleibt das logische untergeordnete Elemente <xref:System.Windows.Controls.Primitives.Popup>. Im Gegensatz dazu <xref:System.Windows.Controls.Primitives.Popup> bleibt das logische übergeordnete Element der <xref:System.Windows.Controls.Primitives.Popup.Child%2A> Inhalt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.Primitives.Popup>
 - <xref:System.Windows.Controls.Primitives.PopupPrimaryAxis>
 - <xref:System.Windows.Controls.Primitives.PlacementMode>
@@ -96,5 +95,5 @@ Die <xref:System.Windows.Controls.Primitives.Popup> Steuerelement bietet eine M�
 - <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [Themen zu Vorgehensweisen](popup-how-to-topics.md)
-- [Themen zu Vorgehensweisen](tooltip-how-to-topics.md)
+- [Gewusst wie-Themen](popup-how-to-topics.md)
+- [Gewusst wie-Themen](tooltip-how-to-topics.md)

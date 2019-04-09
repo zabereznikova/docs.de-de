@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: d3ec8c1b8c9b30a23dacabeb033d525c34709931
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 564e9e424b8b82e8837a0a58cb8c11389920c297
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139632"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Vorgehensweise: Erstellen eines Zustandsautomatworkflows
 Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Aktivitäten erstellt werden. Dieses Thema führt durch Erstellen eines Workflows, der integrierten Aktivitäten, wie z. B. verwendet die <xref:System.Activities.Statements.StateMachine> Aktivität und die benutzerdefinierten Aktivitäten aus dem vorherigen [Vorgehensweise: Erstellen einer Aktivität](how-to-create-an-activity.md) Thema. Der Workflow erstellt ein Spiel, das Zahlen errät.  
@@ -188,10 +188,11 @@ Workflows können aus integrierten Aktivitäten und aus benutzerdefinierten Akti
      Informationen zum Ausführen des Workflows finden Sie im nächste Thema, [Vorgehensweise: Ausführen eines Workflows](how-to-run-a-workflow.md). Wenn Sie bereits abgeschlossen haben die [Vorgehensweise: Ausführen eines Workflows](how-to-run-a-workflow.md) Schritt mit einer anderen workflowart und ihn mithilfe der Zustandsautomatworkflows aus diesem Schritt ausführen möchten, fahren Sie mit der [erstellen und Ausführen der Anwendungs](how-to-run-a-workflow.md#BKMK_ToRunTheApplication) Abschnitt [Vorgehensweise: Ausführen eines Workflows](how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
 - [Windows Workflow Foundation-Programmierung](programming.md)
 - [Entwerfen von Workflows](designing-workflows.md)
-- [Tutorial mit ersten Schritten](getting-started-tutorial.md)
+- [Lernprogramm 'Erste Schritte'](getting-started-tutorial.md)
 - [Vorgehensweise: Erstellen einer Aktivität](how-to-create-an-activity.md)
 - [Vorgehensweise: Ausführen eines Workflows](how-to-run-a-workflow.md)

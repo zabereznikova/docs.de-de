@@ -2,12 +2,12 @@
 title: Operatorrangfolge (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: e92e4ca5-2889-4266-9625-47f0eb01a948
-ms.openlocfilehash: c68ac6d89426896b708ac74de1268f8ea8f193c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 722ebe5f0ec530f8c7f86e9f9901451b060903f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506835"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159132"
 ---
 # <a name="operator-precedence-entity-sql"></a>Operatorrangfolge (Entity SQL)
 Wenn ein [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Abfrage verfügt über mehrere Operatoren, bestimmt die Operatorrangfolge die Reihenfolge, in dem die Vorgänge ausgeführt werden. Die Ausführungsreihenfolge kann sich entscheidend auf das Abfrageergebnis auswirken.  
@@ -30,4 +30,5 @@ Wenn ein [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Abfrage verfüg
  Mit Klammern kann die definierte Rangfolge von Operatoren in einer Abfrage außer Kraft gesetzt werden. Die Operatoren innerhalb der Klammern werden zuerst ausgewertet, bevor das sich ergebende einzelne Ergebnis von den Operatoren außerhalb der Klammern verwendet werden kann. Z. B. `x+y*z` multipliziert `y` von `z` und fügt dann `x`, aber `(x+y)*z` fügt `x` zu `y` und multipliziert dann das Ergebnis durch `z`.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

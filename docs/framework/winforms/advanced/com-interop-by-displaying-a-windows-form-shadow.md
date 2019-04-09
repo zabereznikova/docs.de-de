@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen eines Windows Forms mit der ShowDialog-Methode'
+title: 'Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen eines Windows Forms mit der ShowDialog-Methode'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [Windows Forms]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-ms.openlocfilehash: 56ded3118d0961f38c77d3db4fc879eb241a7520
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 81220ad4c0bf00a38abfe7257d5fc61e92e8d885
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206446"
 ---
-# <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen eines Windows Forms mit der ShowDialog-Methode
+# <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen eines Windows Forms mit der ShowDialog-Methode
 Sie können Probleme mit der Component Object Model-Interoperabilität (COM) beheben, indem Sie die Windows Form in einer [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Nachrichtenschleife anzeigen, die Sie mit der <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> -Methode erstellen können.  
   
  Damit ein Formular aus einer COM-Clientanwendung heraus ordnungsgemäß funktioniert, müssen Sie es in einer Windows Forms-Nachrichtenschleife ausführen. Hierzu können Sie einen der folgenden Ansätze verwenden:  
@@ -38,6 +38,7 @@ Sie können Probleme mit der Component Object Model-Interoperabilität (COM) beh
 -   Ersetzen Sie in Ihrer <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> -Komponente alle Aufrufe der <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> -Methode durch Aufrufe der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Methode.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verfügbarmachen von .NET Framework-Komponenten in COM](../../interop/exposing-dotnet-components-to-com.md)
-- [Vorgehensweise: Unterstützen von COM-Interop durch Anzeigen jedes Windows-Formular in einem eigenen Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Vorgehensweise: Unterstützen von COM-Interop durch das Anzeigen einzelner Windows Forms in einem eigenen Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
 - [Windows Forms und nicht verwaltete Anwendungen](windows-forms-and-unmanaged-applications.md)

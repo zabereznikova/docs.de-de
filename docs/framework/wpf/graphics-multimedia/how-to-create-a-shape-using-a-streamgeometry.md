@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], shapes
 - shapes [WPF], creating with StreamGeometry class
 ms.assetid: 08f7c8ce-074b-49cd-9aba-cc9592d4ee51
-ms.openlocfilehash: 3273b6f45c367afeb8e572d0f68e6774075890c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fd191e4cfdfa33c144389d4871a9641e9c811ed3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108601"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>Vorgehensweise: Erstellen eines Shapes mit einer StreamGeometry
 <xref:System.Windows.Media.StreamGeometry> stellt einfache Alternative zu <xref:System.Windows.Media.PathGeometry> zum Erstellen geometrischer Formen. Verwenden einer <xref:System.Windows.Media.StreamGeometry> Wenn Sie eine komplexe Geometrie beschreiben müssen jedoch nicht den Mehraufwand für die Unterstützung von Datenbindung, Animation oder Änderung möchten. Beispielsweise aufgrund ihrer Effizienz der <xref:System.Windows.Media.StreamGeometry> Klasse ist eine gute Wahl zum Beschreiben von Adornern.  
@@ -38,8 +38,9 @@ ms.locfileid: "57361017"
  [!code-vb[GeometriesMiscSnippets_procedural_snip#StreamGeometryExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GeometriesMiscSnippets_procedural_snip/visualbasic/streamgeometryexample.vb#streamgeometryexamplewholepage)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.StreamGeometry>
 - <xref:System.Windows.Media.StreamGeometryContext>
-- [Erstellen einer Form mithilfe von PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)
-- [Übersicht über Geometrien](geometry-overview.md)
+- [Erstellen einer Form mithilfe einer PathGeometry](how-to-create-a-shape-by-using-a-pathgeometry.md)
+- [Übersicht über die Geometrie](geometry-overview.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COM [WCF]
 - WCF, COM integration
 ms.assetid: c98bda3e-6779-419e-8e6d-9aa94053026d
-ms.openlocfilehash: 8fa802ce20bfde3579258a5d34bc5d7f68aaaea3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51626da6e97e346f43cfe606a5164024580a2ac7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155323"
 ---
 # <a name="integrating-with-com-applications"></a>Integrieren von COM-Anwendungen
 Windows Communication Foundation (WCF)-Dienste können direkt in den vorhandenen Code integriert werden, mithilfe des WCF-dienstmonikers. Der Dienstmoniker kann in vielen verschiedenen COM-basierten Entwicklungsumgebungen wie Office VBA, Visual Basic 6.0 oder Visual C++ 6.0 verwendet werden.  
@@ -35,11 +35,12 @@ Windows Communication Foundation (WCF)-Dienste können direkt in den vorhandenen
  [Vorgehensweise: Verwenden eines Dienstmonikers mit Metadatenaustausch-Verträgen](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-metadata-exchange-contracts.md)  
  Beschreibt das Aufrufen von WCF-Beispiel verwenden einen WCF-Moniker, der einen Mex-Endpunkt angibt.  
   
- [Vorgehensweise: Geben Sie Anmeldeinformationen für Kanalsicherheit](../../../../docs/framework/wcf/feature-details/how-to-specify-channel-security-credentials.md)  
+ [Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit](../../../../docs/framework/wcf/feature-details/how-to-specify-channel-security-credentials.md)  
  Der WCF-Dienstmoniker unterstützt die `IChannelCredentials` Schnittstelle, die eine Reihe von alternativen Methoden für die Angabe von kanalanmeldeinformationen ermöglicht.  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.ServiceModel>  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Integrieren von COM+-Anwendungen](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

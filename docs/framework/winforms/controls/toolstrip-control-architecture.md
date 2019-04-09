@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: bede247ca9e1c2c20ffc8fef9fd4fab89aa78453
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: 1032b282801db485253da18536b448e8d3b65ae7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186666"
 ---
 # <a name="toolstrip-control-architecture"></a>Architektur des ToolStrip-Steuerelements
 Die <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.ToolStripItem> Klassen bieten ein flexibles, erweiterbares System zum Anzeigen der Symbolleiste, Status und Menüelementen. Diese Klassen sind in enthalten die <xref:System.Windows.Forms> -Namespace, und sie werden alle in der Regel mit dem Präfix "ToolStrip" benannt (z. B. <xref:System.Windows.Forms.ToolStripOverflow>) oder mit dem Suffix "Entfernen" (z. B. <xref:System.Windows.Forms.MenuStrip>).  
@@ -316,7 +316,7 @@ Die <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.ToolStr
  <xref:System.Windows.Forms.ToolStripMenuItem> ist eine <xref:System.Windows.Forms.ToolStripDropDownItem> dieses Produkt funktioniert mit <xref:System.Windows.Forms.ToolStripDropDownMenu> und <xref:System.Windows.Forms.ContextMenuStrip> die besondere Hervorhebung, Layout und Spalte Anordnung für Menüs zu behandeln.  
   
 ### <a name="toolstripdropdownbutton"></a>ToolStripDropDownButton  
- <xref:System.Windows.Forms.ToolStripDropDownButton> sieht wie <xref:System.Windows.Forms.ToolStripButton>, aber es zeigt einen Dropdownbereich, wenn der Benutzer darauf klickt. Ein- oder Ausblenden der Dropdown-Pfeil durch Festlegen der <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> Eigenschaft. <xref:System.Windows.Forms.ToolStripDropDownButton> hostet eine <xref:System.Windows.Forms.ToolStripOverflowButton> , die Elemente angezeigt, die overflow der <xref:System.Windows.Forms.ToolStrip>.  
+ <xref:System.Windows.Forms.ToolStripDropDownButton> sieht wie <xref:System.Windows.Forms.ToolStripButton>, aber es zeigt einen Dropdownbereich, wenn der Benutzer darauf klickt. Ein- oder Ausblenden der Dropdown-Pfeil durch Festlegen der <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> Eigenschaft. <xref:System.Windows.Forms.ToolStripDropDownButton> Hostet eine <xref:System.Windows.Forms.ToolStripOverflowButton> , die Elemente angezeigt, die overflow der <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="toolstripsplitbutton"></a>ToolStripSplitButton  
  <xref:System.Windows.Forms.ToolStripSplitButton> kombiniert die Schaltfläche und Funktionalität der Dropdown-Schaltfläche.  
@@ -377,6 +377,7 @@ Die <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.ToolStr
 -   <xref:System.Windows.Forms.ToolStripPanel> Dient zum Verschieben und Anordnen von <xref:System.Windows.Forms.ToolStrip> Steuerelemente. Sie können nur einen Bereich verwenden, wenn Sie möchten, und <xref:System.Windows.Forms.ToolStripPanel> funktioniert gut in MDI-Szenarien.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über das ToolStrip-Steuerelement](toolstrip-control-overview-windows-forms.md)
 - [Zusammenfassung der ToolStrip-Technologie](toolstrip-technology-summary.md)
 - [ToolStrip-Steuerelement](toolstrip-control-windows-forms.md)

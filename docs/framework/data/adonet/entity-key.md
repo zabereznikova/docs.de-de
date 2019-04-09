@@ -2,12 +2,12 @@
 title: Entitätsschlüssel
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
-ms.openlocfilehash: 0c3a809884fc7b7c1f188af9881f784527fa87ba
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408963"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140113"
 ---
 # <a name="entity-key"></a>Entitätsschlüssel
 Ein *Entitätsschlüssel* ist eine [Eigenschaft](../../../../docs/framework/data/adonet/property.md) oder einen Satz von Eigenschaften einer [Entitätstyp](../../../../docs/framework/data/adonet/entity-type.md) , mit denen die Identität zu ermitteln. Die Eigenschaften, die einen Entitätsschlüssel bilden, werden zur Entwurfszeit ausgewählt. Die Werte von entitätsschlüsseleigenschaften müssen eindeutig identifiziert eine Instanz eines Entitätstyps innerhalb einer [Entitätenmenge](../../../../docs/framework/data/adonet/entity-set.md) zur Laufzeit. Die Eigenschaften, die einen Entitätsschlüssel bilden, sollten so ausgewählt werden, dass die Eindeutigkeit von Instanzen in einem Entitätssatz gewährleistet ist.  
@@ -40,5 +40,6 @@ Ein *Entitätsschlüssel* ist eine [Eigenschaft](../../../../docs/framework/data
  Die Verwendung von `Name` und `Address` für den Entitätsschlüssel ist empfehlenswert, da zwei Autoren mit demselben Namen sehr wahrscheinlich nicht die gleiche Adresse besitzen. Dieser Entitätsschlüssel garantiert jedoch nicht absolut eindeutige Entitätsschlüssel in einem Entitätssatz. In diesem Fall wäre das Hinzufügen einer Eigenschaft, z. B. `AuthorId`, zur eindeutigen Identifikation eines Autors empfehlenswert.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

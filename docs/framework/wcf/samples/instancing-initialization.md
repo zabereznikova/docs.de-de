@@ -2,12 +2,12 @@
 title: Initialisierung der Instanziierung
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: ec44276d56b0a914c742a5a709f2207f8111e57b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 553272c9059b41eac7d8807ef7a283edbfb8f791
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827912"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142375"
 ---
 # <a name="instancing-initialization"></a>Initialisierung der Instanziierung
 Dieses Beispiel erweitert die [Pooling](../../../../docs/framework/wcf/samples/pooling.md) Beispiel, indem Sie definieren eine Schnittstelle, `IObjectControl`, die die Initialisierung eines Objekts durch Aktivieren und deaktivieren sie passt. Der Client ruft Methoden auf, die das Objekt an den Pool zurückgeben und das Objekt nicht an den Pool zurückgeben.  
@@ -154,7 +154,7 @@ if (activeObjectsCount == 0)
   
  In diesem Beispiel wird ein benutzerdefiniertes Attribut verwendet. Beim Erstellen von <xref:System.ServiceModel.ServiceHost> werden die in der Typdefinition des Diensts verwendeten Attribute untersucht, und die verfügbaren Verhalten werden der Verhaltensauflistung der Dienstbeschreibung hinzugefügt.  
   
- Die <xref:System.ServiceModel.Description.IServiceBehavior> Schnittstelle verfügt über drei Methoden: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,` und <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Diese Methoden werden von WCF aufgerufen wenn die <xref:System.ServiceModel.ServiceHost> initialisiert wird. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> wird zuerst aufgerufen. So kann der Dienst auf Inkonsistenzen untersucht werden. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> wird danach aufgerufen. Diese Methode ist nur in sehr komplexen Szenarios erforderlich. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> wird zuletzt aufgerufen und ist für das Konfigurieren der Laufzeit zuständig. Die folgenden Parameter werden in <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> übergeben:  
+ Die <xref:System.ServiceModel.Description.IServiceBehavior> Schnittstelle verfügt über drei Methoden: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>`,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>`,` und <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>. Diese Methoden werden von WCF aufgerufen wenn die <xref:System.ServiceModel.ServiceHost> initialisiert wird. <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> zuerst aufgerufen wird. Sie können den Dienst auf Inkonsistenzen untersucht werden. <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> als Nächstes aufgerufen wird. Diese Methode ist nur in sehr komplexen Szenarios erforderlich. <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> wird zuletzt aufgerufen und ist verantwortlich für das Konfigurieren der Laufzeit. Die folgenden Parameter werden in <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> übergeben:  
   
 -   `Description`: Dieser Parameter stellt die dienstbeschreibung für den gesamten Dienst bereit. Dies kann verwendet werden, um Beschreibungsdaten über die Endpunkte, Verträge, Bindungen und andere Daten zu dem Dienst zu überprüfen.  
   
@@ -203,7 +203,7 @@ public class PoolService : IPoolService
 ## <a name="hooking-activation-and-deactivation"></a>Aktivieren und Deaktivieren von Verknüpfungen  
  Das primäre Ziel des Objektpoolings ist das Optimieren von Objekten mit kurzer Lebensdauer und relativ aufwändiger Erstellung und Initialisierung. Bei der richtigen Verwendung kann daher eine erhebliche Leistungssteigerung erreicht werden. Da das Objekt aus dem Pool zurückgegeben wird, wird der Konstruktor nur einmal aufgerufen. Bei einigen Anwendungen ist jedoch eine gewisse Kontrolle erforderlich, damit sie die in einem einzigen Kontext verwendeten Ressourcen initialisieren und bereinigen können. Ein Objekt, das beispielsweise für eine Gruppe von Berechnungen verwendet wird, kann die privaten Felder zurücksetzen, bevor die nächste Berechnung verarbeitet wird. In Enterprise Services wurde diese Art der kontextspezifischen Initialisierung ermöglicht, indem der Objektentwickler die `Activate`-Methode und die `Deactivate`-Methode in der <xref:System.EnterpriseServices.ServicedComponent>-Basisklasse überschreiben konnte.  
   
- Der Objektpool ruft die `Activate`-Methode unmittelbar vor dem Zurückgeben des Objekts aus dem Pool auf. `Deactivate` wird aufgerufen, wenn das Objekt an den Pool zurückgegeben wird. Die <xref:System.EnterpriseServices.ServicedComponent>-Basisklasse verfügt außerdem über die `boolean`-Eigenschaft mit der Bezeichnung `CanBePooled`, mit der der Pool darüber benachrichtigt werden kann, ob das Objekt weiter gepoolt werden kann.  
+ Der Objektpool ruft die `Activate`-Methode unmittelbar vor dem Zurückgeben des Objekts aus dem Pool auf. `Deactivate` wird aufgerufen, wenn das Objekt an den Pool zurückgegeben. Die <xref:System.EnterpriseServices.ServicedComponent>-Basisklasse verfügt außerdem über die `boolean`-Eigenschaft mit der Bezeichnung `CanBePooled`, mit der der Pool darüber benachrichtigt werden kann, ob das Objekt weiter gepoolt werden kann.  
   
  Im Beispiel wird eine öffentliche Schnittstelle (`IObjectControl`) deklariert, die über die oben genannten Member verfügt, um diese Funktionalität zu imitieren. Diese Schnittstelle wird dann von Dienstklassen implementiert, die die kontextspezifische Initialisierung bereitstellen sollen. Die <xref:System.ServiceModel.Dispatcher.IInstanceProvider>-Implementierung muss geändert werden, um diese Anforderungen zu erfüllen. Jetzt jedes Mal Sie erhalten ein Objekt durch Aufrufen der `GetInstance` -Methode müssen Sie überprüfen, ob das Objekt implementiert `IObjectControl.` ist dies der Fall ist, müssen Sie Aufrufen der `Activate` Methode entsprechend.  
   
@@ -264,4 +264,3 @@ else if (pool.Count < minPoolSize)
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
-  

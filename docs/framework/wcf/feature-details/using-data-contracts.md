@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, data
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
-ms.openlocfilehash: a93fb708ed6b1790027b1e3a2fc74ca8c5ff2024
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129934"
 ---
 # <a name="using-data-contracts"></a>Verwenden von Datenverträgen
 Ein neuer *Datenvertrag* ist eine formale Vereinbarung zwischen einem Dienst und einem Client, in dem die auszutauschenden Daten abstrakt beschrieben werden. Das heißt, der Client und der Dienst müssen, um kommunizieren zu können, nicht denselben Typ verwenden, sondern nur dieselben Datenverträge. Ein Datenvertrag definiert für jeden Parameter oder Rückgabetyp genau, welche Daten für einen Austausch serialisiert (in XML umgewandelt) werden.  
@@ -67,15 +67,16 @@ Ein neuer *Datenvertrag* ist eine formale Vereinbarung zwischen einem Dienst und
  Ein vollständiges Codebeispiel eines WCF-Diensts, der einen Datenvertrag definiert, finden Sie unter [Basic Data Contract](../../../../docs/framework/wcf/samples/basic-data-contract.md) .  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - [Serialisierbare Typen](../../../../docs/framework/wcf/feature-details/serializable-types.md)
 - [Datenvertragsnamen](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
 - [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [Datenmemberreihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md)
+- [Datenmember-Reihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md)
 - [Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
-- [Datenvertrags-Versionsverwaltung](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Datenvertragsversionsverwaltung](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
 - [Versionstolerante Serialisierungsrückrufe](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
 - [Standardwerte der Datenelemente](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)
 - [Vom Datenvertragsserialisierer unterstützte Typen](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

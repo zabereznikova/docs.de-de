@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
-ms.openlocfilehash: 4119a762bd0db63108d08a9db9367e367adb6b58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372086"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109043"
 ---
 # <a name="how-to-create-a-routedcommand"></a>Vorgehensweise: Erstellen eines RoutedCommand
 In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte <xref:System.Windows.Input.RoutedCommand> und zum Implementieren von benutzerdefinierten Befehls durch das Erstellen einer <xref:System.Windows.Input.ExecutedRoutedEventHandler> und ein <xref:System.Windows.Input.CanExecuteRoutedEventHandler> und zum Anfügen von einer <xref:System.Windows.Input.CommandBinding>.  Weitere Informationen über Befehle finden Sie unter den [Befehlsübersicht](commanding-overview.md).  
@@ -48,5 +48,6 @@ In diesem Beispiel wird gezeigt, wie eine benutzerdefinierte <xref:System.Window
  Wenn die Schaltfläche geklickt wird, die <xref:System.Windows.Input.RoutedCommand.Execute%2A> Methode für die benutzerdefinierte <xref:System.Windows.Input.RoutedCommand> aufgerufen wird.  Die <xref:System.Windows.Input.RoutedCommand> löst die <xref:System.Windows.Input.CommandManager.PreviewExecuted> und <xref:System.Windows.Input.CommandManager.Executed> Routingereignisse.  Diese Ereignisse durchlaufen die Elementstruktur nach einem <xref:System.Windows.Input.CommandBinding> für diesen speziellen Befehl.  Wenn eine <xref:System.Windows.Input.CommandBinding> gefunden wird, wird die <xref:System.Windows.Input.ExecutedRoutedEventHandler> zugeordneten <xref:System.Windows.Input.CommandBinding> aufgerufen wird.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Input.RoutedCommand>
 - [Befehlsübersicht](commanding-overview.md)

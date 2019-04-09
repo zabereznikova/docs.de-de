@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: b81cb3b7428ba2ed4e958e18e9368f6f774e8ee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dd463c895efcddfe288fe1dc8571981872d9d80
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604234"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181765"
 ---
 # <a name="how-to-use-stored-procedures-that-take-parameters"></a>Vorgehensweise: Verwenden von gespeicherten Prozeduren, die Parameter annehmen
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ordnet Verweisparametern Ausgabeparameter zu, und für Werttypen wird der Parameter als auf NULL festlegbar deklariert.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Ordnet die Output-Parameter, um Parameter zu verweisen, und für Werttypen wird den Parameter als auf NULL festlegbar deklariert.  
   
  Ein Beispiel dafür, wie Eingabeparameter in einer Abfrage verwenden, die ein Rowset zurückgibt, finden Sie [Vorgehensweise: Zurückgeben von Rowsets](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md).  
   
@@ -40,7 +40,8 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
  [!code-vb[DLinqSprox#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#3)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Gespeicherte Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)
-- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
-- [Verwenden von Typen mit Nullwert](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Verwenden von auf NULL festlegbaren Typen](~/docs/csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [Auf NULL festlegbare Werttypen](~/docs/visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

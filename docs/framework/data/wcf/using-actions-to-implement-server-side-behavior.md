@@ -2,12 +2,12 @@
 title: Verwenden von Aktionen zum Implementieren des serverseitigen Verhaltens
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: fdff4f87e0c22baeb92ee844e0dae1fa9bef8302
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
+ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144117"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Verwenden von Aktionen zum Implementieren des serverseitigen Verhaltens
 
@@ -17,7 +17,7 @@ OData-Aktionen bieten eine Möglichkeit, ein Verhalten für eine aus einem OData
  Zum Implementieren einer Dienstaktion müssen Sie implementieren die <xref:System.IServiceProvider>, [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)), und [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) Schnittstellen. <xref:System.IServiceProvider> ermöglicht es WCF Data Services zum Abrufen der Implementierung von [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)). [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) sind WCF Data Services zu erstellen, suchen, zu beschreiben und Aufrufen von Dienstaktionen. [IDataServiceInvokable](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859893(v=vs.103)) können Sie Sie rufen Sie den Code, der Dienstaktionen Verhalten implementiert, und rufen Sie die Ergebnisse, sofern vorhanden. Bedenken Sie, dass die WCF Data Services pro Aufruf berechnet werden. Bei jedem Aufruf des Dienstes wird eine neue Dienstinstanz erstellt.  Stellen Sie sicher, dass mit dem Dienst keine unnötigen Arbeiten ausgeführt werden.  
   
 ### <a name="iserviceprovider"></a>IServiceProvider  
- <xref:System.IServiceProvider> enthält eine Methode mit dem Namen <xref:System.IServiceProvider.GetService%2A>. Diese Methode wird von den WCF Data Services aufgerufen, um eine Reihe von Dienstanbietern abzurufen, einschließlich Anbietern von Metadatendiensten und Anbietern von Datendienstaktionen. Wenn Sie aufgefordert, einen Datendienstanbieter für die Aktion, zurückgeben Ihre [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) Implementierung.  
+ <xref:System.IServiceProvider> enthält eine Methode namens <xref:System.IServiceProvider.GetService%2A>. Diese Methode wird von den WCF Data Services aufgerufen, um eine Reihe von Dienstanbietern abzurufen, einschließlich Anbietern von Metadatendiensten und Anbietern von Datendienstaktionen. Wenn Sie aufgefordert, einen Datendienstanbieter für die Aktion, zurückgeben Ihre [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) Implementierung.  
   
 ### <a name="idataserviceactionprovider"></a>IDataServiceActionProvider  
  [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) enthält Methoden, mit denen Sie Informationen zu den verfügbaren Aktionen abrufen können. Bei der Implementierung [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) erweitern Sie die Metadaten für den Dienst, der durch die Implementierung des Diensts definiert ist [IDataServiceActionProvider](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/hh859915(v=vs.103)) mit Aktionen und behandeln die Verteilung an diese Aktionen nach Bedarf.  
@@ -81,7 +81,8 @@ context.Execute(new Uri("http://MyServer/MoviesService.svc/Movies(1)/Rate"), "PO
  Im oben angegebenen Codeausschnitt wurde die `MoviesModel`-Klasse von Visual Studio generiert, um einem WCF Data Service einen Dienstverweis hinzuzufügen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
-- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Definieren von WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Entwickeln und Bereitstellen von WCF Data Services](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)
 - [Benutzerdefinierte Datendienstanbieter](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

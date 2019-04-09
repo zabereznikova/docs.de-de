@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zugriff auf das verwaltete HTML-Dokumentobjektmodell'
+title: 'Vorgehensweise: Zugreifen auf das verwaltete HTML-Dokumentobjektmodell'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: f2e2593b161a0dc072f0ecaa872bfa9ab83ac24c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 591d1f4d0b1ebe63b06a30cd01e18addc580d393
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715944"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205016"
 ---
-# <a name="how-to-access-the-managed-html-document-object-model"></a>Vorgehensweise: Zugriff auf das verwaltete HTML-Dokumentobjektmodell
+# <a name="how-to-access-the-managed-html-document-object-model"></a>Vorgehensweise: Zugreifen auf das verwaltete HTML-Dokumentobjektmodell
 Sie können auf das verwaltete HTML-Dokumentobjektmodell (DOM) von zwei Anwendungsarten aus zugreifen:  
   
 -   Eine Windows Forms-Anwendung (EXE), die das verwaltete <xref:System.Windows.Forms.WebBrowser>-Steuerelement gehostet hat. Diese beiden Technologien ergänzen sich gegenseitig, wobei das <xref:System.Windows.Forms.WebBrowser>-Steuerelement dem Benutzer die Seite anzeigt und das HTML-DOM die logische Struktur des Dokuments darstellt.  
@@ -46,4 +46,5 @@ Sie können auf das verwaltete HTML-Dokumentobjektmodell (DOM) von zwei Anwendun
 1.  Die Anwendung oder das <xref:System.Windows.Forms.UserControl> setzen volle Vertrauenswürdigkeit voraus, um auf das verwaltete HTML-DOM zuzugreifen. Wenn Sie eine Windows Forms-Anwendung mit [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] bereitstellen, können Sie volle Vertrauenswürdigkeit entweder über erweiterte Berechtigungen oder die Bereitstellung vertrauenswürdiger Anwendungen anfordern; ausführliche Informationen finden Sie unter [Sichern von ClickOnce-Anwendungen](/visualstudio/deployment/securing-clickonce-applications).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden des verwalteten HTML-Dokumentobjektmodells](using-the-managed-html-document-object-model.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding [WPF], to methods
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
-ms.openlocfilehash: 8ccba42c3e16fdda73c087afde99e9864dc4ab0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cdad46fd6d9ef3bc4ce1a13fedb6ff1d639d93e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123239"
 ---
 # <a name="how-to-bind-to-a-method"></a>Vorgehensweise: Binden an eine Methode
 Das folgende Beispiel zeigt, wie zum Binden an eine Methode mit <xref:System.Windows.Data.ObjectDataProvider>.  
@@ -32,5 +32,6 @@ Das folgende Beispiel zeigt, wie zum Binden an eine Methode mit <xref:System.Win
  Die `InvalidationCharacterRule` ist eine <xref:System.Windows.Controls.ValidationRule> , die nach ungültigen Zeichen sucht. Die Standardvorlage für die Fehler, die einen roten Rahmen ist rund um die <xref:System.Windows.Controls.TextBox>, angezeigt wird, um Benutzer zu benachrichtigen, wenn der Eingabewert nicht um einen double-Wert ist.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)
 - [Binden an eine Enumeration](how-to-bind-to-an-enumeration.md)

@@ -8,17 +8,16 @@ helpviewer_keywords:
 - TileBrush [WPF]
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
-ms.openlocfilehash: 8013bacf6c4d33ce89fc287e625ce8c8fb6c3ef0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369941"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125297"
 ---
 # <a name="tilebrush-overview"></a>Übersicht über TileBrush
 <xref:System.Windows.Media.TileBrush> -Objekte bieten Ihnen viel Kontrolle wie ein Bereich mit einem Bild, gezeichnet wird <xref:System.Windows.Media.Drawing>, oder <xref:System.Windows.Media.Visual>. In diesem Thema wird beschrieben, wie Sie mit <xref:System.Windows.Media.TileBrush> Funktionen erhalten Sie weitere steuern, wie ein <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, oder <xref:System.Windows.Media.VisualBrush> zeichnet einen Bereich.  
-  
-  
+
 <a name="prerequisite"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Um in diesem Thema zu verstehen, ist es hilfreich zu verstehen, wie Sie mit der grundlegenden Funktionen des die <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, oder <xref:System.Windows.Media.VisualBrush> Klasse. Eine Einführung in diese Datentypen, finden Sie unter den [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md).  
@@ -122,12 +121,13 @@ Komponenten eines TileBrush mit einer TileMode-Kachel
  [!code-vb[BrushOverviewExamples_procedural_snip#GraphicsMMFlipXYExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushOverviewExamples_procedural_snip/visualbasic/tilingexample.vb#graphicsmmflipxyexample)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
 - [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md)
-- [Themen zu Vorgehensweisen](brushes-how-to-topics.md)
+- [Gewusst wie-Themen](brushes-how-to-topics.md)
 - [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md)
 - [Beispiel zu ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush-Beispiel](https://go.microsoft.com/fwlink/?LinkID=160049)

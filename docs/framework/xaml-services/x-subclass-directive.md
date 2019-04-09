@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Subclass attribute
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-ms.openlocfilehash: c348d8fa2bd66a9abbb64c9363bb4dae0933ba34
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 850fe8acf9e47149bd385e78b30e04ba77d7a8b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048000"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140789"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass-Anweisung
 Ändert die XAML-Markup kompilieren Verhalten beim `x:Class` wird ebenfalls bereitgestellt. Statt eine partielle Klasse, die basierend auf `x:Class`, bereitgestellten `x:Class` wird erstellt, wie ein intermediate-Klasse, und klicken Sie dann Ihre bereitgestellte abgeleitete Klasse wird erwartet, dass auf basiert `x:Class`.  
@@ -57,5 +57,6 @@ ms.locfileid: "58048000"
  Wenn Sie beide definieren `x:Class` und `x:Subclass`, Sie müssen keine Implementierung für die Klasse angeben, die verweist `x:Class`. Sie müssen nur diese über benennen die `x:Class` Attribut, damit der Compiler verfügt über einige Hinweise für die Klasse, die es in die Zwischendateien erstellt (der Compiler ist nicht wählen Sie einen Standardnamen in diesem Fall). Sie erhalten die `x:Class` Klasse eine Implementierung; Dies ist jedoch nicht das typische Szenario für die Verwendung beider `x:Class` und `x:Subclass`.  
   
 ## <a name="see-also"></a>Siehe auch
-- [x:Class-Anweisung](x-class-directive.md)
+
+- [x:Class-Direktive](x-class-directive.md)
 - [XAML- und benutzerdefinierte Klassen für WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)

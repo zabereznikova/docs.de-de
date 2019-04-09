@@ -1,5 +1,5 @@
 ---
-title: <filter>-Element für <add> für <sharedListeners>
+title: <filter> -Element für <add> für <sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 739acedcc83cd207a7ef4c10c220d27695dd713d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2bef729f179b41509d3c0381b26e38e364dbf86b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120743"
 ---
 # <a name="filter-element-for-add-for-sharedlisteners"></a>\<Filter >-Element für \<hinzufügen > für \<SharedListeners >
 Fügt einen Filter zu einem Listener in der `sharedListeners`-Sammlung hinzu.  
@@ -86,7 +86,8 @@ Fügt einen Filter zu einem Listener in der `sharedListeners`-Sammlung hinzu.
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceSource>
-- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

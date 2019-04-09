@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Sperren von Endpunkten im Unternehmen'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 5392db25c0e3ae0051a892831dd013063389d863
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9bfd077abf0956f014c78a7c398670822724f7e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663078"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181341"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Vorgehensweise: Sperren von Endpunkten im Unternehmen
 Von Großunternehmen wird oft gefordert, dass Anwendungen unter Einhaltung der Sicherheitsrichtlinien der Unternehmen entwickelt werden. Im folgende Thema wird erläutert, wie zum Entwickeln und installieren eine clientendpunktbestätigung, die verwendet werden kann, überprüfen Sie alle Windows Communication Foundation (WCF)-Client-Anwendungen, die auf Computern installiert werden.  
@@ -15,11 +15,11 @@ Von Großunternehmen wird oft gefordert, dass Anwendungen unter Einhaltung der S
  In diesem Fall wird das Validierungssteuerelement eine Clientbestätigung, da dieses Endpunktverhalten, an den Client hinzugefügt wird [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt in der Datei "Machine.config". WCF lädt gemeinsame Endpunktverhalten nur für Clientanwendungen und gemeinsames Dienstverhalten nur für dienstanwendungen. Um diese Bestätigung für Dienstanwendungen installieren zu können, muss es sich bei der Bestätigung um ein Dienstverhalten handeln. Weitere Informationen finden Sie unter den [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt.  
   
 > [!IMPORTANT]
->  Dienst- oder Endpunktverhaltensweisen, die nicht mit dem gekennzeichnet werden die <xref:System.Security.AllowPartiallyTrustedCallersAttribute> -Attribut (APTCA), die hinzugefügt werden, die [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt einer Konfigurationsdatei werden nicht ausgeführt werden, wenn die Anwendung in einer teilweise vertrauenswürdigen ausgeführt wird Umgebung und keine Ausnahme wird ausgelöst, wenn dies der Fall. Um die Ausführung gemeinsamer Verhalten, wie z.&#160;B. Bestätigungen, zu erzwingen, müssen Sie einen der beiden folgenden Schritte ausführen:  
+>  Dienst- oder Endpunktverhaltensweisen, die nicht mit dem gekennzeichnet werden die <xref:System.Security.AllowPartiallyTrustedCallersAttribute> -Attribut (APTCA), die hinzugefügt werden, die [ \<CommonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) Abschnitt einer Konfigurationsdatei werden nicht ausgeführt werden, wenn die Anwendung in einer teilweise vertrauenswürdigen ausgeführt wird Umgebung und keine Ausnahme wird ausgelöst, wenn dies der Fall. Um die Ausführung gemeinsamer Verhalten, wie z.&amp;#160;B. Bestätigungen, zu erzwingen, müssen Sie einen der beiden folgenden Schritte ausführen:  
 >   
->  &#8211; Markieren Sie das gemeinsame Verhalten mit dem <xref:System.Security.AllowPartiallyTrustedCallersAttribute>-Attribut, damit es ausgeführt werden kann, wenn es als teilweise vertrauenswürdige Anwendung bereitgestellt wird. Beachten Sie, dass auf dem Computer ein Registrierungseintrag festgelegt werden kann, um die Ausführung von mit APTCA markierten Assemblys zu verhindern.  
+>  &amp;#8211; Markieren Sie das gemeinsame Verhalten mit dem <xref:System.Security.AllowPartiallyTrustedCallersAttribute>-Attribut, damit es ausgeführt werden kann, wenn es als teilweise vertrauenswürdige Anwendung bereitgestellt wird. Beachten Sie, dass auf dem Computer ein Registrierungseintrag festgelegt werden kann, um die Ausführung von mit APTCA markierten Assemblys zu verhindern.  
 >   
->  &#8211; Wenn die Anwendung als voll vertrauenswürdige Anwendung bereitgestellt wird, stellen Sie sicher, dass die Benutzer die Sicherheitseinstellungen für den Codezugriff nicht dahingehend ändern können, dass die Anwendung in einer teilweise vertrauenswürdigen Umgebung ausgeführt werden kann. Wenn sie dies können, dann wird die benutzerdefinierte Bestätigung nicht ausgeführt, und es wird keine Ausnahme ausgelöst. Eine Möglichkeit, dies sicherzustellen, finden Sie unter den `levelfinal` -Option [Code Access Security Policy-Tool (Caspol.exe)](https://go.microsoft.com/fwlink/?LinkId=248222).  
+>  &amp;#8211; Wenn die Anwendung als voll vertrauenswürdige Anwendung bereitgestellt wird, stellen Sie sicher, dass die Benutzer die Sicherheitseinstellungen für den Codezugriff nicht dahingehend ändern können, dass die Anwendung in einer teilweise vertrauenswürdigen Umgebung ausgeführt werden kann. Wenn sie dies können, dann wird die benutzerdefinierte Bestätigung nicht ausgeführt, und es wird keine Ausnahme ausgelöst. Eine Möglichkeit, dies sicherzustellen, finden Sie unter den `levelfinal` -Option [Code Access Security Policy-Tool (Caspol.exe)](https://go.microsoft.com/fwlink/?LinkId=248222).  
 >   
 >  Weitere Informationen finden Sie unter [Partial Trust Best Practices](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md) und [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md).  
   
@@ -64,5 +64,6 @@ Von Großunternehmen wird oft gefordert, dass Anwendungen unter Einhaltung der S
  Sie können darüber hinaus die Elemente der Konfigurationsdatei verschlüsseln. Weitere Informationen finden Sie im Abschnitt "Siehe auch".  
   
 ## <a name="see-also"></a>Siehe auch
-- [Verschlüsseln von konfigurationsdateielementen mit DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)
-- [Verschlüsseln von konfigurationsdateielementen mit RSA](https://go.microsoft.com/fwlink/?LinkId=94955)
+
+- [Verschlüsseln von Konfigurationsdateielementen mit DPAPI](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [Verschlüsseln von Konfigurationsdateielementen mit RSA](https://go.microsoft.com/fwlink/?LinkId=94955)

@@ -2,15 +2,15 @@
 title: Dienstversionsverwaltung
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 62c8641e69ea461c3bf56b911c25b4894f63abe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27d54cdf6f49bd9433f43290c97706af81d98b6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649244"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122407"
 ---
 # <a name="service-versioning"></a>Dienstversionsverwaltung
-Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstellungen während ihrer Lebensdauer müssen die Dienste (und die Endpunkte, die sie verfügbar machen) eventuell geändert werden. Dafür kann es verschiedene Gründe geben, z.&#160;B. veränderte Geschäftsanforderungen, Anforderungen an die Informationstechnologie oder andere Themen, die in die Dienste integriert werden müssen. Jede Änderung führt zu einer neuen Version des Diensts. In diesem Thema wird erläutert, Überlegungen zur versionsverwaltung in Windows Communication Foundation (WCF).  
+Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstellungen während ihrer Lebensdauer müssen die Dienste (und die Endpunkte, die sie verfügbar machen) eventuell geändert werden. Dafür kann es verschiedene Gründe geben, z.&amp;#160;B. veränderte Geschäftsanforderungen, Anforderungen an die Informationstechnologie oder andere Themen, die in die Dienste integriert werden müssen. Jede Änderung führt zu einer neuen Version des Diensts. In diesem Thema wird erläutert, Überlegungen zur versionsverwaltung in Windows Communication Foundation (WCF).  
   
 ## <a name="four-categories-of-service-changes"></a>Vier Kategorien von Dienständerungen  
  Die Änderungen von Diensten, die eventuell erforderlich sind, können in vier Kategorien unterteilt werden:  
@@ -75,7 +75,7 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
  Ähnlich verhält es sich mit Änderungen des Namens oder Namespace eines Datenvertrags, bei denen es sich ebenfalls um unterbrechende Änderungen handelt.  
   
 ### <a name="round-trips-of-unknown-data"></a>Round-Trips von unbekannten Daten  
- In einigen Szenarien muss ein "Round-Trip" von unbekannten Daten stattfinden, die aus Membern stammen, die einer neuen Version hinzugefügt wurden. So sendet z.&#160;B. ein "versionNew"-Dienst Daten mit einigen neu hinzugefügten Membern an einen "versionOld"-Client. Der Client ignoriert die neu hinzugefügten Member beim Verarbeiten der Nachricht, sendet dann jedoch diese Daten, einschließlich der neu hinzugefügten Member, erneut zurück an den versionNew-Dienst. Das typische Szenario dafür sind Datenupdates, bei denen Daten aus dem Dienst entfernt, geändert und zurückgegeben werden.  
+ In einigen Szenarien muss ein "Round-Trip" von unbekannten Daten stattfinden, die aus Membern stammen, die einer neuen Version hinzugefügt wurden. So sendet z.&amp;#160;B. ein "versionNew"-Dienst Daten mit einigen neu hinzugefügten Membern an einen "versionOld"-Client. Der Client ignoriert die neu hinzugefügten Member beim Verarbeiten der Nachricht, sendet dann jedoch diese Daten, einschließlich der neu hinzugefügten Member, erneut zurück an den versionNew-Dienst. Das typische Szenario dafür sind Datenupdates, bei denen Daten aus dem Dienst entfernt, geändert und zurückgegeben werden.  
   
  Um die Roundtrip-Funktion für einen bestimmten Typ zu aktivieren, muss der Typ die <xref:System.Runtime.Serialization.IExtensibleDataObject>-Schnittstelle implementieren. Die Schnittstelle enthält die <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>-Eigenschaft, die den <xref:System.Runtime.Serialization.ExtensionDataObject>-Typ zurückgibt. In der Eigenschaft werden alle Daten aus zukünftigen Versionen des Datenvertrags gespeichert, der in der aktuellen Version unbekannt ist. Diese Daten sind für den Client nicht transparent. Wenn jedoch die Instanz serialisiert wird, wird der Inhalt der <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A>-Eigenschaft mit den restlichen Daten der Datenvertragsmember geschrieben.  
   
@@ -130,7 +130,7 @@ Nach der ursprünglichen Bereitstellung und möglicherweise mehreren Bereitstell
 ## <a name="appendix"></a>Anhang  
  Die allgemeine Richtlinie für die Datenvertrags-Versionsverwaltung im Falle der strengen Versionsverwaltung besagt, dass Datenverträge als unveränderlich behandelt werden und neue Verträge erstellt werden, wenn Änderungen erforderlich sind. Für jeden neuen Datenvertrag muss eine neue Klasse erstellt werden. Deshalb ist ein Mechanismus erforderlich, mit dem vermieden wird, dass bereits vorhandener Code, der für die alte Datenvertragsklasse geschrieben wurde, für die neue Datenvertragsklasse neu geschrieben werden muss.  
   
- Ein solcher Mechanismus besteht z.&#160;B. in der Verwendung der Schnittstellen für die Definition der Member eines Datenvertrags und im Schreiben eines internen Implementierungscodes für die Schnittstellen anstatt der Datenvertragsklassen, mit denen die Schnittstellen implementiert werden. Im folgenden Code für Version 1 eines Diensts werden eine `IPurchaseOrderV1`-Schnittstelle und eine `PurchaseOrderV1`-Schnittstelle dargestellt:  
+ Ein solcher Mechanismus besteht z.&amp;#160;B. in der Verwendung der Schnittstellen für die Definition der Member eines Datenvertrags und im Schreiben eines internen Implementierungscodes für die Schnittstellen anstatt der Datenvertragsklassen, mit denen die Schnittstellen implementiert werden. Im folgenden Code für Version 1 eines Diensts werden eine `IPurchaseOrderV1`-Schnittstelle und eine `PurchaseOrderV1`-Schnittstelle dargestellt:  
   
 ```  
 public interface IPurchaseOrderV1  
@@ -176,6 +176,7 @@ public class PurchaseOrderV2 : IPurchaseOrderV1, IPurchaseOrderV2
  Der Dienstvertrag würde aktualisiert werden, um neue Vorgänge für `PurchaseOrderV2` zu berücksichtigen. Die vorhandene Geschäftslogik für `IPurchaseOrderV1` würde weiterhin für `PurchaseOrderV2` funktionieren. Es würde eine neue Geschäftslogik für `OrderDate` geschrieben, die die `IPurchaseOrderV2`-Eigenschaft benötigt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>

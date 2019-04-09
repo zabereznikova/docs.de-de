@@ -2,12 +2,12 @@
 title: Typsystem (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
-ms.openlocfilehash: a2748407703b90c60d3082b0e6c0b6aa2d3fb365
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 0afeffd3ad180d6cc6175010140754e279988b38
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904680"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134562"
 ---
 # <a name="type-system-entity-sql"></a>Typsystem (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt eine Reihe von Typen:  
@@ -29,7 +29,7 @@ ms.locfileid: "55904680"
 ## <a name="references"></a>Verweise  
  Ein Verweis ist ein logischer Zeiger auf eine bestimmte Entität in einer bestimmten Entitätenmenge.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt folgende Operatoren zum Erstellen, Löschen und Navigieren von Verweisen:  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt folgenden Operatoren zum Erstellen, löschen und Navigieren von verweisen:  
   
 -   [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
   
@@ -49,7 +49,8 @@ from (select ref(o) as r from LOB.Orders as o) as o2
  Wenn der Verweiswert NULL ist oder das Ziel des Verweises nicht vorhanden ist, hat das Ergebnis den Wert NULL.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)
-- [CSDL, SSDL, and MSL Specifications (CSDL-, SSDL- und MSL-Spezifikationen)](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)
+- [CSDL-, SSDL- und MSL-Spezifikationen](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

@@ -6,18 +6,16 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186824"
 ---
 # <a name="property-value-inheritance"></a>Vererbung von Eigenschaftswerten
 Die Vererbung von Eigenschaftswerten ist eine Funktion des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftssystems. Die Vererbung von Eigenschaftswerten ermöglicht untergeordneten Elementen in einer Elementstruktur, den Wert einer bestimmten Eigenschaft von übergeordneten Elementen zu übernehmen. Dabei erben sie den Wert, der im nächsten übergeordneten Element festgelegt wurde. Das übergeordnete Element hat seinen Wert möglicherweise ebenfalls durch die Vererbung von Eigenschaftswerten erhalten, damit das System auf den Seitenstamm zurückgeführt werden kann. Die Vererbung von Eigenschaftswerten ist nicht das Standardverhalten eines Eigenschaftssystems. Eine Eigenschaft muss mit einer bestimmten Metadateneinstellung eingerichtet werden, damit diese die Vererbung von Eigenschaftswerten für untergeordnete Elemente veranlassen kann.  
-  
 
-  
 <a name="Property_Value_Inheritance_is_Containment_Inheritance"></a>   
 ## <a name="property-value-inheritance-is-containment-inheritance"></a>Die Vererbung von Eigenschaftswerten ist eine Einschlussvererbung  
  „Vererbung“ als ein Begriff wie hier, ist nicht ganz dasselbe Konzept wie Vererbung im Typenkontext und der allgemeinen objektorientierten Programmierung, wobei abgeleitete Klassen Memberdefinitionen von ihren Basisklassen erben. Diese Bedeutung von Vererbung ist auch aktiv in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]: Eigenschaften, die in verschiedenen Basisklassen festgelegt sind, werden als Attribute für abgeleitete [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Klassen verfügbar gemacht, wenn sie als Elemente verwendet werden und werden dem Code als Member verfügbar gemacht. Bei der Vererbung von Eigenschaftswerten geht es insbesondere darum, wie Eigenschaftswerte von einem Element zu einem anderen, auf der Grundlage der über-und untergeordneten Elementen in einer Elementstruktur, erben können. Diese Elementstruktur ist unmittelbar sichtbar, wenn Elemente in andere Elemente geschachtelt werden, wenn Sie Anwendungen in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Markup festlegen. Objektstrukturen können auch programmgesteuert durch das Hinzufügen von Objekten zu angegebenen Auflistungen von anderen Objekten erstellt werden, und die Vererbung von Eigenschaftswerten funktioniert auf dieselbe Weise zur Laufzeit in der fertigen Struktur.  
@@ -42,6 +40,7 @@ Die Vererbung von Eigenschaftswerten ist eine Funktion des [!INCLUDE[TLA#tla_win
  Vererbung erfolgt durch die Traversierung einer Elementstruktur. Diese Struktur ist häufig parallel zur logischen Struktur. Jedes Mal, wenn Sie jedoch einschließen ein WPF-Kernebenen-Objekts im Markup, das eine Elementstruktur z. B. definiert eine <xref:System.Windows.Media.Brush>, Sie haben eine nicht aufeinanderfolgende logische Struktur erstellt. Eine echte logische Struktur ist konzeptionell nicht über die <xref:System.Windows.Media.Brush>, da die logische Struktur ein Konzept der WPF-Frameworkebene ist. Sehen Sie dies in den Ergebnissen berücksichtigt werden, wenn das mithilfe der Methoden der <xref:System.Windows.LogicalTreeHelper>. Allerdings die Vererbung von Eigenschaftswerten kann diese Lücke in der logischen Struktur und vererbte Werte, können weiterhin übergeben werden, solange die vererbbare Eigenschaft als angefügte Eigenschaft und keine absichtliche Vererbung blockierende Grenze registriert wurde (z. B. eine <xref:System.Windows.Controls.Frame>) festgestellt wird.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md)
 - [Übersicht über angefügte Eigenschaften](attached-properties-overview.md)
 - [Priorität von Abhängigkeitseigenschaftswerten](dependency-property-value-precedence.md)

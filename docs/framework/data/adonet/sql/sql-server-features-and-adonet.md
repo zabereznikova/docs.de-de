@@ -2,19 +2,19 @@
 title: SQL Server-Funktionen und ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: 9e6f9d0404108428375aa859fa3f0b0939da6a24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b07f5e1e62744e4301acd64034481cf391100af8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705371"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107522"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server-Funktionen und ADO.NET
 In den Themen in diesem Abschnitt werden Funktionen von SQL Server für die Entwicklung von Datenbankanwendungen mit ADO.NET beschrieben.  
   
  Weitere Informationen finden Sie in der Onlinedokumentation zu SQL Server unter der von Ihnen verwendeten Version von SQL Server wie in der folgenden Tabelle aufgeführt.  
   
- **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
+ **SQL Server-Onlinedokumentation**  
   
 1.  [Entwicklung (Datenbank-Engine)](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
@@ -47,7 +47,8 @@ In den Themen in diesem Abschnitt werden Funktionen von SQL Server für die Entw
  Beschreibt die SqlClient-Unterstützung für LocalDB-Datenbanken.  
   
 ## <a name="see-also"></a>Siehe auch
-- [SQL Server Data Operations in ADO.NET (SQL Server-Datenvorgänge in ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+
+- [SQL Server-Datenvorgänge in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
 - [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
 - [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)

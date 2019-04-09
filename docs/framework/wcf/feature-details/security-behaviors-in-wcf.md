@@ -2,12 +2,12 @@
 title: Sicherheitsverhalten in WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 3040f2af2f9db030d8434e977167810ac83f09dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1bffef127fe295aa41b1287da1c7104464ae0bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180062"
 ---
 # <a name="security-behaviors-in-wcf"></a>Sicherheitsverhalten in WCF
 In Windows Communication Foundation (WCF) Verhalten zu Laufzeitverhalten auf Dienstebene bzw. auf Endpunktebene ändern. (Weitere Informationen zu Verhalten im Allgemeinen finden Sie unter [Run-Time-Dienstverhalten angeben](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Sicherheitsverhalten* Ihnen die Kontrolle über Anmeldeinformationen, Authentifizierung und Autorisierung und über Überwachungsprotokolle. Sie können Verhalten entweder mittels Programmierung oder mittels Konfiguration verwenden. In diesem Thema wird die Konfiguration der folgenden, auf Sicherheitsfunktionen bezogenen Verhalten erläutert:  
@@ -218,5 +218,6 @@ In Windows Communication Foundation (WCF) Verhalten zu Laufzeitverhalten auf Die
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
 - [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

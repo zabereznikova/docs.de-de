@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 0e3dd33e740d7e9f0b59b8568b35a83303e8b592
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517694"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172808"
 ---
 # <a name="configuring-system-provided-bindings"></a>Konfigurieren der vom System bereitgestellten Bindungen
 Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem Endpunkt und die zum Herstellen einer Verbindung mit einem Endpunkt erforderlichen Kommunikationsdetails an. Bindungen bestehen aus Elementen, die definieren, wie die Windows Communication Foundation (WCF)-Kanäle Sie Ebenen auf, die erforderlichen Kommunikationsfunktionen bereitzustellen. Eine Bindung enthält drei Arten von Elementen:  
@@ -20,12 +20,12 @@ Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem E
   
 -   Bindungselemente für den Transportkanal, die das zugrunde liegende Transportprotokoll festlegen, das zum Senden von Nachrichten zum Endpunkt verwendet werden soll, beispielsweise TCP oder HTTP.  
   
--   Bindungselemente für die Nachrichtencodierung, die die Codierung festlegen, z.&#160;B. Text/XML, binär oder MTOM (Message Transmission Optimization Mechanism), die für Nachrichten, die an den Endpunkt gesendet werden, verwendet werden soll.  
+-   Bindungselemente für die Nachrichtencodierung, die die Codierung festlegen, z.&amp;#160;B. Text/XML, binär oder MTOM (Message Transmission Optimization Mechanism), die für Nachrichten, die an den Endpunkt gesendet werden, verwendet werden soll.  
   
  Dieses Thema enthält alle vom System bereitgestellten Bindungen für eine Windows Communication Foundation (WCF). Wenn keine dieser Bindungen die Anforderungen der Anwendung erfüllt, können Sie mithilfe der <xref:System.ServiceModel.Channels.CustomBinding>-Klasse eine Bindung erstellen. Weitere Informationen zum Erstellen benutzerdefinierter Bindungen finden Sie unter [Benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md).  
   
 > [!IMPORTANT]
->  Wählen Sie eine Bindung aus, bei der die Sicherheitsfunktionen aktiviert sind. Standardmäßig weisen alle Bindungen, mit Ausnahme der <xref:System.ServiceModel.BasicHttpBinding>-Bindung, aktivierte Sicherheitsfunktionen auf. Wenn Sie keine sichere Bindung auswählen oder Sicherheitsfunktionen deaktivieren, müssen Sie den Datenaustausch im Netzwerk auf eine andere Weise schützen, z.&#160;B. durch ein geschütztes Datencenter oder ein isoliertes Netzwerk.  
+>  Wählen Sie eine Bindung aus, bei der die Sicherheitsfunktionen aktiviert sind. Standardmäßig weisen alle Bindungen, mit Ausnahme der <xref:System.ServiceModel.BasicHttpBinding>-Bindung, aktivierte Sicherheitsfunktionen auf. Wenn Sie keine sichere Bindung auswählen oder Sicherheitsfunktionen deaktivieren, müssen Sie den Datenaustausch im Netzwerk auf eine andere Weise schützen, z.&amp;#160;B. durch ein geschütztes Datencenter oder ein isoliertes Netzwerk.  
   
 > [!IMPORTANT]
 >  Verwenden Sie nur dann Duplexverträge mit Bindungen, die keine Sicherheitsfunktionen unterstützen oder bei denen die Sicherheitsfunktionen deaktiviert sind, wenn der Datenaustausch im Netzwerk auf andere Weise geschützt wird.  
@@ -78,6 +78,7 @@ Bindungen geben den Kommunikationsmechanismus für die Kommunikation mit einem E
 |Streaming|Gibt an, ob das Nachrichtenstreaming unterstützt wird.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die Endpunkterstellung](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Basis-WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)

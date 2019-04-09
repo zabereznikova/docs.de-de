@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 34d49416bb7d0da60624a1f60e4dbd01a1dff9cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a4bbed1f115ef5cfb6b7b63156f2d84b071cf224
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584544"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127113"
 ---
 # <a name="date-and-time-data"></a>Datums- und Zeitdaten
-SQL Server 2008 enthält neue Datentypen zur Behandlung von Datums- und Uhrzeitinformationen. Die neuen Datentypen beinhalten separate Typen für Datum und Uhrzeit sowie erweiterte Datentypen mit einem größerem Bereich, höherer Präzision und Zeitzonenermittlung. Ab .NET Framework Version 3.5 Service Pack (SP) 1 bietet der .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) vollständige Unterstützung für alle neuen Funktionen des SQL Server 2008-Datenbankmoduls. Sie müssen .NET Framework 3.5 SP1 (oder höher) installieren, um diese neuen Funktionen mit SqlClient zu verwenden.  
+SQL Server 2008 enthält neue Datentypen zur Behandlung von Datums- und Uhrzeitinformationen. Die neuen Datentypen beinhalten separate Typen für Datum und Uhrzeit sowie erweiterte Datentypen mit einem größerem Bereich, höherer Präzision und Zeitzonenermittlung. Ab .NET Framework Version 3.5 Service Pack (SP) 1 bietet der .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) vollständige Unterstützung für alle neuen Funktionen der SQL Server 2008-Datenbank-Engine. Sie müssen .NET Framework 3.5 SP1 (oder höher) installieren, um diese neuen Funktionen mit SqlClient zu verwenden.  
   
  Versionen von SQL Server vor SQL Server 2008 verfügten nur über zwei Datentypen für Datums- und Uhrzeitwerte: `datetime` und `smalldatetime`. Diese beiden Datentypen enthalten sowohl einen Datumswert als auch einen Uhrzeitwert. Dadurch macht es schwierig, nur mit den Datums- oder nur mit den Uhrzeitwerten zu arbeiten. Außerdem werden nur Datumsangaben nach Einführung des gregorianischen Kalenders in England im Jahr 1753 unterstützt. Weiterhin berücksichtigen diese älteren Datums- und Uhrzeitdatentypen nicht die Zeitzone und erschweren dadurch das Arbeiten mit Daten aus verschiedenen Zeitzonen.  
   
  Die vollständige Dokumentation für SQL Server-Datentypen ist in der SQL Server-Onlinedokumentation verfügbar. In der folgenden Tabelle sind die versionsspezifischen Einsteigerthemen für Datums- und Uhrzeitdaten aufgeführt.  
   
- **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
+ **SQL Server-Onlinedokumentation**  
   
 1.  [Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
@@ -74,7 +74,7 @@ Sie können angeben, den den Datentyp des einen <xref:System.Data.SqlClient.SqlP
   
  Der .NET Framework-Datenanbietertyp eines Parameterobjekts wird vom .NET Framework-Typ des Werts des Parameterobjekts oder vom `DbType` des Parameterobjekts hergeleitet. Zur Unterstützung der neuen Datums- und Uhrzeitdatentypen wurden keine neuen <xref:System.Data.SqlTypes>-Datentypen hinzugefügt. Der folgenden Tabelle können Sie die Zuordnungen zwischen den Datentypen für die Datums- und Uhrzeitangabe in SQL Server 2008 und den entsprechenden CLR-Typen entnehmen.  
   
-|SQL Server-Datentyp|.NET Framework-Typ|System.Data.SqlDbType|System.Data.DbType|  
+|SQL Server-Datentyp|.NET Framework-Typ|System.Data.SqlDbType|System.Data.DbType|  
 |--------------------------|-------------------------|---------------------------|------------------------|  
 |date|System.DateTime|Datum|Datum|  
 |Uhrzeit|System.TimeSpan|zeit|zeit|  
@@ -99,7 +99,7 @@ Sie können angeben, den den Datentyp des einen <xref:System.Data.SqlClient.SqlP
 >  Zeitwerte, die kleiner als 0 bzw. größer als oder gleich 24 Stunden sind, lösen eine <xref:System.ArgumentException> aus.  
   
 ### <a name="creating-parameters"></a>Erstellen von Parametern  
- Sie können ein <xref:System.Data.SqlClient.SqlParameter>-Objekt erstellen, indem Sie dessen Konstruktor verwenden, oder Sie fügen es zu einer <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A>-Auflistung hinzu, indem Sie die `Add`-Methode der <xref:System.Data.SqlClient.SqlParameterCollection> aufrufen. Die `Add`-Methode akzeptiert entweder Konstruktorargumente oder ein bestehendes Parameterobjekt als Eingabe.  
+ Können Sie erstellen eine <xref:System.Data.SqlClient.SqlParameter> Objekt mit seinen Konstruktor oder durch Hinzufügen zu einer <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> -Auflistung durch Aufruf der `Add` -Methode der der <xref:System.Data.SqlClient.SqlParameterCollection>. Die `Add`-Methode akzeptiert entweder Konstruktorargumente oder ein bestehendes Parameterobjekt als Eingabe.  
   
  Die nächsten Abschnitte in diesem Thema enthalten Beispiele über das Angeben von Datums- und Uhrzeitparametern. Weitere Beispiele zum Arbeiten mit Parametern, finden Sie unter [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) und [DataAdapter-Parameter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   
@@ -235,12 +235,13 @@ command.Parameters.AddWithValue( _
   
 |Thema|Beschreibung|  
 |-----------|-----------------|  
-|[Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Bietet eine Übersicht über alle Transact-SQL-Datentypen und -Funktionen zur Angabe des Datums und der Uhrzeit.|  
+|[Datentypen und Funktionen für die Angabe von Datum und Uhrzeit (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Bietet eine Übersicht über alle Transact-SQL-Datentypen und -Funktionen zur Angabe des Datums und der Uhrzeit.|  
 |[Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkId=98361)|Enthält Informationen zu den Datentypen und Funktionen zur Angabe des Datums und der Uhrzeit sowie Beispiele für deren Verwendung.|  
-|[Data Types (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Beschreibt die Systemdatentypen in SQL Server 2008.|  
+|[Datentypen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Beschreibt die Systemdatentypen in SQL Server 2008.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [SQL Server-Datentypzuordnungen](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [SQL Server-Datentypen und ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Sequenzoperatoren
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: b4a6e01eeb70015899cbbbfe8ecd748bd9936b2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62cb654922af9df65b0ec9abb67bdc33fda09339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666162"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113684"
 ---
 # <a name="sequence-operators"></a>Sequenzoperatoren
 Im Allgemeinen unterstützt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] keine Sequenzoperatoren, die über eine oder mehrere der folgenden Qualitäten verfügen:  
@@ -43,7 +43,8 @@ Im Allgemeinen unterstützt [!INCLUDE[vbtecdlinq](../../../../../../includes/vbt
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="differences-from-net"></a>Unterschiede zu .NET  
- Alle unterstützten Sequenzoperatoren funktionieren in der Common Language Runtime (CLR) wie erwartet, außer `Average`. `Average` gibt einen Wert des Typs zurück, der dem Typ entspricht, dessen Durchschnitt ermittelt wird, wohingegen `Average` in der CLR entweder immer ein <xref:System.Double> oder ein <xref:System.Decimal> zurückgibt. Wird das Quellargument explizit in double/decimal oder wird der Selector in double/decimal umgewandelt, weist auch die resultierende SQL diese Umwandlung auf, und das Ergebnis entspricht den Erwartungen.  
+ Alle unterstützten Sequenzoperatoren funktionieren in der Common Language Runtime (CLR) wie erwartet, außer `Average`. `Average` Gibt einen Wert des gleichen Typs wie der Typ, dessen Durchschnitt ermittelt wird, zurück, wohingegen in der CLR `Average` gibt immer einen <xref:System.Double> oder <xref:System.Decimal>. Wird das Quellargument explizit in double/decimal oder wird der Selector in double/decimal umgewandelt, weist auch die resultierende SQL diese Umwandlung auf, und das Ergebnis entspricht den Erwartungen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

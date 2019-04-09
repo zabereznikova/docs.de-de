@@ -2,12 +2,12 @@
 title: Fehlerbehandlung in einer Flussdiagrammaktivität mit TryCatch
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: 3f45d4a60de3201a3100fba3af6cc15484a1fbf0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e515248594088f9888c3488d83d8079ce5d13089
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119807"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>Fehlerbehandlung in einer Flussdiagrammaktivität mit TryCatch
 In diesem Beispiel wird gezeigt, wie die <xref:System.Activities.Statements.TryCatch>-Aktivität innerhalb einer komplexen Ablaufsteuerungsaktivität verwendet werden kann.
@@ -23,7 +23,7 @@ In diesem Beispiel wird gezeigt, wie die <xref:System.Activities.Statements.TryC
 
  Die `CreateFlowchartWithFaults`-Aktivität verwendet eine <xref:System.Activities.Statements.FlowSwitch%601>-Aktivität, die auf das `promoCode`-Argument umschaltet und den Rabatt mit der folgenden Formel berechnet.
 
-|Wert von `promoCode`|Rabatt (%)|
+|Wert des `promoCode`|Rabatt (%)|
 |--------------------------|--------------------|
 |Single|10|
 |MNK|15|
@@ -47,5 +47,6 @@ In diesem Beispiel wird gezeigt, wie die <xref:System.Activities.Statements.TryC
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Flussdiagrammworkflows](../flowchart-workflows.md)
 - [Ausnahmen](../exceptions.md)

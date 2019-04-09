@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
-ms.openlocfilehash: c77d688afa19caf1d54adf93b9fb6cf8b1c4701d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 417afd5f614aee8db0aeec2377973ad894e04384
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493897"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119300"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>Ändern von Daten mit umfangreichen Werten (max) in ADO.NET
 Bei LOB-Datentypen übersteigt die Zeilengröße die maximal zulässige Zeilengröße von 8 KB. SQL Server umfasst einen `max`-Spezifizierer für die Datentypen `varchar`, `nvarchar` und `varbinary`, der das Speichern Werten mit einer Größe bis zu 2^32 Bytes ermöglicht. Tabellenspalten und Transact-SQL-Variablen können die Datentypen `varchar(max)`, `nvarchar(max)` oder `varbinary(max)` angeben. In ADO.NET können die `max`-Datentypen durch einen `DataReader` abgerufen werden. Außerdem können sie ohne spezielle Behandlung sowohl als Eingabe- als auch als Ausgabeparameterwerte angegeben werden. Bei großen `varchar`-Datentypen können Daten inkrementell abgerufen und aktualisiert werden.  
@@ -19,7 +19,7 @@ Bei LOB-Datentypen übersteigt die Zeilengröße die maximal zulässige Zeilengr
   
  Die folgende Tabelle enthält Links zur Dokumentation in der SQL Server-Onlinedokumentation.  
   
- **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
+ **SQL Server-Onlinedokumentation**  
   
 1.  [Verwenden von Datentypen mit umfangreichen Werten](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
@@ -33,13 +33,13 @@ Bei LOB-Datentypen übersteigt die Zeilengröße die maximal zulässige Zeilengr
 -   Große `varchar`-Spalten können nicht zum Partitionieren von Schlüsselspalten verwendet werden.  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Arbeiten mit großen Werttypen in Transact-SQL  
- Die Transact-SQL-`OPENROWSET`-Funktion ist eine für den Einmalgebrauch bestimmte Methode zum Herstellen einer Verbindung mit Remotedaten und den Zugriff auf diese Daten. Sie enthält alle erforderlichen Verbindungsinformationen für den Zugriff auf Remotedaten von einer OLE DB-Datenquelle. Auf `OPENROWSET` kann in der FROM-Klausel einer Abfrage so verwiesen werden, als ob es ein Tabellenname wäre. Abhängig von den Funktionen des OLE DB-Anbieters kann <legacyBold>OPENROWSET</legacyBold> auch als Zieltabelle einer INSERT-, UPDATE- oder DELETE-Anweisung dienen.  
+ Die Transact-SQL-`OPENROWSET`-Funktion ist eine für den Einmalgebrauch bestimmte Methode zum Herstellen einer Verbindung mit Remotedaten und den Zugriff auf diese Daten. Sie enthält alle erforderlichen Verbindungsinformationen für den Zugriff auf Remotedaten von einer OLE DB-Datenquelle. `OPENROWSET` kann in der FROM-Klausel einer Abfrage verwiesen werden, als wäre es ein Tabellenname. Abhängig von den Funktionen des OLE DB-Anbieters kann OPENROWSET auch als Zieltabelle einer INSERT-, UPDATE- oder DELETE-Anweisung dienen.  
   
  Die `OPENROWSET`-Funktion umfasst den `BULK`-Rowsetanbieter, mit dem Sie Daten direkt aus einer Datei lesen können, ohne sie in eine Zieltabelle zu laden. Auf diese Weise können Sie `OPENROWSET` in einer einfachen INSERT SELECT-Anweisung verwenden.  
   
  Die `OPENROWSET BULK` Optionsargumente bieten bedeutende Kontrolle darüber, wo Sie beginnen und enden, Lesen von Daten, wie Sie die Fehler zu behandeln und wie Daten interpretiert werden. So können Sie z. B. angeben, dass die Datendatei als Rowset mit einer einzelnen Zeile und einer einzelnen Spalte vom Typ `varbinary`, `varchar` oder `nvarchar` gelesen werden soll. Die vollständige Syntax und alle Optionen finden Sie in der SQL Server-Onlinedokumentation.  
   
- Im folgenden Beispiel wird ein Foto in die <legacyBold>ProductPhoto</legacyBold>-Tabelle der <legacyBold>AdventureWorks</legacyBold>-Beispieldatenbank eingefügt. Bei Verwendung der `BULK OPENROWSET` -Anbieter, müssen Sie die benannte Liste der Spalten, die auch angeben, wenn Sie nicht in jeder Spalte Werte einfügen. Der Primärschlüssel ist in diesem Fall als Identitätsspalte definiert und kann in der Liste der Spalten weggelassen werden. Beachten Sie, dass Sie am Ende der `OPENROWSET`-Anweisung auch einen Korrelationsnamen angeben müssen. In diesem Fall lautet er "ThumbnailPhoto". Dies korreliert mit der Spalte in der `ProductPhoto`-Tabelle, in die die Datei geladen wird.  
+ Im folgenden Beispiel wird ein Foto in die ProductPhoto-Tabelle der AdventureWorks-Beispieldatenbank eingefügt. Bei Verwendung der `BULK OPENROWSET` -Anbieter, müssen Sie die benannte Liste der Spalten, die auch angeben, wenn Sie nicht in jeder Spalte Werte einfügen. Der Primärschlüssel ist in diesem Fall als Identitätsspalte definiert und kann in der Liste der Spalten weggelassen werden. Beachten Sie, dass Sie am Ende der `OPENROWSET`-Anweisung auch einen Korrelationsnamen angeben müssen. In diesem Fall lautet er "ThumbnailPhoto". Dies korreliert mit der Spalte in der `ProductPhoto`-Tabelle, in die die Datei geladen wird.  
   
 ```  
 INSERT Production.ProductPhoto (  
@@ -68,15 +68,15 @@ FROM OPENROWSET
 |If|Then|  
 |--------|----------|  
 |Der Ausdruck ist auf NULL festgelegt.|`@Length` wird ignoriert, und der Wert im *Column_name* wird abgeschnitten, an der angegebenen `@Offset`.|  
-|`@Offset` ist NULL|Hängt der Updatevorgang den Ausdruck am Ende des vorhandenen *Column_name* Wert und `@Length` wird ignoriert.|  
-|`@Offset` ist größer als die Länge des <legacyItalic>column_name</legacyItalic>-Werts|SQL Server gibt einen Fehler zurück.|  
-|`@Length` ist NULL|Beim Updatevorgang werden alle Daten ab `@Offset` bis zum Ende des `column_name`-Werts entfernt.|  
+|`@Offset` is NULL|Hängt der Updatevorgang den Ausdruck am Ende des vorhandenen *Column_name* Wert und `@Length` wird ignoriert.|  
+|`@Offset` ist größer als die Länge des Werts|SQL Server gibt einen Fehler zurück.|  
+|`@Length` is NULL|Beim Updatevorgang werden alle Daten ab `@Offset` bis zum Ende des `column_name`-Werts entfernt.|  
   
 > [!NOTE]
 >  Weder `@Offset` noch `@Length` darf eine negative Zahl sein.  
   
 ## <a name="example"></a>Beispiel  
- In diesem Transact-SQL-Beispiel wird ein Teil eines Werts in <legacyBold>DocumentSummary</legacyBold> aktualisiert. Dabei handelt es sich um eine `nvarchar(max)`-Spalte in der <legacyBold>Document</legacyBold>-Tabelle in der <legacyBold>AdventureWorks</legacyBold>-Datenbank. Das Wort "components" wird ersetzt durch "features". Dazu wird das Ersatzwort, die Anfangsposition (Offset) des zu ersetzenden Worts in den vorhandenen Daten und die Anzahl der zu ersetzenden Zeichen (Length) angegeben. Das Beispiel enthält SELECT-Anweisungen vor und nach der UPDATE-Anweisung, damit die Ergebnisse verglichen werden können.  
+ In diesem Transact-SQL-Beispiel wird ein Teil eines Werts in &lt;legacyBold&gt;DocumentSummary&lt;/legacyBold&gt; aktualisiert. Dabei handelt es sich um eine `nvarchar(max)`-Spalte in der &lt;legacyBold&gt;Document&lt;/legacyBold&gt;-Tabelle in der &lt;legacyBold&gt;AdventureWorks&lt;/legacyBold&gt;-Datenbank. Das Wort "components" wird ersetzt durch "features". Dazu wird das Ersatzwort, die Anfangsposition (Offset) des zu ersetzenden Worts in den vorhandenen Daten und die Anzahl der zu ersetzenden Zeichen (Length) angegeben. Das Beispiel enthält SELECT-Anweisungen vor und nach der UPDATE-Anweisung, damit die Ergebnisse verglichen werden können.  
   
 ```  
 USE AdventureWorks;  
@@ -228,7 +228,7 @@ while (reader.Read())
  [!code-vb[DataWorks LargeValueType.Photo#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Photo/VB/source.vb#1)]  
   
 ## <a name="using-large-value-type-parameters"></a>Verwenden großer Werttypparameter  
- Große Werttypen können in <xref:System.Data.SqlClient.SqlParameter>-Objekten auf dieselbe Weise verwendet werden wie kleinere Werttypen in <xref:System.Data.SqlClient.SqlParameter>-Objekten. Sie können große Werttypen als abrufen <xref:System.Data.SqlClient.SqlParameter> Werte, wie im folgenden Beispiel gezeigt. Im Code wird davon ausgegangen, dass in der <legacyBold>AdventureWorks</legacyBold>-Beispieldatenbank die folgende gespeicherte <legacyBold>GetDocumentSummary</legacyBold>-Prozedur vorhanden ist. Die gespeicherte Prozedur nimmt einen Eingabeparameter namens @DocumentID und gibt den Inhalt der DocumentSummary-Spalte in der @DocumentSummary output-Parameter.  
+ Große Werttypen können in <xref:System.Data.SqlClient.SqlParameter>-Objekten auf dieselbe Weise verwendet werden wie kleinere Werttypen in <xref:System.Data.SqlClient.SqlParameter>-Objekten. Sie können große Werttypen als abrufen <xref:System.Data.SqlClient.SqlParameter> Werte, wie im folgenden Beispiel gezeigt. Im Code wird davon ausgegangen, dass in der AdventureWorks-Beispieldatenbank die folgende gespeicherte GetDocumentSummary-Prozedur vorhanden ist. Die gespeicherte Prozedur nimmt einen Eingabeparameter namens @DocumentID und gibt den Inhalt der DocumentSummary-Spalte in der @DocumentSummary output-Parameter.  
   
 ```  
 CREATE PROCEDURE GetDocumentSummary   
@@ -244,13 +244,14 @@ WHERE   DocumentID=@DocumentID
 ```  
   
 ### <a name="example"></a>Beispiel  
- Der ADO.NET-Code erstellt ein <xref:System.Data.SqlClient.SqlConnection>-Objekt und ein <xref:System.Data.SqlClient.SqlCommand>-Objekt, um die gespeicherte <legacyBold>GetDocumentSummary</legacyBold>-Prozedur auszuführen und die Dokumentübersicht abzurufen, die als großer Werttyp gespeichert ist. Der Code übergibt einen Wert für die @DocumentID -Eingabeparameter übergeben wird, und zeigt die Ergebnisse zu übergeben, in der @DocumentSummary output-Parameter im Konsolenfenster angezeigt.  
+ Der ADO.NET-Code erstellt ein <xref:System.Data.SqlClient.SqlConnection>-Objekt und ein <xref:System.Data.SqlClient.SqlCommand>-Objekt, um die gespeicherte GetDocumentSummary-Prozedur auszuführen und die Dokumentübersicht abzurufen, die als großer Werttyp gespeichert ist. Der Code übergibt einen Wert für die @DocumentID -Eingabeparameter übergeben wird, und zeigt die Ergebnisse zu übergeben, in der @DocumentSummary output-Parameter im Konsolenfenster angezeigt.  
   
  [!code-csharp[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/CS/source.cs#1)]
  [!code-vb[DataWorks LargeValueType.Param#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks LargeValueType.Param/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+
+- [Binäre Daten und Daten mit umfangreichen Werten in SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [SQL Server-Datentypzuordnungen](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [SQL Server Data Operations in ADO.NET (SQL Server-Datenvorgänge in ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [SQL Server-Datenvorgänge in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

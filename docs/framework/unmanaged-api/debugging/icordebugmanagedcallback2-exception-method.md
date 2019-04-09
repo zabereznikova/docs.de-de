@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f776f20f163df91d65509e5dbab31fe9c29a965
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f8952b34781045089945e7e72e179e88300b5fdd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492100"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103349"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception-Methode
 Benachrichtigt den Debugger, dass eine Suche nach einem Ausnahmehandler gestartet wurde.  
@@ -66,7 +66,7 @@ HRESULT Exception (
   
  Der bestimmten Frame und Offset hängen von der `dwEventType` Parameter wie folgt:  
   
-|Wert von `dwEventType`|Wert von `pFrame`|Wert von `nOffset`|  
+|Wert des `dwEventType`|Wert des `pFrame`|Wert des `nOffset`|  
 |----------------------------|-----------------------|------------------------|  
 |DEBUG_EXCEPTION_FIRST_CHANCE|Der Frame, der die Ausnahme ausgelöst hat.|Der Anweisungszeiger im Frame.|  
 |DEBUG_EXCEPTION_USER_FIRST_CHANCE|Der Rahmen Benutzercode dem Punkt der ausgelösten Ausnahme am nächsten ist.|Der Anweisungszeiger im Frame.|  
@@ -83,5 +83,6 @@ HRESULT Exception (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorDebugManagedCallback2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

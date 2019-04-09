@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: 7a424f289bb4ffba102d1023909b139ac2a70c33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503741"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110792"
 ---
 # <a name="the-linq-to-sql-object-model"></a>Das LINQ to SQL-Objektmodell
 In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], ein in der Programmiersprache des Entwicklers ausgedrücktes Objektmodell dem Datenmodell einer relationalen Datenbank zugeordnet ist. Operationen mit den Daten werden dann nach dem Objektmodell durchgeführt.  
@@ -69,7 +69,7 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], ein in d
   
  Ein von einem Aufruf einer zugeordneten Prozedur zurückgegebener Ergebnissatz ist eine Auflistung mit strikter Typzuordnung.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ordnet gespeicherte Prozeduren und Funktionen den Methoden durch Verwendung des <xref:System.Data.Linq.Mapping.FunctionAttribute>-Attribut und des <xref:System.Data.Linq.Mapping.ParameterAttribute>-Attribut zu. Methoden, die gespeicherte Prozeduren darstellen, werden von jenen unterschieden, die benutzerdefinierte Funktionen durch die <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>-Eigenschaft darstellen. Wenn diese Eigenschaft auf `false` (Standard) festgelegt wird, stellt die Methode eine gespeicherte Prozedur dar. Wenn sie auf `true` festgelegt wird, stellt die Methode eine Datenbankfunktion dar.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ordnet gespeicherte Prozeduren und Funktionen auf Methoden mit dem <xref:System.Data.Linq.Mapping.FunctionAttribute> und <xref:System.Data.Linq.Mapping.ParameterAttribute> Attribute. Methoden, die gespeicherte Prozeduren darstellen, werden von jenen unterschieden, die benutzerdefinierte Funktionen durch die <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>-Eigenschaft darstellen. Wenn diese Eigenschaft auf `false` (Standard) festgelegt wird, stellt die Methode eine gespeicherte Prozedur dar. Wenn sie auf `true` festgelegt wird, stellt die Methode eine Datenbankfunktion dar.  
   
 > [!NOTE]
 >  Wenn Sie Visual Studio verwenden, können Sie die [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] zum Erstellen von Methoden, die die gespeicherten Prozeduren und benutzerdefinierten Funktionen zugeordnet.  
@@ -81,5 +81,6 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], ein in d
  Weitere Informationen finden Sie in den Abschnitten zu Funktionsattributen, gespeicherten Prozeduren und Parameter-Attribut [attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) und [gespeicherte Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+
+- [Attributbasiertes Zuordnen](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

@@ -10,18 +10,16 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376369"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108965"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>Initialisierung für Objektelemente außerhalb einer Objektstruktur
 Einige Aspekte der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Initialisierung werden für Prozesse zurückgestellt, die sich in der Regel darauf verlassen, dass das Element entweder mit einer logischen Struktur oder einer visuellen Struktur verbunden wird. Dieses Thema beschreibt die Schritte, die möglicherweise erforderlich sind, um ein Element zu initialisieren, das nicht mit einer dieser Strukturen verbunden ist.  
-  
- 
-  
+
 ## <a name="elements-and-the-logical-tree"></a>Elemente und die logische Struktur  
  Beim Erstellen einer Instanz einer [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Klasse im Code sollten Sie bedenken, dass verschiedene Aspekte der Objektinitialisierung für eine [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Klasse absichtlich keinen Teil des Codes sind, der beim Aufrufen des Klassenkonstruktors ausgeführt wird. Insbesondere für eine Steuerelementklasse ist der Großteil der visuellen Darstellung dieses Steuerelements nicht vom Konstruktor definiert. Stattdessen wird die visuelle Darstellung durch die Vorlage des Steuerelements definiert. Die Vorlage stammt möglicherweise aus einer Vielzahl von Quellen, ganz oft wird die Vorlage jedoch aus Designstilen. Vorlagen sind eine effektive späte Bindung; die erforderliche Vorlage wird dem fraglichen Steuerelement nicht angefügt, solange das Steuerelement nicht für Layout bereit ist. Das Steuerelement ist so lange nicht für Layout bereit, bis es einer logischen Struktur angefügt wird, die eine Verbindung mit einer Renderingoberfläche auf der Stammebene eingeht. Es ist das Rootebenenelement, dass das Rendering aller untergeordneten Elemente initiiert, so wie in der logischen Struktur definiert.  
   
@@ -43,6 +41,7 @@ Einige Aspekte der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla
  [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Strukturen in WPF](trees-in-wpf.md)
 - [Übersicht über das WPF-Grafikrendering](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [Übersicht über XAML (WPF)](xaml-overview-wpf.md)

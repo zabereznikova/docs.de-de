@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fba62a55-36bd-401e-bcd2-5be8e2d34891
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 918b4f8c42b21878fa7eae5c79ae1171ef3e6b29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 487f3d7b31e0b7bd09dbaff7b823678118f68092
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739445"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118234"
 ---
 # <a name="ialink2-interface"></a>IALink2-Schnittstelle
 Ergänzt die [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) durch das Deklarieren von Methoden, die in neueren Metadatenschnittstellen, wie z. B. arbeiten [IMetaDataEmit2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md). IALink2 deklariert darüber hinaus Methoden, die zusätzliche Nutzung über die ursprüngliche IALink Schnittstellen flexibler zu sein.  
@@ -42,6 +42,7 @@ Ergänzt die [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/ali
  [SetPEKind-Methode](../../../../docs/framework/unmanaged-api/alink/setpekind-method.md)  
   
 ## <a name="see-also"></a>Siehe auch
-- [Alink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
+
+- [ALink-API](../../../../docs/framework/unmanaged-api/alink/index.md)
 - [IALink-Schnittstelle](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [Al.exe (Assembly Linker-Tool)](../../../../docs/framework/tools/al-exe-assembly-linker.md)

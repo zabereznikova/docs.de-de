@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a10c39d7df12c86b8fcf0fb40389c087f96e1ee
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1c60d7685de1e9a1d4f631ad1fba53b981829f58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965970"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159796"
 ---
 # <a name="icordebugilframe-interface"></a>ICorDebugILFrame-Schnittstelle
 
@@ -57,4 +57,5 @@ Stellt einen Stapelrahmen des Microsoft intermediate Language (MSIL)-Code dar. D
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: Benutzerdefinierte Stream-Upgrades
 ms.date: 03/30/2017
 ms.assetid: e3da85c8-57f3-4e32-a4cb-50123f30fea6
-ms.openlocfilehash: 12c2b56d65b2ff41d6919e978dfad7560d05782c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: cd8385194e1f24d246e6fc398462b45bacbe15d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611318"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127360"
 ---
 # <a name="custom-stream-upgrades"></a>Benutzerdefinierte Stream-Upgrades
 Streamorientierte Transports wie TCP und benannte Pipes werden auf einem fortlaufenden Bytestream zwischen Client und Server ausgeführt. Dieser Stream wird durch ein <xref:System.IO.Stream>-Objekt realisiert. Bei einem Stream-Upgrade will der Client dem Kanalstapel eine optionale Protokollebene hinzufügen und fordert das andere Ende des Kommunikationskanals dazu auf. Das Stream-Upgrade besteht aus dem Ersetzen des ursprünglichen <xref:System.IO.Stream>-Objekts durch ein aktualisiertes Objekt.  
@@ -93,6 +93,7 @@ Streamorientierte Transports wie TCP und benannte Pipes werden auf einem fortlau
 4.  Der Stream wird nach jedem Aufruf an <xref:System.ServiceModel.Channels.StreamUpgradeInitiator.GetNextUpgrade%2A> und <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor.CanUpgrade%2A> aktualisiert.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Channels.StreamUpgradeInitiator>
 - <xref:System.ServiceModel.Channels.StreamSecurityUpgradeInitiator>
 - <xref:System.ServiceModel.Channels.StreamUpgradeAcceptor>

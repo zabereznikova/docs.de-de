@@ -2,12 +2,12 @@
 title: <message> von <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: 7447c41d991561bc98540b6fb8ea3ad93a42192b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: bf0ed2de73505d5634d6c7d26881f9800a0bf1f2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166737"
 ---
 # <a name="message-of-ws2007httpbinding"></a>\<Message > von \<ws2007HttpBinding >
 Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) Element.  
@@ -82,7 +82,7 @@ Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<ws
 |`Windows`|Dies ermöglicht den SOAP-Austausch im Rahmen des authentifizierten Kontexts von `Windows`-Anmeldeinformationen. Wenn das `negotiateServiceCredential`-Attribut auf `true` festgelegt ist, wird entweder eine SSPI-Verhandlung oder Kerberos (ein interoperabler Standard) ausgeführt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -91,6 +91,7 @@ Definiert die Einstellungen für Sicherheit auf Nachrichtenebene, der die [ \<ws
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Definiert die Sicherheitseinstellungen für eine [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md).|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSHttpSecurity.Message%2A>

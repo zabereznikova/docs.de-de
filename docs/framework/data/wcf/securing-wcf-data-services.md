@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: bc5fe149050ad0a4784d90d370dfcd3f99663b38
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 1e134d877c45af00e2a2fb7e7ef0882ffd7ddc48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119118"
 ---
 # <a name="securing-wcf-data-services"></a>Sichern von WCF Data Services
 Dieses Thema beschreibt sicherheitsüberlegungen speziell für das Entwickeln, bereitstellen und Ausführen von WCF Data Services und Anwendungen, von Access Services, die das Open Data Protocol (OData) zu unterstützen. Sie sollten auch Empfehlungen für das Erstellen sicherer Anwendungen für .NET Framework ausführen.  
@@ -111,5 +111,6 @@ OData basiert auf dem HTTP-Protokoll. Abhängig von der vom Datendienst implemen
 -   Benutzereingaben und akzeptierte Daten von nicht vertrauenswürdigen Diensten sollten immer von Clientanwendungen überprüft werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Definieren von WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

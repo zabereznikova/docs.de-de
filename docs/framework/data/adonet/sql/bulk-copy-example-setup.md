@@ -2,12 +2,12 @@
 title: Einrichtung der Massenkopierbeispiele
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 42a0316351603575d33041c2a0fc783d9726f14c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6244afff348edbde46fdfda7481910aca2b25939
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117273"
 ---
 # <a name="bulk-copy-example-setup"></a>Einrichtung der Massenkopierbeispiele
 Mit der <xref:System.Data.SqlClient.SqlBulkCopy>-Klasse können Daten nur in SQL Server-Tabellen geschrieben werden. In diesem Thema gezeigten Codebeispiele verwenden die SQL Server-Beispieldatenbank, **AdventureWorks**. Um Änderungen an den vorhandenen Tabellen zu vermeiden, schreiben die Codebeispiele in Tabellen, die zunächst erstellt werden müssen.  
@@ -82,5 +82,6 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Massenkopiervorgänge in SQL Server](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

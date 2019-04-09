@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: cf9a06c4604ee71e3e98de22c6729cc4a874e741
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 26488b76608aa46b56285581e7368bf24f8b1be7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127841"
 ---
 # <a name="controls-by-category"></a>Kategorien von Steuerelementen
 Windows Presentation Foundation (WPF)-Steuerelemente können logisch in verschiedene Kategorien gruppiert werden. Diese Kategorien können verwendet werden, um das entsprechende Steuerelement für das Szenario auszuwählen, indem Ihnen angezeigt wird, welche Steuerelemente ähnliche Verwendungsmuster oder Funktionen aufweisen.  
@@ -162,7 +162,7 @@ Windows Presentation Foundation (WPF)-Steuerelemente können logisch in verschie
 -   <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="media"></a>Medien  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] enthält integrierte Unterstützung für das Hosten von Audio- und Videoinhalt sowie [Codecs] für die gängigsten Bildformate.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] umfasst integrierte Unterstützung für das Hosten von Audio-und Videoinhalt sowie [Codecs] für die gängigsten Bildformate.  
   
 -   <xref:System.Windows.Controls.Image>  
   
@@ -178,4 +178,5 @@ Windows Presentation Foundation (WPF)-Steuerelemente können logisch in verschie
 -   <xref:System.Windows.Controls.InkPresenter>  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Steuerelementbibliothek](control-library.md)

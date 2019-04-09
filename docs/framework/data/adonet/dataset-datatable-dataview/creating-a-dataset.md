@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 57629d8f-393e-4677-8b83-29ffde27f5fc
-ms.openlocfilehash: 62f0aca98c861771d3b7cc20c9f473165bc6546d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d2d17056e6dcd29ef9b5c5e8c3024a32fce32bd5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743373"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118182"
 ---
 # <a name="creating-a-dataset"></a>Erstellen eines "DataSets"
 Durch Aufrufen des <xref:System.Data.DataSet>-Konstruktors wird eine Instanz eines <xref:System.Data.DataSet> erstellt. Optional kann ein Argument für den Namen angegeben werden. Wenn für das <xref:System.Data.DataSet> kein Name angegeben wird, wird der Name auf "NewDataSet" festgelegt.  
@@ -28,6 +28,7 @@ DataSet customerOrders = new DataSet("CustomerOrders");
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Populating a DataSet from a DataAdapter (Auffüllen eines DataSets durch einen DataAdapter)](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
-- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+
+- [Auffüllen eines "DataSets" durch einen "DataAdapter"](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)
+- ["DataSets", "DataTables" und "DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

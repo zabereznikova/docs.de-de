@@ -2,12 +2,12 @@
 title: Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 8d11fdbcb973eb3e4b7487eb6aacb28374c4c654
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 549579fca0179994191987097c12b6085ee91756
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119690"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)
 Dieser Abschnitt enthält eine Übersicht über das Erstellen des relationalen Schemas eines `DataSet` aus einem XSD-Schemadokument (XML Schema Definition Language). Im Allgemeinen für die einzelnen `complexType` untergeordnetes Element eines Schemaelements eine Tabelle wird generiert, der `DataSet`. Die Tabellenstruktur wird durch die Definition des komplexen Typs festgelegt. Tabellen werden erstellt, der `DataSet` für Elemente der obersten Ebene im Schema. Eine Tabelle wird jedoch nur erstellt, für die ein auf oberster Ebene `complexType` Element bei der `complexType` in einem anderen Element geschachtelt ist `complexType` Element, in dem Fall wird das geschachtelte `complexType` -Element zugeordnet ist eine `DataTable` innerhalb der `DataSet`.  
@@ -83,7 +83,7 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
 ```  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Zuordnen von XML Schema-Schlüsseleinschränkungen (XSD) zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Beschreibt die XML-Schema-Elemente, die zum Erstellen von Unique- und foreign Key-Einschränkungen in einer `DataSet`.  
   
  [Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
@@ -93,8 +93,9 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
  Beschreibt, wie Beziehungen implizit erstellt werden, wenn XML-Schema-Elemente zum Erstellen von Einschränkungen in einer `DataSet`.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Verwenden von XML in einem "DataSet"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Beschreibt, wie Sie geladen und beibehalten werden, die relationale Struktur und die Daten in einem `DataSet` als XML-Daten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

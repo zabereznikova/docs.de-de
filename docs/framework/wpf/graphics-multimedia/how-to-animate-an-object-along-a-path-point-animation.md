@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (point animation)
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
-ms.openlocfilehash: 13cf583277b4e105da01c5ab56111123cf03038c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4ef28118975d02500916676ca50e0f9622c7a3e2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351616"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129584"
 ---
 # <a name="how-to-animate-an-object-along-a-path-point-animation"></a>Vorgehensweise: Animieren eines Objekts entlang eines Pfads (Punktanimation)
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.Animation.PointAnimationUsingPath> zu animierende Objekt eine <xref:System.Windows.Point> entlang eines gekrümmten Pfads.  
@@ -31,6 +31,7 @@ Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.Animation.Po
  Die Codeversion des vorhergehenden Beispiels verwendet eine <xref:System.Windows.Media.Animation.Storyboard> zum Animieren der <xref:System.Windows.Media.EllipseGeometry>, auch wenn nur eine einzige Animation angewendet wurde. Ein <xref:System.Windows.Media.Animation.Storyboard> ist häufig der einfachste Weg, mehrere Animationen anzuwenden, da diese vom selben gesteuert werden können <xref:System.Windows.Media.Animation.Storyboard>. Eine einfachere Möglichkeit, eine einzelne Animation auf eine Eigenschaft anwenden, wenn Sie Code verwenden jedoch ist die Verwendung der <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> Methode. Ein Beispiel finden Sie unter [Vorgehensweise: Animieren einer Eigenschaft ohne Storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [Übersicht über Animationen](animation-overview.md)
-- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](path-animation-how-to-topics.md)
+- [Gewusst-wie-Themen zur Pfadanimation](path-animation-how-to-topics.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Reagieren Sie auf das Klicken in das DataGrid-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Reagieren auf das Klicken in das DataGrid-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 7310557bad7e845c4b193debdefba68db2e1d116
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708201"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191899"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Vorgehensweise: Reagieren Sie auf das Klicken in das DataGrid-Steuerelement in Windows Forms
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>Vorgehensweise: Reagieren auf das Klicken in das DataGrid-Steuerelement in Windows Forms
 > [!NOTE]
 >  Obwohl das <xref:System.Windows.Forms.DataGridView>-Steuerelement das <xref:System.Windows.Forms.DataGrid>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.DataGrid>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -141,5 +141,6 @@ ms.locfileid: "57708201"
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)
-- [Vorgehensweise: Ändern der angezeigten Daten zur Laufzeit in das DataGrid-Steuerelement in Windows Forms](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [Vorgehensweise: Ändern der angezeigten Daten im DataGrid-Steuerelement in Windows Forms zur Laufzeit](change-displayed-data-at-run-time-wf-datagrid-control.md)

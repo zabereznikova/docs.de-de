@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: 99f6e9e265071c2e7e3c79cf158ab5051eb78f04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2b63719149c21eba493b3d8f2fc65309515bb0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149096"
 ---
 # <a name="provider-statistics-for-sql-server"></a>Anbieterstatistiken für SQL Server
 Ab .NET Framework Version 2.0 unterstützt der .NET Framework-Datenanbieter für SQL Server Laufzeitstatistiken. Sie müssen die Statistik aktivieren, indem Sie nach dem Erstellen eines gültigen Verbindungsobjekts die <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>-Eigenschaft des <xref:System.Data.SqlClient.SqlConnection>-Objekts auf `True` festlegen. Nach dem Aktivieren der Statistik können Sie sie als "Momentaufnahme" betrachten, indem Sie einen <xref:System.Collections.IDictionary>-Verweis über die <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A>-Methode des <xref:System.Data.SqlClient.SqlConnection>-Objekts abrufen. Blättern Sie durch die Liste wie durch Wörterbucheinträge mit Name-Wert-Paaren. Diese Name-Wert-Paare sind nicht sortiert. Sie können jederzeit die <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A>-Methode des <xref:System.Data.SqlClient.SqlConnection>-Objekts aufrufen, um die Zähler zurückzusetzen. Wenn das Erfassen der Statistik nicht aktiviert wurde, wird keine Ausnahme ausgelöst. Wenn <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> aufgerufen wird, ohne vorher <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> aufzurufen, stellen die abgerufenen Werte die Anfangswerte für die einzelnen Einträge dar. Wenn Sie die Statistik aktivieren, die Anwendung für eine gewisse Zeit ausführen und dann die Statistik wieder deaktivieren, entsprechen die abgerufenen Werte den Werten, die bis zu dem Zeitpunkt erfasst wurden, an dem die Statistik deaktiviert wurde. Alle statistischen Werte werden auf der Basis einzelner Verbindungen erfasst.  
@@ -339,5 +339,6 @@ namespace CS_Stats_Console_GetAll
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

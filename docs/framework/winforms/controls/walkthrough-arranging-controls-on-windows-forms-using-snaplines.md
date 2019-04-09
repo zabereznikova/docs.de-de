@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4d352ee5c431ba43bbe338a9caf7bd0716e91834
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139788"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien
 Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anwendungen einen hohen Stellenwert. Der Windows Forms-Designer bietet Ihnen viele Layouttools, um dies zu erreichen. Einer der wichtigsten Faktoren ist die <xref:System.Windows.Forms.Design.Behavior.SnapLine> Feature.  
@@ -169,7 +169,7 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
   
 2.  Ziehen Sie ein <xref:System.Windows.Forms.Label> -Steuerelement aus der **Toolbox** auf das Formular.  
   
-3.  Ändern Sie den Wert der <xref:System.Windows.Forms.Label> -Eigenschaft des <xref:System.Windows.Forms.Control.AutoSize%2A> -Steuerelements in `true`. Beachten Sie, dass es sich bei den Rändern des Steuerelements angepasst werden, um den Text anpassen.  
+3.  Ändern Sie den Wert der <xref:System.Windows.Forms.Control.AutoSize%2A>-Eigenschaft des <xref:System.Windows.Forms.Label>-Steuerelements in `true`. Beachten Sie, dass es sich bei den Rändern des Steuerelements angepasst werden, um den Text anpassen.  
   
 4.  Verschieben der <xref:System.Windows.Forms.Label> Steuerelement auf der linken Seite von der <xref:System.Windows.Forms.TextBox> zu steuern, sodass es den unteren Rand ausgerichtet ist die <xref:System.Windows.Forms.TextBox> Steuerelement. Beachten Sie die Ausrichtungslinie, die an den unteren Rändern der beiden Steuerelemente angezeigt wird.  
   
@@ -240,8 +240,9 @@ Die präzise Platzierung von Steuerelementen auf dem Formular hat für viele Anw
  Informationen zum Entwurf der Benutzeroberfläche Windows finden Sie in das Buch *Microsoft Windows User Experience, Official Guidelines for User Interface Developers and Designers* Redmond, WA, USA: Microsoft Press, 1999. (USBN: 0-7356-0566-1).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
 - [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](windows-forms-controls-padding-autosize.md)
-- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
+- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)

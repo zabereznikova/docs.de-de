@@ -9,12 +9,12 @@ helpviewer_keywords:
 - scrolling methods [WPF]
 - ScrollViewer control [WPF], scrolling methods
 ms.assetid: 4708cc65-6510-45f8-82e6-30b0d3e30045
-ms.openlocfilehash: b9da9ca2512a39164f2b3a6f5e98fe63b89f0b9a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e81c63de16d09de8435d5ec49a013bf8dc5927cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142154"
 ---
 # <a name="how-to-use-the-content-scrolling-methods-of-scrollviewer"></a>Vorgehensweise: Verwenden der ScrollViewer-Bildlaufmethoden
 Dieses Beispiel zeigt, wie Sie mit der Bildlaufmethoden des der <xref:System.Windows.Controls.ScrollViewer> Element. Diese Methoden bieten inkrementellen Bildlauf in Inhalten, indem Zeile oder Seite einem <xref:System.Windows.Controls.ScrollViewer>.  
@@ -30,5 +30,6 @@ Dieses Beispiel zeigt, wie Sie mit der Bildlaufmethoden des der <xref:System.Win
  [!code-vb[ScrollViewerMethods#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollViewerMethods/VisualBasic/Window1.xaml.vb#2)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.StackPanel>

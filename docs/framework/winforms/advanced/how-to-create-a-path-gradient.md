@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126226"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186094"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Vorgehensweise: Erstellen eines linearen Pfadfarbverlaufs
 Die <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasse können Sie die Möglichkeit, die Sie ausfüllen einer Form nach und nach Ändern von Farben anpassen. Beispielsweise können Sie eine Farbe für den Mittelpunkt der einen Pfad und eine andere Farbe für die Grenze eines Pfads angeben. Sie können auch separate Farben für die einzelnen mehrere Punkte entlang der Grenzen eines Pfads angeben.  
@@ -111,4 +111,5 @@ Die <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasse können Sie die Mö
  Im vorherigen Beispiel sind für die Verwendung mit Windows Forms konzipiert und erfordern <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden eines Pinsels für Farbverläufe zum Ausfüllen von Formen](using-a-gradient-brush-to-fill-shapes.md)

@@ -9,20 +9,18 @@ helpviewer_keywords:
 - Win32 code [WPF], visual objects in
 - hosting [WPF], visual objects in Win32 code
 ms.assetid: f0e1600c-3217-43d5-875d-1864fa7fe628
-ms.openlocfilehash: 68241d679b0f788423b09badfa549a660da0d106
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b260f96246f0d9e5447b74a05e1396bfef176197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111461"
 ---
 # <a name="tutorial-hosting-visual-objects-in-a-win32-application"></a>Tutorial: Hosten von visuellen Objekten in einer Win32-Anwendung
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wann haben Sie jedoch eine erhebliche Investition [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] Code es möglicherweise effektiver [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Funktionalität für Ihre Anwendung anstelle der Code neu geschrieben. Zur Unterstützung von [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Grafiksubsystemen, die gleichzeitig in einer Anwendung verwendet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet einen Mechanismus zum Hosten von Objekten in einem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wann haben Sie jedoch eine erhebliche Investition [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] Code es möglicherweise effektiver [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Funktionalität für Ihre Anwendung anstelle der Code neu geschrieben. Zur Unterstützung von [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] und [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Grafiksubsystemen, die gleichzeitig in einer Anwendung verwendet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet einen Mechanismus zum Hosten von Objekten in einem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster.  
   
  In diesem Tutorial wird beschrieben, wie eine beispielanwendung schreiben [Treffertests mit Win32-Interoperabilität](https://go.microsoft.com/fwlink/?LinkID=159995), die von Hosts [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visuellen Objekte einem [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] Fenster.  
-  
 
-  
 <a name="requirements"></a>   
 ## <a name="requirements"></a>Anforderungen  
  In diesem Lernprogramm wird vorausgesetzt, dass Sie mit den Grundlagen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Programmierung und der [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]-Programmierung vertraut sind. Für eine grundlegende Einführung in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Programmierung finden Sie [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md). Eine Einführung in die [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] -Programmierung finden Sie in zahlreichen Büchern zu diesem Thema, insbesondere *Programming Windows* von Charles Petzold.  
@@ -78,6 +76,7 @@ ms.locfileid: "57377267"
  Weitere Informationen über Treffertests für visuelle Objekte finden Sie unter [Treffertests in der visuellen Ebene](hit-testing-in-the-visual-layer.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Interop.HwndSource>
 - [Treffertests mit Win32-Interoperation](https://go.microsoft.com/fwlink/?LinkID=159995)
 - [Treffertests in der visuellen Ebene](hit-testing-in-the-visual-layer.md)

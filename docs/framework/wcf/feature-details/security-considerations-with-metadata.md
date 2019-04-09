@@ -2,12 +2,12 @@
 title: Sicherheitsüberlegungen für Metadaten
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: 2e1ad9f3c7d2a77ec6237bf1fc12c0d1a67181ad
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0dc060475f868923e8c7e4c87ef43ef5912c7ac5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411912"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172964"
 ---
 # <a name="security-considerations-with-metadata"></a>Sicherheitsüberlegungen für Metadaten
 Wenn Sie die Metadaten-Features in Windows Communication Foundation (WCF) verwenden, sollten Sie die Sicherheitsaspekte bei der Veröffentlichung, abrufen und verwenden die Metadaten des Diensts.  
@@ -39,5 +39,6 @@ Wenn Sie die Metadaten-Features in Windows Communication Foundation (WCF) verwen
  Mithilfe der Anwendungskonfigurationsdatei eines Diensts kann gesteuert werden, ob und auf welche Weise Metadaten veröffentlicht werden. Es empfiehlt sich, die Anwendungskonfigurationsdatei mit geeigneten Zugriffssteuerungslisten (Access Control Lists, ACLs) zu schützen, um so den Schutz vor Einstellungsänderungen durch einen möglichen Angreifer sicherzustellen.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Sichere Metadatenendpunkte](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+
+- [Vorgehensweise: Sichern von Metadatenendpunkten](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
 - [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md)

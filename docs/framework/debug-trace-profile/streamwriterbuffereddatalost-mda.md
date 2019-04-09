@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e20502cfd64e7e4e40bee0b815729e914c3dd4a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b35e6ab4de699126b4b3b5f74d7a9a8dacfa4a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553710"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117390"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost-MDA
 Der `streamWriterBufferedDataLost`-MDA (Assistent für verwaltetes Debuggen) wird aktiviert, wenn eine <xref:System.IO.StreamWriter> geschrieben wird, aber die <xref:System.IO.StreamWriter.Flush%2A>- oder <xref:System.IO.StreamWriter.Close%2A>-Methode wird anschließend nicht aufgerufen, bevor die Instanz der <xref:System.IO.StreamWriter> zerstört wird. Wenn dieser MDA aktiviert ist, überprüft die Common Language Runtime, ob gepufferte Daten immer noch in <xref:System.IO.StreamWriter> vorhanden sind. Wenn die gepufferten Daten vorhanden sind, wird der MDA aktiviert. Ein Aufruf der <xref:System.GC.Collect%2A>- und <xref:System.GC.WaitForPendingFinalizers%2A>-Methoden kann erzwingen, dass Finalizer ausgeführt werden. Finalizer werden andernfalls zu scheinbar willkürlichen Zeiten und beim Beenden des Prozesses möglicherweise gar nicht ausgeführt. Wenn Finalizer explizit mit diesem aktiven MDA ausgeführt werden, wird diese Art von Problemen zuverlässiger reproduziert werden können.  
@@ -105,5 +105,6 @@ static WriteToFile()
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.IO.StreamWriter>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

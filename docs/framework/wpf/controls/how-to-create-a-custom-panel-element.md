@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF]
 - custom Panel elements [WPF]
 ms.assetid: e0df4f1e-8c07-4e86-89a3-e22acfffdc2a
-ms.openlocfilehash: 2e778adfb79a64c8f248992aee92de9471906129
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d4fc9d76ada9f27bd52619280b323691af9382c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368700"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139567"
 ---
 # <a name="how-to-create-a-custom-panel-element"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Bereichselements
 ## <a name="example"></a>Beispiel  
@@ -29,6 +29,7 @@ ms.locfileid: "57368700"
  [!code-vb[PlotPanel#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PlotPanel/VisualBasic/PlotPanel.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.Panel>
 - [Übersicht über Panel-Elemente](panels-overview.md)
 - [Erstellen einer benutzerdefinierten Content-Wrapping Panel Sample](https://go.microsoft.com/fwlink/?LinkID=159979)

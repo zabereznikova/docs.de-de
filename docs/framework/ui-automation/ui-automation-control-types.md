@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, control types
 - control types, UI Automation
 ms.assetid: 261dcc59-3a62-4e40-91dd-63ff9d2241c0
-ms.openlocfilehash: 9cfd0678b21c61cc776162c6daeb1b7262e602cb
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 54a2157d469acad6d20a44afe72432138894cfe8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116102"
 ---
 # <a name="ui-automation-control-types"></a>Steuerelementtypen der Benutzeroberflächenautomatisierung
 **Hinweis** diese Dokumentation ist für .NET Framework-Entwickler, die die verwaltete verwenden möchten, vorgesehen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] in definierten Klassen die <xref:System.Windows.Automation> Namespace. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
@@ -22,46 +22,47 @@ ms.locfileid: "57674977"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den Schaltflächen-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-button-control-type.md)  
- [Benutzeroberflächenautomatisierungs-Unterstützung für den Kalender-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
+ [Benutzeroberflächenautomatisierungs-Unterstützung für den Calendar-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den CheckBox-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-checkbox-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den ComboBox-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-combobox-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den DataGrid-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-datagrid-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den DataItem-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)  
- [Benutzeroberflächenautomatisierungs-Unterstützung für den Dokumentsteuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
- [Benutzeroberflächenautomatisierungs-Unterstützung für den Bearbeitungssteuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
- [Benutzeroberflächenautomatisierungs-Unterstützung für den Gruppen-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
+ [Benutzeroberflächenautomatisierungs-Unterstützung für den Document-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
+ [Benutzeroberflächenautomatisierungs-Unterstützung für den Edit-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
+ [Benutzeroberflächenautomatisierungs-Unterstützung für den Group-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den Header-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den HeaderItem-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-headeritem-control-type.md)  
- [Benutzeroberflächenautomatisierungs-Unterstützung für den Link-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-hyperlink-control-type.md)  
+ [Benutzeroberflächenautomatisierungs-Unterstützung für den Hyperlink-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-hyperlink-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den Bild-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-image-control-type.md)  
- [Benutzeroberflächenautomatisierungs-Unterstützung für den Listen-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
+ [Benutzeroberflächenautomatisierungs-Unterstützung für den List-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den ListItem-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den Menü-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den MenuBar-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den MenuItem-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-menuitem-control-type.md)  
- [Benutzeroberflächenautomatisierungs-Unterstützung für den Bereich-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
+ [Benutzeroberflächenautomatisierungs-Unterstützung für den Pane-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den ProgressBar-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-progressbar-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den RadioButton-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-radiobutton-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den ScrollBar-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-scrollbar-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den Separator-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
- [Benutzeroberflächenautomatisierungs-Unterstützung für den Schieberegler-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
- [Benutzeroberflächenautomatisierungs-Unterstützung für den Drehfeld-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
+ [Benutzeroberflächenautomatisierungs-Unterstützung für den Slider-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
+ [Benutzeroberflächenautomatisierungs-Unterstützung für den Spinner-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den SplitButton-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-splitbutton-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den StatusBar-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-statusbar-control-type.md)  
- [Benutzeroberflächenautomatisierungs-Unterstützung für den Registerkarten-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-tab-control-type.md)  
+ [Benutzeroberflächenautomatisierungs-Unterstützung für den Tab-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-tab-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den TabItem-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-tabitem-control-type.md)  
- [Benutzeroberflächenautomatisierungs-Unterstützung für den Tabellen-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
+ [Benutzeroberflächenautomatisierungs-Unterstützung für den Table-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den Text-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
- [Benutzeroberflächenautomatisierungs-Unterstützung für den Ziehpunkt-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
- [Benutzeroberflächenautomatisierungs-Unterstützung für den TitleBar-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
+ [Benutzeroberflächenautomatisierungs-Unterstützung für den Thumb-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
+ [Benutzeroberflächenautomatisierung-Unterstützung für den TitleBar-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den ToolBar-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den ToolTip-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den Struktur-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-tree-control-type.md)  
  [Benutzeroberflächenautomatisierungs-Unterstützung für den TreeItem-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)  
- [Benutzeroberflächenautomatisierungs-Unterstützung für den Fenster-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
+ [Benutzeroberflächenautomatisierungs-Unterstützung für den Window-Steuerelementtyp](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Automation.ControlType>  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)

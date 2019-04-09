@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579003"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141530"
 ---
 # <a name="loader-etw-events"></a>ETW-Ladeprogrammereignisse
 <a name="top"></a> In diesen Ereignissen werden Informationen zum Laden und Entladen von Anwendungsdomänen, Assemblys und Modulen erfasst.  
@@ -37,13 +37,13 @@ ms.locfileid: "54579003"
   
 |Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0 x 8)|`AppDomainLoad_V1` und `AppDomainUnLoad_V1`|Information (4)|  
+|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` und `AppDomainUnLoad_V1`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Beschreibung|  
+|event|Ereignis-ID|Beschreibung|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` (protokolliert für alle Anwendungsdomänen)|156|Wird ausgelöst, wenn eine Anwendungsdomäne während der Lebensdauer eines Prozesses erstellt wird.|  
 |`AppDomainUnLoad_V1`|157|Wird ausgelöst, wenn eine Anwendungsdomäne während der Lebensdauer eines Prozesses zerstört wird.|  
@@ -68,13 +68,13 @@ ms.locfileid: "54579003"
   
 |Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0 x 8)|`AssemblyLoad` und `AssemblyUnload`|Information (4)|  
+|`LoaderKeyword` (0x8)|`AssemblyLoad` und `AssemblyUnload`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Beschreibung|  
+|event|Ereignis-ID|Beschreibung|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|Wird beim Laden einer Assembly ausgelöst.|  
 |`AssemblyUnload_V1`|155|Wird beim Entladen einer Assembly ausgelöst.|  
@@ -100,14 +100,14 @@ ms.locfileid: "54579003"
   
 |Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0 x 8)|`ModuleLoad_V2` und `ModuleUnload_V2`|Information (4)|  
+|`LoaderKeyword` (0x8)|`ModuleLoad_V2` und `ModuleUnload_V2`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Information (4)|  
 ||||  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Beschreibung|  
+|event|Ereignis-ID|Beschreibung|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|Wird ausgelöst, wenn ein Modul während der Lebensdauer eines Prozesses geladen wird.|  
 |`ModuleUnload_V2`|153|Wird ausgelöst, wenn ein Modul während der Lebensdauer eines Prozesses entladen wird.|  
@@ -148,13 +148,13 @@ ms.locfileid: "54579003"
   
 |Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0 x 8)|`DomainModuleLoad_V1`|Information (4)|  
+|`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Beschreibung|  
+|event|Ereignis-ID|Beschreibung|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|Wird ausgelöst, wenn ein Modul für eine Anwendungsdomäne geladen wird.|  
 |`DomainModuleDCStart_V1`|151|Listet während eines Startrundowns für eine Anwendungsdomäne geladene Module auf und wird für alle Anwendungsdomänen protokolliert.|  
@@ -187,7 +187,7 @@ ms.locfileid: "54579003"
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Beschreibung|  
+|event|Ereignis-ID|Beschreibung|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|Dieses Ereignis ist vorhanden, wenn ein geladenes Native Image Generator (NGen)-Image mit IBC optimiert wurde und Informationen über die aktiven Bereiche des NGen-Image enthält.|  
 |`ModuleRangeDCStart`|160|Ein `ModuleRange` -Ereignis, das zu Beginn eines Rundowns ausgelöst wird.|  
@@ -213,4 +213,5 @@ ms.locfileid: "54579003"
  Modulbereichereignisse werden bei jeder ETW-Ebene größer oder gleich 4 ausgelöst und werden als Informationsereignisse klassifiziert.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], rectangles
 - rectangles [WPF], animating
 ms.assetid: 572ffb95-790d-4ace-adbf-b2ea8a90e75b
-ms.openlocfilehash: 6529a7466b1bfc54968a2577efea22093c536ec0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f7cf24f7883553329de3761ff0670e8e3a09463
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151007"
 ---
 # <a name="how-to-animate-a-rectangle"></a>Vorgehensweise: Animieren eines Rechtecks
 Dieses Beispiel zeigt, wie Änderungen an Größe und Position eines Rechtecks animiert werden.  
@@ -25,10 +25,11 @@ Dieses Beispiel zeigt, wie Änderungen an Größe und Position eines Rechtecks a
  [!code-vb[BasicAnimations_snip#RectAnimationWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BasicAnimations_snip/VisualBasic/RectAnimationExample.vb#rectanimationwholepage)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Animation.RectAnimation>
 - <xref:System.Windows.Media.RectangleGeometry.Rect%2A>
 - <xref:System.Windows.Media.RectangleGeometry>
 - [Übersicht über Animationen](animation-overview.md)
 - [Grafiken und Multimedia](index.md)
-- [Grafiken: Themen zur Vorgehensweise](graphics-how-to-topics.md)
-- [Das Animations- und Zeitsteuerungssystem Gewusst-wie-Themen](animation-and-timing-how-to-topics.md)
+- [Gewusst-wie-Themen zu Grafiken](graphics-how-to-topics.md)
+- [Gewusst-wie-Themen zu Animation und Zeitsteuerung](animation-and-timing-how-to-topics.md)

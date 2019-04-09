@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e4ab2c4c-9433-4eba-9e9a-096de406cafb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98b83abce36b6e8a66ec3580af109b66b7ae09d8
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: aab6dad369b751b1d6a61214569cbb7d79b0e11d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131169"
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Allgemeine Datentypen (Referenz zur nicht verwalteten API)
 In diesem Thema werden einfache Datentypen aufgelistet, die unverwaltete APIs für .NET Framework verwenden und die über `typedef`-Argumente aus C/C++ definiert sind. Diese Datentypen sind meist Aliase für primitive Datentypen aus C/C++. Die Werte dieser Datentypen sind meist nicht transparent. Das bedeutet, sie werden von einer bestimmten Funktion oder Methode zurückgegeben, sodass sie ohne Änderungen an andere Funktionen oder Methoden übergeben werden können.  
@@ -36,8 +36,9 @@ In diesem Thema werden einfache Datentypen aufgelistet, die unverwaltete APIs f�
 |ObjectID|`typedef UINT_PTR ObjectID;`|corprof.h|Der Bezeichner eines Objekts.|  
 |ProcessID|`typedef UINT_PTR ProcessID;`|corprof.h|Der Bezeichner eines verwalteten Prozesses.|  
 |ReJITID|`typedef UINT_PTR ReJITID;`|corprof.h|Der Bezeichner einer mit JIT kompilierten Funktion.|  
-|AUFGABEN-ID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|Der Bezeichner des ein [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) Instanz.|  
+|TASKID|`typedef UINT64 TASKID;`|cordebug.h, mscoree.h|Der Bezeichner des ein [ICLRTask](../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) Instanz.|  
 |ThreadID|`typedef UINT_PTR ThreadID;`|corprof.h|Der Bezeichner eines verwalteten Threads.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Referenz zur nicht verwalteten API](../../../docs/framework/unmanaged-api/index.md)

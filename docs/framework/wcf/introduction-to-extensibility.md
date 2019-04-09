@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 78a0410876016ef2d5249fe3b6a667cacc432320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654853"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147042"
 ---
 # <a name="introduction-to-extensibility"></a>Einführung in die Erweiterbarkeit
 Das Anwendungsmodell Windows Communication Foundation (WCF) wurde entwickelt, um den größeren Teil der kommunikationsanforderungen aller beliebigen verteilten Anwendungen zu lösen. Es treten jedoch häufig Szenarien auf, die das Standardanwendungsmodell und vom System bereitgestellte Implementierungen nicht unterstützen. Der WCF-Erweiterbarkeitsmodell werden benutzerdefinierte Szenarien unterstützt, aktivieren Sie das Systemverhalten auf jeder Ebene auch zum Ersatz des gesamten Anwendungsmodells ändern. Dieses Thema gliedert die verschiedenen Bereiche der Erweiterung und verweist auf weitere Informationen zu jeder Erweiterung.  
@@ -53,4 +53,5 @@ Das Anwendungsmodell Windows Communication Foundation (WCF) wurde entwickelt, um
  Soll die Beziehung zwischen der Hostanwendungsdomäne und dem Diensthost geändert werden, ist eine Erweiterung der <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType>-Klasse erforderlich. Weitere Informationen finden Sie unter [erweitern Hosting mithilfe von ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erweitern von WCF](../../../docs/framework/wcf/extending/index.md)

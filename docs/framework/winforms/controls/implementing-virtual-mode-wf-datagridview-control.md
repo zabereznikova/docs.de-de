@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms'
+title: 'Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
-ms.openlocfilehash: 7bbf8a87f2f72a23199ce4d18cc50fbccd9b6af2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 7509e2f5035cb05c20af379f9f6a141177d540d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716542"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127048"
 ---
-# <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms
+# <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms
 Bei sehr große Mengen von Tabellendaten in angezeigt werden soll eine <xref:System.Windows.Forms.DataGridView> -Steuerelements legen Sie die <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> Eigenschaft `true` und explizit die Interaktion mit dem Datenspeicher des Steuerelements verwalten. Dadurch können Sie die Leistung des Steuerelements in diesem Fall optimieren.  
   
  Die <xref:System.Windows.Forms.DataGridView> Steuerelement bietet mehrere Ereignisse, die Sie behandeln können, für die Interaktion mit einem benutzerdefinierten Datenspeicher. Diese exemplarische Vorgehensweise führt Sie durch den Prozess der Implementierung von diesen Ereignishandlern. Das Codebeispiel in diesem Thema wird eine sehr einfache Datenquelle zur Veranschaulichung verwendet. In einer produktionsumgebung werden Sie in der Regel Laden nur die Zeilen, die Sie in einen Cache anzuzeigen und zu behandeln müssen <xref:System.Windows.Forms.DataGridView> Ereignisse interagieren und den Cache zu aktualisieren. Weitere Informationen finden Sie unter [Implementieren des virtuellen Modus mit Just-in-Time-Laden von Daten im DataGridView-Steuerelement in Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
@@ -126,6 +126,7 @@ Bei sehr große Mengen von Tabellendaten in angezeigt werden soll eine <xref:Sys
  Weitere Informationen zum Zwischenspeichern von Werten aus einer externen Datenbank finden Sie unter [Vorgehensweise: Implementieren des virtuellen Modus mit Just-in-Time-Daten laden in das Windows Forms-DataGridView-Steuerelement](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
 - <xref:System.Windows.Forms.DataGridView.CellValueNeeded>
@@ -138,4 +139,4 @@ Bei sehr große Mengen von Tabellendaten in angezeigt werden soll eine <xref:Sys
 - [Leistungsoptimierung im DataGridView-Steuerelement in Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)
 - [Empfohlene Vorgehensweisen für das Skalieren des DataGridView-Steuerelements in Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
 - [Implementieren des virtuellen Modus mit Just-In-Time-Laden von Daten in das DataGridView-Steuerelement in Windows Forms](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
-- [Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms](how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)

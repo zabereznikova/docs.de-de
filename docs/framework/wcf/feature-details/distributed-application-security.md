@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132056"
 ---
 # <a name="distributed-application-security"></a>Sicherheit bei verteilten Anwendungen
 Windows Communication Foundation (WCF)-Sicherheit wird in drei funktionelle Hauptbereiche unterteilt: übertragungssicherheit, Zugriffssteuerung und Überwachung. Durch die Übertragungssicherheit werden Integrität, Vertraulichkeit und Authentifizierung bereitgestellt. Die Übertragungssicherheit wird durch eine der folgenden Funktionen bereitgestellt: Transportsicherheit, Nachrichtensicherheit oder `TransportWithMessageCredential`.  
@@ -40,7 +40,7 @@ Windows Communication Foundation (WCF)-Sicherheit wird in drei funktionelle Haup
   
 |Modus|Beschreibung|  
 |----------|-----------------|  
-|Keine|Auf Transport- bzw. Nachrichtenebene wird keine Sicherheit bereitgestellt. Keine der vordefinierten Bindungen verwenden Sie diesen Modus wird standardmäßig mit Ausnahme der [ \<BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) Element oder, wenn der Code, mit der <xref:System.ServiceModel.BasicHttpBinding> Klasse.|  
+|Keiner|Auf Transport- bzw. Nachrichtenebene wird keine Sicherheit bereitgestellt. Keine der vordefinierten Bindungen verwenden Sie diesen Modus wird standardmäßig mit Ausnahme der [ \<BasicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) Element oder, wenn der Code, mit der <xref:System.ServiceModel.BasicHttpBinding> Klasse.|  
 |Transport|Es wird ein sicherer Transport wie HTTPS zur Gewährleistung von Integrität, Vertraulichkeit und gegenseitiger Authentifizierung verwendet.|  
 |Meldung|Es wird die SOAP-Nachrichtensicherheit zur Gewährleistung von Integrität, Vertraulichkeit und gegenseitiger Authentifizierung verwendet. SOAP-Nachrichten werden gemäß den Standards für die WS-Sicherheit geschützt.|  
 |Gemischt|Es wird die Transportsicherheit zur Gewährleistung von Integrität und Vertraulichkeit sowie für die Serverauthentifizierung verwendet. Für die Clientauthentifizierung wird die Nachrichtensicherheit (WS-Sicherheit und andere Standards) eingesetzt.<br /><br /> (Der Enumerationswert für diesen Modus ist `TransportWithMessageCredential`.)|  
@@ -64,9 +64,9 @@ Windows Communication Foundation (WCF)-Sicherheit wird in drei funktionelle Haup
   
 |Einstellung|Beschreibung|  
 |-------------|-----------------|  
-|Keine|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|  
+|Keiner|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|  
 |Standard|Gibt die Standardauthentifizierung an.  Weitere Informationen finden Sie unter RFC2617, "[HTTP-Authentifizierung: Grundlegende und Digestauthentifizierung](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
-|Digest|Gibt die Hashwertauthentifizierung an.  Weitere Informationen finden Sie unter RFC2617, "[HTTP-Authentifizierung: Grundlegende und Digestauthentifizierung](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
+|Digest|Gibt die Digestauthentifizierung an.  Weitere Informationen finden Sie unter RFC2617, "[HTTP-Authentifizierung: Grundlegende und Digestauthentifizierung](https://go.microsoft.com/fwlink/?LinkId=88313). "|  
 |Ntlm|Gibt die Windows-Authentifizierung mit SSPI-Aushandlung auf einer Windows-Domäne an.<br /><br /> Die SSPI-Aushandlung führt dazu, dass entweder das Kerberos-Protokoll oder NT LanMan (NTLM) verwendet wird.|  
 |Windows|Gibt die Windows-Authentifizierung mit SSPI auf einer Windows-Domäne an. SSPI wählt entweder das Kerberos-Protokoll oder NTLM als Authentifizierungsdienst aus.<br /><br /> Zuerst wird das Kerberos-Protokoll angewendet, wenn dies scheitert, wird NTLM verwendet.|  
 |Zertifikat|Führt die Clientauthentifizierung mit einem Zertifikat (in der Regel X.509) durch.|  
@@ -76,7 +76,7 @@ Windows Communication Foundation (WCF)-Sicherheit wird in drei funktionelle Haup
   
 |Einstellung|Beschreibung|  
 |-------------|-----------------|  
-|Keine|Ermöglicht dem Dienst die Interaktion mit anonymen Clients.|  
+|Keiner|Ermöglicht dem Dienst die Interaktion mit anonymen Clients.|  
 |Windows|Ermöglicht den SOAP-Nachrichtenaustausch im Rahmen des authentifizierten Kontexts von Windows-Anmeldeinformationen. Es wird mittels SSPI-Aushandlung entweder das Kerberos-Protokoll oder NTLM als Authentifizierungsdienst ausgewählt.|  
 |Benutzername|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass alle kryptografischen Vorgänge mit den Benutzernamen ein, z. B. das Erzeugen einer Signatur oder Verschlüsseln von Daten von WCF nicht zulässig ist. Daher setzt WCF an, dass der Transport geschützt wird, wenn der Identitätsnachweis über den Benutzernamen.|  
 |Zertifikat|Ermöglicht dem Dienst, die Forderung zu stellen, dass der Client über ein Zertifikat authentifiziert werden muss.|  
@@ -95,6 +95,7 @@ Windows Communication Foundation (WCF)-Sicherheit wird in drei funktionelle Haup
  Im Modus für die Nachrichtensicherheit können Sie die Übertragungssicherheit auch so ausüben, dass im Zuge einer anfänglichen Aushandlung ein Austausch der Dienstanmeldeinformationen mit dem Client erfolgt. Legen Sie die <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A>-Eigenschaft auf `true` fest, um die Aushandlung zu aktivieren.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die Endpunkterstellung](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)

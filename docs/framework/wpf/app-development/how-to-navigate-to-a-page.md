@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Navigieren Sie zu einer Seite'
+title: 'Vorgehensweise: Navigieren zu einer Seite'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - pages [WPF], navigating to
 - navigation [WPF], to page
 ms.assetid: 2a556fc0-748b-417f-a58a-0d05a7afb66f
-ms.openlocfilehash: a5a0e7a8e7effac7c51f4dee92d30de56d60d90c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c8e808180682bfd97f397d8cadd1e4deafd7eb06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369339"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141049"
 ---
-# <a name="how-to-navigate-to-a-page"></a>Vorgehensweise: Navigieren Sie zu einer Seite
+# <a name="how-to-navigate-to-a-page"></a>Vorgehensweise: Navigieren zu einer Seite
 Dieses Beispiel veranschaulicht mehrere Möglichkeiten, die in der eine Seite werden, von navigiert kann einem <xref:System.Windows.Navigation.NavigationWindow>.  
   
 ## <a name="example"></a>Beispiel  
@@ -32,6 +32,7 @@ Dieses Beispiel veranschaulicht mehrere Möglichkeiten, die in der eine Seite we
 >  [!INCLUDE[TLA#tla_uri#initcap#plural](../../../../includes/tlasharptla-urisharpinitcapsharpplural-md.md)] Dies kann entweder relativ oder absolut sein. Weitere Informationen finden Sie unter [Paket-URI in WPF](pack-uris-in-wpf.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.Frame>
 - <xref:System.Windows.Controls.Page>
 - <xref:System.Windows.Navigation.NavigationService>

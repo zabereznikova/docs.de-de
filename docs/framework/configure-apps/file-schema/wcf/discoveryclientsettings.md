@@ -2,12 +2,12 @@
 title: <discoveryClientSettings>
 ms.date: 03/30/2017
 ms.assetid: 02e1b823-a8bb-4074-90d5-8599f71e8f9d
-ms.openlocfilehash: 5b60c7281b92a487ba3ee275f7405cb82bd6cd87
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0b014a9d797ded61949a374486824ee3ebc34661
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136252"
 ---
 # <a name="discoveryclientsettings"></a>\<discoveryClientSettings>
 Enthält die Einstellungen, die von einer Anwendung benötigt werden, um am Dienstermittlungsprozess als Client teilzunehmen.  
@@ -64,5 +64,6 @@ Enthält die Einstellungen, die von einer Anwendung benötigt werden, um am Dien
 |[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Definiert einen Standardendpunkt, der Informationen enthält, mit denen eine Anwendung als Clientprogramm aktiviert wird, das die Endpunktadresse zur Laufzeit dynamisch suchen kann.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>
 - <xref:System.ServiceModel.Discovery.Configuration.DiscoveryClientSettingsElement>

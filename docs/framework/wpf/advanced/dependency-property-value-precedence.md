@@ -7,17 +7,16 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 22ac109c06659741c673681ad9bfcf3e1dcc5b2e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117747"
 ---
 # <a name="dependency-property-value-precedence"></a>Priorität von Abhängigkeitseigenschaftswerten
 <a name="introduction"></a> In diesem Thema wird erläutert, wie die Funktionsweise des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystems den Wert einer Abhängigkeitseigenschaft beeinflussen kann. Außerdem wird die Rangfolge beschrieben, nach der Aspekte des Eigenschaftensystems auf den effektiven Wert einer Eigenschaft angewendet werden.  
-    
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
  In diesem Thema wird davon ausgegangen, dass Sie Abhängigkeitseigenschaften aus Sicht eines Consumers vorhandener Abhängigkeitseigenschaften von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Klassen verstehen und die [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md) gelesen haben. Um den Beispielen in diesem Thema zu folgen, sollten Sie zudem [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] verstehen und wissen, wie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendungen geschrieben werden.  
@@ -60,7 +59,7 @@ ms.locfileid: "57367936"
   
 8.  **Stil-Setter.** Werte aus einer <xref:System.Windows.Setter> innerhalb von Stilen einer Seite oder Anwendung.  
   
-9. **Standard(design)stil.** Ausführliche Informationen dazu, wann dies zutrifft und wie sich Designstile auf die Vorlagen innerhalb von Designstilen beziehen, finden Sie unter [Standard(design)stile](#themestyles) weiter unten in diesem Thema. Innerhalb eines Standardstils gilt die folgende Rangfolge:  
+9. **Standardstil (Design).** Ausführliche Informationen dazu, wann dies zutrifft und wie sich Designstile auf die Vorlagen innerhalb von Designstilen beziehen, finden Sie unter [Standard(design)stile](#themestyles) weiter unten in diesem Thema. Innerhalb eines Standardstils gilt die folgende Rangfolge:  
   
     1.  Aktive Trigger im Designstil  
   
@@ -68,7 +67,7 @@ ms.locfileid: "57367936"
   
 10. **Vererbung.** Einige Abhängigkeitseigenschaften vererben ihre Werte von übergeordneten Elementen an untergeordnete Elemente, sodass sie nicht speziell für jedes Element in einer Anwendung festgelegt werden müssen. Weitere Informationen finden Sie unter [Vererbung von Eigenschaftswerten](property-value-inheritance.md).  
   
-11. **Standardwert von den Metadaten der Abhängigkeitseigenschaft.** Jede Abhängigkeitseigenschaft kann einen Standardwert haben, wie bei der Registrierung der bestimmten Eigenschaft durch das Eigenschaftensystem festgelegt. Außerdem verfügen abgeleitete Klassen, die eine Abhängigkeitseigenschaft erben, über die Option zum Überschreiben dieser Metadaten (einschließlich des Standardwerts) auf einer Pro-Typ-Basis. Weitere Informationen finden Sie unter [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md). Da die Vererbung vor dem Standardwert überprüft wird, hat bei einer vererbten Eigenschaft der Standardwert eines übergeordneten Elements Vorrang vor einem untergeordneten Element.  Daher wird, wenn eine vererbbare Eigenschaft nicht irgendwo festgelegt ist, der Standardwert verwendet, der im Stamm oder übergeordneten Element festgelegt wurde, anstatt des Standardwerts des untergeordneten Elements.  
+11. **Der Standardwert aus Metadaten für Abhängigkeitseigenschaften.** Jede Abhängigkeitseigenschaft kann einen Standardwert haben, wie bei der Registrierung der bestimmten Eigenschaft durch das Eigenschaftensystem festgelegt. Außerdem verfügen abgeleitete Klassen, die eine Abhängigkeitseigenschaft erben, über die Option zum Überschreiben dieser Metadaten (einschließlich des Standardwerts) auf einer Pro-Typ-Basis. Weitere Informationen finden Sie unter [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md). Da die Vererbung vor dem Standardwert überprüft wird, hat bei einer vererbten Eigenschaft der Standardwert eines übergeordneten Elements Vorrang vor einem untergeordneten Element.  Daher wird, wenn eine vererbbare Eigenschaft nicht irgendwo festgelegt ist, der Standardwert verwendet, der im Stamm oder übergeordneten Element festgelegt wurde, anstatt des Standardwerts des untergeordneten Elements.  
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  
@@ -127,6 +126,7 @@ ms.locfileid: "57367936"
  Die <xref:System.Windows.DependencyObject.ClearValue%2A> Methode bietet ein sinnvolles Mittel zum von lokal angewendeten Werten einer Abhängigkeitseigenschaft zu löschen, die für ein Element festgelegt ist. Das Aufrufen von jedoch <xref:System.Windows.DependencyObject.ClearValue%2A> ist keine Garantie, dass die Standardeinstellung, wie in den Metadaten eingerichtet, bei der Registrierung der den neuen gültigen Wert ist. Alle anderen Teilnehmer der Wertrangfolge sind noch immer aktiv. Nur der lokal festgelegte Wert wurde von der Rangfolgensequenz entfernt. Wenn Sie aufrufen, z. B. <xref:System.Windows.DependencyObject.ClearValue%2A> für eine Eigenschaft, in dem diese Eigenschaft auch durch einen Designstil festgelegt ist, wird der Designwert wird als der neue Wert statt auf die Standardwerte angewendet. Wenn Sie alle von eigenschaftswerteteilnehmer aus dem Prozess nehmen und den Wert in den registrierten Metadatenstandard festlegen möchten, erhalten Sie, dass Standardwert definitiv durch Abfragen der Metadaten für Abhängigkeitseigenschaften, und klicken Sie dann Sie den Standardwert, der lokal verwendet werden kann Legen Sie die Eigenschaft mit einem Aufruf von <xref:System.Windows.DependencyObject.SetValue%2A>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)

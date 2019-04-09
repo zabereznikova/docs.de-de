@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 021cb448e5dbcb3ea1405d5cedaed1ae6d4f1b53
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5d817d34e47253b2e35afa7bb41c59eea06e1f94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709792"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178827"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Vorgehensweise: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit (Windows Forms)
 Bei Verwendung der Windows Forms <xref:System.Windows.Forms.PictureBox> Steuerelement eines Formulars, Sie können festlegen, die <xref:System.Windows.Forms.PictureBox.SizeMode%2A> Eigenschaft darauf, um:  
@@ -83,6 +83,7 @@ Bei Verwendung der Windows Forms <xref:System.Windows.Forms.PictureBox> Steuerel
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.PictureBox>
 - [Vorgehensweise: Laden eines Bilds mithilfe des Designers](how-to-load-a-picture-using-the-designer-windows-forms.md)
 - [Übersicht über das PictureBox-Steuerelement](picturebox-control-overview-windows-forms.md)

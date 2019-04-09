@@ -2,12 +2,12 @@
 title: <comContracts>
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-ms.openlocfilehash: 3e3e4bf18b204db5a4068cc3f6cbb1337d5f611d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 47a7d862cf85254f88373d582169ff421be2b5b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115829"
 ---
 # <a name="comcontracts"></a>\<comContracts>
 Der `comContracts`-Konfigurationsabschnitt enthält Elemente, mit denen Sie verschiedene Eigenschaften eines COM+-Integrationsdienstvertrags angeben können.  
@@ -15,7 +15,7 @@ Der `comContracts`-Konfigurationsabschnitt enthält Elemente, mit denen Sie vers
 ## <a name="specifying-namespace-and-contract"></a>Angeben von Namespace und Vertrag  
  COM+-integrationsdienstverträge sind aktuell auf beschränkt die `http://tempuri.org` -Namespace und Vertragsnamen aus der unterstützenden COM-Schnittstelle abgeleitet wird. Sie können Alternativen aber angeben, indem Sie den Abschnitt `comContracts` in der Konfigurationsdatei verwenden.  
   
- Sie können z.&#160;B. folgende Konfiguration zum Angeben des Namespaces und Namens des Dienstvertrags sowie als Option zum Erzwingen sitzungsbasierter Bindungen verwenden.  
+ Sie können z.&amp;#160;B. folgende Konfiguration zum Angeben des Namespaces und Namens des Dienstvertrags sowie als Option zum Erzwingen sitzungsbasierter Bindungen verwenden.  
   
 ```xml  
 <comContracts>
@@ -34,9 +34,10 @@ Der `comContracts`-Konfigurationsabschnitt enthält Elemente, mit denen Sie vers
  Darüber hinaus können Sie die [ \<ExposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) -Element zum Angeben von COM+-Methoden, die bereitgestellt werden, wenn die Schnittstelle für eine COM+-Komponente als Webdienst verfügbar gemacht wird. Sie können auch die [ \<PersistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md) dauerhaften Typen, die in der Integration an. Verwenden Sie abschließend die [ \<UserDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md) zum Angeben von benutzerdefinierten Typen (UDT), die in den Dienstvertrag eingeschlossen werden sollen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
-- [\<exposedMethod>](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)
+- [\<ExposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)
 - [\<persistableTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md)
 - [\<userDefinedType>](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md)
 - [\<comContract>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontract.md)

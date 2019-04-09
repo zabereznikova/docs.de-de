@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96f0b1648c8182b4d075a479f9bd376dbe33ef61
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f3214a21dda27fda01054e96400997b15d11f71b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487902"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194434"
 ---
 # <a name="ihostfiltermarktoken-method"></a>IHostFilter::MarkToken-Methode
 Gibt an, dass das angegebene Metadatentoken verarbeitet wird.  
@@ -52,5 +52,6 @@ HRESULT MarkToken (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IHostFilter-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)

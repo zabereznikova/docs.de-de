@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, obtaining elements
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
-ms.openlocfilehash: 24a9c63b8d52ef05c386e5bfefe81e33245ece91
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 89c9397ba579f04d81eee7af6363f8fee3abfe1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191275"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Abrufen von Benutzeroberflächenautomatisierungs-Elementen
 > [!NOTE]
@@ -34,9 +34,9 @@ ms.locfileid: "57674483"
 ## <a name="conditions"></a>Bedingungen  
  In den meisten Verfahren, die zum Abrufen von [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Elementen verwendet werden können, müssen Sie eine <xref:System.Windows.Automation.Condition>angeben, die ein Satz von Kriterien ist, mit denen definiert wird, welche Elemente abgerufen werden sollen.  
   
- Die einfachste Bedingung ist <xref:System.Windows.Automation.Condition.TrueCondition>. Dies ist ein vordefiniertes Objekt, das angibt, dass alle im Suchbereich befindlichen Elemente zurückgegeben werden sollen. <xref:System.Windows.Automation.Condition.FalseCondition>(das Gegenteil von <xref:System.Windows.Automation.Condition.TrueCondition>) ist weniger nützlich, da diese Bedingung verhindert, dass irgendein Element gefunden wird.  
+ Die einfachste Bedingung ist <xref:System.Windows.Automation.Condition.TrueCondition>. Dies ist ein vordefiniertes Objekt, das angibt, dass alle im Suchbereich befindlichen Elemente zurückgegeben werden sollen. <xref:System.Windows.Automation.Condition.FalseCondition>, das Gegenteil von <xref:System.Windows.Automation.Condition.TrueCondition>, ist weniger nützlich, wie Elemente verhindern würden gefunden wird.  
   
- Sie können drei weitere vordefinierte Bedingungen jeweils eigenständig oder in Kombination mit anderen Bedingungen verwenden: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>und <xref:System.Windows.Automation.Automation.RawViewCondition>. Eigenständig verwendet entspricht<xref:System.Windows.Automation.Automation.RawViewCondition>der Bedingung <xref:System.Windows.Automation.Condition.TrueCondition>, da Elemente hierbei nicht nach ihrer <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> -Eigenschaft oder <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> -Eigenschaft gefiltert werden.  
+ Sie können drei weitere vordefinierte Bedingungen jeweils eigenständig oder in Kombination mit anderen Bedingungen verwenden: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>und <xref:System.Windows.Automation.Automation.RawViewCondition>. <xref:System.Windows.Automation.Automation.RawViewCondition>, eigenständig verwendet entspricht <xref:System.Windows.Automation.Condition.TrueCondition>, da Elemente von nicht gefiltert werden ihre <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> oder <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> Eigenschaften.  
   
  Andere Bedingungen werden aus <xref:System.Windows.Automation.PropertyCondition> -Objekten erstellt, von denen jedes einen Eigenschaftswert angibt. Beispielsweise kann ein <xref:System.Windows.Automation.PropertyCondition> -Objekt angeben, dass das Element aktiviert ist oder dass es bestimmtes Steuerelementmuster unterstützt.  
   
@@ -97,6 +97,7 @@ ms.locfileid: "57674483"
  Sie können ein <xref:System.Windows.Automation.AutomationElement> , das das Steuerelement mit Fokus darstellt, aus der statischen <xref:System.Windows.Automation.AutomationElement.FocusedElement%2A> -Eigenschaft abrufen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Suchen eines Benutzeroberflächenautomatisierungs-Elements anhand einer Eigenschaftenbedingung](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
 - [Navigieren zwischen Benutzeroberflächenautomatisierungs-Elementen mit TreeWalker](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
 - [Übersicht über die Benutzeroberflächenautomatisierungs-Struktur](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

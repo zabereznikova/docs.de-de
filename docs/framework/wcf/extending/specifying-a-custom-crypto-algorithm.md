@@ -2,17 +2,17 @@
 title: Angeben eines benutzerdefinierten Kryptografiealgorithmus
 ms.date: 03/30/2017
 ms.assetid: d662a305-8e09-451d-9a59-b0f12b012f1d
-ms.openlocfilehash: 5c7bddb7e6e1696ea1cb4f8359e34a51a89fce40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c92ce463f885e9784913b07eb11941ecd7d78d09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537685"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113710"
 ---
 # <a name="specifying-a-custom-crypto-algorithm"></a>Angeben eines benutzerdefinierten Kryptografiealgorithmus
 WCF ermöglicht es Ihnen, beim Verschlüsseln von Daten oder Berechnen digitaler Signaturen einen benutzerdefinierten Kryptografiealgorithmus anzugeben. Dazu führen Sie die folgenden Schritte aus:  
   
-1.  Leiten Sie eine Klasse von <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> ab.  
+1.  Leiten Sie eine Klasse aus <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>  
   
 2.  Registrieren Sie den Algorithmus.  
   
@@ -126,6 +126,7 @@ WSHttpBinding binding = new WSHttpBinding();
  Eine vollständige Codebeispiel finden Sie unter den [kryptografische Flexibilität in WCF-Sicherheit](../../../../docs/framework/wcf/samples/cryptographic-agility-in-wcf-security.md) Beispiel.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [Sichern von Diensten](../../../../docs/framework/wcf/securing-services.md)
 - [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)

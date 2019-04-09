@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Control class [WPF], SelectedValuePath properties
 - SelectedValue [WPF], SelectedItem properties
 ms.assetid: 2fc92ad4-f02c-4f89-bbe9-d4978a7af0db
-ms.openlocfilehash: e3f4e5e6a51426581082ab24a1c3a962e38846bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d9f7a8f04f53b7d38a49dfef2c947dfa1c2d263d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373828"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169701"
 ---
 # <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a>Vorgehensweise: Verwendung von SelectedValue, SelectedValuePath und SelectedItem
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Controls.TreeView.SelectedValue%2A> und <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> Eigenschaften, die einen Wert für die <xref:System.Windows.Controls.TreeView.SelectedItem%2A> von einem <xref:System.Windows.Controls.TreeView>.  
@@ -38,7 +38,8 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Controls.TreeView.Se
  [!code-xaml[TreeViewSelectedValue#SelectedValuePath](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSelectedValue/CS/Window1.xaml#selectedvaluepath)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
 - [Übersicht über TreeView](treeview-overview.md)
-- [Themen zu Vorgehensweisen](treeview-how-to-topics.md)
+- [Gewusst wie-Themen](treeview-how-to-topics.md)

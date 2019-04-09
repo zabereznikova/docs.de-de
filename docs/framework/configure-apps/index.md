@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 184be04c963116906c1dc2c0a5803814402ea8e0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147107"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurieren von Apps mithilfe von Konfigurationsdateien
 .NET Framework bietet Entwicklern und Administratoren die Möglichkeit, die Ausführung von Anwendungen über Konfigurationsdateien flexibel zu steuern. Konfigurationsdateien sind XML-Dateien, die je nach Bedarf verändert werden können. So kann der Administrator bestimmen, auf welche geschützten Ressourcen eine Anwendung zugreifen kann, welche Assemblyversionen sie verwenden soll und wo sich Remoteanwendungen befinden. Entwickler wiederum können Einstellungen in Konfigurationsdateien einfügen, sodass eine Anwendung nicht jedes Mal neu kompiliert werden muss, wenn sich ihre Einstellungen ändern. In diesem Abschnitt wird beschrieben, was konfiguriert werden kann und warum die Konfiguration einer Anwendung von Nutzen sein kann.  
@@ -120,10 +120,11 @@ ms.locfileid: "55826433"
  Beschreibt die Schemahierarchie für Startup, Laufzeit, Netzwerk und anderen Arten von Konfigurationseinstellungen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Konfigurationsdateischema](../../../docs/framework/configure-apps/file-schema/index.md)
 - [Festlegen des Speicherortes einer Assembly](../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [Umleiten von Assemblyversionen](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
-- [ASP.NET-Websiteverwaltung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [ASP.NET-websiteverwaltung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
 - [Serversicherheits-richtlinienverwaltung](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
 - [Caspol.exe (Richtlinientool für die Codezugriffssicherheit)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)
 - [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

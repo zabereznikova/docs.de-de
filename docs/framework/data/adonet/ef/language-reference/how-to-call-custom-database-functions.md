@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Rufen benutzerdefinierter Datenbankfunktionen auf'
+title: 'Vorgehensweise: Aufrufen benutzerdefinierter Datenbankfunktionen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: cdb7b5c90e98f299f37cd09fc83ddfdcca31effd
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 4558a5b26903fb53c60fccf3df806f7cf67f9845
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826628"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119664"
 ---
-# <a name="how-to-call-custom-database-functions"></a>Vorgehensweise: Rufen benutzerdefinierter Datenbankfunktionen auf
+# <a name="how-to-call-custom-database-functions"></a>Vorgehensweise: Aufrufen benutzerdefinierter Datenbankfunktionen
 In diesem Thema wird das Aufrufen von benutzerdefinierten Funktionen beschrieben, die in der Datenbank in LINQ to Entities-Abfragen definiert werden.  
   
  Datenbankfunktionen, die von LINQ to Entities-Abfragen aufgerufen werden, werden in der Datenbank ausgeführt. Das Ausführen von Funktionen in der Datenbank kann die Anwendungsleistung verbessern.  
@@ -61,5 +61,6 @@ In diesem Thema wird das Aufrufen von benutzerdefinierten Funktionen beschrieben
  [!code-vb[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die EDMX-Datei](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Abfragen in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

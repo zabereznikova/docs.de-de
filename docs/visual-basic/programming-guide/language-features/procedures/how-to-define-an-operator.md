@@ -13,12 +13,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 3a09657ee7a79b7f590adba0e4fb0c04a8e89043
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14aa25de78eb357f8474d3828aa45e48e7a4f9c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843642"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126112"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>Vorgehensweise: Definieren eines Operators (Visual Basic)
 Wenn Sie eine Klasse oder Struktur definiert haben, können Sie das Verhalten von Standardoperatoren definieren (z. B. `*`, `<>`, oder `And`) Wenn eine oder beide der Operanden vom Typ der Klasse oder Struktur ist.  
@@ -35,15 +35,14 @@ Wenn Sie eine Klasse oder Struktur definiert haben, können Sie das Verhalten vo
  Sie können die Struktur testen `height` durch den folgenden Code.  
   
  [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
-  
-  
+
 ## <a name="see-also"></a>Siehe auch
 
 - [Operatorprozeduren](./operator-procedures.md)
 - [Vorgehensweise: Definieren eines Konvertierungsoperators](./how-to-define-a-conversion-operator.md)
 - [Vorgehensweise: Aufrufen einer Operatorprozedur](./how-to-call-an-operator-procedure.md)
-- [Vorgehensweise: Verwenden Sie eine Klasse, die Operatoren definiert](./how-to-use-a-class-that-defines-operators.md)
-- [Operator-Anweisung](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [Structure-Anweisung](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Vorgehensweise: Verwenden einer Klasse, die Operatoren definiert](./how-to-use-a-class-that-defines-operators.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md)
 - [Vorgehensweise: Deklarieren einer Struktur](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [Mod-Operator](../../../../visual-basic/language-reference/operators/mod-operator.md)
+- [Operator Mod](../../../../visual-basic/language-reference/operators/mod-operator.md)

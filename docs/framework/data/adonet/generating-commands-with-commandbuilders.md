@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: f2aff8d5d8779e3c99644238ae54d30a13f00304
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42463249a6636e625729f90fc31fa7589ef7ef74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120028"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Generieren von Befehlen mit CommandBuilder-Objekten
 Wenn die `SelectCommand`-Eigenschaft dynamisch zur Laufzeit angegeben wird, z. B. mit einem Abfragetool, in dem der Benutzer einen Textbefehl eingibt, sind Sie zur Entwurfszeit u. U. nicht in der Lage, den entsprechenden `InsertCommand`, `UpdateCommand` oder `DeleteCommand` anzugeben. Wenn Ihre <xref:System.Data.DataTable> einer einzelnen Datenbanktabelle zugeordnet ist oder aus einer solchen generiert wurde, können Sie mithilfe des <xref:System.Data.Common.DbCommandBuilder>-Objekts automatisch den `DeleteCommand`, den `InsertCommand` und den `UpdateCommand` des <xref:System.Data.Common.DbDataAdapter> generieren.  
@@ -32,7 +32,7 @@ Wenn die `SelectCommand`-Eigenschaft dynamisch zur Laufzeit angegeben wird, z. 
   
 |Befehl|Regel|  
 |-------------|----------|  
-|`InsertCommand`|Fügt in der Datenquelle für alle Zeilen in der Tabelle, die den <xref:System.Data.DataRow.RowState%2A> <xref:System.Data.DataRowState.Added> aufweisen, eine Zeile ein. Fügt Werte für alle Spalten ein, die aktualisiert werden können (jedoch nicht für Spalten wie Identitäten, Ausdrücke oder Timestamps).|  
+|`InsertCommand`|Fügt in der Datenquelle für alle Zeilen in der Tabelle, die den <xref:System.Data.DataRow.RowState%2A><xref:System.Data.DataRowState.Added> aufweisen, eine Zeile ein. Fügt Werte für alle Spalten ein, die aktualisiert werden können (jedoch nicht für Spalten wie Identitäten, Ausdrücke oder Timestamps).|  
 |`UpdateCommand`|Aktualisiert Zeilen in der Datenquelle für alle Zeilen in der Tabelle, die den `RowState`-Wert <xref:System.Data.DataRowState.Modified> aufweisen. Aktualisiert die Werte aller Spalten mit Ausnahme von Spalten, die nicht aktualisiert werden können, z. B. Identitäten oder Ausdrücke. Aktualisiert alle Zeilen, deren Spaltenwerte in der Datenquelle den Primärschlüssel-Spaltenwerten der Zeile entsprechen und bei denen die übrigen Spalten in der Datenquelle den ursprünglichen Werten der Zeile entsprechen. Weitere Informationen finden Sie unter "Vollständiges Parallelitätsmodell für Updates und Löschvorgänge" weiter unten in diesem Thema.|  
 |`DeleteCommand`|Löscht Zeilen in der Datenquelle für alle Zeilen in der Tabelle, die den `RowState`-Wert <xref:System.Data.DataRowState.Deleted> aufweisen. Löscht alle Zeilen, deren Spaltenwerte den Primärschlüssel-Spaltenwerten der Zeile entsprechen und bei denen die übrigen Spalten in der Datenquelle den ursprünglichen Werten der Zeile entsprechen. Weitere Informationen finden Sie unter "Vollständiges Parallelitätsmodell für Updates und Löschvorgänge" weiter unten in diesem Thema.|  
   
@@ -113,7 +113,8 @@ adapter.Fill(custDS, "Customers");
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Ausführen eines Befehls](../../../../docs/framework/data/adonet/executing-a-command.md)
-- [DbConnection, DbCommand und DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
+- ["DbConnection", "DbCommand" und "DbException"](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

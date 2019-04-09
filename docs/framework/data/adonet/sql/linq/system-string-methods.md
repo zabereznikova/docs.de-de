@@ -2,15 +2,15 @@
 title: System.String-Methoden
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: 569010c36296e18487eb52527d3df0cc0b97cf06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a7b45f27441d889524f5055eb5c6a3b06937bd3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160497"
 ---
 # <a name="systemstring-methods"></a>System.String-Methoden
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die folgenden <xref:System.String>-Methoden nicht.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt nicht die folgenden <xref:System.String> Methoden.  
   
 ## <a name="unsupported-systemstring-methods-in-general"></a>Nicht unterstützte System.String-Methoden im Allgemeinen  
  Nicht unterstützte <xref:System.String>-Methoden im Allgemeinen:  
@@ -56,4 +56,5 @@ ms.locfileid: "54618123"
 -   Da viele Methoden, wie `Replace`, `ToLower`, `ToUpper` und die Zeichenindizierung keine gültige Übersetzung für die `TEXT`-Spalte oder die `NTEXT`-Spalte und XML aufweisen, kommt es bei normaler Übersetzung zu `SqlExceptions`. Dieses Verhalten gilt für diese Typen als akzeptabel. Alle Zeichenfolgenoperationen müssen jedoch zur Common Language Runtime (CLR)-Semantik für `VARCHAR`, `NVARCHAR`, `VARCHAR(max)` und `NVARCHAR(max)` passen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Datentypen und Funktionen](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

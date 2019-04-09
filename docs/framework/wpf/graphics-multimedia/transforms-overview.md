@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: e3169a34f676d65a3af50bfc9177095c9996c1a2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355648"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162201"
 ---
 # <a name="transforms-overview"></a>Übersicht über Transformationen
 In diesem Thema wird beschrieben, wie Sie mit der [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> Klassen zu drehen, skalieren, verschieben (übersetzen) und Neigen <xref:System.Windows.FrameworkElement> Objekte.  
-  
-  
+
 <a name="whatIsATransformSection"></a>   
 ## <a name="what-is-a-transform"></a>Was ist eine Transformation?  
  Ein <xref:System.Windows.Media.Transform> definiert, wie die Zuordnung oder Transformation von Punkten aus einem Koordinatenbereich zu einem anderen Koordinatenbereich. Diese Zuordnung wird durch eine Transformation beschrieben <xref:System.Windows.Media.Matrix>, eine Sammlung von drei Zeilen mit drei Spalten von <xref:System.Double> Werte.  
@@ -60,7 +59,7 @@ In diesem Thema wird beschrieben, wie Sie mit der [!INCLUDE[TLA#tla_2d](../../..
 |Klasse|Beschreibung|Beispiel|  
 |-----------|-----------------|-------------|  
 |<xref:System.Windows.Media.TransformGroup>|Gruppiert mehrere <xref:System.Windows.Media.TransformGroup> Objekte in einem einzelnen <xref:System.Windows.Media.Transform> , dass Sie dann anwenden können, um Eigenschaften zu transformieren.|[Anwenden mehrerer Transformationen auf ein Objekt](how-to-apply-multiple-transforms-to-an-object.md)|  
-|<xref:System.Windows.Media.MatrixTransform>|Erstellt benutzerdefinierte Transformationen, die nicht von dem anderen bereitgestellt werden <xref:System.Windows.Media.Transform> Klassen. Bei Verwendung einer <xref:System.Windows.Media.MatrixTransform>, eine Matrix direkt bearbeitet.|[Verwenden von MatrixTransform zum Erstellen benutzerdefinierter Transformationen](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
+|<xref:System.Windows.Media.MatrixTransform>|Erstellt benutzerdefinierte Transformationen, die nicht von dem anderen bereitgestellt werden <xref:System.Windows.Media.Transform> Klassen. Bei Verwendung einer <xref:System.Windows.Media.MatrixTransform>, eine Matrix direkt bearbeitet.|[Verwenden eines MatrixTransform-Objekts zum Erstellen benutzerdefinierter Transformationen](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
  Windows Presentation Foundation (WPF) bietet auch [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] Transformationen. Weitere Informationen finden Sie in den Ausführungen zur <xref:System.Windows.Media.Media3D.Transform3D>-Klasse.  
   
@@ -150,7 +149,8 @@ LayoutTransform wird zum Drehen der Schaltfläche verwendet
  Da es erbt die <xref:System.Windows.Freezable> -Klasse, die <xref:System.Windows.Media.Transform> Klasse mehrere spezielle Features bereit: <xref:System.Windows.Media.Transform> als Objekte deklariert werden [Ressourcen](../advanced/xaml-resources.md), von mehreren Objekten, die schreibgeschützt zur Verbesserung der freigegebenen Leistung, geklont und threadsicher gemacht. Weitere Informationen zu den verschiedenen Funktionen, die von bereitgestellten <xref:System.Windows.Freezable> Objekten finden Sie die [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
-- [Themen zu Vorgehensweisen](transformations-how-to-topics.md)
+- [Gewusst wie-Themen](transformations-how-to-topics.md)
 - [Beispiel für 2D-Transformationen](https://go.microsoft.com/fwlink/?LinkID=158252)

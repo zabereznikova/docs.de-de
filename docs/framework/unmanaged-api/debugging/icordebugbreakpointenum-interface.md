@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b5268eb4240f7c3ff254f4d3d9a13ab494530a1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7fd42f13f699b0b79fd69311186f2b2ca0c9998a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149070"
 ---
 # <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum-Schnittstelle
 
@@ -48,4 +48,5 @@ ICorDebugEnum-Methoden implementiert, und listet ICorDebugBreakpoint-Arrays.
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

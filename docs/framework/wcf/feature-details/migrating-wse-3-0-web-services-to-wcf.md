@@ -2,12 +2,12 @@
 title: Migrieren von WSE 3.0-Webdiensten zu WCF
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-ms.openlocfilehash: 30b9d1fa3c8b2123b3a71465f9ccebf722740d0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a691e8f63e34f60f26d1a96a975dbe062bd59c96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668249"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180608"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migrieren von WSE 3.0-Webdiensten zu WCF
 Das Migrieren von WSE 3.0-Webdiensten, Windows Communication Foundation (WCF) Vorteile verbesserte Leistung und die Unterstützung zusätzlicher Transporte, zusätzlicher Sicherheitsszenarien und WS-* Spezifikationen. Ein Webdienst, der von WSE 3.0 zu WCF migriert wird, kann bis zu einer leistungsverbesserung 200 % bis 400 % auftreten. Weitere Informationen über die von WCF unterstützten Transporte finden Sie unter [Wählen eines Transports](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Eine Liste mit den Szenarien, die von WCF unterstützt werden, finden Sie unter [häufige Sicherheitsszenarien](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Eine Liste der Spezifikationen, die von WCF unterstützt werden, finden Sie unter [Handbuch für die Interoperabilität von Web Services-Protokolle](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  
@@ -123,6 +123,7 @@ Das Migrieren von WSE 3.0-Webdiensten, Windows Communication Foundation (WCF) Vo
  Die Darstellung eines benutzerdefinierten WSE 3.0-Transports in WCF ist eine kanalerweiterung. Weitere Informationen zum Erstellen einer kanalerweiterung finden Sie unter [Erweitern der Kanalschicht](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Grundlegender Programmierlebenszyklus](../../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [Benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

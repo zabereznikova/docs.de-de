@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 103eb3a3-1cf0-4406-8a9a-a7798fdc22d1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c99ae7d222db2e44de471eb9a41fed614362e300
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66f662114868832f909d734a482e1dc9aefb841a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614379"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150879"
 ---
 # <a name="gcunmanagedtomanaged-mda"></a>gcUnmanagedToManaged-MDA
 Der `gcUnmanagedToManaged`-Assistent für verwaltetes Debuggen (MDA) bewirkt eine Garbage Collection bei jedem Übergang eines Threads von nicht verwaltetem zu verwaltetem Code.  
@@ -36,7 +36,7 @@ Der `gcUnmanagedToManaged`-Assistent für verwaltetes Debuggen (MDA) bewirkt ein
 ## <a name="effect-on-the-runtime"></a>Auswirkungen auf die Laufzeit  
  Löst immer eine Garbage Collection aus, wenn der Übergang eines Threads von nicht verwaltetem zu verwaltetem Code erfolgt.  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Dieser MDA erzeugt keine Ausgabe.  
   
 ## <a name="configuration"></a>Konfiguration  
@@ -50,7 +50,8 @@ Der `gcUnmanagedToManaged`-Assistent für verwaltetes Debuggen (MDA) bewirkt ein
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)
-- [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)
+- [Interop-Marshalling](../../../docs/framework/interop/interop-marshaling.md)

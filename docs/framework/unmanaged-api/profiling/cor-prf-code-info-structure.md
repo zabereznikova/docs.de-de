@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e83dbb234cf1cacc0e18d4e42bccb427eb54f14c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56734a9971759b78a835917c4914cf55edaa47a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617251"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103284"
 ---
 # <a name="corprfcodeinfo-structure"></a>COR_PRF_CODE_INFO-Struktur
-Stellt einen zusammenhängenden Block von im Speicher befindlichem nativen Code dar.  
+Stellt einen zusammenhängenden Block von im Speicher befindlichem systemeigenem Code dar.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,4 +52,5 @@ typedef struct _COR_PRF_CODE_INFO {
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Profilerstellungsstrukturen](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

@@ -4,12 +4,12 @@ ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 69f79b64250ff46524e7b4720d13351774875a3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167504"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in
 Wenn Sie einen sicheren Client oder Dienst erstellen, können Sie eine [Zertifikat](working-with-certificates.md) als die Anmeldeinformationen. Ein allgemeiner Typ der Anmeldeinformationen ist z. B. das x. 509-Zertifikat, das Sie erstellen, mit der <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType> Methode. 
@@ -22,7 +22,6 @@ Es gibt drei verschiedene Typen von Zertifikatspeichern, die Sie, mit der Micros
 
 - Dienstkonto: Der Speicher ist für einen bestimmten Dienst auf dem Gerät lokal.
 
-  
 ## <a name="view-certificates-in-the-mmc-snap-in"></a>Anzeigen von Zertifikaten im MMC-Snap-in 
 
 Das folgende Verfahren veranschaulicht, wie der Speicher auf dem lokalen Gerät finden Sie ein entsprechendes Zertifikat zu überprüfen: 
@@ -57,7 +56,6 @@ Das folgende Verfahren veranschaulicht, wie der Speicher auf dem lokalen Gerät 
 8. Wählen Sie zum Anzeigen Ihrer Zertifikate im MMC-Snap-in **Konsolenstamm** im linken Bereich, und erweitern Sie dann **Zertifikate (lokaler Computer)**.
 
     Eine Liste der Verzeichnisse für jeden Typ von Zertifikat wird angezeigt. Jedes Verzeichnis Zertifikat können Sie anzeigen, exportieren, importieren und die Zertifikate zu löschen.
-  
 
 ## <a name="view-certificates-with-the-certificate-manager-tool"></a>Anzeigen von Zertifikaten mit dem Zertifikat-Manager-tool
 
@@ -79,8 +77,8 @@ Sie können auch anzeigen, exportieren, importieren und Löschen von Zertifikate
   
 2. Die Zertifikate, unter anzeigen **Zertifikate - Aktueller Benutzer** im linken Bereich, erweitern Sie in das Verzeichnis für den Typ des Zertifikats, die Sie anzeigen möchten.
 
-  
 ## <a name="see-also"></a>Siehe auch
+
 - [Arbeiten mit Zertifikaten](working-with-certificates.md)
 - [Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](how-to-create-temporary-certificates-for-use-during-development.md)
 - [Vorgehensweise: Abrufen des Fingerabdrucks eines Zertifikats](how-to-retrieve-the-thumbprint-of-a-certificate.md)

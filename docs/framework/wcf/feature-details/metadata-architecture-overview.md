@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: 38a0eec31c4a0910048a0ed674e997d685747862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9c903dd520f1aa85fc0577264288ecbc8c62a7f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111474"
 ---
 # <a name="metadata-architecture-overview"></a>Übersicht über die Metadatenarchitektur
 Windows Communication Foundation (WCF) bietet eine umfangreiche Infrastruktur für das Exportieren, veröffentlichen, abrufen und Import von Dienstmetadaten. WCF-Dienste mithilfe von Metadaten um zu beschreiben, wie mit den Endpunkten des Diensts zu interagieren, sodass Tools, wie Svcutil.exe, automatisch Clientcode für den Zugriff auf den Dienst generieren können.  
@@ -37,7 +37,7 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Infrastruktur f�
   
  Die <xref:System.ServiceModel.Description.WsdlExporter> Typ ist die Implementierung der <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> abstrakte Klasse, die in WCF enthalten. Der <xref:System.ServiceModel.Description.WsdlExporter>-Typ generiert WSDL-Metadaten mit angefügten Richtlinienausdrücken.  
   
- Um benutzerdefinierte WSDL-Metadaten oder WSDL-Ausdrücke für Endpunktverhalten, Vertragsverhalten oder Bindungselemente in einem Dienstendpunkt zu exportieren, können Sie die <xref:System.ServiceModel.Description.IWsdlExportExtension>-Schnittstelle implementieren. Der <xref:System.ServiceModel.Description.WsdlExporter> untersucht eine <xref:System.ServiceModel.Description.ServiceEndpoint>-Instanz daraufhin, ob sie Bindungselemente, Vorgangsverhalten, Vertragsverhalten und Endpunktverhalten enthält, die beim Erzeugen eines WSDL-Dokuments die <xref:System.ServiceModel.Description.IWsdlExportExtension>-Schnittstelle implementieren.  
+ Um benutzerdefinierte WSDL-Metadaten oder WSDL-Erweiterungen für Endpunktverhalten, Vertragsverhalten oder Bindungselemente in einem Dienstendpunkt zu exportieren, können Sie die <xref:System.ServiceModel.Description.IWsdlExportExtension>-Schnittstelle implementieren. Der <xref:System.ServiceModel.Description.WsdlExporter> untersucht eine <xref:System.ServiceModel.Description.ServiceEndpoint>-Instanz daraufhin, ob sie Bindungselemente, Vorgangsverhalten, Vertragsverhalten und Endpunktverhalten enthält, die beim Erzeugen eines WSDL-Dokuments die <xref:System.ServiceModel.Description.IWsdlExportExtension>-Schnittstelle implementieren.  
   
 ## <a name="publishing-service-metadata"></a>Veröffentlichen von Dienstmetadaten  
  WCF-Dienste veröffentlichen Metadaten, indem Sie eine oder mehrere Metadatenendpunkte verfügbar machen. Durch die Veröffentlichung von Dienstmetadaten werden die Dienstmetadaten mithilfe standardisierter Protokolle, wie MEX und HTTP/GET-Anforderungen, zur Verfügung gestellt. Metadatenendpunkte ähneln anderen Dienstendpunkten insofern, als dass sie über eine Adresse, eine Bindung und einen Vertrag verfügen. Sie können einem Diensthost in der Konfiguration oder im Code Metadatenendpunkte hinzufügen.  
@@ -71,7 +71,7 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Infrastruktur f�
   
  Standardmäßig wird eine <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>-Instanz an eine einzelne <xref:System.ServiceModel.Channels.ChannelFactoryBase>-Instanz gebunden. Sie können die <xref:System.ServiceModel.Channels.ChannelFactoryBase>-Instanz, die von einem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> verwendet wird, durch Überschreiben der virtuellen <xref:System.ServiceModel.Description.MetadataExchangeClient.GetChannelFactory%2A>-Methode ändern oder ersetzen. Ebenso können Sie die <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>-Instanz, die von einem <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> zur Erstellung von HTTP/GET-Anforderungen verwendet wird, durch Überschreiben der virtuellen <xref:System.ServiceModel.Description.MetadataExchangeClient.GetWebRequest%2A?displayProperty=nameWithType>-Methode ändern oder ersetzen.  
   
- Sie können Dienstmetadaten mit WS-MetadataExchange- oder HTTP/GET-Anforderungen, indem Sie das Tool Svcutil.exe und übergeben Abrufen der **/target:metadata** Switches und einer Adresse. Svcutil.exe lädt die Metadaten von der angegebenen Adresse herunter und speichert die Dateien auf dem Datenträger. Svcutil.exe verwendet intern eine <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>-Instanz und lädt die MEX-Endpunktkonfiguration, deren Name mit dem Schema der an Svcutil.exe als Eingabe weitergegebenen Adresse übereinstimmt, aus der Anwendungskonfigurationsdatei, sofern vorhanden. Andernfalls verwendet „Svcutil.exe“ standardmäßig eine der Bindungen, die durch den statischen <xref:System.ServiceModel.Description.MetadataExchangeBindings>-Factorytyp definiert werden.  
+ Sie können Dienstmetadaten mit WS-MetadataExchange- oder HTTP/GET-Anforderungen, indem Sie das Tool Svcutil.exe und übergeben Abrufen der **/target:metadata** Switches und einer Adresse. Svcutil.exe lädt die Metadaten von der angegebenen Adresse herunter und speichert die Dateien auf dem Datenträger. Svcutil.exe verwendet intern eine <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>-Instanz und lädt die MEX-Endpunktkonfiguration, deren Name mit dem Schema der an Svcutil.exe als Eingabe weitergegebenen Adresse übereinstimmt, aus der Anwendungskonfigurationsdatei, sofern vorhanden. Andernfalls verwendet Svcutil.exe standardmäßig eine der Bindungen, die durch den statischen <xref:System.ServiceModel.Description.MetadataExchangeBindings>-Factorytyp definiert werden.  
   
 ## <a name="importing-service-metadata"></a>Importieren von Dienstmetadaten  
  In WCF ist Metadatenimport der Prozess der Generierung einer abstrakten Darstellung eines Diensts oder seiner Komponenten aus dessen Metadaten. WCF kann importieren, z. B. <xref:System.ServiceModel.Description.ServiceEndpoint> Instanzen <xref:System.ServiceModel.Channels.Binding> Instanzen oder <xref:System.ServiceModel.Description.ContractDescription> Instanzen aus einem WSDL-Dokument für einen Dienst. Verwenden Sie zum Importieren von Metadaten von Diensten in WCF eine Implementierung der <xref:System.ServiceModel.Description.MetadataImporter> abstrakte Klasse. Von abgeleiteten Typen dem <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> Klasse implementieren die Unterstützung für das Importieren von Metadaten-Formate, die die WS-Richtlinie nutzen Logik in WCF zu importieren.  
@@ -88,6 +88,7 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Infrastruktur f�
  Sie können die Bindung, die zum Erstellen eines Kanals zu einem Dienstendpunkt verwendet wird, dynamisch aktualisieren, wenn sich die Bindung für den Endpunkt ändert oder wenn Sie einen Kanal zu einem Endpunkt erstellen möchten, der den gleichen Vertrag verwendet, aber über eine andere Bindung verfügt. Sie können mithilfe der statischen <xref:System.ServiceModel.Description.MetadataResolver>-Klasse zur Laufzeit Metadaten für Dienstendpunkte abrufen und importieren, die einen bestimmten Vertrag implementieren. Mit den importierten <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType>-Objekten können Sie einen Client oder eine Kanalfactory für den gewünschten Endpunkt erstellen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Description>
 - [Metadatenformate](../../../../docs/framework/wcf/feature-details/metadata-formats.md)
 - [Exportieren und Importieren von Metadaten](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

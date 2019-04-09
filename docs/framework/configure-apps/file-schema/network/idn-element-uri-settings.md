@@ -1,19 +1,19 @@
 ---
-title: <idn>-Element (Uri-Einstellungen)
+title: <idn> -Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 6abbc70e16a6c9ff8e4a7b52df7a7c3d74c7498a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 3940f30f2ef90a77560a82edc909071f0ee8e130
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129401"
 ---
 # <a name="idn-element-uri-settings"></a>\<IDN >-Element (Netzwerkeinstellungen)
 Gibt an, ob es sich bei Analyse Internationalized Domain Name (IDN) an den Domänennamen angewendet wird.  
   
 ## <a name="schema-hierarchy"></a>Schemahierarchie  
- [\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<Configuration >-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<URI >-Elements (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -37,7 +37,7 @@ Gibt an, ob es sich bei Analyse Internationalized Domain Name (IDN) an den Domä
 |`enabled`|Gibt an, wenn Internationalized Domain Name (IDN) Analyse an den Domänennamen angewendet wird der Standardwert none ist.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -94,6 +94,7 @@ Gibt an, ob es sich bei Analyse Internationalized Domain Name (IDN) an den Domä
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

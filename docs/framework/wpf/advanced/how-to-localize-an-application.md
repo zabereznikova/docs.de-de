@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 777d0fa9217b647b9ee9bd952addaa83b5f825fc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 6bc2d5c45ef6f8626e51f9f760ec299db19627d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374114"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171573"
 ---
 # <a name="how-to-localize-an-application"></a>Vorgehensweise: Lokalisieren einer Anwendung
 In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem LocBaml-Tool erstellt wird.  
@@ -151,9 +151,9 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
   
    |BAML-Name|Ressourcenschlüssel|Kategorie|Lesbarkeit|Änderbarkeit|Kommentare|Wert|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignorieren|FALSE|FALSE||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Keine|TRUE|TRUE||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Keine|TRUE|TRUE||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignorieren|false|false||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Text1:System.Windows.Controls.TextBlock.$Content|Keiner|true|true||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Text2:System.Windows.Controls.TextBlock.$Content|Keiner|true|true||Goodbye World|
   
    Beachten Sie, dass alle Werte für die **Kommentare** Feld keine Werte enthalten, wenn ein Feld einen Wert besitzt, ist es leer. Beachten Sie auch, dass das Element in der ersten Zeile weder lesbar noch änderbar ist und "ignorieren" als seine **Kategorie** Wert, der angegeben ist, dass der Wert nicht lokalisierbar ist.  
   
@@ -210,5 +210,6 @@ In diesem Lernprogramm wird erläutert, wie eine lokalisierte Anwendung mit dem 
  Sie wissen nun in Grundzügen, wie das LocBaml-Tool verwendet werden kann.  Sie sollten in der Lage sein, eine Datei zu erstellen, die UIDs enthält. Mit dem LocBaml-Tool sollten Sie in der Lage sein, eine Datei zu analysieren, um den lokalisierbaren Inhalt zu extrahieren, und nach der Übersetzung des Inhalts sollten Sie eine .resources.dll-Datei generieren können, die den übersetzten Inhalt zusammenführt. Dieses Thema beinhaltet nicht jedes mögliche Detail, aber Sie verfügen nun über das notwendige Wissen, um LocBaml zur Lokalisierung Ihrer Anwendungen zu verwenden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Globalisierung für WPF](globalization-for-wpf.md)
 - [Übersicht über die Verwendung eines automatischen Layouts](use-automatic-layout-overview.md)

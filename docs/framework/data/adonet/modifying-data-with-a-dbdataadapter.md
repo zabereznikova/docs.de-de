@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
-ms.openlocfilehash: 3bd4cbeffcf320d6415b3a3d4aa907280d71a598
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158872"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Ändern von Daten mit "DbDataAdapter"
 Mit der <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A>-Methode eines <xref:System.Data.Common.DbProviderFactory>-Objekts erhalten Sie ein <xref:System.Data.Common.DbDataAdapter>-Objekt, das bezüglich des zugrunde liegenden Datenanbieters, der beim Erstellen der Factory angegeben wurde, stark typisiert ist. Sie können dann einen <xref:System.Data.Common.DbCommandBuilder> verwenden, um Einfüge-, Update- und Löschbefehle für Daten in einem <xref:System.Data.DataSet> zu erstellen und diese auf eine Datenquelle anzuwenden.  
@@ -22,7 +22,7 @@ Mit der <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A>-Methode
  [!code-vb[DataWorks DbProviderFactories.DbDataAdapter#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapter/VB/source.vb#1)]  
   
 ## <a name="modifying-data-with-a-dbdataadapter"></a>Ändern von Daten mit "DbDataAdapter"  
- Dieses Beispiel zeigt, wie die Daten in einer `DataTable` mit einem <xref:System.Data.Common.DbDataAdapter> geändert werden können, indem ein <xref:System.Data.Common.DbCommandBuilder> verwendet wird, um die für das Aktualisieren der Daten an der Datenquelle benötigten Befehle zu generieren. Mit dem <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> des `DbDataAdapter` werden die Kundennummer (<legacyBold>CustomerID</legacyBold>) und der Firmenname (<legacyBold>CompanyName</legacyBold>) aus der <legacyBold>Customers</legacyBold>-Tabelle abgerufen. Mit der <xref:System.Data.Common.DbCommandBuilder.GetInsertCommand%2A>-Methode wird die <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>-Eigenschaft festgelegt, mit der <xref:System.Data.Common.DbCommandBuilder.GetUpdateCommand%2A>-Methode wird die <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>-Eigenschaft festgelegt, und mit der <xref:System.Data.Common.DbCommandBuilder.GetDeleteCommand%2A>-Methode wird die <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A>-Eigenschaft festgelegt. Der Code fügt der <legacyBold>Customers</legacyBold>-Tabelle eine neue Zeile hinzu und aktualisiert die Datenquelle. Der Code lokalisiert anschließend die hinzugefügte Zeile, indem er anhand der <legacyBold>CustomerID</legacyBold> sucht. <legacyBold>CustomerID</legacyBold> ist dabei der für die <legacyBold>Customers</legacyBold>-Tabelle definierte Primärschlüssel. Er ändert den <legacyBold>CompanyName</legacyBold>-Wert und aktualisiert die Datenquelle. Zum Schluss löscht der Code die Zeile.  
+ Dieses Beispiel zeigt, wie die Daten in einer `DataTable` mit einem <xref:System.Data.Common.DbDataAdapter> geändert werden können, indem ein <xref:System.Data.Common.DbCommandBuilder> verwendet wird, um die für das Aktualisieren der Daten an der Datenquelle benötigten Befehle zu generieren. Mit dem <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> des `DbDataAdapter` werden die Kundennummer (CustomerID) und der Firmenname (CompanyName) aus der Customers-Tabelle abgerufen. Mit der <xref:System.Data.Common.DbCommandBuilder.GetInsertCommand%2A>-Methode wird die <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>-Eigenschaft festgelegt, mit der <xref:System.Data.Common.DbCommandBuilder.GetUpdateCommand%2A>-Methode wird die <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>-Eigenschaft festgelegt, und mit der <xref:System.Data.Common.DbCommandBuilder.GetDeleteCommand%2A>-Methode wird die <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A>-Eigenschaft festgelegt. Der Code fügt der &lt;legacyBold&gt;Customers&lt;/legacyBold&gt;-Tabelle eine neue Zeile hinzu und aktualisiert die Datenquelle. Der Code lokalisiert anschließend die hinzugefügte Zeile, indem er anhand der &lt;legacyBold&gt;CustomerID&lt;/legacyBold&gt; sucht. &lt;legacyBold&gt;CustomerID&lt;/legacyBold&gt; ist dabei der für die &lt;legacyBold&gt;Customers&lt;/legacyBold&gt;-Tabelle definierte Primärschlüssel. Er ändert den CompanyName-Wert und aktualisiert die Datenquelle. Zum Schluss löscht der Code die Zeile.  
   
  [!code-csharp[DataWorks DbProviderFactories.DbDataAdapterModify#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapterModify/CS/source.cs#1)]
  [!code-vb[DataWorks DbProviderFactories.DbDataAdapterModify#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DbProviderFactories.DbDataAdapterModify/VB/source.vb#1)]  
@@ -37,13 +37,14 @@ Mit der <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A>-Methode
 |`OleDb`|Verwendet Positionsparametermarker, die durch ein Fragezeichen (`?`) gekennzeichnet sind.|  
 |`Odbc`|Verwendet Positionsparametermarker, die durch ein Fragezeichen (`?`) gekennzeichnet sind.|  
   
- Das Factorymodell bietet keine Unterstützung beim Erstellen parametrisierter `DbCommand`- und `DbDataAdapter`-Objekte. Zum Erstellen von Parametern, die auf Ihren Datenanbieter zugeschnitten sind, müssen Sie in Ihrem Code mit Verzweigungen arbeiten.  
+ Das Factorymodell bietet keine Unterstützung beim Erstellen parametrisierter `DbCommand`- und `DbDataAdapter`-Objekte. Zum Erstellen von Parametern, die auf Ihren Datenanbieter zugeschnitten sind, müssen Sie in Ihrem Code mit Branches arbeiten.  
   
 > [!IMPORTANT]
 >  Aus Sicherheitsgründen wird davon abgeraten, anbieterspezifische Parameter generell zu vermeiden und stattdessen zum Konstruieren direkter SQL-Anweisungen die Zeichenfolgenverkettung zu verwenden. Das Verwenden von Zeichenfolgenverkettung anstelle von Parametern macht Ihre Anwendung für Angriffe durch Einschleusung von SQL-Befehlen (SQL Injection-Angriffe) anfällig.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Abrufen einer DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
-- [DbConnection, DbCommand und DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
+- [Abrufen einer "DbProviderFactory"](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
+- ["DbConnection", "DbCommand" und "DbException"](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

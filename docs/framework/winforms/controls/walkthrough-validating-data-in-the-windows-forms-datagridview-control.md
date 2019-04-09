@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Überprüfen von Daten in das DataGridView-Steuerelement in Windows Forms'
+title: 'Exemplarische Vorgehensweise: Überprüfen von Daten im DataGridView-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: 6bb46a9bc54652d781d3421051b7d6e09fc91772
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127347"
 ---
-# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Überprüfen von Daten in das DataGridView-Steuerelement in Windows Forms
+# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>Exemplarische Vorgehensweise: Überprüfen von Daten im DataGridView-Steuerelement in Windows Forms
 Wenn Sie Data-Eintrag-Funktionalität für Benutzer angezeigt wird, müssen Sie häufig in Ihr Formular eingegebenen Daten zu überprüfen. Die <xref:System.Windows.Forms.DataGridView> -Klasse bietet eine bequeme Möglichkeit, die Validierung ausführen, bevor Daten an den Datenspeicher übertragen werden. Sie können Daten validieren, durch Behandeln der <xref:System.Windows.Forms.DataGridView.CellValidating> -Ereignis, das ausgelöst wird, indem die <xref:System.Windows.Forms.DataGridView> Wenn die aktuelle Zelle geändert wird.  
   
  In dieser exemplarischen Vorgehensweise rufen Sie Zeilen aus der `Customers` -Tabelle in der Beispieldatenbank Northwind aus, und zeigen Sie sie in einem <xref:System.Windows.Forms.DataGridView> Steuerelement. Wenn ein Benutzer eine Zelle in bearbeitet die `CompanyName` Spalten- und versucht, die die Zelle, lassen die <xref:System.Windows.Forms.DataGridView.CellValidating> -Ereignishandler überprüft neue Zeichenfolge mit dem Firmennamen, stellen Sie sicher, dass es nicht leer ist; wenn der neue Wert eine leere Zeichenfolge ist die <xref:System.Windows.Forms.DataGridView> wird verhindert, dass den Cursor des Benutzers die Zelle verlässt, bis eine nicht leere Zeichenfolge eingegeben wird.  
@@ -89,9 +89,10 @@ Wenn Sie Data-Eintrag-Funktionalität für Benutzer angezeigt wird, müssen Sie 
 -   Anpassen der Darstellung von Zellen an. Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen der Darstellung von Zellen in der DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) und [Vorgehensweise: Festlegen von Schriftart- und Farbstilen im DataGridView-Steuerelement in Windows Forms](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Dateneingabe im DataGridView-Steuerelement in Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Überprüfen von Daten in das DataGridView-Steuerelement in Windows Forms](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
-- [Exemplarische Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement von Windows Forms auftreten](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
-- [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../data/adonet/protecting-connection-information.md)
+- [Vorgehensweise: Überprüfen von Daten im DataGridView-Steuerelement in Windows Forms](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
+- [Exemplarische Vorgehensweise: Behandeln von Fehlern, die während der Dateneingabe im DataGridView-Steuerelement in Windows Forms auftreten](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [Schützen von Verbindungsinformationen](../../data/adonet/protecting-connection-information.md)

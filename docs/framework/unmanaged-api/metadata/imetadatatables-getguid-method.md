@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94df2192b0b02f6cf0e068cb554afc6e7f9ec74d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 70a22e7e37a0fd88bcb8673846f5313d35971a15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121523"
 ---
 # <a name="imetadatatablesgetguid-method"></a>IMetaDataTables::GetGuid-Methode
 Ruft eine GUID aus der Zeile am angegebenen Index ab.  
@@ -56,5 +56,6 @@ HRESULT GetGuid (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IMetaDataTables-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: a9066054c82fdb2e25dace0b7611df4cbbf4ec93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a3ac0f321a20624deea1fe382d04a8d4e1b6c510
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135199"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Angeben von Datenübertragung in Dienstverträgen
 Die Windows Communication Foundation (WCF) kann als Messaginginfrastruktur betrachtet werden. Dienstvorgänge können Nachrichten empfangen, sie verarbeiten und ihnen Nachrichten schicken. Nachrichten werden mit Vorgangsverträgen beschrieben. Beispiel:  
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>Angeben der Verwendung und des Stils  
  Bei der Beschreibung von Diensten mithilfe von Web Services Description Language (WSDL) sind die beiden am häufigsten verwendeten Stile der Dokumentstil und der Remoteprozeduraufruf (RPC, remote procedure call). Beim Dokumentstil wird der gesamte Nachrichtentext mithilfe des Schemas beschrieben, und WSDL beschreibt die verschiedenen Nachrichtentextteile durch Verweisen auf Elemente innerhalb dieses Schemas. Beim RPC-Stil verweist WSDL auf einen Schematyp für jeden Nachrichtenteil statt auf ein Element. In einigen Fällen müssen Sie einen dieser Stile manuell auswählen. Zu diesem Zweck können Sie das <xref:System.ServiceModel.DataContractFormatAttribute>-Attribut anwenden und die `Style`-Eigenschaft festlegen (wenn das <xref:System.Runtime.Serialization.DataContractSerializer> verwendet wird), oder Sie legen `Style` in dem <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Attribut fest (wenn das <xref:System.Xml.Serialization.XmlSerializer> verwendet wird).  
   
- Außerdem unterstützt der <xref:System.Xml.Serialization.XmlSerializer> zwei Formen von serialisiertem XML: `Literal` und `Encoded`. `Literal` ist die am häufigsten akzeptierte Form und die einzige Form, die vom <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt wird. `Encoded` ist eine Legacyform, die in Abschnitt 5 der SOAP-Spezifikation beschrieben wird. Sie wird für neue Dienste nicht empfohlen. Um zum `Encoded`-Modus zu wechseln, legen Sie die `Use`-Eigenschaft für das <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Attribut auf `Encoded` fest.  
+ Außerdem unterstützt der <xref:System.Xml.Serialization.XmlSerializer> zwei Formen von serialisiertem XML: `Literal` und `Encoded`. `Literal` ist die am häufigsten akzeptierte Form und die einzige Form der <xref:System.Runtime.Serialization.DataContractSerializer> unterstützt. `Encoded` ist eine legacyform, die in Abschnitt 5 der SOAP-Spezifikation beschrieben, und wird für neue Dienste nicht empfohlen. Um zum `Encoded`-Modus zu wechseln, legen Sie die `Use`-Eigenschaft für das <xref:System.ServiceModel.XmlSerializerFormatAttribute>-Attribut auf `Encoded` fest.  
   
  In den meisten Fällen sollten Sie die Standardeinstellungen für die `Style`- und die `Use`-Eigenschaft nicht ändern.  
   
@@ -575,6 +575,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
  Weitere Informationen über erweiterte Serialisierungskonzepte finden Sie unter [Serialisierung und Deserialisierung](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden der XmlSerializer-Klasse](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
-- [Vorgehensweise: Aktivieren des Streamens](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [Vorgehensweise: Aktivieren des Streamingmodus](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
 - [Vorgehensweise: Erstellen eines grundlegenden Datenvertrags für eine Klasse oder Struktur](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

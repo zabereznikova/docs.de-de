@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Deaktivieren von Registerkarten'
+title: 'Vorgehensweise: Deaktivieren von Registerkartenseiten'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: a2a0f4084529b1dd2618c1cd6171ee45b8f569d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ace713a635b5d9c4b73f85cd3d378c0f1ff3dba1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704998"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107574"
 ---
-# <a name="how-to-disable-tab-pages"></a>Vorgehensweise: Deaktivieren von Registerkarten
+# <a name="how-to-disable-tab-pages"></a>Vorgehensweise: Deaktivieren von Registerkartenseiten
 In einigen Fällen möchten Sie den Zugriff auf Daten zu beschränken, die in der Windows Forms-Anwendung verfügbar ist. Ein Beispiel hierfür kann sein, wenn Sie auf den Registerkartenseiten des ein Registerkarten-Steuerelement angezeigte Daten verfügen; Administratoren können Informationen zu einer Registerkarte haben, die Sie aus dem Gast oder Low-Level-Benutzer zu beschränken möchten.  
   
 ### <a name="to-disable-tab-pages-programmatically"></a>So deaktivieren Sie die Registerkarten programmgesteuert  
@@ -102,7 +102,8 @@ In einigen Fällen möchten Sie den Zugriff auf Daten zu beschränken, die in de
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über das TabControl-Steuerelement](tabcontrol-control-overview-windows-forms.md)
 - [Vorgehensweise: Hinzufügen eines Steuerelements zu einer Registerkarte](how-to-add-a-control-to-a-tab-page.md)
-- [Vorgehensweise: Hinzufügen und Entfernen von Registerkarten zu TabControls in Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [Vorgehensweise: Ändern der Darstellung der TabControl-Steuerelement in Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Vorgehensweise: Hinzufügen und Entfernen von Registerkarten mit dem TabControl-Steuerelement in Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Vorgehensweise: Ändern der Darstellung der TabControl-Komponente in Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

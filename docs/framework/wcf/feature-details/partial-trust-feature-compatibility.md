@@ -2,12 +2,12 @@
 title: Funktionskompatibilität für teilweise Vertrauenswürdigkeit
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-ms.openlocfilehash: 5a09d4d1ce9f9ec328c74e7f2714f1c3f702670a
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333502"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124565"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Funktionskompatibilität für teilweise Vertrauenswürdigkeit
 Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge der Funktionen auf, wenn in einer teilweise vertrauenswürdigen Umgebung ausgeführt. Die in einer teilweise vertrauenswürdigen Umgebung unterstützten Funktionen sind, wie im Thema [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) beschrieben, für einen speziellen Satz von Szenarios konzipiert.  
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge der
   
 -   Bei Verwendung des `[ServiceKnownType]` -Attributs muss die angegebene Methode `public`sein.  
   
--   `[MessageContract]` -Klassen und ihre Member können `public`sein. Ist in der Anwendungsassembly die `[MessageContract]` -Klasse definiert, kann diese `internal` sein und Member vom Typ `internal` besitzen.  
+-   `[MessageContract]` Klassen und deren Member möglich `public`. Ist in der Anwendungsassembly die `[MessageContract]` -Klasse definiert, kann diese `internal` sein und Member vom Typ `internal` besitzen.  
   
 ## <a name="system-provided-bindings"></a>Vom System bereitgestellte Bindungen  
  Sowohl <xref:System.ServiceModel.BasicHttpBinding> als auch <xref:System.ServiceModel.WebHttpBinding> werden in einer teilweise vertrauenswürdigen Umgebung vollständig unterstützt. <xref:System.ServiceModel.WSHttpBinding> wird nur für den Transportsicherheitsmodus unterstützt.  
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge der
   
 -   <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>und <xref:System.IdentityModel.Tokens>.  
+-   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>, und <xref:System.IdentityModel.Tokens>.  
   
  Folgende Ablaufverfolgungsquellen werden nicht unterstützt:  
   
@@ -160,9 +160,10 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge der
  Die beste Möglichkeit festzustellen, ob in einer teilweise vertrauenswürdigen Umgebung auf eine bestimmte Ressource zugegriffen oder eine Aktion ausgeführt werden kann, besteht darin, innerhalb eines `try` -Blocks auf die Ressource zuzugreifen oder die Aktion auszuführen, und dann einen möglichen Fehlschlag mit `catch` abzufangen. Um die Ablaufverfolgungsdateien mit doppelten Fehlermeldungen überflutet wird, wird von WCF die Ablaufverfolgung der Ressource oder der Aktion nach dem ersten Sicherheitsfehler deaktiviert. Es gibt eine Ausnahmeablaufverfolgung für jeden fehlgeschlagenen Ressourcenzugriff, und zwar für den ersten Versuch, auf eine Ressource zuzugreifen oder eine Aktion auszuführen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
 - [Unterstützte Bereitstellungsszenarien](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
-- [Bewährte Methoden für teilweise Vertrauenswürdigkeit](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+- [Empfehlungen für eine teilweise vertrauenswürdige Umgebung](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

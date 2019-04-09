@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: f05d4a9348c12a29dc3cd7b93334ab1134eeb1a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af3e5c4c33936e809438019f1a8af823ffc3e52b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114030"
 ---
 # <a name="federation"></a>Verbund
 Dieses Thema enthält eine kurze Übersicht über den Begriff Verbundsicherheit. Darüber hinaus wird die Windows Communication Foundation (WCF)-Unterstützung für die Bereitstellung von verbundsicherheitsarchitekturen beschrieben. Eine beispielanwendung, die Verbund veranschaulicht, finden Sie unter [Verbundbeispiel](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -290,4 +290,5 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  Verbundsicherheit liefert eine klare Trennung der Verantwortungsbereiche und unterstützt den Aufbau einer sicheren und skalierbaren Dienstarchitektur. WCF bietet als Plattform für die Erstellung und Bereitstellung von verteilten Anwendungen die systemeigenen Unterstützung für die Implementierung von verbundsicherheit.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sicherheit](../../../../docs/framework/wcf/feature-details/security.md)

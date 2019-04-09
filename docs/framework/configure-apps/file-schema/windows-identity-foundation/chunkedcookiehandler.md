@@ -3,12 +3,12 @@ title: <chunkedCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
-ms.openlocfilehash: 383ce39816ec7d3f2567765549b537073ee7e081
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d9c81d5de7bea343f0d67fa00037763fbae7b8c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277029"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120782"
 ---
 # <a name="chunkedcookiehandler"></a>\<chunkedCookieHandler>
 Konfiguriert die <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Dieses Element kann nur vorhanden sein, wenn die `mode` Attribut der `<cookieHandler>` -Element ist "Default" oder "Aufgeteilte".  
@@ -41,7 +41,7 @@ Konfiguriert die <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Dies
 |ChunkSize|Die maximale Größe in Zeichen, die HTTP-Cookie-Daten für alle eine HTTP-Cookie. Sie müssen Sie vorsichtig, wenn die Blockgröße anpassen können. Webbrowser haben verschiedene Grenzwerte auf der Größe des Cookies und die Anzahl der pro Domäne zulässig. Die ursprüngliche Netscape-Spezifikation senkendatenquelle z. B. diese Grenzwerte: 300 Cookies insgesamt maximal 4096 Bytes pro Cookie-Header (einschließlich Metadaten, nicht nur den Cookiewert) und 20 Cookies pro Domäne. Der Standardwert ist 2000. Erforderlich.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -64,4 +64,5 @@ Konfiguriert die <xref:System.IdentityModel.Services.ChunkedCookieHandler>. Dies
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.IdentityModel.Services.ChunkedCookieHandler>

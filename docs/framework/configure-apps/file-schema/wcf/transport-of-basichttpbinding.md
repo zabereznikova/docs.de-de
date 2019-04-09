@@ -2,12 +2,12 @@
 title: <transport> von <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: 3d305c90233e4af7dde2a0b80e79e2adbe85c356
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5d1ef059f8fde7c41e333571d1c025a9c0c7e03f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170637"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<Transport > von \<BasicHttpBinding >
 Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport steuern.  
@@ -48,7 +48,7 @@ Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport
 |---------------|-----------------|  
 |clientCredentialType|-Gibt den Typ der Anmeldeinformationen an, beim Durchführen der Clientauthentifizierung mit HTTP-Authentifizierung verwendet werden.  Die Standardeinstellung ist `None`. Dieses Attribut ist vom Typ <xref:System.ServiceModel.HttpClientCredentialType>.|  
 |proxyCredentialType|-Gibt den Typ der Anmeldeinformationen an, beim Durchführen der Clientauthentifizierung innerhalb einer Domäne mit einem Proxy über HTTP verwendet werden. Dies Attribut trifft nur zu, wenn das `mode`-Attribut dieses übergeordneten `security`-Elements `Transport` oder `TransportCredentialsOnly` lautet. Dieses Attribut ist vom Typ <xref:System.ServiceModel.HttpProxyCredentialType>.|  
-|realm|Eine Zeichenfolge, die den vom HTTP-Authentifizierungsschema verwendeten Bereich für die Digest- oder Standardauthentifizierung angibt. Der Standardwert ist eine leere Zeichenfolge.|  
+|realm|Eine Zeichenfolge, die den vom HTTP-Authentifizierungsschema verwendeten Bereich für die Hashwert- oder Standardauthentifizierung angibt. Der Standardwert ist eine leere Zeichenfolge.|  
 |policyEnforcement|Diese Enumeration gibt an, wann die <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> erzwungen werden soll.<br /><br /> 1.  Never – die Richtlinie wird nie erzwungen (erweiterter Schutz ist deaktiviert).<br />2.  WhenSupported – die Richtlinie wird nur erzwungen, wenn der Client erweiterten Schutz unterstützt.<br />3.  Always – die Richtlinie wird immer erzwungen. Clients, die erweiterten Schutz nicht unterstützen, werden nicht authentifiziert.|  
 |protectionScenario|Diese Enumeration gibt das von der Richtlinie erzwungene Schutzszenario an.|  
   
@@ -56,7 +56,7 @@ Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Keine|Nachrichten werden nicht während der Übertragung gesichert.|  
+|Keiner|Nachrichten werden nicht während der Übertragung gesichert.|  
 |Standard|Gibt die Standardauthentifizierung an.|  
 |Digest|Gibt die Digestauthentifizierung an.|  
 |Ntlm|Gibt die NTLM-Authentifizierung an, wenn möglich, und ob die Windows-Authentifizierung fehlschlägt.|  
@@ -66,7 +66,7 @@ Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Keine|-Nachrichten werden während der Übertragung nicht gesichert.|  
+|Keiner|-Nachrichten werden während der Übertragung nicht gesichert.|  
 |Standard|Gibt die Standardauthentifizierung gemäß RFC 2617 – HTTP Authentication: Grundlegende und Digest-Authentifizierung.|  
 |Digest|Gibt die hashwertauthentifizierung an, gemäß der RFC 2617 – HTTP Authentication: Grundlegende und Digest-Authentifizierung.|  
 |Ntlm|Gibt die NTLM-Authentifizierung an, wenn möglich, und ob die Windows-Authentifizierung fehlschlägt.|  
@@ -74,7 +74,7 @@ Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport
 |Zertifikat|Führt die Clientauthentifizierung mit einem Zertifikat aus. Diese Option funktioniert nur, wenn das `Mode`-Attribut des übergeordneten `security`-Elements auf Transport gesetzt ist. Sie funktioniert nicht, wenn es auf TransportCredentialOnly gesetzt ist.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -118,6 +118,7 @@ Definiert Eigenschaften, die Authentifizierungsparameter für den HTTP-Transport
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>

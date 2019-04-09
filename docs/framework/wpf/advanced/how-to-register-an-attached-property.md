@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attached properties [WPF], registering
 - registering attached properties [WPF]
 ms.assetid: eb47bd94-0451-4f8d-8fb6-95f7812ac05b
-ms.openlocfilehash: 3cbbc8a1ea8419df408cda76de3459be9464a100
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c678a64b62b8f4db24cf39ffbafac52e56c9982
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137630"
 ---
 # <a name="how-to-register-an-attached-property"></a>Vorgehensweise: Registrieren einer angefügten Eigenschaft
 In diesem Beispiel wird das Registrieren einer angefügten Eigenschaft und das Bereitstellen öffentlicher Accessoren beschrieben, damit Sie die Eigenschaft jeweils in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] und in Code verwenden können. Angefügte Eigenschaften sind ein von [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] definiertes Syntaxkonzept. Die meisten angefügten Eigenschaften für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Typen werden auch als Abhängigkeitseigenschaften implementiert. Verwenden von Abhängigkeitseigenschaften können auf jedem <xref:System.Windows.DependencyObject> Typen.  
@@ -27,7 +27,8 @@ In diesem Beispiel wird das Registrieren einer angefügten Eigenschaft und das B
  [!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.DependencyProperty>
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
 - [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
-- [Themen zu Vorgehensweisen](properties-how-to-topics.md)
+- [Gewusst wie-Themen](properties-how-to-topics.md)

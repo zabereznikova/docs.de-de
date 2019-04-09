@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Hosten eines WCF-Diensts in WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 9094cf04ed1bc9fabe8d9df11b876007f322679a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9c60248342c9cfa0e1b70d86df47a478dd34a60f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651174"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195448"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Vorgehensweise: Hosten eines WCF-Diensts in WAS
 Dieses Thema beschreibt die grundlegenden Schritte zum Erstellen einer Windows Process Activation Service (auch bekannt als WAS) gehostet, Windows Communication Foundation (WCF)-Dienst. WAS ist der neue Prozessaktivierungsdienst, der eine Generalisierung der Funktionen der Internetinformationsdienste (IIS) darstellt, die mit Nicht-HTTP-Transportprotokollen arbeiten. WCF verwendet die Listeneradapter-Schnittstelle, um aktivierungsanforderungen weiterzugeben, die über die von WCF, z. B. TCP, named Pipes und Message Queuing-unterstützten nicht-HTTP-Protokolle empfangen werden.  
@@ -88,7 +88,7 @@ Dieses Thema beschreibt die grundlegenden Schritte zum Erstellen einer Windows P
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4.  Svcutil.exe generiert auch die Konfiguration für den Client, der <xref:System.ServiceModel.NetTcpBinding> verwendet. Wenn Sie Visual&#160;Studio verwenden, sollte diese Datei in der Datei App.config genannt werden.  
+4.  Svcutil.exe generiert auch die Konfiguration für den Client, der <xref:System.ServiceModel.NetTcpBinding> verwendet. Wenn Sie Visual&amp;#160;Studio verwenden, sollte diese Datei in der Datei App.config genannt werden.  
   
      [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
   
@@ -99,5 +99,6 @@ Dieses Thema beschreibt die grundlegenden Schritte zum Erstellen einer Windows P
 6.  Kompilieren Sie den Code, und führen Sie den Client aus.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [TCP-Aktivierung](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=201276)

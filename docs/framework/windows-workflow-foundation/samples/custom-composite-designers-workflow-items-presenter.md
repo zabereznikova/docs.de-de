@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 13d1a76779877bc2ab6d1cbd9c892bf14781e788
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f4db3325081a820a37a8791849d2ad9697d15151
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118104"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Benutzerdefinierte zusammengesetzte Designer – Workflowelementpräsentation
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> ist ein Haupttyp im WF-Designer-Programmiermodell, der die Bearbeitung einer Auflistung enthaltener Elemente zulässt. In dem Beispiel wird veranschaulicht, wie ein Aktivitätsdesigner erstellt wird, der eine solche bearbeitbare Auflistung aufweist.
@@ -32,11 +32,11 @@ ms.locfileid: "54705942"
 ## <a name="sample-highlights"></a>Das Wichtigste zum Beispiel
  Der Code für dieses Beispiel zeigt Folgendes:
 
--   Die Aktivität, für die ein Designer erstellt wird: `Parallel`
+-   Die Aktivität einem Designer erstellt wird:  `Parallel`
 
 -   Die Erstellung eines benutzerdefinierten Aktivitätsdesigners mit einem <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType>. Einige wichtige Punkte:
 
-    -   Beachten Sie die Verwendung der WPF-Datenbindung, um eine Bindung an `ModelItem.Branches` auszuführen. `ModelItem` ist die Eigenschaft im `WorkflowElementDesigner`, die auf das zugrunde liegende Objekt verweist, für das der Designer verwendet wird; in diesem Fall `Parallel`.
+    -   Beachten Sie die Verwendung der WPF-Datenbindung, um eine Bindung an `ModelItem.Branches` auszuführen. `ModelItem` ist die Eigenschaft im `WorkflowElementDesigner` , verweist auf die zugrunde liegende Objekt, das der Designer, in diesem Fall verwendet wird unsere `Parallel`.
 
     -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> kann verwendet werden, um ein visuelle Trennung festzulegen, die zwischen den einzelnen Elementen in der Auflistung angezeigt werden soll.
 
@@ -158,5 +158,6 @@ End Sub
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - [Entwickeln von Anwendungen mit dem Workflow-Designer](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

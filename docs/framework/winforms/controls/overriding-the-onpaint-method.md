@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: 93afd0d463ed3f52ec6425c9de19a6c147860ed9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: baf4e6cb3b2a40b1b792ae12e78cb9f878a738ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713228"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124305"
 ---
 # <a name="overriding-the-onpaint-method"></a>Überschreiben der OnPaint-Methode
 Die grundlegenden Schritte zum Überschreiben von Ereignissen im definierten die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sind identisch und werden in der folgenden Liste zusammengefasst.  
@@ -87,6 +87,7 @@ public class PaintEventArgs : EventArgs {
  Ein Steuerelement ruft seine <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode auf, wenn es die visuelle Darstellung geändert werden muss. Diese Methode löst wiederum die <xref:System.Windows.Forms.Control.Paint> Ereignis.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Ereignisse](../../../standard/events/index.md)
 - [Wiedergeben eines Windows Forms-Steuerelements](rendering-a-windows-forms-control.md)
 - [Definieren eines Ereignisses](defining-an-event-in-windows-forms-controls.md)

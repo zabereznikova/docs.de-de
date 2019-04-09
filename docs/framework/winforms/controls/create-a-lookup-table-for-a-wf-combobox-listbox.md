@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen einer Nachschlagetabelle für eine Windows-ComboBox-, ListBox- oder CheckedListBox-Steuerelement Forms'
+title: 'Vorgehensweise: Erstellen einer Suchtabelle für ComboBox-, ListBox- oder CheckedListBox-Steuerelemente in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: eaa92c2b95d8dd8578b46e44a948127e201bb351
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 95b1962b83a44a99ebc466e27c732917d63dc3c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724610"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125971"
 ---
-# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Vorgehensweise: Erstellen einer Nachschlagetabelle für eine Windows-ComboBox-, ListBox- oder CheckedListBox-Steuerelement Forms
+# <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Vorgehensweise: Erstellen einer Suchtabelle für ComboBox-, ListBox- oder CheckedListBox-Steuerelemente in Windows Forms
 Manchmal ist es sinnvoll, Daten in einem benutzerfreundlichen Format in einem Windows Form anzuzeigen, aber Sie sollten die Daten in einem Format speichern, das vor allem für Ihr Programm sinnvoll ist. Beispielsweise können in einem Bestellformular für Nahrungsmittel die Menüelemente nach Namen in einem Listenfeld angezeigt werden. Die zur Erfassung der Bestellung verwendete Datentabelle enthält hingegen die eindeutigen ID-Nummern der Nahrungsmittel. Die folgende Tabelle enthält ein Beispiel zum Speichern und Anzeigen von Bestellformulardaten für Nahrungsmittel.  
   
 ### <a name="orderdetailstable"></a>OrderDetailsTable  
@@ -33,7 +33,7 @@ Manchmal ist es sinnvoll, Daten in einem benutzerfreundlichen Format in einem Wi
   
 ### <a name="itemtable"></a>ItemTable  
   
-|ID|name|  
+|ID|Name|  
 |--------|----------|  
 |12|Kartoffel|  
 |13|Huhn|  
@@ -71,8 +71,9 @@ Manchmal ist es sinnvoll, Daten in einem benutzerfreundlichen Format in einem Wi
     ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Datenbindung und Windows Forms](../data-binding-and-windows-forms.md)
+
+- [Datenbindung und Windows Forms](../data-binding-and-windows-forms.md)
 - [Übersicht über das ListBox-Steuerelement](listbox-control-overview-windows-forms.md)
 - [Übersicht über das ComboBox-Steuerelement](combobox-control-overview-windows-forms.md)
 - [Übersicht über das CheckedListBox-Steuerelement](checkedlistbox-control-overview-windows-forms.md)
-- [Windows Forms-Steuerelemente zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)
+- [Steuerelemente in Windows Forms zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)

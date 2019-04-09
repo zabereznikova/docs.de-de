@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf52f74c38b479664ad7e015180b26e0a53c235e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5998ce684726b2386d8f1e05eb7eaeccf455747c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508300"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110455"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters-Struktur
 Speichert den Typnamen eines Ereignisses und die Parameter für die aktuelle Ausnahme, die dem Ereignis zugeordnet ist.  
@@ -52,4 +52,5 @@ typedef struct _BucketParameters {
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Hosten von Strukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+
+- [Hostingstrukturen](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

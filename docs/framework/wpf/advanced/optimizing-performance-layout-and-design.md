@@ -9,12 +9,12 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: e62b439926465aa1a61abd39c7c942acf26732c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107067"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Optimieren der Leistung: Layout und Entwurf
 Der Entwurf Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung kann die Leistung durch unnötigen Mehraufwand durch die Berechnung des Layouts und das Überprüfung von Objektverweisen beeinträchtigen. Das Erstellen von Objekten, insbesondere zur Laufzeit, kann sich auf die Leistungsmerkmale Ihrer Anwendung auswirken.  
@@ -57,7 +57,7 @@ Der Entwurf Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptl
 ### <a name="build-your-tree-top-down"></a>Erstellen Sie Ihre Struktur von oben nach unten  
  Wenn der logischen Struktur ein Knoten hinzugefügt oder dieser entfernt wird, werden Eigenschafteninvalidierungen auf dem übergeordneten und allen untergeordneten Elementen des Knotens ausgelöst. Demzufolge sollte immer ein Oben-nach-unten-Erstellmuster eingehalten werden, um unnötige Invalidierungen auf Knoten zu verhindern, die bereits validiert wurden. Die folgende Tabelle zeigt den Unterschied in der ausführungsgeschwindigkeit zwischen dem Erstellen einer Struktur von oben nach unten und von unten nach oben, in denen die Struktur 150 Ebenen mit einem einzelnen ist <xref:System.Windows.Controls.TextBlock> und <xref:System.Windows.Controls.DockPanel> auf jeder Ebene.  
   
-|**Aktion**|**Strukturerstellung (in ms)**|**Rendern, einschließlich Strukturerstellung (in ms)**|  
+|**Aktion**|**Strukturerstellung (in ms)**|**Rendern, einschließlich strukturerstellung (in Millisekunden)**|  
 |----------------|---------------------------------|-------------------------------------------------|  
 |Unten-nach-oben|366|454|  
 |Oben-nach-unten|11|96|  
@@ -70,9 +70,10 @@ Der Entwurf Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptl
  Weitere Informationen über die logische Struktur finden Sie unter [Strukturen in WPF](trees-in-wpf.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Optimieren der WPF-Anwendungsleistung](optimizing-wpf-application-performance.md)
 - [Planen der Anwendungsleistung](planning-for-application-performance.md)
-- [Vorteile der Hardware nutzen](optimizing-performance-taking-advantage-of-hardware.md)
+- [Nutzen der Vorteile der Hardware](optimizing-performance-taking-advantage-of-hardware.md)
 - [2D-Grafiken und Bildverarbeitung](optimizing-performance-2d-graphics-and-imaging.md)
 - [Objektverhalten](optimizing-performance-object-behavior.md)
 - [Anwendungsressourcen](optimizing-performance-application-resources.md)

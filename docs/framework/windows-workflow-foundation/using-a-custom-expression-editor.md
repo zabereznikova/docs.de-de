@@ -2,12 +2,12 @@
 title: Verwenden eines benutzerdefinierten Ausdrucks-Editors
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 3bbad843c5e4d409627c255be7341d364a3d36d6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2a390dd57d31994e8a2ba6a424d74bf7ee44fc10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716529"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101275"
 ---
 # <a name="using-a-custom-expression-editor"></a>Verwenden eines benutzerdefinierten Ausdrucks-Editors
 Ein benutzerdefinierter Ausdrucks-Editor kann implementiert werden, um eine umfangreichere oder einfachere Ausdrucksbearbeitung zu ermöglichen. Es gibt mehrere Szenarios, in denen ein benutzerdefinierter Ausdrucks-Editor nützlich ist:  
@@ -279,6 +279,7 @@ namespace WpfApplication1
  Bei Verwendung einer **ExpressionTextBox** Steuerelement in einem benutzerdefinierten Aktivitätsdesigner angegeben wird, ist es nicht erforderlich, erstellen und Zerstören von Ausdrucks-Editoren mithilfe der <xref:System.Activities.Presentation.View.IExpressionEditorService.CreateExpressionEditor%2A> und <xref:System.Activities.Presentation.View.IExpressionEditorService.CloseExpressionEditors%2A> Methoden der <xref:System.Activities.Presentation.View.IExpressionEditorService> Schnittstelle. Die <xref:System.Activities.Presentation.View.ExpressionTextBox>-Klasse übernimmt dies für Sie.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Activities.Presentation.View.IExpressionEditorService>
 - <xref:System.Activities.Presentation.View.IExpressionEditorInstance>
 - [Verwenden des ExpressionTextBox in einem benutzerdefinierten Aktivitätsdesigner](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

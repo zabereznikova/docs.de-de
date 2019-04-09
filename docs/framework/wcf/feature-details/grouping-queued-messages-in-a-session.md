@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 260e8b38f110ffc2c2fdc5e2768db8c95fb01860
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0246f059079b2024dd1bd16ae6afc4950d08e0a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115270"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Gruppieren von Nachrichten in der Warteschlange einer Sitzung
 Windows Communication Foundation (WCF) bietet eine Sitzung, die Ihnen ermöglicht, einen Satz zusammengehöriger Nachrichten zur Verarbeitung von einer empfangenden Anwendung gruppieren. Die Nachrichten in einer Sitzung müssen Teil der gleichen Transaktion sein. Da alle Nachrichten Teil der gleichen Transaktion sind, wird die gesamte Sitzung zurückgesetzt, wenn eine Nachricht nicht verarbeitet werden kann. Sitzungen weisen ähnliche Verhaltensweisen bezüglich Warteschlangen für unzustellbare Nachrichten und Warteschlangen für potenziell schädliche Nachrichten auf. Die Time to Live (TTL)-Eigenschaft einer Bindung in der Warteschlange, die für Sitzungen konfiguriert wurde, wird auf die gesamte Sitzung angewendet. Wenn nur ein Teil der Nachrichten in der Sitzung vor Ablauf der TTL gesendet wird, wird die gesamte Sitzung in der Warteschlange für unzustellbare Nachrichten abgelegt. Analog wird ggf. die gesamte Sitzung in der Warteschlange für potenziell schädliche Nachrichten abgelegt, wenn Nachrichten in einer Sitzung nicht von der Anwendungswarteschlange an eine Anwendung gesendet werden können.  
@@ -76,15 +76,12 @@ Windows Communication Foundation (WCF) bietet eine Sitzung, die Ihnen ermöglich
 ### <a name="code-for-the-service"></a>Code für den Dienst  
  [!code-csharp[S_Msmq_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/service.cs#1)]
  [!code-vb[S_Msmq_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_session/vb/service.vb#1)]  
-  
-  
-  
+
 ### <a name="code-for-the-client"></a>Code für den Client  
  [!code-csharp[S_Msmq_Session#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/client.cs#3)]
  [!code-vb[S_Msmq_Session#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_session/vb/client.vb#3)]  
-  
-  
-  
+
 ## <a name="see-also"></a>Siehe auch
+
 - [Sitzungen und Warteschlangen](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
 - [Warteschlangenübersicht](../../../../docs/framework/wcf/feature-details/queues-overview.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: fccfa5b0ef531ac8ecc869d7a248bb4f43a55d2c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120977"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>Implementieren einer impliziten Transaktion mit Transaktionsbereich
 Mit der <xref:System.Transactions.TransactionScope>-Klasse lassen sich Codeblöcke einfach als an einer Transaktion beteiligte Codeblöcke markieren, ohne die Transaktion selbst bearbeiten zu müssen. Ein Transaktionsbereich kann die Ambient-Transaktion automatisch auswählen und verwalten. Wegen ihrer einfachen Verwendung und Effizienz wird empfohlen, die <xref:System.Transactions.TransactionScope>-Klasse zur Entwicklung von Transaktionsanwendungen zu verwenden.  
@@ -121,11 +121,11 @@ using(TransactionScope scope1 = new TransactionScope())
 }  
 ```  
   
- Im Beispiel wird ein Codeblock ohne Ambient-Transaktion gezeigt, in dem ein neuer Bereich (`scope1`) mit <xref:System.Transactions.TransactionScopeOption.Required> erstellt wird. Der Bereich `scope1` ist ein Stammbereich, da er eine neue Transaktion (Transaction A) erstellt und Transaction A als Ambient-Transaktion definiert. `Scope1` erstellt dann drei weitere Objekte, die jeweils über einen anderen <xref:System.Transactions.TransactionScopeOption>-Wert verfügen. Beispielsweise wird `scope2` mit <xref:System.Transactions.TransactionScopeOption.Required> erstellt, und da eine Ambient-Transaktion vorhanden ist, wird eine Verknüpfung mit der ersten von `scope1` erstellten Transaktion erstellt. Beachten Sie, dass `scope3` der Stammbereich der neuen Transaktion ist, und dass `scope4` keine Ambient-Transaktion enthält.  
+ Im Beispiel wird ein Codeblock ohne Ambient-Transaktion gezeigt, in dem ein neuer Bereich (`scope1`) mit <xref:System.Transactions.TransactionScopeOption.Required> erstellt wird. Der Bereich `scope1` ist ein Stammbereich, da er eine neue Transaktion (Transaction A) erstellt und Transaction A als Ambient-Transaktion definiert. `Scope1` erstellt dann drei weitere Objekte, die jeweils über einen anderen <xref:System.Transactions.TransactionScopeOption> Wert. Beispielsweise wird `scope2` mit <xref:System.Transactions.TransactionScopeOption.Required> erstellt, und da eine Ambient-Transaktion vorhanden ist, wird eine Verknüpfung mit der ersten von `scope1` erstellten Transaktion erstellt. Beachten Sie, dass `scope3` der Stammbereich der neuen Transaktion ist, und dass `scope4` keine Ambient-Transaktion enthält.  
   
  Der am häufigsten verwendete Wert und Standardwert von <xref:System.Transactions.TransactionScopeOption> lautet zwar <xref:System.Transactions.TransactionScopeOption.Required>, aber auch die anderen Werte erfüllen jeweils einen bestimmten Zweck.  
   
- <xref:System.Transactions.TransactionScopeOption.Suppress> ist nützlich, wenn die im Codeabschnitt ausgeführten Operationen beibehalten werden sollen und die Ambient-Transaktion nicht abgebrochen werden soll, wenn die Operation fehlschlägt. Wenn beispielsweise Aktivitäten protokolliert oder Überwachungsoperationen ausgeführt werden sollen oder wenn Ereignisse für Abonnenten veröffentlicht werden sollen, unabhängig davon, ob die Ambient-Transaktion abgeschlossen oder abgebrochen wird. Dieser Wert ermöglicht es, wie im folgenden Beispiel gezeigt, in einen Transaktionsbereich einen von der Transaktion unabhängigen Codeabschnitt einzufügen.  
+ <xref:System.Transactions.TransactionScopeOption.Suppress> ist nützlich, wenn Sie die im Codeabschnitt ausgeführten Vorgänge beibehalten möchten, und möchten nicht die Ambiente-Transaktion abgebrochen wird, wenn die Operation fehlschlägt. Wenn beispielsweise Aktivitäten protokolliert oder Überwachungsoperationen ausgeführt werden sollen oder wenn Ereignisse für Abonnenten veröffentlicht werden sollen, unabhängig davon, ob die Ambient-Transaktion abgeschlossen oder abgebrochen wird. Dieser Wert ermöglicht es, wie im folgenden Beispiel gezeigt, in einen Transaktionsbereich einen von der Transaktion unabhängigen Codeabschnitt einzufügen.  
   
 ```csharp  
 using(TransactionScope scope1 = new TransactionScope())  
@@ -152,7 +152,7 @@ using(TransactionScope scope1 = new TransactionScope())
 ## <a name="setting-the-transactionscope-timeout"></a>Festlegen des TransactionScope-Timeouts  
  Einige der überladenen Konstruktoren von <xref:System.Transactions.TransactionScope> akzeptieren einen Wert vom Typ <xref:System.TimeSpan>, der zur Steuerung des Timeouts einer Transaktion dient. Ein Timeout mit dem Wert Null (0) steht für ein unendliches Timeout. Ein unendliches Timeout ist vor allem beim Debuggen hilfreich, wenn ein Problem in der Geschäftslogik durch das schrittweise Ausführen des Codes eingegrenzt werden soll, und wenn während der Suche nach der Problemursache bei der Transaktion, die untersucht wird, kein Timeout auftreten soll. Verwenden Sie den unendlichen Timeoutwert in allen anderen Fällen mit äußerster Vorsicht, weil dadurch die Sicherungsmechanismen gegen Transaktions-Deadlocks außer Kraft gesetzt werden.  
   
- Sie legen den <xref:System.Transactions.TransactionScope>-Timeout i.&#160;d.&#160;R. in zwei Fällen auf einen anderen Wert als den Standardwert fest. Erstens während der Entwicklung, wenn Sie testen möchten, wie eine Anwendung mit abgebrochenen Transaktionen umgeht. Wenn Sie für den Timeout einen kleinen Wert (z.&#160;B. eine Millisekunde) angeben, kann dies zum Fehlschlagen der Transaktion führen, und Sie können folglich den Fehlerbehandlungscode überprüfen. Zweitens wählen Sie einen kleineren Wert als den Standardtimeoutwert, wenn Sie annehmen, dass der Bereich zu einem Ressourcenkonflikt beiträgt, der zu Deadlocks führt. In diesem Fall soll die Transaktion so bald wie möglich abgebrochen werden und nicht auf den Ablauf des Standardtimeouts warten.  
+ Sie legen den <xref:System.Transactions.TransactionScope>-Timeout i.&amp;#160;d.&amp;#160;R. in zwei Fällen auf einen anderen Wert als den Standardwert fest. Erstens während der Entwicklung, wenn Sie testen möchten, wie eine Anwendung mit abgebrochenen Transaktionen umgeht. Wenn Sie für den Timeout einen kleinen Wert (z.&amp;#160;B. eine Millisekunde) angeben, kann dies zum Fehlschlagen der Transaktion führen, und Sie können folglich den Fehlerbehandlungscode überprüfen. Zweitens wählen Sie einen kleineren Wert als den Standardtimeoutwert, wenn Sie annehmen, dass der Bereich zu einem Ressourcenkonflikt beiträgt, der zu Deadlocks führt. In diesem Fall soll die Transaktion so bald wie möglich abgebrochen werden und nicht auf den Ablauf des Standardtimeouts warten.  
   
  Wenn in einem Bereich eine Verknüpfung mit einer Ambient-Transaktion hergestellt wird, aber ein kleinerer Timeoutwert als der für die Ambient-Transaktion definierte Wert angegeben wird, dann wird der neue kürzere Timeoutwert für das <xref:System.Transactions.TransactionScope>-Objekt übernommen. Wird der Bereich hier nicht innerhalb der in der Ambient-Transaktion angegebenen Zeitspanne beendet, wird die Transaktion automatisch beendet. Wenn der Timeoutwert des geschachtelten Bereichs größer ist als der der Ambient-Transaktion, hat er keine Auswirkungen.  
   
@@ -169,5 +169,6 @@ using(TransactionScope scope1 = new TransactionScope())
  Wenn Sie eine neue <xref:System.Transactions.TransactionScope>-Instanz erstellen, können Sie die <xref:System.Transactions.EnterpriseServicesInteropOption>-Enumeration in einem der Konstruktoren verwenden, um die Zusammenarbeit mit COM+ näher zu bestimmen. Weitere Informationen hierzu finden Sie unter [Interoperabilität mit Enterprise Services und COM+-Transaktionen](../../../../docs/framework/data/transactions/interoperability-with-enterprise-services-and-com-transactions.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Transactions.Transaction.Clone%2A>
 - <xref:System.Transactions.TransactionScope>

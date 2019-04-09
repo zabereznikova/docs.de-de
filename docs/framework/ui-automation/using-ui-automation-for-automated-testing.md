@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: e9bab754302252cdf4e4e9303ecc4a188e651ca9
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5a14ed3baab5b25cb1ed15271474580faaf176
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183975"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Verwenden von Benutzeroberflächenautomatisierung für automatisierte Tests
 > [!NOTE]
@@ -19,9 +19,9 @@ ms.locfileid: "57678401"
   
  In dieser Übersicht wird erläutert, wie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] als nützliches Framework für den programmgesteuerten Zugriff in Szenarien mit automatisierten Tests verwendet werden kann.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] stellt ein einheitliches Objektmodell zur Verfügung, das allen [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Frameworks ermöglicht, komplexe, umfangreiche Funktionalität einfach und leicht automatisierbar bereitzustellen.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bietet ein einheitliches Objektmodell, das alle ermöglicht [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] Frameworks für komplexe, umfangreiche Funktionalität einfach und leicht automatisierbar bereitzustellen.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wurde als Nachfolger von [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]entwickelt. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] ist ein vorhandenes Framework, das zum Bereitstellen einer Lösung für den Zugriff auf Steuerelemente und Anwendungen entwickelt wurde. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] wurde nicht im Hinblick auf Testautomatisierung entwickelt, obwohl es diese Rolle aufgrund der sehr ähnlichen Anforderungen hinsichtlich Zugriff und Automatisierung übernommen hat. Neben der Bereitstellung von verbesserten Zugriffslösungen wurde[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]insbesondere für stabile Funktionalität bei automatisierten Tests entwickelt. Beispielsweise wird in [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] eine einzelne Schnittstelle zum Bereitstellen von Benutzeroberflächeninformationen und zum Erfassen der erforderlichen Informationen für AT-Produkte verwendet. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sind die beiden Modelle getrennt.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] wurde entwickelt als Nachfolger von [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] ein vorhandenes Framework dient zum Bereitstellen einer Lösung für jedermann die Steuerelemente und Anwendungen verwendet. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] wurde nicht testautomatisierung Denken Sie daran entwickelt werden, auch wenn sie diese Rolle aufgrund der sehr ähnlichen Anforderungen hinsichtlich Zugriff und Automatisierung entwickelt. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zusätzlich zur Bereitstellung von zugriffslösungen für den Zugriff auf, insbesondere für stabile Funktionalität für automatische Tests entwickelt. Beispielsweise wird in [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] eine einzelne Schnittstelle zum Bereitstellen von Benutzeroberflächeninformationen und zum Erfassen der erforderlichen Informationen für AT-Produkte verwendet. In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] sind die beiden Modelle getrennt.  
   
  Sowohl ein Anbieter als auch ein Client müssen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] implementieren, damit es als automatisiertes Testtool eingesetzt werden kann. Benutzeroberflächenautomatisierungs-Anbieter sind Anwendungen, wie zum Beispiel Microsoft Word, Excel und andere Anwendungen oder Steuerelemente von Drittanbietern, die auf dem [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] -Betriebssystem basieren. Benutzeroberflächenautomatisierungs-Clients schließen automatisierte Testskripts und Hilfstechnologieanwendungen ein.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "57678401"
   
 <a name="Programmatic_Access"></a>   
 ### <a name="programmatic-access"></a>Programmgesteuerter Zugriff  
- Mit programmgesteuertem Zugriff können mithilfe von Code alle durch normale Maus- und Tastatureingaben ausführbaren Interaktionen und Verhaltensweisen imitiert werden. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglich programmgesteuerten Zugriff mit fünf Komponenten:  
+ Mit programmgesteuertem Zugriff können mithilfe von Code alle durch normale Maus- und Tastatureingaben ausführbaren Interaktionen und Verhaltensweisen imitiert werden. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht programmgesteuerten Zugriff mit fünf Komponenten:  
   
 -   Die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur erleichtert die Navigation durch die Struktur von [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Die Struktur wird aus der hWnd-Auflistung erstellt. Weitere Informationen finden Sie unter [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
   
@@ -76,16 +76,16 @@ ms.locfileid: "57678401"
  Die Möglichkeit, jedes Steuerelement in [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] eindeutig zu identifizieren und anschließend zu finden, stellt die Grundlage für das Ausführen automatisierter Testanwendungen auf [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]dar. Es gibt hierfür mehrere hilfreiche [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Eigenschaften, die von unterstützenden Clients und Anbietern verwendet werden.  
   
 #### <a name="automationid"></a>AutomationID  
- Unterscheidet ein Automatisierungselement von den nebengeordneten Elementen. <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> ist nicht lokalisiert, im Gegensatz zu Eigenschaften wie <xref:System.Windows.Automation.AutomationElement.NameProperty> , die in der Regel lokalisiert werden, wenn ein Produkt in mehreren Sprachen ausgeliefert wird. Siehe [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md).  
+ Unterscheidet ein Automatisierungselement von den nebengeordneten Elementen. <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> ist nicht lokalisiert, im Gegensatz zu einer Eigenschaft wie z. B. <xref:System.Windows.Automation.AutomationElement.NameProperty> , ist in der Regel lokalisiert werden, wenn ein Produkt in mehreren Sprachen ausgeliefert wird. Siehe [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md).  
   
 > [!NOTE]
->  Durch<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> wird keine eindeutige Identität in der gesamten Automatisierungsstruktur sichergestellt. Eine Anwendung kann beispielsweise ein Menüsteuerelement mit mehreren Menüeinträgen oberster Ebene enthalten, die wiederum mehrere untergeordnete Menüeinträge aufweisen. Diese sekundären Menüeinträge können durch ein allgemeines Schema wie "Element1, Element2, Element3 usw." identifiziert werden, wodurch doppelte Bezeichner für die untergeordneten Elemente aller Menüeinträge oberster Ebene möglich sind.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> eine eindeutige Identität in der gesamten Automatisierungsstruktur garantiert nicht. Eine Anwendung kann beispielsweise ein Menüsteuerelement mit mehreren Menüeinträgen oberster Ebene enthalten, die wiederum mehrere untergeordnete Menüeinträge aufweisen. Diese sekundären Menüeinträge können durch ein allgemeines Schema wie "Element1, Element2, Element3 usw." identifiziert werden, wodurch doppelte Bezeichner für die untergeordneten Elemente aller Menüeinträge oberster Ebene möglich sind.  
   
 #### <a name="controltype"></a>ControlType  
  Identifiziert den Steuerelementtyp, der durch ein Automatisierungselement dargestellt wird. Durch Kenntnis des Steuerelementtyps können wichtige Informationen abgeleitet werden. Siehe [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md).  
   
 #### <a name="nameproperty"></a>NameProperty  
- Dies ist eine Textzeichenfolge, die ein Steuerelement identifiziert oder erläutert. <xref:System.Windows.Automation.AutomationElement.NameProperty> sollte mit Vorsicht verwendet werden, da möglicherweise eine Lokalisierung vorliegt. Siehe [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ Dies ist eine Textzeichenfolge, die ein Steuerelement identifiziert oder erläutert. <xref:System.Windows.Automation.AutomationElement.NameProperty> sollte mit Vorsicht verwendet werden, da sie lokalisiert werden kann. Siehe [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
 <a name="Steps_Required_To_Automate_the_UI_in_a_Test_Application"></a>   
 ### <a name="implementing-ui-automation-in-a-test-application"></a>Implementieren von Benutzeroberflächenautomatisierung in einer Testanwendung  
@@ -112,4 +112,5 @@ ms.locfileid: "57678401"
  Sicherheitsinformationen finden Sie unter [UI Automation Security Overview](../../../docs/framework/ui-automation/ui-automation-security-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Grundlagen der Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/index.md)

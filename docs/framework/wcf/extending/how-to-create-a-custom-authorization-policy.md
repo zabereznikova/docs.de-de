@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Erstellen Sie eine benutzerdefinierte Autorisierungsrichtlinie'
+title: 'Vorgehensweise: Erstellen einer benutzerdefinierten Autorisierungsrichtlinie'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
-ms.openlocfilehash: ba5d8d02d0c8d5993e1b072298aadcaa5fe0fe35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 78cc77a5491e50d718a53efff1c6f99acf23cf27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705903"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115387"
 ---
-# <a name="how-to-create-a-custom-authorization-policy"></a>Vorgehensweise: Erstellen Sie eine benutzerdefinierte Autorisierungsrichtlinie
+# <a name="how-to-create-a-custom-authorization-policy"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Autorisierungsrichtlinie
 Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) unterstützt ein anspruchsbasiertes Autorisierungsmodell. Ansprüche werden aus Token extrahiert, wahlweise von der benutzerdefinierten Autorisierungsrichtlinie verarbeitet und in einen <xref:System.IdentityModel.Policy.AuthorizationContext> platziert, der dann untersucht werden kann, um Autorisierungsentscheidungen zu treffen. Eine benutzerdefinierte Richtlinie kann zum Transformieren von Ansprüchen von eingehenden Token in von der Anwendung erwartete Ansprüche verwendet werden. Auf diese Weise kann die Anwendungsschicht gegenüber Details zu den verschiedenen Ansprüchen durch die verschiedenen Tokentypen, die weiterhin WCF unterstützt isoliert sein. In diesem Thema wird gezeigt, wie eine benutzerdefinierte Autorisierungsrichtlinie implementiert und wie diese Richtlinie einer Sammlung von Richtlinien, die von einem Dienst verwendet werden, hinzugefügt wird.  
   
 ### <a name="to-implement-a-custom-authorization-policy"></a>So implementieren Sie eine benutzerdefinierte Autorisierungsrichtlinie  
@@ -76,7 +76,8 @@ Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) unt
  [!code-vb[c_CustomAuthPol#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthpol/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [Vorgehensweise: Ansprüche vergleichen](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Vorgehensweise: Vergleichen von Ansprüchen](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
 - [Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Autorisierungsrichtlinie](../../../../docs/framework/wcf/samples/authorization-policy.md)

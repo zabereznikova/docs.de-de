@@ -2,12 +2,12 @@
 title: WCF Visual Studio-Vorlagen
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 72239f9e0e6d7882e6a29222c0b68f3bfd5d89d5
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443236"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130896"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio-Vorlagen
 Windows Communication Foundation (WCF) von Visual Studio-Vorlagen sind vordefinierte Projekt- und Elementvorlagen, die Sie in Visual Studio verwenden können, um WCF-Dienste und entsprechende Anwendungen schnell zu erstellen.  
@@ -83,5 +83,6 @@ Windows Communication Foundation (WCF) von Visual Studio-Vorlagen sind vordefini
 >  Der Silverlight-aktivierte WCF-Dienst macht einen `basicHttpBinding`-Endpunkt ohne aktivierte Sicherheitseinstellungen verfügbar. Deshalb können Dienstinformationen von allen Clients abgerufen werden, die eine Verbindung mit diesem Dienst herstellen. Zudem werden zwischen dem Dienst und dem Client ausgetauschte Nachrichten weder signiert noch verschlüsselt. Sichern Sie den Endpunkt nach Möglichkeit per ASP.NET-Authentifizierung, per HTTPS oder mit einem anderen Mechanismus.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WCF-Diensthost (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)
 - [WCF-Testclient (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

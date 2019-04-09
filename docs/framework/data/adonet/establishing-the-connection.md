@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 97cae018f8cdf19da390b9586334f7c8b7f1c239
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 7f8cca02e673339e892c16e0de99e20accdfd404
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903814"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142340"
 ---
 # <a name="establishing-the-connection"></a>Herstellen der Verbindung
 Zum Herstellen einer Verbindung mit Microsoft SQL Server verwenden Sie das <xref:System.Data.SqlClient.SqlConnection>-Objekt des .NET Framework-Datenanbieters für SQL Server. Wenn Sie eine Verbindung mit einer OLE DB-Datenquelle herstellen möchten, verwenden Sie das <xref:System.Data.OleDb.OleDbConnection>-Objekt des .NET Framework-Datenanbieters für OLE DB. Wenn Sie eine Verbindung mit einer ODBC-Datenquelle herstellen möchten, verwenden Sie das <xref:System.Data.Odbc.OdbcConnection>-Objekt des .NET Framework-Datenanbieters für ODBC. Zum Herstellen einer Verbindung mit einer Oracle-Datenquelle verwenden Sie das <xref:System.Data.OracleClient.OracleConnection>-Objekt des .NET Framework-Datenanbieters für Oracle. Sicher speichern und Abrufen von Verbindungszeichenfolgen finden Sie [Protecting Connection Information](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
@@ -143,6 +143,7 @@ nwindConn.Open();
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Aufbauen der Verbindung zu einer Datenquelle](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Verbindungszeichenfolgen](../../../../docs/framework/data/adonet/connection-strings.md)
 - [OLE DB-, ODBC- und Oracle-Verbindungspooling](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)

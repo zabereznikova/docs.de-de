@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0361a4cd048f0b3be6bce47e52dd44ba3cea3475
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9d2d48e5fb070ec0334de579d2e28146177a87b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121614"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs-Methode
 Gibt ein Array von IDs, die alle erneut JIT-kompilierte Versionen der angegebenen Funktion zu identifizieren, die immer noch zugeordnet sind. Dies schließt erneut JIT-kompilierte Versionen der Funktionen, die anschließend zurückgesetzt, aber noch nicht verfügbar (z. B. wenn die Anwendungsdomäne mit der wiederhergestellten Funktion noch verwendet wird).  
@@ -63,6 +63,7 @@ HRESULT GetReJITIDs (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorProfilerInfo4-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
 - [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [Profilerstellung](../../../../docs/framework/unmanaged-api/profiling/index.md)

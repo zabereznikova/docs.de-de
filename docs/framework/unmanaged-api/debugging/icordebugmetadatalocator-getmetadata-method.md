@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c787a93ac98a086dfb6218d1b4891de87e0e107d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c29e581a77ac90882d102cfee2c715e9c309e1a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486989"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116024"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData-Methode
 Fordert den Debugger auf, den vollständigen Pfad eines Moduls zurückzugeben, dessen Metadaten benötigt werden, um einen vom Debugger angeforderten Vorgang abzuschließen.  
@@ -69,7 +69,7 @@ HRESULT GetMetaData(
   
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
-|S_OK|Die Methode wurde erfolgreich abgeschlossen. `wszPathBuffer` enthält den vollständigen Pfad zu der Datei und endet auf NULL.|  
+|S_OK|Die Methode wurde erfolgreich abgeschlossen. `wszPathBuffer` enthält den vollständigen Pfad zur Datei, und Null-terminiert ist.|  
 |E_NOT_SUFFICIENT_BUFFER|Die aktuelle Größe von `wszPathBuffer` reicht nicht aus, um den vollständigen Pfad aufzunehmen. In diesem Fall enthält `pcchPathBuffer` die benötigte Anzahl von `WCHAR`s, einschließlich des abschließenden NULL-Zeichens, und `GetMetaData` wird ein zweites Mal mit der angeforderten Puffergröße aufgerufen.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -85,6 +85,7 @@ HRESULT GetMetaData(
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorDebugThread4-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -2,15 +2,15 @@
 title: Aktivität
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 970f2978f65b2c1a2585a207d66e4b97fbe4af1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505587"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170208"
 ---
 # <a name="activity"></a>Aktivität
-Dieses Thema beschreibt aktivitätsablaufverfolgungen im ablaufverfolgungsmodell Windows Communication Foundation (WCF). Aktivitäten sind Verarbeitungseinheiten, mit deren Hilfe der Benutzer einen Fehlerbereich eingrenzen kann. Fehler, die in der gleichen Aktivität auftreten, hängen direkt zusammen. Ein Vorgang schlägt z.&#160;B. fehl, weil eine Nachrichtenentschlüsselung fehlgeschlagen ist. Die Ablaufverfolgungen für den Vorgangs- und den Nachrichtenverschlüsselungsfehler treten in der gleichen Aktivität auf und zeigen eine direkte Verbindung zwischen dem Verschlüsselungsfehler und dem Anforderungsfehler.  
+Dieses Thema beschreibt aktivitätsablaufverfolgungen im ablaufverfolgungsmodell Windows Communication Foundation (WCF). Aktivitäten sind Verarbeitungseinheiten, mit deren Hilfe der Benutzer einen Fehlerbereich eingrenzen kann. Fehler, die in der gleichen Aktivität auftreten, hängen direkt zusammen. Ein Vorgang schlägt z.&amp;#160;B. fehl, weil eine Nachrichtenentschlüsselung fehlgeschlagen ist. Die Ablaufverfolgungen für den Vorgangs- und den Nachrichtenverschlüsselungsfehler treten in der gleichen Aktivität auf und zeigen eine direkte Verbindung zwischen dem Verschlüsselungsfehler und dem Anforderungsfehler.  
   
 ## <a name="configuring-activity-tracing"></a>Konfigurieren der Aktivitätsablaufverfolgung  
  WCF stellt vordefinierte Aktivitäten für verarbeitungsanwendungen bereit (siehe [Aktivitätsliste](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)). Sie können Aktivitäten auch programmgesteuert definieren, um Benutzerablaufverfolgungen zu gruppieren. Weitere Informationen finden Sie unter [Ausgeben von Benutzercode-Ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md).  
@@ -24,12 +24,12 @@ Dieses Thema beschreibt aktivitätsablaufverfolgungen im ablaufverfolgungsmodell
  Weitere Informationen zum Konfigurationselement und den verwendeten Attributen finden Sie unter den [Konfigurieren der Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md) Thema.  
   
 ## <a name="viewing-activities"></a>Anzeigen von Aktivitäten  
- Sie können die Aktivitäten und deren Hilfsprogramm im Anzeigen der [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Wenn ActivityTracing aktiviert wird, sortiert dieses Tool die Ablaufverfolgungen basierend auf der Aktivität. Sie können auch Ablaufverfolgungsübertragungen anzeigen. Eine Ablaufverfolgungsübertragung gibt an, wie verschiedene Aktivitäten zusammenhängen. Sie sehen, dass eine bestimmte Aktivität das Starten einer anderen Aktivität verursachte. Eine Nachrichtenanforderung hat z.&#160;B. einen Sicherheitshandshake gestartet, um ein Token für eine sichere Konversation abzurufen.  
+ Sie können die Aktivitäten und deren Hilfsprogramm im Anzeigen der [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Wenn ActivityTracing aktiviert wird, sortiert dieses Tool die Ablaufverfolgungen basierend auf der Aktivität. Sie können auch Ablaufverfolgungsübertragungen anzeigen. Eine Ablaufverfolgungsübertragung gibt an, wie verschiedene Aktivitäten zusammenhängen. Sie sehen, dass eine bestimmte Aktivität das Starten einer anderen Aktivität verursachte. Eine Nachrichtenanforderung hat z.&amp;#160;B. einen Sicherheitshandshake gestartet, um ein Token für eine sichere Konversation abzurufen.  
   
 ### <a name="correlating-activities-in-service-trace-viewer"></a>Korrelation von Aktivitäten in Service Trace Viewer  
  Das Service Trace Viewer-Tool stellt zwei Aktivitätsansichten bereit:  
   
--   **Liste** Ansicht, in dem die Aktivitäts-ID wird zum Korrelieren von ablaufverfolgungen prozessübergreifend direkt. Ablaufverfolgungen aus unterschiedlichen Prozessen, z.&#160;B. Client und Dienst, jedoch mit der gleichen Aktivitäts-ID werden in der gleichen Aktivität gruppiert. Wenn folglich ein Fehler im Dienst auftritt, der wiederum einen Fehler auf dem Client verursacht, werden beide Fehler in der gleichen Aktivitätsansicht im Tool angezeigt.  
+-   **Liste** Ansicht, in dem die Aktivitäts-ID wird zum Korrelieren von ablaufverfolgungen prozessübergreifend direkt. Ablaufverfolgungen aus unterschiedlichen Prozessen, z.&amp;#160;B. Client und Dienst, jedoch mit der gleichen Aktivitäts-ID werden in der gleichen Aktivität gruppiert. Wenn folglich ein Fehler im Dienst auftritt, der wiederum einen Fehler auf dem Client verursacht, werden beide Fehler in der gleichen Aktivitätsansicht im Tool angezeigt.  
   
 -   **Diagramm** Ansicht, in denen Aktivitäten nach Prozessen gruppiert werden. In dieser Ansicht verwalten ein Client und ein Dienst mit der gleichen Aktivitäts-ID ihre Ablaufverfolgungen in unterschiedlichen Aktivitäten. Zur Korrelation von Aktivitäten mit der gleichen Aktivitäts-ID, jedoch in unterschiedlichen Prozessen, zeigt das Tool den Fluss der Nachrichten zwischen den verwandten Aktivitäten.  
   
@@ -38,9 +38,9 @@ Dieses Thema beschreibt aktivitätsablaufverfolgungen im ablaufverfolgungsmodell
 ## <a name="defining-the-scope-of-an-activity"></a>Definieren des Bereichs einer Aktivität  
  Eine Aktivität wird zur Entwurfszeit definiert und bezeichnet eine logische Arbeitseinheit. Ausgegebene Ablaufverfolgungen mit dem gleichen Aktivitätsbezeichner hängen direkt zusammen, sie gehören zur gleichen Aktivität. Da eine Aktivität über Endpunktgrenzen hinausgehen kann (eine Anforderung), werden zwei Bereiche für eine Aktivität definiert.  
   
--   Bereich (`Global`), pro Anwendung. In diesem Bereich wird die Aktivität nach ihrem global eindeutigen 128-Bit-Aktivitätsbezeichner, der gAId, identifiziert. Die gAId wird über Endpunkte hinaus weitergegeben.  
+-   `Global` Gültigkeitsbereich pro Anwendung. In diesem Bereich wird die Aktivität nach ihrem global eindeutigen 128-Bit-Aktivitätsbezeichner, der gAId, identifiziert. Die gAId wird über Endpunkte hinaus weitergegeben.  
   
--   Bereich (`Local`), pro Endpunkt. In diesem Bereich wird die Aktivität nach ihrer gAId identifiziert sowie nach dem Namen der Ablaufverfolgungsquelle, die die Aktivitätsablaufverfolgungen ausgibt, und nach der Prozess-ID. Diese Dreiergruppe bildet die lokale Aktivitäts-ID, die lAId. Mit der lAId werden die (lokalen) Grenzen einer Aktivität definiert.  
+-   `Local` Bereich, pro Endpunkt. In diesem Bereich wird die Aktivität nach ihrer gAId identifiziert sowie nach dem Namen der Ablaufverfolgungsquelle, die die Aktivitätsablaufverfolgungen ausgibt, und nach der Prozess-ID. Diese Dreiergruppe bildet die lokale Aktivitäts-ID, die lAId. Mit der lAId werden die (lokalen) Grenzen einer Aktivität definiert.  
   
 ## <a name="trace-schema"></a>Ablaufverfolgungsschema  
  Ablaufverfolgungen können mit einem beliebigen Schema und über verschiedene Microsoft-Plattformen hinweg ausgegeben werden. "e2e" (für "End to End") ist ein häufig verwendetes Schema. Dieses Schema umfasst einen 128-Bit-Bezeichner (gAId), den Namen der Ablaufverfolgungsquelle und die Prozess-ID. In verwaltetem Code gibt <xref:System.Diagnostics.XmlWriterTraceListener> Ablaufverfolgungen im E2E-Schema aus.  
@@ -76,7 +76,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
  Start- und Stop-Ablaufverfolgungen sind für die Korrelation nicht entscheidend. Sie können jedoch dazu beitragen, die Leistung, die Profilerstellung und die Validierung des Aktivitätsbereichs zu verbessern.  
   
- Mithilfe dieser Typen können die Tools die Navigation in den Ablaufverfolgungsprotokollen optimieren und nach direkt zusammenhängenden Ereignissen derselben Aktivität suchen oder nach Ereignissen in verwandten Aktivitäten, wenn das Tool Transfer-Ablaufverfolgungen überwacht. Die Tools beenden z.&#160;B. die Analyse des Protokolls für eine bestimmte Aktivität, wenn eine Start/Stop-Ablaufverfolgung festgestellt wird.  
+ Mithilfe dieser Typen können die Tools die Navigation in den Ablaufverfolgungsprotokollen optimieren und nach direkt zusammenhängenden Ereignissen derselben Aktivität suchen oder nach Ereignissen in verwandten Aktivitäten, wenn das Tool Transfer-Ablaufverfolgungen überwacht. Die Tools beenden z.&amp;#160;B. die Analyse des Protokolls für eine bestimmte Aktivität, wenn eine Start/Stop-Ablaufverfolgung festgestellt wird.  
   
  Diese Ablaufverfolgungstypen können auch zur Profilerstellung verwendet werden. Ressourcen, die zwischen Start- und Stop-Kennzeichnungen verwendet werden, stellen die inklusive Zeit einer Aktivität dar, einschließlich enthaltener logischer Aktivitäten. Die Differenz der Zeitintervalle zwischen Suspend- und Resume-Ablaufverfolgungen ergibt die tatsächliche Aktivitätsdauer.  
   
@@ -91,15 +91,16 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
   
 -   Jeder WCF-Methode, sowohl auf dem Client und Server, begrenzt wird, vom Beginn einer neuen Aktivität und anschließend (nach Abschluss der Arbeit) Ende der neuen Aktivität und an die ambient-Aktivität.  
   
--   Lange andauernde (fortlaufende) Aktivitäten, wie z.&#160;B. das Überwachen von Verbindungen oder Warten auf Nachrichten, werden durch übereinstimmende Start/Stop-Kennzeichnungen dargestellt.  
+-   Lange andauernde (fortlaufende) Aktivitäten, wie z.&amp;#160;B. das Überwachen von Verbindungen oder Warten auf Nachrichten, werden durch übereinstimmende Start/Stop-Kennzeichnungen dargestellt.  
   
 -   Durch den Empfang oder die Verarbeitung einer Nachricht ausgelöste Aktivitäten werden durch Ablaufverfolgungsgrenzen dargestellt.  
   
 -   Aktivitäten stellen Aktivitäten dar, nicht notwendigerweise Objekte. Eine Aktivität als interpretiert werden soll "das geschah bei. sein. sein. (sinnvolle Ausgabe einer Ablaufverfolgung stattfand)" interpretiert werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Konfigurieren der Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [End-to-End-Ablaufverfolgungsszenarien](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [Ausgeben von Benutzercode-Ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)

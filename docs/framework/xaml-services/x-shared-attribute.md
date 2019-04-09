@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: 42de341d59e3e70103db765faf3160b5fe3250d3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039408"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125736"
 ---
 # <a name="xshared-attribute"></a>x:Shared-Attribut
 Bei Festlegung auf `false`, verändert WPF Abrufen von Ressourcen, damit Anforderungen für die attributierte Ressource eine neue Instanz für jede Anforderung und nicht gemeinsam dieselbe Instanz für alle Anforderungen erstellen.  
@@ -50,6 +50,7 @@ Bei Festlegung auf `false`, verändert WPF Abrufen von Ressourcen, damit Anforde
 -   Die <xref:System.Windows.ResourceDictionary> , enthält die Elemente müssen innerhalb einer anderen nicht geschachtelt werden <xref:System.Windows.ResourceDictionary>. Beispielsweise können keine `x:Shared` für Elemente in einer <xref:System.Windows.ResourceDictionary> , der sich im eine <xref:System.Windows.Style> , der sich bereits ein <xref:System.Windows.ResourceDictionary> Element.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.ResourceDictionary>
 - [XAML-Ressourcen](../wpf/advanced/xaml-resources.md)
 - [Basiselemente](../wpf/advanced/base-elements.md)

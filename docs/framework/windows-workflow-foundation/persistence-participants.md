@@ -2,12 +2,12 @@
 title: Persistenzteilnehmer
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: a8392bd756d8315a72d9df131476414f8982cf03
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f9a1f2142a2aef617c3337bf1bc384a51c8ed049
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115894"
 ---
 # <a name="persistence-participants"></a>Persistenzteilnehmer
 Ein Persistenzteilnehmer kann an einem von einem Anwendungshost ausgelösten Persistenzvorgang (Speichern oder Laden) teilnehmen. Die [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] im Lieferumfang von zwei abstrakter Klassen **PersistenceParticipant** und **PersistenceIOParticipant**, die Sie verwenden können, um die Erstellung eines persistenzteilnehmers. Ein Persistenzteilnehmer leitet sich von einer dieser Klassen ab, implementiert die passenden Methoden und fügt dann der <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A>-Auflistung im <xref:System.ServiceModel.Activities.WorkflowServiceHost> eine Instanz der Klasse hinzu. Beim Beibehalten einer Workflowinstanz sucht der Anwendungshost möglicherweise nach Workflowerweiterungen dieser Art und ruft auf den Persistenzteilnehmern zur richtigen Zeit jeweils die entsprechenden Methoden auf.  
@@ -61,4 +61,5 @@ Ein Persistenzteilnehmer kann an einem von einem Anwendungshost ausgelösten Per
 -   [Vorgehensweise: Erstellen eines benutzerdefinierten Persistenzteilnehmers](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erweiterbarkeit des Speichers](store-extensibility.md)

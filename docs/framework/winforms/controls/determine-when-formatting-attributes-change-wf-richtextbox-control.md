@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Bestimmen Sie, wann die Formatierung der Änderung von Formatierungsattributen im RichTextBox-Steuerelement von Windows Forms'
+title: 'Vorgehensweise: Erkennen der Änderung von Formatierungsattributen im RichTextBox-Steuerelement von Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: e463ac0fd77a31e4e11cb440f64ec0d4694af61f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e35ebb7c90be00a814d465af3546de2bcd11c5de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722021"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183941"
 ---
-# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Bestimmen Sie, wann die Formatierung der Änderung von Formatierungsattributen im RichTextBox-Steuerelement von Windows Forms
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Vorgehensweise: Erkennen der Änderung von Formatierungsattributen im RichTextBox-Steuerelement von Windows Forms
 Eine häufige Verwendung des Windows Forms <xref:System.Windows.Forms.RichTextBox> Steuerelement formatieren von Text mit Attributen wie z. B. Schriftartoptionen oder Absätze. Ihre Anwendung möglicherweise Änderungen an Text für die Anzeige von eine Symbolleiste, wie viele Textverarbeitungsprogrammen Formatierung von.  
   
 ### <a name="to-respond-to-changes-in-formatting-attributes"></a>Reaktion auf Änderungen bei der Formatierung von Attributen  
@@ -81,7 +81,8 @@ Eine häufige Verwendung des Windows Forms <xref:System.Windows.Forms.RichTextBo
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox-Steuerelement](richtextbox-control-windows-forms.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

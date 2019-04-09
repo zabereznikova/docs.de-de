@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], about toolbars
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-ms.openlocfilehash: 249c5854b83a62878ecef0350e08ba4b00523aff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7b39c8e3dca88e968b43ba5ff14794e2e77247d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174810"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>Übersicht über das ToolBar-Steuerelement (Windows Forms)
 > [!NOTE]
@@ -31,8 +31,9 @@ ms.locfileid: "57708846"
  Die <xref:System.Windows.Forms.ToolBar> Steuerelement ermöglicht es Ihnen zum Erstellen von Symbolleisten hinzufügen <xref:System.Windows.Forms.Button> Objekte eine <xref:System.Windows.Forms.ToolBar.Buttons%2A> Auflistung. Können Sie den Auflistungs-Editor auf die Schaltflächen zum Hinzufügen einer <xref:System.Windows.Forms.ToolBar> Steuerelement; jede <xref:System.Windows.Forms.Button> -Objekt sollte Text oder ein Bild zugewiesen ist, können, jedoch auch beides zuweisen können. Das Bild wird von einer verknüpften [ImageList](imagelist-component-windows-forms.md)-Komponente zur Verfügung gestellt. Zur Laufzeit können Sie hinzufügen oder entfernen Sie Schaltflächen aus der <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> mithilfe der <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> und <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> Methoden. Programmieren die Schaltflächen des eine <xref:System.Windows.Forms.ToolBar>, fügen Sie Code in die <xref:System.Windows.Forms.ToolBar.ButtonClick> Ereignisse der <xref:System.Windows.Forms.ToolBar>unter Verwendung der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> Eigenschaft der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> Klasse, um zu bestimmen, welche Schaltfläche geklickt wurde.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ToolBar>
 - [ToolBar-Steuerelement](toolbar-control-windows-forms.md)
 - [Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement](how-to-add-buttons-to-a-toolbar-control.md)
-- [Vorgehensweise: Definieren eines Symbols für eine Symbolleisten-Schaltfläche](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Vorgehensweise: Trigger Menüereignissen für Symbolleistenschaltflächen](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Vorgehensweise: Definieren eines Symbols für eine Symbolleistenschaltfläche](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Vorgehensweise: Auslösen von Menüereignissen für Symbolleistenschaltflächen](how-to-trigger-menu-events-for-toolbar-buttons.md)

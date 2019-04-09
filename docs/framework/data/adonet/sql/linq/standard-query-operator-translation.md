@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 0b962df58092dc0d410bff4559180a5d77580545
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 48c95411d08aefc3ecb7d8a7041ac47d44e6b9ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127945"
 ---
 # <a name="standard-query-operator-translation"></a>Übersetzen von Standardabfrageoperatoren
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt Standardabfrageoperatoren in SQL-Befehle. Der Abfrageprozessor der Datenbank bestimmt die Ausführungssemantik der SQL-Übersetzung an.  
@@ -24,9 +24,9 @@ ms.locfileid: "56093930"
 ## <a name="operator-support"></a>Operatorunterstützung  
   
 ### <a name="concat"></a>Concat  
- Die <xref:System.Linq.Enumerable.Concat%2A>-Methode ist für geordnete Multisets definiert, bei denen die Reihenfolge des Empfängers und des Arguments identisch ist. <xref:System.Linq.Enumerable.Concat%2A> fungiert als `UNION ALL` für die Multisets, gefolgt von der allgemeinen Reihenfolge.  
+ Die <xref:System.Linq.Enumerable.Concat%2A>-Methode ist für geordnete Multisets definiert, bei denen die Reihenfolge des Empfängers und des Arguments identisch ist. <xref:System.Linq.Enumerable.Concat%2A> fungiert als `UNION ALL` für die Multisets, gefolgt von der Befehlsreihenfolge.  
   
- Die Sortierung in SQL ist der letzte Schritt vor dem Erzeugen von Ergebnissen. <xref:System.Linq.Enumerable.Concat%2A> behält die Reihenfolge der Argumente nicht bei. Um die entsprechende Sortierung sicherzustellen, müssen Sie die Ergebnisse von <xref:System.Linq.Enumerable.Concat%2A> explizit sortieren.  
+ Die Sortierung in SQL ist der letzte Schritt vor dem Erzeugen von Ergebnissen. <xref:System.Linq.Enumerable.Concat%2A> die Reihenfolge der Argumente beibehalten nicht. Um die entsprechende Sortierung sicherzustellen, müssen Sie die Ergebnisse von <xref:System.Linq.Enumerable.Concat%2A> explizit sortieren.  
   
 ### <a name="intersect-except-union"></a>Intersect, Except, Union  
  Die <xref:System.Linq.Enumerable.Intersect%2A>-Methode und die <xref:System.Linq.Enumerable.Except%2A>-Methode sind nur für Sätze gut definiert. Die Semantik für Multisets ist nicht definiert.  
@@ -37,7 +37,7 @@ ms.locfileid: "56093930"
  <xref:System.Linq.Enumerable.Take%2A> und <xref:System.Linq.Enumerable.Skip%2A> Methoden sind nur für gut definierte *geordnete Mengen*. Die Semantik für ungeordnete Sätze oder Multisets ist nicht definiert.  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> und <xref:System.Linq.Enumerable.Skip%2A> weisen bestimmte Einschränkungen auf, wenn sie für Abfragen in SQL Server 2000 verwendet werden. Weitere Informationen finden Sie im Eintrag "Überspringen und Behandeln von Ausnahmen in SQLServer 2000" in [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+>  <xref:System.Linq.Enumerable.Take%2A> und <xref:System.Linq.Enumerable.Skip%2A> weisen bestimmte Einschränkungen, wenn sie in Abfragen mit SQL Server 2000 verwendet werden. Weitere Informationen finden Sie im Eintrag "Überspringen und Behandeln von Ausnahmen in SQLServer 2000" in [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
  Aufgrund der sortierungseinschränkungen in SQL [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] versucht, die Sortierung des Arguments der folgenden Methoden auf das Ergebnis der Methode zu verschieben. Betrachten Sie z. B. die folgende [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfrage:  
   
@@ -71,20 +71,20 @@ ORDER BY [t0].[CustomerID]
   
 |Operatoren|Begründung|  
 |---------------|---------------|  
-|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL-Abfragen verwenden Multisets, keine Sequenzen. `ORDER BY` muss die letzte Klausel sein, die auf die Ergebnisse angewendet wird. Aus diesem Grund gibt es keine allgemeine Übersetzung dieser beiden Methoden.|  
+|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL-Abfragen verwenden Multisets, keine Sequenzen. `ORDER BY` muss die letzte Klausel sein, der auf die Ergebnisse angewendet werden. Aus diesem Grund gibt es keine allgemeine Übersetzung dieser beiden Methoden.|  
 |<xref:System.Linq.Enumerable.Reverse%2A>|Die Übersetzung dieser Methode ist für eine geordnete Menge möglich. Sie wird jedoch derzeit von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht übersetzt.|  
 |<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|Die Übersetzung dieser Methoden ist für eine geordnete Menge möglich. Sie werden jedoch derzeit von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht übersetzt.|  
 |<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL-Abfragen verwenden Multisets, keine indizierbaren Sequenzen.|  
-|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (Überladung mit Standard-arg)|Im Allgemeinen kann ein Standardwert nicht für ein beliebiges Tupel angegeben werden. NULL-Werte für Tupel sind in einigen Fällen durch äußere Joins möglich.|  
+|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (Überladung mit Standard-Arg)|Im Allgemeinen kann ein Standardwert nicht für ein beliebiges Tupel angegeben werden. NULL-Werte für Tupel sind in einigen Fällen durch äußere Joins möglich.|  
   
 ## <a name="expression-translation"></a>Ausdrucksübersetzung  
   
 ### <a name="null-semantics"></a>NULL-Semantik  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wendet keine NULL-Vergleichssemantik auf SQL an. Vergleichsoperatoren werden syntaktisch zu ihren SQL-Entsprechungen übersetzt. Aus diesem Grund reflektiert die Semantik SQL-Semantik, die von Server- oder Verbindungseinstellungen definiert wird. Beispielsweise werden zwei null-Werte als ungleich betrachtet werden in SQL Server-Standardeinstellungen, aber ändern Sie die Einstellungen, um die Semantik anzupassen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zieht beim Übersetzen von Abfragen keine Servereinstellungen in Betracht.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] entstehen keine null-Vergleichssemantik auf SQL. Vergleichsoperatoren werden syntaktisch zu ihren SQL-Entsprechungen übersetzt. Aus diesem Grund reflektiert die Semantik SQL-Semantik, die von Server- oder Verbindungseinstellungen definiert wird. Beispielsweise werden zwei null-Werte als ungleich betrachtet werden in SQL Server-Standardeinstellungen, aber ändern Sie die Einstellungen, um die Semantik anzupassen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not consider server settings when it translates queries.  
   
  Ein Vergleich mit dem NULL-Literal wird in die entsprechende SQL-Version (`is null` oder `is not null`) übersetzt.  
   
- Der Wert von `null` in der Zusammenstellung wird von SQL-Server definiert. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ändert die Zusammenstellung nicht.  
+ Der Wert von `null` in der Zusammenstellung wird von SQL-Server definiert. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die Sortierung wird nicht geändert werden.  
   
 ### <a name="aggregates"></a>Aggregate  
  Die Aggregationsmethode für Standardabfrageoperatoren <xref:System.Linq.Enumerable.Sum%2A> ergibt bei einer leeren Sequenz oder bei einer aus Nullen bestehenden Sequenz 0. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], die Semantik von SQL unverändert, und <xref:System.Linq.Enumerable.Sum%2A> ergibt `null` anstelle von 0 (null) für eine leere Sequenz oder eine Sequenz, die nur aus Nullen besteht.  
@@ -173,7 +173,7 @@ ORDER BY [t0].[CustomerID]
  Weitere Informationen über das Mapping zu diesen Datums- und Uhrzeittypen von SQL Server finden Sie unter [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
 ## <a name="sql-server-2005-support"></a>SQL Server 2005-Unterstützung  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet keine Unterstützung für die folgenden SQL Server 2005-Funktionen:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die folgenden Funktionen von SQL Server 2005 unterstützt nicht:  
   
 -   Gespeicherte Prozeduren für SQL CLR.  
   
@@ -185,7 +185,7 @@ ORDER BY [t0].[CustomerID]
  Die folgenden [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]-Einschränkungen (im Vergleich zu [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]) betreffen die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Unterstützung.  
   
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply-Operator und Outer Apply-Operator  
- Diese Operatoren sind in [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] nicht verfügbar. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] versucht eine Reihe von erneuten Schreibvorgängen, um sie durch entsprechende Joins zu ersetzen.  
+ Diese Operatoren sind in [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] nicht verfügbar. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] versucht, eine Reihe von erneuten Schreibzugriffen, um sie durch entsprechende Joins zu ersetzen.  
   
  `Cross Apply` und `Outer Apply` werden für Beziehungsnavigation erzeugt. Der Satz von Abfragen, für den solche erneuten Schreibzugriffe möglich sind, ist nicht klar definiert. Aus diesem Grund umfasst der minimale für [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] unterstützte Abfragesatz jene Elemente, die keine Beziehungsnavigation beinhalten.  
   
@@ -198,7 +198,7 @@ ORDER BY [t0].[CustomerID]
  [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (durch SP4) weist einige eigenheiten auf, die von verschachtelten Abfragen ausgelöst werden. Der Satz von SQL-Abfragen, der diese Eigenheiten auslöst, ist nicht klar definiert. Aus diesem Grund keine definieren den Satz von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Abfragen, die SQL Server-Ausnahmen führen können.  
   
 ### <a name="skip-and-take-operators"></a>Skip-Operator und Take-Operator  
- <xref:System.Linq.Enumerable.Take%2A> und <xref:System.Linq.Enumerable.Skip%2A> weisen bestimmte Einschränkungen hinsichtlich der Verwendung in Abfragen mit [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] auf. Weitere Informationen finden Sie im Eintrag "Überspringen und Behandeln von Ausnahmen in SQLServer 2000" in [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
+ <xref:System.Linq.Enumerable.Take%2A> und <xref:System.Linq.Enumerable.Skip%2A> weisen bestimmte Einschränkungen, wenn sie in Abfragen verwendet werden [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]. Weitere Informationen finden Sie im Eintrag "Überspringen und Behandeln von Ausnahmen in SQLServer 2000" in [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md).  
   
 ## <a name="object-materialization"></a>Objektmaterialisierung  
  Die Materialisierung erstellt CLR-Objekte aus Zeilen, die von einer oder mehreren SQL-Abfragen zurückgegeben werden.  
@@ -207,7 +207,7 @@ ORDER BY [t0].[CustomerID]
   
     -   Konstruktoren  
   
-    -   `ToString`-Methoden in Projektionen  
+    -   `ToString` -Methoden in Projektionen  
   
     -   Typumwandlungen in Projektionen  
   
@@ -226,7 +226,8 @@ ORDER BY [t0].[CustomerID]
     -   <xref:System.Linq.Enumerable.ToArray%2A>  
   
 ## <a name="see-also"></a>Siehe auch
-- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+
+- [Referenz](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [Zurückgeben oder Überspringen von Elementen in einer Sequenz](../../../../../../docs/framework/data/adonet/sql/linq/return-or-skip-elements-in-a-sequence.md)
 - [Verketten von zwei Sequenzen](../../../../../../docs/framework/data/adonet/sql/linq/concatenate-two-sequences.md)
 - [Zurückgeben der Unterschiedsmenge zwischen zwei Sequenzen](../../../../../../docs/framework/data/adonet/sql/linq/return-the-set-difference-between-two-sequences.md)

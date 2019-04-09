@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
-ms.openlocfilehash: f92558798267760eb6cfd1bfc6365451cdcc1c62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84002609c550cc2de76f9948bf77f9fd88261f64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529991"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136720"
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>Suchen des minimalen Werts in einer numerischen Sequenz
 Verwenden Sie den <xref:System.Linq.Enumerable.Min%2A>-Operator, um den minimalen Wert einer Sequenz numerischer Werte zurückzugeben.  
@@ -72,5 +72,6 @@ Verwenden Sie den <xref:System.Linq.Enumerable.Min%2A>-Operator, um den minimale
  `Konbu`  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Aggregatabfragen](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

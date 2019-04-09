@@ -8,12 +8,12 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 844e03891cce41566300409ad1bec67c875718a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20341a44eb8a43a9d130e0b76d23b513738c6782
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704504"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129505"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Zugreifen auf nicht verfügbar gemachte Member des verwalteten HTML-Dokumentobjektmodells
 Das verwaltete HTML (DOKUMENTOBJEKTMODELL) enthält eine Klasse namens <xref:System.Windows.Forms.HtmlElement> , verfügbar macht, die Eigenschaften, Methoden und Ereignisse, die alle HTML-Elemente gemeinsam haben. In einigen Fällen müssen Sie jedoch auf Member zuzugreifen, die die verwaltete Schnittstelle nicht direkt verfügbar gemacht wird. In diesem Thema werden zwei Methoden für den Zugriff auf nicht verfügbar gemachte Member, einschließlich untersucht [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] und VBScript-Funktionen, die innerhalb einer Webseite definiert.  
@@ -72,4 +72,5 @@ Das verwaltete HTML (DOKUMENTOBJEKTMODELL) enthält eine Klasse namens <xref:Sys
  Sie können alle Skriptfunktionen, die Sie definieren in einer HTML-Seite mit Aufrufen der <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> Methode. Wenn die Skriptmethode ein HTML-Elements zurückgibt, können eine Umwandlung konvertieren Sie dieses Ergebnis eine <xref:System.Windows.Forms.HtmlElement>. Ausführliche Informationen und Beispielcode finden Sie unter <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden des verwalteten HTML-Dokumentobjektmodells](using-the-managed-html-document-object-model.md)

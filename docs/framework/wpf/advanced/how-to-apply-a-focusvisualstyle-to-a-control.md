@@ -5,12 +5,12 @@ helpviewer_keywords:
 - properties [WPF], FocusVisualStyle
 - FocusVisualStyle property [WPF]
 ms.assetid: 363de99e-8ecc-438c-ac4a-f9147432ebd6
-ms.openlocfilehash: c4b379d3c57b6d0ae29952c23a35d7cc2cdf7f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 53d4984946143c15c4a2b71095529fb5ee7de4b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133548"
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>Vorgehensweise: Anwenden eines FocusVisualStyle auf ein Steuerelement
 Dieses Beispiel zeigt Ihnen das Erstellen eines visuellen Fokusstils in Ressourcen und Anwenden der Formatvorlage auf ein Steuerelement, mit der <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> Eigenschaft.  
@@ -27,6 +27,7 @@ Dieses Beispiel zeigt Ihnen das Erstellen eines visuellen Fokusstils in Ressourc
  Fokus visuelle Stile konsistent werden, über ein Thema oder eine Benutzeroberfläche verwendet sollten, anstatt einen anderen Wert für jedes Element den Fokus erhalten kann. Weitere Informationen finden Sie unter [Fokusstile in Steuerelementen und FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
 - [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)
 - [Fokusstile in Steuerelementen und FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)

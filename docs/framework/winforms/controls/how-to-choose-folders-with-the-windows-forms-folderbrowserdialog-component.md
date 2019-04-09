@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Wählen Sie Ordner mit der FolderBrowserDialog-Komponente in Windows Forms'
+title: 'Vorgehensweise: Auswählen von Ordnern mit der FolderBrowserDialog-Komponente in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: ea5fdc9708d8e896eb66fa42f64cac672baff08b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2bff105d5c97a8b98d094a1ce3a4f033aa5971be
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724556"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116076"
 ---
-# <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Vorgehensweise: Wählen Sie Ordner mit der FolderBrowserDialog-Komponente in Windows Forms
+# <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Vorgehensweise: Auswählen von Ordnern mit der FolderBrowserDialog-Komponente in Windows Forms
 Häufig müssen Sie in von Ihnen erstellten Windows-Anwendungen Benutzer auffordern, einen Ordner auszuwählen, meistens zum Speichern einer Gruppe von Dateien. Die Windows-Formulare <xref:System.Windows.Forms.FolderBrowserDialog> Komponente können Sie diese Aufgabe problemlos erledigen.  
   
 ### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>So wählen Sie Ordner mit der FolderBrowserDialog-Komponente  
@@ -67,6 +67,7 @@ Häufig müssen Sie in von Ihnen erstellten Windows-Anwendungen Benutzer aufford
  Weitere Informationen zum Speichern von Dateien, finden Sie unter [Vorgehensweise: Speichern von Dateien mit der SaveFileDialog-Komponente](how-to-save-files-using-the-savefiledialog-component.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [Übersicht über die FolderBrowserDialog-Komponente (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)
+- [Übersicht über die FolderBrowserDialog-Komponente (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)
 - [FolderBrowserDialog-Komponente](folderbrowserdialog-component-windows-forms.md)

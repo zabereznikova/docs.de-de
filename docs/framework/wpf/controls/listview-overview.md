@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 33f4cc55a52a67381c1fbf0d0a92bfad5e50b1ec
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186497"
 ---
 # <a name="listview-overview"></a>Übersicht über ListView
 Die <xref:System.Windows.Controls.ListView> Steuerelement bietet die Infrastruktur, um einen Satz von Datenelementen in verschiedenen Layouts oder Ansichten anzuzeigen. Benutzer können damit z.B. die Datenelemente in einer Tabelle anzeigen und die Spalten sortieren.  
-  
-  
+
 <a name="WhatisaListView"></a>   
 ## <a name="what-is-a-listview"></a>Was ist ein ListView-Steuerelement?  
  Die <xref:System.Windows.Controls.ListView> Steuerelement ist ein <xref:System.Windows.Controls.ItemsControl> abgeleitete <xref:System.Windows.Controls.ListBox>. In der Regel enthaltenen Elemente sind Mitglieder einer Datensammlung und werden als dargestellt <xref:System.Windows.Controls.ListViewItem> Objekte. Ein <xref:System.Windows.Controls.ListViewItem> ist eine <xref:System.Windows.Controls.ContentControl> und kann nur ein einzelnes untergeordnetes Element enthalten. Dieses untergeordnete Element kann jedoch ein beliebiges visuelles Element sein.  
@@ -82,10 +81,11 @@ Die <xref:System.Windows.Controls.ListView> Steuerelement bietet die Infrastrukt
  Angepasste Ansichten wie <xref:System.Windows.Controls.GridView> stammen von der <xref:System.Windows.Controls.ViewBase> abstrakte Klasse, die stellt die Tools zum Anzeigen von Datenelementen, die als dargestellt werden <xref:System.Windows.Controls.ListViewItem> Objekte.    
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.GridView>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Data.Binding>
 - [Übersicht über GridView](gridview-overview.md)
-- [Themen zu Vorgehensweisen](listview-how-to-topics.md)
+- [Gewusst wie-Themen](listview-how-to-topics.md)
 - [Steuerelemente](../advanced/optimizing-performance-controls.md)

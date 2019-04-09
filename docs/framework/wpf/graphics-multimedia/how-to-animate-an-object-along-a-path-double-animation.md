@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verschieben eines Objekts auf einem Pfad (DoubleAnimation)'
+title: 'Vorgehensweise: Verschieben eines Objekts auf einem Pfad (Doppelanimation)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (double animation)
 - double animation [WPF]
 ms.assetid: 5a3c4a99-f303-42ad-a52a-e4794bb1798e
-ms.openlocfilehash: 1838b2492e7ea8a33139fdb5682362998d84a98d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 54f345bbe6b513e3593cbf45ba190d4a44228424
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363399"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101444"
 ---
-# <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Vorgehensweise: Verschieben eines Objekts auf einem Pfad (DoubleAnimation)
+# <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Vorgehensweise: Verschieben eines Objekts auf einem Pfad (Doppelanimation)
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> Klasse, um ein Objekt entlang eines Pfads durch Verschieben einer <xref:System.Windows.Media.PathGeometry>.  
   
 ## <a name="example"></a>Beispiel  
@@ -35,5 +35,6 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.Doub
  Eine weitere Möglichkeit zum Verschieben eines Objekts mithilfe eines geometrischen Pfads ist die Verwendung einer <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> Objekt. Ein Beispiel finden Sie unter [animieren Sie ein Objekt auf einem Pfad (Matrixanimation)](how-to-animate-an-object-along-a-path-matrix-animation.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Animationen](animation-overview.md)
-- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](path-animation-how-to-topics.md)
+- [Gewusst-wie-Themen zur Pfadanimation](path-animation-how-to-topics.md)

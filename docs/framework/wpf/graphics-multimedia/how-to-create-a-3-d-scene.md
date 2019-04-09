@@ -8,12 +8,12 @@ helpviewer_keywords:
 - scenes [WPF], 3-D
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
-ms.openlocfilehash: 8c9aec78bdda4f9f122b6dbefe0956ba649adf22
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8e176cb437055787da86d56770dd71323134fa33
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370747"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126229"
 ---
 # <a name="how-to-create-a-3-d-scene"></a>Vorgehensweise: Erstellen einer 3D-Szene
 Dieses Beispiel zeigt, wie Sie ein 3D-Objekt erstellen, der einem flachen Blatt Papier ähnelt dem gedreht wurde. Ein <xref:System.Windows.Controls.Viewport3D> zusammen mit den folgenden Komponenten verwendet, um diese einfache 3D-Szene zu erstellen:  
@@ -38,4 +38,5 @@ Dieses Beispiel zeigt, wie Sie ein 3D-Objekt erstellen, der einem flachen Blatt 
  [!code-vb[3DGallery_procedural_snip#Basic3DShapeCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/basic3dshapeexample.vb#basic3dshapecodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über 3D-Grafiken](3-d-graphics-overview.md)

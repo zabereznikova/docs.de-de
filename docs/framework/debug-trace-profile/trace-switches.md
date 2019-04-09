@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ab913aa-f400-4406-9436-f45bc6e54fbe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27f0d35dbe459ce53e6e10905a0a86a3f2bd3762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85a1a017197826717280f53995ed98f26f1d80bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702625"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132664"
 ---
 # <a name="trace-switches"></a>Ablaufverfolgungsschalter
 Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivieren, deaktivieren und filtern. Diese Schalter sind Objekte, die im Code vorhanden sind und extern über die Konfigurationsdatei (CONFIG) konfiguriert werden können. .NET Framework bietet drei Typen von Ablaufverfolgungsschaltern: die <xref:System.Diagnostics.BooleanSwitch> -Klasse, die <xref:System.Diagnostics.TraceSwitch> -Klasse und die <xref:System.Diagnostics.SourceSwitch> -Klasse. Die <xref:System.Diagnostics.BooleanSwitch> -Klasse fungiert als Umschalter, d. h., sie aktiviert oder deaktiviert eine Vielzahl von Ablaufverfolgungsanweisungen. Mit der <xref:System.Diagnostics.TraceSwitch> -Klasse und der <xref:System.Diagnostics.SourceSwitch> -Klasse können Sie einen Ablaufverfolgungsschalter für eine bestimmte Ablaufverfolgungsebene aktivieren, sodass die für diese und alle darunter liegenden Ebenen angegebenen <xref:System.Diagnostics.Trace> - oder <xref:System.Diagnostics.TraceSource> -Meldungen angezeigt werden. Wenn Sie den Schalter deaktivieren, werden die Ablaufverfolgungsmeldungen nicht angezeigt. All diese Klassen werden von der abstrakten (**MustInherit**) **Switch**-Klasse abgeleitet. Dies gilt für alle von Benutzern entwickelten Schalter.  
@@ -49,7 +49,7 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
   
 |Enumerationswert|Ganzzahliger Wert|Angezeigter (oder in angegebenes Ausgabeziel geschriebener) Meldungstyp|  
 |----------------------|-------------------|---------------------------------------------------------------------------|  
-|Aus|0|Keine|  
+|Aus|0|Keiner|  
 |Error|1|Nur Fehlermeldungen|  
 |Warnung|2|Warnmeldungen und Fehlermeldungen|  
 |Info|3|Informationsmeldungen, Warnmeldungen und Fehlermeldungen|  
@@ -84,6 +84,7 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
  Zusätzlich zur Bereitstellung von **BooleanSwitch** und **TraceSwitch**können Sie auch eigene Schalter definieren, indem Sie die Einstellungen von der **Switch** -Klasse erben und die Basisklassenmethoden mit benutzerdefinierten Methoden überschreiben. Weitere Informationen zum Erstellen entwicklerdefinierter Schalter finden Sie unter <xref:System.Diagnostics.Switch> -Klasse in der Referenz zu .NET Framework.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Trace Listeners (Ablaufverfolgungslistener)](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+
+- [Ablaufverfolgungslistener](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

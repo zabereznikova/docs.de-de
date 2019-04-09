@@ -9,19 +9,18 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: a0c6260eee10487034655b5e4abbfa1f1a7bce71
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: faf2e9bbe23acfd46ee98e1f0fca01b7563ede73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122446"
 ---
 # <a name="annotations-overview"></a>Übersicht über Anmerkungen
 Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine verbreitete Aktivität, dass wir sie als selbstverständlich erachten. Diese Notizen oder Kommentare sind „Anmerkungen“, die wir einem Dokument hinzufügen, um Informationen zu kennzeichnen oder um interessante Elemente für einen späteren Zeitpunkt zu markieren. Obwohl das Schreiben von Notizen auf gedruckte Dokumente einfach und üblich ist, ist die Möglichkeit, persönliche Kommentare auf elektronischen Dokumenten hinzuzufügen, in der Regel nur sehr eingeschränkt, falls diese Möglichkeit überhaupt verfügbar ist.  
   
  In diesem Thema werden mehrere allgemeine Typen von Anmerkungen, insbesondere Kurznotizen und Markierungen, und veranschaulicht, wie die [!INCLUDE[TLA#tla_caf](../../../../includes/tlasharptla-caf-md.md)] erleichtert diese Typen von Anmerkungen in Anwendungen, die durch das Windows Presentation Foundation (WPF)-Dokument Steuerelemente für das anzeigen.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Steuerelemente für das Dokument anzeigen, die Anmerkungen unterstützen enthalten <xref:System.Windows.Controls.FlowDocumentReader> und <xref:System.Windows.Controls.FlowDocumentScrollViewer>sowie Steuerelemente abgeleitet <xref:System.Windows.Controls.Primitives.DocumentViewerBase> wie z. B. <xref:System.Windows.Controls.DocumentViewer> und <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
-  
-  
+
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Kurznotizen  
  Eine normale Kurznotiz enthält Informationen, die auf ein kleines Stück farbiges Papier geschrieben werden, das dann auf ein Dokument „geklebt“ wird. Digitale Kurznotizen bieten ähnliche Funktionen für elektronische Dokumente, jedoch mit der zusätzlichen Flexibilität, viele andere Inhaltstypen wie eingegebenen Text, handschriftliche Notizen (z.B. [!INCLUDE[TLA#tla_tpc](../../../../includes/tlasharptla-tpc-md.md)]-Freihandeingabestriche), oder Weblinks einzuschließen.  
@@ -65,6 +64,7 @@ Das Schreiben von Notizen oder Kommentare auf Papierdokumenten ist solch eine ve
  Ein weiteres Beispielszenario umfasst Anwendungen, die den Austausch von Anmerkungen und Kurznotizen zwischen Lesern von Dokument per e-Mail ermöglichen. Diese Funktion ermöglicht diesen Programmen, den Leser zu der Seite zu navigieren, die die Anmerkung enthält, die gerade ausgetauscht wird.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.Primitives.DocumentViewerBase>
 - <xref:System.Windows.Controls.DocumentViewer>
 - <xref:System.Windows.Controls.FlowDocumentPageViewer>

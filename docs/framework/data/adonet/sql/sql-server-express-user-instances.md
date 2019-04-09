@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: 4546ce2a08fc2ac20717bbaa55d4688b43d34b47
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111149"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express-Benutzerinstanzen
-Microsoft SQL Server Express Edition (SQL Server Express) unterstützt die Benutzerinstanzfunktion, die die Verwendung des .NET Framework-Datenanbieters für SQL Server (`SqlClient`) voraussetzt. Eine Benutzerinstanz ist eine separate Instanz des SQL Server Express-Datenbankmoduls, die von einer übergeordneten Instanz generiert wird. Mit Benutzerinstanzen können Benutzer, die auf ihrem lokalen Computer nicht mit Administratorrechten arbeiten, eine Verbindung zu SQL Server Express-Datenbanken herstellen. Jede Instanz wird im Sicherheitskontext des jeweiligen Benutzers ausgeführt, wobei für jeden Benutzer genau eine Instanz erstellt wird.  
+Microsoft SQL Server Express Edition (SQL Server Express) unterstützt die Benutzerinstanzfunktion, die die Verwendung des .NET Framework-Datenanbieters für SQL Server (`SqlClient`) voraussetzt. Eine Benutzerinstanz ist eine separate Instanz der SQL Server Express-Datenbank-Engine, die von einer übergeordneten Instanz generiert wird. Mit Benutzerinstanzen können Benutzer, die auf ihrem lokalen Computer nicht mit Administratorrechten arbeiten, eine Verbindung zu SQL Server Express-Datenbanken herstellen. Jede Instanz wird im Sicherheitskontext des jeweiligen Benutzers ausgeführt, wobei für jeden Benutzer genau eine Instanz erstellt wird.  
   
 ## <a name="user-instance-capabilities"></a>Was können Benutzerinstanzen?  
  Benutzerinstanzen eignen sich für Benutzer, die Windows in einem Konto der untersten Berechtigungsebene (Least-Priviledged User Account, LUA) ausführen, da jeder Benutzer über SQL Server-Systemadministratorberechtigungen (`sysadmin`) für die Instanz verfügt, die auf seinem Computer ausgeführt wird, ohne dass dazu auch Windows mit Administratorrechten ausgeführt werden muss. Software, die in einer Benutzerinstanz mit eingeschränkten Berechtigungen ausgeführt wird, kann keine systemweiten Änderungen vornehmen, da die SQL Server Express-Instanz beim Benutzer über das Windows-Konto ohne Administratorberechtigung und nicht als Dienst ausgeführt wird. Jede Benutzerinstanz ist von ihrer übergeordneten Instanz und von allen anderen Benutzerinstanzen isoliert, die auf demselben Computer ausgeführt werden. Auf einer Benutzerinstanz installierte Datenbanken werden nur im Einzelbenutzermodus geöffnet. Es ist ausgeschlossen, dass mehrere Benutzer eine Verbindung mit einer Datenbank herstellen können, die auf einer Benutzerinstanz ausgeführt wird. Replikation und verteilte Abfragen sind für Benutzerinstanzen ebenfalls deaktiviert.  
@@ -37,17 +37,17 @@ sp_configure 'user instances enabled','0'
  Als Netzwerkprotokoll für Benutzerinstanzen kommen lokale Named Pipes zum Einsatz. Benutzerinstanzen können nicht auf einer Remoteinstanz von SQL Server gestartet werden, und SQL Server-Anmeldungen sind ebenfalls nicht zulässig.  
   
 ## <a name="connecting-to-a-user-instance"></a>Herstellen einer Verbindung mit einer Benutzerinstanz  
- Die `User Instance` und `AttachDBFilename` <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> Schlüsselwörter ermöglichen eine <xref:System.Data.SqlClient.SqlConnection> eine Verbindung mit einer Benutzerinstanz herstellen. Benutzerinstanzen werden auch von den <xref:System.Data.SqlClient.SqlConnectionStringBuilder>-Eigenschaften `UserInstance` und `AttachDBFilename` unterstützt.  
+ Die `User Instance` und `AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> Schlüsselwörter ermöglichen eine <xref:System.Data.SqlClient.SqlConnection> eine Verbindung mit einer Benutzerinstanz herstellen. Benutzerinstanzen werden auch von unterstützt die <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` und `AttachDBFilename` Eigenschaften.  
   
  Beachten Sie bei der unten genannten Beispielverbindungszeichenfolge Folgendes:  
   
 -   Das `Data Source`-Schlüsselwort verweist auf die übergeordnete Instanz von SQL Server Express, die die Benutzerinstanz generiert. Die Standardinstanz ist .\sqlexpress.  
   
--   Für `Integrated Security` ist `true` festgelegt. Zur Herstellung einer Verbindung mit einer Benutzerinstanz ist die Windows-Authentifizierung erforderlich. SQL Server-Anmeldungen werden nicht unterstützt.  
+-   `Integrated Security` nastaven NA hodnotu `true`. Zur Herstellung einer Verbindung mit einer Benutzerinstanz ist die Windows-Authentifizierung erforderlich. SQL Server-Anmeldungen werden nicht unterstützt.  
   
 -   Für `User Instance` ist `true` festgelegt, wodurch eine Benutzerinstanz aufgerufen wird. (Der Standardwert ist `false`.)  
   
--   Das Schlüsselwort für die `AttachDbFileName`-Verbindungszeichenfolge wird verwendet, um die primäre Datenbankdatei (.mdf) anzufügen. Diese muss den vollständigen Pfadnamen enthalten. `AttachDbFileName` entspricht auch den Schlüsseln "extended properties" und "initial file name" in einer <xref:System.Data.SqlClient.SqlConnection>-Verbindungszeichenfolge.  
+-   Das Schlüsselwort für die `AttachDbFileName`-Verbindungszeichenfolge wird verwendet, um die primäre Datenbankdatei (.mdf) anzufügen. Diese muss den vollständigen Pfadnamen enthalten. `AttachDbFileName` entspricht auch der "extended Properties" und "initial File Name"-Schlüssel in einem <xref:System.Data.SqlClient.SqlConnection> Verbindungszeichenfolge.  
   
 -   Die `|DataDirectory|`-Ersatzzeichenfolge zwischen den vertikalen Strichen (|) verweist auf das Datenverzeichnis der Anwendung, die die Verbindung öffnet, und gibt den relativen Pfad zum Speicherort der MDF- und LDF-Datenbank- und Protokolldateien an. Wenn sich diese Dateien woanders befinden, müssen Sie den vollständigen Pfad zu den Dateien angeben.  
   
@@ -58,12 +58,12 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  Sie können mit der <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A>-Eigenschaft und der <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A>-Eigenschaft eine Verbindungszeichenfolge zur Laufzeit erstellen.  
+>  Sie können auch die <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> und <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> Eigenschaften, erstellen Sie eine Verbindungszeichenfolge zur Laufzeit.  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>Mithilfe der &#124;"DataDirectory"&#124; -Ersatzzeichenfolge  
- `AttachDbFileName` wurde in ADO.NET 2.0 mit der Einführung der `|DataDirectory|`-Ersatzzeichenfolge (zwischen Pipesymbolen) erweitert. `DataDirectory` wird in Verbindung mit `AttachDbFileName` verwendet, um einen relativen Pfad zu einer Datendatei anzugeben. Damit wird es Entwicklern ermöglicht, Verbindungszeichenfolgen zu erstellen, die auf einem relativen Pfad zur Datenquelle basieren. Es muss kein vollständiger Pfad angegeben werden.  
+ `AttachDbFileName` wurde in ADO.NET 2.0 erweitert, mit der Einführung der `|DataDirectory|` (zwischen pipesymbolen) Ersatzzeichenfolge. `DataDirectory` wird verwendet, in Verbindung mit `AttachDbFileName` um einen relativen Pfad zu einer Datendatei anzugeben, es Entwicklern ermöglicht, Verbindungszeichenfolgen zu erstellen, die auf einen relativen Pfad zu der Datenquelle basieren, müssen einen vollständigen Pfad angeben.  
   
- Auf welchen physischen Speicherort `DataDirectory` verweist, hängt von der Art der Anwendung ab. In diesem Beispiel befindet sich die anzufügende Datei <legacyBold>Northwind.mdf</legacyBold> im Ordner <legacyBold>\app_data</legacyBold> der Anwendung.  
+ Auf welchen physischen Speicherort `DataDirectory` verweist, hängt von der Art der Anwendung ab. In diesem Beispiel befindet sich die anzufügende Datei Northwind.mdf im Ordner \app_data der Anwendung.  
   
 ```  
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -72,12 +72,12 @@ AttachDBFilename=|DataDirectory|\app_data\Northwind.mdf;
 Initial Catalog=Northwind;  
 ```  
   
- Bei Verwendung von `DataDirectory` darf sich der resultierende Dateipfad in der Verzeichnisstruktur nicht über dem Verzeichnis befinden, auf das in der Ersatzzeichenfolge verwiesen wird. Wenn z. B. das vollständige Datenverzeichnis in `DataDirectory` <legacyBold>C:\AppDirectory\app_data</legacyBold> lautet, funktioniert die oben genannte Beispielverbindungszeichenfolge, weil sie sich unterhalb von <legacyBold>C:\AppDirectory</legacyBold> befindet. Wenn aber versucht wird, das `DataDirectory` als `|DataDirectory|\..\data` anzugeben, wird ein Fehler ausgelöst, weil <legacyBold>\data</legacyBold> kein Unterverzeichnis von <legacyBold>\AppDirectory</legacyBold> ist.  
+ Bei Verwendung von `DataDirectory` darf sich der resultierende Dateipfad in der Verzeichnisstruktur nicht über dem Verzeichnis befinden, auf das in der Ersatzzeichenfolge verwiesen wird. Wenn z. B. das vollständige Datenverzeichnis in C:\AppDirectory\app_data`DataDirectory` lautet, funktioniert die oben genannte Beispielverbindungszeichenfolge, weil sie sich unterhalb von C:\AppDirectory befindet. Wenn aber versucht wird, das `DataDirectory` als `|DataDirectory|\..\data` anzugeben, wird ein Fehler ausgelöst, weil &lt;legacyBold&gt;\data&lt;/legacyBold&gt; kein Unterverzeichnis von &lt;legacyBold&gt;\AppDirectory&lt;/legacyBold&gt; ist.  
   
  Wenn die Verbindungszeichenfolge eine nicht ordnungsgemäß formatierte Ersatzzeichenfolge enthält, wird eine <xref:System.ArgumentException> ausgelöst.  
   
 > [!NOTE]
->  <xref:System.Data.SqlClient> löst die Ersatzzeichenfolgen in vollständige Pfade des Dateisystems auf dem lokalen Computer auf. Deshalb werden Remoteserver-, HTTP- und UNC-Pfadnamen nicht unterstützt. Wenn sich der Server nicht auf dem lokalen Computer befindet und die Verbindung geöffnet wird, wird eine Ausnahme ausgelöst.  
+>  <xref:System.Data.SqlClient> löst die Ersatzzeichenfolgen in vollständige Pfade für das Dateisystem für den lokalen Computer. Deshalb werden Remoteserver-, HTTP- und UNC-Pfadnamen nicht unterstützt. Wenn sich der Server nicht auf dem lokalen Computer befindet und die Verbindung geöffnet wird, wird eine Ausnahme ausgelöst.  
   
  Wenn die <xref:System.Data.SqlClient.SqlConnection> geöffnet ist, wird sie von der standardmäßigen SQL Server Express-Instanz an eine Instanz umgeleitet, die zur Laufzeit initiiert und unter dem Konto des Aufrufers ausgeführt wird.  
   
@@ -127,7 +127,7 @@ private static void OpenSqlConnection()
 ## <a name="how-user-instances-work"></a>So funktionieren Benutzerinstanzen  
  Beim ersten eine Benutzerinstanz wird für jeden Benutzer, generiert der **master** und **Msdb** Systemdatenbanken werden aus dem Ordner für Vorlagendaten in einen Pfad im lokalen Anwendung Data-Repository des Benutzers kopiert Verzeichnis für die ausschließliche Verwendung durch die Benutzerinstanz. Dieser Pfad lautet in der Regel `C:\Documents and Settings\<UserName>\Local Settings\Application Data\Microsoft\Microsoft SQL Server Data\SQLEXPRESS`. Wenn eine Benutzerinstanz gestartet wurde, die **Tempdb**, Protokoll- und Ablaufverfolgungsdateien auch Dateien in dieses Verzeichnis geschrieben werden. Es wird ein Name für die Instanz generiert, der für jeden Benutzer garantiert eindeutig ist.  
   
- Standardmäßig sind alle Member der Gruppe <legacyBold>Windows Builtin\Users</legacyBold> berechtigt, über die lokale Instanz Verbindungen herzustellen und die SQL Server-Binärdateien zu lesen und auszuführen. Nachdem die Anmeldeinformationen des Benutzers verifiziert wurden, der die Benutzerinstanz hostet, wird dieser Benutzer zum `sysadmin` für diese Instanz. Für Benutzerinstanzen ist nur ein gemeinsam genutzter Speicherbereich (Shared Memory) aktiviert, sodass der Benutzer nur Vorgänge auf seinem lokalen Computer ausführen kann.  
+ Standardmäßig sind alle Member der Gruppe &lt;legacyBold&gt;Windows Builtin\Users&lt;/legacyBold&gt; berechtigt, über die lokale Instanz Verbindungen herzustellen und die SQL Server-Binärdateien zu lesen und auszuführen. Nachdem die Anmeldeinformationen des Benutzers verifiziert wurden, der die Benutzerinstanz hostet, wird dieser Benutzer zum `sysadmin` für diese Instanz. Für Benutzerinstanzen ist nur ein gemeinsam genutzter Speicherbereich (Shared Memory) aktiviert, sodass der Benutzer nur Vorgänge auf seinem lokalen Computer ausführen kann.  
   
  Die Benutzer müssen sowohl Lese- als auch Schreibberechtigungen für die in der Verbindungszeichenfolge angegebenen MDF- und LDF-Dateien erhalten.  
   
@@ -151,6 +151,7 @@ private static void OpenSqlConnection()
 -   dediziertes ASP.NET-Hosting mit Windows-Authentifizierung: Eine einzelne SQL Server Express-Instanz kann in einem Intranet gehostet werden. Die Anwendung stellt die Verbindung über das ASPNET-Windows-Konto und nicht durch einen Identitätswechsel her. Benutzerinstanzen dürfen nicht in Drittanbieterszenarien oder Szenarien mit gemeinsamem Hosting verwendet werden, in denen alle Anwendungen dieselbe Benutzerinstanz nutzen und damit nicht mehr voneinander isoliert sind.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [SQL Server und ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [Verbindungszeichenfolgen](../../../../../docs/framework/data/adonet/connection-strings.md)
 - [Aufbauen der Verbindung zu einer Datenquelle](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)

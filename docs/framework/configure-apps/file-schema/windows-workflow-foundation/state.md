@@ -3,12 +3,12 @@ title: <state>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 619414f2-61c2-4427-9977-d05009e343db
-ms.openlocfilehash: 38b0522b93c051473d7cdc28ae955cc3b7b58efe
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6f1a9474f3f12005df364a6fb84dc63aa1b68e04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287234"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108165"
 ---
 # <a name="state"></a>\<state>
 Stellt bei der Erstellung von Nachverfolgungsdatensätzen eine Auflistung abonnierter Zustände der nachverfolgten Workflowinstanz dar.  
@@ -75,7 +75,7 @@ Stellt bei der Erstellung von Nachverfolgungsdatensätzen eine Auflistung abonni
 |Resumed|Die Workflowinstanz wurde wiederaufgenommen.|  
 |Started|Die Workflowinstanz wurde gestartet.|  
 |UnhandledException|In der Workflowinstanz ist eine nicht behandelte Ausnahme aufgetreten.|  
-|Unloaded|Die Workflowinstanz wurde entladen.|  
+|Nicht Geladen|Die Workflowinstanz wurde entladen.|  
 |Canceled|Die Workflowinstanz wurde abgebrochen.|  
 |Angehalten|Die Workflowinstanz wurde unterbrochen.|  
 |Terminated|Die Workflowinstanz wurde beendet.|  
@@ -95,6 +95,7 @@ Stellt bei der Erstellung von Nachverfolgungsdatensätzen eine Auflistung abonni
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>

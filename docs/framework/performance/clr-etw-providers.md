@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0911132a705f3de89d771324cbb63e8db31bdfdb
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
-ms.translationtype: MT
+ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188603"
 ---
 # <a name="clr-etw-providers"></a>CLR-ETW-Anbieter
 Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbieter und den Rundownanbieter.  
@@ -92,4 +92,5 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
  Ein Tool kann die Schritte 2 und 3 ausführen (dabei wird eine Rundownsitzung gestartet und anschließend die Profilerstellung beendet), anstatt sofort die Profilerstellung zu deaktivieren, wenn ein Benutzer das Beenden der Profilerstellung anfordert. Schritt 4 kann auch mit einem Tool ausgeführt werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

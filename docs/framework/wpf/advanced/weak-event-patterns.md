@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 039d25fb14ed2d29f21168267611d4f0d7f2d04f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 49795235d489ebc70cec11332e6be4a9452bc21d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139255"
 ---
 # <a name="weak-event-patterns"></a>Schwache Ereignismuster
 Bei Anwendungen ist es möglich, dass der Handler, die Ereignisquellen angefügt sind, nicht in Koordination mit dem Listenerobjekt zerstört werden, die die Quelle der Handler zugeordnet. Diese Situation kann zu Arbeitsspeicherverlusten führen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] führt ein Entwurfsmuster, die verwendet werden kann, um dieses Problem zu beheben, indem Sie eine dedizierte Manager-Klasse für bestimmte Ereignisse bereitstellen und Implementieren einer Schnittstelle zum Listener für das betreffende Ereignis. Dieses Entwurfsmuster wird als bezeichnet die *Muster für schwache Ereignisse*.  
@@ -131,7 +131,8 @@ Bei Anwendungen ist es möglich, dass der Handler, die Ereignisquellen angefügt
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.WeakEventManager>
 - <xref:System.Windows.IWeakEventListener>
 - [Übersicht über Routingereignisse](routed-events-overview.md)
-- [Übersicht zur Datenbindung](../data/data-binding-overview.md)
+- [Übersicht über die Datenbindung](../data/data-binding-overview.md)

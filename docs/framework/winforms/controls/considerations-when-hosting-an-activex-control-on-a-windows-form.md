@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, hosting ActiveX controls
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
-ms.openlocfilehash: 354c524924794cd240a230e325a4f0eee58cdc50
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: babae31a3be9775d07ca84c54e1177d297cab5cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705206"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108757"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Aspekte beim Hosten eines ActiveX-Steuerelements in Windows Forms
 Obwohl Windows Forms zum Hosten von Windows Forms-Steuerelementen optimiert wurde, können Sie weiterhin ActiveX-Steuerelemente verwenden. Bei Verwendung von ActiveX-Steuerelementen in einer Anwendung sollten Sie Folgendes berücksichtigen:  
@@ -29,7 +29,8 @@ Obwohl Windows Forms zum Hosten von Windows Forms-Steuerelementen optimiert wurd
     >  Wenn der Name eines Members des ActiveX-Steuerelements mit einem Namen, die in definierten übereinstimmt der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], und klicken Sie dann der ActiveX Control Importer den Membernamen mit dem Präfix **Ctl** beim Erstellen der <xref:System.Windows.Forms.AxHost> abgeleitete Klasse. Wenn beispielsweise das ActiveX-Steuerelement ein Member mit dem Namen **Layout** enthält, wird dieser Name in der von AxHost abgeleiteten Klasse in **CtlLayout** geändert, da in [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] das **Layout**-Ereignis bereits definiert ist.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Hinzufügen von ActiveX-Steuerelemente zu Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
+
+- [Vorgehensweise: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
 - [Codezugriffssicherheit](../../misc/code-access-security.md)
 - [In zahlreichen Sprachen und Bibliotheken verglichene Steuerelemente und programmierbare Objekte](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
 - [Einfügen von Steuerelementen in Windows Forms](putting-controls-on-windows-forms.md)

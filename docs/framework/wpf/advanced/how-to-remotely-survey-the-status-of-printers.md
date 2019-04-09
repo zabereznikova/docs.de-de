@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 6eba3c5edd9095a25c0a387a3b37f68e3799d1c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4ebcb2e4f85d30ea1ce24584c69def5b0d1297c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143545"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Vorgehensweise: Remoteüberwachung des Druckerstatus
 In mittleren und großen Unternehmen kann es jederzeit dazu kommen, dass mehrere Drucker wegen eines Papierstaus oder fehlenden Papiers oder anderer problematischer Situationen ausfallen. Die umfangreichen verfügbar gemacht werden, der [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] von Microsoft .NET Framework ermöglichen eine schnelle Überwachung der Druckerzustände.  
@@ -74,6 +74,7 @@ In mittleren und großen Unternehmen kann es jederzeit dazu kommen, dass mehrere
  [!code-vb[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#usingstartanduntiltimes)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Printing.PrintQueue.StartTimeOfDay%2A>
 - <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>
 - <xref:System.DateTime>
@@ -84,6 +85,6 @@ In mittleren und großen Unternehmen kann es jederzeit dazu kommen, dass mehrere
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
-- [&-Operator (C# Verweis)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [Operator & (C#-Referenz)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [Dokumente in WPF](documents-in-wpf.md)
 - [Übersicht über das Drucken](printing-overview.md)

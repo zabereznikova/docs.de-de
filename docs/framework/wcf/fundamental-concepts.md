@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: b28f9c0575d1031c2f542ffa0de4ac5b848d3da1
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305544"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122303"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Wesentliche Windows Communication Foundation-Begriffe
 Dieses Dokument bietet einen allgemeinen Überblick über die Windows Communication Foundation (WCF)-Architektur. Es ist dafür vorgesehen, Hauptkonzepte zu erklären und zu erläutern, wie diese zusammenpassen. Ein Tutorial zum Erstellen der einfachsten Version eines WCF-Dienst und Client finden Sie unter [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md). WCF-Programmierung finden Sie unter [Basis-WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -66,7 +66,7 @@ Dieses Dokument bietet einen allgemeinen Überblick über die Windows Communicat
  Ein Endpunkt, der von der Infrastruktur verfügbar gemacht wird, um Funktionalitäten zu erleichtern, die vom Dienst benötigt oder bereitgestellt werden, der sich nicht auf einen Dienstvertrag bezieht. Ein Dienst könnte z. B. einen Infrastrukturendpunkt aufweisen, der Metadateninformationen bereitstellt.  
   
  Adresse  
- Gibt den Speicherort an, an dem Nachrichten empfangen werden. Sie wird als ein Uniform Resource Identifier (URI) angegeben. Der URI-Schemateil benennt den Transportmechanismus, der zum Erreichen der Adresse verwendet wird, z.&#160;B. HTTP und TCP. Der hierarchische Teil des URI enthält einen eindeutigen Ort, dessen Format vom Transportmechanismus abhängt.  
+ Gibt den Speicherort an, an dem Nachrichten empfangen werden. Sie wird als ein Uniform Resource Identifier (URI) angegeben. Der URI-Schemateil benennt den Transportmechanismus, der zum Erreichen der Adresse verwendet wird, z.&amp;#160;B. HTTP und TCP. Der hierarchische Teil des URI enthält einen eindeutigen Ort, dessen Format vom Transportmechanismus abhängt.  
   
  Die Endpunktadresse ermöglicht es, für jeden Endpunkt in einem Dienst eindeutige Endpunktadressen zu erstellen oder unter bestimmten Voraussetzungen eine Adresse für mehrere Endpunkte zu verwenden. Im folgenden Beispiel wird veranschaulicht, wie eine Adresse das HTTPS-Protokoll mit einem nicht standardmäßigen Anschluss verwendet:  
   
@@ -84,8 +84,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Eine Komponente, die verschiedene Laufzeitaspekte eines Diensts, eines Endpunkts, eines bestimmten Vorgangs oder eines Clients steuert. Verhalten werden gemäß ihrem Umfang gruppiert: allgemeine Verhalten, die alle Endpunkte global beeinflussen, Dienstverhalten, die nur dienstbezogene Aspekte beeinflussen, Endpunktverhalten, die nur endpunktbezogene Eigenschaften beeinflussen, und Verhalten auf Vorgangsebene, die bestimmte Vorgänge beeinflussen. Eines der Dienstverhalten ist beispielsweise die Drosselung, die festlegt, wie ein Dienst reagiert, wenn zu viele Nachrichten seine Abwicklungskapazitäten zu überlasten drohen. Ein Endpunktverhalten steuert wiederum nur Aspekte, die für Endpunkte relevant sind, u. a. wie und wo eine Sicherheitsanmeldeinformation zu finden ist.  
   
  Vom System bereitgestellte Bindungen (system-provided bindings)  
- WCF bietet einige vom System bereitgestellte Bindungen. Dies sind Auflistungen von Bindungselementen, die für bestimmte Szenarien optimiert werden. 
-  <xref:System.ServiceModel.WSHttpBinding> ist beispielsweise für die Interoperabilität mit Diensten vorgesehen, die verschiedene WS-*-Spezifikationen implementieren. Diese vordefinierten Bindungen sparen Zeit, da sie nur diejenigen Optionen bereitstellen, die auf das spezifische Szenario korrekt angewendet werden können. Wenn eine vordefinierte Bindung die Anforderungen nicht erfüllt, können Sie eine eigene benutzerdefinierte Bindung erstellen.  
+ WCF bietet einige vom System bereitgestellte Bindungen. Dies sind Auflistungen von Bindungselementen, die für bestimmte Szenarien optimiert werden. <xref:System.ServiceModel.WSHttpBinding> ist beispielsweise für die Interoperabilität mit Diensten vorgesehen, die verschiedene WS-*-Spezifikationen implementieren. Diese vordefinierten Bindungen sparen Zeit, da sie nur diejenigen Optionen bereitstellen, die auf das spezifische Szenario korrekt angewendet werden können. Wenn eine vordefinierte Bindung die Anforderungen nicht erfüllt, können Sie eine eigene benutzerdefinierte Bindung erstellen.  
   
  Konfiguration gegen Codierung  
  Eine Anwendung kann entweder über die Codierung, über die Konfiguration oder über eine Kombination aus beidem gesteuert werden. Die Konfiguration bietet den Vorteil, dass auch andere Personen als der Entwickler (z.&amp;#160;B. ein Netzwerkadministrator) die Client- und die Dienstparameter festlegen können, nachdem der Code geschrieben wurde, ohne dass eine neue Kompilierung erforderlich wäre. Die Konfiguration ermöglicht nicht nur das Festlegen von Werten wie Endpunktadressen, sondern auch eine weitere Steuerung durch die Möglichkeit, Endpunkte, Bindungen und Verhalten hinzuzufügen. Die Codierung ermöglicht es dem Entwickler, die genaue Kontrolle über alle Komponenten des Diensts oder Clients zu behalten, und alle Einstellungen, die über die Konfiguration gemacht werden, können überprüft und bei Bedarf vom Code aufgehoben werden.  
@@ -154,5 +153,6 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Kurzform für die ständig steigende Zahl von Web Service (WS)-Spezifikationen wie WS-Sicherheit, WS-ReliableMessaging usw., die in WCF implementiert sind.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Was ist die Windows Communication Foundation?](../../../docs/framework/wcf/whats-wcf.md)
 - [Windows Communication Foundation-Architektur](../../../docs/framework/wcf/architecture.md)

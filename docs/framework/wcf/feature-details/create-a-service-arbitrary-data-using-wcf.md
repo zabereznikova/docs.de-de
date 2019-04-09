@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Erstellen Sie einen Dienst, akzeptiert der beliebige Daten mithilfe des WCF REST-Programmiermodells'
+title: 'Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF REST-Programmiermodells akzeptiert'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c03450c66cf8de14d6c638550a510a91593c45b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666997"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144078"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Vorgehensweise: Erstellen Sie einen Dienst, akzeptiert der beliebige Daten mithilfe des WCF REST-Programmiermodells
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF REST-Programmiermodells akzeptiert
 Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmöglichkeiten für die Rückgabe der Daten durch einen Dienstvorgang. Dies ist der Fall, wenn ein Dienstvorgang zurückgeben muss, Daten in einem Format ByWCF werden nicht unterstützt. In diesem Thema wird erläutert, mit den WCF REST-Programmiermodell zum Erstellen eines Diensts, das beliebige Daten empfangen.  
   
 ### <a name="to-implement-the-service-contract"></a>So implementieren Sie den Dienstvertrag  
@@ -194,6 +194,7 @@ namespace ReceiveRawData
 -   Verweisen Sie beim Kompilieren des Codes auf "System.ServiceModel.dll" und "System.ServiceModel.Web.dll".  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [UriTemplate und UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
 - [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Überblick über WCF-Web-HTTP-Programmiermodelle](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

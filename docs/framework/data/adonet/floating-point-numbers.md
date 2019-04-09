@@ -2,12 +2,12 @@
 title: Gleitkommazahlen
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: a30252d7d25b3c3e09dd5e59f364d94aa40dd272
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: aae7bd2ea6b5ba7bc9c69b99c93b62ba7a413d59
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102517"
 ---
 # <a name="floating-point-numbers"></a>Gleitkommazahlen
 In diesem Thema werden einige der Probleme beschrieben, auf die Entwickler beim Arbeiten mit Gleitkommazahlen in [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] häufig stoßen. Diese Probleme treten auf, wie Computer Gleitkommazahlen speichern, und gelten nicht für einen bestimmten Anbieter wie z. B. <xref:System.Data.SqlClient> oder <xref:System.Data.OracleClient>.  
@@ -19,5 +19,6 @@ In diesem Thema werden einige der Probleme beschrieben, auf die Entwickler beim 
  Wenn Sie Probleme mit Gleichheitsvergleichen umgehen möchten, überlegen Sie, ob Sie Ihre Anwendung nicht so programmieren können, dass Abweichungen bei den letzten gültigen Ziffern ignoriert werden. So können Sie z. B. statt zu vergleichen, ob zwei Zahlen gleich sind, eine Zahl von der anderen Zahl subtrahieren. Wenn die Differenz in einem akzeptablen Rundungsbereich liegt, kann Ihre Anwendung die Zahlen so behandeln, als wären sie gleich.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Warum Gleitkommazahlen an Genauigkeit verlieren können](/cpp/build/reference/why-floating-point-numbers-may-lose-precision)
 - [Übersicht über ADO.NET](ado-net-overview.md)

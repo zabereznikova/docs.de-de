@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: a10d9ac5718bf6b88a3a00902f90045c705f8431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721788"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207525"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>Endpunkte: Adressen, Bindungen und Verträge
 Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Dienst erfolgt über die *Endpunkte* des Diensts. Endpunkte ermöglichen Clients den Zugriff auf die von einem WCF-Dienst bereitgestellten Funktionen.  
@@ -41,11 +41,11 @@ Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Diens
   
 -   Bindung: Die Bindung gibt an, wie eine Kommunikation mit dem Endpunkt stattfindet. Dies umfasst Folgendes:  
   
-    -   Das Transportprotokoll, das verwendet werden soll (z.&#160;B. TCP oder HTTP).  
+    -   Das Transportprotokoll, das verwendet werden soll (z.&amp;#160;B. TCP oder HTTP).  
   
-    -   Die Codierung, die für die Nachrichten verwendet werden soll (z.&#160;B. Text oder binär).  
+    -   Die Codierung, die für die Nachrichten verwendet werden soll (z.&amp;#160;B. Text oder binär).  
   
-    -   Die erforderlichen Sicherheitsanforderungen (z.&#160;B. SSL- oder SOAP-Nachrichtensicherheit).  
+    -   Die erforderlichen Sicherheitsanforderungen (z.&amp;#160;B. SSL- oder SOAP-Nachrichtensicherheit).  
   
      Weitere Informationen finden Sie unter [WCF-Bindungsübersicht](../../../../docs/framework/wcf/bindings-overview.md). Eine Bindung wird durch die abstrakte Basisklasse im WCF-Objektmodell dargestellt <xref:System.ServiceModel.Channels.Binding>. Für die meisten Szenarien können Benutzer eine der vom System bereitgestellten Bindungen verwenden. Weitere Informationen finden Sie unter [System-provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md).  
   
@@ -78,15 +78,16 @@ Die gesamte Kommunikation mit einem Windows Communication Foundation (WCF)-Diens
  [Verträge](../../../../docs/framework/wcf/feature-details/contracts.md)  
  Beschreibt, wie Verträge die Methoden eines Diensts definieren.  
   
- [Vorgehensweise: Erstellen eines Dienstendpunkts in der Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Vorgehensweise: Erstellen eines Dienstendpunkts in einer Konfiguration](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Beschreibt, wie Sie einen Dienstendpunkt in einer Konfiguration erstellen.  
   
  [Vorgehensweise: Erstellen eines Dienstendpunkts im Code](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Beschreibt, wie Sie einen Dienstendpunkt im Code erstellen.  
   
- [Vorgehensweise: Verwenden von Svcutil.exe zum Überprüfen von kompiliertem Dienstcode](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [Vorgehensweise: Verwenden von „Svcutil.exe“ zum Überprüfen von kompiliertem Dienstcode](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  Beschreibt, wie Sie Fehler in dienstimplementierungen und Konfigurationen zu erkennen, ohne zu hosten, den Dienst mithilfe der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Konfigurieren von Diensten](../../../../docs/framework/wcf/configuring-services.md)
 - [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md)

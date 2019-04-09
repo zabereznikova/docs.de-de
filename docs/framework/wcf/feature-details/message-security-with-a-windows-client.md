@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: 4b94bfd92cf586088316b03222e0bbe5c1728bc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 794a3d8e118cadd2a2752e1bbf85ef930deb2f27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138644"
 ---
 # <a name="message-security-with-a-windows-client"></a>Nachrichtensicherheit über einen Windows-Client
 Dieses Szenario zeigt einen Windows Communication Foundation (WCF)-Client und Server im nachrichtensicherheitsmodus gesichert werden. Client und Dienst werden mit Windows-Anmeldeinformationen authentifiziert.  
@@ -77,7 +77,7 @@ Dieses Szenario zeigt einen Windows Communication Foundation (WCF)-Client und Se
   
 -   Erstellen Sie mit dem Code (und Clientcode) einen eigenständigen Client.  
   
--   Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Beispiel:  
+-   Erstellen Sie einen Client, der keine Endpunktadressen definiert. Verwenden Sie stattdessen den Clientkonstruktor, der den Konfigurationsnamen als Argument verwendet. Zum Beispiel:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -117,5 +117,6 @@ Dieses Szenario zeigt einen Windows Communication Foundation (WCF)-Client und Se
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
