@@ -2,22 +2,19 @@
 title: Compileroptionen
 description: Verwendung F# Compilerbefehlszeilenoptionen zum Steuern der Kompilierung Ihrer F# apps und Bibliotheken.
 ms.date: 12/10/2018
-ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: fa639fe37ed336ad9f990e01bf2645c5a86498e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "53614492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089756"
 ---
 # <a name="compiler-options"></a>Compileroptionen
 
 In diesem Thema werden Compilerbefehlszeilenoptionen für den F#-Compiler fsc.exe beschrieben. Die Kompilierungsumgebung kann auch durch Festlegen der Projekteigenschaften gesteuert werden.
 
-
 ## <a name="compiler-options-listed-alphabetically"></a>Compileroptionen alphabetisch sortiert
 In der folgenden Tabelle werden Compileroptionen alphabetisch aufgeführt. Einige der F#-Compileroptionen ähneln den C#-Compileroptionen. Wenn dies der Fall ist, wird ein Link zum Thema für die C#-Compileroptionen zur Verfügung gestellt.
-
-
 
 |Compileroptionen|Beschreibung|
 |---------------|-----------|
@@ -60,7 +57,7 @@ In der folgenden Tabelle werden Compileroptionen alphabetisch aufgeführt. Einig
 |`--staticlink:assembly-name`|Verknüpft statistisch die angegebene Assembly und alle DLLs, auf die verwiesen wird und die von dieser Assembly abhängen. Verwenden Sie den Assemblynamen, nicht den DLL-Namen.|
 |`--subsystemversion`|Gibt die Version des Subsystems des Betriebssystems an, das von der generierten ausführbaren Datei verwendet wird. Verwenden Sie 6.02 für Windows 8.1, 6.01 für Windows 7, 6.00 für Windows Vista. Diese Option gilt nur für ausführbare Dateien, nicht für DLLs, und kann nur dann verwendet werden, wenn die Anwendung von bestimmten Sicherheitsfunktionen abhängt, die nur in bestimmten Betriebssystemversionen verfügbar sind. Wenn diese Option verwendet wird und ein Benutzer versucht, die Anwendung auf einer niedrigeren Version des Betriebssystems auszuführen, wird eine Fehlermeldung angezeigt.|
 |<code>--tailcalls[+&#124;-]</code>|Aktiviert oder deaktiviert die Verwendung der Tail-IL-Anweisung, die die Wiederverwendung des Stapelrahmens für endrekursive Funktionen verursacht. Diese Option ist standardmäßig aktiviert.|
-|<code>--target:[exe&#124;winexe&#124;library&#124;module] filename</code>|Gibt den Typ und Dateinamen des generierten kompilierten Codes an.<ul><li>`exe` weist auf eine Konsolenanwendung hin.<br /></li><li>`winexe` weist auf eine Windows-Anwendung hin, die sich von der Konsolenanwendung dadurch unterscheidet, dass für sie keine standardmäßigen Eingabe-/Ausgabestreams (stdin, stdout und stderr) definiert sind.<br /></li><li>`library` ist eine Assembly ohne Einstiegspunkt.<br /></li><li>`module` ist ein .NET Framework-Modul (.netmodule), was später mit anderen Modulen zu einer Assembly kombiniert werden kann.<br /></li><ul/>Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [ &#47;Ziel &#40;C&#35; Compileroptionen&#41;](https://msdn.microsoft.com/library/6h25dztx.aspx).|
+|<code>--target:[exe&#124;winexe&#124;library&#124;module] filename</code>|Gibt den Typ und Dateinamen des generierten kompilierten Codes an.<ul><li>`exe` bedeutet, dass eine Konsolenanwendung.<br /></li><li>`winexe` bedeutet, dass eine Windows-Anwendung, die von der Konsolenanwendung unterscheidet Sie sich, da es keine standardmäßigen Eingabe-/Ausgabestreams (Stdin, Stdout und Stderr) definiert werden.<br /></li><li>`library` ist eine Assembly ohne Einstiegspunkt.<br /></li><li>`module` ist ein .NET Framework-Modul (.netmodule), die später in eine Assembly mit anderen Modulen kombiniert werden können.<br /></li><ul/>Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [ &#47;Ziel &#40;C&#35; Compileroptionen&#41;](https://msdn.microsoft.com/library/6h25dztx.aspx).|
 |`--times`|Zeigt Zeitinformationen für die Kompilierung an.|
 |`--utf8output`|Aktiviert das Drucken der Compilerausgabe mit UTF-8-Codierung.|
 |`--warn:warning-level`|Legt eine Warnstufe (0 bis 5) fest. Der Standardwert ist 3. Jeder Warnung wird auf Grundlage ihres Schweregrads eine Stufe zugewiesen. Bei Stufe 5 werden mehr Warnungen (jedoch mit geringerem Schweregrad) als bei Stufe 1 angezeigt.<br /><br />Warnungen der Stufe 5 sind: 21 (rekursive Verwendung zur Laufzeit aktiviert), 22 (`let rec` außerhalb der Reihenfolge ausgewertet), 45 (vollständige Abstraktion) und 52 (tiefe Kopie). Alle anderen Warnungen sind Stufe 2.<br /><br />Diese Compileroption entspricht der C#-Compileroption gleichen Namens. Weitere Informationen finden Sie unter [ &#47;warnen &#40;C&#35; Compileroptionen&#41;](https://msdn.microsoft.com/library/13b90fz7.aspx).|

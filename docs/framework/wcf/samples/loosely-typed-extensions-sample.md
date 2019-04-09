@@ -2,12 +2,12 @@
 title: Beispiel zu lose typisierten Erweiterungen
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
-ms.openlocfilehash: 19d39e4a70022304262c5872636d3ea03a3b861b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22d5b2c1c7680b750d8bd26da10588e0ca9f585
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668482"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086792"
 ---
 # <a name="loosely-typed-extensions-sample"></a>Beispiel zu lose typisierten Erweiterungen
 Das Syndication-Objektmodell bietet umfangreiche Unterstützung zum Arbeiten mit Erweiterungsdaten – Informationen, die in der XML-Darstellung eines Syndication-Feeds vorhanden, jedoch nicht explizit durch Klassen wie <xref:System.ServiceModel.Syndication.SyndicationFeed> und <xref:System.ServiceModel.Syndication.SyndicationItem> verfügbar gemacht werden. Dieses Beispiel veranschaulicht die grundlegenden Techniken zum Arbeiten mit Erweiterungsdaten.  
@@ -56,13 +56,13 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
 -   Das `myAttribute`-Attribut des `<feed>`-Elements.  
   
--   `<simpleString>`-Element.  
+-   `<simpleString>` Element.  
   
--   `<DataContractExtension>`-Element.  
+-   `<DataContractExtension>` Element.  
   
--   `<XmlSerializerExtension>`-Element.  
+-   `<XmlSerializerExtension>` Element.  
   
--   `<xElementExtension>`-Element.  
+-   `<xElementExtension>` Element.  
   
 ## <a name="writing-extension-data"></a>Schreiben von Erweiterungsdaten  
  Attributerweiterungen werden erstellt, indem man der <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A>-Auflistung Einträge hinzufügt, wie im folgenden Beispielcode gezeigt.  
@@ -156,5 +156,6 @@ foreach (SyndicationElementExtension extension in feed2.ElementExtensions.Where<
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\LooselyTypedExtensions`  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Stark typisierte Erweiterungen](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)
 - [WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 42e8b5626cf30010f154e7c978708042c4e3369a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 765df4bcd3cef83e624ad8b11676696b95f7d035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715853"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089301"
 ---
 # <a name="types-of-coordinate-systems"></a>Typen von Koordinatensystemen
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] verwendet drei Koordinatensysteme: Welt, Seiten- und Gerät. Globale Koordinaten sind die Koordinaten, die zum Modellieren einer bestimmten grafikumgebung verwendet und die Koordinaten, die Sie Methoden in .NET Framework übergeben. Seitenkoordinaten beziehen sich auf das Koordinatensystem, die von einer Zeichenoberfläche, z. B. eines Formulars oder Steuerelements verwendet. Gerätekoordinaten beziehen, die von der physischen Zeichengerät, z. B. einen Bildschirm oder Blatt Papier verwendet. Wenn Sie den Aufruf vornehmen `myGraphics.DrawLine(myPen, 0, 0, 160, 80)`, die Punkte, die Sie übergeben die <xref:System.Drawing.Graphics.DrawLine%2A> Methode –`(0, 0)` und `(160, 80)`– werden in der Welt Koordinatenraum. Vor dem [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] die Zeile auf dem Bildschirm zeichnen können, die eine Sequenz von Transformationen durchlaufen die Koordinaten. Eine Transformation, wird aufgerufen, die globale Transformation, globale Koordinaten in Seitenkoordinaten konvertiert und eine andere Transformation, die genannte Seitentransformation, Seitenkoordinaten in Gerätekoordinaten.  
@@ -95,5 +95,6 @@ ms.locfileid: "57715853"
 |Gerät|(192, 48), (384, 144)|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Koordinatensysteme und Transformationen](coordinate-systems-and-transformations.md)
 - [Matrixdarstellung von Transformationen](matrix-representation-of-transformations.md)

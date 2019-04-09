@@ -1,5 +1,5 @@
 ---
-title: <disableCommitThreadStack>-Element
+title: <disableCommitThreadStack> Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/runtime/disableCommitThreadStack
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5071b2c23b25d6368c84582b76c1f8d18e2a3dff
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 08ffd6ffcb9a8fa356d486f6d2ae1113de0fa682
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257514"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106509"
 ---
 # <a name="disablecommitthreadstack-element"></a>\<DisableCommitThreadStack >-Element
 Gibt an, ob beim Starten eines Threads für den vollständigen Threadstapel ein Commit ausgeführt wird  
@@ -74,5 +74,6 @@ Gibt an, ob beim Starten eines Threads für den vollständigen Threadstapel ein 
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

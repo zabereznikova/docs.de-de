@@ -5,17 +5,16 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 711d55e46fb548787976a1f966c9fbf6dc7f12d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464956"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105325"
 ---
 # <a name="toolbar-overview"></a>Übersicht überToolBar
 <xref:System.Windows.Controls.ToolBar> -Steuerelemente sind Container für eine Gruppe von Befehlen oder Steuerelementen, die in der Regel in ihren Funktionen miteinander verbunden sind. Ein <xref:System.Windows.Controls.ToolBar> enthält in der Regel Schaltflächen, die Befehle aufrufen.  
-  
-  
+
 <a name="ToolBarControl"></a>   
 ## <a name="toolbar-control"></a>ToolBar-Steuerelement  
  Die <xref:System.Windows.Controls.ToolBar> -Steuerelement hat seinen Namen aus der Leiste Anordnung der Schaltflächen oder anderen Steuerelementen in einer einzelnen Zeile oder Spalte. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> Steuerelemente bieten einen Überlaufmechanismus, der alle Elemente platziert, die nicht auf natürliche Weise in eine größenbeschränkte passen <xref:System.Windows.Controls.ToolBar> in einen speziellen Überlaufbereich. Darüber hinaus [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> -Steuerelementen wird in der Regel mit den zugehörigen <xref:System.Windows.Controls.ToolBarTray> Steuerelement, das besonderes Layoutverhalten sowie Unterstützung für Benutzerinitiierte größenanpassung und Anordnung von Symbolleisten zu bereitstellt.  
@@ -41,6 +40,7 @@ ms.locfileid: "58464956"
  [ToolBar-Stile und -Vorlagen](toolbar-styles-and-templates.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.Primitives.ToolBarPanel>
 - <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>
 - [Formatieren von Steuerelementen in einer Symbolleiste](how-to-style-controls-on-a-toolbar.md)

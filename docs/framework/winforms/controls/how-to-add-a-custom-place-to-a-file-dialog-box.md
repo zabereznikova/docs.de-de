@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Hinzufügen eines benutzerdefinierten Speicherorts zum Dateidialogfeld'
+title: 'Vorgehensweise: Hinzufügen eines benutzerdefinierten Speicherorts zum Dialogfeld „Datei“'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - adding Custom Place to dialog box
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-ms.openlocfilehash: d9c1373a16f7d62c2933e01e513478fc6c9866d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79836dd260cb13912ccba43cfb4a0a3e0ad195fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087684"
 ---
-# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Vorgehensweise: Hinzufügen eines benutzerdefinierten Speicherorts zum Dateidialogfeld
+# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Vorgehensweise: Hinzufügen eines benutzerdefinierten Speicherorts zum Dialogfeld „Datei“
 In [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] befindet sich in den Standarddialogfeldern zum Öffnen und Schließen auf der linken Seite ein Bereich mit der Bezeichnung **Linkfavoriten**. Dieser Bereich wird als „Benutzerdefinierte Speicherorte“ bezeichnet. Die <xref:System.Windows.Forms.OpenFileDialog> und <xref:System.Windows.Forms.SaveFileDialog> Klassen können Sie Ordner zum Hinzufügen der <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> Auflistung.  
   
 > [!NOTE]
@@ -37,6 +37,7 @@ In [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] befindet sich in 
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.FileDialog>
 - <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>
 - [GUIDs von bekannten Ordnern für benutzerdefinierte Speicherorte im Dateidialogfeld](known-folder-guids-for-file-dialog-custom-places.md)

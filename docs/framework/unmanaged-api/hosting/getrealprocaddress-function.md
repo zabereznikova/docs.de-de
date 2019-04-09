@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6826ee1b94f9a1c48c19150271ebc84ac54dda25
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5d4723fbf2311316184cb77c90754d7e037badcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089581"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress-Funktion
 Ruft die Adresse der angegebenen Funktion, die aus der neuesten installierten Version der common Language Runtime (CLR) exportiert werden.  
@@ -50,7 +50,7 @@ HRESULT GetRealProcAddress (
 |Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_POINTER|`ppv` ist nicht gültig.|  
+|E_POINTER|`ppv` ist ungültig.|  
 |CLR_E_SHIM_RUNTIMEEXPORT|Die Funktion wird von der Laufzeit nicht exportiert werden.|  
   
 ## <a name="requirements"></a>Anforderungen  
@@ -63,4 +63,5 @@ HRESULT GetRealProcAddress (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Veraltete CLR-Hostingfunktionen](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

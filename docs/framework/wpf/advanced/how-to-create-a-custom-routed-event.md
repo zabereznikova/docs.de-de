@@ -8,12 +8,12 @@ helpviewer_keywords:
 - routed events [WPF], creating
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-ms.openlocfilehash: c351bec05fa8ad8438cb8521f6ab1e6277a40b1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3850875c8ca747f8709b55f8fe721d25be24304
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373399"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091472"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Routingereignisses
 Für das benutzerdefinierte Ereignis zur Unterstützung von Ereignisrouting, müssen Sie registrieren einen <xref:System.Windows.RoutedEvent> mithilfe der <xref:System.Windows.EventManager.RegisterRoutedEvent%2A> Methode. Dieses Beispiel zeigt die Grundlagen der Erstellung eines benutzerdefinierten Routingereignisses.  
@@ -35,6 +35,7 @@ Für das benutzerdefinierte Ereignis zur Unterstützung von Ereignisrouting, mü
  Ein Beispiel der Funktionsweise des Bubbling von Ereignissen finden Sie unter [Behandeln eines Routingereignisses](how-to-handle-a-routed-event.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Routingereignisse](routed-events-overview.md)
 - [Übersicht über die Eingabe](input-overview.md)
 - [Übersicht über das Erstellen von Steuerelementen](../controls/control-authoring-overview.md)
