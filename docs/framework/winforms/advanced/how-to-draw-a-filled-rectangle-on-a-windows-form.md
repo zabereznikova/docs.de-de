@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Zeichnen eines ausgefüllten Rechtecks in Windows Forms'
+title: 'Vorgehensweise: Zeichnen eines ausgefüllten Rechtecks in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - drawing rectangles
 ms.assetid: d656a93c-987d-4809-aafd-493fe17450f0
-ms.openlocfilehash: 53fab93f47c16257b5ab2e336b43c6133a31d509
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e551eacf0924c9bffa802fb5d2ba8bae7c1c3a98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716893"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072026"
 ---
-# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Vorgehensweise: Zeichnen eines ausgefüllten Rechtecks in Windows Forms
+# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Vorgehensweise: Zeichnen eines ausgefüllten Rechtecks in Windows Forms
 In diesem Beispiel zeichnet ein ausgefülltes Rechteck in einem Formular.  
   
 ## <a name="example"></a>Beispiel  
@@ -34,9 +34,10 @@ In diesem Beispiel zeichnet ein ausgefülltes Rechteck in einem Formular.
  Sie sollten immer Aufrufen <xref:System.IDisposable.Dispose%2A> auf alle Objekte, die Systemressourcen, z. B. beanspruchen <xref:System.Drawing.Brush> und <xref:System.Drawing.Graphics> Objekte.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.Graphics.FillRectangle%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
-- [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)
+- [Erste Schritte mit der Grafikprogrammierung](getting-started-with-graphics-programming.md)
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Verwenden eines Stifts zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)
+- [Verwenden eines Stiftes zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)
 - [Pinsel und gefüllte Formen in GDI+](brushes-and-filled-shapes-in-gdi.md)

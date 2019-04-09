@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: 0d8b3e476488f81e4154c876e555b3090d0287f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c092ad49f40257467245a07a6e4b9849822e1835
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076561"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit XAML
 Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine animierte Schaltfläche für die Verwendung in einer Windows Presentation Foundation (WPF)-Anwendung zu erstellen. In dieser exemplarischen Vorgehensweise verwendet und eine Vorlage zum Erstellen einer benutzerdefinierten Schaltflächenressource, die Wiederverwendung von Code und die Trennung von aus der Schaltflächendeklaration ermöglicht. In dieser exemplarischen Vorgehensweise wird ausschließlich in geschrieben [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -432,6 +432,7 @@ Das Ziel dieser exemplarischen Vorgehensweise werden erfahren, wie Sie eine anim
 -   Anpassen des Verhaltens für die Schaltflächen als Reaktion auf Benutzeraktionen (z. B. <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, und <xref:System.Windows.Controls.Primitives.ButtonBase.Click>), die Animationseffekte enthalten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen einer Schaltfläche mit Microsoft Expression Blend](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
 - [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
 - [Übersicht über Animationen](../graphics-multimedia/animation-overview.md)

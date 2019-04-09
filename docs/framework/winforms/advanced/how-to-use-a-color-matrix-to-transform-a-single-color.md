@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: f19039c69f27f78e838ea1a891690451af3f0cdc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 66ddd85d4f841edf9cabf338fbb66a8e2dda491a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075163"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Vorgehensweise: Verwenden einer Farbmatrix zum Transformieren einer Farbe
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Stellt die <xref:System.Drawing.Image> und <xref:System.Drawing.Bitmap> Klassen zum Speichern und Bearbeiten von Bildern. <xref:System.Drawing.Image> und <xref:System.Drawing.Bitmap> Objekte speichern die Farbe jedes Pixels als 32-Bit-Zahl: jeweils 8 Bit für Rot, Grün, Blau und Alpha. Jede der vier Komponenten ist es sich um eine Zahl zwischen 0 und 255, wobei 0 für keine Intensität und 255, die vollständigen Intensität darstellt. Die alpha-Komponente gibt die Transparenz der Farbe an: 0 vollständig transparent ist, und 255 vollständig deckend ist.  
@@ -61,8 +61,9 @@ ms.locfileid: "57705596"
  [!code-vb[System.Drawing.RecoloringImages#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, einen Parameter des <xref:System.Windows.Forms.Control.Paint>-Ereignishandlers.  
+ Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Neufärben von Bildern](recoloring-images.md)
+
+- [Neueinfärben von Bildern](recoloring-images.md)
 - [Koordinatensysteme und Transformationen](coordinate-systems-and-transformations.md)
