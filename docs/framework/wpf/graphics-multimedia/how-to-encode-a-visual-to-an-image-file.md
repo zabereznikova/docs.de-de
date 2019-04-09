@@ -9,12 +9,12 @@ helpviewer_keywords:
 - encoding image formats [WPF]
 - visuals [WPF], encoding to an image file
 ms.assetid: 2036385b-ea47-4d54-8027-5797f52c8149
-ms.openlocfilehash: 2d5da0bde243128bc0d7aa29bf865ca9bfbd1d9a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 872c19af0cfcf4fc980643c37e9a6028457c03b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096783"
 ---
 # <a name="how-to-encode-a-visual-to-an-image-file"></a>Vorgehensweise: Codieren eines Visual-Objekts in einer Bilddatei
 In diesem Beispiel wird veranschaulicht, wie zum Codieren einer <xref:System.Windows.Media.Visual> Objekt in ein Bild mit einer <xref:System.Windows.Media.Imaging.RenderTargetBitmap> und ein <xref:System.Windows.Media.Imaging.PngBitmapEncoder>.  
@@ -28,6 +28,7 @@ In diesem Beispiel wird veranschaulicht, wie zum Codieren einer <xref:System.Win
  Ein <xref:System.Windows.Media.Imaging.PngBitmapEncoder> verwendet wurde, in diesem Beispiel jedoch eine der abgeleiteten <xref:System.Windows.Media.Imaging.BitmapEncoder> Objekte hätten verwendet werden können, erstellen Sie die Image-Datei.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.DrawingContext>
 - [Übersicht über die Bildverarbeitung](imaging-overview.md)
 - [Übersicht über Zeichnungsobjekte](drawing-objects-overview.md)

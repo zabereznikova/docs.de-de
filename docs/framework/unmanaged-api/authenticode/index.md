@@ -4,6 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 408219307015d5c39cb581b3884ed9810f4c0566
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216345"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (Referenz zur nicht verwalteten API)
 Unterstützt das Authenticode XrML-Lizenterstellungs- und Überprüfungsmodul.  
@@ -13,10 +19,10 @@ Unterstützt das Authenticode XrML-Lizenterstellungs- und Überprüfungsmodul.
  Ruft den SHA-1-Hash des öffentlichen Schlüssels ab, der dem privaten Schlüssel zugeordnet wurde, der beim Signieren des festgelegten Zertifikats zur Verwendung kam.  
   
  [_AxlPublicKeyBlobToPublicKeyToken-Funktion](../../../../docs/framework/unmanaged-api/authenticode/axlpublickeyblobtopublickeytoken-function.md)  
- Berechnet den starken Namen des öffentlichen Schlüsseltokens aus einem CSP PUBLICKEYBLOB-Format.  
+ Berechnet das öffentliche Schlüsseltoken für einen starken Namen aus einem CSP PUBLICKEYBLOB-Format.  
   
  [_AxlRSAKeyValueToPublicKeyToken-Funktion](../../../../docs/framework/unmanaged-api/authenticode/axlrsakeyvaluetopublickeytoken-function.md)  
- Konvertiert ein Modulo und einen Exponenten in ein Token für den öffentlichen Schlüssel für einen starken Namen.  
+ Konvertiert einen Modulo und Exponenten in einen starken Namen des öffentlichen Schlüsseltokens.  
   
  [CertFreeAuthenticodeSignerInfo-Funktion](../../../../docs/framework/unmanaged-api/authenticode/certfreeauthenticodesignerinfo-function.md)  
  Macht Ressourcen frei, die der AXL_AUTHENTICODE_SIGNER_INFO-Struktur zugewiesen sind.  
@@ -31,10 +37,11 @@ Unterstützt das Authenticode XrML-Lizenterstellungs- und Überprüfungsmodul.
  Überprüft die Gültigkeit einer Authenticode-XrML-Lizenz.  
   
  [AXL_AUTHENTICODE_SIGNER_INFO-Struktur](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-signer-info-structure.md)  
- Definiert Informationen zum Signaturgeber für Authenticode.  
+ Definiert die Authenticode-Informationen des Signaturgebers.  
   
  [AXL_AUTHENTICODE_TIMESTAMPER_INFO-Struktur](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)  
- Definiert Informationen zum Ersteller des Zeitstempels für Authenticode.  
+ Definiert die Authenticode-Informationen des Zeitstempelgebers.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Referenz zur nicht verwalteten API](../../../../docs/framework/unmanaged-api/index.md)

@@ -1,5 +1,5 @@
 ---
-title: <add>-Element für <sharedListeners>
+title: <add> Element für <sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <add> element for <sharedListeners>
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
-ms.openlocfilehash: cbce115c6a485c5642a60528614480324e3e5665
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e7934ed5e71005cfd28271298ff6ce1eb8829a0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274021"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095632"
 ---
 # <a name="add-element-for-sharedlisteners"></a>\<Hinzufügen >-Element für \<SharedListeners >
 Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners` eine Sammlung von Listenern, die von jedem ist [ \<Quelle >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) oder [ \<Ablaufverfolgung >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md) verweisen können.  Standardmäßig werden von Listenern in der `sharedListeners` Auflistung befinden sich keine `Listeners` Auflistung. Sie müssen hinzugefügt werden, anhand des Namens der [ \<Quelle >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md) oder [ \<Ablaufverfolgung >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md). Es ist nicht möglich, um die Listener in der `sharedListeners` Auflistung im Code zur Laufzeit.  
@@ -80,7 +80,7 @@ Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners` 
  Dieses Element kann in der Computerkonfigurationsdatei (Machine.config) und der Anwendungskonfigurationsdatei verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie Sie mit `<add>` hinzuzufügenden Elemente der <xref:System.Diagnostics.TextWriterTraceListener> `textListener` auf die `sharedListeners` Auflistung.   `textListener` wurde anhand des Namens der `Listeners` Auflistung für die Ablaufverfolgungsquelle `TraceSourceApp`. Die `textListener` -Listener schreibt die Ausgabe der Ablaufverfolgung in die Datei myListener.log.  
+ Das folgende Beispiel zeigt, wie Sie mit `<add>` hinzuzufügenden Elemente der <xref:System.Diagnostics.TextWriterTraceListener>`textListener` auf die `sharedListeners` Auflistung.   `textListener` wurde anhand des Namens der `Listeners` Auflistung für die Ablaufverfolgungsquelle `TraceSourceApp`. Die `textListener` -Listener schreibt die Ausgabe der Ablaufverfolgung in die Datei myListener.log.  
   
 ```xml  
 <configuration>  
@@ -109,7 +109,8 @@ Fügt einen Listener zu der `sharedListeners`-Sammlung hinzu. `sharedListeners` 
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
-- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [Trace Listeners (Ablaufverfolgungslistener)](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Ablaufverfolgungslistener](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

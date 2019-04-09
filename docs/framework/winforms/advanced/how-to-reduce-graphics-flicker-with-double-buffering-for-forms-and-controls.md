@@ -8,12 +8,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - graphics [Windows Forms], reducing double-buffered flicker
 ms.assetid: 91083d3a-653f-4f15-a467-0f37b2aa39d6
-ms.openlocfilehash: 95f8bdd9c30533b35782971459bad887e145adfe
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ef05b72b33d3f28d1811389dfae65554a1567d43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713358"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096952"
 ---
 # <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>Vorgehensweise: Reduzieren von Grafikflimmern mit doppelter Pufferung für Formulare und Steuerelemente
 Bei der doppelten Pufferung werden Flimmerprobleme, die durch mehrere Zeichenoperationen entstehen, mithilfe eines Arbeitsspeicherpuffers behoben. Wenn die doppelte Pufferung aktiviert ist, werden alle Zeichenoperationen anstelle der Zeichenoberfläche auf dem Bildschirm zunächst in einen Arbeitsspeicherpuffer gerendert. Nachdem alle Zeichenoperationen abgeschlossen sind, wird der Arbeitsspeicherpuffer direkt in die damit verbundene Zeichenoberfläche kopiert. Da auf dem Bildschirm nur eine Grafikoperation ausgeführt wird, wird die durch komplexe Zeichenoperationen ausgelöste Bildflimmern beseitigt. Für die meisten Anwendungen, die von bereitgestellten standardmäßige doppelte Pufferung der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] bieten die besten Ergebnisse. Standardmäßigen Windows Forms-Steuerelemente sind doppelte standardmäßig gepuffert. Sie können standardmäßige doppelte Pufferung in Ihren Formularen und Steuerelementen auf zwei Arten erstellt. Können Sie entweder die <xref:System.Windows.Forms.Control.DoubleBuffered%2A> Eigenschaft `true`, oder Sie rufen die <xref:System.Windows.Forms.Control.SetStyle%2A> Methode zum Festlegen der <xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer> flag auf `true`. Beide Methoden werden standardmäßige doppelte Pufferung für das Formular oder Steuerelement zu aktivieren und Bereitstellen flimmerfreier Grafik-Rendering. Aufrufen der <xref:System.Windows.Forms.Control.SetStyle%2A> Methode wird empfohlen, nur für benutzerdefinierte Steuerelemente, die für die Sie alle wiedergebenden Code geschrieben haben.  
@@ -35,6 +35,7 @@ Bei der doppelten Pufferung werden Flimmerprobleme, die durch mehrere Zeichenope
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#32)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.Control.DoubleBuffered%2A>
 - <xref:System.Windows.Forms.Control.SetStyle%2A>
 - [Doppelt gepufferte Grafiken](double-buffered-graphics.md)
