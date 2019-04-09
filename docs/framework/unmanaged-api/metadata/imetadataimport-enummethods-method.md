@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c6237951b7fab013a32a7e717215cacdbe1125b1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bab625b8415183b9cf90c35cba140c4d28095805
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493705"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076873"
 ---
 # <a name="imetadataimportenummethods-method"></a>IMetaDataImport::EnumMethods-Methode
 Zählt MethodDef-Token auf, die Methoden des angegebenen Typs darstellen.  
@@ -72,5 +72,6 @@ HRESULT EnumMethods (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IMetaDataImport-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
