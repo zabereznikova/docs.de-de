@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9cf5d1c2e08f18c08273d6c7b34446a3827743b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079357"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Exemplarische Vorgehensweise: Formatieren von WPF-Inhalt
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie eine Formatvorlage auf ein WPF-Steuerelement (Windows Presentation Foundation) angewendet wird, das in einem Windows Form-Objekt gehostet wird.
@@ -72,7 +72,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie eine Formatvor
   
 3.  Der Smarttagbereich für `elementHost1`, klicken Sie auf **gehosteten Inhalt bearbeiten** aus der Dropdown-Liste.  
   
-     `UserControl1` wird im [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] geöffnet.  
+     `UserControl1` wird geöffnet, der [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
 4.  Fügen Sie den folgenden XAML-Code in der XAML-Ansicht hinter dem `<UserControl>`-Starttag ein.  
   
@@ -150,6 +150,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie eine Formatvor
 5.  Klicken Sie auf die Schaltflächen "OK" und "Cancel", und beobachten Sie die Unterschiede.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Migration und Interoperabilität](../../wpf/advanced/migration-and-interoperability.md)

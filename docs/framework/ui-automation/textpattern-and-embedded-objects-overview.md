@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 03316ae7ecc6dab6d9f3d4856f396e4a05fd3293
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 136073b3ef1c5463ff078efd7c173b7446f0ca48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679423"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077914"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Übersicht über TextPattern und eingebettete Objekte
 > [!NOTE]
@@ -75,7 +75,7 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Gibt die Zeichenfolge `The URL https://www.microsoft.com is embedded in text` zurück.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Gibt das den Textbereich einschließende, innerste <xref:System.Windows.Automation.AutomationElement> zurück, in diesem Fall das <xref:System.Windows.Automation.AutomationElement> , das den Textanbieter darstellt.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Gibt ein <xref:System.Windows.Automation.AutomationElement> zurück, das das Linksteuerelement darstellt.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen `GetChildren` -Methode zurückgegebene Objekt ist.|Gibt den Bereich zurück, "https://www.microsoft.com".|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> wo <xref:System.Windows.Automation.AutomationElement> ist das Objekt zurückgegeben, die von der vorherigen `GetChildren` Methode.|Gibt den Bereich zurück, "https://www.microsoft.com".|  
   
  **Beispiel 2: Ein Textbereich, der einen eingebetteten Textlink nur teilweise enthält**  
   
@@ -87,7 +87,7 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Gibt das den Textbereich einschließende, innerste <xref:System.Windows.Automation.AutomationElement> zurück, in diesem Fall das Linksteuerelement.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Gibt `null` zurück, da der Textbereich nicht die gesamte URL-Zeichenfolge umfasst.|  
   
-**Beispiel 3: ein Textbereich, der den Inhalt eines Textcontainers nur teilweise enthält. Der Textcontainer enthält einen eingebetteten Textlink, der nicht Teil des Textbereichs ist.**  
+**Beispiel 3: Ein Textbereich, der den Inhalt eines Textcontainers nur teilweise enthält. Der Textcontainer enthält einen eingebetteten Textlink, der nicht im Textbereich enthalten ist.**  
   
 `{The URL} [https://www.microsoft.com](https://www.microsoft.com) is embedded in text.`
   
@@ -108,9 +108,9 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Gibt die Zeichenfolge „Das Bild ist in den Text eingebettet“ zurück. Ein dem Bild zugeordneter Alternativtext (ALT) kann nicht im Textstream miteingeschlossen werden.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Gibt das den Textbereich einschließende, innerste <xref:System.Windows.Automation.AutomationElement> zurück, in diesem Fall das <xref:System.Windows.Automation.AutomationElement> , das den Textanbieter darstellt.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Gibt ein <xref:System.Windows.Automation.AutomationElement> zurück, das das Bildsteuerelement darstellt.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> -Methode zurückgegebene Objekt ist.|Gibt den degenerierten Bereich zurück, "![Beispiel für eingebettetes Bild](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")".|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> wo <xref:System.Windows.Automation.AutomationElement> ist das Objekt zurückgegeben, die von der vorherigen <xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A> Methode.|Gibt den degenerierten Bereich zurück, "![Beispiel für eingebettetes Bild](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample")".|  
   
- **Beispiel 2: ein Textbereich, der den Inhalt eines Textcontainers nur teilweise enthält. Der Textcontainer enthält ein eingebettetes Bild, das nicht Teil des Textbereichs ist.**  
+ **Beispiel 2: Ein Textbereich, der den Inhalt eines Textcontainers nur teilweise enthält. Der Textcontainer enthält ein eingebettetes Bild, das nicht im Textbereich enthalten ist.**  
   
  {Das Bild} ![Beispiel für eingebettetes Bild](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample") ist in den Text eingebettet.  
   
@@ -135,20 +135,21 @@ Beispiele für die Anpassung eines Textbereichs für Move() und ExpandToEnclosin
   
 |Aufgerufene Methode|Ergebnis|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.GridPattern.GetItem%2A> mit den Parametern (0,0)|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das den Inhalt der Tabellenzelle darstellt; in diesem Fall ist das Element ein Textsteuerelement.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen `GetItem` -Methode zurückgegebene Objekt ist.|Gibt den Bereich, der das Image umfasst ![Beispiel für eingebettetes Bild](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> für das von der vorherigen `RangeFromChild` -Methode zurückgegebene Objekt.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das die Tabellenzelle darstellt; in diesem Fall ist das Element ein Textsteuerelement, das TableItemPattern unterstützt.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> für das von der vorherigen `GetEnclosingElement` -Methode zurückgegebene Objekt.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das die Tabelle darstellt.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> für das von der vorherigen `GetEnclosingElement` -Methode zurückgegebene Objekt.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das den Textanbieter darstellt.|  
+|<xref:System.Windows.Automation.GridPattern.GetItem%2A> mit Parametern (0,0)|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das den Inhalt der Tabellenzelle darstellt; in diesem Fall ist das Element ein Textsteuerelement.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> wo <xref:System.Windows.Automation.AutomationElement> ist das Objekt zurückgegeben, die von der vorherigen `GetItem` Methode.|Gibt den Bereich, der das Image umfasst ![Beispiel für eingebettetes Bild](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> für das Objekt zurückgegeben, die von der vorherigen `RangeFromChild` Methode.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das die Tabellenzelle darstellt; in diesem Fall ist das Element ein Textsteuerelement, das TableItemPattern unterstützt.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> für das Objekt zurückgegeben, die von der vorherigen `GetEnclosingElement` Methode.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das die Tabelle darstellt.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> für das Objekt zurückgegeben, die von der vorherigen `GetEnclosingElement` Methode.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das den Textanbieter darstellt.|  
   
  **Beispiel 2: Abrufen des Textinhalts einer Zelle**  
   
 |Aufgerufene Methode|Ergebnis|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.GridPattern.GetItem%2A> mit den Parametern {1,1}.|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das den Inhalt der Tabellenzelle darstellt; in diesem Fall ist das Element ein Textsteuerelement.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , wobei <xref:System.Windows.Automation.AutomationElement> das von der vorherigen `GetItem` -Methode zurückgegebene Objekt ist.|Gibt „Y“ zurück.|  
+|<xref:System.Windows.Automation.GridPattern.GetItem%2A> mit den Parametern (1,1).|Gibt das <xref:System.Windows.Automation.AutomationElement> zurück, das den Inhalt der Tabellenzelle darstellt; in diesem Fall ist das Element ein Textsteuerelement.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> wo <xref:System.Windows.Automation.AutomationElement> ist das Objekt zurückgegeben, die von der vorherigen `GetItem` Methode.|Gibt „Y“ zurück.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Automation.TextPattern>
 - <xref:System.Windows.Automation.Text.TextPatternRange>
 - <xref:System.Windows.Automation.Provider.ITextProvider>

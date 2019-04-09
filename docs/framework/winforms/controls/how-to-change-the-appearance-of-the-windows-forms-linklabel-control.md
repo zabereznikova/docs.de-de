@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ändern der Darstellung des LinkLabel-Steuerelement von Windows Forms'
+title: 'Vorgehensweise: Ändern der Darstellung des LinkLabel-Steuerelements in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: 451faf04e3a51e7dbcb992feb3f38025894be631
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: be2f6e8e10d9f9b23b4f57fa696f1fb88c4726c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105026"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Vorgehensweise: Ändern der Darstellung des LinkLabel-Steuerelement von Windows Forms
+# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Vorgehensweise: Ändern der Darstellung des LinkLabel-Steuerelements in Windows Forms
 Sie können den Text durch Ändern der <xref:System.Windows.Forms.LinkLabel> Steuerelement an eine Vielzahl von Zwecken anpassen. Beispielsweise ist es üblich, zu verdeutlichen, dass Text geklickt werden kann, durch Festlegen des Texts in einer bestimmten Farbe mit einer Unterstreichung angezeigt. Nachdem der Benutzer den Text klickt, ändert sich die Farbe in eine andere Farbe. Um dieses Verhalten zu steuern, können Sie fünf verschiedene Eigenschaften festlegen: die <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, und <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> Eigenschaften.  
   
 ### <a name="to-change-the-appearance-of-a-linklabel-control"></a>So ändern Sie die Darstellung des LinkLabel-Steuerelement  
@@ -122,10 +122,11 @@ Sie können den Text durch Ändern der <xref:System.Windows.Forms.LinkLabel> Ste
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
 - [Übersicht über das LinkLabel-Steuerelement](linklabel-control-overview-windows-forms.md)
-- [Vorgehensweise: Link zu einem Objekt oder Webseite mit dem LinkLabel-Steuerelement in Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Vorgehensweise: Verknüpfen eines Objekts oder einer Webseite mit dem LinkLabel-Steuerelement in Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
 - [LinkLabel-Steuerelement](linklabel-control-windows-forms.md)

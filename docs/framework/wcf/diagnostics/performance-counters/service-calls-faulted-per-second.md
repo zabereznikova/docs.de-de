@@ -2,12 +2,12 @@
 title: 'Dienst: Calls Faulted Per Second'
 ms.date: 03/30/2017
 ms.assetid: 94247356-2b29-4b50-b639-91ca8c1cf3a9
-ms.openlocfilehash: c9af93c7cc0f07ced4435c98fd307e7a7976687f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 595b623d70bad82ea39ab3ef93fb5fd499268ff2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580082"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088475"
 ---
 # <a name="service-calls-faulted-per-second"></a>Dienst: Calls Faulted Per Second
 Indikatorname: Fehlerhafte Aufrufe pro Sekunde.  
@@ -22,4 +22,5 @@ Indikatorname: Fehlerhafte Aufrufe pro Sekunde.
  In Windows Communication Foundation (WCF)-Anwendungen kommunizieren Dienstmethoden Verarbeitung Fehlerinformationen mit SOAP-Fehlernachrichten. SOAP-Fehler sind Meldungstypen, die in den Metadaten für einen Dienstvorgang enthalten sind und daher einen Fehlervertrag erstellen, den Clients nutzen können, um ihre Ausführung robuster oder interaktiver zu gestalten. Da SOAP-Fehler gegenüber Clients in XML-Form ausgedrückt werden, sind sie sehr interoperabel.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

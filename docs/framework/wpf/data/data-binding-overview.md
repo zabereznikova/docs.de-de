@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: a11118f0fad98d7c719951b97d7ad2b431e7af6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081267"
 ---
 # <a name="data-binding-overview"></a>Übersicht über die Datenbindung
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] die Datenbindung bietet eine einfache und einheitliche Möglichkeit für Anwendungen und mit Daten interagieren. Elemente können an Daten aus einer Vielzahl von Datenquellen in Form von [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Objekten und [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] gebunden werden. <xref:System.Windows.Controls.ContentControl>s wie z. B. <xref:System.Windows.Controls.Button> und <xref:System.Windows.Controls.ItemsControl>s wie z. B. <xref:System.Windows.Controls.ListBox> und <xref:System.Windows.Controls.ListView> verfügen über integrierte Funktionen, um flexible Formatierung von einzelnen Datenelementen oder Auflistungen von Datenelementen zu aktivieren. Sortier-, Filter- und Gruppenansichten können übergreifend für die Daten generiert werden.  
@@ -23,8 +23,7 @@ ms.locfileid: "59055351"
  Die Datenbindungsfunktionen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bieten gegenüber herkömmlichen Modellen einige Vorteile. Dazu zählen eine Reihe von Eigenschaften, die Datenbindung grundsätzlich unterstützen, eine flexible Darstellung von Daten auf einer [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] sowie die klare Trennung zwischen Geschäftslogik und [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
  In diesem Thema wird zunächst erläutert die grundlegenden Konzepte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Datenbindung und anschließend wird die Verwendung der <xref:System.Windows.Data.Binding> -Klasse und anderen Features der Datenbindung.  
-  
-  
+
 <a name="what_is_data_binding"></a>   
 ## <a name="what-is-data-binding"></a>Was ist Datenbindung?  
  Durch Datenbindung wird eine Verbindung zwischen der [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] der Anwendung und der Geschäftslogik hergestellt. Wenn die Bindung die ordnungsgemäßen Einstellungen aufweist und die Daten die richtigen Benachrichtigungen bereitstellen, ändern sich die an die Daten gebundenen Elemente automatisch bei jeder Änderung des Werts der Daten, sodass die Änderungen entsprechend wiedergegeben werden. Datenbindung kann auch bedeuten, dass bei einer Änderung der äußeren Darstellung von Daten in einem Element die zugrunde liegenden Daten automatisch aktualisiert werden können, um die Änderung wiederzugeben. Z. B., wenn der Benutzer den Wert in bearbeitet ein <xref:System.Windows.Controls.TextBox> Element, das zugrunde liegende Datenwert wird automatisch aktualisiert, um diese Änderung zu übernehmen.  
@@ -232,8 +231,7 @@ ms.locfileid: "59055351"
 <a name="collection_views"></a>   
 ### <a name="collection-views"></a>Auflistungsansichten  
  Sobald Ihre <xref:System.Windows.Controls.ItemsControl> gebunden an eine datenauflistung, Sie sollten zu sortieren, filtern oder Gruppieren der Daten ist. Zu diesem Zweck verwenden Sie Auflistungsansichten, bei denen Klassen handelt, implementieren die <xref:System.ComponentModel.ICollectionView> Schnittstelle.  
-  
-  
+
 #### <a name="what-are-collection-views"></a>Was sind Auflistungsansichten?  
  Eine Auflistungsansicht fungiert als Ebene über der Bindungsquellauflistung, in der Sie mit Sortier-, Filter- und Gruppierungsabfragen navigieren und die jeweilige Quellauflistung anzeigen können, ohne die zugrunde liegende Quellauflistung selbst ändern zu müssen. Eine Auflistungsansicht stellt außerdem einen Zeiger auf das aktuelle Element in der Auflistung zur Verfügung. Wenn die quellauflistung implementiert die <xref:System.Collections.Specialized.INotifyCollectionChanged> Schnittstelle, die Änderungen, die ausgelöst wird, indem die <xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged> Ereignis an die Ansichten weitergegeben werden.  
   
@@ -430,6 +428,7 @@ ms.locfileid: "59055351"
  Sie können die angefügte Eigenschaft festlegen <xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType> für ein Objekt Datenbindung, um Informationen über den Status einer bestimmten Bindung zu erhalten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [Neues in WPF Version 4.5](../getting-started/whats-new.md)
 - [Binden an die Ergebnisse einer LINQ-Abfrage](how-to-bind-to-the-results-of-a-linq-query.md)

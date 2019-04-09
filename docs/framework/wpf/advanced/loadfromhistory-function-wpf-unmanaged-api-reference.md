@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: d037c062-a911-4949-b251-ccd3e48b1d17
-ms.openlocfilehash: 4fc083313c99b1b93db380bfbf6ddeacbc784dcb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a4480d54390aea2771e2939b0a0825f6c49c3564
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487407"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084960"
 ---
 # <a name="loadfromhistory-function-wpf-unmanaged-api-reference"></a>LoadFromHistory-Funktion (WPF nicht verwaltete API-Referenz)
 Diese API unterstützt die Infrastruktur von Windows Presentation Foundation (WPF) und nicht direkt aus Ihrem Code verwendet werden soll.  
@@ -45,7 +45,8 @@ HRESULT LoadFromHistory_export(
   
  In .NET Framework 4 und höher: PresentationHost_v0400.dll  
   
- **.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **.NET Framework-Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WPF – Referenz zur nicht verwalteten API](wpf-unmanaged-api-reference.md)

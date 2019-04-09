@@ -2,12 +2,12 @@
 title: <secureConversationAuthentication> von <serviceCredential>
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
-ms.openlocfilehash: 13e9312e4c4eade003fec77909a743009aa9bca7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f35392b91d047c46e65ce433ef544b86cf6c88c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278524"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083698"
 ---
 # <a name="secureconversationauthentication-of-servicecredential"></a>\<SecureConversationAuthentication > von \<ServiceCredential >
 Gibt die Einstellungen für einen sicheren Konversationsdienst an.  
@@ -47,6 +47,7 @@ Gibt die Einstellungen für einen sicheren Konversationsdienst an.
  Verwenden Sie das Konfigurationselement, um eine Liste bekannter Anspruchstypen für die Serialisierung der SCT-Cookies (Security Context Token) und einen Encoder zum Verschlüsseln und Sichern der Cookieinformationen anzugeben. Weitere Informationen zu SCT finden Sie unter <xref:System.ServiceModel.Security.SecureConversationServiceCredential>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.SecureConversationServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.SecureConversationAuthentication%2A>
 - <xref:System.ServiceModel.Description.ServiceCredentials.SecureConversationAuthentication%2A>

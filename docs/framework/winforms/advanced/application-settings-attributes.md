@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: cfbaac8ad9a8576d076ed34059fb62e9e0a91ebc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f945d8e6918c271eeb5fdf3cf9c357b1c2bbca66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714657"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079642"
 ---
 # <a name="application-settings-attributes"></a>Attribute für Anwendungseinstellungen
 Architektur der Anwendungseinstellungen enthält viele Attribute, die entweder auf die Anwendungen Einstellungen-Wrapperklasse oder ihre individuellen Eigenschaften angewendet werden können. Diese Attribute werden zur Laufzeit durch die Einstellungen Anwendungsstruktur, häufig speziell der Einstellungsanbieter, untersucht, um anzupassen, die funktioniert auf die angegebenen Anforderungen von den benutzerdefinierten Wrapper.  
@@ -38,6 +38,7 @@ Architektur der Anwendungseinstellungen enthält viele Attribute, die entweder a
  *Klasse* gibt an, dass das Attribut nur auf eine Wrapperklasse für Anwendungseinstellungen angewendet werden kann. *Eigenschaft* gibt an, dass das Attribut nur Einstellungseigenschaften angewendet werden kann. *Beide* gibt an, dass das Attribut auf beiden Ebenen angewendet werden kann.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - [Architektur der Anwendungseinstellungen](application-settings-architecture.md)

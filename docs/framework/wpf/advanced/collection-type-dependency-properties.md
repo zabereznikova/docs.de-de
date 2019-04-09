@@ -10,18 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: a2a664f0672f4585649cebad6e62635125db0983
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9ce0b70bfdd70b47857167ff14e62ed2bbda569d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354894"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077458"
 ---
 # <a name="collection-type-dependency-properties"></a>Abhängigkeitseigenschaften vom Auflistungstyp
 Dieses Thema enthält einen Leitfaden und empfohlene Muster zur Implementierung einer Abhängigkeitseigenschaft für Eigenschaften vom Auflistungstyp.  
-  
- 
-  
+
 <a name="implementing"></a>   
 ## <a name="implementing-a-collection-type-dependency-property"></a>Implementieren einer Abhängigkeitseigenschaft vom Auflistungstyp  
  Für eine Abhängigkeitseigenschaft im Allgemeinen Implementierung, die Sie ausführen, wird Sie definieren eine [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Eigenschaftenwrapper, in dem diese Eigenschaft basiert auf einer <xref:System.Windows.DependencyProperty> -Bezeichner statt ein Feld oder anderes Konstrukt. Folgen Sie diesem Muster auch bei der Implementierung einer Eigenschaft vom Auflistungstyp. Eine Eigenschaft vom Auflistungstyp führt jedoch komplexer, das Muster, wenn der Typ, der in der Auflistung enthalten ist, die selbst ist ein <xref:System.Windows.DependencyObject> oder <xref:System.Windows.Freezable> abgeleitete Klasse.  
@@ -57,9 +55,10 @@ Dieses Thema enthält einen Leitfaden und empfohlene Muster zur Implementierung 
  Um die Bindung von untergeordneten Eigenschaften in einer Auflistung zu ermöglichen, erstellen Sie die Auflistungseigenschaft als Typ <xref:System.Windows.FreezableCollection%601>, mit einer typeinschränkung für diese Sammlung in einen <xref:System.Windows.DependencyObject> abgeleitete Klasse.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.FreezableCollection%601>
 - [XAML- und benutzerdefinierte Klassen für WPF](xaml-and-custom-classes-for-wpf.md)
-- [Übersicht zur Datenbindung](../data/data-binding-overview.md)
+- [Übersicht über die Datenbindung](../data/data-binding-overview.md)
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
 - [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)
 - [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md)

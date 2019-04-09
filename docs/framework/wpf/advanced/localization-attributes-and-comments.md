@@ -5,18 +5,16 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 214d2cf369a62f5565ef4b89fd658f6bec4b2fdc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4e4c4891a905a5e4458ad5fc21a512c1dfe6f74e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092915"
 ---
 # <a name="localization-attributes-and-comments"></a>Lokalisierungsattribute und -kommentare
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Lokalisierungskommentare sind Eigenschaften innerhalb des [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]-Quellcodes, die vom Entwickler verfügbar gemacht werden um Regeln und Hinweise für die Lokalisierung bereitzustellen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Lokalisierungkommentare enthalten zwei Arten von Informationen: Lokalisierbarkeitsattribute und formfreie Lokalisierungskommentare. Lokalisierbarkeitsattribute werden von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Lokalisierungs-API verwendet, um anzugeben, welche Ressourcen lokalisiert werden sollen. Formfreie Kommentare umfassen alle Informationen, die der Anwendungsentwickler beinhaltet haben möchte.  
-  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -Lokalisierungskommentare sind Eigenschaften innerhalb [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] Quellcodes, die vom Entwickler, um Regeln und Hinweise für die Lokalisierung bereitzustellen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -lokalisierungkommentare enthalten zwei Arten von Informationen: Lokalisierbarkeitsattribute und formfreie Lokalisierungskommentare. Lokalisierbarkeitsattribute werden von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Lokalisierungs-API verwendet, um anzugeben, welche Ressourcen lokalisiert werden sollen. Formfreie Kommentare umfassen alle Informationen, die der Anwendungsentwickler beinhaltet haben möchte.  
 
-  
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>Lokalisierungskommentare  
  Wenn Entwickler von Markupanwendungen Anforderungen an bestimmte Elemente in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] stellen (wie Einschränkungen hinsichtlich Textlänge, Schriftfamilie oder Schriftgrad), können Sie dem Lokalisierungsexperten diese Informationen über Kommentare im [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]-Code mitteilen. Das Hinzufügen von Kommentaren zu Quellcode funktioniert wie folgt:  
@@ -90,7 +88,7 @@ ms.locfileid: "57377099"
   
 |Kategorie|Bedeutung|  
 |--------------|-------------|  
-|Keine|Der Zielwert besitzt keine definierte Kategorie.|  
+|Keiner|Der Zielwert besitzt keine definierte Kategorie.|  
 |Inherit|Der Zielwert erbt seine Kategorie von seinem übergeordneten Element.|  
 |Ignorieren|Der Zielwert wird im Lokalisierungsprozess ignoriert. Ignore wirkt sich nur auf den aktuellen Wert aus. Untergeordnete Knoten werden nicht beeinflusst.|  
 |NeverLocalize|Der aktuelle Wert kann nicht lokalisiert werden. Diese Kategorie wird von den untergeordneten Elementen eines Elements geerbt.|  
@@ -100,6 +98,7 @@ ms.locfileid: "57377099"
  Localization.Comments enthält formfreie Zeichenfolgen, die den Zielwert betreffen. Anwendungsentwickler können Informationen hinzufügen, um Lokalisierungsexperten Hinweise zur Übersetzung des Anwendungstexts zu geben. Das Format der Kommentare kann jede Zeichenfolge sein, die von „()“ umgeben ist. Verwenden Sie '\\' als Escapezeichen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Globalisierung für WPF](globalization-for-wpf.md)
 - [Verwenden des automatischen Layouts zum Erstellen einer Schaltfläche](how-to-use-automatic-layout-to-create-a-button.md)
 - [Verwenden eines Rasters für automatisches Layout](how-to-use-a-grid-for-automatic-layout.md)

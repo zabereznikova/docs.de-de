@@ -6,12 +6,12 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: cd143b55190ce398cc33e57a832ae85aabc36c41
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f969e13ba50c2aadd170bdb28716213056d62cad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352697"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100118"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Exemplarische Vorgehensweise: Erstellen einer Schaltfläche mit Microsoft Expression Blend
 Diese exemplarische Vorgehensweise führt Sie durch den Prozess der Erstellung einer [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] benutzerdefinierte Schaltfläche mit Microsoft Expression Blend.  
@@ -248,6 +248,7 @@ Diese exemplarische Vorgehensweise führt Sie durch den Prozess der Erstellung e
 -   Sonstiges: Erstellen von Farbverläufen, BitmapEffects hinzufügen, verwenden von Transformationen und legen Sie die grundlegende Eigenschaften von Objekten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen einer Schaltfläche mit XAML](walkthrough-create-a-button-by-using-xaml.md)
 - [Erstellen von Formaten und Vorlagen](styling-and-templating.md)
 - [Übersicht über Animationen](../graphics-multimedia/animation-overview.md)

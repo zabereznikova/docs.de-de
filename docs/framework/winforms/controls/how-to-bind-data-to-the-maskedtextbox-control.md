@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: b03eff45b8494253918ae4462c29f50568c81569
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0350d6e690d54d6176ede3b858f75829326b7556
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717465"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090601"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Vorgehensweise: Binden von Daten an das MaskedTextBox-Steuerelement
 Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie jedes andere Windows Forms-Steuerelement zu steuern. Wenn das Format der Daten in der Datenbank nicht das erwartete durch Ihre Maskendefinition Format übereinstimmt, müssen Sie jedoch die Daten neu zu formatieren. Das folgende Verfahren veranschaulicht, wie dieses Vorgangs unter Verwendung der <xref:System.Windows.Forms.Binding.Format> und <xref:System.Windows.Forms.Binding.Parse> Ereignisse der <xref:System.Windows.Forms.Binding> Klasse, um separate Telefonnummer anzeigen und phone Erweiterungsfelder für die Datenbank als einzelnes Feld bearbeitet werden.  
@@ -250,4 +250,5 @@ Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie j
 -   Kompilieren Sie die Anwendung.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Exemplarische Vorgehensweise: Arbeiten mit dem MaskedTextBox-Steuerelement](walkthrough-working-with-the-maskedtextbox-control.md)

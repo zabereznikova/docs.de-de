@@ -9,17 +9,16 @@ helpviewer_keywords:
 - dependency properties [WPF], XAML loading and
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
-ms.openlocfilehash: ed608a658b5077a20ed56419c4ac731641610e3d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4db87c5f266a9eed136f0651f48d11720abede65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083832"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>Laden von XAML und Abhängigkeitseigenschaften
 Die aktuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Implementierung des [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Prozessors ist mit Abhängigkeitseigenschaften kompatibel. Der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Prozessor verwendet Methoden des Eigenschaftensystems zum Laden von binären [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] und zum Verarbeiten von Attributen, die Abhängigkeitseigenschaften sind. Dadurch werden Eigenschaftenwrapper praktisch umgangen. Wenn Sie benutzerdefinierte Abhängigkeitseigenschaften implementieren, Sie müssen dieses Verhalten berücksichtigen und vermeiden jeder andere Code in Ihrem Eigenschaftenwrapper außer den Methoden des Eigenschaftensystems <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A>.  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
  In diesem Thema wird davon ausgegangen, dass Sie Abhängigkeitseigenschaften sowohl aus Sicht eines Anwenders als auch der eines Autors verstehen, und dass Sie [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md) und [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md) gelesen haben. Sie sollten auch [Übersicht über XAML (WPF)](xaml-overview-wpf.md) und [Ausführliche Erläuterung der XAML-Syntax](xaml-syntax-in-detail.md) gelesen haben.  
@@ -42,6 +41,7 @@ Die aktuelle [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-win
  [!code-vb[WPFAquariumSln#AGWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
 - [Übersicht über XAML (WPF)](xaml-overview-wpf.md)
 - [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md)

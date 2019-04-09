@@ -7,12 +7,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
-ms.openlocfilehash: 2bba90f704458e1c724328feccaaf6f04b98ecb4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f70246d4a4d158815ee9662036eca8edeb891d85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104196"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>Übersicht über das ListBox-Steuerelement (Windows Forms)
 Ein Windows Forms <xref:System.Windows.Forms.ListBox> -Steuerelement zeigt eine Liste von dem der Benutzer kann ein oder mehrere Elemente auswählen. Überschreitet die Gesamtzahl der Elemente für die Anzahl, die angezeigt werden können, eine Bildlaufleiste wird automatisch hinzugefügt der <xref:System.Windows.Forms.ListBox> Steuerelement. Wenn die <xref:System.Windows.Forms.ListBox.MultiColumn%2A> -Eigenschaftensatz auf `true`, das Listenfeld zeigt Elemente in mehreren Spalten und eine horizontale Bildlaufleiste angezeigt wird. Wenn die <xref:System.Windows.Forms.ListBox.MultiColumn%2A> -Eigenschaftensatz auf `false`, das Listenfeld zeigt Elemente in einer einzelnen Spalte und eine vertikale Bildlaufleiste angezeigt wird. Wenn <xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A> nastaven NA hodnotu `true`, die scrollleiste angezeigt wird, unabhängig von der Anzahl von Elementen. Die <xref:System.Windows.Forms.ListBox.SelectionMode%2A> Eigenschaft bestimmt, wie viele Elemente gleichzeitig ausgewählt werden können.  
@@ -23,11 +23,12 @@ Ein Windows Forms <xref:System.Windows.Forms.ListBox> -Steuerelement zeigt eine 
  Hinzufügen oder Löschen von Elementen in einem <xref:System.Windows.Forms.ListBox> steuern, verwenden Sie die <xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>, <xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A> oder <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> Methode. Sie können auch Elemente der Liste hinzufügen, mit der <xref:System.Windows.Forms.ListBox.Items%2A> Eigenschaft zur Entwurfszeit.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ListBox>
-- [Vorgehensweise: Hinzufügen und Entfernen von Elementen aus einer Windows Forms, ComboBox-, ListBox- oder CheckedListBox-Steuerelement](add-and-remove-items-from-a-wf-combobox.md)
-- [Vorgehensweise: Sortieren des Inhalts einer Windows Forms-ComboBox-, ListBox- oder CheckedListBox-Steuerelement](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [Vorgehensweise: Binden eines Windows Forms-Kombinationsfeld oder das ListBox-Steuerelement an Daten](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [Vorgehensweise: Hinzufügen und Entfernen von Elementen in bzw. aus ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms](add-and-remove-items-from-a-wf-combobox.md)
+- [Vorgehensweise: Sortieren des Inhalts eines ComboBox-, ListBox- oder CheckedListBox-Steuerelements in Windows Forms](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [Vorgehensweise: Binden eines ComboBox-Steuerelements oder ListBox-Steuerelements in Windows Forms an Daten](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
 - [Übersicht über das ComboBox-Steuerelement](combobox-control-overview-windows-forms.md)
 - [Übersicht über das CheckedListBox-Steuerelement](checkedlistbox-control-overview-windows-forms.md)
-- [Windows Forms-Steuerelemente zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)
-- [Vorgehensweise: Erstellen einer Nachschlagetabelle für eine Windows-ComboBox-, ListBox- oder CheckedListBox-Steuerelement Forms](create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [Steuerelemente in Windows Forms zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)
+- [Vorgehensweise: Erstellen einer Suchtabelle für ComboBox-, ListBox- oder CheckedListBox-Steuerelemente in Windows Forms](create-a-lookup-table-for-a-wf-combobox-listbox.md)

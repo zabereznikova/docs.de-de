@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a105ca8838820b62e81dae4c0149734339bed7a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5904083be66d4bd6dc69729bebc28db8a800e77
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089230"
 ---
 # <a name="icordebugprocess5-interface"></a>ICorDebugProcess5-Schnittstelle
 Erweitert die ICorDebugProcess-Schnittstelle, um Zugriff auf dem verwalteten Heap, Informationen zur Garbagecollection von verwalteten Objekten zu unterstützen, und lädt bestimmen, ob ein Debugger Bilder aus dem lokalen systemeigene Images.  
@@ -59,5 +59,6 @@ Erweitert die ICorDebugProcess-Schnittstelle, um Zugriff auf dem verwalteten Hea
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

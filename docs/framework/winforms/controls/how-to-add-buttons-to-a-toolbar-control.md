@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 347ca067a5ae5544351f29afe3ebcfe11d0b1e0f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a8666124c09d27d9d2ef936d36e7739d473a996
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085986"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement
 > [!NOTE]
@@ -149,8 +149,9 @@ ms.locfileid: "57713238"
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ToolBar>
-- [Vorgehensweise: Definieren eines Symbols für eine Symbolleisten-Schaltfläche](how-to-define-an-icon-for-a-toolbar-button.md)
-- [Vorgehensweise: Trigger Menüereignissen für Symbolleistenschaltflächen](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [Vorgehensweise: Definieren eines Symbols für eine Symbolleistenschaltfläche](how-to-define-an-icon-for-a-toolbar-button.md)
+- [Vorgehensweise: Auslösen von Menüereignissen für Symbolleistenschaltflächen](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [Übersicht über das ToolBar-Steuerelement](toolbar-control-overview-windows-forms.md)
 - [ToolBar-Steuerelement](toolbar-control-windows-forms.md)

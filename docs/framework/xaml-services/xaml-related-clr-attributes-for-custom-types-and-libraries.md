@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
-ms.openlocfilehash: 80127bae06a90dccd204b0f2a4baef10732ade76
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039465"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086207"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>XAML-bezogene CLR-Attribute für benutzerdefinierte Typen und Bibliotheken
 Dieses Thema beschreibt die allgemeinen Language Runtime (CLR)-Attribute, die von .NET Framework-XAML-Dienste definiert werden. Außerdem werden andere CLR-Attribute, die in .NET Framework definiert sind, die ein XAML-bezogene-Szenario für die Anwendung auf die Assemblys oder Typen beschrieben. Assemblys, Typen oder Mitglieder mit diesen Attributen CLR Attributierung stellt XAML-Typsysteminformationen in Bezug auf Ihre Typen bereit. Informationen werden für alle XAML-Consumer bereitgestellt, die .NET Framework-XAML-Dienste für die Verarbeitung von des XAML-Knotenstreams direkt oder über die dedizierte XAML-Reader und XAML-Writer verwendet.  
@@ -24,7 +24,7 @@ Dieses Thema beschreibt die allgemeinen Language Runtime (CLR)-Attribute, die vo
   
  **Gilt für:** Klasse, Eigenschaft oder `get` -Member, die anfügbare Eigenschaften unterstützen.  
   
- **Argumente:** Keine  
+ **Argumente:** Keiner  
   
  <xref:System.Windows.Markup.AmbientAttribute> Gibt an, dass die Eigenschaft oder alle Eigenschaften, die der attributierten Typ, in das Konzept der ambient-Eigenschaft in XAML interpretiert werden soll. Das Umgebungskonzept bezieht sich darauf, wie XAML-Prozessoren Typbesitzer von Membern bestimmen. Eine Ambiente-Eigenschaft ist eine Eigenschaft, in denen der Wert muss in der Parserkontext verfügbar sein, beim Erstellen eines Objektdiagramms, aber bei der Suche nach typischen Typ-Membern angehalten wird, für den unmittelbaren XAML-Knoten festgelegt, wird erstellt.  
   
@@ -269,5 +269,6 @@ Dieses Thema beschreibt die allgemeinen Language Runtime (CLR)-Attribute, die vo
 >  .NET Framework XAML Services definiert auch die XAML-Attribut <xref:System.Windows.Markup.RootNamespaceAttribute>. Dieses Attribut ist ein Attribut auf Assemblyebene für projektsystemunterstützung, und es ist nicht relevant für XAML-benutzerdefinierte Typen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Attribute>
 - [Definieren von benutzerdefinierten Typen für die Verwendung mit .NET Framework-XAML-Diensten](defining-custom-types-for-use-with-net-framework-xaml-services.md)

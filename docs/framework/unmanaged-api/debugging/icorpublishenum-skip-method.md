@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f56792bbdf11c099205efd0cb35e3bf02d67632
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a98892964eb21746580e9115f86fd1be0832d9f2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082041"
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip-Methode
 Verschiebt den Cursor vorwärts in der Enumeration, um die angegebene Anzahl von Elementen.  
@@ -49,4 +49,5 @@ HRESULT Skip (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorPublishEnum-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

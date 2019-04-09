@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b33750e5792dcc83e261bc9bb8d1c5dbe35808aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74a897c1fca51c92e8290f6362d947730349344c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627225"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104857"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -112,7 +112,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     -   Verwenden Sie die <xref:System.Activator.CreateInstanceFrom%2A>-Methode, um in der neuen <xref:System.AppDomain> eine Instanz einer von <xref:System.MarshalByRefObject> abgeleiteten Klasse zu erstellen.  
   
-     Die zweite Methode ist zu bevorzugen, da es hiermit einfacher ist, Parameter an die neue <xref:System.AppDomain>-Instanz zu übergeben. Die <xref:System.Activator.CreateInstanceFrom%2A>-Methode bieten zwei wichtige Features:  
+     Die zweite Methode ist zu bevorzugen, da es hiermit einfacher ist, Parameter an die neue <xref:System.AppDomain>-Instanz zu übergeben. Die <xref:System.Activator.CreateInstanceFrom%2A>-Methode bieten zwei wichtige Funktionen:  
   
     -   Sie können eine Codebasis verwenden, die auf einen Speicherort verweist, der nicht Ihre Assembly enthält.  
   
@@ -167,7 +167,7 @@ AppDomain.CreateDomain( string friendlyName,
     }  
     ```  
   
-     <xref:System.Reflection> wird verwendet, um ein Handle von einer Methode in der teilweise vertrauenswürdigen Assembly zu erhalten. Das Handle kann verwendet werden, um Code auf sichere Weise mit minimalen Berechtigungen auszuführen.  
+     <xref:System.Reflection> wird verwendet, um ein Handle einer Methode in der teilweise vertrauenswürdigen Assembly abzurufen. Das Handle kann verwendet werden, um Code auf sichere Weise mit minimalen Berechtigungen auszuführen.  
   
      Beachten Sie im vorherigen Code den <xref:System.Security.PermissionSet.Assert%2A> für die Berechtigung "Volle Vertrauenswürdigkeit", bevor Sie die <xref:System.Security.SecurityException> drucken.  
   
@@ -274,4 +274,5 @@ class Sandboxer : MarshalByRefObject
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)

@@ -12,24 +12,23 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 6ec03775f42e7f7a60d182eba134f9e1f7ba8466
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074988"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>Optimieren der Leistung: 2D-Grafiken und Bildverarbeitung
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt zahlreiche Funktionen für 2D-Grafiken und Bildverarbeitung zur Verfügung, die den Anforderungen Ihrer Anwendung entsprechend optimiert werden können. Dieses Thema enthält Informationen über die Leistungsoptimierung in diesen Bereichen.  
-  
-  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stellt eine Vielzahl von 2D-Grafiken und bildverarbeitung Funktionen, die optimiert werden kann für den Anforderungen Ihrer Anwendung bereit. Dieses Thema enthält Informationen über die Leistungsoptimierung in diesen Bereichen.  
+
 <a name="Drawing_and_Shapes"></a>   
 ## <a name="drawing-and-shapes"></a>Zeichnen und Formen  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] sowohl <xref:System.Windows.Media.Drawing> und <xref:System.Windows.Shapes.Shape> Objekten um grafischen Zeichnungsinhalt darzustellen. Allerdings <xref:System.Windows.Media.Drawing> Objekte sind jedoch einfachere Konstrukte als <xref:System.Windows.Shapes.Shape> Objekte aus, und stellen bessere Leistungsmerkmale bereit.  
   
  Ein <xref:System.Windows.Shapes.Shape> können Sie grafische Formen auf dem Bildschirm zu zeichnen. Da sie von abgeleitet werden die <xref:System.Windows.FrameworkElement> -Klasse, <xref:System.Windows.Shapes.Shape> können Objekte in Bereichen und den meisten Steuerelementen verwendet werden.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet mehrere Ebenen für den Zugriff auf Grafiken und Renderingdienste. Auf der obersten Ebene <xref:System.Windows.Shapes.Shape> Objekte sind einfach zu verwenden und bieten viele nützliche Features, z.B. Layout und Ereignisbehandlung. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt eine Reihe von vorgefertigten Shape-Objekten zur Verfügung. Alle Shape-Objekte erben von der <xref:System.Windows.Shapes.Shape> Klasse. Verfügbare Shape-Objekte sind <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, und <xref:System.Windows.Shapes.Rectangle>.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet mehrere Ebenen des Zugriffs auf Grafiken und Renderingdienste. Auf der obersten Ebene <xref:System.Windows.Shapes.Shape> Objekte sind einfach zu verwenden und bieten viele nützliche Features, z.B. Layout und Ereignisbehandlung. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet eine Reihe von sofort zu verwendende Shape-Objekte. Alle Shape-Objekte erben von der <xref:System.Windows.Shapes.Shape> Klasse. Verfügbare Shape-Objekte sind <xref:System.Windows.Shapes.Ellipse>, <xref:System.Windows.Shapes.Line>, <xref:System.Windows.Shapes.Path>, <xref:System.Windows.Shapes.Polygon>, <xref:System.Windows.Shapes.Polyline>, und <xref:System.Windows.Shapes.Rectangle>.  
   
  <xref:System.Windows.Media.Drawing> Objekte, auf der anderen Seite leiten Sie nicht von der <xref:System.Windows.FrameworkElement> Klasse und bieten eine schlankere Implementierung für Rendering von Formen, Bildern und Text.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "57371397"
   
 <a name="Images"></a>   
 ## <a name="images"></a>Bilder  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Bildverarbeitung stellt gegenüber den Bildverarbeitungsfähigkeiten in vorherigen Versionen von [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] eine deutliche Verbesserung dar. Die Bildverarbeitungsfähigkeiten wie das Anzeigen einer Bitmap oder das Verwenden eines Bilds für ein allgemeines Steuerelement wurden hauptsächlich von Microsoft Windows Graphics Device Interface (GDI) oder der Microsoft Windows GDI+-API behandelt. Diese API hat Baseline-Bildverarbeitungsfunktionen bereitgestellt, hatte aber keine Features wie die Unterstützung von Codec-Erweiterbarkeit und hochwertigen Bildern. Die WPF-Bildverarbeitungs-APIs wurden neu entworfen, um die Nachteile von GDI und GDI+ zu beheben und einen neuen Satz von APIs bereitzustellen, um Bilder in den Anwendungen anzeigen und verwenden können.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -bildverarbeitung stellt eine bedeutende Verbesserung gegenüber den bildverarbeitungsfähigkeiten in vorherigen Versionen von [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Die Bildverarbeitungsfähigkeiten wie das Anzeigen einer Bitmap oder das Verwenden eines Bilds für ein allgemeines Steuerelement wurden hauptsächlich von Microsoft Windows Graphics Device Interface (GDI) oder der Microsoft Windows GDI+-API behandelt. Diese API hat Baseline-Bildverarbeitungsfunktionen bereitgestellt, hatte aber keine Features wie die Unterstützung von Codec-Erweiterbarkeit und hochwertigen Bildern. Die WPF-Bildverarbeitungs-APIs wurden neu entworfen, um die Nachteile von GDI und GDI+ zu beheben und einen neuen Satz von APIs bereitzustellen, um Bilder in den Anwendungen anzeigen und verwenden können.  
   
  Beim Verwenden von Bildern sollten Sie die folgenden Empfehlungen in Betracht ziehen, um eine bessere Leistung zu erzielen:  
   
@@ -100,9 +99,10 @@ ms.locfileid: "57371397"
  [!code-vb[RenderOptions#RenderOptionsSnippet3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RenderOptions/visualbasic/window1.xaml.vb#renderoptionssnippet3)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Optimieren der WPF-Anwendungsleistung](optimizing-wpf-application-performance.md)
 - [Planen der Anwendungsleistung](planning-for-application-performance.md)
-- [Vorteile der Hardware nutzen](optimizing-performance-taking-advantage-of-hardware.md)
+- [Nutzen der Vorteile der Hardware](optimizing-performance-taking-advantage-of-hardware.md)
 - [Layout und Entwurf](optimizing-performance-layout-and-design.md)
 - [Objektverhalten](optimizing-performance-object-behavior.md)
 - [Anwendungsressourcen](optimizing-performance-application-resources.md)

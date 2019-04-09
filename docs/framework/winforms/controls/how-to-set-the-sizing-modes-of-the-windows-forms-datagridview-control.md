@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelement von Windows Forms'
+title: 'Vorgehensweise: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelements in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], setting sizing modes
 - DataGridView control [Windows Forms], sizing modes
 ms.assetid: e9ad15e6-b4bb-44aa-a767-3738e9db1651
-ms.openlocfilehash: 85322afcaae96b07d085d2b44d923542ecbf9bf6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d92322da6644c110f5e3177acebea62799a0ed89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708885"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085453"
 ---
-# <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>Vorgehensweise: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelement von Windows Forms
+# <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>Vorgehensweise: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelements in Windows Forms
 Die folgenden Prozeduren veranschaulichen einige allgemeinen Szenarien, die die Größenanpassungsoptionen für das <xref:System.Windows.Forms.DataGridView>-Steuerelement und für bestimmte Spalten in einem Steuerelement anpassen oder kombinieren.  
   
 ### <a name="to-create-a-fixed-width-column"></a>So erstellen Sie eine Spalte mit fester Breite  
@@ -59,6 +59,7 @@ Die folgenden Prozeduren veranschaulichen einige allgemeinen Szenarien, die die 
  Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>

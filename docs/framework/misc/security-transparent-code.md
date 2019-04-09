@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc39e4ee47041e70060465a7e220ae1d861d9053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01427e8f90cebca5297e21d54d29c08cf1eab75c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075937"
 ---
 # <a name="security-transparent-code"></a>Sicherheitstransparenter Code
 <a name="top"></a>
@@ -107,5 +107,6 @@ ms.locfileid: "54510116"
  Transparenzregeln werden erst erzwungen, wenn Transparenz berechnet wird. Zu diesem Zeitpunkt wird eine <xref:System.InvalidOperationException> ausgelöst, wenn gegen eine Transparenzregel verstoßen wird. Die Zeit zur Berechnung der Transparenz hängt von mehreren Faktoren ab und kann nicht vorhergesagt werden. Sie wird so spät wie möglich berechnet. In [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] erfolgt die Berechnung der Transparenz auf Assemblyebene früher als in .NET Framework 2.0. Es ist nur garantiert, dass die Transparenzberechnung ausgeführt wird, wenn sie benötigt wird. Dies ist vergleichbar mit der Änderung des Punkts durch den Just-In-Time-Compiler, an dem eine Methode kompiliert wird und Fehler in dieser Methode erkannt werden. Die Transparenzberechnung ist unsichtbar, wenn der Code keine Transparenzfehler enthält.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sicherheitstransparenter Code, Ebene 1](../../../docs/framework/misc/security-transparent-code-level-1.md)
 - [Sicherheitstransparenter Code, Ebene 2](../../../docs/framework/misc/security-transparent-code-level-2.md)

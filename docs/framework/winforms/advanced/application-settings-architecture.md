@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099780"
 ---
 # <a name="application-settings-architecture"></a>Architektur der Anwendungseinstellungen
 In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellungen funktioniert. Außerdem werden erweiterte Funktionen der Architektur erläutert, z.B. gruppierte Einstellungen und Einstellungsschlüssel.  
@@ -147,10 +147,11 @@ In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellunge
  Ihr Anbieter muss nicht alle Einstellungen unterstützen Attribute, in definiert der <xref:System.Configuration?displayProperty=nameWithType> -Namespace, jedoch es auf eine minimale Unterstützung muss <xref:System.Configuration.ApplicationScopedSettingAttribute> und <xref:System.Configuration.UserScopedSettingAttribute>, und sollte auch unterstützen <xref:System.Configuration.DefaultSettingValueAttribute>. Für die Attribute, die nicht unterstützt werden, sollte der Anbieter ohne Benachrichtigung fehlschlagen und keine Ausnahme auslösen. Wenn die Einstellungsklasse jedoch eine ungültige Kombination von Attributen verwendet, z. B. das Anwenden <xref:System.Configuration.ApplicationScopedSettingAttribute> und <xref:System.Configuration.UserScopedSettingAttribute> auf die gleiche Einstellung, sollte der Anbieter eine Ausnahme auslösen und Vorgang beenden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [Übersicht über Anwendungseinstellungen](application-settings-overview.md)
-- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
+- [Anwendungseinstellungen für benutzerdefinierte Steuerelemente](application-settings-for-custom-controls.md)
 - [ClickOnce und Anwendungseinstellungen](/visualstudio/deployment/clickonce-and-application-settings)
 - [Schema für Anwendungseinstellungen](../../configure-apps/file-schema/application-settings-schema.md)

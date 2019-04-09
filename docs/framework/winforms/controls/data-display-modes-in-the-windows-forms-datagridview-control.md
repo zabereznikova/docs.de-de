@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], display modes
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-ms.openlocfilehash: 86eda82cad778978711520bc2951a7a35d133753
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079694"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Datenanzeigemodi im DataGridView-Steuerelement in Windows Forms
 Die <xref:System.Windows.Forms.DataGridView> Steuerelement kann Daten in drei verschiedenen Modi anzeigen: gebunden, aufgehoben und virtuell. Wählen Sie den am besten geeigneten Modus, die je nach Ihren Anforderungen.  
@@ -42,6 +42,7 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement kann Daten in drei ve
  Weitere Informationen zu virtuellen Modus befindet, finden Sie unter [Virtueller Modus im DataGridView-Steuerelement von Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md). Ein Beispiel, das zeigt, wie Sie die Ereignisse des virtuellen Modus verwenden, finden Sie unter [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus in der Windows Forms-DataGridView-Steuerelement](implementing-virtual-mode-wf-datagridview-control.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType>
@@ -49,7 +50,7 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement kann Daten in drei ve
 - <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>
 - [Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Spaltentypen im DataGridView-Steuerelement in Windows Forms](column-types-in-the-windows-forms-datagridview-control.md)
-- [Exemplarische Vorgehensweise: Erstellen eine nicht gebundene Windows Forms-DataGridView-Steuerelement](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Binden von Daten an das DataGridView-Steuerelement in Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [Exemplarische Vorgehensweise: Erstellen eines ungebundenen DataGridView-Steuerelements in Windows Forms](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Binden von Daten an das DataGridView-Steuerelement in Windows Forms](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
 - [Virtueller Modus im DataGridView-Steuerelement in Windows Forms](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)
+- [Exemplarische Vorgehensweise: Implementieren des virtuellen Modus im DataGridView-Steuerelement in Windows Forms](implementing-virtual-mode-wf-datagridview-control.md)

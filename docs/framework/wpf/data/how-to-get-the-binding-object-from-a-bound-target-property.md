@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], getting binding objects from bound target properties
 - properties [WPF], getting binding objects from
 ms.assetid: 87974c5f-136b-4de7-b07d-9285b62ab123
-ms.openlocfilehash: af18cf3fc155148816690bdd16baa3a2a5515eee
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7c7392bc11af57b2e9f27e2302f36efb59d40e9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368518"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083106"
 ---
 # <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>Vorgehensweise: Abrufen des Bindungsobjekts aus einer gebundenen Zieleigenschaft
 Dieses Beispiel zeigt, wie das Bindungsobjekt aus einer datengebundenen Zieleigenschaft abgerufen wird.  
@@ -31,5 +31,6 @@ Dieses Beispiel zeigt, wie das Bindungsobjekt aus einer datengebundenen Zieleige
 >  Wenn die Bindung ist eine <xref:System.Windows.Data.MultiBinding>, verwenden Sie <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetMultiBinding%2A>. Ist dies ein <xref:System.Windows.Data.PriorityBinding>, verwenden Sie <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetPriorityBinding%2A>. Falls Sie unsicher sind, ob die Eigenschaft gebunden ist mit einer <xref:System.Windows.Data.Binding>, <xref:System.Windows.Data.MultiBinding>, oder ein <xref:System.Windows.Data.PriorityBinding>, können Sie <xref:System.Windows.Data.BindingOperations>.<xref:System.Windows.Data.BindingOperations.GetBindingBase%2A>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen einer Bindung in Code](how-to-create-a-binding-in-code.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)

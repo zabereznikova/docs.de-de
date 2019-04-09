@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8491f80c1b4340756c00b5540520bd76f0f583a0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 06dd3b028f4f43ca8681c80a5caa4716104068dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486995"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080890"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2-Funktion
 Benachrichtigt den Profiler an, die gerade ausgeführte Funktion ist einen Endeaufruf an eine andere Funktion ausführen und enthält Informationen zu den Stapelrahmen.  
@@ -75,6 +75,7 @@ void __stdcall FunctionTailcall2 (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [FunctionEnter2-Funktion](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
 - [FunctionLeave2-Funktion](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
 - [SetEnterLeaveFunctionHooks2-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)

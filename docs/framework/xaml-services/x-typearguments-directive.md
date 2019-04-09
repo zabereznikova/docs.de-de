@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TypeArguments attribute in XAML [XAML Services]
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
-ms.openlocfilehash: 0d3edf6c7a16fc206832d8d6deff9d4ac2f69ba3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58043271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085804"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments-Anweisung
 Einschränken von übergibt Typargumente eines generischen an den Konstruktor des generischen Typs.  
@@ -82,7 +82,8 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  In WPF und Zielgruppenadressierung [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], können Sie XAML 2009-Funktionen zusammen mit `x:TypeArguments` jedoch nur für loose XAML (XAML, das nicht markupkompiliert ist). Markupkompilierte XAML für WPF und die BAML-Form von XAML unterstützen die XAML 2009-Schlüsselwörter und -Funktionen derzeit nicht. Wenn Sie in Markup der XAML kompilieren müssen, müssen Sie unter den Einschränkungen, die im Abschnitt "XAML 2006 und WPF-generische XAML-Verwendungen" erwähnt ausgeführt werden.  
   
 ## <a name="see-also"></a>Siehe auch
-- [x:Class-Anweisung](x-class-directive.md)
+
+- [x:Class-Direktive](x-class-directive.md)
 - [x:Type-Markuperweiterung](x-type-markup-extension.md)
 - [Integrierte Typen für häufige XAML-Sprachprimitive](built-in-types-for-common-xaml-language-primitives.md)
-- [Generika in XAML](generics-in-xaml.md)
+- [Generics in XAML](generics-in-xaml.md)

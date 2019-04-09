@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 14aad5b3-84ab-4bbc-94e3-1eb92e258d10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f63343b43481d1d91d1db30cd2ace3214c5590a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8b33b07e7c9f83f5874dea1455cd70dcc3206de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492298"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105936"
 ---
 # <a name="icordebugmutabledatatarget-interface"></a>ICorDebugMutableDataTarget-Schnittstelle
 Erweitert die [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) Schnittstelle, um änderbare Datenziele zu unterstützen.  
@@ -39,5 +39,6 @@ Erweitert die [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/deb
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

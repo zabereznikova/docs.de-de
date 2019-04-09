@@ -2,12 +2,12 @@
 title: Im Überblick2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089860"
 ---
 # <a name="security-overview"></a>Übersicht über die Sicherheit
 Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozess. Es wird niemals die Situation eintreten, dass ein Entwickler dafür garantieren kann, dass eine Anwendung vor allen Angriffen sicher ist, weil unmöglich vorhergesagt werden kann, welche Arten von Angriffen durch neue Technologien hervorgebracht werden. Umgekehrt kann nicht behauptet werden, dass Sicherheitsmängel nicht vorhanden sind oder nicht vorhanden sein können, nur weil diese noch nicht in einem System entdeckt (oder veröffentlicht) wurden. Sie müssen die Sicherheit bereits in der Entwurfsphase des Projekts planen, und Sie müssen planen, wie die Sicherheit über die gesamte Lebensdauer der Anwendung hinweg gewährleistet werden soll.  
@@ -88,7 +88,7 @@ Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozes
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[SQL Server Security (SQL Server-Sicherheit)](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Bietet eine Übersicht über die SQL Server-Sicherheit mit Anwendungsszenarien, die wertvolle Hinweise zur Erstellung sicherer ADO.NET-Anwendungen geben, die auf SQL Server zugreifen.|  
+|[SQL Server-Sicherheit](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Bietet eine Übersicht über die SQL Server-Sicherheit mit Anwendungsszenarien, die wertvolle Hinweise zur Erstellung sicherer ADO.NET-Anwendungen geben, die auf SQL Server zugreifen.|  
 |[Empfehlungen für Strategien für den Datenzugriff](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Enthält Empfehlungen für das Zugreifen auf Daten und das Ausführen von Datenbankoperationen.|  
   
 ## <a name="security-policy-and-administration"></a>Sicherheitsrichtlinie und Verwaltung  
@@ -102,7 +102,8 @@ Die Gewährleistung der Sicherheit einer Anwendung ist ein fortwährender Prozes
 |[Sicherheitsempfehlungen für Gruppenrichtlinien](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|Enthält Links zu Themen, in denen die Verwaltung einer Sicherheitsrichtlinie beschrieben wird.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Sicherheit in .NET](../../../standard/security/index.md)
-- [SQL Server Security (SQL Server-Sicherheit)](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [SQL Server-Sicherheit](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

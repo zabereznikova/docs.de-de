@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
-ms.openlocfilehash: f99b8626ca4a89bf94e44652e8277f8b2c147fe3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091940"
 ---
 # <a name="exporting-and-importing-metadata"></a>Exportieren und Importieren von Metadaten
 In Windows Communication Foundation (WCF) ist Exportieren von Metadaten der Prozess der Beschreibung von Dienstendpunkten und Ihrer Projektion in eine parallele, standardisierte Darstellung, die Clients verwenden können, um zu verstehen, wie Sie den Dienst verwenden. Beim Import von Dienstmetadaten werden <xref:System.ServiceModel.Description.ServiceEndpoint>-Instanzen oder Teile davon aus Dienstmetadaten generiert.  
@@ -20,8 +20,7 @@ In Windows Communication Foundation (WCF) ist Exportieren von Metadaten der Proz
  Der <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType>-Typ generiert WSDL (Web Services Description Language)-Metadaten mit angefügten Richtlinienausdrücken, die in einer <xref:System.ServiceModel.Description.MetadataSet>-Instanz gekapselt sind. Sie können eine <xref:System.ServiceModel.Description.WsdlExporter?displayProperty=nameWithType>-Instanz verwenden, um Metadaten für <xref:System.ServiceModel.Description.ContractDescription>-Objekte und <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekte iterativ zu exportieren. Sie können auch eine Auflistung von <xref:System.ServiceModel.Description.ServiceEndpoint>-Objekten exportieren und sie einem bestimmten Dienstnamen zuordnen.  
   
 > [!NOTE]
->  
-  `WsdlExporter` kann nur zum Exportieren von Metadaten aus `ContractDescription`-Instanzen verwendet werden, die Common Language Runtime (CLR)-Typinformationen enthalten, wie z.&#160;B. eine `ContractDescription`-Instanz, die mit der `ContractDescription.GetContract`-Methode oder als Teil der `ServiceDescription` für eine `ServiceHost`-Instanz erstellt wurde. Sie können `WsdlExporter` nicht zum Exportieren von Metadaten aus `ContractDescription`-Instanzen verwenden, die aus Dienstmetadaten stammen oder ohne Typinformationen erstellt wurden.  
+>  `WsdlExporter` kann nur zum Exportieren von Metadaten aus `ContractDescription`-Instanzen verwendet werden, die Common Language Runtime (CLR)-Typinformationen enthalten, wie z.&amp;amp;#160;B. eine `ContractDescription`-Instanz, die mit der `ContractDescription.GetContract`-Methode oder als Teil der `ServiceDescription` für eine `ServiceHost`-Instanz erstellt wurde. Sie können `WsdlExporter` nicht zum Exportieren von Metadaten aus `ContractDescription`-Instanzen verwenden, die aus Dienstmetadaten stammen oder ohne Typinformationen erstellt wurden.  
   
 ## <a name="importing-metadata"></a>Importieren von Metadaten  
   
@@ -35,11 +34,11 @@ In Windows Communication Foundation (WCF) ist Exportieren von Metadaten der Proz
 ### <a name="importing-policies"></a>Importieren von Richtlinien  
  Der <xref:System.ServiceModel.Description.WsdlImporter>-Typ sammelt die Richtlinienausdrücke, die den Nachrichten-, Vorgangs- und Endpunktrichtliniensubjekts angehängt sind, und importiert die Richtlinienausdrücke dann mithilfe der <xref:System.ServiceModel.Description.IPolicyImportExtension>-Implementierungen aus der <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A>-Auflistung.  
   
- Das Richtlinienimportprogramm verarbeitet automatisch Richtlinienverweise auf Richtlinienausdrücke im gleichen WSDL-Dokument und wird durch das `wsu:Id`-Attribut oder das `xml:id`-Attribut angegeben. Das Richtlinienimportprogramm schützt Anwendungen vor zirkulären Verweisen, indem es die Größe von Richtlinienausdrücken auf 4096&#160;Knoten beschränkt, wobei ein Knoten eines der folgenden Elemente sein kann: `wsp:Policy`, `wsp:All`, `wsp:ExactlyOne`, `wsp:policyReference`.  
+ Das Richtlinienimportprogramm verarbeitet automatisch Richtlinienverweise auf Richtlinienausdrücke im gleichen WSDL-Dokument und wird durch das `wsu:Id`-Attribut oder das `xml:id`-Attribut angegeben. Das Richtlinienimportprogramm schützt Anwendungen vor zirkulären Verweisen, indem es die Größe von Richtlinienausdrücken auf 4096&amp;#160;Knoten beschränkt, wobei ein Knoten eines der folgenden Elemente sein kann: `wsp:Policy`, `wsp:All`, `wsp:ExactlyOne`, `wsp:policyReference`.  
   
- Das Richtlinienimportprogramm normalisiert Richtlinienausdrücke auch automatisch. Geschachtelte Richtlinienausdrücke und das `wsp:Optional`-Attribut werden nicht normalisiert. Die normalisierte Verarbeitung wird auf höchsten 4096&#160;Schritte beschränkt, wobei jeder Schritt eine Richtlinienassertion oder ein untergeordnetes Element eines `wsp:ExactlyOne`-Elements ergibt.  
+ Das Richtlinienimportprogramm normalisiert Richtlinienausdrücke auch automatisch. Geschachtelte Richtlinienausdrücke und das `wsp:Optional`-Attribut werden nicht normalisiert. Die normalisierte Verarbeitung wird auf höchsten 4096&amp;#160;Schritte beschränkt, wobei jeder Schritt eine Richtlinienassertion oder ein untergeordnetes Element eines `wsp:ExactlyOne`-Elements ergibt.  
   
- Der <xref:System.ServiceModel.Description.WsdlImporter>-Typ probiert bis zu 32&#160;Kombinationen von Richtlinienalternativen aus, die verschiedenen WSDL-Richtliniensubjekten angehängt sind. Wenn keine Kombination sauber importiert werden kann, wird die erste Kombination zur Erstellung einer teilweise benutzerdefinierten Bindung verwendet.  
+ Der <xref:System.ServiceModel.Description.WsdlImporter>-Typ probiert bis zu 32&amp;#160;Kombinationen von Richtlinienalternativen aus, die verschiedenen WSDL-Richtliniensubjekten angehängt sind. Wenn keine Kombination sauber importiert werden kann, wird die erste Kombination zur Erstellung einer teilweise benutzerdefinierten Bindung verwendet.  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
  Sowohl der <xref:System.ServiceModel.Description.MetadataExporter>-Typ als auch der <xref:System.ServiceModel.Description.MetadataImporter>-Typ machen eine `Errors`-Eigenschaft verfügbar, die eine Auflistung von Meldungen für Fehler und Warnungen enthalten kann, die während des Export- bzw. Importprozesses auftreten können und die in der Implementierung von Dienstprogrammen verwendet werden können.  
@@ -52,13 +51,13 @@ In Windows Communication Foundation (WCF) ist Exportieren von Metadaten der Proz
  [Vorgehensweise: Importieren von Metadaten in Dienstendpunkte](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  Beschreibt, wie heruntergeladene Metadaten in Beschreibungsobjekte importiert werden.  
   
- [Vorgehensweise: Exportieren Sie Metadaten aus Dienstendpunkten](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Vorgehensweise: Exportieren von Metadaten aus Dienstendpunkten](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Beschreibt, wie Beschreibungsobjekte in Metadaten importiert werden.  
   
  [ServiceDescription und WSDL-Verweis](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Beschreibt die Zuordnung zwischen Beschreibungsobjekten und WSDL.  
   
- [Vorgehensweise: Verwenden von Svcutil.exe zum Exportieren von Metadaten aus kompiliertem Dienstcode](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Vorgehensweise: Verwenden von „Svcutil.exe“ zum Exportieren von Metadaten aus kompiliertem Dienstcode](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Beschreibt die Verwendung von Svcutil.exe zum Export von Metadaten für Dienste, Verträge und Datentypen in kompilierten Assemblys.  
   
  [Datenvertrags-Schemareferenz](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
@@ -70,5 +69,6 @@ In Windows Communication Foundation (WCF) ist Exportieren von Metadaten der Proz
  <xref:System.ServiceModel.Description.WsdlImporter>  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Exportieren von benutzerdefinierten Metadaten für eine WCF-Erweiterung](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)
 - [Importieren von benutzerdefinierten Metadaten für eine WCF-Erweiterung](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

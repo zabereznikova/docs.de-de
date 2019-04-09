@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Übergeben von Änderungen an der Datenbank'
+title: 'Vorgehensweise: Übergeben von Änderungen an die Datenbank'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
-ms.openlocfilehash: 455e4e3296a9136b2b9bf24278bb034e4a94fc7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 572c4427ada06701c5982770ae476bd1c6c2b13a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562816"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082541"
 ---
-# <a name="how-to-submit-changes-to-the-database"></a>Vorgehensweise: Übergeben von Änderungen an der Datenbank
+# <a name="how-to-submit-changes-to-the-database"></a>Vorgehensweise: Übergeben von Änderungen an die Datenbank
 Unabhängig von der Anzahl der Änderungen an Ihren Objekten erfolgen diese Änderungen nur an den Replikaten im Arbeitsspeicher. Sie haben die eigentlichen Daten in der Datenbank nicht verändert. Ihre Änderungen werden erst dann zum Server gesendet, wenn Sie explizit <xref:System.Data.Linq.DataContext.SubmitChanges%2A> im <xref:System.Data.Linq.DataContext> aufrufen.  
   
  Bei diesem Aufruf versucht der <xref:System.Data.Linq.DataContext>, die Änderungen in entsprechende SQL-Befehle zu übersetzen. Sie können Ihre eigene Logik verwenden, um diese Aktionen zu überschreiben. allerdings wird die Reihenfolge der Übergabe durch einen Dienst des orchestriert die <xref:System.Data.Linq.DataContext> bekannt als die *Änderungsprozessor*. Die Ereignisse finden in der folgenden Reihenfolge statt:  
@@ -34,7 +34,8 @@ Unabhängig von der Anzahl der Änderungen an Ihren Objekten erfolgen diese Änd
  [!code-vb[DLinqSubmittingChanges#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Erkennen und Auflösen von Übergabekonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
 - [Vorgehensweise: Verwalten von Änderungskonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [Vornehmen und Übergeben von Datenänderungen](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

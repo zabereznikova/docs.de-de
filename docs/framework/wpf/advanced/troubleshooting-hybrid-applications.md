@@ -9,21 +9,19 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: dbc70f58fddfad6e7e7271802b8b01d2b52ab25a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 707e77ac69878c1c7fb8e975c1f90ad657228d1a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079670"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Problembehandlung für Hybridanwendungen
 <a name="introduction"></a>In diesem Thema werden einige der häufigsten Probleme aufgeführt, die beim Erstellen von Hybridanwendungen, die sowohl die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]- als auch die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Technologie verwenden, auftreten können,.  
-  
 
-  
 <a name="overlapping_controls"></a>   
 ## <a name="overlapping-controls"></a>Überlappende Steuerelemente  
- Steuerelemente überlappen sich möglicherweise nicht wie erwartet. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] verwendet ein verschiedenes HWND für jedes Steuerelement. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verwendet ein HWND für den gesamten Inhalt auf einer Seite. Dieser Unterschied bei der Implementierung verursacht unerwartete Verhalten bei der Überlappung.  
+ Steuerelemente überlappen sich möglicherweise nicht wie erwartet. [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] verwendet ein Verschiedenes HWND für jedes Steuerelement. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] verwendet ein HWND für den gesamten Inhalt auf einer Seite an. Dieser Unterschied bei der Implementierung verursacht unerwartete Verhalten bei der Überlappung.  
   
  Ein in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] gehostetes [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelement wird immer über dem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt angezeigt.  
   
@@ -88,7 +86,7 @@ ms.locfileid: "57370097"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Aktivieren von visuellen Stilen  
- Visuelle [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]-Stile für ein [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelement dürfen nicht aktiviert werden. Die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Methode wird aufgerufen, in der Vorlage für eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendung. Obwohl diese Methode nicht standardmäßig aufgerufen wird, wenn Sie [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] zur Erstellung eines Projekts verwenden, erhalten Sie visuelle [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]-Stile für Steuerelemente, wenn Version 6.0 von Comctl32.dll verfügbar ist. Rufen Sie die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> -Methode auf, bevor die Handles für den Thread erstellt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren von visuellen Stilen in einer Hybridanwendung](how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] visuelle Stile für eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelement nicht aktiviert werden. Die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> Methode wird aufgerufen, in der Vorlage für eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendung. Obwohl diese Methode nicht standardmäßig aufgerufen wird, wenn Sie [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] zur Erstellung eines Projekts verwenden, erhalten Sie visuelle [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]-Stile für Steuerelemente, wenn Version 6.0 von Comctl32.dll verfügbar ist. Rufen Sie die <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> -Methode auf, bevor die Handles für den Thread erstellt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren von visuellen Stilen in einer Hybridanwendung](how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Lizenzierte Steuerelemente  
@@ -115,6 +113,7 @@ ms.locfileid: "57370097"
  Gehostete WPF-Steuerelemente einem <xref:System.Windows.Forms.Integration.ElementHost> unterstützen derzeit nicht die <xref:System.Windows.Forms.Control.ImeMode%2A> Eigenschaft. Änderungen an <xref:System.Windows.Forms.Control.ImeMode%2A> werden von den gehosteten Steuerelementen ignoriert.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [Interoperabilität im WPF-Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))

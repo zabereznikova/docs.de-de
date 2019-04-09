@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: bde264684eb4d36ae59e9ed966c88f379231ac73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06dcbbedf8c1533b3da52b447c121746ce705083
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083347"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>Laden von DataSet-Schemainformationen aus XML
 Das Schema der einen <xref:System.Data.DataSet> (seine Tabellen, Spalten, Beziehungen und Einschränkungen) können programmgesteuert definiert, erstellt die **füllen** oder **FillSchema** Methoden eine <xref:System.Data.Common.DataAdapter>, oder aus der geladen ein XML-Dokument. Beim Laden **DataSet** Schemainformationen aus einer XML-Dokument, verwenden Sie entweder die **ReadXmlSchema** oder **InferXmlSchema** -Methode der der **DataSet**. **ReadXmlSchema** ermöglicht es Ihnen, laden oder herleiten **DataSet** Schemainformationen aus dem Dokument mit Schema für XML Schema Definition Language (XSD) oder ein XML-Dokument mit Inline-XML-Schema. **InferXmlSchema** ermöglicht das Herleiten des Schemas aus XML-Dokument und bestimmte von Ihnen angegebenen XML-Namespaces ignoriert.  
@@ -86,9 +86,10 @@ dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:o
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+
+- [Verwenden von XML in einem "DataSet"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
 - [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
-- [Laden eines DataSet aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [Laden eines "DataSets" aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- ["DataSets", "DataTables" und "DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1107fe12f5efa2b812f723568f5cb4fea1eddc8a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093839"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087897"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Streaminganbieter (WCF Data Services)
 Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. Diese Binärdaten können Video- und Audiostreams, Bilder, Dokumentdateien oder andere Typen binärer Medien darstellen. Wenn eine Entität im Datenmodell eine oder mehrere binäre Eigenschaften enthält, gibt der Datendienst diese als Base-64-codierte Binärdaten im Eintrag im Antwortfeed zurück. Da das Laden und Serialisieren von umfangreichen Binärdaten auf diese Weise die Leistung beeinträchtigen können die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiert einen Mechanismus zum Abrufen von Binärdaten unabhängig von der Entität, zu dem er gehört. Dies wird erreicht, indem die Binärdaten und die Entität in einen oder mehrere Datenströme getrennt werden.  
@@ -55,7 +55,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
  **Reflektionsanbieter**  
  Um anzugeben, dass eine Entität ein Medienlinkeintrag ist, fügen Sie der Klasse, die den Entitätstyp im Reflektionsanbieter definiert, <xref:System.Data.Services.Common.HasStreamAttribute> hinzu.  
   
- **Benutzerdefinierte Datendienstanbieter**  
+ **Benutzerdefinierter Datendienstanbieter**  
  Wenn Sie benutzerdefinierte Dienstanbieter verwenden, implementieren Sie die <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>-Schnittstelle, um die Metadaten für den Datendienst zu definieren. Weitere Informationen finden Sie unter [Benutzerdefinierte Datendienstanbieter](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md). Sie geben an, dass ein binärer Ressourcenstream zu einem <xref:System.Data.Services.Providers.ResourceType> gehört, indem Sie die <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A>-Eigenschaft für den `true`, der den Entitätstyp (einen Medienlinkeintrag) darstellt, auf <xref:System.Data.Services.Providers.ResourceType> festlegen.  
   
 ## <a name="implementing-the-idataservicestreamprovider-interface"></a>Implementieren der IDataServiceStreamProvider-Schnittstelle  
@@ -81,18 +81,14 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
   
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Aktivieren von großen binären Datenströmen in der Hostumgebung  
  Wenn Sie einen Datendienst in einer [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Webanwendung erstellen, wird Windows Communication Foundation (WCF) verwendet, um die HTTP-Protokollimplementierung bereitzustellen. Standardmäßig schränkt WCF die Größe von HTTP-Nachrichten auf nur 65 KB ein. Damit umfangreiche Binärdaten als Datenstrom zum und vom Datendienst gesendet werden können, müssen Sie auch die Webanwendung für die Verwendung großer Binärdateien und den Einsatz von Datenströmen für die Übertragung konfigurieren. Fügen Sie dazu Folgendes im `<configuration />`-Element der Datei Web.config der Anwendung hinzu:  
-  
-  
-  
+
 > [!NOTE]
 >  Verwenden Sie eine <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> Übertragungsmodus, um sicherzustellen, dass die Binärdaten im sowohl die Anforderungs-und Antwortnachrichten gestreamt und von WCF nicht gepuffert.  
   
  Weitere Informationen finden Sie unter [Nachrichtenübertragung per Stream](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) und [Transportkontingente](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
  Darüber hinaus wird die Größe von Anforderungen von Internetinformationsdienste (IIS) standardmäßig auf 4 MB begrenzt. Um Datenströme, die größer als 4 MB zu erhalten, wenn die Ausführung in IIS vom Datendienst zu aktivieren, müssen Sie auch Festlegen der `maxRequestLength` Attribut der [HttpRuntime-Element ((ASP.NET Einstellungsschema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) in die `<system.web />` Konfigurationsabschnitt als Im folgenden Beispiel gezeigt:  
-  
-  
-  
+
 ## <a name="using-data-streams-in-a-client-application"></a>Verwenden von Datenströmen in einer Clientanwendung  
  Mithilfe der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clientbibliothek können Sie diese verfügbar gemachten Ressourcen als binäre Datenströme auf dem Client abrufen und aktualisieren. Weitere Informationen finden Sie unter [arbeiten mit Binärdaten](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
@@ -130,6 +126,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
  Weitere Informationen finden Sie unter [Datendienst-Versionskontrolle](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Datendienstanbieter](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Benutzerdefinierte Datendienstanbieter](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
 - [Arbeiten mit Binärdaten](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

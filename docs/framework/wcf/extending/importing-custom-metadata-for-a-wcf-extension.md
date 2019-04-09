@@ -2,12 +2,12 @@
 title: Importieren von benutzerdefinierten Metadaten für eine WCF-Erweiterung
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: b99d7fbab08c5edabe3a08baf89dd267c3f9fa25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 021790a256448d9c81e7a53a2845edf839ff3534
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562101"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090068"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importieren von benutzerdefinierten Metadaten für eine WCF-Erweiterung
 In Windows Communication Foundation (WCF)-Metadatenimport ist der Prozess der Generierung einer abstrakten Darstellung eines Diensts oder seiner Komponenten aus dessen Metadaten. WCF kann importieren, z. B. <xref:System.ServiceModel.Description.ServiceEndpoint> Instanzen <xref:System.ServiceModel.Channels.Binding> Instanzen oder <xref:System.ServiceModel.Description.ContractDescription> Instanzen aus einem WSDL-Dokument für einen Dienst. Verwenden Sie zum Importieren von Metadaten von Diensten in WCF eine Implementierung der <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> abstrakte Klasse. Von abgeleiteten Typen dem <xref:System.ServiceModel.Description.MetadataImporter> Klasse implementieren die Unterstützung für das Importieren von Metadaten-Formate, die die WS-Richtlinie nutzen Logik in WCF zu importieren.  
@@ -17,7 +17,7 @@ In Windows Communication Foundation (WCF)-Metadatenimport ist der Prozess der Ge
  In diesem Abschnitt wird beschrieben, wie benutzerdefinierte WSDL-Erweiterungen und benutzerdefinierte Richtlinienassertionen importiert werden. Dabei wird der eigentliche Importvorgang nur am Rande erläutert. Weitere Informationen zur Verwendung von Typen, die exportieren und Importieren von Metadaten unabhängig davon, ob die Metadaten benutzerdefinierte oder vom System unterstützt, finden Sie unter [exportieren und Importieren von Metadaten](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md).  
   
 ## <a name="overview"></a>Übersicht  
- Die <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Typ ist die Implementierung der <xref:System.ServiceModel.Description.MetadataImporter> abstrakte Klasse, die in WCF enthalten. Der <xref:System.ServiceModel.Description.WsdlImporter>-Typ importiert WSDL-Metadaten mit angefügten Richtlinien, die in einem <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType>-Objekt zusammengefasst sind. Richtlinienassertionen und WSDL-Erweiterungen, die von den Standardimportern nicht erkannt werden, werden an eine registrierte benutzerdefinierte Richtlinie oder an einen registrierten WSDL-Importer übergeben, um sie zu importieren. Normalerweise werden Importer zur Unterstützung von benutzerdefinierten Bindungselementen oder zur Änderung des importierten Vertrags implementiert.  
+ Die <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> Typ ist die Implementierung der <xref:System.ServiceModel.Description.MetadataImporter> abstrakte Klasse, die in WCF enthalten. Der <xref:System.ServiceModel.Description.WsdlImporter>-Typ importiert WSDL-Metadaten mit angefügten Richtlinien, die in einem <xref:System.ServiceModel.Description.MetadataSet?displayProperty=nameWithType>-Objekt zusammengefasst sind. Richtlinienassertionen und WSDL-Erweiterungen, die von den Standardimportern nicht erkannt werden, werden an eine registrierte benutzerdefinierte Richtlinie oder an einen registrierten WSDL-Importer übergeben, um sie zu importieren. Normalerweise werden Importprogramme zur Unterstützung von benutzerdefinierten Bindungselementen oder zur Änderung des importierten Vertrags implementiert.  
   
  Dieser Abschnitt beschreibt:  
   
@@ -49,6 +49,7 @@ In Windows Communication Foundation (WCF)-Metadatenimport ist der Prozess der Ge
 >  Ungültige oder fehlerhafte Metadaten können an den Importer übergeben werden. Stellen Sie sicher, dass benutzerdefinierte Importer gegenüber allen Arten von XML robust sind.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Benutzerdefinierte WSDL importieren](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+
+- [Vorgehensweise: Importieren von benutzerdefinierten WSDL-Informationen](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
 - [Vorgehensweise: Importieren von benutzerdefinierten Richtlinienassertionen](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
-- [Vorgehensweise: Schreiben einer Erweiterung für den ServiceContractGenerator](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)
+- [Vorgehensweise: Schreiben einer Erweiterung für die ServiceContractGenerator-Klasse](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)

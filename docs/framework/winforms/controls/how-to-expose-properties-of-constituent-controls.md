@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 75ee93b7a601b4fc1480dca708d78740664c9a85
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 750caa1f45f870e63a5b7ccbe0c309e6fb0b3178
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106352"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>Vorgehensweise: Verfügbarmachen der Eigenschaften konstituierender Steuerelemente
 Die Steuerelemente, die ein zusammengesetztes Steuerelement zu bilden, heißen *konstituierende Steuerelemente*. Diese Steuerelemente werden normalerweise als privat deklariert, und daher können nicht vom Entwickler zugegriffen werden kann. Wenn Sie die Eigenschaften dieser Steuerelemente zukünftigen Benutzern zur Verfügung stellen möchten, müssen Sie für den Benutzer verfügbar machen. Eine Eigenschaft des konstituierenden Steuerelements wird verfügbar gemacht, indem Sie eine Eigenschaft im Benutzersteuerelement erstellt und die `get` und `set` Accessoren der Eigenschaft, die Auswirkungen der Änderung in der privaten Eigenschaft des konstituierenden Steuerelements.  
@@ -58,6 +58,7 @@ public Color ButtonColor
 3.  In der `set` Abschnitt der Eigenschaft, Code schreiben, der den Wert der Eigenschaft an die verfügbar gemachten Eigenschaft des konstituierenden Steuerelements übergibt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.UserControl>
-- [Eigenschaften in Windows Forms-Steuerelementen](properties-in-windows-forms-controls.md)
-- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](varieties-of-custom-controls.md)
+- [Eigenschaften von Windows Forms-Steuerelementen](properties-in-windows-forms-controls.md)
+- [Arten von benutzerdefinierten Steuerelementen](varieties-of-custom-controls.md)
