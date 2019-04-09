@@ -2,12 +2,12 @@
 title: Beispiel für Ankündigungen
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 91422d9b625339236e3d8d09683deba18a24c9d4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 7506dcc2b73ce2ee3437020c958f480fb521f4f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814210"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094553"
 ---
 # <a name="announcements-sample"></a>Beispiel für Ankündigungen
 In diesem Beispiel wird die Verwendung der Ankündigungsfunktionalität der Discovery-Funktion erläutert. Ankündigungen ermöglichen es Diensten, Ankündigungsmeldungen mit Metadaten zum Dienst zu senden. Standardmäßig wird als Ankündigung "hello" gesendet, wenn der Dienst startet, und "bye", wenn der Dienst beendet wird. Diese Ankündigungen können per Multicast oder von Punkt zu Punkt gesendet werden. Das folgende Beispiel besteht aus zwei Projekten, Service und Client.  
@@ -86,4 +86,3 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Announcements`  
-  

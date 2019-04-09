@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie Ihre erste .NET Core-Anwendung in C# mithilfe
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8df26651a7b35e5b6c9bdcb54d09c97525e12426
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788335"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890552"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Erste Schritte mit C# und Visual Studio Code
 
@@ -91,14 +91,14 @@ Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurz
 ## <a name="add-a-class"></a>Hinzufügen einer Klasse
 
 1. Um eine neue Klasse hinzuzufügen, klicken Sie mit der rechten Maustaste auf den VSCode-Explorer, und wählen Sie **Neue Datei** aus. Dadurch wird dem Ordner, den Sie in Visual Studio Code geöffnet haben, eine neue Datei hinzugefügt.
-2. Nennen Sie Ihre Datei `Class1.cs`. Sie müssen sie mit der `.cs`-Erweiterung speichern, damit sie als Csharp-Datei erkannt wird.
+2. Nennen Sie Ihre Datei `MyClass.cs`. Sie müssen sie mit der `.cs`-Erweiterung speichern, damit sie als Csharp-Datei erkannt wird.
 3. Fügen Sie den folgenden Code zum Erstellen Ihrer ersten Klasse hinzu. Achten Sie darauf, den richtigen Namespace einzubeziehen, damit Sie von Ihrer `Program.cs`-Datei darauf verweisen können.
 ``` csharp
 using System;
 
 namespace HelloWorld
 {
-    public class Class1
+    public class MyClass
     {
         public string ReturnMessage()
         {
@@ -119,7 +119,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Class1 c1 = new Class1();
+            MyClass c1 = new MyClass();
             Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
         }
     }

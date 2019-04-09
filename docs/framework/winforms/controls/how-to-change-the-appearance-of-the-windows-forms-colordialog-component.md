@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ändern der Darstellung der ColorDialog-Komponente in Windows Forms'
+title: 'Vorgehensweise: Ändern der Darstellung der ColorDialog-Komponente in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: 6bc59f08d811ef542206b5788f251f30f89af301
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d79139ac3d11d3cd9a7d1bbe1f12e14df83530e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702788"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094644"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Vorgehensweise: Ändern der Darstellung der ColorDialog-Komponente in Windows Forms
+# <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Vorgehensweise: Ändern der Darstellung der ColorDialog-Komponente in Windows Forms
 Sie können konfigurieren, das Erscheinungsbild der Windows-Formulare <xref:System.Windows.Forms.ColorDialog> Komponente mit dem eine Reihe von dessen Eigenschaften. Das Dialogfeld verfügt über zwei Abschnitte: einen, der anzeigt, Grundfarben und eine, die dem Benutzer ermöglicht, benutzerdefinierte Farben definieren.  
   
  Die meisten Eigenschaften einschränken, welche Farben im Dialogfeld der Benutzer auswählen kann. Wenn die <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> -Eigenschaftensatz auf `true`, können Benutzer benutzerdefinierte Farben definieren. Die <xref:System.Windows.Forms.ColorDialog.FullOpen%2A> Eigenschaft `true` Wenn das Dialogfeld wird erweitert, damit benutzerdefinierte Farben definiert werden andernfalls der Benutzer muss klicken Sie auf eine Schaltfläche "Benutzerdefinierte Farben". Wenn die <xref:System.Windows.Forms.ColorDialog.AnyColor%2A> -Eigenschaftensatz auf `true`, im Dialogfeld werden alle verfügbare Farben angezeigt, in der Menge der Grundfarben. Wenn die <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> -Eigenschaftensatz auf `true`, der Benutzer kann nicht mit Dithering Farben auswählen, stehen nur Volltonfarben auswählen.  
@@ -50,6 +50,7 @@ Sie können konfigurieren, das Erscheinungsbild der Windows-Formulare <xref:Syst
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog-Komponente](colordialog-component-windows-forms.md)
 - [Übersicht über die ColorDialog-Komponente](colordialog-component-overview-windows-forms.md)

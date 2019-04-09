@@ -4,12 +4,12 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Häu
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 05d696f5cbceaedb35e3e4e97f8c4e89124d43dc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 68f88d29a6c88f4ce261a0a2794035d43db1fc0c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826732"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921103"
 ---
 # <a name="common-web-application-architectures"></a>Häufig verwendete Webanwendungsarchitekturen
 
@@ -263,7 +263,7 @@ networks:
 Die `docker-compose.yml`-Datei verweist auf die `Dockerfile` im `Web`-Projekt. Die `Dockerfile`-Datei wird verwendet, um anzugeben, welcher Basiscontainer verwendet und wie die Anwendung darauf konfiguriert wird. Die `Dockerfile`-Datei von `Web`:
 
 ```
-FROM microsoft/dotnet:2.2-sdk AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
 COPY *.sln .
@@ -273,7 +273,7 @@ RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
 
@@ -296,7 +296,7 @@ Wenn Sie Ihrer Anwendung mithilfe von Visual Studio Docker-Unterstützung hinzuf
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **Onion Architecture**  
 >   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
-> - **The Repository Pattern (Das Muster „Repository“)**  
+> - **Repositorymuster**  
 >   <https://deviq.com/repository-pattern/>
 > - **Clean Architecture Solution Sample (Projektmappenbeispiel unter Verwendung von Clean Architecture)**  
 >   <https://github.com/ardalis/cleanarchitecture>

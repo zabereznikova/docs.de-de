@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - basicHttpBinding Element
 ms.assetid: 85cf1a4f-26c2-48c7-bda6-6c960d5d3fb3
-ms.openlocfilehash: c797058732d74ab1a50d59b350ff1744bc6365d6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d62746ad55b5e6a7cd9300a5f534e4ecd2d5d81e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412174"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090432"
 ---
 # <a name="basichttpbinding"></a>\<basicHttpBinding>
 Stellt eine Bindung dar, die ein Windows Communication Foundation-Dienst (WCF) zum Konfigurieren und Verfügbarmachen von Endpunkten verwenden kann, die mit ASMX-basierten Webdiensten und -clients sowie mit anderen Diensten kommunizieren können, die mit WS-I Basic Profile 1.1 konform sind.  
@@ -174,6 +174,7 @@ Stellt eine Bindung dar, die ein Windows Communication Foundation-Dienst (WCF) z
  Weitere Informationen zu Standardkonfiguration und zu namenlosen Bindungen und Verhaltensweisen finden Sie unter [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) und [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>

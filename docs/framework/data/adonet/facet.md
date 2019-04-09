@@ -2,12 +2,12 @@
 title: Facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
-ms.openlocfilehash: 9994aff7337dd842e1d70c22ea288d2fda5648d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9353b143a328e0fb183b7870332462a0a2c91b10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648231"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094501"
 ---
 # <a name="facet"></a>Facet
 Ein *Facet* wird verwendet, um einer primitiven typeigenschaftendefinition Details hinzuzufügen. Ein [Eigenschaft](../../../../docs/framework/data/adonet/property.md) Definition enthält Informationen zu den Eigenschaftentyp, oft detaillierter ist jedoch erforderlich. Ein Entitätstyp in einem konzeptionellen Modell könnte z. B. über eine Eigenschaft vom Typ `String` verfügen, deren Wert nicht auf NULL festgelegt werden kann. Mit Facets können Sie diese Detailebene angeben.  
@@ -35,5 +35,6 @@ Ein *Facet* wird verwendet, um einer primitiven typeigenschaftendefinition Detai
  [!code-xml[EDM_Example_Model#EntityExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entityexample)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Schlüsselkonzepte im Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

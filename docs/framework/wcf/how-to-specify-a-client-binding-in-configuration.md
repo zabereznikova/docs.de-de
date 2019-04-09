@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Angeben einer Clientbindung in einer Konfiguration'
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: 2441b307961079c28e114b4fed69c252ff42e0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81e9b4b5949d3a89749911a30ad199c4f0da300f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606386"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091563"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>Vorgehensweise: Angeben einer Clientbindung in einer Konfiguration
 In diesem Beispiel wird eine Client-Konsolenanwendung erstellt, um einen Rechnerdienst zu nutzen, und die Bindung dieses Clients wird deklarativ in der Konfiguration angegeben. Der Client greift auf den `CalculatorService` zu, der die `ICalculator`-Schnittstelle implementiert, und sowohl der Dienst als auch der Client verwenden die Klasse <xref:System.ServiceModel.BasicHttpBinding>.  
@@ -51,4 +51,5 @@ In diesem Beispiel wird eine Client-Konsolenanwendung erstellt, um einen Rechner
 6.  Kompilieren Sie den Code, und führen Sie den Client aus.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

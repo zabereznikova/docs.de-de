@@ -1,5 +1,5 @@
 ---
-title: <ipv6>-Element (Netzwerkeinstellungen)
+title: <ipv6> -Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/ipv6
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <ipv6> element
 - ipv6 element
 ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
-ms.openlocfilehash: 708604c782690efa631e4eab0aa62c1c0b1f657b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b8969cecf8ffb2ef23522f193bb322b1170e6111
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279694"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089210"
 ---
 # <a name="ipv6-element-network-settings"></a>\<IPv6 >-Element (Netzwerkeinstellungen)
 Internetprotokoll Version 6 (IPv6) ermöglicht Antworten von veralteten Member, der die <xref:System.Net.Dns> Klasse.  
@@ -47,7 +47,7 @@ Internetprotokoll Version 6 (IPv6) ermöglicht Antworten von veralteten Member, 
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
+|[Einstellungen](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Konfiguriert grundlegende Netzwerkoptionen für den <xref:System.Net>-Namespace.|  
   
 ## <a name="remarks"></a>Hinweise  
  Diese Einstellung ermöglicht IPv6-Unterstützung für die veralteten Member von der <xref:System.Net.Dns> Klasse: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, und <xref:System.Net.Dns.Resolve%2A>. Für andere Teammitglieder die <xref:System.Net?displayProperty=nameWithType> -Namespace, IPv6-Adressen können zurückgegeben werden, wenn IPv6 im Betriebssystem aktiviert ist.  
@@ -69,7 +69,8 @@ Internetprotokoll Version 6 (IPv6) ermöglicht Antworten von veralteten Member, 
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Net?displayProperty=nameWithType>
 - <xref:System.Net.Dns?displayProperty=nameWithType>
 - <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

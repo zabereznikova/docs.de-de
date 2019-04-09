@@ -2,12 +2,12 @@
 title: Signieren von gespeicherten Prozeduren in SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: da7b21d725d301006288245c940e4367c3ce8568
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606821"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094618"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Signieren von gespeicherten Prozeduren in SQL Server
  Eine digitale Signatur ist ein mit dem privaten Schlüssel des Signaturgebers verschlüsselter Datenhashwert. Der private Schlüssel stellt sicher, dass die digitale Signatur für den Träger oder Besitzer eindeutig ist. Sie können gespeicherte Prozeduren, Funktionen (mit Ausnahme von Inline-Tabellenwertfunktionen), Trigger und Assemblys registrieren.  
@@ -55,6 +55,7 @@ Wenn das Modul zusätzliche auf Serverebene-Berechtigungen erforderlich:
 |[Signieren von gespeicherten Prozeduren mit einem Zertifikat](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) in SQL Server-Onlinedokumentation|Enthält ein Lernprogramm zum Signieren einer gespeicherten Prozedur mit einem Zertifikat.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Übersicht über die SQL Server-Sicherheit](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

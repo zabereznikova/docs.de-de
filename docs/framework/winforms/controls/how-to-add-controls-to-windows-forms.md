@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms'
+title: 'Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 31820775d4f7fb981599e806aa5e27655039e6ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 72b5931a79284a93a4e0fdf3cb2cc3b03157f5f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720773"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106482"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a>Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms
+# <a name="how-to-add-controls-to-windows-forms"></a>Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms
 Die meisten Formulare werden durch Hinzufügen der Steuerelemente auf die Oberfläche des Formulars entworfen, um eine Benutzeroberfläche (UI) zu definieren. Ein *Steuerelement* ist eine Komponente in einem Formular zum Anzeigen von Informationen oder Benutzereingaben akzeptieren. Weitere Informationen zu Steuerelementen, finden Sie unter [Windows Forms-Steuerelemente](index.md).  
   
 > [!NOTE]
@@ -90,8 +90,9 @@ Die meisten Formulare werden durch Hinzufügen der Steuerelemente auf die Oberfl
     >  Sie können den lokalen Computer ein Sicherheitsrisiko dar, über das Netzwerk verfügbar zu machen, durch Verweisen auf ein böswilliger `UserControl`. Dies wäre nur ein Problem, wenn ein böswilliger Benutzer erstellt ein schädliches benutzerdefiniertes Steuerelement, indem Sie versehentlich zu Ihrem Projekt hinzufügen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Windows Forms-Steuerelemente](index.md)
-- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
-- [Vorgehensweise: Größe von Steuerelementen in Windows Forms](how-to-resize-controls-on-windows-forms.md)
-- [Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
+- [Vorgehensweise: Ändern der Größe von Steuerelementen in Windows Forms](how-to-resize-controls-on-windows-forms.md)
+- [Vorgehensweise: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Textes](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

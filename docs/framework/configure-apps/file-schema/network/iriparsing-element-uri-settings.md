@@ -1,19 +1,19 @@
 ---
-title: <iriParsing>-Element (Uri-Einstellungen)
+title: <iriParsing> -Element (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: a4d4df8c214efb955f8f9d6678aaf8d56de71ebc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 710d82b70eb16e88404d4d8bbf38d2d030693103
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256655"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092499"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<IriParsing >-Element (Netzwerkeinstellungen)
 Gibt an, ob die Analyse für internationale Ressourcenbezeichner (International Resource Identifier, IRI) auf <xref:System.Uri> angewendet wird und ob die IRI-Analyseregeln angewendet werden sollen.  
   
 ## <a name="schema-hierarchy"></a>Schemahierarchie  
- [\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<Configuration >-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<URI >-Elements (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -37,7 +37,7 @@ Gibt an, ob die Analyse für internationale Ressourcenbezeichner (International 
 |`enabled`|Gibt an, ob IRI-Analyse aktiviert ist. Der Standardwert ist `false`.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -80,6 +80,7 @@ Gibt an, ob die Analyse für internationale Ressourcenbezeichner (International 
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
-- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

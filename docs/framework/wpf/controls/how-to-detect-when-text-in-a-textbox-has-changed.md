@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erkennen von Änderungen an Text in einem Textfeld'
+title: 'Vorgehensweise: Erkennen von Textänderungen in einem TextBox-Objekt'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - text change [WPF], detecting
 - detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
-ms.openlocfilehash: 72441e53d21df47d34a0600dafdf0b4b04c11cad
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1adadb0f071815930d34f40ddf244ffc8c19131b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352372"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091147"
 ---
-# <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>Vorgehensweise: Erkennen von Änderungen an Text in einem Textfeld
+# <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>Vorgehensweise: Erkennen von Textänderungen in einem TextBox-Objekt
 Dieses Beispiel zeigt eine Möglichkeit zur Verwendung der <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> Ereignis zum Ausführen einer Methode immer den Text in eine <xref:System.Windows.Controls.TextBox> -Steuerelements geändert hat.  
   
  In der CodeBehind-Klasse für den [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] , enthält die <xref:System.Windows.Controls.TextBox> -Steuerelement, das Sie überwachen möchten, Änderungen, fügen Sie eine Methode aufruft, wenn die <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> -Ereignis ausgelöst wird.  Diese Methode müssen eine Signatur, die entspricht Erwartungen erfüllt werden die <xref:System.Windows.Controls.TextChangedEventHandler> delegieren.  
@@ -43,6 +43,7 @@ Dieses Beispiel zeigt eine Möglichkeit zur Verwendung der <xref:System.Windows.
  Kommentare  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.TextChangedEventArgs>
 - [Übersicht über TextBox](textbox-overview.md)
 - [Übersicht über RichTextBox](richtextbox-overview.md)

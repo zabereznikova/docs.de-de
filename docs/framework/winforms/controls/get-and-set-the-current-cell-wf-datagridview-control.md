@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], setting current cell
 - cells [Windows Forms], getting and setting current
 ms.assetid: b0e41e57-493a-4bd0-9376-a6f76723540c
-ms.openlocfilehash: 712340e6fbc081cbac9ecfb516bffb7a58bf0c12
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fb71a6e3259d3007e11f528377c95a9c4cbeb023
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724023"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096978"
 ---
 # <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Abrufen und Festlegen der aktuellen Zelle im DataGridView-Steuerelement in Windows Forms
 Interaktion mit der <xref:System.Windows.Forms.DataGridView> häufig erforderlich, dass Sie programmgesteuert ermitteln, welche Zelle derzeit aktiv ist. Sie müssen möglicherweise auch die aktuelle Zelle zu ändern. Sie können diese Aufgaben mit der <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> Eigenschaft.  
@@ -48,6 +48,7 @@ Interaktion mit der <xref:System.Windows.Forms.DataGridView> häufig erforderlic
 -   Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.CurrentCell%2A?displayProperty=nameWithType>
 - [Grundlegende Spalten-, Zeilen- und Zellfunktionen im DataGridView-Steuerelement in Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)

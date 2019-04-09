@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Suchen von Elementen, die mit einer DataTemplate generiert wurden'
+title: 'Vorgehensweise: Suchen von Elementen, die mit einer DataTemplate-Klasse generiert wurden'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - finding DataTemplate elements [WPF]
 - DataTemplate [WPF]
 ms.assetid: bfcd564e-5e9e-451e-8641-a9b5c3cfac90
-ms.openlocfilehash: 4317d22a786caa6a191002ff411fe54436f3dbcc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de5a4937feabdb4486d9dcf9d5e5bfddd2356690
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089171"
 ---
-# <a name="how-to-find-datatemplate-generated-elements"></a>Vorgehensweise: Suchen von Elementen, die mit einer DataTemplate generiert wurden
+# <a name="how-to-find-datatemplate-generated-elements"></a>Vorgehensweise: Suchen von Elementen, die mit einer DataTemplate-Klasse generiert wurden
 In diesem Beispiel zeigt, wie Sie Elemente, die vom generierten eine <xref:System.Windows.DataTemplate>.  
   
 ## <a name="example"></a>Beispiel  
@@ -38,9 +38,10 @@ In diesem Beispiel zeigt, wie Sie Elemente, die vom generierten eine <xref:Syste
  [!code-vb[FindGeneratedItems#FVC](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FindGeneratedItems/VisualBasic/Window1.xaml.vb#fvc)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Suchen von Elementen einer ControlTemplate generiert wurden](../controls/how-to-find-controltemplate-generated-elements.md)
-- [Übersicht zur Datenbindung](data-binding-overview.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+
+- [Vorgehensweise: Suchen von Elementen, die mit einer ControlTemplate generiert wurden](../controls/how-to-find-controltemplate-generated-elements.md)
+- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)
 - [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)
 - [WPF-XAML-Namescopes](../advanced/wpf-xaml-namescopes.md)
 - [Strukturen in WPF](../advanced/trees-in-wpf.md)

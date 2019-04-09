@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Legen Sie die ProtectionLevel-Eigenschaft'
+title: 'Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: 13e07d06ed795bc50822d95cdd1ab44c6c336d2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce9fc8549218db5a1446026421f1a7ba1e5a23aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586855"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089847"
 ---
-# <a name="how-to-set-the-protectionlevel-property"></a>Vorgehensweise: Legen Sie die ProtectionLevel-Eigenschaft
+# <a name="how-to-set-the-protectionlevel-property"></a>Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft
 Sie können die Schutzebene festlegen, indem Sie ein entsprechendes Attribut anwenden und die Eigenschaft einrichten. Sie können den Schutz auf Dienstebene einrichten, um alle Teile einer Nachricht anzupassen. Darüber hinaus können Sie den Schutz auf stärker unterteilten Ebenen einrichten – von den Methoden zu den Nachrichtenteilen. Weitere Informationen zu den `ProtectionLevel` -Eigenschaft finden Sie unter [Verständnis Schutzebene](../../../docs/framework/wcf/understanding-protection-level.md).  
   
 > [!NOTE]
@@ -89,6 +89,7 @@ Sie können die Schutzebene festlegen, indem Sie ein entsprechendes Attribut anw
  [!code-vb[C_ProtectionLevel#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#0)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 - <xref:System.ServiceModel.FaultContractAttribute>

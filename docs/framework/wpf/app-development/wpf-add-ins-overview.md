@@ -12,18 +12,16 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365840"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091615"
 ---
 # <a name="wpf-add-ins-overview"></a>Übersicht über WPF-Add-Ins
 <a name="Introduction"></a> .NET Framework enthält eine Add-In-Modell, mit denen Entwickler Anwendungen erstellen, die Add-in-Erweiterbarkeit zu unterstützen. Dieses Add-In-Modell ermöglicht die Erstellung von Add-Ins, die in die Anwendungsfunktionalität integriert werden und diese erweitern. In einigen Szenarien müssen Anwendungen auch von Benutzeroberflächen anzeigen, die von Add-Ins bereitgestellt werden. In diesem Thema wird gezeigt, wie das .NET Framework-add-in-Modell zum Aktivieren dieser Szenarien, in der Architektur hinter, dessen Vorteile und Einschränkungen von WPF erweitert.  
-  
 
-  
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
  Vertrautheit mit dem Add-In-Modell von .NET Framework ist erforderlich. Weitere Informationen finden Sie unter [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
@@ -167,7 +165,7 @@ ms.locfileid: "57365840"
  In den folgenden Unterabschnitten werden diese Aufgaben ausführlich beschrieben.  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Konfigurieren der Pipeline und des Add-Ins für die ClickOnce-Bereitstellung  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]s werden in einen sicheren Ordner heruntergeladen und von dort aus im [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]-Bereitstellungscache ausgeführt. Damit eine [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ein Add-In hosten kann, müssen auch Pipeline- und Add-In-Assembly in den sicheren Ordner heruntergeladen werden. Um dies zu erreichen, müssen Sie das Anwendungsmanifest so konfigurieren, dass sowohl die Pipeline- als auch die Add-In-Assembly heruntergeladen wird. Diese Aufgabe lässt sich am einfachsten in [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] ausführen, obwohl Pipeline- und Add-In-Assembly im Stammordner des [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Hostprojekts gespeichert sein müssen, damit [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] die Pipelineassemblys ermitteln kann.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] werden heruntergeladen, und führen Sie aus einem sicheren Ordner, in der [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] -Bereitstellungscache. Damit eine [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ein Add-In hosten kann, müssen auch Pipeline- und Add-In-Assembly in den sicheren Ordner heruntergeladen werden. Um dies zu erreichen, müssen Sie das Anwendungsmanifest so konfigurieren, dass sowohl die Pipeline- als auch die Add-In-Assembly heruntergeladen wird. Diese Aufgabe lässt sich am einfachsten in [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] ausführen, obwohl Pipeline- und Add-In-Assembly im Stammordner des [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Hostprojekts gespeichert sein müssen, damit [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] die Pipelineassemblys ermitteln kann.  
   
  Folglich muss der erste Schritt darin bestehen, die Pipeline- und Add-In-Assembly im Stammverzeichnis des [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Projekts zu erstellen. Dazu wird die Buildausgabe der einzelnen Pipelineassembly- und Add-In-Assemblyprojekte festgelegt. Die folgende Tabelle zeigt die Buildausgabepfade für die Pipelineassemblyprojekte und das Add-In-Assemblyprojekt, die sich in demselben Projektmappen- und Stammordner befinden wie das [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Hostprojekt.  
   
@@ -283,9 +281,10 @@ ms.locfileid: "57365840"
  Standardmäßig Wenn mehrere Anwendungsdomänen verwendet werden, werden verschiedenen .NET Framework-Assemblys, die von jeder Anwendung benötigt werden alle in die Domäne dieser Anwendung geladen. Aufgrund der Zeit, die zum Erstellen neuer Anwendungsdomänen und für das Starten der darin enthaltenen Anwendungen erforderlich ist, kann die Leistung beeinträchtigt werden. .NET Framework bietet jedoch eine Möglichkeit, Startzeiten zu verkürzen von Anwendungen angewiesen, Assemblys in Anwendungsdomänen gemeinsam nutzen, wenn sie bereits geladen sind. Verwenden Sie hierzu die <xref:System.LoaderOptimizationAttribute> -Attribut, das auf die Einstiegspunktmethode angewendet werden muss (`Main`). In diesem Fall müssen Sie lediglich zum Implementieren Ihrer Anwendungsdefinition Code verwenden (siehe [Übersicht über die Anwendungsverwaltung](application-management-overview.md)).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.LoaderOptimizationAttribute>
 - [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Anwendungsdomänen](../../app-domains/application-domains.md)
-- [Übersicht über .NET Framework-Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
-- [Erstellen Remotefähiger Objekte](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Themen zu Vorgehensweisen](how-to-topics.md)
+- [Übersicht über .NET Framework-Remoting](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [Remotefähigmachen von Objekten](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
+- [Gewusst wie-Themen](how-to-topics.md)

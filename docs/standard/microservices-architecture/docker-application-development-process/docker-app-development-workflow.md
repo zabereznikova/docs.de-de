@@ -4,12 +4,12 @@ description: Erläuterungen zu den Workflowdetails für die Entwicklung von auf 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: a8016b2b55313cb6e1d84bfb2c50a62347858de9
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: d494dba829d8065e2bc1424bc9bcc11e265fbcc0
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464358"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921090"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Entwicklungsworkflow für Docker-Apps
 
@@ -51,7 +51,7 @@ Das Entwickeln einer Docker-Anwendung ist mit der Art und Weise vergleichbar, wi
 
 Stellen Sie zuerst sicher, dass [Docker Community Edition (CE)](https://docs.docker.com/docker-for-windows/) für Windows wie nachfolgend erläutert installiert wurde:
 
-[Get started with Docker CE for Windows (Erste Schritte mit Docker CE für Windows)](https://docs.docker.com/docker-for-windows/)
+[Erste Schritte mit Docker CE für Windows](https://docs.docker.com/docker-for-windows/)
 
 Zudem benötigen Sie Visual Studio 2017, Version 15.7 oder höher, mit installierter Workload für die **plattformübergreifende .NET Core-Entwicklung**, wie in Abbildung 5.2 dargestellt.
 
@@ -97,14 +97,14 @@ Visual Studio kann auf ganz ähnliche Weise eine docker-compose.yml-Datei für d
 
 Sie erstellen ein benutzerdefiniertes Image für den Container in der Regel auf einem Basisimage, das Sie von einem offiziellen Repository in der [Docker-Hub](https://hub.docker.com/)-Registrierung erhalten. Das ist genau das, was im Hintergrund geschieht, wenn Sie die Docker-Unterstützung in Visual Studio aktivieren. Die Dockerfile verwendet ein vorhandenes `aspnetcore`-Image.
 
-Es wurde bereits erläutert, welche Docker-Images und Repositorys Sie abhängig vom Framework und Betriebssystem, das Sie ausgewählt haben, verwenden können. Wenn Sie beispielsweise ASP.NET Core (Linux oder Windows) verwenden möchten, muss das Image `microsoft/dotnet:2.2-aspnetcore-runtime` verwendet werden. Aus diesem Grund müssen Sie nur angeben, welche Docker-Basisimages Sie für den Container verwenden werden. Fügen Sie hierzu `FROM microsoft/dotnet:2.2-aspnetcore-runtime` Ihrer Dockerfile hinzu. Dies wird automatisch von Visual Studio ausgeführt, aber wenn Sie die Version aktualisieren müssen, aktualisieren Sie diesen Wert.
+Es wurde bereits erläutert, welche Docker-Images und Repositorys Sie abhängig vom Framework und Betriebssystem, das Sie ausgewählt haben, verwenden können. Wenn Sie beispielsweise ASP.NET Core (Linux oder Windows) verwenden möchten, muss das Image `mcr.microsoft.com/dotnet/core/aspnet:2.2` verwendet werden. Aus diesem Grund müssen Sie nur angeben, welche Docker-Basisimages Sie für den Container verwenden werden. Fügen Sie hierzu `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2` Ihrer Dockerfile hinzu. Dies wird automatisch von Visual Studio ausgeführt, aber wenn Sie die Version aktualisieren müssen, aktualisieren Sie diesen Wert.
 
 Durch Verwendung eines offiziellen .NET Image-Repositorys von Docker-Hub mit einer Versionsnummer wird sichergestellt, dass die gleichen Sprachfunktionen auf allen Computern (Entwicklung, Test und Produktion) verfügbar sind.
 
 Das folgende Beispiel veranschaulicht eine Dockerfile-Beispieldatei für einen ASP.NET Core-Container.
 
 ```Dockerfile
-FROM microsoft/dotnet:2.2-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 ARG source
 WORKDIR /app
 EXPOSE 80
@@ -112,7 +112,7 @@ COPY ${source:-obj/Docker/publish} .
 ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
 ```
 
-In diesem Fall basiert das Image auf Version 2.2 des offiziellen ASP.NET Core-Docker-Images (mehrere Architekturen für Linux und Windows). Dies ist die Einstellung `FROM microsoft/dotnet:2.2-aspnetcore-runtime`. (Weitere Informationen zu diesem Basisimage finden Sie unter [.NET Core Docker Image (.NET Core-Docker-Image)](https://hub.docker.com/r/microsoft/dotnet/).) In der Dockerfile-Datei müssen Sie auch angeben, dass Docker an dem TCP-Port lauscht, den Sie zur Runtime verwenden (in diesem Fall Port 80 gemäß Konfiguration mit der EXPOSE-Einstellung).
+In diesem Fall basiert das Image auf Version 2.2 des offiziellen ASP.NET Core-Docker-Images (mehrere Architekturen für Linux und Windows). Dies ist die Einstellung `FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`. (Weitere Informationen zu diesem Basisimage finden Sie unter [.NET Core Docker Image (.NET Core-Docker-Image)](https://hub.docker.com/_/microsoft-dotnet-core/).) In der Dockerfile-Datei müssen Sie auch angeben, dass Docker an dem TCP-Port lauscht, den Sie zur Runtime verwenden (in diesem Fall Port 80 gemäß Konfiguration mit der EXPOSE-Einstellung).
 
 Je nach Sprache und Framework, die Sie verwenden, können Sie zusätzliche Konfigurationseinstellungen in der Dockerfile angeben. Beispielsweise weist die ENTRYPOINT-Zeile mit `["dotnet", "MySingleContainerWebApp.dll"]` Docker an, eine .NET Core-Anwendung auszuführen. Wenn Sie das SDK und die .NET Core-CLI (Dotnet-CLI) verwenden, um die .NET-Anwendung zu entwickeln und auszuführen, wird eine andere Einstellung verwendet. Entscheidend ist, dass die ENTRYPOINT-Zeile und andere Einstellungen je nach Sprache und Plattform variieren können, die Sie für Ihre Anwendung auswählen.
 
@@ -132,7 +132,7 @@ Je nach Sprache und Framework, die Sie verwenden, können Sie zusätzliche Konfi
 
 ### <a name="using-multi-arch-image-repositories"></a>Verwenden von Repositorys für Images für mehrere Architekturen
 
-Ein Repository kann Plattformvarianten enthalten, wie z.B. ein Linux-Image und ein Windows-Image. Dieses Feature ermöglicht Anbietern wie Microsoft (Basisimageentwickler), ein Repository für mehrere Plattformen (Linux und Windows) zu entwickeln. Das in der Docker-Hub-Registrierung verfügbare [Microsoft/Dotnet](https://hub.docker.com/r/microsoft/dotnet/)-Repository bietet beispielsweise Unterstützung für Linux und Windows Nano Server dadurch, dass der gleiche Repositoryname verwendet wird.
+Ein Repository kann Plattformvarianten enthalten, wie z.B. ein Linux-Image und ein Windows-Image. Dieses Feature ermöglicht Anbietern wie Microsoft (Basisimageentwickler), ein Repository für mehrere Plattformen (Linux und Windows) zu entwickeln. Das in der Docker-Hub-Registrierung verfügbare [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)-Repository bietet beispielsweise Unterstützung für Linux und Windows Nano Server dadurch, dass der gleiche Repositoryname verwendet wird.
 
 Wenn Sie ein explizites Tag für eine bestimmte Plattform angeben, wie in den folgenden Fällen:
 
@@ -174,11 +174,11 @@ Sie können den mehrstufigen Prozess am besten verstehen, wenn Sie eine Dockerfi
 Die ursprüngliche Dockerfile kann wie folgt aussehen:
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
+ 1  FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.2-sdk AS build
+ 5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
  8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
@@ -257,7 +257,7 @@ Jedoch wird `dotnet restore` nur ausgeführt, wenn sich ein einzelnes Projekt od
 
    - `*.sln`, um alle Projektmappendateien in der Hauptordnerstruktur zu ignorieren
 
-   - `!eShopOnContainers-ServicesAndWebApps.sln`, um nur diese Projektmappendatei einzufügen
+   - `!eShopOnContainers-ServicesAndWebApps.sln`, um nur diese Projektmappendatei einzubeziehen
 
 2) Schließen Sie das `/ignoreprojectextensions:.dcproj`-Argument in `dotnet restore` ein, damit auch das docker-compose-Projekt ignoriert und nur das Paket für die Projektmappe „eShopOnContainers-ServicesAndWebApps“ wiederhergestellt wird.
 
@@ -266,11 +266,11 @@ Für die letzte Optimierung kann es der Fall sein, dass Zeile 20 redundant wird,
 Die Datei, die sich daraus ergibt, sieht wie folgt aus:
 
 ```Dockerfile
- 1  FROM microsoft/dotnet:2.2-aspnetcore-runtime AS base
+ 1  FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS base
  2  WORKDIR /app
  3  EXPOSE 80
  4
- 5  FROM microsoft/dotnet:2.2-sdk AS publish
+ 5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS publish
  6  WORKDIR /src
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj
@@ -524,7 +524,7 @@ Wenn Sie mit dem Editor-/CLI-Ansatz entwickeln, ist das Debuggen von Containern 
 - **Debuggen von Apps in einem lokalen Docker-Container** \
   [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
-- **Steve Lasker. Build, Debug, Deploy ASP.NET Core Apps with Docker (Erstellen, Debuggen, Bereitstellen von ASP.NET Core-Apps mit Docker).** Video. \
+- **Steve Lasker: Build, Debug, Deploy ASP.NET Core Apps with Docker (Erstellen, Debuggen, Bereitstellen von ASP.NET Core-Apps mit Docker).** Video. \
   [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Vereinfachter Workflow bei der Entwicklung von Containern mit Visual Studio

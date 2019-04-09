@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442723"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095866"
 ---
 # <a name="using-sessions"></a>Verwenden von Sitzungen
 In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert eine Gruppe von Nachrichten in einer Konversation. WCF--Sitzungen sind anders als das Session-Objekt, das in verfügbar [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Anwendungen, unterstützen andere Verhaltensweisen und auf andere Weise gesteuert werden. Dieses Thema beschreibt die Funktionen, mit denen Sitzungen in WCF-Anwendungen und deren Verwendung.  
@@ -32,11 +32,11 @@ In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert 
   
  Wenn Sie kennen die <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> -Klasse im [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Anwendungen und die Funktionalität bietet, fallen Ihnen möglicherweise die folgenden Unterschiede zwischen dieser Art von Sitzung und WCF-Sitzungen:  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Sitzungen werden immer vom Server initiiert.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Sitzungen werden immer vom Server initiiert.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Sitzungen sind implizit nicht sortiert.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Sitzungen sind implizit nicht sortiert.  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] -Sitzungen stellen einen allgemeinen Datenspeicher für Anforderungen bereit.  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Sitzungen bieten eine allgemeine Datenspeichermechanismus für Anforderungen.  
   
  Dieses Thema beschreibt Folgendes:  
   
@@ -108,14 +108,14 @@ In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert 
 > [!NOTE]
 >  Das Standardverhalten ist lokalen Konstruktoren und Destruktoren ähnlich, aber eben nur ähnlich. Ein WCF-Dienstvorgang kann ein initiierungs- oder Beendigungsvorgang oder beides gleichzeitig sein. Außerdem können Initiierungsvorgänge im Standardfall beliebig oft in einer beliebigen Reihenfolge aufgerufen werden, nachdem der erste Vorgang aufgerufen wurde. Es werden keine zusätzlichen Sitzungen erstellt, sobald die Sitzung aufgebaut und einer Instanz zugeordnet wurde, es sei denn, Sie steuern die Lebensdauer der Dienstinstanz explizit (durch Bearbeiten des <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> -Objekts). Der Zustand wird schließlich der Sitzung zugeordnet, nicht dem Dienstobjekt.  
   
- Z. B. die `ICalculatorSession` Vertrag, der im vorherigen Beispiel verwendet der WCF-Client den ersten Aufruf Objekt muss die `Clear` Vorgang vor allen anderen Vorgängen, und dass die Sitzung mit dieser WCF-Clientobjekts sollte beim Aufrufen der Beenden`Equals` Vorgang. Das folgende Codebeispiel zeigt einen Vertrag, der diese Anforderungen erzwingt. `Clear` muss zuerst aufgerufen werden, um eine Sitzung zu initiieren. Diese Sitzung endet, wenn `Equals` aufgerufen wird.  
+ Z. B. die `ICalculatorSession` Vertrag, der im vorherigen Beispiel verwendet der WCF-Client den ersten Aufruf Objekt muss die `Clear` Vorgang vor allen anderen Vorgängen, und dass die Sitzung mit dieser WCF-Clientobjekts sollte beim Aufrufen der Beenden`Equals` Vorgang. Das folgende Codebeispiel zeigt einen Vertrag, der diese Anforderungen erzwingt. `Clear` muss zuerst aufgerufen werden, um eine Sitzung zu initiieren und die Sitzung endet, wenn `Equals` aufgerufen wird.  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
   
  Dienste starten keine Sitzungen mit Clients. In WCF-Clientanwendungen ist Sie eine direkte Beziehung zwischen der Lebensdauer des sitzungsbasierten Kanals und die Lebensdauer der Sitzung vorhanden. Aus diesem Grund erstellen Clients neue Sitzungen, indem sie neue sitzungsbasierte Kanäle erstellen, und beenden bestehende Sitzungen, indem sie sitzungsbasierte Kanäle ordnungsgemäß schließen. Ein Client startet eine Sitzung mit einem Dienstendpunkt, indem er einen der folgenden Vorgänge aufruft:  
   
--   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> auf dem Kanal, das durch einen Aufruf an <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>zurückgegeben wurde.  
+-   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> auf dem Kanal zurückgegeben, die durch einen Aufruf von <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
 -   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> für das vom WCF-Clientobjekt den [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
@@ -123,7 +123,7 @@ In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert 
   
  Ein Client beendet eine Sitzung in der Regel mit einem Dienstendpunkt, indem er einen der folgenden Vorgänge aufruft:  
   
--   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> auf dem Kanal, das durch einen Aufruf an <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>zurückgegeben wurde.  
+-   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> auf dem Kanal zurückgegeben, die durch einen Aufruf von <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>.  
   
 -   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> für das WCF-Clientobjekt von Svcutil.exe generiert wurde.  
   
@@ -146,5 +146,6 @@ In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert 
 >  MaxConcurrentSessions hat in diesem Fall keine Auswirkungen, da nur eine Sitzung verfügbar ist.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Kopieren von Pixeln zum Vermindern des Flackerns in Windows Forms'
+title: 'Vorgehensweise: Kopieren von Pixeln zum Vermindern des Flackerns in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: d03a9b79dc2c0ec61bbafe2ff09b5aba7fffc57b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094033"
 ---
-# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Vorgehensweise: Kopieren von Pixeln zum Vermindern des Flackerns in Windows Forms
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Vorgehensweise: Kopieren von Pixeln zum Vermindern des Flackerns in Windows Forms
 Wenn Sie eine einfache Grafik animieren, können Benutzer manchmal Flimmern oder andere unerwünschte visuelle Effekte auftreten. Eine Möglichkeit zum Beschränken dieses Problems ist, einen "Bitblt" auf die Grafik verwenden. BitBlt ist die "Bitblocktransfer" der Farbdaten aus einem Ursprung Rechteck aus Pixeln einen Ziel-Rechteck aus Pixeln.  
   
  Mit Windows Forms, Bitblt erfolgt mithilfe der <xref:System.Drawing.Graphics.CopyFromScreen%2A> Methode der <xref:System.Drawing.Graphics> Klasse. In den Parametern der Methode geben Sie an der Quelle und Ziel (als Punkt), die Größe des Bereichs für den kopiert werden und das Graphics-Objekt verwendet, um die neue Form zu zeichnen.  
@@ -63,8 +63,9 @@ private void Form1_Paint(System.Object sender,
  Der obige Code ausgeführt wird, in der Form <xref:System.Windows.Forms.Control.Paint> -Ereignishandler so, dass die Grafiken erhalten bleiben, wenn das Formular neu gezeichnet wird. Rufen Sie daher nicht Grafiken bezogene Methoden in der <xref:System.Windows.Forms.Form.Load> -Ereignishandler, da der gezeichnete Inhalt nicht neu gezeichnet wird, wenn das Formular vergrößert bzw. verkleinert oder durch eine andere Form verdeckt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Verwenden eines Stifts zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)
+- [Verwenden eines Stiftes zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)

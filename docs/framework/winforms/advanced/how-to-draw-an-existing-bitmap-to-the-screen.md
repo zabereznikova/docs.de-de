@@ -9,12 +9,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], loading in Windows Forms applications
 - images [Windows Forms], displaying on Windows Forms
 ms.assetid: 5bc558d7-b326-4050-a834-b8600da0de95
-ms.openlocfilehash: d2e06aa382bc2b01a4308f99735ca533e7a9a3ea
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 90511adf9caffe7952e270d6fe32dd85162a29d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653820"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089165"
 ---
 # <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>Vorgehensweise: Zeichnen einer vorhandenen Bitmap auf dem Bildschirm
 Sie können ein vorhandenes Image ganz einfach auf dem Bildschirm zeichnen. Zunächst müssen Sie erstellen eine <xref:System.Drawing.Bitmap> Objekt mit dem Bitmapkonstruktor, der einen Dateinamen akzeptiert <xref:System.Drawing.Bitmap.%23ctor%28System.String%29>. Dieser Konstruktor akzeptiert die Images mit mehrere verschiedene Dateiformate einschließlich BMP, GIF, JPEG, PNG und TIFF. Nach der Erstellung der <xref:System.Drawing.Bitmap> Objekt, und übergeben, die <xref:System.Drawing.Bitmap> -Objekt an die <xref:System.Drawing.Graphics.DrawImage%2A> Methode eine <xref:System.Drawing.Graphics> Objekt.  
@@ -33,5 +33,6 @@ Sie können ein vorhandenes Image ganz einfach auf dem Bildschirm zeichnen. Zun�
  Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Arbeiten mit Bildern, Bitmaps, Symbolen und Metadateien](working-with-images-bitmaps-icons-and-metafiles.md)

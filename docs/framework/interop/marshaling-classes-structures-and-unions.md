@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a4461d14299264a35f36133480cb11709c346ce
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c481b6889c1f10124465a4e851adfb25a1ba2eff
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221276"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890292"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshallen von Klassen, Strukturen und Unions
 Klassen und Strukturen sind in .NET Framework ähnlich. Beide können Felder, Eigenschaften und Ereignisse enthalten. Sie können auch über statische und nicht statische Methoden verfügen. Ein deutlicher Unterschied ist, dass Strukturen Werttypen sind, während Klassen Verweistypen sind.  
@@ -68,7 +68,7 @@ Klassen und Strukturen sind in .NET Framework ähnlich. Beide können Felder, Ei
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) ist eine benutzerdefinierte, nicht verwaltete Bibliothek, die Implementierungen für die zuvor aufgelisteten Funktionen und vier Strukturen enthält: **MYPERSON**, **MYPERSON2**, **MYPERSON3** und **MYARRAYSTRUCT**. Diese Strukturen enthalten die folgenden Elemente:  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) ist eine benutzerdefinierte, nicht verwaltete Bibliothek, die Implementierungen für die zuvor aufgelisteten Funktionen und vier Strukturen enthält: **MYPERSON**, **MYPERSON2**, **MYPERSON3** und **MYARRAYSTRUCT**. Diese Strukturen enthalten die folgenden Elemente:  
   
 ```  
 typedef struct _MYPERSON  
@@ -182,7 +182,7 @@ typedef struct _WIN32_FIND_DATA
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) ist eine benutzerdefinierte, nicht verwaltete Bibliothek, die eine Implementierung für die zuvor aufgelistete Funktion und zwei Unions enthält: **MYUNION** und **MYUNION2**. Die Union enthält die folgenden Elemente:  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) ist eine benutzerdefinierte, nicht verwaltete Bibliothek, die eine Implementierung für die zuvor aufgelistete Funktion und zwei Unions enthält: **MYUNION** und **MYUNION2**. Die Union enthält die folgenden Elemente:  
   
 ```  
 union MYUNION  
@@ -254,7 +254,7 @@ typedef struct _SYSTEMTIME {
   
  In diesem Beispiel wird veranschaulicht, wie eine systemeigene Funktion unter Verwendung der <xref:System.Runtime.InteropServices.Marshal>-Klasse und mithilfe von unsicherem Code aufgerufen wird.  
   
- Dieses Beispiel verwendet eine Wrapperfunktion und Plattformaufrufe, die in [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) definiert sind und auch in den Quelldateien bereitgestellt werden. Es verwendet die `TestOutArrayOfStructs`-Funktion und die `MYSTRSTRUCT2`-Struktur. Die Struktur enthält die folgenden Elemente:  
+ Dieses Beispiel verwendet eine Wrapperfunktion und Plattformaufrufe, die in [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) definiert sind und auch in den Quelldateien bereitgestellt werden. Es verwendet die `TestOutArrayOfStructs`-Funktion und die `MYSTRSTRUCT2`-Struktur. Die Struktur enthält die folgenden Elemente:  
   
 ```  
 typedef struct _MYSTRSTRUCT2  
@@ -264,7 +264,7 @@ typedef struct _MYSTRSTRUCT2
 } MYSTRSTRUCT2;  
 ```  
   
- Die `MyStruct`-Klasse enthält ein Zeichenfolgenobjekt aus ANSI-Zeichen. Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>-Feld gibt das ANSI-Format an. `MyUnsafeStruct` ist eine Struktur, die einen <xref:System.IntPtr>-Typ anstelle einer Zeichenfolge enthält.  
+ Die `MyStruct`-Klasse enthält ein Zeichenfolgenobjekt aus ANSI-Zeichen. Das <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>-Feld gibt das ANSI-Format an. `MyUnsafeStruct`ist eine Struktur, die einen <xref:System.IntPtr>-Typ anstelle einer Zeichenfolge enthält.  
   
  Die `LibWrap`-Klasse enthält die überladene `TestOutArrayOfStructs`-Prototypenmethode. Wenn eine Methode einen Zeiger als Parameter deklariert, sollte die Klasse mit dem `unsafe`-Schlüsselwort markiert werden. Da [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] keinen unsicheren Code verwenden kann, sind die überladene Methode, der "unsafe"-Modifizierer und die `MyUnsafeStruct`-Struktur nicht erforderlich.  
   
@@ -290,5 +290,5 @@ typedef struct _MYSTRSTRUCT2
   
 ## <a name="see-also"></a>Siehe auch
 - [Marshallen von Daten mit Plattformaufruf](marshaling-data-with-platform-invoke.md)
-- [Marshallen von Zeichenfolgen](marshaling-strings.md)
-- [Maushallen verschiedener Typen von Arrays](marshaling-different-types-of-arrays.md)
+- [Marshalling von Zeichenfolgen](marshaling-strings.md)
+- [Marshallen verschiedener Typen von Arrays](marshaling-different-types-of-arrays.md)

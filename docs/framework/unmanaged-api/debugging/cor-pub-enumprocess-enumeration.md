@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bfc576e1b4f0bf1666dcd585a24dbfa398e9abde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02ff60852a85d003deb68cae96a184ac8d61c65f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089406"
 ---
 # <a name="corpubenumprocess-enumeration"></a>COR_PUB_ENUMPROCESS-Enumeration
 Identifiziert den aufzulistenden Prozesstyp.  
@@ -53,4 +53,5 @@ typedef enum {
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+
+- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

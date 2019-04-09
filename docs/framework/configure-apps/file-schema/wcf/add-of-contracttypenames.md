@@ -2,12 +2,12 @@
 title: <add> von <contractTypeNames>
 ms.date: 03/30/2017
 ms.assetid: 03aff6be-5dfb-4a64-ada3-e36227cd43c7
-ms.openlocfilehash: fa67d2ec21494bb3d84861f4c2e2e39151aac28f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 856298cb0639cf19b941f326b5b9a25aa6663088
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55253714"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091316"
 ---
 # <a name="add-of-contracttypenames"></a>\<add> of \<contractTypeNames>
 Ein Konfigurationselement, das den Vertragsnamen der Dienste angibt, nach denen gesucht wird, sowie die Kriterien, die normalerweise beim Suchen nach einem Dienst verwendet werden. Wenn mehr als ein Vertragsname angegeben wird, antworten nur Dienstendpunkte, die ALLEN Verträgen entsprechen. Beachten Sie, dass in Windows Communication Foundation (WCF), ein Endpunkt nur als einen Vertrag unterstützen kann.  
@@ -52,7 +52,7 @@ Ein Konfigurationselement, das den Vertragsnamen der Dienste angibt, nach denen 
 |namespace|Eine Zeichenfolge, die den Namespace des Vertragstyps angibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -61,6 +61,7 @@ Ein Konfigurationselement, das den Vertragsnamen der Dienste angibt, nach denen 
 |[\<contractTypeNames>](../../../../../docs/framework/configure-apps/file-schema/wcf/contracttypenames.md)|Eine Auflistung von Vertragstypnamen.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Discovery.FindCriteria>
 - <xref:System.ServiceModel.Discovery.Configuration.FindCriteriaElement>
 - <xref:System.ServiceModel.Discovery.Configuration.ContractTypeNameElement>

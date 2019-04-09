@@ -2,12 +2,12 @@
 title: <custom>
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 5ff066c32f7d08ec989d6cd04e16c89f0a36f6fa
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 18359e871feed17a11006d0b2998907faf25c158
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106586"
 ---
 # <a name="custom"></a>\<custom>
 Gibt die spezifischen Einstellungen für einen benutzerdefinierten Peerresolverdienst an.  
@@ -56,9 +56,10 @@ Gibt die spezifischen Einstellungen für einen benutzerdefinierten Peerresolverd
  Mit diesem Element werden die Basiseinstellungen für einen benutzerdefinierten Peerresolverdienst definiert. Berücksichtigt werden dabei unter anderem die Endpunktadresse des Peers, der den Dienst hostet, sowie alle spezifischen Bindungseinstellungen. Weitere Informationen zum Erstellen eines benutzerdefinierten Konfliktlösers finden Sie unter [Hinzufügen eines benutzerdefinierten Konfliktlösers zu einer PeerChannel-Anwendung](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90)).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>
 - <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>
 - <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>
 - <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>
 - [Peerresolver](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
-- [Hinzufügen eines benutzerdefinierten Konfliktlösers zu einer PeerChannel-Anwendung](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))
+- [Hinzufügen einer benutzerdefinierten Auflösung zu einer PeerChannel-Anwendung](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))
