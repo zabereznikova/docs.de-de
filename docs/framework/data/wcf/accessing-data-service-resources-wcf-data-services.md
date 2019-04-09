@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 9589656c00573f7b3bba07aee1f89902a34d61ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4b0af7f20cbf932773df3ae226729a0a6c2500
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740839"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085869"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Zugreifen auf Datendienstressourcen (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] unterstützt die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] zum Verfügbarmachen von Daten als Feed mit Ressourcen, die mit URIs adressierbar sind. Diese Ressourcen werden entsprechend der entitätsbeziehungskonventionen des dargestellt die [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md). In diesem Modell stellen Entitäten Funktionsbausteine von Daten, die Datentypen sind, in einer Anwendungsdomäne dar, z. B. Kunden, Bestellungen, Artikel und Produkte. Das Zugreifen auf und Ändern von Entitätsdaten erfolgt mit der REST ( Representational State Transfer)-Semantik, speziell mit den Standard-HTTP-Verben GET, PUT, POST und DELETE.  
@@ -97,4 +97,5 @@ http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper
  Der URI des ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -Ressource ermöglicht es Ihnen, Entitätsdaten zu adressieren von dem Dienst verfügbar gemacht werden. Wenn Sie einen URI in das Adressfeld eines Webbrowsers eingeben einer [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feeddarstellung der angeforderten Ressource zurückgegeben wird. Weitere Informationen finden Sie unter den [WCF Data Services-Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Obwohl ein Webbrowser zum Testen der, dass eine datendienstressource die erwarteten Daten zurückgibt, Daten-Produktionsdienste, die können auch erstellen, aktualisieren und Löschen von Daten erfolgt in der Regel vom Anwendungscode oder Skriptsprachen auf einer Webseite hilfreich sein kann. Weitere Informationen finden Sie unter [Verwenden eines Datendiensts in einer Clientanwendung](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Open Data Protocol-Website](https://go.microsoft.com/fwlink/?LinkID=182204)
+
+- [Website "Open Data Protocol"](https://go.microsoft.com/fwlink/?LinkID=182204)

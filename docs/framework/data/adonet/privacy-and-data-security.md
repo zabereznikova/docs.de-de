@@ -2,12 +2,12 @@
 title: Datenschutz und -sicherheit
 ms.date: 03/30/2017
 ms.assetid: 46fa5839-adf7-4c7c-bce3-71e941fa7de9
-ms.openlocfilehash: ed408cedbd686efd29472f6f7d19ec03390164f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3852e6034ff78b362bd67a05bd828d3033731a85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662139"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081832"
 ---
 # <a name="privacy-and-data-security"></a>Datenschutz und -sicherheit
 Die Vorgehensweise zum Schutz und zur Verwaltung sicherheitsrelevanter Informationen in ADO.NET-Anwendungen hängt von den Produkten und Technologien ab, mit denen die jeweilige Anwendung erstellt wird. ADO.NET selbst stellt keine direkten Dienste zum Sichern oder Verschlüsseln von Daten bereit.  
@@ -28,6 +28,7 @@ Die Vorgehensweise zum Schutz und zur Verwaltung sicherheitsrelevanter Informati
  Die <xref:System.Security.SecureString>-Klasse stellt Methoden zum Verschlüsseln von Text mit der Datenschutz-API (DPAPI) im Arbeitsspeicher bereit. Die Zeichenfolge wird dann aus dem Arbeitsspeicher gelöscht, wenn sie nicht mehr benötigt wird. Es gibt keine `ToString`-Methode zum schnellen Lesen des Inhalts einer <xref:System.Security.SecureString>. Sie können eine neue Instanz von `SecureString` ohne Wert oder durch Übergabe eines Zeigers auf ein Array von <xref:System.Char>-Objekten initialisieren. Anschließend können Sie dann die verschiedenen Methoden der Klasse verwenden, um mit der Zeichenfolge zu arbeiten. Weitere Informationen die [Anwendungsbeispiel für SecureString](https://go.microsoft.com/fwlink/?LinkId=120418), die veranschaulicht, wie die `SecureString` -Klasse aus.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server Security (SQL Server-Sicherheit)](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
+- [SQL Server-Sicherheit](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: afd35b67fc11cb556159ed0d37130cd86d72c30f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00c54a59ccfe2a49dcf35b322ca077a10a48ae7d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354829"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839638"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Arbeiten mit Anwendungsprotokollen in Visual Basic
 
@@ -23,11 +23,11 @@ Zuerst wird der Schweregrad der Meldung mithilfe der <xref:System.Diagnostics.Tr
 
 Im folgenden Diagramm ist dargestellt, wie eine in die `WriteEntry` -Methode geschriebene Meldung an die `WriteLine` -Methoden der Ablaufverfolgungslistener des Protokolls übergeben wird:
 
-![Aufruf von „My Log“](../../../../visual-basic/developing-apps/programming/log-info/media/mylogcall.png "MyLogCall")
+![Abbildung, die den My-Protokollaufruf zeigt.](./media/working-with-application-logs/my-log-call-messages.png)
 
 Das Verhalten von Protokoll und Ablaufverfolgungslistener lässt sich durch Ändern der Konfigurationsdatei der Anwendung ändern. Das folgende Diagramm stellt die Entsprechung zwischen den Teilen des Protokolls und der Konfigurationsdatei dar.
 
-![Konfiguration von „Log“ für „My“](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")
+![Abbildung, die die My-Protokollkonfiguration zeigt.](./media/working-with-application-logs/my-log-configuration.png)
 
 ## <a name="where-messages-are-logged"></a>Protokollspeicherorte von Meldungen
 

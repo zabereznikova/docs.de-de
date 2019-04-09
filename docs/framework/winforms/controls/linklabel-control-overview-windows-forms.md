@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
-ms.openlocfilehash: 81edab0d44ae0bb9dcabe77ad568f281e6f5fffb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 541467b0f1285d372e5f6d502d9d8f28c8c6333e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722358"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083126"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>Übersicht über das LinkLabel-Steuerelement (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.LinkLabel> Steuerelement ermöglicht es Ihnen Weblinks, Windows Forms-Anwendungen hinzuzufügen. Können Sie die <xref:System.Windows.Forms.LinkLabel> -Steuerelement für alle Elemente, die Sie verwenden können, die <xref:System.Windows.Forms.Label> für steuern; Sie können auch Teile des Texts als einen Link zu einer Datei, Ordner oder Website festlegen.  
@@ -24,7 +24,8 @@ Die Windows-Formulare <xref:System.Windows.Forms.LinkLabel> Steuerelement ermög
  Den einfachsten Gebrauch von der <xref:System.Windows.Forms.LinkLabel> Steuerelement ist zum Anzeigen einer einzelnen Link mit der <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> -Eigenschaft, aber Sie können auch anzeigen, mehrere Links, die mit der <xref:System.Windows.Forms.LinkLabel.Links%2A> Eigenschaft. Die <xref:System.Windows.Forms.LinkLabel.Links%2A> Eigenschaft ermöglicht den Zugriff auf eine Auflistung von Links. Sie können auch angeben, Daten in die <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> -Eigenschaft jedes einzelnen <xref:System.Windows.Forms.LinkLabel.Link> Objekt. Der Wert des der <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> Eigenschaft kann verwendet werden, um den Speicherort einer Datei, die Anzeige oder die Adresse einer Website zu speichern.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.LinkLabel>
 - [Übersicht über das Label-Steuerelement](label-control-overview-windows-forms.md)
-- [Vorgehensweise: Link zu einem Objekt oder Webseite mit dem LinkLabel-Steuerelement in Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [Vorgehensweise: Ändern der Darstellung des LinkLabel-Steuerelement von Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [Vorgehensweise: Verknüpfen eines Objekts oder einer Webseite mit dem LinkLabel-Steuerelement in Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Vorgehensweise: Ändern der Darstellung des LinkLabel-Steuerelements in Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)

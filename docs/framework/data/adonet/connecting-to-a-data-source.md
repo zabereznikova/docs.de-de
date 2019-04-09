@@ -2,12 +2,12 @@
 title: Verbinden mit einer Datenquelle in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 9abc3f92-1be3-4e1a-b360-762dc689650e
-ms.openlocfilehash: 20cf22e1c9b9bf18dd3109cb9589c05a6c27d4d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c04624be758e4bc7c8b1981ad6a9dc44430d62b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701741"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083711"
 ---
 # <a name="connecting-to-a-data-source-in-adonet"></a>Verbinden mit einer Datenquelle in ADO.NET
 In ADO.NET verwenden Sie eine **Verbindung** Objekt zur Verbindung mit einer bestimmten Datenquelle durch Angabe der erforderlichen Authentifizierungsinformationen in einer Verbindungszeichenfolge. Die **Verbindung** Objekt abhängig ist, auf dem Typ der Datenquelle.  
@@ -22,9 +22,10 @@ In ADO.NET verwenden Sie eine **Verbindung** Objekt zur Verbindung mit einer bes
  Beschreibt, wie ein **InfoMessage** Ereignis informationsmeldungen aus einer Datenquelle abrufen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verbindungszeichenfolgen](../../../../docs/framework/data/adonet/connection-strings.md)
 - [Verbindungspooling](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- ["DataAdapters" und "DataReaders"](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

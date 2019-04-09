@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen von geformten Windows Forms'
+title: 'Vorgehensweise: Erstellen von geformten Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Windows Forms, circular
 - forms [Windows Forms], custom shapes
 ms.assetid: 6e6041e0-8e67-4487-b1e9-e410dbd1ef6c
-ms.openlocfilehash: a130614b0977aab6191f195c93454c527e6be9b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 03fcbb97db180e71283810e2daeab9be272b9d5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087248"
 ---
-# <a name="how-to-create-a-shaped-windows-form"></a>Vorgehensweise: Erstellen von geformten Windows Forms
+# <a name="how-to-create-a-shaped-windows-form"></a>Vorgehensweise: Erstellen von geformten Windows Forms
 In diesem Beispiel wird ein Formular eine elliptische Form, die mit dem Formular der Größe, an.  
   
 ## <a name="example"></a>Beispiel  
@@ -41,9 +41,10 @@ In diesem Beispiel wird ein Formular eine elliptische Form, die mit dem Formular
  In diesem Beispiel überschreibt die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, um die Form des Formulars zu ändern. Um diesen Code zu verwenden, kopieren Sie die Deklaration der Methode als auch der Code innerhalb der Methode zum Zeichnen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Region>
 - <xref:System.Drawing>
 - <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>
 - <xref:System.Windows.Forms.Control.Region%2A>
-- [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)
+- [Erste Schritte mit der Grafikprogrammierung](getting-started-with-graphics-programming.md)

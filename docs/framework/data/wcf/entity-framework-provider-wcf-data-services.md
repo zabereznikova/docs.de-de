@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: 94a708ca33aa94c7a0143d195803d17d49be4bdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a09c81b2d0f052884e8e54c899653a6f0e038aff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569114"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086246"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Entity Framework-Anbieter (WCF Data Services)
 Genau wie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] basiert das ADO.NET Entity Framework auf dem Entity Data Model, einem Typ von Entitätsbeziehungsmodell. Das Entity Framework übersetzt Vorgänge für die Implementierung des Entity Data Model, die aufgerufen wird, die *Konzeptmodell*, in entsprechende Vorgänge für eine Datenquelle. Daher ist das Entity Framework ein idealer Anbieter für Datendienste, die auf relationalen Daten basieren, und jede Datenbank mit einem Datenanbieter, der das Entity Framework unterstützt, kann mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verwendet werden. Eine Liste der Datenquellen, die gegenwärtig das Entity Framework unterstützen, finden Sie unter [Drittanbieter für Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699).  
@@ -21,6 +21,7 @@ Genau wie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] basiert da
  Weitere Informationen zu Entity Framework finden Sie unter [Übersicht über Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Datendienstanbieter](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
 - [Reflektionsanbieter](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)
 - [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

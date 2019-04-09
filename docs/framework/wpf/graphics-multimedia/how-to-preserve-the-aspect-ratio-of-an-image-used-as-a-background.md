@@ -6,12 +6,12 @@ helpviewer_keywords:
 - brushes [WPF], preserving aspect ratios of background images
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-ms.openlocfilehash: df5632aa3d3c7dbc2442cabe1f4db7a850a1bd54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4ae6f1242548038bcd54b7218783e5063fa67872
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353945"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083244"
 ---
 # <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>Vorgehensweise: Beibehalten des Seitenverhältnisses bei einem als Hintergrund verwendeten Bild
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.TileBrush.Stretch%2A> Eigenschaft eine <xref:System.Windows.Media.ImageBrush> um das Seitenverhältnis des Bilds zu erhalten.  
@@ -40,5 +40,6 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.TileBrush.Stre
  Dieses Codebeispiel ist Teil eines größeren Beispiels, die aus Gründen der <xref:System.Windows.Media.ImageBrush> Klasse. Das vollständige Beispiel finden Sie unter [Beispiel zu ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.TileBrush>
 - [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md)

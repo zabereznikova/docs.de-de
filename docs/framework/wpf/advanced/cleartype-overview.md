@@ -5,20 +5,19 @@ helpviewer_keywords:
 - typography [WPF], ClearType technology
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
-ms.openlocfilehash: d5aee9eccad7075ca9f05e08a02ba008bab9a7e7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0127ee4112c4b42a7a55b9233217ea1e02604042
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355154"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085193"
 ---
 # <a name="cleartype-overview"></a>Übersicht über ClearType
 Dieses Thema bietet eine Übersicht über die [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]-Technologie in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
-  
-  
+
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Übersicht über die Technologie  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ist eine von [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] entwickelte Softwaretechnologie, mit der die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), z.B. auf Laptopbildschirmen, Pocket PC-Bildschirmen und Flachbildschirmen, optimiert wird.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] greift dabei auf die einzelnen vertikalen Farbstreifenelemente in jedem Pixel auf einem LCD-Bildschirm zu. Vor [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] war ein einzelnes Pixel das kleinste Detail, das auf einem Computer angezeigt werden konnte. Mithilfe von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] können Texteigenschaften, die nur einen Bruchteil eines Pixels groß sind, auf einem LCD-Bildschirm dargestellt werden. Die zusätzliche Auflösung verbessert die Schärfe der kleinen Details in der Textanzeige, was das Lesen über lange Zeiträume hinweg erleichtert.  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] ist eine softwaretechnologie von entwickelte [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] , verbessert die Lesbarkeit von Text auf vorhandenen LCDs (Liquid Crystal Displays), z. B. Laptopbildschirmen, Pocket PC-Bildschirmen und Flachbildschirmen.  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] funktioniert, indem Sie den Zugriff auf die einzelnen vertikalen Farbstreifenelemente in jedem Pixel auf einem LCD-Bildschirm. Vor [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] war ein einzelnes Pixel das kleinste Detail, das auf einem Computer angezeigt werden konnte. Mithilfe von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] können Texteigenschaften, die nur einen Bruchteil eines Pixels groß sind, auf einem LCD-Bildschirm dargestellt werden. Die zusätzliche Auflösung verbessert die Schärfe der kleinen Details in der Textanzeige, was das Lesen über lange Zeiträume hinweg erleichtert.  
   
  Die in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] verfügbare [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Technologie gehört der aktuellsten Generation von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] an, die gegenüber der Version in [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] zahlreiche Verbesserungen enthält.  
   
@@ -45,7 +44,7 @@ Mit einer früheren Version von ClearType angezeigter Text
  ![Text mit gezackten Kanten an flachen Kurven](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
 Text mit Flatterrändern an flachen Kurven  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt Antialiasing auf der y-Achse zum Glätten der gezackten Kanten bereit. Dies ist besonders für die Verbesserung der Lesbarkeit ostasiatischer Sprachen wichtig, in denen Ideogramme über nahezu gleiche Anteile von horizontalen und vertikalen flachen Kurven verfügen.  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt Antialiasing auf der Ebene der y-Richtung zum Glätten der gezackten Kanten bereit. Dies ist besonders für die Verbesserung der Lesbarkeit ostasiatischer Sprachen wichtig, in denen Ideogramme über nahezu gleiche Anteile von horizontalen und vertikalen flachen Kurven verfügen.  
   
  Im folgenden Beispiel wird die Auswirkung von Antialiasing auf der y-Achse gezeigt. In diesem Fall weisen der obere und untere Rand des Buchstabens eine glatte Kurve auf.  
   
@@ -54,17 +53,18 @@ Text mit ClearType-Antialiasing auf der y-Achse
   
 <a name="hardware_acceleration"></a>   
 ## <a name="hardware-acceleration"></a>Hardwarebeschleunigung  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] kann die Hardwarebeschleunigung nutzen, um eine bessere Leistung zu erzielen und die CPU-Auslastung und die Systemspeicheranforderungen zu verringern. Mithilfe der Pixelshader und Videospeicher einer Grafikkarte stellt [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] schnelleres Rendering von Text bereit, besonders bei Animationen.  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] profitieren von Hardware-Beschleunigung für eine bessere Leistung und CPU-Auslastung und die systemspeicheranforderungen zu verringern. Mithilfe der Pixelshader und Videospeicher einer Grafikkarte stellt [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] schnelleres Rendering von Text bereit, besonders bei Animationen.  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ändert die systemweiten [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]-Einstellungen nicht. Durch das Deaktivieren von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] wird das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Antialiasing auf den Graustufenmodus festgelegt. Darüber hinaus ändert [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nicht die Einstellungen von [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ändert sich nicht auf die systemweiten [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] Einstellungen. Durch das Deaktivieren von [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] wird das [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Antialiasing auf den Graustufenmodus festgelegt. Darüber hinaus ändert [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] nicht die Einstellungen von [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx).  
   
  Eine der Designentscheidungen hinsichtlich der Architektur von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bestand darin, dass das von Auflösung unabhängige Layout höher auflösende DPI-Monitore besser unterstützen soll, da diese immer mehr Verbreitung finden. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] unterstützt daher weder Textrendering mit Aliasing noch die Bitmaps in bestimmten ostasiatischen Schriftarten, da beides von der Auflösung abhängt.  
   
 <a name="further_information"></a>   
 ## <a name="further-information"></a>Weitere Informationen  
- [ClearType Information (ClearType-Informationen)](https://www.microsoft.com/typography/ClearTypeInfo.mspx)  
+ [ClearType-Informationen](https://www.microsoft.com/typography/ClearTypeInfo.mspx)  
   
  [ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx)  
   
 ## <a name="see-also"></a>Siehe auch
-- [ClearType Registry Settings (ClearType-Registrierungseinstellungen)](cleartype-registry-settings.md)
+
+- [ClearType-Registrierungseinstellungen](cleartype-registry-settings.md)

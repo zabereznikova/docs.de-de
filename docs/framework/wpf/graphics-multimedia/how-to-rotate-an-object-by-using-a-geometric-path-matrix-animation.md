@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rotating objects by geometric paths [WPF]
 - matrix animation [WPF]
 ms.assetid: 877dc9aa-6bdc-4beb-8772-3efaec32c0f0
-ms.openlocfilehash: 57402ba24e8dc75f3563e71329b54db9cb96aaab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8f1b0ac42ea7509f8bc22b0bd2f50e2f96b5bee5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369083"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087884"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>Vorgehensweise: Drehen eines Objekts mithilfe eines geometrischen Pfads (Matrixanimation)
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> und ein <xref:System.Windows.Media.MatrixTransform> gedreht (PowerPivot) eines Objekts entlang eines geometrischen Pfads durch definiert eine <xref:System.Windows.Media.PathGeometry> Objekt.  
@@ -32,6 +32,7 @@ Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Media.Animation.Ma
  Die Codeversion des vorhergehenden Beispiels verwendet eine <xref:System.Windows.Media.Animation.Storyboard> zum Animieren der <xref:System.Windows.Media.EllipseGeometry>, auch wenn nur eine einzige Animation angewendet wurde. Eine einfachere Möglichkeit zum Anwenden einer einzelnen Animation auf eine Eigenschaft im Code ist die Verwendung der <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A> Methode. Ein Beispiel finden Sie unter [Vorgehensweise: Animieren einer Eigenschaft ohne Storyboard](how-to-animate-a-property-without-using-a-storyboard.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Animationen](animation-overview.md)
-- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](path-animation-how-to-topics.md)
+- [Gewusst-wie-Themen zur Pfadanimation](path-animation-how-to-topics.md)
 - [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028)

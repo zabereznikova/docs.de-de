@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Serialisieren und Deserialisieren von JSON-Daten'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: c5da34b6ab7953dbff62ca757ba08d0c7364b4cf
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 6363a8e161969c188c5dd18c425ffd42969e9adc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106157"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>Vorgehensweise: Serialisieren und Deserialisieren von JSON-Daten
 JSON (JavaScript Object Notation) ist ein effizientes Datencodierungsformat, das einen schnellen Austausch kleiner Datenmengen zwischen Clientbrowsern und AJAX-aktivierten Webdiensten ermöglicht.  
@@ -136,5 +136,6 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Eigenständige JSON-Serialisierung](stand-alone-json-serialization.md)
 - [Unterstützung für JSON und andere datenübertragungs-Formate](support-for-json-and-other-data-transfer-formats.md)

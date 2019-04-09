@@ -10,14 +10,14 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 80ec480b5d45a338c1f15796ae82015d6da24fc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705531"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078875"
 ---
-# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Exemplarische Vorgehensweise: Erstellen eine Master-/Detailformulars mit zwei DataGridView-Steuerelementen in Windows Forms
+# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Exemplarische Vorgehensweise: Erstellen eines Master-/Detailformulars mit zwei DataGridView-Steuerelementen in Windows Forms
 Einer der häufigsten Szenarios für die Verwendung der <xref:System.Windows.Forms.DataGridView> Steuerelement ist die *Master/Detail-* Form, in dem eine über-/unterordnungsbeziehung zwischen zwei Datenbanktabellen angezeigt wird. Auswählen von Zeilen in der master-Tabelle bewirkt, dass die Detailtabelle um mit den entsprechenden untergeordneten Daten zu aktualisieren.  
   
  Implementieren eine Master-/Detailformulars kann leicht mit der die Interaktion zwischen der <xref:System.Windows.Forms.DataGridView> Steuerelement und die <xref:System.Windows.Forms.BindingSource> Komponente. In dieser exemplarischen Vorgehensweise erstellen Sie das Formular mit zwei <xref:System.Windows.Forms.DataGridView> -Steuerelemente und zwei <xref:System.Windows.Forms.BindingSource> Komponenten. Das Formular zeigt zwei verknüpfte Tabellen in der Beispieldatenbank Northwind-SQL Server: `Customers` und `Orders`. Wenn Sie fertig sind, haben Sie ein Formular, das zeigt, alle Kunden in der Datenbank in der Masterdatenbank <xref:System.Windows.Forms.DataGridView> und alle Aufträge für den ausgewählten Kunden in die Details <xref:System.Windows.Forms.DataGridView>.  
@@ -76,8 +76,9 @@ Einer der häufigsten Szenarios für die Verwendung der <xref:System.Windows.For
 -   Anpassen der Darstellung von Zellen an. Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen der Darstellung von Zellen in der DataGridView-Steuerelement in Windows Forms](customize-the-appearance-of-cells-in-the-datagrid.md) und [Vorgehensweise: Festlegen von Standardzellenformaten für das Windows-DataGridView-Steuerelement Forms](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Erstellen Sie eine Master-/Detailformulars mit zwei DataGridView-Steuerelementen in Windows Forms](create-a-master-detail-form-using-two-datagridviews.md)
-- [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../data/adonet/protecting-connection-information.md)
+- [Vorgehensweise: Erstellen eines Master-/Detailformulars mit zwei DataGridView-Steuerelementen in Windows Forms](create-a-master-detail-form-using-two-datagridviews.md)
+- [Schützen von Verbindungsinformationen](../../data/adonet/protecting-connection-information.md)

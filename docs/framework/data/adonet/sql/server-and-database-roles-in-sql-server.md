@@ -2,12 +2,12 @@
 title: Server- und Datenbankrollen in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: c7fdac92c2d980669a3cc3bf67119bdbb42509a4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e2d0de08f23bc3767e11de31c4ded4a326d060a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087975"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Server- und Datenbankrollen in SQL Server
 Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie einer Rolle, also einer ganzen Gruppe von Benutzern, Berechtigungen zuweisen können, statt Berechtigungen individuell für jeden Benutzer einzeln festzulegen. Feste Server- und feste Datenbankrollen besitzen einen festen Satz von ihnen übertragenen Berechtigungen.  
@@ -16,7 +16,7 @@ Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie 
  Feste Serverrollen besitzen einen festen Satz von Berechtigungen, die serverweit gültig sind. Sie sind zur Verwaltung von SQL Server gedacht, und die ihnen zugewiesenen Berechtigungen können nicht geändert werden. Anmeldungen können festen Serverrollen zugewiesen sein, ohne dass in einer Datenbank ein Benutzerkonto vorhanden ist.  
   
 > [!IMPORTANT]
->  Die feste Serverrolle `sysadmin` schließt alle anderen Rollen ein und kennt keine Einschränkungen. Fügen Sie dieser Rolle keine Prinzipale hinzu, außer wenn ihre Vertrauenswürdigkeit sehr hoch ist. Mitglieder der Rolle `sysadmin` verfügen über unwiderrufliche Administratorberechtigungen für alle Serverdatenbanken und -ressourcen.  
+>  Die feste Serverrolle `sysadmin` schließt alle anderen Rollen ein und kennt keine Einschränkungen. Fügen Sie dieser Rolle keine Prinzipale hinzu, außer wenn ihre Vertrauenswürdigkeit sehr hoch ist. `sysadmin` Mitglieder der Rolle haben nicht widerrufbare administrative Zugriffsrechte auf alle Serverdatenbanken und -Ressourcen.  
   
  Gehen Sie beim Hinzufügen von Benutzern zu festen Serverrollen mit großer Sorgfalt vor. So können z. B. Benutzer mit der Rolle `bulkadmin` den Inhalt einer beliebigen lokalen Datei in eine Tabelle einfügen, wodurch die Datenintegrität gefährdet werden könnte. Die vollständige Liste der festen Serverrollen und Berechtigungen finden Sie in der SQL Server-Onlinedokumentation.  
   
@@ -27,8 +27,8 @@ Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie 
   
 |Ressource|Beschreibung|  
 |--------------|-----------------|  
-|[Auf Serverebene Rollen](/sql/relational-databases/security/authentication-access/server-level-roles)|Beschreibt feste Serverrollen und die Berechtigungen, die in SQL Server zugeordnet.|  
-|[Datenbankrollen](/sql/relational-databases/security/authentication-access/database-level-roles)|Beschreibt die festen Datenbankrollen und die mit ihnen verknüpften Berechtigungen.|  
+|[Rollen auf Serverebene](/sql/relational-databases/security/authentication-access/server-level-roles)|Beschreibt feste Serverrollen und die Berechtigungen, die in SQL Server zugeordnet.|  
+|[Rollen auf Datenbankebene](/sql/relational-databases/security/authentication-access/database-level-roles)|Beschreibt die festen Datenbankrollen und die mit ihnen verknüpften Berechtigungen.|  
   
 ## <a name="database-roles-and-users"></a>Datenbankrollen und Benutzer  
  Anmeldungen müssen Datenbankbenutzerkonten zugeordnet werden, damit das Arbeiten mit den Datenbankobjekten funktioniert. Anschließend können den Datenbankrollen Datenbankbenutzer hinzugefügt werden, die alle Berechtigungssätze erben, die mit diesen Rollen verknüpft sind. Alle Berechtigungen können erteilt werden.  
@@ -47,7 +47,7 @@ Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie 
  Das `dbo`-Benutzerkonto wird häufig mit der festen Datenbankrolle `db_owner` verwechselt. Der Gültigkeitsbereich von `db_owner` umfasst eine Datenbank, während serverweit `sysadmin` gültig ist. Die Zugehörigkeit zur Rolle `db_owner` verleiht keine `dbo`-Benutzerrechte.  
   
 ### <a name="the-guest-user-account"></a>Das "guest"-Benutzerkonto  
- Nachdem ein Benutzer authentifiziert und als berechtigt eingestuft wurde, sich bei einer Instanz von SQL Server anzumelden, muss in jeder Datenbank, auf die der Benutzer zugreifen können soll, ein separates Benutzerkonto vorhanden sein. Auf diese Weise wird verhindert, dass Benutzer eine Verbindung mit einer SQL Server-Instanz herstellen und damit auf alle auf einem Server vorhandenen Datenbanken zugreifen können. Wenn in der Datenbank ein `guest`-Benutzerkonto vorhanden ist, gilt diese Voraussetzung nicht, und für den Datenbankzugriff reicht eine Anmeldung ohne ein Datenbankbenutzerkonto.  
+ Nachdem ein Benutzer authentifiziert und als berechtigt eingestuft wurde, sich bei einer Instanz von SQL Server anzumelden, muss in jeder Datenbank, auf die der Benutzer zugreifen können soll, ein separates Benutzerkonto vorhanden sein. Auf diese Weise wird verhindert, dass Benutzer eine Verbindung mit einer SQL Server-Instanz herstellen und damit auf alle auf einem Server vorhandenen Datenbanken zugreifen können. Wenn in der Datenbank ein `guest`-Benutzerkonto vorhanden ist, gilt diese Anforderung nicht, und für den Datenbankzugriff reicht eine Anmeldung ohne ein Datenbankbenutzerkonto.  
   
  Das `guest`-Konto ist in allen Versionen von SQL Server ein integriertes Konto. In neuen Datenbanken ist es standardmäßig deaktiviert. Wenn es aktiviert ist, können Sie es deaktivieren, indem Sie dessen CONNECT-Berechtigung widerrufen. Führen Sie dazu die Transact-SQL-REVOKE CONNECT FROM GUEST-Anweisung aus.  
   
@@ -62,6 +62,7 @@ Alle SQL Server-Versionen verwenden die rollenbasierte Sicherheit, mit der Sie 
 |[Prinzipale](/sql/relational-databases/security/authentication-access/principals-database-engine)|Beschreibt Prinzipale und enthält Links zu Themen, in denen Server- und Datenbankrollen beschrieben werden.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [Authentifizierung in SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)

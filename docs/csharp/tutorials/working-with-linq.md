@@ -3,12 +3,12 @@ title: Arbeiten mit LINQ
 description: In diesem Tutorial erfahren Sie, wie Sie Sequenzen mit LINQ generieren, Methoden zur Verwendung in LINQ-Abfragen schreiben und zwischen strikter Auswertung (Eager Evaluation) und verzögerter Auswertung (Lazy Evaluation) unterscheiden.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 7613051bf5a8419244453339dd036d92249d2002
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679653"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815584"
 ---
 # <a name="working-with-linq"></a>Arbeiten mit LINQ
 
@@ -115,7 +115,7 @@ Der Compiler übersetzt mit der Abfragesyntax geschriebene LINQ-Anweisungen in d
 
 Führen Sie jetzt das erstellte Beispiel aus. Es werden alle 52 Karten des Kartenstapels angezeigt. Es kann sehr hilfreich sein, dieses Beispiel mit einem Debugger auszuführen, um zu beobachten, wie die Methoden `Suits()` und `Ranks()` ausgeführt werden. Sie können deutlich erkennen, dass jede Zeichenfolge in jeder Sequenz erst dann erstellt wird, wenn sie benötigt wird.
 
-![Konsolenfenster, das die App zeigt, die 52 Karten schreibt](./media/working-with-linq/console.png)
+![Ein Konsolenfenster, das die App zeigt, die 52 Karten schreibt.](./media/working-with-linq/console-52-card-application.png)
 
 ## <a name="manipulating-the-order"></a>Ändern der Reihenfolge
 

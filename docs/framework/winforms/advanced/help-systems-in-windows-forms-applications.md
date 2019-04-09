@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help [Windows Forms], Windows Forms
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
-ms.openlocfilehash: 22c07490d0d3b54be96f32d67c9b4aee70306c1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718311"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087273"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Hilfesysteme in Windows Forms-Anwendungen
 Einer der wichtigsten Zusatzfunktionen, wie ein Entwickler von Anwendungen können Ihre Benutzer mit Dokumentationselement ist ein zuständigen Hilfesystem. Dies ist, in dem sie aktivieren werden, wenn sie verwechselt oder disoriented werden. Ein Hilfesystem in einer Windows-basierten Anwendung erfolgt problemlos mithilfe der [HelpProvider-Komponente](../controls/helpprovider-component-windows-forms.md).  
@@ -24,6 +24,7 @@ Einer der wichtigsten Zusatzfunktionen, wie ein Entwickler von Anwendungen könn
  Sie können HTML Help 1.x-Dateien mit der HTML-Hilfeworkshop generieren. Weitere Informationen zur HTML-Hilfe finden Sie unter "HTML Help Workshop" oder "HTML Help" Themenauswahl in MSDN.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Integrieren von Benutzerhilfe in Windows Forms](integrating-user-help-in-windows-forms.md)
 - [HelpProvider-Komponente](../controls/helpprovider-component-windows-forms.md)
 - [ToolTip-Komponente](../controls/tooltip-component-windows-forms.md)

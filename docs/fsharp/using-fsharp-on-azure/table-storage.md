@@ -3,12 +3,12 @@ title: Erste Schritte mit Azure Table Storage mit F#
 description: Store strukturierte Daten in der Cloud mit Azure Table Storage oder Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 2b74a33023065ea809c2d7eb6202b1a254018422
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 54c777acd454e4f675175b814675c185e41ad9a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966007"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086701"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Erste Schritte mit Azure Table Storage und Azure Cosmos DB Table API mit F\#
 
@@ -35,7 +35,6 @@ In diesem Tutorial wird gezeigt, wie zum Schreiben F# Code zum Durchführen allg
 ## <a name="prerequisites"></a>Vorraussetzungen
 
 Um dieses Handbuch verwenden zu können, müssen Sie zuerst [erstellen Sie ein Azure Storage-Konto](/azure/storage/storage-create-storage-account) oder [Azure Cosmos DB-Konto](https://azure.microsoft.com/try/cosmosdb/).
-
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>Erstellen Sie einen F#-Skript, und starten F# Interactive
 
@@ -128,7 +127,6 @@ Sie werden nun die Ergebnisse drucken:
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
 
-
 ### <a name="retrieve-a-range-of-entities-in-a-partition"></a>Abrufen eines entitätsbereichs in einer partition
 
 Wenn Sie nicht alle Entitäten in einer Partition abrufen möchten, können Sie einen Bereich angeben, indem Sie den partitionsschlüsselfilter mit einem zeilenschlüsselfilter kombinieren. Hier verwenden Sie zwei Filter auf alle Entitäten in der Partition "Smith" abzurufen, in dem der Zeilenschlüssel (Vorname) mit einem Buchstaben vor "M" im Alphabet beginnt.
@@ -148,7 +146,6 @@ Sie können eine Abfrage zum Abrufen einer bestimmten Entität schreiben. Hier e
 Sie werden nun die Ergebnisse drucken:
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L113-L115)]
-
 
 ### <a name="replace-an-entity"></a>Ersetzen einer Entität
 

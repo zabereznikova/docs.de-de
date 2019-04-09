@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e8bb31967a6ad515761e6cd03657f2c834debe5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bd705ef549de3a8018efe731ef8735ef7b6b915
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083178"
 ---
 # <a name="idefinitionappid-interface"></a>IDefinitionAppId-Schnittstelle
 Stellt einen eindeutigen Bezeichner für den Code, der die Anwendung im aktuellen Bereich definiert.  
@@ -45,4 +45,5 @@ Stellt einen eindeutigen Bezeichner für den Code, der die Anwendung im aktuelle
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Fusion-Schnittstellen](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

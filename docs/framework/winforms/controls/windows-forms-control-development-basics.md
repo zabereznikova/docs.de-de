@@ -6,12 +6,12 @@ helpviewer_keywords:
 - programming concepts [Windows Forms], Windows Forms controls
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
-ms.openlocfilehash: 6a7009ead6ceba58c17579835d03254f259f8e51
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723061"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086441"
 ---
 # <a name="windows-forms-control-development-basics"></a>Grundlagen für das Entwickeln von Windows Forms-Steuerelementen
 Ein Windows Forms-Steuerelement ist eine Klasse, die direkt oder indirekt von abgeleitet <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Die folgende Liste beschreibt allgemeine Szenarien für die Entwicklung von Windows Forms-Steuerelemente:  
@@ -31,7 +31,8 @@ Ein Windows Forms-Steuerelement ist eine Klasse, die direkt oder indirekt von ab
  Die Basisklasse für Windows Forms-Steuerelemente, <xref:System.Windows.Forms.Control>, bietet die Grundlagen für die grafische Darstellung in clientseitigen Windows-basierten Anwendungen erforderlich sind. <xref:System.Windows.Forms.Control> bietet ein Fensterhandle, das Nachrichtenrouting verarbeitet, sowie Maus-und Tastaturereignissen sowie viele andere Ereignisse der Benutzeroberfläche. Es bietet ein erweitertes Layout und verfügt über Eigenschaften, die für die visuelle Anzeige, z. B. <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, und viele andere. Darüber hinaus bietet sie Sicherheit, threading-Unterstützung und Interoperabilität mit ActiveX-Steuerelementen. Da der Großteil der Infrastruktur von der Basisklasse bereitgestellt wird, ist es relativ einfach, Ihre eigenen Windows Forms-Steuerelemente zu entwickeln.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Entwickeln eines einfachen Windows Forms-Steuerelements](how-to-develop-a-simple-windows-forms-control.md)
-- [Entwickeln eines zusammengesetzten Windows Forms-Steuerelements](developing-a-composite-windows-forms-control.md)
-- [Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das ausgeführt wird.](how-to-create-a-windows-forms-control-that-shows-progress.md)
-- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](varieties-of-custom-controls.md)
+
+- [Vorgehensweise: Entwickeln eines einfachen Windows Forms-Steuerelements](how-to-develop-a-simple-windows-forms-control.md)
+- [Entwickeln eines zusammengesetzten Windows Forms-Steuerelements](developing-a-composite-windows-forms-control.md)
+- [Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das den Fortschritt anzeigt](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [Arten von benutzerdefinierten Steuerelementen](varieties-of-custom-controls.md)

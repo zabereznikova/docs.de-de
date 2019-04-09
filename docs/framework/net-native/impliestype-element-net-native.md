@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1739c2a5e15d4c120d487c849819b6439afabade
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2ef238a2cb852ecd7fa3f0e2dbe4048ff03a4139
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288014"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080877"
 ---
 # <a name="impliestype-element-net-native"></a>\<ImpliesType > (Element (.NET Native)
 Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthaltenden Typ oder die enthaltende Methode angewendet wurde.  
@@ -70,7 +70,7 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
 |-------------|-----------------|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen Typ und alle seine Member an.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ und alle seine Member an.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Methode an.|  
+|[\<Methode >](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Methode an.|  
   
 ## <a name="remarks"></a>Hinweise  
  Das `<ImpliesType>`-Element dient in erster Linie der Verwendung durch Bibliotheken. Es wird in folgendem Szenario eingesetzt:  
@@ -89,7 +89,7 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
 </Type>  
 ```  
   
- Diese Richtlinie hat nur dann eine Auswirkungen, wenn eine Instanziierung von `Explicit` über eine definierte `Dynamic`-Richtlinieneinstellung verfügt. Wenn das z. B. für `Explicit<Int32>` der Fall ist, wird `Implicit<Int32>` mit den öffentlichen Membern instanziiert, und ihre Metadaten werden für die dynamische Programmierung verfügbar gemacht.  
+ Diese Anweisung hat nur dann Auswirkungen, wenn eine Instanziierung von `Explicit` über eine definierte `Dynamic`-Richtlinieneinstellung verfügt. Wenn das z. B. für `Explicit<Int32>` der Fall ist, wird `Implicit<Int32>` mit den öffentlichen Membern instanziiert, und ihre Metadaten werden für die dynamische Programmierung verfügbar gemacht.  
   
  Folgendes ist ein praktisches Beispiel, das für mindestens ein Serialisierungsprogramm gilt. Die Anweisungen erkennen den Bedarf, dass die Reflektion von etwas, das als `IList<`*something*`>` typisiert ist, auch die Reflektion des entsprechenden `List<`*something*`>`-Typs umfasst, ohne dass anwendungsbasierte Anmerkungen erforderlich sind.  
   
@@ -111,6 +111,7 @@ Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie auf den enthalten
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

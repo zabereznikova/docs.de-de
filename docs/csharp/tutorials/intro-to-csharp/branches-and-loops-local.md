@@ -3,12 +3,12 @@ title: Verzweigungen und Schleifen – Einführung in das C#-Tutorial
 description: In diesem Tutorial über Verzweigungen und Schleifen schreiben Sie C#-Code, um die Sprachsyntax zu erkunden, die bedingte Verzweigungen und Schleifen zum wiederholten Ausführen von Anweisungen unterstützt.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677785"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920947"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Bedingungen für Verzweigungs- und Schleifenanweisungen
 
@@ -249,7 +249,7 @@ Probieren Sie es selbst aus. Prüfen Sie dann, wie Sie abgeschnitten haben. Sie 
 
 Sie haben das Tutorial „Verzweigungen und Schleifen“ abgeschlossen.
 
-Sie können mit dem Tutorial [Zeichenfolgeninterpolation](interpolated-strings-local.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
+Sie können mit dem Tutorial [Arrays und Auflistungen](arrays-and-collections.md) in Ihrer eigenen Entwicklungsumgebung fortfahren.
 
 Weitere Informationen zu diesen Begriffen finden Sie unter folgenden Themen:
 

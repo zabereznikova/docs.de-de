@@ -9,12 +9,12 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: 6ea49c591b43d3f70bfd39058fd5ee256c537ec2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078497"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Antialiasing bei Linien und Kurven
 Bei Verwendung von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] um eine Linie zu zeichnen, Sie geben Sie den Startpunkt und Endpunkt der Linie, aber Sie müssen keine Informationen zu den einzelnen Pixel in der Zeile zu bieten. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funktioniert in Verbindung mit dem Bildschirmtreiber um zu bestimmen, welche Pixel aktiviert werden, werden um die Zeile in der jeweiligen Ausgabegeräts angezeigt.  
@@ -45,6 +45,7 @@ Bei Verwendung von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-m
  [!code-vb[LinesCurvesAndShapes#81](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#81)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>
 - [Linien, Kurven und Formen](lines-curves-and-shapes.md)
 - [Vorgehensweise: Verwenden der Bildkantenglättung mit Text](how-to-use-antialiasing-with-text.md)

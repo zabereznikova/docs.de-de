@@ -2,12 +2,12 @@
 title: Konfigurieren der Anwendung
 ms.date: 03/30/2017
 ms.assetid: a2f995b0-669d-4721-b00f-4561ec7eb6a4
-ms.openlocfilehash: 39d8c73809b8c2695ccebb1d69d1c016fd2313d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94bf5f4bbee8bb8bb462c4bf91be75d1627ec567
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584635"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087169"
 ---
 # <a name="configuring-your-application"></a>Konfigurieren der Anwendung
 Windows Communication Foundation (WCF) verwendet das Konfigurationssystem von .NET und ermöglicht es Ihnen, im Bereich Computer- und anwendungsspezifische Dienste zu konfigurieren.  
@@ -30,6 +30,7 @@ Windows Communication Foundation (WCF) verwendet das Konfigurationssystem von .N
 >  Wenn Sie die Konfigurationsdatei eines WCF-Webdienst-Projekts in Visual Studio bearbeiten, indem Sie mit der rechten Maustaste in **Projektmappen-Explorer**, beachten Sie, dass die **WCF-Konfiguration bearbeiten** Kontextmenüelement ist nicht vorhanden. Dieses Problem umgehen, klicken Sie auf die **Tools** Menü, und wählen Sie **WCF-Dienstkonfigurations-Editor**. Danach können Sie mit der rechten Maustaste in einer Konfigurationsdatei und Verwenden der **WCF-Konfiguration bearbeiten** Kontextmenüelement.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Configuration Editor-Tool (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
 - [Konfigurieren von Diensten](../../../../docs/framework/wcf/configuring-services.md)
 - [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)

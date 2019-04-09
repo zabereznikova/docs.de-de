@@ -2,12 +2,12 @@
 title: Unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: e805eba7cc14b322b4d3dafe9036691b51ecec02
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 74b3973f931fa6f0d1f5b380833b8d5e5566563b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904284"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077069"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Unterstützte und nicht unterstützte LINQ-Methoden (LINQ to Entities)
 In diesem Abschnitt werden Informationen über die Language-Integrated Query (LINQ)-Standardabfrageoperatoren bereitgestellt, die in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfragen unterstützt bzw. nicht unterstützt werden. Viele der LINQ-Standardabfrageoperatoren verfügen über eine überladene Version, der ein ganzzahliges Argument übergeben werden kann. Das ganzzahlige Argument entspricht einem nullbasierten Index in der Sequenz, die bearbeiteten ist ein <xref:System.Collections.Generic.IEqualityComparer%601>, oder <xref:System.Collections.Generic.IComparer%601>. Sofern nicht anders angegeben, werden diese überladenen Versionen der LINQ-Standardabfrageoperatoren nicht unterstützt, und bei ihrer Verwendung wird eine Ausnahme ausgelöst.  
@@ -179,4 +179,5 @@ In diesem Abschnitt werden Informationen über die Language-Integrated Query (LI
 |<xref:System.Linq.Queryable.TakeWhile%2A>|Nicht unterstützt|`Function TakeWhile(Of TSource) ( _ source As IQueryable(Of TSource), _ predicate As Expression(Of Func(Of TSource, Integer, Boolean)) _ ) As IQueryable(Of TSource)`|`IQueryable<TSource> TakeWhile<TSource>( this IQueryable<TSource> source, Expression<Func\<TSource, int, bool>> predicate )`|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Standardabfrageoperatoren in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)

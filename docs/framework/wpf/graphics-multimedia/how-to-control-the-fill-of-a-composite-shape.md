@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], composite shapes
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
-ms.openlocfilehash: 0b2e71e7db403857aa1a3b0dddcfe907150f9528
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b3ab1f7b81c296aa1ee766136b6c95b82cab105
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357286"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084049"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Vorgehensweise: Steuern des Ausfüllens einer zusammengesetzten Form
 Die <xref:System.Windows.Media.GeometryGroup.FillRule%2A> Eigenschaft eine <xref:System.Windows.Media.GeometryGroup> oder <xref:System.Windows.Media.PathGeometry>, gibt eine "Regel" die zusammengesetzte Form verwendet, um zu bestimmen, ob ein bestimmter Punkt Teil der Geometrie ist. Es gibt zwei mögliche Werte für <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> und <xref:System.Windows.Media.FillRule.Nonzero>. In den folgenden Abschnitten wird beschrieben, wie diese beiden Regeln verwendet werden.  
@@ -62,5 +62,6 @@ Die <xref:System.Windows.Media.GeometryGroup.FillRule%2A> Eigenschaft eine <xref
 ## <a name="example"></a>Beispiel  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen einer zusammengesetzten Form](how-to-create-a-composite-shape.md)
-- [Übersicht über Geometrien](geometry-overview.md)
+- [Übersicht über die Geometrie](geometry-overview.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: b3d05c3165e54735cfe739c3c0e227ec4b974c7b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f654c9f1431a0ab8aa4df568b405dabf881bb1bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104090"
 ---
 # <a name="how-to-clone-a-printer"></a>Vorgehensweise: Klonen eines Druckers
 Die meisten Unternehmen werden irgendwann mehrere Drucker desselben Modells erwerben. Diese werden alle in der Regel mit nahezu identischen Konfigurationseinstellungen installiert. Installieren die einzelnen Drucker kann sehr zeitaufwändig sein und fehleranfällig. Die <xref:System.Printing.IndexedProperties?displayProperty=nameWithType> Namespace und die <xref:System.Printing.PrintServer.InstallPrintQueue%2A> -Klasse, die mit Microsoft .NET Framework verfügbar gemacht werden ermöglicht, eine beliebige Anzahl von zusätzlichen Druckwarteschlangen, die geklont werden sofort aus einer vorhandenen Druckwarteschlange zu installieren.  
@@ -56,6 +56,7 @@ Die meisten Unternehmen werden irgendwann mehrere Drucker desselben Modells erwe
  [!code-vb[ClonePrinter#ClonePrinter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClonePrinter/visualbasic/program.vb#cloneprinter)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Printing.IndexedProperties>
 - <xref:System.Printing.IndexedProperties.PrintPropertyDictionary>
 - <xref:System.Printing.LocalPrintServer>

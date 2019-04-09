@@ -8,12 +8,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually rendering graphics
 - graphics [Windows Forms], rendering
 ms.assetid: 5192295e-bd8e-45f7-8bd6-5c4f6bd21e61
-ms.openlocfilehash: f9763620d5fe56a0720d5d5f4ad53ec2ef18531c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b01e10ff0f65b3abfe1e60d84d66447968a310c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097950"
 ---
 # <a name="how-to-manually-render-buffered-graphics"></a>Vorgehensweise: Manuelles Rendern von gepufferten Grafiken
 Wenn Sie Ihre eigenen gepufferten Grafiken verwalten, müssen Sie Grafikpuffer erstellen und rendern können. Sie können Instanzen der <xref:System.Drawing.BufferedGraphics>-Klasse erstellen, die mit Zeichenflächen auf dem Bildschirm verknüpft ist. Dazu rufen Sie die <xref:System.Drawing.BufferedGraphicsContext.Allocate%2A>-Methode auf. Diese Methode erstellt eine <xref:System.Drawing.BufferedGraphics>-Instanz, die mit einer bestimmten Darstellungsoberfläche verknüpft ist, beispielsweise mit einem Formular oder Steuerelement. Nachdem Sie eine <xref:System.Drawing.BufferedGraphics>-Instanz erstellt haben, können Sie mit der<xref:System.Drawing.BufferedGraphics.Graphics%2A>-Eigenschaft Grafiken in den Puffer schreiben, dem die Instanz entspricht. Nachdem Sie alle Grafikvorgänge ausgeführt haben, können Sie den Inhalt des Puffers auf den Bildschirm kopieren, indem Sie die <xref:System.Drawing.BufferedGraphics.Render%2A>-Methode aufrufen.  
@@ -46,6 +46,7 @@ Wenn Sie Ihre eigenen gepufferten Grafiken verwalten, müssen Sie Grafikpuffer e
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#24](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#24)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphics>
 - [Doppelt gepufferte Grafiken](double-buffered-graphics.md)

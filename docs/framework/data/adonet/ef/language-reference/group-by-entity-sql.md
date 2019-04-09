@@ -2,12 +2,12 @@
 title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
-ms.openlocfilehash: 4dffc88866721bde0d4e846fa805bb60c6855b5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 581a18b75d6028089e96b97dc5adeb2d3986c088
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081917"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
 Gibt Gruppen an, in denen von einem Abfrageausdruck ([SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) zurückgegebene Objekte platziert werden sollen.  
@@ -20,7 +20,7 @@ Gibt Gruppen an, in denen von einem Abfrageausdruck ([SELECT](../../../../../../
   
 ## <a name="arguments"></a>Argumente  
  `aliasedExpression`  
- Jeder gültige Abfrageausdruck, der gruppiert wird. `expression` kann eine Eigenschaft oder ein nicht aggregierter Ausdruck sein, der auf eine von der FROM-Klausel zurückgegebene Eigenschaft verweist. Die Auswertung jedes Ausdrucks in einer GROUP BY-Klausel muss einen Typ ergeben, der auf Gleichheit überprüft werden kann. Bei diesen Typen handelt es sich im Allgemeinen um skalare primitive Typen wie Zahlen, Zeichenfolgen und Datumsangaben. Nach einer Auflistung kann nicht gruppiert werden.  
+ Jeder gültige Abfrageausdruck, der gruppiert wird. `expression` ist eine Eigenschaft oder ein nicht aggregierter Ausdruck sein, der auf eine von der FROM-Klausel zurückgegebene Eigenschaft verweist. Die Auswertung jedes Ausdrucks in einer GROUP BY-Klausel muss einen Typ ergeben, der auf Gleichheit überprüft werden kann. Bei diesen Typen handelt es sich im Allgemeinen um skalare primitive Typen wie Zahlen, Zeichenfolgen und Datumsangaben. Nach einer Auflistung kann nicht gruppiert werden.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Aggregatfunktionen in der SELECT-Klausel enthalten sind \<Auswahlliste >, GROUP BY berechnet einen Summenwert für jede Gruppe. Wenn GROUP BY angegeben wird, muss jeder Eigenschaftsname jedes Nichtaggregatausdrucks in der Auswahlliste in der GROUP BY-Liste eingeschlossen sein, oder der GROUP BY-Ausdruck muss dem Auswahllistenausdruck genau entsprechen.  
@@ -69,5 +69,6 @@ GROUP BY 1   -- BAD, a constant is not allowed
  [!code-csharp[DP EntityServices Concepts 2#GROUPBY](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#groupby)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Abfrageausdrücke](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)

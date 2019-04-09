@@ -12,12 +12,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45278b116ce1ea1a910d806df408c8692338d9a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: add1458bb3a50a5e5433e8cc7baaf47d750c927d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634375"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083672"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>CorDebugRecordFormat-Aufzählung
 Beschreibt das Format der Daten in einem Byte-Array, das Informationen über ein systemeigenes Ausnahme-Debug-Ereignis enthält.  
@@ -42,7 +42,7 @@ typedef enum CorDebugRecordFormat {
  Ein Mitglied der `CorDebugRecordFormat` Enumeration wird zum Übergeben der [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) Methode an, dass das Format des Bytearrays in die `pRecord` Argument.  
   
 > [!NOTE]
->  Diese Enumeration ist nur für die Verwendung in .NET Native-Debugszenarios vorgesehen.  
+>  Diese Enumeration ist nur für die Verwendung in .NET Native-Debugszenarien vorgesehen.  
   
 ## <a name="requirements"></a>Anforderungen  
  **Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
@@ -54,4 +54,5 @@ typedef enum CorDebugRecordFormat {
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+
+- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
