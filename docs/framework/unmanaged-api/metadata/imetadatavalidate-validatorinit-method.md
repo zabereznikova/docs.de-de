@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d2018be28cbfe72bb7c989634374b8ab43693e6f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 31ff2c62810061cd8b774e934167a5ee3acf040c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491957"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195890"
 ---
-# <a name="imetadatavalidatevalidatorinit-method"></a><span data-ttu-id="347a3-102">IMetaDataValidate::ValidatorInit-Methode</span><span class="sxs-lookup"><span data-stu-id="347a3-102">IMetaDataValidate::ValidatorInit Method</span></span>
-<span data-ttu-id="347a3-103">Setzt ein Flag, das den Typ des Moduls im aktuellen Metadatenbereich angibt, und registriert die angegebene Rückrufmethode für Überprüfungsfehler.</span><span class="sxs-lookup"><span data-stu-id="347a3-103">Sets a flag that specifies the type of the module in the current metadata scope, and registers the specified callback method for validation errors.</span></span>  
+# <a name="imetadatavalidatevalidatorinit-method"></a><span data-ttu-id="2c780-102">IMetaDataValidate::ValidatorInit-Methode</span><span class="sxs-lookup"><span data-stu-id="2c780-102">IMetaDataValidate::ValidatorInit Method</span></span>
+<span data-ttu-id="2c780-103">Setzt ein Flag, das den Typ des Moduls im aktuellen Metadatenbereich angibt, und registriert die angegebene Rückrufmethode für Überprüfungsfehler.</span><span class="sxs-lookup"><span data-stu-id="2c780-103">Sets a flag that specifies the type of the module in the current metadata scope, and registers the specified callback method for validation errors.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="347a3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="347a3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2c780-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="2c780-104">Syntax</span></span>  
   
 ```  
 HRESULT ValidatorInit (  
@@ -36,21 +36,22 @@ HRESULT ValidatorInit (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="347a3-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="347a3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2c780-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="2c780-105">Parameters</span></span>  
  `dwModule`  
- <span data-ttu-id="347a3-106">[in] Der Wert der [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) -Enumeration, der den Typ des Moduls im aktuellen Metadatenbereich angibt.</span><span class="sxs-lookup"><span data-stu-id="347a3-106">[in] A value of the [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) enumeration that specifies the type of the module in the current metadata scope.</span></span>  
+ <span data-ttu-id="2c780-106">[in] Der Wert der [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) -Enumeration, der den Typ des Moduls im aktuellen Metadatenbereich angibt.</span><span class="sxs-lookup"><span data-stu-id="2c780-106">[in] A value of the [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) enumeration that specifies the type of the module in the current metadata scope.</span></span>  
   
  `pUnk`  
- <span data-ttu-id="347a3-107">[in] Ein Zeiger auf ein [IUnknown](/cpp/atl/iunknown) Instanz, die als Funktionsrückruf für Validierungsfehler dient.</span><span class="sxs-lookup"><span data-stu-id="347a3-107">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) instance that serves as a function callback for validation errors.</span></span>  
+ <span data-ttu-id="2c780-107">[in] Ein Zeiger auf ein [IUnknown](/cpp/atl/iunknown) Instanz, die als Funktionsrückruf für Validierungsfehler dient.</span><span class="sxs-lookup"><span data-stu-id="2c780-107">[in] A pointer to an [IUnknown](/cpp/atl/iunknown) instance that serves as a function callback for validation errors.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="347a3-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="347a3-108">Requirements</span></span>  
- <span data-ttu-id="347a3-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="347a3-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2c780-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2c780-108">Requirements</span></span>  
+ <span data-ttu-id="2c780-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2c780-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="347a3-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="347a3-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="2c780-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="2c780-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="347a3-111">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="347a3-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="2c780-111">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="2c780-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="347a3-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="347a3-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="2c780-112">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="2c780-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="347a3-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="347a3-113">See also</span></span>
-- [<span data-ttu-id="347a3-114">IMetaDataValidate-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="347a3-114">IMetaDataValidate Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2c780-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2c780-113">See also</span></span>
+
+- [<span data-ttu-id="2c780-114">IMetaDataValidate-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2c780-114">IMetaDataValidate Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)

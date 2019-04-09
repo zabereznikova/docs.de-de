@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa1fa59bf3bb33e115989eae9095752eea00a041
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 83dec9b6ed3b1e538e0f1b7d13a33b8bdbc1cf54
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487641"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200804"
 ---
-# <a name="imetadataimportgetmemberprops-method"></a><span data-ttu-id="5054b-102">IMetaDataImport::GetMemberProps-Methode</span><span class="sxs-lookup"><span data-stu-id="5054b-102">IMetaDataImport::GetMemberProps Method</span></span>
-<span data-ttu-id="5054b-103">Ruft ab, in den Metadaten für eine angegebenen Member-Definition, einschließlich Name, binäre Signatur und relative virtuelle Adresse des gespeicherten Informationen dem <xref:System.Type> Member vom angegebenen Metadatentoken verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="5054b-103">Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token.</span></span> <span data-ttu-id="5054b-104">Dies ist eine einfache Hilfsmethode: Wenn *mb* MethodDef, dann ist **GetMethodProps** aufgerufen, wenn *mb* ist ein FieldDef, **GetFieldProps** wird aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="5054b-104">This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called.</span></span> <span data-ttu-id="5054b-105">Finden Sie unter diesen anderen Methoden für Details.</span><span class="sxs-lookup"><span data-stu-id="5054b-105">See these other methods for details.</span></span> 
+# <a name="imetadataimportgetmemberprops-method"></a><span data-ttu-id="d799b-102">IMetaDataImport::GetMemberProps-Methode</span><span class="sxs-lookup"><span data-stu-id="d799b-102">IMetaDataImport::GetMemberProps Method</span></span>
+<span data-ttu-id="d799b-103">Ruft ab, in den Metadaten für eine angegebenen Member-Definition, einschließlich Name, binäre Signatur und relative virtuelle Adresse des gespeicherten Informationen dem <xref:System.Type> Member vom angegebenen Metadatentoken verwiesen wird.</span><span class="sxs-lookup"><span data-stu-id="d799b-103">Gets information stored in the metadata for a specified member definition, including the name, binary signature, and relative virtual address, of the <xref:System.Type> member referenced by the specified metadata token.</span></span> <span data-ttu-id="d799b-104">Dies ist eine einfache Hilfsmethode: Wenn *mb* MethodDef, dann ist **GetMethodProps** aufgerufen, wenn *mb* ist ein FieldDef, **GetFieldProps** wird aufgerufen.</span><span class="sxs-lookup"><span data-stu-id="d799b-104">This is a simple helper method: if *mb* is a MethodDef, then **GetMethodProps** is called; if *mb* is a FieldDef, then **GetFieldProps** is called.</span></span> <span data-ttu-id="d799b-105">Finden Sie unter diesen anderen Methoden für Details.</span><span class="sxs-lookup"><span data-stu-id="d799b-105">See these other methods for details.</span></span> 
   
-## <a name="syntax"></a><span data-ttu-id="5054b-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="5054b-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d799b-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="d799b-106">Syntax</span></span>  
   
 ```  
 HRESULT GetMemberProps (  
@@ -47,55 +47,56 @@ HRESULT GetMemberProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5054b-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="5054b-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d799b-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="d799b-107">Parameters</span></span>  
  `mb`  
- <span data-ttu-id="5054b-108">[in] Das Token, das Element zum Abrufen der zugehörigen Metadaten für verweist.</span><span class="sxs-lookup"><span data-stu-id="5054b-108">[in] The token that references the member to get the associated metadata for.</span></span>  
+ <span data-ttu-id="d799b-108">[in] Das Token, das Element zum Abrufen der zugehörigen Metadaten für verweist.</span><span class="sxs-lookup"><span data-stu-id="d799b-108">[in] The token that references the member to get the associated metadata for.</span></span>  
   
  `pClass`  
- <span data-ttu-id="5054b-109">[out] Ein Zeiger auf das Metadatentoken, das die Klasse des Elements darstellt.</span><span class="sxs-lookup"><span data-stu-id="5054b-109">[out] A pointer to the metadata token that represents the class of the member.</span></span>  
+ <span data-ttu-id="d799b-109">[out] Ein Zeiger auf das Metadatentoken, das die Klasse des Elements darstellt.</span><span class="sxs-lookup"><span data-stu-id="d799b-109">[out] A pointer to the metadata token that represents the class of the member.</span></span>  
   
  `szMember`  
- <span data-ttu-id="5054b-110">[out] Der Name des Elements.</span><span class="sxs-lookup"><span data-stu-id="5054b-110">[out] The name of the member.</span></span>  
+ <span data-ttu-id="d799b-110">[out] Der Name des Elements.</span><span class="sxs-lookup"><span data-stu-id="d799b-110">[out] The name of the member.</span></span>  
   
  `cchMember`  
- <span data-ttu-id="5054b-111">[in] Die Größe in Breitzeichen die `szMember` Puffer.</span><span class="sxs-lookup"><span data-stu-id="5054b-111">[in] The size in wide characters of the `szMember` buffer.</span></span>  
+ <span data-ttu-id="d799b-111">[in] Die Größe in Breitzeichen die `szMember` Puffer.</span><span class="sxs-lookup"><span data-stu-id="d799b-111">[in] The size in wide characters of the `szMember` buffer.</span></span>  
   
  `pchMember`  
- <span data-ttu-id="5054b-112">[out] Die Größe in Breitzeichen der zurückgegebene Name.</span><span class="sxs-lookup"><span data-stu-id="5054b-112">[out] The size in wide characters of the returned name.</span></span>  
+ <span data-ttu-id="d799b-112">[out] Die Größe in Breitzeichen der zurückgegebene Name.</span><span class="sxs-lookup"><span data-stu-id="d799b-112">[out] The size in wide characters of the returned name.</span></span>  
   
  `pdwAttr`  
- <span data-ttu-id="5054b-113">[out] Alle Flagwerte, die auf den Member angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="5054b-113">[out] Any flag values applied to the member.</span></span>  
+ <span data-ttu-id="d799b-113">[out] Alle Flagwerte, die auf den Member angewendet wird.</span><span class="sxs-lookup"><span data-stu-id="d799b-113">[out] Any flag values applied to the member.</span></span>  
   
  `ppvSigBlob`  
- <span data-ttu-id="5054b-114">[out] Ein Zeiger auf die binäre Metadatensignatur des Elements.</span><span class="sxs-lookup"><span data-stu-id="5054b-114">[out] A pointer to the binary metadata signature of the member.</span></span>  
+ <span data-ttu-id="d799b-114">[out] Ein Zeiger auf die binäre Metadatensignatur des Elements.</span><span class="sxs-lookup"><span data-stu-id="d799b-114">[out] A pointer to the binary metadata signature of the member.</span></span>  
   
  `pcbSigBlob`  
- <span data-ttu-id="5054b-115">[out] Die Größe in Bytes der `ppvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="5054b-115">[out] The size in bytes of `ppvSigBlob`.</span></span>  
+ <span data-ttu-id="d799b-115">[out] Die Größe in Bytes der `ppvSigBlob`.</span><span class="sxs-lookup"><span data-stu-id="d799b-115">[out] The size in bytes of `ppvSigBlob`.</span></span>  
   
  `pulCodeRVA`  
- <span data-ttu-id="5054b-116">[out] Ein Zeiger auf die relative virtuelle Adresse des Elements.</span><span class="sxs-lookup"><span data-stu-id="5054b-116">[out] A pointer to the relative virtual address of the member.</span></span>  
+ <span data-ttu-id="d799b-116">[out] Ein Zeiger auf die relative virtuelle Adresse des Elements.</span><span class="sxs-lookup"><span data-stu-id="d799b-116">[out] A pointer to the relative virtual address of the member.</span></span>  
   
  `pdwImplFlags`  
- <span data-ttu-id="5054b-117">[out] Alle Methodenimplementierungsflags, der dem Element zugeordnet wird.</span><span class="sxs-lookup"><span data-stu-id="5054b-117">[out] Any method implementation flags associated with the member.</span></span>  
+ <span data-ttu-id="d799b-117">[out] Alle Methodenimplementierungsflags, der dem Element zugeordnet wird.</span><span class="sxs-lookup"><span data-stu-id="d799b-117">[out] Any method implementation flags associated with the member.</span></span>  
   
  `pdwCPlusTypeFlag`  
- <span data-ttu-id="5054b-118">[out] Ein Flag, das kennzeichnet eine <xref:System.ValueType>.</span><span class="sxs-lookup"><span data-stu-id="5054b-118">[out] A flag that marks a <xref:System.ValueType>.</span></span> <span data-ttu-id="5054b-119">Es ist eines der `ELEMENT_TYPE_*` Werte.</span><span class="sxs-lookup"><span data-stu-id="5054b-119">It is one of the `ELEMENT_TYPE_*` values.</span></span>
+ <span data-ttu-id="d799b-118">[out] Ein Flag, das kennzeichnet eine <xref:System.ValueType>.</span><span class="sxs-lookup"><span data-stu-id="d799b-118">[out] A flag that marks a <xref:System.ValueType>.</span></span> <span data-ttu-id="d799b-119">Es ist eines der `ELEMENT_TYPE_*` Werte.</span><span class="sxs-lookup"><span data-stu-id="d799b-119">It is one of the `ELEMENT_TYPE_*` values.</span></span>
   
  `ppValue`  
- <span data-ttu-id="5054b-120">[out] Eine Zeichenfolgenkonstante, die von diesem Element zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="5054b-120">[out] A constant string value returned by this member.</span></span>  
+ <span data-ttu-id="d799b-120">[out] Eine Zeichenfolgenkonstante, die von diesem Element zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="d799b-120">[out] A constant string value returned by this member.</span></span>  
   
  `pcchValue`  
- <span data-ttu-id="5054b-121">[out] Die Größe in Zeichen des `ppValue`, oder NULL, wenn `ppValue` errichtet keine Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="5054b-121">[out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.</span></span>  
+ <span data-ttu-id="d799b-121">[out] Die Größe in Zeichen des `ppValue`, oder NULL, wenn `ppValue` errichtet keine Zeichenfolge.</span><span class="sxs-lookup"><span data-stu-id="d799b-121">[out] The size in characters of `ppValue`, or zero if `ppValue` does not hold a string.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5054b-122">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5054b-122">Requirements</span></span>  
- <span data-ttu-id="5054b-123">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5054b-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d799b-122">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d799b-122">Requirements</span></span>  
+ <span data-ttu-id="d799b-123">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d799b-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5054b-124">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5054b-124">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d799b-124">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d799b-124">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5054b-125">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="5054b-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d799b-125">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="d799b-125">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="5054b-126">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5054b-126">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="d799b-126">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="d799b-126">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="5054b-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5054b-127">See also</span></span>
-- [<span data-ttu-id="5054b-128">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5054b-128">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="5054b-129">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5054b-129">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d799b-127">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d799b-127">See also</span></span>
+
+- [<span data-ttu-id="d799b-128">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d799b-128">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="d799b-129">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d799b-129">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

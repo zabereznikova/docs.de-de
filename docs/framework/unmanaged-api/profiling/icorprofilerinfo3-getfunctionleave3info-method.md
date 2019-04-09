@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f3ee7dd280239217e4e16932667e86de67e738f2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7d51462017287d42fd468ed0a74a2e83203a3d94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471172"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172392"
 ---
-# <a name="icorprofilerinfo3getfunctionleave3info-method"></a><span data-ttu-id="8bca7-102">ICorProfilerInfo3::GetFunctionLeave3Info-Methode</span><span class="sxs-lookup"><span data-stu-id="8bca7-102">ICorProfilerInfo3::GetFunctionLeave3Info Method</span></span>
-<span data-ttu-id="8bca7-103">Stellt den Stapelrahmen und den Rückgabewert der Funktion, die dem Profiler von gemeldet wird die [FunctionLeave3WithInfo-Funktion](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) Funktion.</span><span class="sxs-lookup"><span data-stu-id="8bca7-103">Provides the stack frame and return value of the function that is being reported to the profiler by the [FunctionLeave3WithInfo function](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span> <span data-ttu-id="8bca7-104">Diese Methode kann nur während des `FunctionLeave3WithInfo`-Rückrufs aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="8bca7-104">This method can be called only during the `FunctionLeave3WithInfo` callback.</span></span>  
+# <a name="icorprofilerinfo3getfunctionleave3info-method"></a><span data-ttu-id="c6514-102">ICorProfilerInfo3::GetFunctionLeave3Info-Methode</span><span class="sxs-lookup"><span data-stu-id="c6514-102">ICorProfilerInfo3::GetFunctionLeave3Info Method</span></span>
+<span data-ttu-id="c6514-103">Stellt den Stapelrahmen und den Rückgabewert der Funktion, die dem Profiler von gemeldet wird die [FunctionLeave3WithInfo-Funktion](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) Funktion.</span><span class="sxs-lookup"><span data-stu-id="c6514-103">Provides the stack frame and return value of the function that is being reported to the profiler by the [FunctionLeave3WithInfo function](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span> <span data-ttu-id="c6514-104">Diese Methode kann nur während des `FunctionLeave3WithInfo`-Rückrufs aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="c6514-104">This method can be called only during the `FunctionLeave3WithInfo` callback.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8bca7-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="8bca7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c6514-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="c6514-105">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionLeave3Info(  
@@ -37,34 +37,35 @@ HRESULT GetFunctionLeave3Info(
             [out] COR_PRF_FUNCTION_ARGUMENT_RANGE *pRetvalRange);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8bca7-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="8bca7-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c6514-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="c6514-106">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="8bca7-107">[in] Die `FunctionID` der Funktion, die zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="8bca7-107">[in] The `FunctionID` of the function that is returning.</span></span>  
+ <span data-ttu-id="c6514-107">[in] Die `FunctionID` der Funktion, die zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="c6514-107">[in] The `FunctionID` of the function that is returning.</span></span>  
   
  `eltInfo`  
- <span data-ttu-id="8bca7-108">[in] Ein nicht transparentes Handle, das Informationen über einen bestimmten Stapelrahmen entspricht.</span><span class="sxs-lookup"><span data-stu-id="8bca7-108">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="8bca7-109">Der Profiler sollte gleich bereitstellen `eltInfo` , wurde übergeben, um dem Profiler von der [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) Funktion.</span><span class="sxs-lookup"><span data-stu-id="8bca7-109">The profiler should provide the same `eltInfo` that was given to the profiler by the [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span>  
+ <span data-ttu-id="c6514-108">[in] Ein nicht transparentes Handle, das Informationen über einen bestimmten Stapelrahmen entspricht.</span><span class="sxs-lookup"><span data-stu-id="c6514-108">[in] An opaque handle that represents information about a given stack frame.</span></span> <span data-ttu-id="c6514-109">Der Profiler sollte gleich bereitstellen `eltInfo` , wurde übergeben, um dem Profiler von der [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) Funktion.</span><span class="sxs-lookup"><span data-stu-id="c6514-109">The profiler should provide the same `eltInfo` that was given to the profiler by the [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md) function.</span></span>  
   
  `pFrameInfo`  
- <span data-ttu-id="8bca7-110">[out] Ein nicht transparentes Handle, das Genericsinformationen zu einem bestimmten Stapelrahmen entspricht.</span><span class="sxs-lookup"><span data-stu-id="8bca7-110">[out] An opaque handle that represents generics information about a given stack frame.</span></span> <span data-ttu-id="8bca7-111">Dieses Handle ist nur während des `FunctionLeave3WithInfo`-Rückrufs gültig, in dem der Profiler die `GetFunctionLeave3Info`-Methode aufgerufen hat.</span><span class="sxs-lookup"><span data-stu-id="8bca7-111">This handle is valid only during the `FunctionLeave3WithInfo` callback in which the profiler called the `GetFunctionLeave3Info` method.</span></span>  
+ <span data-ttu-id="c6514-110">[out] Ein nicht transparentes Handle, das Genericsinformationen zu einem bestimmten Stapelrahmen entspricht.</span><span class="sxs-lookup"><span data-stu-id="c6514-110">[out] An opaque handle that represents generics information about a given stack frame.</span></span> <span data-ttu-id="c6514-111">Dieses Handle ist nur während des `FunctionLeave3WithInfo`-Rückrufs gültig, in dem der Profiler die `GetFunctionLeave3Info`-Methode aufgerufen hat.</span><span class="sxs-lookup"><span data-stu-id="c6514-111">This handle is valid only during the `FunctionLeave3WithInfo` callback in which the profiler called the `GetFunctionLeave3Info` method.</span></span>  
   
  `pRetvalRange`  
- <span data-ttu-id="8bca7-112">[out] Ein Zeiger auf eine [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) -Struktur, die den Wert enthält, die von der Funktion zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="8bca7-112">[out] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that contains the value that is returned from the function.</span></span> <span data-ttu-id="8bca7-113">Informationen zum Rückgabewert, den Zugriff auf die `COR_PRF_ENABLE_FUNCTION_RETVAL` Flag festgelegt werden muss.</span><span class="sxs-lookup"><span data-stu-id="8bca7-113">To access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="8bca7-114">Der Profiler kann mithilfe der [ICorProfilerInfo:: SetEventMask-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) werden die Ereignisflags festgelegt.</span><span class="sxs-lookup"><span data-stu-id="8bca7-114">The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags.</span></span>  
+ <span data-ttu-id="c6514-112">[out] Ein Zeiger auf eine [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) -Struktur, die den Wert enthält, die von der Funktion zurückgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="c6514-112">[out] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that contains the value that is returned from the function.</span></span> <span data-ttu-id="c6514-113">Informationen zum Rückgabewert, den Zugriff auf die `COR_PRF_ENABLE_FUNCTION_RETVAL` Flag festgelegt werden muss.</span><span class="sxs-lookup"><span data-stu-id="c6514-113">To access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set.</span></span> <span data-ttu-id="c6514-114">Der Profiler kann mithilfe der [ICorProfilerInfo:: SetEventMask-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) werden die Ereignisflags festgelegt.</span><span class="sxs-lookup"><span data-stu-id="c6514-114">The profiler can use the [ICorProfilerInfo::SetEventMask method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) to set the event flags.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8bca7-115">Hinweise</span><span class="sxs-lookup"><span data-stu-id="8bca7-115">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c6514-115">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c6514-115">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8bca7-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8bca7-116">Requirements</span></span>  
- <span data-ttu-id="8bca7-117">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8bca7-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c6514-116">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c6514-116">Requirements</span></span>  
+ <span data-ttu-id="c6514-117">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c6514-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8bca7-118">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8bca7-118">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="c6514-118">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c6514-118">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="8bca7-119">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8bca7-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c6514-119">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c6514-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8bca7-120">**.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8bca7-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="c6514-120">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="c6514-120">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="8bca7-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8bca7-121">See also</span></span>
-- [<span data-ttu-id="8bca7-122">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="8bca7-122">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
-- [<span data-ttu-id="8bca7-123">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="8bca7-123">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [<span data-ttu-id="8bca7-124">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="8bca7-124">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [<span data-ttu-id="8bca7-125">ICorProfilerInfo3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8bca7-125">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="8bca7-126">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="8bca7-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="8bca7-127">Profilerstellung</span><span class="sxs-lookup"><span data-stu-id="8bca7-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="c6514-121">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c6514-121">See also</span></span>
+
+- [<span data-ttu-id="c6514-122">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="c6514-122">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)
+- [<span data-ttu-id="c6514-123">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="c6514-123">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
+- [<span data-ttu-id="c6514-124">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="c6514-124">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
+- [<span data-ttu-id="c6514-125">ICorProfilerInfo3-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c6514-125">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="c6514-126">Profilerstellungsschnittstellen</span><span class="sxs-lookup"><span data-stu-id="c6514-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="c6514-127">Profilerstellung</span><span class="sxs-lookup"><span data-stu-id="c6514-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

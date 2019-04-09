@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f60d0d8480dcbe697b9ae76abd210120fc6b6955
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b9c91a982a5f3d28b43a301f961601485639bb91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485511"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180627"
 ---
-# <a name="ihostsyncmanagercreateautoevent-method"></a><span data-ttu-id="51b00-102">IHostSyncManager::CreateAutoEvent-Methode</span><span class="sxs-lookup"><span data-stu-id="51b00-102">IHostSyncManager::CreateAutoEvent Method</span></span>
-<span data-ttu-id="51b00-103">Erstellt ein automatisches Zurücksetzungsereignis-Objekt.</span><span class="sxs-lookup"><span data-stu-id="51b00-103">Creates an auto-reset event object.</span></span>  
+# <a name="ihostsyncmanagercreateautoevent-method"></a><span data-ttu-id="2242b-102">IHostSyncManager::CreateAutoEvent-Methode</span><span class="sxs-lookup"><span data-stu-id="2242b-102">IHostSyncManager::CreateAutoEvent Method</span></span>
+<span data-ttu-id="2242b-103">Erstellt ein automatisches Zurücksetzungsereignis-Objekt.</span><span class="sxs-lookup"><span data-stu-id="2242b-103">Creates an auto-reset event object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51b00-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="51b00-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2242b-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="2242b-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateAutoEvent (  
@@ -35,36 +35,37 @@ HRESULT CreateAutoEvent (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="51b00-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="51b00-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2242b-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="2242b-105">Parameters</span></span>  
  `ppEvent`  
- <span data-ttu-id="51b00-106">[out] Ein Zeiger auf die Adresse einer [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) Instanz vom Host implementiert, oder null, wenn das Ereignisobjekt nicht erstellt werden konnte.</span><span class="sxs-lookup"><span data-stu-id="51b00-106">[out] A pointer to the address of an [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance implemented by the host, or null if the event object could not be created.</span></span>  
+ <span data-ttu-id="2242b-106">[out] Ein Zeiger auf die Adresse einer [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) Instanz vom Host implementiert, oder null, wenn das Ereignisobjekt nicht erstellt werden konnte.</span><span class="sxs-lookup"><span data-stu-id="2242b-106">[out] A pointer to the address of an [IHostAutoEvent](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md) instance implemented by the host, or null if the event object could not be created.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="51b00-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="51b00-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2242b-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="2242b-107">Return Value</span></span>  
   
-|<span data-ttu-id="51b00-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="51b00-108">HRESULT</span></span>|<span data-ttu-id="51b00-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="51b00-109">Description</span></span>|  
+|<span data-ttu-id="2242b-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2242b-108">HRESULT</span></span>|<span data-ttu-id="2242b-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2242b-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="51b00-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="51b00-110">S_OK</span></span>|<span data-ttu-id="51b00-111">`CreateAutoEvent` wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="51b00-111">`CreateAutoEvent` returned successfully.</span></span>|  
-|<span data-ttu-id="51b00-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="51b00-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="51b00-113">Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="51b00-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="51b00-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="51b00-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="51b00-115">Der Aufruf ist ein Timeout aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="51b00-115">The call timed out.</span></span>|  
-|<span data-ttu-id="51b00-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="51b00-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="51b00-117">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="51b00-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="51b00-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="51b00-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="51b00-119">Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.</span><span class="sxs-lookup"><span data-stu-id="51b00-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="51b00-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="51b00-120">E_FAIL</span></span>|<span data-ttu-id="51b00-121">Ein Unbekannter Schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="51b00-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="51b00-122">Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="51b00-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="51b00-123">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="51b00-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="51b00-124">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="51b00-124">E_OUTOFMEMORY</span></span>|<span data-ttu-id="51b00-125">Es war nicht genügend Arbeitsspeicher verfügbar, um das angeforderte Ereignis-Objekt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="51b00-125">Not enough memory was available to create the requested event object.</span></span>|  
+|<span data-ttu-id="2242b-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="2242b-110">S_OK</span></span>|`CreateAutoEvent` <span data-ttu-id="2242b-111">wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="2242b-111">returned successfully.</span></span>|  
+|<span data-ttu-id="2242b-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="2242b-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="2242b-113">Die common Language Runtime (CLR) wurde nicht in einen Prozess geladen wurde, oder die CLR ist in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="2242b-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="2242b-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="2242b-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="2242b-115">Der Aufruf ist ein Timeout aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="2242b-115">The call timed out.</span></span>|  
+|<span data-ttu-id="2242b-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="2242b-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="2242b-117">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="2242b-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="2242b-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="2242b-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="2242b-119">Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.</span><span class="sxs-lookup"><span data-stu-id="2242b-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="2242b-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="2242b-120">E_FAIL</span></span>|<span data-ttu-id="2242b-121">Ein Unbekannter Schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="2242b-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="2242b-122">Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2242b-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="2242b-123">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="2242b-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="2242b-124">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="2242b-124">E_OUTOFMEMORY</span></span>|<span data-ttu-id="2242b-125">Es war nicht genügend Arbeitsspeicher verfügbar, um das angeforderte Ereignis-Objekt zu erstellen.</span><span class="sxs-lookup"><span data-stu-id="2242b-125">Not enough memory was available to create the requested event object.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="51b00-126">Hinweise</span><span class="sxs-lookup"><span data-stu-id="51b00-126">Remarks</span></span>  
- <span data-ttu-id="51b00-127">`CreateAutoEvent` erstellt ein Auto-Event-Objekt, dessen Zustand automatisch zu geändert wird, nicht signalisiertes nach der Freigabe des wartende Threads.</span><span class="sxs-lookup"><span data-stu-id="51b00-127">`CreateAutoEvent` creates an auto-event object whose state is automatically changed to non-signaled after the waiting thread has been released.</span></span> <span data-ttu-id="51b00-128">Diese Methode entspricht der Win32 `CreateEvent` Funktion mit einem Wert von `false` für die `bManualReset` Parameter</span><span class="sxs-lookup"><span data-stu-id="51b00-128">This method mirrors the Win32 `CreateEvent` function with a value of `false` specified for the `bManualReset` parameter</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2242b-126">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2242b-126">Remarks</span></span>  
+ `CreateAutoEvent` <span data-ttu-id="2242b-127">erstellt ein Auto-Event-Objekt, dessen Zustand automatisch zu geändert wird, nicht signalisiertes nach der Freigabe des wartende Threads.</span><span class="sxs-lookup"><span data-stu-id="2242b-127">creates an auto-event object whose state is automatically changed to non-signaled after the waiting thread has been released.</span></span> <span data-ttu-id="2242b-128">Diese Methode entspricht der Win32 `CreateEvent` Funktion mit einem Wert von `false` für die `bManualReset` Parameter</span><span class="sxs-lookup"><span data-stu-id="2242b-128">This method mirrors the Win32 `CreateEvent` function with a value of `false` specified for the `bManualReset` parameter</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="51b00-129">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="51b00-129">Requirements</span></span>  
- <span data-ttu-id="51b00-130">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="51b00-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2242b-129">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2242b-129">Requirements</span></span>  
+ <span data-ttu-id="2242b-130">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2242b-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="51b00-131">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="51b00-131">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="2242b-131">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2242b-131">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="51b00-132">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="51b00-132">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="2242b-132">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="2242b-132">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="51b00-133">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="51b00-133">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="2242b-133">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="2242b-133">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="51b00-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="51b00-134">See also</span></span>
-- [<span data-ttu-id="51b00-135">ICLRSyncManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="51b00-135">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="51b00-136">IHostAutoEvent-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="51b00-136">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
-- [<span data-ttu-id="51b00-137">IHostControl-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="51b00-137">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
-- [<span data-ttu-id="51b00-138">IHostSyncManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="51b00-138">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2242b-134">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2242b-134">See also</span></span>
+
+- [<span data-ttu-id="2242b-135">ICLRSyncManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2242b-135">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="2242b-136">IHostAutoEvent-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2242b-136">IHostAutoEvent Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
+- [<span data-ttu-id="2242b-137">IHostControl-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2242b-137">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+- [<span data-ttu-id="2242b-138">IHostSyncManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2242b-138">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)

@@ -2,17 +2,17 @@
 title: <endpointExtensions>
 ms.date: 03/30/2017
 ms.assetid: 33396e0a-1fae-4616-b822-923584eebfd1
-ms.openlocfilehash: 746f98b54285f95bb63e15136508909327c0d140
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 12ac8d9a7b0ed584fb1308e56d197a03b1c53e51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174927"
 ---
-# <a name="endpointextensions"></a><span data-ttu-id="d10c4-101">\<endpointExtensions></span><span class="sxs-lookup"><span data-stu-id="d10c4-101">\<endpointExtensions></span></span>
-<span data-ttu-id="d10c4-102">Dieser Abschnitt registriert einen neuen Standardendpunkt im Erweiterungsabschnitt einer Konfigurationsdatei auf Computer- oder Anwendungsebene.</span><span class="sxs-lookup"><span data-stu-id="d10c4-102">This section registers a new standard endpoint in the extensions section in a machine or application configuration file.</span></span> <span data-ttu-id="d10c4-103">Sie können dieser Auflistung einen Standardendpunkt hinzufügen, indem Sie das `add`-Schlüsselwort verwenden und das `type`-Attribut des Elements auf den Endpunkttyp sowie das `name`-Attribut auf den Namen des Standardendpunkts festlegen.</span><span class="sxs-lookup"><span data-stu-id="d10c4-103">You can add a standard endpoint to this collection by using the `add` keyword, and setting the `type` attribute of the element to the endpoint type, as well as the `name` attribute to the name of the standard endpoint.</span></span>  
+# <a name="endpointextensions"></a><span data-ttu-id="fec0a-101">\<endpointExtensions></span><span class="sxs-lookup"><span data-stu-id="fec0a-101">\<endpointExtensions></span></span>
+<span data-ttu-id="fec0a-102">Dieser Abschnitt registriert einen neuen Standardendpunkt im Erweiterungsabschnitt einer Konfigurationsdatei auf Computer- oder Anwendungsebene.</span><span class="sxs-lookup"><span data-stu-id="fec0a-102">This section registers a new standard endpoint in the extensions section in a machine or application configuration file.</span></span> <span data-ttu-id="fec0a-103">Sie können dieser Auflistung einen Standardendpunkt hinzufügen, indem Sie das `add`-Schlüsselwort verwenden und das `type`-Attribut des Elements auf den Endpunkttyp sowie das `name`-Attribut auf den Namen des Standardendpunkts festlegen.</span><span class="sxs-lookup"><span data-stu-id="fec0a-103">You can add a standard endpoint to this collection by using the `add` keyword, and setting the `type` attribute of the element to the endpoint type, as well as the `name` attribute to the name of the standard endpoint.</span></span>  
   
- <span data-ttu-id="d10c4-104">Im folgenden Beispiel werden das `add`-Element sowie das `name`-Attribut zum Hinzufügen eines Standardendpunkts zum `<endpointExtensions>`-Abschnitt der Konfigurationsdatei verwendet.</span><span class="sxs-lookup"><span data-stu-id="d10c4-104">The following example uses the `add` element, as well as the `name` attribute to add a standard endpoint to the `<endpointExtensions>` section of the configuration file.</span></span>  
+ <span data-ttu-id="fec0a-104">Im folgenden Beispiel werden das `add`-Element sowie das `name`-Attribut zum Hinzufügen eines Standardendpunkts zum `<endpointExtensions>`-Abschnitt der Konfigurationsdatei verwendet.</span><span class="sxs-lookup"><span data-stu-id="fec0a-104">The following example uses the `add` element, as well as the `name` attribute to add a standard endpoint to the `<endpointExtensions>` section of the configuration file.</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -25,7 +25,7 @@ ms.locfileid: "55264608"
 </system.serviceModel>
 ```  
   
- <span data-ttu-id="d10c4-105">Nachdem der Standardendpunkt registriert wurde, können Sie ihn verwenden wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="d10c4-105">After the standard endpoint has been registered, you can use it as shown in the following example.</span></span> <span data-ttu-id="d10c4-106">In der [ \<Endpunkt >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) -Element, das `kind` Attribut gibt an, den standardendpunkttyp an, die in registriert wurde die `<endpointExtensions>` Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="d10c4-106">In the [\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) element, the `kind` attribute specifies the standard endpoint type that has been registered in the `<endpointExtensions>` section.</span></span> <span data-ttu-id="d10c4-107">Die `endpointConfiguration` Attribut werden identisch mit der `name` Attribut des Konfigurationselements für den Standardendpunkt im der `<standardEndpoints>` Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="d10c4-107">The `endpointConfiguration` attribute will be identical to the `name` attribute of the configuration element of the standard endpoint in the `<standardEndpoints>` section.</span></span>  
+ <span data-ttu-id="fec0a-105">Nachdem der Standardendpunkt registriert wurde, können Sie ihn verwenden wie im folgenden Beispiel gezeigt.</span><span class="sxs-lookup"><span data-stu-id="fec0a-105">After the standard endpoint has been registered, you can use it as shown in the following example.</span></span> <span data-ttu-id="fec0a-106">In der [ \<Endpunkt >](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) -Element, das `kind` Attribut gibt an, den standardendpunkttyp an, die in registriert wurde die `<endpointExtensions>` Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="fec0a-106">In the [\<endpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) element, the `kind` attribute specifies the standard endpoint type that has been registered in the `<endpointExtensions>` section.</span></span> <span data-ttu-id="fec0a-107">Die `endpointConfiguration` Attribut werden identisch mit der `name` Attribut des Konfigurationselements für den Standardendpunkt im der `<standardEndpoints>` Abschnitt.</span><span class="sxs-lookup"><span data-stu-id="fec0a-107">The `endpointConfiguration` attribute will be identical to the `name` attribute of the configuration element of the standard endpoint in the `<standardEndpoints>` section.</span></span>  
   
 ```xml  
 <system.serviceModel>
@@ -44,4 +44,3 @@ ms.locfileid: "55264608"
   </standardEndpoints>
 </system.serviceModel>
 ```  
-  

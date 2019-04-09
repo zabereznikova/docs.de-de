@@ -1,5 +1,5 @@
 ---
-title: <generatePublisherEvidence>-Element
+title: <generatePublisherEvidence> Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - generatePublisherEvidence element
@@ -7,68 +7,68 @@ helpviewer_keywords:
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f029131f5b10cc487021ee15e72552a26c0b04e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 09a12f062b2fe3ad6e5ac90f0d268bbbeab44876
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198919"
 ---
-# <a name="generatepublisherevidence-element"></a><span data-ttu-id="42ebd-102">\<generatePublisherEvidence> Element</span><span class="sxs-lookup"><span data-stu-id="42ebd-102">\<generatePublisherEvidence> Element</span></span>
-<span data-ttu-id="42ebd-103">Gibt an, ob die Common Language Runtime erstellt <xref:System.Security.Policy.Publisher> Beweis für die Codezugriffssicherheit (CAS).</span><span class="sxs-lookup"><span data-stu-id="42ebd-103">Specifies whether the runtime creates <xref:System.Security.Policy.Publisher> evidence for code access security (CAS).</span></span>  
+# <a name="generatepublisherevidence-element"></a><span data-ttu-id="fc43c-102">\<generatePublisherEvidence> Element</span><span class="sxs-lookup"><span data-stu-id="fc43c-102">\<generatePublisherEvidence> Element</span></span>
+<span data-ttu-id="fc43c-103">Gibt an, ob die Common Language Runtime erstellt <xref:System.Security.Policy.Publisher> Beweis für die Codezugriffssicherheit (CAS).</span><span class="sxs-lookup"><span data-stu-id="fc43c-103">Specifies whether the runtime creates <xref:System.Security.Policy.Publisher> evidence for code access security (CAS).</span></span>  
   
- <span data-ttu-id="42ebd-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="42ebd-104">\<configuration></span></span>  
-<span data-ttu-id="42ebd-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="42ebd-105">\<runtime></span></span>  
-<span data-ttu-id="42ebd-106">\<generatePublisherEvidence></span><span class="sxs-lookup"><span data-stu-id="42ebd-106">\<generatePublisherEvidence></span></span>  
+ <span data-ttu-id="fc43c-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="fc43c-104">\<configuration></span></span>  
+<span data-ttu-id="fc43c-105">\<runtime></span><span class="sxs-lookup"><span data-stu-id="fc43c-105">\<runtime></span></span>  
+<span data-ttu-id="fc43c-106">\<generatePublisherEvidence></span><span class="sxs-lookup"><span data-stu-id="fc43c-106">\<generatePublisherEvidence></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="42ebd-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="42ebd-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc43c-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="fc43c-107">Syntax</span></span>  
   
 ```xml  
 <generatePublisherEvidence    
    enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="42ebd-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="42ebd-108">Attributes and Elements</span></span>  
- <span data-ttu-id="42ebd-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="42ebd-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="fc43c-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="fc43c-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="fc43c-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="fc43c-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="42ebd-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="42ebd-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="fc43c-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="fc43c-110">Attributes</span></span>  
   
-|<span data-ttu-id="42ebd-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="42ebd-111">Attribute</span></span>|<span data-ttu-id="42ebd-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="42ebd-112">Description</span></span>|  
+|<span data-ttu-id="fc43c-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="fc43c-111">Attribute</span></span>|<span data-ttu-id="fc43c-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fc43c-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="42ebd-113">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="42ebd-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="42ebd-114">Gibt an, ob die Common Language Runtime erstellt <xref:System.Security.Policy.Publisher> Beweise.</span><span class="sxs-lookup"><span data-stu-id="42ebd-114">Specifies whether the runtime creates <xref:System.Security.Policy.Publisher> evidence.</span></span>|  
+|`enabled`|<span data-ttu-id="fc43c-113">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="fc43c-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="fc43c-114">Gibt an, ob die Common Language Runtime erstellt <xref:System.Security.Policy.Publisher> Beweise.</span><span class="sxs-lookup"><span data-stu-id="fc43c-114">Specifies whether the runtime creates <xref:System.Security.Policy.Publisher> evidence.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="42ebd-115">Enabled-Attribut</span><span class="sxs-lookup"><span data-stu-id="42ebd-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="fc43c-115">Enabled-Attribut</span><span class="sxs-lookup"><span data-stu-id="fc43c-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="42ebd-116">Wert</span><span class="sxs-lookup"><span data-stu-id="42ebd-116">Value</span></span>|<span data-ttu-id="42ebd-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="42ebd-117">Description</span></span>|  
+|<span data-ttu-id="fc43c-116">Wert</span><span class="sxs-lookup"><span data-stu-id="fc43c-116">Value</span></span>|<span data-ttu-id="fc43c-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fc43c-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="42ebd-118">Erstellt keine <xref:System.Security.Policy.Publisher> Beweise.</span><span class="sxs-lookup"><span data-stu-id="42ebd-118">Does not create <xref:System.Security.Policy.Publisher> evidence.</span></span>|  
-|`true`|<span data-ttu-id="42ebd-119">Erstellt <xref:System.Security.Policy.Publisher> Beweise.</span><span class="sxs-lookup"><span data-stu-id="42ebd-119">Creates <xref:System.Security.Policy.Publisher> evidence.</span></span> <span data-ttu-id="42ebd-120">Dies ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="42ebd-120">This is the default.</span></span>|  
+|`false`|<span data-ttu-id="fc43c-118">Erstellt keine <xref:System.Security.Policy.Publisher> Beweise.</span><span class="sxs-lookup"><span data-stu-id="fc43c-118">Does not create <xref:System.Security.Policy.Publisher> evidence.</span></span>|  
+|`true`|<span data-ttu-id="fc43c-119">Erstellt <xref:System.Security.Policy.Publisher> Beweise.</span><span class="sxs-lookup"><span data-stu-id="fc43c-119">Creates <xref:System.Security.Policy.Publisher> evidence.</span></span> <span data-ttu-id="fc43c-120">Dies ist die Standardeinstellung.</span><span class="sxs-lookup"><span data-stu-id="fc43c-120">This is the default.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="42ebd-121">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="42ebd-121">Child Elements</span></span>  
- <span data-ttu-id="42ebd-122">Keine</span><span class="sxs-lookup"><span data-stu-id="42ebd-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="fc43c-121">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="fc43c-121">Child Elements</span></span>  
+ <span data-ttu-id="fc43c-122">Keine</span><span class="sxs-lookup"><span data-stu-id="fc43c-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="42ebd-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="42ebd-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="fc43c-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="fc43c-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="42ebd-124">Element</span><span class="sxs-lookup"><span data-stu-id="42ebd-124">Element</span></span>|<span data-ttu-id="42ebd-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="42ebd-125">Description</span></span>|  
+|<span data-ttu-id="fc43c-124">Element</span><span class="sxs-lookup"><span data-stu-id="fc43c-124">Element</span></span>|<span data-ttu-id="fc43c-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fc43c-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="42ebd-126">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="42ebd-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="42ebd-127">Enthält Informationen über Laufzeitinitialisierungsoptionen.</span><span class="sxs-lookup"><span data-stu-id="42ebd-127">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="fc43c-126">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="fc43c-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="fc43c-127">Enthält Informationen über Laufzeitinitialisierungsoptionen.</span><span class="sxs-lookup"><span data-stu-id="fc43c-127">Contains information about runtime initialization options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="42ebd-128">Hinweise</span><span class="sxs-lookup"><span data-stu-id="42ebd-128">Remarks</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="42ebd-129">In der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] und höher, dieses Element hat keine Auswirkungen auf die Assembly in den Ladezeiten.</span><span class="sxs-lookup"><span data-stu-id="42ebd-129">In the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] and later, this element has no effect on assembly load times.</span></span> <span data-ttu-id="42ebd-130">Weitere Informationen finden Sie im Abschnitt "Security Policy Vereinfachung" in [Sicherheitsänderungen](../../../../../docs/framework/security/security-changes.md).</span><span class="sxs-lookup"><span data-stu-id="42ebd-130">For more information, see the "Security Policy Simplification" section in [Security Changes](../../../../../docs/framework/security/security-changes.md).</span></span>  
-  
- <span data-ttu-id="42ebd-131">Die common Language Runtime (CLR) versucht zum Überprüfen der Authenticode-Signatur zur Ladezeit erstellen <xref:System.Security.Policy.Publisher> Beweis für die Assembly.</span><span class="sxs-lookup"><span data-stu-id="42ebd-131">The common language runtime (CLR) tries to verify the Authenticode signature at load time to create <xref:System.Security.Policy.Publisher> evidence for the assembly.</span></span> <span data-ttu-id="42ebd-132">Allerdings wird standardmäßig die meisten Anwendungen müssen nicht <xref:System.Security.Policy.Publisher> Beweise.</span><span class="sxs-lookup"><span data-stu-id="42ebd-132">However, by default, most applications do not need <xref:System.Security.Policy.Publisher> evidence.</span></span> <span data-ttu-id="42ebd-133">Standard-CAS-Richtlinien beruht nicht auf die <xref:System.Security.Policy.PublisherMembershipCondition>.</span><span class="sxs-lookup"><span data-stu-id="42ebd-133">Standard CAS policy does not rely on the <xref:System.Security.Policy.PublisherMembershipCondition>.</span></span> <span data-ttu-id="42ebd-134">Vermeiden Sie die unnötige Start Kosten im Zusammenhang mit der Signatur des Herausgebers wird überprüft, es sei denn, Ihre Anwendung auf einem Computer mit benutzerdefinierten CAS-Richtlinie ausgeführt wird, oder zum Erfüllen der Anforderungen für die beabsichtigt ist <xref:System.Security.Permissions.PublisherIdentityPermission> in einer teilweise vertrauenswürdigen Umgebung.</span><span class="sxs-lookup"><span data-stu-id="42ebd-134">You should avoid the unnecessary startup cost associated with verifying the publisher signature unless your application executes on a computer with custom CAS policy, or is intending to satisfy demands for <xref:System.Security.Permissions.PublisherIdentityPermission> in a partial-trust environment.</span></span> <span data-ttu-id="42ebd-135">(Anforderungen für Identitätsberechtigungen immer erfolgreich in einer vollständig vertrauenswürdigen Umgebung.)</span><span class="sxs-lookup"><span data-stu-id="42ebd-135">(Demands for identity permissions always succeed in a full-trust environment.)</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fc43c-128">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fc43c-128">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="42ebd-136">Es wird empfohlen, die Dienste verwenden die `<generatePublisherEvidence>` Element, um die startleistung zu verbessern.</span><span class="sxs-lookup"><span data-stu-id="42ebd-136">We recommend that services use the `<generatePublisherEvidence>` element to improve startup performance.</span></span>  <span data-ttu-id="42ebd-137">Mit diesem Element können auch Verzögerungen zu vermeiden, die ein Timeout und den Abbruch des Dienststarts verursachen können.</span><span class="sxs-lookup"><span data-stu-id="42ebd-137">Using this element can also help avoid delays that can cause a time-out and the cancellation of the service startup.</span></span>  
+>  <span data-ttu-id="fc43c-129">In der [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] und höher, dieses Element hat keine Auswirkungen auf die Assembly in den Ladezeiten.</span><span class="sxs-lookup"><span data-stu-id="fc43c-129">In the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] and later, this element has no effect on assembly load times.</span></span> <span data-ttu-id="fc43c-130">Weitere Informationen finden Sie im Abschnitt "Security Policy Vereinfachung" in [Sicherheitsänderungen](../../../../../docs/framework/security/security-changes.md).</span><span class="sxs-lookup"><span data-stu-id="fc43c-130">For more information, see the "Security Policy Simplification" section in [Security Changes](../../../../../docs/framework/security/security-changes.md).</span></span>  
   
-## <a name="configuration-file"></a><span data-ttu-id="42ebd-138">Konfigurationsdatei</span><span class="sxs-lookup"><span data-stu-id="42ebd-138">Configuration File</span></span>  
- <span data-ttu-id="42ebd-139">Dieses Element kann nur in der Anwendungskonfigurationsdatei verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="42ebd-139">This element can be used only in the application configuration file.</span></span>  
+ <span data-ttu-id="fc43c-131">Die common Language Runtime (CLR) versucht zum Überprüfen der Authenticode-Signatur zur Ladezeit erstellen <xref:System.Security.Policy.Publisher> Beweis für die Assembly.</span><span class="sxs-lookup"><span data-stu-id="fc43c-131">The common language runtime (CLR) tries to verify the Authenticode signature at load time to create <xref:System.Security.Policy.Publisher> evidence for the assembly.</span></span> <span data-ttu-id="fc43c-132">Allerdings wird standardmäßig die meisten Anwendungen müssen nicht <xref:System.Security.Policy.Publisher> Beweise.</span><span class="sxs-lookup"><span data-stu-id="fc43c-132">However, by default, most applications do not need <xref:System.Security.Policy.Publisher> evidence.</span></span> <span data-ttu-id="fc43c-133">Standard-CAS-Richtlinien beruht nicht auf die <xref:System.Security.Policy.PublisherMembershipCondition>.</span><span class="sxs-lookup"><span data-stu-id="fc43c-133">Standard CAS policy does not rely on the <xref:System.Security.Policy.PublisherMembershipCondition>.</span></span> <span data-ttu-id="fc43c-134">Vermeiden Sie die unnötige Start Kosten im Zusammenhang mit der Signatur des Herausgebers wird überprüft, es sei denn, Ihre Anwendung auf einem Computer mit benutzerdefinierten CAS-Richtlinie ausgeführt wird, oder zum Erfüllen der Anforderungen für die beabsichtigt ist <xref:System.Security.Permissions.PublisherIdentityPermission> in einer teilweise vertrauenswürdigen Umgebung.</span><span class="sxs-lookup"><span data-stu-id="fc43c-134">You should avoid the unnecessary startup cost associated with verifying the publisher signature unless your application executes on a computer with custom CAS policy, or is intending to satisfy demands for <xref:System.Security.Permissions.PublisherIdentityPermission> in a partial-trust environment.</span></span> <span data-ttu-id="fc43c-135">(Anforderungen für Identitätsberechtigungen immer erfolgreich in einer vollständig vertrauenswürdigen Umgebung.)</span><span class="sxs-lookup"><span data-stu-id="fc43c-135">(Demands for identity permissions always succeed in a full-trust environment.)</span></span>  
   
-## <a name="example"></a><span data-ttu-id="42ebd-140">Beispiel</span><span class="sxs-lookup"><span data-stu-id="42ebd-140">Example</span></span>  
- <span data-ttu-id="42ebd-141">Das folgende Beispiel zeigt, wie Sie mit der `<generatePublisherEvidence>` Element So deaktivieren Sie die Verleger-CAS-Richtlinie für eine Anwendung überprüfen.</span><span class="sxs-lookup"><span data-stu-id="42ebd-141">The following example shows how to use the `<generatePublisherEvidence>` element to disable checking for CAS publisher policy for an application.</span></span>  
+> [!NOTE]
+>  <span data-ttu-id="fc43c-136">Es wird empfohlen, die Dienste verwenden die `<generatePublisherEvidence>` Element, um die startleistung zu verbessern.</span><span class="sxs-lookup"><span data-stu-id="fc43c-136">We recommend that services use the `<generatePublisherEvidence>` element to improve startup performance.</span></span>  <span data-ttu-id="fc43c-137">Mit diesem Element können auch Verzögerungen zu vermeiden, die ein Timeout und den Abbruch des Dienststarts verursachen können.</span><span class="sxs-lookup"><span data-stu-id="fc43c-137">Using this element can also help avoid delays that can cause a time-out and the cancellation of the service startup.</span></span>  
+  
+## <a name="configuration-file"></a><span data-ttu-id="fc43c-138">Konfigurationsdatei</span><span class="sxs-lookup"><span data-stu-id="fc43c-138">Configuration File</span></span>  
+ <span data-ttu-id="fc43c-139">Dieses Element kann nur in der Anwendungskonfigurationsdatei verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="fc43c-139">This element can be used only in the application configuration file.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="fc43c-140">Beispiel</span><span class="sxs-lookup"><span data-stu-id="fc43c-140">Example</span></span>  
+ <span data-ttu-id="fc43c-141">Das folgende Beispiel zeigt, wie Sie mit der `<generatePublisherEvidence>` Element So deaktivieren Sie die Verleger-CAS-Richtlinie für eine Anwendung überprüfen.</span><span class="sxs-lookup"><span data-stu-id="fc43c-141">The following example shows how to use the `<generatePublisherEvidence>` element to disable checking for CAS publisher policy for an application.</span></span>  
   
 ```xml  
 <configuration>  
@@ -78,6 +78,7 @@ ms.locfileid: "55275846"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="42ebd-142">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="42ebd-142">See also</span></span>
-- [<span data-ttu-id="42ebd-143">Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="42ebd-143">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="42ebd-144">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="42ebd-144">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a><span data-ttu-id="fc43c-142">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fc43c-142">See also</span></span>
+
+- [<span data-ttu-id="fc43c-143">Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="fc43c-143">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="fc43c-144">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="fc43c-144">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

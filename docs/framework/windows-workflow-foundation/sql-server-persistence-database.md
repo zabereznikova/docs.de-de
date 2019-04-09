@@ -2,23 +2,24 @@
 title: SQL Server-Persistenzdatenbank
 ms.date: 03/30/2017
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
-ms.openlocfilehash: 76a659c933c641fecf2c5737f1994491f459e4ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f69a6b3a67407a2273e04ba3e652693a3a10f9a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171540"
 ---
-# <a name="sql-server-persistence-database"></a><span data-ttu-id="ac200-102">SQL Server-Persistenzdatenbank</span><span class="sxs-lookup"><span data-stu-id="ac200-102">SQL Server Persistence Database</span></span>
-<span data-ttu-id="ac200-103">Dieser Abschnitt enthält Details zu öffentlichen Datenbankansichten, die vom SQL-Workflowinstanzspeicher unterstützt werden, und zeigt, wie primitive Instanzdateneigenschaften deserialisiert und wie nicht persistente Instanzen abgefragt werden.</span><span class="sxs-lookup"><span data-stu-id="ac200-103">This section provides details about public database views supported by the SQL Workflow Instance Store and shows how to de-serialize primitive instance data properties and how to query for non-persisted instances.</span></span>  
+# <a name="sql-server-persistence-database"></a><span data-ttu-id="b521b-102">SQL Server-Persistenzdatenbank</span><span class="sxs-lookup"><span data-stu-id="b521b-102">SQL Server Persistence Database</span></span>
+<span data-ttu-id="b521b-103">Dieser Abschnitt enthält Details zu öffentlichen Datenbankansichten, die vom SQL-Workflowinstanzspeicher unterstützt werden, und zeigt, wie primitive Instanzdateneigenschaften deserialisiert und wie nicht persistente Instanzen abgefragt werden.</span><span class="sxs-lookup"><span data-stu-id="b521b-103">This section provides details about public database views supported by the SQL Workflow Instance Store and shows how to de-serialize primitive instance data properties and how to query for non-persisted instances.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ac200-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="ac200-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="b521b-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="b521b-104">In This Section</span></span>  
   
--   [<span data-ttu-id="ac200-105">Persistenzdatenbankschema</span><span class="sxs-lookup"><span data-stu-id="ac200-105">Persistence Database Schema</span></span>](persistence-database-schema.md)  
+-   [<span data-ttu-id="b521b-105">Persistenzdatenbankschema</span><span class="sxs-lookup"><span data-stu-id="b521b-105">Persistence Database Schema</span></span>](persistence-database-schema.md)  
   
--   [<span data-ttu-id="ac200-106">Vorgehensweise: Deserialisieren von Instanzdateneigenschaften</span><span class="sxs-lookup"><span data-stu-id="ac200-106">How to: Deserialize Instance Data Properties</span></span>](how-to-deserialize-instance-data-properties.md)  
+-   [<span data-ttu-id="b521b-106">Vorgehensweise: Deserialisieren von Instanzdateneigenschaften</span><span class="sxs-lookup"><span data-stu-id="b521b-106">How to: Deserialize Instance Data Properties</span></span>](how-to-deserialize-instance-data-properties.md)  
   
--   [<span data-ttu-id="ac200-107">Vorgehensweise: Abfragen von nicht persistenten Instanzen</span><span class="sxs-lookup"><span data-stu-id="ac200-107">How to: Query for Non-persisted Instances</span></span>](how-to-query-for-non-persisted-instances.md)  
+-   [<span data-ttu-id="b521b-107">Vorgehensweise: Abfragen von nicht persistenten Instanzen</span><span class="sxs-lookup"><span data-stu-id="b521b-107">How to: Query for Non-persisted Instances</span></span>](how-to-query-for-non-persisted-instances.md)  
   
-## <a name="see-also"></a><span data-ttu-id="ac200-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ac200-108">See also</span></span>
-- [<span data-ttu-id="ac200-109">AppFabric SQL Server-Persistenzdatenbank</span><span class="sxs-lookup"><span data-stu-id="ac200-109">App Fabric SQL Server Persistence Database</span></span>](https://go.microsoft.com/fwlink/?LinkID=201202&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="b521b-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b521b-108">See also</span></span>
+
+- [<span data-ttu-id="b521b-109">AppFabric SQL Server-Persistenzdatenbank</span><span class="sxs-lookup"><span data-stu-id="b521b-109">App Fabric SQL Server Persistence Database</span></span>](https://go.microsoft.com/fwlink/?LinkID=201202&clcid=0x409)
