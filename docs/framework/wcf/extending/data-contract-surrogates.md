@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: b9349291979e76650f07db5e433620554928eb4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 684ce075155d3da9bae3f7828e84d34399928875
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158625"
 ---
 # <a name="data-contract-surrogates"></a>Datenvertrag-Ersatzzeichen
 Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Datenvertragsmodell basiert. Diese Funktion wurde zur Verwendung für die Typanpassung und -ersetzung entwickelt, wenn Benutzer Änderungen daran vornehmen möchten, wie ein Typ serialisiert, deserialisiert oder in Metadaten projiziert wird. Einige Szenarien, in denen ein Ersatzzeichen verwendet werden kann, sind die fehlende Spezifizierung eines Datenvertrags für den Typ, die fehlende Markierung von Feldern und Eigenschaften mit dem <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut oder wenn Benutzer die dynamische Erstellung von Schemavarianten wünschen.  
@@ -120,7 +120,7 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Daten
   
  [!code-csharp[C_IDataContractSurrogate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#7)]  
   
- Während des Imports wird diese Methode für jeden generierten Typ aufgerufen. Ändern der angegebenen <xref:System.CodeDom.CodeTypeDeclaration> oder Ändern der <xref:System.CodeDom.CodeCompileUnit>. Dies schließt das Ändern von Namen, Membern, Attributen und vielen anderen Eigenschaften der `CodeTypeDeclaration` ein. Durch Verarbeiten der `CodeCompileUnit` ist es möglich, die Direktiven, die Namespaces, die referenzierten Assemblys und verschiedene andere Aspekte zu ändern.  
+ Während des Imports wird diese Methode für jeden generierten Typ aufgerufen. Ändern der angegebenen <xref:System.CodeDom.CodeTypeDeclaration> oder Ändern der <xref:System.CodeDom.CodeCompileUnit>. Dies schließt das Ändern von Namen, Membern, Attributen und vielen anderen Eigenschaften der `CodeTypeDeclaration` ein. Durch Verarbeiten der `CodeCompileUnit` ist es möglich, die Anweisungen, die Namespaces, die referenzierten Assemblys und verschiedene andere Aspekte zu ändern.  
   
  Der `CodeTypeDeclaration`-Parameter enthält die Code-DOM-Typdeklaration. Der `CodeCompileUnit`-Parameter ermöglicht die Änderung zum Verarbeiten des Codes.  Zurückgeben von `null`-Ergebnissen in der Typdeklaration, die verworfen wird. Umgekehrt werden beim Zurückgeben einer `CodeTypeDeclaration` die Änderungen beibehalten.  
   
@@ -183,7 +183,7 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Daten
   
 2.  Verwenden Sie die <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Funktion zur Überprüfung, ob ein <xref:System.Runtime.Serialization.XsdDataContractExporter> definiert wurde.  
   
-3.  Wenn <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> `false` zurückgibt, erstellen Sie ein neues <xref:System.Runtime.Serialization.XsdDataContractExporter> mit den generierten XML-Schemas aus dem <xref:System.ServiceModel.Description.WsdlExporter>, und fügen Sie diesen der Sammlung hinzu, die durch die <xref:System.ServiceModel.Description.MetadataExporter.State%2A>-Eigenschaft des <xref:System.ServiceModel.Description.WsdlExporter> zurückgegeben wird. Verwenden Sie andernfalls das Exportprogramm, das durch den `out`-Parameter der <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Methode zurückgegeben wird.  
+3.  Wenn <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>`false` zurückgibt, erstellen Sie ein neues <xref:System.Runtime.Serialization.XsdDataContractExporter> mit den generierten XML-Schemas aus dem <xref:System.ServiceModel.Description.WsdlExporter>, und fügen Sie diesen der Sammlung hinzu, die durch die <xref:System.ServiceModel.Description.MetadataExporter.State%2A>-Eigenschaft des <xref:System.ServiceModel.Description.WsdlExporter> zurückgegeben wird. Verwenden Sie andernfalls das Exportprogramm, das durch den `out`-Parameter der <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Methode zurückgegeben wird.  
   
 4.  Wenn für das <xref:System.Runtime.Serialization.XsdDataContractExporter> keine <xref:System.Runtime.Serialization.ExportOptions> definiert sind, dann legen Sie die <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A>-Eigenschaft auf eine neue Instanz der <xref:System.Runtime.Serialization.ExportOptions>-Klasse fest.  
   
@@ -192,6 +192,7 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Daten
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.IDataContractSurrogate>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>

@@ -1,13 +1,13 @@
 ---
-title: <message> Element <wsFederationHttpBinding>
+title: <message> von <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: d5e5ba1785dd5c6c3aaeccd5bdd7ac4443f85661
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 79739dd715d7982555e5577c921cb65156af5923
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223813"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<Message >-Element der \<WsFederationHttpBinding >
 Definiert die Einstellungen für die Sicherheit auf Nachrichtenebene für die [ \<WsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
@@ -128,6 +128,7 @@ Definiert die Einstellungen für die Sicherheit auf Nachrichtenebene für die [ 
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|Definiert die Sicherheitseinstellungen für eine Bindung.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>

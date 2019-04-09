@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: babd601bb29fc2aa9c906921082a18942f6649c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369707"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211037"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Vorgehensweise: Diagnose von Problemen mit Druckaufträgen
 Netzwerkadministratoren erhalten oft Beschwerden von Benutzern über Druckaufträge, die gar nicht oder nur langsam gedruckt werden. Den umfassenden Satz an Eigenschaften eines Druckauftrags verfügbar gemacht werden, der [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] von Microsoft .NET Framework ermöglichen eine schnelle remote-Diagnose von Druckaufträgen ausführen.  
@@ -82,10 +82,11 @@ Netzwerkadministratoren erhalten oft Beschwerden von Benutzern über Druckauftr�
  [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Printing.PrintJobStatus>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [&-Operator (C# Verweis)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [Operator & (C#-Referenz)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [Dokumente in WPF](documents-in-wpf.md)
 - [Übersicht über das Drucken](printing-overview.md)

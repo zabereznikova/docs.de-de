@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e4241f2057ce77713f91e969eda7765739613333
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6a65eae91bf3b44fc2b49588ead5ed178d7326f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732842"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180400"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport-Schnittstelle
 Stellt Methoden zum Importieren und Bearbeiten vorhandener Metadaten aus einer portablen ausführbaren Datei (PE-Datei) oder einer anderen Quelle wie einer Typbibliothek oder einer eigenständigen Laufzeit-Metadatenbinärdatei bereit  
@@ -62,7 +62,7 @@ Stellt Methoden zum Importieren und Bearbeiten vorhandener Metadaten aus einer p
 |[FindTypeRef-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findtyperef-method.md)|Ruft einen Zeiger auf das TypeRef-Metadatentoken ab, das auf den Typ im angegebenen Suchbereich mit dem angegebenen Namen verweist.|  
 |[GetClassLayout-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md)|Ruft Layoutinformationen für die Klasse ab, auf die vom angegebenen TypeDef-Token verwiesen wird.|  
 |[GetCustomAttributeByName-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getcustomattributebyname-method.md)|Ruft den Wert des benutzerdefinierten Attributs ab, wenn sein Name angegeben wurde.|  
-|[GetCustomAttributeProps-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getcustomattributeprops-method.md)|Ruft den Wert des benutzerdefinierten Attributs mit dem angegebenen Metadatentoken ab.|  
+|[GetCustomAttributeProps-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getcustomattributeprops-method.md)|Ruft den Wert des benutzerdefinierten Attributs ab, wenn sein Metadatentoken angegeben wurde.|  
 |[GetEventProps-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-geteventprops-method.md)|Ruft Metadateninformationen (z. B. den deklarierenden Typ, die Hinzufügungs- und Entfernungsmethoden für Delegaten und alle Kennzeichnungen und sonstigen zugeordneten Daten) für das Ereignis ab, das durch das angegebene Ereignistoken dargestellt wird.|  
 |[GetFieldMarshal-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getfieldmarshal-method.md)|Ruft einen Zeiger auf den systemeigenen, nicht verwalteten Typ des Felds ab, das durch das angegebene Field-Metadatentoken dargestellt wird.|  
 |[GetFieldProps-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getfieldprops-method.md)|Ruft Metadaten ab, die dem Feld zugeordnet sind, auf das durch das angegebene FieldDef-Token verwiesen wird.|  
@@ -74,7 +74,7 @@ Stellt Methoden zum Importieren und Bearbeiten vorhandener Metadaten aus einer p
 |[GetModuleFromScope-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getmodulefromscope-method.md)|Ruft einen Zeiger auf das Metadatentoken für das Modul ab, auf das im aktuellen Metadatenbereich verwiesen wird.|  
 |[GetModuleRefProps-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getmodulerefprops-method.md)|Ruft den Namen des Moduls ab, auf das vom angegebenen Metadatentoken verwiesen wird.|  
 |[GetNameFromToken-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getnamefromtoken-method.md)|Ruft den UTF-8-Namen des Objekts ab, auf das vom angegebenen Metadatentoken verwiesen wird.|  
-|[GetNativeCallConvFromSig-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getnativecallconvfromsig-method.md)|Ruft die native Aufrufkonvention für die Methode ab, die durch den angegebenen Signaturzeiger dargestellt wird.|  
+|[GetNativeCallConvFromSig-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getnativecallconvfromsig-method.md)|Ruft die systemeigene Aufrufkonvention für die Methode ab, die durch den angegebenen Signaturzeiger dargestellt wird.|  
 |[GetNestedClassProps-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getnestedclassprops-method.md)|Ruft das TypeDef-Token für den einschließenden übergeordneten Typ des angegebenen geschachtelten Typs ab.|  
 |[GetParamForMethodIndex-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getparamformethodindex-method.md)|Ruft einen Zeiger auf das Token ab, das den Parameter an der angegebenen Ordinalposition in der Sequenz der Methodenparameter für die Methode darstellt, die durch das angegebene MethodDef-Token dargestellt wird.|  
 |[GetParamProps-Methode](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getparamprops-method.md)|Ruft Metadatenwerte für den Parameter ab, auf den durch das angegebene ParamDef-Token verwiesen wird.|  
@@ -114,5 +114,6 @@ Stellt Methoden zum Importieren und Bearbeiten vorhandener Metadaten aus einer p
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Metadatenschnittstellen](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataImport2-Schnittstelle](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

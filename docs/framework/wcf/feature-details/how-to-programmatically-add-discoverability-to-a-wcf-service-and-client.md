@@ -1,15 +1,15 @@
 ---
-title: 'Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und Client'
+title: 'Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: a0240d09c07a23c2c578008885e5bca00169acdd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 821e45d41a1a91b6884a73abcbdf3ea04e938e25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643129"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224207"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und Client
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Vorgehensweise: Programmgesteuertes Hinzufügen der Ermittelbarkeit zu einem WCF-Dienst und -Client
 In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation (WCF)-Dienst erkennbar zu machen. Es basiert auf der [Selbsthosting](https://go.microsoft.com/fwlink/?LinkId=145523) Beispiel.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>So konfigurieren Sie das vorhandene Beispiel unter "Selbst gehostete Dienste" für die Suche  
@@ -58,7 +58,7 @@ In diesem Thema wird erläutert, wie Sie einen Windows Communication Foundation 
   
 1.  Fügen Sie der Projektmappe eine neue Konsolenanwendung mit dem Namen `DiscoveryClientApp` hinzu.  
   
-2.  Fügen Sie einen Verweis auf `System.ServiceModel.dll` und `System.ServiceModel.Discovery.dll` hinzu.  
+2.  Hinzufügen eines Verweises auf `System.ServiceModel.dll` und `System.ServiceModel.Discovery.dll`  
   
 3.  Kopieren Sie die Dateien "GeneratedClient.cs" und "App.config" aus dem vorhandenen Clientprojekt in das neue DiscoveryClientApp-Projekt. Dazu, mit der Maustaste der Dateien in die **Projektmappen-Explorer**Option **Kopie**, und wählen Sie dann die **DiscoveryClientApp** -Projekts mit der rechten Maustaste, und wählen Sie **Einfügen**.  
   
@@ -341,5 +341,6 @@ namespace DiscoveryClientApp
 ```  
 
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [Objektmodell der WCF-Suche](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

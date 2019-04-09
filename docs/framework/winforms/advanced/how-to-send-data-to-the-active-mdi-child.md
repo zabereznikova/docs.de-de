@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: a89956595ff98e8cda717c90a3f96c95abc8118a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0ffe87d55f7325f77bd33bdbf5d5fbab9f321f93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203326"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>Vorgehensweise: Senden von Daten an das aktive untergeordnete MDI-Element
 Häufig innerhalb des Kontexts [Multiple Document Interface (MDI) Applications](multiple-document-interface-mdi-applications.md), Senden von Daten an das aktive untergeordnete Fenster, z. B. wenn der Benutzer Daten aus der Zwischenablage in einer MDI-Anwendung eingefügt werden sollen.  
@@ -92,6 +92,7 @@ Häufig innerhalb des Kontexts [Multiple Document Interface (MDI) Applications](
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [MDI-Anwendungen (Multiple Document Interface)](multiple-document-interface-mdi-applications.md)
 - [Vorgehensweise: Erstellen von übergeordneten MDI-Formularen](how-to-create-mdi-parent-forms.md)
 - [Vorgehensweise: Erstellen von untergeordneten MDI-Formularen](how-to-create-mdi-child-forms.md)

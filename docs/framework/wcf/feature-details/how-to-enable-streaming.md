@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Aktivieren des Streamens'
+title: 'Vorgehensweise: Aktivieren des Streamingmodus'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: 2521b6ac237a76cac64cebca91bbaa792bba2c67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5bc4bce984c4159949f840f395005ec9fe746e85
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227313"
 ---
-# <a name="how-to-enable-streaming"></a>Vorgehensweise: Aktivieren des Streamens
+# <a name="how-to-enable-streaming"></a>Vorgehensweise: Aktivieren des Streamingmodus
 Windows Communication Foundation (WCF) kann Nachrichten, die mit der gepufferten oder der Streamingübertragung Übertragung senden. Im voreingestellten gepufferten Übertragungsmodus müssen Nachrichten vollständig übertragen worden sein, bevor sie vom Empfänger gelesen werden können. Im Streamingmodus kann der Empfänger mit der Verarbeitung der Nachricht beginnen, bevor diese vollständig übertragen wurde. Der Streamingmodus ist hilfreich, wenn die zu übergebenden Informationen sehr umfangreich sind und hintereinander verarbeitet werden können. Der Streamingmodus ist auch dann nützlich, wenn eine Nachricht zu groß ist, um als Ganzes gepuffert zu werden.  
   
  Um den Streamingmodus zu aktivieren, definieren Sie den `OperationContract` angemessen, und aktivieren Sie den Streamingmodus auf Transportebene.  
@@ -30,21 +30,21 @@ Windows Communication Foundation (WCF) kann Nachrichten, die mit der gepufferten
      [!code-csharp[c_HowTo_EnableStreaming#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#1)]
      [!code-vb[c_HowTo_EnableStreaming#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#1)]  
   
-     Der `GetStream`-Vorgang muss gepufferte Eingabedaten des Typs `string` erhalten, die dann gepuffert werden, und er gibt einen `Stream`-Wert zurück, der im Streamingmodus übertragen wird. Umgekehrt akzeptiert `UploadStream` einen (per Streaming übertragenen) `Stream` und gibt einen (gepufferten) `bool` zurück. `EchoStream` akzeptiert und gibt einen Wert des Typs `Stream` zurück und ist ein Beispiel für einen Vorgang, dessen Eingabe- und Ausgabenachrichten per Streaming übertragen werden. `GetReversedStream` akzeptiert keine Eingaben und gibt einen `Stream`-Wert (im Streamingmodus) zurück.  
+     Der `GetStream`-Vorgang muss gepufferte Eingabedaten des Typs `string` erhalten, die dann gepuffert werden, und er gibt einen `Stream`-Wert zurück, der im Streamingmodus übertragen wird. Umgekehrt akzeptiert `UploadStream` einen (per Streaming übertragenen) `Stream` und gibt einen (gepufferten) `bool` zurück. `EchoStream` annimmt und zurückgibt `Stream` und ist ein Beispiel für einen Vorgang, dessen Eingabe- und Ausgabenachrichten im Streamingmodus übermittelt. `GetReversedStream` akzeptiert keine Eingaben und gibt einen `Stream`-Wert (im Streamingmodus) zurück.  
   
 2.  Der Streamingmodus muss für die Bindung aktiviert werden. Sie legen eine `TransferMode`-Eigenschaft fest, für die die folgenden Werte zulässig sind:  
   
     1.  `Buffered`,  
   
-    2.  `Streamed`, womit ein Kommunikationsstream in beide Richtungen ermöglicht wird.  
+    2.  `Streamed`, wodurch kommunikationsstream in beide Richtungen.  
   
-    3.  `StreamedRequest`, womit der Streamingmodus lediglich für die Übertragung der Anforderung aktiviert wird.  
+    3.  `StreamedRequest`, wodurch die Anforderung nur streaming.  
   
-    4.  `StreamedResponse`, womit der Streamingmodus lediglich für die Übertragung der Antwort aktiviert wird.  
+    4.  `StreamedResponse`, womit die Antwort nur streaming.  
   
      Die `BasicHttpBinding`-Bindung macht die `TransferMode`-Eigenschaft für die Bindung verfügbar. Dies gilt ebenso für `NetTcpBinding` und `NetNamedPipeBinding`. Die `TransferMode`-Eigenschaft kann auch für das Transportbindungselement festgelegt und in einer benutzerdefinierten Bindung verwendet werden.  
   
-     In den folgenden Beispielen wird gezeigt, wie `TransferMode` im Code und durch Ändern der Konfigurationsdatei festgelegt wird. In beiden Beispielen wird zudem die `maxReceivedMessageSize`-Eigenschaft auf 64&#160;MB festgelegt und damit die maximal zulässige Größe für den Empfang von Nachrichten beschränkt. Die Standardeinstellung von `maxReceivedMessageSize` ist 64&#160;KB, was normalerweise zu niedrig für die Verwendung des Streamingmodus ist. Legen Sie diese Größeneinstellung, abhängig von der maximalen Größe der Nachrichten, die von der Anwendung empfangen werden sollen, auf einen geeigneten Wert fest. Beachten Sie außerdem, dass die `maxBufferSize`-Einstellung die maximale Puffergröße angibt, und legen Sie diese Eigenschaft auf einen angemessenen Wert fest.  
+     In den folgenden Beispielen wird gezeigt, wie `TransferMode` im Code und durch Ändern der Konfigurationsdatei festgelegt wird. In beiden Beispielen wird zudem die `maxReceivedMessageSize`-Eigenschaft auf 64&amp;#160;MB festgelegt und damit die maximal zulässige Größe für den Empfang von Nachrichten beschränkt. Die Standardeinstellung von `maxReceivedMessageSize` ist 64&amp;#160;KB, was normalerweise zu niedrig für die Verwendung des Streamingmodus ist. Legen Sie diese Größeneinstellung, abhängig von der maximalen Größe der Nachrichten, die von der Anwendung empfangen werden sollen, auf einen geeigneten Wert fest. Beachten Sie außerdem, dass die `maxBufferSize`-Einstellung die maximale Puffergröße angibt, und legen Sie diese Eigenschaft auf einen angemessenen Wert fest.  
   
     1.  Der folgende Ausschnitt aus der Konfiguration des Beispiel zeigt, wie die `TransferMode`-Eigenschaft für `basicHttpBinding` und eine benutzerdefinierte HTTP-Bindung auf den Streamingmodus festgelegt wird.  
   
@@ -69,11 +69,12 @@ Windows Communication Foundation (WCF) kann Nachrichten, die mit der gepufferten
   
 1.  Wenn jedes Element eines Datenstreams beim Senden oder Empfangen auf eine besondere Weise verarbeitet werden soll, müssen Sie eine benutzerdefinierte Streamklasse von der <xref:System.IO.Stream>-Klasse ableiten Der folgende Code enthält als Beispiel für einen benutzerdefinierten Stream die `GetReversedStream`-Methode und die `ReverseStream`-Klasse.  
   
-     `GetReversedStream` erstellt eine neue Instanz der `ReverseStream`-Klasse und gibt eine Instanz dieser Klasse zurück. Die tatsächliche Verarbeitung erfolgt, wenn das System Daten aus dem `ReverseStream`-Objekt liest. Die `ReverseStream.Read`-Methode liest eine Gruppe von Bytes aus der zugrunde liegenden Datei, invertiert die Reihenfolge der Bytes und gibt die invertierten Bytes zurück. Diese Methode invertiert nicht den gesamten Dateiinhalt, sondern jeweils nur eine Gruppe von Bytes. Dieses Beispiel zeigt, wie Daten im Streamingmodus verarbeitet werden, wenn Daten aus dem Stream gelesen oder in den Stream geschrieben werden.  
+     `GetReversedStream` Erstellt und gibt eine neue Instanz der `ReverseStream`. Die tatsächliche Verarbeitung erfolgt, wenn das System Daten aus dem `ReverseStream`-Objekt liest. Die `ReverseStream.Read`-Methode liest eine Gruppe von Bytes aus der zugrunde liegenden Datei, invertiert die Reihenfolge der Bytes und gibt die invertierten Bytes zurück. Diese Methode invertiert nicht den gesamten Dateiinhalt, sondern jeweils nur eine Gruppe von Bytes. Dieses Beispiel zeigt, wie Daten im Streamingmodus verarbeitet werden, wenn Daten aus dem Stream gelesen oder in den Stream geschrieben werden.  
   
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Umfangreiche Daten und Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
 - [Stream](../../../../docs/framework/wcf/samples/stream.md)

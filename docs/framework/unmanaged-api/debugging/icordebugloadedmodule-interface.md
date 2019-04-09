@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 34be6369-2e75-4a95-a538-3b29ac97cf6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8f3a881a1beceb7d4aa35e2bd9a5e9e5419a391
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e91dda9cbc5957768e98db2b2a9e1026d94c03e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654866"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200752"
 ---
 # <a name="icordebugloadedmodule-interface"></a>ICorDebugLoadedModule-Schnittstelle
 Stellt Informationen zu einem geladenen Modul bereit.  
@@ -38,5 +38,6 @@ Stellt Informationen zu einem geladenen Modul bereit.
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - size [WPF], DataGrid
 - automatically size DataGrid [WPF]
 ms.assetid: 96a0e47e-b010-4302-98ef-2daac446d8db
-ms.openlocfilehash: 38cd29720a885f10d093bdb4617c503c16402e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d100fb17b1ee3e652985a637d333d9f65e20d36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672187"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219199"
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>Größenänderungsoptionen im DataGrid-Steuerelement
 Verschiedene Optionen zur Verfügung, um zu steuern wie die <xref:System.Windows.Controls.DataGrid> wird die Größe. Die <xref:System.Windows.Controls.DataGrid>, und einzelne Zeilen und Spalten in der <xref:System.Windows.Controls.DataGrid>, auf die Größe automatisch an den jeweiligen Inhalt festgelegt werden kann, oder auf bestimmte Werte festgelegt werden kann. In der Standardeinstellung die <xref:System.Windows.Controls.DataGrid> vergrößert oder verkleinert werden, um die Größe seines Inhalts angepasst.  
@@ -56,7 +56,7 @@ Verschiedene Optionen zur Verfügung, um zu steuern wie die <xref:System.Windows
   
  Die folgende Tabelle zeigt die Beispielwerte durch die <xref:System.Windows.Controls.DataGridLengthUnitType> Struktur.  
   
-|name|Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |<xref:System.Windows.Controls.DataGridLengthUnitType.Auto>|Die Standardeinstellung automatische größenanpassung Modus Größen <xref:System.Windows.Controls.DataGrid> basierend auf den Inhalt von Zellen und Spaltenheader.|  
 |<xref:System.Windows.Controls.DataGridLengthUnitType.SizeToCells>|Die zellenbasierte automatische größenanpassung Modus Größen <xref:System.Windows.Controls.DataGrid> basierend auf den Inhalt der Zellen in der Spalte, die Spaltenheader nicht eingeschlossen.|  
@@ -86,6 +86,7 @@ Verschiedene Optionen zur Verfügung, um zu steuern wie die <xref:System.Windows
  Benutzer können die Größe <xref:System.Windows.Controls.DataGrid> Zeilen und Spalten durch Ziehen der Headerunterteiler Zeile oder Spalte. Die <xref:System.Windows.Controls.DataGrid> unterstützt auch das automatische Ändern der Größe von Zeilen und Spalten durch Doppelklicken auf die Zeile oder Spalte Headerunterteiler. Um zu verhindern, dass einen Benutzer bestimmte Spalten Größe, legen Sie die <xref:System.Windows.Controls.DataGridColumn.CanUserResize%2A?displayProperty=nameWithType> Eigenschaft `false` für einzelnen Spalten. Um zu verhindern, dass Benutzer die Größe aller Spalten ändern, legen Sie die <xref:System.Windows.Controls.DataGrid.CanUserResizeColumns%2A?displayProperty=nameWithType> Eigenschaft `false`. Um zu verhindern, dass Benutzer die Größe aller Zeilen ändern, legen Sie die <xref:System.Windows.Controls.DataGrid.CanUserResizeRows%2A?displayProperty=nameWithType> Eigenschaft `false`.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.DataGrid>
 - <xref:System.Windows.Controls.DataGridColumn>
 - <xref:System.Windows.Controls.DataGridLength>

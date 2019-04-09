@@ -8,15 +8,15 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 38e9553d77612635f0403a8dc34c368379116e8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b63c6d8f3a5a949299a925a321ca8f01c67b1d8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497117"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211971"
 ---
 # <a name="service-operations-wcf-data-services"></a>Dienstvorgänge (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht es Ihnen, Dienstvorgänge für einen Datendienst zu definieren, um Methoden auf dem Server verfügbar zu machen. Wie andere Datendienstressourcen werden Dienstvorgänge durch URIs adressiert. Dienstvorgänge ermöglichen es Ihnen, die Geschäftslogik in einem Datendienst verfügbar zu machen, z. B. um Validierungslogik zu implementieren, rollenbasierte Sicherheit anzuwenden oder spezielle Abfragefunktionen verfügbar zu machen. Dienstvorgänge sind der von <xref:System.Data.Services.DataService%601> abgeleiteten Datendienstklasse hinzugefügte Methoden. Wie allen anderen Datendienstressourcen können der Dienstvorgangsmethode Parameter übergeben werden. Z. B. die folgenden Dienstvorgang-URI (basierend auf der [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Datendiensts) übergibt den Wert `London` auf die `city` Parameter:  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht es Ihnen, Dienstvorgänge für einen Datendienst zum Verfügbarmachen von Methoden auf dem Server zu definieren. Wie andere Datendienstressourcen werden Dienstvorgänge durch URIs adressiert. Dienstvorgänge ermöglichen es Ihnen, die Geschäftslogik in einem Datendienst verfügbar zu machen, z. B. um Validierungslogik zu implementieren, rollenbasierte Sicherheit anzuwenden oder spezielle Abfragefunktionen verfügbar zu machen. Dienstvorgänge sind der von <xref:System.Data.Services.DataService%601> abgeleiteten Datendienstklasse hinzugefügte Methoden. Wie allen anderen Datendienstressourcen können der Dienstvorgangsmethode Parameter übergeben werden. Z. B. die folgenden Dienstvorgang-URI (basierend auf der [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) Datendiensts) übergibt den Wert `London` auf die `city` Parameter:  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
@@ -58,9 +58,9 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   Die Methode muss mit dem Attribut `[WebGet]` oder `[WebInvoke]` versehen sein.  
   
-    -   `[WebGet]` aktiviert die aufgerufene Methode mit einer GET-Anforderung.  
+    -   `[WebGet]` aktiviert die Methode mit einer GET-Anforderung aufgerufen werden.  
   
-    -   `[WebInvoke(Method = "POST")]` aktiviert die aufgerufene Methode mit einer POST-Anforderung. Andere <xref:System.ServiceModel.Web.WebInvokeAttribute>-Methoden werden nicht unterstützt.  
+    -   `[WebInvoke(Method = "POST")]` aktiviert die Methode mit einer POST-Anforderung aufgerufen werden. Andere <xref:System.ServiceModel.Web.WebInvokeAttribute>-Methoden werden nicht unterstützt.  
   
 -   Ein Dienstvorgang kann mit <xref:System.Data.Services.SingleResultAttribute> versehen sein, das festlegt, dass der Rückgabewert der Methode eine einzelne Entität und keine Auflistung von Entitäten ist. Dieser Unterschied schreibt die resultierende Serialisierung der Antwort und die Weise vor, in der zusätzliche Navigationseigenschaftendurchläufe im URI dargestellt werden. Wenn zum Beispiel die AtomPub-Serialisierung verwendet wird, ist ein einzelner Ressourcentyp als Eingangselement dargestellt, und eine Gruppe von Instanzen als Feed-Element.  
   
@@ -105,4 +105,5 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
  [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Interceptors](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)

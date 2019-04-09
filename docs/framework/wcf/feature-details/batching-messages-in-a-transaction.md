@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: a09cbbe8b77523184a3e75b8fd4301ca956d5cd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b0b189db8f51e0cccb6ee0516fc4cc53556ccf51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174121"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Batchverarbeitung von Nachrichten in einer Transaktion
 Anwendungen, die mit Warteschlangen arbeiten, verwenden Transaktionen, um eine richtige und zuverlässige Zustellung der Nachrichten zu gewährleisten. Transaktionen sind jedoch teuer und können den Nachrichtendurchsatz stark senken. Eine Möglichkeit, den Nachrichtendurchsatz zu verbessern, ist, dass mehrere Nachrichten in einer Transaktion von einer Anwendung gelesen und verarbeitet werden. Dabei muss zwischen Leistung und Wiederherstellungsaufwand abgewogen werden: Je mehr Nachrichten sich in einem Batch befinden, desto umfangreicher ist die Wiederherstellungsarbeit, die anfällt, falls Transaktionen zurückgesetzt werden. Beachten Sie dabei den Unterschied zwischen der Batchverarbeitung von Nachrichten in einer Transaktion und in Sitzungen. Ein *Sitzung* ist eine Gruppierung verwandter Nachrichten, die von einer einzigen Anwendung verarbeitet werden und ein Commit ausgeführt, als einzelne Einheit. Sitzungen werden in der Regel verwendet, wenn eine Gruppe verwandter Nachrichten gemeinsam verarbeitet werden muss. Ein Beispiel hierfür ist eine Website für Online-Shopping. *Batches* werden verwendet, um die Verarbeitung mehrerer, unzusammenhängender Nachrichten so, dass Nachrichtendurchsatz zu erhöhen. Weitere Informationen zu Sitzungen finden Sie unter [Gruppierung in der Warteschlange Nachrichten in einer Sitzung](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Nachrichten in einem Batch werden auch nur von einer Anwendung verarbeitet und als Einheit festgeschrieben (COMMIT), die Nachrichten im Batch stehen jedoch ggf. in keinem Zusammenhang zueinander. Die Batchverarbeitung von Nachrichten in einer Transaktion ist eine Optimierung, die sich nicht auf die Ausführung der Anwendung auswirkt.  
@@ -20,11 +20,11 @@ Anwendungen, die mit Warteschlangen arbeiten, verwenden Transaktionen, um eine r
 ## <a name="committing-a-transaction"></a>Durchführen eines Commits für eine Transaktion  
  Bei Batchtransaktionen werden Commits auf Grundlage der folgenden Punkte durchgeführt:  
   
--   `MaxBatchSize`. Eine Eigenschaft des <xref:System.ServiceModel.Description.TransactedBatchingBehavior>-Verhaltens. Durch diese Eigenschaft wird die maximale Anzahl von Nachrichten in einen Batch bestimmt. Sobald diese Anzahl erreicht ist, wird ein Commit für den Batch durchgeführt. Es handelt sich bei diesem Wert allerdings um einen flexiblen Grenzwert, das heißt, dass für einen Batch auch schon vor Erreichen dieser Anzahl von Nachrichten ein Commit durchgeführt werden kann.  
+-   `MaxBatchSize`sein. Eine Eigenschaft des <xref:System.ServiceModel.Description.TransactedBatchingBehavior>-Verhaltens. Durch diese Eigenschaft wird die maximale Anzahl von Nachrichten in einen Batch bestimmt. Sobald diese Anzahl erreicht ist, wird ein Commit für den Batch durchgeführt. Es handelt sich bei diesem Wert allerdings um einen flexiblen Grenzwert, das heißt, dass für einen Batch auch schon vor Erreichen dieser Anzahl von Nachrichten ein Commit durchgeführt werden kann.  
   
--   `Transaction Timeout`. Sobald 80 Prozent des Transaktionstimeouts verstrichen sind, wird ein Commit für den Batch durchgeführt und ein neuer Batch erstellt. Das heißt, dass der Commit für den Batch durchgeführt wird, sobald nur noch maximal 20 Prozent der für die Transaktion erlaubten Zeit übrig sind.  
+-   `Transaction Timeout`sein. Sobald 80 Prozent des Transaktionstimeouts verstrichen sind, wird ein Commit für den Batch durchgeführt und ein neuer Batch erstellt. Das heißt, dass der Commit für den Batch durchgeführt wird, sobald nur noch maximal 20 Prozent der für die Transaktion erlaubten Zeit übrig sind.  
   
--   `TransactionScopeRequired`. Bei der Verarbeitung von Batches von Nachrichten, wenn WCF eine gefunden, die `TransactionScopeRequired`  =  `false`, er führt einen Commit für Batch und erneut öffnet einen neuen Batch beim Empfang der ersten Nachricht mit `TransactionScopeRequired`  =  `true` und `TransactionAutoComplete`  = `true`.  
+-   `TransactionScopeRequired`sein. Bei der Verarbeitung von Batches von Nachrichten, wenn WCF eine gefunden, die `TransactionScopeRequired`  =  `false`, er führt einen Commit für Batch und erneut öffnet einen neuen Batch beim Empfang der ersten Nachricht mit `TransactionScopeRequired`  =  `true` und `TransactionAutoComplete`  = `true`.  
   
 -   Falls die Warteschlange keine weiteren Nachrichten mehr enthält, wird ein Commit für den aktuellen Batch durchgeführt, selbst wenn `MaxBatchSize` noch nicht erreicht wurde bzw. noch keine 80 Prozent des Transaktionstimeouts verstrichen sind.  
   
@@ -83,5 +83,6 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Warteschlangenübersicht](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

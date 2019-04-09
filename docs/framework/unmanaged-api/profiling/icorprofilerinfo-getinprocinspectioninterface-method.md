@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbb4aa43757df86037d9c883e76ee38cef5eeb86
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 456dd8aedf11b1b27ee4926988fc615ebb7a76d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494427"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209930"
 ---
 # <a name="icorprofilerinfogetinprocinspectioninterface-method"></a>ICorProfilerInfo::GetInprocInspectionInterface-Methode
 Ruft ein Objekt, das abgefragt werden kann, für eine "ICorDebugProcess"-Schnittstelle ab. Diese Methode ist in .NET Framework, Version 2.0, veraltet.  
@@ -51,4 +51,5 @@ HRESULT GetInprocInspectionInterface(
  **.NET Framework Version:** 1.0  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

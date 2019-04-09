@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-ms.openlocfilehash: 882b210a19f1ec5515bd7f37ccc55343f84767bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 52c448f21be056e6166334785943356039baf3ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175291"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Szenarien für das DataGridView-Steuerelement (Windows Forms)
 Mit der <xref:System.Windows.Forms.DataGridView> -Steuerelement, können Sie Tabellendaten aus einer Vielzahl von Datenquellen anzeigen. Sie können manuell auffüllen, für die einfache verwendet, eine <xref:System.Windows.Forms.DataGridView> und die Daten direkt über das Steuerelement bearbeiten. In der Regel jedoch werden Ihre Daten in einer externen Datenquelle zu speichern und Binden des Steuerelements mit einem <xref:System.Windows.Forms.BindingSource> Komponente.  
@@ -87,5 +87,6 @@ Mit der <xref:System.Windows.Forms.DataGridView> -Steuerelement, können Sie Tab
 -   Sie können Ihre eigenen Klassen Zellen- und Spaltentyps zum Hosten von Steuerelementen als den angebotenen, die von den integrierten Typen implementieren. Weitere Informationen finden Sie unter [Vorgehensweise: Hosten von Steuerelementen in Windows Forms DataGridView-Zellen](how-to-host-controls-in-windows-forms-datagridview-cells.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - [Übersicht über das DataGridView-Steuerelement](datagridview-control-overview-windows-forms.md)

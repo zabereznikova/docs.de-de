@@ -1,21 +1,21 @@
 ---
-title: F#-Programmierung Konventionen
-description: Erfahren Sie, allgemeine Richtlinien und Idiome, beim Schreiben von F#-Code.
+title: F#Codierungskonventionen
+description: Erfahren Sie, allgemeine Richtlinien und Idiome, beim Schreiben von F# Code.
 ms.date: 05/14/2018
-ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "49087387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186744"
 ---
-# <a name="f-coding-conventions"></a>F#-Programmierung Konventionen
+# <a name="f-coding-conventions"></a>F#Codierungskonventionen
 
-Die folgenden Konventionen aus Erfahrung, die Arbeit mit großen F# formuliert werden Codebasen. Die [fünf Prinzipien guten F#-Code](index.md#five-principles-of-good-f-code) bilden die Grundlage jeder Empfehlung. Sie beziehen sich auf die [Entwurfsrichtlinien für F#-Komponente](component-design-guidelines.md), jedoch gelten für alle F#-Code, nicht nur Komponenten wie Bibliotheken.
+Die folgenden Konventionen aus Erfahrung, die Arbeit mit großen F# formuliert werden Codebasen. Die [fünf Prinzipien guten F# Code](index.md#five-principles-of-good-f-code) bilden die Grundlage jeder Empfehlung. Sie beziehen sich auf die [ F# Richtlinien zum Entwerfen der Komponente](component-design-guidelines.md), jedoch gelten für alle F# code, nicht nur Komponenten wie Bibliotheken.
 
 ## <a name="organizing-code"></a>Organisieren von code
 
-F# bietet zwei bevorzugte Möglichkeiten, Code zu organisieren: Modulen und Namespaces. Diese sind ähnlich, aber Sie müssen die folgenden Unterschiede:
+F#bietet zwei bevorzugte Möglichkeiten, Code zu organisieren: Modulen und Namespaces. Diese sind ähnlich, aber Sie müssen die folgenden Unterschiede:
 
 * Namespaces werden als .NET Namespaces kompiliert. Module werden als statische Klassen kompiliert.
 * Namespaces sind immer oberste Ebene. Module können der obersten Ebene und in anderen Modulen geschachtelt sein.
@@ -36,7 +36,7 @@ type MyClass() =
     ...
 ```
 
-Mit einem Modul auf oberster Ebene möglicherweise nicht angezeigt, unterschiedliche, wenn Sie nur von F#-aufgerufen, aber für C#-Verbraucher Aufrufer Ergebnissen möglicherweise überrascht sein, dass Sie zu qualifizieren `MyClass` mit der `MyCode` Modul.
+Ein Modul auf oberster Ebene mit möglicherweise nicht angezeigt, beim Aufruf nur von anderen F#, aber für C# Consumer, Aufrufer möglicherweise überraschen, dass Sie zu qualifizieren `MyClass` mit der `MyCode` Modul.
 
 ```fsharp
 // Bad!
@@ -48,7 +48,7 @@ type MyClass() =
 
 ### <a name="carefully-apply-autoopen"></a>Sorgfältig anwenden. `[<AutoOpen>]`
 
-Die `[<AutoOpen>]` Konstrukt kann den Bereich der verfügbaren Aufrufern verunreinigen, und die Antwort auf einen Ursprung ist "magische". Dies ist in der Regel nicht gut. Eine Ausnahme von dieser Regel ist die F#-Kernbibliothek selbst (obwohl dies auch etwas umstrittenen ist).
+Die `[<AutoOpen>]` Konstrukt kann den Bereich der verfügbaren Aufrufern verunreinigen, und die Antwort auf einen Ursprung ist "magische". Dies ist in der Regel nicht gut. Eine Ausnahme von dieser Regel wird die F# -Kernbibliothek selbst (obwohl dies ist auch etwas umstrittenen Wert).
 
 Es ist jedoch aus Gründen der benutzerfreundlichkeit, wenn Sie über Hilfsfunktionen für eine öffentliche API verfügen, die Sie zum Organisieren von separat über der öffentliche API möchten.
 
@@ -58,7 +58,6 @@ module MyAPI =
     module private Helpers =
         let helper1 x y z =
             ...
-
 
     let myFunction1 x =
         let y = ...
@@ -96,7 +95,7 @@ In F# können Elemente in einem Bereich geöffnet Shadowing für andere bereits 
 
 Stattdessen empfehlen wir, dass Sie diese sortieren [topologisch](https://en.wikipedia.org/wiki/Topological_sorting); sortieren, also Ihr `open` Anweisungen in der Reihenfolge, in der _Ebenen_ des Systems definiert sind. Alphanumerische in Schichten topologische Sortierung durchführen kann ebenfalls berücksichtigt werden.
 
-Als Beispiel ist hier die topologische Sortierung für die F#-Compiler öffentliche API-Datei:
+Beispielsweise sieht die topologische Sortierung für die F# Compiler Dienst öffentliche API-Datei:
 
 ```fsharp
 namespace Microsoft.FSharp.Compiler.SourceCodeServices
@@ -240,7 +239,7 @@ Die `failwith` und `failwithf` Funktionen sollten im Allgemeinen vermieden werde
 
 ### <a name="using-exception-handling-syntax"></a>Mithilfe der Syntax der Behandlung von Ausnahmen
 
-F# unterstützt Muster für die Ausnahme über die `try...with` Syntax:
+F#unterstützt Muster für die Ausnahme über die `try...with` Syntax:
 
 ```fsharp
 try
@@ -321,11 +320,11 @@ Typen wie `Result<'Success, 'Error>` eignen sich für grundlegende Vorgänge, in
 
 ## <a name="partial-application-and-point-free-programming"></a>Teilweise Anwendung "und" Punkt-free-Programmierung
 
-F# unterstützt partielle Anwendung, und daher verschiedene Arten der Programmierung in einem Punkt-free-Stil. Dies kann für die Wiederverwendung von Code in einem Modul oder die Implementierung von etwas von Vorteil sein, aber es wird in der Regel nicht öffentlich verfügbar machen. Im Allgemeinen kann Point-free-Programmierung keine Tugend an und für sich selbst, und eine erhebliche Hürde für cognitive für Personen, die nicht in der Formatvorlage befinden werden.
+F#unterstützt teilweise Anwendung, und daher verschiedene Arten der Programmierung in einem Punkt-free-Stil an. Dies kann für die Wiederverwendung von Code in einem Modul oder die Implementierung von etwas von Vorteil sein, aber es wird in der Regel nicht öffentlich verfügbar machen. Im Allgemeinen kann Point-free-Programmierung keine Tugend an und für sich selbst, und eine erhebliche Hürde für cognitive für Personen, die nicht in der Formatvorlage befinden werden.
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>Verwenden Sie teilweise Anwendung und in öffentlichen APIs currying nicht
 
-Mit kleinen Ausnahme kann die Verwendung von teilweise Anwendung von öffentlichen APIs für Benutzer verwirrend sein. In der Regel `let`-gebundenen Werte in F#-Code sind **Werte**, nicht **Funktionswerte**. Miteinander kombinieren, Werte und Werte von Funktionen kann dazu führen, speichern eine kleine Anzahl von Codezeilen im Austausch gegen einiges an cognitive Mehraufwand, insbesondere dann, wenn Sie z. B. mit Operatoren kombiniert `>>` um Funktionen zu erstellen.
+Mit kleinen Ausnahme kann die Verwendung von teilweise Anwendung von öffentlichen APIs für Benutzer verwirrend sein. In der Regel `let`-Werte in gebunden F# Code **Werte**, nicht **Funktionswerte**. Miteinander kombinieren, Werte und Werte von Funktionen kann dazu führen, speichern eine kleine Anzahl von Codezeilen im Austausch gegen einiges an cognitive Mehraufwand, insbesondere dann, wenn Sie z. B. mit Operatoren kombiniert `>>` um Funktionen zu erstellen.
 
 ### <a name="consider-the-tooling-implications-for-point-free-programming"></a>Betrachten Sie die Auswirkungen auf die Tools für Punkt-free-Programmierung
 
@@ -418,7 +417,7 @@ Dieses Verfahren sollten nicht universell angewendet werden, Ihre gesamte Codeba
 
 ## <a name="access-control"></a>Zugriffssteuerung
 
-F# weist mehrere Optionen für [Zugriffssteuerung](../language-reference/access-control.md), geerbt vom, was in der .NET Runtime verfügbar ist. Diese sind nicht nur für Typen verwendet werden – Sie können sie für Funktionen zu.
+F#bietet mehrere Optionen zum [Zugriffssteuerung](../language-reference/access-control.md), geerbt vom, was in der .NET Runtime verfügbar ist. Diese sind nicht nur für Typen verwendet werden – Sie können sie für Funktionen zu.
 
 * Lieber nicht`public` Typen und Member, bis Sie sie öffentlich nutzbar sein benötigen. Dies minimiert ebenfalls, welche Consumer-Paar.
 * Sich bemühen, behalten Sie alle Hilfsfunktionen `private`.
@@ -444,13 +443,13 @@ Schließlich ist automatische Verallgemeinerung nicht immer ein Segen für Perso
 
 ## <a name="performance"></a>Leistung
 
-F#-Werte sind unveränderlich, standardmäßig die Ihnen ermöglicht, bestimmte Klassen von Fehlern (insbesondere die im Zusammenhang mit Parallelität und Konkurrenz) zu vermeiden. Allerdings kann in bestimmten Fällen um eine optimale (oder sogar sinnvoll) Effizienz Ausführungszeit oder speicherbelegungen, eine Spanne der Arbeit am besten implementiert werden mithilfe des direktes Veränderung des Zustands. Dies ist möglich, in einer Basis Opt-in mit F# mit der `mutable` Schlüsselwort.
+F#Werte sind unveränderlich, standardmäßig die Ihnen ermöglicht, bestimmte Klassen von Fehlern (insbesondere die im Zusammenhang mit Parallelität und Konkurrenz) zu vermeiden. Allerdings kann in bestimmten Fällen um eine optimale (oder sogar sinnvoll) Effizienz Ausführungszeit oder speicherbelegungen, eine Spanne der Arbeit am besten implementiert werden mithilfe des direktes Veränderung des Zustands. Dies ist möglich, in einer Basis Opt-in mit F# mit der `mutable` Schlüsselwort.
 
 Allerdings verwenden der `mutable` in F# echtzeiteinschränkungen funktionale Reinheit fühlen. Dies ist in Ordnung, wenn Sie anpassen, dass die Erwartungen Reinheit zu [referenzieller Transparenz](https://en.wikipedia.org/wiki/Referential_transparency). Referenzieller Transparenz - nicht Reinheit – ist das Ziel beim Schreiben von F#-Funktionen. Dadurch können Sie eine funktionsfähige-Schnittstelle über eine Mutation-basierte Implementierung für die Leistung kritischen Code zu schreiben.
 
 ### <a name="wrap-mutable-code-in-immutable-interfaces"></a>Umschließen Sie änderbare Code in der unveränderlichen Schnittstellen
 
-Mit referenzieller Transparenz als Ziel ist es wichtig, Code schreiben, der nicht die änderbare Tiefen des leistungskritischen Funktionen verfügbar macht. Das folgende Codebeispiel implementiert die `Array.contains` Funktion in der F#-Kernbibliothek:
+Mit referenzieller Transparenz als Ziel ist es wichtig, Code schreiben, der nicht die änderbare Tiefen des leistungskritischen Funktionen verfügbar macht. Das folgende Codebeispiel implementiert die `Array.contains` Funktion in der F# -Kernbibliothek:
 
 ```fsharp
 [<CompiledName("Contains")>]
@@ -546,7 +545,7 @@ Abgesehen von der einzige Punkt der Veränderung in der Mitte der Lambda-Ausdruc
 
 ## <a name="object-programming"></a>Objektprogrammierung
 
-F# bietet vollständige Unterstützung für Objekte und Konzepte für objektorientierte (OO). Obwohl viele OO-Konzepte leistungsfähig und nützlich sind, sind nicht alle von ihnen erzielen Sie, wenn verwenden. Die folgenden Listen bieten Anleitungen für die Kategorien von OO-Funktionen auf hoher Ebene.
+F#bietet vollständige Unterstützung für Objekte und Konzepte für das objektorientierte (OO). Obwohl viele OO-Konzepte leistungsfähig und nützlich sind, sind nicht alle von ihnen erzielen Sie, wenn verwenden. Die folgenden Listen bieten Anleitungen für die Kategorien von OO-Funktionen auf hoher Ebene.
 
 **Sollten Sie diese Funktionen in vielen Situationen verwenden:**
 
@@ -578,7 +577,7 @@ F# bietet vollständige Unterstützung für Objekte und Konzepte für objektorie
 
 ### <a name="prefer-composition-over-inheritance"></a>Vererbung Komposition vorziehen
 
-[Aufbau im Laufe der Vererbung](https://en.wikipedia.org/wiki/Composition_over_inheritance) ist eine langfristige Vorgehensweise, die guter F#-Code entsprechen kann. Das grundlegende Prinzip ist, dass Sie nicht verfügbar eine Basisklasse machen und Erzwingen von Aufrufern das erben von dieser Basisklasse um Funktionen zu erhalten.
+[Aufbau im Laufe der Vererbung](https://en.wikipedia.org/wiki/Composition_over_inheritance) ist eine langfristige Vorgehensweise gut F# Code entsprechen kann. Das grundlegende Prinzip ist, dass Sie nicht verfügbar eine Basisklasse machen und Erzwingen von Aufrufern das erben von dieser Basisklasse um Funktionen zu erhalten.
 
 ### <a name="use-object-expressions-to-implement-interfaces-if-you-dont-need-a-class"></a>Verwenden Sie Object-Ausdrücke, um Schnittstellen zu implementieren, wenn Sie eine Klasse nicht
 

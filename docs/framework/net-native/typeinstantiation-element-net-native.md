@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 928d3c528bef6d319f50464a0648e61de2603eb2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4244d47c099fe7a5b0093b94ef44b4354bae86f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256625"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173133"
 ---
 # <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation > (Element (.NET Native)
 Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Typ an.  
@@ -49,7 +49,7 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
 |`XmlSerializer`|Serialisierung|Optionales Attribut. Steuert die Richtlinie für die XML-Serialisierung, die die <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>-Klasse verwendet.|  
 |`MarshalObject`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Verweistypen zu Windows-Runtime und COM.|  
 |`MarshalDelegate`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Delegattypen als Funktionszeiger zu systemeigenem Code.|  
-|`MarshalStructure`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Strukturen zu systemeigenem Code.|  
+|`MarshalStructure`|Interop|Optionales Attribut. Steuert die Richtlinie für das Marshalling von Strukturen zu nativem Code.|  
   
 ## <a name="name-attribute"></a>Namensattribut  
   
@@ -73,12 +73,12 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Wendet die Reflektionsrichtlinie auf ein Ereignis dieses Typs an.|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Wendet die Reflektionsrichtlinie auf ein Feld dieses Typs an.|  
+|[\<Ereignis >](../../../docs/framework/net-native/event-element-net-native.md)|Wendet die Reflektionsrichtlinie auf ein Ereignis dieses Typs an.|  
+|[\<Feld >](../../../docs/framework/net-native/field-element-net-native.md)|Wendet die Reflektionsrichtlinie auf ein Feld dieses Typs an.|  
 |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie an den Typ angewendet wurde, der vom enthaltenden `<TypeInstantiation>`-Element dargestellt wird.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Methode dieses Typs an.|  
+|[\<Methode >](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Methode dieses Typs an.|  
 |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine konstruierte generische Methode dieses Typs an.|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Eigenschaft dieses Typs an.|  
+|[\<Eigenschaft >](../../../docs/framework/net-native/property-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Eigenschaft dieses Typs an.|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen geschachtelten Typ an.|  
 |`<TypeInstantiation>`|Wendet die Reflektionsrichtlinie auf einen geschachtelten konstruierten generischen Typ an.|  
   
@@ -117,6 +117,7 @@ Wendet eine Laufzeitreflektionsrichtlinie auf einen konstruierten generischen Ty
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

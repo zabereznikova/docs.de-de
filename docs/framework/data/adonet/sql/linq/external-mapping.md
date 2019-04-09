@@ -2,12 +2,12 @@
 title: Externe Zuordnung
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 5cc72c360a2dfbb7446a5157cde898be93d29171
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614613"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218679"
 ---
 # <a name="external-mapping"></a>Externe Zuordnung
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt *externe Zuordnung*, einen Prozess mit dem Sie eine separate XML-Datei verwenden, um die Zuordnung zwischen dem Datenmodell der Datenbank und dem Objektmodell an. Die Verwendung einer externen Zuordnungsdatei bietet u. a. folgende Vorteile:  
@@ -27,7 +27,7 @@ ms.locfileid: "54614613"
   
 -   Externe Zuordnungen überschreiben attributbasierte Zuordnungen. Dies bedeutet, dass alle für Klassen erstellten Zuordnungsattribute von <xref:System.Data.Linq.DataContext> ignoriert werden, wenn Sie <xref:System.Data.Linq.DataContext> unter Verwendung einer externen Zuordnungsquelle erstellen. Dieses Verhalten gilt unabhängig davon, ob die Klasse in der externen Zuordnungsdatei enthalten ist.  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet keine Unterstützung für die kombinierte Verwendung beider Zuordnungsarten (attributbasiert und extern).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] die kombinierte Verwendung beider Zuordnungsarten (attributbasiert und externen) unterstützt nicht.  
   
 ## <a name="xml-schema-definition-file"></a>XML-Schemadefinitionsdatei  
  Die externe Zuordnung in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] muss gegenüber der folgenden XML-Schemadefinition gültig sein.  
@@ -142,6 +142,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Codegenerierung in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
-- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Referenz](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [Vorgehensweise: Generieren des Objektmodells als externe Datei](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

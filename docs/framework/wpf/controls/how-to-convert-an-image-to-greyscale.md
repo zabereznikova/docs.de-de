@@ -9,12 +9,12 @@ helpviewer_keywords:
 - converting [WPF], images to grayscale
 - grayscale [WPF], converting images to
 ms.assetid: 77935ff0-4500-4307-9710-96999dcf579f
-ms.openlocfilehash: 3fcc758007bf0a7e3f6c9a3597d628fae506fda4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f3b7837c6c25db1aa3bdd11786df90660a75da87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200284"
 ---
 # <a name="how-to-convert-an-image-to-greyscale"></a>Vorgehensweise: Konvertieren eines Bilds in Graustufen
 Dieses Beispiel zeigt, wie Sie ein Bild in Graustufen mit konvertieren <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.  
@@ -26,6 +26,7 @@ Dieses Beispiel zeigt, wie Sie ein Bild in Graustufen mit konvertieren <xref:Sys
  [!code-vb[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/FormatConvertedBitmapExample.vb#formatconvertedbitmapcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Verwenden des Image-Elements](how-to-use-the-image-element.md)
+
+- [Verwenden des Bildelements](how-to-use-the-image-element.md)
 - [Zuschneiden eines Bilds](how-to-crop-an-image.md)
 - [Drehen eines Bilds](how-to-rotate-an-image.md)

@@ -2,12 +2,12 @@
 title: Wiederholungsangriffe
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
-ms.openlocfilehash: bceaa1bb723144ee4e3b534aa1537acdc7f65fc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712076"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186757"
 ---
 # <a name="replay-attacks"></a>Wiederholungsangriffe
 Ein *Wiederholungsangriff* tritt auf, wenn ein Angreifer einen Nachrichtenstream zwischen zwei Parteien kopiert und den Strom für eine oder mehrere Parteien wiedergibt. Wenn der Angriff nicht abgeschwächt wird, verarbeiten die angegriffenen Computer den Stream wie zulässige Nachrichten, was eine Reihe negativer Konsequenzen wie redundante Bestellungen eines Artikels zur Folge hat.  
@@ -30,16 +30,17 @@ Ein *Wiederholungsangriff* tritt auf, wenn ein Angreifer einen Nachrichtenstream
 ## <a name="web-farm-attacker-replays-request-to-multiple-nodes"></a>Webfarm: Angreifer Wiederholen von Anforderungen an mehreren Knoten  
  Ein Client verwendet einen Dienst, der in einer Webfarm implementiert ist. Ein Angreifer wiederholt eine Anforderung, die an einen Knoten in der Farm gesendet wurde, für einen anderen Knoten in der Farm. Zusätzlich wird beim Neustart eines Diensts der Wiederholungscache geleert, sodass der Angriff wiederholt werden kann. (Der Cache enthält die bereits verwendeten Signaturen von Nachrichten und verhindert so, dass diese mehrfach verwendet werden können. Wiederholungscaches werden nicht von mehreren Anwendungen in einer Webfarm verwendet.)  
   
- Mögliche Gegenmaßnahmen:  
+ Mögliche Entschärfungen:  
   
 -   Verwenden Sie die Nachrichtenmodussicherheit mit zustandsbehafteten Token für den Sicherheitskontext (mit oder ohne sichere Konversation). Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen Sie einen Sicherheitskontext für eine sichere Sitzung Token](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).  
   
 -   Konfigurieren Sie den Dienst für die Sicherheit auf Transportebene.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Veröffentlichung von Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Angriffe durch Rechteerweiterung](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Dienstverweigerung (Denial of Service)](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Verfälschungen](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

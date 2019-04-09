@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: 6ec61a295f50fa64c484902ed811a627a22ee1c7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 234b3059f9109c23b8ecae4da37e15f7f094fbd1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203235"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>Ausdrücke in LINQ to Entities-Abfragen
 Ein Ausdruck ist ein Codefragment, das als einzelner Wert, einzelnes Objekt, einzelne Methode oder einzelner Namespace ausgewertet werden kann. Ausdrücke können einen literalen Wert, einen Methodenaufruf, einen Operator und die entsprechenden Operanden oder einen einfachen Namen enthalten. Einfache Namen können der Name einer Variablen, eines Typmembers, eines Methodenparameters, eines Namespaces oder eines Typs sein. Ausdrücke können Operatoren verwenden, die wiederum andere Ausdrücke als Parameter oder Methodenaufrufe verwenden können, deren Parameter wiederum andere Methodenaufrufe darstellen. Die Bandbreite der möglichen Ausdrücke reicht daher von einfach bis sehr komplex.  
@@ -26,7 +26,7 @@ Ein Ausdruck ist ein Codefragment, das als einzelner Wert, einzelnes Objekt, ein
 >  Bestimmte Sprachkonstrukte, wie `unchecked` in C#, haben in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] keine Bedeutung.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Constant Expressions (Konstante Ausdrücke)](../../../../../../docs/framework/data/adonet/ef/language-reference/constant-expressions.md)  
+ [Konstante Ausdrücke](../../../../../../docs/framework/data/adonet/ef/language-reference/constant-expressions.md)  
   
  [Vergleichsausdrücke](../../../../../../docs/framework/data/adonet/ef/language-reference/comparison-expressions.md)  
   
@@ -37,4 +37,5 @@ Ein Ausdruck ist ein Codefragment, das als einzelner Wert, einzelnes Objekt, ein
  [Beziehungen, Navigationseigenschaften und Fremdschlüssel](/ef/ef6/fundamentals/relationships)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

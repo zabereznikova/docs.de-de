@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-ms.openlocfilehash: 9843d5231f6ed95290af6e6d2adaa384f8b47dd7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cefc97e571f315a6a644e0a058d4283168ecb9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509505"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199361"
 ---
 # <a name="adding-datarelations"></a>Hinzufügen von "DataRelations"
 In einem <xref:System.Data.DataSet> mit mehreren <xref:System.Data.DataTable>-Objekten können Sie mithilfe von <xref:System.Data.DataRelation>-Objekten eine Beziehung zwischen zwei Tabellen herstellen, um durch die Tabellen navigieren und untergeordnete oder übergeordnete Zeilen aus einer verknüpften Tabelle zurückgeben zu können.  
@@ -36,5 +36,6 @@ customerOrders.Relations.Add("CustOrders",
  Ein **DataRelation** verfügt auch über eine **geschachtelte** Eigenschaft, die bei Festlegung auf **"true"**, werden die Zeilen der untergeordneten Tabelle, in die entsprechenden Zeilen aus der übergeordneten Tabelle geschachtelt werden. Beim Schreiben als XML-Elemente mit <xref:System.Data.DataSet.WriteXml%2A> . Weitere Informationen finden Sie unter [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+
+- ["DataSets", "DataTables" und "DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

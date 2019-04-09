@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 125d2ab8-55a4-4e5f-af36-a7d401a37ab0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 39b7bcec1196a59c47717ec2b5622ca8e0d3cdfc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46e2e1c327a683782b68069ace2ad6c40bbc856e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225286"
 ---
 # <a name="security-and-remoting-considerations"></a>Überlegungen zu Sicherheit und Remoting
 Remoting ermöglicht Ihnen das Einrichten transparenter Aufrufe zwischen Anwendungsdomänen, Prozessen oder Computern. Der Sicherheitsstack für den Codezugriff kann jedoch Prozess- oder Computergrenzen nicht überschreiten (dies gilt zwischen Anwendungsdomänen des gleichen Prozesses).  
@@ -38,4 +38,5 @@ Remoting ermöglicht Ihnen das Einrichten transparenter Aufrufe zwischen Anwendu
  In der Regel erstellt die Standardanwendungsdomäne die untergeordneten Anwendungsdomänen mit jeweils einem Steuerelementobjekt. Das Steuerelementobjekt verwaltet die neue Anwendungsdomäne und nimmt gelegentlich Anweisungen von der Standardanwendungsdomäne entgegen, kann aber nicht direkt Kontakt mit der Domäne aufnehmen. Gelegentlich ruft die Standardanwendungsdomäne Ihren Proxy für das Steuerelementobjekt auf. Es können jedoch Fälle auftreten, in denen es erforderlich ist, dass das Steuerelementobjekt einen Rückruf an die Standardanwendungsdomäne ausgibt. In diesen Fällen übergibt die Standardanwendungsdomäne ein durch Verweis gemarshalltes Rückrufobjekt an den Konstruktor des Steuerelementobjekts. Es liegt in der Verantwortung des Steuerelementobjekts, diesen Proxy zu schützen. Würde das Steuerelementobjekt den Proxy in einem öffentlichen statischen Feld einer öffentlichen Klasse positionieren oder den Proxy auf andere Weise öffentlich bereitstellen, würde dies einen gefährlichen Mechanismus für anderen Code eröffnen, einen Rückruf in die Standardanwendungsdomäne auszugeben. Aus diesem Grund sind Steuerelementobjekte immer implizit vertrauenswürdig, damit der Proxy privat bleibt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Richtlinien für das Schreiben von sicherem Code](../../../docs/standard/security/secure-coding-guidelines.md)

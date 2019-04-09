@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drop-down lists [Windows Forms], ComboBox control
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
-ms.openlocfilehash: a4ce6b0ce2bbf37499bcbe917067ec2539044be8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713286"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227112"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox-Steuerelement (Windows Forms)
 Die Windows-Formulare `ComboBox` Steuerelement zur Anzeige von Daten in einem Dropdown-Kombinationsfeld verwendet wird. In der Standardeinstellung die `ComboBox` Steuerelement angezeigt wird, in zwei Teilen: der obere Bereich ist das Textfeld, das dem Benutzer ermöglicht, geben Sie ein Listenelement. Der zweite Teil ist ein Listenfeld, das eine Liste von Elementen anzeigt, in dem der Benutzer eine auswählen kann.  
@@ -28,12 +28,13 @@ Die Windows-Formulare `ComboBox` Steuerelement zur Anzeige von Daten in einem Dr
  Veranschaulicht das benutzerdefinierte Zeichnen von Text in einem `ComboBox` Steuerelement.  
   
 ## <a name="reference"></a>Referenz  
- <xref:System.Windows.Forms.ComboBox>-Klasse  
+ <xref:System.Windows.Forms.ComboBox> Klasse  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Windows Forms-Steuerelemente zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)  
+ [Steuerelemente in Windows Forms zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)  
  Enthält eine Liste der Dinge, die mit Listenfeldern, Kombinationsfeldern und aktivierten möglich.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+
+- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)

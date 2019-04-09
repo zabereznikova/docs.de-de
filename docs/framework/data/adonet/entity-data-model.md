@@ -2,12 +2,12 @@
 title: Entity Data Model
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
-ms.openlocfilehash: f6f3d02a27ce9df152753b7aeec9ceb251bca532
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904831"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197918"
 ---
 # <a name="entity-data-model"></a>Entity Data Model
 Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur unabhängig von der gespeicherten Form beschreiben. Das EDM ist aus dem 1976 von Peter Chen beschriebenen Entitätsbeziehungsmodell ausgeliehen, baut aber auch auf dem Entitätsbeziehungsmodell auf und erweitert seine herkömmliche Verwendung.  
@@ -23,7 +23,7 @@ Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur 
   
  [Entity Data Model: Namespaces](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [Entity Data Model: Primitive Datentypen](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [Entity Data Model: primitive Datentypen](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
  [Entity Data Model: Vererbung](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
@@ -33,7 +33,7 @@ Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur 
   
  [Zuordnungssatz](../../../../docs/framework/data/adonet/association-set.md)  
   
- [Ende des Zuordnungssatzes](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [Zuordnungssatzende](../../../../docs/framework/data/adonet/association-set-end.md)  
   
  [Zuordnungstyp](../../../../docs/framework/data/adonet/association-type.md)  
   
@@ -47,21 +47,22 @@ Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur 
   
  [Entitätstyp](../../../../docs/framework/data/adonet/entity-type.md)  
   
- [facet](../../../../docs/framework/data/adonet/facet.md)  
+ [Facet](../../../../docs/framework/data/adonet/facet.md)  
   
  [Fremdschlüsseleigenschaft](../../../../docs/framework/data/adonet/foreign-key-property.md)  
   
  [Im Modell deklarierte Funktion](../../../../docs/framework/data/adonet/model-declared-function.md)  
   
- [Im Modell definierte Funktion](../../../../docs/framework/data/adonet/model-defined-function.md)  
+ [Modelldefinierte Funktion](../../../../docs/framework/data/adonet/model-defined-function.md)  
   
  [Navigationseigenschaft](../../../../docs/framework/data/adonet/navigation-property.md)  
   
- [Eigenschaft](../../../../docs/framework/data/adonet/property.md)  
+ [property](../../../../docs/framework/data/adonet/property.md)  
   
  [Einschränkung der referenziellen Integrität](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ADO.NET Entity Data Model-Tools](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [Übersicht über die EDMX-Datei](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [CSDL-Spezifikation](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

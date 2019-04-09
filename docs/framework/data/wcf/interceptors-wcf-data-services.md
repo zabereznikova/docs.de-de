@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 14212c9993d936138df70160e4e49152cd5ff958
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 31308f8c2b031ec0efd77b41bc395d85e7e5307a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192856"
 ---
 # <a name="interceptors-wcf-data-services"></a>Interceptors (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ermöglicht einer Anwendung Abfangen von Anforderungsnachrichten, damit Sie einem Vorgang benutzerdefinierten Logik hinzufügen können. Sie können diese benutzerdefinierten Logik verwenden, um Daten in eingehenden Nachrichten zu überprüfen. Sie können damit außerdem den Bereich einer Abfrageanforderung weiter einschränken, z. B. um eine benutzerdefinierte Autorisierungsrichtlinie für jede Anforderung einzufügen.  
@@ -49,4 +49,5 @@ ms.locfileid: "54626757"
  Weitere Informationen finden Sie unter [Vorgehensweise: Abfangen von Datendienstnachrichten](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Dienstvorgänge](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)

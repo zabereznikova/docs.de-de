@@ -2,17 +2,17 @@
 title: Eigenschaften der Workflowausführung
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 96f5057986e256f485f60221d1c6ad3d2494be55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f87e58a034cbc11565fc74347e6b4362952093c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566723"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193901"
 ---
 # <a name="workflow-execution-properties"></a>Eigenschaften der Workflowausführung
 Durch TLS (Thread Local Storage, threadlokaler Speicher) behält die CLR einen Ausführungskontext für jeden Thread bei. Dieser Ausführungskontext bestimmt bekannte Threadeigenschaften wie die Threadidentität, die Ambient-Transaktion und den aktuellen Berechtigungssatz zusätzlich zu benutzerdefinierten Threadeigenschaften, z. B. benannte Slots.  
   
- Im Gegensatz zu Programmen, die direkt mit der CLR verwendet werden, sind Workflowprogramme hierarchisch bewertete Strukturen von Aktivitäten, die in einer threadagnostischen Umgebung ausgeführt werden. Dies bedeutet, dass mit den Standard-TLS-Mechanismen nicht direkt bestimmt werden kann, welcher Kontext im Bereich einer bestimmten Arbeitsaufgabe liegt. Zwei parallele Verzweigungen der Ausführung können z. B. unterschiedliche Transaktionen verwenden, der Planer kann sie jedoch zeitgleich für denselben CLR-Thread ausführen.  
+ Im Gegensatz zu Programmen, die direkt mit der CLR verwendet werden, sind Workflowprogramme hierarchisch bewertete Strukturen von Aktivitäten, die in einer threadagnostischen Umgebung ausgeführt werden. Dies bedeutet, dass mit den Standard-TLS-Mechanismen nicht direkt bestimmt werden kann, welcher Kontext im Bereich eines bestimmten Arbeitselements liegt. Zwei parallele Verzweigungen der Ausführung können z. B. unterschiedliche Transaktionen verwenden, der Planer kann sie jedoch zeitgleich für denselben CLR-Thread ausführen.  
   
  Die Eigenschaften der Workflowausführung stellen eine Möglichkeit bereit, der Umgebung einer Aktivität kontextspezifische Eigenschaften hinzuzufügen. Damit kann von einer Aktivität deklariert werden, welche Eigenschaften im Bereich ihrer Unterstruktur liegen, und es werden Hooks für das Einrichten und Beenden für den TLS bereitgestellt, damit eine ordnungsgemäße Zusammenarbeit mit CLR-Objekten ermöglicht werden kann.  
   
@@ -70,7 +70,7 @@ public sealed class ConsoleColorScope : NativeActivity
 }  
 ```  
   
- Wenn der Text der Aktivität einen Arbeitsschritt einleitet, wird die <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A>-Methode der Eigenschaft aufgerufen, und nach Abschluss des Schritts wird der <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A> aufgerufen. In diesem Beispiel wird ein Workflow erstellt, der eine <xref:System.Activities.Statements.Parallel>-Aktivität mit drei Verzweigungen verwendet. Die ersten zwei Verzweigungen verwenden die `ConsoleColorScope`-Aktivität, die dritte Verzweigung jedoch nicht. Alle drei Verzweigungen enthalten zwei <xref:System.Activities.Statements.WriteLine>-Aktivitäten und eine <xref:System.Activities.Statements.Delay>-Aktivität. Wenn die <xref:System.Activities.Statements.Parallel>-Aktivität ausgeführt wird, werden die in den Verzweigungen enthaltenen Aktivitäten parallel ausgeführt. Bei der Ausführung der einzelnen untergeordneten Aktivitäten wird jedoch die richtige Konsolenfarbe von der `ConsoleColorProperty` angewendet.  
+ Wenn der Text der Aktivität einen Arbeitsschritt einleitet, wird die <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A>-Methode der Eigenschaft aufgerufen, und nach Abschluss des Schritts wird der <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A> aufgerufen. In diesem Beispiel wird ein Workflow erstellt, der eine <xref:System.Activities.Statements.Parallel>-Aktivität mit drei Branches verwendet. Die ersten zwei Verzweigungen verwenden die `ConsoleColorScope`-Aktivität, die dritte Verzweigung jedoch nicht. Alle drei Branches enthalten zwei <xref:System.Activities.Statements.WriteLine>-Aktivitäten und eine <xref:System.Activities.Statements.Delay>-Aktivität. Wenn die <xref:System.Activities.Statements.Parallel>-Aktivität ausgeführt wird, werden die in den Verzweigungen enthaltenen Aktivitäten parallel ausgeführt. Bei der Ausführung der einzelnen untergeordneten Aktivitäten wird jedoch die richtige Konsolenfarbe von der `ConsoleColorProperty` angewendet.  
   
 ```csharp  
 Activity wf = new Parallel  
@@ -162,6 +162,7 @@ End default text.
  Die Eigenschaften der Workflowausführung können von benutzerdefinierten Aktivitätsautoren verwendet werden. Sie stellen außerdem einen Mechanismus zur Handleverwaltung für Aktivitäten bereit, z. B. für die <xref:System.ServiceModel.Activities.CorrelationScope>-Aktivität und <xref:System.Activities.Statements.TransactionScope>-Aktivität.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Activities.IExecutionProperty>
 - <xref:System.Activities.IPropertyRegistrationCallback>
 - <xref:System.Activities.RegistrationContext>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TrackBar control [Windows Forms], about TrackBar control
 - slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
-ms.openlocfilehash: 74a8feba14b7e2186fb64729cb915e53132805d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1606db73485944f3dfa8b9c084bffda817520c7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200635"
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>Übersicht über das TrackBar-Steuerelement (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.TrackBar> Control (manchmal auch als "ein"Slider"Steuerelement" bezeichnet) Dient zum Navigieren durch eine große Menge an Informationen oder für die visuelle Anpassung einer numerischen Einstellung. Die <xref:System.Windows.Forms.TrackBar> Steuerelement besteht aus zwei Teilen: dem Ziehpunkt, auch bekannt als einen Schieberegler, und die Teilstriche. Der Ziehpunkt ist der Teil, das angepasst werden kann. Entspricht die Position der <xref:System.Windows.Forms.TrackBar.Value%2A> Eigenschaft. Die Teilstriche sind visuelle Indikatoren, die in regelmäßigen Abständen angeordnet sind. Die Positionierungsleiste verschiebt, die Sie angeben und horizontal oder vertikal ausgerichtet werden können. Beispielsweise können Sie die Trackleiste verwenden, können Sie den Cursor Blink Rate oder der Maus Geschwindigkeit für ein System steuern.  
@@ -24,5 +24,6 @@ Die Windows-Formulare <xref:System.Windows.Forms.TrackBar> Control (manchmal auc
  Zwei wichtige Eigenschaften sind <xref:System.Windows.Forms.TrackBar.SmallChange%2A> und <xref:System.Windows.Forms.TrackBar.LargeChange%2A>. Der Wert des der <xref:System.Windows.Forms.TrackBar.SmallChange%2A> -Eigenschaft ist die Anzahl von Positionen, die das Thumb-Steuerelement bewegt wird, nachdem die links oder nach-rechts-Taste gedrückt. Der Wert des der <xref:System.Windows.Forms.TrackBar.LargeChange%2A> -Eigenschaft ist die Anzahl der Positionen, um das Thumb-Steuerelement bewegt wird, nachdem die Bild-auf oder Bild-ab-Taste gedrückt oder als Reaktion auf Maus klickt auf der Trackleiste auf beiden Seiten des Ziehpunkts.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.TrackBar>
 - [TrackBar-Steuerelement](trackbar-control-windows-forms.md)

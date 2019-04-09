@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54a1c8e06991729ea8556d82d31897c522f6d173
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548793"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188720"
 ---
 # <a name="creating-user-defined-bindings"></a>Erstellen benutzerdefinierter Bindungen
 Es gibt mehrere Möglichkeiten, Bindungen zu erstellen, die nicht vom System bereitgestellt werden:  
@@ -25,11 +25,11 @@ Es gibt mehrere Möglichkeiten, Bindungen zu erstellen, die nicht vom System ber
   
  Es gibt drei Haupttypen von Bindungselementen: Protokollbindung Elemente, Codierung Bindungselemente und Transportbindungselementen angeordnet.  
   
- Protokollbindungselemente &#8211; Diese Elemente stellen für Nachrichten ausgeführte Verarbeitungsschritte auf höherer Ebene dar. Die von diesen Bindungselementen erstellten Kanäle und Listener können den Nachrichteninhalt hinzufügen, entfernen oder ändern. Eine gegebene Bindung verfügt möglicherweise über eine beliebige Anzahl von Protokollbindungselementen, die alle von <xref:System.ServiceModel.Channels.BindingElement> erben. Windows Communication Foundation (WCF) bietet mehrere protokollbindungselemente, einschließlich der <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> und <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
+ Protokollbindungselemente &amp;#8211; Diese Elemente stellen für Nachrichten ausgeführte Verarbeitungsschritte auf höherer Ebene dar. Die von diesen Bindungselementen erstellten Kanäle und Listener können den Nachrichteninhalt hinzufügen, entfernen oder ändern. Eine gegebene Bindung verfügt möglicherweise über eine beliebige Anzahl von Protokollbindungselementen, die alle von <xref:System.ServiceModel.Channels.BindingElement> erben. Windows Communication Foundation (WCF) bietet mehrere protokollbindungselemente, einschließlich der <xref:System.ServiceModel.Channels.ReliableSessionBindingElement> und <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>.  
   
- Codierungsbindungselemente &#8211; Diese Elemente stellen eine Transformation zwischen einer Nachricht und einer Codierung dar, die für die Weiterleitung im Netz bereit ist. Typische WCF-Bindungen umfassen genau ein Codierungsbindungselement. Beispiele für Codierungsbindungselemente sind <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> und <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Wird für eine Bindung kein Codierungsbindungselement angegeben, wird eine Standardcodierung verwendet. Wenn als Transport HTTP verwendet wird, ist dieser Standard Text, andernfalls binär.  
+ Codierungsbindungselemente &amp;#8211; Diese Elemente stellen eine Transformation zwischen einer Nachricht und einer Codierung dar, die für die Weiterleitung im Netz bereit ist. Typische WCF-Bindungen umfassen genau ein Codierungsbindungselement. Beispiele für Codierungsbindungselemente sind <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>, <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> und <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>. Wird für eine Bindung kein Codierungsbindungselement angegeben, wird eine Standardcodierung verwendet. Wenn als Transport HTTP verwendet wird, ist dieser Standard Text, andernfalls binär.  
   
- Transportbindungselemente &#8211; Diese Elemente stellen die Übertragung einer codierten Nachricht über ein Transportprotokoll dar. Typische WCF-Bindungen sind genau ein Transportbindungselement, die von erbt <xref:System.ServiceModel.Channels.TransportBindingElement>. Beispiele für Transportbindungselemente sind <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> und <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
+ Transportbindungselemente &amp;#8211; Diese Elemente stellen die Übertragung einer codierten Nachricht über ein Transportprotokoll dar. Typische WCF-Bindungen sind genau ein Transportbindungselement, die von erbt <xref:System.ServiceModel.Channels.TransportBindingElement>. Beispiele für Transportbindungselemente sind <xref:System.ServiceModel.Channels.TcpTransportBindingElement>, <xref:System.ServiceModel.Channels.HttpTransportBindingElement> und <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>.  
   
  Bei der Erstellung neuer Bindungen ist die Reihenfolge der hinzugefügten Bindungselemente wichtig. Fügen Sie Bindungselemente immer in der folgenden Reihenfolge hinzu:  
   
@@ -61,7 +61,7 @@ Binding customBinding = new CustomBinding(
 ## <a name="creating-a-new-binding"></a>Erstellen einer neuen Bindung  
  Ein benutzerdefiniertes Bindungselement kann auf zwei Weisen verwendet werden. Im vorherigen Abschnitt wurde die erste beschrieben: durch eine benutzerdefinierte Bindung. Benutzerdefinierte Bindungen erlauben Benutzern, basierend auf einer beliebigen Gruppe von Bindungselementen einschließlich solcher, die von Benutzern erstellt wurden, eigene Bindungen zu definieren.  
   
- Wenn Sie die Bindung in mehr als einer Anwendung einsetzen, dann erstellen Sie die eigene Bindung und erweitern die <xref:System.ServiceModel.Channels.Binding>. Dadurch ist es nicht mehr notwendig, jedes Mal, wenn Sie sie verwenden möchten, manuell eine benutzerdefinierte Bindung zu erstellen. Eine benutzerdefinierte Bindung ermöglicht es Ihnen, das Verhalten der Bindung einschließlich benutzerdefinierter Bindungselemente zu definieren. Und es ist *installiert*: Sie müssen nicht die Bindung neu erstellen, jedes Mal, wenn Sie es verwenden.  
+ Wenn Sie die Bindung in mehr als einer Anwendung einsetzen, erstellen Sie die eigene Bindung und erweitern die <xref:System.ServiceModel.Channels.Binding>. Dadurch ist es nicht mehr notwendig, jedes Mal, wenn Sie sie verwenden möchten, manuell eine benutzerdefinierte Bindung zu erstellen. Eine benutzerdefinierte Bindung ermöglicht es Ihnen, das Verhalten der Bindung einschließlich benutzerdefinierter Bindungselemente zu definieren. Und es ist *installiert*: Sie müssen nicht die Bindung neu erstellen, jedes Mal, wenn Sie es verwenden.  
   
  Eine benutzerdefinierte Bindung muss zumindest die <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>-Methode und die <xref:System.ServiceModel.Channels.Binding.Scheme%2A>-Eigenschaft implementieren.  
   
@@ -99,7 +99,7 @@ public override BindingElementCollection CreateBindingElements()
   
  Bei Anforderung-Antwort-Verträgen funktioniert die "One-Shot"-Authentifizierung nur, wenn der Bindungsstapel unter dem Sicherheitsbindungselement die Erstellung von <xref:System.ServiceModel.Channels.IRequestChannel>- oder <xref:System.ServiceModel.Channels.IRequestSessionChannel>-Instanzen unterstützt.  
   
- Bei unidirektionalen Verträgen funktioniert die "One-Shot"-Authentifizierung, wenn der Bindungsstapel unter dem Sicherheitsbindungselement die Erstellung von <xref:System.ServiceModel.Channels.IRequestChannel>-, <xref:System.ServiceModel.Channels.IRequestSessionChannel>-, <xref:System.ServiceModel.Channels.IOutputChannel>- oder <xref:System.ServiceModel.Channels.IOutputSessionChannel>-Instanzen unterstützt.  
+ Bei unidirektionalen Verträgen funktioniert die „One-Shot“-Authentifizierung, wenn der Bindungsstapel unter dem Sicherheitsbindungselement die Erstellung von <xref:System.ServiceModel.Channels.IRequestChannel>-, <xref:System.ServiceModel.Channels.IRequestSessionChannel>-, <xref:System.ServiceModel.Channels.IOutputChannel>- oder <xref:System.ServiceModel.Channels.IOutputSessionChannel>-Instanzen unterstützt.  
   
 ### <a name="cookie-mode-security-context-tokens"></a>Cookie-Modus-Sicherheitskontexttoken  
  Cookie-Modus-Sicherheitskontexttoken können nicht mit Duplexverträgen verwendet werden.  
@@ -119,5 +119,6 @@ public override BindingElementCollection CreateBindingElements()
  Statt eine völlig neue Bindungsklasse zu erstellen, ist es möglich, eine vorhandene, vom System bereitgestellte Bindung zu erweitern. Ähnlich wie im vorangegangenen Fall müssen Sie die <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A>-Methode und die <xref:System.ServiceModel.Channels.Binding.Scheme%2A>-Eigenschaft überschreiben.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Channels.Binding>
 - [Benutzerdefinierte Bindungen](../../../../docs/framework/wcf/extending/custom-bindings.md)

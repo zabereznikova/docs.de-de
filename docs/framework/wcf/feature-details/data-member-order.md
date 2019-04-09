@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 93ec81d94d8133fc5a6d71d7f1b57b2e9a6aad21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c78cc682c0776bfb0ce09dec7ba1ff8cab504285
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659630"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198568"
 ---
 # <a name="data-member-order"></a>Datenmember-Reihenfolge
-Bei einigen Anwendungen ist es hilfreich, die Reihenfolge zu kennen, in der die Daten aus verschiedenen Datenmembern gesendet oder erwartet werden (wie z.&#160;B. die Reihenfolge, in der die Daten im serialisierten XML angezeigt werden). Manchmal kann es auch notwendig sein, diese Reihenfolge zu ändern. In diesem Thema werden die Sortierungsregeln beschrieben.  
+Bei einigen Anwendungen ist es hilfreich, die Reihenfolge zu kennen, in der die Daten aus verschiedenen Datenmembern gesendet oder erwartet werden (wie z.&amp;#160;B. die Reihenfolge, in der die Daten im serialisierten XML angezeigt werden). Manchmal kann es auch notwendig sein, diese Reihenfolge zu ändern. In diesem Thema werden die Sortierungsregeln beschrieben.  
   
 ## <a name="basic-rules"></a>Grundregeln  
- Zu den grundlegenden Regeln für die Sortierung von Daten gehören u.&#160;a.:  
+ Zu den grundlegenden Regeln für die Sortierung von Daten gehören u.&amp;#160;a.:  
   
 -   Wenn ein Datenvertragstyp Teil einer Vererbungshierarchie ist, stehen die Datenmember der Basistypen immer am Anfang der Reihenfolge.  
   
@@ -63,6 +63,7 @@ Bei einigen Anwendungen ist es hilfreich, die Reihenfolge zu kennen, in der die 
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

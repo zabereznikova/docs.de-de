@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Calendar [WPF], styles and templates
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
-ms.openlocfilehash: beba15f12b0ae2b819c641de9af8485767ad1a78
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 18bef548b11f1a680c1361027b86f6952bedaad0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373412"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227113"
 ---
 # <a name="calendar-styles-and-templates"></a>Calendar-Stile und -Vorlagen
 In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.Windows.Controls.Calendar> Steuerelement. Sie können den Standardwert ändern <xref:System.Windows.Controls.ControlTemplate> auf dem Steuerelement eine unverwechselbare Darstellung verleihen. Weitere Informationen finden Sie unter [Anpassen der Darstellung eines vorhandenen Steuerelements durch Erstellen einer ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
@@ -83,7 +83,7 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 |Focused|FocusStates|Die Schaltfläche mit der besitzt Fokus.|  
 |Ohne Fokus|FocusStates|Die Schaltfläche mit der keinen Fokus.|  
 |Aktiv|ActiveStates|Die Schaltfläche ist aktiviert.|  
-|inaktiv|ActiveStates|Die Schaltfläche ist inaktiv.|  
+|Inaktiv|ActiveStates|Die Schaltfläche ist inaktiv.|  
 |RegularDay|DayStates|Die Schaltfläche mit der stellt keinen dar <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |Heute|DayStates|Stellt die Schaltfläche mit der <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |NormalDay|BlackoutDayStates|Die Schaltfläche darstellt, einen Tag, der ausgewählt werden kann.|  
@@ -111,7 +111,7 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
 |Focused|FocusStates|Die Schaltfläche mit der besitzt Fokus.|  
 |Ohne Fokus|FocusStates|Die Schaltfläche mit der keinen Fokus.|  
 |Aktiv|ActiveStates|Die Schaltfläche ist aktiviert.|  
-|inaktiv|ActiveStates|Die Schaltfläche ist inaktiv.|  
+|Inaktiv|ActiveStates|Die Schaltfläche ist inaktiv.|  
 |Gültig|ValidationStates|Das Steuerelement verwendet die <xref:System.Windows.Controls.Validation> Klasse und die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `false`.|  
 |InvalidFocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement den Fokus besitzt.|  
 |InvalidUnfocused|ValidationStates|Die <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> angefügte Eigenschaft `true` hat das Steuerelement keinen Fokus besitzt.|  
@@ -128,6 +128,7 @@ In diesem Thema wird beschrieben, die Stile und Vorlagen für die <xref:System.W
  Das vollständige Beispiel finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Steuerelementformate und -vorlagen](control-styles-and-templates.md)

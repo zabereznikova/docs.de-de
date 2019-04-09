@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b8af1de3daf08a8389a5b0e6ebb278646345f9b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 14751b41809eeda5e6bd990fae368879d0f30492
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482612"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227833"
 ---
 # <a name="igchostgetstats-method"></a>IGCHost::GetStats-Methode
 Ruft die Statistiken für den aktuellen Zustand des Garbage Collection-Systems ab.  
@@ -52,4 +52,5 @@ HRESULT GetStats (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [IGCHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

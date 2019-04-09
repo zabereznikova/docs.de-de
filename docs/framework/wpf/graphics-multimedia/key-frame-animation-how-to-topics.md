@@ -7,12 +7,12 @@ helpviewer_keywords:
 - animation [WPF], key-frame
 - key frames [WPF], how-to topics
 ms.assetid: a5f9ab1a-d14c-4816-8540-3c5b8c8143d5
-ms.openlocfilehash: 5ee0f8a6cd40e6293062b62b8bc81bd4c54903c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6b4f5de92f19223a6692236fb3496a1dbbddef5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226429"
 ---
 # <a name="key-frame-animation-how-to-topics"></a>Gewusst-wie-Themen zur Keyframe-Animation
 Die Themen in diesem Abschnitt veranschaulichen das Keyframe-Animationen verwenden, um mehr als zwei Werte und Steuerung der Interpolation zu animieren.  
@@ -38,6 +38,7 @@ Die Themen in diesem Abschnitt veranschaulichen das Keyframe-Animationen verwend
  <xref:System.Windows.Media.Animation.KeyTime>  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Grafiken und Multimedia](index.md)
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)

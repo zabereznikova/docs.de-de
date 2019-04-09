@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: ebbc53f2962c99bc31f998f1afcb4316f3ea81f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c43935cd53d1b58ce695164e957b4b5376d52536
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674702"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209813"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Datenabruf und CUD-Operationen in n-schichtigen Anwendungen (LINQ to SQL)
 Wenn Sie Entitätsobjekte wie Customers oder Orders über ein Netzwerk an einen Client serialisieren, werden diese Entitäten von ihrem Datenkontext getrennt. Änderungen oder Verknüpfungen mit anderen Objekten werden vom Datenkontext nicht mehr verfolgt. Dies stellt kein Problem dar, solange die Clients die Daten nur lesen. Es ist außerdem relativ einfach, Clients zu ermöglichen, einer Datenbank neue Zeilen hinzuzufügen. Wenn Ihre Anwendung jedoch voraussetzt, dass Clients Daten aktualisieren oder löschen sollen, müssen Sie die Entitäten an einen neuen Datenkontext anfügen, bevor Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> aufrufen. Wenn Sie eine Überprüfung auf vollständige Parallelität mit ursprünglichen Werten verwenden, müssen Sie außerdem eine Möglichkeit schaffen, der Datenbank sowohl die ursprüngliche als auch die geänderte Entität bereitzustellen. Die `Attach`-Methoden werden bereitgestellt, um es Ihnen zu ermöglichen, Entitäten in einen neuen Datenkontext einzufügen, nachdem sie getrennt wurden.  
@@ -208,7 +208,7 @@ public void DeleteOrder(Order order)
 ```  
   
 ## <a name="updating-data"></a>Aktualisieren von Daten  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt Updates in folgenden Szenarien mit vollständiger Parallelität:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt Updates in diesen Szenarien mit vollständiger Parallelität:  
   
 -   Vollständige Parallelität auf der Grundlage von Timestamps oder RowVersion-Nummern  
   
@@ -407,5 +407,6 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
  Wenn Sie es mit einem `IEnumerable`-Satz von Objekten anfügen, wird eine <xref:System.Data.Linq.DuplicateKeyException> ausgelöst, wenn ein bereits vorhandener Schlüssel vorliegt. Verbleibende Objekte werden nicht angefügt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [N-schichtige Anwendungen und Remoteanwendungen mit LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
 - [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

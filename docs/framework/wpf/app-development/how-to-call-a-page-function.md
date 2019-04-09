@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Aufrufen von Seitenfunktionen'
+title: 'Vorgehensweise: Aufrufen einer Seitenfunktion'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - page functions [WPF], calling
 - functions [WPF], calling
 ms.assetid: a4808397-c6d5-406a-83e0-0091f0c15ae4
-ms.openlocfilehash: 288edec51a690be844aaa913c368496648a7811b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fb58d50a63cca41420aa102ca0c8b63f3b14c0d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375167"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219134"
 ---
-# <a name="how-to-call-a-page-function"></a>Vorgehensweise: Aufrufen von Seitenfunktionen
+# <a name="how-to-call-a-page-function"></a>Vorgehensweise: Aufrufen einer Seitenfunktion
 Dieses Beispiel zeigt, wie Sie eine Seitenfunktion auf Aufrufen einer [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seite.  
   
 ## <a name="example"></a>Beispiel  
@@ -33,4 +33,5 @@ Dieses Beispiel zeigt, wie Sie eine Seitenfunktion auf Aufrufen einer [!INCLUDE[
  [!code-vb[HOWTOPageFunctionSnippets#CallAPageFunctionCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#callapagefunctioncodebehind)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Navigation.PageFunction%601>

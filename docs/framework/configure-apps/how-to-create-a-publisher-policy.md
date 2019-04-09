@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: b98d3ef62fc9dda48920d32fed6f6acf797334d6
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: MT
+ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758988"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227391"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Vorgehensweise: Erstellen einer Herausgeberrichtlinie
 Anbieter von Assemblys können angeben, dass Anwendungen auf eine neuere Version einer Assembly verwenden sollen, dazu eine Herausgeberrichtlinien-Datei mit der aktualisierten Assembly ist. Die Herausgeberrichtliniendatei gibt Assemblyumleitungen und Code-Basis-Einstellungen, und verwendet das gleiche Format wie eine Anwendungskonfigurationsdatei. Die Herausgeberrichtliniendatei ist in eine Assembly kompiliert und im globalen Assemblycache platziert.  
@@ -101,6 +101,7 @@ Anbieter von Assemblys können angeben, dass Anwendungen auf eine neuere Version
     >  Die Herausgeberrichtlinienassembly kann nicht im globalen Assemblycache hinzugefügt werden, es sei denn, die ursprüngliche Herausgeberrichtlinien-Datei im gleichen Verzeichnis wie die Assembly befindet.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Programmieren mit Assemblys](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Konfigurieren von Apps mithilfe von Konfigurationsdateien](../../../docs/framework/configure-apps/index.md)

@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Geben Sie Anmeldeinformationen für Kanalsicherheit'
+title: 'Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.openlocfilehash: 761f461c1c0cb24901729a717a41bfb1b599112b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222600"
 ---
-# <a name="how-to-specify-channel-security-credentials"></a>Vorgehensweise: Geben Sie Anmeldeinformationen für Kanalsicherheit
+# <a name="how-to-specify-channel-security-credentials"></a>Vorgehensweise: Angeben von Anmeldeinformationen für Kanalsicherheit
 Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht COM-Anwendungen zum Aufrufen von WCF-Diensten. Die meisten WCF-Dienste erfordern den Client Anmeldeinformationen für Authentifizierung und Autorisierung angeben. Beim Aufrufen eines WCF-Diensts aus einem WCF-Client können Sie diese Anmeldeinformationen in verwaltetem Code oder in einer Anwendungskonfigurationsdatei angeben. Beim Aufrufen eines WCF-Diensts aus einer COM-Anwendung können Sie die <xref:System.ServiceModel.ComIntegration.IChannelCredentials> Schnittstelle, um die Anmeldeinformationen angeben. In diesem Thema werden verschiedene Möglichkeiten zur Angabe von Anmeldeinformationen mithilfe der <xref:System.ServiceModel.ComIntegration.IChannelCredentials>-Schnittstelle erläutert.  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> ist eine IDispatch-basierte Schnittstelle, und Sie erhalten keine IntelliSense-Funktionen in der Visual Studio-Umgebung.  
+>  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> ist eine IDispatch-basierte Schnittstelle, und Sie erhalten keine IntelliSense-Funktionalität in Visual Studio-Umgebung.  
   
  In diesem Artikel verwendet den WCF-Dienst, der definiert, der [Nachrichtensicherheitsbeispiel](../../../../docs/framework/wcf/samples/message-security-sample.md).  
   
@@ -50,7 +50,7 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht COM-Anwendu
   
 7.  Führen Sie die Visual Basic-Anwendung aus, und überprüfen Sie die Ergebnisse.  
   
-     Die Visual Basic-Anwendung zeigt ein Meldungsfeld mit dem Ergebnis des Aufrufs von Add(3, 4) an. <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> oder <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> können anstelle von <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> verwendet werden, um das Clientzertifikat festzulegen:  
+     Die Visual Basic-Anwendung zeigt ein Meldungsfeld mit dem Ergebnis des Aufrufs von Add(3, 4) an. <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> oder <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> kann auch verwendet werden, anstelle von <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> um das Clientzertifikat festzulegen:  
   
     ```  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
@@ -65,13 +65,9 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht COM-Anwendu
 ### <a name="to-specify-user-name-and-password"></a>So geben Sie einen Benutzernamen und ein Kennwort an:  
   
 1.  Ändern Sie die Datei Service App.config, um `wsHttpBinding` zu verwenden. Dies ist für die Validierung von Benutzername und Kennwort erforderlich:  
-  
-  
-  
+
 2.  Legen Sie `clientCredentialType` auf UserName fest:  
-  
-  
-  
+
 3.  Öffnen Sie Visual Basic 6.0, und erstellen Sie eine neue Standard-EXE-Datei. Fügen Sie dem Formular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um dem Click-Handler den folgenden Code hinzuzufügen.  
   
     ```  
@@ -96,9 +92,7 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht COM-Anwendu
 ### <a name="to-specify-windows-credentials"></a>So geben Sie Windows-Anmeldeinformationen an:  
   
 1.  Legen Sie `clientCredentialType` in der Datei Service App.config auf Windows fest:  
-  
-  
-  
+
 2.  Öffnen Sie Visual Basic 6.0, und erstellen Sie eine neue Standard-EXE-Datei. Fügen Sie dem Formular eine Schaltfläche hinzu, und doppelklicken Sie darauf, um dem Click-Handler den folgenden Code hinzuzufügen.  
   
     ```  
@@ -138,8 +132,9 @@ Der Windows Communication Foundation (WCF)-Dienstmoniker ermöglicht COM-Anwendu
      Weiter Informationen zu den Parametern für diese Methode finden Sie unter <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verbund](../../../../docs/framework/wcf/feature-details/federation.md)
-- [Vorgehensweise: Konfigurieren von Anmeldeinformationen für einen Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Vorgehensweise: Erstellen eines Verbundclients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [Nachrichtensicherheit](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [Bindungen und Sicherheit](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

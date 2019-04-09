@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4a062e060e7b367f0d56b3633238de74ae8ed88
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c58be27334bcb862367464475a4eade5e01bdbb2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221612"
 ---
 # <a name="field-element-net-native"></a>\<Feld > (Element (.NET Native)
 Wendet eine Laufzeitreflektionrichtlinie auf ein Feld an.  
@@ -61,6 +61,7 @@ Wendet eine Laufzeitreflektionrichtlinie auf ein Feld an.
  Wenn die Richtlinie eines Felds nicht explizit definiert ist, erbt es die Laufzeitrichtlinie des übergeordneten Elements.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
-- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

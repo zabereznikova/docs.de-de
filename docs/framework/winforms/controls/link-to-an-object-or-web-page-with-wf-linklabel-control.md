@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Link zu einem Objekt oder Webseite mit dem LinkLabel-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Verknüpfen eines Objekts oder einer Webseite mit dem LinkLabel-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: 34d6807b874596bd46f11ff90052ab85cc93b5d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 49d53e068ea35b663affac79f689a8688763fac2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705186"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222730"
 ---
-# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Vorgehensweise: Link zu einem Objekt oder Webseite mit dem LinkLabel-Steuerelement in Windows Forms
+# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>Vorgehensweise: Verknüpfen eines Objekts oder einer Webseite mit dem LinkLabel-Steuerelement in Windows Forms
 Die Windows-Formulare <xref:System.Windows.Forms.LinkLabel> Steuerelement ermöglicht es Ihnen die Erstellung von Weblinks in Ihrem Formular. Wenn auf der Link geklickt wird, können Sie ändern die Farbe, um anzugeben, dass der Link bereits besucht wurde. Weitere Informationen zum Ändern der Farbe finden Sie unter [Vorgehensweise: Ändern der Darstellung des LinkLabel-Steuerelement von Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md).  
   
 ## <a name="linking-to-another-form"></a>Verknüpfen mit einer anderen Form  
@@ -179,7 +179,8 @@ Die Windows-Formulare <xref:System.Windows.Forms.LinkLabel> Steuerelement ermög
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
 - [Übersicht über das LinkLabel-Steuerelement](linklabel-control-overview-windows-forms.md)
-- [Vorgehensweise: Ändern der Darstellung des LinkLabel-Steuerelement von Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [Vorgehensweise: Ändern der Darstellung des LinkLabel-Steuerelements in Windows Forms](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
 - [LinkLabel-Steuerelement](linklabel-control-windows-forms.md)

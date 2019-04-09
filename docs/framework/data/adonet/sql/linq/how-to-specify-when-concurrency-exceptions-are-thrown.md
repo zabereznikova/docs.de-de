@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Geben Sie bei der Parallelitätsausnahmen ausgelöst werden'
+title: 'Vorgehensweise: Angeben, wann Parallelitätsausnahmen ausgelöst werden'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 344ae068-ff63-4a2e-8b00-af22e143675f
-ms.openlocfilehash: a6a9fa61685caffb7b2b5d1baf9640cb5ccfa31b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30dd83c68472ecd3244cfc87b6df97b948b9a84f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587163"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182987"
 ---
-# <a name="how-to-specify-when-concurrency-exceptions-are-thrown"></a>Vorgehensweise: Geben Sie bei der Parallelitätsausnahmen ausgelöst werden
+# <a name="how-to-specify-when-concurrency-exceptions-are-thrown"></a>Vorgehensweise: Angeben, wann Parallelitätsausnahmen ausgelöst werden
 In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wird eine <xref:System.Data.Linq.ChangeConflictException>-Ausnahme ausgelöst, wenn Objekte aufgrund von Konflikten bei der vollständigen Parallelität nicht aktualisiert werden. Weitere Informationen finden Sie unter [optimistische Parallelität: Übersicht über die](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md).  
   
  Bevor Sie die Änderungen an die Datenbank übergeben, können Sie angeben, wann Parallelitätsausnahmen ausgelöst werden sollen:  
@@ -30,5 +30,6 @@ In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wird eine
  [!code-vb[System.Data.Linq.ConflictModeEnumeration#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.conflictmodeenumeration/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Verwalten von Änderungskonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
 - [Vornehmen und Übergeben von Datenänderungen](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

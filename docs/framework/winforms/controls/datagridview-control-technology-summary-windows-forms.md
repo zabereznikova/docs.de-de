@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: 9a1738e8be0471e24744a440fee10e5b1152ab10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717634"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217418"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Zusammenfassung der DataGridView-Steuerelementtechnologie (Windows Forms)
 In diesem Thema sind Informationen zum `DataGridView`-Steuerelement und den Klassen zusammengefasst, die seine Verwendung unterstützen.  
@@ -53,7 +53,7 @@ In diesem Thema sind Informationen zum `DataGridView`-Steuerelement und den Klas
 |---------------------|-------------------------------------------------|  
 |Datenbindung|<xref:System.Windows.Forms.BindingSource>|  
 |Darstellung von Daten|<xref:System.Windows.Forms.DataGridView><br /><br /> <xref:System.Windows.Forms.DataGridViewCell> und die abgeleiteten Klassen<br /><br /> <xref:System.Windows.Forms.DataGridViewRow> und die abgeleiteten Klassen<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> und die abgeleiteten Klassen<br /><br /> <xref:System.Windows.Forms.DataGridViewCellStyle>|  
-|<xref:System.Windows.Forms.DataGridView> Erweiterbarkeit|<xref:System.Windows.Forms.DataGridViewCell> und die abgeleiteten Klassen<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> und die abgeleiteten Klassen<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
+|<xref:System.Windows.Forms.DataGridView> Erweiterungen|<xref:System.Windows.Forms.DataGridViewCell> und die abgeleiteten Klassen<br /><br /> <xref:System.Windows.Forms.DataGridViewColumn> und die abgeleiteten Klassen<br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingCell><br /><br /> <xref:System.Windows.Forms.IDataGridViewEditingControl>|  
   
 ## <a name="whats-new"></a>Neues  
  Die <xref:System.Windows.Forms.DataGridView> Steuerelement fungiert als eine vollständige Lösung für die Anzeige von Tabellendaten mit Windows Forms. Erwägen Sie die <xref:System.Windows.Forms.DataGridView> steuern, bevor Sie andere Lösungen, wie z. B. <xref:System.Windows.Forms.DataGrid>, wenn Sie eine neue Anwendung erstellen. Weitere Informationen finden Sie unter [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
@@ -61,6 +61,7 @@ In diesem Thema sind Informationen zum `DataGridView`-Steuerelement und den Klas
  Die <xref:System.Windows.Forms.DataGridView> Steuerelement arbeiten kann schließen zusammen mit den <xref:System.Windows.Forms.BindingSource> Komponente. Diese Komponente fungiert als primäre Datenquelle eines Formulars. Sie können die Interaktion zwischen verwalten eine <xref:System.Windows.Forms.DataGridView> Steuerelement und seine Datenquelle unabhängig von den Daten-Quelltyp.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über das DataGridView-Steuerelement](datagridview-control-overview-windows-forms.md)
 - [Architektur des DataGridView-Steuerelements](datagridview-control-architecture-windows-forms.md)
-- [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../data/adonet/protecting-connection-information.md)
+- [Schützen von Verbindungsinformationen](../../data/adonet/protecting-connection-information.md)

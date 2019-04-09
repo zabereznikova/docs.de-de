@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Hosten eines Workflowdiensts mit Windows Server AppFabric'
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: 96842f103618b9c83f74c8ad0b758f7a425d8939
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: d762863b70191662f4eb145388a48484c944e1e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202260"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Vorgehensweise: Hosten eines Workflowdiensts mit Windows Server AppFabric
 Das Hosten von Workflowdiensten in AppFabric ähnelt dem Hosten unter IIS/WAS. Der einzige Unterschied besteht in den Tools von AppFabric zum Bereitstellen, Überwachen und Verwalten von Workflowdiensten. In diesem Thema wird den Workflowdienst der [zum Erstellen eines Workflowdiensts langer](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Sie werden Schritt für Schritt durch das Erstellen eines Workflowdiensts geführt. In diesem Thema wird erläutert, wie der Workflowdienst mit AppFabric gehostet wird. Weitere Informationen zu Windows Server AppFabric, finden Sie unter [Dokumentation zu Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Vergewissern Sie sich, dass Windows Server AppFabric installiert ist, bevor Sie die nachfolgenden Schritte ausführen.  Dazu öffnen Sie Internet Information Services (inetmgr.exe) dazu klicken Sie auf den Servernamen in der **Verbindungen** anzuzeigen, klicken Sie auf Standorte, und klicken Sie auf **Default Web Site**. Auf der rechten Seite des Bildschirms sehen Sie sich der Unterabschnitt **AppFabric**. Wenn dieser Bereich nicht (oben rechts) angezeigt wird, ist AppFabric nicht installiert. Weitere Informationen zum Installieren von Windows Server AppFabric finden Sie unter [Installieren von Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193136).  
@@ -91,6 +91,7 @@ Das Hosten von Workflowdiensten in AppFabric ähnelt dem Hosten unter IIS/WAS. D
      Weitere Informationen zu Windows Server AppFabric-Funktionen und deren Verwendung finden Sie unter [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen eines Workflowdiensts mit langer Ausführungszeit](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)
 - [Windows Server AppFabric-Hostingfunktionen](https://go.microsoft.com/fwlink/?LinkId=193143)
 - [Installieren von Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=193136)

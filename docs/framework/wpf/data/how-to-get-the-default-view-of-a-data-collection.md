@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Abrufen der Standardansicht einer Datenauflistung'
+title: 'Vorgehensweise: Abrufen der Standardansicht einer Datensammlung'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data collections [WPF], creating views of
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
-ms.openlocfilehash: 28a21aae7f8a08efebfd16bacd2a2d82b04de0c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222106"
 ---
-# <a name="how-to-get-the-default-view-of-a-data-collection"></a>Vorgehensweise: Abrufen der Standardansicht einer Datenauflistung
+# <a name="how-to-get-the-default-view-of-a-data-collection"></a>Vorgehensweise: Abrufen der Standardansicht einer Datensammlung
 Sichten können die Datenerfassung auf unterschiedliche Weise je nach sortieren, filtern oder gruppieren die Kriterien angezeigt werden. Jede Sammlung verfügt über eine gemeinsame Standardansicht, die als die tatsächliche Bindung-Quelle verwendet wird, wenn eine Bindung eine Sammlung als Quelle angegeben. In diesem Beispiel veranschaulicht das Abrufen der Standardansicht einer Auflistung.  
   
 ## <a name="example"></a>Beispiel  
@@ -33,5 +33,6 @@ Sichten können die Datenerfassung auf unterschiedliche Weise je nach sortieren,
  Beispiele für die Funktionalität einer Auflistungsansicht, finden Sie unter [Sortieren von Daten in einer Ansicht](how-to-sort-data-in-a-view.md), [Filtern von Daten in einer Ansicht](how-to-filter-data-in-a-view.md), und [Navigieren durch die Objekte in einer Datenauflistungsansicht](how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sortieren und Gruppieren von Daten mit einer Ansicht in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)

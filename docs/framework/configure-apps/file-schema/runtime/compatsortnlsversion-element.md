@@ -1,5 +1,5 @@
 ---
-title: <CompatSortNLSVersion>-Element
+title: <CompatSortNLSVersion> Element
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f670bd2030e914cc4431c3325215428570ad46cf
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dfd241056947fbf1daf48b84ff41e3f74ff7b8de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195773"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion >-Element
 Gibt an, dass die Laufzeit Sortierreihenfolgen von Legacyversionen beim Vergleichen von Zeichenfolgen verwenden soll.  
@@ -94,5 +94,6 @@ sta equals a in the sort order.
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

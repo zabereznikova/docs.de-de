@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Laden eines Sounds asynchron in einem Windows Form'
+title: 'Vorgehensweise: Asynchrones Laden eines Sounds in einem Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], loading on separate threads
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
-ms.openlocfilehash: 8240e26ea0133aa091354d29f52d0692499d7765
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1d710f1e6d3b208365d5b1eb2524fbeeaa673c2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185756"
 ---
-# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Vorgehensweise: Laden eines Sounds asynchron in einem Windows Form
+# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>Vorgehensweise: Asynchrones Laden eines Sounds in einem Windows Forms
 Im folgenden Codebeispiel wird ein Sound aus einer URL asynchron geladen und anschließend auf einem neuen Thread abgespielt.  
   
 ## <a name="example"></a>Beispiel  
@@ -53,7 +53,8 @@ Im folgenden Codebeispiel wird ein Sound aus einer URL asynchron geladen und ans
  Beurteilen Sie den Inhalt der Datei nicht anhand des Dateinamens. Bei der Datei `Form1.vb` handelt es sich zum Beispiel nicht unbedingt um eine Visual Basic-Quelldatei. Überprüfen Sie alle Eingaben, bevor Sie die Daten in der Anwendung verwenden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Media.SoundPlayer.LoadAsync%2A>
 - <xref:System.Media.SoundPlayer.LoadCompleted>
 - <xref:System.Media.SoundPlayer.Play%2A>
-- [Vorgehensweise: Wiedergabe von Sound in Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
+- [Vorgehensweise: Wiedergabe von Sound in Windows Forms](how-to-play-a-sound-from-a-windows-form.md)

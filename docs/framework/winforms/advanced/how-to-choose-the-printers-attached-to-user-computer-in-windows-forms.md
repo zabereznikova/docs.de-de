@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Auswählen der Drucker, die angefügt werden, auf dem Computer eines Benutzers in Windows Forms'
+title: 'Vorgehensweise: Auswählen der einem Benutzercomputer zugewiesenen Drucker in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - printing [Windows Forms], choosing printers
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
-ms.openlocfilehash: 8c29a90cf4aa7380297cc2776123fb353b07d8c5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: bebb879020e6e45e77f109bf9c377b7322d5e8f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184027"
 ---
-# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Vorgehensweise: Auswählen der Drucker, die angefügt werden, auf dem Computer eines Benutzers in Windows Forms
+# <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>Vorgehensweise: Auswählen der einem Benutzercomputer zugewiesenen Drucker in Windows Forms
 Häufig möchten Benutzer einen anderen Drucker als den Standarddrucker zum Drucken auswählen. Sie können es Benutzern ermöglichen, mithilfe der <xref:System.Windows.Forms.PrintDialog> -Komponente einen Drucker unter den Druckern auszuwählen, die derzeit installiert sind. Über die Komponente <xref:System.Windows.Forms.PrintDialog> wird das <xref:System.Windows.Forms.DialogResult> der Komponente <xref:System.Windows.Forms.PrintDialog> aufgezeichnet und für die Auswahl des Druckers verwendet.  
   
  In der folgenden Prozedur wird eine Textdatei ausgewählt, die auf dem Standarddrucker gedruckt werden soll. Die <xref:System.Windows.Forms.PrintDialog> -Klasse wird dann instanziiert.  
@@ -107,4 +107,5 @@ Häufig möchten Benutzer einen anderen Drucker als den Standarddrucker zum Druc
     ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)
+
+- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)

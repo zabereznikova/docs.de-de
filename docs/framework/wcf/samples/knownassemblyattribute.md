@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: e02aa10f585cd4ad61e6a07d48a0c7e66e4c7523
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 7b5484ee7b8d98ce3ac449fb9d23029f27c8932a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196865"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 In diesem Beispiel wird veranschaulicht, wie die Serialisierungs- und Deserialisierungsprozesse mit der <xref:System.Runtime.Serialization.DataContractResolver>-Klasse angepasst werden können. In diesem Beispiel wird gezeigt, wie bekannte Typen während der Serialisierung und Deserialisierung dynamisch hinzugefügt werden.  
@@ -370,4 +370,3 @@ Lists combined:
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
-  

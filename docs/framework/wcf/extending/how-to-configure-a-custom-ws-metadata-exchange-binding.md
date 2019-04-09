@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 4328306a6b67d2eac498ec48d1769bdf4bd5f81e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ab659e7e586b28f5c06b9b6ba12b313f318c6542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210502"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Vorgehensweise: Konfigurieren einer benutzerdefinierten WS-Metadata Exchange-Bindung
 In diesem Thema wird erläutert, wie Sie eine benutzerdefinierte WS-Metadatenaustausch-Bindung konfigurieren. Windows Communication Foundation (WCF) enthält vier vom System definierte metadatenbindungen, aber Sie können Metadaten mit jeder gewünschten Bindung veröffentlichen. In diesem Thema wird beschrieben, wie Metadaten mit der `wsHttpBinding` veröffentlicht werden. Diese Bindung ermöglicht es Ihnen, Metadaten auf eine sichere Weise verfügbar zu machen. Der Code in diesem Artikel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -114,6 +114,7 @@ In diesem Thema wird erläutert, wie Sie eine benutzerdefinierte WS-Metadatenaus
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Metadatenveröffentlichungsverhalten](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
 - [Metadaten abrufen](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
 - [Metadaten](../../../../docs/framework/wcf/feature-details/metadata.md)

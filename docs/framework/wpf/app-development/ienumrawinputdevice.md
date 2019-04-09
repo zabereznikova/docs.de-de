@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IEnumRAWINPUTDEVICE interface [WPF]
 ms.assetid: 88c8b389-a48b-46b9-b895-8ed7b1e26fea
-ms.openlocfilehash: e7bc6f2c96413f3898a17b541733eeecd6a260f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 04caca0c580d26fde7fc9a3e3a11b7a8fed26d65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375063"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225520"
 ---
 # <a name="ienumrawinputdevice"></a>IEnumRAWINPUTDEVICE
 Diese Schnittstelle listet die Geräte für die unformatierte Eingabe auf und wird nur von "PresentationHost.exe" verwendet.  
@@ -27,4 +27,5 @@ Diese Schnittstelle listet die Geräte für die unformatierte Eingabe auf und wi
 |[IEnumRAWINPUTDEVIC:Clone](ienumrawinputdevic-clone.md)|Erstellt einen weiteren Enumerator für Geräte für die unformatierte Eingabe, der denselben Zustand wie der aktuelle Enumerator aufweist und dieselbe Liste durchlaufen soll.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Informationen zur unformatierten Eingabe](/windows/desktop/inputdev/about-raw-input)

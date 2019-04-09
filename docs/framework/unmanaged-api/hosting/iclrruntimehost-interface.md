@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3dc77cc799342ec0cd10f86d37541ec0a4d7822
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed32fe643a7722eaf1af38e6079096194690e950
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646093"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211391"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost-Schnittstelle
 Stellt die Funktionalität ähnelt der von der [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md) Schnittstelle, die in .NET Framework, Version 1, mit den folgenden Änderungen:  
@@ -60,9 +60,10 @@ Stellt die Funktionalität ähnelt der von der [ICorRuntimeHost](../../../../doc
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [CorBindToCurrentRuntime-Funktion](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
 - [CorBindToRuntimeEx-Funktion](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
 - [ICLRControl-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICorRuntimeHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [CLRRuntimeHost-Co-Klasse](../../../../docs/framework/unmanaged-api/hosting/clrruntimehost-coclass.md)

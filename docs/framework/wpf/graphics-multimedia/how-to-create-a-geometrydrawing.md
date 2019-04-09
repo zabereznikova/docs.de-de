@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], GeometryDrawing class
 - classes [WPF], GeometryDrawing
 ms.assetid: 11d3c096-91ba-4d41-9bba-aeac0db70f97
-ms.openlocfilehash: 6eb604a8446000ef308c2b5a99480fb6a476c949
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f5cdcfdb68ad8030bcbd6c689f45a8baddd000e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179789"
 ---
 # <a name="how-to-create-a-geometrydrawing"></a>Vorgehensweise: Erstellen einer GeometryDrawing
 In diesem Beispiel wird gezeigt, wie zum Erstellen und Anzeigen einer <xref:System.Windows.Media.GeometryDrawing>. Ein <xref:System.Windows.Media.GeometryDrawing> können Sie zum Erstellen einer Form mit einer Füllung und eine Übersicht über durch Zuordnen einer <xref:System.Windows.Media.Pen> und ein <xref:System.Windows.Media.Brush> mit einem <xref:System.Windows.Media.Geometry>. Die <xref:System.Windows.Media.GeometryDrawing.Geometry%2A> beschreibt die Struktur, die <xref:System.Windows.Media.GeometryDrawing.Brush%2A> wird beschrieben, die Füllung der Form, und die <xref:System.Windows.Media.GeometryDrawing.Pen%2A> der Form beschreibt.  
@@ -30,7 +30,8 @@ In diesem Beispiel wird gezeigt, wie zum Erstellen und Anzeigen einer <xref:Syst
  Sie können mehrere Zeichnungsobjekte in einem einzigen zusammengesetzten Zeichnung mithilfe von kombinieren, um komplexere Zeichnungen erstellen zu können, eine <xref:System.Windows.Media.DrawingGroup>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.DrawingGroup>
 - [Übersicht über Zeichnungsobjekte](drawing-objects-overview.md)
-- [Übersicht über Geometrien](geometry-overview.md)
+- [Übersicht über die Geometrie](geometry-overview.md)
 - [Erstellen einer zusammengesetzten Zeichnung](how-to-create-a-composite-drawing.md)

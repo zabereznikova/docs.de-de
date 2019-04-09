@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1cb6e12e7badff9bcd00196f50bf1291df630122
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92370751b38029435b12c177b75cd4d9402369b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500183"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220941"
 ---
 # <a name="icorprofilerobjectenum-interface"></a>ICorProfilerObjectEnum-Schnittstelle
 Stellt Methoden für die nacheinander durchlaufen einer Auflistung von fixierten Objekten, die vom generierten der [Ngen.exe (Native Image Generator)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
@@ -51,5 +51,6 @@ Stellt Methoden für die nacheinander durchlaufen einer Auflistung von fixierten
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [EnumModuleFrozenObjects-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-enummodulefrozenobjects-method.md)

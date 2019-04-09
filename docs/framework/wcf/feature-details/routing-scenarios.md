@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 6803468c8814b229df752e3ed9bc48aa0e632dd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223826"
 ---
 # <a name="routing-scenarios"></a>Routingszenarien
 Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein, beim Erstellen einer völlig neuen Konfiguration eine effiziente Routinglogik zu entwerfen.  Es gibt jedoch einige allgemeine Szenarios, auf denen die meisten Routingdienstkonfigurationen basieren. Auch wenn diese Szenarios ggf. nicht genau mit Ihrer jeweiligen Konfiguration übereinstimmen, trägt es zum Verständnis des Routingdiensts bei, wenn Sie wissen, wie dieser in bestimmten Szenarios konfiguriert werden kann.  
@@ -66,13 +66,14 @@ Der Routingdienst lässt sich zwar stark anpassen, aber es kann aufwändig sein,
  Die Schritte zum Konfigurieren der Fehlerbehandlung verwendet wird, finden Sie unter [so wird's gemacht: Fehlerbehandlung](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md).
   
 ### <a name="in-this-section"></a>In diesem Abschnitt  
- [How To: Dienstversionsverwaltung](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Vorgehensweise: Dienstversionsverwaltung](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [How To: Dienstdatenpartitionierung](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Vorgehensweise: Dienstdatenpartitionierung](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [How To: Dynamisches Update](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [Vorgehensweise: Dynamisches Update](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [How To: Fehlerbehandlung](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [Vorgehensweise: Fehlerbehandlung](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>Siehe auch
-- [Einführung in Routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
+
+- [Einführung in das Routing](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

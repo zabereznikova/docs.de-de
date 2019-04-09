@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
-ms.openlocfilehash: 63a761b4a79743b0d4a03392ced465c3105db9bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602532"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195058"
 ---
 # <a name="sending-and-receiving-faults"></a>Senden und Empfangen von Fehlern
 SOAP-Fehler vermitteln Informationen über Fehlerbedingungen von einem Dienst an einen Client und bei Duplexkommunikation von einem Client an einen Dienst in einem interoperablen Verfahren. In der Regel definiert ein Dienst benutzerdefinierten Fehlerinhalt und legt fest, welche Vorgänge ihn zurückgeben können. (Weitere Informationen finden Sie unter [definieren und Angeben von Fehlern](../../../docs/framework/wcf/defining-and-specifying-faults.md).) In diesem Thema wird erläutert, wie ein Dienst oder ein Duplexclient diese Fehler senden kann, wenn der entsprechende Fehlerzustand aufgetreten ist, und wie eine Client- oder Dienstanwendung diese Fehler verarbeitet. Einen Überblick über die Fehlerbehandlung in Windows Communication Foundation (WCF)-Anwendungen finden Sie unter [angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -51,15 +51,15 @@ SOAP-Fehler vermitteln Informationen über Fehlerbedingungen von einem Dienst an
   
 -   <xref:System.ServiceModel.CommunicationException>  
   
- <xref:System.TimeoutException>-Objekte werden ausgelöst, wenn ein Vorgang das angegebene Zeitlimit überschreitet.  
+ <xref:System.TimeoutException> -Objekte werden ausgelöst, wenn ein Vorgang das angegebene Zeitlimit überschreitet.  
   
- <xref:System.ServiceModel.CommunicationException>-Objekte werden ausgelöst, wenn entweder beim Dienst oder beim Client eine behebbare Kommunikationsfehlerbedingung besteht.  
+ <xref:System.ServiceModel.CommunicationException> -Objekte werden ausgelöst, wenn einige wiederherstellbaren kommunikationsfehlerbedingung entweder auf den Dienst oder auf dem Client vorhanden ist.  
   
  Die <xref:System.ServiceModel.CommunicationException>-Klasse verfügt über zwei wichtige abgeleitete Typen: <xref:System.ServiceModel.FaultException> und den generischen <xref:System.ServiceModel.FaultException%601>-Typ.  
   
- <xref:System.ServiceModel.FaultException>-Ausnahmen werden ausgelöst, wenn ein Listener einen Fehler empfängt, der in dem Vorgangsvertrag nicht erwartet oder festgelegt ist; dies geschieht normalerweise, wenn die Anwendung gedebuggt wird und die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>-Eigenschaft des Diensts auf `true` festgelegt ist.  
+ <xref:System.ServiceModel.FaultException> Ausnahmen werden ausgelöst, wenn ein Listener einen Fehler empfängt, der nicht erwartet oder im Vorgangsvertrag angegeben wird; Dies geschieht normalerweise, wenn die Anwendung ein Debugvorgang durchgeführt wird und der Dienst hat die <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `true`.  
   
- Am Client werden <xref:System.ServiceModel.FaultException%601>-Ausnahmen ausgelöst, wenn ein im Vorgangsvertrag angegebener Fehler als Antwort auf einen bidirektionalen Vorgang empfangen wird (d. h. eine Methode mit einem <xref:System.ServiceModel.OperationContractAttribute>-Attribut, bei dem <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> auf `false` festgelegt ist).  
+ <xref:System.ServiceModel.FaultException%601> Ausnahmen werden auf dem Client ausgelöst, wenn ein Fehler, die im Vorgangsvertrag angegeben wird als Reaktion auf einen bidirektionalen Vorgang empfangen wird (d. h. eine Methode mit einem <xref:System.ServiceModel.OperationContractAttribute> -Attribut mit <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> festgelegt `false`).  
   
 > [!NOTE]
 >  Wenn ein WCF-Dienst hat die <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> -Eigenschaftensatz auf `true` der Client erfährt dieses als eine undeklarierte <xref:System.ServiceModel.FaultException%601> des Typs <xref:System.ServiceModel.ExceptionDetail>. Clients können diesen bestimmten Fehler entweder abfangen oder den Fehler in einem Catch-Block für <xref:System.ServiceModel.FaultException> behandeln.  
@@ -105,8 +105,9 @@ SOAP-Fehler vermitteln Informationen über Fehlerbedingungen von einem Dienst an
  [!code-vb[FaultContractAttribute#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/faultcontractattribute/vb/client.vb#3)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [Erwartete Ausnahmen](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [Verwenden Sie schließen "und" Abort um WCF-Client-Ressourcen freizugeben.](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [Freigeben von WCF-Clientressourcen mit „Close“ und „Abort“](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

@@ -2,12 +2,12 @@
 title: <security> von <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: be3417296a401c002e59487cd4903e15e6301a63
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3fd850862172ad2b9bd58cd01d332028ff76462a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199075"
 ---
 # <a name="security-of-nettcpbinding"></a>\<security> of \<netTcpBinding>
 Definiert die Sicherheitseinstellungen für eine Bindung.  
@@ -42,9 +42,9 @@ Definiert die Sicherheitseinstellungen für eine Bindung.
   
 |Wert|Beschreibung|  
 |-----------|-----------------|  
-|Keine|Die Sicherheitsfunktionen sind deaktiviert.|  
+|Keiner|Die Sicherheitsfunktionen sind deaktiviert.|  
 |Transport|Die Transportsicherheit wird durch TLS über TCP oder SPNego gewährleistet. Der Dienst muss unter Umständen mit SSL-Zertifikaten konfiguriert werden. Es ist möglich, den Schutzgrad mit diesem Modus zu steuern.|  
-|Meldung|Sicherheit wird über die SOAP-Nachrichtensicherheit bereitgestellt. Standardmäßig wird der SOAP-Nachrichtentext verschlüsselt und signiert. Bei diesem Modus können eine Reihe von Features eingestellt werden, z.&#160;B., ob die Dienstanmeldeinformationen out-of-band auf dem Client verfügbar sind, welche Algorithmenfolge verwendet werden soll und welcher Schutzgrad auf den Nachrichtentext angewendet werden soll. Die Clientauthentifizierung wird einmal pro Sitzung durchgeführt, und die Ergebnisse der Authentifizierung werden für die Dauer der Sitzung zwischengespeichert.|  
+|Meldung|Sicherheit wird über die SOAP-Nachrichtensicherheit bereitgestellt. Standardmäßig wird der SOAP-Nachrichtentext verschlüsselt und signiert. Bei diesem Modus können eine Reihe von Features eingestellt werden, z.&amp;#160;B., ob die Dienstanmeldeinformationen out-of-band auf dem Client verfügbar sind, welche Algorithmensammlung verwendet werden soll und welcher Schutzgrad auf den Nachrichtentext angewendet werden soll. Die Clientauthentifizierung wird einmal pro Sitzung durchgeführt, und die Ergebnisse der Authentifizierung werden für die Dauer der Sitzung zwischengespeichert.|  
 |TransportWithMessageCredential|Die Transportsicherheit wird mit der Nachrichtensicherheit gekoppelt. Die Transportsicherheit wird durch TLS über TCP oder SPNego bereitgestellt und stellt Integrität, Vertraulichkeit und Serverauthentifizierung sicher. Die Clientauthentifizierung wird durch die SOAP-Nachrichtensicherheit gewährleistet. Die Clientauthentifizierung wird standardmäßig einmal pro Sitzung durchgeführt, und die Ergebnisse der Authentifizierung werden für die Dauer der Sitzung zwischengespeichert.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
@@ -68,6 +68,7 @@ Definiert die Sicherheitseinstellungen für eine Bindung.
  Dieses Konfigurationselement stellt die Sicherheitsspezifikationen für `netTcpBinding` bereit. Daraus ergibt sich eine sichere, zuverlässige und optimierte Bindung, die computerübergreifende Kommunikation unterstützt. Diese Bindung generiert standardmäßig einen Laufzeitkommunikationsstapel mit TCP für die Nachrichtenübertragung, Windows-Sicherheit für Nachrichtensicherheit und Authentifizierung, WS-Reliable-Messaging für Zuverlässigkeit sowie binäre Nachrichtencodierung.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.NetTcpSecurity>
 - <xref:System.ServiceModel.NetTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetTcpBindingElement.Security%2A>

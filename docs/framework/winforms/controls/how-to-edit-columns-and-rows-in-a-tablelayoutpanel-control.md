@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: 40129deed1f43480b7bde59ef8a67f4561af5d38
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: eb194052ecd78d585f251789730a1f9855c509d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201961"
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Vorgehensweise: Bearbeiten von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement
 Können Sie den auflistungs-Editor, der die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement mit der Bezeichnung der **Spalten- und Zeilenstile** Dialogfeld, um die Zeilen und Spalten der Steuerelemente zu bearbeiten.  
@@ -44,5 +44,6 @@ Können Sie den auflistungs-Editor, der die <xref:System.Windows.Forms.TableLayo
 8.  Um eine Zeile oder Spalte zu entfernen, klicken Sie auf die **entfernen** Schaltfläche, um das aktuell ausgewählte Element im Löschen der **Member** Liste.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.SizeType>
 - [TableLayoutPanel-Steuerelement](tablelayoutpanel-control-windows-forms.md)

@@ -1,17 +1,17 @@
 ---
-title: Konfigurieren der WS-Atomic-Transaktion-Unterstützung
+title: Konfigurieren der WS-AtomicTransaction-Unterstützung
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: bc21cba7889652a8b485d101205b15d6f189d12d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8fe76cfa0dbcd8bc7ef8248ac798a8b45bf87201
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203534"
 ---
-# <a name="configuring-ws-atomic-transaction-support"></a>Konfigurieren der WS-Atomic-Transaktion-Unterstützung
+# <a name="configuring-ws-atomic-transaction-support"></a>Konfigurieren der WS-AtomicTransaction-Unterstützung
 In diesem Thema wird beschrieben, wie Sie die WS-AtomicTransaction (WS-AT)-Unterstützung mit dem WS-AT-Konfigurationshilfsprogramm konfigurieren können.  
   
 ## <a name="using-the-ws-at-configuration-utility"></a>Verwenden des WS-AT-Konfigurationshilfsprogramms  
@@ -94,7 +94,7 @@ In diesem Thema wird beschrieben, wie Sie die WS-AtomicTransaction (WS-AT)-Unter
  Beim Bereitstellen von MSDTC muss der Administrator sicherstellen, dass der gesamte MSDTC-Datenaustausch gesichert ist. Isolieren Sie bei einer Arbeitsgruppenbereitstellung die Transaktionsinfrastruktur von böswilligen Benutzern; sichern Sie bei einer Clusterbereitstellung die Clusterregistrierung.  
   
 ## <a name="tracing"></a>Ablaufverfolgung  
- Die WS-AT-Protokolldienst unterstützt integrierte, Transaktion, die Ablaufverfolgung aktiviert und verwaltet werden kann durch Verwendung von, der [WS-AtomicTransaction Konfiguration-MMC-Snap-in](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) Tool.  Ablaufverfolgungen können Daten einschließen, die unter anderem den Zeitpunkt einer Eintragung für eine bestimmte Transaktion, den Zeitpunkt an dem die Transaktion ihren Endstatus erreicht und das Ergebnis, das jede Transaktionseintragung empfangen hat, angeben. Alle ablaufverfolgungen können angezeigt werden, mithilfe der [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) Tool.  
+ Die WS-AT-Protokolldienst unterstützt integrierte, Transaktion, die Ablaufverfolgung aktiviert und verwaltet werden kann durch Verwendung von, der [WS-AtomicTransaction Konfiguration-MMC-Snap-in](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md) Tool.  Ablaufverfolgungen können Daten einschließen, die unter anderem den Zeitpunkt einer Eintragung für eine bestimmte Transaktion, den Zeitpunkt des Erreichens des Endstatus und das Ergebnis, das jede Transaktionseintragung empfangen hat, angeben. Alle ablaufverfolgungen können angezeigt werden, mithilfe der [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) Tool.  
   
  Der WS-AT-Protokolldienst unterstützt auch integrierte ServiceModel-Ablaufverfolgung über die ETW-Ablaufverfolgungssitzung. Dies bietet ausführlichere, kommunikationsspezifische Ablaufverfolgungen zusätzlich zu den vorhandenen Transaktionsablaufverfolgungen.  Führen Sie die folgenden Schritte aus, um diese zusätzlichen Ablaufverfolgungen zu aktivieren:  
   
@@ -119,5 +119,6 @@ In diesem Thema wird beschrieben, wie Sie die WS-AtomicTransaction (WS-AT)-Unter
 -   31: Ausführlich  
   
 ## <a name="see-also"></a>Siehe auch
-- [WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+
+- [WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
 - [WS-AtomicTransaction-Konfiguration-MMC-Snap-In](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: 8b1256c1389c6a55f405f0be0d137a8ad170dbec
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0f56fc5fa345cbe4584b61ae2622dfb0dfb35be8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710497"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225533"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Vorgehensweise: Erstellen eines gebundenen Steuerelements und Formatieren der angezeigten Daten
 Mit Windows Forms-Datenbindung können Sie die Daten formatieren, in einem datengebundenen Steuerelement angezeigt wird, indem die **Formatierung und erweiterte Bindung** Dialogfeld.  
@@ -55,6 +55,7 @@ Mit Windows Forms-Datenbindung können Sie die Daten formatieren, in einem daten
 8.  Klicken Sie auf **OK** schließen die **Formatierung und erweiterte Bindung** Dialogfeld und zum Eigenschaftenfenster zurückzukehren.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Erstellen eines einfach gebundenen Steuerelements in Windows Forms](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+
+- [Vorgehensweise: Erstellen eines einfach gebundenen Steuerelements in einer Windows Forms-Instanz](how-to-create-a-simple-bound-control-on-a-windows-form.md)
 - [Validierung von Benutzereingaben in Windows Forms](user-input-validation-in-windows-forms.md)
-- [Windows Forms-Datenbindung](windows-forms-data-binding.md)
+- [Datenbindung in Web Forms](windows-forms-data-binding.md)

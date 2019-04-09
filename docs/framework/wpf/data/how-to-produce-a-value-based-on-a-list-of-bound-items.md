@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], MultiBinding
 - Multibinding [WPF]
 ms.assetid: b3d06378-b511-4181-95aa-316d60c9229b
-ms.openlocfilehash: 77c832c1460749ced58e7a20af333c5ed9dd1555
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c2ec5ff26c89649294df266e790445e5aa5d08ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368124"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200518"
 ---
 # <a name="how-to-produce-a-value-based-on-a-list-of-bound-items"></a>Vorgehensweise: Erzeugen eines Werts auf Grundlage einer Liste gebundener Elemente
 <xref:System.Windows.Data.MultiBinding> können Sie eine Eigenschaft eines Bindungsziels an eine Liste von Quelleigenschaften binden und anschließend Logik anwenden, um einen Wert mit den angegebenen Eingaben zu erzeugen. In diesem Beispiel wird veranschaulicht, wie <xref:System.Windows.Data.MultiBinding>.  
@@ -31,9 +31,10 @@ ms.locfileid: "57368124"
  [!code-csharp[MultiBinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/MultiBinding/CSharp/NameConverter.cs#3)]
  [!code-vb[MultiBinding#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MultiBinding/VisualBasic/NameConverter.vb#3)]  
   
- `NameConverter` implementiert die <xref:System.Windows.Data.IMultiValueConverter>-Schnittstelle. `NameConverter` übernimmt die Werte aus den einzelnen Bindungen und speichert sie im Werteobjektarray. Die Reihenfolge, in der <xref:System.Windows.Data.Binding> Elemente angezeigt werden, unter der <xref:System.Windows.Data.MultiBinding> Element ist die Reihenfolge, in dem diese Werte im Array gespeichert sind. Der Wert des der <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> Parameterargument Attribut verweist die <xref:System.Windows.Data.MultiBinding.Converter%2A> -Methode, die mit einen Switch für den Parameter, um zu bestimmen, wie der Name formatiert ausführt.  
+ `NameConverter` Implementiert die <xref:System.Windows.Data.IMultiValueConverter> Schnittstelle. `NameConverter` akzeptiert die Werte aus den einzelnen Bindungen und speichert sie im werteobjektarray. Die Reihenfolge, in der <xref:System.Windows.Data.Binding> Elemente angezeigt werden, unter der <xref:System.Windows.Data.MultiBinding> Element ist die Reihenfolge, in dem diese Werte im Array gespeichert sind. Der Wert des der <xref:System.Windows.Data.MultiBinding.ConverterParameter%2A> Parameterargument Attribut verweist die <xref:System.Windows.Data.MultiBinding.Converter%2A> -Methode, die mit einen Switch für den Parameter, um zu bestimmen, wie der Name formatiert ausführt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Konvertieren von gebundenen Daten](how-to-convert-bound-data.md)
-- [Übersicht zur Datenbindung](data-binding-overview.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)

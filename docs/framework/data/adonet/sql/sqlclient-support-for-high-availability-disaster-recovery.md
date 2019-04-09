@@ -2,12 +2,12 @@
 title: SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213791"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
 In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] eingeführte) SqlClient-Unterstützung für hohe Verfügbarkeit und Notfallwiederherstellung erörtert, die in Form von AlwaysOn-Verfügbarkeitsgruppen bereitgestellt wird.  SQL Server 2012 wurde AlwaysOn-Verfügbarkeitsgruppen hinzugefügt. Weitere Informationen zu AlwaysOn-Verfügbarkeitsgruppen finden Sie in der SQL Server-Onlinedokumentation.  
@@ -63,7 +63,7 @@ In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-
   
 2.  Wenn eine Anwendung `ApplicationIntent=ReadWrite` (unten erläutert) verwendet und der Speicherort des sekundären Replikats für den schreibgeschützten Zugriff konfiguriert ist.  
   
- <xref:System.Data.SqlClient.SqlDependency> wird für schreibgeschützte sekundäre Replikate nicht unterstützt.  
+ <xref:System.Data.SqlClient.SqlDependency> wird auf schreibgeschützten sekundären Replikaten nicht unterstützt.  
   
  Ein Verbindungsfehler tritt auf, wenn ein primäres Replikat so konfiguriert ist, dass schreibgeschützte Arbeitslasten abgelehnt werden und die Verbindungszeichenfolge `ApplicationIntent=ReadOnly` enthält.  
   
@@ -79,7 +79,7 @@ In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-
   
  Das `ApplicationIntent`-Schlüsselwort funktioniert nicht mit schreibgeschützten Legacy-Datenbanken.  
   
- Eine Datenbank kann Lesearbeitslasten für die AlwaysOn-Zieldatenbank zulassen oder ablehnen. (Dies erfolgt über die `ALLOW_CONNECTIONS`-Klausel der `PRIMARY_ROLE`-Anweisung und der `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]-Anweisung).  
+ Eine Datenbank kann Lesearbeitslasten für die AlwaysOn-Zieldatenbank zulassen oder ablehnen. (Dies erfolgt mit der `ALLOW_CONNECTIONS` -Klausel der `PRIMARY_ROLE` und `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] Anweisungen.)  
   
  Das `ApplicationIntent`-Schlüsselwort wird verwendet, um das schreibgeschützte Routing zu aktivieren.  
   
@@ -97,5 +97,6 @@ In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-
  Das schreibgeschützte Routing dauert möglicherweise länger als die Verbindung mit der primären Datenbank, da zuerst eine Verbindung mit der primären Datenbank hergestellt und dann nach dem besten verfügbaren lesbaren sekundären Replikat gesucht wird. Aus diesem Grund sollten Sie das Anmeldetimeout erhöhen.  
   
 ## <a name="see-also"></a>Siehe auch
-- [SQL Server Features and ADO.NET (SQL Server-Features und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+
+- [SQL Server-Funktionen und ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

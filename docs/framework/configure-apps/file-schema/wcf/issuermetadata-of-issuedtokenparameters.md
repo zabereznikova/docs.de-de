@@ -2,12 +2,12 @@
 title: <issuerMetadata> von <issuedTokenParameters>
 ms.date: 03/30/2017
 ms.assetid: 1a85ca37-496d-4fa3-8d44-d6c9383d735c
-ms.openlocfilehash: 2697d24a731dbf8de3d68bcce7fd52c55ff6dc68
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e46e56c6285af24941a550b2c4f7dec3b441db69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214805"
 ---
 # <a name="issuermetadata-of-issuedtokenparameters"></a>\<issuerMetadata> of \<issuedTokenParameters>
 \<system.serviceModel>  
@@ -47,6 +47,7 @@ ms.locfileid: "55276977"
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Gibt die Parameter für einen Sicherheitstoken an, der in einem verbundenen Sicherheitsszenario ausgegeben wird.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Security.Tokens.IssuedSecurityTokenParameters>
 - <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

@@ -2,12 +2,12 @@
 title: Aufrufen von Funktionen in LINQ to Entities-Abfragen
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: 8cb861c72f33a7dff3d6bef94719ae590a13706d
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 69a0d11893b528d53dfe5bdca97fa36a65b0a45b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828149"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180881"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Aufrufen von Funktionen in LINQ to Entities-Abfragen
 In den Themen in diesem Abschnitt wird beschrieben, wie Funktionen in LINQ to Entities-Abfragen aufgerufen werden.  
@@ -25,18 +25,19 @@ In den Themen in diesem Abschnitt wird beschrieben, wie Funktionen in LINQ to En
  Weitere Informationen hierzu finden Sie in diesem Abschnitt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Aufrufen von kanonischen Funktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-canonical-functions.md)  
+ [Vorgehensweise: Aufrufen kanonischer Funktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-canonical-functions.md)  
   
  [Vorgehensweise: Aufrufen von Datenbankfunktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-database-functions.md)  
   
- [Vorgehensweise: Rufen benutzerdefinierter Datenbankfunktionen auf](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-custom-database-functions.md)  
+ [Vorgehensweise: Aufrufen benutzerdefinierter Datenbankfunktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-custom-database-functions.md)  
   
- [Vorgehensweise: Rufen Sie Modelldefinierter Funktionen in Abfragen auf](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)  
+ [Vorgehensweise: Aufrufen modelldefinierter Funktionen in Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)  
   
- [Vorgehensweise: Rufen Sie Modelldefinierter Funktionen als Objektmethoden auf](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)  
+ [Vorgehensweise: Aufrufen modelldefinierter Funktionen als Objektmethoden](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-as-object-methods.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Abfragen in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
-- [Canonical Functions (Kanonische Funktionen)](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [Kanonische Funktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
 - [Übersicht über die EDMX-Datei](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [Vorgehensweise: Definieren von benutzerdefinierten Funktionen im konzeptionellen Modell](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))

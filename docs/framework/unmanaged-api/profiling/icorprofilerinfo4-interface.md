@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78f9645ad31e7421e239089c5610f6523918228b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 177e5ef8054f408dc8ec3475c56043394a636bc0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536623"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194213"
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4-Schnittstelle
 Enthält Methoden, mit denen Codeprofiler mit der common Language Runtime (CLR), um die ereignisüberwachung zu steuern und Informationen zu kommunizieren. sein. Die `ICorProfilerInfo4` Schnittstelle ist eine Erweiterung der anderen `ICorProfilerInfo` Schnittstellen. Es bietet neue Methoden zur Unterstützung der just-in-Time (JIT) Neukompilierung hinzugefügt, die der [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
@@ -32,7 +32,7 @@ Enthält Methoden, mit denen Codeprofiler mit der common Language Runtime (CLR),
 |------------|-----------------|  
 |[EnumJITedFunctions2-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumjitedfunctions2-method.md)|Gibt einen Enumerator für alle Funktionen, die JIT-kompiliert und erneut JIT-kompilierten zuvor waren.|  
 |[EnumThreads-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-enumthreads-method.md)|Ruft einen Enumerator, der Methoden, um Sie sequenziell zu durchlaufen, bis die Auflistung aller verwalteten Threads im profilierten Prozess bereitstellt.|  
-|[GetCodeInfo3-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)|Ruft die Erweiterungen des nativen Codes ab, die der JIT-kompilierten Version der angegebenen Funktion zugeordnet sind.|  
+|[GetCodeInfo3-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getcodeinfo3-method.md)|Ruft die Erweiterungen des systemeigenen Codes ab, die der JIT-kompilierten Version der angegebenen Funktion zugeordnet sind.|  
 |[GetFunctionFromIP2-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getfunctionfromip2-method.md)|Ordnet einen Anweisungszeiger im verwalteten Code die JIT-kompilierten Version einer angegebenen Funktion.|  
 |[GetILToNativeMapping2-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getiltonativemapping2-method.md)|Ruft eine Zuordnung von Microsoft intermediate Language (MSIL)-und systemeigenen Offsets für den in der erneut JIT-kompilierten Version der angegebenen Funktion enthaltenen Code Offsets ab.|  
 |[GetObjectSize2-Methode](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md)|Gibt die Größe eines angegebenen Objekts zurück.|  
@@ -54,5 +54,6 @@ Enthält Methoden, mit denen Codeprofiler mit der common Language Runtime (CLR),
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Profilerstellungsschnittstellen](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [ICorProfilerInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

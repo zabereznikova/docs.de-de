@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5947f1e84bc5b1f35f0bd479a9fc879dbe63c9f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219212"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Ablaufverfolgung und Instrumentieren von Anwendungen
-Mithilfe der Ablaufverfolgung kann die Ausführung einer Anwendung überwacht werden. Beim Entwickeln können Sie eine .NET Framework-Anwendung mit einer Ablaufverfolgungs- und Debugginginstrumentation versehen, die sowohl beim Entwickeln als auch nach der Bereitstellung der Anwendung eingesetzt werden kann. Mit den Klassen <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> und <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> können Sie Informationen zu Fehlern und zur Anwendungsausführung in Protokollen, Textdateien oder auf anderen Medien für eine spätere Analyse aufzeichnen.  
+Mithilfe der Ablaufverfolgung kann die Ausführung einer Anwendung überwacht werden. Beim Entwickeln können Sie eine .NET Framework-Anwendung mit einer Ablaufverfolgungs- und Debugginginstrumentierung versehen, die sowohl beim Entwickeln als auch nach der Bereitstellung der Anwendung eingesetzt werden kann. Mit den Klassen <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> und <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> können Sie Informationen zu Fehlern und zur Anwendungsausführung in Protokollen, Textdateien oder auf anderen Medien für eine spätere Analyse aufzeichnen.   
   
  Der Begriff *Instrumentierung* bezeichnet die Fähigkeit, die Leistung eines Produkts zu überwachen oder zu messen und Fehler zu diagnostizieren. In der Programmierung versteht man darunter die Fähigkeit eines Programms, folgende Funktionen zu bieten:  
   
@@ -123,8 +123,8 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 |Methode|Output|  
 |------------|------------|  
 |**Assert**|Der angegebene Text oder, falls keiner angegeben ist, die Aufrufliste. Die Ausgabe wird nur geschrieben, wenn die als Argument in der **Assert**-Anweisung angegebene Bedingung **FALSE** ist.|  
-|**Fehler**|Der angegebene Text oder, falls keiner angegeben ist, die Aufrufliste.|  
-|**Schreiben**|Der angegebene Text.|  
+|**Fail**|Der angegebene Text oder, falls keiner angegeben ist, die Aufrufliste.|  
+|**Write**|Der angegebene Text.|  
 |**WriteIf**|Der angegebene Text, wenn die als Argument in der **WriteIf**-Anweisung angegebene Bedingung erfüllt ist.|  
 |**WriteLine**|Der angegebene Text und ein Wagenrücklaufzeichen.|  
 |**WriteLineIf**|Der angegebene Text und ein Wagenrücklaufzeichen, wenn die als Argument in der **WriteLineIf**-Anweisung angegebene Bedingung erfüllt ist.|  
@@ -142,14 +142,15 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  Wenn Sie vor der Bereitstellung einer ASP.NET-Anwendung nicht die Ablaufverfolgung und das Debuggen deaktivieren, könnte die Anwendung Informationen über sich selbst offen legen, die von böswilligen Programmen missbraucht werden könnten. Weitere Informationen finden Sie unter [Vorgehensweise: Kompiliert bedingt mit Ablaufverfolgung und Debuggen](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md), [kompilieren und generieren](/visualstudio/ide/compiling-and-building-in-visual-studio), und [Vorgehensweise: Erstellen, initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md). Das Debuggen kann auch über Internetinformationendienste (IIS) konfiguriert werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - [Codeverträge](../../../docs/framework/debug-trace-profile/code-contracts.md)
 - [C#-, F#- und Visual Basic-Projekttypen](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
 - [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
-- [Vorgehensweise: Erstellen, initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Vorgehensweise: Erstellen und Initialisieren von Ablaufverfolgungsquellen](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
 - [Vorgehensweise: Verwenden von TraceSource und Filtern für Ablaufverfolgungslistener](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
-- [Trace Listeners (Ablaufverfolgungslistener)](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Ablaufverfolgungslistener](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Ablaufverfolgungsschalter](../../../docs/framework/debug-trace-profile/trace-switches.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GDI+, cardinal splines
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
-ms.openlocfilehash: 6cc57698c8e43aefff0e0a63b0384417483d3b48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4588f6f606f0f479aeae1d143f23175ec4be32a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705284"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200414"
 ---
 # <a name="cardinal-splines-in-gdi"></a>Kardinale Splines in GDI+
 Eine cardinal-Splinekurve ist eine Sequenz von einzelnen Kurven, um eine größere Kurve zu bilden. Die Spline wird durch ein Array von Punkten und Spannungsparameter angegeben. Eine cardinal-Splinekurve durchläuft reibungslos jeder Punkt im Array ab; Es gibt keine Ecken und keine abrupten Änderungen in die Dichtigkeit der Kurve. Die folgende Abbildung zeigt eine Reihe von Punkten und eine cardinal-Splinekurve, die jeden Punkt in der Gruppe durchläuft.  
@@ -36,5 +36,6 @@ Eine cardinal-Splinekurve ist eine Sequenz von einzelnen Kurven, um eine größe
  [!code-vb[LinesCurvesAndShapes#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Linien, Kurven und Formen](lines-curves-and-shapes.md)
 - [Erstellen und Zeichnen von Kurven](constructing-and-drawing-curves.md)

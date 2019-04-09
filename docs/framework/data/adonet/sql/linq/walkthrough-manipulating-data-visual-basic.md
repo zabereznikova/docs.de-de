@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 0eab5fe5c9455badb7f538307cb827391b254a95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 34049f113ce9da0ed1c4cc63fd53093a0775bbad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208305"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>Exemplarische Vorgehensweise: Bearbeiten von Daten (Visual Basic)
 Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zum Hinzufügen, Ändern und Löschen von Daten in einer Datenbank bereit. Sie werden eine Kopie der Beispieldatenbank Northwind verwenden, um einen Kunden hinzuzufügen, den Namen des Kunden zu ändern und eine Bestellung zu löschen.  
@@ -187,4 +187,5 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
 >  Wenn Sie den neuen Kunden durch Übergeben der Änderungen hinzugefügt haben, können Sie diese Lösung nicht einfach wieder ausführen, da Sie den gleichen Kunden nicht erneut hinzufügen können. Um die Lösung erneut auszuführen, ändern Sie den Wert der hinzuzufügenden Kunden-ID.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: eefdb3b1205a64221e3e9352f70e3d06dc074eff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3950df8b6f4b48a035c6ebf37d8d65c18cb82e1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368544"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197216"
 ---
 # <a name="how-to-implement-binding-validation"></a>Vorgehensweise: Implementieren der Bindungsvalidierung
 Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> und ein Formattriggers zum Bereitstellen von visuellen Feedback, um den Benutzer zu informieren, wenn ein ungültiger Wert eingegeben wird, auf Grundlage einer benutzerdefinierten Validierungsregel.  
@@ -38,5 +38,6 @@ Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Controls.Validatio
  Beachten Sie, dass Sie keine benutzerdefinierte bereitstellen <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> Standardwert wird durch die zum Bereitstellen von visuellem Feedback, die dem Benutzer, wenn ein Überprüfungsfehler vorliegt. Weitere Informationen finden Sie unter „Datenvalidierung“ in [Übersicht über die Datenbindung](data-binding-overview.md). [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet außerdem eine integrierte Validierungsregel, die die während der Aktualisierung der Bindungsquelleneigenschaft ausgelöste Ausnahmen abfängt. Weitere Informationen finden Sie unter <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Übersicht zur Datenbindung](data-binding-overview.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+
+- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)

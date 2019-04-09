@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 1207a25a6718fddf9d18206a4cc09089806edecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e6b0d9c9b5d2b473aebc00063bd0a343b8708c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538530"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226663"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Binden von Daten an Steuerelemente (WCF Data Services)
 Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Steuerelemente wie `ComboBox` und `ListView` an eine Instanz der <xref:System.Data.Services.Client.DataServiceCollection%601>-Klasse binden. Diese Auflistung, die von der <xref:System.Collections.ObjectModel.ObservableCollection%601>-Klasse erbt, enthält die Daten aus einem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-Feed. Die Klasse stellt eine dynamische Datensammlung dar, die Benachrichtigungen bereitstellt, wenn Elemente hinzugefügt oder entfernt werden. Bei Verwendung eine Instanz von <xref:System.Data.Services.Client.DataServiceCollection%601> für die Datenbindung, die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliotheken diese Ereignisse um sicherzustellen, dass Objekte vom verfolgt die <xref:System.Data.Services.Client.DataServiceContext> mit den Daten im gebundenen Benutzeroberflächenelement synchronisiert bleiben.  
@@ -81,12 +81,12 @@ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Steu
   
  Wenn Sie eine neue Instanz der <xref:System.Data.Services.Client.DataServiceCollection%601> erstellen, haben Sie die Option, die folgenden Parameter anzugeben, die Delegaten für Methoden definieren, die die beim Ändern gebundener Objekte ausgelösten Ereignisse behandeln:  
   
--   `entityChanged` - ein Methode, die aufgerufen wird, wenn die Eigenschaft eines gebundenen Objekts geändert wird. Dieser <xref:System.Func%602>-Delegat akzeptiert ein <xref:System.Data.Services.Client.EntityChangedParams>-Objekt und gibt einen booleschen Wert zurück, der angibt, ob das Standardverhalten, <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> für den <xref:System.Data.Services.Client.DataServiceContext> aufzurufen, noch auftreten soll.  
+-   `entityChanged` -eine Methode, die aufgerufen wird, wenn die Eigenschaft eines gebundenen Objekts geändert wird. Dieser <xref:System.Func%602>-Delegat akzeptiert ein <xref:System.Data.Services.Client.EntityChangedParams>-Objekt und gibt einen booleschen Wert zurück, der angibt, ob das Standardverhalten, <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> für den <xref:System.Data.Services.Client.DataServiceContext> aufzurufen, noch auftreten soll.  
   
--   `entityCollectionChanged` - eine Methode, die aufgerufen wird, wenn ein Objekt der Bindungsauflistung hinzugefügt oder daraus entfernt wird. Dieser <xref:System.Func%602>-Delegat akzeptiert ein <xref:System.Data.Services.Client.EntityCollectionChangedParams>-Objekt und gibt einen booleschen Wert zurück, der angibt, ob das Standardverhalten, <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> für eine <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add>-Aktion oder <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> für eine <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove>-Aktion für den <xref:System.Data.Services.Client.DataServiceContext> aufzurufen, beibehalten werden soll.  
+-   `entityCollectionChanged` -eine Methode, die aufgerufen wird, wenn ein Objekt hinzugefügt oder aus der bindungsauflistung entfernt wird. Dieser <xref:System.Func%602>-Delegat akzeptiert ein <xref:System.Data.Services.Client.EntityCollectionChangedParams>-Objekt und gibt einen booleschen Wert zurück, der angibt, ob das Standardverhalten, <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> für eine <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add>-Aktion oder <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> für eine <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove>-Aktion für den <xref:System.Data.Services.Client.DataServiceContext> aufzurufen, beibehalten werden soll.  
   
 > [!NOTE]
->  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] überprüft die benutzerdefinierten Verhalten nicht, die Sie in diesen Delegaten implementieren.  
+>  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] führt keine Validierung die benutzerdefinierten Verhaltensweisen, die Sie in diesen Delegaten implementieren.  
   
  Im folgenden Beispiel wird die <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove>-Aktion angepasst, um die <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>-Methode und <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>-Methode zum Entfernen von `Orders_Details`-Entitäten aufzurufen, die zu einer gelöschten `Orders`-Entität gehören. Diese benutzerdefinierte Aktion wird ausgeführt, da abhängige Entitäten beim Löschen der übergeordneten Entität nicht automatisch gelöscht werden.  
   
@@ -101,18 +101,19 @@ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Steu
 ## <a name="data-binding-with-custom-client-data-classes"></a>Datenbindung mit benutzerdefinierten Clientdatenklassen  
  Um Objekte in eine <xref:System.Data.Services.Client.DataServiceCollection%601> laden zu können, müssen die Objekte selbst die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle implementieren. Data service-Clientklassen, die generiert werden, bei der Verwendung der **Hinzufügen eines Dienstverweises** Dialogfeld oder ["DataSvcUtil.exe"](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) Tool implementieren diese Schnittstelle. Wenn Sie eigene Clientdatenklassen bereitstellen, müssen Sie einen anderen Auflistungstyp für die Datenbindung verwenden. Wenn sich Objekte ändern, müssen Sie Ereignisse in den datengebundenen Steuerelementen behandeln, um die folgenden Methoden der <xref:System.Data.Services.Client.DataServiceContext>-Klasse aufzurufen:  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> - wenn der Auflistung ein neues Objekt hinzugefügt wird.  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> – Wenn ein neues Objekt der Auflistung hinzugefügt wird.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> - wenn ein Objekt aus der Auflistung entfernt wird.  
+-   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> – Wenn ein Objekt aus der Auflistung entfernt wird.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> - wenn die Eigenschaft eines Objekts in der Auflistung geändert wird.  
+-   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> – Wenn eine Eigenschaft eines Objekts in der Auflistung geändert wird.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> - wenn einer Auflistung des verknüpften Objekts ein Objekt hinzugefügt wird.  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> – Wenn ein Objekt auf eine Auflistung des verknüpften Objekts hinzugefügt wird.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> - wenn einer Auflistung verknüpfter Objekte ein Objekt hinzugefügt wird.  
+-   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> – Wenn ein Objekt auf eine Auflistung von verknüpften Objekten hinzugefügt wird.  
   
  Weitere Informationen finden Sie unter [Aktualisieren des Datendiensts](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Manuelles Generieren von Client-Datendienstklassen](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
+
+- [Vorgehensweise: Manuelles Generieren von Clientdatendienstklassen](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
 - [Vorgehensweise: Hinzufügen eines Datendienstverweises](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

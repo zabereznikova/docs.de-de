@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], reordering columns
 - columns [Windows Forms], reordering
 ms.assetid: cc20eae3-e4db-493f-95ce-a4215e29472a
-ms.openlocfilehash: c34807cc1d2a569068ba82479e3a2bf230f4f2c5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 625c4987a45ed3749284e7abc7b6cde6d24821ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161472"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Aktivieren der Neuanordnung von Spalten im DataGridView-Steuerelement in Windows Forms
 Wenn Sie die Neuanordnung von Spalten im <xref:System.Windows.Forms.DataGridView>-Steuerelement aktivieren, können die Benutzer eine Spalte an eine neuen Position ziehen, indem sie den Spaltenkopf mit der Maus ziehen. Im <xref:System.Windows.Forms.DataGridView>-Steuerelement bestimmt der Wert der Eigenschaftswert <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>, ob Benutzer Spalten an andere Positionen ziehen können.  
@@ -36,7 +36,8 @@ Wenn Sie die Neuanordnung von Spalten im <xref:System.Windows.Forms.DataGridView
 -   Verweise auf die Assemblys <xref:System?displayProperty=nameWithType> und <xref:System.Windows.Forms?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>
 - [Grundlegende Spalten-, Zeilen- und Zellfunktionen im DataGridView-Steuerelement in Windows Forms](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [Vorgehensweise: Einfrieren von Spalten im DataGridView-Steuerelement in Windows Forms](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Fixieren von Spalten im DataGridView-Steuerelement in Windows Forms](how-to-freeze-columns-in-the-windows-forms-datagridview-control.md)

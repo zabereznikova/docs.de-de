@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: ddc9e3ec1a07e52e366ff5c17d4dd2ce3a3192a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b8fa13bf5db7f3c3df97febe4bb6f9ee4c184a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231291"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Aktualisieren des Datendiensts (WCF Data Services)
 Bei Verwendung der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliothek ein [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed, übersetzt die Bibliothek die Einträge in den Feed in Instanzen von clientdatendienstklassen. Diese Datendienstklassen werden mithilfe des <xref:System.Data.Services.Client.DataServiceContext> verfolgt, zu dem die <xref:System.Data.Services.Client.DataServiceQuery%601> gehört. Der Client verfolgt Änderungen an Entitäten nach, die mit Methoden des <xref:System.Data.Services.Client.DataServiceContext> gemeldet werden. Mithilfe dieser Methoden kann der Client hinzugefügte und gelöschte Entitäten sowie Änderungen an den Eigenschaftswerten oder an Beziehungen zwischen Entitätsinstanzen verfolgen. Wenn Sie die <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>-Methode aufrufen, werden diese nachverfolgten Änderungen als REST-basierte Vorgänge an den Datendienst zurückgesendet.  
@@ -73,7 +73,7 @@ Bei Verwendung der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -
 |------------|-----------------|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|Erstellt einen neuen Link zwischen zwei verknüpften Entitätsobjekten. Das Aufrufen dieser Methode entspricht dem Aufrufen von <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> und <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>, um das neue Objekt zu erstellen und die Beziehung zu einem vorhandenen Objekt zu definieren.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|Erstellt einen neuen Link zwischen zwei verknüpften Entitätsobjekten.|  
-|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Aktualisiert einen vorhandenen Link zwischen zwei verknüpften Entitätsobjekten. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> wird auch verwendet, um Links mit einer Kardinalität von 0 bzw. 1:1 (`0..1:1`) und 1:1 (`1:1`) zu löschen. Sie können dazu das verknüpfte Objekte auf `null` festlegen.|  
+|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Aktualisiert einen vorhandenen Link zwischen zwei verknüpften Entitätsobjekten. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> dient auch zum Löschen von Links mit einer Multiplizität von 0 (null)-oder-1-1 (`0..1:1`) und 1: 1 (`1:1`). Sie können dazu das verknüpfte Objekte auf `null` festlegen.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|Markiert einen Link, den der Kontext für den Löschvorgang nachverfolgt, wenn die <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>-Methode aufgerufen wird. Verwenden Sie diese Methode, wenn Sie ein verknüpftes Objekt löschen oder durch das Löschen des Links zu einem vorhandenen Objekt und dem nachfolgenden Hinzufügen eines Links zum neuen verknüpften Objekt eine Beziehung ändern.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|Benachrichtigt den Kontext über einen vorhandenen Link zwischen zwei Entitätsobjekten. Der Kontext geht davon aus, dass diese Beziehung bereits im Datendienst vorhanden ist, und versucht nicht, den Link zu erstellen, wenn Sie die <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>-Methode aufrufen. Verwenden Sie diese Methode, wenn Sie Objekte an einen Kontext anfügen und außerdem den Link zwischen beiden anfügen müssen. Wenn Sie eine neue Beziehung definieren, sollten Sie stattdessen <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> verwenden.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|Beendet die Nachverfolgung des angegebenen Links im Kontext. Diese Methode wird verwendet, um 1:n-Beziehungen (`*:*`) zu löschen. Für Beziehungslinks mit einer Multiplizität von 1 müssen Sie stattdessen <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> verwenden.|  
@@ -94,6 +94,7 @@ Bei Verwendung der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -
  Änderungen werden in der <xref:System.Data.Services.Client.DataServiceContext>-Instanz nachverfolgt, jedoch nicht unmittelbar an den Server gesendet. Wenn Sie die erforderlichen Änderungen für eine bestimmte Aktivität vorgenommen haben, rufen Sie <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> auf, um alle Änderungen an den Datendienst zu übergeben. Weitere Informationen finden Sie unter [Verwalten des Datendienstkontextes](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md). Sie können Änderungen mit der <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A>-Methode und der <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A>-Methode auch asynchron speichern. Weitere Informationen finden Sie unter [asynchrone Vorgänge](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 - [Asynchrone Vorgänge](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)

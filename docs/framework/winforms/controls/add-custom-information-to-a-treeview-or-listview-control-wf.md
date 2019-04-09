@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)'
+title: 'Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 40ac3fb3a148c351cf5acca235569e2a1a439a3e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 15533b2b1fb13ad43bba645d3f52dbad53b17033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188935"
 ---
-# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)
 Sie können einen abgeleiteten Knoten in einer Windows Forms erstellen <xref:System.Windows.Forms.TreeView> Steuerelement oder ein abgeleitetes Element in einem <xref:System.Windows.Forms.ListView> Steuerelement. Durch Ableitung können Sie jegliche Felder, die Sie benötigen, sowie die benutzerdefinierten Methoden und Konstruktoren für deren Behandlung hinzufügen. Eine Verwendung dieser Funktion ist das Anfügen eines Customer-Objekts an jeden Strukturknoten oder jedes Listenelement. Die hier aufgeführten Beispiele gelten für eine <xref:System.Windows.Forms.TreeView> -Steuerelement, aber der gleiche Ansatz kann für verwendet werden eine <xref:System.Windows.Forms.ListView> Steuerelement.  
   
 ### <a name="to-derive-a-tree-node"></a>So leiten Sie einen Strukturknoten ab  
@@ -131,5 +131,6 @@ Sie können einen abgeleiteten Knoten in einer Windows Forms erstellen <xref:Sys
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [TreeView-Steuerelement](treeview-control-windows-forms.md)
 - [ListView-Steuerelement](listview-control-windows-forms.md)

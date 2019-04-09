@@ -3,12 +3,12 @@ title: Verwenden von F# in Azure
 description: Anleitung zur Verwendung von Azure-Diensten mit F#
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: 8243c021b8bc3ea9b067b278a5d9c6e3619232b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 92b453b680a5f8c55f35458e9020f15444e90035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211737"
 ---
 # <a name="using-f-on-azure"></a>Verwenden von F# in Azure
 
@@ -25,7 +25,6 @@ Azure unterstützt eine Vielzahl von Konfigurationen von virtuellen Computern. I
 
 Um F# auf einem virtuellen Computer zum Ausführen, für die Kompilierung und/oder zum Erstellen von Skripts zu installieren, gehen Sie unter [Use F# on Linux (Verwenden von F# unter Linux)](https://fsharp.org/use/linux) und [Use F# on Windows (Verwenden von F# unter Windows)](https://fsharp.org/use/windows).
 
-
 ## <a name="using-azure-functions-with-f"></a>Verwenden von Azure Functions mit F#\#
 
 [Azure Functions](https://azure.microsoft.com/services/functions/) ist eine Lösung zum einfachen Ausführen kleiner Codestücke oder „Funktionen“ in der Cloud. Sie können nur den Code schreiben, den Sie für Ihr vorliegendes Problem benötigen, und müssen sich keine Sorgen über die Ausführung der gesamten Anwendung oder der Infrastruktur machen. Ihre Funktionen sind mit Ereignissen in Azure Storage und anderen in der Cloud gehosteten Ressourcen verbunden. Daten fließen über Funktionsargumente in Ihre F#-Funktionen. Sie können die Entwicklungssprache Ihrer Wahl verwenden und auf Azure vertrauen, dass skaliert wird, wenn dies erforderlich ist.
@@ -34,8 +33,8 @@ Azure Functions unterstützt F# als Hauptprogrammiersprache mit effizienter, rea
 
 Weitere Ressourcen für die Verwendung von Azure Functions und F#:
 
-* [Scale Up Azure Functions in F# Using Suave (Zentrales Aufwärtsskalieren von Azure Functions in F# mit Suave)](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
-* [How to create Azure function in F# (Erstellen von Azure-Funktionen in F#)](https://mnie.github.io/2016-09-08-AzureFunctions/)
+* [Skalieren von Azure Functions in F# mit Suave](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
+* [Vorgehensweise: Erstellen von Azure-Funktion inF#](https://mnie.github.io/2016-09-08-AzureFunctions/)
 * [Mithilfe des Azure-Typanbieters mit Azure Functions](https://compositional-it.com/blog/2017/08-30-using-the-azure-type-provider-with-azure-functions/index.html)
 
 ## <a name="using-azure-storage-with-f"></a>Verwenden von Azure Storage mit F#\#
@@ -53,15 +52,15 @@ Azure Storage kann auch in Verbindung mit Azure Functions über die deklarative 
 
 [Azure App Service](https://azure.microsoft.com/services/app-service/) ist eine Cloudplattform zum Erstellen leistungsstarker Web- und mobilen Apps, die sich überall mit Daten verbinden, ob in der Cloud oder lokal.
 
-* [F# Azure Web API example (Beispiel für eine F#-Azure-Web-API)](https://github.com/fsprojects/azure-webapi-example)
-* [Hosting F# in a web application on Azure (Hosten von F# in einer Web-Anwendung in Azure)](https://github.com/isaacabraham/fsharp-demonstrator)
+* [F#Azure-Web-API-Beispiel](https://github.com/fsprojects/azure-webapi-example)
+* [Hosten von F# in einer Webanwendung in Azure](https://github.com/isaacabraham/fsharp-demonstrator)
 
 ## <a name="using-apache-spark-with-f-with-azure-hdinsight"></a>Verwenden von Apache Spark mit F# mit Azure HDInsight
 
 [Apache Spark für Azure HDInsight](https://azure.microsoft.com/services/hdinsight/apache-spark/) ist ein Open-Source-Verarbeitungsframework, das umfangreiche Anwendungen zur Datenanalyse ausführt. Durch Azure kann Apache Spark einfach und kosteneffektiv bereitgestellt werden. Entwickeln Sie Ihre Spark-Anwendung in F# mithilfe von [Mobius](https://github.com/Microsoft/Mobius), einer .NET-API für Spark.
 
-* [Implementing Spark Apps in F# using Mobius (Implementieren von Spark-APps in F# mit Mobius)](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
-* [Example F# Spark Apps using Mobius (Beispiel einer F#-Spark-App mithilfe von Mobius)](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
+* [Implementieren von Spark-Apps in F# mithilfe von Mobius](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
+* [Beispiel F# Spark-Apps, die mithilfe von Mobius](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
 
 ## <a name="using-azure-cosmos-db-with-f"></a>Verwenden von Azure Cosmos DB mit F#\#
 
@@ -90,7 +89,6 @@ Azure Notification Hubs können mit F# auf zwei Arten verwendet werden:
 1. Durch die Erstellung von Azure Functions in F#, wodurch Ergebnisse an Notification Hub gesendet werden. (Weitere Informationen finden Sie unter [Azure Functions Notification Hub-Ausgabebindung](/azure/azure-functions/functions-bindings-notification-hubs) oder
 2. Mithilfe der [.NET SDK für Azure](https://blogs.msdn.microsoft.com/azuremobile/2014/04/08/push-notifications-using-notification-hub-and-net-backend/). Beachten Sie, dass diese Beispiele in C# geschrieben sind.
 
-
 ## <a name="implementing-webhooks-on-azure-with-f"></a>Implementieren von WebHooks in Azure mit F#\#
 
 Ein [Webhook](https://en.wikipedia.org/wiki/Webhook) ist ein Rückruf, der durch eine Webanfrage ausgelöst wird. Webhooks werden von Websites wie GitHub verwendet, um Ereignisse zu signalisieren.
@@ -101,7 +99,7 @@ Webhooks können in F# implementiert und in Azure durch [HTTP- und Webhookbindun
 
 [WebJobs](/azure/app-service-web/web-sites-create-web-jobs) sind Programme, die Sie in Ihrer App Service-Web-App auf drei Arten ausführen können: bedarfsgesteuert, kontinuierlich oder zeitplanmäßig.
 
-[Beispiel für F# WebJob](https://github.com/jrr/webjob-project-examples)
+[Beispiel F# Webjob](https://github.com/jrr/webjob-project-examples)
 
 ## <a name="implementing-timers-on-azure-with-f"></a>Implementieren von Timern in Azure mit F\#
 

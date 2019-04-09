@@ -9,17 +9,17 @@ helpviewer_keywords:
 - WCF, security
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
-ms.openlocfilehash: bcc23097a6778bb537421ba494dd94414b37f4e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 063d9e334575170c632eb49aef527b14a6d164b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207109"
 ---
 # <a name="how-to-examine-the-security-context"></a>Vorgehensweise: Prüfen des Sicherheitskontexts
 Bei der Programmierung von Windows Communication Foundation (WCF)-Dienste kann dienstsicherheitskontextes Sie Details zu den Clientanmeldeinformationen und Ansprüche verwendet, um die Authentifizierung mit dem Dienst zu ermitteln. Dies geschieht anhand der Eigenschaften der <xref:System.ServiceModel.ServiceSecurityContext>-Klasse.  
   
- So können Sie z.&#160;B. die Identität des aktuellen Clients mit der <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>-Eigenschaft oder der <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>-Eigenschaft abrufen. Mit der <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>-Eigenschaft können Sie ermitteln, ob der Client anonym ist.  
+ So können Sie z.&amp;#160;B. die Identität des aktuellen Clients mit der <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>-Eigenschaft oder der <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A>-Eigenschaft abrufen. Mit der <xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>-Eigenschaft können Sie ermitteln, ob der Client anonym ist.  
   
  Sie können auch bestimmen, welche Ansprüche im Namen des Clients gestellt werden, indem Sie die Auflistung der Ansprüche der <xref:System.ServiceModel.ServiceSecurityContext.AuthorizationContext%2A>-Eigenschaft durchlaufen.  
   
@@ -55,5 +55,6 @@ Bei der Programmierung von Windows Communication Foundation (WCF)-Dienste kann d
 -   <xref:System.IdentityModel.Claims>  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md)
 - [Dienstidentität und Authentifizierung](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

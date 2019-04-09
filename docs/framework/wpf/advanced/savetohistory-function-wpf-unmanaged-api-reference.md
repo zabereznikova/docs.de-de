@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 6dd101a3-44ad-4143-b228-772156f9b8ff
-ms.openlocfilehash: 853931b7b968f8103af8bf9c33c07d40ac653069
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3f6413558ff1f259e497c6a1c31eb2664f70cc48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213715"
 ---
 # <a name="savetohistory-function-wpf-unmanaged-api-reference"></a>SaveToHistory-Funktion (WPF nicht verwaltete API-Referenz)
 Diese API unterstützt die Infrastruktur von Windows Presentation Foundation (WPF) und nicht direkt aus Ihrem Code verwendet werden soll.  
@@ -43,7 +43,8 @@ HRESULT SaveToHistory(
   
  In .NET Framework 4 und höher: PresentationHost_v0400.dll  
   
- **.NET Framework Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **.NET Framework-Version:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WPF – Referenz zur nicht verwalteten API](wpf-unmanaged-api-reference.md)

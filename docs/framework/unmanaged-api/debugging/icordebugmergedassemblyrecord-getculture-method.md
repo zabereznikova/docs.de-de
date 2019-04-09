@@ -1,17 +1,17 @@
 ---
-title: ICorDebugMergedAssemblyRecord::GetCulture-Methode
+title: ICorDebugMergedAssemblyRecord::GetCulture Method
 ms.date: 03/30/2017
 ms.assetid: 030b2f8c-8c21-40b7-855d-3afa78975a17
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ee20ddd337e99836e74fe95e88e9e49a9a783ea7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 093b21a439b96c9fe2f971300f314d1b75527f1f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466062"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207200"
 ---
-# <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord::GetCulture-Methode
+# <a name="icordebugmergedassemblyrecordgetculture-method"></a>ICorDebugMergedAssemblyRecord::GetCulture Method
 Ruft die Kulturnamen-Zeichenfolge der Assembly ab.  
   
 ## <a name="syntax"></a>Syntax  
@@ -50,5 +50,6 @@ HRESULT GetCulture(
  **.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorDebugMergedAssemblyRecord-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)
-- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

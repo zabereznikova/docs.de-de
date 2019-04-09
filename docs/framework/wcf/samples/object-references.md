@@ -2,12 +2,12 @@
 title: Objektverweise
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: 4965ddab23f0f6c64edd3d71e97ba3293d2f69ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 393a6cb446d8216659c2b2f63b21754c37291ca7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577632"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203001"
 ---
 # <a name="object-references"></a>Objektverweise
 In diesem Beispiel wird veranschaulicht, wie Objekte als Verweis zwischen Server und Client übergeben werden. Das Beispiel verwendet simulierte *soziale Netzwerke*. Ein gesellschaftliches Netzwerk besteht aus einer `Person`-Klasse, die eine Liste von Freunden enthält, wobei jeder Freund eine Instanz der `Person`-Klasse mit eigener Liste von Freunden ist. Damit wird ein Objektdiagramm erstellt. Der Dienst macht Operationen in diesen gesellschaftlichen Netzwerken verfügbar.  
@@ -114,5 +114,6 @@ public List<Person> GetCommonFriends(List<Person> people)
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\ObjectReferences`  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>
 - [Interoperable Objektverweise](../../../../docs/framework/wcf/feature-details/interoperable-object-references.md)

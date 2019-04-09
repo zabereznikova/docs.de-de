@@ -8,12 +8,12 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: 038e259810111d2d648c72a9f43afabe11a07f29
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2ced508eb83e2955fdcd1ad87fb6415e2052446f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206043"
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Vorgehensweise: Aufrufen eines Druckdialogfelds
 Um die Funktion zum Drucken von aus der Anwendung zu ermöglichen, Sie können einfach erstellen und öffnen Sie eine <xref:System.Windows.Controls.PrintDialog> Objekt.  
@@ -32,6 +32,7 @@ Um die Funktion zum Drucken von aus der Anwendung zu ermöglichen, Sie können e
  Genau genommen können Sie die <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> -Methode ohne jemals Öffnen des Dialogfelds. In dieser Hinsicht kann das Steuerelement als eine Druckkomponente verwendet werden. Aber zur Verbesserung der Leistung, es wäre besser, verwenden Sie entweder die <xref:System.Printing.PrintQueue.AddJob%2A> Methode oder eine der zahlreichen <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> und <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> Methoden der <xref:System.Windows.Xps.XpsDocumentWriter>. Weitere Informationen hierzu finden Sie unter [Programmgesteuertes Drucken von XPS-Dateien](how-to-programmatically-print-xps-files.md) und.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.PrintDialog>
 - [Dokumente in WPF](documents-in-wpf.md)
 - [Übersicht über das Drucken](printing-overview.md)

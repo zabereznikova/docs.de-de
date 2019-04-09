@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: ca74650428c4536cd21694a49b74370b07c77667
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214935"
 ---
 # <a name="data-contract-equivalence"></a>Datenvertragsäquivalenz
 Damit ein Client erfolgreich Daten eines bestimmten Typs an einen Dienst sendet oder ein Dienst erfolgreich Daten an einen Client sendet, muss der gesendete Typ nicht unbedingt an der Empfängerseite vorhanden sein. Die einzige Anforderung ist, dass die Datenverträge beider Typen äquivalent sind. (In einigen Fällen strenge Äquivalenz ist nicht erforderlich, siehe [Versionsverwaltung von Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md).)  
@@ -47,7 +47,7 @@ Damit ein Client erfolgreich Daten eines bestimmten Typs an einen Dienst sendet 
  [!code-vb[C_DataContractNames#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#7)]  
   
 ## <a name="inheritance-interfaces-and-data-contract-equivalence"></a>Vererbung, Schnittstellen und Datenvertragsäquivalenz  
- Beim Bestimmen der Äquivalenz wird ein Datenvertrag, der von einem anderen Datenvertrag erbt, so behandelt, als ob es sich nur um einen Datenvertrag mit allen Datenmembern vom Basistyp handelt. Die Reihenfolge der Datenmember muss übereinstimmen, und die Basistypmember müssen in der Reihenfolge vor den abgeleiteten Typmembern stehen. Verfügen zwei Datenmember &#8211; wie im folgenden Codesbeispiel &#8211; über denselben Reihenfolgenwert, werden diese Datenmember darüber hinaus alphabetisch sortiert. Weitere Informationen finden Sie unter [Datenmemberreihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
+ Beim Bestimmen der Äquivalenz wird ein Datenvertrag, der von einem anderen Datenvertrag erbt, so behandelt, als ob es sich nur um einen Datenvertrag mit allen Datenmembern vom Basistyp handelt. Die Reihenfolge der Datenmember muss übereinstimmen, und die Basistypmember müssen in der Reihenfolge vor den abgeleiteten Typmembern stehen. Verfügen zwei Datenmember &amp;#8211; wie im folgenden Codesbeispiel &amp;#8211; über denselben Reihenfolgenwert, werden diese Datenmember darüber hinaus alphabetisch sortiert. Weitere Informationen finden Sie unter [Datenmemberreihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md).  
   
  Im folgenden Beispiel entspricht der Datenvertrag für den Typ `Employee` dem Datenvertrag für den Typ `Worker`.  
   
@@ -61,8 +61,9 @@ Damit ein Client erfolgreich Daten eines bestimmten Typs an einen Dienst sendet 
  Beim Übergeben von Parametern und Rückgabewerten zwischen Anwendungen entspricht der erwartete Typ (sofern es sich dabei um eine Schnittstelle handelt) dem erwarteten Typ <xref:System.Object>. Da jeder Typ letztlich von <xref:System.Object> abgeleitet wird, wird jeder Datenvertrag letztlich vom Datenvertrag für <xref:System.Object> abgeleitet. So kann jeder Datenvertragstyp übergeben werden, wenn eine Schnittstelle erwartet wird. Um erfolgreich arbeiten mit Schnittstellen sind zusätzliche Schritte erforderlich; Weitere Informationen finden Sie unter [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [Datenmemberreihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md)
+- [Datenmember-Reihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md)
 - [Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [Datenvertragsnamen](../../../../docs/framework/wcf/feature-details/data-contract-names.md)

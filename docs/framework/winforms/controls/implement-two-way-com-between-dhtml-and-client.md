@@ -14,12 +14,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 52928b11ce3577a1fb6d218b4a74b986f5fe8d1e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4823bf482e785b1e9d03ca57010a832cb0e26dd9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199790"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Vorgehensweise: Implementieren der bidirektionalen Kommunikation zwischen DHTML-Code und Clientanwendungscode
 Das <xref:System.Windows.Forms.WebBrowser>-Steuerelement können Sie verwenden, um Ihren Windows Forms-Clientanwendungen vorhandenen DHTML-Webanwendungscode (dynamisches HTML) hinzuzufügen. Dies ist hilfreich, wenn Sie viel Zeit in die Erstellung DHTML-basierter Steuerelemente investiert haben und von den Möglichkeiten der Windows Forms-Benutzeroberfläche profitieren möchten, ohne vorhandenen Code umschreiben zu müssen.   
@@ -108,6 +108,7 @@ Das <xref:System.Windows.Forms.WebBrowser>-Steuerelement können Sie verwenden, 
  Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A?displayProperty=nameWithType>

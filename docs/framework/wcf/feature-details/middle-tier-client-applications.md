@@ -2,12 +2,12 @@
 title: Clientanwendungen mittlerer Ebene
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: 457a215274c4804ac38958d8f840e8f4100a7be0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 667cc98f46b131fe91e17f3b1b16af429dc597ee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174082"
 ---
 # <a name="middle-tier-client-applications"></a>Clientanwendungen mittlerer Ebene
 Dieses Thema beschreibt verschiedene Probleme bezüglich Clientanwendungen mittlerer Ebene, die Windows Communication Foundation (WCF) verwenden.  
@@ -36,4 +36,5 @@ Dieses Thema beschreibt verschiedene Probleme bezüglich Clientanwendungen mittl
  Darüber hinaus können Sie die Leistung beim Starten von Clients verbessern, von denen serialisierbare Datentypen verwendet werden. Für die Serialisierung dieser Datentypen wird der Serialisierungscode von <xref:System.Xml.Serialization.XmlSerializer> zum Generieren und Kompilieren zur Laufzeit verwendet, was eine Beeinträchtigung der Leistung beim Start zur Folge haben kann. Die [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) können startleistung für diese Anwendungen verbessern, indem der erforderliche Serialisierungscode aus den kompilierten Assemblys für die Anwendung generiert. Weitere Informationen finden Sie unter [Vorgehensweise: Verbessern der Startzeit von WCF-Client Clientanwendungen mit dem XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Zugreifen auf Dienste mithilfe eines WCF-Clients](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)

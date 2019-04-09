@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7dbbfbcd-93f5-4546-9dbf-e5fa290b69fa
-ms.openlocfilehash: 3005465b3c6b974dc06c4a40abf22ee2bbed47aa
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
-ms.translationtype: MT
+ms.openlocfilehash: 7a8f08717743971c0378d9130d4fcea0621dae97
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209689"
 ---
 # <a name="how-to-execute-a-query-that-returns-reftype-results"></a>Vorgehensweise: Ausführen einer Abfrage, die RefType-Ergebnisse zurückgibt
 In diesem Thema wird dargestellt, wie ein Befehl für ein konzeptionelles Modell unter Verwendung eines <xref:System.Data.EntityClient.EntityCommand>-Objekts ausgeführt wird, und wie die <xref:System.Data.Metadata.Edm.RefType>-Ergebnisse mithilfe von <xref:System.Data.EntityClient.EntityDataReader> abgerufen werden.  
@@ -37,5 +37,6 @@ In diesem Thema wird dargestellt, wie ein Befehl für ein konzeptionelles Modell
  [!code-vb[DP EntityServices Concepts#eSQLRefTypes](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#esqlreftypes)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Entity SQL-Referenz](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [EntityClient-Anbieter für Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

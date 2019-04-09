@@ -2,12 +2,12 @@
 title: Attributbasiertes Zuordnen
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: bd16731684a04ca7a92dbb6560b5c008558896cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713901"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223562"
 ---
 # <a name="attribute-based-mapping"></a>Attributbasiertes Zuordnen
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Ordnet eine SQL Server-Datenbank eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Objektmodell mithilfe von Attributen oder mit einer externen Zuordnungsdatei. Dieser Abschnitt befasst sich mit dem attributbasierten Ansatz.  
@@ -26,12 +26,12 @@ ms.locfileid: "54713901"
   
 |Eigenschaft|Typ|Standard|Beschreibung|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Zeichenfolge|Siehe <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.|Gibt in Verbindung mit seiner <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>-Eigenschaft den Namen der Datenbank an.|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Zeichenfolge|Siehe <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Gibt in Verbindung mit seiner <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>-Eigenschaft den Namen der Datenbank an.|  
   
  Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.DatabaseAttribute>.  
   
 ## <a name="tableattribute-attribute"></a>TableAttribute-Attribut  
- Verwenden Sie dieses Attribut, um eine Klasse als Entität zu kennzeichnen, die einer Datenbanktabelle oder einer Ansicht zugeordnet ist. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] behandelt Klassen, die über dieses Attribut als permanente Klassen verfügen. In der folgenden Tabelle wird die <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>-Eigenschaft beschrieben.  
+ Verwenden Sie dieses Attribut, um eine Klasse als Entität zu kennzeichnen, die einer Datenbanktabelle oder einer Ansicht zugeordnet ist. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] behandelt Klassen, die dieses Attribut als permanente Klassen verfügen. In der folgenden Tabelle wird die <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>-Eigenschaft beschrieben.  
   
 |Eigenschaft|Typ|Standard|Beschreibung|  
 |--------------|----------|-------------|-----------------|  
@@ -52,11 +52,11 @@ ms.locfileid: "54713901"
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>|Boolesch|`true`|Gibt an, dass eine Spalte NULL-Werte enthalten kann.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.DbType%2A>|Zeichenfolge|Abgeleiteter Datenbankspaltentyp|Verwendet Datenbanktypen und Modifizierer, um den Typ der Datenbankspalte anzugeben.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>|Zeichenfolge|Empty|Definiert eine berechnete Spalte in einer Datenbank.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|Boolean|`false`|Gibt an, dass eine Spalte Werte enthält, die die Datenbank automatisch generiert.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolean|`false`|Gibt an, dass die Spalte einen Diskriminatorwert für eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Vererbungshierarchie enthält.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolean|`false`|Legt fest, dass dieser Klassenmember eine Spalte darstellt, die zu den Primärschlüsseln der Tabelle zählt oder ein Teil davon ist.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolean|`false`|Identifiziert den Spaltentyp des Members als Datenbank-Timestamp oder Versionsnummer.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, außer wenn <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>`true` für einen Member ist|Gibt an, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] der Erkennung von Konflikten bei der vollständigen Parallelität handhabt.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>|Boolesch|`false`|Gibt an, dass eine Spalte Werte enthält, die die Datenbank automatisch generiert.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolesch|`false`|Gibt an, dass die Spalte einen Diskriminatorwert für eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Vererbungshierarchie enthält.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolesch|`false`|Legt fest, dass dieser Klassenmember eine Spalte darstellt, die zu den Primärschlüsseln der Tabelle zählt oder ein Teil davon ist.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolesch|`false`|Identifiziert den Spaltentyp des Members als Datenbank-Timestamp oder Versionsnummer.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, es sei denn, <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> ist `true` für ein Element|Gibt an, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] der Erkennung von Konflikten bei der vollständigen Parallelität handhabt.|  
   
  Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
@@ -70,10 +70,10 @@ ms.locfileid: "54713901"
   
 |Eigenschaft|Typ|Standard|Beschreibung|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boolean|`false`|Bei Platzierung in einer Zuordnung, für deren Fremdschlüsselmember keine NULL-Werte zulässig sind, wird das Objekt gelöscht, wenn die Zuordnung auf NULL festgelegt wird.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|Zeichenfolge|Keine|Fügt einer Zuordnung ein Löschverhalten hinzu.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boolean|`false`|Wenn true, legt den Member als Fremdschlüssel in einer Zuordnung fest, die eine Datenbankbeziehung darstellt.|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boolean|`false`|Wenn true, gibt eine Eindeutigkeitseinschränkung des Fremdschlüssels an.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boolesch|`false`|Bei Platzierung in einer Zuordnung, für deren Fremdschlüsselmember keine NULL-Werte zulässig sind, wird das Objekt gelöscht, wenn die Zuordnung auf NULL festgelegt wird.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|Zeichenfolge|Keiner|Fügt einer Zuordnung ein Löschverhalten hinzu.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boolesch|`false`|Wenn true, legt den Member als Fremdschlüssel in einer Zuordnung fest, die eine Datenbankbeziehung darstellt.|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boolesch|`false`|Wenn true, gibt eine Eindeutigkeitseinschränkung des Fremdschlüssels an.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|Zeichenfolge|ID der verbundenen Klasse|Kennzeichnet einen oder mehrere Member der Zielentitätsklasse als Schlüsselwerte auf der anderen Seite der Zuordnung.|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.ThisKey%2A>|Zeichenfolge|ID der enthaltenden Klasse|Legt Member dieser Entitätsklasse fest, um die Schlüsselwerte diesseits der Zuordnung darzustellen.|  
   
@@ -90,7 +90,7 @@ ms.locfileid: "54713901"
 |Eigenschaft|Typ|Standard|Beschreibung|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Code%2A>|Zeichenfolge|Keine Wert muss angegeben werden.|Gibt den Codewert des Diskriminators an.|  
-|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Boolean|`false`|Wenn true, erstellt eine Objektinstanz dieses Typs, wenn kein Diskriminatorwert im Store mit einem der angegebenen Werte übereinstimmt.|  
+|<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.IsDefault%2A>|Boolesch|`false`|Wenn true, erstellt eine Objektinstanz dieses Typs, wenn kein Diskriminatorwert im Store mit einem der angegebenen Werte übereinstimmt.|  
 |<xref:System.Data.Linq.Mapping.InheritanceMappingAttribute.Type%2A>|Typ|Keine Wert muss angegeben werden.|Gibt den Typ der Klasse in der Hierarchie an.|  
   
  Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.InheritanceMappingAttribute>.  
@@ -102,7 +102,7 @@ ms.locfileid: "54713901"
   
 |Eigenschaft|Typ|Standard|Beschreibung|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Boolean|`false`|Wenn false, gibt Zuordnungen zu einer gespeicherten Prozedur an. Wenn true, gibt Zuordnungen zu einer benutzerdefinierten Funktion an.|  
+|<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A>|Boolesch|`false`|Wenn false, gibt Zuordnungen zu einer gespeicherten Prozedur an. Wenn true, gibt Zuordnungen zu einer benutzerdefinierten Funktion an.|  
 |<xref:System.Data.Linq.Mapping.FunctionAttribute.Name%2A>|Zeichenfolge|Gleiche Zeichenfolge wie der Name in der Datenbank|Gibt den Namen der gespeicherten Prozedur oder der benutzerdefinierter Funktion an.|  
   
  Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.FunctionAttribute>.  
@@ -114,7 +114,7 @@ ms.locfileid: "54713901"
   
 |Eigenschaft|Typ|Standard|Beschreibung|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|Zeichenfolge|Keine|Gibt den Datenbanktyp an.|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|Zeichenfolge|Keiner|Gibt den Datenbanktyp an.|  
 |<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|Zeichenfolge|Gleiche Zeichenfolge wie der Parametername in der Datenbank|Gibt einen Namen für den Parameter an.|  
   
  Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.ParameterAttribute>.  
@@ -138,9 +138,10 @@ ms.locfileid: "54713901"
 |Eigenschaft|Typ|Standard|Beschreibung|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A>|Zeichenfolge|Wie der Name in der Datenbank|Gibt den Namen der Tabelle, Spalte usw. an.|  
-|<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|Zeichenfolge|Öffentliche Accessoren|Definiert den Namen eines zugrunde liegenden Speicherfelds an|  
+|<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>|Zeichenfolge|Öffentliche Zugriffsmethoden|Definiert den Namen eines zugrunde liegenden Speicherfelds an|  
   
  Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.DataAttribute>.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+
+- [Referenz](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: e0a81915d35bc382cb4f51ec6d26a429c8a759c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210671"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Angeben und Behandeln von Fehlern in Verträgen und Diensten
 Windows Communication Foundation (WCF)-Anwendungen behandeln Fehler durch verwaltete Ausnahmeobjekte SOAP-Fehlerobjekten und SOAP-Fehlerobjekte verwalteten Ausnahmeobjekten zuordnen. Die Themen in diesem Abschnitt erläutern, wie Verträge erstellt werden, die Fehlerbedingungen als benutzerdefinierte SOAP-Fehler verfügbar machen, wie solche Fehler als Teil einer Dienstimplementierung zurückgegeben werden, und wie Clients diese Fehler abfangen.  
@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF)-Anwendungen behandeln Fehler durch verwal
  Darüber hinaus können WCF-Clients und Dienste undeklarierte Soap-Fehler für Debugzwecke und können standardmäßiges Fehlerverhalten erweitern. Diese Aufgaben und Begriffe werden in den folgenden Abschnitten erläutert.  
   
 ## <a name="map-exceptions-to-soap-faults"></a>Zuordnen von Ausnahmen zu SOAP-Fehlern  
- Der erste Schritt bei der Definition eines Verfahrens zur Behandlung von Fehlerbedingungen besteht darin zu entscheiden, unter welchen Bedingungen eine Clientanwendung über Fehler informiert werden sollte. Die Fehlerbedingungen mancher Vorgänge werden von ihrer Funktionalität bestimmt. Ein `PurchaseOrder`-Vorgang könnte z.&#160;B. bestimmte Informationen an Kunden zurückgeben, denen es nicht mehr erlaubt ist, eine Bestellung zu tätigen. In anderen Fällen, etwa einem `Calculator`-Dienst, könnte ein allgemeinerer `MathFault`-SOAP-Fehler ausreichen, um alle Fehlerbedingungen für den gesamten Dienst zu beschreiben. Nachdem die Fehlerbedingungen der Clients Ihres Diensts identifiziert wurden, kann ein benutzerdefinierter SOAP-Fehler erstellt und der Vorgang dafür gekennzeichnet werden, dass er den SOAP-Fehler zurückgibt, wenn die entsprechende Fehlerbedingung eintritt.  
+ Der erste Schritt bei der Definition eines Verfahrens zur Behandlung von Fehlerbedingungen besteht darin zu entscheiden, unter welchen Bedingungen eine Clientanwendung über Fehler informiert werden sollte. Die Fehlerbedingungen mancher Vorgänge werden von ihrer Funktionalität bestimmt. Ein `PurchaseOrder`-Vorgang könnte z.&amp;#160;B. bestimmte Informationen an Kunden zurückgeben, denen es nicht mehr erlaubt ist, eine Bestellung zu tätigen. In anderen Fällen, etwa einem `Calculator`-Dienst, könnte ein allgemeinerer `MathFault`-SOAP-Fehler ausreichen, um alle Fehlerbedingungen für den gesamten Dienst zu beschreiben. Nachdem die Fehlerbedingungen der Clients Ihres Diensts identifiziert wurden, kann ein benutzerdefinierter SOAP-Fehler erstellt und der Vorgang dafür gekennzeichnet werden, dass er den SOAP-Fehler zurückgibt, wenn die entsprechende Fehlerbedingung eintritt.  
   
  Weitere Informationen zu diesem Schritt der Entwicklung von Ihrem Dienst oder Client finden Sie unter [definieren und Angeben von Fehlern](../../../docs/framework/wcf/defining-and-specifying-faults.md).  
   
@@ -56,6 +56,7 @@ Windows Communication Foundation (WCF)-Anwendungen behandeln Fehler durch verwal
  Beim Deserialisieren eines Fehlervertrags versucht WCF zunächst, den Namen des Fehlervertrags in der SOAP-Nachricht einem Fehlervertragstyp zuzuordnen. Wenn keine exakte Übereinstimmung gefunden werden kann, wird die Liste der verfügbaren Fehlerverträge in alphabetischer Reihenfolge nach einem kompatiblen Typ durchsucht. Wenn zwei Fehlerverträge kompatible Typen darstellen (beispielsweise ist einer die Unterklasse eines anderen), wird möglicherweise der falsche Typ zum Deserialisieren des Fehlers verwendet. Dies geschieht nur, wenn im Fehlervertrag nicht sowohl Name, als auch Namespace und Aktion angegeben wurden. Um dieses Problem zu vermeiden, sollten Fehlerverträge daher stets durch Angabe von Attributen für Name, Namespace und Aktion vollständig qualifiziert werden. Darüber hinaus muss bei verwandten Fehlerverträgen, die von einer freigegebenen Basisklasse abgeleitet wurden, sichergestellt werden, dass neue Member mit `[DataMember(IsRequired=true)]` gekennzeichnet werden. Weitere Informationen über das `IsRequired`-Attribut finden Sie unter <xref:System.Runtime.Serialization.DataMemberAttribute>. Dadurch wird verhindert, dass ein kompatibler Typ als Basisklasse verwendet wird, und die Deserialisierung des Fehlers in den richtigen abgeleiteten Typ wird erzwungen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.FaultException>

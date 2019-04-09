@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: a2b8f4f49afb987243ed96c29a09d7f0ec842945
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 681312f4fcc76b275697024a45503f5c4cf89a4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744582"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208539"
 ---
 # <a name="trusted-subsystem"></a>Vertrauenswürdiges Subsystem
 Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk verteilt werden. Die Webdienste sind so ausgelegt, dass der Zugriff auf zusätzliche Ressourcen (beispielsweise Datenbanken oder andere Webdienste) in der Geschäftslogik des Webdiensts gekapselt sind. Diese Ressourcen müssen vor nicht autorisiertem Zugriff geschützt werden. Die folgende Abbildung stellt einen vertrauenswürdigen Subsystemprozess dar.  
@@ -38,7 +38,7 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
 |Integrität|Ja|  
 |Vertraulichkeit|Ja|  
 |Transport|HTTP zwischen Client und dem vertrauenswürdigen Subsystemdienst.<br /><br /> NET.TCP zwischen dem vertrauenswürdigen Subsystemdienst und der Ressource (Back-End-Dienst).|  
-|Bindung|<xref:System.ServiceModel.WSHttpBinding> und <xref:System.ServiceModel.NetTcpBinding> [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|Bindung|<xref:System.ServiceModel.WSHttpBinding> and <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>Ressource (Back-End-Dienst)  
   
@@ -211,5 +211,6 @@ Ein Client greift auf einen oder mehrere Webdienste zu, die über das Netzwerk v
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

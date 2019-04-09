@@ -2,12 +2,12 @@
 title: ServiceDescription und WSDL-Verweis
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: 59a7c1aabd3de8cc5948e8dbee3ac113cec658c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544327"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182883"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription und WSDL-Verweis
 In diesem Thema wird beschrieben, wie Windows Communication Foundation (WCF) Web Services Description Language (WSDL)-Dokumente in und aus zuordnet <xref:System.ServiceModel.Description.ServiceDescription> Instanzen.  
@@ -50,7 +50,7 @@ In diesem Thema wird beschrieben, wie Windows Communication Foundation (WCF) Web
 |----------------|------------------|  
 |`Name`|Wird im Standardnamen eines Endpunkts verwendet, bei dem es sich um den Bindungsnamen handelt, an den der Vertragsname durch einen Unterstrich abgetrennt angefügt ist.|  
 |`Namespace`|`targetNamespace` für die `wsdl:binding`-Definition.<br /><br /> Ist eine Richtlinie an den WSDL-Anschluss angehängt, wird der importierte Bindungsnamespace dem `targetNamespace` für die `wsdl:port`-Definition zugeordnet.|  
-|`BindingElementCollection` entsprechend der Rückgabe durch die `CreateBindingElements`()-Methode.|Verschiedene domänenspezifische Erweiterungen der `wsdl:binding`-Definition, in der Regel Richtlinienassertionen.|  
+|`BindingElementCollection`, wie vom die `CreateBindingElements`()-Methode|Verschiedene domänenspezifische Erweiterungen der `wsdl:binding`-Definition, in der Regel Richtlinienassertionen.|  
 |`MessageVersion`|`EnvelopeVersion` und `AddressingVersion` für den Endpunkt.<br /><br /> Bei Angabe von `MessageVersion.None` enthält die WSDL-Bindung keine SOAP-Bindung, und der WSDL-Anschluss weist keinen WS-Adressierungsinhalt auf. Diese Einstellung wird in der Regel für Plain Old XML (POX)-Endpunkte verwendet.|  
   
 #### <a name="bindingelements"></a>BindingElements  
@@ -103,13 +103,13 @@ In diesem Thema wird beschrieben, wie Windows Communication Foundation (WCF) Web
 |----------------|------------------|  
 |`XmlSerializerFormatAttribute`|Die `Style` -Eigenschaft für dieses Attribut wird die `wsdl:binding` / `wsdl:operation` / `soap:operation` /@style Wert für den Vorgang.<br /><br /> Die `Use` -Eigenschaft für dieses Attribut wird die `wsdl:binding` / `wsdl:operation` / `soap:operation`/ */@use Werte für alle Nachrichten im Vorgang.|  
   
-### <a name="messages"></a>Mitteilungen  
+### <a name="messages"></a>Meldungen  
  Ein `MessageDescription` Instanz ordnet eine `wsdl:message` auf den verwiesen wird durch eine `wsdl:portType` / `wsdl:operation` / `wsdl:input` oder `wsdl:portType` / `wsdl:operation` / `wsdl:output`Nachricht in einem Vorgang. `MessageDescription` besitzt einen Text und Header.  
   
 |Eigenschaften|WSDL-Zuordnung|  
 |----------------|------------------|  
 |`Action`|Die SOAP- oder WS-Adressierungsaktion für die Nachricht.<br /><br /> Beachten Sie, dass Vorgänge, die die Aktionszeichenfolge "*" verwenden, nicht in WSDL dargestellt werden.|  
-|`Direction`|`MessageDirection.Input` wird `wsdl:input` zugeordnet.<br /><br /> `MessageDirection.Output` wird `wsdl:output` zugeordnet.|  
+|`Direction`|`MessageDirection.Input` Ordnet `wsdl:input`.<br /><br /> `MessageDirection.Output` Ordnet `wsdl:output`.|  
 |`ProtectionLevel`|Schutzassertionen in der Sicherheitsrichtlinie, die an die `wsdl:message`-Definition für diese Nachricht angehängt sind.|  
 |`Body`|Der Text der Nachricht.|  
 |`Headers`|Die Header für die Nachricht.|  
@@ -152,4 +152,5 @@ In diesem Thema wird beschrieben, wie Windows Communication Foundation (WCF) Web
 |`Name, ContractDescription.Name, OperationDescription.Name,`|Zur Ableitung verwendet die `wsdl:message` /@name Wert für die Fehlermeldung.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Description>

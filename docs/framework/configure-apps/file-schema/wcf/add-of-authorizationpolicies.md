@@ -2,12 +2,12 @@
 title: <add> von <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-ms.openlocfilehash: 6a1a7d6b1ef9732e015536d8a78c058fe348113f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 532f7f1a74cb3af24d7a1bc26046be901f3cf025
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255496"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205237"
 ---
 # <a name="add-of-authorizationpolicies"></a>\<Hinzufügen > der \<AuthorizationPolicies >
 Gibt eine Autorisierungsrichtlinie für Anspruchstransformation an.  
@@ -52,6 +52,7 @@ Gibt eine Autorisierungsrichtlinie für Anspruchstransformation an.
  Jede Autorisierungsrichtlinie enthält ein einziges erforderliches `policyType`-Attribut, bei dem es sich um eine Zeichenfolge handelt. Das Attribut gibt eine Autorisierungsrichtlinie an, die die Transformation einer Gruppe von Eingabeansprüchen in eine andere Gruppe von Eingabeansprüchen ermöglicht. Die Zugriffssteuerung kann basierend darauf gewährt oder verweigert werden. Weitere Informationen zur Funktionsweise einer Autorisierungsrichtlinie finden Sie unter <xref:System.IdentityModel.Policy.IAuthorizationPolicy> und [Autorisierungsrichtlinie](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>

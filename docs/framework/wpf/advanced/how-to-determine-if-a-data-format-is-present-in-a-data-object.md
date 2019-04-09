@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], data formats present
 - data formats [WPF], determining if present
 ms.assetid: e487a454-c9fc-4e53-aeaa-c458d059ad4c
-ms.openlocfilehash: 57190b94988c8ee557e99836a8e8500bfb622f2e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4cec733490e2a9dc5d54b3b253ac38a5090ac885
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379171"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207967"
 ---
 # <a name="how-to-determine-if-a-data-format-is-present-in-a-data-object"></a>Vorgehensweise: Feststellen, ob ein Datenformat in einem Datenobjekt vorhanden ist
 Die folgenden Beispiele zeigen, wie Sie mit den verschiedenen <xref:System.Windows.DataObject.GetDataPresent%2A> methodenüberladungen Abfrage, ob ein bestimmtes Datenformat in einem Datenobjekt vorhanden ist.  
@@ -47,4 +47,5 @@ Die folgenden Beispiele zeigen, wie Sie mit den verschiedenen <xref:System.Windo
  [!code-vb[DragDrop_DragDropMiscCode#_DragDrop_QueryDataFormats_Autoconvert](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDrop_DragDropMiscCode/visualbasic/window1.xaml.vb#_dragdrop_querydataformats_autoconvert)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.IDataObject>

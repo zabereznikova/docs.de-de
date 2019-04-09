@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6bee5da4-adf7-42e6-8f78-63a9e5c6dbad
-ms.openlocfilehash: c04febff886dda57ed86d8410c952926d192026b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6d8683108ebe87b8533551d212296b13630b4e19
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632841"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218601"
 ---
 # <a name="how-to-specify-a-client-binding-in-code"></a>Vorgehensweise: Angeben einer Clientbindung im Code
 In diesem Beispiel wird ein Client erstellt, um einen Rechnerdienst zu nutzen, und die Bindung des Clients wird imperativ im Code angegeben. Der Client greift auf den `CalculatorService` zu, der die `ICalculator`-Schnittstelle implementiert, und sowohl der Dienst als auch der Client verwenden die Klasse <xref:System.ServiceModel.BasicHttpBinding>.  
@@ -47,4 +47,5 @@ In diesem Beispiel wird ein Client erstellt, um einen Rechnerdienst zu nutzen, u
 5.  Kompilieren Sie den Code, und führen Sie den Client aus.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden von Bindungen, um Dienste und Clients zu konfigurieren](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-ms.openlocfilehash: ddc2219b0ef6593b6bfa9ab40936cc7b0fff120b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678380"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211659"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Implementieren des ExpandCollapse-Steuerelementmusters der Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "57678380"
   
 -   Wenn der <xref:System.Windows.Automation.ExpandCollapseState> eines Steuerelements auf <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>festgelegt ist, sind die <xref:System.Windows.Automation.ExpandCollapsePattern> -Funktionalitäten aktuell inaktiv für das Steuerelement, und <xref:System.Windows.Automation.ExpandCollapseState>sind die einzigen Informationen, die mithilfe dieses Steuerelementmusters abgerufen werden können. Wenn untergeordnete Objekte später hinzugefügt werden, wird <xref:System.Windows.Automation.ExpandCollapseState> geändert, und die <xref:System.Windows.Automation.ExpandCollapsePattern> -Funktionalität wird aktiviert.  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> verweist nur auf die Sichtbarkeit der unmittelbaren untergeordneten Objekte und nicht auf die Sichtbarkeit sämtlicher Nachfolgerobjekte.  
+-   <xref:System.Windows.Automation.ExpandCollapseState> bezieht sich auf die Sichtbarkeit der unmittelbaren untergeordneten Objekte nur. Es verweist nicht auf die Sichtbarkeit sämtlicher Nachfolgerobjekte.  
   
 -   Die Funktionalität zum Erweitern und Reduzieren ist steuerelementspezifisch. Im Folgenden finden Sie Beispiele dieses Verhaltens.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "57678380"
   
 |Erforderliche Member|Memberart|Hinweise|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Eigenschaft|Keine|  
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Methode|Keine|  
-|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Methode|Keine|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Eigenschaft|Keiner|  
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Methode|Keiner|  
+|<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Methode|Keiner|  
 |<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|event|Dieses Steuerelement verfügt über keine zugeordneten Ereignisse. Verwenden Sie diesen generischen Delegaten.|  
   
 <a name="Exceptions"></a>   
@@ -64,6 +64,7 @@ ms.locfileid: "57678380"
 |<xref:System.InvalidOperationException>|Es wird <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> - oder <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> aufgerufen, wenn <xref:System.Windows.Automation.ExpandCollapseState> = <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)

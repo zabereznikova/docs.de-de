@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das ausgeführt wird.'
+title: 'Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das den Fortschritt anzeigt'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: 6910a7e2e68a3807e08a8b196dde003e1d5bc9af
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1f457d6e2b0eb73da7a16dc93ea80a14ddb4b2c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720243"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202013"
 ---
-# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Vorgehensweise: Erstellen Sie ein Windows Forms-Steuerelement, das ausgeführt wird.
+# <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das den Fortschritt anzeigt
 Das folgende Codebeispiel zeigt ein benutzerdefiniertes Steuerelement mit dem Namen `FlashTrackBar`, mit dem der Benutzer die Ebene oder den Fortschritt einer Anwendung anzeigen lassen kann. Es verwendet Farbverläufe, um den Fortschritt darzustellen.  
   
  Das `FlashTrackBar`-Steuerelement stellt die folgenden Konzepte dar:  
@@ -28,9 +28,9 @@ Das folgende Codebeispiel zeigt ein benutzerdefiniertes Steuerelement mit dem Na
   
 -   Überschreiben der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, um die Logik zum Zeichnen des Steuerelements bereitzustellen.  
   
--   Berechnen des verfügbaren Bereichs für das Zeichnen des Steuerelements mit dessen <xref:System.Windows.Forms.Control.ClientRectangle%2A> Eigenschaft. Dies erfolgt normalerweise durch `FlashTrackBar` in der Methode `OptimizedInvalidate`.  
+-   Berechnen des verfügbaren Bereichs für das Zeichnen des Steuerelements mit dessen <xref:System.Windows.Forms.Control.ClientRectangle%2A> Eigenschaft. `FlashTrackBar` hierfür die `OptimizedInvalidate` Methode.  
   
--   Implementieren der Serialisierung oder Dauerhaftigkeit für eine Eigenschaft, wenn sie in Windows Forms-Designer geändert wird. `FlashTrackBar` definiert die Methoden `ShouldSerializeStartColor` und `ShouldSerializeEndColor` für die Serialisierung der Eigenschaften `StartColor` und `EndColor`.  
+-   Implementieren der Serialisierung oder Dauerhaftigkeit für eine Eigenschaft, wenn sie in Windows Forms-Designer geändert wird. `FlashTrackBar` definiert die `ShouldSerializeStartColor` und `ShouldSerializeEndColor` Methoden zum Serialisieren der `StartColor` und `EndColor` Eigenschaften.  
   
  In der folgenden Tabelle werden die von `FlashTrackBar` benutzerdefinierten Eigenschaften dargestellt.  
   
@@ -93,5 +93,6 @@ Das folgende Codebeispiel zeigt ein benutzerdefiniertes Steuerelement mit dem Na
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erweitern der Entwurfszeitunterstützung](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [Grundlagen für das Entwickeln von Windows Forms-Steuerelementen](windows-forms-control-development-basics.md)
+- [Grundlagen für das Entwickeln von Windows Forms-Steuerelementen](windows-forms-control-development-basics.md)

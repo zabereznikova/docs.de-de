@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e5c12cc6d09e2f1c5b0c58ac4ad3462dca3463c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87094532a52d8f6309998486375ef4eb33b07f20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700974"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189390"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError-MDA
 Der `fatalExecutionEngineError`-Assistent für verwaltetes Debuggen (MDA) wird aktiviert, wenn ein schwerwiegender Fehler in der Common Language Runtime (CLR) erkannt wurde. Der Prozess wird beendet.  
@@ -74,6 +74,7 @@ Der `fatalExecutionEngineError`-Assistent für verwaltetes Debuggen (MDA) wird a
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution.Cer>
-- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

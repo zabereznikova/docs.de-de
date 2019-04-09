@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 3fefbe9696ba7618dc811c6ac8f600bb6322dad5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048048"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228197"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML-Zeichenentitäten und XAML
 XAML verwendet für Sonderzeichen in XML definierte Zeichenentitäten. In diesem Thema werden einige bestimmte Zeichenentitäten und allgemeine Überlegungen für andere XML-Konzepte in XAML beschrieben.  
@@ -46,7 +46,7 @@ XAML verwendet für Sonderzeichen in XML definierte Zeichenentitäten. In diesem
   
 |Zeichen|Entität|Hinweise|  
 |---------------|------------|-----------|  
-|& (Und)|\&amp;|Muss sowohl in Attributwerten als auch in Elementinhalten verwendet werden.|  
+|& (kaufmännisches und-Zeichen)|\&amp;|Muss sowohl in Attributwerten als auch in Elementinhalten verwendet werden.|  
 |> (größer-als-Zeichen)|\&gt;|Für einen Attributwert muss verwendet werden, aber > ist in Elementinhalten zulässig, wenn der Inhalt eines Elements so lange wie < nicht vorausgeht.|  
 |< (kleiner-als-Zeichen)|\&lt;|Für einen Attributwert muss verwendet werden, aber \< ist in Elementinhalten zulässig, wenn der Inhalt eines Elements so lange wie > werden nicht befolgt.|  
 |" (gerades Anführungszeichen)|\&quot;|Muss in Attributwerten verwendet werden. Jedoch ist ein gerades Anführungszeichen (") in Elementinhalten zulässig. Beachten Sie, dass Attributwerte durch ein einzelnes gerades Anführungszeichen (') oder ein gerades Anführungszeichen (") umschlossen werden können. Das Zeichen, das zuerst vorkommt, wird als Umschließungszeichen für Attributwerte festgelegt, und das andere Zeichen kann im Wert als Literalzeichen verwendet werden.|  
@@ -63,7 +63,8 @@ XAML verwendet für Sonderzeichen in XML definierte Zeichenentitäten. In diesem
  XAML behandelt XML-Verarbeitungsanweisungen gemäß den XML-Spezifikationen, die angeben, dass die Anweisungen übergeben werden müssen. XAML-Verarbeitung in .NET Framework-XAML-Dienste werden keine verarbeitungsanweisungen verwendet. Andere vorhandene Frameworks, die XAML verwenden, verwenden auch keine Verarbeitungsanweisungen von XAML.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [Markuperweiterungen und WPF-XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [XamlName-Grammatik](xamlname-grammar.md)
-- [Leerzeichen in XAML verarbeitet](whitespace-processing-in-xaml.md)
+- [Leerstellenverarbeitung in XAML](whitespace-processing-in-xaml.md)

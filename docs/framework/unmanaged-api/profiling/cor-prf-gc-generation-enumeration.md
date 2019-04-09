@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15bd3ed8f1642e44ecf9c4df49feebd72eeac8c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0178e2a7877803644bb25e6700306d7ac2ef2d4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215890"
 ---
 # <a name="corprfgcgeneration-enumeration"></a>COR_PRF_GC_GENERATION-Enumeration
 Identifiziert eine Garbage Collection-Generation.  
@@ -63,4 +63,5 @@ typedef enum {
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Profilerstellungsenumerationen](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 5e9194dc4dc8ef3246870dc1fd71fa53d3ad143f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368167"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227482"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>Neues in WPF Version 4.5
 <a name="introduction"></a> Dieses Thema enthält Informationen zu neuen und verbesserten Features in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Version 4.5.  
@@ -102,7 +102,7 @@ ms.locfileid: "57368167"
 |Die Zieleigenschaft|<xref:System.Windows.Data.BindingExpressionBase.TargetProperty%2A?displayProperty=nameWithType>|  
 |Das Quellobjekt|<xref:System.Windows.Data.BindingExpression.ResolvedSource%2A?displayProperty=nameWithType>|  
 |Die Quelleigenschaft|<xref:System.Windows.Data.BindingExpression.ResolvedSourcePropertyName%2A?displayProperty=nameWithType>|  
-|Ob die <xref:System.Windows.Data.BindingExpression> zu einer <xref:System.Windows.Data.BindingGroup> gehört|<xref:System.Windows.Data.BindingExpressionBase.BindingGroup%2A?displayProperty=nameWithType>|  
+|Ob die <xref:System.Windows.Data.BindingExpression> gehört zu einer <xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingExpressionBase.BindingGroup%2A?displayProperty=nameWithType>|  
 |Der Besitzer einer <xref:System.Windows.Data.BindingGroup>|<xref:System.Windows.Data.BindingGroup.Owner%2A>|  
   
 <a name="DisconnectedSource"></a>   
@@ -126,4 +126,5 @@ ms.locfileid: "57368167"
  WPF 4.5 unterstützt Markuperweiterungen für Ereignisse.  WPF definiert zwar keine Markuperweiterung zur Verwendung für Ereignisse, diese können aber von Drittanbietern erstellt werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Neuigkeiten in .NET Framework](../../whats-new/index.md)

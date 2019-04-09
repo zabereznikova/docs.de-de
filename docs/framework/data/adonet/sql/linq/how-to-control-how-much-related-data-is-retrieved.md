@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Steuern Sie, wie viel verbundene Daten abgerufen werden'
+title: 'Vorgehensweise: Steuern, wie viel verbundene Daten abgerufen werden'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: efdc203e-3da9-4477-815e-54f10c3d7c6c
-ms.openlocfilehash: 3b52e2cdefefce011be7d729569b76f919f9bb33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd59c09185eab003274614dcc30393b060e6b7c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715607"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215442"
 ---
-# <a name="how-to-control-how-much-related-data-is-retrieved"></a>Vorgehensweise: Steuern Sie, wie viel verbundene Daten abgerufen werden
+# <a name="how-to-control-how-much-related-data-is-retrieved"></a>Vorgehensweise: Steuern, wie viel verbundene Daten abgerufen werden
 Geben Sie mit der <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>-Methode an, welche mit Ihrem Hauptziel verbundenen Daten gleichzeitig abgerufen werden sollen. Wenn Sie beispielsweise Informationen über die Bestellungen eines Kunden benötigen, können Sie mithilfe von <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> sicherstellen, dass die Bestellinformationen zusammen mit den Kundeninformationen abgerufen werden. Dadurch können beide Informationssätze in einem Vorgang aus der Datenbank abgerufen werden.  
   
 > [!NOTE]
@@ -25,4 +25,5 @@ Geben Sie mit der <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A>-Methode an
  [!code-vb[System.Data.Linq.DataLoadOptions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Abfragen der Datenbank](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

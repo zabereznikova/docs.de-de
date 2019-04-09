@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224285"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Optimieren der Leistung: Weitere Empfehlungen
 <a name="introduction"></a> Dieses Thema enthält Empfehlungen zur Leistung zusätzlich zu denen im Abschnitt [Optimierung der WPF-Anwendungsleistung](optimizing-wpf-application-performance.md).  
@@ -73,8 +73,9 @@ ms.locfileid: "57358937"
  Der [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Dienst für den Schriftartencache stellt Schriftartdaten über [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendungen hinweg zur Verfügung. Die erste [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Anwendung, die Sie ausführen, startet diesen Dienst, wenn er noch nicht ausgeführt wird. Bei Verwendung von [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], Sie können den Dienst "Windows Presentation Foundation (WPF)--schriftartcache 3.0.0.0" auf "Automatisch (verzögerter Start)" von "Manuell" (Standardeinstellung) festlegen, reduzieren Sie die anfängliche Startzeit von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Planen der Anwendungsleistung](planning-for-application-performance.md)
-- [Vorteile der Hardware nutzen](optimizing-performance-taking-advantage-of-hardware.md)
+- [Nutzen der Vorteile der Hardware](optimizing-performance-taking-advantage-of-hardware.md)
 - [Layout und Entwurf](optimizing-performance-layout-and-design.md)
 - [2D-Grafiken und Bildverarbeitung](optimizing-performance-2d-graphics-and-imaging.md)
 - [Objektverhalten](optimizing-performance-object-behavior.md)

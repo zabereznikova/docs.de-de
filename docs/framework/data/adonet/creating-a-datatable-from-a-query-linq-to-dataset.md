@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: fd2b639f98dbb381cf4bea70cc790fd99ebf185f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0f750f2d23430691016fc2cf1e5e9d44d80da2a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708349"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204080"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Erstellen einer DataTable aus einer Abfrage (LINQ to DataSet)
 Das <xref:System.Data.DataTable>-Objekt wird häufig zur Datenbindung eingesetzt. Die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode kopiert die Ergebnisse einer Abfrage in eine <xref:System.Data.DataTable>, die dann für die Datenbindung verwendet werden kann. Wenn die Datenoperationen ausgeführt wurden, wird die neue <xref:System.Data.DataTable> wieder mit der ursprünglichen <xref:System.Data.DataTable> zusammengeführt.  
@@ -75,6 +75,7 @@ Das <xref:System.Data.DataTable>-Objekt wird häufig zur Datenbindung eingesetzt
  [!code-vb[DP Custom CopyToDataTable Examples#LoadScalarSequence](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP Custom CopyToDataTable Examples/VB/Module1.vb#loadscalarsequence)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Programmierhandbuch](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
 - [Generische Field- und SetField-Methoden](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
 - [Beispiele für LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

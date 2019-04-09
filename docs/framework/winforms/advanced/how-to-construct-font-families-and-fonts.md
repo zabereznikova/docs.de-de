@@ -8,12 +8,12 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: b651671e525ae5cfc365a392b96d258ac835a21c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708553"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181219"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>Vorgehensweise: Erstellen von Schriftartfamilien und Schriftarten
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Schriftarten mit dem gleichen Schriftart, aber verschiedene Formate gruppiert in Schriftfamilien. Die Familie der Schriftart Arial enthält beispielsweise die folgenden Schriftarten:  
@@ -47,8 +47,9 @@ ms.locfileid: "57708553"
  [!code-vb[System.Drawing.FontsAndText#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert die <xref:System.Windows.Forms.PaintEventArgs>`e`-Klasse, die ein Parameter von <xref:System.Windows.Forms.PaintEventHandler> ist.  
+ Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs>`e`, d.h. ein Parameter vom <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden von Schriftarten und Text](using-fonts-and-text.md)
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)

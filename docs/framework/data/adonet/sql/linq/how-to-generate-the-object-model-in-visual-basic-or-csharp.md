@@ -1,13 +1,13 @@
 ---
-title: 'Vorgehensweise: Generieren des Objektmodells in Visual Basic oderC#'
+title: 'Vorgehensweise: Generieren des Objektmodells in Visual Basic oder C#'
 ms.date: 03/30/2017
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
-ms.openlocfilehash: 2e60905cc7bf30421a48288378b136bad5f7ee83
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8752a28b9bcfd068afcfc5d33c3097f26cf0f231
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225364"
 ---
 # <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>Vorgehensweise: Generieren des Objektmodells in Visual Basic oder C#\#
 In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wird einer relationalen Datenbank ein Objektmodell in einer eigenen Programmiersprache zugeordnet. Zwei Tools zur Verfügung, für die automatische Generierung eine Visual Basic oder C# Modelle aus den Metadaten einer vorhandenen Datenbank.  
@@ -36,12 +36,13 @@ sqlmetal /code:northwind.cs /language:csharp "c:\northwnd.mdf" /sprocs /function
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Programmierhandbuch](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
 - [Das LINQ to SQL-Objektmodell](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
 - [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
 - [Vorgehensweise: Anpassen von Entitätsklassen mit dem Code-Editor](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
-- [Attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [Attributbasiertes Zuordnen](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)
-- [External Mapping (Externe Zuordnung)](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [Erstellen des Objektmodells](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)

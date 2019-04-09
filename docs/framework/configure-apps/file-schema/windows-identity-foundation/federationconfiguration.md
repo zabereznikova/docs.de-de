@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: befa74f02ccb0dde4448f36c0698feebaf6201ce
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: e1e92fccfad792fc1b9df86a582f0406a87f34e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195285"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Konfiguriert die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) und die <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) bei Verwendung von Verbundauthentifizierung über das WS-Verbund-Protokoll. Konfiguriert die <xref:System.Security.Claims.ClaimsAuthorizationManager> bei Verwendung der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> oder <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Klasse, um anspruchsbasierte Zugriffssteuerung bereitzustellen.  
@@ -92,6 +92,7 @@ Konfiguriert die <xref:System.IdentityModel.Services.WSFederationAuthenticationM
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>
 - <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

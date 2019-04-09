@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: bc209d184ac330b112d17c34f0bf1c479a8b5f7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516160"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228879"
 ---
 # <a name="denial-of-service"></a>Dienstverweigerung (Denial of Service)
 Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass Nachrichten nicht verarbeitet werden können oder extrem langsam verarbeitet werden.  
@@ -17,7 +17,7 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
 ## <a name="excess-memory-consumption"></a>Übermäßiger Speicherverbrauch  
  Beim Lesen eines XML-Dokuments mit einer großen Anzahl von eindeutigen lokalen Namen, Namespaces oder Präfixen kann ein Problem auftreten. Wenn Sie eine von <xref:System.Xml.XmlReader> abgeleitete Klasse verwenden und für jedes Element die Eigenschaft <xref:System.Xml.XmlReader.LocalName%2A>, <xref:System.Xml.XmlReader.Prefix%2A> oder <xref:System.Xml.XmlReader.NamespaceURI%2A> aufrufen, wird die zurückgegebene Zeichenfolge einer <xref:System.Xml.NameTable> hinzugefügt. Die Größe der in der <xref:System.Xml.NameTable> gespeicherten Auflistung nimmt nie ab, sodass ein virtueller Speicherverlust an Zeichenfolgenhandles eintritt.  
   
- Mögliche Gegenmaßnahmen:  
+ Mögliche Entschärfungen:  
   
 -   Leiten Sie von der <xref:System.Xml.NameTable>-Klasse ab, und erzwingen Sie ein maximales Größenkontingent. (Die Verwendung einer <xref:System.Xml.NameTable> lässt sich nicht umgehen, und der Austausch einer vollen <xref:System.Xml.NameTable> ist nicht möglich.)  
   
@@ -26,20 +26,20 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
 ## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>Ein bösartiger Client sendet übermäßig viele Lizenzanforderungen an den Dienst  
  Wenn ein bösartiger Client einen Dienst mit übermäßig vielen Lizenzanforderungen überschwemmt, kann dies eine hohe Speicherauslastung auf dem Server bewirken.  
   
- Mitigation: Verwenden Sie die folgenden Eigenschaften der <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> Klasse:  
+ Entschärfung: Verwenden Sie die folgenden Eigenschaften der <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings> Klasse:  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: Steuert die maximale Anzahl zeitlich begrenzter `SecurityContextToken`, die der Server nach einer `SPNego`- oder `SSL`-Aushandlung zwischenspeichert.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>: steuert die maximale Anzahl zeitlich begrenzter `SecurityContextToken`s, die nach dem der Server speichert zwischen `SPNego` oder `SSL` Aushandlung.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: Steuert die Lebensdauer der `SecurityContextTokens`, die der Dienst nach der `SPNego`- oder `SSL`-Aushandlung ausstellt. Der Server speichert die `SecurityContextToken` für diesen Zeitraum zwischen.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: steuert die Lebensdauer des der `SecurityContextTokens` , die die Serverprobleme, die folgenden `SPNego` oder `SSL` Aushandlung. Der Server speichert die `SecurityContextToken` für diesen Zeitraum zwischen.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: Steuert die maximale Anzahl sicherer Konversationen, die auf dem Server erstellt werden, für die jedoch keine Anwendungsnachrichten verarbeitet wurden. Dieses Kontingent verhindert, dass Clients sichere Konversationen auf dem Dienst erstellen, sodass der Dienst den Zustand pro Client beibehält, sie jedoch nicht verwendet.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: steuert die maximale Anzahl sicherer Konversationen, die eingerichtet werden, auf dem Server, aber für die keine Anwendungsnachrichten verarbeitet wurden. Dieses Kontingent verhindert, dass Clients sichere Konversationen auf dem Dienst erstellen, sodass der Dienst den Zustand pro Client beibehält, sie jedoch nicht verwendet.  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: Steuert die maximale Zeit, die der Dienst eine sichere Konversation aufrechterhält, ohne eine Anwendungsnachricht vom Client für die Konversation zu erhalten. Dieses Kontingent verhindert, dass Clients sichere Konversationen auf dem Dienst erstellen, sodass der Dienst den Zustand pro Client beibehält, sie jedoch nicht verwendet.  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: steuert die maximale Zeit, die der Dienst, eine sichere Konversation aktiv sorgt ohne eine Anwendungsnachricht vom Client für die Konversation empfangen. Dieses Kontingent verhindert, dass Clients sichere Konversationen auf dem Dienst erstellen, sodass der Dienst den Zustand pro Client beibehält, sie jedoch nicht verwendet.  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding oder benutzerdefinierte Dualbindungen erfordern Clientauthentifizierung  
  Standardmäßig ist die Sicherheit für <xref:System.ServiceModel.WSDualHttpBinding> aktiviert. Es ist jedoch möglich, dass, wenn die Clientauthentifizierung durch Festlegen der <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A>-Eigenschaft auf <xref:System.ServiceModel.MessageCredentialType.None> deaktiviert ist, ein böswilliger Benutzer einen Denial-of-Service-Angriff auf einen dritten Dienst verursacht. Die Ursache dafür ist, dass ein böswilliger Benutzer den Dienst anweisen kann, einen Nachrichtenstream an einen dritten Dienst zu senden.  
   
- Legen Sie die Eigenschaft nicht auf `None` fest, um diese Gefahr zu umgehen. Bedenken Sie diese Möglichkeit auch beim Erstellen einer benutzerdefinierten Nachricht mit dualem Nachrichtenmuster.  
+ Legen Sie die Eigenschaft nicht auf `None` fest, um diese Gefahr zu umgehen. Bedenken Sie diese Möglichkeit auch beim Erstellen einer benutzerdefinierten Bindung mit dualem Nachrichtenmuster.  
   
 ## <a name="auditing-event-log-can-be-filled"></a>Überwachungsereignisprotokoll kann ausgefüllt werden  
  Wenn ein böswilliger Benutzer erkennt, dass die Überwachung aktiviert ist, kann dieser Angreifer ungültige Nachrichten senden, die dazu führen, dass Überwachungseinträge geschrieben werden. Wenn das Überwachungsprotokoll auf diese Weise ausgefüllt wird, schlägt das Überwachungssystem fehl.  
@@ -49,7 +49,7 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
 ## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>Ungültige Implementierungen von IAuthorizationPolicy können zu Dienstfehlern führen  
  Das Aufrufen der <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>-Methode für eine fehlerhafte Implementierung der <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Schnittstelle kann Dienstfehler verursachen.  
   
- Mitigation: Verwenden Sie nur vertrauenswürdigen Code. Verwenden Sie also nur selbst geschriebenen und getesteten Code oder Code von einem vertrauenswürdigen Anbieter. Lassen Sie nicht ohne gründliche Prüfung zu, dass nicht vertrauenswürdige Erweiterungen der <xref:System.IdentityModel.Policy.IAuthorizationPolicy> in Ihren Code geladen werden. Dies gilt für alle in einer Dienstimplementierung verwendeten Erweiterungen. WCF macht nicht zwischen Anwendungscode und Fremdschlüssel Code, der im Netzbetrieb befindet über Erweiterungspunkte.  
+ Entschärfung: Verwenden Sie nur vertrauenswürdigen Code. Verwenden Sie also nur selbst geschriebenen und getesteten Code oder Code von einem vertrauenswürdigen Anbieter. Lassen Sie nicht ohne gründliche Prüfung zu, dass nicht vertrauenswürdige Erweiterungen der <xref:System.IdentityModel.Policy.IAuthorizationPolicy> in Ihren Code geladen werden. Dies gilt für alle in einer Dienstimplementierung verwendeten Erweiterungen. WCF macht nicht zwischen Anwendungscode und Fremdschlüssel Code, der im Netzbetrieb befindet über Erweiterungspunkte.  
   
 ## <a name="kerberos-maximum-token-size-may-need-resizing"></a>Maximale Größe des Kerberos-Tokens muss möglicherweise geändert werden  
  Gehört ein Client zu vielen Gruppen (ungefähr 900, obwohl die tatsächliche Anzahl je nach den Gruppen variiert), kann ein Problem auftreten, wenn ein Nachrichtenheaderblock größer als 64 Kilobyte ist. In diesem Fall können Sie die maximale Größe des Kerberos token, erhöhen, wie beschrieben im Microsoft Support-Artikel "[Internet Explorer Kerberos-Authentifizierung funktioniert nicht wegen nicht ausreichenden Puffers für Verbindung zu IIS](https://go.microsoft.com/fwlink/?LinkId=89176)." Sie müssen möglicherweise auch die maximale Größe der WCF-Nachrichten zur Aufnahme der größeren Kerberos-Token zu erhöhen.  
@@ -80,10 +80,11 @@ Eine Dienstverweigerung tritt auf, wenn ein System derart überlastet ist, dass 
  Legen Sie den Grenzwert für die maximale Anzahl aktiver Sitzungen und die maximale Lebensdauer für eine Sitzung über die <xref:System.ServiceModel.Channels.SecurityBindingElement>-Eigenschaft der <xref:System.ServiceModel.Channels.SecurityBindingElement>-Klasse fest, wenn Sie dieses Sicherheitsproblem vermeiden möchten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
-- [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Veröffentlichung von Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Angriffe durch Rechteerweiterung](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Dienstverweigerung (Denial of Service)](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Wiederholungsangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Verfälschungen](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

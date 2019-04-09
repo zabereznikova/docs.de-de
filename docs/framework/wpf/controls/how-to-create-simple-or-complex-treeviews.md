@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Erstellen von einfachen oder komplexen TreeViews'
+title: 'Vorgehensweise: Erstellen von einfachen oder komplexen TreeView-Objekten'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], creating
 - Control class [WPF], TreeView [WPF], creating
 ms.assetid: 1defbb78-b8e7-4c0e-b650-576453ac828d
-ms.openlocfilehash: 9b19443c80818809122b0bbfc7c7dae7b4b40da5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7edb4933ebcc0f0d2cb02754238c2342ee9dd4a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205146"
 ---
-# <a name="how-to-create-simple-or-complex-treeviews"></a>Vorgehensweise: Erstellen von einfachen oder komplexen TreeViews
+# <a name="how-to-create-simple-or-complex-treeviews"></a>Vorgehensweise: Erstellen von einfachen oder komplexen TreeView-Objekten
 In diesem Beispiel wird gezeigt, wie zum Erstellen von einfachen oder komplexen <xref:System.Windows.Controls.TreeView> Steuerelemente.  
   
  Ein <xref:System.Windows.Controls.TreeView> besteht aus einer Hierarchie von <xref:System.Windows.Controls.TreeViewItem> -Steuerelemente, die einfache Textzeichenfolgen und auch eine komplexere Inhalte, z. B. darf <xref:System.Windows.Controls.Button> Steuerelemente oder ein <xref:System.Windows.Controls.StackPanel> mit eingebetteter Inhalt. Sie können explizit definieren, die <xref:System.Windows.Controls.TreeView> Inhalt oder eine Datenquelle kann der Inhalt bereitgestellt. Dieses Thema enthält Beispiele für diese Konzepte.  
@@ -41,7 +41,8 @@ In diesem Beispiel wird gezeigt, wie zum Erstellen von einfachen oder komplexen 
  [!code-xaml[TreeViewSimple#9](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#9)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
 - [Übersicht über TreeView](treeview-overview.md)
-- [Themen zu Vorgehensweisen](treeview-how-to-topics.md)
+- [Gewusst wie-Themen](treeview-how-to-topics.md)

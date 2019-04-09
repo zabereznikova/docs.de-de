@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 33f6e5f7929c5a4231c0779964db177f45af6743
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
-ms.translationtype: MT
+ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055208"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189312"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Übersicht über das DataGrid-Steuerelement (Windows Forms)
 > [!NOTE]
@@ -140,6 +140,7 @@ In der folgenden Abbildung sind die im DataGrid-Steuerelement enthaltenen Objekt
  Neben den allgemeinen Steuerelementereignissen wie <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.Enter> und <xref:System.Windows.Forms.DataGrid.Scroll> unterstützt das <xref:System.Windows.Forms.DataGrid>-Steuerelement auch Ereignisse im Zusammenhang mit der Bearbeitung und Navigation innerhalb des Rasters. Die <xref:System.Windows.Forms.DataGrid.CurrentCell%2A>-Eigenschaft bestimmt, welche Zelle ausgewählt wird. Das <xref:System.Windows.Forms.DataGrid.CurrentCellChanged>-Ereignis wird ausgelöst, wenn der Benutzer zu einer anderen Zelle navigiert. Wenn der Benutzer über hierarchische Beziehungen zu einer neuen Tabelle navigiert, wird das <xref:System.Windows.Forms.DataGrid.Navigate>-Ereignis ausgelöst. Das <xref:System.Windows.Forms.DataGrid.BackButtonClick>-Ereignis wird ausgelöst, wenn der Benutzer beim Anzeigen einer untergeordneten Tabelle auf die Schaltfläche "Zurück" klickt. Und das <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick>-Ereignis wird beim Klicken auf das Symbol zum Ein- und Ausblenden von übergeordneten Zeilen ausgelöst.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)
 - [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

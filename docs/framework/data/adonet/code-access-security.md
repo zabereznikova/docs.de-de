@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: af3fe9a233972e939dc14117fc08343bca9d5fd6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411563"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174108"
 ---
 # <a name="code-access-security-and-adonet"></a>Codezugriffssicherheit und ADO.NET
 .NET Framework bietet sowohl rollenbasierte Sicherheit als auch Codezugriffssicherheit (Code Access Security, CAS). Beide werden mit einer von der CLR (Common Language Runtime) bereitgestellten gemeinsamen Infrastruktur implementiert. In der Welt des nicht verwalteten Codes werden die meisten Anwendungen mit den Berechtigungen des Benutzers oder Prinzipals ausgeführt. Daher können Computersysteme beschädigt werden und vertrauliche Daten in die falschen Hände gelangen, wenn ein Benutzer mit erweiterten Rechten schädliche oder fehlerhafte Software ausführt.  
@@ -27,11 +27,11 @@ ms.locfileid: "58411563"
   
  Es gibt die folgenden drei Arten von Codezugriffsberechtigungen:  
   
--   `Code access permissions` leiten sich aus der <xref:System.Security.CodeAccessPermission>-Klasse her. Die Berechtigungen werden benötigt, um auf geschützte Ressourcen, z. B. Dateien und Umgebungsvariablen, zugreifen und geschützte Vorgänge, z. B. das Zugreifen auf nicht verwalteten Code, ausführen zu können.  
+-   `Code access permissions` Leiten Sie von der <xref:System.Security.CodeAccessPermission> Klasse. Die Berechtigungen werden benötigt, um auf geschützte Ressourcen, z. B. Dateien und Umgebungsvariablen, zugreifen und geschützte Vorgänge, z. B. das Zugreifen auf nicht verwalteten Code, ausführen zu können.  
   
--   `Identity permissions` stehen für Eigenschaften, die eine Assembly identifizieren. Die Berechtigungen werden einer Assembly nach Vorlage eines Beweises gewährt. Als Beweise gelten z. B. digitale Signaturen oder der Ursprung des Codes. Identitätsberechtigungen leiten sich auch von der <xref:System.Security.CodeAccessPermission>-Basisklasse her.  
+-   `Identity permissions` stehen Sie für Eigenschaften, die eine Assembly zu identifizieren. Die Berechtigungen werden einer Assembly nach Vorlage eines Beweises gewährt. Als Beweise gelten z. B. digitale Signaturen oder der Ursprung des Codes. Identitätsberechtigungen leiten sich auch von der <xref:System.Security.CodeAccessPermission>-Basisklasse her.  
   
--   `Role-based security permissions` basieren darauf, ob ein Prinzipal eine bestimmte Identität besitzt oder Member einer bestimmten Rolle ist. Die Klasse <xref:System.Security.Permissions.PrincipalPermission> ermöglicht sowohl deklarative als auch imperative Berechtigungsprüfungen des aktiven Prinzipals.  
+-   `Role-based security permissions` werden, hängt davon ab, ob ein Prinzipal eine bestimmte Identität besitzt oder ein Mitglied einer angegebenen Rolle ist. Die Klasse <xref:System.Security.Permissions.PrincipalPermission> ermöglicht sowohl deklarative als auch imperative Berechtigungsprüfungen des aktiven Prinzipals.  
   
  Zur Bestimmung, ob Code auf eine Ressource zugreifen oder einen Vorgang ausführen darf, durchläuft das Laufzeit-Sicherheitssystem die Aufrufliste und vergleicht dabei die gewährten Berechtigungen der einzelnen Aufrufer mit den angeforderten Berechtigungen. Wenn einer der Aufrufer in der Aufrufliste die angeforderte Berechtigung nicht besitzt, wird eine <xref:System.Security.SecurityException> ausgelöst, und der Zugriff wird verweigert.  
   
@@ -190,12 +190,13 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>Interoperabilität mit nicht verwaltetem Code  
- Code, der außerhalb der CLR ausgeführt wird, wird als nicht verwalteter Code bezeichnet. Deshalb können Sicherheitsmechanismen, z. B. CAS, auf nicht verwalteten Code nicht angewendet werden. COM-Komponenten, ActiveX-Schnittstellen und Windows-API-Funktionen sind Beispiele für nicht verwalteten Code. Damit bei der Ausführung von nicht verwaltetem Code die Gesamtsicherheit der Anwendung nicht gefährdet wird, sind besondere Sicherheitsüberlegungen notwendig. Weitere Informationen finden Sie unter [Interoperation mit nicht verwaltetem Code](../../../../docs/framework/interop/index.md).  
+ Code, der außerhalb der CLR ausgeführt wird, wird als nicht verwalteter Code bezeichnet. Deshalb können Sicherheitsmechanismen, z. B. CAS, auf nicht verwalteten Code nicht angewendet werden. Beispiele für nicht verwalteten Code sind COM-Komponenten, ActiveX-Schnittstellen und Windows API-Funktionen. Damit bei der Ausführung von nicht verwaltetem Code die Gesamtsicherheit der Anwendung nicht gefährdet wird, sind besondere Sicherheitsüberlegungen notwendig. Weitere Informationen finden Sie unter [Interoperation mit nicht verwaltetem Code](../../../../docs/framework/interop/index.md).  
   
  .NET Framework unterstützt den Zugriff durch COM-Interop, um die Abwärtskompatibilität zu vorhandenen COM-Komponenten sicherzustellen. Sie können COM-Komponenten in eine .NET Framework-Anwendung einbauen, indem Sie die entsprechenden COM-Typen mit den COM-Interop-Tools importieren. Nach dem Import sind die COM-Typen einsatzbereit. COM-Interop ermöglicht es COM-Clients auch, auf verwalteten Code zuzugreifen, indem Assemblymetadaten in eine Typbibliothek exportiert und die verwalteten Komponenten als COM-Komponente registriert werden. Weitere Informationen finden Sie unter [Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Sicherheit in systemeigenem Code und .NET Framework-Code](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [Sicherheit in systemeigenem Code und .NET Framework-Code](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Rollenbasierte Sicherheit](../../../../docs/standard/security/role-based-security.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

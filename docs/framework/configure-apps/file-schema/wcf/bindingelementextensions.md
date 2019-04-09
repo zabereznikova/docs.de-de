@@ -2,12 +2,12 @@
 title: <bindingElementExtensions>
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: 9a2a3af093949c1d724fdea13655bbb80fe71048
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 775f93f319c136a29a32ffaa1dfabc12ee081b29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227508"
 ---
 # <a name="bindingelementextensions"></a>\<bindingElementExtensions>
 Dieser Abschnitt aktiviert die Verwendung eines benutzerdefinierten Elements für einen Computer oder eine Anwendungskonfigurationsdatei. Sie können ein benutzerdefiniertes Bindungselement zur Auflistung hinzufügen, indem Sie das `add`-Schlüsselwort verwenden und das `type`-Attribut des Elements auf eine Bindungselementerweiterung sowie das `name`-Attribut auf das benutzerdefinierte Bindungselement festlegen.  
@@ -44,5 +44,6 @@ Dieser Abschnitt aktiviert die Verwendung eines benutzerdefinierten Elements fü
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>
 - [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)

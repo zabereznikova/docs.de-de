@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: b384e3dde3f2f6ba75feef7954dc9872bd3e3cd5
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9da2f125b7b373d81014150c0d67a1422c932516
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676381"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196358"
 ---
 # <a name="ui-automation-events-for-clients"></a>Benutzeroberflächenautomatisierungs-Ereignisse für Clients
 > [!NOTE]
@@ -18,7 +18,7 @@ ms.locfileid: "57676381"
   
  In diesem Thema wird beschrieben, wie [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]-Ereignisse von Benutzeroberflächenautomatisierungs-Clients verwendet werden.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht es Clients, Ereignisse zu abonnieren. Diese Fähigkeit verbessert die Leistung, weil es nicht mehr erforderlich ist, alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]-Elemente im System ständig daraufhin abzufragen, ob sich eine Information, eine Struktur oder ein Zustand geändert hat.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ermöglicht es Clients Abonnieren von Ereignissen von Interesse sind. Diese Fähigkeit verbessert die Leistung, weil es nicht mehr erforderlich ist, alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]-Elemente im System ständig daraufhin abzufragen, ob sich eine Information, eine Struktur oder ein Zustand geändert hat.  
   
  Die Effizienz wird auch durch die Möglichkeit verbessert, Ereignissen nur innerhalb eines definierten Umfangs zu lauschen. Beispielsweise kann ein Client den Fokusänderungsereignisse aller [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Elemente in der Struktur oder nur einem Element und dessen Nachfolgerelementen lauschen.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "57676381"
 |<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>|Fokusänderung|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|<xref:System.Windows.Automation.AutomationFocusChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>|Eigenschaftenänderung|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddStructureChangedEventHandler%2A>|Strukturänderung|<xref:System.Windows.Automation.StructureChangedEventArgs>|<xref:System.Windows.Automation.StructureChangedEventHandler>|  
-|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|Alle anderen Ereignisse, die durch ein <xref:System.Windows.Automation.AutomationEvent>-Objekt ermittelt werden|<xref:System.Windows.Automation.AutomationEventArgs> oder <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
+|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A>|Alle anderen Ereignisse, identifiziert durch einen <xref:System.Windows.Automation.AutomationEvent>|<xref:System.Windows.Automation.AutomationEventArgs> oder <xref:System.Windows.Automation.WindowClosedEventArgs>|<xref:System.Windows.Automation.AutomationEventHandler>|  
   
  Vor dem Aufrufen der Methode müssen Sie eine Delegatmethode erstellen, mit der das Ereignis verarbeitet wird. Wenn Sie dies bevorzugen, können Sie verschiedene Arten von Ereignissen in einer einzelnen Methode verarbeiten und diese Methode in mehreren Aufrufen an eine der Methoden in der Tabelle übergeben. Sie können beispielsweise einen einzelnen <xref:System.Windows.Automation.AutomationEventHandler> einrichten, der verschiedene Ereignisse entsprechend der <xref:System.Windows.Automation.AutomationEventArgs.EventId%2A> unterschiedlich verarbeitet.  
   
@@ -58,6 +58,7 @@ ms.locfileid: "57676381"
  Beispielcode, finden Sie unter [Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
 - [Übersicht über Benutzeroberflächenautomatisierungs-Ereignisse](../../../docs/framework/ui-automation/ui-automation-events-overview.md)
 - [Übersicht über die Benutzeroberflächenautomatisierungs-Eigenschaften](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)

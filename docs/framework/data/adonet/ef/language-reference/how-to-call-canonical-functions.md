@@ -1,18 +1,18 @@
 ---
-title: 'Vorgehensweise: Aufrufen von kanonischen Funktionen'
+title: 'Vorgehensweise: Aufrufen kanonischer Funktionen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b3d84873-7403-4957-8e20-b4ae39f50214
-ms.openlocfilehash: 33abf1a56750d6f13dabe773605ba1474ec75d45
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 6e555b3d896862db491b34e11564e70bbe2d15eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827304"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213154"
 ---
-# <a name="how-to-call-canonical-functions"></a>Vorgehensweise: Aufrufen von kanonischen Funktionen
+# <a name="how-to-call-canonical-functions"></a>Vorgehensweise: Aufrufen kanonischer Funktionen
 Die <xref:System.Data.Objects.EntityFunctions>-Klasse enthält Methoden, mit denen kanonische Funktionen in LINQ to Entities-Abfragen verwendet werden können. Weitere Informationen zur kanonischen Funktionen finden Sie unter [Kanonische Funktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
   
 > [!NOTE]
@@ -35,5 +35,6 @@ Die <xref:System.Data.Objects.EntityFunctions>-Klasse enthält Methoden, mit den
  [!code-vb[DP L2E CanonicalAndStoreFunctions#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e canonicalandstorefunctions/vb/module1.vb#2)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Aufrufen von Funktionen in LINQ to Entities-Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)
 - [Abfragen in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

@@ -2,12 +2,12 @@
 title: Nachverfolgung von Variablen und Argumenten
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: 4e59a6838d93a57302f0c894445ab9da5d4252ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ef2d6111d5c123ac6c684df09f03398340a5522c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625210"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231034"
 ---
 # <a name="variable-and-argument-tracking"></a>Nachverfolgung von Variablen und Argumenten
 Bei der Nachverfolgung der Workflowausführung kann sich das Extrahieren von Daten oft als nützlich erweisen. Sie stellt zusätzlichen Kontext bereit, wenn nach der Ausführung auf einen Überwachungsdatensatz zugegriffen wird. In [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] können Sie alle sichtbaren Variablen oder Argumente innerhalb des Bereichs einer Aktivität in einem Workflow mithilfe der Nachverfolgung extrahieren. Überwachungsprofile vereinfachen das Extrahieren von Daten.  
@@ -47,5 +47,6 @@ Bei der Nachverfolgung der Workflowausführung kann sich das Extrahieren von Dat
 3.  Stellen Sie bei benutzerdefinierten Überwachungsteilnehmern sicher, dass im WF-Code keine vertraulichen Informationen angegeben sind, die in Variablen oder Argumenten gespeichert werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Windows Server App Fabric-Überwachung](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Überwachen von Anwendungen mit AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)

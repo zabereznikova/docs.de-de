@@ -1,5 +1,5 @@
 ---
-title: <ThrowUnobservedTaskExceptions>-Element
+title: <ThrowUnobservedTaskExceptions> Element
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bc2bffa11c3205c265ca21a9d4c4caa9b31d4e9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: cdce2181490d32212cd2629e98267e43bbe0d334
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281501"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189403"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions> Element
 Gibt an, ob ein laufender Prozess durch Aufgabenausnahmefehler beendet werden soll.  
@@ -91,5 +91,6 @@ Gibt an, ob ein laufender Prozess durch Aufgabenausnahmefehler beendet werden so
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)

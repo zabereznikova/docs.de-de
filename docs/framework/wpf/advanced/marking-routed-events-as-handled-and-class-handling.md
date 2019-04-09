@@ -17,18 +17,16 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378837"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172106"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>Markieren von Routingereignissen als behandelt und Klassenbehandlung
 Handler für ein Routingereignis können das Ereignis innerhalb der Ereignisdaten als behandelt markieren. Das Behandeln des Ereignisses verkürzt die Route. Die Klassenbehandlung ist ein Programmierkonzept, das von Routingereignissen unterstützt wird. Ein Klassenhandler hat die Möglichkeit, ein bestimmtes Routingereignis auf Klassenebene mit einem Ereignishandler zu verarbeiten, der vor jedem Instanzenhandler auf jeder Instanz der Klasse aufgerufen wird.  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>Vorraussetzungen  
  In diesem Thema werden unter [Übersicht über Routingereignisse](routed-events-overview.md) eingeführte Konzepte näher erläutert.  
@@ -99,6 +97,7 @@ Handler für ein Routingereignis können das Ereignis innerhalb der Ereignisdate
  Das zweite Verfahren funktioniert nur für Eingabeereignisse, in denen die Tunneling- und Bubblingversionen des Routingereignisses kombiniert werden. Für diese Routingereignisse können Sie stattdessen der Vorschau-/Tunnelingversion des Routingereignisses Handler hinzufügen. Dieses Routingereignis tunnelt ausgehend vom Stamm durch die Route, damit der Code für die Behandlung der Schaltflächenklasse es nicht abfängt, vorausgesetzt, dass Sie den Vorschauhandler in einer Vorgängerebene in der Anwendungsstruktur angefügt haben. Wenn Sie diesen Ansatz verwenden, sollten Sie beim Markieren von Vorschauereignissen als behandelt vorsichtig vorgehen. Für das Beispiel mit <xref:System.Windows.UIElement.PreviewMouseLeftButtonDown> im Stammelement behandelt werden, wenn Sie das Ereignis als markiert <xref:System.Windows.RoutedEventArgs.Handled%2A> in die Implementierung des Handlers, würde unterdrückt die <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis. Dies ist in der Regel kein erwünschtes Verhalten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.EventManager>
 - [Vorschauereignisse](preview-events.md)
 - [Erstellen eines benutzerdefinierten Routingereignisses](how-to-create-a-custom-routed-event.md)

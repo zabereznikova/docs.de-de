@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0d4a7f41-c758-4059-8f83-d2e9c2745593
-ms.openlocfilehash: ed59a25421f8347c25f80573fa127debf61b4c36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2133ae7902cc4746e00be75e7a801296073041e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522244"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193933"
 ---
 # <a name="query-expression-syntax-examples-navigating-relationships"></a>Beispiele für die Abfrageausdruckssyntax: Navigieren in Beziehungen
 Die Navigationseigenschaften im [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] sind Verknüpfungseigenschaften für die Suche nach Entitäten an den Enden einer Zuordnung. Navigationseigenschaften ermöglichen einem Benutzer das Navigieren zwischen Entitäten bzw. zwischen einer Entität und verknüpften Entitäten mithilfe eines Zuordnungssatzes. Dieses Thema enthält Beispiele für die Abfrageausdruckssyntax zum Navigieren von Beziehungen mithilfe von Navigationseigenschaften in [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]-Abfragen.  
@@ -47,4 +47,5 @@ Die Navigationseigenschaften im [!INCLUDE[adonet_ef](../../../../../../includes/
  [!code-vb[DP L2E Examples#WhereNavProperty](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#wherenavproperty)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Abfragen in LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-ms.openlocfilehash: 39b1e9945a1cf6cd847fbe82c0b29e50f23bf785
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18c391e97baa170b78dcfe0165fb38b6c6d739f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714148"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210554"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>Hinzufügen von vorhandenen Einschränkungen zu einem "DataSet"
 Die **füllen** -Methode der der **DataAdapter** füllt eine <xref:System.Data.DataSet> nur mit Spalten und Zeilen aus einer Datenquelle jedoch Einschränkungen sind häufig festgelegt, indem die Datenquelle, die **Füllen** Methode fügt diese Schemainformationen nicht der **DataSet** standardmäßig. Zum Auffüllen einer **DataSet** mit vorhandenen primary Key-Einschränkungsinformationen aus einer Datenquelle können Sie entweder Aufruf der **FillSchema** -Methode der der **DataAdapter**, oder legen Sie die **MissingSchemaAction** Eigenschaft der **DataAdapter** zu **AddWithKey** vor dem Aufruf **füllen**. Dadurch wird sichergestellt, dass die Einschränkungen in der **DataSet** widerzuspiegeln, die in der Datenquelle. Foreign Key-Einschränkungsinformationen nicht enthalten ist, und muss erstellt werden, siehe explizit [DataTable-Einschränkungen](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  
@@ -61,7 +61,8 @@ custAdapter.Fill(custDataSet, "Customers");
 >  Wenn die **FillSchema** Methode der **OleDbDataAdapter** -Objekts aufgerufen wird, für einen Befehl aus, die mehrere Resultsets zurückgibt, wird nur die Schemainformationen aus dem ersten Resultset zurückgegeben. Wenn Schemainformationen für mehrere Resultsets zurückgeben Sätze unter Verwendung der **OleDbDataAdapter**, es wird empfohlen, die Sie angeben, ein **MissingSchemaAction** von **AddWithKey** und rufen Sie die Schemainformationen beim Aufruf der **füllen** Methode.  
   
 ## <a name="see-also"></a>Siehe auch
-- [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
-- [DataSets, DataTables und DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+
+- ["DataAdapters" und "DataReaders"](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- ["DataSets", "DataTables" und "DataViews"](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Abrufen und Ändern von Daten in ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

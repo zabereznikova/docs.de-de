@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65da00d99fec5f2280bcd00ce97b8eddafede680
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f150fe80302cd03e872ca8bdf5d172caae1ce599
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230771"
 ---
 # <a name="icorruntimehostcloseenum-method"></a>ICorRuntimeHost::CloseEnum-Methode
 Setzt einen Domänenenumerator wieder an den Anfang der Domänenliste aus.  
@@ -58,5 +58,6 @@ HRESULT CloseEnum (
  **.NET Framework-Versionen:** 1.0, 1.1  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [CorBindToRuntimeEx-Funktion](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
 - [ICorRuntimeHost-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

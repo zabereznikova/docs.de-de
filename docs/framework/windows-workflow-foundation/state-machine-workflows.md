@@ -2,12 +2,12 @@
 title: Zustandsautomatworkflows
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 78ce1124137e3b97978f3522a59ad1febd23135d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724959"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222990"
 ---
 # <a name="state-machine-workflows"></a>Zustandsautomatworkflows
 Ein Zustandsautomat ist ein bekanntes Paradigma zum Entwickeln von Anwendungen. Die <xref:System.Activities.Statements.StateMachine>-Aktivität kann zusammen mit <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition> und anderen Aktivitäten verwendet werden, um Zustandsautomatenworkflow-Programme zu erstellen. Dieses Thema bietet eine Übersicht über das Erstellen von Zustandsautomatenworkflows.  
@@ -101,8 +101,9 @@ Ein Zustandsautomat ist ein bekanntes Paradigma zum Entwickeln von Anwendungen. 
  Ein Zustand, der den Abschluss des Zustandsautomaten darstellt.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Erstellen eines Zustandsautomatenworkflows](how-to-create-a-state-machine-workflow.md)
-- [StateMachine-Aktivitätsdesigner](/visualstudio/workflow-designer/statemachine-activity-designer)
-- [Zustands-Aktivitätsdesigner](/visualstudio/workflow-designer/state-activity-designer)
-- [FinalState-Aktivitätsdesigner](/visualstudio/workflow-designer/finalstate-activity-designer)
+
+- [Vorgehensweise: Erstellen eines Zustandsautomatworkflows](how-to-create-a-state-machine-workflow.md)
+- [StateMachine-Aktivitäts-Designer](/visualstudio/workflow-designer/statemachine-activity-designer)
+- [Zustandsaktivitäts-Designer](/visualstudio/workflow-designer/state-activity-designer)
+- [FinalState-Aktivitäts-Designer](/visualstudio/workflow-designer/finalstate-activity-designer)
 - [Übergangsaktivitäts-Designer](/visualstudio/workflow-designer/transition-activity-designer)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 7c696d24dd84aee568706200389839dea080d7b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 686d1797666c36f47d1ab0244754bbf2daf97eaf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577393"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188571"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Exemplarische Vorgehensweise: Ausschließliches Verwenden von gespeicherten Prozeduren (Visual Basic)
 Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Szenario für den Datenzugriff mithilfe von gespeicherten Prozeduren bereit. Dieser Ansatz wird oft von Datenbankadministratoren verwendet, um den Zugriff auf den Datenspeicher einzuschränken.  
@@ -105,14 +105,14 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-[!INCLUDE
   
 1.  In **Projektmappen-Explorer**, mit der rechten Maustaste **Form1.vb**, und klicken Sie dann auf **Ansichtscode**.  
   
-     `Class Form1` erscheint im Code-Editor.  
+     `Class Form1` wird im Code-Editor angezeigt.  
   
 2.  Geben Sie den folgenden Code in den `Form1`-Code-Block ein.  
   
      [!code-vb[DLinqWalk4VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk4VB/vb/Form1.vb#1)]  
   
 ## <a name="setting-up-the-user-interface"></a>Einrichten der Benutzeroberfläche  
- In diesem Schritt erstellen Sie eine Benutzeroberfläche, sodass Benutzer durch Ausführen gespeicherter Prozeduren auf die Daten in der Datenbank zugreifen können. In den von Ihnen hier entwickelten Anwendungen können Benutzer nur mithilfe der in der Anwendung eingebetteten gespeicherten Prozeduren auf die Daten zugreifen.  
+ In dieser Aufgabe erstellen Sie eine Benutzeroberfläche, sodass Benutzer durch Ausführen gespeicherter Prozeduren auf die Daten in der Datenbank zugreifen können. In den von Ihnen hier entwickelten Anwendungen können Benutzer nur mithilfe der in der Anwendung eingebetteten gespeicherten Prozeduren auf die Daten zugreifen.  
   
 #### <a name="to-set-up-the-user-interface"></a>So richten Sie die Benutzeroberfläche ein  
   
@@ -192,5 +192,6 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-[!INCLUDE
  Sie können dieses Projekt mit einigen Änderungen erweitern. Sie können beispielsweise die verfügbaren gespeicherten Prozeduren in einem Listenfeld aufführen, sodass der Benutzer diese auswählen kann. Sie könnten auch die Ausgabe von Berichten in eine Textdatei umleiten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
 - [Gespeicherte Prozeduren](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

@@ -13,21 +13,22 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: 32efbd44579622fddba95d162261633a1af6d277
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206407"
 ---
 # <a name="drawings"></a>Zeichnungen
 <xref:System.Windows.Media.Drawing> Objekte werden verwendet, um effizient Formen, Bildern oder Text zu zeichnen. Beim Zeichnen mit Zeichnungen dienen einem <xref:System.Windows.Media.DrawingBrush> oder Programmierung mit <xref:System.Windows.Media.Visual> Objekte.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über Zeichnungsobjekte](drawing-objects-overview.md)  
-  [Themen zu Vorgehensweisen](drawings-how-to-topics.md)  
+  [Gewusst wie-Themen](drawings-how-to-topics.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Drawing>
 - [2D-Grafiken und Bildverarbeitung](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Übersicht über das WPF-Grafikrendering](wpf-graphics-rendering-overview.md)

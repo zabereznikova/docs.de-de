@@ -2,12 +2,12 @@
 title: Zuordnen von Beziehungen, die für geschachtelte Elemente angegeben sind
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: cec7be5bea466c353e5320c04c76b37764a87e1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9772f077991c758be65bbb44b9474f1ad341371f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203144"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>Zuordnen von Beziehungen, die für geschachtelte Elemente angegeben sind
 Es kann ein Schema enthalten eine **msdata: Relationship** Anmerkung, die die Zuordnung zwischen zwei beliebigen Elementen im Schema explizit anzugeben. Die zwei Elemente im angegebenen **msdata: Relationship** können im Schema geschachtelt werden, aber nicht unbedingt sein. Der Zuordnungsprozess verwendet **msdata: Relationship** im Schema für die primäre/Fremdschlüssel-Beziehung zwischen den beiden Spalten zu generieren.  
@@ -75,6 +75,7 @@ Es kann ein Schema enthalten eine **msdata: Relationship** Anmerkung, die die Zu
  Der Zuordnungsprozess erstellt keine Einschränkungen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Generieren von DataSet-Beziehungen aus einem XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [Zuordnen von XML Schema-Schlüsseleinschränkungen (XSD) zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
+- [Zuordnen von XML Schema (XSD)-Schlüsseleinschränkungen zu DataSet-Einschränkungen](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

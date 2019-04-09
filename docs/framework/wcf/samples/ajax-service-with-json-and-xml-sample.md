@@ -2,12 +2,12 @@
 title: Beispiel für AJAX-Dienst mit JSON und XML
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: f8e112a75d537927d7a099d2988c1219515e2c1a
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: e5f2838575b212f6b95fd01b469d771017ef534c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207479"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Beispiel für AJAX-Dienst mit JSON und XML
 In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (WCF) zu verwenden, um einen Dienst Asynchronous JavaScript and XML (AJAX) zu erstellen, der entweder JavaScript Object Notation (JSON) oder XML-Daten zurückgibt. Sie können auf einen AJAX-Dienst zugreifen, indem Sie JavaScript-Code in einem Webbrowserclient verwenden. Dieses Beispiel baut auf den [einfacher AJAX-Dienst](../../../../docs/framework/wcf/samples/basic-ajax-service.md) Beispiel.  
@@ -19,7 +19,7 @@ In diesem Beispiel wird veranschaulicht, wie Windows Communication Foundation (W
 > [!NOTE]
 > Die Setupprozedur und die Buildanweisungen für dieses Beispiel befinden sich am Ende dieses Themas.
   
-Um die Verwendung von Nicht-ASP.NET AJAX-Clients zu aktivieren, verwenden Sie <xref:System.ServiceModel.Activation.WebServiceHostFactory> (nicht <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) in der SVC-Datei. <xref:System.ServiceModel.Activation.WebServiceHostFactory> fügt dem Dienst einen <xref:System.ServiceModel.Description.WebHttpEndpoint>-Standardendpunkt hinzu. Der Endpunkt wird an einer leeren Adresse relativ zur SVC-Datei konfiguriert; Dies bedeutet, dass die Adresse des Diensts `http://localhost/ServiceModelSamples/service.svc`, mit Ausnahme des Vorgangsnamens keine zusätzlichen Suffixe.  
+Um die Verwendung von Nicht-ASP.NET AJAX-Clients zu aktivieren, verwenden Sie <xref:System.ServiceModel.Activation.WebServiceHostFactory> (nicht <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) in der SVC-Datei. <xref:System.ServiceModel.Activation.WebServiceHostFactory> Fügt eine <xref:System.ServiceModel.Description.WebHttpEndpoint> an den Dienst Standardendpunkt. Der Endpunkt wird an einer leeren Adresse relativ zur SVC-Datei konfiguriert; Dies bedeutet, dass die Adresse des Diensts `http://localhost/ServiceModelSamples/service.svc`, mit Ausnahme des Vorgangsnamens keine zusätzlichen Suffixe.  
   
 ```svc
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>  
@@ -112,4 +112,5 @@ xmlHttp.onreadystatechange=function(){
 3.  Navigieren Sie zu `http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm` (Öffnen Sie XmlAjaxClientPage.htm nicht im Browser aus dem Projektverzeichnis).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [AJAX-Dienst mit HTTP POST](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

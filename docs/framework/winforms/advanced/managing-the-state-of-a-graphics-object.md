@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: a0166d2ee5a16916fdc2ece95eaf130ebd2598d5
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 8fc92bf84def50bed54a054ae634a8a08c8835c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653781"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212452"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Verwalten des Zustands eines Graphics-Objekts
 Die <xref:System.Drawing.Graphics> -Klasse ist das Herzstück von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]. Um alles zu zeichnen, Sie erhalten eine <xref:System.Drawing.Graphics> Objekt, dessen Eigenschaften festlegen und seine Methoden aufrufen <xref:System.Drawing.Graphics.DrawLine%2A>, <xref:System.Drawing.Graphics.DrawImage%2A>, <xref:System.Drawing.Graphics.DrawString%2A>, usw.).  
@@ -151,5 +151,6 @@ graphics.DrawLine(pen, 40, 20, 190, 150);
  ![Diagramm der beschränkter Clip-Bereich zeigt.](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Verwenden geschachtelter Grafikcontainer](using-nested-graphics-containers.md)

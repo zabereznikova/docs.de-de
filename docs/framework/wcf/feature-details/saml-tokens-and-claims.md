@@ -10,12 +10,12 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: 2fbb1f520a1497ef5aa3227d038b3759b8327eda
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f1f7a15d1457390bf77f5e53c7fd657304725df6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714996"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218211"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML-Token und SAML-Ansprüche
 Security Assertions Markup Language (SAML) *Token* sind XML-Darstellungen von Ansprüchen. Windows Communication Foundation (WCF) verwendet wird, in verbundsicherheitsszenarien SAML-Token sind standardmäßig *ausgestellte Token*.  
@@ -43,12 +43,13 @@ Security Assertions Markup Language (SAML) *Token* sind XML-Darstellungen von An
  Wenn SAML-Token in Nachrichten empfangen werden, werden die unterschiedlichen Anweisungen im SAML-Token in <xref:System.IdentityModel.Policy.IAuthorizationPolicy>-Objekte umgewandelt, die in den <xref:System.IdentityModel.Policy.AuthorizationContext> gesetzt werden. Die Ansprüche aus jeder SAML-Anweisung werden von der <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A>-Eigenschaft des <xref:System.IdentityModel.Policy.AuthorizationContext> zurückgegeben und können überprüft werden, um zu bestimmen, ob der Benutzer authentifiziert und autorisiert werden soll  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - [Verbund](../../../../docs/framework/wcf/feature-details/federation.md)
 - [Vorgehensweise: Erstellen eines Verbundclients](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [Vorgehensweise: Konfigurieren von Anmeldeinformationen für einen Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [Vorgehensweise: Konfigurieren von Anmeldeinformationen auf einem Verbunddienst](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [Ansprüche und Token](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
 - [Erstellen von Ansprüchen und Ressourcenwerte](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)

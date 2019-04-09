@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tile patterns [WPF], creating
 - creating [WPF], tile patterns with TileBrush
 ms.assetid: 5aa46632-3527-4668-9d8d-0375c8af28aa
-ms.openlocfilehash: 2efd070ac9ad502f2539d100fa450f95bcdddced
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c1051b234961eee9ae740af2abac3d64c523656c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367777"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227404"
 ---
 # <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a>Vorgehensweise: Erstellen von unterschiedlichen Kachelmustern mit einem TileBrush
 Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.TileBrush.TileMode%2A> Eigenschaft eine <xref:System.Windows.Media.TileBrush> um ein Muster zu erstellen.  
@@ -34,5 +34,6 @@ Kachelmuster mit der TileMode-Eigenschaft erstellt
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/TileModeExample.xaml#graphicsmmdrawingbrushtilemodeexample)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Festlegen der Kachelgröße für ein TileBrush](how-to-set-the-tile-size-for-a-tilebrush.md)
+
+- [Festlegen der Kachelgröße für einen TileBrush](how-to-set-the-tile-size-for-a-tilebrush.md)
 - [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md)

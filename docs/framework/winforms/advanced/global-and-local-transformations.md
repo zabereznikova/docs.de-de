@@ -9,12 +9,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], global
 - transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
-ms.openlocfilehash: 07ef61e3a41448f051fb9b7da2cfd91d7cbf26b5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e4ed103e781cc2e59d62c11f3233357c77b81cb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711849"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213752"
 ---
 # <a name="global-and-local-transformations"></a>Globale und lokale Transformationen
 Eine globale Transformation ist eine Transformation, die für jedes Element, das vom gilt eine bestimmte <xref:System.Drawing.Graphics> Objekt. Im Gegensatz dazu ist eine lokale Transformation eine Transformation, die gilt zu einem bestimmten Element gezeichnet werden soll.  
@@ -61,5 +61,6 @@ Eine globale Transformation ist eine Transformation, die für jedes Element, das
  ![Transformations](./media/aboutgdip05-art16.gif "AboutGdip05_art16")  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Koordinatensysteme und Transformationen](coordinate-systems-and-transformations.md)
 - [Verwenden von Transformationen in Managed GDI+](using-transformations-in-managed-gdi.md)

@@ -21,17 +21,16 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 45214b5f0e6827c36f87a4d45592ff0989c9a877
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890809"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209709"
 ---
 # <a name="imaging-overview"></a>Übersicht über die Bildverarbeitung
 Dieses Thema enthält eine Einführung in die [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] ermöglicht es Entwicklern, um anzuzeigen, Transformieren und Bilder zu formatieren.  
-  
-  
+
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF Imaging-Komponente  
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] ermöglicht signifikante Verbesserungen Bildverarbeitungsfunktionen in [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]. Bildverarbeitugnsfunktionen, z.B. die Anzeige einer Bitmap oder die Verwendung eines Bilds in einem allgemeinen Steuerelement, basierten in der Vergangenheit auf [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)]- oder [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)]-Bibliotheken. Diese [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] stellen Baseline-Bildverarbeitungsfunktionen bereit, verfügen aber nicht über Features wie die Unterstützung für Codec-Erweiterbarkeit und hochwertige Bilder. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] Dient zum Umgehen der unzulänglichkeiten der [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] und [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] , und geben Sie einen neuen Satz von [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] um Bilder in Ihren Anwendungen anzeigen und verwenden.  
@@ -190,6 +189,7 @@ Bildpinsel können Formen, Steuerelemente, Text usw. füllen.
 >  Der Codec muss digital signiert werden, damit das System ihn erkennt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Imaging.BitmapSource>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
 - <xref:System.Windows.Controls.Image>

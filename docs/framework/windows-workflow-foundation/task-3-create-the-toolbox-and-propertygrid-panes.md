@@ -2,12 +2,12 @@
 title: 'Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 45819577c39185a5d95da81521cd541087a64efc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a03a4204d6f112d8a94b48dd5a295dc4ff8354a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175044"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche
 In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche und fügen sie dem neu gehosteten [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
@@ -213,6 +213,7 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erneutes Hosten des Workflow-Designers](rehosting-the-workflow-designer.md)
 - [Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung](task-1-create-a-new-wpf-app.md)
-- [Task 2: Hosten des Workflowdesigners](task-2-host-the-workflow-designer.md)
+- [Aufgabe 2: Hosten des Workflow-Designers](task-2-host-the-workflow-designer.md)

@@ -3,12 +3,12 @@ title: <customCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: 752b1188fccb6f09cdcab6a50653abf26e8e2a53
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0129c63fe17b63889a77ea1a56c0d7e657def859
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288183"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223979"
 ---
 # <a name="customcookiehandler"></a>\<customCookieHandler>
 Legt fest, den Handlertyp der benutzerdefinierten Cookies. Dieses Element kann nur vorhanden sein, wenn die `mode` Attribut der `<cookieHandler>` Element ist "Custom". Aus der benutzerdefinierte Typ abgeleitet werden die <xref:System.IdentityModel.Services.CookieHandler> Klasse.  
@@ -41,7 +41,7 @@ Legt fest, den Handlertyp der benutzerdefinierten Cookies. Dieses Element kann n
 |Typ|Gibt einen benutzerdefinierten Typ abgeleitet, die die <xref:System.IdentityModel.Services.CookieHandler> Klasse. Weitere Informationen zur Vorgehensweise beim Angeben der `type` Attribut, finden Sie unter [benutzerdefinierte Typverweise](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md).|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
- Keine  
+ Keiner  
   
 ### <a name="parent-elements"></a>Übergeordnete Elemente  
   
@@ -64,4 +64,5 @@ Legt fest, den Handlertyp der benutzerdefinierten Cookies. Dieses Element kann n
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.IdentityModel.Services.CookieHandler>

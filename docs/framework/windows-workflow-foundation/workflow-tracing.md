@@ -2,12 +2,12 @@
 title: Workflowüberwachung
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: f8b454437631b4711360ddf0c1196cafca13b5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 92497768e7e8d720cdcc7c8f2c7c04b4dfcc47b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627173"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224935"
 ---
 # <a name="workflow-tracing"></a>Workflowüberwachung
 Die Workflowüberwachung bietet eine Möglichkeit, Diagnoseinformationen mit .NET Framework-Ablaufverfolgungslistenern zu erfassen. Die Ablaufverfolgung kann aktiviert werden, wenn ein Problem mit der Anwendung erkannt wird, und dann wieder deaktiviert werden, sobald das Problem behoben ist. Es gibt zwei Methoden zur Aktivierung der Debugablaufverfolgung für Workflows. Sie können sie mit der Ereignisablaufverfolgung (ETW) konfigurieren, oder Sie können Ablaufverfolgungsereignisse mit <xref:System.Diagnostics> an eine Datei senden.  
@@ -23,7 +23,7 @@ Die Workflowüberwachung bietet eine Möglichkeit, Diagnoseinformationen mit .NE
   
 4.  Die Standardpuffergröße für die analytische Ablaufverfolgung beträgt nur 4 Kilobytes (KB). Es wird empfohlen, die Größe auf 32 KB zu erweitern. Gehen Sie hierzu folgendermaßen vor.  
   
-    1.  Führen Sie den folgenden Befehl im aktuellen Frameworkverzeichnis (z. B. C:\Windows\Microsoft.NET\Framework\v4.0.21203) aus: `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1.  Führen Sie den folgenden Befehl im aktuellen Frameworkverzeichnis (z. B. C:\Windows\Microsoft.NET\Framework\v4.0.21203) aus: `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
     2.  Ändern der \<BufferSize >-Wert in der Datei "Windows.ApplicationServer.Applications.man" auf 32.  
   
@@ -35,7 +35,7 @@ Die Workflowüberwachung bietet eine Möglichkeit, Diagnoseinformationen mit .NE
                   </channel>  
         ```  
   
-    3.  Führen Sie den folgenden Befehl im aktuellen Frameworkverzeichnis (z. B. C:\Windows\Microsoft.NET\Framework\v4.0.21203) aus: `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3.  Führen Sie den folgenden Befehl im aktuellen Frameworkverzeichnis (z. B. C:\Windows\Microsoft.NET\Framework\v4.0.21203) aus: `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
 >  Wenn Sie die .NET Framework 4 Client Profile verwenden, müssen Sie zuerst das ETW-Manifest registrieren, mithilfe des folgenden Befehls aus dem .NET Framework 4-Verzeichnis: `ServiceModelReg.exe –i –c:etw`  
@@ -70,5 +70,6 @@ Die Workflowüberwachung bietet eine Möglichkeit, Diagnoseinformationen mit .NE
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Windows Server App Fabric-Überwachung](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [Überwachen von Anwendungen mit AppFabric](https://go.microsoft.com/fwlink/?LinkId=201275)

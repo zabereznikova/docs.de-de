@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Formatieren von Daten in der Windows Forms-DataGridView-Steuerelement'
+title: 'Vorgehensweise: Formatieren von Daten im DataGridView-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], date values
 - cells [Windows Forms], text alignment
 ms.assetid: 8c33543c-9c08-4636-a65a-fdf714a529b7
-ms.openlocfilehash: 0699aec73c0a48efe88fc2901ef11c70d6f639d7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 62701edfdb3cf2729cb401ad12a12ee4f524287b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721280"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221299"
 ---
-# <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Formatieren von Daten in der Windows Forms-DataGridView-Steuerelement
+# <a name="how-to-format-data-in-the-windows-forms-datagridview-control"></a>Vorgehensweise: Formatieren von Daten im DataGridView-Steuerelement in Windows Forms
 Die folgenden Prozeduren veranschaulichen grundlegende Formatierung von Zellenwerten durch die <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A> Eigenschaft eine <xref:System.Windows.Forms.DataGridView> Steuerelement sowie von bestimmten Spalten in einem Steuerelement. Weitere Informationen über die Erweiterte Formatierung finden Sie unter [Vorgehensweise: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).  
   
 ### <a name="to-format-currency-and-date-values"></a>Formatieren von Währung und Datumswerte  
@@ -68,11 +68,12 @@ Die folgenden Prozeduren veranschaulichen grundlegende Formatierung von Zellenwe
  Sie sollten für maximale Skalierbarkeit gibt freigeben <xref:System.Windows.Forms.DataGridViewCellStyle> Objekten über mehrere Zeilen, Spalten oder Zellen, die dieselben Stile, anstatt die Stileigenschaften für jedes Element einzeln zu verwenden. Weitere Informationen finden Sie unter [Best Practices für das Skalieren des DataGridView-Steuerelements in Windows Forms](best-practices-for-scaling-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - [Grundlegende Formatierungen und Formate im DataGridView-Steuerelement in Windows Forms](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
 - [Zellstile im DataGridView-Steuerelement in Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [Datenformatierung im DataGridView-Steuerelement in Windows Forms](data-formatting-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
 - [Formatierung von Typen](../../../standard/base-types/formatting-types.md)

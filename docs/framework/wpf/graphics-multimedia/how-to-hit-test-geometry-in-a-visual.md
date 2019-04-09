@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: e51dd73a65666ffee5958325079e8f06f13ac61b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227339"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>Vorgehensweise: Treffertest für eine Geometrie in einem visuellen Objekt
 Dieses Beispiel zeigt, wie Sie einen Treffertest für ein visuelles Objekt durchführen, das von einem oder mehreren besteht <xref:System.Windows.Media.Geometry> Objekte.  
@@ -36,5 +36,6 @@ Dieses Beispiel zeigt, wie Sie einen Treffertest für ein visuelles Objekt durch
 >  Bei diesem Beispiel werden keine Clippings oder Transformationen berücksichtigt, die ggf. auf die Geometrie angewendet werden. Außerdem funktioniert dieses Beispiel nicht mit einem formatierten Steuerelement, da diesem keine Zeichnungen direkt zugeordnet sind.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Treffertests in der visuellen Ebene](hit-testing-in-the-visual-layer.md)
 - [Treffertest mit Geometrie als Parameter](how-to-hit-test-using-geometry-as-a-parameter.md)

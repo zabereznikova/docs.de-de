@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen von Zugriffstasten mit Windows Forms-Steuerelementen'
+title: 'Vorgehensweise: Erstellen von Zugriffstasten mit Windows Forms-Steuerelementen'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: 227880ad15e452df3f05807c41f3923cccb6fe3a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ff603ee784978a8b2bab2cccd4610fc50b45d477
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708300"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171716"
 ---
-# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Vorgehensweise: Erstellen von Zugriffstasten mit Windows Forms-Steuerelementen
+# <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Vorgehensweise: Erstellen von Zugriffstasten mit Windows Forms-Steuerelementen
 Windows Forms <xref:System.Windows.Forms.Label> Steuerelemente können verwendet werden, um die Zugriffstasten für andere Steuerelemente definieren. Wenn Sie einen Zugriffsschlüssel in ein Label-Steuerelement definieren, kann Benutzer drücken, die ALT-Taste plus das Zeichen, das Sie festlegen, um den Fokus auf das Steuerelement zu verschieben, die sie in der Aktivierreihenfolge folgt. Da Bezeichnungen keinen Fokus erhalten können, verschiebt den Fokus automatisch auf das nächste Steuerelement in der Aktivierreihenfolge. Verwenden Sie dieses Verfahren, um Textfelder, Kombinationsfelder, Listenfelder und Datenraster Zugriffsschlüssel zuweisen.  
   
 ### <a name="to-assign-an-access-key-to-a-control-with-a-label"></a>Zuweisen eine Zugriffstaste auf ein Steuerelement mit einer Bezeichnung  
@@ -64,6 +64,7 @@ Windows Forms <xref:System.Windows.Forms.Label> Steuerelemente können verwendet
     ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Größe der Größe des Label-Steuerelements in Windows Forms an seinen Inhalt](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+
+- [Vorgehensweise: Anpassen der Größe des Label-Steuerelements in Windows Forms an seinen Inhalt](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Übersicht über das Label-Steuerelement](label-control-overview-windows-forms.md)
 - [Label-Steuerelement](label-control-windows-forms.md)

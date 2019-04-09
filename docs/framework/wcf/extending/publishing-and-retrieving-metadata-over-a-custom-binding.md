@@ -2,12 +2,12 @@
 title: Veröffentlichen und Abrufen von Metadaten über eine benutzerdefinierte Bindung
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-ms.openlocfilehash: 850f341e933e44d92f130dae90aff5b5c1a882b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33777358262465e9ecbadd75df8abf066bafcd01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639548"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222977"
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>Veröffentlichen und Abrufen von Metadaten über eine benutzerdefinierte Bindung
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> bietet Support für das Hinzufügen von Metadatenendpunkten zu einem Dienst. Diese Metadatenendpunkte können Antworten auf HTTP GET-Anforderungen an eine URL mit einem `?wsdl` Querystring und WS-Transfer GET-Anforderungen, wie in der WS-MetadataExchange (MEX)-Spezifikation definiert. MEX-Endpunkte implementieren den <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType>-Vertrag.  
@@ -28,7 +28,8 @@ ms.locfileid: "54639548"
  Stellen Sie beim Veröffentlichen von Metadaten über eine benutzerdefinierte Bindung sicher, dass die Bindung den Sicherheitssupport bietet, der für die Metadaten erforderlich ist. Um beispielsweise die Offenlegung von Informationen zu verhindern und sicherzustellen, dass der Client die Berechtigung hat, die Metadaten abzurufen, können Sie die Metadaten und die Anwendung weiter sichern, indem Sie den <xref:System.ServiceModel.Description.IMetadataExchange>-Endpunkt so konfigurieren, dass eine Authentifizierung und Verschlüsselung notwendig sind. Das Beispiel [benutzerdefinierte sicherer Metadatenendpunkt](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md) wird dieses Szenario veranschaulicht.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von Diensten](../../../../docs/framework/wcf/securing-services.md)
 - [WS-MetadataExchange-Bindungen](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)
 - [Vorgehensweise: Konfigurieren einer benutzerdefinierten WS-Metadata Exchange-Bindung](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
-- [Vorgehensweise: Abrufen von Metadaten über eine nicht - MEX-Bindung](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+- [Vorgehensweise: Aufrufen von Metadaten über eine Nicht-MEX-Bindung](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)

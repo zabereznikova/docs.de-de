@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verwenden von Filtern'
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 1d521162f2878a00d4d8ff7515ca2aabf32db97e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6f145a9bc2842eaa5dad1a1c0ec6d77eb2b37552
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530988"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216196"
 ---
 # <a name="how-to-use-filters"></a>Vorgehensweise: Verwenden von Filtern
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration mit mehreren Filtern zu erstellen. In diesem Beispiel werden Nachrichten an zwei Implementierungen eines Rechnerdiensts weitergeleitet: regularCalc und roundingCalc. Beide Implementierungen unterstützen die gleichen Vorgänge. Ein Dienst rundet vor der Rückgabe jedoch alle Berechnungen auf den nächsten ganzzahligen Wert. Eine Clientanwendung muss angeben können, ob die Rundungsversion des Diensts verwendet werden soll. Falls kein bevorzugter Dienst angegeben wird, wird für die Nachricht ein Lastenausgleich zwischen beiden Diensten durchgeführt. Beide Dienste machen die folgenden Vorgänge verfügbar:  
@@ -18,7 +18,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
   
 -   Multiplizieren  
   
--   Trennen  
+-   Teilen  
   
  Da beide Dienste die gleichen Vorgänge implementieren, können Sie den Aktionsfilter nicht verwenden, weil die in der Nachricht angegebene Aktion nicht eindeutig ist. Stattdessen müssen Sie weitere Schritte unternehmen, um sicherzustellen, dass die Nachrichten an die entsprechenden Endpunkte weitergeleitet werden.  
   
@@ -197,7 +197,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
   
      Da diese Filter eine Filterpriorität von 1 aufweisen, werden diese nur ausgewertet, wenn sich für den Filter auf der Prioritätsstufe 2 keine Übereinstimmung mit der Nachricht ergeben hat. Da beide Filter außerdem die gleiche Prioritätsstufe aufweisen, werden sie gleichzeitig ausgewertet. Weil sich beide Filter gegenseitig ausschließen, kann sich nur für einen von beiden eine Übereinstimmung mit der Nachricht ergeben.  
   
-3.  Falls sich für eine Nachricht keine Übereinstimmung mit den vorherigen Filtern ergibt, wurde die Nachricht über den generischen Dienstendpunkt empfangen und hat keine Headerinformationen enthalten, die das Ziel für die Weiterleitung angeben. Diese Nachrichten werden vom benutzerdefinierten Filter behandelt, der dafür den Lastenausgleich zwischen den beiden Rechnerdiensten durchführt. Im folgenden Beispiel wird veranschaulicht, wie Sie der Filtertabelle die Filtereinträge hinzufügen. Jedem Filter wird einer der beiden Zielendpunkte zugeordnet.  
+3.  Falls sich für eine Nachricht keine Übereinstimmung mit den vorherigen Filtern ergibt, wurde die Nachricht über den generischen Dienstendpunkt empfangen und hat keine Headerinformationen enthalten, die das Ziel für die Weiterleitung angeben. Diese Nachrichten werden vom benutzerdefinierten Filter behandelt, der dafür einen Lastausgleich zwischen den beiden Rechnerdiensten vornimmt. Im folgenden Beispiel wird veranschaulicht, wie Sie der Filtertabelle die Filtereinträge hinzufügen. Jedem Filter wird einer der beiden Zielendpunkte zugeordnet.  
   
     ```xml  
     <!--if none of the other filters have matched,   
@@ -326,4 +326,5 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Routingdienste](../../../../docs/framework/wcf/samples/routing-services.md)

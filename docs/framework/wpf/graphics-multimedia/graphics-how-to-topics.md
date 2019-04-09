@@ -8,25 +8,26 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358787"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230654"
 ---
 # <a name="graphics-how-to-topics"></a>Gewusst-wie-Themen zu Grafiken
 In den folgenden Themen veranschaulichen, wie die Grafiken Funktionen des die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Animieren eines Rechtecks](how-to-animate-a-rectangle.md)  
- [Animieren der Position eines Objekts mit Punktanimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [Animieren der Position eines Objekts mithilfe von PointAnimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
  [Transformieren von Punkten und Vektoren](how-to-transform-points-and-vectors.md)  
  [Erweitern von Glasframe in eine WPF-Anwendung](extend-glass-frame-into-a-wpf-application.md)  
  [Vorgehensweise: Verbessern der Renderingleistung durch Zwischenspeichern eines Elements](how-to-improve-rendering-performance-by-caching-an-element.md)  
  [Vorgehensweise: Verwenden eines zwischengespeicherten Elements als Pinsel](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>

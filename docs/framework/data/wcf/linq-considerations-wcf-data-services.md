@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 8d7ec8914fe83bb34e946fd5596f161e526038b1
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: a41eb4b5df7786558a73d5a195d57c9f30e9235d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904623"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192952"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Überlegungen zu LINQ (WCF Data Services)
 Dieses Thema enthält Informationen zum Erstellen und Ausführen von LINQ-Abfragen bei der Verwendung des [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Clients und zu den Einschränkungen, die gelten, wenn Sie einen Datendienst, der [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] implementiert, mithilfe von LINQ abfragen. Weitere Informationen zum Verfassen und Ausführen von Abfragen für ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]--basierten Datendienst finden Sie unter [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
@@ -112,8 +112,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
 [!code-csharp[Astoria Northwind Client#LinqSelectMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#linqselectmethodspecific)]      
 [!code-vb[Astoria Northwind Client#LinqSelectMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#linqselectmethodspecific)]         
- 
-  
+
 > [!NOTE]
 >  Die `$select`-Abfrageoption kann einem Abfrage-URI nicht mit der <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>-Methode hinzugefügt werden. Es wird empfohlen, die <xref:System.Linq.Enumerable.Select%2A>-LINQ-Methode zu verwenden, damit der Client die `$select`-Abfrageoption im Anforderungs-URI generiert.  
   
@@ -136,7 +135,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  Die obigen Beispiele werden beide in den Abfrage-URI übersetzt: `http://localhost:12345/northwind.svc/Orders()?$orderby=OrderDate desc&$skip=50&$top=25`.  
   
 <a name="expand"></a>   
-### <a name="expand"></a>Erweitern  
+### <a name="expand"></a>Expand  
  Beim Abfragen eines [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Datendiensts können Sie anfordern, dass mit der Zielentität der Abfrage verknüpfte Entitäten in den zurückgegebenen Feed eingeschlossen werden. Die <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>-Methode wird in der <xref:System.Data.Services.Client.DataServiceQuery%601> für die in der LINQ-Abfrage angegebene Entität aufgerufen, und der Name der verknüpften Entitätenmenge wird als `path`-Parameter angegeben. Weitere Informationen finden Sie unter [verzögerte Inhalte laden](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).  
   
  Die folgenden Beispiele zeigen funktional gleichwertige Möglichkeiten zur Verwendung der <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>-Methode in einer Abfrage:  
@@ -150,8 +149,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 
 [!code-csharp[Astoria Northwind Client#LinqQueryExpandMethodSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#linqqueryexpandmethodspecific)]       
 [!code-vb[Astoria Northwind Client#LinqQueryExpandMethodSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#linqqueryexpandmethodspecific)]       
-  
-  
+
  Die obigen Beispiele werden beide in den Abfrage-URI übersetzt: `http://localhost:12345/northwind.svc/Orders()?$filter=CustomerID eq 'ALFKI'&$expand=Order_Details`.  
   
 <a name="unsupportedMethods"></a>   
@@ -172,7 +170,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 ## <a name="supported-expression-functions"></a>Unterstützte Ausdrucksfunktionen  
  Die folgenden CLR-Methoden und -Eigenschaften (Common Language Runtime) werden unterstützt, da sie zum Einschließen in den Anforderungs-URI für einen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Dienst in einen Abfrageausdruck übersetzt werden können:  
   
-|<xref:System.String>-Member|Unterstützte [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Funktion|  
+|<xref:System.String> Member|Unterstützte [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Funktion|  
 |-----------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.String.Concat%28System.String%2CSystem.String%29>|`string concat(string p0, string p1)`|  
 |<xref:System.String.Contains%28System.String%29>|`bool substringof(string p0, string p1)`|  
@@ -197,7 +195,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  <sup>1</sup>das entsprechende Datum und Uhrzeit-Eigenschaften der <xref:Microsoft.VisualBasic.DateAndTime?displayProperty=nameWithType>, als auch die <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> Methode in Visual Basic werden ebenfalls unterstützt.  
   
-|<xref:System.Math>-Member|Unterstützte [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Funktion|  
+|<xref:System.Math> Member|Unterstützte [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Funktion|  
 |---------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.Math.Ceiling%28System.Decimal%29>|`decimal ceiling(decimal p0)`|  
 |<xref:System.Math.Ceiling%28System.Double%29>|`double ceiling(double p0)`|  
@@ -206,13 +204,14 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |<xref:System.Math.Round%28System.Decimal%29>|`decimal round(decimal p0)`|  
 |<xref:System.Math.Round%28System.Double%29>|`double round(double p0)`|  
   
-|<xref:System.Linq.Expressions.Expression>-Member|Unterstützte [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Funktion|  
+|<xref:System.Linq.Expressions.Expression> Member|Unterstützte [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Funktion|  
 |---------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
 |<xref:System.Linq.Expressions.Expression.TypeIs%28System.Linq.Expressions.Expression%2CSystem.Type%29>|`bool isof(type p0)`|  
   
  Der Client kann möglicherweise auch weitere CLR-Funktionen auf dem Client auswerten. Für einen Ausdruck, der nicht auf dem Client ausgewertet und nicht in einen gültigen URI für die Auswertung auf dem Server übersetzt werden kann, wird eine <xref:System.NotSupportedException> ausgelöst.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
 - [Abfrageprojektionen](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)
 - [Objektmaterialisierung](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)

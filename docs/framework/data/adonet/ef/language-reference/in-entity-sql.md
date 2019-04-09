@@ -2,12 +2,12 @@
 title: IN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
-ms.openlocfilehash: a8c028bf0fc2890b932c62aa9efe94cab153503d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f4fa8cbc07513321e59b93503b59af172c0a6f05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211321"
 ---
 # <a name="in-entity-sql"></a>IN (Entity SQL)
 Bestimmt, ob ein Wert mit irgendeinem Wert in einer Auflistung übereinstimmt.  
@@ -29,7 +29,7 @@ value [ NOT ] IN expression
  Jeder gültige Ausdruck, der die auf Übereinstimmung zu prüfende Auflistung zurückgibt. Alle Ausdrücke müssen vom selben Typ oder vom gleichen Basistyp bzw. abgeleiteten Typ sein wie `value`.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true`, wenn der Wert in der Auflistung gefunden wurde, null, wenn der Wert oder die Auflistung NULL ist, anderenfalls `false`. Mit NOT IN wird das Ergebnis von IN negiert.  
+ `true` Wenn der Wert in der Auflistung gefunden wird; NULL, wenn der Wert null ist oder die Auflistung ist null. andernfalls `false`. Mit NOT IN wird das Ergebnis von IN negiert.  
   
 ## <a name="example"></a>Beispiel  
  Die folgende Entity SQL-Abfrage verwendet den IN-Operator, um zu bestimmen, ob ein Wert mit irgendeinem Wert in einer Auflistung übereinstimmt. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
@@ -41,4 +41,5 @@ value [ NOT ] IN expression
  [!code-csharp[DP EntityServices Concepts 2#IN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#in)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Entity SQL-Referenz](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

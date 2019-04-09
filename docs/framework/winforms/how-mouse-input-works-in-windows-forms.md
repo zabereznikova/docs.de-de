@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203014"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Funktionsweise von Mauseingaben in Windows Forms
 Empfang und Verarbeitung von Mauseingaben ist ein wichtiger Bestandteil jeder Windows-Anwendung. Sie können Mausereignisse, die zum Ausführen einer Aktion in Ihrer Anwendung behandeln oder Mauspositionsinformationen Treffertests ausführen oder andere Aktionen. Darüber hinaus können Sie die Art ändern, die Steuerelemente in Ihrer Anwendung Mauseingaben behandeln. Dieses Thema beschreibt diese Mausereignisse im Detail und das Abrufen und Ändern von Systemeinstellungen für die Maus. Weitere Informationen zu den Daten, die mit der Maus bereitgestellten Ereignisse und die Reihenfolge, in dem die Maus, klicken Sie auf Ereignisse, ausgelöst werden, finden Sie unter [Mausereignisse in Windows Forms](mouse-events-in-windows-forms.md).  
@@ -53,6 +53,7 @@ Empfang und Verarbeitung von Mauseingaben ist ein wichtiger Bestandteil jeder Wi
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Ruft die Anzahl der Zeilen ab, die mit einem Bildlauf erfasst werden, wenn das Mausrad gedreht wird.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Mauseingabe in einer Windows Forms-Anwendung](mouse-input-in-a-windows-forms-application.md)
 - [Mauserfassung in Windows Forms](mouse-capture-in-windows-forms.md)
 - [Mauszeiger in Windows Forms](mouse-pointers-in-windows-forms.md)

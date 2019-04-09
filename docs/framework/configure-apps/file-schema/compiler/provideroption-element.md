@@ -1,5 +1,5 @@
 ---
-title: <providerOption>-Element
+title: <providerOption> Element
 ms.date: 03/30/2017
 f1_keywords:
 - provideroption
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: bb29ba8721c3aa13fad4410208b1276bdfa761c1
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 9c69ea7bf95b311a796ec29d90410a77b748c3c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229783"
 ---
 # <a name="provideroption-element"></a>\<"Provideroption" >-Element
 Gibt die Compiler-Version-Attribute für einen Sprachanbieter an.  
@@ -50,10 +50,10 @@ Gibt die Compiler-Version-Attribute für einen Sprachanbieter an.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Das Stammelement in jeder Konfigurationsdatei, die von der Common Language Runtime und den .NET Framework-Anwendungen verwendet wird.|  
+|[\<Configuration >-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Das Stammelement in jeder Konfigurationsdatei, die von der Common Language Runtime und den .NET Framework-Anwendungen verwendet wird.|  
 |[\<System.CodeDom >-Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Gibt die Compilerkonfigurationseinstellungen für verfügbare Sprachanbieter an.|  
 |[\<Compiler > Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Container für compilerkonfigurationselemente; enthält 0 (null) oder mehr `<compiler>` Elemente.|  
-|[\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.|  
+|[\<Compilerfehler >-Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Gibt die Compilerkonfigurationsattribute für einen Sprachanbieter an.|  
   
 ## <a name="remarks"></a>Hinweise  
  In .NET Framework, Version 3.5, können Code Document Object Model (CodeDOM)-Codeanbieter anbieterspezifische Optionen unterstützen, mithilfe der `<providerOption>` Element.  
@@ -90,9 +90,10 @@ Gibt die Compiler-Version-Attribute für einen Sprachanbieter an.
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<Compiler > Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
-- [Specifying Fully Qualified Type Names (Angeben vollqualifizierter Typnamen)](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
-- [Compiler-Element für Compilers für Compilation ((ASP.NET Einstellungsschema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))
+- [Angeben vollständig gekennzeichneter Typnamen](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
+- [compiler-Element für compilers für compilation (ASP.NET-Einstellungsschema)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

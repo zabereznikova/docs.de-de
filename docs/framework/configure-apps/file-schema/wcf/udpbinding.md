@@ -2,12 +2,12 @@
 title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: 1b2c4615445a906d1c48f386288a3d21e1e1f470
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84a5bc763f898b3d323a6cee468c6e22d27d85a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229601"
 ---
 # <a name="udpbinding"></a>\<udpBinding>
 Ein Konfigurationselement, das zum Konfigurieren der <xref:System.ServiceModel.UdpBinding>-Bindung verwendet wird.  
@@ -81,7 +81,7 @@ Ein Konfigurationselement, das zum Konfigurieren der <xref:System.ServiceModel.U
  UdpBinding ermöglicht WCF-Diensten die Kommunikation über den UDP-Transport. Sie können für "fire and forget" Nachrichtenaustausch, in denen ein Client sendet eine Nachricht an einen Dienst, und keine Rückantwort erwartet.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt, wie <xref:System.ServiceModel.UdpBinding> mithilfe des <`udpBinding`>-Elements konfiguriert wird.  
+ Das folgende Beispiel zeigt, wie Sie konfigurieren die <xref:System.ServiceModel.UdpBinding> mithilfe der <`udpBinding`> Element.  
   
 ```xml  
 <udpBinding>
@@ -104,6 +104,7 @@ Ein Konfigurationselement, das zum Konfigurieren der <xref:System.ServiceModel.U
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>

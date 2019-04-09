@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: 41f4e7cd633cf6175b6b167937cf53ceb4d9ec59
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 96b7bfabef589464e99e808d19f0dee6cfb23536
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225819"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Generieren der Datendienst-Clientbibliothek (WCF Data Services)
 Ein Datendienst, die implementiert die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] kann ein dienstmetadatendokument an, die von verfügbar gemachten Datenmodell beschreibt Zurückgeben der [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Weitere Informationen finden Sie unter [OData: Service Metadatendokument](https://go.microsoft.com/fwlink/?LinkId=186070). Können Sie die **Hinzufügen eines Dienstverweises** Dialogfeld in Visual Studio zum Hinzufügen eines Verweises auf ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Dienst. Wenn Sie dieses Tool verwenden, um einen Verweis auf das vom zurückgegebenen Metadaten Hinzufügen einer [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in einem Clientprojekt die folgenden Aktionen ausgeführt:  
@@ -53,5 +53,6 @@ Ein Datendienst, die implementiert die [!INCLUDE[ssODataFull](../../../../includ
  Weitere Informationen finden Sie unter [OData: Primitive Datentypen](https://go.microsoft.com/fwlink/?LinkId=186072).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

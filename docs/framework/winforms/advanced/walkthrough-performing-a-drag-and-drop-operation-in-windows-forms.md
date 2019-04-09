@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Eine Drag & Drop-Vorgang in Windows Forms'
+title: 'Exemplarische Vorgehensweise: Ausführen von Drag & Drop-Operationen in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: 664c78ce3fff9651acf6ad720360cdb077f23108
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e9b21d7bfa188ebb053f36e2637ffce5d6fa0dd7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189026"
 ---
-# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Exemplarische Vorgehensweise: Eine Drag & Drop-Vorgang in Windows Forms
+# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>Exemplarische Vorgehensweise: Ausführen von Drag & Drop-Operationen in Windows Forms
 Zum Ausführen von Drag & Drop-Vorgängen in Windows-basierten Anwendungen müssen Sie insbesondere eine Reihe von Ereignissen, behandeln die <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave>, und <xref:System.Windows.Forms.Control.DragDrop> Ereignisse. Wenn Sie die Daten aus den Ereignisargumenten dieser Ereignisse verwenden, können Sie Drag & Drop-Vorgänge problemlos vereinfachen.  
   
 ## <a name="dragging-data"></a>Ziehen von Daten  
@@ -107,6 +107,7 @@ Zum Ausführen von Drag & Drop-Vorgängen in Windows-basierten Anwendungen müss
     >  Sie können darüber hinaus arbeiten, mit der <xref:System.Windows.Forms.DragEventArgs.KeyState%2A> -Eigenschaft, je nach Schlüssel während des Drag & Drop-Vorgangs erschießen bestimmter Effekte auftreten (z. B. ist es standard, um die gezogenen Daten zu kopieren, wenn die STRG-Taste gedrückt wird).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorgehensweise: Hinzufügen von Daten in die Zwischenablage](how-to-add-data-to-the-clipboard.md)
+
+- [Vorgehensweise: Hinzufügen von Daten zur Zwischenablage](how-to-add-data-to-the-clipboard.md)
 - [Vorgehensweise: Abrufen von Daten aus der Zwischenablage](how-to-retrieve-data-from-the-clipboard.md)
-- [Drag & Drop-Vorgänge und Unterstützung der Zwischenablage](drag-and-drop-operations-and-clipboard-support.md)
+- [Drag &amp; Drop-Operationen und Unterstützung der Zwischenablage](drag-and-drop-operations-and-clipboard-support.md)

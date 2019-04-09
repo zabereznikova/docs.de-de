@@ -2,12 +2,12 @@
 title: Anpassen von Berechtigungen durch Identitätswechsel in SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 182eadecbd5330f06fc1cd45d2c768b570f12bf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9c3e84e8a432a54cdcd2cbe4e01dada870cd1366
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202793"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Anpassen von Berechtigungen durch Identitätswechsel in SQL Server
 Viele Anwendungen verwenden für den Zugriff auf Daten gespeicherte Prozeduren, wobei der Zugriff auf die Basistabellen per Besitzverkettung gesteuert wird. Sie können EXECUTE-Berechtigungen für gespeicherte Prozeduren gewähren und so Berechtigungen für die Basistabellen widerrufen oder verweigern. Wenn der Besitzer der gespeicherten Prozedur identisch mit dem Besitzer der Tabellen ist, nimmt SQL Server keine Prüfung der Berechtigungen des Aufrufers vor. Bei Objekten, die verschiedenen Besitzern gehören, und bei dynamischem SQL funktioniert die Besitzverkettung jedoch nicht.  
@@ -66,6 +66,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 -   SELF: Mit SELF wird die Prozedur im Sicherheitskontext des Erstellers der gespeicherten Prozedur ausgeführt. Dies entspricht der Ausführung der Prozedur als ein spezifischer Benutzer, wobei der spezifische Benutzer die Person ist, die die Prozedur erstellt oder geändert hat.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Übersicht über die SQL Server-Sicherheit](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

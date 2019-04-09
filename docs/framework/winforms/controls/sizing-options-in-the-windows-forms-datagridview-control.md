@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717907"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197840"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Größenänderungsoptionen im DataGridView-Steuerelement in Windows Forms
 <xref:System.Windows.Forms.DataGridView> Zeilen, Spalten und Header können aus vielen Gründen ihre Größe ändern. Die folgende Tabelle zeigt diese vorkommen.  
@@ -128,6 +128,7 @@ ms.locfileid: "57717907"
  Die Enumerationen, die von der von Größeneigenschaften und Methoden verwendet haben ähnliche Werte für die Dimensionierung von inhaltsbasierten. Mit diesen Werten verwenden können Sie einschränken, welche Zellen verwendet werden, um die bevorzugte Größe zu berechnen. Für alle zur größenanpassung-Enumerationen nur die Werte mit Namen, die auf die angezeigten Zellen verweisen ihre Berechnungen für Zellen in Zeilen angezeigt. Ausschließen von Zeilen ist nützlich, um Leistungseinbußen zu vermeiden, wenn Sie mit einer großen Menge von Zeilen arbeiten. Sie können auch Berechnungen durch, um Werte von Zellen in Header oder keine Headerzeile Zellen beschränken.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=nameWithType>
@@ -156,4 +157,4 @@ ms.locfileid: "57717907"
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
 - [Größenanpassung bei Spalten und Zeilen im DataGridView-Steuerelement in Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
 - [Spaltenfüllmodus im DataGridView-Steuerelement in Windows Forms](column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelement von Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Festlegen der Größenanpassungsmodi des DataGridView-Steuerelements in Windows Forms](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

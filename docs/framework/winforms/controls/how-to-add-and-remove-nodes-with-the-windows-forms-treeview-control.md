@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Hinzufügen und Entfernen von Knoten mit dem TreeView-Steuerelement in Windows Forms'
+title: 'Vorgehensweise: Hinzufügen oder Entfernen von Knoten mit dem TreeView-Steuerelement in Windows Forms'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: de1b82db-4905-449a-9f59-af271a6b6673
-ms.openlocfilehash: d0a77f55e28055ef097f0b4604c316f7751abdbe
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1849e3ae88b9805f74b2f792ad53b02aa87e6569
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209514"
 ---
-# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>Vorgehensweise: Hinzufügen und Entfernen von Knoten mit dem TreeView-Steuerelement in Windows Forms
+# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control"></a>Vorgehensweise: Hinzufügen oder Entfernen von Knoten mit dem TreeView-Steuerelement in Windows Forms
 Die Windows-Formulare <xref:System.Windows.Forms.TreeView> Steuerelement speichert den Knoten der obersten Ebene in der <xref:System.Windows.Forms.TreeView.Nodes%2A> Auflistung. Jede <xref:System.Windows.Forms.TreeNode> hat auch ein eigenes <xref:System.Windows.Forms.TreeNode.Nodes%2A> Auflistung zum Speichern der untergeordneten Knoten. Beide-Auflistung – Eigenschaften sind vom Typ <xref:System.Windows.Forms.TreeNodeCollection>, dort finden Sie standardmäßige Auflistungsmember, die Sie hinzufügen möchten, können entfernen, und ordnen die Knoten auf einer einzigen Ebene der Hierarchie von Knoten.  
   
 ### <a name="to-add-nodes-programmatically"></a>Das programmgesteuerte Hinzufügen von Knoten  
@@ -71,9 +71,10 @@ Die Windows-Formulare <xref:System.Windows.Forms.TreeView> Steuerelement speiche
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [TreeView-Steuerelement](treeview-control-windows-forms.md)
 - [Übersicht über das TreeView-Steuerelement](treeview-control-overview-windows-forms.md)
-- [Vorgehensweise: Festlegen von Symbolen für das TreeView-Steuerelement in Windows Forms](how-to-set-icons-for-the-windows-forms-treeview-control.md)
-- [Vorgehensweise: Durchlaufen Sie aller Knoten eines Windows Forms TreeView-Steuerelements](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [Vorgehensweise: Festlegen von Symbolen für das TreeView-Steuerelement in Windows Forms](how-to-set-icons-for-the-windows-forms-treeview-control.md)
+- [Vorgehensweise: Durchlaufen aller Knoten eines TreeView-Steuerelements in Windows Forms](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
 - [Vorgehensweise: Ermitteln des per Mausklick ausgewählten TreeView-Knotens](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

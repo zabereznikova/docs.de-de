@@ -8,17 +8,16 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: e002c07953320ac5e7c0854fe521896c3bca225c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353009"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179997"
 ---
 # <a name="geometry-overview"></a>Übersicht über die Geometrie
 Diese Übersicht beschreibt, wie die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> Klassen, um Formen zu beschreiben. In diesem Thema sind auch die Unterschiede zwischen <xref:System.Windows.Media.Geometry> Objekte und <xref:System.Windows.Shapes.Shape> Elemente.  
-  
-  
+
 <a name="wcpsdk_graphics_geometry_introduction"></a>   
 ## <a name="what-is-a-geometry"></a>Was ist eine Geometrie?  
  Die <xref:System.Windows.Media.Geometry> -Klasse und die Klassen, z. B. <xref:System.Windows.Media.EllipseGeometry>, <xref:System.Windows.Media.PathGeometry>, und <xref:System.Windows.Media.CombinedGeometry>, ermöglichen es Ihnen, die die Geometrie einer 2-D-Form beschreiben. Diese geometrischen Beschreibungen haben viele Verwendungszwecke, beispielsweise zum Definieren einer am Bildschirm zu zeichnenden Form oder zum Definieren von Treffertest- und Clipbereichen. Sie können mithilfe einer Geometrie sogar einen Animationspfad definieren.  
@@ -217,13 +216,14 @@ Eine PathGeometry mit mehreren Figuren
  Finden Sie unter den <xref:System.Windows.Media.Geometry> -Klasse für eine vollständige Liste der Methoden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Media.Geometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.GeometryDrawing>
 - [2D-Grafiken und Bildverarbeitung](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Pfadmarkupsyntax](path-markup-syntax.md)
-- [Themen zu Vorgehensweisen](geometries-how-to-topics.md)
+- [Gewusst wie-Themen](geometries-how-to-topics.md)
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Übersicht über Zeichnungsobjekte](drawing-objects-overview.md)

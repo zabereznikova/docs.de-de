@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: 2246ad1f9f36af2f8f4383647ccb97ee7be3b64b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: aa6be50e1cdb00acf79c9f9e2c49050ce7bf3b0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585470"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213349"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Exemplarische Vorgehensweise: Beziehungsübergreifendes Abfragen (Visual Basic)
 Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *Zuordnungen* um fremdschlüsselbeziehungen in der Datenbank darzustellen.  
@@ -92,4 +92,5 @@ Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[
  Die nächste exemplarische Vorgehensweise ([Exemplarische Vorgehensweise: Bearbeiten von Daten (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) wird veranschaulicht, wie Daten bearbeiten können. Diese exemplarische Vorgehensweise setzt nicht voraus, dass Sie die beiden in dieser Serie abgeschlossenen exemplarischen Vorgehensweisen speichern.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Lernen durch exemplarische Vorgehensweisen](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

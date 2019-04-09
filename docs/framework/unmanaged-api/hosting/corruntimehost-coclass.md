@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c81a39acee31986421c810e2814a4f7e6c4d970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2143fc13db1757ac2fa8a9c5a43f104a0c519ca0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218562"
 ---
 # <a name="corruntimehost-coclass"></a>CorRuntimeHost-Co-Klasse
 Stellt Schnittstellen zum Verwalten von Anwendungen, die von der common Language Runtime ausgeführt werden.  
@@ -58,4 +58,5 @@ coclass CorRuntimeHost {
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Hosten von Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)
+
+- [Hosting-Co-Klassen](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

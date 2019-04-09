@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e04bef30d4a9edf9898b27e15a79b2b70e3a7f31
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dcb869bed71be05e0450580b50dfa9f2a0fca525
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477855"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169792"
 ---
 # <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess-Methode
 Ruft einen Zeiger auf die "ICorDebugProcess"-Instanz für den angegebenen Prozess an.  
@@ -53,4 +53,5 @@ HRESULT GetProcess (
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ICorDebug-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

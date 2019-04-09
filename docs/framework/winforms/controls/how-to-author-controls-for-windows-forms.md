@@ -1,19 +1,19 @@
 ---
-title: 'Vorgehensweise: Erstellen von Steuerelementen für Windows Forms'
+title: 'Vorgehensweise: Erstellen von Steuerelementen für Windows Forms'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], creating
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 38416f28546f2aebc04d9ecf2c6995282b4720b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5240b9aaaf4d73cb2899a9003f9658dbd8958f3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713411"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224337"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>Vorgehensweise: Erstellen von Steuerelementen für Windows Forms
+# <a name="how-to-author-controls-for-windows-forms"></a>Vorgehensweise: Erstellen von Steuerelementen für Windows Forms
 Ein Steuerelement stellt eine grafische Verknüpfung zwischen dem Benutzer und der Anwendung dar. Ein Steuerelement kann Daten bereitstellen oder verarbeiten, Benutzereingaben akzeptieren, auf Ereignisse reagieren oder eine beliebige Anzahl von anderen Funktionen ausführen, die eine Verbindung zwischen dem Benutzer und der Anwendung herstellen. Da es sich bei einem Steuerelement im Wesentlichen um eine Komponente mit grafischer Schnittstelle handelt, kann sie den gleichen Zwecken dienen wie eine Komponente, sowie Benutzerinteraktion bereitstellen. Steuerelemente werden erstellt, um bestimmte Zwecke zu erfüllen, und das Erstellen von Steuerelementen ist einfach eine weitere Aufgabe als Programmierer. Vor diesem Hintergrund bieten die folgenden Schritte einen Überblick über das Erstellen von Steuerelementen. Links bieten zusätzliche Informationen zu den einzelnen Schritten.  
   
 > [!NOTE]
@@ -52,10 +52,11 @@ Ein Steuerelement stellt eine grafische Verknüpfung zwischen dem Benutzer und d
 10. Verpacken Sie das Steuerelement, und stellen Sie es bereit. Weitere Informationen finden Sie unter [ein erster Blick auf die Bereitstellung in Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Exemplarische Vorgehensweise: Erstellen eines zusammengesetzten Steuerelements mit Visual Basic](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [Exemplarische Vorgehensweise: Vererben eines Windows Forms-Steuerelements mit Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [Exemplarische Vorgehensweise: Vererben von einem Windows Forms-Steuerelement mit Visual Basic](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
 - [Vorgehensweise: Erben von der UserControl-Klasse](how-to-inherit-from-the-usercontrol-class.md)
 - [Vorgehensweise: Erben von der Control-Klasse](how-to-inherit-from-the-control-class.md)
-- [Vorgehensweise: Erben von vorhandenen Windows Forms-Steuerelementen](how-to-inherit-from-existing-windows-forms-controls.md)
-- [Vorgehensweise: Testen Sie das Laufzeitverhalten eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [Varieties of Custom Controls (Vielfalt benutzerdefinierter Steuerelemente)](varieties-of-custom-controls.md)
+- [Vorgehensweise: Erben von vorhandenen Windows Forms-Steuerelementen](how-to-inherit-from-existing-windows-forms-controls.md)
+- [Vorgehensweise: Testen des Laufzeitverhaltens eines UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [Arten von benutzerdefinierten Steuerelementen](varieties-of-custom-controls.md)

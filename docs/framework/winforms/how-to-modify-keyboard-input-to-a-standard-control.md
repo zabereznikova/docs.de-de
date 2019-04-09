@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Windows Forms, modifying keyboard input
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 626d3712-d866-4988-bcda-a2d5b36ec0ba
-ms.openlocfilehash: 41071efad50d42c873410420c850a7800b41008d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 81d33234670fb8ae5445cc86a79f5c3b6a647a03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705440"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225780"
 ---
 # <a name="how-to-modify-keyboard-input-to-a-standard-control"></a>Vorgehensweise: Ändern von Tastatureingaben in ein Standardsteuerelement
 Windows Forms bietet die Möglichkeit, Tastatureingaben zu nutzen und zu ändern. Nutzen einer Taste bezieht sich auf die Behandlung einer Taste innerhalb einer Methode oder eines Ereignishandlers, sodass andere Methoden und Ereignisse weiter unten in der Meldungswarteschlange den Tastenwert nicht empfangen. Ändern einer Taste bezieht sich auf ein Ändern des Werts einer Taste, sodass Methoden und Ereignishandler weiter unten in der Meldungswarteschlange einen anderen Tastenwert empfangen. In diesem Thema wird gezeigt, wie Sie diese Aufgaben ausführen.  
@@ -68,6 +68,7 @@ Windows Forms bietet die Möglichkeit, Tastatureingaben zu nutzen und zu ändern
  Informationen zum Erstellen dieses Beispiels über die Befehlszeile für Visual Basic oder Visual c# finden Sie unter [erstellen über die Befehlszeile](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) oder [Befehlszeile mit csc.exe](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Sie können auch in diesem Beispiel in Visual Studio erstellen, indem Sie den Code in ein neues Projekt einfügen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Tastatureingaben in einer Windows Forms-Anwendung](keyboard-input-in-a-windows-forms-application.md)
 - [Benutzereingabe in einer Windows Forms-Anwendung](user-input-in-a-windows-forms-application.md)
 - [Funktionsweise von Tastatureingaben](how-keyboard-input-works.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - events [WPF], Preview
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
-ms.openlocfilehash: 95514cfce88764d92d690fb9c0a51c667a49683b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211392"
 ---
 # <a name="preview-events"></a>Vorschauereignisse
 Vorschauereignisse, auch bekannt als Tunneling-Ereignisse, sind die Routingereignisse übertragen, in denen die Richtung der Route aus den Anwendungsstamm für das Element, das das Ereignis ausgelöst hat, und wird als Quelle in den Ereignisdaten gemeldet. Nicht alle Ereignisszenarien zu unterstützen oder erfordern Vorschauereignisse; Dieses Thema beschreibt die Situationen, in denen Vorschauereignisse vorhanden wie Anwendungen oder Komponenten, die sie behandeln soll, und die Fälle, in denen Erstellen von Vorschau-Ereignissen in benutzerdefinierten Komponenten oder Klassen geeignet sein könnte.  
@@ -30,5 +30,6 @@ Vorschauereignisse, auch bekannt als Tunneling-Ereignisse, sind die Routingereig
  Jede dieser Techniken wurde entweder Nebenwirkungen oder Einschränkungen. Den Nebeneffekt, dass der Behandlung des Ereignisses für die Vorschau ist, dass die Behandlung des Ereignisses an diesem Punkt kann deaktiviert werden, Handler, die Sie voraussichtlich die bubbling-Ereignis zu behandeln, und daher die Einschränkung besteht darin, dass es in der Regel keine gute Idee, markieren das Ereignis als behandelt zwar immer noch auf die Previ Neues Teil der Route. Die Beschränkung auf die `handledEventsToo` Technik ist, dass Sie nicht angeben einer `handledEventsToo` Ereignishandler in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] als Attribut, müssen Sie den Ereignishandler im Code registrieren, nach dem erhalten eines Objektverweis auf das Element ist, in dem der Handler angefügt werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Markieren von Routingereignissen als behandelt und Klassenbehandlung](marking-routed-events-as-handled-and-class-handling.md)
 - [Übersicht über Routingereignisse](routed-events-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente, die mithilfe des Designers'
+title: 'Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente mithilfe des Designers'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], access keys
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
-ms.openlocfilehash: 3d4112d87dbd448c7e34d2b84d11b49f56e1dc44
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 900a955173c28c7b86fce73e418561ed437719c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216924"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente, die mithilfe des Designers
+# <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente mithilfe des Designers
 Ein *Zugriffsschlüssel* ist ein unterstrichenes Zeichen im Text eines Menüs, Menüelement oder die Bezeichnung eines Steuerelements wie einer Schaltfläche. Dadurch wird den Benutzer auf eine Schaltfläche "klicken", durch Drücken der ALT-Taste in Kombination mit dem vordefinierten Zugriffsschlüssel. Angenommen, eine Schaltfläche eine Prozedur zum Drucken eines Formulars ausgeführt wird und daher seine `Text` -Eigenschaftensatz "Print", ein kaufmännisches und-Zeichen (&) vor dem Buchstaben "P" bewirkt, die Buchstaben "P dass" unterstrichen werden in den Text der Schaltfläche zur Laufzeit. Der Benutzer kann den Befehl mit der Schaltfläche durch Drücken von ALT + P verknüpften ausführen. Sie keine Zugriffstaste für ein Steuerelement, die keinen Fokus erhalten kann.  
   
 > [!NOTE]
@@ -33,7 +33,8 @@ Ein *Zugriffsschlüssel* ist ein unterstrichenes Zeichen im Text eines Menüs, M
 1.  In der **Eigenschaften** legen die `Text` Eigenschaft eine Zeichenfolge, die ein kaufmännisches und-Zeichen (&) vor dem Buchstaben, die den Zugriffsschlüssel. Geben Sie den Buchstaben "P" als Zugriffstaste festlegen, z. B. **& Drucken** in das Raster.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.Button>
-- [Vorgehensweise: Reagieren Sie auf eine Windows Forms-Schaltfläche geklickt](how-to-respond-to-windows-forms-button-clicks.md)
-- [Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Vorgehensweise: Reagieren auf das Anklicken von Schaltflächen in Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Vorgehensweise: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Textes](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

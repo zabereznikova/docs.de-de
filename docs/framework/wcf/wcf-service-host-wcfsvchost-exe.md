@@ -2,12 +2,12 @@
 title: WCF-Diensthost (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505639"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193017"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF-Diensthost (WcfSvcHost.exe)
 Windows Communication Foundation (WCF)-Diensthost (WcfSvcHost.exe) können Sie zum Starten von Visual Studio-Debugger (F5), um automatisch zu hosten und Testen einen Dienst, den Sie implementiert haben. Anschließend können Sie den Dienst mithilfe von WCF-Testclient (WcfTestClient.exe) oder Ihre eigenen-Clients zum Suchen und beheben potenzielle Fehler testen.  
@@ -111,4 +111,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  Weitere Informationen zum netsh.exe, finden Sie unter "[wie mit dem Netsh.exe-Tool und die Befehlszeilenoptionen](https://go.microsoft.com/fwlink/?LinkId=97877)".  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WCF-Testclient (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

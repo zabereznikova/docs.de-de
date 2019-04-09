@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding direction [WPF]
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
-ms.openlocfilehash: 265271cee16d203d7652281c5416b93759e66d4b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4334ed178e7f2ed90928db6b434eb8c9fee77bf7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206433"
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>Vorgehensweise: Angeben der Bindungsrichtung
 In diesem Beispiel wird erläutert, wie sich angeben lässt, ob die Bindung nur die Eigenschaft „Bindungsziel (Ziel)“, „Bindungsquelle (Quelle)“ oder sowohl die Ziel- als auch die Quelleigenschaft aktualisiert.  
@@ -40,6 +40,7 @@ In diesem Beispiel wird erläutert, wie sich angeben lässt, ob die Bindung nur 
  Für <xref:System.Windows.Data.BindingMode.TwoWay> oder <xref:System.Windows.Data.BindingMode.OneWayToSource> Bindungen können Sie die zeitplanung für die Quelle aktualisiert steuern, durch Festlegen der <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Eigenschaft. Weitere Informationen finden Sie unter <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Data.Binding>
-- [Übersicht zur Datenbindung](data-binding-overview.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)

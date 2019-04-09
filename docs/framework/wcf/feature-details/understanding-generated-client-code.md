@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-ms.openlocfilehash: 929b0ee8b0904d43f44857e8051ff52fc04a4f82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734447"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189157"
 ---
 # <a name="understanding-generated-client-code"></a>Grundlagen des generierten Clientcodes
 Mit dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) werden Clientcode und eine Clientanwendungs-Konfigurationsdatei zum Erstellen von Clientanwendungen generiert. Dieses Thema bietet Beispiele für generierten Code für standardmäßige Dienstvertragszenarien. Weitere Informationen zum Erstellen einer Clientanwendung, die mit dem generierten Code finden Sie unter [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md).  
@@ -31,7 +31,7 @@ Mit dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/fram
 -   Das Identifizieren der Hilfsdienstvertrag-Kanalschnittstelle.  
   
 ### <a name="finding-service-contract-interfaces"></a>Das Suchen von Dienstvertragschnittstellen.  
- Suchen Sie bei der Suche nach Schnittstellen für Dienstvertragmodelle mit dem <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType>-Attribut markierte Schnittstellen. Die Suche nach diesem Attribute mit schnellem Lesen kann wegen des Vorhandenseins anderer Attribute und der für das Attribut selbst festgelegten expliziten Eigenschaften häufig schwierig sein. Beachten Sie, dass die Dienstvertragschnittstelle und die Clientvertragschnittstelle zwei verschiedene Typen sind. Im folgenden Codebeispiel wird der ursprüngliche Dienstvertrag gezeigt.  
+ Suchen Sie bei der Suche nach Schnittstellen für Dienstvertragmodelle mit dem <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> -Attribut markierte Schnittstellen. Die Suche nach diesem Attribute mit schnellem Lesen kann wegen des Vorhandenseins anderer Attribute und der für das Attribut selbst festgelegten expliziten Eigenschaften häufig schwierig sein. Beachten Sie, dass die Dienstvertragschnittstelle und die Clientvertragschnittstelle zwei verschiedene Typen sind. Im folgenden Codebeispiel wird der ursprüngliche Dienstvertrag gezeigt.  
   
  [!code-csharp[C_GeneratedCodeFiles#22](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#22)]  
   
@@ -63,7 +63,7 @@ Mit dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/fram
  In diesem Fall ist der Datentyp der durch eine bestimmte Ausnahme auf dem Client ausgelöste Detailtyp, eine <xref:System.ServiceModel.FaultException%601> , wobei der Detailtypparameter `microsoft.wcf.documentation.SampleFault`ist. Weitere Informationen zu Datentypen finden Sie unter [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md). Weitere Informationen zur Behandlung von Ausnahmen in Clients finden Sie unter [Sending and Receiving Faults](../../../../docs/framework/wcf/sending-and-receiving-faults.md).  
   
 ### <a name="finding-callback-contracts-for-duplex-services"></a>Suchen von Rückrufverträgen für Duplexdienste  
- Wenn Sie einen Dienstvertrag finden, bei dem die Vertragschnittstelle einen Wert für die <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType>-Eigenschaft angibt, dann gibt dieser Vertrag einen Duplexvertrag an. Duplexverträge erfordern, dass die Clientanwendung eine Rückrufklasse erstellt, die den Rückrufvertrag implementiert und eine Instanz dieser Klasse an <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> oder <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> zur Kommunikation mit dem Dienst übergibt. Weitere Informationen zu duplexclients finden Sie unter [Vorgehensweise: Zugreifen auf Dienste mit einem Duplexvertrag](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
+ Wenn Sie einen Dienstvertrag finden, bei dem die Vertragschnittstelle einen Wert für die <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A?displayProperty=nameWithType> -Eigenschaft angibt, dann gibt dieser Vertrag einen Duplexvertrag an. Duplexverträge erfordern, dass die Clientanwendung eine Rückrufklasse erstellt, die den Rückrufvertrag implementiert und eine Instanz dieser Klasse an <xref:System.ServiceModel.DuplexClientBase%601?displayProperty=nameWithType> oder <xref:System.ServiceModel.DuplexChannelFactory%601?displayProperty=nameWithType> zur Kommunikation mit dem Dienst übergibt. Weitere Informationen zu duplexclients finden Sie unter [Vorgehensweise: Zugreifen auf Dienste mit einem Duplexvertrag](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md).  
   
  Der folgende Vertrag gibt einen Rückrufvertrag vom Typ `SampleDuplexHelloCallback`an.  
   
@@ -76,9 +76,10 @@ Mit dem [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/fram
  [!code-vb[C_GeneratedCodeFiles#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_generatedcodefiles/vb/duplexproxycode.vb#4)]  
   
 ### <a name="finding-service-contract-channel-interfaces"></a>Suchen von Dienstvertrag-Kanalschnittstellen  
- Beim Verwenden der <xref:System.ServiceModel.ChannelFactory>-Klasse mit einer Dienstvertragschnittstelle muss diese in eine <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType>-Schnittstelle umgewandelt werden, um den Kanal explizit zu öffnen, zu schließen oder abzubrechen. Zum Erleichtern der Arbeit generiert das Tool Svcutil.exe auch eine Hilfsschnittstelle, die die Dienstvertragschnittstelle und <xref:System.ServiceModel.IClientChannel> implementiert, wodurch die Interaktion mit der Clientkanalinfrastruktur ohne Umwandlung ermöglicht wird. Im folgenden Code wird die Definition eines Hilfsclientkanals, der den vorangehenden Dienstvertrag implementiert, veranschaulicht.  
+ Beim Verwenden der <xref:System.ServiceModel.ChannelFactory> -Klasse mit einer Dienstvertragschnittstelle muss diese in eine <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> -Schnittstelle umgewandelt werden, um den Kanal explizit zu öffnen, zu schließen oder abzubrechen. Zum Erleichtern der Arbeit generiert das Tool Svcutil.exe auch eine Hilfsschnittstelle, die die Dienstvertragschnittstelle und <xref:System.ServiceModel.IClientChannel> implementiert, wodurch die Interaktion mit der Clientkanalinfrastruktur ohne Umwandlung ermöglicht wird. Im folgenden Code wird die Definition eines Hilfsclientkanals, der den vorangehenden Dienstvertrag implementiert, veranschaulicht.  
   
  [!code-csharp[C_GeneratedCodeFiles#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#13)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über den WCF-Client](../../../../docs/framework/wcf/wcf-client-overview.md)

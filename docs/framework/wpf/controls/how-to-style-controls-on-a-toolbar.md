@@ -6,12 +6,12 @@ helpviewer_keywords:
 - toolbars [WPF]
 - customizing controls on toolbar [WPF]
 ms.assetid: ba6ae056-d6a9-4c24-90f8-467ab0bc0b1a
-ms.openlocfilehash: d81aa227eb1ffcb3dbaa119c41d561cbb066b704
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 580b56ebb47aa7bd50da0a966ccf60f7ea9fb2a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364449"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217782"
 ---
 # <a name="how-to-style-controls-on-a-toolbar"></a>Vorgehensweise: Formatieren von Steuerelementen in einer Symbolleiste
 Die <xref:System.Windows.Controls.ToolBar> definiert <xref:System.Windows.ResourceKey> Objekte an das Format von Steuerelementen in der <xref:System.Windows.Controls.ToolBar>.  So formatieren Sie ein Steuerelement in einer <xref:System.Windows.Controls.ToolBar>, legen die `x:key` Attribut des Formats, eine <xref:System.Windows.ResourceKey> in definierten <xref:System.Windows.Controls.ToolBar>.  
@@ -41,4 +41,5 @@ Die <xref:System.Windows.Controls.ToolBar> definiert <xref:System.Windows.Resour
 [!code-xaml[ToolBar_snip#ToolBar](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolBar_snip/CS/pane1.xaml#toolbar)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen von Formaten und Vorlagen](styling-and-templating.md)

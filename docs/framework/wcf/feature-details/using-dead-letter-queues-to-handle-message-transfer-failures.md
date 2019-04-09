@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: b8dae094655e7bf2a52848d449a5f604f846e052
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f15bf569da6127d6c9d27be255590ce3784d7a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497091"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174615"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Verwenden von Warteschlangen für unzustellbare Nachrichten zur Handhabung von Nachrichtenübertragungsfehlern
 Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen. Diese fehlgeschlagenen Nachrichten werden in einer Warteschlange für unzustellbare Nachrichten aufgezeichnet. Das Fehlschlagen der Zustellung kann beispielsweise durch Netzwerkfehler, eine gelöschte Warteschlange, eine volle Warteschlange, einen Authentifizierungsfehler oder eine zu späte Zustellung verursacht werden.  
@@ -61,19 +61,16 @@ Die Zustellung von in der Warteschlange stehenden Nachrichten kann fehlschlagen.
  [!code-vb[S_DeadLetter#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/client.vb#1)]  
   
  Der folgende Code ist für die Clientkonfigurationsdatei.  
-  
-  
-  
+
  Der folgende Code ist für einen Dienst, der Nachrichten aus einer Warteschlange für unzustellbare Nachrichten verarbeitet.  
   
  [!code-csharp[S_DeadLetter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_deadletter/cs/dlservice.cs#3)]
  [!code-vb[S_DeadLetter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/dlservice.vb#3)]  
   
  Der folgende Code ist für die Dienstkonfigurationsdatei für die Warteschlange für unzustellbare Nachrichten.  
-  
-  
-  
+
 ## <a name="see-also"></a>Siehe auch
+
 - [Warteschlangenübersicht](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Vorgehensweise: Austauschen von Nachrichten in der Warteschlange mit wcd-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Vorgehensweise: Austauschen von Nachrichten in einer Warteschlange mit WCF-Endpunkten](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [Behandlung nicht verarbeitbarer Nachrichten](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

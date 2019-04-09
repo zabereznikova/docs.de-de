@@ -11,19 +11,19 @@ helpviewer_keywords:
 - language providers, settings schema
 - compiler configuration settings
 ms.assetid: c020b139-8699-4f0d-9ac9-70d0c5b2a8c8
-ms.openlocfilehash: ab8225d664b658789f7eb9e7830d5ec527ded94a
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: fe08ac5dc0600e0861bb349ce99875af8658eb4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084366"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187446"
 ---
 # <a name="compiler-and-language-provider-settings-schema"></a>Schema für Compiler- und Sprachanbietereinstellungen
 Die Compiler- und Sprachanbietereinstellungen geben Compilerkonfigurationselemente für verfügbare Sprachanbieter an. Jedes Compilerkonfigurationselement gibt den Typnamen des Codeanbieters, Compilerparameter, unterstützte Sprachnamen und unterstützte Dateierweiterungen an.  
   
  .NET Framework definiert die ursprünglichen Compilereinstellungen in der Computerkonfigurationsdatei (Machine.config). Entwickler und Compileranbieter können Konfigurationseinstellungen für eine neue <xref:System.CodeDom.Compiler.CodeDomProvider>-Implementierung hinzufügen. Verwenden Sie die <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>-Methode, um Sprachanbieter und Compilerkonfigurationseinstellungen auf einem Computer programmgesteuert aufzulisten.  
   
- [\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<Configuration >-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<system.codedom>](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)  
   
@@ -57,7 +57,8 @@ Die Compiler- und Sprachanbietereinstellungen geben Compilerkonfigurationselemen
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<compiler> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [\<Compilerfehler >-Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

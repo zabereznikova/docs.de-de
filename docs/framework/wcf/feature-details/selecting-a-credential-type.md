@@ -2,12 +2,12 @@
 title: Wählen eines Typs von Anmeldeinformationen
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 27e1bc4b9e4209fafd0e3707ad6674eb5db6e451
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577112"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167842"
 ---
 # <a name="selecting-a-credential-type"></a>Wählen eines Typs von Anmeldeinformationen
 *Anmeldeinformationen* sind die Daten, die Windows Communication Foundation (WCF) verwendet wird, um entweder eine beanspruchte Identität bzw. beanspruchte Befähigungen belegt. Ein Ausweis ist beispielsweise ein mit Anmeldeinformationen vergleichbares Dokument, das ein Staat ausgibt, damit seine Bürger ihre Staatsbürgerschaft nachweisen können. In WCF können Anmeldeinformationen viele Formate haben, wie z. B. Benutzernamentoken und x. 509-Zertifikate nutzen. In diesem Thema wird erläutert, Anmeldeinformationen, wie sie in WCF verwendet werden und wie Sie die richtige Anmeldeinformationen für Ihre Anwendung auswählen.  
@@ -25,7 +25,7 @@ ms.locfileid: "54577112"
   
 |Einstellung|Beschreibung|  
 |-------------|-----------------|  
-|Keine|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|  
+|Keiner|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|  
 |Standard|Gibt die Standardauthentifizierung für den Client an. Weitere Informationen finden Sie unter RFC2617 –[HTTP-Authentifizierung: Basic and Digest Authentication (RFC 2617 – HTTP-Authentifizierung: Grundlegende und Hashauthentifizierung)](https://go.microsoft.com/fwlink/?LinkID=88313).|  
 |Digest|Gibt die Hashwertauthentifizierung für den Client an. Weitere Informationen finden Sie unter RFC2617 –[HTTP-Authentifizierung: Basic and Digest Authentication (RFC 2617 – HTTP-Authentifizierung: Grundlegende und Hashauthentifizierung)](https://go.microsoft.com/fwlink/?LinkID=88313).|  
 |Ntlm|Gibt die NT-LAN-Managerauthentifizierung (NTLM) an. Wird verwendet, wenn Sie aus bestimmten Gründen keine Kerberos-Authentifizierung verwenden können. Sie können die Verwendung als ausweichlösung auch deaktivieren, durch Festlegen der <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> Eigenschaft `false`, bewirkt, dass WCF stellen einen Best-Effort-Prinzip eine Ausnahme ausgelöst, wenn NTLM verwendet wird. Durch das Festlegen dieser Eigenschaft auf `false` wird unter Umständen nicht verhindert, dass NTLM-Anmeldeinformationen über die Verbindung gesendet werden.|  
@@ -38,7 +38,7 @@ ms.locfileid: "54577112"
   
 |Einstellung|Beschreibung|  
 |-------------|-----------------|  
-|Keine|Gibt an, dass der Client keine Anmeldeinformationen bereitstellen muss. Dies führt zur Verwendung eines anonymen Clients.|  
+|Keiner|Gibt an, dass der Client keine Anmeldeinformationen bereitstellen muss. Dies führt zur Verwendung eines anonymen Clients.|  
 |Windows|Ermöglicht unter dem mit Windows-Anmeldeinformationen eingerichteten Sicherheitskontext den Austausch von SOAP-Nachrichten.|  
 |Benutzername|Ermöglicht es dem Dienst zu fordern, dass sich der Client per Benutzername authentifiziert. Beachten Sie, dass alle kryptografischen Vorgänge mit Benutzernamen wie das Erzeugen einer Signatur oder Verschlüsseln von Daten von WCF nicht zulässig ist. WCF wird sichergestellt, dass der Transport geschützt wird, wenn der Identitätsnachweis über den Benutzernamen.|  
 |Zertifikat|Ermöglicht es dem Dienst zu fordern, dass der Client mithilfe eines X.509-Zertifikats authentifiziert wird.|  
@@ -98,6 +98,7 @@ ms.locfileid: "54577112"
  Weitere Informationen zu Anmeldeinformationen und sicherheitssitzungen finden Sie unter [Sicherheitsüberlegungen für Sicherheitssitzungen](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A?displayProperty=nameWithType>

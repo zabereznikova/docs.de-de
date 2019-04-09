@@ -10,18 +10,18 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 4b2988314afbe501623fd050a989876842f68601
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 8c2477e5e7086e1bbfaab1e4b116c9e6bb4e2d30
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194062"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Benutzeroberflächenautomatisierung und Bildschirmskalierung
 > [!NOTE]
 >  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] ermöglicht es Benutzern, die [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] -Einstellung so zu ändern, dass die meisten [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Elemente auf dem Bildschirm größer erscheinen. Obwohl dieses Feature in [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]bereits seit längerem verfügbar ist, musste die Skalierung in früheren Versionen von Anwendungen implementiert werden. In [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]führt der Desktopfenster-Manager standardmäßig die Skalierung für alle Anwendungen aus, die ihre eigene Skalierung nicht übernehmen. Benutzeroberflächenautomatisierungs-Clientanwendungen müssen dieses Feature berücksichtigen.  
+ [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] ermöglicht Benutzern das Ändern der [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] Einstellung so, dass die meisten [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] Elemente auf dem Bildschirm größer erscheinen. Obwohl dieses Feature in [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]bereits seit längerem verfügbar ist, musste die Skalierung in früheren Versionen von Anwendungen implementiert werden. In [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]führt der Desktopfenster-Manager standardmäßig die Skalierung für alle Anwendungen aus, die ihre eigene Skalierung nicht übernehmen. Benutzeroberflächenautomatisierungs-Clientanwendungen müssen dieses Feature berücksichtigen.  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Skalierung in Windows Vista  
@@ -76,4 +76,5 @@ ms.locfileid: "57674535"
  Wenn Ihre Anwendung eine direkte prozessübergreifende Kommunikation mit nicht mit [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-Werten kompatiblen Anwendungen unterhält, müssen Sie mithilfe der [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Funktionen `PhysicalToLogicalPoint` und `LogicalToPhysicalPoint`möglicherweise zwischen logischen und physischen Koordinaten konvertieren.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)

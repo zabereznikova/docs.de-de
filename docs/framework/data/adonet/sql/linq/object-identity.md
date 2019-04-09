@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c788f2f9-65cc-4455-9907-e8388a268e00
-ms.openlocfilehash: 8e1db49f534b0f82bf54dc5cedaf46cef683363c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f1b6cf27101c2a7f55757b72b56b2291198404d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640987"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200661"
 ---
 # <a name="object-identity"></a>Objektidentität
 Objekte verfügen zur Laufzeit über eindeutige Identitäten. Zwei Variablen, die sich auf das gleiche Objekt beziehen, verweisen tatsächlich auf die gleiche Objektinstanz. Aufgrund dieser Tatsache sind Änderungen, die Sie über einen Pfad durch eine Variable vornehmen, sofort über die andere Variable sichtbar.  
@@ -43,4 +43,5 @@ Objekte verfügen zur Laufzeit über eindeutige Identitäten. Zwei Variablen, di
  [!code-vb[DLinqObjectIdentity#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqObjectIdentity/vb/Module1.vb#2)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

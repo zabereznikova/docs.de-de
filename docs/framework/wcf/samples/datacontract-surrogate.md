@@ -2,12 +2,12 @@
 title: DataContract-Ersatzzeichen
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 33d5db0251d22ff2fac05c475903eca7dcb3e0fb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 663f168ebbba2238be814791fd0d75e211a469ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828055"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196423"
 ---
 # <a name="datacontract-surrogate"></a>DataContract-Ersatzzeichen
 In diesem Beispiel wird beschrieben, wie Vorgänge wie Serialisierung, Deserialisierung, Schemaexport und Schemaimport mithilfe einer Datenvertrag-Ersatzzeichenklasse angepasst werden können. Dieses Beispiel zeigt, wie verwenden Sie ein Ersatzzeichen in einem Client und Server-Szenario, in dem Daten serialisiert und zwischen Windows Communication Foundation (WCF)-Client und Dienst übertragen.  
@@ -268,4 +268,3 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 >  Wenn dieses Verzeichnis nicht vorhanden ist, fahren Sie mit [Windows Communication Foundation (WCF) und Windows Workflow Foundation (WF) Samples für .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) alle Windows Communication Foundation (WCF) herunterladen und [!INCLUDE[wf1](../../../../includes/wf1-md.md)] Beispiele. Dieses Beispiel befindet sich im folgenden Verzeichnis.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
-  

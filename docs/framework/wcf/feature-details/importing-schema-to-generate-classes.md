@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: e12b4967a84797432ec30cdc88863f8530ea9afd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620525"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228587"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importieren von Schemas zum Generieren von Klassen
 Verwenden Sie zum Generieren von Klassen aus Schemas, die mit Windows Communication Foundation (WCF) verwendet werden, die <xref:System.Runtime.Serialization.XsdDataContractImporter> Klasse. In diesem Thema werden der Prozess und die Variationen beschrieben.  
@@ -31,7 +31,7 @@ Verwenden Sie zum Generieren von Klassen aus Schemas, die mit Windows Communicat
   
 2. Dies ist optional. Übergeben Sie im Konstruktor eine `CodeCompileUnit`. Die während des Schemaimports generierten Typen werden dieser `CodeCompileUnit`-Instanz hinzugefügt. Es wird keine leere `CodeCompileUnit` verwendet.  
   
-3. Dies ist optional. Rufen Sie eine der <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A>-Methoden auf. Die Methode bestimmt, ob es sich beim jeweiligen Schema um ein gültiges Datenvertragsschema handelt und ob es importiert werden kann. Die `CanImport`-Methode verfügt über die gleichen Überladungen wie `Import` (der nächste Schritt).  
+3. Dies ist optional. Rufen Sie eine der <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> -Methoden auf. Die Methode bestimmt, ob es sich beim jeweiligen Schema um ein gültiges Datenvertragsschema handelt und ob es importiert werden kann. Die `CanImport`-Methode verfügt über die gleichen Überladungen wie `Import` (der nächste Schritt).  
   
 4. Rufen Sie eine der überladenen `Import`-Methoden auf, zum Beispiel die <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%28System.Xml.Schema.XmlSchemaSet%29>-Methode.  
   
@@ -52,7 +52,7 @@ Verwenden Sie zum Generieren von Klassen aus Schemas, die mit Windows Communicat
   
  Normalerweise werden öffentliche Typen aus Schemas generiert, indem private Felder und passende Eigenschaften öffentlicher Datenmember verwendet werden. Wenn Sie stattdessen interne Typen generieren möchten, legen Sie die <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A>-Eigenschaft auf `true` fest.  
   
- Das folgende Beispiel zeigt ein Schema, das in eine interne Klasse umgewandelt wird, wenn die <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A>-Eigenschaft auf `true.` festgelegt ist.  
+ Das folgende Beispiel zeigt ein Schema transformiert, die in eine interne Klasse an, wenn die <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> Eigenschaft auf festgelegt ist `true.`  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
@@ -175,11 +175,12 @@ Verwenden Sie zum Generieren von Klassen aus Schemas, die mit Windows Communicat
 #### <a name="import-options-advanced-options"></a>Importoptionen: Erweiterte Optionen  
  Bei den folgenden Optionen handelt es sich um erweiterte Importoptionen:  
   
--   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>-Eigenschaft. Geben Sie den <xref:System.CodeDom.Compiler.CodeDomProvider> an, der verwendet werden soll, um den Code für die generierten Klassen zu generieren. Der Importmechanismus versucht, Funktionen zu vermeiden, die der <xref:System.CodeDom.Compiler.CodeDomProvider> nicht unterstützt. Wenn der <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> nicht festgelegt wird, wird der gesamte Satz an [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Funktionen ohne Einschränkungen verwendet.  
+-   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> -Eigenschaft veranschaulicht. Geben Sie den <xref:System.CodeDom.Compiler.CodeDomProvider> an, der verwendet werden soll, um den Code für die generierten Klassen zu generieren. Der Importmechanismus versucht, Funktionen zu vermeiden, die der <xref:System.CodeDom.Compiler.CodeDomProvider> nicht unterstützt. Wenn der <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> nicht festgelegt wird, wird der gesamte Satz an [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Funktionen ohne Einschränkungen verwendet.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>-Eigenschaft. Mit dieser Eigenschaft können Sie eine <xref:System.Runtime.Serialization.IDataContractSurrogate>-Implementierung angeben. <xref:System.Runtime.Serialization.IDataContractSurrogate> passt den Importprozess an. Weitere Informationen finden Sie unter [Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Standardmäßig wird kein Ersatzzeichen verwendet.  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> -Eigenschaft veranschaulicht. Mit dieser Eigenschaft können Sie eine <xref:System.Runtime.Serialization.IDataContractSurrogate>-Implementierung angeben. <xref:System.Runtime.Serialization.IDataContractSurrogate> passt den Importprozess an. Weitere Informationen finden Sie unter [Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Standardmäßig wird kein Ersatzzeichen verwendet.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>

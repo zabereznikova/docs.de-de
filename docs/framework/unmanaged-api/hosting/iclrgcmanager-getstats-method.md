@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e92707e7b24709d64915e29823196bb0f827175
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9300f67e75d40f041a4fba52f6742741ec9f91de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485233"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187332"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats-Methode
 Ruft einen Satz von aktuellen Statistiken über die common Language Runtime die Garbage Collection-System ab.  
@@ -73,12 +73,13 @@ pCLRGCManager->GetStats(&GCStats);
  **.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Automatische Speicherverwaltung](../../../../docs/standard/automatic-memory-management.md)
+
+- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
 - [COR_GC_STATS-Struktur](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [COR_GC_STAT_TYPES-Enumeration](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)
 - [Garbage Collection](../../../../docs/standard/garbage-collection/index.md)
 - [ICLRControl-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRGCManager-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)
 - [CLR-Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)
-- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)

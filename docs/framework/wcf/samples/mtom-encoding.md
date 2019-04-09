@@ -2,12 +2,12 @@
 title: MTOM-Codierung
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-ms.openlocfilehash: aa24a8f8553ceb035e5fc9c0c6094b1279711674
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 6cf9606896b153fea2bc70b4d0b1a04a64ece598
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198100"
 ---
 # <a name="mtom-encoding"></a>MTOM-Codierung
 Dieses Beispiel veranschaulicht die Verwendung der MTOM-Nachrichtencodierung (Message Transmission Optimization Mechanism) mit einer WSHttpBinding. MTOM ist ein Mechanismus zum Übertragen großer Binäranhänge mit SOAP-Nachrichten als unformatierte Bytes, was kleinere Nachrichten ermöglicht.  
@@ -79,4 +79,3 @@ Press <ENTER> to terminate client.
 3.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
 4.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  

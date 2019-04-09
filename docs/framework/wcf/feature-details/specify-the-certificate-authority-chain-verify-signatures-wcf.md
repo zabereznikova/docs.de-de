@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 8d44e9f9278a212813fca5e77ebfca72734c60d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43296fad9519a08db5facdd220492ac70dffeca2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224467"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Vorgehensweise: Angeben der Zertifizierungsstellenzertifikatskette, der zum Überprüfen von Signaturen (WCF)
 Wenn Windows Communication Foundation (WCF) eine mit einem x. 509-Zertifikat signierte SOAP-Nachricht empfängt, wird standardmäßig überprüft er, ob das x. 509-Zertifikat von einer vertrauenswürdigen Zertifizierungsstelle ausgestellt wurde. Dies erfolgt, indem ein Zertifikatspeicher überprüft und bestimmt wird, ob das Zertifikat für diese Zertifizierungsstelle als vertrauenswürdig bestimmt wurde. In der Reihenfolge für WCF, um diese Entscheidung zu treffen muss die zertifizierungsstellenzertifikatkette im richtigen Zertifikatspeicher installiert werden.  
@@ -34,4 +34,5 @@ Wenn Windows Communication Foundation (WCF) eine mit einem x. 509-Zertifikat sig
          Weitere Informationen zur Verwendung von das Zertifikate-Snap-in mit MMC finden Sie unter [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+
+- [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

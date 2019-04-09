@@ -12,12 +12,12 @@ helpviewer_keywords:
 - views [WPF], grouping data
 - sorting data in views [WPF]
 ms.assetid: f4c43578-01b7-4774-a953-acb95a13b94a
-ms.openlocfilehash: 41ee5cded04559acac5e7270c5e1a2450c70a5aa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 32f73d3c3ba213778654f0d1ee7bbae16b9d845b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211256"
 ---
 # <a name="how-to-sort-data-in-a-view"></a>Vorgehensweise: Sortieren von Daten in einer Ansicht
 In diesem Beispiel wird das Sortieren von Daten in einer Ansicht beschreibt.  
@@ -37,8 +37,9 @@ In diesem Beispiel wird das Sortieren von Daten in einer Ansicht beschreibt.
  Ein Beispiel für die Sortierfunktionen in anwenden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], finden Sie unter [sortieren und Daten mithilfe einer Ansicht in XAML](how-to-sort-and-group-data-using-a-view-in-xaml.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Data.ListCollectionView.CustomSort%2A>
 - [Sortieren einer GridView-Spalte beim Klicken auf einen Header](../controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Übersicht über die Datenbindung](data-binding-overview.md)
 - [Filtern von Daten in einer Ansicht](how-to-filter-data-in-a-view.md)
-- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
+- [Gewusst wie-Themen](data-binding-how-to-topics.md)

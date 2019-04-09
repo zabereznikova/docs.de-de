@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: 9331c892b0c0abccf2ea8700d46fa4180a7225ed
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8df19e69ff3be06704878ea290a3f4a2997127eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375843"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224259"
 ---
 # <a name="freezable-objects-overview"></a>Übersicht über Freezable-Objekte
 In diesem Thema wird beschrieben, wie effektiv verwenden und erstellen Sie <xref:System.Windows.Freezable> -Objekte, die spezielle Funktionen bereitstellen, die Leistung der Anwendung verbessern können. Beispiele für freezable-Objekte sind Pinsel, Stifte, Transformationen, Geometrien und Animationen.  
@@ -162,6 +162,7 @@ mc:Ignorable="PresentationOptions"
  Ein Beispiel für eine benutzerdefinierte <xref:System.Windows.Freezable> Klasse, finden Sie unter den [Beispiel für die benutzerdefinierte Animation](https://go.microsoft.com/fwlink/?LinkID=159981).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Freezable>
 - [Benutzerdefiniertes Animationsbeispiel](https://go.microsoft.com/fwlink/?LinkID=159981)
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)

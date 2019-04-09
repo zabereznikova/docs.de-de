@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ProgressBar control type
 - UI Automation, Progress Bar control type
 ms.assetid: 302e778c-24b0-4789-814a-c8d37cf53a5f
-ms.openlocfilehash: 6ff513b157b29a407a09fbffc9a7d54652317cd2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7a3347aa0fa272ea0b93ac2ad504943f37c65b2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673521"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217730"
 ---
 # <a name="ui-automation-support-for-the-progressbar-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den ProgressBar-Steuerelementtyp
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.locfileid: "57673521"
 ## <a name="required-ui-automation-properties"></a>Erforderliche Benutzeroberflächenautomatisierungs-Eigenschaften  
  Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften, deren Werte oder Definitionen für Statusanzeige-Steuerelemente besonders relevant sind. Weitere Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaften finden Sie [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|Wert|Hinweise|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaft|Wert|Hinweise|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Siehe Hinweise.|Der Wert dieser Eigenschaft muss für alle Steuerelemente in einer Anwendung eindeutig sein.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Siehe Hinweise.|Das äußere Rechteck, das das gesamte Steuerelement enthält.|  
@@ -59,7 +59,7 @@ ms.locfileid: "57673521"
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Variabel|Statusanzeige-Steuerelemente, die den Fortschritt als Text anzeigen, müssen <xref:System.Windows.Automation.Provider.IValueProvider>implementieren.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider.IsReadOnly%2A>|True|Der Wert für diese Eigenschaft ist immer „True“.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>|Siehe Hinweise.|Durch diese Eigenschaft wird der Fortschritt eines Statusanzeige-Steuerelements als Text verfügbar.|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Variabel|Statusanzeige-Steuerelemente, die einen numerischen Bereich erfordern, müssen <xref:System.Windows.Automation.Provider.IRangeValueProvider>implementieren.|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|Variabel|Statusanzeige-Steuerelemente, die einen numerischen Bereich übernehmen müssen implementieren. <xref:System.Windows.Automation.Provider.IRangeValueProvider>|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Minimum%2A>|0.0|Der Wert dieser Eigenschaft wird auf den kleinsten Wert festgelegt, den das Steuerelement annehmen kann.|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Maximum%2A>|100.0|Der Wert dieser Eigenschaft wird auf den größten Wert festgelegt, den das Steuerelement annehmen kann.|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.SmallChange%2A>|NaN|Diese Eigenschaft ist nicht erforderlich, da Statusanzeige-Steuerelemente schreibgeschützt sind.|  
@@ -69,17 +69,18 @@ ms.locfileid: "57673521"
 ## <a name="required-ui-automation-events"></a>Erforderliche Benutzeroberflächenautomatisierungs-Ereignisse  
  Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse, die von allen Statusanzeige-Steuerelementen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis|Unterstützung|Hinweise|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event|Unterstützung|Hinweise|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keine|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keine|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keine|  
-|Durch geänderte<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keine|  
-|Durch geänderte<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> -Eigenschaft ausgelöstes Ereignis.|Variabel|Keine|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Erforderlich|Keine|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Erforderlich|Keine|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Variabel|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Erforderlich|Keiner|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Erforderlich|Keiner|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Automation.ControlType.ProgressBar>
 - [Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [Übersicht über die Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-overview.md)

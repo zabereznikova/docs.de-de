@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 6d246c56af191189fa775be3248d3099d2aa2544
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203690"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Exemplarische Vorgehensweise: Erstellen von behindertengerechten Windows-basierten Anwendungen
 Das Erstellen von barrierefreien Anwendungen ist für Unternehmen von größter Bedeutung. Bei vielen staatlichen Stellen gibt es für den Kauf von Software Vorschriften hinsichtlich der Barrierefreiheit. Das Certified for Windows-Logo beinhaltet Anforderungen zur Barrierefreiheit. Allein in den USA gibt es etwa 30 Millionen Menschen, viele davon potenzielle Kunden, für die die Barrierefreiheit von Software maßgeblich ist.  
@@ -141,7 +141,6 @@ Das Erstellen von barrierefreien Anwendungen ist für Unternehmen von größter 
     
       ![Die pizzabestellformular mit einer Namen im Textfeld "und" Größe "und" Beläge Auswahl.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
-  
 ## <a name="supporting-high-contrast-mode"></a>Unterstützen des Modus für hohe Kontraste  
  Der Modus für hohe Kontraste ist eine Windows-Systemeinstellung, die die Lesbarkeit verbessert, indem kontrastreiche Farben und Schriftgrade verwendet werden, die für sehbehinderte Benutzer vorteilhaft sind. Die <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> Eigenschaft wird bereitgestellt, um zu bestimmen, ob der Modus für hohe Kontraste festgelegt ist.  
   

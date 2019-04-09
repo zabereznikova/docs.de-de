@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: 50097ef86fb6bc5341d7ea16ccee441b89823401
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: f9fb5a0d2a23d2ad23aa3886ce25edb999b50678
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352420"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160978"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Eingabearchitektur für die Interoperabilität zwischen Windows Forms und WPF
 Interoperation zwischen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] erfordert, dass beide Technologien auf die entsprechende Tastenkombination Eingabeverarbeitung ist. Dieses Thema beschreibt die Implementierung dieser Technologies Tastatur- und Nachrichtenverarbeitung statt, um reibungslose Zusammenarbeit in hybridanwendungen zu ermöglichen.  
@@ -129,10 +129,11 @@ Interoperation zwischen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
  Nachrichten werden nur gesendet, <xref:System.Windows.Forms.Integration.ElementHost> Steuerelemente im aktiven Formular.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
 - [Interaktion zwischen WPF und Win32](wpf-and-win32-interoperation.md)

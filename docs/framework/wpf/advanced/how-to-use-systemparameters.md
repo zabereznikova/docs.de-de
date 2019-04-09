@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
-ms.openlocfilehash: a05e2d08c989da70dd7763ad2df238aac03fded4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 344fb54b48bcbf188b36a29d8205c21deff713c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375154"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199855"
 ---
 # <a name="how-to-use-systemparameters"></a>Vorgehensweise: Verwenden von SystemParameters
 Dieses Beispiel zeigt, wie Sie den Zugriff auf und verwenden Sie die Eigenschaften der <xref:System.Windows.SystemParameters> zum Formatieren oder Anpassen einer Schaltfläche.  
@@ -32,8 +32,9 @@ Dieses Beispiel zeigt, wie Sie den Zugriff auf und verwenden Sie die Eigenschaft
  [!code-vb[SystemRes_snip#ParameterResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#parameterresourcescode)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.SystemParameters>
 - [Zeichnen eines Bereichs mit einem Systempinsel](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [Verwenden von SystemFonts](how-to-use-systemfonts.md)
 - [Verwenden von Systemparameterschlüsseln](how-to-use-system-parameters-keys.md)
-- [Themen zu Vorgehensweisen](resources-how-to-topics.md)
+- [Gewusst wie-Themen](resources-how-to-topics.md)

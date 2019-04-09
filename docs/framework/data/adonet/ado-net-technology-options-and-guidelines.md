@@ -2,12 +2,12 @@
 title: Optionen und Richtlinien der ADO.NET-Technologie
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: b24e06fef52397a550717893876e1e1cf33f371f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 0d0e8f7bd779ce7a8290594887630dd192301fe1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212530"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Optionen und Richtlinien der ADO.NET-Technologie
 Die ADO.NET-Datenplattform ist eine Multiversionsstrategie, die die Menge an erforderlichem Code und den Verwaltungsaufwand reduziert, da Entwickler bei der Programmierung auf konzeptionelle EDMs zurückgreifen können. Diese Plattform enthält das ADO.NET Entity Framework und verwandte Technologien.  
@@ -40,6 +40,7 @@ Die ADO.NET-Datenplattform ist eine Multiversionsstrategie, die die Menge an erf
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] stellt Datendienste im Internet oder in einem Intranet bereit. Die Daten werden gemäß den Spezifikationen des Entity Data Model in Entitäten und Beziehungen strukturiert. Die in diesem Modell bereitgestellten Daten sind durch das Standard-HTTP-Protokoll adressierbar. Weitere Informationen finden Sie unter [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [Neues in ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

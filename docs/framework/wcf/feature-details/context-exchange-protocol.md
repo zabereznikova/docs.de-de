@@ -2,12 +2,12 @@
 title: Kontextaustauschprotokoll
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: b1c2b293f8e23f9bc43fba32551233d92666793e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217002"
 ---
 # <a name="context-exchange-protocol"></a>Kontextaustauschprotokoll
 In diesem Abschnitt wird das in Windows Communication Foundation (WCF)-Version .NET Framework, Version 3.5 eingeführte kontextaustauschprotokoll beschrieben. Mithilfe dieses Protokolls kann vom Clientkanal ein vom Dienst bereitgestellter Kontext akzeptiert und für alle nachfolgenden Anforderungen übernommen werden, die über dieselbe Clientkanalinstanz an den Dienst gesendet werden. Die Implementierung des kontextaustauschprotokolls kann eine der beiden folgenden Verfahren verwenden, den Kontext zwischen dem Server und den Client weitergegeben werden: HTTP-Cookies oder ein SOAP-Header.  
@@ -68,4 +68,5 @@ In diesem Abschnitt wird das in Windows Communication Foundation (WCF)-Version .
     ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Leitfaden für die Interoperabilität von Webdienstprotokollen](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)
+
+- [Handbuch für die Interoperabilität von Webdienstprotokollen](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

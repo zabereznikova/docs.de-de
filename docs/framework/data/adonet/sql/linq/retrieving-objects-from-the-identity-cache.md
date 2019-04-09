@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
-ms.openlocfilehash: dceda9dce794e0a08cc9cd7905cf3cd0685898d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211230"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Abrufen von Objekten aus dem Identitätscache
 In diesem Thema werden die Typen von LINQ to SQL-Abfragen beschrieben, die Objekte aus dem Identitäts-Cache abrufen, der vom <xref:System.Data.Linq.DataContext> verwaltet wird.  
@@ -30,7 +30,7 @@ In diesem Thema werden die Typen von LINQ to SQL-Abfragen beschrieben, die Objek
   
  In diesen allgemeinen Formen werden `Function1`, `Function2` und `predicate` wie folgt definiert.  
   
- `Function1` kann eine der folgenden Formen haben:  
+ `Function1` Dabei kann es sich um eine der folgenden sein:  
   
 -   <xref:System.Linq.Queryable.Where%2A>  
   
@@ -42,7 +42,7 @@ In diesem Thema werden die Typen von LINQ to SQL-Abfragen beschrieben, die Objek
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `Function2` kann eine der folgenden Formen haben:  
+ `Function2` Dabei kann es sich um eine der folgenden sein:  
   
 -   <xref:System.Linq.Queryable.First%2A>  
   
@@ -52,7 +52,7 @@ In diesem Thema werden die Typen von LINQ to SQL-Abfragen beschrieben, die Objek
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `predicate` muss ein Ausdruck sein, in dem die Primärschlüsseleigenschaft des Objekts auf einen konstanten Wert festgelegt ist. Wenn der Primärschlüssel eines Objekts von mehreren Eigenschaften definiert wird, muss jede dieser Eigenschaften auf einen konstanten Wert festgelegt sein. Hier einige Beispiele der Form, die `predicate` aufweisen muss:  
+ `predicate` Ein Ausdruck muss sein, in dem Primärschlüsseleigenschaft des Objekts auf einen konstanten Wert festgelegt ist. Wenn der Primärschlüssel eines Objekts von mehreren Eigenschaften definiert wird, muss jede dieser Eigenschaften auf einen konstanten Wert festgelegt sein. Hier einige Beispiele der Form, die `predicate` aufweisen muss:  
   
 -   `c => c.PK == constant_value`  
   
@@ -65,6 +65,7 @@ In diesem Thema werden die Typen von LINQ to SQL-Abfragen beschrieben, die Objek
  [!code-vb[L2S_QueryCache#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/l2s_querycache/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Abfragekonzepte](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
 - [Objektidentität](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
 - [Hintergrundinformationen](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
