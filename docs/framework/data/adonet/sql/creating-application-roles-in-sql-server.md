@@ -2,12 +2,12 @@
 title: Erstellen von Anwendungsrollen in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: 4d3ee759a11417d5f4d36a295f20c7f7886d30d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f836fd239eca30d0a1f4a667cddc844446d1d951
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100371"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Erstellen von Anwendungsrollen in SQL Server
 Anwendungsrollen bieten die Möglichkeit, einer Anwendung anstelle von Datenbankrollen oder Benutzern Berechtigungen zuzuweisen. Benutzer können eine Verbindung mit der Datenbank herstellen, die Anwendungsrolle aktivieren und die der Anwendung erteilten Berechtigungen annehmen. Die der Anwendungsrolle gewährten Berechtigungen sind so lange in Kraft, wie die Verbindung besteht.  
@@ -47,7 +47,7 @@ Anwendungsrollen bieten die Möglichkeit, einer Anwendung anstelle von Datenbank
   
  Sie sollten die folgenden Alternativen in Erwägung ziehen.  
   
--   Verwenden Sie Kontextwechsel mit der EXECUTE AS-Anweisung und deren Klauseln NO REVERT und WITH COOKIE. Sie können ein Benutzerkonto in einer Datenbank erstellen, das keiner Anmeldung zugeordnet ist. Anschließend weisen Sie diesem Konto Berechtigungen zu. Die Verwendung von EXECUTE AS mit einem <legacyBold>login-less</legacyBold>-Benutzer ist sicherer, da sie auf Berechtigungen und nicht auf dem Kennwort basiert. Weitere Informationen finden Sie unter [Anpassen von Berechtigungen durch Identitätswechsel in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
+-   Verwenden Sie Kontextwechsel mit der EXECUTE AS-Anweisung und deren Klauseln NO REVERT und WITH COOKIE. Sie können ein Benutzerkonto in einer Datenbank erstellen, das keiner Anmeldung zugeordnet ist. Anschließend weisen Sie diesem Konto Berechtigungen zu. Die Verwendung von EXECUTE AS mit einem login-less-Benutzer ist sicherer, da sie auf Berechtigungen und nicht auf dem Kennwort basiert. Weitere Informationen finden Sie unter [Anpassen von Berechtigungen durch Identitätswechsel in SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md).  
   
 -   Signieren Sie gespeicherte Prozeduren mit Zertifikaten, die nur die Berechtigung gewähren, die zum Ausführen der Prozeduren notwendig ist. Weitere Informationen finden Sie unter [Signieren von gespeicherten Prozeduren in SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md).  
   
@@ -59,6 +59,7 @@ Anwendungsrollen bieten die Möglichkeit, einer Anwendung anstelle von Datenbank
 |[Anwendungsrollen](/sql/relational-databases/security/authentication-access/application-roles)|Beschreibt das Erstellen und Verwenden von Anwendungsrollen in SQL Server 2008.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sichern von ADO.NET-Anwendungen](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [Übersicht über die SQL Server-Sicherheit](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
 - [Anwendungssicherheitsszenarios in SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)

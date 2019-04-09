@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: 8dea23bac122f1f135b4695995d79191d5cd5f04
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0c53e3a15bcbe61db7da1edb31ecd3fd562603f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827603"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099897"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Laden eines "DataSets" aus XML
 Der Inhalt eines ADO.NET-<xref:System.Data.DataSet> kann aus einem XML-Stream oder einem XML-Dokument erstellt werden. Außerdem können Sie mit .NET Framework größtenteils festlegen, welche Informationen aus der XML-Quelle geladen werden sollen und wie das Schema oder die relationale Struktur des <xref:System.Data.DataSet> erstellt werden soll.  
@@ -116,11 +116,12 @@ foreach (DataTable dataTable in dataSet.Tables)
  Wenn das <xref:System.Data.DataSet> bereits Daten enthält, werden die neuen Daten aus der XML-Quelle den im <xref:System.Data.DataSet> bereits vorhandenen Daten hinzugefügt. **ReadXml** nicht zusammen in der XML-Daten in die <xref:System.Data.DataSet> alle Zeileninformationen mit übereinstimmenden Primärschlüsseln. Um vorhandene Zeileninformationen mit neuen Informationen aus XML zu überschreiben, verwenden **ReadXml** zum Erstellen eines neuen <xref:System.Data.DataSet>, und klicken Sie dann <xref:System.Data.DataSet.Merge%2A> neuen <xref:System.Data.DataSet> in die vorhandenen <xref:System.Data.DataSet>. Laden ein DiffGram mit **ReadXML** mit einer **XmlReadMode** von **DiffGram** werden Zeilen mit den gleichen Bezeichner zusammengeführt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Data.DataSet.Merge%2A?displayProperty=nameWithType>
-- [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [Verwenden von XML in einem "DataSet"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
 - [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
 - [Ableiten einer relationalen DataSet-Struktur aus einem XML-Schema](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
 - [Laden von DataSet-Schemainformationen aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)
-- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- ["DataSets", "DataTables" und "DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

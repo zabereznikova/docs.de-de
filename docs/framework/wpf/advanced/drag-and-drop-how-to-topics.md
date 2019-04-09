@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
-ms.openlocfilehash: dd7bccdd28f433893a988f95c5e1d804f6e138de
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87c1425e6eaf03b900e07cfd9fc489ef01b1607a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100170"
 ---
 # <a name="drag-and-drop-how-to-topics"></a>Gewusst-wie-Themen zu Drag &amp; Drop
 Die folgenden Beispiele veranschaulichen, wie Sie häufige Aufgaben mit der [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Drag & Drop-Framework.  
@@ -25,4 +25,5 @@ Die folgenden Beispiele veranschaulichen, wie Sie häufige Aufgaben mit der [!IN
  [Speichern von mehreren Datenformaten in einem Datenobjekt](how-to-store-multiple-data-formats-in-a-data-object.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über Drag & Drop](drag-and-drop-overview.md)

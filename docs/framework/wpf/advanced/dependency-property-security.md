@@ -10,17 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 85806ee9fb01cd2ca07697230c46a8847fdf8c6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077471"
 ---
 # <a name="dependency-property-security"></a>Sicherheit von Abhängigkeitseigenschaften
 Abhängigkeitseigenschaften sollten im Allgemeinen als öffentliche Eigenschaften betrachtet werden. Die Art des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystems verhindert die Möglichkeit von Sicherheitsgarantien in Bezug auf einen Abhängigkeitseigenschaftswert.  
-  
-  
+
 <a name="AccessSecurity"></a>   
 ## <a name="access-and-security-of-wrappers-and-dependency-properties"></a>Zugriff und Sicherheit von Wrappern und Abhängigkeitseigenschaften  
  Abhängigkeitseigenschaften werden in der Regel zusammen mit [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Wrappereigenschaften implementiert, die das Abrufen oder Festlegen der Eigenschaft aus einer Instanz vereinfachen. Die Wrapper sind einfach nur praktische Methoden, die die zugrunde liegende implementieren jedoch <xref:System.Windows.DependencyObject.GetValue%2A> und <xref:System.Windows.DependencyObject.SetValue%2A> statische Aufrufe, die bei der Interaktion mit Abhängigkeitseigenschaften verwendet werden. Anders formuliert werden die Eigenschaften als [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]-Eigenschaften verfügbar gemacht, die durch eine Abhängigkeitseigenschaft anstatt durch ein privates Feld gesichert werden. Auf Wrapper angewendete Sicherheitsmechanismen gelten nicht parallel zum Verhalten des Eigenschaftensystems und zum Zugriff auf die zugrunde liegende Abhängigkeitseigenschaft. Platzieren eine sicherheitsforderung für den Wrapper wird nur verhindert, dass die Verwendung der Hilfsmethode aber wird nicht verhindert, dass Aufrufe von <xref:System.Windows.DependencyObject.GetValue%2A> oder <xref:System.Windows.DependencyObject.SetValue%2A>. Auch bietet das Versehen der Wrapper mit geschützten oder privaten Zugriffsebenen keine effektive Sicherheit.  
@@ -40,4 +39,5 @@ Abhängigkeitseigenschaften sollten im Allgemeinen als öffentliche Eigenschafte
  Eine Anforderung zum Anwenden einer <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> und erwartet wird der Fehler bei der Überprüfung auf einen Fehler bei Bedarf, um zu verhindern, dass eine Eigenschaft festgelegt wird, ist kein geeigneter Sicherheitsmechanismus. Ungültigkeit von festgelegten Werten durch erzwungen <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> kann auch von böswilligen Aufrufern unterdrückt werden, wenn diese Aufrufer innerhalb der Anwendungsdomäne ausgeführt werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Benutzerdefinierte Abhängigkeitseigenschaften](custom-dependency-properties.md)

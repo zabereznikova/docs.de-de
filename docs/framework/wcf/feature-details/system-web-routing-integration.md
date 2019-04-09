@@ -2,12 +2,12 @@
 title: System.Web.Routing-Integration
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 0ace776b8be64f42c05918bc234d39cd96bf8782
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d5c3d7586189e0939fd52bc2b5feac51ae00613
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688184"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097511"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing-Integration
 Beim Hosten eines Windows Communication Foundation (WCF)-Diensts in Internet Information Service (IIS) platzieren Sie eine SVC-Datei in das virtuelle Verzeichnis ein. Diese SVC-Datei gibt die zu verwendende Diensthostfactory sowie die Klasse an, die den Dienst implementiert. Bei Anforderungen an den Dienst geben Sie die SVC-Datei im URI an, z. B.: `http://contoso.com/EmployeeServce.svc`. Für Programmierer, die REST-Dienste schreiben, ist dieser Typ von URI nicht optimal. URIs für REST-Dienste geben eine bestimmte Ressource an und verfügen normalerweise nicht über Erweiterungen. Die <xref:System.Web.Routing> -Integrationsfunktion können Sie zum Hosten eines WCF REST-Diensts, der auf URIs ohne Erweiterung reagiert. Weitere Informationen zu routing finden Sie unter [ASP.NET-Routing](https://go.microsoft.com/fwlink/?LinkId=184660).  
@@ -70,5 +70,6 @@ Beim Hosten eines Windows Communication Foundation (WCF)-Diensts in Internet Inf
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [ASP.NET-Routing](https://go.microsoft.com/fwlink/?LinkId=184660)

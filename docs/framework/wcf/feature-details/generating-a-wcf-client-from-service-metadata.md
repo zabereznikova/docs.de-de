@@ -2,12 +2,12 @@
 title: Generieren eines WCF-Clients aus Dienstmetadaten
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 3bdb283e461076ffd5c1e77963933de0e5b4bb02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cfbfc1e4be0003b3699f818212fbcd959f3ad91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570956"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078251"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Generieren eines WCF-Clients aus Dienstmetadaten
 In diesem Thema wird beschrieben, wie die verschiedenen Schalter in Svcutil.exe verwendet werden, um aus Metadatendokumenten Clients zu generieren.  
@@ -30,36 +30,36 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/ reference:\<Dateipfad >**|Verweist auf Typen in der angegebenen Assembly. Beim Generieren von Clients können Sie diese Option verwenden, um Assemblys anzugeben, die unter Umständen die Typen mit den zu importierenden Metadaten enthalten.<br /><br /> Kurzform: `/r`.|  
-|**/excludeType:\<type>**|Gibt einen vollqualifizierten oder assemblyqualifizierten Namen an, der aus den verwiesenen Vertragstypen ausgeschlossen werden soll.<br /><br /> Kurzform: `/et`.|  
+|**/ reference:\<Dateipfad >**|Verweist auf Typen in der angegebenen Assembly. Beim Generieren von Clients können Sie diese Option verwenden, um Assemblys anzugeben, die unter Umständen die Typen mit den zu importierenden Metadaten enthalten.<br /><br /> Kurzform: `/r`|  
+|**/excludeType:\<type>**|Gibt einen vollqualifizierten oder assemblyqualifizierten Namen an, der aus den verwiesenen Vertragstypen ausgeschlossen werden soll.<br /><br /> Kurzform: `/et`|  
   
 ## <a name="choosing-a-serializer"></a>Wählen eines Serialisierungsprogramms  
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/serializer:Auto**|Wählt die Serialisierung automatisch aus. Hierbei wird das `DataContract`-Serialisierungsmodul verwendet. Wenn dieser Versuch fehlschlägt, wird `XmlSerializer` verwendet.<br /><br /> Kurzform: `/ser:Auto`.|  
-|**/serializer:DataContractSerializer**|Generiert Datentypen, die das `DataContract`-Serialisierungsprogramm für die Serialisierung und die Deserialisierung verwenden.<br /><br /> Kurzform: `/ser:DataContractSerializer`.|  
-|**/serializer:XmlSerializer**|Generiert Datentypen, die `XmlSerializer` für die Serialisierung und die Deserialisierung verwenden.<br /><br /> Kurzform: `/ser:XmlSerializer`.|  
-|**/importXmlTypes**|Das `DataContract`-Serialisierungsprogramm wird so konfiguriert, dass Typen, die keine `DataContract`-Typen sind, als `IXmlSerializable`-Typen importiert werden.<br /><br /> Kurzform: `/ixt`.|  
-|**/dataContractOnly**|Generiert nur Code für `DataContract`-Typen. `ServiceContract`-Typen werden generiert.<br /><br /> Sie sollten für diese Option nur lokale Metadatendateien angeben.<br /><br /> Kurzform: `/dconly`.|  
+|**/serializer:Auto**|Wählt die Serialisierung automatisch aus. Hierbei wird das `DataContract`-Serialisierungsmodul verwendet. Wenn dieser Versuch fehlschlägt, wird `XmlSerializer` verwendet.<br /><br /> Kurzform: `/ser:Auto`|  
+|**/serializer:DataContractSerializer**|Generiert Datentypen, die das `DataContract`-Serialisierungsprogramm für die Serialisierung und die Deserialisierung verwenden.<br /><br /> Kurzform: `/ser:DataContractSerializer`|  
+|**/serializer:XmlSerializer**|Generiert Datentypen, die `XmlSerializer` für die Serialisierung und die Deserialisierung verwenden.<br /><br /> Kurzform: `/ser:XmlSerializer`|  
+|**/importXmlTypes**|Das `DataContract`-Serialisierungsprogramm wird so konfiguriert, dass Typen, die keine `DataContract`-Typen sind, als `IXmlSerializable`-Typen importiert werden.<br /><br /> Kurzform: `/ixt`|  
+|**/dataContractOnly**|Generiert nur Code für `DataContract`-Typen. `ServiceContract` -Typen werden generiert.<br /><br /> Sie sollten für diese Option nur lokale Metadatendateien angeben.<br /><br /> Kurzform: `/dconly`|  
   
 ## <a name="choosing-a-language-for-the-client"></a>Auswählen einer Sprache für den Client  
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/ Language:\<Sprache >**|Gibt die Programmiersprache an, die zur Codegenerierung verwendet werden soll. Sie können entweder einen in der Datei Machine.config registrierten Sprachnamen oder den vollqualifizierten Namen einer Klasse angeben, der von <xref:System.CodeDom.Compiler.CodeDomProvider> abgeleitet ist.<br /><br /> Werte: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Standard: csharp<br /><br /> Kurzform: `/l`.<br /><br /> Weitere Informationen finden Sie unter [CodeDomProvider-Klasse](https://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/ Language:\<Sprache >**|Gibt die Programmiersprache an, die zur Codegenerierung verwendet werden soll. Sie können entweder einen in der Datei Machine.config registrierten Sprachnamen oder den vollqualifizierten Namen einer Klasse angeben, der von <xref:System.CodeDom.Compiler.CodeDomProvider> abgeleitet ist.<br /><br /> Werte: C#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> Standard: csharp<br /><br /> Kurzform: `/l`<br /><br /> Weitere Informationen finden Sie unter [CodeDomProvider-Klasse](https://go.microsoft.com/fwlink/?LinkId=94778).|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Auswählen eines Namespace für den Client  
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/namespace:\<string,string>**|Gibt eine Zuordnung von einem WSDL- oder XML-Schema-`targetNamespace` zu einem CLR (Common Language Runtime)-Namespace an. Durch die Verwendung eines Platzhalters (*) für `targetNamespace` werden alle `targetNamespaces` ohne eine explizite Zuordnung diesem CLR-Namespace zugeordnet.<br /><br /> Um zu gewährleisten, dass der Nachrichtenvertragsname nicht mit dem Vorgangsnamen in Konflikt steht, sollten Sie den Typverweis entweder mit zwei Doppelpunkten (`::`) angeben oder sicherstellen, dass die Namen einmalig sind.<br /><br /> Standardeinstellung: Abgeleitet aus dem Zielnamespace des Schemadokuments für `DataContracts`. Der Standardnamespace wird für alle anderen generierten Typen verwendet.<br /><br /> Kurzform: `/n`.|  
+|**/namespace:\<string,string>**|Gibt eine Zuordnung von einem WSDL- oder XML-Schema-`targetNamespace` zu einem CLR (Common Language Runtime)-Namespace an. Durch die Verwendung eines Platzhalters (*) für `targetNamespace` werden alle `targetNamespaces` ohne eine explizite Zuordnung diesem CLR-Namespace zugeordnet.<br /><br /> Um zu gewährleisten, dass der Nachrichtenvertragsname nicht mit dem Vorgangsnamen in Konflikt steht, sollten Sie den Typverweis entweder mit zwei Doppelpunkten (`::`) angeben oder sicherstellen, dass die Namen einmalig sind.<br /><br /> Standardeinstellung: Abgeleitet aus dem Zielnamespace des Schemadokuments für `DataContracts`. Der Standardnamespace wird für alle anderen generierten Typen verwendet.<br /><br /> Kurzform: `/n`|  
   
 ## <a name="choosing-a-data-binding"></a>Auswählen einer Datenbindung  
   
 |Option|Beschreibung|  
 |------------|-----------------|  
-|**/enableDataBinding**|Implementiert die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle für alle generierten `DataContract`-Typen, um die Datenbindung zu ermöglichen.<br /><br /> Kurzform: `/edb`.|  
+|**/enableDataBinding**|Implementiert die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle für alle generierten `DataContract`-Typen, um die Datenbindung zu ermöglichen.<br /><br /> Kurzform: `/edb`|  
   
 ## <a name="generating-configuration"></a>Generieren der Konfiguration  
   
@@ -70,5 +70,6 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
 |**/noConfig**|Es werden keine Konfigurationsdateien generiert.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden von Metadaten](../../../../docs/framework/wcf/feature-details/using-metadata.md)
 - [Übersicht über die Metadatenarchitektur](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)

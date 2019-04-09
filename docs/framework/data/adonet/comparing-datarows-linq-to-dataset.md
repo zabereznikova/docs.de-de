@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
-ms.openlocfilehash: 546b877dc9eb1e7422505b710690d92937cf2b42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b45a4629474c394c8e49c41a7a98fc1181e124b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077172"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>Vergleichen von DataRows (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] definiert verschiedene Mengenoperatoren, um Quellelemente zu vergleichen und zu sehen, ob sie gleich sind. Der [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] stellt die folgenden Mengenoperatoren bereit:  
+[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] definiert verschiedene Mengenoperatoren zum Vergleichen von Quellelementen, um festzustellen, ob diese gleich sind. [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] Stellt die folgenden Mengenoperatoren bereit:  
   
 -   <xref:System.Linq.Enumerable.Distinct%2A>  
   
@@ -39,6 +39,7 @@ ms.locfileid: "54659188"
  [!code-vb[DP LINQ to DataSet Examples#CompareDifferentRows](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#comparedifferentrows)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Data.DataRowComparer>
 - [Laden von Daten in ein DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [Beispiele für LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)

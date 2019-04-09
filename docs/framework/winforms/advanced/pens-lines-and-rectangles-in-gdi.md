@@ -17,12 +17,12 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 91f41fb4acf5ec174bd76498a70aed3dcda076f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705739"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078225"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>Stifte, Linien und Rechtecke in GDI+
 Zum Zeichnen von Linien mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] müssen Sie erstellen eine <xref:System.Drawing.Graphics> Objekt und ein <xref:System.Drawing.Pen> Objekt. Die <xref:System.Drawing.Graphics> Objekt bietet Methoden, die den Zeichenvorgang, ausführen und die <xref:System.Drawing.Pen> Objekt speichert Attribute, z. B. Farbe, Breite und Stil.  
@@ -68,9 +68,10 @@ Zum Zeichnen von Linien mit [!INCLUDE[ndptecgdiplus](../../../../includes/ndptec
  Ein <xref:System.Drawing.Rectangle> Objekt enthält Methoden und Eigenschaften zum Bearbeiten und Sammeln von Informationen über das Rechteck. Z. B. die <xref:System.Drawing.Rectangle.Inflate%2A> und <xref:System.Drawing.Rectangle.Offset%2A> Methoden ändern die Größe und Position des Rechtecks. Die <xref:System.Drawing.Rectangle.IntersectsWith%2A> Methode erfahren Sie, ob das Rechteck für einen anderen überschneidet angegebenen Rechteck, und die <xref:System.Drawing.Rectangle.Contains%2A> Methode erfahren Sie, ob ein bestimmter Punkt innerhalb des Rechtecks befindet.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
 - [Vorgehensweise: Erstellen eines Stifts](how-to-create-a-pen.md)
-- [Vorgehensweise: Zeichnen einer Linie in einem Windows Form](how-to-draw-a-line-on-a-windows-form.md)
-- [Vorgehensweise: Zeichnen der Kontur eine Form](how-to-draw-an-outlined-shape.md)
+- [Vorgehensweise: Zeichnen einer Linie in Windows Forms](how-to-draw-a-line-on-a-windows-form.md)
+- [Vorgehensweise: Zeichnen der Kontur einer Form](how-to-draw-an-outlined-shape.md)

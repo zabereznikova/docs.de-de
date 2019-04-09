@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0cb166f2753b910465aabb8abd68c31c6f56ff8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7cba2bd1dd5b83e29c7a6c192a1a7e5e2d33ecc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497537"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076473"
 ---
 # <a name="stack-etw-event"></a>ETW-Stapelereignis
 Das Stapelereignis sollte in Verbindung mit anderen Ereignissen verwendet werden, um Stapelüberwachungen zu generieren, nachdem ein Ereignis ausgelöst wird. Es wird protokolliert, wann der Laufzeitanbieter aktiviert ist. Dieses Ereignis hat eine hohe Frequenz, da es ausgelöst wird, wenn ein anderes Laufzeitereignis ausgelöst wird. Aus diesem Grund wird empfohlen, dass Sie dieses Ereignis mit Vorsicht verwenden.  
@@ -25,7 +25,7 @@ Das Stapelereignis sollte in Verbindung mit anderen Ereignissen verwendet werden
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
-|Ereignis|Ereignis-ID|Wird ausgelöst, wenn|  
+|event|Ereignis-ID|Wird ausgelöst, wenn|  
 |-----------|--------------|-----------------|  
 |`CLRStackWalk`|82|In Verbindung mit anderen Ereignissen zum Generieren von Stapelüberwachungen nach einem Ereignis.|  
   
@@ -40,4 +40,5 @@ Das Stapelereignis sollte in Verbindung mit anderen Ereignissen verwendet werden
 |Stapel|win:Pointer|Anweisungszeigerspalten.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)

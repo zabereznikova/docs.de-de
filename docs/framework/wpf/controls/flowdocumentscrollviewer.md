@@ -7,17 +7,18 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentScrollViewer
 - FlowDocumentScrollViewer control [WPF]
 ms.assetid: 727b0a0a-b845-4aa9-9fd4-98f42ed738b4
-ms.openlocfilehash: 307c8e86ac6834631ba4086de5d7e27c0e32b87b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e7f3f52ecbed792469c70c8736e3ca43e5a7a788
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098896"
 ---
 # <a name="flowdocumentscrollviewer"></a>FlowDocumentScrollViewer
 Die <xref:System.Windows.Controls.FlowDocumentScrollViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FlowDocument> Inhalt in einem fortlaufenden Container. Im Gegensatz dazu <xref:System.Windows.Controls.FlowDocumentPageViewer>, die auf der Seite für Inhalt von Systemsichten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Controls.FlowDocumentReader>
 - <xref:System.Windows.Controls.FlowDocumentPageViewer>
 - <xref:System.Windows.Controls.FlowDocumentScrollViewer>
