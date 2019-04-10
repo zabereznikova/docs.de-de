@@ -1,15 +1,15 @@
 ---
-title: 'Vorbereitungen für Windows Communication Foundation: Einfachere Integration in der Zukunft'
+title: 'Vorbereitungen für Windows Communication Foundation: einfachere Migration in der Zukunft'
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: c20011c6cf7a31d8c45769b6995bb6754088bba6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2f733f9cc33846913539fee4afdd95efa9224058
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731282"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124799"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Vorbereitungen für Windows Communication Foundation: Einfachere Integration in der Zukunft
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Vorbereitungen für Windows Communication Foundation: einfachere Migration in der Zukunft
 Dieses Thema enthält Anleitungen, um sicherzustellen, dass neue ASP.NET-Webdienste auch zusammen mit WCF-Anwendungen funktionieren, wenn Sie heute ASP.NET verwenden und erwarten, in der Zukunft mithilfe von WCF.  
   
 ## <a name="general-recommendations"></a>Allgemeine Empfehlungen  
@@ -44,4 +44,5 @@ public interface IEcho
  Vermeiden Sie die Verwendung der von den Internetinformationsdiensten (IIS) bereitgestellten Authentifizierungsoptionen. WCF-Clients unterstützen sie nicht. Wenn ein Dienst gesichert werden muss, verwenden Sie die Optionen, WCF, bereitgestellt werden, da diese Optionen leistungsstärker sind und auf Standardprotokollen basieren.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Vorbereitungen für Windows Communication Foundation: Einfachere Migration in der Zukunft](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+
+- [Vorbereitungen für Windows Communication Foundation: einfachere Integration in der Zukunft](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

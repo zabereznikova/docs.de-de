@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Erstellen Sie einen Dienst, der ein benutzerdefiniertes Zertifikatvalidierungssteuerelement verwendet'
+title: 'Vorgehensweise: Erstellen eines Diensts, der ein benutzerdefiniertes Zertifikatsvalidierungssteuerelement verwendet'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: c4e9be8cb24745cd9651d4ee649a9a37520aa58d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7c2eb820a7e087d99ebd2c463db6e10595f7c1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119625"
 ---
-# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Vorgehensweise: Erstellen Sie einen Dienst, der ein benutzerdefiniertes Zertifikatvalidierungssteuerelement verwendet
+# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>Vorgehensweise: Erstellen eines Diensts, der ein benutzerdefiniertes Zertifikatsvalidierungssteuerelement verwendet
 In diesem Thema wird gezeigt, wie Sie ein benutzerdefiniertes Zertifikats-Validierungssteuerelement implementieren und wie Sie Anmeldeinformationen für Clients oder Dienste konfigurieren, um die standardmäßige Zertifikatüberprüfungslogik durch das benutzerdefinierte Zertifikats-Validierungssteuerelement zu ersetzen.  
   
  Wenn das x. 509-Zertifikat verwendet wird, um einen Client oder Dienst zu authentifizieren, verwendet Windows Communication Foundation (WCF) wird standardmäßig die Windows-Zertifikatspeicher und die Kryptografie-API zum Überprüfen des Zertifikats und stellen Sie sicher, dass es vertrauenswürdig ist. Es kann vorkommen, dass die integrierten Funktionen zur Zertifikatsvalidierung nicht ausreichen und geändert werden müssen. WCF bietet eine einfache Möglichkeit zum Ändern der Validierungslogik, da Benutzer ein benutzerdefiniertes Zertifikats-Validierungssteuerelement hinzuzufügen. Wenn ein benutzerdefiniertes Zertifikats-Validierungssteuerelement angegeben wird, WCF nicht Validierungslogik integrierte Zertifikat, sondern verwendet stattdessen das benutzerdefinierte Validierungssteuerelement.  
@@ -69,11 +69,11 @@ In diesem Thema wird gezeigt, wie Sie ein benutzerdefiniertes Zertifikats-Validi
   
 #### <a name="to-specify-a-custom-certificate-validator-using-configuration-on-the-client"></a>So geben Sie ein benutzerdefiniertes Zertifikats-Validierungssteuerelement an, indem Sie die Konfiguration auf dem Client verwenden  
   
-1.  Hinzufügen einer [ \<Verhaltensweisen >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Element und ein [ \<ServiceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) auf die [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Element.  
+1.  Hinzufügen einer [\<Verhaltensweisen >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) Element und ein [\<ServiceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) auf die [\<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Element.  
   
 2.  Hinzufügen einer [ \<EndpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) Element.  
   
-3.  Fügen Sie ein `<behavior>`-Element hinzu, und legen Sie das `name`-Attribut auf einen passenden Wert fest.  
+3.  Fügen Sie ein `<behavior>`name-Element hinzu, und legen Sie das`name`-Attribut auf einen passenden Wert fest.  
   
 4.  Hinzufügen einer [ \<ClientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) Element.  
   
@@ -109,7 +109,7 @@ In diesem Thema wird gezeigt, wie Sie ein benutzerdefiniertes Zertifikats-Validi
   
 1.  Geben Sie das benutzerdefinierte Zertifikats-Validierungssteuerelement über die <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>-Eigenschaft an. Sie können auf die Dienstanmeldeinformationen mit der <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>-Eigenschaft zugreifen.  
   
-2.  Legen Sie die <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A>-Eigenschaft auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> fest.  
+2.  Legen Sie die <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A> -Eigenschaft auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>fest.  
   
  [!code-csharp[c_CustomCertificateValidator#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcertificatevalidator/cs/source.cs#1)]
  [!code-vb[c_CustomCertificateValidator#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#1)]  
@@ -130,4 +130,5 @@ In diesem Thema wird gezeigt, wie Sie ein benutzerdefiniertes Zertifikats-Validi
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.IdentityModel.Selectors.X509CertificateValidator>

@@ -28,20 +28,19 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: c3bd76c893c2055f94e321e9c888848d344efa15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466217"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166932"
 ---
 # <a name="wpf-windows-overview"></a>Übersicht über WPF-Fenster
 Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige Anwendungen über Windows. Die Hauptaufgabe eines Fensters besteht darin, Inhalt zu hosten, der Daten visuell darstellen kann und Benutzern die Interaktion mit Daten ermöglicht. Eigenständige [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen stellen ihre eigenen Windows über das <xref:System.Windows.Window> Klasse. In diesem Thema werden <xref:System.Windows.Window> , bevor Sie die Grundlagen der Erstellung und Verwaltung von Fenstern in eigenständigen Anwendungen behandelt.  
   
 > [!NOTE]
 >  Im Browser gehostete [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Anwendungen, einschließlich [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] und loose [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Seiten, stellen keine eigenen Fenster. Stattdessen werden sie in von bereitgestellten Windows gehostet [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]. Finden Sie unter [Übersicht über WPF-XAML-Browseranwendungen](wpf-xaml-browser-applications-overview.md).  
-  
-  
+
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Die Fensterklasse  
  Die folgende Abbildung zeigt die Bestandteile eines Fensters an:  
@@ -109,9 +108,9 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Konfigurieren einer Fensterdefinition für MSBuild  
  Wie der Implementierung des Fensters bestimmt dessen Konfiguration für [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Für ein Fenster, das definiert ist, mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup und CodeBehind:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup-Dateien werden als konfiguriert [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` Elemente.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup-Dateien werden als konfiguriert [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` Elemente.  
   
--   Code-Behind-Dateien werden als konfiguriert [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` Elemente.  
+-   Code-Behind-Dateien werden als konfiguriert [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` Elemente.  
   
  Dies wird im folgenden gezeigt [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] Projektdatei.  
   
@@ -130,8 +129,7 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Fensterlebensdauer  
  Wie alle Klassen hat auch ein Fenster eine Lebensdauer, die mit dem erstmaligen Instanziieren beginnt. Anschließend wird es geöffnet, aktiviert, deaktiviert und schließlich geschlossen.  
-  
-  
+
 <a name="Opening_a_Window"></a>   
 ### <a name="opening-a-window"></a>Öffnen eines Fensters  
  Wenn Sie ein Fenster öffnen möchten, müssen Sie zuerst eine Instanz davon erstellen. Dies wird im folgenden Beispiel veranschaulicht.  
@@ -258,9 +256,8 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
- 
-  
- Die <xref:System.Windows.Window.Closing> -Ereignishandler übergeben wird eine <xref:System.ComponentModel.CancelEventArgs>, implementiert die `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> -Eigenschaft, die Sie, um festlegen `true` zum Schließen ein Fensters zu verhindern.  
+
+ Die <xref:System.Windows.Window.Closing> -Ereignishandler übergeben wird eine <xref:System.ComponentModel.CancelEventArgs>, implementiert die `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> -Eigenschaft, die Sie, um festlegen `true` zum Schließen ein Fensters zu verhindern.  
   
  Wenn <xref:System.Windows.Window.Closing> nicht behandelt, oder behandelt, aber nicht abgebrochen, wird das Fenster zu schließen. Unmittelbar vor der eigentlichen Schließen des Fensters <xref:System.Windows.Window.Closed> ausgelöst wird. An dieser Stelle kann das Schließen des Fensters nicht verhindert werden.  
   
@@ -328,13 +325,13 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  Wenn Sie möchten die Breite und Höhe des Fensters, um eine Größe aufweisen, die auf die Größe des Fensters entspricht den Inhalt, können Sie verwenden die <xref:System.Windows.Window.SizeToContent%2A> -Eigenschaft, die in den folgenden Werten:  
   
--   <xref:System.Windows.SizeToContent.Manual>. Keine Auswirkung (Standard).  
+-   <xref:System.Windows.SizeToContent.Manual>sein. Keine Auswirkung (Standard).  
   
--   <xref:System.Windows.SizeToContent.Width>. Anpassen an die Breite Inhalts dieselbe Wirkung hat wie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
+-   <xref:System.Windows.SizeToContent.Width>sein. Anpassen an die Breite Inhalts dieselbe Wirkung hat wie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
   
--   <xref:System.Windows.SizeToContent.Height>. Anpassen an die Höhe Inhalts dieselbe Wirkung hat wie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts.  
+-   <xref:System.Windows.SizeToContent.Height>sein. Anpassen an die Höhe Inhalts dieselbe Wirkung hat wie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts.  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>. Anpassen an die Breite des Inhalts und die Höhe dieselbe Wirkung hat wie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts sowie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
+-   <xref:System.Windows.SizeToContent.WidthAndHeight>sein. Anpassen an die Breite des Inhalts und die Höhe dieselbe Wirkung hat wie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts sowie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
   
  Im folgenden Beispiel wird ein Fenster dass die Größe automatisch an seinen Inhalt vertikal und horizontal an, wenn es zuerst angezeigt wird.  
   
@@ -401,8 +398,7 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
  Sie ändern die Darstellung des Clientbereichs eines Fensters, indem Sie fensterspezifischen Inhalt hinzufügen, z. B. Schaltflächen, Bezeichnungen und Textfelder. So konfigurieren Sie den nicht-Clientbereich, <xref:System.Windows.Window> stellt mehrere Eigenschaften, darunter <xref:System.Windows.Window.Icon%2A> auf das Symbol eines Fensters festzulegen und <xref:System.Windows.Window.Title%2A> um den Fenstertitel festzulegen.  
   
  Außerdem können Sie die Darstellung und das Verhalten des Rahmens im Nicht-Clientbereich ändern, indem Sie den Größenänderungsmodus, den Fensterstil und die Tatsache konfigurieren, ob es als Schaltfläche in der Desktoptaskleiste angezeigt wird.  
-  
-  
+
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>Größenänderungsmodus  
  Je die <xref:System.Windows.Window.WindowStyle%2A> -Eigenschaft, können Sie steuern, wie (und ob) Benutzer die Größe des Fensters ändern können. Die Auswahl des Fensterstils bestimmt, ob es sich bei ein Benutzer die Fenstergröße durch Ziehen von, ob der Rahmen mit der Maus ändern kann die **Minimieren**, **Maximieren**, und **Größe** Schaltflächen auf den nicht-Clientbereich angezeigt werden und, falls sie angezeigt, ob diese aktiviert sind.  
@@ -484,6 +480,7 @@ Die standarddarstellung eines Fensters umfasst eine Taskleistenschaltfläche wie
  Dialogfelder sind Fenster, die häufig zum Erfassen von Benutzerinformationen verwendet werden, um eine Funktion ausführen. Z. B. wenn ein Benutzer möchte eine Datei öffnen die **Datei öffnen** Dialogfeld wird in der Regel von einer Anwendung zum Abrufen des Dateinamens des Benutzers angezeigt. Weitere Informationen finden Sie unter [Übersicht über Dialogfelder](dialog-boxes-overview.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>

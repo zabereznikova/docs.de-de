@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 12bfe994e02e1a330cc543ca1afd21ddf32dac66
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673677"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126359"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung
 > [!NOTE]
@@ -18,7 +18,7 @@ ms.locfileid: "57673677"
   
  In dieser Übersicht werden [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Steuerelementmuster vorgestellt. Steuerelementmuster bieten eine Möglichkeit zum Kategorisieren und Verfügbarmachen der Funktionalität eines Steuerelements, unabhängig vom Typ des Steuerelements oder vom Erscheinungsbild des Steuerelements.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] verwendet Steuerelementmuster, um allgemeine Verhaltensweisen von Steuerelementen abzubilden. Beispielsweise verwenden Sie das Aufruf-Steuerelementmuster für Steuerelemente, die aufgerufen werden können (etwa Schaltflächen), und das Scroll-Steuerelementmuster für Steuerelemente, die Scrollleisten haben (z. B. Listenfelder, Listenansichten oder Kombinationsfelder). Da mit jedem Steuerelementmuster eine separate Funktionalität abgebildet wird, können diese kombiniert werden, um den gesamten Funktionsumfang zu beschreiben, der von einem bestimmten Steuerelement unterstützt wird.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] verwendet Steuerelementmuster, um die allgemeinen Steuerelementverhaltensweisen darzustellen. Beispielsweise verwenden Sie das Aufruf-Steuerelementmuster für Steuerelemente, die aufgerufen werden können (etwa Schaltflächen), und das Scroll-Steuerelementmuster für Steuerelemente, die Scrollleisten haben (z. B. Listenfelder, Listenansichten oder Kombinationsfelder). Da mit jedem Steuerelementmuster eine separate Funktionalität abgebildet wird, können diese kombiniert werden, um den gesamten Funktionsumfang zu beschreiben, der von einem bestimmten Steuerelement unterstützt wird.  
   
 > [!NOTE]
 >  Zusammengesetzte Steuerelemente – Steuerelemente, die mit untergeordneten Steuerelementen erstellt wurden, die die [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] für Funktionalität bereitstellen, die vom übergeordneten Steuerelement verfügbar gemacht wird – sollten alle Steuerelementmuster implementieren, die normalerweise den untergeordneten Steuerelementen zugewiesen sind. Dagegen ist es nicht erforderlich, dass diese selben Steuerelementmuster durch die untergeordneten Steuerelemente implementiert werden.  
@@ -73,6 +73,7 @@ ms.locfileid: "57673677"
 |<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|Macht fensterspezifische Informationen verfügbar. Dies ist ein grundlegendes Konzept für [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] . Zu den Beispielen für Steuerelemente, die Fenster sind, gehören Anwendungsfenster der obersten Ebene ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)], [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]usw.), untergeordnete [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] -Fenster und Dialogfelder.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
 - [Übersicht über die Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-overview.md)

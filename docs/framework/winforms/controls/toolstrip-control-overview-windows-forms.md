@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: c701ed6ff155ca507f827874a955b2361a3b2359
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144572"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>Übersicht über das ToolStrip-Steuerelement (Windows Forms)
 Die Windows-Formulare <xref:System.Windows.Forms.ToolStrip> -Steuerelement und die zugehörigen Klassen bieten Sie ein gemeinsames Framework zum Zusammenfassen von Elementen der Benutzeroberfläche in Symbolleisten, Statusleisten und Menüs. <xref:System.Windows.Forms.ToolStrip> Steuerelemente bieten eine komfortable während der Entwurfszeit, die direkte Aktivierung und bearbeiten, benutzerdefiniertes Layout und rafting, enthält dies ist die Möglichkeit von Symbolleisten, horizontalen oder vertikalen Speicherplatz freizugeben.  
@@ -46,7 +46,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.ToolStrip> -Steuerelement und d
   
 ### <a name="important-toolstrip-members"></a>Wichtige ToolStrip-Elemente  
   
-|name|Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.ToolStrip.Dock%2A>|Ruft ab oder legt fest, welche Rand des übergeordneten Containers eine <xref:System.Windows.Forms.ToolStrip> angedockt ist.|  
 |<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>|Ruft einen Wert ab bzw. legt einen Wert fest, der angibt, ob Drag &amp; Drop und die Neuanordnung von Elementen von der <xref:System.Windows.Forms.ToolStrip>-Klasse privat behandelt werden.|  
@@ -62,7 +62,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.ToolStrip> -Steuerelement und d
   
 ### <a name="important-toolstrip-companion-classes"></a>Wichtige ToolStrip Assistentenklassen  
   
-|name|Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip>|Ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.MainMenu> Klasse.|  
 |<xref:System.Windows.Forms.StatusStrip>|Ersetzt und funktionell erweitert, um die <xref:System.Windows.Forms.StatusBar> Klasse.|  
@@ -80,6 +80,7 @@ Die Windows-Formulare <xref:System.Windows.Forms.ToolStrip> -Steuerelement und d
  Weitere Informationen finden Sie unter [Zusammenfassung der ToolStrip-Technologie](toolstrip-technology-summary.md) und [Architektur des ToolStrip-Steuerelements](toolstrip-control-architecture.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

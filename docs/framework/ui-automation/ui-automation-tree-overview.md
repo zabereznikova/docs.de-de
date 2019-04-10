@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: 19e416271e0c6e717a46821569983a250ef0ae0b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a88822d6aed5af04ecf7deffe6936cfc4ebe296e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225949"
 ---
 # <a name="ui-automation-tree-overview"></a>Übersicht über die Benutzeroberflächenautomatisierungs-Struktur
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "57675575"
   
  Benutzeroberflächenautomatisierungs-Anbieter unterstützen Filtern durch Definieren von Eigenschaften für Elemente, einschließlich der <xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>-Eigenschaft und der <xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>-Eigenschaft.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] bietet drei Standardansichten. Diese Ansichten werden durch den Typ des ausgeführten Filterns definiert. Der Bereich jeder Ansicht wird durch die Anwendung definiert. Außerdem kann eine Anwendung andere Filter auf Eigenschaften anwenden, z. B. um nur aktivierte Steuerelemente in eine Steuerelementansicht aufzunehmen.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] stellt drei Standardansichten bereit. Diese Ansichten werden durch den Typ des ausgeführten Filterns definiert. Der Bereich jeder Ansicht wird durch die Anwendung definiert. Außerdem kann eine Anwendung andere Filter auf Eigenschaften anwenden, z. B. um nur aktivierte Steuerelemente in eine Steuerelementansicht aufzunehmen.  
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>Rohdatenansicht  
@@ -55,5 +55,6 @@ ms.locfileid: "57675575"
  Sie erhalten die Inhaltsansicht, indem Sie nach Elementen suchen, deren <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>-Eigenschaft auf `true` festgelegt ist, oder indem Sie über <xref:System.Windows.Automation.TreeWalker.ContentViewWalker> in der Struktur navigieren.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Windows.Automation.AutomationElement>
 - [Übersicht über die Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-overview.md)

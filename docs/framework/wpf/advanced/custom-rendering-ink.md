@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ink [WPF], custom-rendering
 - classes [WPF], InkCanvas
 ms.assetid: 65c978a7-0ee0-454f-ac7f-b1bd2efecac5
-ms.openlocfilehash: ce4c2bd48e819541d942c795307df36629ec05b9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: fead6e28949726bef46fe2be46e976fb47c3e9a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362629"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125657"
 ---
 # <a name="custom-rendering-ink"></a>Benutzerdefiniertes Rendern von Freihandeingaben
 Die <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> -Eigenschaft eines Strichs können Sie die Darstellung eines Strichs, z. B. seine Größe, Farbe und Form angeben, aber unter Umständen, die Sie zum Anpassen der Darstellung überschreiten möchten <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> ermöglichen. Sie können beispielsweise die Darstellung von Freihandeingaben so anpassen, dass sie wie ein Airbrush- oder Ölgemälde aussieht oder mit vielen weiteren Effekten gerendert wird. Die Windows Presentation Foundation (WPF) ermöglicht Ihnen benutzerdefiniertes Rendern von Freihandeingaben durch Implementierung eines benutzerdefinierten <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> und <xref:System.Windows.Ink.Stroke> Objekt.  
@@ -29,7 +29,7 @@ Die <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> -Eigenschaft eines Str
   
 -   [Implementieren eines benutzerdefinierten InkCanvas](#ImplementingACustomInkCanvas)  
   
--   [Schlussfolgerung](#Conclusion)  
+-   [Schlussbemerkung](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>Architektur  
@@ -79,7 +79,7 @@ Die <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> -Eigenschaft eines Str
   
 -   Weisen Sie den benutzerdefinierten <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> auf die <xref:System.Windows.Controls.InkCanvas.DynamicRenderer%2A?displayProperty=nameWithType> Eigenschaft.  
   
--   Überschreiben Sie die <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A> -Methode. Entfernen Sie in dieser Methode den Originalstrich, der InkCanvas hinzugefügt wurde. Klicken Sie dann einen benutzerdefinierten Strich zu erstellen, Hinzufügen der <xref:System.Windows.Controls.InkCanvas.Strokes%2A> -Eigenschaft, und rufen Sie die Basisklasse mit einer neuen <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> , das den benutzerdefinierten Strich enthält.  
+-   Überschreiben Sie die <xref:System.Windows.Controls.InkCanvas.OnStrokeCollected%2A>-Methode. Entfernen Sie in dieser Methode den Originalstrich, der InkCanvas hinzugefügt wurde. Klicken Sie dann einen benutzerdefinierten Strich zu erstellen, Hinzufügen der <xref:System.Windows.Controls.InkCanvas.Strokes%2A> -Eigenschaft, und rufen Sie die Basisklasse mit einer neuen <xref:System.Windows.Controls.InkCanvasStrokeCollectedEventArgs> , das den benutzerdefinierten Strich enthält.  
   
  Die folgenden C# Code veranschaulicht eine benutzerdefinierte <xref:System.Windows.Controls.InkCanvas> Klasse, die eine benutzerdefinierte verwendet <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> und benutzerdefinierte Striche erfasst.  
   
@@ -92,4 +92,5 @@ Die <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> -Eigenschaft eines Str
  Sie können die Darstellung von Freihandeingaben anpassen, indem Sie eigene ableiten <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, und <xref:System.Windows.Controls.InkCanvas> Klassen. Zusammen stellen diese Klassen sicher, dass die Darstellung des Strichs während des Zeichnens durch den Benutzer mit der Darstellung nach seiner Erfassung konsistent ist.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erweiterte Behandlung von Freihandeingaben](advanced-ink-handling.md)
