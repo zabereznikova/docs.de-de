@@ -11,26 +11,26 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 5256185104f7d22514eac2db93856d7c58f51fb6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0f5afde1cc0be772baff373c84c82f81df284b9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228346"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303985"
 ---
-# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a><span data-ttu-id="d543d-102">Vorgehensweise: Auslösen von Menüereignissen für Symbolleistenschaltflächen</span><span class="sxs-lookup"><span data-stu-id="d543d-102">How to: Trigger Menu Events for Toolbar Buttons</span></span>
+# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a><span data-ttu-id="6e13f-102">Vorgehensweise: Auslösen von Menüereignissen für Symbolleistenschaltflächen</span><span class="sxs-lookup"><span data-stu-id="6e13f-102">How to: Trigger Menu Events for Toolbar Buttons</span></span>
 > [!NOTE]
->  <span data-ttu-id="d543d-103">Obwohl das <xref:System.Windows.Forms.ToolStrip>-Steuerelement das <xref:System.Windows.Forms.ToolBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.</span><span class="sxs-lookup"><span data-stu-id="d543d-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="6e13f-103">Obwohl das <xref:System.Windows.Forms.ToolStrip>-Steuerelement das <xref:System.Windows.Forms.ToolBar>-Steuerelement ersetzt und funktionell erweitert, wird das <xref:System.Windows.Forms.ToolBar>-Steuerelement sowohl aus Gründen der Abwärtskompatibilität als auch, falls gewünscht, für die zukünftige Verwendung beibehalten.</span><span class="sxs-lookup"><span data-stu-id="6e13f-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="d543d-104">Wenn Ihr Windows Form-Funktionen eine <xref:System.Windows.Forms.ToolBar> Steuerelement mit Schaltflächen der Symbolleiste, sollten Sie wissen, welche Schaltfläche der Benutzer klickt.</span><span class="sxs-lookup"><span data-stu-id="d543d-104">If your Windows Form features a <xref:System.Windows.Forms.ToolBar> control with toolbar buttons, you will want to know which button the user clicks.</span></span>  
+ <span data-ttu-id="6e13f-104">Wenn Ihr Windows Form-Funktionen eine <xref:System.Windows.Forms.ToolBar> Steuerelement mit Schaltflächen der Symbolleiste, sollten Sie wissen, welche Schaltfläche der Benutzer klickt.</span><span class="sxs-lookup"><span data-stu-id="6e13f-104">If your Windows Form features a <xref:System.Windows.Forms.ToolBar> control with toolbar buttons, you will want to know which button the user clicks.</span></span>  
   
- <span data-ttu-id="d543d-105">Auf der <xref:System.Windows.Forms.ToolBar.ButtonClick> Ereignis die <xref:System.Windows.Forms.ToolBar> -Steuerelement, können Sie bewerten der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> Eigenschaft der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> Klasse.</span><span class="sxs-lookup"><span data-stu-id="d543d-105">On the <xref:System.Windows.Forms.ToolBar.ButtonClick> event of the <xref:System.Windows.Forms.ToolBar> control, you can evaluate the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> property of the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class.</span></span> <span data-ttu-id="d543d-106">Im folgenden Beispiel wird ein Meldungsfeld angezeigt, das angibt, auf welche Schaltfläche geklickt wurde.</span><span class="sxs-lookup"><span data-stu-id="d543d-106">In the example below, a message box is shown, indicating which button was clicked.</span></span> <span data-ttu-id="d543d-107">Ausführliche Informationen finden Sie unter <xref:System.Windows.Forms.MessageBox>.</span><span class="sxs-lookup"><span data-stu-id="d543d-107">For details, see <xref:System.Windows.Forms.MessageBox>.</span></span>  
+ <span data-ttu-id="6e13f-105">Auf der <xref:System.Windows.Forms.ToolBar.ButtonClick> Ereignis die <xref:System.Windows.Forms.ToolBar> -Steuerelement, können Sie bewerten der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> Eigenschaft der <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> Klasse.</span><span class="sxs-lookup"><span data-stu-id="6e13f-105">On the <xref:System.Windows.Forms.ToolBar.ButtonClick> event of the <xref:System.Windows.Forms.ToolBar> control, you can evaluate the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> property of the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class.</span></span> <span data-ttu-id="6e13f-106">Im folgenden Beispiel wird ein Meldungsfeld angezeigt, das angibt, auf welche Schaltfläche geklickt wurde.</span><span class="sxs-lookup"><span data-stu-id="6e13f-106">In the example below, a message box is shown, indicating which button was clicked.</span></span> <span data-ttu-id="6e13f-107">Ausführliche Informationen finden Sie unter <xref:System.Windows.Forms.MessageBox>.</span><span class="sxs-lookup"><span data-stu-id="6e13f-107">For details, see <xref:System.Windows.Forms.MessageBox>.</span></span>  
   
- <span data-ttu-id="d543d-108">Im folgenden Beispiel geht davon aus einem <xref:System.Windows.Forms.ToolBar> -Steuerelement zu einem Windows-Formular hinzugefügt wurde.</span><span class="sxs-lookup"><span data-stu-id="d543d-108">The example below assumes a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form.</span></span>  
+ <span data-ttu-id="6e13f-108">Im folgenden Beispiel geht davon aus einem <xref:System.Windows.Forms.ToolBar> -Steuerelement zu einem Windows-Formular hinzugefügt wurde.</span><span class="sxs-lookup"><span data-stu-id="6e13f-108">The example below assumes a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form.</span></span>  
   
-### <a name="to-handle-the-click-event-on-a-toolbar"></a><span data-ttu-id="d543d-109">So behandeln Sie das Click-Ereignis für eine Symbolleiste</span><span class="sxs-lookup"><span data-stu-id="d543d-109">To handle the Click event on a toolbar</span></span>  
+### <a name="to-handle-the-click-event-on-a-toolbar"></a><span data-ttu-id="6e13f-109">So behandeln Sie das Click-Ereignis für eine Symbolleiste</span><span class="sxs-lookup"><span data-stu-id="6e13f-109">To handle the Click event on a toolbar</span></span>  
   
-1.  <span data-ttu-id="d543d-110">Fügen Sie in einer Prozedur Symbolleistenschaltflächen, die <xref:System.Windows.Forms.ToolBar> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="d543d-110">In a procedure, add toolbar buttons to the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
+1. <span data-ttu-id="6e13f-110">Fügen Sie in einer Prozedur Symbolleistenschaltflächen, die <xref:System.Windows.Forms.ToolBar> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="6e13f-110">In a procedure, add toolbar buttons to the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,10 +70,10 @@ ms.locfileid: "59228346"
        }  
     ```  
   
-2.  <span data-ttu-id="d543d-111">Hinzufügen eines ereignishandlers für das <xref:System.Windows.Forms.ToolBar> des Steuerelements <xref:System.Windows.Forms.ToolBar.ButtonClick> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="d543d-111">Add an event handler for the <xref:System.Windows.Forms.ToolBar> control's <xref:System.Windows.Forms.ToolBar.ButtonClick> event.</span></span> <span data-ttu-id="d543d-112">Mit einer case / switch-Anweisung und die <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> -Klasse die Symbolleistenschaltfläche bestimmen, auf die geklickt wurde.</span><span class="sxs-lookup"><span data-stu-id="d543d-112">Use a case switching statement and the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class to determine the toolbar button that was clicked.</span></span> <span data-ttu-id="d543d-113">Zeigen Sie basierend darauf ein entsprechendes Meldungsfenster an.</span><span class="sxs-lookup"><span data-stu-id="d543d-113">Based on this, show an appropriate message box.</span></span>  
+2. <span data-ttu-id="6e13f-111">Hinzufügen eines ereignishandlers für das <xref:System.Windows.Forms.ToolBar> des Steuerelements <xref:System.Windows.Forms.ToolBar.ButtonClick> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="6e13f-111">Add an event handler for the <xref:System.Windows.Forms.ToolBar> control's <xref:System.Windows.Forms.ToolBar.ButtonClick> event.</span></span> <span data-ttu-id="6e13f-112">Mit einer case / switch-Anweisung und die <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> -Klasse die Symbolleistenschaltfläche bestimmen, auf die geklickt wurde.</span><span class="sxs-lookup"><span data-stu-id="6e13f-112">Use a case switching statement and the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class to determine the toolbar button that was clicked.</span></span> <span data-ttu-id="6e13f-113">Zeigen Sie basierend darauf ein entsprechendes Meldungsfenster an.</span><span class="sxs-lookup"><span data-stu-id="6e13f-113">Based on this, show an appropriate message box.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="d543d-114">Im vorliegenden Beispiel wird ein Meldungsfenster lediglich als Platzhalter verwendet.</span><span class="sxs-lookup"><span data-stu-id="d543d-114">A message box is being used solely as a placeholder in this example.</span></span> <span data-ttu-id="d543d-115">Sie können bei Bedarf weiteren, nach dem Klicken auf eine Schaltfläche auszuführenden Code hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="d543d-115">Feel free to add other code to execute when the toolbar buttons are clicked.</span></span>  
+    >  <span data-ttu-id="6e13f-114">Im vorliegenden Beispiel wird ein Meldungsfenster lediglich als Platzhalter verwendet.</span><span class="sxs-lookup"><span data-stu-id="6e13f-114">A message box is being used solely as a placeholder in this example.</span></span> <span data-ttu-id="6e13f-115">Sie können bei Bedarf weiteren, nach dem Klicken auf eine Schaltfläche auszuführenden Code hinzufügen.</span><span class="sxs-lookup"><span data-stu-id="6e13f-115">Feel free to add other code to execute when the toolbar buttons are clicked.</span></span>  
   
     ```vb  
     Protected Sub ToolBar1_ButtonClick(ByVal sender As Object, _  
@@ -134,9 +134,9 @@ ms.locfileid: "59228346"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="d543d-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d543d-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6e13f-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6e13f-116">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolBar>
-- [<span data-ttu-id="d543d-117">Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="d543d-117">How to: Add Buttons to a ToolBar Control</span></span>](how-to-add-buttons-to-a-toolbar-control.md)
-- [<span data-ttu-id="d543d-118">Vorgehensweise: Definieren eines Symbols für eine Symbolleistenschaltfläche</span><span class="sxs-lookup"><span data-stu-id="d543d-118">How to: Define an Icon for a ToolBar Button</span></span>](how-to-define-an-icon-for-a-toolbar-button.md)
-- [<span data-ttu-id="d543d-119">ToolBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="d543d-119">ToolBar Control</span></span>](toolbar-control-windows-forms.md)
+- [<span data-ttu-id="6e13f-117">Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="6e13f-117">How to: Add Buttons to a ToolBar Control</span></span>](how-to-add-buttons-to-a-toolbar-control.md)
+- [<span data-ttu-id="6e13f-118">Vorgehensweise: Definieren eines Symbols für eine Symbolleistenschaltfläche</span><span class="sxs-lookup"><span data-stu-id="6e13f-118">How to: Define an Icon for a ToolBar Button</span></span>](how-to-define-an-icon-for-a-toolbar-button.md)
+- [<span data-ttu-id="6e13f-119">ToolBar-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="6e13f-119">ToolBar Control</span></span>](toolbar-control-windows-forms.md)

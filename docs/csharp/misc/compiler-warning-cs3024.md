@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - CS3024
 ms.assetid: fef9db31-9a7f-42d5-ad37-3e7faf661f95
-ms.openlocfilehash: e49c131328f132ae6372167818d084df51ef6c78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7515fdd7bc8f57890e3f1aac6303ed4607cc2249
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "56798333"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297292"
 ---
-# <a name="compiler-warning-cs3024"></a><span data-ttu-id="c1249-102">Compilerwarnung CS3024</span><span class="sxs-lookup"><span data-stu-id="c1249-102">Compiler Warning CS3024</span></span>
-<span data-ttu-id="c1249-103">Einschränkungstyp 'Typ' ist nicht CLS-kompatibel.</span><span class="sxs-lookup"><span data-stu-id="c1249-103">Constraint type 'type' is not CLS-compliant.</span></span>  
+# <a name="compiler-warning-cs3024"></a><span data-ttu-id="21c16-102">Compilerwarnung CS3024</span><span class="sxs-lookup"><span data-stu-id="21c16-102">Compiler Warning CS3024</span></span>
+<span data-ttu-id="21c16-103">Einschränkungstyp 'Typ' ist nicht CLS-kompatibel.</span><span class="sxs-lookup"><span data-stu-id="21c16-103">Constraint type 'type' is not CLS-compliant.</span></span>  
   
- <span data-ttu-id="c1249-104">Der Compiler gibt diese Warnung aus, da die Verwendung eines nicht mit CLS-kompatiblen Typs als generische Typeinschränkung verhindern kann, dass Code, der in einigen Sprachen verfasst wurde, Ihre generische Klasse verwendet.</span><span class="sxs-lookup"><span data-stu-id="c1249-104">The compiler issues this warning because the use of a non-CLS-compliant type as a generic type constraint could make it impossible for code written in some languages to consume your generic class.</span></span>  
+ <span data-ttu-id="21c16-104">Der Compiler gibt diese Warnung aus, da die Verwendung eines nicht mit CLS-kompatiblen Typs als generische Typeinschränkung verhindern kann, dass Code, der in einigen Sprachen verfasst wurde, Ihre generische Klasse verwendet.</span><span class="sxs-lookup"><span data-stu-id="21c16-104">The compiler issues this warning because the use of a non-CLS-compliant type as a generic type constraint could make it impossible for code written in some languages to consume your generic class.</span></span>  
   
-### <a name="to-eliminate-this-warning"></a><span data-ttu-id="c1249-105">So beseitigen Sie diese Warnung</span><span class="sxs-lookup"><span data-stu-id="c1249-105">To eliminate this warning</span></span>  
+### <a name="to-eliminate-this-warning"></a><span data-ttu-id="21c16-105">So beseitigen Sie diese Warnung</span><span class="sxs-lookup"><span data-stu-id="21c16-105">To eliminate this warning</span></span>  
   
-1.  <span data-ttu-id="c1249-106">Verwenden Sie einen CLS-kompatiblen Typ für die Typeinschränkung.</span><span class="sxs-lookup"><span data-stu-id="c1249-106">Use a CLS-compliant type for the type constraint.</span></span>  
+1. <span data-ttu-id="21c16-106">Verwenden Sie einen CLS-kompatiblen Typ für die Typeinschränkung.</span><span class="sxs-lookup"><span data-stu-id="21c16-106">Use a CLS-compliant type for the type constraint.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c1249-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c1249-107">Example</span></span>  
- <span data-ttu-id="c1249-108">Im folgenden Beispiel wird der Fehler CS3024 an verschiedenen Stellen generiert:</span><span class="sxs-lookup"><span data-stu-id="c1249-108">The following example generates CS3024 in several locations:</span></span>  
+## <a name="example"></a><span data-ttu-id="21c16-107">Beispiel</span><span class="sxs-lookup"><span data-stu-id="21c16-107">Example</span></span>  
+ <span data-ttu-id="21c16-108">Im folgenden Beispiel wird der Fehler CS3024 an verschiedenen Stellen generiert:</span><span class="sxs-lookup"><span data-stu-id="21c16-108">The following example generates CS3024 in several locations:</span></span>  
   
 ```csharp  
 // cs3024.cs  
@@ -55,6 +55,6 @@ public class Test
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c1249-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c1249-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="21c16-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="21c16-109">See also</span></span>
 
-- [<span data-ttu-id="c1249-110">Einschränkungen für Typparameter</span><span class="sxs-lookup"><span data-stu-id="c1249-110">Constraints on Type Parameters</span></span>](../../csharp/programming-guide/generics/constraints-on-type-parameters.md)
+- [<span data-ttu-id="21c16-110">Einschränkungen für Typparameter</span><span class="sxs-lookup"><span data-stu-id="21c16-110">Constraints on Type Parameters</span></span>](../../csharp/programming-guide/generics/constraints-on-type-parameters.md)

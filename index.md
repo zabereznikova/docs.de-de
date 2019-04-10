@@ -6,12 +6,12 @@ title: .NET-Dokumentation
 description: Erfahren Sie, wie Sie mit .NET eine Vielzahl von Anwendungen auf jeder Plattform mit C#, Visual Basic und F# erstellen können. Durchsuchen Sie die API-Referenz, Beispielcode, Tutorials und vieles mehr.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 31e810246528c99a665128d3535b92dbfcb4352d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 132cab6f7c196f88fdc02259e55d0fcb5fbbfd10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464514"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297265"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -92,7 +92,7 @@ ms.locfileid: "58464514"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/standard/">.NET Guide (Leitfaden für .NET)</a></h3>
+                                                <h3><a href="/dotnet/standard/">Leitfaden für .NET</a></h3>
                                                 <p><a href="/dotnet/standard/get-started">Erste Schritte</a></p>
                                                 <p><a href="/dotnet/standard/tour">Einführung in .NET</a></p>
                                                 <p><a href="/dotnet/standard/components">.NET-Architekturkonzepte</a></p>
@@ -132,7 +132,7 @@ ms.locfileid: "58464514"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/framework/">Leitfaden für .NET Framework</a></h3>
+                                                <h3><a href="/dotnet/framework/">.NET Framework – Leitfaden</a></h3>
                                                 <p><a href="/dotnet/framework/get-started/">Erste Schritte</a></p>
                                                 <p><a href="/dotnet/framework/development-guide">Entwicklungshandbuch</a></p>
                                                 <p><a href="/dotnet/framework/develop-client-apps">Cliententwicklung</a></p>
@@ -214,7 +214,7 @@ ms.locfileid: "58464514"
                                                 <h3><a href="/dotnet/visual-basic">Leitfaden für Visual Basic</a></h3>
                                                 <p><a href="/dotnet/visual-basic/getting-started">Erste Schritte</a></p>
                                                 <p><a href="/dotnet/visual-basic/walkthroughs">Einführung in Visual Basic</a></p>
-                                                <p><a href="/dotnet/visual-basic/language-reference">Sprachreferenz zu Visual Basic</a></p>
+                                                <p><a href="/dotnet/visual-basic/language-reference">Sprachreferenz zu Visual Basic</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -231,8 +231,8 @@ ms.locfileid: "58464514"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning">Leitfaden für ML.NET</a></h3>
-                                                <p><a href="/dotnet/machine-learning/tutorials">Tutorials</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources">Ressourcen</a></p>
+                                                <p><a href="/dotnet/machine-learning/index#tutorials">Tutorials</a></p>
+                                                <p><a href="/dotnet/machine-learning/index#resources">Ressourcen</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Glossar</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">ML.NET-API-Referenz</a></p>
                                             </div>
@@ -242,7 +242,7 @@ ms.locfileid: "58464514"
                             </li>
                             <li class="fullSpan">
                                 <div class="container footer">
-                                    <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">Contribute to .NET docs and samples (Zu .NET-Dokumentationen und Beispielen beitragen)</a></p>
+                                    <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">Contribute to .NET docs and samples (Zu .NET-Dokumenten und Beispielen beitragen)</a></p>
                                     <p><a href="/dotnet/project-json">Find Visual Studio 2015/project.json version of the documentation (Suchen der Visual Studio 2015/project.json-Version der Dokumentation)</a></p>
                                 </div>
                             </li>
@@ -434,7 +434,7 @@ ms.locfileid: "58464514"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">Mobile</a>
+                        <a href="#mobile">Mobil</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
@@ -579,10 +579,10 @@ ms.locfileid: "58464514"
                         </ul>
                     </li>
                     <li>
-                        <a href="#gaming">Gaming</a>
+                        <a href="#gaming">Spiele</a>
                         <ul id="gaming" class="cardsC">
                             <li>
-                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/">
+                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
