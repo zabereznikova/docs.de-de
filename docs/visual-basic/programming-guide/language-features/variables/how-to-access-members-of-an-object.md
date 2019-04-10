@@ -5,12 +5,12 @@ helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 2b7e600a23ed326fe3e914957b4e698bc34c6135
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819649"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322757"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Vorgehensweise: Zugreifen auf Member eines Objekts (Visual Basic)
 Wenn Sie eine Objektvariablen, die auf ein Objekt verweist verfügen, möchten Sie häufig die Member des Objekts, z. B. die Methoden, Eigenschaften, Felder und Ereignisse zusammenarbeiten. Angenommen, nachdem Sie erstellt haben ein neues <xref:System.Windows.Forms.Form> -Objekts können Sie festlegen möchten die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft oder der Aufruf der <xref:System.Windows.Forms.Control.Focus%2A> Methode.  
@@ -33,7 +33,7 @@ Wenn Sie eine Objektvariablen, die auf ein Objekt verweist verfügen, möchten S
   
 #### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>Auf Member eines Objekts, für die der Typ zur Kompilierzeit unbekannt  
   
-1.  Deklarieren Sie die Objektvariable vom Typ des Objekts sein, die Sie der Variable zuweisen möchten.  
+1. Deklarieren Sie die Objektvariable vom Typ des Objekts sein, die Sie der Variable zuweisen möchten.  
   
     ```  
     Dim extraForm As System.Windows.Forms.Form  
@@ -41,7 +41,7 @@ Wenn Sie eine Objektvariablen, die auf ein Objekt verweist verfügen, möchten S
   
      Mit `Option Strict On`, Sie können nur zuweisen <xref:System.Windows.Forms.Form> Objekte (oder davon abgeleitete Objekte eines Typs <xref:System.Windows.Forms.Form>) zu `extraForm`. Wenn Sie eine Klasse oder Struktur mit einer erweiternden definiert haben `CType` Konvertierung in <xref:System.Windows.Forms.Form>, Sie können auch weisen Sie dieser Klasse oder-Struktur in `extraForm`.  
   
-2.  Verwenden Sie den Memberzugriffsoperator (`.`) zwischen den Namen der Objektvariablen und den Namen des Members.  
+2. Verwenden Sie den Memberzugriffsoperator (`.`) zwischen den Namen der Objektvariablen und den Namen des Members.  
   
     ```  
     extraForm.Show()  
@@ -54,7 +54,7 @@ Wenn Sie eine Objektvariablen, die auf ein Objekt verweist verfügen, möchten S
   
 #### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>Auf Member eines Objekts, für die Sie nicht den Typ zur Kompilierzeit kennen  
   
-1.  Deklarieren Sie die Objektvariable, der die [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). (Deklaration einer Variablen als `Object` ist identisch mit der Deklaration als <xref:System.Object?displayProperty=nameWithType>.)  
+1. Deklarieren Sie die Objektvariable, der die [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). (Deklaration einer Variablen als `Object` ist identisch mit der Deklaration als <xref:System.Object?displayProperty=nameWithType>.)  
   
     ```  
     Dim someControl As Object  
@@ -62,7 +62,7 @@ Wenn Sie eine Objektvariablen, die auf ein Objekt verweist verfügen, möchten S
   
      Mit `Option Strict On`, es stehen nur die Elemente, die auf definierten die <xref:System.Object> Klasse.  
   
-2.  Verwenden Sie den Memberzugriffsoperator (`.`) zwischen den Namen der Objektvariablen und den Namen des Members.  
+2. Verwenden Sie den Memberzugriffsoperator (`.`) zwischen den Namen der Objektvariablen und den Namen des Members.  
   
     ```  
     someControl.GetType()  
@@ -77,5 +77,5 @@ Wenn Sie eine Objektvariablen, die auf ein Objekt verweist verfügen, möchten S
 - <xref:System.MemberAccessException>
 - [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Deklaration von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Option Strict-Anweisung](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

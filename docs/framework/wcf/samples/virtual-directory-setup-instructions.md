@@ -2,12 +2,12 @@
 title: Anleitung zum Einrichten eines virtuellen Verzeichnisses
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 7999a040dc14d75a34b75f320982dd3118eae670
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225585"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325344"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Anleitung zum Einrichten eines virtuellen Verzeichnisses
 Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von eines gemeinsamen virtuellen Verzeichnis mit dem Namen Servicemodelsamples, die das das dem Ordner %SystemDrive%\inetpub\wwwroot\servicemodelsamples zugeordnet ist.  
@@ -21,19 +21,19 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
   
 #### <a name="to-create-a-virtual-directory-in-iis-70-or-75"></a>So erstellen ein virtuelles Verzeichnis in IIS 7.0 oder 7.5  
   
-1.  Von der **starten** Menü klicken Sie auf **ausführen**, geben Sie dann **Inetmgr** auf das Internet Information Services (IIS)-MMC-Snap-in zu öffnen.  
+1. Von der **starten** Menü klicken Sie auf **ausführen**, geben Sie dann **Inetmgr** auf das Internet Information Services (IIS)-MMC-Snap-in zu öffnen.  
   
-2.  Klicken Sie im linken Bereich den Knoten mit dem Namen des Computers, und erweitern Sie dann die **Websites** Knoten.  
+2. Klicken Sie im linken Bereich den Knoten mit dem Namen des Computers, und erweitern Sie dann die **Websites** Knoten.  
   
-3.  Mit der rechten Maustaste **Default Web Site**, und wählen Sie dann **Anwendung hinzufügen** zum Öffnen der **hinzufügen Anwendungsfenster**.  
+3. Mit der rechten Maustaste **Default Web Site**, und wählen Sie dann **Anwendung hinzufügen** zum Öffnen der **hinzufügen Anwendungsfenster**.  
   
-4.  Geben Sie im Fenster `servicemodelsamples` als Alias für das virtuelle Verzeichnis, das Sie erstellen.  
+4. Geben Sie im Fenster `servicemodelsamples` als Alias für das virtuelle Verzeichnis, das Sie erstellen.  
   
-5.  Erstellen Sie das folgende Verzeichnis: %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
+5. Erstellen Sie das folgende Verzeichnis: %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
-6.  Legen Sie den physischen Pfad auf %SystemDrive%\inetpub\wwwroot\servicemodelsamples fest.  Die meisten der WCF-Beispiele kopieren bei der Erstellung die ausführbaren Dateien der Dienste an diesen Speicherort.  
+6. Legen Sie den physischen Pfad auf %SystemDrive%\inetpub\wwwroot\servicemodelsamples fest.  Die meisten der WCF-Beispiele kopieren bei der Erstellung die ausführbaren Dateien der Dienste an diesen Speicherort.  
   
-7.  Klicken Sie auf **OK**. Die Webanwendung wird für die WCF-Beispiele erstellt.  
+7. Klicken Sie auf **OK**. Die Webanwendung wird für die WCF-Beispiele erstellt.  
   
     > [!NOTE]
     >  Diese Aufgabe muss nur einmal ausgeführt werden, da alle der WCF-Beispiele auf dem gleichen Namen Servicemodelsamples-Webanwendung verwenden.  
@@ -45,44 +45,44 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>So erstellen Sie ein virtuelles Verzeichnis in IIS 5.1 oder 6.0  
   
-1.  Öffnen Sie ein Eingabeaufforderungsfenster und geben `start inetmgr` auf das Internet Information Services (IIS)-MMC-Snap-in zu öffnen.  
+1. Öffnen Sie ein Eingabeaufforderungsfenster und geben `start inetmgr` auf das Internet Information Services (IIS)-MMC-Snap-in zu öffnen.  
   
-2.  Klicken Sie im linken Bereich den Knoten mit dem Namen des Computers, und erweitern Sie dann die **Websites** Knoten.  
+2. Klicken Sie im linken Bereich den Knoten mit dem Namen des Computers, und erweitern Sie dann die **Websites** Knoten.  
   
-3.  Mit der rechten Maustaste **Default Web Site** , und wählen Sie **neu, virtuelles Verzeichnis** zum Öffnen des Assistenten Erstellen eines virtuellen Verzeichnisses.  
+3. Mit der rechten Maustaste **Default Web Site** , und wählen Sie **neu, virtuelles Verzeichnis** zum Öffnen des Assistenten Erstellen eines virtuellen Verzeichnisses.  
   
-4.  Geben Sie im Assistenten `servicemodelsamples` als Alias für das virtuelle Verzeichnis, das Sie erstellen.  
+4. Geben Sie im Assistenten `servicemodelsamples` als Alias für das virtuelle Verzeichnis, das Sie erstellen.  
   
-5.  Legen Sie den Pfad auf %SystemDrive%\inetpub\wwwroot\servicemodelsamples fest. Die meisten der WCF-Beispiele kopieren bei der Erstellung die ausführbaren Dateien der Dienste an diesen Speicherort.  
+5. Legen Sie den Pfad auf %SystemDrive%\inetpub\wwwroot\servicemodelsamples fest. Die meisten der WCF-Beispiele kopieren bei der Erstellung die ausführbaren Dateien der Dienste an diesen Speicherort.  
   
-6.  Klicken Sie auf **Weiter**.  
+6. Klicken Sie auf **Weiter**.  
   
-7.  Standardmäßig werden die folgenden Kontrollkästchen aktiviert:  
+7. Standardmäßig werden die folgenden Kontrollkästchen aktiviert:  
   
     -   **Lesen**  
   
     -   **Skripts ausführen (z. B. ASP)**  
   
-8.  Klicken Sie auf **Weiter**, und klicken Sie dann auf **Fertig stellen** um den Assistenten abzuschließen.  
+8. Klicken Sie auf **Weiter**, und klicken Sie dann auf **Fertig stellen** um den Assistenten abzuschließen.  
   
     > [!NOTE]
     >  Diese Aufgabe muss nur einmal ausgeführt werden, da die WCF-Beispiele alle das gleiche virtuelle Verzeichnis Servicemodelsamples verwenden.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>Um zusätzliche Eigenschaften virtueller Verzeichnisse in IIS 7.0 oder 7.5 festzulegen.  
   
-1.  Klicken Sie auf den Knoten servicemodelsamples. Unten im Fenster sind zwei Ansichten aufgelistet. Wählen Sie **Ansicht "Features"** , wenn sie nicht bereits ausgewählt ist.  
+1. Klicken Sie auf den Knoten servicemodelsamples. Unten im Fenster sind zwei Ansichten aufgelistet. Wählen Sie **Ansicht "Features"** , wenn sie nicht bereits ausgewählt ist.  
   
-2.  Doppelklicken Sie auf den Eintrag für **Verzeichnissuche**.  
+2. Doppelklicken Sie auf den Eintrag für **Verzeichnissuche**.  
   
-3.  Wählen Sie im Aktionsbereich die **aktivieren** Option. So können Sie über Internet Explorer auf das Verzeichnis zugreifen, was beim Debuggen eines Diensts hilfreich ist.  
+3. Wählen Sie im Aktionsbereich die **aktivieren** Option. So können Sie über Internet Explorer auf das Verzeichnis zugreifen, was beim Debuggen eines Diensts hilfreich ist.  
   
  Zum Schluss müssen Sie die Sicherheitseigenschaften des Ordners servicemodelsamples so einstellen, dass andere darauf zugreifen können. Details finden Sie weiter unten.  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a>So legen Sie zusätzliche Eigenschaften für das virtuelle Verzeichnis in IIS 5.1 oder 6.0 fest  
   
-1.  Mit der rechten Maustaste des Knotens Servicemodelsamples, und klicken Sie dann auf **Eigenschaften**.  
+1. Mit der rechten Maustaste des Knotens Servicemodelsamples, und klicken Sie dann auf **Eigenschaften**.  
   
-2.  Standardmäßig werden die folgenden Kontrollkästchen aktiviert:  
+2. Standardmäßig werden die folgenden Kontrollkästchen aktiviert:  
   
     -   **Lesen**  
   
@@ -90,25 +90,25 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
   
     -   **Indizieren dieser Ressource**  
   
-3.  Wählen Sie die **Verzeichnissuche** Kontrollkästchen. So können Sie über Internet Explorer auf das Verzeichnis zugreifen, was beim Debuggen eines Diensts hilfreich ist.  
+3. Wählen Sie die **Verzeichnissuche** Kontrollkästchen. So können Sie über Internet Explorer auf das Verzeichnis zugreifen, was beim Debuggen eines Diensts hilfreich ist.  
   
 #### <a name="to-set-security-properties-of-the-folder-in-iis-70-or-75"></a>So legen Sie die Sicherheitseigenschaften des Ordners in IIS 7.0 oder 7.5 fest  
   
-1.  Navigieren Sie zu %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
+1. Navigieren Sie zu %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
-2.  Mit der rechten Maustaste in des Ordners Servicemodelsamples, und klicken Sie auf **Freigabe** oder **freigeben für**.  
+2. Mit der rechten Maustaste in des Ordners Servicemodelsamples, und klicken Sie auf **Freigabe** oder **freigeben für**.  
   
-3.  Klicken Sie auf den Pfeil nach unten, links von der **hinzufügen** Schaltfläche.  
+3. Klicken Sie auf den Pfeil nach unten, links von der **hinzufügen** Schaltfläche.  
   
-4.  Wählen Sie die **finden** Eintrag. Die **Benutzer oder Gruppen auswählen** Fenster wird geöffnet.  
+4. Wählen Sie die **finden** Eintrag. Die **Benutzer oder Gruppen auswählen** Fenster wird geöffnet.  
   
-5.  Klicken Sie auf **Erweitert**.  
+5. Klicken Sie auf **Erweitert**.  
   
-6.  Klicken Sie auf **Speicherorte**. Die **Speicherorte** Fenster wird geöffnet.  
+6. Klicken Sie auf **Speicherorte**. Die **Speicherorte** Fenster wird geöffnet.  
   
-7.  Wählen Sie den Eintrag für den verwendeten Computer aus. Achten Sie darauf, den lokalen Computer und keinen Eintrag für Domänen oder Netzwerke auszuwählen. Nachdem Sie die Computer ausgewählt haben, klicken Sie auf **OK**.  
+7. Wählen Sie den Eintrag für den verwendeten Computer aus. Achten Sie darauf, den lokalen Computer und keinen Eintrag für Domänen oder Netzwerke auszuwählen. Nachdem Sie die Computer ausgewählt haben, klicken Sie auf **OK**.  
   
-8.  Klicken Sie auf **Jetzt suchen**. Als Suchergebnisse werden Objekte angezeigt, die mit dem lokalen Computer verknüpft sind.  
+8. Klicken Sie auf **Jetzt suchen**. Als Suchergebnisse werden Objekte angezeigt, die mit dem lokalen Computer verknüpft sind.  
   
 9. Suchen der **IIS_IUSRS** Eintrag in der **Namen (Relative Distinguished Name)** Spalte. Wählen Sie den Eintrag, und klicken Sie auf **OK** So schließen Sie die Suche die Ergebnisse im Fenster.  
   
@@ -120,13 +120,13 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
   
 #### <a name="to-set-security-properties-of-the-folder-in-iis-51-or-60"></a>So stellen Sie die Sicherheitseigenschaften des Ordners in IIS 5.1 oder 6.0 ein  
   
-1.  Navigieren Sie zu %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
+1. Navigieren Sie zu %SystemDrive%\inetpub\wwwroot\servicemodelsamples.  
   
-2.  Mit der rechten Maustaste die **Servicemodelsamples** Ordner, und klicken Sie dann auf **Freigabe und Sicherheit.**  
+2. Mit der rechten Maustaste die **Servicemodelsamples** Ordner, und klicken Sie dann auf **Freigabe und Sicherheit.**  
   
-3.  Klicken Sie auf die Registerkarte **Sicherheit** .  
+3. Klicken Sie auf die Registerkarte **Sicherheit** .  
   
-4.  Bei Verwendung von IIS 6.0 in der **Gruppen-oder Benutzernamen** Feld überprüfen, ob **Internetgastkonto** aufgeführt ist.  
+4. Bei Verwendung von IIS 6.0 in der **Gruppen-oder Benutzernamen** Feld überprüfen, ob **Internetgastkonto** aufgeführt ist.  
   
      Falls der Eintrag nicht vorhanden ist:  
   
@@ -162,7 +162,7 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
   
     16. Klicken Sie auf **Namen überprüfen** um den Namen zu überprüfen. Gültige Namen werden in Großbuchstaben und unterstrichen angezeigt.  
   
-5.  Für IIS 6.0 auch überprüfen, NETWORK SERVICE aufgeführt sein, die **Gruppen-oder Benutzernamen** Feld.  
+5. Für IIS 6.0 auch überprüfen, NETWORK SERVICE aufgeführt sein, die **Gruppen-oder Benutzernamen** Feld.  
   
      Wenn NETZWERKDIENST nicht vorhanden ist:  
   
@@ -178,7 +178,7 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
   
     6.  Klicken Sie auf **OK** schließen die **Benutzer oder Gruppen auswählen** Dialogfeld.  
   
-6.  Wenn Sie Windows XP SP2 mit IIS 5.1 verwenden, überprüfen Sie, dass sowohl Internetgastkonto und ASPNET vorhanden sind die **Gruppen-oder Benutzernamen** Feld.  
+6. Wenn Sie Windows XP SP2 mit IIS 5.1 verwenden, überprüfen Sie, dass sowohl Internetgastkonto und ASPNET vorhanden sind die **Gruppen-oder Benutzernamen** Feld.  
   
      Beachten Sie, dass der ASPNET-Benutzer ein Mitglied der integrierten möglicherweise **Benutzer** Sicherheitsgruppe. Wenn dies der Fall ist, dann, wenn die **Benutzer** Gruppe, die im Dialogfeld aufgelistet ist, Sie müssen nicht als separates Element zur Liste der zugelassenen Benutzer hinzufügen.  
   

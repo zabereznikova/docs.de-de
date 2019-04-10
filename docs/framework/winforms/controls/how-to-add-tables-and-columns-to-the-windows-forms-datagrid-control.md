@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: 55a8d28d04dd05d4dba7ab2b1edbcfbcce97cecb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc364f3609f8041378b0b03b8e1bc8f312fade18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222041"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319910"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms
 > [!NOTE]
@@ -25,12 +25,12 @@ ms.locfileid: "59222041"
   
 ### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>So eine Tabelle und Spalte ein DataGrid-Steuerelement programmgesteuert hinzu  
   
-1.  Sie müssen zuerst binden, um Daten in der Tabelle anzuzeigen, die <xref:System.Windows.Forms.DataGrid> Steuerelement zu einem Dataset. Weitere Informationen finden Sie unter [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
+1. Sie müssen zuerst binden, um Daten in der Tabelle anzuzeigen, die <xref:System.Windows.Forms.DataGrid> Steuerelement zu einem Dataset. Weitere Informationen finden Sie unter [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
   
     > [!CAUTION]
     >  Wenn Sie Spaltenformate programmgesteuert festlegen zu können, erstellen Sie immer **DataGridColumnStyle** -Objekte und fügen sie der **GridColumnStylesCollection** Objekt vor dem Hinzufügen von  **DataGridTableStyle** Objekte die **GridTableStylesCollection** Objekt. Wenn Sie eine leere hinzufügen **DataGridTableStyle** Objekt, das der Auflistung **DataGridColumnStyle** Objekte automatisch für Sie generiert werden. Daher eine Ausnahme wird ausgelöst, wenn Sie versuchen, das Hinzufügen neuer **DataGridColumnStyle** Objekte mit doppelten **%MappingName** -Werte in der **GridColumnStylesCollection**Objekt.  
   
-2.  Deklarieren Sie ein neues Tabellenformat, und legen Sie dessen Zuordnungsnamen.  
+2. Deklarieren Sie ein neues Tabellenformat, und legen Sie dessen Zuordnungsnamen.  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
@@ -47,7 +47,7 @@ ms.locfileid: "59222041"
     ts1->MappingName = S"Customers";  
     ```  
   
-3.  Deklarieren Sie einen neuen Stil für die Spalte, und legen Sie den Zuordnungsnamen und andere Eigenschaften.  
+3. Deklarieren Sie einen neuen Stil für die Spalte, und legen Sie den Zuordnungsnamen und andere Eigenschaften.  
   
     ```vb  
     Dim myDataCol As New DataGridBoolColumn()  
@@ -67,7 +67,7 @@ ms.locfileid: "59222041"
     myDataCol->MappingName = "Current";  
     ```  
   
-4.  Rufen Sie die **hinzufügen** -Methode der der **GridColumnStylesCollection** Objekt, das die Spalte das Tabellenformat hinzufügen  
+4. Rufen Sie die **hinzufügen** -Methode der der **GridColumnStylesCollection** Objekt, das die Spalte das Tabellenformat hinzufügen  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -81,7 +81,7 @@ ms.locfileid: "59222041"
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5.  Rufen Sie die **hinzufügen** Methode der **GridTableStylesCollection** Objekt, das Tabellenformat das Datenraster hinzugefügt.  
+5. Rufen Sie die **hinzufügen** Methode der **GridTableStylesCollection** Objekt, das Tabellenformat das Datenraster hinzugefügt.  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  

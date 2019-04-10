@@ -1,16 +1,16 @@
 ---
-title: 'Gewusst wie: Aktivieren von WIF für eine WCF-Webdienstanwendung'
+title: 'Vorgehensweise: Aktivieren von WIF für eine WCF-Webdienstanwendung'
 ms.date: 03/30/2017
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
-ms.openlocfilehash: c3d22d812fdd5a1fc7567b3da34e7fd5a59531cd
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6af0336e19df4ba2a99a52f8726e78ed92f5a79e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584199"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323303"
 ---
-# <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Gewusst wie: Aktivieren von WIF für eine WCF-Webdienstanwendung
+# <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Vorgehensweise: Aktivieren von WIF für eine WCF-Webdienstanwendung
 ## <a name="applies-to"></a>Gilt für  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -18,7 +18,7 @@ ms.locfileid: "48584199"
 -   Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>Zusammenfassung  
- In dieser Vorgehensweise werden ausführliche schrittweise Prozeduren zum Aktivieren von WIF in einem WCF-Webdienst vorgestellt. Sie enthält auch Anweisungen für Tests der Anwendung, mit denen überprüft werden kann, ob der Webdienst Ansprüche ordnungsgemäß darstellt, wenn die Anwendung ausgeführt wird. Diese Vorgehensweise enthält keine ausführlichen Anweisungen zum Erstellen eines Sicherheitstokendiensts (STS). Stattdessen wird der Entwicklungs-STS verwendet, der aus dem Identitäts- und Zugriffstool stammt. Der Entwicklungs-STS führt keine echte Authentifizierung durch und ist nur für Testzwecke vorgesehen. Sie müssen das Identitäts- und Zugriffs-Tool installieren, um diese Vorgehensweise nachzuvollziehen. Es kann auf der folgenden Seite heruntergeladen werden: [Identity and Access Tool (Identitäts- und Zugriffstool)](https://go.microsoft.com/fwlink/?LinkID=245849)  
+ In dieser Vorgehensweise werden ausführliche schrittweise Prozeduren zum Aktivieren von WIF in einem WCF-Webdienst vorgestellt. Sie enthält auch Anweisungen für Tests der Anwendung, mit denen überprüft werden kann, ob der Webdienst Ansprüche ordnungsgemäß darstellt, wenn die Anwendung ausgeführt wird. Diese Vorgehensweise enthält keine ausführlichen Anweisungen zum Erstellen eines Sicherheitstokendiensts (STS). Stattdessen wird der Entwicklungs-STS verwendet, der aus dem Identitäts- und Zugriffstool stammt. Der Entwicklungs-STS führt keine echte Authentifizierung durch und ist nur für Testzwecke vorgesehen. Sie müssen das Identitäts- und Zugriffs-Tool installieren, um diese Vorgehensweise nachzuvollziehen. Es kann von folgendem Speicherort heruntergeladen werden: [Identitäts- und Zugriffs-Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Inhalt  
   
@@ -43,13 +43,13 @@ ms.locfileid: "48584199"
 ## <a name="overview"></a>Übersicht  
  In dieser Vorgehensweise wird veranschaulicht, wie ein Entwickler Verbundauthentifizierung bei der Entwicklung eines WCF-Diensts verwenden kann. Die Verwendung eines Verbunds in WCF-Diensten hat folgende Vorteile:  
   
-1.  Ausklammern der Authentifizierungslogik aus dem WCF-Dienstcode  
+1. Ausklammern der Authentifizierungslogik aus dem WCF-Dienstcode  
   
-2.  Wiederverwenden vorhandener Projektmappen für die Identitätsverwaltung  
+2. Wiederverwenden vorhandener Projektmappen für die Identitätsverwaltung  
   
-3.  Interoperabilität mit anderen Identitätsprojektmappen  
+3. Interoperabilität mit anderen Identitätsprojektmappen  
   
-4.  Flexibilität und Agilität für zukünftige Änderungen  
+4. Flexibilität und Agilität für zukünftige Änderungen  
   
  Mit WIF und dem zugeordneten Identitäts- und Zugriffs-Tool kann ein WCF-Dienst einfacher mit Verbundauthentifizierung entwickelt und getestet werden. Die ist in den folgenden Schritten dargestellt.  
   
@@ -66,19 +66,19 @@ ms.locfileid: "48584199"
   
 #### <a name="to-create-a-simple-wcf-service"></a>So erstellen Sie einen einfachen WCF-Dienst  
   
-1.  Starten Sie Visual Studio im erweiterten Modus als Administrator.  
+1. Starten Sie Visual Studio im erweiterten Modus als Administrator.  
   
-2.  Klicken Sie in Visual Studio auf **Datei**, **Neu** und anschließend auf **Projekt**.  
+2. Klicken Sie in Visual Studio auf **Datei**, **Neu** und anschließend auf **Projekt**.  
   
-3.  Klicken Sie im Fenster **Neues Projekt** auf **WCF-Dienstanwendung**.  
+3. Klicken Sie im Fenster **Neues Projekt** auf **WCF-Dienstanwendung**.  
   
-4.  Geben Sie im Feld **Name** die Zeichenfolge `TestService` ein, und drücken Sie auf **OK**.  
+4. Geben Sie im Feld **Name** die Zeichenfolge `TestService` ein, und drücken Sie auf **OK**.  
   
-5.  Klicken Sie mit der rechten Maustaste unter **Projektmappen-Explorer** auf das Projekt **TestService**, und klicken Sie dann auf **Identität und Zugriff**.  
+5. Klicken Sie mit der rechten Maustaste unter **Projektmappen-Explorer** auf das Projekt **TestService**, und klicken Sie dann auf **Identität und Zugriff**.  
   
-6.  Das Fenster **Identität und Zugriff** wird geöffnet. Klicken Sie unter **Anbieter** auf **Anwendung mit dem lokalen Entwicklungs-STS testen**, und klicken Sie auf **Übernehmen**. Mit dem Identitäts- und Zugriffs-Tool wird der Dienst so konfiguriert, dass WIF verwendet wird und die Authentifizierung in den lokalen Entwicklungs-STS (**LocalSTS**) ausgelagert wird. Dazu werden der Datei *Web.config* Konfigurationselemente hinzugefügt.  
+6. Das Fenster **Identität und Zugriff** wird geöffnet. Klicken Sie unter **Anbieter** auf **Anwendung mit dem lokalen Entwicklungs-STS testen**, und klicken Sie auf **Übernehmen**. Mit dem Identitäts- und Zugriffs-Tool wird der Dienst so konfiguriert, dass WIF verwendet wird und die Authentifizierung in den lokalen Entwicklungs-STS (**LocalSTS**) ausgelagert wird. Dazu werden der Datei *Web.config* Konfigurationselemente hinzugefügt.  
   
-7.  Fügen Sie in der Datei *Service1.svc.cs* eine `using`-Anweisung für den Namespace **System.Security.Claims** hinzu, und ersetzen Sie den vorhandenen Code durch folgenden Code. Speichern Sie die Datei anschließend:  
+7. Fügen Sie in der Datei *Service1.svc.cs* eine `using`-Anweisung für den Namespace **System.Security.Claims** hinzu, und ersetzen Sie den vorhandenen Code durch folgenden Code. Speichern Sie die Datei anschließend:  
   
     ```csharp  
     public class Service1 : IService1  
@@ -115,7 +115,7 @@ ms.locfileid: "48584199"
   
      Die `ComputeResponse`-Methode zeigt die Eigenschaften verschiedener Ansprüche an, die von **LocalSTS** ausgegeben werden.  
   
-8.  Ersetzen Sie in der Datei *IService1.cs* den vorhandenen Code durch folgenden Code. Speichern Sie die Datei anschließend:  
+8. Ersetzen Sie in der Datei *IService1.cs* den vorhandenen Code durch folgenden Code. Speichern Sie die Datei anschließend:  
   
     ```csharp  
     [ServiceContract]  
@@ -138,18 +138,18 @@ ms.locfileid: "48584199"
   
 #### <a name="to-create-a-client-application"></a>So erstellen Sie eine Clientanwendung  
   
-1.  Klicken Sie in Visual Studio mit der rechten Maustaste auf die Projektmappe, und klicken Sie dann auf **Hinzufügen** und **Neues Projekt**.  
+1. Klicken Sie in Visual Studio mit der rechten Maustaste auf die Projektmappe, und klicken Sie dann auf **Hinzufügen** und **Neues Projekt**.  
   
-2.  Wählen Sie im Fenster **Neues Projekt hinzufügen** aus der Vorlagenliste **Visual C#** den Eintrag **Konsolenanwendung** aus, geben Sie `Client` ein, und klicken Sie dann auf **OK**. Das neue Projekt wird im Projektmappenordner erstellt.  
+2. Wählen Sie im Fenster **Neues Projekt hinzufügen** aus der Vorlagenliste **Visual C#** den Eintrag **Konsolenanwendung** aus, geben Sie `Client` ein, und klicken Sie dann auf **OK**. Das neue Projekt wird im Projektmappenordner erstellt.  
   
-3.  Klicken Sie mit der rechten Maustaste unter dem Projekt **Client** auf **Verweise**, und klicken Sie dann auf **Dienstverweis hinzufügen**.  
+3. Klicken Sie mit der rechten Maustaste unter dem Projekt **Client** auf **Verweise**, und klicken Sie dann auf **Dienstverweis hinzufügen**.  
   
-4.  Klicken Sie im Fenster **Dienstverweis hinzufügen** auf den Dropdownpfeil der Schaltfläche **Ermitteln**, und klicken Sie auf **Dienste in der Projektmappe**. Die **Adresse** wird automatisch mit dem WCF-Dienst aufgefüllt, den Sie zuvor erstellt haben, und der **Namespace** wird auf **ServiceReference1** festgelegt. Klicken Sie auf **OK**.  
+4. Klicken Sie im Fenster **Dienstverweis hinzufügen** auf den Dropdownpfeil der Schaltfläche **Ermitteln**, und klicken Sie auf **Dienste in der Projektmappe**. Die **Adresse** wird automatisch mit dem WCF-Dienst aufgefüllt, den Sie zuvor erstellt haben, und der **Namespace** wird auf **ServiceReference1** festgelegt. Klicken Sie auf **OK**.  
   
     > [!IMPORTANT]
     >  Sowohl **TestService** als auch **LocalSTS** müssen ausgeführt werden, wenn Sie dem Client den Dienstverweis hinzufügen.  
   
-5.  Visual Studio generiert Proxyklassen für den WCF-Dienst und fügt alle erforderlichen Referenzinformationen hinzu. Auch werden der Datei *App.config* Elemente hinzugefügt, mit denen der Client so konfiguriert wird, dass für die Authentifizierung im Dienst ein Token aus dem STS abgerufen wird. Wenn dieser Prozess abgeschlossen ist, wird die Datei **Program.cs** geöffnet. Fügen Sie eine `using`-Anweisung für **System.ServiceModel** und eine weitere für **Client.ServiceReference1** hinzu. Ersetzen Sie dann die **Main**-Methode durch folgenden Code, und speichern Sie die Datei anschließend:  
+5. Visual Studio generiert Proxyklassen für den WCF-Dienst und fügt alle erforderlichen Referenzinformationen hinzu. Auch werden der Datei *App.config* Elemente hinzugefügt, mit denen der Client so konfiguriert wird, dass für die Authentifizierung im Dienst ein Token aus dem STS abgerufen wird. Wenn dieser Prozess abgeschlossen ist, wird die Datei **Program.cs** geöffnet. Fügen Sie eine `using`-Anweisung für **System.ServiceModel** und eine weitere für **Client.ServiceReference1** hinzu. Ersetzen Sie dann die **Main**-Methode durch folgenden Code, und speichern Sie die Datei anschließend:  
   
     ```csharp  
     static void Main(string[] args)  
@@ -209,7 +209,7 @@ ms.locfileid: "48584199"
     }  
     ```  
   
-6.  Öffnen Sie die Datei *App.config*, fügen Sie folgenden XML-Code als erstes untergeordnetes Element unter dem `<system.serviceModel>`-Element hinzu, und speichern Sie die Datei anschließend:  
+6. Öffnen Sie die Datei *App.config*, fügen Sie folgenden XML-Code als erstes untergeordnetes Element unter dem `<system.serviceModel>`-Element hinzu, und speichern Sie die Datei anschließend:  
   
     ```xml  
     <behaviors>  
@@ -227,18 +227,18 @@ ms.locfileid: "48584199"
   
      Damit wird die Zertifikatsvalidierung deaktiviert.  
   
-7.  Klicken Sie mit der rechten Maustaste auf die Projektmappe **TestService**, und klicken Sie auf **Startprojekte festlegen...**. Die Eigenschaftenseite **Startprojekt** wird geöffnet. Wählen Sie auf der Eigenschaftenseite **Startprojekt** die Option **Mehrere Startprojekte** aus, klicken Sie dann für jedes Projekt in das Feld **Aktion**, und wählen Sie im Dropdownmenü **Starten** aus. Klicken Sie auf **OK**, um die Einstellungen zu speichern.  
+7. Klicken Sie mit der rechten Maustaste auf die Projektmappe **TestService**, und klicken Sie auf **Startprojekte festlegen...**. Die Eigenschaftenseite **Startprojekt** wird geöffnet. Wählen Sie auf der Eigenschaftenseite **Startprojekt** die Option **Mehrere Startprojekte** aus, klicken Sie dann für jedes Projekt in das Feld **Aktion**, und wählen Sie im Dropdownmenü **Starten** aus. Klicken Sie auf **OK**, um die Einstellungen zu speichern.  
   
-8.  Erstellen Sie die Projektmappe.  
+8. Erstellen Sie die Projektmappe.  
   
 ## <a name="step-3--test-your-solution"></a>Schritt 3: Testen Ihrer Projektmappe  
  In diesem Schritt testen Sie die für WIF aktivierte WCF-Anwendung und überprüfen, ob Ansprüche dargestellt werden.  
   
 #### <a name="to-test-your-wif-enabled-wcf-application-for-claims"></a>So testen Sie die für WIF aktivierte WCF-Anwendung auf Ansprüche  
   
-1.  Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen. Ein Konsolenfenster mit folgendem Text wird angezeigt: **Press Enter key to invoke service, any other key to quit application:** (EINGABETASTE drücken, um den Dienst aufzurufen. Drücken Sie eine andere Taste, um die Anwendung zu beenden:)  
+1. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen. Sie sollte ein Konsolenfenster, und der folgende Text angezeigt werden: **Drücken Sie EINGABETASTE, um den Dienst, eine beliebige Taste, um die Anwendung beenden aufzurufen:**  
   
-2.  Drücken Sie die **EINGABETASTE**. Folgende Anspruchsinformationen sollten in der Konsole angezeigt werden:  
+2. Drücken Sie die **EINGABETASTE**. Folgende Anspruchsinformationen sollten in der Konsole angezeigt werden:  
   
     ```  
     Computed by Service1  
@@ -255,4 +255,4 @@ ms.locfileid: "48584199"
     > [!IMPORTANT]
     >  Sowohl **TestService** als auch **LocalSTS** müssen ausgeführt werden, bevor Sie die **EINGABETASTE** drücken. Eine Webseite für den Dienst wird geöffnet. Hier können Sie im Infobereich (Taskleiste) überprüfen, ob **LocalSTS** ausgeführt wird.  
   
-3.  Wenn diese Ansprüche in der Konsole angezeigt werden, wurde die Authentifizierung im STS erfolgreich durchgeführt, und es werden Ansprüche vom WCF-Dienst angezeigt.
+3. Wenn diese Ansprüche in der Konsole angezeigt werden, wurde die Authentifizierung im STS erfolgreich durchgeführt, und es werden Ansprüche vom WCF-Dienst angezeigt.

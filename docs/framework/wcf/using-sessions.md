@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095866"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320924"
 ---
 # <a name="using-sessions"></a>Verwenden von Sitzungen
 In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert eine Gruppe von Nachrichten in einer Konversation. WCF--Sitzungen sind anders als das Session-Objekt, das in verfügbar [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Anwendungen, unterstützen andere Verhaltensweisen und auf andere Weise gesteuert werden. Dieses Thema beschreibt die Funktionen, mit denen Sitzungen in WCF-Anwendungen und deren Verwendung.  
@@ -53,9 +53,9 @@ In Windows Communication Foundation (WCF)-Anwendungen eine *Sitzung* korreliert 
   
  Wenn ein WCF-Dienst eine Clientsitzung akzeptiert, werden die folgenden Features standardmäßig aktiviert:  
   
-1.  Alle Aufrufe zwischen einem WCF-Clientobjekt werden von der gleichen Dienstinstanz verarbeitet.  
+1. Alle Aufrufe zwischen einem WCF-Clientobjekt werden von der gleichen Dienstinstanz verarbeitet.  
   
-2.  Andere sitzungsbasierte Bindungen stellen zusätzliche Funktionen bereit.  
+2. Andere sitzungsbasierte Bindungen stellen zusätzliche Funktionen bereit.  
   
 ## <a name="system-provided-session-types"></a>Vom System bereitgestellte Sitzungstypen  
  Eine sitzungsbasierte Bindung unterstützt die Standardzuordnung einer Dienstinstanz zu einer bestimmten Sitzung. Andere sitzungsbasierte Bindungen ermöglichen nicht nur die zuvor beschriebene sitzungsbasierte Instanziierungssteuerung, sondern unterstützen darüber hinaus andere Funktionen.  

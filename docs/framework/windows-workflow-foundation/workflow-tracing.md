@@ -2,12 +2,12 @@
 title: Workflowüberwachung
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: 92497768e7e8d720cdcc7c8f2c7c04b4dfcc47b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cd53ed834fdacb639b38346dca831ef4c3e26337
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224935"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321665"
 ---
 # <a name="workflow-tracing"></a>Workflowüberwachung
 Die Workflowüberwachung bietet eine Möglichkeit, Diagnoseinformationen mit .NET Framework-Ablaufverfolgungslistenern zu erfassen. Die Ablaufverfolgung kann aktiviert werden, wenn ein Problem mit der Anwendung erkannt wird, und dann wieder deaktiviert werden, sobald das Problem behoben ist. Es gibt zwei Methoden zur Aktivierung der Debugablaufverfolgung für Workflows. Sie können sie mit der Ereignisablaufverfolgung (ETW) konfigurieren, oder Sie können Ablaufverfolgungsereignisse mit <xref:System.Diagnostics> an eine Datei senden.  
@@ -15,13 +15,13 @@ Die Workflowüberwachung bietet eine Möglichkeit, Diagnoseinformationen mit .NE
 ## <a name="enabling-debug-tracing-in-etw"></a>Aktivieren der Debugablaufverfolgung in ETW  
  Zum Aktivieren der Ablaufverfolgung in ETW aktivieren Sie den Debugkanal in der Ereignisanzeige:  
   
-1.  Navigieren Sie in der Ereignisanzeige zum Knoten für analytische und Debugprotokolle.  
+1. Navigieren Sie in der Ereignisanzeige zum Knoten für analytische und Debugprotokolle.  
   
-2.  In der Strukturansicht in der Ereignisanzeige, navigieren Sie zu **Ereignisanzeige -> Anwendungen und Dienstprotokolle > Microsoft -> Windows-Anwendungsserver-Anwendungen >**. Mit der rechten Maustaste **Anwendungsserver-Anwendungen** , und wählen Sie **Ansicht-analytische und Debugprotokolle**. Mit der rechten Maustaste **Debuggen** , und wählen Sie **Protokoll aktivieren**.  
+2. In der Strukturansicht in der Ereignisanzeige, navigieren Sie zu **Ereignisanzeige -> Anwendungen und Dienstprotokolle > Microsoft -> Windows-Anwendungsserver-Anwendungen >**. Mit der rechten Maustaste **Anwendungsserver-Anwendungen** , und wählen Sie **Ansicht-analytische und Debugprotokolle**. Mit der rechten Maustaste **Debuggen** , und wählen Sie **Protokoll aktivieren**.  
   
-3.  Wenn ein Workflow den Debugmodus ausführt und die Ablaufverfolgungen an den Debugkanal in ETW ausgegeben werden, können Sie diese in der Ereignisanzeige anzeigen. Navigieren Sie zu **Ereignisanzeige -> Anwendungen und Dienstprotokolle > Microsoft -> Windows-Anwendungsserver-Anwendungen >**. Mit der rechten Maustaste **Debuggen** , und wählen Sie **aktualisieren**.  
+3. Wenn ein Workflow den Debugmodus ausführt und die Ablaufverfolgungen an den Debugkanal in ETW ausgegeben werden, können Sie diese in der Ereignisanzeige anzeigen. Navigieren Sie zu **Ereignisanzeige -> Anwendungen und Dienstprotokolle > Microsoft -> Windows-Anwendungsserver-Anwendungen >**. Mit der rechten Maustaste **Debuggen** , und wählen Sie **aktualisieren**.  
   
-4.  Die Standardpuffergröße für die analytische Ablaufverfolgung beträgt nur 4 Kilobytes (KB). Es wird empfohlen, die Größe auf 32 KB zu erweitern. Gehen Sie hierzu folgendermaßen vor.  
+4. Die Standardpuffergröße für die analytische Ablaufverfolgung beträgt nur 4 Kilobytes (KB). Es wird empfohlen, die Größe auf 32 KB zu erweitern. Gehen Sie hierzu folgendermaßen vor.  
   
     1.  Führen Sie den folgenden Befehl im aktuellen Frameworkverzeichnis (z. B. C:\Windows\Microsoft.NET\Framework\v4.0.21203) aus: `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   

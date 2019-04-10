@@ -1,16 +1,16 @@
 ---
-title: 'Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET-Anwendung mit Windows-Authentifizierung'
+title: 'Vorgehensweise: Erstellen einer Ansprüche unterstützenden ASP.NET-Anwendung mit Windows-Authentifizierung'
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 2c7877c452c729b30029cad1a8e17600f3dc9661
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198527"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323667"
 ---
-# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Gewusst wie: Erstellen einer Ansprüche unterstützenden ASP.NET-Anwendung mit Windows-Authentifizierung
+# <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Vorgehensweise: Erstellen einer Ansprüche unterstützenden ASP.NET-Anwendung mit Windows-Authentifizierung
 ## <a name="applies-to"></a>Gilt für  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -58,13 +58,13 @@ ms.locfileid: "47198527"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>So erstellen Sie eine einfache ASP.NET-Anwendung  
   
-1.  Starten Sie Visual Studio, klicken Sie auf **Datei**, **Neu**, und klicken Sie dann auf **Projekt**.  
+1. Starten Sie Visual Studio, klicken Sie auf **Datei**, **Neu**, und klicken Sie dann auf **Projekt**.  
   
-2.  Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET Web Forms-Anwendung**.  
+2. Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET Web Forms-Anwendung**.  
   
-3.  Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und drücken Sie auf **OK**.  
+3. Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und drücken Sie auf **OK**.  
   
-4.  Klicken Sie im **Projektmappen-Explorer** auf das Projekt **TestApp**, nachdem Sie dieses erstellt haben. Die Eigenschaften des Projekts werden im Bereich **Eigenschaften** unter dem **Projektmappen-Explorer** angezeigt. Legen Sie die Eigenschaft **Windows-Authentifizierung** auf **Aktiviert** fest.  
+4. Klicken Sie im **Projektmappen-Explorer** auf das Projekt **TestApp**, nachdem Sie dieses erstellt haben. Die Eigenschaften des Projekts werden im Bereich **Eigenschaften** unter dem **Projektmappen-Explorer** angezeigt. Legen Sie die Eigenschaft **Windows-Authentifizierung** auf **Aktiviert** fest.  
   
     > [!WARNING]
     >  Die Windows-Authentifizierung ist standardmäßig für neue ASP.NET-Anwendungen deaktiviert, sodass Sie sie manuell aktivieren müssen.  
@@ -74,7 +74,7 @@ ms.locfileid: "47198527"
   
 #### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Konfigurieren einer ASP.NET-Anwendung für Ansprüche bei Verwendung der Windows-Authentifizierung  
   
-1.  Ersetzen Sie in der Datei *Default.aspx* des Projekts **TestApp** das vorhandene Markup durch das folgende Markup:  
+1. Ersetzen Sie in der Datei *Default.aspx* des Projekts **TestApp** das vorhandene Markup durch das folgende Markup:  
   
     ```  
     <%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"  
@@ -96,7 +96,7 @@ ms.locfileid: "47198527"
   
      In diesem Schritt wird eine „GridView“-Steuerung zu Ihrer Seite *Default.aspx* hinzugefügt, die mit den Ansprüchen aufgefüllt wird, die von der Windows-Authentifizierung abgerufen wurden.  
   
-2.  Speichern Sie die Datei *Default.aspx*, und öffnen Sie dann die CodeBehind-Datei *Default.aspx.cs*. Ersetzen Sie den vorhandenen Code durch folgenden Code:  
+2. Speichern Sie die Datei *Default.aspx*, und öffnen Sie dann die CodeBehind-Datei *Default.aspx.cs*. Ersetzen Sie den vorhandenen Code durch folgenden Code:  
   
     ```csharp  
     using System;  
@@ -119,13 +119,13 @@ ms.locfileid: "47198527"
   
      Der obige Code zeigt die Ansprüche eines authentifizierten Benutzers an.  
   
-3.  Modifizieren Sie zum Ändern des Authentifizierungstyps einer Anwendung den Block **\<authentication>** im Abschnitt **\<system.web>** der Stammdatei des Projekts (*Web.config*), sodass diese nur den folgenden Konfigurationseintrag enthält:  
+3. Modifizieren Sie zum Ändern des Authentifizierungstyps einer Anwendung den Block **\<authentication>** im Abschnitt **\<system.web>** der Stammdatei des Projekts (*Web.config*), sodass diese nur den folgenden Konfigurationseintrag enthält:  
   
     ```xml  
     <authentication mode="Windows" />  
     ```  
   
-4.  Ändern Sie abschließend den Block **\<authorization>** im Abschnitt **\<system.web>** derselben *Web.config*-Datei, um die Authentifizierung zu erzwingen:  
+4. Ändern Sie abschließend den Block **\<authorization>** im Abschnitt **\<system.web>** derselben *Web.config*-Datei, um die Authentifizierung zu erzwingen:  
   
     ```xml  
     <authorization>  
@@ -138,4 +138,4 @@ ms.locfileid: "47198527"
   
 #### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Testen der ASP.NET Web Forms-Anwendung für Ansprüche bei Verwendung der Windows-Authentifizierung  
   
-1.  Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen. Ihnen sollte *Default.aspx* angezeigt werden, und Ihr Windows-Kontoname (einschließlich des Domänennamens) sollte bereits als der authentifizierte Benutzer oben rechts auf der Seite angezeigt werden. Die Seite sollte eine Tabelle enthalten, die mit den Ansprüchen gefüllt ist, die von Ihrem Windows-Konto abgerufen wurden.
+1. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen. Ihnen sollte *Default.aspx* angezeigt werden, und Ihr Windows-Kontoname (einschließlich des Domänennamens) sollte bereits als der authentifizierte Benutzer oben rechts auf der Seite angezeigt werden. Die Seite sollte eine Tabelle enthalten, die mit den Ansprüchen gefüllt ist, die von Ihrem Windows-Konto abgerufen wurden.

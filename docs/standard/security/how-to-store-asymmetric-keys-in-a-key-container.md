@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Store von asymmetrischen Schlüsseln in einem Schlüsselcontainer'
+title: 'Vorgehensweise: Speichern asymmetrischer Schlüssel in einem Schlüsselcontainer'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,31 +17,31 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff86db89eadc36faf3ebdcd1f653d73fc958595a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6fada360eda46dc695ab732a2573b135d823f0a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972793"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326189"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Vorgehensweise: Store von asymmetrischen Schlüsseln in einem Schlüsselcontainer
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Vorgehensweise: Speichern asymmetrischer Schlüssel in einem Schlüsselcontainer
 Asymmetrische private Schlüssel sollten in keinem Fall in vollem Wortlaut oder in Klartext auf dem lokalen Computer gespeichert werden. Wenn ein privater Schlüssel gespeichert werden muss, sollten Sie einen Schlüsselcontainer verwenden. Weitere Informationen zu Schlüsselcontainern finden Sie unter [RSA-Schlüsselcontainer auf Computerebene und Benutzerebene](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100)).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>So erstellen Sie einen asymmetrischen Schlüssel und speichern ihn in einem Schlüsselcontainer  
   
-1.  Erstellen Sie eine neue Instanz der ein <xref:System.Security.Cryptography.CspParameters> Klasse und übergeben Sie den Namen, die den Schlüsselcontainer an aufgerufen werden soll die <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> Feld.  
+1. Erstellen Sie eine neue Instanz der ein <xref:System.Security.Cryptography.CspParameters> Klasse und übergeben Sie den Namen, die den Schlüsselcontainer an aufgerufen werden soll die <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> Feld.  
   
-2.  Erstellen Sie eine neue Instanz der eine abgeleitete Klasse die <xref:System.Security.Cryptography.AsymmetricAlgorithm> Klasse (in der Regel **RSACryptoServiceProvider** oder **DSACryptoServiceProvider**), und übergeben Sie das zuvor erstellte  **CspParameters** -Objekt an deren Konstruktor.  
+2. Erstellen Sie eine neue Instanz der eine abgeleitete Klasse die <xref:System.Security.Cryptography.AsymmetricAlgorithm> Klasse (in der Regel **RSACryptoServiceProvider** oder **DSACryptoServiceProvider**), und übergeben Sie das zuvor erstellte  **CspParameters** -Objekt an deren Konstruktor.  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>So löschen Sie den Schlüssel aus einem Schlüsselcontainer  
   
-1.  Erstellen Sie eine neue Instanz der **CspParameters**-Klasse, und übergeben Sie den gewünschten Namen für den Schlüsselcontainer an das Feld **CspParameters.KeyContainerName**.  
+1. Erstellen Sie eine neue Instanz der **CspParameters**-Klasse, und übergeben Sie den gewünschten Namen für den Schlüsselcontainer an das Feld **CspParameters.KeyContainerName**.  
   
-2.  Erstellen Sie eine neue Instanz einer Klasse, die aus der **AsymmetricAlgorithm**-Klasse abgeleitet ist (normalerweise **RSACryptoServiceProvider** oder **DSACryptoServiceProvider**), und übergeben Sie das zuvor erstellte **CspParameters**-Objekt an deren Konstruktor.  
+2. Erstellen Sie eine neue Instanz einer Klasse, die aus der **AsymmetricAlgorithm**-Klasse abgeleitet ist (normalerweise **RSACryptoServiceProvider** oder **DSACryptoServiceProvider**), und übergeben Sie das zuvor erstellte **CspParameters**-Objekt an deren Konstruktor.  
   
-3.  Legen Sie die **PersistKeyInCSP**-Eigenschaft der Klasse, die aus **AsymmetricAlgorithm** abgeleitet ist, auf **false** fest (**False** in Visual Basic).  
+3. Legen Sie die **PersistKeyInCSP**-Eigenschaft der Klasse, die aus **AsymmetricAlgorithm** abgeleitet ist, auf **false** fest (**False** in Visual Basic).  
   
-4.  Rufen Sie die **Clear**-Methode der Klasse auf, die aus **AsymmetricAlgorithm** abgeleitet ist. Diese Methode gibt alle Ressourcen der Klasse frei und löscht den Schlüsselcontainer.  
+4. Rufen Sie die **Clear**-Methode der Klasse auf, die aus **AsymmetricAlgorithm** abgeleitet ist. Diese Methode gibt alle Ressourcen der Klasse frei und löscht den Schlüsselcontainer.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie Sie einen asymmetrischen Schlüssel erstellen, ihn in einem Schlüsselcontainer speichern, den Schlüssel zu einem späteren Zeitpunkt abrufen und den Schlüssel aus dem Container löschen.  
@@ -228,4 +228,4 @@ Key deleted.
 - [Erzeugen von Schlüsseln für die Ver- und Entschlüsselung](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [Verschlüsseln von Daten](../../../docs/standard/security/encrypting-data.md)
 - [Entschlüsseln von Daten](../../../docs/standard/security/decrypting-data.md)
-- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [Kryptografische Dienste](../../../docs/standard/security/cryptographic-services.md)

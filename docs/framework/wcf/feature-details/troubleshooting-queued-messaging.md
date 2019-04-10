@@ -2,12 +2,12 @@
 title: Problembehandlung bei Nachrichtenwarteschlangen
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: b2193755beddd6c0d0eef4f95ca311b8e2b75b3c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463110"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322042"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Problembehandlung bei Nachrichtenwarteschlangen
 Dieser Abschnitt enthält häufig gestellte Fragen und Hilfe zur Problembehandlung für die Verwendung von Warteschlangen in Windows Communication Foundation (WCF).  
@@ -96,9 +96,9 @@ Dieser Abschnitt enthält häufig gestellte Fragen und Hilfe zur Problembehandlu
   
  **Antwort:** Der häufigste Grund sind die Berechtigungen.  
   
-1.  Stellen Sie sicher, dass der `NetMsmqActivator`-Prozess ausgeführt wird und die Identität des `NetMsmqActivator`-Prozesses Lese- und Suchberechtigungen für die Warteschlange besitzt.  
+1. Stellen Sie sicher, dass der `NetMsmqActivator`-Prozess ausgeführt wird und die Identität des `NetMsmqActivator`-Prozesses Lese- und Suchberechtigungen für die Warteschlange besitzt.  
   
-2.  Wenn `NetMsmqActivator` Warteschlangen auf einem Remotecomputer überwacht, stellen Sie sicher, dass `NetMsmqActivator` unter keinem eingeschränkten Token ausgeführt wird. So führen Sie `NetMsmqActivator` mit einem uneingeschränkten Token aus:  
+2. Wenn `NetMsmqActivator` Warteschlangen auf einem Remotecomputer überwacht, stellen Sie sicher, dass `NetMsmqActivator` unter keinem eingeschränkten Token ausgeführt wird. So führen Sie `NetMsmqActivator` mit einem uneingeschränkten Token aus:  
   
     ```  
     sc sidtype NetMsmqActivator unrestricted  
@@ -157,19 +157,19 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **Antwort:** Sie können keinen Zertifikatspeicher des lokalen Computers mit dem zertifikatmodus verwenden. Sie müssen das Zertifikat mit dem Zertifikat-Snap-In aus dem Zertifikatspeicher des Computers in den Speicher des aktuellen Benutzers kopieren. So rufen Sie das Zertifikat-Snap-In auf:  
   
-1.  Klicken Sie auf **starten**Option **ausführen**, Typ `mmc`, und klicken Sie auf **OK**.  
+1. Klicken Sie auf **starten**Option **ausführen**, Typ `mmc`, und klicken Sie auf **OK**.  
   
-2.  In der **Microsoft Management Console**öffnen die **Datei** Menü **Snap-In hinzufügen/entfernen**.  
+2. In der **Microsoft Management Console**öffnen die **Datei** Menü **Snap-In hinzufügen/entfernen**.  
   
-3.  In der **Snap-In hinzufügen/entfernen** Dialogfeld klicken Sie auf die **hinzufügen** Schaltfläche.  
+3. In der **Snap-In hinzufügen/entfernen** Dialogfeld klicken Sie auf die **hinzufügen** Schaltfläche.  
   
-4.  In der **Standalone-Snap-in hinzufügen** (Dialogfeld), auf Zertifikate aus, und klicken Sie auf **hinzufügen**.  
+4. In der **Standalone-Snap-in hinzufügen** (Dialogfeld), auf Zertifikate aus, und klicken Sie auf **hinzufügen**.  
   
-5.  In der **Zertifikate** wählen Sie im Snap-in-Dialogfeld **mein Benutzerkonto** , und klicken Sie auf **Fertig stellen**.  
+5. In der **Zertifikate** wählen Sie im Snap-in-Dialogfeld **mein Benutzerkonto** , und klicken Sie auf **Fertig stellen**.  
   
-6.  Fügen Sie ein zweites Zertifkat-Snap-in der obigen Schritte, aber diesmal wählen **Computerkonto** , und klicken Sie auf **Weiter**.  
+6. Fügen Sie ein zweites Zertifkat-Snap-in der obigen Schritte, aber diesmal wählen **Computerkonto** , und klicken Sie auf **Weiter**.  
   
-7.  Wählen Sie **lokalen Computer** , und klicken Sie auf **Fertig stellen**. Sie können jetzt Zertifikate per Drag &amp; Drop aus dem Computerzertifikatspeicher in den Speicher des aktuellen Benutzers verschieben.  
+7. Wählen Sie **lokalen Computer** , und klicken Sie auf **Fertig stellen**. Sie können jetzt Zertifikate per Drag &amp; Drop aus dem Computerzertifikatspeicher in den Speicher des aktuellen Benutzers verschieben.  
   
  **Q:** Wenn mein Dienst aus einer Warteschlange auf einem anderen Computer im Arbeitsgruppenmodus liest, erhalte ich ein "Zugriff verweigert"-Ausnahme aus.  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 2e569f7254c2436a7c05eeeb139bf75bf61f900e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bed943466348447e30947c170e27027f324342c6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213310"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323173"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>Vorgehensweise: Ändern der Abstände und der Ausrichtung der ToolStrip-Elemente in Windows Forms
 Die <xref:System.Windows.Forms.ToolStrip> Steuerelement vollständig unterstützt Funktionen wie z. B. das Ändern der Größe, des Abstands des <xref:System.Windows.Forms.ToolStripItem> Steuerelemente relativ zueinander und die Anordnung von Steuerelementen auf der <xref:System.Windows.Forms.ToolStrip>, und der Abstand der Steuerelemente relativ zu den <xref:System.Windows.Forms.ToolStrip>.  
@@ -23,7 +23,7 @@ Die <xref:System.Windows.Forms.ToolStrip> Steuerelement vollständig unterstütz
   
 ### <a name="to-manually-size-a-toolstripitem"></a>Manuell auf einem ToolStripItem Größe  
   
-1.  Legen Sie die <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> Eigenschaft `false` für das zugeordnete Steuerelement.  
+1. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> Eigenschaft `false` für das zugeordnete Steuerelement.  
   
     ```vb  
     ToolStripButton1.AutoSize = False  
@@ -33,11 +33,11 @@ Die <xref:System.Windows.Forms.ToolStrip> Steuerelement vollständig unterstütz
     toolStripButton1.AutoSize = false;  
     ```  
   
-2.  Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Size%2A> Eigenschaft wie gewünscht, für das zugeordnete <xref:System.Windows.Forms.ToolStripItem>.  
+2. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Size%2A> Eigenschaft wie gewünscht, für das zugeordnete <xref:System.Windows.Forms.ToolStripItem>.  
   
 ### <a name="to-set-the-spacing-of-a-toolstripitem"></a>Um den Abstand eines ToolStripItem festzulegen  
   
-1.  Legen Sie die gewünschten Werte in Pixel in der <xref:System.Windows.Forms.ToolStripItem.Margin%2A> Eigenschaft des zugeordneten Steuerelements.  
+1. Legen Sie die gewünschten Werte in Pixel in der <xref:System.Windows.Forms.ToolStripItem.Margin%2A> Eigenschaft des zugeordneten Steuerelements.  
   
      Die Werte der <xref:System.Windows.Forms.ToolStripItem.Margin%2A> Eigenschaft geben den Abstand zwischen dem Element und angrenzenden Elementen in der folgenden Reihenfolge: Links, oben, rechts und unten.  
   
@@ -53,7 +53,7 @@ Die <xref:System.Windows.Forms.ToolStrip> Steuerelement vollständig unterstütz
   
 ### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a>Ausrichten ein ToolStripItem auf die rechte Seite des ToolStrip  
   
-1.  Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> Eigenschaft <xref:System.Windows.Forms.ToolStripItemAlignment.Right> für das zugeordnete Steuerelement. Standardmäßig <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> nastaven NA hodnotu <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, die Steuerelemente auf der linken Seite des richtet die <xref:System.Windows.Forms.ToolStrip>.  
+1. Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> Eigenschaft <xref:System.Windows.Forms.ToolStripItemAlignment.Right> für das zugeordnete Steuerelement. Standardmäßig <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> nastaven NA hodnotu <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, die Steuerelemente auf der linken Seite des richtet die <xref:System.Windows.Forms.ToolStrip>.  
   
     ```vb  
     ToolStripSplitButton1.Alignment = _  

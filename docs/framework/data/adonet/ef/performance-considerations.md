@@ -2,12 +2,12 @@
 title: Überlegungen zur Leistung (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: d0ee92b96a22b0ecb59ee76fb2f2e9d64442ce22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087949"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324044"
 ---
 # <a name="performance-considerations-entity-framework"></a>Überlegungen zur Leistung (Entity Framework)
 In diesem Thema werden Leistungsmerkmale des ADO.NET Entity Framework beschrieben. Außerdem sind einige Vorschläge enthalten, die Sie zur Verbesserung der Leistung von Entity Framework-Anwendungen verwenden können.  
@@ -82,11 +82,11 @@ In diesem Thema werden Leistungsmerkmale des ADO.NET Entity Framework beschriebe
 ### <a name="query-paths"></a>Abfragepfade  
  Standardmäßig werden verknüpfte Objekte nicht zurückgegeben (obwohl dies für Objekte, die die Beziehungen selbst darstellen, zutrifft), wenn Sie einen <xref:System.Data.Objects.ObjectQuery%601> ausführen. Sie können auf eine von drei Arten verknüpfte Objekte laden:  
   
-1.  Legen Sie den Abfragepfad fest, bevor die <xref:System.Data.Objects.ObjectQuery%601>-Abfrage ausgeführt wird.  
+1. Legen Sie den Abfragepfad fest, bevor die <xref:System.Data.Objects.ObjectQuery%601>-Abfrage ausgeführt wird.  
   
-2.  Rufen Sie die `Load`-Methode für die Navigationseigenschaft auf, die das Objekt verfügbar macht.  
+2. Rufen Sie die `Load`-Methode für die Navigationseigenschaft auf, die das Objekt verfügbar macht.  
   
-3.  Legen Sie die <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A>-Option für das <xref:System.Data.Objects.ObjectContext>-Objekt auf `true` fest. Beachten Sie, dass dies automatisch geschieht beim Generieren von Objektebenencode mit dem [Entity Data Model Designer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)). Weitere Informationen finden Sie unter [Übersicht über generierten Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100)).  
+3. Legen Sie die <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A>-Option für das <xref:System.Data.Objects.ObjectContext>-Objekt auf `true` fest. Beachten Sie, dass dies automatisch geschieht beim Generieren von Objektebenencode mit dem [Entity Data Model Designer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100)). Weitere Informationen finden Sie unter [Übersicht über generierten Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100)).  
   
  Denken Sie beim Auswählen der Option daran, dass zwischen der Anzahl der Abfragen der Datenbank und der in einer einzelnen Abfrage zurückgegebenen Datenmenge abgewogen werden sollte. Weitere Informationen finden Sie unter [laden verbundener Objekte](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100)).  
   

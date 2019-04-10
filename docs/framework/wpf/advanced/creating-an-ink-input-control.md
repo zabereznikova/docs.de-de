@@ -14,12 +14,12 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: 80385b904f4ff5de86bf7e011f6a883b957d0ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219667"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323849"
 ---
 # <a name="creating-an-ink-input-control"></a>Erstellen eines Freihandeingabesteuerelements
 Sie können ein benutzerdefiniertes Steuerelement erstellen, die dynamisch und statisch rendert Freihandeingaben. Freihandeingaben gerendert wird, wenn ein Benutzer ein Strichs zeichnet, wodurch die Freihandeingaben angezeigt werden, "flow" aus der Tablettstift und Freihandeingaben dahinter angezeigt wurde an das Steuerelement, entweder über den Tablettstift aus der Zwischenablage eingefügten oder aus einer Datei geladen. Zum Rendern von Freihandeingaben dynamisch das Steuerelement verwenden, muss ein <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Zum Rendern von Freihandeingaben statisch, müssen Sie den Stift-Event-Methoden überschreiben (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, und <xref:System.Windows.UIElement.OnStylusUp%2A>) zum Sammeln von <xref:System.Windows.Input.StylusPoint> , Striche zu erstellen, und fügen sie eine <xref:System.Windows.Controls.InkPresenter> (die rendert Freihandeingaben auf dem Steuerelement).  
@@ -40,30 +40,30 @@ Sie können ein benutzerdefiniertes Steuerelement erstellen, die dynamisch und s
 ## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Vorgehensweise: Stift-Verwaltungspunkt-Daten sammeln und zum Erstellen von Freihandstrichen  
  Führen Sie zum Erstellen eines Steuerelements, das erfasst und verwaltet Striche folgende:  
   
-1.  Leiten Sie eine Klasse von <xref:System.Windows.Controls.Control> oder eine der Klassen abgeleitet <xref:System.Windows.Controls.Control>, z. B. <xref:System.Windows.Controls.Label>.  
+1. Leiten Sie eine Klasse von <xref:System.Windows.Controls.Control> oder eine der Klassen abgeleitet <xref:System.Windows.Controls.Control>, z. B. <xref:System.Windows.Controls.Label>.  
   
      [!code-csharp[AdvancedInkTopicsSamples#20](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#20)]  
     [!code-csharp[AdvancedInkTopicsSamples#14](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#14)]  
     [!code-csharp[AdvancedInkTopicsSamples#15](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#15)]  
   
-2.  Hinzufügen einer <xref:System.Windows.Controls.InkPresenter> auf die Klasse und den Satz der <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft mit dem neuen <xref:System.Windows.Controls.InkPresenter>.  
+2. Hinzufügen einer <xref:System.Windows.Controls.InkPresenter> auf die Klasse und den Satz der <xref:System.Windows.Controls.ContentControl.Content%2A> Eigenschaft mit dem neuen <xref:System.Windows.Controls.InkPresenter>.  
   
      [!code-csharp[AdvancedInkTopicsSamples#16](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#16)]  
   
-3.  Anfügen der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> von der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> zu der <xref:System.Windows.Controls.InkPresenter> durch Aufrufen der <xref:System.Windows.Controls.InkPresenter.AttachVisuals%2A> -Methode, und fügen die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> auf der <xref:System.Windows.UIElement.StylusPlugIns%2A> Auflistung. Dadurch wird die <xref:System.Windows.Controls.InkPresenter> um Freihandeingaben anzuzeigen. wenn der Tablettstift-Verwaltungspunkt-Daten vom Steuerelement erfasst werden.  
+3. Anfügen der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer.RootVisual%2A> von der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> zu der <xref:System.Windows.Controls.InkPresenter> durch Aufrufen der <xref:System.Windows.Controls.InkPresenter.AttachVisuals%2A> -Methode, und fügen die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> auf der <xref:System.Windows.UIElement.StylusPlugIns%2A> Auflistung. Dadurch wird die <xref:System.Windows.Controls.InkPresenter> um Freihandeingaben anzuzeigen. wenn der Tablettstift-Verwaltungspunkt-Daten vom Steuerelement erfasst werden.  
   
      [!code-csharp[AdvancedInkTopicsSamples#17](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#17)]  
     [!code-csharp[AdvancedInkTopicsSamples#18](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControlSnippets.cs#18)]  
   
-4.  Überschreiben Sie die <xref:System.Windows.UIElement.OnStylusDown%2A>-Methode.  Erfassen Sie bei dieser Methode den Tablettstift mit einem Aufruf von <xref:System.Windows.Input.Stylus.Capture%2A>. Durch das Erfassen der Stift, wird das Steuerelement weiter empfangen <xref:System.Windows.UIElement.StylusMove> und <xref:System.Windows.UIElement.StylusUp> Ereignisse, selbst wenn der Stift des Steuerelements-Grenzen verlässt. Dies ist nicht unbedingt erforderlich, aber fast immer gewünschten für eine gute benutzererfahrung. Erstellen Sie ein neues <xref:System.Windows.Input.StylusPointCollection> zum Sammeln von <xref:System.Windows.Input.StylusPoint> Daten. Fügen Sie abschließend den anfänglichen Satz von <xref:System.Windows.Input.StylusPoint> Daten an die <xref:System.Windows.Input.StylusPointCollection>.  
+4. Überschreiben Sie die <xref:System.Windows.UIElement.OnStylusDown%2A>-Methode.  Erfassen Sie bei dieser Methode den Tablettstift mit einem Aufruf von <xref:System.Windows.Input.Stylus.Capture%2A>. Durch das Erfassen der Stift, wird das Steuerelement weiter empfangen <xref:System.Windows.UIElement.StylusMove> und <xref:System.Windows.UIElement.StylusUp> Ereignisse, selbst wenn der Stift des Steuerelements-Grenzen verlässt. Dies ist nicht unbedingt erforderlich, aber fast immer gewünschten für eine gute benutzererfahrung. Erstellen Sie ein neues <xref:System.Windows.Input.StylusPointCollection> zum Sammeln von <xref:System.Windows.Input.StylusPoint> Daten. Fügen Sie abschließend den anfänglichen Satz von <xref:System.Windows.Input.StylusPoint> Daten an die <xref:System.Windows.Input.StylusPointCollection>.  
   
      [!code-csharp[AdvancedInkTopicsSamples#7](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#7)]  
   
-5.  Überschreiben der <xref:System.Windows.UIElement.OnStylusMove%2A> Methode und Hinzufügen der <xref:System.Windows.Input.StylusPoint> Daten an die <xref:System.Windows.Input.StylusPointCollection> -Objekt, das Sie zuvor erstellt haben.  
+5. Überschreiben der <xref:System.Windows.UIElement.OnStylusMove%2A> Methode und Hinzufügen der <xref:System.Windows.Input.StylusPoint> Daten an die <xref:System.Windows.Input.StylusPointCollection> -Objekt, das Sie zuvor erstellt haben.  
   
      [!code-csharp[AdvancedInkTopicsSamples#8](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#8)]  
   
-6.  Überschreiben der <xref:System.Windows.UIElement.OnStylusUp%2A> Methode, und erstellen Sie ein neues <xref:System.Windows.Ink.Stroke> mit der <xref:System.Windows.Input.StylusPointCollection> Daten. Hinzufügen des neuen <xref:System.Windows.Ink.Stroke> Sie erstellt haben, um die <xref:System.Windows.Controls.InkPresenter.Strokes%2A> Auflistung von der <xref:System.Windows.Controls.InkPresenter> und Freigeben von Tablettstifteingaben erfasst.  
+6. Überschreiben der <xref:System.Windows.UIElement.OnStylusUp%2A> Methode, und erstellen Sie ein neues <xref:System.Windows.Ink.Stroke> mit der <xref:System.Windows.Input.StylusPointCollection> Daten. Hinzufügen des neuen <xref:System.Windows.Ink.Stroke> Sie erstellt haben, um die <xref:System.Windows.Controls.InkPresenter.Strokes%2A> Auflistung von der <xref:System.Windows.Controls.InkPresenter> und Freigeben von Tablettstifteingaben erfasst.  
   
      [!code-csharp[AdvancedInkTopicsSamples#10](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#10)]  
   
@@ -71,15 +71,15 @@ Sie können ein benutzerdefiniertes Steuerelement erstellen, die dynamisch und s
 ## <a name="how-to-enable-your-control-to-accept-input-from-the-mouse"></a>Vorgehensweise: Aktivieren Sie das Steuerelement Benutzereingaben von der Maus  
  Wenn Sie das vorherige Steuerelement zu Ihrer Anwendung hinzufügen, führen Sie es, und verwenden Sie die Maus als Eingabegerät, bemerken Sie, dass die Striche nicht beibehalten werden. Um beizubehalten gehen die Striche, wenn der Mauszeiger als das Eingabegerät verwendet wird:  
   
-1.  Außer Kraft setzen der <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> und erstellen Sie ein neues <xref:System.Windows.Input.StylusPointCollection> erhalten Sie die Position der Maus aus, wenn das Ereignis aufgetreten ist, und erstellen Sie eine <xref:System.Windows.Input.StylusPoint> mit dem Verwaltungspunkt-Daten, und fügen die <xref:System.Windows.Input.StylusPoint> auf die <xref:System.Windows.Input.StylusPointCollection>.  
+1. Außer Kraft setzen der <xref:System.Windows.UIElement.OnMouseLeftButtonDown%2A> und erstellen Sie ein neues <xref:System.Windows.Input.StylusPointCollection> erhalten Sie die Position der Maus aus, wenn das Ereignis aufgetreten ist, und erstellen Sie eine <xref:System.Windows.Input.StylusPoint> mit dem Verwaltungspunkt-Daten, und fügen die <xref:System.Windows.Input.StylusPoint> auf die <xref:System.Windows.Input.StylusPointCollection>.  
   
      [!code-csharp[AdvancedInkTopicsSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#11)]  
   
-2.  Überschreiben Sie die <xref:System.Windows.UIElement.OnMouseMove%2A>-Methode. Die Position der Maus zu erhalten, wenn das Ereignis aufgetreten ist, und erstellen Sie eine <xref:System.Windows.Input.StylusPoint> mithilfe der Point-Daten.  Hinzufügen der <xref:System.Windows.Input.StylusPoint> auf die <xref:System.Windows.Input.StylusPointCollection> -Objekt, das Sie zuvor erstellt haben.  
+2. Überschreiben Sie die <xref:System.Windows.UIElement.OnMouseMove%2A>-Methode. Die Position der Maus zu erhalten, wenn das Ereignis aufgetreten ist, und erstellen Sie eine <xref:System.Windows.Input.StylusPoint> mithilfe der Point-Daten.  Hinzufügen der <xref:System.Windows.Input.StylusPoint> auf die <xref:System.Windows.Input.StylusPointCollection> -Objekt, das Sie zuvor erstellt haben.  
   
      [!code-csharp[AdvancedInkTopicsSamples#12](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#12)]  
   
-3.  Überschreiben Sie die <xref:System.Windows.UIElement.OnMouseLeftButtonUp%2A>-Methode.  Erstellen Sie ein neues <xref:System.Windows.Ink.Stroke> mit der <xref:System.Windows.Input.StylusPointCollection> Daten, und fügen Sie der neuen <xref:System.Windows.Ink.Stroke> Sie erstellt haben, um die <xref:System.Windows.Controls.InkPresenter.Strokes%2A> Auflistung von der <xref:System.Windows.Controls.InkPresenter>.  
+3. Überschreiben Sie die <xref:System.Windows.UIElement.OnMouseLeftButtonUp%2A>-Methode.  Erstellen Sie ein neues <xref:System.Windows.Ink.Stroke> mit der <xref:System.Windows.Input.StylusPointCollection> Daten, und fügen Sie der neuen <xref:System.Windows.Ink.Stroke> Sie erstellt haben, um die <xref:System.Windows.Controls.InkPresenter.Strokes%2A> Auflistung von der <xref:System.Windows.Controls.InkPresenter>.  
   
      [!code-csharp[AdvancedInkTopicsSamples#13](~/samples/snippets/csharp/VS_Snippets_Wpf/AdvancedInkTopicsSamples/CSharp/StylusControl.cs#13)]  
   

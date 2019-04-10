@@ -1,5 +1,5 @@
 ---
-title: 'Exemplarische Vorgehensweise: Aktivieren der Drag & Drop auf einem Benutzersteuerelement'
+title: 'Exemplarische Vorgehensweise: Aktivieren der Drag & Drop-Funktion auf einem Benutzersteuerelement'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - walkthrough [WPF], drag-and-drop
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
-ms.openlocfilehash: 7009f56c25ff63729f0b0170503c2f356dc91301
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a628665ccfa0a423667344b1fe81f132d6691b12
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352918"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321678"
 ---
-# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Exemplarische Vorgehensweise: Aktivieren der Drag & Drop auf einem Benutzersteuerelement
+# <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Exemplarische Vorgehensweise: Aktivieren der Drag & Drop-Funktion auf einem Benutzersteuerelement
 
 In dieser exemplarische Vorgehensweise wird veranschaulicht, wie man in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ein benutzerdefiniertes Steuerelement erstellt, das Drag & Drop-Datenübertragung unterstützt.
 
@@ -38,11 +38,11 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 ## <a name="create-the-application-project"></a>Erstellen des Anwendungsprojekts
  In diesem Abschnitt erstellen Sie die Anwendungsstruktur, einschließlich eine Hauptseite mit zwei Panels und einer <xref:System.Windows.Controls.TextBox>.
 
-1.  Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Basic oder Visual C# mit dem Namen `DragDropExample`. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
+1. Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Basic oder Visual C# mit dem Namen `DragDropExample`. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
-2.  Öffnen Sie „MainWindow.xaml“.
+2. Öffnen Sie „MainWindow.xaml“.
 
-3.  Fügen Sie das folgende Markup zwischen die öffnenden und schließenden <xref:System.Windows.Controls.Grid> Tags.
+3. Fügen Sie das folgende Markup zwischen die öffnenden und schließenden <xref:System.Windows.Controls.Grid> Tags.
 
      Dieses Markup erstellt die Benutzeroberfläche für die Testanwendung.
 
@@ -51,23 +51,23 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 ## <a name="add-a-new-user-control-to-the-project"></a>Fügen Sie dem Projekt ein neues Benutzersteuerelement hinzu
  In diesem Abschnitt fügen Sie dem Projekt ein neues Benutzersteuerelement hinzu.
 
-1.  Klicken Sie im Menü „Projekt” auf **Benutzersteuerelement hinzufügen**.
+1. Klicken Sie im Menü „Projekt” auf **Benutzersteuerelement hinzufügen**.
 
-2.  In der **neues Element hinzufügen** Dialogfeld ändern den Namen in `Circle.xaml`, und klicken Sie auf **hinzufügen**.
+2. In der **neues Element hinzufügen** Dialogfeld ändern den Namen in `Circle.xaml`, und klicken Sie auf **hinzufügen**.
 
      Circle.XAML und der dazugehörige CodeBehind werden dem Projekt hinzugefügt.
 
-3.  Öffnen Sie Circle.xaml.
+3. Öffnen Sie Circle.xaml.
 
      Diese Datei enthält die Benutzeroberflächenelemente des Benutzersteuerelements.
 
-4.  Fügen Sie das folgende Markup in das Stammverzeichnis <xref:System.Windows.Controls.Grid> ein einfaches Benutzersteuerelement zu erstellen, die über die Benutzeroberfläche ein blauer Kreis verfügt.
+4. Fügen Sie das folgende Markup in das Stammverzeichnis <xref:System.Windows.Controls.Grid> ein einfaches Benutzersteuerelement zu erstellen, die über die Benutzeroberfläche ein blauer Kreis verfügt.
 
      [!code-xaml[DragDropWalkthrough#EllipseXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#ellipsexaml)]
 
-5.  Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".
+5. Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".
 
-6.  Fügen Sie in C# den folgenden Code nach dem Standardkonstruktor hinzu, um einen Kopierkonstruktor zu erstellen. Fügen Sie in Visual Basic den folgenden Code hinzu, um sowohl einen Standardkonstruktor als auch einen Kopierkonstruktor zu erstellen.
+6. Fügen Sie in C# den folgenden Code nach dem Standardkonstruktor hinzu, um einen Kopierkonstruktor zu erstellen. Fügen Sie in Visual Basic den folgenden Code hinzu, um sowohl einen Standardkonstruktor als auch einen Kopierkonstruktor zu erstellen.
 
      Fügen Sie eine Kopierkonstruktor-Methode in die CodeBehind-Datei ein, damit das Benutzersteuerelement kopiert werden kann. Im vereinfachten kreisförmigen Benutzersteuerelement wollen wir nur die Füllfarbe und die Größe des Benutzersteuerelements kopieren.
 
@@ -76,15 +76,15 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
 ## <a name="add-the-user-control-to-the-main-window"></a>Fügen Sie das Benutzersteuerelement dem Hauptfenster
 
-1.  Öffnen Sie „MainWindow.xaml“.
+1. Öffnen Sie „MainWindow.xaml“.
 
-2.  Fügen Sie den folgenden XAML an das öffnende <xref:System.Windows.Window> Tag, um eine XML-Namespace-Referenz auf die aktuelle Anwendung zu erstellen.
+2. Fügen Sie den folgenden XAML an das öffnende <xref:System.Windows.Window> Tag, um eine XML-Namespace-Referenz auf die aktuelle Anwendung zu erstellen.
 
     ```
     xmlns:local="clr-namespace:DragDropExample"
     ```
 
-3.  In der ersten <xref:System.Windows.Controls.StackPanel>, fügen Sie den folgenden XAML zum Erstellen von zwei Instanzen des Kreis-Steuerelements im ersten Bereich hinzu.
+3. In der ersten <xref:System.Windows.Controls.StackPanel>, fügen Sie den folgenden XAML zum Erstellen von zwei Instanzen des Kreis-Steuerelements im ersten Bereich hinzu.
 
      [!code-xaml[DragDropWalkthrough#CirclesXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/SnippetWindow.xaml#circlesxaml)]
 
@@ -99,9 +99,9 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
 ### <a name="to-initiate-a-drag-and-drop-operation"></a>Initiieren eines Drag & Drop-Vorgangs
 
-1.  Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".
+1. Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".
 
-2.  Fügen Sie die folgenden <xref:System.Windows.UIElement.OnMouseMove%2A> überschreiben, um eine Klassenbehandlung für das Bereitstellen der <xref:System.Windows.UIElement.MouseMove> Ereignis.
+2. Fügen Sie die folgenden <xref:System.Windows.UIElement.OnMouseMove%2A> überschreiben, um eine Klassenbehandlung für das Bereitstellen der <xref:System.Windows.UIElement.MouseMove> Ereignis.
 
      [!code-csharp[DragDropWalkthrough#OnMouseMove](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#onmousemove)]
      [!code-vb[DragDropWalkthrough#OnMouseMove](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#onmousemove)]
@@ -114,19 +114,19 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 
     -   Ruft die statische <xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType> Methode, um den Drag & Drop-Vorgang einzuleiten. Sie übergeben die folgenden drei Parameter für die <xref:System.Windows.DragDrop.DoDragDrop%2A> Methode:
 
-        -   `dragSource`: Ein Verweis auf dieses Steuerelement.
+        -   `dragSource` – Ein Verweis auf dieses Steuerelement.
 
         -   `data` – Die <xref:System.Windows.DataObject> im vorherigen Code erstellte.
 
         -   `allowedEffects` – Die zulässigen Drag & Drop-Vorgänge, die <xref:System.Windows.DragDropEffects.Copy> oder <xref:System.Windows.DragDropEffects.Move>.
 
-3.  Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen.
+3. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen.
 
-4.  Klicken Sie auf eines der Kreis-Steuerelemente, und ziehen Sie es über die Bereiche, die den anderen Kreis und die <xref:System.Windows.Controls.TextBox>. Beim Ziehen über die <xref:System.Windows.Controls.TextBox>, ändert sich der Cursor um eine Verschiebung anzuzeigen.
+4. Klicken Sie auf eines der Kreis-Steuerelemente, und ziehen Sie es über die Bereiche, die den anderen Kreis und die <xref:System.Windows.Controls.TextBox>. Beim Ziehen über die <xref:System.Windows.Controls.TextBox>, ändert sich der Cursor um eine Verschiebung anzuzeigen.
 
-5.  Beim Ziehen eines Kreises über die <xref:System.Windows.Controls.TextBox>, drücken Sie die **STRG** Schlüssel. Beachten Sie, wie sich der Cursor ändert, um einen Kopiervorgang anzuzeigen.
+5. Beim Ziehen eines Kreises über die <xref:System.Windows.Controls.TextBox>, drücken Sie die **STRG** Schlüssel. Beachten Sie, wie sich der Cursor ändert, um einen Kopiervorgang anzuzeigen.
 
-6.  Drag & drop ein Kreises auf die <xref:System.Windows.Controls.TextBox>. Die Zeichenfolgendarstellung der Füllfarbe des Kreises wird angefügt, um die <xref:System.Windows.Controls.TextBox>.
+6. Drag & drop ein Kreises auf die <xref:System.Windows.Controls.TextBox>. Die Zeichenfolgendarstellung der Füllfarbe des Kreises wird angefügt, um die <xref:System.Windows.Controls.TextBox>.
 
      ![Zeichenfolgendarstellung der Füllfarbe des Kreises](./media/dragdrop-colorstring.png "DragDrop_ColorString")
 
@@ -134,9 +134,9 @@ Standardmäßig ändert sich der Cursor während eines Drag & Drop-Vorgangs, um 
 
 ## <a name="give-feedback-to-the-user"></a>Geben Sie Feedback an den Benutzer
 
-1.  Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".
+1. Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".
 
-2.  Fügen Sie die folgenden <xref:System.Windows.UIElement.OnGiveFeedback%2A> überschreiben, um eine Klassenbehandlung für das Bereitstellen der <xref:System.Windows.UIElement.GiveFeedback> Ereignis.
+2. Fügen Sie die folgenden <xref:System.Windows.UIElement.OnGiveFeedback%2A> überschreiben, um eine Klassenbehandlung für das Bereitstellen der <xref:System.Windows.UIElement.GiveFeedback> Ereignis.
 
      [!code-csharp[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ongivefeedback)]
      [!code-vb[DragDropWalkthrough#OnGiveFeedback](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ongivefeedback)]
@@ -147,24 +147,24 @@ Standardmäßig ändert sich der Cursor während eines Drag & Drop-Vorgangs, um 
 
     -   Legt einen benutzerdefinierten Cursor auf der Grundlage der <xref:System.Windows.GiveFeedbackEventArgs.Effects%2A> Wert. Der Cursor soll visuelles Feedback an den Benutzer geben, welche Auswirkungen das Ablegen der Daten hat.
 
-3.  Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen.
+3. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen.
 
-4.  Ziehen Sie eines der Kreis über die Bereiche, die den anderen Kreis Steuerelemente und die <xref:System.Windows.Controls.TextBox>. Beachten Sie, dass die Cursor jetzt die benutzerdefinierten Cursor, die Sie angegeben haben sind, in der <xref:System.Windows.UIElement.OnGiveFeedback%2A> außer Kraft setzen.
+4. Ziehen Sie eines der Kreis über die Bereiche, die den anderen Kreis Steuerelemente und die <xref:System.Windows.Controls.TextBox>. Beachten Sie, dass die Cursor jetzt die benutzerdefinierten Cursor, die Sie angegeben haben sind, in der <xref:System.Windows.UIElement.OnGiveFeedback%2A> außer Kraft setzen.
 
      ![Drag & Drop mit benutzerdefiniertem Cursor](./media/dragdrop-customcursor.png "DragDrop_CustomCursor")
 
-5.  Wählen Sie den Text `green` aus der <xref:System.Windows.Controls.TextBox>.
+5. Wählen Sie den Text `green` aus der <xref:System.Windows.Controls.TextBox>.
 
-6.  Ziehen Sie den Text `green` auf ein Kreis-Steuerelement. Beachten Sie, dass die standardmäßigen Cursor angezeigt werden, um die Auswirkungen des Drag & Drop-Vorgangs anzugeben. Der Feedbackcursor wird immer durch die Quelle des Ziehvorgangs festgelegt.
+6. Ziehen Sie den Text `green` auf ein Kreis-Steuerelement. Beachten Sie, dass die standardmäßigen Cursor angezeigt werden, um die Auswirkungen des Drag & Drop-Vorgangs anzugeben. Der Feedbackcursor wird immer durch die Quelle des Ziehvorgangs festgelegt.
 
 ## <a name="implement-drop-target-events-in-the-user-control"></a>Implementieren der Ereignisse des Ablageziels im Benutzersteuerelement
  In diesem Abschnitt geben Sie an, dass das Benutzersteuerelement ein Ablageziel ist, überschreiben die Methoden, die das Benutzersteuerelement befähigen, ein Ablageziel sein und verarbeiten die Daten, die darauf abgelegt werden.
 
 ### <a name="to-enable-the-user-control-to-be-a-drop-target"></a>So konfigurieren Sie das Benutzersteuerelement als Ziel eines Ablegevorgangs
 
-1.  Öffnen Sie Circle.xaml.
+1. Öffnen Sie Circle.xaml.
 
-2.  Im öffnenden <xref:System.Windows.Controls.UserControl> markieren, fügen Sie der <xref:System.Windows.UIElement.AllowDrop%2A> Eigenschaft, und legen Sie ihn auf `true`.
+2. Im öffnenden <xref:System.Windows.Controls.UserControl> markieren, fügen Sie der <xref:System.Windows.UIElement.AllowDrop%2A> Eigenschaft, und legen Sie ihn auf `true`.
 
      [!code-xaml[DragDropWalkthrough#UCTagXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml#uctagxaml)]
 
@@ -172,9 +172,9 @@ Die <xref:System.Windows.UIElement.OnDrop%2A> Methode wird aufgerufen, wenn die 
 
 ### <a name="to-process-the-dropped-data"></a>So verarbeiten Sie die abgelegten Daten
 
-1.  Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".
+1. Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".
 
-2.  Fügen Sie die folgenden <xref:System.Windows.UIElement.OnDrop%2A> überschreiben, um eine Klassenbehandlung für das Bereitstellen der <xref:System.Windows.UIElement.Drop> Ereignis.
+2. Fügen Sie die folgenden <xref:System.Windows.UIElement.OnDrop%2A> überschreiben, um eine Klassenbehandlung für das Bereitstellen der <xref:System.Windows.UIElement.Drop> Ereignis.
 
      [!code-csharp[DragDropWalkthrough#OnDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondrop)]
      [!code-vb[DragDropWalkthrough#OnDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondrop)]
@@ -191,19 +191,19 @@ Die <xref:System.Windows.UIElement.OnDrop%2A> Methode wird aufgerufen, wenn die 
 
     -   Markiert die <xref:System.Windows.UIElement.Drop> Ereignis als behandelt. Sie sollten das Drop-Ereignis als behandelt kennzeichnen, damit andere Elemente, die dieses Ereignis empfangen, wissen, dass das Kreis-Steuerelement es behandelt hat.
 
-3.  Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen.
+3. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen.
 
-4.  Wählen Sie den Text `green` in die <xref:System.Windows.Controls.TextBox>.
+4. Wählen Sie den Text `green` in die <xref:System.Windows.Controls.TextBox>.
 
-5.  Ziehen Sie den Text auf ein Kreis-Steuerelement, und legen Sie ihn ab. Der Kreis ändert sich von Blau in Grün.
+5. Ziehen Sie den Text auf ein Kreis-Steuerelement, und legen Sie ihn ab. Der Kreis ändert sich von Blau in Grün.
 
      ![Konvertieren einer Zeichenfolge in einen Pinsel](./media/dragdrop-dropgreentext.png "DragDrop_DropGreenText")
 
-6.  Geben Sie den Text `green` in die <xref:System.Windows.Controls.TextBox>.
+6. Geben Sie den Text `green` in die <xref:System.Windows.Controls.TextBox>.
 
-7.  Wählen Sie den Text `gre` in die <xref:System.Windows.Controls.TextBox>.
+7. Wählen Sie den Text `gre` in die <xref:System.Windows.Controls.TextBox>.
 
-8.  Ziehen Sie ihn auf ein Kreis-Steuerelement, und legen Sie ihn ab. Beachten Sie, dass sich zwar der Cursor ändert, um anzuzeigen, dass der Ablegevorgang zulässig ist, die Farbe des Kreises sich aber nicht ändert, da `gre` keine gültige Farbe ist.
+8. Ziehen Sie ihn auf ein Kreis-Steuerelement, und legen Sie ihn ab. Beachten Sie, dass sich zwar der Cursor ändert, um anzuzeigen, dass der Ablegevorgang zulässig ist, die Farbe des Kreises sich aber nicht ändert, da `gre` keine gültige Farbe ist.
 
 9. Ziehen Sie vom grünen Kreis-Steuerelement auf das blaue Kreis-Steuerelement. Der Kreis ändert sich von Blau in Grün. Beachten Sie, die angezeigte Cursor abhängig, ob davon die <xref:System.Windows.Controls.TextBox> oder der Kreis die Quelle des Ziehvorgangs.
 
@@ -213,9 +213,9 @@ Wenn Daten über das Kreis-Steuerelement gezogen werden, sollte das Steuerelemen
 
 ### <a name="to-verify-that-the-data-drop-is-allowed"></a>So stellen sie sicher, dass die Datenablage zulässig ist
 
-1.  Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".
+1. Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".
 
-2.  Fügen Sie die folgenden <xref:System.Windows.UIElement.OnDragOver%2A> überschreiben, um eine Klassenbehandlung für das Bereitstellen der <xref:System.Windows.UIElement.DragOver> Ereignis.
+2. Fügen Sie die folgenden <xref:System.Windows.UIElement.OnDragOver%2A> überschreiben, um eine Klassenbehandlung für das Bereitstellen der <xref:System.Windows.UIElement.DragOver> Ereignis.
 
      [!code-csharp[DragDropWalkthrough#OnDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragover)]
      [!code-vb[DragDropWalkthrough#OnDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragover)]
@@ -228,24 +228,24 @@ Wenn Daten über das Kreis-Steuerelement gezogen werden, sollte das Steuerelemen
 
     -   Legt fest, wenn das Benutzersteuerelement die Daten verarbeiten kann, die <xref:System.Windows.DragEventArgs.Effects%2A> Eigenschaft <xref:System.Windows.DragDropEffects.Copy> oder <xref:System.Windows.DragDropEffects.Move>.
 
-3.  Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen.
+3. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen.
 
-4.  Wählen Sie den Text `gre` in die <xref:System.Windows.Controls.TextBox>.
+4. Wählen Sie den Text `gre` in die <xref:System.Windows.Controls.TextBox>.
 
-5.  Ziehen Sie den Text auf ein Kreis-Steuerelement. Beachten Sie, dass sich der Cursor jetzt so ändert, dass er anzeigt, dass der Ablegevorgang nicht zulässig ist, da `gre` keine gültige Farbe ist.
+5. Ziehen Sie den Text auf ein Kreis-Steuerelement. Beachten Sie, dass sich der Cursor jetzt so ändert, dass er anzeigt, dass der Ablegevorgang nicht zulässig ist, da `gre` keine gültige Farbe ist.
 
  Sie können die Benutzerfunktionalität weiter verbessern, indem Sie eine Vorschau des Drop-Vorgangs anwenden. Für das Kreis-Steuerelement, überschreiben Sie die <xref:System.Windows.UIElement.OnDragEnter%2A> und <xref:System.Windows.UIElement.OnDragLeave%2A> Methoden. Wenn die Daten gezogen werden, über dem Steuerelement, das die aktuelle Hintergrundfarbe <xref:System.Windows.Shapes.Shape.Fill%2A> wird in einer Platzhaltervariablen gespeichert. Klicken Sie dann die Zeichenfolge in einen Pinsel konvertiert und angewendet werden, um die <xref:System.Windows.Shapes.Ellipse> des Kreises bereitstellt Benutzeroberfläche. Wenn die Daten aus den Kreis gezogen werden, ohne abgelegt zu werden, die ursprüngliche <xref:System.Windows.Shapes.Shape.Fill%2A> Wert erneut auf den Kreis angewendet.
 
 ### <a name="to-preview-the-effects-of-the-drag-and-drop-operation"></a>So können Sie die Auswirkungen eines Drag & Drop-Vorgangs in der Vorschau anzeigen
 
-1.  Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".
+1. Öffnen Sie "Circle.Xaml.cs" oder "Circle.Xaml.vb".
 
-2.  Deklarieren Sie in der Kreis-Klasse eine Private <xref:System.Windows.Media.Brush> Variable mit dem Namen `_previousFill` und initialisieren Sie es mit `null`.
+2. Deklarieren Sie in der Kreis-Klasse eine Private <xref:System.Windows.Media.Brush> Variable mit dem Namen `_previousFill` und initialisieren Sie es mit `null`.
 
      [!code-csharp[DragDropWalkthrough#Brush](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#brush)]
      [!code-vb[DragDropWalkthrough#Brush](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#brush)]
 
-3.  Fügen Sie die folgenden <xref:System.Windows.UIElement.OnDragEnter%2A> überschreiben, um eine Klassenbehandlung für das Bereitstellen der <xref:System.Windows.UIElement.DragEnter> Ereignis.
+3. Fügen Sie die folgenden <xref:System.Windows.UIElement.OnDragEnter%2A> überschreiben, um eine Klassenbehandlung für das Bereitstellen der <xref:System.Windows.UIElement.DragEnter> Ereignis.
 
      [!code-csharp[DragDropWalkthrough#OnDragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragenter)]
      [!code-vb[DragDropWalkthrough#OnDragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragenter)]
@@ -258,7 +258,7 @@ Wenn Daten über das Kreis-Steuerelement gezogen werden, sollte das Steuerelemen
 
     -   Wenn die Daten auf eine gültige konvertiert werden <xref:System.Windows.Media.Brush>, wendet sie auf die <xref:System.Windows.Shapes.Shape.Fill%2A> von der <xref:System.Windows.Shapes.Ellipse>.
 
-4.  Fügen Sie die folgenden <xref:System.Windows.UIElement.OnDragLeave%2A> überschreiben, um eine Klassenbehandlung für das Bereitstellen der <xref:System.Windows.UIElement.DragLeave> Ereignis.
+4. Fügen Sie die folgenden <xref:System.Windows.UIElement.OnDragLeave%2A> überschreiben, um eine Klassenbehandlung für das Bereitstellen der <xref:System.Windows.UIElement.DragLeave> Ereignis.
 
      [!code-csharp[DragDropWalkthrough#OnDragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/Circle.xaml.cs#ondragleave)]
      [!code-vb[DragDropWalkthrough#OnDragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/Circle.xaml.vb#ondragleave)]
@@ -267,29 +267,29 @@ Wenn Daten über das Kreis-Steuerelement gezogen werden, sollte das Steuerelemen
 
     -   Gilt die <xref:System.Windows.Media.Brush> gespeichert, der `_previousFill` Variable die <xref:System.Windows.Shapes.Shape.Fill%2A> von der <xref:System.Windows.Shapes.Ellipse> , der die Benutzeroberfläche des Kreis-Steuerelements bereitstellt.
 
-5.  Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen.
+5. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen.
 
-6.  Wählen Sie den Text `green` in die <xref:System.Windows.Controls.TextBox>.
+6. Wählen Sie den Text `green` in die <xref:System.Windows.Controls.TextBox>.
 
-7.  Ziehen Sie den Text über ein Kreis-Steuerelement ohne ihn abzulegen. Der Kreis ändert sich von Blau in Grün.
+7. Ziehen Sie den Text über ein Kreis-Steuerelement ohne ihn abzulegen. Der Kreis ändert sich von Blau in Grün.
 
      ![Vorschau der Auswirkungen eines Drag & Drop-Vorgangs](./media/dragdrop-previeweffects.png "DragDrop_PreviewEffects")
 
-8.  Ziehen Sie den Text vom Kreis-Steuerelement weg. Der Kreis ändert sich von Grün zurück in Blau.
+8. Ziehen Sie den Text vom Kreis-Steuerelement weg. Der Kreis ändert sich von Grün zurück in Blau.
 
 ## <a name="enable-a-panel-to-receive-dropped-data"></a>Konfigurieren eines Panels, abgelegte Daten zu empfangen
 
 In diesem Abschnitt ermöglichen Sie die Bereiche, die als Ziele für gezogene Kreisdaten zu fungieren die Kreis-Steuerelemente hosten. Implementieren Sie Code, der Sie einen Kreis von einem Panel auf einen anderen verschieben oder um eine Kopie eines Kreis-Steuerelements zu machen, indem Sie sie gedrückt halten, ermöglicht die **STRG** gedrückt, während der Drag & Drop eines Kreises.
 
-1.  Öffnen Sie „MainWindow.xaml“.
+1. Öffnen Sie „MainWindow.xaml“.
 
-2.  Siehe das folgende XAML, in den einzelnen der <xref:System.Windows.Controls.StackPanel> -Steuerelemente, Hinzufügen von Ereignishandlern für die <xref:System.Windows.UIElement.DragOver> und <xref:System.Windows.UIElement.Drop> Ereignisse. Name der <xref:System.Windows.UIElement.DragOver> -Ereignishandler `panel_DragOver`, und nennen Sie die <xref:System.Windows.UIElement.Drop> -Ereignishandler `panel_Drop`.
+2. Siehe das folgende XAML, in den einzelnen der <xref:System.Windows.Controls.StackPanel> -Steuerelemente, Hinzufügen von Ereignishandlern für die <xref:System.Windows.UIElement.DragOver> und <xref:System.Windows.UIElement.Drop> Ereignisse. Name der <xref:System.Windows.UIElement.DragOver> -Ereignishandler `panel_DragOver`, und nennen Sie die <xref:System.Windows.UIElement.Drop> -Ereignishandler `panel_Drop`.
 
      [!code-xaml[DragDropWalkthrough#PanelsXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml#panelsxaml)]
 
-3.  Öffnen Sie „MainWindow.xaml.cs“ bzw. „MainWindow.xaml.vb“.
+3. Öffnen Sie „MainWindow.xaml.cs“ bzw. „MainWindow.xaml.vb“.
 
-4.  Fügen Sie den folgenden Code für die <xref:System.Windows.UIElement.DragOver> -Ereignishandler.
+4. Fügen Sie den folgenden Code für die <xref:System.Windows.UIElement.DragOver> -Ereignishandler.
 
      [!code-csharp[DragDropWalkthrough#PanelDragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldragover)]
      [!code-vb[DragDropWalkthrough#PanelDragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldragover)]
@@ -302,7 +302,7 @@ In diesem Abschnitt ermöglichen Sie die Bereiche, die als Ziele für gezogene K
 
     -   Wenn die **STRG** -Taste gedrückt wird, legt die <xref:System.Windows.DragEventArgs.Effects%2A> Eigenschaft <xref:System.Windows.DragDropEffects.Copy>. Andernfalls legen die <xref:System.Windows.DragEventArgs.Effects%2A> Eigenschaft <xref:System.Windows.DragDropEffects.Move>.
 
-5.  Fügen Sie den folgenden Code für die <xref:System.Windows.UIElement.Drop> -Ereignishandler.
+5. Fügen Sie den folgenden Code für die <xref:System.Windows.UIElement.Drop> -Ereignishandler.
 
      [!code-csharp[DragDropWalkthrough#PanelDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/DragDropWalkthrough/CS/MainWindow.xaml.cs#paneldrop)]
      [!code-vb[DragDropWalkthrough#PanelDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DragDropWalkthrough/VB/MainWindow.xaml.vb#paneldrop)]
@@ -319,11 +319,11 @@ In diesem Abschnitt ermöglichen Sie die Bereiche, die als Ziele für gezogene K
 
     -   Legt die <xref:System.Windows.DragEventArgs.Effects%2A> Eigenschaft benachrichtigt die <xref:System.Windows.DragDrop.DoDragDrop%2A> Methode gibt an, ob ein Verschiebe- oder Kopiervorgang-Vorgang ausgeführt wurde.
 
-6.  Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen.
+6. Drücken Sie **F5**, um die Anwendung zu erstellen und auszuführen.
 
-7.  Wählen Sie den Text `green` aus der <xref:System.Windows.Controls.TextBox>.
+7. Wählen Sie den Text `green` aus der <xref:System.Windows.Controls.TextBox>.
 
-8.  Ziehen Sie den Text auf ein Kreis-Steuerelement, und legen Sie ihn ab.
+8. Ziehen Sie den Text auf ein Kreis-Steuerelement, und legen Sie ihn ab.
 
 9. Ziehen Sie ein Kreis-Steuerelement vom linken Panel in das rechte Panel und legen Sie es ab. Der Kreis wird entfernt, von der <xref:System.Windows.Controls.Panel.Children%2A> Auflistung im linken Bereich und der Auflistung untergeordneter Elemente des rechten Panels hinzugefügt.
 

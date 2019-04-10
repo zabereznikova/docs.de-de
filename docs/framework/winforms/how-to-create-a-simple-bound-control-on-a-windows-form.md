@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 85b19c43441650789eed6b92a771d2f2433c6a10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fc59e6d5e71bfc69dea0bfc5098a1fa14c97d4b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094071"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322172"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>Vorgehensweise: Erstellen eines einfach gebundenen Steuerelements in einer Windows Forms-Instanz
 Mit *einfache Bindung*, Sie können ein einzelnes Datenelement, z. B. ein Spaltenwert aus einem Dataset-Tabelle in einem Steuerelement anzeigen. Sie können einfach eine Eigenschaft eines Steuerelements an einen Datenwert binden.  
@@ -20,25 +20,25 @@ Mit *einfache Bindung*, Sie können ein einzelnes Datenelement, z. B. ein Spalte
   
 ### <a name="to-simple-bind-a-control"></a>An einfach ein Steuerelement gebunden werden soll  
   
-1.  Stellen Sie die Verbindung zu einer Datenquelle her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer Datenquelle](../data/adonet/connecting-to-a-data-source.md).  
+1. Stellen Sie die Verbindung zu einer Datenquelle her. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit einer Datenquelle](../data/adonet/connecting-to-a-data-source.md).  
   
-2.  Klicken Sie in der Form, wählen Sie das Steuerelement und Anzeigen der **Eigenschaften** Fenster.  
+2. Klicken Sie in der Form, wählen Sie das Steuerelement und Anzeigen der **Eigenschaften** Fenster.  
   
-3.  Erweitern Sie die **(DataBindings)** Eigenschaft.  
+3. Erweitern Sie die **(DataBindings)** Eigenschaft.  
   
      Die am häufigsten gebundenen Eigenschaften werden angezeigt, darunter die **(DataBindings)** Eigenschaft. In den meisten Steuerelementen, z. B. die **Text** -Eigenschaft wird am häufigsten gebunden.  
   
-4.  Die Eigenschaft gewünscht Bindung gehört nicht zu den häufig gebundenen Eigenschaften, klicken Sie auf die **Auslassungspunkte** Schaltfläche (![VisualStudioEllipsesButton-bildschirmabbildung](./media/vbellipsesbutton.png "VbEllipsesButton") ) in der **(Erweitert)** anzuzeigen die **Formatierung und erweiterte Bindung** Dialogfeld mit einer vollständigen Liste der Eigenschaften, die für dieses Steuerelement.  
+4. Die Eigenschaft gewünscht Bindung gehört nicht zu den häufig gebundenen Eigenschaften, klicken Sie auf die **Auslassungspunkte** Schaltfläche (![VisualStudioEllipsesButton-bildschirmabbildung](./media/vbellipsesbutton.png "VbEllipsesButton") ) in der **(Erweitert)** anzuzeigen die **Formatierung und erweiterte Bindung** Dialogfeld mit einer vollständigen Liste der Eigenschaften, die für dieses Steuerelement.  
   
-5.  Wählen Sie die Eigenschaft, die Sie binden möchten und klicken Sie auf den Dropdownpfeil unter **Bindung**.  
+5. Wählen Sie die Eigenschaft, die Sie binden möchten und klicken Sie auf den Dropdownpfeil unter **Bindung**.  
   
      Nun wird eine Liste verfügbarer Datenquellen angezeigt.  
   
-6.  Erweitern Sie die Datenquelle, die Sie für die Bindung verwenden möchten, bis Sie das gewünschte einzelne Datenelement finden. Wenn die Bindung beispielsweise an einen Spaltenwert in einer Dataset-Tabelle erfolgen soll, erweitern Sie den Namen des Datasets, und erweitern sie dann den Tabellennamen, um die Spaltennamen anzuzeigen.  
+6. Erweitern Sie die Datenquelle, die Sie für die Bindung verwenden möchten, bis Sie das gewünschte einzelne Datenelement finden. Wenn die Bindung beispielsweise an einen Spaltenwert in einer Dataset-Tabelle erfolgen soll, erweitern Sie den Namen des Datasets, und erweitern sie dann den Tabellennamen, um die Spaltennamen anzuzeigen.  
   
-7.  Klicken Sie auf den Namen des Elements, das gebunden werden soll.  
+7. Klicken Sie auf den Namen des Elements, das gebunden werden soll.  
   
-8.  Wenn Sie, in bearbeitet haben der **Formatierung und erweiterte Bindung** im Dialogfeld klicken Sie auf **OK** zum Zurückgeben der **Eigenschaften** Fenster.  
+8. Wenn Sie, in bearbeitet haben der **Formatierung und erweiterte Bindung** im Dialogfeld klicken Sie auf **OK** zum Zurückgeben der **Eigenschaften** Fenster.  
   
 9. Wenn Sie zusätzliche Eigenschaften für das Steuerelement binden möchten, wiederholen Sie Schritte 3 bis 7.  
   

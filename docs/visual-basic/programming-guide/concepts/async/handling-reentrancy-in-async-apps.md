@@ -2,29 +2,29 @@
 title: Umgang mit Ablaufinvarianz in asynchronen Anwendungen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 151cdcb841a7a67ba0bf8f5560d3f6baf999c365
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374887"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324785"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Umgang mit Ablaufinvarianz in asynchronen Anwendungen (Visual Basic)
 Wenn Sie asynchronen Code in der App einschließen, sollten Sie erneutes Eintreten, also den erneuten Beginn eines asynchronen Vorgangs vor seinem Abschließen, berücksichtigen und möglicherweise verhindern. Wenn Sie Möglichkeiten für erneutes Eintreten nicht identifizieren und behandeln, kann dies zu unerwarteten Ergebnissen führen.  
   
- **Inhalt**  
+ **In diesem Thema**  
   
--   [Erkennen von Ablaufinvarianz](#BKMK_RecognizingReentrancy)  
+-   [Erkennen von Reentranz](#BKMK_RecognizingReentrancy)  
   
--   [Umgang mit Ablaufinvarianz](#BKMK_HandlingReentrancy)  
+-   [Arbeiten mit Reentranz](#BKMK_HandlingReentrancy)  
   
-    -   [Die Schaltfläche „Start“ deaktivieren](#BKMK_DisableTheStartButton)  
+    -   [Die Schaltfläche "Start" deaktivieren](#BKMK_DisableTheStartButton)  
   
     -   [Den Vorgang abbrechen und neu starten](#BKMK_CancelAndRestart)  
   
     -   [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](#BKMK_RunMultipleOperations)  
   
--   [Die Beispiel-App überprüfen und ausführen](#BKMD_SettingUpTheExample)  
+-   [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  Um das Beispiel ausführen zu können, muss Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf Ihrem Computer installiert sein.  
@@ -89,7 +89,7 @@ TOTAL bytes returned:  890591
 ## <a name="BKMK_HandlingReentrancy"></a> Umgang mit Ablaufinvarianz  
  Sie können das erneute Eintreten auf verschiedene Weise behandeln, je nachdem, was von der App ausgeführt werden soll. In diesem Thema werden die folgenden Beispiele zur Veranschaulichung verwendet:  
   
--   [Die Schaltfläche „Start“ deaktivieren](#BKMK_DisableTheStartButton)  
+-   [Die Schaltfläche "Start" deaktivieren](#BKMK_DisableTheStartButton)  
   
      Deaktivieren der Schaltfläche **Start**, während der Vorgang ausgeführt wird, sodass der Benutzer ihn nicht unterbrechen kann  
   
@@ -136,7 +136,7 @@ End Sub
   
  Um dieses Szenario festzulegen, nehmen Sie am grundlegenden Code aus [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample) folgende Änderungen vor. Sie können die fertige App auch unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Eintrittsinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen. Der Name dieses Projekts lautet "CancelAndRestart".  
   
-1.  Deklarieren Sie eine <xref:System.Threading.CancellationTokenSource>-Variable, `cts`, die im Bereich für alle Methoden liegt.  
+1. Deklarieren Sie eine <xref:System.Threading.CancellationTokenSource>-Variable, `cts`, die im Bereich für alle Methoden liegt.  
   
     ```vb  
     Class MainWindow // Or Class MainPage  
@@ -145,7 +145,7 @@ End Sub
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  Bestimmen Sie im Element `StartButton_Click`, ob ein Vorgang bereits ausgeführt wird. Wenn der Wert des `cts` ist `Nothing`, es ist noch kein Vorgang aktiv. Wenn der Wert nicht `Nothing`, der Vorgang, der bereits ausgeführt wird, wird abgebrochen.  
+2. Bestimmen Sie im Element `StartButton_Click`, ob ein Vorgang bereits ausgeführt wird. Wenn der Wert des `cts` ist `Nothing`, es ist noch kein Vorgang aktiv. Wenn der Wert nicht `Nothing`, der Vorgang, der bereits ausgeführt wird, wird abgebrochen.  
   
     ```vb  
     ' *** If a download process is already underway, cancel it.  
@@ -154,7 +154,7 @@ End Sub
     End If  
     ```  
   
-3.  Legen Sie `cts` auf einen anderen Wert fest, der den aktuellen Prozess darstellt.  
+3. Legen Sie `cts` auf einen anderen Wert fest, der den aktuellen Prozess darstellt.  
   
     ```vb  
     ' *** Now set cts to cancel the current process if the button is chosen again.  
@@ -162,7 +162,7 @@ End Sub
     cts = newCTS  
     ```  
   
-4.  Am Ende der `StartButton_Click`, der aktuelle Vorgang abgeschlossen ist, legen Sie daher den Wert der `cts` an `Nothing`.  
+4. Am Ende der `StartButton_Click`, der aktuelle Vorgang abgeschlossen ist, legen Sie daher den Wert der `cts` an `Nothing`.  
   
     ```vb  
     ' *** When the process completes, signal that another process can proceed.  
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>Die AccessTheWebAsync-Methode  
  In diesem Beispiel wird `AccessTheWebAsync` in zwei Methoden aufgeteilt. Mit der erste Methode, `AccessTheWebAsync`, werden alle Downloadtasks für eine Gruppe gestartet und `pendingWork` wird zum Steuern des Anzeigenprozesses festgelegt. Die Methode verwendet zum gleichzeitigen Starten aller Downloadtasks eine LINQ-Abfrage (Language-Integrated Query) sowie <xref:System.Linq.Enumerable.ToArray%2A>.  
   
- `AccessTheWebAsync` ruft dann `FinishOneGroupAsync` auf, um den Abschluss jedes einzelnen Downloads zu erwarten und die Länge anzuzeigen.  
+ `AccessTheWebAsync` Ruft dann `FinishOneGroupAsync` "await" den Abschluss jedes einzelnen Downloads und die Länge anzuzeigen.  
   
- `FinishOneGroupAsync` gibt einen Task zurück, der in `pendingWork` dem Element `AccessTheWebAsync` zugewiesen wird. Dieser Wert verhindert die Unterbrechung durch einen anderen Vorgang, bevor die Aufgabe abgeschlossen wurde.  
+ `FinishOneGroupAsync` Gibt eine Aufgabe, die zugewiesen ist `pendingWork` in `AccessTheWebAsync`. Dieser Wert verhindert die Unterbrechung durch einen anderen Vorgang, bevor die Aufgabe abgeschlossen wurde.  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  
@@ -535,42 +535,42 @@ End Function
   
 ### <a name="BKMK_DownloadingTheApp"></a> Herunterladen der App  
   
-1.  Sie können die komprimierte Datei unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Eintrittsinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen.  
+1. Sie können die komprimierte Datei unter [Async Samples: Reentrancy in .NET Desktop Apps (Asynchrone Beispiele: Eintrittsinvarianz in .NET-Desktop-Apps)](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) herunterladen.  
   
-2.  Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.  
+2. Dekomprimieren Sie die heruntergeladene Datei, und starten Sie dann Visual Studio.  
   
-3.  Klicken Sie in der Menüleiste auf **Datei**, dann auf **Öffnen**und **Projekt/Projektmappe**.  
+3. Klicken Sie in der Menüleiste auf **Datei**, dann auf **Öffnen**und **Projekt/Projektmappe**.  
   
-4.  Navigieren Sie zu dem Ordner mit dem dekomprimierten Beispielcode, und öffnen Sie die Projektmappendatei (SLN-Datei).  
+4. Navigieren Sie zu dem Ordner mit dem dekomprimierten Beispielcode, und öffnen Sie die Projektmappendatei (SLN-Datei).  
   
-5.  Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für das Projekt, das Sie ausführen möchten, und wählen Sie dann **Set as StartUpProject** (Als StartUpProject festlegen) aus.  
+5. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für das Projekt, das Sie ausführen möchten, und wählen Sie dann **Set as StartUpProject** (Als StartUpProject festlegen) aus.  
   
-6.  Drücken Sie zum Erstellen und Ausführen des Projekts die Tastenkombination "STRG+F5".  
+6. Drücken Sie zum Erstellen und Ausführen des Projekts die Tastenkombination "STRG+F5".  
   
 ### <a name="BKMK_BuildingTheApp"></a> Erstellen der App  
  Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstellen.  
   
 ##### <a name="to-build-a-wpf-app"></a>So erstellen Sie eine WPF-App  
   
-1.  Starten Sie Visual Studio.  
+1. Starten Sie Visual Studio.  
   
-2.  Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.  
+2. Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.  
   
      Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-3.  In der **installierte Vorlagen** Bereich, erweitern Sie **Visual Basic**, und erweitern Sie dann **Windows**.  
+3. In der **installierte Vorlagen** Bereich, erweitern Sie **Visual Basic**, und erweitern Sie dann **Windows**.  
   
-4.  Wählen Sie in der Liste der Projekttypen **WPF-Anwendung** aus.  
+4. Wählen Sie in der Liste der Projekttypen **WPF-Anwendung** aus.  
   
-5.  Weisen Sie dem Projekt den Namen `WebsiteDownloadWPF` zu, und wählen Sie dann die Schaltfläche **OK** aus.  
+5. Weisen Sie dem Projekt den Namen `WebsiteDownloadWPF` zu, und wählen Sie dann die Schaltfläche **OK** aus.  
   
      Das neue Projekt wird im **Projektmappen-Explorer** angezeigt.  
   
-6.  Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.  
+6. Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.  
   
      Wenn die Registerkarte nicht sichtbar ist, öffnen Sie das Kontextmenü für „MainWindow.xaml“ im **Projektmappen-Explorer**, und wählen Sie dann **Code anzeigen**aus.  
   
-7.  Ersetzen Sie den automatisch generierten Code in der **XAML**-Ansicht der Datei „MainWindow.xaml“ durch den folgenden Code.  
+7. Ersetzen Sie den automatisch generierten Code in der **XAML**-Ansicht der Datei „MainWindow.xaml“ durch den folgenden Code.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -590,7 +590,7 @@ End Function
   
      Ein einfaches Fenster, das ein Textfeld und eine Schaltfläche enthält, wird in der **Entwurfsansicht** der Datei „MainWindow.xaml“ angezeigt.  
   
-8.  Fügen Sie einen Verweis für <xref:System.Net.Http> hinzu.  
+8. Fügen Sie einen Verweis für <xref:System.Net.Http> hinzu.  
   
 9. In **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für "MainWindow.Xaml.vb", und wählen Sie dann **Ansichtscode**.  
   
@@ -679,4 +679,4 @@ End Function
 ## <a name="see-also"></a>Siehe auch
 
 - [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Asynchronous Programming with Async and Await (Visual Basic) (Asynchrone Programmierung mit Async und Await (Visual Basic))](../../../../visual-basic/programming-guide/concepts/async/index.md)

@@ -7,17 +7,15 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: dee1df1e122e47ea67618da5a1e4349e28d90447
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9a08fdeaa3517b1483af3f9958ad2db1c64648b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084166"
 ---
 # <a name="globalization-for-wpf"></a>Globalisierung für WPF
 In diesem Thema werden Probleme, die Sie beim Schreiben von bewusst sein sollten [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Anwendungen für den globalen Markt. Programmierelemente der Globalisierung werden in definiert [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] in `System.Globalization`.
-
-
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>XAML-Globalisierung
@@ -133,7 +131,7 @@ Das folgende Beispiel zeigt einen Verweis mit Hexadezimalzeichen. Beachten Sie, 
 
 <a name="intl_layout"></a>
 ### <a name="international-layout"></a>Internationales Layout
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet eine einfache Möglichkeit für die Unterstützung von horizontalen, bidirektionalen und vertikalen Layouts. In PresentationFramework der <xref:System.Windows.FrameworkElement.FlowDirection%2A> Eigenschaft kann verwendet werden, um das Layout zu definieren. Die Muster der Flussrichtung sind:
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet eine äußerst angenehme Methode zur Unterstützung von horizontalen, bidirektionalen und vertikalen Layouts. In PresentationFramework der <xref:System.Windows.FrameworkElement.FlowDirection%2A> Eigenschaft kann verwendet werden, um das Layout zu definieren. Die Muster der Flussrichtung sind:
 
 -   *LeftToRight*: Horizontales Layout für Latein, Ostasiatisch usw.
 
@@ -154,7 +152,7 @@ Das folgende Beispiel zeigt einen Verweis mit Hexadezimalzeichen. Beachten Sie, 
  Aus Sicht einer Ressource eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei, die eine sprachabhängige beschrieben [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] ist ein Ressourcenelement und daher muss sein fertiges verteilungsformat lokalisierbar, um internationale Sprachen zu unterstützen. Da [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Ereignisse nicht behandeln viele [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Anwendungen enthalten, Blöcke von Code für diese Aufgabe. Weitere Informationen finden Sie unter [XAML Overview (WPF)](xaml-overview-wpf.md). Code wird entfernt und in verschiedene Binärdateien kompiliert beim eine [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Datei in der BAML-Form von XAML mit Token versehen wird. Die BAML-Form von XAML-Dateien, Bilder und andere verwaltete Ressourcenobjekte werden in die Satellitenressourcenassembly, die in andere Sprachen lokalisiert werden kann, oder in die Hauptassembly eingebettet, wenn keine Lokalisierung erforderlich ist.
 
 > [!NOTE]
->  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Anwendungen unterstützen alle die [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)] [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Ressourcen einschließlich Zeichenfolgentabellen, Bilder und So weiter.
+>  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] -Anwendungen unterstützen alle die [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)][!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Ressourcen einschließlich Zeichenfolgentabellen, Bilder und So weiter.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Erstellen von lokalisierbaren Anwendungen
@@ -181,4 +179,5 @@ Das folgende Beispiel zeigt einen Verweis mit Hexadezimalzeichen. Beachten Sie, 
 ```
 
 ## <a name="see-also"></a>Siehe auch
+
 - [Übersicht über WPF-Globalisierung und -Lokalisierung](wpf-globalization-and-localization-overview.md)

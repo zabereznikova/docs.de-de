@@ -2,12 +2,12 @@
 title: Datenbankzugriffsaktivitäten
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066089"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322601"
 ---
 # <a name="database-access-activities"></a>Datenbankzugriffsaktivitäten
 Mit Datenbankzugriffsaktivitäten können Sie auf eine Datenbank innerhalb eines Workflows zugreifen. Diese Aktivitäten können Datenbanken abrufen und ändern Sie Informationen sowie über [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) Zugriff auf die Datenbank.  
@@ -242,7 +242,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |CommandType|Der auszuführende <xref:System.Data.Common.DbCommand>-Typ.|
 |Sql|Der auszuführende SQL-Befehl.|
 |Parameter|Auflistung der Parameter der SQL-Abfrage.|
-|Ergebnis|<xref:System.Data.DataSet>, das nach Ausführung der Abfrage zurückgegeben wird.|
+|Ergebnis|<xref:System.Data.DataSet> abgerufen wird, nachdem die Abfrage ausgeführt wird.|
 
 ## <a name="configuring-connection-information"></a>Konfigurieren von Verbindungsinformationen
  Für alle Datenbankaktivitäten gelten die gleichen Konfigurationsparameter. Für die Konfiguration gibt es zwei Möglichkeiten:
@@ -299,26 +299,26 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 ##### <a name="to-run-setupcmd"></a>So führen Sie "Setup.cmd" aus
 
-1.  Öffnen Sie eine Eingabeaufforderung.
+1. Öffnen Sie eine Eingabeaufforderung.
 
-2.  Navigieren Sie zum Beispielordner "DbActivities".
+2. Navigieren Sie zum Beispielordner "DbActivities".
 
-3.  Geben Sie "setup.cmd" aus, und drücken Sie die EINGABETASTE.
+3. Geben Sie "setup.cmd" aus, und drücken Sie die EINGABETASTE.
 
     > [!NOTE]
     >  Setup.cmd versucht, das Beispiel auf der SqlExpress-Instanz auf Ihrem lokalen Computer zu installieren. Wenn Sie es auf einer anderen SQL Server-Instanz installieren möchten, aktualisieren Sie "Setup.cmd" mit dem neuen Instanznamen.
 
 ##### <a name="to-uninstall-the-sample-database"></a>So deinstallieren Sie die Beispieldatenbank
 
-1.  Führen Sie "Cleanup.cmd" aus dem Beispielordner über eine Eingabeaufforderung aus.
+1. Führen Sie "Cleanup.cmd" aus dem Beispielordner über eine Eingabeaufforderung aus.
 
 ##### <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus
 
-1.  Öffnen Sie die Projektmappe in Visual Studio 2010
+1. Öffnen Sie die Projektmappe in Visual Studio 2010
 
-2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu kompilieren.
+2. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu kompilieren.
 
-3.  Um das Beispiel ohne Debugging auszuführen, drücken Sie STRG+F5.
+3. Um das Beispiel ohne Debugging auszuführen, drücken Sie STRG+F5.
 
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

@@ -2,23 +2,23 @@
 title: Bereichsauswahl und Sichtbarkeit der Aktivitätsdefinition
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 27c43323a176c841f3d90cb9c52f25599bc0686d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723841"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325214"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>Bereichsauswahl und Sichtbarkeit der Aktivitätsdefinition
 Wie die Bereichsauswahl und Sichtbarkeit eines Objekts beschreibt die Bereichsauswahl und Sichtbarkeit der Aktivitätsdefinition die Fähigkeit anderer Objekte oder Aktivitäten, auf Member der Aktivität zuzugreifen. Die Aktivitätsdefinition erfolgt durch folgende Implementierungen:  
   
-1.  Bestimmen der Member (<xref:System.Activities.Argument>-, <xref:System.Activities.Variable>- und <xref:System.Activities.ActivityDelegate>-Objekte und untergeordnete Aktivitäten), die den Benutzern von einer Aktivität zur Verfügung gestellt werden.  
+1. Bestimmen der Member (<xref:System.Activities.Argument>-, <xref:System.Activities.Variable>- und <xref:System.Activities.ActivityDelegate>-Objekte und untergeordnete Aktivitäten), die den Benutzern von einer Aktivität zur Verfügung gestellt werden.  
   
-2.  Implementieren der Ausführungslogik der Aktivität  
+2. Implementieren der Ausführungslogik der Aktivität  
   
  Die Implementierung umfasst möglicherweise einige Member, die nicht für Consumer der Aktivität bereitgestellt werden, sondern Teil der internen Implementierung sind.  Analog zur Typdefinition ermöglicht das Aktivitätsmodell einem Autor das Qualifizieren der Sichtbarkeit eines Aktivitätsmembers im Hinblick auf die Definition der definierten Aktivität.  Die Sichtbarkeit wirkt sich auf Einzelheiten der Memberverwendung aus, etwa auf Datenbereiche.  
   
-## <a name="scope"></a>Umfang  
+## <a name="scope"></a>Bereich  
  Neben dem Datenbereich kann durch die Sichtbarkeit des Aktivitätsmodells auch der Zugriff auf weitere Aspekte der Aktivität eingeschränkt werden, z. B. Validierung, Debugging, Überwachung oder Nachverfolgung. Ausführungseigenschaften schränken über die Sichtbarkeit und Bereichsauswahl die Ausführungsmerkmale für einen bestimmten Definitionsbereich ein. Sekundäre Stämme schränken über die Sichtbarkeit und Bereichsauswahl den von einer <xref:System.Activities.Statements.CompensableActivity> erfassten Zustand auf den Definitionsbereich ein, in dem kompensierbare Aktivitäten verwendet werden.  
   
 ## <a name="definition-and-usage"></a>Definition und Verwendung  
@@ -27,9 +27,9 @@ Wie die Bereichsauswahl und Sichtbarkeit eines Objekts beschreibt die Bereichsau
 ### <a name="activity-members"></a>Aktivitätsmember  
  Das Aktivitätsmodell definiert die Argumente, Variablen, Delegaten und untergeordneten Aktivitäten, die von der Aktivität für Consumer verfügbar gemacht werden. Diese Member können jeweils als `public` oder `private` deklariert werden. Öffentliche Member werden vom Consumer der Aktivität konfiguriert, wohingegen `private`-Member eine Implementierung verwenden, die vom Autor der Aktivität festgelegt wurde. Die Sichtbarkeitsregeln für Datenbereiche lauten wie folgt:  
   
-1.  Öffentliche Member und die öffentlichen Member von öffentlichen untergeordneten Aktivitäten können auf öffentliche Variablen verweisen.  
+1. Öffentliche Member und die öffentlichen Member von öffentlichen untergeordneten Aktivitäten können auf öffentliche Variablen verweisen.  
   
-2.  Private Member und die öffentlichen Member von öffentlichen untergeordneten Aktivitäten können auf Argumente und private Variablen verweisen.  
+2. Private Member und die öffentlichen Member von öffentlichen untergeordneten Aktivitäten können auf Argumente und private Variablen verweisen.  
   
  Member, die vom Consumer einer Aktivität festgelegt werden können, sollten niemals privat sein.  
   

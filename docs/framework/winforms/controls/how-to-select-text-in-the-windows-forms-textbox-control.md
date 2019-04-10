@@ -10,27 +10,27 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: f96ac69f16eefb5bf4a0625ff83e207c289a105b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3bb1245cd47084935d632ff345a32058db6074e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111435"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321710"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>Vorgehensweise: Programmgesteuertes Auswählen von Text im TextBox-Steuerelement in Windows Forms
 Sie können Text programmgesteuert in das Windows Forms auswählen <xref:System.Windows.Forms.TextBox> Steuerelement. Wenn Sie eine Funktion, die Text nach einer bestimmten Zeichenfolge sucht erstellen, können Sie beispielsweise den Text, den Reader, der die gefundene Zeichenfolge Position visuell Warnung auswählen.  
   
 ### <a name="to-select-text-programmatically"></a>Text programmgesteuert ausgewählt  
   
-1.  Legen Sie die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Eigenschaft an den Anfang des Texts, die Sie auswählen möchten.  
+1. Legen Sie die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Eigenschaft an den Anfang des Texts, die Sie auswählen möchten.  
   
      Die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> Eigenschaft ist eine Zahl, die die Einfügemarke innerhalb der Zeichenfolge des Texts angibt, wobei 0 die äußerste linke Position. Wenn die <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> -Eigenschaftensatz auf einen Wert gleich oder größer als die Anzahl der Zeichen in das Textfeld, das die Einfügemarke befindet sich hinter dem letzten Zeichen.  
   
-2.  Legen Sie die <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Eigenschaft, um die Länge des Texts, die Sie auswählen möchten.  
+2. Legen Sie die <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Eigenschaft, um die Länge des Texts, die Sie auswählen möchten.  
   
      Die <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> Eigenschaft ist ein numerischer Wert, der die Breite der Einfügemarke festlegt. Festlegen der <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A> auf eine Zahl größer als 0 bewirkt, diese Anzahl von Zeichen dass, die ausgewählt werden, beginnend mit der aktuellen Einfügemarke.  
   
-3.  (Optional) Zugriff auf den markierten Text durch die <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> Eigenschaft.  
+3. (Optional) Zugriff auf den markierten Text durch die <xref:System.Windows.Forms.TextBoxBase.SelectedText%2A> Eigenschaft.  
   
      Der Code unten wählt den Inhalt mit einem Feld beim des Steuerelements <xref:System.Windows.Forms.Control.Enter> Ereignis auftritt. In diesem Beispiel wird überprüft, ob das Textfeld einen Wert für die <xref:System.Windows.Forms.TextBox.Text%2A> -Eigenschaft, die nicht `null` oder eine leere Zeichenfolge. Wenn das Textfeld den Fokus erhält, ist der aktuelle Text in das Textfeld ausgewählt. Die `TextBox1_Enter` Ereignishandler muss gebunden sein, auf das Steuerelement; Weitere Informationen, wie unter [Vorgehensweise: Erstellen von Ereignishandlern für Windows Forms zur Laufzeit](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   

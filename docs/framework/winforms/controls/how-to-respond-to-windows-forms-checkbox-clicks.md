@@ -12,19 +12,19 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: 77f93dae2a91f282c6746c3fec3fb5f567cae2e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce616f45ceaa3db117c6981d2987ac09bba7b3fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211984"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319897"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>Vorgehensweise: Reagieren auf das Klicken auf Kontrollkästchen in Windows Forms
 Jedes Mal, wenn ein Benutzer klickt ein Windows Forms <xref:System.Windows.Forms.CheckBox> -Steuerelement, das <xref:System.Windows.Forms.Control.Click> Ereignis auftritt. Sie können Ihre Anwendung zum Ausführen einer Aktion, die je nach Zustand des Kontrollkästchens programmieren.  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>Um auf das Klicken auf Kontrollkästchen zu reagieren  
   
-1.  In der <xref:System.Windows.Forms.Control.Click> -Ereignishandler der <xref:System.Windows.Forms.CheckBox.Checked%2A> Eigenschaft, um den Zustand des Steuerelements zu bestimmen, und führen Sie alle erforderlichen Aktionen.  
+1. In der <xref:System.Windows.Forms.Control.Click> -Ereignishandler der <xref:System.Windows.Forms.CheckBox.Checked%2A> Eigenschaft, um den Zustand des Steuerelements zu bestimmen, und führen Sie alle erforderlichen Aktionen.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -80,7 +80,7 @@ Jedes Mal, wenn ein Benutzer klickt ein Windows Forms <xref:System.Windows.Forms
   
 ### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>Um zu bestimmen, Aktion, wenn das Kontrollkästchen geklickt wird  
   
-1.  Eine Case-Anweisung den Wert der Abfragen verwenden die <xref:System.Windows.Forms.CheckBox.CheckState%2A> Eigenschaft, um eine Aktion zu bestimmen. Wenn die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> -Eigenschaftensatz auf `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> Eigenschaft kann drei mögliche Werte, die das Feld, das zu überprüfende darstellen, zurück Kontrollkästchen deaktiviert wird, oder ein Drittanbieterserver unbestimmten Zustand, in dem das Feld angezeigt wird, mit einem abgeblendet Darstellung an, dass die Option ist nicht verfügbar.  
+1. Eine Case-Anweisung den Wert der Abfragen verwenden die <xref:System.Windows.Forms.CheckBox.CheckState%2A> Eigenschaft, um eine Aktion zu bestimmen. Wenn die <xref:System.Windows.Forms.CheckBox.ThreeState%2A> -Eigenschaftensatz auf `true`, <xref:System.Windows.Forms.CheckBox.CheckState%2A> Eigenschaft kann drei mögliche Werte, die das Feld, das zu überprüfende darstellen, zurück Kontrollkästchen deaktiviert wird, oder ein Drittanbieterserver unbestimmten Zustand, in dem das Feld angezeigt wird, mit einem abgeblendet Darstellung an, dass die Option ist nicht verfügbar.  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  

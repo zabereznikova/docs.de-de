@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: ab6a4a0e6736e2af9c1fa0dd170b6aa4c42d9e4a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1ce5c793a09df34ac17e70e3253e98108bf76fb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817153"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321475"
 ---
 # <a name="end-of-statement-expected"></a>end of-Anweisung erwartet.
 Die Anweisung syntaktisch abgeschlossen ist, aber eine zusätzliche Programmierelement folgt auf das Element, das die Anweisung abgeschlossen ist. Ein Zeilenabschlusszeichen ist am Ende jeder Anweisung erforderlich.
@@ -23,9 +23,9 @@ Die Anweisung syntaktisch abgeschlossen ist, aber eine zusätzliche Programmiere
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler
   
-1.  Überprüfen Sie, wenn zwei verschiedene Anweisungen in der gleichen Zeile versehentlich gestellt wurden.
+1. Überprüfen Sie, wenn zwei verschiedene Anweisungen in der gleichen Zeile versehentlich gestellt wurden.
   
-2.  Fügen Sie einem Zeilenabschluss, nach das Element, das die Anweisung abgeschlossen ist.
+2. Fügen Sie einem Zeilenabschluss, nach das Element, das die Anweisung abgeschlossen ist.
   
 ## <a name="see-also"></a>Siehe auch
 

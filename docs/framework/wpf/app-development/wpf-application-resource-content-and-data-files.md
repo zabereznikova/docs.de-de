@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: f9fd936c15454a81058d42825800a388c5c90a40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211921"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF-Anwendungsressource, Inhalts- und Datendateien
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] -Anwendungen hängen oftmals Dateien, die nicht ausführbare Daten, z. B. enthalten [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Bilder, Video und Audio. Windows Presentation Foundation (WPF) bietet spezielle Unterstützung für das Konfigurieren, identifizieren und die Verwendung dieser Typen von Datendateien, die als Anwendungsdatendateien bezeichnet werden. Diese Unterstützung bezieht sich auf einen bestimmten Satz von Anwendungsdatendateitypen, einschließlich:  
@@ -38,8 +38,7 @@ ms.locfileid: "57379197"
  Anwendungsdatendateien verweisen möchten, verwendet Windows Presentation Foundation (WPF) das Pack [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] Schema, das ausführlich beschrieben wird [Paket-URIs in WPF](pack-uris-in-wpf.md)).  
   
  In diesem Thema wird beschrieben, wie Sie Anwendungsdatendateien konfigurieren und verwenden.  
-  
-  
+
 <a name="Resource_Files"></a>   
 ## <a name="resource-files"></a>Ressourcendateien  
  Wenn eine Anwendungsdatendatei einer Anwendung stets zur Verfügung stehen muss, kann die Verfügbarkeit nur dadurch gewährleistet werden, dass die Datei in eine der ausführbaren Hauptassemblys einer Anwendung oder in eine der Assemblys kompiliert wird, auf die verwiesen wird. Dieser Typ von Anwendungsdatendatei wird als bezeichnet ein *Ressourcendatei*.  
@@ -124,7 +123,7 @@ ms.locfileid: "57379197"
  Verwenden Sie Inhaltsdateien, wenn die Anwendung einen speziellen Satz von Anwendungsdatendateien erfordert, die aktualisierbar sein soll, ohne dass die Assembly, die sie verwendet, neu kompiliert werden muss.  
   
 ### <a name="configuring-content-files"></a>Konfigurieren von Inhaltsdateien  
- Um ein Projekt eine Inhaltsdatei hinzuzufügen, muss eine Anwendungsdatendatei als einbezogen werden eine `Content` Element. Da eine Inhaltsdatei nicht direkt in die Assembly kompiliert wird, müssen Sie außerdem zum Festlegen der [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` Metadata-Element, um anzugeben, dass die Inhaltsdatei an einen Speicherort kopiert wird, der relativ zur erstellten Assembly ist. Wenn Sie die Ressource in den Buildausgabeordner kopiert werden soll, ein Projekt erstellt wird, Festlegen der `CopyToOutputDirectory` Metadata-Element mit der `Always` Wert. Andernfalls können Sie sicherstellen, dass nur die neueste Version der Ressource in den Buildausgabeordner, mithilfe kopiert wird der `PreserveNewest` Wert.  
+ Um ein Projekt eine Inhaltsdatei hinzuzufügen, muss eine Anwendungsdatendatei als einbezogen werden eine `Content` Element. Da eine Inhaltsdatei nicht direkt in die Assembly kompiliert wird, müssen Sie außerdem zum Festlegen der [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` Metadata-Element, um anzugeben, dass die Inhaltsdatei an einen Speicherort kopiert wird, der relativ zur erstellten Assembly ist. Wenn Sie die Ressource in den Buildausgabeordner kopiert werden soll, ein Projekt erstellt wird, Festlegen der `CopyToOutputDirectory` Metadata-Element mit der `Always` Wert. Andernfalls können Sie sicherstellen, dass nur die neueste Version der Ressource in den Buildausgabeordner, mithilfe kopiert wird der `PreserveNewest` Wert.  
   
  Im Folgenden wird eine Datei gezeigt, die als Inhaltsdatei konfiguriert ist und nur dann in den Buildausgabeordner kopiert wird, wenn dem Projekt eine neue Version der Ressource hinzugefügt wird.  
   
@@ -198,7 +197,7 @@ ms.locfileid: "57379197"
 ### <a name="configuring-site-of-origin-files"></a>Konfigurieren der Dateien der Ursprungssite  
  Wenn die Dateien der Ursprungssite zur Kompilierungszeit nicht vorhanden oder unbekannt sind, müssen Sie herkömmliche Bereitstellung verwenden Mechanismen zum gewährleisten, dass die erforderlichen Dateien verfügbar sind, zur Laufzeit, einschließlich der `XCopy` Befehlszeilenprogramm oder dem [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- Wenn Sie zum Zeitpunkt der Kompilierung die Dateien kennen, die Sie gerne auf der Ursprungssite befinden würde, aber dennoch explizite Abhängigkeit vermeiden möchten, können Sie diese Dateien zum Hinzufügen einer [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] -Projekt als `None` Element. Wie bei Inhaltsdateien Sie müssen die [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` Attribut, um anzugeben, dass die Website Datei der Ursprungssite an einen Speicherort kopiert wird, der relativ zur erstellten Assembly ist entweder der `Always` Wert oder die `PreserveNewest` Wert.  
+ Wenn Sie zum Zeitpunkt der Kompilierung die Dateien kennen, die Sie gerne auf der Ursprungssite befinden würde, aber dennoch explizite Abhängigkeit vermeiden möchten, können Sie diese Dateien zum Hinzufügen einer [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] -Projekt als `None` Element. Wie bei Inhaltsdateien Sie müssen die [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` Attribut, um anzugeben, dass die Website Datei der Ursprungssite an einen Speicherort kopiert wird, der relativ zur erstellten Assembly ist entweder der `Always` Wert oder die `PreserveNewest` Wert.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -239,4 +238,5 @@ ms.locfileid: "57379197"
  Nachdem Sie den Buildtyp einer Anwendungsdatendatei geändert haben, müssen Sie die gesamte Anwendung neu erstellen, um zu gewährleisten, dass diese Änderungen übernommen werden. Wenn Sie nur die Anwendung erstellen, werden die Änderungen nicht übernommen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Paket-URI in WPF](pack-uris-in-wpf.md)

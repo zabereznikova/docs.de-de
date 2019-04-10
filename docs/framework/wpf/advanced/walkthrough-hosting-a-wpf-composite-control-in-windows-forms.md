@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: dfff99969943a99d30f4e00b75fb5320bb3c9ad2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219602"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322835"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Stellt eine umfangreiche Umgebung zum Erstellen von Anwendungen bereit. Wenn Sie haben jedoch eine erhebliche Investition [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Code, es kann zum Erweitern Ihrer vorhandenen effektiver sein [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendung mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] anstatt sie von Grund auf neu zu schreiben. Ein häufiges Szenario ist, wenn eine eingebettet werden soll, oder weitere Steuerelemente implementiert wird, mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] innerhalb der Windows Forms-Anwendung. Weitere Informationen zum Anpassen von WPF-Steuerelemente finden Sie unter [Anpassung von Steuerelementen](../controls/control-customization.md).  
@@ -40,17 +40,17 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 ### <a name="creating-the-project"></a>Erstellen des Projekts  
  Um das Projekt zu starten:  
   
-1.  Starten Sie [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], und öffnen Sie die **neues Projekt** Dialogfeld.  
+1. Starten Sie [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], und öffnen Sie die **neues Projekt** Dialogfeld.  
   
-2.  Wählen Sie in Visual C#- und der Kategorie "Windows" die **WPF-Benutzersteuerelementbibliothek** Vorlage.  
+2. Wählen Sie in Visual C#- und der Kategorie "Windows" die **WPF-Benutzersteuerelementbibliothek** Vorlage.  
   
-3.  Geben Sie dem neuen Projekt den Namen `MyControls`.  
+3. Geben Sie dem neuen Projekt den Namen `MyControls`.  
   
-4.  Geben Sie für den Speicherort einen bequem benannten Ordner an der obersten Ebene, z. B. `WindowsFormsHostingWpfControl`. Sie werden die Host-Anwendung später in diesem Ordner ablegen.  
+4. Geben Sie für den Speicherort einen bequem benannten Ordner an der obersten Ebene, z. B. `WindowsFormsHostingWpfControl`. Sie werden die Host-Anwendung später in diesem Ordner ablegen.  
   
-5.  Klicken Sie auf **OK**, um das Projekt zu erstellen. Das Standardprojekt enthält ein einzelnes Steuerelement mit dem Namen `UserControl1`.  
+5. Klicken Sie auf **OK**, um das Projekt zu erstellen. Das Standardprojekt enthält ein einzelnes Steuerelement mit dem Namen `UserControl1`.  
   
-6.  Benennen Sie im Projektmappen-Explorer `UserControl1` zu `MyControl1`.  
+6. Benennen Sie im Projektmappen-Explorer `UserControl1` zu `MyControl1`.  
   
  Das Projekt sollte Verweise auf die folgenden System-DLLs aufweisen. Sollten eine oder mehrere dieser DLLs nicht standardmäßig enthalten sein, fügen Sie diese manuell zum Projekt hinzu.  
   
@@ -105,11 +105,11 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 ### <a name="implementing-the-code-behind-file"></a>Implementieren der CodeBehind-Datei  
  Der Code-Behind-Datei "MyControl1.xaml.cs" implementiert drei wesentliche Aufgaben:
   
-1.  Sie behandelt das Ereignis, das auftritt, wenn der Benutzer eine der Schaltflächen klickt.  
+1. Sie behandelt das Ereignis, das auftritt, wenn der Benutzer eine der Schaltflächen klickt.  
   
-2.  Ruft ab, die Daten aus der <xref:System.Windows.Controls.TextBox> Elemente, und verpackt sie in ein benutzerdefiniertes Ereignisargumentobjekt.  
+2. Ruft ab, die Daten aus der <xref:System.Windows.Controls.TextBox> Elemente, und verpackt sie in ein benutzerdefiniertes Ereignisargumentobjekt.  
   
-3.  Löst das benutzerdefinierte `OnButtonClick` -Ereignis, das den Host benachrichtigt, dass der Benutzer abgeschlossen ist, und die Daten an dem Host übergibt.  
+3. Löst das benutzerdefinierte `OnButtonClick` -Ereignis, das den Host benachrichtigt, dass der Benutzer abgeschlossen ist, und die Daten an dem Host übergibt.  
   
  Das Steuerelement macht auch eine Reihe von Farb- und Schriftart-Eigenschaften verfügbar, mit deren Hilfe Sie das Erscheinungsbild anpassen können. Im Gegensatz zu den <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Klasse, die zum Hosten eines Windows Forms-Steuerelements verwendet wird, die <xref:System.Windows.Forms.Integration.ElementHost> Klasse verfügbar macht, des Steuerelements <xref:System.Windows.Controls.Panel.Background%2A> nur-Eigenschaft. Verwalten Sie die Ähnlichkeit zwischen diesem Codebeispiel und dem Beispiel [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md), macht das Steuerelement die übrigen Eigenschaften direkt verfügbar.  
   
@@ -189,25 +189,25 @@ Die folgende Abbildung zeigt einen zusammengesetzten WPF-Steuerelements in einer
 ### <a name="creating-the-project"></a>Erstellen des Projekts  
  Um das Projekt zu starten:  
   
-1.  Starten Sie [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], und öffnen Sie die **neues Projekt** Dialogfeld.  
+1. Starten Sie [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)], und öffnen Sie die **neues Projekt** Dialogfeld.  
   
-2.  Wählen Sie in Visual C#- und der Kategorie "Windows" die **Windows Forms-Anwendung** Vorlage.  
+2. Wählen Sie in Visual C#- und der Kategorie "Windows" die **Windows Forms-Anwendung** Vorlage.  
   
-3.  Geben Sie dem neuen Projekt den Namen `WFHost`.  
+3. Geben Sie dem neuen Projekt den Namen `WFHost`.  
   
-4.  Geben Sie für den Speicherort denselben Stammordner an, der das Projekt „MyControls” enthält.  
+4. Geben Sie für den Speicherort denselben Stammordner an, der das Projekt „MyControls” enthält.  
   
-5.  Klicken Sie auf **OK**, um das Projekt zu erstellen.  
+5. Klicken Sie auf **OK**, um das Projekt zu erstellen.  
   
  Sie müssen auch Verweise auf die DLL hinzufügen, enthält `MyControl1` und andere Assemblys.  
   
-1.  Mit der rechten Maustaste des Projektnamen im Projektmappen-Explorer, und wählen **Verweis hinzufügen**.  
+1. Mit der rechten Maustaste des Projektnamen im Projektmappen-Explorer, und wählen **Verweis hinzufügen**.  
   
-2.  Klicken Sie auf die **Durchsuchen** Registerkarte, und navigieren Sie zu dem Ordner, der MyControls.dll enthält. In dieser exemplarischen Vorgehensweise ist dies der Ordner "MyControls\bin\Debug".  
+2. Klicken Sie auf die **Durchsuchen** Registerkarte, und navigieren Sie zu dem Ordner, der MyControls.dll enthält. In dieser exemplarischen Vorgehensweise ist dies der Ordner "MyControls\bin\Debug".  
   
-3.  Wählen Sie MyControls.dll aus, und klicken Sie dann auf **OK**.  
+3. Wählen Sie MyControls.dll aus, und klicken Sie dann auf **OK**.  
   
-4.  Fügen Sie Verweise auf die folgenden Assemblys hinzu.  
+4. Fügen Sie Verweise auf die folgenden Assemblys hinzu.  
   
     -   PresentationCore  
   
@@ -222,13 +222,13 @@ Die folgende Abbildung zeigt einen zusammengesetzten WPF-Steuerelements in einer
 ### <a name="implementing-the-user-interface-for-the-application"></a>Implementieren der Benutzeroberfläche für die Anwendung  
  Die Benutzeroberfläche für die Windows Forms-Anwendung enthält mehrere Steuerelemente, die dazu dienen, mit dem zusammengesetzten WPF-Steuerelement zu interagieren.  
   
-1.  Öffnen Sie Form1 im Windows Forms-Designer.  
+1. Öffnen Sie Form1 im Windows Forms-Designer.  
   
-2.  Vergrößern Sie das Formular, um den Steuerelementen genügend Platz zu geben.  
+2. Vergrößern Sie das Formular, um den Steuerelementen genügend Platz zu geben.  
   
-3.  Fügen Sie in der oberen rechten Ecke des Formulars ein <xref:System.Windows.Forms.Panel?displayProperty=nameWithType> Steuerelement zum Speichern der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zusammengesetztes Steuerelement.  
+3. Fügen Sie in der oberen rechten Ecke des Formulars ein <xref:System.Windows.Forms.Panel?displayProperty=nameWithType> Steuerelement zum Speichern der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zusammengesetztes Steuerelement.  
   
-4.  Fügen Sie die folgenden <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> Steuerelemente im Formular.  
+4. Fügen Sie die folgenden <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> Steuerelemente im Formular.  
   
     |Name|Text|  
     |----------|----------|  
@@ -240,7 +240,7 @@ Die folgende Abbildung zeigt einen zusammengesetzten WPF-Steuerelements in einer
     |groupBox6|Schriftbreite|  
     |groupBox7|Daten vom Steuerelement|  
   
-5.  Fügen Sie die folgenden <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> -Steuerelementen an die <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> Steuerelemente.  
+5. Fügen Sie die folgenden <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> -Steuerelementen an die <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> Steuerelemente.  
   
     |GroupBox|Name|Text|  
     |--------------|----------|----------|  
@@ -261,7 +261,7 @@ Die folgende Abbildung zeigt einen zusammengesetzten WPF-Steuerelements in einer
     |groupBox6|radioWeightOriginal|Ursprünglich|  
     |groupBox6|radioWeightBold|Fett|  
   
-6.  Fügen Sie die folgenden <xref:System.Windows.Forms.Label?displayProperty=nameWithType> steuert, mit dem letzten <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>. Diese Steuerelemente zeigen die vom zurückgegebenen Daten die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zusammengesetztes Steuerelement.  
+6. Fügen Sie die folgenden <xref:System.Windows.Forms.Label?displayProperty=nameWithType> steuert, mit dem letzten <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>. Diese Steuerelemente zeigen die vom zurückgegebenen Daten die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zusammengesetztes Steuerelement.  
   
     |GroupBox|Name|Text|  
     |--------------|----------|----------|  
@@ -284,15 +284,15 @@ Die folgende Abbildung zeigt einen zusammengesetzten WPF-Steuerelements in einer
   
  Die `Form1_Load` -Methode in der vorhergehende Code zeigt die allgemeine Vorgehensweise für das Hosten einer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelement:  
   
-1.  Erstellen Sie ein neues <xref:System.Windows.Forms.Integration.ElementHost> Objekt.  
+1. Erstellen Sie ein neues <xref:System.Windows.Forms.Integration.ElementHost> Objekt.  
   
-2.  Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill?displayProperty=nameWithType>.  
+2. Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill?displayProperty=nameWithType>.  
   
-3.  Hinzufügen der <xref:System.Windows.Forms.Integration.ElementHost> die Steuerung an die <xref:System.Windows.Forms.Panel> des Steuerelements <xref:System.Windows.Forms.Control.Controls%2A> Auflistung.  
+3. Hinzufügen der <xref:System.Windows.Forms.Integration.ElementHost> die Steuerung an die <xref:System.Windows.Forms.Panel> des Steuerelements <xref:System.Windows.Forms.Control.Controls%2A> Auflistung.  
   
-4.  Erstellen Sie eine Instanz von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelement.  
+4. Erstellen Sie eine Instanz von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Steuerelement.  
   
-5.  Das zusammengesetzte Steuerelement im Formular hosten, indem Sie das Steuerelement, das Zuweisen der <xref:System.Windows.Forms.Integration.ElementHost> des Steuerelements <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> Eigenschaft.  
+5. Das zusammengesetzte Steuerelement im Formular hosten, indem Sie das Steuerelement, das Zuweisen der <xref:System.Windows.Forms.Integration.ElementHost> des Steuerelements <xref:System.Windows.Forms.Integration.ElementHost.Child%2A> Eigenschaft.  
   
  Die verbleibenden zwei Zeilen in der `Form1_Load` -Methode binden Handler an zwei Steuerelement-Ereignisse:  
   

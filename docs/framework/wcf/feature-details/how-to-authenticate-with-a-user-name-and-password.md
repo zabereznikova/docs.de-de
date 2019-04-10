@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 11a146e387171d6af95a7710fe96d6f35f6c611f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174134"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321034"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Vorgehensweise: Authentifizierung mit Benutzernamen und Kennwort
 
@@ -21,7 +21,7 @@ Dieses Thema veranschaulicht, wie Sie einen Windows Communication Foundation (WC
   
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Zum Konfigurieren eines WCF-Diensts für die Authentifizierung mit Windows-Domänenbenutzernamen und Ihr Kennwort
   
-1.  Erstellen Sie eine Instanz von <xref:System.ServiceModel.WSHttpBinding>, legen Sie den Sicherheitsmodus der Bindung auf <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType> fest, legen Sie den `ClientCredentialType` der Bindung auf <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType> fest, und fügen Sie dem Diensthost mithilfe der konfigurierten Bindung einen Dienstendpunkt hinzu, wie im folgenden Code dargestellt:  
+1. Erstellen Sie eine Instanz von <xref:System.ServiceModel.WSHttpBinding>, legen Sie den Sicherheitsmodus der Bindung auf <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType> fest, legen Sie den `ClientCredentialType` der Bindung auf <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType> fest, und fügen Sie dem Diensthost mithilfe der konfigurierten Bindung einen Dienstendpunkt hinzu, wie im folgenden Code dargestellt:  
   
     ```  
     // ...  
@@ -32,7 +32,7 @@ Dieses Thema veranschaulicht, wie Sie einen Windows Communication Foundation (WC
     // ...  
     ```  
   
-2.  Geben Sie das Serverzertifikat an, das zum Verschlüsseln des über die Verbindung gesendeten Benutzernamens und Kennworts verwendet wird. Dieser Code sollte direkt auf den vorangehenden Code folgen. Im folgenden Beispiel wird das Zertifikat, das erstellt wird, indem Sie die Datei "Setup.bat" aus der [Nachrichtensicherheit – Benutzername](../../../../docs/framework/wcf/samples/message-security-user-name.md) Beispiel:  
+2. Geben Sie das Serverzertifikat an, das zum Verschlüsseln des über die Verbindung gesendeten Benutzernamens und Kennworts verwendet wird. Dieser Code sollte direkt auf den vorangehenden Code folgen. Im folgenden Beispiel wird das Zertifikat, das erstellt wird, indem Sie die Datei "Setup.bat" aus der [Nachrichtensicherheit – Benutzername](../../../../docs/framework/wcf/samples/message-security-user-name.md) Beispiel:  
   
     ```  
     // ...  
@@ -44,7 +44,7 @@ Dieses Thema veranschaulicht, wie Sie einen Windows Communication Foundation (WC
   
 ## <a name="to-call-the-service-passing-username-and-password"></a>So rufen Sie den Dienst auf, der den Benutzernamen und das Kennwort übergibt  
   
-1.  Die Clientanwendung muss den Benutzer zur Eingabe von Benutzername und Kennwort auffordern. Der folgende Code fordert den Benutzer zur Eingabe von Benutzername und Kennwort auf.  
+1. Die Clientanwendung muss den Benutzer zur Eingabe von Benutzername und Kennwort auffordern. Der folgende Code fordert den Benutzer zur Eingabe von Benutzername und Kennwort auf.  
   
     > [!WARNING]
     >  Dieser Code sollte nicht in Produktionssystemen verwendet werden, da das Kennwort bei der Eingabe sichtbar ist.  
@@ -61,7 +61,7 @@ Dieses Thema veranschaulicht, wie Sie einen Windows Communication Foundation (WC
             }  
     ```  
   
-2.  Erstellen Sie eine Instanz des Clientproxys, indem Sie die Anmeldeinformationen des Clients wie im folgenden Code dargestellt angeben:  
+2. Erstellen Sie eine Instanz des Clientproxys, indem Sie die Anmeldeinformationen des Clients wie im folgenden Code dargestellt angeben:  
   
     ```  
     string username;  

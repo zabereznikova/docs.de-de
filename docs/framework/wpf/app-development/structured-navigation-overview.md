@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161511"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320070"
 ---
 # <a name="structured-navigation-overview"></a>Übersicht über die strukturierte Navigation
 Inhalt, der von gehostet werden kann eine [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, oder ein <xref:System.Windows.Navigation.NavigationWindow> besteht aus Seiten, die vom Pack identifiziert werden können [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] und über Links aufgerufen. Die Struktur der Seiten und die durch Links definierte Navigation in ihnen werden als Navigationstopologie bezeichnet. Eine solche Topologie kann für unterschiedliche Anwendungstypen eingesetzt werden, insbesondere für die Navigation in Dokumenten. In diesen Anwendungen kann der Benutzer von einer Seite zu einer anderen Seite navigieren, ohne dass die Seite Informationen zu der anderen Seite enthält.  
@@ -134,9 +134,9 @@ Inhalt, der von gehostet werden kann eine [!INCLUDE[TLA#tla_xbap](../../../../in
 ### <a name="returning-task-result-and-task-data-from-a-task-to-a-calling-page"></a>Zurückgeben von Aufgabenergebnissen und Aufgabendaten aus einer Aufgabe an eine aufrufende Seite  
  Nachdem der Benutzer alle Aufgaben auf der aufgerufenen Seite beendet hat und wie in diesem Beispiel auf „OK“ oder „Abbrechen“ geklickt hat, muss die aufgerufene Seite wieder angezeigt werden. Da die aufrufende Seite die aufgerufene Seite dazu verwendet hat, um Daten vom Benutzer zu erfassen, benötigt die aufrufende Seite zwei Arten von Informationen:  
   
-1.  Ob der Benutzer die aufgerufene Seite abgebrochen hat (indem er wie in diesem Beispiel auf „OK“ oder „Abbrechen“ geklickt hat). Die aufrufende Seite ermittelt anhand dieser Informationen, ob die von der aufrufenden Seite erfassten Daten des Benutzers verarbeitet werden sollen.  
+1. Ob der Benutzer die aufgerufene Seite abgebrochen hat (indem er wie in diesem Beispiel auf „OK“ oder „Abbrechen“ geklickt hat). Die aufrufende Seite ermittelt anhand dieser Informationen, ob die von der aufrufenden Seite erfassten Daten des Benutzers verarbeitet werden sollen.  
   
-2.  Die Daten, die vom Benutzer angegeben wurden.  
+2. Die Daten, die vom Benutzer angegeben wurden.  
   
  Um Informationen zurückzugeben <xref:System.Windows.Navigation.PageFunction%601> implementiert die <xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A> Methode. Im folgenden Code wird veranschaulicht, wie diese aufgerufen wird.  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC2012
 ms.assetid: 73270fe4-a638-42c7-be21-5e156e2b18f6
-ms.openlocfilehash: 289b024569900b94c9f41fe0f98a817ce907de0f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b92a2c6f3de02a1a31ad131004dd613b15f01f19
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843616"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325162"
 ---
 # <a name="cant-open-filename-for-writing"></a>Kann nicht geöffnet werden "\<Dateiname >' zum Schreiben
 Die angegebene Datei kann nicht geöffnet werden, für das Schreiben, vielleicht weil es bereits geöffnet wurde.  
@@ -21,9 +21,9 @@ Die angegebene Datei kann nicht geöffnet werden, für das Schreiben, vielleicht
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Schließen Sie die Datei, und öffnen Sie es erneut.  
+1. Schließen Sie die Datei, und öffnen Sie es erneut.  
   
-2.  Überprüfen Sie die Berechtigungen der Datei.  
+2. Überprüfen Sie die Berechtigungen der Datei.  
   
 ## <a name="see-also"></a>Siehe auch
 

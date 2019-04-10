@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818722"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324317"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>Vorgehensweise: Steuern des Gültigkeitsbereichs einer Variablen (Visual Basic)
 In der Regel wird eine Variable *Bereich*, oder als Referenz in der Region, in dem Sie wurde deklariert, sichtbar. In einigen Fällen die Variable des *Zugriffsebene* können ihren Bereich beeinflussen.  
@@ -43,19 +43,19 @@ In der Regel wird eine Variable *Bereich*, oder als Referenz in der Region, in d
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>Um eine Variable in einem Modul, Klasse oder Struktur sichtbar zu machen  
   
-1.  Ort der `Dim` -Anweisung für die Variable in das Modul, Klasse oder Struktur, aber außerhalb einer Prozedur.  
+1. Ort der `Dim` -Anweisung für die Variable in das Modul, Klasse oder Struktur, aber außerhalb einer Prozedur.  
   
-2.  Enthalten die [Private](../../../../visual-basic/language-reference/modifiers/private.md) -Schlüsselwort in der `Dim` Anweisung.  
+2. Enthalten die [Private](../../../../visual-basic/language-reference/modifiers/private.md) -Schlüsselwort in der `Dim` Anweisung.  
   
-3.  Sehen Sie sich die Variable aus einer beliebigen Position innerhalb der Module, Klasse oder Struktur, jedoch nicht von außerhalb davon.  
+3. Sehen Sie sich die Variable aus einer beliebigen Position innerhalb der Module, Klasse oder Struktur, jedoch nicht von außerhalb davon.  
   
 #### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>Um eine Variable in einem Namespace sichtbar zu machen  
   
-1.  Ort der `Dim` -Anweisung für die Variable in das Modul, Klasse oder Struktur, aber außerhalb einer Prozedur.  
+1. Ort der `Dim` -Anweisung für die Variable in das Modul, Klasse oder Struktur, aber außerhalb einer Prozedur.  
   
-2.  Enthalten die [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) oder [öffentliche](../../../../visual-basic/language-reference/modifiers/public.md) -Schlüsselwort in der `Dim` Anweisung.  
+2. Enthalten die [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) oder [öffentliche](../../../../visual-basic/language-reference/modifiers/public.md) -Schlüsselwort in der `Dim` Anweisung.  
   
-3.  Sie können auf die Variable verweisen, von überall aus innerhalb des Namespaces, die das Modul, Klasse oder Struktur enthält.  
+3. Sie können auf die Variable verweisen, von überall aus innerhalb des Namespaces, die das Modul, Klasse oder Struktur enthält.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel deklariert eine Variable auf Modulebene und schränkt die Sichtbarkeit für Code innerhalb des Moduls.  

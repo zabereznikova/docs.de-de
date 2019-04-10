@@ -14,19 +14,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: 13f1e18753ad5b49a9cc530cf340579087908b4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bd6614c76c63a44a7367ac7c7113c4db260c9a02
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188883"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322731"
 ---
 # <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Vorgehensweise: Hinzufügen und Entfernen von Elementen in bzw. aus ComboBox-, ListBox- oder CheckedListBox-Steuerelementen in Windows Forms
 Elemente können ein Windows Forms-Kombinationsfeld, Listenfeld hinzugefügt werden oder Listenfeld in einer Vielzahl von Möglichkeiten, nicht überprüft, da diese Steuerelemente an eine Vielzahl von Datenquellen gebunden werden können. Allerdings wird in diesem Thema zeigt die einfachste Methode, und erfordert keine Datenbindung. Die angezeigten Elemente sind im Allgemeinen Zeichenfolgen. Allerdings kann ein Objekt verwendet werden. Der Text, der im Steuerelement angezeigt wird, wird den Rückgabewert von des Objekts `ToString` Methode.  
   
 ### <a name="to-add-items"></a>Hinzufügen von Elementen  
   
-1.  Fügen Sie der Zeichenfolge oder ein Objekt zur Liste mit den `Add` Methode der `ObjectCollection` Klasse. Die Auflistung enthält einen Verweis auf die `Items` Eigenschaft:  
+1. Fügen Sie der Zeichenfolge oder ein Objekt zur Liste mit den `Add` Methode der `ObjectCollection` Klasse. Die Auflistung enthält einen Verweis auf die `Items` Eigenschaft:  
   
     ```vb  
     ComboBox1.Items.Add("Tokyo")  
@@ -42,7 +42,7 @@ Elemente können ein Windows Forms-Kombinationsfeld, Listenfeld hinzugefügt wer
   
      - ODER  
   
-2.  Fügen Sie der Zeichenfolge oder das Objekt an der gewünschten Stelle in der Liste mit den `Insert` Methode:  
+2. Fügen Sie der Zeichenfolge oder das Objekt an der gewünschten Stelle in der Liste mit den `Insert` Methode:  
   
     ```vb  
     CheckedListBox1.Items.Insert(0, "Copenhagen")  
@@ -58,7 +58,7 @@ Elemente können ein Windows Forms-Kombinationsfeld, Listenfeld hinzugefügt wer
   
      - ODER  
   
-3.  Weisen Sie ein gesamtes Array, das die `Items` Auflistung:  
+3. Weisen Sie ein gesamtes Array, das die `Items` Auflistung:  
   
     ```vb  
     Dim ItemObject(9) As System.Object  
@@ -89,7 +89,7 @@ Elemente können ein Windows Forms-Kombinationsfeld, Listenfeld hinzugefügt wer
   
 ### <a name="to-remove-an-item"></a>So entfernen Sie ein Element  
   
-1.  Rufen Sie die `Remove` oder `RemoveAt` Methode, um Elemente zu löschen.  
+1. Rufen Sie die `Remove` oder `RemoveAt` Methode, um Elemente zu löschen.  
   
      `Remove` hat ein Argument, der angibt, der zu entfernenden Elements.`RemoveAt` Entfernt das Element mit der angegebenen Indexnummer.  
   
@@ -122,7 +122,7 @@ Elemente können ein Windows Forms-Kombinationsfeld, Listenfeld hinzugefügt wer
   
 ### <a name="to-remove-all-items"></a>So entfernen Sie alle Elemente  
   
-1.  Rufen Sie die `Clear` Methode, um alle Elemente aus der Auflistung zu entfernen:  
+1. Rufen Sie die `Clear` Methode, um alle Elemente aus der Auflistung zu entfernen:  
   
     ```vb  
     ListBox1.Items.Clear()  

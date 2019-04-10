@@ -9,12 +9,12 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 0f48c90232c00f53007e7d2f8f08e2107406ecad
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841003"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320690"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen (Visual Basic)
 In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie für das Deklarieren und Auslösen von Ereignissen für eine Klasse, die mit dem Namen `Widget`. Nachdem Sie die Schritte abgeschlossen haben, Sie möchten das begleitthema lesen [Exemplarische Vorgehensweise: Behandeln von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md), erfahren, wie Sie Ereignisse aus `Widget` Objekte Statusinformationen in einer Anwendung bereitstellen.  
@@ -28,11 +28,11 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie für das Dekla
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>Das Codebeispiel in diesem Thema erstellen  
   
-1.  Öffnen Sie ein neues Visual Basic Windows-Anwendungsprojekt, und erstellen Sie ein Formular mit dem Namen `Form1`.  
+1. Öffnen Sie ein neues Visual Basic Windows-Anwendungsprojekt, und erstellen Sie ein Formular mit dem Namen `Form1`.  
   
-2.  Fügen Sie zwei Schaltflächen und eine Bezeichnung für die `Form1`.  
+2. Fügen Sie zwei Schaltflächen und eine Bezeichnung für die `Form1`.  
   
-3.  Benennen Sie die Objekte wie in der folgenden Tabelle gezeigt.  
+3. Benennen Sie die Objekte wie in der folgenden Tabelle gezeigt.  
   
     |Objekt|Eigenschaft|Einstellung|  
     |------------|--------------|-------------|  
@@ -40,7 +40,7 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie für das Dekla
     |`Button2`|`Text`|Abbrechen|  
     |`Label`|`(Name)`, `Text`|lblPercentDone, 0|  
   
-4.  Auf der **Projekt** Menü wählen **Klasse hinzufügen** zum Hinzufügen der Klasse `Widget.vb` zum Projekt.  
+4. Auf der **Projekt** Menü wählen **Klasse hinzufügen** zum Hinzufügen der Klasse `Widget.vb` zum Projekt.  
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>Um ein Ereignis für das Widget-Klasse zu deklarieren.  
   
@@ -57,11 +57,11 @@ In dieser exemplarischen Vorgehensweise wird veranschaulicht, wie für das Dekla
   
 #### <a name="to-raise-the-percentdone-event"></a>Zum Auslösen des Ereignisses PercentDone  
   
-1.  Zur Vereinfachung der Zugriff auf die `Timer` hinzufügen Eigenschaft, die von dieser Klasse verwendet eine `Imports` Anweisung am Anfang des Abschnitts Deklarationen Klassenmoduls über die `Class Widget` Anweisung.  
+1. Zur Vereinfachung der Zugriff auf die `Timer` hinzufügen Eigenschaft, die von dieser Klasse verwendet eine `Imports` Anweisung am Anfang des Abschnitts Deklarationen Klassenmoduls über die `Class Widget` Anweisung.  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
-2.  Fügen Sie der `Widget`-Klasse folgenden Code hinzu:  
+2. Fügen Sie der `Widget`-Klasse folgenden Code hinzu:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
