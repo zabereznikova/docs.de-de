@@ -2,12 +2,12 @@
 title: Service Trace Viewer-Tool (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213388"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341100"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer-Tool (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die Analyse der diagnoseablaufverfolgungen, die von WCF generiert werden. Service Trace Viewer bietet eine Möglichkeit, ganz einfach zusammenführen, anzeigen und Filtern von Ablaufverfolgungsnachrichten im Protokoll, damit können Sie diagnostizieren, reparieren und prüfen die WCF-Dienstprobleme.  
@@ -72,7 +72,7 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
   
 ##### <a name="to-open-a-trace-file"></a>So öffnen Sie eine Ablaufverfolgungsdatei  
   
-1.  Starten Sie Ihre WCF-Installationsverzeichnis (c:\Programme\Microsoft SDKs\Windows\v6.0\Bin) wechseln, und geben Sie ein Befehlsfenster mit Service Trace Viewer `SvcTraceViewer.exe`.  
+1. Starten Sie Ihre WCF-Installationsverzeichnis (c:\Programme\Microsoft SDKs\Windows\v6.0\Bin) wechseln, und geben Sie ein Befehlsfenster mit Service Trace Viewer `SvcTraceViewer.exe`.  
   
 > [!NOTE]
 >  Das Service Trace Viewer-Tool kann zwei Dateitypen zuweisen: .svclog und .stvproj. Sie können zwei Parameter in der Befehlszeile verwenden, um die Dateierweiterungen zu registrieren und deren Registrierung aufzuheben.  
@@ -81,14 +81,14 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
 >   
 >  /unregister: Hebt die Registrierung der zugewiesenen Dateierweiterungen ".svclog" und ".stvproj" in SvcTraceViewer.exe auf.  
   
-1.  Service Trace Viewer starten, klicken Sie auf **Datei** und zeigen Sie dann auf **öffnen**. Navigieren Sie zu dem Speicherort, an dem die Ablaufverfolgungsdateien gespeichert sind.  
+1. Service Trace Viewer starten, klicken Sie auf **Datei** und zeigen Sie dann auf **öffnen**. Navigieren Sie zu dem Speicherort, an dem die Ablaufverfolgungsdateien gespeichert sind.  
   
-2.  Doppelklicken Sie auf die Ablaufverfolgungsdatei, die Sie öffnen möchten.  
+2. Doppelklicken Sie auf die Ablaufverfolgungsdatei, die Sie öffnen möchten.  
   
     > [!NOTE]
     >  Halten Sie die UMSCHALTTASTE gedrückt, während Sie auf mehrere Ablaufverfolgungsdateien klicken, um sie gleichzeitig auszuwählen und zu öffnen. Service Trace Viewer führt den Inhalt aller Dateien zusammen und zeigt ihn in einer Ansicht an. Sie können zum Beispiel gleichzeitig Ablaufverfolgungsdateien von Client und Dienst öffnen. Dies ist nützlich, wenn Sie die Nachrichtenprotokollierung und Aktivitätspropagierung in der Konfiguration aktiviert haben. Auf diese Weise können Sie den Nachrichtenaustausch zwischen Client und Dienst untersuchen. Sie können auch mehrere Dateien in den Viewer ziehen oder verwenden Sie die **Projekt** Registerkarte. Weitere Informationen finden Sie im Abschnitt über das Verwalten des Projekts.  
   
-3.  Um der Auflistung, das geöffnet ist Weitere Ablaufverfolgungsdateien hinzuzufügen, klicken Sie auf **Datei** und zeigen Sie dann auf **hinzufügen**. Navigieren Sie in dem geöffneten Fenster zum Speicherort der Ablaufverfolgungsdateien, und doppelklicken Sie auf die Datei, die Sie hinzufügen möchten.  
+3. Um der Auflistung, das geöffnet ist Weitere Ablaufverfolgungsdateien hinzuzufügen, klicken Sie auf **Datei** und zeigen Sie dann auf **hinzufügen**. Navigieren Sie in dem geöffneten Fenster zum Speicherort der Ablaufverfolgungsdateien, und doppelklicken Sie auf die Datei, die Sie hinzufügen möchten.  
   
 > [!CAUTION]
 >  Es ist nicht empfehlenswert, eine Ablaufverfolgungsprotokolldatei zu laden, die größer als 200 MB ist. Wenn Sie eine Datei laden, die diesen Wert überschreitet, nimmt der Ladeprozess je nach Computerressourcen unter Umständen viel Zeit in Anspruch. Das Service Trace Viewer-Tool reagiert unter Umständen über einen längeren Zeitraum nicht oder belegt den gesamten Speicher des Computers. Es wird empfohlen, dass Sie das teilweise Laden konfigurieren, um dies zu vermeiden. Weitere Informationen dazu finden Sie im Abschnitt "Laden von großen Ablaufverfolgungsdateien".  
@@ -154,24 +154,24 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
   
 ###### <a name="selecting-traces-in-the-graph"></a>Auswählen von Ablaufverfolgungen im Diagramm  
   
-1.  Klicken Sie auf einen Block im Diagramm.  
+1. Klicken Sie auf einen Block im Diagramm.  
   
-2.  Wählen Sie mit den Nach-oben- und Nach-unten-Pfeilen die benachbarten Ablaufverfolgungen aus.  
+2. Wählen Sie mit den Nach-oben- und Nach-unten-Pfeilen die benachbarten Ablaufverfolgungen aus.  
   
-3.  Achten Sie auf die Ablaufverfolgungsinformationen im Ablaufverfolgungsbereich und Detailbereich.  
+3. Achten Sie auf die Ablaufverfolgungsinformationen im Ablaufverfolgungsbereich und Detailbereich.  
   
 ###### <a name="expanding-or-collapsing-activity-transfers"></a>Erweitern oder Reduzieren von Aktivitätsübertragungen  
  Sie können Aktivitätsübertragungen erweitern, wenn die ausgewählte Aktivität an eine andere Aktivität übertragen wird. Sie können auf diese Weise den Übertragungen folgen.  
   
  So erweitern oder reduzieren Sie Aktivitätsübertragungen  
   
-1.  Suchen Sie die übertragungsablaufverfolgung mit einem Zeichen "+", auf der linken Seite neben dem übertragungssymbol.  
+1. Suchen Sie die übertragungsablaufverfolgung mit einem Zeichen "+", auf der linken Seite neben dem übertragungssymbol.  
   
-2.  Klicken Sie auf "+", oder drücken Sie **STRG** und "+" mithilfe der Tastatur.  
+2. Klicken Sie auf "+", oder drücken Sie **STRG** und "+" mithilfe der Tastatur.  
   
-3.  Die nächste Aktivität wird im Diagramm angezeigt.  
+3. Die nächste Aktivität wird im Diagramm angezeigt.  
   
-4.  Ein "-" wird links neben dem übertragungssymbol. Klicken Sie auf der "-" oder drücken Sie STRG und "-", die aktivitätsübertragung wird reduziert.  
+4. Ein "-" wird links neben dem übertragungssymbol. Klicken Sie auf der "-" oder drücken Sie STRG und "-", die aktivitätsübertragung wird reduziert.  
   
 > [!NOTE]
 >  Wenn eine Aktivität über mehrere Übertragungen verfügt und Sie eine der Übertragungen erweitern, werden Aktivitäten angezeigt, die von der Stammaktivität zu der neuen Aktivität führen. Diese neuen Aktivitäten werden reduziert angezeigt. Wenn Sie die Details dieser Aktivitäten anzeigen möchten, erweitern Sie sie vertikal, indem Sie auf das Erweiterungssymbol in der Kopfzeile des Diagramms klicken.  
@@ -181,13 +181,13 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
   
  So erweitern oder reduzieren Sie Aktivitäten vertikal  
   
-1.  Klicken Sie auf das Symbol "+" in der Kopfzeile der Aktivität um die Aktivität vertikal zu erweitern.  
+1. Klicken Sie auf das Symbol "+" in der Kopfzeile der Aktivität um die Aktivität vertikal zu erweitern.  
   
-2.  Beachten Sie, dass alle Ablaufverfolgungen im Diagramm angezeigt werden.  
+2. Beachten Sie, dass alle Ablaufverfolgungen im Diagramm angezeigt werden.  
   
-3.  Klicken Sie auf der "-"-Symbol in der Kopfzeile der Aktivität auf die Aktivität vertikal zu reduzieren.  
+3. Klicken Sie auf der "-"-Symbol in der Kopfzeile der Aktivität auf die Aktivität vertikal zu reduzieren.  
   
-4.  Beachten Sie, dass nur wichtige Übertragungen, Nachrichtenprotokolle, Warnungs- und Ausnahmeablaufverfolgungen in der Aktivität angezeigt werden.  
+4. Beachten Sie, dass nur wichtige Übertragungen, Nachrichtenprotokolle, Warnungs- und Ausnahmeablaufverfolgungen in der Aktivität angezeigt werden.  
   
 ###### <a name="options"></a>Optionen  
  Sie können zwei Optionen auswählen der **Option** Menü in der Diagrammansicht.  
@@ -259,17 +259,17 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
 ###### <a name="creating-a-custom-filter-using-the-template-wizard"></a>Erstellen eines benutzerdefinierten Filters mit dem Vorlagen-Assistenten  
  Sie können auf eine vorhandene Ablaufverfolgung klicken und auf Grundlage der Struktur der Ablaufverfolgung einen Filter erstellen. In diesem Beispiel wird ein benutzerdefinierter Filter auf Grundlage der Thread-ID erstellt.  
   
-1.  Wählen Sie im Ablaufverfolgungsbereich oben rechts im Viewer eine Ablaufverfolgung aus, die ein Element enthält, nach dem Sie filtern möchten.  
+1. Wählen Sie im Ablaufverfolgungsbereich oben rechts im Viewer eine Ablaufverfolgung aus, die ein Element enthält, nach dem Sie filtern möchten.  
   
-2.  Klicken Sie auf die **Erstellen benutzerdefinierter Filter** Schaltfläche am oberen Rand des Bereichs für die Ablaufverfolgung.  
+2. Klicken Sie auf die **Erstellen benutzerdefinierter Filter** Schaltfläche am oberen Rand des Bereichs für die Ablaufverfolgung.  
   
-3.  Geben Sie im angezeigten Dialogfeld einen Namen für den Filter ein. Geben Sie in diesem Beispiel `Thread ID`. Sie können auch eine Beschreibung des Filters eingeben.  
+3. Geben Sie im angezeigten Dialogfeld einen Namen für den Filter ein. Geben Sie in diesem Beispiel `Thread ID`. Sie können auch eine Beschreibung des Filters eingeben.  
   
-4.  In der Strukturansicht links wird die Struktur des Ablaufverfolgungsdatensatzes angezeigt, den Sie in Schritt 1 ausgewählt haben. Wechseln Sie zu dem Element, für das Sie eine Bedingung erstellen möchten. In diesem Beispiel durchsuchen, zu der ThreadID, die in der XPath-Ausdruck gefunden werden: /E2ETraceEvent/System/Execution/@ThreadID Knoten. Doppelklicken Sie auf das ThreadID-Attribut in der Strukturansicht. Hierdurch wird rechts im Dialogfeld ein Ausdruck für das Attribut erstellt.  
+4. In der Strukturansicht links wird die Struktur des Ablaufverfolgungsdatensatzes angezeigt, den Sie in Schritt 1 ausgewählt haben. Wechseln Sie zu dem Element, für das Sie eine Bedingung erstellen möchten. In diesem Beispiel durchsuchen, zu der ThreadID, die in der XPath-Ausdruck gefunden werden: /E2ETraceEvent/System/Execution/@ThreadID Knoten. Doppelklicken Sie auf das ThreadID-Attribut in der Strukturansicht. Hierdurch wird rechts im Dialogfeld ein Ausdruck für das Attribut erstellt.  
   
-5.  Ändern Sie das Parameterfeld für die ThreadID-Bedingung von keine in '{0}". Dieser Schritt aktiviert den ThreadID-Wert, der beim Anwenden des Filters konfiguriert werden soll. (Siehe den Abschnitt zum Anwenden eines Filters.) Sie können bis zu vier Parameter definieren. Bedingungen werden mit dem OR-Operator kombiniert.  
+5. Ändern Sie das Parameterfeld für die ThreadID-Bedingung von keine in '{0}". Dieser Schritt aktiviert den ThreadID-Wert, der beim Anwenden des Filters konfiguriert werden soll. (Siehe den Abschnitt zum Anwenden eines Filters.) Sie können bis zu vier Parameter definieren. Bedingungen werden mit dem OR-Operator kombiniert.  
   
-6.  Klicken Sie auf **Ok** zum Erstellen des Filters.  
+6. Klicken Sie auf **Ok** zum Erstellen des Filters.  
   
 > [!NOTE]
 >  Sobald ein Filter mit dem Vorlagen-Assistenten erstellt wurde, kann er nur manuell bearbeitet werden. Es ist nicht möglich, den Assistenten für einen Filter zu aktivieren, der bereits erstellt wurde. Darüber hinaus werden die Bedingungen eines XPath-Filters, der mit dem Vorlagen-Assistenten erstellt wurde, mit dem OR-Operator kombiniert. Wenn ein AND-Vorgang benötigt wird, können Sie den Filterausdruck bearbeiten, nachdem er erstellt wurde.  
@@ -277,20 +277,20 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
 ###### <a name="creating-a-custom-filter-manually"></a>Manuelles Erstellen eines benutzerdefinierten Filters  
  Das Menü Benutzerdefinierte Filter ermöglicht Ihnen, XPath-Filter manuell einzugeben.  
   
-1.  Klicken Sie im Menü Ansicht auf die **benutzerdefinierte Filter** Menüelement.  
+1. Klicken Sie im Menü Ansicht auf die **benutzerdefinierte Filter** Menüelement.  
   
-2.  Klicken Sie im daraufhin angezeigten Dialogfeld auf **neu.**  
+2. Klicken Sie im daraufhin angezeigten Dialogfeld auf **neu.**  
   
-3.  Geben Sie mindestens einen Filternamen und einen XPath-Ausdruck an.  
+3. Geben Sie mindestens einen Filternamen und einen XPath-Ausdruck an.  
   
-4.  Klicken Sie auf **OK**.  
+4. Klicken Sie auf **OK**.  
   
 ###### <a name="applying-a-custom-filter"></a>Anwenden eines benutzerdefinierten Filters  
  Sobald ein benutzerdefinierter Filter erstellt wurde, kann er über die Filtersymbolleiste aufgerufen werden. Wählen Sie den Filter, die Sie anwenden möchten die **Suchen In** die Filtersymbolleiste Feld. Wählen Sie für das vorherige Beispiel 'Thread-ID' aus.  
   
-1.  Geben Sie den Wert, der Sie in Suchen der **Suchen nach** Feld. Geben Sie in diesem Beispiel die ID des Threads ein, nach dem Sie suchen möchten.  
+1. Geben Sie den Wert, der Sie in Suchen der **Suchen nach** Feld. Geben Sie in diesem Beispiel die ID des Threads ein, nach dem Sie suchen möchten.  
   
-2.  Klicken Sie auf **jetzt filtern**, und beobachten Sie das Ergebnis des Vorgangs.  
+2. Klicken Sie auf **jetzt filtern**, und beobachten Sie das Ergebnis des Vorgangs.  
   
  Wenn der Filter mehrere Parameter verwendet werden, geben Sie sie mithilfe von ";" als Trennzeichen in den **Suchen nach** Feld. Die folgende Zeichenfolge definiert z. B. 3 Parameter: ‘1;findValue;text’. Der Viewer wendet '1', um die {0} -Parameter des Filters. 'FindValue' und 'Text' gelten für {1} und {2} bzw.  
   
@@ -299,21 +299,21 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
   
  So importieren Sie einen benutzerdefinierten Filter  
   
-1.  In der **Ansicht** Menü klicken Sie auf **benutzerdefinierte Filter**.  
+1. In der **Ansicht** Menü klicken Sie auf **benutzerdefinierte Filter**.  
   
-2.  Klicken Sie im daraufhin angezeigten Dialogfeld klicken Sie auf die **Import** Schaltfläche.  
+2. Klicken Sie im daraufhin angezeigten Dialogfeld klicken Sie auf die **Import** Schaltfläche.  
   
-3.  Navigieren Sie zur benutzerdefinierten Filterdatei (.stvcf), klicken Sie auf die Datei, und klicken Sie auf die **öffnen** Schaltfläche.  
+3. Navigieren Sie zur benutzerdefinierten Filterdatei (.stvcf), klicken Sie auf die Datei, und klicken Sie auf die **öffnen** Schaltfläche.  
   
  So exportieren Sie einen benutzerdefinierten Filter  
   
-1.  Klicken Sie im Menü Ansicht auf **benutzerdefinierte Filter**.  
+1. Klicken Sie im Menü Ansicht auf **benutzerdefinierte Filter**.  
   
-2.  Wählen Sie im aufgerufenen Dialogfeld den Filter, den Sie exportieren möchten.  
+2. Wählen Sie im aufgerufenen Dialogfeld den Filter, den Sie exportieren möchten.  
   
-3.  Klicken Sie auf die **exportieren** Schaltfläche.  
+3. Klicken Sie auf die **exportieren** Schaltfläche.  
   
-4.  Geben Sie den Namen und Speicherort der benutzerdefinierten filterdefinitionsdatei (.stvcf), und klicken Sie auf die **speichern** Schaltfläche.  
+4. Geben Sie den Namen und Speicherort der benutzerdefinierten filterdefinitionsdatei (.stvcf), und klicken Sie auf die **speichern** Schaltfläche.  
   
 > [!NOTE]
 >  Diese benutzerdefinierten Filter können nur von Service Trace Viewer importiert und exportiert werden. Sie können nicht von anderen Tools gelesen werden.  
@@ -396,9 +396,9 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
 #### <a name="adjusting-partial-loading"></a>Anpassen des teilweisen Ladens  
  Nachdem die Ablaufverfolgungsdatei teilweise geladen wurde, können Sie den geladenen Datensatz ändern. Passen Sie dazu die Symbolleiste für teilweises Laden oben im Viewer an.  
   
-1.  Verschieben Sie die Symbolleiste mit der Maus, oder geben Sie die Anfangs- und Endzeit ein.  
+1. Verschieben Sie die Symbolleiste mit der Maus, oder geben Sie die Anfangs- und Endzeit ein.  
   
-2.  Klicken Sie auf die **anpassen** Schaltfläche.  
+2. Klicken Sie auf die **anpassen** Schaltfläche.  
   
 ## <a name="understanding-trace-icons"></a>Verstehen von Ablaufverfolgungssymbolen  
  Im folgenden werden eine Liste von Symbolen, die das Service Trace Viewer-Tool verwendet die **Aktivität** Ansicht **Graph** anzeigen und **Ablaufverfolgung** Bereich, um verschiedene Elemente darstellen.  

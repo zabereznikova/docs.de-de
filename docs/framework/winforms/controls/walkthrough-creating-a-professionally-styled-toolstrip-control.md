@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 22ec7b85973d606d329fe1c58f8cef7036fc1a8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 526cb509d780abdbf3db6e15504616de19daae83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115790"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336550"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Exemplarische Vorgehensweise: Erstellen eines professionellen ToolStrip-Steuerelements
 Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.ToolStrip> steuert, ein professionelles Aussehen und Verhalten durch eine eigene Klasse abgeleitet schreiben die <xref:System.Windows.Forms.ToolStripProfessionalRenderer> Typ.  
@@ -45,22 +45,22 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
   
 #### <a name="to-create-the-control-library-project"></a>Um die Steuerelementbibliothek-Projekt zu erstellen.  
   
-1.  Erstellen Sie ein neues Windows-Steuerelementbibliothek-Projekt namens `StackViewLibrary`.  
+1. Erstellen Sie ein neues Windows-Steuerelementbibliothek-Projekt namens `StackViewLibrary`.  
   
-2.  In **Projektmappen-Explorer**, löschen Sie Standardsteuerelement des Projekts, indem Sie die Quelldatei, die mit dem Namen "UserControl1.cs" oder "UserControl1.vb", abhängig von der Sprache Ihrer Wahl löschen.  
+2. In **Projektmappen-Explorer**, löschen Sie Standardsteuerelement des Projekts, indem Sie die Quelldatei, die mit dem Namen "UserControl1.cs" oder "UserControl1.vb", abhängig von der Sprache Ihrer Wahl löschen.  
   
      Weitere Informationen finden Sie unter [Vorgehensweise: Entfernen, löschen und Ausschließen von Elementen](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
   
-3.  Fügen Sie einen neuen <xref:System.Windows.Forms.UserControl> Element für die **StackViewLibrary** Projekt. Weisen Sie der neuen Quelldatei Basisnamen `StackView`.  
+3. Fügen Sie einen neuen <xref:System.Windows.Forms.UserControl> Element für die **StackViewLibrary** Projekt. Weisen Sie der neuen Quelldatei Basisnamen `StackView`.  
   
 ## <a name="designing-the-stackview-control"></a>Entwerfen des StackView-Steuerelements  
  Die `StackView` Steuerelement ist ein zusammengesetztes Steuerelement mit einem untergeordneten <xref:System.Windows.Forms.ToolStrip> Steuerelement. Weitere Informationen über zusammengesetzte Steuerelemente finden Sie unter [Varieties of Custom Controls](varieties-of-custom-controls.md).  
   
 #### <a name="to-design-the-stackview-control"></a>So entwerfen Sie die StackView-Steuerelement  
   
-1.  Von der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.ToolStrip> Steuerelement auf die Entwurfsoberfläche.  
+1. Von der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.ToolStrip> Steuerelement auf die Entwurfsoberfläche.  
   
-2.  In der **Eigenschaften** legen die <xref:System.Windows.Forms.ToolStrip> Eigenschaften des Steuerelements entsprechend der folgenden Tabelle.  
+2. In der **Eigenschaften** legen die <xref:System.Windows.Forms.ToolStrip> Eigenschaften des Steuerelements entsprechend der folgenden Tabelle.  
   
     |Eigenschaft|Wert|  
     |--------------|-----------|  
@@ -73,9 +73,9 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
     |Abstand|`0, 7, 0, 0`|  
     |RenderMode|<xref:System.Windows.Forms.ToolStripRenderMode.Professional>|  
   
-3.  Im Windows Forms-Designer, klicken Sie auf die <xref:System.Windows.Forms.ToolStrip> des Steuerelements **hinzufügen** Schaltfläche, und fügen eine <xref:System.Windows.Forms.ToolStripButton> auf die `stackStrip` Steuerelement.  
+3. Im Windows Forms-Designer, klicken Sie auf die <xref:System.Windows.Forms.ToolStrip> des Steuerelements **hinzufügen** Schaltfläche, und fügen eine <xref:System.Windows.Forms.ToolStripButton> auf die `stackStrip` Steuerelement.  
   
-4.  In der **Eigenschaften** legen die <xref:System.Windows.Forms.ToolStripButton> Eigenschaften des Steuerelements entsprechend der folgenden Tabelle.  
+4. In der **Eigenschaften** legen die <xref:System.Windows.Forms.ToolStripButton> Eigenschaften des Steuerelements entsprechend der folgenden Tabelle.  
   
     |Eigenschaft|Wert|  
     |--------------|-----------|  
@@ -91,7 +91,7 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
     |Text|**Mail**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
-5.  Wiederholen Sie Schritt 7 für drei weitere <xref:System.Windows.Forms.ToolStripButton> Steuerelemente.  
+5. Wiederholen Sie Schritt 7 für drei weitere <xref:System.Windows.Forms.ToolStripButton> Steuerelemente.  
   
      Benennen Sie die Steuerelemente `calendarStackButton`, `contactsStackButton`, und `tasksStackButton`. Legen Sie den Wert, der die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft **Kalender**, **Kontakte**, und **Aufgaben**bzw.  
   
@@ -100,26 +100,26 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
   
 #### <a name="to-handle-events"></a>Zum Behandeln von Ereignissen  
   
-1.  Wählen Sie in der Windows Forms-Designer die `StackView` Steuerelement.  
+1. Wählen Sie in der Windows Forms-Designer die `StackView` Steuerelement.  
   
-2.  Klicken Sie im Fenster **Eigenschaften** auf **Ereignisse**.  
+2. Klicken Sie im Fenster **Eigenschaften** auf **Ereignisse**.  
   
-3.  Doppelklicken Sie auf das Load-Ereignis zum Generieren der `StackView_Load` -Ereignishandler.  
+3. Doppelklicken Sie auf das Load-Ereignis zum Generieren der `StackView_Load` -Ereignishandler.  
   
-4.  Kopieren Sie den folgenden Code und fügen Sie ihn in den `StackView_Load`-Ereignishandler ein.  
+4. Kopieren Sie den folgenden Code und fügen Sie ihn in den `StackView_Load`-Ereignishandler ein.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#3)]  
   
-5.  Wählen Sie in der Windows Forms-Designer die `mailStackButton` Steuerelement.  
+5. Wählen Sie in der Windows Forms-Designer die `mailStackButton` Steuerelement.  
   
-6.  Klicken Sie im Fenster **Eigenschaften** auf **Ereignisse**.  
+6. Klicken Sie im Fenster **Eigenschaften** auf **Ereignisse**.  
   
-7.  Doppelklicken Sie auf das Click-Ereignis.  
+7. Doppelklicken Sie auf das Click-Ereignis.  
   
      Die Windows Forms-Designer generiert die `mailStackButton_Click` -Ereignishandler.  
   
-8.  Benennen Sie die `mailStackButton_Click` Ereignishandler `stackButton_Click`.  
+8. Benennen Sie die `mailStackButton_Click` Ereignishandler `stackButton_Click`.  
   
      Weitere Informationen finden Sie unter [Umbenennen eines Codesymbols](/visualstudio/ide/reference/rename).  
   
@@ -139,12 +139,12 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
   
 #### <a name="to-define-icons"></a>Um Symbole zu definieren.  
   
-1.  Im Code-Editor, fügen Sie folgenden Code in die `StackView` Definition der Klasse. Dieser Code initialisiert die Bitmaps für die <xref:System.Windows.Forms.ToolStripButton> Symbole.  
+1. Im Code-Editor, fügen Sie folgenden Code in die `StackView` Definition der Klasse. Dieser Code initialisiert die Bitmaps für die <xref:System.Windows.Forms.ToolStripButton> Symbole.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#2)]  
   
-2.  Fügen Sie einen Aufruf an die `InitializeImages` -Methode in der die `StackView` Klassenkonstruktor.  
+2. Fügen Sie einen Aufruf an die `InitializeImages` -Methode in der die `StackView` Klassenkonstruktor.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
@@ -154,14 +154,14 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
   
 #### <a name="to-implement-a-custom-renderer"></a>Zum Implementieren eines benutzerdefinierten Renderers  
   
-1.  Fügen Sie folgenden Code in die `StackView` Definition zu steuern.  
+1. Fügen Sie folgenden Code in die `StackView` Definition zu steuern.  
   
      Dies ist die Definition für die `StackRenderer` Klasse, welche Außerkraftsetzungen der <xref:System.Windows.Forms.ToolStripRenderer.RenderGrip>, <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBorder>, und <xref:System.Windows.Forms.ToolStripRenderer.RenderButtonBackground> Methoden, um eine benutzerdefinierte Darstellung zu erzeugen.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#10)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#10)]  
   
-2.  In der `StackView` Konstruktor des Steuerelements, erstellen Sie eine neue Instanz der dem `StackRenderer` Klasse, und weisen Sie diese Instanz mit der `stackStrip` des Steuerelements <xref:System.Windows.Forms.ToolStrip.Renderer%2A> Eigenschaft.  
+2. In der `StackView` Konstruktor des Steuerelements, erstellen Sie eine neue Instanz der dem `StackRenderer` Klasse, und weisen Sie diese Instanz mit der `stackStrip` des Steuerelements <xref:System.Windows.Forms.ToolStrip.Renderer%2A> Eigenschaft.  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
@@ -171,9 +171,9 @@ Sie können Ihrer Anwendungsverzeichnis erteilen <xref:System.Windows.Forms.Tool
   
 #### <a name="to-test-the-stackview-control"></a>So testen Sie die StackView-Steuerelement  
   
-1.  Drücken Sie F5, um das Projekt erstellen und starten Sie den **UserControl-Testcontainer**.  
+1. Drücken Sie F5, um das Projekt erstellen und starten Sie den **UserControl-Testcontainer**.  
   
-2.  Bewegen Sie den Zeiger über die Schaltflächen des der `StackView` steuern, und klicken Sie dann auf eine Schaltfläche, um die Darstellung im ausgewählten Zustand anzuzeigen.  
+2. Bewegen Sie den Zeiger über die Schaltflächen des der `StackView` steuern, und klicken Sie dann auf eine Schaltfläche, um die Darstellung im ausgewählten Zustand anzuzeigen.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  In dieser exemplarischen Vorgehensweise haben Sie eine wiederverwendbare benutzerdefinierte Clientsteuerelement mit der professionelle Darstellung eines Steuerelements Office XP erstellt. Sie können die <xref:System.Windows.Forms.ToolStrip> -Steuerelementfamilie zu vielen anderen Zwecken:  

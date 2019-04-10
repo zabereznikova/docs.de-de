@@ -2,12 +2,12 @@
 title: ASP.NET-Zwischenspeicherungsintegration
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197447"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309471"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET-Zwischenspeicherungsintegration
 In diesem Beispiel wird gezeigt, wie der ASP.NET-Ausgabecache mit dem WCF-WEB HTTP-Programmiermodell verwendet wird. Dieses Thema befasst sich mit den Integrationsfunktion des ASP.NET-Ausgabecaches.  
@@ -34,31 +34,31 @@ In diesem Beispiel wird gezeigt, wie der ASP.NET-Ausgabecache mit dem WCF-WEB HT
 ## <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
  Das Beispiel umfasst drei Projekte:  
   
--   **Dienst**: ein Webanwendungsprojekt, die einen WCF-HTTP-Dienst, gehostet in ASP.NET enthält.  
+-   **Dienst:** Ein Webanwendungsprojekt, die einen WCF-HTTP-Dienst, gehostet in ASP.NET enthält.  
   
--   **Client**: ein Konsolenanwendungsprojekt, das Aufrufe an den Dienst ausführt.  
+-   **Client**: Ein Konsolenanwendungsprojekt, das Aufrufe an den Dienst ausführt.  
   
--   **Allgemeine**: eine freigegebene Bibliothek, die die vom Client und Dienst verwendeten Kundentyp enthält.  
+-   **Allgemeine**: Eine freigegebene Bibliothek, die die vom Client und Dienst verwendeten Kundentyp enthält.  
   
  Während die Clientkonsolenanwendung ausgeführt wird, sendet der Client Anforderungen an den Dienst und schreibt die in den Antworten enthaltenen wichtigen Informationen in das Konsolenfenster.  
   
 #### <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
   
-1.  Öffnen Sie die Projektmappe für das Beispiel der Integration von ASP.NET-Zwischenspeicherung.  
+1. Öffnen Sie die Projektmappe für das Beispiel der Integration von ASP.NET-Zwischenspeicherung.  
   
-2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
+2. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
-3.  Wenn die **Projektmappen-Explorer** nicht bereits geöffnet ist, drücken Sie STRG + W + s.  
+3. Wenn die **Projektmappen-Explorer** nicht bereits geöffnet ist, drücken Sie STRG + W + s.  
   
-4.  Von der **Projektmappen-Explorer** rechts klicken die **Service** Projekt, und wählen **neue Instanz starten**. Der ASP.NET-Entwicklungsserver, der den Dienst hostet, wird gestartet.  
+4. Von der **Projektmappen-Explorer** rechts klicken die **Service** Projekt, und wählen **neue Instanz starten**. Der ASP.NET-Entwicklungsserver, der den Dienst hostet, wird gestartet.  
   
-5.  Von der **Projektmappen-Explorer** rechts klicken die **Client** Projekt, und wählen **neue Instanz starten**.  
+5. Von der **Projektmappen-Explorer** rechts klicken die **Client** Projekt, und wählen **neue Instanz starten**.  
   
-6.  Im eingeblendeten Clientkonsolenfenster werden der URI des ausgeführten Diensts und der URI der HTML-Hilfeseite für den ausgeführten Dienst angezeigt. Sie können die HTML-Hilfeseite jederzeit anzeigen, indem sie den URI der Hilfeseite in einem Browser eingeben.  
+6. Im eingeblendeten Clientkonsolenfenster werden der URI des ausgeführten Diensts und der URI der HTML-Hilfeseite für den ausgeführten Dienst angezeigt. Sie können die HTML-Hilfeseite jederzeit anzeigen, indem sie den URI der Hilfeseite in einem Browser eingeben.  
   
-7.  Während das Beispiel ausgeführt wird, schreibt der Client den Status der aktuellen Aktivität.  
+7. Während das Beispiel ausgeführt wird, schreibt der Client den Status der aktuellen Aktivität.  
   
-8.  Drücken Sie eine beliebige Taste, um die Clientkonsolenanwendung zu beenden.  
+8. Drücken Sie eine beliebige Taste, um die Clientkonsolenanwendung zu beenden.  
   
 9. Drücken Sie UMSCHALT+F5, um das Debugging des Diensts zu beenden.  
   

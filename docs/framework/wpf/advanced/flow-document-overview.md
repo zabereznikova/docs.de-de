@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139606"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303491"
 ---
 # <a name="flow-document-overview"></a>Übersicht über Flussdokumente
 Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein vordefiniertes Layout festgelegt zu werden, passen Flussdokumente ihren Inhalt basierend auf Laufzeitvariablen dynamisch an Variablen wie Fenstergröße, Geräteauflösung und optionale Benutzereinstellungen an und brechen den Inhalt dynamisch um. Zudem bieten Flussdokumente erweiterte Dokumentfunktionen, z.B. Paginierung und Spalten. Dieses Thema enthält eine Übersicht über Flussdokumente und deren Erstellung.  
@@ -89,9 +89,9 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  Für die Zwecke des fortlaufenden Inhalts gibt es zwei wichtige Kategorien:  
   
-1.  **Blockabgeleitete Klassen**: Auch "Blockinhaltselemente" oder einfach "Blockelemente" genannt. Elemente, die von erben <xref:System.Windows.Documents.Block> kann verwendet werden, um Elemente unter einem gemeinsamen übergeordneten Element gruppiert oder gemeinsame Attribute auf eine Gruppe angewendet.  
+1. **Blockabgeleitete Klassen**: Auch "Blockinhaltselemente" oder einfach "Blockelemente" genannt. Elemente, die von erben <xref:System.Windows.Documents.Block> kann verwendet werden, um Elemente unter einem gemeinsamen übergeordneten Element gruppiert oder gemeinsame Attribute auf eine Gruppe angewendet.  
   
-2.  **Inlineabgeleitete Klassen**: Auch "Inlineinhaltselemente" oder einfach "Inlineelemente" genannt. Elemente, die von erben <xref:System.Windows.Documents.Inline> entweder in einem Blockelement oder einem anderen Inlineelement enthalten sind. Inlineelemente werden oft als direkter Container für Inhalt verwendet, der auf dem Bildschirm gerendert wird. Z. B. eine <xref:System.Windows.Documents.Paragraph> (Block-Element) darf eine <xref:System.Windows.Documents.Run> (Inline-Element), aber die <xref:System.Windows.Documents.Run> enthält den Text, der auf dem Bildschirm gerendert wird.  
+2. **Inlineabgeleitete Klassen**: Auch "Inlineinhaltselemente" oder einfach "Inlineelemente" genannt. Elemente, die von erben <xref:System.Windows.Documents.Inline> entweder in einem Blockelement oder einem anderen Inlineelement enthalten sind. Inlineelemente werden oft als direkter Container für Inhalt verwendet, der auf dem Bildschirm gerendert wird. Z. B. eine <xref:System.Windows.Documents.Paragraph> (Block-Element) darf eine <xref:System.Windows.Documents.Run> (Inline-Element), aber die <xref:System.Windows.Documents.Run> enthält den Text, der auf dem Bildschirm gerendert wird.  
   
  Jede Klasse in diesen zwei Kategorien wird nachstehend kurz beschrieben.  
   

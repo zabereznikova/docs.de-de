@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-ms.openlocfilehash: 1a3fcac56df1328c12d7a5dcb542138afdb486f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 662343af42f72816a5a673d2cd6d839a5dca9190
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214831"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341399"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Vorgehensweise: Gruppieren von Steuerelementen mit dem Windows Forms-Bereichssteuerelement im Designer
 Windows Forms <xref:System.Windows.Forms.Panel> Steuerelemente werden verwendet, um die Gruppierung anderer Steuerelemente. Es gibt drei Gründe zum Gruppieren von Steuerelementen. Eine ist die visuelle Gruppierung von verwandten Form-Elemente für eine übersichtliche Benutzeroberfläche. eine andere ist die programmgesteuerte Gruppieren von Optionsfeldern z. B. das letzte ist für die Steuerelemente zur Entwurfszeit als Einheit verschieben.  
@@ -21,13 +21,13 @@ Windows Forms <xref:System.Windows.Forms.Panel> Steuerelemente werden verwendet,
   
 ### <a name="to-create-a-group-of-controls"></a>Um eine Gruppe von Steuerelementen zu erstellen.  
   
-1.  Ziehen Sie eine <xref:System.Windows.Forms.Panel> -Steuerelement aus der **Windows Forms** Registerkarte der Toolbox auf das Formular.  
+1. Ziehen Sie eine <xref:System.Windows.Forms.Panel> -Steuerelement aus der **Windows Forms** Registerkarte der Toolbox auf das Formular.  
   
-2.  Fügen Sie weitere Steuerelemente hinzu, um den Bereich, Zeichnen im Auswahlbereich.  
+2. Fügen Sie weitere Steuerelemente hinzu, um den Bereich, Zeichnen im Auswahlbereich.  
   
      Wenn Sie vorhandene Steuerelemente verfügen, die Sie in einem Panel schließen möchten, können Sie wählen alle Steuerelemente, verschieben Sie sie in die Zwischenablage, wählen Sie die <xref:System.Windows.Forms.Panel> steuern, und fügen Sie sie in den Bereich. Sie können auch in den Bereich ziehen.  
   
-3.  (Optional) Wenn Sie einen Rahmen um einen Bereich hinzufügen möchten, legen Sie dessen <xref:System.Windows.Forms.BorderStyle> Eigenschaft. Es gibt drei Optionen: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>, und <xref:System.Windows.Forms.BorderStyle.None>.  
+3. (Optional) Wenn Sie einen Rahmen um einen Bereich hinzufügen möchten, legen Sie dessen <xref:System.Windows.Forms.BorderStyle> Eigenschaft. Es gibt drei Optionen: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>, und <xref:System.Windows.Forms.BorderStyle.None>.  
   
 ## <a name="see-also"></a>Siehe auch
 

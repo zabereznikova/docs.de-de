@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 21a3f7f687f72fe6e73b5d2420675634ff834d2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117987"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332117"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Exemplarische Vorgehensweise: Erstellen einer Explorer-ähnlichen Schnittstelle mit dem ListView-Steuerelement und dem TreeView-Steuerelement im Designer
 Einer der Vorteile von Visual Studio ist die Fähigkeit zum Erstellen von professionell gestaltete Windows Forms-Anwendungen in eine Kurzform der Zeitspanne. Ein häufiges Szenario ist die Erstellung einer Benutzeroberfläche (UI) mit <xref:System.Windows.Forms.ListView> und <xref:System.Windows.Forms.TreeView> Steuerelemente, die die Windows-Explorer-Funktion von Windows-Betriebssystemen ähnelt. Windows-Explorer zeigt eine hierarchische Struktur der Dateien und Ordner auf dem Computer eines Benutzers an.  
@@ -28,27 +28,27 @@ Einer der Vorteile von Visual Studio ist die Fähigkeit zum Erstellen von profes
   
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>Um das Formular mit einer ListView und TreeView-Steuerelement zu erstellen.  
   
-1.  Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.  
+1. Zeigen Sie im Menü **Datei** auf **Neu**, und klicken Sie dann auf **Projekt**.  
   
-2.  In der **neues Projekt** Dialogfeld Feld, gehen Sie folgendermaßen vor:  
+2. In der **neues Projekt** Dialogfeld Feld, gehen Sie folgendermaßen vor:  
   
     1.  Wählen Sie in die Kategorien entweder **Visual Basic** oder **Visual C#-**.  
   
     2.  Wählen Sie in der Liste der Vorlagen, **Windows Forms-Anwendung**.  
   
-3.  Klicken Sie auf **OK**. Ein neues Windows Forms-Projekt wird erstellt.  
+3. Klicken Sie auf **OK**. Ein neues Windows Forms-Projekt wird erstellt.  
   
-4.  Hinzufügen einer <xref:System.Windows.Forms.SplitContainer> -Steuerelement auf das Formular, und legen Sie dessen <xref:System.Windows.Forms.SplitContainer.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill>.  
+4. Hinzufügen einer <xref:System.Windows.Forms.SplitContainer> -Steuerelement auf das Formular, und legen Sie dessen <xref:System.Windows.Forms.SplitContainer.Dock%2A> Eigenschaft <xref:System.Windows.Forms.DockStyle.Fill>.  
   
-5.  Hinzufügen einer <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1` auf das Formular und verwenden Sie das Fenster "Eigenschaften" zwei Bilder hinzu: ein Ordner-Image und eine Dokument-Image, in dieser Reihenfolge.  
+5. Hinzufügen einer <xref:System.Windows.Forms.ImageList> mit dem Namen `imageList1` auf das Formular und verwenden Sie das Fenster "Eigenschaften" zwei Bilder hinzu: ein Ordner-Image und eine Dokument-Image, in dieser Reihenfolge.  
   
-6.  Hinzufügen einer <xref:System.Windows.Forms.TreeView> Steuerelement mit dem Namen `treeview1` auf das Formular, und positionieren Sie sie auf der linken Seite von der <xref:System.Windows.Forms.SplitContainer> Steuerelement. Im Fenster "Eigenschaften" für `treeView1` gehen Sie folgendermaßen vor:  
+6. Hinzufügen einer <xref:System.Windows.Forms.TreeView> Steuerelement mit dem Namen `treeview1` auf das Formular, und positionieren Sie sie auf der linken Seite von der <xref:System.Windows.Forms.SplitContainer> Steuerelement. Im Fenster "Eigenschaften" für `treeView1` gehen Sie folgendermaßen vor:  
   
     1.  Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
   
     2.  Legen Sie die <xref:System.Windows.Forms.TreeView.ImageList%2A> Eigenschaft `imagelist1.`  
   
-7.  Hinzufügen einer <xref:System.Windows.Forms.ListView> Steuerelement mit dem Namen `listView1` auf das Formular, und positionieren Sie sie auf der rechten Seite von der <xref:System.Windows.Forms.SplitContainer> Steuerelement. Im Fenster "Eigenschaften" für `listview1` gehen Sie folgendermaßen vor:  
+7. Hinzufügen einer <xref:System.Windows.Forms.ListView> Steuerelement mit dem Namen `listView1` auf das Formular, und positionieren Sie sie auf der rechten Seite von der <xref:System.Windows.Forms.SplitContainer> Steuerelement. Im Fenster "Eigenschaften" für `listview1` gehen Sie folgendermaßen vor:  
   
     1.  Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
   
@@ -58,7 +58,7 @@ Einer der Vorteile von Visual Studio ist die Fähigkeit zum Erstellen von profes
   
     4.  Legen Sie die <xref:System.Windows.Forms.ListView.SmallImageList%2A> Eigenschaft `imageList1.`  
   
-8.  Implementieren Sie den Code zum Auffüllen der <xref:System.Windows.Forms.TreeView> mit Knoten und die untergeordneten Knoten. Fügen Sie diesen Code zur `Form1`-Klasse hinzu.  
+8. Implementieren Sie den Code zum Auffüllen der <xref:System.Windows.Forms.TreeView> mit Knoten und die untergeordneten Knoten. Fügen Sie diesen Code zur `Form1`-Klasse hinzu.  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  

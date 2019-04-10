@@ -2,12 +2,12 @@
 title: Konfiguration und Metadatenunterstützung
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 65c826c909496a9efeb99801142eb49e4f92d3bc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183489"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298304"
 ---
 # <a name="configuration-and-metadata-support"></a>Konfiguration und Metadatenunterstützung
 In diesem Thema wird beschrieben, wie Konfigurations- und Metadatenunterstützung für Bindungen und Bindungselemente aktiviert wird.  
@@ -163,9 +163,9 @@ if (soapBinding != null)
   
  Bei der Ausführung von "Svcutil.exe" gibt es zwei Optionen, um "Svcutil.exe" dazu zu bewegen, die WSDL-Importerweiterungen zu laden:  
   
-1.  Verweisen Sie Svcutil.exe in der Konfigurationsdatei, die mithilfe der/svcutilconfig:\<Datei >.  
+1. Verweisen Sie Svcutil.exe in der Konfigurationsdatei, die mithilfe der/svcutilconfig:\<Datei >.  
   
-2.  Fügen Sie den Konfigurationsabschnitt zu Svcutil.exe.config im gleichen Verzeichnis wie Svcutil.exe hinzu.  
+2. Fügen Sie den Konfigurationsabschnitt zu Svcutil.exe.config im gleichen Verzeichnis wie Svcutil.exe hinzu.  
   
  Der `UdpBindingElementImporter`-Typ implementiert die <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType>-Schnittstelle. Die `ImportEndpoint`-Methode importiert die Adresse vom WSDL-Anschluss:  
   
@@ -182,7 +182,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  Das benutzerdefinierte Bindungselement kann Richtlinienassertionen in die WSDL-Bindung für einen Dienstendpunkt exportieren, um die Funktionen dieses Bindungselements auszudrücken. Der folgende Beispielcode stammt aus dem [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel.  
   
 #### <a name="policy-export"></a>Richtlinienexport  
- Die `UdpTransportBindingElement` -Typ implementiert <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> zum Hinzufügen der Unterstützung für das Exportieren der Richtlinie. Als Ergebnis schließt <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> `UdpTransportBindingElement` in die Generierung der Richtlinie für eine Bindung ein, die dieses enthält.  
+ Die `UdpTransportBindingElement` -Typ implementiert <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> zum Hinzufügen der Unterstützung für das Exportieren der Richtlinie. Als Ergebnis schließt <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType>`UdpTransportBindingElement` in die Generierung der Richtlinie für eine Bindung ein, die dieses enthält.  
   
  Fügen Sie in <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType> eine Assertion für UDP und eine weitere Assertion ein, wenn der Kanal sich im Multicastmodus befindet. Grund hierfür ist, dass der Multicastmodus Einfluss auf die Art und Weise hat, in der der Kommunikationsstapel erstellt wird, weshalb eine Koordinierung zwischen beiden Seiten stattfinden muss.  
   
@@ -223,12 +223,12 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  Dann implementieren Sie <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> aus der registrierten Klasse (`UdpBindingElementImporter`). Prüfen Sie in <xref:System.ServiceModel.Description.IPolicyImportExtension.ImportPolicy%2A?displayProperty=nameWithType> die Assertionen im entsprechenden Namespace, verarbeiten Sie sie für die Generierung des Transports, und prüfen Sie, ob Multicast vorliegt. Entfernen Sie darüber hinaus die Assertionen, die das Importprogramm handhabt, aus der Liste der Bindungsassertionen. Erneut stehen bei der Ausführung von "Svcutil.exe" zwei Optionen für die Integration zur Verfügung:  
   
-1.  Verweisen Sie Svcutil.exe Konfigurationsdatei mithilfe der/svcutilconfig:\<Datei >.  
+1. Verweisen Sie Svcutil.exe Konfigurationsdatei mithilfe der/svcutilconfig:\<Datei >.  
   
-2.  Fügen Sie den Konfigurationsabschnitt zu Svcutil.exe.config im gleichen Verzeichnis wie Svcutil.exe hinzu.  
+2. Fügen Sie den Konfigurationsabschnitt zu Svcutil.exe.config im gleichen Verzeichnis wie Svcutil.exe hinzu.  
   
 ### <a name="adding-a-custom-standard-binding-importer"></a>Hinzufügen eines benutzerdefinierten Standardbindungsimportprogramms  
- „Svcutil.exe“ und der <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>-Typ erkennen und importieren vom System bereitgestellte Bindungen standardmäßig. Andernfalls wird die Bindung als <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>-Instanz importiert. Zur Aktivierung des Imports der <xref:System.ServiceModel.Description.WsdlImporter> für „Svcutil.exe“ und den `SampleProfileUdpBinding`, fungiert der `UdpBindingElementImporter` auch als benutzerdefiniertes Importprogramm für Standardbindungen.  
+ Svcutil.exe und der <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>-Typ erkennen und importieren vom System bereitgestellte Bindungen standardmäßig. Andernfalls wird die Bindung als <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>-Instanz importiert. Zur Aktivierung des Imports der <xref:System.ServiceModel.Description.WsdlImporter> für „Svcutil.exe“ und den `SampleProfileUdpBinding`, fungiert der `UdpBindingElementImporter` auch als benutzerdefiniertes Importprogramm für Standardbindungen.  
   
  Ein benutzerdefiniertes standardbindungsimportprogramm implementiert die `ImportEndpoint` Methode für die <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> Schnittstelle zum Überprüfen der <xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType> Instanz importiert aus den Metadaten, um festzustellen, ob sie von einer spezifischen standardbindung hätte generiert werden kann.  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127454"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315880"
 ---
 # <a name="data-transfer-architectural-overview"></a>Datenübertragungsarchitektur - Übersicht
 Windows Communication Foundation (WCF) kann als Messaginginfrastruktur betrachtet werden. Damit können Nachrichten empfangen, verarbeitet und für weitere Aktionen an Benutzercode verteilt werden, oder es können Nachrichten anhand von Daten des Benutzercodes erstellt und an ein Ziel übergeben werden. In diesem Thema, das sich an fortgeschrittene Entwickler richtet, wird die Architektur zur Verarbeitung von Nachrichten und der darin enthaltenen Daten beschrieben. Eine einfachere, funktionsbezogene Betrachtung zum Senden und Empfangen von Daten finden Sie unter [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).  
@@ -107,15 +107,15 @@ Windows Communication Foundation (WCF) kann als Messaginginfrastruktur betrachte
   
  Damit dies möglich ist, muss zwischen der gesamten `Message` -Instanz und einem XML-Infoset eine Zuordnung definiert werden. Eine solche Zuordnung ist tatsächlich vorhanden: WCF verwendet den SOAP-Standard, um diese Zuordnung zu definieren. Wenn eine `Message` -Instanz als XML-Infoset geschrieben wird, ist der daraus resultierende Infoset der gültige SOAP-Umschlag, der die Nachricht enthält. So würde `WriteMessage` normalerweise die folgenden Schritte ausführen:  
   
-1.  Schreiben des öffnenden SOAP-Umschlagelementtags.  
+1. Schreiben des öffnenden SOAP-Umschlagelementtags.  
   
-2.  Schreiben des öffnenden SOAP-Headerelementtags, Schreiben aller Header und Schließen des Headerelements.  
+2. Schreiben des öffnenden SOAP-Headerelementtags, Schreiben aller Header und Schließen des Headerelements.  
   
-3.  Schreiben des öffnenden SOAP-Textkörperelementtags.  
+3. Schreiben des öffnenden SOAP-Textkörperelementtags.  
   
-4.  Aufrufen von `WriteBodyContents` oder einer entsprechenden Methode zum Schreiben des Texts.  
+4. Aufrufen von `WriteBodyContents` oder einer entsprechenden Methode zum Schreiben des Texts.  
   
-5.  Schließen der Text- und Umschlagelemente.  
+5. Schließen der Text- und Umschlagelemente.  
   
  Die vorhergehenden Schritte sind eng an den SOAP-Standard gebunden. Dies wird durch die Tatsache komplizierter, dass mehrere SOAP-Versionen vorhanden sind. So ist es z.&#160;B. möglich, das SOAP-Umschlagelement richtig zu schreiben, ohne die verwendete SOAP-Version zu kennen. Auch in einigen Fällen ist es möglicherweise wünschenswert, diese komplexe SOAP-spezifische Zuordnung völlig auszuschalten.  
   
@@ -170,11 +170,11 @@ Windows Communication Foundation (WCF) kann als Messaginginfrastruktur betrachte
   
  Zu diesem Zweck wird die <xref:System.Xml.IStreamProvider> -Schnittstelle verwendet. Die Schnittstelle verfügt über eine <xref:System.Xml.IStreamProvider.GetStream> -Methode, die den zu schreibenden Stream zurückgibt. Die richtige Vorgehensweise, um einen in einem Stream befindlichen Nachrichtentext in <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> auszuschreiben, lautet wie folgt:  
   
-1.  Schreiben Sie alle notwendigen Informationen, die dem Stream vorausgehen (z.&#160;B. das öffnende XML-Tag).  
+1. Schreiben Sie alle notwendigen Informationen, die dem Stream vorausgehen (z.&#160;B. das öffnende XML-Tag).  
   
-2.  Rufen Sie die `WriteValue` -Überladung in <xref:System.Xml.XmlDictionaryWriter> auf, die <xref:System.Xml.IStreamProvider>mit einer `IStreamProvider` -Implementierung verwendet, die den zu schreibenden Stream zurückgibt.  
+2. Rufen Sie die `WriteValue` -Überladung in <xref:System.Xml.XmlDictionaryWriter> auf, die <xref:System.Xml.IStreamProvider>mit einer `IStreamProvider` -Implementierung verwendet, die den zu schreibenden Stream zurückgibt.  
   
-3.  Schreiben Sie alle Informationen, die nach dem Stream folgen (z.&#160;B. das schließende XML-Tag).  
+3. Schreiben Sie alle Informationen, die nach dem Stream folgen (z.&#160;B. das schließende XML-Tag).  
   
  Auf diese Weise kann der XML-Writer bestimmen, wann <xref:System.Xml.IStreamProvider.GetStream> aufgerufen wird und die im Stream befindlichen Daten ausgeschrieben werden. So rufen die Text-XML-Writer und die binären XML-Writer die Daten zum Beispiel direkt auf und schreiben den im Stream befindlichen Inhalt zwischen die Start- und Endtags. Der MTOM-Writer ruft <xref:System.Xml.IStreamProvider.GetStream> möglicherweise erst dann auf, wenn er zum Schreiben des entsprechenden Nachrichtenteils bereit ist.  
   

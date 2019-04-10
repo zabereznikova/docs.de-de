@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199322"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307729"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>Interaktion zwischen WPF und Direct3D9
 Sie können Direct3D9-Inhalt in einer Windows Presentation Foundation (WPF)-Anwendung einschließen. In diesem Thema wird beschrieben, wie zum Erstellen von Direct3D9-Inhalt, damit sie effizient mit WPF interagiert wird.  
@@ -112,13 +112,13 @@ Sie können Direct3D9-Inhalt in einer Windows Presentation Foundation (WPF)-Anwe
   
  Um die Leistungseinbuße zu vermeiden, Schreiben Sie Code speziell für den Fall von mehreren Bildschirmen. Die folgende Liste zeigt eine Möglichkeit, mehrere Monitore Code zu schreiben.  
   
-1.  Suchen Sie einen Punkt von der <xref:System.Windows.Interop.D3DImage> in Platz auf dem Bildschirm mit der `Visual.ProjectToScreen` Methode.  
+1. Suchen Sie einen Punkt von der <xref:System.Windows.Interop.D3DImage> in Platz auf dem Bildschirm mit der `Visual.ProjectToScreen` Methode.  
   
-2.  Verwenden der `MonitorFromPoint` GDI-Methode, um den Monitor zu ermitteln, die den Punkt angezeigt wird.  
+2. Verwenden der `MonitorFromPoint` GDI-Methode, um den Monitor zu ermitteln, die den Punkt angezeigt wird.  
   
-3.  Verwenden der `IDirect3D9::GetAdapterMonitor` Methode zu welcher Direct3D9-Adapter finden Sie den Monitor befindet sich auf.  
+3. Verwenden der `IDirect3D9::GetAdapterMonitor` Methode zu welcher Direct3D9-Adapter finden Sie den Monitor befindet sich auf.  
   
-4.  Wenn der Adapter nicht identisch mit den Adapter mit den Hintergrundpuffer ist, erstellen Sie einen neuen Back-Puffer für den neuen Bildschirm, und weisen sie Sie der <xref:System.Windows.Interop.D3DImage> Hintergrundpuffer.  
+4. Wenn der Adapter nicht identisch mit den Adapter mit den Hintergrundpuffer ist, erstellen Sie einen neuen Back-Puffer für den neuen Bildschirm, und weisen sie Sie der <xref:System.Windows.Interop.D3DImage> Hintergrundpuffer.  
   
 > [!NOTE]
 >  Wenn die <xref:System.Windows.Interop.D3DImage> umspannt Monitore, die Leistung ist langsam sein, außer im Fall von WDDM und `IDirect3D9Ex` für denselben Adapter. Es gibt keine Möglichkeit zur Verbesserung der Leistung in dieser Situation.  

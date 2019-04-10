@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: 52d4fc32836a5d20bd99d8ebfd3119c761376e30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098714"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304778"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Vorgehensweise: Hinzufügen der Schaltflächen für das Laden, Speichern und Abbrechen zum BindingNavigator-Steuerelement in Windows Forms
 Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement ist eine zweckgebundene <xref:System.Windows.Forms.ToolStrip> -Steuerelement, das zum Navigieren und Bearbeiten von Steuerelementen im Formular, das an Daten gebunden werden soll.  
@@ -24,21 +24,21 @@ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement ist eine zweckgeb
   
 ### <a name="to-add-load-save-and-cancel-buttons-to-the-bindingnavigator-component"></a>Zum Hinzufügen laden, speichern und Abbrechen (Schaltflächen) der BindingNavigator-Komponente  
   
-1.  Fügen Sie Ihrem Formular ein <xref:System.Windows.Forms.TextBox>-Steuerelement hinzu.  
+1. Fügen Sie Ihrem Formular ein <xref:System.Windows.Forms.TextBox>-Steuerelement hinzu.  
   
-2.  Binden Sie es an eine <xref:System.Windows.Forms.BindingSource>, das an eine Datenquelle gebunden ist. In diesem Beispiel die <xref:System.Windows.Forms.BindingSource> an eine Datenbank gebunden ist.  
+2. Binden Sie es an eine <xref:System.Windows.Forms.BindingSource>, das an eine Datenquelle gebunden ist. In diesem Beispiel die <xref:System.Windows.Forms.BindingSource> an eine Datenbank gebunden ist.  
   
-3.  Nachdem die Adapter Dataset und eine Tabelle generiert wurden, ziehen Sie eine <xref:System.Windows.Forms.BindingNavigator> -Steuerelement auf das Formular.  
+3. Nachdem die Adapter Dataset und eine Tabelle generiert wurden, ziehen Sie eine <xref:System.Windows.Forms.BindingNavigator> -Steuerelement auf das Formular.  
   
-4.  Legen Sie die <xref:System.Windows.Forms.BindingNavigator> des Steuerelements <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> Eigenschaft, um die <xref:System.Windows.Forms.BindingSource> auf das Formular, das an die Steuerelemente gebunden ist.  
+4. Legen Sie die <xref:System.Windows.Forms.BindingNavigator> des Steuerelements <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> Eigenschaft, um die <xref:System.Windows.Forms.BindingSource> auf das Formular, das an die Steuerelemente gebunden ist.  
   
-5.  Wählen Sie das <xref:System.Windows.Forms.BindingNavigator>-Steuerelement.  
+5. Wählen Sie das <xref:System.Windows.Forms.BindingNavigator>-Steuerelement.  
   
-6.  Klicken Sie auf die Smarttag-Glyphe (![Smarttag-Glyphe](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) daher **BindingNavigator-Aufgaben** Dialogfeld wird angezeigt, und wählen Sie **ElementeBearbeiten**.  
+6. Klicken Sie auf die Smarttag-Glyphe (![Smarttag-Glyphe](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) daher **BindingNavigator-Aufgaben** Dialogfeld wird angezeigt, und wählen Sie **ElementeBearbeiten**.  
   
      Die **-Elementauflistungs-Editor** angezeigt wird.  
   
-7.  In der **-Elementauflistungs-Editor**, führen Sie die folgenden:  
+7. In der **-Elementauflistungs-Editor**, führen Sie die folgenden:  
   
     1.  Hinzufügen einer <xref:System.Windows.Forms.ToolStripSeparator> und drei <xref:System.Windows.Forms.ToolStripButton> Elemente nach Auswahl des entsprechenden Typs <xref:System.Windows.Forms.ToolStripItem> und klicken Sie auf die **hinzufügen** Schaltfläche.  
   
@@ -50,7 +50,7 @@ Die <xref:System.Windows.Forms.BindingNavigator> Steuerelement ist eine zweckgeb
   
     5.  Klicken Sie auf **OK** um das Dialogfeld zu schließen. Die Schaltflächen werden hinzugefügt, um die <xref:System.Windows.Forms.ToolStrip>.  
   
-8.  Mit der rechten Maustaste in des Formulars, und wählen Sie **Ansichtscode**.  
+8. Mit der rechten Maustaste in des Formulars, und wählen Sie **Ansichtscode**.  
   
 9. Suchen Sie im Code-Editor, die Zeile des Codes, der Daten in der Tabellenadapter lädt. Dieser Code wurde generiert, wenn Sie die Datenbindung in Schritt 2 einrichten. Der Code sollte ähnlich der folgenden sein: `TableAdapterName.Fill(DataSetName.TableName)`. Die meisten wird voraussichtlich im des Formulars <xref:System.Windows.Forms.Form.Load> Ereignis.  
   
