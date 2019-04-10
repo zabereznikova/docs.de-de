@@ -4,12 +4,12 @@ description: Informationen zu Beispielen und Tutorials für .NET Core, ASP.NET C
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "57558948"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330817"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET-Beispiele und -Tutorials
 
@@ -19,13 +19,13 @@ Die .NET-Dokumentation enthält einen Satz Beispiele und Tutorials zum Erlernen 
 
 ### <a name="samples"></a>Proben
 
-**[Komponententests in .NET Core mit „dotnet test“](../core/testing/unit-testing-with-dotnet-test.md)**
+**[Unittests in .NET Core mit dotnet-test](../core/testing/unit-testing-with-dotnet-test.md)**
 
 Dieser Leitfaden zeigt, wie Sie eine ASP.NET Core-Webanwendung sowie die zugehörigen Komponententests erstellen. Zu Beginn des Leitfadens erstellen Sie eine einfache Webdienst-App und fügen dann Tests hinzu. Anschließend erstellen Sie weitere Tests für die Implementierung neuer Funktionen. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test) finden Sie im dotnet/samples-Repository auf GitHub.
 
 ### <a name="tutorials"></a>Tutorials
 
-**[Schreiben von .NET Core-Konsolen-Apps mithilfe der CLI-Tools: ausführlicher Leitfaden](../core/tutorials/using-with-xplat-cli.md)**
+**[Schreiben von .NET Core-Konsolen-Apps mithilfe der CLI-Tools: Ein ausführlicher Leitfaden](../core/tutorials/using-with-xplat-cli.md)**
 
 In diesem Leitfaden erfahren Sie, wie Sie mit den Tools der .NET Core-Befehlszeilenschnittstelle plattformübergreifende Konsolen-Apps erstellen können. Dabei beginnen Sie mit einer einfachen Konsolen-App, die immer mehr erweitert wird und sich schließlich über mehrere Projekte mit zugehörigen Tests erstreckt. Sie fügen nach und nach Funktionen hinzu und erweitern so Ihre Kenntnisse. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/core/console-apps) finden Sie im dotnet/samples-Repository auf GitHub.
 
@@ -41,7 +41,7 @@ Informationen hierzu finden Sie in den [ASP.NET Core-Tutorials](/aspnet/core/tut
 
 ### <a name="samples"></a>Proben
 
-**[Iteratoren](../csharp/iterators.md)**
+**[Iterators](../csharp/iterators.md)**
 
 Dieses Beispiel veranschaulicht die Syntax und die Funktionen zum Erstellen und Verwenden von C#-Iteratoren. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/csharp/iterators) finden Sie im dotnet/samples-Repository auf GitHub.
 
@@ -53,7 +53,7 @@ Dieses Beispiel veranschaulicht die Syntax und die Funktionen für C#-Indexer. D
 
 Dieses Beispiel veranschaulicht die Syntax und die Funktionen für C#-Delegaten und -Ereignisse. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) finden Sie im dotnet/samples-Repository auf GitHub. Im gleichen Repository finden Sie ein [zweites Beispiel](https://github.com/dotnet/samples/tree/master/csharp/events), bei dem es hauptsächlich um Ereignisse geht.
 
-**[Expression Trees](../csharp/expression-trees.md)**
+**[Ausdrucksbaumstrukturen](../csharp/expression-trees.md)**
 
 Dieses Beispiel veranschaulicht viele der Probleme, die mithilfe von Ausdrucksbaumstrukturen gelöst werden können. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) finden Sie im dotnet/samples-Repository auf GitHub.
 
@@ -79,15 +79,15 @@ Dieses Tutorial veranschaulicht Webkommunikation, JSON-Serialisierung und objekt
 
 Dieses Tutorial veranschaulicht viele der Features von LINQ und die Sprachelemente, die diese unterstützen. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) finden Sie im dotnet/samples-Repository auf GitHub.
 
-**[Getting started with .NET Core on macOS using Visual Studio for Mac (Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac)](../core/tutorials/using-on-mac-vs.md)**
+**[Erste Schritte mit .NET Core unter macOS mit Visual Studio für Mac](../core/tutorials/using-on-mac-vs.md)**
 
 Dieses Tutorial zeigt Ihnen, wie Sie mithilfe von Visual Studio für Mac eine einfache .NET Core-Konsolen-App erstellen.
 
-**[Building a complete .NET Core solution on macOS using Visual Studio for Mac (Erstellen einer vollständigen .NET Core-Projektmappe unter macOS mit Visual Studio für Mac)](../core/tutorials/using-on-mac-vs-full-solution.md)**
+**[Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac](../core/tutorials/using-on-mac-vs-full-solution.md)**
 
 In diesem Tutorial erfahren Sie, wie Sie eine vollständige .NET Core-Projektmappe erstellen, die eine wiederverwendbare Bibliothek und Komponententests enthält.
 
-**[Creating a .NET Core application that supports plugins (Erstellen einer .NET Core-Anwendung, die Plug-Ins unterstützt)](../core/tutorials/creating-app-with-plugin-support.md)**
+**[Erstellen einer .NET Core-Anwendung, die Plug-Ins unterstützt](../core/tutorials/creating-app-with-plugin-support.md)**
 
 In diesem Tutorial erfahren Sie, wie Sie eine einfache .NET Core-Anwendung erstellen, die eine Plug-In-Architektur unterstützt. Das [vollständige Beispiel](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) finden Sie im dotnet/samples-Repository auf GitHub.
 
@@ -112,6 +112,6 @@ Viele Themen enthalten Quellcode und Beispiele, die zum Anzeigen oder Herunterla
 1. Navigieren Sie in den Ordnern des Repositorys zum Speicherort des Beispiels. Der relative Pfad zum Speicherort des Beispiels wird in der Adressleiste Ihres Browsers angezeigt, wenn Sie dem Link zum Beispiel folgen.
 1. Zum Ausführen eines Beispiels stehen Ihnen verschiedene Optionen zur Verfügung:
    * Verwenden Sie die [dotnet-CLI-Tools](../core/tools/index.md): Navigieren Sie in einem Konsolenfenster zum Ordner des Beispiels, und verwenden Sie die dotnet-CLI-Tools.
-   * Verwenden Sie [Visual Studio](https://visualstudio.microsoft.com/) oder [Visual Studio für Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/): Öffnen Sie das Beispiel, indem Sie auf der Menüleiste die Option **Datei > Öffnen > Projekt/Projektmappe** auswählen, zum Ordner des Beispielprojekts navigieren und die Projektdatei auswählen (*CSPROJ* oder *FSPROJ*).
+   * Verwenden Sie [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) oder [Visual Studio für Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): Öffnen Sie das Beispiel, indem Sie auf der Menüleiste die Option **Datei > Öffnen > Projekt/Projektmappe** auswählen, zum Ordner des Beispielprojekts navigieren und die Projektdatei auswählen (*CSPROJ* oder *FSPROJ*).
    * Verwenden Sie [Visual Studio Code](https://code.visualstudio.com/): Öffnen Sie das Beispiel, indem Sie auf der Menüleiste die Option **Datei > Ordner öffnen** auswählen und dann den Projektordner des Beispiels auswählen.
    * Verwenden Sie eine andere IDE, die .NET Core-Projekte unterstützt.

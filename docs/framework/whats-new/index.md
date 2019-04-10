@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e6ce15c344ecd6e5f8d73cb98a06c8ccb40c9e7
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 22f6c6827b2574ba887839f749df8fc7ae6605ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466438"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328633"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Neues in .NET Framework
 
@@ -208,12 +208,12 @@ Unterstützung für Dekomprimierung mithilfe von Windows-APIs ist standardmäßi
 
 .NET Framework 4.7.2 fügt den <xref:System.Collections.Generic.SortedSet%601>- und <xref:System.Collections.Generic.HashSet%601>-Typen eine Reihe von neuen APIs hinzu. Dazu gehören:
 
-- `TryGetValue`-Methoden, die das try-Muster, das in anderen Sammlungstypen verwendet wird, auf diese beiden Typen erweitern. Dabei handelt es sich um folgenden Methoden:
+- `TryGetValue` Methoden, die das try-Muster, das in anderen Sammlungstypen verwendet wird, auf diese beiden Typen erweitern. Dabei handelt es sich um folgenden Methoden:
 
    - [public bool HashSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
    - [public bool SortedSet\<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
 
-- `Enumerable.To*`-Erweiterungsmethoden, die eine Sammlung in ein <xref:System.Collections.Generic.HashSet%601> konvertieren:
+- `Enumerable.To*` Erweiterungsmethoden, die eine Sammlung in ein <xref:System.Collections.Generic.HashSet%601> konvertieren:
 
    - [public static HashSet\<TSource> ToHashSet\<TSource>(this IEnumerable\<TSource> source)](xref:System.Linq.Enumerable.ToHashSet%2A)
    - [public static HashSet\<TSource> ToHashSet\<TSource>(this IEnumerable\<TSource> source, IEqualityComparer\<TSource> comparer)](xref:System.Linq.Enumerable.ToHashSet%2A)
@@ -241,7 +241,7 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 #### <a name="aspnet"></a>ASP.NET
 
-**Unterstützung für Abhängigkeitsinjektion in Web Forms**
+**Unterstützung für Dependency Injection in Web Forms**
 
 [Abhängigkeitsinjektion (Dependency Injection, DI)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) entkoppelt Objekte und ihre Abhängigkeiten, sodass der Code eines Objekts nicht mehr geändert werden muss, nur weil sich eine Abhängigkeit geändert hat. Beim Entwickeln von ASP.NET-Anwendungen für .NET Framework 4.7.2 können Sie Folgendes nutzen:
 
@@ -313,13 +313,13 @@ Weitere Informationen und ein Beispiel finden Sie unter „SQL: Unterstützung f
 
 NET Framework 4.7.2 fügt Unterstützung für Enclave-basiertes Always Encrypted hinzu. Die ursprüngliche Version von Always Encrypted ist eine clientseitige Verschlüsselungstechnologie, bei der die Verschlüsselungsschlüssel den Client nie verlassen. Im Enclave-basierten Always Encrypted kann der Client optional die Verschlüsselungsschlüssel an eine sichere Enclave senden. Dabei handelt es sich um eine sichere Computerentität, die als Teil von SQL Server betrachtet, aber nicht durch SQL Server-Code manipuliert werden kann. Zur Unterstützung von Enclave-basiertem Always Encrypted fügt .NET Framework 4.7.2 dem <xref:System.Data.SqlClient>-Namespace die folgenden Typen und Member hinzu:
 
-- <xref:System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl?displayProperty=nameWithType>: Gibt den URI für Enclave-basiertes Always Encrypted an.
+- <xref:System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl?displayProperty=nameWithType>Gibt den URI für Enclave-basiertes Always Encrypted an.
 
-- <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider>: Eine abstrakte Klasse, von der alle Enclave-Anbieter abgeleitet werden.
+- <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider>Eine abstrakte Klasse, von der alle Enclave-Anbieter abgeleitet werden.
 
-- <xref:System.Data.SqlClient.SqlEnclaveSession>: Kapselt den Zustand für eine bestimmte Enclave-Sitzung.
+- <xref:System.Data.SqlClient.SqlEnclaveSession>Kapselt den Zustand für eine bestimmte Enclave-Sitzung.
 
-- <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>: Stellt die Nachweisparameter bereit, die von SQL Server zum Abrufen von Informationen verwendet werden, die zum Ausführen eines bestimmten Protokolls erforderlich sind.
+- <xref:System.Data.SqlClient.SqlEnclaveAttestationParameters>Stellt die Nachweisparameter bereit, die von SQL Server zum Abrufen von Informationen verwendet werden, die zum Ausführen eines bestimmten Protokolls erforderlich sind.
 
 Die Anwendungskonfigurationsdatei gibt dann eine konkrete Implementierung der abstrakten <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider?displayProperty=nameWithType>-Klasse an, die die Funktionalität für den Enclave-Anbieter bereitstellt. Beispiel:
 
@@ -631,7 +631,7 @@ Die Druck-APIs von WPF in der <xref:System.Printing.PrintQueue?displayProperty=n
 
 - [Kryptografie](#Crypto462)
 
-- [SQLClient](#SQLClient)
+- [SqlClient](#SQLClient)
 
 - [Windows Communication Foundation](#WCF)
 
@@ -657,13 +657,13 @@ In [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] umfasst ASP.NET die fo
 
 Mit Validierungssteuerelementen für Datenanmerkungen können Sie eine Überprüfung durchführen, indem Sie mindestens ein Attribut einer Klasseneigenschaft hinzufügen. Das Element <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> des Attributs definiert den Text der Fehlermeldung, falls die Überprüfung fehlschlägt. Beginnend mit [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], ist es einfach, mit ASP.NET Fehlermeldungen zu lokalisieren. Fehlermeldungen werden lokalisiert, wenn:
 
-1.  <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> im Validierungsattribut vorhanden ist.
+1. <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> im Validierungsattribut vorhanden ist.
 
-2.  die Ressourcendatei im Ordner „App_LocalResources“ gespeichert ist.
+2. die Ressourcendatei im Ordner „App_LocalResources“ gespeichert ist.
 
-3.  Der Name der lokalisierten Ressourcendatei ist folgendermaßen aufgebaut: `DataAnnotation.Localization.{`*Name*`}.resx`, wobei *Name* einen Kulturnamen im Format *Sprachcode*`-`*Länder-/Regionscode* oder *Sprachcode* darstellt.
+3. Der Name der lokalisierten Ressourcendatei ist folgendermaßen aufgebaut: `DataAnnotation.Localization.{`*Name*`}.resx`, wobei *Name* einen Kulturnamen im Format *Sprachcode*`-`*Länder-/Regionscode* oder *Sprachcode* darstellt.
 
-4.  Der Schlüsselname der Ressource ist die Zeichenfolge, die dem Attribut <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> zugewiesen ist, und deren Wert ist die lokalisierte Fehlermeldung.
+4. Der Schlüsselname der Ressource ist die Zeichenfolge, die dem Attribut <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> zugewiesen ist, und deren Wert ist die lokalisierte Fehlermeldung.
 
 Das folgende Datenanmerkungsattribut definiert z. B. die Fehlermeldung der Standardkultur für eine ungültige Bewertung.
 
@@ -941,11 +941,11 @@ Kunden können eine Anwendungskonfigurationseinstellung verwenden, um zu bestimm
 </runtime>
 ```
 
-Wenn diese Funktion aktiviert ist, verwendet ein <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>-Objekt den <xref:System.TimeZoneInfo>-Typ anstelle des <xref:System.TimeZone>-Typs, um Datums-und Uhrzeitdaten zu deserialisieren. <xref:System.TimeZoneInfo> unterstützt mehrere Anpassungsregeln, die es ermöglichen, mit veralteten Zeitzonendaten. <xref:System.TimeZone> unterstützt dies nicht.
+Wenn diese Funktion aktiviert ist, verwendet ein <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>-Objekt den <xref:System.TimeZoneInfo>-Typ anstelle des <xref:System.TimeZone>-Typs, um Datums-und Uhrzeitdaten zu deserialisieren. <xref:System.TimeZoneInfo> unterstützt mehrere Anpassungsregeln, die es ermöglichen, mit veralteten Zeitzonendaten zu arbeiten. <xref:System.TimeZone> unterstützt dies nicht.
 
 Weitere Informationen zur <xref:System.TimeZoneInfo>-Struktur und zu Zeitzonenanpassungen finden Sie unter [Übersicht über Zeitzonen](../../standard/datetime/time-zone-overview.md).
 
-**NetNamedPipeBinding höchste Übereinstimmung**
+**Höchste Übereinstimmung für NetNamedPipeBinding**
 
 WCF bietet eine neue App-Einstellung, die für Clientanwendungen festgelegt werden kann, um sicherzustellen, dass diese immer eine Verbindung zu dem Dienst herstellen, der an dem URI lauscht, der die höchste Übereinstimmung zu dem aufweist, den die Anwendungen anfordern. Wenn diese App-Einstellung auf `false` (Standard) festgelegt ist, ist es für Clients möglich, <xref:System.ServiceModel.NetNamedPipeBinding> zu verwenden, um zu versuchen, eine Verbindung zu einem Dienst herzustellen, der an einen URI lauscht, der eine Teilzeichenfolge des angeforderten URI darstellt.
 
@@ -1036,7 +1036,8 @@ In [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] wurde die Windows Work
 
 Beginnend mit [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], unterstützt WF C#-Ausdrücke sowohl im Visual Studio-Designer als auch in Codeworkflows. Der neu gehostete Workflow-Designer ist eine wichtige Funktion von WF, die zulässt, dass sich der Workflow-Designer in einer Anwendung außerhalb von Visual Studio befindet (z.B. in WPF).  Windows Workflow Foundation bietet die Möglichkeit der Unterstützung von C#-Ausdrücken und IntelliSense im neu gehosteten Workflow-Designer. Weitere Informationen finden Sie im [Windows Workflow Foundation-Blog](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` In Versionen von .NET Framework vor [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] wird IntelliSense im WF-Designer unterbrochen, wenn ein Kunde ein Workflowprojekt von Visual Studio neu erstellt. Obwohl die Erstellung des Projekts erfolgreich war, können die Workflowtypen nicht im Designer gefunden werden und IntelliSense gibt Warnungen für die fehlenden Workflowtypen im Fenster **Fehlerliste** aus. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] behandelt dieses Problem und macht IntelliSense verfügbar.
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`
+In Versionen von .NET Framework vor [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] wird IntelliSense in WF-Designer unterbrochen, wenn ein Kunde eine Workflowprojekt von Visual Studio neu erstellt. Obwohl die Erstellung des Projekts erfolgreich war, können die Workflowtypen nicht im Designer gefunden werden und IntelliSense gibt Warnungen für die fehlenden Workflowtypen im Fenster **Fehlerliste** aus. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] behandelt dieses Problem und macht IntelliSense verfügbar.
 
 **Workflow V1-Anwendungen mit aktivierter Workflowüberwachung werden im FIPS-Modus ausgeführt**
 
@@ -1130,7 +1131,7 @@ Dies steht in deutlichem Gegensatz zu dem Code, der zum Generieren einer Signatu
 
 ADO.NET wurde um die folgenden Features erweitert:
 
-**Always Encrypted-Unterstützung für hardwaregeschützte Schlüssel**
+**"Always Encrypted"-Unterstützung für hardwaregeschützte Schlüssel**
 
 ADO.NET unterstützt jetzt die systemeigene Speicherung von "Always Encrypted"-Spaltenhauptschlüsseln in Hardwaresicherheitsmodulen (Hardware Security Modules, HSMs). Mit dieser Unterstützung profitieren Kunden von asymmetrischen, in HSMs gespeicherten Schlüsseln, ohne benutzerdefinierte Spaltenhauptschlüssel-Speicheranbieter zu schreiben und in Anwendungen registrieren zu müssen.
 
@@ -1146,7 +1147,7 @@ SqlClient ermöglicht jetzt automatisch schnellere Verbindungen mit einer Always
 
 Windows Presentation Foundation umfasst eine Reihe von Verbesserungen und Änderungen.
 
-**Verbesserte Leistung**
+**Leistungssteigerung**
 
 Die Verzögerung beim Auslösen von Touchereignissen wurde in [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] behoben. Wenn eine Eingabe in ein <xref:System.Windows.Controls.RichTextBox>-Steuerelement erfolgt, wird außerdem der Renderthread während der schnellen Eingabe nicht mehr vollständig beansprucht.
 
@@ -1181,7 +1182,7 @@ In früheren WPF-Versionen wurden Listen ausgeschlossener Wörter und AutoKorrek
 > [!NOTE]
 > Diese neuen Dateiformate werden von den WPF-Rechtschreibprüfungs-APIs nicht direkt unterstützt, sodass die benutzerdefinierten Wörterbücher, die in Anwendungen für WPF bereitgestellt werden, weiterhin LEX-Dateien verwenden sollten.
 
-**Beispiele**
+**Proben**
 
 Sie finden mehrere WPF-Beispiele im GitHub-Repository unter [Microsoft/WPF-Samples](https://github.com/Microsoft/WPF-Samples). Helfen Sie uns bei der Verbesserung unserer Beispiele, indem Sie uns einen Pull Request senden oder ein [GitHub-Problem](https://github.com/Microsoft/WPF-Samples/issues) eröffnen.
 
@@ -1352,7 +1353,7 @@ In .NET 2015 werden [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und .NE
              [!code-csharp[WhatsNew.Casting#2](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.casting/cs/program.cs#2)]
              [!code-vb[WhatsNew.Casting#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.casting/vb/module1.vb#2)]
 
-    - **Unterstützung für das Konvertieren von Datumsangaben und Uhrzeiten zur oder aus der Unix-Zeit**
+    - **Unterstützung für das Konvertieren von Datumsangaben und Uhrzeiten in die oder aus der Unix-Zeit**
 
          Die folgenden neuen Methoden wurden zur <xref:System.DateTimeOffset>-Struktur hinzugefügt, um das Konvertieren von Datums- und Uhrzeitangaben zur oder aus der Unix-Zeit zu unterstützen:
 
@@ -1547,7 +1548,7 @@ In .NET 2015 werden [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und .NE
 
          Der Klasse <xref:System.Uri> wurde die neue Eigenschaft <xref:System.Uri.IdnHost%2A> hinzugefügt, um internationale Domänennamen und PunyCode besser zu unterstützen.
 
-- **Größenänderungen in Windows Forms-Steuerelementen**
+- **Größenänderungen in Windows Forms-Steuerelementen.**
 
      Diese Funktion wurde in [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] so erweitert, dass sie jetzt die Typen <xref:System.Windows.Forms.DomainUpDown>, <xref:System.Windows.Forms.NumericUpDown>, <xref:System.Windows.Forms.DataGridViewComboBoxColumn>, <xref:System.Windows.Forms.DataGridViewColumn> und <xref:System.Windows.Forms.ToolStripSplitButton> beinhaltet sowie das durch die <xref:System.Drawing.Design.PaintValueEventArgs.Bounds%2A>-Eigenschaft angegebene Rechteck, das beim Zeichnen eines <xref:System.Drawing.Design.UITypeEditor> verwendet wird.
 
@@ -1563,7 +1564,7 @@ In .NET 2015 werden [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und .NE
 
      [!INCLUDE[net_core](../../../includes/net-core-md.md)] unterstützt primär Unicode-Codierungen und bietet standardmäßig eingeschränkte Unterstützung für Codepagecodierungen. Sie können Unterstützung für Codeseitencodierungen, die in .NET Framework verfügbar sind, aber in [!INCLUDE[net_core](../../../includes/net-core-md.md)] nicht unterstützt werden, verfügbar machen, indem Sie Codeseitencodierungen mit der <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType>-Methode registrieren. Weitere Informationen finden Sie unter <xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>.
 
-- **.NET Native**
+- **.NET systemeigen**
 
      Windows-Apps für Windows 10, die auf [!INCLUDE[net_core](../../../includes/net-core-md.md)] ausgerichtet und in C# oder Visual Basic geschrieben sind, können eine neue Technologie nutzen, die Apps in systemeigenen Code kompiliert statt in IL. Sie erzeugen Apps, die sich durch kürzere Start- und Ausführungszeiten auszeichnen. Weitere Informationen finden Sie unter [Kompilieren von Anwendungen mit .NET Native](../net-native/index.md). Eine Übersicht über .NET Native, in der untersucht wird, wie es sich sowohl von der JIT-Kompilierung als auch von NGEN unterscheidet und was dies für Ihren Code bedeutet, finden Sie unter [.NET Native und Kompilierung](../net-native/net-native-and-compilation.md).
 
@@ -1579,13 +1580,13 @@ In .NET 2015 werden [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und .NE
 
 ## <a name="whats-new-in-the-net-framework-452"></a>Neuigkeiten in .NET Framework 4.5.2
 
-- **Neue APIs für ASP.NET-Apps** Mit den neuen <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType>- und <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType>-Methoden können Sie Antwortheader und Statuscodes betrachten und verändern, wenn Sie die Antwort an die Client-App übergeben. Sie sollten diese Methoden anstelle der <xref:System.Web.HttpApplication.PreSendRequestHeaders>- und <xref:System.Web.HttpApplication.PreSendRequestContent>-Ereignisse verwenden, da diese effizienter und zuverlässiger sind.
+- **Neue APIs für ASP.NET-Apps.** Mit den neuen <xref:System.Web.HttpResponse.AddOnSendingHeaders%2A?displayProperty=nameWithType>- und <xref:System.Web.HttpResponseBase.AddOnSendingHeaders%2A?displayProperty=nameWithType>-Methoden können Sie Antwortheader und Statuscodes betrachten und verändern, wenn Sie die Antwort an die Client-App übergeben. Sie sollten diese Methoden anstelle der <xref:System.Web.HttpApplication.PreSendRequestHeaders>- und <xref:System.Web.HttpApplication.PreSendRequestContent>-Ereignisse verwenden, da diese effizienter und zuverlässiger sind.
 
      Mit der <xref:System.Web.Hosting.HostingEnvironment.QueueBackgroundWorkItem%2A?displayProperty=nameWithType>-Methode können Sie die Ausführung kleiner Hintergrundarbeitselemente planen. ASP.NET überwacht diese Aufgaben und verhindert, dass IIS den Arbeitsprozess abrupt beendet, bevor alle Hintergrundarbeitselemente abgeschlossen wurden. Diese Methode kann nicht außerhalb von verwalteten ASP.NET-App-Domänen aufgerufen werden.
 
      Die neuen <xref:System.Web.HttpResponse.HeadersWritten?displayProperty=nameWithType>- und <xref:System.Web.HttpResponseBase.HeadersWritten?displayProperty=nameWithType>-Eigenschaften geben boolesche Werte zurück, die angeben, ob die Antwortheader geschrieben wurden. Mit diesen Eigenschaften können Sie sicherstellen, dass API-Aufrufe wie z. B. <xref:System.Web.HttpResponse.StatusCode%2A?displayProperty=nameWithType> (die Ausnahmen auslösen, wenn die Header geschrieben wurden) erfolgreich ausgeführt werden.
 
-- **Größenänderungen in Windows Forms-Steuerelementen** Dieses Feature wurde erweitert. Sie können nun die systemeigene DPI-Einstellung verwenden, um die Größe von Komponenten der folgenden zusätzlichen Steuerelemente anzupassen (z. B. der Dropdownpfeil in Combofeldern):
+- **Größenänderungen in Windows Forms-Steuerelementen.** Dieses Feature wurde erweitert. Sie können nun die systemeigene DPI-Einstellung verwenden, um die Größe von Komponenten der folgenden zusätzlichen Steuerelemente anzupassen (z. B. der Dropdownpfeil in Combofeldern):
 
     - <xref:System.Windows.Forms.ComboBox>
     - <xref:System.Windows.Forms.ToolStripComboBox>
@@ -1602,15 +1603,15 @@ In .NET 2015 werden [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und .NE
     </appSettings>
     ```
 
-- **Neues Workflow-Feature** Ein Ressourcen-Manager, der die <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A>-Methode verwendet (und somit die <xref:System.Transactions.IPromotableSinglePhaseNotification>-Schnittstelle implementiert), kann die neue <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType>-Methode verwenden, um Folgendes abzufragen:
+- **Neues Workflow-Feature.** Ein Ressourcen-Manager, der die <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A>-Methode verwendet (und somit die <xref:System.Transactions.IPromotableSinglePhaseNotification>-Schnittstelle implementiert), kann die neue <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType>-Methode verwenden, um Folgendes abzufragen:
 
     - Stufen Sie die Transaktion zu einer Microsoft Distributed Transaction Coordinator (MSDTC)-Transaktion herauf.
 
     - Ersetzen Sie <xref:System.Transactions.IPromotableSinglePhaseNotification> durch eine <xref:System.Transactions.ISinglePhaseNotification>, eine dauerhafte Eintragung, die einphasige Commits unterstützt.
 
-     Dies kann innerhalb derselben App-Domäne erfolgen, und erfordert keinen zusätzlichen nicht verwalteten Code für die Interaktion mit MSDTC für die Höherstufung. Die neue Methode kann nur aufgerufen werden, wenn ein ausstehender Aufruf von <xref:System.Transactions?displayProperty=nameWithType> an die <xref:System.Transactions.IPromotableSinglePhaseNotification> `Promote`-Methode vorhanden ist, die von der heraufstufbaren Eintragung implementiert wird.
+     Dies kann innerhalb derselben App-Domäne erfolgen, und erfordert keinen zusätzlichen nicht verwalteten Code für die Interaktion mit MSDTC für die Höherstufung. Die neue Methode kann nur aufgerufen werden, wenn ein ausstehender Aufruf von <xref:System.Transactions?displayProperty=nameWithType> an die <xref:System.Transactions.IPromotableSinglePhaseNotification>`Promote`-Methode vorhanden ist, die von der heraufstufbaren Eintragung implementiert wird.
 
-- **Profilerstellungsverbesserungen** Die folgenden neuen, nicht verwalteten Profilerstellungs-APIs bieten eine robustere Profilerstellung:
+- **Profilerstellungsverbesserungen.** Die folgenden neuen, nicht verwalteten Profilerstellungs-APIs bieten eine robustere Profilerstellung:
 
     - [COR_PRF_ASSEMBLY_REFERENCE_INFO-Struktur](../unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
     - [COR_PRF_HIGH_MONITOR-Enumeration](../unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
@@ -1621,7 +1622,7 @@ In .NET 2015 werden [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und .NE
 
      Frühere `ICorProfiler`-Implementierungen unterstützten Lazy Loading für abhängige Assemblys. Die neue Profilerstellungs-API benötigt abhängige Assemblys, die vom Profiler zum sofortigen Laden eingefügt werden, anstatt nach der vollständigen Initialisierung der App geladen zu werden. Diese Änderung betrifft keine Benutzer der existierenden `ICorProfiler`-APIs.
 
-- **Verbesserungen beim Debugging** Die folgenden neuen, nicht verwalteten Debugging-APIs bieten bessere Profilerintegration. Beim Debuggen von Abbildern haben Sie nun Zugriff auf die vom Profiler eingefügten Metadaten sowie auf lokale Variablen und den von ReJIT-Anfragen des Compilers eingefügten Code.
+- **Verbesserungen beim Debugging.** Die folgenden neuen, nicht verwalteten Debugging-APIs bieten bessere Profilerintegration. Beim Debuggen von Abbildern haben Sie nun Zugriff auf die vom Profiler eingefügten Metadaten sowie auf lokale Variablen und den von ReJIT-Anfragen des Compilers eingefügten Code.
 
     - [SetWriteableMetadataUpdateMode-Methode](../unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)
     - [EnumerateLocalVariablesEx-Methode](../unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)
@@ -1630,11 +1631,11 @@ In .NET 2015 werden [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] und .NE
     - [GetActiveReJitRequestILCode-Methode](../unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)
     - [GetInstrumentedILMap-Methode](../unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
 
-- **Änderungen an der Ereignisablaufverfolgung** .NET Framework 4.5.2 unterstützt prozessexterne Ereignisablaufverfolgung für Windows (ETW)-basierte Aktivitätsverfolgung für eine größere Oberfläche. Auf diese Weise können Advanced Power Management (APM)-Hersteller einfache Tools zur Messung der Kosten einzelner threadübergreifender Anfragen und Aktivitäten anbieten.  Diese Ereignisse werden nur ausgelöst, wenn sie von einem ETW-Controller aktiviert wurden. Die Änderungen betreffen daher keinen zuvor geschriebenen ETW-Code oder Code, der mit deaktivierter ETW ausgeführt wird.
+- **Änderungen an der Ereignisablaufverfolgung.** .NET Framework 4.5.2 unterstützt prozessexterne Ereignisablaufverfolgung für Windows (ETW)-basierte Aktivitätsverfolgung für eine größere Oberfläche. Auf diese Weise können Advanced Power Management (APM)-Hersteller einfache Tools zur Messung der Kosten einzelner threadübergreifender Anfragen und Aktivitäten anbieten.  Diese Ereignisse werden nur ausgelöst, wenn sie von einem ETW-Controller aktiviert wurden. Die Änderungen betreffen daher keinen zuvor geschriebenen ETW-Code oder Code, der mit deaktivierter ETW ausgeführt wird.
 
 - **Höherstufen einer Transaktion mit entsprechender Konvertierung zu einer dauerhaften Eintragung**
 
-     Bei <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> handelt es sich um eine neue API, die zu .NET Framework 4.5.2 und 4.6 hinzugefügt wurde:
+     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> Dabei handelt es sich um eine neue API, die zu .NET Framework 4.5.2 und 4.6 hinzugefügt wurde:
 
     ```csharp
     [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name = "FullTrust")]
@@ -1782,7 +1783,7 @@ Mit Managed Profile Guided Optimization (Mpgo.exe) können Sie die Anwendungssta
 
 In ASP.NET 4.5 und 4.5.1 wurden die Modellbindung für Webformulare, WebSocket-Unterstützung, asynchrone Handler, Leistungserweiterungen und viele weitere Funktionen hinzugefügt. Weitere Informationen finden Sie in den folgenden Ressourcen:
 
-- [ASP.NET 4.5 and Visual Studio 2012 (ASP.NET 4.5 und Visual Studio 2012)](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
+- [ASP.NET 4.5 und Visual Studio 2012](https://docs.microsoft.com/previous-versions/aspnet/hh420390(v=vs.110))
 
 - [ASP.NET and Web Tools für Visual Studio 2013 – Anmerkungen zu dieser Version](/aspnet/visual-studio/overview/2013/release-notes)
 
@@ -1858,7 +1859,7 @@ Um das Schreiben und Verwalten von Windows Communication Foundation (WCF)-Anwend
 
 - XML-Editor-QuickInfos.
 
-- Unterstützung von <xref:System.ServiceModel.ChannelFactory>-Cachediensten.
+- <xref:System.ServiceModel.ChannelFactory> Unterstützung von Cachediensten.
 
 - Unterstützung für die Komprimierung binärer Encoder.
 
@@ -1928,7 +1929,7 @@ In der Version [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] gibt es jetz
 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
 
-[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps werden für bestimmte Formularfaktoren entworfen und nutzen die Leistungsfähigkeit des Windows-Betriebssystems. Eine Teilmenge von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] oder 4.5.1 kann mithilfe von C# oder Visual Basic zum Erstellen von [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps in Windows verwendet werden. Diese Teilmenge wird [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] genannt und in einer [Übersicht](https://go.microsoft.com/fwlink/?LinkId=228491) im Windows Developer Center erläutert.
+[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] Apps werden für bestimmte Formularfaktoren entworfen und nutzen die Leistungsfähigkeit des Windows-Betriebssystems. Eine Teilmenge von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] oder 4.5.1 kann mithilfe von C# oder Visual Basic zum Erstellen von [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps in Windows verwendet werden. Diese Teilmenge wird [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] genannt und in einer [Übersicht](https://go.microsoft.com/fwlink/?LinkId=228491) im Windows Developer Center erläutert.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Portable Klassenbibliotheken <a name="portable" />
 

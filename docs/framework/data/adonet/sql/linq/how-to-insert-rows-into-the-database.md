@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: cc9f276cc278d4a9c376d72f1ab38d89ea6dd5b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cb2319d51e0518114a04eea2fc7ab6b5a836b7ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169597"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328594"
 ---
 # <a name="how-to-insert-rows-into-the-database"></a>Vorgehensweise: Einfügen von Zeilen in die Datenbank
 Einfügen von Zeilen in einer Datenbank durch Hinzufügen von Objekten an die zugeordnete [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> Sammlung und übermitteln Sie dann die Änderungen an der Datenbank. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt Ihre Änderungen in die entsprechenden SQL `INSERT` Befehle.  
@@ -24,11 +24,11 @@ Einfügen von Zeilen in einer Datenbank durch Hinzufügen von Objekten an die zu
   
 ### <a name="to-insert-a-row-into-the-database"></a>So fügen Sie eine Zeile in die Datenbank ein  
   
-1.  Erstellen Sie ein neues Objekt, das die zu übermittelnden Spaltendaten enthält.  
+1. Erstellen Sie ein neues Objekt, das die zu übermittelnden Spaltendaten enthält.  
   
-2.  Fügen Sie das neue Objekt der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` Auflistung mit der Zieltabelle in der Datenbank zugeordnet ist.  
+2. Fügen Sie das neue Objekt der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] `Table` Auflistung mit der Zieltabelle in der Datenbank zugeordnet ist.  
   
-3.  Übergeben Sie die Änderung an die Datenbank.  
+3. Übergeben Sie die Änderung an die Datenbank.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird ein neues Objekt des Typs `Order` erstellt und mit entsprechenden Werten aufgefüllt. Anschließend wird das neue Objekt der `Order`-Auflistung hinzugefügt. Schließlich wird die Änderung an der Datenbank als neue Zeile in der `Orders`-Tabelle übergeben.  

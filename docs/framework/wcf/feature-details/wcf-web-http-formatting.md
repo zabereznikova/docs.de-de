@@ -2,12 +2,12 @@
 title: Formatieren von WCF-Web-HTTP
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 37f0506822ca03aed3755ad42f9bf7ecdc962da7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094449"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331038"
 ---
 # <a name="wcf-web-http-formatting"></a>Formatieren von WCF-Web-HTTP
 Mit dem WCF-Web-HTTP-Programmiermodell können Sie dynamisch das beste Format für einen Dienstvorgang bestimmen, in dem dieser seine Antwort zurückgibt. Es werden zwei Methoden zum Bestimmen eines entsprechenden Formats unterstützt: automatisch und explizit.  
@@ -15,13 +15,13 @@ Mit dem WCF-Web-HTTP-Programmiermodell können Sie dynamisch das beste Format f�
 ## <a name="automatic-formatting"></a>Automatische Formatierung  
  Wenn Sie aktiviert ist, wählt die automatische Formatierung das beste Format aus, in dem die Antwort zurückgegeben wird. Das beste Format wird bestimmt, indem Folgendes in der unten angegebenen Reihenfolge überprüft wird:  
   
-1.  Medientypen im Accept-Header der Anforderungsnachricht  
+1. Medientypen im Accept-Header der Anforderungsnachricht  
   
-2.  Inhaltstyp der Anforderungsnachricht  
+2. Inhaltstyp der Anforderungsnachricht  
   
-3.  Standardformateinstellung des Vorgangs  
+3. Standardformateinstellung des Vorgangs  
   
-4.  Standardformateinstellung unter WebHttpBehavior  
+4. Standardformateinstellung unter WebHttpBehavior  
   
  Wenn die Anforderungsnachricht einen Accept-Header enthält sucht ein Typ, den unterstützt die Windows Communication Foundation (WCF)-Infrastruktur. Wenn der `Accept`-Header Prioritäten für seine Medientypen angibt, werden diese beachtet. Wird im `Accept`-Header kein geeignetes Format gefunden, wird der Inhaltstyp der Anforderungsnachricht verwendet. Wird kein geeigneter Inhaltstyp angegeben, wird die Standardformateinstellung für den Vorgang verwendet. Das Standardformat wird mit dem `ResponseFormat`-Parameter der Attribute <xref:System.ServiceModel.Web.WebGetAttribute> und <xref:System.ServiceModel.Web.WebInvokeAttribute> festgelegt. Falls für den Vorgang kein Standardformat angegeben ist, wird der Wert der <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>-Eigenschaft verwendet. Die automatische Formatierung verwendet die <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>-Eigenschaft. Wenn diese Eigenschaft auf `true` festgelegt wird, bestimmte die WCF-Infrastruktur das beste Format. Die automatische Formatauswahl ist standardmäßig deaktiviert, um die Abwärtskompatibilität sicherzustellen. Sie können die automatische Formatauswahl programmgesteuert oder per Konfiguration aktivieren. Im folgenden Beispiel wird gezeigt, wie Sie die automatische Formatauswahl im Code aktivieren.  
   

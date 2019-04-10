@@ -9,19 +9,19 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 85f572f021f1613e0a2bb70cc090f58d2833182e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0177533f11b7dfa6c2561f1f519eacf8073bcd45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219914"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331077"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Vorgehensweise: Zugänglichmachen von X.509-Zertifikaten für WCF
 Damit ein x. 509-Zertifikat für Windows Communication Foundation (WCF) zugreifen können, muss die Anwendungscode der Name des Zertifikatspeichers und Speicherort angeben. In bestimmten Fällen benötigt die Prozessidentität Zugriff auf die Datei, die den zugeordneten privaten Schlüssel für das X.509-Zertifikat enthält. Zum Abrufen des privaten Schlüssels mit einem x. 509-Zertifikat im Zertifikatspeicher verknüpft ist, muss WCF dazu berechtigt. Standardmäßig können nur der Besitzer und das Systemkonto auf den privaten Schlüssel eines Zertifikats zugreifen.  
   
 ### <a name="to-make-x509-certificates-accessible-to-wcf"></a>So machen Sie X.509-Zertifikate für WCF zugänglich  
   
-1.  Geben Sie das Konto, unter der WCF Lesezugriff auf die Datei ausgeführt wird, die die dem x. 509-Zertifikat zugeordneten privaten Schlüssel enthält.  
+1. Geben Sie das Konto, unter der WCF Lesezugriff auf die Datei ausgeführt wird, die die dem x. 509-Zertifikat zugeordneten privaten Schlüssel enthält.  
   
     1.  Bestimmen Sie, ob WCF Lesezugriff auf den privaten Schlüssel für das x. 509-Zertifikat erfordert.  
   

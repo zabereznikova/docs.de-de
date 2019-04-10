@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 18849e61ea9af503d49e6be1894e7ebd53cce9fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5e530b475745a3df7482b9ea4276f004d13ec055
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201532"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329959"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms mithilfe des Designers
 
@@ -27,35 +27,35 @@ ms.locfileid: "59201532"
   
 ### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a>Zum Hinzufügen einer Tabelle zum DataGrid-Steuerelement im designer  
   
-1.  Sie müssen zuerst binden, um Daten in der Tabelle anzuzeigen, die <xref:System.Windows.Forms.DataGrid> Steuerelement zu einem Dataset. Weitere Informationen finden Sie unter [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle mithilfe des Designers](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
+1. Sie müssen zuerst binden, um Daten in der Tabelle anzuzeigen, die <xref:System.Windows.Forms.DataGrid> Steuerelement zu einem Dataset. Weitere Informationen finden Sie unter [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle mithilfe des Designers](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md).  
   
-2.  Wählen Sie die <xref:System.Windows.Forms.DataGrid> des Steuerelements <xref:System.Windows.Forms.DataGrid.TableStyles%2A> Eigenschaft im Eigenschaftenfenster, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben die Eigenschaft zum Anzeigen der **DataGridTableStyle Auflistungs-Editor**.  
+2. Wählen Sie die <xref:System.Windows.Forms.DataGrid> des Steuerelements <xref:System.Windows.Forms.DataGrid.TableStyles%2A> Eigenschaft im Eigenschaftenfenster, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben die Eigenschaft zum Anzeigen der **DataGridTableStyle Auflistungs-Editor**.  
   
-3.  Klicken Sie im auflistungs-Editor auf **hinzufügen** ein Tabellenformat eingefügt.  
+3. Klicken Sie im auflistungs-Editor auf **hinzufügen** ein Tabellenformat eingefügt.  
   
-4.  Klicken Sie auf **OK** den auflistungs-Editor zu schließen und erneut öffnen, indem Sie auf die Schaltfläche mit den Auslassungspunkten neben der <xref:System.Windows.Forms.DataGrid.TableStyles%2A> Eigenschaft.  
+4. Klicken Sie auf **OK** den auflistungs-Editor zu schließen und erneut öffnen, indem Sie auf die Schaltfläche mit den Auslassungspunkten neben der <xref:System.Windows.Forms.DataGrid.TableStyles%2A> Eigenschaft.  
   
      Wenn Sie den auflistungs-Editor erneut öffnen, erscheint in der Dropdown-Liste für alle Datentabellen, die an das Steuerelement gebunden der <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> das Format der Eigenschaft.  
   
-5.  In der **Mitglieder** Feld von der auflistungs-Editor, klicken Sie auf das Tabellenformat.  
+5. In der **Mitglieder** Feld von der auflistungs-Editor, klicken Sie auf das Tabellenformat.  
   
-6.  In der **Eigenschaften** im Feld den auflistungs-Editor auf die <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> Wert für die Tabelle, die Sie anzeigen möchten.  
+6. In der **Eigenschaften** im Feld den auflistungs-Editor auf die <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> Wert für die Tabelle, die Sie anzeigen möchten.  
   
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>Hinzufügen eine Spalte zum DataGrid-Steuerelement im designer  
   
-1.  In der **Mitglieder** im Feld der **DataGridTableStyle Auflistungs-Editor**, wählen Sie den Stil der entsprechenden Tabelle. In der **Eigenschaften** im Feld den auflistungs-Editor wählen die <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> -Auflistung, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png " VbEllipsesButton")) neben der Eigenschaft zum Anzeigen der **DataGridColumnStyle Auflistungs-Editor**.  
+1. In der **Mitglieder** im Feld der **DataGridTableStyle Auflistungs-Editor**, wählen Sie den Stil der entsprechenden Tabelle. In der **Eigenschaften** im Feld den auflistungs-Editor wählen die <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> -Auflistung, und klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png " VbEllipsesButton")) neben der Eigenschaft zum Anzeigen der **DataGridColumnStyle Auflistungs-Editor**.  
   
-2.  Klicken Sie im auflistungs-Editor auf **hinzufügen** ein Spaltenformat einfügen, oder klicken Sie auf den Pfeil nach unten neben **hinzufügen** zum Angeben eines Spaltentyps.  
+2. Klicken Sie im auflistungs-Editor auf **hinzufügen** ein Spaltenformat einfügen, oder klicken Sie auf den Pfeil nach unten neben **hinzufügen** zum Angeben eines Spaltentyps.  
   
      In der Dropdown-Feld, Sie haben die Wahl zwischen der <xref:System.Windows.Forms.DataGridTextBoxColumn> oder <xref:System.Windows.Forms.DataGridBoolColumn> Typ.  
   
-3.  Klicken Sie auf OK, um schließen die **DataGridColumnStyle Auflistungs-Editor**, und erneut öffnen, indem Sie auf die Schaltfläche mit den Auslassungspunkten neben der <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> Eigenschaft.  
+3. Klicken Sie auf OK, um schließen die **DataGridColumnStyle Auflistungs-Editor**, und erneut öffnen, indem Sie auf die Schaltfläche mit den Auslassungspunkten neben der <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> Eigenschaft.  
   
      Wenn Sie den auflistungs-Editor erneut öffnen, erscheint in der Dropdown-Liste für alle Datenspalten in der gebundenen Datentabelle die <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> Eigenschaft von das Spaltenformat.  
   
-4.  In der **Mitglieder** Feld von der auflistungs-Editor, klicken Sie auf das Spaltenformat.  
+4. In der **Mitglieder** Feld von der auflistungs-Editor, klicken Sie auf das Spaltenformat.  
   
-5.  In der **Eigenschaften** im Feld den auflistungs-Editor auf die <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> Wert für die Spalte, die Sie anzeigen möchten.  
+5. In der **Eigenschaften** im Feld den auflistungs-Editor auf die <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> Wert für die Spalte, die Sie anzeigen möchten.  
   
 ## <a name="see-also"></a>Siehe auch
 

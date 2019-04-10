@@ -2,12 +2,12 @@
 title: Verwendung des Serialisierungsbinders
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
-ms.openlocfilehash: 5fd90febac8c75df9fa2472e4aab591a5630076e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47a1974386927316ea9230ec27cf647d7245c44a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503157"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329842"
 ---
 # <a name="usage-of-serialization-binder"></a>Verwendung des Serialisierungsbinders
 In diesem Beispiel wird gezeigt, wie der <xref:System.Runtime.Serialization.SerializationBinder> verwendet wird, um die Version eines generischen Typs zu ändern, während diese serialisiert wird.  
@@ -24,10 +24,10 @@ In diesem Beispiel wird gezeigt, wie der <xref:System.Runtime.Serialization.Seri
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So richten Sie das Beispiel ein, erstellen es und führen es aus  
   
-1.  Um den Client auszuführen, Maustaste die Projektmappe SBGenericsVTS (6 Projekte), und wählen Sie dann **Eigenschaften**.  
+1. Um den Client auszuführen, Maustaste die Projektmappe SBGenericsVTS (6 Projekte) und wählen Sie dann **Eigenschaften**.  
   
-2.  In **allgemeine Eigenschaften**Option **Startprojekt**, und wählen Sie dann **mehrere Startprojekte**.  
+2. In **allgemeine Eigenschaften**Option **Startprojekt**, und wählen Sie dann **mehrere Startprojekte**.  
   
-3.  Wählen Sie **Server** zuerst, dann **Client20** und dann **Client40**. Wählen Sie die **starten** Aktion für diese drei Projekte, und behalten Sie die restlichen festgelegt **keine**.  
+3. Wählen Sie **Server** zuerst, dann **Client20** und dann **Client40**. Wählen Sie die **starten** Aktion, die diese drei Projekte, und lassen Sie den Rest, legen Sie auf **keine**.  
   
-4.  Klicken Sie auf **OK** und drücken Sie F5, um das Beispiel ausführen.
+4. Klicken Sie auf **OK** und drücken Sie F5, um das Beispiel auszuführen.

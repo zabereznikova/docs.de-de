@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, resizing
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-ms.openlocfilehash: 28cee4e1aa989ef4df902907c09645a1a0400475
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b5550aef220ece09d5486421275b19a37bfe9011
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072992"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329777"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Vorgehensweise: Verankern von Steuerelementen in Windows Forms
 Wenn Sie ein Formular entwerfen, die der Benutzer zur Laufzeit ändern kann, sollten die Steuerelemente im Formular ändern der Größe und ordnungsgemäß neu zu positionieren. Steuerelemente dynamisch mit dem Formular ändern möchten, können Sie die <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft von Windows Forms-Steuerelementen. Die <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft definiert eine Ankerposition, die für das Steuerelement. Wenn ein Steuerelement zu einem Formular verankert ist, und des Formulars geändert wird, behält das Steuerelement den Abstand zwischen dem Steuerelement und das Anchorpositionen. Angenommen, Sie haben eine <xref:System.Windows.Forms.TextBox> -Steuerelement, das auf der linken, rechten und unteren Rand des Formulars, verankert ist, wie des Formulars geändert wird, die <xref:System.Windows.Forms.TextBox> horizontal-Steuerelements geändert wird, sodass er die gleiche Distanz vom die Rechte und linke Seite des Formulars verwaltet. Darüber hinaus wird das Steuerelement vertikal positioniert, sodass am Speicherort immer den gleichen Abstand vom unteren Rand des Formulars ist. Wenn ein Steuerelement nicht verankert ist und die Größe des Formulars ist, wird die Position des Steuerelements relativ zu den Rändern des Formulars geändert.  
@@ -29,22 +29,22 @@ Wenn Sie ein Formular entwerfen, die der Benutzer zur Laufzeit ändern kann, sol
   
 ### <a name="to-anchor-a-control-on-a-form"></a>Verankert ein Steuerelement in einem Formular  
   
-1.  Wählen Sie das Steuerelement zu verankern.  
+1. Wählen Sie das Steuerelement zu verankern.  
   
     > [!NOTE]
     >  Sie können mehrere Steuerelemente gleichzeitig durch Drücken der STRG-Taste, auf jedes Steuerelement, um ihn auszuwählen und dann folgen den Rest dieses Verfahrens verankern.  
   
-2.  In der **Eigenschaften** Fenster, klicken Sie auf den Pfeil rechts neben der <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft.  
+2. In der **Eigenschaften** Fenster, klicken Sie auf den Pfeil rechts neben der <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaft.  
   
      Ein Editor wird mit einem Kreuz angezeigt.  
   
-3.  Um einen Anker festzulegen, klicken Sie auf die oberen, linken, rechten oder unteren Teil der Cross.  
+3. Um einen Anker festzulegen, klicken Sie auf die oberen, linken, rechten oder unteren Teil der Cross.  
   
      Steuerelemente sind oben verankert und wird standardmäßig links.  
   
-4.  Um eine Seite des Steuerelements zu löschen, die verankert ist, klicken Sie auf diese Arm, der die kreuzfilterrichtung.  
+4. Um eine Seite des Steuerelements zu löschen, die verankert ist, klicken Sie auf diese Arm, der die kreuzfilterrichtung.  
   
-5.  Schließen der <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaften-Editor, klicken Sie auf die <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaftennamen erneut.  
+5. Schließen der <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaften-Editor, klicken Sie auf die <xref:System.Windows.Forms.Control.Anchor%2A> Eigenschaftennamen erneut.  
   
  Wenn das Formular zur Laufzeit angezeigt wird, wird die Größe des Steuerelements die gleiche Distanz vom Rand des Formulars positioniert bleiben. Der Abstand zwischen dem verankerten Rand bleibt unverändert immer, wie der Abstand definiert, wenn das Steuerelement im Windows Forms-Designer befindet.  
   

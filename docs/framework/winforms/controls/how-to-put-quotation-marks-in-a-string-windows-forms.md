@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 7e48e948b52cd512dba81d643fb6a42a2d90723f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59113203"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328061"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Vorgehensweise: Setzen von Anführungszeichen in Zeichenfolgen (Windows Forms)
 Möglicherweise benötigen Sie manchmal Anführungszeichen („ “) in einer Textzeichenfolge. Zum Beispiel:  
@@ -26,7 +26,7 @@ Möglicherweise benötigen Sie manchmal Anführungszeichen („ “) in einer Te
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>So platzieren Sie Anführungszeichen in einer Zeichenfolge in Ihrem Code  
   
-1.  Fügen Sie in Visual Basic zwei Anführungszeichen in einer Zeile als eingebettetes Anführungszeichen ein. In visuellen C# und [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], fügen Sie die Escape-Sequenz \\"als eingebettetes Anführungszeichen ein. Verwenden Sie z.B. folgenden Code, um die oben genannte Zeichenfolge zu erstellen.  
+1. Fügen Sie in Visual Basic zwei Anführungszeichen in einer Zeile als eingebettetes Anführungszeichen ein. In visuellen C# und [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], fügen Sie die Escape-Sequenz \\"als eingebettetes Anführungszeichen ein. Verwenden Sie z.B. folgenden Code, um die oben genannte Zeichenfolge zu erstellen.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -50,7 +50,7 @@ Möglicherweise benötigen Sie manchmal Anführungszeichen („ “) in einer Te
   
      - oder -   
   
-2.  Fügen Sie das ASCII- oder Unicode-Zeichen für ein Anführungszeichen ein. Verwenden Sie in Visual Basic das ASCII-Zeichen (34). In visuellen C#, verwenden Sie das Unicode-Zeichen (\u0022).  
+2. Fügen Sie das ASCII- oder Unicode-Zeichen für ein Anführungszeichen ein. Verwenden Sie in Visual Basic das ASCII-Zeichen (34). In visuellen C#, verwenden Sie das Unicode-Zeichen (\u0022).  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -69,7 +69,7 @@ Möglicherweise benötigen Sie manchmal Anführungszeichen („ “) in einer Te
   
      - oder -   
   
-3.  Sie können auch eine Konstante für das Zeichen definieren und bei Bedarf verwenden.  
+3. Sie können auch eine Konstante für das Zeichen definieren und bei Bedarf verwenden.  
   
     ```vb  
     Const quote As String = """"  

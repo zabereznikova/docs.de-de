@@ -2,12 +2,12 @@
 title: Lernen durch exemplarische Vorgehensweisen
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: fdcc2db1507d8ee2c6d1b07a79c531267fbb5714
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189000"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329309"
 ---
 # <a name="learning-by-walkthroughs"></a>Lernen durch exemplarische Vorgehensweisen
 Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumentation stellt mehrere exemplarische Vorgehensweisen bereit. Dieser Abschnitt behandelt allgemeine Aspekte der exemplarischen Vorgehensweisen (einschließlich Fehlerbehebung) und bietet Links zu Vorgehensweisen für Einsteiger, die mehr über [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erfahren möchten.  
@@ -53,13 +53,13 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>So prüfen oder ändern Sie die Datenbankanmeldung  
   
-1.  Klicken Sie auf der Windows **starten** , zeigen Sie auf **Programme**, **Microsoft SQL Server 2005**, zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
+1. Klicken Sie auf der Windows **starten** , zeigen Sie auf **Programme**, **Microsoft SQL Server 2005**, zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-2.  Klicken Sie im linken Bereich die **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server 2005 Services**.  
+2. Klicken Sie im linken Bereich die **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server 2005 Services**.  
   
-3.  Klicken Sie im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **Eigenschaften**.  
+3. Klicken Sie im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Klicken Sie auf die **anmelden** Registerkarte, und überprüfen Sie, wie Sie möchten melden Sie sich an den Server.  
+4. Klicken Sie auf die **anmelden** Registerkarte, und überprüfen Sie, wie Sie möchten melden Sie sich an den Server.  
   
      In den meisten Fällen **Lokales System** funktioniert.  
   
@@ -70,9 +70,9 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>So aktivieren Sie das Named Pipes-Protokoll  
   
-1.  Im linken Bereich die **SQL Server-Konfigurations-Manager**, erweitern Sie **SQL Server 2005-Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für SQLEXPRESS**.  
+1. Im linken Bereich die **SQL Server-Konfigurations-Manager**, erweitern Sie **SQL Server 2005-Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für SQLEXPRESS**.  
   
-2.  Stellen Sie im rechten Bereich sicher, dass die **Named Pipes** -Protokoll aktiviert ist. Wenn sie nicht der Fall ist, mit der rechten Maustaste **Namenspipes** , und klicken Sie dann auf **aktivieren**.  
+2. Stellen Sie im rechten Bereich sicher, dass die **Named Pipes** -Protokoll aktiviert ist. Wenn sie nicht der Fall ist, mit der rechten Maustaste **Namenspipes** , und klicken Sie dann auf **aktivieren**.  
   
      Sie müssen den Dienst beenden und neu starten. Führen Sie die Schritte im nächsten Block aus.  
   
@@ -81,11 +81,11 @@ Die [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] -Dokumen
   
 ##### <a name="to-stop-and-restart-the-service"></a>So beenden Sie den Dienst und starten ihn neu  
   
-1.  Klicken Sie im linken Bereich die **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server 2005 Services**.  
+1. Klicken Sie im linken Bereich die **SQL Server-Konfigurations-Manager**, klicken Sie auf **SQL Server 2005 Services**.  
   
-2.  Klicken Sie im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **beenden**.  
+2. Klicken Sie im rechten Bereich mit der Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **beenden**.  
   
-3.  Mit der rechten Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **Neustart**.  
+3. Mit der rechten Maustaste **SQL Server (SQLEXPRESS)**, und klicken Sie dann auf **Neustart**.  
   
 ## <a name="see-also"></a>Siehe auch
 

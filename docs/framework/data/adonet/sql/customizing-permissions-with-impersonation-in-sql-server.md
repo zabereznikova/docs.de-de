@@ -2,12 +2,12 @@
 title: Anpassen von Berechtigungen durch Identitätswechsel in SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 9c3e84e8a432a54cdcd2cbe4e01dada870cd1366
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202793"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326969"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Anpassen von Berechtigungen durch Identitätswechsel in SQL Server
 Viele Anwendungen verwenden für den Zugriff auf Daten gespeicherte Prozeduren, wobei der Zugriff auf die Basistabellen per Besitzverkettung gesteuert wird. Sie können EXECUTE-Berechtigungen für gespeicherte Prozeduren gewähren und so Berechtigungen für die Basistabellen widerrufen oder verweigern. Wenn der Besitzer der gespeicherten Prozedur identisch mit dem Besitzer der Tabellen ist, nimmt SQL Server keine Prüfung der Berechtigungen des Aufrufers vor. Bei Objekten, die verschiedenen Besitzern gehören, und bei dynamischem SQL funktioniert die Besitzverkettung jedoch nicht.  
@@ -34,15 +34,15 @@ EXECUTE AS USER = 'userName';
   
  Für die Aufnahme der EXECUTE AS-Klausel in eine Prozedur sind die folgenden drei Schritte auszuführen.  
   
-1.  Erstellen Sie einen Proxybenutzer in der Datenbank, der keiner Anmeldung zugeordnet wird. Dieser Schritt ist nicht zwingend erforderlich, erleichtert aber das Verwalten der Berechtigungen.  
+1. Erstellen Sie einen Proxybenutzer in der Datenbank, der keiner Anmeldung zugeordnet wird. Dieser Schritt ist nicht zwingend erforderlich, erleichtert aber das Verwalten der Berechtigungen.  
   
 ```  
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
-1.  Gewähren Sie dem Proxybenutzer die notwendigen Berechtigungen.  
+1. Gewähren Sie dem Proxybenutzer die notwendigen Berechtigungen.  
   
-2.  Fügen Sie der gespeicherten Prozedur oder der benutzerdefinierten Funktion die EXECUTE AS-Klausel hinzu.  
+2. Fügen Sie der gespeicherten Prozedur oder der benutzerdefinierten Funktion die EXECUTE AS-Klausel hinzu.  
   
 ```  
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: e559702d5fd7f0f56c7b2b010713e3129504746a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192133"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327372"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Vorgehensweise: Erstellen einer Oberfläche im Stil von Windows Explorer in Windows Forms
 Windows-Explorer ist eine gemeinsame Benutzeroberfläche Wahl für Anwendungen aufgrund seiner Kenntnisse bereit.  
@@ -25,9 +25,9 @@ Windows-Explorer ist eine gemeinsame Benutzeroberfläche Wahl für Anwendungen a
   
 ### <a name="to-create-a-windows-explorer-style-windows-form"></a>Um ein Windows-Formular in Windows Explorer-Stil zu erstellen.  
   
-1.  Erstellen Sie ein neues Windows-Anwendungsprojekt (**Datei** > **neu** > **Projekt** > **Visual C#-** oder **Visual Basic** > **Klassischer Desktop** > **Windows Forms-Anwendung**).  
+1. Erstellen Sie ein neues Windows-Anwendungsprojekt (**Datei** > **neu** > **Projekt** > **Visual C#-** oder **Visual Basic** > **Klassischer Desktop** > **Windows Forms-Anwendung**).  
   
-2.  Von der **Toolbox**:  
+2. Von der **Toolbox**:  
   
     1.  Ziehen Sie eine <xref:System.Windows.Forms.SplitContainer> Steuerelement auf das Formular.  
   
@@ -35,14 +35,14 @@ Windows-Explorer ist eine gemeinsame Benutzeroberfläche Wahl für Anwendungen a
   
     3.  Ziehen Sie eine <xref:System.Windows.Forms.ListView> steuern in **SplitterPanel2** (der Bereich von der <xref:System.Windows.Forms.SplitContainer> Steuerelemente **Panel2**).  
   
-3.  Wählen Sie alle drei Steuerelemente, indem Sie die STRG-Taste drücken, und klicken sie dann auf. Bei der Auswahl der <xref:System.Windows.Forms.SplitContainer> Steuerelement, klicken Sie auf die Teilerleiste, anstatt die Bereiche.  
+3. Wählen Sie alle drei Steuerelemente, indem Sie die STRG-Taste drücken, und klicken sie dann auf. Bei der Auswahl der <xref:System.Windows.Forms.SplitContainer> Steuerelement, klicken Sie auf die Teilerleiste, anstatt die Bereiche.  
   
     > [!NOTE]
     >  Verwenden Sie nicht die **Alles markieren** Befehl die **bearbeiten** Menü. Wenn Sie dies tun, die Eigenschaft, die in den nächsten Schritt erforderlich sind, erscheinen nicht im der **Eigenschaften** Fenster.  
   
-4.  Legen Sie im Fenster **Eigenschaften** die Eigenschaft <xref:System.Windows.Forms.SplitContainer.Dock%2A> auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
+4. Legen Sie im Fenster **Eigenschaften** die Eigenschaft <xref:System.Windows.Forms.SplitContainer.Dock%2A> auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
   
-5.  Drücken Sie F5, um die Anwendung auszuführen.  
+5. Drücken Sie F5, um die Anwendung auszuführen.  
   
      Das Formular zeigt eine mit dem zweiteiligen Benutzeroberfläche ähnelt der von der Windows-Explorer.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verschlüsseln von XML-Elementen mit x. 509-Zertifikaten'
+title: 'Vorgehensweise: Verschlüsseln von XML-Elementen mit X.509-Zertifikaten'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 761f1c66-631c-47af-aa86-ad9c50cfa453
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 060bc53efa175314e00f487776c43124c39f33c0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 890216fa8cc9915ffa640b6330994c5f1ee2e611
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970973"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327333"
 ---
-# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Vorgehensweise: Verschlüsseln von XML-Elementen mit x. 509-Zertifikaten
+# <a name="how-to-encrypt-xml-elements-with-x509-certificates"></a>Vorgehensweise: Verschlüsseln von XML-Elementen mit X.509-Zertifikaten
 Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace verwenden, um ein Element in einem XML-Dokument zu verschlüsseln.  XML-Verschlüsselung ist ein gängiges Verfahren zum Austauschen oder Speichern von verschlüsselten XML-Daten, ohne sich Gedanken machen zu müssen, dass die Daten einfach gelesen werden können.  Weitere Informationen zu XML-Verschlüsselungsstandard, finden Sie die Spezifikation des World Wide Web Consortium (W3C) XML-Verschlüsselung im Pfad <https://www.w3.org/TR/xmldsig-core/>.  
   
  Sie können die XML-Verschlüsselung verwenden, um jedes XML-Element oder XML-Dokument durch ein <`EncryptedData`>-Element zu ersetzen, das die verschlüsselten XML-Daten enthält. Das <`EncryptedData`>-Element kann auch Unterelemente mit Informationen über die bei der Verschlüsselung verwendeten Schlüssel und Prozesse enthalten.  XML-Verschlüsselung unterstützt, dass ein Dokument mehrere verschlüsselte Elemente enthält und dass ein Element mehrfach verschlüsselt ist.  Das Codebeispiel in dieser Vorgehensweise veranschaulicht das Erstellen eines <`EncryptedData`>-Elements zusammen mit weiteren Unterelementen, die Sie später bei der Entschlüsselung verwenden können.  
@@ -36,43 +36,43 @@ Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace ver
   
 ### <a name="to-encrypt-an-xml-element-with-an-x509-certificate"></a>So verschlüsseln Sie ein XML-Element mit einem X.509-Zertifikat  
   
-1.  Verwenden Sie [Makecert.exe (Certificate Creation-Tool)](/windows/desktop/SecCrypto/makecert), um ein X.509-Testzertifikat zu generieren und dieses Zertifikat im lokalen Benutzerspeicher abzulegen.  Sie müssen einen exportierbaren Austauschschlüssel generieren. Führen Sie den folgenden Befehl aus:  
+1. Verwenden Sie [Makecert.exe (Certificate Creation-Tool)](/windows/desktop/SecCrypto/makecert), um ein X.509-Testzertifikat zu generieren und dieses Zertifikat im lokalen Benutzerspeicher abzulegen.  Sie müssen einen exportierbaren Austauschschlüssel generieren. Führen Sie den folgenden Befehl aus:  
   
     ```  
     makecert -r -pe -n "CN=XML_ENC_TEST_CERT" -b 01/01/2005 -e 01/01/2010 -sky exchange -ss my  
     ```  
   
-2.  Erstellen Sie ein <xref:System.Security.Cryptography.X509Certificates.X509Store>-Objekt, und initialisieren Sie dieses, um den aktuellen Benutzerspeicher zu öffnen  
+2. Erstellen Sie ein <xref:System.Security.Cryptography.X509Certificates.X509Store>-Objekt, und initialisieren Sie dieses, um den aktuellen Benutzerspeicher zu öffnen  
   
      [!code-csharp[HowToEncryptXMLElementX509#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#2)]
      [!code-vb[HowToEncryptXMLElementX509#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#2)]  
   
-3.  Öffnen Sie den Speicher im schreibgeschützten Modus.  
+3. Öffnen Sie den Speicher im schreibgeschützten Modus.  
   
      [!code-csharp[HowToEncryptXMLElementX509#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#3)]
      [!code-vb[HowToEncryptXMLElementX509#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#3)]  
   
-4.  Initialisieren Sie eine <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> mit allen im Speicher enthaltenen Zertifikaten.  
+4. Initialisieren Sie eine <xref:System.Security.Cryptography.X509Certificates.X509Certificate2Collection> mit allen im Speicher enthaltenen Zertifikaten.  
   
      [!code-csharp[HowToEncryptXMLElementX509#4](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#4)]
      [!code-vb[HowToEncryptXMLElementX509#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#4)]  
   
-5.  Durchlaufen Sie die Zertifikate im Speicher, und suchen Sie nach dem Zertifikat mit dem entsprechenden Namen.  In diesem Beispiel hat das Zertifikat den Namen `"CN=XML_ENC_TEST_CERT"`.  
+5. Durchlaufen Sie die Zertifikate im Speicher, und suchen Sie nach dem Zertifikat mit dem entsprechenden Namen.  In diesem Beispiel hat das Zertifikat den Namen `"CN=XML_ENC_TEST_CERT"`.  
   
      [!code-csharp[HowToEncryptXMLElementX509#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#5)]
      [!code-vb[HowToEncryptXMLElementX509#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#5)]  
   
-6.  Schließen Sie den Speicher, nachdem Sie das Zertifikat gefunden haben.  
+6. Schließen Sie den Speicher, nachdem Sie das Zertifikat gefunden haben.  
   
      [!code-csharp[HowToEncryptXMLElementX509#6](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#6)]
      [!code-vb[HowToEncryptXMLElementX509#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#6)]  
   
-7.  Erstellen Sie ein <xref:System.Xml.XmlDocument>-Objekt, indem Sie eine XML-Datei von einem Datenträger laden.  Das <xref:System.Xml.XmlDocument>-Objekt enthält das zu verschlüsselnde XML-Element.  
+7. Erstellen Sie ein <xref:System.Xml.XmlDocument>-Objekt, indem Sie eine XML-Datei von einem Datenträger laden.  Das <xref:System.Xml.XmlDocument>-Objekt enthält das zu verschlüsselnde XML-Element.  
   
      [!code-csharp[HowToEncryptXMLElementX509#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#7)]
      [!code-vb[HowToEncryptXMLElementX509#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#7)]  
   
-8.  Suchen Sie das angegebene Element im <xref:System.Xml.XmlDocument>-Objekt, und erstellen Sie ein neues <xref:System.Xml.XmlElement>-Objekt, das dem Element entspricht, das Sie verschlüsseln möchten.  In diesem Beispiel wird das `"creditcard"`-Element verschlüsselt.  
+8. Suchen Sie das angegebene Element im <xref:System.Xml.XmlDocument>-Objekt, und erstellen Sie ein neues <xref:System.Xml.XmlElement>-Objekt, das dem Element entspricht, das Sie verschlüsseln möchten.  In diesem Beispiel wird das `"creditcard"`-Element verschlüsselt.  
   
      [!code-csharp[HowToEncryptXMLElementX509#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementX509/cs/sample.cs#8)]
      [!code-vb[HowToEncryptXMLElementX509#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementX509/vb/sample.vb#8)]  
@@ -119,4 +119,4 @@ Sie können die Klassen im <xref:System.Security.Cryptography.Xml>-Namespace ver
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Security.Cryptography.Xml>
-- [Vorgehensweise: Entschlüsseln von XML-Elementen mit x. 509-Zertifikaten](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)
+- [Vorgehensweise: Entschlüsseln von XML-Elementen mit X.509-Zertifikaten](../../../docs/standard/security/how-to-decrypt-xml-elements-with-x-509-certificates.md)

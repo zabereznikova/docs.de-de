@@ -9,19 +9,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 845e550d0e784568723acbe098fabb2a555ce9b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 457069cd7ac5af62e08115d84060c9c7fb25beee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089359"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328139"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Vorgehensweise: Entwickeln eines einfachen Windows Forms-Steuerelements
 Dieser Abschnitt führt Sie durch die wichtigsten Schritte zum Erstellen von benutzerdefinierten Windows Forms-Steuerelementen. Ein einfache Steuerelement in dieser exemplarischen Vorgehensweise entwickelt ermöglicht die Ausrichtung der <xref:System.Windows.Forms.Control.Text%2A> zu ändernden Eigenschaft. Es löst keine Ereignisse aus oder behandelt sie.  
   
 ### <a name="to-create-a-simple-custom-control"></a>So erstellen Sie ein einfaches benutzerdefiniertes Steuerelement  
   
-1.  Definieren Sie eine Klasse, die sich von <xref:System.Windows.Forms.Control?displayProperty=nameWithType> ableitet.  
+1. Definieren Sie eine Klasse, die sich von <xref:System.Windows.Forms.Control?displayProperty=nameWithType> ableitet.  
   
     ```vb  
     Public Class FirstControl  
@@ -34,26 +34,26 @@ Dieser Abschnitt führt Sie durch die wichtigsten Schritte zum Erstellen von ben
     public class FirstControl:Control {}  
     ```  
   
-2.  Definieren Sie Eigenschaften. (Sie müssen keine Eigenschaften definieren, da ein Steuerelement viele Eigenschaften erbt die <xref:System.Windows.Forms.Control> -Klasse, aber die meisten benutzerdefinierten Steuerelemente definieren zusätzliche Eigenschaften.) Das folgende Codefragment definiert eine Eigenschaft namens `TextAlignment` , `FirstControl` verwendet, um die Anzeige formatieren der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft vererbt <xref:System.Windows.Forms.Control>. Weitere Informationen zum Definieren von Eigenschaften finden Sie in der [Übersicht über Eigenschaften](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120)).  
+2. Definieren Sie Eigenschaften. (Sie müssen keine Eigenschaften definieren, da ein Steuerelement viele Eigenschaften erbt die <xref:System.Windows.Forms.Control> -Klasse, aber die meisten benutzerdefinierten Steuerelemente definieren zusätzliche Eigenschaften.) Das folgende Codefragment definiert eine Eigenschaft namens `TextAlignment` , `FirstControl` verwendet, um die Anzeige formatieren der <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft vererbt <xref:System.Windows.Forms.Control>. Weitere Informationen zum Definieren von Eigenschaften finden Sie in der [Übersicht über Eigenschaften](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
      Wenn Sie eine Eigenschaft, die die visuelle Darstellung des Steuerelements ändert festlegen, müssen Sie Aufrufen der <xref:System.Windows.Forms.Control.Invalidate%2A> Methode, um das Steuerelement neu gezeichnet werden. <xref:System.Windows.Forms.Control.Invalidate%2A> wird in der Basisklasse definiert <xref:System.Windows.Forms.Control>.  
   
-3.  Überschreiben Sie die geschützte <xref:System.Windows.Forms.Control.OnPaint%2A> Methode geerbt von <xref:System.Windows.Forms.Control> Renderinglogik auf das Steuerelement angeben. Wenn Sie nicht außer Kraft setzen <xref:System.Windows.Forms.Control.OnPaint%2A>, das Steuerelement wird nicht in der Lage, sich selbst zu zeichnen. Im folgenden Codefragment der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode zeigt die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft vererbt <xref:System.Windows.Forms.Control> mit die Ausrichtung anhand der `alignmentValue` Feld.  
+3. Überschreiben Sie die geschützte <xref:System.Windows.Forms.Control.OnPaint%2A> Methode geerbt von <xref:System.Windows.Forms.Control> Renderinglogik auf das Steuerelement angeben. Wenn Sie nicht außer Kraft setzen <xref:System.Windows.Forms.Control.OnPaint%2A>, das Steuerelement wird nicht in der Lage, sich selbst zu zeichnen. Im folgenden Codefragment der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode zeigt die <xref:System.Windows.Forms.Control.Text%2A> Eigenschaft vererbt <xref:System.Windows.Forms.Control> mit die Ausrichtung anhand der `alignmentValue` Feld.  
   
      [!code-csharp[System.Windows.Forms.FirstControl#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  Stellen Sie Attribute für das Steuerelement bereit. Attribute ermöglichen es einem visuellen Designer, Ihr Steuerelement und dessen Eigenschaften und Ereignisse entsprechend zur Entwurfszeit anzuzeigen. Das folgende Codefragment wendet die Attribute auf die Eigenschaft `TextAlignment` an. In einem Designer wie Visual Studio die <xref:System.ComponentModel.CategoryAttribute.Category%2A> Attribut (Siehe Codefragment) bewirkt, dass die Eigenschaft in einer logischen Kategorie angezeigt werden. Die <xref:System.ComponentModel.DescriptionAttribute.Description%2A> Attribut bewirkt, dass eine beschreibende Zeichenfolge, die am unteren Rand angezeigt werden die **Eigenschaften** Fenster bei der `TextAlignment` Eigenschaft ausgewählt ist. Weitere Informationen zu Attributen finden Sie unter [Entwurfszeitattribute für Komponenten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
+4. Stellen Sie Attribute für das Steuerelement bereit. Attribute ermöglichen es einem visuellen Designer, Ihr Steuerelement und dessen Eigenschaften und Ereignisse entsprechend zur Entwurfszeit anzuzeigen. Das folgende Codefragment wendet die Attribute auf die Eigenschaft `TextAlignment` an. In einem Designer wie Visual Studio die <xref:System.ComponentModel.CategoryAttribute.Category%2A> Attribut (Siehe Codefragment) bewirkt, dass die Eigenschaft in einer logischen Kategorie angezeigt werden. Die <xref:System.ComponentModel.DescriptionAttribute.Description%2A> Attribut bewirkt, dass eine beschreibende Zeichenfolge, die am unteren Rand angezeigt werden die **Eigenschaften** Fenster bei der `TextAlignment` Eigenschaft ausgewählt ist. Weitere Informationen zu Attributen finden Sie unter [Entwurfszeitattribute für Komponenten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120)).  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
   
-5.  (optional) Stellen Sie Ressourcen für Ihr Steuerelement zur Verfügung. Sie können eine Ressource, z.B. eine Bitmap für das Steuerelement mit einer Compileroption bereitstellen (`/res` für C#), um Ressourcen mit dem Steuerelement zu verpacken. Zur Laufzeit kann die Ressource mithilfe der Methoden der abgerufen werden die <xref:System.Resources.ResourceManager> Klasse. Weitere Informationen zum Erstellen und Verwenden von Ressourcen finden Sie unter [Ressourcen in Desktop-Apps](../../resources/index.md).  
+5. (optional) Stellen Sie Ressourcen für Ihr Steuerelement zur Verfügung. Sie können eine Ressource, z.B. eine Bitmap für das Steuerelement mit einer Compileroption bereitstellen (`/res` für C#), um Ressourcen mit dem Steuerelement zu verpacken. Zur Laufzeit kann die Ressource mithilfe der Methoden der abgerufen werden die <xref:System.Resources.ResourceManager> Klasse. Weitere Informationen zum Erstellen und Verwenden von Ressourcen finden Sie unter [Ressourcen in Desktop-Apps](../../resources/index.md).  
   
-6.  Kompilieren Sie das Steuerelement, und stellen Sie es bereit. Führen Sie die folgenden Schritte aus, um `FirstControl,` zu kompilieren und bereitzustellen:  
+6. Kompilieren Sie das Steuerelement, und stellen Sie es bereit. Führen Sie die folgenden Schritte aus, um `FirstControl,` zu kompilieren und bereitzustellen:  
   
     1.  Speichern Sie den Code im folgenden Beispiel als Quelldatei (z.B. als „FirstControl.cs“ oder „FirstControl.vb“).  
   
@@ -79,9 +79,9 @@ Dieser Abschnitt führt Sie durch die wichtigsten Schritte zum Erstellen von ben
   
 #### <a name="to-compile-and-run-this-sample"></a>So kompilieren Sie dieses Beispiel und führen es aus  
   
-1.  Speichern Sie den Code im folgenden Beispiel als Quelldatei („SimpleForm.cs“ oder „SimpleForms.vb“).  
+1. Speichern Sie den Code im folgenden Beispiel als Quelldatei („SimpleForm.cs“ oder „SimpleForms.vb“).  
   
-2.  Kompilieren Sie den Quellcode in eine ausführbare Assembly, indem Sie den folgenden Befehl im Verzeichnis ausführen, das die Quelldatei enthält.  
+2. Kompilieren Sie den Quellcode in eine ausführbare Assembly, indem Sie den folgenden Befehl im Verzeichnis ausführen, das die Quelldatei enthält.  
   
     ```console  
     vbc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.vb  
@@ -93,7 +93,7 @@ Dieser Abschnitt führt Sie durch die wichtigsten Schritte zum Erstellen von ben
   
      "CustomWinControls.dll" ist die Assembly, die die Klasse enthält `FirstControl`. Diese Assembly muss sich im gleichen Verzeichnis befinden wie die Quelldatei für das Formular, das auf sie zugreift („SimpleForm.cs“ oder „SimpleForms.vb“).  
   
-3.  Führen Sie „SimpleForm.exe“ mit dem folgenden Befehl aus.  
+3. Führen Sie „SimpleForm.exe“ mit dem folgenden Befehl aus.  
   
     ```console
     SimpleForm  

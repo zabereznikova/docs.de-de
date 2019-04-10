@@ -2,12 +2,12 @@
 title: Sperre der PII-Sicherheit
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 38ca91ab969624ab2128e3cfad1d8151cb8d1f88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122056"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326644"
 ---
 # <a name="pii-security-lockdown"></a>Sperre der PII-Sicherheit
 In diesem Beispiel wird veranschaulicht, wie mehrere sicherheitsbezogene Funktionen eines Windows Communication Foundation (WCF)-Diensts, indem gesteuert wird:  
@@ -41,11 +41,11 @@ In diesem Beispiel wird veranschaulicht, wie mehrere sicherheitsbezogene Funktio
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>So verschlüsseln Sie die Werte im Abschnitt appSettings in Web.config für das Beispiel  
   
-1.  Öffnen Sie eine Eingabeaufforderung mithilfe des Start -> ausführen... Geben Sie in `cmd` , und klicken Sie auf **OK**.  
+1. Öffnen Sie eine Eingabeaufforderung mithilfe des Start -> ausführen... Geben Sie in `cmd` , und klicken Sie auf **OK**.  
   
-2.  Navigieren Sie zum aktuellen .NET Framework-Verzeichnis, indem Sie folgenden Befehl ausgeben: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
+2. Navigieren Sie zum aktuellen .NET Framework-Verzeichnis, indem Sie folgenden Befehl ausgeben: `cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`.  
   
-3.  Verschlüsseln Sie die appSettings-Konfigurationseinstellungen im Web.config-Ordner, indem Sie folgenden Befehl ausgeben: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
+3. Verschlüsseln Sie die appSettings-Konfigurationseinstellungen im Web.config-Ordner, indem Sie folgenden Befehl ausgeben: `aspnet_regiis -pe "appSettings" -app "/servicemodelsamples" -prov "DataProtectionConfigurationProvider"`.  
   
  Weitere Informationen zur Verschlüsselung der Abschnitte von Konfigurationsdateien finden Sie eine Anleitung auf DPAPI in ASP.NET-Konfiguration lesen ([Building Secure ASP.NET Applications: Authentifizierung, Autorisierung und sichere Kommunikation](https://go.microsoft.com/fwlink/?LinkId=95137)) und eine Anleitung für RSA in der ASP.NET-Konfiguration ([so wird's gemacht: Verschlüsseln von Konfigurationsabschnitten in ASP.NET 2.0 mithilfe von RSA](https://go.microsoft.com/fwlink/?LinkId=95138)).  
   
@@ -130,17 +130,17 @@ In diesem Beispiel wird veranschaulicht, wie mehrere sicherheitsbezogene Funktio
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So richten Sie das Beispiel ein, erstellen es und führen es aus  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Bearbeiten Sie "Machine.config", um das `enableLoggingKnownPii`-Attribut auf `true` festzulegen, wobei Sie, falls notwendig, die übergeordneten Knoten hinzufügen.  
+2. Bearbeiten Sie "Machine.config", um das `enableLoggingKnownPii`-Attribut auf `true` festzulegen, wobei Sie, falls notwendig, die übergeordneten Knoten hinzufügen.  
   
-3.  Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
+3. Um die C#- oder Visual Basic .NET-Edition der Projektmappe zu erstellen, befolgen Sie die unter [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)aufgeführten Anweisungen.  
   
-4.  Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4. Folgen Sie den Anweisungen, um das Beispiel in einer Konfiguration für die einzelnen-Computer oder computerübergreifend auszuführen, [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 #### <a name="to-clean-up-the-sample"></a>So bereinigen Sie das Beispiel  
   
-1.  Bearbeiten Sie Machine.config, und legen Sie `enableLoggingKnownPii`-Attribut auf `false` fest.  
+1. Bearbeiten Sie Machine.config, und legen Sie `enableLoggingKnownPii`-Attribut auf `false` fest.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,14 +2,14 @@
 title: Erneutes Hosten von Designern
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: 885590604532fba76fc9ab3f6bcc69e077868403
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b2a51014e34bf27d6f016db71d2c2eaabb906c6d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837353"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328165"
 ---
-# <a name="designer-rehosting"></a>Hosten von Designern
+# <a name="designer-rehosting"></a>Erneutes Hosten von Designern
 Das erneute Hosten des Designers ist ein allgemeines Szenario, das sich auf das Hosting des Entwurfszeichnungsbereichs des Workflows in einer benutzerdefinierten Anwendung bezieht. Die Hostinganwendung, mit der die meisten Personen vertraut sind, ist Visual Studio, es gibt jedoch eine Reihe von Szenarien, in denen das Anzeigen des Workflow-Designers in einer Anwendung hilfreich sein kann:  
   
 -   Das Überwachen von Anwendungen (die Schaffung von Möglichkeiten für einen Endbenutzer, den Prozess sowie Laufzeitdaten zum Prozess, z. B. die gerade aktiven Zustände, die kombinierten Ausführungszeitdaten oder andere Informationen zu einer Instanz des Workflows, visuell darzustellen).  
@@ -114,11 +114,11 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>Verwenden des Beispiels  
   
-1.  Öffnen Sie die Projektmappe designerrehosting.sln in Visual Studio 2010.  
+1. Öffnen Sie die Projektmappe designerrehosting.sln in Visual Studio 2010.  
   
-2.  Drücken Sie F5, um die Anwendung zu kompilieren und auszuführen.  
+2. Drücken Sie F5, um die Anwendung zu kompilieren und auszuführen.  
   
-3.  Eine WPF-Anwendung beginnt mit einem neu gehosteten Designer.  
+3. Eine WPF-Anwendung beginnt mit einem neu gehosteten Designer.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

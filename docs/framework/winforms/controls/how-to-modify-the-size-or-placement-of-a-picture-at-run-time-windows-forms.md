@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 5d817d34e47253b2e35afa7bb41c59eea06e1f94
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178827"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328334"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>Vorgehensweise: Ändern der Größe oder Platzierung eines Bildes zur Laufzeit (Windows Forms)
 Bei Verwendung der Windows Forms <xref:System.Windows.Forms.PictureBox> Steuerelement eines Formulars, Sie können festlegen, die <xref:System.Windows.Forms.PictureBox.SizeMode%2A> Eigenschaft darauf, um:  
@@ -33,7 +33,7 @@ Bei Verwendung der Windows Forms <xref:System.Windows.Forms.PictureBox> Steuerel
   
 ### <a name="to-set-the-sizemode-property-at-run-time"></a>Um die SizeMode-Eigenschaft zur Laufzeit festzulegen.  
   
-1.  Legen Sie <xref:System.Windows.Forms.PictureBox.SizeMode%2A> zu <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (Standardeinstellung), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, oder <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> bedeutet, dass das Bild in die linken oberen Ecke des Steuerelements eingefügt wird. Wenn das Bild größer als das Steuerelement ist, werden die unteren und rechten Rand abgeschnitten. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> bedeutet, dass das Bild innerhalb des Steuerelements zentriert wird. Wenn das Bild größer als das Steuerelement ist, werden die äußeren Ränder des Bilds abgeschnitten. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> bedeutet, dass die Größe des Steuerelements auf die Größe des Bilds angepasst wird. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> ist das Gegenteil und bedeutet, dass die Größe des Bilds an die Größe des Steuerelements angepasst wird.  
+1. Legen Sie <xref:System.Windows.Forms.PictureBox.SizeMode%2A> zu <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> (Standardeinstellung), <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>, <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>, oder <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>. <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> bedeutet, dass das Bild in die linken oberen Ecke des Steuerelements eingefügt wird. Wenn das Bild größer als das Steuerelement ist, werden die unteren und rechten Rand abgeschnitten. <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> bedeutet, dass das Bild innerhalb des Steuerelements zentriert wird. Wenn das Bild größer als das Steuerelement ist, werden die äußeren Ränder des Bilds abgeschnitten. <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> bedeutet, dass die Größe des Steuerelements auf die Größe des Bilds angepasst wird. <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> ist das Gegenteil und bedeutet, dass die Größe des Bilds an die Größe des Steuerelements angepasst wird.  
   
      Im folgenden Beispiel wird der Pfad für den Speicherort des Bilds Ordner "Eigene Dokumente". Dies geschieht, da Sie davon ausgehen können, dass die meisten Computer, die das Windows-Betriebssystem ausgeführt wird dieses Verzeichnis enthält. Dadurch können auch Benutzer mit minimalen Systemzugriffsebenen die Anwendung sicher ausführen. Im folgenden Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.PictureBox> Steuerelement bereits hinzugefügt.  
   

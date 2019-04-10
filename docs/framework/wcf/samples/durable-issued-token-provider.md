@@ -2,12 +2,12 @@
 title: Dauerhaft ausgestellter Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 72c8b4e74607a1ed7f616959a6445f21b595a956
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103258"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329751"
 ---
 # <a name="durable-issued-token-provider"></a>Dauerhaft ausgestellter Tokenanbieter
 Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von einem benutzerdefinierten Client ausgestellt wird.  
@@ -114,7 +114,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
 #### <a name="to-develop-a-custom-token-provider"></a>So entwickeln Sie einen benutzerdefinierten Tokenanbieter  
   
-1.  Schreiben Sie einen benutzerdefinierten Tokenanbieter.  
+1. Schreiben Sie einen benutzerdefinierten Tokenanbieter.  
   
      Das Beispiel implementiert einen benutzerdefinierten Tokenanbieter, der ein Sicherheitstoken zurückgibt, das aus dem Cache abgerufen wird.  
   
@@ -133,7 +133,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
     }  
     ```  
   
-2.  Schreiben Sie den benutzerdefiniertem Sicherheitstoken-Manager.  
+2. Schreiben Sie den benutzerdefiniertem Sicherheitstoken-Manager.  
   
      Der <xref:System.IdentityModel.Selectors.SecurityTokenManager> wird zur Erstellung von einem <xref:System.IdentityModel.Selectors.SecurityTokenProvider> für eine bestimmte <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> verwendet, die in der `CreateSecurityTokenProvider`-Methode übergeben wird. Der Sicherheitstoken-Manager dient außerdem zum Erstellen von Tokenauthentifizierern und Token-Serialisierungsprogrammen. Diese Vorgänge werden jedoch in diesem Beispiel nicht behandelt. In diesem Beispiel erbt der benutzerdefinierte Sicherheitstoken-Manager aus der Klasse <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> und setzt die Methode `CreateSecurityTokenProvider` außer Kraft, um den benutzerdefinierten Tokenanbieter zurückzugeben, wenn die übergebenen Tokenanforderungen angeben, dass ein ausgestelltes Token angefordert wird.  
   
@@ -162,7 +162,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
     }  
     ```  
   
-3.  Schreiben Sie benutzerdefinierte Clientanmeldeinformationen.  
+3. Schreiben Sie benutzerdefinierte Clientanmeldeinformationen.  
   
      Eine Klasse der Clientanmeldeinformationen stellt die Anmeldeinformationen dar, die für den Clientproxy konfiguriert werden, und erstellt einen Sicherheitstoken-Manager, mit dem Tokenauthentifizierer, Tokenanbieter und Token-Serialisierungsprogramme abgerufen werden können.  
   
@@ -204,7 +204,7 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
     }  
     ```  
   
-4.  Implementieren Sie den Tokencache. Die Beispielimplementierung verwendet eine abstrakte Basisklasse, über die Consumer eines bestimmten Tokencaches mit dem Cache interagieren.  
+4. Implementieren Sie den Tokencache. Die Beispielimplementierung verwendet eine abstrakte Basisklasse, über die Consumer eines bestimmten Tokencaches mit dem Cache interagieren.  
   
     ```  
     public abstract class IssuedTokenCache  
@@ -233,17 +233,17 @@ Dieses Beispiel veranschaulicht das Implementieren eines Tokenanbieters, der von
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Führen Sie die Datei "Setup.cmd" aus, um die erforderlichen Zertifikate zu erstellen.  
+1. Führen Sie die Datei "Setup.cmd" aus, um die erforderlichen Zertifikate zu erstellen.  
   
-2.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md). Stellen Sie sicher, dass alle Projekte in der Projektmappe erstellt werden (Shared, RSTRSTR, Service, SecurityTokenService und Client).  
+2. Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md). Stellen Sie sicher, dass alle Projekte in der Projektmappe erstellt werden (Shared, RSTRSTR, Service, SecurityTokenService und Client).  
   
-3.  Stellen Sie sicher, dass Service.exe und SecurityTokenService.exe mit Administratorrechten ausgeführt werden.  
+3. Stellen Sie sicher, dass Service.exe und SecurityTokenService.exe mit Administratorrechten ausgeführt werden.  
   
-4.  Führen Sie Client.exe aus.  
+4. Führen Sie Client.exe aus.  
   
 #### <a name="to-clean-up-after-the-sample"></a>So stellen Sie den Zustand vor Ausführung des Beispiels wieder her  
   
-1.  Führen Sie "Cleanup.cmd" im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
+1. Führen Sie "Cleanup.cmd" im Beispielordner aus, nachdem Sie das Beispiel fertig ausgeführt haben.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

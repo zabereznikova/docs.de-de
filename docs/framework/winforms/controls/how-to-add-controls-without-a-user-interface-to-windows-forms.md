@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 90166821181e6562d0bef3ff85f7e7a95c479be0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330102"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Vorgehensweise: Hinzufügen von Steuerelementen ohne Benutzeroberfläche zu Windows Forms
 Ein nicht visuelles Steuerelement (oder Komponente) bietet Funktionen für Ihre Anwendung. Im Gegensatz zu anderen Steuerelementen Komponenten bieten eine Benutzeroberfläche für dem Benutzer nicht und müssen somit auch nicht auf der Windows Forms-Designer-Oberfläche angezeigt werden. Wenn eine Komponente zu einem Formular hinzugefügt wird, zeigt der Windows Forms-Designer ein veränderbarer am unteren Rand der Form, in dem alle Komponenten angezeigt werden. Nach einem Steuerelement der Komponentenleiste hinzugefügt wurde, können Sie wählen die Komponente aus und legen Sie seine Eigenschaften fest, wie jedes andere Steuerelement im Formular.  
@@ -29,9 +29,9 @@ Ein nicht visuelles Steuerelement (oder Komponente) bietet Funktionen für Ihre 
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Hinzufügen eine Komponente zu einem Windows-Formular  
   
-1.  Öffnen Sie das Formular. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Windows Forms im Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
+1. Öffnen Sie das Formular. Weitere Informationen finden Sie unter [Vorgehensweise: Anzeigen von Windows Forms im Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).  
   
-2.  In der **Toolbox**, klicken Sie auf eine Komponente, und ziehen Sie es in Ihrem Formular.  
+2. In der **Toolbox**, klicken Sie auf eine Komponente, und ziehen Sie es in Ihrem Formular.  
   
      Die Komponente wird auf der Komponentenleiste angezeigt.  
   
@@ -42,11 +42,11 @@ Ein nicht visuelles Steuerelement (oder Komponente) bietet Funktionen für Ihre 
   
 #### <a name="to-add-a-component-to-a-windows-form-programmatically"></a>Programmgesteuertes Hinzufügen eine Komponente zu einem Windows-Formular  
   
-1.  Erstellen Sie eine Instanz von der <xref:System.Windows.Forms.Timer> Klasse im Code.  
+1. Erstellen Sie eine Instanz von der <xref:System.Windows.Forms.Timer> Klasse im Code.  
   
-2.  Legen Sie die `Interval` Eigenschaft, um die Zeit zwischen den Ticks des Zeitgebers zu bestimmen.  
+2. Legen Sie die `Interval` Eigenschaft, um die Zeit zwischen den Ticks des Zeitgebers zu bestimmen.  
   
-3.  Konfigurieren Sie alle anderen erforderlichen Eigenschaften für die Komponente an.  
+3. Konfigurieren Sie alle anderen erforderlichen Eigenschaften für die Komponente an.  
   
      Der folgende Code zeigt die Erstellung einer <xref:System.Windows.Forms.Timer> mit seiner `Interval` Eigenschaftensatz.  
   

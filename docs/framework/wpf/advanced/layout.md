@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231122"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330492"
 ---
 # <a name="layout"></a>Layout
 Dieses Thema beschreibt das Layoutsystem von [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Das Verstehen, wie und wann Layoutberechnungen auftreten, ist wichtige für die Erstellung von Benutzeroberflächen in [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -64,17 +64,17 @@ Dieses Thema beschreibt das Layoutsystem von [!INCLUDE[TLA#tla_winclient](../../
   
  Jedes Mal, das ein untergeordnetes Element <xref:System.Windows.UIElement> seine Position ändert, hat die Möglichkeit, einen neuen Durchlauf des Layoutsystems auslösen. Daher ist es wichtig, die Ereignisse zu verstehen, die das Layoutsystem aufrufen können, da unnötige Aufrufe zu schlechter Anwendungsleistung führen können. Im Folgenden wird der Prozess beschrieben, der auftritt, wenn das Layoutsystem aufgerufen wird.  
   
-1.  Ein untergeordnetes Element <xref:System.Windows.UIElement> startet den Layoutvorgang, indem zuerst dessen Kerneigenschaften gemessen.  
+1. Ein untergeordnetes Element <xref:System.Windows.UIElement> startet den Layoutvorgang, indem zuerst dessen Kerneigenschaften gemessen.  
   
-2.  Für definierten Größeneigenschaften <xref:System.Windows.FrameworkElement> ausgewertet werden, z. B. <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, und <xref:System.Windows.FrameworkElement.Margin%2A>.  
+2. Für definierten Größeneigenschaften <xref:System.Windows.FrameworkElement> ausgewertet werden, z. B. <xref:System.Windows.FrameworkElement.Width%2A>, <xref:System.Windows.FrameworkElement.Height%2A>, und <xref:System.Windows.FrameworkElement.Margin%2A>.  
   
-3.  <xref:System.Windows.Controls.Panel>-spezifische Logik angewendet wird, wie z. B. <xref:System.Windows.Controls.Dock> Richtung oder Stapeln <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
+3. <xref:System.Windows.Controls.Panel>-spezifische Logik angewendet wird, wie z. B. <xref:System.Windows.Controls.Dock> Richtung oder Stapeln <xref:System.Windows.Controls.StackPanel.Orientation%2A>.  
   
-4.  Der Inhalt wird neu angeordnet, nachdem alle untergeordneten Elemente gemessen wurden.  
+4. Der Inhalt wird neu angeordnet, nachdem alle untergeordneten Elemente gemessen wurden.  
   
-5.  Die <xref:System.Windows.Controls.Panel.Children%2A> Auflistung auf dem Bildschirm gezeichnet wird.  
+5. Die <xref:System.Windows.Controls.Panel.Children%2A> Auflistung auf dem Bildschirm gezeichnet wird.  
   
-6.  Der Prozess wird erneut aufgerufen, wenn zusätzliche <xref:System.Windows.Controls.Panel.Children%2A> der Auflistung hinzugefügt werden eine <xref:System.Windows.FrameworkElement.LayoutTransform%2A> angewendet wird, oder die <xref:System.Windows.UIElement.UpdateLayout%2A> Methode wird aufgerufen.  
+6. Der Prozess wird erneut aufgerufen, wenn zusätzliche <xref:System.Windows.Controls.Panel.Children%2A> der Auflistung hinzugefügt werden eine <xref:System.Windows.FrameworkElement.LayoutTransform%2A> angewendet wird, oder die <xref:System.Windows.UIElement.UpdateLayout%2A> Methode wird aufgerufen.  
   
  Dieser Prozess und wie er aufgerufen wird, werden in den folgenden Abschnitten ausführlicher definiert.  
   

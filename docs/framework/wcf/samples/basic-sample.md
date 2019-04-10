@@ -2,12 +2,12 @@
 title: Einfaches Beispiel
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 22d5428da57b2fc8f9b97d4553b86ac2a918f0e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1ceee6dd11b59ab9b43797ca8b1fd80c232fc8ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59083015"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327970"
 ---
 # <a name="basic-sample"></a>Einfaches Beispiel
 In diesem Beispiel wird erläutert, wie ein Dienst sichtbar gemacht wird und wie nach einem sichtbaren Dienst gesucht und dieser aufgerufen wird. Dieses Beispiel besteht aus zwei Projekten: Dienst und Client.
@@ -82,15 +82,15 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
-1.  In diesem Beispiel werden HTTP-Endpunkte verwendet. Zur Ausführung des Beispiels müssen die richtigen URL-ACLs hinzugefügt werden. Weitere Informationen finden Sie unter [Konfigurieren von HTTP und HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). Durch die Ausführung des folgenden Befehls mit erweiterten Berechtigungen werden die entsprechenden ACLs hinzugefügt. Es empfiehlt sich, die Domäne und den Benutzernamen durch die folgenden Argumente zu ersetzen, wenn der Befehl nicht funktioniert. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. In diesem Beispiel werden HTTP-Endpunkte verwendet. Zur Ausführung des Beispiels müssen die richtigen URL-ACLs hinzugefügt werden. Weitere Informationen finden Sie unter [Konfigurieren von HTTP und HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). Durch die Ausführung des folgenden Befehls mit erweiterten Berechtigungen werden die entsprechenden ACLs hinzugefügt. Es empfiehlt sich, die Domäne und den Benutzernamen durch die folgenden Argumente zu ersetzen, wenn der Befehl nicht funktioniert. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  Verwenden Visual Studio 2012, öffnen Sie Basic.sln und erstellen Sie das Beispiel.  
+2. Verwenden Visual Studio 2012, öffnen Sie Basic.sln und erstellen Sie das Beispiel.  
   
-3.  Führen Sie die SERVICE.EXE-Anwendung aus.  
+3. Führen Sie die SERVICE.EXE-Anwendung aus.  
   
-4.  Führen Sie nach dem Starten des Diensts client.exe aus.  
+4. Führen Sie nach dem Starten des Diensts client.exe aus.  
   
-5.  Beachten Sie, dass der Client den Dienst ermitteln konnte, ohne seine Adresse zu kennen.  
+5. Beachten Sie, dass der Client den Dienst ermitteln konnte, ohne seine Adresse zu kennen.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

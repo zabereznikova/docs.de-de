@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: ff52d3bbf7bf5d9d85f7a6fd5f73d9730dde8fad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168986"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327853"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Überlegungen zum Layout für das WindowsFormsHost-Element
 In diesem Thema wird beschrieben, wie die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element interagiert mit der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Layoutsystem.  
@@ -84,13 +84,13 @@ In diesem Thema wird beschrieben, wie die <xref:System.Windows.Forms.Integration
 ### <a name="sizing-algorithm"></a>Algorithmus zur Anpassung  
  Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element verwendet das folgende Verfahren, um die Größe des gehosteten Steuerelements:  
   
-1.  Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Element überschreibt die <xref:System.Windows.FrameworkElement.MeasureOverride%2A> und <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> Methoden.  
+1. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Element überschreibt die <xref:System.Windows.FrameworkElement.MeasureOverride%2A> und <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> Methoden.  
   
-2.  Zur Bestimmung der Größe des gehosteten Steuerelements, das <xref:System.Windows.FrameworkElement.MeasureOverride%2A> Methodenaufrufe des gehosteten Steuerelements <xref:System.Windows.Forms.Control.GetPreferredSize%2A> Methode mit einer Einschränkung übersetzt wird, von der Einschränkung, die an die <xref:System.Windows.FrameworkElement.MeasureOverride%2A> Methode.  
+2. Zur Bestimmung der Größe des gehosteten Steuerelements, das <xref:System.Windows.FrameworkElement.MeasureOverride%2A> Methodenaufrufe des gehosteten Steuerelements <xref:System.Windows.Forms.Control.GetPreferredSize%2A> Methode mit einer Einschränkung übersetzt wird, von der Einschränkung, die an die <xref:System.Windows.FrameworkElement.MeasureOverride%2A> Methode.  
   
-3.  Die <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> -Methode versucht, die die Einschränkung für die angegebene Größe des gehosteten Steuerelements fest.  
+3. Die <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> -Methode versucht, die die Einschränkung für die angegebene Größe des gehosteten Steuerelements fest.  
   
-4.  Wenn des gehosteten Steuerelements <xref:System.Windows.Forms.Control.Size%2A> Eigenschaft mit die angegebene Einschränkung übereinstimmt, wird die Einschränkung wird das gehostete Steuerelement angepasst.  
+4. Wenn des gehosteten Steuerelements <xref:System.Windows.Forms.Control.Size%2A> Eigenschaft mit die angegebene Einschränkung übereinstimmt, wird die Einschränkung wird das gehostete Steuerelement angepasst.  
   
  Wenn die <xref:System.Windows.Forms.Control.Size%2A> Eigenschaft entspricht nicht der angegebenen Einschränkung, das gehostete Steuerelement die kontinuierliche Größe nicht unterstützt. Z. B. die <xref:System.Windows.Forms.MonthCalendar> Steuerelement ermöglicht es, nur diskrete Größen. Die zulässigen Größen für dieses Steuerelement bestehen aus ganzen Zahlen (für die Anzahl der Monate) für die Höhe und Breite. In Fällen wie diesem den <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element verhält sich wie folgt:  
   

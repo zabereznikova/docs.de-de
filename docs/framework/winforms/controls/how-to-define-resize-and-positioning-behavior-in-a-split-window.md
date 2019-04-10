@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: 4ed1d2a5230502bc598906da0db5164396986e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217067"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328672"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>Vorgehensweise: Definieren des Verhaltens bei Größen- und Positionsänderungen in einem geteilten Fenster
 Die Bereiche von den <xref:System.Windows.Forms.SplitContainer> Steuerelement eignen sich gut für das wird ein, angepasst und die vom Benutzer bearbeitet. Es werden jedoch Situationen wird den Splitter programmgesteuert –, wo es positioniert ist und in welchem Ausmaß verschoben werden.  
@@ -31,7 +31,7 @@ Die Bereiche von den <xref:System.Windows.Forms.SplitContainer> Steuerelement ei
   
 ### <a name="to-define-splitcontainer-resize-behavior"></a>Verhalten bei Größenänderung SplitContainer definieren  
   
-1.  Legen Sie in einer Prozedur die <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Eigenschaft, um die gewünschte Größe, damit der "springende" Verhalten des Splitters erreicht wird.  
+1. Legen Sie in einer Prozedur die <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> Eigenschaft, um die gewünschte Größe, damit der "springende" Verhalten des Splitters erreicht wird.  
   
      Das folgende Codebeispiel zeigt, innerhalb des Formulars <xref:System.Windows.Forms.Form.Load> Ereignis, das der Splitter innerhalb der <xref:System.Windows.Forms.SplitContainer> -Steuerelement so eingestellt ist, dass 10 Pixel beim gezogen.  
   

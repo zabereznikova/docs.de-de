@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171157"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330453"
 ---
 # <a name="routed-events-overview"></a>Übersicht über Routingereignisse
 Dieses Thema beschreibt das Konzept von Routingereignissen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Das Thema definiert die Terminologie von Routingereignissen, beschreibt, wie Routingereignisse anhand einer Struktur von Elementen weitergeleitet werden und führt Sie in das Erstellen Ihrer eigenen, benutzerdefinierten Routingereignisse ein.
@@ -204,17 +204,17 @@ Bubbling und Tunneling eines Eingabeereignisses
   
  Ein Ereignis wird in folgender Reihenfolge verarbeitet:  
   
-1.  `PreviewMouseDown` (tunnel) auf dem Stammelement.  
+1. `PreviewMouseDown` (tunnel) auf dem Stammelement.  
   
-2.  `PreviewMouseDown` (tunnel) auf dem intermediate Element #1.  
+2. `PreviewMouseDown` (tunnel) auf dem intermediate Element #1.  
   
-3.  `PreviewMouseDown` (tunnel) auf dem Source-Element #2.  
+3. `PreviewMouseDown` (tunnel) auf dem Source-Element #2.  
   
-4.  `MouseDown` (bubble) auf dem Source-Element #2.  
+4. `MouseDown` (bubble) auf dem Source-Element #2.  
   
-5.  `MouseDown` (bubble) auf dem intermediate Element #1.  
+5. `MouseDown` (bubble) auf dem intermediate Element #1.  
   
-6.  `MouseDown` (bubble) auf dem Stammelement.  
+6. `MouseDown` (bubble) auf dem Stammelement.  
   
  Ein Delegat eines Routingereignishandlers enthält Verweise auf zwei Objekte: auf das Objekt, das das Ereignis ausgelöst hat und das Objekt, auf dem der Handler aufgerufen wurde. Das Objekt, auf dem der Handler aufgerufen wurde, ist das Objekt, das vom `sender`-Parameter gemeldet wurde. Das Objekt, in dem das Ereignis erstmals ausgelöst, wird gemeldet, durch die <xref:System.Windows.RoutedEventArgs.Source%2A> Eigenschaft in den Ereignisdaten. Ein Ereignis dennoch ausgelöst und verarbeitet werden kann durch das gleiche Objekt in diesem Fall `sender` und <xref:System.Windows.RoutedEventArgs.Source%2A> identisch sind (Dies ist der Fall mit Schritt 3 und 4, die Verarbeitung in dieser Liste mit Beispielen).  
   

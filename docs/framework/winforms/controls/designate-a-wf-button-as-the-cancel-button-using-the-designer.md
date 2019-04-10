@@ -5,12 +5,12 @@ helpviewer_keywords:
 - buttons [Windows Forms], cancel buttons
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 30e77d9c-d565-4ab5-a84a-62c043af8822
-ms.openlocfilehash: be0847d1837ec85ed9d82dc7cc879d0cffa19cd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f127a1a74643c975aea73b24896c098b365aa327
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156220"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327541"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button-using-the-designer"></a>Vorgehensweise: Definieren einer Windows Forms-Schaltfläche als „Abbrechen“-Schaltfläche mithilfe des Designers
 Auf jedem Windows-Formular, Sie können festlegen, eine <xref:System.Windows.Forms.Button> Steuerelement die Schaltfläche "Abbrechen". Schaltfläche "Abbrechen" geklickt wird, wenn der Benutzer die ESC-Taste drückt, unabhängig davon, die welche anderen Formular auf das Steuerelement den Fokus besitzt. Eine solche Schaltfläche programmiert wird in der Regel dem Benutzer ermöglichen, schnell einen Vorgang beendet, ohne dass eine Aktion.  
@@ -20,9 +20,9 @@ Auf jedem Windows-Formular, Sie können festlegen, eine <xref:System.Windows.For
   
 ### <a name="to-designate-the-cancel-button"></a>Um die Schaltfläche "Abbrechen" zu kennzeichnen.  
   
-1.  Wählen Sie das Formular, das auf dem sich die Schaltfläche befindet.  
+1. Wählen Sie das Formular, das auf dem sich die Schaltfläche befindet.  
   
-2.  In der **Eigenschaften** legen des Formulars <xref:System.Windows.Forms.Form.CancelButton%2A> Eigenschaft, um die <xref:System.Windows.Forms.Button> Name des Steuerelements.  
+2. In der **Eigenschaften** legen des Formulars <xref:System.Windows.Forms.Form.CancelButton%2A> Eigenschaft, um die <xref:System.Windows.Forms.Button> Name des Steuerelements.  
   
 ## <a name="see-also"></a>Siehe auch
 

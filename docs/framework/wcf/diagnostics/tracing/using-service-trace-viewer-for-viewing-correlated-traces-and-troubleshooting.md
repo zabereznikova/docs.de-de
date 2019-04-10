@@ -2,12 +2,12 @@
 title: Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd5fe08054b3a10c1663a7dd7dab5f9de5327cbb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160666"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329049"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung
 In diesem Thema wird das Format von Ablaufverfolgungsdaten und ihre Verwendung beschrieben. Dabei wird auch auf die Verwendung von Service Trace Viewer zur Problembehandlung in einer Anwendung eingegangen.  
@@ -152,17 +152,17 @@ Die folgende Abbildung zeigt die WCF-Clientaktivitäten nach Erstellungszeit (li
   
  Auf dem Dienst das Aktivitätsmodell die WCF-Konzepte folgendermaßen zugeordnet:  
   
-1.  Ein ServiceHost wird erstellt und geöffnet (dadurch werden möglicherweise mehrere hostbezogene Aktivitäten erzeugt, z.&amp;#160;B. im Falle der Sicherheit).  
+1. Ein ServiceHost wird erstellt und geöffnet (dadurch werden möglicherweise mehrere hostbezogene Aktivitäten erzeugt, z.&amp;#160;B. im Falle der Sicherheit).  
   
-2.  Es wird eine Lauschaktivität für jeden Listener im ServiceHost erstellt (mit Übertragung in und aus Open ServiceHost).  
+2. Es wird eine Lauschaktivität für jeden Listener im ServiceHost erstellt (mit Übertragung in und aus Open ServiceHost).  
   
-3.  Wenn der Listener eine kommunikationsanforderung, die vom Client initiierten erkannt wird, überträgt er zu einer "Receive Bytes"-Aktivität, die in der alle vom Client gesendeten Bytes verarbeitet werden. In dieser Aktivität sind alle Verbindungsfehler erkennbar, die während der Client-Dienst-Interaktion aufgetreten sind.  
+3. Wenn der Listener eine kommunikationsanforderung, die vom Client initiierten erkannt wird, überträgt er zu einer "Receive Bytes"-Aktivität, die in der alle vom Client gesendeten Bytes verarbeitet werden. In dieser Aktivität sind alle Verbindungsfehler erkennbar, die während der Client-Dienst-Interaktion aufgetreten sind.  
   
-4.  Für jede Gruppe von Bytes, die empfangen werden, die eine Nachricht entspricht, verarbeiten wir diese Bytes in einer Aktivität "Nachricht verarbeiten", in dem wir erstellen die WCF-Nachrichtenobjekt. In dieser Aktivität sind Fehler aufgrund eines ungültigen Umschlags oder einer falsch formatierten Nachricht erkennbar.  
+4. Für jede Gruppe von Bytes, die empfangen werden, die eine Nachricht entspricht, verarbeiten wir diese Bytes in einer Aktivität "Nachricht verarbeiten", in dem wir erstellen die WCF-Nachrichtenobjekt. In dieser Aktivität sind Fehler aufgrund eines ungültigen Umschlags oder einer falsch formatierten Nachricht erkennbar.  
   
-5.  Sobald die Nachricht erstellt wird, erfolgt die Übertragung zu einer Process Action-Aktivität. Wenn `propagateActivity` sowohl für den Client als auch für den Dienst auf `true` festgelegt ist, verfügt diese Aktivität über dieselbe ID wie die auf dem Client definierte und zuvor beschriebene. Von dieser Phase beginnen wir, profitieren von der direkten Korrelation über Endpunkte hinweg, da alle ablaufverfolgungen in WCF ausgegeben, die der Anforderung verknüpft sind, in derselben Aktivität, einschließlich der Verarbeitung der Antwortnachricht sind.  
+5. Sobald die Nachricht erstellt wird, erfolgt die Übertragung zu einer Process Action-Aktivität. Wenn `propagateActivity` sowohl für den Client als auch für den Dienst auf `true` festgelegt ist, verfügt diese Aktivität über dieselbe ID wie die auf dem Client definierte und zuvor beschriebene. Von dieser Phase beginnen wir, profitieren von der direkten Korrelation über Endpunkte hinweg, da alle ablaufverfolgungen in WCF ausgegeben, die der Anforderung verknüpft sind, in derselben Aktivität, einschließlich der Verarbeitung der Antwortnachricht sind.  
   
-6.  Für die Out-of-Process-Aktion erstellen wir eine Aktivität "Execute User Code", um ablaufverfolgungen in Benutzercode von den angegebenen WCF ausgegeben ausgegebenen zu isolieren. Im vorherigen Beispiel wird die Ablaufverfolgung "Dienst sendet Add-Antwort" ggf. in der "Execute User Code"-Aktivität nicht in der vom Client weitergegebenen Aktivität ausgegeben.  
+6. Für die Out-of-Process-Aktion erstellen wir eine Aktivität "Execute User Code", um ablaufverfolgungen in Benutzercode von den angegebenen WCF ausgegeben ausgegebenen zu isolieren. Im vorherigen Beispiel wird die Ablaufverfolgung "Dienst sendet Add-Antwort" ggf. in der "Execute User Code"-Aktivität nicht in der vom Client weitergegebenen Aktivität ausgegeben.  
   
  In der nachfolgenden Abbildung ist die erste Aktivität auf der linken Seite die Stammaktivität (0000), bei der es sich um die Standardaktivität handelt. Die nächsten drei Aktivitäten dienen dazu, den ServiceHost zu öffnen. Die Aktivität in Spalte&amp;#160;5 ist der Listener, und die übrigen Aktivitäten (6 bis 8) beschreiben die WCF-Verarbeitung einer Nachricht, von der Byteverarbeitung bis zur Benutzercodeaktivierung.  
 

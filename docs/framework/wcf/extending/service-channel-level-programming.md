@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197196"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329129"
 ---
 # <a name="service-channel-level-programming"></a>Dienst-Kanalebenenprogrammierung
 In diesem Thema wird beschrieben, wie Sie eine Windows Communication Foundation (WCF)-Dienst-Anwendung ohne schreiben die <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> und der zugehörigen Objektmodelle.  
@@ -18,15 +18,15 @@ In diesem Thema wird beschrieben, wie Sie eine Windows Communication Foundation 
 ## <a name="receiving-messages"></a>Empfangen von Meldungen  
  Um bereit zu sein, Meldungen zu empfangen und zu verarbeiten, sind die folgenden Schritte erforderlich:  
   
-1.  Erstellen Sie eine Bindung.  
+1. Erstellen Sie eine Bindung.  
   
-2.  Erstellen Sie einen Kanallistener.  
+2. Erstellen Sie einen Kanallistener.  
   
-3.  Öffnen Sie den Kanallistener.  
+3. Öffnen Sie den Kanallistener.  
   
-4.  Lesen Sie die Anforderung, und senden Sie eine Antwort.  
+4. Lesen Sie die Anforderung, und senden Sie eine Antwort.  
   
-5.  Schließen Sie alle Kanalobjekte.  
+5. Schließen Sie alle Kanalobjekte.  
   
 #### <a name="creating-a-binding"></a>Erstellen einer Bindung  
  Der erste Schritt beim Lauschen und Empfangen von Meldungen ist das Erstellen einer Bindung. Im Lieferumfang von WCF sind mehrere integrierte und vom System bereitgestellten Bindungen, die direkt durch Instanziierung verwendet werden können. Außerdem können Sie eigene benutzderdefinierte Bindungen durch Instanziieren einer CustomBinding-Klasse erstellen. Diese Aufgabe übernimmt beispielsweise der Code im Programmbeispiel 1.  
@@ -36,7 +36,7 @@ In diesem Thema wird beschrieben, wie Sie eine Windows Communication Foundation 
 #### <a name="building-a-channellistener"></a>Erstellen eines Kanallisteners.  
  Nach dem Erstellen einer Bindung wird <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> aufgerufen, um den Kanallistener zu erstellen, wobei der Typparameter der zu erstellenden Kanalform entspricht. In diesem Beispiel wird <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> verwendet, da eingehende Meldungen in einem Anforderungs-/Antwort-Meldungsaustauschmuster abgehört werden sollen.  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> wird zum Empfangen von Anforderungsmeldungen und Senden von Antwortnachrichten verwendet. Durch das Aufrufen von <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> wird ein <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType> zurückgegeben, der zum Empfang der Anforderungsmeldung und zum Senden einer Antwortmeldung verwendet werden kann.  
+ <xref:System.ServiceModel.Channels.IReplyChannel> wird zum Empfangen von anforderungsmeldungen und Senden von Antwortnachrichten verwendet. Durch das Aufrufen von <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> wird ein <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType> zurückgegeben, der zum Empfang der Anforderungsmeldung und zum Senden einer Antwortmeldung verwendet werden kann.  
   
  Beim Erstellen des Listeners wird die Netzwerkadresse übergeben, die dieser abhört, in diesem Fall `http://localhost:8080/channelapp`. Allgemein unterstützt jeder Transportkanal mindestens ein Adressenschema. So unterstützt beispielsweise der HTTP-Transport HTTP- und HTTPS-Schemas.  
   

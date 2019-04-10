@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Hosten eines WCF-Diensts in WAS'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: 9c60248342c9cfa0e1b70d86df47a478dd34a60f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 157c18d1640ccf1a61f871e5e3e9fef70b6a7e79
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195448"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326501"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>Vorgehensweise: Hosten eines WCF-Diensts in WAS
 Dieses Thema beschreibt die grundlegenden Schritte zum Erstellen einer Windows Process Activation Service (auch bekannt als WAS) gehostet, Windows Communication Foundation (WCF)-Dienst. WAS ist der neue Prozessaktivierungsdienst, der eine Generalisierung der Funktionen der Internetinformationsdienste (IIS) darstellt, die mit Nicht-HTTP-Transportprotokollen arbeiten. WCF verwendet die Listeneradapter-Schnittstelle, um aktivierungsanforderungen weiterzugeben, die über die von WCF, z. B. TCP, named Pipes und Message Queuing-unterstützten nicht-HTTP-Protokolle empfangen werden.  
@@ -39,15 +39,15 @@ Dieses Thema beschreibt die grundlegenden Schritte zum Erstellen einer Windows P
   
 ### <a name="to-create-a-basic-service-hosted-by-was"></a>So erstellen Sie einen grundlegenden durch WAS gehosteten Dienst  
   
-1.  Definieren Sie einen Dienstvertrag für den Diensttyp.  
+1. Definieren Sie einen Dienstvertrag für den Diensttyp.  
   
      [!code-csharp[C_HowTo_HostInWAS#1121](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1121)]  
   
-2.  Implementieren Sie den Dienstvertrag in einer Dienstklasse. Beachten Sie, dass die Adresse oder die Bindungsinformationen in der Implementierung des Diensts nicht angegeben werden. Es muss auch kein Code geschrieben werden, um Informationen aus der Konfigurationsdatei abzurufen.  
+2. Implementieren Sie den Dienstvertrag in einer Dienstklasse. Beachten Sie, dass die Adresse oder die Bindungsinformationen in der Implementierung des Diensts nicht angegeben werden. Es muss auch kein Code geschrieben werden, um Informationen aus der Konfigurationsdatei abzurufen.  
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3.  Erstellen Sie eine „Web.config“-Datei, um die <xref:System.ServiceModel.NetTcpBinding>-Bindung zu definieren, die von den `CalculatorService`-Endpunkten verwendet wird.  
+3. Erstellen Sie eine „Web.config“-Datei, um die <xref:System.ServiceModel.NetTcpBinding>-Bindung zu definieren, die von den `CalculatorService`-Endpunkten verwendet wird.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -64,39 +64,39 @@ Dieses Thema beschreibt die grundlegenden Schritte zum Erstellen einer Windows P
     </configuration>  
     ```  
   
-4.  Erstellen Sie eine Service.svc-Datei, die den folgenden Code enthält.  
+4. Erstellen Sie eine Service.svc-Datei, die den folgenden Code enthält.  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
     ```  
   
-5.  Stellen Sie die Service.svc-Datei in das virtuelle IIS-Verzeichnis.  
+5. Stellen Sie die Service.svc-Datei in das virtuelle IIS-Verzeichnis.  
   
 ### <a name="to-create-a-client-to-use-the-service"></a>So erstellen Sie einen Client, der den Dienst verwendet  
   
-1.  Verwendung [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) über die Befehlszeile, um Code aus Dienstmetadaten zu generieren.  
+1. Verwendung [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) über die Befehlszeile, um Code aus Dienstmetadaten zu generieren.  
   
     ```  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
     ```  
   
-2.  Der generierte Client enthält die `ICalculator`-Schnittstelle, die den Dienstvertrag definiert, dem die Clientimplementierung entsprechen muss.  
+2. Der generierte Client enthält die `ICalculator`-Schnittstelle, die den Dienstvertrag definiert, dem die Clientimplementierung entsprechen muss.  
   
      [!code-csharp[C_HowTo_HostInWAS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1221)]  
   
-3.  Die generierte Clientanwendung enthält außerdem die Implementierung von `ClientCalculator`. Beachten Sie, dass die Adresse und die Bindungsinformationen in der Implementierung des Diensts nirgendwo angegeben werden. Es muss auch kein Code geschrieben werden, um Informationen aus der Konfigurationsdatei abzurufen.  
+3. Die generierte Clientanwendung enthält außerdem die Implementierung von `ClientCalculator`. Beachten Sie, dass die Adresse und die Bindungsinformationen in der Implementierung des Diensts nirgendwo angegeben werden. Es muss auch kein Code geschrieben werden, um Informationen aus der Konfigurationsdatei abzurufen.  
   
      [!code-csharp[C_HowTo_HostInWAS#1222](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1222)]  
   
-4.  Svcutil.exe generiert auch die Konfiguration für den Client, der <xref:System.ServiceModel.NetTcpBinding> verwendet. Wenn Sie Visual&amp;#160;Studio verwenden, sollte diese Datei in der Datei App.config genannt werden.  
+4. Svcutil.exe generiert auch die Konfiguration für den Client, der <xref:System.ServiceModel.NetTcpBinding> verwendet. Wenn Sie Visual&amp;#160;Studio verwenden, sollte diese Datei in der Datei App.config genannt werden.  
   
      [!code-xml[C_HowTo_HostInWAS#2211](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/common/app.config#2211)]   
   
-5.  Erstellen Sie eine Instanz von `ClientCalculator` in einer Anwendung, und rufen Sie dann die Dienstvorgänge auf.  
+5. Erstellen Sie eine Instanz von `ClientCalculator` in einer Anwendung, und rufen Sie dann die Dienstvorgänge auf.  
   
      [!code-csharp[C_HowTo_HostInWAS#1223](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1223)]  
   
-6.  Kompilieren Sie den Code, und führen Sie den Client aus.  
+6. Kompilieren Sie den Code, und führen Sie den Client aus.  
   
 ## <a name="see-also"></a>Siehe auch
 

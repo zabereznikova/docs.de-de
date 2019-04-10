@@ -2,12 +2,12 @@
 title: Verwenden des Suchclientchannels
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
-ms.openlocfilehash: ecade2eedb167e216655a4b7b270806c04b25024
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 298cafe34b20a3644f967acf15f831be5b0b90ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499746"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329933"
 ---
 # <a name="using-the-discovery-client-channel"></a>Verwenden des Suchclientchannels
 Beim Schreiben einer WCF-Clientanwendung müssen Sie die Endpunktadresse des Diensts kennen, den Sie aufrufen. In vielen Situationen ist die Endpunktadresse eines Diensts nicht im Voraus bekannt, oder die Adresse des Diensts ändert sich im Laufe der Zeit. Mithilfe des Discovery-Clientchannels können Sie eine WCF-Clientanwendung schreiben und den aufzurufenden Dienst beschreiben. Der Client sendet dann automatisch eine Überprüfungsanforderung. Wenn ein Dienst antwortet, ruft der Discovery-Clientchannel die Endpunktadresse für den Dienst aus der Überprüfungsantwort ab und verwendet diese zum Aufrufen des Diensts.  
@@ -20,11 +20,11 @@ Beim Schreiben einer WCF-Clientanwendung müssen Sie die Endpunktadresse des Die
   
  Die <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>-Klasse enthält zwei öffentliche Eigenschaften:  
   
-1.  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A> wird verwendet, um den Dienst zu beschreiben, den Sie aufrufen möchten.  
+1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, das wird verwendet, um den Dienst zu beschreiben, aufgerufen werden soll.  
   
-2.  <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> die gibt des suchendpunkt auf Suchnachrichten gesendet.  
+2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> Gibt den Discovery-Endpunkt, um ermittlungsmeldungen zu senden.  
   
- Mit der <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A>-Eigenschaft können Sie den Dienstvertrag angeben, nach dem Sie suchen, sowie alle erforderlichen Bereichs-URIs und den maximalen Zeitraum, wie lange versucht wird, den Channel zu öffnen. Der Typ des Vertrags wird angegeben, indem der Konstruktor <xref:System.ServiceModel.Discovery.FindCriteria>. Der <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A>-Eigenschaft können Bereichs-URIs hinzugefügt werden. Mithilfe der <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>-Eigenschaft können Sie die maximale Anzahl von Ergebnissen angeben, für die der Client das Herstellen einer Verbindung versucht. Wenn eine Überprüfungsantwort empfangen wird, versucht der Client, den Channel mit der Endpunktadresse aus der Überprüfungsantwort zu öffnen. Wenn eine Ausnahme auftritt, fährt der Client mit der nächsten Überprüfungsantwort fort und wartet auf weitere Antworten, sofern dies erforderlich ist. Dies dauert so lange an, bis der Channel erfolgreich geöffnet oder die maximale Anzahl an Ergebnissen erreicht wurde. Weitere Informationen zu diesen Einstellungen finden Sie unter <xref:System.ServiceModel.Discovery.FindCriteria>.  
+ Mit der <xref:System.ServiceModel.Discovery.FindCriteria.%23ctor%2A>-Eigenschaft können Sie den Dienstvertrag angeben, nach dem Sie suchen, sowie alle erforderlichen Bereichs-URIs und den maximalen Zeitraum, wie lange versucht wird, den Channel zu öffnen. Der Typ des Vertrags wird durch Aufrufen des Konstruktors angegeben <xref:System.ServiceModel.Discovery.FindCriteria>. Der <xref:System.ServiceModel.Discovery.FindCriteria.Scopes%2A>-Eigenschaft können Bereichs-URIs hinzugefügt werden. Mithilfe der <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>-Eigenschaft können Sie die maximale Anzahl von Ergebnissen angeben, für die der Client das Herstellen einer Verbindung versucht. Wenn eine Überprüfungsantwort empfangen wird, versucht der Client, den Channel mit der Endpunktadresse aus der Überprüfungsantwort zu öffnen. Wenn eine Ausnahme auftritt, fährt der Client mit der nächsten Überprüfungsantwort fort und wartet auf weitere Antworten, sofern dies erforderlich ist. Dies dauert so lange an, bis der Channel erfolgreich geöffnet oder die maximale Anzahl an Ergebnissen erreicht wurde. Weitere Informationen zu diesen Einstellungen finden Sie unter <xref:System.ServiceModel.Discovery.FindCriteria>.  
   
  Mit der <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A>-Eigenschaft können Sie den zu verwendenden Suchendpunkt angeben. Normalerweise ist dies ein <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>-Objekt, aber es kann sich um jeden gültigen Endpunkt handeln.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153243"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328724"
 ---
 # <a name="integrating-with-com-applications-overview"></a>Übersicht über die Integration von COM+-Anwendungen
 Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Erstellen von verteilten Anwendungen. Wenn Sie bereits komponentenbasierte Anwendungslogik, die in COM+ gehostet verwenden, können Sie WCF, erweitern Sie Ihre vorhandenen Logik, anstatt sie neu zu schreiben. Ein häufiges Szenario ist das Verfügbarmachen vorhandener COM+- oder Enterprise Services-Geschäftslogik über Webdienste.  
@@ -36,13 +36,13 @@ Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Ers
   
  Die folgenden Schritte sind erforderlich, um die Schnittstelle einer COM+-Komponente ohne Änderung der Komponente als Webdienst verfügbar zu machen:  
   
-1.  Legen Sie fest, ob die Schnittstelle der COM+-Komponente als Webdienst verfügbar gemacht werden kann.  
+1. Legen Sie fest, ob die Schnittstelle der COM+-Komponente als Webdienst verfügbar gemacht werden kann.  
   
-2.  Wählen Sie einen entsprechenden Hostingmodus aus.  
+2. Wählen Sie einen entsprechenden Hostingmodus aus.  
   
-3.  Verwenden Sie das COM+ Service Model Configuration-Tool (ComSvcConfig.exe) zum Hinzufügen eines Webdiensts für die Schnittstelle. Weitere Informationen zur Verwendung von ComSvcConfig.exe finden Sie unter [Vorgehensweise: Verwenden Sie das COM+ Service Model Configuration-Tool](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
+3. Verwenden Sie das COM+ Service Model Configuration-Tool (ComSvcConfig.exe) zum Hinzufügen eines Webdiensts für die Schnittstelle. Weitere Informationen zur Verwendung von ComSvcConfig.exe finden Sie unter [Vorgehensweise: Verwenden Sie das COM+ Service Model Configuration-Tool](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
   
-4.  Konfigurieren Sie zusätzliche Diensteinstellungen in der Anwendungskonfigurationsdatei. Weitere Informationen zum Konfigurieren einer Komponentenfehlers finden Sie unter [Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
+4. Konfigurieren Sie zusätzliche Diensteinstellungen in der Anwendungskonfigurationsdatei. Weitere Informationen zum Konfigurieren einer Komponentenfehlers finden Sie unter [Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md).  
   
 ## <a name="supported-interfaces"></a>Unterstützte Schnittstellen  
  Es gibt einige Beschränkungen beim Typ von Schnittstellen, die als Webdienst verfügbar gemacht werden können. Die folgenden Typen von Schnittstellen werden nicht unterstützt:  

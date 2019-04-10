@@ -10,12 +10,12 @@ helpviewer_keywords:
 - touch-sensitive applications [WPF], creating
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
-ms.openlocfilehash: 2ebf22775ab9308bc896829be0b4e8cc147a3b4c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 53ae737394d76d9f293f6e03fbf04cbb46d2adbb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374153"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326982"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>Exemplarische Vorgehensweise: Erstellen der ersten Fingereingabeanwendung
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ermöglicht es Anwendungen, die auf berührungen reagieren. Angenommen, Sie können mit einer Anwendung interagieren, indem Sie eine oder mehrere Finger auf einem Gerät mit Berührungseingabe, z.B. ein Touchscreen, den in dieser exemplarischen Vorgehensweise eine Anwendung, die dem Benutzer ermöglicht erstellt, zu verschieben, Ändern der Größe oder drehen Sie ein einzelnes Objekt mithilfe von Touch.  
@@ -33,24 +33,24 @@ ms.locfileid: "57374153"
   
 #### <a name="to-create-the-application"></a>So erstellen Sie die Anwendung  
   
-1.  Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Basic oder Visual C# mit dem Namen `BasicManipulation`. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
+1. Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Basic oder Visual C# mit dem Namen `BasicManipulation`. Weitere Informationen finden Sie unter [Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md).  
   
-2.  Ersetzen Sie den Inhalt der Datei "MainWindow.xaml" durch den folgenden XAML an.  
+2. Ersetzen Sie den Inhalt der Datei "MainWindow.xaml" durch den folgenden XAML an.  
   
      Dieses Markup erstellt eine einfache Anwendung, das ein Rot enthält <xref:System.Windows.Shapes.Rectangle> auf eine <xref:System.Windows.Controls.Canvas>. Die <xref:System.Windows.UIElement.IsManipulationEnabled%2A> Eigenschaft der <xref:System.Windows.Shapes.Rectangle> nastaven NA hodnotu true festgelegt, sodass Bearbeitungsereignisse empfangen wird. Die Anwendung abonniert die <xref:System.Windows.UIElement.ManipulationStarting>, <xref:System.Windows.UIElement.ManipulationDelta>, und <xref:System.Windows.UIElement.ManipulationInertiaStarting> Ereignisse. Diese Ereignisse enthalten die Logik zum Verschieben der <xref:System.Windows.Shapes.Rectangle> Wenn der Benutzer es bearbeitet.  
   
      [!code-xaml[BasicManipulation#UI](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml#ui)]  
   
-3.  Ersetzen Sie bei Verwendung von Visual Basic in der ersten Zeile der Datei "MainWindow.xaml" `x:Class="BasicManipulation.MainWindow"` mit `x:Class="MainWindow"`.  
+3. Ersetzen Sie bei Verwendung von Visual Basic in der ersten Zeile der Datei "MainWindow.xaml" `x:Class="BasicManipulation.MainWindow"` mit `x:Class="MainWindow"`.  
   
-4.  In der `MainWindow` Klasse, fügen Sie die folgenden <xref:System.Windows.UIElement.ManipulationStarting> -Ereignishandler.  
+4. In der `MainWindow` Klasse, fügen Sie die folgenden <xref:System.Windows.UIElement.ManipulationStarting> -Ereignishandler.  
   
      Die <xref:System.Windows.UIElement.ManipulationStarting> Ereignis tritt auf, wenn [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] erkennt, dass die Fingereingabe beginnt, ein Objekt zu bearbeiten. Der Code gibt an, dass die Position der Manipulation relativ zum sein sollte die <xref:System.Windows.Window> durch Festlegen der <xref:System.Windows.Input.ManipulationStartingEventArgs.ManipulationContainer%2A> Eigenschaft.  
   
      [!code-csharp[BasicManipulation#ManipulationStarting](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationstarting)]
      [!code-vb[BasicManipulation#ManipulationStarting](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationstarting)]
 
-5.  In der `MainWindow` Klasse, fügen Sie die folgenden <xref:System.Windows.Input.ManipulationDelta> -Ereignishandler.
+5. In der `MainWindow` Klasse, fügen Sie die folgenden <xref:System.Windows.Input.ManipulationDelta> -Ereignishandler.
 
      Die <xref:System.Windows.Input.ManipulationDelta> Ereignis tritt auf, wenn die Fingereingabe ändert die Position kann mehrere Male während eines Bearbeitungsvorgangs auftreten. Das Ereignis kann auch auftreten, nachdem ein Finger ausgelöst wurde. Wenn der Benutzer einen Finger über den Bildschirm, zieht z. B. die <xref:System.Windows.Input.ManipulationDelta> -Ereignis tritt mehrmals sich der Finger bewegt. Wenn ein Benutzer einen Finger vom Bildschirm, der <xref:System.Windows.Input.ManipulationDelta> behält eintretende Ereignis um Trägheit zu simulieren.
 
@@ -59,14 +59,14 @@ ms.locfileid: "57374153"
      [!code-csharp[BasicManipulation#ManipulationDelta](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationdelta)]
      [!code-vb[BasicManipulation#ManipulationDelta](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationdelta)]
 
-6.  In der `MainWindow` Klasse, fügen Sie die folgenden <xref:System.Windows.UIElement.ManipulationInertiaStarting> -Ereignishandler.
+6. In der `MainWindow` Klasse, fügen Sie die folgenden <xref:System.Windows.UIElement.ManipulationInertiaStarting> -Ereignishandler.
 
      Die <xref:System.Windows.UIElement.ManipulationInertiaStarting> Ereignis tritt auf, wenn der Benutzer alle Finger vom Bildschirm. Der Code legt die ursprüngliche Geschwindigkeit und die Verzögerung für die Bewegung, Erweiterung und Drehung des Rechtecks.
 
      [!code-csharp[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/csharp/VS_Snippets_Wpf/basicmanipulation/csharp/mainwindow.xaml.cs#manipulationinertiastarting)]
      [!code-vb[BasicManipulation#ManipulationInertiaStarting](~/samples/snippets/visualbasic/VS_Snippets_Wpf/basicmanipulation/visualbasic/mainwindow.xaml.vb#manipulationinertiastarting)]
 
-7.  Erstellen Sie das Projekt, und führen Sie es aus.
+7. Erstellen Sie das Projekt, und führen Sie es aus.
 
      Daraufhin sollte ein rotes Quadrat im Fenster angezeigt werden.
 

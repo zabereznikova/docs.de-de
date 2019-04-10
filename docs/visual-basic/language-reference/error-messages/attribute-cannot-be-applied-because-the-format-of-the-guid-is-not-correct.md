@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
-ms.openlocfilehash: ab821db45ae834e82aa134b6f20ded14d43709ef
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d27c326b6a88271ba4abf0144e71027f6671b17e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832267"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330674"
 ---
 # <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>"\<Attribut >' kann nicht angewendet werden, da das Format der GUID '\<Anzahl >' ist nicht richtig
 Ein `COMClassAttribute` -Attributblock gibt einen global eindeutigen Bezeichner (GUID), die nicht das richtige Format für eine GUID entspricht. `COMClassAttribute` verwendet GUIDs zur eindeutigen Identifizierung der Klasse, die Schnittstelle und das Erstellungsereignis an.  
@@ -23,9 +23,9 @@ Ein `COMClassAttribute` -Attributblock gibt einen global eindeutigen Bezeichner 
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Bestimmen Sie die richtige GUID oder den GUIDs zur Identifizierung des COM-Objekts erforderlich.  
+1. Bestimmen Sie die richtige GUID oder den GUIDs zur Identifizierung des COM-Objekts erforderlich.  
   
-2.  Stellen Sie sicher, dass die GUID-Zeichenfolgen, die dem `COMClassAttribute` -Attributblock angezeigt werden, ordnungsgemäß kopiert werden.  
+2. Stellen Sie sicher, dass die GUID-Zeichenfolgen, die dem `COMClassAttribute` -Attributblock angezeigt werden, ordnungsgemäß kopiert werden.  
   
 ## <a name="see-also"></a>Siehe auch
 
