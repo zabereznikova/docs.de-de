@@ -10,43 +10,43 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 750234a7073b3931b4f3ce5674f3989fe119c50c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: be8b299c99515394bc676cfd7a715cb82ac4d58c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199946"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301151"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Vorgehensweise: Überprüfen und Zusammenführen von PrintTickets
 Die [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Druckschema](https://go.microsoft.com/fwlink/?LinkId=186397) enthält, die flexible und erweiterbare <xref:System.Printing.PrintCapabilities> und <xref:System.Printing.PrintTicket> Elemente. Ersteres aufführt, die Funktionen von einem Druckgerät und letzterer angibt, wie das Gerät auf diese Funktionen in Bezug auf eine bestimmte Sequenz von Dokumenten, einzelnes Dokument oder einzelne Seite verwenden soll.  
   
  Eine typische Sequenz von Aufgaben für eine Anwendung, die Drucken unterstützt würde wie folgt lauten.  
   
-1.  Bestimmen Sie die Funktionen des Druckers.  
+1. Bestimmen Sie die Funktionen des Druckers.  
   
-2.  Konfigurieren einer <xref:System.Printing.PrintTicket> diese Funktionen verwenden.  
+2. Konfigurieren einer <xref:System.Printing.PrintTicket> diese Funktionen verwenden.  
   
-3.  Überprüfen Sie die <xref:System.Printing.PrintTicket>.  
+3. Überprüfen Sie die <xref:System.Printing.PrintTicket>.  
   
  In diesem Artikel veranschaulicht dies.  
   
 ## <a name="example"></a>Beispiel  
  Im einfachen Beispiel interessieren wir uns nur, ob ein Drucker Duplexdruck unterstützen kann – doppelseitigen Druck. Die wichtigsten Schritte sind wie folgt aus.  
   
-1.  Abrufen einer <xref:System.Printing.PrintCapabilities> Objekt mit der <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> Methode.  
+1. Abrufen einer <xref:System.Printing.PrintCapabilities> Objekt mit der <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> Methode.  
   
-2.  Testen Sie das Vorhandensein der gewünschten Funktion. Im folgenden Beispiel, das wir testen die <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> Eigenschaft der <xref:System.Printing.PrintCapabilities> -Objekt an den der langen Seite des Blatts auf das Vorhandensein der Fähigkeit des Druckens auf beiden Seiten der Blatt Papier mit der "Seite"aktivieren". Da <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> ist eine Auflistung, verwenden wir die `Contains` -Methode der <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.  
+2. Testen Sie das Vorhandensein der gewünschten Funktion. Im folgenden Beispiel, das wir testen die <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> Eigenschaft der <xref:System.Printing.PrintCapabilities> -Objekt an den der langen Seite des Blatts auf das Vorhandensein der Fähigkeit des Druckens auf beiden Seiten der Blatt Papier mit der "Seite"aktivieren". Da <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> ist eine Auflistung, verwenden wir die `Contains` -Methode der <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.  
   
     > [!NOTE]
     >  Dieser Schritt ist nicht unbedingt erforderlich ist. Die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> unten verwendete Methode prüft jede Anforderung die <xref:System.Printing.PrintTicket> anhand der Funktionen des Druckers. Wenn die erforderlichen Funktionen, die vom Drucker nicht unterstützt wird, ersetzt der Druckertreiber wird eine alternative Anforderung in die <xref:System.Printing.PrintTicket> von der Methode zurückgegeben.  
   
-3.  Wenn der Drucker Duplexdruck unterstützt, wird der Beispielcode erstellt eine <xref:System.Printing.PrintTicket> , die für Duplexdruck gefragt. Aber die Anwendung nicht alle möglichen Drucker, die Einstellung in der <xref:System.Printing.PrintTicket> Element. Das wäre sehr aufwändig für den Programmierer Programm Zeit. Stattdessen der Code legt nur die Duplex-Anforderung und führt dies dann zusammen <xref:System.Printing.PrintTicket> mit einem vorhandenen, vollständig konfiguriert und überprüft, <xref:System.Printing.PrintTicket>, in diesem Fall des Benutzers <xref:System.Printing.PrintTicket>.  
+3. Wenn der Drucker Duplexdruck unterstützt, wird der Beispielcode erstellt eine <xref:System.Printing.PrintTicket> , die für Duplexdruck gefragt. Aber die Anwendung nicht alle möglichen Drucker, die Einstellung in der <xref:System.Printing.PrintTicket> Element. Das wäre sehr aufwändig für den Programmierer Programm Zeit. Stattdessen der Code legt nur die Duplex-Anforderung und führt dies dann zusammen <xref:System.Printing.PrintTicket> mit einem vorhandenen, vollständig konfiguriert und überprüft, <xref:System.Printing.PrintTicket>, in diesem Fall des Benutzers <xref:System.Printing.PrintTicket>.  
   
-4.  Entsprechend ist das Beispiel ruft die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> Methode, um die neue merge sehr einfach gehalten und <xref:System.Printing.PrintTicket> Standardwert des Benutzers <xref:System.Printing.PrintTicket>. Dies gibt eine <xref:System.Printing.ValidationResult> , enthält das neue <xref:System.Printing.PrintTicket> als eine seiner Eigenschaften.  
+4. Entsprechend ist das Beispiel ruft die <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> Methode, um die neue merge sehr einfach gehalten und <xref:System.Printing.PrintTicket> Standardwert des Benutzers <xref:System.Printing.PrintTicket>. Dies gibt eine <xref:System.Printing.ValidationResult> , enthält das neue <xref:System.Printing.PrintTicket> als eine seiner Eigenschaften.  
   
-5.  Das Beispiel testet, klicken Sie dann die neue <xref:System.Printing.PrintTicket> Duplexdruck anfordert. Wenn dies der Fall ist, vereinfacht klicken Sie dann das Beispiel die neue Standardeinstellung Druckticket für den Benutzer. Wenn Schritt 2 oben musste außer acht gelassen wurde und Duplexdruck entlang der langen Seite wurde von der Drucker nicht unterstützt, wird der Test hat `false`. (Siehe Hinweis oben).  
+5. Das Beispiel testet, klicken Sie dann die neue <xref:System.Printing.PrintTicket> Duplexdruck anfordert. Wenn dies der Fall ist, vereinfacht klicken Sie dann das Beispiel die neue Standardeinstellung Druckticket für den Benutzer. Wenn Schritt 2 oben musste außer acht gelassen wurde und Duplexdruck entlang der langen Seite wurde von der Drucker nicht unterstützt, wird der Test hat `false`. (Siehe Hinweis oben).  
   
-6.  Der letzte wichtige Schritt ist die Änderung mit der <xref:System.Printing.PrintQueue.UserPrintTicket%2A> Eigenschaft der <xref:System.Printing.PrintQueue> mit der <xref:System.Printing.PrintQueue.Commit%2A> Methode.  
+6. Der letzte wichtige Schritt ist die Änderung mit der <xref:System.Printing.PrintQueue.UserPrintTicket%2A> Eigenschaft der <xref:System.Printing.PrintQueue> mit der <xref:System.Printing.PrintQueue.Commit%2A> Methode.  
   
  [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
  [!code-vb[PrintTicketManagment#UsingMergeAndValidate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  

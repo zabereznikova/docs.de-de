@@ -6,12 +6,12 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: bd9a708b99d11b90e47c3413bb0003ce2def13a1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 15fe62457ed11ffcd08a1db3aa8be57080f22869
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833715"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300797"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die übertragbare ausführbare Datei (PE) eines Projekts eingebettet werden soll.  
@@ -38,9 +38,9 @@ Identifiziert eine benutzerdefinierte Win32-Anwendungsmanifestdatei, die in die 
   
  Ihre Anwendung werden Virtualisierung, wenn eine der folgenden Bedingungen zutrifft:  
   
-1.  Sie verwenden die `-nowin32manifest` Option, und Sie bieten kein Manifests in einem späteren Buildschritt oder als Teil einer Windows-Ressourcendatei (. res) mithilfe der `-win32resource` Option.  
+1. Sie verwenden die `-nowin32manifest` Option, und Sie bieten kein Manifests in einem späteren Buildschritt oder als Teil einer Windows-Ressourcendatei (. res) mithilfe der `-win32resource` Option.  
   
-2.  Sie stellen ein benutzerdefiniertes Manifest bereit, das keine angeforderte Ausführungsebene angibt.  
+2. Sie stellen ein benutzerdefiniertes Manifest bereit, das keine angeforderte Ausführungsebene angibt.  
   
  Visual Studio erstellt eine MANIFEST-Standarddatei und speichert sie zusammen mit der ausführbaren Datei in den Debug- oder Releaseverzeichnissen. Sie können auch anzeigen oder bearbeiten Sie die Standarddatei "App.manifest" durch Klicken auf **UAC-Anzeigeeinstellungen** auf die **Anwendung** Registerkarte im Projekt-Designer. Weitere Informationen finden Sie unter [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   

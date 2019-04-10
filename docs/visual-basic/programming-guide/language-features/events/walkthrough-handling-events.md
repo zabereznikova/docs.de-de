@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2a8b515f500884d743b7dcca41ffe8c1607375a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840925"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308561"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Exemplarische Vorgehensweise: Behandeln von Ereignissen (Visual Basic)
 Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereignissen zu arbeiten. Das erste Thema [Exemplarische Vorgehensweise: Deklarieren und Auslösen von Ereignissen](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), deklarieren und Auslösen von Ereignissen veranschaulicht. In diesem Abschnitt werden das Formular und die Klasse aus dieser exemplarischen Vorgehensweise verwendet, um die zeigen, wie Sie behandeln Ereignisse aus, wenn sie auftreten.  
@@ -23,7 +23,7 @@ Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereigniss
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>Zum Behandeln des Ereignisses PercentDone der Widget-Klasse  
   
-1.  Platzieren Sie den folgenden Code in `Form1`:  
+1. Platzieren Sie den folgenden Code in `Form1`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
@@ -38,20 +38,20 @@ Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereigniss
   
 #### <a name="to-handle-an-event"></a>So behandeln Sie ein Ereignis  
   
-1.  Wählen Sie `mWidget` aus der linken Dropdownliste in der **Code-Editor**.  
+1. Wählen Sie `mWidget` aus der linken Dropdownliste in der **Code-Editor**.  
   
-2.  Wählen Sie die `PercentDone` Ereignis von der rechten Dropdownliste aus. Die **Code-Editor** öffnet die `mWidget_PercentDone` Ereignisprozedur.  
+2. Wählen Sie die `PercentDone` Ereignis von der rechten Dropdownliste aus. Die **Code-Editor** öffnet die `mWidget_PercentDone` Ereignisprozedur.  
   
     > [!NOTE]
     >  Die **Code-Editor** ist nützlich, aber nicht erforderlich, für das Einfügen von neuen Ereignishandler. In dieser exemplarischen Vorgehensweise ist es direktere Ereignishandler nur direkt in Ihren Code zu kopieren.  
   
-3.  Fügen Sie dem `mWidget_PercentDone` -Ereignishandler folgenden Code hinzu:  
+3. Fügen Sie dem `mWidget_PercentDone` -Ereignishandler folgenden Code hinzu:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
      Wenn die `PercentDone` -Ereignis ausgelöst wird, der die Ereignisprozedur zeigt die abgeschlossenen Prozentsatz in eine `Label` Steuerelement. Die `DoEvents` Methode ermöglicht die Bezeichnung neu zu zeichnen, und gibt dem Benutzer die Möglichkeit, klicken Sie auf die **Abbrechen** Schaltfläche.  
   
-4.  Fügen Sie den folgenden Code für die `Button2_Click` -Ereignishandler:  
+4. Fügen Sie den folgenden Code für die `Button2_Click` -Ereignishandler:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
@@ -64,11 +64,11 @@ Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereigniss
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>Erstellen Sie ein Objekt, und weisen Sie einen Verweis darauf  
   
-1.  Wählen Sie **(Form1-Ereignisse)** aus der linken Dropdownliste in der **Code-Editor**.  
+1. Wählen Sie **(Form1-Ereignisse)** aus der linken Dropdownliste in der **Code-Editor**.  
   
-2.  Wählen Sie die `Load` Ereignis von der rechten Dropdownliste aus. Die **Code-Editor** öffnet die `Form1_Load` Ereignisprozedur.  
+2. Wählen Sie die `Load` Ereignis von der rechten Dropdownliste aus. Die **Code-Editor** öffnet die `Form1_Load` Ereignisprozedur.  
   
-3.  Fügen Sie den folgenden Code für die `Form1_Load` Ereignis Verfahren zum Erstellen der `Widget`:  
+3. Fügen Sie den folgenden Code für die `Form1_Load` Ereignis Verfahren zum Erstellen der `Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
@@ -88,11 +88,11 @@ Dies ist die zweite von zwei Themen, die veranschaulichen, wie Sie mit Ereigniss
   
 #### <a name="to-run-the-program"></a>So führen Sie das Programm aus  
   
-1.  Drücken Sie F5, um das Projekt im Ausführungsmodus.  
+1. Drücken Sie F5, um das Projekt im Ausführungsmodus.  
   
-2.  Klicken Sie auf die **Starttask** Schaltfläche. Jedes Mal die `PercentDone` -Ereignis ausgelöst wird, die Bezeichnung wird aktualisiert, mit dem Prozentsatz der der Vorgang abgeschlossen ist.  
+2. Klicken Sie auf die **Starttask** Schaltfläche. Jedes Mal die `PercentDone` -Ereignis ausgelöst wird, die Bezeichnung wird aktualisiert, mit dem Prozentsatz der der Vorgang abgeschlossen ist.  
   
-3.  Klicken Sie auf die **Abbrechen** Schaltfläche, um den Vorgang zu beenden. Beachten Sie, dass die Darstellung der **Abbrechen** Schaltfläche nicht direkt ändert, wenn Sie darauf klicken. Die `Click` Ereignis kann nicht ausgeführt, bis die `My.Application.DoEvents` -Anweisung können die Verarbeitung von Ereignissen.  
+3. Klicken Sie auf die **Abbrechen** Schaltfläche, um den Vorgang zu beenden. Beachten Sie, dass die Darstellung der **Abbrechen** Schaltfläche nicht direkt ändert, wenn Sie darauf klicken. Die `Click` Ereignis kann nicht ausgeführt, bis die `My.Application.DoEvents` -Anweisung können die Verarbeitung von Ereignissen.  
   
     > [!NOTE]
     >  Die `My.Application.DoEvents` -Methode verarbeitet Ereignisse nicht in die gleiche Weise wie das Formular. Klicken Sie beispielsweise in dieser exemplarischen Vorgehensweise, Sie müssen auf die **Abbrechen** Schaltfläche zweimal. Damit das Formular, um die Ereignisse direkt verarbeiten kann, können Sie multithreading. Weitere Informationen finden Sie unter [Managed Threading](../../../../standard/threading/index.md).

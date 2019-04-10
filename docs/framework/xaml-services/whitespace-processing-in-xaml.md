@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: ca628a366b000b23a2abe38b1c8b7272299bff16
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102231"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294924"
 ---
 # <a name="white-space-processing-in-xaml"></a>Leerstellenverarbeitung in XAML
 Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet werden müssen, indem eine [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] -prozessorimplementierung. In diesem Thema werden diese XAML-Sprachregeln erläutert. Er dokumentiert auch zusätzliche Leerzeichen behandeln, die von definiert ist die [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Implementierung der XAML-Prozessor und der XAML-Writer für die Serialisierung.  
@@ -25,15 +25,15 @@ Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet wer
 ## <a name="white-space-normalization"></a>Normalisierung von Leerzeichen  
  Wird standardmäßig die folgenden leerstellennormalisierung tritt auf, wenn eine [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Prozessor Prozesse eine [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] Datei:  
   
-1.  Zeilenvorschubzeichen zwischen ostasiatischen Zeichen werden entfernt. Eine Definition dieses Begriffs finden Sie im Abschnitt „Ostasiatische Zeichen“ weiter hinten in diesem Thema.  
+1. Zeilenvorschubzeichen zwischen ostasiatischen Zeichen werden entfernt. Eine Definition dieses Begriffs finden Sie im Abschnitt „Ostasiatische Zeichen“ weiter hinten in diesem Thema.  
   
-2.  Alle Leerraumzeichen (Leerzeichen, Zeilenvorschub, Registerkarte ") werden in Leerzeichen konvertiert.  
+2. Alle Leerraumzeichen (Leerzeichen, Zeilenvorschub, Registerkarte ") werden in Leerzeichen konvertiert.  
   
-3.  Alle aufeinander folgenden Leerzeichen werden gelöscht und durch ein Leerzeichen ersetzt.  
+3. Alle aufeinander folgenden Leerzeichen werden gelöscht und durch ein Leerzeichen ersetzt.  
   
-4.  Ein Leerzeichen unmittelbar nach dem Starttag wird gelöscht.  
+4. Ein Leerzeichen unmittelbar nach dem Starttag wird gelöscht.  
   
-5.  Ein Leerzeichen unmittelbar vor dem Endtag wird gelöscht.  
+5. Ein Leerzeichen unmittelbar vor dem Endtag wird gelöscht.  
   
  „Standard“ entspricht dem Zustand, der durch den Standardwert des [xml:space](xml-space-handling-in-xaml.md) -Attribut bezeichnet wird.  
   

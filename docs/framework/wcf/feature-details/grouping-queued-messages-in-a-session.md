@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 0246f059079b2024dd1bd16ae6afc4950d08e0a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 37f0874ea99ee928e49a54a3e6a05ea4ef06f84e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115270"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294664"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Gruppieren von Nachrichten in der Warteschlange einer Sitzung
 Windows Communication Foundation (WCF) bietet eine Sitzung, die Ihnen ermöglicht, einen Satz zusammengehöriger Nachrichten zur Verarbeitung von einer empfangenden Anwendung gruppieren. Die Nachrichten in einer Sitzung müssen Teil der gleichen Transaktion sein. Da alle Nachrichten Teil der gleichen Transaktion sind, wird die gesamte Sitzung zurückgesetzt, wenn eine Nachricht nicht verarbeitet werden kann. Sitzungen weisen ähnliche Verhaltensweisen bezüglich Warteschlangen für unzustellbare Nachrichten und Warteschlangen für potenziell schädliche Nachrichten auf. Die Time to Live (TTL)-Eigenschaft einer Bindung in der Warteschlange, die für Sitzungen konfiguriert wurde, wird auf die gesamte Sitzung angewendet. Wenn nur ein Teil der Nachrichten in der Sitzung vor Ablauf der TTL gesendet wird, wird die gesamte Sitzung in der Warteschlange für unzustellbare Nachrichten abgelegt. Analog wird ggf. die gesamte Sitzung in der Warteschlange für potenziell schädliche Nachrichten abgelegt, wenn Nachrichten in einer Sitzung nicht von der Anwendungswarteschlange an eine Anwendung gesendet werden können.  
@@ -24,49 +24,49 @@ Windows Communication Foundation (WCF) bietet eine Sitzung, die Ihnen ermöglich
   
 #### <a name="to-set-up-a-service-contract-to-use-sessions"></a>So richten Sie einen Dienstvertrag für Sitzungen ein  
   
-1.  Definieren Sie einen Dienstvertrag, der eine Sitzung erfordert. Verwenden Sie dazu das <xref:System.ServiceModel.OperationContractAttribute>-Attribut, und geben Sie Folgendes an:  
+1. Definieren Sie einen Dienstvertrag, der eine Sitzung erfordert. Verwenden Sie dazu das <xref:System.ServiceModel.OperationContractAttribute>-Attribut, und geben Sie Folgendes an:  
   
     ```  
     SessionMode=SessionMode.Required  
     ```  
   
-2.  Markieren Sie die Vorgänge im Vertrag als unidirektional, da von diesen Methoden nichts zurückgegeben wird. Verwenden Sie dazu das <xref:System.ServiceModel.OperationContractAttribute>-Attribut, und geben Sie Folgendes an:  
+2. Markieren Sie die Vorgänge im Vertrag als unidirektional, da von diesen Methoden nichts zurückgegeben wird. Verwenden Sie dazu das <xref:System.ServiceModel.OperationContractAttribute>-Attribut, und geben Sie Folgendes an:  
   
     ```  
     [OperationContract(IsOneWay = true)]  
     ```  
   
-3.  Implementieren Sie den Dienstvertrag, und geben Sie einen `InstanceContextMode` von `PerSession` an. Dadurch wird der Dienst für jede Sitzung nur einmal instanziiert.  
+3. Implementieren Sie den Dienstvertrag, und geben Sie einen `InstanceContextMode` von `PerSession` an. Dadurch wird der Dienst für jede Sitzung nur einmal instanziiert.  
   
     ```  
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
     ```  
   
-4.  Jeder Dienstvorgang erfordert eine Transaktion. Verwenden Sie das <xref:System.ServiceModel.OperationBehaviorAttribute>-Attribut für die Angabe. Der Vorgang, mit dem die Transaktion abgeschlossen wird, sollte auch `TransactionAutoComplete` auf `true` festlegen.  
+4. Jeder Dienstvorgang erfordert eine Transaktion. Verwenden Sie das <xref:System.ServiceModel.OperationBehaviorAttribute>-Attribut für die Angabe. Der Vorgang, mit dem die Transaktion abgeschlossen wird, sollte auch `TransactionAutoComplete` auf `true` festlegen.  
   
     ```  
     [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]   
     ```  
   
-5.  Konfigurieren Sie einen Endpunkt, der die vom System bereitgestellte `NetMsmqBinding`-Bindung verwendet.  
+5. Konfigurieren Sie einen Endpunkt, der die vom System bereitgestellte `NetMsmqBinding`-Bindung verwendet.  
   
-6.  Erstellen Sie eine Transaktionswarteschlange mit <xref:System.Messaging>. Sie können die Warteschlange auch mit Message Queuing (MSMQ) oder MMC erstellen. Erstellen Sie in diesem Fall eine Transaktionswarteschlange.  
+6. Erstellen Sie eine Transaktionswarteschlange mit <xref:System.Messaging>. Sie können die Warteschlange auch mit Message Queuing (MSMQ) oder MMC erstellen. Erstellen Sie in diesem Fall eine Transaktionswarteschlange.  
   
-7.  Erstellen Sie mit <xref:System.ServiceModel.ServiceHost> einen Host für den Dienst.  
+7. Erstellen Sie mit <xref:System.ServiceModel.ServiceHost> einen Host für den Dienst.  
   
-8.  Öffnen Sie den Diensthost, um den Dienst verfügbar zu machen.  
+8. Öffnen Sie den Diensthost, um den Dienst verfügbar zu machen.  
   
 9. Schließen Sie den Diensthost.  
   
 #### <a name="to-set-up-a-client"></a>So richten Sie einen Client ein  
   
-1.  Erstellen Sie einen Transaktionsbereich zum Schreiben in die Transaktionswarteschlange.  
+1. Erstellen Sie einen Transaktionsbereich zum Schreiben in die Transaktionswarteschlange.  
   
-2.  Erstellen des WCF-Clients mithilfe der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Tool.  
+2. Erstellen des WCF-Clients mithilfe der [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Tool.  
   
-3.  Platzieren Sie den Auftrag.  
+3. Platzieren Sie den Auftrag.  
   
-4.  Schließen Sie den WCF-Client.  
+4. Schließen Sie den WCF-Client.  
   
 ## <a name="example"></a>Beispiel  
   

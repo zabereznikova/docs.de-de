@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: cf09415e9203c82d26bccf4e84db5607047b6f35
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176916"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301034"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>XAML-Namespaces und Namespacezuordnung für WPF-XAML
 Diesem Thema bietet weitere Erläuterungen zu Vorhandensein und Zweck der beiden XAML-Namespacezuordnungen, die häufig im Stammelement einer WPF XAML-Datei zu finden sind. Es wird ebenfalls beschrieben, wie Sie ähnliche Zuordnungen für Elemente in Ihrem eigenen Code und/oder separaten Assemblys erstellen können.  
@@ -119,15 +119,15 @@ End Namespace
 ## <a name="wpf-and-assembly-loading"></a>WPF und Laden von Assemblys  
  Der XAML-Schemakontext für WPF-Integration mit dem WPF-Anwendungsmodell, die wiederum die CLR definierte Konzept von <xref:System.AppDomain>. Die folgende Sequenz beschreibt, wie XAML-Schemakontext interpretiert, wie Assemblys geladen werden oder finden von Typen zur Laufzeit oder Entwurfszeit basierend auf der WPF-Verwendung von <xref:System.AppDomain> und anderen Faktoren.  
   
-1.  Durchlaufen der <xref:System.AppDomain>, Suchen nach einer bereits geladenen Assembly mit allen Aspekten des Namens, des zuletzt geladenen Assembly wird gestartet.  
+1. Durchlaufen der <xref:System.AppDomain>, Suchen nach einer bereits geladenen Assembly mit allen Aspekten des Namens, des zuletzt geladenen Assembly wird gestartet.  
   
-2.  Wenn der Name qualifiziert ist, rufen Sie <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> für den qualifizierten Namen.  
+2. Wenn der Name qualifiziert ist, rufen Sie <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> für den qualifizierten Namen.  
   
-3.  Wenn der Kurzname und das öffentliche Schlüsseltoken eines qualifizierten Namens mit der Assembly übereinstimmen, aus der das Markup geladen wurde, gib diese Assembly zurück.  
+3. Wenn der Kurzname und das öffentliche Schlüsseltoken eines qualifizierten Namens mit der Assembly übereinstimmen, aus der das Markup geladen wurde, gib diese Assembly zurück.  
   
-4.  Verwenden Sie zum Aufrufen der Kurzname und das Token des öffentlichen Schlüssels <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+4. Verwenden Sie zum Aufrufen der Kurzname und das Token des öffentlichen Schlüssels <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
-5.  Wenn der Name nicht qualifiziert ist, rufen Sie <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
+5. Wenn der Name nicht qualifiziert ist, rufen Sie <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
  Loose XAML verwendet Schritt 3 nicht, da es nicht aus Assemblys geladen wird.  
   

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 98ca530da28591fec23a5036b421d02b393e83b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149304"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298889"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ausführliche Erläuterung der XAML-Syntax
 In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der XAML-Syntax verwendet werden. Diese Begriffe werden häufig in den restlichen dieser Dokumentation wird sowohl für WPF-Dokumentation verwendet, insbesondere und für die anderen Frameworks, die XAML oder die grundlegenden XAML-Konzepte, die aktiviert, indem die XAML-sprachunterstützung auf der Ebene "System.xaml" verwenden. Dieses Thema baut auf die grundlegende Terminologie eingeführt, die im Thema [XAML Overview (WPF)](xaml-overview-wpf.md).  
@@ -99,11 +99,11 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
   
  Der Attributwert mit einer der folgenden gefüllt wird durch diese Verarbeitungsreihenfolge verwenden:  
   
-1.  Wenn der XAML-Prozessor erkennt eine geschweifte Klammer oder ein Objektelement, das von abgeleitet ist <xref:System.Windows.Markup.MarkupExtension>, klicken Sie dann auf die verwiesen wird Auswertung der Markuperweiterung wird zuerst anstatt die Verarbeitung des Werts als Zeichenfolge und das Objekt, das von der Markuperweiterung zurückgegeben wird verwendet, als die -Wert. In vielen Fällen werden die von einer Markuperweiterung zurückgegebene Objekt einen Verweis auf ein vorhandenes Objekt oder ein Ausdruck, der Auswertung bis zur Laufzeit zurückstellt, ist kein neu instanziierten Objekt.  
+1. Wenn der XAML-Prozessor erkennt eine geschweifte Klammer oder ein Objektelement, das von abgeleitet ist <xref:System.Windows.Markup.MarkupExtension>, klicken Sie dann auf die verwiesen wird Auswertung der Markuperweiterung wird zuerst anstatt die Verarbeitung des Werts als Zeichenfolge und das Objekt, das von der Markuperweiterung zurückgegeben wird verwendet, als die -Wert. In vielen Fällen werden die von einer Markuperweiterung zurückgegebene Objekt einen Verweis auf ein vorhandenes Objekt oder ein Ausdruck, der Auswertung bis zur Laufzeit zurückstellt, ist kein neu instanziierten Objekt.  
   
-2.  Wenn die Eigenschaft deklariert wird mit einem attributierten <xref:System.ComponentModel.TypeConverter>, oder der Werttyp der Eigenschaft deklariert ist mit einem attributierten <xref:System.ComponentModel.TypeConverter>, wird der Zeichenfolgenwert des Attributs für den Typkonverter als Konvertierungseingabe übermittelt, und der Konverter zurück ein neue Objektinstanz.  
+2. Wenn die Eigenschaft deklariert wird mit einem attributierten <xref:System.ComponentModel.TypeConverter>, oder der Werttyp der Eigenschaft deklariert ist mit einem attributierten <xref:System.ComponentModel.TypeConverter>, wird der Zeichenfolgenwert des Attributs für den Typkonverter als Konvertierungseingabe übermittelt, und der Konverter zurück ein neue Objektinstanz.  
   
-3.  Es ist keine <xref:System.ComponentModel.TypeConverter>, eine direkte Konvertierung in den Typ der versucht wird. Diese letzte Ebene ist eine direkte Konvertierung des Werts der Parser Native zwischen primitiven Typen von XAML-Sprache oder überprüft, ob die Namen der benannten Konstanten in einer Enumeration (der Parser greift dann auf die entsprechenden Werte).  
+3. Es ist keine <xref:System.ComponentModel.TypeConverter>, eine direkte Konvertierung in den Typ der versucht wird. Diese letzte Ebene ist eine direkte Konvertierung des Werts der Parser Native zwischen primitiven Typen von XAML-Sprache oder überprüft, ob die Namen der benannten Konstanten in einer Enumeration (der Parser greift dann auf die entsprechenden Werte).  
   
 #### <a name="enumeration-attribute-values"></a>Enumerationswerte-Attribut  
  Enumerationen in XAML intrinsisch vom XAML-Parser verarbeitet werden, und die Member einer Enumeration sollte angegeben werden, indem Sie den Zeichenfolgennamen eines benannten Konstanten der Enumeration angeben.  

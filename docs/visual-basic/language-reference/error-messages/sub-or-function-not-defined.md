@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 6bca368e13a32559bcb7cbb028dcaa1dea0353e3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819787"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294677"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub oder Funktion ist nicht definiert (Visual Basic)
 Ein `Sub` oder `Function` muss definiert werden, damit Sie aufgerufen werden. Dieser Fehler kann folgende Ursachen haben:  
@@ -24,11 +24,11 @@ Ein `Sub` oder `Function` muss definiert werden, damit Sie aufgerufen werden. Di
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Stellen Sie sicher, dass der Prozedurname richtig geschrieben ist.  
+1. Stellen Sie sicher, dass der Prozedurname richtig geschrieben ist.  
   
-2.  Suchen Sie den Namen des Projekts mit der Prozedur, die Sie aufrufen möchten die **Verweise** Dialogfeld. Wenn es nicht angezeigt wird, klicken Sie auf die **Durchsuchen** Schaltfläche, um ihn zu suchen. Wählen Sie das Kontrollkästchen links neben den Namen des Projekts, und klicken Sie dann auf **OK**.  
+2. Suchen Sie den Namen des Projekts mit der Prozedur, die Sie aufrufen möchten die **Verweise** Dialogfeld. Wenn es nicht angezeigt wird, klicken Sie auf die **Durchsuchen** Schaltfläche, um ihn zu suchen. Wählen Sie das Kontrollkästchen links neben den Namen des Projekts, und klicken Sie dann auf **OK**.  
   
-3.  Überprüfen Sie den Namen der Routine.  
+3. Überprüfen Sie den Namen der Routine.  
   
 ## <a name="see-also"></a>Siehe auch
 

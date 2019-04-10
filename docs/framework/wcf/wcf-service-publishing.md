@@ -2,12 +2,12 @@
 title: WCF-Dienstpublishing
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 04912d94568cf144e874513395e6a6f31375fb7c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441436"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299721"
 ---
 # <a name="wcf-service-publishing"></a>WCF-Dienstpublishing
 
@@ -35,13 +35,13 @@ Der Dienst kann an den folgenden Zielorten veröffentlicht werden:
 
 Führen Sie zum Bereitstellen einer Dienstimplementierung die folgenden Schritte aus:
 
-1.  Öffnen Sie Visual Studio mit erweiterten Berechtigungen (mit der rechten Maustaste in der ausführbare Datei, und wählen Sie **als Administrator ausführen** um ihn zu öffnen).  Wenn Sie mit IIS 7.0 oder höher,, dass sicher haben Sie die "IIS-Metabasis und IIS 6-Konfigurationskompatibilität"-Komponente, die mithilfe von "Turn Windows Features ein- oder ausschalten" in der Systemsteuerung installiert.
+1. Öffnen Sie Visual Studio mit erweiterten Berechtigungen (mit der rechten Maustaste in der ausführbare Datei, und wählen Sie **als Administrator ausführen** um ihn zu öffnen).  Wenn Sie mit IIS 7.0 oder höher,, dass sicher haben Sie die "IIS-Metabasis und IIS 6-Konfigurationskompatibilität"-Komponente, die mithilfe von "Turn Windows Features ein- oder ausschalten" in der Systemsteuerung installiert.
 
-2.  Öffnen Sie ein Dienstprojekt, wählen Sie **erstellen** > **veröffentlichen \<Projektname >** im Hauptmenü oder mit der rechten Maustaste in des Projekts im **Projektmappen-Explorer**, und klicken Sie auf **veröffentlichen**.
+2. Öffnen Sie ein Dienstprojekt, wählen Sie **erstellen** > **veröffentlichen \<Projektname >** im Hauptmenü oder mit der rechten Maustaste in des Projekts im **Projektmappen-Explorer**, und klicken Sie auf **veröffentlichen**.
 
-3.  Die **veröffentlichen** Fenster wird angezeigt. Klicken Sie auf die **...** . um den Zielort anzugeben, an dem der Dienst bereitgestellt werden soll. Sie können auswählen, um die Anwendung auf lokale IIS, Dateisystem oder FTP-Site bereitzustellen. Wenn die Anwendung für IIS lokal bereitstellen, können Sie wählen Sie Ihre Website und Ihre Webanwendung darunter erstellen, indem Sie auf die **neue Webanwendung erstellen** Symbol in der oberen rechten Ecke.
+3. Die **veröffentlichen** Fenster wird angezeigt. Klicken Sie auf die **...** . um den Zielort anzugeben, an dem der Dienst bereitgestellt werden soll. Sie können auswählen, um die Anwendung auf lokale IIS, Dateisystem oder FTP-Site bereitzustellen. Wenn die Anwendung für IIS lokal bereitstellen, können Sie wählen Sie Ihre Website und Ihre Webanwendung darunter erstellen, indem Sie auf die **neue Webanwendung erstellen** Symbol in der oberen rechten Ecke.
 
-4.  Nachdem Sie auf **veröffentlichen** in im Hauptfenster von Visual Studio die Anwendung an den angegebenen Zielort bereitgestellt und die Datei "Web.config", SVC-Datei und Assembly-Dateien in das Zielverzeichnis kopiert. sein. Der Name der SVC werden "ProjectName.ServiceName.svc". Nachdem der Dienst wurde erfolgreich veröffentlicht wurde, finden Sie einen Hotlink in das Ausgabefenster von Visual Studio-Fenster, die so aussieht wie "Herstellen einer Verbindung mit `http://localhost/WebApplicationFolderName...`". Sie können STRG gedrückt halten und auf den Link klicken, um in Visual Studio eine Browserseite zu öffnen, in der die Dienstverzeichnisstruktur angezeigt wird.
+4. Nachdem Sie auf **veröffentlichen** in im Hauptfenster von Visual Studio die Anwendung an den angegebenen Zielort bereitgestellt und die Datei "Web.config", SVC-Datei und Assembly-Dateien in das Zielverzeichnis kopiert. sein. Der Name der SVC werden "ProjectName.ServiceName.svc". Nachdem der Dienst wurde erfolgreich veröffentlicht wurde, finden Sie einen Hotlink in das Ausgabefenster von Visual Studio-Fenster, die so aussieht wie "Herstellen einer Verbindung mit `http://localhost/WebApplicationFolderName...`". Sie können STRG gedrückt halten und auf den Link klicken, um in Visual Studio eine Browserseite zu öffnen, in der die Dienstverzeichnisstruktur angezeigt wird.
 
      Wenn die Website nicht geöffnet werden kann, liegt dies möglicherweise daran, dass der Verzeichnisbrowser in IIS nicht aktiviert ist. Befolgen Sie die Tipps im Abschnitt "Mögliche Vorgehensweise", um ihn zu aktivieren. Sie können auch direkt eingeben `http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc` an die Dienstseite anzuzeigen.
 

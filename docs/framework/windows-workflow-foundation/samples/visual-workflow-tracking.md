@@ -2,12 +2,12 @@
 title: Visuelle Workflownachverfolgung
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: c89a63ac80b4705fff5c7714e7f40646c5b5d26d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6e87b0ef5a0d6fa97c87c99a63fe0e23c389140c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703581"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296458"
 ---
 # <a name="visual-workflow-tracking"></a>Visuelle Workflownachverfolgung
 In diesem Beispiel wird veranschaulicht, wie eine visuelle Anwendung zur Workflownachverfolgung mit der Debugfunktionalität in [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] geschrieben wird.
@@ -19,17 +19,17 @@ In diesem Beispiel wird veranschaulicht, wie eine visuelle Anwendung zur Workflo
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
-1.  Öffnen Sie die Datei "workflowsimulator.sln" im Beispielverzeichnis in Visual Studio 2010 aus.
+1. Öffnen Sie die Datei "workflowsimulator.sln" im Beispielverzeichnis in Visual Studio 2010 aus.
 
-2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.
+2. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.
 
-3.  Drücken Sie STRG+F5, um das Beispiel auszuführen. Die Datei "Workflow.xaml" wird in einem neu gehosteten Workflow-Designer-Fenster angezeigt.
+3. Drücken Sie STRG+F5, um das Beispiel auszuführen. Die Datei "Workflow.xaml" wird in einem neu gehosteten Workflow-Designer-Fenster angezeigt.
 
-4.  Klicken Sie auf die **Datei** Menü **Workflow ausführen...** .
+4. Klicken Sie auf die **Datei** Menü **Workflow ausführen...** .
 
-5.  Die gerade ausgeführte Aktivität wird wie oben beschrieben hervorgehoben, und die Nachverfolgungsdatensätze werden auf der rechten Seite des Anwendungsfensters angezeigt.
+5. Die gerade ausgeführte Aktivität wird wie oben beschrieben hervorgehoben, und die Nachverfolgungsdatensätze werden auf der rechten Seite des Anwendungsfensters angezeigt.
 
-6.  Nach Abschluss des Workflows können Sie durch Klicken auf einen Nachverfolgungsdatensatz prüfen, welcher Aktivität dieser entspricht.
+6. Nach Abschluss des Workflows können Sie durch Klicken auf einen Nachverfolgungsdatensatz prüfen, welcher Aktivität dieser entspricht.
 
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

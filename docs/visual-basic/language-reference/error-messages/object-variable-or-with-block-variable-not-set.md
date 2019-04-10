@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 1b24bec6dd7c4b5af10349cf523d9a7e93b385fe
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b2c0c47b359e218111c1629ea574303a6d663046
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831656"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297927"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>Die Objektvariable oder die With-Blockvariable wurde nicht festgelegt.
 Eine ungültiges Objekt-Variable wird verwiesen wird.   Dieser Fehler kann mehrere Ursachen haben:  
@@ -36,7 +36,7 @@ Eine ungültiges Objekt-Variable wird verwiesen wird.   Dieser Fehler kann mehre
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Legen Sie `Option Strict` zu `On` durch den folgenden Code am Anfang der das Hinzufügen:  
+1. Legen Sie `Option Strict` zu `On` durch den folgenden Code am Anfang der das Hinzufügen:  
   
 ```vb  
 Option Strict On  
@@ -44,13 +44,13 @@ Option Strict On
 
      When you run the project, a compiler error will appear in the **Error List** for any variable that was specified without a type.  
   
-2.  Wenn Sie nicht aktivieren möchten `Option Strict`, Durchsuchen Ihres gesamten Codes für alle Variablen, die ohne einen Typ angegeben wurden (`Dim x` anstelle von `Dim x As String`), und fügen Sie der Deklaration der gewünschte Typ hinzu.  
+2. Wenn Sie nicht aktivieren möchten `Option Strict`, Durchsuchen Ihres gesamten Codes für alle Variablen, die ohne einen Typ angegeben wurden (`Dim x` anstelle von `Dim x As String`), und fügen Sie der Deklaration der gewünschte Typ hinzu.  
   
-3.  Stellen Sie sicher, dass Sie einer Objektvariablen, die festgelegt wurde, verweisen sind nicht `Nothing`.  Suchen Sie Ihren Code für das Schlüsselwort `Nothing`, und Ihren Code so überarbeiten, dass das Objekt, dass festgelegt wurde `Nothing` erst nach dem Sie darauf verwiesen haben.  
+3. Stellen Sie sicher, dass Sie einer Objektvariablen, die festgelegt wurde, verweisen sind nicht `Nothing`.  Suchen Sie Ihren Code für das Schlüsselwort `Nothing`, und Ihren Code so überarbeiten, dass das Objekt, dass festgelegt wurde `Nothing` erst nach dem Sie darauf verwiesen haben.  
   
-4.  Stellen Sie sicher, dass alle Arrayvariablen, die dimensioniert werden, bevor Sie darauf zugreifen. Sie können entweder eine Dimension zuweisen, wenn Sie das Array erstellen (`Dim x(5) As String` anstelle von `Dim x() As String`), oder verwenden Sie die `ReDim` Schlüsselwort, um die Dimensionen des Arrays festgelegt, bevor Sie zuerst darauf zugreifen.  
+4. Stellen Sie sicher, dass alle Arrayvariablen, die dimensioniert werden, bevor Sie darauf zugreifen. Sie können entweder eine Dimension zuweisen, wenn Sie das Array erstellen (`Dim x(5) As String` anstelle von `Dim x() As String`), oder verwenden Sie die `ReDim` Schlüsselwort, um die Dimensionen des Arrays festgelegt, bevor Sie zuerst darauf zugreifen.  
   
-5.  Stellen Sie sicher, dass Ihre `With` Block wird initialisiert, indem Sie Ausführung der `With` Einstiegspunkt für die Anweisung.  
+5. Stellen Sie sicher, dass Ihre `With` Block wird initialisiert, indem Sie Ausführung der `With` Einstiegspunkt für die Anweisung.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,12 +2,12 @@
 title: Behandlung nicht verarbeitbarer Nachrichten
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146522"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305025"
 ---
 # <a name="poison-message-handling"></a>Behandlung nicht verarbeitbarer Nachrichten
 Ein *für nicht verarbeitbare Nachrichten* ist eine Nachricht, das die maximale Anzahl von Versuchen nicht an der Anwendung überschritten hat. Diese Situation kann auftreten, wenn eine warteschlangenbasierte Anwendung aufgrund der Fehler keine Nachricht verarbeiten kann. Um Zuverlässigkeitsforderungen zu erfüllen, empfängt eine in der Warteschlange stehende Anwendung Nachrichten unter einer Transaktion. Beim Abbrechen der Transaktion, in der eine in der Warteschlange stehende Nachricht empfangen wurde, bleibt die Nachricht in der Warteschlange und wird dann unter einer neuen Transaktion wiederholt. Wenn das Problem, das zum Abbrechen der Transaktion geführt hat, nicht korrigiert wird, kann die empfangende Anwendung in einer Schleife hängen bleiben, in der sie dieselbe Nachricht immer wieder empfängt und abbricht, bis die maximale Anzahl der Zustellversuche überschritten ist. Auf diese Weise entsteht eine nicht verarbeitbare Nachricht.  
@@ -66,17 +66,17 @@ Ein *für nicht verarbeitbare Nachrichten* ist eine Nachricht, das die maximale 
   
  Die Anwendung erfordert möglicherweise eine bestimmte automatische Behandlung von nicht verarbeitbaren Nachrichten, mit der die nicht verarbeitbaren Nachrichten in eine entsprechende Warteschlange verschoben werden, sodass der Dienst auf die restlichen Nachrichten in der Warteschlange zugreifen kann. Das einzige Szenario, in dem der Fehlerbehandlungsmechanismus zum Abhören auf Ausnahmen für nicht verarbeitbare Nachrichten verwendet werden kann, liegt vor, wenn die <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A>-Einstellung auf <xref:System.ServiceModel.ReceiveErrorHandling.Fault> festgelegt ist. Das Beispiel der nicht verarbeitbaren Nachricht für Message Queuing 3.0 veranschaulicht dieses Verhalten. Im Folgenden werden die Schritte zur Behandlung nicht verarbeitbarer Nachrichten, einschließlich empfohlener Vorgehensweisen, umrissen:  
   
-1.  Stellen Sie sicher, dass die Einstellungen für nicht verarbeitbare Nachrichten den Anforderungen Ihrer Anwendung entsprechen. Stellen Sie bei der Arbeit mit diesen Einstellungen sicher, dass Ihnen die Unterschiede zwischen den Message Queuing-Fähigkeiten in [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] bekannt sind.  
+1. Stellen Sie sicher, dass die Einstellungen für nicht verarbeitbare Nachrichten den Anforderungen Ihrer Anwendung entsprechen. Stellen Sie bei der Arbeit mit diesen Einstellungen sicher, dass Ihnen die Unterschiede zwischen den Message Queuing-Fähigkeiten in [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] bekannt sind.  
   
-2.  Implementieren Sie falls erforderlich den `IErrorHandler`, um Fehler mit nicht verarbeitbaren Nachrichten zu behandeln. Das das Festlegen von `ReceiveErrorHandling` auf `Fault` einen manuellen Mechanismus zum Verschieben der nicht verarbeitbaren Nachricht aus der Warteschlange oder zum Korrigieren eines Problems mit externen Abhängigkeiten erfordert, besteht die typische Nutzung darin, den `IErrorHandler` zu implementieren, wenn `ReceiveErrorHandling` auf `Fault` festgelegt ist, wie im folgenden Code gezeigt:  
+2. Implementieren Sie falls erforderlich den `IErrorHandler`, um Fehler mit nicht verarbeitbaren Nachrichten zu behandeln. Das das Festlegen von `ReceiveErrorHandling` auf `Fault` einen manuellen Mechanismus zum Verschieben der nicht verarbeitbaren Nachricht aus der Warteschlange oder zum Korrigieren eines Problems mit externen Abhängigkeiten erfordert, besteht die typische Nutzung darin, den `IErrorHandler` zu implementieren, wenn `ReceiveErrorHandling` auf `Fault` festgelegt ist, wie im folgenden Code gezeigt:  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
-3.  Erstellen Sie ein `PoisonBehaviorAttribute`, das das Dienstverhalten verwenden kann. Das Verhalten installiert den `IErrorHandler` auf dem Verteiler. Siehe nachstehendes Codebeispiel.  
+3. Erstellen Sie ein `PoisonBehaviorAttribute`, das das Dienstverhalten verwenden kann. Das Verhalten installiert den `IErrorHandler` auf dem Verteiler. Siehe nachstehendes Codebeispiel.  
   
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
-4.  Stellen Sie sicher, dass der Dienst mit dem Verhaltensattribut für nicht verarbeitbare Nachrichten kommentiert wird.  
+4. Stellen Sie sicher, dass der Dienst mit dem Verhaltensattribut für nicht verarbeitbare Nachrichten kommentiert wird.  
 
  Wenn außerdem das `ReceiveErrorHandling` auf `Fault` festgelegt ist, tritt beim `ServiceHost` ein Fehler auf, wenn dieser auf die nicht verarbeitbare Nachricht stößt. Sie können sich dem Fehlerereignis zuwenden und den Dienst herunterfahren, Korrekturmaßnahmen treffen und neu starten. Beispielsweise kann die `LookupId` in der <xref:System.ServiceModel.MsmqPoisonMessageException>, die an den `IErrorHandler` weitergegeben wurde, notiert werden. Tritt nun beim Diensthost ein Fehler auf, können Sie die `System.Messaging`-API verwenden, um die Nachricht mithilfe der `LookupId` aus der Warteschlange zu empfangen, die Nachricht aus der Warteschlange zu entfernen und die Nachricht in einem externen Speicher oder einer anderen Warteschlange zu speichern. Sie können dann den `ServiceHost` neu starten, um die normale Verarbeitung fortzusetzen. Die [Nachrichtenbehandlung nicht verarbeitbarer Nachrichten in MSMQ 4.0](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md) veranschaulicht dieses Verhalten.  
   

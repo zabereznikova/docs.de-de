@@ -2,20 +2,20 @@
 title: Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: a5dae1479c9be7954b9eec1eed197f358eb48e4f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239513"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308587"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose
 Windows Communication Foundation (WCF) macht inspektionsdaten eines Diensts zur Laufzeit über einen WCF (Windows Management Instrumentation, WMI) Anbieter verfügbar.  
   
 ## <a name="enabling-wmi"></a>Aktivieren von WMI  
- Bei WMI handelt es sich um die Implementierung des Web-Based Enterprise Management (WBEM)-Standards von Microsoft. Weitere Informationen zum WMI-SDK finden Sie unter [Windows-Verwaltungsinstrumentation](/windows/desktop/WmiSdk/wmi-start-page). Bei WBEM handelt es sich um einen Industriestandard für das Verhalten von Anwendungen beim Verfügbarmachen der Verwaltungsinstrumentierung für externe Verwaltungstools.  
+ Bei WMI handelt es sich um die Implementierung des Web-Based Enterprise Management (WBEM)-Standards von Microsoft. Weitere Informationen zum WMI-SDK finden Sie unter [Windows-Verwaltungsinstrumentation](/windows/desktop/WmiSdk/wmi-start-page). Bei WBEM handelt es sich um einen Industriestandard für das Verhalten von Anwendungen beim Verfügbarmachen der Verwaltungsinstrumentation für externe Verwaltungstools.  
   
- Ein WMI-Anbieter ist eine Komponente zum Verfügbarmachen der Instrumentation zur Laufzeit über eine WBEM-kompatible Schnittstelle. Sie besteht aus einer Gruppe von WMI-Objekten mit Attribut/Wert-Paaren. Bei den Paaren kann es sich um eine Reihe einfacher Typen handeln. Über die Schnittstelle können Verwaltungstools zur Laufzeit Verbindungen mit den Diensten herstellen. WCF macht Attribute von Diensten wie z. B. Adressen, Bindungen, Verhaltensweisen und Listener.  
+ Ein WMI-Anbieter ist eine Komponente zum Verfügbarmachen der Instrumentierung zur Laufzeit über eine WBEM-kompatible Schnittstelle. Sie besteht aus einer Gruppe von WMI-Objekten mit Attribut/Wert-Paaren. Bei den Paaren kann es sich um eine Reihe einfacher Typen handeln. Über die Schnittstelle können Verwaltungstools zur Laufzeit Verbindungen mit den Diensten herstellen. WCF macht Attribute von Diensten wie z. B. Adressen, Bindungen, Verhaltensweisen und Listener.  
   
  Der integrierte WMI-Anbieter kann in der Konfigurationsdatei der Anwendung aktiviert werden. Dies erfolgt mithilfe der `wmiProviderEnabled` Attribut des der [ \<Diagnose >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) in die [ \<system.serviceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) Abschnitt, wie im folgenden Beispiel gezeigt. die Konfiguration.  
   
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) macht inspektionsdaten eines Diensts zur 
 </system.serviceModel>  
 ```  
   
- Mit diesem Konfigurationseintrag wird eine WMI-Schnittstelle verfügbar gemacht. Über diese Schnittstelle kann nun von Verwaltungsanwendungen eine Verbindung hergestellt und auf die Verwaltungsinstrumentation der Anwendung zugegriffen werden.  
+ Mit diesem Konfigurationseintrag wird eine WMI-Schnittstelle verfügbar gemacht. Über diese Schnittstelle kann nun von Verwaltungsanwendungen eine Verbindung hergestellt und auf die Verwaltungsinstrumentierung der Anwendung zugegriffen werden.  
   
 ## <a name="accessing-wmi-data"></a>Zugreifen auf WMI-Daten  
  Der Zugriff auf WMI-Daten kann auf mehrere Arten erfolgen. Microsoft stellt WMI-APIs für Skripts, die Visual Basic-Anwendungen, die C++-Anwendungen und die [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Weitere Informationen finden Sie unter [mit WMI](https://go.microsoft.com/fwlink/?LinkId=95183).  
@@ -56,26 +56,26 @@ Windows Communication Foundation (WCF) macht inspektionsdaten eines Diensts zur 
   
  Gehen Sie zum Ändern der Benutzerberechtigungsebenen folgendermaßen vor:  
   
-1.  Klicken Sie auf Start, und klicken Sie dann ausführen, und geben Sie **compmgmt.msc**.  
+1. Klicken Sie auf Start, und klicken Sie dann ausführen, und geben Sie **compmgmt.msc**.  
   
-2.  Mit der rechten Maustaste **Dienste und Anwendungen/WMI-Steuerelemente** auszuwählenden **Eigenschaften**.  
+2. Mit der rechten Maustaste **Dienste und Anwendungen/WMI-Steuerelemente** auszuwählenden **Eigenschaften**.  
   
-3.  Wählen Sie die **Sicherheit** Registerkarte, und navigieren Sie zu der **Root/ServiceModel** Namespace. Klicken Sie auf die **Sicherheit** Schaltfläche.  
+3. Wählen Sie die **Sicherheit** Registerkarte, und navigieren Sie zu der **Root/ServiceModel** Namespace. Klicken Sie auf die **Sicherheit** Schaltfläche.  
   
-4.  Wählen Sie die spezifischen Gruppe oder Benutzer, die Sie verwenden möchten, den Zugriff steuern und verwenden Sie die **zulassen** oder **Verweigern** Kontrollkästchen, um Berechtigungen zu konfigurieren.  
+4. Wählen Sie die spezifischen Gruppe oder Benutzer, die Sie verwenden möchten, den Zugriff steuern und verwenden Sie die **zulassen** oder **Verweigern** Kontrollkästchen, um Berechtigungen zu konfigurieren.  
   
 ## <a name="granting-wcf-wmi-registration-permissions-to-additional-users"></a>Gewähren von WCF WMI-Registrierungsberechtigungen für zusätzliche Benutzer  
  WCF macht Verwaltungsdaten für WMI verfügbar. Dies erfolgt durch das Hosten eines in-Process-WMI-Anbieters, manchmal als "entkoppelten Anbieter" bezeichnet. Damit die Verwaltungsdaten verfügbar gemacht werden können, muss das Konto, das diesen Anbieter registriert, über die erforderlichen Berechtigungen verfügen. Unter Windows kann standardmäßig nur eine kleine Gruppe von berechtigten Konten entkoppelte Anbieter registrieren. Dies ist ein Problem, da Benutzer im Allgemeinen die WMI-Daten von einem WCF-Dienst verfügbar machen möchten, der unter einem Konto ausgeführt wird, das nicht im Standardsatz enthalten ist.  
   
  Um diesen Zugriff bereitzustellen, muss ein Administrator den zusätzlichen Konten die folgenden Berechtigungen in der angegebenen Reihenfolge erteilen:  
   
-1.  Berechtigung für den Zugriff auf den WCF WMI-Namespace.  
+1. Berechtigung für den Zugriff auf den WCF WMI-Namespace.  
   
-2.  Berechtigung zum Registrieren des entkoppelten WCF WMI-Anbieters.  
+2. Berechtigung zum Registrieren des entkoppelten WCF WMI-Anbieters.  
   
 #### <a name="to-grant-wmi-namespace-access-permission"></a>So gewähren Sie eine Zugriffsberechtigung für den WMI-Namespace  
   
-1.  Führen Sie das folgende PowerShell-Skript aus.  
+1. Führen Sie das folgende PowerShell-Skript aus.  
   
     ```powershell  
     write-host ""  
@@ -122,7 +122,7 @@ Windows Communication Foundation (WCF) macht inspektionsdaten eines Diensts zur 
   
 #### <a name="to-grant-provider-registration-access"></a>So gewähren Sie Zugriff für die Anbieterregistrierung  
   
-1.  Führen Sie das folgende PowerShell-Skript aus.  
+1. Führen Sie das folgende PowerShell-Skript aus.  
   
     ```powershell  
     write-host ""  
@@ -150,23 +150,23 @@ Whoami /user
  Dieser Befehl stellt die SID des aktuellen Benutzers bereit, aber diese Methode kann nicht verwendet werden, um die SID für einen beliebigen Benutzer abzurufen. Eine andere Methode zum Abrufen der SID ist die Verwendung der [getsid.exe](https://go.microsoft.com/fwlink/?LinkId=186467) tool die [Windows 2000 Resource Kit-Tools für administrative Aufgaben](https://go.microsoft.com/fwlink/?LinkId=178660). Dieses Tool vergleicht die SID von zwei Benutzern (lokal oder Domäne) und gibt als Nebeneffekt die beiden SIDs in der Befehlszeile aus. Weitere Informationen finden Sie unter [Well-Known-SIDs](https://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Zugreifen auf Remote-WMI-Objektinstanzen  
- Bei Bedarf den Zugriff auf WCF WMI-Instanzen auf einem Remotecomputer, müssen Sie die paketsicherheit zu den Tools aktivieren, die Sie für den Zugriff verwenden. Im folgenden Abschnitt wird die hierzu erforderliche Vorgehensweise für WMI CIM Studio, das Testprogramm für Windows-Verwaltungsinstrumentierung und .NET SDK 2.0 beschrieben.  
+ Bei Bedarf den Zugriff auf WCF WMI-Instanzen auf einem Remotecomputer, müssen Sie die paketsicherheit zu den Tools aktivieren, die Sie für den Zugriff verwenden. Im folgenden Abschnitt wird die hierzu erforderliche Vorgehensweise für WMI CIM Studio, das Testprogramm für Windows-Verwaltungsinstrumentation und .NET SDK 2.0 beschrieben.  
   
 ### <a name="wmi-cim-studio"></a>WMI CIM Studio  
  Wenn Sie installiert haben [WMI-Verwaltung](https://go.microsoft.com/fwlink/?LinkId=95185), können Sie die WMI CIM Studio Zugriff auf WMI-Instanzen. Die Tools befinden sich im folgenden Ordner:  
   
  **%WINDIR%\Programme\Microsoft %windir%\programme\wmi Tools\\**  
   
-1.  In der **Herstellen einer Verbindung mit dem Namespace:** geben **Root\ServiceModel** , und klicken Sie auf **OK.**  
+1. In der **Herstellen einer Verbindung mit dem Namespace:** geben **Root\ServiceModel** , und klicken Sie auf **OK.**  
   
-2.  In der **WMI CIM Studio Anmeldung** Fenster, klicken Sie auf die **Optionen >>** Schaltfläche, um das Fenster zu erweitern. Wählen Sie **paketsicherheit** für **Authentifizierungsebene**, und klicken Sie auf **OK**.  
+2. In der **WMI CIM Studio Anmeldung** Fenster, klicken Sie auf die **Optionen >>** Schaltfläche, um das Fenster zu erweitern. Wählen Sie **paketsicherheit** für **Authentifizierungsebene**, und klicken Sie auf **OK**.  
   
-### <a name="windows-management-instrumentation-tester"></a>Testprogramm für Windows-Verwaltungsinstrumentierung  
+### <a name="windows-management-instrumentation-tester"></a>Testprogramm für Windows-Verwaltungsinstrumentation  
  Dieses Tool wird von Windows installiert. Um es auszuführen, starten Sie eine Befehlskonsole durch Eingabe **cmd.exe** in die **starten/ausführen** Dialogfeld und klicken Sie auf **OK**. Geben Sie dann **wbemtest.exe** im Befehlsfenster angezeigt. Das Testprogramm für Windows-Verwaltungsinstrumentierung wird gestartet.  
   
-1.  Klicken Sie auf die **Connect** auf der oberen rechten Ecke des Fensters auf die Schaltfläche.  
+1. Klicken Sie auf die **Connect** auf der oberen rechten Ecke des Fensters auf die Schaltfläche.  
   
-2.  Geben Sie im neuen Fenster **Root\ServiceModel** für die **Namespace** Feld, und wählen **paketsicherheit** für **Authentifizierungsebene**. Klicken Sie auf **Verbinden**.  
+2. Geben Sie im neuen Fenster **Root\ServiceModel** für die **Namespace** Feld, und wählen **paketsicherheit** für **Authentifizierungsebene**. Klicken Sie auf **Verbinden**.  
   
 ### <a name="using-managed-code"></a>Verwenden von verwaltetem Code  
  Der Zugriff auf Remote-WMI-Instanzen kann auch programmgesteuert erfolgen. Verwenden Sie hierzu die vom <xref:System.Management>-Namespace bereitgestellten Klassen. Die erforderliche Vorgehensweise wird im folgenden Codebeispiel veranschaulicht:  

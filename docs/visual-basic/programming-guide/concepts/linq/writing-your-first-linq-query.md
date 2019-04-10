@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 362d241d1da01ea935ab3bb3dcdfcba30cb8c67e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6f6968713fdb1c0ec0ee9f9da3b199a649938de5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975146"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295873"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Schreiben der ersten LINQ-Abfrage (Visual Basic)
 Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in einer dedizierten Abfragesprache ausgedrückt. Im Laufe der Zeit wurden verschiedene Sprachen für verschiedene Arten von Datenquellen, z. B. SQL für relationale Datenbanken und XQuery für XML entwickelt. Dadurch für den Entwickler der Anwendung finden Sie eine neue Abfragesprache für jeden Typ von Datenquelle oder Datenformat, das unterstützt wird.  
@@ -21,11 +21,11 @@ Eine *Abfrage* ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfrage
 ## <a name="three-stages-of-a-query-operation"></a>Drei Phasen einer Abfrageoperation  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] -Abfrageoperationen bestehen aus drei Aktionen:  
   
-1.  Abrufen der Datenquelle(n).  
+1. Abrufen der Datenquelle(n).  
   
-2.  Erstellen der Abfrage  
+2. Erstellen der Abfrage  
   
-3.  Ausführen der Abfrage  
+3. Ausführen der Abfrage  
   
  In [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], die Ausführung einer Abfrage unterscheidet sich von der Erstellung der Abfrage. Sie sind alle Daten nicht abgerufen werden, indem Sie einfach eine Abfrage erstellen. Dieser Punkt wird in diesem Thema an späterer Stelle ausführlicher behandelt.  
   
@@ -120,9 +120,9 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](getting-started-with-linq.md)
+- [Erste Schritte mit LINQ in Visual Basic](getting-started-with-linq.md)
 - [Lokaler Typrückschluss](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Standard Query Operators Overview (Visual Basic) (Übersicht über Standardabfrageoperatoren (Visual Basic))](standard-query-operators-overview.md)
+- [Standard Query Operators Overview (Visual Basic)](standard-query-operators-overview.md)
 - [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Abfragen](../../../../visual-basic/language-reference/queries/index.md)

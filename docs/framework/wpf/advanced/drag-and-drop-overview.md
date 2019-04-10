@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139216"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301398"
 ---
 # <a name="drag-and-drop-overview"></a>Übersicht über Drag & Drop
 Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Anwendungen. Drag & Drop bezeichnet im Allgemeinen eine Methode zur Datenübertragung, die die Verwendung einer Maus (oder eines anderen Zeigegeräts) zum Auswählen mindestens eines Objekts, das Ziehen dieses Objekts auf ein gewünschtes Ablageziels auf der [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] und dessen Ablegen beinhaltet.  
@@ -181,11 +181,11 @@ Dieses Thema enthält eine Übersicht zur Drag & Drop-Unterstützung in [!INCLUD
   
  Um anzugeben, dass ein Element ein Ablageziel ist, legen Sie seine <xref:System.Windows.UIElement.AllowDrop%2A>-Eigenschaft auf `true` fest. Dadurch werden die Ablagezielereignisse für das Element ausgelöst, sodass Sie sie verarbeiten können. Während eines Drag & Drop-Vorgang tritt die folgenden Reihenfolge der Ereignisse beim Ablageziel auf:  
   
-1.  <xref:System.Windows.DragDrop.DragEnter>  
+1. <xref:System.Windows.DragDrop.DragEnter>  
   
-2.  <xref:System.Windows.DragDrop.DragOver>  
+2. <xref:System.Windows.DragDrop.DragOver>  
   
-3.  <xref:System.Windows.DragDrop.DragLeave> oder <xref:System.Windows.DragDrop.Drop>  
+3. <xref:System.Windows.DragDrop.DragLeave> oder <xref:System.Windows.DragDrop.Drop>  
   
  Das <xref:System.Windows.DragDrop.DragEnter>-Ereignis tritt ein, wenn die Daten in den Begrenzung des Ablageziels gezogen werden. Normalerweise verarbeiten Sie dieses Ereignis, um eine Vorschau der Auswirkungen des Drag & Drop-Vorgangs bereitzustellen, wenn das in Ihrer Anwendung sinnvoll ist. Legen Sie nicht die <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType>-Eigenschaft im Ereignis <xref:System.Windows.DragDrop.DragEnter> fest, da sie im <xref:System.Windows.DragDrop.DragOver>-Ereignis überschrieben wird.  
   

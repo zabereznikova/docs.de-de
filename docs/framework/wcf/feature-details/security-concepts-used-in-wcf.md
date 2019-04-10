@@ -2,12 +2,12 @@
 title: In WCF verwendete Sicherheitsbegriffe
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: c995705e998ceee34ac9a3c2fc2343366f92ca00
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3ef2b9c104fa15de17a769c9ca9354e5cef085bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142219"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295548"
 ---
 # <a name="security-concepts-used-in-wcf"></a>In WCF verwendete Sicherheitsbegriffe
 Windows Communication Foundation (WCF)-Sicherheit wird baut auf Begriffen bereits und in diversen Sicherheitsinfrastrukturen bereitgestellt.  
@@ -34,15 +34,15 @@ Windows Communication Foundation (WCF)-Sicherheit wird baut auf Begriffen bereit
 ## <a name="access-control-mechanisms"></a>Zugriffssteuerungsmechanismen  
  WCF bietet mehrere Möglichkeiten zum Steuern des Zugriffs auf einen Dienst oder Vorgang. Dazu zählen:  
   
-1.  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
+1. <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
-2.  ASP.NET-Mitgliedschaftsanbieter  
+2. ASP.NET-Mitgliedschaftsanbieter  
   
-3.  ASP.NET-Rollenanbieter  
+3. ASP.NET-Rollenanbieter  
   
-4.  Autorisierungs-Manager  
+4. Autorisierungs-Manager  
   
-5.  Identitätsmodell  
+5. Identitätsmodell  
   
  Weitere Informationen zu diesen Themen finden Sie unter [Mechanismen der Zugriffssteuerung](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   

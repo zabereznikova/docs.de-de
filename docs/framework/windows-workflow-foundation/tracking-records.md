@@ -2,12 +2,12 @@
 title: Nachverfolgungsdatensätze
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: f8b79cad7161e780f336a9c5902e69d9826b23d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59163916"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298356"
 ---
 # <a name="tracking-records"></a>Nachverfolgungsdatensätze
 Die Workflowlaufzeit ist so instrumentiert, dass Überwachungsdatensätze im Zusammenhang mit der Ausführung einer Workflowinstanz ausgegeben werden.  
@@ -50,15 +50,15 @@ Die Workflowlaufzeit ist so instrumentiert, dass Überwachungsdatensätze im Zus
   
  Beispielsweise könnte eine einfache <xref:System.Activities.Statements.Sequence>-Aktivität vorhanden sein, die einen <xref:System.Activities.Statements.WriteLine>-Vorgang mit Überwachungsdatensätzen enthält, die in der folgenden Reihenfolge ausgegeben werden:  
   
-1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> Gibt an, dass der Workflow gestartet wird.  
+1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> Gibt an, dass der Workflow gestartet wird.  
   
-2.  <xref:System.Activities.Tracking.ActivityScheduledRecord> Gibt an, dass eine Aktivität geplant wurde. In diesem Fall handelt es sich um eine <xref:System.Activities.Statements.Sequence>-Aktivität.  
+2. <xref:System.Activities.Tracking.ActivityScheduledRecord> Gibt an, dass eine Aktivität geplant wurde. In diesem Fall handelt es sich um eine <xref:System.Activities.Statements.Sequence>-Aktivität.  
   
-3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> Stellt die <xref:System.Activities.Statements.WriteLine> Aktivität.  
+3. <xref:System.Activities.Tracking.ActivityScheduledRecord> Stellt die <xref:System.Activities.Statements.WriteLine> Aktivität.  
   
-4.  Es gibt zwei <xref:System.Activities.Tracking.ActivityStateRecord>-Datensätze, die die zwei Aktivitäten darstellen, die abgeschlossen werden.  
+4. Es gibt zwei <xref:System.Activities.Tracking.ActivityStateRecord>-Datensätze, die die zwei Aktivitäten darstellen, die abgeschlossen werden.  
   
-5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> Gibt an, dass der Workflow abgeschlossen wird.  
+5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> Gibt an, dass der Workflow abgeschlossen wird.  
   
 ## <a name="see-also"></a>Siehe auch
 

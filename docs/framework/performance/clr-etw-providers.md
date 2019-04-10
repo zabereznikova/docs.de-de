@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302620"
 ---
 # <a name="clr-etw-providers"></a>CLR-ETW-Anbieter
 Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbieter und den Rundownanbieter.  
@@ -58,7 +58,7 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
 ## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>ETW-Datensammlung mit Laufzeit- und Rundownanbietern  
  Im folgenden Beispiel wird veranschaulicht, wie der CLR-Rundownanbieter so verwendet wird, dass die Symbolauflösung verwalteter Prozesse mit minimalen Auswirkungen ermöglicht wird, unabhängig davon, ob die Prozesse innerhalb oder außerhalb des Fensters, für das ein Profil erstellt wurde, beginnen oder enden.  
   
-1.  Aktivieren Sie die ETW-Protokollierung mit dem CLR-Laufzeitanbieter:  
+1. Aktivieren Sie die ETW-Protokollierung mit dem CLR-Laufzeitanbieter:  
   
     ```  
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
@@ -66,7 +66,7 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
   
      Das Protokoll wird in der Datei clr1.etl gespeichert.  
   
-2.  Um die Profilerstellung zu beenden, während der Prozess weiterhin ausgeführt wird, starten Sie den Rundownanbieter, um die `DCEnd`-Ereignisse zu erfassen:  
+2. Um die Profilerstellung zu beenden, während der Prozess weiterhin ausgeführt wird, starten Sie den Rundownanbieter, um die `DCEnd`-Ereignisse zu erfassen:  
   
     ```  
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
@@ -74,14 +74,14 @@ Die Common Language Runtime (CLR) verfügt über zwei Anbieter: den Laufzeitanbi
   
      Dadurch kann mit dem Sammeln von `DCEnd`-Ereignissen eine Rundownsitzung begonnen werden. Das Sammeln aller Ereignisse dauert möglicherweise 30 bis 60 Sekunden. Das Protokoll wird in der Datei clr1.et2 gespeichert.  
   
-3.  Deaktivieren Sie die gesamte ETW-Profilerstellung:  
+3. Deaktivieren Sie die gesamte ETW-Profilerstellung:  
   
     ```  
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
-4.  Führen Sie die Profile zusammen, um eine Protokolldatei zu erstellen:  
+4. Führen Sie die Profile zusammen, um eine Protokolldatei zu erstellen:  
   
     ```  
     xperf -merge clr1.etl clr2.etl merged.etl  

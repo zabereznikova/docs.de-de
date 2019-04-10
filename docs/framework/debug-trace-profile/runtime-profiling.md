@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 036744362c414fe51c919b59c693d447c92a87c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141387"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306390"
 ---
 # <a name="runtime-profiling"></a>Laufzeit-Profilerstellung
 Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Bereitstellung oder einem Bereitstellungsszenario. Dieser Abschnitt ist für Entwickler und Systemadministratoren vorgesehen, die Informationen zur Leistung der Anwendung erfassen möchten.  
@@ -28,19 +28,19 @@ Die Profilerstellung ist eine Methode zum Sammeln von Leistungsdaten in einer Be
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>So führen Sie „Perfmon.exe“ unter Windows Vista und höheren Versionen aus  
   
-1.  Geben Sie an der Eingabeaufforderung **perfmon**ein. Die **Systemmonitor** -Konsole wird angezeigt.  
+1. Geben Sie an der Eingabeaufforderung **perfmon**ein. Die **Systemmonitor** -Konsole wird angezeigt.  
   
-2.  Klicken Sie im Ordner **Überwachungstools** auf **Systemmonitor**.  
+2. Klicken Sie im Ordner **Überwachungstools** auf **Systemmonitor**.  
   
-3.  Klicken Sie auf der Symbolleiste des Systemmonitors auf das Symbol **Hinzufügen** (das Pluszeichen), sofern es vorhanden ist. Wenn es nicht vorhanden ist, klicken Sie mit der rechten Maustaste im Überwachungsfenster, und wählen Sie dann die Option **Leistungsindikatoren hinzufügen** aus.  
+3. Klicken Sie auf der Symbolleiste des Systemmonitors auf das Symbol **Hinzufügen** (das Pluszeichen), sofern es vorhanden ist. Wenn es nicht vorhanden ist, klicken Sie mit der rechten Maustaste im Überwachungsfenster, und wählen Sie dann die Option **Leistungsindikatoren hinzufügen** aus.  
   
      Dadurch wird das Dialogfeld **Leistungsindikatoren hinzufügen** geöffnet. Das Listenfeld **Verfügbare Indikatoren** zeigt die verfügbaren Leistungsobjekte an. Es gibt eine Reihe von vordefinierten Objekten für .NET Framework-Clientanwendungen, einschließlich der Objekte für die Speicherverwaltung (**.NET CLR-Speicher**), Interoperabilität (**.NET CLR-Interop**), Ausnahmebehandlung (**.NET CLR-Ausnahmen**) und für Multithreading (**.NET CLR-Sperren und Threads**). Jedes Leistungsobjekt umfasst eine Reihe von einzelnen Leistungsindikatoren. Eine Liste der im Systemmonitor verfügbaren Leistungsindikatoren finden Sie unter [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)installiert werden.  
   
-4.  Aktivieren Sie das Kontrollkästchen neben dem Namen eines Leistungsobjekts, um die Liste der einzelnen Leistungsindikatoren anzuzeigen, die es unterstützt.  
+4. Aktivieren Sie das Kontrollkästchen neben dem Namen eines Leistungsobjekts, um die Liste der einzelnen Leistungsindikatoren anzuzeigen, die es unterstützt.  
   
-5.  Klicken Sie auf den Leistungsindikator, den Sie anzeigen möchten.  
+5. Klicken Sie auf den Leistungsindikator, den Sie anzeigen möchten.  
   
-6.  Klicken Sie im Listenfeld **Instanzen des ausgewählten Objekts** auf **\<Alle Instanzen>**, um anzugeben, dass Sie den Leistungsindikator für die Common Language Runtime global (d.h. systemweit) überwachen möchten.  
+6. Klicken Sie im Listenfeld **Instanzen des ausgewählten Objekts** auf **\<Alle Instanzen>**, um anzugeben, dass Sie den Leistungsindikator für die Common Language Runtime global (d.h. systemweit) überwachen möchten.  
   
      - oder -   
   

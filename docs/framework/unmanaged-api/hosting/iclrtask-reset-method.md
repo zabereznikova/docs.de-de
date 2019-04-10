@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3889e48019f30f93a9eaa677de26445dbcc33d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 13bf7342157de48e0183537afea2f2e53d1498dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198802"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300306"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset-Methode
 Informiert der common Language Runtime (CLR), dass der Host eine Aufgabe abgeschlossen hat, und ermöglicht es der CLR, die aktuelle [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) Instanz mit einer anderen Aufgabe darstellen.  
@@ -55,15 +55,15 @@ HRESULT Reset (
 ## <a name="remarks"></a>Hinweise  
  Die CLR kann wiederverwenden, die zuvor erstellte `ICLRTask` Instanzen, um zu vermeiden, dass neue Instanzen erstellt werden jedes Mal, wenn es sich um eine neue Aufgabe benötigt. Der Host kann mithilfe dieser Funktion durch den Aufruf `ICLRTask::Reset` anstelle von [ICLRTask:: ExitTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md) Wenn es eine Aufgabe abgeschlossen wurde. Die folgende Liste enthält die normalen Lebenszyklus einer `ICLRTask` Instanz:  
   
-1.  Die Common Language Runtime erstellt ein neues `ICLRTask` Instanz.  
+1. Die Common Language Runtime erstellt ein neues `ICLRTask` Instanz.  
   
-2.  Ruft die Laufzeit [IHostTaskManager:: GetCurrentTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) Abrufen eines Verweises auf die aktuelle Hostaufgabe.  
+2. Ruft die Laufzeit [IHostTaskManager:: GetCurrentTask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md) Abrufen eines Verweises auf die aktuelle Hostaufgabe.  
   
-3.  Ruft die Laufzeit [IHostTask:: SetCLRTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) , die Hostaufgabe die neue Instanz zugeordnet werden soll.  
+3. Ruft die Laufzeit [IHostTask:: SetCLRTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md) , die Hostaufgabe die neue Instanz zugeordnet werden soll.  
   
-4.  Der Task wird ausgeführt und abgeschlossen.  
+4. Der Task wird ausgeführt und abgeschlossen.  
   
-5.  Der Host zerstört die Aufgabe durch Aufrufen von `ICLRTask::ExitTask`.  
+5. Der Host zerstört die Aufgabe durch Aufrufen von `ICLRTask::ExitTask`.  
   
  `Reset` ändert dieses Szenario gibt es zwei Möglichkeiten. In Schritt 5 oben der Host ruft `Reset` auf die Aufgabe in einem fehlerfreien Status zurückzusetzen und dann die `ICLRTask` Instanz zugeordneten [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) Instanz. Falls gewünscht, kann auch der Host Zwischenspeichern der `IHostTask` Instanz zur Wiederverwendung. Klicken Sie in Schritt 1 oben, die Runtime eine wiederverwendete `ICLRTask` aus dem Zwischenspeicher, anstatt eine neue Instanz erstellen.  
   

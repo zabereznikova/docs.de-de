@@ -4,12 +4,12 @@ description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Wind
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2f1d624365c168d14e98ed175d369f6aef18e42e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 45eeee165a1dcbfc7b6dbc5146ce2c4b2be2e643
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153877"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296250"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>Microsoft-Technologien in die Cloud optimierte Anwendungen
 
@@ -25,9 +25,9 @@ Die folgende Liste beschreibt die Tools, Technologien und Lösungen, die als Vor
 
 -   **Überwachung, Protokollierung und Überwachung Telemetriedaten**: Die Möglichkeit zum Überwachen von Anwendungen und Container, die in der Cloud ausgeführt werden, ist wichtig für alle Cloudoptimierte Anwendungen. [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) und [Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite) sind die wichtigsten Microsoft-Tools, Überwachung und Überprüfung für die Cloud optimierte apps bereitstellen.
 
--   **Bereitstellung**: Automatisierungstools können Sie die Infrastruktur einrichten und Bereitstellen einer Anwendung in mehreren Umgebungen (Produktion, Tests, staging). Sie können Tools wie Chef und Puppet verwenden, um Konfigurations- und Umgebungsdaten einer Anwendung zu verwalten. Diese Ebene kann auch mithilfe einfachere und direktere Methoden implementiert werden. Beispielsweise können direkt mithilfe von Azure-Befehlszeilenschnittstelle (Azure CLI)-Tools, bereitstellen und anschließend verwenden Sie den continuous Deployment und release Management-Pipelines in [Azure DevOps-Dienste](https://visualstudio.microsoft.com/team-services/).
+-   **Bereitstellung**: Automatisierungstools können Sie die Infrastruktur einrichten und Bereitstellen einer Anwendung in mehreren Umgebungen (Produktion, Tests, staging). Sie können Tools wie Chef und Puppet verwenden, um Konfigurations- und Umgebungsdaten einer Anwendung zu verwalten. Diese Ebene kann auch mithilfe einfachere und direktere Methoden implementiert werden. Beispielsweise können direkt mithilfe von Azure-Befehlszeilenschnittstelle (Azure CLI)-Tools, bereitstellen und anschließend verwenden Sie den continuous Deployment und release Management-Pipelines in [Azure DevOps-Dienste](https://azure.microsoft.com/services/devops/).
 
--   **Anwendungslebenszyklus**: [Azure DevOps-Dienste](https://visualstudio.microsoft.com/team-services/) und andere Tools wie Jenkins, sind integrierte Automatisierungsserver, mit denen Sie implementieren Sie CI/CD-Pipelines, einschließlich der releaseverwaltung.
+-   **Anwendungslebenszyklus**: [Azure DevOps-Dienste](https://azure.microsoft.com/services/devops/) und andere Tools wie Jenkins, sind integrierte Automatisierungsserver, mit denen Sie implementieren Sie CI/CD-Pipelines, einschließlich der releaseverwaltung.
 
 In den nächsten Abschnitten dieses Kapitels und verwandten exemplarischen Vorgehensweisen an, den schwerpunktmäßig Informationen zu der Ebene der Common Language Runtime (Windows Container). Die Anleitung wird beschrieben, wie Sie Windows-Containern unter Windows Server 2016 (und höher)-VMs und Azure Container Instances bereitstellen können. Hierin sind auch erweiterte PaaS-Plattformen wie Azure App Service und Orchestrator wie Azure Service Fabric und Azure Kubernetes Service.
 

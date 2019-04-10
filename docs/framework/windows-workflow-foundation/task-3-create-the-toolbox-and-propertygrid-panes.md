@@ -2,12 +2,12 @@
 title: 'Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: a03a4204d6f112d8a94b48dd5a295dc4ff8354a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175044"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306006"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche
 In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche und fügen sie dem neu gehosteten [!INCLUDE[wfd1](../../../includes/wfd1-md.md)].  
@@ -16,11 +16,11 @@ In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche un
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>So erstellen Sie die Toolbox und fügen sie dem Raster hinzu.  
   
-1.  Öffnen Sie das HostingApplication-Projekt, das Sie erworben haben, gemäß das Verfahren in [Aufgabe 2: Hosten des Workflowdesigners](task-2-host-the-workflow-designer.md).  
+1. Öffnen Sie das HostingApplication-Projekt, das Sie erworben haben, gemäß das Verfahren in [Aufgabe 2: Hosten des Workflowdesigners](task-2-host-the-workflow-designer.md).  
   
-2.  In der **Projektmappen-Explorer** Bereich mit der rechten Maustaste in der Datei "MainWindow.xaml", und wählen Sie **Ansichtscode**.  
+2. In der **Projektmappen-Explorer** Bereich mit der rechten Maustaste in der Datei "MainWindow.xaml", und wählen Sie **Ansichtscode**.  
   
-3.  Hinzufügen einer `GetToolboxControl` Methode, um die `MainWindow` Klasse, die erstellt eine <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, fügt ein neues **Toolbox** Kategorie, um die **Toolbox**, und weist die <xref:System.Activities.Statements.Assign> und <xref:System.Activities.Statements.Sequence> Aktivitätstypen für die auf diese Kategorie.  
+3. Hinzufügen einer `GetToolboxControl` Methode, um die `MainWindow` Klasse, die erstellt eine <xref:System.Activities.Presentation.Toolbox.ToolboxControl>, fügt ein neues **Toolbox** Kategorie, um die **Toolbox**, und weist die <xref:System.Activities.Statements.Assign> und <xref:System.Activities.Statements.Sequence> Aktivitätstypen für die auf diese Kategorie.  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche un
     }  
     ```  
   
-4.  Hinzufügen eine privaten `AddToolbox` Methode, um die `MainWindow` -Klasse, die platziert die **Toolbox** in der linken Spalte des Rasters.  
+4. Hinzufügen eine privaten `AddToolbox` Methode, um die `MainWindow` -Klasse, die platziert die **Toolbox** in der linken Spalte des Rasters.  
   
     ```csharp  
     private void AddToolBox()  
@@ -60,7 +60,7 @@ In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche un
     }  
     ```  
   
-5.  Fügen Sie der `AddToolBox`-Methode im `MainWindow()`-Klassenkonstruktor einen Aufruf hinzu, wie im folgenden Code gezeigt.  
+5. Fügen Sie der `AddToolBox`-Methode im `MainWindow()`-Klassenkonstruktor einen Aufruf hinzu, wie im folgenden Code gezeigt.  
   
     ```csharp  
     public MainWindow()  
@@ -73,13 +73,13 @@ In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche un
     }  
     ```  
   
-6.  Drücken Sie F5, um die Lösung zu erstellen und auszuführen. Die **Toolbox** , enthält die <xref:System.Activities.Statements.Assign> und <xref:System.Activities.Statements.Sequence> Aktivitäten angezeigt werden soll.  
+6. Drücken Sie F5, um die Lösung zu erstellen und auszuführen. Die **Toolbox** , enthält die <xref:System.Activities.Statements.Assign> und <xref:System.Activities.Statements.Sequence> Aktivitäten angezeigt werden soll.  
   
 ### <a name="to-create-the-propertygrid"></a>So erstellen Sie den PropertyGrid  
   
-1.  In der **Projektmappen-Explorer** Bereich mit der rechten Maustaste in der Datei "MainWindow.xaml", und wählen Sie **Ansichtscode**.  
+1. In der **Projektmappen-Explorer** Bereich mit der rechten Maustaste in der Datei "MainWindow.xaml", und wählen Sie **Ansichtscode**.  
   
-2.  Hinzufügen der `AddPropertyInspector` Methode, um die `MainWindow` -Klasse die **PropertyGrid** Bereich in der äußersten rechten Spalte des Rasters.  
+2. Hinzufügen der `AddPropertyInspector` Methode, um die `MainWindow` -Klasse die **PropertyGrid** Bereich in der äußersten rechten Spalte des Rasters.  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -89,7 +89,7 @@ In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche un
     }  
     ```  
   
-3.  Fügen Sie der `AddPropertyInspector`-Methode im `MainWindow()`-Klassenkonstruktor einen Aufruf hinzu, wie im folgenden Code gezeigt.  
+3. Fügen Sie der `AddPropertyInspector`-Methode im `MainWindow()`-Klassenkonstruktor einen Aufruf hinzu, wie im folgenden Code gezeigt.  
   
     ```csharp  
     public MainWindow()  
@@ -103,7 +103,7 @@ In dieser Aufgabe erstellen Sie die **Toolbox** und **PropertyGrid** Bereiche un
     }  
     ```  
   
-4.  Drücken Sie F5, um die Projektmappe zu erstellen und auszuführen. Die **Toolbox**, entwurfszeichnungsbereich des Workflows und **PropertyGrid** sollte alle Bereiche angezeigt werden, und Sie ziehen, wenn ein <xref:System.Activities.Statements.Assign> Aktivität oder eine <xref:System.Activities.Statements.Sequence> Aktivität auf der Entwurfs-Canvas die Eigenschaftenraster sollte je nach markierter Aktivität aktualisiert werden.  
+4. Drücken Sie F5, um die Projektmappe zu erstellen und auszuführen. Die **Toolbox**, entwurfszeichnungsbereich des Workflows und **PropertyGrid** sollte alle Bereiche angezeigt werden, und Sie ziehen, wenn ein <xref:System.Activities.Statements.Assign> Aktivität oder eine <xref:System.Activities.Statements.Sequence> Aktivität auf der Entwurfs-Canvas die Eigenschaftenraster sollte je nach markierter Aktivität aktualisiert werden.  
   
 ## <a name="example"></a>Beispiel  
  Die Datei "MainWindow.xaml.cs" sollte jetzt den folgenden Code enthalten.  

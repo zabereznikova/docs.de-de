@@ -6,21 +6,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 78497de3a9aea55320639c55a151a1260a960159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835283"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303088"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>Vorgehensweise: Zuweisen eines Arrays zu einem anderen Array (Visual Basic)
 Da Arrays Objekte sind, können Sie sie in zuweisungsanweisungen wie andere Objekttypen. Eine Array-Variable enthält einen Zeiger auf die Daten enthalten sind, die die Elemente des Arrays und die Informationen Rang und die Länge und eine Zuordnung kopiert nur this-Zeiger.  
   
 ### <a name="to-assign-one-array-to-another-array"></a>Zuweisen eines Arrays zu einem anderen array  
   
-1.  Stellen Sie sicher, dass die beiden Arrays den gleichen Rang (Anzahl der Dimensionen) und kompatiblen Elements-Datentypen aufweisen.  
+1. Stellen Sie sicher, dass die beiden Arrays den gleichen Rang (Anzahl der Dimensionen) und kompatiblen Elements-Datentypen aufweisen.  
   
-2.  Verwenden Sie eine standardmäßige zuweisungsanweisung, um das Quellarray in den Zielarray zuzuweisen. Führen Sie nicht entweder Arrayname mit Klammern.  
+2. Verwenden Sie eine standardmäßige zuweisungsanweisung, um das Quellarray in den Zielarray zuzuweisen. Führen Sie nicht entweder Arrayname mit Klammern.  
   
     ```  
     Dim formArray() As System.Windows.Forms.Form  

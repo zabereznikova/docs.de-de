@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: eb194052ecd78d585f251789730a1f9855c509d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2149cac7fb15052c2602ef20a6684696730aae1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201961"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294465"
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>Vorgehensweise: Bearbeiten von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement
 Können Sie den auflistungs-Editor, der die <xref:System.Windows.Forms.TableLayoutPanel> Steuerelement mit der Bezeichnung der **Spalten- und Zeilenstile** Dialogfeld, um die Zeilen und Spalten der Steuerelemente zu bearbeiten.  
@@ -27,21 +27,21 @@ Können Sie den auflistungs-Editor, der die <xref:System.Windows.Forms.TableLayo
   
 ### <a name="to-edit-rows-and-columns"></a>Bearbeiten von Zeilen und Spalten  
   
-1.  Ziehen Sie ein <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement aus der **Toolbox** auf das Formular.  
+1. Ziehen Sie ein <xref:System.Windows.Forms.TableLayoutPanel> -Steuerelement aus der **Toolbox** auf das Formular.  
   
-2.  Klicken Sie auf die <xref:System.Windows.Forms.TableLayoutPanel> des Steuerelements Smarttag-Glyphe (![Smarttag-Glyphe](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")), und wählen Sie **Zeilen und Spalten bearbeiten** zum Öffnen der  **Spalten- und Zeilenstile** Dialogfeld. Sie können auch der rechten Maustaste auf die <xref:System.Windows.Forms.TableLayoutPanel> steuern, und wählen Sie **Zeilen und Spalten bearbeiten** aus dem Kontextmenü.  
+2. Klicken Sie auf die <xref:System.Windows.Forms.TableLayoutPanel> des Steuerelements Smarttag-Glyphe (![Smarttag-Glyphe](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")), und wählen Sie **Zeilen und Spalten bearbeiten** zum Öffnen der  **Spalten- und Zeilenstile** Dialogfeld. Sie können auch der rechten Maustaste auf die <xref:System.Windows.Forms.TableLayoutPanel> steuern, und wählen Sie **Zeilen und Spalten bearbeiten** aus dem Kontextmenü.  
   
-3.  Wählen Sie zum Hinzufügen oder Entfernen von Spalten, **Spalten** aus der **Elementtyp** im Dropdown Listenfeld.  
+3. Wählen Sie zum Hinzufügen oder Entfernen von Spalten, **Spalten** aus der **Elementtyp** im Dropdown Listenfeld.  
   
-4.  Wählen Sie zum Hinzufügen oder Entfernen von Zeilen, **Zeilen** aus der **Elementtyp** im Dropdown Listenfeld.  
+4. Wählen Sie zum Hinzufügen oder Entfernen von Zeilen, **Zeilen** aus der **Elementtyp** im Dropdown Listenfeld.  
   
-5.  Klicken Sie auf die **hinzufügen** Schaltfläche, um das Ende einer Zeile oder Spalte hinzufügen der **Member** Liste.  
+5. Klicken Sie auf die **hinzufügen** Schaltfläche, um das Ende einer Zeile oder Spalte hinzufügen der **Member** Liste.  
   
-6.  Klicken Sie auf die **einfügen** , um eine Zeile oder Spalte, bevor Sie das aktuell ausgewählte Element in der Liste hinzuzufügen.  
+6. Klicken Sie auf die **einfügen** , um eine Zeile oder Spalte, bevor Sie das aktuell ausgewählte Element in der Liste hinzuzufügen.  
   
-7.  Wenn Sie eine Zeile oder Spalte hinzufügen, wählen Sie die **Größentyp** für die neue Zeile oder Spalte. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.SizeType>.  
+7. Wenn Sie eine Zeile oder Spalte hinzufügen, wählen Sie die **Größentyp** für die neue Zeile oder Spalte. Weitere Informationen finden Sie unter <xref:System.Windows.Forms.SizeType>.  
   
-8.  Um eine Zeile oder Spalte zu entfernen, klicken Sie auf die **entfernen** Schaltfläche, um das aktuell ausgewählte Element im Löschen der **Member** Liste.  
+8. Um eine Zeile oder Spalte zu entfernen, klicken Sie auf die **entfernen** Schaltfläche, um das aktuell ausgewählte Element im Löschen der **Member** Liste.  
   
 ## <a name="see-also"></a>Siehe auch
 

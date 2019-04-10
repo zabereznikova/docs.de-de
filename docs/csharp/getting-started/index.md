@@ -6,17 +6,18 @@ helpviewer_keywords:
 - getting started, Visual C#
 author: rpetrusha
 ms.author: ronpet
-ms.date: 08/23/2017
-ms.openlocfilehash: 9894d96c74741477b871d6073d78ea95413b8299
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.date: 04/05/2019
+ms.custom: seoapril2019
+ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675665"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130966"
 ---
 # <a name="get-started-with-c"></a>Erste Schritte mit C\#
 
-Dieser Abschnitt bietet kurze, einfache Tutorials, mit denen Sie schnell eine Anwendung mit C# und .NET Core erstellen können. Es gibt Themen mit ersten Schritten für Visual Studio 2017 und Visual Studio Code. Sie können eine einfache „Hello World“-Anwendung erstellen. Wenn Sie über Visual Studio 2017 verfügen, können Sie auch eine einfache Klassenbibliothek erstellen, die von anderen Anwendungen verwendet werden kann.
+Dieser Abschnitt bietet kurze, einfache Tutorials, mit denen Sie schnell eine Anwendung mit C# und .NET Core erstellen können. Es gibt Themen mit ersten Schritten für Visual Studio 2017 und Visual Studio Code. In diesen Artikeln wird einige Programmiererfahrung vorausgesetzt. Wenn Sie noch keine Programmiererfahrung haben, finden Sie in unseren interaktiven Tutorials [Einführung in C#](../tutorials/intro-to-csharp/index.md) hilfreiche Informationen.
 
 Folgende Themen sind verfügbar:
 

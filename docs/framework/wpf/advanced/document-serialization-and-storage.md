@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 519d3aa218fca734a9159503b4107bdbcfc31652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215949"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295899"
 ---
 # <a name="document-serialization-and-storage"></a>Serialisierung und Speicherung von Dokumenten
 Microsoft .NET Framework stellt eine leistungsfähige Umgebung zum Erstellen und anzeigen qualitativ hochwertiger Dokumente.  Erweiterte Funktionen, die Unterstützung von sowohl fixierten Dokumenten als auch Flussdokumenten sowie erweiterte Anzeigesteuerelemente, kombiniert mit leistungsstarken 2D- und 3D-Grafikfunktionen führen .NET Framework-Anwendungen, um eine neue Ebene der Qualität und benutzerfreundlichkeit.  Eine speicherinterne Darstellung eines Dokuments flexibel zu verwalten, ist ein wichtiges Feature von .NET Framework und effizient zu speichern und Laden von Dokumenten aus einem Datenspeicher ist nahezu jede Anwendung erforderlich.  Der Prozess der Konvertierung eines Dokuments aus einer speicherinternen Darstellung in einen externen Datenspeicher wird als Serialisierung bezeichnet.  Der umgekehrte Vorgang des Lesens eines Datenspeichers und Neuerstellens der ursprünglichen Instanz im Speicher wird Deserialisierung genannt.  
@@ -65,11 +65,11 @@ Microsoft .NET Framework stellt eine leistungsfähige Umgebung zum Erstellen und
 ### <a name="creating-a-plug-in-serializer"></a>Erstellen eines Plug-In-Serialisierungsprogramms  
  Plug-In-Serialisierungsprogramme und verknüpfte Serialisierungsprogramme verwenden dieselben verfügbar gemachten, öffentlichen Methoden und Ereignisse und können daher so entworfen werden, dass sie synchron oder asynchron ausgeführt werden.  Folgen Sie diesen drei grundlegenden Schritten zum Erstellen eines Plug-In-Serialisierungsprogramms:  
   
-1.  Implementieren und debuggen Sie das Serialisierungsprogramm zuerst als verknüpftes Serialisierungsprogramm.  Das vorherige Erstellen des Serialisierungsprogramms, das kompiliert und direkt mit der Testanwendung verknüpft wird, ermöglicht vollen Zugriff auf Haltepunkte und weitere für den Test nützliche Debugdienste.  
+1. Implementieren und debuggen Sie das Serialisierungsprogramm zuerst als verknüpftes Serialisierungsprogramm.  Das vorherige Erstellen des Serialisierungsprogramms, das kompiliert und direkt mit der Testanwendung verknüpft wird, ermöglicht vollen Zugriff auf Haltepunkte und weitere für den Test nützliche Debugdienste.  
   
-2.  Nachdem das Serialisierungsprogramm vollständig getestet ist, eine <xref:System.Windows.Documents.Serialization.ISerializerFactory> Schnittstelle wird zum Erstellen eines Plug-Ins hinzugefügt.  Die <xref:System.Windows.Documents.Serialization.ISerializerFactory> -Schnittstelle gestattet den Vollzugriff auf alle .NET Framework-Objekte einschließlich die logische Struktur <xref:System.Windows.UIElement> Objekte <xref:System.Windows.Documents.IDocumentPaginatorSource>, und <xref:System.Windows.Media.Visual> Elemente.  Darüber hinaus <xref:System.Windows.Documents.Serialization.ISerializerFactory> bietet dieselben synchronen und asynchronen Methoden und Ereignisse, die verknüpfte Serialisierungsprogramme.  Da die Ausgabe großer Dokumente mehr Zeit in Anspruch nehmen kann, sind asynchrone Vorgänge empfehlenswert, um eine reaktionsfähige Benutzerinteraktion und eine Abbrechen-Option zu gewährleisten, falls ein Problem mit dem Datenspeicher auftreten sollte.  
+2. Nachdem das Serialisierungsprogramm vollständig getestet ist, eine <xref:System.Windows.Documents.Serialization.ISerializerFactory> Schnittstelle wird zum Erstellen eines Plug-Ins hinzugefügt.  Die <xref:System.Windows.Documents.Serialization.ISerializerFactory> -Schnittstelle gestattet den Vollzugriff auf alle .NET Framework-Objekte einschließlich die logische Struktur <xref:System.Windows.UIElement> Objekte <xref:System.Windows.Documents.IDocumentPaginatorSource>, und <xref:System.Windows.Media.Visual> Elemente.  Darüber hinaus <xref:System.Windows.Documents.Serialization.ISerializerFactory> bietet dieselben synchronen und asynchronen Methoden und Ereignisse, die verknüpfte Serialisierungsprogramme.  Da die Ausgabe großer Dokumente mehr Zeit in Anspruch nehmen kann, sind asynchrone Vorgänge empfehlenswert, um eine reaktionsfähige Benutzerinteraktion und eine Abbrechen-Option zu gewährleisten, falls ein Problem mit dem Datenspeicher auftreten sollte.  
   
-3.  Nach Erstellen des Plug-In-Serialisierungsprogramms wird ein Installationsskript für die Verteilung und Installation (und Deinstallation) des Plug-Ins implementiert (siehe oben unter „[Installieren von Plug-In-Serialisierungsprogrammen](#InstallingPluginSerializers)“).  
+3. Nach Erstellen des Plug-In-Serialisierungsprogramms wird ein Installationsskript für die Verteilung und Installation (und Deinstallation) des Plug-Ins implementiert (siehe oben unter „[Installieren von Plug-In-Serialisierungsprogrammen](#InstallingPluginSerializers)“).  
   
 ## <a name="see-also"></a>Siehe auch
 

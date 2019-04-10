@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: 932df915ab55d8141e64836961dd636d3d5da241
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9366c7ebe2e5b347f4795b15e6f2c2d0f3835482
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174602"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307600"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Exemplarische Vorgehensweise: Demonstrieren der visuellen Vererbung
 Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anzeigen und neue Steuerelemente hinzufügen. In dieser exemplarischen Vorgehensweise erstellen Sie ein Basisformular und kompilieren es in eine Klassenbibliothek. Sie importieren diese Klassenbibliothek in ein anderes Projekt und erstellen ein neues Formular, das vom Basisformular erbt. Bei dieser exemplarischen Vorgehensweise lernen Sie Folgendes:  
@@ -56,25 +56,25 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
   
 #### <a name="to-create-a-class-library-project-containing-a-base-form"></a>So erstellen Sie ein Klassenbibliotheksprojekt, das ein Basisformular enthält  
   
-1.  Aus der **Datei** im Menü wählen **neu**, und klicken Sie dann **Projekt** öffnen die **neues Projekt** im Dialogfeld.  
+1. Aus der **Datei** im Menü wählen **neu**, und klicken Sie dann **Projekt** öffnen die **neues Projekt** im Dialogfeld.  
   
-2.  Erstellen eine Windows Forms-Anwendung, die mit dem Namen `BaseFormLibrary`.  
+2. Erstellen eine Windows Forms-Anwendung, die mit dem Namen `BaseFormLibrary`.  
   
-3.  Erstellen Sie eine Klassenbibliothek anstelle einer standardmäßigen Windows Forms-Anwendung in **Projektmappen-Explorer**, mit der rechten Maustaste die **BaseFormLibrary** Projektknoten und wählen Sie dann **Eigenschaften**.  
+3. Erstellen Sie eine Klassenbibliothek anstelle einer standardmäßigen Windows Forms-Anwendung in **Projektmappen-Explorer**, mit der rechten Maustaste die **BaseFormLibrary** Projektknoten und wählen Sie dann **Eigenschaften**.  
   
-4.  Ändern Sie in den Eigenschaften für das Projekt, das **Ausgabetyp** aus **Windows-Anwendung** zu **Klassenbibliothek**.  
+4. Ändern Sie in den Eigenschaften für das Projekt, das **Ausgabetyp** aus **Windows-Anwendung** zu **Klassenbibliothek**.  
   
-5.  Von der **Datei** Menü wählen **Alles speichern** um das Projekt und die Dateien am Standardspeicherort zu speichern.  
+5. Von der **Datei** Menü wählen **Alles speichern** um das Projekt und die Dateien am Standardspeicherort zu speichern.  
   
  Mit den nächsten zwei Verfahren werden dem Basisformular Schaltflächen hinzugefügt. Zur Demonstration der visuellen Vererbung weisen Sie den Schaltflächen verschiedene Zugriffsebenen zu, indem Sie ihre `Modifiers`Eigenschaften festlegen.  
   
 #### <a name="to-add-a-button-that-inheritors-of-the-base-form-can-modify"></a>So fügen Sie eine Schaltfläche hinzu, die von Erben des Basisformulars geändert werden kann  
   
-1.  Öffnen Sie **Form1** im Designer.  
+1. Öffnen Sie **Form1** im Designer.  
   
-2.  Auf der **alle Windows Forms** Registerkarte die **Toolbox**, doppelklicken Sie auf **Schaltfläche** auf dem Formular eine Schaltfläche hinzuzufügen. Verwenden Sie die Maus, um die Position und Größe der Schaltfläche anzupassen.  
+2. Auf der **alle Windows Forms** Registerkarte die **Toolbox**, doppelklicken Sie auf **Schaltfläche** auf dem Formular eine Schaltfläche hinzuzufügen. Verwenden Sie die Maus, um die Position und Größe der Schaltfläche anzupassen.  
   
-3.  Legen Sie im "Eigenschaftenfenster" die folgenden Eigenschaften der Schaltfläche fest:  
+3. Legen Sie im "Eigenschaftenfenster" die folgenden Eigenschaften der Schaltfläche fest:  
   
     -   Legen Sie die **Text** Eigenschaft **Say Hello**.  
   
@@ -82,9 +82,9 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
   
     -   Legen Sie die **Modifizierer** Eigenschaft **geschützte**. Dadurch wird es möglich, dass Formulare, die von erben **Form1** beim Ändern der Eigenschaften von **BtnProtected**.  
   
-4.  Doppelklicken Sie auf die **Say Hello** Schaltfläche zum Hinzufügen eines ereignishandlers für das **klicken Sie auf** Ereignis.  
+4. Doppelklicken Sie auf die **Say Hello** Schaltfläche zum Hinzufügen eines ereignishandlers für das **klicken Sie auf** Ereignis.  
   
-5.  Fügen Sie dem Ereignishandler folgende Codezeile hinzu:  
+5. Fügen Sie dem Ereignishandler folgende Codezeile hinzu:  
   
     ```vb  
     MessageBox.Show("Hello, World!")  
@@ -96,9 +96,9 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
   
 #### <a name="to-add-a-button-that-cannot-be-modified-by-inheritors-of-the-base-form"></a>So fügen Sie eine Schaltfläche hinzu, die von Erben des Basisformulars nicht geändert werden kann  
   
-1.  Wechseln Sie zur Entwurfsansicht durch Klicken auf die **Form1.vb [Entwurf], Form1.cs [Entwurf] oder Form1.jsl [Design]** Registerkarte, die über den Code-Editor, oder drücken Sie F7.  
+1. Wechseln Sie zur Entwurfsansicht durch Klicken auf die **Form1.vb [Entwurf], Form1.cs [Entwurf] oder Form1.jsl [Design]** Registerkarte, die über den Code-Editor, oder drücken Sie F7.  
   
-2.  Fügen Sie eine zweite Schaltfläche hinzu, und legen Sie deren Eigenschaften wie folgt fest:  
+2. Fügen Sie eine zweite Schaltfläche hinzu, und legen Sie deren Eigenschaften wie folgt fest:  
   
     -   Legen Sie die **Text** Eigenschaft **Say Goodbye**.  
   
@@ -106,7 +106,7 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
   
     -   Legen Sie die **Modifizierer** Eigenschaft **Private**. Dies macht es unmöglich, Formularen, die von erben **Form1** beim Ändern der Eigenschaften von **BtnPrivate**.  
   
-3.  Doppelklicken Sie auf die **Say Goodbye** Schaltfläche zum Hinzufügen eines ereignishandlers für das **klicken Sie auf** Ereignis. Platzieren Sie die folgende Codezeile in der Ereignisprozedur:  
+3. Doppelklicken Sie auf die **Say Goodbye** Schaltfläche zum Hinzufügen eines ereignishandlers für das **klicken Sie auf** Ereignis. Platzieren Sie die folgende Codezeile in der Ereignisprozedur:  
   
     ```vb  
     MessageBox.Show("Goodbye!")  
@@ -116,37 +116,37 @@ Mit visueller Vererbung können Sie die Steuerelemente auf dem Basisformular anz
     MessageBox.Show("Goodbye!");  
     ```  
   
-4.  Aus der **erstellen** Menü wählen **BaseFormLibrary** die Klassenbibliothek erstellen.  
+4. Aus der **erstellen** Menü wählen **BaseFormLibrary** die Klassenbibliothek erstellen.  
   
      Nachdem die Bibliothek erstellt wurde, können Sie ein neues Projekt erstellen, das von dem Formular erbt, das Sie gerade erstellt haben.  
   
 #### <a name="to-create-a-project-containing-a-form-that-inherits-from-the-base-form"></a>So erstellen Sie ein Projekt, das ein Formular enthält, das vom Basisformular erbt  
   
-1.  Aus der **Datei** im Menü wählen **hinzufügen** und klicken Sie dann **neues Projekt** zum Öffnen der **neues Projekt hinzufügen** im Dialogfeld.  
+1. Aus der **Datei** im Menü wählen **hinzufügen** und klicken Sie dann **neues Projekt** zum Öffnen der **neues Projekt hinzufügen** im Dialogfeld.  
   
-2.  Erstellen eine Windows Forms-Anwendung, die mit dem Namen `InheritanceTest`.  
+2. Erstellen eine Windows Forms-Anwendung, die mit dem Namen `InheritanceTest`.  
   
 #### <a name="to-add-an-inherited-form"></a>So fügen Sie ein geerbtes Formular hinzu  
   
-1.  In **Projektmappen-Explorer**, mit der rechten Maustaste die **InheritanceTest** -Projekt, wählen **hinzufügen**, und wählen Sie dann **neues Element**.  
+1. In **Projektmappen-Explorer**, mit der rechten Maustaste die **InheritanceTest** -Projekt, wählen **hinzufügen**, und wählen Sie dann **neues Element**.  
   
-2.  In der **neues Element hinzufügen** wählen Sie im Dialogfeld die **Windows Forms** Kategorie (Wenn Sie eine Liste der Kategorien haben), und wählen Sie dann die **geerbtes Formular** Vorlage.  
+2. In der **neues Element hinzufügen** wählen Sie im Dialogfeld die **Windows Forms** Kategorie (Wenn Sie eine Liste der Kategorien haben), und wählen Sie dann die **geerbtes Formular** Vorlage.  
   
-3.  Übernehmen Sie den Standardnamen der `Form2` , und klicken Sie dann auf **hinzufügen**.  
+3. Übernehmen Sie den Standardnamen der `Form2` , und klicken Sie dann auf **hinzufügen**.  
   
-4.  In der **Vererbungsauswahl** wählen Sie im Dialogfeld **Form1** aus der **BaseFormLibrary** Projekt wie das Formular erben, und klicken Sie auf **OK** .  
+4. In der **Vererbungsauswahl** wählen Sie im Dialogfeld **Form1** aus der **BaseFormLibrary** Projekt wie das Formular erben, und klicken Sie auf **OK** .  
   
      Dies erstellt ein Formular in der **InheritanceTest** -Projekt, das das Formular im abgeleitet **BaseFormLibrary**.  
   
-5.  Öffnen Sie das geerbte Formular (**Form2**) im Designer, indem Sie darauf doppelklicken, wenn es nicht bereits geöffnet ist.  
+5. Öffnen Sie das geerbte Formular (**Form2**) im Designer, indem Sie darauf doppelklicken, wenn es nicht bereits geöffnet ist.  
   
      Im Designer haben die geerbten Schaltflächen ein Symbol (![Screenshot der Vererbung von Visual Basic-Symbols.](./media/walkthrough-demonstrating-visual-inheritance/visual-basic-inheritance-glyph.gif)) in der oberen Ecke, der angibt, sie werden geerbt.  
   
-6.  Wählen Sie die **Say Hello** Schaltfläche, und beobachten Sie die Handles zur Größenänderung. Da diese Schaltfläche geschützt ist, können die Erben sie verschieben, ihre Größe ändern, ihre Beschriftung ändern und andere Änderungen vornehmen.  
+6. Wählen Sie die **Say Hello** Schaltfläche, und beobachten Sie die Handles zur Größenänderung. Da diese Schaltfläche geschützt ist, können die Erben sie verschieben, ihre Größe ändern, ihre Beschriftung ändern und andere Änderungen vornehmen.  
   
-7.  Wählen Sie die Private **Say Goodbye** Schaltfläche, und beachten Sie, dass sie nicht über die Handles zur Größenänderung verfügt. Darüber hinaus wird in der **Eigenschaften** werden im Fenster die Eigenschaften dieser Schaltfläche abgeblendet, um anzugeben, kann nicht geändert werden.  
+7. Wählen Sie die Private **Say Goodbye** Schaltfläche, und beachten Sie, dass sie nicht über die Handles zur Größenänderung verfügt. Darüber hinaus wird in der **Eigenschaften** werden im Fenster die Eigenschaften dieser Schaltfläche abgeblendet, um anzugeben, kann nicht geändert werden.  
   
-8.  Wenn Sie Visual C# -Code verwenden:  
+8. Wenn Sie Visual C# -Code verwenden:  
   
     1.  In **Projektmappen-Explorer**, mit der rechten Maustaste **Form1** in die **InheritanceTest** Projekt, und wählen Sie dann **löschen**. Klicken Sie im Meldungsfeld, das angezeigt wird, klicken Sie auf **OK** zu bestätigen.  
   

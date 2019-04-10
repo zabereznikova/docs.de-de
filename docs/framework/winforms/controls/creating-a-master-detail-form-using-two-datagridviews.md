@@ -10,12 +10,12 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a887dacfcb83b4b6ea4cb2690ab09b0d1b20b4fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078875"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295795"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Exemplarische Vorgehensweise: Erstellen eines Master-/Detailformulars mit zwei DataGridView-Steuerelementen in Windows Forms
 Einer der häufigsten Szenarios für die Verwendung der <xref:System.Windows.Forms.DataGridView> Steuerelement ist die *Master/Detail-* Form, in dem eine über-/unterordnungsbeziehung zwischen zwei Datenbanktabellen angezeigt wird. Auswählen von Zeilen in der master-Tabelle bewirkt, dass die Detailtabelle um mit den entsprechenden untergeordneten Daten zu aktualisieren.  
@@ -33,14 +33,14 @@ Einer der häufigsten Szenarios für die Verwendung der <xref:System.Windows.For
   
 #### <a name="to-create-a-masterdetail-form"></a>Erstellen eines Master/Detail-Formulars  
   
-1.  Erstellen Sie eine abgeleitete Klasse <xref:System.Windows.Forms.Form> und enthält zwei <xref:System.Windows.Forms.DataGridView> -Steuerelemente und zwei <xref:System.Windows.Forms.BindingSource> Komponenten. Der folgende Code stellt die grundlegende Form Initialisierung bereit und enthält eine `Main` Methode. Wenn Sie Visual Studio-Designer verwenden, um das Formular zu erstellen, können Sie verwenden Sie den vom Designer generierten Code anstelle dieser Code, aber Achten Sie darauf, dass Sie die in den Variablen Deklarationen in den hier angezeigten Namen zu verwenden.  
+1. Erstellen Sie eine abgeleitete Klasse <xref:System.Windows.Forms.Form> und enthält zwei <xref:System.Windows.Forms.DataGridView> -Steuerelemente und zwei <xref:System.Windows.Forms.BindingSource> Komponenten. Der folgende Code stellt die grundlegende Form Initialisierung bereit und enthält eine `Main` Methode. Wenn Sie Visual Studio-Designer verwenden, um das Formular zu erstellen, können Sie verwenden Sie den vom Designer generierten Code anstelle dieser Code, aber Achten Sie darauf, dass Sie die in den Variablen Deklarationen in den hier angezeigten Namen zu verwenden.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#02)]  
   
-2.  Implementieren Sie eine Methode in Ihres Formulars Klassendefinition für die Verarbeitung von Details der Verbindung zur Datenbank. Dieses Beispiel verwendet eine `GetData` -Methode, die füllt eine <xref:System.Data.DataSet> Objekt, fügt ein <xref:System.Data.DataRelation> Objekt, das Dataset, und bindet die <xref:System.Windows.Forms.BindingSource> Komponenten. Sorgen Sie dafür, dass die `connectionString`-Variable auf einen Wert gesetzt wird, der für Ihre Datenbank geeignet ist.  
+2. Implementieren Sie eine Methode in Ihres Formulars Klassendefinition für die Verarbeitung von Details der Verbindung zur Datenbank. Dieses Beispiel verwendet eine `GetData` -Methode, die füllt eine <xref:System.Data.DataSet> Objekt, fügt ein <xref:System.Data.DataRelation> Objekt, das Dataset, und bindet die <xref:System.Windows.Forms.BindingSource> Komponenten. Sorgen Sie dafür, dass die `connectionString`-Variable auf einen Wert gesetzt wird, der für Ihre Datenbank geeignet ist.  
   
     > [!IMPORTANT]
     >  Das Speichern vertraulicher Informationen (z. B. eines Kennworts) innerhalb der Verbindungszeichenfolge kann die Sicherheit einer Anwendung beeinträchtigen. Der Zugriff auf eine Datenbank lässt sich mithilfe der Windows-Authentifizierung (wird auch als integrierte Sicherheit bezeichnet) sicherer steuern. Weitere Informationen finden Sie unter [Protecting Connection Information (Schützen von Verbindungsinformationen)](../../data/adonet/protecting-connection-information.md).  
@@ -48,7 +48,7 @@ Einer der häufigsten Szenarios für die Verwendung der <xref:System.Windows.For
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#20)]  
   
-3.  Implementieren einen Handler für Ihres Formulars <xref:System.Windows.Forms.Form.Load> -Ereignis, das gebunden wird die <xref:System.Windows.Forms.DataGridView> -Steuerelementen an die <xref:System.Windows.Forms.BindingSource> Komponenten und ruft die `GetData` Methode. Das folgende Beispiel enthält Code, der Größe der <xref:System.Windows.Forms.DataGridView> Spalten sind die angezeigten Daten anpassen.  
+3. Implementieren einen Handler für Ihres Formulars <xref:System.Windows.Forms.Form.Load> -Ereignis, das gebunden wird die <xref:System.Windows.Forms.DataGridView> -Steuerelementen an die <xref:System.Windows.Forms.BindingSource> Komponenten und ruft die `GetData` Methode. Das folgende Beispiel enthält Code, der Größe der <xref:System.Windows.Forms.DataGridView> Spalten sind die angezeigten Daten anpassen.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]  

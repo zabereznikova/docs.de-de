@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: d07da72e238ef21237ca60e4d9b47240507948e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209540"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307742"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Vorgehensweise: Ausrichten von mehreren Steuerelementen in Windows Forms
 Um das Layout der Benutzeroberfläche (UI) der Windows-basierten Anwendung standardisieren möchten, können Sie eine Gruppe von Steuerelementen mit einem einzigen Befehl positionieren.  
@@ -22,11 +22,11 @@ Um das Layout der Benutzeroberfläche (UI) der Windows-basierten Anwendung stand
   
 ### <a name="to-align-multiple-controls-on-a-form"></a>Zum Ausrichten von mehreren Steuerelementen in einem Formular  
   
-1.  Öffnen Sie das Formular mit den Steuerelementen positionieren möchten die **Windows Forms-Designer**.  
+1. Öffnen Sie das Formular mit den Steuerelementen positionieren möchten die **Windows Forms-Designer**.  
   
-2.  Wählen Sie die Steuerelemente möchten Sie abstimmen, damit das erste Steuerelement, das Sie auswählen, das primäre Steuerelement ist, das den anderen ausgerichtet werden soll.  
+2. Wählen Sie die Steuerelemente möchten Sie abstimmen, damit das erste Steuerelement, das Sie auswählen, das primäre Steuerelement ist, das den anderen ausgerichtet werden soll.  
   
-3.  Auf der **Format** Startmenü **ausrichten**, und klicken Sie dann auf eine der sieben Optionen zur Verfügung.  
+3. Auf der **Format** Startmenü **ausrichten**, und klicken Sie dann auf eine der sieben Optionen zur Verfügung.  
   
 ## <a name="see-also"></a>Siehe auch
 

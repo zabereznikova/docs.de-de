@@ -2,12 +2,12 @@
 title: Standard-XAML-Schemakontext und WPF-XAML-Schemakontext
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 1312541321e74668e6527c6c54e712342fbb3a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124695"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295600"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Standard-XAML-Schemakontext und WPF-XAML-Schemakontext
 Ein XAML-Schemakontext ist eine konzeptionelle Entität, die beschreibt, wie eine XAML-Produktion, die ein bestimmtes XAML-Vokabular verwendet interagiert mit dem Schreiben von Verhalten führen, einschließlich wie Zuordnung eines Typs aufgelöst wird, wie Assemblys geladen werden, wie bestimmte Reader- und Writer-Objekt Einstellungen werden interpretiert. Dieses Thema beschreibt die Funktionen von .NET Framework-XAML-Dienste und der zugeordnetes standardmäßiges XAML-Schemakontext, basierend auf der CLR-Typsystems. Dieses Thema beschreibt auch die XAML-Schemakontext, der für WPF verwendet wird.  
@@ -46,9 +46,9 @@ Ein XAML-Schemakontext ist eine konzeptionelle Entität, die beschreibt, wie ein
   
 #### <a name="xaml-reader-input-loose-xaml"></a>XAML-Reader-Eingabe (loose XAML)  
   
-1.  Der XAML-Schemakontext durchläuft die <xref:System.AppDomain> der Anwendung nach einer bereits geladenen Assembly mit allen Aspekten des Namens, beginnend mit dem zuletzt geladenen Assembly. Wenn eine Übereinstimmung gefunden wird, wird diese Assembly für die Auflösung verwendet.  
+1. Der XAML-Schemakontext durchläuft die <xref:System.AppDomain> der Anwendung nach einer bereits geladenen Assembly mit allen Aspekten des Namens, beginnend mit dem zuletzt geladenen Assembly. Wenn eine Übereinstimmung gefunden wird, wird diese Assembly für die Auflösung verwendet.  
   
-2.  Andernfalls, eine der folgenden Methoden auf der Grundlage CLR <xref:System.Reflection.Assembly> -API zum Laden einer Assembly verwendet werden:  
+2. Andernfalls, eine der folgenden Methoden auf der Grundlage CLR <xref:System.Reflection.Assembly> -API zum Laden einer Assembly verwendet werden:  
   
     -   Wenn der Name in der Zuordnung gekennzeichnet ist, rufen Sie <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> für den qualifizierten Namen.  
   
@@ -61,9 +61,9 @@ Ein XAML-Schemakontext ist eine konzeptionelle Entität, die beschreibt, wie ein
   
  Beachten Sie, die über Assemblyverweise `XamlBuildTask` sind stets vollqualifiziert.  
   
-1.  Rufen Sie <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> für den qualifizierten Namen.  
+1. Rufen Sie <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> für den qualifizierten Namen.  
   
-2.  Wenn der vorherige Schritt fehlschlägt, verwenden Sie den kurzen Namen (und das öffentliche Schlüsseltoken, falls vorhanden) aufrufen, <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+2. Wenn der vorherige Schritt fehlschlägt, verwenden Sie den kurzen Namen (und das öffentliche Schlüsseltoken, falls vorhanden) aufrufen, <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 #### <a name="baml-presentationbuildtask"></a>BAML (PresentationBuildTask)  
  Es gibt zwei Aspekte: das Laden von Assemblys für BAML: Laden der ursprünglichen Assembly, die die BAML als Komponente enthält, und laden den Typ Unterstützungsassemblys für alle Typen, die von der BAML-Produktion verwiesen wird.  
@@ -71,16 +71,16 @@ Ein XAML-Schemakontext ist eine konzeptionelle Entität, die beschreibt, wie ein
 ##### <a name="assembly-load-for-initial-markup"></a>Laden der Assembly für das ursprüngliche Markup:  
  Der Verweis auf die Assembly, die das Markup geladen ist immer nicht qualifiziert.  
   
-1.  Der WPF XAML-Schemakontext durchläuft die <xref:System.AppDomain> der WPF-Anwendung und Suche nach einer bereits geladenen Assembly mit allen Aspekten des Namens, beginnend mit dem zuletzt geladenen Assembly. Wenn eine Übereinstimmung gefunden wird, wird diese Assembly für die Auflösung verwendet.  
+1. Der WPF XAML-Schemakontext durchläuft die <xref:System.AppDomain> der WPF-Anwendung und Suche nach einer bereits geladenen Assembly mit allen Aspekten des Namens, beginnend mit dem zuletzt geladenen Assembly. Wenn eine Übereinstimmung gefunden wird, wird diese Assembly für die Auflösung verwendet.  
   
-2.  Wenn der vorherige Schritt fehlschlägt, verwenden Sie den kurzen Namen (und das öffentliche Schlüsseltoken, falls vorhanden) aufrufen, <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
+2. Wenn der vorherige Schritt fehlschlägt, verwenden Sie den kurzen Namen (und das öffentliche Schlüsseltoken, falls vorhanden) aufrufen, <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>.  
   
 ##### <a name="assembly-references-by-baml-types"></a>Assemblyverweise von BAML-Typen:  
  Assemblyverweise für Typen in der BAML-Produktion sind immer voll gekennzeichnet sein, als Ausgabe des Tasks "Build".  
   
-1.  Der WPF XAML-Schemakontext durchläuft die <xref:System.AppDomain> der WPF-Anwendung und Suche nach einer bereits geladenen Assembly mit allen Aspekten des Namens, beginnend mit dem zuletzt geladenen Assembly. Wenn eine Übereinstimmung gefunden wird, wird diese Assembly für die Auflösung verwendet.  
+1. Der WPF XAML-Schemakontext durchläuft die <xref:System.AppDomain> der WPF-Anwendung und Suche nach einer bereits geladenen Assembly mit allen Aspekten des Namens, beginnend mit dem zuletzt geladenen Assembly. Wenn eine Übereinstimmung gefunden wird, wird diese Assembly für die Auflösung verwendet.  
   
-2.  Andernfalls wird eine der folgenden Methoden zum Laden einer Assembly verwendet:  
+2. Andernfalls wird eine der folgenden Methoden zum Laden einer Assembly verwendet:  
   
     -   Rufen Sie <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> für den qualifizierten Namen.  
   

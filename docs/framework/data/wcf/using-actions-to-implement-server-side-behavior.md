@@ -2,12 +2,12 @@
 title: Verwenden von Aktionen zum Implementieren des serverseitigen Verhaltens
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144117"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294937"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Verwenden von Aktionen zum Implementieren des serverseitigen Verhaltens
 
@@ -40,11 +40,11 @@ OData-Aktionen bieten eine Möglichkeit, ein Verhalten für eine aus einem OData
 ### <a name="idataserviceinvokable"></a>IDataServiceInvokable  
  Diese Schnittstelle bietet eine Möglichkeit zur Ausführung einer WCF Data Service-Aktion. Beim Implementieren von IDataServiceInvokable sind drei Dinge zu beachten:  
   
-1.  Erfassen und potenzielles Marshallen der Parameter  
+1. Erfassen und potenzielles Marshallen der Parameter  
   
-2.  Verteilen der Parameter an den Code, durch den die Aktion beim Aufruf von Invoke() tatsächlich implementiert wird  
+2. Verteilen der Parameter an den Code, durch den die Aktion beim Aufruf von Invoke() tatsächlich implementiert wird  
   
-3.  Speichern der Ergebnisse von Invoke(), sodass sie mit GetResult() abgerufen werden können  
+3. Speichern der Ergebnisse von Invoke(), sodass sie mit GetResult() abgerufen werden können  
   
  Die Parameter können als Token übergeben werden. Das liegt daran, dass ein Datendienstanbieter mit Unterstützung für Token geschrieben werden kann, die Ressourcen darstellen. In diesem Fall müssen die Token u. U. in tatsächliche Ressourcen konvertiert (gemarshallt) werden, bevor sie an die tatsächliche Aktion verteilt werden. Nachdem der Parameter gemarshallt wurde, muss er sich in einem bearbeitbaren Zustand befinden, damit alle Änderungen an der Ressource, die beim Aufrufen der Aktion auftreten, gespeichert und auf den Datenträger geschrieben werden.  
   

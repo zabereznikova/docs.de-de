@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - WCF Data Services, customizing feeds
 ms.assetid: fd16272e-36f2-415e-850e-8a81f2b17525
-ms.openlocfilehash: 186b921f508b1a4b05e766c4f1a3c9e65de04722
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 38550b3b7d6fd7c6808db174017499ec71685140
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089288"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299851"
 ---
 # <a name="how-to-customize-feeds-with-the-entity-framework-provider-wcf-data-services"></a>Vorgehensweise: Anpassen von Feeds mit dem Entity Framework-Anbieter (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie die Atom-Serialisierung in einer datendienstantwort anpassen, sodass Eigenschaften einer Entität nicht verwendeten Elementen zugeordnet werden können, die im AtomPub-Protokoll definiert sind. In diesem Thema wird gezeigt, wie Zuordnungsattribute für die Entitätstypen in einem Datenmodell definiert werden, das in einer EDMX-Datei mit dem Entity Framework-Anbieter definiert wird. Weitere Informationen finden Sie unter [Feed Anpassung](../../../../docs/framework/data/wcf/feed-customization-wcf-data-services.md).  
@@ -19,21 +19,21 @@ ms.locfileid: "59089288"
   
 ### <a name="to-manually-modify-the-northwindedmx-file-to-add-feed-customization-attributes"></a>So ändern Sie manuell die Datei Northwind.edmx, um Feedanpassungsattribute hinzuzufügen  
   
-1.  In **Projektmappen-Explorer**, mit der rechten Maustaste die `Northwind.edmx` Datei, und klicken Sie dann auf **Öffnen mit**.  
+1. In **Projektmappen-Explorer**, mit der rechten Maustaste die `Northwind.edmx` Datei, und klicken Sie dann auf **Öffnen mit**.  
   
-2.  In der **Öffnen mit - Northwind.edmx** wählen Sie im Dialogfeld **XML-Editor**, und klicken Sie dann auf **OK**.  
+2. In der **Öffnen mit - Northwind.edmx** wählen Sie im Dialogfeld **XML-Editor**, und klicken Sie dann auf **OK**.  
   
-3.  Suchen Sie das `ConceptualModels`-Element, und ersetzen Sie den vorhandenen `Customers`-Entitätstyp durch das folgende Element, das Feedanpassungszuordnungsattribute enthält:  
+3. Suchen Sie das `ConceptualModels`-Element, und ersetzen Sie den vorhandenen `Customers`-Entitätstyp durch das folgende Element, das Feedanpassungszuordnungsattribute enthält:  
   
      [!code-xml[Astoria Custom Feeds#EdmFeedCustomers](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedcustomers)]  
   
-4.  Speichern Sie die Änderungen, und schließen Sie die Datei Northwind.edmx.  
+4. Speichern Sie die Änderungen, und schließen Sie die Datei Northwind.edmx.  
   
-5.  (Optional) Mit der rechten Maustaste in der Datei Northwind.edmx, und klicken Sie dann auf **benutzerdefiniertes Tool ausführen**.  
+5. (Optional) Mit der rechten Maustaste in der Datei Northwind.edmx, und klicken Sie dann auf **benutzerdefiniertes Tool ausführen**.  
   
      Hierdurch wird die Objektebenendatei erneut erstellt, was möglicherweise erforderlich ist.  
   
-6.  Kompilieren Sie das Projekt neu.  
+6. Kompilieren Sie das Projekt neu.  
   
 ## <a name="example"></a>Beispiel  
  Das vorherige Beispiel gibt das folgende Ergebnis für den URI `http://myservice/Northwind.svc/Customers('ALFKI')` zurück.  

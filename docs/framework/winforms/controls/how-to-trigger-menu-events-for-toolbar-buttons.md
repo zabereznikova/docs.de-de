@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 5256185104f7d22514eac2db93856d7c58f51fb6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0f5afde1cc0be772baff373c84c82f81df284b9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228346"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303985"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>Vorgehensweise: Auslösen von Menüereignissen für Symbolleistenschaltflächen
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "59228346"
   
 ### <a name="to-handle-the-click-event-on-a-toolbar"></a>So behandeln Sie das Click-Ereignis für eine Symbolleiste  
   
-1.  Fügen Sie in einer Prozedur Symbolleistenschaltflächen, die <xref:System.Windows.Forms.ToolBar> Steuerelement.  
+1. Fügen Sie in einer Prozedur Symbolleistenschaltflächen, die <xref:System.Windows.Forms.ToolBar> Steuerelement.  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,7 +70,7 @@ ms.locfileid: "59228346"
        }  
     ```  
   
-2.  Hinzufügen eines ereignishandlers für das <xref:System.Windows.Forms.ToolBar> des Steuerelements <xref:System.Windows.Forms.ToolBar.ButtonClick> Ereignis. Mit einer case / switch-Anweisung und die <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> -Klasse die Symbolleistenschaltfläche bestimmen, auf die geklickt wurde. Zeigen Sie basierend darauf ein entsprechendes Meldungsfenster an.  
+2. Hinzufügen eines ereignishandlers für das <xref:System.Windows.Forms.ToolBar> des Steuerelements <xref:System.Windows.Forms.ToolBar.ButtonClick> Ereignis. Mit einer case / switch-Anweisung und die <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> -Klasse die Symbolleistenschaltfläche bestimmen, auf die geklickt wurde. Zeigen Sie basierend darauf ein entsprechendes Meldungsfenster an.  
   
     > [!NOTE]
     >  Im vorliegenden Beispiel wird ein Meldungsfenster lediglich als Platzhalter verwendet. Sie können bei Bedarf weiteren, nach dem Klicken auf eine Schaltfläche auszuführenden Code hinzufügen.  

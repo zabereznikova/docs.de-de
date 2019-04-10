@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 9930b0081ef67ed006e399e3e5b44e88a47933c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147549"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304401"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>Aktivieren von Multiple Active Result Sets
 MARS (Multiple Active Result Sets) ist eine Funktion, die mit SQL Server verwendet wird und das Ausführen mehrerer Batches über eine einzelne Verbindung ermöglicht. Wenn MARS für die Verwendung mit SQL Server aktiviert wird, fügen die einzelnen verwendeten Befehlsobjekte der Verbindung eine Sitzung hinzu.  
@@ -102,11 +102,11 @@ string connectionString = "Data Source=MSSQL1;" +
   
  Zum Behandeln dieses Szenarien bestehen drei Möglichkeiten:  
   
-1.  Starten Sie die Transaktion, nachdem der Reader erstellt wurde, damit dieser keinen Bestandteil der Transaktion darstellt. Jedes Update wird zu einer eigenen Transaktion.  
+1. Starten Sie die Transaktion, nachdem der Reader erstellt wurde, damit dieser keinen Bestandteil der Transaktion darstellt. Jedes Update wird zu einer eigenen Transaktion.  
   
-2.  Führen Sie alle Aufgaben aus, nachdem der Reader geschlossen wurde. Dadurch kann eine Vielzahl von Updates entstehen.  
+2. Führen Sie alle Aufgaben aus, nachdem der Reader geschlossen wurde. Dadurch kann eine Vielzahl von Updates entstehen.  
   
-3.  Verwenden Sie nicht MARS, sondern für jedes Befehlsobjekt eine separate Verbindung (wie vor der Verwendung von MARS).  
+3. Verwenden Sie nicht MARS, sondern für jedes Befehlsobjekt eine separate Verbindung (wie vor der Verwendung von MARS).  
   
 ### <a name="detecting-mars-support"></a>Ermitteln der MARS-Unterstützung  
  Durch Lesen des `SqlConnection.ServerVersion`-Werts kann eine Anwendung überprüfen, ob MARS unterstützt wird. Der Hauptwert sollte 9 für SQL Server 2005 und 10 für SQL Server 2008 lauten.  

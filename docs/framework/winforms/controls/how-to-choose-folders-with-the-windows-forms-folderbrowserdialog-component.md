@@ -12,23 +12,23 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 2bff105d5c97a8b98d094a1ce3a4f033aa5971be
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 050af6d10faec3dd09998349dcf96e96ea0f9201
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116076"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306183"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Vorgehensweise: Auswählen von Ordnern mit der FolderBrowserDialog-Komponente in Windows Forms
 Häufig müssen Sie in von Ihnen erstellten Windows-Anwendungen Benutzer auffordern, einen Ordner auszuwählen, meistens zum Speichern einer Gruppe von Dateien. Die Windows-Formulare <xref:System.Windows.Forms.FolderBrowserDialog> Komponente können Sie diese Aufgabe problemlos erledigen.  
   
 ### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>So wählen Sie Ordner mit der FolderBrowserDialog-Komponente  
   
-1.  Überprüfen Sie in einer Prozedur die <xref:System.Windows.Forms.FolderBrowserDialog> Komponente <xref:System.Windows.Forms.Form.DialogResult%2A> Eigenschaft, um festzustellen, wie Sie das Dialogfeld geschlossen wurde, und rufen Sie den Wert von der <xref:System.Windows.Forms.FolderBrowserDialog> Komponente <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> Eigenschaft.  
+1. Überprüfen Sie in einer Prozedur die <xref:System.Windows.Forms.FolderBrowserDialog> Komponente <xref:System.Windows.Forms.Form.DialogResult%2A> Eigenschaft, um festzustellen, wie Sie das Dialogfeld geschlossen wurde, und rufen Sie den Wert von der <xref:System.Windows.Forms.FolderBrowserDialog> Komponente <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> Eigenschaft.  
   
-2.  Wenn Sie den obersten Ordner, die in der Strukturansicht des Dialogfelds angezeigt werden müssen, legen die <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> -Eigenschaft, die einen Member verwendet die <xref:System.Environment.SpecialFolder> Enumeration.  
+2. Wenn Sie den obersten Ordner, die in der Strukturansicht des Dialogfelds angezeigt werden müssen, legen die <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> -Eigenschaft, die einen Member verwendet die <xref:System.Environment.SpecialFolder> Enumeration.  
   
-3.  Darüber hinaus können Sie festlegen der <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> Eigenschaft, die angibt, die Text-Zeichenfolge, wird am oberen Rand der Ordnerbrowser Strukturansicht angezeigt.  
+3. Darüber hinaus können Sie festlegen der <xref:System.Windows.Forms.FolderBrowserDialog.Description%2A> Eigenschaft, die angibt, die Text-Zeichenfolge, wird am oberen Rand der Ordnerbrowser Strukturansicht angezeigt.  
   
      Im folgenden Beispiel wird die <xref:System.Windows.Forms.FolderBrowserDialog> Komponente wird verwendet, um Wählen Sie einen Ordner, ähnlich wie wenn Sie ein Projekt in Visual Studio erstellen und werden aufgefordert, einen Ordner zum Speichern auszuwählen. In diesem Beispiel ist der Name des Ordners wird angezeigt einem <xref:System.Windows.Forms.TextBox> Steuerelement im Formular. Es ist eine gute Idee, platzieren den Speicherort in einem bearbeitbaren Bereich, z. B. eine <xref:System.Windows.Forms.TextBox> zu steuern, sodass Benutzer die Auswahl bei einem Fehler oder andere Probleme bearbeiten können. In diesem Beispiel wird ein Formular mit einem <xref:System.Windows.Forms.FolderBrowserDialog> Komponente und eine <xref:System.Windows.Forms.TextBox> Steuerelement.  
   

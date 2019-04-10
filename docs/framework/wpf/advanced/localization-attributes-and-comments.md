@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 4e4c4891a905a5e4458ad5fc21a512c1dfe6f74e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092915"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301853"
 ---
 # <a name="localization-attributes-and-comments"></a>Lokalisierungsattribute und -kommentare
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -Lokalisierungskommentare sind Eigenschaften innerhalb [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] Quellcodes, die vom Entwickler, um Regeln und Hinweise für die Lokalisierung bereitzustellen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] -lokalisierungkommentare enthalten zwei Arten von Informationen: Lokalisierbarkeitsattribute und formfreie Lokalisierungskommentare. Lokalisierbarkeitsattribute werden von der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Lokalisierungs-API verwendet, um anzugeben, welche Ressourcen lokalisiert werden sollen. Formfreie Kommentare umfassen alle Informationen, die der Anwendungsentwickler beinhaltet haben möchte.  
@@ -19,13 +19,13 @@ ms.locfileid: "59092915"
 ## <a name="localization-comments"></a>Lokalisierungskommentare  
  Wenn Entwickler von Markupanwendungen Anforderungen an bestimmte Elemente in [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] stellen (wie Einschränkungen hinsichtlich Textlänge, Schriftfamilie oder Schriftgrad), können Sie dem Lokalisierungsexperten diese Informationen über Kommentare im [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]-Code mitteilen. Das Hinzufügen von Kommentaren zu Quellcode funktioniert wie folgt:  
   
-1.  Anwendungsentwickler fügen dem [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]-Quellcode Lokalisierungskommentare hinzu.  
+1. Anwendungsentwickler fügen dem [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]-Quellcode Lokalisierungskommentare hinzu.  
   
-2.  Während des Buildprozesses können Sie in der PROJ-Datei angeben, ob die formfreien Lokalisierungskommentare in der Assembly bleiben oder ob ein Teil der oder alle Kommentare entfernt werden sollen. Die entfernten Kommentare werden in einer separaten Datei abgelegt. Sie geben die Option mit einem `LocalizationDirectivesToLocFile`-Tag an, z.B.:  
+2. Während des Buildprozesses können Sie in der PROJ-Datei angeben, ob die formfreien Lokalisierungskommentare in der Assembly bleiben oder ob ein Teil der oder alle Kommentare entfernt werden sollen. Die entfernten Kommentare werden in einer separaten Datei abgelegt. Sie geben die Option mit einem `LocalizationDirectivesToLocFile`-Tag an, z.B.:  
   
      `<LocalizationDirectivesToLocFile>` *Wert* `</LocalizationDirectivesToLocFile>`  
   
-3.  Folgende Werte können zugewiesen werden:  
+3. Folgende Werte können zugewiesen werden:  
   
     -   **None** – Sowohl Kommentare als auch Attribute bleiben in der Assembly. Es wird keine separate Datei generiert.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "59092915"
   
     -   **Alle** – Es werden sowohl Kommentare als auch Attribute aus der Assembly entfernt und in einer separaten LocFile abgelegt.  
   
-4.  Wenn lokalisierbare Ressourcen aus [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] extrahiert werden, werden die Lokalisierbarkeitsattribute von der [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)]-Lokalisierungs-API berücksichtigt.  
+4. Wenn lokalisierbare Ressourcen aus [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] extrahiert werden, werden die Lokalisierbarkeitsattribute von der [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)]-Lokalisierungs-API berücksichtigt.  
   
-5.  Lokalisierungskommentardateien, die nur formfreie Kommentare enthalten, werden zu einem späteren Zeitpunkt in den Lokalisierungsprozess integriert.  
+5. Lokalisierungskommentardateien, die nur formfreie Kommentare enthalten, werden zu einem späteren Zeitpunkt in den Lokalisierungsprozess integriert.  
   
  Das folgende Beispiel zeigt, wie einer [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]-Datei Lokalisierungskommentare hinzugefügt werden.  
   

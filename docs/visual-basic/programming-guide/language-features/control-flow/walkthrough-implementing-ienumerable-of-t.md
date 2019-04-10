@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 5fc96e1ae3624adc197b5b13029498b9aa90c95e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b13fd85ae01fd0b6f3c963d87a372add930be99d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819501"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302581"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>Exemplarische Vorgehensweise: Implementieren von IEnumerable(Of T) in Visual Basic
 Die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle wird implementiert von Klassen, die eine Sequenz von Werten eines Elements zu einem Zeitpunkt zurückgeben kann. Der Vorteil des Zurückgebens von Daten, die ein Element zu einem Zeitpunkt ist, dass Sie nicht den vollständigen Satz von Daten in den Arbeitsspeicher zu dessen Funktionsweise geladen werden soll. Sie müssen nur genügend Arbeitsspeicher verwenden, um ein einzelnes Element aus den Daten zu laden. Klassen, in denen die `IEnumerable(T)` Schnittstelle kann verwendet werden, mit `For Each` Schleifen oder LINQ-Abfragen.  
@@ -29,13 +29,13 @@ Die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle wird impleme
   
 **Erstellen des Projekts enumerable-Klasse**
 
-1.  In Visual Basic auf den **Datei** Startmenü **neu** , und klicken Sie dann auf **Projekt**.
+1. In Visual Basic auf den **Datei** Startmenü **neu** , und klicken Sie dann auf **Projekt**.
 
-1.  Überprüfen Sie, ob im Dialogfeld **Neues Projekt** im Bereich **Projekttypen** der Eintrag **Windows** ausgewählt ist. Wählen Sie im Bereich **Vorlagen** die Option **Klassenbibliothek** aus. Geben Sie im Feld **Name** die Bezeichnung `StreamReaderEnumerable` ein, und klicken Sie dann auf **OK**. Das neue Projekt wird angezeigt.
+1. Überprüfen Sie, ob im Dialogfeld **Neues Projekt** im Bereich **Projekttypen** der Eintrag **Windows** ausgewählt ist. Wählen Sie im Bereich **Vorlagen** die Option **Klassenbibliothek** aus. Geben Sie im Feld **Name** die Bezeichnung `StreamReaderEnumerable` ein, und klicken Sie dann auf **OK**. Das neue Projekt wird angezeigt.
 
-1.  In **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei "Class1.vb", und klicken Sie auf **umbenennen**. Benennen Sie die Datei in `StreamReaderEnumerable.vb` um, und drücken Sie die EINGABETASTE. Durch Umbenennen der Datei wird die Klasse ebenfalls in `StreamReaderEnumerable` umbenannt. Diese Klasse implementiert die `IEnumerable(Of String)`-Schnittstelle.
+1. In **Projektmappen-Explorer**mit der rechten Maustaste auf die Datei "Class1.vb", und klicken Sie auf **umbenennen**. Benennen Sie die Datei in `StreamReaderEnumerable.vb` um, und drücken Sie die EINGABETASTE. Durch Umbenennen der Datei wird die Klasse ebenfalls in `StreamReaderEnumerable` umbenannt. Diese Klasse implementiert die `IEnumerable(Of String)`-Schnittstelle.
 
-1.  Mit der rechten Maustaste in des Projekts StreamReaderEnumerable, zeigen Sie auf **hinzufügen**, und klicken Sie dann auf **neues Element**. Wählen Sie die **Klasse** Vorlage. In der **Namen** geben `StreamReaderEnumerator.vb` , und klicken Sie auf **OK**.
+1. Mit der rechten Maustaste in des Projekts StreamReaderEnumerable, zeigen Sie auf **hinzufügen**, und klicken Sie dann auf **neues Element**. Wählen Sie die **Klasse** Vorlage. In der **Namen** geben `StreamReaderEnumerator.vb` , und klicken Sie auf **OK**.
 
  Die erste Klasse in diesem Projekt wird von der enumerable-Klasse und Implementieren der `IEnumerable(Of String)` Schnittstelle. Diese generische Schnittstelle implementiert, die <xref:System.Collections.IEnumerable> Schnittstelle und wird sichergestellt, dass ein Consumer dieser Klasse Werte vom Typ zugreifen können `String`.  
   
@@ -97,5 +97,5 @@ Die <xref:System.Collections.Generic.IEnumerable%601> Schnittstelle wird impleme
 
 - [Einführung in LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Ablaufsteuerung](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [Schleifenstruktur](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Schleifenstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [For Each...Next-Anweisung](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

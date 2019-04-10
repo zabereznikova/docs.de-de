@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 2b3e25187d2865a8e754c553f8057c3c8e3cff37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59151228"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304830"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Vorgehensweise: Aufrufen modelldefinierter Funktionen als Objektmethoden
 In diesem Thema wird beschrieben, wie eine modelldefinierte Funktion als Methode für ein <xref:System.Data.Objects.ObjectContext>-Objekt oder als statische Methode für eine benutzerdefinierte Klasse aufgerufen wird. Ein *modelldefinierte Funktion* ist eine Funktion, die im konzeptionellen Modell definiert ist. Die folgenden Prozeduren beschreiben, wie diese Funktionen direkt aufgerufen werden, anstatt sie von LINQ to Entities-Abfragen aufzurufen. Weitere Informationen zu aufrufen modelldefinierter Funktionen in LINQ to Entities-Abfragen, finden Sie unter [Vorgehensweise: Aufrufen Modelldefinierter Funktionen in Abfragen](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
@@ -21,19 +21,19 @@ In diesem Thema wird beschrieben, wie eine modelldefinierte Funktion als Methode
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>So rufen Sie eine modelldefinierte Funktion als Methode für ein ObjectContext-Objekt auf  
   
-1.  Fügen Sie eine Quelldatei hinzu, um die partielle von den Entity Framework-Tools generierte und von der <xref:System.Data.Objects.ObjectContext> Klasse abgeleitete Klasse zu erweitern. Durch die Definition des CLR-Stub in einer separaten Quelldatei werden die Änderungen bei der erneuten Erstellung der Datei beibehalten.  
+1. Fügen Sie eine Quelldatei hinzu, um die partielle von den Entity Framework-Tools generierte und von der <xref:System.Data.Objects.ObjectContext> Klasse abgeleitete Klasse zu erweitern. Durch die Definition des CLR-Stub in einer separaten Quelldatei werden die Änderungen bei der erneuten Erstellung der Datei beibehalten.  
   
-2.  Fügen Sie der <xref:System.Data.Objects.ObjectContext>-Klasse, die wie folgt vorgeht, eine Common Language Runtime (CLR)-Methode hinzu:  
+2. Fügen Sie der <xref:System.Data.Objects.ObjectContext>-Klasse, die wie folgt vorgeht, eine Common Language Runtime (CLR)-Methode hinzu:  
   
     -   Sie ordnet der im konzeptionellen Modell definierten Funktion Objekte zu. Zum Zuordnen der Methode müssen Sie ein <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> für die Methode übernehmen. Beachten Sie, dass der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A>-Parameter und der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A>-Parameter des Attributs im konzeptionellen Modell den Namespacenamen und den Funktionsnamen darstellen. Bei der Funktionsnamenauflösung für LINQ wird die Groß-/Kleinschreibung berücksichtigt.  
   
     -   Gibt die Ergebnisse der <xref:System.Linq.IQueryProvider.Execute%2A>-Methode zurück, die von der <xref:System.Data.Objects.ObjectContext.QueryProvider%2A>-Eigenschaft zurückgegeben werden.  
   
-3.  Rufen Sie die statische Methode als ein Member für eine Instanz der <xref:System.Data.Objects.ObjectContext>-Klasse auf.  
+3. Rufen Sie die statische Methode als ein Member für eine Instanz der <xref:System.Data.Objects.ObjectContext>-Klasse auf.  
   
 ### <a name="to-call-a-model-defined-function-as-static-method-on-a-custom-class"></a>So rufen Sie eine modelldefinierte Funktion als statische Methode für eine benutzerdefinierte Klasse auf  
   
-1.  Fügen Sie der Anwendung eine Klasse mit einer statischen Methode hinzu, die wie folgt vorgeht:  
+1. Fügen Sie der Anwendung eine Klasse mit einer statischen Methode hinzu, die wie folgt vorgeht:  
   
     -   Sie ordnet der im konzeptionellen Modell definierten Funktion Objekte zu. Zum Zuordnen der Methode müssen Sie ein <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> für die Methode übernehmen. Beachten Sie, dass der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A>-Parameter und der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A>-Parameter des Attributs im konzeptionellen Modell den Namespacenamen und den Funktionsnamen darstellen.  
   
@@ -41,7 +41,7 @@ In diesem Thema wird beschrieben, wie eine modelldefinierte Funktion als Methode
   
     -   Gibt die Ergebnisse der <xref:System.Linq.IQueryProvider.Execute%2A>-Methode zurück, die von der <xref:System.Linq.IQueryable.Provider%2A>-Eigenschaft zurückgegeben werden.  
   
-2.  Aufrufen der Methode als Member einer statischen Methode für die benutzerdefinierte Klasse  
+2. Aufrufen der Methode als Member einer statischen Methode für die benutzerdefinierte Klasse  
   
 ## <a name="example"></a>Beispiel  
  **Aufrufen einer modelldefinierten Funktion als Methode für ein ObjectContext-Objekt**  

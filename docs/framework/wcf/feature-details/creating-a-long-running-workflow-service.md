@@ -2,12 +2,12 @@
 title: Erstellen eines Workflowdiensts mit langer Ausführungszeit
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 37d3accae017b6725eab5ebb3d7df6e1bc15a56a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109654"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301346"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>Erstellen eines Workflowdiensts mit langer Ausführungszeit
 In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit erstellt wird. Workflowdienste mit langer Laufzeit können über einen sehr großen Zeitraum hinweg ausgeführt werden. Währenddessen kann der Workflow in den Leerlauf wechseln und auf weitere Informationen warten. In diesem Fall wird der Workflow in einer SQL-Datenbank beibehalten und aus dem Arbeitsspeicher entfernt. Wenn weitere Informationen für die Workflowinstanz verfügbar sind, wird diese wieder in den Arbeitsspeicher geladen, und die Ausführung wird fortgesetzt.  In diesem Szenario implementieren Sie ein stark vereinfachtes Bestellsystem.  Zunächst wird eine Nachricht vom Client an den Workflow gesendet, um die Bestellung zu beginnen. Die Bestell-ID wird an den Client zurückgegeben. Der Workflowdienst wartet nun auf eine weitere Nachricht vom Client, wechselt in den Leerlauf und wird in der SQL-Datenbank beibehalten.  Wenn die nächste Nachricht vom Client mit der Bestellung eines Artikels empfangen wird, wird der Workflowdienst wieder in den Arbeitsspeicher geladen, und die Bestellung wird abschließend bearbeitet. In diesem Codebeispiel wird eine Zeichenfolge zurückgegeben, die angibt, dass der Artikel der Bestellung hinzugefügt wurde. Das Codebeispiel ist nicht als reale Anwendung der Technologie gedacht. Es soll vielmehr auf einfache Weise einen Workflowdienst mit langer Laufzeit veranschaulichen. In diesem Thema wird davon ausgegangen, dass Sie wissen, wie Visual Studio 2012-Projekte und Projektmappen zu erstellen.
@@ -15,33 +15,33 @@ In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit ers
 ## <a name="prerequisites"></a>Vorraussetzungen
  Sie müssen folgende Software installiert haben, um diese exemplarische Vorgehensweise verwenden zu können:
 
-1.  Microsoft SQL Server 2008
+1. Microsoft SQL Server 2008
 
-2.  Visual Studio 2012
+2. Visual Studio 2012
 
-3.  Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3. Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
-4.  Sie sind mit WCF und Visual Studio 2012 vertraut und wissen, wie Sie Projekte und Projektmappen erstellt.
+4. Sie sind mit WCF und Visual Studio 2012 vertraut und wissen, wie Sie Projekte und Projektmappen erstellt.
 
 ### <a name="to-setup-the-sql-database"></a>So richten Sie die SQL-Datenbank ein
 
-1.  Damit Workflowdienstinstanzen beibehalten werden können, muss Microsoft SQL Server installiert sein, und Sie müssen eine Datenbank konfiguriert haben, in der die beibehaltenen Workflowinstanzen gespeichert werden können. Führen Microsoft SQL Management Studio, indem Sie auf die **starten** Schaltfläche auswählen **Programme**, **Microsoft SQL Server 2008**, und **Microsoft SQL Management Studio**.
+1. Damit Workflowdienstinstanzen beibehalten werden können, muss Microsoft SQL Server installiert sein, und Sie müssen eine Datenbank konfiguriert haben, in der die beibehaltenen Workflowinstanzen gespeichert werden können. Führen Microsoft SQL Management Studio, indem Sie auf die **starten** Schaltfläche auswählen **Programme**, **Microsoft SQL Server 2008**, und **Microsoft SQL Management Studio**.
 
-2.  Klicken Sie auf die **Connect** Schaltfläche zur Anmeldung beim SQL Server-Instanz
+2. Klicken Sie auf die **Connect** Schaltfläche zur Anmeldung beim SQL Server-Instanz
 
-3.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** in der Strukturansicht und **neue Datenbank...** Erstellen Sie eine neue Datenbank namens `SQLPersistenceStore`.
+3. Klicken Sie mit der rechten Maustaste auf **Datenbanken** in der Strukturansicht und **neue Datenbank...** Erstellen Sie eine neue Datenbank namens `SQLPersistenceStore`.
 
-4.  Führen Sie die Skriptdatei SqlWorkflowInstanceStoreSchema.sql unter C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en in der SQLPersistenceStore-Datenbank aus, um die erforderlichen Datenbankschemas einzurichten.
+4. Führen Sie die Skriptdatei SqlWorkflowInstanceStoreSchema.sql unter C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en in der SQLPersistenceStore-Datenbank aus, um die erforderlichen Datenbankschemas einzurichten.
 
-5.  Führen Sie die Skriptdatei SqlWorkflowInstanceStoreLogic.sql unter C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en in der SQLPersistenceStore-Datenbank aus, um die erforderliche Datenbanklogik einzurichten.
+5. Führen Sie die Skriptdatei SqlWorkflowInstanceStoreLogic.sql unter C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en in der SQLPersistenceStore-Datenbank aus, um die erforderliche Datenbanklogik einzurichten.
 
 ### <a name="to-create-the-web-hosted-workflow-service"></a>So erstellen Sie den im Internet gehosteten Workflowdienst
 
-1.  Erstellen Sie eine leere Projektmappe mit Visual Studio 2012, nennen Sie es `OrderProcessing`.
+1. Erstellen Sie eine leere Projektmappe mit Visual Studio 2012, nennen Sie es `OrderProcessing`.
 
-2.  Fügen Sie der Projektmappe ein neues Projekt für eine WCF-Workflowdienstanwendung mit dem Namen `OrderService` hinzu.
+2. Fügen Sie der Projektmappe ein neues Projekt für eine WCF-Workflowdienstanwendung mit dem Namen `OrderService` hinzu.
 
-3.  Wählen Sie im Eigenschaftendialogfeld Projekts, das **Web** Registerkarte.
+3. Wählen Sie im Eigenschaftendialogfeld Projekts, das **Web** Registerkarte.
 
     1.  Klicken Sie unter **Startaktion** wählen **bestimmte Seite** , und geben Sie `Service1.xamlx`.
 
@@ -56,16 +56,16 @@ In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit ers
 
          Mit diesen beiden Schritten wird das Workflowdienstprojekt konfiguriert, das von IIS gehostet werden soll.
 
-4.  Öffnen Sie `Service1.xamlx` ist dies nicht bereits geöffnet ist, und löschen Sie die vorhandenen **ReceiveRequest** und **SendResponse** Aktivitäten.
+4. Öffnen Sie `Service1.xamlx` ist dies nicht bereits geöffnet ist, und löschen Sie die vorhandenen **ReceiveRequest** und **SendResponse** Aktivitäten.
 
-5.  Wählen Sie die **sequenzieller Dienst** -Aktivität, und klicken Sie auf die **Variablen** verknüpfen, und fügen Sie die Variablen, die in der folgenden Abbildung dargestellt. Dadurch werden einige Variablen hinzugefügt, die im weiteren Verlauf in diesem Workflow verwendet werden.
+5. Wählen Sie die **sequenzieller Dienst** -Aktivität, und klicken Sie auf die **Variablen** verknüpfen, und fügen Sie die Variablen, die in der folgenden Abbildung dargestellt. Dadurch werden einige Variablen hinzugefügt, die im weiteren Verlauf in diesem Workflow verwendet werden.
 
     > [!NOTE]
     >  Wenn CorrelationHandle nicht in der Dropdown-Liste der Variablentyp ist, wählen Sie **nach Typen suchen** aus der Dropdownliste aus. Geben Sie CorrelationHandle im der **Typnamen** Feld, wählen Sie CorrelationHandle aus dem Listenfeld aus, und klicken Sie auf **OK**.
 
      ![Fügen Sie Variablen](./media/creating-a-long-running-workflow-service/add-variables-sequential-service-activity.gif "Variablen an die Aktivität sequenzieller Dienst hinzufügen.")
 
-6.  Drag & drop eine **ReceiveAndSendReply** Aktivitätsvorlage in der **sequenzieller Dienst** Aktivität. Diese Gruppe von Aktivitäten empfängt eine Nachricht von einem Client und sendet eine Antwort.
+6. Drag & drop eine **ReceiveAndSendReply** Aktivitätsvorlage in der **sequenzieller Dienst** Aktivität. Diese Gruppe von Aktivitäten empfängt eine Nachricht von einem Client und sendet eine Antwort.
 
     1.  Wählen Sie die **Receive** Aktivität, und legen die Eigenschaften, die in der folgenden Abbildung hervorgehoben.
 
@@ -95,7 +95,7 @@ In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit ers
 
          ![Hinzufügen eines korrelationsinitialisierers](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "hinzufügen ein korrelationsinitialisierers.")
 
-7.  Drag & drop ein weiteres **ReceiveAndSendReply** Aktivität bis zum Ende des Workflows (außerhalb der **Sequenz** , enthält die erste **Receive** und  **"SendReply"** Aktivitäten). Dadurch wird die zweite Meldung empfangen, die vom Client gesendet wurde, und beantwortet.
+7. Drag & drop ein weiteres **ReceiveAndSendReply** Aktivität bis zum Ende des Workflows (außerhalb der **Sequenz** , enthält die erste **Receive** und  **"SendReply"** Aktivitäten). Dadurch wird die zweite Meldung empfangen, die vom Client gesendet wurde, und beantwortet.
 
     1.  Wählen Sie die **Sequenz** , enthält die neu hinzugefügte **Receive** und **"SendReply"** Aktivitäten, und klicken Sie auf die **Variablen** Schaltfläche. Fügen Sie die in der folgenden Abbildung hervorgehobene Variable hinzu:
 
@@ -131,7 +131,7 @@ In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit ers
 
              ![Einrichten der Datenbindung für die SendReply-Aktivität](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "-Eigenschaft für SendReplyToAddItem Aktivität festgelegt.")
 
-8.  Öffnen Sie die Datei "Web.config", und fügen Sie die folgenden Elemente in der \<Verhalten > Abschnitt aus, um die Workflowpersistenz zu aktivieren.
+8. Öffnen Sie die Datei "Web.config", und fügen Sie die folgenden Elemente in der \<Verhalten > Abschnitt aus, um die Workflowpersistenz zu aktivieren.
 
     ```xml
     <sqlWorkflowInstanceStore connectionString="Data Source=your-machine\SQLExpress;Initial Catalog=SQLPersistenceStore;Integrated Security=True;Asynchronous Processing=True" instanceEncodingOption="None" instanceCompletionAction="DeleteAll" instanceLockedExceptionAction="BasicRetry" hostLockRenewalPeriod="00:00:30" runnableInstancesDetectionPeriod="00:00:02" />
@@ -145,17 +145,17 @@ In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit ers
 
 ### <a name="to-create-a-client-application-to-call-the-workflow-service"></a>So erstellen Sie eine Clientanwendung zum Aufrufen des Workflowdiensts
 
-1.  Fügen Sie der Projektmappe ein neues Konsolenanwendungsprojekt mit dem Namen `OrderClient` hinzu.
+1. Fügen Sie der Projektmappe ein neues Konsolenanwendungsprojekt mit dem Namen `OrderClient` hinzu.
 
-2.  Fügen Sie dem `OrderClient`-Projekt Verweise auf die folgenden Assemblys hinzu:
+2. Fügen Sie dem `OrderClient`-Projekt Verweise auf die folgenden Assemblys hinzu:
 
     1.  System.ServiceModel.dll
 
     2.  System.ServiceModel.Activities.dll
 
-3.  Fügen Sie dem Workflowdienst einen Dienstverweis hinzu, und geben Sie `OrderService` als Namespace an.
+3. Fügen Sie dem Workflowdienst einen Dienstverweis hinzu, und geben Sie `OrderService` als Namespace an.
 
-4.  Fügen Sie der `Main()`-Methode des Clientprojekts den folgenden Code hinzu:
+4. Fügen Sie der `Main()`-Methode des Clientprojekts den folgenden Code hinzu:
 
     ```
     static void Main(string[] args)
@@ -182,17 +182,17 @@ In diesem Thema wird beschrieben, wie ein Workflowdienst mit langer Laufzeit ers
     }
     ```
 
-5.  Erstellen Sie die Projektmappe, und führen Sie die `OrderClient`-Anwendung aus. Der folgende Text wird vom Client angezeigt:
+5. Erstellen Sie die Projektmappe, und führen Sie die `OrderClient`-Anwendung aus. Der folgende Text wird vom Client angezeigt:
 
     ```Output
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
     ```
 
-6.  Um sicherzustellen, dass der Workflowdienst beibehalten wurde, starten Sie SQL Server Management Studio, indem Sie die **starten** im Menü auswählen **Programme**, **Microsoft SQL Server 2008**, **SQL Server Management Studio**.
+6. Um sicherzustellen, dass der Workflowdienst beibehalten wurde, starten Sie SQL Server Management Studio, indem Sie die **starten** im Menü auswählen **Programme**, **Microsoft SQL Server 2008**, **SQL Server Management Studio**.
 
     1.  Erweitern Sie im linken Bereich, **Datenbanken**, **SQLPersistenceStore**, **Ansichten** , und klicken Sie mit der rechten Maustaste auf **System.Activities.DurableInstancing.Instances**  , und wählen Sie **oberste 1000 Zeilen auswählen**. In der **Ergebnisse** Bereich sollte mindestens eine Instanz aufgeführt. Es kann sein, dass auch Instanzen früherer Ausführungen aufgelistet sind, wenn Fehler bei der Ausführung aufgetreten sind. Sie können vorhandene Zeilen löschen, mit der rechten Maustaste **System.Activities.DurableInstancing.Instances** und **oberste 200 Zeilen bearbeiten**, drücken die **Execute** Schaltfläche Wählen alle Zeilen im Ergebnisbereich, und wählen **löschen**.  Um zu überprüfen, ob in der Datenbank die Instanz angezeigt wird, die von Ihrer Anwendung erstellt wurde, können Sie überprüfen, ob die Ansicht für Instanzen vor Ausführung des Clients leer ist. Führen Sie die Abfrage (Oberste 1000 Zeilen auswählen) erneut aus, sobald der Client ausgeführt wird, und überprüfen Sie, ob eine neue Instanz hinzugefügt wurde.
 
-7.  Drücken Sie die EINGABETASTE, um die Nachricht zum Hinzufügen des Artikels an den Workflowdienst zu senden. Der folgende Text wird vom Client angezeigt:
+7. Drücken Sie die EINGABETASTE, um die Nachricht zum Hinzufügen des Artikels an den Workflowdienst zu senden. Der folgende Text wird vom Client angezeigt:
 
     ```Output
     Sending add item messageService returned: Item added to orderPress any key to continue . . .

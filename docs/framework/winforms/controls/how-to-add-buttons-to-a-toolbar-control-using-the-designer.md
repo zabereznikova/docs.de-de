@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 133190426229a10ed6f637293326c229e808bfdb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 509aa0b03dbbb370384fb83e0d8e5471fc2cb819
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084023"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306188"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>Vorgehensweise: Hinzufügen von Schaltflächen zu einem ToolBar-Steuerelement mithilfe des Designers
 > [!NOTE]
@@ -28,13 +28,13 @@ ms.locfileid: "59084023"
   
 ### <a name="to-add-buttons-at-design-time"></a>Hinzufügen von Schaltflächen zur Entwurfszeit  
   
-1.  Wählen Sie das <xref:System.Windows.Forms.ToolBar>-Steuerelement.  
+1. Wählen Sie das <xref:System.Windows.Forms.ToolBar>-Steuerelement.  
   
-2.  In der **Eigenschaften** Fenster, klicken Sie auf die <xref:System.Windows.Forms.ToolBar.Buttons%2A> Eigenschaft, um ihn auszuwählen, und klicken Sie auf die **mit den Auslassungspunkten** (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png " VbEllipsesButton")) die Schaltfläche, um die **ToolBarButton Auflistungs-Editor**.  
+2. In der **Eigenschaften** Fenster, klicken Sie auf die <xref:System.Windows.Forms.ToolBar.Buttons%2A> Eigenschaft, um ihn auszuwählen, und klicken Sie auf die **mit den Auslassungspunkten** (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png " VbEllipsesButton")) die Schaltfläche, um die **ToolBarButton Auflistungs-Editor**.  
   
-3.  Verwenden der **hinzufügen** und **entfernen** Schaltflächen zum Hinzufügen und entfernen Schaltflächen aus der <xref:System.Windows.Forms.ToolBar> Steuerelement.  
+3. Verwenden der **hinzufügen** und **entfernen** Schaltflächen zum Hinzufügen und entfernen Schaltflächen aus der <xref:System.Windows.Forms.ToolBar> Steuerelement.  
   
-4.  Konfigurieren Sie die Eigenschaften der einzelnen Schaltflächen in der **Eigenschaften** Fenster, das im Bereich auf der rechten Seite des Editors angezeigt wird. Die folgende Tabelle zeigt einige wichtigen Eigenschaften zu berücksichtigen.  
+4. Konfigurieren Sie die Eigenschaften der einzelnen Schaltflächen in der **Eigenschaften** Fenster, das im Bereich auf der rechten Seite des Editors angezeigt wird. Die folgende Tabelle zeigt einige wichtigen Eigenschaften zu berücksichtigen.  
   
     |Eigenschaft|Beschreibung|  
     |--------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "59084023"
     |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|Die Textzeichenfolge, die von der Schaltfläche angezeigt wird.|  
     |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|Der Text, der als QuickInfo für die Schaltfläche angezeigt wird.|  
   
-5.  Klicken Sie auf **OK** , um das Dialogfeld schließen und die angegebenen Bereiche zu erstellen.  
+5. Klicken Sie auf **OK** , um das Dialogfeld schließen und die angegebenen Bereiche zu erstellen.  
   
 ## <a name="see-also"></a>Siehe auch
 

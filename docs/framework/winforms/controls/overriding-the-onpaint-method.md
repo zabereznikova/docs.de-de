@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: baf4e6cb3b2a40b1b792ae12e78cb9f878a738ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b1eb24aaa9ed3bfede41fc5a9a80fcbdc9f749a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124305"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302190"
 ---
 # <a name="overriding-the-onpaint-method"></a>Überschreiben der OnPaint-Methode
 Die grundlegenden Schritte zum Überschreiben von Ereignissen im definierten die [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] sind identisch und werden in der folgenden Liste zusammengefasst.  
   
 #### <a name="to-override-an-inherited-event"></a>Zum Überschreiben eines geerbten Ereignisses.  
   
-1.  Überschreiben Sie die geschützte `On` *EventName* Methode.  
+1. Überschreiben Sie die geschützte `On` *EventName* Methode.  
   
-2.  Rufen Sie die `On` *EventName* Methode der Basisklasse von der überschriebenen `On` *EventName* Methode, damit registrierte Delegaten das Ereignis empfangen.  
+2. Rufen Sie die `On` *EventName* Methode der Basisklasse von der überschriebenen `On` *EventName* Methode, damit registrierte Delegaten das Ereignis empfangen.  
   
  Die <xref:System.Windows.Forms.Control.Paint> Ereignis wird hier ausführlich erläutert, da jedes Windows Forms-Steuerelement überschreiben, muss die <xref:System.Windows.Forms.Control.Paint> -Ereignis, das es erbt <xref:System.Windows.Forms.Control>. Die Basis <xref:System.Windows.Forms.Control> Klasse weiß nicht, wie ein abgeleitetes Steuerelement gezeichnet werden muss, und bietet keine Zeichnungslogik in die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode. Die <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode der <xref:System.Windows.Forms.Control> einfach sendet die <xref:System.Windows.Forms.Control.Paint> Ereignis, um registrierte Ereignisempfänger.  
   

@@ -3,12 +3,12 @@ title: Übersicht über das WSFederation-Authentifizierungsmodul
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 4b15952e2fdc050c5291bed6a58d2eecbf5ddbfd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092466"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310251"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Übersicht über das WSFederation-Authentifizierungsmodul
 Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NET-Anwendungen über das WS-Verbundauthentifizierungsmodul (WS-FAM). In diesem Thema wird beschrieben, wie Verbundauthentifizierung funktioniert und verwendet wird.  
@@ -18,26 +18,26 @@ Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NE
   
  ![Szenario für Verbundauthentifizierung](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
   
-1.  Ein Client in der vertrauenswürdigen Fabrikam-Domäne sendet eine Anforderung an eine Anwendung der vertrauenden Seite (Relying Party, RP) in der vertrauenswürdigen Contoso-Domäne.  
+1. Ein Client in der vertrauenswürdigen Fabrikam-Domäne sendet eine Anforderung an eine Anwendung der vertrauenden Seite (Relying Party, RP) in der vertrauenswürdigen Contoso-Domäne.  
   
-2.  Die vertrauende Seite leitet den Client an einen STS in der vertrauenswürdigen Contoso-Domäne um. Dieser STS kennt den Client nicht.  
+2. Die vertrauende Seite leitet den Client an einen STS in der vertrauenswürdigen Contoso-Domäne um. Dieser STS kennt den Client nicht.  
   
-3.  Der Contoso-STS leitet den Client an einen STS in der vertrauenswürdigen Fabrikam-Domäne um, zu der seitens der Contoso-Domäne eine Vertrauensstellung besteht.  
+3. Der Contoso-STS leitet den Client an einen STS in der vertrauenswürdigen Fabrikam-Domäne um, zu der seitens der Contoso-Domäne eine Vertrauensstellung besteht.  
   
-4.  Der Fabrikam-STS überprüft die Identität des Clients und gibt einen Sicherheitstoken an den Contoso-STS aus.  
+4. Der Fabrikam-STS überprüft die Identität des Clients und gibt einen Sicherheitstoken an den Contoso-STS aus.  
   
-5.  Der Contoso-STS verwendet das Fabrikam-Token, um sein eigenes Token zu erstellen, das von der vertrauenden Seite verwendet werden kann, und sendet es an die vertrauende Seite.  
+5. Der Contoso-STS verwendet das Fabrikam-Token, um sein eigenes Token zu erstellen, das von der vertrauenden Seite verwendet werden kann, und sendet es an die vertrauende Seite.  
   
-6.  Die vertrauende Seite extrahiert die Ansprüche des Clients aus dem Sicherheitstoken und trifft eine Autorisierungsentscheidung.  
+6. Die vertrauende Seite extrahiert die Ansprüche des Clients aus dem Sicherheitstoken und trifft eine Autorisierungsentscheidung.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>Verwenden des Verbundauthentifizierungsmoduls mit ASP.NET  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) ist ein HTTP-Modul, in dem Sie die Verbundauthentifizierung hinzufügen kann eine [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Anwendung. Mit Verbundauthentifizierung kann der STS Authentifizierungslogik verwenden, sodass Sie sich auf das Schreiben von Geschäftslogik konzentrieren können.  
   
  Bei der Konfiguration des WS-FAM geben Sie den STS an, an den nicht authentifizierte Anforderungen umgeleitet werden sollen. Mit WIF können Sie einen Benutzer auf zwei Arten authentifizieren:  
   
-1.  Passive Umleitung: Wenn ein nicht authentifizierter Benutzer versucht, eine geschützte Ressource zuzugreifen, und Sie einfach diese an einen STS umleiten ohne eine Anmeldeseite möchten, ist dies der richtige Ansatz. Der STS überprüft die Identität des Benutzers und gibt ein Sicherheitstoken aus, das die entsprechenden Ansprüche für diesen Benutzer enthält. Für diese Option muss das WS-FAM in der HTTP-Modulpipeline hinzugefügt werden. Mit dem Identitäts- und Zugriffs-Tool können Sie in Visual Studio 2012 die Konfigurationsdatei der Anwendung ändern, damit das WS-FAM verwendet und ein Verbund-STS erstellt wird. Weitere Informationen finden Sie unter [Identitäts- und Zugriffs-Tool für Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+1. Passive Umleitung: Wenn ein nicht authentifizierter Benutzer versucht, eine geschützte Ressource zuzugreifen, und Sie einfach diese an einen STS umleiten ohne eine Anmeldeseite möchten, ist dies der richtige Ansatz. Der STS überprüft die Identität des Benutzers und gibt ein Sicherheitstoken aus, das die entsprechenden Ansprüche für diesen Benutzer enthält. Für diese Option muss das WS-FAM in der HTTP-Modulpipeline hinzugefügt werden. Mit dem Identitäts- und Zugriffs-Tool können Sie in Visual Studio 2012 die Konfigurationsdatei der Anwendung ändern, damit das WS-FAM verwendet und ein Verbund-STS erstellt wird. Weitere Informationen finden Sie unter [Identitäts- und Zugriffs-Tool für Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
-2.  Sie können die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType>-Methode oder die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A>-Methode aus dem zugrunde liegenden Code einer Anmeldeseite in der Anwendung der vertrauenden Seiten aufrufen.  
+2. Sie können die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType>-Methode oder die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A>-Methode aus dem zugrunde liegenden Code einer Anmeldeseite in der Anwendung der vertrauenden Seiten aufrufen.  
   
  In der passiven Umleitung wird die gesamte Kommunikation durch Antwort/Umleitung vom Client ausgeführt (in der Regel ein Browser). Sie können der HTTP-Pipeline der Anwendung das WS-FAM hinzufügen. Hier sucht es nach nicht authentifizierten Benutzeranforderungen und leitet die Benutzer an den angegebenen STS um.  
   

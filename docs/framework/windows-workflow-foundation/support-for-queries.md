@@ -2,27 +2,27 @@
 title: Unterstützung für Abfragen
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 2314a111cb4c4b82cacd91b7638ef0c8eaba5c3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712005"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307950"
 ---
 # <a name="support-for-queries"></a>Unterstützung für Abfragen
 Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im Speicher auf. Benutzer können Instanzen auf Grundlage dieser Eigenschaften abfragen. Die folgende Liste enthält einige dieser bekannten Eigenschaften:  
   
--   **Websitename.** Der Name der Website, die den Dienst enthält.  
+-   **Site Name.** Der Name der Website, die den Dienst enthält.  
   
--   **Relative Anwendungspfad.** Der Pfad der Anwendung relativ zur Website.  
+-   **Relative Application Path.** Der Pfad der Anwendung relativ zur Website.  
   
--   **Relativer Pfad.** Der Pfad des Diensts relativ zur Anwendung.  
+-   **Relative Service Path.** Der Pfad des Diensts relativ zur Anwendung.  
   
--   **Dienstname.** Name des Diensts.  
+-   **Service Name.** Name des Diensts.  
   
--   **Dienst-Namespace.** Der Name des vom Dienst verwendeten Namespaces.  
+-   **Service Namespace.** Der Name des vom Dienst verwendeten Namespaces.  
   
--   **Aktuellen Computer.**  
+-   **Current Machine.**  
   
 -   **Letzte Computer**. Der Computer, auf dem die Workflowdienstinstanz das letzte Mal ausgeführt wurde.  
   
@@ -39,21 +39,21 @@ Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im S
 ### <a name="the-instances-view"></a>Die Ansicht "Instances"  
  Die Ansicht "Instances" enthält die folgenden Felder:  
   
-1.  **Id**  
+1. **Id**  
   
-2.  **PendingTimer**  
+2. **PendingTimer**  
   
-3.  **CreationTime**  
+3. **CreationTime**  
   
-4.  **LastUpdatedTime**  
+4. **LastUpdatedTime**  
   
-5.  **ServiceDeploymentId**  
+5. **ServiceDeploymentId**  
   
-6.  **SuspensionExceptionName**  
+6. **SuspensionExceptionName**  
   
-7.  **SuspensionReason**  
+7. **SuspensionReason**  
   
-8.  **ActiveBookmarks**  
+8. **ActiveBookmarks**  
   
 9. **CurrentMachine**  
   
@@ -80,23 +80,23 @@ Der SQL-Workflowinstanzspeicher zeichnet einen Satz bekannter Eigenschaften im S
 ### <a name="the-servicedeployments-view"></a>Die Ansicht "ServiceDeployments"  
  Die Ansicht "ServiceDeployments" enthält die folgenden Felder:  
   
-1.  **SiteName**  
+1. **SiteName**  
   
-2.  **RelativeServicePath**  
+2. **RelativeServicePath**  
   
-3.  **RelativeApplicationPath**  
+3. **RelativeApplicationPath**  
   
-4.  **ServiceName**  
+4. **ServiceName**  
   
-5.  **ServiceNamespace**  
+5. **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>Die Ansicht "InstancePromotedProperties"  
  Die Ansicht "InstancePromotedProperties" enthält die folgenden Felder. Weitere Informationen zu höher gestuften Eigenschaften finden Sie unter den [Store Erweiterbarkeit](store-extensibility.md) Thema.  
   
-1.  **InstanceId**  
+1. **InstanceId**  
   
-2.  **EncodingOption**  
+2. **EncodingOption**  
   
-3.  **PromotionName**  
+3. **PromotionName**  
   
-4.  **Value#** (eine Reihe von Feldern aus **Value1** zu **Value64**).
+4. **Value#** (eine Reihe von Feldern aus **Value1** zu **Value64**).

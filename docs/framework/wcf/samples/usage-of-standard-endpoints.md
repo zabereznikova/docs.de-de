@@ -2,12 +2,12 @@
 title: Verwendung von Standardendpunkten
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: 5502d42d6a576509c826e05c8781662d374fbff4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584285"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304609"
 ---
 # <a name="usage-of-standard-endpoints"></a>Verwendung von Standardendpunkten
 
@@ -139,9 +139,9 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
-1.  Öffnen Sie die Datei StandardEndpoints.sln mit Visual Studio 2012.
+1. Öffnen Sie die Datei StandardEndpoints.sln mit Visual Studio 2012.
 
-2.  Aktivieren Sie mehrere Projekte, um zu starten.
+2. Aktivieren Sie mehrere Projekte, um zu starten.
 
     1.  In **Projektmappen-Explorer**mit der rechten Maustaste auf die Projektmappe Standardendpunkte, und wählen Sie dann **Eigenschaften**.
 
@@ -153,7 +153,7 @@ public class CustomEndpoint : ServiceEndpoint
 
          Dadurch wird angegeben, dass das Clientprojekt nach dem Dienstprojekt ausgeführt werden soll.
 
-3.  Drücken Sie F5, um die Projektmappe auszuführen.
+3. Drücken Sie F5, um die Projektmappe auszuführen.
 
 > [!NOTE]
 > Wenn diese Schritte nicht funktionieren, stellen Sie sicher, dass Ihre Umgebung ordnungsgemäß eingerichtet wurde wurde mit den folgenden Schritten:

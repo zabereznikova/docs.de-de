@@ -2,19 +2,19 @@
 title: 'Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zurückgibt'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: f5735f4d596e17afc32b1419e9f41fd8a56af410
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157482"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303920"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF-Web-HTTP-Programmiermodells zurückgibt
 Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmöglichkeiten für die Rückgabe der Daten durch einen Dienstvorgang. Dies ist der Fall, wenn ein Dienstvorgang Daten in einem nicht von WCF unterstützten Format zurückgeben muss. In diesem Thema wird erläutert, mit den WCF-HTTP-Webprogrammierungsmodell zum Erstellen eines solchen Diensts. Dieser Dienst besitzt einen Vorgang, durch den ein Stream zurückgegeben wird.  
   
 ### <a name="to-implement-the-service-contract"></a>So implementieren Sie den Dienstvertrag  
   
-1.  Definieren Sie den Dienstvertrag. Der Vertrag wird `IImageServer` genannt und besitzt eine Methode mit der Bezeichnung `GetImage`, von der ein <xref:System.IO.Stream> zurückgegeben wird.  
+1. Definieren Sie den Dienstvertrag. Der Vertrag wird `IImageServer` genannt und besitzt eine Methode mit der Bezeichnung `GetImage`, von der ein <xref:System.IO.Stream> zurückgegeben wird.  
   
     ```  
     [ServiceContract]  
@@ -27,7 +27,7 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
   
      Da die Methode gibt eine <xref:System.IO.Stream>, WCF wird davon ausgegangen, dass der Vorgang verfügt über vollständige Kontrolle über die Bytes, die vom Dienstvorgang zurückgegeben werden und keine Formatierung auf die Daten, die zurückgegeben wird.  
   
-2.  Implementieren Sie den Dienstvertrag. Der Vertrag besitzt lediglich einen Vorgang (`GetImage`). Diese Methode generiert eine Bitmap und speichert diese anschließend im JPG-Format in einem <xref:System.IO.MemoryStream>. Der Vorgang gibt diesen Stream anschließend an den Aufrufer zurück.  
+2. Implementieren Sie den Dienstvertrag. Der Vertrag besitzt lediglich einen Vorgang (`GetImage`). Diese Methode generiert eine Bitmap und speichert diese anschließend im JPG-Format in einem <xref:System.IO.MemoryStream>. Der Vorgang gibt diesen Stream anschließend an den Aufrufer zurück.  
   
     ```  
     public class Service : IImageServer  
@@ -57,7 +57,7 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
   
 ### <a name="to-host-the-service"></a>So hosten Sie den Dienst  
   
-1.  Erstellen Sie eine Konsolenanwendung, um den Dienst zu hosten.  
+1. Erstellen Sie eine Konsolenanwendung, um den Dienst zu hosten.  
   
     ```  
     class Program  
@@ -68,31 +68,31 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
     }  
     ```  
   
-2.  Erstellen Sie eine Variable, um die Basisadresse für den Dienst innerhalb der `Main`-Methode zu speichern.  
+2. Erstellen Sie eine Variable, um die Basisadresse für den Dienst innerhalb der `Main`-Methode zu speichern.  
   
     ```  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  Erstellen Sie eine <xref:System.ServiceModel.ServiceHost>-Instanz für den Dienst, in der die Dienstklasse und die Basisadresse angegeben sind.  
+3. Erstellen Sie eine <xref:System.ServiceModel.ServiceHost>-Instanz für den Dienst, in der die Dienstklasse und die Basisadresse angegeben sind.  
   
     ```  
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
     ```  
   
-4.  Fügen Sie mithilfe der <xref:System.ServiceModel.WebHttpBinding> und der <xref:System.ServiceModel.Description.WebHttpBehavior> einen Endpunkt hinzu.  
+4. Fügen Sie mithilfe der <xref:System.ServiceModel.WebHttpBinding> und der <xref:System.ServiceModel.Description.WebHttpBehavior> einen Endpunkt hinzu.  
   
     ```  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5.  Öffnen des Diensthosts  
+5. Öffnen des Diensthosts  
   
     ```  
     host.Open()  
     ```  
   
-6.  Warten Sie, bis der Benutzer den Dienst durch Drücken der EINGABETASTE beendet.  
+6. Warten Sie, bis der Benutzer den Dienst durch Drücken der EINGABETASTE beendet.  
   
     ```  
     Console.WriteLine("Service is running");  
@@ -103,9 +103,9 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
   
 ### <a name="to-call-the-raw-service-using-internet-explorer"></a>So rufen Sie den unformatierten Dienst mithilfe von Internet Explorer auf  
   
-1.  Führen Sie den Dienst aus. Die folgende Ausgabe sollte angezeigt werden: `Service is running Press ENTER to close the host`  
+1. Führen Sie den Dienst aus. Die folgende Ausgabe sollte angezeigt werden: `Service is running Press ENTER to close the host`  
   
-2.  Öffnen Sie Internet Explorer, und geben Sie `http://localhost:8000/Service/GetImage?width=50&height=40` ein. Ein gelbes Rechteck sollte angezeigt werden, durch dessen Mitte eine blauen diagonale Linie verläuft.  
+2. Öffnen Sie Internet Explorer, und geben Sie `http://localhost:8000/Service/GetImage?width=50&height=40` ein. Ein gelbes Rechteck sollte angezeigt werden, durch dessen Mitte eine blauen diagonale Linie verläuft.  
   
 ## <a name="example"></a>Beispiel  
  Die folgende vollständige Auflistung enthält den Code für dieses Thema:  

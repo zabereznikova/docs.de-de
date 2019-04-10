@@ -8,12 +8,12 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: b10876c22d2f6dd5832baa0d498db7c4205a3fcb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 94c838a69aab9fcae9dc0c79b6038ee90e2369e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816290"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299136"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>Vorgehensweise: Beschleunigen des Zugriffs auf ein Objekt mit langem Qualifizierungspfad (Visual Basic)
 Wenn Sie häufig ein Objekt, die einen Qualifizierungspfad, der mehrere Methoden und Eigenschaften erforderlich sind zugreifen, können Sie Ihren Code beschleunigen, indem nicht wiederholt den Qualifizierungspfad.  
@@ -22,13 +22,13 @@ Wenn Sie häufig ein Objekt, die einen Qualifizierungspfad, der mehrere Methoden
   
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>Um den Zugriff auf ein stark qualifiziertes Objekt beschleunigen durch eine Variable zuweisen  
   
-1.  Deklarieren Sie eine Variable des Typs des Objekts, das Sie häufig zugreifen. Geben Sie den Qualifizierungspfad im Initialisierungsteil der Deklaration.  
+1. Deklarieren Sie eine Variable des Typs des Objekts, das Sie häufig zugreifen. Geben Sie den Qualifizierungspfad im Initialisierungsteil der Deklaration.  
   
     ```  
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  Verwenden Sie die Variable, um die Member des Objekts zuzugreifen.  
+2. Verwenden Sie die Variable, um die Member des Objekts zuzugreifen.  
   
     ```  
     ctrlActv.Text = "Test"  
@@ -38,13 +38,13 @@ Wenn Sie häufig ein Objekt, die einen Qualifizierungspfad, der mehrere Methoden
   
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>Um den Zugriff auf ein stark qualifiziertes Objekt beschleunigen mithilfe einer With... End-With-block  
   
-1.  Fügen Sie den Qualifizierungspfad in einem `With` Anweisung.  
+1. Fügen Sie den Qualifizierungspfad in einem `With` Anweisung.  
   
     ```  
     With someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  Zugriff auf die Member des Objekts in der `With` blockieren, bevor die `End With` Anweisung.  
+2. Zugriff auf die Member des Objekts in der `With` blockieren, bevor die `End With` Anweisung.  
   
     ```  
         .Text = "Test"  

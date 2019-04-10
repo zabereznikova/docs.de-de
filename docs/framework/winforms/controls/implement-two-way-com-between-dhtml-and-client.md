@@ -14,12 +14,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 4823bf482e785b1e9d03ca57010a832cb0e26dd9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cf1391e88c03095e0851d75ae6d50f8e809d13e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199790"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295613"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Vorgehensweise: Implementieren der bidirektionalen Kommunikation zwischen DHTML-Code und Clientanwendungscode
 Das <xref:System.Windows.Forms.WebBrowser>-Steuerelement können Sie verwenden, um Ihren Windows Forms-Clientanwendungen vorhandenen DHTML-Webanwendungscode (dynamisches HTML) hinzuzufügen. Dies ist hilfreich, wenn Sie viel Zeit in die Erstellung DHTML-basierter Steuerelemente investiert haben und von den Möglichkeiten der Windows Forms-Benutzeroberfläche profitieren möchten, ohne vorhandenen Code umschreiben zu müssen.   
@@ -28,22 +28,22 @@ Das <xref:System.Windows.Forms.WebBrowser>-Steuerelement können Sie verwenden, 
   
 ### <a name="to-embed-dhtml-in-your-windows-forms-application"></a>So betten Sie DHTML in Ihre Windows Forms-Anwendung ein  
   
-1.  Legen Sie die <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>-Eigenschaft des <xref:System.Windows.Forms.WebBrowser>-Steuerelements auf `false` fest, um zu verhindern, dass das <xref:System.Windows.Forms.WebBrowser>-Steuerelement Dateien öffnet, die auf ihm abgelegt werden.  
+1. Legen Sie die <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>-Eigenschaft des <xref:System.Windows.Forms.WebBrowser>-Steuerelements auf `false` fest, um zu verhindern, dass das <xref:System.Windows.Forms.WebBrowser>-Steuerelement Dateien öffnet, die auf ihm abgelegt werden.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#1)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#1)]  
   
-2.  Legen Sie die <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A>-Eigenschaft auf `false` fest, um zu verhindern, dass das <xref:System.Windows.Forms.WebBrowser>-Steuerelement sein Kontextmenü anzeigt, wenn der Benutzer mit der rechten Maustaste auf das Steuerelement klickt.  
+2. Legen Sie die <xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A>-Eigenschaft auf `false` fest, um zu verhindern, dass das <xref:System.Windows.Forms.WebBrowser>-Steuerelement sein Kontextmenü anzeigt, wenn der Benutzer mit der rechten Maustaste auf das Steuerelement klickt.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#2)]  
   
-3.  Legen Sie die <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A>-Eigenschaft des Steuerelements auf `false` fest, um zu verhindern, dass das <xref:System.Windows.Forms.WebBrowser>-Steuerelement auf Tastenkombinationen reagiert.  
+3. Legen Sie die <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A>-Eigenschaft des Steuerelements auf `false` fest, um zu verhindern, dass das <xref:System.Windows.Forms.WebBrowser>-Steuerelement auf Tastenkombinationen reagiert.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#3)]  
   
-4.  Legen Sie die <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A>-Eigenschaft im Konstruktor des Formulars oder in einem <xref:System.Windows.Forms.Form.Load>-Ereignishandler fest.  
+4. Legen Sie die <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A>-Eigenschaft im Konstruktor des Formulars oder in einem <xref:System.Windows.Forms.Form.Load>-Ereignishandler fest.  
   
      Im folgenden Code wird die Formularklasse selbst für das Skriptobjekt verwendet.  
   
@@ -53,14 +53,14 @@ Das <xref:System.Windows.Forms.WebBrowser>-Steuerelement können Sie verwenden, 
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#4)]  
   
-5.  Implementieren Sie öffentliche Eigenschaften oder Methoden in Ihrem Anwendungscode, den Ihr Skriptcode verwendet.  
+5. Implementieren Sie öffentliche Eigenschaften oder Methoden in Ihrem Anwendungscode, den Ihr Skriptcode verwendet.  
   
      Wenn Sie beispielsweise die Formularklasse für das Skriptobjekt verwenden, fügen Sie der Formularklasse folgenden Code hinzu.  
   
      [!code-csharp[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/CS/form1.cs#5)]
      [!code-vb[System.Windows.Forms.WebBrowser.ObjectForScripting#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser.ObjectForScripting/vb/form1.vb#5)]  
   
-6.  Verwenden Sie das `window.external`-Objekt in Ihrem Skriptcode, um auf öffentliche Eigenschaften und Methoden des angegebenen Objekts zuzugreifen.  
+6. Verwenden Sie das `window.external`-Objekt in Ihrem Skriptcode, um auf öffentliche Eigenschaften und Methoden des angegebenen Objekts zuzugreifen.  
   
      Der folgende HTML-Code veranschaulicht, wie eine Methode des Skriptobjekts über Klicken auf eine Schaltfläche aufgerufen wird. Kopieren Sie diesen Code in das BODY-Element eines HTML-Dokuments, das Sie mithilfe der <xref:System.Windows.Forms.WebBrowser.Navigate%2A>-Methode des Steuerelements laden oder das Sie der <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>-Eigenschaft des Steuerelements zuweisen .  
   
@@ -70,7 +70,7 @@ Das <xref:System.Windows.Forms.WebBrowser>-Steuerelement können Sie verwenden, 
     </button>  
     ```  
   
-7.  Implementieren Sie Funktionen in Ihrem Skriptcode, den Ihr Anwendungscode verwendet.  
+7. Implementieren Sie Funktionen in Ihrem Skriptcode, den Ihr Anwendungscode verwendet.  
   
      Das folgende HTML-SCRIPT-Element stellt eine Beispielfunktion bereit. Kopieren Sie diesen Code in das HEAD-Element eines HTML-Dokuments, das Sie mithilfe der <xref:System.Windows.Forms.WebBrowser.Navigate%2A>-Methode des Steuerelements laden oder das Sie der <xref:System.Windows.Forms.WebBrowser.DocumentText%2A>-Eigenschaft des Steuerelements zuweisen .  
   
@@ -82,7 +82,7 @@ Das <xref:System.Windows.Forms.WebBrowser>-Steuerelement können Sie verwenden, 
     </script>  
     ```  
   
-8.  Verwenden Sie die <xref:System.Windows.Forms.WebBrowser.Document%2A>-Eigenschaft, um aus Ihrem Clientanwendungscode auf den Skriptcode zuzugreifen.  
+8. Verwenden Sie die <xref:System.Windows.Forms.WebBrowser.Document%2A>-Eigenschaft, um aus Ihrem Clientanwendungscode auf den Skriptcode zuzugreifen.  
   
      Fügen Sie beispielsweise den folgenden Code dem <xref:System.Windows.Forms.Control.Click>-Ereignishandler einer Schaltfläche hinzu.  
   

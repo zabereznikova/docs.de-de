@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-ms.openlocfilehash: f3207c2cc237ae22c295c2b3ed56f18601625226
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 28f78161e14604c1f59872801855ccc918faec58
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822267"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299253"
 ---
 # <a name="ordinal-is-not-valid"></a>Ungültiger Ordinalwert.
 Beim Aufruf einer Dynamic Link Library (DLL) wurde angegeben, eine Anzahl anstelle einer Prozedur verwendet mit dem `#num` Syntax. Dieser Fehler hat die folgenden möglichen Ursachen:  
@@ -22,12 +22,12 @@ Beim Aufruf einer Dynamic Link Library (DLL) wurde angegeben, eine Anzahl anstel
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Stellen Sie sicher, dass der Ausdruck eine gültige Zahl darstellt, oder rufen Sie die Prozedur nach Namen.  
+1. Stellen Sie sicher, dass der Ausdruck eine gültige Zahl darstellt, oder rufen Sie die Prozedur nach Namen.  
   
-2.  Stellen Sie sicher, dass `#num` identifiziert eine gültige Funktion in der DLL.  
+2. Stellen Sie sicher, dass `#num` identifiziert eine gültige Funktion in der DLL.  
   
-3.  Isolieren Sie den Aufruf der Prozedur das Problem verursachen, durch den Code auskommentieren. Schreiben einer `Declare` -Anweisung für die Prozedur, und klicken Sie auf Bericht des Problems an den Hersteller der Bibliothek weiter.  
+3. Isolieren Sie den Aufruf der Prozedur das Problem verursachen, durch den Code auskommentieren. Schreiben einer `Declare` -Anweisung für die Prozedur, und klicken Sie auf Bericht des Problems an den Hersteller der Bibliothek weiter.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)

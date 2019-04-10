@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219212"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298906"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>Ablaufverfolgung und Instrumentieren von Anwendungen
 Mithilfe der Ablaufverfolgung kann die Ausführung einer Anwendung überwacht werden. Beim Entwickeln können Sie eine .NET Framework-Anwendung mit einer Ablaufverfolgungs- und Debugginginstrumentierung versehen, die sowohl beim Entwickeln als auch nach der Bereitstellung der Anwendung eingesetzt werden kann. Mit den Klassen <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug?displayProperty=nameWithType> und <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> können Sie Informationen zu Fehlern und zur Anwendungsausführung in Protokollen, Textdateien oder auf anderen Medien für eine spätere Analyse aufzeichnen.   
@@ -67,11 +67,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 ### <a name="phases-of-code-tracing"></a>Phasen der Codeablaufverfolgung  
  Die Codeablaufverfolgung umfasst die folgenden drei Phasen:  
   
-1.  **Instrumentation**: Der Verfolgungscode wird der Anwendung hinzugefügt.  
+1. **Instrumentation**: Der Verfolgungscode wird der Anwendung hinzugefügt.  
   
-2.  **Ablaufverfolgung**: Der Verfolgungscode schreibt Informationen in das angegebene Ziel.  
+2. **Ablaufverfolgung**: Der Verfolgungscode schreibt Informationen in das angegebene Ziel.  
   
-3.  **Analyse**: Die Ablaufverfolgungsinformationen werden ausgewertet, um Probleme in der Anwendung zu ermitteln und zu verstehen.  
+3. **Analyse**: Die Ablaufverfolgungsinformationen werden ausgewertet, um Probleme in der Anwendung zu ermitteln und zu verstehen.  
   
  Während der Entwicklung schreiben alle Debug- und Ablaufverfolgungsausgabemethoden standardmäßig Informationen in das Ausgabefenster in Visual Studio. In einer bereitgestellten Anwendung schreiben die Methoden die Ablaufverfolgungsinformationen in die von Ihnen angegebenen Ziele. Weitere Informationen zum Festlegen eines Ausgabeziels für die Ablaufverfolgung oder das Debuggen finden Sie unter [Ablaufverfolgungslistener](../../../docs/framework/debug-trace-profile/trace-listeners.md).  
   
@@ -79,17 +79,17 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 ##### <a name="to-use-tracing-in-an-application"></a>So verwenden Sie die Ablaufverfolgung in einer Anwendung  
   
-1.  Überlegen Sie, welche Ablaufverfolgungsausgabe nach der Bereitstellung der Anwendung an ihrem Einsatzort benötigt wird.  
+1. Überlegen Sie, welche Ablaufverfolgungsausgabe nach der Bereitstellung der Anwendung an ihrem Einsatzort benötigt wird.  
   
-2.  Erstellen Sie eine Reihe von Schaltern. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+2. Erstellen Sie eine Reihe von Schaltern. Weitere Informationen finden Sie unter [Vorgehensweise: Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
-3.  Fügen Sie die Ablaufverfolgungsanweisungen zum Anwendungscode hinzu.  
+3. Fügen Sie die Ablaufverfolgungsanweisungen zum Anwendungscode hinzu.  
   
-4.  Bestimmen Sie, wo die Ablaufverfolgungsausgabe angezeigt werden soll, und fügen Sie die entsprechenden Listener hinzu. Weitere Informationen finden Sie unter [Erstellen und Initialisieren von Ablaufverfolgungslistenern](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
+4. Bestimmen Sie, wo die Ablaufverfolgungsausgabe angezeigt werden soll, und fügen Sie die entsprechenden Listener hinzu. Weitere Informationen finden Sie unter [Erstellen und Initialisieren von Ablaufverfolgungslistenern](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-listeners.md).  
   
-5.  Testen und debuggen Sie die Anwendung und den darin enthaltenen Ablaufverfolgungscode.  
+5. Testen und debuggen Sie die Anwendung und den darin enthaltenen Ablaufverfolgungscode.  
   
-6.  Kompilieren Sie die Anwendung mit einem der folgenden Verfahren in ausführbaren Code:  
+6. Kompilieren Sie die Anwendung mit einem der folgenden Verfahren in ausführbaren Code:  
   
     -   Verwenden Sie das Menü **Erstellen** zusammen mit der Seite **Debuggen** im Dialogfeld **Eigenschaftenseite** im **Projektmappen-Explorer**. Dies gilt für die Kompilierung in Visual Studio.  
   
@@ -97,11 +97,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
     -   Verwenden Sie für die Kompilierung der Befehlszeile die Compileranweisungen **Ablaufverfolgung** und **Debuggen**. Weitere Informationen finden Sie unter [Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md). Dies gilt für die Kompilierung von der Befehlszeile aus.  
   
-7.  Aktivieren Sie den entsprechenden Ablaufverfolgungsschalter, wenn zur Laufzeit ein Problem auftritt. Weitere Informationen finden Sie unter [Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
+7. Aktivieren Sie den entsprechenden Ablaufverfolgungsschalter, wenn zur Laufzeit ein Problem auftritt. Weitere Informationen finden Sie unter [Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md).  
   
      Der Ablaufverfolgungscode schreibt Ablaufverfolgungsmeldungen in ein angegebenes Ziel, z. B. einen Bildschirm, eine Textdatei oder ein Ereignisprotokoll. Das Ziel wird durch den Typ des in der **Trace.Listeners**-Auflistung eingetragenen Listeners bestimmt.  
   
-8.  Analysieren Sie die Ablaufverfolgungsmeldungen, um das Problem in der Anwendung zu ermitteln und zu verstehen.  
+8. Analysieren Sie die Ablaufverfolgungsmeldungen, um das Problem in der Anwendung zu ermitteln und zu verstehen.  
   
 ## <a name="trace-instrumentation-and-distributed-applications"></a>Instrumentation der Ablaufverfolgung und verteilte Anwendungen  
  Beim Erstellen einer verteilten Anwendung ist es in der Regel schwierig, die Anwendung in der Weise zu testen, in der sie letzten Endes verwendet wird. Wenige Entwicklungsteams haben die Möglichkeit, alle möglichen Kombinationen aus Betriebsystemen oder Webbrowsern (einschließlich aller lokalisierten Sprachoptionen) zu testen oder die hohe Zahl von Benutzern zu simulieren, die gleichzeitig auf die Anwendung zugreifen. Unter diesen Umständen können Sie die Reaktion einer verteilten Anwendung auf hohes Datenaufkommen, verschiedene Setups und individuelles Endbenutzerverhalten nicht testen. Außerdem haben viele Teile einer verteilten Anwendung keine Benutzeroberfläche, über die Sie direkt mit diesen Teilen interagieren oder ihre Aktivitäten anzeigen lassen könnten.  

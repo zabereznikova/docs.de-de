@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822075"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296237"
 ---
 # <a name="extension-methods-visual-basic"></a>Erweiterungsmethoden (Visual Basic)
 Erweiterungsmethoden ermöglichen Entwicklern das Hinzufügen von benutzerdefinierten Funktionen, Datentypen, die bereits definiert sind, ohne einen neuen abgeleiteten Typ zu erstellen. Erweiterungsmethoden ermöglichen das Schreiben eine Methode, die aufgerufen werden können, als handele es sich um eine Instanzenmethode des vorhandenen Typs.  
@@ -29,7 +29,7 @@ Erweiterungsmethoden ermöglichen Entwicklern das Hinzufügen von benutzerdefini
   
  [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]  
   
- Beachten Sie, dass die Definition der Erweiterungsmethode mit dem Erweiterungsattribut `<Extension()>` markiert ist. Die Markierung des Moduls, in dem die Methode definiert ist, ist optional, aber jede Erweiterungsmethode muss markiert werden. Zum Zugriff auf das Erweiterungsattribut muss <xref:System.Runtime.CompilerServices> importiert werden.  
+ Beachten Sie, dass die Definition der Erweiterungsmethode mit dem Erweiterungsattribut `<Extension()>` markiert ist. Die Markierung des Moduls, in dem die Methode definiert ist, ist optional, aber jede Erweiterungsmethode muss markiert werden. <xref:System.Runtime.CompilerServices> muss importiert werden, um Zugriff auf das Erweiterungsattribut.  
   
  Erweiterungsmethoden können nur innerhalb von Modulen deklariert werden. Bei dem Modul, in dem eine Erweiterungsmethode definiert wird, handelt es sich normalerweise um ein anderes Modul als das, in dem sie aufgerufen wird. Stattdessen wird das Modul, in dem die Erweiterungsmethode enthalten ist, ggf. importiert, um es in den Gültigkeitsbereich einzubinden. Nachdem sich das Modul, in dem `Print` enthalten ist, im Gültigkeitsbereich befindet, kann die Methode wie jede andere gewöhnliche Instanzenmethode, die keine Argumente verwendet (z. B. `ToUpper`) aufgerufen werden:  
   
@@ -39,9 +39,9 @@ Erweiterungsmethoden ermöglichen Entwicklern das Hinzufügen von benutzerdefini
   
  [!code-vb[VbVbalrExtensionMethods#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class2.vb#3)]  
   
- Die Methode wird aufgerufen, indem ein Zeichenfolgenargument für `punc` gesendet wird: `example.PrintAndPunctuate(".")`  
+ Die Methode wird aufgerufen, indem Sie ein Zeichenfolgenargument für Senden `punc`: `example.PrintAndPunctuate(".")`  
   
- Im folgenden Beispiel werden `Print` und `PrintAndPunctuate` definiert und aufgerufen. <xref:System.Runtime.CompilerServices> wird in das Definitionsmodul importiert, um den Zugriff auf das Erweiterungsattribut zu ermöglichen.  
+ Im folgenden Beispiel werden `Print` und `PrintAndPunctuate` definiert und aufgerufen. <xref:System.Runtime.CompilerServices> wird in das Definitionsmodul importiert, um Zugriff auf das Erweiterungsattribut zu ermöglichen.  
   
 ### <a name="code"></a>Code  
   
@@ -160,17 +160,17 @@ End Module
 ## <a name="extension-method-precedence"></a>Rangfolge von Erweiterungsmethoden  
  Wenn sich zwei Erweiterungsmethoden mit identischen Signaturen im Gültigkeitsbereich befinden und zugreifbar sind, wird die Methode mit der höheren Rangfolge aufgerufen. Die Rangfolge einer Erweiterungsmethode basiert auf dem Mechanismus, der verwendet wird, um die Methode in den Gültigkeitsbereich einzubinden. Die folgende Liste gibt die hierarchische Rangfolge von oben nach unten an:  
   
-1.  Im aktuellen Modul definierte Erweiterungsmethoden.  
+1. Im aktuellen Modul definierte Erweiterungsmethoden.  
   
-2.  Erweiterungsmethoden, die innerhalb von Datentypen im aktuellen Namespace oder in übergeordneten Namespaces definiert sind, wobei untergeordnete Namespaces eine höhere Rangfolge als übergeordnete Namespaces haben.  
+2. Erweiterungsmethoden, die innerhalb von Datentypen im aktuellen Namespace oder in übergeordneten Namespaces definiert sind, wobei untergeordnete Namespaces eine höhere Rangfolge als übergeordnete Namespaces haben.  
   
-3.  In Typimporten in der aktuellen Datei definierte Erweiterungsmethoden.  
+3. In Typimporten in der aktuellen Datei definierte Erweiterungsmethoden.  
   
-4.  In Namespaceimporten in der aktuellen Datei definierte Erweiterungsmethoden.  
+4. In Namespaceimporten in der aktuellen Datei definierte Erweiterungsmethoden.  
   
-5.  In Typimporten auf Projektebene definierte Erweiterungsmethoden.  
+5. In Typimporten auf Projektebene definierte Erweiterungsmethoden.  
   
-6.  In Namespaceimporten auf Projektebene definierte Erweiterungsmethoden.  
+6. In Namespaceimporten auf Projektebene definierte Erweiterungsmethoden.  
   
  Wenn sich die Mehrdeutigkeit durch die Anwendung einer Rangfolge nicht auflösen lässt, können Sie den vollqualifizierten Namen zum Festlegen der aufgerufenen Methode verwenden. Wenn die `Print`-Methode aus dem vorherigen Beispiel in einem Modul mit dem Namen `StringExtensions` definiert wird, lautet der vollqualifizierte Name `StringExtensions.Print(example)` und nicht `example.Print()`.  
   

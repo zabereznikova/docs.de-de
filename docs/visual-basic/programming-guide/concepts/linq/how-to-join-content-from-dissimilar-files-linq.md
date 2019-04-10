@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verknüpfen des Inhalts Unterschiedlicher Dateien (LINQ) (Visual Basic)'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 4183a27ead8f8570091bb369d75147af7aebd23b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827746"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301112"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>Vorgehensweise: Verknüpfen des Inhalts Unterschiedlicher Dateien (LINQ) (Visual Basic)
 
@@ -15,7 +15,7 @@ In diesem Beispiel wird veranschaulicht, wie Daten aus zwei durch Trennzeichen g
   
 ## <a name="to-create-the-data-files"></a>So erstellen Sie die Datendateien
   
-1.  Kopieren Sie die folgenden Zeilen in eine Datei namens „scores.csv“, und speichern Sie sie in Ihrem Projektordner. Diese Datei stellt das Arbeitsblatt dar. Spalte 1 enthält die ID des Studierenden und die Spalten 2 bis 5 enthalten die Testergebnisse.  
+1. Kopieren Sie die folgenden Zeilen in eine Datei namens „scores.csv“, und speichern Sie sie in Ihrem Projektordner. Diese Datei stellt das Arbeitsblatt dar. Spalte 1 enthält die ID des Studierenden und die Spalten 2 bis 5 enthalten die Testergebnisse.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ In diesem Beispiel wird veranschaulicht, wie Daten aus zwei durch Trennzeichen g
     122, 94, 92, 91, 91  
     ```  
   
-2.  Kopieren Sie die folgenden Zeilen in eine Datei namens „names.csv“, und speichern Sie sie in Ihrem Projektordner. Die Datei stellt ein Arbeitsblatt dar, das den Nachnamen, den Vornamen und die ID des Studierenden enthält.  
+2. Kopieren Sie die folgenden Zeilen in eine Datei namens „names.csv“, und speichern Sie sie in Ihrem Projektordner. Die Datei stellt ein Arbeitsblatt dar, das den Nachnamen, den Vornamen und die ID des Studierenden enthält.  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -131,4 +131,4 @@ Erstellen und kompilieren Sie ein Projekt, das eine der folgenden Optionen als Z
 ## <a name="see-also"></a>Siehe auch
 
 - [LINQ und Zeichenfolgen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ and File Directories (Visual Basic) (LINQ und Dateiverzeichnisse (Visual Basic))](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ und Dateiverzeichnisse (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

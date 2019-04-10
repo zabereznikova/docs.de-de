@@ -1,16 +1,16 @@
 ---
-title: 'Vorgehensweise: Aktivieren von WIF-Ablaufverfolgung'
+title: 'Vorgehensweise: Aktivieren der WIF-Ablaufverfolgung'
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: ab59b0809008f212269e2c4b9745ccaec8c9af5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605165"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310264"
 ---
-# <a name="how-to-enable-wif-tracing"></a>Vorgehensweise: Aktivieren von WIF-Ablaufverfolgung
+# <a name="how-to-enable-wif-tracing"></a>Vorgehensweise: Aktivieren der WIF-Ablaufverfolgung
 ## <a name="applies-to"></a>Gilt für  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -55,19 +55,19 @@ ms.locfileid: "54605165"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>So erstellen Sie eine einfache ASP.NET-Anwendung  
   
-1.  Starten Sie Visual Studio, und klicken Sie auf **Datei**, **Neu** und anschließend auf **Projekt**.  
+1. Starten Sie Visual Studio, und klicken Sie auf **Datei**, **Neu** und anschließend auf **Projekt**.  
   
-2.  Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET Web Forms-Anwendung**.  
+2. Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET Web Forms-Anwendung**.  
   
-3.  Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und drücken Sie auf **OK**.  
+3. Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und drücken Sie auf **OK**.  
   
-4.  Klicken Sie mit der rechten Maustaste unter **Projektmappen-Explorer** auf das Projekt **TestApp**, und wählen Sie anschließend **Identität und Zugriff** aus.  
+4. Klicken Sie mit der rechten Maustaste unter **Projektmappen-Explorer** auf das Projekt **TestApp**, und wählen Sie anschließend **Identität und Zugriff** aus.  
   
-5.  Das Fenster **Identität und Zugriff** wird geöffnet. Klicken Sie unter **Anbieter** auf **Test your application with the Local Development STS** (Anwendung mit dem lokalen Entwicklungs-STS testen), und klicken Sie anschließend auf **Übernehmen**.  
+5. Das Fenster **Identität und Zugriff** wird geöffnet. Klicken Sie unter **Anbieter** auf **Test your application with the Local Development STS** (Anwendung mit dem lokalen Entwicklungs-STS testen), und klicken Sie anschließend auf **Übernehmen**.  
   
-6.  Erstellen Sie einen neuen Ordner mit dem Namen **Protokolle** im Stammverzeichnis des der **C:** steuern, wie gezeigt: **C:\logs**  
+6. Erstellen Sie einen neuen Ordner mit dem Namen **Protokolle** im Stammverzeichnis des der **C:** steuern, wie gezeigt: **C:\logs**  
   
-7.  Fügen Sie der Konfigurationsdatei *Web.config* direkt nach dem schließenden **\</configSections>**-Element das folgende **\<system.diagnostics>**-Element wie dargestellt hinzu:  
+7. Fügen Sie der Konfigurationsdatei *Web.config* direkt nach dem schließenden **\</configSections>**-Element das folgende **\<system.diagnostics>**-Element wie dargestellt hinzu:  
   
     ```xml  
     <configuration>  
@@ -96,8 +96,8 @@ ms.locfileid: "54605165"
   
 #### <a name="to-test-your-wif-enabled-aspnet-application-for-successful-tracing"></a>So testen Sie die für WIF aktivierte ASP.NET-Anwendung auf erfolgreiche Ablaufverfolgung  
   
-1.  Starten Sie die Projektmappe durch Drücken der Taste **F5**. Die Standard-Homepage von ASP.NET wird angezeigt. Sie werden automatisch mit dem Benutzernamen *Terry* authentifiziert. Dies ist der Standardbenutzer, der vom Entwicklungs-STS zurückgegeben wird.  
+1. Starten Sie die Projektmappe durch Drücken der Taste **F5**. Die Standard-Homepage von ASP.NET wird angezeigt. Sie werden automatisch mit dem Benutzernamen *Terry* authentifiziert. Dies ist der Standardbenutzer, der vom Entwicklungs-STS zurückgegeben wird.  
   
-2.  Schließen Sie das Browserfenster, und navigieren Sie dann zum Ordner **C:\logs**. Öffnen Sie die Datei **C:\logs\WIF.xml** in einem Text-Editor.  
+2. Schließen Sie das Browserfenster, und navigieren Sie dann zum Ordner **C:\logs**. Öffnen Sie die Datei **C:\logs\WIF.xml** in einem Text-Editor.  
   
-3.  Überprüfen Sie, ob die Datei **WIF.xml** Einträge enthält, die mit **\<E2ETraceEvent>** beginnen. Diese Ablaufverfolgungen enthalten **\<TraceRecord>**-Elemente mit Beschreibungen für die aufgezeichnete Aktivität, z. B. **Sicherheitstoken wird überprüft**.
+3. Überprüfen Sie, ob die Datei **WIF.xml** Einträge enthält, die mit **\<E2ETraceEvent>** beginnen. Diese Ablaufverfolgungen enthalten **\<TraceRecord>**-Elemente mit Beschreibungen für die aufgezeichnete Aktivität, z. B. **Sicherheitstoken wird überprüft**.

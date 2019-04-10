@@ -3,12 +3,12 @@ title: Erstellen meines ersten Ansprüche unterstützenden WCF-Diensts
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: 82ce5441463989507872750eb025899b8f80adee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 13a17473388582e5fa72cd8d335b6a05204ea509
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144461"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306611"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Erstellen meines ersten Ansprüche unterstützenden WCF-Diensts
 ## <a name="applies-to"></a>Gilt für  
@@ -22,11 +22,11 @@ ms.locfileid: "59144461"
   
  ![Das Diagramm zeigt die Komponenten der WIF-grundlegenden Ansprüche Beachten der WCF-Dienst.](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
   
-1.  Der WCF-Dienstclient (mitunter auch als Agent bezeichnet) verwendet WIF, um Anmeldeinformationen an den STS zu senden. Nach erfolgreicher Authentifizierung gibt der STS ein Token für den Agent aus.  
+1. Der WCF-Dienstclient (mitunter auch als Agent bezeichnet) verwendet WIF, um Anmeldeinformationen an den STS zu senden. Nach erfolgreicher Authentifizierung gibt der STS ein Token für den Agent aus.  
   
-2.  Der Agent sendet dieses vom STS ausgegebene Token an den WCF-Dienst.  
+2. Der Agent sendet dieses vom STS ausgegebene Token an den WCF-Dienst.  
   
-3.  Der Ansprüche unterstützende WCF-Dienst wird so konfiguriert, dass er dem STS und den Token, die er ausgibt, vertraut. Der Ansprüche unterstützende WCF-Dienst verwendet WIF, um das Token zu überprüfen und zu analysieren. Entwickler verwenden die entsprechende WIF-API und -Typen wie **ClaimsPrincipal** für die Anforderungen der Anwendung, z.B. das Implementieren der entsprechenden Autorisierung.  
+3. Der Ansprüche unterstützende WCF-Dienst wird so konfiguriert, dass er dem STS und den Token, die er ausgibt, vertraut. Der Ansprüche unterstützende WCF-Dienst verwendet WIF, um das Token zu überprüfen und zu analysieren. Entwickler verwenden die entsprechende WIF-API und -Typen wie **ClaimsPrincipal** für die Anforderungen der Anwendung, z.B. das Implementieren der entsprechenden Autorisierung.  
   
  Ab .NET 4.5 ist WIF Bestandteil von .NET Framework. Da die WIF-Klassen direkt im Framework selbst verfügbar sind, ist eine weitaus umfassendere Integration der anspruchsbasierten Identität in .NET möglich, sodass Ansprüche einfacher verwendet werden können. Mit WIF 4.5 müssen keine Out-of-Band-Komponenten installiert werden, um Ansprüche unterstützende Webanwendungen zu entwickeln. WIF-Klassen sind nun über mehrere Assemblys verteilt. Die wichtigsten Klassen hierbei sind System.Security.Claims, System.IdentityModel und System.IdentityModel.Services.  
   

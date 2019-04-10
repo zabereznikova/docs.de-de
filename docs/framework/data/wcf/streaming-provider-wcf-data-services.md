@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087897"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298876"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Streaminganbieter (WCF Data Services)
 Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. Diese Binärdaten können Video- und Audiostreams, Bilder, Dokumentdateien oder andere Typen binärer Medien darstellen. Wenn eine Entität im Datenmodell eine oder mehrere binäre Eigenschaften enthält, gibt der Datendienst diese als Base-64-codierte Binärdaten im Eintrag im Antwortfeed zurück. Da das Laden und Serialisieren von umfangreichen Binärdaten auf diese Weise die Leistung beeinträchtigen können die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiert einen Mechanismus zum Abrufen von Binärdaten unabhängig von der Entität, zu dem er gehört. Dies wird erreicht, indem die Binärdaten und die Entität in einen oder mehrere Datenströme getrennt werden.  
@@ -28,15 +28,15 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
   
  Folgende Schritte sind erforderlich, um einen Datendienst zu konfigurieren, der das Streaming von Binärdaten unterstützt:  
   
-1.  Kennzeichnen Sie mindestens eine Entität im Datenmodell als Medienlinkeintrag. Diese Entitäten dürfen die als Datenstrom zu sendenden Binärdaten nicht enthalten. Alle binären Eigenschaften einer Entität werden im Eintrag stets als Base-64-codierte Binärdaten zurückgegeben.  
+1. Kennzeichnen Sie mindestens eine Entität im Datenmodell als Medienlinkeintrag. Diese Entitäten dürfen die als Datenstrom zu sendenden Binärdaten nicht enthalten. Alle binären Eigenschaften einer Entität werden im Eintrag stets als Base-64-codierte Binärdaten zurückgegeben.  
   
-2.  Implementieren Sie die T:System.Data.Services.Providers.IDataServiceStreamProvider-Schnittstelle.  
+2. Implementieren Sie die T:System.Data.Services.Providers.IDataServiceStreamProvider-Schnittstelle.  
   
-3.  Definieren Sie einen Datendienst, der die <xref:System.IServiceProvider>-Schnittstelle implementiert. Der Datendienst verwendet die <xref:System.IServiceProvider.GetService%2A>-Implementierung, um auf die Implementierung des Streamingdatenanbieters zuzugreifen. Diese Methode gibt die entsprechende Streaminganbieterimplementierung zurück.  
+3. Definieren Sie einen Datendienst, der die <xref:System.IServiceProvider>-Schnittstelle implementiert. Der Datendienst verwendet die <xref:System.IServiceProvider.GetService%2A>-Implementierung, um auf die Implementierung des Streamingdatenanbieters zuzugreifen. Diese Methode gibt die entsprechende Streaminganbieterimplementierung zurück.  
   
-4.  Aktivieren Sie große Nachrichtendatenströme in der Konfiguration der Webanwendung.  
+4. Aktivieren Sie große Nachrichtendatenströme in der Konfiguration der Webanwendung.  
   
-5.  Aktivieren Sie den Zugriff auf binäre Ressourcen auf dem Server oder in einer Datenquelle.  
+5. Aktivieren Sie den Zugriff auf binäre Ressourcen auf dem Server oder in einer Datenquelle.  
   
  In die Beispielen in diesem Thema basieren auf einer Stichprobe streamingfotodienst, das ausführlich im Beitrag erläutert wird [Data Services Streaming Provider Series: Implementing a Streaming Provider (Teil 1)](https://go.microsoft.com/fwlink/?LinkID=198989). Der Quellcode für diesen Beispieldienst ist auf die [Streaming Photo Data Service Sample Seite](https://go.microsoft.com/fwlink/?LinkID=198988) in der MSDN Code Gallery.  
   

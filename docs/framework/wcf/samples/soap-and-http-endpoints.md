@@ -2,12 +2,12 @@
 title: SOAP- und HTTP-Endpunkte
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
-ms.openlocfilehash: be050eecebb050ec41c3d548ea993d9e035e471c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523190"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307443"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP- und HTTP-Endpunkte
 In diesem Beispiel wird veranschaulicht, wie ein RPC-basierter Dienst implementiert, und machen Sie ihn in der SOAP-Format und das Verwenden der WCF-Webprogrammiermodell "Plain Old XML" (POX)-Format verfügbar. Finden Sie unter den [grundlegenden HTTP-Dienst](../../../../docs/framework/wcf/samples/basic-http-service.md) Weitere Informationen zur HTTP-Bindung für den Dienst. Dieses Beispiel befasst sich mit den Details der Bereitstellung des gleichen Diensts über SOAP und HTTP, allerdings mit unterschiedlichen Bindungen.  
@@ -28,7 +28,7 @@ In diesem Beispiel wird veranschaulicht, wie ein RPC-basierter Dienst implementi
   
 -   Der ~/service.svc/soap-Endpunkt, der es den Clients ermöglicht, über die SOAP über HTTP-Bindung auf den Dienst zuzugreifen.  
   
- Der HTTP-Endpunkt wird mit einem <`webHttp`>-Standardendpunkt konfiguriert, bei dem `helpEnabled` auf `true` festgelegt wurde. Als Ergebnis stellt der Dienst eine XHTML-basierte Hilfeseite unter ~/service.svc/http/help bereit, mit der HTTP-basierte Clients auf den Dienst zugreifen können.  
+ Mit der HTTP-Endpunkt konfiguriert ist ein <`webHttp`>-Standardendpunkt mit `helpEnabled` festgelegt `true`. Als Ergebnis stellt der Dienst eine XHTML-basierte Hilfeseite unter ~/service.svc/http/help bereit, mit der HTTP-basierte Clients auf den Dienst zugreifen können.  
   
  Das Clientprojekt veranschaulicht den Zugriff auf den Dienst über einen SOAP-Proxy (generiert durch **Hinzufügen eines Dienstverweises**) und den Zugriff auf den Dienst mit <xref:System.Net.WebClient>.  
   
@@ -36,21 +36,21 @@ In diesem Beispiel wird veranschaulicht, wie ein RPC-basierter Dienst implementi
   
 #### <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
   
-1.  Öffnen Sie die Projektmappe für das Beispiel mit den SOAP- und HTTP-Endpunkten.  
+1. Öffnen Sie die Projektmappe für das Beispiel mit den SOAP- und HTTP-Endpunkten.  
   
-2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
+2. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
-3.  Wenn es nicht bereits geöffnet ist, drücken Sie STRG + W, S, um das Öffnen der **Projektmappen-Explorer** Fenster.  
+3. Wenn es nicht bereits geöffnet ist, drücken Sie STRG + W, S, um das Öffnen der **Projektmappen-Explorer** Fenster.  
   
-4.  Von der **Projektmappen-Explorer** Fenster mit der rechten Maustaste die **Service** Projekt, und platzieren Sie den Cursor über der **Debuggen** Option im Kontextmenü, damit die **neue starten Instanz** Kontextmenü angezeigt wird. Klicken Sie auf **neue Instanz starten**. Der ASP.NET-Entwicklungsserver, der den Dienst hostet, wird gestartet.  
+4. Von der **Projektmappen-Explorer** Fenster mit der rechten Maustaste die **Service** Projekt, und platzieren Sie den Cursor über der **Debuggen** Option im Kontextmenü, damit die **neue starten Instanz** Kontextmenü angezeigt wird. Klicken Sie auf **neue Instanz starten**. Der ASP.NET-Entwicklungsserver, der den Dienst hostet, wird gestartet.  
   
-5.  Klicken Sie im Projektmappen-Explorer-Windows mit der rechten Maustaste in des Clientprojekts, und platzieren Sie den Cursor über der **Debuggen** Option im Kontextmenü, damit der **neue Instanz starten** Kontextmenü angezeigt wird. Klicken Sie auf **neue Instanz starten**.  
+5. Klicken Sie im Projektmappen-Explorer-Windows mit der rechten Maustaste in des Clientprojekts, und platzieren Sie den Cursor über der **Debuggen** Option im Kontextmenü, damit der **neue Instanz starten** Kontextmenü angezeigt wird. Klicken Sie auf **neue Instanz starten**.  
   
-6.  Im eingeblendeten Clientkonsolenfenster werden der URI des ausgeführten Diensts und der URI der HTML-Hilfeseite für den ausgeführten Dienst angezeigt. Sie können die HTML-Hilfeseite jederzeit anzeigen, indem sie den URI der Hilfeseite in einem Browser eingeben.  
+6. Im eingeblendeten Clientkonsolenfenster werden der URI des ausgeführten Diensts und der URI der HTML-Hilfeseite für den ausgeführten Dienst angezeigt. Sie können die HTML-Hilfeseite jederzeit anzeigen, indem sie den URI der Hilfeseite in einem Browser eingeben.  
   
-7.  Während das Beispiel ausgeführt wird, schreibt der Client den Status der aktuellen Aktivität.  
+7. Während das Beispiel ausgeführt wird, schreibt der Client den Status der aktuellen Aktivität.  
   
-8.  Drücken Sie eine beliebige Taste, um die Clientkonsolenanwendung zu beenden.  
+8. Drücken Sie eine beliebige Taste, um die Clientkonsolenanwendung zu beenden.  
   
 9. Drücken Sie UMSCHALT+F5, um das Debugging des Diensts zu beenden.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086805"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305950"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Vorgehensweise: Implementieren von Validierung mit dem DataGrid-Steuerelement
 Die <xref:System.Windows.Controls.DataGrid> -Steuerelement können Sie eine Überprüfung auf die Zelle und die Zeile Ebene durchführen. Überprüfen Sie mit Überprüfung auf Zellenebene einzelne Eigenschaften eines Objekts an Sie gebundenen Daten aus, wenn ein Benutzer einen Wert aktualisiert. Überprüfen Sie mit Überprüfung auf Zeilenebene gesamte Datenobjekte aus, wenn ein Benutzer auf eine Zeile Änderungen ein Commit ausgeführt. Sie können auch benutzerdefinierte visuelles Feedback für Validierungsfehler oder verwenden Sie das standardmäßige visuelle Feedback, das die <xref:System.Windows.Controls.DataGrid> gesteuert.  
@@ -42,14 +42,14 @@ Die <xref:System.Windows.Controls.DataGrid> -Steuerelement können Sie eine Übe
   
 ### <a name="to-validate-multiple-values-in-a-single-row"></a>Um mehrere Werte in einer einzelnen Zeile zu überprüfen.  
   
-1.  Implementieren einer <xref:System.Windows.Controls.ValidationRule> Unterklasse, die mehrere Eigenschaften des gebundenen Objekts überprüft. In Ihrer <xref:System.Windows.Controls.ValidationRule.Validate%2A> methodenimplementierung, wandeln die `value` Parameterwert, der eine <xref:System.Windows.Data.BindingGroup> Instanz. Sie können dann zugreifen, das Datenobjekt mithilfe der <xref:System.Windows.Data.BindingGroup.Items%2A> Eigenschaft.  
+1. Implementieren einer <xref:System.Windows.Controls.ValidationRule> Unterklasse, die mehrere Eigenschaften des gebundenen Objekts überprüft. In Ihrer <xref:System.Windows.Controls.ValidationRule.Validate%2A> methodenimplementierung, wandeln die `value` Parameterwert, der eine <xref:System.Windows.Data.BindingGroup> Instanz. Sie können dann zugreifen, das Datenobjekt mithilfe der <xref:System.Windows.Data.BindingGroup.Items%2A> Eigenschaft.  
   
      Das folgende Beispiel zeigt diesen Vorgang aus, um zu überprüfen, ob die `StartDate` Eigenschaftswert für eine `Course` -Objekt liegt vor dessen `EndDate` -Eigenschaftswert.  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2.  Fügen Sie die Validierungsregel dem <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> Auflistung. Die <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> Eigenschaft bietet direkten Zugriff auf die <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> Eigenschaft eine <xref:System.Windows.Data.BindingGroup> -Instanz, die alle vom Steuerelement verwendeten Bindungen gruppiert.  
+2. Fügen Sie die Validierungsregel dem <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType> Auflistung. Die <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> Eigenschaft bietet direkten Zugriff auf die <xref:System.Windows.Data.BindingGroup.ValidationRules%2A> Eigenschaft eine <xref:System.Windows.Data.BindingGroup> -Instanz, die alle vom Steuerelement verwendeten Bindungen gruppiert.  
   
      Im folgenden Beispiel wird die <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A> -Eigenschaft in XAML. Die <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A> -Eigenschaftensatz auf <xref:System.Windows.Controls.ValidationStep.UpdatedValue> , damit die Überprüfung wird nur verwendet werden, nachdem das gebundene Datenobjekt, das aktualisiert wurde.  
   

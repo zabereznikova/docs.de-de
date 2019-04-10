@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091615"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304804"
 ---
 # <a name="wpf-add-ins-overview"></a>Übersicht über WPF-Add-Ins
 <a name="Introduction"></a> .NET Framework enthält eine Add-In-Modell, mit denen Entwickler Anwendungen erstellen, die Add-in-Erweiterbarkeit zu unterstützen. Dieses Add-In-Modell ermöglicht die Erstellung von Add-Ins, die in die Anwendungsfunktionalität integriert werden und diese erweitern. In einigen Szenarien müssen Anwendungen auch von Benutzeroberflächen anzeigen, die von Add-Ins bereitgestellt werden. In diesem Thema wird gezeigt, wie das .NET Framework-add-in-Modell zum Aktivieren dieser Szenarien, in der Architektur hinter, dessen Vorteile und Einschränkungen von WPF erweitert.  
@@ -73,7 +73,7 @@ ms.locfileid: "59091615"
 ## <a name="wpf-add-ins"></a>WPF-Add-Ins  
  WPF ermöglicht in Verbindung mit dem .NET Framework-add-in-Modell, eine Vielzahl von Szenarien abzudecken, auf die hostanwendungen Benutzeroberflächen aus Add-Ins anzeigen müssen. Diese Szenarien werden vor allem von WPF mit den folgenden zwei Programmiermodellen behandelt:  
   
-1.  **Das Add-In gibt eine Benutzeroberfläche zurück**. Ein Add-in gibt eine Benutzeroberfläche zurück an die hostanwendung über einen Methodenaufruf wie im Vertrag definiert. Das Szenario wird in den folgenden Fällen verwendet:  
+1. **Das Add-In gibt eine Benutzeroberfläche zurück**. Ein Add-in gibt eine Benutzeroberfläche zurück an die hostanwendung über einen Methodenaufruf wie im Vertrag definiert. Das Szenario wird in den folgenden Fällen verwendet:  
   
     -   Die Darstellung einer Benutzeroberfläche, die von einem Add-In zurückgegeben wird, ist abhängig von entweder Daten oder Bedingungen, die nur zur Laufzeit, wie z.B. dynamisch generierte Berichte.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "59091615"
   
     -   Das Add-in in erster Linie einen Dienst für die hostanwendung ausführt, und meldet den Status an die hostanwendung mit einer Benutzeroberfläche.  
   
-2.  **Das Add-In ist eine Benutzeroberfläche**. Ein Add-in ist eine Benutzeroberfläche, wie im Vertrag definiert. Das Szenario wird in den folgenden Fällen verwendet:  
+2. **Das Add-In ist eine Benutzeroberfläche**. Ein Add-in ist eine Benutzeroberfläche, wie im Vertrag definiert. Das Szenario wird in den folgenden Fällen verwendet:  
   
     -   Ein Add-In stellt ausschließlich die angezeigten Dienste bereit, z. B. eine Werbung.  
   
@@ -102,13 +102,13 @@ ms.locfileid: "59091615"
   
  Die WPF-UI-Typen sind nicht remotefähig. Um das Problem zu beheben, erweitert WPF das .NET Framework-add-in-Modell zum Aktivieren von WPF-UI-add-ins erstellt, die von hostanwendungen angezeigt werden. Diese Unterstützung wird durch WPF durch zwei Arten bereitgestellt: die <xref:System.AddIn.Contract.INativeHandleContract> Schnittstelle und zwei statische Methoden implementiert, indem die <xref:System.AddIn.Pipeline.FrameworkElementAdapters> Klasse: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> und <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Im Allgemeinen werden diese Typen und Methoden wie folgt verwendet:  
   
-1.  WPF ist erforderlich, dass die Benutzeroberflächen-add-ins gebotenen Klassen, die direkt oder indirekt sind von abgeleitet <xref:System.Windows.FrameworkElement>, z. B. Formen, Steuerelemente, Benutzersteuerelemente, Layoutbereiche und Seiten.  
+1. WPF ist erforderlich, dass die Benutzeroberflächen-add-ins gebotenen Klassen, die direkt oder indirekt sind von abgeleitet <xref:System.Windows.FrameworkElement>, z. B. Formen, Steuerelemente, Benutzersteuerelemente, Layoutbereiche und Seiten.  
   
-2.  Wenn der Vertrag deklariert, dass eine Benutzeroberfläche zwischen den Add-in und der hostanwendung übergeben wird, muss es als deklariert werden ein <xref:System.AddIn.Contract.INativeHandleContract> (keinen <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> ist eine remotefähige Darstellung der Benutzeroberfläche-Add-Ins, die über Isolationsgrenzen hinweg übergeben werden kann.  
+2. Wenn der Vertrag deklariert, dass eine Benutzeroberfläche zwischen den Add-in und der hostanwendung übergeben wird, muss es als deklariert werden ein <xref:System.AddIn.Contract.INativeHandleContract> (keinen <xref:System.Windows.FrameworkElement>); <xref:System.AddIn.Contract.INativeHandleContract> ist eine remotefähige Darstellung der Benutzeroberfläche-Add-Ins, die über Isolationsgrenzen hinweg übergeben werden kann.  
   
-3.  Vor der Weitergabe von das Add-in die Anwendungsdomäne, einem <xref:System.Windows.FrameworkElement> als gepackt ein <xref:System.AddIn.Contract.INativeHandleContract> durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
+3. Vor der Weitergabe von das Add-in die Anwendungsdomäne, einem <xref:System.Windows.FrameworkElement> als gepackt ein <xref:System.AddIn.Contract.INativeHandleContract> durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>.  
   
-4.  Nach dem übergeben an die Anwendungsdomäne der hostanwendung, die <xref:System.AddIn.Contract.INativeHandleContract> neu verpackt werden müssen, als eine <xref:System.Windows.FrameworkElement> durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.  
+4. Nach dem übergeben an die Anwendungsdomäne der hostanwendung, die <xref:System.AddIn.Contract.INativeHandleContract> neu verpackt werden müssen, als eine <xref:System.Windows.FrameworkElement> durch Aufrufen von <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>.  
   
  Wie <xref:System.AddIn.Contract.INativeHandleContract>, <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>, und <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A> werden verwendet, nach dem jeweiligen Szenario abhängt. Die folgenden Abschnitte bieten ausführliche Informationen zu den Programmiermodellen.  
   
@@ -116,17 +116,17 @@ ms.locfileid: "59091615"
 ## <a name="add-in-returns-a-user-interface"></a>Add-In gibt eine Benutzeroberfläche zurück  
  Für ein Add-in eine Benutzeroberfläche an eine hostanwendung zurückgeben ist Folgendes erforderlich:  
   
-1.  Die hostanwendung, Add-in- und Pipeline müssen erstellt werden, wie .NET Framework beschrieben [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) Dokumentation.  
+1. Die hostanwendung, Add-in- und Pipeline müssen erstellt werden, wie .NET Framework beschrieben [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) Dokumentation.  
   
-2.  Der Vertrag implementieren muss <xref:System.AddIn.Contract.IContract> und, um eine Benutzeroberfläche zurückzugeben, muss der Vertrag eine Methode mit einem Rückgabewert vom Typ deklarieren <xref:System.AddIn.Contract.INativeHandleContract>.  
+2. Der Vertrag implementieren muss <xref:System.AddIn.Contract.IContract> und, um eine Benutzeroberfläche zurückzugeben, muss der Vertrag eine Methode mit einem Rückgabewert vom Typ deklarieren <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  Die Benutzeroberfläche, die zwischen des Add-Ins und der hostanwendung übergeben muss direkt oder indirekt von abgeleitet werden <xref:System.Windows.FrameworkElement>.  
+3. Die Benutzeroberfläche, die zwischen des Add-Ins und der hostanwendung übergeben muss direkt oder indirekt von abgeleitet werden <xref:System.Windows.FrameworkElement>.  
   
-4.  Die Benutzeroberfläche, die durch das Add-In zurückgegeben wird, muss aus konvertiert werden eine <xref:System.Windows.FrameworkElement> auf eine <xref:System.AddIn.Contract.INativeHandleContract> vor dem Überschreiten der Isolationsgrenze.  
+4. Die Benutzeroberfläche, die durch das Add-In zurückgegeben wird, muss aus konvertiert werden eine <xref:System.Windows.FrameworkElement> auf eine <xref:System.AddIn.Contract.INativeHandleContract> vor dem Überschreiten der Isolationsgrenze.  
   
-5.  Die Benutzeroberfläche, die zurückgegeben wird, muss aus konvertiert werden ein <xref:System.AddIn.Contract.INativeHandleContract> zu einem <xref:System.Windows.FrameworkElement> nach dem Überschreiten der Isolationsgrenze.  
+5. Die Benutzeroberfläche, die zurückgegeben wird, muss aus konvertiert werden ein <xref:System.AddIn.Contract.INativeHandleContract> zu einem <xref:System.Windows.FrameworkElement> nach dem Überschreiten der Isolationsgrenze.  
   
-6.  Die hostanwendung zeigt das zurückgegebene <xref:System.Windows.FrameworkElement>.  
+6. Die hostanwendung zeigt das zurückgegebene <xref:System.Windows.FrameworkElement>.  
   
  Ein Beispiel, das veranschaulicht, wie ein Add-in zu implementieren, die eine Benutzeroberfläche zurückgibt, finden Sie unter [Erstellen einer Add-In, das eine Benutzeroberfläche zurückgibt](how-to-create-an-add-in-that-returns-a-ui.md).  
   
@@ -134,17 +134,17 @@ ms.locfileid: "59091615"
 ## <a name="add-in-is-a-user-interface"></a>Add-In ist eine Benutzeroberfläche  
  Wenn ein Add-in eine Benutzeroberfläche ist, ist Folgendes erforderlich:  
   
-1.  Die hostanwendung, Add-in- und Pipeline müssen erstellt werden, wie .NET Framework beschrieben [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) Dokumentation.  
+1. Die hostanwendung, Add-in- und Pipeline müssen erstellt werden, wie .NET Framework beschrieben [Add-Ins und Erweiterbarkeit](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)) Dokumentation.  
   
-2.  Die Vertragsschnittstelle für das Add-in muss implementieren <xref:System.AddIn.Contract.INativeHandleContract>.  
+2. Die Vertragsschnittstelle für das Add-in muss implementieren <xref:System.AddIn.Contract.INativeHandleContract>.  
   
-3.  Das Add-in, das an die hostanwendung übergeben wird muss direkt oder indirekt von abgeleitet werden <xref:System.Windows.FrameworkElement>.  
+3. Das Add-in, das an die hostanwendung übergeben wird muss direkt oder indirekt von abgeleitet werden <xref:System.Windows.FrameworkElement>.  
   
-4.  Das Add-in muss konvertiert werden, aus einer <xref:System.Windows.FrameworkElement> zu ein <xref:System.AddIn.Contract.INativeHandleContract> vor dem Überschreiten der Isolationsgrenze.  
+4. Das Add-in muss konvertiert werden, aus einer <xref:System.Windows.FrameworkElement> zu ein <xref:System.AddIn.Contract.INativeHandleContract> vor dem Überschreiten der Isolationsgrenze.  
   
-5.  Das Add-in muss von konvertiert werden ein <xref:System.AddIn.Contract.INativeHandleContract> auf eine <xref:System.Windows.FrameworkElement> nach dem Überschreiten der Isolationsgrenze.  
+5. Das Add-in muss von konvertiert werden ein <xref:System.AddIn.Contract.INativeHandleContract> auf eine <xref:System.Windows.FrameworkElement> nach dem Überschreiten der Isolationsgrenze.  
   
-6.  Die hostanwendung zeigt das zurückgegebene <xref:System.Windows.FrameworkElement>.  
+6. Die hostanwendung zeigt das zurückgegebene <xref:System.Windows.FrameworkElement>.  
   
  Ein Beispiel, das veranschaulicht, wie ein Add-in zu implementieren, die eine Benutzeroberfläche ist, finden Sie unter [erstellen Sie ein Add-in-d. h. eine Benutzeroberfläche](how-to-create-an-add-in-that-is-a-ui.md).  
   
@@ -181,15 +181,15 @@ ms.locfileid: "59091615"
   
  Der nächste Schritt besteht darin, die Pipelineassemblys und die Add-In-Assembly als die Inhaltsdateien der [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]s in [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] anzugeben. Dazu werden folgende Schritte ausgeführt:  
   
-1.  Hinzufügen der Pipeline- und Add-In-Assembly zum Projekt, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf die einzelnen Pipelineordner klicken und die Option **Zu Projekt hinzufügen** auswählen.  
+1. Hinzufügen der Pipeline- und Add-In-Assembly zum Projekt, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf die einzelnen Pipelineordner klicken und die Option **Zu Projekt hinzufügen** auswählen.  
   
-2.  Festlegen des **Buildvorgangs** jeder Pipelineassembly und jeder Add-In-Assembly im **Eigenschaftenfenster** auf **Inhalt**.  
+2. Festlegen des **Buildvorgangs** jeder Pipelineassembly und jeder Add-In-Assembly im **Eigenschaftenfenster** auf **Inhalt**.  
   
  Im letzten Schritt muss das Anwendungsmanifest so konfiguriert werden, dass sowohl die Pipelineassemblydateien als auch die Add-In-Assemblydatei heruntergeladen werden. Die Dateien sollten in Ordnern im Stammverzeichnis des Ordners in dem [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]-Cache gespeichert sein, den die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Anwendung belegt. Die Konfiguration richten Sie in [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] durch folgende Schritte ein:  
   
-1.  Klicken Sie mit der rechten Maustaste auf das [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Projekt, klicken Sie auf **Eigenschaften**, auf **Veröffentlichen** und dann auf die Schaltfläche **Anwendungsdateien**.  
+1. Klicken Sie mit der rechten Maustaste auf das [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Projekt, klicken Sie auf **Eigenschaften**, auf **Veröffentlichen** und dann auf die Schaltfläche **Anwendungsdateien**.  
   
-2.  Legen Sie im Dialogfeld **Anwendungsdateien** den **Veröffentlichungsstatus** der einzelnen Pipeline- und Add-In-DLLs auf **Einschließen (Auto)** und die **Downloadgruppe** für die Pipeline- und Add-In-DLLs auf **(Erforderlich)** fest.  
+2. Legen Sie im Dialogfeld **Anwendungsdateien** den **Veröffentlichungsstatus** der einzelnen Pipeline- und Add-In-DLLs auf **Einschließen (Auto)** und die **Downloadgruppe** für die Pipeline- und Add-In-DLLs auf **(Erforderlich)** fest.  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Verwenden der Pipeline und des Add-Ins von der Anwendungsbasis  
  Sind Pipeline und Add-In für die [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]-Bereitstellung konfiguriert, werden sie in denselben [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]-Cacheordner heruntergeladen wie die [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Damit Pipeline und Add-In aus der [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] verwendet werden können, müssen sie vom [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]-Code aus der Anwendungsbasis abgerufen werden. Die unterschiedlichen Typen und Member, der das .NET Framework-add-in-Modell für die Verwendung von Pipelines und Add-Ins, bieten besondere Unterstützung für dieses Szenario. Zuerst wird durch der Pfad identifiziert die <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase> Enumerationswert. Diesen Wert verwenden Sie mit Überladungen der relevanten Add-In-Member, wenn Pipelines verwendet werden sollen, die Folgendes enthalten:  

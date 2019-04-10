@@ -1,14 +1,14 @@
 ---
 title: Leitfaden zu ML.NET-Inhalt
 description: Erfahren Sie mehr über das Erstellen von benutzerdefinierten KI-Lösungen, und integrieren Sie sie mithilfe von ML.NET in Ihre .NET-Anwendungen.
-ms.date: 01/18/2019
+ms.date: 04/05/2019
 ms.custom: seodec18
-ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: de681daea5a29a121d350271ced4ccc2c0b1b533
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231330"
 ---
 # <a name="mlnet-content-guide"></a>Leitfaden zu ML.NET-Inhalt
 
@@ -33,7 +33,11 @@ Grundlegende Informationen finden Sie unter [Basiskonzepte für das Modelltraini
 
 [Vorhersage von Preisen mit einem Regressionsmodell](./tutorials/taxi-fare.md): Hier wird gezeigt, wie Sie eine Vorhersage-App erstellen, die zum Bestimmen der Antwort verschiedene Faktoren aus Verlaufsdaten nutzt.
 
-[Klassifizierung nach Merkmalen unter Verwendung des Iris-Beispiels](./tutorials/iris-clustering.md): Hier wird gezeigt, wie Sie ein Clusteringmodell zum Analysieren des Iris-Datasets verwenden. 
+[Klassifizierung nach Merkmalen unter Verwendung des Iris-Beispiels](./tutorials/iris-clustering.md): Hier wird gezeigt, wie Sie ein Clusteringmodell zum Analysieren des Iris-Datasets verwenden.
+
+[Erstellen eines Filmempfehlungssystems mit ML.NET](./tutorials/movie-recommmendation.md): Hier erfahren Sie, wie eine Empfehlungs-App erstellen, mit der Sie den Benutzern anhand des Benutzerverlaufs Filme empfehlen können.
+
+[Erstellen einer benutzerdefinierten Image-Klassifizierung mit ML.NET und TensorFlow](./tutorials/image-classification.md): Veranschaulicht, wie ein vorhandenes Tensorflow-Modell zum Erstellen einer benutzerdefinierten Image-Klassifizierung mithilfe von ML.NET erneut trainiert wird.
 
 ## <a name="how-to-guide"></a>Schrittanleitung
 
@@ -46,7 +50,6 @@ Grundlegende Informationen finden Sie unter [Basiskonzepte für das Modelltraini
 [Machine Learning-Aufgaben](./resources/tasks.md): Beschreibt Aufgaben wie z.B. Klassifizierung und Anomalieerkennung. 
 
 [Datentransformationen](./resources/transforms.md): Beschreiben die Funktionen zur Datenvorbereitung in ML.NET.
-
 
 ## <a name="api-reference"></a>API-Verweis
 

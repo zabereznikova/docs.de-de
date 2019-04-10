@@ -2,12 +2,12 @@
 title: Architektur und Entwurf
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307573"
 ---
 # <a name="architecture-and-design"></a>Architektur und Entwurf
 Das SQL-Generierungsmodul im der [Beispielanbieter](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0) wird implementiert, als Besucher für die Ausdrucksbaumstruktur, die die Befehlsstruktur darstellt. Die Generierung erfolgt, indem die Ausdrucksbaumstruktur einmal durchlaufen wird.  
@@ -252,13 +252,13 @@ private bool IsParentAJoin{get}
   
  Der Zugriff auf diese Knoten erfolgt nach dem folgenden Muster:  
   
-1.  Zugreifen auf die relationale Eingabe und Abrufen des resultierenden SqlSelectStatements. Folgende Eingaben sind bei einem relationalen Knoten möglich:  
+1. Zugreifen auf die relationale Eingabe und Abrufen des resultierenden SqlSelectStatements. Folgende Eingaben sind bei einem relationalen Knoten möglich:  
   
     -   Ein relationaler Knoten, einschließlich eines Blocks (z. B. ein DbScanExpression). Der Zugriff auf einen solchen Knoten gibt ein SqlSelectStatement zurück.  
   
     -   Ein Festlegungsausdruck (z. B. UNION ALL). Das Ergebnis muss in Klammern eingeschlossen und in die FROM-Klausel eines neuen SqlSelectStatements eingefügt werden.  
   
-2.  Überprüfen Sie, ob der aktuelle Knoten dem SqlSelectStatement hinzugefügt werden kann, das von der Eingabe erzeugt wurde. Im Abschnitt mit dem Titel "Gruppieren von Ausdrücken in SQL-Anweisungen" wird dies beschrieben. Wenn das nicht der Fall ist, gehen Sie folgendermaßen vor:  
+2. Überprüfen Sie, ob der aktuelle Knoten dem SqlSelectStatement hinzugefügt werden kann, das von der Eingabe erzeugt wurde. Im Abschnitt mit dem Titel "Gruppieren von Ausdrücken in SQL-Anweisungen" wird dies beschrieben. Wenn das nicht der Fall ist, gehen Sie folgendermaßen vor:  
   
     -   Lesen Sie das aktuelle SqlSelectStatement-Objekt aus.  
   
@@ -266,13 +266,13 @@ private bool IsParentAJoin{get}
   
     -   Legen Sie das neue Objekt oben auf dem Stapel ab.  
   
-3.  Leiten Sie die Eingabeausdruckbindung auf das passende Symbol aus der Eingabe um. Diese Informationen werden im SqlSelectStatement-Objekt verwaltet.  
+3. Leiten Sie die Eingabeausdruckbindung auf das passende Symbol aus der Eingabe um. Diese Informationen werden im SqlSelectStatement-Objekt verwaltet.  
   
-4.  Fügen Sie einen neuen SymbolTable-Bereich hinzu.  
+4. Fügen Sie einen neuen SymbolTable-Bereich hinzu.  
   
-5.  Greifen Sie auf den Teil des Ausdrucks zu (z. B. Projektion und Prädikat), der nicht zur Eingabe gehört.  
+5. Greifen Sie auf den Teil des Ausdrucks zu (z. B. Projektion und Prädikat), der nicht zur Eingabe gehört.  
   
-6.  Lesen Sie alle Objekte aus, die den globalen Stapeln hinzugefügt wurden.  
+6. Lesen Sie alle Objekte aus, die den globalen Stapeln hinzugefügt wurden.  
   
  DbSkipExpression hat keine direkte Entsprechung in SQL. Logisch wird es übersetzt in:  
   
@@ -301,9 +301,9 @@ ORDER BY sk1, sk2, ...
   
  Verarbeiten Sie im zweiten Schritt die Eingaben einzeln. Für jede Eingabe gilt:  
   
-1.  Greifen Sie auf die Eingabe zu.  
+1. Greifen Sie auf die Eingabe zu.  
   
-2.  Verarbeiten Sie das Ergebnis nach dem Zugriff auf die Eingabe durch den Aufruf von ProcessJoinInputResult. Diese Methode ist für die Verwaltung der Symboltabelle nach dem Zugriff auf ein untergeordnetes Element eines Joinausdrucks und gegebenenfalls den Abschluss des vom untergeordneten Element erzeugten SqlSelectStatements zuständig. Das untergeordnete Element kann eines der folgenden Ergebnisse haben:  
+2. Verarbeiten Sie das Ergebnis nach dem Zugriff auf die Eingabe durch den Aufruf von ProcessJoinInputResult. Diese Methode ist für die Verwaltung der Symboltabelle nach dem Zugriff auf ein untergeordnetes Element eines Joinausdrucks und gegebenenfalls den Abschluss des vom untergeordneten Element erzeugten SqlSelectStatements zuständig. Das untergeordnete Element kann eines der folgenden Ergebnisse haben:  
   
     -   Ein anderes SqlSelectStatement als das, dem das übergeordnete Element hinzugefügt wird. In dem Fall muss es möglicherweise durch das Hinzufügen von Standardspalten vervollständigt werden. Wenn die Eingabe ein Join war, müssen Sie ein neues Joinsymbol erstellen. Erstellen Sie andernfalls ein normales Symbol.  
   

@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: e1e92fccfad792fc1b9df86a582f0406a87f34e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195285"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297486"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 Konfiguriert die <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) und die <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) bei Verwendung von Verbundauthentifizierung über das WS-Verbund-Protokoll. Konfiguriert die <xref:System.Security.Claims.ClaimsAuthorizationManager> bei Verwendung der <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> oder <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> Klasse, um anspruchsbasierte Zugriffssteuerung bereitzustellen.  
@@ -58,13 +58,13 @@ Konfiguriert die <xref:System.IdentityModel.Services.WSFederationAuthenticationM
   
  Unabhängig vom Szenario gilt lädt die Runtime die Standardkonfiguration für den Verbund. Das Verhalten wird wie folgt definiert:  
   
-1.  Es ist keine `<federationConfiguration>` -Element vorhanden ist, die Laufzeit eine Verbundkonfiguration erstellt und füllt sie mit den Standardwerten. Diese Standardkonfiguration für den Verbund wird die standardidentitätskonfiguration verwiesen.  
+1. Es ist keine `<federationConfiguration>` -Element vorhanden ist, die Laufzeit eine Verbundkonfiguration erstellt und füllt sie mit den Standardwerten. Diese Standardkonfiguration für den Verbund wird die standardidentitätskonfiguration verwiesen.  
   
-2.  Wenn ein einzelner `<federationConfiguration>` -Element vorhanden ist, ist die Standardkonfiguration für die verbundanmeldung unabhängig davon, ob sie mit dem Namen oder nicht benannt ist. Wenn die `identityConfiguration` -Attribut angegeben ist, die benannte identitätskonfiguration verwiesen wird; andernfalls wird die standardidentitätskonfiguration verwiesen.  
+2. Wenn ein einzelner `<federationConfiguration>` -Element vorhanden ist, ist die Standardkonfiguration für die verbundanmeldung unabhängig davon, ob sie mit dem Namen oder nicht benannt ist. Wenn die `identityConfiguration` -Attribut angegeben ist, die benannte identitätskonfiguration verwiesen wird; andernfalls wird die standardidentitätskonfiguration verwiesen.  
   
-3.  Wenn ein unbenannter `<federationConfiguration>` -Element vorhanden ist, ist die Standardkonfiguration für den Verbund. Wenn die `identityConfiguration` -Attribut angegeben ist, die benannte identitätskonfiguration verwiesen wird; andernfalls wird die standardidentitätskonfiguration verwiesen.  
+3. Wenn ein unbenannter `<federationConfiguration>` -Element vorhanden ist, ist die Standardkonfiguration für den Verbund. Wenn die `identityConfiguration` -Attribut angegeben ist, die benannte identitätskonfiguration verwiesen wird; andernfalls wird die standardidentitätskonfiguration verwiesen.  
   
-4.  Wenn mehrere Namen `<federationConfiguration>` Elemente sind vorhanden und keine unbenannten `<federationConfiguration>` -Element vorhanden ist, wird eine Ausnahme ausgelöst.  
+4. Wenn mehrere Namen `<federationConfiguration>` Elemente sind vorhanden und keine unbenannten `<federationConfiguration>` -Element vorhanden ist, wird eine Ausnahme ausgelöst.  
   
  In der Regel nur eine einzige `<federationConfiguration>` -Abschnitt definiert ist. Dieser Abschnitt ist die Standardkonfiguration für den Verbund. Sie können angeben, dass mehrere eindeutig benannte `<federationConfiguration>` Elemente jedoch in diesem Fall sollten Sie eine Verbundkonfiguration als der unbenannten zu laden, geben Sie einen Handler für das. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> Ereignis, und legen die <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> Eigenschaft innerhalb der Handler, der eine <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> Objekt mit Werten aus der entsprechenden initialisiert `<federationConfiguration>` Element in der Konfigurationsdatei.  
   

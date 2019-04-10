@@ -2,12 +2,12 @@
 title: Oracle-BFILEs
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 07a7f28e08ed43672e94151cd9de88301069e1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142388"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304466"
 ---
 # <a name="oracle-bfiles"></a>Oracle-BFILEs
 Der .NET Framework-Datenanbieter für Oracle enthält die <xref:System.Data.OracleClient.OracleBFile>-Klasse, die für das Arbeiten mit dem Oracle-<xref:System.Data.OracleClient.OracleType.BFile>-Datentyp verwendet wird.  
@@ -26,9 +26,9 @@ Der .NET Framework-Datenanbieter für Oracle enthält die <xref:System.Data.Ora
   
  Jedem von NULL **OracleBFile** Objekt bezieht sich auf zwei Entitäten, die den Speicherort der zugrunde liegenden physischen Datei definieren:  
   
-1.  Ein Oracle-DIRECTORY-Objekt, das als Datenbank-Alias für ein Verzeichnis im Dateisystem fungiert.  
+1. Ein Oracle-DIRECTORY-Objekt, das als Datenbank-Alias für ein Verzeichnis im Dateisystem fungiert.  
   
-2.  Der Dateiname der zugrunde liegenden physischen Datei, die sich in dem dem DIRECTORY-Objekt zugeordneten Verzeichnis befindet.  
+2. Der Dateiname der zugrunde liegenden physischen Datei, die sich in dem dem DIRECTORY-Objekt zugeordneten Verzeichnis befindet.  
   
 ## <a name="example"></a>Beispiel  
  Im folgende C#-Beispiel wird veranschaulicht, wie Sie erstellen eine **BFILE** in einer Oracle-Tabelle, und rufen Sie ihn in der Form einer **OracleBFile** Objekt. Das Beispiel veranschaulicht die Verwendung der <xref:System.Data.OracleClient.OracleDataReader> Objekt und die **OracleBFile** **Seek** und **lesen** Methoden. Beachten Sie, um die Verwendung dieses Beispiels Sie zunächst ein Verzeichnis namens erstellen müssen "c:\\\bfiles" und die Datei "MyFile.jpg" auf dem Oracle-Server.  

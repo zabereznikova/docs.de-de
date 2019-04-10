@@ -2,25 +2,25 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 29980450bd75c6ba0992ad7fd3165f6f2d5f32bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129687"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304576"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es Entwicklern ermöglicht, in Visual Basic oder Visual C# Abfragen für das konzeptionelle Modell im Entity Framework zu schreiben. Abfragen für das Entity Framework werden als Befehlsstrukturabfragen dargestellt, die für den Objektkontext ausgeführt werden. LINQ to Entities wandelt LINQ (Language-Integrated Queries)-Abfragen in Befehlsstrukturabfragen um, führt die Abfragen für das Entity Framework aus und gibt Objekte zurück, die sowohl vom Entity Framework als auch von LINQ verwendet werden können. Mit folgendem Vorgang können Sie eine LINQ to Entities-Abfrage erstellen und ausführen:  
   
-1.  Erstellen Sie eine <xref:System.Data.Objects.ObjectQuery%601>-Instanz aus dem <xref:System.Data.Objects.ObjectContext>.  
+1. Erstellen Sie eine <xref:System.Data.Objects.ObjectQuery%601>-Instanz aus dem <xref:System.Data.Objects.ObjectContext>.  
   
-2.  Verfassen Sie mithilfe der <xref:System.Data.Objects.ObjectQuery%601>-Instanz eine LINQ to Entities-Abfrage in C# oder Visual Basic.  
+2. Verfassen Sie mithilfe der <xref:System.Data.Objects.ObjectQuery%601>-Instanz eine LINQ to Entities-Abfrage in C# oder Visual Basic.  
   
-3.  Wandeln Sie LINQ-Standardabfrageoperatoren und -ausdrücke in Befehlsstrukturen um.  
+3. Wandeln Sie LINQ-Standardabfrageoperatoren und -ausdrücke in Befehlsstrukturen um.  
   
-4.  Führen Sie die als Befehlsstruktur dargestellte Abfrage für die Datenquelle aus. Alle Ausnahmen, die bei der Ausführung für die Datenquelle ausgelöst wurden, werden direkt an den Client weitergegeben.  
+4. Führen Sie die als Befehlsstruktur dargestellte Abfrage für die Datenquelle aus. Alle Ausnahmen, die bei der Ausführung für die Datenquelle ausgelöst wurden, werden direkt an den Client weitergegeben.  
   
-5.  Geben Sie die Abfrageergebnisse an den Client zurück.  
+5. Geben Sie die Abfrageergebnisse an den Client zurück.  
   
 ## <a name="constructing-an-objectquery-instance"></a>Erstellen einer 'ObjectQuery'-Instanz  
  Die generische <xref:System.Data.Objects.ObjectQuery%601>-Klasse stellt eine Abfrage dar, die eine Auflistung von 0 (null) oder mehr typisierten Entitäten zurückgibt. Eine Objektabfrage wird normalerweise aus einem bestehenden Objektkontext und nicht manuell erstellt. Sie gehört immer zu diesem Objektkontext. Dieser Kontext stellt die Verbindungs- und Metadateninformationen bereit, die zum Verfassen und Ausführen der Abfrage erforderlich sind. Die generische <xref:System.Data.Objects.ObjectQuery%601>-Klasse implementiert die generische <xref:System.Linq.IQueryable%601>-Schnittstelle, durch deren Generatormethoden die inkrementelle Erstellung von LINQ-Abfragen aktiviert wird. Sie können auch den Typ von Entitäten mit dem `var`-Schlüsselwort in C# (`Dim` in Visual Basic, wobei der lokale Typrückschluss aktiviert sein muss) per Rückschluss vom Compiler ableiten lassen.  

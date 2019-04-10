@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: 292a70658e37839897b39d4d58fdf98903d2d963
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 42a9e0f67f00c1a706b72ab0eeb522e99d8a8dfe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300475"
 ---
 # <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>Vorgehensweise: Festlegen des vom ProgressBar-Steuerelement für Windows Forms angezeigten Werts
 > [!IMPORTANT]
@@ -31,9 +31,9 @@ ms.locfileid: "59196878"
   
 ### <a name="to-set-the-progressbar-value-directly"></a>Den Wert "ProgressBar" direkt festgelegt.  
   
-1.  Legen Sie die <xref:System.Windows.Forms.ProgressBar> des Steuerelements <xref:System.Windows.Forms.ProgressBar.Minimum%2A> und <xref:System.Windows.Forms.ProgressBar.Maximum%2A> Werte.  
+1. Legen Sie die <xref:System.Windows.Forms.ProgressBar> des Steuerelements <xref:System.Windows.Forms.ProgressBar.Minimum%2A> und <xref:System.Windows.Forms.ProgressBar.Maximum%2A> Werte.  
   
-2.  Legen Sie im Code des Steuerelements <xref:System.Windows.Forms.ProgressBar.Value%2A> Eigenschaft, um eine ganze Zahl zwischen der minimalen und maximalen Werte, die Sie eingerichtet haben.  
+2. Legen Sie im Code des Steuerelements <xref:System.Windows.Forms.ProgressBar.Value%2A> Eigenschaft, um eine ganze Zahl zwischen der minimalen und maximalen Werte, die Sie eingerichtet haben.  
   
     > [!NOTE]
     >  Setzen Sie die <xref:System.Windows.Forms.ProgressBar.Value%2A> Eigenschaft außerhalb der Grenzen hergestellt, indem die <xref:System.Windows.Forms.ProgressBar.Minimum%2A> und <xref:System.Windows.Forms.ProgressBar.Maximum%2A> Eigenschaften, löst das Steuerelement eine <xref:System.ArgumentException> Ausnahme.  
@@ -87,11 +87,11 @@ ms.locfileid: "59196878"
   
 ### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>Um die Statusanzeige durch einen festen Wert zu erhöhen.  
   
-1.  Legen Sie die <xref:System.Windows.Forms.ProgressBar> des Steuerelements <xref:System.Windows.Forms.ProgressBar.Minimum%2A> und <xref:System.Windows.Forms.ProgressBar.Maximum%2A> Werte.  
+1. Legen Sie die <xref:System.Windows.Forms.ProgressBar> des Steuerelements <xref:System.Windows.Forms.ProgressBar.Minimum%2A> und <xref:System.Windows.Forms.ProgressBar.Maximum%2A> Werte.  
   
-2.  Legen Sie die <xref:System.Windows.Forms.ProgressBar.Step%2A> -Eigenschaft eine ganze Zahl fest, die Menge der Statusanzeige erhöht der angezeigte Wert.  
+2. Legen Sie die <xref:System.Windows.Forms.ProgressBar.Step%2A> -Eigenschaft eine ganze Zahl fest, die Menge der Statusanzeige erhöht der angezeigte Wert.  
   
-3.  Rufen Sie die <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> Methode zum Ändern des Werts angezeigt wird, um den Betrag an, legen Sie in der <xref:System.Windows.Forms.ProgressBar.Step%2A> Eigenschaft.  
+3. Rufen Sie die <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> Methode zum Ändern des Werts angezeigt wird, um den Betrag an, legen Sie in der <xref:System.Windows.Forms.ProgressBar.Step%2A> Eigenschaft.  
   
      Im folgenden Codebeispiel wird veranschaulicht, wie eine Statusanzeige Anzahl der Dateien in einem Kopiervorgang verwalten kann.  
   
@@ -153,9 +153,9 @@ ms.locfileid: "59196878"
   
 ### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>Die Statusanzeige um einen dynamischen Wert zu erhöhen.  
   
-1.  Legen Sie die <xref:System.Windows.Forms.ProgressBar> des Steuerelements <xref:System.Windows.Forms.ProgressBar.Minimum%2A> und <xref:System.Windows.Forms.ProgressBar.Maximum%2A> Werte.  
+1. Legen Sie die <xref:System.Windows.Forms.ProgressBar> des Steuerelements <xref:System.Windows.Forms.ProgressBar.Minimum%2A> und <xref:System.Windows.Forms.ProgressBar.Maximum%2A> Werte.  
   
-2.  Rufen Sie die <xref:System.Windows.Forms.ProgressBar.Increment%2A> Methode so ändern Sie den Wert, der durch eine ganze Zahl, die Sie angeben, angezeigt.  
+2. Rufen Sie die <xref:System.Windows.Forms.ProgressBar.Increment%2A> Methode so ändern Sie den Wert, der durch eine ganze Zahl, die Sie angeben, angezeigt.  
   
      Im folgenden Codebeispiel wird veranschaulicht, wie eine Statusanzeige berechnen kann wie viel Speicherplatz während eines Kopiervorgangs verwendet wurde.  
   

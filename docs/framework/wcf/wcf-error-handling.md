@@ -2,21 +2,21 @@
 title: WCF-Fehlerbehandlung
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: 4fad317d8cb696b29d9c8e4e4d8209abc28410f8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235360"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306286"
 ---
 # <a name="wcf-error-handling"></a>WCF-Fehlerbehandlung
 Die bei einer WCF-Anwendung aufgetretenen Fehler gehören zu einer von drei Gruppen:  
   
-1.  Kommunikationsfehler  
+1. Kommunikationsfehler  
   
-2.  Proxy-/Channelfehler  
+2. Proxy-/Channelfehler  
   
-3.  Anwendungsfehler  
+3. Anwendungsfehler  
   
  Kommunikationsfehler treten auf, wenn ein Netzwerk nicht verfügbar ist, ein Client eine falsche Adresse verwendet oder der Diensthost keine eingehende Nachrichten überwacht. An den Client werden Fehler dieses Typs als <xref:System.ServiceModel.CommunicationException>-Klasse oder abgeleitete <xref:System.ServiceModel.CommunicationException>-Klasse zurückgegeben.  
   

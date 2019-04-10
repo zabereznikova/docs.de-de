@@ -12,23 +12,23 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: f2017ccfd6d8320d6afc7b5e8a2ce8349c4fbd17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ab5df1233c16a7ce076efa817fb14808b588ebcd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110611"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300982"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>Vorgehensweise: Erstellen eines Kennwort-Textfelds mit dem TextBox-Steuerelement in Windows Forms
 Ein Kennwortfeld ist ein Windows Forms-Textfeld ein, die Platzhalterzeichen zeigt an, wenn ein Benutzer eine Zeichenfolge eingibt.  
   
 ### <a name="to-create-a-password-text-box"></a>Erstellen Sie ein Kennwort-Textfeld  
   
-1.  Legen Sie die <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Eigenschaft der <xref:System.Windows.Forms.TextBox> Steuerelement auf ein bestimmtes Zeichen.  
+1. Legen Sie die <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Eigenschaft der <xref:System.Windows.Forms.TextBox> Steuerelement auf ein bestimmtes Zeichen.  
   
      Die <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Eigenschaft gibt das Zeichen, die Sie im Textfeld angezeigt. Wenn Sternchen im Kennwortfeld angezeigt werden sollen, z. B. Geben Sie * für die <xref:System.Windows.Forms.TextBox.PasswordChar%2A> Eigenschaft im Eigenschaftenfenster angezeigt. Unabhängig davon, welche Zeichen, die ein Benutzer in das Textfeld eingibt, wird dann ein Sternchen angezeigt.  
   
-2.  (Optional) Legen Sie die <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> Eigenschaft. Die Eigenschaft wird bestimmt, wie viele Zeichen in das Textfeld eingegeben werden können. Wenn die maximale Länge überschritten wird, wird das System gibt einen Signalton aus, und im Textfeld akzeptiert keine weiteren Zeichen. Beachten Sie, dass Sie nicht dazu, wie die maximale Länge eines Kennworts für Hacker sein kann, die das Kennwort zu erraten versuchen möchten.  
+2. (Optional) Legen Sie die <xref:System.Windows.Forms.TextBoxBase.MaxLength%2A> Eigenschaft. Die Eigenschaft wird bestimmt, wie viele Zeichen in das Textfeld eingegeben werden können. Wenn die maximale Länge überschritten wird, wird das System gibt einen Signalton aus, und im Textfeld akzeptiert keine weiteren Zeichen. Beachten Sie, dass Sie nicht dazu, wie die maximale Länge eines Kennworts für Hacker sein kann, die das Kennwort zu erraten versuchen möchten.  
   
      Im folgenden Codebeispiel wird veranschaulicht, ein Textfeld zu initialisieren, der akzeptiert einer Zeichenfolge mit bis zu 14 Zeichen lang sein und durch Sternchen anstelle der Zeichenfolge. Die `InitializeMyControl` -Prozedur wird nicht automatisch ausgeführt; muss aufgerufen werden.  
   

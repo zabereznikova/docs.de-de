@@ -2,40 +2,40 @@
 title: SQL-Nachverfolgung
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: 6d3974cbf181734f2a3cab0fbc7d8f32c16699bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f3c48b40e2d3d7dec2b9008b3de738f9b2983610
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146340"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308925"
 ---
 # <a name="sql-tracking"></a>SQL-Nachverfolgung
 In diesem Beispiel wird veranschaulicht, wie ein benutzerdefinierter SQL-Nachverfolgungsteilnehmer, der Nachverfolgungsdatensätze in eine SQL-Datenbank schreibt, geschrieben wird. Windows Workflow Foundation (WF) stellt die workflownachverfolgung um Einblick in die Ausführung einer Workflowinstanz zu erhalten. Die Überwachungslaufzeit gibt während der Ausführung des Workflows Workflowüberwachungsdatensätze aus. Weitere Informationen zur workflownachverfolgung finden Sie unter [nachverfolgung und Ablaufverfolgung für Workflows](../workflow-tracking-and-tracing.md).
 
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel
 
-1.  Überprüfen Sie, ob Sie SQL Server 2008, SQL Server 2008 Express oder eine höhere Version installiert haben. In den mit dem Beispiel verpackten Skripts wird davon ausgegangen, dass auf dem lokalen Computer eine SQL Express-Instanz verwendet wird. Wenn Sie eine andere Instanz verwenden, ändern Sie die datenbankbezogenen Skripts vor dem Ausführen des Beispiels.
+1. Überprüfen Sie, ob Sie SQL Server 2008, SQL Server 2008 Express oder eine höhere Version installiert haben. In den mit dem Beispiel verpackten Skripts wird davon ausgegangen, dass auf dem lokalen Computer eine SQL Express-Instanz verwendet wird. Wenn Sie eine andere Instanz verwenden, ändern Sie die datenbankbezogenen Skripts vor dem Ausführen des Beispiels.
 
-2.  Erstellen Sie die SQL Server-Nachverfolgungsdatenbank, indem Sie "Trackingsetup.cmd" im Skripteverzeichnis (\WF\Basic\Tracking\SqlTracking\CS\Scripts) ausführen. Dadurch wird eine Datenbank mit dem Namen "TrackingSample" erstellt.
+2. Erstellen Sie die SQL Server-Nachverfolgungsdatenbank, indem Sie "Trackingsetup.cmd" im Skripteverzeichnis (\WF\Basic\Tracking\SqlTracking\CS\Scripts) ausführen. Dadurch wird eine Datenbank mit dem Namen "TrackingSample" erstellt.
 
     > [!NOTE]
     >  Das Skript erstellt die Datenbank auf der Standardinstanz von SQL Express. Wenn Sie sie auf einer anderen Datenbankinstanz installieren möchten, bearbeiten Sie das Skript "Trackingsetup.cmd".  
   
-3.  Öffnen Sie "sqltrackingsample.sln" in Visual Studio 2010 ein.  
+3. Öffnen Sie "sqltrackingsample.sln" in Visual Studio 2010 ein.  
   
-4.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
+4. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
-5.  Drücken Sie F5, um die Anwendung auszuführen.  
+5. Drücken Sie F5, um die Anwendung auszuführen.  
   
      Das Browserfenster wird geöffnet und zeigt die Verzeichnisliste für die Anwendung an.  
   
-6.  Klicken Sie im Browser auf "StockPriceService.xamlx".  
+6. Klicken Sie im Browser auf "StockPriceService.xamlx".  
   
-7.  Der Browser zeigt die Seite "StockPriceService" an, die die WSDL-Adresse des lokalen Diensts enthält. Kopieren Sie diese Adresse.  
+7. Der Browser zeigt die Seite "StockPriceService" an, die die WSDL-Adresse des lokalen Diensts enthält. Kopieren Sie diese Adresse.  
   
      Ein Beispiel für die WSDL-Adresse des lokalen Diensts ist `http://localhost:65193/StockPriceService.xamlx?wsdl`.  
   
-8.  Führen Sie den WCF-Testclient (WcfTestClient.exe) über [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] aus. Er befindet im Verzeichnis "Microsoft Visual Studio 10.0 \Common7\IDE".  
+8. Führen Sie den WCF-Testclient (WcfTestClient.exe) über [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] aus. Er befindet im Verzeichnis "Microsoft Visual Studio 10.0 \Common7\IDE".  
   
 9. Klicken Sie in der WCF-Testclient auf die **Datei** Menü **Dienst hinzufügen**. Fügen Sie die lokale Dienstadresse in das Textfeld ein. Klicken Sie auf **OK** um das Dialogfeld zu schließen.  
   
@@ -45,7 +45,7 @@ In diesem Beispiel wird veranschaulicht, wie ein benutzerdefinierter SQL-Nachver
   
 #### <a name="to-uninstall-the-sample"></a>So installieren Sie das Beispiel aus  
   
-1.  Führen Sie das Skript "Tdrackingcleanup.cmd" im Beispielverzeichnis (\WF\Basic\Tracking\SqlTracking) aus.  
+1. Führen Sie das Skript "Tdrackingcleanup.cmd" im Beispielverzeichnis (\WF\Basic\Tracking\SqlTracking) aus.  
   
     > [!NOTE]
     >  "Trackingcleanup.cmd" versucht, die Datenbank in SQL Express auf dem lokalen Computer zu löschen. Wenn Sie eine andere SQL Server-Instanz verwenden, bearbeiten Sie "Trackingcleanup.cmd".

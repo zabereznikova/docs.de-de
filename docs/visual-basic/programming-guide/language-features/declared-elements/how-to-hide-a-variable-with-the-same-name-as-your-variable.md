@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: a8a7eda2a636d7f89131d140c82ad4f3c4743211
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 744c7aed50690d5591d1e8248e121cb66ef39108
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826677"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296185"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>Vorgehensweise: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable (Visual Basic)
 Sie können eine Variable durch ausblenden *shadowing* es, d. h. durch ihn mit einer Variablen mit dem gleichen Namen neu zu definieren. Sie können die Variable Schattenkopien, die Sie auf zwei Arten ausblenden möchten:  
@@ -30,7 +30,7 @@ Sie können eine Variable durch ausblenden *shadowing* es, d. h. durch ihn mit e
   
 #### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>Um einer Variablen ausblenden, indem Sie es über den Gültigkeitsbereich shadowing  
   
-1.  Ermitteln Sie den Bereich definieren die Variable, die Sie ausblenden möchten, und bestimmen Sie einen Unterbereich, in dem sie mit Ihrer Variablen zu definieren.  
+1. Ermitteln Sie den Bereich definieren die Variable, die Sie ausblenden möchten, und bestimmen Sie einen Unterbereich, in dem sie mit Ihrer Variablen zu definieren.  
   
     |Bereich der Variablen|Zulässiger Teilbereich für ihn neu definieren|  
     |-----------------------|-------------------------------------------|  
@@ -39,9 +39,9 @@ Sie können eine Variable durch ausblenden *shadowing* es, d. h. durch ihn mit e
   
      Sie können nicht neu definieren, die Variablen in einem Block während dieser Prozedur für eine Prozedur z. B. einer `If`... `End If` Konstruktion oder `For` Schleife.  
   
-2.  Erstellen des Unterbereichs an, wenn es nicht bereits vorhanden ist.  
+2. Erstellen des Unterbereichs an, wenn es nicht bereits vorhanden ist.  
   
-3.  Erstellen Sie innerhalb des Unterbereichs einen [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) die shadowing Variable deklariert.  
+3. Erstellen Sie innerhalb des Unterbereichs einen [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) die shadowing Variable deklariert.  
   
      Wenn Code innerhalb des Unterbereichs auf den Namen der Variablen verwiesen wird, löst der Compiler den Verweis auf die shadowing-Variable.  
   
@@ -73,11 +73,11 @@ Sie können eine Variable durch ausblenden *shadowing* es, d. h. durch ihn mit e
   
 #### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>Zu eine Variablen zu verbergen, indem sie durch Vererbung shadowing  
   
-1.  Achten Sie darauf, dass die Variable, die Sie ausblenden möchten, in einer Klasse, und klicken Sie auf Klassenebene (außerhalb einer Prozedur) deklariert wird. Andernfalls kann es nicht durch Vererbung überschatten werden.  
+1. Achten Sie darauf, dass die Variable, die Sie ausblenden möchten, in einer Klasse, und klicken Sie auf Klassenebene (außerhalb einer Prozedur) deklariert wird. Andernfalls kann es nicht durch Vererbung überschatten werden.  
   
-2.  Definieren Sie eine Klasse, die von den Wert der Variablen-Klasse abgeleitet werden, wenn Sie noch nicht vorhanden ist.  
+2. Definieren Sie eine Klasse, die von den Wert der Variablen-Klasse abgeleitet werden, wenn Sie noch nicht vorhanden ist.  
   
-3.  Schreiben Sie in der abgeleiteten Klasse eine `Dim` Anweisung, die die Variable deklariert. Enthalten die [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) Schlüsselwort in der Deklaration.  
+3. Schreiben Sie in der abgeleiteten Klasse eine `Dim` Anweisung, die die Variable deklariert. Enthalten die [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) Schlüsselwort in der Deklaration.  
   
      Wenn der Code in der abgeleiteten Klasse auf den Namen der Variablen verwiesen wird, löst der Compiler den Verweis auf die Variable an.  
   
@@ -105,7 +105,7 @@ Sie können eine Variable durch ausblenden *shadowing* es, d. h. durch ihn mit e
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Unterschiede zwischen Shadowing und Überschreiben](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [Vorgehensweise: Ausblenden einer geerbten Variablen](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)

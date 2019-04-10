@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: eb0c34f259220a0326238b27ab43efd3078b0bcc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59207083"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295704"
 ---
 # <a name="xstatic-markup-extension"></a>x:Statische Markuperweiterung
 Verweist auf alle statischen by-Value-Codeentitäten, die in definiert ist eine [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– konforme Speicherung. Die statische Eigenschaft, die auf die verwiesen wird kann verwendet werden, um den Wert einer Eigenschaft in XAML bereitzustellen.  
@@ -55,13 +55,13 @@ Die Attributsyntax ist die mit dieser Markuperweiterung am häufigsten verwendet
 
 Es gibt zwei anderen XAML-Verwendungen, die technisch möglich ist. Allerdings sind diese Verwendungen seltener auf, da sie unnötig ausführlich sind:  
 
-1.  Die Objektelementsyntax.
+1. Die Objektelementsyntax.
 
     ```xaml
     <x:Static Member="prefix:typeName.staticMemberName" ... />
     ```
 
-2.  Attribut-Syntax mit expliziter Member-Eigenschaft für die Initialisierungszeichenfolge an.
+2. Attribut-Syntax mit expliziter Member-Eigenschaft für die Initialisierungszeichenfolge an.
 
     ```xaml
     <object property="{x:Static Member=prefix:typeName.staticMemberName}" ... />

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 236871ff5b8976bb9f8a27bce26195b1a84cf954
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195877"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309640"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>Enumerationstypen in Datenverträgen
 Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Thema werden mehrere Beispiele behandelt, in denen das Programmiermodell erklärt wird.  
@@ -79,11 +79,11 @@ Enumerationen können im Datenvertragsmodell ausgedrückt werden. In diesem Them
   
  Die folgenden Schritte gelten für das Senden des Enumerationswerts eines Flags:  
   
-1.  Versuchen Sie, einen Enumerationsmember zu finden (mit angewendetem <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut), der dem numerischen Wert zugeordnet ist. Wenn Sie einen Member finden, senden Sie eine Liste, die nur diesen Member enthält.  
+1. Versuchen Sie, einen Enumerationsmember zu finden (mit angewendetem <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut), der dem numerischen Wert zugeordnet ist. Wenn Sie einen Member finden, senden Sie eine Liste, die nur diesen Member enthält.  
   
-2.  Versuchen Sie, den numerischen Wert so zu einer Summe aufzulösen, dass Enumerationsmember vorhanden sind (jeweils mit angewendetem <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut), die den einzelnen Teilen der Summe zugeordnet sind. Senden Sie die Liste mit allen Membern dieser Art. Beachten Sie, dass die *greedy-Algorithmus* verwendet, um eine Summe, suchen und es gibt also keine Garantie dafür, die eine Summe gefunden wird, auch wenn es vorhanden ist. Um dieses Problem zu verhindern, sollten Sie sicherstellen, dass es sich bei den numerischen Werten der Enumerationsmember um Potenzen von 2 handelt.  
+2. Versuchen Sie, den numerischen Wert so zu einer Summe aufzulösen, dass Enumerationsmember vorhanden sind (jeweils mit angewendetem <xref:System.Runtime.Serialization.EnumMemberAttribute>-Attribut), die den einzelnen Teilen der Summe zugeordnet sind. Senden Sie die Liste mit allen Membern dieser Art. Beachten Sie, dass die *greedy-Algorithmus* verwendet, um eine Summe, suchen und es gibt also keine Garantie dafür, die eine Summe gefunden wird, auch wenn es vorhanden ist. Um dieses Problem zu verhindern, sollten Sie sicherstellen, dass es sich bei den numerischen Werten der Enumerationsmember um Potenzen von 2 handelt.  
   
-3.  Lösen Sie eine <xref:System.Runtime.Serialization.SerializationException> aus, wenn die vorausgehenden zwei Schritte fehlschlagen und der numerische Wert ungleich 0 ist. Senden Sie die leere Liste, wenn der numerische Wert 0 ist.  
+3. Lösen Sie eine <xref:System.Runtime.Serialization.SerializationException> aus, wenn die vorausgehenden zwei Schritte fehlschlagen und der numerische Wert ungleich 0 ist. Senden Sie die leere Liste, wenn der numerische Wert 0 ist.  
   
 ### <a name="example"></a>Beispiel  
  Das folgende Enumerationsbeispiel kann für einen Flagvorgang verwendet werden.  

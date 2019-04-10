@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Dienstdatenpartitionierung'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: c5cfd56943c97b70ef12276f1bae47fa870366a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 17cb80bf253491eb563d6fd45b5997e452f542e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150097"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300384"
 ---
 # <a name="how-to-service-data-partitioning"></a>Vorgehensweise: Dienstdatenpartitionierung
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um Meldungen über mehrere Instanzen des gleichen Zieldiensts zu partitionieren. Die Partitionierung von Dienstdaten wird in der Regel verwendet, wenn Sie einen Dienst skalieren müssen, um eine bessere Dienstqualität bereitzustellen, oder wenn Sie Anforderungen verschiedener Kunden jeweils auf bestimmte Art und Weise behandeln müssen. Beispielsweise können Nachrichten von wichtigen Kunden oder "Gold"-Kunden mit einer höheren Priorität als Nachrichten von einem Standardkunden verarbeitet werden müssen.  
@@ -21,7 +21,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
   
 ### <a name="implement-service-data-partitioning"></a>Implementieren der Dienstdatenpartitionierung  
   
-1.  Erstellen Sie die grundlegende Routingdienstkonfiguration, indem Sie die vom Dienst verfügbar gemachten Dienstendpunkte angeben. Im folgenden Beispiel werden zwei Endpunkte definiert, die zum Empfangen von Meldungen verwendet werden. Außerdem werden die Clientendpunkte definiert, die verwendet werden, um Nachrichten an die regularCalc Dienstinstanzen zu senden.  
+1. Erstellen Sie die grundlegende Routingdienstkonfiguration, indem Sie die vom Dienst verfügbar gemachten Dienstendpunkte angeben. Im folgenden Beispiel werden zwei Endpunkte definiert, die zum Empfangen von Meldungen verwendet werden. Außerdem werden die Clientendpunkte definiert, die verwendet werden, um Nachrichten an die regularCalc Dienstinstanzen zu senden.  
   
     ```xml  
     <services>  
@@ -58,7 +58,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
      </client>  
     ```  
   
-2.  Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.  In diesem Beispiel wird mithilfe des EndpointName-Filters ermittelt, welcher Dienstendpunkt die Nachricht empfangen hat. Im folgenden Beispiel werden der erforderliche Routingabschnitt und die Filter definiert.  
+2. Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.  In diesem Beispiel wird mithilfe des EndpointName-Filters ermittelt, welcher Dienstendpunkt die Nachricht empfangen hat. Im folgenden Beispiel werden der erforderliche Routingabschnitt und die Filter definiert.  
   
     ```xml  
     <filters>  
@@ -71,7 +71,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     </filters>  
     ```  
   
-3.  Definieren Sie die Filtertabelle, in der jedem Filter ein Clientendpunkt zugeordnet wird. In diesem Beispiel wird die Nachricht basierend auf dem jeweiligen Endpunkt weitergeleitet, über den sie empfangen wurde. Da die Nachricht nur mit einem von zwei möglichen Filtern übereinstimmen kann, ist eine Filterpriorität zum Steuern der Reihenfolge, in der Filter ausgewertet werden, nicht erforderlich.  
+3. Definieren Sie die Filtertabelle, in der jedem Filter ein Clientendpunkt zugeordnet wird. In diesem Beispiel wird die Nachricht basierend auf dem jeweiligen Endpunkt weitergeleitet, über den sie empfangen wurde. Da die Nachricht nur mit einem von zwei möglichen Filtern übereinstimmen kann, ist eine Filterpriorität zum Steuern der Reihenfolge, in der Filter ausgewertet werden, nicht erforderlich.  
   
      Der folgende Code definiert die Filtertabelle und fügt die zuvor definierten Filter hinzu.  
   
@@ -85,7 +85,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     </filterTables>  
     ```  
   
-4.  Um eingehende Nachrichten anhand der in der Tabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Das folgende Beispiel veranschaulicht die Zuordnung von "filterTable1" zu den Dienstendpunkten:  
+4. Um eingehende Nachrichten anhand der in der Tabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Das folgende Beispiel veranschaulicht die Zuordnung von "filterTable1" zu den Dienstendpunkten:  
   
     ```xml  
     <behaviors>  

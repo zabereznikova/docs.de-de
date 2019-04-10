@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 5817d4d37610c87bb7e4ade407421ddce7a3a862
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828120"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295769"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Struktur von Visual Basic-Programmen
 Visual Basic-Programms wird von den Standardbausteinen entwickelt. Ein *Lösung* besteht aus einem oder mehreren Projekten. Ein *Projekt* wiederum können eine oder mehrere Assemblys enthalten. Jede *Assembly* aus ein oder mehrere Quelldateien kompiliert wird. Ein *Quelldatei* enthält die Definition und Implementierung von Klassen, Strukturen, Module und Schnittstellen, die letzten Endes den gesamten Code enthalten.  
@@ -22,11 +22,11 @@ Visual Basic-Programms wird von den Standardbausteinen entwickelt. Ein *Lösung*
 ## <a name="file-level-programming-elements"></a>Laufwerkssicherungen auf Dateiebene Programmierelemente  
  Wenn Sie, ein Projekt oder eine Datei beginnen und den Code-Editor zu öffnen, sehen Sie etwas Code bereits an Ort und in der richtigen Reihenfolge. Code, den Sie schreiben, sollten die folgende Sequenz beachten:  
   
-1.  `Option` Anweisungen  
+1. `Option` Anweisungen  
   
-2.  `Imports` Anweisungen  
+2. `Imports` Anweisungen  
   
-3.  `Namespace` Anweisungen und Namespace-Level-Elementen  
+3. `Namespace` Anweisungen und Namespace-Level-Elementen  
   
  Wenn Sie die Anweisungen in einer anderen Reihenfolge eingeben, können Kompilierungsfehler führen.  
   
@@ -47,9 +47,9 @@ Visual Basic-Programms wird von den Standardbausteinen entwickelt. Ein *Lösung*
 ## <a name="namespace-level-programming-elements"></a>Namespace-Ebene Programmierelemente  
  Klassen, Strukturen und -Module enthalten alle den Code in der Quelldatei. Sie sind *auf Namespace-Ebene* -Elemente, die in einem Namespace oder auf der Ebene der Quelldatei angezeigt werden können. Sie enthalten die Deklarationen der anderen Programmierungselementen. Schnittstellen, die Elementsignaturen zu definieren, aber keine Implementierung bereitstellen, werden auch auf Modulebene angezeigt. Weitere Informationen zu den Elementen auf Modulebene finden Sie in der folgenden:  
   
--   [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)  
+-   [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)  
+-   [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
 -   [Module-Anweisung](../../../visual-basic/language-reference/statements/module-statement.md)  
   
@@ -64,11 +64,11 @@ Visual Basic-Programms wird von den Standardbausteinen entwickelt. Ein *Lösung*
   
 -   [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)  
+-   [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 -   [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)  
   
@@ -95,5 +95,5 @@ Visual Basic-Programms wird von den Standardbausteinen entwickelt. Ein *Lösung*
 ## <a name="see-also"></a>Siehe auch
 
 - [Main-Prozedur in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
-- [Visual Basic-Benennungskonventionen](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-- [Beschränkungen in Visual Basic](../../../visual-basic/programming-guide/program-structure/limitations.md)
+- [Benennungskonventionen in Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Beschränkungen in Visual Basic](../../../visual-basic/programming-guide/program-structure/limitations.md)
