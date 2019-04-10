@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 89fcd981dbb5442f6150f539db4c7d404fe8d691
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f1dcc03a67880727893e55c13d65a804586b3f56
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839846"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315503"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen.  
@@ -38,9 +38,9 @@ Ermöglicht die Verwendung von lokalem Typrückschluss in Variablendeklarationen
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>-Optioninfer in Visual Studio-IDE festlegen  
   
-1.  Wählen Sie ein Projekt in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
+1. Wählen Sie ein Projekt in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
   
-2.  Auf der **Kompilieren** Registerkarte, ändern Sie den Wert in der **Option infer-** Feld.  
+2. Auf der **Kompilieren** Registerkarte, ändern Sie den Wert in der **Option infer-** Feld.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code kompiliert `test.vb` mit aktiviertem lokalen Typrückschluss.  
@@ -58,7 +58,7 @@ vbc -optioninfer+ test.vb
 - [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Option Infer-Anweisung](../../../visual-basic/language-reference/statements/option-infer-statement.md)
 - [Lokaler Typrückschluss](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [VB-Standard, Projekte, Dialogfeld „Optionen“](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
-- [Seite „Kompilieren“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [VB-Standard, Projekte, Dialogfeld "Optionen"](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [Seite "Kompilieren", Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [Erstellen von der Befehlszeile aus](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)

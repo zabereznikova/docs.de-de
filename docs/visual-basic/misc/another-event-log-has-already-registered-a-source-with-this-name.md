@@ -2,12 +2,12 @@
 title: Ein anderes Ereignisprotokoll hat bereits eine Quelle mit diesem Namen registriert.
 ms.date: 07/20/2015
 ms.assetid: e6f5cd95-bb3f-4845-84fb-ae623a9bd44e
-ms.openlocfilehash: b32169b79521ec7d0c429e1dce641aca9d747bb1
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d932869504b2d8a5f3a948b190e5528bfcfa664f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58032141"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314671"
 ---
 # <a name="another-event-log-has-already-registered-a-source-with-this-name"></a>Ein anderes Ereignisprotokoll hat bereits eine Quelle mit diesem Namen registriert.
 Es wurde versucht, einen Eintrag in ein Ereignisprotokoll schreiben, bei dem die angegebene Quelle für ein anderes Ereignisprotokoll registriert ist.  
@@ -16,9 +16,9 @@ Es wurde versucht, einen Eintrag in ein Ereignisprotokoll schreiben, bei dem die
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Entfernen Sie die Zuordnung der Quelle zum ersten Protokoll mithilfe der <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> - oder <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> -Methode.  
+1. Entfernen Sie die Zuordnung der Quelle zum ersten Protokoll mithilfe der <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> - oder <xref:System.Diagnostics.EventLog.DeleteEventSource%2A> -Methode.  
   
-2.  Registrieren Sie die Quelle für das neue Protokoll.  
+2. Registrieren Sie die Quelle für das neue Protokoll.  
   
 ## <a name="see-also"></a>Siehe auch
 

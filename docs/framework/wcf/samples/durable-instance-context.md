@@ -2,12 +2,12 @@
 title: Permanenter Instanzkontext
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 74b2d42900b032936734884ceb19472d70b56b43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160965"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316933"
 ---
 # <a name="durable-instance-context"></a>Permanenter Instanzkontext
 Dieses Beispiel veranschaulicht das Anpassen die Windows Communication Foundation (WCF)-Runtime, um permanente instanzkontexte zu aktivieren. Dabei wird als Sicherungsspeicher SQL Server 2005 (in diesem Fall SQL Server 2005 Express) verwendet. Aber es bietet auch eine Möglichkeit, auf benutzerdefinierte Speichermechanismen zuzugreifen.  
@@ -23,9 +23,9 @@ Dieses Beispiel veranschaulicht das Anpassen die Windows Communication Foundatio
   
  Anhand der vorangegangenen Beschreibung können leicht zwei Schritte bestimmt werden, um das Ziel zu erreichen:  
   
-1.  Ändern Sie die Nachricht, mit der die Kontext-ID übertragen wird.  
+1. Ändern Sie die Nachricht, mit der die Kontext-ID übertragen wird.  
   
-2.  Ändern Sie das lokale Verhalten des Diensts, um die benutzerdefinierte Instanziierungslogik zu implementieren.  
+2. Ändern Sie das lokale Verhalten des Diensts, um die benutzerdefinierte Instanziierungslogik zu implementieren.  
   
  Da der erste aufgeführte Schritt die gesendete Nachricht betrifft, sollte er als ein benutzerdefinierter Kanal implementiert und mit der Kanalschicht verknüpft werden. Der zweite Schritt beeinflusst nur das lokale Verhalten des Diensts und kann deshalb durch das Erweitern mehrerer Diensterweiterungspunkte implementiert werden. In den nächsten Abschnitten wird jede dieser Erweiterungen erläutert.  
   
@@ -442,11 +442,11 @@ Press ENTER to shut down client
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
+1. Stellen Sie sicher, dass Sie ausgeführt haben die [Schritte der Einrichtung einmaligen Setupverfahren für Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+2. Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3. Um das Beispiel in einer einzelnen oder computerübergreifenden Konfiguration ausführen möchten, folgen Sie den Anweisungen im [Ausführen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
 >  Um dieses Beispiel auszuführen, muss SQL Server 2005 oder SQL Express 2005 ausgeführt werden. Wenn Sie SQL Server 2005 ausführen, müssen Sie die Konfiguration der Verbindungszeichenfolge des Diensts ändern. Wenn Sie das Beispiel computerübergreifend ausführen, ist SQL Server nur auf dem Servercomputer erforderlich.  

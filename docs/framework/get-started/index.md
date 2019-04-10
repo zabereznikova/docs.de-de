@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad380b5e411a61db648495875a5b697df54e2849
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304686"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314970"
 ---
 # <a name="get-started-with-the-net-framework"></a>Erste Schritte mit .NET Framework
 
@@ -71,7 +71,7 @@ Gehen Sie beim Entwickeln von .NET Framework-Apps oder -Komponenten folgenderma�
 
 2. Wählen Sie die von .NET Framework unterstützten Sprachen aus, die Sie zur Entwicklung von Apps verwenden möchten. Es stehen mehrere Sprachen zur Verfügung, darunter [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) und [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp) von Microsoft. (Programmiersprachen, die Ihnen ermöglichen, Apps für .NET Framework zu entwickeln, erfüllen die [CLI-Spezifikation](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/).)
 
-3. Wählen Sie die Entwicklungsumgebung aus, die Sie zum Erstellen der Apps verwenden möchten und die von der von Ihnen gewählten Programmiersprachen unterstützt werden, und installieren Sie sie. Die integrierte Microsoft-Entwicklungsumgebung (IDE) für .NET Framework-Apps ist [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Es stehen verschiedene Editionen zur Verfügung.
+3. Wählen Sie die Entwicklungsumgebung aus, die Sie zum Erstellen der Apps verwenden möchten und die von der von Ihnen gewählten Programmiersprachen unterstützt werden, und installieren Sie sie. Die integrierte Microsoft-Entwicklungsumgebung (IDE) für .NET Framework-Apps ist [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link). Es stehen verschiedene Editionen zur Verfügung.
 
 Weitere Informationen zum Entwickeln von Apps, die auf .NET Framework ausgerichtet sind, finden Sie im [Entwicklungshandbuch](../development-guide.md).
 
@@ -89,7 +89,7 @@ Weitere Informationen zum Entwickeln von Apps, die auf .NET Framework ausgericht
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Leitfaden für .NET Framework](../index.md)
-- [Neuigkeiten](../whats-new/index.md)
+- [.NET Framework – Leitfaden](../index.md)
+- [Neues](../whats-new/index.md)
 - [.NET API-Browser](../../../api/index.md)
 - [Entwicklungshandbuch](../development-guide.md)

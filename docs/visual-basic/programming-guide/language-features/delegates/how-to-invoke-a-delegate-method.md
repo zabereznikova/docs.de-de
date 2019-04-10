@@ -2,25 +2,25 @@
 title: 'Vorgehensweise: Aufrufen einer Delegatenmethode (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: 42d56fca7e1d33c071db2e7e38935aa00caa5b7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac3e32010e7c20ba76e39915d694b11ab3a65d40
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676210"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319611"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Vorgehensweise: Aufrufen einer Delegatenmethode (Visual Basic)
 Dieses Beispiel zeigt, wie Sie eine Methode mit einem Delegaten zuweisen, und rufen danach diese Methode über den Delegaten.  
   
 ### <a name="create-the-delegate-and-matching-procedures"></a>Erstellen des Delegaten und die entsprechenden Verfahren  
   
-1.  Erstellen Sie einen Delegaten, mit dem Namen `MySubDelegate`.  
+1. Erstellen Sie einen Delegaten, mit dem Namen `MySubDelegate`.  
   
     ```  
     Delegate Sub MySubDelegate(ByVal x As Integer)  
     ```  
   
-2.  Deklarieren Sie eine Klasse, die eine Methode mit der gleichen Signatur wie der Delegat enthält.  
+2. Deklarieren Sie eine Klasse, die eine Methode mit der gleichen Signatur wie der Delegat enthält.  
   
     ```  
     Class class1  
@@ -30,7 +30,7 @@ Dieses Beispiel zeigt, wie Sie eine Methode mit einem Delegaten zuweisen, und ru
     End Class  
     ```  
   
-3.  Definieren Sie eine Methode, erstellt eine Instanz des Delegaten und ruft die Methode dem Delegaten zugeordnet sind, durch Aufrufen der integriertes `Invoke` Methode.  
+3. Definieren Sie eine Methode, erstellt eine Instanz des Delegaten und ruft die Methode dem Delegaten zugeordnet sind, durch Aufrufen der integriertes `Invoke` Methode.  
   
     ```  
     Protected Sub DelegateTest()  

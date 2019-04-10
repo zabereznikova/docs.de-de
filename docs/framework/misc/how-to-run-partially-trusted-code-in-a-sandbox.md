@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74a897c1fca51c92e8290f6362d947730349344c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104857"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316530"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -48,7 +48,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 ### <a name="to-run-an-application-in-a-sandbox"></a>So führen Sie eine Anwendung in einer Sandkastenumgebung aus  
   
-1.  Erstellen Sie den Berechtigungssatz, der der nicht vertrauenswürdigen Anwendung gewährt werden soll. Die Mindestberechtigung, die Sie gewähren können, ist die Berechtigung <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>. Sie können auch weitere Berechtigungen gewähren, von denen Sie annehmen, dass sie für nicht vertrauenswürdigen Code sicher sind, beispielsweise <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Mit dem folgenden Code wird ein neuer Berechtigungssatz erstellt, der nur die Berechtigung <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> enthält.  
+1. Erstellen Sie den Berechtigungssatz, der der nicht vertrauenswürdigen Anwendung gewährt werden soll. Die Mindestberechtigung, die Sie gewähren können, ist die Berechtigung <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>. Sie können auch weitere Berechtigungen gewähren, von denen Sie annehmen, dass sie für nicht vertrauenswürdigen Code sicher sind, beispielsweise <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Mit dem folgenden Code wird ein neuer Berechtigungssatz erstellt, der nur die Berechtigung <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> enthält.  
   
     ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
@@ -65,7 +65,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      Die <xref:System.Security.SecurityManager.GetStandardSandbox%2A>-Methode gibt entweder einen `Internet`-Berechtigungssatz oder einen `LocalIntranet`-Berechtigungssatz zurück, abhängig von der im Beweis angegebenen Zone. <xref:System.Security.SecurityManager.GetStandardSandbox%2A> konstruiert zudem Identitätsberechtigungen für einige der Beweis-Objekte, die als Verweise übergeben werden.  
   
-2.  Signieren Sie die Assembly, die die Hostingklasse enthält (in diesem Beispiel `Sandboxer` genannt) und den nicht vertrauenswürdigen Code aufruft. Fügen Sie den <xref:System.Security.Policy.StrongName>, der zum Signieren der Assembly verwenden wird, zum <xref:System.Security.Policy.StrongName>-Array des `fullTrustAssemblies`-Parameters des <xref:System.AppDomain.CreateDomain%2A>-Aufrufs hinzu. Die Hostingklasse muss als vollständig vertrauenswürdig ausgeführt werden, um die Ausführung von teilweise vertrauenswürdigem Code zu ermöglichen oder um Dienste für die teilweise vertrauenswürdige Anwendung bereitzustellen. Und so lesen Sie den <xref:System.Security.Policy.StrongName> einer Assembly:  
+2. Signieren Sie die Assembly, die die Hostingklasse enthält (in diesem Beispiel `Sandboxer` genannt) und den nicht vertrauenswürdigen Code aufruft. Fügen Sie den <xref:System.Security.Policy.StrongName>, der zum Signieren der Assembly verwenden wird, zum <xref:System.Security.Policy.StrongName>-Array des `fullTrustAssemblies`-Parameters des <xref:System.AppDomain.CreateDomain%2A>-Aufrufs hinzu. Die Hostingklasse muss als vollständig vertrauenswürdig ausgeführt werden, um die Ausführung von teilweise vertrauenswürdigem Code zu ermöglichen oder um Dienste für die teilweise vertrauenswürdige Anwendung bereitzustellen. Und so lesen Sie den <xref:System.Security.Policy.StrongName> einer Assembly:  
   
     ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
@@ -73,14 +73,14 @@ AppDomain.CreateDomain( string friendlyName,
   
      .NET Framework-Assemblys wie mscorlib und System.dll müssen nicht zur Liste der vollständig vertrauenswürdigen Assemblys hinzugefügt werden, da sie als vollständig vertrauenswürdig aus dem globalen Assemblycache geladen werden.  
   
-3.  Initialisieren Sie den <xref:System.AppDomainSetup>-Parameter der <xref:System.AppDomain.CreateDomain%2A>-Methode. Mit diesem Parameter können Sie viele der Einstellungen der neuen <xref:System.AppDomain> steuern. Die <xref:System.AppDomainSetup.ApplicationBase%2A>-Eigenschaft ist eine wichtige Einstellung und sollte sich von der <xref:System.AppDomainSetup.ApplicationBase%2A>-Eigenschaft der <xref:System.AppDomain> der Hostanwendung unterscheiden. Wenn die <xref:System.AppDomainSetup.ApplicationBase%2A>-Einstellungen die gleichen sind, kann die teilweise vertrauenswürdige Anwendung bewirken, dass die Hostanwendung (als vollständig vertrauenswürdig) eine hiervon definierte Ausnahme lädt, wodurch sie angreifbar wird. Dies ist ein weiterer Grund warum ein Catch (Ausnahme) nicht zu empfehlen ist. Wird die Anwendungsbasis des Hosts anders als die Anwendungsbasis der Anwendung in der Sandboxumgebung eingestellt, verringert sich das Risiko von Angriffen.  
+3. Initialisieren Sie den <xref:System.AppDomainSetup>-Parameter der <xref:System.AppDomain.CreateDomain%2A>-Methode. Mit diesem Parameter können Sie viele der Einstellungen der neuen <xref:System.AppDomain> steuern. Die <xref:System.AppDomainSetup.ApplicationBase%2A>-Eigenschaft ist eine wichtige Einstellung und sollte sich von der <xref:System.AppDomainSetup.ApplicationBase%2A>-Eigenschaft der <xref:System.AppDomain> der Hostanwendung unterscheiden. Wenn die <xref:System.AppDomainSetup.ApplicationBase%2A>-Einstellungen die gleichen sind, kann die teilweise vertrauenswürdige Anwendung bewirken, dass die Hostanwendung (als vollständig vertrauenswürdig) eine hiervon definierte Ausnahme lädt, wodurch sie angreifbar wird. Dies ist ein weiterer Grund warum ein Catch (Ausnahme) nicht zu empfehlen ist. Wird die Anwendungsbasis des Hosts anders als die Anwendungsbasis der Anwendung in der Sandboxumgebung eingestellt, verringert sich das Risiko von Angriffen.  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
   
-4.  Rufen Sie die <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29>-Methodenüberladung auf, um die Anwendungsdomäne mit den angegebenen Parametern zu erstellen.  
+4. Rufen Sie die <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29>-Methodenüberladung auf, um die Anwendungsdomäne mit den angegebenen Parametern zu erstellen.  
   
      Die Signatur für diese Methode lautet:  
   
@@ -106,7 +106,7 @@ AppDomain.CreateDomain( string friendlyName,
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
-5.  Laden Sie den Code in die <xref:System.AppDomain> der von Ihnen erstellten Sandkastenumgebung. Dazu gibt es zwei Möglichkeiten:  
+5. Laden Sie den Code in die <xref:System.AppDomain> der von Ihnen erstellten Sandkastenumgebung. Dazu gibt es zwei Möglichkeiten:  
   
     -   Rufen Sie die <xref:System.AppDomain.ExecuteAssembly%2A>-Methode für die Assembly auf.  
   
@@ -130,13 +130,13 @@ AppDomain.CreateDomain( string friendlyName,
     class Sandboxer:MarshalByRefObject  
     ```  
   
-6.  Entpacken Sie die neue Domäneninstanz in einen Verweis in dieser Domäne. Dieser Verweis wird verwendet, um den nicht vertrauenswürdigen Code auszuführen.  
+6. Entpacken Sie die neue Domäneninstanz in einen Verweis in dieser Domäne. Dieser Verweis wird verwendet, um den nicht vertrauenswürdigen Code auszuführen.  
   
     ```csharp
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
-7.  Rufen Sie in der `ExecuteUntrustedCode`-Methode der Instanz der soeben erstellten `Sandboxer`-Klasse auf.  
+7. Rufen Sie in der `ExecuteUntrustedCode`-Methode der Instanz der soeben erstellten `Sandboxer`-Klasse auf.  
   
     ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  

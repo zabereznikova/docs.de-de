@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169610"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313956"
 ---
 # <a name="documents-in-wpf"></a>Dokumente in WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] bietet eine große Auswahl an Dokumentfunktionen, mit denen die Erstellung von Inhalten mit hoher Wiedergabetreue, leichter zugegriffen wird und als in früheren Generationen von gelesen werden sollen [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]. Neben erweiterten Funktionen und verbesserter Qualität bietet [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] auch integrierte Dienste für Dokumentanzeige, Packen und Sicherheit. Dieses Thema enthält eine Einführung zu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Dokumenttypen und dem Packen von Dokumenten.  
@@ -89,9 +89,9 @@ ms.locfileid: "59169610"
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  
  Aus Sicherheitsgründen eine <xref:System.IO.Packaging.PackageDigitalSignature> ("digitale Signatur") kann in der Teile in einem Paket zugeordnet werden. Ein <xref:System.IO.Packaging.PackageDigitalSignature> beinhaltet ein [509], die stellt zwei Funktionen bereit:  
   
-1.  Identifizieren und Authentifizieren des Erstellers eines Parts  
+1. Identifizieren und Authentifizieren des Erstellers eines Parts  
   
-2.  Überprüfen des Parts auf Änderungen  
+2. Überprüfen des Parts auf Änderungen  
   
  Die digitale Signatur schließt eine Änderung des Parts nicht aus, doch schlägt eine Validierungsüberprüfung der digitalen Signatur bei jedweder Änderung des Parts fehl. Die Anwendung kann dann entsprechende Maßnahmen ergreifen, wie z.B. das Öffnen des Parts blockieren oder den Benutzer darüber benachrichtigen, dass der Part geändert wurde und nicht sicher ist.  
   
@@ -107,9 +107,9 @@ ms.locfileid: "59169610"
   
  Paketbeziehungen bieten eine sichtbare Möglichkeit zum Hinzufügen und Zuordnen von zusätzlichen Informationen zu einzelnen Parts oder dem gesamten Paket. Paketbeziehungen besitzen zwei Hauptaufgaben:  
   
-1.  Definieren von Abhängigkeitsbeziehungen zwischen einem Part und einem anderen  
+1. Definieren von Abhängigkeitsbeziehungen zwischen einem Part und einem anderen  
   
-2.  Definieren von Informationsbeziehungen, durch die Hinweise oder andere Daten zum Part hinzugefügt werden  
+2. Definieren von Informationsbeziehungen, durch die Hinweise oder andere Daten zum Part hinzugefügt werden  
   
  Ein <xref:System.IO.Packaging.PackageRelationship> bietet eine schnelle und sichtbare Möglichkeit zum Definieren der Abhängigkeiten und Hinzufügen von weiteren Informationen, die einem Part des Pakets oder das Paket als Ganzes.  
   

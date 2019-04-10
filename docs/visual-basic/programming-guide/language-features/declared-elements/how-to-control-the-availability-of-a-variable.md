@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: fb7c04ac6c24648dfb2a8cfa5e01bf97c6b0b3be
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311525"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Vorgehensweise: Steuern der Verfügbarkeit einer Variablen (Visual Basic)
 Sie steuern die Verfügbarkeit einer Variablen durch Angabe der *Zugriffsebene*. Die Zugriffsebene bestimmt, welcher Code verfügt über die Berechtigung zum Lesen oder Schreiben auf die Variable.  
@@ -31,25 +31,25 @@ Sie steuern die Verfügbarkeit einer Variablen durch Angabe der *Zugriffsebene*.
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>Um eine Variable zu machen, die nur innerhalb der Module, Klasse oder Struktur zugegriffen werden  
   
-1.  Ort der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) für die Variable in das Modul, Klasse oder Struktur, aber außerhalb einer Prozedur.  
+1. Ort der [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) für die Variable in das Modul, Klasse oder Struktur, aber außerhalb einer Prozedur.  
   
-2.  Enthalten die [Private](../../../../visual-basic/language-reference/modifiers/private.md) -Schlüsselwort in der `Dim` Anweisung.  
+2. Enthalten die [Private](../../../../visual-basic/language-reference/modifiers/private.md) -Schlüsselwort in der `Dim` Anweisung.  
   
      Sie Lese- oder Schreibzugriff auf die Variable an einer beliebigen Stelle innerhalb der Module, Klasse oder Struktur, jedoch nicht von außerhalb davon.  
   
 #### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>So auf eine Variable von einem beliebigen Code zugegriffen werden kann, die angezeigt werden können  
   
-1.  Platzieren Sie nach einer Membervariable der `Dim` -Anweisung für die Variable in einem Modul, Klasse oder Struktur, aber außerhalb einer Prozedur.  
+1. Platzieren Sie nach einer Membervariable der `Dim` -Anweisung für die Variable in einem Modul, Klasse oder Struktur, aber außerhalb einer Prozedur.  
   
-2.  Enthalten die [öffentliche](../../../../visual-basic/language-reference/modifiers/public.md) -Schlüsselwort in der `Dim` Anweisung.  
+2. Enthalten die [öffentliche](../../../../visual-basic/language-reference/modifiers/public.md) -Schlüsselwort in der `Dim` Anweisung.  
   
      Sie können lesen oder Schreiben auf die Variable aus jeder Code, der Interoperabilität mit der Assembly.  
   
  - oder -   
   
-1.  Platzieren Sie für eine lokale Variable, die `Dim` -Anweisung für die Variable innerhalb einer Prozedur.  
+1. Platzieren Sie für eine lokale Variable, die `Dim` -Anweisung für die Variable innerhalb einer Prozedur.  
   
-2.  Schließen Sie nicht die `Public` -Schlüsselwort in der `Dim` Anweisung.  
+2. Schließen Sie nicht die `Public` -Schlüsselwort in der `Dim` Anweisung.  
   
      Sie Lese- oder Schreibzugriff auf die Variable an einer beliebigen Stelle innerhalb der Prozedur, aber nicht von außerhalb davon.  
   
@@ -58,17 +58,17 @@ Sie steuern die Verfügbarkeit einer Variablen durch Angabe der *Zugriffsebene*.
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>Um eine Variable nur innerhalb seiner Klasse und alle abgeleiteten Klassen zugänglich zu machen  
   
-1.  Ort der `Dim` -Anweisung für die Variable innerhalb einer Klasse, aber außerhalb einer Prozedur.  
+1. Ort der `Dim` -Anweisung für die Variable innerhalb einer Klasse, aber außerhalb einer Prozedur.  
   
-2.  Enthalten die [geschützte](../../../../visual-basic/language-reference/modifiers/protected.md) -Schlüsselwort in der `Dim` Anweisung.  
+2. Enthalten die [geschützte](../../../../visual-basic/language-reference/modifiers/protected.md) -Schlüsselwort in der `Dim` Anweisung.  
   
      Sie Lese- oder Schreibzugriff auf die Variable an einer beliebigen Stelle innerhalb der Klasse sowie innerhalb eine Klasse abgeleitet, daraus, jedoch nicht von außerhalb einer Klasse in der Ableitungskette.  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>Um eine Variable zu machen, die nur innerhalb der gleichen Assembly zugegriffen werden  
   
-1.  Ort der `Dim` -Anweisung für die Variable in einem Modul, Klasse oder Struktur, aber außerhalb einer Prozedur.  
+1. Ort der `Dim` -Anweisung für die Variable in einem Modul, Klasse oder Struktur, aber außerhalb einer Prozedur.  
   
-2.  Enthalten die [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) -Schlüsselwort in der `Dim` Anweisung.  
+2. Enthalten die [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) -Schlüsselwort in der `Dim` Anweisung.  
   
      Sie Lese- oder Schreibzugriff auf die Variable an einer beliebigen Stelle innerhalb der Module, Klasse oder Struktur sowie von einem beliebigen Code in der gleichen Assembly, jedoch nicht von außerhalb der Assembly.  
   

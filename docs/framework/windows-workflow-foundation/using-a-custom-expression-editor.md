@@ -2,12 +2,12 @@
 title: Verwenden eines benutzerdefinierten Ausdrucks-Editors
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 2a390dd57d31994e8a2ba6a424d74bf7ee44fc10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101275"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314086"
 ---
 # <a name="using-a-custom-expression-editor"></a>Verwenden eines benutzerdefinierten Ausdrucks-Editors
 Ein benutzerdefinierter Ausdrucks-Editor kann implementiert werden, um eine umfangreichere oder einfachere Ausdrucksbearbeitung zu ermöglichen. Es gibt mehrere Szenarios, in denen ein benutzerdefinierter Ausdrucks-Editor nützlich ist:  
@@ -18,11 +18,11 @@ Ein benutzerdefinierter Ausdrucks-Editor kann implementiert werden, um eine umfa
   
  Zur Implementierung eines benutzerdefinierten Ausdrucks-Editors sind drei einfache Schritte erforderlich:  
   
-1.  Implementieren Sie die <xref:System.Activities.Presentation.View.IExpressionEditorService>-Schnittstelle. Über diese Schnittstelle wird die Erstellung und Löschung von Ausdrucks-Editoren verwaltet.  
+1. Implementieren Sie die <xref:System.Activities.Presentation.View.IExpressionEditorService>-Schnittstelle. Über diese Schnittstelle wird die Erstellung und Löschung von Ausdrucks-Editoren verwaltet.  
   
-2.  Implementieren Sie die <xref:System.Activities.Presentation.View.IExpressionEditorInstance>-Schnittstelle. Über diese Schnittstelle wird die Benutzeroberfläche zur Ausdrucksbearbeitung implementiert.  
+2. Implementieren Sie die <xref:System.Activities.Presentation.View.IExpressionEditorInstance>-Schnittstelle. Über diese Schnittstelle wird die Benutzeroberfläche zur Ausdrucksbearbeitung implementiert.  
   
-3.  Veröffentlichen des <xref:System.Activities.Presentation.View.IExpressionEditorService> in der neu gehosteten Workflowanwendung.  
+3. Veröffentlichen des <xref:System.Activities.Presentation.View.IExpressionEditorService> in der neu gehosteten Workflowanwendung.  
   
 ## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>Implementieren eines benutzerdefinierten Ausdrucks-Editors in einer Klassenbibliothek  
  Es folgt ein Codebeispiel für eine `MyEditorService`-Klasse (Machbarkeitsstudie) zur Implementierung der <xref:System.Activities.Presentation.View.IExpressionEditorService>-Schnittstelle, die in einem MyExpressionEditorService-Bibliotheksprojekt enthalten ist.  

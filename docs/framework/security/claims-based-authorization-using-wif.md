@@ -3,12 +3,12 @@ title: Anspruchsbasierte Autorisierung mit WIF
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 65254b31570ebf65d10c4d8c1f0fa776a6e2bae1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872922"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312175"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Anspruchsbasierte Autorisierung mit WIF
 In einer Anwendung der vertrauenden Seite bestimmt die Autorisierung, auf welche Ressourcen eine authentifizierte Identität zugreifen und welche Vorgänge sie mit diesen Ressourcen ausführen darf. Eine falsche oder schwache Autorisierung führt zu Offenlegung von Informationen und Datenmanipulation. In diesem Thema werden die verfügbaren Methoden zum Implementieren der Autorisierung für Ansprüche unterstützende ASP.NET-Webanwendungen und -Dienste mit Windows Identity Foundation (WIF) und einem Sicherheitstokendienst (STS) wie Microsoft Azure-Zugriffssteuerungsdienst (ACS) beschrieben.  
@@ -42,7 +42,7 @@ In einer Anwendung der vertrauenden Seite bestimmt die Autorisierung, auf welche
   
 -   **Während der Tokenausstellung**. Wenn ein Benutzer authentifiziert wird, kann der Rollenanspruch vom Identitätsanbieter-STS oder von einem Verbundanbieter wie dem Microsoft Azure-Zugriffssteuerungsdienst (ACS) ausgegeben werden.  
   
--   **Transformieren beliebiger Ansprüche mit ClaimsAuthenticationManager in einen Anspruchsrollentyp**. ClaimsAuthenticationManager ist eine Komponente, die im Lieferumfang von WIF enthalten ist. Sie ermöglicht ein Abfangen von Anforderungen, wenn diese eine Anwendung starten. Dabei werden Token überprüft und transformiert, indem Ansprüche hinzugefügt, geändert oder entfernt werden. Weitere Informationen zur Verwendung von ClaimsAuthenticationManager zum Transformieren von Ansprüchen finden Sie unter [so wird's gemacht: Implementieren Rolle Based Access Control (RBAC) in einem Claims Aware ASP.NET Application Using WIF und ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
+-   **Transformieren beliebiger Ansprüche mit ClaimsAuthenticationManager in einen Anspruchsrollentyp**. ClaimsAuthenticationManager ist eine Komponente, die im Lieferumfang von WIF enthalten ist. Sie ermöglicht ein Abfangen von Anforderungen, wenn diese eine Anwendung starten. Dabei werden Token überprüft und transformiert, indem Ansprüche hinzugefügt, geändert oder entfernt werden. Weitere Informationen zur Verwendung von ClaimsAuthenticationManager zum Transformieren von Ansprüchen finden Sie unter [so wird's gemacht: Implementieren rollenbasierte Zugriffssteuerung (RBAC) in einer Claims Aware ASP.NET-Anwendung mithilfe von WIF und ACS](https://go.microsoft.com/fwlink/?LinkID=247445).  
   
 -   **Zuordnen von beliebigen Ansprüchen zu einem Rollentyp mithilfe des samlSecurityTokenRequirement-Konfigurationsabschnitts**. Dies ist ein deklarativer Ansatz, bei dem die Anspruchstransformation nur mithilfe der Konfiguration durchgeführt wird. Eine Codierung ist nicht erforderlich.  
   
@@ -50,14 +50,14 @@ In einer Anwendung der vertrauenden Seite bestimmt die Autorisierung, auf welche
 ## <a name="claims-based-authorization"></a>Anspruchsbasierte Autorisierung  
  Die anspruchsbasierte Autorisierung ist ein Ansatz, bei dem die Autorisierungsentscheidung, den Zugriff zu gewähren oder zu verweigern, auf beliebiger Logik basiert. Diese Logik trifft die Entscheidung mithilfe der in Ansprüchen verfügbaren Informationen. Beachten Sie, dass der einzige Anspruch, der in RBAC verwendet wird, der Rollentyp ist. Ein Rollentypanspruch wurde verwendet, um zu überprüfen, ob der Benutzer zu einer bestimmten Rolle gehört oder nicht. Die folgenden Schritte veranschaulichen den Prozess zum Treffen der Autorisierungsentscheidungen mithilfe des anspruchsbasierten Autorisierungsansatzes:  
   
-1.  Die Anwendung empfängt eine Anforderung, die eine Authentifizierung des Benutzers erfordert.  
+1. Die Anwendung empfängt eine Anforderung, die eine Authentifizierung des Benutzers erfordert.  
   
-2.  WIF leitet den Benutzer an den Identitätsanbieter um. Nach der Authentifizierung wird die Anwendungsanforderung mit einem verknüpften Sicherheitstoken durchgeführt, das den Benutzer mit Ansprüchen darstellt. WIF ordnet diese Ansprüche dem Prinzipal zu, der den Benutzer darstellt.  
+2. WIF leitet den Benutzer an den Identitätsanbieter um. Nach der Authentifizierung wird die Anwendungsanforderung mit einem verknüpften Sicherheitstoken durchgeführt, das den Benutzer mit Ansprüchen darstellt. WIF ordnet diese Ansprüche dem Prinzipal zu, der den Benutzer darstellt.  
   
-3.  Die Anwendung übergibt die Ansprüche an den Entscheidungslogikmechanismus. Dabei kann es sich um Code im Arbeitsspeicher, einen Aufruf eines Webdiensts, eine Abfrage einer Datenbank, eine hoch entwickelte Regel-Engine oder die Verwendung von ClaimsAuthorizationManager handeln.  
+3. Die Anwendung übergibt die Ansprüche an den Entscheidungslogikmechanismus. Dabei kann es sich um Code im Arbeitsspeicher, einen Aufruf eines Webdiensts, eine Abfrage einer Datenbank, eine hoch entwickelte Regel-Engine oder die Verwendung von ClaimsAuthorizationManager handeln.  
   
-4.  Der Entscheidungsmechanismus berechnet das Ergebnis auf Grundlage der Ansprüche.  
+4. Der Entscheidungsmechanismus berechnet das Ergebnis auf Grundlage der Ansprüche.  
   
-5.  Der Zugriff wird gewährt, wenn das Ergebnis "true" ist, und verweigert, wenn es "false" ist. Beispielsweise könnte die Regel lauten, dass der Benutzer mindestens 21 Jahre alt sein und in Hessen leben muss.  
+5. Der Zugriff wird gewährt, wenn das Ergebnis "true" ist, und verweigert, wenn es "false" ist. Beispielsweise könnte die Regel lauten, dass der Benutzer mindestens 21 Jahre alt sein und in Hessen leben muss.  
   
- <xref:System.Security.Claims.ClaimsAuthorizationManager> ist nützlich, um die Entscheidungslogik für die anspruchsbasierte Autorisierung in Anwendungen zu externalisieren. ClaimsAuthorizationManager ist eine WIF-Komponente, die im Lieferumfang von .NET 4.5 enthalten ist. Mit ClaimsAuthorizationManager können Sie eingehende Anforderungen abfangen und eine Logik Ihrer Wahl implementieren, um Autorisierungsentscheidungen auf der Basis eingehender Ansprüche zu treffen. Dies ist wichtig, wenn die Autorisierungslogik geändert werden muss. In diesem Fall beeinträchtigt die Verwendung von ClaimsAuthorizationManager nicht die Integrität der Anwendung. Darüber hinaus wird die Wahrscheinlichkeit eines Anwendungsfehlers aufgrund der Änderung reduziert. Weitere Informationen dazu, wie Sie ClaimsAuthorizationManager zur Implementierung von anspruchsbasierter Zugriffssteuerung verwenden, finden Sie unter [How To: Implement Claims Authorization in a Claims Aware ASP.NET Application Using WIF and ACS (Vorgehensweise: Implementieren von Anspruchsautorisierung in einer Ansprüche unterstützenden ASP.NET-Anwendung mithilfe von WIF und ACS)](https://go.microsoft.com/fwlink/?LinkID=247446).
+ <xref:System.Security.Claims.ClaimsAuthorizationManager> ist nützlich für die entscheidungslogik für anspruchsbasierte Autorisierung in Ihren Anwendungen zu externalisieren. ClaimsAuthorizationManager ist eine WIF-Komponente, die im Lieferumfang von .NET 4.5 enthalten ist. Mit ClaimsAuthorizationManager können Sie eingehende Anforderungen abfangen und eine Logik Ihrer Wahl implementieren, um Autorisierungsentscheidungen auf der Basis eingehender Ansprüche zu treffen. Dies ist wichtig, wenn die Autorisierungslogik geändert werden muss. In diesem Fall beeinträchtigt die Verwendung von ClaimsAuthorizationManager nicht die Integrität der Anwendung. Darüber hinaus wird die Wahrscheinlichkeit eines Anwendungsfehlers aufgrund der Änderung reduziert. Weitere Informationen zum Verwenden von ClaimsAuthenticationManager zum Implementieren von anspruchsbasierter Zugriffssteuerung finden Sie unter [so wird's gemacht: Implementieren von Autorisierung in einer Claims Aware ASP.NET-Anwendung mithilfe von WIF und ACS Ansprüchen](https://go.microsoft.com/fwlink/?LinkID=247446).

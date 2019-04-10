@@ -11,23 +11,23 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: 39dd77fee36b172f6c38746bfe970094ec9edb4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9487d4f82878ffefe17c576b16f654293ef01106
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223549"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316504"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>Vorgehensweise: Anzeigen von Fehlersymbolen für die Formularvalidierung mit der ErrorProvider-Komponente in Windows Forms
 Sie können ein Windows Forms <xref:System.Windows.Forms.ErrorProvider> Komponente, um ein Fehlersymbol angezeigt wird, wenn der Benutzer unzulässige Daten eingibt. Sie müssen mindestens zwei Steuerelemente im Formular aus, um zwischen diesen gewechselt und aufgerufen Validierungscode verfügen.  
   
 ### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>Um ein Fehlersymbol angezeigt wird, wenn der Wert eines Steuerelements ungültig ist.  
   
-1.  Hinzufügen von zwei Steuerelementen, z. B. Textfelder, zu einem Windows-Formular.  
+1. Hinzufügen von zwei Steuerelementen, z. B. Textfelder, zu einem Windows-Formular.  
   
-2.  Hinzufügen einer <xref:System.Windows.Forms.ErrorProvider> -Komponente zum Formular.  
+2. Hinzufügen einer <xref:System.Windows.Forms.ErrorProvider> -Komponente zum Formular.  
   
-3.  Wählen Sie das erste Steuerelement, und fügen Sie Code in die <xref:System.Windows.Forms.Control.Validating> -Ereignishandler. Damit dieser Code ordnungsgemäß ausgeführt werden kann muss die Prozedur mit dem Ereignis bestehen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Ereignishandlern für Windows Forms zur Laufzeit](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+3. Wählen Sie das erste Steuerelement, und fügen Sie Code in die <xref:System.Windows.Forms.Control.Validating> -Ereignishandler. Damit dieser Code ordnungsgemäß ausgeführt werden kann muss die Prozedur mit dem Ereignis bestehen. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Ereignishandlern für Windows Forms zur Laufzeit](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
      Der folgende Code überprüft die Gültigkeit der Daten, die der Benutzer eingegeben hat; Wenn die Daten ungültig ist, werden die <xref:System.Windows.Forms.ErrorProvider.SetError%2A> Methode wird aufgerufen. Das erste Argument von der <xref:System.Windows.Forms.ErrorProvider.SetError%2A> Methode gibt an, die steuern, auf das Symbol angezeigt. Das zweite Argument ist der, die anzuzeigende Fehlertext.  
   
@@ -90,7 +90,7 @@ Sie können ein Windows Forms <xref:System.Windows.Forms.ErrorProvider> Komponen
        (this, &Form1::textBox1_Validating);  
     ```  
   
-4.  Führen Sie das Projekt aus. Geben Sie (in diesem Beispiel nicht numerischen) ungültige Daten in das erste Steuerelement, und klicken Sie dann die zweite Registerkarte. Wenn das Symbol "Fehler" angezeigt wird, stellen Sie den Mauszeiger an den Fehlertext finden Sie unter.  
+4. Führen Sie das Projekt aus. Geben Sie (in diesem Beispiel nicht numerischen) ungültige Daten in das erste Steuerelement, und klicken Sie dann die zweite Registerkarte. Wenn das Symbol "Fehler" angezeigt wird, stellen Sie den Mauszeiger an den Fehlertext finden Sie unter.  
   
 ## <a name="see-also"></a>Siehe auch
 

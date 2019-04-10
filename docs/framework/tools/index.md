@@ -9,17 +9,17 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11525c2a98ceee3115fe789dbb106347c0201ecd
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220105"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311954"
 ---
 # <a name="net-framework-tools"></a>.NET Framework-Tools
 Die .NET Framework-Tools erleichtern Ihnen das Erstellen, Bereitstellen und Verwalten von Anwendungen und Komponenten für .NET Framework.  
   
-Die meisten der in diesem Abschnitt beschriebenen .NET Framework-Tools werden automatisch mit Visual Studio installiert. Sie können Visual Studio von der [Visual Studio-Downloadseite](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) herunterladen.
+Die meisten der in diesem Abschnitt beschriebenen .NET Framework-Tools werden automatisch mit Visual Studio installiert. Sie können Visual Studio von der [Visual Studio-Downloadseite](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) herunterladen.
   
  Mit Ausnahme des Assembly Cache Viewer (Shfusion.dll) können Sie alle Tools von der Befehlszeile aus starten. Auf "Shfusion.dll" muss über den Datei-Explorer zugegriffen werden.  
   
@@ -59,7 +59,7 @@ Die meisten der in diesem Abschnitt beschriebenen .NET Framework-Tools werden a
  [Ilasm.exe (IL-Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md)  
  Generiert eine portierbare ausführbare Datei (Portable Executable, PE) aus Zwischensprache (Intermediate Language, IL). Sie können die resultierende ausführbare Datei starten, um zu überprüfen, ob die IL wie erwartet ausgeführt wird.  
   
- [Ildasm.exe (IL-Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
+ [Ildasm.exe (IL Disassembler)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
  Erfasst eine portierbare ausführbare Datei (PE-Datei), die Intermediate Language (IL)-Code enthält, und erstellt eine Textdatei, die in das IL Assembler-Tool (Ilasm.exe) eingegeben werden kann.  
   
  [Installutil.exe (Installer-Tool)](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
@@ -77,7 +77,7 @@ Die meisten der in diesem Abschnitt beschriebenen .NET Framework-Tools werden a
  [MDbg.exe (.NET Framework-Befehlszeilendebugger)](../../../docs/framework/tools/mdbg-exe.md)  
  Erleichtert Anbietern von Tools und Entwicklern von Anwendungen das Suchen und Beheben von Fehlern in Programmen, die für die Common Language Runtime von .NET Framework entwickelt wurden. Dieses Tool stellt mithilfe der Debug-API Debugdienste bereit.  
   
- [Mgmtclassgen.exe (Management Strongly Typed Class Generator-Tool)](../../../docs/framework/tools/mgmtclassgen-exe.md)  
+ [Mgmtclassgen.exe (Management Strongly Typed Class Generator)](../../../docs/framework/tools/mgmtclassgen-exe.md)  
  Ermöglicht das Generieren einer früh gebundenen verwalteten Klasse für eine angegebene WMI (Windows Management Instrumentation)-Klasse.  
   
  [Mpgo.exe (verwaltetes, profilgesteuertes Optimierungstool)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md)  

@@ -2,35 +2,35 @@
 title: Übersicht über den Nachrichtenfluss
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 54ffd8ec2349b2dd54ca61615b2fb1b997d02932
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372784"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312643"
 ---
 # <a name="message-flow-overview"></a>Übersicht über den Nachrichtenfluss
 In einem verteilten System mit untereinander verbundenen Diensten müssen kausale Beziehungen zwischen den Diensten bestimmt werden. Es ist unerlässlich, die verschiedenen Komponenten eines Anforderungsflusses zu verstehen, wenn kritische Szenarien wie Systemüberwachung, Fehlerbehebung und Fehlerursachenanalyse unterstützt werden sollen. Um eine Korrelation der Ablaufverfolgungen verschiedener Dienste zu ermöglichen, wurde in .NET Framework 4 eine entsprechende Unterstützung über folgende Funktionen hinzugefügt:
 
--   Analytische Ablaufverfolgung: Hierbei handelt es sich um eine Ablaufverfolgungsfunktion mit hoher Leistung und geringer Ausführlichkeit, die auf der Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW) aufbaut.
+-   Analytische Ablaufverfolgung: Eine hohe Leistung und geringer Ausführlichkeit aktivitätsablaufverfolgungs-Funktion mit Event Tracing for Windows (ETW).
 
--   End-to-End-Aktivitätsmodell für WCF/WF-Dienste: Diese Funktion unterstützt die Korrelation von Ablaufverfolgungen, die vom <xref:System.ServiceModel>-Namespace und vom <xref:System.Workflow.ComponentModel>-Namespace generiert wurden.
+-   End-to-End-Aktivitätsmodell für WCF/WF-Dienste: Dieses Feature unterstützt die Korrelation von ablaufverfolgungen, die generiert werden, indem die <xref:System.ServiceModel> und <xref:System.Workflow.ComponentModel> Namespaces.
 
--   ETW-Nachverfolgung für WF: Diese Funktion verwendet Überwachungsdatensätze, die von WF-Diensten generiert wurden, um einen Überblick über den aktuellen Status und Fortschritt eines bestimmten Workflows zu geben.
+-   ETW-nachverfolgung für WF: Diese Funktion verwendet Überwachungsdatensätze, die vom WF-Dienste, um Einblick in den aktuellen Status und Fortschritt des Workflows bereitzustellen.
 
  Anhand der in einem Überwachungs- oder Ablaufverfolgungsdatensatz protokollierten Fehler können Codefehler oder fehlerhaft formatierte Nachrichten aufgefunden werden. Mit der ActivityId-Eigenschaft des Knotens Korrelation im Nachrichtenheader des Ereignisses kann die Aktivität ermittelt werden, die den Fehler verursacht hat. Zum Aktivieren der Ablaufverfolgung des Nachrichtenflusses nach Aktivitäts-ID finden Sie unter [Configuring Message Flow Tracing](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md). In diesem Thema wird veranschaulicht, wie die Ablaufverfolgung des Nachrichtenflusses im Projekt aktiviert wird, das im Lernprogramm "Erste Schritte" erstellt wurde.
 
 ### <a name="to-enable-message-flow-tracing-in-the-getting-started-tutorial"></a>So aktivieren Sie die Ablaufverfolgung des Nachrichtenflusses im Lernprogramm "Erste Schritte"
 
-1.  Ereignisanzeige öffnen, indem Sie auf **starten**, **ausführen**, und geben Sie `eventvwr.exe`.
+1. Ereignisanzeige öffnen, indem Sie auf **starten**, **ausführen**, und geben Sie `eventvwr.exe`.
 
-2.  Wenn Sie analytische Ablaufverfolgung nicht aktiviert haben, erweitern Sie **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendungsserver-Anwendungen** . Wählen Sie **Ansicht**, **analytische und Debugprotokolle einblenden**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll aktivieren**. Lassen Sie die Ereignisanzeige geöffnet, damit die Ablaufverfolgungen eingesehen werden können.
+2. Wenn Sie analytische Ablaufverfolgung nicht aktiviert haben, erweitern Sie **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, **Anwendungsserver-Anwendungen** . Wählen Sie **Ansicht**, **analytische und Debugprotokolle einblenden**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll aktivieren**. Lassen Sie die Ereignisanzeige geöffnet, damit die Ablaufverfolgungen eingesehen werden können.
 
-3.  Öffnen Sie das Beispiel erstellt der [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md) in Visual Studio 2012. Beachten Sie, dass Sie Visual Studio 2012 als Administrator ausführen müssen, damit der Dienst erstellt werden kann. Wenn Sie die WCF-Beispiele installiert haben, können Sie öffnen die [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), enthält das abgeschlossene Projekt, das in diesem Tutorial erstellt haben.
+3. Öffnen Sie das Beispiel erstellt der [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md) in Visual Studio 2012. Beachten Sie, dass Sie Visual Studio 2012 als Administrator ausführen müssen, damit der Dienst erstellt werden kann. Wenn Sie die WCF-Beispiele installiert haben, können Sie öffnen die [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), enthält das abgeschlossene Projekt, das in diesem Tutorial erstellt haben.
 
-4.  Mit der rechten Maustaste die **Service** Projekt, und wählen **hinzufügen**, **neues Element**. Wählen Sie **Anwendungskonfigurationsdatei** , und klicken Sie auf **OK**.
+4. Mit der rechten Maustaste die **Service** Projekt, und wählen **hinzufügen**, **neues Element**. Wählen Sie **Anwendungskonfigurationsdatei** , und klicken Sie auf **OK**.
 
-5.  Fügen Sie der im vorherigen Schritt erstellten Datei App.Config den folgenden Code hinzu.
+5. Fügen Sie der im vorherigen Schritt erstellten Datei App.Config den folgenden Code hinzu.
 
     ```xml
     <system.serviceModel>
@@ -40,9 +40,9 @@ In einem verteilten System mit untereinander verbundenen Diensten müssen kausal
     </system.serviceModel>
     ```
 
-6.  Führen Sie die Serveranwendung ohne Debuggen aus, indem Sie STRG+F5 drücken. Führen Sie das Clientprojekt, indem Sie mit der rechten Maustaste die **Client** Projekt- und Auswählen von **Debuggen**, **neue Instanz starten**.
+6. Führen Sie die Serveranwendung ohne Debuggen aus, indem Sie STRG+F5 drücken. Führen Sie das Clientprojekt, indem Sie mit der rechten Maustaste die **Client** Projekt- und Auswählen von **Debuggen**, **neue Instanz starten**.
 
-7.  Um die Ereignisse vom Client zum Server zu verfolgen, fügen Sie der Anwendungskonfigurationsdatei im Projekt Client Folgendes hinzu.
+7. Um die Ereignisse vom Client zum Server zu verfolgen, fügen Sie der Anwendungskonfigurationsdatei im Projekt Client Folgendes hinzu.
 
     ```xml
     <diagnostics>
@@ -50,7 +50,7 @@ In einem verteilten System mit untereinander verbundenen Diensten müssen kausal
     </diagnostics>
     ```
 
-8.  Fügen Sie in Program.cs auf dem Client die folgende Using-Anweisung hinzu.
+8. Fügen Sie in Program.cs auf dem Client die folgende Using-Anweisung hinzu.
 
     ```csharp
     using System.Diagnostics;

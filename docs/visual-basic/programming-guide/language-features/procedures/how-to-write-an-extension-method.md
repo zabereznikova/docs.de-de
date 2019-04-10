@@ -6,33 +6,33 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: d6f8b85945bd400d1f4b54a50260d72c750add8b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 00d62d275f7afc06e066a375dc1ffcd74b23c9ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819116"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313761"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>Vorgehensweise: Schreiben einer Erweiterungsmethode (Visual Basic)
 Erweiterungsmethoden können Sie einer vorhandenen Klasse Methoden hinzufügen. Die Erweiterungsmethode kann aufgerufen werden, als handele es sich um eine Instanz dieser Klasse.  
   
 ### <a name="to-define-an-extension-method"></a>So definieren Sie eine Extension-Methode  
   
-1.  Öffnen Sie eine neue oder vorhandene Visual Basic-Anwendung in Visual Studio.  
+1. Öffnen Sie eine neue oder vorhandene Visual Basic-Anwendung in Visual Studio.  
   
-2.  Am Anfang der Datei, in der Sie eine Erweiterungsmethode definieren möchten, müssen schließen Sie die folgende importanweisung ein:  
+2. Am Anfang der Datei, in der Sie eine Erweiterungsmethode definieren möchten, müssen schließen Sie die folgende importanweisung ein:  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3.  Beginnen Sie in einem Modul in Ihrer neuen oder vorhandenen Anwendung die Definition der Methode mit dem Erweiterungsattribut:  
+3. Beginnen Sie in einem Modul in Ihrer neuen oder vorhandenen Anwendung die Definition der Methode mit dem Erweiterungsattribut:  
   
     ```  
     <Extension()>  
     ```  
   
-4.  Deklarieren Sie die Methode auf die normale Weise, außer dass der Typ des ersten Parameters den Datentyp sein muss, die, den Sie erweitern möchten.  
+4. Deklarieren Sie die Methode auf die normale Weise, außer dass der Typ des ersten Parameters den Datentyp sein muss, die, den Sie erweitern möchten.  
   
     ```  
     <Extension()>   

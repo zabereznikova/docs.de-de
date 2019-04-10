@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa6be50e1cdb00acf79c9f9e2c49050ce7bf3b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: abd4941697639ec7bdda545b1ead8d57091e9e7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213349"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314658"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Exemplarische Vorgehensweise: Beziehungsübergreifendes Abfragen (Visual Basic)
 Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *Zuordnungen* um fremdschlüsselbeziehungen in der Datenbank darzustellen.  
@@ -53,15 +53,15 @@ Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>So greifen Sie mithilfe von Customer-Objekten auf Order-Objekte zu  
   
-1.  Ändern Sie die `Sub Main`-Methode durch das Eingeben oder Einfügen des folgenden Codes in die Methode:  
+1. Ändern Sie die `Sub Main`-Methode durch das Eingeben oder Einfügen des folgenden Codes in die Methode:  
   
      [!code-vb[DLinqWalk2VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#3)]  
   
-2.  Drücken Sie F5, um die Anwendung zu debuggen.  
+2. Drücken Sie F5, um die Anwendung zu debuggen.  
   
      Zwei Namen werden im Meldungsfeld angezeigt, und das Konsolenfenster zeigt den generierten SQL-Code an.  
   
-3.  Schließen Sie das Meldungsfeld, um das Debuggen zu beenden.  
+3. Schließen Sie das Meldungsfeld, um das Debuggen zu beenden.  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>Erstellen einer Datenbankansicht mit strikter Typbindung  
  Es ist viel leichter, mit einer Datenbankansicht mit strikter Typbindung zu beginnen. Bei strikter Typbindung des <xref:System.Data.Linq.DataContext>-Objekts benötigen Sie keine Aufrufe von <xref:System.Data.Linq.DataContext.GetTable%2A>. Sie können Tabellen mit strikter Typbindung in allen Abfragen verwenden, wenn Sie das <xref:System.Data.Linq.DataContext>-Objekt mit strikter Typbindung verwenden.  
@@ -70,23 +70,23 @@ Diese exemplarische Vorgehensweise veranschaulicht die Verwendung von [!INCLUDE[
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>So erstellen Sie die striktre Typbindung für das DataContext-Objekt  
   
-1.  Fügen Sie den folgenden Code oberhalb der Deklaration der `Customer`-Klasse hinzu.  
+1. Fügen Sie den folgenden Code oberhalb der Deklaration der `Customer`-Klasse hinzu.  
   
      [!code-vb[DLinqWalk2VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#4)]  
   
-2.  Ändern Sie die `Sub Main`-Methode wie folgt, damit diese den <xref:System.Data.Linq.DataContext> mit strikter Typbindung verwendet:  
+2. Ändern Sie die `Sub Main`-Methode wie folgt, damit diese den <xref:System.Data.Linq.DataContext> mit strikter Typbindung verwendet:  
   
      [!code-vb[DLinqWalk2VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#5)]  
   
-3.  Drücken Sie F5, um die Anwendung zu debuggen.  
+3. Drücken Sie F5, um die Anwendung zu debuggen.  
   
      Die Ausgabe im Konsolenfenster lautet:  
   
      `ID=WHITC`  
   
-4.  Drücken Sie die EINGABETASTE im Konsolenfenster, um die Anwendung zu schließen.  
+4. Drücken Sie die EINGABETASTE im Konsolenfenster, um die Anwendung zu schließen.  
   
-5.  Auf der **Datei** Menü klicken Sie auf **Alles speichern** , wenn Sie diese Anwendung speichern möchten.  
+5. Auf der **Datei** Menü klicken Sie auf **Alles speichern** , wenn Sie diese Anwendung speichern möchten.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Die nächste exemplarische Vorgehensweise ([Exemplarische Vorgehensweise: Bearbeiten von Daten (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) wird veranschaulicht, wie Daten bearbeiten können. Diese exemplarische Vorgehensweise setzt nicht voraus, dass Sie die beiden in dieser Serie abgeschlossenen exemplarischen Vorgehensweisen speichern.  

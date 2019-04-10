@@ -2,12 +2,12 @@
 title: Asynchrone Rückgabetypen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 7a8bc3ba98da830c8415284771460a25e0927895
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838351"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313280"
 ---
 # <a name="async-return-types-visual-basic"></a>Asynchrone Rückgabetypen (Visual Basic)
 Asynchrone Methoden haben drei mögliche Rückgabetypen: <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task> und den void-Typ. In Visual Basic wird der void-Rückgabetyp als [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)-Prozedur geschrieben. Weitere Informationen zu asynchronen Methoden finden Sie unter [asynchrone Programmierung mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync` wird aufgerufen und erwartet, indem eine "await"-Anweisung anstelle eines "await"-Ausdrucks verwendet wird, ähnlich der Aufrufanweisung für ein synchrones `Sub` oder eine Methode, die "void" zurückgibt. Die Anwendung von einem `Await` Operator in diesem Fall erzeugt keine Werte.  
+ `Task_MethodAsync` wird aufgerufen und erwartet, indem anstelle einer Await-Anweisung, die einen Await-Ausdruck, ähnlich der aufrufanweisung für einen synchronen `Sub` oder "void" zurückgebende Methode. Die Anwendung von einem `Await` Operator in diesem Fall erzeugt keine Werte.  
   
  Der folgende Code ruft auf und erwartet die `Task_MethodAsync`-Methode.  
   
@@ -150,23 +150,23 @@ End Sub
   
  Um das Projekt auszuführen, führen Sie die folgenden Schritte aus:  
   
-1.  Starten Sie Visual Studio.  
+1. Starten Sie Visual Studio.  
   
-2.  Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.  
+2. Wählen Sie in der Menüleiste **Datei**, **Neu**, **Projekt**aus.  
   
      Das Dialogfeld **Neues Projekt** wird angezeigt.  
   
-3.  In der **installiert**, **Vorlagen** Kategorie wählen **Visual Basic**, und wählen Sie dann **Windows**. Wählen Sie in der Liste der Projekttypen die **WPF-Anwendung** aus.  
+3. In der **installiert**, **Vorlagen** Kategorie wählen **Visual Basic**, und wählen Sie dann **Windows**. Wählen Sie in der Liste der Projekttypen die **WPF-Anwendung** aus.  
   
-4.  Geben Sie `AsyncReturnTypes` als Namen für das Projekt ein, und wählen Sie dann die Schaltfläche **OK** aus.  
+4. Geben Sie `AsyncReturnTypes` als Namen für das Projekt ein, und wählen Sie dann die Schaltfläche **OK** aus.  
   
      Das neue Projekt wird im **Projektmappen-Explorer** angezeigt.  
   
-5.  Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.  
+5. Wählen Sie im Visual Studio Code Editor die Registerkarte **MainWindow.xaml** aus.  
   
      Wenn die Registerkarte nicht sichtbar ist, öffnen Sie das Kontextmenü für „MainWindow.xaml“ im **Projektmappen-Explorer** und wählen dann **Öffnen** aus.  
   
-6.  Ersetzen Sie den Code im Fenster **XAML** von „MainWindow.xaml“ durch den folgenden Code.  
+6. Ersetzen Sie den Code im Fenster **XAML** von „MainWindow.xaml“ durch den folgenden Code.  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -183,9 +183,9 @@ End Sub
   
      Ein einfaches Fenster mit einem Textfeld und einer Schaltfläche wird im Fenster **Entwurf** von „MainWindow.xaml“ angezeigt.  
   
-7.  In **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für "MainWindow.Xaml.vb", und wählen Sie dann **Ansichtscode**.  
+7. In **Projektmappen-Explorer**, öffnen Sie das Kontextmenü für "MainWindow.Xaml.vb", und wählen Sie dann **Ansichtscode**.  
   
-8.  Ersetzen Sie den Code in „MainWindow.xaml.vb“ durch den folgenden Code.  
+8. Ersetzen Sie den Code in „MainWindow.xaml.vb“ durch den folgenden Code.  
   
     ```vb  
     Class MainWindow  

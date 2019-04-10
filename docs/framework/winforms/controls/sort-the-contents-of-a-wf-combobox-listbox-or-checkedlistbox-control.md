@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], sorting contents
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
-ms.openlocfilehash: 4db1c133aabe39232a891183356e9c1b712f5cc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bd26d396c238bfc53858320b8f4487df84b3436a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59150604"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312578"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Vorgehensweise: Sortieren des Inhalts eines ComboBox-, ListBox- oder CheckedListBox-Steuerelements in Windows Forms
 Windows Forms-Steuerelemente werden nicht sortiert werden, wenn sie die Daten gebunden werden. Um sortierte Daten anzuzeigen, verwenden Sie eine Datenquelle, die das Sortieren unterstützt, und lassen Sie dann die Datenquelle sortiert das System. Datenquellen, die das Sortieren unterstützt, sind Ansichten, Data Manager anzuzeigen, und sortiert Sie Arrays.  
@@ -22,7 +22,7 @@ Windows Forms-Steuerelemente werden nicht sortiert werden, wenn sie die Daten ge
   
 ### <a name="to-sort-the-list"></a>Um die Liste sortieren  
   
-1.  Legen Sie die `Sorted` -Eigenschaft auf `true`fest.  
+1. Legen Sie die `Sorted` -Eigenschaft auf `true`fest.  
   
      Diese Einstellung automatisch neu positioniert und alle vorhandenen Auflisten von Elementen in sortierter Reihenfolge.  
   

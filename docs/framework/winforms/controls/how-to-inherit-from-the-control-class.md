@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: b173f322018921ef1c0fec6aa785ae6c9d9e6957
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 14f225f5587379b3efa7b6dc2475f1b697ebb281
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141985"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314216"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Vorgehensweise: Erben von der Control-Klasse
 Wenn Sie ein vollständig benutzerdefiniertes Steuerelement für die Verwendung in einem Windows Form erstellen möchten, sollten Sie erben von der <xref:System.Windows.Forms.Control> Klasse. Beim Erben von der <xref:System.Windows.Forms.Control> Klasse erfordert mehr Planung und Implementierung durchführen, es bietet Ihnen auch die größtmögliche Auswahl an Optionen. Beim Erben von <xref:System.Windows.Forms.Control>, erben die grundlegende Funktionalität, die Steuerelemente notwendig ist. Die Funktionalität der <xref:System.Windows.Forms.Control> Klasse behandelt Benutzereingaben durch Tastatur und Maus, definiert die Grenzen und die Größe des Steuerelements, stellt ein Windows-Handle bereit und bietet Meldungsbehandlung und Sicherheit. Sie enthält keine Zeichnungen, bei denen es sich in diesem Fall um das eigentliche Rendering der grafischen Benutzeroberfläche des Steuerelements handelt, und keine spezifische Funktionalität für Benutzerinteraktion. Sie müssen alle diese Aspekte über benutzerdefinierten Code bereitstellen.  
@@ -23,25 +23,25 @@ Wenn Sie ein vollständig benutzerdefiniertes Steuerelement für die Verwendung 
   
 ### <a name="to-create-a-custom-control"></a>So erstellen Sie ein benutzerdefiniertes Steuerelement  
   
-1.  Erstellen Sie ein neues **Windows-Anwendung** oder **Windows-Steuerelementbibliothek**-Projekt.  
+1. Erstellen Sie ein neues **Windows-Anwendung** oder **Windows-Steuerelementbibliothek**-Projekt.  
   
-2.  Wählen Sie im Menü **Projekt** den Eintrag **Klasse hinzufügen** aus.  
+2. Wählen Sie im Menü **Projekt** den Eintrag **Klasse hinzufügen** aus.  
   
-3.  Klicken Sie im Dialogfeld **Neues Element hinzufügen** auf **Benutzerdefiniertes Steuerelement**.  
+3. Klicken Sie im Dialogfeld **Neues Element hinzufügen** auf **Benutzerdefiniertes Steuerelement**.  
   
      Ein neues benutzerdefiniertes Steuerelement wird zu Ihrem Projekt hinzugefügt.  
   
-4.  Drücken Sie F7, um den**Code-Editor** für das benutzerdefinierte Steuerelement zu öffnen.  
+4. Drücken Sie F7, um den**Code-Editor** für das benutzerdefinierte Steuerelement zu öffnen.  
   
-5.  Suchen Sie die <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode, die leer ist, mit Ausnahme von einem Aufruf der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode der Basisklasse.  
+5. Suchen Sie die <xref:System.Windows.Forms.Control.OnPaint%2A> -Methode, die leer ist, mit Ausnahme von einem Aufruf der <xref:System.Windows.Forms.Control.OnPaint%2A> Methode der Basisklasse.  
   
-6.  Ändern Sie den Code so, dass er die gewünschte benutzerdefinierte Darstellung Ihres Steuerelements enthält.  
+6. Ändern Sie den Code so, dass er die gewünschte benutzerdefinierte Darstellung Ihres Steuerelements enthält.  
   
      Informationen zum Schreiben von Code zum Rendern von Grafiken für Steuerelemente finden Sie unter [Zeichnen und Ausgeben von benutzerdefinierten Steuerelementen](custom-control-painting-and-rendering.md).  
   
-7.  Implementieren Sie alle benutzerdefinierten Methoden, Eigenschaften oder Ereignisse, die in das Steuerelement eingebunden werden sollen.  
+7. Implementieren Sie alle benutzerdefinierten Methoden, Eigenschaften oder Ereignisse, die in das Steuerelement eingebunden werden sollen.  
   
-8.  Speichern und testen Sie das Steuerelement.  
+8. Speichern und testen Sie das Steuerelement.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -2,12 +2,12 @@
 title: Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: e1d65df46c0ed6d9d271727ad04a661c5e34a1ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145430"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316725"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
 Projekte für Portable Teilmengen ermöglichen .NET Assembly-Programmierern, die eine einzelne Quellstruktur zu verwalten und Buildsystem Unterstützung mehrerer .NET Implementierungen (Desktop, Silverlight, Windows Phone und XBOX). Projekte für Portable Teilmengen verweisen nur auf .NET portable Bibliotheken, die eine .NET Framework-Assembly sind, die auf jeder .NET-Implementierung verwendet werden kann.  
@@ -15,21 +15,21 @@ Projekte für Portable Teilmengen ermöglichen .NET Assembly-Programmierern, die
 ## <a name="add-service-reference-details"></a>Details zu "Dienstverweis hinzufügen"  
  Wenn Sie einem Projekt für portable Teilmengen einen Dienstverweis hinzufügen, werden die folgenden Einschränkungen erzwungen:  
   
-1.  Für <xref:System.Xml.Serialization.XmlSerializer> sind nur literale Codierungen zulässig. SOAP-Codierungen generieren während des Imports einen Fehler.  
+1. Für <xref:System.Xml.Serialization.XmlSerializer> sind nur literale Codierungen zulässig. SOAP-Codierungen generieren während des Imports einen Fehler.  
   
-2.  Bei Diensten, die <xref:System.Runtime.Serialization.DataContractSerializer>-Szenarien verwenden, wird ein Datenvertrag-Ersatzzeichen bereitgestellt, um sicherzustellen, dass wiederverwendete Typen nur aus der portablen Teilmenge stammen.  
+2. Bei Diensten, die <xref:System.Runtime.Serialization.DataContractSerializer>-Szenarien verwenden, wird ein Datenvertrag-Ersatzzeichen bereitgestellt, um sicherzustellen, dass wiederverwendete Typen nur aus der portablen Teilmenge stammen.  
   
-3.  Endpunkte, die auf Bindungen basieren, die in portablen Bibliotheken nicht unterstützt werden (alle Bindungen außer <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> ohne Transaktionsfluss, zuverlässige Sitzungen oder MTOM-Codierung und die entsprechenden benutzerdefinierten Bindungen), werden ignoriert.  
+3. Endpunkte, die auf Bindungen basieren, die in portablen Bibliotheken nicht unterstützt werden (alle Bindungen außer <xref:System.ServiceModel.BasicHttpBinding>, <xref:System.ServiceModel.WSHttpBinding> ohne Transaktionsfluss, zuverlässige Sitzungen oder MTOM-Codierung und die entsprechenden benutzerdefinierten Bindungen), werden ignoriert.  
   
-4.  Nachrichtenheader werden vor dem Import aus allen Nachrichtenbeschreibungen in sämtlichen Vorgängen gelöscht.  
+4. Nachrichtenheader werden vor dem Import aus allen Nachrichtenbeschreibungen in sämtlichen Vorgängen gelöscht.  
   
-5.  Die nicht portablen Attribute <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute> und <xref:System.ServiceModel.TransactionFlowAttribute> werden aus generiertem Clientproxycode entfernt.  
+5. Die nicht portablen Attribute <xref:System.ComponentModel.DesignerCategoryAttribute>, <xref:System.SerializableAttribute> und <xref:System.ServiceModel.TransactionFlowAttribute> werden aus generiertem Clientproxycode entfernt.  
   
-6.  Die nicht portablen Eigenschaften ProtectionLevel<xref:System.ServiceModel.ServiceContractAttribute>, SessionMode<xref:System.ServiceModel.OperationContractAttribute>, IsInitiating<xref:System.ServiceModel.FaultContractAttribute> und IsTerminating werden aus ,  und  entfernt.  
+6. Die nicht portablen Eigenschaften ProtectionLevel<xref:System.ServiceModel.ServiceContractAttribute>, SessionMode<xref:System.ServiceModel.OperationContractAttribute>, IsInitiating<xref:System.ServiceModel.FaultContractAttribute> und IsTerminating werden aus ,  und  entfernt.  
   
-7.  Alle Dienstvorgänge werden auf dem Clientproxy als asynchrone Vorgänge generiert.  
+7. Alle Dienstvorgänge werden auf dem Clientproxy als asynchrone Vorgänge generiert.  
   
-8.  Generierte Clientkonstruktoren, die nicht portable Typen verwenden, werden entfernt.  
+8. Generierte Clientkonstruktoren, die nicht portable Typen verwenden, werden entfernt.  
   
 9. Eine <xref:System.Net.CookieContainer>-Instanz wird für den generierten Client verfügbar gemacht.  
   

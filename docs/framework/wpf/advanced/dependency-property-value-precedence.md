@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 03ac9c59495d5eb95851df98f85eadc3d1a329ba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117747"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315685"
 ---
 # <a name="dependency-property-value-precedence"></a>Priorität von Abhängigkeitseigenschaftswerten
 <a name="introduction"></a> In diesem Thema wird erläutert, wie die Funktionsweise des [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Eigenschaftensystems den Wert einer Abhängigkeitseigenschaft beeinflussen kann. Außerdem wird die Rangfolge beschrieben, nach der Aspekte des Eigenschaftensystems auf den effektiven Wert einer Eigenschaft angewendet werden.  
@@ -39,25 +39,25 @@ ms.locfileid: "59117747"
 ## <a name="dependency-property-setting-precedence-list"></a>Rangfolgeliste bei der Einstellung von Abhängigkeitseigenschaften  
  Im Folgenden finden Sie die definitive Reihenfolge, die vom Eigenschaftensystem beim Zuweisen der Laufzeitwerte von Abhängigkeitseigenschaften verwendet wird. Die oberste Priorität ist zuerst aufgeführt. Diese Liste erweitert einige der Verallgemeinerungen aus der [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md).  
   
-1.  **Eigenschaftensystemkoersion.** Weitere Informationen zur Koersion finden Sie unter [Koersion, Animationen und Basiswert](#animations) weiter unten in diesem Thema.  
+1. **Eigenschaftensystemkoersion.** Weitere Informationen zur Koersion finden Sie unter [Koersion, Animationen und Basiswert](#animations) weiter unten in diesem Thema.  
   
-2.  **Aktive Animationen oder Animationen mit einem Halteverhalten.** Damit eine Animation einer Eigenschaft eine praktische Auswirkung hat, muss sie Vorrang vor dem (nicht animierten) Basiswert haben können, selbst wenn dieser Wert lokal festgelegt wurde. Weitere Informationen finden Sie unter [Koersion, Animationen und Basiswert](#animations) weiter unten in diesem Thema.  
+2. **Aktive Animationen oder Animationen mit einem Halteverhalten.** Damit eine Animation einer Eigenschaft eine praktische Auswirkung hat, muss sie Vorrang vor dem (nicht animierten) Basiswert haben können, selbst wenn dieser Wert lokal festgelegt wurde. Weitere Informationen finden Sie unter [Koersion, Animationen und Basiswert](#animations) weiter unten in diesem Thema.  
   
-3.  **Lokaler Wert.** Ein lokaler Wert festgelegt werden kann, über die Vorteile der Eigenschaft "Wrapper", was auch Einstellung als ein Attribut oder Eigenschaftenelement in entspricht [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], oder durch einen Aufruf der <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] mithilfe einer Eigenschaft einer bestimmten Instanz. Wenn Sie einen lokalen Wert mithilfe einer Bindung oder eine Ressource festlegen, haben diese jeweils Vorrang, als ob ein direkter Wert festgelegt wurde.  
+3. **Lokaler Wert.** Ein lokaler Wert festgelegt werden kann, über die Vorteile der Eigenschaft "Wrapper", was auch Einstellung als ein Attribut oder Eigenschaftenelement in entspricht [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], oder durch einen Aufruf der <xref:System.Windows.DependencyObject.SetValue%2A> [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] mithilfe einer Eigenschaft einer bestimmten Instanz. Wenn Sie einen lokalen Wert mithilfe einer Bindung oder eine Ressource festlegen, haben diese jeweils Vorrang, als ob ein direkter Wert festgelegt wurde.  
   
-4.  **TemplatedParent-Vorlageneigenschaften.** Ein Element verfügt über eine <xref:System.Windows.FrameworkElement.TemplatedParent%2A> , wenn es als Teil einer Vorlage erstellt wurde (eine <xref:System.Windows.Controls.ControlTemplate> oder <xref:System.Windows.DataTemplate>). Weitere Informationen dazu, wann dies zutrifft, finden Sie unter [TemplatedParent](#templatedparent) weiter unten in diesem Thema. Innerhalb der Vorlage gilt die folgende Rangfolge:  
+4. **TemplatedParent-Vorlageneigenschaften.** Ein Element verfügt über eine <xref:System.Windows.FrameworkElement.TemplatedParent%2A> , wenn es als Teil einer Vorlage erstellt wurde (eine <xref:System.Windows.Controls.ControlTemplate> oder <xref:System.Windows.DataTemplate>). Weitere Informationen dazu, wann dies zutrifft, finden Sie unter [TemplatedParent](#templatedparent) weiter unten in diesem Thema. Innerhalb der Vorlage gilt die folgende Rangfolge:  
   
     1.  Wird ausgelöst, von der <xref:System.Windows.FrameworkElement.TemplatedParent%2A> Vorlage.  
   
     2.  Eigenschaftensätze (normalerweise über [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Attribute) in der <xref:System.Windows.FrameworkElement.TemplatedParent%2A> Vorlage.  
   
-5.  **Impliziter Stil.** Gilt nur für die `Style`-Eigenschaft. Die `Style`-Eigenschaft wird durch eine Stilressource mit einem Schlüssel gefüllt, der mit dem Typ dieses Elements übereinstimmt. Diese Stilressource muss entweder auf der Seite oder in der Anwendung vorhanden sein. Die Suche nach einer impliziten Stilressource wird nicht in den Designs fortgesetzt.  
+5. **Impliziter Stil.** Gilt nur für die `Style`-Eigenschaft. Die `Style`-Eigenschaft wird durch eine Stilressource mit einem Schlüssel gefüllt, der mit dem Typ dieses Elements übereinstimmt. Diese Stilressource muss entweder auf der Seite oder in der Anwendung vorhanden sein. Die Suche nach einer impliziten Stilressource wird nicht in den Designs fortgesetzt.  
   
-6.  **Stiltrigger.** Die Trigger innerhalb von Stilen einer Seite oder Anwendung (bei diesen Stilen kann es sich entweder um explizite oder um implizite Stile, jedoch nicht um Standardstile handeln, die in der Rangfolge weiter unten stehen).  
+6. **Stiltrigger.** Die Trigger innerhalb von Stilen einer Seite oder Anwendung (bei diesen Stilen kann es sich entweder um explizite oder um implizite Stile, jedoch nicht um Standardstile handeln, die in der Rangfolge weiter unten stehen).  
   
-7.  **Vorlagentrigger.** Ein Trigger aus einer Vorlage innerhalb eines Stils oder eine direkt angewendete Vorlage.  
+7. **Vorlagentrigger.** Ein Trigger aus einer Vorlage innerhalb eines Stils oder eine direkt angewendete Vorlage.  
   
-8.  **Stil-Setter.** Werte aus einer <xref:System.Windows.Setter> innerhalb von Stilen einer Seite oder Anwendung.  
+8. **Stil-Setter.** Werte aus einer <xref:System.Windows.Setter> innerhalb von Stilen einer Seite oder Anwendung.  
   
 9. **Standardstil (Design).** Ausführliche Informationen dazu, wann dies zutrifft und wie sich Designstile auf die Vorlagen innerhalb von Designstilen beziehen, finden Sie unter [Standard(design)stile](#themestyles) weiter unten in diesem Thema. Innerhalb eines Standardstils gilt die folgende Rangfolge:  
   

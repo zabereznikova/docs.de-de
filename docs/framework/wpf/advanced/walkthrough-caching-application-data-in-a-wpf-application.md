@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 886a436f845aa4ba9662e75cbc9e534e915a4cfa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1d00c222dabf446c7c102307c3b904d3f1ff4bca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361173"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314391"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung
 Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbeitsspeicher zu speichern. Wenn erneut auf die Daten zugegriffen wird, erhalten Anwendungen die Daten aus dem Zwischenspeicher, anstatt sie aus der Originalquelle abzurufen. Dies kann die Leistung und Skalierbarkeit verbessern. Darüber hinaus macht das Zwischenspeichern Daten verfügbar, wenn die Datenquelle vorübergehend nicht verfügbar ist.
@@ -56,24 +56,24 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
 #### <a name="to-create-a-wpf-application"></a>So erstellen Sie eine WPF-Anwendung.
 
-1.  Starten Sie Visual Studio.
+1. Starten Sie Visual Studio.
 
-2.  In der **Datei** Menü klicken Sie auf **neu**, und klicken Sie dann auf **neues Projekt**.
+2. In der **Datei** Menü klicken Sie auf **neu**, und klicken Sie dann auf **neues Projekt**.
 
      Das Dialogfeld **Neues Projekt** wird angezeigt.
 
-3.  Klicken Sie unter **installierte Vorlagen**, wählen Sie die Programmiersprache, die Sie verwenden möchten (**Visual Basic** oder **Visual C#-**).
+3. Klicken Sie unter **installierte Vorlagen**, wählen Sie die Programmiersprache, die Sie verwenden möchten (**Visual Basic** oder **Visual C#-**).
 
-4.  In der **neues Projekt** wählen Sie im Dialogfeld **WPF-Anwendung**.
+4. In der **neues Projekt** wählen Sie im Dialogfeld **WPF-Anwendung**.
 
     > [!NOTE]
     >  Wenn Sie nicht angezeigt werden der **WPF-Anwendung** Vorlage stellen Sie sicher, dass Sie eine Version Anzielen der [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , die WPF unterstützt. In der **neues Projekt** wählen Sie im Dialogfeld [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] aus der Liste.
 
-5.  In der **Namen** Text Geben Sie einen Namen für Ihr Projekt. Sie können z. B. eingeben **"WPFCaching"**.
+5. In der **Namen** Text Geben Sie einen Namen für Ihr Projekt. Sie können z. B. eingeben **"WPFCaching"**.
 
-6.  Aktivieren Sie das Kontrollkästchen **Verzeichnis für Projektmappe erstellen**.
+6. Aktivieren Sie das Kontrollkästchen **Verzeichnis für Projektmappe erstellen**.
 
-7.  Klicken Sie auf **OK**.
+7. Klicken Sie auf **OK**.
 
      Der WPF-Designer wird geöffnet, **Entwurf** anzeigen und die Datei "MainWindow.xaml" angezeigt. Visual Studio erstellt die **Mein Projekt** Ordner, die Datei "Application.xaml" und die Datei "MainWindow.xaml".
 
@@ -87,27 +87,27 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
 #### <a name="to-change-the-target-net-framework-in-visual-basic"></a>So ändern Sie das Ziel .NET Framework in Visual Basic
 
-1.  In **Projektmappen-Explorer**mit der rechten Maustaste auf den Projektnamen, und klicken Sie dann auf **Eigenschaften**.
+1. In **Projektmappen-Explorer**mit der rechten Maustaste auf den Projektnamen, und klicken Sie dann auf **Eigenschaften**.
 
      Fenster "Eigenschaften" für die Anwendung wird angezeigt.
 
-2.  Klicken Sie auf die Registerkarte **Kompilieren**.
+2. Klicken Sie auf die Registerkarte **Kompilieren**.
 
-3.  Am unteren Rand des Fensters, klicken Sie auf **Erweiterte Kompilierungsoptionen...** .
+3. Am unteren Rand des Fensters, klicken Sie auf **Erweiterte Kompilierungsoptionen...** .
 
      Die **erweiterte Compilereinstellungen** Dialogfeld wird angezeigt.
 
-4.  In der **Zielframework (alle Konfigurationen)** Liste [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Wählen Sie nicht [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
+4. In der **Zielframework (alle Konfigurationen)** Liste [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Wählen Sie nicht [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)].)
 
-5.  Klicken Sie auf **OK**.
+5. Klicken Sie auf **OK**.
 
      Das Dialogfeld **Änderung des Zielframeworks** wird angezeigt.
 
-6.  In der **Zielframeworkänderung** Dialogfeld klicken Sie auf **Ja**.
+6. In der **Zielframeworkänderung** Dialogfeld klicken Sie auf **Ja**.
 
      Das Projekt geschlossen und erneut geöffnet wird.
 
-7.  Fügen Sie einen Verweis auf die caching-Assembly mit folgenden Schritten hinzu:
+7. Fügen Sie einen Verweis auf die caching-Assembly mit folgenden Schritten hinzu:
 
     1.  In **Projektmappen-Explorer**mit der rechten Maustaste auf den Namen des Projekts, und klicken Sie dann auf **Verweis hinzufügen**.
 
@@ -115,15 +115,15 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>So ändern Sie die .NET Framework-Zielversion in einem Visual C#-Projekt
 
-1.  In **Projektmappen-Explorer**mit der rechten Maustaste auf den Projektnamen, und klicken Sie dann auf **Eigenschaften**.
+1. In **Projektmappen-Explorer**mit der rechten Maustaste auf den Projektnamen, und klicken Sie dann auf **Eigenschaften**.
 
      Fenster "Eigenschaften" für die Anwendung wird angezeigt.
 
-2.  Klicken Sie auf die Registerkarte **Anwendung** .
+2. Klicken Sie auf die Registerkarte **Anwendung** .
 
-3.  In der **Zielframework** Liste [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Wählen Sie nicht **.NET Framework 4 Client Profile**.)
+3. In der **Zielframework** Liste [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]. (Wählen Sie nicht **.NET Framework 4 Client Profile**.)
 
-4.  Fügen Sie einen Verweis auf die caching-Assembly mit folgenden Schritten hinzu:
+4. Fügen Sie einen Verweis auf die caching-Assembly mit folgenden Schritten hinzu:
 
     1.  Mit der rechten Maustaste die **Verweise** Ordner, und klicken Sie dann auf **Verweis hinzufügen**.
 
@@ -134,11 +134,11 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
 #### <a name="to-add-a-button-control"></a>Ein Schaltflächen-Steuerelement hinzufügen
 
-1.  In **Projektmappen-Explorer**, doppelklicken Sie auf die Datei "MainWindow.xaml", um ihn zu öffnen.
+1. In **Projektmappen-Explorer**, doppelklicken Sie auf die Datei "MainWindow.xaml", um ihn zu öffnen.
 
-2.  Von der **Toolbox**unter **WPF-Standardsteuerelemente**, ziehen Sie eine `Button` die Steuerung an die `MainWindow` Fenster.
+2. Von der **Toolbox**unter **WPF-Standardsteuerelemente**, ziehen Sie eine `Button` die Steuerung an die `MainWindow` Fenster.
 
-3.  In der **Eigenschaften** legen die `Content` Eigenschaft der `Button` die Steuerung an **Cache abrufen**.
+3. In der **Eigenschaften** legen die `Content` Eigenschaft der `Button` die Steuerung an **Cache abrufen**.
 
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>Initialisieren des Caches und Zwischenspeichern eines Eintrags
  Anschließend fügen Sie den Code, um die folgenden Aufgaben ausführen:
@@ -153,9 +153,9 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
 #### <a name="to-create-the-cache-object"></a>Um das Cache-Objekt zu erstellen.
 
-1.  Doppelklicken Sie auf die Schaltfläche, die Sie gerade hinzugefügt haben, um einen Ereignishandler in der Datei "MainWindow.Xaml.cs" oder "MainWindow.Xaml.vb" zu erstellen.
+1. Doppelklicken Sie auf die Schaltfläche, die Sie gerade hinzugefügt haben, um einen Ereignishandler in der Datei "MainWindow.Xaml.cs" oder "MainWindow.Xaml.vb" zu erstellen.
 
-2.  Fügen Sie am Anfang der Datei (vor der Klassendeklaration), die folgenden `Imports` (Visual Basic) oder `using` (c#)-Anweisungen:
+2. Fügen Sie am Anfang der Datei (vor der Klassendeklaration), die folgenden `Imports` (Visual Basic) oder `using` (c#)-Anweisungen:
 
     ```csharp
     using System.Runtime.Caching;
@@ -167,7 +167,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
     Imports System.IO
     ```
 
-3.  Fügen Sie den folgenden Code zum Instanziieren des Cache-Objekts, in dem Ereignishandler:
+3. Fügen Sie den folgenden Code zum Instanziieren des Cache-Objekts, in dem Ereignishandler:
 
     ```csharp
     ObjectCache cache = MemoryCache.Default;
@@ -179,7 +179,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
      Die <xref:System.Runtime.Caching.ObjectCache> -Klasse ist eine integrierte, die Cache ein Objekt im Speicher bereitstellt.
 
-4.  Fügen Sie den folgenden Code zum Lesen des Inhalts ein Cacheeintrag mit dem Namen `filecontents`:
+4. Fügen Sie den folgenden Code zum Lesen des Inhalts ein Cacheeintrag mit dem Namen `filecontents`:
 
     ```vb
     Dim fileContents As String = TryCast(cache("filecontents"), String)
@@ -189,7 +189,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
     string fileContents = cache["filecontents"] as string;
     ```
 
-5.  Fügen Sie den folgenden Code zum Überprüfen, ob der Cacheeintrag mit dem Namen `filecontents` vorhanden ist:
+5. Fügen Sie den folgenden Code zum Überprüfen, ob der Cacheeintrag mit dem Namen `filecontents` vorhanden ist:
 
     ```vb
     If fileContents Is Nothing Then
@@ -206,7 +206,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
      Wenn der angegebene Cacheeintrag nicht vorhanden ist, müssen Sie die Textdatei lesen und als einen Cacheeintrag in den Cache hinzufügen.
 
-6.  In der `if/then` blockieren, fügen Sie den folgenden Code zum Erstellen eines neuen <xref:System.Runtime.Caching.CacheItemPolicy> Objekt, das angibt, dass nach 10 Sekunden der Cacheeintrag abläuft.
+6. In der `if/then` blockieren, fügen Sie den folgenden Code zum Erstellen eines neuen <xref:System.Runtime.Caching.CacheItemPolicy> Objekt, das angibt, dass nach 10 Sekunden der Cacheeintrag abläuft.
 
     ```vb
     Dim policy As New CacheItemPolicy()
@@ -220,7 +220,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
      Wenn keine Informationen Cachelöschungs- oder Ablaufrichtlinie angegeben wird, wird der Standardwert ist <xref:System.Runtime.Caching.ObjectCache.InfiniteAbsoluteExpiration>, was bedeutet, dass die Cacheeinträge läuft nie ab basiert nur auf einer absoluten Zeit. Stattdessen laufen die Einträge im Cache nur, wenn genügend Arbeitsspeicher vorhanden ist. Als bewährte Methode sollten Sie entweder ein absoluter oder ein variabler Ablauf immer explizit bereitstellen.
 
-7.  In der `if/then` blockieren und die folgenden den Code, die Sie im vorherigen Schritt hinzugefügt haben, fügen Sie den folgenden Code aus, um eine Sammlung für die Dateipfade zu erstellen, überwachen und den Pfad der Textdatei, die Auflistung hinzugefügt werden soll:
+7. In der `if/then` blockieren und die folgenden den Code, die Sie im vorherigen Schritt hinzugefügt haben, fügen Sie den folgenden Code aus, um eine Sammlung für die Dateipfade zu erstellen, überwachen und den Pfad der Textdatei, die Auflistung hinzugefügt werden soll:
 
     ```vb
     Dim filePaths As New List(Of String)()
@@ -235,7 +235,7 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
     > [!NOTE]
     >  Wenn die Textdatei, die Sie verwenden möchten nicht `c:\cache\cacheText.txt`, geben Sie den Pfad die Textdatei, die Sie verwenden möchten.
 
-8.  Nach dem Code, die Sie im vorherigen Schritt hinzugefügt haben, fügen den folgenden Code zum Hinzufügen einer neuen <xref:System.Runtime.Caching.HostFileChangeMonitor> Objekt, das die Auflistung der Änderung für den Cacheeintrag überwacht:
+8. Nach dem Code, die Sie im vorherigen Schritt hinzugefügt haben, fügen den folgenden Code zum Hinzufügen einer neuen <xref:System.Runtime.Caching.HostFileChangeMonitor> Objekt, das die Auflistung der Änderung für den Cacheeintrag überwacht:
 
     ```vb
     policy.ChangeMonitors.Add(New HostFileChangeMonitor(filePaths))
@@ -288,31 +288,31 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 
 #### <a name="to-test-caching-in-the-wpf-application"></a>Zum Testen der Zwischenspeicherung in WPF-Anwendung
 
-1.  Drücken Sie STRG+F5, um die Anwendung auszuführen.
+1. Drücken Sie STRG+F5, um die Anwendung auszuführen.
 
      Die `MainWindow` Fenster wird angezeigt.
 
-2.  Klicken Sie auf **Cache abrufen**.
+2. Klicken Sie auf **Cache abrufen**.
 
      Die zwischengespeicherte Inhalte aus der Textdatei wird in einem Meldungsfeld angezeigt. Beachten Sie, dass die Zeitstempel der Datei.
 
-3.  Das Meldungsfeld zu schließen, und klicken Sie dann auf **Cache abrufen** erneut aus.
+3. Das Meldungsfeld zu schließen, und klicken Sie dann auf **Cache abrufen** erneut aus.
 
      Der Zeitstempel ist unverändert. Dies gibt an, dass der zwischengespeicherte Inhalt angezeigt wird.
 
-4.  Warten Sie mindestens 10 Sekunden festzulegen, und klicken Sie dann auf **Cache abrufen** erneut aus.
+4. Warten Sie mindestens 10 Sekunden festzulegen, und klicken Sie dann auf **Cache abrufen** erneut aus.
 
      Dieses Mal wird es sich um ein neuer Zeitstempel angezeigt. Dies bedeutet, dass die Richtlinie den Cacheeintrag abläuft und neue zwischengespeicherte Inhalte angezeigt wird.
 
-5.  Öffnen Sie in einem Text-Editor die Textdatei, die Sie erstellt haben. Nehmen Sie Änderungen noch nicht.
+5. Öffnen Sie in einem Text-Editor die Textdatei, die Sie erstellt haben. Nehmen Sie Änderungen noch nicht.
 
-6.  Das Meldungsfeld zu schließen, und klicken Sie dann auf **Cache abrufen** erneut aus.
+6. Das Meldungsfeld zu schließen, und klicken Sie dann auf **Cache abrufen** erneut aus.
 
      Beachten Sie den Zeitstempel erneut ein.
 
-7.  Nehmen Sie eine Änderung in die Textdatei, und speichern Sie die Datei.
+7. Nehmen Sie eine Änderung in die Textdatei, und speichern Sie die Datei.
 
-8.  Das Meldungsfeld zu schließen, und klicken Sie dann auf **Cache abrufen** erneut aus.
+8. Das Meldungsfeld zu schließen, und klicken Sie dann auf **Cache abrufen** erneut aus.
 
      Das Meldungsfeld enthält des aktualisierten Inhalts aus der Textdatei und einen neuen Zeitstempel. Dies gibt an, dass die änderungsüberwachung Hostdatei der Cacheeintrag entfernt sofort, wenn Sie die Datei geändert, obwohl die absoluten Ablauf des Zeitlimits nicht hatten.
 
@@ -330,4 +330,4 @@ Das Zwischenspeichern ermöglicht es Ihnen, Daten für schnellen Zugriff im Arbe
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching>
-- [Caching in .NET Framework Applications (Caching in .NET Framework-Anwendungen)](../../performance/caching-in-net-framework-applications.md)
+- [Caching in .NET Framework-Anwendungen](../../performance/caching-in-net-framework-applications.md)

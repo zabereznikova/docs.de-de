@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 34abe6b07cebc446324785bde1061c7aa2b04e4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115920"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312331"
 ---
 # <a name="wcf-client-overview"></a>Übersicht über den WCF-Client
 Dieser Abschnitt beschreibt das vorgehen, Client-Anwendungen, wie Sie konfigurieren, erstellen und verwenden Sie einen Windows Communication Foundation (WCF)-Client und Client-Anwendungen zu sichern.  
@@ -20,13 +20,13 @@ Dieser Abschnitt beschreibt das vorgehen, Client-Anwendungen, wie Sie konfigurie
 ## <a name="using-wcf-client-objects"></a>Verwenden von WCF-Clientobjekten  
  Eine Clientanwendung ist eine verwaltete Anwendung, die einen WCF-Client, die für die Kommunikation mit einer anderen Anwendung verwendet. Erstellen einer Clientanwendung erfordert die Anwendung für einen WCF-Dienst die folgenden Schritte aus:  
   
-1.  Abrufen des Dienstvertrags, der Bindungen und der Adressinformationen für einen Dienstendpunkt.  
+1. Abrufen des Dienstvertrags, der Bindungen und der Adressinformationen für einen Dienstendpunkt.  
   
-2.  Erstellen Sie einen WCF-Clients, die mithilfe dieser Informationen.  
+2. Erstellen Sie einen WCF-Clients, die mithilfe dieser Informationen.  
   
-3.  Aufrufen von Vorgängen.  
+3. Aufrufen von Vorgängen.  
   
-4.  Schließen Sie das WCF-Client-Objekt.  
+4. Schließen Sie das WCF-Client-Objekt.  
   
  In den folgenden Abschnitten finden Sie eine Erläuterung dieser Schritte und kurze Einführungen in die folgenden Probleme:  
   

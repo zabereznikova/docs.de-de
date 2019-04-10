@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 2fef6c924498003bc9ea393ba2117a1cb5f2afab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212088"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317886"
 ---
 # <a name="how-to-validate-application-settings"></a>Vorgehensweise: Überprüfen von Anwendungseinstellungen
 In diesem Thema wird veranschaulicht, wie Anwendungseinstellungen überprüft werden, bevor sie persistent gespeichert werden.  
@@ -78,7 +78,7 @@ In diesem Thema wird veranschaulicht, wie Anwendungseinstellungen überprüft we
   
 ### <a name="to-validate-application-settings-when-a-setting-is-changing"></a>So überprüfen Sie Anwendungseinstellungen, wenn eine Einstellung geändert wird  
   
-1.  Möchten eine C# Entwickler Ihres Formulars oder Steuerelements `Load` Ereignis Hinzufügen eines ereignishandlers für das <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> Ereignis.  
+1. Möchten eine C# Entwickler Ihres Formulars oder Steuerelements `Load` Ereignis Hinzufügen eines ereignishandlers für das <xref:System.Configuration.ApplicationSettingsBase.SettingChanging> Ereignis.  
   
      - oder -   
   
@@ -97,7 +97,7 @@ In diesem Thema wird veranschaulicht, wie Anwendungseinstellungen überprüft we
     End Sub   
     ```  
   
-2.  Definieren Sie den Ereignishandler, und schreiben Sie den Code in den Ereignishandler, um eine Überprüfung der Begrenzungen für das Geburtsdatum durchzuführen.  
+2. Definieren Sie den Ereignishandler, und schreiben Sie den Code in den Ereignishandler, um eine Überprüfung der Begrenzungen für das Geburtsdatum durchzuführen.  
   
     ```csharp  
     private void MyCustomSettings_SettingChanging(Object sender, SettingChangingEventArgs e)  
@@ -126,7 +126,7 @@ In diesem Thema wird veranschaulicht, wie Anwendungseinstellungen überprüft we
   
 ### <a name="to-validate-application-settings-when-a-save-occurs"></a>So überprüfen Sie Anwendungseinstellungen, sobald ein Speichervorgang auftritt  
   
-1.  In einem Formular oder Steuerelement die `Load` Ereignis Hinzufügen eines ereignishandlers für das <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> Ereignis.  
+1. In einem Formular oder Steuerelement die `Load` Ereignis Hinzufügen eines ereignishandlers für das <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving> Ereignis.  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -141,7 +141,7 @@ In diesem Thema wird veranschaulicht, wie Anwendungseinstellungen überprüft we
     End Sub  
     ```  
   
-2.  Definieren Sie den Ereignishandler, und schreiben Sie den Code in den Ereignishandler, um eine Überprüfung der Begrenzungen für das Geburtsdatum durchzuführen.  
+2. Definieren Sie den Ereignishandler, und schreiben Sie den Code in den Ereignishandler, um eine Überprüfung der Begrenzungen für das Geburtsdatum durchzuführen.  
   
     ```csharp  
     private void MyCustomSettings_SettingsSaving(Object sender, SettingsSavingEventArgs e)  

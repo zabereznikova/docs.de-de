@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce1928254699f4de41e92087c76be9bc3c249523
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ec411039363cfb118fee06dff88daf50bbc97a86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108042"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314775"
 ---
 # <a name="alwaysflowimpersonationpolicy-element"></a>\<AlwaysFlowImpersonationPolicy >-Element
 Gibt an, dass die Windows-Identität immer über asynchrone Punkte verläuft, unabhängig davon, wie der Identitätswechsel durchgeführt wurde.  
@@ -62,11 +62,11 @@ Gibt an, dass die Windows-Identität immer über asynchrone Punkte verläuft, un
   
  Sie können dieses Standardverhalten auf zwei weitere Arten ändern:  
   
-1.  In verwaltetem Code auf einer pro-Thread-Basis.  
+1. In verwaltetem Code auf einer pro-Thread-Basis.  
   
      Sie können den Fluss auf einer pro-Thread-Basis unterdrücken, indem Sie ändern die <xref:System.Threading.ExecutionContext> und <xref:System.Security.SecurityContext> Einstellungen mithilfe der <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>, <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>, oder <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> Methode.  
   
-2.  Im Aufruf der nicht verwaltete Hostschnittstelle die common Language Runtime (CLR) geladen.  
+2. Im Aufruf der nicht verwaltete Hostschnittstelle die common Language Runtime (CLR) geladen.  
   
      Wenn eine nicht verwaltete Hostschnittstelle (anstatt eine einfache verwaltete ausführbare Datei) zum Laden der CLR verwendet wird, können Sie ein spezielles Flag angeben, in dem Aufruf der [CorBindToRuntimeEx-Funktion](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) Funktion. Legen Sie zum Aktivieren des Kompatibilitätsmodus für den gesamten Prozess der `flags` -Parameter für [CorBindToRuntimeEx-Funktion](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) zu `STARTUP_ALWAYSFLOW_IMPERSONATION`.  
   

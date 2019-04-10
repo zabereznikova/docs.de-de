@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3846e9e00158efbd4828053411b604dafc56e27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091329"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312097"
 ---
 # <a name="controlling-net-framework-logging"></a>Steuern der Protokollierung in .NET Framework
 Sie können mithilfe der Ereignisablaufverfolgung für Windows (ETW) Common Language Runtime (CLR)-Ereignisse aufzeichnen. Sie können Ablaufverfolgungen mit den folgenden Tools erstellen und anzeigen:  
@@ -45,7 +45,7 @@ Provider                                 GUID
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>So erfassen Sie CLR-ETW-Ereignisse mit Logman  
   
-1.  Geben Sie an der Eingabeaufforderung Folgendes ein:  
+1. Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
      `logman start clrevents -p {e13c0d23-ccbc-4e12-931b-d9cc2eee27e4} 0x1CCBD 0x5 -ets -ct perf`  
   
@@ -61,7 +61,7 @@ Provider                                 GUID
   
     -   Der `-ct perf`-Parameter gibt an, dass mit der `QueryPerformanceCounter`-Funktion der Zeitstempel für jedes Ereignis protokolliert wird.  
   
-2.  Geben Sie Folgendes ein, um die Protokollierung der Ereignisse zu beenden:  
+2. Geben Sie Folgendes ein, um die Protokollierung der Ereignisse zu beenden:  
   
      `logman stop clrevents -ets`  
   
@@ -69,13 +69,13 @@ Provider                                 GUID
   
 #### <a name="to-capture-clr-etw-events-using-xperf"></a>So erfassen Sie CLR-ETW-Ereignisse mit XPerf  
   
-1.  Geben Sie an der Eingabeaufforderung Folgendes ein:  
+1. Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
      `xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:5 -f clrevents.etl`  
   
      Dabei ist die GUID die GUID des CLR-ETW-Anbieters, und `0x1CCBD:5` verfolgt sämtliche Vorgänge auf und unterhalb von Ebene 5 (Ausführlich).  
   
-2.  Geben Sie Folgendes ein, um die Ablaufverfolgung zu beenden:  
+2. Geben Sie Folgendes ein, um die Ablaufverfolgung zu beenden:  
   
      `Xperf -stop clr`  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108705"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314697"
 ---
 # <a name="framework-property-metadata"></a>Framework-Eigenschaftenmetadaten
 Die Optionen für Framework-Eigenschaftenmetadaten werden für die Eigenschaften von Objektelementen gemeldet, die in der WPF-Frameworkebene in der Architektur [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] vorhanden sein sollen. Im Allgemeinen bedeutet die Bezeichnung WPF-Frameworkebene, dass Funktionen wie das Rendering, die Datenbindung und die Verbesserungen des Eigenschaftensystems von [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Präsentations-[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] und von ausführbaren Dateien behandelt werden. Framework-Eigenschaftenmetadaten werden von diesen Systemen zur Ermittlung funktionsspezifischer Merkmale von bestimmten Elementeigenschaften abgefragt.  
@@ -48,9 +48,9 @@ Die Optionen für Framework-Eigenschaftenmetadaten werden für die Eigenschaften
   
  Bei der Erstellung einer <xref:System.Windows.FrameworkPropertyMetadata> Instanz ist, es gibt zwei Möglichkeiten, Metadaten mit den Werten für die einzelnen Eigenschaften aufzufüllen, die die Merkmale der Framework-Eigenschaft kommunizieren:  
   
-1.  Verwenden der <xref:System.Windows.FrameworkPropertyMetadata> Konstruktorsignatur, die ermöglicht eine `flags` Parameter. Dieser Parameter sollte mit allen gewünschten kombinierten Werten der gefüllt werden die <xref:System.Windows.FrameworkPropertyMetadataOptions> Enumerationsflags.  
+1. Verwenden der <xref:System.Windows.FrameworkPropertyMetadata> Konstruktorsignatur, die ermöglicht eine `flags` Parameter. Dieser Parameter sollte mit allen gewünschten kombinierten Werten der gefüllt werden die <xref:System.Windows.FrameworkPropertyMetadataOptions> Enumerationsflags.  
   
-2.  Verwenden Sie eine der Signaturen ohne ein `flags` Parameter, und legen Sie anschließend jeden Bericht zur booleschen Eigenschaft für <xref:System.Windows.FrameworkPropertyMetadata> zu `true` für jede Änderung der Merkmale gewünschte. Wenn Sie dies tun, müssen Sie diese Eigenschaften festlegen, bevor Elemente mit dieser Abhängigkeitseigenschaft erstellt werden. Die booleschen Eigenschaften verfügen über Lese-/Schreibzugriff, um dieses Verhalten zur Vermeidung des `flags`-Parameters zu ermöglichen und trotzdem die Metadaten zu füllen, aber die Metadaten müssen vor der Verwendung der Eigenschaft effektiv versiegelt werden. Daher wird der Versuch, Eigenschaften nach der Anforderung von Metadaten festzulegen, ein ungültiger Vorgang sein.  
+2. Verwenden Sie eine der Signaturen ohne ein `flags` Parameter, und legen Sie anschließend jeden Bericht zur booleschen Eigenschaft für <xref:System.Windows.FrameworkPropertyMetadata> zu `true` für jede Änderung der Merkmale gewünschte. Wenn Sie dies tun, müssen Sie diese Eigenschaften festlegen, bevor Elemente mit dieser Abhängigkeitseigenschaft erstellt werden. Die booleschen Eigenschaften verfügen über Lese-/Schreibzugriff, um dieses Verhalten zur Vermeidung des `flags`-Parameters zu ermöglichen und trotzdem die Metadaten zu füllen, aber die Metadaten müssen vor der Verwendung der Eigenschaft effektiv versiegelt werden. Daher wird der Versuch, Eigenschaften nach der Anforderung von Metadaten festzulegen, ein ungültiger Vorgang sein.  
   
 <a name="Framework_Property_Metadata_Merge_Behavior"></a>   
 ## <a name="framework-property-metadata-merge-behavior"></a>Zusammenführungsverhalten von Framework-Eigenschaftenmetadaten  

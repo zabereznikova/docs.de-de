@@ -16,12 +16,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 74092fdcd72c09670db53dc79d43d9d52f0dcf4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172185"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311044"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Vorgehensweise: Benutzerdefiniertes Zeichnen eines ToolStrip-Steuerelements
 Die <xref:System.Windows.Forms.ToolStrip>-Steuerelemente verfügen über die folgenden zugeordneten Renderingklassen (Zeichnungsklassen):  
@@ -107,11 +107,11 @@ Die <xref:System.Windows.Forms.ToolStrip>-Steuerelemente verfügen über die fol
   
 ### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a>So ändern Sie das Rendering für alle ToolStrip-Steuerelemente in Ihrer Anwendung  
   
-1.  Verwenden Sie die <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType>-Eigenschaft, um einen der bereitgestellten Renderer auszuwählen.  
+1. Verwenden Sie die <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType>-Eigenschaft, um einen der bereitgestellten Renderer auszuwählen.  
   
-2.  Verwenden Sie <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>, um einen benutzerdefinierten Renderer zuzuweisen.  
+2. Verwenden Sie <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>, um einen benutzerdefinierten Renderer zuzuweisen.  
   
-3.  Stellen Sie sicher, dass <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> auf den Standardwert von <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> festgelegt ist.  
+3. Stellen Sie sicher, dass <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> auf den Standardwert von <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> festgelegt ist.  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>So deaktivieren Sie die Microsoft Office-Farben für die gesamte Anwendung  
   

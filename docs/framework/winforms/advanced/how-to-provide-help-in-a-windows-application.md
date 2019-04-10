@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 5cda0517e8653e89aabde3a9c0459a2dbae61616
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129479"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312714"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Vorgehensweise: Bereitstellen von Hilfe in einer Windows-Anwendung
 Sie verwenden können, der die <xref:System.Windows.Forms.HelpProvider> Komponente, um Hilfethemen in einer Hilfedatei bestimmten Steuerelementen in Windows Forms zuzuordnen. Die Hilfedatei kann entweder im Format HTML oder HTMLHelp 1.x oder höher vorliegen.  
@@ -23,17 +23,17 @@ Sie verwenden können, der die <xref:System.Windows.Forms.HelpProvider> Komponen
   
 ### <a name="to-provide-help"></a>So wird die Hilfe verfügbar  
   
-1.  Von der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.HelpProvider> Ihrem Formular.  
+1. Von der **Toolbox**, ziehen Sie eine <xref:System.Windows.Forms.HelpProvider> Ihrem Formular.  
   
      Die Komponente befindet sich anschließend auf der Taskleiste unten im Windows Forms-Designer.  
   
-2.  In der **Eigenschaften** legen die <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> -Eigenschaft auf die CHM-, col- oder htm-Hilfedatei.  
+2. In der **Eigenschaften** legen die <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> -Eigenschaft auf die CHM-, col- oder htm-Hilfedatei.  
   
-3.  Wählen Sie ein anderes Steuerelement, die Sie in das Formular, und in der **Eigenschaften** legen die <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> Eigenschaft.  
+3. Wählen Sie ein anderes Steuerelement, die Sie in das Formular, und in der **Eigenschaften** legen die <xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A> Eigenschaft.  
   
      Dies ist die Zeichenfolge, die durch Übergeben der <xref:System.Windows.Forms.HelpProvider> Komponente, an der Hilfe-Datei in das entsprechende Hilfethema aufzurufen.  
   
-4.  In der **Eigenschaften** legen die <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> Eigenschaft mit einem Wert, der die <xref:System.Windows.Forms.HelpNavigator> Enumeration.  
+4. In der **Eigenschaften** legen die <xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A> Eigenschaft mit einem Wert, der die <xref:System.Windows.Forms.HelpNavigator> Enumeration.  
   
      Dies bestimmt die Art, wie die **HelpKeyword**-Eigenschaft an das Hilfesystem übergeben wird. In der folgenden Tabelle werden die möglichen Einstellungen und ihre Beschreibungen aufgeführt.  
   

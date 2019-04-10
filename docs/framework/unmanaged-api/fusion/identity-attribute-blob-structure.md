@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cda9f6c71361d3865b40669c7ba09f2c2fb0c253
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 074cca51cee2b0227e1d124f1d40a2ffc31e3c85
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102985"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314073"
 ---
 # <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB-Struktur
 Enthält Informationen zu einem einzelnen Attribut in einer Assembly und besteht aus drei `DWORD`s. Jede `DWORD` ist ein Offset in einen Puffer aus Zeichen, erzeugt die `CurrentIntoBuffer` -Methode der der [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) Schnittstelle  
@@ -49,13 +49,13 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
 ## <a name="sample"></a>Beispiel  
  Im folgende Beispiel wird veranschaulicht, mehrere grundlegende Schritte, die schließlich ein aufgefülltes führen `IDENTITY_ATTRIBUTE_BLOB` Struktur:  
   
-1.  Abrufen einer [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) für die Assembly.  
+1. Abrufen einer [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) für die Assembly.  
   
-2.  Rufen Sie die `IReferenceIdentity::EnumAttributes` -Methode, und erhalten eine [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
+2. Rufen Sie die `IReferenceIdentity::EnumAttributes` -Methode, und erhalten eine [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md).  
   
-3.  Erstellen Sie einen Puffer aus Zeichen, und wandeln Sie es als ein `IDENTITY_ATTRIBUTE_BLOB` Struktur.  
+3. Erstellen Sie einen Puffer aus Zeichen, und wandeln Sie es als ein `IDENTITY_ATTRIBUTE_BLOB` Struktur.  
   
-4.  Rufen Sie die `CurrentIntoBuffer` Methode der `IEnumIDENTITY_ATTRIBUTE` Schnittstelle. Diese Methode kopiert die Attribute `Namespace`, `Name`, und `Value` in den Zeichenpuffer. Die drei Offsets zu diesen Zeichenfolgen in zur Verfügung stehen die `IDENTITY_ATTRIBUTE_BLOB` Struktur.  
+4. Rufen Sie die `CurrentIntoBuffer` Methode der `IEnumIDENTITY_ATTRIBUTE` Schnittstelle. Diese Methode kopiert die Attribute `Namespace`, `Name`, und `Value` in den Zeichenpuffer. Die drei Offsets zu diesen Zeichenfolgen in zur Verfügung stehen die `IDENTITY_ATTRIBUTE_BLOB` Struktur.  
   
 ```  
 // EnumAssemblyAttributes.cpp : main project file.  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: c43935cd53d1b58ce695164e957b4b5376d52536
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209813"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318428"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Datenabruf und CUD-Operationen in n-schichtigen Anwendungen (LINQ to SQL)
 Wenn Sie Entitätsobjekte wie Customers oder Orders über ein Netzwerk an einen Client serialisieren, werden diese Entitäten von ihrem Datenkontext getrennt. Änderungen oder Verknüpfungen mit anderen Objekten werden vom Datenkontext nicht mehr verfolgt. Dies stellt kein Problem dar, solange die Clients die Daten nur lesen. Es ist außerdem relativ einfach, Clients zu ermöglichen, einer Datenbank neue Zeilen hinzuzufügen. Wenn Ihre Anwendung jedoch voraussetzt, dass Clients Daten aktualisieren oder löschen sollen, müssen Sie die Entitäten an einen neuen Datenkontext anfügen, bevor Sie <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> aufrufen. Wenn Sie eine Überprüfung auf vollständige Parallelität mit ursprünglichen Werten verwenden, müssen Sie außerdem eine Möglichkeit schaffen, der Datenbank sowohl die ursprüngliche als auch die geänderte Entität bereitzustellen. Die `Attach`-Methoden werden bereitgestellt, um es Ihnen zu ermöglichen, Entitäten in einen neuen Datenkontext einzufügen, nachdem sie getrennt wurden.  
@@ -394,11 +394,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="state"></a>Zustand  
  Nachdem ein Entitätsobjekt an die <xref:System.Data.Linq.DataContext>-Instanz angefügt wurde, wird davon ausgegangen, dass sich das Objekt im `PossiblyModified`-Zustand befindet. Sie können auf drei Weisen erzwingen, dass ein angefügtes Objekt als Objekt im `Modified`-Zustand betrachtet wird.  
   
-1.  Fügen Sie es als unverändert an, und ändern Sie die Felder dann direkt.  
+1. Fügen Sie es als unverändert an, und ändern Sie die Felder dann direkt.  
   
-2.  Fügen Sie es mit der <xref:System.Data.Linq.Table%601.Attach%2A>-Überladung an, die aktuelle und ursprüngliche Objektinstanzen akzeptiert. Dadurch werden dem Änderungsprotokollierer alte und neue Werte zur Verfügung gestellt, sodass er automatisch weiß, welche Felder geändert wurden.  
+2. Fügen Sie es mit der <xref:System.Data.Linq.Table%601.Attach%2A>-Überladung an, die aktuelle und ursprüngliche Objektinstanzen akzeptiert. Dadurch werden dem Änderungsprotokollierer alte und neue Werte zur Verfügung gestellt, sodass er automatisch weiß, welche Felder geändert wurden.  
   
-3.  Fügen Sie es mit der <xref:System.Data.Linq.Table%601.Attach%2A>-Überladung an, die einen zweiten booleschen Parameter (auf true festgelegt) akzeptiert. Dadurch wird das Objekt vom Änderungsprotokollierer als geändert betrachtet, ohne dass einer der ursprünglichen Werte bereitgestellt werden muss. Bei dieser Vorgehensweise muss dass Objekt über ein Versions-/Timestampfeld verfügen.  
+3. Fügen Sie es mit der <xref:System.Data.Linq.Table%601.Attach%2A>-Überladung an, die einen zweiten booleschen Parameter (auf true festgelegt) akzeptiert. Dadurch wird das Objekt vom Änderungsprotokollierer als geändert betrachtet, ohne dass einer der ursprünglichen Werte bereitgestellt werden muss. Bei dieser Vorgehensweise muss dass Objekt über ein Versions-/Timestampfeld verfügen.  
   
  Weitere Informationen finden Sie unter [Objektzustände und Änderungsverfolgung](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md).  
   

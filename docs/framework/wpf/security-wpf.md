@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 01b1b30ceca316ecebacfaf23f458f71f1953d04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193667"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313566"
 ---
 # <a name="security-wpf"></a>Sicherheit (WPF)
 <a name="introduction"></a> Wenn Sie Windows Presentation Foundation (WPF)-eigenständige und im Browser gehostete Anwendungen zu entwickeln, müssen Sie das Sicherheitsmodell berücksichtigen. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] eigenständige Anwendungen werden mit uneingeschränkten Berechtigungen ausgeführt ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** Berechtigungssatz), ob mithilfe von Windows Installer (MSI), XCopy, bereitgestellt oder [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Die Bereitstellung teilweise vertrauenswürdiger eigenständiger WPF-Anwendungen mit ClickOnce wird nicht unterstützt. Eine voll vertrauenswürdige hostanwendung kann jedoch eine teilweise vertrauenswürdige erstellen <xref:System.AppDomain> mit dem .NET Framework-Add-in-Modell. Weitere Informationen finden Sie unter [Übersicht über WPF-Add-Ins](./app-development/wpf-add-ins-overview.md).  
@@ -103,15 +103,15 @@ ms.locfileid: "59193667"
   
  Die Auflistung der Funktionen, die auf diese Weise gesichert werden kann erfolgt auf Grundlage einzelner Zonen für die **Internet**, **Intranet**, **vertrauenswürdige Sites**, und  **Eingeschränkte Sites** Zonen. Die folgenden Schritte beschreiben, wie die Sicherheitseinstellungen konfiguriert werden:  
   
-1.  Open **Systemsteuerung**.  
+1. Open **Systemsteuerung**.  
   
-2.  Klicken Sie auf **Netzwerk und Internet** , und klicken Sie dann auf **Internetoptionen**.  
+2. Klicken Sie auf **Netzwerk und Internet** , und klicken Sie dann auf **Internetoptionen**.  
   
      Das Dialogfeld "Internetoptionen" wird angezeigt.  
   
-3.  Auf der **Sicherheit** Registerkarte, wählen Sie die Zone so konfigurieren Sie die Sicherheitseinstellungen für.  
+3. Auf der **Sicherheit** Registerkarte, wählen Sie die Zone so konfigurieren Sie die Sicherheitseinstellungen für.  
   
-4.  Klicken Sie auf die **Stufe** Schaltfläche.  
+4. Klicken Sie auf die **Stufe** Schaltfläche.  
   
      Die **Sicherheitseinstellungen** Dialogfeld wird angezeigt, und Sie können die Sicherheitseinstellungen für die ausgewählte Zone konfigurieren.  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194525"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314879"
 ---
 # <a name="accessing-services-using-a-client"></a>Zugreifen auf Dienste mithilfe eines Clients
 Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF-Client- oder kanalobjekt-Objekte mit Diensten kommunizieren. Die [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md) Thema bietet eine Übersicht über die Objekte und Schritte zum Erstellen von Objekten für grundlegende Client- und kanalobjekten und deren Verwendung.  
@@ -83,11 +83,11 @@ Clientanwendungen müssen erstellen, konfigurieren und Verwenden von WCF-Client-
   
  Bei Verwendung des expliziten Ansatzes müssen durch die Anwendung die folgenden Schritte in dieser Reihenfolge ausgeführt werden:  
   
-1.  Rufen Sie <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (oder eine asynchrone Version) auf.  
+1. Rufen Sie <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> oder <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (oder eine asynchrone Version) auf.  
   
-2.  Wenn die Initialisierer zurückgegeben wurden, rufen Sie entweder die <xref:System.ServiceModel.ICommunicationObject.Open%2A>-Methode für das <xref:System.ServiceModel.IClientChannel>-Objekt oder für das <xref:System.ServiceModel.IClientChannel>-Objekt auf, das durch die <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird.  
+2. Wenn die Initialisierer zurückgegeben wurden, rufen Sie entweder die <xref:System.ServiceModel.ICommunicationObject.Open%2A>-Methode für das <xref:System.ServiceModel.IClientChannel>-Objekt oder für das <xref:System.ServiceModel.IClientChannel>-Objekt auf, das durch die <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird.  
   
-3.  Aufrufen von Vorgängen.  
+3. Aufrufen von Vorgängen.  
   
  Es wird empfohlen, dass Anwendungen mit Produktionsqualität den Prozess der Benutzeroberfläche mithilfe des expliziten Ansatzes steuern.  
   

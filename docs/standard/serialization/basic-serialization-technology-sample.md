@@ -2,12 +2,12 @@
 title: Technologiebeispiel für einfache Serialisierung
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 43e69ce90b86053badad91b62ec288378e63e2ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681702"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315009"
 ---
 # <a name="basic-serialization-technology-sample"></a>Technologiebeispiel für einfache Serialisierung
 [Beispiel herunterladen](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -18,25 +18,25 @@ ms.locfileid: "54681702"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>So erstellen Sie das Beispiel mithilfe der Eingabeaufforderung  
   
-1.  Navigieren Sie mithilfe der Eingabeaufforderung zu einem der sprachspezifischen Unterverzeichnisse unter dem Verzeichnis "Technologies\Serialization\Runtime Serialization\Basic".  
+1. Navigieren Sie mithilfe der Eingabeaufforderung zu einem der sprachspezifischen Unterverzeichnisse unter dem Verzeichnis "Technologies\Serialization\Runtime Serialization\Basic".  
   
-2.  Geben Sie je nach verwendeter Programmiersprache **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** oder **msbuild SerializationVB.sln** in der Befehlszeile ein.  
+2. Geben Sie je nach verwendeter Programmiersprache **msbuild SerializationCS.sln**, **msbuild SerializationJSL.sln** oder **msbuild SerializationVB.sln** in der Befehlszeile ein.  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>So erstellen Sie das Beispiel mithilfe von Visual Studio  
   
-1.  Öffnen Sie [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)], und navigieren Sie zu einem der sprachspezifischen Unterverzeichnisse für das Beispiel.  
+1. Öffnen Sie [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)], und navigieren Sie zu einem der sprachspezifischen Unterverzeichnisse für das Beispiel.  
   
-2.  Doppelklicken Sie je nach verwendeter Programmiersprache auf das Symbol für die Datei SerializationCS.sln, SerializationJSL.sln oder SerializationVB.sln, um die Datei in Visual Studio zu öffnen.  
+2. Doppelklicken Sie je nach verwendeter Programmiersprache auf das Symbol für die Datei SerializationCS.sln, SerializationJSL.sln oder SerializationVB.sln, um die Datei in Visual Studio zu öffnen.  
   
-3.  Wählen Sie im Menü **Erstellen** die Option **Projektmappe erstellen** aus.  
+3. Wählen Sie im Menü **Erstellen** die Option **Projektmappe erstellen** aus.  
   
  Die Beispielanwendung wird im Standardunterverzeichnis \bin oder \bin\Debug erstellt.  
   
 ### <a name="to-run-the-sample"></a>So führen Sie das Beispiel aus  
   
-1.  Navigieren Sie zu dem Verzeichnis, das die erstellte ausführbare Datei enthält.  
+1. Navigieren Sie zu dem Verzeichnis, das die erstellte ausführbare Datei enthält.  
   
-2.  Geben Sie **Serialization.exe** zusammen mit den gewünschten Parameterwerten in der Befehlszeile ein.  
+2. Geben Sie **Serialization.exe** zusammen mit den gewünschten Parameterwerten in der Befehlszeile ein.  
   
     > [!NOTE]
     >  In diesem Beispiel wird eine Konsolenanwendung erstellt. Sie müssen es über die Eingabeaufforderung starten, um die Ausgabe anzuzeigen.  
@@ -64,19 +64,19 @@ ms.locfileid: "54681702"
   
 -   Laufzeitserialisierung  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> Wird verwendet, um auf ein <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Objekt oder ein <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>-Objekt zu verweisen.  
+    -   <xref:System.Runtime.Serialization.IFormatter> Zum Verweisen auf entweder eine <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> oder <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Objekt.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Wird verwendet, um eine verknüpfte Liste in einen Stream im Binärformat zu serialisieren. Die Binärformatierung verwendet ein Format, das nur der <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Typ versteht. Die Daten sind jedoch präzise.  
+    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> Verwendet, um eine verknüpfte Liste in einen Stream im Binärformat zu serialisieren. Die Binärformatierung verwendet ein Format, das nur der <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>-Typ versteht. Die Daten sind jedoch präzise.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Wird verwendet, um eine verknüpfte Liste in einen Stream im SOAP-Format zu serialisieren. SOAP ist ein Standardformat.  
+    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> Verwendet, um eine verknüpfte Liste in einen Stream im SOAP-Format zu serialisieren. SOAP ist ein Standardformat.  
   
 -   Stream-E/A  
   
-    -   <xref:System.IO.Stream> Wird zum Serialisieren und Deserialisieren verwendet. Bei dem in diesem Beispiel verwendeten speziellen Streamtyp handelt es sich um den <xref:System.IO.FileStream>-Typ. Die Serialisierung kann jedoch mit einem beliebigen aus <xref:System.IO.Stream> abgeleitetet Typ durchgeführt werden.  
+    -   <xref:System.IO.Stream> Verwendet zum Serialisieren und deserialisieren. Bei dem in diesem Beispiel verwendeten speziellen Streamtyp handelt es sich um den <xref:System.IO.FileStream>-Typ. Die Serialisierung kann jedoch mit einem beliebigen aus <xref:System.IO.Stream> abgeleitetet Typ durchgeführt werden.  
   
-    -   <xref:System.IO.File> Wird zum Erstellen von <xref:System.IO.FileStream>-Objekten zum Lesen und Erstellen von Dateien auf einem Datenträger verwendet.  
+    -   <xref:System.IO.File> Zum Erstellen <xref:System.IO.FileStream> Objekte zum Lesen und Erstellen von Dateien auf dem Datenträger.  
   
-    -   <xref:System.IO.FileStream> Wird zum Serialisieren und Deserialisieren verknüpfter Listen verwendet.  
+    -   <xref:System.IO.FileStream> Zum Serialisieren und Deserialisieren verknüpfter Listen verwendet.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Verwenden Sie den Schutz von Daten'
+title: 'Vorgehensweise: Verwenden des Datenschutzes'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b90c8fc25b0d33d084fbfd4979088e568c0618df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698391"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314456"
 ---
-# <a name="how-to-use-data-protection"></a>Vorgehensweise: Verwenden Sie den Schutz von Daten
+# <a name="how-to-use-data-protection"></a>Vorgehensweise: Verwenden des Datenschutzes
 .NET Framework bietet Zugriff auf die Datenschutz-API, die es Ihnen ermöglicht, Daten mithilfe von Informationen vom aktuellen Benutzerkonto oder Computer zu verschlüsseln.  Wenn Sie die Datenschutz-API verwenden, umgehen Sie die schwierige Aufgabe, einen kryptografischen Schlüssel explizit zu generieren und zu speichern.  
   
  Verwenden Sie die <xref:System.Security.Cryptography.ProtectedMemory>-Klasse, um ein Array aus In-Memory-Bytes zu verschlüsseln.  Diese Funktionalität ist ab Microsoft Windows XP verfügbar.  Sie können angeben, dass der durch den aktuellen Prozess verschlüsselte Speicher nur durch den aktuellen Prozess, durch alle Prozesse oder von demselben Benutzerkontext entschlüsselt werden kann.  In der <xref:System.Security.Cryptography.MemoryProtectionScope>-Enumeration finden Sie eine ausführliche Beschreibung der <xref:System.Security.Cryptography.ProtectedMemory>-Optionen.  
@@ -34,25 +34,25 @@ ms.locfileid: "54698391"
   
 ### <a name="to-encrypt-in-memory-data-using-data-protection"></a>So verschlüsseln Sie im Arbeitsspeicher befindliche Daten mithilfe von Datenschutz  
   
-1.  Rufen Sie die statische <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A>-Methode auf, wobei Sie ein Array zu verschlüsselnder Bytes, die Entropie und den Speicherschutzbereich übergeben.  
+1. Rufen Sie die statische <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A>-Methode auf, wobei Sie ein Array zu verschlüsselnder Bytes, die Entropie und den Speicherschutzbereich übergeben.  
   
 ### <a name="to-decrypt-in-memory-data-using-data-protection"></a>So entschlüsseln Sie im Arbeitsspeicher befindliche Daten mithilfe von Datenschutz  
   
-1.  Rufen Sie die statische <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A>-Methode auf, wobei Sie ein Array zu entschlüsselnder Bytes und den Speicherschutzbereich übergeben.  
+1. Rufen Sie die statische <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A>-Methode auf, wobei Sie ein Array zu entschlüsselnder Bytes und den Speicherschutzbereich übergeben.  
   
 ### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>So verschlüsseln Sie Daten in eine Datei oder einen Stream mithilfe von Datenschutz  
   
-1.  Erstellen Sie eine zufällige Entropie.  
+1. Erstellen Sie eine zufällige Entropie.  
   
-2.  Rufen Sie die statische <xref:System.Security.Cryptography.ProtectedData.Protect%2A>-Methode auf, wobei Sie ein Array zu verschlüsselnder Bytes, die Entropie und den Datenschutzbereich übergeben.  
+2. Rufen Sie die statische <xref:System.Security.Cryptography.ProtectedData.Protect%2A>-Methode auf, wobei Sie ein Array zu verschlüsselnder Bytes, die Entropie und den Datenschutzbereich übergeben.  
   
-3.  Schreiben Sie die verschlüsselten Daten in eine Datei oder einen Stream.  
+3. Schreiben Sie die verschlüsselten Daten in eine Datei oder einen Stream.  
   
 ### <a name="to-decrypt-data-from-a-file-or-stream-using-data-protection"></a>So entschlüsseln Sie Daten aus einer Datei oder einem Stream mithilfe von Datenschutz  
   
-1.  Lesen Sie die verschlüsselten Daten aus einer Datei oder einem Stream.  
+1. Lesen Sie die verschlüsselten Daten aus einer Datei oder einem Stream.  
   
-2.  Rufen Sie die statische <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A>-Methode auf, wobei Sie ein Array zu entschlüsselnder Bytes und den Datenschutzbereich übergeben.  
+2. Rufen Sie die statische <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A>-Methode auf, wobei Sie ein Array zu entschlüsselnder Bytes und den Datenschutzbereich übergeben.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel werden zwei Arten von Verschlüsselung und Entschlüsselung veranschaulicht.  Im Codebeispiel wird zunächst ein im Arbeitsspeicher befindliches Array aus Bytes verschlüsselt und anschließend entschlüsselt.  Danach wird eine Kopie eines Bytearrays verschlüsselt, wird diese Kopie in einer Datei gespeichert, werden die Daten aus der Datei zurückgeladen und werden die Daten entschlüsselt.  Im Beispiel werden die ursprünglichen Daten, die verschlüsselten Daten und die entschlüsselten Daten angezeigt.  

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: ab659e7e586b28f5c06b9b6ba12b313f318c6542
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 51681e258e6a21b3a7ae604d1c0ef65d320bfb4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210502"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311876"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>Vorgehensweise: Konfigurieren einer benutzerdefinierten WS-Metadata Exchange-Bindung
 In diesem Thema wird erläutert, wie Sie eine benutzerdefinierte WS-Metadatenaustausch-Bindung konfigurieren. Windows Communication Foundation (WCF) enthält vier vom System definierte metadatenbindungen, aber Sie können Metadaten mit jeder gewünschten Bindung veröffentlichen. In diesem Thema wird beschrieben, wie Metadaten mit der `wsHttpBinding` veröffentlicht werden. Diese Bindung ermöglicht es Ihnen, Metadaten auf eine sichere Weise verfügbar zu machen. Der Code in diesem Artikel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 ### <a name="using-a-configuration-file"></a>Verwenden einer Konfigurationsdatei  
   
-1.  Fügen Sie in der Konfigurationsdatei des Dienstes ein Dienstverhalten hinzu, das das `serviceMetadata`-Tag enthält:  
+1. Fügen Sie in der Konfigurationsdatei des Dienstes ein Dienstverhalten hinzu, das das `serviceMetadata`-Tag enthält:  
   
     ```xml  
     <behaviors>  
@@ -29,14 +29,14 @@ In diesem Thema wird erläutert, wie Sie eine benutzerdefinierte WS-Metadatenaus
     </behaviors>  
     ```  
   
-2.  Fügen Sie dem Dienst-Tag ein `behaviorConfiguration`-Attribut hinzu, das auf dieses neue Verhalten verweist:  
+2. Fügen Sie dem Dienst-Tag ein `behaviorConfiguration`-Attribut hinzu, das auf dieses neue Verhalten verweist:  
   
     ```xml  
     <service        name="Microsoft.ServiceModel.Samples.CalculatorService"  
     behaviorConfiguration="CalculatorServiceBehavior">   
     ```  
   
-3.  Fügen Sie einen Metadatenendpunkt hinzu, der MEX als Adresse, `wsHttpBinding` als Bindung und <xref:System.ServiceModel.Description.IMetadataExchange> als Vertrag angibt:  
+3. Fügen Sie einen Metadatenendpunkt hinzu, der MEX als Adresse, `wsHttpBinding` als Bindung und <xref:System.ServiceModel.Description.IMetadataExchange> als Vertrag angibt:  
   
     ```xml  
     <endpoint address="mex"  
@@ -44,7 +44,7 @@ In diesem Thema wird erläutert, wie Sie eine benutzerdefinierte WS-Metadatenaus
               contract="IMetadataExchange" />  
     ```  
   
-4.  Fügen Sie ein Endpunkt-Tag in der Client-Konfigurationsdatei hinzu, um zu überprüfen, ob der Metadatenaustausch-Endpunkt ordnungsgemäß funktioniert:  
+4. Fügen Sie ein Endpunkt-Tag in der Client-Konfigurationsdatei hinzu, um zu überprüfen, ob der Metadatenaustausch-Endpunkt ordnungsgemäß funktioniert:  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  
@@ -52,7 +52,7 @@ In diesem Thema wird erläutert, wie Sie eine benutzerdefinierte WS-Metadatenaus
               contract="IMetadataExchange"/>  
     ```  
   
-5.  Erstellen Sie in der Main()-Methode des Clients eine neue <xref:System.ServiceModel.Description.MetadataExchangeClient>-Instanz, legen Sie ihre <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A>-Eigenschaft auf `true` fest, rufen Sie <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> auf, und durchlaufen Sie dann die Auflistung zurückgegebener Metadaten:  
+5. Erstellen Sie in der Main()-Methode des Clients eine neue <xref:System.ServiceModel.Description.MetadataExchangeClient>-Instanz, legen Sie ihre <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A>-Eigenschaft auf `true` fest, rufen Sie <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> auf, und durchlaufen Sie dann die Auflistung zurückgegebener Metadaten:  
   
     ```  
     string mexAddress = "http://localhost:8000/servicemodelsamples/service/mex";  
@@ -66,19 +66,19 @@ In diesem Thema wird erläutert, wie Sie eine benutzerdefinierte WS-Metadatenaus
   
 ### <a name="configuring-by-code"></a>Konfigurieren durch Code  
   
-1.  Erstellen Sie eine <xref:System.ServiceModel.WSHttpBinding>-Bindungsinstanz:  
+1. Erstellen Sie eine <xref:System.ServiceModel.WSHttpBinding>-Bindungsinstanz:  
   
     ```  
     WSHttpBinding binding = new WSHttpBinding();  
     ```  
   
-2.  Erstellen Sie eine <xref:System.ServiceModel.ServiceHost>-Instanz:  
+2. Erstellen Sie eine <xref:System.ServiceModel.ServiceHost>-Instanz:  
   
     ```  
     ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress);  
     ```  
   
-3.  Fügen Sie einen Dienstendpunkt hinzu, und fügen Sie eine <xref:System.ServiceModel.Description.ServiceMetadataBehavior>-Instanz hinzu:  
+3. Fügen Sie einen Dienstendpunkt hinzu, und fügen Sie eine <xref:System.ServiceModel.Description.ServiceMetadataBehavior>-Instanz hinzu:  
   
     ```  
     serviceHost.AddServiceEndpoint(typeof(ICalculator), binding, baseAddress);  
@@ -87,13 +87,13 @@ In diesem Thema wird erläutert, wie Sie eine benutzerdefinierte WS-Metadatenaus
     serviceHost.Description.Behaviors.Add(smb);  
     ```  
   
-4.  Fügen Sie einen Metadatenaustausch-Endpunkt hinzu, der die zuvor erstellte <xref:System.ServiceModel.WSHttpBinding> angibt:  
+4. Fügen Sie einen Metadatenaustausch-Endpunkt hinzu, der die zuvor erstellte <xref:System.ServiceModel.WSHttpBinding> angibt:  
   
     ```  
     serviceHost.AddServiceEndpoint(typeof(IMetadataExchange), binding, mexAddress);  
     ```  
   
-5.  Fügen Sie ein Endpunkt-Tag in der Client-Konfigurationsdatei hinzu, um zu überprüfen, ob der Metadatenaustausch-Endpunkt ordnungsgemäß funktioniert:  
+5. Fügen Sie ein Endpunkt-Tag in der Client-Konfigurationsdatei hinzu, um zu überprüfen, ob der Metadatenaustausch-Endpunkt ordnungsgemäß funktioniert:  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  
@@ -101,7 +101,7 @@ In diesem Thema wird erläutert, wie Sie eine benutzerdefinierte WS-Metadatenaus
               contract="IMetadataExchange"/>  
     ```  
   
-6.  Erstellen Sie in der Main()-Methode des Clients eine neue <xref:System.ServiceModel.Description.MetadataExchangeClient>-Instanz, legen Sie die <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A>-Eigenschaft auf `true` fest, rufen Sie <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> auf, und durchlaufen Sie dann die Auflistung zurückgegebener Metadaten:  
+6. Erstellen Sie in der Main()-Methode des Clients eine neue <xref:System.ServiceModel.Description.MetadataExchangeClient>-Instanz, legen Sie die <xref:System.ServiceModel.Description.MetadataExchangeClient.ResolveMetadataReferences%2A>-Eigenschaft auf `true` fest, rufen Sie <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> auf, und durchlaufen Sie dann die Auflistung zurückgegebener Metadaten:  
   
     ```  
     string mexAddress = "http://localhost:8000/servicemodelsamples/service/mex";  

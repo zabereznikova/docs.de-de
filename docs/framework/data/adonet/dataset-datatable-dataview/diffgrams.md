@@ -2,12 +2,12 @@
 title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 1324e6536390b598ca9ef1f0cd3102f8ec49d45a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197996"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313514"
 ---
 # <a name="diffgrams"></a>DiffGrams
 Ein DiffGram ist ein XML-Format, das aktuelle und ursprüngliche Versionen von Datenelementen angibt. <xref:System.Data.DataSet> verwendet das DiffGram-Format, um seinen Inhalt zu laden und beizubehalten und um seinen Inhalt für die Übertragung über eine Netzwerkverbindung zu serialisieren. Wenn eine <xref:System.Data.DataSet> wird als DiffGram geschrieben, füllt es das DiffGram mit allen erforderlichen Informationen, um genau den Inhalt, jedoch nicht mit das Schema, der neu zu erstellen die <xref:System.Data.DataSet>, einschließlich Spaltenwerten aus der **ursprünglichen** und **aktuelle** Zeilenversionen, Zeilenfehlerinformationen und Zeilenreihenfolgen.  
@@ -20,26 +20,26 @@ Ein DiffGram ist ein XML-Format, das aktuelle und ursprüngliche Versionen von D
   
 ### <a name="to-generate-a-diffgram"></a>So generieren Sie ein Diffgram  
   
-1.  Generieren Sie eine Liste von Stammtabellen (also Tabellen ohne irgendein übergeordnetes Element).  
+1. Generieren Sie eine Liste von Stammtabellen (also Tabellen ohne irgendein übergeordnetes Element).  
   
-2.  Geben Sie im ersten Diffgram-Abschnitt für jede Tabelle und ihre untergeordneten Tabellen in der Liste die aktuelle Version der einzelnen Zeilen an.  
+2. Geben Sie im ersten Diffgram-Abschnitt für jede Tabelle und ihre untergeordneten Tabellen in der Liste die aktuelle Version der einzelnen Zeilen an.  
   
-3.  Für jede Tabelle in der <xref:System.Data.DataSet>, schreiben die Originalversion der einzelnen Zeilen an, sofern vorhanden, in der  **\<vor >** Abschnitt des DiffGram-Objekts.  
+3. Für jede Tabelle in der <xref:System.Data.DataSet>, schreiben die Originalversion der einzelnen Zeilen an, sofern vorhanden, in der  **\<vor >** Abschnitt des DiffGram-Objekts.  
   
-4.  Für Zeilen mit Fehlermeldungen der Fehlermeldung die  **\<Fehlern >** Abschnitt des DiffGram-Objekts.  
+4. Für Zeilen mit Fehlermeldungen der Fehlermeldung die  **\<Fehlern >** Abschnitt des DiffGram-Objekts.  
   
  Ein Diffgram wird vom Anfang der XML-Datei bis zu deren Ende verarbeitet.  
   
 ### <a name="to-process-a-diffgram"></a>So verarbeiten Sie ein Diffgram  
   
-1.  Verarbeiten Sie den ersten Abschnitt des Diffgram, der die aktuelle Version der Zeilen enthält.  
+1. Verarbeiten Sie den ersten Abschnitt des Diffgram, der die aktuelle Version der Zeilen enthält.  
   
-2.  Verarbeiten Sie den zweiten oder  **\<vor >** Abschnitt mit die Originalversion der bearbeiteten und gelöschten Zeilen.  
+2. Verarbeiten Sie den zweiten oder  **\<vor >** Abschnitt mit die Originalversion der bearbeiteten und gelöschten Zeilen.  
   
     > [!NOTE]
     >  Wenn eine Zeile als gelöscht gekennzeichnet ist, kann je nach der `Cascade`-Eigenschaft des aktuellen <xref:System.Data.DataSet> der Löschvorgang auch die untergeordneten Zeilen der Zeile löschen.  
   
-3.  Prozess der  **\<Fehlern >** Abschnitt. Legen Sie in diesem Abschnitt die Fehlerinformationen für die angegebene Zeile und Spalte für jedes Element fest.  
+3. Prozess der  **\<Fehlern >** Abschnitt. Legen Sie in diesem Abschnitt die Fehlerinformationen für die angegebene Zeile und Spalte für jedes Element fest.  
   
 > [!NOTE]
 >  Wenn Sie für <xref:System.Data.XmlWriteMode> "Diffgram" festlegen, kann es passieren, dass sich der Inhalt des Ziel-<xref:System.Data.DataSet> und des Original-<xref:System.Data.DataSet> voneinander unterscheiden.  

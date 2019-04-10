@@ -8,12 +8,12 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 78ad6a88d5c123272e1796f1a75e2bd226bfc8f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 56e8720a6130d2908fbfb83bd243a54fae9a2406
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176162"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315815"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>Vorgehensweise: Einrichten einer Signaturbestätigung
 *Signaturbestätigung* ist ein Mechanismus für einen nachrichteninitiator, um sicherzustellen, dass eine empfangene Antwort als Antwort auf die ursprüngliche Nachricht des Absenders generiert wurde. Die Signaturbestätigung wird in der WS-Sicherheit 1.1-Spezifikation definiert. Wenn ein Endpunkt WS-Sicherheit 1.0 unterstützt, können Sie keine Signaturbestätigung verwenden.  
@@ -22,29 +22,29 @@ ms.locfileid: "59176162"
   
 ### <a name="to-enable-signature-confirmation-in-code"></a>So aktivieren Sie die Signaturbestätigung in Code  
   
-1.  Erstellen Sie eine Instanz der <xref:System.ServiceModel.Channels.BindingElementCollection>-Klasse.  
+1. Erstellen Sie eine Instanz der <xref:System.ServiceModel.Channels.BindingElementCollection>-Klasse.  
   
-2.  Erstellen Sie eine Instanz von der <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> Klasse.  
+2. Erstellen Sie eine Instanz von der <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> Klasse.  
   
-3.  Legen Sie <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> auf `true` fest  
+3. Legen Sie <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> auf `true` fest  
   
-4.  Fügen Sie der Bindungsauflistung das Sicherheitselement hinzu.  
+4. Fügen Sie der Bindungsauflistung das Sicherheitselement hinzu.  
   
-5.  Erstellen Sie eine benutzerdefinierte Bindung gemäß [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
+5. Erstellen Sie eine benutzerdefinierte Bindung gemäß [Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
 ### <a name="to-enable-signature-confirmation-in-configuration"></a>So aktivieren Sie die Signaturbestätigung in der Konfiguration  
   
-1.  Fügen Sie dem `<customBinding>``<bindings>`-Abschnitt der Konfigurationsdatei ein -Element hinzu.  
+1. Fügen Sie dem `<customBinding>``<bindings>`-Abschnitt der Konfigurationsdatei ein -Element hinzu.  
   
-2.  Fügen Sie ein `<binding>`-Element hinzu, und legen Sie das Namensattribut auf einen passenden Wert fest.  
+2. Fügen Sie ein `<binding>`-Element hinzu, und legen Sie das Namensattribut auf einen passenden Wert fest.  
   
-3.  Fügen Sie ein entsprechendes Codierungselement hinzu. Im folgenden Beispiel wird ein `<TextMessageEncoding>`-Element hinzugefügt.  
+3. Fügen Sie ein entsprechendes Codierungselement hinzu. Im folgenden Beispiel wird ein `<TextMessageEncoding>`-Element hinzugefügt.  
   
-4.  Hinzufügen einer `<security>` untergeordnete Element, und legen die `requireSignatureConfirmation` -Attribut `true`.  
+4. Hinzufügen einer `<security>` untergeordnete Element, und legen die `requireSignatureConfirmation` -Attribut `true`.  
   
-5.  Dies ist optional. Um signaturbestätigung während des Bootstraps aktivieren möchten, fügen einen [ \<SecureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) untergeordneten-Element, und legen die `equireSignatureConfirmation` Attribut `true`.  
+5. Dies ist optional. Um signaturbestätigung während des Bootstraps aktivieren möchten, fügen einen [ \<SecureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md) untergeordneten-Element, und legen die `equireSignatureConfirmation` Attribut `true`.  
   
-6.  Fügen Sie ein entsprechendes Transportelement hinzu. Im folgenden Beispiel wird ein [ \<HttpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
+6. Fügen Sie ein entsprechendes Transportelement hinzu. Im folgenden Beispiel wird ein [ \<HttpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
   
     ```xml  
     <bindings>  

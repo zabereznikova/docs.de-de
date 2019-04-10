@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 684ce075155d3da9bae3f7828e84d34399928875
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158625"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315347"
 ---
 # <a name="data-contract-surrogates"></a>Datenvertrag-Ersatzzeichen
 Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Datenvertragsmodell basiert. Diese Funktion wurde zur Verwendung für die Typanpassung und -ersetzung entwickelt, wenn Benutzer Änderungen daran vornehmen möchten, wie ein Typ serialisiert, deserialisiert oder in Metadaten projiziert wird. Einige Szenarien, in denen ein Ersatzzeichen verwendet werden kann, sind die fehlende Spezifizierung eines Datenvertrags für den Typ, die fehlende Markierung von Feldern und Eigenschaften mit dem <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut oder wenn Benutzer die dynamische Erstellung von Schemavarianten wünschen.  
@@ -141,15 +141,15 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Daten
   
 ##### <a name="to-implement-serialization-and-deserialization"></a>So implementieren Sie die Serialisierung und die Deserialisierung  
   
-1.  Erstellen Sie eine Instanz des <xref:System.ServiceModel.ServiceHost> für Ihren Dienst. Vollständige Anweisungen dazu finden Sie unter [Basis-WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
+1. Erstellen Sie eine Instanz des <xref:System.ServiceModel.ServiceHost> für Ihren Dienst. Vollständige Anweisungen dazu finden Sie unter [Basis-WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md).  
   
-2.  Suchen Sie für jeden <xref:System.ServiceModel.Description.ServiceEndpoint> des angegebenen Diensthosts seine <xref:System.ServiceModel.Description.OperationDescription>.  
+2. Suchen Sie für jeden <xref:System.ServiceModel.Description.ServiceEndpoint> des angegebenen Diensthosts seine <xref:System.ServiceModel.Description.OperationDescription>.  
   
-3.  Durchsuchen Sie die Vorgangsverhalten, um zu ermitteln, ob eine Instanz von <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> gefunden wird.  
+3. Durchsuchen Sie die Vorgangsverhalten, um zu ermitteln, ob eine Instanz von <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> gefunden wird.  
   
-4.  Wenn ein <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> gefunden wird, legen Sie dessen <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A>-Eigenschaft auf eine neue Instanz des Ersatzzeichens fest. Wenn kein <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> gefunden wird, dann erstellen Sie eine neue Instanz, und legen Sie den <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A>-Member des neuen Verhaltens auf eine neue Instanz des Ersatzzeichens fest.  
+4. Wenn ein <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> gefunden wird, legen Sie dessen <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A>-Eigenschaft auf eine neue Instanz des Ersatzzeichens fest. Wenn kein <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> gefunden wird, dann erstellen Sie eine neue Instanz, und legen Sie den <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A>-Member des neuen Verhaltens auf eine neue Instanz des Ersatzzeichens fest.  
   
-5.  Fügen Sie dieses neue Verhalten schließlich den aktuellen Vorgangsverhalten hinzu, wie im folgenden Beispiel gezeigt wird:  
+5. Fügen Sie dieses neue Verhalten schließlich den aktuellen Vorgangsverhalten hinzu, wie im folgenden Beispiel gezeigt wird:  
   
      [!code-csharp[C_IDataContractSurrogate#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#8)]  
   
@@ -158,19 +158,19 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Daten
   
 ##### <a name="to-implement-a-surrogate-for-metadata-importation"></a>So implementieren Sie ein Ersatzzeichen für den Metadatenimport  
   
-1.  Importieren Sie die Metadaten mit der <xref:System.ServiceModel.Description.WsdlImporter>-Klasse.  
+1. Importieren Sie die Metadaten mit der <xref:System.ServiceModel.Description.WsdlImporter>-Klasse.  
   
-2.  Verwenden Sie die <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Methode zur Überprüfung, ob ein <xref:System.Runtime.Serialization.XsdDataContractImporter> definiert wurde.  
+2. Verwenden Sie die <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Methode zur Überprüfung, ob ein <xref:System.Runtime.Serialization.XsdDataContractImporter> definiert wurde.  
   
-3.  Wenn die <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Methode `false` zurückgibt, erstellen Sie einen neuen <xref:System.Runtime.Serialization.XsdDataContractImporter>, und legen Sie dessen <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A>-Eigenschaft auf eine neue Instanz der <xref:System.Runtime.Serialization.ImportOptions>-Klasse fest. Verwenden Sie andernfalls den durch den `out`-Parameter der <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Methode zurückgegebenen Importer.  
+3. Wenn die <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Methode `false` zurückgibt, erstellen Sie einen neuen <xref:System.Runtime.Serialization.XsdDataContractImporter>, und legen Sie dessen <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A>-Eigenschaft auf eine neue Instanz der <xref:System.Runtime.Serialization.ImportOptions>-Klasse fest. Verwenden Sie andernfalls den durch den `out`-Parameter der <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Methode zurückgegebenen Importer.  
   
-4.  Wenn für den <xref:System.Runtime.Serialization.XsdDataContractImporter> keine <xref:System.Runtime.Serialization.ImportOptions> definiert sind, dann legen Sie die Eigenschaft auf eine neue Instanz der <xref:System.Runtime.Serialization.ImportOptions>-Klasse fest.  
+4. Wenn für den <xref:System.Runtime.Serialization.XsdDataContractImporter> keine <xref:System.Runtime.Serialization.ImportOptions> definiert sind, dann legen Sie die Eigenschaft auf eine neue Instanz der <xref:System.Runtime.Serialization.ImportOptions>-Klasse fest.  
   
-5.  Legen Sie die <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>-Eigenschaft der <xref:System.Runtime.Serialization.ImportOptions> des <xref:System.Runtime.Serialization.XsdDataContractImporter> auf eine neue Instanz des Ersatzzeichens fest.  
+5. Legen Sie die <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>-Eigenschaft der <xref:System.Runtime.Serialization.ImportOptions> des <xref:System.Runtime.Serialization.XsdDataContractImporter> auf eine neue Instanz des Ersatzzeichens fest.  
   
-6.  Fügen Sie den <xref:System.Runtime.Serialization.XsdDataContractImporter> der Sammlung hinzu, die durch die <xref:System.ServiceModel.Description.MetadataExporter.State%2A>-Eigenschaft des <xref:System.ServiceModel.Description.WsdlImporter> (geerbt von der <xref:System.ServiceModel.Description.MetadataExporter>-Klasse) zurückgegeben wird.  
+6. Fügen Sie den <xref:System.Runtime.Serialization.XsdDataContractImporter> der Sammlung hinzu, die durch die <xref:System.ServiceModel.Description.MetadataExporter.State%2A>-Eigenschaft des <xref:System.ServiceModel.Description.WsdlImporter> (geerbt von der <xref:System.ServiceModel.Description.MetadataExporter>-Klasse) zurückgegeben wird.  
   
-7.  Verwenden Sie die <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>-Methode des <xref:System.ServiceModel.Description.WsdlImporter> zum Importieren sämtlicher Datenverträge innerhalb des Schemas. Während des letzten Schritts wird Code aus den geladenen Schemas durch Aufruf in das Ersatzzeichen generiert.  
+7. Verwenden Sie die <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A>-Methode des <xref:System.ServiceModel.Description.WsdlImporter> zum Importieren sämtlicher Datenverträge innerhalb des Schemas. Während des letzten Schritts wird Code aus den geladenen Schemas durch Aufruf in das Ersatzzeichen generiert.  
   
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
@@ -179,15 +179,15 @@ Der Datenvertrag *Ersatzzeichen* ist eine erweiterte Funktion, die auf dem Daten
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>So verwenden Sie ein Ersatzzeichen für den Metadatenexport  
   
-1.  Erstellen Sie ein neues <xref:System.ServiceModel.Description.WsdlExporter>, oder verwenden Sie den `wsdlExporter`-Parameter, der an die <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A>-Methode übergeben wird.  
+1. Erstellen Sie ein neues <xref:System.ServiceModel.Description.WsdlExporter>, oder verwenden Sie den `wsdlExporter`-Parameter, der an die <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A>-Methode übergeben wird.  
   
-2.  Verwenden Sie die <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Funktion zur Überprüfung, ob ein <xref:System.Runtime.Serialization.XsdDataContractExporter> definiert wurde.  
+2. Verwenden Sie die <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Funktion zur Überprüfung, ob ein <xref:System.Runtime.Serialization.XsdDataContractExporter> definiert wurde.  
   
-3.  Wenn <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>`false` zurückgibt, erstellen Sie ein neues <xref:System.Runtime.Serialization.XsdDataContractExporter> mit den generierten XML-Schemas aus dem <xref:System.ServiceModel.Description.WsdlExporter>, und fügen Sie diesen der Sammlung hinzu, die durch die <xref:System.ServiceModel.Description.MetadataExporter.State%2A>-Eigenschaft des <xref:System.ServiceModel.Description.WsdlExporter> zurückgegeben wird. Verwenden Sie andernfalls das Exportprogramm, das durch den `out`-Parameter der <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Methode zurückgegeben wird.  
+3. Wenn <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>`false` zurückgibt, erstellen Sie ein neues <xref:System.Runtime.Serialization.XsdDataContractExporter> mit den generierten XML-Schemas aus dem <xref:System.ServiceModel.Description.WsdlExporter>, und fügen Sie diesen der Sammlung hinzu, die durch die <xref:System.ServiceModel.Description.MetadataExporter.State%2A>-Eigenschaft des <xref:System.ServiceModel.Description.WsdlExporter> zurückgegeben wird. Verwenden Sie andernfalls das Exportprogramm, das durch den `out`-Parameter der <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A>-Methode zurückgegeben wird.  
   
-4.  Wenn für das <xref:System.Runtime.Serialization.XsdDataContractExporter> keine <xref:System.Runtime.Serialization.ExportOptions> definiert sind, dann legen Sie die <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A>-Eigenschaft auf eine neue Instanz der <xref:System.Runtime.Serialization.ExportOptions>-Klasse fest.  
+4. Wenn für das <xref:System.Runtime.Serialization.XsdDataContractExporter> keine <xref:System.Runtime.Serialization.ExportOptions> definiert sind, dann legen Sie die <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A>-Eigenschaft auf eine neue Instanz der <xref:System.Runtime.Serialization.ExportOptions>-Klasse fest.  
   
-5.  Legen Sie die <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>-Eigenschaft der <xref:System.Runtime.Serialization.ExportOptions> des <xref:System.Runtime.Serialization.XsdDataContractExporter> auf eine neue Instanz des Ersatzzeichens fest. Die nachfolgenden Schritte zum Exportieren von Metadaten erfordern keine Änderungen.  
+5. Legen Sie die <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>-Eigenschaft der <xref:System.Runtime.Serialization.ExportOptions> des <xref:System.Runtime.Serialization.XsdDataContractExporter> auf eine neue Instanz des Ersatzzeichens fest. Die nachfolgenden Schritte zum Exportieren von Metadaten erfordern keine Änderungen.  
   
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   

@@ -2,21 +2,21 @@
 title: CustomChannelsTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
-ms.openlocfilehash: c91632c1967645b4319bca14be66fb0052ad741f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7402ac9ccc0e5e1777fa77f339d7605e1d306e13
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192820"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312669"
 ---
 # <a name="customchannelstester"></a>CustomChannelsTester
 Der `CustomChannelsTester` ist ein Tool, das Sie zum Testen Ihrer benutzerdefinierten Channelimplementierungen mit einem Satz vordefinierter Dienstverträge verwenden können. Sie können einen Satz von Dienstverträgen auswählen und diesen mithilfe einer XML-Datei an das Tool übergeben. Anschließend generiert das Tool den Dienst und den Client, die die benutzerdefinierten Channelimplementierungen während des Nachrichtenaustauschs ausführen.  
   
 ### <a name="to-build-the-tool"></a>So erstellen Sie das Tool  
   
-1.  Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
+1. Um die Projektmappe zu erstellen, folgen Sie den Anweisungen im [Erstellen der Windows Communication Foundation-Beispiele](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Erstellen der Projektmappe werden drei Dateien generiert: CustomChannelsTester.exe, "Testspec.xml" und "samplerun.cmd". Die Datei "samplerun.cmd" verfügt über eine Beispielbefehlszeile, die zeigt, wie Sie dieses Tool zum Testen verwenden die [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel.  
+2. Erstellen der Projektmappe werden drei Dateien generiert: CustomChannelsTester.exe, "Testspec.xml" und "samplerun.cmd". Die Datei "samplerun.cmd" verfügt über eine Beispielbefehlszeile, die zeigt, wie Sie dieses Tool zum Testen verwenden die [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Beispiel.  
   
 ### <a name="to-run-the-tool"></a>So führen Sie das Tool aus  
   

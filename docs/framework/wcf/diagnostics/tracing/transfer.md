@@ -2,12 +2,12 @@
 title: Übertragung
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 8263093944cf01a38a49b52d71f7a6e54195a3c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145040"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311018"
 ---
 # <a name="transfer"></a>Übertragung
 Dieses Thema beschreibt die Übertragung in Windows Communication Foundation (WCF) aktivitätsablaufverfolgungs-Modell.  
@@ -42,21 +42,21 @@ Dieses Thema beschreibt die Übertragung in Windows Communication Foundation (WC
 ## <a name="activity-transfer-sequence"></a>Aktivitätsübertragungssequenz  
  Eine gut strukturierte Aktivitätsübertragungssequenz schließt die folgenden Schritte ein.  
   
-1.  Starten Sie eine neue Aktivität, die aus der Auswahl einer neuen gAId besteht.  
+1. Starten Sie eine neue Aktivität, die aus der Auswahl einer neuen gAId besteht.  
   
-2.  Geben Sie eine Übertragungsablaufverfolgung zu dieser neuen gAId von der aktuellen Aktivitäts-ID aus.  
+2. Geben Sie eine Übertragungsablaufverfolgung zu dieser neuen gAId von der aktuellen Aktivitäts-ID aus.  
   
-3.  Festlegen der neuen ID in TLS  
+3. Festlegen der neuen ID in TLS  
   
-4.  Geben Sie eine Start-Ablaufverfolgung aus, um den Beginn der neuen Aktivität festzulegen.  
+4. Geben Sie eine Start-Ablaufverfolgung aus, um den Beginn der neuen Aktivität festzulegen.  
   
-5.  Die Rückgabe zur Originalaktivität besteht aus Folgendem:  
+5. Die Rückgabe zur Originalaktivität besteht aus Folgendem:  
   
-6.  Ausgabe einer Übertragungsablaufverfolgung zur Original-gAId  
+6. Ausgabe einer Übertragungsablaufverfolgung zur Original-gAId  
   
-7.  Ausgabe einer Stop-Ablaufverfolgung, um das Ende der neuen Aktivität festzulegen  
+7. Ausgabe einer Stop-Ablaufverfolgung, um das Ende der neuen Aktivität festzulegen  
   
-8.  Festlegen von TLS auf die alte gAId  
+8. Festlegen von TLS auf die alte gAId  
   
  Das folgende Codebeispiel veranschaulicht, wie Sie dabei vorgehen: Bei diesem Beispiel wird davon ausgegangen, dass ein Sperraufruf bei der Übertragung zur neuen Aktivität ausgelöst wurde, und es enthält Suspend-/Resume-Ablaufverfolungen.  
   

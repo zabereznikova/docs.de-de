@@ -2,12 +2,12 @@
 title: Signieren von gespeicherten Prozeduren in SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094618"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313917"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Signieren von gespeicherten Prozeduren in SQL Server
  Eine digitale Signatur ist ein mit dem privaten Schlüssel des Signaturgebers verschlüsselter Datenhashwert. Der private Schlüssel stellt sicher, dass die digitale Signatur für den Träger oder Besitzer eindeutig ist. Sie können gespeicherte Prozeduren, Funktionen (mit Ausnahme von Inline-Tabellenwertfunktionen), Trigger und Assemblys registrieren.  
@@ -23,25 +23,25 @@ ms.locfileid: "59094618"
   
  Es gibt zwei notwendigen Schritten beteiligt, die zum Signieren eines Moduls:  
   
-1.  Erstellen Sie mit der Transact-SQL-`CREATE CERTIFICATE [certificateName]`-Anweisung ein Zertifikat. Diese Anweisung verfügt über mehrere Optionen, mit denen das Start- und Enddatum und ein Kennwort festgelegt werden können. Die Standardgültigkeitsdauer ist ein Jahr.  
+1. Erstellen Sie mit der Transact-SQL-`CREATE CERTIFICATE [certificateName]`-Anweisung ein Zertifikat. Diese Anweisung verfügt über mehrere Optionen, mit denen das Start- und Enddatum und ein Kennwort festgelegt werden können. Die Standardgültigkeitsdauer ist ein Jahr.  
   
-1.  Signieren Sie die Prozedur mit dem Zertifikat. Verwenden Sie dazu die Transact-SQL-`ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`-Anweisung.  
+1. Signieren Sie die Prozedur mit dem Zertifikat. Verwenden Sie dazu die Transact-SQL-`ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`-Anweisung.  
 
 Nachdem das Modul signiert wurde, muss einen oder mehrere Prinzipale erstellt werden, um die zusätzlichen Berechtigungen enthalten, die mit dem Zertifikat verknüpft werden sollen.  
 
 Wenn das Modul zusätzliche auf Datenbankebene-Berechtigungen erforderlich:  
   
-1.  Erstellen Sie mit der Transact-SQL-`CREATE USER [userName] FROM CERTIFICATE [certificateName]`-Anweisung einen mit diesem Zertifikat verknüpften Datenbankbenutzer. Dieser Benutzer nur in der Datenbank vorhanden ist, und es ist nicht mit einer Anmeldung verknüpft, es sei denn, eine Anmeldung auch über das gleiche Zertifikat erstellt wurde.  
+1. Erstellen Sie mit der Transact-SQL-`CREATE USER [userName] FROM CERTIFICATE [certificateName]`-Anweisung einen mit diesem Zertifikat verknüpften Datenbankbenutzer. Dieser Benutzer nur in der Datenbank vorhanden ist, und es ist nicht mit einer Anmeldung verknüpft, es sei denn, eine Anmeldung auch über das gleiche Zertifikat erstellt wurde.  
   
-1.  Erteilen Sie dem Zertifikatsbenutzer die erforderlichen Berechtigungen auf Datenbankebene.  
+1. Erteilen Sie dem Zertifikatsbenutzer die erforderlichen Berechtigungen auf Datenbankebene.  
   
 Wenn das Modul zusätzliche auf Serverebene-Berechtigungen erforderlich:  
   
-1.  Kopieren Sie das Zertifikat auf dem `master` Datenbank.  
+1. Kopieren Sie das Zertifikat auf dem `master` Datenbank.  
  
-1.  Erstellen Sie eine Anmeldung mit diesem Zertifikat, mit der Transact-SQL-verknüpften `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` Anweisung.  
+1. Erstellen Sie eine Anmeldung mit diesem Zertifikat, mit der Transact-SQL-verknüpften `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` Anweisung.  
   
-1.  Erteilen Sie der Anmeldung des Zertifikats die erforderlichen Berechtigungen auf Serverebene.  
+1. Erteilen Sie der Anmeldung des Zertifikats die erforderlichen Berechtigungen auf Serverebene.  
   
 > [!NOTE]  
 >  Ein Zertifikat kann keine Berechtigungen für Benutzer gewähren, die Berechtigungen hatten, die mit der DENY-Anweisung widerrufen wurden. DENY hat immer Vorrang gegenüber GRANT und verhindert, dass der Aufrufer Berechtigungen erben kann, die dem Zertifikatsbenutzer gewährt wurden.  

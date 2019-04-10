@@ -2,29 +2,29 @@
 title: 'Vorgehensweise: Bestimmen Sie, ob eine Datei eine Assembly (Visual Basic) ist.'
 ms.date: 07/20/2015
 ms.assetid: de26f410-9bd1-4b55-a343-cc82f81684be
-ms.openlocfilehash: b8627c64398afdef00fde71121f870b337ac072f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47ac7f29509af86819006a4394ca661140b95ab0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520088"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316062"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-visual-basic"></a>Vorgehensweise: Bestimmen Sie, ob eine Datei eine Assembly (Visual Basic) ist.
 Eine Datei ist nur dann eine Assembly, wenn sie verwaltet wird und einen Assemblyeintrag in ihren Metadaten enthält. Weitere Informationen über Assemblys und Metadaten finden Sie im Thema [Assemblymanifest](../../../../framework/app-domains/assembly-manifest.md).  
   
 ## <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>So bestimmen Sie manuell, ob eine Datei eine Assembly ist  
   
-1.  Starten Sie [Ildasm.exe (IL Disassembler)](../../../../framework/tools/ildasm-exe-il-disassembler.md).  
+1. Starten Sie [Ildasm.exe (IL Disassembler)](../../../../framework/tools/ildasm-exe-il-disassembler.md).  
   
-2.  Laden Sie die Datei, die Sie testen möchten.  
+2. Laden Sie die Datei, die Sie testen möchten.  
   
-3.  Wenn **ILDASM** meldet, dass die Datei keine portierbare ausführbare Datei (PE, portable executable) ist, ist es keine Assembly. Weitere Informationen finden Sie im Thema [Vorgehensweise: View Assembly Contents (Vorgehensweise: Anzeigen von Assemblyinhalt)](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
+3. Wenn **ILDASM** meldet, dass die Datei keine portierbare ausführbare Datei (PE, portable executable) ist, ist es keine Assembly. Weitere Informationen finden Sie im Thema [How to: View Assembly Contents (Vorgehensweise: Anzeigen von Assemblyinhalt)](../../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
 ## <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>So bestimmen Sie programmgesteuert, ob eine Datei eine Assembly ist  
   
-1.  Rufen Sie die <xref:System.Reflection.AssemblyName.GetAssemblyName%2A>-Methode auf, und übergeben Sie den vollständigen Dateipfad der Datei, die Sie überprüfen möchten.  
+1. Rufen Sie die <xref:System.Reflection.AssemblyName.GetAssemblyName%2A>-Methode auf, und übergeben Sie den vollständigen Dateipfad der Datei, die Sie überprüfen möchten.  
   
-2.  Wenn eine <xref:System.BadImageFormatException>-Ausnahme ausgelöst wird, ist die Datei keine Assembly.  
+2. Wenn eine <xref:System.BadImageFormatException>-Ausnahme ausgelöst wird, ist die Datei keine Assembly.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird eine DLL getestet, um festzustellen, ob es sich um eine Assembly handelt.  

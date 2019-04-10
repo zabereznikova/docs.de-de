@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099780"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312565"
 ---
 # <a name="application-settings-architecture"></a>Architektur der Anwendungseinstellungen
 In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellungen funktioniert. Außerdem werden erweiterte Funktionen der Architektur erläutert, z.B. gruppierte Einstellungen und Einstellungsschlüssel.  
@@ -100,11 +100,11 @@ In diesem Thema wird beschrieben, wie die Architektur der Anwendungseinstellunge
 ### <a name="settings-serialization"></a>Serialisierung von Einstellungen  
  Wenn <xref:System.Configuration.LocalFileSettingsProvider> Speichern von Einstellungen auf den Datenträger muss es führt folgende Aktionen aus:  
   
-1.  Verwendet Reflektion, um alle Eigenschaften für definierten untersuchen Ihrer <xref:System.Configuration.ApplicationSettingsBase> abgeleitete Klasse sein, suchen, die entweder mit gelten <xref:System.Configuration.ApplicationScopedSettingAttribute> oder <xref:System.Configuration.UserScopedSettingAttribute>.  
+1. Verwendet Reflektion, um alle Eigenschaften für definierten untersuchen Ihrer <xref:System.Configuration.ApplicationSettingsBase> abgeleitete Klasse sein, suchen, die entweder mit gelten <xref:System.Configuration.ApplicationScopedSettingAttribute> oder <xref:System.Configuration.UserScopedSettingAttribute>.  
   
-2.  Serialisieren der Eigenschaft auf den Datenträger. Zuerst versucht wird, rufen Sie die <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> oder <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> auf der Typ zugeordneten <xref:System.ComponentModel.TypeConverter>. Schlägt der Versuch fehl, wird stattdessen die XML-Serialisierung angewendet.  
+2. Serialisieren der Eigenschaft auf den Datenträger. Zuerst versucht wird, rufen Sie die <xref:System.ComponentModel.TypeConverter.ConvertToString%2A> oder <xref:System.ComponentModel.TypeConverter.ConvertFromString%2A> auf der Typ zugeordneten <xref:System.ComponentModel.TypeConverter>. Schlägt der Versuch fehl, wird stattdessen die XML-Serialisierung angewendet.  
   
-3.  Bestimmen, welche Einstellungen in welche Datei übergehen, basierend auf dem Attribut der Einstellung.  
+3. Bestimmen, welche Einstellungen in welche Datei übergehen, basierend auf dem Attribut der Einstellung.  
   
  Wenn Sie eine eigene Einstellungsklasse implementieren, können Sie die <xref:System.Configuration.SettingsSerializeAsAttribute> , markieren Sie eine Einstellung für die binäre oder benutzerdefinierte Serialisierung mit der <xref:System.Configuration.SettingsSerializeAs> Enumeration. Weitere Informationen zum Erstellen Ihrer eigenen Einstellungsklasse, im Code finden Sie unter [Vorgehensweise: Erstellen von Anwendungseinstellungen](how-to-create-application-settings.md).  
   

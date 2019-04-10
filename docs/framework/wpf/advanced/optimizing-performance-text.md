@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cc1ac9adf40948a5109b37336d45a2be833e54f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225962"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317205"
 ---
 # <a name="optimizing-performance-text"></a>Optimieren der Leistung: Text
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet Unterstützung für die Präsentation von Textinhalt durch Verwendung von umfangreichen [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Steuerelemente. Im Allgemeinen können Sie das Rendern von Text in drei Ebenen unterteilen:  
   
-1.  Mithilfe der <xref:System.Windows.Documents.Glyphs> und <xref:System.Windows.Media.GlyphRun> -Objekte direkt.  
+1. Mithilfe der <xref:System.Windows.Documents.Glyphs> und <xref:System.Windows.Media.GlyphRun> -Objekte direkt.  
   
-2.  Mithilfe der <xref:System.Windows.Media.FormattedText> Objekt.  
+2. Mithilfe der <xref:System.Windows.Media.FormattedText> Objekt.  
   
-3.  Verwendung von übergeordneten Steuerelementen wie z. B. die <xref:System.Windows.Controls.TextBlock> und <xref:System.Windows.Documents.FlowDocument> Objekte.  
+3. Verwendung von übergeordneten Steuerelementen wie z. B. die <xref:System.Windows.Controls.TextBlock> und <xref:System.Windows.Documents.FlowDocument> Objekte.  
   
  In diesem Thema erhalten Sie Empfehlungen bezüglich des Renderns von Text.  
 

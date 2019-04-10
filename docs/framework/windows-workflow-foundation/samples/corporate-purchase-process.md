@@ -2,12 +2,12 @@
 title: Unternehmenseinkaufsprozess
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442242"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313332"
 ---
 # <a name="corporate-purchase-process"></a>Unternehmenseinkaufsprozess
 In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basierenden Einkaufsvorgangs veranschaulicht, bei dem automatisch das beste Angebot ausgewählt wird. In diesem Beispiel werden <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> und <xref:System.Activities.Statements.ForEach%601> sowie eine benutzerdefinierte Aktivität kombiniert, um einen Workflow zu erstellen, der diesen Vorgang darstellt.
@@ -18,7 +18,7 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 
 -   Visual Studio 2012.
 
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]sein.
 
 ## <a name="demonstrates"></a>Veranschaulicht
 
@@ -50,27 +50,27 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 ## <a name="description-of-the-process"></a>Beschreibung des Vorgangs  
  Dieses Beispiel zeigt eine Implementierung eines Programms Windows Workflow Foundation (WF), um die Angebote von Anbietern für ein allgemeines Unternehmen erfasst.  
   
-1.  Ein Mitarbeiter des Unternehmens X erstellt eine Ausschreibung (Request for Proposal, RFP).  
+1. Ein Mitarbeiter des Unternehmens X erstellt eine Ausschreibung (Request for Proposal, RFP).  
   
     1.  Der Mitarbeiter gibt den Titel und die Beschreibung für die Ausschreibung ein.  
   
     2.  Der Mitarbeiter wählt die Anbieter aus, die im Rahmen der Ausschreibung ihre Angebote abgeben sollen.  
   
-2.  Der Mitarbeiter versendet die Ausschreibung.  
+2. Der Mitarbeiter versendet die Ausschreibung.  
   
     1.  Eine Instanz des Workflows wird erstellt.  
   
     2.  Der Workflow wartet darauf, dass alle Anbieter ihre Angebote einreichen.  
   
-3.  Nachdem alle Angebote empfangen wurden, durchläuft der Workflow alle eingegangenen Angebote und wählt das beste aus.  
+3. Nachdem alle Angebote empfangen wurden, durchläuft der Workflow alle eingegangenen Angebote und wählt das beste aus.  
   
     1.  Jeder Anbieter hat einen Ruf (in diesem Beispiel wird die Reputationliste in VendorRepository.cs gespeichert).  
   
     2.  Der Gesamtwert des Angebots wird ermittelt, indem der vom Anbieter eingegebene Wert mit dem aufgezeichneten Ruf des Anbieters multipliziert und durch 100 dividiert wird: (vom Anbieter eingegebener Wert) * (gespeicherte Reputation des Anbieters)/100.  
   
-4.  Der ursprüngliche Anforderer kann alle eingesendeten Angebote anzeigen. Das beste Angebot wird in einem speziellen Abschnitt des Berichts präsentiert.  
+4. Der ursprüngliche Anforderer kann alle eingesendeten Angebote anzeigen. Das beste Angebot wird in einem speziellen Abschnitt des Berichts präsentiert.  
   
-## <a name="process-definition"></a>Vorgangsdefinition  
+## <a name="process-definition"></a>Prozessdefinition  
  Die Kernlogik des Beispiels verwendet eine <xref:System.Activities.Statements.ParallelForEach%601>-Aktivität, die auf die Angebote der einzelnen Anbieter wartet (wobei eine benutzerdefinierte Aktivität, die ein Lesezeichen erstellt, verwendet wird) und das Angebot des Anbieters als RFP registriert (wobei eine <xref:System.Activities.Statements.InvokeMethod>-Aktivität verwendet wird).  
   
  Im Beispiel werden dann alle eingegangenen, im `RfpRepository` gespeicherten Angebote durchlaufen, wobei der angepasste Wert (mithilfe einer <xref:System.Activities.Statements.Assign>-Aktivität und von <xref:System.Activities.Expressions>-Aktivitäten) berechnet wird. Wenn der angepasste Wert besser als das zuvor als bestes Angebot eingestufte Angebot ist, wird der neue Wert als bestes Angebot (mithilfe der <xref:System.Activities.Statements.If>-Aktivität und <xref:System.Activities.Statements.Assign>-Aktivität) zugeordnet.  
@@ -78,12 +78,12 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 ## <a name="projects-in-this-sample"></a>Projekte in diesem Beispiel  
  Dieses Beispiel enthält die folgenden Projekte.  
   
-|Project|Beschreibung|  
+|Projekt|Beschreibung|  
 |-------------|-----------------|  
-|Allgemein|Die im Vorgang verwendeten Entitätsobjekte (Ausschreibung, Anbieter und Angebot).|  
+|Allgemeine|Die im Vorgang verwendeten Entitätsobjekte (Ausschreibung, Anbieter und Angebot).|  
 |WfDefinition|Die Definition des Vorgangs (als [!INCLUDE[wf1](../../../../includes/wf1-md.md)]-Programm) und der Host (`PurchaseProcessHost`), die von den Clientanwendungen zum Erstellen und Verwenden von Instanzen des Einkaufsworkflows verwendet werden.|  
-|WebClient|Eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Clientanwendung, mit der die Benutzer Instanzen des Einkaufsvorgangs erstellen und daran teilnehmen können. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit dem Workflowmodul.|  
-|WinFormsClient|Eine Windows Forms-Clientanwendung, mit der die Benutzer Instanzen des Einkaufsvorgangs erstellen und daran teilnehmen können. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit dem Workflowmodul.|  
+|WebClient|Eine [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Clientanwendung, mit der die Benutzer Instanzen des Einkaufsvorgangs erstellen und daran teilnehmen können. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit der Workflow-Engine.|  
+|WinFormsClient|Eine Windows Forms-Clientanwendung, mit der die Benutzer Instanzen des Einkaufsvorgangs erstellen und daran teilnehmen können. Sie verwendet einen benutzerdefinierten Host für die Interaktion mit der Workflow-Engine.|  
   
 ### <a name="wfdefinition"></a>WfDefinition  
  Die folgende Tabelle enthält eine Beschreibung der wichtigsten Dateien im WfDefinition-Projekt.  
@@ -93,18 +93,18 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
 |IPurchaseProcessHost.cs|Schnittstelle für den Host des Workflows|  
 |PurchaseProcessHost.cs|Implementierung eines Hosts für den Workflow. Der Host fasst die Details der Workflowlaufzeit zusammen und wird in allen Clientanwendungen verwendet, um die `PurchaseProcess`-Workflowinstanzen zu laden, auszuführen und damit zu interagieren.|  
 |PurchaseProcessWorkflow.cs|Eine Aktivität, die die Definition des Einkaufsworkflows (abgeleitet von <xref:System.Activities.Activity>) enthält.<br /><br /> Die Funktionen der Aktivitäten, die sich von <xref:System.Activities.Activity> ableiten, setzten sich aus vorhandenen benutzerdefinierten Aktivitäten und Aktivitäten aus der [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]-Aktivitätenbibliothek zusammen. Das Zusammenfügen dieser Aktivitäten stellt die grundlegendste Möglichkeit für das Erstellen benutzerdefinierter Funktionalität dar.|  
-|WaitForVendorProposal.cs|Diese benutzerdefinierte Aktivität leitet sich von <xref:System.Activities.NativeActivity> ab und erstellt ein benanntes Lesezeichen, das später von einem Anbieter beim Abgeben eines Angebots wieder aufgenommen werden muss.<br /><br /> Mit Aktivitäten, die von der <xref:System.Activities.NativeActivity> abgeleitet werden (etwa von der <xref:System.Activities.CodeActivity> abgeleitete Aktivitäten), wird eine imperative Funktionalität erzeugt, indem <xref:System.Activities.NativeActivity.Execute%2A> überschrieben wird. Es besteht jedoch über den <xref:System.Activities.ActivityContext>, der an die `Execute`-Methode weitergegeben wird, Zugriff auf die gesamte Funktionalität der Workflowlaufzeit. Dieser Kontext verfügt über Unterstützung für die Planung und das Abbrechen von untergeordneten Aktivitäten, das Einrichten von Zonen ohne Dauerhaftigkeit (Ausführungsblöcke, in denen die Laufzeit die Daten des Workflows nicht beibehält) und <xref:System.Activities.Bookmark>-Objekte (Handles zum Fortsetzen von angehaltenen Workflows).|  
+|WaitForVendorProposal.cs|Diese benutzerdefinierte Aktivität leitet sich von <xref:System.Activities.NativeActivity> ab und erstellt ein benanntes Lesezeichen, das später von einem Anbieter beim Abgeben eines Angebots wieder aufgenommen werden muss.<br /><br /> Mit Aktivitäten, die von der <xref:System.Activities.NativeActivity> abgeleitet werden (etwa von der <xref:System.Activities.CodeActivity> abgeleitete Aktivitäten), wird eine imperative Funktionalität erzeugt, indem <xref:System.Activities.NativeActivity.Execute%2A> überschrieben wird. Es besteht jedoch über den <xref:System.Activities.ActivityContext>, der an die `Execute`-Methode weitergegeben wird, Zugriff auf die gesamte Funktionalität der Workflowlaufzeit. Dieser Kontext verfügt über Unterstützung für die Planung und das Abbrechen von untergeordneten Aktivitäten, das Einrichten von Zonen ohne Dauerhaftigkeit (Ausführungsblöcke, in denen die Laufzeit die Daten des Workflows nicht beibehält, wie das bei atomarischen Transaktionen der Fall ist) und <xref:System.Activities.Bookmark>-Objekte (Handles zum Fortsetzen von angehaltenen Workflows).|  
 |TrackingParticipant.cs|Ein <xref:System.Activities.Tracking.TrackingParticipant>, der alle Nachverfolgungsereignisse empfängt und sie in einer Textdatei speichert.<br /><br /> Nachverfolgungsteilnehmer werden einer Workflowinstanz als Erweiterungen hinzugefügt.|  
 |XmlWorkflowInstanceStore.cs|Ein benutzerdefinierter <xref:System.Runtime.DurableInstancing.InstanceStore>, der Workflowanwendungen in XML-Dateien speichert.|  
 |XmlPersistenceParticipant.cs|Ein benutzerdefinierter <xref:System.Activities.Persistence.PersistenceParticipant>, der eine Instanz der Ausschreibung in einer XML-Datei speichert.|  
 |AsyncResult.cs / CompletedAsyncResult.cs|Hilfsklassen zum Implementieren des asynchronen Musters in den Dauerhaftigkeitskomponenten.|  
   
-### <a name="common"></a>Allgemein  
+### <a name="common"></a>Allgemeine  
  Die folgende Tabelle enthält eine Beschreibung der wichtigsten Klassen des Common-Projekts.  
   
 |Klasse|Beschreibung|  
 |-----------|-----------------|  
-|Vendor|Ein Anbieter, der im Rahmen einer Ausschreibung Angebote abgibt.|  
+|Hersteller|Ein Anbieter, der im Rahmen einer Ausschreibung Angebote abgibt.|  
 |RequestForProposal|Im Rahmen einer Ausschreibung (Request for Proposal, RFP) werden Anbieter aufgefordert, Angebote für eine bestimmte Ware oder Dienstleistungen abzugeben.|  
 |VendorProposal|Ein Angebot, das im Rahmen einer Ausschreibung von einem Anbieter abgegeben wird.|  
 |VendorRepository|Das Repository der Anbieter. Diese Implementierung enthält eine im Speicher befindliche Auflistung der Vendor-Instanzen und Methoden zum Bereitstellen dieser Instanzen.|  
@@ -143,15 +143,15 @@ In diesem Beispiel wird die Erstellung eines einfachen, auf Ausschreibungen basi
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
-1.  Öffnen Sie mit Visual Studio 2010 die PurchaseProcess.sln-Projektmappendatei.  
+1. Öffnen Sie mit Visual Studio 2010 die PurchaseProcess.sln-Projektmappendatei.  
   
-2.  Öffnen Sie zum Ausführen des webclientprojekts **Projektmappen-Explorer** mit der rechten Maustaste die **WebClient** Projekt. Wählen Sie **als Startprojekt festlegen**.  
+2. Öffnen Sie zum Ausführen des webclientprojekts **Projektmappen-Explorer** mit der rechten Maustaste die **WebClient** Projekt. Wählen Sie **als Startprojekt festlegen**.  
   
-3.  Öffnen Sie zum Ausführen der WinForms-Clientprojekts **Projektmappen-Explorer** mit der rechten Maustaste die **WinForms Client** Projekt. Wählen Sie **als Startprojekt festlegen**.  
+3. Öffnen Sie zum Ausführen der WinForms-Clientprojekts **Projektmappen-Explorer** mit der rechten Maustaste die **WinForms Client** Projekt. Wählen Sie **als Startprojekt festlegen**.  
   
-4.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
+4. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
-5.  Drücken Sie STRG+F5, um die Projektmappe auszuführen.  
+5. Drücken Sie STRG+F5, um die Projektmappe auszuführen.  
   
 ### <a name="web-client-options"></a>Webclientoptionen  
   

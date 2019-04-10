@@ -2,31 +2,31 @@
 title: Persistenzteilnehmer
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: f9a1f2142a2aef617c3337bf1bc384a51c8ed049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115894"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316361"
 ---
 # <a name="persistence-participants"></a>Persistenzteilnehmer
 Ein Persistenzteilnehmer kann an einem von einem Anwendungshost ausgelösten Persistenzvorgang (Speichern oder Laden) teilnehmen. Die [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] im Lieferumfang von zwei abstrakter Klassen **PersistenceParticipant** und **PersistenceIOParticipant**, die Sie verwenden können, um die Erstellung eines persistenzteilnehmers. Ein Persistenzteilnehmer leitet sich von einer dieser Klassen ab, implementiert die passenden Methoden und fügt dann der <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A>-Auflistung im <xref:System.ServiceModel.Activities.WorkflowServiceHost> eine Instanz der Klasse hinzu. Beim Beibehalten einer Workflowinstanz sucht der Anwendungshost möglicherweise nach Workflowerweiterungen dieser Art und ruft auf den Persistenzteilnehmern zur richtigen Zeit jeweils die entsprechenden Methoden auf.  
   
  In der folgenden Liste werden die Aufgaben beschrieben, die das Persistenzsubsystem in den einzelnen Phasen des Persistenzvorgangs (Speichern) ausführt. Die Persistenzteilnehmer werden in der dritten und vierten Phase verwendet. Falls der Teilnehmer ist ein e/a-Teilnehmer (ein persistenzteilnehmer, die auch an e/a-Vorgängen beteiligt ist), wird der Teilnehmer auch in der sechsten Phase verwendet.  
   
-1.  Erfasst integrierte Werte, einschließlich Workflowstatus, Lesezeichen, zugeordnete Variablen und Timestamps.  
+1. Erfasst integrierte Werte, einschließlich Workflowstatus, Lesezeichen, zugeordnete Variablen und Timestamps.  
   
-2.  Erfasst alle Persistenzteilnehmer, die der Erweiterungsauflistung mit Zuordnung zur Workflowinstanz hinzugefügt wurden.  
+2. Erfasst alle Persistenzteilnehmer, die der Erweiterungsauflistung mit Zuordnung zur Workflowinstanz hinzugefügt wurden.  
   
-3.  Ruft die <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A>-Methode auf, die von allen Persistenzteilnehmern implementiert wurde.  
+3. Ruft die <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A>-Methode auf, die von allen Persistenzteilnehmern implementiert wurde.  
   
-4.  Ruft die <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A>-Methode auf, die von allen Persistenzteilnehmern implementiert wurde.  
+4. Ruft die <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A>-Methode auf, die von allen Persistenzteilnehmern implementiert wurde.  
   
-5.  Beibehalten oder Speichern des Workflows im persistenten Speicher.  
+5. Beibehalten oder Speichern des Workflows im persistenten Speicher.  
   
-6.  Ruft die <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> für alle von der e/a-persistenzteilnehmern. Wenn der Teilnehmer nicht über einen e/a-Teilnehmer ist, wird diese Aufgabe übersprungen. Falls der Persistenzabschnitt transaktionsgebunden ist, wird die Transaktion in der Transaction.Current-Eigenschaft bereitgestellt.  
+6. Ruft die <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A> für alle von der e/a-persistenzteilnehmern. Wenn der Teilnehmer nicht über einen e/a-Teilnehmer ist, wird diese Aufgabe übersprungen. Falls der Persistenzabschnitt transaktionsgebunden ist, wird die Transaktion in der Transaction.Current-Eigenschaft bereitgestellt.  
   
-7.  Wartet, bis die Vorgänge aller Persistenzteilnehmer abgeschlossen sind. Falls alle Teilnehmer das Beibehalten der Instanzdaten erfolgreich abschließen, wird für die Transaktion ein Commit ausgeführt.  
+7. Wartet, bis die Vorgänge aller Persistenzteilnehmer abgeschlossen sind. Falls alle Teilnehmer das Beibehalten der Instanzdaten erfolgreich abschließen, wird für die Transaktion ein Commit ausgeführt.  
   
  Ein persistenzteilnehmer leitet sich von der **PersistenceParticipant** Klasse und Implementieren der **CollectValues** und **MapValues** Methoden. Ein e/a-persistenzteilnehmer leitet sich von der **PersistenceIOParticipant** Klasse und Implementieren der **BeginOnSave** -Methode zusätzlich zur Implementierung der **CollectValues**und **MapValues** Methoden.  
   
@@ -34,15 +34,15 @@ Ein Persistenzteilnehmer kann an einem von einem Anwendungshost ausgelösten Per
   
  In der folgenden Liste werden die Aufgaben beschrieben, die das Persistenzsubsystem in den einzelnen Phasen des Ladevorgangs ausführt. Die Persistenzteilnehmer werden in der vierten Phase verwendet. Die e/a-persistenzteilnehmer (persistenzteilnehmer, die auch bei e/a-Vorgängen beteiligt sind) werden auch in der dritten Phase verwendet.  
   
-1.  Erfasst alle Persistenzteilnehmer, die der Erweiterungsauflistung mit Zuordnung zur Workflowinstanz hinzugefügt wurden.  
+1. Erfasst alle Persistenzteilnehmer, die der Erweiterungsauflistung mit Zuordnung zur Workflowinstanz hinzugefügt wurden.  
   
-2.  Lädt den Workflow aus dem Persistenzspeicher.  
+2. Lädt den Workflow aus dem Persistenzspeicher.  
   
-3.  Ruft die <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> für alle persistenzteilnehmer e/a und wartet darauf, alle persistenzteilnehmer abgeschlossen. Falls der Persistenzabschnitt transaktionsgebunden ist, wird die Transaktion in der Transaction.Current-Eigenschaft bereitgestellt.  
+3. Ruft die <xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A> für alle persistenzteilnehmer e/a und wartet darauf, alle persistenzteilnehmer abgeschlossen. Falls der Persistenzabschnitt transaktionsgebunden ist, wird die Transaktion in der Transaction.Current-Eigenschaft bereitgestellt.  
   
-4.  Lädt die Workflowinstanz basierend auf den aus dem Persistenzspeicher abgerufenen Daten in den Arbeitsspeicher.  
+4. Lädt die Workflowinstanz basierend auf den aus dem Persistenzspeicher abgerufenen Daten in den Arbeitsspeicher.  
   
-5.  Ruft <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> für jeden Persistenzteilnehmer auf.  
+5. Ruft <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A> für jeden Persistenzteilnehmer auf.  
   
  Ein persistenzteilnehmer leitet sich von der **PersistenceParticipant** Klasse und Implementieren der **PublishValues** Methode. Ein e/a-persistenzteilnehmer leitet sich von der **PersistenceIOParticipant** Klasse und Implementieren der **BeginOnLoad** -Methode zusätzlich zur Implementierung der **PublishValues**Methode.  
   

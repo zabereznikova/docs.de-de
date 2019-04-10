@@ -3,12 +3,12 @@ title: Benutzerdefinierte Tokenhandler
 ms.date: 03/30/2017
 ms.assetid: 5062669f-8bfc-420a-a25d-d8ab992ab10e
 author: BrucePerlerMS
-ms.openlocfilehash: c27abb5df7f895a9dec5f7f784f1a3ff0b31edb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200879"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312110"
 ---
 # <a name="custom-token-handlers"></a>Benutzerdefinierte Tokenhandler
 In diesem Thema werden Tokenhandler in WIF und ihre Verwendung zur Verarbeitung von Token erläutert. Das Thema behandelt auch die Vorgehensweise zum Erstellen von benutzerdefinierten Tokenhandlern für Tokentypen, die nicht standardmäßig in WIF unterstützt werden.  
@@ -42,9 +42,9 @@ In diesem Thema werden Tokenhandler in WIF und ihre Verwendung zur Verarbeitung 
   
 #### <a name="adding-a-custom-token-handler"></a>Hinzufügen eines benutzerdefinierten Tokenhandlers  
   
-1.  Erstellen Sie eine neue Klasse, die von <xref:System.IdentityModel.Tokens.SecurityTokenHandler> abgeleitet wird.  
+1. Erstellen Sie eine neue Klasse, die von <xref:System.IdentityModel.Tokens.SecurityTokenHandler> abgeleitet wird.  
   
-2.  Überschreiben Sie die folgenden Methoden, und stellen Sie Ihre eigene Implementierung bereit:  
+2. Überschreiben Sie die folgenden Methoden, und stellen Sie Ihre eigene Implementierung bereit:  
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
@@ -58,7 +58,7 @@ In diesem Thema werden Tokenhandler in WIF und ihre Verwendung zur Verarbeitung 
   
     -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
-3.  Fügen Sie im **\<system.identityModel>**-Abschnitt für WIF in der Datei *Web.config* oder der Datei *App.config* dem neuen benutzerdefinierten Tokenhandler einen Verweis hinzu. Das folgende Konfigurationsmarkup gibt z.B. einen neuen Tokenhandler mit dem Namen **MyCustomTokenHandler** an, der sich im Namespace **CustomToken** befindet.  
+3. Fügen Sie im **\<system.identityModel>**-Abschnitt für WIF in der Datei *Web.config* oder der Datei *App.config* dem neuen benutzerdefinierten Tokenhandler einen Verweis hinzu. Das folgende Konfigurationsmarkup gibt z.B. einen neuen Tokenhandler mit dem Namen **MyCustomTokenHandler** an, der sich im Namespace **CustomToken** befindet.  
   
     ```xml  
     <system.identityModel>  

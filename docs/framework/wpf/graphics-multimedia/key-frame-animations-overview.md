@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191587"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316738"
 ---
 # <a name="key-frame-animations-overview"></a>Übersicht über Keyframe-Animationen
 Dieses Thema bietet eine Einführung in Keyframe-Animationen. Mit Keyframe-Animationen können Sie bei Animationen mehr als zwei Zielwerte animieren und die Interpolationsmethode einer Animation steuern.  
@@ -259,9 +259,9 @@ Ein Spline für Keyframes mit den Kontrollpunkten (0,25, 0,5) und (0,75, 1,0)
   
  Die folgende Liste beschreibt das Verfahren, mit dem Schlüsselzeiten für Keyframes einer Keyframe-Animation aufgelöst werden.  
   
-1.  Beheben <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> Werte.  
+1. Beheben <xref:System.TimeSpan> <xref:System.Windows.Media.Animation.KeyTime> Werte.  
   
-2.  Bestimmen Sie die *gesamte Interpolationszeit* der Animation, die Gesamtzeit, die die Keyframe-Animation für eine vollständige Vorwärtsiteration benötigt.  
+2. Bestimmen Sie die *gesamte Interpolationszeit* der Animation, die Gesamtzeit, die die Keyframe-Animation für eine vollständige Vorwärtsiteration benötigt.  
   
     1.  Wenn der Animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> nicht <xref:System.Windows.Duration.Automatic%2A> oder <xref:System.Windows.Duration.Forever%2A>, die gesamte Interpolationszeit Zeit ist der Wert der Animation <xref:System.Windows.Media.Animation.Timeline.Duration%2A> Eigenschaft.  
   
@@ -269,19 +269,19 @@ Ein Spline für Keyframes mit den Kontrollpunkten (0,25, 0,5) und (0,75, 1,0)
   
     3.  Andernfalls beträgt die gesamte Interpolationszeit Zeit 1 Sekunde.  
   
-3.  Verwenden Sie den Zeitwert für die gesamte Interpolationszeit aufgelöst <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> Werte.  
+3. Verwenden Sie den Zeitwert für die gesamte Interpolationszeit aufgelöst <xref:System.Windows.Media.Animation.KeyTimeType.Percent> <xref:System.Windows.Media.Animation.KeyTime> Werte.  
   
-4.  Lösen Sie den letzten Keyframe auf, wenn er nicht bereits in den vorherigen Schritten aufgelöst wurde. Wenn die <xref:System.Windows.Media.Animation.KeyTime> des letzten Keyframes ist <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> oder <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, die aufgelöste Zeit wird die gesamte Interpolationszeit gleich sein.  
+4. Lösen Sie den letzten Keyframe auf, wenn er nicht bereits in den vorherigen Schritten aufgelöst wurde. Wenn die <xref:System.Windows.Media.Animation.KeyTime> des letzten Keyframes ist <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> oder <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, die aufgelöste Zeit wird die gesamte Interpolationszeit gleich sein.  
   
      Wenn die <xref:System.Windows.Media.Animation.KeyTime> ist der erste Keyframe <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> und diese Animation hat mehr als auf Keyframes, beheben Sie die <xref:System.Windows.Media.Animation.KeyTime> Wert 0 (null); Wenn nur ein Keyframe vorhanden ist und die zugehörige <xref:System.Windows.Media.Animation.KeyTime> Wert <xref:System.Windows.Media.Animation.KeyTime.Paced%2A>, wird er mit dem gesamten aufgelöst Interpolationszeit, wie im vorherigen Schritt beschrieben.  
   
-5.  Lösen Sie verbleibende <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> Werte: sie erhalten jeweils einen gleichen Anteil der verfügbaren Zeit.  Während dieses Vorgangs nicht aufgelöste <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Werte werden als vorübergehend behandelt <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> Werte und erhalten eine vorübergehend aufgelöste Zeit.  
+5. Lösen Sie verbleibende <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> Werte: sie erhalten jeweils einen gleichen Anteil der verfügbaren Zeit.  Während dieses Vorgangs nicht aufgelöste <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Werte werden als vorübergehend behandelt <xref:System.Windows.Media.Animation.KeyTime.Uniform%2A> <xref:System.Windows.Media.Animation.KeyTime> Werte und erhalten eine vorübergehend aufgelöste Zeit.  
   
-6.  Auflösen der <xref:System.Windows.Media.Animation.KeyTime> -Werte von Keyframes mit nicht Schlüsselzeiten angegeben, mithilfe von Keyframes Sie deklariert, die gelöst haben <xref:System.Windows.Media.Animation.KeyTime> Werte.  
+6. Auflösen der <xref:System.Windows.Media.Animation.KeyTime> -Werte von Keyframes mit nicht Schlüsselzeiten angegeben, mithilfe von Keyframes Sie deklariert, die gelöst haben <xref:System.Windows.Media.Animation.KeyTime> Werte.  
   
-7.  Lösen Sie verbleibende <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Werte. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Verwenden Sie die <xref:System.Windows.Media.Animation.KeyTime> -Werte der benachbarten Keyframes, um ihre aufgelöste Zeit zu bestimmen.  Das Ziel ist es, sicherzustellen, dass die Geschwindigkeit der Animation um die aufgelöste Zeit dieses Keyframes herum konstant ist.  
+7. Lösen Sie verbleibende <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Werte. <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> Verwenden Sie die <xref:System.Windows.Media.Animation.KeyTime> -Werte der benachbarten Keyframes, um ihre aufgelöste Zeit zu bestimmen.  Das Ziel ist es, sicherzustellen, dass die Geschwindigkeit der Animation um die aufgelöste Zeit dieses Keyframes herum konstant ist.  
   
-8.  Sortieren Sie die Keyframes in der Reihenfolge der aufgelösten Zeit (Primärschlüssel), und die Reihenfolge der Deklaration (Sekundärschlüssel), d. h., verwenden Sie eine stabile Sortierung basierend auf den aufgelösten Keyframe <xref:System.Windows.Media.Animation.KeyTime> Werte.  
+8. Sortieren Sie die Keyframes in der Reihenfolge der aufgelösten Zeit (Primärschlüssel), und die Reihenfolge der Deklaration (Sekundärschlüssel), d. h., verwenden Sie eine stabile Sortierung basierend auf den aufgelösten Keyframe <xref:System.Windows.Media.Animation.KeyTime> Werte.  
   
 ## <a name="see-also"></a>Siehe auch
 

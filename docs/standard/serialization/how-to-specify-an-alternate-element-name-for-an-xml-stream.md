@@ -12,12 +12,12 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: d11fd0353faccdb19e1a39b7a57df9fe3bca3190
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 577b96517632ca1ae06891540f22c2c3c3886cd1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465476"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317791"
 ---
 # <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Vorgehensweise: Angeben eines alternativen Elementnamens für einen XML-Stream
   
@@ -25,21 +25,21 @@ Mit <xref:System.Xml.Serialization.XmlSerializer> können Sie mehr als einen XML
   
 ## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>So erstellen Sie einen XML-Stream mit einem alternativen Elementnamen  
   
-1.  Erstellen Sie eine Instanz der <xref:System.Xml.Serialization.XmlElementAttribute>-Klasse.  
+1. Erstellen Sie eine Instanz der <xref:System.Xml.Serialization.XmlElementAttribute>-Klasse.  
   
-2.  Legen Sie die <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A>-Eigenschaft des <xref:System.Xml.Serialization.XmlElementAttribute>-Objekts auf "BookID" fest.  
+2. Legen Sie die <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A>-Eigenschaft des <xref:System.Xml.Serialization.XmlElementAttribute>-Objekts auf "BookID" fest.  
   
-3.  Erstellen Sie eine Instanz der <xref:System.Xml.Serialization.XmlAttributes>-Klasse.  
+3. Erstellen Sie eine Instanz der <xref:System.Xml.Serialization.XmlAttributes>-Klasse.  
   
-4.  Fügen Sie das `XmlElementAttribute`-Objekt der Sammlung hinzu, auf die über die <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A>-Eigenschaft von <xref:System.Xml.Serialization.XmlAttributes> zugegriffen wird.  
+4. Fügen Sie das `XmlElementAttribute`-Objekt der Sammlung hinzu, auf die über die <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A>-Eigenschaft von <xref:System.Xml.Serialization.XmlAttributes> zugegriffen wird.  
   
-5.  Erstellen Sie eine Instanz der <xref:System.Xml.Serialization.XmlAttributeOverrides>-Klasse.  
+5. Erstellen Sie eine Instanz der <xref:System.Xml.Serialization.XmlAttributeOverrides>-Klasse.  
   
-6.  Fügen Sie das `XmlAttributes`-Objekt dem <xref:System.Xml.Serialization.XmlAttributeOverrides>-Objekt hinzu, und geben Sie dabei sowohl den Typ des zu überschreibenden Objekts als auch den Namen des Members an, das überschrieben wird.  
+6. Fügen Sie das `XmlAttributes`-Objekt dem <xref:System.Xml.Serialization.XmlAttributeOverrides>-Objekt hinzu, und geben Sie dabei sowohl den Typ des zu überschreibenden Objekts als auch den Namen des Members an, das überschrieben wird.  
   
-7.  Erstellen Sie eine Instanz der `XmlSerializer`-Klasse mit `XmlAttributeOverrides`.  
+7. Erstellen Sie eine Instanz der `XmlSerializer`-Klasse mit `XmlAttributeOverrides`.  
   
-8.  Erstellen Sie eine Instanz der `Book`-Klasse, und serialisieren oder deserialisieren Sie diese Instanz.  
+8. Erstellen Sie eine Instanz der `Book`-Klasse, und serialisieren oder deserialisieren Sie diese Instanz.  
   
 ## <a name="example"></a>Beispiel  
   

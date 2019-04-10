@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 49795235d489ebc70cec11332e6be4a9452bc21d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139255"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316166"
 ---
 # <a name="weak-event-patterns"></a>Schwache Ereignismuster
 Bei Anwendungen ist es möglich, dass der Handler, die Ereignisquellen angefügt sind, nicht in Koordination mit dem Listenerobjekt zerstört werden, die die Quelle der Handler zugeordnet. Diese Situation kann zu Arbeitsspeicherverlusten führen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] führt ein Entwurfsmuster, die verwendet werden kann, um dieses Problem zu beheben, indem Sie eine dedizierte Manager-Klasse für bestimmte Ereignisse bereitstellen und Implementieren einer Schnittstelle zum Listener für das betreffende Ereignis. Dieses Entwurfsmuster wird als bezeichnet die *Muster für schwache Ereignisse*.  
@@ -50,11 +50,11 @@ Bei Anwendungen ist es möglich, dass der Handler, die Ereignisquellen angefügt
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>Verwenden einer vorhandenen schwache Ereignis-Manager-Klasse  
   
-1.  Suchen Sie ein vorhandenes schwache Ereignis Manager.  
+1. Suchen Sie ein vorhandenes schwache Ereignis Manager.  
   
      Eine Liste von Managern für schwache Ereignisse, die mit WPF enthalten sind, finden Sie in der Vererbungshierarchie in den <xref:System.Windows.WeakEventManager> Klasse.  
   
-2.  Verwenden Sie den neuen schwache Ereignis-Manager anstelle der normalen ereigniseinbindung an.  
+2. Verwenden Sie den neuen schwache Ereignis-Manager anstelle der normalen ereigniseinbindung an.  
   
      Angenommen, Ihr Code im folgenden Format verwendet, um ein Ereignis abonnieren:  
   
@@ -82,7 +82,7 @@ Bei Anwendungen ist es möglich, dass der Handler, die Ereignisquellen angefügt
   
 ### <a name="using-the-generic-weak-event-manager-class"></a>Mithilfe der generischen schwache Ereignis-Manager-Klasse  
   
-1.  Die generische <xref:System.Windows.WeakEventManager%602> -Klasse anstelle der normalen ereigniseinbindung.  
+1. Die generische <xref:System.Windows.WeakEventManager%602> -Klasse anstelle der normalen ereigniseinbindung.  
   
      Bei Verwendung von <xref:System.Windows.WeakEventManager%602> um Ereignislistener zu registrieren, geben Sie die Ereignisquelle und <xref:System.EventArgs> Typ wie die Typparameter von der Klasse und rufen <xref:System.Windows.WeakEventManager%602.AddHandler%2A> wie im folgenden Code gezeigt:  
   
@@ -92,19 +92,19 @@ Bei Anwendungen ist es möglich, dass der Handler, die Ereignisquellen angefügt
   
 ### <a name="creating-a-custom-weak-event-manager-class"></a>Erstellen eine benutzerdefinierte schwache Ereignis-Manager-Klasse  
   
-1.  Kopieren Sie die folgende Klassenvorlage in Ihr Projekt ein.  
+1. Kopieren Sie die folgende Klassenvorlage in Ihr Projekt ein.  
   
      Diese Klasse erbt von der <xref:System.Windows.WeakEventManager> Klasse.  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2.  Ersetzen Sie die `SomeEventWeakEventManager` durch den Namen Ihres eigenen Namen.  
+2. Ersetzen Sie die `SomeEventWeakEventManager` durch den Namen Ihres eigenen Namen.  
   
-3.  Ersetzen Sie die drei Namen, die zuvor mit den entsprechenden Namen für das Ereignis beschrieben. (`SomeEvent`, `EventSource`, und `SomeEventEventArgs`)  
+3. Ersetzen Sie die drei Namen, die zuvor mit den entsprechenden Namen für das Ereignis beschrieben. (`SomeEvent`, `EventSource`, und `SomeEventEventArgs`)  
   
-4.  Legen Sie die Sichtbarkeit der WeakEvent-Manager-Klasse (öffentliche / private / interne), auf die gleiche Sichtbarkeit wie Ereignis, das er verwaltet.  
+4. Legen Sie die Sichtbarkeit der WeakEvent-Manager-Klasse (öffentliche / private / interne), auf die gleiche Sichtbarkeit wie Ereignis, das er verwaltet.  
   
-5.  Verwenden Sie den neuen schwache Ereignis-Manager anstelle der normalen ereigniseinbindung an.  
+5. Verwenden Sie den neuen schwache Ereignis-Manager anstelle der normalen ereigniseinbindung an.  
   
      Angenommen, Ihr Code im folgenden Format verwendet, um ein Ereignis abonnieren:  
   

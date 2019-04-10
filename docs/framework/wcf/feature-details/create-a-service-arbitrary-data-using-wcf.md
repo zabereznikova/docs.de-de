@@ -2,19 +2,19 @@
 title: 'Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF REST-Programmiermodells akzeptiert'
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: c03450c66cf8de14d6c638550a510a91593c45b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d7da3a5c6dd4f04c4d902dab9c2dff40413ddd20
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144078"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313137"
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Vorgehensweise: Erstellen eines Diensts, der beliebige Daten mithilfe des WCF REST-Programmiermodells akzeptiert
 Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmöglichkeiten für die Rückgabe der Daten durch einen Dienstvorgang. Dies ist der Fall, wenn ein Dienstvorgang zurückgeben muss, Daten in einem Format ByWCF werden nicht unterstützt. In diesem Thema wird erläutert, mit den WCF REST-Programmiermodell zum Erstellen eines Diensts, das beliebige Daten empfangen.  
   
 ### <a name="to-implement-the-service-contract"></a>So implementieren Sie den Dienstvertrag  
   
-1.  Definieren Sie den Dienstvertrag. Der Vorgang, der die beliebigen Daten empfängt, muss über einen Parameter des Typs <xref:System.IO.Stream> verfügen. Außerdem muss es sich bei diesem Parameter um den einzigen Parameter handeln, der im Text der Anforderung übergeben wird. Der in diesem Beispiel beschriebene Vorgang nimmt auch einen Dateinamenparameter an. Dieser Parameter wird innerhalb der URL der Anforderung übergeben. Geben Sie zum Festlegen, dass ein Parameter innerhalb der URL übergeben wird, im <xref:System.UriTemplate> eine <xref:System.ServiceModel.Web.WebInvokeAttribute> an. In diesem Fall verwendete URI aufrufen, beendet diese Methode in "UploadFile/Beliebiger_dateiname". Der Teil von "{Filename}" für die URI-Vorlage gibt an, dass der dateinameparameter für den Vorgang, in dem URI übergeben wird, um den Vorgang aufzurufen.  
+1. Definieren Sie den Dienstvertrag. Der Vorgang, der die beliebigen Daten empfängt, muss über einen Parameter des Typs <xref:System.IO.Stream> verfügen. Außerdem muss es sich bei diesem Parameter um den einzigen Parameter handeln, der im Text der Anforderung übergeben wird. Der in diesem Beispiel beschriebene Vorgang nimmt auch einen Dateinamenparameter an. Dieser Parameter wird innerhalb der URL der Anforderung übergeben. Geben Sie zum Festlegen, dass ein Parameter innerhalb der URL übergeben wird, im <xref:System.UriTemplate> eine <xref:System.ServiceModel.Web.WebInvokeAttribute> an. In diesem Fall verwendete URI aufrufen, beendet diese Methode in "UploadFile/Beliebiger_dateiname". Der Teil von "{Filename}" für die URI-Vorlage gibt an, dass der dateinameparameter für den Vorgang, in dem URI übergeben wird, um den Vorgang aufzurufen.  
   
     ```csharp  
      [ServiceContract]  
@@ -25,7 +25,7 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
     }  
     ```  
   
-2.  Implementieren Sie den Dienstvertrag. Der Vertrag verfügt über nur eine Methode (`UploadFile`), die in einem Stream eine Datei mit beliebigen Daten empfängt. Der Vorgang liest den Stream, erfasst die Menge der gelesenen Bytes und zeigt anschließend den Dateinamen und die Menge der gelesenen Bytes an.  
+2. Implementieren Sie den Dienstvertrag. Der Vertrag verfügt über nur eine Methode (`UploadFile`), die in einem Stream eine Datei mit beliebigen Daten empfängt. Der Vorgang liest den Stream, erfasst die Menge der gelesenen Bytes und zeigt anschließend den Dateinamen und die Menge der gelesenen Bytes an.  
   
     ```csharp  
     public class RawDataService : IReceiveData  
@@ -46,7 +46,7 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
   
 ### <a name="to-host-the-service"></a>So hosten Sie den Dienst  
   
-1.  Erstellen Sie eine Konsolenanwendung, um den Dienst zu hosten.  
+1. Erstellen Sie eine Konsolenanwendung, um den Dienst zu hosten.  
   
     ```csharp  
     class Program  
@@ -57,25 +57,25 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
     }  
     ```  
   
-2.  Erstellen Sie eine Variable, um die Basisadresse für den Dienst innerhalb der `Main`-Methode zu speichern.  
+2. Erstellen Sie eine Variable, um die Basisadresse für den Dienst innerhalb der `Main`-Methode zu speichern.  
   
     ```csharp  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  Erstellen Sie eine <xref:System.ServiceModel.ServiceHost>-Instanz für den Dienst, um die Dienstklasse und die Basisadresse anzugeben.  
+3. Erstellen Sie eine <xref:System.ServiceModel.ServiceHost>-Instanz für den Dienst, um die Dienstklasse und die Basisadresse anzugeben.  
   
     ```csharp  
     ServiceHost host = new ServiceHost(typeof(RawDataService), new Uri(baseAddress));  
     ```  
   
-4.  Fügen Sie einen Endpunkt hinzu, durch den der Vertrag, die <xref:System.ServiceModel.WebHttpBinding> sowie das <xref:System.ServiceModel.Description.WebHttpBehavior> angegeben werden.  
+4. Fügen Sie einen Endpunkt hinzu, durch den der Vertrag, die <xref:System.ServiceModel.WebHttpBinding> sowie das <xref:System.ServiceModel.Description.WebHttpBehavior> angegeben werden.  
   
     ```csharp  
     host.AddServiceEndpoint(typeof(IReceiveData), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5.  Öffnen des Diensthosts Der Dienst ist nun zum Empfangen von Anforderungen bereit.  
+5. Öffnen des Diensthosts Der Dienst ist nun zum Empfangen von Anforderungen bereit.  
   
     ```csharp  
     host.Open();  
@@ -84,20 +84,20 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
   
 ### <a name="to-call-the-service-programmatically"></a>So rufen Sie den Dienst programmgesteuert auf  
   
-1.  Erstellen Sie eine <xref:System.Net.HttpWebRequest> mit dem URI, mit dem der Dienst aufgerufen wird. In diesem Code wird die Basisadresse mit `"/UploadFile/Text"` kombiniert. Der `"UploadFile"`-Teil des URI gibt den aufzurufenden Vorgang an. Der `"Test.txt"`-Teil des URI gibt den Dateinamenparameter an, der an den `UploadFile`-Vorgang übergeben werden soll. Beide Elemente werden der <xref:System.UriTemplate> zugeordnet, die auf den Vorgangsvertrag angewendet wurde.  
+1. Erstellen Sie eine <xref:System.Net.HttpWebRequest> mit dem URI, mit dem der Dienst aufgerufen wird. In diesem Code wird die Basisadresse mit `"/UploadFile/Text"` kombiniert. Der `"UploadFile"`-Teil des URI gibt den aufzurufenden Vorgang an. Der `"Test.txt"`-Teil des URI gibt den Dateinamenparameter an, der an den `UploadFile`-Vorgang übergeben werden soll. Beide Elemente werden der <xref:System.UriTemplate> zugeordnet, die auf den Vorgangsvertrag angewendet wurde.  
   
     ```csharp  
     HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(baseAddress + "/UploadFile/Test.txt");  
     ```  
   
-2.  Legen Sie die <xref:System.Net.HttpWebRequest.Method%2A>-Eigenschaft der <xref:System.Net.HttpWebRequest> auf `POST` und die <xref:System.Net.HttpWebRequest.ContentType%2A>-Eigenschaft auf `"text/plain"` fest. Dadurch wird dem Dienst mitgeteilt, dass der Code Daten sendet und diese Daten im Nur-Text-Format vorliegen.  
+2. Legen Sie die <xref:System.Net.HttpWebRequest.Method%2A>-Eigenschaft der <xref:System.Net.HttpWebRequest> auf `POST` und die <xref:System.Net.HttpWebRequest.ContentType%2A>-Eigenschaft auf `"text/plain"` fest. Dadurch wird dem Dienst mitgeteilt, dass der Code Daten sendet und diese Daten im Nur-Text-Format vorliegen.  
   
     ```csharp  
     req.Method = "POST";  
     req.ContentType = "text/plain";  
     ```  
   
-3.  Rufen Sie <xref:System.Net.HttpWebRequest.GetRequestStream%2A> auf, um den Anforderungsstream abzurufen, erstellen Sie die zu sendenden Daten, schreiben Sie die Daten in den Anforderungsstream, und schließen Sie anschließend den Stream.  
+3. Rufen Sie <xref:System.Net.HttpWebRequest.GetRequestStream%2A> auf, um den Anforderungsstream abzurufen, erstellen Sie die zu sendenden Daten, schreiben Sie die Daten in den Anforderungsstream, und schließen Sie anschließend den Stream.  
   
     ```csharp  
     Stream reqStream = req.GetRequestStream();  
@@ -110,14 +110,14 @@ Unter bestimmten Voraussetzungen benötigen Entwickler umfassende Steuerungsmög
     reqStream.Close();  
     ```  
   
-4.  Rufen Sie die Antwort des Diensts ab, indem Sie <xref:System.Net.HttpWebRequest.GetResponse%2A> aufrufen, und zeigen Sie die Antwortdaten an die Konsole an.  
+4. Rufen Sie die Antwort des Diensts ab, indem Sie <xref:System.Net.HttpWebRequest.GetResponse%2A> aufrufen, und zeigen Sie die Antwortdaten an die Konsole an.  
   
     ```csharp  
     HttpWebResponse resp = (HttpWebResponse)req.GetResponse();  
     Console.WriteLine("Client: Receive Response HTTP/{0} {1} {2}", resp.ProtocolVersion, (int)resp.StatusCode, resp.StatusDescription);  
     ```  
   
-5.  Schließen Sie den Diensthost.  
+5. Schließen Sie den Diensthost.  
   
     ```csharp  
     host.Close();  

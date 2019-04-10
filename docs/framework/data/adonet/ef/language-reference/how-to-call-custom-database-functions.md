@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4354e5eb-dd45-469d-97fb-1c495705ee59
-ms.openlocfilehash: 4558a5b26903fb53c60fccf3df806f7cf67f9845
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc2e25183649f6a95e7862520ccc5719f201277a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119664"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311486"
 ---
 # <a name="how-to-call-custom-database-functions"></a>Vorgehensweise: Aufrufen benutzerdefinierter Datenbankfunktionen
 In diesem Thema wird das Aufrufen von benutzerdefinierten Funktionen beschrieben, die in der Datenbank in LINQ to Entities-Abfragen definiert werden.  
@@ -21,17 +21,17 @@ In diesem Thema wird das Aufrufen von benutzerdefinierten Funktionen beschrieben
   
 ### <a name="to-call-custom-functions-that-are-defined-in-the-database"></a>So rufen Sie benutzerdefinierte Funktionen auf, die in der Datenbank definiert sind  
   
-1.  Erstellen Sie in der Datenbank eine benutzerdefinierte Funktion.  
+1. Erstellen Sie in der Datenbank eine benutzerdefinierte Funktion.  
   
      Weitere Informationen zum Erstellen von benutzerdefinierter Funktionen in SQL Server finden Sie unter [CREATE FUNCTION (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=139871).  
   
-2.  Beschreiben Sie in der Datenspeicherschema-Definitionssprache (SSDL) der EDMX-Datei eine Funktion. Der Name der Funktion muss mit der in der Datenbank deklarierten Funktion übereinstimmen.  
+2. Beschreiben Sie in der Datenspeicherschema-Definitionssprache (SSDL) der EDMX-Datei eine Funktion. Der Name der Funktion muss mit der in der Datenbank deklarierten Funktion übereinstimmen.  
   
      Weitere Informationen finden Sie unter [Function-Element (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#function-element-ssdl).  
   
-3.  Fügen Sie einer Klasse im Anwendungscode eine entsprechende Methode hinzu, und übernehmen Sie ein <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> für die Methode. Der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A>-Parameter und der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A>-Parameter des Attributs sind die Namespacebezeichnung des konzeptionellen Modells bzw. der Funktionsname im konzeptionellen Modell. Bei der Funktionsnamenauflösung für LINQ wird die Groß-/Kleinschreibung berücksichtigt.  
+3. Fügen Sie einer Klasse im Anwendungscode eine entsprechende Methode hinzu, und übernehmen Sie ein <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> für die Methode. Der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A>-Parameter und der <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A>-Parameter des Attributs sind die Namespacebezeichnung des konzeptionellen Modells bzw. der Funktionsname im konzeptionellen Modell. Bei der Funktionsnamenauflösung für LINQ wird die Groß-/Kleinschreibung berücksichtigt.  
   
-4.  Rufen Sie die Methode in einer LINQ to Entities-Abfrage auf.  
+4. Rufen Sie die Methode in einer LINQ to Entities-Abfrage auf.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt, wie eine benutzerdefinierte Datenbankfunktion innerhalb einer LINQ to Entities-Abfrage aufgerufen wird. Im Beispiel wird das Modell "School" verwendet. Weitere Informationen über das Modell "School" finden Sie unter [Erstellen der Beispieldatenbank "School"](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399731(v=vs.100)) und [Generieren der EDMX-Datei des "School"](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399739(v=vs.100)).  

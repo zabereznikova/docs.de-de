@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-ms.openlocfilehash: 483491ea7408c1df57f31b4b984116b085ea50ba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367543"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312058"
 ---
 # <a name="data-and-data-objects"></a>Daten und Datenobjekte
 Als Teil eines Drag & Drop-Vorgangs übertragenen Daten werden in einem Datenobjekt gespeichert.  Konzeptionell besteht aus einem Datenobjekt eine oder mehrere der folgenden Paare:  
@@ -87,11 +87,11 @@ Als Teil eines Drag & Drop-Vorgangs übertragenen Daten werden in einem Datenobj
 ### <a name="removing-data-from-a-data-object"></a>Entfernen von Daten von einem Datenobjekt  
  Daten können nicht direkt von einem Datenobjekt entfernt werden.  Um Daten von einem Datenobjekt effektiv zu entfernen, gehen Sie folgendermaßen vor:  
   
-1.  Erstellen Sie ein neues Objekt, das nur die Daten enthalten, die Sie beibehalten möchten.  
+1. Erstellen Sie ein neues Objekt, das nur die Daten enthalten, die Sie beibehalten möchten.  
   
-2.  "Copy" die gewünschten Daten aus dem alten Datenobjekt auf das neue Objekt.  Um die Daten kopieren möchten, verwenden Sie eine der der <xref:System.Windows.DataObject.GetData%2A> Methoden zum Abrufen einer <xref:System.Object> , enthält die unformatierten Daten und verwenden Sie eine der der <xref:System.Windows.DataObject.SetData%2A> Methoden, um die Daten auf das neue Objekt hinzuzufügen.  
+2. "Copy" die gewünschten Daten aus dem alten Datenobjekt auf das neue Objekt.  Um die Daten kopieren möchten, verwenden Sie eine der der <xref:System.Windows.DataObject.GetData%2A> Methoden zum Abrufen einer <xref:System.Object> , enthält die unformatierten Daten und verwenden Sie eine der der <xref:System.Windows.DataObject.SetData%2A> Methoden, um die Daten auf das neue Objekt hinzuzufügen.  
   
-3.  Ersetzen Sie das alte Objekt durch die neue ein.  
+3. Ersetzen Sie das alte Objekt durch die neue ein.  
   
 > [!NOTE]
 >  Die <xref:System.Windows.DataObject.SetData%2A> Methoden nur Daten an ein Datenobjekt hinzufügen; sie sind Daten, nicht ersetzen, auch wenn die Daten und das Format der Daten genau einem vorherigen Aufruf identisch sind. Aufrufen von <xref:System.Windows.DataObject.SetData%2A> Format führt für die gleichen Daten und Daten zweimal in das Daten/Datenformat wird zweimal im Datenobjekt vorhanden sind.

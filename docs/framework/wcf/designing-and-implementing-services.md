@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: ccac3dd26ff03f235827c4bb3135dc2028f09032
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216414"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319676"
 ---
 # <a name="designing-and-implementing-services"></a>Entwerfen und Implementieren von Diensten
 In diesem Abschnitt erfahren Sie, wie Sie definieren und Implementieren von WCF-Verträge. Ein Dienstvertrag gibt an, was ein Endpunkt an die Außenwelt kommuniziert. Konkreter gesagt ist er ein Anweisung zu mehreren bestimmten Nachrichten, die in grundlegende Nachrichtenaustauschmuster aufgeteilt sind, wie Anforderung/Antwort, unidirektional und Duplex. Wenn ein Dienstvertrag ein logisch zusammengehöriger Satz von Vorgängen des Nachrichtenaustauschs ist, dann ist ein Dienstvorgang ein einzelner Nachrichtenaustausch. Beispielsweise muss ein `Hello`-Vorgang natürlich eine Nachricht annehmen (damit der Aufrufer den Gruß ankündigen kann) und kann dann eine Nachricht zurückgeben (je nach Verfügung des Vorgangs).  
@@ -38,13 +38,13 @@ In diesem Abschnitt erfahren Sie, wie Sie definieren und Implementieren von WCF-
   
  Beispielsweise kann ein Vertrag für eine Bestellung einen `CreateOrder`-Vorgang aufweisen, der eine Eingabe von Bestellinformationstypen annimmt und Erfolgs- oder Fehlerinformationen einschließlich einer Bestellnummer zurückgibt. Er kann auch einen `GetOrderStatus`-Vorgang aufweisen, der eine Bestellnummer annimmt und Bestellstatusinformationen zurückgibt. Ein Dienstvertrag dieser Art würde Folgendes angeben:  
   
-1.  Dass der Vertrag für die Bestellung aus `CreateOrder`- und `GetOrderStatus`-Vorgänge besteht.  
+1. Dass der Vertrag für die Bestellung aus `CreateOrder`- und `GetOrderStatus`-Vorgänge besteht.  
   
-2.  Dass die Vorgänge Eingabemeldungen und Ausgabemeldungen angegeben haben.  
+2. Dass die Vorgänge Eingabemeldungen und Ausgabemeldungen angegeben haben.  
   
-3.  Die Daten, die diese Meldungen enthalten können.  
+3. Die Daten, die diese Meldungen enthalten können.  
   
-4.  Nach Kategorien geordnete Anweisungen zur für die erfolgreiche Verarbeitung der Meldungen erforderlichen Kommunikationsinfrastruktur. Beispielsweise schließen diese Details ein, ob und welche Formen von Sicherheit erforderlich sind, um eine erfolgreiche Kommunikation herzustellen.  
+4. Nach Kategorien geordnete Anweisungen zur für die erfolgreiche Verarbeitung der Meldungen erforderlichen Kommunikationsinfrastruktur. Beispielsweise schließen diese Details ein, ob und welche Formen von Sicherheit erforderlich sind, um eine erfolgreiche Kommunikation herzustellen.  
   
  Um diese Art von Informationen für andere Anwendungen auf vielen Plattformen (einschließlich nicht-Microsoft-Plattformen) zu vermitteln, XML-Dienstverträge sind öffentlich in XML-Standardformaten ausgedrückt, z. B. [Web Services Description Language](https://go.microsoft.com/fwlink/?LinkId=94952) () WSDL) und [XML-Schema](https://go.microsoft.com/fwlink/?LinkId=94953) (XSD), unter anderem. Entwickler für viele Plattformen können mithilfe dieser öffentlichen Vertragsinformationen Anwendungen erstellen, die mit dem Dienst kommunizieren können, da sie die Sprache der Spezifikation verstehen und diese Sprachen für das Ermöglichen der Interoperation konzipiert sind, indem sie die öffentlichen Formulare, Formate und Protokolle beschreiben, die der Dienst unterstützt. Weitere Informationen zur Behandlung dieser Art von Informationen von WCF finden Sie unter [Metadaten](../../../docs/framework/wcf/feature-details/metadata.md).  
   

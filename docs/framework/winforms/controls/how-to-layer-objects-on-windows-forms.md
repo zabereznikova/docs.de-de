@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 2b02e5e1a4d9872cc89a26b25a44c226ee545a88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8d0abbf0f71ac176d17261a0ae863938c575bdaf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166009"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311651"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Vorgehensweise: Überlagern von Objekten in Windows Forms
 Beim Erstellen einer komplexen Benutzeroberfläche, oder mit einem Formular der multiple Document Interface (MDI) arbeiten, sollten Sie häufig layer-Steuerelemente und untergeordnete Formulare komplexere Benutzeroberflächen (UI) erstellen. Zum Verschieben und das Verfolgen von Steuerelemente und Fenster innerhalb des Kontexts einer Gruppe, bearbeiten Sie die Z-Reihenfolge. *Z-Reihenfolge* ist die Schichtung der Steuerelemente in einem Formular entlang des Formulars z-Achse (Tiefe). Das Fenster am Anfang der Z-Reihenfolge überschneidet sich mit allen anderen Fenstern. Alle anderen Fenster überlappen, das Fenster am unteren Rand der Z-Reihenfolge.  
@@ -27,9 +27,9 @@ Beim Erstellen einer komplexen Benutzeroberfläche, oder mit einem Formular der 
   
 ### <a name="to-layer-controls-at-design-time"></a>Auf der Ebene von Steuerelementen zur Entwurfszeit  
   
-1.  Wählen Sie ein Steuerelement, das Sie überlagern möchten.  
+1. Wählen Sie ein Steuerelement, das Sie überlagern möchten.  
   
-2.  Auf der **Format** Startmenü **Reihenfolge**, und klicken Sie dann auf **in den Vordergrund** oder **in den Hintergrund**.  
+2. Auf der **Format** Startmenü **Reihenfolge**, und klicken Sie dann auf **in den Vordergrund** oder **in den Hintergrund**.  
   
 ### <a name="to-layer-controls-programmatically"></a>Layer-Steuerelemente programmgesteuert  
   

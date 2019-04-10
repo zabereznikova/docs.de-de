@@ -2,12 +2,12 @@
 title: Angehaltene Instanzverwaltung
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: d977e058b2de2939d64c91aa9353f6559b3c7013
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: ace4d2baef8f6b030790deaa5b1c20bb4b0cd30d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583872"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319559"
 ---
 # <a name="suspended-instance-management"></a>Angehaltene Instanzverwaltung
 In diesem Beispiel wird veranschaulicht, wie Workflowinstanzen, die angehalten wurden, verwaltet werden.  Die Standardaktion für <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> ist `AbandonAndSuspend`. Dies bedeutet, dass nicht behandelte Ausnahmen, die von einer Workflowinstanz ausgelöst werden, die im <xref:System.ServiceModel.WorkflowServiceHost> gehostet wird, standardmäßig dazu führen, dass die Instanz aus dem Speicher verworfen (abgebrochen) und dass die dauerhafte/persistente Version der Instanz als angehalten markiert wird. Eine angehaltene Workflowinstanz kann erst ausgeführt werden, nachdem sie fortgesetzt wurde.
@@ -24,13 +24,13 @@ In diesem Beispiel wird veranschaulicht, wie Workflowinstanzen, die angehalten w
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 
-1.  Dieses Beispiel erfordert, dass die folgenden Windows-Komponenten aktiviert sind:
+1. Dieses Beispiel erfordert, dass die folgenden Windows-Komponenten aktiviert sind:
 
     1.  Microsoft Message Queues (MSMQ) Server
 
-    2.  SQL Server Express
+    2.  SQL Server Express
 
-2.  Richten Sie die SQL Server-Datenbank ein.
+2. Richten Sie die SQL Server-Datenbank ein.
 
     1.  Eine Visual Studio 2010-Eingabeaufforderung führen Sie "setup.cmd" aus dem Beispielverzeichnis SuspendedInstanceManagement, das welches Folgendes durchführt:
 
@@ -40,7 +40,7 @@ In diesem Beispiel wird veranschaulicht, wie Workflowinstanzen, die angehalten w
 
         3.  Fügt IIS der InstanceStoreUsers-Rolle, die beim Einrichten der Datenbank für Persistenz definiert wurde, APPPOOL\DefaultAppPool und NT AUTHORITY\Network Service hinzu.
 
-3.  Einrichten der Dienstwarteschlange.
+3. Einrichten der Dienstwarteschlange.
 
     1.  In Visual Studio 2010, mit der Maustaste der **SampleWorkflowApp** Projekt, und klicken Sie auf **als Startprojekt festlegen**.
 
@@ -56,7 +56,7 @@ In diesem Beispiel wird veranschaulicht, wie Workflowinstanzen, die angehalten w
 
     7.  Wählen Sie die **Sicherheit** Registerkarte und ermöglichen **jeder** Berechtigungen, zu **empfangen von Nachrichten**, **Nachricht einsehen**, und  **Nachricht senden**.
 
-4.  Führen Sie nun das Beispiel aus.
+4. Führen Sie nun das Beispiel aus.
 
     1.  In Visual Studio 2010, führen Sie das Projekt "sampleworkflowapp" erneut ohne debugging drücken Sie **STRG + F5**. Zwei Endpunktadressen werden im Konsolenfenster ausgegeben: eine für den Anwendungsendpunkt und die andere vom <xref:System.ServiceModel.Activities.WorkflowControlEndpoint>. Daraufhin wird eine Workflowinstanz erstellt, und Überwachungsdatensätze für diese Instanz werden im Konsolenfenster angezeigt. Die Workflowinstanz löst eine Ausnahme aus, die bewirkt, dass die Instanz angehalten und abgebrochen wird.
 
@@ -68,13 +68,13 @@ In diesem Beispiel wird veranschaulicht, wie Workflowinstanzen, die angehalten w
 
 #### <a name="to-cleanup-optional"></a>So führen Sie eine (optionale) Bereinigung durch
 
-1.  Öffnen Sie die Computerverwaltungskonsole, indem Sie "Compmgmt.msc" an einer `vs2010`-Eingabeaufforderung ausführen.
+1. Öffnen Sie die Computerverwaltungskonsole, indem Sie "Compmgmt.msc" an einer `vs2010`-Eingabeaufforderung ausführen.
 
-2.  Erweitern Sie **Dienste und Anwendungen**, **Message Queuing-**, **Private Warteschlangen**.
+2. Erweitern Sie **Dienste und Anwendungen**, **Message Queuing-**, **Private Warteschlangen**.
 
-3.  Löschen der **ReceiveTx** Warteschlange.
+3. Löschen der **ReceiveTx** Warteschlange.
 
-4.  Um die Persistenzdatenbank zu entfernen, führen Sie "cleanup.cmd" aus.
+4. Um die Persistenzdatenbank zu entfernen, führen Sie "cleanup.cmd" aus.
 
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

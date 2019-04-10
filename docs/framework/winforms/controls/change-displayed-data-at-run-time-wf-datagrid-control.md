@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 27608a7fbce5e9aa815b43e1d7202fa11e52ee1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315854"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>Vorgehensweise: Ändern der angezeigten Daten im DataGrid-Steuerelement in Windows Forms zur Laufzeit
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59175603"
   
 ### <a name="to-change-data-programmatically"></a>Programmgesteuertes Ändern von Daten  
   
-1.  Geben Sie die gewünschte Tabelle aus der <xref:System.Data.DataSet> Objekt und die gewünschte Zeile, und das Feld aus der Tabelle, und legen Sie die Zelle auf den neuen Wert.  
+1. Geben Sie die gewünschte Tabelle aus der <xref:System.Data.DataSet> Objekt und die gewünschte Zeile, und das Feld aus der Tabelle, und legen Sie die Zelle auf den neuen Wert.  
   
     > [!NOTE]
     >  Der ersten Tabelle des an den <xref:System.Data.DataSet> oder die erste Zeile der Tabelle, verwenden Sie 0.  
@@ -68,7 +68,7 @@ ms.locfileid: "59175603"
   
 ### <a name="to-change-the-datasource-programmatically"></a>So ändern Sie die Datenquelle programmgesteuert  
   
-1.  Legen Sie die <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Methode, um den Namen der Datenquelle und der Tabelle, die Sie binden möchten.  
+1. Legen Sie die <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Methode, um den Namen der Datenquelle und der Tabelle, die Sie binden möchten.  
   
      Das folgende Beispiel zeigt, wie Sie die Datenquelle mithilfe der <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> Methode, um eine [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] Datensteuerelement (adoPubsAuthors gebunden), die mit der Autorentabelle in der Pubs-Datenbank verbunden ist.  
   

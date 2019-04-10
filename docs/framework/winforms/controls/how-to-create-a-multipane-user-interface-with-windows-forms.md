@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: d75d96f8db216ab78e13ba5f8409ea5aa535d685
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315153"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms
 Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die der ähnelt der Verwendung in Microsoft Outlook ist eine **Ordner** Liste eine **Nachrichten** Bereich und eine **Vorschau** Bereich. In dieser Anordnung erfolgt hauptsächlich durch Andocken von Steuerelementen mit dem Formular.  
@@ -30,7 +30,7 @@ Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die der
   
 ### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>So erstellen Sie programmgesteuert eine Outlook-Stil-Benutzeroberfläche  
   
-1.  Deklarieren Sie innerhalb eines Formulars jedes Steuerelement, das die Benutzeroberfläche besteht. In diesem Beispiel verwenden Sie die <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, und <xref:System.Windows.Forms.RichTextBox> Steuerelemente, um die Microsoft Outlook-Benutzeroberfläche zu imitieren.  
+1. Deklarieren Sie innerhalb eines Formulars jedes Steuerelement, das die Benutzeroberfläche besteht. In diesem Beispiel verwenden Sie die <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, und <xref:System.Windows.Forms.RichTextBox> Steuerelemente, um die Microsoft Outlook-Benutzeroberfläche zu imitieren.  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die der
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2.  Erstellen Sie eine Prozedur, die Benutzeroberfläche definiert. Der folgende Code legt die Eigenschaften fest, sodass das Formular die Benutzeroberfläche in Microsoft Outlook ähnelt. Es ist jedoch mithilfe von anderen Steuerelementen, oder sie anders andocken, andere Benutzeroberflächen zu erstellen, die gleichermaßen flexibles sind genauso einfach.  
+2. Erstellen Sie eine Prozedur, die Benutzeroberfläche definiert. Der folgende Code legt die Eigenschaften fest, sodass das Formular die Benutzeroberfläche in Microsoft Outlook ähnelt. Es ist jedoch mithilfe von anderen Steuerelementen, oder sie anders andocken, andere Benutzeroberflächen zu erstellen, die gleichermaßen flexibles sind genauso einfach.  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ Im folgenden Verfahren erstellen Sie eine multipane-Benutzeroberfläche, die der
     }  
     ```  
   
-3.  Fügen Sie in Visual Basic einen Aufruf an die Prozedur, die Sie gerade erstellt, in haben der `New()` Verfahren. In visuellen C#, fügen Sie diese Zeile des Codes, an den Konstruktor für die Klasse.  
+3. Fügen Sie in Visual Basic einen Aufruf an die Prozedur, die Sie gerade erstellt, in haben der `New()` Verfahren. In visuellen C#, fügen Sie diese Zeile des Codes, an den Konstruktor für die Klasse.  
   
     ```vb  
     ' Add this to the New procedure.  

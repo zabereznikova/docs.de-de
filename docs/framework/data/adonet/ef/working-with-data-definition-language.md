@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 9ca3732de5e4cfa07fe08dec78edc9de23a1a036
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 75a214ad1099bf48dcb2c2d3b36bf07dc0524f8d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904373"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313241"
 ---
 # <a name="working-with-data-definition-language"></a>Arbeiten mit der Datendefinitionssprache
 Beginnend mit der [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Version 4 der [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Datendefinitionssprache (DDL) unterstützt. Dadurch wird das Erstellen oder Löschen einer Datenbankinstanz auf Grundlage der Verbindungszeichenfolge und der Metadaten des Speichermodells (SSDL) ermöglicht.  
@@ -36,9 +36,9 @@ Beginnend mit der [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.
   
 #### <a name="to-define-a-database-based-on-the-existing-model"></a>So definieren Sie eine Datenbank auf Grundlage des vorhandenen Modells  
   
-1.  Erstellen Sie eine Konsolenanwendung.  
+1. Erstellen Sie eine Konsolenanwendung.  
   
-2.  Fügen Sie der Anwendung ein vorhandenes Modell hinzu.  
+2. Fügen Sie der Anwendung ein vorhandenes Modell hinzu.  
   
     1.  Fügen Sie ein leeres Modell mit dem Namen `SchoolModel`. Um ein leeres Modell erstellen möchten, finden Sie unter den [Vorgehensweise: Erstellen einer neuen EDMX-Datei](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100)) Thema.  
   
@@ -48,7 +48,7 @@ Beginnend mit der [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.
   
     2.  Öffnen Sie die Datei SchoolModel.edmx`edmx:Runtime`, und fügen Sie den Inhalt zwischen den -Tags ein.  
   
-3.  Fügen Sie der Hauptfunktion den folgenden Code hinzu. Im Code werden die Verbindungszeichenfolge mit dem Datenbankserver initialisiert, das DDL-Skript angezeigt, die Datenbank erstellt, dem Kontext eine neue Entität hinzugefügt und die Änderungen in der Datenbank gespeichert.  
+3. Fügen Sie der Hauptfunktion den folgenden Code hinzu. Im Code werden die Verbindungszeichenfolge mit dem Datenbankserver initialisiert, das DDL-Skript angezeigt, die Datenbank erstellt, dem Kontext eine neue Entität hinzugefügt und die Änderungen in der Datenbank gespeichert.  
   
      [!code-csharp[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#ddl)]
      [!code-vb[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#ddl)]

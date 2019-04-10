@@ -2,12 +2,12 @@
 title: Beispiel für Workflowsuche
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
-ms.openlocfilehash: 1076e7045ca546fed7e6902f69406bfc002c4c26
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9a0d3ad22b4663ee71b5b2aa8d0e3d64f20996d8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964422"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311660"
 ---
 # <a name="workflow-discovery-sample"></a>Beispiel für Workflowsuche
 Dieses Beispiel veranschaulicht, wie ein Workflowdienst erkennbar gemacht wird, und wie eine benutzerdefinierte Codeaktivität erstellt wird, die nach einem bestimmten Dienst sucht.  
@@ -20,7 +20,7 @@ Dieses Beispiel veranschaulicht, wie ein Workflowdienst erkennbar gemacht wird, 
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Dieses Beispiel verwendet die HTTP-Endpunkten, die richtigen URL-ACLs ausführen müssen (finden Sie unter [Konfigurieren von HTTP und HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Einzelheiten). Wenn der folgende Befehl an einer Eingabeaufforderung auf höherer Ebene ausgeführt wird, sollten die entsprechenden ACLs hinzugefügt werden. Ersetzen Sie die folgenden Argumente durch die Domäne und den Benutzernamen, wenn die Shell die variable Struktur nicht erkennt.  
+1. Dieses Beispiel verwendet die HTTP-Endpunkten, die richtigen URL-ACLs ausführen müssen (finden Sie unter [Konfigurieren von HTTP und HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Einzelheiten). Wenn der folgende Befehl an einer Eingabeaufforderung auf höherer Ebene ausgeführt wird, sollten die entsprechenden ACLs hinzugefügt werden. Ersetzen Sie die folgenden Argumente durch die Domäne und den Benutzernamen, wenn die Shell die variable Struktur nicht erkennt.  
   
      **Netsh http hinzufügen Urlacl Url =http://+:8000/ Benutzer Domäne % =\\%UserName%**  
   

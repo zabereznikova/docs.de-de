@@ -2,12 +2,12 @@
 title: Suchrouterdienst
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 9c0c409eb6cf3146a198b9f4bcd6d76660f5da36
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 166f6b9d1055e36f987e6b9a81fe69dc8bd548b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509080"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318766"
 ---
 # <a name="discovery-router-service"></a>Suchrouterdienst
 In diesem Beispiel wird veranschaulicht, wie Suchnachrichten an einen anderen Endpunkt weitergeleitet werden.  
@@ -22,13 +22,13 @@ In diesem Beispiel wird veranschaulicht, wie Suchnachrichten an einen anderen En
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen  
   
-1.  Erstellen Sie das Beispiel.  
+1. Erstellen Sie das Beispiel.  
   
-2.  Führen Sie die ausführbare DiscoveryRouter-Datei aus.  
+2. Führen Sie die ausführbare DiscoveryRouter-Datei aus.  
   
-3.  Führen Sie die ausführbare Dienstdatei aus dem Buildverzeichnis aus.  
+3. Führen Sie die ausführbare Dienstdatei aus dem Buildverzeichnis aus.  
   
-4.  Führen Sie die ausführbare Clientanwendung aus. Beachten Sie, dass der Client den Dienst sucht.  
+4. Führen Sie die ausführbare Clientanwendung aus. Beachten Sie, dass der Client den Dienst sucht.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

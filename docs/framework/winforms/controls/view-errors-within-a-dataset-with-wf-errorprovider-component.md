@@ -9,12 +9,12 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 190b53a248a77f03dd5d8cb13cb59a439fa9960d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 15fbf4a3cebef1485f0c54ace36ab88f3d4289e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157624"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310446"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Vorgehensweise: Anzeigen von Fehlern innerhalb eines Datasets mit der ErrorProvider-Komponente in Windows Forms
 Sie können die Windows-Formulare verwenden <xref:System.Windows.Forms.ErrorProvider> Komponente, um die Spaltenfehler innerhalb eines Datasets oder anderen Datenquelle anzuzeigen. Für eine <xref:System.Windows.Forms.ErrorProvider> Komponente zum Anzeigen der Datenfehler in einem Formular, es muss keine werden direkt mit einem Steuerelement verknüpft ist. Sobald sie mit einer Datenquelle gebunden ist, kann es ein Fehlersymbol neben jedem Steuerelement anzeigen, die an die gleiche Datenquelle gebunden ist.  
@@ -24,7 +24,7 @@ Sie können die Windows-Formulare verwenden <xref:System.Windows.Forms.ErrorProv
   
 ### <a name="to-display-data-errors"></a>Zum Anzeigen der Datenfehler  
   
-1.  Binden Sie die Komponente an einer bestimmten Spalte in eine Datentabelle.  
+1. Binden Sie die Komponente an einer bestimmten Spalte in eine Datentabelle.  
   
     ```vb  
     ' Assumes existence of DataSet1, DataTable1  
@@ -40,7 +40,7 @@ Sie können die Windows-Formulare verwenden <xref:System.Windows.Forms.ErrorProv
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2.  Legen Sie die <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> Eigenschaft, um das Formular.  
+2. Legen Sie die <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> Eigenschaft, um das Formular.  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -50,7 +50,7 @@ Sie können die Windows-Formulare verwenden <xref:System.Windows.Forms.ErrorProv
     errorProvider1.ContainerControl = this;  
     ```  
   
-3.  Die Position des aktuellen Datensatzes auf einer Zeile, die einem Spaltenfehler festgelegt.  
+3. Die Position des aktuellen Datensatzes auf einer Zeile, die einem Spaltenfehler festgelegt.  
   
     ```vb  
     DataTable1.Rows(5).SetColumnError("Name", "Bad data in this row.")  

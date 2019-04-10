@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-ms.openlocfilehash: 6d2edadc323994f7f25394321fb1aff18f7154c5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 017a2458562068727674bd3fd9cda8c33d989e8b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824272"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314619"
 ---
 # <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>Ausdruck weist den Typ "\<Typname >', einen eingeschränkten Typ, kann nicht verwendet werden, um von 'Object' oder 'ValueType' geerbte Member zuzugreifen
 Ein Ausdruck ergibt einen Typ, der von der common Language Runtime (CLR) geschachtelt werden kann, aber greift auf ein Element, das Boxing erforderlich.  
@@ -25,11 +25,11 @@ Ein Ausdruck ergibt einen Typ, der von der common Language Runtime (CLR) geschac
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Suchen Sie den Ausdruck, der den angegebenen Typ ergibt.  
+1. Suchen Sie den Ausdruck, der den angegebenen Typ ergibt.  
   
-2.  Suchen Sie den Teil der Anweisung, die versucht, die zum Aufrufen der Methode geerbt von <xref:System.Object> oder <xref:System.ValueType>.  
+2. Suchen Sie den Teil der Anweisung, die versucht, die zum Aufrufen der Methode geerbt von <xref:System.Object> oder <xref:System.ValueType>.  
   
-3.  Schreiben Sie Anweisung um den Methodenaufruf zu vermeiden.  
+3. Schreiben Sie Anweisung um den Methodenaufruf zu vermeiden.  
   
 ## <a name="see-also"></a>Siehe auch
 

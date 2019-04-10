@@ -9,20 +9,19 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825377"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318935"
 ---
 # <a name="decision-structures-visual-basic"></a>Entscheidungsstrukturen (Visual Basic)
 Visual Basic können Sie die Bedingungen zu testen, und führen Sie verschiedene Vorgänge abhängig von den Ergebnissen dieses Tests. Sie können testen, auf eine Bedingung wird "true" oder "false" für verschiedene Werte für einen Ausdruck oder für verschiedene Ausnahmen generiert, wenn Sie eine Reihe von Anweisungen ausführen.  
   
  Die folgende Abbildung zeigt eine Entscheidungsstruktur, die eine Bedingung "true" wird überprüft, und verschiedene Aktionen abhängig davon, ob es "true" oder "false".  
   
- ![Flussdiagramm einer If... Klicken Sie dann... Else-Konstruktion](../../../../visual-basic/programming-guide/language-features/control-flow/media/ifthenelse.gif "IfThenElse")  
-Andere Aktionen auszuführen, wenn eine Bedingung ist "true", und wann ist "false"  
+ ![Ein Flussdiagramm einer If... Klicken Sie dann... Else-Konstruktion.](./media/decision-structures/if-then-else-construction.gif)  
   
 ## <a name="ifthenelse-construction"></a>If... Klicken Sie dann... Else-Konstruktion  
  `If...Then...Else` Konstruktionen können Sie für eine oder mehrere Bedingungen zu testen, und führen Sie eine oder mehrere Anweisungen je nach jede Bedingung. Sie können testen Bedingungen und Aktionen auf folgende Weise:  
@@ -49,7 +48,7 @@ Andere Aktionen auszuführen, wenn eine Bedingung ist "true", und wann ist "fals
 ## <a name="see-also"></a>Siehe auch
 
 - [Ablaufsteuerung](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [Schleifenstruktur](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Schleifenstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Weitere Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
 - [Geschachtelte Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
-- [If-Operator](../../../../visual-basic/language-reference/operators/if-operator.md)
+- [Operator If](../../../../visual-basic/language-reference/operators/if-operator.md)
