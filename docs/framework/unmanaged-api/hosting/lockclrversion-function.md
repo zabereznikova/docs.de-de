@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571a676496683ba3251f13c41600bb017e1ced5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156103"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336693"
 ---
-# <a name="lockclrversion-function"></a><span data-ttu-id="62187-102">LockClrVersion-Funktion</span><span class="sxs-lookup"><span data-stu-id="62187-102">LockClrVersion Function</span></span>
-<span data-ttu-id="62187-103">Ermöglicht dem Host, um zu bestimmen, welche Version der common Language Runtime (CLR) innerhalb des Prozesses verwendet werden soll, bevor die CLR explizit initialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="62187-103">Allows the host to determine which version of the common language runtime (CLR) will be used within the process before explicitly initializing the CLR.</span></span>  
+# <a name="lockclrversion-function"></a><span data-ttu-id="ad9e5-102">LockClrVersion-Funktion</span><span class="sxs-lookup"><span data-stu-id="ad9e5-102">LockClrVersion Function</span></span>
+<span data-ttu-id="ad9e5-103">Ermöglicht dem Host, um zu bestimmen, welche Version der common Language Runtime (CLR) innerhalb des Prozesses verwendet werden soll, bevor die CLR explizit initialisiert wird.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-103">Allows the host to determine which version of the common language runtime (CLR) will be used within the process before explicitly initializing the CLR.</span></span>  
   
- <span data-ttu-id="62187-104">Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.</span><span class="sxs-lookup"><span data-stu-id="62187-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="ad9e5-104">Diese Funktion ist in [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] veraltet.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="62187-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="62187-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ad9e5-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="ad9e5-105">Syntax</span></span>  
   
 ```  
 HRESULT LockClrVersion (  
@@ -39,60 +39,60 @@ HRESULT LockClrVersion (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="62187-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="62187-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ad9e5-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="ad9e5-106">Parameters</span></span>  
  `hostCallback`  
- <span data-ttu-id="62187-107">[in] Die Funktion, die von der CLR bei der Initialisierung aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="62187-107">[in] The function to be called by the CLR upon initialization.</span></span>  
+ <span data-ttu-id="ad9e5-107">[in] Die Funktion, die von der CLR bei der Initialisierung aufgerufen werden.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-107">[in] The function to be called by the CLR upon initialization.</span></span>  
   
  `pBeginHostSetup`  
- <span data-ttu-id="62187-108">[in] Die Funktion, die durch den Host aus, um die CLR darüber zu informieren, dass die Initialisierung aufgerufen werden, wird gestartet.</span><span class="sxs-lookup"><span data-stu-id="62187-108">[in] The function to be called by the host to inform the CLR that initialization is starting.</span></span>  
+ <span data-ttu-id="ad9e5-108">[in] Die Funktion, die durch den Host aus, um die CLR darüber zu informieren, dass die Initialisierung aufgerufen werden, wird gestartet.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-108">[in] The function to be called by the host to inform the CLR that initialization is starting.</span></span>  
   
  `pEndHostSetup`  
- <span data-ttu-id="62187-109">[in] Die Funktion, die durch den Host aus, um die CLR darüber zu informieren, dass die Initialisierung aufgerufen werden, ist abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="62187-109">[in] The function to be called by the host to inform the CLR that initialization is complete.</span></span>  
+ <span data-ttu-id="ad9e5-109">[in] Die Funktion, die durch den Host aus, um die CLR darüber zu informieren, dass die Initialisierung aufgerufen werden, ist abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-109">[in] The function to be called by the host to inform the CLR that initialization is complete.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="62187-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="62187-110">Return Value</span></span>  
- <span data-ttu-id="62187-111">Diese Methode gibt die standard-COM-Fehlercodes, zurück, wie in "Winerror.h", zusätzlich zu den folgenden Werten definiert.</span><span class="sxs-lookup"><span data-stu-id="62187-111">This method returns standard COM error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ad9e5-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="ad9e5-110">Return Value</span></span>  
+ <span data-ttu-id="ad9e5-111">Diese Methode gibt die standard-COM-Fehlercodes, zurück, wie in "Winerror.h", zusätzlich zu den folgenden Werten definiert.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-111">This method returns standard COM error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="62187-112">Rückgabecode</span><span class="sxs-lookup"><span data-stu-id="62187-112">Return code</span></span>|<span data-ttu-id="62187-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="62187-113">Description</span></span>|  
+|<span data-ttu-id="ad9e5-112">Rückgabecode</span><span class="sxs-lookup"><span data-stu-id="ad9e5-112">Return code</span></span>|<span data-ttu-id="ad9e5-113">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="ad9e5-113">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="62187-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="62187-114">S_OK</span></span>|<span data-ttu-id="62187-115">Die Methode wurde erfolgreich abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="62187-115">The method completed successfully.</span></span>|  
-|<span data-ttu-id="62187-116">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="62187-116">E_INVALIDARG</span></span>|<span data-ttu-id="62187-117">Eine oder mehrere der Argumente ist null.</span><span class="sxs-lookup"><span data-stu-id="62187-117">One or more of the arguments is null.</span></span>|  
+|<span data-ttu-id="ad9e5-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="ad9e5-114">S_OK</span></span>|<span data-ttu-id="ad9e5-115">Die Methode wurde erfolgreich abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-115">The method completed successfully.</span></span>|  
+|<span data-ttu-id="ad9e5-116">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="ad9e5-116">E_INVALIDARG</span></span>|<span data-ttu-id="ad9e5-117">Eine oder mehrere der Argumente ist null.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-117">One or more of the arguments is null.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="62187-118">Hinweise</span><span class="sxs-lookup"><span data-stu-id="62187-118">Remarks</span></span>  
- <span data-ttu-id="62187-119">Der Host ruft `LockClrVersion` vor der Initialisierung der CLR.</span><span class="sxs-lookup"><span data-stu-id="62187-119">The host calls `LockClrVersion` before initializing the CLR.</span></span> `LockClrVersion` <span data-ttu-id="62187-120">akzeptiert drei Parameter, die alle Rückrufe vom Typ sind [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md).</span><span class="sxs-lookup"><span data-stu-id="62187-120">takes three parameters, all of which are callbacks of type [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md).</span></span> <span data-ttu-id="62187-121">Dieser Typ ist wie folgt definiert.</span><span class="sxs-lookup"><span data-stu-id="62187-121">This type is defined as follows.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ad9e5-118">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ad9e5-118">Remarks</span></span>  
+ <span data-ttu-id="ad9e5-119">Der Host ruft `LockClrVersion` vor der Initialisierung der CLR.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-119">The host calls `LockClrVersion` before initializing the CLR.</span></span> `LockClrVersion` <span data-ttu-id="ad9e5-120">akzeptiert drei Parameter, die alle Rückrufe vom Typ sind [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md).</span><span class="sxs-lookup"><span data-stu-id="ad9e5-120">takes three parameters, all of which are callbacks of type [FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md).</span></span> <span data-ttu-id="ad9e5-121">Dieser Typ ist wie folgt definiert.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-121">This type is defined as follows.</span></span>  
   
 ```  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
 ```  
   
- <span data-ttu-id="62187-122">Die folgenden Schritte werden bei der Initialisierung der Runtime:</span><span class="sxs-lookup"><span data-stu-id="62187-122">The following steps occur upon initialization of the runtime:</span></span>  
+ <span data-ttu-id="ad9e5-122">Die folgenden Schritte werden bei der Initialisierung der Runtime:</span><span class="sxs-lookup"><span data-stu-id="ad9e5-122">The following steps occur upon initialization of the runtime:</span></span>  
   
-1.  <span data-ttu-id="62187-123">Der Host ruft [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) oder eine der anderen Initialisierungsfunktionen Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="62187-123">The host calls [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) or one of the other runtime initialization functions.</span></span> <span data-ttu-id="62187-124">Sie können auch konnte der Host die Laufzeit mithilfe von COM-objektaktivierung initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="62187-124">Alternatively, the host could initialize the runtime using COM object activation.</span></span>  
+1. <span data-ttu-id="ad9e5-123">Der Host ruft [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) oder eine der anderen Initialisierungsfunktionen Common Language Runtime.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-123">The host calls [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) or one of the other runtime initialization functions.</span></span> <span data-ttu-id="ad9e5-124">Sie können auch konnte der Host die Laufzeit mithilfe von COM-objektaktivierung initialisiert werden.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-124">Alternatively, the host could initialize the runtime using COM object activation.</span></span>  
   
-2.  <span data-ttu-id="62187-125">Ruft die Runtime die Funktion, die anhand der `hostCallback` Parameter.</span><span class="sxs-lookup"><span data-stu-id="62187-125">The runtime calls the function specified by the `hostCallback` parameter.</span></span>  
+2. <span data-ttu-id="ad9e5-125">Ruft die Runtime die Funktion, die anhand der `hostCallback` Parameter.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-125">The runtime calls the function specified by the `hostCallback` parameter.</span></span>  
   
-3.  <span data-ttu-id="62187-126">Die Funktion anhand des `hostCallback` macht anschließend die folgende Sequenz von aufrufen:</span><span class="sxs-lookup"><span data-stu-id="62187-126">The function specified by `hostCallback` then makes the following sequence of calls:</span></span>  
+3. <span data-ttu-id="ad9e5-126">Die Funktion anhand des `hostCallback` macht anschließend die folgende Sequenz von aufrufen:</span><span class="sxs-lookup"><span data-stu-id="ad9e5-126">The function specified by `hostCallback` then makes the following sequence of calls:</span></span>  
   
-    -   <span data-ttu-id="62187-127">Die Funktion, die anhand der `pBeginHostSetup` Parameter.</span><span class="sxs-lookup"><span data-stu-id="62187-127">The function specified by the `pBeginHostSetup` parameter.</span></span>  
+    -   <span data-ttu-id="ad9e5-127">Die Funktion, die anhand der `pBeginHostSetup` Parameter.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-127">The function specified by the `pBeginHostSetup` parameter.</span></span>  
   
-    -   `CorBindToRuntimeEx` <span data-ttu-id="62187-128">(oder eine andere Funktion der Common Language Runtime-Initialisierung).</span><span class="sxs-lookup"><span data-stu-id="62187-128">(or another runtime initialization function).</span></span>  
+    -   `CorBindToRuntimeEx` <span data-ttu-id="ad9e5-128">(oder eine andere Funktion der Common Language Runtime-Initialisierung).</span><span class="sxs-lookup"><span data-stu-id="ad9e5-128">(or another runtime initialization function).</span></span>  
   
-    -   <span data-ttu-id="62187-129">[ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).</span><span class="sxs-lookup"><span data-stu-id="62187-129">[ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).</span></span>  
+    -   <span data-ttu-id="ad9e5-129">[ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).</span><span class="sxs-lookup"><span data-stu-id="ad9e5-129">[ICLRRuntimeHost::SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md).</span></span>  
   
-    -   <span data-ttu-id="62187-130">[ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).</span><span class="sxs-lookup"><span data-stu-id="62187-130">[ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).</span></span>  
+    -   <span data-ttu-id="ad9e5-130">[ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).</span><span class="sxs-lookup"><span data-stu-id="ad9e5-130">[ICLRRuntimeHost::Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md).</span></span>  
   
-    -   <span data-ttu-id="62187-131">Die Funktion, die anhand der `pEndHostSetup` Parameter.</span><span class="sxs-lookup"><span data-stu-id="62187-131">The function specified by the `pEndHostSetup` parameter.</span></span>  
+    -   <span data-ttu-id="ad9e5-131">Die Funktion, die anhand der `pEndHostSetup` Parameter.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-131">The function specified by the `pEndHostSetup` parameter.</span></span>  
   
- <span data-ttu-id="62187-132">Alle Aufrufe von `pBeginHostSetup` zu `pEndHostSetup` muss auf einem einzelnen Thread oder eine Fiber mit demselben logischen Stapel auftreten.</span><span class="sxs-lookup"><span data-stu-id="62187-132">All the calls from `pBeginHostSetup` to `pEndHostSetup` must occur on a single thread or fiber, with the same logical stack.</span></span> <span data-ttu-id="62187-133">Dieser Thread kann aus dem Thread, von denen unterscheiden `hostCallback` aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="62187-133">This thread can be different from the thread upon which `hostCallback` is called.</span></span>  
+ <span data-ttu-id="ad9e5-132">Alle Aufrufe von `pBeginHostSetup` zu `pEndHostSetup` muss auf einem einzelnen Thread oder eine Fiber mit demselben logischen Stapel auftreten.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-132">All the calls from `pBeginHostSetup` to `pEndHostSetup` must occur on a single thread or fiber, with the same logical stack.</span></span> <span data-ttu-id="ad9e5-133">Dieser Thread kann aus dem Thread, von denen unterscheiden `hostCallback` aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="ad9e5-133">This thread can be different from the thread upon which `hostCallback` is called.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="62187-134">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="62187-134">Requirements</span></span>  
- <span data-ttu-id="62187-135">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="62187-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ad9e5-134">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ad9e5-134">Requirements</span></span>  
+ <span data-ttu-id="ad9e5-135">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ad9e5-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="62187-136">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="62187-136">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="ad9e5-136">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="ad9e5-136">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="62187-137">**Bibliothek:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="62187-137">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="ad9e5-137">**Bibliothek:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ad9e5-137">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="62187-138">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="62187-138">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **<span data-ttu-id="ad9e5-138">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="ad9e5-138">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="62187-139">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="62187-139">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ad9e5-139">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ad9e5-139">See also</span></span>
 
-- [<span data-ttu-id="62187-140">Veraltete CLR-Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="62187-140">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="ad9e5-140">Veraltete CLR-Hostingfunktionen</span><span class="sxs-lookup"><span data-stu-id="ad9e5-140">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
