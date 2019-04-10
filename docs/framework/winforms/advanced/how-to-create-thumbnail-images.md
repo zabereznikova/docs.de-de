@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144013"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341490"
 ---
 # <a name="how-to-create-thumbnail-images"></a>Vorgehensweise: Erstellen von Miniaturbildern
 Eine Miniaturansicht ist eine kleine Version eines Bilds. Sie können ein Miniaturbild erstellen, durch den Aufruf der <xref:System.Drawing.Image.GetThumbnailImage%2A> Methode eine <xref:System.Drawing.Image> Objekt.  
@@ -34,19 +34,19 @@ Eine Miniaturansicht ist eine kleine Version eines Bilds. Sie können ein Miniat
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
  Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler. Um das Beispiel auszuführen, gehen Sie folgendermaßen vor:  
   
-1.  Erstellen Sie eine neue Windows Forms-Anwendung.  
+1. Erstellen Sie eine neue Windows Forms-Anwendung.  
   
-2.  Fügen Sie den Beispielcode, in das Formular.  
+2. Fügen Sie den Beispielcode, in das Formular.  
   
-3.  Erstellen Sie einen Ereignishandler für des Formulars des <xref:System.Windows.Forms.Control.Paint> Ereignis  
+3. Erstellen Sie einen Ereignishandler für des Formulars des <xref:System.Windows.Forms.Control.Paint> Ereignis  
   
-4.  In der <xref:System.Windows.Forms.Control.Paint> Handler, rufen die `GetThumbnail` Methode und übergeben Sie `e` für <xref:System.Windows.Forms.PaintEventArgs>.  
+4. In der <xref:System.Windows.Forms.Control.Paint> Handler, rufen die `GetThumbnail` Methode und übergeben Sie `e` für <xref:System.Windows.Forms.PaintEventArgs>.  
   
-5.  Finden Sie eine Bilddatei, der Sie eine Miniaturansicht erstellen möchten.  
+5. Finden Sie eine Bilddatei, der Sie eine Miniaturansicht erstellen möchten.  
   
-6.  In der `GetThumbnail` Methode, geben Sie den Pfad und Dateinamen an, in Ihrem Image.  
+6. In der `GetThumbnail` Methode, geben Sie den Pfad und Dateinamen an, in Ihrem Image.  
   
-7.  Drücken Sie F5, um das Beispiel auszuführen.  
+7. Drücken Sie F5, um das Beispiel auszuführen.  
   
      Eine Miniaturansicht 100 x 100 wird im Formular angezeigt.  
   

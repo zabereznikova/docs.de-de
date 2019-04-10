@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: f9fb5a0d2a23d2ad23aa3886ce25edb999b50678
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160978"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335718"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Eingabearchitektur für die Interoperabilität zwischen Windows Forms und WPF
 Interoperation zwischen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] und [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] erfordert, dass beide Technologien auf die entsprechende Tastenkombination Eingabeverarbeitung ist. Dieses Thema beschreibt die Implementierung dieser Technologies Tastatur- und Nachrichtenverarbeitung statt, um reibungslose Zusammenarbeit in hybridanwendungen zu ermöglichen.  
@@ -57,13 +57,13 @@ Interoperation zwischen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
 ### <a name="surrogate-windows-forms-message-loop"></a>Ersatzzeichen Windows Forms-Nachrichtenschleife  
  In der Standardeinstellung die <xref:System.Windows.Forms.Application?displayProperty=nameWithType> -Klasse enthält die primäre Meldungsschleife für [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Anwendungen. Bei der Zusammenarbeit die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Nachricht, die Schleife verarbeitet keine Nachrichten. Aus diesem Grund muss diese Logik reproduziert werden. Der Handler für die <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType> Ereignis führt die folgenden Schritte aus:  
   
-1.  Filtert die Nachricht mithilfe der <xref:System.Windows.Forms.IMessageFilter> Schnittstelle.  
+1. Filtert die Nachricht mithilfe der <xref:System.Windows.Forms.IMessageFilter> Schnittstelle.  
   
-2.  Ruft die <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> Methode.  
+2. Ruft die <xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType> Methode.  
   
-3.  Übersetzt, und die Nachricht sendet, wenn dies erforderlich ist.  
+3. Übersetzt, und die Nachricht sendet, wenn dies erforderlich ist.  
   
-4.  Übergibt die Nachricht an das hosting-Steuerelement, wenn keine anderen Steuerelementen die Nachricht zu verarbeiten.  
+4. Übergibt die Nachricht an das hosting-Steuerelement, wenn keine anderen Steuerelementen die Nachricht zu verarbeiten.  
   
 ### <a name="ikeyboardinputsink-implementation"></a>IKeyboardInputSink-Implementierung  
  Die Nachrichtenschleife Ersatzzeichen übernimmt Tastatur. Aus diesem Grund die <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> Methode ist die einzige <xref:System.Windows.Interop.IKeyboardInputSink> Member, die eine Implementierung in erfordert die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Klasse.  
@@ -72,11 +72,11 @@ Interoperation zwischen der [!INCLUDE[TLA2#tla_winclient](../../../../includes/t
   
  Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Implementierung der <xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType> Methode führt die folgenden Schritte aus:  
   
-1.  Sucht das erste oder letzte [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] von befindlichen Steuerelement ausgehend, die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Steuerelement und die Fokus erhalten kann. Die Auswahl des Steuerelements, die Traversierung Informationen abhängig ist.  
+1. Sucht das erste oder letzte [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] von befindlichen Steuerelement ausgehend, die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Steuerelement und die Fokus erhalten kann. Die Auswahl des Steuerelements, die Traversierung Informationen abhängig ist.  
   
-2.  Legt den Fokus auf das Steuerelement und gibt `true`.  
+2. Legt den Fokus auf das Steuerelement und gibt `true`.  
   
-3.  Gibt zurück, wenn kein Steuerelement den Fokus erhalten kann, `false`.  
+3. Gibt zurück, wenn kein Steuerelement den Fokus erhalten kann, `false`.  
   
 ### <a name="windowsformshost-registration"></a>WindowsFormsHost-Registrierung  
  Wenn das Fensterhandle für ein <xref:System.Windows.Forms.Integration.WindowsFormsHost> Steuerelement wird erstellt, die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Steuerelement ruft eine interne, statische Methode, die ihr Vorhandensein für die Nachrichtenschleife registriert.  

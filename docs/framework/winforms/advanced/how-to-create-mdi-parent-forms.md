@@ -5,12 +5,12 @@ helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 120a7d45e01b0460f0c5e50896f58d026c4c3b9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d3ec2e16f06169790711c92c9d445ae93ee50c95
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216313"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338656"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>Vorgehensweise: Erstellen von übergeordneten MDI-Formularen
 > [!IMPORTANT]
@@ -20,20 +20,20 @@ ms.locfileid: "59216313"
   
 ### <a name="to-create-an-mdi-parent-form-at-design-time"></a>So erstellen Sie ein übergeordnetes MDI-Formular zur Entwurfszeit  
   
-1.  Erstellen Sie ein Windows-Anwendungsprojekt.  
+1. Erstellen Sie ein Windows-Anwendungsprojekt.  
   
-2.  In der **Eigenschaften** legen die <xref:System.Windows.Forms.Form.IsMdiContainer%2A> Eigenschaft **"true"**.  
+2. In der **Eigenschaften** legen die <xref:System.Windows.Forms.Form.IsMdiContainer%2A> Eigenschaft **"true"**.  
   
      Dies kennzeichnet das Formular als MDI-Container für untergeordnete Fenster.  
   
     > [!NOTE]
     >  Beim Festlegen der Eigenschaften im Fenster **Eigenschaften** können Sie bei Bedarf auch die `WindowState`-Eigenschaft auf **Maximiert** festlegen, da sich untergeordnete MDI-Fenster am leichtesten bearbeiten lassen, wenn das übergeordnete Formular maximiert ist. Achten Sie außerdem darauf, dass durch den Rand des übergeordneten MDI-Formulars die Systemfarbe (die in der Windows-Systemsteuerung festgelegt wird) und nicht die Hintergrundfarbe, die Sie mithilfe der <xref:System.Windows.Forms.Control.BackColor%2A?displayProperty=nameWithType> -Eigenschaft festlegen, übernommen wird.  
   
-3.  Ziehen Sie aus der **Toolbox** ein **MenuStrip**-Steuerelement in das Formular. Erstellen Sie ein Menüelement auf der obersten Ebene, wobei die **Text**-Eigenschaft auf **&Datei** festgelegt ist und die Untermenüs **&Neu** und **&Schließen** heißen. Erstellen Sie darüber hinaus ein Menüelement auf der obersten Ebene mit dem Namen **&Fenster**.  
+3. Ziehen Sie aus der **Toolbox** ein **MenuStrip**-Steuerelement in das Formular. Erstellen Sie ein Menüelement auf der obersten Ebene, wobei die **Text**-Eigenschaft auf **&Datei** festgelegt ist und die Untermenüs **&Neu** und **&Schließen** heißen. Erstellen Sie darüber hinaus ein Menüelement auf der obersten Ebene mit dem Namen **&Fenster**.  
   
      Durch das erste Menü werden Menüelemente zur Laufzeit erstellt und ausgeblendet, während über das zweite Menü die offenen untergeordneten MDI-Fenster nachverfolgt werden. Jetzt haben Sie ein übergeordnetes MDI-Fenster erstellt.  
   
-4.  Drücken Sie **F5**, um die Anwendung auszuführen. Informationen zum Erstellen von untergeordneten MDI-Fenstern, innerhalb von übergeordneten MDI-Formulars verwendet werden, finden Sie unter [Vorgehensweise: Erstellen von untergeordneten MDI-Formularen](how-to-create-mdi-child-forms.md).  
+4. Drücken Sie **F5**, um die Anwendung auszuführen. Informationen zum Erstellen von untergeordneten MDI-Fenstern, innerhalb von übergeordneten MDI-Formulars verwendet werden, finden Sie unter [Vorgehensweise: Erstellen von untergeordneten MDI-Formularen](how-to-create-mdi-child-forms.md).  
   
 ## <a name="see-also"></a>Siehe auch
 

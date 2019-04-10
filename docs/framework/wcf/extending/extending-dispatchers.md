@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: df726d71880d135adb883f834acfa9839641eae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162723"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335029"
 ---
 # <a name="extending-dispatchers"></a>Erweitern von Verteilern
 Verteiler sind dafür verantwortlich, eingehende Nachrichten aus den zugrunde liegenden Kanälen abzufangen, sie in Methodenaufrufe im Anwendungscode zu übersetzen und die Ergebnisse zurück an den Aufrufer zu senden. Verteilererweiterungen versetzen Sie in die Lage, diese Verarbeitung zu ändern.  Sie können Nachrichten- oder Parameterinspektoren implementieren, die den Inhalt von Nachrichten oder Parametern überprüfen bzw. ändern.  Sie können die Weiterleitung von Nachrichten an Vorgänge ändern oder andere Funktionalität bereitstellen.  
@@ -76,13 +76,13 @@ Verteiler sind dafür verantwortlich, eingehende Nachrichten aus den zugrunde li
   
  Es gibt vier Hauptbereiche der Verteilererweiterbarkeit, die von der <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Klasse verfügbar gemacht werden:  
   
-1.  Kanalkomponenten verwenden Eigenschaften der <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Klasse sowie jene des zugeordneten Kanalverteilers, der von der <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A>-Eigenschaft zurückgegeben wird, um festzulegen, wie der Kanalverteiler Kanäle akzeptiert und schließt. Dazu gehören die Eigenschaften <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> und <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A>.  
+1. Kanalkomponenten verwenden Eigenschaften der <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Klasse sowie jene des zugeordneten Kanalverteilers, der von der <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A>-Eigenschaft zurückgegeben wird, um festzulegen, wie der Kanalverteiler Kanäle akzeptiert und schließt. Dazu gehören die Eigenschaften <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> und <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A>.  
   
-2.  Nachrichtenkomponenten werden für jede verarbeitete Nachricht angepasst. Dazu gehören die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A> und <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A>.  
+2. Nachrichtenkomponenten werden für jede verarbeitete Nachricht angepasst. Dazu gehören die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>, <xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A> und <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A>.  
   
-3.  Instanzkomponenten passen die Erstellung, Lebensdauer und Freigabe von Instanzen des Diensttyps an. Weitere Informationen zur Lebensdauer von Dienstobjekten finden Sie in den Ausführungen zur <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>-Eigenschaft. Dazu gehören die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> und <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>.  
+3. Instanzkomponenten passen die Erstellung, Lebensdauer und Freigabe von Instanzen des Diensttyps an. Weitere Informationen zur Lebensdauer von Dienstobjekten finden Sie in den Ausführungen zur <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>-Eigenschaft. Dazu gehören die Eigenschaften <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> und <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A>.  
   
-4.  Sicherheitsrelevante Komponenten können die folgenden Eigenschaften verwenden:  
+4. Sicherheitsrelevante Komponenten können die folgenden Eigenschaften verwenden:  
   
     -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> Gibt an, wohin Überwachungsereignisse geschrieben werden.  
   

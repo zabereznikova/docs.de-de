@@ -12,21 +12,21 @@ helpviewer_keywords:
 - examples [Windows Forms], event handling
 - Button control [Windows Forms], event handlers
 ms.assetid: 2e7c9e1a-61fe-444d-8113-3c5bacf1c8cb
-ms.openlocfilehash: 3c1dca420b9e63fe8a2cb93b2e7918d9dc35e84d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 09f090c6267093e3ad59266d8c77ea13b13b63d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158547"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343263"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a>Vorgehensweise: Erstellen von Ereignishandlern für Windows Forms zur Laufzeit
 Zusätzlich zum Erstellen von Ereignissen mit dem Windows Forms-Designer können Sie auch einen Ereignishandler zur Laufzeit erstellen. Durch diese Aktion können Sie Ereignishandler basierend auf Bedingungen in Code zur Laufzeit miteinander verknüpfen, statt sie beim ersten Start des Programms miteinander zu verknüpfen.  
   
 ### <a name="to-create-an-event-handler-at-run-time"></a>So erstellen Sie einen Ereignishandler zur Laufzeit  
   
-1.  Öffnen Sie das Formular im Code-Editor, das Sie zu einem Ereignishandler hinzufügen möchten.  
+1. Öffnen Sie das Formular im Code-Editor, das Sie zu einem Ereignishandler hinzufügen möchten.  
   
-2.  Fügen Sie eine Methode zu Ihrem Formular hinzu. Verwenden Sie hierfür die Methodensignatur für das Ereignis, das Sie bearbeiten möchten.  
+2. Fügen Sie eine Methode zu Ihrem Formular hinzu. Verwenden Sie hierfür die Methodensignatur für das Ereignis, das Sie bearbeiten möchten.  
   
      Angenommen, Sie bearbeiten die <xref:System.Windows.Forms.Control.Click> Ereignis eine <xref:System.Windows.Forms.Button> -Steuerelement, erstellen Sie eine Methode z. B. Folgendes:  
   
@@ -52,11 +52,11 @@ Zusätzlich zum Erstellen von Ereignissen mit dem Windows Forms-Designer können
        }  
     ```  
   
-3.  Fügen Sie für Ihre Anwendung geeigneten Code zum Ereignishandler hinzu.  
+3. Fügen Sie für Ihre Anwendung geeigneten Code zum Ereignishandler hinzu.  
   
-4.  Bestimmen Sie, für welches Formular oder Steuerelement Sie einen Ereignishandler erstellen möchten.  
+4. Bestimmen Sie, für welches Formular oder Steuerelement Sie einen Ereignishandler erstellen möchten.  
   
-5.  Fügen Sie in einer Methode innerhalb der Formularklasse einen Code hinzu, der den zu bearbeitenden Ereignishandler angibt. Der folgende Code gibt beispielsweise den Ereignishandler `button1_Click` Handles der <xref:System.Windows.Forms.Control.Click> Ereignis eine <xref:System.Windows.Forms.Button> Steuerelement:  
+5. Fügen Sie in einer Methode innerhalb der Formularklasse einen Code hinzu, der den zu bearbeitenden Ereignishandler angibt. Der folgende Code gibt beispielsweise den Ereignishandler `button1_Click` Handles der <xref:System.Windows.Forms.Control.Click> Ereignis eine <xref:System.Windows.Forms.Button> Steuerelement:  
   
     ```vb  
     AddHandler Button1.Click, AddressOf Button1_Click  

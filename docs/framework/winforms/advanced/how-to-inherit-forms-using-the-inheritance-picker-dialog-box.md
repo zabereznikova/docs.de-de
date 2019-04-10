@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 74dfd1bb2c47a8e377a2ed74934f742dff6cd64a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212283"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342088"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Vorgehensweise: Erben von Formularen mithilfe des Dialogfelds „Vererbungsauswahl“
 Das Dialogfeld **Vererbungsauswahl** bietet die einfachste Möglichkeit, ein Formular oder ein anderes Objekt zu erben. Mithilfe dieser Option können Sie die Vorteile von Codezeichenfolgen oder Benutzeroberflächen (UI) nutzen, die Sie bereits in anderen Projektmappen erstellt haben.  
@@ -23,23 +23,23 @@ Das Dialogfeld **Vererbungsauswahl** bietet die einfachste Möglichkeit, ein For
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>So erstellen Sie ein von einem vorhandenen Formular geerbtes Windows Form mithilfe der Vererbungsauswahl  
   
-1.  Wählen Sie aus dem Menü **Projekt** die Option **Windows Form hinzufügen** aus.  
+1. Wählen Sie aus dem Menü **Projekt** die Option **Windows Form hinzufügen** aus.  
   
      Das Dialogfeld **Neues Element hinzufügen** wird angezeigt.  
   
-2.  Suchen der **geerbtes Formular** Vorlage entweder auf die Searchbox oder durch Klicken auf die **Windows Forms** Kategorie auszuwählen, und nennen Sie sie in der **Namen** Feld. Klicken Sie auf die Schaltfläche **Hinzufügen**, um fortzufahren.  
+2. Suchen der **geerbtes Formular** Vorlage entweder auf die Searchbox oder durch Klicken auf die **Windows Forms** Kategorie auszuwählen, und nennen Sie sie in der **Namen** Feld. Klicken Sie auf die Schaltfläche **Hinzufügen**, um fortzufahren.  
   
      Das Dialogfeld **Vererbungsauswahl** wird geöffnet. Wenn das aktuelle Projekt bereits Formulare enthält, werden diese im Dialogfeld **Vererbungsauswahl** angezeigt.  
   
-3.  Um von einem Formular in einer anderen Assembly zu erben, klicken Sie auf die Schaltfläche **Durchsuchen**.  
+3. Um von einem Formular in einer anderen Assembly zu erben, klicken Sie auf die Schaltfläche **Durchsuchen**.  
   
-4.  Navigieren Sie im Dialogfeld **Eine Datei auswählen, die eine Komponente für die Vererbung enthält** zu dem Projekt, das das gewünschte Formular oder Modul enthält.  
+4. Navigieren Sie im Dialogfeld **Eine Datei auswählen, die eine Komponente für die Vererbung enthält** zu dem Projekt, das das gewünschte Formular oder Modul enthält.  
   
-5.  Klicken Sie auf den Namen der EXE- oder DLL-Datei, um sie auszuwählen, und klicken Sie dann auf die Schaltfläche **Öffnen**.  
+5. Klicken Sie auf den Namen der EXE- oder DLL-Datei, um sie auszuwählen, und klicken Sie dann auf die Schaltfläche **Öffnen**.  
   
      Daraufhin kehren Sie zum Dialogfeld **Vererbungsauswahl** zurück, in dem jetzt die Komponente zusammen mit dem Projekt, in dem sie gespeichert ist, aufgelistet wird.  
   
-6.  Wählen Sie die Komponente aus.  
+6. Wählen Sie die Komponente aus.  
   
      Die Komponente wird im **Projektmappen-Explorer** zu Ihrem Projekt hinzugefügt. Wenn sie eine Benutzeroberfläche verfügt, Steuerelemente, die Bestandteil des geerbten Formulars sind durch ein Symbol markiert (![Screenshot von der Visual Basic-Vererbung-Symbol.](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif)), und bei Auswahl dieser Option müssen Sie einen Rahmen, der angibt, der Sicherheitsebene das Steuerelement besitzt, auf die Form der Komponente. In der folgenden Tabelle sind die Verhaltensweisen aufgeführt, die den verschiedenen Sicherheitsebenen entsprechen.  
   

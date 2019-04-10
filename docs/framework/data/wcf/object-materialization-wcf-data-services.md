@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: c63dd07686463c652c27dea8473b4d8cbe2dab71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bf75e126c2a44b6b9d151269046d2cb8110815cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59137669"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335393"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Objektmaterialisierung (WCF Data Services)
 Bei Verwendung der **Hinzufügen eines Dienstverweises** Dialogfeld nutzen eine [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed in einer .NET Framework-basierte Clientanwendung, werden entsprechende Datenklassen für jeden Entitätstyp im Datenmodell verfügbar gemacht werden, durch den Feed generiert. Weitere Informationen finden Sie unter [Generieren der Datendienst-Clientbibliothek](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md). Entitätsdaten, die von einer Abfrage zurückgegeben werden, werden in eine Instanz einer dieser generierten Client-Datendienstklassen materialisiert. Weitere Informationen zu Mergeoptionen und identitätsauflösung für nachverfolgte Objekte finden Sie unter [Verwalten des Datendienstkontextes](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md).  
@@ -19,7 +19,7 @@ Bei Verwendung der **Hinzufügen eines Dienstverweises** Dialogfeld nutzen eine 
   
  Nachdem die Bibliothek die abfrageantwortnachricht empfangen hat, materialisiert Sie die zurückgegebenen Daten aus der [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in Instanzen von Client-Datendienstklassen, die vom Typ der Abfrage sind. Zur Materialisierung dieser Objekte werden die folgenden allgemeinen Schritte ausgeführt:  
   
-1.  Die Clientbibliothek liest den serialisierten Typ aus dem `entry`-Element im Antwortnachrichtenfeed und versucht, mit einer der folgenden Methoden eine neue Instanz des richtigen Typs zu erstellen:  
+1. Die Clientbibliothek liest den serialisierten Typ aus dem `entry`-Element im Antwortnachrichtenfeed und versucht, mit einer der folgenden Methoden eine neue Instanz des richtigen Typs zu erstellen:  
   
     -   Wenn der im Feed deklarierte Typ den gleichen Namen wie den Typ der <xref:System.Data.Services.Client.DataServiceQuery%601>-Abfrage hat, wird mit dem leeren Konstruktor eine neue Instanz dieses Typs erstellt.  
   
@@ -29,9 +29,9 @@ Bei Verwendung der **Hinzufügen eines Dienstverweises** Dialogfeld nutzen eine 
   
     -   Wenn die <xref:System.Data.Services.Client.DataServiceContext.ResolveType%2A>-Eigenschaft festgelegt wird, wird der angegebene Delegat aufgerufen, um die namensbasierte Standardtypzuordnung zu überschreiben, und stattdessen wird eine neue Instanz des Typs erstellt, die von <xref:System.Func%602> zurückgegeben wurde. Wenn dieser Delegat einen NULL-Wert zurückgibt, wird stattdessen eine neue Instanz des abgefragten Typs erstellt. Es ist möglicherweise erforderlich, die namensbasierte Standardtypnamenzuordnung zu überschreiben, um Vererbungsszenarien zu unterstützen.  
   
-2.  Die Clientbibliothek liest den URI-Wert aus dem `id`-Element des `entry`Elements, das der Identitätswert der Entität darstellt. Sofern nicht der <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A>-Wert <xref:System.Data.Services.Client.MergeOption.NoTracking> verwendet wird, wird der Identitätswert verwendet, um das Objekt im <xref:System.Data.Services.Client.DataServiceContext>-Kontext zu verfolgen. Der Identitätswert wird auch verwendet, um zu garantieren, dass selbst dann nur eine einzelne Entitätsinstanz erstellt wird, wenn eine Entität mehrmals in der Abfrageantwort zurückgegeben wird.  
+2. Die Clientbibliothek liest den URI-Wert aus dem `id`-Element des `entry`Elements, das der Identitätswert der Entität darstellt. Sofern nicht der <xref:System.Data.Services.Client.DataServiceContext.MergeOption%2A>-Wert <xref:System.Data.Services.Client.MergeOption.NoTracking> verwendet wird, wird der Identitätswert verwendet, um das Objekt im <xref:System.Data.Services.Client.DataServiceContext>-Kontext zu verfolgen. Der Identitätswert wird auch verwendet, um zu garantieren, dass selbst dann nur eine einzelne Entitätsinstanz erstellt wird, wenn eine Entität mehrmals in der Abfrageantwort zurückgegeben wird.  
   
-3.  Die Clientbibliothek liest Eigenschaften vom Feedeintrag und legt die entsprechenden Eigenschaften auf dem neu erstellten Objekt fest. Wenn ein Objekt über den gleichen Identitätswert verfügt wie ein bereits im <xref:System.Data.Services.Client.DataServiceContext>-Kontext vorhandenes Objekt, dann werden die Eigenschaften  auf der Grundlage der <xref:System.Data.Services.Client.MergeOption>-Einstellung des <xref:System.Data.Services.Client.DataServiceContext>-Kontexts festgelegt. Die Antwort kann Eigenschaftswerte enthalten, für die keine entsprechende Eigenschaft im Clienttyp vorhanden ist. Wenn dieser Fall eintritt, hängt die Aktion vom Wert der <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A>-Eigenschaft des <xref:System.Data.Services.Client.DataServiceContext>-Kontexts ab. Wenn diese Eigenschaft auf `true` festgelegt wurde, wird die fehlende Eigenschaft ignoriert. Andernfalls wird ein Fehler ausgelöst. Eigenschaften werden wie folgt festgelegt:  
+3. Die Clientbibliothek liest Eigenschaften vom Feedeintrag und legt die entsprechenden Eigenschaften auf dem neu erstellten Objekt fest. Wenn ein Objekt über den gleichen Identitätswert verfügt wie ein bereits im <xref:System.Data.Services.Client.DataServiceContext>-Kontext vorhandenes Objekt, dann werden die Eigenschaften  auf der Grundlage der <xref:System.Data.Services.Client.MergeOption>-Einstellung des <xref:System.Data.Services.Client.DataServiceContext>-Kontexts festgelegt. Die Antwort kann Eigenschaftswerte enthalten, für die keine entsprechende Eigenschaft im Clienttyp vorhanden ist. Wenn dieser Fall eintritt, hängt die Aktion vom Wert der <xref:System.Data.Services.Client.DataServiceContext.IgnoreMissingProperties%2A>-Eigenschaft des <xref:System.Data.Services.Client.DataServiceContext>-Kontexts ab. Wenn diese Eigenschaft auf `true` festgelegt wurde, wird die fehlende Eigenschaft ignoriert. Andernfalls wird ein Fehler ausgelöst. Eigenschaften werden wie folgt festgelegt:  
   
     -   Skalare Eigenschaften werden auf den entsprechenden Wert im Eintrag in der Antwortnachricht festgelegt.  
   
@@ -42,9 +42,9 @@ Bei Verwendung der **Hinzufügen eines Dienstverweises** Dialogfeld nutzen eine 
         > [!NOTE]
         >  Wenn die generierten Clientdatenklassen die Datenbindung unterstützen, geben Navigationseigenschaften stattdessen Instanzen der <xref:System.Data.Services.Client.DataServiceCollection%601>-Klasse zurück. Weitere Informationen finden Sie unter [Binden von Daten an Steuerelemente](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  
   
-4.  Das <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity>-Ereignis wird ausgelöst.  
+4. Das <xref:System.Data.Services.Client.DataServiceContext.ReadingEntity>-Ereignis wird ausgelöst.  
   
-5.  Die Clientbibliothek fügt das Objekt an den <xref:System.Data.Services.Client.DataServiceContext>-Kontext an. Das Objekt wird nicht angefügt, wenn <xref:System.Data.Services.Client.MergeOption> auf <xref:System.Data.Services.Client.MergeOption.NoTracking> festgelegt wurde.  
+5. Die Clientbibliothek fügt das Objekt an den <xref:System.Data.Services.Client.DataServiceContext>-Kontext an. Das Objekt wird nicht angefügt, wenn <xref:System.Data.Services.Client.MergeOption> auf <xref:System.Data.Services.Client.MergeOption.NoTracking> festgelegt wurde.  
   
 ## <a name="see-also"></a>Siehe auch
 

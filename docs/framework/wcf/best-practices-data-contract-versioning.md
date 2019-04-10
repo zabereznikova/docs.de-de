@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 9f92e731132eb564b893e3d34ccd322fbcd66ea7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119001"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334925"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Bewährte Methoden: Datenvertragsversionsverwaltung
 In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenverträgen aufgeführt, die sich im Laufe der Zeit auf einfache Weise entwickeln können. Weitere Informationen zu Datenverträgen finden Sie unter den Themen in [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -50,21 +50,21 @@ In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenvert
   
  Einige Richtlinien müssen exakt befolgt werden, um neue Versionen eines Typs zu senden zu können, wenn ein älterer Typ erwartet wird, bzw. um einen älteren Typ senden zu können, wenn ein neuer Typ erwartet wird. Andere Richtlinien sind nicht unbedingt erforderlich, hier jedoch aufgeführt, da sich die zukünftige Versionsverwaltung von Schemas darauf auswirken kann.  
   
-1.  Versuchen Sie nicht, Datenverträge mit einer Versionsangabe zu versehen, indem Sie die Typvererbung verwenden. Um höhere Versionen zu erstellen, ändern Sie entweder den Datenvertrag für einen vorhandenen Typ oder erstellen einen neuen nicht verwandten Typ.  
+1. Versuchen Sie nicht, Datenverträge mit einer Versionsangabe zu versehen, indem Sie die Typvererbung verwenden. Um höhere Versionen zu erstellen, ändern Sie entweder den Datenvertrag für einen vorhandenen Typ oder erstellen einen neuen nicht verwandten Typ.  
   
-2.  Die Verwendung der Vererbung im Zusammenhang mit Datenverträgen ist zulässig, vorausgesetzt, die Vererbung wird nicht als Mechanismus für die Versionsverwaltung verwendet und bestimmte Regeln werden befolgt. Wenn ein Typ von einem bestimmten Basistyp abgeleitet ist, sollten Sie diese Ableitung in einer zukünftigen Version nicht in einen anderen Basistyp ändern (es sei denn, dieser verfügt über denselben Datenvertrag). Dabei gilt eine Ausnahme: Sie können einen Typ in die Hierarchie zwischen einem Datenvertragstyp und seinem Basistyp einfügen, jedoch nur dann, wenn dieser keine Datenmember mit demselben Namen wie andere Member in beliebigen Versionen der anderen Typen der Hierarchie enthält. Im Allgemeinen kann die Verwendung von Datenmembern mit demselben Namen auf verschiedenen Ebenen einer Vererbungshierarchie zu ernsthaften Problemen bei der Versionsverwaltung führen. Dies sollte daher vermieden werden.  
+2. Die Verwendung der Vererbung im Zusammenhang mit Datenverträgen ist zulässig, vorausgesetzt, die Vererbung wird nicht als Mechanismus für die Versionsverwaltung verwendet und bestimmte Regeln werden befolgt. Wenn ein Typ von einem bestimmten Basistyp abgeleitet ist, sollten Sie diese Ableitung in einer zukünftigen Version nicht in einen anderen Basistyp ändern (es sei denn, dieser verfügt über denselben Datenvertrag). Dabei gilt eine Ausnahme: Sie können einen Typ in die Hierarchie zwischen einem Datenvertragstyp und seinem Basistyp einfügen, jedoch nur dann, wenn dieser keine Datenmember mit demselben Namen wie andere Member in beliebigen Versionen der anderen Typen der Hierarchie enthält. Im Allgemeinen kann die Verwendung von Datenmembern mit demselben Namen auf verschiedenen Ebenen einer Vererbungshierarchie zu ernsthaften Problemen bei der Versionsverwaltung führen. Dies sollte daher vermieden werden.  
   
-3.  Implementieren Sie immer das <xref:System.Runtime.Serialization.IExtensibleDataObject>, indem Sie mit der ersten Version eines Datenvertrags beginnen, um Roundtrips zu aktivieren. Weitere Informationen finden Sie unter [Aufwärtskompatible Datenverträge](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Wenn Sie eine oder mehrere Versionen eines Typs veröffentlicht haben, ohne diese Schnittstelle zu implementieren, sollten Sie sie in der nächsten Version des Typs implementieren.  
+3. Implementieren Sie immer das <xref:System.Runtime.Serialization.IExtensibleDataObject>, indem Sie mit der ersten Version eines Datenvertrags beginnen, um Roundtrips zu aktivieren. Weitere Informationen finden Sie unter [Aufwärtskompatible Datenverträge](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md). Wenn Sie eine oder mehrere Versionen eines Typs veröffentlicht haben, ohne diese Schnittstelle zu implementieren, sollten Sie sie in der nächsten Version des Typs implementieren.  
   
-4.  Ändern Sie den Datenvertragsnamen oder den Namespace in höheren Versionen nicht. Wenn Sie den Namen oder Namespace des Typs ändern, der dem Datenvertrag zugrunde liegt, müssen Sie darauf achten, den Datenvertragsnamen und Namespace beizubehalten, indem Sie die entsprechenden Mechanismen verwenden, zum Beispiel die <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>-Eigenschaft des <xref:System.Runtime.Serialization.DataContractAttribute>. Weitere Informationen zur Benennung finden Sie unter [Data Contract Names](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+4. Ändern Sie den Datenvertragsnamen oder den Namespace in höheren Versionen nicht. Wenn Sie den Namen oder Namespace des Typs ändern, der dem Datenvertrag zugrunde liegt, müssen Sie darauf achten, den Datenvertragsnamen und Namespace beizubehalten, indem Sie die entsprechenden Mechanismen verwenden, zum Beispiel die <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A>-Eigenschaft des <xref:System.Runtime.Serialization.DataContractAttribute>. Weitere Informationen zur Benennung finden Sie unter [Data Contract Names](../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
-5.  Nehmen Sie in höheren Versionen keine Änderungen an den Namen von Datenmembern vor. Wenn Sie den Namen des Felds, der Eigenschaft oder des Ereignisses ändern, das bzw. die dem Datenmember zugrunde liegt, können Sie die `Name`-Eigenschaft des <xref:System.Runtime.Serialization.DataMemberAttribute> verwenden, um den vorhandenen Datenmembernamen beizubehalten.  
+5. Nehmen Sie in höheren Versionen keine Änderungen an den Namen von Datenmembern vor. Wenn Sie den Namen des Felds, der Eigenschaft oder des Ereignisses ändern, das bzw. die dem Datenmember zugrunde liegt, können Sie die `Name`-Eigenschaft des <xref:System.Runtime.Serialization.DataMemberAttribute> verwenden, um den vorhandenen Datenmembernamen beizubehalten.  
   
-6.  Nehmen Sie in höheren Versionen keine Änderungen am Typ eines Felds, einer Eigenschaft oder eines einem Datenmember zugrunde liegenden Ereignisses vor, die sich dahingehend auswirken, dass sich der resultierende Datenvertrag für diesen Datenmember ändert. Denken Sie daran, dass Schnittstellentypen mit <xref:System.Object> äquivalent sind, um den erwarteten Datenvertrag ermitteln zu können.  
+6. Nehmen Sie in höheren Versionen keine Änderungen am Typ eines Felds, einer Eigenschaft oder eines einem Datenmember zugrunde liegenden Ereignisses vor, die sich dahingehend auswirken, dass sich der resultierende Datenvertrag für diesen Datenmember ändert. Denken Sie daran, dass Schnittstellentypen mit <xref:System.Object> äquivalent sind, um den erwarteten Datenvertrag ermitteln zu können.  
   
-7.  Nehmen Sie in höheren Versionen keine Änderung der Reihenfolge der vorhandenen Datenmember vor, indem Sie die <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>-Eigenschaft des <xref:System.Runtime.Serialization.DataMemberAttribute>-Attributs anpassen.  
+7. Nehmen Sie in höheren Versionen keine Änderung der Reihenfolge der vorhandenen Datenmember vor, indem Sie die <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A>-Eigenschaft des <xref:System.Runtime.Serialization.DataMemberAttribute>-Attributs anpassen.  
   
-8.  In höheren Versionen können neue Datenmember hinzugefügt werden. Sie sollten dabei immer die folgenden Regeln einhalten:  
+8. In höheren Versionen können neue Datenmember hinzugefügt werden. Sie sollten dabei immer die folgenden Regeln einhalten:  
   
     1.  Die <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A>-Eigenschaft muss immer auf ihrem Standardwert `false` belassen werden.  
   

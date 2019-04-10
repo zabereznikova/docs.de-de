@@ -2,12 +2,12 @@
 title: Überwachungsteilnehmer
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 334815c3c928790569846d02d87e9d1dbba889ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138826"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340177"
 ---
 # <a name="tracking-participants"></a>Überwachungsteilnehmer
 Nachverfolgungsteilnehmer sind Erweiterungspunkte, über die ein Workflowentwickler auf <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A>-Objekte zugreifen und sie verarbeiten kann. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] enthält einen standardmäßigen Überwachungsteilnehmer, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt. Wenn dies nicht Ihren Anforderungen entspricht, können Sie auch einen benutzerdefinierten Überwachungsteilnehmer schreiben.  
@@ -81,13 +81,13 @@ Nachverfolgungsteilnehmer sind Erweiterungspunkte, über die ein Workflowentwick
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>So aktivieren Sie das Anzeigen der Überwachungsdatensätze in der Ereignisanzeige  
   
-1.  Starten der Ereignisanzeige (EVENTVWR.EXE)  
+1. Starten der Ereignisanzeige (EVENTVWR.EXE)  
   
-2.  Wählen Sie **Ereignisanzeige, Anwendungs- und Dienstprotokolle, Microsoft, Windows, Anwendungsserver-Anwendungen**.  
+2. Wählen Sie **Ereignisanzeige, Anwendungs- und Dienstprotokolle, Microsoft, Windows, Anwendungsserver-Anwendungen**.  
   
-3.  Mit der rechten Maustaste, und stellen sicher, dass **Ansicht, analytische und Debugprotokolle** ausgewählt ist. Wenn dies nicht der Fall ist, aktivieren Sie die Option, sodass das Häkchen daneben angezeigt wird. Dies zeigt die **analytisch**, **Perf**, und **Debuggen** Protokolle.  
+3. Mit der rechten Maustaste, und stellen sicher, dass **Ansicht, analytische und Debugprotokolle** ausgewählt ist. Wenn dies nicht der Fall ist, aktivieren Sie die Option, sodass das Häkchen daneben angezeigt wird. Dies zeigt die **analytisch**, **Perf**, und **Debuggen** Protokolle.  
   
-4.  Mit der rechten Maustaste die **analytisch** melden Sie sich, und wählen Sie dann **Protokoll aktivieren**. Das Protokoll befindet sich in der Datei unter "%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl".  
+4. Mit der rechten Maustaste die **analytisch** melden Sie sich, und wählen Sie dann **Protokoll aktivieren**. Das Protokoll befindet sich in der Datei unter "%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl".  
   
 ## <a name="custom-tracking-participant"></a>Benutzerdefinierte Nachverfolgungskomponente  
  Die Überwachungsteilnehmer-API ermöglicht eine Erweiterung der Überwachungslaufzeit mit einem vom Benutzer bereitgestellten Überwachungsteilnehmer. Dieser kann benutzerdefinierte Logik enthalten, mit der von der Workflowlaufzeit ausgegebene Überwachungsdatensätze behandelt werden. Zum Schreiben eines benutzerdefinierten Überwachungsteilnehmers muss der Entwickler die `Track`-Methode für die <xref:System.Activities.Tracking.TrackingParticipant>-Klasse implementieren. Diese Methode wird aufgerufen, wenn ein Überwachungsdatensatz von der Workflowlaufzeit ausgegeben wird.  

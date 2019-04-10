@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: 0350d6e690d54d6176ede3b858f75829326b7556
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090601"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342231"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>Vorgehensweise: Binden von Daten an das MaskedTextBox-Steuerelement
 Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie jedes andere Windows Forms-Steuerelement zu steuern. Wenn das Format der Daten in der Datenbank nicht das erwartete durch Ihre Maskendefinition Format übereinstimmt, müssen Sie jedoch die Daten neu zu formatieren. Das folgende Verfahren veranschaulicht, wie dieses Vorgangs unter Verwendung der <xref:System.Windows.Forms.Binding.Format> und <xref:System.Windows.Forms.Binding.Parse> Ereignisse der <xref:System.Windows.Forms.Binding> Klasse, um separate Telefonnummer anzeigen und phone Erweiterungsfelder für die Datenbank als einzelnes Feld bearbeitet werden.  
@@ -24,15 +24,15 @@ Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie j
   
 ### <a name="to-bind-data-to-a-maskedtextbox-control"></a>So binden Sie Daten an eine MaskedTextBox-Steuerelement  
   
-1.  Erstellen Sie ein neues Windows Forms-Projekt.  
+1. Erstellen Sie ein neues Windows Forms-Projekt.  
   
-2.  Ziehen Sie zwei <xref:System.Windows.Forms.TextBox> Steuerelemente auf das Formular aus, nennen Sie diese `FirstName` und `LastName`.  
+2. Ziehen Sie zwei <xref:System.Windows.Forms.TextBox> Steuerelemente auf das Formular aus, nennen Sie diese `FirstName` und `LastName`.  
   
-3.  Ziehen Sie eine <xref:System.Windows.Forms.MaskedTextBox> steuern, auf das Formular, nennen Sie sie `PhoneMask`.  
+3. Ziehen Sie eine <xref:System.Windows.Forms.MaskedTextBox> steuern, auf das Formular, nennen Sie sie `PhoneMask`.  
   
-4.  Legen Sie die <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Eigenschaft `PhoneMask` zu `(000) 000-0000 x9999`.  
+4. Legen Sie die <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> Eigenschaft `PhoneMask` zu `(000) 000-0000 x9999`.  
   
-5.  Fügen Sie, dass die folgenden Namespaceimporte auf das Formular.  
+5. Fügen Sie, dass die folgenden Namespaceimporte auf das Formular.  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie j
     Imports System.Data.SqlClient  
     ```  
   
-6.  Mit der rechten Maustaste in des Formulars, und wählen Sie **Ansichtscode**. Platzieren Sie diesen Code an einer beliebigen Stelle in der Form-Klasse.  
+6. Mit der rechten Maustaste in des Formulars, und wählen Sie **Ansichtscode**. Platzieren Sie diesen Code an einer beliebigen Stelle in der Form-Klasse.  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -136,7 +136,7 @@ Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie j
     End Sub  
     ```  
   
-7.  Fügen Sie Ereignishandler für die <xref:System.Windows.Forms.Binding.Format> und <xref:System.Windows.Forms.Binding.Parse> Ereignisse zu kombinieren und trennen Sie die `PhoneNumber` und `Extension` Felder aus der Grenze <xref:System.Data.DataSet>.  
+7. Fügen Sie Ereignishandler für die <xref:System.Windows.Forms.Binding.Format> und <xref:System.Windows.Forms.Binding.Parse> Ereignisse zu kombinieren und trennen Sie die `PhoneNumber` und `Extension` Felder aus der Grenze <xref:System.Data.DataSet>.  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -204,7 +204,7 @@ Binden von Daten an eine <xref:System.Windows.Forms.MaskedTextBox> genauso wie j
     End Sub  
     ```  
   
-8.  Hinzufügen von zwei <xref:System.Windows.Forms.Button> Steuerelemente im Formular. Nennen Sie diese `previousButton` und `nextButton`. Doppelklicken Sie auf jede Schaltfläche zum Hinzufügen einer <xref:System.Windows.Forms.Control.Click> -Ereignishandler, und geben Sie die Ereignishandler, wie im folgenden Codebeispiel gezeigt.  
+8. Hinzufügen von zwei <xref:System.Windows.Forms.Button> Steuerelemente im Formular. Nennen Sie diese `previousButton` und `nextButton`. Doppelklicken Sie auf jede Schaltfläche zum Hinzufügen einer <xref:System.Windows.Forms.Control.Click> -Ereignishandler, und geben Sie die Ereignishandler, wie im folgenden Codebeispiel gezeigt.  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  

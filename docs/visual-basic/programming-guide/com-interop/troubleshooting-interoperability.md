@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 197361020ad8c6a88a5fc8617b8e24f420799e14
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377260"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341191"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Problembehandlung bei Interoperabilität (Visual Basic)
 Wenn Sie die Interoperabilität zwischen COM und verwalteten Code die [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], können Sie eine oder mehrere der folgenden Probleme auftreten.  
@@ -42,9 +42,9 @@ Wenn Sie die Interoperabilität zwischen COM und verwalteten Code die [!INCLUDE[
   
  Die Umbenennung kann dazu führen, dass zwei Probleme für die Nutzer des COM-Objekts.  
   
-1.  Clients können nicht die Namen für die generierte Methode erwarten.  
+1. Clients können nicht die Namen für die generierte Methode erwarten.  
   
-2.  Die generierte Methodennamen in der Klasse verfügbar gemacht werden, als COM-Objekt können ändern, wenn die Klasse oder Basisklasse neue Überladungen hinzugefügt werden. Dies kann zu Problemen bei der versionsverwaltung führen.  
+2. Die generierte Methodennamen in der Klasse verfügbar gemacht werden, als COM-Objekt können ändern, wenn die Klasse oder Basisklasse neue Überladungen hinzugefügt werden. Dies kann zu Problemen bei der versionsverwaltung führen.  
   
  Um beide Probleme zu beheben, geben Sie jeder Methode einen eindeutigen Namen ein, anstatt das Überladen zulässt, wenn Sie Objekte entwickeln, die als COM-Objekte verfügbar gemacht werden.  
   
@@ -132,6 +132,6 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 - [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Tlbimp.exe (Type Library Importer-Tool)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (Type Library Exporter-Tool)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
-- [Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekten](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [Inherits-Anweisung](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekte](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Globaler Assemblycache](../../../framework/app-domains/gac.md)

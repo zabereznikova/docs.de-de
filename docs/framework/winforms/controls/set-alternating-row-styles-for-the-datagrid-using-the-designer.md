@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: 52105a933efc8bccde8d01aa707ade0a2af6be96
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fb338a3616bc20542ec940db5977c4ffdab9654c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072935"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335627"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>Vorgehensweise: Festlegen von abwechselnden Zeilenstilen für das Windows Forms-Steuerelement DataGridView mithilfe des Designers
 Tabellendaten werden oft in einem Ledger-ähnlichen Format präsentiert, in dem Zeilen abwechselnde Hintergrundfarben haben. Dieses Format erleichtert es dem Benutzer, zu erkennen, welche Zellen sich in jeder Zeile befinden, insbesondere bei breiten Tabellen mit vielen Spalten.  
@@ -27,13 +27,13 @@ Tabellendaten werden oft in einem Ledger-ähnlichen Format präsentiert, in dem 
   
 ### <a name="define-styles-for-alternating-rows"></a>Definieren Sie Stile für abwechselnde Zeilen  
   
-1.  Wählen Sie die <xref:System.Windows.Forms.DataGridView> Steuerelement im Designer.  
+1. Wählen Sie die <xref:System.Windows.Forms.DataGridView> Steuerelement im Designer.  
   
-2.  In der **Eigenschaften** Fenster, klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> Eigenschaft.  
+2. In der **Eigenschaften** Fenster, klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> Eigenschaft.  
   
-3.  In der **CellStyle-Generator** im Dialogfeld den Stil durch Festlegen der Eigenschaften definieren und Verwenden der **Vorschau** Bereich, um Ihre Auswahl zu bestätigen. Die Stile, die Sie angeben, werden für jede weitere Zeile angezeigt, in das Steuerelement, beginnend mit dem zweiten Ausdruck verwendet.  
+3. In der **CellStyle-Generator** im Dialogfeld den Stil durch Festlegen der Eigenschaften definieren und Verwenden der **Vorschau** Bereich, um Ihre Auswahl zu bestätigen. Die Stile, die Sie angeben, werden für jede weitere Zeile angezeigt, in das Steuerelement, beginnend mit dem zweiten Ausdruck verwendet.  
   
-4.  Um Formate für die verbleibenden Zeilen zu definieren, wiederholen Sie Schritte 2 und 3: Verwenden der <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> Eigenschaft.  
+4. Um Formate für die verbleibenden Zeilen zu definieren, wiederholen Sie Schritte 2 und 3: Verwenden der <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> Eigenschaft.  
   
     > [!NOTE]
     >  Zellen werden mit Stilen, die von mehreren Eigenschaften geerbt angezeigt. Weitere Informationen zu stilvererbung, finden Sie unter [Zellstile im DataGridView-Steuerelement in Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md).  

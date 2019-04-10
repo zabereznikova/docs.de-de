@@ -1,16 +1,16 @@
 ---
-title: 'Vorgehensweise: Aktivieren der Erkennung einer Tokenmehrfachverwendung'
+title: 'Vorgehensweise: Aktivieren der Erkennung einer Token-Replay-Erkennung'
 ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
-ms.openlocfilehash: 373177924a0a2e03bd43237510c918694cd5a340
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a357f153d61b6a8e1e105639bd68647dabdc26f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236003"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336524"
 ---
-# <a name="how-to-enable-token-replay-detection"></a>Vorgehensweise: Aktivieren der Erkennung einer Tokenmehrfachverwendung
+# <a name="how-to-enable-token-replay-detection"></a>Vorgehensweise: Aktivieren der Erkennung einer Token-Replay-Erkennung
 ## <a name="applies-to"></a>Gilt für  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -18,7 +18,7 @@ ms.locfileid: "47236003"
 -   ASP.NET® Web Forms  
   
 ## <a name="summary"></a>Zusammenfassung  
- In dieser Vorgehensweise werden ausführliche Prozeduren zum Aktivieren der Erkennung einer Tokenmehrfachverwendung in einer ASP.NET-Anwendung, die WIF verwendet, vorgestellt. Es werden auch Anleitungen bereitgestellt, wie die Anwendung danach überprüft werden kann, ob die Erkennung einer Tokenmehrfachverwendung aktiviert ist. Diese Vorgehensweise enthält keine ausführlichen Anweisungen zum Erstellen eines Sicherheitstokendiensts (STS). Stattdessen wird der Entwicklungs-STS verwendet, der aus dem Identitäts- und Zugriffstool stammt. Der Entwicklungs-STS führt keine echte Authentifizierung durch und ist nur für Testzwecke vorgesehen. Sie müssen das Identitäts- und Zugriffs-Tool installieren, um diese Vorgehensweise nachzuvollziehen. Es kann auf der folgenden Seite heruntergeladen werden: [Identity and Access Tool (Identitäts- und Zugriffstool)](https://go.microsoft.com/fwlink/?LinkID=245849)  
+ In dieser Vorgehensweise werden ausführliche Prozeduren zum Aktivieren der Erkennung einer Tokenmehrfachverwendung in einer ASP.NET-Anwendung, die WIF verwendet, vorgestellt. Es werden auch Anleitungen bereitgestellt, wie die Anwendung danach überprüft werden kann, ob die Erkennung einer Tokenmehrfachverwendung aktiviert ist. Diese Vorgehensweise enthält keine ausführlichen Anweisungen zum Erstellen eines Sicherheitstokendiensts (STS). Stattdessen wird der Entwicklungs-STS verwendet, der aus dem Identitäts- und Zugriffstool stammt. Der Entwicklungs-STS führt keine echte Authentifizierung durch und ist nur für Testzwecke vorgesehen. Sie müssen das Identitäts- und Zugriffs-Tool installieren, um diese Vorgehensweise nachzuvollziehen. Es kann von folgendem Speicherort heruntergeladen werden: [Identitäts- und Zugriffs-Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Inhalt  
   
@@ -54,17 +54,17 @@ ms.locfileid: "47236003"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>So erstellen Sie eine einfache ASP.NET-Anwendung  
   
-1.  Starten Sie Visual Studio, und klicken Sie auf **Datei**, **Neu** und anschließend auf **Projekt**.  
+1. Starten Sie Visual Studio, und klicken Sie auf **Datei**, **Neu** und anschließend auf **Projekt**.  
   
-2.  Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET Web Forms-Anwendung**.  
+2. Klicken Sie im Fenster **Neues Projekt** auf **ASP.NET Web Forms-Anwendung**.  
   
-3.  Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und drücken Sie auf **OK**.  
+3. Geben Sie im Feld **Name** die Zeichenfolge `TestApp` ein, und drücken Sie auf **OK**.  
   
-4.  Klicken Sie mit der rechten Maustaste unter **Projektmappen-Explorer** auf das Projekt **TestApp**, und wählen Sie anschließend **Identität und Zugriff** aus.  
+4. Klicken Sie mit der rechten Maustaste unter **Projektmappen-Explorer** auf das Projekt **TestApp**, und wählen Sie anschließend **Identität und Zugriff** aus.  
   
-5.  Das Fenster **Identität und Zugriff** wird geöffnet. Klicken Sie unter **Anbieter** auf **Test your application with the Local Development STS** (Anwendung mit dem lokalen Entwicklungs-STS testen), und klicken Sie anschließend auf **Übernehmen**.  
+5. Das Fenster **Identität und Zugriff** wird geöffnet. Klicken Sie unter **Anbieter** auf **Test your application with the Local Development STS** (Anwendung mit dem lokalen Entwicklungs-STS testen), und klicken Sie anschließend auf **Übernehmen**.  
   
-6.  Fügen Sie folgendes **\<tokenReplayDetection>**-Element zur Konfigurationsdatei *Web.config* hinzu und direkt danach wie im Folgenden gezeigt die Elemente **\<system.identityModel>** und **\<identityConfiguration>**:  
+6. Fügen Sie folgendes **\<tokenReplayDetection>**-Element zur Konfigurationsdatei *Web.config* hinzu und direkt danach wie im Folgenden gezeigt die Elemente **\<system.identityModel>** und **\<identityConfiguration>**:  
   
     ```xml  
     <system.identityModel>  
@@ -77,8 +77,8 @@ ms.locfileid: "47236003"
   
 #### <a name="to-test-your-wif-enabled-aspnet-application-for-replay-detection"></a>Testen der für WIF aktivierten ASP.NET-Anwendung auf erfolgreiche Replay-Erkennung  
   
-1.  Starten Sie die Projektmappe durch Drücken der Taste **F5**. Die Standard-Homepage von ASP.NET wird angezeigt. Sie werden automatisch mit dem Benutzernamen *Terry* authentifiziert. Dies ist der Standardbenutzer, der vom Entwicklungs-STS zurückgegeben wird.  
+1. Starten Sie die Projektmappe durch Drücken der Taste **F5**. Die Standard-Homepage von ASP.NET wird angezeigt. Sie werden automatisch mit dem Benutzernamen *Terry* authentifiziert. Dies ist der Standardbenutzer, der vom Entwicklungs-STS zurückgegeben wird.  
   
-2.  Klicken Sie im Browser auf die Schaltfläche **Zurück**. Ihnen sollte die Seite **Serverfehler in „/“-Anwendung** mit folgender Beschreibung angezeigt werden: *ID1062: Wiedergabe wurde erkannt für: Token: „System.IdentityModel.Tokens.SamlSecurityToken“*, gefolgt von einer *AssertionID* und einem *Zertifikataussteller*.  
+2. Klicken Sie im Browser auf die Schaltfläche **Zurück**. Ihnen sollte angezeigt werden, mit einem **Serverfehler in Anwendung '/'** Seite mit der folgenden Beschreibung: *ID1062: Wiedergabe wurde erkannt für: Token: "System.IdentityModel.Tokens.SamlSecurityToken"*, gefolgt von einem *AssertionId* und *Aussteller*.  
   
      Diese Fehlerseite wird Ihnen angezeigt, da eine Ausnahme des Typs <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> durch eine Tokenmehrfachverwendung ausgelöst wurde. Dieser Fehler tritt auf, weil Sie versuchen, die ursprüngliche POST-Anforderung, bei der der Token zuerst verwendet wurde, erneut zu senden. Die Schaltfläche **Zurück** löst dieses Verhalten bei nachfolgenden Anforderungen an den Server nicht aus.

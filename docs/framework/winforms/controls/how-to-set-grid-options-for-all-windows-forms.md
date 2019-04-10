@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: 8dec7451aaa84b5ec0f3f5d6210afa82924500fe
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6823b524759bbc8ec252bf2d34a6e428d1bb237b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199816"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336056"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Vorgehensweise: Festlegen von Rasteroptionen für alle Windows Forms
 Wie Sie mit der Arbeit in der Visual Studio-Entwicklungsumgebung werden verwendet, können Sie Einstellungen für die Formulare und Projekte, mit denen, die Sie zusammenarbeiten, im Windows Forms-Designer festlegen.  
@@ -23,9 +23,9 @@ Wie Sie mit der Arbeit in der Visual Studio-Entwicklungsumgebung werden verwende
   
 ### <a name="to-set-global-windows-forms-options"></a>Festlegen von Optionen für globale Windows Forms  
   
-1.  Von der **Tools** , wählen Sie im Menü **Optionen**.  
+1. Von der **Tools** , wählen Sie im Menü **Optionen**.  
   
-2.  Im linken Bereich die **Optionen** Dialogfeld klicken Sie auf **Windows Forms-Designer**.  
+2. Im linken Bereich die **Optionen** Dialogfeld klicken Sie auf **Windows Forms-Designer**.  
   
      Klicken Sie im rechten Bereich unter der **Layouteinstellungen** Überschrift können legen Sie die standardmäßige Einstellungen für alle neuen Formulare, die Sie erstellen. Diese Einstellungen umfassen die Größe des Rasters gibt an, ob Steuerelemente darauf ausgerichtet, und gibt an, ob es standardmäßig aktiviert ist. Darüber hinaus können Sie auswählen zwischen **SnapToGrid** und **Ausrichtungslinien** Layoutmodi. Weitere Informationen zu Ausrichtungslinien, finden Sie unter [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   

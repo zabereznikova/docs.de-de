@@ -8,23 +8,23 @@ helpviewer_keywords:
 - BC30420
 - Sub Main error message
 ms.assetid: a006d57d-4dd3-46a7-9026-ca9a31470da7
-ms.openlocfilehash: 880b3a53e445cc8523ba2cae050ac02114ee715e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e48968472fea2accd85544f2360a6732e2bcbe17
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821048"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338747"
 ---
 # <a name="sub-main-was-not-found-in-name"></a>'Sub Main"wurde nicht gefunden"\<Name >'
-`Sub Main` fehlt, oder es wurde die falsche Position dafür angegeben.  
+`Sub Main` ist fehlt oder die falsche Position dafür angegeben wurde.  
   
  **Fehler-ID:** BC30420  
   
 ## <a name="to-correct-this-error"></a>So beheben Sie diesen Fehler  
   
-1.  Geben Sie die fehlende `Sub Main`-Anweisung, oder verschieben Sie sie, falls vorhanden, an die entsprechende Position im Code. Weitere Informationen zu `Sub Main`, finden Sie unter [Main-Prozedur in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md).  
+1. Geben Sie die fehlende `Sub Main`-Anweisung, oder verschieben Sie sie, falls vorhanden, an die entsprechende Position im Code. Weitere Informationen zu `Sub Main`, finden Sie unter [Main-Prozedur in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md).  
   
-2.  Geben Sie den Speicherort des Startobjekts für das Projekt in der **Startformular** im Feld der **Projekt-Designer**.  
+2. Geben Sie den Speicherort des Startobjekts für das Projekt in der **Startformular** im Feld der **Projekt-Designer**.  
   
 ## <a name="see-also"></a>Siehe auch
 

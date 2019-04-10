@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 4ebcb2e4f85d30ea1ce24584c69def5b0d1297c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143545"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340788"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>Vorgehensweise: Remoteüberwachung des Druckerstatus
 In mittleren und großen Unternehmen kann es jederzeit dazu kommen, dass mehrere Drucker wegen eines Papierstaus oder fehlenden Papiers oder anderer problematischer Situationen ausfallen. Die umfangreichen verfügbar gemacht werden, der [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] von Microsoft .NET Framework ermöglichen eine schnelle Überwachung der Druckerzustände.  
@@ -24,11 +24,11 @@ In mittleren und großen Unternehmen kann es jederzeit dazu kommen, dass mehrere
 ## <a name="example"></a>Beispiel  
  Die wichtigsten Schritte beim Erstellen dieses Dienstprogramms sind die folgenden.  
   
-1.  Rufen Sie eine Liste aller Druckerserver ab.  
+1. Rufen Sie eine Liste aller Druckerserver ab.  
   
-2.  Durchlaufen Sie die Server, um ihre Druckwarteschlangen abzufragen.  
+2. Durchlaufen Sie die Server, um ihre Druckwarteschlangen abzufragen.  
   
-3.  Durchlaufen Sie in jeder Phase der Serverschleife alle Serverwarteschlangen, und lesen Sie jede Eigenschaft, die auf eine nicht ordnungsgemäß funktionierende Warteschlange hinweisen könnte.  
+3. Durchlaufen Sie in jeder Phase der Serverschleife alle Serverwarteschlangen, und lesen Sie jede Eigenschaft, die auf eine nicht ordnungsgemäß funktionierende Warteschlange hinweisen könnte.  
   
  Der folgende Code ist eine Reihe von Ausschnitten. Der Einfachheit halber wird in diesem Beispiel davon ausgegangen, dass eine CRLF-getrennte Liste der Druckerserver vorhanden ist. Die Variable `fileOfPrintServers` ist eine <xref:System.IO.StreamReader> Objekt für diese Datei. Da die Namen aller Server in einer eigenen Zeile ist, jeden Aufruf der <xref:System.IO.StreamReader.ReadLine%2A> Ruft den Namen des Servers weiter ab und verschiebt die <xref:System.IO.StreamReader>des Cursors am Anfang der nächsten Zeile.  
   

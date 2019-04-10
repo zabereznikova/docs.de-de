@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 2e0837e4a3058db7f1086d6a8ed53136ec86c7ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 89d9517a92155f569a15c5272bcecc1c8f427f1c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153490"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339670"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Vorgehensweise: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Bildes mithilfe des Designers
 Mehrerer Windows Forms-Steuerelemente können Bilder anzeigen. Das Bild kann ein Symbol, das den Zweck des Steuerelements, z. B. auf eine Schaltfläche, ein Datenträgersymbol wird ermittelt, werden die **speichern** Befehl. Alternativ kann das Symbol ein Hintergrundbild auf dem Steuerelement der gewünschten Eindruck sein.  
@@ -24,13 +24,13 @@ Mehrerer Windows Forms-Steuerelemente können Bilder anzeigen. Das Bild kann ein
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>Das von einem Steuerelement angezeigte Bild festlegen  
   
-1.  In der **Eigenschaften** wählen Sie im Fenster der **Image** oder **BackgroundImage** -Eigenschaft des Steuerelements, klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten ()  
+1. In der **Eigenschaften** wählen Sie im Fenster der **Image** oder **BackgroundImage** -Eigenschaft des Steuerelements, klicken Sie dann auf die Schaltfläche mit den Auslassungspunkten ()  
   
      ![VisualStudioEllipsesButton screenshot](../media/vbellipsesbutton.png "vbEllipsesButton")  
   
      ) zum Anzeigen der **Ressource auswählen** Dialogfeld.  
   
-2.  Wählen Sie das Bild, die, das Sie anzeigen möchten.  
+2. Wählen Sie das Bild, die, das Sie anzeigen möchten.  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 22225c97ec082022cb609e47d3cafcdcc052143d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132794"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334002"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Vorgehensweise: Positionieren von Steuerelementen in Windows Forms
 Positionieren von Steuerelementen, die Windows Forms-Designer, oder geben Sie die <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft.  
@@ -37,9 +37,9 @@ Positionieren von Steuerelementen, die Windows Forms-Designer, oder geben Sie di
   
 ### <a name="to-position-a-control-using-the-properties-window"></a>Um ein Steuerelement, das über das Eigenschaftenfenster zu positionieren.  
   
-1.  Klicken Sie auf das Steuerelement platzieren möchten.  
+1. Klicken Sie auf das Steuerelement platzieren möchten.  
   
-2.  In der **Eigenschaften** Fenster Typwerte für die <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft, getrennt durch ein Komma, um das Steuerelement innerhalb des Containers zu positionieren.  
+2. In der **Eigenschaften** Fenster Typwerte für die <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft, getrennt durch ein Komma, um das Steuerelement innerhalb des Containers zu positionieren.  
   
      Die erste Zahl (X) ist der Abstand vom linken Rand des Containers. die zweite Zahl (Y) wird der Abstand zwischen den oberen Rand des Container-Bereichs, gemessen in Pixel.  
   
@@ -48,7 +48,7 @@ Positionieren von Steuerelementen, die Windows Forms-Designer, oder geben Sie di
   
 ### <a name="to-position-a-control-programmatically"></a>Um ein Steuerelement programmgesteuert zu positionieren.  
   
-1.  Legen Sie die <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft des Steuerelements, das eine <xref:System.Drawing.Point>.  
+1. Legen Sie die <xref:System.Windows.Forms.Control.Location%2A> Eigenschaft des Steuerelements, das eine <xref:System.Drawing.Point>.  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -62,7 +62,7 @@ Positionieren von Steuerelementen, die Windows Forms-Designer, oder geben Sie di
     button1->Location = Point(100, 100);  
     ```  
   
-2.  Ändern Sie die X-Koordinate der Position des Steuerelements mit der <xref:System.Windows.Forms.Control.Left%2A> Untereigenschaften.  
+2. Ändern Sie die X-Koordinate der Position des Steuerelements mit der <xref:System.Windows.Forms.Control.Left%2A> Untereigenschaften.  
   
     ```vb  
     Button1.Left = 300  
@@ -78,7 +78,7 @@ Positionieren von Steuerelementen, die Windows Forms-Designer, oder geben Sie di
   
 ### <a name="to-increment-a-controls-location-programmatically"></a>Um die Position eines Steuerelements programmgesteuerte inkrementieren  
   
-1.  Legen Sie die <xref:System.Windows.Forms.Control.Left%2A> untergeordnete Eigenschaft, um die X-Koordinate des Steuerelements zu erhöhen.  
+1. Legen Sie die <xref:System.Windows.Forms.Control.Left%2A> untergeordnete Eigenschaft, um die X-Koordinate des Steuerelements zu erhöhen.  
   
     ```vb  
     Button1.Left += 200  

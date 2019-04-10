@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Fehlerbehandlung'
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-ms.openlocfilehash: 7b173997eb53f8cf156ccb14083885a199dc8921
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493598"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334990"
 ---
 # <a name="how-to-error-handling"></a>Vorgehensweise: Fehlerbehandlung
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration mit Fehlerbehandlung zu erstellen. In diesem Beispiel werden Nachrichten an einen Zielendpunkt weitergeleitet. Falls eine Nachricht aufgrund eines Netzwerkfehlers oder kommunikationsbezogenen Fehlers (<xref:System.ServiceModel.CommunicationException>) nicht übermittelt werden kann, wird die Nachricht neu an einen anderen Endpunkt gesendet.  
@@ -22,7 +22,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
   
 ### <a name="implement-error-handling"></a>Implementieren der Fehlerbehandlung  
   
-1.  Erstellen Sie die grundlegende Routingdienstkonfiguration, indem Sie den vom Dienst verfügbar gemachten Dienstendpunkt angeben. Im folgenden Beispiel wird ein einzelner Dienstendpunkt definiert, der zum Empfangen von Nachrichten verwendet wird. Außerdem werden die Clientendpunkte definiert, die verwendet werden, um Nachrichten zu senden (deadDestination und realDestination). Der deadDestination-Endpunkt enthält eine Adresse, die nicht auf einen ausgeführten Dienst verweist und zum Simulieren eines Netzwerkfehlers verwendet wird, wenn Nachrichten an diesen Endpunkt gesendet werden.  
+1. Erstellen Sie die grundlegende Routingdienstkonfiguration, indem Sie den vom Dienst verfügbar gemachten Dienstendpunkt angeben. Im folgenden Beispiel wird ein einzelner Dienstendpunkt definiert, der zum Empfangen von Nachrichten verwendet wird. Außerdem werden die Clientendpunkte definiert, die verwendet werden, um Nachrichten zu senden (deadDestination und realDestination). Der deadDestination-Endpunkt enthält eine Adresse, die nicht auf einen ausgeführten Dienst verweist und zum Simulieren eines Netzwerkfehlers verwendet wird, wenn Nachrichten an diesen Endpunkt gesendet werden.  
   
     ```xml  
     <services>  
@@ -57,7 +57,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     </client>  
     ```  
   
-2.  Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.  Für dieses Beispiel wird ein MatchAll-Filter verwendet, damit sich für alle Nachrichten, die vom Routingdienst empfangen werden, Übereinstimmungen ergeben.  
+2. Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.  Für dieses Beispiel wird ein MatchAll-Filter verwendet, damit sich für alle Nachrichten, die vom Routingdienst empfangen werden, Übereinstimmungen ergeben.  
   
     ```xml  
     <filters>  
@@ -66,7 +66,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     </filters>  
     ```  
   
-3.  Definieren Sie die Sicherungsendpunktliste, in der die Endpunkte enthalten sind, an die eine Nachricht im Fall eines Netzwerk- oder Kommunikationsfehlers gesendet wird, sofern das Senden an den primären Zielendpunkt erfolgt. Im folgenden Beispiel wird eine Sicherungsliste definiert, die einen Endpunkt enthält. Sie können in einer Sicherungsliste jedoch mehrere Endpunkte angeben.  
+3. Definieren Sie die Sicherungsendpunktliste, in der die Endpunkte enthalten sind, an die eine Nachricht im Fall eines Netzwerk- oder Kommunikationsfehlers gesendet wird, sofern das Senden an den primären Zielendpunkt erfolgt. Im folgenden Beispiel wird eine Sicherungsliste definiert, die einen Endpunkt enthält. Sie können in einer Sicherungsliste jedoch mehrere Endpunkte angeben.  
   
      Falls die Sicherungsliste mehrere Endpunkte enthält, versucht der Routingdienst beim Auftreten eines Netzwerk- oder Kommunikationsfehlers, die Nachricht an den ersten Endpunkt in der Liste zu senden. Falls beim Senden an diesen Endpunkt ein Netzwerk- oder Kommunikationsfehler auftritt, sendet der Routingdienst die Nachricht an den nächsten in der Liste enthaltenen Endpunkt. Der Dienst fährt damit fort, die Nachricht an die einzelnen Endpunkte in der Sicherungsendpunktliste zu senden, bis die Nachricht erfolgreich gesendet wurde, für alle Sicherungsendpunkte ein Netzwerk- oder Kommunikationsfehler zurückgegeben wird oder nach dem Senden der Nachricht ein anderer Fehler als ein Netzwerk- oder Kommunikationsfehler zurückgegeben wird.  
   
@@ -78,7 +78,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
     </backupLists>  
     ```  
   
-4.  Definieren Sie die Filtertabelle, in der dem Filter der deadDestination-Endpunkt und die Liste der Sicherungsendpunkte zugeordnet wird.  Zuerst versucht der Routingdienst, die Nachricht an den Zielendpunkt zu senden, der dem Filter zugeordnet ist. Da deadDestination eine Adresse enthält, die nicht auf einen ausgeführten Dienst verweist, führt dies zu einem Netzwerkfehler. Danach versucht der Routingdienst, die Nachricht an den Endpunkt zu senden, der in backupEndpointlist angegeben ist.  
+4. Definieren Sie die Filtertabelle, in der dem Filter der deadDestination-Endpunkt und die Liste der Sicherungsendpunkte zugeordnet wird.  Zuerst versucht der Routingdienst, die Nachricht an den Zielendpunkt zu senden, der dem Filter zugeordnet ist. Da deadDestination eine Adresse enthält, die nicht auf einen ausgeführten Dienst verweist, führt dies zu einem Netzwerkfehler. Danach versucht der Routingdienst, die Nachricht an den Endpunkt zu senden, der in backupEndpointlist angegeben ist.  
   
     ```xml  
     <filterTables>  
@@ -92,7 +92,7 @@ In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich 
           </filterTables>  
     ```  
   
-5.  Um eingehende Nachrichten anhand des in der Filtertabelle enthaltenen Filters auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen.  Das folgende Beispiel veranschaulicht die Zuordnung von "filterTable1" zu den Dienstendpunkten.  
+5. Um eingehende Nachrichten anhand des in der Filtertabelle enthaltenen Filters auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen.  Das folgende Beispiel veranschaulicht die Zuordnung von "filterTable1" zu den Dienstendpunkten.  
   
     ```xml  
     <behaviors>  

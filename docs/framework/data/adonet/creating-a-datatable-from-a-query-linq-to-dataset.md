@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 0f750f2d23430691016fc2cf1e5e9d44d80da2a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204080"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342530"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>Erstellen einer DataTable aus einer Abfrage (LINQ to DataSet)
 Das <xref:System.Data.DataTable>-Objekt wird häufig zur Datenbindung eingesetzt. Die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode kopiert die Ergebnisse einer Abfrage in eine <xref:System.Data.DataTable>, die dann für die Datenbindung verwendet werden kann. Wenn die Datenoperationen ausgeführt wurden, wird die neue <xref:System.Data.DataTable> wieder mit der ursprünglichen <xref:System.Data.DataTable> zusammengeführt.  
   
  Die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode verwendet den folgenden Prozess, um aus einer Abfrage eine <xref:System.Data.DataTable> zu erstellen:  
   
-1.  Die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode klont eine <xref:System.Data.DataTable> aus der Quelltabelle (ein <xref:System.Data.DataTable>-Objekt, das die <xref:System.Linq.IQueryable%601>-Schnittstelle implementiert). Die <xref:System.Collections.IEnumerable>-Quelle stammt im Allgemeinen von einem [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Ausdruck oder einer Methodenabfrage ab.  
+1. Die <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode klont eine <xref:System.Data.DataTable> aus der Quelltabelle (ein <xref:System.Data.DataTable>-Objekt, das die <xref:System.Linq.IQueryable%601>-Schnittstelle implementiert). Die <xref:System.Collections.IEnumerable>-Quelle stammt im Allgemeinen von einem [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]-Ausdruck oder einer Methodenabfrage ab.  
   
-2.  Das Schema der geklonten <xref:System.Data.DataTable> wird aus den Spalten des ersten aufgezählten <xref:System.Data.DataRow>-Objekts in der Quelltabelle generiert, und als Name für die geklonte Tabelle wird der Name der Quelltabelle mit dem Zusatz "Abfrage" verwendet.  
+2. Das Schema der geklonten <xref:System.Data.DataTable> wird aus den Spalten des ersten aufgezählten <xref:System.Data.DataRow>-Objekts in der Quelltabelle generiert, und als Name für die geklonte Tabelle wird der Name der Quelltabelle mit dem Zusatz "Abfrage" verwendet.  
   
-3.  Für jede Zeile in der Quelltabelle wird der Inhalt der Zeile in ein neues <xref:System.Data.DataRow>-Objekt kopiert, dass dann in die geklonte Tabelle eingefügt wird. Die Eigenschaften <xref:System.Data.DataRow.RowState%2A> und <xref:System.Data.DataRow.RowError%2A> bleiben beim Kopieren erhalten. Wenn die <xref:System.ArgumentException>-Objekte in der Quelle aus unterschiedlichen Tabellen stammen, wird eine <xref:System.Data.DataRow> ausgelöst.  
+3. Für jede Zeile in der Quelltabelle wird der Inhalt der Zeile in ein neues <xref:System.Data.DataRow>-Objekt kopiert, dass dann in die geklonte Tabelle eingefügt wird. Die Eigenschaften <xref:System.Data.DataRow.RowState%2A> und <xref:System.Data.DataRow.RowError%2A> bleiben beim Kopieren erhalten. Wenn die <xref:System.ArgumentException>-Objekte in der Quelle aus unterschiedlichen Tabellen stammen, wird eine <xref:System.Data.DataRow> ausgelöst.  
   
-4.  Nachdem alle <xref:System.Data.DataTable>-Objekte in der abfragbaren Eingabetabelle kopiert wurden, wird die geklonte <xref:System.Data.DataRow> zurückgegeben. Wenn die Ausgangsfolge keine <xref:System.Data.DataRow>-Objekte enthält, gibt die Methode eine leere <xref:System.Data.DataTable> zurück.  
+4. Nachdem alle <xref:System.Data.DataTable>-Objekte in der abfragbaren Eingabetabelle kopiert wurden, wird die geklonte <xref:System.Data.DataRow> zurückgegeben. Wenn die Ausgangsfolge keine <xref:System.Data.DataRow>-Objekte enthält, gibt die Methode eine leere <xref:System.Data.DataTable> zurück.  
   
  Beachten Sie, dass ein Aufruf der <xref:System.Data.DataTableExtensions.CopyToDataTable%2A>-Methode zur Ausführung der an die Quelltabelle gebundenen Abfrage führt.  
   

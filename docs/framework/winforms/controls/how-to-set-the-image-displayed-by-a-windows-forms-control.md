@@ -12,19 +12,19 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 031ddcb3b852e75353fed7420735350e79f23df3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1de835bda5ac906837ac3fbd97b87f68f14d1953
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085089"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333924"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>Vorgehensweise: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Bildes
 Mehrerer Windows Forms-Steuerelemente können Bilder anzeigen. Diese Images können Symbole, die Erläuterung des Zwecks des Steuerelements, z. B. ein Diskettensymbol auf eine Schaltfläche, werden die **speichern** Befehl. Alternativ können die Symbole Hintergrundbilder, um die Kontrolle zu haben, die Darstellung und das gewünschte Verhalten sein.  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>Das von einem Steuerelement angezeigte Bild festlegen  
   
-1.  Legen Sie die `Image` oder `BackgroundImage` Eigenschaft, um ein Objekt des Typs <xref:System.Drawing.Image>. In der Regel Laden Sie das Image aus einer Datei mithilfe der <xref:System.Drawing.Image.FromFile%2A> Methode.  
+1. Legen Sie die `Image` oder `BackgroundImage` Eigenschaft, um ein Objekt des Typs <xref:System.Drawing.Image>. In der Regel Laden Sie das Image aus einer Datei mithilfe der <xref:System.Drawing.Image.FromFile%2A> Methode.  
   
      Das folgende Codebeispiel zeigt der Pfad festgelegt, für der Speicherort des Images ist der **eigene Bilder** Ordner. Die meisten Computer, die das Windows-Betriebssystem ausgeführt wird, werden dieses Verzeichnis enthalten. Dies ermöglicht auch Benutzer mit minimalen Systemzugriffsebenen die Anwendung sicher ausführen. Das folgende Codebeispiel ist erforderlich, dass Sie bereits ein Formular mit einem <xref:System.Windows.Forms.PictureBox> Steuerelement hinzugefügt.  
   

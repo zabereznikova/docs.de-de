@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 8089c857d2406f8cfb357ba2efe188ad84605541
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377026"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335316"
 ---
 # <a name="the-ink-threading-model"></a>Das Threadmodell für Freihandeingaben
 Einer der Vorteile von Freihandeingaben auf einem Tablet PC ist, dass es viel wie beim Schreiben mit einem regulären Stift und Papier fühlt sich.  Um dies zu erreichen, erfasst der Tablettstift Eingabedaten sehr viel schneller als eine Maus und Freihandeingaben während des Schreibvorgangs rendert.  Thread (Benutzeroberflächenthread) der Anwendung ist nicht für das Sammeln von Daten und zum Rendern von Freihandeingaben, ausreichend, da er blockiert werden kann.  Um dies zu lösen eine [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung verwendet zwei zusätzliche Threads aus, wenn der Freihandeingabe.  
@@ -38,7 +38,7 @@ Einer der Vorteile von Freihandeingaben auf einem Tablet PC ist, dass es viel wi
   
  ![Threading-Modell beim Zeichnen eines Strichs. ](./media/inkthreading-drawingink.png "InkThreading_DrawingInk")  
   
-1.  Aktionen, die auftreten, während des Zeichnens durch des Benutzers  
+1. Aktionen, die auftreten, während des Zeichnens durch des Benutzers  
   
     1.  Wenn der Benutzer einen Strich zeichnet, gibt die Tablettstiftpunkte im Stiftthread.  Stift-Plug-ins, einschließlich der <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, akzeptieren Sie die Tablettstiftpunkte im Stiftthread und haben die Möglichkeit, die sie vor dem Ändern der <xref:System.Windows.Controls.InkCanvas> Empfangs.  
   
@@ -46,7 +46,7 @@ Einer der Vorteile von Freihandeingaben auf einem Tablet PC ist, dass es viel wi
   
     3.  Die <xref:System.Windows.Controls.InkCanvas> empfängt die Tablettstiftpunkte, die im UI-Thread.  
   
-2.  Aktionen, die auftreten, nachdem der Benutzer der Strich beendet.  
+2. Aktionen, die auftreten, nachdem der Benutzer der Strich beendet.  
   
     1.  Strich gezeichnet hat, nach Abschluss der Benutzer die <xref:System.Windows.Controls.InkCanvas> erstellt eine <xref:System.Windows.Ink.Stroke> -Objekt und fügt es der <xref:System.Windows.Controls.InkPresenter>, die statisch gerendert wird.  
   
@@ -61,13 +61,13 @@ Einer der Vorteile von Freihandeingaben auf einem Tablet PC ist, dass es viel wi
   
  In der vorherigen Abbildung findet folgendes statt:  
   
-1.  `StylusPlugin1` Ändert die Werte für x und y.  
+1. `StylusPlugin1` Ändert die Werte für x und y.  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> die geänderte Tablettstiftpunkte empfangen, und klicken Sie auf der Thread für dynamisches Rendering gerendert.  
+2. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> die geänderte Tablettstiftpunkte empfangen, und klicken Sie auf der Thread für dynamisches Rendering gerendert.  
   
-3.  `StylusPlugin2` die geänderte Tablettstiftpunkte empfangen und weitere ändert die Werte für x und y.  
+3. `StylusPlugin2` die geänderte Tablettstiftpunkte empfangen und weitere ändert die Werte für x und y.  
   
-4.  Die Anwendung die Tablettstiftpunkte erfasst, und wenn der Benutzer den Strich, beendet der Strich statisch gerendert.  
+4. Die Anwendung die Tablettstiftpunkte erfasst, und wenn der Benutzer den Strich, beendet der Strich statisch gerendert.  
   
  Nehmen wir an, die `stylusPlugin1` schränkt die Tablettstiftpunkte, die ein Rechteck und `stylusPlugin2` übersetzt die Tablettstiftpunkte, die auf der rechten Seite.  Im vorherigen Szenario das <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> empfängt die eingeschränkten Tablettstiftpunkte, jedoch nicht die übersetzten Tablettstiftpunkte.  Wenn der Benutzer einen Strich zeichnet, innerhalb der Grenzen des Rechtecks der Strich gerendert wird, aber der Strich nicht übersetzt werden, bis der Benutzer den Stift wird angezeigt.  
   
@@ -83,15 +83,15 @@ Einer der Vorteile von Freihandeingaben auf einem Tablet PC ist, dass es viel wi
   
  ![Freihandeingaben threading Diagramm](./media/inkthreading-visualtree.png "InkThreading_VisualTree")  
   
-1.  Der Benutzer mit den Strich beginnt.  
+1. Der Benutzer mit den Strich beginnt.  
   
     1.  Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> erstellt die visuelle Struktur.  
   
-2.  Der Benutzer ist den Strich gezeichnet werden.  
+2. Der Benutzer ist den Strich gezeichnet werden.  
   
     1.  Die <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> erstellt die visuelle Struktur.  
   
-3.  Der Benutzer beendet den Strich.  
+3. Der Benutzer beendet den Strich.  
   
     1.  Die <xref:System.Windows.Controls.InkPresenter> der visuellen Struktur den Strich hinzugefügt.  
   

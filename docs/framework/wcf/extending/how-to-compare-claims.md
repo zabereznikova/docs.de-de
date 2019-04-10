@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF], comparing
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
-ms.openlocfilehash: c6230d7618b7885d72ddfebc67157bb48ff9cb38
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 932ad347730b35a936e040e116e5aa6af36cd3dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122017"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343310"
 ---
 # <a name="how-to-compare-claims"></a>Vorgehensweise: Vergleichen von Ansprüchen
 Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) wird verwendet, um die autorisierungsüberprüfung auszuführen. Eine gängige Aufgabe besteht darin, die Ansprüche im Autorisierungskontext mit den Ansprüchen zu vergleichen, die erforderlich sind, um die angeforderte Aktion auszuführen oder auf die angeforderte Ressource zuzugreifen. In diesem Thema wird beschrieben, wie Ansprüche verglichen werden, einschließlich integrierter und benutzerdefinierter Anspruchstypen. Weitere Informationen über die identitätsmodellinfrastruktur finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
@@ -36,33 +36,33 @@ Die identitätsmodellinfrastruktur in Windows Communication Foundation (WCF) wir
   
 ### <a name="comparing-built-in-claims"></a>Vergleichen von integrierten Ansprüchen  
   
-1.  Wenn zwei Instanzen der <xref:System.IdentityModel.Claims.Claim>-Klasse vorliegen, verwenden Sie <xref:System.IdentityModel.Claims.Claim.Equals%2A> für den Vergleich, wie im folgenden Code gezeigt.  
+1. Wenn zwei Instanzen der <xref:System.IdentityModel.Claims.Claim>-Klasse vorliegen, verwenden Sie <xref:System.IdentityModel.Claims.Claim.Equals%2A> für den Vergleich, wie im folgenden Code gezeigt.  
   
      [!code-csharp[c_CustomClaimComparison#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#5)]
      [!code-vb[c_CustomClaimComparison#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#5)]  
   
 ### <a name="comparing-custom-claims-with-primitive-resource-types"></a>Vergleichen von benutzerdefinierten Ansprüchen mit primitiven Ressourcentypen  
   
-1.  Für benutzerdefinierte Ansprüche mit primitiven Ressourcentypen kann der Vergleich wie für integrierte Ansprüche erfolgen, wie im folgenden Code veranschaulicht.  
+1. Für benutzerdefinierte Ansprüche mit primitiven Ressourcentypen kann der Vergleich wie für integrierte Ansprüche erfolgen, wie im folgenden Code veranschaulicht.  
   
      [!code-csharp[c_CustomClaimComparison#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#6)]
      [!code-vb[c_CustomClaimComparison#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#6)]  
   
-2.  Für benutzerdefinierte Ansprüche mit struktur- oder klassenbasierten Typen überschreibt der Ressourcentyp die <xref:System.IdentityModel.Claims.Claim.Equals%2A>-Methode.  
+2. Für benutzerdefinierte Ansprüche mit struktur- oder klassenbasierten Typen überschreibt der Ressourcentyp die <xref:System.IdentityModel.Claims.Claim.Equals%2A>-Methode.  
   
-3.  Überprüfen Sie zunächst, ob der `obj`-Parameter `null` ist, und wenn ja, geben Sie `false` zurück.  
+3. Überprüfen Sie zunächst, ob der `obj`-Parameter `null` ist, und wenn ja, geben Sie `false` zurück.  
   
      [!code-csharp[c_CustomClaimComparison#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#7)]
      [!code-vb[c_CustomClaimComparison#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#7)]  
   
-4.  Rufen Sie als nächstes <xref:System.Object.ReferenceEquals%2A> auf, und übergeben Sie `this` und `obj` als Parameter. Wenn `true` zurückgegeben wird, geben Sie `true` zurück.  
+4. Rufen Sie als nächstes <xref:System.Object.ReferenceEquals%2A> auf, und übergeben Sie `this` und `obj` als Parameter. Wenn `true` zurückgegeben wird, geben Sie `true` zurück.  
   
      [!code-csharp[c_CustomClaimComparison#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaimcomparison/cs/c_customclaimcomparison.cs#8)]
      [!code-vb[c_CustomClaimComparison#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaimcomparison/vb/source.vb#8)]  
   
-5.  Versuchen Sie danach, `obj` einer lokalen Variable des Klassentyps zuzuweisen. Wenn dieser Versuch fehlschlägt, lautet die Referenz `null`. In derartigen Fällen wird `false` zurückgegeben.  
+5. Versuchen Sie danach, `obj` einer lokalen Variable des Klassentyps zuzuweisen. Wenn dieser Versuch fehlschlägt, lautet die Referenz `null`. In derartigen Fällen wird `false` zurückgegeben.  
   
-6.  Führen Sie den benutzerdefinierten Vergleich durch, der notwendig ist, um den aktuellen Anspruch ordnungsgemäß mit dem bereitgestellten Anspruch zu vergleichen.  
+6. Führen Sie den benutzerdefinierten Vergleich durch, der notwendig ist, um den aktuellen Anspruch ordnungsgemäß mit dem bereitgestellten Anspruch zu vergleichen.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt einen Vergleich von benutzerdefinierten Ansprüchen, deren Anspruchsressource ein nicht primitiver Typ ist.  

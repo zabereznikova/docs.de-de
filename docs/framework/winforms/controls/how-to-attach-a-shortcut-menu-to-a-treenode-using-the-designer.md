@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], attaching to TreeNodes
 - TreeNode [Windows Forms], attaching a shortcut menu using Designer
 ms.assetid: 8e45e184-1313-4f8f-90ff-2cd5789b2268
-ms.openlocfilehash: 1cc90ed9a103c41dbf85e39a43d307b1c0422603
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9be633d14429bc2ceda1f0db2ff09252d55d5dd5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191437"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337447"
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>Vorgehensweise: Anfügen eines Kontextmenüs an einen TreeNode mithilfe des Designers
 Die Windows-Formulare <xref:System.Windows.Forms.TreeView> Steuerelement wird eine Hierarchie von Knoten, ähnlich wie die Dateien und Ordner im linken Bereich des Windows-Explorer-Features in Windows-Betriebssysteme angezeigt. Durch Festlegen der <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> -Eigenschaft, Sie bieten kontextbezogene Vorgänge für den Benutzer sie mit der rechten Maustaste die <xref:System.Windows.Forms.TreeView> Steuerelement. Durch Zuordnen einer <xref:System.Windows.Forms.ContextMenuStrip> Komponente mit individuellen <xref:System.Windows.Forms.TreeNode> Elemente, Sie können eine benutzerdefinierte Ebene Verknüpfung im Menü-Funktionen zum Hinzufügen Ihrer <xref:System.Windows.Forms.TreeView> Steuerelemente.  
@@ -20,13 +20,13 @@ Die Windows-Formulare <xref:System.Windows.Forms.TreeView> Steuerelement wird ei
   
 ### <a name="to-associate-a-shortcut-menu-with-a-treenode-at-design-time"></a>Um ein Kontextmenü einen TreeNode zur Entwurfszeit zuzuordnen  
   
-1.  Hinzufügen einer <xref:System.Windows.Forms.TreeView> -Steuerelement zu Ihrem Formular ein, und klicken Sie dann den Knoten zum Hinzufügen der <xref:System.Windows.Forms.TreeView> je nach Bedarf. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen und Entfernen von Knoten mit der Windows Forms "TreeView"-Steuerelement](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md).  
+1. Hinzufügen einer <xref:System.Windows.Forms.TreeView> -Steuerelement zu Ihrem Formular ein, und klicken Sie dann den Knoten zum Hinzufügen der <xref:System.Windows.Forms.TreeView> je nach Bedarf. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen und Entfernen von Knoten mit der Windows Forms "TreeView"-Steuerelement](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md).  
   
-2.  Hinzufügen einer <xref:System.Windows.Forms.ContextMenuStrip> -Komponente zum Formular, und Hinzufügen von Menüelementen klicken Sie dann auf das Kontextmenü, die auf Knotenebene Vorgänge darstellen, zur Laufzeit verfügbar gemacht werden sollen. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Menüelementen zu einem ContextMenuStrip](how-to-add-menu-items-to-a-contextmenustrip.md).  
+2. Hinzufügen einer <xref:System.Windows.Forms.ContextMenuStrip> -Komponente zum Formular, und Hinzufügen von Menüelementen klicken Sie dann auf das Kontextmenü, die auf Knotenebene Vorgänge darstellen, zur Laufzeit verfügbar gemacht werden sollen. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Menüelementen zu einem ContextMenuStrip](how-to-add-menu-items-to-a-contextmenustrip.md).  
   
-3.  Öffnen Sie erneut der **TreeNode-Editor** im Dialogfeld für die <xref:System.Windows.Forms.TreeView> steuern, wählen Sie den Knoten zu bearbeiten, und legen seine <xref:System.Windows.Forms.ContextMenuStrip> Eigenschaft, um das Kontextmenü, das Sie hinzugefügt.  
+3. Öffnen Sie erneut der **TreeNode-Editor** im Dialogfeld für die <xref:System.Windows.Forms.TreeView> steuern, wählen Sie den Knoten zu bearbeiten, und legen seine <xref:System.Windows.Forms.ContextMenuStrip> Eigenschaft, um das Kontextmenü, das Sie hinzugefügt.  
   
-4.  Wenn diese Eigenschaft festgelegt ist, wird das Kontextmenü per Rechtsklick auf den Knoten angezeigt werden.  
+4. Wenn diese Eigenschaft festgelegt ist, wird das Kontextmenü per Rechtsklick auf den Knoten angezeigt werden.  
   
      Darüber hinaus sollten Sie zum Schreiben von Code zum Behandeln von der <xref:System.Windows.Forms.ToolStripItem.Click> Ereignisse für diese Menüelemente.  
   

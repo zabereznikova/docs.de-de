@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: 609dfb93e2327ffd6013230cf5d54572e0f9b420
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340970"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Vorgehensweise: Hinzufügen eines Steuerelements zu einer Registerkarte mithilfe des Designers
 Die Verwendung des Windows Forms <xref:System.Windows.Forms.TabControl> besteht darin, andere Steuerelemente in einer strukturierten Weise anzuzeigen. Sie können diese Anweisungen verwenden, um ein Bild auf den Hauptteil einer Registerkarte angezeigt werden sollen. Informationen zum Hinzufügen eines Symbols auf die Bezeichnung eine Registerkarte, finden Sie unter [Vorgehensweise: Ändern der Darstellung der TabControl-Steuerelement in Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  
@@ -23,9 +23,9 @@ Die Verwendung des Windows Forms <xref:System.Windows.Forms.TabControl> besteht 
   
 ### <a name="to-add-a-control-using-the-designer"></a>Hinzufügen des Steuerelements mithilfe des Designers  
   
-1.  Klicken Sie auf die entsprechende Registerkarte, sodass es im Vordergrund angezeigt wird.  
+1. Klicken Sie auf die entsprechende Registerkarte, sodass es im Vordergrund angezeigt wird.  
   
-2.  Ziehen Sie das Steuerelement auf der Registerkarte.  
+2. Ziehen Sie das Steuerelement auf der Registerkarte.  
   
 ## <a name="see-also"></a>Siehe auch
 

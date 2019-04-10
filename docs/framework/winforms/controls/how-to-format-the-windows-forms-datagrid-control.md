@@ -14,12 +14,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-ms.openlocfilehash: a07fde63463d209e0006de9be677636f19fd93a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e5c41d6f146e6abef8d7670e6191b587ac86c92
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147900"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336121"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>Vorgehensweise: Formatieren des DataGrid-Steuerelements in Windows Forms
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "59147900"
   
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>Herstellen einen Standardstil für das DataGrid-Steuerelement  
   
-1.  Legen Sie die folgenden Eigenschaften nach Bedarf:  
+1. Legen Sie die folgenden Eigenschaften nach Bedarf:  
   
     |Eigenschaft|Beschreibung|  
     |--------------|-----------------|  
@@ -68,19 +68,19 @@ ms.locfileid: "59147900"
   
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>So legen Sie den Stil für Tabellen und Spalten einer Datentabelle programmgesteuert fest  
   
-1.  Erstellen einer neuen Tabellenformatvorlage, und seine Eigenschaften festlegen.  
+1. Erstellen einer neuen Tabellenformatvorlage, und seine Eigenschaften festlegen.  
   
-2.  Erstellen Sie ein Spaltenformat und festlegen Sie seine Eigenschaften.  
+2. Erstellen Sie ein Spaltenformat und festlegen Sie seine Eigenschaften.  
   
-3.  Fügen Sie das Spaltenformat Auflistung Spaltenformate das Tabellenformat an.  
+3. Fügen Sie das Spaltenformat Auflistung Spaltenformate das Tabellenformat an.  
   
-4.  Fügen Sie das Format der zur Auflistung für das Datenraster Tabelle Stile hinzu.  
+4. Fügen Sie das Format der zur Auflistung für das Datenraster Tabelle Stile hinzu.  
   
-5.  Erstellen Sie im folgenden Beispiel wird eine Instanz eines neuen <xref:System.Windows.Forms.DataGridTableStyle> und legen Sie dessen <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> Eigenschaft.  
+5. Erstellen Sie im folgenden Beispiel wird eine Instanz eines neuen <xref:System.Windows.Forms.DataGridTableStyle> und legen Sie dessen <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> Eigenschaft.  
   
-6.  Erstellen Sie eine neue Instanz der ein **GridColumnStyle** und legen Sie dessen **%MappingName** (und einige andere Eigenschaften Layout und die Anzeige).  
+6. Erstellen Sie eine neue Instanz der ein **GridColumnStyle** und legen Sie dessen **%MappingName** (und einige andere Eigenschaften Layout und die Anzeige).  
   
-7.  Wiederholen Sie die Schritte 2 bis 6 für jedes Spaltenformat, die Sie erstellen möchten.  
+7. Wiederholen Sie die Schritte 2 bis 6 für jedes Spaltenformat, die Sie erstellen möchten.  
   
      Im folgende Beispiel wird veranschaulicht, wie eine <xref:System.Windows.Forms.DataGridTextBoxColumn> wird erstellt, weil ein Name, der in der Spalte angezeigt werden. Außerdem hinzugefügt werden, dem das Spaltenformat den <xref:System.Windows.Forms.GridColumnStylesCollection> des Tabellenformats, und Sie fügen das Tabellenformat an die <xref:System.Windows.Forms.GridTableStylesCollection> im Datenraster.  
   

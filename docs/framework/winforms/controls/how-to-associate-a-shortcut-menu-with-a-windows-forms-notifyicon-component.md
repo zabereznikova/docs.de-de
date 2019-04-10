@@ -10,12 +10,12 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: 702a848631ce45c0efcb8eadfdf64074b454ac7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f2a086cc25eb6996b2643742a887bccf481916d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097989"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337057"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>Vorgehensweise: Zuordnen eines Kontextmenüs zu einer NotifyIcon-Komponente in Windows Forms
 > [!NOTE]
@@ -28,23 +28,23 @@ ms.locfileid: "59097989"
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>Zum Zuordnen eines Kontextmenüs mit der NotifyIcon-Komponente zur Entwurfszeit  
   
-1.  Hinzufügen einer <xref:System.Windows.Forms.NotifyIcon> -Komponente zum Formular, und legen Sie die wichtigen Eigenschaften, z. B. die <xref:System.Windows.Forms.NotifyIcon.Icon%2A> und <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Eigenschaften.  
+1. Hinzufügen einer <xref:System.Windows.Forms.NotifyIcon> -Komponente zum Formular, und legen Sie die wichtigen Eigenschaften, z. B. die <xref:System.Windows.Forms.NotifyIcon.Icon%2A> und <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Eigenschaften.  
   
      Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Anwendungssymbolen zur Taskleiste mit der Windows Forms NotifyIcon-Komponente](app-icons-to-the-taskbar-with-wf-notifyicon.md).  
   
-2.  Hinzufügen einer <xref:System.Windows.Forms.ContextMenu> Ihrem Windows-Formular.  
+2. Hinzufügen einer <xref:System.Windows.Forms.ContextMenu> Ihrem Windows-Formular.  
   
      Hinzufügen von Menüelementen, die im Kontextmenü die Befehle, die zur Laufzeit zur Verfügung stellen möchten darstellt. Dies ist auch ein guter Zeitpunkt, zu diesen Menüelementen wie den Zugriffsschlüssel im Menü-Erweiterungen hinzugefügt.  
   
-3.  Legen Sie die <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> Eigenschaft der <xref:System.Windows.Forms.NotifyIcon> Komponente dem Kontextmenü aus, die Sie hinzugefügt.  
+3. Legen Sie die <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> Eigenschaft der <xref:System.Windows.Forms.NotifyIcon> Komponente dem Kontextmenü aus, die Sie hinzugefügt.  
   
      Diese Eigenschaft festgelegt ist wird das Kontextmenü angezeigt, wenn das Symbol auf der Taskleiste geklickt wird.  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>Um programmgesteuert Zuordnen eines Kontextmenüs mit der NotifyIcon-Komponente  
   
-1.  Erstellen Sie eine Instanz von der <xref:System.Windows.Forms.NotifyIcon> Klasse und ein <xref:System.Windows.Forms.ContextMenu> Klasse, dabei werden alle eigenschafteneinstellungen für die Anwendung erforderlich sind (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> und <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Eigenschaften für die <xref:System.Windows.Forms.NotifyIcon> -Komponente, die Menüelemente für die <xref:System.Windows.Forms.ContextMenu> die Komponente).  
+1. Erstellen Sie eine Instanz von der <xref:System.Windows.Forms.NotifyIcon> Klasse und ein <xref:System.Windows.Forms.ContextMenu> Klasse, dabei werden alle eigenschafteneinstellungen für die Anwendung erforderlich sind (<xref:System.Windows.Forms.NotifyIcon.Icon%2A> und <xref:System.Windows.Forms.NotifyIcon.Visible%2A> Eigenschaften für die <xref:System.Windows.Forms.NotifyIcon> -Komponente, die Menüelemente für die <xref:System.Windows.Forms.ContextMenu> die Komponente).  
   
-2.  Legen Sie die <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> Eigenschaft der <xref:System.Windows.Forms.NotifyIcon> Komponente dem Kontextmenü aus, die Sie hinzugefügt.  
+2. Legen Sie die <xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A> Eigenschaft der <xref:System.Windows.Forms.NotifyIcon> Komponente dem Kontextmenü aus, die Sie hinzugefügt.  
   
      Diese Eigenschaft festgelegt ist wird das Kontextmenü angezeigt, wenn das Symbol auf der Taskleiste geklickt wird.  
   
