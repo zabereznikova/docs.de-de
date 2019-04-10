@@ -2,18 +2,18 @@
 title: Zusammenstellen verschachtelter Entity SQL-Abfragen
 ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
-ms.openlocfilehash: b5fc39a25b5b8592117348b150da9d82454a1562
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4d6892e96cfbc9c5ba9d389aa03588c5133c7943
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827317"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137981"
 ---
-# <a name="composing-nested-entity-sql-queries"></a><span data-ttu-id="b2439-102">Zusammenstellen verschachtelter Entity SQL-Abfragen</span><span class="sxs-lookup"><span data-stu-id="b2439-102">Composing Nested Entity SQL Queries</span></span>
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] <span data-ttu-id="b2439-103">ist eine umfangreiche funktionale Sprache.</span><span class="sxs-lookup"><span data-stu-id="b2439-103">is a rich functional language.</span></span> <span data-ttu-id="b2439-104">Der Baustein von [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist ein Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="b2439-104">The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression.</span></span> <span data-ttu-id="b2439-105">Im Unterschied zu konventionellem SQL ist [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist nicht auf tabellarische Resultsets beschränkt: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt komplexe Ausdrücke, die Literale, Parameter oder geschachtelte Ausdrücke aufweisen können.</span><span class="sxs-lookup"><span data-stu-id="b2439-105">Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions.</span></span> <span data-ttu-id="b2439-106">Ein Wert im Ausdruck kann parametrisiert sein bestehend aus einem anderen Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="b2439-106">A value in the expression can be parameterized or composed of some other expression.</span></span>  
+# <a name="composing-nested-entity-sql-queries"></a><span data-ttu-id="c4ea9-102">Zusammenstellen verschachtelter Entity SQL-Abfragen</span><span class="sxs-lookup"><span data-stu-id="c4ea9-102">Composing Nested Entity SQL Queries</span></span>
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] <span data-ttu-id="c4ea9-103">ist eine umfangreiche funktionale Sprache.</span><span class="sxs-lookup"><span data-stu-id="c4ea9-103">is a rich functional language.</span></span> <span data-ttu-id="c4ea9-104">Der Baustein von [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist ein Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="c4ea9-104">The building block of [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is an expression.</span></span> <span data-ttu-id="c4ea9-105">Im Unterschied zu konventionellem SQL ist [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ist nicht auf tabellarische Resultsets beschränkt: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt komplexe Ausdrücke, die Literale, Parameter oder geschachtelte Ausdrücke aufweisen können.</span><span class="sxs-lookup"><span data-stu-id="c4ea9-105">Unlike conventional SQL, [!INCLUDE[esql](../../../../../../includes/esql-md.md)] is not limited to a tabular result set: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] supports composing complex expressions that can have literals, parameters, or nested expressions.</span></span> <span data-ttu-id="c4ea9-106">Ein Wert im Ausdruck kann parametrisiert sein bestehend aus einem anderen Ausdruck.</span><span class="sxs-lookup"><span data-stu-id="c4ea9-106">A value in the expression can be parameterized or composed of some other expression.</span></span>  
   
-## <a name="nested-expressions"></a><span data-ttu-id="b2439-107">Geschachtelte Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="b2439-107">Nested Expressions</span></span>  
- <span data-ttu-id="b2439-108">Ein geschachtelter Ausdruck kann an jeder Stelle verwendet werden, an der der Wert des Rückgabetyps zulässig ist.</span><span class="sxs-lookup"><span data-stu-id="b2439-108">A nested expression can be placed anywhere a value of the type it returns is accepted.</span></span> <span data-ttu-id="b2439-109">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="b2439-109">For example:</span></span>  
+## <a name="nested-expressions"></a><span data-ttu-id="c4ea9-107">Geschachtelte Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="c4ea9-107">Nested Expressions</span></span>  
+ <span data-ttu-id="c4ea9-108">Ein geschachtelter Ausdruck kann an jeder Stelle verwendet werden, an der der Wert des Rückgabetyps zulässig ist.</span><span class="sxs-lookup"><span data-stu-id="c4ea9-108">A nested expression can be placed anywhere a value of the type it returns is accepted.</span></span> <span data-ttu-id="c4ea9-109">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="c4ea9-109">For example:</span></span>  
   
 ```  
 -- Returns a hierarchical collection of three elements at top-level.   
@@ -25,7 +25,7 @@ ROW(@x, {@x}, {@x, 4, 5}, {@x, 7, 8, 9})
 {{{@x}}};  
 ```  
   
- <span data-ttu-id="b2439-110">Eine geschachtelte Abfrage kann in einer Projektionsklausel enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="b2439-110">A nested query can be placed in a projection clause.</span></span> <span data-ttu-id="b2439-111">Beispiel:</span><span class="sxs-lookup"><span data-stu-id="b2439-111">For example:</span></span>  
+ <span data-ttu-id="c4ea9-110">Eine geschachtelte Abfrage kann in einer Projektionsklausel enthalten sein.</span><span class="sxs-lookup"><span data-stu-id="c4ea9-110">A nested query can be placed in a projection clause.</span></span> <span data-ttu-id="c4ea9-111">Zum Beispiel:</span><span class="sxs-lookup"><span data-stu-id="c4ea9-111">For example:</span></span>  
   
 ```  
 -- Returns a collection of rows where each row contains an Address entity.  
@@ -35,7 +35,7 @@ SELECT address, (SELECT DEREF(soh)
                     AS salesOrderHeader FROM AdventureWorksEntities.Address AS address  
 ```  
   
- <span data-ttu-id="b2439-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] müssen geschachtelte Abfragen stets in Klammern eingeschlossen werden:</span><span class="sxs-lookup"><span data-stu-id="b2439-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:</span></span>  
+ <span data-ttu-id="c4ea9-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)] müssen geschachtelte Abfragen stets in Klammern eingeschlossen werden:</span><span class="sxs-lookup"><span data-stu-id="c4ea9-112">In [!INCLUDE[esql](../../../../../../includes/esql-md.md)], nested queries must always be enclosed in parentheses:</span></span>  
   
 ```  
 -- Pseudo-Entity SQL  
@@ -46,19 +46,19 @@ UNION ALL
 FROM … );  
 ```  
   
- <span data-ttu-id="b2439-113">Im folgende Beispiel wird veranschaulicht, wie Ausdrücke in ordnungsgemäß geschachtelt [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [Vorgehensweise: Sortieren Sie die Union von zwei Abfragen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="b2439-113">The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).</span></span>  
+ <span data-ttu-id="c4ea9-113">Im folgende Beispiel wird veranschaulicht, wie Ausdrücke in ordnungsgemäß geschachtelt [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [Vorgehensweise: Sortieren Sie die Union von zwei Abfragen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).</span><span class="sxs-lookup"><span data-stu-id="c4ea9-113">The following example demonstrates how to properly nest expressions in [!INCLUDE[esql](../../../../../../includes/esql-md.md)]: [How to: Order the Union of Two Queries](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100)).</span></span>  
   
-## <a name="nested-queries-in-projection"></a><span data-ttu-id="b2439-114">Geschachtelte Abfragen in Projektion</span><span class="sxs-lookup"><span data-stu-id="b2439-114">Nested Queries in Projection</span></span>  
- <span data-ttu-id="b2439-115">Geschachtelte Abfragen in der Projektklausel könnten auf dem Server in Abfragen des kartesischen Produkts übersetzt werden.</span><span class="sxs-lookup"><span data-stu-id="b2439-115">Nested queries in the project clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="b2439-116">Bei einigen Backendservern, einschließlich SLQ Server, kann hierdurch die TempDB-Tabelle sehr groß werden, was die Serverleistung beeinträchtigen kann.</span><span class="sxs-lookup"><span data-stu-id="b2439-116">In some backend servers, including SLQ Server, this can cause the TempDB table to get very large, which can adversely affect server performance.</span></span>  
+## <a name="nested-queries-in-projection"></a><span data-ttu-id="c4ea9-114">Geschachtelte Abfragen in Projektion</span><span class="sxs-lookup"><span data-stu-id="c4ea9-114">Nested Queries in Projection</span></span>  
+ <span data-ttu-id="c4ea9-115">Geschachtelte Abfragen in der Projektklausel könnten auf dem Server in Abfragen des kartesischen Produkts übersetzt werden.</span><span class="sxs-lookup"><span data-stu-id="c4ea9-115">Nested queries in the project clause might get translated into Cartesian product queries on the server.</span></span> <span data-ttu-id="c4ea9-116">Bei einigen Backendservern, einschließlich SLQ Server, kann hierdurch die TempDB-Tabelle sehr groß werden, was die Serverleistung beeinträchtigen kann.</span><span class="sxs-lookup"><span data-stu-id="c4ea9-116">In some backend servers, including SLQ Server, this can cause the TempDB table to get very large, which can adversely affect server performance.</span></span>  
   
- <span data-ttu-id="b2439-117">Das folgende Beispiel zeigt eine Abfrage dieser Art:</span><span class="sxs-lookup"><span data-stu-id="b2439-117">The following is an example of such a query:</span></span>  
+ <span data-ttu-id="c4ea9-117">Das folgende Beispiel zeigt eine Abfrage dieser Art:</span><span class="sxs-lookup"><span data-stu-id="c4ea9-117">The following is an example of such a query:</span></span>  
   
 ```  
 SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2 FROM AdventureWorksModel.JobCandidate AS c  ) As Inner1 FROM AdventureWorksModel.EmployeeDepartmentHistory AS c  
 ```  
   
-## <a name="ordering-nested-queries"></a><span data-ttu-id="b2439-118">Reihenfolge geschachtelter Abfragen</span><span class="sxs-lookup"><span data-stu-id="b2439-118">Ordering Nested Queries</span></span>  
- <span data-ttu-id="b2439-119">In Entity Framework kann ein geschachtelter Ausdruck an einer beliebigen Stelle in die Abfrage eingefügt werden.</span><span class="sxs-lookup"><span data-stu-id="b2439-119">In the Entity Framework, a nested expression can be placed anywhere in the query.</span></span> <span data-ttu-id="b2439-120">Da Entity SQL große Flexibilität beim Schreiben von Abfragen zulässt, kann eine Abfrage mit einer Reihe von geschachtelten Abfragen geschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="b2439-120">Because Entity SQL allows great flexibility in writing queries, it is possible to write a query that contains an ordering of nested queries.</span></span> <span data-ttu-id="b2439-121">Die Reihenfolge einer geschachtelten Abfrage wird jedoch nicht beibehalten.</span><span class="sxs-lookup"><span data-stu-id="b2439-121">However, the order of a nested query is not preserved.</span></span>  
+## <a name="ordering-nested-queries"></a><span data-ttu-id="c4ea9-118">Reihenfolge geschachtelter Abfragen</span><span class="sxs-lookup"><span data-stu-id="c4ea9-118">Ordering Nested Queries</span></span>  
+ <span data-ttu-id="c4ea9-119">In Entity Framework kann ein geschachtelter Ausdruck an einer beliebigen Stelle in die Abfrage eingefügt werden.</span><span class="sxs-lookup"><span data-stu-id="c4ea9-119">In the Entity Framework, a nested expression can be placed anywhere in the query.</span></span> <span data-ttu-id="c4ea9-120">Da Entity SQL große Flexibilität beim Schreiben von Abfragen zulässt, kann eine Abfrage mit einer Reihe von geschachtelten Abfragen geschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="c4ea9-120">Because Entity SQL allows great flexibility in writing queries, it is possible to write a query that contains an ordering of nested queries.</span></span> <span data-ttu-id="c4ea9-121">Die Reihenfolge einer geschachtelten Abfrage wird jedoch nicht beibehalten.</span><span class="sxs-lookup"><span data-stu-id="c4ea9-121">However, the order of a nested query is not preserved.</span></span>  
   
 ```  
 -- The following query will order the results by last name.  
@@ -75,5 +75,6 @@ SELECT C2.FirstName, C2.LastName
         ORDER BY C1.LastName) as C2  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b2439-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b2439-122">See also</span></span>
-- [<span data-ttu-id="b2439-123">Übersicht über Entity SQL</span><span class="sxs-lookup"><span data-stu-id="b2439-123">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+## <a name="see-also"></a><span data-ttu-id="c4ea9-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c4ea9-122">See also</span></span>
+
+- [<span data-ttu-id="c4ea9-123">Übersicht über Entity SQL</span><span class="sxs-lookup"><span data-stu-id="c4ea9-123">Entity SQL Overview</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
