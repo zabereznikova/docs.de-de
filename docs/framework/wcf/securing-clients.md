@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 42c87f7b427af775784f8bf1c49ecabde2572823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135777"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331805"
 ---
 # <a name="securing-clients"></a>Sichern von Clients
 In Windows Communication Foundation (WCF), schreibt der Dienst die sicherheitsanforderungen für Clients vor. d. h. der Dienst legt fest, welcher Sicherheitsmodus verwendet wird und ob der Client Anmeldeinformationen angeben muss oder nicht. Der Sicherungsvorgang an einem Client ist also unkompliziert: Man verwendet einfach die vom Dienst erhaltenen Metadaten (sofern diese veröffentlicht wurden) und erstellt einen Client. Die Metadaten geben an, wie der Client konfiguriert wird. Wenn der Dienst erfordert, dass der Client Anmeldeinformationen angibt, müssen Sie Anmeldeinformationen erhalten, die die Anforderung erfüllen. Dieses Thema beschreibt den Vorgang ausführlicher. Weitere Informationen zum Erstellen eines sicheren Diensts finden Sie unter [Securing Services](../../../docs/framework/wcf/securing-services.md).  
@@ -33,9 +33,9 @@ In Windows Communication Foundation (WCF), schreibt der Dienst die sicherheitsan
 ## <a name="setting-a-client-credential"></a>Festlegen von Clientanmeldeinformationen  
  Das Festlegen von Clientanmeldeinformationen auf einem Client erfolgt in zwei Schritten:  
   
-1.  Bestimmen der *Clientanmeldeinformationstyp* der Dienst erfordert. Dies wird durch eine der folgenden beiden Methoden erreicht. Erstens: Wenn Sie Dokumentation vom Dienstersteller besitzen, sollte diese den Typ der Clientanmeldeinformation (sofern vorhanden) angeben, der vom Dienst gefordert wird. Zweitens: Wenn Sie nur eine vom Svcutil.exe-Tool erstellte Konfigurationsdatei besitzen, können Sie die einzelnen Bindungen untersuchen, um herauszufinden, welcher Typ von Anmeldeinformationen benötigt wird.  
+1. Bestimmen der *Clientanmeldeinformationstyp* der Dienst erfordert. Dies wird durch eine der folgenden beiden Methoden erreicht. Erstens: Wenn Sie Dokumentation vom Dienstersteller besitzen, sollte diese den Typ der Clientanmeldeinformation (sofern vorhanden) angeben, der vom Dienst gefordert wird. Zweitens: Wenn Sie nur eine vom Svcutil.exe-Tool erstellte Konfigurationsdatei besitzen, können Sie die einzelnen Bindungen untersuchen, um herauszufinden, welcher Typ von Anmeldeinformationen benötigt wird.  
   
-2.  Geben Sie tatsächliche Clientanmeldeinformationen an. Die tatsächlichen Clientanmeldeinformationen wird aufgerufen, eine *clientanmeldeinformationswert* zur Unterscheidung von den Typ. Wenn der Typ der Clientanmeldeinformationen beispielsweise ein Zertifikat angibt, müssen Sie ein X.509-Zertifikat bereitstellen, das von einer Zertifizierungsstelle ausgestellt wurde, der der Dienst vertraut.  
+2. Geben Sie tatsächliche Clientanmeldeinformationen an. Die tatsächlichen Clientanmeldeinformationen wird aufgerufen, eine *clientanmeldeinformationswert* zur Unterscheidung von den Typ. Wenn der Typ der Clientanmeldeinformationen beispielsweise ein Zertifikat angibt, müssen Sie ein X.509-Zertifikat bereitstellen, das von einer Zertifizierungsstelle ausgestellt wurde, der der Dienst vertraut.  
   
 ### <a name="determining-the-client-credential-type"></a>Bestimmen des Typs der Clientanmeldeinformationen  
  Wenn Sie die Konfiguration, sehen Sie das Tool Svcutil.exe generierten Datei haben die [ \<Bindungen >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) Abschnitt aus, um zu bestimmen, welcher Typ von Clientanmeldeinformationen erforderlich ist. Innerhalb des Abschnitts befinden sich Bindungselemente, die die Sicherheitsanforderungen angeben. Untersuchen Sie besonders die \<Sicherheit >-Element jeder Bindung. Zu diesem Element gehört das Attribut `mode`, das Sie auf einen von drei möglichen Werten festlegen können (`Message`, `Transport` oder `TransportWithMessageCredential`). Der Wert des Attributs bestimmt den Modus, und der Modus legt fest, welches der untergeordneten Elemente von Bedeutung ist.  

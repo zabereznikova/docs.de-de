@@ -9,12 +9,12 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 4aca6e9c20dbce7aa8a94067c96fcf44329a6fe4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814873"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332390"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 Bewirkt, dass der Compiler Fehler melden, wenn Variablen nicht deklariert werden, bevor sie verwendet werden.  
@@ -34,11 +34,11 @@ Bewirkt, dass der Compiler Fehler melden, wenn Variablen nicht deklariert werden
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>-Optionexplicit in Visual Studio-IDE festlegen  
   
-1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.   
+1. Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.   
   
-2.  Klicken Sie auf die Registerkarte **Kompilieren**.  
+2. Klicken Sie auf die Registerkarte **Kompilieren**.  
   
-3.  Ändern Sie den Wert in der **Option Explicit** Feld.  
+3. Ändern Sie den Wert in der **Option Explicit** Feld.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Code wird kompiliert, wenn `-optionexplicit-` verwendet wird.  
@@ -53,4 +53,4 @@ Bewirkt, dass der Compiler Fehler melden, wenn Variablen nicht deklariert werden
 - [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
 - [Beispiele für Kompilierungsbefehlszeilen](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [Option Explicit-Anweisung](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [VB-Standard, Projekte, Dialogfeld „Optionen“](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+- [VB-Standard, Projekte, Dialogfeld "Optionen"](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

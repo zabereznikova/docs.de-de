@@ -2,12 +2,12 @@
 title: Analytische Ablaufverfolgung von WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 3c9f878a22c928daa9c7dbc142efb3958b1657c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229172"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332312"
 ---
 # <a name="wcf-analytic-tracing"></a>Analytische Ablaufverfolgung von WCF
 In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungsereignisse in den Stream der analytischen ablaufverfolgungen hinzufügen, die Windows Communication Foundation (WCF) in ETW in schreibt [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Analytische Ablaufverfolgungen sollen die Dienste sichtbar machen, ohne die Leistung deutlich zu beeinträchtigen. Dieses Beispiel zeigt, wie Sie mit der <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs, um Ereignisse zu schreiben, die in WCF-Dienste integrieren.  
@@ -43,31 +43,31 @@ In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungse
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
-1.  Öffnen Sie die Projektmappendatei wcfanalytictracingextensibility.sln in mit Visual Studio 2012.  
+1. Öffnen Sie die Projektmappendatei wcfanalytictracingextensibility.sln in mit Visual Studio 2012.  
   
-2.  Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
+2. Drücken Sie STRG+UMSCHALT+B, um die Projektmappe zu erstellen.  
   
-3.  Drücken Sie STRG+F5, um die Projektmappe auszuführen.  
+3. Drücken Sie STRG+F5, um die Projektmappe auszuführen.  
   
      Klicken Sie im Webbrowser auf **Calculator.svc**. Der URI des WSDL-Dokuments für den Dienst wird daraufhin im Browser angezeigt. Kopieren Sie diesen URI.  
   
-4.  Führen Sie den WCF-Testclient (WcfTestClient.exe).  
+4. Führen Sie den WCF-Testclient (WcfTestClient.exe).  
   
      WCF-Testclient (WcfTestClient.exe) befindet sich unter `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`. Der standardmäßige Visual Studio 2012 ist `C:\Program Files\Microsoft Visual Studio 10.0`.  
   
-5.  Fügen Sie innerhalb der WCF-Testclient den Dienst dazu **Datei**, und klicken Sie dann **Dienst hinzufügen**.  
+5. Fügen Sie innerhalb der WCF-Testclient den Dienst dazu **Datei**, und klicken Sie dann **Dienst hinzufügen**.  
   
      Fügen Sie die Endpunktadresse im Eingabefeld hinzu.  
   
-6.  Klicken Sie auf **OK** um das Dialogfeld zu schließen.  
+6. Klicken Sie auf **OK** um das Dialogfeld zu schließen.  
   
      Der ICalculator-Dienst wird im linken Bereich unter hinzugefügt **Meine Dienstprojekte**.  
   
-7.  Öffnen Sie die Ereignisanzeige.  
+7. Öffnen Sie die Ereignisanzeige.  
   
      Vor dem Aufrufen des Diensts die Ereignisanzeige starten, und stellen Sie sicher, dass das Ereignisprotokoll eine Überwachung für vom WCF-Dienst ausgegebene Überwachungsereignisse ausführt.  
   
-8.  Von der **starten** , wählen Sie im Menü **Verwaltung**, und klicken Sie dann **Ereignisanzeige**. Aktivieren der **analytisch** und **Debuggen** Protokolle.  
+8. Von der **starten** , wählen Sie im Menü **Verwaltung**, und klicken Sie dann **Ereignisanzeige**. Aktivieren der **analytisch** und **Debuggen** Protokolle.  
   
 9. In der Strukturansicht in der Ereignisanzeige, navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, und klicken Sie dann **Anwendungsserver-Anwendungen**. Mit der rechten Maustaste **Anwendungsserver-Anwendungen**Option **Ansicht**, und klicken Sie dann **analytische und Debugprotokolle**.  
   
@@ -97,13 +97,13 @@ In diesem Beispiel wird veranschaulicht, wie Sie Ihre eigenen Ablaufverfolgungse
   
 #### <a name="to-clean-up-optional"></a>So führen Sie eine Bereinigung aus (optional)  
   
-1.  Open **Ereignisanzeige**.  
+1. Open **Ereignisanzeige**.  
   
-2.  Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, und klicken Sie dann  **Anwendungsserver-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll deaktivieren**.  
+2. Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**, und klicken Sie dann  **Anwendungsserver-Anwendungen**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll deaktivieren**.  
   
-3.  Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**,  **Anwendungsserver-Anwendungen**, und klicken Sie dann **analytische**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll löschen**.  
+3. Navigieren Sie zu **Ereignisanzeige**, **Anwendungs- und Dienstprotokolle**, **Microsoft**, **Windows**,  **Anwendungsserver-Anwendungen**, und klicken Sie dann **analytische**. Mit der rechten Maustaste **analytisch** , und wählen Sie **Protokoll löschen**.  
   
-4.  Klicken Sie auf **löschen** um die Ereignisse zu löschen.  
+4. Klicken Sie auf **löschen** um die Ereignisse zu löschen.  
   
 ## <a name="known-issue"></a>Bekanntes Problem  
  Es ist ein bekanntes Problem in der **Ereignisanzeige** , in denen es möglicherweise nicht Decodierung von ETW-Ereignissen. Sie können eine Fehlermeldung angezeigt, die besagt: "Die Beschreibung für Ereigniskennung \<Id > aus der Quelle Microsoft Windows-Anwendungsserver-Anwendungen wurde nicht gefunden. Entweder ist die Komponente, die dieses Ereignis auslöst, nicht auf dem lokalen Computer installiert, oder die Installation ist beschädigt. Sie können installieren oder reparieren Sie die Komponente auf dem lokalen Computer." Wenn dieser Fehler auftritt, wählen Sie **aktualisieren** aus der **Aktionen** Menü. Das Ereignis sollte dann ordnungsgemäß decodiert werden.  

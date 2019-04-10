@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115699"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331714"
 ---
 # <a name="working-with-certificates"></a>Verwenden von Zertifikaten
 Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden häufig digitale X.509-Zertifikate zum Authentifizieren von Clients und Servern sowie zum Verschlüsseln und digitalen Signieren von Nachrichten verwendet. Dieser Artikel bietet einen Überblick über die Funktionen digitaler X.509-Zertifikate und ihre Verwendung in WCF und enthält Links zu Themen, in denen diese Konzepte näher beschrieben oder die Ausführung allgemeiner Aufgaben mit WCF und Zertifikaten erläutert werden.  
@@ -90,13 +90,13 @@ Zum Programmieren der WCF-Sicherheit (Windows Communication Foundation) werden h
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>Erstellen Sie eine Kette von Vertrauensstellungen mit dem Cmdlet "New-SelfSignedCertificate"  
   
-1.  Erstellen Sie ein temporären Stammzertifizierungsstellen (selbst signiertes)-Zertifikat mit dem Cmdlet "New-SelfSignedCertificate". Speichern Sie den privaten Schlüssel.  
+1. Erstellen Sie ein temporären Stammzertifizierungsstellen (selbst signiertes)-Zertifikat mit dem Cmdlet "New-SelfSignedCertificate". Speichern Sie den privaten Schlüssel.  
   
-2.  Verwenden Sie das neue Zertifikat, um ein anderes Zertifikat auszustellen, das den öffentlichen Schlüssel enthält.  
+2. Verwenden Sie das neue Zertifikat, um ein anderes Zertifikat auszustellen, das den öffentlichen Schlüssel enthält.  
   
-3.  Importieren Sie das Zertifikat der Stammzertifizierungsstelle in den Speicher vertrauenswürdiger Stammzertifizierungsstellen.  
+3. Importieren Sie das Zertifikat der Stammzertifizierungsstelle in den Speicher vertrauenswürdiger Stammzertifizierungsstellen.  
   
-4.  Schrittweise Anweisungen finden Sie unter [Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+4. Schrittweise Anweisungen finden Sie unter [Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ## <a name="which-certificate-to-use"></a>Welches Zertifikat soll verwendet werden?  
  Im Zusammenhang mit Zertifikaten wird häufig danach gefragt, welches Zertifikat und warum dieses verwendet werden soll. Die Antwort hängt davon ab, ob Sie einen Client oder einen Dienst programmieren. Die folgenden Informationen bieten eine allgemeine Orientierung und stellen keine erschöpfende Antwort auf diese Fragen dar.  

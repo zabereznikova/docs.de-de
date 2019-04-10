@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191470"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332143"
 ---
 # <a name="handling-null-values"></a>Behandeln von NULL-Werten
 Wenn der Wert in einer Spalte unbekannt ist oder fehlt, wird in einer relationalen Datenbank ein NULL-Wert verwendet. NULL ist weder eine leere Zeichenfolge (für Zeichen- oder Datetime-Datentypen) noch ein Wert 0 (null) (für numerische Datentypen). Die ANSI SQL-92-Spezifikation legt fest, dass NULL für alle Datentypen gleich sein muss, sodass alle NULL-Werte einheitlich behandelt werden können. Der <xref:System.Data.SqlTypes>-Namespace stellt durch Implementieren der <xref:System.Data.SqlTypes.INullable>-Schnittstelle eine NULL-Semantik bereit. Jeder Datentyp in <xref:System.Data.SqlTypes> besitzt eine eigene `IsNull`-Eigenschaft und einen `Null`-Wert. Diese können einer Instanz dieses Datentyps zugewiesen werden.  
@@ -87,15 +87,15 @@ WHERE TerritoryID IN (1, 2, 3)
   
  Darüber hinaus gelten für Instanzen von `DataRow.["columnName"]`-NULL-Zuweisungen die folgenden Regeln:  
   
-1.  Der Standardwert *Standard* Wert `DbNull.Value` für alle außer den stark typisierten null-Spalten das entsprechende stark also null-Wert typisierte.  
+1. Der Standardwert *Standard* Wert `DbNull.Value` für alle außer den stark typisierten null-Spalten das entsprechende stark also null-Wert typisierte.  
   
-2.  NULL-Werte werden bei der Serialisierung in XML-Dateien (wie in "xsi:nil") nie ausgegeben.  
+2. NULL-Werte werden bei der Serialisierung in XML-Dateien (wie in "xsi:nil") nie ausgegeben.  
   
-3.  Alle Nicht-NULL-Werte einschließlich der Standardwerte werden bei der Serialisierung nach XML immer ausgegeben. Dies entspricht nicht der XSD/XML-Semantik, bei der ein NULL-Wert (xsi:nil) explizit und der Standardwert implizit ist (wenn nicht in XML vorhanden, kann der Wert von einem validierenden Parser aus einem zugeordneten XSD-Schema abgerufen werden). Das Gegenteil gilt für eine `DataTable`: Ein NULL-Wert ist implizit, und der Standardwert ist explizit.  
+3. Alle Nicht-NULL-Werte einschließlich der Standardwerte werden bei der Serialisierung nach XML immer ausgegeben. Dies entspricht nicht der XSD/XML-Semantik, bei der ein NULL-Wert (xsi:nil) explizit und der Standardwert implizit ist (wenn nicht in XML vorhanden, kann der Wert von einem validierenden Parser aus einem zugeordneten XSD-Schema abgerufen werden). Das Gegenteil gilt für eine `DataTable`: Ein NULL-Wert ist implizit, und der Standardwert ist explizit.  
   
-4.  Allen fehlenden Spaltenwerten für Zeilen, die aus der XML-Eingabe gelesen werden, wird NULL zugewiesen. Zeilen, die mithilfe von <xref:System.Data.DataTable.NewRow%2A> oder ähnlichen Methoden erstellt wurden, wird der Standardwert von DataColumn zugewiesen.  
+4. Allen fehlenden Spaltenwerten für Zeilen, die aus der XML-Eingabe gelesen werden, wird NULL zugewiesen. Zeilen, die mithilfe von <xref:System.Data.DataTable.NewRow%2A> oder ähnlichen Methoden erstellt wurden, wird der Standardwert von DataColumn zugewiesen.  
   
-5.  Die <xref:System.Data.DataRow.IsNull%2A>-Methode gibt sowohl für `true` als auch für `DbNull.Value` `INullable.Null` zurück.  
+5. Die <xref:System.Data.DataRow.IsNull%2A>-Methode gibt sowohl für `true` als auch für `DbNull.Value` `INullable.Null` zurück.  
   
 ## <a name="assigning-null-values"></a>Zuweisen von NULL-Werten  
  Der Standardwert für alle <xref:System.Data.SqlTypes>-Instanzen ist NULL.  

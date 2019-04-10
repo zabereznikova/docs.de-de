@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 03ee861f7eba8b2ecee6b4697c5b475eacf78c89
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 21e9e0609ed63c4398f2df7ba718f8af17464b0a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59093903"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332481"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>Vorgehensweise: Abrufen eines Zertifikats (WCF)
 Funktionen, verwenden Sie x. 509-Zertifikate von Windows Communication Foundation (WCF) verwenden, rufen Sie zuerst Zertifikate.  
   
 ### <a name="to-obtain-an-x509-certificate"></a>So rufen Sie ein X.509-Zertifikat ab  
   
-1.  Wählen Sie eine der folgenden Optionen aus:  
+1. Wählen Sie eine der folgenden Optionen aus:  
   
     -   Erwerben Sie ein Zertifikat von einer Zertifizierungsstelle, z. B. VeriSign, Inc.  
   

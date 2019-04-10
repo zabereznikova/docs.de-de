@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 81cb9b55f53c152e755ada1803e4ba5731498627
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b70824670b8f47a2346135cb31ad39bd55694d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229471"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300605"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>Vorgehensweise: Bestimmen des aktiven untergeordneten MDI-Elements
 Gelegentlich möchten Sie einen Befehl, der ausgeführt wird auf dem Steuerelement bereitstellen, auf dem derzeit aktiven untergeordneten Formular den Fokus besitzt. Nehmen wir beispielsweise an, dass Sie den markierten Text aus des untergeordneten Formulars-Textfeld in die Zwischenablage kopieren möchten. Erstellen Sie eine Prozedur, die ausgewählten Text in die Zwischenablage mithilfe kopiert die <xref:System.Windows.Forms.Control.Click> Ereignis von der Menübefehl zum Kopieren auf die standardmäßige Menü "Bearbeiten".  
@@ -27,7 +27,7 @@ Gelegentlich möchten Sie einen Befehl, der ausgeführt wird auf dem Steuereleme
   
 ### <a name="to-determine-the-active-mdi-child-to-copy-its-text-to-the-clipboard"></a>Bestimmen des aktive untergeordneten MDI-Fensters (um den Text in die Zwischenablage kopieren)  
   
-1.  Kopieren Sie den Text zum aktiven Steuerelement des aktiven untergeordneten Formulars innerhalb einer Methode in die Zwischenablage.  
+1. Kopieren Sie den Text zum aktiven Steuerelement des aktiven untergeordneten Formulars innerhalb einer Methode in die Zwischenablage.  
   
     > [!NOTE]
     >  In diesem Beispiel geht davon aus, es ist ein übergeordnetes MDI-Formular (`Form1`), die eine oder mehrere untergeordnete MDI-Fenster mit wurde ein <xref:System.Windows.Forms.RichTextBox> Steuerelement. Weitere Informationen finden Sie unter [Erstellen von übergeordneten MDI-Formularen](how-to-create-mdi-parent-forms.md).  

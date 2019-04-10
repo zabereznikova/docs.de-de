@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: 2b052b44043deba85c8b142a2bf1a684c1159809
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ee147ecd00b88b538ace32844c42ac9c5022b2ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842511"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331701"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Vorgehensweise: Ausblenden einer geerbten Variablen (Visual Basic)
 Eine abgeleitete Klasse erbt alle Definitionen der Basisklasse. Wenn Sie eine Variable mit dem gleichen Namen wie ein Element der Basisklasse definieren möchten, können Sie ausblenden, oder *Schatten*, das Basisklasse-Element, wenn Sie die Variable in der abgeleiteten Klasse definieren. Wenn Sie dies tun, greift Code in der abgeleiteten Klasse die Variable auf, es sei denn, sie explizit das Shadowing umgeht.  
@@ -25,11 +25,11 @@ Eine abgeleitete Klasse erbt alle Definitionen der Basisklasse. Wenn Sie eine Va
   
 ### <a name="to-hide-an-inherited-variable"></a>Ausblenden eine geerbte Variablen  
   
-1.  Achten Sie darauf, dass die Variable, die Sie ausblenden möchten, die auf Klassenebene (außerhalb einer Prozedur) deklariert wird. Andernfalls müssen Sie nicht ausgeblendet.  
+1. Achten Sie darauf, dass die Variable, die Sie ausblenden möchten, die auf Klassenebene (außerhalb einer Prozedur) deklariert wird. Andernfalls müssen Sie nicht ausgeblendet.  
   
-2.  Schreiben Sie in der abgeleiteten Klasse eine [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) deklarieren Ihrer Variablen. Verwenden Sie den gleichen Namen wie die geerbten Variablen.  
+2. Schreiben Sie in der abgeleiteten Klasse eine [Dim-Anweisung](../../../../visual-basic/language-reference/statements/dim-statement.md) deklarieren Ihrer Variablen. Verwenden Sie den gleichen Namen wie die geerbten Variablen.  
   
-3.  Enthalten die [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) Schlüsselwort in der Deklaration.  
+3. Enthalten die [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md) Schlüsselwort in der Deklaration.  
   
      Wenn der Code in der abgeleiteten Klasse auf den Namen der Variablen verwiesen wird, löst der Compiler den Verweis auf die Variable an.  
   
@@ -57,7 +57,7 @@ Eine abgeleitete Klasse erbt alle Definitionen der Basisklasse. Wenn Sie eine Va
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Unterschiede zwischen Shadowing und Überschreiben](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [Vorgehensweise: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)

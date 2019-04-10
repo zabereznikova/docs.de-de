@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 80340bcf25ec3299629af34f7fafe53877ad571c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213297"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331675"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>Vorgehensweise: Löschen von Zeilen aus der Datenbank
 Sie können Zeilen in einer Datenbank löschen, durch das Entfernen der entsprechenden [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Objekte aus einer Tabelle verknüpften Auflistung. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt die Änderungen in die entsprechenden SQL `DELETE` Befehle.  
@@ -32,11 +32,11 @@ Sie können Zeilen in einer Datenbank löschen, durch das Entfernen der entsprec
   
 ### <a name="to-delete-a-row-in-the-database"></a>So löschen Sie eine Zeile aus der Datenbank  
   
-1.  Rufen Sie die zu löschende Zeile aus der Datenbank ab.  
+1. Rufen Sie die zu löschende Zeile aus der Datenbank ab.  
   
-2.  Rufen Sie die <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>-Methode auf.  
+2. Rufen Sie die <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>-Methode auf.  
   
-3.  Übergeben Sie die Änderung an die Datenbank.  
+3. Übergeben Sie die Änderung an die Datenbank.  
   
 ## <a name="example"></a>Beispiel  
  Im ersten Codebeispiel wird die Datenbank nach Bestelldetails durchsucht, die sich auf die Bestellung 11000 beziehen. Diese Bestelldetails werden dann zum Löschen markiert und diese Änderungen an die Datenbank übergeben.  

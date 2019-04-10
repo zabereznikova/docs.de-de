@@ -2,12 +2,12 @@
 title: 'Exemplarische Vorgehensweise: Ausschließliches Verwenden von gespeicherten Prozeduren (C#)'
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: 8f3bc061f626f6c29ca62131fc1cb0fc2dea9249
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e5497c1c6bfe032ba272c911217adaa3bd7f4f4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098168"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332688"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>Exemplarische Vorgehensweise: Ausschließliches Verwenden von gespeicherten Prozeduren (C#)
 Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario für [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] für den Datenzugriff mithilfe von gespeicherten Prozeduren bereit. Dieser Ansatz wird oft von Datenbankadministratoren verwendet, um den Zugriff auf den Datenspeicher einzuschränken.  
@@ -60,17 +60,17 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>So erstellen Sie eine LINQ to SQL-Lösung  
   
-1.  Visual Studio **Datei** Startmenü **neu**, und klicken Sie dann auf **Projekt**.  
+1. Visual Studio **Datei** Startmenü **neu**, und klicken Sie dann auf **Projekt**.  
   
-2.  In der **Projekttypen** im Bereich der **neues Projekt** Dialogfeld klicken Sie auf **Visual C#** .  
+2. In der **Projekttypen** im Bereich der **neues Projekt** Dialogfeld klicken Sie auf **Visual C#** .  
   
-3.  Klicken Sie im Bereich **Vorlagen** auf **Windows Forms-Anwendung**.  
+3. Klicken Sie im Bereich **Vorlagen** auf **Windows Forms-Anwendung**.  
   
-4.  In der **Namen** geben **SprocOnlyApp**.  
+4. In der **Namen** geben **SprocOnlyApp**.  
   
-5.  In der **Speicherort** Vergewissern Sie sich, in der Sie die Projektdateien speichern möchten.  
+5. In der **Speicherort** Vergewissern Sie sich, in der Sie die Projektdateien speichern möchten.  
   
-6.  Klicken Sie auf **OK**.  
+6. Klicken Sie auf **OK**.  
   
      Der Windows Forms Designer wird geöffnet.  
   
@@ -79,9 +79,9 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 #### <a name="to-add-systemdatalinqdll"></a>So fügen Sie die Datei System.Data.Linq.dll hinzu  
   
-1.  In **Projektmappen-Explorer**, mit der rechten Maustaste **Verweise**, und klicken Sie dann auf **Verweis hinzufügen**.  
+1. In **Projektmappen-Explorer**, mit der rechten Maustaste **Verweise**, und klicken Sie dann auf **Verweis hinzufügen**.  
   
-2.  In der **Verweis hinzufügen** Dialogfeld klicken Sie auf **.NET**, klicken Sie auf die System.Data.Linq-Assembly, und klicken Sie dann auf **OK**.  
+2. In der **Verweis hinzufügen** Dialogfeld klicken Sie auf **.NET**, klicken Sie auf die System.Data.Linq-Assembly, und klicken Sie dann auf **OK**.  
   
      Dem Projekt wird die Assembly hinzugefügt.  
   
@@ -90,9 +90,9 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>So fügen Sie die Northwind-Codedatei dem Projekt hinzu.  
   
-1.  Auf der **Projekt** Menü klicken Sie auf **vorhandenes Element hinzufügen**.  
+1. Auf der **Projekt** Menü klicken Sie auf **vorhandenes Element hinzufügen**.  
   
-2.  In der **vorhandenes Element hinzufügen** Dialogfeld zu c:\linqtest7\northwind.cs verschieben, und klicken Sie dann auf **hinzufügen**.  
+2. In der **vorhandenes Element hinzufügen** Dialogfeld zu c:\linqtest7\northwind.cs verschieben, und klicken Sie dann auf **hinzufügen**.  
   
      Die Datei northwind.cs wird dem Projekt hinzugefügt.  
   
@@ -101,9 +101,9 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 #### <a name="to-create-the-database-connection"></a>So erstellen Sie die Datenbankverbindung  
   
-1.  In **Projektmappen-Explorer**, mit der rechten Maustaste **"Form1.cs"**, und klicken Sie dann auf **Ansichtscode**.  
+1. In **Projektmappen-Explorer**, mit der rechten Maustaste **"Form1.cs"**, und klicken Sie dann auf **Ansichtscode**.  
   
-2.  Geben Sie den folgenden Code in die `Form1`-Klasse ein:  
+2. Geben Sie den folgenden Code in die `Form1`-Klasse ein:  
   
      [!code-csharp[DLinqWalk4CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#1)]  
   
@@ -112,42 +112,42 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 #### <a name="to-set-up-the-user-interface"></a>So richten Sie die Benutzeroberfläche ein  
   
-1.  Wechseln Sie zurück zur der Windows Forms-Designer (**Form1.cs]**).  
+1. Wechseln Sie zurück zur der Windows Forms-Designer (**Form1.cs]**).  
   
-2.  Klicken Sie im Menü **Ansicht** auf **Toolbox**.  
+2. Klicken Sie im Menü **Ansicht** auf **Toolbox**.  
   
      Die Toolbox wird geöffnet.  
   
     > [!NOTE]
     >  Klicken Sie auf die **automatisch im Hintergrund** PIN, die Toolbox geöffnet zu lassen, während der folgenden Schritte in diesem Abschnitt.  
   
-3.  Ziehen Sie zwei Schaltflächen, zwei Textfelder und zwei Bezeichnungen aus der Toolbox auf **Form1**.  
+3. Ziehen Sie zwei Schaltflächen, zwei Textfelder und zwei Bezeichnungen aus der Toolbox auf **Form1**.  
   
      Ordnen Sie die Steuerelemente wie in der Abbildung an. Erweitern Sie **Form1** , damit die Steuerelemente platziert.  
   
-4.  Mit der rechten Maustaste **label1**, und klicken Sie dann auf **Eigenschaften**.  
+4. Mit der rechten Maustaste **label1**, und klicken Sie dann auf **Eigenschaften**.  
   
-5.  Ändern der **Text** Eigenschaft **label1** zu **Enter OrderID:**.  
+5. Ändern der **Text** Eigenschaft **label1** zu **Enter OrderID:**.  
   
-6.  Für die gleiche Weise **label2**, ändern Sie die **Text** Eigenschaft aus **label2** zu **Enter CustomerID:**.  
+6. Für die gleiche Weise **label2**, ändern Sie die **Text** Eigenschaft aus **label2** zu **Enter CustomerID:**.  
   
-7.  Ändern Sie in die gleiche Weise die **Text** -Eigenschaft für **"Button1"** zu **Bestelldetails**.  
+7. Ändern Sie in die gleiche Weise die **Text** -Eigenschaft für **"Button1"** zu **Bestelldetails**.  
   
-8.  Ändern der **Text** -Eigenschaft für **button2** zu **Bestellverlauf**.  
+8. Ändern der **Text** -Eigenschaft für **button2** zu **Bestellverlauf**.  
   
      Erweitern Sie die Schaltflächen-Steuerelemente, damit der gesamte Text sichtbar ist.  
   
 #### <a name="to-handle-button-clicks"></a>Verarbeitung von Mausklicks auf die Schaltflächen  
   
-1.  Doppelklicken Sie auf **Bestelldetails** auf **Form1** um den button1-Ereignishandler im Code-Editor zu öffnen.  
+1. Doppelklicken Sie auf **Bestelldetails** auf **Form1** um den button1-Ereignishandler im Code-Editor zu öffnen.  
   
-2.  Geben Sie den folgenden Code in den `button1`-Ereignishandler ein.  
+2. Geben Sie den folgenden Code in den `button1`-Ereignishandler ein.  
   
      [!code-csharp[DLinqWalk4CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#2)]  
   
-3.  Doppelklicken Sie jetzt auf **button2** auf **Form1** zum Öffnen der `button2` Handler  
+3. Doppelklicken Sie jetzt auf **button2** auf **Form1** zum Öffnen der `button2` Handler  
   
-4.  Geben Sie den folgenden Code in den `button2`-Ereignishandler ein.  
+4. Geben Sie den folgenden Code in den `button2`-Ereignishandler ein.  
   
      [!code-csharp[DLinqWalk4CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk4CS/cs/Form1.cs#3)]  
   
@@ -156,33 +156,33 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-Szenario 
   
 #### <a name="to-test-the-application"></a>So testen Sie die Anwendung  
   
-1.  Drücken Sie die Taste F5, um mit dem Debuggen zu beginnen.  
+1. Drücken Sie die Taste F5, um mit dem Debuggen zu beginnen.  
   
      Form1 wird angezeigt.  
   
-2.  In der **Enter OrderID** geben `10249`, und klicken Sie dann auf **Bestelldetails**.  
+2. In der **Enter OrderID** geben `10249`, und klicken Sie dann auf **Bestelldetails**.  
   
      Ein Meldungsfeld listet die in Bestellung 10249 enthaltenen Produkte auf.  
   
      Klicken Sie auf **OK** um das Meldungsfeld zu schließen.  
   
-3.  In der **Enter CustomerID** geben `ALFKI`, und klicken Sie dann auf **Bestellverlauf**.  
+3. In der **Enter CustomerID** geben `ALFKI`, und klicken Sie dann auf **Bestellverlauf**.  
   
      Ein Meldungsfeld mit der Bestellhistorie für den Kunden ALFKI wird angezeigt.  
   
      Klicken Sie auf **OK** um das Meldungsfeld zu schließen.  
   
-4.  In der **Enter OrderID** geben `123`, und klicken Sie dann auf **Bestelldetails**.  
+4. In der **Enter OrderID** geben `123`, und klicken Sie dann auf **Bestelldetails**.  
   
      Die Meldung "Keine Ergebnisse" erscheint.  
   
      Klicken Sie auf **OK** um das Meldungsfeld zu schließen.  
   
-5.  Auf der **Debuggen** Menü klicken Sie auf **Beenden des Debuggens**.  
+5. Auf der **Debuggen** Menü klicken Sie auf **Beenden des Debuggens**.  
   
      Die Debugsitzung schließt.  
   
-6.  Wenn Sie mit dem Experimentieren fertig sind, können Sie klicken **Projekt schließen** auf die **Datei** Menü, und speichern Sie das Projekt aus, wenn Sie aufgefordert werden.  
+6. Wenn Sie mit dem Experimentieren fertig sind, können Sie klicken **Projekt schließen** auf die **Datei** Menü, und speichern Sie das Projekt aus, wenn Sie aufgefordert werden.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie können dieses Projekt mit einigen Änderungen erweitern. Sie können beispielsweise die verfügbaren gespeicherten Prozeduren in einem Listenfeld aufführen, sodass der Benutzer diese auswählen kann. Sie könnten auch die Ausgabe von Berichten in eine Textdatei umleiten.  

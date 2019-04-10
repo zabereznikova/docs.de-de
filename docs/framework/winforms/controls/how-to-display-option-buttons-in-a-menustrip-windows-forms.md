@@ -9,12 +9,12 @@ helpviewer_keywords:
 - displaying option buttons [Windows Forms], MenuStrip [Windows Forms]
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
-ms.openlocfilehash: 61feda3f49c9a9e03a606c0284629f809d6876b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e764c7e181870d8faf6157cacc13164977ce2e3b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115530"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306234"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>Vorgehensweise: Anzeigen von Optionsfeldern in einem MenuStrip (Windows Forms)
 Optionsfelder, auch bekannt als die Optionsfelder, ähneln der Kontrollkästchen, mit dem Unterschied, dass Benutzer nur jeweils eine auswählen können. Zwar wird standardmäßig die <xref:System.Windows.Forms.ToolStripMenuItem> -Klasse keinen Optionsfeld-aus-Verhalten, das die Klasse bietet ein Kontrollkästchen-Verhalten, das Sie anpassen können, um das Implementieren des Verhaltens von Optionsfeldern für Menüelemente in einem <xref:System.Windows.Forms.MenuStrip> Steuerelement.  
@@ -25,46 +25,46 @@ Optionsfelder, auch bekannt als die Optionsfelder, ähneln der Kontrollkästchen
   
 ### <a name="to-implement-option-button-selection-behavior"></a>Zum Implementieren des Verhaltens von Optionsfeld-Auswahl  
   
-1.  Initialisieren der <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> Eigenschaft `true` Elementauswahl zu aktivieren.  
+1. Initialisieren der <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> Eigenschaft `true` Elementauswahl zu aktivieren.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#110](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#110)]
      [!code-vb[ToolStripRadioButtonMenuItem#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#110)]  
   
-2.  Überschreiben der <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> Methode, um die Auswahl der zuvor ausgewählten Elements zu löschen, wenn ein neues Element ausgewählt ist.  
+2. Überschreiben der <xref:System.Windows.Forms.ToolStripMenuItem.OnCheckedChanged%2A> Methode, um die Auswahl der zuvor ausgewählten Elements zu löschen, wenn ein neues Element ausgewählt ist.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#120](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#120)]
      [!code-vb[ToolStripRadioButtonMenuItem#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#120)]  
   
-3.  Überschreiben der <xref:System.Windows.Forms.ToolStripMenuItem.OnClick%2A> Methode, um sicherzustellen, dass beim Klicken auf ein Element, das bereits ausgewählt wurde, wird nicht die Auswahl gelöscht.  
+3. Überschreiben der <xref:System.Windows.Forms.ToolStripMenuItem.OnClick%2A> Methode, um sicherzustellen, dass beim Klicken auf ein Element, das bereits ausgewählt wurde, wird nicht die Auswahl gelöscht.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#130](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#130)]
      [!code-vb[ToolStripRadioButtonMenuItem#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#130)]  
   
 ### <a name="to-modify-the-appearance-of-the-option-button-items"></a>Zum Ändern der Darstellung der Optionsfeld-Elemente  
   
-1.  Überschreiben der <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> Methode, um das Standard-Häkchen ein Optionsfeld mit mit Ersetzen der <xref:System.Windows.Forms.RadioButtonRenderer> Klasse.  
+1. Überschreiben der <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> Methode, um das Standard-Häkchen ein Optionsfeld mit mit Ersetzen der <xref:System.Windows.Forms.RadioButtonRenderer> Klasse.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#140](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#140)]
      [!code-vb[ToolStripRadioButtonMenuItem#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#140)]  
   
-2.  Überschreiben der <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseEnter%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseLeave%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseDown%2A>, und <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseUp%2A> Methoden zum Nachverfolgen des Status der Maus, und stellen sicher, dass die <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> zeichnet den Status richtig Optionsfeld-Methode.  
+2. Überschreiben der <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseEnter%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseLeave%2A>, <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseDown%2A>, und <xref:System.Windows.Forms.ToolStripMenuItem.OnMouseUp%2A> Methoden zum Nachverfolgen des Status der Maus, und stellen sicher, dass die <xref:System.Windows.Forms.ToolStripMenuItem.OnPaint%2A> zeichnet den Status richtig Optionsfeld-Methode.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#150](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#150)]
      [!code-vb[ToolStripRadioButtonMenuItem#150](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#150)]  
   
 ### <a name="to-disable-options-on-a-submenu-when-the-parent-item-is-not-selected"></a>So deaktivieren Sie Optionen in einem Untermenü, wenn das übergeordnete Element nicht ausgewählt ist  
   
-1.  Außer Kraft setzen der <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> Eigenschaft so, dass das Element deaktiviert wird, wenn es sich um ein übergeordnetes Element mit sowohl hat eine <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> Wert `true` und ein <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> Wert `false`.  
+1. Außer Kraft setzen der <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A> Eigenschaft so, dass das Element deaktiviert wird, wenn es sich um ein übergeordnetes Element mit sowohl hat eine <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> Wert `true` und ein <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> Wert `false`.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#160](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#160)]
      [!code-vb[ToolStripRadioButtonMenuItem#160](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#160)]  
   
-2.  Überschreiben der <xref:System.Windows.Forms.ToolStripMenuItem.OnOwnerChanged%2A> Methode zum Abonnieren der <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> Ereignis des übergeordneten Elements.  
+2. Überschreiben der <xref:System.Windows.Forms.ToolStripMenuItem.OnOwnerChanged%2A> Methode zum Abonnieren der <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> Ereignis des übergeordneten Elements.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#170](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#170)]
      [!code-vb[ToolStripRadioButtonMenuItem#170](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#170)]  
   
-3.  Im Handler für den übergeordneten Elements <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> -Ereignis, das Element, um die Anzeige zu aktualisieren, mit dem neuen aktivierten Zustand ungültig.  
+3. Im Handler für den übergeordneten Elements <xref:System.Windows.Forms.ToolStripMenuItem.CheckedChanged> -Ereignis, das Element, um die Anzeige zu aktualisieren, mit dem neuen aktivierten Zustand ungültig.  
   
      [!code-csharp[ToolStripRadioButtonMenuItem#180](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#180)]
      [!code-vb[ToolStripRadioButtonMenuItem#180](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#180)]  

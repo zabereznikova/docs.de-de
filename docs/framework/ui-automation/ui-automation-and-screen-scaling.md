@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 8c2477e5e7086e1bbfaab1e4b116c9e6bb4e2d30
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194062"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332683"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Benutzeroberflächenautomatisierung und Bildschirmskalierung
 > [!NOTE]
@@ -58,14 +58,14 @@ ms.locfileid: "59194062"
   
  Die Lösung besteht aus zwei Teilen.  
   
-1.  Zunächst sorgen Sie dafür, dass die Clientanwendung mit [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-Werten kompatibel ist. Rufen Sie dazu die [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Funktion `SetProcessDPIAware` beim Start auf. Die folgende Deklaration stellt diese Funktion in verwaltetem Code zur Verfügung.  
+1. Zunächst sorgen Sie dafür, dass die Clientanwendung mit [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-Werten kompatibel ist. Rufen Sie dazu die [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Funktion `SetProcessDPIAware` beim Start auf. Die folgende Deklaration stellt diese Funktion in verwaltetem Code zur Verfügung.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      Diese Funktion wird der gesamte Prozess dpi-fähig ist, was bedeutet, dass alle an den Prozess gehörenden Fenster nicht skaliert werden werden. In der [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), z. B. die vier Fenster, die das hervorgehobene Rechteck bilden sich an den physischen Koordinaten, die aus der UI-Automatisierung, nicht an den logischen Koordinaten abgerufen werden. Wenn das Beispiel nicht dpi-bewusst wäre, würde die Hervorhebung an den logischen Koordinaten auf dem Desktop gezeichnet werden was zu falschen Platzierung in einer nicht-96-dpi-Umgebung führen würde.  
   
-2.  Rufen Sie die [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Funktion `GetPhysicalCursorPos`auf, um Cursorkoordinaten abzurufen. Im folgenden Beispiel wird das Deklarieren und Verwenden dieser Funktion veranschaulicht.  
+2. Rufen Sie die [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] -Funktion `GetPhysicalCursorPos`auf, um Cursorkoordinaten abzurufen. Im folgenden Beispiel wird das Deklarieren und Verwenden dieser Funktion veranschaulicht.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: 9a6b043420554e41d0804e32313b87f05cf54631
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f95274861f58d1581e4c5439861ebf186b1b3489
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160939"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332559"
 ---
 # <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>Vorgehensweise: Verwenden von separaten X.509-Zertifikaten zum Signieren und Verschlüsseln
 In diesem Thema zeigt, wie so konfigurieren Sie Windows Communication Foundation (WCF), um verschiedene Zertifikate für die nachrichtensignierung und-Verschlüsselung auf dem Client und dem Dienst verwendet wird.  
@@ -47,34 +47,34 @@ In diesem Thema zeigt, wie so konfigurieren Sie Windows Communication Foundation
   
 ### <a name="to-use-separate-certificates-for-signing-and-encryption"></a>So verwenden Sie separate Zertifikate für Signieren und Verschlüsselung  
   
-1.  Definieren Sie eine neue Clientanmeldeinformationen-Klasse, die von der <xref:System.ServiceModel.Description.ClientCredentials>-Klasse erbt. Implementieren Sie vier neue Eigenschaften, um die Angabe mehrerer Zertifikate zu ermöglichen: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` und `ServiceEncryptingCertificate`. Überschreiben Sie auch die <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A>-Methode, damit eine Instanz der im nächsten Schritt eingerichteten benutzerdefinierten <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>-Klasse zurückgegeben wird.  
+1. Definieren Sie eine neue Clientanmeldeinformationen-Klasse, die von der <xref:System.ServiceModel.Description.ClientCredentials>-Klasse erbt. Implementieren Sie vier neue Eigenschaften, um die Angabe mehrerer Zertifikate zu ermöglichen: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` und `ServiceEncryptingCertificate`. Überschreiben Sie auch die <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A>-Methode, damit eine Instanz der im nächsten Schritt eingerichteten benutzerdefinierten <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>-Klasse zurückgegeben wird.  
   
      [!code-csharp[c_FourCerts#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#1)]
      [!code-vb[c_FourCerts#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#1)]  
   
-2.  Definieren Sie einen neuen Clientsicherheitstoken-Manager, der von der <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>-Klasse erbt. Überschreiben Sie die <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>-Methode, um einen entsprechenden Sicherheitstokenanbieter zu erstellen. Der `requirement`-Parameter <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>) stellt die Nachrichtenrichtung und die Schlüsselverwendung zur Verfügung.  
+2. Definieren Sie einen neuen Clientsicherheitstoken-Manager, der von der <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>-Klasse erbt. Überschreiben Sie die <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>-Methode, um einen entsprechenden Sicherheitstokenanbieter zu erstellen. Der `requirement`-Parameter <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>) stellt die Nachrichtenrichtung und die Schlüsselverwendung zur Verfügung.  
   
      [!code-csharp[c_FourCerts#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#2)]
      [!code-vb[c_FourCerts#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#2)]  
   
-3.  Definieren Sie eine neue Dienstanmeldeinformationen-Klasse, die von der <xref:System.ServiceModel.Description.ServiceCredentials>-Klasse erbt. Implementieren Sie vier neue Eigenschaften, um die Angabe mehrerer Zertifikate zu ermöglichen: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` und `ServiceEncryptingCertificate`. Überschreiben Sie auch die <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A>-Methode, damit eine Instanz der im nächsten Schritt eingerichteten benutzerdefinierten <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>-Klasse zurückgegeben wird.  
+3. Definieren Sie eine neue Dienstanmeldeinformationen-Klasse, die von der <xref:System.ServiceModel.Description.ServiceCredentials>-Klasse erbt. Implementieren Sie vier neue Eigenschaften, um die Angabe mehrerer Zertifikate zu ermöglichen: `ClientSigningCertificate`, `ClientEncryptingCertificate`, `ServiceSigningCertificate` und `ServiceEncryptingCertificate`. Überschreiben Sie auch die <xref:System.ServiceModel.Description.ServiceCredentials.CreateSecurityTokenManager%2A>-Methode, damit eine Instanz der im nächsten Schritt eingerichteten benutzerdefinierten <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>-Klasse zurückgegeben wird.  
   
      [!code-csharp[c_FourCerts#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#3)]
      [!code-vb[c_FourCerts#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#3)]  
   
-4.  Definieren Sie einen neuen Dienstsicherheitstoken-Manager, der von der <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>-Klasse erbt. Überschreiben Sie die <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>-Methode, um anhand der angegebenen Nachrichtenrichtung und Schlüsselverwendung einen entsprechenden Sicherheitstokenanbieter zu erstellen.  
+4. Definieren Sie einen neuen Dienstsicherheitstoken-Manager, der von der <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>-Klasse erbt. Überschreiben Sie die <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A>-Methode, um anhand der angegebenen Nachrichtenrichtung und Schlüsselverwendung einen entsprechenden Sicherheitstokenanbieter zu erstellen.  
   
      [!code-csharp[c_FourCerts#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#4)]
      [!code-vb[c_FourCerts#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#4)]  
   
 ### <a name="to-use-multiple-certificates-on-the-client"></a>So verwenden Sie mehrere Zertifikate über den Client  
   
-1.  Erstellen Sie eine benutzerdefinierte Bindung. Das Sicherheitsbindungselement muss im Duplexmodus ausgeführt werden, damit für Anforderungen und Antworten verschiedene Sicherheitstokenanbieter zur Verfügung stehen können. Verwenden Sie dazu einen duplexfähigen Transport oder <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, wie im folgenden Code veranschaulicht. Verknüpfen Sie den angepassten <xref:System.ServiceModel.Security.IdentityVerifier>, der im nächsten Schritt definiert wird, mit dem Sicherheitsbindungselement. Ersetzen Sie die standardmäßigen Clientanmeldeinformationen mit den angepassten Clientanmeldeinformationen, die zuvor erstellt werden.  
+1. Erstellen Sie eine benutzerdefinierte Bindung. Das Sicherheitsbindungselement muss im Duplexmodus ausgeführt werden, damit für Anforderungen und Antworten verschiedene Sicherheitstokenanbieter zur Verfügung stehen können. Verwenden Sie dazu einen duplexfähigen Transport oder <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, wie im folgenden Code veranschaulicht. Verknüpfen Sie den angepassten <xref:System.ServiceModel.Security.IdentityVerifier>, der im nächsten Schritt definiert wird, mit dem Sicherheitsbindungselement. Ersetzen Sie die standardmäßigen Clientanmeldeinformationen mit den angepassten Clientanmeldeinformationen, die zuvor erstellt werden.  
   
      [!code-csharp[c_FourCerts#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#5)]
      [!code-vb[c_FourCerts#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#5)]  
   
-2.  Definieren Sie einen benutzerdefinierten <xref:System.ServiceModel.Security.IdentityVerifier>. Der Dienst verfügt über mehrere Identitäten, da zum Verschlüsseln der Anforderung und zum Signieren der Antwort verschiedene Zertifikate verwendet werden.  
+2. Definieren Sie einen benutzerdefinierten <xref:System.ServiceModel.Security.IdentityVerifier>. Der Dienst verfügt über mehrere Identitäten, da zum Verschlüsseln der Anforderung und zum Signieren der Antwort verschiedene Zertifikate verwendet werden.  
   
     > [!NOTE]
     >  Im folgenden Beispiel führt die zur Verfügung gestellte benutzerdefinierte Identitätsprüfung zu Demonstrationszwecken keine Überprüfung der Endpunktidentität durch. Dies ist keine empfohlene Vorgehensweise für Produktionscode.  
@@ -84,7 +84,7 @@ In diesem Thema zeigt, wie so konfigurieren Sie Windows Communication Foundation
   
 ### <a name="to-use-multiple-certificates-on-the-service"></a>So verwenden Sie mehrere Zertifikate für den Dienst  
   
-1.  Erstellen Sie eine benutzerdefinierte Bindung. Das Sicherheitsbindungselement muss im Duplexmodus ausgeführt werden, damit für Anforderungen und Antworten verschiedene Sicherheitstokenanbieter zur Verfügung stehen können. Verwenden Sie dazu ebenso wie mit dem Client einen duplexfähigen Transport oder <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, wie im folgenden Code veranschaulicht. Ersetzen Sie die standardmäßigen Dienstanmeldeinformationen mit den angepassten Dienstanmeldeinformationen, die zuvor erstellt werden.  
+1. Erstellen Sie eine benutzerdefinierte Bindung. Das Sicherheitsbindungselement muss im Duplexmodus ausgeführt werden, damit für Anforderungen und Antworten verschiedene Sicherheitstokenanbieter zur Verfügung stehen können. Verwenden Sie dazu ebenso wie mit dem Client einen duplexfähigen Transport oder <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>, wie im folgenden Code veranschaulicht. Ersetzen Sie die standardmäßigen Dienstanmeldeinformationen mit den angepassten Dienstanmeldeinformationen, die zuvor erstellt werden.  
   
      [!code-csharp[c_FourCerts#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_fourcerts/cs/source.cs#7)]
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  

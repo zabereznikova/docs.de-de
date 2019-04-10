@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f02c551c4382c9db03be2f4a0adbb9061fd4fe65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540753"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332507"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Vorgehensweise: Binden von Daten mit einer Projektdatenquelle (WCF Data Services)
 
@@ -23,11 +23,11 @@ Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in ein
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>Verwenden Sie eine Projektdatenquelle in einem WPF-Fenster
 
-1.  Fügen Sie einen Verweis auf die Northwind-Datendienst in Visual Studio in einem WPF-Projekt hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen ein Datendienstverweises](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
+1. Fügen Sie einen Verweis auf die Northwind-Datendienst in Visual Studio in einem WPF-Projekt hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen ein Datendienstverweises](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md).
 
-2.  In der **Datenquellen** Fenster, erweitern Sie die `Customers` Knoten in der **NorthwindEntities** Projektdatenquelle.
+2. In der **Datenquellen** Fenster, erweitern Sie die `Customers` Knoten in der **NorthwindEntities** Projektdatenquelle.
 
-3.  Klicken Sie auf die **"CustomerID"** Element, und wählen **"ComboBox"** aus der Liste aus, und ziehen Sie die **"CustomerID"** Element aus der **Kunden** Knoten aus, um die Designer.
+3. Klicken Sie auf die **"CustomerID"** Element, und wählen **"ComboBox"** aus der Liste aus, und ziehen Sie die **"CustomerID"** Element aus der **Kunden** Knoten aus, um die Designer.
 
      Die folgenden Objektelemente in der XAML-Datei für das Fenster werden erstellt:
 
@@ -37,7 +37,7 @@ Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in ein
 
     -   Ein <xref:System.Windows.Controls.Label>.
 
-4.  Ziehen Sie die **Bestellungen** Navigationseigenschaft in den Designer.
+4. Ziehen Sie die **Bestellungen** Navigationseigenschaft in den Designer.
 
      Die folgenden zusätzlichen Objektelemente in der XAML-Datei für das Fenster werden erstellt:
 
@@ -45,18 +45,18 @@ Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in ein
 
     -   Ein datengebundenes <xref:System.Windows.Controls.DataGrid>-Steuerelement mit dem Namen `ordersDataGrid`.
 
-5.  (Optional) Ziehen Sie zusätzliche Elemente aus der **Kunden** Knoten aus, um den Designer.
+5. (Optional) Ziehen Sie zusätzliche Elemente aus der **Kunden** Knoten aus, um den Designer.
 
-6.  Öffnen Sie die Codepage für das Formular, und fügen Sie die folgenden `using`-Anweisungen (`Imports` in Visual Basic) hinzu:
+6. Öffnen Sie die Codepage für das Formular, und fügen Sie die folgenden `using`-Anweisungen (`Imports` in Visual Basic) hinzu:
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
 
-7.  Fügen Sie in der partiellen Klasse, die das Formular definiert, den folgenden Code hinzu, mit dem eine <xref:System.Data.Objects.ObjectContext>-Instanz erstellt wird und die `customerID`-Konstante definiert wird.
+7. Fügen Sie in der partiellen Klasse, die das Formular definiert, den folgenden Code hinzu, mit dem eine <xref:System.Data.Objects.ObjectContext>-Instanz erstellt wird und die `customerID`-Konstante definiert wird.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
 
-8.  Wählen Sie im Designer das Fenster aus.
+8. Wählen Sie im Designer das Fenster aus.
 
     > [!NOTE]
     > Stellen Sie sicher, dass Sie das Fenster selbst und nicht Inhalt auszuwählen, der sich innerhalb des Fensters befindet. Wenn das Fenster ausgewählt ist, die **Namen** Textfeld am oberen Rand der **Eigenschaften** Fenster sollte der Name des Fensters enthalten.
@@ -76,9 +76,9 @@ Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in ein
 
 ## <a name="use-a-project-data-source-in-a-windows-form"></a>Verwenden Sie eine Projektdatenquelle in einem Windows-Formular
 
-1.  In der **Datenquellen** Fenster, erweitern Sie die **Kunden** Knoten in der **NorthwindEntities** Projektdatenquelle.
+1. In der **Datenquellen** Fenster, erweitern Sie die **Kunden** Knoten in der **NorthwindEntities** Projektdatenquelle.
 
-2.  Klicken Sie auf die **"CustomerID"** Element, und wählen **"ComboBox"** aus der Liste aus, und ziehen Sie die **"CustomerID"** Element aus der **Kunden** Knoten aus, um die Designer.
+2. Klicken Sie auf die **"CustomerID"** Element, und wählen **"ComboBox"** aus der Liste aus, und ziehen Sie die **"CustomerID"** Element aus der **Kunden** Knoten aus, um die Designer.
 
      Dadurch werden die folgenden Steuerelemente im Formular erstellt:
 
@@ -90,23 +90,23 @@ Sie können Datenquellen erstellen, die auf den generierten Datenobjekten in ein
 
     -   Ein <xref:System.Windows.Forms.Label>.
 
-3.  Ziehen Sie die **Bestellungen** -Navigationseigenschaft auf das Formular.
+3. Ziehen Sie die **Bestellungen** -Navigationseigenschaft auf das Formular.
 
-4.  Hirdurch wird das `ordersBindingSource`-Steuerelement mit der <xref:System.Windows.Forms.BindingSource.DataSource%2A>-Eigenschaft `customersBindingSource` und der <xref:System.Windows.Forms.BindingSource.DataMember%2A>-Eigenschaft `Customers` erstellt. Es wird auch das datengebundene `ordersDataGridView`-Steuerelement mit einem entsprechend bezeichneten Label-Steuerelement auf dem Formular erstellt.
+4. Hirdurch wird das `ordersBindingSource`-Steuerelement mit der <xref:System.Windows.Forms.BindingSource.DataSource%2A>-Eigenschaft `customersBindingSource` und der <xref:System.Windows.Forms.BindingSource.DataMember%2A>-Eigenschaft `Customers` erstellt. Es wird auch das datengebundene `ordersDataGridView`-Steuerelement mit einem entsprechend bezeichneten Label-Steuerelement auf dem Formular erstellt.
 
-5.  (Optional) Ziehen Sie zusätzliche Elemente aus der **Kunden** Knoten aus, um den Designer.
+5. (Optional) Ziehen Sie zusätzliche Elemente aus der **Kunden** Knoten aus, um den Designer.
 
-6.  Öffnen Sie die Codepage für das Formular, und fügen Sie die folgenden `using`-Anweisungen (`Imports` in Visual Basic) hinzu:
+6. Öffnen Sie die Codepage für das Formular, und fügen Sie die folgenden `using`-Anweisungen (`Imports` in Visual Basic) hinzu:
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersusing)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersusing)]
 
-7.  Fügen Sie in der partiellen Klasse, die das Formular definiert, den folgenden Code hinzu, mit dem eine <xref:System.Data.Objects.ObjectContext>-Instanz erstellt wird und die `customerID`-Konstante definiert wird.
+7. Fügen Sie in der partiellen Klasse, die das Formular definiert, den folgenden Code hinzu, mit dem eine <xref:System.Data.Objects.ObjectContext>-Instanz erstellt wird und die `customerID`-Konstante definiert wird.
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdefinition)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdefinition)]
 
-8.  Doppelklicken Sie im Formular-Designer auf das Formular.
+8. Doppelklicken Sie im Formular-Designer auf das Formular.
 
      Dadurch wird die Codeseite für das Formular geöffnet und die Methode erstellt, die das `Load`-Ereignis für das Formular behandelt.
 

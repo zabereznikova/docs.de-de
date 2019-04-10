@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: 9f0224a9360d7ce31a85883902c9668b4a1158b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: df6fe22eef338732c14d6f1ff56f25e6d1aa8a2a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119287"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332169"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Vorgehensweise: Erstellen Sie ein einfachen Windows Forms-ToolStrip mit Standardelementen mithilfe des Designers
 Das folgende Verfahren veranschaulicht, wie eine <xref:System.Windows.Forms.ToolStrip> und fügen Sie sieben <xref:System.Windows.Forms.ToolStripButton> Steuerelemente, die typische Aufgaben darstellen.  
@@ -22,11 +22,11 @@ Das folgende Verfahren veranschaulicht, wie eine <xref:System.Windows.Forms.Tool
   
 ### <a name="to-add-standard-items-in-the-designer"></a>Hinzufügen von Standardelementen im designer  
   
-1.  Erstellen Sie eine <xref:System.Windows.Forms.ToolStrip> Steuerelement.  
+1. Erstellen Sie eine <xref:System.Windows.Forms.ToolStrip> Steuerelement.  
   
-2.  In der oberen rechten Ecke des der <xref:System.Windows.Forms.ToolStrip>, klicken Sie auf den Pfeil Smarttask zum Anzeigen der **ToolStrip-Aufgaben** Bereich.  
+2. In der oberen rechten Ecke des der <xref:System.Windows.Forms.ToolStrip>, klicken Sie auf den Pfeil Smarttask zum Anzeigen der **ToolStrip-Aufgaben** Bereich.  
   
-3.  In der **ToolStrip-Aufgaben** Bereich wählen **Standardelemente einfügen**.  
+3. In der **ToolStrip-Aufgaben** Bereich wählen **Standardelemente einfügen**.  
   
 ## <a name="see-also"></a>Siehe auch
 
