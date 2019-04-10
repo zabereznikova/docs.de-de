@@ -1,17 +1,17 @@
 ---
-title: Bereitstellen Sie vorhandener .NET-Apps als Windows-Container
+title: Bereitstellen vorhandener .NET-Apps als Windows-Container
 description: Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern | Bereitstellen Sie vorhandener .NET-Apps als Windows-Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 646acc6fd14c1ff85593dbf6074f0d03d86f04bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143746"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216664"
 ---
-# <a name="deploy-existing-net-apps-as-windows-containers"></a>Bereitstellen Sie vorhandener .NET-Apps als Windows-Container
+# <a name="deploy-existing-net-apps-as-windows-containers"></a>Bereitstellen vorhandener .NET-Apps als Windows-Container
 
 Bereitstellungen, die auf Windows-Containern basieren, sind dies gilt für Cloudoptimierte Anwendungen und Native Cloudanwendungen.
 
@@ -103,7 +103,7 @@ Für .NET Core (Cross-Platform für Linux und Windows) würde die Tags wie folgt
 > | **Tag** | **System- und version**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | .NET Core 2.0 nur zur Laufzeit unter Linux |
-> | **Microsoft/dotnet:2.0.0-Runtime-nanoserver** | .NET Core 2.0 nur zur Laufzeit auf Windows Nano Server |
+> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET Core 2.0 nur zur Laufzeit auf Windows Nano Server |
 
 ### <a name="multi-arch-images"></a>Images für mehrere Architekturen
 
@@ -134,7 +134,6 @@ Ausführen eines Containers auf Windows, mit oder ohne Hyper-V-Isolierung ist ei
 -   **INFOGRAFIK: Microsoft und Container**
 
     [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
-
 
 ## <a name="the-container-ecosystem-in-azure"></a>Das Container-Ökosystem in Azure
 

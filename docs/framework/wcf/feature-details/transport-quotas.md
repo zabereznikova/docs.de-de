@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 0664dbb70df61c0f68d34c4ab364db6623805bfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174628"
 ---
 # <a name="transport-quotas"></a>Transportkontingente
 Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann eine Verbindung übermäßige Ressourcen belegt. Ein Kontingent ist eine harte Grenze, die eine Nutzung zusätzlicher Ressourcen nach Überschreiten des Kontingentwerts verhindert. Transportkontingente verhindern entweder böswillige oder unbeabsichtigte Denial-of-Service-Angriffe.  
@@ -30,7 +30,7 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
   
  Jede Kontingenteinstellung verfügt über einen Typ, einen minimalen Wert und einen Standardwert. Der Maximalwert eines Kontingents wird von seinem Typ beschränkt. Aufgrund von Computereinschränkungen ist es nicht immer möglich, ein Kontingent auf seinen Maximalwert festzulegen.  
   
-|name|Typ|Min.-<br /><br /> Wert|Standard<br /><br /> Wert|Beschreibung|  
+|Name|Typ|Min.-<br /><br /> Wert|Standard<br /><br /> Wert|Beschreibung|  
 |----------|----------|--------------------|-----------------------|-----------------|  
 |`ChannelInitializationTimeout`|TimeSpan|1 Teilstrich|5 Sek.|Maximale Zeit für das Warten darauf, dass eine Verbindung die Präambel während des anfänglichen Lesens sendet. Diese Daten werden empfangen, bevor die Authentifizierung eintritt. Diese Einstellung ist im Allgemeinen viel kleiner als der `ReceiveTimeout`-Kontingentwert.|  
 |`CloseTimeout`|TimeSpan|0|1 Min.|Maximale Zeit für das Warten darauf, dass eine Verbindung geschlossen wird, bevor der Transport eine Ausnahme auslöst.|  
@@ -59,7 +59,7 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
 ### <a name="controlling-transport-quotas-from-the-binding-element"></a>Kontrolle von Transportkontingenten vom Bindungselement  
  Das Festlegen von Transportkontingenten durch das Bindungselement bietet die größte Flexibilität in der Kontrolle des Transportverhaltens. Die Standardtimeouts für Schließen-, Öffnen-, Empfangs- und Sendevorgänge werden von der Bindung übernommen, wenn ein Kanal erstellt wird.  
   
-|name|HTTP|TCP/IP|Named Pipe|  
+|Name|HTTP|TCP/IP|Named Pipe|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||X|X|  
 |`CloseTimeout`||||  
@@ -81,7 +81,7 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
 ### <a name="controlling-transport-quotas-from-the-binding"></a>Kontrolle von Transportkontingenten von der Bindung  
  Die Einrichtung von Transportkontingenten durch die Bindung bietet einen vereinfachten Satz an Kontingenten, aus dem ausgesucht werden kann, während gleichzeitig der Zugriff auf die üblichsten Kontingentwerte aufrechterhalten bleibt.  
   
-|name|HTTP|TCP/IP|Named Pipe|  
+|Name|HTTP|TCP/IP|Named Pipe|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
 |`CloseTimeout`|X|X|X|  
@@ -108,6 +108,7 @@ Transportkontingente sind ein Richtlinienmechanismus für die Entscheidung, wann
  Die Anwendungskonfiguration kann die gleichen Transportkontingente festlegen, wie der direkte Zugriff auf Eigenschaften auf der Bindung . In Konfigurationsdateien beginnt der Name eines Transportkontingents immer mit einem Kleinbuchstaben. Beispielsweise entspricht die `CloseTimeout`-Eigenschaft auf einer Bindung der `closeTimeout`-Einstellung in der Konfiguration, und die `MaxConnections`-Eigenschaft auf einer Bindung entspricht der `maxConnections`-Einstellung in der Konfiguration.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

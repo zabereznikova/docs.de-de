@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <system.serviceModel> element
 - system.serviceModel element
 ms.assetid: 78519531-ad7a-40d3-b3e7-42f1103d8854
-ms.openlocfilehash: 7b0c91bafc14dee0d298a5cd31dc674f5002466a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c176f7f470cc65bb135e5f92935102e09c7e8485
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209826"
 ---
 # <a name="systemservicemodel"></a>\<system.serviceModel>
 Dieser Konfigurationsabschnitt enthält alle Elemente der Windows Communication Foundation (WCF)-ServiceModel-Konfiguration.  
@@ -55,7 +55,7 @@ Dieser Konfigurationsabschnitt enthält alle Elemente der Windows Communication 
  In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.  
   
 ### <a name="attributes"></a>Attribute  
- Keine  
+ Keiner  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
   
@@ -128,4 +128,5 @@ Dieser Konfigurationsabschnitt enthält alle Elemente der Windows Communication 
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceModel.Configuration.ServiceModelSectionGroup>

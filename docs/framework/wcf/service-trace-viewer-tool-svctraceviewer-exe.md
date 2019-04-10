@@ -2,12 +2,12 @@
 title: Service Trace Viewer-Tool (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680385"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213388"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Service Trace Viewer-Tool (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) Service Trace Viewer-Tool können Sie die Analyse der diagnoseablaufverfolgungen, die von WCF generiert werden. Service Trace Viewer bietet eine Möglichkeit, ganz einfach zusammenführen, anzeigen und Filtern von Ablaufverfolgungsnachrichten im Protokoll, damit können Sie diagnostizieren, reparieren und prüfen die WCF-Dienstprobleme.  
@@ -456,6 +456,7 @@ Ab .NET Framework 4.8, werden in die richtige Farbe Kombinationsfeld-Steuereleme
  Wenn Sie ein in einem arabischen Betriebssystem erstelltes Ablaufverfolgungsprotokoll öffnen, stellen Sie unter Umständen fest, dass der Zeitfilter nicht funktioniert. Zum Beispiel entspricht das Jahr 2005 dem Jahr 1427 im arabischen Kalender. Der Filter des Service Trace Viewer-Tools unterstützt jedoch keine Jahresangabe vor 1752. Dies kann dazu führen, dass Sie kein korrektes Datum im Filter auswählen können. Um dieses Problem zu beheben, können Sie einen benutzerdefinierten Filter erstellen (**Ansicht/benutzerdefinierte Filter**) mithilfe eines XPath-Ausdrucks auf einen bestimmten Zeitbereich abzudecken.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+
+- [Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [Konfigurieren der Ablaufverfolgung](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [End-to-End-Ablaufverfolgung](./diagnostics/tracing/end-to-end-tracing.md)

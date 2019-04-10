@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-ms.openlocfilehash: 689094bda355f095c30d6cc2a462e6d0e630753b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9aa0d33b3cb2c15ba9c1cb7e7d7be9a3125f66d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378196"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162710"
 ---
 # <a name="richtextbox-overview"></a>Übersicht über RichTextBox
 Die <xref:System.Windows.Controls.RichTextBox> -Steuerelement können Sie zum Anzeigen oder Bearbeiten von fortlaufenden Inhalt wie Absätze, Bilder, Tabellen und vieles mehr. In diesem Thema werden die <xref:System.Windows.Controls.TextBox> -Klasse und stellt Beispiele für die Verwendung in beiden [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] und C#.  
-  
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox oder RichTextBox?  
  Beide <xref:System.Windows.Controls.RichTextBox> und <xref:System.Windows.Controls.TextBox> Benutzerberechtigungen zum Bearbeiten von Text, jedoch die beiden Steuerelemente in verschiedenen Szenarien verwendet werden. Ein <xref:System.Windows.Controls.RichTextBox> ist eine bessere Wahl, wenn der Benutzer formatierten Text, Bilder, Tabellen oder andere umfangreiche Inhalte bearbeiten muss. Z. B. Bilder bearbeiten ein Dokument, Artikel oder Blogs, die Formatierung, erforderlich sind, usw. erfolgt am besten mithilfe einer <xref:System.Windows.Controls.RichTextBox>. Ein <xref:System.Windows.Controls.TextBox> benötigt weniger Systemressourcen und dann eine <xref:System.Windows.Controls.RichTextBox> und eignet sich ideal, wenn nur nur-Text sein muss (d. h. die Verwendung in Formularen) bearbeitet. Finden Sie unter [Übersicht über TextBox](textbox-overview.md) für Weitere Informationen zu <xref:System.Windows.Controls.TextBox>. In der folgenden Tabelle werden die Hauptfunktionen von <xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.RichTextBox>.  
@@ -95,5 +94,6 @@ Die <xref:System.Windows.Controls.RichTextBox> -Steuerelement können Sie zum An
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Themen zu Vorgehensweisen](richtextbox-how-to-topics.md)
+
+- [Gewusst wie-Themen](richtextbox-how-to-topics.md)
 - [Übersicht über TextBox](textbox-overview.md)
