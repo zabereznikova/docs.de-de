@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: 92939f1bdddaca1d743116a4ae4ee9da657abf19
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725362"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333573"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Vorgehensweise: Formatieren des DataGrid-Steuerelements in Windows Forms mithilfe des Designers
 
@@ -40,9 +40,9 @@ ms.locfileid: "57725362"
   
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>Herstellen einen Standardstil für das DataGrid-Steuerelement  
   
-1.  Wählen Sie das <xref:System.Windows.Forms.DataGrid>-Steuerelement.  
+1. Wählen Sie das <xref:System.Windows.Forms.DataGrid>-Steuerelement.  
   
-2.  In der **Eigenschaften** legen die folgenden Eigenschaften, nach Bedarf.  
+2. In der **Eigenschaften** legen die folgenden Eigenschaften, nach Bedarf.  
   
     |Eigenschaft|Beschreibung|  
     |--------------|-----------------|  
@@ -77,21 +77,21 @@ ms.locfileid: "57725362"
 
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>Den Tabellen und Spalten einer Datentabelle zur Entwurfszeit fest
 
-1.  Wählen Sie die <xref:System.Windows.Forms.DataGrid> Steuerelement auf Ihrem Formular.
+1. Wählen Sie die <xref:System.Windows.Forms.DataGrid> Steuerelement auf Ihrem Formular.
 
-2.  In der **Eigenschaften** wählen Sie im Fenster der <xref:System.Windows.Forms.DataGrid.TableStyles%2A> -Eigenschaft, und klicken Sie auf die **Auslassungspunkte** (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png " VbEllipsesButton")) Schaltfläche.
+2. In der **Eigenschaften** wählen Sie im Fenster der <xref:System.Windows.Forms.DataGrid.TableStyles%2A> -Eigenschaft, und klicken Sie auf die **Auslassungspunkte** (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png " VbEllipsesButton")) Schaltfläche.
 
-3.  In der **DataGridTableStyle Auflistungs-Editor** Dialogfeld klicken Sie auf **hinzufügen** ein Tabellenformat in der Auflistung hinzu.
+3. In der **DataGridTableStyle Auflistungs-Editor** Dialogfeld klicken Sie auf **hinzufügen** ein Tabellenformat in der Auflistung hinzu.
 
      Mit der **DataGridTableStyle Auflistungs-Editor**, können Sie hinzufügen und entfernen Tabellenformate, Set-Anzeige und Layout-Eigenschaften und Set benennen Sie die Zuordnung für die Tabellenformate.
 
-4.  Legen Sie die <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> -Eigenschaft auf den Zuordnungsnamen für jede Tabellenformat.
+4. Legen Sie die <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> -Eigenschaft auf den Zuordnungsnamen für jede Tabellenformat.
 
      Der Zuordnungsname wird verwendet, um anzugeben, welche das Format der Tabelle verwendet werden soll.
 
-5.  In der **DataGridTableStyle Auflistungs-Editor**, wählen die <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> Eigenschaft, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton ")).
+5. In der **DataGridTableStyle Auflistungs-Editor**, wählen die <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> Eigenschaft, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton ")).
 
-6.  In der **DataGridColumnStyle Auflistungs-Editor** Dialogfeld Feld, Spaltenformate hinzufügen, um das Tabellenformat, das Sie erstellt haben.
+6. In der **DataGridColumnStyle Auflistungs-Editor** Dialogfeld Feld, Spaltenformate hinzufügen, um das Tabellenformat, das Sie erstellt haben.
 
      Mit der **DataGridColumnStyle Auflistungs-Editor**, Sie können hinzufügen und entfernen Sie Spaltenformate, legen Sie Eigenschaften für Anzeige- und Layoutinformationen und legen Sie den Zuordnungsnamen und Formatierung von Zeichenfolgen für die Daten Spalten.
 
@@ -103,5 +103,5 @@ ms.locfileid: "57725362"
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [Vorgehensweise: Löschen oder Ausblenden von Spalten im DataGrid-Steuerelement in Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Vorgehensweise: Löschen oder Ausblenden von Spalten aus dem DataGrid-Steuerelement in Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)

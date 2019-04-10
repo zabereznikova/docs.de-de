@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 62309bb9965d1aa538e211dc66c44876671e0242
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 671e37c7d6dc40046d6d717d7785b03b6b545c7e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134978"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333677"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Mausereignisse in Windows Forms
 Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Mauszeigers und den Zustand der Maustasten kennen. Dieses Thema enthält Details zum Abrufen dieser Informationen von Mausereignissen und erörtert die Reihenfolge, in der Mausklickereignisse in Windows Forms-Steuerelementen ausgelöst werden. Eine Liste und Beschreibung aller von den Mausereignissen, finden Sie unter [Maus Funktionsweise in Windows Forms](how-mouse-input-works-in-windows-forms.md).  Siehe auch [Übersicht über Ereignishandler (Windows Forms)](event-handlers-overview-windows-forms.md) und [Events Overview (Windows Forms)](events-overview-windows-forms.md).  
@@ -36,31 +36,31 @@ Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Maus
 ## <a name="standard-click-event-behavior"></a>Standardverhalten bei Mausklickereignissen  
  Wenn Sie Mausklickereignisse in der richtigen Reihenfolge behandeln möchten, müssen Sie die Reihenfolge kennen, in der Mausklickereignisse in Windows Forms-Steuerelementen ausgelöst werden. Wenn eine Maustaste gedrückt und wieder losgelassen wird (unabhängig davon, um welche Maustaste es sich handelt), lösen alle Windows Forms-Steuerelemente Mausklickereignisse in derselben Reihenfolge aus. In der folgenden Liste ist die Reihenfolge der Ereignisse aufgeführt, die bei einem einzelnen Mausklick ausgelöst werden:  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> Ereignis.  
+1. <xref:System.Windows.Forms.Control.MouseDown> Ereignis.  
   
-2.  <xref:System.Windows.Forms.Control.Click> Ereignis.  
+2. <xref:System.Windows.Forms.Control.Click> Ereignis.  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> Ereignis.  
+3. <xref:System.Windows.Forms.Control.MouseClick> Ereignis.  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> Ereignis.  
+4. <xref:System.Windows.Forms.Control.MouseUp> Ereignis.  
   
  In der folgenden Liste ist die Reihenfolge der Ereignisse aufgeführt, die bei einem Doppelklick mit der Maus ausgelöst werden:  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> Ereignis.  
+1. <xref:System.Windows.Forms.Control.MouseDown> Ereignis.  
   
-2.  <xref:System.Windows.Forms.Control.Click> Ereignis.  
+2. <xref:System.Windows.Forms.Control.Click> Ereignis.  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> Ereignis.  
+3. <xref:System.Windows.Forms.Control.MouseClick> Ereignis.  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> Ereignis.  
+4. <xref:System.Windows.Forms.Control.MouseUp> Ereignis.  
   
-5.  <xref:System.Windows.Forms.Control.MouseDown> Ereignis.  
+5. <xref:System.Windows.Forms.Control.MouseDown> Ereignis.  
   
-6.  <xref:System.Windows.Forms.Control.DoubleClick> Ereignis. (Dies kann abhängig davon variieren, ob für das betreffende Steuerelement das <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick>-Stilbit auf `true` festgelegt ist. Weitere Informationen zum Festlegen eines <xref:System.Windows.Forms.ControlStyles>-Bits finden Sie unter der <xref:System.Windows.Forms.Control.SetStyle%2A>-Methode.)  
+6. <xref:System.Windows.Forms.Control.DoubleClick> Ereignis. (Dies kann abhängig davon variieren, ob für das betreffende Steuerelement das <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick>-Stilbit auf `true` festgelegt ist. Weitere Informationen zum Festlegen eines <xref:System.Windows.Forms.ControlStyles>-Bits finden Sie unter der <xref:System.Windows.Forms.Control.SetStyle%2A>-Methode.)  
   
-7.  <xref:System.Windows.Forms.Control.MouseDoubleClick> Ereignis.  
+7. <xref:System.Windows.Forms.Control.MouseDoubleClick> Ereignis.  
   
-8.  <xref:System.Windows.Forms.Control.MouseUp> Ereignis.  
+8. <xref:System.Windows.Forms.Control.MouseUp> Ereignis.  
   
  Klicken Sie auf Ereignisse, ein Codebeispiel, das die Reihenfolge der Mausklickereignisse veranschaulicht, finden Sie unter [Vorgehensweise: Behandeln von Benutzereingabeereignissen in Windows Forms-Steuerelementen](how-to-handle-user-input-events-in-windows-forms-controls.md).  
   
@@ -122,21 +122,21 @@ Wenn Sie Mauseingaben behandeln, möchten Sie in der Regel die Position des Maus
 ### <a name="painting-behavior-of-toggle-controls"></a>Zeichnungsverhalten umschaltbarer Steuerelemente  
  Umschaltbare Steuerelemente, wie die Steuerelemente, die von der <xref:System.Windows.Forms.ButtonBase>-Klasse abgeleitet werden, weisen bei Mausklickereignissen das folgende Zeichnungsverhalten auf:  
   
-1.  Der Benutzer drückt die Maustaste.  
+1. Der Benutzer drückt die Maustaste.  
   
-2.  Das Steuerelement zeichnet im gedrückten Zustand.  
+2. Das Steuerelement zeichnet im gedrückten Zustand.  
   
-3.  Das <xref:System.Windows.Forms.Control.MouseDown>-Ereignis wird ausgelöst.  
+3. Das <xref:System.Windows.Forms.Control.MouseDown>-Ereignis wird ausgelöst.  
   
-4.  Der Benutzer lässt die Maustaste los.  
+4. Der Benutzer lässt die Maustaste los.  
   
-5.  Das Steuerelement zeichnet im erhöhten Zustand.  
+5. Das Steuerelement zeichnet im erhöhten Zustand.  
   
-6.  Das <xref:System.Windows.Forms.Control.Click>-Ereignis wird ausgelöst.  
+6. Das <xref:System.Windows.Forms.Control.Click>-Ereignis wird ausgelöst.  
   
-7.  Das <xref:System.Windows.Forms.Control.MouseClick>-Ereignis wird ausgelöst.  
+7. Das <xref:System.Windows.Forms.Control.MouseClick>-Ereignis wird ausgelöst.  
   
-8.  Das <xref:System.Windows.Forms.Control.MouseUp>-Ereignis wird ausgelöst.  
+8. Das <xref:System.Windows.Forms.Control.MouseUp>-Ereignis wird ausgelöst.  
   
     > [!NOTE]
     >  Wenn der Benutzer den Mauszeiger bei gedrückter Maustaste aus dem umschaltbaren Steuerelement bewegt (z. B. wenn er die Maus bei gedrückter Maustaste vom <xref:System.Windows.Forms.Button>-Steuerelement weg bewegt), zeichnet das umschaltbare Steuerelement im erhöhten Zustand, und es tritt nur das <xref:System.Windows.Forms.Control.MouseUp>-Ereignis auf. Das <xref:System.Windows.Forms.Control.Click>-Ereignis oder das <xref:System.Windows.Forms.Control.MouseClick>-Ereignis tritt in dieser Situation nicht auf.  

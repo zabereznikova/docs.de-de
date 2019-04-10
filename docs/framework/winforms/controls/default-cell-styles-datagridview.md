@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 0e5664707d12fd45c73f3585d07660fc732965fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179893"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333612"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>Vorgehensweise: Festlegen von standardmäßigen Zellenstilen und Datenformaten für das DataGridView-Steuerelement in Windows Forms mithilfe des Designers
 Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Angeben von standardmäßigen Zellenstilen und Datenformaten für das gesamte Steuerelement, für bestimmte Spalten, für die Zeilen- und Spaltenüberschriften und für abwechselnde Zeilen, um einen Ledger-Effekt zu erstellen von Zellen. Die Standardstile für das gesamte Steuerelement festgelegt werden standardmäßig überschrieben, die Stile für abwechselnde Zeilen und Spalten festgelegt. Stile, die Sie im Code für die einzelnen Zeilen und Zellen festlegen wird darüber hinaus die Standardstile überschreiben.  
@@ -28,11 +28,11 @@ Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Ange
   
 ### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>Um die Standardstile für alle Zellen im Steuerelement festgelegt.  
   
-1.  Wählen Sie die <xref:System.Windows.Forms.DataGridView> Steuerelement im Designer.  
+1. Wählen Sie die <xref:System.Windows.Forms.DataGridView> Steuerelement im Designer.  
   
-2.  In der **Eigenschaften** Fenster, klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, oder <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> Eigenschaft. Die **CellStyle-Generator** Dialogfeld wird angezeigt.  
+2. In der **Eigenschaften** Fenster, klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>, <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>, oder <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> Eigenschaft. Die **CellStyle-Generator** Dialogfeld wird angezeigt.  
   
-3.  Definieren Sie durch Festlegen der Eigenschaften, die über den Stil der **Vorschau** Bereich, um Ihre Auswahl zu bestätigen.  
+3. Definieren Sie durch Festlegen der Eigenschaften, die über den Stil der **Vorschau** Bereich, um Ihre Auswahl zu bestätigen.  
   
 > [!NOTE]
 >  Wenn visuelle Stile aktiviert sind, die Zeilen- und Spaltenüberschriften (mit Ausnahme der <xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) automatisch angewendet, das aktuelle Design, das Überschreiben der <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A> und <xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A> Eigenschaftswerte.  
@@ -41,23 +41,23 @@ Die <xref:System.Windows.Forms.DataGridView> -Steuerelement können Sie das Ange
   
 ### <a name="to-set-default-styles-for-cells-in-individual-columns"></a>Standard-Formate für Zellen in den einzelnen Spalten festlegen  
   
-1.  Mit der rechten Maustaste die <xref:System.Windows.Forms.DataGridView> steuern im Designer, und wählen Sie **Spalten bearbeiten**.  
+1. Mit der rechten Maustaste die <xref:System.Windows.Forms.DataGridView> steuern im Designer, und wählen Sie **Spalten bearbeiten**.  
   
-2.  Wählen Sie eine Spalte aus der **Selected Columns** Liste.  
+2. Wählen Sie eine Spalte aus der **Selected Columns** Liste.  
   
-3.  In der **Spalteneigenschaften** Raster klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> Eigenschaft. Die **CellStyle-Generator** Dialogfeld wird angezeigt.  
+3. In der **Spalteneigenschaften** Raster klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> Eigenschaft. Die **CellStyle-Generator** Dialogfeld wird angezeigt.  
   
-4.  Definieren Sie durch Festlegen der Eigenschaften, die über den Stil der **Vorschau** Bereich, um Ihre Auswahl zu bestätigen.  
+4. Definieren Sie durch Festlegen der Eigenschaften, die über den Stil der **Vorschau** Bereich, um Ihre Auswahl zu bestätigen.  
   
 ### <a name="to-format-data-in-cells"></a>So formatieren Sie Daten in Zellen  
   
-1.  Verwenden Sie eine der vorangehenden Verfahren zum Anzeigen einer **CellStyle-Generator** Dialogfeld im Zusammenhang mit der eine standardmäßige Zelle Style-Eigenschaft.  
+1. Verwenden Sie eine der vorangehenden Verfahren zum Anzeigen einer **CellStyle-Generator** Dialogfeld im Zusammenhang mit der eine standardmäßige Zelle Style-Eigenschaft.  
   
-2.  In der **CellStyle-Generator** Dialogfeld klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> Diese Eigenschaft. Die **Formatzeichenfolge** Dialogfeld wird angezeigt.  
+2. In der **CellStyle-Generator** Dialogfeld klicken Sie auf die Schaltfläche mit den Auslassungspunkten (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben dem <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> Diese Eigenschaft. Die **Formatzeichenfolge** Dialogfeld wird angezeigt.  
   
-3.  Wählen Sie einen Formattyp aus, und ändern Sie die Details des Typs (z. B. die Anzahl der anzuzeigenden Dezimalstellen), mit der **Beispiel** Feld, um Ihre Auswahl zu bestätigen.  
+3. Wählen Sie einen Formattyp aus, und ändern Sie die Details des Typs (z. B. die Anzahl der anzuzeigenden Dezimalstellen), mit der **Beispiel** Feld, um Ihre Auswahl zu bestätigen.  
   
-4.  Wenn Sie binden die <xref:System.Windows.Forms.DataGridView> Steuerelement mit einer Datenquelle, die wahrscheinlich zu null-Werte enthalten, geben Sie die **Null-Wert** Textfeld. Dieser Wert wird angezeigt, wenn der Wert der Zelle ein null-Verweis entspricht (`Nothing` in Visual Basic) oder <xref:System.DBNull.Value?displayProperty=nameWithType>.  
+4. Wenn Sie binden die <xref:System.Windows.Forms.DataGridView> Steuerelement mit einer Datenquelle, die wahrscheinlich zu null-Werte enthalten, geben Sie die **Null-Wert** Textfeld. Dieser Wert wird angezeigt, wenn der Wert der Zelle ein null-Verweis entspricht (`Nothing` in Visual Basic) oder <xref:System.DBNull.Value?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Siehe auch
 
