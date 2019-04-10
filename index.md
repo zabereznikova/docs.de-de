@@ -6,12 +6,12 @@ title: .NET-Dokumentation
 description: Erfahren Sie, wie Sie mit .NET eine Vielzahl von Anwendungen auf jeder Plattform mit C#, Visual Basic und F# erstellen können. Durchsuchen Sie die API-Referenz, Beispielcode, Tutorials und vieles mehr.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 132cab6f7c196f88fdc02259e55d0fcb5fbbfd10
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: de-DE
 ms.lasthandoff: 04/09/2019
-ms.locfileid: "59297265"
+ms.locfileid: "59427486"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -231,8 +231,8 @@ ms.locfileid: "59297265"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning">Leitfaden für ML.NET</a></h3>
-                                                <p><a href="/dotnet/machine-learning/index#tutorials">Tutorials</a></p>
-                                                <p><a href="/dotnet/machine-learning/index#resources">Ressourcen</a></p>
+                                                <p><a href="/dotnet/machine-learning/tutorials">Tutorials</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources">Ressourcen</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">Glossar</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">ML.NET-API-Referenz</a></p>
                                             </div>

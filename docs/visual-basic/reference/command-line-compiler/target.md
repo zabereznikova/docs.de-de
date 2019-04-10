@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: 69312ca3512c5407185df11e66d95ce9f5cdddff
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c91e69e3d9f17f758990b8385f6b8d0a1c03bef6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412291"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344740"
 ---
 # <a name="-target-visual-basic"></a>-Target (Visual Basic)
 Gibt das Format der Ausgabe des Compilers.  
@@ -25,7 +25,7 @@ Gibt das Format der Ausgabe des Compilers.
 ## <a name="remarks"></a>Hinweise  
  Der folgenden Tabelle werden die Auswirkungen der `-target` Option.  
   
-|**Option**|**Behavior class (Behavior-Klasse)**|  
+|**Option**|**Verhalten**|  
 |----------------|------------------|  
 |`-target:exe`|Bewirkt, dass der Compiler eine ausführbare Konsolenanwendung zu erstellen.<br /><br /> Dies ist die Standardoption, wenn kein `-target` angegeben wird. Die ausführbare Datei wird mit der Erweiterung .exe erstellt.<br /><br /> Sofern nicht anders angegeben mit der `/out` Option den Namen der Ausgabedatei erhält den Namen der Eingabedatei, die enthält die `Sub Main` Verfahren.<br /><br /> Nur ein `Sub Main` Prozedur ist erforderlich. in den Quellcodedateien, die in eine .exe-Datei kompiliert werden. Verwenden der `-main` Compileroption, um anzugeben, welche Klasse enthält die `Sub Main` Verfahren.|  
 |`-target:library`|Bewirkt, dass den Compiler eine Dynamic Link Library (DLL) erstellt.<br /><br /> Die Dynamic Link Library-Datei wird mit der Erweiterung ".dll" erstellt.<br /><br /> Sofern nicht anders angegeben mit der `-out` Option den Namen der Ausgabedatei erhält den Namen der ersten Eingabedatei.<br /><br /> Beim Erstellen einer DLL ein `Sub Main` Verfahren ist nicht erforderlich.|  
@@ -42,11 +42,11 @@ Gibt das Format der Ausgabe des Compilers.
   
 ### <a name="to-set--target-in-the-visual-studio-ide"></a>Um die set - Ziel, in der Visual Studio-IDE  
   
-1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.   
+1. Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.   
   
-2.  Klicken Sie auf die Registerkarte **Anwendung** .  
+2. Klicken Sie auf die Registerkarte **Anwendung** .  
   
-3.  Ändern Sie den Wert in der **Anwendungstyp** Feld.  
+3. Ändern Sie den Wert in der **Anwendungstyp** Feld.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende code kompiliert `in.vb`, wodurch `in.dll`:  

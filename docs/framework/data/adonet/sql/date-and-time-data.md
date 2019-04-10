@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: a4bbed1f115ef5cfb6b7b63156f2d84b071cf224
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127113"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344173"
 ---
 # <a name="date-and-time-data"></a>Datums- und Zeitdaten
 SQL Server 2008 enthält neue Datentypen zur Behandlung von Datums- und Uhrzeitinformationen. Die neuen Datentypen beinhalten separate Typen für Datum und Uhrzeit sowie erweiterte Datentypen mit einem größerem Bereich, höherer Präzision und Zeitzonenermittlung. Ab .NET Framework Version 3.5 Service Pack (SP) 1 bietet der .NET Framework-Datenanbieter für SQL Server (<xref:System.Data.SqlClient>) vollständige Unterstützung für alle neuen Funktionen der SQL Server 2008-Datenbank-Engine. Sie müssen .NET Framework 3.5 SP1 (oder höher) installieren, um diese neuen Funktionen mit SqlClient zu verwenden.  
@@ -21,7 +21,7 @@ SQL Server 2008 enthält neue Datentypen zur Behandlung von Datums- und Uhrzeiti
   
  **SQL Server-Onlinedokumentation**  
   
-1.  [Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkID=98361)  
+1. [Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Neue Datums-/Uhrzeitdaten in SQL Server 2008  
  In der folgenden Tabelle werden die neuen Datums- und Uhrzeitdatentypen beschrieben.  

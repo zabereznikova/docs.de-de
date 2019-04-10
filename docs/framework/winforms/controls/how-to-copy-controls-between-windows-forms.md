@@ -5,19 +5,19 @@ helpviewer_keywords:
 - Windows Forms controls, copying
 - controls [Windows Forms], copying
 ms.assetid: 106c1eb2-1fba-4f69-b2ec-9ea3fa182f1e
-ms.openlocfilehash: 7aa858e7c7215c589d9e39412ef20ec81a1a4239
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8a60dd4c5fc80af46b1552e99abbba37a8a390af
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075782"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345611"
 ---
 # <a name="how-to-copy-controls-between-windows-forms"></a>Vorgehensweise: Kopieren von Steuerelementen zwischen Windows Forms
 Ein Steuerelement kann auf die gleiche Form, auf eine andere Form innerhalb des Projekts oder in die Zwischenablage zur Verwendung in anderen Lösungen kopiert werden.  
   
 ### <a name="to-copy-a-control"></a>Kopieren eines Steuerelements  
   
-1.  Wählen Sie das Steuerelement, und von der **bearbeiten** Menü **Kopie**.  
+1. Wählen Sie das Steuerelement, und von der **bearbeiten** Menü **Kopie**.  
   
  Dieses Steuerelement kann jetzt auf keinerlei eingefügt werden, die diese Art von Steuerelement akzeptiert. Darüber hinaus wurde das Steuerelement in die Zwischenablage hinzugefügt.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122238"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345520"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>Delegierung und Identitätswechsel mit WCF
 Der*Identitätswechsel* ist ein gängiges Verfahren, das Dienste verwenden, um den Clientzugriff auf die Ressourcen einer Dienstdomäne zu beschränken. Dienstdomänenressourcen können entweder Computerressourcen, wie lokale Dateien (Identitätswechsel), oder eine Ressource auf einem anderen Computer, z. B. eine Dateifreigabe (Delegierung), sein. Eine Beispielanwendung finden Sie unter [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md). Ein Beispiel zur Verwendung von Identitätswechsel finden Sie unter [Vorgehensweise: Annehmen der Clientidentität für einen Dienst](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md).  
@@ -191,13 +191,13 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>Konfigurieren einer Anwendung für die Verwendung der eingeschränkten Delegierung  
  Die eingeschränkte Delegierung kann erst verwendet werden, nachdem Absender, Empfänger und Domänencontroller entsprechend konfiguriert wurden. Die folgende Prozedur listet die Schritte auf, die eine eingeschränkte Delegierung ermöglichen. Nähere Angaben zu den Unterschieden zwischen Delegierung und eingeschränkter Delegierung finden Sie in dem Abschnitt unter [Windows Server 2003 Kerberos Extensions](https://go.microsoft.com/fwlink/?LinkId=100194) , der sich mit eingeschränkter Delegierung befasst (Seite möglicherweise auf Englisch).  
   
-1.  Deaktivieren Sie auf dem Domänencontroller das Kontrollkästchen **Konto ist vertraulich und kann nicht delegiert werden** für das Konto, unter dem die Clientanwendung ausgeführt wird.  
+1. Deaktivieren Sie auf dem Domänencontroller das Kontrollkästchen **Konto ist vertraulich und kann nicht delegiert werden** für das Konto, unter dem die Clientanwendung ausgeführt wird.  
   
-2.  Aktivieren Sie auf dem Domänencontroller das Kontrollkästchen **Konto wird für Delegierungszwecke vertraut** für das Konto, unter dem die Clientanwendung ausgeführt wird.  
+2. Aktivieren Sie auf dem Domänencontroller das Kontrollkästchen **Konto wird für Delegierungszwecke vertraut** für das Konto, unter dem die Clientanwendung ausgeführt wird.  
   
-3.  Konfigurieren Sie auf dem Domänencontroller den Computer der mittleren Schicht, sodass diesem für Delegierungszwecke vertraut wird, indem Sie auf die Option **Computer für Delegierungszwecke vertrauen** klicken.  
+3. Konfigurieren Sie auf dem Domänencontroller den Computer der mittleren Schicht, sodass diesem für Delegierungszwecke vertraut wird, indem Sie auf die Option **Computer für Delegierungszwecke vertrauen** klicken.  
   
-4.  Konfigurieren Sie auf dem Domänencontroller den Computer der mittleren Schicht für die Verwendung der eingeschränkten Delegierung, indem Sie auf die Option **Computer nur für Delegierungszwecke angegebener Dienste vertrauen** klicken.  
+4. Konfigurieren Sie auf dem Domänencontroller den Computer der mittleren Schicht für die Verwendung der eingeschränkten Delegierung, indem Sie auf die Option **Computer nur für Delegierungszwecke angegebener Dienste vertrauen** klicken.  
   
  Ausführlichere Anweisungen zum Konfigurieren der eingeschränkten Delegierung finden Sie in den folgenden MSDN-Themen:  
   

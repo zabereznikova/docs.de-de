@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: f4db3325081a820a37a8791849d2ad9697d15151
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118104"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344870"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Benutzerdefinierte zusammengesetzte Designer – Workflowelementpräsentation
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> ist ein Haupttyp im WF-Designer-Programmiermodell, der die Bearbeitung einer Auflistung enthaltener Elemente zulässt. In dem Beispiel wird veranschaulicht, wie ein Aktivitätsdesigner erstellt wird, der eine solche bearbeitbare Auflistung aufweist.
@@ -25,9 +25,9 @@ ms.locfileid: "59118104"
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>So können Sie das Beispiel einrichten, erstellen und ausführen
 
-1.  Öffnen der **UsingWorkflowItemsPresenter.sln** beispiellösung für c# oder VB in Visual Studio 2010.
+1. Öffnen der **UsingWorkflowItemsPresenter.sln** beispiellösung für c# oder VB in Visual Studio 2010.
 
-2.  Erstellen Sie die Projektmappe, und führen Sie sie aus. Eine neu gehostete Workflow-Designer-Anwendung sollte geöffnet werden, und Sie können Aktivitäten auf den Zeichenbereich ziehen.
+2. Erstellen Sie die Projektmappe, und führen Sie sie aus. Eine neu gehostete Workflow-Designer-Anwendung sollte geöffnet werden, und Sie können Aktivitäten auf den Zeichenbereich ziehen.
 
 ## <a name="sample-highlights"></a>Das Wichtigste zum Beispiel
  Der Code für dieses Beispiel zeigt Folgendes:

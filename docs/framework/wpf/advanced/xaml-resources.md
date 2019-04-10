@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: d736d80a05469dafecbdaf196701c14528ee7d26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230017"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344922"
 ---
 # <a name="xaml-resources"></a>XAML-Ressourcen
 Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung erneut verwendet werden kann. Beispiele für Ressourcen sind Pinsel und Stile. In dieser Übersicht wird beschrieben, wie Ressourcen in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Sie können auch Zugriff auf Ressourcen mithilfe von Code oder abwechselnd zwischen Code und [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Weitere Informationen finden Sie unter [Ressourcen und Code](resources-and-code.md).  
@@ -69,11 +69,11 @@ Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung
   
 #### <a name="static-resource-lookup-behavior"></a>Suchverhalten von statischen Ressourcen  
   
-1.  Der Suchprozess prüft den angeforderten Schlüssel im Ressourcenverzeichnis, das durch das Element definiert wird, das die Eigenschaft festlegt.  
+1. Der Suchprozess prüft den angeforderten Schlüssel im Ressourcenverzeichnis, das durch das Element definiert wird, das die Eigenschaft festlegt.  
   
-2.  Der Suchprozess durchläuft anschließend die logische Struktur aufwärts, zum übergeordneten Element und seinem Ressourcenverzeichnis. Die Suche wird fortgesetzt, bis das Stammelement erreicht ist.  
+2. Der Suchprozess durchläuft anschließend die logische Struktur aufwärts, zum übergeordneten Element und seinem Ressourcenverzeichnis. Die Suche wird fortgesetzt, bis das Stammelement erreicht ist.  
   
-3.  Als nächstes werden die Anwendungsressourcen geprüft. Anwendungsressourcen sind die Ressourcen im Ressourcenverzeichnis, das nach definiert ist die <xref:System.Windows.Application> Objekt für Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung.  
+3. Als nächstes werden die Anwendungsressourcen geprüft. Anwendungsressourcen sind die Ressourcen im Ressourcenverzeichnis, das nach definiert ist die <xref:System.Windows.Application> Objekt für Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung.  
   
  Statische Ressourcenverweise innerhalb eines Ressourcenverzeichnisses müssen auf eine Ressource verweisen, die bereits vor dem Ressourcenverweis lexikalisch definiert worden ist. Vorwärtsverweise können von einem statischen Ressourcenverweis nicht aufgelöst werden. Wenn Sie statische Ressourcenverweise verwenden, müssen Sie daher die Struktur des Ressourcenverzeichnisses so entwerfen, dass Ressourcen, die durch andere Ressourcen verwendet werden können, zu Beginn der jeweiligen Ressourcenverweise definiert werden.  
   
@@ -101,19 +101,19 @@ Eine Ressource ist ein Objekt, das an unterschiedlichen Stellen in der Anwendung
 #### <a name="dynamic-resource-lookup-behavior"></a>Suchverhalten von dynamischen Ressourcen  
  Suchverhalten von Ressourcen für einen dynamischen Ressourcenverweis entspricht dem Suchverhalten in Ihrem Code aus, wenn Sie aufrufen <xref:System.Windows.FrameworkElement.FindResource%2A> oder <xref:System.Windows.FrameworkElement.SetResourceReference%2A>.  
   
-1.  Der Suchprozess prüft den angeforderten Schlüssel im Ressourcenverzeichnis, das durch das Element definiert wird, das die Eigenschaft festlegt.  
+1. Der Suchprozess prüft den angeforderten Schlüssel im Ressourcenverzeichnis, das durch das Element definiert wird, das die Eigenschaft festlegt.  
   
     -   Wenn das Element definiert eine <xref:System.Windows.FrameworkElement.Style%2A> -Eigenschaft, die <xref:System.Windows.Style.Resources%2A> -Ressourcenverzeichnis innerhalb der <xref:System.Windows.Style> aktiviert ist.  
   
     -   Wenn das Element definiert eine <xref:System.Windows.Controls.Control.Template%2A> -Eigenschaft, die <xref:System.Windows.FrameworkTemplate.Resources%2A> -Ressourcenverzeichnis innerhalb der <xref:System.Windows.FrameworkTemplate> aktiviert ist.  
   
-2.  Der Suchprozess durchläuft anschließend die logische Struktur aufwärts, zum übergeordneten Element und dessen Ressourcenverzeichnis. Die Suche wird fortgesetzt, bis das Stammelement erreicht ist.  
+2. Der Suchprozess durchläuft anschließend die logische Struktur aufwärts, zum übergeordneten Element und dessen Ressourcenverzeichnis. Die Suche wird fortgesetzt, bis das Stammelement erreicht ist.  
   
-3.  Als nächstes werden die Anwendungsressourcen geprüft. Anwendungsressourcen sind die Ressourcen im Ressourcenverzeichnis, das nach definiert ist die <xref:System.Windows.Application> Objekt für Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung.  
+3. Als nächstes werden die Anwendungsressourcen geprüft. Anwendungsressourcen sind die Ressourcen im Ressourcenverzeichnis, das nach definiert ist die <xref:System.Windows.Application> Objekt für Ihre [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendung.  
   
-4.  Das Ressourcenverzeichnis des Designs wird für das derzeit aktive Design überprüft. Falls das Design zur Laufzeit geändert wird, wird der Wert neu ausgewertet.  
+4. Das Ressourcenverzeichnis des Designs wird für das derzeit aktive Design überprüft. Falls das Design zur Laufzeit geändert wird, wird der Wert neu ausgewertet.  
   
-5.  Systemressourcen werden geprüft.  
+5. Systemressourcen werden geprüft.  
   
  Es sind verschiedene Ausnahmeverhaltensmuster möglich (sofern sie auftreten):  
   

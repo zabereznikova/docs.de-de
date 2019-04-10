@@ -3,12 +3,12 @@ title: Anspruchsbasiertes Identitätsmodell
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 21ed5b7616b51109ef21ee91bdf93b2808e00715
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411733"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345871"
 ---
 # <a name="claims-based-identity-model"></a>Anspruchsbasiertes Identitätsmodell
 Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeridentität in der Anwendung als Satz von Ansprüchen dargestellt. Ein Anspruch könnte der Name des Benutzers, eine andere e-Mail-Adresse sein. Das zugrunde liegende Konzept besteht darin, dass ein externes Identitätssystem konfiguriert wird, um der Anwendung mit jeder Anforderung alle erforderlichen Informationen über den Benutzer zu geben. Außerdem wird die kryptografische Zusicherung gegeben, dass die Identitätsdaten, die Sie erhalten, aus einer vertrauenswürdigen Quelle stammen.  
@@ -73,10 +73,10 @@ Wenn Sie Ansprüche unterstützende Anwendungen erstellen, wird die Benutzeriden
   
  Dieses Diagramm zeigt eine Website (die Anwendung der vertrauenden Seite), die konfiguriert wurde, um WIF zur Authentifizierung zu verwenden, und einen Client, in diesem Fall einen Webbrowser, der diese Website verwenden möchte.  
   
-1.  Wenn ein nicht authentifizierter Benutzer eine Seite anfordert, wird der Browser zu den Seiten des Identity Provider (IdP) umgeleitet.  
+1. Wenn ein nicht authentifizierter Benutzer eine Seite anfordert, wird der Browser zu den Seiten des Identity Provider (IdP) umgeleitet.  
   
-2.  Der IdP muss der Benutzer seine Anmeldeinformationen ein, z. B. Benutzername/Kennwort oder Kerberos-Authentifizierung zu präsentieren.  
+2. Der IdP muss der Benutzer seine Anmeldeinformationen ein, z. B. Benutzername/Kennwort oder Kerberos-Authentifizierung zu präsentieren.  
   
-3.  Die IdP-Probleme, die ein die Token an, die an den Browser zurückgegeben wird.  
+3. Die IdP-Probleme, die ein die Token an, die an den Browser zurückgegeben wird.  
   
-4.  Der Browser wird jetzt wieder an die ursprünglich angeforderte Seite umgeleitet, wo WIF bestimmt, ob das Token die Anforderungen erfüllt und auf die Seite zugreifen darf. Falls ja, wird ein Cookie ausgegeben, um eine Sitzung zu starten. Die Authentifizierung muss daher nur einmal erfolgen und die Kontrolle wird an die Anwendung übergeben.
+4. Der Browser wird jetzt wieder an die ursprünglich angeforderte Seite umgeleitet, wo WIF bestimmt, ob das Token die Anforderungen erfüllt und auf die Seite zugreifen darf. Falls ja, wird ein Cookie ausgegeben, um eine Sitzung zu starten. Die Authentifizierung muss daher nur einmal erfolgen und die Kontrolle wird an die Anwendung übergeben.

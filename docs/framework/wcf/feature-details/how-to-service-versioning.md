@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Dienstversionsverwaltung'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: dc81fcde3c4f731257bf759cbd3f31542483618d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085375"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346287"
 ---
 # <a name="how-to-service-versioning"></a>Vorgehensweise: Dienstversionsverwaltung
 In diesem Thema werden die grundlegenden Schritte beschrieben, die erforderlich sind, um eine Routingkonfiguration zu erstellen, die Nachrichten an verschiedene Versionen des gleichen Diensts weiterleitet. In diesem Beispiel werden Nachrichten an zwei verschiedene Versionen eines Rechnerdiensts weitergeleitet: `roundingCalc` (v1) und `regularCalc` (v2). Beide Implementierungen unterstützen die gleichen Vorgänge. Der ältere Dienst, `roundingCalc`, rundet vor der Rückgabe jedoch alle Berechnungen auf den nächsten ganzzahligen Wert. Eine Clientanwendung muss angeben können, ob der neuere `regularCalc`-Dienst verwendet werden soll.  
@@ -37,7 +37,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
   
 ### <a name="implement-service-versioning"></a>Implementieren der Dienstversionsverwaltung  
   
-1.  Erstellen Sie die grundlegende Routingdienstkonfiguration, indem Sie den vom Dienst verfügbar gemachten Dienstendpunkt angeben. Im folgenden Beispiel wird ein einzelner Dienstendpunkt definiert, der zum Empfangen von Nachrichten verwendet wird. Außerdem werden die Clientendpunkte definiert, die zum Senden von Nachrichten an die Dienste `roundingCalc` (v1) und `regularCalc` (v2) verwendet werden.  
+1. Erstellen Sie die grundlegende Routingdienstkonfiguration, indem Sie den vom Dienst verfügbar gemachten Dienstendpunkt angeben. Im folgenden Beispiel wird ein einzelner Dienstendpunkt definiert, der zum Empfangen von Nachrichten verwendet wird. Außerdem werden die Clientendpunkte definiert, die zum Senden von Nachrichten an die Dienste `roundingCalc` (v1) und `regularCalc` (v2) verwendet werden.  
   
     ```xml  
     <services>  
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2.  Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.  In diesem Beispiel wird der XPath-Filter verwendet, um den Wert des benutzerdefinierten Headers "CalcVer", welche Version die Nachricht soll, um weitergeleitet werden zu erkennen. Ein XPath-Filter wird auch verwendet, um Nachrichten zu erkennen, die den Header "CalcVer" nicht enthalten. Im folgenden Beispiel werden die erforderlichen Filter und die Namespacetabelle definiert.  
+2. Definieren Sie die Filter, die verwendet werden, um Nachrichten an die Zielendpunkte weiterzuleiten.  In diesem Beispiel wird der XPath-Filter verwendet, um den Wert des benutzerdefinierten Headers "CalcVer", welche Version die Nachricht soll, um weitergeleitet werden zu erkennen. Ein XPath-Filter wird auch verwendet, um Nachrichten zu erkennen, die den Header "CalcVer" nicht enthalten. Im folgenden Beispiel werden die erforderlichen Filter und die Namespacetabelle definiert.  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -96,7 +96,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     > [!NOTE]
     > Das Namespacepräfix s12 wird in der namespacetabelle standardmäßig definiert und steht für den Namespace `http://www.w3.org/2003/05/soap-envelope`.
   
-3.  Definieren Sie die Filtertabelle, in der jedem Filter ein Clientendpunkt zugeordnet wird. Wenn die Nachricht den Header "CalcVer" mit dem Wert 1 enthält, wird sie an den RegularCalc-Dienst gesendet werden. Enthält der Header den Wert 2, wird sie an den roundingCalc-Dienst gesendet. Falls kein Header vorhanden ist, wird die Nachricht an regularCalc weitergeleitet.  
+3. Definieren Sie die Filtertabelle, in der jedem Filter ein Clientendpunkt zugeordnet wird. Wenn die Nachricht den Header "CalcVer" mit dem Wert 1 enthält, wird sie an den RegularCalc-Dienst gesendet werden. Enthält der Header den Wert 2, wird sie an den roundingCalc-Dienst gesendet. Falls kein Header vorhanden ist, wird die Nachricht an regularCalc weitergeleitet.  
   
      Der folgende Code definiert die Filtertabelle und fügt die zuvor definierten Filter hinzu.  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Das folgende Beispiel veranschaulicht das zuordnen `filterTable1` mit den Dienstendpunkten:  
+4. Um eingehende Nachrichten anhand der in der Filtertabelle enthaltenen Filter auszuwerten, müssen Sie den Dienstendpunkten die Filtertabelle mithilfe des Routingverhaltens zuordnen. Das folgende Beispiel veranschaulicht das zuordnen `filterTable1` mit den Dienstendpunkten:  
   
     ```xml  
     <behaviors>  

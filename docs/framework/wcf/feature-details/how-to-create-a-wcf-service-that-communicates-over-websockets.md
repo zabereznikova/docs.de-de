@@ -2,19 +2,19 @@
 title: 'Vorgehensweise: Erstellen eines WCF-Diensts, der über WebSockets kommuniziert'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 28a200b3e531f524e246c3d2fa1961573ec4e014
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7125914e64ac3c7643f7338b1343654794cf45da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223185"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346365"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Vorgehensweise: Erstellen eines WCF-Diensts, der über WebSockets kommuniziert
 WCF-Dienste und -Clients können die <xref:System.ServiceModel.NetHttpBinding>-Bindung verwenden, um über WebSockets zu kommunizieren.  WebSockets werden verwendet, wenn die <xref:System.ServiceModel.NetHttpBinding> bestimmt, dass der Dienstvertrag einen Rückrufvertrag definiert. In diesem Thema wird das Implementieren eines WCF-Diensts und -Clients beschrieben, die mithilfe der <xref:System.ServiceModel.NetHttpBinding> über WebSockets kommunizieren.  
   
 ### <a name="define-the-service"></a>Definieren des Diensts  
   
-1.  Definieren Sie einen Rückrufvertrag.  
+1. Definieren Sie einen Rückrufvertrag.  
   
     ```csharp  
     [ServiceContract]  
@@ -27,7 +27,7 @@ WCF-Dienste und -Clients können die <xref:System.ServiceModel.NetHttpBinding>-B
   
      Dieser Vertrag wird von der Clientanwendung implementiert, damit der Dienst Nachrichten zurück an den Client senden kann.  
   
-2.  Definieren Sie den Dienstvertrag, und geben Sie die `IStockQuoteCallback`-Schnittstelle als Rückrufvertrag an.  
+2. Definieren Sie den Dienstvertrag, und geben Sie die `IStockQuoteCallback`-Schnittstelle als Rückrufvertrag an.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -38,7 +38,7 @@ WCF-Dienste und -Clients können die <xref:System.ServiceModel.NetHttpBinding>-B
         }  
     ```  
   
-3.  Implementieren Sie den Dienstvertrag.  
+3. Implementieren Sie den Dienstvertrag.  
   
     ```  
     public class StockQuoteService : IStockQuoteService  
@@ -61,7 +61,7 @@ WCF-Dienste und -Clients können die <xref:System.ServiceModel.NetHttpBinding>-B
   
      Der Dienstvorgang `StartSendingQuotes` wird als asynchroner Aufruf implementiert. Der Rückrufkanal wird mithilfe des `OperationContext` abgerufen, und wenn der Kanal geöffnet ist, wird ein asynchroner Aufruf des Rückrufkanals ausgeführt.  
   
-4.  Konfigurieren Sie den Dienst.  
+4. Konfigurieren Sie den Dienst.  
   
     ```xml  
     <configuration>  
@@ -94,7 +94,7 @@ WCF-Dienste und -Clients können die <xref:System.ServiceModel.NetHttpBinding>-B
   
 ### <a name="define-the-client"></a>Definieren des Clients  
   
-1.  Implementieren Sie den Rückrufvertrag.  
+1. Implementieren Sie den Rückrufvertrag.  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  

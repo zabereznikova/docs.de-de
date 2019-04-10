@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], populating
 - ListView control [Windows Forms], adding list items
 ms.assetid: 217611ee-fd11-4d39-9a54-a37c3e781be1
-ms.openlocfilehash: 37e793104eb29c21e67b975a7caa372cc817e57f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6e08a7013242b0dbb433e288c4f8d788cb4e143b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143883"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343843"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a>Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms mithilfe des Designers
 Beim Hinzufügen eines Elements zu einer Windows Forms <xref:System.Windows.Forms.ListView> -Steuerelement besteht aus in erster Linie das Element angeben, und Eigenschaften zuweisen. Hinzufügen oder Entfernen von Elementen kann jederzeit erfolgen.  
@@ -22,15 +22,15 @@ Beim Hinzufügen eines Elements zu einer Windows Forms <xref:System.Windows.Form
   
 ### <a name="to-add-or-remove-items-using-the-designer"></a>Hinzufügen oder Entfernen von Elementen, die mithilfe des Designers  
   
-1.  Wählen Sie das <xref:System.Windows.Forms.ListView>-Steuerelement.  
+1. Wählen Sie das <xref:System.Windows.Forms.ListView>-Steuerelement.  
   
-2.  In der **Eigenschaften** Fenster, klicken Sie auf die **Auslassungspunkte** (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben die <xref:System.Windows.Forms.ListView.Items%2A> Eigenschaft.  
+2. In der **Eigenschaften** Fenster, klicken Sie auf die **Auslassungspunkte** (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) neben die <xref:System.Windows.Forms.ListView.Items%2A> Eigenschaft.  
   
      Die **ListViewItem Auflistungs-Editor** angezeigt wird.  
   
-3.  Um ein Element hinzuzufügen, klicken Sie auf die **hinzufügen** Schaltfläche. Sie können dann Eigenschaften des neuen Elements, z. B. Festlegen der <xref:System.Windows.Forms.ListView.Text%2A> und <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> Eigenschaften.  
+3. Um ein Element hinzuzufügen, klicken Sie auf die **hinzufügen** Schaltfläche. Sie können dann Eigenschaften des neuen Elements, z. B. Festlegen der <xref:System.Windows.Forms.ListView.Text%2A> und <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> Eigenschaften.  
   
-4.  Um ein Element zu entfernen, wählen Sie ihn, und klicken Sie auf die **entfernen** Schaltfläche.  
+4. Um ein Element zu entfernen, wählen Sie ihn, und klicken Sie auf die **entfernen** Schaltfläche.  
   
 ## <a name="see-also"></a>Siehe auch
 

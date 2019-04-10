@@ -2,12 +2,12 @@
 title: Suche und FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: c95f8e1b48c4e58c6d521bd06df4a470999fa375
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095775"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345780"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Suche und FindCriteria
 Ein Suchvorgang wird von einem Client initiiert, um einen oder mehrere Dienste zu ermitteln, und ist eine der Hauptaktionen bei der Suche. Beim Durchführen einer Suche wird eine WS-Discovery-Probe-Nachricht über das Netzwerk gesendet. Dienste, die die angegebenen Kriterien erfüllen, antworten mit WS-Discovery-ProbeMatch-Nachrichten. Weitere Informationen zu Suchnachrichten finden Sie unter den [WS-Ermittlungsspezifikation](https://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -40,9 +40,9 @@ Ein Suchvorgang wird von einem Client initiiert, um einen oder mehrere Dienste z
   
  Zu den Beendigungskriterien gehört Folgendes:  
   
-1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> – Die maximale Zeit, die für Antworten von Diensten im Netzwerk gewartet werden soll. Der Standardzeitraum beträgt 20 Sekunden.  
+1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> – Die maximale Zeit, die für Antworten von Diensten im Netzwerk gewartet werden soll. Der Standardzeitraum beträgt 20 Sekunden.  
   
-2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> – Die maximale Anzahl an Antworten warten. Wenn <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>-Antworten empfangen werden, bevor die <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> verstrichen ist, endet der Suchvorgang.  
+2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> – Die maximale Anzahl an Antworten warten. Wenn <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>-Antworten empfangen werden, bevor die <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> verstrichen ist, endet der Suchvorgang.  
   
 ## <a name="findresponse"></a>FindResponse  
  <xref:System.ServiceModel.Discovery.FindResponse> verfügt über eine <xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A> Auflistungseigenschaft, die enthält alle Antworten, die von übereinstimmenden Diensten im Netzwerk gesendet werden. Falls keine Dienste antworten, ist die Auflistung leer. Falls ein oder mehrere Dienste antworteten, wird jede Antwort in einem <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>-Objekt gespeichert. Dieses Objekt enthält die Adresse, den Vertrag und einige weitere Informationen zum Dienst.  

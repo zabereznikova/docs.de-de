@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2b5c90f-6cc3-4128-bfab-1db488d5af26
-ms.openlocfilehash: 84ef85b1e53d97ff468c3360af5e394a0e4ad776
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e40866c5160d6850b39133050d09026f5ffd6cc5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091192"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344174"
 ---
 # <a name="how-to-update-rows-in-the-database"></a>Vorgehensweise: Aktualisieren von Zeilen in der Datenbank
 Sie können Zeilen in einer Datenbank aktualisieren, indem Sie die Memberwerte der zugeordneten Objekte ändern der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> Sammlung und übermitteln Sie dann die Änderungen an der Datenbank. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt Ihre Änderungen in die entsprechenden SQL `UPDATE` Befehle.  
@@ -24,11 +24,11 @@ Sie können Zeilen in einer Datenbank aktualisieren, indem Sie die Memberwerte d
   
 ### <a name="to-update-a-row-in-the-database"></a>So aktualisieren Sie eine Zeile in der Datenbank  
   
-1.  Rufen Sie die zu aktualisierende Zeile aus der Datenbank ab.  
+1. Rufen Sie die zu aktualisierende Zeile aus der Datenbank ab.  
   
-2.  Nehmen Sie die gewünschten Änderungen an Memberwerten im resultierenden [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Objekt vor.  
+2. Nehmen Sie die gewünschten Änderungen an Memberwerten im resultierenden [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Objekt vor.  
   
-3.  Übergeben Sie die Änderungen an die Datenbank.  
+3. Übergeben Sie die Änderungen an die Datenbank.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Bestellung Nr. 11000 aus der Datenbank abgerufen. Anschließend werden die Werte für `ShipName` und `ShipVia` im resultierenden `Order`-Objekt geändert. Schließlich werden die Änderungen an diesen Memberwerten als Änderungen in der `ShipName`-Spalte und der `ShipVia`-Spalte an die Datenbank übergeben.  

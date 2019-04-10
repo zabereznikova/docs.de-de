@@ -2,12 +2,12 @@
 title: Asynchrone Programmierung
 description: Erfahren Sie, wie F# asynchrone Programmierung erfolgt über ein Programmiermodell auf Sprachebene, das einfach zu verwenden und natürlich für die Sprache ist.
 ms.date: 06/20/2016
-ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980086"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343453"
 ---
 # <a name="async-programming-in-f"></a>Asynchrone Programmierung in F\#
 
@@ -57,7 +57,7 @@ Darüber hinaus normalen `let`, `use`, und `do` Schlüsselwörter können zusamm
 
 Wie bereits erwähnt, ist Async-Code eine Spezifikation der Arbeit in einem anderen Kontext ausgeführt werden, die explizit gestartet werden muss. Hier sind zwei Hauptmethoden, um dies zu erreichen:
 
-1.  `Async.RunSynchronously` Startet einen asynchronen Workflow in einem anderen Thread und wartet auf das Ergebnis.
+1. `Async.RunSynchronously` Startet einen asynchronen Workflow in einem anderen Thread und wartet auf das Ergebnis.
 
 ```fsharp
 open System
@@ -78,7 +78,7 @@ let fetchHtmlAsync url =
  printfn "%s" html
  ```
 
-2.  `Async.Start` Startet einen asynchronen Workflow in einem anderen Thread, und wird **nicht** wartet auf das Ergebnis.
+2. `Async.Start` Startet einen asynchronen Workflow in einem anderen Thread, und wird **nicht** wartet auf das Ergebnis.
 
 ```fsharp
 open System
@@ -184,9 +184,9 @@ Es gibt einige andere ähnlichkeiten und Unterschiede zu beachten.
 
 Im Gegensatz dazu F# asynchrone Workflows sind also ganz natürlich abgebrochen werden können. Abbruch ist ein einfacher dreistufigen Prozess.
 
-1.  Erstellen Sie einen neuen `CancellationTokenSource`.
-2.  Übergeben Sie ihn in eine Funktion ab.
-3.  Rufen Sie `Cancel` im Token.
+1. Erstellen Sie einen neuen `CancellationTokenSource`.
+2. Übergeben Sie ihn in eine Funktion ab.
+3. Rufen Sie `Cancel` im Token.
 
 Beispiel:
 

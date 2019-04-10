@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
-ms.openlocfilehash: 6b4414d56e22646e057e6b1999e15722244deda4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 43bc222bb69aafa3fa3492d79d35fbc492055ead
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075153"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344831"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Nachrichtensicherheit mit einem Windows-Client ohne Anmeldeinformationen-Aushandlung
 Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client und-Dienst gesichert durch das Kerberos-Protokoll.  
@@ -46,9 +46,9 @@ Das folgende Szenario zeigt einen Windows Communication Foundation (WCF)-Client 
 > [!NOTE]
 >  Zur Verwendung des Windows-Anmeldeinformationstyps ohne Aushandlung muss das Benutzerkonto des Diensts Zugriff auf den bei der Active Directory-Domäne registrierten Dienstprinzipalnamen (Service Principal Name, SPN) haben. Dazu gibt es zwei Möglichkeiten:  
   
-1.  Verwenden Sie das `NetworkService`-Konto oder das `LocalSystem`-Konto, um den Dienst auszuführen. Da diese Konten Zugriff auf den Computer-SPN haben, die festgelegt wird, wenn der Computer der Active Directory-Domäne beigetreten ist, generiert WCF automatisch das zutreffende SPN-Element innerhalb der Endpunkt des Diensts in den Dienstmetadaten (Web Services Description Language oder WSDL).  
+1. Verwenden Sie das `NetworkService`-Konto oder das `LocalSystem`-Konto, um den Dienst auszuführen. Da diese Konten Zugriff auf den Computer-SPN haben, die festgelegt wird, wenn der Computer der Active Directory-Domäne beigetreten ist, generiert WCF automatisch das zutreffende SPN-Element innerhalb der Endpunkt des Diensts in den Dienstmetadaten (Web Services Description Language oder WSDL).  
   
-2.  Verwenden Sie ein beliebiges Active Directory-Domänenkonto, um den Dienst auszuführen. In diesem Fall muss für das Domänenkonto ein SPN eingerichtet werden. Eine mögliche Vorgehensweise hierzu besteht in der Verwendung des Tools Setspn.exe. Nachdem Sie der SPN für das Dienstkonto erstellt wird, konfigurieren Sie WCF, damit dieser SPN für die Clients des Dienstes über seine Metadaten (WSDL) veröffentlicht. Legen Sie hierzu die Endpunktidentität für den angezeigten Endpunkt entweder mit einer Anwendungskonfigurationsdatei oder mit Code fest. Im folgenden Beispiel wird die Identität programmgesteuert veröffentlicht:  
+2. Verwenden Sie ein beliebiges Active Directory-Domänenkonto, um den Dienst auszuführen. In diesem Fall muss für das Domänenkonto ein SPN eingerichtet werden. Eine mögliche Vorgehensweise hierzu besteht in der Verwendung des Tools Setspn.exe. Nachdem Sie der SPN für das Dienstkonto erstellt wird, konfigurieren Sie WCF, damit dieser SPN für die Clients des Dienstes über seine Metadaten (WSDL) veröffentlicht. Legen Sie hierzu die Endpunktidentität für den angezeigten Endpunkt entweder mit einer Anwendungskonfigurationsdatei oder mit Code fest. Im folgenden Beispiel wird die Identität programmgesteuert veröffentlicht:  
   
  Weitere Informationen zu SPNs, Kerberos-Protokoll und Active Directory, finden Sie unter [Kerberos Technical Supplement für Windows](https://go.microsoft.com/fwlink/?LinkId=88330). Weitere Informationen zu endpunktidentitäten finden Sie unter [SecurityBindingElement-Authentifizierungsmodi](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   

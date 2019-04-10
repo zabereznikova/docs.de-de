@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
-ms.openlocfilehash: 707b365a0f64055497e6b8814633acf7f4d7097c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200058"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344246"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>Konfigurieren und Erweitern der Laufzeit mit Verhalten
 Verhalten können Sie Standardverhalten zu ändern, und fügen Sie benutzerdefinierte Erweiterungen, die zu überprüfen und Dienstkonfiguration zu überprüfen oder das Laufzeitverhalten in Windows Communication Foundation (WCF)-Client und Dienst-Anwendungen. In diesem Thema werden die Verhaltensschnittstellen beschrieben und erläutert, wie sie implementiert und wie sie zur Dienstbeschreibung (in einer Dienstanwendung) oder zu einem Endpunkt (in einer Clientanwendung) programmgesteuert oder in einer Konfigurationsdatei hinzugefügt werden können. Weitere Informationen zu vom System bereitgestellten Verhalten verwenden, finden Sie unter [Run-Time-Dienstverhalten angeben](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md) und [Run-Time-Clientverhalten angeben](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md).  
@@ -18,7 +18,7 @@ Verhalten können Sie Standardverhalten zu ändern, und fügen Sie benutzerdefin
  Verhaltenstypen werden hinzugefügt, an den Dienst oder die Dienstendpunkt-beschreibungsobjekten (auf den Dienst oder Client bzw.), bevor diese Objekte von Windows Communication Foundation (WCF) verwendet werden, zum Erstellen einer Laufzeit, die einen WCF-Dienst oder einen WCF-Client ausgeführt wird. Wenn diese Verhaltenstypen während des Lauftzeitkonstruktionsprozesses aufgerufen werden, können sie auf Laufzeiteigenschaften und -methoden zugreifen, die die vom Vertrag, von den Bindungen und von den Adressen erstellte Laufzeit ändern.  
   
 ### <a name="behavior-methods"></a>Verhaltensmethoden  
- Alle Verhaltenstypen verfügen über eine `AddBindingParameters`-Methode, eine `ApplyDispatchBehavior`-Methode, eine `Validate`-Methode und eine `ApplyClientBehavior`-Methode mit einer Ausnahme: Da <xref:System.ServiceModel.Description.IServiceBehavior> nicht in einem Client ausgeführt werden kann, wird `ApplyClientBehavior` nicht implementiert.  
+ Alle Verhaltenstypen verfügen über eine `AddBindingParameters` -Methode, eine `ApplyDispatchBehavior` -Methode, eine `Validate` -Methode, und ein `ApplyClientBehavior` Methode mit einer Ausnahme: Da <xref:System.ServiceModel.Description.IServiceBehavior> kann nicht ausgeführt werden in einem Client wird nicht implementiert `ApplyClientBehavior`.  
   
 -   Verwenden Sie die `AddBindingParameters`-Methode, um benutzerdefinierte Objekte zu ändern oder einer Sammlung hinzuzufügen, auf die benutzerdefinierte Bindungen beim Erstellen der Laufzeit für ihre Verwendung zugreifen können. Ein Beispiel hierfür ist, wie Schutzanforderungen festgelegt werden, die beeinflussen, wie der Kanal erstellt wird, jedoch dem Kanalentwickler nicht bekannt sind.  
   
@@ -54,16 +54,16 @@ Verhalten können Sie Standardverhalten zu ändern, und fügen Sie benutzerdefin
 #### <a name="service-behaviors"></a>Dienstverhalten  
  Dienstverhalten, das <xref:System.ServiceModel.Description.IServiceBehavior> implementiert, ist der Hauptmechanismus, mit dem die gesamte Dienstlaufzeit geändert wird. Für das Hinzufügen von Dienstverhalten zu einem Dienst stehen drei Mechanismen zur Verfügung.  
   
-1.  Verwenden eines Attributs in der Dienstklasse.  Wenn ein <xref:System.ServiceModel.ServiceHost>-Objekt erstellt wird, wird von der <xref:System.ServiceModel.ServiceHost>-Implementierung Spiegelung eingesetzt, um den Attributsatz für den Diensttyp zu ermitteln. Falls eines der Attribute Implementierungen von <xref:System.ServiceModel.Description.IServiceBehavior> darstellt, wird es der Verhaltenssammlung für <xref:System.ServiceModel.Description.ServiceDescription> hinzugefügt. Dadurch können diese Verhaltenstypen an der Erstellung der Dienstlaufzeit partizipieren.  
+1. Verwenden eines Attributs in der Dienstklasse.  Wenn ein <xref:System.ServiceModel.ServiceHost>-Objekt erstellt wird, wird von der <xref:System.ServiceModel.ServiceHost>-Implementierung Spiegelung eingesetzt, um den Attributsatz für den Diensttyp zu ermitteln. Falls eines der Attribute Implementierungen von <xref:System.ServiceModel.Description.IServiceBehavior> darstellt, wird es der Verhaltenssammlung für <xref:System.ServiceModel.Description.ServiceDescription> hinzugefügt. Dadurch können diese Verhaltenstypen an der Erstellung der Dienstlaufzeit partizipieren.  
   
-2.  Programmgesteuertes Hinzufügen des Verhaltens zur Verhaltenssammlung in <xref:System.ServiceModel.Description.ServiceDescription>. Dies kann durch die folgenden Codezeilen erreicht werden:  
+2. Programmgesteuertes Hinzufügen des Verhaltens zur Verhaltenssammlung in <xref:System.ServiceModel.Description.ServiceDescription>. Dies kann durch die folgenden Codezeilen erreicht werden:  
   
     ```csharp
     ServiceHost host = new ServiceHost(/* Parameters */);  
     host.Description.Behaviors.Add(/* Service Behavior */);  
     ```  
   
-3.  Implementieren eines benutzerdefinierten <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, das die Konfiguration erweitert. Dies ermöglicht die Verwendung des Dienstverhaltens von Anwendungskonfigurationsdateien aus.  
+3. Implementieren eines benutzerdefinierten <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, das die Konfiguration erweitert. Dies ermöglicht die Verwendung des Dienstverhaltens von Anwendungskonfigurationsdateien aus.  
   
  Beispiele für Dienstverhalten in WCF die <xref:System.ServiceModel.ServiceBehaviorAttribute> -Attribut, das <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>, und die <xref:System.ServiceModel.Description.ServiceMetadataBehavior> Verhalten.  
   
@@ -89,9 +89,9 @@ Verhalten können Sie Standardverhalten zu ändern, und fügen Sie benutzerdefin
   
  Für das Hinzufügen von Endpunktverhalten zu einem Dienst stehen zwei Mechanismen zur Verfügung.  
   
-1.  Hinzufügen des Verhaltens zur <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A>-Eigenschaft.  
+1. Hinzufügen des Verhaltens zur <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A>-Eigenschaft.  
   
-2.  Implementieren eines benutzerdefinierten <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, das die Konfiguration erweitert.  
+2. Implementieren eines benutzerdefinierten <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>, das die Konfiguration erweitert.  
   
  Weitere Informationen und ein Beispiel hierzu finden Sie im Verweisthema.  
   
@@ -110,11 +110,11 @@ Verhalten können Sie Standardverhalten zu ändern, und fügen Sie benutzerdefin
  Dienst-, Endpunkt- und Vertragsverhalten können so konzipiert werden, dass sie in Code oder mithilfe von Attributen angegeben werden. Nur Dienst- und Endpunktverhalten können mit Anwendungs- oder Webkonfigurationsdateien konfiguriert werden. Durch das Verfügbarmachen von Verhalten mit Attributen können Entwickler ein Verhalten zum Kompilierungszeitpunkt angeben, das zur Laufzeit weder hinzugefügt, entfernt oder geändert werden kann. Dies ist häufig für Verhalten nützlich, das für den korrekten Betrieb eines Diensts immer erforderlich ist (z. B. die transaktionsbezogenen Parameter für das <xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType>-Attribut). Durch Verfügbarmachen von Verhalten unter Verwendung der Konfiguration können Entwickler die Spezifikation und Konfiguration des Verhaltens den Personen überlassen, die den Dienst bereitstellen. Dieses Verfahren ist nützlich für Verhalten, das aus optionalen Komponenten oder einer anderen bereitstellungsspezifischen Konfiguration besteht, wie z. B. ob Metadaten für den Dienst verfügbar gemacht werden oder die spezifische Autorisierungskonfiguration für einen Dienst.  
   
 > [!NOTE]
->  Sie können konfigurationsunterstützendes Verhalten auch zur Durchsetzung von Unternehmensrichtlinien verwenden, indem sie in die Konfigurationsdatei machine.config eingefügt werden und diese Elemente gesperrt werden. Eine Beschreibung und ein Beispiel finden Sie unter [How to: Lock Down Endpoints in Unternehmen](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+>  Sie können konfigurationsunterstützendes Verhalten auch zur Durchsetzung von Unternehmensrichtlinien verwenden, indem sie in die Konfigurationsdatei machine.config eingefügt werden und diese Elemente gesperrt werden. Eine Beschreibung und ein Beispiel finden Sie unter [Vorgehensweise: Sperren von Endpunkten im Unternehmen](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
  Um ein Verhalten unter Verwendung der Konfiguration verfügbar zu machen, muss ein Entwickler eine abgeleitete Klasse von <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> erstellen und die Erweiterung anschließend in der Konfiguration registrieren.  
   
- Das folgende Codebeispiel veranschaulicht, wie ein <xref:System.ServiceModel.Description.IEndpointBehavior> <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> implementiert:  
+ Das folgende Codebeispiel veranschaulicht, wie ein <xref:System.ServiceModel.Description.IEndpointBehavior><xref:System.ServiceModel.Configuration.BehaviorExtensionElement> implementiert:  
   
 ```csharp
 // BehaviorExtensionElement members  
@@ -188,23 +188,23 @@ protected override object CreateBehavior()
   
  Der <xref:System.ServiceModel.ServiceHost> wendet Verhalten in folgender Reihenfolge an:  
   
-1.  Dienst  
+1. Dienst  
   
-2.  Vertrag  
+2. Vertrag  
   
-3.  Endpunkt  
+3. Endpunkt  
   
-4.  Vorgang  
+4. Vorgang  
   
  Innerhalb einer Verhaltenssammlung wird keine Reihenfolge garantiert.  
   
  Der <xref:System.ServiceModel.ChannelFactory%601> wendet Verhalten in folgender Reihenfolge an:  
   
-1.  Vertrag  
+1. Vertrag  
   
-2.  Endpunkt  
+2. Endpunkt  
   
-3.  Vorgang  
+3. Vorgang  
   
  Innerhalb einer Verhaltenssammlung wird auch in diesem Fall keine Reihenfolge garantiert.  
   
