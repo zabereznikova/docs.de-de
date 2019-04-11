@@ -5,16 +5,16 @@ helpviewer_keywords:
 - deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
 - -deterministic compiler option [Visual Basic]
-ms.openlocfilehash: d3558976002e273aee239e518f0387033cb82873
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 95c9add0521208ef04ff47c071a2e04abc968f27
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836141"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480637"
 ---
 # <a name="-deterministic"></a>-deterministic
 
-Bewirkt, dass der Compiler eine Assembly erstellt, deren Byte-für-Byte-Ausgabe über Kompilierungen identisch ist, wenn die Eingaben identisch sind. 
+Bewirkt, dass der Compiler eine Assembly erstellt, deren Byte-für-Byte-Ausgabe über Kompilierungen identisch ist, wenn die Eingaben identisch sind.
 
 ## <a name="syntax"></a>Syntax
 
@@ -32,23 +32,23 @@ Der Compiler berücksichtigt die folgenden Eingaben für den Determinismus:
 - Der Inhalt der rsp-Antwortdatei des Compilers.
 - Die genaue Version des verwendeten Compilers und seiner verwiesenen Assemblys.
 - Der aktuelle Verzeichnispfad.
-- Die binären Inhalte aller Dateien, die explizit und entweder direkt oder indirekt an den Compiler übergeben werden, einschließlich: 
-    - Quelldateien
-    - Assemblys, auf die verwiesen wird
-    - Module, auf die verwiesen wird
-    - Ressourcen
-    - Die Schlüsseldatei mit starkem Namen
-    - @ Antwortdateien
-    - Analyzer
-    - RuleSets
-    - Zusätzliche Dateien, die möglicherweise von Analyzern verwendet werden
+- Die binären Inhalte aller Dateien, die explizit und entweder direkt oder indirekt an den Compiler übergeben werden, einschließlich:
+  - Quelldateien
+  - Assemblys, auf die verwiesen wird
+  - Module, auf die verwiesen wird
+  - Ressourcen
+  - Die Schlüsseldatei mit starkem Namen
+  - @ Antwortdateien
+  - Analyzer
+  - RuleSets
+  - Zusätzliche Dateien, die möglicherweise von Analyzern verwendet werden
 - Die aktuelle Kultur (für die Sprache, in der die Diagnose und die Ausnahmenachrichten erstellt werden).
 - Die Standardcodierung (oder die aktuelle Codeseite), wenn die Codierung nicht angegeben ist.
 - Das Vorhandensein, Nichtvorhandensein und die Inhalte der Dateien auf den Suchpfaden des Compilers (z.B. von `/lib` oder `/recurse` angegeben).
 - Die CLR-Plattform, auf der der Compiler ausgeführt wird.
 - Der Wert von `%LIBPATH%`, der das Abhängigkeitsladen des Analyzers beeinträchtigen kann.
 
-Wenn Quellen öffentlich verfügbar sind, kann die deterministische Kompilierung verwendet werden, um festzustellen, ob eine Binärdatei aus einer vertrauenswürdigen Quelle kompiliert wird. Sie kann auch in einem fortlaufenden Buildsystem verwendet werden, um zu bestimmen, ob Buildschritte, die von den Änderungen einer Binärdatei abhängig sind, ausgeführt werden müssen. 
+Wenn Quellen öffentlich verfügbar sind, kann die deterministische Kompilierung verwendet werden, um festzustellen, ob eine Binärdatei aus einer vertrauenswürdigen Quelle kompiliert wird. Sie kann auch in einem fortlaufenden Buildsystem verwendet werden, um zu bestimmen, ob Buildschritte, die von den Änderungen einer Binärdatei abhängig sind, ausgeführt werden müssen.
 
 ## <a name="see-also"></a>Siehe auch
 
