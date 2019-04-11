@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: feccd6978d0a3cf8db60bbd505826433c93e3276
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 826cfc0ea7f681e1f7cbe858008c24a4941f0e11
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227196"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335081"
 ---
 # <a name="navigation-overview"></a>Übersicht über die Navigation
 Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil, die verwendet werden, kann in zwei Arten von Anwendungen: eigenständige Anwendungen und [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Zum Packen von Inhalten für die Navigation [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet die <xref:System.Windows.Controls.Page> Klasse. Können Sie von einem navigieren <xref:System.Windows.Controls.Page> in ein anderes deklarativ mithilfe einer <xref:System.Windows.Documents.Hyperlink>, oder programmgesteuert, durch die Verwendung der <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] verwendet das Journal, um Seiten zu speichern, von dem navigiert wurde, und Navigation zu ihnen.  
@@ -353,13 +353,13 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  Standardmäßig wird der Text für die einzelnen <xref:System.Windows.Controls.Page> , angezeigt wird, der **zuletzt besuchte Seiten** Liste der [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] ist die [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für die <xref:System.Windows.Controls.Page>. In vielen Fällen ist das für den Benutzer nicht besonders sinnvoll. Sie können den Text jedoch mithilfe einer der folgenden Optionen ändern:  
   
-1.  Der angefügte `JournalEntry.Name` Attributwert.  
+1. Der angefügte `JournalEntry.Name` Attributwert.  
   
-2.  Die `Page.Title` Attributwert.  
+2. Die `Page.Title` Attributwert.  
   
-3.  Die `Page.WindowTitle` -Attributwert und dem [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für die aktuelle <xref:System.Windows.Controls.Page>.  
+3. Die `Page.WindowTitle` -Attributwert und dem [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für die aktuelle <xref:System.Windows.Controls.Page>.  
   
-4.  Der [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für die aktuelle <xref:System.Windows.Controls.Page>. (Standard)  
+4. Der [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] für die aktuelle <xref:System.Windows.Controls.Page>. (Standard)  
   
  Die Reihenfolge, in der die Optionen aufgeführt sind, entspricht der Rangfolge zum Suchen von Text. Z. B. wenn `JournalEntry.Name` festgelegt ist, werden die anderen Werte ignoriert.  
   
@@ -429,19 +429,19 @@ Windows Presentation Foundation (WPF) unterstützt die Navigation im Browserstil
   
  Glücklicherweise stellt das Journal Unterstützung für das Speichern von Daten über <xref:System.Windows.Controls.Page> Navigationen hinweg, einschließlich Steuerelementdaten. Insbesondere der Journaleintrag für jede <xref:System.Windows.Controls.Page> fungiert als temporärer Container für das zugeordnete <xref:System.Windows.Controls.Page> Zustand. Die folgenden Schritte beschreiben, wie diese Unterstützung verwendet wird bei einem <xref:System.Windows.Controls.Page> von navigiert wird:  
   
-1.  Ein Eintrag für den aktuellen <xref:System.Windows.Controls.Page> das Journal hinzugefügt wird.  
+1. Ein Eintrag für den aktuellen <xref:System.Windows.Controls.Page> das Journal hinzugefügt wird.  
   
-2.  Den Status der <xref:System.Windows.Controls.Page> wird gespeichert, mit dem Journaleintrag für diese Seite, die dem Rückwärtsstapel hinzugefügt wird.  
+2. Den Status der <xref:System.Windows.Controls.Page> wird gespeichert, mit dem Journaleintrag für diese Seite, die dem Rückwärtsstapel hinzugefügt wird.  
   
-3.  Die neue <xref:System.Windows.Controls.Page> navigiert wird.  
+3. Die neue <xref:System.Windows.Controls.Page> navigiert wird.  
   
  Wenn die Seite <xref:System.Windows.Controls.Page> ist zum zurück navigiert, mithilfe des Journals die folgenden Schritte erfolgen:  
   
-1.  Die <xref:System.Windows.Controls.Page> (der oberste Journaleintrag im Rückwärtsstapel) instanziiert wird.  
+1. Die <xref:System.Windows.Controls.Page> (der oberste Journaleintrag im Rückwärtsstapel) instanziiert wird.  
   
-2.  Die <xref:System.Windows.Controls.Page> wird mit dem Zustand, der mit dem Journaleintrag für gespeichert wurde, aktualisiert der <xref:System.Windows.Controls.Page>.  
+2. Die <xref:System.Windows.Controls.Page> wird mit dem Zustand, der mit dem Journaleintrag für gespeichert wurde, aktualisiert der <xref:System.Windows.Controls.Page>.  
   
-3.  Die <xref:System.Windows.Controls.Page> an navigiert wird.  
+3. Die <xref:System.Windows.Controls.Page> an navigiert wird.  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] verwendet diese Unterstützung automatisch, wenn die folgenden Steuerelemente verwendet werden, auf eine <xref:System.Windows.Controls.Page>:  
   
