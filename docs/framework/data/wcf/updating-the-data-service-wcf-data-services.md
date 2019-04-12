@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 5b8fa13bf5db7f3c3df97febe4bb6f9ee4c184a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231291"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517108"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Aktualisieren des Datendiensts (WCF Data Services)
 Bei Verwendung der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliothek ein [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed, übersetzt die Bibliothek die Einträge in den Feed in Instanzen von clientdatendienstklassen. Diese Datendienstklassen werden mithilfe des <xref:System.Data.Services.Client.DataServiceContext> verfolgt, zu dem die <xref:System.Data.Services.Client.DataServiceQuery%601> gehört. Der Client verfolgt Änderungen an Entitäten nach, die mit Methoden des <xref:System.Data.Services.Client.DataServiceContext> gemeldet werden. Mithilfe dieser Methoden kann der Client hinzugefügte und gelöschte Entitäten sowie Änderungen an den Eigenschaftswerten oder an Beziehungen zwischen Entitätsinstanzen verfolgen. Wenn Sie die <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>-Methode aufrufen, werden diese nachverfolgten Änderungen als REST-basierte Vorgänge an den Datendienst zurückgesendet.  
@@ -24,33 +24,33 @@ Bei Verwendung der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -
 ## <a name="adding-modifying-and-changing-entities"></a>Hinzufügen und Ändern von Entitäten  
  Bei Verwendung der **Hinzufügen eines Dienstverweises** Dialogfeld in Visual Studio zum Hinzufügen eines Verweises auf ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] die resultierenden Clientdaten-Dienstklassen jeder feed, verfügen über eine statische *erstellen* Methode, die ein Parameter für jede Entitätseigenschaft für die NULL-Werte zulässt. Sie können mithilfe dieser Methode Instanzen von Entitätstypklassen wie im folgenden Beispiel erstellen:  
   
- [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#createnewproduct)]
- [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#createnewproduct)]  
+ [!code-csharp[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#createnewproduct)]
+ [!code-vb[Astoria Northwind Client#CreateNewProduct](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#createnewproduct)]  
   
  Rufen Sie zum Hinzufügen einer Entitätsinstanz die entsprechende *AddTo* Methode für die <xref:System.Data.Services.Client.DataServiceContext> generierten Klasse die **Hinzufügen eines Dienstverweises** (Dialogfeld), wie im folgenden Beispiel:  
   
- [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addproductspecific)]
- [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addproductspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addproductspecific)]
+ [!code-vb[Astoria Northwind Client#AddProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addproductspecific)]  
   
  Diese fügt das Objekt zum Kontext und in die richtige Entitätenmenge hinzu. Sie können auch <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> aufrufen, Sie müssen jedoch stattdessen den Entitätenmengennamen angeben. Wenn die hinzugefügte Entität über eine oder mehrere Beziehungen zu anderen Entitäten verfügt, können Sie entweder die <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>-Methode verwenden, oder Sie verwenden eine der vorherigen Methoden und definieren die Links auch explizit. Diese Vorgänge werden weiter unten in diesem Thema erläutert.  
   
  Zum Ändern einer vorhandenen Instanz einer Entität führen Sie zunächst eine Abfrage für die entsprechende Entität durch und nehmen die gewünschten Änderungen an den zugehörigen Eigenschaften vor. Rufen Sie anschließend die <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A>-Methode für den <xref:System.Data.Services.Client.DataServiceContext> auf, um der Clientbibliothek mitzuteilen, dass eine Aktualisierung für dieses Objekt gesendet werden muss, wie im folgenden Beispiel dargestellt:  
   
- [!code-csharp[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#modifycustomerspecific)]
- [!code-vb[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#modifycustomerspecific)]  
+ [!code-csharp[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#modifycustomerspecific)]
+ [!code-vb[Astoria Northwind Client#ModifyCustomerSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#modifycustomerspecific)]  
   
  Zum Löschen einer Entitätsinstanz rufen Sie wie im folgenden Beispiel dargestellt die <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>-Methode für den <xref:System.Data.Services.Client.DataServiceContext> auf:  
   
- [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#deleteproductspecific)]
- [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#deleteproductspecific)]  
+ [!code-csharp[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#deleteproductspecific)]
+ [!code-vb[Astoria Northwind Client#DeleteProductSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#deleteproductspecific)]  
   
  Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen, ändern und Löschen von Entitäten](../../../../docs/framework/data/wcf/how-to-add-modify-and-delete-entities-wcf-data-services.md).  
   
 ## <a name="attaching-entities"></a>Anfügen von Entitäten  
  Mithilfe der Clientbibliothek können Sie an einer Entität vorgenommene Aktualisierungen speichern, ohne zuerst eine Abfrage zum Laden der Entität in den <xref:System.Data.Services.Client.DataServiceContext> auszuführen. Verwenden Sie die <xref:System.Data.Services.Client.DataServiceContext.AttachTo%2A>-Methode, um ein vorhandenes Objekt an eine bestimmte Entitätenmenge im <xref:System.Data.Services.Client.DataServiceContext> anzufügen. Sie können dann das Objekt ändern und die Änderungen am Datendienst speichern. Im folgenden Beispiel wird ein geändertes Kundenobjekt an den Kontext angefügt, und dann wird <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> aufgerufen, um das angefügte Objekt als <xref:System.Data.Services.Client.EntityStates.Modified> zu markieren, bevor <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> aufgerufen wird:  
   
- [!code-csharp[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#attachobjectspecific)]
- [!code-vb[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#attachobjectspecific)]  
+ [!code-csharp[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#attachobjectspecific)]
+ [!code-vb[Astoria Northwind Client#AttachObjectSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#attachobjectspecific)]  
   
  Folgendes gilt beim Anfügen von Objekten:  
   
@@ -73,20 +73,20 @@ Bei Verwendung der [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -
 |------------|-----------------|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>|Erstellt einen neuen Link zwischen zwei verknüpften Entitätsobjekten. Das Aufrufen dieser Methode entspricht dem Aufrufen von <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> und <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>, um das neue Objekt zu erstellen und die Beziehung zu einem vorhandenen Objekt zu definieren.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>|Erstellt einen neuen Link zwischen zwei verknüpften Entitätsobjekten.|  
-|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Aktualisiert einen vorhandenen Link zwischen zwei verknüpften Entitätsobjekten. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> dient auch zum Löschen von Links mit einer Multiplizität von 0 (null)-oder-1-1 (`0..1:1`) und 1: 1 (`1:1`). Sie können dazu das verknüpfte Objekte auf `null` festlegen.|  
+|<xref:System.Data.Services.Client.DataServiceContext.SetLink%2A>|Aktualisiert einen vorhandenen Link zwischen zwei verknüpften Entitätsobjekten. <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> wird auch verwendet, um Links mit einer Kardinalität von 0 bzw. 1:1 (`0..1:1`) und 1:1 (`1:1`) zu löschen. Sie können dazu das verknüpfte Objekte auf `null` festlegen.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>|Markiert einen Link, den der Kontext für den Löschvorgang nachverfolgt, wenn die <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>-Methode aufgerufen wird. Verwenden Sie diese Methode, wenn Sie ein verknüpftes Objekt löschen oder durch das Löschen des Links zu einem vorhandenen Objekt und dem nachfolgenden Hinzufügen eines Links zum neuen verknüpften Objekt eine Beziehung ändern.|  
 |<xref:System.Data.Services.Client.DataServiceContext.AttachLink%2A>|Benachrichtigt den Kontext über einen vorhandenen Link zwischen zwei Entitätsobjekten. Der Kontext geht davon aus, dass diese Beziehung bereits im Datendienst vorhanden ist, und versucht nicht, den Link zu erstellen, wenn Sie die <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>-Methode aufrufen. Verwenden Sie diese Methode, wenn Sie Objekte an einen Kontext anfügen und außerdem den Link zwischen beiden anfügen müssen. Wenn Sie eine neue Beziehung definieren, sollten Sie stattdessen <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> verwenden.|  
 |<xref:System.Data.Services.Client.DataServiceContext.DetachLink%2A>|Beendet die Nachverfolgung des angegebenen Links im Kontext. Diese Methode wird verwendet, um 1:n-Beziehungen (`*:*`) zu löschen. Für Beziehungslinks mit einer Multiplizität von 1 müssen Sie stattdessen <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> verwenden.|  
   
  Im folgenden Beispiel wird gezeigt, wie die <xref:System.Data.Services.Client.DataServiceContext.AddRelatedObject%2A>-Methode verwendet wird, um ein neues `Order_Detail` hinzuzufügen, das sich auf eine vorhandene `Orders`-Entität bezieht. Da das neue `Order_Details`-Objekt jetzt vom <xref:System.Data.Services.Client.DataServiceContext> nachverfolgt wird, wird die Beziehung des hinzugefügten `Order_Details`-Objekts zur vorhandenen `Products`-Entität definiert, indem die <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>-Methode aufgerufen werden:  
   
- [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addorderdetailtoorderspecific)]
- [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addorderdetailtoorderspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addorderdetailtoorderspecific)]
+ [!code-vb[Astoria Northwind Client#AddOrderDetailToOrderSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addorderdetailtoorderspecific)]  
   
  Während die <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A>-Methode Links definiert, die im Datendienst erstellt werden müssen, müssen Sie auch die Navigationseigenschaften für die Objekte selbst festlegen, damit sich diese Links in den im Kontext enthaltenen Objekten widerspiegeln. Im vorherigen Beispiel sollten Sie die Navigationseigenschaften wie folgt festlegen:  
   
- [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#setnavprops)]
- [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#setnavprops)]  
+ [!code-csharp[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#setnavprops)]
+ [!code-vb[Astoria Northwind Client#SetNavProps](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#setnavprops)]  
   
  Weitere Informationen finden Sie unter [Vorgehensweise: Definieren von Entitätsbeziehungen](../../../../docs/framework/data/wcf/how-to-define-entity-relationships-wcf-data-services.md).  
   

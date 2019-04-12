@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 8e6b0d9c9b5d2b473aebc00063bd0a343b8708c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fb2a7c8e1cf3fbae4c6417dab492343ead991204
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59226663"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517875"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Binden von Daten an Steuerelemente (WCF Data Services)
 Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Steuerelemente wie `ComboBox` und `ListView` an eine Instanz der <xref:System.Data.Services.Client.DataServiceCollection%601>-Klasse binden. Diese Auflistung, die von der <xref:System.Collections.ObjectModel.ObservableCollection%601>-Klasse erbt, enthält die Daten aus einem [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]-Feed. Die Klasse stellt eine dynamische Datensammlung dar, die Benachrichtigungen bereitstellt, wenn Elemente hinzugefügt oder entfernt werden. Bei Verwendung eine Instanz von <xref:System.Data.Services.Client.DataServiceCollection%601> für die Datenbindung, die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliotheken diese Ereignisse um sicherzustellen, dass Objekte vom verfolgt die <xref:System.Data.Services.Client.DataServiceContext> mit den Daten im gebundenen Benutzeroberflächenelement synchronisiert bleiben.  
@@ -29,21 +29,21 @@ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Steu
   
  Im folgenden Beispiel wird gezeigt, wie eine Instanz von <xref:System.Data.Services.Client.DataServiceCollection%601> basierend auf einem angegebenen <xref:System.Data.Services.Client.DataServiceContext> und einer <xref:System.Data.Services.Client.DataServiceQuery%601> erstellt wird, die alle Kunden mit verknüpften Bestellungen zurückgibt:  
   
- [!code-csharp[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders2.cs#customersorders2binding)]
- [!code-vb[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders2.vb#customersorders2binding)]  
+ [!code-csharp[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders2.cs#customersorders2binding)]
+ [!code-vb[Astoria Northwind Client#CustomersOrders2Binding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders2.vb#customersorders2binding)]  
   
 ## <a name="binding-data-to-windows-presentation-foundation-elements"></a>Binden von Daten an Windows Presentation Foundation-Elemente  
  Da die <xref:System.Data.Services.Client.DataServiceCollection%601>-Klasse von der <xref:System.Collections.ObjectModel.ObservableCollection%601>-Klasse erbt, können Sie Objekte in einer WPF (Windows Presentation Foundation)-Anwendung an ein Element oder Steuerelement binden, ähnlich wie beim Verwenden der <xref:System.Collections.ObjectModel.ObservableCollection%601>-Klasse für die Bindung. Weitere Informationen finden Sie unter [Datenbindung (Windows Presentation Foundation)](../../../../docs/framework/wpf/data/data-binding-wpf.md). Eine Möglichkeit zum Binden von Datendienstdaten an WPF-Steuerelemente ist das Festlegen der `DataContext`-Eigenschaft des Elements auf die Instanz der <xref:System.Data.Services.Client.DataServiceCollection%601>-Klasse, die das Abfrageergebnis enthält. In diesem Fall verwenden Sie die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>-Eigenschaft, um die Objektquelle für das Steuerelement festzulegen. Verwenden Sie die <xref:System.Windows.Controls.ItemsControl.DisplayMemberPath%2A>-Eigenschaft, um anzugeben, welche Eigenschaft des gebundenen Objekts angezeigt werden soll. Wenn Sie ein Element an ein verknüpftes Objekt binden, das von einer Navigationseigenschaft zurückgegeben wird, schließen Sie den Pfad in die für die <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>-Eigenschaft definierte Bindung ein. Der Pfad ist relativ zum Stammobjekt, das von der <xref:System.Windows.FrameworkElement.DataContext%2A>-Eigenschaft des übergeordneten Steuerelements festgelegt ist. Im folgenden Beispiel wird die <xref:System.Windows.FrameworkElement.DataContext%2A>-Eigenschaft eines <xref:System.Windows.Controls.StackPanel>-Elements festgelegt, um das übergeordnete Steuerelement an eine <xref:System.Data.Services.Client.DataServiceCollection%601> von Customer-Objekten zu binden:  
   
- [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
- [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
- [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml.vb#masterdetailbinding)]
- [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf.xaml.vb#masterdetailbinding)]
- [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom2.xaml.vb#masterdetailbinding)]  
+ [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#masterdetailbinding)]
+ [!code-csharp[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf.xaml.cs#masterdetailbinding)]
+ [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom.xaml.vb#masterdetailbinding)]
+ [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf.xaml.vb#masterdetailbinding)]
+ [!code-vb[Astoria Northwind Client#MasterDetailBinding](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom2.xaml.vb#masterdetailbinding)]  
   
  Das folgende Beispiel veranschaulicht die XAML-Bindungsdefinition des untergeordneten <xref:System.Windows.Controls.DataGrid>-Elements und der <xref:System.Windows.Controls.ComboBox>-Steuerelemente:  
   
- [!code-xaml[Astoria Northwind Client#MasterDetailXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf.xaml#masterdetailxaml)]  
+ [!code-xaml[Astoria Northwind Client#MasterDetailXaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf.xaml#masterdetailxaml)]  
   
  Weitere Informationen finden Sie unter [Vorgehensweise: Binden von Daten an Windows Presentation Foundation-Elemente](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md).  
   
@@ -57,16 +57,16 @@ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Steu
   
  Im folgenden Beispiel wird eine <xref:System.Data.Services.Client.DataServiceCollection%601> an ein <xref:System.Windows.Forms.ComboBox>-Steuerelement gebunden:  
   
- [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdatabindingspecific)]
- [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdatabindingspecific)]  
+ [!code-csharp[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorders.cs#customersordersdatabindingspecific)]
+ [!code-vb[Astoria Northwind Client#CustomersOrdersDataBindingSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorders.vb#customersordersdatabindingspecific)]  
   
  Bei Verwendung der **Hinzufügen eines Dienstverweises** Dialogfeld, um die Client-Datendienstklassen, ein Projekt generieren-Datenquelle auch erstellt wird, auf der Grundlage der generierten <xref:System.Data.Services.Client.DataServiceContext>. Sie können mit dieser Datenquelle erstellen, Benutzeroberflächenelemente oder Steuerelemente, die angezeigt werden Daten aus dem Datendienst einfach durch Ziehen von Elementen aus der **Datenquellen** Fenster in den Designer. Diese Elemente werden zu an die Datenquelle gebundenen Elementen auf der Benutzeroberfläche der Anwendung. Weitere Informationen finden Sie unter [Vorgehensweise: Binden von Daten mit einer Projektdatenquelle](../../../../docs/framework/data/wcf/how-to-bind-data-using-a-project-data-source-wcf-data-services.md).  
   
 ## <a name="binding-paged-data"></a>Binden von ausgelagerten Daten  
  Ein Datendienst kann so konfiguriert werden, dass die Menge an abgefragten Daten beschränkt wird, die in einer einzelnen Antwortnachricht zurückgegeben werden. Weitere Informationen finden Sie unter [Konfigurieren des Datendiensts](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md). Wenn der Datendienst Paging von Antwortdaten durchführt, enthält jede Antwort einen Link, der zum Zurückgeben der nächsten Ergebnisseite verwendet wird. Weitere Informationen finden Sie unter [verzögerte Inhalte laden](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md). In diesem Fall müssen Sie Seiten durch Aufrufen der <xref:System.Data.Services.Client.DataServiceCollection%601.Load%2A>-Methode für die <xref:System.Data.Services.Client.DataServiceCollection%601> explizit laden, indem Sie den aus der <xref:System.Data.Services.Client.DataServiceQueryContinuation.NextLinkUri%2A>-Eigenschaft abgerufenen URI wie im folgenden Beispiel weiterleiten:  
   
- [!code-csharp[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf3.xaml.cs#bindpageddataspecific)]
- [!code-vb[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf3.xaml.vb#bindpageddataspecific)]  
+ [!code-csharp[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderswpf3.xaml.cs#bindpageddataspecific)]
+ [!code-vb[Astoria Northwind Client#BindPagedDataSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderswpf3.xaml.vb#bindpageddataspecific)]  
   
  Verknüpfte Objekte werden auf ähnliche Weise geladen. Weitere Informationen finden Sie unter [Vorgehensweise: Binden von Daten an Windows Presentation Foundation-Elemente](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md).  
   
@@ -81,18 +81,18 @@ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Steu
   
  Wenn Sie eine neue Instanz der <xref:System.Data.Services.Client.DataServiceCollection%601> erstellen, haben Sie die Option, die folgenden Parameter anzugeben, die Delegaten für Methoden definieren, die die beim Ändern gebundener Objekte ausgelösten Ereignisse behandeln:  
   
--   `entityChanged` -eine Methode, die aufgerufen wird, wenn die Eigenschaft eines gebundenen Objekts geändert wird. Dieser <xref:System.Func%602>-Delegat akzeptiert ein <xref:System.Data.Services.Client.EntityChangedParams>-Objekt und gibt einen booleschen Wert zurück, der angibt, ob das Standardverhalten, <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> für den <xref:System.Data.Services.Client.DataServiceContext> aufzurufen, noch auftreten soll.  
+-   `entityChanged` - ein Methode, die aufgerufen wird, wenn die Eigenschaft eines gebundenen Objekts geändert wird. Dieser <xref:System.Func%602>-Delegat akzeptiert ein <xref:System.Data.Services.Client.EntityChangedParams>-Objekt und gibt einen booleschen Wert zurück, der angibt, ob das Standardverhalten, <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> für den <xref:System.Data.Services.Client.DataServiceContext> aufzurufen, noch auftreten soll.  
   
--   `entityCollectionChanged` -eine Methode, die aufgerufen wird, wenn ein Objekt hinzugefügt oder aus der bindungsauflistung entfernt wird. Dieser <xref:System.Func%602>-Delegat akzeptiert ein <xref:System.Data.Services.Client.EntityCollectionChangedParams>-Objekt und gibt einen booleschen Wert zurück, der angibt, ob das Standardverhalten, <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> für eine <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add>-Aktion oder <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> für eine <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove>-Aktion für den <xref:System.Data.Services.Client.DataServiceContext> aufzurufen, beibehalten werden soll.  
+-   `entityCollectionChanged` - eine Methode, die aufgerufen wird, wenn ein Objekt der Bindungsauflistung hinzugefügt oder daraus entfernt wird. Dieser <xref:System.Func%602>-Delegat akzeptiert ein <xref:System.Data.Services.Client.EntityCollectionChangedParams>-Objekt und gibt einen booleschen Wert zurück, der angibt, ob das Standardverhalten, <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> für eine <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add>-Aktion oder <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> für eine <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove>-Aktion für den <xref:System.Data.Services.Client.DataServiceContext> aufzurufen, beibehalten werden soll.  
   
 > [!NOTE]
->  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] führt keine Validierung die benutzerdefinierten Verhaltensweisen, die Sie in diesen Delegaten implementieren.  
+>  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] überprüft die benutzerdefinierten Verhalten nicht, die Sie in diesen Delegaten implementieren.  
   
  Im folgenden Beispiel wird die <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove>-Aktion angepasst, um die <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A>-Methode und <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A>-Methode zum Entfernen von `Orders_Details`-Entitäten aufzurufen, die zu einer gelöschten `Orders`-Entität gehören. Diese benutzerdefinierte Aktion wird ausgeführt, da abhängige Entitäten beim Löschen der übergeordneten Entität nicht automatisch gelöscht werden.  
   
- [!code-csharp[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderscustom.xaml.cs#customersordersdeleterelated)]
- [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom.xaml.vb#customersordersdeleterelated)]
- [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderscustom2.xaml.vb#customersordersdeleterelated)]  
+ [!code-csharp[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/customerorderscustom.xaml.cs#customersordersdeleterelated)]
+ [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom.xaml.vb#customersordersdeleterelated)]
+ [!code-vb[Astoria Northwind Client#CustomersOrdersDeleteRelated](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/customerorderscustom2.xaml.vb#customersordersdeleterelated)]  
   
  Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen von Datenbindungsverhalten](../../../../docs/framework/data/wcf/how-to-customize-data-binding-behaviors-wcf-data-services.md).  
   
@@ -101,19 +101,19 @@ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] können Sie Steu
 ## <a name="data-binding-with-custom-client-data-classes"></a>Datenbindung mit benutzerdefinierten Clientdatenklassen  
  Um Objekte in eine <xref:System.Data.Services.Client.DataServiceCollection%601> laden zu können, müssen die Objekte selbst die <xref:System.ComponentModel.INotifyPropertyChanged>-Schnittstelle implementieren. Data service-Clientklassen, die generiert werden, bei der Verwendung der **Hinzufügen eines Dienstverweises** Dialogfeld oder ["DataSvcUtil.exe"](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md) Tool implementieren diese Schnittstelle. Wenn Sie eigene Clientdatenklassen bereitstellen, müssen Sie einen anderen Auflistungstyp für die Datenbindung verwenden. Wenn sich Objekte ändern, müssen Sie Ereignisse in den datengebundenen Steuerelementen behandeln, um die folgenden Methoden der <xref:System.Data.Services.Client.DataServiceContext>-Klasse aufzurufen:  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> – Wenn ein neues Objekt der Auflistung hinzugefügt wird.  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> - wenn der Auflistung ein neues Objekt hinzugefügt wird.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> – Wenn ein Objekt aus der Auflistung entfernt wird.  
+-   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> - wenn ein Objekt aus der Auflistung entfernt wird.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> – Wenn eine Eigenschaft eines Objekts in der Auflistung geändert wird.  
+-   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> - wenn die Eigenschaft eines Objekts in der Auflistung geändert wird.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> – Wenn ein Objekt auf eine Auflistung des verknüpften Objekts hinzugefügt wird.  
+-   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> - wenn einer Auflistung des verknüpften Objekts ein Objekt hinzugefügt wird.  
   
--   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> – Wenn ein Objekt auf eine Auflistung von verknüpften Objekten hinzugefügt wird.  
+-   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> - wenn einer Auflistung verknüpfter Objekte ein Objekt hinzugefügt wird.  
   
  Weitere Informationen finden Sie unter [Aktualisieren des Datendiensts](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Manuelles Generieren von Clientdatendienstklassen](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
+- [Vorgehensweise: Manuelles Generieren von Client-Datendienstklassen](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)
 - [Vorgehensweise: Hinzufügen eines Datendienstverweises](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

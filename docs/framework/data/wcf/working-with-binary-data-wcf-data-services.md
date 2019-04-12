@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 82a773623c1941320aa155dd5bd937d318c1238a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: de85a3aca629582e79712b71ae2e3413b919ab28
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170325"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517238"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Arbeiten mit Binärdaten (WCF-Datendienste)
 Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliothek können Sie zum Abrufen und Aktualisieren von Binärdaten aus einer [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed in einem der folgenden Methoden:  
@@ -30,7 +30,7 @@ Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliothe
 ## <a name="entity-metadata"></a>Entitätsmetadaten  
  Eine Entität mit einem verknüpften Medienressourcenstream wird in den Metadaten des Datendiensts angegeben, indem das `HasStream`-Attribut auf einen Entitätstyp angewendet wird, bei dem es sich um den Medienlinkeintrag handelt. Im folgenden Beispiel die `PhotoInfo` Entität ist ein Media Link Entry, die eine zugehörige Medienressource, angegeben durch die `HasStream` Attribut.  
   
- [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
+ [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]  
   
  Die verbleibenden Beispiele in diesem Thema zeigen, wie Sie auf den Medienressourcenstream zugreifen und ihn ändern. Ein vollständiges Beispiel dafür, wie Sie einen medienressourcenstream in einer .NET Framework-Clientanwendung mithilfe von nutzen die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Clientbibliothek finden Sie im Beitrag [den Zugriff auf Stream einen Medien-Ressource vom Client](https://go.microsoft.com/fwlink/?LinkID=201637).  
   
@@ -43,14 +43,14 @@ Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliothe
 ### <a name="getting-the-uri-of-the-binary-stream"></a>Abrufen des URI des binären Streams  
  Beim Abrufen bestimmter Medienressourcentypen wie Bildern und anderen Mediendateien ist es oft einfacher, den URI der Medienressource in der Anwendung zu verwenden, anstatt den binären Datenstrom selbst zu behandeln. Zum Abrufen des URI des zugehörigen Ressourcenstreams eines Medienlinkeintrags müssen Sie die <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A>-Methode für die <xref:System.Data.Services.Client.DataServiceContext>-Instanz aufrufen, von der die Entität nachverfolgt wird. Das folgende Beispiel zeigt, wie Sie die <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A>-Methode aufrufen, um den URI eines Medienressourcenstreams abzurufen, mit dem auf dem Client ein neues Bild erstellt wird:  
   
- [!code-csharp[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming client/cs/photowindow.xaml.cs#getreadstreamuri)]
- [!code-vb[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming client/vb/photowindow.xaml.vb#getreadstreamuri)]  
+ [!code-csharp[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_client/cs/photowindow.xaml.cs#getreadstreamuri)]
+ [!code-vb[Astoria Photo Streaming Client#GetReadStreamUri](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_client/vb/photowindow.xaml.vb#getreadstreamuri)]  
   
 ### <a name="downloading-the-binary-resource-stream"></a>Herunterladen des binären Ressourcenstreams  
  Wenn Sie einen binären Ressourcenstream abrufen, müssen Sie die <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A>-Methode für die <xref:System.Data.Services.Client.DataServiceContext>-Instanz aufrufen, von der die Entität nachverfolgt wird. Diese Methode sendet eine Anforderung an den Datendienst, der ein <xref:System.Data.Services.Client.DataServiceStreamResponse>-Objekt mit einem Verweis auf den Stream mit der Ressource zurückgibt. Verwenden Sie diese Methode, wenn die Anwendung die binäre Ressource als <xref:System.IO.Stream> erfordert. Das folgende Beispiel zeigt, wie Sie die <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A>-Methode aufrufen, um einen Stream abzurufen, mit dem auf dem Client ein neues Bild erstellt wird:  
   
- [!code-csharp[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria streaming client/cs/customerphotowindow.xaml.cs#getreadstreamclient)]
- [!code-vb[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria streaming client/vb/customerphotowindow.xaml.vb#getreadstreamclient)]  
+ [!code-csharp[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_streaming_client/cs/customerphotowindow.xaml.cs#getreadstreamclient)]
+ [!code-vb[Astoria Streaming Client#GetReadStreamClient](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_streaming_client/vb/customerphotowindow.xaml.vb#getreadstreamclient)]  
   
 > [!NOTE]
 >  Der Content-Length-Header der Antwortnachricht, die den binären Datenstrom enthält, wird nicht vom Datendienst festgelegt. Dieser Wert entspricht möglicherweise nicht der tatsächlichen Länge des binären Datenstroms.  
@@ -58,8 +58,8 @@ Die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] -Clientbibliothe
 ### <a name="uploading-a-media-resource-as-a-stream"></a>Hochladen einer Medienressource als Stream  
  Um eine Medienressource einzufügen oder zu aktualisieren, rufen Sie die <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>-Methode für die <xref:System.Data.Services.Client.DataServiceContext>-Instanz auf, von der die Entität nachverfolgt wird. Diese Methode sendet eine Anforderung an den Datendienst, die die aus dem angegebenen Stream gelesene Medienressource enthält. Das folgende Beispiel zeigt, wie Sie die <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>-Methode aufrufen, um ein Bild an den Datendienst zu senden:  
   
- [!code-csharp[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming client/cs/photodetailswindow.xaml.cs#setsavestream)]
- [!code-vb[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming client/vb/photodetailswindow.xaml.vb#setsavestream)]  
+ [!code-csharp[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_client/cs/photodetailswindow.xaml.cs#setsavestream)]
+ [!code-vb[Astoria Photo Streaming Client#SetSaveStream](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_client/vb/photodetailswindow.xaml.vb#setsavestream)]  
   
  In diesem Beispiel wird die <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A>-Methode aufgerufen, indem der Wert `true` für den `closeStream`-Parameter angegeben wird. Dadurch wird sichergestellt, dass der <xref:System.Data.Services.Client.DataServiceContext> den Stream nach dem Hochladen der Binärdaten in den Datendienst schließt.  
   

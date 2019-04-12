@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 4b63695992b3af28043a46c62b426ff176505048
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dec42a19f3e265f440ec03164ebc1ece9b6d5ce3
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074325"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517043"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Konfigurieren des Datendiensts (WCF Data Services)
 Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], können Sie Datendienste, die verfügbar zu machen erstellen [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] -feeds. Die Daten dieser Feeds können aus einer Vielzahl von Datenquellen stammen. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Mithilfe von Datenanbietern, um diese Daten als verfügbar zu machen eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed. Zu diesen Anbietern zählen ein [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-Anbieter, ein Reflektionsanbieter und ein Schnittstellensatz für benutzerdefinierte Datendienstanbieter. Die Anbieterimplementierung definiert das Datenmodell für den Dienst. Weitere Informationen finden Sie unter [Datendiensteanbieter](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  
@@ -21,8 +21,8 @@ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], können Sie Dat
   
  Das Verhalten des Datendiensts wird durch die Member der <xref:System.Data.Services.DataServiceConfiguration>-Klasse definiert, und durch Member der <xref:System.Data.Services.DataServiceBehavior>-Klasse, auf die von der <xref:System.Data.Services.DataServiceConfiguration.DataServiceBehavior%2A>-Eigenschaft der <xref:System.Data.Services.DataServiceConfiguration>-Klasse zugegriffen wird. Die <xref:System.Data.Services.DataServiceConfiguration>-Klasse wird wie in der folgenden Implementierung eines Northwind-Datendiensts für die `InitializeService`-Methode angegeben, die vom Datendienst implementiert wird:  
   
-[!code-csharp[Astoria Northwind Service#DataServiceConfigComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/Astoria Northwind Service/cs/northwind.svc.cs#dataserviceconfigcomplete)]  
-[!code-vb[Astoria Northwind Service#DataServiceConfigComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/Astoria Northwind Service/vb/northwind.svc.vb#dataserviceconfigcomplete)]  
+[!code-csharp[Astoria Northwind Service#DataServiceConfigComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind.svc.cs#dataserviceconfigcomplete)]  
+[!code-vb[Astoria Northwind Service#DataServiceConfigComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind.svc.vb#dataserviceconfigcomplete)]  
   
 ## <a name="data-service-configuration-settings"></a>Konfigurationseinstellungen des Datendiensts  
  Mit der <xref:System.Data.Services.DataServiceConfiguration>-Klasse können Sie das folgende Datendienstverhalten angeben:  
@@ -55,7 +55,7 @@ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], können Sie Dat
 |------------------|-----------|--------------|-------------|------------|-----------|  
 |`/Customers`|<xref:System.Data.Services.EntitySetRights.ReadMultiple>|Nicht unterstützt|Nicht unterstützt|<xref:System.Data.Services.EntitySetRights.WriteAppend>|Nicht unterstützt|  
 |`/Customers('ALFKI')`|<xref:System.Data.Services.EntitySetRights.ReadSingle>|<xref:System.Data.Services.EntitySetRights.ReadSingle> und <xref:System.Data.Services.EntitySetRights.WriteDelete>|<xref:System.Data.Services.EntitySetRights.ReadSingle> und <xref:System.Data.Services.EntitySetRights.WriteMerge>|n/v|<xref:System.Data.Services.EntitySetRights.ReadSingle> und <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
-|`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Nicht unterstützt|Nicht unterstützt|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> und <xref:System.Data.Services.EntitySetRights.WriteMerge> oder <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> - und -<br /><br /> `Orders` `:` und <xref:System.Data.Services.EntitySetRights.WriteAppend>|Nicht unterstützt|  
+|`/Customers('ALFKI')/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Nicht unterstützt|Nicht unterstützt|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> und <xref:System.Data.Services.EntitySetRights.WriteMerge> oder <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> - und -<br /><br /> `Orders` `:` Und <xref:System.Data.Services.EntitySetRights.WriteAppend>|Nicht unterstützt|  
 |`/Customers('ALFKI')/Orders(10643)`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> und <xref:System.Data.Services.EntitySetRights.WriteDelete>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> und <xref:System.Data.Services.EntitySetRights.WriteMerge>|Nicht unterstützt|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle> und <xref:System.Data.Services.EntitySetRights.WriteReplace>|  
 |`/Orders(10643)/Customer`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> und <xref:System.Data.Services.EntitySetRights.WriteDelete><br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> und <xref:System.Data.Services.EntitySetRights.WriteMerge>;<br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|`Customers`: <xref:System.Data.Services.EntitySetRights.WriteAppend><br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.WriteAppend> und <xref:System.Data.Services.EntitySetRights.ReadSingle>|Nicht unterstützt|  
 |`/Customers('ALFKI')/$links/Orders`|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle><br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadMultiple>|Nicht unterstützt|Nicht unterstützt|`Customers`: <xref:System.Data.Services.EntitySetRights.ReadSingle> und <xref:System.Data.Services.EntitySetRights.WriteMerge> oder <xref:System.Data.Services.EntitySetRights.WriteReplace><br /><br /> - und -<br /><br /> `Orders`: <xref:System.Data.Services.EntitySetRights.ReadSingle>|Nicht unterstützt|  
@@ -85,5 +85,5 @@ Mit [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], können Sie Dat
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Definieren von WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Hosten des Datendiensts](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)

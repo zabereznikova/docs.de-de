@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 615443bee67d7ca69d25193404055b7299a58507
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298876"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517589"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Streaminganbieter (WCF Data Services)
 Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. Diese Binärdaten können Video- und Audiostreams, Bilder, Dokumentdateien oder andere Typen binärer Medien darstellen. Wenn eine Entität im Datenmodell eine oder mehrere binäre Eigenschaften enthält, gibt der Datendienst diese als Base-64-codierte Binärdaten im Eintrag im Antwortfeed zurück. Da das Laden und Serialisieren von umfangreichen Binärdaten auf diese Weise die Leistung beeinträchtigen können die [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiert einen Mechanismus zum Abrufen von Binärdaten unabhängig von der Entität, zu dem er gehört. Dies wird erreicht, indem die Binärdaten und die Entität in einen oder mehrere Datenströme getrennt werden.  
@@ -46,7 +46,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
  **Entity Framework-Anbieter**  
  Um anzugeben, dass eine Entität ein Medienlinkeintrag ist, fügen Sie der Entitätstypdefinition das `HasStream`-Attribut im konzeptionellen Modell hinzu, wie im folgenden Beispiel dargestellt:  
   
- [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
+ [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_photo_streaming_service/xml/photodata.edmx#hasstream)]  
   
  Sie müssen außerdem entweder der Entität oder dem Stamm der EDMX- oder CSDL-Datei, die das Datenmodell definiert, den Namespace `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` hinzufügen.  
   
@@ -55,7 +55,7 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
  **Reflektionsanbieter**  
  Um anzugeben, dass eine Entität ein Medienlinkeintrag ist, fügen Sie der Klasse, die den Entitätstyp im Reflektionsanbieter definiert, <xref:System.Data.Services.Common.HasStreamAttribute> hinzu.  
   
- **Benutzerdefinierter Datendienstanbieter**  
+ **Benutzerdefinierte Datendienstanbieter**  
  Wenn Sie benutzerdefinierte Dienstanbieter verwenden, implementieren Sie die <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>-Schnittstelle, um die Metadaten für den Datendienst zu definieren. Weitere Informationen finden Sie unter [Benutzerdefinierte Datendienstanbieter](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md). Sie geben an, dass ein binärer Ressourcenstream zu einem <xref:System.Data.Services.Providers.ResourceType> gehört, indem Sie die <xref:System.Data.Services.Providers.ResourceType.IsMediaLinkEntry%2A>-Eigenschaft für den `true`, der den Entitätstyp (einen Medienlinkeintrag) darstellt, auf <xref:System.Data.Services.Providers.ResourceType> festlegen.  
   
 ## <a name="implementing-the-idataservicestreamprovider-interface"></a>Implementieren der IDataServiceStreamProvider-Schnittstelle  
@@ -74,8 +74,8 @@ Ein Datendienst kann große BLOB-Daten (Binary Large Object) verfügbar machen. 
 ## <a name="creating-the-streaming-data-service"></a>Erstellen des Streamingdatendiensts  
  Damit die [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Laufzeit auf die <xref:System.Data.Services.Providers.IDataServiceStreamProvider>-Implementierung zugreifen kann, muss der Datendienst, den Sie erstellen, auch die <xref:System.IServiceProvider>-Schnittstelle implementieren. Im folgenden Beispiel wird gezeigt, wie die <xref:System.IServiceProvider.GetService%2A>-Methode implementiert wird, um eine Instanz der `PhotoServiceStreamProvider`-Klasse zurückzugeben, die <xref:System.Data.Services.Providers.IDataServiceStreamProvider> implementiert.  
   
- [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria photo streaming service/cs/photodata.svc.cs#photoservicestreamingprovider)]
- [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria photo streaming service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
+ [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
+ [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]  
   
  Allgemeine Informationen über das Erstellen eines Datendiensts finden Sie unter [Konfigurieren des Datendiensts](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md).  
   

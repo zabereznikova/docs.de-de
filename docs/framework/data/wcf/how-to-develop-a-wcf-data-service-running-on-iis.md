@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Entwickeln eines WCF-Datendiensts, der auf IIS ausgeführt wird'
+title: 'Vorgehensweise: Entwickeln eines mit IIS ausgeführten WCF-Datendiensts'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,29 +9,29 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: af81e65dfd4661d62d7aa4a3e6075be312765cb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201067"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517836"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Vorgehensweise: Entwickeln von WCF Data Services auf IIS ausgeführt wird
 
 In diesem Thema wird gezeigt, wie mit WCF Data Services einen Datendienst erstellen, der auf der Northwind-Beispieldatenbank basiert, die von einer ASP.NET-Webanwendung gehostet wird, die auf Internet Information Services (IIS) ausgeführt wird. Ein Beispiel zum gleichen Northwind-Datendienst als eine ASP.NET-Webanwendung erstellen, die auf ASP.NET Development Server ausgeführt wird, finden Sie die [WCF Data Services-Schnellstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).
 
 > [!NOTE]
-> Um den Northwind-Datendienst zu erstellen, muss die Northwind-Beispieldatenbank auf dem lokalen Computer installiert sein. Diese Beispieldatenbank, finden Sie unter auf der Downloadseite des [Beispieldatenbanken für SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
+> Um den Northwind-Datendienst zu erstellen, muss die Northwind-Beispieldatenbank auf dem lokalen Computer installiert sein. Diese Beispieldatenbank kann von der Downloadseite [Beispieldatenbanken für SQL Server](https://go.microsoft.com/fwlink/?linkid=24758)heruntergeladen werden.
 
  In diesem Thema wird gezeigt, wie ein Datendienst mithilfe des Entity Framework-Anbieters erstellt wird. Weitere Datendiensteanbieter sind verfügbar. Weitere Informationen finden Sie unter [Datendiensteanbieter](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).
 
- Nach dem Erstellen des Diensts, müssen Sie explizit den Zugriff auf Datendienstressourcen bereitstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren Sie den Zugriff auf den Datendienst](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
+ Nach dem Erstellen des Diensts, müssen Sie explizit den Zugriff auf Datendienstressourcen bereitstellen. Weitere Informationen finden Sie unter [Vorgehensweise: Aktivieren des Zugriffs auf den Datendienst](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>Erstellen der ASP.NET-Webanwendung, die unter IIS ausgeführt wird.
 
 1. In Visual Studio auf die **Datei** , wählen Sie im Menü **neu** > **Projekt**.
 
-2. In der **neues Projekt** wählen Sie im Dialogfeld die **installiert** > [**Visual C#-** oder **Visual Basic**] > **Web** Kategorie.
+2. In der **neues Projekt** wählen Sie im Dialogfeld die **installiert** > [**Visual C#**  oder **Visual Basic**] > **Web**  Kategorie.
 
 3. Wählen Sie die **ASP.NET-Webanwendung** Vorlage.
 
@@ -132,7 +132,7 @@ In diesem Thema wird gezeigt, wie mit WCF Data Services einen Datendienst erstel
 
 5. Verbinden Sie das Datenmodell mit der Datenbank, indem er einen der folgenden Schritte aus, und klicken Sie dann auf **Weiter**:
 
-    -   Wenn Sie keine datenbankverbindung, die bereits konfiguriert haben, klicken Sie auf **neue Verbindung** , und erstellen Sie eine neue Verbindung. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Verbindungen mit SQL Server-Datenbanken](https://go.microsoft.com/fwlink/?LinkId=123631). Dieser SQL Server-Instanz muss die Northwind-Beispieldatenbank angefügt sein.
+    -   Wenn Sie keine datenbankverbindung, die bereits konfiguriert haben, klicken Sie auf **neue Verbindung** , und erstellen Sie eine neue Verbindung. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Verbindungen zu SQL Server-Datenbanken](https://go.microsoft.com/fwlink/?LinkId=123631). Dieser SQL Server-Instanz muss die Northwind-Beispieldatenbank angefügt sein.
 
          \- oder –
 
@@ -159,8 +159,8 @@ In diesem Thema wird gezeigt, wie mit WCF Data Services einen Datendienst erstel
 
 4. Ersetzen Sie im Code für den Datendienst in der Definition der Klasse, die den Datendienst definiert, den Kommentar `/* TODO: put your data source class name here */` durch den Typ des Entitätscontainers des Datenmodells, in diesem Fall `NorthwindEntities`. Die Klassendefinition sollte wie folgt aussehen:
 
-     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
-     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
+     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
+     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
 ## <a name="see-also"></a>Siehe auch
 
