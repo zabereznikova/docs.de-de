@@ -480,7 +480,7 @@ Assemblyentladbarkeit wurde im .NET Framework durch Anwendungsdomänen (AppDomai
 
 ## <a name="windows-native-interop"></a>Native Windows-Interop-API
 
-Windows stellt eine umfassende native API mit grundlegenden C-APIs (ohne C++-Features), COM und WinRT bereit. Seit .NET Core 1.0 wird **P/Invoke** unterstützt. In .NET Core 3.0 besteht nun die Möglichkeit, **mit CoCreate COM-APIs zu erstellen** und **WinRT-APIs zu aktivieren**.
+Windows stellt eine umfassende native API mit grundlegenden C-APIs (ohne C++-Features), COM und WinRT bereit. Seit .NET Core 1.0 wird **P/Invoke** unterstützt. In .NET Core 3.0 besteht nun die Möglichkeit, **COCreate-COM-APIs zu erstellen** und **WinRT-APIs zu aktivieren**.
 
 Ein Beispiel zur Verwendung von COM finden Sie im [Quellcode der Excel-Demo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo).
 
