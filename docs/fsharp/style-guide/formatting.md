@@ -2,12 +2,12 @@
 title: F#Richtlinien für die codeformatierung
 description: Erfahren Sie, Richtlinien für die Formatierung F# Code.
 ms.date: 02/08/2019
-ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 0a72f96119181650837657afea6ca9d555ce9e5a
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093618"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553861"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#Richtlinien für die codeformatierung
 
@@ -74,7 +74,7 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-Für jeden benutzerdefinierten Operator an, die mit beginnt `*`, Sie müssen eine durch Leerraum am Anfang der Definition, die ein Compiler Mehrdeutigkeiten zu vermeiden, hinzufügen. Aus diesem Grund empfiehlt es sich, dass Sie einfach die Definitionen aller Operatoren mit einem einzelnen Leerzeichen umschließen.
+Für jeden benutzerdefinierten Operator an, die mit beginnt `*` und, die mehr als ein Zeichen ist, müssen Sie ein Leerzeichen am Anfang der Definition, die ein Compiler Mehrdeutigkeiten zu vermeiden, hinzufügen. Aus diesem Grund empfehlen wir, dass Sie einfach die Definitionen aller Operatoren mit einem einzelnen Leerzeichen umschließen.
 
 ### <a name="surround-function-parameter-arrows-with-white-space"></a>Setzen Sie die Funktion Parameter Pfeile mit einem Leerzeichen
 
