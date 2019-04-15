@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: e8f90d2a9e2f2e4bef8d1ab360bfe677bd2bf695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bbdab11201171bf8d730276c7f94cbc5317acdd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589700"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101119"
 ---
 # <a name="how-to-create-a-socket"></a>Vorgehensweise: Erstellen eines Sockets
 Bevor Sie einen Socket verwenden können, um mit einem Remotegerät zu kommunizieren, muss der Socket mit Informationen zu Protokoll und Netzwerkadresse initialisiert werden. Der Konstruktor für die Klasse <xref:System.Net.Sockets.Socket> besitzt Parameter, die die Adressfamilie, den Sockettyp und den Protokolltyp, den der Socket zum Aufbauen von Verbindungen verwendet, angeben.  
@@ -61,5 +61,6 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
  Nachdem ein **Socket** erstellt wurde, kann dieser entweder eine Verbindung zu einem Remoteendpunkt initiieren oder Verbindungen von Remotegeräten empfangen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden von Clientsockets](../../../docs/framework/network-programming/using-client-sockets.md)
 - [Überwachen mit Sockets](../../../docs/framework/network-programming/listening-with-sockets.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c4ba3ff2-fe59-4c5d-9e0b-86bba3cd865c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1939666b3dd271959c418e3d714b177e170fcd04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcbcced47cfb2031e4a35a7437ec875a20354eed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176253"
 ---
 # <a name="application-compatibility-in-the-net-framework"></a>Anwendungskompatibilität im .NET Framework
 
@@ -71,12 +71,11 @@ Jedes Problem umfasst die folgenden Informationen:
 ## <a name="usage"></a>Verwendung
 Um zu starten, wählen Sie unten den Typ der Kompatibilitätsänderung aus:
 
-* [Neuausrichtungsänderungen](./retargeting/index.md)
-* [Änderungen zur Laufzeit](./runtime/index.md)
-
+* [Neuzuweisungsänderungen](./retargeting/index.md)
+* [Laufzeitänderungen](./runtime/index.md)
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Versionen und Abhängigkeiten](../../../docs/framework/migration-guide/versions-and-dependencies.md)
-- [Neuigkeiten](../../../docs/framework/whats-new/index.md)
+- [Neues](../../../docs/framework/whats-new/index.md)
 - [Veraltete Elemente in der Klassenbibliothek](../../../docs/framework/whats-new/whats-obsolete.md)

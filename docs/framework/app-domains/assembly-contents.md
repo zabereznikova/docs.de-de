@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2be1aad4d222917364a57abc93b414af40b1e9ae
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 25594c55a5462c42611df7119dad37bd8a61cc2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675652"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149343"
 ---
 # <a name="assembly-contents"></a>Assemblyinhalte
 Im Allgemeinen kann eine statische Assembly vier Elemente enthalten:  
@@ -47,6 +47,7 @@ Im Allgemeinen kann eine statische Assembly vier Elemente enthalten:
  Wenn Sie gegenwärtig Quellcode schreiben, treffen Sie explizite Entscheidungen darüber, wie die Funktionen einer Anwendung in eine oder mehrere Dateien aufgeteilt werden. Beim Entwerfen von .NET Framework-Code werden Sie in Zukunft ähnliche Entscheidungen darüber treffen, wie Sie Funktionen in eine oder mehrere Assemblys aufteilen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Assemblymanifest](../../../docs/framework/app-domains/assembly-manifest.md)
 - [Überlegungen zur Assemblysicherheit](../../../docs/framework/app-domains/assembly-security-considerations.md)

@@ -1,6 +1,6 @@
 ---
 title: namespace-Schlüsselwort – C#-Programmierreferenz
-ms.custom: seodec18
+ms.custom: seoapril2019
 ms.date: 07/20/2015
 f1_keywords:
 - namespace_CSharpKeyword
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: b5c6b8081c188d5b184930222d54ad8f4b5d7a71
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148758"
 ---
-# <a name="namespace-c-reference"></a>namespace (C#-Referenz)
+# <a name="namespace-c-reference"></a>Namespace (C#-Referenz)
 
 Das `namespace`-Schlüsselwort wird verwendet, um einen Gültigkeitsbereich zu deklarieren, der eine Gruppe von verwandten Objekten enthält. Sie können einen Namespace verwenden, um Codeelemente zu organisieren und global eindeutige Typen zu erstellen.
 
 [!code-csharp[csrefKeywordsNamespace#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#1)]
 
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Anmerkungen
 
 Innerhalb eines Namespace können Sie 0 (null) oder mehr der folgenden Typen deklarieren:
 
@@ -58,7 +58,7 @@ Weitere Informationen zur Verwendung von Namespaces finden Sie in den folgenden 
 
 - [Namespaces](../../programming-guide/namespaces/index.md)
 
-- [Using-Namespaces](../../programming-guide/namespaces/using-namespaces.md)
+- [Verwenden von Namespaces](../../programming-guide/namespaces/using-namespaces.md)
 
 - [Vorgehensweise: Verwenden des globalen Namespacealias](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
 
@@ -72,4 +72,5 @@ Weitere Informationen zur Verwendung von Namespaces finden Sie in den folgenden 
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
 - [Namespaceschlüsselwörter](namespace-keywords.md)
-- [using](using.md)
+- [using](using-directive.md)
+- [verwendet statische](using-static.md)

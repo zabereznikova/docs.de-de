@@ -4,12 +4,12 @@ description: Best Practices für die Paketerstellung mit NuGet für .NET-Bibliot
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: e08629adb8074fdfb73865d2dc156cbf6e46ab9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204612"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198178"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -119,7 +119,6 @@ Der Nachteil von eingebetteten Symboldateien ist, dass sie die Paketgröße für
 > Mit Symbolpaketen (`*.snupkg`) erhalten Entwickler eine gute abrufbare Debugfunktion, ohne dass die Größe des Hauptpakets und die Wiederherstellungsleistung für diejenigen, die das NuGet-Paket nicht debuggen möchten, beeinträchtigt wird.
 >
 > Der Nachteil ist, dass sie den NuGet-Symbolserver in ihrer IDE finden und konfigurieren müssen (einmalige Konfiguration), um Symboldateien abzurufen. Für Visual Studio 2019 ist geplant, dass der Symbolserver von NuGet.org als Standardoption bereitgestellt wird. 
-
 
 >[!div class="step-by-step"]
 >[Zurück](strong-naming.md)

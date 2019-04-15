@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 612cd108e37d6f072bafed919c14532498352e4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37a864083fa7cfbea16614a94454571f31deed3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136707"
 ---
 # <a name="platform-invoke-examples"></a>Beispiele für Plattformaufrufe
 In den folgenden Beispielen erfahren Sie, wie Sie durch die Übergabe einer einfachen Zeichenfolge als Argument die Funktion **MessageBox** in der Datei „User32.dll“ definieren und aufrufen. In den Beispielen ist das Feld <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> auf **Auto** (Automatisch) festgelegt, damit die Zielplattform die Zeichenbreite und das Marshalling von Zeichenfolgen festlegen kann.  
@@ -32,6 +32,7 @@ In den folgenden Beispielen erfahren Sie, wie Sie durch die Übergabe einer einf
  Weitere Beispiele finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mithilfe des Plattformaufrufs)](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [Specifying a Character Set (Angeben eines Zeichensatzes)](../../../docs/framework/interop/specifying-a-character-set.md)
+- [Erstellen von Prototypen in verwaltetem Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [Angeben eines Zeichensatzes](../../../docs/framework/interop/specifying-a-character-set.md)

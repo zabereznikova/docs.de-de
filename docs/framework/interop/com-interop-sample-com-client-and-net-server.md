@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a219cb2c-9fa2-4c90-9b26-939e0788f178
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc2cd6b59fe7d05e4973d8a9ece13d9ae7f91e7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a928dde8615589cbc8e502a9b5dd033beded4c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548546"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086753"
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>COM-Interopbeispiel: COM-Client und .NET-Server
 Dieses Beispiel veranschaulicht die Interoperation zwischen einem [COM-Client](#cpconcominteropsamplecomclientnetserveranchor1) und einem [.NET-Server](#cpconcominteropsamplecomclientnetserveranchor2), die Hypothekenberechnungen ausführt. In diesem Beispiel erstellt der Client eine Instanz der verwalteten `Loan`-Klasse und ruft sie auf. Er übergibt vier Argumente (eine dieser vier ist gleich 0 (null)) an die Instanz und zeigt die Berechnungen. In diesem Abschnitt werden Codebeispiele aus diesem Beispiel angezeigt.  
@@ -390,4 +390,5 @@ namespace LoanLib {
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)

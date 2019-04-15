@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fc265e4a7ceec291d645346bb012e2ed4600d22
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 4cc9d592bc2030cdd17e7f87d7c5ac458dc01106
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124812"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Marshalling von Delegaten als Rückrufmethode
 In diesem Beispiel wird veranschaulicht, wie Delegaten an eine nicht verwaltete Funktion übergeben werden, die Funktionszeiger erwartet. Ein Delegat ist eine Klasse, die einen Verweis auf eine Methode enthalten kann, und gleichbedeutend mit einem typsicheren Funktionszeiger oder einer Rückruffunktion ist.
@@ -53,6 +53,7 @@ Die `LibWrap`-Klasse in diesem Beispiel enthält verwaltete Prototypen für die 
 [!code-vb[Conceptual.Interop.Marshaling#38](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/callback.vb#38)]
 
 ## <a name="see-also"></a>Siehe auch
+
 - [Verschiedene Marshallingbeispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
 - [Datentypen für den Plattformaufruf](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
 - [Erstellen von Prototypen in verwaltetem Code](creating-prototypes-in-managed-code.md)

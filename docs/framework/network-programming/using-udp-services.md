@@ -17,12 +17,12 @@ helpviewer_keywords:
 - sending data, UDP
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
-ms.openlocfilehash: f89a0ad79dbf46c6d75d56106ad05a683482a501
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 397c51501ac333d6df699064b3fe82920bc38152
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511604"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086103"
 ---
 # <a name="using-udp-services"></a>Verwenden von UDP-Diensten
 Die <xref:System.Net.Sockets.UdpClient>-Klasse kommuniziert über UDP-Netzwerkdienste. Die Eigenschaften und Methoden der <xref:System.Net.Sockets.UdpClient>-Klasse abstrahieren Details zum Erstellen einer <xref:System.Net.Sockets.Socket> zum Anfordern und Empfangen von Daten mithilfe von UDP.
@@ -159,5 +159,6 @@ class Program
 ```
 
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Net.Sockets.UdpClient>
 - <xref:System.Net.IPAddress>

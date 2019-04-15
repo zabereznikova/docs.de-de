@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2881af41828425914c7644d04e07918ac6b97f06
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 075396ae070be5312fa7afe29e8bdf5fa81a3817
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185427"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Veraltete Member in .NET Framework
 
@@ -800,5 +800,6 @@ In den Tabellen in diesem Artikel werden die Typmember nach Assembly geordnet au
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|Der Registrierungsschlüssel `DynData` funktioniert nur unter Win9x, was von dieser .NET Framework-Version nicht unterstützt wird. Verwenden Sie stattdessen den Registrierungsschlüssel `PerformanceData`. Diese Eigenschaft wird in einer der nächsten Framework-Versionen entfernt.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Veraltete Elemente in der Klassenbibliothek](whats-obsolete.md)
 - [Veraltete Typen](obsolete-types.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 39cc38f56b6f9fb1735bcca64bf0f77ec29a1c43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff85f5737babb73d87f4918ca0f4981263f7dadc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597826"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166750"
 ---
 # <a name="how-to-create-an-application-domain"></a>Vorgehensweise: Erstellen einer Anwendungsdomäne
 Ein Common Language Runtime-Host erstellt automatisch Anwendungsdomänen, wenn sie gebraucht werden. Jedoch können Sie eigene Anwendungsdomänen erstellen und sie in die Assemblys laden, die Sie persönlich verwalten möchten. Sie können auch Anwendungsdomänen erstellen, in denen Sie Code ausführen.  
@@ -30,5 +30,6 @@ Ein Common Language Runtime-Host erstellt automatisch Anwendungsdomänen, wenn s
  [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>Siehe auch
-- [Programming with Application Domains (Programmieren mit Anwendungsdomänen)](application-domains.md#programming-with-application-domains)
+
+- [Programmieren mit Anwendungsdomänen](application-domains.md#programming-with-application-domains)
 - [Verwenden von Anwendungsdomänen](../../../docs/framework/app-domains/use.md)

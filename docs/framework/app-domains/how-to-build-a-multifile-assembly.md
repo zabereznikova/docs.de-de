@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 68f525244f2238ebdc44116fc91c3ddcb0a79bfd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bcc451903f7fbf7f82e2ed64834d26e605a0c069
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975055"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187797"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Vorgehensweise: Erstellen einer Mehrfachdateiassembly
 In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird, und es wird Code vorgestellt, der jeden Schritt in der Vorgehensweise veranschaulicht.
@@ -98,6 +98,7 @@ In diesem Artikel wird beschrieben, wie eine Mehrfachdateiassembly erstellt wird
     Sie können das [MSIL Disassembler-Tool (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) verwenden, um den Inhalt einer Assembly zu untersuchen oder um zu bestimmen, ob es sich bei einer Datei um eine Assembly oder ein Modul handelt.
 
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)
 - [Vorgehensweise: Anzeigen des Assemblyinhalts](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)
 - [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

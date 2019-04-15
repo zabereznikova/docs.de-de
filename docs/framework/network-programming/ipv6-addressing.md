@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50df0e0710c1f722d4e769ad89b653f6a8d5e394
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121952"
 ---
 # <a name="ipv6-addressing"></a>IPv6-Adressierung
 Im Internetprotokoll Version 6 (IPv6) sind die Adressen 128 Bits lang. Ein Grund für solch einen großen Adressbereich ist das Unterteilen der verfügbaren Adressen in eine Hierarchie von Routingdomänen, die die Topologie des Internets widerspiegeln. Ein weiterer Grund ist das Zuordnen der Adressen des Netzwerkadapters (oder der Netzwerkschnittstellen), die Geräte mit dem Netzwerk verbinden. IPv6 verfügt über die inhärente Funktion, Adressen auf ihrer niedrigsten Ebene aufzulösen, bei der es sich um die Ebene der Netzwerkschnittstelle handelt. Weiterhin verfügt es über Funktionen zur automatischen Konfiguration.  
@@ -52,7 +52,7 @@ Im Internetprotokoll Version 6 (IPv6) sind die Adressen 128 Bits lang. Ein Grund
   
  Das folgende Beispiel enthält eine Adresse mit einem 64-Bit-Präfix.  
   
- `3FFE:FFFF:0:CD30:0:0:0:0/64`.  
+ `3FFE:FFFF:0:CD30:0:0:0:0/64`sein.  
   
  Das Präfix in diesem Beispiel ist `3FFE:FFFF:0:CD30`. Die Adresse kann auch in einem komprimierten Format (`3FFE:FFFF:0:CD30::/64`) geschrieben werden.  
   
@@ -73,5 +73,6 @@ Im Internetprotokoll Version 6 (IPv6) sind die Adressen 128 Bits lang. Ein Grund
  Im Allgemeinen verfügt der Knoten immer über eine verbindungslokale Adresse. Er kann auch über eine standortlokale Adresse und eine oder mehrere globale Adressen verfügen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Internetprotokoll Version 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [Sockets](../../../docs/framework/network-programming/sockets.md)

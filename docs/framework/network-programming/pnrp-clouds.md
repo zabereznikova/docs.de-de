@@ -2,12 +2,12 @@
 title: PNRP-Clouds
 ms.date: 03/30/2017
 ms.assetid: a82e2bf1-62ab-4c2d-83f3-3217a6aead2e
-ms.openlocfilehash: d91bf1b68b8446e2700b601d818c493b8edc1b82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 943cad880885a624c0ed0798738665c8bcd7036f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110044"
 ---
 # <a name="pnrp-clouds"></a>PNRP-Clouds
 Eine PNRP-Cloud stellt eine Gruppe von Knoten dar, die über das Netzwerk miteinander kommunizieren können. Der Begriff „Cloud“ wird synonym mit „Peermesh“ und „Peer-to-Peer-Diagramm“ verwendet.  
@@ -32,5 +32,6 @@ Eine PNRP-Cloud stellt eine Gruppe von Knoten dar, die über das Netzwerk mitein
  Nachdem eine Cloudinstanz erstellt oder abgerufen wurde, können Peernamen darin registriert werden, um ein Netz aus bekannten Peers zu erstellen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Net.PeerToPeer.Cloud>
 - [Peer Name Resolution-Protokoll (PNRP)](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)

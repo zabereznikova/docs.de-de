@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c481b6889c1f10124465a4e851adfb25a1ba2eff
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890292"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113723"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshallen von Klassen, Strukturen und Unions
 Klassen und Strukturen sind in .NET Framework ähnlich. Beide können Felder, Eigenschaften und Ereignisse enthalten. Sie können auch über statische und nicht statische Methoden verfügen. Ein deutlicher Unterschied ist, dass Strukturen Werttypen sind, während Klassen Verweistypen sind.  
@@ -289,6 +289,7 @@ typedef struct _MYSTRSTRUCT2
  [!code-vb[Conceptual.Interop.Marshaling#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/outarrayofstructs.vb#21)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Marshallen von Daten mit Plattformaufruf](marshaling-data-with-platform-invoke.md)
 - [Marshalling von Zeichenfolgen](marshaling-strings.md)
 - [Marshallen verschiedener Typen von Arrays](marshaling-different-types-of-arrays.md)

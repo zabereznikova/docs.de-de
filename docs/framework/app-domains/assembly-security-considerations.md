@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 862488a157c1030335c5f8e3d02f9f411be6d9a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e74d7a4a72b9595d6a280a16ad9bbc4118648404
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218069"
 ---
 # <a name="assembly-security-considerations"></a>Überlegungen zur Assemblysicherheit
 <a name="top"></a> Beim Erstellen einer Assembly können Sie eine Reihe von Berechtigungen angeben, die erforderlich sind, um die Assembly auszuführen. Das Erteilen bestimmter Berechtigungen für eine Assembly beruht auf Beweisen.  
@@ -63,6 +63,7 @@ ms.locfileid: "54589570"
  Da starke Namen und das Signieren mit [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md) die Integrität garantieren, können Sie der Sicherheitsrichtlinie für den Codezugriff diese beiden Formen von Assemblybeweisen zugrunde legen. Starke Namen und das Signieren mit [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md) garantieren die Integrität durch digitale Signaturen und Zertifikate. Alle genannten Technologien (Hashüberprüfung, starke Namen und das Signieren mit [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md)) gewährleisten gemeinsam, dass die Assembly in keiner Weise geändert werden kann.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)
 - [Assemblys in der Common Language Runtime (CLR)](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [SignTool.exe (Signaturtool)](../../../docs/framework/tools/signtool-exe.md)

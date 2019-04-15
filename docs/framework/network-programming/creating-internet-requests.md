@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Internet, requesting data
 - data requests, creating requests
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
-ms.openlocfilehash: 07c15614f22409f427c6f75cd4ddb8cfa218beba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a4915796310e4f6899d833f20bc5260e0ee032b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171029"
 ---
 # <a name="creating-internet-requests"></a>Erstellen von Internetanforderungen
 Anwendungen erstellen mithilfe der <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>-Methode <xref:System.Net.WebRequest>-Instanzen. Diese statische Methode erstellt eine von **WebRequest** abgeleitete Klasse basierend auf dem URI-Schema, das an sie übergeben wurde.  
@@ -28,5 +28,6 @@ Anwendungen erstellen mithilfe der <xref:System.Net.WebRequest.Create%2A?display
  Bei Anforderungen, die andere Protokolle auf Anwendungsebene verwenden, müssen Sie von **WebRequest** und **WebResponse** abgeleitete protokollspezifische Klassen implementieren. Weitere Informationen finden Sie unter [Programming Pluggable Protocols (Programmieren austauschbarer Protokolle)](../../../docs/framework/network-programming/programming-pluggable-protocols.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Anfordern von Daten mithilfe der WebRequest-Klasse](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)
-- [Requesting Data (Anfordern von Daten)](../../../docs/framework/network-programming/requesting-data.md)
+- [Anfordern von Daten](../../../docs/framework/network-programming/requesting-data.md)

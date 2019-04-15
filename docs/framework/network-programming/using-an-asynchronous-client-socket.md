@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 54a8209c7dee2d1c26b4a66223b5f727d7765c11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d7020b6bc5049101ec08329d53d966771e38035
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497445"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168895"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Verwenden von asynchronen Clientsockets
 Ein asynchroner Clientsocket hält die Anwendung nicht an, während darauf gewartet wird, dass Netzwerkvorgänge abgeschlossen werden. Stattdessen wird das standardmäßige asynchrone Programmiermodell von .NET Framework verwendet, um die Netzwerkverbindung in einem Thread zu verarbeiten, während die Anwendung weiterhin auf dem ursprünglichen Thread ausgeführt wird. Asynchrone Sockets eignen sich für Anwendungen, die das Netzwerk stark nutzen, oder die nicht warten können, bis Netzwerkvorgänge vor dem Fortsetzen abgeschlossen werden.  
@@ -286,6 +286,7 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden eines synchronen Clientsockets](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
 - [Überwachen mit Sockets](../../../docs/framework/network-programming/listening-with-sockets.md)
 - [Asynchrone Clientsockets - Beispiel](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)

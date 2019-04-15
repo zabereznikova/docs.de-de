@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ff1ba3563249cda786a12894c5e4b37442ed9d21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722665"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096263"
 ---
 # <a name="common-type-system"></a>Allgemeines Typsystem
 Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime deklariert, verwendet und verwaltet werden. Außerdem ist das System ein wichtiger Bestandteil der Laufzeitunterstützung für die sprachübergreifende Integration. Das allgemeine Typsystem hat die folgenden Funktionen:  
@@ -165,9 +165,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
   
 > [!NOTE]
 >  Es ist in C#, C++ und Visual Basic nicht erforderlich, diese Methoden für Ereignishandlerdelegaten einzusetzen, da in diesen Programmiersprachen Syntax zum Hinzufügen und Entfernen von Ereignishandlern bereitsteht.  
-  
- 
-  
+
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>Typdefinitionen  
  Eine Typdefinition enthält Folgendes:  
@@ -226,9 +224,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
  Ein Typ kann Werte und Verhaltensdefinitionen von anderen Typen erben. Gemäß dem allgemeinen Typsystem können Typen nicht von mehr als einem Basistyp erben.  
   
  Ein Typ kann eine beliebige Anzahl von Schnittstellen implementieren. Zur Implementierung einer Schnittstelle muss ein Typ alle virtuellen Member der betreffenden Schnittstelle implementieren. Eine virtuelle Methode kann durch einen abgeleiteten Typ implementiert und entweder statisch oder dynamisch aufgerufen werden.  
-  
-  
-  
+
 <a name="type_members"></a>   
 ## <a name="type-members"></a>Typmember  
  Die Laufzeit ermöglicht es Ihnen, Member des Typs zu definieren. Hierbei werden das Verhalten und der Zustand eines Typs angegeben. Typmember umfassen Folgendes:  
@@ -290,9 +286,7 @@ Das allgemeine Typsystem legt fest, wie Typen in der Common Language Runtime dek
  Ein geschachtelter Typ ist ein Typ, der ein Member eines anderen Typs ist. Geschachtelte Typen müssen eng mit dem zugehörigen enthaltenden Typ verknüpft sein und dürfen nicht für allgemeine Zwecke verwendbar sein. Geschachtelte Typen sind sinnvoll, wenn der deklarierende Typ Instanzen des geschachtelten Typs verwendet und erstellt und die Verwendung des geschachtelten Typs nicht in öffentlichen Membern verfügbar gemacht wird.  
   
  Für einige Entwickler sind geschachtelte Typen verwirrend, und sie sollten nur öffentlich sichtbar sein, wenn ein zwingender Grund dafür vorliegt. In einer gut entworfenen Bibliothek sollten Entwickler nur selten geschachtelte Typen zum Instanziieren von Objekten oder Deklarieren von Variablen verwenden müssen.  
-  
-  
-  
+
 <a name="characteristics_of_type_members"></a>   
 ## <a name="characteristics-of-type-members"></a>Eigenschaften von Typmembern  
  Das allgemeine Typsystem unterstützt Typmember, die eine Vielzahl unterschiedlicher Merkmale haben können. Zur Unterstützung all dieser Merkmale sind jedoch keine speziellen Sprachen erforderlich. In der folgenden Tabelle sind diese Membermerkmale beschrieben.  

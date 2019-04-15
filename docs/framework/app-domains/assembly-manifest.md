@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8acf811b835d5afd8686701fe269b16d4b766458
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 5cce67b36330714a821012082457e0297395a09c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58676068"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087533"
 ---
 # <a name="assembly-manifest"></a>Assemblymanifest
 Jede Assembly, ob statisch oder dynamisch, enthält eine Auflistung von Daten, in der beschrieben ist, wie die Elemente in der Assembly miteinander verknüpft sind. Das Assemblymanifest enthält diese Assemblymetadaten. Ein Assemblymanifest enthält alle Metadaten, die zum Angeben von Versionsanforderungen und Sicherheitsidentität der Assembly erforderlich sind, sowie alle Metadaten, die zum Definieren des Gültigkeitsbereichs der Assembly und zum Auflösen von Verweisen auf Ressourcen und Klassen benötigt werden. Das Assemblymanifest kann entweder in einer PE-Datei (eine EXE- oder DLL-Datei) mit MSIL-Code (Microsoft Intermediate Language) oder in einer eigenständigen PE-Datei gespeichert sein, die ausschließlich Informationen aus dem Assemblymanifest enthält.  
@@ -54,6 +54,7 @@ Jede Assembly, ob statisch oder dynamisch, enthält eine Auflistung von Daten, i
  Im Assemblymanifest können Sie Informationen hinzufügen oder ändern. Dazu müssen Sie Assemblyattribute im Code verwenden. Sie können Versionsinformationen und Informationsattribute ändern, einschließlich Marke, Urheberrecht, Produkt, Firma und Informationsversion. Eine vollständige Liste von Assemblyattributen finden Sie unter [Setting Assembly Attributes (Festlegen von Assemblyattributen)](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Assemblyinhalte](../../../docs/framework/app-domains/assembly-contents.md)
 - [Assemblyversionen](../../../docs/framework/app-domains/assembly-versioning.md)
 - [Erstellen von Satellitenassemblys](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

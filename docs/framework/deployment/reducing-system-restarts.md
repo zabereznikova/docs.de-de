@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a4affda0abdf46d298e6f1dac87b6a17a7a2e857
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b7e8a4d92661b974fba7c88989891b30e54e94d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218446"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen
 Das Installationsprogramm [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] verwendet den [Neustart-Manager](https://go.microsoft.com/fwlink/?LinkId=231425), um Systemneustarts während der Installation möglichst zu verhindern. Wenn das App-Setupprogramm .NET Framework installiert, kann es über eine Schnittstelle mit dem Neustart-Manager diese Funktion nutzen. Weitere Informationen finden Sie unter [Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
@@ -35,6 +35,7 @@ Aufforderung zum Schließen von .NET Framework-Apps, die in Verwendung sind
  Wenn Sie ein verkettetes Installationsprogramm verwenden, jedoch kein eigenes Meldungsfeld zum Schließen von Apps bereitstellen möchten, können Sie beim Verketten des .NET Framework-Setupvorgangs die Befehlszeilenoptionen und `/showrmui` und `/passive` verwenden. Wenn Sie diese Optionen zusammen verwenden und die Apps geschlossen werden können, zeigt das Installationsprogramm das Meldungsfeld zum Schließen von Apps an, um einen Systemneustart zu vermeiden. Das Verhalten dieses Meldungsfelds im passiven Modus ist mit dem Verhalten auf der vollständigen Benutzeroberfläche identisch. Den vollständigen Satz von Befehlszeilenoptionen für .NET Framework Redisbutable finden Sie unter [Handbuch für die Bereitstellung für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Bereitstellung](../../../docs/framework/deployment/index.md)
 - [Bereitstellungshandbuch für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)
 - [Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

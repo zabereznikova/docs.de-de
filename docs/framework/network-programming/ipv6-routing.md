@@ -2,12 +2,12 @@
 title: IPv6-Routing
 ms.date: 03/30/2017
 ms.assetid: c98731b4-b542-46a2-9947-1cea63c186b2
-ms.openlocfilehash: dabf17f85330b884918d5c6e1bc9832a7a0dbd02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f0fbce84caf096770e49ab47fb1de5b23b44b33
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694814"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136681"
 ---
 # <a name="ipv6-routing"></a>IPv6-Routing
 Der flexible Routingmechanismus ist ein Vorteil von IPv6. Aufgrund der Art, auf die IPv4-Netzwerk-IDs zugeordnet werden, müssen große Routingtabellen von den Routern verwaltet werden, die sich in den Internetbackbones befinden. Diese Router müssen alle Routen kennen, um Pakete weiterzuleiten, die möglicherweise auf einen beliebigen Knoten im Internet weitergeleitet werden. IPv6 ermöglicht flexiblere Adressen durch seine Fähigkeit zum Aggregieren von Adressen und reduziert die Größe von Routingtabellen drastisch. In dieser neuen Adressarchitektur müssen zwischengeschaltete Router nur den lokalen Teil ihres Netzwerks verfolgen, um eine Nachricht korrekt weiterzuleiten.  
@@ -34,5 +34,6 @@ Der flexible Routingmechanismus ist ein Vorteil von IPv6. Aufgrund der Art, auf 
 -   Umleiten. Wird von Routern gesendet, um eine bessere Adresse für den nächsten Hop für ein bestimmtes Ziel eines Sendeknotens anzugeben.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Internetprotokoll Version 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [Sockets](../../../docs/framework/network-programming/sockets.md)

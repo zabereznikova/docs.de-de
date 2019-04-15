@@ -9,12 +9,12 @@ helpviewer_keywords:
 - staleness of cached resources
 - age of cached resources
 ms.assetid: 7f775925-89a1-4956-ba90-c869c1749a94
-ms.openlocfilehash: bb44aca802f6a0323e69fb33f64d8238406f8b48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18a73a46bc4b463d0a5f5690afe6d1109e06171c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653644"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207135"
 ---
 # <a name="cache-policy-interactionmaximum-age-and-maximum-staleness"></a>Cacherichtlinieninteraktion – maximales Alter und maximale Überalterung
 Um sicherzustellen, dass die aktuellsten Inhalte an die Clientanwendung zurückgegeben werden, führt die Interaktion der Cacherichtlinie für Clients und den Anforderungen der Serverüberprüfung immer zur konservativsten Cacherichtlinie. Alle Beispiele in diesem Thema veranschaulichen die Cacherichtlinie für eine Ressource, die am 1. Januar zwischengespeichert wird und am 4. Januar abläuft.  
@@ -36,9 +36,10 @@ Um sicherzustellen, dass die aktuellsten Inhalte an die Clientanwendung zurückg
 -   Wenn die Cacherichtlinie `maxAge` = 1 Tage und `maxStale` = 1 Tag festlegt, wird der Inhalt am 2. Januar erneut überprüft.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)
 - [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)
 - [Konfigurieren der Zwischenspeicherung in den Netzwerkanwendungen](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)
 - [Cacherichtlinieninteraktion – maximales Alter und minimale Aktualität](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)

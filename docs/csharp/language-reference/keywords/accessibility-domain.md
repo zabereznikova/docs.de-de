@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-ms.openlocfilehash: 241fe7714bfd3dd3fd37f7ac83a836f89b4951bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 529d256a553c4000c77bcd5096db1a4d943874ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605577"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141751"
 ---
 # <a name="accessibility-domain-c-reference"></a>Zugriffsdomäne (C#-Referenz)
 Die Zugriffsdomäne eines Members gibt an, in welche Teile des Programms ein Member verwiesen werden kann. Wenn der Member in einem anderen Typ geschachtelt ist, wird seine Zugriffsdomäne sowohl durch das [Zugriffslevel](../../../csharp/language-reference/keywords/accessibility-levels.md) des Members als auch durch die Zugriffsdomäne des direkt enthaltenden Typs bestimmt.  
@@ -26,6 +26,7 @@ Die Zugriffsdomäne eines Members gibt an, in welche Teile des Programms ein Mem
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [C#-Referenz](../../../csharp/language-reference/index.md)
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)
 - [C#-Schlüsselwörter](../../../csharp/language-reference/keywords/index.md)

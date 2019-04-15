@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2eb1898f03a52306a8a2763059cf198208b7b88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 096c818c1103835110478953d0a0d9082b33569e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180660"
 ---
 # <a name="deploying-the-net-framework"></a>Bereitstellen von .NET Framework
 In diesem Abschnitt der .NET Framework-Dokumentation werden Informationen für Entwickler bereitgestellt, die .NET Framework mit ihren Anwendungen installieren, und Administratoren, die .NET Framework in einem Netzwerk bereitstellen möchten. Außerdem werden Probleme bei der Aktivierung und dem Neustart im Zusammenhang mit der Bereitstellung besprochen sowie erläutert, wie der Status der .NET Framework-Installation überwacht wird.  
@@ -37,4 +37,5 @@ In diesem Abschnitt der .NET Framework-Dokumentation werden Informationen für E
  Hierin wird besprochen, wie Sie CLR-Aktivierungsprotokolle anzeigen und debuggen, um Probleme zu beheben, die bei der Einrichtung Ihrer Anwendung mit der richtigen CLR-Version auftreten können.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Entwicklungshandbuch](../../../docs/framework/development-guide.md)

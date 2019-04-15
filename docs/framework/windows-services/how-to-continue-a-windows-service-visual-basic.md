@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: 86c2414fd6ad9c32a37339c553ec80c98426f78a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 160d1b5f0604cff96549c9d94dc5d8ddc7e39f09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217158"
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>Vorgehensweise: Fortsetzen eines Windows-Diensts (Visual Basic)
 In diesem Beispiel wird die <xref:System.ServiceProcess.ServiceController>-Komponente verwendet, um den IIS-Verwaltungsdienst auf dem lokalen Computer fortzusetzen.  
@@ -50,6 +50,7 @@ In diesem Beispiel wird die <xref:System.ServiceProcess.ServiceController>-Kompo
  Der Zugriff auf Dienstinformationen kann mithilfe der <xref:System.Security.Permissions.PermissionState>-Enumeration eingeschränkt werden, um Berechtigungen in der <xref:System.Security.Permissions.SecurityPermission>-Klasse festzulegen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
 - [Vorgehensweise: Anhalten von Windows-Diensten (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)

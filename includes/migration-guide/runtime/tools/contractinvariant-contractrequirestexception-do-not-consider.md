@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 91e09e71a32bb6d410ff52a97a8d14384ee3a5f1
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 3cff9bfbb1adb6004921903276d75f641c7e703c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58467080"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234228"
 ---
 ### <a name="contractinvariant-or-contractrequirestexception-do-not-consider-stringisnullorempty-to-be-pure"></a>„Contract.Invariant“ oder „Contract.Requires\<TException>“ erkennen „String.IsNullOrEmpty“ nicht als reinen Wert an
 
@@ -16,4 +16,3 @@ ms.locfileid: "58467080"
 |Version|4.6.1|
 |Typ|Laufzeit|
 |Betroffene APIs|<ul><li><xref:System.Diagnostics.Contracts.Contract.Invariant(System.Boolean)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Contracts.Contract.Requires(System.Boolean)?displayProperty=nameWithType></li></ul>|
-

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-ms.openlocfilehash: 468d8afc290d8e725deb13ba57dd990181ae4e19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a1b18f2c31bf8dad8cf32e2e5205cf3008e7b18
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136044"
 ---
 # <a name="sockets"></a>Sockets
 Der <xref:System.Net.Sockets>-Namespace enthält eine verwaltete Implementierung der Windows Sockets-Schnittstelle. Alle anderen Netzwerkzugriffsklassen im <xref:System.Net>-Namespace sind auf dieser Implementierung von Sockets aufgebaut.  
@@ -30,6 +30,7 @@ Der <xref:System.Net.Sockets>-Namespace enthält eine verwaltete Implementierung
  Die **Socket**-Klasse unterstützt zwei grundlegende Modi: synchron und asynchron. Im synchronen Modus werden Funktionen, die Netzwerkvorgänge ausführen (z.B. <xref:System.Net.Sockets.Socket.Send%2A> und <xref:System.Net.Sockets.Socket.Receive%2A>), erst aufgerufen, wenn der Vorgang abgeschlossen ist, bevor die Steuerung an das aufrufende Programm zurückgegeben wird. Im asynchronen Modus werden diese Aufrufe sofort zurückgegeben.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Erstellen eines Sockets](../../../docs/framework/network-programming/how-to-create-a-socket.md)
 
 - [Verwenden von Anwendungsprotokollen](../../../docs/framework/network-programming/using-application-protocols.md)

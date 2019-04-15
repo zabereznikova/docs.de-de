@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 130c26b7d135db232eb40a2c466aa3bdb2481ace
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: bfe406161ac754124a2cc38c68a80c3b9fb2c7f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761409"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234229"
 ---
 ### <a name="persian-calendar-now-uses-the-hijri-solar-algorithm"></a>Der persische Kalender verwendet jetzt den Hijri-Solaralgorithmus
 
@@ -16,4 +16,3 @@ ms.locfileid: "58761409"
 |Version|4.6|
 |Typ|Laufzeit|
 |Betroffene APIs|<ul><li><xref:System.Globalization.PersianCalendar?displayProperty=nameWithType></li></ul>|
-

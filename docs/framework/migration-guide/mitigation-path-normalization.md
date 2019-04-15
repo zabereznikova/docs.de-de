@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 158d47b1-ba6d-4fa6-8963-a012666bdc31
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: addbeeab6f5b3544a7ed1b86b7da0f7d09be7ffb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37241dd666a5d10eeb35bcbb4c9e09a5bc56f620
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701104"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176539"
 ---
 # <a name="mitigation-path-normalization"></a>Entschärfung: Pfadnormalisierung
 Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] an hat sich die Pfadnormalisierung in .NET Framework geändert.  
@@ -61,4 +61,5 @@ Von Apps für die Zielplattform [!INCLUDE[net_v462](../../../includes/net-v462-m
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)
+
+- [Neuzuweisungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6-2.md)

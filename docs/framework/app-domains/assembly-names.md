@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b210ea2126058d38c2586c5bdd0d94af2abab30
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bdd27511de18c6cb119ddbf8621c43606c82ad4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529816"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195825"
 ---
 # <a name="assembly-names"></a>Assemblynamen
 Der Name einer Assembly wird in Metadaten gespeichert und wirkt sich erheblich auf den Geltungsbereich einer Assembly aus. Zudem hat er Einfluss darauf, wie die Assembly von einer Anwendung verwendet wird. Eine Assembly mit starkem Namen hat einen vollqualifizierten Namen, der den Namen, die Kultur, den öffentlichen Schlüssel und die Versionsnummer der Assembly enthält. Dies wird häufig als Anzeigename bezeichnet. Für geladenen Assemblys kann er mit der <xref:System.Reflection.Assembly.FullName%2A>-Eigenschaft abgerufen werden.  
@@ -58,6 +58,7 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 >  Wenn Sie eine Assembly mit starkem Namen in den globalen Assemblycache einfügen, muss der Dateiname der Assembly mit dem Assemblynamen übereinstimmen (davon ausgenommen sind Erweiterungen des Dateinamen wie „.exe“ oder „.dll“). Wenn der Dateiname einer Assembly z.B. „meineAssembly.dll“ ist, muss der Assemblyname „meineAssembly“ sein. Private Assemblys, die nur im Stammanwendungsverzeichnis bereitgestellt wurden, können einen Assemblynamen haben, der sich vom Dateinamen unterscheidet.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Vorgehensweise: Bestimmen des vollqualifizierten Namens einer Assembly](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)
 - [Erstellen von Assemblys](../../../docs/framework/app-domains/create-assemblies.md)
 - [Assemblys mit starkem Namen](../../../docs/framework/app-domains/strong-named-assemblies.md)

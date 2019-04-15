@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfe2be8784fd4baf6ce9e603da1c6e2388126b5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409327"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132032"
 ---
 # <a name="identifying-functions-in-dlls"></a>Identifizieren von Funktionen in DLLs
 Die Identität einer DLL-Funktion besteht aus den folgenden Elementen:  
@@ -46,8 +46,9 @@ Die Identität einer DLL-Funktion besteht aus den folgenden Elementen:
  Eine vollständige Dokumentation der Windows-API finden Sie im Plattform SDK. Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden nicht verwalteter DLL-Funktionen](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
 - [Angeben eines Einstiegspunktes](../../../docs/framework/interop/specifying-an-entry-point.md)
 - [Erstellen einer Klasse zum Halten von DLL-Funktionen](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)
-- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [Calling a DLL Function (Aufrufen einer DLL-Funktion)](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Erstellen von Prototypen in verwaltetem Code](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [Aufrufen einer DLL-Funktion](../../../docs/framework/interop/calling-a-dll-function.md)

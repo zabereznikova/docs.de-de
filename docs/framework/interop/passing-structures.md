@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1617a082a6ad46023add2d2df7de2561e2815881
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c8e35a09bd3348d5f53c662cf6e0ee9fec733d88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142817"
 ---
 # <a name="passing-structures"></a>Übergeben von Strukturen
 Bei vielen nicht verwalteten Funktionen wird erwartet, dass Member von Strukturen (benutzerdefinierte Typen in Visual Basic) oder Member von Klassen, die in verwaltetem Code definiert werden, als Parameter an die Funktion übergeben werden. Wenn Sie Strukturen oder Klassen an nicht verwalteten Code mithilfe von Plattformaufruf übergeben, müssen Sie zusätzliche Informationen angeben, um das ursprüngliche Layout und die ursprüngliche Ausrichtung beizubehalten. Dieses Thema enthält eine Einführung in das <xref:System.Runtime.InteropServices.StructLayoutAttribute>-Attribut, das Sie zum Definieren formatierter Typen verwenden. Sie können für verwaltete Strukturen und Klassen verschiedene vorhersagbare Layoutverhalten auswählen, die von der **LayoutKind**-Enumeration bereitgestellt werden.  
@@ -178,7 +178,8 @@ public class TestPlatformInvoke
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Calling a DLL Function (Aufrufen einer DLL-Funktion)](../../../docs/framework/interop/calling-a-dll-function.md)
+
+- [Aufrufen einer DLL-Funktion](../../../docs/framework/interop/calling-a-dll-function.md)
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
 - <xref:System.Runtime.InteropServices.FieldOffsetAttribute>
