@@ -15,33 +15,33 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c66235d866bd7c276d049d9415015dd6f9aa9fb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722360"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296159"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Vorgehensweise: Konvertieren numerischer Benutzereingaben in Websteuerelementen in Zahlen
 Da eine Webseite in verschiedensten Ländern auf der ganzen Welt angezeigt werden kann, können Benutzer numerische Daten in einer nahezu unbegrenzten Anzahl von Formaten in ein <xref:System.Web.UI.WebControls.TextBox>-Steuerelement einfügen. Daher ist es von entscheidender Bedeutung, das Gebietsschema und die Kultur des Webseitenbenutzers zu ermitteln. Bei der Analyse von Benutzereingaben können Sie dann die vom Gebietsschema und der Kultur des Benutzers definierten Formatierungskonventionen anwenden.  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>So konvertieren Sie numerische Eingaben eines TextBox-Websteuerelements in eine Zahl  
   
-1.  Stellen Sie fest, ob das von der <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebene Zeichenfolgenarray aufgefüllt ist. Wenn dies nicht der Fall ist, fahren Sie mit Schritt 6 fort.  
+1. Stellen Sie fest, ob das von der <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebene Zeichenfolgenarray aufgefüllt ist. Wenn dies nicht der Fall ist, fahren Sie mit Schritt 6 fort.  
   
-2.  Wenn das von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebene Zeichenfolgenarray aufgefüllt ist, rufen Sie sein erstes Element ab. Das erste Element gibt die Standardeinstellung des Benutzers oder seine bevorzugte Sprache und Region an.  
+2. Wenn das von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebene Zeichenfolgenarray aufgefüllt ist, rufen Sie sein erstes Element ab. Das erste Element gibt die Standardeinstellung des Benutzers oder seine bevorzugte Sprache und Region an.  
   
-3.  Instanziieren Sie durch Aufrufen des <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktors ein <xref:System.Globalization.CultureInfo>-Objekt, das die bevorzugte Kultur des Benutzers darstellt.  
+3. Instanziieren Sie durch Aufrufen des <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktors ein <xref:System.Globalization.CultureInfo>-Objekt, das die bevorzugte Kultur des Benutzers darstellt.  
   
-4.  Rufen Sie entweder die `TryParse`- oder `Parse`-Methode des numerischen Typs auf, in den die Benutzereingabe konvertiert werden soll. Verwenden Sie eine Überladung der `TryParse`- oder `Parse`-Methode mit einem `provider`-Parameter, und übergeben Sie sie an eines der folgenden Objekte:  
+4. Rufen Sie entweder die `TryParse`- oder `Parse`-Methode des numerischen Typs auf, in den die Benutzereingabe konvertiert werden soll. Verwenden Sie eine Überladung der `TryParse`- oder `Parse`-Methode mit einem `provider`-Parameter, und übergeben Sie sie an eines der folgenden Objekte:  
   
     -   Das in Schritt 3 erstellte <xref:System.Globalization.CultureInfo>-Objekt  
   
     -   Das von der <xref:System.Globalization.CultureInfo.NumberFormat%2A>-Eigenschaft zurückgegebene <xref:System.Globalization.NumberFormatInfo>-Objekt des in Schritt 3 erstellten <xref:System.Globalization.CultureInfo>-Objekts  
   
-5.  Wenn bei der Konvertierung ein Fehler auftritt, wiederholen Sie die Schritte 2 bis 4 für jedes verbleibende Element im von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebenen Zeichenfolgenarray.  
+5. Wenn bei der Konvertierung ein Fehler auftritt, wiederholen Sie die Schritte 2 bis 4 für jedes verbleibende Element im von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebenen Zeichenfolgenarray.  
   
-6.  Wenn bei der Konvertierung weiterhin ein Fehler auftritt, oder das von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebene Zeichenfolgenarray leer ist, analysieren Sie die Zeichenfolge mit der invarianten Kultur, die durch die <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird.  
+6. Wenn bei der Konvertierung weiterhin ein Fehler auftritt, oder das von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebene Zeichenfolgenarray leer ist, analysieren Sie die Zeichenfolge mit der invarianten Kultur, die durch die <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die gesamte CodeBehind-Seite für ein Webformular dargestellt, das den Benutzer dazu auffordert, einen numerischen Wert in ein <xref:System.Web.UI.WebControls.TextBox>-Steuerelement einzugeben, und diesen Wert in eine Zahl konvertiert. Diese Zahl wird dann verdoppelt und mit den gleichen Formatierungsregeln wie denen der ursprünglichen Eingabe angezeigt.  
@@ -74,4 +74,4 @@ Da eine Webseite in verschiedensten Ländern auf der ganzen Welt angezeigt werde
 ## <a name="see-also"></a>Siehe auch
 
 - [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [Verarbeiten numerischer Zeichenfolgen](../../../docs/standard/base-types/parsing-numeric.md)
+- [Analysieren numerischer Zeichenfolgen](../../../docs/standard/base-types/parsing-numeric.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceProcessInstaller class, adding installers to services
 ms.assetid: 8b698e9a-b88e-4f44-ae45-e0c5ea0ae5a8
 author: ghogen
-ms.openlocfilehash: 3316f3b292f6a9597b62a802b489459ee2f0a952
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af56e01c1c8c1e23bb80413ce6f52a5f6d467b4b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743516"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307255"
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung
 Visual Studio liefert Installationskomponenten, mit denen Ihren Dienstanwendungen zugeordnete Ressourcen installiert werden können. Installationskomponenten registrieren einen einzelnen Dienst auf dem System, auf dem dieser installiert wird, und informieren den Dienststeuerungs-Manager über das Vorhandensein des Diensts. Bei der Arbeit mit einer Dienstanwendung können Sie im Fenster „Eigenschaften“ einen Link auswählen, damit die entsprechenden Installer für Ihr Projekt automatisch hinzugefügt werden.  
@@ -33,17 +33,17 @@ Visual Studio liefert Installationskomponenten, mit denen Ihren Dienstanwendunge
   
 ### <a name="to-add-installers-to-your-service-application"></a>Vorgehensweise beim Hinzufügen von Installern zu Ihrer Dienstanwendung  
   
-1.  Greifen Sie im **Projektmappen-Explorer** bei dem Dienst, für den Sie eine Installationskomponente hinzufügen möchten, auf die Ansicht **Entwurf** zu.  
+1. Greifen Sie im **Projektmappen-Explorer** bei dem Dienst, für den Sie eine Installationskomponente hinzufügen möchten, auf die Ansicht **Entwurf** zu.  
   
-2.  Klicken Sie auf den Hintergrund des Designers, um den Dienst selbst auszuwählen, nicht Elemente seines Inhalts.  
+2. Klicken Sie auf den Hintergrund des Designers, um den Dienst selbst auszuwählen, nicht Elemente seines Inhalts.  
   
-3.  Führen Sie einen Rechtsklick aus, während der Designer den Fokus hat, und klicken Sie anschließend auf **Installer hinzufügen**.  
+3. Führen Sie einen Rechtsklick aus, während der Designer den Fokus hat, und klicken Sie anschließend auf **Installer hinzufügen**.  
   
      Eine neue Klasse, `ProjectInstaller`, und zwei Installationskomponenten, <xref:System.ServiceProcess.ServiceProcessInstaller> und <xref:System.ServiceProcess.ServiceInstaller>, werden zu Ihrem Projekt hinzugefügt, und Eigenschaftswerte für den Dienst werden in die Komponenten kopiert.  
   
-4.  Klicken Sie auf die Komponente <xref:System.ServiceProcess.ServiceInstaller>, und überprüfen Sie, ob der Wert der Eigenschaft <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> auf den gleichen Wert festgelegt ist wie der Wert der Eigenschaft <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> für den Dienst selbst.  
+4. Klicken Sie auf die Komponente <xref:System.ServiceProcess.ServiceInstaller>, und überprüfen Sie, ob der Wert der Eigenschaft <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> auf den gleichen Wert festgelegt ist wie der Wert der Eigenschaft <xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> für den Dienst selbst.  
   
-5.  Klicken Sie auf die Komponente <xref:System.ServiceProcess.ServiceInstaller>, und legen Sie die Eigenschaft <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> auf den entsprechenden Wert fest, um zu bestimmen, wie Ihr Dienst gestartet wird.  
+5. Klicken Sie auf die Komponente <xref:System.ServiceProcess.ServiceInstaller>, und legen Sie die Eigenschaft <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> auf den entsprechenden Wert fest, um zu bestimmen, wie Ihr Dienst gestartet wird.  
   
     |Wert|Ergebnis|  
     |-----------|------------|  
@@ -51,16 +51,17 @@ Visual Studio liefert Installationskomponenten, mit denen Ihren Dienstanwendunge
     |<xref:System.ServiceProcess.ServiceStartMode.Automatic>|Der Dienst startet selbst, sobald der Computer neu gestartet wird.|  
     |<xref:System.ServiceProcess.ServiceStartMode.Disabled>|Der Dienst kann nicht gestartet werden.|  
   
-6.  Klicken Sie auf die Komponente <xref:System.ServiceProcess.ServiceProcessInstaller>, und legen Sie die entsprechenden Eigenschaftswerte fest, um den Sicherheitskontext zu bestimmen, in dem Ihr Dienst ausgeführt wird. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben des Sicherheitskontexts für Dienste](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
+6. Klicken Sie auf die Komponente <xref:System.ServiceProcess.ServiceProcessInstaller>, und legen Sie die entsprechenden Eigenschaftswerte fest, um den Sicherheitskontext zu bestimmen, in dem Ihr Dienst ausgeführt wird. Weitere Informationen finden Sie unter [Vorgehensweise: Angeben des Sicherheitskontexts für Dienste](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md).  
   
-7.  Setzen Sie alle Methoden außer Kraft, für die eine benutzerdefinierte Verarbeitung durchgeführt werden muss.  
+7. Setzen Sie alle Methoden außer Kraft, für die eine benutzerdefinierte Verarbeitung durchgeführt werden muss.  
   
-8.  Führen Sie für jeden weiteren Dienst in Ihrem Projekt die Schritte 1 bis 7 durch.  
+8. Führen Sie für jeden weiteren Dienst in Ihrem Projekt die Schritte 1 bis 7 durch.  
   
     > [!NOTE]
     >  Sie müssen für jeden weiteren Dienst in Ihrem Projekt eine zusätzliche <xref:System.ServiceProcess.ServiceInstaller>-Komponente für die Klasse `ProjectInstaller` des Projekts hinzufügen. Die in Schritt 3 hinzugefügte Komponente <xref:System.ServiceProcess.ServiceProcessInstaller> kann mit allen Dienstinstallern im Projekt ausgeführt werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md)

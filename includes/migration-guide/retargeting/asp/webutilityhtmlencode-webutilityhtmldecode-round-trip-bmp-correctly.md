@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ca662b57fae9b1d0d41290f3052f71bca66e9bf3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234748"
+---
 ### <a name="webutilityhtmlencode-and-webutilityhtmldecode-round-trip-bmp-correctly"></a>WebUtility.HtmlEncode und WebUtility.HtmlDecode führen für die BMP eine ordnungsgemäße Roundtripkonvertierung durch
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.5|
 |Typ|Neuzuweisung|
 |Betroffene APIs|<ul><li><xref:System.Net.WebUtility.HtmlEncode(System.String)?displayProperty=nameWithType></li><li><xref:System.Net.WebUtility.HtmlEncode(System.String,System.IO.TextWriter)?displayProperty=nameWithType></li></ul>|
-

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exceptions, logging
 - exceptions, tracking
 ms.assetid: a26c60e2-ae39-444a-aebb-33eccadc0eeb
-ms.openlocfilehash: bdbe9b1d05acdc0f67f0264ed1583dff922e527b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 53bf93a326123ddb1e26ef5964fa057148505116
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832657"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307222"
 ---
 # <a name="how-to-log-exceptions-in-visual-basic"></a>Vorgehensweise: Protokollieren von Ausnahmen in Visual Basic
 Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informationen zu Ausnahmen zu protokollieren, die in Ihrer Anwendung auftreten. In diesen Beispielen wird gezeigt, wie Sie die `My.Application.Log.WriteException`-Methode verwenden können, um Ausnahmen zu protokollieren, die Sie explizit abfangen bzw. die unbehandelt sind.  
@@ -19,21 +19,21 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
 ### <a name="to-log-a-handled-exception"></a>Protokollieren einer behandelten Ausnahme  
   
-1.  Erstellen Sie die Methode, die die Ausnahmeinformationen generiert.  
+1. Erstellen Sie die Methode, die die Ausnahmeinformationen generiert.  
   
      [!code-vb[VbVbalrMyApplicationLog#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#9)]  
   
-2.  Verwenden Sie einen `Try...Catch`-Block, um die Ausnahme abzufangen.  
+2. Verwenden Sie einen `Try...Catch`-Block, um die Ausnahme abzufangen.  
   
      [!code-vb[VbVbalrMyApplicationLog#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#6)]  
   
-3.  Fügen Sie den Code, der eine Ausnahme generieren kann, in den `Try`-Block ein.  
+3. Fügen Sie den Code, der eine Ausnahme generieren kann, in den `Try`-Block ein.  
   
      Heben Sie die Auskommentierung der Zeilen `Dim` und `MsgBox` auf, um eine <xref:System.NullReferenceException>-Ausnahme auszulösen.  
   
      [!code-vb[VbVbalrMyApplicationLog#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#7)]  
   
-4.  Verwenden Sie im `Catch`-Block die `My.Application.Log.WriteException`-Methode, um die Ausnahmeinformationen zu schreiben.  
+4. Verwenden Sie im `Catch`-Block die `My.Application.Log.WriteException`-Methode, um die Ausnahmeinformationen zu schreiben.  
   
      [!code-vb[VbVbalrMyApplicationLog#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#8)]  
   
@@ -43,21 +43,21 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
 ### <a name="to-log-an-unhandled-exception"></a>Protokollieren einer nicht behandelten Ausnahme  
   
-1.  Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
+1. Ein Projekt auswählen in **Projektmappen-Explorer**. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
   
-2.  Klicken Sie auf die Registerkarte **Anwendung** .  
+2. Klicken Sie auf die Registerkarte **Anwendung** .  
   
-3.  Klicken Sie auf die Schaltfläche **Anwendungsereignisse anzeigen** um den Code-Editor zu öffnen.  
+3. Klicken Sie auf die Schaltfläche **Anwendungsereignisse anzeigen** um den Code-Editor zu öffnen.  
   
      Dadurch wird die Datei "ApplicationEvents.vb" geöffnet.  
   
-4.  Öffnen Sie die Datei "ApplicationEvents.vb" im Code-Editor. Wählen Sie im Menü **Allgemein** den Eintrag **MyApplication-Ereignisse**aus.  
+4. Öffnen Sie die Datei "ApplicationEvents.vb" im Code-Editor. Wählen Sie im Menü **Allgemein** den Eintrag **MyApplication-Ereignisse**aus.  
   
-5.  Wählen Sie im Menü **Deklarationen** den Eintrag **UnhandledException** aus.  
+5. Wählen Sie im Menü **Deklarationen** den Eintrag **UnhandledException** aus.  
   
      Die Anwendung löst das Ereignis <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> aus, bevor die Hauptanwendung ausgeführt wird.  
   
-6.  Fügen Sie die Methode `My.Application.Log.WriteException` zum `UnhandledException` -Ereignishandler hinzu.  
+6. Fügen Sie die Methode `My.Application.Log.WriteException` zum `UnhandledException` -Ereignishandler hinzu.  
   
      [!code-vb[VbVbalrMyApplicationLog#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#4)]  
   

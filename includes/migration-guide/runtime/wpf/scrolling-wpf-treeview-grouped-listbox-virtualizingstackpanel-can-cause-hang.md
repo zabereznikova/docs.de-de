@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 0887379fb23e9e66c6cc55a3774545162634c3f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236689"
+---
 ### <a name="scrolling-a-wpf-treeview-or-grouped-listbox-in-a-virtualizingstackpanel-can-cause-a-hang"></a>Das Scrollen für ein WPF-TreeView-Steuerelement oder ein gruppiertes ListBox-Steuerelement in VirtualizingStackPanel kann zu einem Absturz führen
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.5|
 |Typ|Laufzeit|
 |Betroffene APIs|<ul><li><xref:System.Windows.Controls.VirtualizingStackPanel.SetIsVirtualizing(System.Windows.DependencyObject,System.Boolean)?displayProperty=nameWithType></li></ul>|
-

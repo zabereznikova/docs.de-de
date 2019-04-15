@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5688559bcadea309bb0ddb4b156f94540e7be624
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664329"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298421"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Validieren eines XML-Dokuments im Dokumentobjektmodell
 Die <xref:System.Xml.XmlDocument>-Klasse validiert das XML-Dokument im DOM (Dokumentobjektmodell) standardmäßig nicht anhand eines XSD-Schemas (XML Schema Definition Language) oder einer DTD (Document Type Definition). Das XML-Dokument wird nur validiert, damit es wohlgeformt ist.  
@@ -29,15 +29,15 @@ Die <xref:System.Xml.XmlDocument>-Klasse validiert das XML-Dokument im DOM (Doku
 ### <a name="creating-an-xml-schema-validating-xmlreader"></a>Erstellen eines "XmlReader" zum Validieren von XML-Schemata  
  Wenn Sie einen <xref:System.Xml.XmlReader> zum Validieren von XML-Schemata erstellen möchten, führen Sie folgende Schritte aus:  
   
-1.  Erstellen Sie eine neue <xref:System.Xml.XmlReaderSettings>-Instanz.  
+1. Erstellen Sie eine neue <xref:System.Xml.XmlReaderSettings>-Instanz.  
   
-2.  Fügen Sie der <xref:System.Xml.XmlReaderSettings.Schemas%2A>-Eigenschaft der <xref:System.Xml.XmlReaderSettings>-Instanz ein XML-Schema hinzu.  
+2. Fügen Sie der <xref:System.Xml.XmlReaderSettings.Schemas%2A>-Eigenschaft der <xref:System.Xml.XmlReaderSettings>-Instanz ein XML-Schema hinzu.  
   
-3.  Geben Sie `Schema` als den <xref:System.Xml.XmlReaderSettings.ValidationType%2A> an.  
+3. Geben Sie `Schema` als den <xref:System.Xml.XmlReaderSettings.ValidationType%2A> an.  
   
-4.  Geben Sie optional <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> und einen <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> an, um während der Schemavalidierung auftretende Fehler und Warnungen zu behandeln.  
+4. Geben Sie optional <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> und einen <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> an, um während der Schemavalidierung auftretende Fehler und Warnungen zu behandeln.  
   
-5.  Übergeben Sie abschließend das <xref:System.Xml.XmlReaderSettings>-Objekt zusammen mit dem XML-Dokument an die <xref:System.Xml.XmlReader.Create%2A>-Methode der <xref:System.Xml.XmlReader>-Klasse. Dabei wird ein schemavalidierender <xref:System.Xml.XmlReader> erstellt.  
+5. Übergeben Sie abschließend das <xref:System.Xml.XmlReaderSettings>-Objekt zusammen mit dem XML-Dokument an die <xref:System.Xml.XmlReader.Create%2A>-Methode der <xref:System.Xml.XmlReader>-Klasse. Dabei wird ein schemavalidierender <xref:System.Xml.XmlReader> erstellt.  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel validiert ein schemavalidierender <xref:System.Xml.XmlReader> die in das DOM geladenen XML-Daten. Es werden ungültige Änderungen am XML-Dokument vorgenommen, und das Dokument wird anschließend erneut validiert, was zu Schemavalidierungsfehlern führt. Abschließend wird einer der Fehler korrigiert, und anschließend werden Teile des XML-Dokuments teilweise validiert.  

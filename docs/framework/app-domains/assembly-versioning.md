@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbb681567090cb26d20a31e8645c0b651bef9244
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675951"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305194"
 ---
 # <a name="assembly-versioning"></a>Assemblyversionen
 Jede Version einer Assembly, die die Common Language Runtime verwendet, wird auf Assemblyebene erstellt. Die spezifische Version einer Assembly sowie die Versionen der abhängigen Assemblys sind im Assemblymanifest aufgezeichnet. Der Standardversionsrichtlinie für die Laufzeit zufolge werden Anwendungen nur in der Version ausgeführt, in der sie erstellt und getestet wurden, sofern dies nicht durch eine explizite Versionsrichtlinie in den Konfigurationsdateien (die Anwendungskonfigurationsdatei, die Herausgeberrichtliniendatei und die Administratorkonfigurationsdatei für den Computer) überschrieben wird.  
@@ -25,13 +25,13 @@ Jede Version einer Assembly, die die Common Language Runtime verwendet, wird a
   
  Zur Auflösung einer Assemblybindungsanforderung werden von der Laufzeit mehrere Schritte ausgeführt:  
   
-1.  Überprüft den ursprünglichen Assemblyverweis, um zu bestimmen, welche Version der Assembly gebunden werden soll.  
+1. Überprüft den ursprünglichen Assemblyverweis, um zu bestimmen, welche Version der Assembly gebunden werden soll.  
   
-2.  Überprüft alle anwendbaren Konfigurationsdateien, um die Versionsrichtlinie anzuwenden.  
+2. Überprüft alle anwendbaren Konfigurationsdateien, um die Versionsrichtlinie anzuwenden.  
   
-3.  Ermittelt die richtige Assembly aus dem ursprünglichen Assemblyverweis und allen Umleitungen, die in den Konfigurationsdateien angegeben sind, und bestimmt die Version, die an die aufrufende Assembly gebunden werden soll.  
+3. Ermittelt die richtige Assembly aus dem ursprünglichen Assemblyverweis und allen Umleitungen, die in den Konfigurationsdateien angegeben sind, und bestimmt die Version, die an die aufrufende Assembly gebunden werden soll.  
   
-4.  Überprüft den globalen Assemblycache, jede in den Konfigurationsdateien angegebene CodeBase und danach das Anwendungsverzeichnis und die Unterverzeichnisse anhand der Überprüfungsregeln, die in [How the Runtime Locates Assemblies (So sucht die Runtime nach Assemblys)](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) erklärt werden.  
+4. Überprüft den globalen Assemblycache, jede in den Konfigurationsdateien angegebene CodeBase und danach das Anwendungsverzeichnis und die Unterverzeichnisse anhand der Überprüfungsregeln, die in [How the Runtime Locates Assemblies (So sucht die Runtime nach Assemblys)](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md) erklärt werden.  
   
  Diese Schritte sind in der folgenden Abbildung dargestellt:  
   
@@ -70,6 +70,7 @@ Jede Version einer Assembly, die die Common Language Runtime verwendet, wird a
  Die Informationsversion wird mit dem benutzerdefinierten Attribut <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> dargestellt. Weitere Informationen über das Informationsversionsattribut finden Sie unter [Setting Assembly Attributes (Festlegen von Assemblyattributen)](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Konfigurieren von Apps](../../../docs/framework/configure-apps/index.md)
 - [Festlegen von Assemblyattributen](../../../docs/framework/app-domains/set-assembly-attributes.md)

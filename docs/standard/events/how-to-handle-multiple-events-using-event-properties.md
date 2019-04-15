@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 158313bcecc8e4bd89f358aecf92324c10789b43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8d68770fe60f4d9fb3d9982cf426376d54b229e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592220"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330115"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>Vorgehensweise: Behandeln mehrerer Ereignisse mit Ereigniseigenschaften
 Zur Verwendung von Ereigniseigenschaften müssen Sie die Ereigniseigenschaften in der Klasse definieren, die die Ereignisse auslöst. Anschließend müssen Sie die Delegaten für die Ereigniseigenschaften in den Klassen festlegen, die die Ereignisse behandeln. Zum Implementieren mehrerer Ereigniseigenschaften in einer Klasse muss die Klasse den für jedes Ereignis definierten Delegaten intern speichern und verwalten. Ein typischer Ansatz ist, eine Delegatauflistung zu implementieren, die von einem Ereignisschlüssel indiziert wird.  
@@ -30,15 +30,15 @@ Zur Verwendung von Ereigniseigenschaften müssen Sie die Ereigniseigenschaften i
   
 ### <a name="to-handle-multiple-events-using-event-properties"></a>So behandeln Sie mehrere Ereignisse mit Ereigniseigenschaften  
   
-1.  Definieren Sie eine Delegatauflistung innerhalb der Klasse, die die Ereignisse auslöst.  
+1. Definieren Sie eine Delegatauflistung innerhalb der Klasse, die die Ereignisse auslöst.  
   
-2.  Definieren Sie einen Schlüssel für jedes Ereignis.  
+2. Definieren Sie einen Schlüssel für jedes Ereignis.  
   
-3.  Definieren Sie die Ereigniseigenschaften in der Klasse, die die Ereignisse auslöst.  
+3. Definieren Sie die Ereigniseigenschaften in der Klasse, die die Ereignisse auslöst.  
   
-4.  Verwenden Sie die Delegatauflistung, um die add- und die remove-Accessor-Methode für die Ereigniseigenschaften zu implementieren.  
+4. Verwenden Sie die Delegatauflistung, um die add- und die remove-Accessor-Methode für die Ereigniseigenschaften zu implementieren.  
   
-5.  Verwenden Sie die öffentlichen Ereigniseigenschaften, um Ereignishandlerdelegaten in den Klassen, die die Ereignisse auslösen, hinzuzufügen und zu entfernen.  
+5. Verwenden Sie die öffentlichen Ereigniseigenschaften, um Ereignishandlerdelegaten in den Klassen, die die Ereignisse auslösen, hinzuzufügen und zu entfernen.  
   
 ## <a name="example"></a>Beispiel  
  Das folgende C#-Beispiel implementiert die `MouseDown`-Ereigniseigenschaft und die `MouseUp`-Ereigniseigenschaft unter Verwendung einer <xref:System.ComponentModel.EventHandlerList>, um den Delegat jedes Ereignisses zu speichern. Die Schlüsselwörter der Eigenschaftenkonstrukte für Ereignisse sind fett dargestellt.  

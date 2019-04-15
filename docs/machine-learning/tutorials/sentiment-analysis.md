@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie ML.NET in einem Szenario mit binärer Klassif
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: c5373f63927ff39e7c819cd1fc0bc2bec1843b3e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 202edc5127388df2397053d5703d33a39046374f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921116"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303114"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Tutorial: Verwenden von ML.NET in einem Standpunktanalyse-Szenario mit binärer Klassifizierung
 
@@ -39,7 +39,7 @@ Sie finden den Quellcode für dieses Tutorial im Repository [dotnet/samples](htt
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-* [Visual Studio 2017 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
+* [Visual Studio 2017 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
 
 * [Die Dataset-ZIP-Datei „UCI Sentiment Labeled Sentences“](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip)
 

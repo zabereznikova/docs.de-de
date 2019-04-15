@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545467"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307456"
 ---
 # <a name="operators-c-programming-guide"></a>Operatoren (C#-Programmierhandbuch)
 
@@ -63,7 +63,7 @@ In C# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Operan
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|Identität|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Negation|  
-|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|Logische Negation|  
+|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|Logische Negation|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|Bitweise Negation|  
 |[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|Präinkrement|  
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|Prädekrement|  
@@ -116,8 +116,8 @@ In C# ist ein *Operator* ein Programmelement, das auf einen oder mehrere *Operan
 |Logisches AND|x [&](../../../csharp/language-reference/operators/and-operator.md) y|Ganzzahliges bitweises AND, boolesches logisches AND|  
 |Logisches XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|Ganzzahliges bitweises XOR, boolesches logisches XOR|  
 |Logisches OR|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|Ganzzahliges bitweises OR, boolesches logisches OR|  
-|Bedingtes AND|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|Wertet y nur aus, wenn x den Wert true hat.|  
-|Bedingtes OR|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|Wertet y nur aus, wenn x den Wert false hat.|  
+|Bedingtes AND|x [&&](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|Wertet y nur aus, wenn x den Wert true hat.|  
+|Bedingtes OR|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|Wertet y nur aus, wenn x den Wert false hat.|  
 |NULL-Sammeloperator|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) y|Ergibt y, wenn x den Wert NULL hat, andernfalls x.|  
 |Bedingt|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|Wird zu y ausgewertet, wenn x den Wert true hat, und zu z, wenn x den Wert false hat.|  
   

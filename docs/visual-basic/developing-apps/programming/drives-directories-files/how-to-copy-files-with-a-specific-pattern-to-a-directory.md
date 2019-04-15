@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 184742ef03343eaff644c0f3f803e2acec8854eb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 437a7058abd9ae167fcde15d4bddbe69bc64b7e0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837103"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310771"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>Vorgehensweise: Kopieren von Dateien mit einem bestimmten Muster in ein Verzeichnis in Visual Basic
 Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>-Methode gibt eine schreibgeschützte Auflistung von Zeichenfolgen zurück, die die Pfadnamen für die Dateien darstellen. Sie können den `wildCards` -Parameter verwenden, um ein bestimmtes Muster anzugeben.  
@@ -23,15 +23,15 @@ Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>-Methode 
   
 ### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a>So kopieren Sie Dateien mit einem bestimmten Muster in ein Verzeichnis  
   
-1.  Verwenden Sie die `GetFiles` -Methode, um die Liste der Dateien zurückzugeben. In diesem Beispiel werden alle RTF-Dateien im angegebenen Verzeichnis zurückgegeben.  
+1. Verwenden Sie die `GetFiles` -Methode, um die Liste der Dateien zurückzugeben. In diesem Beispiel werden alle RTF-Dateien im angegebenen Verzeichnis zurückgegeben.  
   
      [!code-vb[VbFileIOMisc#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#36)]  
   
-2.  Verwenden Sie die `CopyFile` -Methode, um die Dateien zu kopieren. In diesem Beispiel werden die Dateien in das Verzeichnis `testdirectory`kopiert.  
+2. Verwenden Sie die `CopyFile` -Methode, um die Dateien zu kopieren. In diesem Beispiel werden die Dateien in das Verzeichnis `testdirectory`kopiert.  
   
      [!code-vb[VbVbcnMyFileSystem#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#88)]  
   
-3.  Schließen Sie die `For` -Anweisung mit einer `Next` -Anweisung.  
+3. Schließen Sie die `For` -Anweisung mit einer `Next` -Anweisung.  
   
      [!code-vb[VbVbcnMyFileSystem#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#89)]  
   
@@ -63,4 +63,4 @@ Die <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>-Methode 
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
 - [Vorgehensweise: Suchen nach Unterverzeichnissen mit einem bestimmten Muster](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
 - [Problembehandlung: Lesen aus und Schreiben in Textdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [Vorgehensweise: Abrufen einer Auflistung der Dateien in einem Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [Vorgehensweise: Abrufen einer Sammlung der Dateien in einem Verzeichnis](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

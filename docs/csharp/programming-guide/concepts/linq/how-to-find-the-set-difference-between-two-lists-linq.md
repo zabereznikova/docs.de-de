@@ -2,19 +2,19 @@
 title: 'Vorgehensweise: Suchen der Unterschiedsmenge zwischen zwei Listen (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 13166aaeba50d8cca33861d5489d7839d3933099
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a00b3ea6bcab13bbb3af56027c4c49a9bb562c3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712732"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306311"
 ---
 # <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>Vorgehensweise: Suchen der Unterschiedsmenge zwischen zwei Listen (LINQ) (C#)
 In diesem Beispiel wird veranschaulicht, wie Sie mit LINQ zwei Listen mit Zeichenfolgen vergleichen und die Zeilen ausgeben, die in names1.txt, aber nicht in names2.txt enthalten sind.  
   
 ### <a name="to-create-the-data-files"></a>So erstellen Sie die Datendateien  
   
-1.  Kopieren Sie die Dateien „names1.txt“ und „names2.txt“ in den Projektmappenordner, wie unter [Vorgehensweise: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md) gezeigt wird.  
+1. Kopieren Sie die Dateien „names1.txt“ und „names2.txt“ in den Projektmappenordner, wie unter [Vorgehensweise: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md) gezeigt wird.  
   
 ## <a name="example"></a>Beispiel  
   

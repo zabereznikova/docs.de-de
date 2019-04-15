@@ -2,19 +2,19 @@
 title: 'Vorgehensweise: Berechnen von Spaltenwerten in einer CSV-Textdatei (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 3a4bd410bc0d01e835132f7752970417be66941b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a1b42bf941fa65f053be4931ddfbbbdf1223a48
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585837"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309366"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Vorgehensweise: Berechnen von Spaltenwerten in einer CSV-Textdatei (LINQ) (C#)
 In diesem Beispiel wird veranschaulicht, wie Sie Aggregatberechnungen wie „Sum“, „Average“, „Min“ und „Max“ für die Spalten einer CSV-Datei ausführen. Die hier gezeigten Beispielprinzipien können auf andere Typen von strukturiertem Text angewendet werden.  
   
 ### <a name="to-create-the-source-file"></a>So erstellen Sie die Quelldatei  
   
-1.  Kopieren Sie die folgenden Zeilen in eine Datei namens „scores.csv“, und speichern Sie sie in Ihrem Projektordner. Angenommen, die erste Spalte enthält eine Schüler-ID und die nachfolgende Spalten stellen die Noten aus vier Prüfungen dar.  
+1. Kopieren Sie die folgenden Zeilen in eine Datei namens „scores.csv“, und speichern Sie sie in Ihrem Projektordner. Angenommen, die erste Spalte enthält eine Schüler-ID und die nachfolgende Spalten stellen die Noten aus vier Prüfungen dar.  
   
     ```  
     111, 97, 92, 81, 60  

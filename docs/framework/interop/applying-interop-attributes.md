@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 590fed6a2a4e59f438dc73057973aff4539cb1aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83afabf58048620b3b9936560f2b3fdf1e2039d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226936"
 ---
 # <a name="applying-interop-attributes"></a>Anwenden von Interop-Attributen
 Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von Interop-spezifischen Attributen zur Verfügung: Attribute, die Sie zur Entwurfszeit anwenden, Attribute, die von COM-Interop-Tools und -APIs während des Konvertierungsprozesses angewendet werden und Attribute, die entweder von Ihnen oder von COM-Interop angewendet werden.  
@@ -68,6 +68,7 @@ Der <xref:System.Runtime.InteropServices>-Namespace stellt drei Kategorien von I
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|Enthält die **FUNCFLAGS**, die ursprünglich für diese Variable aus der COM-Typbibliothek importiert wurden.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.InteropServices>
 - [Verfügbarmachen von .NET Framework-Komponenten in COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [Attribute](../../../docs/standard/attributes/index.md)

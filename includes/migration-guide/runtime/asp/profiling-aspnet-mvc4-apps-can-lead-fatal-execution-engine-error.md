@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 439a4976482639cd2e4e17315ec1a53ca54aa477
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235529"
+---
 ### <a name="profiling-aspnet-mvc4-apps-can-lead-to-fatal-execution-engine-error"></a>Bei der Profilerstellung für ASP.NET MVC4-Apps kann ein schwerwiegender Fehler der Ausführungs-Engine entstehen
 
 |   |   |
@@ -7,4 +15,3 @@
 |Bereich|Microsoft Edge|
 |Version|4.5|
 |Typ|Laufzeit|
-

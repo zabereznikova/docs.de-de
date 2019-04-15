@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4b1fb4abe8ca0ba7afcefe996de59ceaf67a249
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a37220816ab320340b2dd5c048cc4ff2ad9724a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252778"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330232"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Unterstützung der msxsl:node-set()-Funktion
 Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in eine Knotengruppe konvertieren. Die resultierende Knotengruppe enthält immer einen einzelnen Knoten und stellt den Stammknoten der Struktur dar.  
@@ -38,14 +38,14 @@ Mit der `msxsl:node-set`-Funktion können Sie ein Ergebnisstrukturfragment in ei
     <xsl:template match="/">  
         <authors>  
             <xsl:for-each select="msxsl:node-set($books)/book">   
-                <author><xsl:value-of select="@author"/)</author>  
+                <author><xsl:value-of select="@author"/></author>  
             </xsl:for-each>  
         </authors>  
     </xsl:template>  
 </xsl:stylesheet>  
 ```  
   
-## <a name="output"></a>Ausgabe  
+## <a name="output"></a>Output  
  Die Ausgabe der Transformation lautet:  
   
 ```xml  

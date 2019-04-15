@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 522d80ce6be277c048fa62cc1a7b077d8bb08bfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4026fcbd7dc2ef29c1e7ee01a0f37b3ff471b187
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544703"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322373"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (C#-Compileroptionen)
 Die Option **-win32res** fügt eine Win32-Ressource in die Ausgabedatei ein.  
@@ -29,7 +29,7 @@ Die Option **-win32res** fügt eine Win32-Ressource in die Ausgabedatei ein.
  `filename`  
  Die Ressourcendatei, die Sie Ihrer Ausgabedatei hinzufügen möchten  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Eine Win32-Ressourcendatei kann mit dem [Ressourcencompiler](../../language-reference/compiler-options/resource-compiler-option.md) erstellt werden. Der Ressourcencompiler wird gestartet, wenn Sie ein Visual C++-Programm kompilieren. Aus der RC-Datei wird eine RES-Datei erstellt.  
   
  Eine Win32-Ressource kann Versions- oder Bitmapinformationen (Symbolinformationen) enthalten, anhand derer die Anwendung im Datei-Explorer identifiziert werden kann. Wenn sie **-win32res** nicht angeben, generiert der Compiler Versionsinformationen auf Grundlage der Assemblyversion.  
@@ -38,11 +38,11 @@ Die Option **-win32res** fügt eine Win32-Ressource in die Ausgabedatei ein.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die Seite **Eigenschaften** des Projekts.  
+1. Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Anwendung**.  
+2. Klicken Sie auf die Eigenschaftenseite **Anwendung**.  
   
-3.  Klicken Sie auf die Schaltfläche **Ressourcendatei**, und wählen Sie die Datei über das Kombinationsfeld aus.  
+3. Klicken Sie auf die Schaltfläche **Ressourcendatei**, und wählen Sie die Datei über das Kombinationsfeld aus.  
   
 ## <a name="example"></a>Beispiel  
  Kompilieren Sie `in.cs`, und fügen Sie die Win32-Ressourcendatei `rf.res` an, um `in.exe` zu erzeugen:  

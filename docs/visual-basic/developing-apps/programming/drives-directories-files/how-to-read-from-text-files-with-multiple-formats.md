@@ -11,19 +11,19 @@ helpviewer_keywords:
 - I/O [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
-ms.openlocfilehash: d6326bb44d6a84c455c972fcbd191dc957844b74
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3ad34864e162f8f62fed3754bdbcd39c75f7b3f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830096"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334301"
 ---
 # <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>Vorgehensweise: Lesen aus Textdateien mit mehreren Formaten in Visual Basic
 Das <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>-Objekt bietet eine Möglichkeit, strukturierte Textdateien wie Protokolle einfach und effizient zu analysieren. Sie können eine Datei mit mehreren Formaten verarbeiten, indem Sie die `PeekChars`-Methode verwenden, um das Format jeder Zeile zu bestimmen, während Sie eine Datei analysieren.  
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>Analysieren einen Textdatei mit mehreren Formaten  
   
-1.  Fügen Sie eine Textdatei mit dem Namen „textfile.txt“ in Ihrem Projekt hinzu. Fügen Sie folgenden Inhalt in der Textdatei ein.  
+1. Fügen Sie eine Textdatei mit dem Namen „textfile.txt“ in Ihrem Projekt hinzu. Fügen Sie folgenden Inhalt in der Textdatei ein.  
   
     ```  
     Err  1001 Cannot access resource.  
@@ -34,19 +34,19 @@ Das <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>-Objekt bietet eine Mögl
     Acc  10/04/2009User2      Standard user.  
     ```  
   
-2.  Definieren Sie das erwartete Format und das Format, das verwendet werden soll, wenn ein Fehler gemeldet wird. Der letzte Eintrag in jedem Array ist -1. Deshalb wird davon ausgegangen, dass das letzte Feld von variabler Breite ist. Dies tritt auf, wenn der letzte Eintrag des Arrays weniger oder gleich 0 (null) ist.  
+2. Definieren Sie das erwartete Format und das Format, das verwendet werden soll, wenn ein Fehler gemeldet wird. Der letzte Eintrag in jedem Array ist -1. Deshalb wird davon ausgegangen, dass das letzte Feld von variabler Breite ist. Dies tritt auf, wenn der letzte Eintrag des Arrays weniger oder gleich 0 (null) ist.  
   
      [!code-vb[VbFileIORead#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#4)]  
   
-3.  Erstellen Sie ein neues <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>-Objekt, das die Breite und das Format definiert.  
+3. Erstellen Sie ein neues <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>-Objekt, das die Breite und das Format definiert.  
   
      [!code-vb[VbFileIORead#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#5)]  
   
-4.  Gehen Sie durch die Reihen, und prüfen Sie vor dem Lesen das Format.  
+4. Gehen Sie durch die Reihen, und prüfen Sie vor dem Lesen das Format.  
   
      [!code-vb[VbFileIORead#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#6)]  
   
-5.  Schreiben Sie Fehler in die Konsole.  
+5. Schreiben Sie Fehler in die Konsole.  
   
      [!code-vb[VbFileIORead#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#7)]  
   
@@ -77,5 +77,5 @@ Das <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>-Objekt bietet eine Mögl
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>
 - [Vorgehensweise: Lesen aus durch Trennzeichen getrennten Textdateien](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [Vorgehensweise: Lesen aus einer Textdatei mit fester Breite](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
+- [Vorgehensweise: Lesen aus Textdateien mit fester Breite](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
 - [Analysieren von Textdateien mit dem TextFieldParser-Objekt](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

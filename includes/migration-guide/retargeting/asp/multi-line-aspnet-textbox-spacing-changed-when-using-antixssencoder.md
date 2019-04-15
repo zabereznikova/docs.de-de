@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e2bca42daebd25667ab2f312d5e59089b986503c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234693"
+---
 ### <a name="multi-line-aspnet-textbox-spacing-changed-when-using-antixssencoder"></a>Der Abstand für mehrzeilige ASP.NET-Textfelder (TextBox) wurde bei der Verwendung von AntiXSSEncoder geändert
 
 |   |   |
@@ -7,4 +15,3 @@
 |Bereich|Gering|
 |Version|4.5|
 |Typ|Neuzuweisung|
-

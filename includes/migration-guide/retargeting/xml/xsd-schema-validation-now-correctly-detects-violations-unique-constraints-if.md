@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c0a281b05f453b68495e6fa6fca45f3f36a204a3
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 5844dbc2c3c89baeb39b69f16846f92ac10e97f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "50746416"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234471"
 ---
 ### <a name="xsd-schema-validation-now-correctly-detects-violations-of-unique-constraints-if-compound-keys-are-used-and-one-key-is-empty"></a>Die XSD-Schemaüberprüfung erkennt jetzt Verstöße gegen eindeutige Einschränkungen richtig, wenn Verbundschlüssel verwendet werden und ein Schlüssel leer ist
 
@@ -15,4 +15,3 @@ ms.locfileid: "50746416"
 |Bereich|Microsoft Edge|
 |Version|4.6|
 |Typ|Neuzuweisung|
-

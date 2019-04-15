@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 6d9790d37812ff0ed4ac76049b6949901f7b5c58
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835452"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312610"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Vorgehensweise: Erstellen von Registrierungsschlüsseln und Festlegen von deren Werten in Visual Basic
 Die `CreateSubKey`-Methode des `My.Computer.Registry`-Objekts kann verwendet werden, um einen Registrierungsschlüssel zu erstellen.  
@@ -31,11 +31,11 @@ Die `CreateSubKey`-Methode des `My.Computer.Registry`-Objekts kann verwendet wer
   
 #### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>So erstellen Sie einen Registrierungsschlüssel und legen einen Wert darin fest  
   
-1.  Verwenden Sie die `CreateSubkey`-Methode, geben sie dabei an, unter welcher Struktur der Schlüssel platziert werden soll sowie den Namen des Schlüssels. Dieses Beispiel erstellt den Registrierungsschlüssel `MyTestKey` unter HKEY_CURRENT_USER.  
+1. Verwenden Sie die `CreateSubkey`-Methode, geben sie dabei an, unter welcher Struktur der Schlüssel platziert werden soll sowie den Namen des Schlüssels. Dieses Beispiel erstellt den Registrierungsschlüssel `MyTestKey` unter HKEY_CURRENT_USER.  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
-2.  Legen Sie den Wert mit der `SetValue`-Methode fest. Im folgenden Beispiel wird der Zeichenfolgenwert festgelegt. „MyTestKeyValue“ zu „Dies ist ein Testwert“.  
+2. Legen Sie den Wert mit der `SetValue`-Methode fest. Im folgenden Beispiel wird der Zeichenfolgenwert festgelegt. „MyTestKeyValue“ zu „Dies ist ein Testwert“.  
   
      [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]  
   

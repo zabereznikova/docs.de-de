@@ -2,12 +2,12 @@
 title: 'Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ) (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 5fb954bee6433d28ffb47f789b41492349f7ab42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698413"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328815"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Vorgehensweise: Verknüpfen des Inhalts unterschiedlicher Dateien (LINQ) (C#)
 
@@ -15,7 +15,7 @@ In diesem Beispiel wird veranschaulicht, wie Daten aus zwei durch Trennzeichen g
   
 ## <a name="to-create-the-data-files"></a>So erstellen Sie die Datendateien
   
-1.  Kopieren Sie die folgenden Zeilen in eine Datei namens *scores.csv*, und speichern Sie sie in Ihrem Projektordner. Diese Datei stellt das Arbeitsblatt dar. Spalte 1 enthält die ID des Studierenden und die Spalten 2 bis 5 enthalten die Testergebnisse.  
+1. Kopieren Sie die folgenden Zeilen in eine Datei namens *scores.csv*, und speichern Sie sie in Ihrem Projektordner. Diese Datei stellt das Arbeitsblatt dar. Spalte 1 enthält die ID des Studierenden und die Spalten 2 bis 5 enthalten die Testergebnisse.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ In diesem Beispiel wird veranschaulicht, wie Daten aus zwei durch Trennzeichen g
     122, 94, 92, 91, 91  
     ```  
   
-2.  Kopieren Sie die folgenden Zeilen in eine Datei namens *names.csv*, und speichern Sie sie in Ihrem Projektordner. Die Datei stellt ein Arbeitsblatt dar, das den Nachnamen, den Vornamen und die ID des Studierenden enthält.  
+2. Kopieren Sie die folgenden Zeilen in eine Datei namens *names.csv*, und speichern Sie sie in Ihrem Projektordner. Die Datei stellt ein Arbeitsblatt dar, das den Nachnamen, den Vornamen und die ID des Studierenden enthält.  
   
     ```  
     Omelchenko,Svetlana,111  

@@ -7,31 +7,31 @@ helpviewer_keywords:
 - reading text files [Visual Basic], comma-delimited
 - text files [Visual Basic], reading
 ms.assetid: a8413fe4-0dba-49c8-8692-44fb67a9ec4f
-ms.openlocfilehash: 27a832dc5851393b8d655996e3f052cb3d759c7c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f241a8fcb971cfcd94cb32f0b3c0273552954349
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835439"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314203"
 ---
 # <a name="how-to-read-from-comma-delimited-text-files-in-visual-basic"></a>Gewusst wie: Lesen aus durch Kommas getrennten Textdateien in Visual Basic
 Das `TextFieldParser`-Objekt bietet eine Möglichkeit, strukturierte Textdateien wie Protokolle einfach und effizient zu analysieren. Die `TextFieldType`-Eigenschaft definiert, ob es sich um eine Datei mit Trennzeichen oder mit Textfeldern fester Breite handelt.  
   
 ### <a name="to-parse-a-comma-delimited-text-file"></a>Analysieren einer durch Trennzeichen getrennten Textdatei  
   
-1.  Erstellen Sie einen neuen `TextFieldParser`. Der folgende Code erstellt den `TextFieldParser` namens `MyReader` und öffnet die Datei `test.txt`.  
+1. Erstellen Sie einen neuen `TextFieldParser`. Der folgende Code erstellt den `TextFieldParser` namens `MyReader` und öffnet die Datei `test.txt`.  
   
      [!code-vb[VbFileIORead#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#15)]  
   
-2.  Definieren Sie den `TextField`-Typ und das Trennzeichen. Der folgende Code definiert die `TextFieldType`-Eigenschaft als `Delimited` und das Trennzeichen als „,“.  
+2. Definieren Sie den `TextField`-Typ und das Trennzeichen. Der folgende Code definiert die `TextFieldType`-Eigenschaft als `Delimited` und das Trennzeichen als „,“.  
   
      [!code-vb[VbFileIORead#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#16)]  
   
-3.  Durchlaufen Sie die Felder in der Datei. Wenn Zeilen fehlerhaft sind, einen Fehler melden und die Analyse fortsetzen. Der folgende Code durchläuft die Datei, zeigt der Reihe nach jedes Feld an und meldet alle Felder, die nicht korrekt formatiert sind.  
+3. Durchlaufen Sie die Felder in der Datei. Wenn Zeilen fehlerhaft sind, einen Fehler melden und die Analyse fortsetzen. Der folgende Code durchläuft die Datei, zeigt der Reihe nach jedes Feld an und meldet alle Felder, die nicht korrekt formatiert sind.  
   
      [!code-vb[VbFileIORead#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#17)]  
   
-4.  Schließen Sie die Blöcke `While` und `Using` mit `End While` und `End Using`.  
+4. Schließen Sie die Blöcke `While` und `Using` mit `End While` und `End Using`.  
   
      [!code-vb[VbFileIORead#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#18)]  
   
@@ -56,7 +56,7 @@ Das `TextFieldParser`-Objekt bietet eine Möglichkeit, strukturierte Textdateien
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser?displayProperty=nameWithType>
-- [Vorgehensweise: Lesen aus einer Textdatei mit fester Breite](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
+- [Vorgehensweise: Lesen aus Textdateien mit fester Breite](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
 - [Vorgehensweise: Lesen aus Textdateien mit mehreren Formaten](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
 - [Analysieren von Textdateien mit dem TextFieldParser-Objekt](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
 - [Exemplarische Vorgehensweise: Bearbeiten von Dateien und Verzeichnissen in Visual Basic](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)

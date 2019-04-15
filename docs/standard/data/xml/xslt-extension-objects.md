@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b662ca537bf33dc9702e99f279bd068f92de6664
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836447"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320417"
 ---
 # <a name="xslt-extension-objects"></a>XSLT-Erweiterungsobjekte
 Mit Erweiterungsobjekten kann der Funktionsumfang von Stylesheets erweitert werden. Erweiterungsobjekte werden von der <xref:System.Xml.Xsl.XsltArgumentList>-Klasse beibehalten.  
@@ -32,13 +32,13 @@ Mit Erweiterungsobjekten kann der Funktionsumfang von Stylesheets erweitert werd
   
 ### <a name="to-use-an-xslt-extension-object"></a>So verwenden Sie ein XSLT-Erweiterungsobjekt  
   
-1.  Erstellen Sie ein <xref:System.Xml.Xsl.XsltArgumentList>-Objekt, und fügen Sie das Erweiterungsobjekt mit der <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>-Methode hinzu.  
+1. Erstellen Sie ein <xref:System.Xml.Xsl.XsltArgumentList>-Objekt, und fügen Sie das Erweiterungsobjekt mit der <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>-Methode hinzu.  
   
-2.  Rufen Sie das Erweiterungsobjekt aus dem Stylesheet auf.  
+2. Rufen Sie das Erweiterungsobjekt aus dem Stylesheet auf.  
   
-3.  Übergeben Sie das <xref:System.Xml.Xsl.XsltArgumentList>-Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode.  
+3. Übergeben Sie das <xref:System.Xml.Xsl.XsltArgumentList>-Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [XSLT-Transformationen](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [XSLT-Sicherheitsaspekte](../../../../docs/standard/data/xml/xslt-security-considerations.md)

@@ -15,51 +15,51 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857657"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320157"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Vorgehensweise: Anzeigen lokalisierter Datums- und Uhrzeitangaben für Webbenutzer
 Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, die Datums- und Uhrzeitwerte analysieren und formatieren, bei der Interaktion mit dem Benutzer nicht von einem Standardformat (am häufigsten das Format der lokalen Kultur des Webservers) abhängen. Stattdessen sollten Webformulare, die vom Benutzer eingegebene Datums- und Uhrzeitzeichenfolgen behandeln, die Zeichenfolgen gemäß der bevorzugten Kultur des Benutzers analysieren. Entsprechend sollten Datums- und Uhrzeitdaten dem Benutzer in einem Format angezeigt werden, das seiner Kultur entspricht. In diesem Thema wird gezeigt, wie Sie dazu vorgehen müssen.  
   
 ## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>So analysieren Sie vom Benutzer eingegebene Datums- und Uhrzeitzeichenfolgen  
   
-1.  Bestimmen Sie, ob das von der <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebene Zeichenfolgenarray gefüllt ist. Wenn dies nicht der Fall ist, fahren Sie mit Schritt 6 fort.  
+1. Bestimmen Sie, ob das von der <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebene Zeichenfolgenarray gefüllt ist. Wenn dies nicht der Fall ist, fahren Sie mit Schritt 6 fort.  
   
-2.  Wenn das von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebene Zeichenfolgenarray aufgefüllt ist, rufen Sie sein erstes Element ab. Das erste Element gibt die Standardeinstellung des Benutzers oder seine bevorzugte Sprache und Region an.  
+2. Wenn das von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebene Zeichenfolgenarray aufgefüllt ist, rufen Sie sein erstes Element ab. Das erste Element gibt die Standardeinstellung des Benutzers oder seine bevorzugte Sprache und Region an.  
   
-3.  Instanziieren Sie ein <xref:System.Globalization.CultureInfo>-Objekt durch Aufrufen des <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktors, das die bevorzugte Kultur des Benutzers darstellt.  
+3. Instanziieren Sie ein <xref:System.Globalization.CultureInfo>-Objekt durch Aufrufen des <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktors, das die bevorzugte Kultur des Benutzers darstellt.  
   
-4.  Rufen Sie entweder die `TryParse`- oder `Parse`-Methode des <xref:System.DateTime>- oder <xref:System.DateTimeOffset>-Typs ab, um die Konvertierung zu versuchen. Verwenden Sie eine Überladung der `TryParse`- oder `Parse`-Methode mit einem `provider`-Parameter, und übergeben Sie sie an eines der folgenden Objekte:  
+4. Rufen Sie entweder die `TryParse`- oder `Parse`-Methode des <xref:System.DateTime>- oder <xref:System.DateTimeOffset>-Typs ab, um die Konvertierung zu versuchen. Verwenden Sie eine Überladung der `TryParse`- oder `Parse`-Methode mit einem `provider`-Parameter, und übergeben Sie sie an eines der folgenden Objekte:  
   
     -   Das in Schritt 3 erstellte <xref:System.Globalization.CultureInfo>-Objekt  
   
     -   Das von der <xref:System.Globalization.CultureInfo.DateTimeFormat%2A>-Eigenschaft zurückgegebene <xref:System.Globalization.DateTimeFormatInfo>-Objekt des in Schritt 3 erstellten <xref:System.Globalization.CultureInfo>-Objekts  
   
-5.  Wenn bei der Konvertierung ein Fehler auftritt, wiederholen Sie die Schritte 2 bis 4 für jedes verbleibende Element im von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebenen Zeichenfolgenarray.  
+5. Wenn bei der Konvertierung ein Fehler auftritt, wiederholen Sie die Schritte 2 bis 4 für jedes verbleibende Element im von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebenen Zeichenfolgenarray.  
   
-6.  Wenn bei der Konvertierung weiterhin ein Fehler auftritt, oder das von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebene Zeichenfolgenarray leer ist, analysieren Sie die Zeichenfolge mit der invarianten Kultur, die durch die <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird.  
+6. Wenn bei der Konvertierung weiterhin ein Fehler auftritt, oder das von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebene Zeichenfolgenarray leer ist, analysieren Sie die Zeichenfolge mit der invarianten Kultur, die durch die <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>-Eigenschaft zurückgegeben wird.  
   
 ## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>So analysieren Sie lokales Datum und Ortszeit der Anforderung des Benutzers  
   
-1.  Fügen Sie einem Webformular ein <xref:System.Web.UI.WebControls.HiddenField>-Steuerelement hinzu.  
+1. Fügen Sie einem Webformular ein <xref:System.Web.UI.WebControls.HiddenField>-Steuerelement hinzu.  
   
-2.  Erstellen Sie eine JavaScript-Funktion, die das `onClick`-Ereignis einer `Submit`-Schaltfläche behandelt, indem sie aktuelles Datum und aktuelle Uhrzeit sowie den Offset zwischen der lokalen Zeitzone und der koordinierten Weltzeit (UTC) in die <xref:System.Web.UI.WebControls.HiddenField.Value%2A>-Eigenschaft schreibt. Verwenden Sie ein Trennzeichen (z.B. ein Semikolon), um die beiden Komponenten der Zeichenfolge zu trennen.  
+2. Erstellen Sie eine JavaScript-Funktion, die das `onClick`-Ereignis einer `Submit`-Schaltfläche behandelt, indem sie aktuelles Datum und aktuelle Uhrzeit sowie den Offset zwischen der lokalen Zeitzone und der koordinierten Weltzeit (UTC) in die <xref:System.Web.UI.WebControls.HiddenField.Value%2A>-Eigenschaft schreibt. Verwenden Sie ein Trennzeichen (z.B. ein Semikolon), um die beiden Komponenten der Zeichenfolge zu trennen.  
   
-3.  Verwenden Sie das <xref:System.Web.UI.Control.PreRender>-Ereignis des Webformulars, um die Funktion durch Übergeben des Skripttexts an die <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Methode in den HTML-Ausgabestream einzufügen.  
+3. Verwenden Sie das <xref:System.Web.UI.Control.PreRender>-Ereignis des Webformulars, um die Funktion durch Übergeben des Skripttexts an die <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Methode in den HTML-Ausgabestream einzufügen.  
   
-4.  Verbinden Sie den Ereignishandler durch Übergabe des Namens der JavaScript-Funktion an das `OnClientClick`-Attribut der `Submit`-Schaltfläche mit dem `onClick`-Ereignis der `Submit`-Schaltfläche.  
+4. Verbinden Sie den Ereignishandler durch Übergabe des Namens der JavaScript-Funktion an das `OnClientClick`-Attribut der `Submit`-Schaltfläche mit dem `onClick`-Ereignis der `Submit`-Schaltfläche.  
   
-5.  Erstellen Sie einen Ereignishandler für das <xref:System.Web.UI.WebControls.Button.Click>-Ereignis der `Submit`-Schaltfläche.  
+5. Erstellen Sie einen Ereignishandler für das <xref:System.Web.UI.WebControls.Button.Click>-Ereignis der `Submit`-Schaltfläche.  
   
-6.  Bestimmen Sie im Ereignishandler, ob das von der <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebene Zeichenfolgenarray gefüllt ist. Wenn dies nicht der Fall ist, fahren Sie mit Schritt 14 fort.  
+6. Bestimmen Sie im Ereignishandler, ob das von der <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType>-Eigenschaft zurückgegebene Zeichenfolgenarray gefüllt ist. Wenn dies nicht der Fall ist, fahren Sie mit Schritt 14 fort.  
   
-7.  Wenn das von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebene Zeichenfolgenarray gefüllt ist, rufen Sie sein erstes Element ab. Das erste Element gibt die Standardeinstellung des Benutzers oder seine bevorzugte Sprache und Region an.  
+7. Wenn das von der <xref:System.Web.HttpRequest.UserLanguages%2A>-Eigenschaft zurückgegebene Zeichenfolgenarray gefüllt ist, rufen Sie sein erstes Element ab. Das erste Element gibt die Standardeinstellung des Benutzers oder seine bevorzugte Sprache und Region an.  
   
-8.  Instanziieren Sie ein <xref:System.Globalization.CultureInfo>-Objekt durch Aufrufen des <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktors, das die bevorzugte Kultur des Benutzers darstellt.  
+8. Instanziieren Sie ein <xref:System.Globalization.CultureInfo>-Objekt durch Aufrufen des <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>-Konstruktors, das die bevorzugte Kultur des Benutzers darstellt.  
   
 9. Übergeben Sie die Zeichenfolge, die der <xref:System.Web.UI.WebControls.HiddenField.Value%2A>-Eigenschaft zugewiesen ist, der <xref:System.String.Split%2A>-Methode, um die Zeichenfolgendarstellung des lokalen Datums und der Ortszeit des Benutzers und die Zeichenfolgendarstellung des Offsets der lokalen Zeitzone des Benutzers in separaten Arrayelementen zu speichern.  
   
@@ -114,6 +114,6 @@ Da eine Webseite überall in der Welt angezeigt werden kann, sollten Vorgänge, 
 ## <a name="see-also"></a>Siehe auch
 
 - [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
-- [Verarbeiten von Zeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/parsing-datetime.md)
+- [Standard-Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Analysieren von Zeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/parsing-datetime.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - logs, service applications
 ms.assetid: c0d8140f-c055-4d8e-a2e0-37358a550116
 author: ghogen
-ms.openlocfilehash: ff3eb0dd27f097899fc19f57142034ffd2bb382a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dfcfb7370ffd59a50cf6d0b01e84e581ddc6fc52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660140"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306520"
 ---
 # <a name="how-to-log-information-about-services"></a>Vorgehensweise: Protokollinformationen über Dienste
 Standardmäßig können alle Windows-Dienst-Projekte auf das Anwendungsereignisprotokoll zugreifen und Informationen sowie Ausnahmen in das Protokoll schreiben. Sie geben über die <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft an, ob Sie diese Funktionalität in Ihrer Anwendung nutzen möchten. Standardmäßig ist die Protokollierung für jeden Dienst aktiviert, den Sie mit den Projektvorlagen für Windows-Dienste erstellen. Sie können eine statische Form der <xref:System.Diagnostics.EventLog> -Klasse verwenden, um Dienstinformationen in ein Protokoll zu schreiben, ohne dass Sie eine Instanz von einer <xref:System.Diagnostics.EventLog> -Komponente erstellen oder eine Quelle manuell registrieren müssen.  
@@ -46,18 +46,18 @@ Standardmäßig können alle Windows-Dienst-Projekte auf das Anwendungsereignisp
   
 ### <a name="to-set-up-logging-to-a-custom-log"></a>So richten Sie die Protokollierung in eine benutzerdefinierte Protokolldatei ein  
   
-1.  Legen Sie die <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft auf `false`fest.  
+1. Legen Sie die <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> -Eigenschaft auf `false`fest.  
   
     > [!NOTE]
     >  Sie müssen <xref:System.ServiceProcess.ServiceBase.AutoLog%2A> auf „false“ festlegen, damit ein benutzerdefiniertes Protokoll verwendet werden kann.  
   
-2.  Richten Sie in Ihrer Windows-Dienst-Anwendung eine Instanz einer <xref:System.Diagnostics.EventLog> -Komponente ein.  
+2. Richten Sie in Ihrer Windows-Dienst-Anwendung eine Instanz einer <xref:System.Diagnostics.EventLog> -Komponente ein.  
   
-3.  Erstellen Sie ein benutzerdefiniertes Protokoll, indem Sie die <xref:System.Diagnostics.EventLog.CreateEventSource%2A> -Methode aufrufen sowie die Quellzeichenfolge und den Namen der Protokolldatei angeben, die erstellt werden soll.  
+3. Erstellen Sie ein benutzerdefiniertes Protokoll, indem Sie die <xref:System.Diagnostics.EventLog.CreateEventSource%2A> -Methode aufrufen sowie die Quellzeichenfolge und den Namen der Protokolldatei angeben, die erstellt werden soll.  
   
-4.  Legen Sie die <xref:System.Diagnostics.EventLog.Source%2A> -Eigenschaft für die <xref:System.Diagnostics.EventLog> -Komponenteninstanz auf die Quellzeichenfolge fest, die Sie in Schritt 3 erstellt haben.  
+4. Legen Sie die <xref:System.Diagnostics.EventLog.Source%2A> -Eigenschaft für die <xref:System.Diagnostics.EventLog> -Komponenteninstanz auf die Quellzeichenfolge fest, die Sie in Schritt 3 erstellt haben.  
   
-5.  Schreiben Sie die Einträge, indem Sie auf die <xref:System.Diagnostics.EventLog.WriteEntry%2A> -Methode der <xref:System.Diagnostics.EventLog> -Komponenteninstanz zugreifen.  
+5. Schreiben Sie die Einträge, indem Sie auf die <xref:System.Diagnostics.EventLog.WriteEntry%2A> -Methode der <xref:System.Diagnostics.EventLog> -Komponenteninstanz zugreifen.  
   
      Im folgenden Code wird veranschaulicht, wie Sie Protokollierung in ein benutzerdefiniertes Protokoll einrichten.  
   
@@ -70,4 +70,5 @@ Standardmäßig können alle Windows-Dienst-Projekte auf das Anwendungsereignisp
     [!code-vb[VbRadconService#15](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#15)]  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

@@ -3,12 +3,12 @@ title: 'Trainieren eines Machine Learning-Modells mit Kreuzvalidierung: ML.NET'
 description: Erfahren Sie wie ein Machine Learning-Modell mithilfe von Kreuzvalidierung mit ML.NET trainiert werden kann, um die Vorhersagegenauigkeit des Modells zu erhöhen.
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9508835e613cf4f78d7f95a25cc98c3c3aade7ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676537"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231317"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a>Trainieren eines Machine Learning-Modells mit Kreuzvalidierung: ML.NET
 
@@ -46,7 +46,6 @@ var reader = mlContext.Data.CreateTextLoader(
     // First line of the file is a header, not a data row.
     hasHeader: true
 );
-
 
 // Read the data.
 var data = reader.Read(dataPath);

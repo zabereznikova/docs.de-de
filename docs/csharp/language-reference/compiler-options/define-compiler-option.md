@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 56028bcf3b843a4f6884e2d7cc7d409621adba34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46ceca3a84e8ffbe6d07886c1b93d062f3ccd2d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558818"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305259"
 ---
 # <a name="-define-c-compiler-options"></a>-define (C#-Compileroptionen)
 Die Option **-define** definiert `name` als Symbol in allen Quellcodedateien Ihres Programms.  
@@ -31,7 +31,7 @@ Die Option **-define** definiert `name` als Symbol in allen Quellcodedateien Ihr
  `name`, `name2`  
  Der Name eines oder mehrerer Symbole, die Sie definieren möchten.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Die Option **-define** hat dieselbe Auswirkung wie die Verwendung einer [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md)-Präprozessoranweisung, außer dass die Compileroption für alle Dateien im Projekt gültig ist. Ein Symbol bleibt in einer Quelldatei definiert, bis eine [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md)-Anweisung in der Quelldatei die Definition entfernt. Wenn Sie die Option „-define“ verwenden, hat eine `#undef`-Anweisung in einer Datei keinerlei Auswirkung auf andere Quellcodedateien im Projekt.  
   
  Sie können die durch diese Option erstellten Symbole in Verbindung mit [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), [#else](../../../csharp/language-reference/preprocessor-directives/preprocessor-else.md), [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md), und [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md) verwenden, um Quelldateien bedingt zu kompilieren.  
@@ -51,9 +51,9 @@ Die Option **-define** definiert `name` als Symbol in allen Quellcodedateien Ihr
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die Seite **Eigenschaften** des Projekts.  
+1. Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
-2.  Geben Sie auf der Registerkarte **Erstellen** im Feld **Symbole für bedingte Kompilierung** das zu definierende Symbol ein. Wenn Sie z.B. das folgende Codebeispiel verwenden, geben Sie im Textfeld einfach `xx` ein.  
+2. Geben Sie auf der Registerkarte **Erstellen** im Feld **Symbole für bedingte Kompilierung** das zu definierende Symbol ein. Wenn Sie z.B. das folgende Codebeispiel verwenden, geben Sie im Textfeld einfach `xx` ein.  
   
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>.  
   

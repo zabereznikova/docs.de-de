@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: e55b3712-b9ea-4453-bd9a-ad5cfa2f6bfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bf972455aa54a7fe45ffd7858ac9e5da5eee6e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0a033e6881f9c0c8741fda26211b0f565762de4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718675"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331324"
 ---
 # <a name="how-to-implement-callback-functions"></a>Vorgehensweise: Implementieren von Rückruffunktionen
 Im folgenden Verfahren und Beispiel wird veranschaulicht, wie eine verwaltete Anwendung den Handlewert für jedes Fenster auf dem lokalen Computer mithilfe eines Plattformaufrufs drucken kann. Insbesondere verwenden das Verfahren und das Beispiel die **EnumWindows**-Funktion, um die Liste von Fenstern und eine verwaltete Rückruffunktion (namens „CallBack“) zu durchlaufen, um den Wert des Fensterhandles auszugeben.  
   
 ### <a name="to-implement-a-callback-function"></a>So implementieren Sie die Rückruffunktion  
   
-1.  Betrachten Sie die Signatur für die **EnumWindows**-Funktion, bevor Sie mit der Implementierung fortfahren. **EnumWindows** weist die folgende Signatur auf:  
+1. Betrachten Sie die Signatur für die **EnumWindows**-Funktion, bevor Sie mit der Implementierung fortfahren. **EnumWindows** weist die folgende Signatur auf:  
   
     ```  
     BOOL EnumWindows(WNDENUMPROC lpEnumFunc, LPARAM lParam)  
@@ -30,13 +30,13 @@ Im folgenden Verfahren und Beispiel wird veranschaulicht, wie eine verwaltete An
   
      Ein Hinweis darauf, dass diese Funktion einen Rückruf erfordert, ist das Vorkommen des **lpEnumFunc**-Arguments. Es ist üblich, das Präfix **lp** (Long-Zeiger) zusammen mit dem Suffix **Func** im Namen von Argumenten zu sehen, die einen Zeiger auf eine Rückruffunktion verwenden. Eine Dokumentation zu den Win32-Funktionen finden Sie im Microsoft Platform SDK.  
   
-2.  Erstellen Sie die verwaltete Rückruffunktion. Im Beispiel wird ein Delegattyp namens `CallBack` deklariert, der zwei Argumente übernimmt (**hwnd** und **lparam**). Das erste Argument ist ein Handle für das Fenster. Das zweite Argument wird von der Anwendung definiert. In dieser Version müssen beide Argumente ganze Zahlen sein.  
+2. Erstellen Sie die verwaltete Rückruffunktion. Im Beispiel wird ein Delegattyp namens `CallBack` deklariert, der zwei Argumente übernimmt (**hwnd** und **lparam**). Das erste Argument ist ein Handle für das Fenster. Das zweite Argument wird von der Anwendung definiert. In diesem Release müssen beide Argumente ganze Zahlen sein.  
   
      Rückruffunktionen geben im Allgemeinen bei einer erfolgreichen Ausführung einen Wert ungleich Null zurück, während ein Fehler durch 0 (null) angezeigt wird. In diesem Beispiel wird der Rückgabewert explizit auf **TRUE** festgelegt, um die Enumeration fortzusetzen.  
   
-3.  Erstellen Sie einen Delegaten, und übergeben Sie ihn als Argument an die **EnumWindows**-Funktion. Ein Plattformaufruf konvertiert den Delegaten automatisch in ein vertrautes Rückrufformat.  
+3. Erstellen Sie einen Delegaten, und übergeben Sie ihn als Argument an die **EnumWindows**-Funktion. Ein Plattformaufruf konvertiert den Delegaten automatisch in ein vertrautes Rückrufformat.  
   
-4.  Stellen Sie sicher, dass der Garbage Collector den Delegaten nicht freigibt, bevor die Rückruffunktion ihre Arbeit abgeschlossen hat. Wenn Sie einen Delegaten als Parameter oder als in einer Struktur enthaltenes Feld übergeben, wird er für die Dauer des Aufrufs nicht erfasst. Ebenso ist dies der Fall im folgenden Enumerationsbeispiel, in dem die Rückruffunktion ihre Arbeit beendet, bevor der Aufruf zurückkehrt. Daher erfordert sie keine zusätzliche Aktion des verwalteten Aufrufers.  
+4. Stellen Sie sicher, dass der Garbage Collector den Delegaten nicht freigibt, bevor die Rückruffunktion ihre Arbeit abgeschlossen hat. Wenn Sie einen Delegaten als Parameter oder als in einer Struktur enthaltenes Feld übergeben, wird er für die Dauer des Aufrufs nicht erfasst. Ebenso ist dies der Fall im folgenden Enumerationsbeispiel, in dem die Rückruffunktion ihre Arbeit beendet, bevor der Aufruf zurückkehrt. Daher erfordert sie keine zusätzliche Aktion des verwalteten Aufrufers.  
   
      Wenn die Rückruffunktion jedoch nach der Rückkehr des Aufrufs aufgerufen werden kann, muss der verwaltete Aufrufer Maßnahmen ergreifen, um sicherzustellen, dass der Delegat weiterhin nicht erfasst wird, bevor die Rückruffunktion abgeschlossen ist. Ausführliche Informationen zum Verhindern der Garbage Collection finden Sie unter [Interop-Marshalling](../../../docs/framework/interop/interop-marshaling.md) mit Plattformaufruf.  
   
@@ -130,5 +130,6 @@ int main()
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Rückruffunktionen](../../../docs/framework/interop/callback-functions.md)
-- [Calling a DLL Function (Aufrufen einer DLL-Funktion)](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Aufrufen einer DLL-Funktion](../../../docs/framework/interop/calling-a-dll-function.md)

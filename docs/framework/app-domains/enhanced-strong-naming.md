@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a0b63e27a3eceb80d42d43eea321b0dc757ad69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cbda9c160b99bf5648c670a67d39b245f031645
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688864"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319871"
 ---
 # <a name="enhanced-strong-naming"></a>Verbesserte starke Namen
 Eine starke Namenssignatur ist ein Identitätsmechanismus in .NET Framework zum Identifizieren von Assemblys. In der Regel wird eine digitale Signatur mit öffentlichem Schlüssel verwendet, um die Integrität von Daten sicherzustellen, die von einem Absender (Signaturgeber) an einen Empfänger (Überprüfer) übergeben werden. Diese Signatur wird als eindeutige Identität für eine Assembly verwendet und gewährleistet, dass Verweise auf die Assembly nicht mehrdeutig sind. Die Assembly wird als Teil des Buildprozesses signiert und anschließend überprüft, wenn sie geladen wird.  
@@ -41,25 +41,25 @@ Eine starke Namenssignatur ist ein Identitätsmechanismus in .NET Framework zum 
 ### <a name="signing-with-sha-2-without-key-migration"></a>Signieren mit SHA-2, ohne Schlüsselmigration  
  Führen Sie die folgenden Befehle in einem Eingabeaufforderungsfenster aus, um eine Assembly zu signieren, ohne eine starke Namenssignatur zu migrieren:  
   
-1.  Generieren Sie den neuen Identitätsschlüssels (falls erforderlich).  
+1. Generieren Sie den neuen Identitätsschlüssels (falls erforderlich).  
   
     ```  
     sn -k IdentityKey.snk  
     ```  
   
-2.  Extrahieren Sie den öffentlichen Identitätsschlüssel, und geben Sie an, dass ein SHA-2-Algorithmus beim Signieren mit diesem Schlüssel verwendet werden soll.  
+2. Extrahieren Sie den öffentlichen Identitätsschlüssel, und geben Sie an, dass ein SHA-2-Algorithmus beim Signieren mit diesem Schlüssel verwendet werden soll.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
-3.  Führen Sie eine verzögerte Signierung der Assembly mit der öffentlichen Identitätsschlüsseldatei durch.  
+3. Führen Sie eine verzögerte Signierung der Assembly mit der öffentlichen Identitätsschlüsseldatei durch.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-4.  Signieren Sie die Assembly mit dem vollständigen Identitätsschlüsselpaar erneut.  
+4. Signieren Sie die Assembly mit dem vollständigen Identitätsschlüsselpaar erneut.  
   
     ```  
     sn -Ra MyAssembly.exe IdentityKey.snk  
@@ -68,26 +68,26 @@ Eine starke Namenssignatur ist ein Identitätsmechanismus in .NET Framework zum 
 ### <a name="signing-with-sha-2-with-key-migration"></a>Signieren mit SHA-2, mit Schlüsselmigration  
  Führen Sie die folgenden Befehle in einem Eingabeaufforderungsfenster aus, um eine Assembly mit einer migrierten starken Namenssignatur zu signieren.  
   
-1.  Generieren Sie ein Identitäts- und Signaturschlüsselpaar (falls erforderlich).  
+1. Generieren Sie ein Identitäts- und Signaturschlüsselpaar (falls erforderlich).  
   
     ```  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
-2.  Extrahieren Sie den öffentlichen Signaturschlüssel, und geben Sie an, dass ein SHA-2-Algorithmus beim Signieren mit diesem Schlüssel verwendet werden soll.  
+2. Extrahieren Sie den öffentlichen Signaturschlüssel, und geben Sie an, dass ein SHA-2-Algorithmus beim Signieren mit diesem Schlüssel verwendet werden soll.  
   
     ```  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
-3.  Extrahieren Sie den öffentlichen Identitätsschlüssel, der den Hashalgorithmus bestimmt, der eine Gegensignatur generiert.  
+3. Extrahieren Sie den öffentlichen Identitätsschlüssel, der den Hashalgorithmus bestimmt, der eine Gegensignatur generiert.  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
-4.  Generieren Sie die Parameter für ein <xref:System.Reflection.AssemblySignatureKeyAttribute>-Attribut, und fügen Sie das Attribut an die Assembly an.  
+4. Generieren Sie die Parameter für ein <xref:System.Reflection.AssemblySignatureKeyAttribute>-Attribut, und fügen Sie das Attribut an die Assembly an.  
   
     ```  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
@@ -121,17 +121,18 @@ Eine starke Namenssignatur ist ein Identitätsmechanismus in .NET Framework zum 
     )]
     ```
   
-5.  Führen Sie eine verzögerte Signierung der Assembly mit dem öffentlichen Identitätsschlüssel durch.  
+5. Führen Sie eine verzögerte Signierung der Assembly mit dem öffentlichen Identitätsschlüssel durch.  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-6.  Führen Sie eine vollständige Signatur der Assembly mit dem Signaturschlüsselpaar durch.  
+6. Führen Sie eine vollständige Signatur der Assembly mit dem Signaturschlüsselpaar durch.  
   
     ```  
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

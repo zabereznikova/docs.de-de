@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: f3ea4a323fa57a49499c4fa6dea43aa22c3475df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49920a46f1d970c3f00025c3dc3eb384c937aa99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677874"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319403"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C#-Compileroptionen)
 Die Option **-lib** gibt den Speicherort der Assembly an, auf die verwiesen wird. Dies geschieht mithilfe der Option [-reference (C#-Compileroptionen)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
@@ -31,16 +31,16 @@ Die Option **-lib** gibt den Speicherort der Assembly an, auf die verwiesen wird
  `dir2`  
  Mindestens ein zusätzliches Verzeichnis, in dem nach Assemblyverweisen gesucht werden kann. Trennen Sie zusätzliche Verzeichnisnamen mit einem Komma, aber ohne Leerzeichen zu verwenden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Der Compiler sucht in folgender Reihenfolge nach Assemblyverweisen, die nicht voll qualifiziert sind:  
   
-1.  Aktuelles Arbeitsverzeichnis Dies ist das Arbeitsverzeichnis, aus dem der Compiler abgerufen wird.  
+1. Aktuelles Arbeitsverzeichnis Dies ist das Arbeitsverzeichnis, aus dem der Compiler abgerufen wird.  
   
-2.  Das Verzeichnis des CLR-Systems (Common Language Runtime)  
+2. Das Verzeichnis des CLR-Systems (Common Language Runtime)  
   
-3.  Von **-lib** angegebene Verzeichnisse  
+3. Von **-lib** angegebene Verzeichnisse  
   
-4.  Von den LIB-Umgebungsvariablen angegebene Verzeichnisse  
+4. Von den LIB-Umgebungsvariablen angegebene Verzeichnisse  
   
  Verwenden Sie **-reference**, um einen Assemblyverweis anzugeben.  
   
@@ -52,11 +52,11 @@ Die Option **-lib** gibt den Speicherort der Assembly an, auf die verwiesen wird
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  
+1. Öffnen Sie das Dialogfeld **Eigenschaftenseiten** des Projekts.  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Verweispfad**.  
+2. Klicken Sie auf die Eigenschaftenseite **Verweispfad**.  
   
-3.  Modifizieren Sie den Inhalt des Listenfelds.  
+3. Modifizieren Sie den Inhalt des Listenfelds.  
   
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>.  
   

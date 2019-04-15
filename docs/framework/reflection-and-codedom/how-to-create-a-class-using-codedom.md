@@ -13,27 +13,27 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78c50b3813ebb0bb65955e411eb84e4cd9e0a001
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d431fd472df329dd0a8421483eb36b573dce775
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54581938"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333170"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>Vorgehensweise: Erstellen einer Klasse mit CodeDOM
 Die folgenden Verfahren stellen dar, wie ein CodeDOM-Diagramm erstellt und kompiliert, das eine Klasse erstellt, die zwei Felder, drei Eigenschaften, eine Methode, einen Konstruktor und einen Einstiegspunkt enthält.  
   
-1.  Erstellen Sie eine Konsolenanwendung, die den CodeDOM-Code zum Generieren des Quellcodes für eine Klasse verwendet.  
+1. Erstellen Sie eine Konsolenanwendung, die den CodeDOM-Code zum Generieren des Quellcodes für eine Klasse verwendet.  
   
      In diesem Beispiel heißt die generierende Klasse `Sample`, und der generierte Code ist eine Klasse namens `CodeDOMCreatedClass` in einer Datei namens „SampleCode“.  
   
-2.  Initialisieren Sie in der generierenden Klasse das CodeDOM-Diagramm, und verwenden Sie CodeDOM-Methoden, um die Member, den Konstruktor und den Einstiegspunkt (`Main`-Methode) der generierten Klasse zu definieren.  
+2. Initialisieren Sie in der generierenden Klasse das CodeDOM-Diagramm, und verwenden Sie CodeDOM-Methoden, um die Member, den Konstruktor und den Einstiegspunkt (`Main`-Methode) der generierten Klasse zu definieren.  
   
      In diesem Beispiel verfügt die generierte Klasse über zwei Felder, drei Eigenschaften, einen Konstruktor, eine Methode und eine `Main`-Methode.  
   
-3.  Erstellen Sie in der generierenden Klasse einen sprachspezifischen Codeanbieter, und rufen Sie dessen <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A>-Methode auf, um den Code aus dem Diagramm zu erstellen.  
+3. Erstellen Sie in der generierenden Klasse einen sprachspezifischen Codeanbieter, und rufen Sie dessen <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A>-Methode auf, um den Code aus dem Diagramm zu erstellen.  
   
-4.  Kompilieren Sie die Anwendung, und führen Sie sie aus, um den Code zu generieren.  
+4. Kompilieren Sie die Anwendung, und führen Sie sie aus, um den Code zu generieren.  
   
      In diesem Beispiel befindet sich der generierte Code in einer Datei namens „SampleCode“. Kompilieren Sie diesen Code, und führen Sie ihn aus, um die Beispielausgabe zu sehen.  
   
@@ -87,12 +87,12 @@ Die folgenden Verfahren stellen dar, wie ein CodeDOM-Diagramm erstellt und kompi
   
 ### <a name="to-create-the-graph-and-generate-the-code"></a>So erstellen Sie das Diagramm und generieren den Code  
   
-1.  Fügen Sie die in den vorherigen Schritten erstellten Methoden der `Main`-Methode, die im ersten Schritt definiert ist, hinzu.  
+1. Fügen Sie die in den vorherigen Schritten erstellten Methoden der `Main`-Methode, die im ersten Schritt definiert ist, hinzu.  
   
      [!code-csharp[CodeDOM Class Sample#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#9)]
      [!code-vb[CodeDOM Class Sample#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#9)]  
   
-2.  Kompilieren Sie die generierende Klasse, und führen Sie sie aus.  
+2. Kompilieren Sie die generierende Klasse, und führen Sie sie aus.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Codebeispiel wird der Code aus den vorherigen Schritten gezeigt.  
@@ -119,5 +119,6 @@ The object:
 -   Dieses Codebeispiel benötigt die festgelegte `FullTrust`-Berechtigung, damit es erfolgreich ausgeführt werden kann.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden von CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
 - [Generieren und Kompilieren von Quellcode aus einem CodeDOM-Diagramm](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)

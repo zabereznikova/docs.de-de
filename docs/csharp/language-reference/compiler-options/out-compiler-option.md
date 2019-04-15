@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 6d1134367cbbe494f5ab882d88cc083110ffd5c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362356"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331298"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C#-Compileroptionen)
 Die Option **-out** gibt den Namen der Ausgabedatei an.  
@@ -49,11 +49,11 @@ Die Option **-out** gibt den Namen der Ausgabedatei an.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die Seite **Eigenschaften** des Projekts.  
+1. Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Anwendung**.  
+2. Klicken Sie auf die Eigenschaftenseite **Anwendung**.  
   
-3.  Ändern Sie die Eigenschaft **Assemblyname**.  
+3. Ändern Sie die Eigenschaft **Assemblyname**.  
   
      So legen Sie diese Compileroption programmgesteuert fest: <xref:VSLangProj80.ProjectProperties3.OutputFileName%2A> ist eine schreibgeschützte Eigenschaft, die durch eine Kombination aus dem Projekttyp (ausführbare Datei, Bibliothek usw.) und dem Namen der Assembly bestimmt wird. Das Ändern von einer oder diesen beiden Eigenschaften ist erforderlich, um den Namen der Ausgabedatei festzulegen.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 3aeb9735876953e9332997f6b8f2ca4df9234c06
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203388"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322081"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Polymorphismus (C#-Programmierhandbuch)
 Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte Säule der objektorientierten Programmierung bezeichnet. Es handelt sich dabei um ein griechisches Wort, das "Vielgestaltigkeit" bedeutet und zwei verschiedene Aspekte umfasst:  
@@ -22,9 +22,9 @@ Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte 
   
  Dank virtueller Methoden können Sie auf einheitliche Weise mit Gruppen verwandter Objekte arbeiten. Nehmen Sie beispielsweise an, Sie haben eine Zeichenanwendung, mit der ein Benutzer verschiedene Arten von Formen auf einer Zeichenoberfläche erstellen kann. Zur Kompilierzeit wissen Sie nicht, welche spezifischen Typen von Formen der Benutzer erstellen wird. Die Anwendung muss jedoch alle verschiedenen Formentypen, die erstellt werden, nachverfolgen und diese als Antwort auf die Mausaktionen des Benutzers aktualisieren. Sie können Polymorphismus verwenden, um dieses Problem mithilfe von zwei einfachen Schritten zu lösen:  
   
-1.  Erstellen Sie eine Klassenhierarchie, in der jede spezifische Formenklasse von einer gemeinsamen Basisklasse abgeleitet wird.  
+1. Erstellen Sie eine Klassenhierarchie, in der jede spezifische Formenklasse von einer gemeinsamen Basisklasse abgeleitet wird.  
   
-2.  Verwenden Sie eine virtuelle Methode, um die entsprechende Methode in einer abgeleiteten Klasse durch einen einzigen Aufruf der Basisklassenmethode aufzurufen.  
+2. Verwenden Sie eine virtuelle Methode, um die entsprechende Methode in einer abgeleiteten Klasse durch einen einzigen Aufruf der Basisklassenmethode aufzurufen.  
   
  Erstellen Sie zuerst eine Basisklasse namens `Shape` und abgeleitete Klassen, wie z. B. `Rectangle`, `Circle` und `Triangle`. Geben Sie der `Shape`-Klasse eine virtuelle Methode namens `Draw`, und überschreiben Sie sie in jeder abgeleiteten Klasse, um die jeweilige Form zu zeichnen, die die Klasse darstellt. Erstellen Sie ein `List<Shape>`-Objekt und fügen Sie einen Kreis, ein Dreieck und ein Rechteck hinzu. Um die Zeichenoberfläche zu aktualisieren, verwenden Sie eine [foreach](../../../csharp/language-reference/keywords/foreach-in.md)-Schleife, um die Liste zu durchlaufen und die `Draw`-Methode für jedes `Shape`-Objekt in der Liste aufzurufen. Obwohl jedes Objekt in der Liste einen deklarierten `Shape`-Typ aufweist, wird der Laufzeittyp (die überschriebene Version der Methode in jeder abgeleiteten Klasse) aufgerufen.  
   
@@ -89,9 +89,9 @@ Polymorphismus wird häufig nach der Kapselung und der Vererbung als die dritte 
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Versionsverwaltung mit den Schlüsselwörtern "override" und "new"](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+-   [Versionsverwaltung mit den Schlüsselwörtern „override“ und „new“](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
--   [Wann müssen die Schlüsselwörter "override" und "new" verwendet werden?](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+-   [Wann müssen die Schlüsselwörter „override“ und „new“ verwendet werden?](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
 -   [Vorgehensweise: Überschreiben der ToString-Methode](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   

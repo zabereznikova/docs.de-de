@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9bf6972812bdf4a385b99fe34d2cd3cd8a91c8cf
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 0358450024607a985f38564ec9743ba964949e8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234491"
 ---
 ### <a name="clickonce-supports-sha-256-on-40-targeted-apps"></a>ClickOnce unterstützt SHA-256 auf Apps, die auf 4.0 ausgerichtet sind
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761099"
 |Bereich|Gering|
 |Version|4.6|
 |Typ|Neuzuweisung|
-

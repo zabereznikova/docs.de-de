@@ -2,19 +2,19 @@
 title: 'Vorgehensweise: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 9788973df42b91aa2da690c5bf1b0f6b4d41b127
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f8d734738606ada2db6db7f3c8e6c08ca57a543
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514776"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323745"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Vorgehensweise: Verbinden und Vergleichen von Zeichenfolgenauflistungen (LINQ) (C#)
 In diesem Beispiel wird veranschaulicht, wie Sie Dateien mit Textzeilen zusammenführen und die Ergebnisse anschließend sortieren. Insbesondere wird gezeigt, wie eine einfache Verkettung, eine Vereinigung und eine Schnittmenge von zwei Gruppen von Textzeilen ausgeführt wird.  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>So richten Sie das Projekt und die Textdateien ein  
   
-1.  Kopieren Sie diese Namen in eine Textdatei namens „names1.txt“, und speichern Sie sie in Ihrem Projektordner:  
+1. Kopieren Sie diese Namen in eine Textdatei namens „names1.txt“, und speichern Sie sie in Ihrem Projektordner:  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ In diesem Beispiel wird veranschaulicht, wie Sie Dateien mit Textzeilen zusammen
     Garcia, Debra  
     ```  
   
-2.  Kopieren Sie diese Namen in eine Textdatei namens „names2.txt“, und speichern Sie sie in Ihrem Projektordner. Beachten Sie, dass die zwei Dateien einige Namen gemeinsam haben.  
+2. Kopieren Sie diese Namen in eine Textdatei namens „names2.txt“, und speichern Sie sie in Ihrem Projektordner. Beachten Sie, dass die zwei Dateien einige Namen gemeinsam haben.  
   
     ```  
     Liu, Jinghao  

@@ -6,19 +6,19 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: ee5c7cbea09c6183b48fe1b0acd051d65bdd1875
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819033"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312713"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>Vorgehensweise: Schreiben von Ereignisinformationen in eine Textdatei (Visual Basic)
 Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informationen über Ereignisse zu protokollieren, die in Ihrer Anwendung auftreten. Dieses Beispiel zeigt die Verwendung der `My.Application.Log.WriteEntry`-Methode zum Protokollieren von Nachverfolgungsinformationen, um eine Datei zu protokollieren.  
   
 ### <a name="to-add-and-configure-the-file-log-listener"></a>Hinzufügen und Konfigurieren des Dateiprotokolllisteners  
   
-1.  Klicken Sie im **Projektmappen-Explorer** auf "app.config", und wählen Sie **Öffnen**aus.  
+1. Klicken Sie im **Projektmappen-Explorer** auf "app.config", und wählen Sie **Öffnen**aus.  
   
      \- oder –  
   
@@ -30,19 +30,19 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
   
     3.  Klicken Sie auf **Hinzufügen**.  
   
-2.  Suchen Sie den Abschnitt `<listeners>` in der Anwendungskonfigurationsdatei.  
+2. Suchen Sie den Abschnitt `<listeners>` in der Anwendungskonfigurationsdatei.  
   
      Sie finden den Abschnitt \<listeners> im Abschnitt \<source> mit dem Namensattribute „DefaultScource“, das sich im Abschnitt \<system.diagnostics> befindet, der wiederum unter dem Abschnitt der höchsten Ebene \<configuration> zu finden ist.  
   
-3.  Fügen Sie dem `<listeners>` -Abschnitt dieses Element hinzu:  
+3. Fügen Sie dem `<listeners>` -Abschnitt dieses Element hinzu:  
   
     ```xml  
     <add name="FileLogListener" />  
     ```  
   
-4.  Machen Sie den Abschnitt `<sharedListeners>` im Abschnitt `<system.diagnostics>`, der sich unter dem Abschnitt der höchsten Ebene `<configuration>` befindet.  
+4. Machen Sie den Abschnitt `<sharedListeners>` im Abschnitt `<system.diagnostics>`, der sich unter dem Abschnitt der höchsten Ebene `<configuration>` befindet.  
   
-5.  Fügen Sie dem `<sharedListeners>` -Abschnitt dieses Element hinzu:  
+5. Fügen Sie dem `<sharedListeners>` -Abschnitt dieses Element hinzu:  
   
     ```xml  
     <add name="FileLogListener"   

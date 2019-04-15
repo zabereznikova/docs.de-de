@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e5d81d791e1a2f1a2dbdafc787dec1227423883d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236648"
+---
 ### <a name="opt-in-break-to-revert-from-different-45-sql-generation-to-simpler-40-sql-generation"></a>Aktivierte Unterbrechung zur Wiederherstellung der SQL-Generationen 4.0 oder 4.5
 
 |   |   |
@@ -7,4 +15,3 @@
 |Bereich|Transparent|
 |Version|4.5.2|
 |Typ|Laufzeit|
-

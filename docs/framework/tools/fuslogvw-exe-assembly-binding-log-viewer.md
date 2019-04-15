@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 57f62f6d03a95860e06e0a457884dd30d186643a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b74321ecc5c945aab74ad8678b23eb4a66046d39
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574156"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329517"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (Assembly Binding Log Viewer-Tool)
 In der Assemblybindungs-Protokollanzeige werden Details zu Assemblybindungen angezeigt. Mit diesen Informationen lässt sich leichter diagnostizieren, weshalb zur Laufzeit in .NET Framework keine Assembly gefunden werden kann. Diese Fehler resultieren normalerweise aus einer Assembly, die am falschen Ort bereitgestellt wird, einem systemeigenen Abbild, das nicht mehr gültig ist, oder aus Abweichungen bei Versionsnummern oder Kulturen. Wenn die Common Language Runtime eine Assembly nicht finden kann, wird dies in der Anwendung als <xref:System.TypeLoadException> angezeigt.  
@@ -36,18 +36,18 @@ fuslogvw
   
 ### <a name="to-change-the-log-location-view"></a>So ändern Sie die Anzeige des Protokollspeicherorts  
   
-1.  Wählen Sie das Optionsfeld **Standard** aus, um Bindungsfehler für alle Anwendungstypen anzuzeigen. Protokolleinträge werden standardmäßig auf dem Datenträger in Verzeichnissen nach Benutzer im WinInet-Cache gespeichert.  
+1. Wählen Sie das Optionsfeld **Standard** aus, um Bindungsfehler für alle Anwendungstypen anzuzeigen. Protokolleinträge werden standardmäßig auf dem Datenträger in Verzeichnissen nach Benutzer im WinInet-Cache gespeichert.  
   
-2.  Wählen Sie das Optionsfeld **Benutzerdefiniert** aus, um Bindungsfehler in dem von Ihnen angegebenen, benutzerdefinierten Verzeichnis anzuzeigen. Sie müssen den benutzerdefinierten Speicherort angeben, in dem die Protokolle von der Runtime gespeichert werden sollen, indem Sie den benutzerdefinierten Protokollspeicherort festlegen. Geben Sie dazu im Dialogfeld **Protokolleinstellungen** einen gültigen Verzeichnisnamen an. Dieses Verzeichnis sollte bis auf die Dateien, die von der Laufzeit generiert werden, leer sein. Wenn es eine ausführbare Datei enthält, die einen zu protokollierenden Fehler erzeugt, wird der Fehler nicht protokolliert, da das Tool versucht, ein Verzeichnis mit dem Namen der ausführbaren Datei zu erstellen. Außerdem schlägt der Versuch fehl, eine ausführbare Datei vom Protokollspeicherort auszuführen.  
+2. Wählen Sie das Optionsfeld **Benutzerdefiniert** aus, um Bindungsfehler in dem von Ihnen angegebenen, benutzerdefinierten Verzeichnis anzuzeigen. Sie müssen den benutzerdefinierten Speicherort angeben, in dem die Protokolle von der Runtime gespeichert werden sollen, indem Sie den benutzerdefinierten Protokollspeicherort festlegen. Geben Sie dazu im Dialogfeld **Protokolleinstellungen** einen gültigen Verzeichnisnamen an. Dieses Verzeichnis sollte bis auf die Dateien, die von der Laufzeit generiert werden, leer sein. Wenn es eine ausführbare Datei enthält, die einen zu protokollierenden Fehler erzeugt, wird der Fehler nicht protokolliert, da das Tool versucht, ein Verzeichnis mit dem Namen der ausführbaren Datei zu erstellen. Außerdem schlägt der Versuch fehl, eine ausführbare Datei vom Protokollspeicherort auszuführen.  
   
     > [!NOTE]
     >  Anstelle des benutzerdefinierten Bindungspfads wird die Verwendung des standardmäßigen Bindungspfads empfohlen. Der standardmäßige Bindungspfad wird während der Laufzeit im WinInet-Cache gespeichert und daher auch automatisch gelöscht. Wenn Sie einen benutzerdefinierten Bindungspfad festlegen, müssen Sie diesen selbst löschen.  
   
 ### <a name="to-view-details-about-a-specific-failure"></a>So zeigen Sie Details für einen bestimmten Fehler an  
   
-1.  Markieren Sie den Anwendungsnamen des gewünschten Eintrags.  
+1. Markieren Sie den Anwendungsnamen des gewünschten Eintrags.  
   
-2.  Klicken Sie auf die Schaltfläche **Protokolldatei anzeigen**. Alternativ können Sie auch auf den markierten Eintrag doppelklicken.  
+2. Klicken Sie auf die Schaltfläche **Protokolldatei anzeigen**. Alternativ können Sie auch auf den markierten Eintrag doppelklicken.  
   
      Für den markierten Bindungsfehler werden folgende Details angezeigt:  
   
@@ -99,9 +99,9 @@ LOG: All probing URLs attempted and failed.
   
 ### <a name="to-delete-a-single-entry-from-the-log"></a>So löschen Sie einen Eintrag aus dem Protokoll  
   
-1.  Markieren Sie einen Eintrag.  
+1. Markieren Sie einen Eintrag.  
   
-2.  Klicken Sie auf die Schaltfläche **Eintrag löschen**.  
+2. Klicken Sie auf die Schaltfläche **Eintrag löschen**.  
   
 ### <a name="to-delete-all-entries-from-the-log"></a>So löschen Sie alle Einträge aus dem Protokoll  
   
@@ -210,9 +210,9 @@ Discarding native image.
   
 #### <a name="to-enable-a-custom-log-path"></a>So aktivieren Sie einen benutzerdefinierten Protokollpfad  
   
-1.  Wählen Sie das Optionsfeld **Benutzerdefinierten Protokollpfad aktivieren** aus.  
+1. Wählen Sie das Optionsfeld **Benutzerdefinierten Protokollpfad aktivieren** aus.  
   
-2.  Geben Sie den Pfad in das Textfeld **Benutzerdefinierter Protokollpfad** ein.  
+2. Geben Sie den Pfad in das Textfeld **Benutzerdefinierter Protokollpfad** ein.  
   
 > [!NOTE]
 >  Der [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) verwendet den Internet Explorer-Cache zum Speichern des Bindungsprotokolls. Aufgrund gelegentlicher Beschädigungen des IE-Caches ist es möglich, dass der [Assembly Binding Log Viewer (Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) keine neuen Bindungsprotokolle mehr im Ansichtsfenster anzeigt. In Folge einer solchen Beschädigung kann die .NET-Bindungsinfrastruktur (Fusion) weder in das Bindungsprotokoll schreiben noch daraus lesen. (Dieses Problem tritt nicht auf, wenn Sie einen benutzerdefinierten Protokollpfad verwenden.)  Um die Beschädigung zu beheben und Fusion wieder das Anzeigen von Bindungsprotokollen zu ermöglichen, müssen Sie den IE-Cache löschen. Löschen Sie dazu im Dialogfeld "Internetoptionen" von Internet Explorer die temporären Internetdateien.  
@@ -221,16 +221,17 @@ Discarding native image.
   
 #### <a name="to-enable-logging-for-apps-running-in-the-windows-app-container"></a>So aktivieren Sie die Protokollierung für im Windows-App-Container ausgeführte Apps  
   
-1.  Aktivieren Sie einen benutzerdefinierten Protokollpfad, wie im vorherigen Verfahren beschrieben. Standardmäßig verfügen Apps, die im Windows-App-Container ausgeführt, über eingeschränkten Zugriff auf die Festplatte. Das Verzeichnis, das Sie angeben, erhält Lese-/Schreibzugriff für alle Apps im App-Container.  
+1. Aktivieren Sie einen benutzerdefinierten Protokollpfad, wie im vorherigen Verfahren beschrieben. Standardmäßig verfügen Apps, die im Windows-App-Container ausgeführt, über eingeschränkten Zugriff auf die Festplatte. Das Verzeichnis, das Sie angeben, erhält Lese-/Schreibzugriff für alle Apps im App-Container.  
   
-2.  Aktivieren Sie das Kontrollkästchen **Immersive Protokollierung aktivieren**.  
+2. Aktivieren Sie das Kontrollkästchen **Immersive Protokollierung aktivieren**.  
   
     > [!NOTE]
     >  Dieses Kontrollkästchen ist nur unter Windows 8 oder höher aktiviert.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.TypeLoadException>
-- [Extras](../../../docs/framework/tools/index.md)
+- [Tools](../../../docs/framework/tools/index.md)
 - [Globaler Assemblycache](../../../docs/framework/app-domains/gac.md)
 - [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

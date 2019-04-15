@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce346bfe0c20e94673009adb0134fbaab62cf551
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71eaaa85b8bd287c37f59116e75cf99b030d63ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653917"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297836"
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars
 
@@ -33,7 +33,7 @@ Um eine Assembly mit einem starken Namen zu signieren, benötigen Sie ein Schlü
 
 ## <a name="to-create-a-key-pair"></a>So erstellen Sie ein Schlüsselpaar
 
-1.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
+1. Geben Sie an der Eingabeaufforderung folgenden Befehl ein:
 
      **sn –k** \<*Dateiname*>
 

@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed3129364d73d196b2e25b962b8c42325a144dfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08e5712db60fb09b48d6be9f35737c9a884d1ce8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642830"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324473"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Vorgehensweise: Abbrechen einer Aufgabe und ihrer untergeordneten Elemente
 In diesen Beispielen wird gezeigt, wie Sie die folgenden Aufgaben ausführen:  
   
-1.  Erstellen und Starten einer abbrechbare Aufgabe  
+1. Erstellen und Starten einer abbrechbare Aufgabe  
   
-2.  Übergeben eines Abbruchtokens an den Benutzerdelegaten und optional an die Aufgabeninstanz  
+2. Übergeben eines Abbruchtokens an den Benutzerdelegaten und optional an die Aufgabeninstanz  
   
-3.  Erkennen der Abbruchanforderung im Benutzerdelegaten und Reagieren auf diese  
+3. Erkennen der Abbruchanforderung im Benutzerdelegaten und Reagieren auf diese  
   
-4.  Hinzufügen eines optionalen Hinweises, dass die Aufgabe abgebrochen wurde, zum aufrufenden Thread  
+4. Hinzufügen eines optionalen Hinweises, dass die Aufgabe abgebrochen wurde, zum aufrufenden Thread  
   
  Der aufrufende Thread erzwingt nicht die Beendigung der Aufgabe, er kennzeichnet nur, dass der Abbruch angefordert wurde. Wenn die Aufgabe bereits ausgeführt wird, muss der Benutzerdelegat die Anforderung erkennen und entsprechend reagieren. Wenn der Abbruch vor Auführung der Aufgabe angefordert wird, wird der Benutzerdelegat nicht ausgeführt; und das Aufgabenobjekt geht in den abgebrochenen Zustand über.  
   

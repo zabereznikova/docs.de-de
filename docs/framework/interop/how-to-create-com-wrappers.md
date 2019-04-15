@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58b7ca910f8f8c751f03b25459bc83efb8086923
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540974"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324126"
 ---
 # <a name="how-to-create-com-wrappers"></a>Vorgehensweise: Erstellen von COM-Wrappern
 
@@ -28,13 +28,13 @@ In Visual Studio 2005 können Sie den COM-Wrapper als Verweis zu Ihrem Projekt h
 
 ### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>Erstellen eines durch die Laufzeit aufrufbaren Wrappers mit Visual Studio
 
-1.  Öffnen Sie das Projekt für Ihre verwaltete Anwendung.
+1. Öffnen Sie das Projekt für Ihre verwaltete Anwendung.
 
-2.  Klicken Sie im Menü **Projekt** auf **Alle Dateien anzeigen**.
+2. Klicken Sie im Menü **Projekt** auf **Alle Dateien anzeigen**.
 
-3.  Klicken Sie im Menü **Projekt** auf **Verweis hinzufügen** .
+3. Klicken Sie im Menü **Projekt** auf **Verweis hinzufügen** .
 
-4.  Klicken Sie im Dialogfeld „Verweis hinzufügen“ auf die Registerkarte **COM**, wählen Sie die Komponente aus, die Sie verwenden möchten, und klicken Sie auf **OK**.
+4. Klicken Sie im Dialogfeld „Verweis hinzufügen“ auf die Registerkarte **COM**, wählen Sie die Komponente aus, die Sie verwenden möchten, und klicken Sie auf **OK**.
 
      Beachten Sie, dass die COM-Komponente im **Projektmappen-Explorer** dem Projektordner „Verweise“ hinzugefügt wird.
 
@@ -53,15 +53,15 @@ Sie können jetzt Code schreiben, um auf das COM-Objekt zuzugreifen. Sie können
   
 ### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>Erstellen eines COM Callable Wrappers mit Visual Studio  
   
-1.  Erstellen Sie ein Klassenbibliotheksprojekt für die verwaltete Klasse, die Sie in nativem Code ausführen möchten. Die Klasse muss über einen Standardkonstruktor verfügen.  
+1. Erstellen Sie ein Klassenbibliotheksprojekt für die verwaltete Klasse, die Sie in nativem Code ausführen möchten. Die Klasse muss über einen Standardkonstruktor verfügen.  
   
      Überprüfen Sie, ob Sie eine vollständige vierteilige Versionsnummer für die Assembly in der AssemblyInfo-Datei besitzen. Diese Zahl ist für die Versionszuweisung in der Windows-Registrierung erforderlich. Weitere Informationen über die Versionsummern finden Sie unter [Assemblyversionen](../../../docs/framework/app-domains/assembly-versioning.md).  
   
-2.  Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
+2. Klicken Sie im Menü **Projekt** auf **Eigenschaften**.  
   
-3.  Klicken Sie auf die Registerkarte **Kompilieren**.  
+3. Klicken Sie auf die Registerkarte **Kompilieren**.  
   
-4.  Aktivieren Sie das Kontrollkästchen **Für COM-Interop registrieren**.  
+4. Aktivieren Sie das Kontrollkästchen **Für COM-Interop registrieren**.  
   
  Wenn Sie das Projekt erstellen, wird die Assembly für COM-Interop automatisch registriert. Wenn Sie in Visual Studio 2005 eine native Anwendung erstellen, können Sie die Assembly verwenden, indem Sie im Menü **Projekt** auf **Verweis hinzufügen** klicken.  
   
@@ -76,4 +76,4 @@ Sie können Regasm.exe für eine Assembly in jedem beliebigen Verzeichnis ausfü
 ## <a name="see-also"></a>Siehe auch
 
 - [Runtime Callable Wrapper (RCW)](../../../docs/framework/interop/runtime-callable-wrapper.md)
-- [COM Callable Wrapper](../../../docs/framework/interop/com-callable-wrapper.md)
+- [COM Callable Wrapper (CCW)](../../../docs/framework/interop/com-callable-wrapper.md)
