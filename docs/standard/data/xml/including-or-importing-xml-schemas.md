@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dff5dca159b3e714a027bd2d2ebe86d2b414dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626003"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343570"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Einfügen oder Importieren von XML-Schemata
 Ein XML-Schema kann die Elemente `<xs:import />`, `<xs:include />` und `<xs:redefine />` enthalten. Diese Schemaelemente verweisen auf andere XML-Schemata, mit denen die Struktur des Schemas ergänzt werden kann, in das Sie eingefügt bzw. importiert werden. Im SOM-API (Schemaobjektmodell) werden die Klassen <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> und <xref:System.Xml.Schema.XmlSchemaRedefine> diesen Elementen zugeordnet.  
@@ -26,15 +26,15 @@ Ein XML-Schema kann die Elemente `<xs:import />`, `<xs:include />` und `<xs:rede
   
  Im Codebeispiel wird das Adressschema in den folgenden Schritten eingefügt.  
   
-1.  Fügt das Kundenschema und das Adressschema einem neuen <xref:System.Xml.Schema.XmlSchemaSet>-Objekt hinzu und kompiliert diese anschließend. Alle beim Lesen oder Kompilieren der Schemata aufgetretenen Schemavalidierungswarnungen und -fehler werden vom <xref:System.Xml.Schema.ValidationEventHandler>-Delegaten behandelt.  
+1. Fügt das Kundenschema und das Adressschema einem neuen <xref:System.Xml.Schema.XmlSchemaSet>-Objekt hinzu und kompiliert diese anschließend. Alle beim Lesen oder Kompilieren der Schemata aufgetretenen Schemavalidierungswarnungen und -fehler werden vom <xref:System.Xml.Schema.ValidationEventHandler>-Delegaten behandelt.  
   
-2.  Ruft die kompilierten <xref:System.Xml.Schema.XmlSchema>-Objekte für die Kunden- und Adressschemata aus dem <xref:System.Xml.Schema.XmlSchemaSet> ab, indem die <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>-Eigenschaft durchlaufen wird. Da die Schemata kompiliert sind, kann auf die Eigenschaften im Post-Schema-Compilation-Infoset (PSCI) zugegriffen werden.  
+2. Ruft die kompilierten <xref:System.Xml.Schema.XmlSchema>-Objekte für die Kunden- und Adressschemata aus dem <xref:System.Xml.Schema.XmlSchemaSet> ab, indem die <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>-Eigenschaft durchlaufen wird. Da die Schemata kompiliert sind, kann auf die Eigenschaften im Post-Schema-Compilation-Infoset (PSCI) zugegriffen werden.  
   
-3.  Erstellt ein <xref:System.Xml.Schema.XmlSchemaImport>-Objekt, legt die <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A>-Eigenschaft des Imports auf den Namespace des Adressschemas fest, legt die <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A>-Eigenschaft des Imports auf das <xref:System.Xml.Schema.XmlSchema>-Objekt des Adressschemas fest, und fügt der <xref:System.Xml.Schema.XmlSchema.Includes%2A>-Eigenschaft des Kundenschemas den Import hinzu.  
+3. Erstellt ein <xref:System.Xml.Schema.XmlSchemaImport>-Objekt, legt die <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A>-Eigenschaft des Imports auf den Namespace des Adressschemas fest, legt die <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A>-Eigenschaft des Imports auf das <xref:System.Xml.Schema.XmlSchema>-Objekt des Adressschemas fest, und fügt der <xref:System.Xml.Schema.XmlSchema.Includes%2A>-Eigenschaft des Kundenschemas den Import hinzu.  
   
-4.  Das geänderte <xref:System.Xml.Schema.XmlSchema>-Objekt des Kundenschemas wird mithilfe der <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>-Methode und der <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode der <xref:System.Xml.Schema.XmlSchemaSet>-Klasse erneut verarbeitet, kompiliert und in die Konsole geschrieben.  
+4. Das geänderte <xref:System.Xml.Schema.XmlSchema>-Objekt des Kundenschemas wird mithilfe der <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>-Methode und der <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>-Methode der <xref:System.Xml.Schema.XmlSchemaSet>-Klasse erneut verarbeitet, kompiliert und in die Konsole geschrieben.  
   
-5.  Schließlich werden alle in das Kundenschema importierten Schemata mithilfe der <xref:System.Xml.Schema.XmlSchema.Includes%2A>-Eigenschaft des Kundenschemas rekursiv in die Konsole geschrieben. Die <xref:System.Xml.Schema.XmlSchema.Includes%2A>-Eigenschaft bietet Zugriff auf alle einem Schema hinzugefügten Includes, Importe und Neudefinitionen.  
+5. Schließlich werden alle in das Kundenschema importierten Schemata mithilfe der <xref:System.Xml.Schema.XmlSchema.Includes%2A>-Eigenschaft des Kundenschemas rekursiv in die Konsole geschrieben. Die <xref:System.Xml.Schema.XmlSchema.Includes%2A>-Eigenschaft bietet Zugriff auf alle einem Schema hinzugefügten Includes, Importe und Neudefinitionen.  
   
  Im Folgenden werden das gesamte Codebeispiel dargestellt und die Kunden- und Adressschemata auf der Konsole ausgegeben.  
   
@@ -102,8 +102,8 @@ Ein XML-Schema kann die Elemente `<xs:import />`, `<xs:include />` und `<xs:rede
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über das XML-Schemaobjektmodell (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [Lesen und Schreiben von XML-Schemas](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Erstellen von XML-Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Durchlaufen von XML-Schemas](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
-- [Bearbeiten von XML-Schemas](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [„XmlSchemaSet“ zur Kompilierung von Schemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+- [Lesen und Schreiben von XML-Schemata](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [Erstellen von XML-Schemata](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Durchlaufen von XML-Schemata](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [Bearbeiten von XML-Schemata](../../../../docs/standard/data/xml/editing-xml-schemas.md)
+- ["XmlSchemaSet" zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

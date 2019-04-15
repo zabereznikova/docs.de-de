@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: acdcc588-b458-436d-876c-726de68244c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a8077125ac99fa1d8f5b22ac3864fcc17213fa6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff00e2f1d266243f0453f004564f2ed802d26c85
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639632"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338721"
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Vorgehensweise: Entfernen einer Assembly aus dem globalen Assemblycache
 Es gibt zwei Möglichkeiten, eine Assembly aus dem globalen Assemblycache (GAC) zu entfernen:  
@@ -29,7 +29,7 @@ Es gibt zwei Möglichkeiten, eine Assembly aus dem globalen Assemblycache (GAC) 
   
 ### <a name="removing-an-assembly-with-gacutilexe"></a>Entfernen einer Assembly mit "Gacutil.exe"  
   
-1.  Geben Sie an der Eingabeaufforderung folgenden Befehl ein:  
+1. Geben Sie an der Eingabeaufforderung folgenden Befehl ein:  
   
      **gacutil –u** \<*assemblyname*>  
   
@@ -46,12 +46,13 @@ gacutil -u hello
   
 ### <a name="removing-an-assembly-with-windows-installer"></a>Entfernen einer Assembly mit Windows Installer  
   
-1.  Wählen Sie in der **Systemsteuerung** in **Programme und Funktionen** die Anwendung aus, die Sie deinstallieren möchten. Wenn das Installationspaket Assemblys im GAC platziert hat, werden diese von Windows Installer entfernt, sofern sie nicht von einer anderen Anwendung verwendet werden.  
+1. Wählen Sie in der **Systemsteuerung** in **Programme und Funktionen** die Anwendung aus, die Sie deinstallieren möchten. Wenn das Installationspaket Assemblys im GAC platziert hat, werden diese von Windows Installer entfernt, sofern sie nicht von einer anderen Anwendung verwendet werden.  
   
     > [!NOTE]
     >  Windows Installer verwaltet einen Verweiszähler für Assemblys, die im GAC installiert sind. Eine Assembly wird nur dann aus dem GAC entfernt, wenn ihr Verweiszähler gleich null wird, wodurch angegeben ist, dass sie von keiner der Anwendungen verwendet wird, die über ein Windows Installer-Paket installiert wurden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Arbeiten mit Assemblys und dem globalen Assemblychache](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)
 - [Vorgehensweise: Installieren einer Assembly im globalen Assemblycache](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)
 - [Gacutil.exe (Global Assembly Cache-Tool)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

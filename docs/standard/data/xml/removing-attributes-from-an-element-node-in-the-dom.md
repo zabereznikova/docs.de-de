@@ -5,19 +5,19 @@ ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65fd6d2baae29c72241350e4568faf09b9c71f39
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 0e38ad777112e5e88fe40c530da6107d0de0e3ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835180"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336134"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Entfernen von Attributen aus einem Elementknoten im DOM
 Es gibt viele Möglichkeiten, Attribute zu entfernen. Eine Möglichkeit besteht darin, Attribute aus der Attributauflistung zu entfernen. Dabei werden die folgenden Schritte ausgeführt:  
   
-1.  Rufen Sie mithilfe von `XmlAttributeCollection attrs = elem.Attributes;` die Attributauflistung aus dem Element ab.  
+1. Rufen Sie mithilfe von `XmlAttributeCollection attrs = elem.Attributes;` die Attributauflistung aus dem Element ab.  
   
-2.  Entfernen Sie das Attribut aus der Attributauflistung mithilfe einer dieser drei Methoden:  
+2. Entfernen Sie das Attribut aus der Attributauflistung mithilfe einer dieser drei Methoden:  
   
     -   Entfernen Sie mit <xref:System.Xml.XmlAttributeCollection.Remove%2A> ein bestimmtes Attribut.  
   
@@ -37,7 +37,7 @@ Es gibt viele Möglichkeiten, Attribute zu entfernen. Eine Möglichkeit besteht 
   
  Unabhängig davon, mithilfe welcher Methode Attribute entfernt wurden, bestehen spezielle Einschränkungen für das Entfernen von Standardattributen in der DTD (Document Type Definition). Standardattribute können nicht entfernt werden, wenn nicht das zugehörige Element ebenfalls entfernt wird. Es sind immer Standardattribute für Elemente vorhanden, für die Standardattribute deklariert wurden. Durch das Entfernen eines Standardattributs aus einer <xref:System.Xml.XmlAttributeCollection> oder aus dem <xref:System.Xml.XmlElement> wird ein Ersatzattribut in die <xref:System.Xml.XmlAttributeCollection> des Elements eingefügt, das mit dem deklarierten Standardwert initialisiert wurde. Wenn ein als `<book att1="1" att2="2" att3="3"></book>` definiertes Element vorhanden ist, ist dies ein `book`-Element mit drei deklarierten Standardattributen. Die Implementierung des XML-DOMs (Document Object Model) garantiert, dass es bei Vorhandensein dieses `book`-Elements die drei Standardattribute `att1`, `att2` und `att3` aufweist.  
   
- Bei einem Aufruf mit einem <xref:System.Xml.XmlAttribute> legt die <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A>-Methode den Wert des Attributs auf <legacyBold>String.Empty</legacyBold> fest, da ein Attribut nicht ohne Wert existieren kann.  
+ Bei einem Aufruf mit einem <xref:System.Xml.XmlAttribute> legt die <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A>-Methode den Wert des Attributs auf String.Empty fest, da ein Attribut nicht ohne Wert existieren kann.  
   
 ## <a name="see-also"></a>Siehe auch
 

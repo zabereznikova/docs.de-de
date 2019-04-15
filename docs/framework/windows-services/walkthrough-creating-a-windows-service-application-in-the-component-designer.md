@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial: Erstellen einer Windows-Dienst-App'
-ms.date: 03/14/2019
+ms.date: 03/27/2019
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 786b9e28607cced0a15793415ff5fd470b559374
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262496"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518031"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>Tutorial: Erstellen einer Windows-Dienst-App
 
@@ -59,7 +59,6 @@ Benennen Sie den Dienst von **Service1** in **MyNewService** um.
 
 3. Wählen Sie im Menü **Datei** die Option **Alle speichern** aus.
 
-
 ## <a name="add-features-to-the-service"></a>Hinzufügen von Features zum Dienst
 
 In diesem Abschnitt fügen Sie dem Windows-Dienst ein benutzerdefiniertes Ereignisprotokoll hinzu. Die <xref:System.Diagnostics.EventLog>-Komponente wird als Beispiel für die Art von Komponente verwendet, die Sie einem Windows-Dienst hinzufügen können.
@@ -74,21 +73,7 @@ In diesem Abschnitt fügen Sie dem Windows-Dienst ein benutzerdefiniertes Ereign
 
 4. Definieren Sie ein benutzerdefiniertes Ereignisprotokoll. Für C# bearbeiten Sie den vorhandenen `MyNewService()`-Konstruktor; für Visual Basic wird der `New()`-Konstruktor hinzugefügt:
 
-   ```csharp
-   public MyNewService()
-   {
-        InitializeComponent();
-
-        eventLog1 = new EventLog();
-        if (!EventLog.SourceExists("MySource"))
-        {
-            EventLog.CreateEventSource("MySource", "MyNewLog");
-        }
-        eventLog1.Source = "MySource";
-        eventLog1.Log = "MyNewLog";
-    }
-   ```
-
+   [!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#2)]
    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]
 
 5. Fügen Sie den <xref:System.Diagnostics?displayProperty=nameWithType>-Namespace hinzu, indem Sie (sofern diese nicht bereits vorhanden ist) die `using`-Anweisung in der Datei **MyNewService.cs** bzw. die `Imports`-Anweisung in der Datei **MyNewService.vb** verwenden:
@@ -141,7 +126,6 @@ Mit der <xref:System.Timers.Timer?displayProperty=nameWithType>-Komponente könn
 
 2. Fügen Sie den <xref:System.Timers?displayProperty=nameWithType>-Namespace hinzu, indem Sie die `using`-Anweisung in der Datei **MyNewService.cs** bzw. die `Imports`-Anweisung in der Datei **MyNewService.vb** verwenden:
 
-
    ```csharp
    using System.Timers;
    ```
@@ -149,7 +133,6 @@ Mit der <xref:System.Timers.Timer?displayProperty=nameWithType>-Komponente könn
    ```vb
    Imports System.Timers
    ```
-
 
 3. Fügen Sie der `MyNewService`-Klasse die `OnTimer`-Methode hinzu, um das <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType>-Ereignis zu verarbeiten:
 
@@ -185,10 +168,7 @@ Anstatt alle Aufgaben auf dem Hauptthread auszuführen, können Sie Aufgaben mit
 
 Fügen Sie der Methode <xref:System.ServiceProcess.ServiceBase.OnStop%2A> eine Codezeile hinzu, die beim Beenden des Diensts einen Eintrag zum Ereignisprotokoll hinzufügt:
 
-```csharp
-eventLog1.WriteEntry("In OnStop.");
-```
-
+[!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#4)]
 [!code-vb[VbRadconService#4](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#4)]
 
 ### <a name="define-other-actions-for-the-service"></a>Definieren weiterer Aktionen für den Dienst
@@ -200,13 +180,11 @@ Im folgenden Codebeispiel wird veranschaulicht, wie die <xref:System.ServiceProc
 [!code-csharp[VbRadconService#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#5)]
 [!code-vb[VbRadconService#5](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#5)]
 
-
 ## <a name="set-service-status"></a>Festlegen des Dienststatus
 
 Dienste melden ihren Status an den [Dienststeuerungs-Manager](/windows/desktop/Services/service-control-manager), damit Benutzer erkennen können, ob ein Dienst ordnungsgemäß ausgeführt wird. Standardmäßig meldet ein Dienst, der von <xref:System.ServiceProcess.ServiceBase> erbt, eine begrenzte Anzahl von Statuseinstellungen. Dazu gehören SERVICE_STOPPED, SERVICE_PAUSED und SERVICE_RUNNING. Wenn es etwas länger dauert, bis ein Dienst startet, kann es hilfreich sein, den Status SERVICE_START_PENDING zu melden. 
 
 Sie können auch die Statuseinstellungen SERVICE_START_PENDING und SERVICE_STOP_PENDING durch Hinzufügen von Code implementieren, der in Windows die Funktion [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) aufruft.
-
 
 ### <a name="implement-service-pending-status"></a>Implementieren des Dienststatus SERVICE_PENDING
 
@@ -269,6 +247,9 @@ Sie können auch die Statuseinstellungen SERVICE_START_PENDING und SERVICE_STOP_
         Public dwWaitHint As Long
     End Structure
     ```
+
+    > [!NOTE]
+    > Der Dienststeuerungs-Manager verwendet die Member `dwWaitHint` und `dwCheckpoint` der [SERVICE_STATUS-Struktur](/windows/desktop/api/winsvc/ns-winsvc-_service_status), um zu bestimmen, wie lange bis zum Starten oder Herunterfahren eines Windows-Diensts gewartet werden muss. Wenn Ihre Methoden `OnStart` und `OnStop` eine lange Ausführungszeit haben, kann Ihr Dienst durch das erneute Aufrufen von `SetServiceStatus` mit einem erhöhten `dwCheckPoint`-Wert mehr Zeit anfordern.
 
 3. Deklarieren Sie nun in der Klasse `MyNewService` die Funktion [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) mithilfe eines [Plattformaufrufs](../interop/consuming-unmanaged-dll-functions.md):
 
@@ -341,9 +322,6 @@ Sie können auch die Statuseinstellungen SERVICE_START_PENDING und SERVICE_STOP_
     SetServiceStatus(Me.ServiceHandle, serviceStatus)    
     ```
 
-> [!NOTE]
-> Der Dienststeuerungs-Manager verwendet die Member `dwWaitHint` und `dwCheckpoint` der [SERVICE_STATUS-Struktur](/windows/desktop/api/winsvc/ns-winsvc-_service_status), um zu bestimmen, wie lange bis zum Starten oder Herunterfahren eines Windows-Diensts gewartet werden muss. Wenn Ihre Methoden `OnStart` und `OnStop` eine lange Ausführungszeit haben, kann Ihr Dienst durch das erneute Aufrufen von `SetServiceStatus` mit einem erhöhten `dwCheckPoint`-Wert mehr Zeit anfordern.
-
 ## <a name="add-installers-to-the-service"></a>Hinzufügen von Installern zum Dienst
 
 Bevor Sie einen Windows-Dienst ausführen können, müssen Sie ihn bei der Installation im Dienststeuerungs-Manager registrieren. Sie können Ihrem Projekt Installer hinzufügen, um die Registrierungsdetails zu verarbeiten.
@@ -396,24 +374,8 @@ Jeder Windows-Dienst hat einen Verzeichniseintrag unter dem Unterschlüssel **HK
 
 1. Wählen Sie **Program.cs** oder **MyNewService.Designer.vb** aus, und wählen Sie dann im Kontextmenü **Code anzeigen** aus. Ändern Sie in der `Main`-Methode den Code, sodass ein Eingabeparameter hinzugefügt wird, und übergeben Sie ihn an den Dienstkonstruktor:
 
-   ```csharp
-   static void Main(string[] args)
-   {
-       ServiceBase[] ServicesToRun;
-       ServicesToRun = new ServiceBase[]
-       {
-           new MyNewService(args)
-       };
-       ServiceBase.Run(ServicesToRun);
-   }
-   ```
-
-   ```vb
-   Shared Sub Main(ByVal cmdArgs() As String)
-       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewService(cmdArgs)}
-       System.ServiceProcess.ServiceBase.Run(ServicesToRun)
-   End Sub
-   ```
+   [!code-csharp[VbRadconService](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/Program-add-parameter.cs?highlight=1,6)]
+   [!code-vb[VbRadconService](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.Designer-add-parameter.vb?highlight=1-2)]
 
 2. Ändern Sie in **MyNewService.cs** bzw. **MyNewService.vb** den `MyNewService`-Konstruktor, sodass der Eingabeparameter folgendermaßen verarbeitet wird:
 
@@ -493,7 +455,6 @@ Jeder Windows-Dienst hat einen Verzeichniseintrag unter dem Unterschlüssel **HK
    ```
 
    Dieser Wert enthält in der Regel den vollständigen Pfad zur ausführbaren Datei des Windows-Diensts. Die Anführungszeichen rund um den Pfad und um jeden einzelnen Parameter sind erforderlich, um den Dienst korrekt zu starten. Ein Benutzer kann die Parameter im **ImagePath**-Verzeichniseintrag ändern, um die Startparameter für den Windows-Dienst zu ändern. Besser ist es jedoch, den Wert programmgesteuert zu ändern und die Funktionalität in einer benutzerfreundlichen Weise verfügbar zu machen, z. B. mithilfe eines Verwaltungs- oder Konfigurationshilfsprogramms.
-
 
 ## <a name="build-the-service"></a>Erstellen des Diensts
 

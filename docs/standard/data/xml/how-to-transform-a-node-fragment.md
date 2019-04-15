@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb258b61664e1fdbf6604afdf69074c48cf5bda4
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fabf7983a1887fb318bfb8d111b3911f4d90c545
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45597276"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345169"
 ---
 # <a name="how-to-transform-a-node-fragment"></a>Vorgehensweise: Transformieren eines Knotenfragments
 Wenn Sie in einem <xref:System.Xml.XmlDocument>-Objekt oder einem <xref:System.Xml.XPath.XPathDocument>-Objekt enthaltene Daten transformieren, gelten die XSLT-Transformationen für das vollständige Dokument. Wenn Sie einen anderen Knoten als den Stammknoten des Dokuments übergeben, wird dadurch nicht verhindert, dass im Transformationsprozess auf alle Knoten im geladenen Dokument zugegriffen wird. Zum Transformieren eines Knotenfragments müssen Sie ein separates Objekt erstellen, das nur das Knotenfragment enthält, und dieses Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode übergeben.  
@@ -22,13 +22,13 @@ Wenn Sie in einem <xref:System.Xml.XmlDocument>-Objekt oder einem <xref:System.X
   
 #### <a name="to-transform-a-node-fragment"></a>So transformieren Sie ein Knotenfragment  
   
-1.  Erstellen Sie ein Objekt, das das Quelldokument enthält.  
+1. Erstellen Sie ein Objekt, das das Quelldokument enthält.  
   
-2.  Suchen Sie das Knotenfragment, das Sie transformieren möchten.  
+2. Suchen Sie das Knotenfragment, das Sie transformieren möchten.  
   
-3.  Erstellen Sie ein separates Objekt, das nur das Knotenfragment enthält.  
+3. Erstellen Sie ein separates Objekt, das nur das Knotenfragment enthält.  
   
-4.  Übergeben Sie das Knotenfragment an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode.  
+4. Übergeben Sie das Knotenfragment an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Knotenfragment transformiert und die Ergebnisse werden auf der Konsole ausgegeben.  
@@ -44,7 +44,7 @@ Wenn Sie in einem <xref:System.Xml.XmlDocument>-Objekt oder einem <xref:System.X
 ##### <a name="singlexsl"></a>single.xsl  
  [!code-xml[XSLT_NodeFrag#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_NodeFrag/XML/single.xsl#2)]  
   
-### <a name="output"></a>Ausgabe  
+### <a name="output"></a>Output  
  Der Buchtitel lautet "Ein sehr vertrauenswürdiger Herr".  
   
 ## <a name="see-also"></a>Siehe auch

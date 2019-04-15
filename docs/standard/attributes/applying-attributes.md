@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83fe9180e222dd71c9d94810e4eedbac398acad4
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836473"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337694"
 ---
 # <a name="applying-attributes"></a>Anwenden von Attributen
 Mit dem folgenden Verfahren wenden Sie ein Attribut auf ein Codeelement an.  
   
-1.  Definieren Sie ein neues Attribut, oder verwenden Sie ein vorhandenes Attribut, indem Sie den entsprechenden Namespace aus .NET Framework importieren.  
+1. Definieren Sie ein neues Attribut, oder verwenden Sie ein vorhandenes Attribut, indem Sie den entsprechenden Namespace aus .NET Framework importieren.  
   
-2.  Wenden Sie das Attribut auf das Codeelement an, indem Sie es direkt vor dem Element platzieren.  
+2. Wenden Sie das Attribut auf das Codeelement an, indem Sie es direkt vor dem Element platzieren.  
   
      Jede Sprache verfügt über eine eigene Attributsyntax. In C++ und C# ist das Attribut von eckigen Klammern umgeben und durch einen Leerraum, der einen Zeilenumbruch umfassen kann, vom Element getrennt. In Visual Basic ist das Attribut von spitzen Klammern umgeben, und es muss sich in derselben logischen Zeile befinden. Mithilfe des Zeilenfortsetzungszeichens kann bei Bedarf ein Zeilenumbruch eingefügt werden.
   
-3.  Geben Sie positionelle Parameter und benannte Parameter für das Attribut an.  
+3. Geben Sie positionelle Parameter und benannte Parameter für das Attribut an.  
   
      Positionelle Parameter sind erforderlich und müssen vor benannten Parametern stehen. Sie entsprechen den Parametern eines der Attributkonstruktoren. Benannte Parameter sind optional und entsprechen Lese-/Schreibeigenschaften des Attributs. Geben Sie in C++ und C# für jeden optionalen Parameter `name`=`value` an, wobei `name` der Name der Eigenschaft ist. In Visual Basic geben Sie `name`:=`value` an.  
   

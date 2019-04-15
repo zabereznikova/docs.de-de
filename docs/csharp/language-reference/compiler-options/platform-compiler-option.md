@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -platform compiler option [C#]
 - /platform compiler option [C#]
 ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
-ms.openlocfilehash: 59b54cfd731c21982cae9a07fd1e37d97f3747db
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ae2305e0f5d3ca4de386d8e7933a1107450e0be4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486982"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341503"
 ---
 # <a name="-platform-c-compiler-options"></a>-platform (C#-Compileroptionen)
 Gibt an, welche Version der Common Language Runtime (CLR) die Assembly ausführen kann.  
@@ -60,11 +60,11 @@ Gibt an, welche Version der Common Language Runtime (CLR) die Assembly ausführe
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die Seite **Eigenschaften** für das Projekt.  
+1. Öffnen Sie die Seite **Eigenschaften** für das Projekt.  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Build** .  
+2. Klicken Sie auf die Eigenschaftenseite **Build** .  
   
-3.  Ändern Sie die Eigenschaft **Zielplattform**, und aktivieren oder deaktivieren Sie für Projekte, die auf .NET Framework 4.5 ausgerichtet sind, das Kontrollkästchen **32-Bit bevorzugen**.  
+3. Ändern Sie die Eigenschaft **Zielplattform**, und aktivieren oder deaktivieren Sie für Projekte, die auf .NET Framework 4.5 ausgerichtet sind, das Kontrollkästchen **32-Bit bevorzugen**.  
   
  Hinweis: **-platform** ist in der Entwicklerumgebung in Visual C# Express nicht verfügbar.  
   

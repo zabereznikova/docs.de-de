@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4153638e570bfdb7fe65e5c9cd285f56644fea3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338708"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Regeln für Rückschlussschemaknotentypen und Struktur
 In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem XML-Dokument auftretenden Knotentypen in eine XSD-Struktur (XML Schema Definition) übersetzt.  
@@ -18,21 +18,21 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 ## <a name="element-inference-rules"></a>Rückschlussregeln für Elemente  
  In diesem Abschnitt werden die Rückschlussregeln für Elementdeklarationen erläutert. Es existieren acht Strukturen zur Elementdeklaration, die hergeleitet werden können:  
   
-1.  Einfaches Element  
+1. Einfaches Element  
   
-2.  Leeres Element  
+2. Leeres Element  
   
-3.  Leeres Element mit Attributen  
+3. Leeres Element mit Attributen  
   
-4.  Element mit Attributen und einfachem Inhalt  
+4. Element mit Attributen und einfachem Inhalt  
   
-5.  Element mit einer Sequenz von direkt untergeordneten Elementen  
+5. Element mit einer Sequenz von direkt untergeordneten Elementen  
   
-6.  Element mit einer Sequenz von direkt untergeordneten Elementen und Attributen  
+6. Element mit einer Sequenz von direkt untergeordneten Elementen und Attributen  
   
-7.  Element mit einer Sequenz von Auswahlmöglichkeiten direkt untergeordneter Elemente  
+7. Element mit einer Sequenz von Auswahlmöglichkeiten direkt untergeordneter Elemente  
   
-8.  Element mit einer Sequenz von Auswahlmöglichkeiten direkt untergeordneter Elemente und Attribute  
+8. Element mit einer Sequenz von Auswahlmöglichkeiten direkt untergeordneter Elemente und Attribute  
   
 > [!NOTE]
 >  Alle `complexType`-Deklarationen werden als anonyme Typen hergeleitet. Das einzige globale hergeleitete Element ist das Stammelement. Alle anderen Elemente sind lokal.  
@@ -149,7 +149,7 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
-- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [XML-Schemaobjektmodell (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
 - [Herleiten eines XML-Schemas](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
-- [Herleiten von Schemas aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
+- [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [Regeln zum Herleiten einfacher Typen](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
