@@ -3,15 +3,15 @@ title: Windows Identity Foundation 4.5 – Übersicht
 ms.date: 03/30/2017
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
 author: BrucePerlerMS
-ms.openlocfilehash: 41829bee3df3e47c0ccd712ecc9a314e5971aba0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6165dbf32b777a8d82e756f84ed2415d6ed3d774
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838986"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613030"
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Windows Identity Foundation 4.5 – Übersicht
-Windows Identity Foundation 4.5 stellt einen Satz von .NET Framework-Klassen für das Implementieren von anspruchsbasierter Identität in Anwendungen dar. Mithilfe dieses Produkts können Sie die Vorteile von Ansprüchen unterstützenden Anwendungen und Diensten leichter nutzen. WIF 4.5 kann in jeder Webanwendung oder in jedem Webdienst eingesetzt werden, die bzw. der .NET Framework Version 4.5 oder höher verwendet. WIF ist nur ein Teil der Microsoft-Softwarefamilie für den Identitätsverbund, die die gemeinsame Branchenvision auf der Grundlage von offenen Standards implementiert. Der Identitätsverbund umfasst drei Komponenten: [Active Directory®-Verbunddienste](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0, [Microsoft Azure-Zugriffssteuerungsdienste](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS) und WIF. Zusammen bilden diese drei Komponenten den Kern der neuen anspruchsbasierten Cloudidentität und Zugriffsplattform von Microsoft.  
+Windows Identity Foundation 4.5 stellt einen Satz von .NET Framework-Klassen für das Implementieren von anspruchsbasierter Identität in Anwendungen dar. Mithilfe dieses Produkts können Sie die Vorteile von Ansprüchen unterstützenden Anwendungen und Diensten leichter nutzen. WIF 4.5 kann in jeder Webanwendung oder in jedem Webdienst eingesetzt werden, die bzw. der .NET Framework Version 4.5 oder höher verwendet. WIF ist nur ein Teil der Microsoft-Softwarefamilie für den Identitätsverbund, die die gemeinsame Branchenvision auf der Grundlage von offenen Standards implementiert. Identitätsverbund umfasst drei Komponenten: [Aktive Directory® Verbunddienste](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0 [Microsoft Azure-Zugriffssteuerungsdienste](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS) und WIF. Zusammen bilden diese drei Komponenten den Kern der neuen anspruchsbasierten Cloudidentität und Zugriffsplattform von Microsoft.  
   
  Weitere Informationen über WIF finden Sie unter den [Windows Identity Foundation-Website](https://go.microsoft.com/fwlink/?LinkId=149009) im Security Developer Center auf MSDN. Eine Einführung zum Erstellen von Anwendungen, die mithilfe von WIF finden Sie unter [Programming Windows Identity Foundation](https://go.microsoft.com/fwlink/?LinkId=210158) von Vittorio Bertocci (veröffentlicht von Microsoft Press).  
   
@@ -28,7 +28,7 @@ Windows Identity Foundation 4.5 stellt einen Satz von .NET Framework-Klassen fü
   
      Außerdem bietet das Framework Unterstützung für das Erstellen eines STS, der den WS-Verbund unterstützt, um Webbrowserclients zu aktivieren. Ein solcher STS wird auch als passiver STS bezeichnet.  
   
--   Ein neues Identitäts- und Zugriffs-Tool für Visual Studio 11, das es Ihnen ermöglicht, die Anwendung mit anspruchsbasierter Identität zu sichern und Benutzer verschiedener Identitätsanbieter zu akzeptieren. Sie können dieses WIF-Tool von folgender URL herunterladen: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849) oder direkt aus Visual Studio 11 durch Suchen nach "Identität" direkt im Erweiterungs-Manager. Weitere Informationen finden Sie unter [Identitäts- und Zugriffs-Tool für Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+-   Ein neues Identitäts- und Zugriffs-Tool für Visual Studio 11, das es Ihnen ermöglicht, die Anwendung mit anspruchsbasierter Identität zu sichern und Benutzer verschiedener Identitätsanbieter zu akzeptieren. Sie können dieses WIF-Tool von folgender URL herunterladen: <https://go.microsoft.com/fwlink/?LinkID=245849> oder direkt aus Visual Studio 11 durch Suchen nach "Identität" direkt im Erweiterungs-Manager. Weitere Informationen finden Sie unter [Identitäts- und Zugriffs-Tool für Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
  WIF unterstützt die folgenden Hauptszenarien:  
   

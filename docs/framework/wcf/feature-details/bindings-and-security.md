@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122147"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611905"
 ---
 # <a name="bindings-and-security"></a>Bindungen und Sicherheit
 Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (WCF) bieten eine schnelle Möglichkeit zum Programmieren von WCF-Anwendungen. Mit einer Ausnahme haben alle Bindungen ein standardmäßig aktiviertes Sicherheitsschema. Dieses Thema hilft Ihnen, die richtige Bindung für die benötigte Sicherheit auszuwählen.  
@@ -39,7 +39,7 @@ Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (
   
 -   Webdienststeigerungen (WSE)-Anwendungen.  
   
--   Grundlegendes Profil gemäß der Webdienst-Interoperabilitätsspezifikation (WS-I) Spezifikation ([https://go.microsoft.com/fwlink/?LinkId=38955](https://go.microsoft.com/fwlink/?LinkId=38955)).  
+-   Grundlegendes Profil gemäß der Webdienst-Interoperabilitätsspezifikation (WS-I) Spezifikation (<https://go.microsoft.com/fwlink/?LinkId=38955>).  
   
 -   Standardsicherheitsprofil gemäß der Definition in WS-I.  
   
@@ -205,8 +205,8 @@ Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (
 |Typ|Beschreibung|  
 |----------|-----------------|  
 |Keiner|Gibt an, dass der Client keine Anmeldeinformationen präsentieren muss. Dies führt zur Verwendung eines anonymen Clients.|  
-|Standard|Standardauthentifizierung. Weitere Informationen finden Sie unter RFC 2617 – HTTP Authentication: Grundlegende und Digestauthentifizierung, verfügbar unter [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
-|Digest|Hashwertauthentifizierung. Weitere Informationen finden Sie unter RFC 2617 – HTTP Authentication: Grundlegende und Digestauthentifizierung, verfügbar unter [ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023).|  
+|Standard|Standardauthentifizierung. Weitere Informationen finden Sie unter RFC 2617 – HTTP Authentication: Grundlegende und Digestauthentifizierung, verfügbar unter <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
+|Digest|Hashwertauthentifizierung. Weitere Informationen finden Sie unter RFC 2617 – HTTP Authentication: Grundlegende und Digestauthentifizierung, verfügbar unter <https://go.microsoft.com/fwlink/?LinkId=84023>.|  
 |NTLM|NT-LAN-Manager (NTLM)-Authentifizierung.|  
 |Windows|Windows-Authentifizierung.|  
 |Zertifikat|Die Authentifizierung fand über ein Zertifikat statt.|  
@@ -227,7 +227,7 @@ Die vom System bereitgestellten Bindungen mit Windows Communication Foundation (
 
 - [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Sichern von Diensten und Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [Wählen eines Typs von Anmeldeinformationen](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
+- [Ausählen eines Anmeldeinformationentyps](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [Sicherheitsfunktionen mit benutzerdefinierten Bindungen](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [Sicherheitsverhalten](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

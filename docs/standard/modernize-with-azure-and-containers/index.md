@@ -4,12 +4,12 @@ description: Informationen Sie zum übertragen und verschieben und modernisieren
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 8484bf554df2de47121b99272355181e3842517d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7e56238e129cadd128240d51f03a5926e6de3e6b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324694"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613095"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernisieren vorhandener .NET-Anwendungen mit Azure-Cloud und Windows-Containern (2. Auflage)
 
@@ -91,7 +91,7 @@ Die dritte Reifestufe ist das ultimative Ziel in der Cloud, aber sie ist für vi
 
 Tabelle 1-1 beschreibt die wichtigsten Vorteile und Gründe für die Wahl der einzelnen Migrations- oder Modernisierungsansätze.
 
-| **Bereit für Cloudinfrastruktur** <br /> *Lift & shift* | **Cloud-Optimized** <br /> *Modernisieren* | **Cloud-Native** <br /> *Modernisieren, überarbeiten und Schreiben* |
+| **Bereit für Cloudinfrastruktur** <br /> *Übertragen und verschieben* | **Cloud-Optimized** <br /> *Modernisieren* | **Cloud-Native** <br /> *Modernisieren, überarbeiten und Schreiben* |
 |---|---|---|
 | **Computeziel der Anwendung** |
 | Auf virtuellen Computern in Azure bereitgestellte Anwendungen | Monolithisch oder N-Tier-apps, die für Azure App Service, Azure Container-Instanz (ACI), virtuelle Computer bereitgestellt wird, mit dem Container, Azure Service Fabric oder AKS (Azure Kubernetes Service) | Microservices in Containern in Azure Kubernetes Service (AKS), Service Fabric und/oder serverlose Microservices, die basierend auf der Azure Functions. |
@@ -113,7 +113,7 @@ Abbildung 1-2 zeigt die primären Technologien und Architekturstile, die bei jed
 
 ![Primäre Technologien für jeden Reifegrad zur Modernisierung vorhandener .NET-Webanwendungen](./media/image1-2.png)
 
-> **Abbildung 1 – 2.** Primäre Technologien für jeden Reifegrad zur Modernisierung vorhandener .NET-Webanwendungen
+> **Abbildung 1-2.** Primäre Technologien für jeden Reifegrad zur Modernisierung vorhandener .NET-Webanwendungen
 
 Abbildung 1-2 zeigt die gängigsten Szenarien. Es sind aber viele hybride und gemischte Varianten bezüglich der Architektur denkbar. Die Reifegradmodelle gelten beispielsweise nicht nur für monolithische Architekturen in vorhandenen Web-Apps, sondern auch für Dienstorientierung, n-schichtige und andere Architekturstilvarianten. Die höhere Fokus oder Prozent in eine oder andere Architekturtyp und verwandten Technologien bestimmt die allgemeine Reife Ihrer Anwendungen.
 
@@ -129,7 +129,7 @@ Abbildung 1-3 zeigt die internen Technologien, die Sie für jeden Reifegrad verw
 
 ![Interne Technologien für jeden Modernisierungsreifegrad](./media/image1-3.png)
 
-> **Abbildung 1 – 3.** Interne Technologien für jeden Modernisierungsreifegrad
+> **Abbildung 1-3.** Interne Technologien für jeden Modernisierungsreifegrad
 
 ## <a name="lift-and-shift-scenario"></a>Lift & Shift-Szenario
 
@@ -145,13 +145,13 @@ Modernisierung Szenarien müssen Sie eine reine Cloud optimierte Anwendung mögl
 
 ![Beispielauswahlszenario mit Datenbank unter IaaS, DevOps und Containerisierung von Ressourcen](./media/image1-5.png)
 
-> **Abbildung 1 bis 5.** Beispielauswahlszenario mit Datenbank unter IaaS, DevOps und Containerisierung von Ressourcen
+> **Abbildung 1-5.** Beispielauswahlszenario mit Datenbank unter IaaS, DevOps und Containerisierung von Ressourcen
 
 Als Nächstes als ideales Szenario für viele vorhandene .NET Framework-Anwendungen zu migrieren, könnten Sie einer Anwendung Cloudoptimierte abzurufenden bedeutende Vorteile aus wenig Aufwand migrieren. Dieser Ansatz wird Sie als eine mögliche zukünftige Entwicklung auch für Native Cloud. Abbildung 1-6 zeigt ein Beispiel.
 
 ![Beispiel-apps Cloudoptimierte-Szenario mit Windows-Containern und verwalteten Diensten](./media/image1-6.png)
 
-> **Abbildung 1 bis 6.** Beispiel-apps Cloudoptimierte-Szenario mit Windows-Containern und verwalteten Diensten
+> **Abbildung 1-6.** Beispiel-apps Cloudoptimierte-Szenario mit Windows-Containern und verwalteten Diensten
 
 Darüber hinaus können Sie Ihre vorhandene Cloud optimierte Anwendung durch einige microservices für bestimmte Szenarien erweitern. Dies würden Sie teilweise auf der Ebene des Cloudnativen Modell verschieben handelt es sich nicht im Mittelpunkt der vorliegenden Anleitung steht.
 
@@ -161,7 +161,7 @@ Dieser Leitfaden behandelt eine bestimmte Teilmenge der in Abbildung 1-7 dargest
 
 ![Cloudnative wird in diesem Handbuch nicht behandelt.](./media/image1-7.png)
 
-> **Abbildung 1 bis 7.** Cloudnative wird in diesem Handbuch nicht behandelt.
+> **Abbildung 1-7.** Cloudnative wird in diesem Handbuch nicht behandelt.
 
 Der Schwerpunkt dieses Leitfadens ist spezifisch. Erfahren Sie, den Pfad an, die, den Sie ergreifen können, um eine Übertragung und Verschiebung Ihrer vorhandenen .NET-Anwendungen verwenden können, ohne Neuentwurf und ohne codeänderungen zu erzielen. Letzten Endes es erfahren Sie, wie Sie Ihre Anwendung Cloud optimiert.
 
@@ -170,13 +170,13 @@ Diesem Leitfaden können nicht Sie Gewusst wie: Erstellen Sie Native Cloudanwend
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Containerisierter Docker-Anwendungslebenszyklus mit Microsoft-Plattform und-Tools** (herunterladbares e-Book) \
-  [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
+  <https://aka.ms/dockerlifecycleebook>
 
 - **.NET-Microservices: Architektur für containerisierte .NET-Anwendungen** (herunterladbares e-Book) \
-  [https://aka.ms/microservicesebook](https://aka.ms/microservicesebook)
+  <https://aka.ms/microservicesebook>
 
 - **Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure** (herunterladbares e-Book) \
-  [https://aka.ms/webappebook](https://aka.ms/webappebook)
+  <https://aka.ms/webappebook>
 
 ## <a name="who-should-use-this-guide"></a>Zielgruppe dieses Leitfadens
 
@@ -201,4 +201,4 @@ Diese Beispiel-apps ist eine zweite Version mit modernisiertem Code verfügbar, 
 Dieses Handbuch wurde geschrieben, können Sie Ihre Möglichkeiten zur Verbesserung und Modernisierung vorhandene Webanwendungen für .NET zu verstehen. Der Leitfaden und die zugehörigen Anwendungsbeispiele werden ständig weiterentwickelt. Ihr Feedback ist Willkommen! Wenn Sie Anmerkungen dazu haben, wie dieser Leitfaden hilfreicher gestaltet werden könnte, senden Sie diese bitte an [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 >[!div class="step-by-step"]
->[Weiter](lift-and-shift-existing-apps-azure-iaas.md)
+>[Nächste](lift-and-shift-existing-apps-azure-iaas.md)

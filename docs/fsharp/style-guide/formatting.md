@@ -2,12 +2,12 @@
 title: F#Richtlinien für die codeformatierung
 description: Erfahren Sie, Richtlinien für die Formatierung F# Code.
 ms.date: 02/08/2019
-ms.openlocfilehash: 0a72f96119181650837657afea6ca9d555ce9e5a
-ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
+ms.openlocfilehash: 259d4bb2147d1fc8bc5d35d7ff2e3c34ec2185d0
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59553861"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613823"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#Richtlinien für die codeformatierung
 
@@ -285,6 +285,7 @@ let update model msg =
     | 1 -> model + 1, []
     | _ -> model, [ msg ]
 ```
+
 Zusammenfassend lässt sich sagen, lieber in Klammern gesetzte Tupel Instanziierungen, aber wenn Tupel für Musterabgleich oder einen Rückgabewert zu verwenden, gilt dies in Ordnung, Klammern zu vermeiden.
 
 ## <a name="formatting-discriminated-union-declarations"></a>Formatieren von Unterscheidungs-union-Deklarationen
@@ -344,10 +345,10 @@ type PostalAddress =
     City: string
     Zip: string }
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
-    
+
 // Unusual in F#
 type PostalAddress =
-    { 
+    {
         Address: string
         City: string
         Zip: string
@@ -359,13 +360,13 @@ Das öffnendes-Token auf eine neue Zeile und dem schließenden-Token in einer ne
 ```fsharp
 // Declaring additional members on PostalAddress
 type PostalAddress =
-    { 
+    {
         Address: string
         City: string
         Zip: string
     } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
-    
+
 type MyRecord =
     {
         SomeField: int
@@ -407,7 +408,7 @@ let rainbow =
         Boss8 = "Jeffrey"
         Lackeys = ["Zippy"; "George"; "Bungle"]
     }
-    
+
 type MyRecord =
     {
         SomeField: int
@@ -445,12 +446,12 @@ let rainbow2 =
 
 Und wie mit der Anleitung Datensatz möchten reservieren einzelne Zeilen für die geschweiften Klammern und einen Bereich auf der rechten Seite mit dem Ausdruck einziehen. Beachten Sie, dass in einigen besonderen Fällen, z. B. einen Wert mit einem optionalen ohne Klammern umschließen Sie möglicherweise eine geschweifte Klammer in einer Zeile beibehalten müssen:
 
-```fsharp    
+```fsharp
 type S = { F1: int; F2: string }
 type State = { F:  S option }
 
 let state = { F = Some { F1 = 1; F2 = "Hello" } }
-let newState = 
+let newState =
     {
         state with
             F = Some {

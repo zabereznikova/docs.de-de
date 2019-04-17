@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: a02a60668ae6caaad1940395822758331b93f550
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 755063ca6da29a2e4733dd653306192ac0434ec0
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119794"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610599"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule::Request-Methode
 
@@ -29,7 +29,8 @@ Anforderungen zum Auffüllen mit Daten für das Modul des angegebenen Puffers.
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
 ## <a name="syntax"></a>Syntax
-```
+
+```cpp
 HRESULT Request([in] ULONG32 reqCode,
     [in] ULONG32 inBufferSize,
     [in, size_is(inBufferSize)] BYTE* inBuffer,
@@ -60,12 +61,10 @@ Die angegebene Methode ist Teil der `IXCLRDataModule` Schnittstelle, und mit dem
 
 ## <a name="requirements"></a>Anforderungen
 
-**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).  
-**Header:** Keiner   
-**Bibliothek:** Keiner  
-**.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).
+**Header:** Keine **Bibliothek:** Keine **.NET Framework-Versionen:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>Siehe auch
 
 - [Debuggen](index.md)
-- [IXCLRDataModule Interface-Schnittstelle](ixclrdatamodule-interface.md)
+- [IXCLRDataModule-Schnittstelle](ixclrdatamodule-interface.md)

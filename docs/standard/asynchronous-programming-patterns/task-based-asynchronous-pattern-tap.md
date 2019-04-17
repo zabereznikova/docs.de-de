@@ -95,8 +95,7 @@ TAP verwendet eine einfache Methode, um die Initiierung und den Abschluss eines 
  Wenn TAP-Implementierungen Überladungen bereitstellen, die einen Statusparameter akzeptieren, müssen sie den Wert `progress` für das Argument `null` zulassen. In diesem Fall wird kein Status gemeldet. TAP-Implementierungen sollten den Status synchron an das <xref:System.Progress%601>-Objekt melden, das die asynchrone Methode ermöglicht, um den Status schnell bereitzustellen und dem Consumer des Status ermöglichen, zu bestimmen wie und wo die Informationen am besten bearbeitet werden. Zum Beispiel kann die Statusinstanz Rückrufe marshallen und Ereignisse auf einem aufgezeichneten Synchronisierungskontext auslösen.  
   
 ## <a name="iprogresst-implementations"></a>IProgress\<T>-Implementierungen  
- 
-  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] stellt eine einzelne <xref:System.IProgress%601>-Implementierung bereit: <xref:System.Progress%601>. Die <xref:System.Progress%601>-Klasse wird folgendermaßen deklariert:  
+ [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] stellt eine einzelne <xref:System.IProgress%601>-Implementierung bereit: <xref:System.Progress%601>. Die <xref:System.Progress%601>-Klasse wird folgendermaßen deklariert:  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  

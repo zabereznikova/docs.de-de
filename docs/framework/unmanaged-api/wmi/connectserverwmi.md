@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8786892d591a98ddcd7f51eddf86fdbcf50f2197
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff9ea8cdc8aea66b1dd1f54c8be881882f6e27f7
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214870"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611535"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi-Funktion
+
 Erstellt über DCOM eine Verbindung mit einem WMI-Namespace auf einem angegebenen Computer.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
 ## <a name="syntax"></a>Syntax
 
-```
+```cpp
 HRESULT ConnectServerWmi (
    [in] BSTR               strNetworkResource,
    [in] BSTR               strUser,
@@ -40,10 +41,11 @@ HRESULT ConnectServerWmi (
    [in] BSTR               strAuthority,
    [in] IWbemContext*      pCtx,
    [out] IWbemServices**   ppNamespace,
-   [in] DWORD              impLevel, 
+   [in] DWORD              impLevel,
    [in] DWORD              authLevel
 );
 ```
+
 ## <a name="parameters"></a>Parameter
 
 `strNetworkResource`\
@@ -56,8 +58,8 @@ HRESULT ConnectServerWmi (
 [in] Ein Zeiger auf ein gültiges `BSTR` , die Kennwort enthält. Ein `null` gibt den aktuellen Sicherheitskontext. Eine leere Zeichenfolge ("") gibt an, ein gültiges Kennwort für die Länge 0 (null).
 
 `strLocale`\
-[in] Ein Zeiger auf ein gültiges `BSTR` , der angibt, dass des richtigen Gebietsschemas für den Abruf von Informationen. Für Microsoft-Gebietsschemabezeichner, die das Format der Zeichenfolge ist "MS\_*Xxx*", wobei *Xxx* ist eine Zeichenfolge im hexadezimalen Format, der den Gebietsschemabezeichner (LCID) angibt. Wenn eine ungültige Gebietsschema angegeben wird, gibt die Methode `WBEM_E_INVALID_PARAMETER` außer auf Windows 7, das Standardgebietsschema des Servers ist, in denen stattdessen verwendet. Wenn "null1, das aktuelle Gebietsschema verwendet wird. 
- 
+[in] Ein Zeiger auf ein gültiges `BSTR` , der angibt, dass des richtigen Gebietsschemas für den Abruf von Informationen. Für Microsoft-Gebietsschemabezeichner, die das Format der Zeichenfolge ist "MS\_*Xxx*", wobei *Xxx* ist eine Zeichenfolge im hexadezimalen Format, der den Gebietsschemabezeichner (LCID) angibt. Wenn eine ungültige Gebietsschema angegeben wird, gibt die Methode `WBEM_E_INVALID_PARAMETER` außer auf Windows 7, das Standardgebietsschema des Servers ist, in denen stattdessen verwendet. Wenn "null1, das aktuelle Gebietsschema verwendet wird.
+
 `lSecurityFlags`\
 [in] Flags, die zum Übergeben der `ConnectServerWmi` Methode. Der Wert NULL (0) für diesen Parameter im Aufruf führt `ConnectServerWmi` zurückgeben, nur, nachdem eine Verbindung mit dem Server hergestellt wird. Dadurch kann eine Anwendung, die nicht auf unbestimmte Zeit reagiert, wenn der Server beschädigt ist. Die andere gültige Werte sind:
 
@@ -76,7 +78,7 @@ HRESULT ConnectServerWmi (
 | NTLMDOMAIN:*Domänennamen* | NT LAN Manager-Authentifizierung wird verwendet, und dieser Parameter enthält einen NTLM-Domänennamen. |
 
 `pCtx`\
-[in] Dieser Parameter in der Regel ist `null`. Andernfalls wird ein Zeiger auf ein [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) Objekt durch eine oder mehrere dynamische Klasse Anbieter erforderlich. 
+[in] Dieser Parameter in der Regel ist `null`. Andernfalls wird ein Zeiger auf ein [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext) Objekt durch eine oder mehrere dynamische Klasse Anbieter erforderlich.
 
 `ppNamespace`\
 [out] Wenn die Funktion zurückgibt, erhält einen Zeiger auf ein [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) Objekt an den angegebenen Namespace gebunden. Festgelegt auf zeigen `null` , wenn ein Fehler auftritt.
