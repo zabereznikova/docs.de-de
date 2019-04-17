@@ -4,12 +4,12 @@ description: Lernen Sie die Microsoft Lösungen zur Unterstützung der Lebenszyk
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 811ebd46c97b53176bf8bb9e47a366575e273efb
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 8536703a520434c0e393c5f46005c2ac02d5d849
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680191"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672263"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Einführung in die Microsoft-Plattform und-Tools für Container-apps
 
@@ -17,7 +17,7 @@ ms.locfileid: "57680191"
 
 Abbildung 3-1 zeigt die Hauptpfeiler im Lebenszyklus von Docker-Apps, die nach der Art der von mehreren Teams geleisteten Arbeit klassifiziert sind (App-Entwicklung, DevOps-Infrastrukturprozesse und IT-Verwaltung und -Betrieb). Normalerweise sind im Unternehmen die Profile der „Rollen“, die für jeden Bereich zuständig sind, unterschiedlich. Genau wie ihre Fähigkeiten.
 
-![Microsoft-Tools. Für die arbeitsauslastung zum Entwickeln/entwerfen: Docker-Modul für Windows, Visual Studio und Visual Studio Code, .NET Core, Azure Kubernetes Service. Für den Build/Test/Ship-Workload: Azure DevOps für Team Foundation Server, Docker CLI, Azure Kubernetes-Dienst. Für die Workload ausführen/überwachen/verwalten: Application Insights, Azure-Portal Azure Kubernetes-Dienste, Service Fabric, andere orchestratoren.](./media/image1.png)
+![Microsoft-Tools. Für die arbeitsauslastung zum Entwickeln/entwerfen: Docker-Modul für Windows, Visual Studio und Visual Studio Code, .NET Core, Azure Kubernetes Service. Für den Build/Test/Ship-Workload: Azure DevOps für Team Foundation Server, Docker CLI, Azure Kubernetes-Dienst. Für die Workload ausführen/überwachen/verwalten: Azure Monitor, Azure-Portal Azure Kubernetes-Dienste, Service Fabric, andere orchestratoren.](./media/image1.png)
 
 **Abbildung 3-1.** Hauptpfeiler im Lebenszyklus von Docker-containeranwendungen mit Microsoft-Plattform und-Tools
 
@@ -51,7 +51,7 @@ Die Microsoft-Plattform und die Tools für containerisierte Docker-Anwendungen, 
 
   - **Open-Source-Tools** da AKS stellt die API-Standardendpunkte für die Orchestrierungs-Engine, die beliebtesten Tools mit ACS kompatibel sind und in den meisten Fällen funktionieren sofort – einschließlich Visualisierung, Überwachung und Befehlszeilentools und sogar zukünftige Tools, sobald diese verfügbar werden.
 
-  - **Application Insights** ist Azure Soution jeden Winkel Ihre produktionsumgebung zu überwachen. Sie können Docker-Produktionsanwendungen überwachen, indem Sie einfach deren SDK in Ihre Dienste einrichten, damit Sie vom System generierte Daten von den Anwendungen abrufen können.
+  - **Azure Monitor** wird von Azure-Lösung für jeden Winkel der produktionsumgebung zu überwachen. Sie können Docker-Produktionsanwendungen überwachen, indem Sie einfach deren SDK in Ihre Dienste einrichten, damit Sie vom System generierte Daten von den Anwendungen abrufen können.
 
 Damit stellt Microsoft eine vollständige Grundlage für einen End-to-End-Lebenszyklus von Docker-Containeranwendungen breit. Es ist jedoch *eine Auflistung von Produkten und Technologien, mit denen Sie optional auswählen und integrieren in vorhandene tools und Prozesse*. Die Flexibilität durch einen umfassenden Ansatz und die Stärke der tiefgreifenden Funktionen versetzen Microsoft in eine starke Position für die Entwicklung von Docker-Containeranwendungen.
 

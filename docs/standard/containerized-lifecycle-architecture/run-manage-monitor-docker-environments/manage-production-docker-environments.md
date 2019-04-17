@@ -1,17 +1,17 @@
 ---
-title: Verwalten von Docker-produktionsumgebungen
+title: Verwalten von Docker-Produktionsumgebungen
 description: Lernen Sie wichtige Punkte für die Verwaltung einer produktionsumgebung containerbasierte kennen.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: f3cf9bc281e94f342cecb1083d886daba03c019d
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3f8c51b95f52a655de470ac237c51dd4ee9c13eb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836616"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672099"
 ---
-# <a name="manage-production-docker-environments"></a>Verwalten von Docker-produktionsumgebungen
+# <a name="manage-production-docker-environments"></a>Verwalten von Docker-Produktionsumgebungen
 
 Clusterverwaltung und Orchestrierung ist der Prozess, eine Gruppe von Hosts zu steuern. Dies kann beinhalten, hinzufügen und Entfernen von Hosts in einem Cluster, das Abrufen von Informationen zu den aktuellen Zustand des Hosts und Containern, und starten und Beenden von Prozessen. Clusterverwaltung und Orchestrierung sind eng mit planen, da der Scheduler den Zugriff auf jedem Host im Cluster benötigen, um Dienste zu planen. Aus diesem Grund wird das gleiche Tool häufig für beide Zwecke verwendet.
 
@@ -30,7 +30,7 @@ Tabelle 6 – 1 listet allgemeiner Verwaltungstools, die im Zusammenhang mit ihr
 | [Azure Monitor für Container](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Azure reserviert die Kubernetes-Verwaltungstool | Azure Kubernetes-Dienste (AKS) |
 | [Kubernetes Web UI (dashboard)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes-Verwaltungstool, können überwachen und Verwalten von lokalen Kubernetes-cluster | Azure Kubernetes Service (AKS)<br/>Lokale Kubernetes |
 | [Azure-Portal für Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Online und desktop-Version für die Verwaltung von Service Fabric-Cluster in Azure, lokal, lokalen Entwicklungs-und andere clouds | Azure Service Fabric |
-| [Containerüberwachung (Log Analytics)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Allgemeine Container Management y-Lösung zur Überwachung. Kubernetes-Cluster über verwalten [Azure Monitor für Container](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS und andere. |
+| [Containerüberwachung (Azure Monitor)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | Allgemeine Container Management y-Lösung zur Überwachung. Kubernetes-Cluster über verwalten [Azure Monitor für Container](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview). | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS und andere. |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 

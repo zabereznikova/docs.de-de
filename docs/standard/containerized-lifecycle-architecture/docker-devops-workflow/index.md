@@ -4,20 +4,20 @@ description: Containerisierten Docker-Anwendungslebenszyklus mit Microsoft Platf
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a2fa1dddd68a54b7aab2ac44bf6109626689b36b
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 80acd58d08900da8e79f6b7388da3b10f9e4e566
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663924"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672302"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Docker DevOps-Anwendungsworkflow mit Microsoft-Tools
 
-*Microsoft Visual Studio, Azure DevOps-Services, Team Foundation Server und Application Insights geben ein umfassendes Ökosystem für Entwicklungs- und IT-Betrieb, mit denen dem Team die Tools zum Verwalten von Projekten und schnell erstellen, testen und bereitstellen Anwendungen in Containern.*
+*Microsoft Visual Studio, Azure DevOps-Services, Team Foundation Server und Azure Monitor angeben, dass ein umfassendes Ökosystem für Entwicklungs- und IT-Betrieb, mit denen dem Team die Tools zum Verwalten von Projekten und schnell zu erstellen, testen und Bereitstellen von Containern Anwendungen.*
 
 Mit Visual Studio und Azure DevOps-Dienste in der Cloud, zusammen mit Team Foundation Server lokal können Entwicklungsteams produktiv erstellen, testen und Freigeben von Anwendungen in Containern, die entweder Windows oder Linux als Ziel.
 
-Microsoft-Tools können die Pipeline für spezifische Implementierungen von containeranwendungen automatisieren, Docker, .NET Core oder eine beliebige Kombination mit anderen Plattformen – von globalen Builds und fortlaufende Integration (CI) und Tests mit Azure DevOps-Services oder Team Foundation-Server, um Continuous Deployment (CD) für Docker-Umgebungen (Entwicklung, Staging, Produktion), und um Analyseinformationen zu den Diensten an das Entwicklungsteam über Application Insights zu übertragen. Jeder Codecommit kann einen Build (CI) initiieren und die Dienste automatisch in bestimmten Containerumgebungen (CD) bereitstellen.
+Microsoft-Tools können die Pipeline für spezifische Implementierungen von containeranwendungen automatisieren, Docker, .NET Core oder eine beliebige Kombination mit anderen Plattformen – von globalen Builds und fortlaufende Integration (CI) und Tests mit Azure DevOps-Services oder Team Foundation-Server, um Continuous Deployment (CD) für Docker-Umgebungen (Entwicklung, Staging, Produktion), und zum Übertragen von Analyseinformationen zu den Diensten an das Entwicklungsteam über Azure Monitor. Jeder Codecommit kann einen Build (CI) initiieren und die Dienste automatisch in bestimmten Containerumgebungen (CD) bereitstellen.
 
 Entwickler und Tester können einfach und schnell produktionsähnliche Entwicklungs- und Testumgebungen basierend auf Docker bereitstellen, indem sie Vorlagen in Microsoft Azure verwenden.
 
