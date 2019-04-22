@@ -8,18 +8,18 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
 ms.openlocfilehash: ef041fad1bb9195d9fc6cba172de8c2fdc7507bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207629"
 ---
-# <a name="flowdocumentpageviewer"></a><span data-ttu-id="8fec1-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="8fec1-102">FlowDocumentPageViewer</span></span>
-<span data-ttu-id="8fec1-103">Die <xref:System.Windows.Controls.FlowDocumentPageViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FlowDocument> von Inhalt auf einer Basis pro Seite.</span><span class="sxs-lookup"><span data-stu-id="8fec1-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="8fec1-104">Vergleichen Sie mit der <xref:System.Windows.Controls.FlowDocumentScrollViewer>, welche zeigt <xref:System.Windows.Documents.FlowDocument> Inhalte in einem Bildlauf-Viewer.</span><span class="sxs-lookup"><span data-stu-id="8fec1-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
+# <a name="flowdocumentpageviewer"></a><span data-ttu-id="2ddc8-102">FlowDocumentPageViewer</span><span class="sxs-lookup"><span data-stu-id="2ddc8-102">FlowDocumentPageViewer</span></span>
+<span data-ttu-id="2ddc8-103">Die <xref:System.Windows.Controls.FlowDocumentPageViewer> Steuerelement dient zum Anzeigen <xref:System.Windows.Documents.FlowDocument> von Inhalt auf einer Basis pro Seite.</span><span class="sxs-lookup"><span data-stu-id="2ddc8-103">The <xref:System.Windows.Controls.FlowDocumentPageViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content on a per page basis.</span></span> <span data-ttu-id="2ddc8-104">Vergleichen Sie mit der <xref:System.Windows.Controls.FlowDocumentScrollViewer>, welche zeigt <xref:System.Windows.Documents.FlowDocument> Inhalte in einem Bildlauf-Viewer.</span><span class="sxs-lookup"><span data-stu-id="2ddc8-104">Contrast with the <xref:System.Windows.Controls.FlowDocumentScrollViewer>, which presents <xref:System.Windows.Documents.FlowDocument> content in a scrolling viewer.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8fec1-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8fec1-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2ddc8-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2ddc8-105">See also</span></span>
 
 - <xref:System.Windows.Documents.FlowDocument>
-- [<span data-ttu-id="8fec1-106">Übersicht über Flussdokumente</span><span class="sxs-lookup"><span data-stu-id="8fec1-106">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
-- [<span data-ttu-id="8fec1-107">Gewusst wie-Themen</span><span class="sxs-lookup"><span data-stu-id="8fec1-107">How-to Topics</span></span>](../advanced/flow-content-elements-how-to-topics.md)
-- [<span data-ttu-id="8fec1-108">Dokumente in WPF</span><span class="sxs-lookup"><span data-stu-id="8fec1-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="2ddc8-106">Übersicht über Flussdokumente</span><span class="sxs-lookup"><span data-stu-id="2ddc8-106">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+- [<span data-ttu-id="2ddc8-107">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="2ddc8-107">How-to Topics</span></span>](../advanced/flow-content-elements-how-to-topics.md)
+- [<span data-ttu-id="2ddc8-108">Dokumente in WPF</span><span class="sxs-lookup"><span data-stu-id="2ddc8-108">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)

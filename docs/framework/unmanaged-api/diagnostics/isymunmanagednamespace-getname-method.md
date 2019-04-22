@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9017eeaf8e80c3dc0b546c1f3c2fb54634b3e949
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186432"
 ---
-# <a name="isymunmanagednamespacegetname-method"></a><span data-ttu-id="0f596-102">ISymUnmanagedNamespace::GetName-Methode</span><span class="sxs-lookup"><span data-stu-id="0f596-102">ISymUnmanagedNamespace::GetName Method</span></span>
-<span data-ttu-id="0f596-103">Ruft den Namen des Namespace.</span><span class="sxs-lookup"><span data-stu-id="0f596-103">Gets the name of this namespace.</span></span>  
+# <a name="isymunmanagednamespacegetname-method"></a><span data-ttu-id="611e3-102">ISymUnmanagedNamespace::GetName-Methode</span><span class="sxs-lookup"><span data-stu-id="611e3-102">ISymUnmanagedNamespace::GetName Method</span></span>
+<span data-ttu-id="611e3-103">Ruft den Namen des Namespace.</span><span class="sxs-lookup"><span data-stu-id="611e3-103">Gets the name of this namespace.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0f596-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0f596-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="611e3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="611e3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName(  
@@ -37,22 +37,22 @@ HRESULT GetName(
         length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="0f596-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="0f596-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="611e3-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="611e3-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="0f596-106">[in] Ein `ULONG32` , der angibt, dass der Größe des der `szName` Puffer.</span><span class="sxs-lookup"><span data-stu-id="0f596-106">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
+ <span data-ttu-id="611e3-106">[in] Ein `ULONG32` , der angibt, dass der Größe des der `szName` Puffer.</span><span class="sxs-lookup"><span data-stu-id="611e3-106">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="0f596-107">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des für den Namespacenamen, einschließlich der null-Terminierung enthalten die erforderlichen Puffers in Zeichen.</span><span class="sxs-lookup"><span data-stu-id="0f596-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.</span></span>  
+ <span data-ttu-id="611e3-107">[out] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des für den Namespacenamen, einschließlich der null-Terminierung enthalten die erforderlichen Puffers in Zeichen.</span><span class="sxs-lookup"><span data-stu-id="611e3-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespace name, including the null termination.</span></span>  
   
  `szName`  
- <span data-ttu-id="0f596-108">[out] Ein Zeiger auf einen Puffer, der den Namespacenamen enthält.</span><span class="sxs-lookup"><span data-stu-id="0f596-108">[out] A pointer to a buffer that contains the namespace name.</span></span>  
+ <span data-ttu-id="611e3-108">[out] Ein Zeiger auf einen Puffer, der den Namespacenamen enthält.</span><span class="sxs-lookup"><span data-stu-id="611e3-108">[out] A pointer to a buffer that contains the namespace name.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="0f596-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="0f596-109">Return Value</span></span>  
- <span data-ttu-id="0f596-110">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="0f596-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="611e3-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="611e3-109">Return Value</span></span>  
+ <span data-ttu-id="611e3-110">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="611e3-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0f596-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0f596-111">Requirements</span></span>  
- <span data-ttu-id="0f596-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0f596-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="611e3-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="611e3-111">Requirements</span></span>  
+ <span data-ttu-id="611e3-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="611e3-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0f596-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0f596-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="611e3-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="611e3-113">See also</span></span>
 
-- [<span data-ttu-id="0f596-114">ISymUnmanagedNamespace-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0f596-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+- [<span data-ttu-id="611e3-114">ISymUnmanagedNamespace-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="611e3-114">ISymUnmanagedNamespace Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

@@ -18,29 +18,29 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1d6c79be95ff80c8de9b07cb33be46a5f5db22b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094267"
 ---
-# <a name="isymunmanageddocumenthasembeddedsource-method"></a><span data-ttu-id="48512-102">ISymUnmanagedDocument::HasEmbeddedSource-Methode</span><span class="sxs-lookup"><span data-stu-id="48512-102">ISymUnmanagedDocument::HasEmbeddedSource Method</span></span>
-<span data-ttu-id="48512-103">Gibt `true` verfügt das Dokument Quelle eingebettet, die in den Debugsymbolen; andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="48512-103">Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.</span></span>  
+# <a name="isymunmanageddocumenthasembeddedsource-method"></a><span data-ttu-id="2eb30-102">ISymUnmanagedDocument::HasEmbeddedSource-Methode</span><span class="sxs-lookup"><span data-stu-id="2eb30-102">ISymUnmanagedDocument::HasEmbeddedSource Method</span></span>
+<span data-ttu-id="2eb30-103">Gibt `true` verfügt das Dokument Quelle eingebettet, die in den Debugsymbolen; andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="2eb30-103">Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="48512-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="48512-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2eb30-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="2eb30-104">Syntax</span></span>  
   
 ```  
 HRESULT HasEmbeddedSource(  
    [out, retval]  BOOL  *pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="48512-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="48512-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2eb30-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="2eb30-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="48512-106">[out] Ein Zeiger auf eine Variable, die angibt, ob das Dokument in den Debugsymbolen eingebettete Quelle verfügt.</span><span class="sxs-lookup"><span data-stu-id="48512-106">[out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.</span></span>  
+ <span data-ttu-id="2eb30-106">[out] Ein Zeiger auf eine Variable, die angibt, ob das Dokument in den Debugsymbolen eingebettete Quelle verfügt.</span><span class="sxs-lookup"><span data-stu-id="2eb30-106">[out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="48512-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="48512-107">Return Value</span></span>  
- <span data-ttu-id="48512-108">S_OK, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="48512-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="2eb30-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="2eb30-107">Return Value</span></span>  
+ <span data-ttu-id="2eb30-108">S_OK, wenn die Methode erfolgreich ist.</span><span class="sxs-lookup"><span data-stu-id="2eb30-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="48512-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="48512-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2eb30-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2eb30-109">See also</span></span>
 
-- [<span data-ttu-id="48512-110">ISymUnmanagedDocument-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="48512-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="2eb30-110">ISymUnmanagedDocument-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2eb30-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
