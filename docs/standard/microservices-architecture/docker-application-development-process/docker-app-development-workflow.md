@@ -4,12 +4,12 @@ description: Erläuterungen zu den Workflowdetails für die Entwicklung von auf 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: d494dba829d8065e2bc1424bc9bcc11e265fbcc0
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 3fb5c06f8ed58b45a3ee669931d8c3118b3dc314
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921090"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553874"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Entwicklungsworkflow für Docker-Apps
 
@@ -51,7 +51,7 @@ Das Entwickeln einer Docker-Anwendung ist mit der Art und Weise vergleichbar, wi
 
 Stellen Sie zuerst sicher, dass [Docker Community Edition (CE)](https://docs.docker.com/docker-for-windows/) für Windows wie nachfolgend erläutert installiert wurde:
 
-[Erste Schritte mit Docker CE für Windows](https://docs.docker.com/docker-for-windows/)
+[Get started with Docker CE for Windows (Erste Schritte mit Docker CE für Windows)](https://docs.docker.com/docker-for-windows/)
 
 Zudem benötigen Sie Visual Studio 2017, Version 15.7 oder höher, mit installierter Workload für die **plattformübergreifende .NET Core-Entwicklung**, wie in Abbildung 5.2 dargestellt.
 
@@ -67,7 +67,7 @@ Sie können mit dem Codieren Ihrer Anwendung in einer einfachen .NET-Umgebung be
   [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
 
 - **Visual Studio 2017** \
-  [https://visualstudio.microsoft.com/downloads/](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+  [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
 ![2: Schreiben von Dockerfiles](./media/image4.png)
 
@@ -193,26 +193,26 @@ Die ursprüngliche Dockerfile kann wie folgt aussehen:
 17  RUN dotnet restore src/Services/Catalog/Catalog.API/Catalog.API.csproj
 18  COPY . .
 19  WORKDIR /src/src/Services/Catalog/Catalog.API
-20  RUN dotnet build Catalog.API.csproj -c Release -0 /app
+20  RUN dotnet build Catalog.API.csproj -c Release -o /app
 21
 22  FROM build AS publish
-23  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+23  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 24
 25  FROM base AS final
 26  WORKDIR /app
-27  COPY --from=publish /app
+27  COPY --from=publish /app .
 28  ENTRYPOINT ["dotnet", "Catalog.API.dll"]
 ```
 
 Hier sind die Details zeilenweise dargestellt:
 
-1.  Beginnen Sie eine Stufe mit einem „kleinen“ Basisimage, das nur als Runtime dient. Nennen Sie es zu Referenzzwecken **base**.
-2.  Erstellen Sie das **/app**-Verzeichnis im Image.
-3.  Machen Sie den Port **80** verfügbar.
+1. Beginnen Sie eine Stufe mit einem „kleinen“ Basisimage, das nur als Runtime dient. Nennen Sie es zu Referenzzwecken **base**.
+2. Erstellen Sie das **/app**-Verzeichnis im Image.
+3. Machen Sie den Port **80** verfügbar.
 <!-- skip -->
-5.  Beginnen Sie eine Stufe mit einem „großen“ Basisimage zur Erstellung/Veröffentlichung. Nennen Sie es zu Referenzzwecken **build**.
-6.  Erstellen Sie das **/src**-Verzeichnis im Image.
-7.  Kopieren Sie bis zur Zeile 16 die **.csproj**-Projektdateien, auf die verwiesen wird, damit Sie zu einem späteren Zeitpunkt Pakete wiederherstellen können.
+5. Beginnen Sie eine Stufe mit einem „großen“ Basisimage zur Erstellung/Veröffentlichung. Nennen Sie es zu Referenzzwecken **build**.
+6. Erstellen Sie das **/src**-Verzeichnis im Image.
+7. Kopieren Sie bis zur Zeile 16 die **.csproj**-Projektdateien, auf die verwiesen wird, damit Sie zu einem späteren Zeitpunkt Pakete wiederherstellen können.
 <!-- skip -->
 17. Stellen Sie die Pakete für das **Catalog.API**-Projekt und die Projekte, auf die verwiesen wird, wieder her.
 18. Kopieren Sie **alle Verzeichnisstrukturen für die Projektmappe** (außer die Dateien und Verzeichnisse in der **.dockerignore**-Datei) aus dem **/src**-Verzeichnis in das Image.
@@ -257,7 +257,7 @@ Jedoch wird `dotnet restore` nur ausgeführt, wenn sich ein einzelnes Projekt od
 
    - `*.sln`, um alle Projektmappendateien in der Hauptordnerstruktur zu ignorieren
 
-   - `!eShopOnContainers-ServicesAndWebApps.sln`, um nur diese Projektmappendatei einzubeziehen
+   - `!eShopOnContainers-ServicesAndWebApps.sln`, um nur diese Projektmappendatei einzufügen
 
 2) Schließen Sie das `/ignoreprojectextensions:.dcproj`-Argument in `dotnet restore` ein, damit auch das docker-compose-Projekt ignoriert und nur das Paket für die Projektmappe „eShopOnContainers-ServicesAndWebApps“ wiederhergestellt wird.
 
@@ -524,7 +524,7 @@ Wenn Sie mit dem Editor-/CLI-Ansatz entwickeln, ist das Debuggen von Containern 
 - **Debuggen von Apps in einem lokalen Docker-Container** \
   [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
-- **Steve Lasker: Build, Debug, Deploy ASP.NET Core Apps with Docker (Erstellen, Debuggen, Bereitstellen von ASP.NET Core-Apps mit Docker).** Video. \
+- **Steve Lasker. Build, Debug, Deploy ASP.NET Core Apps with Docker (Erstellen, Debuggen, Bereitstellen von ASP.NET Core-Apps mit Docker).** Video. \
   [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Vereinfachter Workflow bei der Entwicklung von Containern mit Visual Studio

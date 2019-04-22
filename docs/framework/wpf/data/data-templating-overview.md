@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
 ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097550"
 ---
 # <a name="data-templating-overview"></a>Übersicht über Datenvorlagen
@@ -196,7 +196,7 @@ Damit ist die Erläuterung unseres Beispiels abgeschlossen. Das vollständige Be
 ## <a name="see-also"></a>Siehe auch
 
 - [Datenbindung](../advanced/optimizing-performance-data-binding.md)
-- [Suchen von Elementen, die mit einer DataTemplate-Klasse generiert wurden](how-to-find-datatemplate-generated-elements.md)
+- [Suchen von Elementen, die mit einer DataTemplate generiert wurden](how-to-find-datatemplate-generated-elements.md)
 - [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)
-- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Übersicht zur Datenbindung](data-binding-overview.md)
 - [Übersicht über GridView-Spaltenheaderstile und -Spaltenheadervorlagen](../controls/gridview-column-header-styles-and-templates-overview.md)

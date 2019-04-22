@@ -9,10 +9,10 @@ helpviewer_keywords:
 - connection pooling
 ms.assetid: 2ec502e8-4ba0-4c22-9410-f28eaf4eee63
 ms.openlocfilehash: 00ccc11919f0ccd4f9361bfd8f265dea1ad2390d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184564"
 ---
 # <a name="connection-grouping"></a>Verbindungsgruppierung
@@ -23,4 +23,4 @@ Die Verbindungsgruppierung ordnet bestimmte Anforderungen innerhalb einer einzel
 ## <a name="see-also"></a>Siehe auch
 
 - [Verwalten von Verbindungen](../../../docs/framework/network-programming/managing-connections.md)
-- [Vorgehensweise: Zuweisen von Benutzerinformationen zu Gruppenverbindungen](../../../docs/framework/network-programming/how-to-assign-user-information-to-group-connections.md)
+- [Vorgehensweise: Zuweisen von Benutzerinformationen an Gruppenverbindungen](../../../docs/framework/network-programming/how-to-assign-user-information-to-group-connections.md)

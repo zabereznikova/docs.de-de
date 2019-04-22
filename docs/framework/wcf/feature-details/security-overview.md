@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
 ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136954"
 ---
 # <a name="security-overview"></a>Übersicht über die Sicherheit
@@ -108,7 +108,7 @@ Windows Communication Foundation (WCF) ist eine SOAP-Nachrichten basierende vert
 - [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [Überwachung](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Sicherheitsleitfaden und empfohlene Vorgehensweisen](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
+- [Sicherheitsleitfaden und bewährte Methoden](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
 - [Konfigurieren von Diensten mit Konfigurationsdateien](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [Vom System bereitgestellte Bindungen](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Übersicht über die Endpunkterstellung](../../../../docs/framework/wcf/endpoint-creation-overview.md)

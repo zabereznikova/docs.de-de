@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082489"
 ---
 # <a name="path-markup-syntax"></a>Pfadmarkupsyntax
@@ -57,7 +57,7 @@ Pfade finden Sie im [Formen und Grundlegendes Zeichnen in WPF (Übersicht)](shap
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Gibt an, ob die <xref:System.Windows.Media.StreamGeometry> verwendet die <xref:System.Windows.Media.FillRule.EvenOdd> oder <xref:System.Windows.Media.FillRule.Nonzero><xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Gibt an, die <xref:System.Windows.Media.FillRule.EvenOdd> -Füllregel fest.<br />-   `F1` Gibt an, die <xref:System.Windows.Media.FillRule.Nonzero> -Füllregel fest.<br /><br /> Wenn Sie diesen Befehl weglassen, verwendet der untergeordnete Pfad das Standardverhalten, handelt es sich <xref:System.Windows.Media.FillRule.EvenOdd>. Wenn Sie diesen Befehl angeben, müssen Sie ihn zunächst platzieren.|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Gibt an, ob die <xref:System.Windows.Media.StreamGeometry> verwendet die <xref:System.Windows.Media.FillRule.EvenOdd> oder <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Gibt an, die <xref:System.Windows.Media.FillRule.EvenOdd> -Füllregel fest.<br />-   `F1` Gibt an, die <xref:System.Windows.Media.FillRule.Nonzero> -Füllregel fest.<br /><br /> Wenn Sie diesen Befehl weglassen, verwendet der untergeordnete Pfad das Standardverhalten, handelt es sich <xref:System.Windows.Media.FillRule.EvenOdd>. Wenn Sie diesen Befehl angeben, müssen Sie ihn zunächst platzieren.|  
 |*figureDescription*|Eine aus einem Move-Befehl, Draw-Befehl und einem optionalen Close-Befehl bestehende Figur.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|Ein Move-Befehl, der den Startpunkt der Figur angibt. Finden Sie unter den [Move-Befehl](#themovecommand) Abschnitt.|  
 |*drawCommands*|Mindestens ein Draw-Befehl, der den Inhalt der Figur beschreibt. Finden Sie unter den [Draw-Befehle](#drawcommands) Abschnitt.|  
@@ -97,11 +97,11 @@ Pfade finden Sie im [Formen und Grundlegendes Zeichnen in WPF (Übersicht)](shap
 Ein großgeschriebenes `L` gibt an, dass `endPoint` ist ein absoluter Wert ist ein klein geschriebenes `l` gibt an, dass `endPoint` um einen Offset zum vorherigen Punkt handelt oder um (0,0), falls keiner vorhanden ist.
 
 ### <a name="horizontal-line-command"></a>Befehl für eine horizontale Linie  
- Erstellt eine horizontale Linie zwischen dem aktuellen Punkt und der angegebenen x-Koordinate. `H 90` ist ein Beispiel für einen Befehl gültig horizontale Linie.
+ Erstellt eine horizontale Linie zwischen dem aktuellen Punkt und der angegebenen x-Koordinate. `H 90` ist ein Beispiel für einen gültigen Befehl für eine horizontale Linie.
 
 |Syntax|  
 |------------|  
-|`H`  *w*<br /><br /> - oder -<br /><br /> `h`  *w*|  
+|`H`  *x*<br /><br /> - oder -<br /><br /> `h`  *x*|  
   
 |Begriff|Beschreibung|  
 |----------|-----------------|  
@@ -110,7 +110,7 @@ Ein großgeschriebenes `L` gibt an, dass `endPoint` ist ein absoluter Wert ist e
 Ein großgeschriebenes `H` gibt an, dass `x` ist ein absoluter Wert ist ein klein geschriebenes `h` gibt an, dass `x` um einen Offset zum vorherigen Punkt handelt oder um (0,0), falls keiner vorhanden ist.
   
 ### <a name="vertical-line-command"></a>Befehl für vertikale Linie  
- Erstellt eine vertikale Linie zwischen dem aktuellen Punkt und der angegebenen y-Koordinate. `v 90` ist ein Beispiel für einen Befehl gültig vertikale Linie.
+ Erstellt eine vertikale Linie zwischen dem aktuellen Punkt und der angegebenen y-Koordinate. `v 90` ist ein Beispiel für einen gültigen Befehl für eine vertikale Linie.
 
 |Syntax|  
 |------------|  
@@ -123,7 +123,7 @@ Ein großgeschriebenes `H` gibt an, dass `x` ist ein absoluter Wert ist ein klei
 Ein großgeschriebenes `V` gibt an, dass `y` ist ein absoluter Wert ist ein klein geschriebenes `v` gibt an, dass `y` um einen Offset zum vorherigen Punkt handelt oder um (0,0), falls keiner vorhanden ist.  
     
 ### <a name="cubic-bezier-curve-command"></a>Kubische Bezier-Kurve-Befehl  
- Erstellt eine kubische Bezier-Kurve zwischen dem aktuellen Punkt und dem angegebenen Endpunkt mit den zwei angegebenen Kontrollpunkten (`controlPoint`1 und `controlPoint`2). `C 100,200 200,400 300,200` ist ein Beispiel für einen gültigen kurvenbefehl.  
+ Erstellt eine kubische Bezier-Kurve zwischen dem aktuellen Punkt und dem angegebenen Endpunkt mit den zwei angegebenen Kontrollpunkten (`controlPoint`1 und `controlPoint`2). `C 100,200 200,400 300,200` ist ein Beispiel für einen gültigen Kurvenbefehl.  
   
 |Syntax|  
 |------------|  
@@ -229,5 +229,5 @@ Ein großgeschriebenes `V` gibt an, dass `y` ist ein absoluter Wert ist ein klei
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Media.PathFigureCollection>
 - [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](shapes-and-basic-drawing-in-wpf-overview.md)
-- [Übersicht über die Geometrie](geometry-overview.md)
-- [Gewusst wie-Themen](geometries-how-to-topics.md)
+- [Übersicht über Geometrien](geometry-overview.md)
+- [Themen zu Vorgehensweisen](geometries-how-to-topics.md)

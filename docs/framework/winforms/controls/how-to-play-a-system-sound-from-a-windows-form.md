@@ -14,10 +14,10 @@ helpviewer_keywords:
 - examples [Windows Forms], sounds
 ms.assetid: afb206ff-4824-4804-a8d4-185bf5ad8e7c
 ms.openlocfilehash: d85d8cd40ff2b32cb3f2a79cf9a8221964f186c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153230"
 ---
 # <a name="how-to-play-a-system-sound-from-a-windows-form"></a>Vorgehensweise: Wiedergabe eines Systemsounds in Windows Forms
@@ -47,5 +47,5 @@ public void playExclamation()
 
 - <xref:System.Media.SoundPlayer>
 - <xref:System.Media.SystemSounds>
-- [Vorgehensweise: Wiedergabe eines Signaltons in Windows Forms](how-to-play-a-beep-from-a-windows-form.md)
-- [Vorgehensweise: Wiedergabe von Sound in Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
+- [Vorgehensweise: Wiedergabe eines Signaltons in Windows Forms](how-to-play-a-beep-from-a-windows-form.md)
+- [Vorgehensweise: Wiedergabe von Sound in Windows Forms](how-to-play-a-sound-from-a-windows-form.md)

@@ -3,12 +3,12 @@ title: Erste Schritte mit der semantischen Analyse
 description: Dieses Tutorial bietet einen Überblick über die Arbeit mit semantischen Analysen mithilfe des .NET Compiler SDK.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: dac733cba1d60a1bd24f5308717f4933cd620319
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 188104c3430b4ca32578cd35d3e161a6eb0e0e1a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760052"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611743"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Erste Schritte mit der semantischen Analyse
 
@@ -56,7 +56,7 @@ Anschließend erstellen Sie aus der bereits erstellten Struktur eine <xref:Micro
 
 [!code-csharp[Create the compilation](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#3 "Create the compilation for the semantic model")]
 
-Die <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType>-Methode fügt Verweise zur Kompilierung hinzu. Die <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType>-Methode lädt eine Assembly als Verweis. 
+Die <xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType>-Methode fügt Verweise zur Kompilierung hinzu. Die <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType>-Methode lädt eine Assembly als Verweis.
 
 ## <a name="querying-the-semantic-model"></a>Abfragen des semantischen Modells
 
@@ -159,4 +159,5 @@ Intern
 IsInterned
 Press any key to continue . . .
 ```
+
 Sie haben die Semantik-API verwendet, um Informationen zu den Symbolen zu finden und anzuzeigen, die zu diesem Programm gehören.
