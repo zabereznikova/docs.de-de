@@ -2,9 +2,15 @@
 title: Programmieren in Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'programming [Visual Basic], Visual Basic'
-  - programming
+- programming [Visual Basic], Visual Basic
+- programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
+ms.openlocfilehash: 09bc9254c880d58ffed22971d3ff96ba341fdf83
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58819059"
 ---
 # <a name="programming-in-visual-basic"></a>Programmieren in Visual Basic
 Dieser Abschnitt beschreibt Programmieraufgaben, über die Sie möglicherweise weitere Informationen erhalten möchten, wie etwa das Erstellen Ihrer eigenen Visual Basic-Anwendung.  
