@@ -8,16 +8,16 @@ helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
 ms.openlocfilehash: e51ba4ad0910d0db2b927f84303e5c55515f4b84
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58843452"
 ---
-# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a><span data-ttu-id="b2a6c-102">Lambda-Ausdrücke sind im ersten Ausdruck einer 'Select Case'-Anweisung nicht gültig</span><span class="sxs-lookup"><span data-stu-id="b2a6c-102">Lambda expressions are not valid in the first expression of a 'Select Case' statement</span></span>
-<span data-ttu-id="b2a6c-103">Sie können einen Lambda-Ausdruck keine für den Testausdruck in einer `Select Case` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="b2a6c-103">You cannot use a lambda expression for the test expression in a `Select Case` statement.</span></span> <span data-ttu-id="b2a6c-104">Definitionen von Lambda-Ausdrücken zurückgegeben werden, Funktionen und der Testausdruck eine `Select Case` -Anweisung muss ein elementarer Datentyp sein.</span><span class="sxs-lookup"><span data-stu-id="b2a6c-104">Lambda expression definitions return functions, and the test expression of a `Select Case` statement must be an elementary data type.</span></span>  
+# <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a><span data-ttu-id="39559-102">Lambda-Ausdrücke sind im ersten Ausdruck einer 'Select Case'-Anweisung nicht gültig</span><span class="sxs-lookup"><span data-stu-id="39559-102">Lambda expressions are not valid in the first expression of a 'Select Case' statement</span></span>
+<span data-ttu-id="39559-103">Sie können einen Lambda-Ausdruck keine für den Testausdruck in einer `Select Case` Anweisung.</span><span class="sxs-lookup"><span data-stu-id="39559-103">You cannot use a lambda expression for the test expression in a `Select Case` statement.</span></span> <span data-ttu-id="39559-104">Definitionen von Lambda-Ausdrücken zurückgegeben werden, Funktionen und der Testausdruck eine `Select Case` -Anweisung muss ein elementarer Datentyp sein.</span><span class="sxs-lookup"><span data-stu-id="39559-104">Lambda expression definitions return functions, and the test expression of a `Select Case` statement must be an elementary data type.</span></span>  
   
- <span data-ttu-id="b2a6c-105">Der folgende Code verursacht diesen Fehler:</span><span class="sxs-lookup"><span data-stu-id="b2a6c-105">The following code causes this error:</span></span>  
+ <span data-ttu-id="39559-105">Der folgende Code verursacht diesen Fehler:</span><span class="sxs-lookup"><span data-stu-id="39559-105">The following code causes this error:</span></span>  
   
 ```vb  
 ' Select Case (Function(arg) arg Is Nothing)  
@@ -25,13 +25,13 @@ ms.locfileid: "58843452"
 ' End Select  
 ```  
   
- <span data-ttu-id="b2a6c-106">**Fehler-ID:** BC36635</span><span class="sxs-lookup"><span data-stu-id="b2a6c-106">**Error ID:** BC36635</span></span>  
+ <span data-ttu-id="39559-106">**Fehler-ID:** BC36635</span><span class="sxs-lookup"><span data-stu-id="39559-106">**Error ID:** BC36635</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="b2a6c-107">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="b2a6c-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="39559-107">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="39559-107">To correct this error</span></span>  
   
--   <span data-ttu-id="b2a6c-108">Überprüfen Sie den Code, um festzustellen, ob eine andere bedingte Konstruktion für Sie geeignet wäre, z. B. eine `If...Then...Else` -Anweisung.</span><span class="sxs-lookup"><span data-stu-id="b2a6c-108">Examine your code to determine whether a different conditional construction, such as an `If...Then...Else` statement, would work for you.</span></span>  
+-   <span data-ttu-id="39559-108">Überprüfen Sie den Code, um festzustellen, ob eine andere bedingte Konstruktion für Sie geeignet wäre, z. B. eine `If...Then...Else` -Anweisung.</span><span class="sxs-lookup"><span data-stu-id="39559-108">Examine your code to determine whether a different conditional construction, such as an `If...Then...Else` statement, would work for you.</span></span>  
   
--   <span data-ttu-id="b2a6c-109">Sie können beabsichtigt zum Aufrufen der Funktion, wie im folgenden Code gezeigt:</span><span class="sxs-lookup"><span data-stu-id="b2a6c-109">You may have intended to call the function, as shown in the following code:</span></span>  
+-   <span data-ttu-id="39559-109">Sie können beabsichtigt zum Aufrufen der Funktion, wie im folgenden Code gezeigt:</span><span class="sxs-lookup"><span data-stu-id="39559-109">You may have intended to call the function, as shown in the following code:</span></span>  
   
 ```vb  
 Dim num? As Integer  
@@ -40,8 +40,8 @@ Select Case ((Function(arg? As Integer) arg Is Nothing)(num))
 End Select  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b2a6c-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b2a6c-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39559-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="39559-110">See also</span></span>
 
-- [<span data-ttu-id="b2a6c-111">Lambda-Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="b2a6c-111">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [<span data-ttu-id="b2a6c-112">If...Then...Else-Anweisung</span><span class="sxs-lookup"><span data-stu-id="b2a6c-112">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [<span data-ttu-id="b2a6c-113">Select...Case-Anweisung</span><span class="sxs-lookup"><span data-stu-id="b2a6c-113">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)
+- [<span data-ttu-id="39559-111">Lambda-Ausdrücke</span><span class="sxs-lookup"><span data-stu-id="39559-111">Lambda Expressions</span></span>](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [<span data-ttu-id="39559-112">If...Then...Else-Anweisung</span><span class="sxs-lookup"><span data-stu-id="39559-112">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [<span data-ttu-id="39559-113">Select...Case-Anweisung</span><span class="sxs-lookup"><span data-stu-id="39559-113">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)

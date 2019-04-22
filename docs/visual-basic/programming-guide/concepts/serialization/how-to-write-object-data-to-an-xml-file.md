@@ -3,16 +3,16 @@ title: 'Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (Visual Basi
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
 ms.openlocfilehash: 52b896b0191f29f68cc31e02fc325638ca6341b4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58843733"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a><span data-ttu-id="7aae4-102">Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7aae4-102">How to: Write Object Data to an XML File (Visual Basic)</span></span>
-<span data-ttu-id="7aae4-103">Dieses Beispiel verwendet die <xref:System.Xml.Serialization.XmlSerializer>-Klasse, um das Objekt aus einer Klasse in eine XML-Datei zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="7aae4-103">This example writes the object from a class to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  
+# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a><span data-ttu-id="07313-102">Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07313-102">How to: Write Object Data to an XML File (Visual Basic)</span></span>
+<span data-ttu-id="07313-103">Dieses Beispiel verwendet die <xref:System.Xml.Serialization.XmlSerializer>-Klasse, um das Objekt aus einer Klasse in eine XML-Datei zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="07313-103">This example writes the object from a class to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7aae4-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7aae4-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="07313-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="07313-104">Example</span></span>  
   
 ```vb  
 Public Module XMLWrite  
@@ -37,25 +37,25 @@ Public Module XMLWrite
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="7aae4-105">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="7aae4-105">Compiling the Code</span></span>  
- <span data-ttu-id="7aae4-106">Die Klasse muss über einen öffentlichen Konstruktor ohne Parameter verfügen.</span><span class="sxs-lookup"><span data-stu-id="7aae4-106">The class must have a public constructor without parameters.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="07313-105">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="07313-105">Compiling the Code</span></span>  
+ <span data-ttu-id="07313-106">Die Klasse muss über einen öffentlichen Konstruktor ohne Parameter verfügen.</span><span class="sxs-lookup"><span data-stu-id="07313-106">The class must have a public constructor without parameters.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="7aae4-107">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="7aae4-107">Robust Programming</span></span>  
- <span data-ttu-id="7aae4-108">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="7aae4-108">The following conditions may cause an exception:</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="07313-107">Stabile Programmierung</span><span class="sxs-lookup"><span data-stu-id="07313-107">Robust Programming</span></span>  
+ <span data-ttu-id="07313-108">Die folgenden Bedingungen können einen Ausnahmefehler verursachen:</span><span class="sxs-lookup"><span data-stu-id="07313-108">The following conditions may cause an exception:</span></span>  
   
--   <span data-ttu-id="7aae4-109">Die zu serialisierende Klasse verfügt nicht über einen öffentlichen, parameterlosen Konstruktor.</span><span class="sxs-lookup"><span data-stu-id="7aae4-109">The class being serialized does not have a public, parameterless constructor.</span></span>  
+-   <span data-ttu-id="07313-109">Die zu serialisierende Klasse verfügt nicht über einen öffentlichen, parameterlosen Konstruktor.</span><span class="sxs-lookup"><span data-stu-id="07313-109">The class being serialized does not have a public, parameterless constructor.</span></span>  
   
--   <span data-ttu-id="7aae4-110">Die Datei ist bereits vorhanden und schreibgeschützt (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="7aae4-110">The file exists and is read-only (<xref:System.IO.IOException>).</span></span>  
+-   <span data-ttu-id="07313-110">Die Datei ist bereits vorhanden und schreibgeschützt (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="07313-110">The file exists and is read-only (<xref:System.IO.IOException>).</span></span>  
   
--   <span data-ttu-id="7aae4-111">Der Pfad ist zu lang (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="7aae4-111">The path is too long (<xref:System.IO.PathTooLongException>).</span></span>  
+-   <span data-ttu-id="07313-111">Der Pfad ist zu lang (<xref:System.IO.PathTooLongException>).</span><span class="sxs-lookup"><span data-stu-id="07313-111">The path is too long (<xref:System.IO.PathTooLongException>).</span></span>  
   
--   <span data-ttu-id="7aae4-112">Der Datenträger ist voll (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="7aae4-112">The disk is full (<xref:System.IO.IOException>).</span></span>  
+-   <span data-ttu-id="07313-112">Der Datenträger ist voll (<xref:System.IO.IOException>).</span><span class="sxs-lookup"><span data-stu-id="07313-112">The disk is full (<xref:System.IO.IOException>).</span></span>  
   
-## <a name="net-framework-security"></a><span data-ttu-id="7aae4-113">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="7aae4-113">.NET Framework Security</span></span>  
- <span data-ttu-id="7aae4-114">Mit diesem Beispiel wird eine neue Datei erstellt, wenn diese noch nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="7aae4-114">This example creates a new file, if the file does not already exist.</span></span> <span data-ttu-id="7aae4-115">Wenn eine Anwendung eine Datei erstellen muss, benötigt sie eine `Create`-Berechtigung für den Ordner.</span><span class="sxs-lookup"><span data-stu-id="7aae4-115">If an application needs to create a file, that application needs `Create` access for the folder.</span></span> <span data-ttu-id="7aae4-116">Wenn die Datei bereits vorhanden ist, benötigt die Anwendung lediglich die Berechtigung für den `Write`-Zugriff, also eine geringere Berechtigung.</span><span class="sxs-lookup"><span data-stu-id="7aae4-116">If the file already exists, the application needs only `Write` access, a lesser privilege.</span></span> <span data-ttu-id="7aae4-117">Aus Sicherheitsgründen sollte die Datei nach Möglichkeit erst im Verlauf der Bereitstellung erstellt werden. Außerdem sollte nur die `Read`-Berechtigung für eine einzelne Datei erteilt werden (anstatt `Create`-Berechtigungen für den gesamten Ordner zu gewähren).</span><span class="sxs-lookup"><span data-stu-id="7aae4-117">Where possible, it is more secure to create the file during deployment, and only grant `Read` access to a single file, rather than `Create` access for a folder.</span></span>  
+## <a name="net-framework-security"></a><span data-ttu-id="07313-113">.NET Framework-Sicherheit</span><span class="sxs-lookup"><span data-stu-id="07313-113">.NET Framework Security</span></span>  
+ <span data-ttu-id="07313-114">Mit diesem Beispiel wird eine neue Datei erstellt, wenn diese noch nicht vorhanden ist.</span><span class="sxs-lookup"><span data-stu-id="07313-114">This example creates a new file, if the file does not already exist.</span></span> <span data-ttu-id="07313-115">Wenn eine Anwendung eine Datei erstellen muss, benötigt sie eine `Create`-Berechtigung für den Ordner.</span><span class="sxs-lookup"><span data-stu-id="07313-115">If an application needs to create a file, that application needs `Create` access for the folder.</span></span> <span data-ttu-id="07313-116">Wenn die Datei bereits vorhanden ist, benötigt die Anwendung lediglich die Berechtigung für den `Write`-Zugriff, also eine geringere Berechtigung.</span><span class="sxs-lookup"><span data-stu-id="07313-116">If the file already exists, the application needs only `Write` access, a lesser privilege.</span></span> <span data-ttu-id="07313-117">Aus Sicherheitsgründen sollte die Datei nach Möglichkeit erst im Verlauf der Bereitstellung erstellt werden. Außerdem sollte nur die `Read`-Berechtigung für eine einzelne Datei erteilt werden (anstatt `Create`-Berechtigungen für den gesamten Ordner zu gewähren).</span><span class="sxs-lookup"><span data-stu-id="07313-117">Where possible, it is more secure to create the file during deployment, and only grant `Read` access to a single file, rather than `Create` access for a folder.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7aae4-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7aae4-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="07313-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="07313-118">See also</span></span>
 
 - <xref:System.IO.StreamWriter>
-- [<span data-ttu-id="7aae4-119">Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7aae4-119">How to: Read Object Data from an XML File (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
-- [<span data-ttu-id="7aae4-120">Serialisierung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7aae4-120">Serialization (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+- [<span data-ttu-id="07313-119">Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07313-119">How to: Read Object Data from an XML File (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
+- [<span data-ttu-id="07313-120">Serialisierung (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07313-120">Serialization (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

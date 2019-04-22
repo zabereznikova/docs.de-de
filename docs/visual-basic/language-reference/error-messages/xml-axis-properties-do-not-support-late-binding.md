@@ -8,22 +8,22 @@ helpviewer_keywords:
 - BC31168
 ms.assetid: 45707363-55e4-4151-892d-d8729106355b
 ms.openlocfilehash: 959bbdc70bf08dae05f14520a7a5230b38843065
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58835639"
 ---
-# <a name="xml-axis-properties-do-not-support-late-binding"></a><span data-ttu-id="fdcc8-102">Die XML-Achseneigenschaften unterstützen keine späte Bindung</span><span class="sxs-lookup"><span data-stu-id="fdcc8-102">XML axis properties do not support late binding</span></span>
-<span data-ttu-id="fdcc8-103">Eine XML-Achseneigenschaft wurde für ein nicht typisiertes Objekt verwiesen.</span><span class="sxs-lookup"><span data-stu-id="fdcc8-103">An XML axis property has been referenced for an untyped object.</span></span>  
+# <a name="xml-axis-properties-do-not-support-late-binding"></a><span data-ttu-id="99c78-102">Die XML-Achseneigenschaften unterstützen keine späte Bindung</span><span class="sxs-lookup"><span data-stu-id="99c78-102">XML axis properties do not support late binding</span></span>
+<span data-ttu-id="99c78-103">Eine XML-Achseneigenschaft wurde für ein nicht typisiertes Objekt verwiesen.</span><span class="sxs-lookup"><span data-stu-id="99c78-103">An XML axis property has been referenced for an untyped object.</span></span>  
   
- <span data-ttu-id="fdcc8-104">**Fehler-ID:** BC31168</span><span class="sxs-lookup"><span data-stu-id="fdcc8-104">**Error ID:** BC31168</span></span>  
+ <span data-ttu-id="99c78-104">**Fehler-ID:** BC31168</span><span class="sxs-lookup"><span data-stu-id="99c78-104">**Error ID:** BC31168</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="fdcc8-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="fdcc8-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="99c78-105">So beheben Sie diesen Fehler</span><span class="sxs-lookup"><span data-stu-id="99c78-105">To correct this error</span></span>  
   
--   <span data-ttu-id="fdcc8-106">Stellen Sie sicher, dass das Objekt ein stark typisiertes ist <xref:System.Xml.Linq.XElement> Objekt vor dem verweisen auf die XML-Achseneigenschaft.</span><span class="sxs-lookup"><span data-stu-id="fdcc8-106">Ensure that the object is a strong-typed <xref:System.Xml.Linq.XElement> object before referencing the XML axis property.</span></span>  
+-   <span data-ttu-id="99c78-106">Stellen Sie sicher, dass das Objekt ein stark typisiertes ist <xref:System.Xml.Linq.XElement> Objekt vor dem verweisen auf die XML-Achseneigenschaft.</span><span class="sxs-lookup"><span data-stu-id="99c78-106">Ensure that the object is a strong-typed <xref:System.Xml.Linq.XElement> object before referencing the XML axis property.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fdcc8-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fdcc8-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="99c78-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="99c78-107">See also</span></span>
 
-- [<span data-ttu-id="fdcc8-108">XML-Achseneigenschaften</span><span class="sxs-lookup"><span data-stu-id="fdcc8-108">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/index.md)
-- [<span data-ttu-id="fdcc8-109">XML</span><span class="sxs-lookup"><span data-stu-id="fdcc8-109">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="99c78-108">XML-Achseneigenschaften</span><span class="sxs-lookup"><span data-stu-id="99c78-108">XML Axis Properties</span></span>](../../../visual-basic/language-reference/xml-axis/index.md)
+- [<span data-ttu-id="99c78-109">XML</span><span class="sxs-lookup"><span data-stu-id="99c78-109">XML</span></span>](../../../visual-basic/programming-guide/language-features/xml/index.md)
