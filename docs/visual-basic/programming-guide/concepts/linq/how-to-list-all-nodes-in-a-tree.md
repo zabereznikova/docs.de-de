@@ -3,25 +3,25 @@ title: 'Vorgehensweise: Listen Sie aller Knoten in einer Struktur (Visual Basic 
 ms.date: 07/20/2015
 ms.assetid: e19289c4-26d1-435b-b0db-fb8bc856b753
 ms.openlocfilehash: 6576beaaed00905ce7a09f338251934ea375cb7e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824844"
 ---
-# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a><span data-ttu-id="c9be2-102">Vorgehensweise: Listen Sie aller Knoten in einer Struktur (Visual Basic auf)</span><span class="sxs-lookup"><span data-stu-id="c9be2-102">How to: List All Nodes in a Tree (Visual Basic)</span></span>
-<span data-ttu-id="c9be2-103">Manchmal ist es hilfreich, alle in einer Struktur vorhandenen Knoten aufzulisten.</span><span class="sxs-lookup"><span data-stu-id="c9be2-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="c9be2-104">Dies kann sinnvoll sein, wenn Sie genau verstehen möchten, wie sich eine Methode oder eine Eigenschaft auf die Struktur auswirkt.</span><span class="sxs-lookup"><span data-stu-id="c9be2-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="c9be2-105">Eine Möglichkeit, alle Knoten in Textform aufzulisten, besteht darin, einen XPath-Ausdruck zu generieren, der exakt und spezifisch jeden Knoten in der Struktur identifiziert.</span><span class="sxs-lookup"><span data-stu-id="c9be2-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>  
+# <a name="how-to-list-all-nodes-in-a-tree-visual-basic"></a><span data-ttu-id="ae820-102">Vorgehensweise: Listen Sie aller Knoten in einer Struktur (Visual Basic auf)</span><span class="sxs-lookup"><span data-stu-id="ae820-102">How to: List All Nodes in a Tree (Visual Basic)</span></span>
+<span data-ttu-id="ae820-103">Manchmal ist es hilfreich, alle in einer Struktur vorhandenen Knoten aufzulisten.</span><span class="sxs-lookup"><span data-stu-id="ae820-103">Sometimes it is helpful to list all nodes in a tree.</span></span> <span data-ttu-id="ae820-104">Dies kann sinnvoll sein, wenn Sie genau verstehen möchten, wie sich eine Methode oder eine Eigenschaft auf die Struktur auswirkt.</span><span class="sxs-lookup"><span data-stu-id="ae820-104">This can be useful when learning exactly how a method or property affects the tree.</span></span> <span data-ttu-id="ae820-105">Eine Möglichkeit, alle Knoten in Textform aufzulisten, besteht darin, einen XPath-Ausdruck zu generieren, der exakt und spezifisch jeden Knoten in der Struktur identifiziert.</span><span class="sxs-lookup"><span data-stu-id="ae820-105">One approach to listing all nodes in a textual form is to generate an XPath expression that exactly and specifically identifies any node in the tree.</span></span>  
   
- <span data-ttu-id="c9be2-106">Das Ausführen von XPath-Ausdrücken mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist nicht besonders hilfreich.</span><span class="sxs-lookup"><span data-stu-id="c9be2-106">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="c9be2-107">XPath-Ausdrücke verfügen über eine schlechtere Leistung als [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen, und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen sind deutlich leistungsfähiger.</span><span class="sxs-lookup"><span data-stu-id="c9be2-107">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="c9be2-108">Zur Identifizierung der Knoten in der XML-Struktur eignet sich XPath aber gut.</span><span class="sxs-lookup"><span data-stu-id="c9be2-108">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>  
+ <span data-ttu-id="ae820-106">Das Ausführen von XPath-Ausdrücken mit [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ist nicht besonders hilfreich.</span><span class="sxs-lookup"><span data-stu-id="ae820-106">It is not particularly helpful to execute XPath expressions using [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span></span> <span data-ttu-id="ae820-107">XPath-Ausdrücke verfügen über eine schlechtere Leistung als [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen, und [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]-Abfragen sind deutlich leistungsfähiger.</span><span class="sxs-lookup"><span data-stu-id="ae820-107">XPath expressions have poorer performance than [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries, and [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] queries are much more powerful.</span></span> <span data-ttu-id="ae820-108">Zur Identifizierung der Knoten in der XML-Struktur eignet sich XPath aber gut.</span><span class="sxs-lookup"><span data-stu-id="ae820-108">However, as a way to identify nodes in the XML tree, XPath works well.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c9be2-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="c9be2-109">Example</span></span>  
- <span data-ttu-id="c9be2-110">Dieses Beispiel zeigt eine Funktion mit dem Namen `GetXPath`, die für jeden Knoten in der XML-Struktur einen spezifischen XPath-Ausdruck generiert.</span><span class="sxs-lookup"><span data-stu-id="c9be2-110">This example shows an function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="c9be2-111">Sie generiert auch dann entsprechende XPath-Ausdrücke, wenn sich Knoten in einem Namespace befinden.</span><span class="sxs-lookup"><span data-stu-id="c9be2-111">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="c9be2-112">Die XPath-Ausdrücke werden unter Verwendung von Namespacepräfixen generiert.</span><span class="sxs-lookup"><span data-stu-id="c9be2-112">The XPath expressions are generated by using namespace prefixes.</span></span>  
+## <a name="example"></a><span data-ttu-id="ae820-109">Beispiel</span><span class="sxs-lookup"><span data-stu-id="ae820-109">Example</span></span>  
+ <span data-ttu-id="ae820-110">Dieses Beispiel zeigt eine Funktion mit dem Namen `GetXPath`, die für jeden Knoten in der XML-Struktur einen spezifischen XPath-Ausdruck generiert.</span><span class="sxs-lookup"><span data-stu-id="ae820-110">This example shows an function named `GetXPath` that generates a specific XPath expression for any node in the XML tree.</span></span> <span data-ttu-id="ae820-111">Sie generiert auch dann entsprechende XPath-Ausdrücke, wenn sich Knoten in einem Namespace befinden.</span><span class="sxs-lookup"><span data-stu-id="ae820-111">It generates appropriate XPath expressions even when nodes are in a namespace.</span></span> <span data-ttu-id="ae820-112">Die XPath-Ausdrücke werden unter Verwendung von Namespacepräfixen generiert.</span><span class="sxs-lookup"><span data-stu-id="ae820-112">The XPath expressions are generated by using namespace prefixes.</span></span>  
   
- <span data-ttu-id="c9be2-113">Im Beispiel wird dann eine kleine XML-Struktur erstellt, die ein Beispiel für mehrere Typen von Knoten enthält.</span><span class="sxs-lookup"><span data-stu-id="c9be2-113">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="c9be2-114">Anschließend durchläuft das Beispiel die Nachfolgerknoten und gibt für jeden Knoten den XPath-Ausdruck aus.</span><span class="sxs-lookup"><span data-stu-id="c9be2-114">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>  
+ <span data-ttu-id="ae820-113">Im Beispiel wird dann eine kleine XML-Struktur erstellt, die ein Beispiel für mehrere Typen von Knoten enthält.</span><span class="sxs-lookup"><span data-stu-id="ae820-113">The example then creates a small XML tree that contains an example of several types of nodes.</span></span> <span data-ttu-id="ae820-114">Anschließend durchläuft das Beispiel die Nachfolgerknoten und gibt für jeden Knoten den XPath-Ausdruck aus.</span><span class="sxs-lookup"><span data-stu-id="ae820-114">It then iterates through the descendant nodes and prints the XPath expression for each node.</span></span>  
   
- <span data-ttu-id="c9be2-115">Sie werden feststellen, dass die XML-Deklaration kein Knoten in der Struktur ist.</span><span class="sxs-lookup"><span data-stu-id="c9be2-115">You will notice that the XML declaration is not a node in the tree.</span></span>  
+ <span data-ttu-id="ae820-115">Sie werden feststellen, dass die XML-Deklaration kein Knoten in der Struktur ist.</span><span class="sxs-lookup"><span data-stu-id="ae820-115">You will notice that the XML declaration is not a node in the tree.</span></span>  
   
- <span data-ttu-id="c9be2-116">Es folgt eine XML-Datei, die mehrere Typen von Knoten enthält:</span><span class="sxs-lookup"><span data-stu-id="c9be2-116">The following is an XML file that contains several types of nodes:</span></span>  
+ <span data-ttu-id="ae820-116">Es folgt eine XML-Datei, die mehrere Typen von Knoten enthält:</span><span class="sxs-lookup"><span data-stu-id="ae820-116">The following is an XML file that contains several types of nodes:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -37,7 +37,7 @@ ms.locfileid: "58824844"
 </Root>  
 ```  
   
- <span data-ttu-id="c9be2-117">Es folgt die Liste der in der oben erwähnten XML-Struktur vorhandenen Knoten, ausgedrückt als XPath-Ausdrücke:</span><span class="sxs-lookup"><span data-stu-id="c9be2-117">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>  
+ <span data-ttu-id="ae820-117">Es folgt die Liste der in der oben erwähnten XML-Struktur vorhandenen Knoten, ausgedrückt als XPath-Ausdrücke:</span><span class="sxs-lookup"><span data-stu-id="ae820-117">The following is the list of nodes in the above XML tree, expressed as XPath expressions:</span></span>  
   
 ```  
 /processing-instruction()  
@@ -230,7 +230,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="c9be2-118">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="c9be2-118">This example produces the following output:</span></span>  
+ <span data-ttu-id="ae820-118">Dieses Beispiel erzeugt die folgende Ausgabe:</span><span class="sxs-lookup"><span data-stu-id="ae820-118">This example produces the following output:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
@@ -263,6 +263,6 @@ End Module
 /Root/aw:ElementInNamespace/aw:ChildInNamespace  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c9be2-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c9be2-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ae820-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ae820-119">See also</span></span>
 
-- [<span data-ttu-id="c9be2-120">Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c9be2-120">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+- [<span data-ttu-id="ae820-120">Erweiterte Abfragetechniken (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ae820-120">Advanced Query Techniques (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
