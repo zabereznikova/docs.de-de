@@ -5,10 +5,10 @@ helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
 ms.openlocfilehash: 836ec4390e7675effe57c75c79768272d66925a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836862"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>Vorgehensweise: Erstellen von XML-Literalen (Visual Basic)
@@ -22,7 +22,7 @@ Sie können eine XML-Dokument, Fragment oder Element direkt im Code erstellen, m
   
      [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
-     Führen Sie den Code ein. Die Ausgabe dieses Codes lautet:  
+     Führen Sie den Code aus. Die Ausgabe dieses Codes lautet:  
   
      `<contact>`  
   
@@ -40,7 +40,7 @@ Sie können eine XML-Dokument, Fragment oder Element direkt im Code erstellen, m
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-     Führen Sie den Code ein. Die Ausgabe dieses Codes lautet:  
+     Führen Sie den Code aus. Die Ausgabe dieses Codes lautet:  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   

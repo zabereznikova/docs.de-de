@@ -3,10 +3,10 @@ title: Neues in C# 6 – C#-Leitfaden
 description: Neues zu den neuen Features in Version 6 von C#
 ms.date: 12/12/2018
 ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920674"
 ---
 # <a name="whats-new-in-c-6"></a>Neues in C# 6
@@ -106,7 +106,7 @@ Die Regeln des `?.`-Operators stellen sicher, dass die linke Seite des Operators
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-Stellen Sie sicher, dass die linke Seite nur einmal ausgewertet wird, um einen beliebigen Ausdruck sowie Methodenaufrufe auf der linken Seite des Fragezeichens (?) zu verwenden. `?.`
+Stellen Sie sicher, dass die linke Seite nur einmal ausgewertet wird, um einen beliebigen Ausdruck sowie Methodenaufrufe auf der linken Seite von `?.` zu verwenden.
 
 ## <a name="string-interpolation"></a>Zeichenfolgeninterpolation
 
