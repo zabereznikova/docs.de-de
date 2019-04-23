@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
 ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296211"
 ---
 # <a name="toolstrip-control-architecture"></a>Architektur des ToolStrip-Steuerelements
@@ -316,7 +316,7 @@ Die <xref:System.Windows.Forms.ToolStrip> und <xref:System.Windows.Forms.ToolStr
  <xref:System.Windows.Forms.ToolStripMenuItem> ist eine <xref:System.Windows.Forms.ToolStripDropDownItem> dieses Produkt funktioniert mit <xref:System.Windows.Forms.ToolStripDropDownMenu> und <xref:System.Windows.Forms.ContextMenuStrip> die besondere Hervorhebung, Layout und Spalte Anordnung für Menüs zu behandeln.  
   
 ### <a name="toolstripdropdownbutton"></a>ToolStripDropDownButton  
- <xref:System.Windows.Forms.ToolStripDropDownButton> sieht wie <xref:System.Windows.Forms.ToolStripButton>, aber es zeigt einen Dropdownbereich, wenn der Benutzer darauf klickt. Ein- oder Ausblenden der Dropdown-Pfeil durch Festlegen der <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> Eigenschaft. <xref:System.Windows.Forms.ToolStripDropDownButton> Hostet eine <xref:System.Windows.Forms.ToolStripOverflowButton> , die Elemente angezeigt, die overflow der <xref:System.Windows.Forms.ToolStrip>.  
+ <xref:System.Windows.Forms.ToolStripDropDownButton> sieht wie <xref:System.Windows.Forms.ToolStripButton>, aber es zeigt einen Dropdownbereich, wenn der Benutzer darauf klickt. Ein- oder Ausblenden der Dropdown-Pfeil durch Festlegen der <xref:System.Windows.Forms.ToolStripDropDownButton.ShowDropDownArrow%2A> Eigenschaft. <xref:System.Windows.Forms.ToolStripDropDownButton> hostet eine <xref:System.Windows.Forms.ToolStripOverflowButton> , die Elemente angezeigt, die overflow der <xref:System.Windows.Forms.ToolStrip>.  
   
 ### <a name="toolstripsplitbutton"></a>ToolStripSplitButton  
  <xref:System.Windows.Forms.ToolStripSplitButton> kombiniert die Schaltfläche und Funktionalität der Dropdown-Schaltfläche.  

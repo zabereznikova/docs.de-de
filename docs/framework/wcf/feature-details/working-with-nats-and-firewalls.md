@@ -6,10 +6,10 @@ helpviewer_keywords:
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
 ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296341"
 ---
 # <a name="working-with-nats-and-firewalls"></a>Arbeiten mit NATs und Firewalls
@@ -32,7 +32,7 @@ Der Austausch von Daten zwischen einem Client und einem Server erfolgt häufig n
  Private Firewalls sind häufig so konfiguriert, dass eingehende Verbindungen unterbunden werden, es sei denn, es wurde zuvor eine ausgehende Verbindung zum entsprechenden Computer hergestellt. Geschäftliche Firewalls sind häufig so konfiguriert, dass zunächst einmal eingehende Verbindungen auf allen Anschlüssen unterbunden und anschließend Ausnahmen festgelegt werden. Beispielsweise kann eine Firewall alle Verbindungen mit Ausnahme von Verbindungen über den Anschluss 80 und den Anschluss 443 blockieren, um HTTP- und HTTPS-Dienste zu ermöglichen. Sowohl für private als auch für geschäftliche Benutzer gibt es verwaltete Firewalls, die es einem vertrauenswürdigen Benutzer oder einem vertrauenswürdigen Prozess ermöglichen, die Konfiguration der Firewall anzupassen. Verwaltete Firewalls sind häufiger in privaten Umgebungen zu finden, da die Netzwerkverwendung dort i. d. R. keinen spezifischen Richtlinien unterliegt.  
   
 ## <a name="using-teredo"></a>Verwenden von Teredo  
- Teredo ist eine IPv6-Technologie zur direkten Adressierung von Computern hinter einem Netzwerkadressübersetzungsmechanismus. Das Teredo-Protokoll verwendet einen Server, der öffentlich und global geroutet werden kann, um potenzielle Verbindungen anzukündigen. Der Teredo-Server übernimmt die Rolle eine Vermittlers zwischen dem Client und dem Server der Anwendung und ermöglicht so den Austausch von Verbindungsinformationen. Die Computer fordern dann eine temporäre Teredo-Adresse an, und die Pakete werden durch das vorhandene Netzwerk getunnelt. Teredo-Unterstützung in WCF ist das Aktivieren der Unterstützung für IPv6 und Teredo in das Betriebssystem erforderlich. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und neuere Betriebssysteme unterstützen Teredo. [!INCLUDE[wv](../../../../includes/wv-md.md)] und höher unterstützen standardmäßig IPv6, und nur, dass der Benutzer aus, um Teredo zu aktivieren. [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] muss der Benutzer sowohl IPv6 und Teredo zu aktivieren. Weitere Informationen finden Sie unter den [Überblick zu Teredo](https://go.microsoft.com/fwlink/?LinkId=87571).  
+ Teredo ist eine IPv6-Technologie zur direkten Adressierung von Computern hinter einem Netzwerkadressübersetzungsmechanismus. Das Teredo-Protokoll verwendet einen Server, der öffentlich und global geroutet werden kann, um potenzielle Verbindungen anzukündigen. Der Teredo-Server übernimmt die Rolle eine Vermittlers zwischen dem Client und dem Server der Anwendung und ermöglicht so den Austausch von Verbindungsinformationen. Die Computer fordern dann eine temporäre Teredo-Adresse an, und die Pakete werden durch das vorhandene Netzwerk getunnelt. Teredo-Unterstützung in WCF ist das Aktivieren der Unterstützung für IPv6 und Teredo in das Betriebssystem erforderlich. Teredo wird von [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und nachfolgenden Betriebssystemen unterstützt. [!INCLUDE[wv](../../../../includes/wv-md.md)] und nachfolgende Betriebssysteme unterstützen IPv6 standardmäßig und erfordern lediglich eine entsprechende Aktivierung durch den Benutzer. Unter [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] und [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] müssen IPv6 und Teredo vom Benutzer aktiviert werden. Weitere Informationen finden Sie unter den [Überblick zu Teredo](https://go.microsoft.com/fwlink/?LinkId=87571).  
   
 ## <a name="choosing-a-transport-and-message-exchange-pattern"></a>Auswählen eines Transports und eines Nachrichtenaustauschmusters  
  Das Verfahren zum Auswählen eines Transports und eines Nachrichtenaustauschmusters besteht aus drei Schritten:  

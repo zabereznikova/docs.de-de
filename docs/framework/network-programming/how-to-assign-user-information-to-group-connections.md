@@ -5,21 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 927a87b250863c4d59e630264ee11286c30deb3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fa84052bcf9ca97b903111fc02e319b25deb384
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607997"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296965"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>Vorgehensweise: Zuweisen von Benutzerinformationen zu Gruppenverbindungen
 
-  
  Das folgende Beispiel demonstriert, wie Benutzerinformationen zu Gruppenverbindungen zugewiesen werden können. Dabei wird angenommen, dass die Anwendung die Variablen *UserName*, *SecurelyStoredPassword* und *Domain* vor dem Aufrufen dieses Codeabschnitts festgelegt hat und dass *UserName* eindeutig ist.  
   
 ### <a name="to-assign-user-information-to-a-group-connection"></a>Zuweisen von Benutzerinformationen zu Gruppenverbindungen  
   
-1.  Erstellen Sie einen Verbindungsgruppennamen.  
+1. Erstellen Sie einen Verbindungsgruppennamen.  
   
     ```csharp  
     SHA1Managed Sha1 = new SHA1Managed();  
@@ -33,7 +32,7 @@ ms.locfileid: "54607997"
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2.  Erstellen Sie eine Anforderung für eine bestimmte URL. Im folgenden Code wird z.B. eine Anforderung für die URL `http://www.contoso.com.` erstellt.  
+2. Erstellen Sie eine Anforderung für eine bestimmte URL. Der folgende Code erstellt z.B. eine Anforderung für die URL `http://www.contoso.com.`  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -43,7 +42,7 @@ ms.locfileid: "54607997"
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3.  Legen Sie die Anmeldeinformationen und den Verbindungsgruppennamen für die Web-Anforderung fest, und rufen Sie **GetResponse** auf, um ein **WebResponse**-Objekt abzurufen.  
+3. Legen Sie die Anmeldeinformationen und den Verbindungsgruppennamen für die Web-Anforderung fest, und rufen Sie **GetResponse** auf, um ein **WebResponse**-Objekt abzurufen.  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -59,7 +58,7 @@ ms.locfileid: "54607997"
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
     ```  
   
-4.  Schließen Sie den Antwortstream nach dem Verwenden des „WebResponse“-Objekts.  
+4. Schließen Sie den Antwortstream nach dem Verwenden des „WebResponse“-Objekts.  
   
     ```csharp  
     MyWebResponse.Close();  
@@ -109,5 +108,6 @@ MyWebResponse.Close()
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwalten von Verbindungen](../../../docs/framework/network-programming/managing-connections.md)
-- [Connection Grouping (Verbindungsgruppierung)](../../../docs/framework/network-programming/connection-grouping.md)
+- [Verbindungsgruppierung](../../../docs/framework/network-programming/connection-grouping.md)

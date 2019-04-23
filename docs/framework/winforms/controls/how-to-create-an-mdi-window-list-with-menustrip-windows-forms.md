@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
 ms.openlocfilehash: ec0d8af81e320bea3d9d69305f91bd56666ba7cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299643"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>Vorgehensweise: Erstellen einer MDI-Fensterliste mithilfe von MenuStrip (Windows Forms)
@@ -30,11 +30,11 @@ Verwenden Sie zum Erstellen von Anwendungen, die mehrere Dokumente öffnen, zur 
   
 4. Fügen Sie dem `&File`-Menüelement ein Untermenüelement hinzu, und legen Sie dessen <xref:System.Windows.Forms.ToolStripItem.Text%2A>-Eigenschaft auf `&Open` fest.  
   
-5. Legen Sie die <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> Eigenschaft der <xref:System.Windows.Forms.MenuStrip> auf der `&Window`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+5. Legen Sie die <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A> Eigenschaft der <xref:System.Windows.Forms.MenuStrip> auf der `&Window` <xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 6. Das Projekt ein Formular hinzu, und fügen Sie das gewünschte Steuerelement hinzu, z. B. einen anderen <xref:System.Windows.Forms.MenuStrip>.  
   
-7. Erstellen Sie einen Ereignishandler für die <xref:System.Windows.Forms.Control.Click> Ereignis die `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
+7. Erstellen Sie einen Ereignishandler für das <xref:System.Windows.Forms.Control.Click>-Ereignis von `&New`<xref:System.Windows.Forms.ToolStripMenuItem>.  
   
 8. Fügen Sie Code, die etwa wie folgt zu erstellende und anzuzeigende neue Instanzen von innerhalb des ereignishandlers `Form2` als untergeordnete MDI-Fenster von `Form1`.  
   
@@ -61,7 +61,7 @@ Verwenden Sie zum Erstellen von Anwendungen, die mehrere Dokumente öffnen, zur 
     }  
     ```  
   
-9. Fügen Sie Code wie den folgenden in das `&New`<xref:System.Windows.Forms.ToolStripMenuItem> um den Ereignishandler zu registrieren.  
+9. Fügen Sie Code wie den folgenden in das `&New` <xref:System.Windows.Forms.ToolStripMenuItem> um den Ereignishandler zu registrieren.  
   
     ```vb  
     Private Sub newToolStripMenuItem_Click(sender As Object, e As _  

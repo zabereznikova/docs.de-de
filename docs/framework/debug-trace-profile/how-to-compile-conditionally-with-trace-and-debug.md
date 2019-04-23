@@ -13,10 +13,10 @@ ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298577"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Vorgehensweise: Bedingtes Kompilieren mit Ablaufverfolgung und Debuggen
@@ -80,9 +80,9 @@ Beim Debuggen einer Anwendung während der Entwicklung wird sowohl die Ablaufver
     ||**#CONST DEBUG = true**|Aktiviert das Debuggen|  
     ||**#CONST DEBUG = false**|Deaktiviert das Debuggen|  
     |**C#**|**#define TRACE**|Aktiviert die Ablaufverfolgung|  
-    ||**#undef TRACE**|Deaktiviert die Ablaufverfolgung|  
+    ||**#undefine TRACE**|Deaktiviert die Ablaufverfolgung|  
     ||**#define DEBUG**|Aktiviert das Debuggen|  
-    ||**#undef DEBUG**|Deaktiviert das Debuggen|  
+    ||**#undefine DEBUG**|Deaktiviert das Debuggen|  
   
 ### <a name="to-disable-tracing-or-debugging"></a>So deaktivieren Sie die Ablaufverfolgung oder das Debuggen  
   
@@ -98,9 +98,9 @@ Kommentieren Sie die Compileranweisung aus.
 ## <a name="see-also"></a>Siehe auch
 
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [Vorgehensweise: Erstellen, initialisieren und Konfigurieren von Ablaufverfolgungsschaltern](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
 - [Ablaufverfolgungsschalter](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Ablaufverfolgungslistener](../../../docs/framework/debug-trace-profile/trace-listeners.md)
+- [Trace Listeners (Ablaufverfolgungslistener)](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [Vorgehensweise: Aufrufen des Befehlszeilencompilers](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

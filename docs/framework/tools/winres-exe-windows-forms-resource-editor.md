@@ -14,10 +14,10 @@ ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296653"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>„Winres.exe“ (Windows-Ressourcenlokalisierungs-Editor)
@@ -144,6 +144,6 @@ Sie sollten die Version von „Winres.exe“ verwenden, die mit der von Ihnen ve
 - <xref:System.Resources.ResourceManager>
 - <xref:System.Resources.ResourceReader>
 - <xref:System.Resources.ResourceWriter>
-- [Tools](../../../docs/framework/tools/index.md)
+- [Extras](../../../docs/framework/tools/index.md)
 - [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)
 - [Globalisierung und Lokalisierung](../../../docs/standard/globalization-localization/index.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712573"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299474"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Exemplarische Vorgehensweise: Ausgeben von Code in Szenarios mit teilweiser Vertrauenswürdigkeit
 Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit den gleichen API-Satz, für teilweise vertrauenswürdigen Code erfordern einige Funktionen allerdings besondere Berechtigungen. Außerdem verfügt die Reflektionsausgabe über eine Funktion für anonym gehostete dynamische Methoden, die zur Verwendung mit teilweiser Vertrauenswürdigkeit und sicherheitstransparenten Assemblys vorgesehen ist.  
@@ -59,12 +59,12 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
   
 ##### <a name="to-create-an-application-domain-with-partial-trust"></a>So erstellen Sie eine Anwendungsdomäne mit teilweiser Vertrauenswürdigkeit  
   
-1.  Erstellen Sie einen Berechtigungssatz, der den Assemblys in der Sandkastenanwendungsdomäne gewährt wird. In diesem Fall wird der Berechtigungssatz der Internetzone verwendet.  
+1. Erstellen Sie einen Berechtigungssatz, der den Assemblys in der Sandkastenanwendungsdomäne gewährt wird. In diesem Fall wird der Berechtigungssatz der Internetzone verwendet.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#2)]
      [!code-vb[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#2)]  
   
-2.  Erstellen Sie ein <xref:System.AppDomainSetup>-Objekt, um die Anwendungsdomäne mit einem Anwendungspfad zu initialisieren.  
+2. Erstellen Sie ein <xref:System.AppDomainSetup>-Objekt, um die Anwendungsdomäne mit einem Anwendungspfad zu initialisieren.  
   
     > [!IMPORTANT]
     >  In diesem Codebeispiel wird der Einfachheit halber der aktuelle Ordner verwendet. Um Code auszuführen, der eigentlich aus dem Internet stammt, verwenden Sie einen separaten Ordner für den nicht vertrauenswürdigen Code, wie in [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md) beschrieben.  
@@ -72,7 +72,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
   
-3.  Erstellen Sie die Anwendungsdomäne, indem Sie die Setupinformationen der Anwendungsdomäne und den Berechtigungssatz für alle Assemblys angeben, die in der Anwendungsdomäne ausgeführt werden.  
+3. Erstellen Sie die Anwendungsdomäne, indem Sie die Setupinformationen der Anwendungsdomäne und den Berechtigungssatz für alle Assemblys angeben, die in der Anwendungsdomäne ausgeführt werden.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
@@ -89,7 +89,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
   
 ##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>So erstellen Sie eine Anwendungsdomäne mit teilweiser Vertrauenswürdigkeit und eingeschränktem Memberzugriff  
   
-1.  Erstellen Sie ein neues <xref:System.Security.Permissions.ReflectionPermission>-Objekt mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA)-Flag, und fügen Sie die Berechtigung mit der <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType>-Methode dem Berechtigungssatz hinzu.  
+1. Erstellen Sie ein neues <xref:System.Security.Permissions.ReflectionPermission>-Objekt mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (RMA)-Flag, und fügen Sie die Berechtigung mit der <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType>-Methode dem Berechtigungssatz hinzu.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#7)]
      [!code-vb[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#7)]  
@@ -99,7 +99,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
     > [!NOTE]
     >  Das Feature des eingeschränkten Memberzugriffs ist ein Feature anonym gehosteter dynamischer Methoden. Wenn gewöhnliche dynamische Methoden die JIT-Sichtbarkeitsüberprüfungen überspringen, erfordert der ausgegebene Code volle Vertrauenswürdigkeit.  
   
-2.  Erstellen Sie die Anwendungsdomäne, indem Sie die Setupinformationen für die Anwendungsdomäne und den Berechtigungssatz angeben.  
+2. Erstellen Sie die Anwendungsdomäne, indem Sie die Setupinformationen für die Anwendungsdomäne und den Berechtigungssatz angeben.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#8)]
      [!code-vb[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#8)]  
@@ -110,24 +110,24 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
   
 #### <a name="to-define-and-execute-a-method-in-an-application-domain"></a>So definieren Sie eine Methode in einer Anwendungsdomäne und führen sie aus  
   
-1.  Definieren Sie eine Klasse, die sich von <xref:System.MarshalByRefObject> ableitet. Auf diese Weise können Sie Instanzen der Klasse in anderen Anwendungsdomänen erstellen und Methoden über die Grenzen der Anwendungsdomäne hinweg aufrufen. Die Klasse in diesem Beispiel hat den Namen `Worker`.  
+1. Definieren Sie eine Klasse, die sich von <xref:System.MarshalByRefObject> ableitet. Auf diese Weise können Sie Instanzen der Klasse in anderen Anwendungsdomänen erstellen und Methoden über die Grenzen der Anwendungsdomäne hinweg aufrufen. Die Klasse in diesem Beispiel hat den Namen `Worker`.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#10)]
      [!code-vb[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#10)]  
   
-2.  Definieren Sie eine öffentliche Methode, die den Code enthält, den Sie ausführen möchten. In diesem Beispiel gibt der Code eine einfache dynamische Methode aus, erstellt einen Delegaten zum Ausführen der Methode und ruft den Delegaten auf.  
+2. Definieren Sie eine öffentliche Methode, die den Code enthält, den Sie ausführen möchten. In diesem Beispiel gibt der Code eine einfache dynamische Methode aus, erstellt einen Delegaten zum Ausführen der Methode und ruft den Delegaten auf.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#11)]
      [!code-vb[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#11)]  
   
-3.  Rufen Sie im Hauptprogramm den Anzeigenamen der Assembly ab. Dieser Name wird verwendet, wenn Sie Instanzen der `Worker`-Klasse in der Sandbox-Anwendungsdomäne erstellen.  
+3. Rufen Sie im Hauptprogramm den Anzeigenamen der Assembly ab. Dieser Name wird verwendet, wenn Sie Instanzen der `Worker`-Klasse in der Sandbox-Anwendungsdomäne erstellen.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#14)]
      [!code-vb[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#14)]  
   
-4.  Erstellen Sie im Hauptprogramm eine Sandbox-Anwendungsdomäne, wie in der [ersten Prozedur](#Setting_up) dieser exemplarischen Vorgehensweise beschrieben. Sie müssen dem `Internet`-Berechtigungssatz keine Berechtigungen hinzufügen, da die `SimpleEmitDemo`-Methode nur öffentliche Methoden verwendet.  
+4. Erstellen Sie im Hauptprogramm eine Sandbox-Anwendungsdomäne, wie in der [ersten Prozedur](#Setting_up) dieser exemplarischen Vorgehensweise beschrieben. Sie müssen dem `Internet`-Berechtigungssatz keine Berechtigungen hinzufügen, da die `SimpleEmitDemo`-Methode nur öffentliche Methoden verwendet.  
   
-5.  Erstellen Sie im Hauptprogramm eine Instanz der `Worker`-Klasse in der Sandbox-Anwendungsdomäne.  
+5. Erstellen Sie im Hauptprogramm eine Instanz der `Worker`-Klasse in der Sandbox-Anwendungsdomäne.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#12)]
      [!code-vb[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#12)]  
@@ -137,7 +137,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
     > [!NOTE]
     >  Wenn Sie diesen Code in Visual Studio verwenden, müssen Sie den Namen der Klasse ändern, sodass der Namespace enthalten ist. Standardmäßig ist der Namespace der Name des Projekts. Wenn das Projekt z. B. "PartialTrust" heißt, muss der Klassenname "PartialTrust.Worker" lauten.  
   
-6.  Fügen Sie Code zum Aufrufen der `SimpleEmitDemo`-Methode hinzu. Der Aufruf wird über die Grenze der Anwendungsdomäne hinweg gemarshallt, und der Code wird in der Sandbox-Anwendungsdomäne ausgeführt.  
+6. Fügen Sie Code zum Aufrufen der `SimpleEmitDemo`-Methode hinzu. Der Aufruf wird über die Grenze der Anwendungsdomäne hinweg gemarshallt, und der Code wird in der Sandbox-Anwendungsdomäne ausgeführt.  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#13)]
      [!code-vb[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#13)]  
@@ -169,7 +169,7 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     Die Einschränkung besteht darin, dass die anonym gehostete dynamische Methode nur auf private Daten in Assemblys zugreifen kann, die die gleiche oder eine geringere Vertrauensebene als die ausgebende Assembly aufweisen. Wenn die dynamische Methode z. B. mit Internetvertrauenswürdigkeit ausgeführt wird, kann sie auf private Daten in Assemblys zugreifen, die ebenfalls mit Internetvertrauenswürdigkeit ausgeführt werden, jedoch nicht auf private Daten in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Assemblys. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Assemblys werden im globalen Assemblycache installiert und sind immer voll vertrauenswürdig.  
+     Die Einschränkung besteht darin, dass die anonym gehostete dynamische Methode nur auf private Daten in Assemblys zugreifen kann, die die gleiche oder eine geringere Vertrauensebene als die ausgebende Assembly aufweisen. Wenn die dynamische Methode z. B. mit Internetvertrauenswürdigkeit ausgeführt wird, kann sie auf private Daten in Assemblys zugreifen, die ebenfalls mit Internetvertrauenswürdigkeit ausgeführt werden, jedoch nicht auf private Daten in [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Assemblys. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] -Assemblys werden im globalen Assemblycache installiert und sind immer voll vertrauenswürdig.  
   
      Anonym gehostete dynamische Methoden können diese eingeschränkte Fähigkeit zum Überspringen von JIT-Sichtbarkeitsprüfungen nur verwenden, wenn die Hostanwendung <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>-Flag erteilt. Diese Berechtigung wird angefordert, wenn die Methode aufgerufen wird.  
   
@@ -212,5 +212,6 @@ Die Reflektionsausgabe verwendet für volle oder teilweise Vertrauenswürdigkeit
 -   Wenn Sie dieses Codebeispiel in Visual Studio verwenden, müssen Sie den Namespace in den Namen der Klasse einbeziehen, wenn Sie diese an die <xref:System.AppDomain.CreateInstanceAndUnwrap%2A>-Methode übergeben. Standardmäßig ist der Namespace der Name des Projekts. Wenn das Projekt z. B. "PartialTrust" heißt, muss der Klassenname "PartialTrust.Worker" lauten.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Sicherheitsaspekte bei der Reflektionsausgabe](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

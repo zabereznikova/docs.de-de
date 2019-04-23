@@ -30,10 +30,10 @@ helpviewer_keywords:
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
 ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298889"
 ---
 # <a name="xaml-syntax-in-detail"></a>Ausführliche Erläuterung der XAML-Syntax
@@ -316,7 +316,7 @@ In diesem Thema definiert die Bedingungen, die zum beschreiben die Elemente der 
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über XAML (WPF)](xaml-overview-wpf.md)
-- [XAML-Namespace (x:) Sprachfunktionen](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML-Namespace (x:)) Sprachfunktionen](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF-XAML-Erweiterungen](wpf-xaml-extensions.md)
 - [Übersicht über Abhängigkeitseigenschaften](dependency-properties-overview.md)
 - [TypeConverter und XAML](typeconverters-and-xaml.md)

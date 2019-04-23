@@ -29,10 +29,10 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296120"
 ---
 # <a name="wpf-windows-overview"></a>Übersicht über WPF-Fenster
@@ -108,9 +108,9 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Konfigurieren einer Fensterdefinition für MSBuild  
  Wie der Implementierung des Fensters bestimmt dessen Konfiguration für [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Für ein Fenster, das definiert ist, mit [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup und CodeBehind:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup-Dateien werden als konfiguriert [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page` Elemente.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Markup-Dateien werden als konfiguriert [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` Elemente.  
   
--   Code-Behind-Dateien werden als konfiguriert [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile` Elemente.  
+-   Code-Behind-Dateien werden als konfiguriert [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` Elemente.  
   
  Dies wird im folgenden gezeigt [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] Projektdatei.  
   
@@ -257,7 +257,7 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
 
- Die <xref:System.Windows.Window.Closing> -Ereignishandler übergeben wird eine <xref:System.ComponentModel.CancelEventArgs>, implementiert die `Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A> -Eigenschaft, die Sie, um festlegen `true` zum Schließen ein Fensters zu verhindern.  
+ Die <xref:System.Windows.Window.Closing> -Ereignishandler übergeben wird eine <xref:System.ComponentModel.CancelEventArgs>, implementiert die `Boolean` <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> -Eigenschaft, die Sie, um festlegen `true` zum Schließen ein Fensters zu verhindern.  
   
  Wenn <xref:System.Windows.Window.Closing> nicht behandelt, oder behandelt, aber nicht abgebrochen, wird das Fenster zu schließen. Unmittelbar vor der eigentlichen Schließen des Fensters <xref:System.Windows.Window.Closed> ausgelöst wird. An dieser Stelle kann das Schließen des Fensters nicht verhindert werden.  
   
@@ -325,13 +325,13 @@ Benutzer interagieren mit Windows Presentation Foundation (WPF), eigenständige 
   
  Wenn Sie möchten die Breite und Höhe des Fensters, um eine Größe aufweisen, die auf die Größe des Fensters entspricht den Inhalt, können Sie verwenden die <xref:System.Windows.Window.SizeToContent%2A> -Eigenschaft, die in den folgenden Werten:  
   
--   <xref:System.Windows.SizeToContent.Manual>sein. Keine Auswirkung (Standard).  
+-   <xref:System.Windows.SizeToContent.Manual>. Keine Auswirkung (Standard).  
   
--   <xref:System.Windows.SizeToContent.Width>sein. Anpassen an die Breite Inhalts dieselbe Wirkung hat wie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
+-   <xref:System.Windows.SizeToContent.Width>. Anpassen an die Breite Inhalts dieselbe Wirkung hat wie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
   
--   <xref:System.Windows.SizeToContent.Height>sein. Anpassen an die Höhe Inhalts dieselbe Wirkung hat wie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts.  
+-   <xref:System.Windows.SizeToContent.Height>. Anpassen an die Höhe Inhalts dieselbe Wirkung hat wie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts.  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>sein. Anpassen an die Breite des Inhalts und die Höhe dieselbe Wirkung hat wie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts sowie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
+-   <xref:System.Windows.SizeToContent.WidthAndHeight>. Anpassen an die Breite des Inhalts und die Höhe dieselbe Wirkung hat wie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinHeight%2A> und <xref:System.Windows.FrameworkElement.MaxHeight%2A> auf die Höhe des Inhalts sowie das Festlegen sowohl <xref:System.Windows.FrameworkElement.MinWidth%2A> und <xref:System.Windows.FrameworkElement.MaxWidth%2A> auf die Breite des Inhalts.  
   
  Im folgenden Beispiel wird ein Fenster dass die Größe automatisch an seinen Inhalt vertikal und horizontal an, wenn es zuerst angezeigt wird.  
   
