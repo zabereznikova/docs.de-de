@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie Ihre erste .NET Core-Anwendung in C# mithilfe
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: d23f095454a24d67c2b9fb7a0f090fb08ff9e8bb
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890552"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613446"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Erste Schritte mit C# und Visual Studio Code
 
@@ -93,6 +93,7 @@ Um weitere Unterstützung beim Setup zu erhalten, können Sie sich auch ein kurz
 1. Um eine neue Klasse hinzuzufügen, klicken Sie mit der rechten Maustaste auf den VSCode-Explorer, und wählen Sie **Neue Datei** aus. Dadurch wird dem Ordner, den Sie in Visual Studio Code geöffnet haben, eine neue Datei hinzugefügt.
 2. Nennen Sie Ihre Datei `MyClass.cs`. Sie müssen sie mit der `.cs`-Erweiterung speichern, damit sie als Csharp-Datei erkannt wird.
 3. Fügen Sie den folgenden Code zum Erstellen Ihrer ersten Klasse hinzu. Achten Sie darauf, den richtigen Namespace einzubeziehen, damit Sie von Ihrer `Program.cs`-Datei darauf verweisen können.
+
 ``` csharp
 using System;
 
@@ -127,6 +128,7 @@ namespace HelloWorld
 ```
 
 5. Speichern Sie die Änderungen, und führen Sie das Programm erneut aus. Die neue Nachricht sollte mit der angefügten Zeichenfolge angezeigt werden.
+
 ```console
 > dotnet run
 Hello World! Happy coding!

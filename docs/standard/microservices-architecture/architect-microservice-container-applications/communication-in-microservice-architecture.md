@@ -4,12 +4,12 @@ description: Erkunden Sie verschiedene Kommunikationsmöglichkeiten zwischen Mic
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4b57607897e42ff68ff7566120bc3c932040a2a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 364bd4eb82907fcf0fbcc850eca839f676a2dbf8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466191"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613238"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Kommunikation in einer Microservicearchitektur
 
@@ -90,10 +90,10 @@ Die Verwendung von HTTP-REST-Diensten als Interface Definition Language bietet e
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Martin Fowler. Richardson Maturity Model** (Beschreibung des REST-Modells). \
-  [https://martinfowler.com/articles/richardsonMaturityModel.html](https://martinfowler.com/articles/richardsonMaturityModel.html)
+  <https://martinfowler.com/articles/richardsonMaturityModel.html>
 
 - **Swagger** (offizielle Website). \
-  [https://swagger.io/](https://swagger.io/)
+  <https://swagger.io/>
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>Auf HTTP basierende Push- und Echtzeitkommunikation
 

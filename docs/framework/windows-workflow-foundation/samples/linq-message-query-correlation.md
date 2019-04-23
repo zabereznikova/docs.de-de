@@ -3,11 +3,11 @@ title: LINQ-Meldungsabfragekorrelation
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
 ms.openlocfilehash: cc13696cfd8eb2dcdf22fdc067518c8bd55ca32d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59327671"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973316"
 ---
 # <a name="linq-message-query-correlation"></a>LINQ-Meldungsabfragekorrelation
 Dieses Beispiel veranschaulicht, wie die inhaltsbasierte Korrelation mithilfe einer benutzerdefinierten <xref:System.ServiceModel.Dispatcher.MessageQuery>-Implementierung im Gegensatz zu der vom System bereitgestellten <xref:System.ServiceModel.XPathMessageQuery> erfolgt.  

@@ -3,11 +3,11 @@ title: Ausnahmen
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
 ms.openlocfilehash: 64a8338133c265ee1b4c7acbd9b4d168318b66a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145989"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976065"
 ---
 # <a name="exceptions"></a>Ausnahmen
 Die <xref:System.Activities.Statements.TryCatch>-Aktivität kann zur Behandlung von Ausnahmen verwendet werden, die während der Ausführung eines Workflows ausgelöst werden. Diese Ausnahmen können behandelt oder mit der <xref:System.Activities.Statements.Rethrow>-Aktivität erneut ausgelöst werden. Aktivitäten im Abschnitt <xref:System.Activities.Statements.TryCatch.Finally%2A> werden nach Abschluss des Abschnitts <xref:System.Activities.Statements.TryCatch.Try%2A> oder des Abschnitts <xref:System.Activities.Statements.TryCatch.Catches%2A> ausgeführt. Gehostete Workflows, indem eine <xref:System.Activities.WorkflowApplication> Instanz können Sie auch die <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> Ereignishandler zur Behandlung von Ausnahmen, die nicht vom behandelt werden eine <xref:System.Activities.Statements.TryCatch> Aktivität.  

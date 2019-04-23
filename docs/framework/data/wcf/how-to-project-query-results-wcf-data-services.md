@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: 474ac625-8770-43ba-8320-d3315ea9530f
 ms.openlocfilehash: 4b0646c2ad45a86691b86b1dd5f112f598ee2dfd
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59518193"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974790"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>Vorgehensweise: Projekt-Abfrageergebnissen (WCF Data Services)
 Die Projektion stellt einen Mechanismus bereit, mit dem sich die von einer Abfrage zurückgegebene Datenmenge reduzieren lässt, indem angegeben wird, dass nur bestimmte Eigenschaften einer Entität in der Antwort zurückgegeben werden sollen. Durchführen können Projektionen auf den Ergebnissen der ein [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Abfragen, indem Sie entweder die `$select` -Abfrageoption oder mithilfe der [auswählen](~/docs/csharp/language-reference/keywords/select-clause.md) Klausel ([auswählen](~/docs/visual-basic/language-reference/queries/select-clause.md) in Visual Basic) in einer LINQ-Abfrage. Weitere Informationen finden Sie unter [Abfragen des Datendiensts](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  

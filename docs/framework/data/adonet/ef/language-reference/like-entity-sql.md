@@ -3,10 +3,10 @@ title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
 ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302256"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
@@ -32,7 +32,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
  Legt fest, dass das Ergebnis von LIKE negiert werden soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
- `true` Wenn die `string` mit dem Muster übereinstimmt, andernfalls `false`.  
+ `true`, wenn `string` mit dem Muster übereinstimmt, andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Ausdrücke, die den LIKE-Operator werden im Wesentlichen die gleiche Weise wie Ausdrücke ausgewertet, die auf Gleichheit als Filterkriterium verwenden. Allerdings [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Ausdrücke, die den LIKE-Operator verwenden können sowohl Literale als auch Platzhalterzeichen enthalten.  

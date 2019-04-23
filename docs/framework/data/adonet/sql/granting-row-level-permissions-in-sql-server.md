@@ -2,12 +2,12 @@
 title: Gewähren zeilenspezifischer Berechtigungen in SQL Server
 ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
-ms.openlocfilehash: acd4a8962e0c4cd3504b9912a4de66d2a461805a
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: 891b5114551c5784b11504f2463525087125131f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844768"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973082"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>Gewähren zeilenspezifischer Berechtigungen in SQL Server
 
@@ -23,35 +23,35 @@ Das folgende Beispiel beschreibt, wie die zeilenbasierte Filterung auf der Grund
 
 - Aktivieren der zeilenbasierten Filterung:
 
-    - Bei Verwendung von SQL Server 2016 oder höher oder [Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/)erstellen Sie eine Sicherheitsrichtlinie, die der Tabelle ein Prädikat hinzufügt, das die Zeilen auf diejenigen einschränkt, die entweder mit dem aktuellen Datenbankbenutzer (mithilfe der integrierten CURRENT_USER()-Funktion) oder mit dem aktuellen Anmeldenamen (mithilfe der integrierten SUSER_SNAME()-Funktion) übereinstimmen:
+  - Bei Verwendung von SQL Server 2016 oder höher oder [Azure SQL-Datenbank](https://docs.microsoft.com/azure/sql-database/)erstellen Sie eine Sicherheitsrichtlinie, die der Tabelle ein Prädikat hinzufügt, das die Zeilen auf diejenigen einschränkt, die entweder mit dem aktuellen Datenbankbenutzer (mithilfe der integrierten CURRENT_USER()-Funktion) oder mit dem aktuellen Anmeldenamen (mithilfe der integrierten SUSER_SNAME()-Funktion) übereinstimmen:
 
-        ```sql
-        CREATE SCHEMA Security
-        GO
+      ```sql
+      CREATE SCHEMA Security
+      GO
 
-        CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)
-            RETURNS TABLE
-            WITH SCHEMABINDING
-        AS
-            RETURN SELECT 1 AS accessResult
-            WHERE @UserName = SUSER_SNAME()
-        GO
+      CREATE FUNCTION Security.userAccessPredicate(@UserName sysname)
+          RETURNS TABLE
+          WITH SCHEMABINDING
+      AS
+          RETURN SELECT 1 AS accessResult
+          WHERE @UserName = SUSER_SNAME()
+      GO
 
-        CREATE SECURITY POLICY Security.userAccessPolicy
-            ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,
-            ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable
-        GO
-        ```
+      CREATE SECURITY POLICY Security.userAccessPolicy
+          ADD FILTER PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable,
+          ADD BLOCK PREDICATE Security.userAccessPredicate(UserName) ON dbo.MyTable
+      GO
+      ```
 
-    - Wenn Sie eine Vorgängerversion von SQL Server 2016 verwenden, können Sie eine ähnliche Funktionalität mithilfe einer Sicht erzielen:
+  - Wenn Sie eine Vorgängerversion von SQL Server 2016 verwenden, können Sie eine ähnliche Funktionalität mithilfe einer Sicht erzielen:
 
-        ```sql
-        CREATE VIEW vw_MyTable
-        AS
-            RETURN SELECT * FROM MyTable
-            WHERE UserName = SUSER_SNAME()
-        GO
-        ```
+      ```sql
+      CREATE VIEW vw_MyTable
+      AS
+          RETURN SELECT * FROM MyTable
+          WHERE UserName = SUSER_SNAME()
+      GO
+      ```
 
 - Erstellen Sie gespeicherte Prozeduren, um Daten auszuwählen, einzufügen, zu aktualisieren und zu löschen. Wenn die Filterung mithilfe einer Sicherheitsrichtlinie durchgeführt wird, sollten die gespeicherten Prozeduren diese Vorgänge direkt mit der Basistabelle durchführen. Wenn die Filterung mithilfe einer Sicht durchgeführt wird, sollten die gespeicherten Prozeduren stattdessen mit der Sicht arbeiten. Die Sicherheitsrichtlinie oder Sicht filtert die durch Benutzerabfragen zurückgegebenen oder geänderten Zeilen automatisch, und die gespeicherte Prozedur bietet eine stärkere Sicherheitsgrenze, um zu verhindern, dass Benutzer mit direktem Zugriff auf die Abfragen erfolgreich Abfragen ausführen, die die Existenz gefilterter Daten ableiten können.
 

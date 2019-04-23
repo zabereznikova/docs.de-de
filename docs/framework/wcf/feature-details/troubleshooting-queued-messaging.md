@@ -3,11 +3,11 @@ title: Problembehandlung bei Nachrichtenwarteschlangen
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
 ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59322042"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59977287"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Problembehandlung bei Nachrichtenwarteschlangen
 Dieser Abschnitt enthält häufig gestellte Fragen und Hilfe zur Problembehandlung für die Verwendung von Warteschlangen in Windows Communication Foundation (WCF).  

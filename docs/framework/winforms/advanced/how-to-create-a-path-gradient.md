@@ -9,19 +9,21 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.openlocfilehash: a04465c31b160f97568ed88c434e7e3a5126ebb6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186094"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975753"
 ---
 # <a name="how-to-create-a-path-gradient"></a>Vorgehensweise: Erstellen eines linearen Pfadfarbverlaufs
 Die <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasse können Sie die Möglichkeit, die Sie ausfüllen einer Form nach und nach Ändern von Farben anpassen. Beispielsweise können Sie eine Farbe für den Mittelpunkt der einen Pfad und eine andere Farbe für die Grenze eines Pfads angeben. Sie können auch separate Farben für die einzelnen mehrere Punkte entlang der Grenzen eines Pfads angeben.  
   
 > [!NOTE]
->  In [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], ein Pfad ist eine Sequenz von Linien und Kurven, die von verwaltet eine <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt. Weitere Informationen zu [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Pfaden finden Sie unter [Grafikpfade in GDI +](graphics-paths-in-gdi.md) und [Constructing und zeichnen Pfade](constructing-and-drawing-paths.md).  
-  
+>  In GDI +, ist ein Pfad eine Sequenz von Linien und Kurven, die von verwaltet eine <xref:System.Drawing.Drawing2D.GraphicsPath> Objekt. Weitere Informationen zu GDI +-Pfaden finden Sie unter [Grafikpfade in GDI +](graphics-paths-in-gdi.md) und [Constructing und zeichnen Pfade](constructing-and-drawing-paths.md).  
+
+In die Beispielen in diesem Artikel werden die Methoden, die von eines Steuerelements aufgerufen werden <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.  
+
 ### <a name="to-fill-an-ellipse-with-a-path-gradient"></a>Um eine Ellipse mit eines linearen Pfadfarbverlaufs zu füllen.  
   
 -   Im folgenden Beispiel wird eine Ellipse mit der ein Pinsel mit Farbverlauf. Die Farbe in der Mitte auf Blau festgelegt und die Mittelpunktfarbe Hellblau festgelegt. Die folgende Abbildung zeigt die ausgefüllte Ellipse.  
@@ -30,7 +32,7 @@ Die <xref:System.Drawing.Drawing2D.PathGradientBrush> Klasse können Sie die Mö
   
      Standardmäßig wird ein Pinsel mit Farbverlauf außerhalb der Grenzen des Pfads nicht erweitert. Wenn Sie Pfadfarbverlaufs verwenden, um einer Figur zu füllen, die über die Begrenzung des Pfads hinausgeht, wird der Bereich des Bildschirms außerhalb des Pfads wird nicht aufgefüllt.  
   
-     Die folgende Abbildung zeigt, was geschieht, wenn Sie ändern, die <xref:System.Drawing.Graphics.FillEllipse%2A> rufen Sie in den folgenden Code zur `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
+     Die folgende Abbildung zeigt, was geschieht, wenn Sie ändern, die <xref:System.Drawing.Graphics.FillEllipse%2A?displayProperty=nameWithType> rufen Sie in den folgenden Code zur `e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
      ![Farbverlaufspfad außerhalb der Grenzen des Pfads erweitert.](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
