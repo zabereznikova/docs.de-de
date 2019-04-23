@@ -17,10 +17,10 @@ helpviewer_keywords:
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
 ms.openlocfilehash: e074a487c39dfaf1c4704f9dadf7ed8e430fb630
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172548"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
@@ -36,7 +36,7 @@ Anwendungen können die Dienste Transmission Control Protocol (TCP) und User Dat
 
 - [Verwenden von TCP-Diensten](../../../docs/framework/network-programming/using-tcp-services.md)
 - [Verwenden von UDP-Diensten](../../../docs/framework/network-programming/using-udp-services.md)
-- [Verwenden von Streams im Netzwerk](../../../docs/framework/network-programming/using-streams-on-the-network.md)
+- [Verwenden von Datenströmen im Netzwerk](../../../docs/framework/network-programming/using-streams-on-the-network.md)
 - [Verwenden eines asynchronen Serversockets](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
 - [Verwenden von asynchronen Clientsockets](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)
 - [Verwenden von Anwendungsprotokollen](../../../docs/framework/network-programming/using-application-protocols.md)

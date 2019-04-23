@@ -10,10 +10,10 @@ helpviewer_keywords:
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
 ms.openlocfilehash: 599ef73e2e8c772559badb3a562a12f8311e9c60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172067"
 ---
 # <a name="visual-layer-programming"></a>Programmierung auf visueller Ebene
@@ -23,7 +23,7 @@ Die <xref:System.Windows.Media.Visual> Objekt ist ein zentrales [!INCLUDE[TLA2#t
  [Treffertests in der visuellen Ebene](hit-testing-in-the-visual-layer.md)  
  [Verwenden von DrawingVisual-Objekten](using-drawingvisual-objects.md)  
  [Tutorial: Hosten von visuellen Objekten in einer Win32-Anwendung](tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [Gewusst wie-Themen](visual-layer-programming-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](visual-layer-programming-how-to-topics.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

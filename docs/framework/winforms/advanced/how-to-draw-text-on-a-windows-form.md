@@ -10,10 +10,10 @@ helpviewer_keywords:
 - text [Windows Forms], drawing
 ms.assetid: 5d2447a9-21a1-4adc-b954-5516f2bb9b2c
 ms.openlocfilehash: ae7749deedba03f0a63bb74099d071d5da4fe27e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172977"
 ---
 # <a name="how-to-draw-text-on-a-windows-form"></a>Vorgehensweise: Zeichnen von Text in einem Windows Form
@@ -40,5 +40,5 @@ Im folgenden Codebeispiel wird veranschaulicht, wie Sie mit der <xref:System.Dra
 - <xref:System.Drawing.StringFormatFlags>
 - <xref:System.Windows.Forms.TextFormatFlags>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
-- [Erste Schritte mit der Grafikprogrammierung](getting-started-with-graphics-programming.md)
+- [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)
 - [Vorgehensweise: Zeichnen von Text mit GDI](how-to-draw-text-with-gdi.md)

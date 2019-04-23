@@ -10,23 +10,23 @@ helpviewer_keywords:
 - text wrapping [WPF]
 ms.assetid: 205099d9-2551-4302-a25e-a15af9f67e04
 ms.openlocfilehash: 48e439719afa2426b5d8f822c621080cdc32514e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174043"
 ---
 # <a name="how-to-create-a-control-that-has-an-access-key-and-text-wrapping"></a>Vorgehensweise: Erstellen eines Steuerelements, das über eine Tastenkombination und Textumbruch verfügt
 Diese Beispiel veranschaulicht, wie Sie ein Steuerelement erstellen, das über eine Tastenkombination verfügt und das Umbrechen von Text unterstützt. Im Beispiel wird eine <xref:System.Windows.Controls.Label> Steuerelement zur Veranschaulichung dieser Konzepte.  
   
 ## <a name="example"></a>Beispiel  
- **Umbrechen von Text zur Bezeichnung hinzufügen**  
+ **Umbrechen des Texts einer Bezeichnung**  
   
  Die <xref:System.Windows.Controls.Label> Umbrechen von Text-Steuerelement nicht unterstützt. Wenn sich eine Bezeichnung über mehrere Zeilen erstrecken soll, können Sie ein anderes Element verschachteln, das das Umbrechen von Text unterstützt, und es innerhalb der Bezeichnung platzieren. Das folgende Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Controls.TextBlock> um eine Bezeichnung zu erstellen, die mehrere Zeilen Text umbrochen wird.  
   
  [!code-xaml[LabelSnippet#5](~/samples/snippets/csharp/VS_Snippets_Wpf/LabelSnippet/CS/Pane1.xaml#5)]  
   
- **Fügen Sie eine Tastenkombination und Textumbruch zu einer Bezeichnung**  
+ **Hinzufügen von Textumbruch und einer Tastenkombination zu einer Bezeichnung**  
   
  Bei Bedarf eine <xref:System.Windows.Controls.Label> , die über eine Tastenkombination (mnemonisches Zeichen) verfügt, verwenden Sie die <xref:System.Windows.Controls.AccessText> Elements in der <xref:System.Windows.Controls.Label>.  
   

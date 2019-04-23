@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
 ms.openlocfilehash: d3562122ab578f5f622d439c17d86cdb64a1e573
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172119"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Data Services-Ressourcen
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Einführende Themen finden Sie in den folgenden Speicherorten. Viele dieser Themen enthalten auch Links zu verwandten Themen, die ausführlichere Informationen enthalten.  
+Einführende Themen zu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] finden Sie unter den folgenden Links. Viele dieser Themen enthalten auch Links zu verwandten Themen, die ausführlichere Informationen enthalten.  
   
  [Übersicht](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
  Bietet eine Übersicht über die in [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] verfügbaren Features und Funktionen.  
@@ -44,10 +44,10 @@ ms.locfileid: "59172119"
  [OData-Blog](https://go.microsoft.com/fwlink/?LinkId=185868)  
  Blog, enthält Diskussionen zu [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] programmieren.  
   
- [Developer Center für Datenzugriff und -speicherung](https://go.microsoft.com/fwlink/?LinkId=91903)  
+ [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink/?LinkId=91903)  
  Zentraler Ort für Informationen und Ressourcen zum Arbeiten mit Daten.  
   
- [Gewusst wie: Datenplattform Videos: WCF Data Services-Reihe](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ [Data-Plattform durchführen? Videos: WCF Data Services-Reihe](https://go.microsoft.com/fwlink/?LinkId=124600)  
  Enthält eine Reihe von Videos, die die Erstellung von Datendiensten und den Zugriff darauf veranschaulichen.  
   
  [Übersicht: WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
