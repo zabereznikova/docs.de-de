@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da36cfb86aae52af90451e92b8b17088e29481da
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 314977cb55d9c927ddf96a9279ebb83d8f69e936
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481754"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200921"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Type Library Importer-Tool)
 Das Type Library Importer-Tool konvertiert die Typdefinitionen einer COM-Typbibliothek in äquivalente Definitionen einer Common Language Runtime-Assembly. Die Ausgabe von "Tlbimp.exe" besteht aus einer binären Datei (einer Assembly), die Laufzeitmetadaten für die in der ursprünglichen Typbibliothek definierten Typen enthält. Diese Datei können Sie mit Tools wie [Ildasm.exe](ildasm-exe-il-disassembler.md) überprüfen.  
@@ -95,7 +95,7 @@ tlbimp myTest.tlb
 tlbimp  myTest.tlb  /out:myTest.dll  
 ```  
   
- Durch folgenden Befehl wird eine Assembly generiert, die den Namen der Typbibliothek, die von `MyModule.dll\1` angegeben wurde, und die Erweiterung „.dll“ aufweist. `MyModule.dll\1` muss sich im aktuellen Verzeichnis befinden.  
+ Durch folgenden Befehl wird eine Assembly generiert, die den Namen der Typbibliothek, die von `MyModule.dll\1` angegeben wurde, und die Erweiterung „.dll“ aufweist. `MyModule.dll\1` muss im aktuellen Verzeichnis befinden.  
   
 ```  
 tlbimp MyModule.dll\1  
@@ -126,11 +126,12 @@ void SomeMethod(out bool x);
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Extras](index.md)
+
+- [Tools](index.md)
 - [Tlbexp.exe (Type Library Exporter-Tool)](tlbexp-exe-type-library-exporter.md)
-- [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](../interop/importing-a-type-library-as-an-assembly.md)
+- [Importieren einer Typbibliothek als Assembly](../interop/importing-a-type-library-as-an-assembly.md)
 - [Zusammenfassung: Konvertieren einer Typbibliothek in eine Assembly](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
-- [Ildasm.exe (IL-Disassembler)](ildasm-exe-il-disassembler.md)
+- [Ildasm.exe (IL Disassembler)](ildasm-exe-il-disassembler.md)
 - [Sn.exe (Strong Name-Tool)](sn-exe-strong-name-tool.md)
 - [Assemblys mit starkem Namen](../app-domains/strong-named-assemblies.md)
 - [Attribute zum Importieren von Typbibliotheken in Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y6a7ak23(v=vs.100))

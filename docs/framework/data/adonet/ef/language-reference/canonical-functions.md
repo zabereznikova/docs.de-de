@@ -3,10 +3,10 @@ title: Kanonische Funktionen
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
 ms.openlocfilehash: 380c1dbcf86d8bbb844c2b226697d72d00c3e81a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202936"
 ---
 # <a name="canonical-functions"></a>Kanonische Funktionen
@@ -29,7 +29,7 @@ In diesem Abschnitt werden die von allen Datenanbietern unterstützten und in al
  [Aggregieren kanonischer Funktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)  
  Erläutert die kanonischen Aggregatfunktionen von [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
- [Kanonische Mathematikfunktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
+ [Mathematische kanonische Funktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)  
  Erläutert die kanonischen mathematischen Funktionen von [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
  [Kanonische Zeichenfolgefunktionen](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)  

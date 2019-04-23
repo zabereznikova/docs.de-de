@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
 ms.openlocfilehash: dc516f0eb1cfcbac6662497eb4019041eefec2a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59200583"
 ---
 # <a name="how-to-specify-a-custom-popup-position"></a>Vorgehensweise: Angeben einer benutzerdefinierten Popup-Position
@@ -36,4 +36,4 @@ Dieses Beispiel zeigt, wie eine benutzerdefinierte Position für ein <xref:Syste
 
 - <xref:System.Windows.Controls.Primitives.Popup>
 - [Übersicht über Popups](popup-overview.md)
-- [Gewusst wie-Themen](popup-how-to-topics.md)
+- [Themen zu Vorgehensweisen](popup-how-to-topics.md)

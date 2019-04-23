@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
 ms.openlocfilehash: ca52b725f5fad4b591b95bf6a6dd778c7a72d235
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202042"
 ---
 # <a name="wcf-data-services-overview"></a>Übersicht über WCF Data Services
@@ -30,9 +30,9 @@ ms.locfileid: "59202042"
  Beim Veröffentlichen von Daten als ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] basiert auf andere vorhandenen Internetfunktionen für Vorgänge wie Zwischenspeichern und Authentifizierung. Um dies zu erreichen [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] kann in vorhandene Hostinganwendungen und Dienste wie ASP.NET, Windows Communication Foundation (WCF), und Internet Information Services (IIS) integriert werden.  
   
 ## <a name="storage-independence"></a>Speicherunabhängigkeit  
- Obwohl Ressourcen auf der Grundlage eines Entitätsbeziehungsmodells adressiert werden, macht [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)][!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feeds unabhängig von der zugrunde liegenden Datenquelle verfügbar. Nachdem [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] eine HTTP-Anforderung an eine Ressource akzeptiert, die ein URI identifiziert, wird die Anforderung deserialisiert, und eine Darstellung dieser Anforderung wird an einen [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Anbieter übergeben. Dieser Anbieter übersetzt die Anforderung in ein datenquellenspezifisches Format und führt die Anforderung für die zugrunde liegende Datenquelle aus. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] erreicht speicherunabhängigkeit durch Trennung des konzeptionellen Modells, das von vorgeschriebene Ressourcen adressiert [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] aus dem speziellen Schema der zugrunde liegenden Datenquelle.  
+ Obwohl Ressourcen auf der Grundlage eines Entitätsbeziehungsmodells adressiert werden, macht [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)][!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-Feeds unabhängig von der zugrunde liegenden Datenquelle verfügbar. Nachdem [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] eine HTTP-Anforderung an eine Ressource akzeptiert, die ein URI identifiziert, wird die Anforderung deserialisiert, und eine Darstellung dieser Anforderung wird an einen [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]-Anbieter übergeben. Dieser Anbieter übersetzt die Anforderung in ein datenquellenspezifisches Format und führt die Anforderung für die zugrunde liegende Datenquelle aus. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] erreicht Speicherunabhängigkeit durch das Trennen des konzeptionellen Modells, das von [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] vorgeschriebene Ressourcen aus dem jeweiligen Schema der zugrunde liegenden Datenquelle adressiert.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] integriert in ADO.NET Entity Framework ermöglichen es Ihnen, Datendienste zu erstellen, die relationale Daten verfügbar machen. Sie können die Entity Data Model-Tools verwenden, um ein Datenmodell zu erstellen, das adressierbare Ressourcen als Entitäten enthält, und gleichzeitig die Zuordnung zwischen diesem Modell und den Tabellen in der zugrunde liegenden Datenbank definieren. Weitere Informationen finden Sie unter [Entity Framework-Anbieter](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ist in ADO.NET Entity Framework integriert, sodass Sie Datendienste erstellen können, die relationale Daten verfügbar machen. Sie können die Entity Data Model-Tools verwenden, um ein Datenmodell zu erstellen, das adressierbare Ressourcen als Entitäten enthält, und gleichzeitig die Zuordnung zwischen diesem Modell und den Tabellen in der zugrunde liegenden Datenbank definieren. Weitere Informationen finden Sie unter [Entity Framework-Anbieter](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md).  
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Außerdem können Sie Datendienste erstellen, die alle Datenstrukturen verfügbar machen, die eine Implementierung von Zurückgeben der <xref:System.Linq.IQueryable%601> Schnittstelle. Dies ermöglicht das Erstellen von Datendiensten, die Daten aus .NET Framework-Typen verfügbar machen. Erstellungs-, Aktualisierungs- und Löschvorgänge werden unterstützt, wenn Sie außerdem die <xref:System.Data.Services.IUpdatable>-Schnittstelle implementieren. Weitere Informationen finden Sie unter [Reflektionsanbieter](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "59202042"
 ## <a name="client-libraries"></a>Clientbibliotheken  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] definiert eine Reihe einheitlicher Muster zum interagieren mit Datendiensten. Dies bietet die Möglichkeit, wiederverwendbare Komponenten erstellen, die für diese Dienste, z. B. clientseitiger Bibliotheken basieren, die Datendienste erleichtern.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] enthält Clientbibliotheken sowohl .NET Framework-basierten und Silverlight-basierte Clientanwendungen. Diese Clientbibliotheken ermöglichen die Interaktion mit Datendiensten mithilfe von .NET Framework-Objekten. Zudem werden objektbasierte Abfragen und LINQ-Abfragen, das Laden verknüpfter Objekte, eine Änderungsnachverfolgung und die Identitätsauflösung unterstützt. Weitere Informationen finden Sie unter [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] enthält Clientbibliotheken sowohl für .NET Framework-basierte als auch für Silverlight-basierte Clientanwendungen. Diese Clientbibliotheken ermöglichen die Interaktion mit Datendiensten mithilfe von .NET Framework-Objekten. Zudem werden objektbasierte Abfragen und LINQ-Abfragen, das Laden verknüpfter Objekte, eine Änderungsnachverfolgung und die Identitätsauflösung unterstützt. Weitere Informationen finden Sie unter [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md).  
   
  Zusätzlich zu den [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] enthalten, mit dem .NET Framework und Silverlight-Clientbibliotheken sind weitere Clientbibliotheken verfügbar, mit denen Sie nutzen können ein [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] feed in Clientanwendungen, z. B. AJAX, PHP und Java-Anwendungen. Weitere Informationen finden Sie unter den [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185796).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "59202042"
 
 - [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)
 - [Erste Schritte](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
-- [Definieren von WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
 - [Zugreifen auf Datendienstressourcen (WCF Data Services)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
 - [WCF Data Services-Clientbibliothek](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)

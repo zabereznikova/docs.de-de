@@ -9,10 +9,10 @@ helpviewer_keywords:
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
 ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203625"
 ---
 # <a name="application-settings-overview"></a>Übersicht über Anwendungseinstellungen
@@ -55,7 +55,7 @@ In diesem Thema wird erläutert, wie Einstellungsdaten für Ihre Anwendung und d
 - <xref:System.Configuration.IPersistComponentSettings>
 - [Vorgehensweise: Überprüfen von Anwendungseinstellungen](how-to-validate-application-settings.md)
 - [Verwalten von Anwendungseinstellungen (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [Vorgehensweise: Lesen von Einstellungen zur Laufzeit mit C#](how-to-read-settings-at-run-time-with-csharp.md)
+- [How To: Lesen von Einstellungen zur Laufzeit mitC#](how-to-read-settings-at-run-time-with-csharp.md)
 - [Verwenden von Anwendungseinstellungen und Benutzereinstellungen](using-application-settings-and-user-settings.md)
 - [Architektur der Anwendungseinstellungen](application-settings-architecture.md)
-- [Anwendungseinstellungen für benutzerdefinierte Steuerelemente](application-settings-for-custom-controls.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
