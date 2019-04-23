@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165177"
 ---
 # <a name="datatable-constraints"></a>DataTable-Einschränkungen
@@ -27,7 +27,7 @@ Mithilfe von Einschränkungen können Sie die in einer <xref:System.Data.DataTab
 |**Cascade**|Verknüpfte Zeilen werden gelöscht oder aktualisiert.|  
 |**SetNull**|Festlegen der Werte in verknüpften Zeilen auf **DBNull**.|  
 |**SetDefault**|Für die Werte in verknüpften Zeilen wird der Standardwert festgelegt.|  
-|**Keiner**|In verknüpften Zeilen wird keine Aktion ausgeführt. Dies ist die Standardeinstellung.|  
+|**Keine**|In verknüpften Zeilen wird keine Aktion ausgeführt. Dies ist die Standardeinstellung.|  
   
  Ein **ForeignKeyConstraint** einschränken können, als auch weitergeben, Änderungen an verknüpften Spalten. Je nach den Eigenschaften für die **ForeignKeyConstraint** einer Spalte, wenn die **EnforceConstraints** Eigenschaft der **DataSet** ist **"true"**, bestimmte Vorgänge in der übergeordneten Zeile führt zu einer Ausnahme. Z. B. wenn die **DeleteRule** Eigenschaft der **ForeignKeyConstraint** ist **keine**, eine übergeordnete Zeile kann nicht gelöscht werden, wenn es über untergeordnete Zeilen verfügt.  
   
@@ -61,7 +61,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
 |Festgelegte Regel|Beschreibung|  
 |------------------|-----------------|  
 |**Cascade**|Änderungen in untergeordneten Zeilen werden akzeptiert oder zurückgewiesen.|  
-|**Keiner**|In den untergeordneten Zeilen wird keine Aktion ausgeführt. Dies ist die Standardeinstellung.|  
+|**Keine**|In den untergeordneten Zeilen wird keine Aktion ausgeführt. Dies ist die Standardeinstellung.|  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein <xref:System.Data.ForeignKeyConstraint>-Objekt erstellt, und es werden einige seiner Eigenschaften festgelegt (einschließlich der <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>-Regel) und dem <xref:System.Data.ConstraintCollection>-Objekt eines <xref:System.Data.DataTable>-Objekts hinzugefügt.  
@@ -99,5 +99,5 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 - <xref:System.Data.ForeignKeyConstraint>
 - <xref:System.Data.UniqueConstraint>
 - [DataTable-Schemadefinition](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- ["DataSets", "DataTables" und "DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
 ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165268"
 ---
 # <a name="binding-declarations-overview"></a>Übersicht über Bindungsdeklarationen
@@ -79,7 +79,7 @@ In diesem Thema werden die verschiedenen Möglichkeiten zum Deklarieren einer Bi
   
 -   Indexer einer Eigenschaft können durch eckige Klammern nach dem Namen der indizierten Eigenschaft angegeben werden. So legt zum Beispiel die `Path=ShoppingCart[0]`-Klausel die Bindung auf den Index fest, der der Art und Weise entspricht, wie die interne Indizierung der Eigenschaft das Zeichenfolgenliteral „0“ handhabt. Geschachtelte Indexer werden ebenfalls unterstützt.  
   
--   Indexer und untergeordnete Eigenschaften können im gemischt werden eine `Path` Klausel, z. B. `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   Indexer und untergeordnete Eigenschaften können in einer `Path`-Klausel kombiniert werden, z. B. `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`.  
   
 -   Indexer können mehrere durch Kommata (,) getrennte Indexer-Parameter aufweisen. Der Typ der einzelnen Parameter kann in Klammern angegeben werden. Sie können beispielsweise über `Path="[(sys:Int32)42,(sys:Int32)24]"` verfügen, wobei `sys` dem `System`-Namespace zugeordnet ist.  
   
@@ -125,7 +125,7 @@ In diesem Thema werden die verschiedenen Möglichkeiten zum Deklarieren einer Bi
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über die Datenbindung](data-binding-overview.md)
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
 - [Datenbindung](../advanced/optimizing-performance-data-binding.md)
 - [XAML-Syntax von PropertyPath](../advanced/propertypath-xaml-syntax.md)

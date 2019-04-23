@@ -7,10 +7,10 @@ helpviewer_keywords:
 - fonts [WPF]
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
 ms.openlocfilehash: eb8a02445511935d64ebaa6d78d4b05c0b75167e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169246"
 ---
 # <a name="fonts-wpf"></a>Schriftarten (WPF)
@@ -20,7 +20,7 @@ ms.locfileid: "59169246"
  [Features für OpenType-Schriftarten](opentype-font-features.md)  
  [Verpacken von Schriftarten mit Anwendungen](packaging-fonts-with-applications.md)  
  [OpenType-Beispielschriftartenpaket](sample-opentype-font-pack.md)  
- [Gewusst wie-Themen](fonts-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](fonts-how-to-topics.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

@@ -3,10 +3,10 @@ title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
 ms.openlocfilehash: 6c5bb61f234c8d5b8ffc5e16195a2cb50022d142
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166165"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
@@ -61,7 +61,7 @@ Definiert einen TCP-Transport, der von einem Kanal zum Übertragen von Nachricht
 |maxPendingConnections|Ruft die maximale Anzahl an Verbindungen ab, die zum Verteilen auf dem Dienst bereitstehen, oder legt sie fest.|  
 |maxReceivedMessageSize|Ruft die maximal zulässige Größe der Nachrichten ab, die empfangen werden können, und legt diese fest.|  
 |portSharingEnabled|Ein boolescher Wert, der angibt, ob die TCP-Anschlussfreigabe für diese Verbindung aktiviert ist. Wenn dies `false` ist, verwendet jede Bindung ihren eigenen Anschluss. Die Standardeinstellung ist `false`.<br /><br /> Diese Einstellung ist nur für Dienste relevant. Auf Clients hat dies keine Auswirkung.<br /><br /> Bei Verwendung dieser Einstellung muss der Windows Communication Foundation (WCF)-TCP-Anschlussfreigabedienst aktiviert werden, indem der Starttyp auf Manuell oder Automatisch gesetzt wird.|  
-|teredoEnabled|Ein boolescher Wert, der angibt, ob das Teredo-Protokoll aktiviert ist, das zur Adressierung von Clients hinter einer Firewall verwendet wird. Die Standardeinstellung ist `false`.<br /><br /> Mit dieser Eigenschaft wird das Teredo-Protokoll für das zugrunde liegende TCP-Socket aktiviert. Weitere Informationen finden Sie unter [Überblick zu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Diese Eigenschaft kann nur unter [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] und unter [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)] verwendet werden. [!INCLUDE[wv](../../../../../includes/wv-md.md)] verfügt über eine computerweite Konfigurationsoption für Teredo, sodass diese Eigenschaft unter Vista ignoriert. Um das Teredo-Protokoll verwenden zu können, müssen der Client und die Dienstcomputer über den IPv6-Stapel von Microsoft verfügen und ordnungsgemäß konfiguriert sein. Weitere Informationen zum Konfigurieren von Teredo finden Sie unter [Überblick zu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Weitere Informationen finden Sie unter [Windows Server 2003 Technology Centers](https://go.microsoft.com/fwlink/?LinkId=49888).|  
+|teredoEnabled|Ein boolescher Wert, der angibt, ob das Teredo-Protokoll aktiviert ist, das zur Adressierung von Clients hinter einer Firewall verwendet wird. Die Standardeinstellung ist `false`.<br /><br /> Mit dieser Eigenschaft wird das Teredo-Protokoll für das zugrunde liegende TCP-Socket aktiviert. Weitere Informationen finden Sie unter [Überblick zu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Diese Eigenschaft kann nur unter [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] und unter [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)] verwendet werden. [!INCLUDE[wv](../../../../../includes/wv-md.md)] verfügt über eine computerweite Konfigurationsoption für Teredo, sodass diese Eigenschaft bei der Ausführung von Vista ignoriert wird. Um das Teredo-Protokoll verwenden zu können, müssen der Client und die Dienstcomputer über den IPv6-Stapel von Microsoft verfügen und ordnungsgemäß konfiguriert sein. Weitere Informationen zum Konfigurieren von Teredo finden Sie unter [Überblick zu Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Weitere Informationen finden Sie unter [Windows Server 2003 Technology Centers](https://go.microsoft.com/fwlink/?LinkId=49888).|  
 |transferMode|Ruft einen Wert ab, oder legt einen Wert fest, der angibt, ob die Nachrichten bei verbindungsorientiertem Transport gepuffert oder per Stream übertragen werden.|  
 |connectionPoolSettings|Gibt zusätzliche Verbindungspooleinstellungen für eine Named Pipe-Bindung an.|  
   
@@ -86,7 +86,7 @@ Definiert einen TCP-Transport, der von einem Kanal zum Übertragen von Nachricht
 - <xref:System.ServiceModel.Channels.TransportBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - [Transportprotokolle](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [Wählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [Auswählen eines Transports](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
 - [Bindungen](../../../../../docs/framework/wcf/bindings.md)
 - [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [Benutzerdefinierte Bindungen](../../../../../docs/framework/wcf/extending/custom-bindings.md)

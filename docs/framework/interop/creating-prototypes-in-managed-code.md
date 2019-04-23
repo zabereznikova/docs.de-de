@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c65634a1046b193d500e505d945784504285f93a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e642f6507016dd1d62b4889f8a8dbcf0470a2202
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168167"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Erstellen von Prototypen in verwaltetem Code
 In diesem Thema wird der Zugriff auf nicht verwaltete Funktionen beschrieben. Zudem werden verschiedene Attributfelder eingeführt, die die Methodendefinition in verwaltetem Code mit Anmerkungen versehen. Beispiele für die Vorgehensweise beim Erstellen von .NET-basierten Deklarationen, die mit dem Plattformaufruf verwendet werden können, finden Sie unter [Marshaling Data with Platform Invoke (Marshallen von Daten mit Plattformaufruf)](marshaling-data-with-platform-invoke.md).  
@@ -111,7 +111,7 @@ extern "C" int MessageBox(
 ### <a name="platform-invoke-examples"></a>Beispiele für Plattformaufrufe  
  Die Beispiele zum Plattformaufruf in diesem Abschnitt veranschaulichen die Verwendung des `RegistryPermission`-Attributs mit den Stapelmodifizierern.  
   
- Im folgenden Codebeispiel werden die Modifizierer <xref:System.Security.Permissions.SecurityAction>`Assert`, `Deny` und `PermitOnly` ignoriert.  
+ Im folgenden Codebeispiel werden die Modifizierer <xref:System.Security.Permissions.SecurityAction>`Assert`,`Deny` und `PermitOnly` ignoriert.  
   
 ```  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
@@ -135,7 +135,7 @@ extern "C" int MessageBox(
     private static extern bool CallRegistryPermissionDeny();  
 ```  
   
- <xref:System.Security.Permissions.SecurityAction>-Modifizierer funktionieren ordnungsgemäß, wenn sie in einer Klasse positioniert werden, die den Plattformaufruf enthält (umschließt).  
+ <xref:System.Security.Permissions.SecurityAction> -Modifizierer funktionieren ordnungsgemäß, wenn sie in einer Klasse positioniert werden, die den Plattformaufruf enthält (umschließt).  
   
 ```cpp  
       [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
@@ -156,7 +156,7 @@ class PInvokeWrapper
 }  
 ```  
   
- <xref:System.Security.Permissions.SecurityAction>-Modifizierer funktionieren auch in einem geschachtelten Szenario ordnungsgemäß, in dem sie im Aufrufer des Plattformaufrufs positioniert werden:  
+ <xref:System.Security.Permissions.SecurityAction> -Modifizierer funktionieren auch in einem geschachtelten Szenario ordnungsgemäß, in dem sie im Aufrufer des Plattformaufrufs positioniert werden:  
   
 ```cpp  
       {  
@@ -235,11 +235,12 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Verwenden nicht verwalteter DLL-Funktionen](consuming-unmanaged-dll-functions.md)
 - [Angeben eines Einstiegspunktes](specifying-an-entry-point.md)
-- [Festlegen eines Zeichensatzes](specifying-a-character-set.md)
+- [Angeben eines Zeichensatzes](specifying-a-character-set.md)
 - [Beispiele für Plattformaufrufe](platform-invoke-examples.md)
 - [Überlegungen zur Plattformaufrufsicherheit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb397754(v=vs.100))
 - [Identifizieren von Funktionen in DLLs](identifying-functions-in-dlls.md)
 - [Erstellen einer Klasse zum Halten von DLL-Funktionen](creating-a-class-to-hold-dll-functions.md)
-- [Calling a DLL Function (Aufrufen einer DLL-Funktion)](calling-a-dll-function.md)
+- [Aufrufen einer DLL-Funktion](calling-a-dll-function.md)
