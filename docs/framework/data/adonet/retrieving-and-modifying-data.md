@@ -3,10 +3,10 @@ title: Abrufen und Ändern von Daten in ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097620"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Abrufen und Ändern von Daten in ADO.NET
@@ -25,7 +25,7 @@ Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen eine
  [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  Enthält Themen, in denen beschrieben wird, wie Befehlen und Befehlsgeneratoren erstellt und Parameter konfiguriert werden und welche Vorgehensweise beim Ausführen von Befehlen zum Abrufen und Bearbeiten von Daten ausgeführt werden muss.  
   
- ["DataAdapters" und "DataReaders"](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  Enthält Themen, in denen DataReader, DataAdapter, Parameter und die Vorgehensweise bei DataAdapter-Ereignissen und beim Ausführen von Batchvorgängen beschrieben werden.  
   
  [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
@@ -61,7 +61,7 @@ Eine der wichtigsten Funktionen einer Datenbankanwendung ist das Herstellen eine
 ## <a name="see-also"></a>Siehe auch
 
 - [Datentypzuordnungen in ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)
-- ["DataSets", "DataTables" und "DataViews"](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSets, DataTables und DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server und ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

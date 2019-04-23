@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ListView controls [WPF], horizontal alignment [WPF]
 ms.assetid: b9573e44-9dad-4d14-939c-7859ca372758
 ms.openlocfilehash: 528a711c1cf7992bb32c0aa4d6e81d71744c9f80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102660"
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>Vorgehensweise: Ändern der horizontalen Ausrichtung einer Spalte in einem ListView-Objekt
@@ -29,7 +29,7 @@ Standardmäßig wird der Inhalt jeder Spalte in einer <xref:System.Windows.Contr
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über die Datenbindung](../data/data-binding-overview.md)
+- [Übersicht zur Datenbindung](../data/data-binding-overview.md)
 - [Übersicht über Datenvorlagen](../data/data-templating-overview.md)
-- [Binden an XML-Daten mithilfe der XMLDataProvider-Klasse und mithilfe von XPath-Abfragen](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
+- [Binden an XML-Daten mithilfe von XMLDataProvider und XPath-Abfragen](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
 - [Übersicht über ListView](listview-overview.md)

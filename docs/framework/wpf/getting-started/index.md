@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
 ms.openlocfilehash: 26cb4fabedb7a4e17f3ee56e95c310e6483d59e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099689"
 ---
 # <a name="getting-started-wpf"></a>Erste Schritte (WPF)
@@ -20,7 +20,7 @@ Windows Presentation Foundation (WPF) ist ein Benutzeroberflächen-Framework, mi
   
 |||  
 |-|-|  
-|Ich möchte direkt beginnen…|[Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](walkthrough-my-first-wpf-desktop-application.md)|  
+|Ich möchte direkt beginnen…|[Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](walkthrough-my-first-wpf-desktop-application.md)|  
 |Wie wird die Anwendungsbenutzeroberfläche entworfen?|[Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)|  
 |Neu bei .NET?|[Übersicht über .NET Framework](../../get-started/overview.md)<br /><br /> [Grundlagen der .NET Framework-Anwendung](../../../standard/application-essentials.md)<br /><br /> [Erste Schritte mit Visual C# und Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)|  
 |Weitere Informationen über WPF...|[Einführung in WPF in Visual Studio](introduction-to-wpf-in-vs.md)<br /><br /> [Übersicht über XAML (WPF)](../advanced/xaml-overview-wpf.md)<br /><br /> [Steuerelemente](../controls/index.md)<br /><br /> [Übersicht zur Datenbindung](../data/data-binding-overview.md)|  

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
 ms.openlocfilehash: a60c415427a1be994f8081725f20e867dca66aa1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101880"
 ---
 # <a name="listview-control-overview-windows-forms"></a>Übersicht über das ListView-Steuerelement (Windows Forms)
@@ -29,17 +29,17 @@ Mit dem <xref:System.Windows.Forms.ListView>-Steuerelement in Windows Forms wird
   
 |ListView-Element|Ansicht|  
 |---------------------|----------|  
-|<xref:System.Windows.Forms.ListView.Alignment%2A> property|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
-|<xref:System.Windows.Forms.ListView.AutoArrange%2A> property|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
-|<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A> Methode|<xref:System.Windows.Forms.View.Details>|  
-|<xref:System.Windows.Forms.ListView.Columns%2A> property|<xref:System.Windows.Forms.View.Details> oder <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.DrawSubItem> event|<xref:System.Windows.Forms.View.Details>|  
-|<xref:System.Windows.Forms.ListView.FindItemWithText%2A> Methode|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>oder <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.FindNearestItem%2A> Methode|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
-|<xref:System.Windows.Forms.ListView.GetItemAt%2A> Methode|<xref:System.Windows.Forms.View.Details> oder <xref:System.Windows.Forms.View.Tile>|  
-|<xref:System.Windows.Forms.ListView.Groups%2A> property|Alle Ansichten, mit Ausnahme <xref:System.Windows.Forms.View.List>|  
-|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> property|<xref:System.Windows.Forms.View.Details>sein.|  
-|<xref:System.Windows.Forms.ListView.InsertionMark%2A> property|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>oder <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.Alignment%2A> -Eigenschaft|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
+|<xref:System.Windows.Forms.ListView.AutoArrange%2A> -Eigenschaft|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
+|<xref:System.Windows.Forms.ListView.AutoResizeColumn%2A>-Methode|<xref:System.Windows.Forms.View.Details>|  
+|<xref:System.Windows.Forms.ListView.Columns%2A> -Eigenschaft|<xref:System.Windows.Forms.View.Details> oder <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.DrawSubItem> -Ereignis|<xref:System.Windows.Forms.View.Details>|  
+|<xref:System.Windows.Forms.ListView.FindItemWithText%2A>-Methode|<xref:System.Windows.Forms.View.Details>, <xref:System.Windows.Forms.View.List>oder <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.FindNearestItem%2A>-Methode|<xref:System.Windows.Forms.View.SmallIcon> oder <xref:System.Windows.Forms.View.LargeIcon>|  
+|<xref:System.Windows.Forms.ListView.GetItemAt%2A>-Methode|<xref:System.Windows.Forms.View.Details> oder <xref:System.Windows.Forms.View.Tile>|  
+|<xref:System.Windows.Forms.ListView.Groups%2A> -Eigenschaft|Alle Ansichten, mit Ausnahme <xref:System.Windows.Forms.View.List>|  
+|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> -Eigenschaft|<xref:System.Windows.Forms.View.Details>.|  
+|<xref:System.Windows.Forms.ListView.InsertionMark%2A> -Eigenschaft|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>oder <xref:System.Windows.Forms.View.Tile>|  
   
  Die wichtigste Eigenschaft von der <xref:System.Windows.Forms.ListView> Steuerelement <xref:System.Windows.Forms.ListView.Items%2A>, die vom Steuerelement angezeigten Elemente enthält. Die <xref:System.Windows.Forms.ListView.SelectedItems%2A> Eigenschaft enthält eine Auflistung der derzeit im Steuerelement ausgewählten Elemente. Der Benutzer kann mehrere Elemente auswählen, z. B. um Drag & drop mehrere Elemente gleichzeitig zu einem anderen Steuerelement, wenn die <xref:System.Windows.Forms.ListView.MultiSelect%2A> -Eigenschaftensatz auf `true`. Die <xref:System.Windows.Forms.ListView> Steuerelement können Sie die Kontrollkästchen neben den Elementen angezeigt, wenn die <xref:System.Windows.Forms.ListView.CheckBoxes%2A> -Eigenschaftensatz auf `true`.  
   
@@ -51,13 +51,13 @@ Mit dem <xref:System.Windows.Forms.ListView>-Steuerelement in Windows Forms wird
 
 - <xref:System.Windows.Forms.ListView>
 - [ListView-Steuerelement](listview-control-windows-forms.md)
-- [Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Vorgehensweise: Hinzufügen von Spalten zum ListView-Steuerelement in Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [Vorgehensweise: Anzeigen von Symbolen für das ListView-Steuerelement in Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [Vorgehensweise: Anzeigen von Unterelementen in Spalten mit dem ListView-Steuerelement in Windows Forms](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [Vorgehensweise: Auswählen eines Elements im ListView-Steuerelement in Windows Forms](how-to-select-an-item-in-the-windows-forms-listview-control.md)
-- [Vorgehensweise: Gruppieren von Elementen in einem ListView-Steuerelement in Windows Forms](how-to-group-items-in-a-windows-forms-listview-control.md)
-- [Vorgehensweise: Anzeigen einer Einfügemarke in einem ListView-Steuerelement in Windows Forms](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
+- [Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Vorgehensweise: Hinzufügen von Spalten zu dem ListView-Steuerelement in Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Vorgehensweise: Anzeigen von Symbolen für das ListView-Steuerelement in Windows Forms](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [Vorgehensweise: Anzeigen von Unterelementen in Spalten mit dem ListView-Steuerelement in Windows Forms](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [Vorgehensweise: Wählen Sie ein Element in dem ListView-Steuerelement in Windows Forms](how-to-select-an-item-in-the-windows-forms-listview-control.md)
+- [Vorgehensweise: Gruppieren von Elementen in ein ListView-Steuerelement in Windows Forms](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [Vorgehensweise: Anzeigen einer Einfügemarke in ein ListView-Steuerelement in Windows Forms](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
 - [Vorgehensweise: Hinzufügen von Suchfunktionen zu einem ListView-Steuerelement](how-to-add-search-capabilities-to-a-listview-control.md)
-- [Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)

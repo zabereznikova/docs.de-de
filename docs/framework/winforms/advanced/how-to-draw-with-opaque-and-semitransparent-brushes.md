@@ -11,10 +11,10 @@ helpviewer_keywords:
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
 ms.openlocfilehash: a302b8bf978afcead5768fadeb6336c1ece986ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100919"
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>Vorgehensweise: Zeichnen mit nicht transparenten und halb transparenten Pinseln
@@ -33,11 +33,11 @@ Wenn Sie eine Form ausfüllen, müssen Sie ein <xref:System.Drawing.Brush>-Objek
  ![Abbildung der deckender und Halbtransparenter Ausgabe.](./media/how-to-draw-with-opaque-and-semitransparent-brushes/compositingquality-ellipse-semitransparent.png)  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
- Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs>`e`, d.h. ein Parameter vom <xref:System.Windows.Forms.PaintEventHandler>.  
+ Das obige Beispiel ist für die Verwendung in Windows Forms konzipiert und erfordert die <xref:System.Windows.Forms.PaintEventArgs>`e`-Klasse, die ein Parameter von <xref:System.Windows.Forms.PaintEventHandler> ist.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Alphablending von Linien und Füllungen](alpha-blending-lines-and-fills.md)
-- [Vorgehensweise: Verwenden eines transparenten Hintergrunds für ein Steuerelement](../controls/how-to-give-your-control-a-transparent-background.md)
-- [Vorgehensweise: Zeichnen deckender und halbtransparenter Linien](how-to-draw-opaque-and-semitransparent-lines.md)
+- [Vorgehensweise: Fügen Sie dem Steuerelement einen transparenten Hintergrund](../controls/how-to-give-your-control-a-transparent-background.md)
+- [Vorgehensweise: Zeichnen Sie deckender und halbtransparente Linien](how-to-draw-opaque-and-semitransparent-lines.md)

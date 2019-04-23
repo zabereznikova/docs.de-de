@@ -1,12 +1,12 @@
 ---
-title: <defaultCertificate> Element
+title: <defaultCertificate>-Element
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
 ms.openlocfilehash: c94531d10b7c0ef5ca0ee1f2d5683d0a259a2537
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100599"
 ---
 # <a name="defaultcertificate-element"></a>\<DefaultCertificate >-Element
@@ -103,7 +103,7 @@ EndpointBehaviors-Abschnitt
 - <xref:System.ServiceModel.Configuration.X509DefaultServiceCertificateElement>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.DefaultCertificate%2A>
-- [Verwenden von Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Arbeiten mit Zertifikaten](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)
 - [Sichern von Clients](../../../../../docs/framework/wcf/securing-clients.md)
 - [Sichern von Diensten und Clients](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

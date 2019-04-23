@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
 ms.openlocfilehash: f4458639aa2c78e7c78bdae66fa2b20d5546743c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102543"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Abfragen in LINQ to DataSet
-Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in der Regel in einer speziellen Abfragesprache, wie SQL für relationale Datenbanken oder XQuery für XML, geschrieben. Deshalb mussten Entwickler bisher für jeden abzufragenden Datenquellentyp oder Datenformattyp eine neue Abfragesprache lernen. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] bietet ein einfacheres, konsistentes Modell zum Arbeiten mit Daten in verschiedenen Arten von Datenquellen und Formaten. In einer [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Abfrage arbeiten Sie immer mit Programmierobjekten.  
+Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen werden in der Regel in einer speziellen Abfragesprache, wie SQL für relationale Datenbanken oder XQuery für XML, geschrieben. Deshalb mussten Entwickler bisher für jeden abzufragenden Datenquellentyp oder Datenformattyp eine neue Abfragesprache lernen. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] bietet ein einfacheres, konsistentes Modell zum Arbeiten mit Daten über verschiedene Arten von Datenquellen und Formate hinweg. In einer [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Abfrage arbeiten Sie immer mit Programmierobjekten.  
   
  Eine [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-Abfrageoperation besteht aus drei Aktionen: Abrufen der Datenquelle(n), Erstellen der Abfrage und Ausführen der Abfrage.  
   
@@ -64,4 +64,4 @@ Eine Abfrage ist ein Ausdruck, der Daten von einer Datenquelle abruft. Abfragen 
 - [Programmierhandbuch](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
 - [Abfragen von DataSets](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
 - [Erste Schritte mit LINQ in C#](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Erste Schritte mit LINQ in Visual Basic](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Getting Started with LINQ in Visual Basic (Erste Schritte mit LINQ in Visual Basic)](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbb39eb768069a737f3f89c771bf02fd6bc0c3b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102400"
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR-Enumeration
@@ -104,13 +104,13 @@ typedef enum {
   
 -   [Keine Flags festgelegt](#None)  
   
--   [Rückruf-Flags](#Callback)  
+-   [Rückruf-flags](#Callback)  
   
--   [Flags zur Aktivierung von Funktionen](#Feature)  
+-   [Flags zur Aktivierung von Feature](#Feature)  
   
 -   [Konfigurationsflags](#Config)  
   
--   [Kombinierte Flags](#Composite)  
+-   [Kombinierte flags](#Composite)  
   
 <a name="None"></a>   
 ### <a name="no-flags-set"></a>Keine Flags festgelegt  

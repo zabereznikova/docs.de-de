@@ -6,10 +6,10 @@ helpviewer_keywords:
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
 ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099988"
 ---
 # <a name="elevation-of-privilege"></a>Angriffe durch Rechteerweiterung
@@ -18,7 +18,7 @@ ms.locfileid: "59099988"
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>Vertrauenswürdige STS sollten SAML-Tokenansprüche signieren  
  Ein SAML (Security Assertions Markup Language)-Token ist ein generisches XML-Token, das den Standardtyp für ausgestellte Token darstellt. SAML-Token können von einem Sicherheitstokendienst (Security Token Service, STS) erstellt werden, der für den empfangenden Webdienst in einem typischen Datenaustausch als vertrauenswürdig gilt. SAML-Token enthalten Ansprüche in Form von Anweisungen. Ein Angreifer kann die Ansprüche aus einem gültigen Token kopieren, ein neues SAML-Token erstellen und mit einem anderen Aussteller signieren. Das Ziel ist hierbei, festzustellen, ob der Server Aussteller validiert, und wenn nicht, diese Schwäche zum Erstellen von SAML-Token auszunutzen, die Berechtigungen über die von einem vertrauenswürdigen STS beabsichtigten hinaus gewähren.  
   
- Die <xref:System.IdentityModel.Tokens.SamlAssertion>-Klasse überprüft die digitale Signatur, die in einem SAML-Token enthalten ist, und der Standard-<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> erfordert, dass SAML-Token mit einem X.509-Zertifikat signiert sind, das gültig ist, wenn <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>-Klasse auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> festgelegt ist. `ChainTrust` -Modus allein kann nicht bestimmen, ob der Aussteller des SAML-Tokens vertrauenswürdig ist. Dienste, die ein stärker granuliertes Vertrauenswürdigkeitsmodell erfordern, können entweder mithilfe von Autorisierungs- oder Durchsetzungsrichtlinien den Aussteller der erzeugten Anspruchssätze durch die Authentifizierung der Token überprüfen oder die X.509-Validierungseinstellungen für <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> verwenden, um den Satz zulässiger Signaturzertifikate einzuschränken. Weitere Informationen finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) und [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ Die <xref:System.IdentityModel.Tokens.SamlAssertion>-Klasse überprüft die digitale Signatur, die in einem SAML-Token enthalten ist, und der Standard-<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> erfordert, dass SAML-Token mit einem X.509-Zertifikat signiert sind, das gültig ist, wenn <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> der <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>-Klasse auf <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> festgelegt ist. Mithilfe des `ChainTrust`-Modus allein kann nicht bestimmt werden, ob der Aussteller des SAML-Tokens vertrauenswürdig ist. Dienste, die ein stärker granuliertes Vertrauenswürdigkeitsmodell erfordern, können entweder mithilfe von Autorisierungs- oder Durchsetzungsrichtlinien den Aussteller der erzeugten Anspruchssätze durch die Authentifizierung der Token überprüfen oder die X.509-Validierungseinstellungen für <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> verwenden, um den Satz zulässiger Signaturzertifikate einzuschränken. Weitere Informationen finden Sie unter [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md) und [Verbund und ausgestellte Token](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="switching-identity-without-a-security-context"></a>Wechseln der Identität ohne Sicherheitskontext  
  Die nachfolgenden Ausführungen gelten nur für [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)].  
@@ -85,8 +85,8 @@ ms.locfileid: "59099988"
 ## <a name="see-also"></a>Siehe auch
 
 - [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Veröffentlichung von Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Dienstverweigerung (Denial of Service)](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Wiederholungsangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
-- [Verfälschungen](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [Nicht unterstützte Szenarien](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

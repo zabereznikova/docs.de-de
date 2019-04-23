@@ -10,10 +10,10 @@ helpviewer_keywords:
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
 ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100300"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>Vorgehensweise: Erstellen eines Add-Ins, bei dem es sich um eine Benutzeroberfläche handelt
@@ -21,7 +21,7 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
   
  Ist das Add-in eine Benutzeroberfläche, die ein WPF-Benutzersteuerelement ist. Der Inhalt des Benutzersteuerelements ist eine einzelne Schaltfläche, bei der ein Meldungsfeld angezeigt wird, wenn Benutzer darauf klicken. Die eigenständige WPF-Anwendung hostet den Benutzeroberflächen-Add-in als Inhalt des Hauptfensters der Anwendung.  
   
- **Vorraussetzungen**  
+ **Erforderliche Komponenten**  
   
  In diesem Beispiel hebt die WPF-Erweiterungen für die Add-In-Modell von .NET Framework, die dieses Szenario zu aktivieren, und es wird Folgendes vorausgesetzt:  
   
@@ -87,7 +87,7 @@ Dieses Beispiel zeigt, wie Sie ein Add-in erstellen, die eine Windows Presentati
   
  Der Code zum Verarbeiten von Interaktionen mit der Add-in-Benutzeroberfläche, die in das Add-in der Anwendungsdomäne ausgeführt werden. Diese Interaktionen umfassen Folgendes:  
   
--   Behandeln der <xref:System.Windows.Controls.Button><xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
+-   Behandeln der <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click> Ereignis.  
   
 -   Zeigt die <xref:System.Windows.MessageBox>.  
   

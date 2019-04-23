@@ -1,5 +1,5 @@
 ---
-title: <add> -Element für Bypasslist (Netzwerkeinstellungen)
+title: <add>-Element für bypasslist (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
 ms.openlocfilehash: 904c8e23f7a09a975a6f3b9322ed6bc4148d9ba4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098285"
 ---
 # <a name="add-element-for-bypasslist-network-settings"></a>\<Hinzufügen >-Element für Bypasslist (Netzwerkeinstellungen)
@@ -41,7 +41,7 @@ Fügt eine IP-Adresse oder DNS-Namen, der Proxyumgehungsliste enthalten an.
   
 |**Attribut**|**Beschreibung**|  
 |-------------------|---------------------|  
-|**Adresse**|Ein regulärer Ausdruck, ein IP-Adresse oder DNS-Namen beschreibt.|  
+|**address**|Ein regulärer Ausdruck, ein IP-Adresse oder DNS-Namen beschreibt.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -83,4 +83,4 @@ Fügt eine IP-Adresse oder DNS-Namen, der Proxyumgehungsliste enthalten an.
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

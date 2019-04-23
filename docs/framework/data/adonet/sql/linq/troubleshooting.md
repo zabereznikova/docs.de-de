@@ -3,10 +3,10 @@ title: Problembehandlung
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
 ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105481"
 ---
 # <a name="troubleshooting"></a>Problembehandlung
@@ -15,7 +15,7 @@ Die folgenden Informationen beziehen sich auf Probleme, die in [!INCLUDE[vbtecdl
  Weitere Probleme werden behandelt, [häufig gestellte Fragen](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md).  
   
 ## <a name="unsupported-standard-query-operators"></a>Nicht unterstützte Standardabfrageoperatoren  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt nicht alle Standardabfrageoperator-Methoden (z. B. <xref:System.Linq.Enumerable.ElementAt%2A>). Folglich können Projekte, die kompiliert werden, immer noch Laufzeitfehler verursachen. Weitere Informationen finden Sie unter [Übersetzung von Standardabfrageoperatoren](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt nicht alle Standardabfrageoperator-Methoden (z. B. <xref:System.Linq.Enumerable.ElementAt%2A>). Folglich können Projekte, die kompiliert werden, immer noch Laufzeitfehler verursachen. Weitere Informationen finden Sie unter [Übersetzung von Standardabfrageoperatoren](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
   
 ## <a name="memory-issues"></a>Arbeitsspeicherprobleme  
  Wenn eine Abfrage eine in-Memory-Sammlung umfasst und [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, die Abfrage ausgeführt werden kann, im Arbeitsspeicher, abhängig von der Reihenfolge, in dem die beiden Auflistungen angegeben sind. Wenn die Abfrage im Arbeitsspeicher ausgeführt werden muss, müssen die Daten aus der Datenbanktabelle abgerufen werden.  
@@ -29,7 +29,7 @@ Die folgenden Informationen beziehen sich auf Probleme, die in [!INCLUDE[vbtecdl
  [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] erstellt in der Datei `app.config` des Projekts eine Verbindungszeichenfolge. In Klassenbibliotheksprojekten wird die Datei `app.config` nicht verwendet. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] verwendet die in den Entwurfszeitdateien bereitgestellte Verbindungszeichenfolge. Wenn Sie den Wert in `app.config` ändern, wird die Datenbank, mit der die Anwendung eine Verbindung herstellt, nicht geändert.  
   
 ## <a name="cascade-delete"></a>Kaskadierendes Delete  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht unterstützt oder erkennt kaskadierte Löschvorgänge. Wenn Sie eine Zeile in einer Tabelle löschen möchten, für die Einschränkungen gelten, führen Sie eines der folgenden Verfahren aus:  
+ Kaskadierte Löschvorgänge werden von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nicht unterstützt bzw. erkannt. Wenn Sie eine Zeile in einer Tabelle löschen möchten, für die Einschränkungen gelten, führen Sie eines der folgenden Verfahren aus:  
   
 -   Legen Sie die `ON DELETE CASCADE`-Regel in der Fremdschlüsseleinschränkung in der Datenbank fest.  
   
@@ -72,4 +72,4 @@ Die folgenden Informationen beziehen sich auf Probleme, die in [!INCLUDE[vbtecdl
 ## <a name="see-also"></a>Siehe auch
 
 - [Debugunterstützung](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
-- [Häufig gestellte Fragen (FAQs)](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)
+- [Häufig gestellte Fragen](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

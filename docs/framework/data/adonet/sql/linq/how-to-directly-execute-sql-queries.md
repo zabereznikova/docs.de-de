@@ -6,16 +6,16 @@ dev_langs:
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
 ms.openlocfilehash: 6423959ed5036cc8ab2a88bb7273ef7aa95c8958
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101535"
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>Vorgehensweise: Direktes Ausführen von SQL-Abfragen
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt die Abfragen, die Sie, in parametrisierten SQL-Abfragen (in-Text-Format schreiben), und sendet sie an den SQLServer zur Verarbeitung.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] übersetzt die Abfragen, die von Ihnen (in Textform) in parametrisierte SQL-Abfragen geschrieben wurden, und sendet diese zur Verarbeitung an den SQL-Server.  
   
- SQL kann nicht alle lokal für Ihre Anwendung verfügbaren Varianten ausführen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] versucht, konvertieren diese lokalen Methoden in äquivalente Operationen und Funktionen, die in der SQL-Umgebung verfügbar sind. Die meisten Methoden und die Operatoren in [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]-internen Datentypen verfügen über direkte Übersetzungen zu SQL-Befehlen. Einige können von den verfügbaren Funktionen erzeugt werden. Jene, die nicht erzeugt werden können, generieren Laufzeitausnahmen. Weitere Informationen finden Sie unter [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
+ SQL kann nicht alle lokal für Ihre Anwendung verfügbaren Varianten ausführen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] versucht, diese lokalen Methoden in äquivalente Operationen und Funktionen zu konvertieren, die in der SQL-Umgebung verfügbar sind. Die meisten Methoden und die Operatoren in [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]-internen Datentypen verfügen über direkte Übersetzungen zu SQL-Befehlen. Einige können von den verfügbaren Funktionen erzeugt werden. Jene, die nicht erzeugt werden können, generieren Laufzeitausnahmen. Weitere Informationen finden Sie unter [SQL-CLR-Typzuordnung](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md).  
   
  In Fällen, in denen eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Abfrage für spezielle Aufgaben nicht ausreicht, können Sie die <xref:System.Data.Linq.DataContext.ExecuteQuery%2A>-Methode zur Ausführung einer SQL-Abfrage verwenden und das Ergebnis anschließend direkt in Objekte konvertieren.  
   

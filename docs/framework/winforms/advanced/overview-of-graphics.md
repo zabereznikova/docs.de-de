@@ -6,10 +6,10 @@ helpviewer_keywords:
 - graphics [Windows Forms], about graphics
 ms.assetid: a602aef8-a8c8-4c36-9816-74e7bad96a68
 ms.openlocfilehash: a95086645771de61cfc859e34b225992bc16eac9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103934"
 ---
 # <a name="overview-of-graphics"></a>Übersicht über Grafiken
@@ -28,7 +28,7 @@ ms.locfileid: "59103934"
   
 -   <xref:System.Drawing.Printing>  
   
- Mit einem Graphics Device Interface wie z. B. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], Sie können die Informationen auf einem Bildschirm oder Drucker anzeigen, ohne sich Gedanken über die Details des jeweiligen Ausgabegeräts machen. Der Programmierer ruft Methoden auf, die von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]-Klassen bereitgestellt werden. In diesen Methoden wiederum werden die speziellen Gerätetreiber aufgerufen. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] isoliert die Anwendung von der Grafikhardware. Es ist diese Isolierung, die Programmierer geräteunabhängige Anwendungen erstellen kann.  
+ Mit einem Graphics Device Interface wie z. B. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], Sie können die Informationen auf einem Bildschirm oder Drucker anzeigen, ohne sich Gedanken über die Details des jeweiligen Ausgabegeräts machen. Der Programmierer ruft Methoden auf, die von [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]-Klassen bereitgestellt werden. In diesen Methoden wiederum werden die speziellen Gerätetreiber aufgerufen. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] isoliert die jeweilige Anwendung von der Grafikhardware. Es ist diese Isolierung, die Programmierer geräteunabhängige Anwendungen erstellen kann.  
   
 ## <a name="see-also"></a>Siehe auch
 

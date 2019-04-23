@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab4a31195a202929c8485349cbf43235faea8e2d
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 20dd6f9ab601277161079230effdaeeabd1bb13a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221237"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101574"
 ---
 # <a name="reflection-in-the-net-framework"></a>Reflektion in .NET Framework
 Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mit <xref:System.Type?displayProperty=nameWithType>, Informationen zu geladenen [Assemblys](../app-domains/assemblies-in-the-common-language-runtime.md) und den hierin definierten Typen wie [Klassen](../../standard/base-types/common-type-system.md#classes), [Schnittstellen](../../standard/base-types/common-type-system.md#interfaces) und [Werttypen](../../csharp/language-reference/keywords/value-types.md) abzurufen. Sie können auch mithilfe von Reflektion Typeninstanzen zur Laufzeit erstellen, diese aufrufen und darauf zugreifen. Themen zu bestimmten Aspekten der Reflektion finden Sie unter [Verwandte Themen](#related_topics) am Ende dieser Übersicht.
@@ -64,7 +64,7 @@ Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mi
 ## <a name="runtime-types-in-reflection"></a>Laufzeittypen in Reflektion  
  Reflektion stellt Klassen wie <xref:System.Type> und <xref:System.Reflection.MethodInfo> bereit, um Typen, Member, Parameter und andere Codeentitäten darzustellen. Wenn Sie jedoch Reflektion verwenden, arbeiten Sie nicht direkt mit diesen Klassen, von denen die meisten abstrakt sind (`MustInherit` in Visual Basic). Stattdessen arbeiten Sie mit Typen, die von der CLR (Common Language Runtime) bereitgestellt werden.  
   
- Wenn Sie beispielsweise den C#-Operator `typeof` (`GetType` in Visual Basic) verwenden, um ein <xref:System.Type>-Objekt abzurufen, handelt es sich in Wirklichkeit um ein `RuntimeType`-Objekt. `RuntimeType` wird von <xref:System.Type> abgeleitet und stellt Implementierungen aller abstrakten Methoden bereit.  
+ Wenn Sie beispielsweise den C#-Operator `typeof` (`GetType` in Visual Basic) verwenden, um ein <xref:System.Type>-Objekt abzurufen, handelt es sich in Wirklichkeit um ein `RuntimeType`-Objekt. `RuntimeType` ist von <xref:System.Type> abgeleitet und stellt Implementierungen aller abstrakten Methoden bereit.  
   
  Diese Laufzeitklassen sind `internal` (`Friend` in Visual Basic). Sie werden nicht getrennt von den Basisklassen dokumentiert, da ihr Verhalten in der Dokumentation der Basisklasse beschrieben wird.  
   
@@ -75,11 +75,11 @@ Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mi
 |-----------|-----------------|  
 |[Anzeigen von Typinformationen](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|Beschreibt die <xref:System.Type>-Klasse und stellt Codebeispiele bereit, die zeigen, wie <xref:System.Type> mit verschiedenen Reflektionsklassen verwendet wird, um Informationen zu Konstruktoren, Methoden, Feldern, Eigenschaften und Ereignissen abzurufen.|  
 |[Reflektion und generische Typen](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)|Erläutert, wie die Reflektion die Typparameter und die Typargumente von generischen Typen und generischen Methoden behandelt.|  
-|[Security Considerations for Reflection (Sicherheitsüberlegungen für die Reflektion)](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)|Beschreibt die Regeln, die festlegen, bis zu welchem Grad Reflektion verwendet werden kann, um Typinformationen abzurufen und auf Typen zuzugreifen.|  
-|[Dynamically Loading and Using Types (Dynamisches Laden und Verwenden von Typen)](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)|Beschreibt die benutzerdefinierte Bindungsschnittstelle der Reflektion, die spätes Binden unterstützt.|  
-|[Vorgehensweise: Load Assemblies into the Reflection-Only Context](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md) (Gewusst wie: Laden von Assemblys in den auf Reflektion beschränkten Kontext)|Beschreibt den reflektionsbezogenen Ladungskontext. Zeigt, wie eine Assembly geladen wird, wie der Kontext getestet und wie die Attribute überprüft werden, die im reflektionsbezogenen Kontext auf eine Assembly angewendet wurden.|  
-|[Accessing Custom Attributes (Zugreifen auf benutzerdefinierte Attribute)](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)|Zeigt, wie mithilfe der Reflektion das Vorhandensein von Attributen und Werten abgefragt werden kann.|  
-|[Specifying Fully Qualified Type Names (Angeben vollqualifizierter Typnamen)](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)|Beschreibt das Format von vollqualifizierten Typnamen mit den Begriffen von BNF (Backus-Naur Form) sowie die Syntax, die erforderlich ist, um Sonderzeichen, Assemblynamen, Zeiger, Verweise und Arrays anzugeben.|  
+|[Sicherheitsüberlegungen für die Reflektion](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)|Beschreibt die Regeln, die festlegen, bis zu welchem Grad Reflektion verwendet werden kann, um Typinformationen abzurufen und auf Typen zuzugreifen.|  
+|[Dynamisches Laden und Verwenden von Typen](../../../docs/framework/reflection-and-codedom/dynamically-loading-and-using-types.md)|Beschreibt die benutzerdefinierte Bindungsschnittstelle der Reflektion, die spätes Binden unterstützt.|  
+|[Vorgehensweise: Laden von Assemblys in den auf Reflektion beschränkten Kontext](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|Beschreibt den reflektionsbezogenen Ladungskontext. Zeigt, wie eine Assembly geladen wird, wie der Kontext getestet und wie die Attribute überprüft werden, die im reflektionsbezogenen Kontext auf eine Assembly angewendet wurden.|  
+|[Zugreifen auf benutzerdefinierte Attribute](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)|Zeigt, wie mithilfe der Reflektion das Vorhandensein von Attributen und Werten abgefragt werden kann.|  
+|[Angeben vollständig gekennzeichneter Typnamen](../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)|Beschreibt das Format von vollqualifizierten Typnamen mit den Begriffen von BNF (Backus-Naur Form) sowie die Syntax, die erforderlich ist, um Sonderzeichen, Assemblynamen, Zeiger, Verweise und Arrays anzugeben.|  
 |[Vorgehensweise: Verknüpfen mit einem Delegaten mit Reflektion](../../../docs/framework/reflection-and-codedom/how-to-hook-up-a-delegate-using-reflection.md)|Erläutert, wie ein Delegat für eine Methode erstellt und dieser Delegat mit einem Ereignis verknüpft wird. Beschreibt, wie eine Ereignisbehandlungsmethode zur Laufzeit mit <xref:System.Reflection.Emit.DynamicMethod> erstellt wird.|  
 |[Ausgeben von dynamischen Methoden und Assemblys](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Erläutert, wie dynamische Assemblys und dynamische Methoden generiert werden.|  
   
@@ -89,4 +89,3 @@ Die Klassen im <xref:System.Reflection>-Namespace ermöglichen Ihnen zusammen mi
  <xref:System.Reflection>  
   
  <xref:System.Reflection.Emit>  
-  

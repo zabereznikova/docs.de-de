@@ -10,10 +10,10 @@ ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105741"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR-ETW-Schlüsselwörter und -Ebenen
@@ -95,12 +95,12 @@ ms.locfileid: "59105741"
   
 |Schlüsselwörter und Flags|Anwendungsdomäne, Assembly, modulbezogene DCStart-/DCEnd-Ereignisse|Methodenbezogene DCStart-/DCEnd-Ereignisse (einschließlich dynamischer Methodenereignisse)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` Ereignisse.|Keine|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` Ereignisse.|Keine|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Keine|`DCStart` Ereignisse.|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Keine|`DCEnd` Ereignisse.|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Keine|`DCStart` Ereignisse.|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Keine|`DCEnd` Ereignisse.|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` -Ereignisse|Keine|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` -Ereignisse|Keine|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Keine|`DCStart` -Ereignisse|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Keine|`DCEnd` -Ereignisse|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Keine|`DCStart` -Ereignisse|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Keine|`DCEnd` -Ereignisse|  
   
  [Zurück nach oben](#top)  
   
@@ -124,6 +124,6 @@ ms.locfileid: "59105741"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [CLR-ETW-Anbieter](../../../docs/framework/performance/clr-etw-providers.md)
+- [CLR ETW Providers (CLR-ETW-Anbieter)](../../../docs/framework/performance/clr-etw-providers.md)
 - [CLR-ETW-Ereignisse](../../../docs/framework/performance/clr-etw-events.md)
-- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

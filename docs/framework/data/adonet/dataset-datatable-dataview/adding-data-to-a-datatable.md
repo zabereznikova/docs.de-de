@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
 ms.openlocfilehash: ec4ad84a39afe21ef77507732e5e0e417d45f3e7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104285"
 ---
 # <a name="adding-data-to-a-datatable"></a>Hinzufügen von Daten zu einer "DataTable"
@@ -91,5 +91,5 @@ for (int i = 0; i <= 9; i++)
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
-- [Bearbeiten von Daten in einer "DataTable"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
+- [Bearbeiten von Daten in einer DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

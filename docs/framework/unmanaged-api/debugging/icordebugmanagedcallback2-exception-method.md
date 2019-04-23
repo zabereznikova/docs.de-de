@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f8952b34781045089945e7e72e179e88300b5fdd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103349"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception-Methode
@@ -66,7 +66,7 @@ HRESULT Exception (
   
  Der bestimmten Frame und Offset hängen von der `dwEventType` Parameter wie folgt:  
   
-|Wert des `dwEventType`|Wert des `pFrame`|Wert des `nOffset`|  
+|Wert von `dwEventType`|Wert von `pFrame`|Wert von `nOffset`|  
 |----------------------------|-----------------------|------------------------|  
 |DEBUG_EXCEPTION_FIRST_CHANCE|Der Frame, der die Ausnahme ausgelöst hat.|Der Anweisungszeiger im Frame.|  
 |DEBUG_EXCEPTION_USER_FIRST_CHANCE|Der Rahmen Benutzercode dem Punkt der ausgelösten Ausnahme am nächsten ist.|Der Anweisungszeiger im Frame.|  

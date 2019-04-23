@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39dc55aa-f2a1-4093-87bb-f1c0edb6e761
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d51fcbdeeaa1fe30bbdeff5eb85a1c15fa9b4847
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: dc02178223e48c7c578d10ba92123d9436d4f439
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097264"
 ---
 # <a name="packaging-an-assembly-for-com"></a>Verpacken einer Assembly für COM
 COM-Entwickler profitieren von den folgenden Informationen zu den verwalteten Typen, die sie in ihre Anwendung integrieren möchten:  
@@ -81,6 +81,7 @@ COM-Entwickler profitieren von den folgenden Informationen zu den verwalteten Ty
  Das [.NET Services Installation-Tool (Regsvcs.exe)](../tools/regsvcs-exe-net-services-installation-tool.md) fügt verwaltete Klassen zu Windows 2000-Komponentendiensten hinzu, kombiniert mehrere Aufgaben innerhalb eines einzigen Tools. Zusätzlich zum Laden und Registrieren der Assembly, generiert, registriert und installiert Regsvcs.exe die Typbibliothek in eine vorhandene COM+ 1.0-Anwendung.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Runtime.InteropServices.TypeLibConverter>
 - <xref:System.Runtime.InteropServices.ITypeLibConverter>
 - [Verfügbarmachen von .NET Framework-Komponenten in COM](exposing-dotnet-components-to-com.md)
@@ -88,5 +89,5 @@ COM-Entwickler profitieren von den folgenden Informationen zu den verwalteten Ty
 - [Einführung in die Klassenschnittstelle](com-callable-wrapper.md#introducing-the-class-interface)
 - [Überlegungen zur Assemblysicherheit](../app-domains/assembly-security-considerations.md)
 - [Tlbexp.exe (Type Library Exporter-Tool)](../tools/tlbexp-exe-type-library-exporter.md)
-- [Registrieren von Assemblys bei COM](registering-assemblies-with-com.md)
+- [Registrieren von Assemblys mit COM](registering-assemblies-with-com.md)
 - [Vorgehensweise: Einbetten von Typbibliotheken als Win32-Ressourcen in .NET-Anwendungen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ww9a897z(v=vs.100))

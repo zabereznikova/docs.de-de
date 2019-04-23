@@ -8,10 +8,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100079"
 ---
 # <a name="application-management-overview"></a>Übersicht über die Anwendungsverwaltung
@@ -105,7 +105,7 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>Abrufen der aktuellen Anwendungsdomäne  
- Da die Funktionalität der <xref:System.Windows.Application> Klasse in einer Anwendung freigegeben werden, es können nur eine Instanz vorhanden sein. die <xref:System.Windows.Application> pro Klasse <xref:System.AppDomain>. Um dies zu erzwingen die <xref:System.Windows.Application> Klasse wird als Singleton-Klasse implementiert (finden Sie unter [Implementieren von Singleton in C# ](https://go.microsoft.com/fwlink/?LinkId=100567)), das eine einzelne Instanz von sich selbst erstellt und der SAS mit dem `static`<xref:System.Windows.Application.Current%2A> Eigenschaft.  
+ Da die Funktionalität der <xref:System.Windows.Application> Klasse in einer Anwendung freigegeben werden, es können nur eine Instanz vorhanden sein. die <xref:System.Windows.Application> pro Klasse <xref:System.AppDomain>. Um dies zu erzwingen die <xref:System.Windows.Application> Klasse wird als Singleton-Klasse implementiert (finden Sie unter [Implementieren von Singleton in c#](https://go.microsoft.com/fwlink/?LinkId=100567)), das eine einzelne Instanz von sich selbst erstellt und der SAS mit dem `static` <xref:System.Windows.Application.Current%2A> Diese Eigenschaft.  
   
  Der folgende Code zeigt, wie Sie erhalten einen Verweis auf die <xref:System.Windows.Application> Objekt für die aktuelle <xref:System.AppDomain>.  
   
@@ -361,5 +361,5 @@ Alle Anwendungen nutzen in der Regel einen gemeinsamen Satz von Funktionen, der 
 - [Übersicht über die Navigation](navigation-overview.md)
 - [WPF-Anwendungsressource, Inhalts- und Datendateien](wpf-application-resource-content-and-data-files.md)
 - [Paket-URI in WPF](pack-uris-in-wpf.md)
-- [Anwendungsmodell: Gewusst wie-Themen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [Anwendungsmodell: Gewusst-wie-Themen](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
 - [Anwendungsentwicklung](index.md)

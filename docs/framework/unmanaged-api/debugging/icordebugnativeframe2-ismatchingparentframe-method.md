@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a553f2cbac6110e82803e6d0dd872cfaa15d773
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099923"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame-Methode
@@ -49,7 +49,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 |-------------|-----------------|  
 |S_OK|Der übergeordnete Status wurden erfolgreich zurückgegeben.|  
 |E_FAIL|Der übergeordnete Status konnte nicht zurückgegeben werden.|  
-|E_INVALIDARG|`pPotentialParentFrame` oder `pIsParent` ist null.|  
+|E_INVALIDARG|`pPotentialParentFrame` oder `pIsParent` ist NULL.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
   
@@ -68,5 +68,5 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugNativeFrame2-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
 ms.openlocfilehash: 29ce9b165c3823d7d06008431294f67716ccf8e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105442"
 ---
 # <a name="using-the-xmlserializer-class"></a>Verwenden der XmlSerializer-Klasse
@@ -129,7 +129,7 @@ Windows Communication Foundation (WCF) können zwei verschiedene Serialisierungs
  Die gleichen Regeln für die globale Elementdeklaration gelten für Legacy-Datasettypen. Beachten Sie, dass das `XmlRootAttribute` keine globalen Elementdeklarationen überschreiben kann, die mithilfe von benutzerdefiniertem Code hinzugefügt wurden. Diese können mithilfe der Schemaanbietermethode dem `XmlSchemaSet` oder über `GetSchema` für Legacy-Datasettypen hinzugefügt worden sein.  
   
 ### <a name="ixmlserializable-element-types"></a>IXmlSerializable-Elementtypen  
- `IXmlSerializable` -Elementtypen ist entweder der `IsAny` -Eigenschaftensatz auf `true` oder ihre schemaanbietermethode zurückgeben `null`.  
+ Für `IXmlSerializable`-Elementtypen ist entweder die `IsAny`-Eigenschaft auf `true` festgelegt, oder ihre Schemaanbietermethode gibt `null` zurück.  
   
  Das Serialisieren und Deserialisieren eines Elementtyps ähnelt stark dem Serialisieren und Deserialisieren eines Inhaltstyps. Es gibt jedoch einige wichtige Unterschiede:  
   
@@ -141,7 +141,7 @@ Windows Communication Foundation (WCF) können zwei verschiedene Serialisierungs
   
 -   Beim Serialisieren eines Elementtyps auf der obersten Ebene, ohne zur Entwurfszeit den Stammnamen und einen Namespace anzugeben, führen <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> und <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> im Wesentlichen keine Aktionen aus, und <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> ruft einfach `WriteXml` auf. In diesem Modus kann das Objekt, das serialisiert wird, nicht `null` sein und nicht polymorph zugewiesen werden. Außerdem kann die Objektdiagrammbeibehaltung nicht aktiviert und `NetDataContractSerializer` kann nicht verwendet werden.  
   
--   Beim Deserialisieren eines Elementtyps auf der obersten Ebene, ohne zur Entwurfszeit den Stammnamen und den Namespace anzugeben, gibt <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> den Wert `true` zurück, wenn der Anfang eines beliebigen Elements gefunden werden kann. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> mit der `verifyObjectName` Parametersatz zu `true` verhält sich genauso wie `IsStartObject` vor dem das Objekt gelesen. `ReadObject` Anschließend übergibt die Kontrolle an `ReadXml` Methode.  
+-   Beim Deserialisieren eines Elementtyps auf der obersten Ebene, ohne zur Entwurfszeit den Stammnamen und den Namespace anzugeben, gibt <xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> den Wert `true` zurück, wenn der Anfang eines beliebigen Elements gefunden werden kann. <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> mit auf `verifyObjectName` festgelegtem `true`-Parameter verhält sich genau so wie `IsStartObject`, bevor das Objekt gelesen wird. `ReadObject` übergibt das Steuerelement dann an die `ReadXml`-Methode.  
   
  Das Schema, das für die Elementtypen exportiert wird, entspricht dem Schema für den `XmlElement`-Typ, wie in einem Abschnitt weiter oben beschrieben. Es gilt jedoch die Ausnahme, dass die Schemaanbietermethode wie bei Inhaltstypen dem <xref:System.Xml.Schema.XmlSchemaSet> zusätzliche Schemas hinzufügen kann. Das Verwenden des `XmlRootAttribute`-Attributs mit Elementtypen ist nicht zulässig, und globale Elementdeklarationen werden für diese Typen nicht ausgegeben.  
   
@@ -213,4 +213,4 @@ Windows Communication Foundation (WCF) können zwei verschiedene Serialisierungs
 - <xref:System.ServiceModel.MessageHeaderArrayAttribute>
 - [Angeben von Datenübertragung in Dienstverträgen](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
 - [Verwenden von Datenverträgen](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Vorgehensweise: Verbessern der Startzeit von WCF-Clientanwendungen mit dem XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [Vorgehensweise: Verbessern der Startzeit von WCF-Client Clientanwendungen mit dem XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

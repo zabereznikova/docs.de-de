@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2b5646a1a556c57814602790d5f17104d2148e5
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e3eb5c9686f54bcaacef8d593f0ace4804d4ae60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410744"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098220"
 ---
 # <a name="default-marshaling-for-arrays"></a>Standardmäßiges Marshalling für Arrays
 In einer Anwendung, die vollständig aus verwaltetem Code besteht, übergibt die Common Language Runtime Arraytypen als In-/Out-Parameter. Im Gegensatz dazu übergibt der Interopmarshaller außerdem ein Array als In-Parameter in der Standardeinstellung.  
@@ -184,7 +184,7 @@ void New3(ref String ar);
   
 |Verwalteter Arraytyp|Exportiert als|  
 |------------------------|-----------------|  
-|**ELEMENT_TYPE_SZARRAY** **\<** *Typ* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *Typ* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Typ wird in der Signatur angegeben. Rang ist immer 1, Untergrenze ist immer 0. Größe ist immer zur Laufzeit bekannt.|  
+|**ELEMENT_TYPE_SZARRAY** **\<** *Typ* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Typ wird in der Signatur angegeben. Rang ist immer 1, Untergrenze ist immer 0. Größe ist immer zur Laufzeit bekannt.|  
 |**ELEMENT_TYPE_ARRAY** **\<** *Typ* **>** **\<** *Rang* **>**[**\<** *Grenzen* **>**]|**UnmanagedType.SafeArray(** *Typ* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> Typ, Rang und Grenzen sind in der Signatur angegeben. Die Größe ist immer zur Laufzeit bekannt.|  
 |**ELEMENT_TYPE_CLASS** **\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *Typ* **)**<br /><br /> Typ, Rang, Grenzen und Größe sind immer zur Laufzeit bekannt.|  
   
@@ -361,7 +361,8 @@ public struct MyStruct {
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)
+
+- [Standardmarshallingverhalten](default-marshaling-behavior.md)
 - [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)
 - [Direktionale Attribute](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Kopieren und Fixieren](copying-and-pinning.md)

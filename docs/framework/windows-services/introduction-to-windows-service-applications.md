@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-ms.openlocfilehash: b26186ccf4a773297db89026797e89f194db2aa4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a98528a4bae1a22352096958cfec2350b21ddf8e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614418"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103414"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Einführung in Windows-Dienstanwendungen
 Mit Microsoft Windows-Diensten, früher als NT-Dienste bekannt, wird das Erstellen von ausführbaren Anwendungen mit langer Laufzeit ermöglicht, die in eigenen Windows-Sitzungen ausgeführt werden. Die Dienste können automatisch gestartet werden, sobald der Computer gestartet wird. Sie können angehalten und neu gestartet werden. Es wird jedoch keine Benutzeroberfläche angezeigt. Dienste eignen sich mit diesen Funktionen ideal zur Verwendung auf einem Server. Sie sind darüber hinaus für alle Fälle geeignet, in denen Funktionen mit langer Laufzeit benötigt werden und Benutzer, die am gleichen Computer arbeiten, nicht gestört werden sollen. Dienste können auch im Sicherheitskontext eines bestimmten Benutzerkontos ausgeführt werden, bei dem es sich nicht um einen angemeldeten Benutzer oder das Standardcomputerkonto handelt. Weitere Informationen zu Diensten und Windows-Sitzungen finden Sie in der Windows SDK-Dokumentation.  
@@ -81,11 +81,12 @@ Mit Microsoft Windows-Diensten, früher als NT-Dienste bekannt, wird das Erstell
 -   Projekte mit Windows-Diensten müssen Installationskomponenten für das Projekt und seine Dienste aufweisen. Dies kann problemlos im Fenster **Eigenschaften** ausgeführt werden. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Windows-Dienstanwendungen](../../../docs/framework/windows-services/index.md)
 - [Programmierarchitektur für Dienstanwendungen](../../../docs/framework/windows-services/service-application-programming-architecture.md)
 - [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)
 - [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md)
 - [Vorgehensweise: Debuggen von Windows-Dienstanwendungen](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)
-- [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
+- [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung im Komponenten-Designer](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)
 - [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

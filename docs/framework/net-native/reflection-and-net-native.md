@@ -5,10 +5,10 @@ ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c92d71c9862dfbdace4de2e30cf48ace7becfd0b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105851"
 ---
 # <a name="reflection-and-net-native"></a>Reflektion und .NET Native
@@ -27,13 +27,13 @@ Die verwaltete Entwicklung in .NET Framework unterstützt Metaprogrammierung dur
   
  Die folgenden Themen enthalten die konzeptionelle Dokumentation und die Referenzdokumentation, die Sie benötigen, um Reflektion und Serialisierung in Ihren Apps zu unterstützen:  
   
--   [APIs, die auf Refelktion beruhen](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
+-   [APIs That Rely on Reflection (APIs, die die Reflektion benötigen)](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  
   
 -   [Reflektions-API-Referenz](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
   
--   [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+-   [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Kompilieren von Anwendungen mit .NET Native](../../../docs/framework/net-native/index.md)
-- [.NET Native und Kompilierung](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [Kompilieren von Apps mit .NET Native](../../../docs/framework/net-native/index.md)
+- [.NET Native and Compilation (.NET Native und Kompilierung)](../../../docs/framework/net-native/net-native-and-compilation.md)

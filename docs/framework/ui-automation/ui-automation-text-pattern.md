@@ -9,10 +9,10 @@ helpviewer_keywords:
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
 ms.openlocfilehash: 5646ecf9e2d5deb9fd1e7a1460860d8dd2f4dd9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104636"
 ---
 # <a name="ui-automation-text-pattern"></a>Textmuster zur Benutzeroberflächenautomatisierung
@@ -24,7 +24,7 @@ ms.locfileid: "59104636"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über TextPattern für die Benutzeroberflächenautomatisierung](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
  [Übersicht über TextPattern und eingebettete Objekte](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
- [Gewusst wie-Themen](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Automation.Text>  

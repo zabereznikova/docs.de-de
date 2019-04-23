@@ -10,10 +10,10 @@ helpviewer_keywords:
 - IScrollInfo interface [WPF]
 ms.assetid: d8700bef-a3f8-4c12-9de2-fc3b79f32cd3
 ms.openlocfilehash: 6ebd8268e1358b45709885c07e6b096d5f806ebb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098545"
 ---
 # <a name="how-to-scroll-content-by-using-the-iscrollinfo-interface"></a>Vorgehensweise: Durchführen eines Bildlaufs von Inhalten mithilfe der IScrollInfo-Schnittstelle
@@ -35,5 +35,5 @@ Dieses Beispiel veranschaulicht das Scrollen von Inhalt mithilfe der <xref:Syste
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
 - <xref:System.Windows.Controls.StackPanel>
 - [Übersicht über ScrollViewer](scrollviewer-overview.md)
-- [Gewusst wie-Themen](scrollviewer-how-to-topics.md)
+- [Themen zu Vorgehensweisen](scrollviewer-how-to-topics.md)
 - [Übersicht über Panel-Elemente](panels-overview.md)

@@ -12,10 +12,10 @@ ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a7fe0b33bbd77143da6d2f4a26b170e4d7afe1fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104467"
 ---
 # <a name="pinvokelog-mda"></a>pInvokeLog-MDA
@@ -45,5 +45,5 @@ Der `pInvokeLog`-MDA (Assistent für verwaltetes Debuggen) wird für jede eindeu
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Verwenden nicht verwalteter DLL-Funktionen](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)

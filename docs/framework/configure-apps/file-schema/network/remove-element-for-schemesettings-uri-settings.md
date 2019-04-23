@@ -1,12 +1,12 @@
 ---
-title: <remove> -Element für SchemeSettings (Uri-Einstellungen)
+title: <remove>-Element für schemeSettings (URI-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 4095ba51-de20-4f87-b562-018abe422c91
 ms.openlocfilehash: f29ee86deaa150324b40f4fac12ead152553e50d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104974"
 ---
 # <a name="remove-element-for-schemesettings-uri-settings"></a>\<Entfernen Sie >-Element für SchemeSettings (Uri-Einstellungen)
@@ -41,7 +41,7 @@ Entfernt eine Schema-Einstellung für einen Schemanamen an.
   
 |Element|Beschreibung|  
 |-------------|-----------------|  
-|[\<SchemeSettings >-Element (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.|  
+|[\<schemeSettings>-Element (URI-Einstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Gibt an, ob <xref:System.Uri> auf bestimmte Schemen analysiert wird.|  
   
 ## <a name="remarks"></a>Hinweise  
  In der Standardeinstellung die <xref:System.Uri?displayProperty=nameWithType> Klasse un-Escapezeichen % codiert Pfadtrennzeichen vor dem Ausführen der Path-Komprimierung. Dies wurde als Sicherheitsmechanismus vor Angriffen wie folgt implementiert:  
@@ -82,4 +82,4 @@ Entfernt eine Schema-Einstellung für einen Schemanamen an.
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -3,14 +3,14 @@ title: Aggregatfunktionen (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
 ms.openlocfilehash: 113c19078feeca24a0817e52f8eb0d04537b0684
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104922"
 ---
 # <a name="aggregate-functions-entity-sql"></a>Aggregatfunktionen (Entity SQL)
-Ein Aggregat ist ein Sprachkonstrukt, das eine Auflistung als Teil einer Gruppenoperation zu einem Skalar zusammenfasst. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Aggregate sind in zwei Formen:  
+Ein Aggregat ist ein Sprachkonstrukt, das eine Auflistung als Teil einer Gruppenoperation zu einem Skalar zusammenfasst. Es gibt zwei Arten von [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Aggregaten:  
   
 -   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Auflistungsfunktionen, die an einer beliebigen Stelle in einem Ausdruck verwendet werden können. Hierzu gehört auch die Verwendung von Aggregatfunktionen in Projektionen und Prädikate, die auf Auflistungen angewendet werden. Auflistungsfunktionen sind der bevorzugte Modus zum Angeben von Aggregaten in [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   

@@ -20,10 +20,10 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
 ms.openlocfilehash: 56b97170884ef31004b06b0eb50a8d79ad1d041c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102829"
 ---
 # <a name="xaml-overview-wpf"></a>Übersicht über die XAML (WPF)
@@ -203,14 +203,14 @@ Dieses Thema beschreibt die Funktionen der XAML-Sprache und zeigt, wie Sie XAML 
   
  Diese Verwendung von `xmlns` zum Definieren eines Geltungsbereich für die Verwendung und Zuordnung eines Namescopes ist mit der XML 1.0-Spezifikation verträglich. XAML-Namescopes unterscheiden sich von XML-Namescopes nur darin, dass ein XAML-Namescope auch darüber etwas impliziert, wie Elemente durch Typen unterstützt werden, wenn es zur Typauflösung und Analyse des XAML-Codes kommt.  
   
- Beachten Sie, dass die `xmlns`-Attribute nur für das Stammelement jeder XAML-Datei unbedingt erforderlich sind. `xmlns` -Definitionen gelten für alle Nachfolgerelemente des Stammelements (dieses Verhalten entspricht wieder der XML 1.0-Spezifikation für `xmlns`.) `xmlns` Attribute sind auch bei anderen Elementen unterhalb des Stamms zulässig und gelten für alle Nachfolgerelemente des definierenden Elements. Allerdings kann häufiges Definieren oder Neudefinieren von XAML-Namespaces zu einem nur schwer lesbaren XAML-Markup-Stil führen.  
+ Beachten Sie, dass die `xmlns`-Attribute nur für das Stammelement jeder XAML-Datei unbedingt erforderlich sind. `xmlns`-Definitionen gelten für alle Nachfolgerelemente des Stammelements (dieses Verhalten entspricht wieder der XML 1.0-Spezifikation für `xmlns`.) `xmlns`-Attribute sind auch bei anderen Elementen unterhalb des Stamms zulässig und gelten für alle Nachfolgerelemente des definierenden Elements. Allerdings kann häufiges Definieren oder Neudefinieren von XAML-Namespaces zu einem nur schwer lesbaren XAML-Markup-Stil führen.  
   
  Die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Implementierung des XAML-Prozessors schließt eine Infrastruktur ein, der die WPF-Kernassemblys bekannt sind. Ihr ist bekannt, dass die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Kernassemblys die Typen enthalten, welche die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Zuordnungen zum XAML-Standardnamespace unterstützen. Dies wird durch eine Konfiguration ermöglicht, die Teil Ihrer Projekt-Builddatei und des WPF-Builds und -Projektsystems ist. Daher ist die Deklaration des XAML-Namespaces als Standard-`xmlns` das Einzige, was benötigt wird, um auf XAML-Elemente zu verweisen, die aus [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Assemblys stammen.  
   
 ### <a name="the-x-prefix"></a>Das Präfix x:  
  Im vorherigen Beispiel zum Stammelement wurde das Präfix `x:` verwendet, um den XAML-Namespaces [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)] zuzuordnen, also der dedizierte XAML-Namespace, der XAML-Sprachkonstrukte unterstützt. Dieses `x:`-Präfix wird für die Zuordnung des XAML-Namespaces in den Vorlagen für Projekte, in Beispielen und in der Dokumentation im gesamten [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] verwendet. Der XAML-Namespace für die XAML-Sprache enthält verschiedene Programmierkonstrukte, die Sie häufig in XAML verwenden werden. Im folgenden finden Sie eine Liste der häufigsten `x:`-Präfix-Programmierkonstrukte, die Sie verwenden werden:  
   
--   [x:Key](../../xaml-services/x-key-directive.md): Legt einen eindeutigen Schlüssel für jede Ressource in einem <xref:System.Windows.ResourceDictionary> (oder in ähnlichen Wörterbuchkonzepten in anderen Frameworks). `x:Key` wird wahrscheinlich für 90 % der `x:` Verwendungen, die in einer typischen WPF-Anwendung Markup wird angezeigt.  
+-   [x:Key](../../xaml-services/x-key-directive.md): Legt einen eindeutigen Schlüssel für jede Ressource in einem <xref:System.Windows.ResourceDictionary> (oder in ähnlichen Wörterbuchkonzepten in anderen Frameworks). `x:Key` wird wahrscheinlich für 90 % der Verwendungen von `x:` im Markup einer normalen WPF-Anwendung verantwortlich zeigen.  
   
 -   [x:Class](../../xaml-services/x-class-directive.md): Gibt an, die [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Namespace und den Namen für die Klasse, die Code-Behind für eine XAML-Seite bereitstellt. Das WPF-Programmiermodell schreibt eine solche Klasse für CodeBehind-Unterstützung vor, weshalb Sie fast immer eine Zuordnung von `x:` sehen werden, selbst wenn keine Ressourcen vorhanden sind.  
   
@@ -256,7 +256,7 @@ Dieses Thema beschreibt die Funktionen der XAML-Sprache und zeigt, wie Sie XAML 
  [!code-csharp[XAMLOvwSupport#ButtonWithCodeBehindHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page3.xaml.cs#buttonwithcodebehindhandler)]
  [!code-vb[XAMLOvwSupport#ButtonWithCodeBehindHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XAMLOvwSupport/VisualBasic/Page1.xaml.vb#buttonwithcodebehindhandler)]  
   
- Beachten Sie, dass die CodeBehind-Datei den CLR-Namespace `ExampleNamespace` verwendet und `ExamplePage` als partielle Klasse in diesem Namespace deklariert. Dies entspricht der `x:Class` -Attributwert `ExampleNamespace`.`ExamplePage` der im Stammelement des Markups bereitgestellt wurde. Der WPF-Markupcompiler erstellt für jede kompilierte XAML-Datei eine partielle Klasse durch Ableiten einer Klasse des Typs des Stammelements. Wenn Sie CodeBehind bereitstellen, in dem die gleiche partielle Klasse definiert ist, wird der resultierende Code innerhalb der gleichen Namespace- und Klassennamen der kompilierten Anwendung kombiniert.  
+ Beachten Sie, dass die CodeBehind-Datei den CLR-Namespace `ExampleNamespace` verwendet und `ExamplePage` als partielle Klasse in diesem Namespace deklariert. Dies entspricht dem `x:Class`-Attributwert von `ExampleNamespace`.`ExamplePage`, der im Stammelement des Markups bereitgestellt wurde. Der WPF-Markupcompiler erstellt für jede kompilierte XAML-Datei eine partielle Klasse durch Ableiten einer Klasse des Typs des Stammelements. Wenn Sie CodeBehind bereitstellen, in dem die gleiche partielle Klasse definiert ist, wird der resultierende Code innerhalb der gleichen Namespace- und Klassennamen der kompilierten Anwendung kombiniert.  
   
  Weitere Informationen zu den Anforderungen für die CodeBehind-Programmierung in WPF finden Sie im Abschnitt "Code-Behind-Ereignishandler und Anforderungen der partiellen Klasse" von [Code-Behind und XAML in WPF](code-behind-and-xaml-in-wpf.md).  
   
@@ -307,7 +307,7 @@ Dieses Thema beschreibt die Funktionen der XAML-Sprache und zeigt, wie Sie XAML 
 ## <a name="xaml-security"></a>XAML-Sicherheit  
  XAML ist eine Markupsprache, die Objektinstanziierung und -ausführung direkt darstellt. Daher verfügen in XAML erstellte Elemente über dieselbe Fähigkeit zur Interaktion mit Systemressourcen (z.B. Netzwerkzugriff, Dateisystem E/A), wie der gleichwertig generierte Code.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] unterstützt die [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] Sicherheitsframework [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]. Dies bedeutet, dass in der Internetzone ausgeführter [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt eingeschränkte Ausführungsberechtigungen hat. "Loose XAML" (Seiten nicht kompilierten XAML-Codes, die beim Laden von einem XAML-Viewer interpretiert werden) und [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] werden normalerweise in dieser Internetzone ausgeführt und verwenden die gleiche Berechtigungsmenge.  Wenn XAML allerdings in eine voll vertrauenswürdige Anwendung geladen wird, hat es den gleichen Zugriff auf Systemressourcen wie die Hostanwendung. Weitere Informationen finden Sie unter [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../wpf-partial-trust-security.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] unterstützt das [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]-Sicherheitsframework [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]. Dies bedeutet, dass in der Internetzone ausgeführter [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Inhalt eingeschränkte Ausführungsberechtigungen hat. "Loose XAML" (Seiten nicht kompilierten XAML-Codes, die beim Laden von einem XAML-Viewer interpretiert werden) und [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] werden normalerweise in dieser Internetzone ausgeführt und verwenden die gleiche Berechtigungsmenge.  Wenn XAML allerdings in eine voll vertrauenswürdige Anwendung geladen wird, hat es den gleichen Zugriff auf Systemressourcen wie die Hostanwendung. Weitere Informationen finden Sie unter [WPF-Sicherheit mit teilweiser Vertrauenswürdigkeit](../wpf-partial-trust-security.md).  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>Laden von XAML aus code  
@@ -329,7 +329,7 @@ Dieses Thema beschreibt die Funktionen der XAML-Sprache und zeigt, wie Sie XAML 
 
 - [Ausführliche Erläuterung der XAML-Syntax](xaml-syntax-in-detail.md)
 - [XAML- und benutzerdefinierte Klassen für WPF](xaml-and-custom-classes-for-wpf.md)
-- [XAML-Namespace (x:) Sprachfunktionen](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML-Namespace (x:)) Sprachfunktionen](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF-XAML-Erweiterungen](wpf-xaml-extensions.md)
 - [Übersicht über Basiselemente](base-elements-overview.md)
 - [Strukturen in WPF](trees-in-wpf.md)
