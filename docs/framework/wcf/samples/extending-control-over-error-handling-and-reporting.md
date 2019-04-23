@@ -3,10 +3,10 @@ title: Erweitern der Kontrolle über Fehlerbehandlung und -meldung
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 ms.openlocfilehash: 4a12ab62a9ec25d207a88b041bcdf498eaff7228
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303205"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Erweitern der Kontrolle über Fehlerbehandlung und -meldung
@@ -19,7 +19,7 @@ In diesem Beispiel wird veranschaulicht, wie zum Erweitern der Kontrolle über F
   
  In diesem Beispiel implementiert der `CalculatorErrorHandler`-Typ die <xref:System.ServiceModel.Dispatcher.IErrorHandler>-Schnittstelle. Geben Sie Feld  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> Methode, die `CalculatorErrorHandler` schreibt ein Protokoll des Fehlers in Textdatei Error.txt in c:\logs. Beachten Sie, dass das Beispiel den Fehler protokolliert, ihn aber nicht unterdrückt, so dass er wieder zurück an den Client gemeldet werden kann.  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>-Methode protokolliert der `CalculatorErrorHandler` den Fehler in der Textdatei Error.txt in c:\logs. Beachten Sie, dass das Beispiel den Fehler protokolliert, ihn aber nicht unterdrückt, so dass er wieder zurück an den Client gemeldet werden kann.  
   
 ```  
 public class CalculatorErrorHandler : IErrorHandler  

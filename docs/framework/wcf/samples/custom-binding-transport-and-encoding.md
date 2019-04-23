@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
 ms.openlocfilehash: d293ccb45a3af85ca5ca23fec9e3c01a55564581
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299019"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767567"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>Transport und Codierung für benutzerdefinierte Bindungen
 Eine benutzerdefinierte Bindung wird durch eine geordnete Liste einzelner Bindungselemente definiert. In diesem Beispiel wird veranschaulicht, wie eine benutzerdefinierte Bindung mit verschiedenen Transportarten und Nachrichtencodierungselementen konfiguriert wird.  

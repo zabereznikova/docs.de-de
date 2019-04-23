@@ -3,11 +3,11 @@ title: Adressierung
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
 ms.openlocfilehash: a59c3b354404169c2baadd4ab8c2702728d9a891
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306008"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767980"
 ---
 # <a name="addressing"></a>Adressierung
 Im Beispiel für die Adressierung werden verschiedene Aspekte und Features von Endpunktadressen veranschaulicht. Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md). In diesem Beispiel ist der Dienst selbst gehostet. Sowohl der Dienst als auch der Client sind Konsolenanwendungen. Der Dienst definiert mehrere Endpunkte mithilfe einer Kombination aus relativen und absoluten Endpunktadressen.  

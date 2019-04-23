@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
 ms.openlocfilehash: 933baf39845caa2bc96828738d30f41613f69470
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304830"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Vorgehensweise: Aufrufen modelldefinierter Funktionen als Objektmethoden
@@ -44,7 +44,7 @@ In diesem Thema wird beschrieben, wie eine modelldefinierte Funktion als Methode
 2. Aufrufen der Methode als Member einer statischen Methode für die benutzerdefinierte Klasse  
   
 ## <a name="example"></a>Beispiel  
- **Aufrufen einer modelldefinierten Funktion als Methode für ein ObjectContext-Objekt**  
+ **Aufrufen einer Modelldefinierten Funktion als Methode für ein ObjectContext-Objekt**  
   
  Im folgenden Beispiel wird veranschaulicht, wie eine modelldefinierte Funktion als Methode für ein <xref:System.Data.Objects.ObjectContext>-Objekt aufgerufen wird. Im Beispiel wird die [AdventureWorks Sales-Modell](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
@@ -82,7 +82,7 @@ In diesem Thema wird beschrieben, wie eine modelldefinierte Funktion als Methode
  [!code-vb[DP L2E Methods on ObjectContext#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#9)]  
   
 ## <a name="example"></a>Beispiel  
- **Aufrufen einer modelldefinierten Funktion als statische Methode für eine benutzerdefinierte Klasse**  
+ **Aufrufen einer Modelldefinierten Funktion als eine statische Methode für eine benutzerdefinierte Klasse**  
   
  Im nächsten Beispiel wird veranschaulicht, wie eine modelldefinierte Funktion als statische Methode für eine benutzerdefinierte Klasse aufgerufen wird. Im Beispiel wird die [AdventureWorks Sales-Modell](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   

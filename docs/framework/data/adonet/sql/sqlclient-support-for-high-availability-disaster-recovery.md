@@ -3,10 +3,10 @@ title: SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellu
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307595"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>SqlClient-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
@@ -63,7 +63,7 @@ In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-
   
 2. Wenn eine Anwendung `ApplicationIntent=ReadWrite` (unten erläutert) verwendet und der Speicherort des sekundären Replikats für den schreibgeschützten Zugriff konfiguriert ist.  
   
- <xref:System.Data.SqlClient.SqlDependency> wird auf schreibgeschützten sekundären Replikaten nicht unterstützt.  
+ <xref:System.Data.SqlClient.SqlDependency> wird für schreibgeschützte sekundäre Replikate nicht unterstützt.  
   
  Ein Verbindungsfehler tritt auf, wenn ein primäres Replikat so konfiguriert ist, dass schreibgeschützte Arbeitslasten abgelehnt werden und die Verbindungszeichenfolge `ApplicationIntent=ReadOnly` enthält.  
   
@@ -79,7 +79,7 @@ In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-
   
  Das `ApplicationIntent`-Schlüsselwort funktioniert nicht mit schreibgeschützten Legacy-Datenbanken.  
   
- Eine Datenbank kann Lesearbeitslasten für die AlwaysOn-Zieldatenbank zulassen oder ablehnen. (Dies erfolgt mit der `ALLOW_CONNECTIONS` -Klausel der `PRIMARY_ROLE` und `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] Anweisungen.)  
+ Eine Datenbank kann Lesearbeitslasten für die AlwaysOn-Zieldatenbank zulassen oder ablehnen. (Dies erfolgt über die `ALLOW_CONNECTIONS`-Klausel der `PRIMARY_ROLE`-Anweisung und der `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]-Anweisung).  
   
  Das `ApplicationIntent`-Schlüsselwort wird verwendet, um das schreibgeschützte Routing zu aktivieren.  
   
@@ -98,5 +98,5 @@ In diesem Thema wird die (in [!INCLUDE[net_v45](../../../../../includes/net-v45-
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL Server-Funktionen und ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
+- [SQL Server Features and ADO.NET (SQL Server-Features und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

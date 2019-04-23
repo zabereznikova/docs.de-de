@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bd250caae1bd98d238f8d99702a97f0cdbc7448
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5580b6d8af7319397ad7eb6416941c2be0dcdb76
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826901"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303420"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Vorgehensweise: Signieren einer Assembly mit einem starken Namen
 Es gibt mehrere Möglichkeiten, eine Assembly mit einem starken Namen zu signieren:  
@@ -35,13 +35,13 @@ Es gibt mehrere Möglichkeiten, eine Assembly mit einem starken Namen zu signier
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>So erstellen und signieren Sie eine Assembly mit einem starken Namen mithilfe von Visual Studio  
   
-1.  Öffnen Sie im **Projektmappen-Explorer**das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften**aus.  
+1. Öffnen Sie im **Projektmappen-Explorer**das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften**aus.  
   
-2.  Wählen Sie die Registerkarte **Signierung** aus.  
+2. Wählen Sie die Registerkarte **Signierung** aus.  
   
-3.  Wählen Sie das Feld **Assembly signieren** aus.  
+3. Wählen Sie das Feld **Assembly signieren** aus.  
   
-4.  Wählen Sie im Feld **Schlüsseldatei mit starkem Namen auswählen** die Option **\<Durchsuchen…>** aus, und navigieren Sie dann zur Schlüsseldatei. Wählen Sie zum Erstellen einer neuen Schlüsseldatei **\<Neu…>** aus, und geben Sie ihren Namen im Dialogfeld **Schlüssel für einen starken Namen erstellen** ein.  
+4. Wählen Sie im Feld **Schlüsseldatei mit starkem Namen auswählen** die Option **\<Durchsuchen…>** aus, und navigieren Sie dann zur Schlüsseldatei. Wählen Sie zum Erstellen einer neuen Schlüsseldatei **\<Neu…>** aus, und geben Sie ihren Namen im Dialogfeld **Schlüssel für einen starken Namen erstellen** ein.  
   
 > [!NOTE]
 >  Wählen Sie eine Datei mit öffentlichem Schlüssel aus, um [die Signierung einer Assembly zu verzögern](../../../docs/framework/app-domains/delay-sign-assembly.md).  
@@ -73,9 +73,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
   
 #### <a name="to-sign-an-assembly-with-a-strong-name-by-using-attributes"></a>So signieren Sie eine Assembly mit einem starken Namen unter Verwendung von Attributen  
   
-1.  Fügen Sie in Ihrer Codemoduldatei das <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> -Attribut oder das <xref:System.Reflection.AssemblyKeyNameAttribute> -Attribut hinzu, und geben Sie den Namen der Datei oder des Containers an, die bzw. der das zum Signieren der Assembly mit einem starken Namen zu verwendende Schlüsselpaar enthält.  
+1. Fügen Sie in Ihrer Codemoduldatei das <xref:System.Reflection.AssemblyKeyFileAttribute?displayProperty=nameWithType> -Attribut oder das <xref:System.Reflection.AssemblyKeyNameAttribute> -Attribut hinzu, und geben Sie den Namen der Datei oder des Containers an, die bzw. der das zum Signieren der Assembly mit einem starken Namen zu verwendende Schlüsselpaar enthält.  
   
-2.  Kompilieren Sie die Quellcodedatei normal.  
+2. Kompilieren Sie die Quellcodedatei normal.  
   
 > [!NOTE]
 >  Die C#- und Visual Basic-Compiler geben Compilerwarnungen aus (CS1699 bzw. BC41008), wenn das <xref:System.Reflection.AssemblyKeyFileAttribute> -Attribut oder das <xref:System.Reflection.AssemblyKeyNameAttribute> -Attribut im Quellcode auftreten. Sie können die Warnungen ignorieren.  
@@ -101,9 +101,10 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erstellen und Verwenden von Assemblys mit starkem Namen](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [Vorgehensweise: Erstellen eines öffentlichen/privaten Schlüsselpaars](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [Verzögertes Signieren einer Assembly](../../../docs/framework/app-domains/delay-sign-assembly.md)
 - [Verwalten der Signierung von Assemblys und Manifesten](/visualstudio/ide/managing-assembly-and-manifest-signing)
-- [Seite „Signierung“, Projekt-Designer](/visualstudio/ide/reference/signing-page-project-designer)
+- [Seite "Signierung", Projekt-Designer](/visualstudio/ide/reference/signing-page-project-designer)

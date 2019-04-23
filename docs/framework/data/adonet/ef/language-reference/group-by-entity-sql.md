@@ -3,10 +3,10 @@ title: GROUP BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: cf4f4972-4724-4945-ba44-943a08549139
 ms.openlocfilehash: 574d952e0183eb65c88864f2788eb7d698c9f2ec
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302945"
 ---
 # <a name="group-by-entity-sql"></a>GROUP BY (Entity SQL)
@@ -20,7 +20,7 @@ Gibt Gruppen an, in denen von einem Abfrageausdruck ([SELECT](../../../../../../
   
 ## <a name="arguments"></a>Argumente  
  `aliasedExpression`  
- Jeder gültige Abfrageausdruck, der gruppiert wird. `expression` ist eine Eigenschaft oder ein nicht aggregierter Ausdruck sein, der auf eine von der FROM-Klausel zurückgegebene Eigenschaft verweist. Die Auswertung jedes Ausdrucks in einer GROUP BY-Klausel muss einen Typ ergeben, der auf Gleichheit überprüft werden kann. Bei diesen Typen handelt es sich im Allgemeinen um skalare primitive Typen wie Zahlen, Zeichenfolgen und Datumsangaben. Nach einer Auflistung kann nicht gruppiert werden.  
+ Jeder gültige Abfrageausdruck, der gruppiert wird. `expression` kann eine Eigenschaft oder ein nicht aggregierter Ausdruck sein, der auf eine von der FROM-Klausel zurückgegebene Eigenschaft verweist. Die Auswertung jedes Ausdrucks in einer GROUP BY-Klausel muss einen Typ ergeben, der auf Gleichheit überprüft werden kann. Bei diesen Typen handelt es sich im Allgemeinen um skalare primitive Typen wie Zahlen, Zeichenfolgen und Datumsangaben. Nach einer Auflistung kann nicht gruppiert werden.  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn Aggregatfunktionen in der SELECT-Klausel enthalten sind \<Auswahlliste >, GROUP BY berechnet einen Summenwert für jede Gruppe. Wenn GROUP BY angegeben wird, muss jeder Eigenschaftsname jedes Nichtaggregatausdrucks in der Auswahlliste in der GROUP BY-Liste eingeschlossen sein, oder der GROUP BY-Ausdruck muss dem Auswahllistenausdruck genau entsprechen.  

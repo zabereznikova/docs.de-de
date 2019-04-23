@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
 ms.openlocfilehash: 015ce896e49b3a6a932c36db867271b4ac4c64c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303478"
 ---
 # <a name="large-udts"></a>Große UDTs
@@ -22,7 +22,7 @@ Mithilfe benutzerdefinierter Typen (User-Defined Types, UDTs) können Entwickler
   
  Eine vollständige Dokumentation zu benutzerdefinierten Typen finden Sie in der SQL Server-Onlinedokumentation für die von Ihnen verwendete SQL Server-Version.  
   
- **SQL Server-Onlinedokumentation**  
+ **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
   
 1. [Benutzerdefinierte CLR-Typen](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
@@ -136,5 +136,5 @@ End Using
 - [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [Abrufen von Datenbankschemainformationen](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
 - [SQL Server-Datentypzuordnungen](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [Binäre Daten und Daten mit umfangreichen Werten in SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
+- [SQL Server Binary and Large-Value Data (Binäre Daten und Daten mit umfangreichen Werten in SQL Server)](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

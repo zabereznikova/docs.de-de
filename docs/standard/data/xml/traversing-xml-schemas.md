@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c587f4248205251824be851c135d93784e86c2f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f444dd512dc27f1b7cda017e2c2848ac41eb56de
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646632"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305038"
 ---
 # <a name="traversing-xml-schemas"></a>Durchlaufen von XML-Schemata
 Das Durchlaufen eines XML-Schemas mithilfe einer SOM-API (Schema Object Model) ermöglicht den Zugriff auf die im SOM gespeicherten Elemente, Attribute und Typen. Der erste Schritt beim Bearbeiten eines XML-Schemas mithilfe der SOM-API ist das Durchlaufen des im SOM geladenen XML-Schemas.  
@@ -31,7 +31,7 @@ Das Durchlaufen eines XML-Schemas mithilfe einer SOM-API (Schema Object Model) e
 |<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>, <xref:System.Xml.Schema.XmlSchemaInclude>, <xref:System.Xml.Schema.XmlSchemaImport> oder <xref:System.Xml.Schema.XmlSchemaRedefine>|  
 |<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (ermöglicht den Zugriff auf alle Elemente, Attribute und Typen auf globaler Ebene).|  
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|  
-|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>, <xref:System.Xml.Schema.XmlSchemaSimpleType>, <xref:System.Xml.Schema.XmlSchemaComplexType>|  
+|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>ist <xref:System.Xml.Schema.XmlSchemaSimpleType>ist <xref:System.Xml.Schema.XmlSchemaComplexType>|  
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (ermöglicht den Zugriff auf Attribute, die nicht zum Schemanamespace gehören)|  
   
 > [!NOTE]
@@ -43,19 +43,19 @@ Das Durchlaufen eines XML-Schemas mithilfe einer SOM-API (Schema Object Model) e
   
  Im Codebeispiel wird das Kundenschema in den folgenden Schritten durchlaufen.  
   
-1.  Fügt das Kundenschema einem neuen <xref:System.Xml.Schema.XmlSchemaSet>-Objekt hinzu und kompiliert es anschließend. Alle beim Lesen oder Kompilieren des Schemas aufgetretenen Schemavalidierungswarnungen und -fehler werden vom <xref:System.Xml.Schema.ValidationEventHandler>-Delegaten behandelt.  
+1. Fügt das Kundenschema einem neuen <xref:System.Xml.Schema.XmlSchemaSet>-Objekt hinzu und kompiliert es anschließend. Alle beim Lesen oder Kompilieren des Schemas aufgetretenen Schemavalidierungswarnungen und -fehler werden vom <xref:System.Xml.Schema.ValidationEventHandler>-Delegaten behandelt.  
   
-2.  Ruft das kompilierte <xref:System.Xml.Schema.XmlSchema>-Objekt aus <xref:System.Xml.Schema.XmlSchemaSet> ab, indem die <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>-Eigenschaft durchlaufen wird. Da das Schema kompiliert ist, kann auf die Eigenschaften im PSCI zugegriffen werden.  
+2. Ruft das kompilierte <xref:System.Xml.Schema.XmlSchema>-Objekt aus <xref:System.Xml.Schema.XmlSchemaSet> ab, indem die <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>-Eigenschaft durchlaufen wird. Da das Schema kompiliert ist, kann auf die Eigenschaften im PSCI zugegriffen werden.  
   
-3.  Durchläuft jedes <xref:System.Xml.Schema.XmlSchemaElement> in der <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A>-Auflistung der Post-Schema-Compilation-<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>-Auflistung. Dabei werden die Namen der einzelnen Elemente in die Konsole geschrieben.  
+3. Durchläuft jedes <xref:System.Xml.Schema.XmlSchemaElement> in der <xref:System.Xml.Schema.XmlSchemaObjectTable.Values%2A>-Auflistung der Post-Schema-Compilation-<xref:System.Xml.Schema.XmlSchema.Elements%2A?displayProperty=nameWithType>-Auflistung. Dabei werden die Namen der einzelnen Elemente in die Konsole geschrieben.  
   
-4.  Ruft den komplexen Typ des `Customer`-Elements mithilfe der <xref:System.Xml.Schema.XmlSchemaComplexType>-Klasse ab.  
+4. Ruft den komplexen Typ des `Customer`-Elements mithilfe der <xref:System.Xml.Schema.XmlSchemaComplexType>-Klasse ab.  
   
-5.  Wenn der komplexe Typ über Attribute verfügt, wird ein <xref:System.Collections.IDictionaryEnumerator> abgerufen, um jedes <xref:System.Xml.Schema.XmlSchemaAttribute> aufzuzählen und den Namen in die Konsole zu schreiben.  
+5. Wenn der komplexe Typ über Attribute verfügt, wird ein <xref:System.Collections.IDictionaryEnumerator> abgerufen, um jedes <xref:System.Xml.Schema.XmlSchemaAttribute> aufzuzählen und den Namen in die Konsole zu schreiben.  
   
-6.  Ruft den sequence<xref:System.Xml.Schema.XmlSchemaSequence>-Partikel des komplexen Typs mithilfe der -Klasse ab.  
+6. Ruft den sequence<xref:System.Xml.Schema.XmlSchemaSequence>-Partikel des komplexen Typs mithilfe der -Klasse ab.  
   
-7.  Durchläuft jedes <xref:System.Xml.Schema.XmlSchemaElement> in der <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType>-Auflistung und schreibt die Namen der einzelnen untergeordneten Elemente in die Konsole.  
+7. Durchläuft jedes <xref:System.Xml.Schema.XmlSchemaElement> in der <xref:System.Xml.Schema.XmlSchemaSequence.Items%2A?displayProperty=nameWithType>-Auflistung und schreibt die Namen der einzelnen untergeordneten Elemente in die Konsole.  
   
  Nachfolgend ist das vollständige Codebeispiel angegeben.  
   
@@ -70,9 +70,9 @@ Das Durchlaufen eines XML-Schemas mithilfe einer SOM-API (Schema Object Model) e
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über das XML-Schemaobjektmodell (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [Lesen und Schreiben von XML-Schemas](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
-- [Erstellen von XML-Schemas](../../../../docs/standard/data/xml/building-xml-schemas.md)
-- [Bearbeiten von XML-Schemas](../../../../docs/standard/data/xml/editing-xml-schemas.md)
-- [Einfügen oder Importieren von XML-Schemas](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
-- [„XmlSchemaSet“ zur Kompilierung von Schemas](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+- [Lesen und Schreiben von XML-Schemata](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [Erstellen von XML-Schemata](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [Bearbeiten von XML-Schemata](../../../../docs/standard/data/xml/editing-xml-schemas.md)
+- [Einfügen oder Importieren von XML-Schemata](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)
+- ["XmlSchemaSet" zur Kompilierung von Schemata](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [Post-Schema-Compilation-Infoset](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

@@ -3,10 +3,10 @@ title: 'Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
 ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306006"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Aufgabe 3: Erstellen der Toolbox- und PropertyGrid-Bereiche
@@ -216,4 +216,4 @@ namespace HostingApplication
 
 - [Erneutes Hosten des Workflow-Designers](rehosting-the-workflow-designer.md)
 - [Aufgabe 1: Erstellen einer neuen Windows Presentation Foundation-Anwendung](task-1-create-a-new-wpf-app.md)
-- [Aufgabe 2: Hosten des Workflow-Designers](task-2-host-the-workflow-designer.md)
+- [Task 2: Hosten des Workflowdesigners](task-2-host-the-workflow-designer.md)

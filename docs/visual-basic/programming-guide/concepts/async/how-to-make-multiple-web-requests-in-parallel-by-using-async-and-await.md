@@ -3,10 +3,10 @@ title: 'Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
 ms.openlocfilehash: c799fa83c0157019961da6adcf89b6ab6f906763
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303465"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await (Visual Basic)
@@ -68,9 +68,9 @@ Dim result = Await myTask
   
 3. Fügen Sie dem Projekt die folgenden Unterstützungsmethoden hinzu:  
   
-    -   `ProcessURLAsync` verwendet eine <xref:System.Net.Http.HttpClient> Methode, um den Inhalt einer Website als Bytearray herunterzuladen. Die Unterstützungsmethode `ProcessURLAsync` wird daraufhin angezeigt und gibt die Länge des Arrays zurück.  
+    -   `ProcessURLAsync` verwendet eine <xref:System.Net.Http.HttpClient>-Methode, um die Inhalte einer Website als Bytearray herunterzuladen. Die Unterstützungsmethode `ProcessURLAsync` wird daraufhin angezeigt und gibt die Länge des Arrays zurück.  
   
-    -   `DisplayResults` Zeigt die Anzahl der Bytes im Bytearray für jede URL an. Diese Anzeige wird aufgerufen, wenn alle Aufgaben den Download abgeschlossen haben.  
+    -   `DisplayResults` zeigt die Anzahl von Bytes im Bytearray für jede URL an. Diese Anzeige wird aufgerufen, wenn alle Aufgaben den Download abgeschlossen haben.  
   
      Kopieren Sie die folgenden Methoden aus, und fügen Sie sie nach der `startButton_Click` -Ereignishandler in "MainWindow.Xaml.vb".  
   
@@ -206,5 +206,5 @@ End Class
 ## <a name="see-also"></a>Siehe auch
 
 - [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Asynchronous Programming with Async and Await (Visual Basic) (Asynchrone Programmierung mit Async und Await (Visual Basic))](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

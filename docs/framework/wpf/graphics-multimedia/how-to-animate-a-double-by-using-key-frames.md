@@ -10,10 +10,10 @@ helpviewer_keywords:
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
 ms.openlocfilehash: 73cbeab8aee566313bad8e8a18a5500374287de0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305584"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>Vorgehensweise: Animieren eines Doubles mithilfe von Keyframes
@@ -44,4 +44,4 @@ Dieses Beispiel zeigt, wie Sie den Wert einer Eigenschaft zu animieren, akzeptie
 - <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>
 - <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>
 - [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)
-- [Themen zur Vorgehensweise mit Keyframes](key-frame-animation-how-to-topics.md)
+- [Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](key-frame-animation-how-to-topics.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 ms.openlocfilehash: 096cfc0f19189ba3173a8c5decd483542a18dbb0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304186"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Gewusst wie: erstellen ein benutzerdefinierten sicherheitstokenauthentifizierers
@@ -65,4 +65,4 @@ In diesem Thema wird beschrieben, wie Sie einen benutzerdefinierten Sicherheitst
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.IdentityModel.Tokens.UserNameSecurityToken>
 - [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenanbieters](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Anbieter](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)

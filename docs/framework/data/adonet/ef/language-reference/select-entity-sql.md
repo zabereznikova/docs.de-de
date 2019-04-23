@@ -3,10 +3,10 @@ title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
 ms.openlocfilehash: d6250871b8e22b73b49a94ee7ae7835f53a7c7cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306429"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
@@ -62,7 +62,7 @@ SELECT customers.Name FROM customers AS c
  Es kann auch JOIN-Syntax (FULL, INNER, LEFT, OUTER, ON und RIGHT) verwendet werden. ON ist für innere Verknüpfungen erforderlich und bei Cross Joins nicht zulässig.  
   
 ## <a name="row-and-value-select-clauses"></a>Zeilen- und Wertauswahlklauseln  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt zwei Varianten der SELECT-Klausel an. Die erste Variante, Zeilenauswahl, wird durch das SELECT-Schlüsselwort angegeben und kann zur Angabe von einem oder mehreren Werten verwendet werden, die herausprojiziert werden sollen. Da die zurückgegebenen Werte implizit mit einem Zeilen-Wrapper umschlossen werden, ist das Ergebnis des Abfrageausdrucks stets ein Multiset von Zeilen.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt zwei Varianten der SELECT-Klausel. Die erste Variante, Zeilenauswahl, wird durch das SELECT-Schlüsselwort angegeben und kann zur Angabe von einem oder mehreren Werten verwendet werden, die herausprojiziert werden sollen. Da die zurückgegebenen Werte implizit mit einem Zeilen-Wrapper umschlossen werden, ist das Ergebnis des Abfrageausdrucks stets ein Multiset von Zeilen.  
   
  In jedem Abfrageausdruck in einer Zeilenauswahl muss ein Alias angegeben werden. Wenn kein Alias angegeben wird, generiert[!INCLUDE[esql](../../../../../../includes/esql-md.md)] mithilfe der Aliasgenerierungsregeln einen Alias.  
   

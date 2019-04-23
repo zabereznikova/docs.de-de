@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9298bb758c205c1ef577942aca6b107828e8e139
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: f71cebc164e7b324dc847c67d3e0e49e856c11c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675912"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306533"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Handbuch für die Bereitstellung von .NET Framework für Entwickler
 Dieses Thema enthält Informationen für Entwickler, die eine beliebige Version des .NET Framework – von NET Framework 4.5 bis hin zu [!INCLUDE[net_current](../../../includes/net-current-version.md)] – mit ihren Apps installieren möchten.
@@ -66,8 +66,8 @@ Downloadlinks finden Sie im Abschnitt [Verteilbare Pakete](#redistributable-pack
 
 |Bereitstellungsstrategie für die App|Verfügbare Bereitstellungsmethoden|Zu verwendendes verteilbares .NET Framework-Paket|
 |--------------------------------------|----------------------------------|-------------------------------------------|
-|Installation aus dem Web|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX-Toolset](#wix)<br />- [Manuelle Installation](#installing_manually)|[Web installer](#redistributable-packages)|
-|Installation von Datenträger|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX-Toolset](#wix)<br />- [Manuelle Installation](#installing_manually)|[Offline installer](#redistributable-packages)|
+|Installation aus dem Web|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX-Toolset](#wix)<br />- [Manuelle Installation](#installing_manually)|[Webinstaller](#redistributable-packages)|
+|Installation von Datenträger|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX-Toolset](#wix)<br />- [Manuelle Installation](#installing_manually)|[Offlineinstaller](#redistributable-packages)|
 |Installation von einem lokalen Netzwerk (für Unternehmens-Apps)|- [ClickOnce](#clickonce-deployment)|Entweder [Webinstaller](#redistributable-packages) (siehe [ClickOnce](#clickonce-deployment) für Einschränkungen) oder [Offlineinstaller](#redistributable-packages)|
 
 ## <a name="redistributable-packages"></a>Verteilbare Pakete
@@ -117,23 +117,23 @@ Wenn Sie die App mit ClickOnce, InstallAware, InstallShield oder WiX bereitstell
 
  So wählen Sie in Visual Studio die ClickOnce-Bereitstellung aus und fügen eine Abhängigkeit von .NET Framework hinzu:
 
-1.  Öffnen Sie das App-Projekt, das Sie veröffentlichen möchten.
+1. Öffnen Sie das App-Projekt, das Sie veröffentlichen möchten.
 
-2.  Öffnen Sie im Projektmappen-Explorer das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften**aus.
+2. Öffnen Sie im Projektmappen-Explorer das Kontextmenü für das Projekt, und wählen Sie **Eigenschaften**aus.
 
-3.  Wählen Sie den Bereich **Veröffentlichen** aus.
+3. Wählen Sie den Bereich **Veröffentlichen** aus.
 
-4.  Klicken Sie auf die Schaltfläche **Erforderliche Komponenten** .
+4. Klicken Sie auf die Schaltfläche **Erforderliche Komponenten** .
 
-5.  Stellen Sie im Dialogfeld **Erforderliche Komponenten** sicher, dass das Kontrollkästchen **Setupprogramm zur Installation erforderlicher Komponenten erstellen** aktiviert ist.
+5. Stellen Sie im Dialogfeld **Erforderliche Komponenten** sicher, dass das Kontrollkästchen **Setupprogramm zur Installation erforderlicher Komponenten erstellen** aktiviert ist.
 
-6.  Suchen Sie in der Liste der erforderlichen Komponenten nach der Version von .NET Framework, mit der Sie Ihr Projekt erstellt haben, und wählen Sie diese Version aus.
+6. Suchen Sie in der Liste der erforderlichen Komponenten nach der Version von .NET Framework, mit der Sie Ihr Projekt erstellt haben, und wählen Sie diese Version aus.
 
-7.  Wählen Sie eine Option aus, um den Quellspeicherort für die erforderlichen Komponenten anzugeben, und klicken Sie dann auf **OK**.
+7. Wählen Sie eine Option aus, um den Quellspeicherort für die erforderlichen Komponenten anzugeben, und klicken Sie dann auf **OK**.
 
      Wenn Sie als Downloadspeicherort für .NET Framework eine URL festlegen, können Sie die Microsoft Download Center-Website oder eine eigene Website angeben. Wenn Sie das verteilbare Paket auf einem eigenen Server ablegen, müssen Sie den Offlineinstaller verwenden, nicht den Webinstaller. Sie können lediglich einen Link zum Webinstaller im Microsoft Download Center verwenden. Die URL kann auch auf einen Datenträger verweisen, auf dem eine eigene App verteilt wird.
 
-8.  Klicken Sie im Dialogfeld **Eigenschaftenseiten** auf **OK**.
+8. Klicken Sie im Dialogfeld **Eigenschaftenseiten** auf **OK**.
 
 <a name="installaware"></a> 
 ### <a name="installaware-deployment"></a>InstallAware-Bereitstellung
@@ -142,19 +142,19 @@ InstallAware erstellt über eine einzige Quelle die Windows-App (APPX), den Wind
 ### <a name="installshield-deployment"></a>InstallShield-Bereitstellung
  So wählen Sie in Visual Studio die InstallShield-Bereitstellung aus und fügen eine Abhängigkeit von .NET Framework hinzu
 
-1.  Wählen Sie auf der Visual Studio-Menüleiste **Datei**, **Neu**und **Projekt**aus.
+1. Wählen Sie auf der Visual Studio-Menüleiste **Datei**, **Neu**und **Projekt**aus.
 
-2.  Wählen Sie im linken Bereich des Dialogfelds **Neues Projekt** nacheinander **Andere Projekttypen**, **Setup und Bereitstellung**und **InstallShield LE**aus.
+2. Wählen Sie im linken Bereich des Dialogfelds **Neues Projekt** nacheinander **Andere Projekttypen**, **Setup und Bereitstellung**und **InstallShield LE**aus.
 
-3.  Geben Sie im Feld **Name** einen Namen für das Projekt ein, und klicken Sie dann auf **OK**.
+3. Geben Sie im Feld **Name** einen Namen für das Projekt ein, und klicken Sie dann auf **OK**.
 
-4.  Wenn Sie zum ersten Mal ein Setup- und Bereitstellungsprojekt erstellen, wählen Sie **Zu InstallShield wechseln** oder **InstallShield Limited Edition aktivieren**, um InstallShield Limited Edition für Ihre Version von Microsoft Visual Studio herunterzuladen. Starten Sie Visual Studio neu.
+4. Wenn Sie zum ersten Mal ein Setup- und Bereitstellungsprojekt erstellen, wählen Sie **Zu InstallShield wechseln** oder **InstallShield Limited Edition aktivieren**, um InstallShield Limited Edition für Ihre Version von Microsoft Visual Studio herunterzuladen. Starten Sie Visual Studio neu.
 
-5.  Wechseln Sie zum **Projekt-Assistenten** , und wählen Sie **Anwendungsdateien** aus, um die Projektausgabe hinzuzufügen. Sie können mit diesem Assistenten weitere Projektattribute konfigurieren.
+5. Wechseln Sie zum **Projekt-Assistenten** , und wählen Sie **Anwendungsdateien** aus, um die Projektausgabe hinzuzufügen. Sie können mit diesem Assistenten weitere Projektattribute konfigurieren.
 
-6.  Wechseln Sie zu **Installationsanforderungen** , und wählen Sie die Betriebssysteme und die Version von .NET Framework aus, die Sie installieren möchten.
+6. Wechseln Sie zu **Installationsanforderungen** , und wählen Sie die Betriebssysteme und die Version von .NET Framework aus, die Sie installieren möchten.
 
-7.  Öffnen Sie das Kontextmenü für das Setup-Projekt, und wählen Sie **Erstellen**aus.
+7. Öffnen Sie das Kontextmenü für das Setup-Projekt, und wählen Sie **Erstellen**aus.
  
 <a name="wix"></a> 
 ### <a name="windows-installer-xml-wix-deployment"></a>WiX (Windows Installer XML)-Bereitstellung
@@ -258,7 +258,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] installiert unter Windows 10, Update von November|394254|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] installiert unter allen Betriebssystemen außer Windows 10, Update von November|394271|
 |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] installiert unter Windows 10|393295|
-|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] installiert auf allen anderen Windows 10-Betriebssystemversionen|393297|
+|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] installiert unter allen Betriebssystemen außer Windows 10|393297|
 |.NET Framework 4.5.2|379893|
 |[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] installiert mit [!INCLUDE[win81](../../../includes/win81-md.md)] oder Windows Server 2012 R2|378675|
 |[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] installiert unter [!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7|378758|
@@ -287,7 +287,7 @@ Type: DWORD
 
 - [.NET Framework 4.7 Language Packs](https://go.microsoft.com/fwlink/p/?LinkId=825306)
 
-- [.NET Framework 4.6.2-Sprachpakete](https://go.microsoft.com/fwlink/p/?LinkId=780604)
+- [.NET Framework 4.6.2 Language Packs](https://go.microsoft.com/fwlink/p/?LinkId=780604)
 
 - [.NET Framework 4.6.1 Language Packs](https://go.microsoft.com/fwlink/p/?LinkId=671747)
 
@@ -297,7 +297,7 @@ Type: DWORD
 
 - [.NET Framework 4.5.1 Language Packs](https://go.microsoft.com/fwlink/p/?LinkId=322101)
 
-- [.NET Framework 4.5-Language Packs](https://go.microsoft.com/fwlink/p/?LinkId=245451)
+- [.NET Framework 4.5 Language Packs](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
 > [!IMPORTANT]
 > Die Sprachpakete enthalten nicht die zum Ausführen einer App erforderlichen .NET Framework-Komponenten, Sie müssen das .NET Framework mit dem Web- oder Offlineinstaller installieren, bevor Sie ein Sprachpaket installieren.
@@ -403,9 +403,10 @@ In der folgenden Tabelle sind die .NET Framework Sprachpakete aufgeführt, die f
 |3082|Spanisch – Spanien (Moderne Sortierreihenfolge)|es|
 
 ## <a name="see-also"></a>Siehe auch
+
 - [Bereitstellungshandbuch für Administratoren](../../../docs/framework/deployment/guide-for-administrators.md)
 - [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md)
-- [Installieren von .NET Framework für Entwickler](../../../docs/framework/install/guide-for-developers.md)
-- [Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Installieren von.NET Framework für Entwickler](../../../docs/framework/install/guide-for-developers.md)
+- [Problembehandlung von blockierten Installationen und Deinstallationen von .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
 - [Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen](../../../docs/framework/deployment/reducing-system-restarts.md)
 - [Vorgehensweise: Abrufen des Status vom Installationsprogramm für .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

@@ -17,10 +17,10 @@ helpviewer_keywords:
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
 ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303140"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Vorgehensweise: Sicherstellen, dass die ausgewählte Zeile in einer untergeordneten Tabelle an der richtigen Position verbleibt
@@ -87,4 +87,4 @@ Wenn Sie mit Datenbindungen in Windows Forms arbeiten, zeigen Sie diese Daten h�
 
 - [Vorgehensweise: Sicherstellen, dass mehrere Steuerelemente, die an die gleiche Datenquelle gebunden sind, synchronisiert bleiben](multiple-controls-bound-to-data-source-synchronized.md)
 - [BindingSource-Komponente](./controls/bindingsource-component.md)
-- [Datenbindung und Windows Forms](data-binding-and-windows-forms.md)
+- [Datenbindung und Windows Forms](data-binding-and-windows-forms.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303491"
 ---
 # <a name="flow-document-overview"></a>Übersicht über Flussdokumente
@@ -96,7 +96,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
  Jede Klasse in diesen zwei Kategorien wird nachstehend kurz beschrieben.  
   
 ### <a name="block-derived-classes"></a>Blockabgeleitete Klassen  
- **Absatz**  
+ **Paragraph**  
   
  <xref:System.Windows.Documents.Paragraph> wird normalerweise zum Gruppieren von Inhalten in einem Absatz verwendet. Die einfachste und häufigste Verwendung von Paragraph ist, einen Textabsatz zu erstellen.  
   
@@ -107,7 +107,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  Sie können jedoch auch andere inlineabgeleitete Elemente enthalten, wie unten dargestellt wird. 
   
- **Abschnitt**  
+ **Bereich**  
   
  <xref:System.Windows.Documents.Section> wird nur verwendet, um andere enthält <xref:System.Windows.Documents.Block>-abgeleitete Elemente. Sie wendet keine Standardformatierungen auf die Elemente an, die sie einschließt. Allerdings alle Standardwerte für die Eigenschaft Gruppe auf einen <xref:System.Windows.Documents.Section> gilt für die untergeordneten Elemente. Eine Section-Klasse ermöglicht es Ihnen auch, ihre untergeordnete Auflistung programmgesteuert zu durchlaufen. <xref:System.Windows.Documents.Section> werden in ähnlicher Weise wie für die \<DIV >-Tag in HTML.  
   
@@ -130,7 +130,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  ![Screenshot mit einem UIElement eingebettet in fortlaufenden Inhalt.](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
- **Liste**  
+ **List**  
   
  <xref:System.Windows.Documents.List> wird verwendet, um eine Liste mit Aufzählungszeichen oder Zahlen erstellen. Legen Sie die <xref:System.Windows.Documents.List.MarkerStyle%2A> Eigenschaft, um eine <xref:System.Windows.TextMarkerStyle> Enumerationswert, der den Stil der Liste zu bestimmen. Das folgende Beispiel zeigt, wie Sie eine einfache Liste erstellen.  
   
@@ -141,7 +141,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  **Hinweis:** <xref:System.Windows.Documents.List> ist das einzige Flusselement, das verwendet die <xref:System.Windows.Documents.ListItemCollection> zum Verwalten von untergeordneten Elementen.  
   
- **Tabelle**  
+ **Table**  
   
  <xref:System.Windows.Documents.Table> Dient zum Erstellen einer Tabelle. <xref:System.Windows.Documents.Table> ähnelt der <xref:System.Windows.Controls.Grid> -Element, aber es weist mehr Funktionen und erfordert daher höheren Ressourcenaufwand. Da <xref:System.Windows.Controls.Grid> ist eine <xref:System.Windows.UIElement>, es kann nicht in fortlaufendem Inhalt verwendet werden, es sei denn, sie in enthalten ist ein <xref:System.Windows.Documents.BlockUIContainer> oder <xref:System.Windows.Documents.InlineUIContainer>. Weitere Informationen zu <xref:System.Windows.Documents.Table>, finden Sie unter [Tabellenübersicht](table-overview.md).  
   
@@ -194,7 +194,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
   
  <xref:System.Windows.Documents.Figure> und <xref:System.Windows.Documents.Floater> unterscheiden sich auf verschiedene Weise und für verschiedene Szenarios verwendet werden.  
   
- **Abbildung:**  
+ **Figure:**  
   
 -   Kann positioniert werden: Sie können die horizontalen und vertikalen Textmarken auf es Bezug auf die Seite, die Inhalte, die Spalte oder die Absatz andocken festlegen. Sie können auch die <xref:System.Windows.Documents.Figure.HorizontalOffset%2A> und <xref:System.Windows.Documents.Figure.VerticalOffset%2A> Eigenschaft, um beliebige Offsets anzugeben.  
   
@@ -350,7 +350,7 @@ Flussdokumente dienen der Optimierung der Anzeige und Lesbarkeit. Statt auf ein 
 
 - [Text](optimizing-performance-text.md)
 - [Typografie in WPF](typography-in-wpf.md)
-- [Gewusst wie-Themen](flow-content-elements-how-to-topics.md)
+- [Themen zu Vorgehensweisen](flow-content-elements-how-to-topics.md)
 - [Übersicht über das TextElement-Inhaltsmodell](textelement-content-model-overview.md)
 - [Übersicht über RichTextBox](../controls/richtextbox-overview.md)
 - [Dokumente in WPF](documents-in-wpf.md)

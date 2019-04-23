@@ -3,10 +3,10 @@ title: Beispiel für Nachrichtensicherheit
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
 ms.openlocfilehash: ad579705fa30e9b5179f2de4b829bd7f4a5817c2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302958"
 ---
 # <a name="message-security-sample"></a>Beispiel für Nachrichtensicherheit
@@ -143,7 +143,7 @@ Press <ENTER> to terminate client.
   
 5. Führen Sie auf dem Server `setup.bat service` aus. Ausführung `setup.bat` mit der `service` Argument wird ein Dienstzertifikat mit dem vollqualifizierten Domänennamen des Computers erstellt und das Dienstzertifikat in die Datei Service.cer exportiert.  
   
-6. Bearbeiten Sie Service.exe.config so, dass Sie den neuen Zertifikatnamen (im der `findValue` -Attribut in der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Element) die ist identisch mit den vollständig qualifizierten Domänennamen des Computers. Ändern Sie auch den Wert der Basisadresse, um anstelle von Localhost einen vollqualifizierten Computernamen anzugeben`.`  
+6. Bearbeiten Sie Service.exe.config so, dass Sie den neuen Zertifikatnamen (im der `findValue` -Attribut in der [ \<ServiceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) Element) die ist identisch mit den vollständig qualifizierten Domänennamen des Computers. Ändern Sie auch den Wert der Basisadresse, um anstelle von "localhost" einen vollqualifizierten Computernamen anzugeben`.`  
   
 7. Kopieren Sie die Datei Service.cer aus dem Dienstverzeichnis in das Clientverzeichnis auf dem Clientcomputer.  
   

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
 ms.openlocfilehash: 9fae195247dea4cbd049f7157f04e87bb97d6f4d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304661"
 ---
 # <a name="how-to-create-a-custom-token"></a>Vorgehensweise: Erstellen eines benutzerdefinierten Tokens
@@ -162,5 +162,5 @@ In diesem Thema wird beschrieben, wie Sie mit der <xref:System.IdentityModel.Tok
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - [Exemplarische Vorgehensweise: Erstellen von benutzerdefinierten Client- und Dienstanmeldeinformationen](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenauthentifizierers](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [Vorgehensweise: Erstellen eines benutzerdefinierten Sicherheitstokenanbieters](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Authentifikator](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [Vorgehensweise: Erstellen Sie einen benutzerdefinierten Sicherheitstoken-Anbieter](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)

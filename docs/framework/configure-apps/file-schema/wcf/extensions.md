@@ -3,11 +3,11 @@ title: <extensions>
 ms.date: 03/30/2017
 ms.assetid: bcfe5c44-04ef-4a20-96a5-90bfadf39623
 ms.openlocfilehash: bb0df4535560a509d6e3511815196c126a95d0c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59205250"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767570"
 ---
 # <a name="extensions"></a>\<extensions>
 Dieses Konfigurationselement enthält eine Auflistung von XML-Elementen mit benutzerdefinierten Metadaten, die mit den standardmäßigen sichtbaren Metadaten (EPR, ContractTypeName, BindingName, Bereich und ListenURI) veröffentlicht werden sollen. Es folgt ein Beispiel zur Verwendung dieses Konfigurationselements.  

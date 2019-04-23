@@ -3,10 +3,10 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304576"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
@@ -91,7 +91,7 @@ LINQ to Entities bietet LINQ (Language Integrated Query)-Unterstützung, die es 
 ## <a name="see-also"></a>Siehe auch
 
 - [Bekannte Probleme von und Überlegungen zu LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
-- [Language-Integrated Query (LINQ) - C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
-- [Language-Integrated Query (LINQ) - Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [Language Integrated Query (LINQ) – C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
+- [Language Integrated Query (LINQ) – Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ und ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)
 - [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

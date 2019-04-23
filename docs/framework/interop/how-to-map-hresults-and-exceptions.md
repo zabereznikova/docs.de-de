@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c680c1a4671b38c9b2c35945ddecaf9d92d0f477
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60173739842835a705a72da4e7ab442cacfc08d2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729235"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306546"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Vorgehensweise: Zuordnen von HRESULT-Werten und Ausnahmen
 COM-Methoden melden Fehler durch die Rückgabe von HRESULTs; .NET Methoden melden sie durch das Auslösen von Ausnahmen. Die Common Language Runtime verwaltet den Übergang zwischen den beiden. Jede Ausnahmeklasse in .NET Framework wird einem HRESULT zugeordnet.  
@@ -31,7 +31,7 @@ COM-Methoden melden Fehler durch die Rückgabe von HRESULTs; .NET Methoden melde
   
 ### <a name="to-create-a-new-exception-class-and-map-it-to-an-hresult"></a>Erstellen einer neuen Ausnahmeklasse und Zuweisen zu einem HRESULT  
   
-1.  Verwenden Sie den folgenden Code zum Erstellen einer neuen Ausnahmeklasse namens `NoAccessException`, und ordnen Sie sie dem HRESULT `E_ACCESSDENIED` zu.  
+1. Verwenden Sie den folgenden Code zum Erstellen einer neuen Ausnahmeklasse namens `NoAccessException`, und ordnen Sie sie dem HRESULT `E_ACCESSDENIED` zu.  
   
     ```cpp  
     Class NoAccessException : public ApplicationException  
@@ -75,7 +75,7 @@ CMyClass::MethodThatThrows
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**Exception**|  
+|**COR_E_EXCEPTION**|**Ausnahme**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND oder ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
@@ -97,7 +97,7 @@ CMyClass::MethodThatThrows
 |**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
 |**E_NOTIMPL**|**NotImplementedException**|  
 |**COR_E_NOTSUPPORTED**|**NotSupportedException**|  
-|**COR_E_NULLREFERENCE orE_POINTER**|**NullReferenceException**|  
+|**COR_E_NULLREFERENCE oder E_POINTER**|**NullReferenceException**|  
 |**COR_E_OUTOFMEMORY oder**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
 |**COR_E_OVERFLOW**|**OverflowException**|  
 |**COR_E_PATHTOOLONG oder ERROR_FILENAME_EXCED_RANGE**|**PathTooLongException**|  
@@ -143,5 +143,6 @@ CMyClass::MethodThatThrows
  Ausnahmefelder, wie z.B. **Message**, **Source** und **StackTrace** sind für die **StackOverflowException** nicht verfügbar.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Ausnahmen](../../standard/exceptions/index.md)

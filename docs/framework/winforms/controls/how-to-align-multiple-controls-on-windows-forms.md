@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
 ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307742"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Vorgehensweise: Ausrichten von mehreren Steuerelementen in Windows Forms
@@ -31,11 +31,11 @@ Um das Layout der Benutzeroberfläche (UI) der Windows-basierten Anwendung stand
 ## <a name="see-also"></a>Siehe auch
 
 - [Windows Forms-Steuerelemente](index.md)
-- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
-- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
-- [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)
+- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)
 - [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Vorgehensweise: Erneutes Zuweisen von vorhandenen Steuerelementen zu einem anderen übergeordneten Element](how-to-reassign-existing-controls-to-a-different-parent.md)

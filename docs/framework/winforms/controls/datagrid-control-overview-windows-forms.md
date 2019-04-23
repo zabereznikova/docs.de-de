@@ -21,10 +21,10 @@ helpviewer_keywords:
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
 ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304732"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Übersicht über das DataGrid-Steuerelement (Windows Forms)
@@ -57,13 +57,13 @@ ms.locfileid: "59304732"
   
  Gültige Datenquellen für das <xref:System.Windows.Forms.DataGrid>-Steuerelement umfassen Folgendes:  
   
--   <xref:System.Data.DataTable> Klasse  
+-   <xref:System.Data.DataTable>-Klasse  
   
--   <xref:System.Data.DataView> Klasse  
+-   <xref:System.Data.DataView>-Klasse  
   
--   <xref:System.Data.DataSet> Klasse  
+-   <xref:System.Data.DataSet>-Klasse  
   
--   <xref:System.Data.DataViewManager> Klasse  
+-   <xref:System.Data.DataViewManager>-Klasse  
   
  Wenn es sich bei der Quelle um ein DataSet handelt, kann das DataSet ein Objekt im Formular oder ein Objekt sein, das von einem XML-Webdienst an das Formular übergeben wurde. Sie können das Steuerelement an typisierte oder nicht typisierte DataSets binden.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "59304732"
 
  ![Diagramm, das im DataGrid-Steuerelement enthaltene Objekte zeigt.](./media/datagrid-control-overview-windows-forms/visual-basic-columns.gif)  
   
- Tabellen- und Spaltenformate werden mit <xref:System.Data.DataTable>- und <xref:System.Data.DataColumn>-Objekten synchronisiert, indem ihre `MappingName`-Eigenschaften auf die entsprechende <xref:System.Data.DataTable.TableName%2A>-Eigenschaft und die <xref:System.Data.DataColumn.ColumnName%2A>-Eigenschaft festgelegt werden. Wenn ein <xref:System.Windows.Forms.DataGridTableStyle> ohne Spaltenformate einem <xref:System.Windows.Forms.DataGrid>-Steuerelement hinzugefügt wird, das an eine gültige Datenquelle gebunden ist, und die <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>-Eigenschaft dieses Tabellenformats auf eine gültige <xref:System.Data.DataTable.TableName%2A>-Eigenschaft festgelegt ist, wird für dieses Tabellenformat eine Auflistung von <xref:System.Windows.Forms.DataGridColumnStyle>-Objekten erstellt. Für jede <xref:System.Data.DataColumn>, die in der <xref:System.Data.DataTable.Columns%2A>-Auflistung der <xref:System.Data.DataTable> enthalten ist, wird der <xref:System.Windows.Forms.GridColumnStylesCollection> ein entsprechendes <xref:System.Windows.Forms.DataGridColumnStyle> hinzugefügt. <xref:System.Windows.Forms.GridColumnStylesCollection> erfolgt über die <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> Eigenschaft der <xref:System.Windows.Forms.DataGridTableStyle>. Sie können dem Raster Spalten hinzufügen oder Spalten daraus löschen, indem Sie die <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A>- bzw. die <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A>-Methode für die <xref:System.Windows.Forms.GridColumnStylesCollection> verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Tabellen und Spalten, die Windows Forms-DataGrid-Steuerelement](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) und [Vorgehensweise: Löschen oder Ausblenden von Spalten in der Windows Forms-DataGrid-Steuerelement](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
+ Tabellen- und Spaltenformate werden mit <xref:System.Data.DataTable>- und <xref:System.Data.DataColumn>-Objekten synchronisiert, indem ihre `MappingName`-Eigenschaften auf die entsprechende <xref:System.Data.DataTable.TableName%2A>-Eigenschaft und die <xref:System.Data.DataColumn.ColumnName%2A>-Eigenschaft festgelegt werden. Wenn ein <xref:System.Windows.Forms.DataGridTableStyle> ohne Spaltenformate einem <xref:System.Windows.Forms.DataGrid>-Steuerelement hinzugefügt wird, das an eine gültige Datenquelle gebunden ist, und die <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>-Eigenschaft dieses Tabellenformats auf eine gültige <xref:System.Data.DataTable.TableName%2A>-Eigenschaft festgelegt ist, wird für dieses Tabellenformat eine Auflistung von <xref:System.Windows.Forms.DataGridColumnStyle>-Objekten erstellt. Für jede <xref:System.Data.DataColumn>, die in der <xref:System.Data.DataTable.Columns%2A>-Auflistung der <xref:System.Data.DataTable> enthalten ist, wird der <xref:System.Windows.Forms.GridColumnStylesCollection> ein entsprechendes <xref:System.Windows.Forms.DataGridColumnStyle> hinzugefügt. Der Zugriff auf die <xref:System.Windows.Forms.GridColumnStylesCollection> erfolgt über die <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>-Eigenschaft von <xref:System.Windows.Forms.DataGridTableStyle>. Sie können dem Raster Spalten hinzufügen oder Spalten daraus löschen, indem Sie die <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A>- bzw. die <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A>-Methode für die <xref:System.Windows.Forms.GridColumnStylesCollection> verwenden. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Tabellen und Spalten, die Windows Forms-DataGrid-Steuerelement](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) und [Vorgehensweise: Löschen oder Ausblenden von Spalten in der Windows Forms-DataGrid-Steuerelement](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
   
  Eine Auflistung von Spaltentypen erweitert die <xref:System.Windows.Forms.DataGridColumnStyle>-Klasse umfangreiche Formatierungs-und Bearbeitungsfunktionen. Alle Spaltentypen erben von der <xref:System.Windows.Forms.DataGridColumnStyle>-Basisklasse. Die erstellte Klasse hängt von der <xref:System.Data.DataColumn.DataType%2A>-Eigenschaft der <xref:System.Data.DataColumn> ab, auf der die <xref:System.Web.UI.WebControls.DataGridColumn> basiert. Eine <xref:System.Data.DataColumn>, deren <xref:System.Data.DataColumn.DataType%2A>-Eigenschaft auf <xref:System.Boolean> festgelegt ist, wird beispielsweise der <xref:System.Windows.Forms.DataGridBoolColumn> zugeordnet. In der folgenden Tabelle werden die einzelnen Spaltentypen beschrieben.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "59304732"
 ## <a name="see-also"></a>Siehe auch
 
 - [DataGrid-Steuerelement](datagrid-control-windows-forms.md)
-- [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
-- [Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement in Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [Vorgehensweise: Löschen oder Ausblenden von Spalten aus dem DataGrid-Steuerelement in Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Vorgehensweise: Binden des DataGrid-Steuerelements in Windows Forms an eine Datenquelle](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [Vorgehensweise: Hinzufügen von Tabellen und Spalten zum DataGrid-Steuerelement von Windows Forms](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [Vorgehensweise: Löschen oder Ausblenden von Spalten im DataGrid-Steuerelement in Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [Vorgehensweise: Formatieren des DataGrid-Steuerelements in Windows Forms](how-to-format-the-windows-forms-datagrid-control.md)

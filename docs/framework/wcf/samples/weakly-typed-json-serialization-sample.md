@@ -3,10 +3,10 @@ title: Beispiel zur schwach typisierten JSON-Serialisierung
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
 ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303686"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Beispiel zur schwach typisierten JSON-Serialisierung
@@ -58,7 +58,7 @@ Beim Serialisieren eines benutzerdefinierten Typs in ein bestimmtes Übertragung
   
  Dies kann aufwändig sein, insbesondere, wenn der Client mehrere Typen von JSON-Objekten behandeln muss.  
   
- Der in diesem Beispiel bereitgestellte `JsonObject` -Typ führt eine schwach typisierte Darstellung des deserialisierten JSON-Objekts ein. `JsonObject` die natürliche Zuordnung zwischen JSON-Objekten basiert und [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Wörterbüchern und die Zuordnung zwischen JSON-Arrays und [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Arrays. Der folgende Code veranschaulicht den `JsonObject` -Typ:  
+ Der in diesem Beispiel bereitgestellte `JsonObject` -Typ führt eine schwach typisierte Darstellung des deserialisierten JSON-Objekts ein. `JsonObject` verwendet die natürliche Zuordnung zwischen JSON-Objekten und [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Wörterbüchern und die Zuordnung zwischen JSON-Arrays und [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] -Arrays. Der folgende Code veranschaulicht den `JsonObject` -Typ:  
   
 ```  
 // Instantiation of JsonObject json omitted  

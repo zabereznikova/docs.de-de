@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 20b4df2a663bdc584b5f350c95c8c533f1cc7c8e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496819"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306338"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (verwaltetes, profilgesteuertes Optimierungstool)
 
@@ -49,7 +49,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 
 |Erforderlicher Parameter|Beschreibung|
 |------------------------|-----------------|
-|`-Scenario` \<*Befehl*><br /><br /> – oder –<br /><br /> `-Scenario` \<*Paketname*><br /><br /> - oder - <br /><br /> `-Import` \<*Verzeichnis*>|Für Desktop-Apps verwenden Sie `–Scenario` zum Angeben des Befehls zum Ausführen der Anwendung, die Sie optimieren möchten, einschließlich aller Befehlszeilenargumente. Verwenden Sie drei Elemente von doppelten Anführungszeichen für *Befehl*, wenn es einen Pfad angibt, der Leerzeichen enthält, z.B: `mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`. Verwenden Sie keine doppelten Anführungszeichen, da sie nicht ordnungsgemäß funktionieren, wenn der *Befehl* Leerzeichen enthält.<br /><br /> - oder - <br /><br /> Für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verwenden Sie `–Scenario` zum Angeben des Pakets, für das Sie Profilinformationen generieren möchten. Wenn Sie den Paketanzeigenamen oder den Paketfamiliennamen anstelle des vollständigen Paketnamens angeben, wählt Mpgo.exe das Paket aus, das mit dem von Ihnen eingegebenen Namen übereinstimmt, sofern nur eine Übereinstimmung vorliegt. Wenn mehrere Pakete mit dem angegebenen Namen übereinstimmen, werden Sie von Mpgo.exe aufgefordert, ein Paket auszuwählen.<br /><br /> – oder –<br /><br /> Verwenden Sie `-Import` zum Angeben, dass Optimierungsdaten aus zuvor optimiertem Assemblys zum Optimieren der Assemblys in der `-AssemblyList` verwendet werden sollen. *Verzeichnis* gibt das Verzeichnis an, das die zuvor optimierten Dateien enthält. Die in `–AssemblyList` oder `–AssemblyListFile` angegebenen Assemblys sind die neuen Versionen der mit den Daten aus den importierten Dateien zu optimierenden Assemblys. Das Verwenden der Optimierungsdaten aus früheren Versionen der Assemblys ermöglicht Ihnen die Optimierung neuer Versionen, ohne erneute Ausführung des Szenarios.  Wenn die importierten und die neuen Assemblys jedoch erheblich unterschiedlichen Code enthalten, sind die Optimierungsdaten nicht effektiv. Die Assemblynamen, die in `–AssemblyList` oder `–AssemblyListFile` angegeben werden, müssen im Verzeichnis vorhanden sein, das durch `–Import`*verzeichnis* angegeben wird. Verwenden Sie drei Elemente von doppelten Anführungszeichen für *Verzeichnis*, wenn es einen Pfad angibt, der Leerzeichen enthält.<br /><br /> Sie müssen entweder `–Scenario` oder `–Import` angeben, jedoch nicht beide.|
+|`-Scenario` \<*Befehl*><br /><br /> – oder –<br /><br /> `-Scenario` \<*packageName*><br /><br /> - oder - <br /><br /> `-Import` \<*Verzeichnis*>|Für Desktop-Apps verwenden Sie `–Scenario` zum Angeben des Befehls zum Ausführen der Anwendung, die Sie optimieren möchten, einschließlich aller Befehlszeilenargumente. Verwenden Sie drei Elemente von doppelten Anführungszeichen für *Befehl*, wenn es einen Pfad angibt, der Leerzeichen enthält, z.B: `mpgo.exe -scenario """C:\My App\myapp.exe""" -assemblylist """C:\My App\myapp.exe""" -outdir "C:\optimized files"`. Verwenden Sie keine doppelten Anführungszeichen, da sie nicht ordnungsgemäß funktionieren, wenn der *Befehl* Leerzeichen enthält.<br /><br /> - oder - <br /><br /> Für [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]-Apps verwenden Sie `–Scenario` zum Angeben des Pakets, für das Sie Profilinformationen generieren möchten. Wenn Sie den Paketanzeigenamen oder den Paketfamiliennamen anstelle des vollständigen Paketnamens angeben, wählt Mpgo.exe das Paket aus, das mit dem von Ihnen eingegebenen Namen übereinstimmt, sofern nur eine Übereinstimmung vorliegt. Wenn mehrere Pakete mit dem angegebenen Namen übereinstimmen, werden Sie von Mpgo.exe aufgefordert, ein Paket auszuwählen.<br /><br /> – oder –<br /><br /> Verwenden Sie `-Import` zum Angeben, dass Optimierungsdaten aus zuvor optimiertem Assemblys zum Optimieren der Assemblys in der `-AssemblyList` verwendet werden sollen. *Verzeichnis* gibt das Verzeichnis an, das die zuvor optimierten Dateien enthält. Die in `–AssemblyList` oder `–AssemblyListFile` angegebenen Assemblys sind die neuen Versionen der mit den Daten aus den importierten Dateien zu optimierenden Assemblys. Das Verwenden der Optimierungsdaten aus früheren Versionen der Assemblys ermöglicht Ihnen die Optimierung neuer Versionen, ohne erneute Ausführung des Szenarios.  Wenn die importierten und die neuen Assemblys jedoch erheblich unterschiedlichen Code enthalten, sind die Optimierungsdaten nicht effektiv. Die Assemblynamen, die in `–AssemblyList` oder `–AssemblyListFile` angegeben werden, müssen im Verzeichnis vorhanden sein, das durch `–Import`*verzeichnis* angegeben wird. Verwenden Sie drei Elemente von doppelten Anführungszeichen für *Verzeichnis*, wenn es einen Pfad angibt, der Leerzeichen enthält.<br /><br /> Sie müssen entweder `–Scenario` oder `–Import` angeben, jedoch nicht beide.|
 |`-OutDir` \<*Verzeichnis*>|Das Verzeichnis, in dem die optimierten Assemblys gespeichert werden sollen. Wenn eine Assembly bereits im Ausgabeverzeichnisordner vorhanden ist, wird eine neue Kopie erstellt und eine Indexnummer an den Namen angefügt, beispielsweise „*assemblyname*-1.exe“. Verwenden Sie doppelte Anführungszeichen um *Verzeichnis*, wenn es einen Pfad angibt, der Leerzeichen enthält.|
 |`-AssemblyList` \<*Assembly1 Assembly2 ...*><br /><br /> – oder –<br /><br /> `-AssemblyListFile` \<*Datei*>|Eine Liste von Assemblys (einschließlich EXE- und DLL-Dateien), getrennt durch Leerzeichen, von denen Sie Profilinformationen sammeln möchten. Sie können `C:\Dir\*.dll` oder `*.dll` angeben, um alle Assemblys im festgelegten oder aktuellen Arbeitsverzeichnis auszuwählen. Weitere Informationen finden Sie im Abschnitt Hinweise.<br /><br /> – oder –<br /><br /> Eine Textdatei, die die Liste der Assemblys enthält, von denen Sie Profilinformationen sammeln möchten, muss die Assemblys zeilenweise enthalten. Verwenden Sie eine Assemblydateiliste, wenn ein Assemblyname mit einem Bindestrich (-) beginnt oder benennen die Assembly um.|
 |`-AppID` \<*appId*>|Die ID der Anwendung im angegebenen Paket. Wenn Sie den Platzhalter (\*) verwenden, versucht „mpgo.exe“ die AppIDs im Paket aufzulisten und greift bei einem Fehler auf die App \<*package_family_name*>! zurück. Wenn Sie eine Zeichenfolge mit einem vorangestellten Ausrufezeichen (!) angeben, wird Mpgo.exe den Paketfamiliennamen mit dem übergebenen Argument verketten.|
@@ -79,23 +79,23 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 ## <a name="to-use-mpgoexe"></a>So verwenden Sie Mpgo.exe  
   
-1.  Verwenden Sie einen Computer, auf dem Visual Studio Ultimate 2012 und Ihre Anwendung installiert ist.  
+1. Verwenden Sie einen Computer, auf dem Visual Studio Ultimate 2012 und Ihre Anwendung installiert ist.  
   
-2.  Führen Sie Mpgo.exe als Administrator mit den erforderlichen Parametern aus.  Beispielbefehle finden Sie im nächsten Abschnitt.  
+2. Führen Sie Mpgo.exe als Administrator mit den erforderlichen Parametern aus.  Beispielbefehle finden Sie im nächsten Abschnitt.  
   
      Die optimierten Intermediate Language (IL)- Assemblys werden in dem Ordner erstellt, der durch den `–OutDir`-Parameter angegeben wird (in den Beispielen ist dies der Ordner `C:\Optimized` ).  
   
-3.  Ersetzen Sie die für Ngen.exe verwendeten IL-Assemblys mit den neuen IL-Assemblys, die die Profilinformationen von dem Verzeichnis enthalten, das mit `–OutDir` angegeben wurde.  
+3. Ersetzen Sie die für Ngen.exe verwendeten IL-Assemblys mit den neuen IL-Assemblys, die die Profilinformationen von dem Verzeichnis enthalten, das mit `–OutDir` angegeben wurde.  
   
-4.  Das Anwendungssetup (mithilfe der von Mpgo.exe bereitgestellten Abbilder) installiert optimierte systemeigene Abbilder.  
+4. Das Anwendungssetup (mithilfe der von Mpgo.exe bereitgestellten Abbilder) installiert optimierte systemeigene Abbilder.  
   
 ## <a name="suggested-workflow"></a>Workflowvorschläge  
   
-1.  Erstellen Sie einen Satz optimierter IL-Assemblys, indem Sie Mpgo.exe mit dem `–Scenario`-Parameter verwenden.  
+1. Erstellen Sie einen Satz optimierter IL-Assemblys, indem Sie Mpgo.exe mit dem `–Scenario`-Parameter verwenden.  
   
-2.  Fügen Sie der Quellcodeverwaltung die optimierten IL-Assemblys hinzu.  
+2. Fügen Sie der Quellcodeverwaltung die optimierten IL-Assemblys hinzu.  
   
-3.  Im Buildprozess rufen Sie Mpgo.exe mit dem `–Import`-Parameter als Postbuildschritt auf, um optimierte IL-Abbilder zu generieren, die „Ngen.exe“ übergeben werden.  
+3. Im Buildprozess rufen Sie Mpgo.exe mit dem `–Import`-Parameter als Postbuildschritt auf, um optimierte IL-Abbilder zu generieren, die „Ngen.exe“ übergeben werden.  
   
  Dieser Prozess stellt sicher, dass alle Assemblys optimierte Daten haben. Durch häufiges Einchecken aktualisierter optimierter Assemblys (Schritte 1 und 2) werden die Leistungszahlen für die gesamte Produktentwicklung konsistenter.  
   
@@ -127,7 +127,8 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
-- [Improving Launch Performance for your Desktop Applications (Verbessern der Startleistung für Desktopanwendungen)](https://go.microsoft.com/fwlink/p/?LinkId=248943)
+- [Verbessern der Startleistung für Desktopanwendungen](https://go.microsoft.com/fwlink/p/?LinkId=248943)
 - [Überblick Leistungsverbesserungen in .NET 4.5](https://go.microsoft.com/fwlink/p/?LinkId=249131)

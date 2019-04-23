@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63a394bd30b3586f084dc1a2320fa9133da19b64
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191885"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306306"
 ---
 # <a name="xslt-parameters"></a>XSLT-Parameter
 XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>-Methode hinzugefügt. Dabei werden ein qualifizierter Name und ein Namespace-URI (Uniform Resource Identifier) mit dem Parameterobjekt verknüpft.  
   
 ### <a name="to-use-an-xslt-parameter"></a>So verwenden Sie einen XSLT-Parameter  
   
-1.  Erstellen Sie ein <xref:System.Xml.Xsl.XsltArgumentList>-Objekt, und fügen Sie den Parameter mit der <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>-Methode hinzu.  
+1. Erstellen Sie ein <xref:System.Xml.Xsl.XsltArgumentList>-Objekt, und fügen Sie den Parameter mit der <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>-Methode hinzu.  
   
-2.  Rufen Sie den Parameter aus dem Stylesheet auf.  
+2. Rufen Sie den Parameter aus dem Stylesheet auf.  
   
-3.  Übergeben Sie das <xref:System.Xml.Xsl.XsltArgumentList>-Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode.  
+3. Übergeben Sie das <xref:System.Xml.Xsl.XsltArgumentList>-Objekt an die <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>-Methode.  
   
 ## <a name="parameter-types"></a>Parametertypen  
  Das Parameterobjekt sollte einem W3C-Typ entsprechen. In der folgenden Tabelle sind die jeweiligen W3C-Typen mit den entsprechenden Microsoft .NET-Klassen (Typen) aufgelistet. Weiterhin wird angegeben, ob es sich bei dem W3C-Typ um einen XPath-Typ oder einen XSLT-Typ handelt.  
@@ -40,7 +40,7 @@ XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <x
   
  *Dies entspricht einer Knotengruppe, die einen Knoten enthält.  
   
- Wenn das Parameterobjekt keiner der oben genannten Klassen entspricht, wird es entsprechend der folgenden Regeln konvertiert. Numerische CLR-Typen (Common Language Runtime) werden in <xref:System.Double> konvertiert. Der <xref:System.DateTime>-Typ wird in <xref:System.String> konvertiert. <xref:System.Xml.XPath.IXPathNavigable>-Typen werden in <xref:System.Xml.XPath.XPathNavigator> konvertiert. **XPathNavigator[]** wird in <xref:System.Xml.XPath.XPathNodeIterator> konvertiert.  
+ Wenn das Parameterobjekt keiner der oben genannten Klassen entspricht, wird es entsprechend der folgenden Regeln konvertiert. Numerische CLR-Typen (Common Language Runtime) werden in <xref:System.Double> konvertiert. Der <xref:System.DateTime>-Typ wird in <xref:System.String> konvertiert. <xref:System.Xml.XPath.IXPathNavigable> -Typen werden in <xref:System.Xml.XPath.XPathNavigator> konvertiert. **XPathNavigator[]** wird in <xref:System.Xml.XPath.XPathNodeIterator> konvertiert.  
   
  Alle anderen Typen lösen einen Fehler aus.  
   
@@ -58,7 +58,7 @@ XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <x
 ##### <a name="discountxsl"></a>discount.xsl  
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
-### <a name="output"></a>Ausgabe  
+### <a name="output"></a>Output  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -70,4 +70,4 @@ XSLT-Parameter werden der <xref:System.Xml.Xsl.XsltArgumentList> mithilfe der <x
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [XSLT-Transformationen](../../../../docs/standard/data/xml/xslt-transformations.md)

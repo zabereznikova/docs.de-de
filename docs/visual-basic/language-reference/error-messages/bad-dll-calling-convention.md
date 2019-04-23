@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID49
 ms.assetid: 7c7def45-b0ab-450f-ad3f-4383dfd9aed7
 ms.openlocfilehash: f7b0c3a6edbe0b950195306fa66287ff9b209bfe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306624"
 ---
 # <a name="bad-dll-calling-convention"></a>Fehlerhafte DLL-Aufrufkonvention
@@ -26,4 +26,4 @@ Argumente, die an eine Dynamic Link Library (DLL) müssen genau mit den erwartet
 
 - [Fehlertypen](../../../visual-basic/programming-guide/language-features/error-types.md)
 - [Call-Anweisung](../../../visual-basic/language-reference/statements/call-statement.md)
-- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)

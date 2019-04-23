@@ -3,10 +3,10 @@ title: Behandlung nicht verarbeitbarer Nachrichten
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305025"
 ---
 # <a name="poison-message-handling"></a>Behandlung nicht verarbeitbarer Nachrichten
@@ -19,13 +19,13 @@ Ein *für nicht verarbeitbare Nachrichten* ist eine Nachricht, das die maximale 
 ## <a name="handling-poison-messages"></a>Behandeln von nicht verarbeitbaren Nachrichten  
  In WCF bietet die Handhabung beschädigter Nachrichten einen Mechanismus für eine empfangende Anwendung zum Umgang mit Nachrichten, die an die Anwendung weitergeleitet werden können oder Nachrichten, die zur Anwendung weitergeleitet werden, aber nicht die aufgrund einer anwendungsspezifischen verarbeitet werden Gründe. Die Konfiguration der Behandlung nicht verarbeitbarer Nachrichten erfolgt in jeder der verfügbaren, in der Warteschlange stehenden Bindungen durch die folgenden Eigenschaften:  
   
--   `ReceiveRetryCount`sein. Ein Ganzzahlwert, die die maximale Anzahl der Neuversuche für den Versand einer Nachricht von der Anwendungswarteschlange zu der Anwendung angibt. Der Standardwert ist 5. Dieser Wert ist in Fällen ausreichend, in denen eine sofortige Wiederholung das Problem behebt, beispielsweise wenn ein temporärer Deadlock für eine Datenbank vorliegt.  
+-   `ReceiveRetryCount`. Ein Ganzzahlwert, die die maximale Anzahl der Neuversuche für den Versand einer Nachricht von der Anwendungswarteschlange zu der Anwendung angibt. Der Standardwert ist 5. Dieser Wert ist in Fällen ausreichend, in denen eine sofortige Wiederholung das Problem behebt, beispielsweise wenn ein temporärer Deadlock für eine Datenbank vorliegt.  
   
--   `MaxRetryCycles`sein. Ein Ganzzahlwert, der die maximale Anzahl der Wiederholungszyklen angibt. Ein Wiederholungszyklus umfasst die Übertragung einer Nachricht von der Anwendungswarteschlange zur untergeordneten Wiederholungswarteschlange und – nach einer konfigurierbaren Verzögerung – die Rückübertragung der Nachricht aus der untergeordneten Wiederholungswarteschlange zur Anwendungswarteschlange, um einen erneuten Zustellversuch zu unternehmen. Der Standardwert ist 2. In [!INCLUDE[wv](../../../../includes/wv-md.md)] erfolgen maximal (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1) Versuche. `MaxRetryCycles` ignoriert [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+-   `MaxRetryCycles`. Ein Ganzzahlwert, der die maximale Anzahl der Wiederholungszyklen angibt. Ein Wiederholungszyklus umfasst die Übertragung einer Nachricht von der Anwendungswarteschlange zur untergeordneten Wiederholungswarteschlange und – nach einer konfigurierbaren Verzögerung – die Rückübertragung der Nachricht aus der untergeordneten Wiederholungswarteschlange zur Anwendungswarteschlange, um einen erneuten Zustellversuch zu unternehmen. Der Standardwert ist 2. In [!INCLUDE[wv](../../../../includes/wv-md.md)] erfolgen maximal (`ReceiveRetryCount` +1) * (`MaxRetryCycles` + 1) Versuche. `MaxRetryCycles` wird für [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ignoriert.  
   
--   `RetryCycleDelay`sein. Die Verzögerungszeit für Wiederholungszyklen. Der Standardwert ist 30 Minuten. `MaxRetryCycles` und `RetryCycleDelay` bieten gemeinsam einen Mechanismus, um das Problem zu beheben, wenn eine Wiederholung nach einer periodischen Verzögerung das Problem behebt. Damit wird z. B. ein gesperrtes Rowset bei einem in SQL Server anstehenden Transaktionscommit behandelt.  
+-   `RetryCycleDelay`. Die Verzögerungszeit für Wiederholungszyklen. Der Standardwert ist 30 Minuten. `MaxRetryCycles` und `RetryCycleDelay` bieten gemeinsam einen Mechanismus zur Behandlung des Problems, wenn eine Wiederholung nach einer periodischen Verzögerung das Problem behebt. Damit wird z. B. ein gesperrtes Rowset bei einem in SQL Server anstehenden Transaktionscommit behandelt.  
   
--   `ReceiveErrorHandling`sein. Eine Enumeration, die angibt, welche Aktion für eine Nachricht erfolgen soll, deren Zustellung auch nach der maximalen Anzahl von Wiederholungen fehlgeschlagen ist. Die Werte können „Fehler“, „Ablegen“, „Ablehnen“ und „Verschieben“ sein. Die Standardoption ist "Fehler".  
+-   `ReceiveErrorHandling`. Eine Enumeration, die angibt, welche Aktion für eine Nachricht erfolgen soll, deren Zustellung auch nach der maximalen Anzahl von Wiederholungen fehlgeschlagen ist. Die Werte können „Fehler“, „Ablegen“, „Ablehnen“ und „Verschieben“ sein. Die Standardoption ist "Fehler".  
   
 -   Fehler. Diese Option sendet einen Fehler an den Listener, der bewirkt hat, dass der `ServiceHost` fehlerhaft agiert. Die Nachricht muss durch einen externen Mechanismus aus der Anwendungswarteschlange entfernt werden, bevor die Anwendung mit der Verarbeitung von Nachrichten aus der Warteschlange fortfahren kann.  
   
@@ -52,9 +52,9 @@ Ein *für nicht verarbeitbare Nachrichten* ist eine Nachricht, das die maximale 
   
  WCF stellt zwei in der Warteschlange stehende standardbindungen bereit:  
   
--   <xref:System.ServiceModel.NetMsmqBinding>sein. Ein [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Bindung geeignet ist, zum Ausführen warteschlangenbasierter Kommunikation mit anderen WCF-Endpunkten.  
+-   <xref:System.ServiceModel.NetMsmqBinding>. Ein [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Bindung geeignet ist, zum Ausführen warteschlangenbasierter Kommunikation mit anderen WCF-Endpunkten.  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>sein. Eine Bindung, die zur Kommunikation mit vorhandenen Message Queuing-Anwendungen geeignet ist.  
+-   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Eine Bindung, die zur Kommunikation mit vorhandenen Message Queuing-Anwendungen geeignet ist.  
   
 > [!NOTE]
 >  Sie können Eigenschaften in diesen Bindungen basierend auf den Anforderungen von den WCF-Dienst ändern. Der gesamte Mechanismus zur Behandlung nicht verarbeitbarer Nachrichten ist zur empfangenden Anwendung lokal. Der Prozess ist für die sendende Anwendung unsichtbar, es sei denn, die empfangende Anwendung beendet den Vorgang und sendet eine negative Bestätigung an den Absender zurück. In diesem Fall wird die Nachricht in die Warteschlange für unzustellbare Nachrichten des Absenders verschoben.  
@@ -92,7 +92,7 @@ Ein *für nicht verarbeitbare Nachrichten* ist eine Nachricht, das die maximale 
  Wenn eine Nachricht zu einer nicht verarbeitbaren Nachricht wird und Teil eines Batches ist, wird für den gesamten Batch ein Rollback durchgeführt, und der Kanal kehrt zum Lesen einzelner Nachrichten zurück. Weitere Informationen zur Batchverarbeitung finden Sie unter [Batchverarbeitung von Nachrichten in einer Transaktion](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>Behandlung nicht verarbeitbarer Nachrichten für Nachrichten in einer Warteschlange für potenziell schädliche Nachrichten  
- Die Behandlung nicht verarbeitbarer Nachrichten ist nicht damit beendet, dass eine Nachricht in die Warteschlange für potenziell schädliche Nachrichten eingefügt wird. Die Nachrichten in der Warteschlange für potenziell schädliche Nachrichten müssen immer noch gelesen und behandelt werden. Beim Lesen von Nachrichten aus der endgültigen Warteschlange für potenziell schädliche Nachrichten können Sie eine Teilmenge der Einstellungen zur Behandlung nicht verarbeitbarer Nachrichten verwenden. Die anwendbaren Einstellungen sind `ReceiveRetryCount` und `ReceiveErrorHandling`. Sie können `ReceiveErrorHandling` auf "Drop", "Reject" oder "Fault" festlegen. `MaxRetryCycles` wird ignoriert, und eine Ausnahme wird ausgelöst, wenn `ReceiveErrorHandling` auf Move festgelegt ist.  
+ Die Behandlung nicht verarbeitbarer Nachrichten ist nicht damit beendet, dass eine Nachricht in die Warteschlange für potenziell schädliche Nachrichten eingefügt wird. Die Nachrichten in der Warteschlange für potenziell schädliche Nachrichten müssen immer noch gelesen und behandelt werden. Beim Lesen von Nachrichten aus der endgültigen Warteschlange für potenziell schädliche Nachrichten können Sie eine Teilmenge der Einstellungen zur Behandlung nicht verarbeitbarer Nachrichten verwenden. Die anwendbaren Einstellungen sind `ReceiveRetryCount` und `ReceiveErrorHandling`. Sie können `ReceiveErrorHandling` auf "Drop", "Reject" oder "Fault" festlegen. `MaxRetryCycles` wird ignoriert, und es wird eine Ausnahme ausgelöst, wenn `ReceiveErrorHandling` auf {3&amp;amp;gt;Move&amp;amp;lt;3} festgelegt wird.  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Unterschiede zwischen Windows Vista, Windows Server 2003 und Windows XP  
  Wie bereits oben erwähnt, sind in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nicht alle Einstellungen für die Behandlung nicht verarbeitbarer Nachrichten anwendbar. Die folgenden Hauptunterschiede zwischen dem Message Queuing in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], [!INCLUDE[wxp](../../../../includes/wxp-md.md)] und [!INCLUDE[wv](../../../../includes/wv-md.md)] sind für die Behandlung nicht verarbeitbarer Nachrichten relevant:  

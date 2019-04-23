@@ -13,10 +13,10 @@ helpviewer_keywords:
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
 ms.openlocfilehash: 050af6d10faec3dd09998349dcf96e96ea0f9201
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306183"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>Vorgehensweise: Auswählen von Ordnern mit der FolderBrowserDialog-Komponente in Windows Forms
@@ -69,5 +69,5 @@ Häufig müssen Sie in von Ihnen erstellten Windows-Anwendungen Benutzer aufford
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [Übersicht über die FolderBrowserDialog-Komponente (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)
+- [Übersicht über die FolderBrowserDialog-Komponente (Windows Forms)](folderbrowserdialog-component-overview-windows-forms.md)
 - [FolderBrowserDialog-Komponente](folderbrowserdialog-component-windows-forms.md)

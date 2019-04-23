@@ -12,10 +12,10 @@ ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 80dc5f72bac436d4935c1697347d588b1a302f86
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305337"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Vorgehensweise: Abbrechen einer PLINQ-Abfrage
@@ -53,5 +53,5 @@ In den folgenden Beispielen werden zwei Möglichkeiten zum Ändern einer PLINQ-A
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Linq.ParallelEnumerable>
-- [Paralleles LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [Abbruch in verwalteten Threads](../../../docs/standard/threading/cancellation-in-managed-threads.md)

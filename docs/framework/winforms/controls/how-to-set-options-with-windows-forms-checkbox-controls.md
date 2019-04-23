@@ -13,10 +13,10 @@ helpviewer_keywords:
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
 ms.openlocfilehash: 881996563acef36a1981ca6236c155b8fc56ef0a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307309"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>Vorgehensweise: Festlegen von Optionen mit CheckBox-Steuerelementen in Windows Forms
@@ -69,5 +69,5 @@ Ein Windows Forms <xref:System.Windows.Forms.CheckBox> Steuerelement wird verwen
 
 - <xref:System.Windows.Forms.CheckBox>
 - [Übersicht über das CheckBox-Steuerelement](checkbox-control-overview-windows-forms.md)
-- [Vorgehensweise: Reagieren auf das Klicken auf Kontrollkästchen in Windows Forms](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [Vorgehensweise: Reagieren Sie auf Windows Forms das Klicken auf Kontrollkästchen](how-to-respond-to-windows-forms-checkbox-clicks.md)
 - [CheckBox-Steuerelement](checkbox-control-windows-forms.md)

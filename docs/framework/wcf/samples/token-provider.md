@@ -3,11 +3,11 @@ title: Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 ms.openlocfilehash: 9c10d67093fb09cb97f2010926ebaa6176df86c2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59336290"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768110"
 ---
 # <a name="token-provider"></a>Tokenanbieter
 Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Tokenanbieters. Ein Tokenanbieter in Windows Communication Foundation (WCF) Dient zum Angeben von Anmeldeinformationen, um der Sicherheitsinfrastruktur. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. Im Lieferumfang von WCF ist der standardmäßige Tokenanbieter der Anmeldeinformationsverwaltung enthalten. Außerdem Lieferumfang von WCF ein [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:

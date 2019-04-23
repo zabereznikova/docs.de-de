@@ -3,10 +3,10 @@ title: Benutzerdefinierte Nachverfolgung
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
 ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307622"
 ---
 # <a name="custom-tracking"></a>Benutzerdefinierte Nachverfolgung
@@ -18,7 +18,7 @@ Anhand dieses Beispiels wird veranschaulicht, wie eine benutzerdefinierte Nachve
 |Komponente|Beschreibung|
 |---------------|-----------------|
 |Überwachungslaufzeit|Stellt die Infrastruktur bereit, um Überwachungsdatensätze auszugeben.|
-|Überwachungsteilnehmer|Verarbeitet die Nachverfolgungsdatensätze. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] umfasst einen Nachverfolgungsteilnehmer, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt.|
+|Überwachungsteilnehmer|Verarbeitet die Nachverfolgungsdatensätze. [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] wird mit einem Nachverfolgungsteilnehmer geliefert, der Nachverfolgungsdatensätze als Ereignisse der Ereignisablaufverfolgung für Windows (ETW) schreibt.|
 |Überwachungsprofil|Ein Filtermechanismus, der einem Überwachungsteilnehmer das Abonnieren einer Teilmenge der Überwachungsdatensätze ermöglicht, die von einer Workflowinstanz ausgegeben werden.|
 
  In der folgenden Tabelle sind die Überwachungsdatensätze aufgeführt, die von der Workflowlaufzeit ausgegeben werden.
