@@ -1,5 +1,5 @@
 ---
-title: <relativeBindForResources> Element
+title: <relativeBindForResources>-Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - RelativeBindForResources element
@@ -8,71 +8,71 @@ ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c98914f57c24dc51625564e266157731ff173337
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157377"
 ---
-# <a name="relativebindforresources-element"></a><span data-ttu-id="658c2-102">\<RelativeBindForResources >-Element</span><span class="sxs-lookup"><span data-stu-id="658c2-102">\<relativeBindForResources> Element</span></span>
-<span data-ttu-id="658c2-103">Optimiert den Test für Satellitenassemblys.</span><span class="sxs-lookup"><span data-stu-id="658c2-103">Optimizes the probe for satellite assemblies.</span></span>  
+# <a name="relativebindforresources-element"></a><span data-ttu-id="f9c2f-102">\<RelativeBindForResources >-Element</span><span class="sxs-lookup"><span data-stu-id="f9c2f-102">\<relativeBindForResources> Element</span></span>
+<span data-ttu-id="f9c2f-103">Optimiert den Test für Satellitenassemblys.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-103">Optimizes the probe for satellite assemblies.</span></span>  
   
- <span data-ttu-id="658c2-104">\<Configuration >-Element</span><span class="sxs-lookup"><span data-stu-id="658c2-104">\<configuration> Element</span></span>  
-<span data-ttu-id="658c2-105">\<Common Language Runtime >-Element</span><span class="sxs-lookup"><span data-stu-id="658c2-105">\<runtime> Element</span></span>  
-<span data-ttu-id="658c2-106">\<RelativeBindForResources >-Element</span><span class="sxs-lookup"><span data-stu-id="658c2-106">\<relativeBindForResources> Element</span></span>  
+ <span data-ttu-id="f9c2f-104">\<Configuration >-Element</span><span class="sxs-lookup"><span data-stu-id="f9c2f-104">\<configuration> Element</span></span>  
+<span data-ttu-id="f9c2f-105">\<Common Language Runtime >-Element</span><span class="sxs-lookup"><span data-stu-id="f9c2f-105">\<runtime> Element</span></span>  
+<span data-ttu-id="f9c2f-106">\<RelativeBindForResources >-Element</span><span class="sxs-lookup"><span data-stu-id="f9c2f-106">\<relativeBindForResources> Element</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="658c2-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="658c2-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f9c2f-107">Syntax</span><span class="sxs-lookup"><span data-stu-id="f9c2f-107">Syntax</span></span>  
   
 ```xml
 <relativeBindForResources    
    enabled="true|false" />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="658c2-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="658c2-108">Attributes and Elements</span></span>  
- <span data-ttu-id="658c2-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="658c2-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f9c2f-108">Attribute und Elemente</span><span class="sxs-lookup"><span data-stu-id="f9c2f-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="f9c2f-109">In den folgenden Abschnitten werden Attribute sowie untergeordnete und übergeordnete Elemente beschrieben.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="658c2-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="658c2-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f9c2f-110">Attribute</span><span class="sxs-lookup"><span data-stu-id="f9c2f-110">Attributes</span></span>  
   
-|<span data-ttu-id="658c2-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="658c2-111">Attribute</span></span>|<span data-ttu-id="658c2-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="658c2-112">Description</span></span>|  
+|<span data-ttu-id="f9c2f-111">Attribut</span><span class="sxs-lookup"><span data-stu-id="f9c2f-111">Attribute</span></span>|<span data-ttu-id="f9c2f-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f9c2f-112">Description</span></span>|  
 |---------------|-----------------|  
-|`enabled`|<span data-ttu-id="658c2-113">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="658c2-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="658c2-114">Gibt an, ob die common Language Runtime die Überprüfung auf Satellitenassemblys optimiert.</span><span class="sxs-lookup"><span data-stu-id="658c2-114">Specifies whether the common language runtime optimizes the probe for satellite assemblies.</span></span>|  
+|`enabled`|<span data-ttu-id="f9c2f-113">Erforderliches Attribut.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-113">Required attribute.</span></span><br /><br /> <span data-ttu-id="f9c2f-114">Gibt an, ob die common Language Runtime die Überprüfung auf Satellitenassemblys optimiert.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-114">Specifies whether the common language runtime optimizes the probe for satellite assemblies.</span></span>|  
   
-## <a name="enabled-attribute"></a><span data-ttu-id="658c2-115">Enabled-Attribut</span><span class="sxs-lookup"><span data-stu-id="658c2-115">enabled Attribute</span></span>  
+## <a name="enabled-attribute"></a><span data-ttu-id="f9c2f-115">Enabled-Attribut</span><span class="sxs-lookup"><span data-stu-id="f9c2f-115">enabled Attribute</span></span>  
   
-|<span data-ttu-id="658c2-116">Wert</span><span class="sxs-lookup"><span data-stu-id="658c2-116">Value</span></span>|<span data-ttu-id="658c2-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="658c2-117">Description</span></span>|  
+|<span data-ttu-id="f9c2f-116">Wert</span><span class="sxs-lookup"><span data-stu-id="f9c2f-116">Value</span></span>|<span data-ttu-id="f9c2f-117">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f9c2f-117">Description</span></span>|  
 |-----------|-----------------|  
-|`false`|<span data-ttu-id="658c2-118">Die Runtime wird den Test für Satellitenassemblys nicht optimiert werden.</span><span class="sxs-lookup"><span data-stu-id="658c2-118">The runtime does not optimize the probe for satellite assemblies.</span></span> <span data-ttu-id="658c2-119">Dies ist der Standardwert.</span><span class="sxs-lookup"><span data-stu-id="658c2-119">This is the default value.</span></span>|  
-|`true`|<span data-ttu-id="658c2-120">Die Laufzeit optimiert den Test für Satellitenassemblys.</span><span class="sxs-lookup"><span data-stu-id="658c2-120">The runtime optimizes the probe for satellite assemblies.</span></span>|  
+|`false`|<span data-ttu-id="f9c2f-118">Die Runtime wird den Test für Satellitenassemblys nicht optimiert werden.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-118">The runtime does not optimize the probe for satellite assemblies.</span></span> <span data-ttu-id="f9c2f-119">Dies ist der Standardwert.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-119">This is the default value.</span></span>|  
+|`true`|<span data-ttu-id="f9c2f-120">Die Laufzeit optimiert den Test für Satellitenassemblys.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-120">The runtime optimizes the probe for satellite assemblies.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="658c2-121">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="658c2-121">Child Elements</span></span>  
- <span data-ttu-id="658c2-122">Keine</span><span class="sxs-lookup"><span data-stu-id="658c2-122">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f9c2f-121">Untergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="f9c2f-121">Child Elements</span></span>  
+ <span data-ttu-id="f9c2f-122">Keine</span><span class="sxs-lookup"><span data-stu-id="f9c2f-122">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="658c2-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="658c2-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f9c2f-123">Übergeordnete Elemente</span><span class="sxs-lookup"><span data-stu-id="f9c2f-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="658c2-124">Element</span><span class="sxs-lookup"><span data-stu-id="658c2-124">Element</span></span>|<span data-ttu-id="658c2-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="658c2-125">Description</span></span>|  
+|<span data-ttu-id="f9c2f-124">Element</span><span class="sxs-lookup"><span data-stu-id="f9c2f-124">Element</span></span>|<span data-ttu-id="f9c2f-125">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f9c2f-125">Description</span></span>|  
 |-------------|-----------------|  
-|`configuration`|<span data-ttu-id="658c2-126">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="658c2-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-|`runtime`|<span data-ttu-id="658c2-127">Enthält Informationen über Laufzeitinitialisierungsoptionen.</span><span class="sxs-lookup"><span data-stu-id="658c2-127">Contains information about runtime initialization options.</span></span>|  
+|`configuration`|<span data-ttu-id="f9c2f-126">Das Stammelement in jeder von den Common Language Runtime- und .NET Framework-Anwendungen verwendeten Konfigurationsdatei.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-126">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`runtime`|<span data-ttu-id="f9c2f-127">Enthält Informationen über Laufzeitinitialisierungsoptionen.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-127">Contains information about runtime initialization options.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="658c2-128">Hinweise</span><span class="sxs-lookup"><span data-stu-id="658c2-128">Remarks</span></span>  
- <span data-ttu-id="658c2-129">Im Allgemeinen Resource Manager-Tests für Ressourcen, wie in der [Packaging and Deploying Resources](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) Thema.</span><span class="sxs-lookup"><span data-stu-id="658c2-129">In general, Resource Manager probes for resources, as documented in the [Packaging and Deploying Resources](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) topic.</span></span> <span data-ttu-id="658c2-130">Dies bedeutet, dass bei der Ressourcen-Manager für eine bestimmte lokalisierte Version einer Ressource Tests, möglicherweise suchen Sie im globalen Assemblycache, Satellitenassemblys in einem kulturspezifischen Ordner, in der Anwendung Code-Basis, Abfrage Windows Installer gesucht und Auslösen der <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="658c2-130">This means that when Resource Manager probes for a particular localized version of a resource, it may look in the global assembly cache, look in a culture-specific folder in the application's code base, query Windows Installer for satellite assemblies, and raise the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span> <span data-ttu-id="658c2-131">Die `<relativeBindForResources>` Element optimiert die Möglichkeit, die in der Resource Manager-für Satellitenassemblys Tests.</span><span class="sxs-lookup"><span data-stu-id="658c2-131">The `<relativeBindForResources>` element optimizes the way in which Resource Manager probes for satellite assemblies.</span></span> <span data-ttu-id="658c2-132">Sie können die Leistung verbessert, wenn der Testvorgang für Ressourcen in den folgenden Situationen:</span><span class="sxs-lookup"><span data-stu-id="658c2-132">It can improve performance when probing for resources under the following conditions:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f9c2f-128">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f9c2f-128">Remarks</span></span>  
+ <span data-ttu-id="f9c2f-129">Im Allgemeinen Resource Manager-Tests für Ressourcen, wie in der [Packaging and Deploying Resources](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) Thema.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-129">In general, Resource Manager probes for resources, as documented in the [Packaging and Deploying Resources](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md) topic.</span></span> <span data-ttu-id="f9c2f-130">Dies bedeutet, dass bei der Ressourcen-Manager für eine bestimmte lokalisierte Version einer Ressource Tests, möglicherweise suchen Sie im globalen Assemblycache, Satellitenassemblys in einem kulturspezifischen Ordner, in der Anwendung Code-Basis, Abfrage Windows Installer gesucht und Auslösen der <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-130">This means that when Resource Manager probes for a particular localized version of a resource, it may look in the global assembly cache, look in a culture-specific folder in the application's code base, query Windows Installer for satellite assemblies, and raise the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span> <span data-ttu-id="f9c2f-131">Die `<relativeBindForResources>` Element optimiert die Möglichkeit, die in der Resource Manager-für Satellitenassemblys Tests.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-131">The `<relativeBindForResources>` element optimizes the way in which Resource Manager probes for satellite assemblies.</span></span> <span data-ttu-id="f9c2f-132">Sie können die Leistung verbessert, wenn der Testvorgang für Ressourcen in den folgenden Situationen:</span><span class="sxs-lookup"><span data-stu-id="f9c2f-132">It can improve performance when probing for resources under the following conditions:</span></span>  
   
--   <span data-ttu-id="658c2-133">Wenn die Satellitenassembly am gleichen Speicherort wie die Codeassembly bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="658c2-133">When the satellite assembly is deployed in the same location as the code assembly.</span></span> <span data-ttu-id="658c2-134">Das heißt, wenn die Code-Assembly im globalen Assemblycache installiert ist, müssen die Satellitenassemblys auch dort installiert werden.</span><span class="sxs-lookup"><span data-stu-id="658c2-134">In other words, if the code assembly is installed in the global assembly cache, the satellite assemblies must also be installed there.</span></span> <span data-ttu-id="658c2-135">Wenn die Codeassembly in die Codebasis der Anwendung installiert ist, müssen auch die Satellitenassemblys in einem kulturspezifischen Ordner, in der Codebasis installiert werden.</span><span class="sxs-lookup"><span data-stu-id="658c2-135">If the code assembly is installed in the application's code base, the satellite assemblies must also be installed in a culture-specific folder in the code base.</span></span>  
+-   <span data-ttu-id="f9c2f-133">Wenn die Satellitenassembly am gleichen Speicherort wie die Codeassembly bereitgestellt wird.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-133">When the satellite assembly is deployed in the same location as the code assembly.</span></span> <span data-ttu-id="f9c2f-134">Das heißt, wenn die Code-Assembly im globalen Assemblycache installiert ist, müssen die Satellitenassemblys auch dort installiert werden.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-134">In other words, if the code assembly is installed in the global assembly cache, the satellite assemblies must also be installed there.</span></span> <span data-ttu-id="f9c2f-135">Wenn die Codeassembly in die Codebasis der Anwendung installiert ist, müssen auch die Satellitenassemblys in einem kulturspezifischen Ordner, in der Codebasis installiert werden.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-135">If the code assembly is installed in the application's code base, the satellite assemblies must also be installed in a culture-specific folder in the code base.</span></span>  
   
--   <span data-ttu-id="658c2-136">Wenn Windows Installer nicht verwendet wird oder nur selten verwendet für die Installation von Satellitenassemblys bei Bedarf.</span><span class="sxs-lookup"><span data-stu-id="658c2-136">When Windows Installer is not used or is used only rarely for on-demand installation of satellite assemblies.</span></span>  
+-   <span data-ttu-id="f9c2f-136">Wenn Windows Installer nicht verwendet wird oder nur selten verwendet für die Installation von Satellitenassemblys bei Bedarf.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-136">When Windows Installer is not used or is used only rarely for on-demand installation of satellite assemblies.</span></span>  
   
--   <span data-ttu-id="658c2-137">Wenn Anwendungscode behandelt nicht das <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="658c2-137">When application code does not handle the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span>  
+-   <span data-ttu-id="f9c2f-137">Wenn Anwendungscode behandelt nicht das <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-137">When application code does not handle the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span>  
   
- <span data-ttu-id="658c2-138">Festlegen der `enabled` Attribut der `<relativeBindForResources>` Element `true` optimiert die Resource Manager Test für Satellitenassemblys wie folgt:</span><span class="sxs-lookup"><span data-stu-id="658c2-138">Setting the `enabled` attribute of the `<relativeBindForResources>` element to `true` optimizes Resource Manager's probe for satellite assemblies as follows:</span></span>  
+ <span data-ttu-id="f9c2f-138">Festlegen der `enabled` Attribut der `<relativeBindForResources>` Element `true` optimiert die Resource Manager Test für Satellitenassemblys wie folgt:</span><span class="sxs-lookup"><span data-stu-id="f9c2f-138">Setting the `enabled` attribute of the `<relativeBindForResources>` element to `true` optimizes Resource Manager's probe for satellite assemblies as follows:</span></span>  
   
--   <span data-ttu-id="658c2-139">Er verwendet den Speicherort der übergeordneten Codeassembly, um für die Satellitenassembly zu testen.</span><span class="sxs-lookup"><span data-stu-id="658c2-139">It uses the location of the parent code assembly to probe for the satellite assembly.</span></span>  
+-   <span data-ttu-id="f9c2f-139">Er verwendet den Speicherort der übergeordneten Codeassembly, um für die Satellitenassembly zu testen.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-139">It uses the location of the parent code assembly to probe for the satellite assembly.</span></span>  
   
--   <span data-ttu-id="658c2-140">Er fragt Windows Installer nicht für Satellitenassemblys.</span><span class="sxs-lookup"><span data-stu-id="658c2-140">It does not query Windows Installer for satellite assemblies.</span></span>  
+-   <span data-ttu-id="f9c2f-140">Er fragt Windows Installer nicht für Satellitenassemblys.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-140">It does not query Windows Installer for satellite assemblies.</span></span>  
   
--   <span data-ttu-id="658c2-141">Sie löst nicht die <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="658c2-141">It does not raise the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span>  
+-   <span data-ttu-id="f9c2f-141">Sie löst nicht die <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> Ereignis.</span><span class="sxs-lookup"><span data-stu-id="f9c2f-141">It does not raise the <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> event.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="658c2-142">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="658c2-142">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f9c2f-142">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f9c2f-142">See also</span></span>
 
-- [<span data-ttu-id="658c2-143">Verpacken und Bereitstellen von Ressourcen</span><span class="sxs-lookup"><span data-stu-id="658c2-143">Packaging and Deploying Resources</span></span>](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
-- [<span data-ttu-id="658c2-144">Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="658c2-144">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [<span data-ttu-id="658c2-145">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="658c2-145">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [<span data-ttu-id="f9c2f-143">Verpacken und Bereitstellen von Ressourcen</span><span class="sxs-lookup"><span data-stu-id="f9c2f-143">Packaging and Deploying Resources</span></span>](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [<span data-ttu-id="f9c2f-144">Schema für Laufzeiteinstellungen</span><span class="sxs-lookup"><span data-stu-id="f9c2f-144">Runtime Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
+- [<span data-ttu-id="f9c2f-145">Konfigurationsdateischema</span><span class="sxs-lookup"><span data-stu-id="f9c2f-145">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

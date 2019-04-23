@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea63627bc1e689c93634c8fe8b9048b271758573
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156116"
 ---
-# <a name="icorruntimehostcreatedomain-method"></a><span data-ttu-id="2558d-102">ICorRuntimeHost::CreateDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="2558d-102">ICorRuntimeHost::CreateDomain Method</span></span>
-<span data-ttu-id="2558d-103">Erstellt eine Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="2558d-103">Creates an application domain.</span></span> <span data-ttu-id="2558d-104">Der Aufrufer empfängt einen Schnittstellenzeiger vom Typ <xref:System._AppDomain> in eine Instanz des Typs <xref:System.AppDomain?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="2558d-104">The caller receives an interface pointer of type <xref:System._AppDomain> to an instance of type <xref:System.AppDomain?displayProperty=nameWithType>.</span></span>  
+# <a name="icorruntimehostcreatedomain-method"></a><span data-ttu-id="0dd0e-102">ICorRuntimeHost::CreateDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="0dd0e-102">ICorRuntimeHost::CreateDomain Method</span></span>
+<span data-ttu-id="0dd0e-103">Erstellt eine Anwendungsdomäne.</span><span class="sxs-lookup"><span data-stu-id="0dd0e-103">Creates an application domain.</span></span> <span data-ttu-id="0dd0e-104">Der Aufrufer empfängt einen Schnittstellenzeiger vom Typ <xref:System._AppDomain> in eine Instanz des Typs <xref:System.AppDomain?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="0dd0e-104">The caller receives an interface pointer of type <xref:System._AppDomain> to an instance of type <xref:System.AppDomain?displayProperty=nameWithType>.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2558d-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="2558d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0dd0e-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="0dd0e-105">Syntax</span></span>  
   
 ```  
 HRESULT CreateDomain (  
@@ -37,36 +37,36 @@ HRESULT CreateDomain (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2558d-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="2558d-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0dd0e-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="0dd0e-106">Parameters</span></span>  
  `pwzFriendlyName`  
- <span data-ttu-id="2558d-107">[in] Ein optionaler Parameter verwendet, geben einen benutzerfreundlichen Namen der Domäne.</span><span class="sxs-lookup"><span data-stu-id="2558d-107">[in] An optional parameter used to give a friendly name to the domain.</span></span> <span data-ttu-id="2558d-108">Dieser Anzeigename kann in Benutzeroberflächen wie der Debugger zur Kennzeichnung der Domäne angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="2558d-108">This friendly name can be displayed in user interfaces such as debuggers to identify the domain.</span></span>  
+ <span data-ttu-id="0dd0e-107">[in] Ein optionaler Parameter verwendet, geben einen benutzerfreundlichen Namen der Domäne.</span><span class="sxs-lookup"><span data-stu-id="0dd0e-107">[in] An optional parameter used to give a friendly name to the domain.</span></span> <span data-ttu-id="0dd0e-108">Dieser Anzeigename kann in Benutzeroberflächen wie der Debugger zur Kennzeichnung der Domäne angezeigt werden.</span><span class="sxs-lookup"><span data-stu-id="0dd0e-108">This friendly name can be displayed in user interfaces such as debuggers to identify the domain.</span></span>  
   
  `pIdentityArray`  
- <span data-ttu-id="2558d-109">[in] Ein optionales Array von Zeigern auf `IIdentity` Instanzen, die durch Sicherheitsrichtlinien eines Berechtigungssatzes zugeordneten Beweis darstellen.</span><span class="sxs-lookup"><span data-stu-id="2558d-109">[in] An optional array of pointers to `IIdentity` instances that represent evidence mapped through security policy to establish a  permission set.</span></span> <span data-ttu-id="2558d-110">Ein `IIdentity` -Objekt abgerufen werden kann, durch den Aufruf der [CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="2558d-110">An `IIdentity` object can be obtained by calling the [CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md) method.</span></span>  
+ <span data-ttu-id="0dd0e-109">[in] Ein optionales Array von Zeigern auf `IIdentity` Instanzen, die durch Sicherheitsrichtlinien eines Berechtigungssatzes zugeordneten Beweis darstellen.</span><span class="sxs-lookup"><span data-stu-id="0dd0e-109">[in] An optional array of pointers to `IIdentity` instances that represent evidence mapped through security policy to establish a  permission set.</span></span> <span data-ttu-id="0dd0e-110">Ein `IIdentity` -Objekt abgerufen werden kann, durch den Aufruf der [CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="0dd0e-110">An `IIdentity` object can be obtained by calling the [CreateEvidence](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md) method.</span></span>  
   
  `pAppDomain`  
- <span data-ttu-id="2558d-111">[out] Einen Schnittstellenzeiger vom Typ <xref:System._AppDomain> mit einer Instanz von <xref:System.AppDomain?displayProperty=nameWithType> , die verwendet werden kann, um die Domäne noch weiter zu steuern.</span><span class="sxs-lookup"><span data-stu-id="2558d-111">[out] An interface pointer of type <xref:System._AppDomain> to an instance of <xref:System.AppDomain?displayProperty=nameWithType> that can be used to further control the domain.</span></span>  
+ <span data-ttu-id="0dd0e-111">[out] Einen Schnittstellenzeiger vom Typ <xref:System._AppDomain> mit einer Instanz von <xref:System.AppDomain?displayProperty=nameWithType> , die verwendet werden kann, um die Domäne noch weiter zu steuern.</span><span class="sxs-lookup"><span data-stu-id="0dd0e-111">[out] An interface pointer of type <xref:System._AppDomain> to an instance of <xref:System.AppDomain?displayProperty=nameWithType> that can be used to further control the domain.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2558d-112">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="2558d-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0dd0e-112">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="0dd0e-112">Return Value</span></span>  
   
-|<span data-ttu-id="2558d-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="2558d-113">HRESULT</span></span>|<span data-ttu-id="2558d-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="2558d-114">Description</span></span>|  
+|<span data-ttu-id="0dd0e-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0dd0e-113">HRESULT</span></span>|<span data-ttu-id="0dd0e-114">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0dd0e-114">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="2558d-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="2558d-115">S_OK</span></span>|<span data-ttu-id="2558d-116">Der Vorgang war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="2558d-116">The operation was successful.</span></span>|  
-|<span data-ttu-id="2558d-117">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="2558d-117">S_FALSE</span></span>|<span data-ttu-id="2558d-118">Der Vorgang konnte nicht abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="2558d-118">The operation failed to complete.</span></span>|  
-|<span data-ttu-id="2558d-119">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="2558d-119">E_FAIL</span></span>|<span data-ttu-id="2558d-120">Ein Unbekannter, schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="2558d-120">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="2558d-121">Wenn eine Methode E_FAIL zurückgegeben wird, ist die common Language Runtime (CLR) nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="2558d-121">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="2558d-122">Nachfolgende Aufrufe von hosting-APIs HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="2558d-122">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="2558d-123">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="2558d-123">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="2558d-124">Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="2558d-124">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="0dd0e-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="0dd0e-115">S_OK</span></span>|<span data-ttu-id="0dd0e-116">Der Vorgang war erfolgreich.</span><span class="sxs-lookup"><span data-stu-id="0dd0e-116">The operation was successful.</span></span>|  
+|<span data-ttu-id="0dd0e-117">S_FALSE</span><span class="sxs-lookup"><span data-stu-id="0dd0e-117">S_FALSE</span></span>|<span data-ttu-id="0dd0e-118">Der Vorgang konnte nicht abgeschlossen.</span><span class="sxs-lookup"><span data-stu-id="0dd0e-118">The operation failed to complete.</span></span>|  
+|<span data-ttu-id="0dd0e-119">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="0dd0e-119">E_FAIL</span></span>|<span data-ttu-id="0dd0e-120">Ein Unbekannter, schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="0dd0e-120">An unknown, catastrophic failure occurred.</span></span> <span data-ttu-id="0dd0e-121">Wenn eine Methode E_FAIL zurückgegeben wird, ist die common Language Runtime (CLR) nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="0dd0e-121">If a method returns E_FAIL, the common language runtime (CLR) is no longer usable in the process.</span></span> <span data-ttu-id="0dd0e-122">Nachfolgende Aufrufe von hosting-APIs HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="0dd0e-122">Subsequent calls to any hosting APIs return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="0dd0e-123">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="0dd0e-123">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="0dd0e-124">Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="0dd0e-124">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="2558d-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2558d-125">Requirements</span></span>  
- <span data-ttu-id="2558d-126">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2558d-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0dd0e-125">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0dd0e-125">Requirements</span></span>  
+ <span data-ttu-id="0dd0e-126">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0dd0e-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2558d-127">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="2558d-127">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="0dd0e-127">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0dd0e-127">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="2558d-128">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="2558d-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0dd0e-128">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="0dd0e-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2558d-129">**.NET Framework-Versionen:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="2558d-129">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="0dd0e-129">**.NET Framework-Versionen:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="0dd0e-129">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2558d-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2558d-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0dd0e-130">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0dd0e-130">See also</span></span>
 
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
-- [<span data-ttu-id="2558d-131">ICorRuntimeHost-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2558d-131">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+- [<span data-ttu-id="0dd0e-131">ICorRuntimeHost-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0dd0e-131">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

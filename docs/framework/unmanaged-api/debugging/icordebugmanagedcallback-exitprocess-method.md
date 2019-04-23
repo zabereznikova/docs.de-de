@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51162bfb6f9763d2ab4ac1f86e0ccdc15b601271
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159873"
 ---
-# <a name="icordebugmanagedcallbackexitprocess-method"></a><span data-ttu-id="732b3-102">ICorDebugManagedCallback::ExitProcess-Methode</span><span class="sxs-lookup"><span data-stu-id="732b3-102">ICorDebugManagedCallback::ExitProcess Method</span></span>
-<span data-ttu-id="732b3-103">Benachrichtigt den Debugger an, dass ein Prozess beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="732b3-103">Notifies the debugger that a process has exited.</span></span>  
+# <a name="icordebugmanagedcallbackexitprocess-method"></a><span data-ttu-id="ffd37-102">ICorDebugManagedCallback::ExitProcess-Methode</span><span class="sxs-lookup"><span data-stu-id="ffd37-102">ICorDebugManagedCallback::ExitProcess Method</span></span>
+<span data-ttu-id="ffd37-103">Benachrichtigt den Debugger an, dass ein Prozess beendet wurde.</span><span class="sxs-lookup"><span data-stu-id="ffd37-103">Notifies the debugger that a process has exited.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="732b3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="732b3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ffd37-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="ffd37-104">Syntax</span></span>  
   
 ```  
 HRESULT ExitProcess (  
@@ -35,26 +35,26 @@ HRESULT ExitProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="732b3-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="732b3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ffd37-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="ffd37-105">Parameters</span></span>  
  `pProcess`  
- <span data-ttu-id="732b3-106">[in] Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt.</span><span class="sxs-lookup"><span data-stu-id="732b3-106">[in] A pointer to an ICorDebugProcess object that represents the process.</span></span>  
+ <span data-ttu-id="ffd37-106">[in] Ein Zeiger auf ein ICorDebugProcess-Objekt, das den Prozess darstellt.</span><span class="sxs-lookup"><span data-stu-id="ffd37-106">[in] A pointer to an ICorDebugProcess object that represents the process.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="732b3-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="732b3-107">Remarks</span></span>  
- <span data-ttu-id="732b3-108">Sie können nicht fortgesetzt werden, von einem `ExitProcess` Ereignis.</span><span class="sxs-lookup"><span data-stu-id="732b3-108">You cannot continue from an `ExitProcess` event.</span></span> <span data-ttu-id="732b3-109">Dieses Ereignis kann asynchron mit anderen Ereignissen ausgelöst werden, während der Prozess angezeigt wird, beendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="732b3-109">This event may fire asynchronously to other events while the process appears to be stopped.</span></span> <span data-ttu-id="732b3-110">Dies kann auftreten, wenn der Prozess beendet wird, während angehalten, in der Regel aufgrund von einigen externen erzwingen.</span><span class="sxs-lookup"><span data-stu-id="732b3-110">This can occur if the process terminates while stopped, usually due to some external force.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ffd37-107">Hinweise</span><span class="sxs-lookup"><span data-stu-id="ffd37-107">Remarks</span></span>  
+ <span data-ttu-id="ffd37-108">Sie können nicht fortgesetzt werden, von einem `ExitProcess` Ereignis.</span><span class="sxs-lookup"><span data-stu-id="ffd37-108">You cannot continue from an `ExitProcess` event.</span></span> <span data-ttu-id="ffd37-109">Dieses Ereignis kann asynchron mit anderen Ereignissen ausgelöst werden, während der Prozess angezeigt wird, beendet werden soll.</span><span class="sxs-lookup"><span data-stu-id="ffd37-109">This event may fire asynchronously to other events while the process appears to be stopped.</span></span> <span data-ttu-id="ffd37-110">Dies kann auftreten, wenn der Prozess beendet wird, während angehalten, in der Regel aufgrund von einigen externen erzwingen.</span><span class="sxs-lookup"><span data-stu-id="ffd37-110">This can occur if the process terminates while stopped, usually due to some external force.</span></span>  
   
- <span data-ttu-id="732b3-111">Wenn die common Language Runtime (CLR) bereits einen verwalteten Rückruf sendet, wird dieses Ereignis bis verzögert werden, nachdem dieser Rückruf zurückgegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="732b3-111">If the common language runtime (CLR) is already dispatching a managed callback, this event will be delayed until after that callback has returned.</span></span>  
+ <span data-ttu-id="ffd37-111">Wenn die common Language Runtime (CLR) bereits einen verwalteten Rückruf sendet, wird dieses Ereignis bis verzögert werden, nachdem dieser Rückruf zurückgegeben wurde.</span><span class="sxs-lookup"><span data-stu-id="ffd37-111">If the common language runtime (CLR) is already dispatching a managed callback, this event will be delayed until after that callback has returned.</span></span>  
   
- <span data-ttu-id="732b3-112">Die `ExitProcess` Ereignis ist das einzige Beenden/Entladen-Ereignis, die mit Sicherheit beim Herunterfahren aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="732b3-112">The `ExitProcess` event is the only exit/unload event that is guaranteed to get called on shutdown.</span></span>  
+ <span data-ttu-id="ffd37-112">Die `ExitProcess` Ereignis ist das einzige Beenden/Entladen-Ereignis, die mit Sicherheit beim Herunterfahren aufgerufen wird.</span><span class="sxs-lookup"><span data-stu-id="ffd37-112">The `ExitProcess` event is the only exit/unload event that is guaranteed to get called on shutdown.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="732b3-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="732b3-113">Requirements</span></span>  
- <span data-ttu-id="732b3-114">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="732b3-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ffd37-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="ffd37-113">Requirements</span></span>  
+ <span data-ttu-id="ffd37-114">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ffd37-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="732b3-115">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="732b3-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ffd37-115">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ffd37-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="732b3-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="732b3-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ffd37-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ffd37-116">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="732b3-117">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="732b3-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="ffd37-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ffd37-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="732b3-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="732b3-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ffd37-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ffd37-118">See also</span></span>
 
-- [<span data-ttu-id="732b3-119">ICorDebugManagedCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="732b3-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [<span data-ttu-id="ffd37-119">ICorDebugManagedCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="ffd37-119">ICorDebugManagedCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
