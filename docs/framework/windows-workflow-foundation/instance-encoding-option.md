@@ -3,11 +3,11 @@ title: Instance Encoding Option
 ms.date: 03/30/2017
 ms.assetid: 89e4b029-4f68-438c-8117-9b21fe094ef4
 ms.openlocfilehash: c4de7c45d899f45a7b5b71d563257d9accb8fdbb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59315620"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773843"
 ---
 # <a name="instance-encoding-option"></a>Instance Encoding Option
 Die **Instance Encoding Option** Eigenschaft von der SQL-Workflow-Instanz-Store ermöglicht die Angabe, ob der SQL-Persistenzanbieter die Zustandsinformationen zur Workflowinstanz mithilfe des GZip-Algorithmus vor dem Speichern komprimiert werden soll, die die Informationen in der Persistenzdatenbank gespeichert. Die zulässigen Werte für diese Eigenschaft sind: GZip und None. Der Standardwert ist None. In der folgenden Liste werden diese Optionen beschrieben.  

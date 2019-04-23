@@ -3,11 +3,11 @@ title: Instanzspeicher
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
 ms.openlocfilehash: 352ffad56c77d0bd16f7e3b9aa1d82090f3a29b1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59323329"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773765"
 ---
 # <a name="instance-stores"></a>Instanzspeicher
 Ein Instanzspeicher ist ein logischer Container für Instanzen. An diesem Ort werden die Instanzdaten und die Metadaten gespeichert. Ein Instanzspeicher bedeutet keine dedizierte physische Speicherung. Ein Instanzspeicher kann permanente Informationen in einer SQL Server-Datenbank oder nicht permanente Zustandsinformationen in einem Arbeitsspeicher enthalten. Im Lieferumfang von [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] ist der SQL-Workflowinstanzspeicher enthalten. Dabei handelt es sich um eine konkrete Implementierung eines Instanzspeichers, der Workflows das Beibehalten von Instanzdaten und Metadaten in einer SQL Server 2005- oder SQL Server 2008-Datenbank ermöglicht. Außerdem bietet Windows Server AppFabric auch eine konkrete Implementierung eines Instanzspeichers. Weitere Informationen finden Sie unter [Store von Windows Server App Fabric-Instanz, Abfrage und Steuerelementanbieter](https://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  

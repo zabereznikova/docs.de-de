@@ -3,11 +3,11 @@ title: Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
 ms.openlocfilehash: 2b9d84089cdd987f2e2b1e3d23354505520a80f8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59326709"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773050"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Einmaliges Setupverfahren für Windows Communication Foundation-Beispiele
 Die meisten der Windows Communication Foundation (WCF)-Beispiele sind in Internet Information Services (IIS) gehostet und von einem gemeinsamen virtuellen Verzeichnis ausführen. Diesem einmaligen Setupverfahren erstellt einen Ordner auf dem Datenträger; Es fügt auch ein virtuelles Verzeichnis in IIS **ServiceModelSamples**.

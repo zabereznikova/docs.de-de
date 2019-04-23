@@ -3,11 +3,11 @@ title: Konfigurieren von Timeoutwerten für eine Bindung
 ms.date: 03/30/2017
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
 ms.openlocfilehash: f323dfff338f8a3ba24caab6df3b3916d3ae0d13
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339761"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773245"
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Konfigurieren von Timeoutwerten für eine Bindung
 Für WCF-Bindungen stehen eine Reihe von Timeouteinstellungen zur Verfügung. Wenn diese Timeouteinstellungen ordnungsgemäß festgelegt sind, verbessert sich nicht nur die Leistung des Diensts, sondern auch dessen Anwenderfreundlichkeit und Sicherheit. Die folgenden Timeouts sind für WCF-Bindungen verfügbar:  
