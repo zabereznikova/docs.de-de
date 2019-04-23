@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9a757e3b28a94c96e28a5bab736a6820a83617a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101210"
 ---
-# <a name="isymunmanagedmethodgetparameters-method"></a><span data-ttu-id="16a02-102">ISymUnmanagedMethod::GetParameters-Methode</span><span class="sxs-lookup"><span data-stu-id="16a02-102">ISymUnmanagedMethod::GetParameters Method</span></span>
-<span data-ttu-id="16a02-103">Ruft die Parameter für diese Methode ab.</span><span class="sxs-lookup"><span data-stu-id="16a02-103">Gets the parameters for this method.</span></span> <span data-ttu-id="16a02-104">Die Parameter werden in der Reihenfolge zurückgegeben, in denen sie in der Signatur der Methode definiert sind.</span><span class="sxs-lookup"><span data-stu-id="16a02-104">The parameters are returned in the order in which they are defined within the method's signature.</span></span>  
+# <a name="isymunmanagedmethodgetparameters-method"></a><span data-ttu-id="24204-102">ISymUnmanagedMethod::GetParameters-Methode</span><span class="sxs-lookup"><span data-stu-id="24204-102">ISymUnmanagedMethod::GetParameters Method</span></span>
+<span data-ttu-id="24204-103">Ruft die Parameter für diese Methode ab.</span><span class="sxs-lookup"><span data-stu-id="24204-103">Gets the parameters for this method.</span></span> <span data-ttu-id="24204-104">Die Parameter werden in der Reihenfolge zurückgegeben, in denen sie in der Signatur der Methode definiert sind.</span><span class="sxs-lookup"><span data-stu-id="24204-104">The parameters are returned in the order in which they are defined within the method's signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16a02-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="16a02-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="24204-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="24204-105">Syntax</span></span>  
   
 ```  
 HRESULT GetParameters(  
@@ -37,22 +37,22 @@ HRESULT GetParameters(
         length_is(*pcParams)] ISymUnmanagedVariable*  params[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="16a02-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="16a02-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="24204-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="24204-106">Parameters</span></span>  
  `cParams`  
- <span data-ttu-id="16a02-107">[in] Die Größe des `params`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="16a02-107">[in] The size of the `params` array.</span></span>  
+ <span data-ttu-id="24204-107">[in] Die Größe des `params`-Arrays.</span><span class="sxs-lookup"><span data-stu-id="24204-107">[in] The size of the `params` array.</span></span>  
   
  `pcParams`  
- <span data-ttu-id="16a02-108">[in] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des Puffers, der erforderlich ist, um die Parameter enthalten.</span><span class="sxs-lookup"><span data-stu-id="16a02-108">[in] A pointer to a `ULONG32` that receives the size of the buffer that is required to contain the parameters.</span></span>  
+ <span data-ttu-id="24204-108">[in] Ein Zeiger auf eine `ULONG32` , empfängt die Größe des Puffers, der erforderlich ist, um die Parameter enthalten.</span><span class="sxs-lookup"><span data-stu-id="24204-108">[in] A pointer to a `ULONG32` that receives the size of the buffer that is required to contain the parameters.</span></span>  
   
  `params`  
- <span data-ttu-id="16a02-109">[out] Ein Zeiger auf den Puffer, der die Parameter empfängt.</span><span class="sxs-lookup"><span data-stu-id="16a02-109">[out] A pointer to the buffer that receives the parameters.</span></span>  
+ <span data-ttu-id="24204-109">[out] Ein Zeiger auf den Puffer, der die Parameter empfängt.</span><span class="sxs-lookup"><span data-stu-id="24204-109">[out] A pointer to the buffer that receives the parameters.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="16a02-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="16a02-110">Return Value</span></span>  
- <span data-ttu-id="16a02-111">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="16a02-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="24204-110">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="24204-110">Return Value</span></span>  
+ <span data-ttu-id="24204-111">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="24204-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="16a02-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="16a02-112">Requirements</span></span>  
- <span data-ttu-id="16a02-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="16a02-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="24204-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="24204-112">Requirements</span></span>  
+ <span data-ttu-id="24204-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="24204-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16a02-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="16a02-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24204-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="24204-114">See also</span></span>
 
-- [<span data-ttu-id="16a02-115">ISymUnmanagedMethod-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="16a02-115">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+- [<span data-ttu-id="24204-115">ISymUnmanagedMethod-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="24204-115">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

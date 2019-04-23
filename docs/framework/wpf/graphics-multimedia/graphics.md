@@ -8,27 +8,27 @@ helpviewer_keywords:
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
 ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102348"
 ---
-# <a name="graphics"></a><span data-ttu-id="1d68f-102">Grafik</span><span class="sxs-lookup"><span data-stu-id="1d68f-102">Graphics</span></span>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="1d68f-103">bietet integrierte Unterstützung für Multimedia, Vektorgrafiken, Animation und Inhaltskomposition, erleichtert Entwicklern das Erstellen interessanter Benutzeroberflächen und Inhalte.</span><span class="sxs-lookup"><span data-stu-id="1d68f-103">offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
+# <a name="graphics"></a><span data-ttu-id="51f46-102">Grafik</span><span class="sxs-lookup"><span data-stu-id="51f46-102">Graphics</span></span>
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <span data-ttu-id="51f46-103">bietet integrierte Unterstützung für Multimedia, Vektorgrafiken, Animation und Inhaltskomposition, erleichtert Entwicklern das Erstellen interessanter Benutzeroberflächen und Inhalte.</span><span class="sxs-lookup"><span data-stu-id="51f46-103">offers integrated support for multimedia, vector graphics, animation, and content composition, making it easy for developers to build interesting user interfaces and content.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1d68f-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="1d68f-104">In This Section</span></span>  
- [<span data-ttu-id="1d68f-105">Bitmapeffekte</span><span class="sxs-lookup"><span data-stu-id="1d68f-105">Bitmap Effects</span></span>](bitmap-effects.md)  
- [<span data-ttu-id="1d68f-106">Pinsel</span><span class="sxs-lookup"><span data-stu-id="1d68f-106">Brushes</span></span>](brushes.md)  
- [<span data-ttu-id="1d68f-107">Zeichnungen</span><span class="sxs-lookup"><span data-stu-id="1d68f-107">Drawings</span></span>](drawings.md)  
- [<span data-ttu-id="1d68f-108">Geometrien</span><span class="sxs-lookup"><span data-stu-id="1d68f-108">Geometries</span></span>](geometries.md)  
- [<span data-ttu-id="1d68f-109">Bilder</span><span class="sxs-lookup"><span data-stu-id="1d68f-109">Images</span></span>](images.md)  
- [<span data-ttu-id="1d68f-110">Formen</span><span class="sxs-lookup"><span data-stu-id="1d68f-110">Shapes</span></span>](shapes.md)  
- [<span data-ttu-id="1d68f-111">Transformationen</span><span class="sxs-lookup"><span data-stu-id="1d68f-111">Transformations</span></span>](transformations.md)  
- [<span data-ttu-id="1d68f-112">Registrierungseinstellungen für das Rendern von Grafiken</span><span class="sxs-lookup"><span data-stu-id="1d68f-112">Graphics Rendering Registry Settings</span></span>](graphics-rendering-registry-settings.md)  
- [<span data-ttu-id="1d68f-113">Gewusst wie-Themen</span><span class="sxs-lookup"><span data-stu-id="1d68f-113">How-to Topics</span></span>](graphics-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="51f46-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="51f46-104">In This Section</span></span>  
+ [<span data-ttu-id="51f46-105">Bitmapeffekte</span><span class="sxs-lookup"><span data-stu-id="51f46-105">Bitmap Effects</span></span>](bitmap-effects.md)  
+ [<span data-ttu-id="51f46-106">Pinsel</span><span class="sxs-lookup"><span data-stu-id="51f46-106">Brushes</span></span>](brushes.md)  
+ [<span data-ttu-id="51f46-107">Zeichnungen</span><span class="sxs-lookup"><span data-stu-id="51f46-107">Drawings</span></span>](drawings.md)  
+ [<span data-ttu-id="51f46-108">Geometrien</span><span class="sxs-lookup"><span data-stu-id="51f46-108">Geometries</span></span>](geometries.md)  
+ [<span data-ttu-id="51f46-109">Bilder</span><span class="sxs-lookup"><span data-stu-id="51f46-109">Images</span></span>](images.md)  
+ [<span data-ttu-id="51f46-110">Formen</span><span class="sxs-lookup"><span data-stu-id="51f46-110">Shapes</span></span>](shapes.md)  
+ [<span data-ttu-id="51f46-111">Transformationen</span><span class="sxs-lookup"><span data-stu-id="51f46-111">Transformations</span></span>](transformations.md)  
+ [<span data-ttu-id="51f46-112">Registrierungseinstellungen für das Rendern von Grafiken</span><span class="sxs-lookup"><span data-stu-id="51f46-112">Graphics Rendering Registry Settings</span></span>](graphics-rendering-registry-settings.md)  
+ [<span data-ttu-id="51f46-113">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="51f46-113">How-to Topics</span></span>](graphics-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="1d68f-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1d68f-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="51f46-114">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="51f46-114">See also</span></span>
 
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
@@ -37,6 +37,6 @@ ms.locfileid: "59102348"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [<span data-ttu-id="1d68f-115">2D-Grafiken und Bildverarbeitung</span><span class="sxs-lookup"><span data-stu-id="1d68f-115">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="1d68f-116">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="1d68f-116">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="1d68f-117">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="1d68f-117">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="51f46-115">2D-Grafiken und Bildverarbeitung</span><span class="sxs-lookup"><span data-stu-id="51f46-115">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="51f46-116">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="51f46-116">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="51f46-117">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="51f46-117">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
