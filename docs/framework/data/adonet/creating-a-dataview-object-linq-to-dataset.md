@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
 ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121653"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Erstellen eines DataView-Objekts (LINQ to DataSet)
@@ -17,7 +17,7 @@ Es gibt zwei Möglichkeiten, im <xref:System.Data.DataView>-Kontext eine [!INCLU
   
  Nachdem die <xref:System.Data.DataView> erstellt wurde, können Sie sie an ein Benutzeroberflächensteuerelement in einer Windows Forms-Anwendung oder einer ASP.NET-Anwendung binden oder die Filter- und Sortiereinstellungen ändern.  
   
- <xref:System.Data.DataView> erstellt einen Index, erheblich die Leistung von Vorgängen erhöht wird, die den Index, z. B. Filtern und Sortieren verwenden kann. Der Index für eine <xref:System.Data.DataView> wird sowohl dann generiert, wenn die <xref:System.Data.DataView> erstellt wird, als auch dann, wenn Änderungen an den Sortier- oder Filterinformationen vorgenommen werden. Wenn Sie eine <xref:System.Data.DataView> erstellen, ohne gleich auch die Sortier- und Filterinformationen festzulegen, wird der Index mindestens zweimal generiert: das erste Mal, wenn die <xref:System.Data.DataView> erstellt wird, und das zweite Mal, sobald eine der Sortier- oder Filtereigenschaften geändert wird.  
+ <xref:System.Data.DataView> erstellt einen Index, der bei Operationen, die diesen Index einsetzen können, wie beim Filtern und Sortieren, zu beträchtlichen Leistungssteigerungen führt. Der Index für eine <xref:System.Data.DataView> wird sowohl dann generiert, wenn die <xref:System.Data.DataView> erstellt wird, als auch dann, wenn Änderungen an den Sortier- oder Filterinformationen vorgenommen werden. Wenn Sie eine <xref:System.Data.DataView> erstellen, ohne gleich auch die Sortier- und Filterinformationen festzulegen, wird der Index mindestens zweimal generiert: das erste Mal, wenn die <xref:System.Data.DataView> erstellt wird, und das zweite Mal, sobald eine der Sortier- oder Filtereigenschaften geändert wird.  
   
  Weitere Informationen zu filtern und Sortieren mit <xref:System.Data.DataView>, finden Sie unter [Filtern mit DataView](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md) und [Sortieren mit DataView](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md).  
   

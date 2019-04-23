@@ -159,12 +159,12 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 983d7b9a89346a89a89b5e8de23049287f719026
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99fa84b8dea326bc7a32ff4f3c3187acc9883748
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121640"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe-Fehlermeldungen
 Der Buildprozess ruft [Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) auf, wenn Sie die Vorlage **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Komponente** in Visual Studio 2012 verwenden, sodass Winmdexp.exe-Fehlermeldungen in der **Fehlerliste** angezeigt werden. Winmdexp.exe arbeitet auf einem Modul, das mit der `/target:winmdobj`-Option kompiliert ist. Da ein kompiliertes Modul als Eingabe erforderlich ist, erscheinen die Fehlermeldungen nicht, bis die Kompilierung erfolgreich war.  
@@ -174,5 +174,6 @@ Der Buildprozess ruft [Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)](../.
  Falls Ihr Fehler nicht in diesem Artikel behandelt wird, und Sie der Meinung sind, dass die Meldung nicht genügend Informationen enthält, um das Problem zu beheben, verwenden Sie den Link für Feedbackanforderung in diesem Artikel, und fügen Sie die Fehlermeldung ein. Oder melden Sie den Fehler auf der [Microsoft Connect-Website](https://go.microsoft.com/fwlink/p/?LinkId=251130). Sie können in den [Microsoft-Foren](https://go.microsoft.com/fwlink/p/?LinkId=251129) auch nach weiteren Informationen suchen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Winmdexp.exe (Windows-Runtime-Metadaten-Exporttool)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)
 - [Diagnostizieren von Fehlerbedingungen der Windows-Runtime-Komponente](https://go.microsoft.com/fwlink/p/?LinkId=251127)

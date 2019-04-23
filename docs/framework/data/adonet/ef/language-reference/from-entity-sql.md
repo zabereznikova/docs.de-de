@@ -3,10 +3,10 @@ title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
 ms.openlocfilehash: 3cc02b4c51b32d0faace4d89d0c6c1f6923dd138
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119833"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
@@ -28,7 +28,7 @@ FROM expression [ ,...n ] as C
  `FROM C as c`  
   
 ## <a name="from-clause-items"></a>FROM-Klauselelemente  
- Jedes `FROM`-Klauselelement verweist auf eine Quellauflistung in der [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Abfrage. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt die folgenden Klassen von `FROM` Klauselelementen: einfache `FROM` -Klauselelemente `JOIN FROM` -Klauselelemente und `APPLY FROM` -Klauselelemente. Jedes dieser `FROM`-Klauselelemente wird in den folgenden Abschnitten ausführlicher beschrieben.  
+ Jedes `FROM`-Klauselelement verweist auf eine Quellauflistung in der [!INCLUDE[esql](../../../../../../includes/esql-md.md)]-Abfrage. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt die folgenden Klassen von `FROM`-Klauselelementen: einfache `FROM`-Klauselelemente, `JOIN FROM`-Klauselelemente und `APPLY FROM`-Klauselelemente. Jedes dieser `FROM`-Klauselelemente wird in den folgenden Abschnitten ausführlicher beschrieben.  
   
 ### <a name="simple-from-clause-item"></a>Einfaches FROM-Klauselelement  
  Das einfachste `FROM`-Klauselelement ist ein einzelner Ausdruck, der eine Auflistung und einen Alias identifiziert. Bei dem Ausdruck kann es sich einfach um eine Entitätenmenge, eine Unterabfrage oder um einen anderen Ausdruck vom Auflistungstyp handeln. Im Folgenden finden Sie ein Beispiel dazu:  
@@ -46,7 +46,7 @@ LOB.Customers
  Wenn kein Alias angegeben wird, erzeugt [!INCLUDE[esql](../../../../../../includes/esql-md.md)] auf der Grundlage des Auflistungsausdrucks einen Alias.  
   
 ### <a name="join-from-clause-item"></a>JOIN FROM-Klauselelement  
- Ein `JOIN FROM`-Klauselelement stellt einen Join zwischen zwei `FROM`-Klauselelementen dar. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt sowohl cross Joins, innere Joins, linke und Rechte äußere Verknüpfungen und vollständige äußere Joins. Diese Verknüpfungen werden alle auf ähnliche Weise unterstützt wie in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]. Wie in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] müssen die beiden für `FROM` verwendeten `JOIN`-Klauselelemente unabhängig sein. Sie können demnach nicht korreliert werden. Für diese Fälle kann `CROSS APPLY` oder `OUTER APPLY` verwendet werden.  
+ Ein `JOIN FROM`-Klauselelement stellt einen Join zwischen zwei `FROM`-Klauselelementen dar. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] unterstützt Kreuzjoins, innere Joins, linke und rechte äußere Verknüpfungen und vollständige äußere Joins. Diese Verknüpfungen werden alle auf ähnliche Weise unterstützt wie in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]. Wie in [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] müssen die beiden für `FROM` verwendeten `JOIN`-Klauselelemente unabhängig sein. Sie können demnach nicht korreliert werden. Für diese Fälle kann `CROSS APPLY` oder `OUTER APPLY` verwendet werden.  
   
 #### <a name="cross-joins"></a>Cross Joins  
  Ein `CROSS JOIN`-Abfrageausdruck erzeugt das kartesische Produkt der beiden Auflistungen, wie im folgenden Beispiel veranschaulicht:  
@@ -96,7 +96,7 @@ LOB.Customers
 >  Im Unterschied zu [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] ist in [!INCLUDE[esql](../../../../../../includes/esql-md.md)] kein unnest-Schritt erforderlich.  
   
 > [!NOTE]
->  `CROSS` und `OUTER APPLY` Operatoren wurden in eingeführt [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. In einigen Fällen kann die Abfragepipeline Transact-SQL erzeugen, die `CROSS APPLY`- und/oder `OUTER APPLY`-Operatoren enthält. Da einige Back-End-Anbieter, einschließlich SQL Server-Versionen älter als [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], diese Operatoren nicht unterstützen, solche Abfragen können nicht auf diesen Back-End-Anbietern nicht ausgeführt werden.  
+>  `CROSS`- und `OUTER APPLY`-Operatoren wurden in [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] eingeführt. In einigen Fällen kann die Abfragepipeline Transact-SQL erzeugen, die `CROSS APPLY`- und/oder `OUTER APPLY`-Operatoren enthält. Da einige Back-End-Anbieter, einschließlich SQL Server-Versionen älter als [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], diese Operatoren nicht unterstützen, solche Abfragen können nicht auf diesen Back-End-Anbietern nicht ausgeführt werden.  
 >   
 >  Typische Szenarios, in denen `CROSS APPLY`- und/oder `OUTER APPLY`-Operatoren in der Ausgabeabfrage vorhanden sein können, sind beispielsweise korrelierte Unterabfragen mit Paging, AnyElement über einer korrelierten Unterabfrage oder über einer durch Navigation erzeugten Auflistung, LINQ-Abfragen, die Elementselektoren akzeptierende Gruppierungsmethoden verwenden, Abfragen, für die ein `CROSS APPLY` oder ein `OUTER APPLY` explizit angegeben wurden oder Abfragen, die ein `DEREF`-Konstrukt über einem `REF`-Konstrukt enthalten.  
   
@@ -131,7 +131,7 @@ from (C as c join D as d) cross apply c.Names as e
   
  Die `FROM`-Klausel erzeugt logisch eine Zeilenmultimenge vom Row(c, d, e)-Typ. Es wird angenommen, dass die Felder c, d und e den Elementtyp `C`, `D` und `c.Names` aufweisen.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Führt einen Alias für jedes einfache `FROM` -Klauselelement im Bereich. Im folgenden FROM-Klauselausschnitt sind die im Bereich eingeführten Namen beispielsweise c, d und e.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] führt einen Alias für jedes einfache `FROM`-Klauselelement im Bereich ein. Im folgenden FROM-Klauselausschnitt sind die im Bereich eingeführten Namen beispielsweise c, d und e.  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  

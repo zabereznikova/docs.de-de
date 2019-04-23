@@ -1,5 +1,5 @@
 ---
-title: <add> Element für <switches>
+title: <add>-Element für <switches>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 ms.openlocfilehash: d7500620aed1165ff365fee8529230ba252dbc4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120093"
 ---
 # <a name="add-element-for-switches"></a>\<Hinzufügen >-Element für \<Switches >
@@ -36,8 +36,8 @@ Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|**Name**|Erforderliches Attribut.<br /><br /> Gibt den Namen des Schalters. Der Wert dieses Attributs entspricht dem *"DisplayName"* Parameter, der übergeben wird, um den Konstruktor zu wechseln.|  
-|**Wert**|Erforderliches Attribut.<br /><br /> Gibt die Ebene des Schalters.|  
+|**name**|Erforderliches Attribut.<br /><br /> Gibt den Namen des Schalters. Der Wert dieses Attributs entspricht dem *"DisplayName"* Parameter, der übergeben wird, um den Konstruktor zu wechseln.|  
+|**value**|Erforderliches Attribut.<br /><br /> Gibt die Ebene des Schalters.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -72,4 +72,4 @@ Gibt die Ebene an, für die ein Ablaufverfolgungsschalter festgelegt ist.
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
-- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

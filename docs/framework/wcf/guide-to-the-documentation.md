@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
 ms.openlocfilehash: a3d7ca994b185c39ac43cb6643098de602692842
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119599"
 ---
 # <a name="guide-to-the-documentation"></a>Anleitung zur Dokumentation
@@ -63,7 +63,7 @@ Der angegebene hier Anleitungen für die Windows Communication Foundation (WCF)-
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Beispiele für Windows Communication Foundation](../../../docs/framework/wcf/samples/index.md)
+- [Windows Communication Foundation-Beispiele](../../../docs/framework/wcf/samples/index.md)
 - [Konzeptionelle Übersicht](../../../docs/framework/wcf/conceptual-overview.md)
 - [Richtlinien und empfohlene Vorgehensweisen](../../../docs/framework/wcf/guidelines-and-best-practices.md)
 - [Erstellen von Clients](../../../docs/framework/wcf/building-clients.md)

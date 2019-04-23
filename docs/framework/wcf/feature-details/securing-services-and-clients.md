@@ -5,10 +5,10 @@ helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
 ms.openlocfilehash: e455c7a48e1484d5acdcc5f6cdc9098997a3ba83
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120728"
 ---
 # <a name="securing-services-and-clients"></a>Sichern von Diensten und Clients
@@ -27,7 +27,7 @@ Die Informationen in diesem Abschnitt programmiersicherheit in Windows Communica
  [Sichere Sitzungen](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
  Eine Erläuterung der Aspekte ist erforderlich, wenn eine WCF-Sitzung zu sichern.  
   
- [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
+ [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  Eine Erläuterung einiger der allgemeinen Aufgaben, die bei Verwendung von X.509-Zertifikaten erforderlich sind.  
   
 ## <a name="reference"></a>Referenz  
@@ -54,5 +54,5 @@ Die Informationen in diesem Abschnitt programmiersicherheit in Windows Communica
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Basis-WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Sicherheitsmodell für Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
