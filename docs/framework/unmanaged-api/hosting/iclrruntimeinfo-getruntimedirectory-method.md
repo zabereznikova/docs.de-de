@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c09f57ad805b4ba17b4bdafd3ced533199277a0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196683"
 ---
 # <a name="iclrruntimeinfogetruntimedirectory-method"></a>ICLRRuntimeInfo::GetRuntimeDirectory-Methode
@@ -50,7 +50,7 @@ HRESULT GetRuntimeDirectory(
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_POINTER|`pwzBuffer` oder `pchBuffer` ist null.|  
+|E_POINTER|`pwzBuffer` oder `pchBuffer` ist NULL.|  
   
 ## <a name="remarks"></a>Hinweise  
   

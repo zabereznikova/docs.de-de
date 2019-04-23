@@ -3,10 +3,10 @@ title: Entity Data Model
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
 ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197918"
 ---
 # <a name="entity-data-model"></a>Entity Data Model
@@ -23,7 +23,7 @@ Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur 
   
  [Entity Data Model: Namespaces](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [Entity Data Model: primitive Datentypen](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [Entity Data Model: Primitive Datentypen](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
  [Entity Data Model: Vererbung](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
@@ -33,7 +33,7 @@ Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur 
   
  [Zuordnungssatz](../../../../docs/framework/data/adonet/association-set.md)  
   
- [Zuordnungssatzende](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [Ende des Zuordnungssatzes](../../../../docs/framework/data/adonet/association-set-end.md)  
   
  [Zuordnungstyp](../../../../docs/framework/data/adonet/association-type.md)  
   
@@ -47,17 +47,17 @@ Das Entity Data Model (EDM) ist eine Reihe von Konzepten, die die Datenstruktur 
   
  [Entitätstyp](../../../../docs/framework/data/adonet/entity-type.md)  
   
- [Facet](../../../../docs/framework/data/adonet/facet.md)  
+ [facet](../../../../docs/framework/data/adonet/facet.md)  
   
  [Fremdschlüsseleigenschaft](../../../../docs/framework/data/adonet/foreign-key-property.md)  
   
  [Im Modell deklarierte Funktion](../../../../docs/framework/data/adonet/model-declared-function.md)  
   
- [Modelldefinierte Funktion](../../../../docs/framework/data/adonet/model-defined-function.md)  
+ [Im Modell definierte Funktion](../../../../docs/framework/data/adonet/model-defined-function.md)  
   
  [Navigationseigenschaft](../../../../docs/framework/data/adonet/navigation-property.md)  
   
- [property](../../../../docs/framework/data/adonet/property.md)  
+ [Eigenschaft](../../../../docs/framework/data/adonet/property.md)  
   
  [Einschränkung der referenziellen Integrität](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   

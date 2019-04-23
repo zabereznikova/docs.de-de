@@ -7,10 +7,10 @@ helpviewer_keywords:
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
 ms.openlocfilehash: 3950df8b6f4b48a035c6ebf37d8d65c18cb82e1e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197216"
 ---
 # <a name="how-to-implement-binding-validation"></a>Vorgehensweise: Implementieren der Bindungsvalidierung
@@ -39,5 +39,5 @@ Dieses Beispiel zeigt, wie Sie mit einem <xref:System.Windows.Controls.Validatio
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über die Datenbindung](data-binding-overview.md)
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

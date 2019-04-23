@@ -8,10 +8,10 @@ helpviewer_keywords:
 - printing [Windows Forms], PrintDocument component
 ms.assetid: b59b4b60-dce5-42ca-8421-3a54a2f7bab0
 ms.openlocfilehash: a3f08aa4bd5b63769cef35dbea2209d5d83261be
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59198633"
 ---
 # <a name="printdocument-component-overview-windows-forms"></a>Übersicht über die PrintDocument-Komponente (Windows Forms)
@@ -30,5 +30,5 @@ Die Komponente [PrintDocument](printdocument-component-windows-forms.md) von Win
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Druckunterstützung in Windows Forms](../advanced/windows-forms-print-support.md)
+- [Druckunterstützung in Windows Forms](../advanced/windows-forms-print-support.md)
 - [PrintDocument-Komponente](printdocument-component-windows-forms.md)

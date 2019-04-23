@@ -8,10 +8,10 @@ ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65f5e11a8fb40527387c14cdd8dec7f0bfc5c697
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196995"
 ---
 # <a name="callback-functions"></a>Rückruffunktionen
@@ -30,4 +30,4 @@ Eine Rückruffunktion ist ein Code innerhalb einer verwalteten Anwendung, mit de
 ## <a name="see-also"></a>Siehe auch
 
 - [Vorgehensweise: Implementieren von Rückruffunktionen](../../../docs/framework/interop/how-to-implement-callback-functions.md)
-- [Aufrufen einer DLL-Funktion](../../../docs/framework/interop/calling-a-dll-function.md)
+- [Calling a DLL Function (Aufrufen einer DLL-Funktion)](../../../docs/framework/interop/calling-a-dll-function.md)

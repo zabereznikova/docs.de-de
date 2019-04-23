@@ -3,10 +3,10 @@ title: Überblick über WCF-Web-HTTP-Programmiermodelle
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
 ms.openlocfilehash: a6f267232085a46d481199eac83e464f5f774273
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199582"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Überblick über WCF-Web-HTTP-Programmiermodelle
@@ -43,15 +43,15 @@ Das Windows Communication Foundation (WCF)-WEB-HTTP-Programmiermodell bietet die
   
  In dieser Vorlage gibt die Notation mit geschweiften Klammern ("{segment}") ein variables Segment statt eines Literalwerts an.  
   
- .NET Framework stellt eine API mit dem Namen <xref:System.UriTemplate> zum Arbeiten mit URI-Vorlagen bereit. `UriTemplates` können Sie die folgenden Schritte ausführen:  
+ .NET Framework stellt eine API mit dem Namen <xref:System.UriTemplate> zum Arbeiten mit URI-Vorlagen bereit. Mit `UriTemplates` können Sie Folgendes ausführen:  
   
 -   Rufen Sie eine der der `Bind` Methoden mit einer Reihe von Parametern zum Erzeugen einer *vollständig geschlossenen URI* , der mit die Vorlage übereinstimmt. Dies bedeutet, dass alle Variablen innerhalb der URI-Vorlage durch Istwerte ersetzt werden.  
   
 -   Sie können `Match`() mit einem potenziellen URI aufrufen. Diese Methode schlüsselt den potenziellen URI mithilfe einer Vorlage in seine Bestandteile auf und gibt ein Wörterbuch zurück, in dem die verschiedenen URI-Teile mit den zugehörigen Variablen aus der Vorlage verzeichnet sind.  
   
--   `Bind`() und `Match`() sind Gegenstücke, sodass Sie aufrufen können `Match`( `Bind`(X)) und wieder mit der gleichen Umgebung, die Sie mit gestartet.  
+-   `Bind`() und `Match`() sind Gegenstücke, sodass Sie `Match`( `Bind`( x ) ) aufrufen können und wieder zur Ausgangsumgebung zurückkehren.  
   
- Es ist häufig wünschenswert (insbesondere auf dem Server, wo es erforderlich ist, eine Anforderung basierend auf dem URI an einen Dienstvorgang weiterzuleiten), einen Satz von <xref:System.UriTemplate>-Objekten in einer Datenstruktur zu verfolgen, die unabhängig voneinander die einzelnen darin enthaltenen Vorlagen darstellen können. <xref:System.UriTemplateTable> Stellt einen Satz von URI-Vorlagen dar und wählt die beste Übereinstimmung bei einem gegebenen Satz von Vorlagen und eines möglichen URI. Dies ist nicht mit verbundene keinen bestimmten Netzwerkstapel (WCF enthalten), damit Sie ihn an die nötigen verwenden können.  
+ Es ist häufig wünschenswert (insbesondere auf dem Server, wo es erforderlich ist, eine Anforderung basierend auf dem URI an einen Dienstvorgang weiterzuleiten), einen Satz von <xref:System.UriTemplate>-Objekten in einer Datenstruktur zu verfolgen, die unabhängig voneinander die einzelnen darin enthaltenen Vorlagen darstellen können. <xref:System.UriTemplateTable> stellt einen Satz von URI-Vorlagen dar und wählt aus einem gegebenen Vorlagensatz die beste Übereinstimmung für den zu prüfenden URI aus. Dies ist nicht mit verbundene keinen bestimmten Netzwerkstapel (WCF enthalten), damit Sie ihn an die nötigen verwenden können.  
   
  Das WCF-Dienstmodell verwendet <xref:System.UriTemplate> und <xref:System.UriTemplateTable>, um Dienstvorgänge mit einem Satz URIs zu verknüpfen, die durch eine <xref:System.UriTemplate> beschrieben werden. Ein Dienstvorgang wird mithilfe von <xref:System.UriTemplate> oder <xref:System.ServiceModel.Web.WebGetAttribute> mit einer <xref:System.ServiceModel.Web.WebInvokeAttribute> verknüpft. Weitere Informationen zu <xref:System.UriTemplate> und <xref:System.UriTemplateTable>, finden Sie unter [UriTemplate und UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
   
@@ -80,7 +80,7 @@ interface ICustomer
   
  `POST /UpdateCustomerName`  
   
- <xref:System.ServiceModel.Web.WebInvokeAttribute> Der Standardwert ist POST, aber Sie können es für andere Verben zu verwenden.  
+ Für <xref:System.ServiceModel.Web.WebInvokeAttribute> wird standardmäßig POST eingesetzt, aber Sie können das Attribut auch für andere Verben verwenden.  
   
 ```  
 [ServiceContract]  
@@ -135,7 +135,7 @@ interface ICustomer
   
  Dies bedeutet, dass der WCF-WEB-HTTP-Programmiermodell kann alle Arten von Daten behandeln, aber Sie Umständen die Programmierung mit <xref:System.IO.Stream>.  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] bietet Unterstützung für JSON-Daten (AJAX) sowie Syndication-Feeds (einschließlich ATOM und RSS). Weitere Informationen zu diesen Funktionen finden Sie unter [WCF Web-HTTP-Formatierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[Übersicht über WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) und [AJAX-Integration und JSON-Unterstützung](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] stellt Unterstützung für JSON-Daten (AJAX) sowie Syndication-Feeds (einschließlich ATOM und RSS) bereit. Weitere Informationen zu diesen Funktionen finden Sie unter [WCF Web-HTTP-Formatierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[Übersicht über WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md) und [AJAX-Integration und JSON-Unterstützung](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md).  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF-WEB-HTTP-Programmiermodell und Sicherheit  
  Da die WCF-WEB-HTTP-Programmiermodell die WS-nicht unterstützt *-Protokolle, ist die einzige Möglichkeit, einen WCF-WEB-HTTP-Dienst sichern Verfügbarmachen des Diensts über HTTPS mit SSL. Weitere Informationen zum Einrichten von SSL mit [!INCLUDE[iisver](../../../../includes/iisver-md.md)], finden Sie unter [Gewusst wie: Implementieren von SSL auf IIS](https://go.microsoft.com/fwlink/?LinkId=131613)  

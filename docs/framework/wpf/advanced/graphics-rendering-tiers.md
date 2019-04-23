@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
 ms.openlocfilehash: d5924ff9336bc6e93022caf1b85d5fd98f7a617d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197385"
 ---
 # <a name="graphics-rendering-tiers"></a>Renderingebenen für Grafiken
@@ -56,7 +56,7 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
   
 |Feature|Ebene 1|Ebene 2|  
 |-------------|------------|------------|  
-|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)] version|Muss größer als oder gleich 9.0 sein.|Muss größer als oder gleich 9.0 sein.|  
+|[!INCLUDE[TLA2#tla_dx](../../../../includes/tla2sharptla-dx-md.md)]-Version|Muss größer als oder gleich 9.0 sein.|Muss größer als oder gleich 9.0 sein.|  
 |Video-RAM|Muss größer als oder gleich 60 MB sein.|Muss größer als oder gleich 120 MB sein.|  
 |Pixel-Shader|Die Versionsebene muss größer als oder gleich 2.0 sein.|Die Versionsebene muss größer als oder gleich 2.0 sein.|  
 |Vertex-Shader|Keine Anforderung.|Die Versionsebene muss größer als oder gleich 2.0 sein.|  
@@ -68,10 +68,10 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
 |-------------|-----------|  
 |2D-Rendering|Das meiste 2D-Rendering wird unterstützt.|  
 |3D-Rasterung|Die meisten 3D-Rasterungen werden unterstützt.|  
-|Anisotrope 3D-Filterung|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] versucht beim rendering von 3D-Inhalten anisotrope Filterung zu verwenden. Anisotrope Filterung bezieht sich auf die verbesserte Bildqualität von Texturen auf Oberflächen, die in Bezug auf die Kamera weit entfernt und stark angewinkelt sind.|  
-|3D-MIP-Zuordnung|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] versucht, verwenden Sie beim rendering von 3D-Inhalten MIP-Zuordnung. MIP-Zuordnung verbessert die Qualität des Rendering von Texturen, wenn eine Textur ein kleineres Sichtfeld in belegt eine <xref:System.Windows.Controls.Viewport3D>.|  
+|Anisotrope 3D-Filterung|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] versucht beim Rendering von 3D-Inhalten anisotrope Filterung zu verwenden. Anisotrope Filterung bezieht sich auf die verbesserte Bildqualität von Texturen auf Oberflächen, die in Bezug auf die Kamera weit entfernt und stark angewinkelt sind.|  
+|3D-MIP-Zuordnung|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] versucht beim Rendering von 3D-Inhalten MIP-Zuordnung zu verwenden. MIP-Zuordnung verbessert die Qualität des Rendering von Texturen, wenn eine Textur ein kleineres Sichtfeld in belegt eine <xref:System.Windows.Controls.Viewport3D>.|  
 |Radiale Farbverläufe|Zwar unterstützt, vermeiden Sie die Verwendung von <xref:System.Windows.Media.RadialGradientBrush> für große Objekte.|  
-|3D-Beleuchtungsberechnungen|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] führt die pro-Vertex-Beleuchtung aus, was bedeutet, dass eine Lichtstärke bei jedem Vertex für jedes auf ein Mesh angewendetes Material berechnet werden muss.|  
+|3D-Beleuchtungsberechnungen|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] führt die Pro-Vertex-Beleuchtung aus, was bedeutet, dass eine Lichtstärke bei jedem Vertex für jedes auf ein Mesh angewendetes Material berechnet werden muss.|  
 |Rendering von Text|Das Rendering der Subpixel-Schriftart verwendet verfügbare Pixel-Shader in der Grafikhardware.|  
   
  Die folgenden Features und Funktionen sind nur für die Renderingebene 2 hardwarebeschleunigt:  
@@ -96,19 +96,19 @@ Eine Renderingebene definiert eine Ebene der Grafikleistung eines Geräts, auf d
  Die folgenden Ressourcen können Ihnen bei der Analyse der Leistungsmerkmale Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Anwendung helfen.  
   
 ### <a name="graphics-rendering-registry-settings"></a>Registrierungseinstellungen für das Rendern von Grafiken  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet vier registrierungseinstellungen zum Steuern der [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Rendern:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet vier Registrierungseinstellungen zum Steuern des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Rendering:  
   
 |Einstellung|Beschreibung|  
 |-------------|-----------------|  
 |**Option zum Deaktivieren der Hardwarebeschleunigung**|Gibt an, ob die Hardwarebeschleunigung aktiviert werden soll|  
 |**Maximaler Wert für Multisampling**|Gibt den Multisamplinggrad für das Antialiasing von [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]-Inhalten an|  
-|**Einstellung des erforderlichen Videotreiberdatums**|Gibt an, ob das System die Hardwarebeschleunigung für Treiber deaktiviert, die vor November 2004 veröffentlicht wurden|  
+|**Einstellung für das erforderliche Videotreiberdatum**|Gibt an, ob das System die Hardwarebeschleunigung für Treiber deaktiviert, die vor November 2004 veröffentlicht wurden|  
 |**Option zum Verwenden des Referenzrasters**|Gibt an, ob [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] das Referenzraster verwendet werden soll|  
   
  Diese Einstellungen stehen für alle externen Konfigurationshilfsprogramme zur Verfügung, die auf die [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Registrierungseinstellungen verweisen können. Diese Einstellungen können auch erstellt oder geändert werden, indem Sie direkt über den [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Registrierungs-Editor auf die Werte zugreifen. Weitere Informationen finden Sie unter [Registrierungseinstellungen für das Rendern von Grafiken](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>WPF-Leistungsprofilerstellungstools  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet eine Suite von Leistungsprofilerstellungstools bereit, mit denen Sie das Laufzeitverhalten der Anwendung analysieren, und geben Sie die Typen von leistungsoptimierungen, die Sie anwenden können. Die folgende Tabelle enthält die Leistungsprofilerstellungstools, die im [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)]-Tool der WPF Performance Suite enthalten sind:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] stellt eine Suite von Leistungsprofilerstellungstools bereit, mit deren Hilfe Sie das Laufzeitverhalten der Anwendung analysieren und die Typen der anwendbaren Leistungsoptimierungen bestimmen können. Die folgende Tabelle enthält die Leistungsprofilerstellungstools, die im [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)]-Tool der WPF Performance Suite enthalten sind:  
   
 |Tool|Beschreibung|  
 |----------|-----------------|  

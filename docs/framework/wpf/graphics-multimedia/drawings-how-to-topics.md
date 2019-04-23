@@ -12,10 +12,10 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
 ms.openlocfilehash: 6be388292ce2c73b9ef555ea6b00c986c99dc11a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197736"
 ---
 # <a name="drawings-how-to-topics"></a>Gewusst-wie-Themen zu Zeichnungen
@@ -25,7 +25,7 @@ Die Themen in diesem Abschnitt wird beschrieben, wie <xref:System.Windows.Media.
  [Anwenden eines Führungsliniensatzes auf eine Zeichnung](how-to-apply-a-guidelineset-to-a-drawing.md)  
   [Erstellen einer zusammengesetzten Zeichnung](how-to-create-a-composite-drawing.md)  
   [Erstellen einer GeometryDrawing](how-to-create-a-geometrydrawing.md)  
-  [Zeichnen eines Bilds mit einer ImageDrawing](how-to-draw-an-image-using-imagedrawing.md)  
+  [Zeichnen eines Bilds mit ImageDrawing](how-to-draw-an-image-using-imagedrawing.md)  
   [Wiedergeben von Medien mit einer VideoDrawing](how-to-play-media-using-a-videodrawing.md)  
   [Verwenden einer Zeichnung als Bildquelle](how-to-use-a-drawing-as-an-image-source.md)  
   

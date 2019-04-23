@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a95b6b7e20bbcd86dedf187c932f2cf74d37cdab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199179"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress-Methode
@@ -50,7 +50,7 @@ HRESULT GetProcAddress(
 |HRESULT|Beschreibung|  
 |-------------|-----------------|  
 |S_OK|Die Methode wurde erfolgreich abgeschlossen.|  
-|E_POINTER|`pszProcName` oder `ppProc` ist null.|  
+|E_POINTER|`pszProcName` oder `ppProc` ist NULL.|  
 |CLR_E_SHIM_RUNTIMEEXPORT|Die angegebene Funktion ist keiner exportierten Funktion.|  
   
 ## <a name="remarks"></a>Hinweise  
@@ -68,5 +68,5 @@ HRESULT GetProcAddress(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICLRRuntimeInfo-Schnittstelle](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [Hostingschnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [Hosten von Schnittstellen](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)
