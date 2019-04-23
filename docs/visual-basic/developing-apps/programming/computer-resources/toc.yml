@@ -1,58 +1,51 @@
-items:
 - name: Zugreifen auf Computerressourcen
   href: index.md
   items:
-  - name: Wiedergabe von Sound
-    href: playing-sounds.md
-  - name: Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage
-    href: storing-data-to-and-reading-from-the-clipboard.md
-  - name: Abrufen von Informationen über den Computer
-    href: getting-information-about-the-computer.md
-  - name: Zugreifen auf die Tastatur
-    href: accessing-the-keyboard.md
-    items:
-    - name: 'Vorgehensweise: Starten von Anwendungen und Senden von Tastatureingaben'
-      href: how-to-start-an-application-and-send-it-keystrokes.md
-  - name: Zugreifen auf die Maus
-    href: accessing-the-mouse.md
-  - name: Durchführen von Netzwerkvorgängen
-    href: performing-network-operations.md
-    items:
-    - name: 'Vorgehensweise: Hochladen einer Datei'
-      href: how-to-upload-a-file.md
-    - name: 'Vorgehensweise: Herunterladen einer Datei'
-      href: how-to-download-a-file.md
-    - name: 'Vorgehensweise: Überprüfen des Verbindungsstatus'
-      href: how-to-check-connection-status.md
-  - name: Zugreifen auf die Anschlüsse des Computers
-    href: accessing-the-computer-s-ports.md
-    items:
-    - name: 'Vorgehensweise: Anzeigen von verfügbaren seriellen Anschlüssen'
-      href: how-to-show-available-serial-ports.md
-    - name: 'Vorgehensweise: Wählen mit Modems an seriellen Anschlüssen'
-      href: how-to-dial-modems-attached-to-serial-ports.md
-    - name: 'Vorgehensweise: Senden von Zeichenfolgen an serielle Anschlüsse'
-      href: how-to-send-strings-to-serial-ports.md
-    - name: 'Vorgehensweise: Empfangen von Zeichenfolgen von seriellen Anschlüssen'
-      href: how-to-receive-strings-from-serial-ports.md
-    - name: Portvorgänge in .NET Framework
-      href: port-operations-in-the-net-framework.md
-  - name: Lesen aus der und Schreiben in die Registrierung
-    href: reading-from-and-writing-to-the-registry.md
-    items:
-    - name: 'Vorgehensweise: Erstellen von Registrierungsschlüsseln und Festlegen ihrer Werte'
-      href: how-to-create-a-registry-key-and-set-its-value.md
-    - name: 'Vorgehensweise: Lesen eines Werts aus einem Registrierungsschlüssel'
-      href: how-to-read-a-value-from-a-registry-key.md
-    - name: 'Vorgehensweise: Löschen von Registrierungsschlüsseln'
-      href: how-to-delete-a-registry-key.md
-    - name: Lesen von der und Schreiben in die Registrierung mithilfe des Microsoft.Win32-Namespaces
-      href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md
-    - name: Sicherheit und die Registrierung
-      href: security-and-the-registry.md
-ms.openlocfilehash: b45e258b05c06cb8494a1644bd43cca447578e6c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468670"
+    - name: Wiedergabe von Sound
+      href: playing-sounds.md
+    - name: Speichern von Daten in der Zwischenablage und Lesen von Daten aus der Zwischenablage
+      href: storing-data-to-and-reading-from-the-clipboard.md
+    - name: Abrufen von Informationen über den Computer
+      href: getting-information-about-the-computer.md
+    - name: Zugreifen auf die Tastatur
+      href: accessing-the-keyboard.md
+      items:
+        - name: 'Vorgehensweise: Starten von Anwendungen und Senden von Tastatureingaben'
+          href: how-to-start-an-application-and-send-it-keystrokes.md
+    - name: Zugreifen auf die Maus
+      href: accessing-the-mouse.md
+    - name: Durchführen von Netzwerkvorgängen
+      href: performing-network-operations.md
+      items:
+        - name: 'Vorgehensweise: Hochladen einer Datei'
+          href: how-to-upload-a-file.md
+        - name: 'Vorgehensweise: Herunterladen einer Datei'
+          href: how-to-download-a-file.md
+        - name: 'Vorgehensweise: Überprüfen des Verbindungsstatus'
+          href: how-to-check-connection-status.md
+    - name: Zugreifen auf die Anschlüsse des Computers
+      href: accessing-the-computer-s-ports.md
+      items:
+        - name: 'Vorgehensweise: Anzeigen von verfügbaren seriellen Anschlüssen'
+          href: how-to-show-available-serial-ports.md
+        - name: 'Vorgehensweise: Wählen mit Modems an seriellen Anschlüssen'
+          href: how-to-dial-modems-attached-to-serial-ports.md
+        - name: 'Vorgehensweise: Senden von Zeichenfolgen an serielle Anschlüsse'
+          href: how-to-send-strings-to-serial-ports.md
+        - name: 'Vorgehensweise: Empfangen von Zeichenfolgen von seriellen Anschlüssen'
+          href: how-to-receive-strings-from-serial-ports.md
+        - name: Portvorgänge in .NET Framework
+          href: port-operations-in-the-net-framework.md
+    - name: Lesen aus der und Schreiben in die Registrierung
+      href: reading-from-and-writing-to-the-registry.md
+      items:
+        - name: 'Vorgehensweise: Erstellen von Registrierungsschlüsseln und Festlegen ihrer Werte'
+          href: how-to-create-a-registry-key-and-set-its-value.md
+        - name: 'Vorgehensweise: Lesen eines Werts aus einem Registrierungsschlüssel'
+          href: how-to-read-a-value-from-a-registry-key.md
+        - name: 'Vorgehensweise: Löschen von Registrierungsschlüsseln'
+          href: how-to-delete-a-registry-key.md
+        - name: Lesen von der und Schreiben in die Registrierung mithilfe des Microsoft.Win32-Namespaces
+          href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md
+        - name: Sicherheit und die Registrierung
+          href: security-and-the-registry.md

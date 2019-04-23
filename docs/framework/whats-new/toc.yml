@@ -1,19 +1,12 @@
-items:
 - name: Neues
   href: index.md
   items:
-  - name: Neuigkeiten bei der Barrierefreiheit
-    href: whats-new-in-accessibility.md
-  - name: Veraltete Elemente in der Klassenbibliothek
-    href: whats-obsolete.md
-    items:
-    - name: Veraltete Typen
-      href: obsolete-types.md
-    - name: Veraltete Member
-      href: obsolete-members.md
-ms.openlocfilehash: 2c01bcec7ed118bc8d32338a04686d158770d140
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468760"
+    - name: Neuigkeiten bei der Barrierefreiheit
+      href: whats-new-in-accessibility.md
+    - name: Veraltete Elemente in der Klassenbibliothek
+      href: whats-obsolete.md
+      items:
+        - name: Veraltete Typen
+          href: obsolete-types.md
+        - name: Veraltete Member
+          href: obsolete-members.md

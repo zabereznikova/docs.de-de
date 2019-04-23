@@ -1,35 +1,28 @@
-items:
 - name: Asynchrone Programmierung mit Async und Await
   href: index.md
   items:
-  - name: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await'
-    href: walkthrough-accessing-the-web-by-using-async-and-await.md
-  - name: 'Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll'
-    href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-  - name: 'Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await'
-    href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
-  - name: Asynchrone Rückgabetypen
-    href: async-return-types.md
-  - name: Ablaufsteuerung in asynchronen Programmen
-    href: control-flow-in-async-programs.md
-  - name: Feinabstimmung der Async-Anwendung
-    href: fine-tuning-your-async-application.md
-    items:
-    - name: Abbrechen einer asynchronen Aufgabe oder Aufgabenliste
-      href: cancel-an-async-task-or-a-list-of-tasks.md
-    - name: Asynchrone Aufgaben nach einer Zeitperiode abbrechen
-      href: cancel-async-tasks-after-a-period-of-time.md
-    - name: Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen
-      href: cancel-remaining-async-tasks-after-one-is-complete.md
-    - name: Mehrere asynchrone Aufgaben starten und nach Abschluss verarbeiten
-      href: start-multiple-async-tasks-and-process-them-as-they-complete.md
-  - name: Ablauf des erneuten Eintretens in asynchronen Anwendungen
-    href: handling-reentrancy-in-async-apps.md
-  - name: Verwenden von Async für Dateizugriff
-    href: using-async-for-file-access.md
-ms.openlocfilehash: d6b4558a935d019090ccf0e4258d10e4a4f881b4
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469411"
+    - name: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await'
+      href: walkthrough-accessing-the-web-by-using-async-and-await.md
+    - name: 'Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll'
+      href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
+    - name: 'Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await'
+      href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
+    - name: Asynchrone Rückgabetypen
+      href: async-return-types.md
+    - name: Ablaufsteuerung in asynchronen Programmen
+      href: control-flow-in-async-programs.md
+    - name: Feinabstimmung der Async-Anwendung
+      href: fine-tuning-your-async-application.md
+      items:
+        - name: Abbrechen einer asynchronen Aufgabe oder Aufgabenliste
+          href: cancel-an-async-task-or-a-list-of-tasks.md
+        - name: Asynchrone Aufgaben nach einer Zeitperiode abbrechen
+          href: cancel-async-tasks-after-a-period-of-time.md
+        - name: Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen
+          href: cancel-remaining-async-tasks-after-one-is-complete.md
+        - name: Mehrere asynchrone Aufgaben starten und nach Abschluss verarbeiten
+          href: start-multiple-async-tasks-and-process-them-as-they-complete.md
+    - name: Ablauf des erneuten Eintretens in asynchronen Anwendungen
+      href: handling-reentrancy-in-async-apps.md
+    - name: Verwenden von Async für Dateizugriff
+      href: using-async-for-file-access.md

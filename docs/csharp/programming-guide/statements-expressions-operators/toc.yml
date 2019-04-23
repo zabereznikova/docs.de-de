@@ -1,49 +1,42 @@
-items:
-- name: Anweisungen, Ausdrücke und Operatoren
+- name: 'Anweisungen, Ausdrücke und Operatoren'
   href: index.md
   items:
-  - name: Anweisungen
-    href: statements.md
-  - name: Ausdrücke
-    href: expressions.md
-    items:
-    - name: Ausdruckskörpermember
-      href: expression-bodied-members.md
-  - name: Operatoren
-    href: operators.md
-  - name: Anonyme Funktionen
-    href: anonymous-functions.md
-    items:
-    - name: Lambda-Ausdrücke
-      href: lambda-expressions.md
+    - name: Anweisungen
+      href: statements.md
+    - name: Ausdrücke
+      href: expressions.md
       items:
-      - name: 'Vorgehensweise: Verwenden von Lambdaausdrücken in einer Abfrage'
-        href: how-to-use-lambda-expressions-in-a-query.md
-      - name: 'Vorgehensweise: Verwenden von Lambdaausdrücken außerhalb von LINQ'
-        href: how-to-use-lambda-expressions-outside-linq.md
-    - name: Anonyme Methoden
-      href: anonymous-methods.md
-  - name: Überladbare Operatoren
-    href: overloadable-operators.md
-  - name: Konvertierungsoperatoren
-    href: conversion-operators.md
-    items:
-    - name: Verwenden von Konvertierungsoperatoren
-      href: using-conversion-operators.md
-    - name: 'Vorgehensweise: Implementieren von benutzerdefinierten Konvertierungen zwischen Strukturen'
-      href: how-to-implement-user-defined-conversions-between-structs.md
-  - name: Ausdrücke mit Standardwert
-    href: default-value-expressions.md
-  - name: Übereinstimmungsvergleiche
-    href: equality-comparisons.md
-    items:
-    - name: 'Vorgehensweise: Definieren von Wertgleichheit für einen Typ'
-      href: how-to-define-value-equality-for-a-type.md
-    - name: 'Vorgehensweise: Überprüfen auf Verweisgleichheit (Identität)'
-      href: how-to-test-for-reference-equality-identity.md
-ms.openlocfilehash: d5f37fd97cf72c7c8d9b7854753eb25fdea8bbb2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468910"
+        - name: Ausdruckskörpermember
+          href: expression-bodied-members.md
+    - name: Operatoren
+      href: operators.md
+    - name: Anonyme Funktionen
+      href: anonymous-functions.md
+      items:
+        - name: Lambda-Ausdrücke
+          href: lambda-expressions.md
+          items:
+            - name: 'Vorgehensweise: Verwenden von Lambdaausdrücken in einer Abfrage'
+              href: how-to-use-lambda-expressions-in-a-query.md
+            - name: 'Vorgehensweise: Verwenden von Lambdaausdrücken außerhalb von LINQ'
+              href: how-to-use-lambda-expressions-outside-linq.md
+        - name: Anonyme Methoden
+          href: anonymous-methods.md
+    - name: Überladbare Operatoren
+      href: overloadable-operators.md
+    - name: Konvertierungsoperatoren
+      href: conversion-operators.md
+      items:
+        - name: Verwenden von Konvertierungsoperatoren
+          href: using-conversion-operators.md
+        - name: 'Vorgehensweise: Implementieren von benutzerdefinierten Konvertierungen zwischen Strukturen'
+          href: how-to-implement-user-defined-conversions-between-structs.md
+    - name: Ausdrücke mit Standardwert
+      href: default-value-expressions.md
+    - name: Übereinstimmungsvergleiche
+      href: equality-comparisons.md
+      items:
+        - name: 'Vorgehensweise: Definieren von Wertgleichheit für einen Typ'
+          href: how-to-define-value-equality-for-a-type.md
+        - name: 'Vorgehensweise: Überprüfen auf Verweisgleichheit (Identität)'
+          href: how-to-test-for-reference-equality-identity.md

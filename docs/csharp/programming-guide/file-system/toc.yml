@@ -1,28 +1,21 @@
-items:
 - name: Das Dateisystem und die Registrierung
   href: index.md
   items:
-  - name: 'Vorgehensweise: Durchlaufen eines Verzeichnisbaums'
-    href: how-to-iterate-through-a-directory-tree.md
-  - name: 'Vorgehensweise: Abrufen von Informationen über Dateien, Ordner und Laufwerke'
-    href: how-to-get-information-about-files-folders-and-drives.md
-  - name: 'Vorgehensweise: Erstellen einer Datei oder eines Ordners'
-    href: how-to-create-a-file-or-folder.md
-  - name: 'Vorgehensweise: Kopieren, Löschen und Verschieben von Dateien und Ordnern'
-    href: how-to-copy-delete-and-move-files-and-folders.md
-  - name: 'Vorgehensweise: Bereitstellen eines Statusdialogfelds für Dateivorgänge'
-    href: how-to-provide-a-progress-dialog-box-for-file-operations.md
-  - name: 'Vorgehensweise: Schreiben von Text in eine Datei'
-    href: how-to-write-to-a-text-file.md
-  - name: 'Vorgehensweise: Lesen aus einer Textdatei'
-    href: how-to-read-from-a-text-file.md
-  - name: 'Vorgehensweise: Zeilenweises Lesen einer Textdatei (Visual C#)'
-    href: how-to-read-a-text-file-one-line-at-a-time.md
-  - name: 'Vorgehensweise: Erstellen eines Schlüssels in der Registrierung (Visual C#)'
-    href: how-to-create-a-key-in-the-registry.md
-ms.openlocfilehash: 779f7fad6c2ba693a27f2657fc55c5db55ce00ed
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468874"
+    - name: 'Vorgehensweise: Durchlaufen eines Verzeichnisbaums'
+      href: how-to-iterate-through-a-directory-tree.md
+    - name: 'Vorgehensweise: Abrufen von Informationen über Dateien, Ordner und Laufwerke'
+      href: how-to-get-information-about-files-folders-and-drives.md
+    - name: 'Vorgehensweise: Erstellen einer Datei oder eines Ordners'
+      href: how-to-create-a-file-or-folder.md
+    - name: 'Vorgehensweise: Kopieren, Löschen und Verschieben von Dateien und Ordnern'
+      href: how-to-copy-delete-and-move-files-and-folders.md
+    - name: 'Vorgehensweise: Bereitstellen eines Statusdialogfelds für Dateivorgänge'
+      href: how-to-provide-a-progress-dialog-box-for-file-operations.md
+    - name: 'Vorgehensweise: Schreiben von Text in eine Datei'
+      href: how-to-write-to-a-text-file.md
+    - name: 'Vorgehensweise: Lesen aus einer Textdatei'
+      href: how-to-read-from-a-text-file.md
+    - name: 'Vorgehensweise: Zeilenweises Lesen einer Textdatei (Visual C#)'
+      href: how-to-read-a-text-file-one-line-at-a-time.md
+    - name: 'Vorgehensweise: Erstellen eines Schlüssels in der Registrierung (Visual C#)'
+      href: how-to-create-a-key-in-the-registry.md

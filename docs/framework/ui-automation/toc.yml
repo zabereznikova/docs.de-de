@@ -1,252 +1,245 @@
-items:
 - name: Zugriff
   href: index.md
   items:
-  - name: Bewährte Methoden für Eingabehilfen
-    href: accessibility-best-practices.md
-  - name: Grundlagen der Benutzeroberflächenautomatisierung
-    href: ui-automation-fundamentals.md
-    items:
-    - name: Übersicht über die Benutzeroberflächenautomatisierung
-      href: ui-automation-overview.md
-    - name: Benutzeroberflächenautomatisierung und Microsoft Active Accessibility
-      href: ui-automation-and-microsoft-active-accessibility.md
-    - name: Übersicht über die Benutzeroberflächenautomatisierungs-Struktur
-      href: ui-automation-tree-overview.md
-    - name: Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung
-      href: ui-automation-control-patterns-overview.md
-    - name: Übersicht über die Benutzeroberflächenautomatisierungs-Eigenschaften
-      href: ui-automation-properties-overview.md
-    - name: Übersicht über Benutzeroberflächenautomatisierungs-Ereignisse
-      href: ui-automation-events-overview.md
-    - name: Übersicht über die Benutzeroberflächenautomatisierungs-Sicherheit
-      href: ui-automation-security-overview.md
-    - name: Verwenden von Benutzeroberflächenautomatisierung für automatisierte Tests
-      href: using-ui-automation-for-automated-testing.md
-  - name: Benutzeroberflächenautomatisierungs-Anbieter für verwalteten Code
-    href: ui-automation-providers-for-managed-code.md
-    items:
-    - name: Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
-      href: server-side-ui-automation-provider-implementation.md
-    - name: Übersicht über die Benutzeroberflächenautomatisierungs-Anbieter
-      href: ui-automation-providers-overview.md
-    - name: Implementierung eines clientseitigen Benutzeroberflächenautomatisierungs-Anbieters
-      href: client-side-ui-automation-provider-implementation.md
-    - name: Gewusst wie-Themen
-      href: ui-automation-providers-for-managed-code-how-to-topics.md
+    - name: Bewährte Methoden für Eingabehilfen
+      href: accessibility-best-practices.md
+    - name: Grundlagen der Benutzeroberflächenautomatisierung
+      href: ui-automation-fundamentals.md
       items:
-      - name: Verfügbarmachen eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
-        href: expose-a-server-side-ui-automation-provider.md
-      - name: Zurückgeben von Eigenschaften aus einem Benutzeroberflächenautomatisierungs-Anbieter
-        href: return-properties-from-a-ui-automation-provider.md
-      - name: Auslösen von Ereignissen aus einem Benutzeroberflächenautomatisierungs-Anbieter
-        href: raise-events-from-a-ui-automation-provider.md
-      - name: Aktivieren der Navigation in einem Benutzeroberflächenautomatisierungs-Fragmentanbieter
-        href: enable-navigation-in-a-ui-automation-fragment-provider.md
-      - name: Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter
-        href: support-control-patterns-in-a-ui-automation-provider.md
-      - name: Erstellen eines clientseitigen Benutzeroberflächenautomatisierungs-Anbieters
-        href: create-a-client-side-ui-automation-provider.md
-      - name: Implementierung von Benutzeroberflächenautomatisierungs-Anbietern in einer Clientanwendung
-        href: implement-ui-automation-providers-in-a-client-application.md
-  - name: Benutzeroberflächenautomatisierungs-Clients für verwalteten Code
-    href: ui-automation-clients-for-managed-code.md
-    items:
-    - name: Benutzeroberflächenautomatisierung und Bildschirmskalierung
-      href: ui-automation-and-screen-scaling.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für Standardsteuerelemente
-      href: ui-automation-support-for-standard-controls.md
-    - name: Benutzeroberflächenautomatisierungs-Ereignisse für Clients
-      href: ui-automation-events-for-clients.md
-    - name: Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients
-      href: caching-in-ui-automation-clients.md
-    - name: Benutzeroberflächenautomatisierungs-Eigenschaften für Clients
-      href: ui-automation-properties-for-clients.md
-    - name: Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients
-      href: control-pattern-mapping-for-ui-automation-clients.md
-    - name: Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients
-      href: ui-automation-control-patterns-for-clients.md
-    - name: Abrufen von Benutzeroberflächenautomatisierungs-Elementen
-      href: obtaining-ui-automation-elements.md
-    - name: Threadingprobleme bei der Benutzeroberflächenautomatisierung
-      href: ui-automation-threading-issues.md
-    - name: Gewusst wie-Themen
-      href: ui-automation-clients-for-managed-code-how-to-topics.md
+        - name: Übersicht über die Benutzeroberflächenautomatisierung
+          href: ui-automation-overview.md
+        - name: Benutzeroberflächenautomatisierung und Microsoft Active Accessibility
+          href: ui-automation-and-microsoft-active-accessibility.md
+        - name: Übersicht über die Benutzeroberflächenautomatisierungs-Struktur
+          href: ui-automation-tree-overview.md
+        - name: Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung
+          href: ui-automation-control-patterns-overview.md
+        - name: Übersicht über die Benutzeroberflächenautomatisierungs-Eigenschaften
+          href: ui-automation-properties-overview.md
+        - name: Übersicht über Benutzeroberflächenautomatisierungs-Ereignisse
+          href: ui-automation-events-overview.md
+        - name: Übersicht über die Benutzeroberflächenautomatisierungs-Sicherheit
+          href: ui-automation-security-overview.md
+        - name: Verwenden von Benutzeroberflächenautomatisierung für automatisierte Tests
+          href: using-ui-automation-for-automated-testing.md
+    - name: Benutzeroberflächenautomatisierungs-Anbieter für verwalteten Code
+      href: ui-automation-providers-for-managed-code.md
       items:
-      - name: Suchen eines Benutzeroberflächenautomatisierungs-Elements anhand einer Eigenschaftenbedingung
-        href: find-a-ui-automation-element-based-on-a-property-condition.md
-      - name: Navigieren zwischen Benutzeroberflächenautomatisierungs-Elementen mit TreeWalker
-        href: navigate-among-ui-automation-elements-with-treewalker.md
-      - name: Suchen eines Benutzeroberflächenautomatisierungs-Elements für ein Listenelement
-        href: find-a-ui-automation-element-for-a-list-item.md
-      - name: Abrufen von Elementeigenschaften der Benutzeroberflächenautomatisierung
-        href: get-ui-automation-element-properties.md
-      - name: Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung
-        href: use-caching-in-ui-automation.md
-      - name: Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen
-        href: subscribe-to-ui-automation-events.md
-      - name: Registrieren einer clientseitigen Anbieterassembly
-        href: register-a-client-side-provider-assembly.md
-      - name: Verwenden der AutomationID-Eigenschaft
-        href: use-the-automationid-property.md
-  - name: Steuerelementmuster für Benutzeroberflächenautomatisierung
-    href: ui-automation-control-patterns.md
-    items:
-    - name: Implementieren des Dock-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-dock-control-pattern.md
-    - name: Implementieren des ExpandCollapse-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-expandcollapse-control-pattern.md
-    - name: Implementieren des Grid-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-grid-control-pattern.md
-    - name: Implementieren des GridItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-griditem-control-pattern.md
-    - name: Implementieren des Invoke-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-invoke-control-pattern.md
-    - name: Implementieren des MultipleView-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-multipleview-control-pattern.md
-    - name: Implementieren des RangeValue-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-rangevalue-control-pattern.md
-    - name: Implementieren des Scroll-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-scroll-control-pattern.md
-    - name: Implementieren des ScrollItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-scrollitem-control-pattern.md
-    - name: Implementieren des Selection-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-selection-control-pattern.md
-    - name: Implementieren des SelectionItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-selectionitem-control-pattern.md
-    - name: Implementieren des Table-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-table-control-pattern.md
-    - name: Implementieren des TableItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-tableitem-control-pattern.md
-    - name: Implementieren des Toggle-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-toggle-control-pattern.md
-    - name: Implementieren des Transform-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-transform-control-pattern.md
-    - name: Implementieren des Value-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-value-control-pattern.md
-    - name: Implementieren des Window-Steuerelementmusters der Benutzeroberflächenautomatisierung
-      href: implementing-the-ui-automation-window-control-pattern.md
-    - name: Gewusst wie-Themen
-      href: ui-automation-control-patterns-how-to-topics.md
+        - name: Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
+          href: server-side-ui-automation-provider-implementation.md
+        - name: Übersicht über die Benutzeroberflächenautomatisierungs-Anbieter
+          href: ui-automation-providers-overview.md
+        - name: Implementierung eines clientseitigen Benutzeroberflächenautomatisierungs-Anbieters
+          href: client-side-ui-automation-provider-implementation.md
+        - name: Gewusst wie-Themen
+          href: ui-automation-providers-for-managed-code-how-to-topics.md
+          items:
+            - name: Verfügbarmachen eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
+              href: expose-a-server-side-ui-automation-provider.md
+            - name: Zurückgeben von Eigenschaften aus einem Benutzeroberflächenautomatisierungs-Anbieter
+              href: return-properties-from-a-ui-automation-provider.md
+            - name: Auslösen von Ereignissen aus einem Benutzeroberflächenautomatisierungs-Anbieter
+              href: raise-events-from-a-ui-automation-provider.md
+            - name: Aktivieren der Navigation in einem Benutzeroberflächenautomatisierungs-Fragmentanbieter
+              href: enable-navigation-in-a-ui-automation-fragment-provider.md
+            - name: Unterstützung von Steuerelementmustern in einem Benutzeroberflächenautomatisierungs-Anbieter
+              href: support-control-patterns-in-a-ui-automation-provider.md
+            - name: Erstellen eines clientseitigen Benutzeroberflächenautomatisierungs-Anbieters
+              href: create-a-client-side-ui-automation-provider.md
+            - name: Implementierung von Benutzeroberflächenautomatisierungs-Anbietern in einer Clientanwendung
+              href: implement-ui-automation-providers-in-a-client-application.md
+    - name: Benutzeroberflächenautomatisierungs-Clients für verwalteten Code
+      href: ui-automation-clients-for-managed-code.md
       items:
-      - name: Verfügbarmachen eines Tabelleninhalts durch Benutzeroberflächenautomatisierung
-        href: expose-the-content-of-a-table-using-ui-automation.md
-      - name: Abrufen von unterstützten Steuerelementmustern für Benutzeroberflächenautomatisierung
-        href: get-supported-ui-automation-control-patterns.md
-      - name: Abrufen des Umschaltstatus eines Kontrollkästchens mithilfe von Benutzeroberflächenautomatisierung
-        href: get-the-toggle-state-of-a-check-box-using-ui-automation.md
-      - name: Aufrufen eines Steuerelements mithilfe von Benutzeroberflächenautomatisierung
-        href: invoke-a-control-using-ui-automation.md
-      - name: Verschieben eines Benutzeroberflächenautomatisierungs-Elements
-        href: move-a-ui-automation-element.md
-  - name: Textmuster zur Benutzeroberflächenautomatisierung
-    href: ui-automation-text-pattern.md
-    items:
-    - name: Übersicht über TextPattern für die Benutzeroberflächenautomatisierung
-      href: ui-automation-textpattern-overview.md
-    - name: Übersicht über TextPattern und eingebettete Objekte
-      href: textpattern-and-embedded-objects-overview.md
-    - name: Gewusst wie-Themen
-      href: ui-automation-text-pattern-how-to-topics.md
+        - name: Benutzeroberflächenautomatisierung und Bildschirmskalierung
+          href: ui-automation-and-screen-scaling.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für Standardsteuerelemente
+          href: ui-automation-support-for-standard-controls.md
+        - name: Benutzeroberflächenautomatisierungs-Ereignisse für Clients
+          href: ui-automation-events-for-clients.md
+        - name: Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients
+          href: caching-in-ui-automation-clients.md
+        - name: Benutzeroberflächenautomatisierungs-Eigenschaften für Clients
+          href: ui-automation-properties-for-clients.md
+        - name: Zuordnen von Steuerelementmustern für Benutzeroberflächenautomatisierungs-Clients
+          href: control-pattern-mapping-for-ui-automation-clients.md
+        - name: Steuerelementmuster für Benutzeroberflächenautomatisierung für Clients
+          href: ui-automation-control-patterns-for-clients.md
+        - name: Abrufen von Benutzeroberflächenautomatisierungs-Elementen
+          href: obtaining-ui-automation-elements.md
+        - name: Threadingprobleme bei der Benutzeroberflächenautomatisierung
+          href: ui-automation-threading-issues.md
+        - name: Gewusst wie-Themen
+          href: ui-automation-clients-for-managed-code-how-to-topics.md
+          items:
+            - name: Suchen eines Benutzeroberflächenautomatisierungs-Elements anhand einer Eigenschaftenbedingung
+              href: find-a-ui-automation-element-based-on-a-property-condition.md
+            - name: Navigieren zwischen Benutzeroberflächenautomatisierungs-Elementen mit TreeWalker
+              href: navigate-among-ui-automation-elements-with-treewalker.md
+            - name: Suchen eines Benutzeroberflächenautomatisierungs-Elements für ein Listenelement
+              href: find-a-ui-automation-element-for-a-list-item.md
+            - name: Abrufen von Elementeigenschaften der Benutzeroberflächenautomatisierung
+              href: get-ui-automation-element-properties.md
+            - name: Verwenden der Zwischenspeicherung in der Benutzeroberflächenautomatisierung
+              href: use-caching-in-ui-automation.md
+            - name: Abonnieren von Benutzeroberflächenautomatisierungs-Ereignissen
+              href: subscribe-to-ui-automation-events.md
+            - name: Registrieren einer clientseitigen Anbieterassembly
+              href: register-a-client-side-provider-assembly.md
+            - name: Verwenden der AutomationID-Eigenschaft
+              href: use-the-automationid-property.md
+    - name: Steuerelementmuster für Benutzeroberflächenautomatisierung
+      href: ui-automation-control-patterns.md
       items:
-      - name: Hinzufügen von Inhalt in einem Textfeld mithilfe von Benutzeroberflächenautomatisierung
-        href: add-content-to-a-text-box-using-ui-automation.md
-      - name: Suchen und Hervorheben von Text durch Benutzeroberflächenautomatisierung
-        href: find-and-highlight-text-using-ui-automation.md
-      - name: Abrufen von Textattributen mithilfe der Benutzeroberflächenautomatisierung
-        href: obtain-text-attributes-using-ui-automation.md
-      - name: Abrufen verschiedener Textattributdetails mithilfe der Benutzeroberflächenautomatisierung
-        href: obtain-mixed-text-attribute-details-using-ui-automation.md
-      - name: Durchlaufen von Text mit Benutzeroberflächenautomatisierung
-        href: traverse-text-using-ui-automation.md
-      - name: Zugreifen auf eingebettete Objekte mit Benutzeroberflächenautomatisierung
-        href: access-embedded-objects-using-ui-automation.md
-  - name: Steuerelementtypen der Benutzeroberflächenautomatisierung
-    href: ui-automation-control-types.md
-    items:
-    - name: Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung
-      href: ui-automation-control-types-overview.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Schaltflächen-Steuerelementtyp
-      href: ui-automation-support-for-the-button-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Calendar-Steuerelementtyp
-      href: ui-automation-support-for-the-calendar-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den CheckBox-Steuerelementtyp
-      href: ui-automation-support-for-the-checkbox-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den ComboBox-Steuerelementtyp
-      href: ui-automation-support-for-the-combobox-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den DataGrid-Steuerelementtyp
-      href: ui-automation-support-for-the-datagrid-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den DataItem-Steuerelementtyp
-      href: ui-automation-support-for-the-dataitem-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Document-Steuerelementtyp
-      href: ui-automation-support-for-the-document-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Edit-Steuerelementtyp
-      href: ui-automation-support-for-the-edit-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Group-Steuerelementtyp
-      href: ui-automation-support-for-the-group-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Header-Steuerelementtyp
-      href: ui-automation-support-for-the-header-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den HeaderItem-Steuerelementtyp
-      href: ui-automation-support-for-the-headeritem-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Hyperlink-Steuerelementtyp
-      href: ui-automation-support-for-the-hyperlink-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Bild-Steuerelementtyp
-      href: ui-automation-support-for-the-image-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den List-Steuerelementtyp
-      href: ui-automation-support-for-the-list-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den ListItem-Steuerelementtyp
-      href: ui-automation-support-for-the-listitem-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Menü-Steuerelementtyp
-      href: ui-automation-support-for-the-menu-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den MenuBar-Steuerelementtyp
-      href: ui-automation-support-for-the-menubar-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den MenuItem-Steuerelementtyp
-      href: ui-automation-support-for-the-menuitem-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Pane-Steuerelementtyp
-      href: ui-automation-support-for-the-pane-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den ProgressBar-Steuerelementtyp
-      href: ui-automation-support-for-the-progressbar-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den RadioButton-Steuerelementtyp
-      href: ui-automation-support-for-the-radiobutton-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den ScrollBar-Steuerelementtyp
-      href: ui-automation-support-for-the-scrollbar-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Separator-Steuerelementtyp
-      href: ui-automation-support-for-the-separator-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Slider-Steuerelementtyp
-      href: ui-automation-support-for-the-slider-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Spinner-Steuerelementtyp
-      href: ui-automation-support-for-the-spinner-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den SplitButton-Steuerelementtyp
-      href: ui-automation-support-for-the-splitbutton-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den StatusBar-Steuerelementtyp
-      href: ui-automation-support-for-the-statusbar-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Tab-Steuerelementtyp
-      href: ui-automation-support-for-the-tab-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den TabItem-Steuerelementtyp
-      href: ui-automation-support-for-the-tabitem-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Table-Steuerelementtyp
-      href: ui-automation-support-for-the-table-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Text-Steuerelementtyp
-      href: ui-automation-support-for-the-text-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Thumb-Steuerelementtyp
-      href: ui-automation-support-for-the-thumb-control-type.md
-    - name: Benutzeroberflächenautomatisierung-Unterstützung für den TitleBar-Steuerelementtyp
-      href: ui-automation-support-for-the-titlebar-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den ToolBar-Steuerelementtyp
-      href: ui-automation-support-for-the-toolbar-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den ToolTip-Steuerelementtyp
-      href: ui-automation-support-for-the-tooltip-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Struktur-Steuerelementtyp
-      href: ui-automation-support-for-the-tree-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den TreeItem-Steuerelementtyp
-      href: ui-automation-support-for-the-treeitem-control-type.md
-    - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Window-Steuerelementtyp
-      href: ui-automation-support-for-the-window-control-type.md
-  - name: Spezifikation für die Benutzeroberflächenautomatisierung und Zusicherung an die Community
-    href: ui-automation-specification-and-community-promise.md
-ms.openlocfilehash: b30bb47e5b2bfb91c64a07c055889e83310da789
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469033"
+        - name: Implementieren des Dock-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-dock-control-pattern.md
+        - name: Implementieren des ExpandCollapse-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-expandcollapse-control-pattern.md
+        - name: Implementieren des Grid-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-grid-control-pattern.md
+        - name: Implementieren des GridItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-griditem-control-pattern.md
+        - name: Implementieren des Invoke-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-invoke-control-pattern.md
+        - name: Implementieren des MultipleView-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-multipleview-control-pattern.md
+        - name: Implementieren des RangeValue-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-rangevalue-control-pattern.md
+        - name: Implementieren des Scroll-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-scroll-control-pattern.md
+        - name: Implementieren des ScrollItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-scrollitem-control-pattern.md
+        - name: Implementieren des Selection-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-selection-control-pattern.md
+        - name: Implementieren des SelectionItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-selectionitem-control-pattern.md
+        - name: Implementieren des Table-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-table-control-pattern.md
+        - name: Implementieren des TableItem-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-tableitem-control-pattern.md
+        - name: Implementieren des Toggle-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-toggle-control-pattern.md
+        - name: Implementieren des Transform-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-transform-control-pattern.md
+        - name: Implementieren des Value-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-value-control-pattern.md
+        - name: Implementieren des Window-Steuerelementmusters der Benutzeroberflächenautomatisierung
+          href: implementing-the-ui-automation-window-control-pattern.md
+        - name: Gewusst wie-Themen
+          href: ui-automation-control-patterns-how-to-topics.md
+          items:
+            - name: Verfügbarmachen eines Tabelleninhalts durch Benutzeroberflächenautomatisierung
+              href: expose-the-content-of-a-table-using-ui-automation.md
+            - name: Abrufen von unterstützten Steuerelementmustern für Benutzeroberflächenautomatisierung
+              href: get-supported-ui-automation-control-patterns.md
+            - name: Abrufen des Umschaltstatus eines Kontrollkästchens mithilfe von Benutzeroberflächenautomatisierung
+              href: get-the-toggle-state-of-a-check-box-using-ui-automation.md
+            - name: Aufrufen eines Steuerelements mithilfe von Benutzeroberflächenautomatisierung
+              href: invoke-a-control-using-ui-automation.md
+            - name: Verschieben eines Benutzeroberflächenautomatisierungs-Elements
+              href: move-a-ui-automation-element.md
+    - name: Textmuster zur Benutzeroberflächenautomatisierung
+      href: ui-automation-text-pattern.md
+      items:
+        - name: Übersicht über TextPattern für die Benutzeroberflächenautomatisierung
+          href: ui-automation-textpattern-overview.md
+        - name: Übersicht über TextPattern und eingebettete Objekte
+          href: textpattern-and-embedded-objects-overview.md
+        - name: Gewusst wie-Themen
+          href: ui-automation-text-pattern-how-to-topics.md
+          items:
+            - name: Hinzufügen von Inhalt in einem Textfeld mithilfe von Benutzeroberflächenautomatisierung
+              href: add-content-to-a-text-box-using-ui-automation.md
+            - name: Suchen und Hervorheben von Text durch Benutzeroberflächenautomatisierung
+              href: find-and-highlight-text-using-ui-automation.md
+            - name: Abrufen von Textattributen mithilfe der Benutzeroberflächenautomatisierung
+              href: obtain-text-attributes-using-ui-automation.md
+            - name: Abrufen verschiedener Textattributdetails mithilfe der Benutzeroberflächenautomatisierung
+              href: obtain-mixed-text-attribute-details-using-ui-automation.md
+            - name: Durchlaufen von Text mit Benutzeroberflächenautomatisierung
+              href: traverse-text-using-ui-automation.md
+            - name: Zugreifen auf eingebettete Objekte mit Benutzeroberflächenautomatisierung
+              href: access-embedded-objects-using-ui-automation.md
+    - name: Steuerelementtypen der Benutzeroberflächenautomatisierung
+      href: ui-automation-control-types.md
+      items:
+        - name: Übersicht über Steuerelementtypen für Benutzeroberflächenautomatisierung
+          href: ui-automation-control-types-overview.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Schaltflächen-Steuerelementtyp
+          href: ui-automation-support-for-the-button-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Calendar-Steuerelementtyp
+          href: ui-automation-support-for-the-calendar-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den CheckBox-Steuerelementtyp
+          href: ui-automation-support-for-the-checkbox-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den ComboBox-Steuerelementtyp
+          href: ui-automation-support-for-the-combobox-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den DataGrid-Steuerelementtyp
+          href: ui-automation-support-for-the-datagrid-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den DataItem-Steuerelementtyp
+          href: ui-automation-support-for-the-dataitem-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Document-Steuerelementtyp
+          href: ui-automation-support-for-the-document-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Edit-Steuerelementtyp
+          href: ui-automation-support-for-the-edit-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Group-Steuerelementtyp
+          href: ui-automation-support-for-the-group-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Header-Steuerelementtyp
+          href: ui-automation-support-for-the-header-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den HeaderItem-Steuerelementtyp
+          href: ui-automation-support-for-the-headeritem-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Hyperlink-Steuerelementtyp
+          href: ui-automation-support-for-the-hyperlink-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Bild-Steuerelementtyp
+          href: ui-automation-support-for-the-image-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den List-Steuerelementtyp
+          href: ui-automation-support-for-the-list-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den ListItem-Steuerelementtyp
+          href: ui-automation-support-for-the-listitem-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Menü-Steuerelementtyp
+          href: ui-automation-support-for-the-menu-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den MenuBar-Steuerelementtyp
+          href: ui-automation-support-for-the-menubar-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den MenuItem-Steuerelementtyp
+          href: ui-automation-support-for-the-menuitem-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Pane-Steuerelementtyp
+          href: ui-automation-support-for-the-pane-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den ProgressBar-Steuerelementtyp
+          href: ui-automation-support-for-the-progressbar-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den RadioButton-Steuerelementtyp
+          href: ui-automation-support-for-the-radiobutton-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den ScrollBar-Steuerelementtyp
+          href: ui-automation-support-for-the-scrollbar-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Separator-Steuerelementtyp
+          href: ui-automation-support-for-the-separator-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Slider-Steuerelementtyp
+          href: ui-automation-support-for-the-slider-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Spinner-Steuerelementtyp
+          href: ui-automation-support-for-the-spinner-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den SplitButton-Steuerelementtyp
+          href: ui-automation-support-for-the-splitbutton-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den StatusBar-Steuerelementtyp
+          href: ui-automation-support-for-the-statusbar-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Tab-Steuerelementtyp
+          href: ui-automation-support-for-the-tab-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den TabItem-Steuerelementtyp
+          href: ui-automation-support-for-the-tabitem-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Table-Steuerelementtyp
+          href: ui-automation-support-for-the-table-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Text-Steuerelementtyp
+          href: ui-automation-support-for-the-text-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Thumb-Steuerelementtyp
+          href: ui-automation-support-for-the-thumb-control-type.md
+        - name: Benutzeroberflächenautomatisierung-Unterstützung für den TitleBar-Steuerelementtyp
+          href: ui-automation-support-for-the-titlebar-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den ToolBar-Steuerelementtyp
+          href: ui-automation-support-for-the-toolbar-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den ToolTip-Steuerelementtyp
+          href: ui-automation-support-for-the-tooltip-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Struktur-Steuerelementtyp
+          href: ui-automation-support-for-the-tree-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den TreeItem-Steuerelementtyp
+          href: ui-automation-support-for-the-treeitem-control-type.md
+        - name: Benutzeroberflächenautomatisierungs-Unterstützung für den Window-Steuerelementtyp
+          href: ui-automation-support-for-the-window-control-type.md
+    - name: Spezifikation für die Benutzeroberflächenautomatisierung und Zusicherung an die Community
+      href: ui-automation-specification-and-community-promise.md

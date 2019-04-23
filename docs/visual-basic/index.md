@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
 ms.openlocfilehash: b10c520c1940b150566ab5766ca5afd2e0f03e08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797084"
 ---
 # <a name="visual-basic-guide"></a>Leitfaden für Visual Basic
 

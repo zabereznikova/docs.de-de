@@ -1,87 +1,80 @@
-items:
 - name: Threading
   href: index.md
   items:
-  - name: Grundlagen des verwalteten Threadings
-    href: managed-threading-basics.md
-    items:
-    - name: Threads und Threading
-      href: threads-and-threading.md
-    - name: Ausnahmen in verwalteten Threads
-      href: exceptions-in-managed-threads.md
-    - name: Datensynchronisierung für Multithreading
-      href: synchronizing-data-for-multithreading.md
-    - name: Vordergrund- und Hintergrundthreads
-      href: foreground-and-background-threads.md
-    - name: Verwaltetes und nicht verwaltetes Threading in Windows
-      href: managed-and-unmanaged-threading-in-windows.md
-    - name: Thread.Suspend, Garbage Collection und Sicherungspunkte
-      href: thread-suspend-garbage-collection-and-safe-points.md
-    - name: 'Threadlokaler Speicher: Threadbezogene statische Felder und Datenslots'
-      href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
-  - name: Verwenden von Threads und Threading
-    href: using-threads-and-threading.md
-    items:
-    - name: Erstellen von Threads und Übergeben von Daten zur Startzeit
-      href: creating-threads-and-passing-data-at-start-time.md
-    - name: Anhalten und Unterbrechen von Threads
-      href: pausing-and-resuming-threads.md
-    - name: Zerstören von Threads
-      href: destroying-threads.md
-    - name: Scheduling von Threads
-      href: scheduling-threads.md
-    - name: Abbruch in verwalteten Threads
-      href: cancellation-in-managed-threads.md
+    - name: Grundlagen des verwalteten Threadings
+      href: managed-threading-basics.md
       items:
-      - name: Kooperatives Abbrechen von Threads
-        href: canceling-threads-cooperatively.md
-      - name: 'Vorgehensweise: Lauschen auf Abbruchanforderungen durch Abruf'
-        href: how-to-listen-for-cancellation-requests-by-polling.md
-      - name: 'Vorgehensweise: Registrieren von Rückrufen für Abbruchanforderungen'
-        href: how-to-register-callbacks-for-cancellation-requests.md
-      - name: 'Vorgehensweise: Lauschen auf Abbruchanforderungen mit Wait-Handles'
-        href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
-      - name: 'Vorgehensweise: Lauschen auf mehrere Abbruchanforderungen'
-        href: how-to-listen-for-multiple-cancellation-requests.md
-  - name: Empfohlene Vorgehensweise für das verwaltete Threading
-    href: managed-threading-best-practices.md
-  - name: Threadingobjekte und -funktionen
-    href: threading-objects-and-features.md
-    items:
-    - name: Der verwaltete Threadpool
-      href: the-managed-thread-pool.md
-    - name: Timer
-      href: timers.md
-    - name: Übersicht über Synchronisierungsprimitive
-      href: overview-of-synchronization-primitives.md
-    - name: EventWaitHandle
-      href: eventwaithandle.md
-    - name: CountdownEvent
-      href: countdownevent.md
-    - name: Mutexe
-      href: mutexes.md
-    - name: Semaphore und SemaphoreSlim
-      href: semaphore-and-semaphoreslim.md
-    - name: Barriere
-      href: barrier.md
+        - name: Threads und Threading
+          href: threads-and-threading.md
+        - name: Ausnahmen in verwalteten Threads
+          href: exceptions-in-managed-threads.md
+        - name: Datensynchronisierung für Multithreading
+          href: synchronizing-data-for-multithreading.md
+        - name: Vordergrund- und Hintergrundthreads
+          href: foreground-and-background-threads.md
+        - name: Verwaltetes und nicht verwaltetes Threading in Windows
+          href: managed-and-unmanaged-threading-in-windows.md
+        - name: "Thread.Suspend, Garbage\_Collection und Sicherungspunkte"
+          href: thread-suspend-garbage-collection-and-safe-points.md
+        - name: 'Threadlokaler Speicher: Threadbezogene statische Felder und Datenslots'
+          href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
+    - name: Verwenden von Threads und Threading
+      href: using-threads-and-threading.md
       items:
-      - name: 'Vorgehensweise: Synchronisieren gleichzeitiger Vorgänge mit einer Barriere'
-        href: how-to-synchronize-concurrent-operations-with-a-barrier.md
-    - name: SpinLock
-      href: spinlock.md
+        - name: Erstellen von Threads und Übergeben von Daten zur Startzeit
+          href: creating-threads-and-passing-data-at-start-time.md
+        - name: Anhalten und Unterbrechen von Threads
+          href: pausing-and-resuming-threads.md
+        - name: Zerstören von Threads
+          href: destroying-threads.md
+        - name: Scheduling von Threads
+          href: scheduling-threads.md
+        - name: Abbruch in verwalteten Threads
+          href: cancellation-in-managed-threads.md
+          items:
+            - name: Kooperatives Abbrechen von Threads
+              href: canceling-threads-cooperatively.md
+            - name: 'Vorgehensweise: Lauschen auf Abbruchanforderungen durch Abruf'
+              href: how-to-listen-for-cancellation-requests-by-polling.md
+            - name: 'Vorgehensweise: Registrieren von Rückrufen für Abbruchanforderungen'
+              href: how-to-register-callbacks-for-cancellation-requests.md
+            - name: 'Vorgehensweise: Lauschen auf Abbruchanforderungen mit Wait-Handles'
+              href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
+            - name: 'Vorgehensweise: Lauschen auf mehrere Abbruchanforderungen'
+              href: how-to-listen-for-multiple-cancellation-requests.md
+    - name: Empfohlene Vorgehensweise für das verwaltete Threading
+      href: managed-threading-best-practices.md
+    - name: Threadingobjekte und -funktionen
+      href: threading-objects-and-features.md
       items:
-      - name: 'Vorgehensweise: Synchronisierung auf niedriger Ebene mit SpinLock'
-        href: how-to-use-spinlock-for-low-level-synchronization.md
-      - name: 'Vorgehensweise: Aktivieren des Modus zum Nachverfolgen von Threads in SpinLock'
-        href: how-to-enable-thread-tracking-mode-in-spinlock.md
-    - name: SpinWait
-      href: spinwait.md
-      items:
-      - name: 'Vorgehensweise: Implementieren eines Wartevorgangs mit zwei Phasen mit SpinWait'
-        href: how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md
-ms.openlocfilehash: c015db2bc66897ca487e29e36d93e7d84a0897f1
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468757"
+        - name: Der verwaltete Threadpool
+          href: the-managed-thread-pool.md
+        - name: Timer
+          href: timers.md
+        - name: Übersicht über Synchronisierungsprimitive
+          href: overview-of-synchronization-primitives.md
+        - name: EventWaitHandle
+          href: eventwaithandle.md
+        - name: CountdownEvent
+          href: countdownevent.md
+        - name: Mutexe
+          href: mutexes.md
+        - name: Semaphore und SemaphoreSlim
+          href: semaphore-and-semaphoreslim.md
+        - name: Barriere
+          href: barrier.md
+          items:
+            - name: 'Vorgehensweise: Synchronisieren gleichzeitiger Vorgänge mit einer Barriere'
+              href: how-to-synchronize-concurrent-operations-with-a-barrier.md
+        - name: SpinLock
+          href: spinlock.md
+          items:
+            - name: 'Vorgehensweise: Synchronisierung auf niedriger Ebene mit SpinLock'
+              href: how-to-use-spinlock-for-low-level-synchronization.md
+            - name: 'Vorgehensweise: Aktivieren des Modus zum Nachverfolgen von Threads in SpinLock'
+              href: how-to-enable-thread-tracking-mode-in-spinlock.md
+        - name: SpinWait
+          href: spinwait.md
+          items:
+            - name: 'Vorgehensweise: Implementieren eines Wartevorgangs mit zwei Phasen mit SpinWait'
+              href: how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md

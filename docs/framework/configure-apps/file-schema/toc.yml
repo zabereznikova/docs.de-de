@@ -1,66 +1,59 @@
-items:
 - name: Konfigurationsdateischema
   href: index.md
   items:
-  - name: <configuration>-Element
-    href: configuration-element.md
-  - name: <assemblyBinding>-Element
-    href: assemblybinding-element-for-configuration.md
-  - name: <linkedConfiguration>-Element
-    href: linkedconfiguration-element.md
-  - name: <configSections>-Element
-    href: configsections-element-for-configuration.md
-  - name: <clear>-Element für <configSections>
-    href: clear-element-for-configsections.md
-  - name: <remove>-Element für <configSections>
-    href: remove-element-for-configsections.md
-  - name: <sectionGroup>-Element
-    href: sectiongroup-element-for-configsections.md
-  - name: Benutzerdefiniertes Element für SingleTagSectionHandler
-    href: custom-element-1.md
-  - name: Benutzerdefiniertes Element für NameValueSectionHandler und DictionarySectionHandler
-    href: custom-element-2.md
-  - name: <add>-Element
-    href: add-element-for-custom-2.md
-  - name: <clear>-Element für NameValueSectionHandler und DictionarySectionHandler
-    href: clear-element-for-custom-2.md
-  - name: <remove>-Element für NameValueSectionHandler und DictionarySectionHandler
-    href: remove-element-for-custom-2.md
-  - name: <section> Element
-    href: section-element.md
-  - name: Schema für App-Einstellungen
-    href: appsettings/index.md
-  - name: Schema für Anwendungseinstellungen
-    href: application-settings-schema.md
-  - name: Schema für Compiler- und Sprachanbietereinstellungen
-    href: compiler/index.md
-  - name: Schema für Konfigurationsabschnitte
-    href: configuration-sections-schema.md
-  - name: Schema für Kryptografieeinstellungen
-    href: cryptography/index.md
-  - name: Netzwerkeinstellungsschema
-    href: network/index.md
-  - name: Schema für Laufzeiteinstellungen
-    href: runtime/index.md
-  - name: Schema für Starteinstellungen
-    href: startup/index.md
-  - name: Schema für Ablaufverfolgungs- und Debugeinstellungen
-    href: trace-debug/index.md
-  - name: Webeinstellungsschema
-    href: web/index.md
-  - name: WCF-Konfigurationsschema
-    href: wcf/index.md
-  - name: WCF-Anweisungssyntax
-    href: wcf-directive/index.md
-  - name: WIF-Konfigurationsschema
-    href: windows-identity-foundation/index.md
-  - name: Konfigurationsabschnitt für Windows Forms
-    href: winforms/index.md
-  - name: Windows Workflow Foundation-Konfigurationsschema
-    href: windows-workflow-foundation/index.md
-ms.openlocfilehash: 69b0e7862ab6c9a7540469f79d6870a8f9976f14
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468661"
+    - name: <configuration>-Element
+      href: configuration-element.md
+    - name: <assemblyBinding>-Element
+      href: assemblybinding-element-for-configuration.md
+    - name: <linkedConfiguration>-Element
+      href: linkedconfiguration-element.md
+    - name: <configSections>-Element
+      href: configsections-element-for-configuration.md
+    - name: <clear>-Element für <configSections>
+      href: clear-element-for-configsections.md
+    - name: <remove>-Element für <configSections>
+      href: remove-element-for-configsections.md
+    - name: <sectionGroup>-Element
+      href: sectiongroup-element-for-configsections.md
+    - name: Benutzerdefiniertes Element für SingleTagSectionHandler
+      href: custom-element-1.md
+    - name: Benutzerdefiniertes Element für NameValueSectionHandler und DictionarySectionHandler
+      href: custom-element-2.md
+    - name: <add>-Element
+      href: add-element-for-custom-2.md
+    - name: <clear>-Element für NameValueSectionHandler und DictionarySectionHandler
+      href: clear-element-for-custom-2.md
+    - name: <remove>-Element für NameValueSectionHandler und DictionarySectionHandler
+      href: remove-element-for-custom-2.md
+    - name: <section> Element
+      href: section-element.md
+    - name: Schema für App-Einstellungen
+      href: appsettings/index.md
+    - name: Schema für Anwendungseinstellungen
+      href: application-settings-schema.md
+    - name: Schema für Compiler- und Sprachanbietereinstellungen
+      href: compiler/index.md
+    - name: Schema für Konfigurationsabschnitte
+      href: configuration-sections-schema.md
+    - name: Schema für Kryptografieeinstellungen
+      href: cryptography/index.md
+    - name: Netzwerkeinstellungsschema
+      href: network/index.md
+    - name: Schema für Laufzeiteinstellungen
+      href: runtime/index.md
+    - name: Schema für Starteinstellungen
+      href: startup/index.md
+    - name: Schema für Ablaufverfolgungs- und Debugeinstellungen
+      href: trace-debug/index.md
+    - name: Webeinstellungsschema
+      href: web/index.md
+    - name: WCF-Konfigurationsschema
+      href: wcf/index.md
+    - name: WCF-Anweisungssyntax
+      href: wcf-directive/index.md
+    - name: WIF-Konfigurationsschema
+      href: windows-identity-foundation/index.md
+    - name: Konfigurationsabschnitt für Windows Forms
+      href: winforms/index.md
+    - name: Windows Workflow Foundation-Konfigurationsschema
+      href: windows-workflow-foundation/index.md

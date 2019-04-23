@@ -1,122 +1,115 @@
-items:
 - name: Interoperation mit nicht verwaltetem Code
   href: index.md
   items:
-  - name: Verfügbarmachen von COM-Komponenten für .NET Framework
-    href: exposing-com-components.md
-    items:
-    - name: Importieren einer Typbibliothek als Assembly
-      href: importing-a-type-library-as-an-assembly.md
-    - name: 'Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken'
-      href: how-to-add-references-to-type-libraries.md
-    - name: 'Vorgehensweise: Generieren von Interopassemblys aus Typbibliotheken'
-      href: how-to-generate-interop-assemblies-from-type-libraries.md
-    - name: Kompilieren eines Interop-Projekts
-      href: compiling-an-interop-project.md
-    - name: Bereitstellen einer Interop-Anwendung
-      href: deploying-an-interop-application.md
-    - name: 'COM-Interop-Beispiel: .NET-Client und COM-Server'
-      href: com-interop-sample-net-client-and-com-server.md
-  - name: Verfügbarmachen von .NET Framework-Komponenten in COM
-    href: exposing-dotnet-components-to-com.md
-    items:
-    - name: Qualifizieren von .NET-Typen für die Interoperation
-      href: qualifying-net-types-for-interoperation.md
-    - name: Anwenden von Interop-Attributen
-      href: applying-interop-attributes.md
-    - name: Verpacken einer Assembly für COM
-      href: packaging-an-assembly-for-com.md
-    - name: Registrieren von Assemblys mit COM
-      href: registering-assemblies-with-com.md
-    - name: 'Vorgehensweise: Verweisen auf .NET-Typen in COM'
-      href: how-to-reference-net-types-from-com.md
-    - name: 'COM-Interopbeispiel: COM-Client und .NET-Server'
-      href: com-interop-sample-com-client-and-net-server.md
-  - name: Verwenden nicht verwalteter DLL-Funktionen
-    href: consuming-unmanaged-dll-functions.md
-    items:
-    - name: Identifizieren von Funktionen in DLLs
-      href: identifying-functions-in-dlls.md
-    - name: Erstellen einer Klasse zum Halten von DLL-Funktionen
-      href: creating-a-class-to-hold-dll-functions.md
-    - name: Erstellen von Prototypen in verwaltetem Code
-      href: creating-prototypes-in-managed-code.md
+    - name: "Verfügbarmachen von COM-Komponenten für .NET\_Framework"
+      href: exposing-com-components.md
       items:
-      - name: Angeben eines Einstiegspunktes
-        href: specifying-an-entry-point.md
-      - name: Angeben eines Zeichensatzes
-        href: specifying-a-character-set.md
-      - name: Beispiele für Plattformaufrufe
-        href: platform-invoke-examples.md
-    - name: Aufrufen einer DLL-Funktion
-      href: calling-a-dll-function.md
+        - name: Importieren einer Typbibliothek als Assembly
+          href: importing-a-type-library-as-an-assembly.md
+        - name: 'Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken'
+          href: how-to-add-references-to-type-libraries.md
+        - name: 'Vorgehensweise: Generieren von Interopassemblys aus Typbibliotheken'
+          href: how-to-generate-interop-assemblies-from-type-libraries.md
+        - name: Kompilieren eines Interop-Projekts
+          href: compiling-an-interop-project.md
+        - name: Bereitstellen einer Interop-Anwendung
+          href: deploying-an-interop-application.md
+        - name: 'COM-Interop-Beispiel: .NET-Client und COM-Server'
+          href: com-interop-sample-net-client-and-com-server.md
+    - name: Verfügbarmachen von .NET Framework-Komponenten in COM
+      href: exposing-dotnet-components-to-com.md
       items:
-      - name: Übergeben von Strukturen
-        href: passing-structures.md
-      - name: Rückruffunktionen
-        href: callback-functions.md
-      - name: 'Vorgehensweise: Implementieren von Rückruffunktionen'
-        href: how-to-implement-callback-functions.md
-  - name: Interop-Marshalling
-    href: interop-marshaling.md
-    items:
-    - name: Standardmarshallingverhalten
-      href: default-marshaling-behavior.md
+        - name: Qualifizieren von .NET-Typen für die Interoperation
+          href: qualifying-net-types-for-interoperation.md
+        - name: Anwenden von Interop-Attributen
+          href: applying-interop-attributes.md
+        - name: Verpacken einer Assembly für COM
+          href: packaging-an-assembly-for-com.md
+        - name: Registrieren von Assemblys mit COM
+          href: registering-assemblies-with-com.md
+        - name: 'Vorgehensweise: Verweisen auf .NET-Typen in COM'
+          href: how-to-reference-net-types-from-com.md
+        - name: 'COM-Interopbeispiel: COM-Client und .NET-Server'
+          href: com-interop-sample-com-client-and-net-server.md
+    - name: Verwenden nicht verwalteter DLL-Funktionen
+      href: consuming-unmanaged-dll-functions.md
       items:
-      - name: Blitfähige und nicht blitfähige Typen
-        href: blittable-and-non-blittable-types.md
-      - name: Kopieren und Fixieren
-        href: copying-and-pinning.md
-      - name: Standardmäßiges Marshalling für Arrays
-        href: default-marshaling-for-arrays.md
-      - name: Standardmäßiges Marshalling für Objekte
-        href: default-marshaling-for-objects.md
-      - name: Standardmäßiges Marshalling für Zeichenfolgen
-        href: default-marshaling-for-strings.md
-    - name: Marshallen von Daten mit Plattformaufruf
-      href: marshaling-data-with-platform-invoke.md
+        - name: Identifizieren von Funktionen in DLLs
+          href: identifying-functions-in-dlls.md
+        - name: Erstellen einer Klasse zum Halten von DLL-Funktionen
+          href: creating-a-class-to-hold-dll-functions.md
+        - name: Erstellen von Prototypen in verwaltetem Code
+          href: creating-prototypes-in-managed-code.md
+          items:
+            - name: Angeben eines Einstiegspunktes
+              href: specifying-an-entry-point.md
+            - name: Angeben eines Zeichensatzes
+              href: specifying-a-character-set.md
+            - name: Beispiele für Plattformaufrufe
+              href: platform-invoke-examples.md
+        - name: Aufrufen einer DLL-Funktion
+          href: calling-a-dll-function.md
+          items:
+            - name: Übergeben von Strukturen
+              href: passing-structures.md
+            - name: Rückruffunktionen
+              href: callback-functions.md
+            - name: 'Vorgehensweise: Implementieren von Rückruffunktionen'
+              href: how-to-implement-callback-functions.md
+    - name: Interop-Marshalling
+      href: interop-marshaling.md
       items:
-      - name: Marshalling von Zeichenfolgen
-        href: marshaling-strings.md
-      - name: MsgBox-Beispiel
-        href: msgbox-sample.md
-      - name: Marshallen von Klassen, Strukturen und Unions
-        href: marshaling-classes-structures-and-unions.md
-      - name: Marshallen verschiedener Typen von Arrays
-        href: marshaling-different-types-of-arrays.md
-      - name: Marshalling von Delegaten als Rückrufmethode
-        href: marshaling-a-delegate-as-a-callback-method.md
-    - name: Marshallen von Daten mit COM-Interop
-      href: marshaling-data-with-com-interop.md
+        - name: Standardmarshallingverhalten
+          href: default-marshaling-behavior.md
+          items:
+            - name: Blitfähige und nicht blitfähige Typen
+              href: blittable-and-non-blittable-types.md
+            - name: Kopieren und Fixieren
+              href: copying-and-pinning.md
+            - name: Standardmäßiges Marshalling für Arrays
+              href: default-marshaling-for-arrays.md
+            - name: Standardmäßiges Marshalling für Objekte
+              href: default-marshaling-for-objects.md
+            - name: Standardmäßiges Marshalling für Zeichenfolgen
+              href: default-marshaling-for-strings.md
+        - name: Marshallen von Daten mit Plattformaufruf
+          href: marshaling-data-with-platform-invoke.md
+          items:
+            - name: Marshalling von Zeichenfolgen
+              href: marshaling-strings.md
+            - name: MsgBox-Beispiel
+              href: msgbox-sample.md
+            - name: 'Marshallen von Klassen, Strukturen und Unions'
+              href: marshaling-classes-structures-and-unions.md
+            - name: Marshallen verschiedener Typen von Arrays
+              href: marshaling-different-types-of-arrays.md
+            - name: Marshalling von Delegaten als Rückrufmethode
+              href: marshaling-a-delegate-as-a-callback-method.md
+        - name: Marshallen von Daten mit COM-Interop
+          href: marshaling-data-with-com-interop.md
+          items:
+            - name: 'Vorgehensweise: Manuelles Erstellen von Wrappern'
+              href: how-to-create-wrappers-manually.md
+            - name: 'Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF'
+              href: how-to-migrate-managed-code-dcom-to-wcf.md
+    - name: 'Vorgehensweise: Zuordnen von HRESULT-Werten und Ausnahmen'
+      href: how-to-map-hresults-and-exceptions.md
+    - name: COM-Wrapper
+      href: com-wrappers.md
       items:
-      - name: 'Vorgehensweise: Manuelles Erstellen von Wrappern'
-        href: how-to-create-wrappers-manually.md
-      - name: 'Vorgehensweise: Migrieren von verwaltetem Code DCOM zu WCF'
-        href: how-to-migrate-managed-code-dcom-to-wcf.md
-  - name: 'Vorgehensweise: Zuordnen von HRESULT-Werten und Ausnahmen'
-    href: how-to-map-hresults-and-exceptions.md
-  - name: COM-Wrapper
-    href: com-wrappers.md
-    items:
-    - name: Runtime Callable Wrapper (RCW)
-      href: runtime-callable-wrapper.md
-    - name: COM Callable Wrapper (CCW)
-      href: com-callable-wrapper.md
-    - name: 'Vorgehensweise: Erstellen von COM-Wrappern'
-      href: how-to-create-com-wrappers.md
-  - name: Typäquivalenz und eingebettete Interop-Typen
-    href: type-equivalence-and-embedded-interop-types.md
-  - name: 'Vorgehensweise: Generieren primärer Interopassemblys mit „Tlbimp.exe“'
-    href: how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md
-  - name: 'Vorgehensweise: Registrieren primärer Interopassemblys'
-    href: how-to-register-primary-interop-assemblies.md
-  - name: COM-Interop ohne Registrierung
-    href: registration-free-com-interop.md
-  - name: 'Vorgehensweise: Konfigurieren von .NET Framework-basierten COM-Komponenten für die Aktivierung ohne Registrierung'
-    href: configure-net-framework-based-com-components-for-reg.md
-ms.openlocfilehash: be9d4bcdaeb8b7389d72bddfa36e1594b5149ce4
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468733"
+        - name: Runtime Callable Wrapper (RCW)
+          href: runtime-callable-wrapper.md
+        - name: COM Callable Wrapper (CCW)
+          href: com-callable-wrapper.md
+        - name: 'Vorgehensweise: Erstellen von COM-Wrappern'
+          href: how-to-create-com-wrappers.md
+    - name: Typäquivalenz und eingebettete Interop-Typen
+      href: type-equivalence-and-embedded-interop-types.md
+    - name: 'Vorgehensweise: Generieren primärer Interopassemblys mit „Tlbimp.exe“'
+      href: how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md
+    - name: 'Vorgehensweise: Registrieren primärer Interopassemblys'
+      href: how-to-register-primary-interop-assemblies.md
+    - name: COM-Interop ohne Registrierung
+      href: registration-free-com-interop.md
+    - name: 'Vorgehensweise: Konfigurieren von .NET Framework-basierten COM-Komponenten für die Aktivierung ohne Registrierung'
+      href: configure-net-framework-based-com-components-for-reg.md

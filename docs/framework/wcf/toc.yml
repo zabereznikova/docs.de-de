@@ -1,256 +1,249 @@
-items:
 - name: Dienstorientierte Anwendungen mit WCF
   href: index.md
   items:
-  - name: Neues in Windows Communication Foundation 4.5
-    href: whats-new.md
-  - name: WCF-Vereinfachungsfunktionen
-    href: wcf-simplification-features.md
-  - name: Anleitung zur Dokumentation
-    href: guide-to-the-documentation.md
-  - name: Konzeptionelle Übersicht
-    href: conceptual-overview.md
-    items:
-    - name: Was ist die Windows Communication Foundation?
-      href: whats-wcf.md
-    - name: Wesentliche Windows Communication Foundation-Begriffe
-      href: fundamental-concepts.md
-    - name: Windows Communication Foundation-Architektur
-      href: architecture.md
-    - name: Clientprofil für WCF und .NET&amp;#160;Framework
-      href: wcf-and-net-framework-client-profile.md
-  - name: Tutorial für die ersten Schritte
-    href: getting-started-tutorial.md
-    items:
-    - name: Definieren eines Dienstvertrags
-      href: how-to-define-a-wcf-service-contract.md
-    - name: Implementieren eines Dienstvertrags
-      href: how-to-implement-a-wcf-contract.md
-    - name: Hosten und Ausführen eines grundlegenden Diensts
-      href: how-to-host-and-run-a-basic-wcf-service.md
-    - name: Erstellen eines Clients
-      href: how-to-create-a-wcf-client.md
-    - name: Verwenden eines Clients
-      href: how-to-use-a-wcf-client.md
-    - name: Problembehandlung für das Tutorial „Erste Schritte“
-      href: troubleshooting-the-getting-started-tutorial.md
-  - name: Basis-WCF-Programmierung
-    href: basic-wcf-programming.md
-    items:
-    - name: Grundlegender Programmierlebenszyklus
-      href: basic-programming-lifecycle.md
-    - name: Entwerfen und Implementieren von Diensten
-      href: designing-and-implementing-services.md
+    - name: Neues in Windows Communication Foundation 4.5
+      href: whats-new.md
+    - name: WCF-Vereinfachungsfunktionen
+      href: wcf-simplification-features.md
+    - name: Anleitung zur Dokumentation
+      href: guide-to-the-documentation.md
+    - name: Konzeptionelle Übersicht
+      href: conceptual-overview.md
       items:
-      - name: Entwerfen von Dienstverträgen
-        href: designing-service-contracts.md
-        items:
-        - name: Angeben und Behandeln von Fehlern in Verträgen und Diensten
-          href: specifying-and-handling-faults-in-contracts-and-services.md
+        - name: Was ist die Windows Communication Foundation?
+          href: whats-wcf.md
+        - name: Wesentliche Windows Communication Foundation-Begriffe
+          href: fundamental-concepts.md
+        - name: Windows Communication Foundation-Architektur
+          href: architecture.md
+        - name: 'Clientprofil für WCF und .NET&amp;#160;Framework'
+          href: wcf-and-net-framework-client-profile.md
+    - name: Tutorial für die ersten Schritte
+      href: getting-started-tutorial.md
+      items:
+        - name: Definieren eines Dienstvertrags
+          href: how-to-define-a-wcf-service-contract.md
+        - name: Implementieren eines Dienstvertrags
+          href: how-to-implement-a-wcf-contract.md
+        - name: Hosten und Ausführen eines grundlegenden Diensts
+          href: how-to-host-and-run-a-basic-wcf-service.md
+        - name: Erstellen eines Clients
+          href: how-to-create-a-wcf-client.md
+        - name: Verwenden eines Clients
+          href: how-to-use-a-wcf-client.md
+        - name: Problembehandlung für das Tutorial „Erste Schritte“
+          href: troubleshooting-the-getting-started-tutorial.md
+    - name: Basis-WCF-Programmierung
+      href: basic-wcf-programming.md
+      items:
+        - name: Grundlegender Programmierlebenszyklus
+          href: basic-programming-lifecycle.md
+        - name: Entwerfen und Implementieren von Diensten
+          href: designing-and-implementing-services.md
           items:
-          - name: Definieren und Angeben von Fehlern
-            href: defining-and-specifying-faults.md
-            items:
-            - name: 'Vorgehensweise: Deklarieren von Fehlern in Dienstverträgen'
-              href: how-to-declare-faults-in-service-contracts.md
-          - name: Senden und Empfangen von Fehlern
-            href: sending-and-receiving-faults.md
-        - name: Verwenden von Sitzungen
-          href: using-sessions.md
-        - name: Synchrone und asynchrone Vorgänge
-          href: synchronous-and-asynchronous-operations.md
+            - name: Entwerfen von Dienstverträgen
+              href: designing-service-contracts.md
+              items:
+                - name: Angeben und Behandeln von Fehlern in Verträgen und Diensten
+                  href: specifying-and-handling-faults-in-contracts-and-services.md
+                  items:
+                    - name: Definieren und Angeben von Fehlern
+                      href: defining-and-specifying-faults.md
+                      items:
+                        - name: 'Vorgehensweise: Deklarieren von Fehlern in Dienstverträgen'
+                          href: how-to-declare-faults-in-service-contracts.md
+                    - name: Senden und Empfangen von Fehlern
+                      href: sending-and-receiving-faults.md
+                - name: Verwenden von Sitzungen
+                  href: using-sessions.md
+                - name: Synchrone und asynchrone Vorgänge
+                  href: synchronous-and-asynchronous-operations.md
+                  items:
+                    - name: 'Vorgehensweise: Implementieren eines asynchronen Dienstvorgangs'
+                      href: how-to-implement-an-asynchronous-service-operation.md
+                - name: Zuverlässige Dienste
+                  href: reliable-services.md
+                - name: Dienste und Transaktionen
+                  href: services-and-transactions.md
+            - name: Implementieren von Dienstverträgen
+              href: implementing-service-contracts.md
+              items:
+                - name: Angeben des Dienstlaufzeitverhaltens
+                  href: specifying-service-run-time-behavior.md
+        - name: Konfigurieren von Diensten
+          href: configuring-services.md
           items:
-          - name: 'Vorgehensweise: Implementieren eines asynchronen Dienstvorgangs'
-            href: how-to-implement-an-asynchronous-service-operation.md
-        - name: Zuverlässige Dienste
-          href: reliable-services.md
-        - name: Dienste und Transaktionen
-          href: services-and-transactions.md
-      - name: Implementieren von Dienstverträgen
-        href: implementing-service-contracts.md
-        items:
-        - name: Angeben des Dienstlaufzeitverhaltens
-          href: specifying-service-run-time-behavior.md
-    - name: Konfigurieren von Diensten
-      href: configuring-services.md
-      items:
-      - name: Vereinfachte Konfiguration
-        href: simplified-configuration.md
-      - name: Konfigurieren von Diensten mit Konfigurationsdateien
-        href: configuring-services-using-configuration-files.md
-      - name: Konfigurieren von WCF-Diensten in Code
-        href: configuring-wcf-services-in-code.md
-      - name: Bindungen
-        href: bindings.md
-        items:
-        - name: WCF-Bindungsübersicht
-          href: bindings-overview.md
-        - name: Vom System bereitgestellte Bindungen
-          href: system-provided-bindings.md
-        - name: Verwenden von Bindungen, um Dienste und Clients zu konfigurieren
-          href: using-bindings-to-configure-services-and-clients.md
+            - name: Vereinfachte Konfiguration
+              href: simplified-configuration.md
+            - name: Konfigurieren von Diensten mit Konfigurationsdateien
+              href: configuring-services-using-configuration-files.md
+            - name: Konfigurieren von WCF-Diensten in Code
+              href: configuring-wcf-services-in-code.md
+            - name: Bindungen
+              href: bindings.md
+              items:
+                - name: WCF-Bindungsübersicht
+                  href: bindings-overview.md
+                - name: Vom System bereitgestellte Bindungen
+                  href: system-provided-bindings.md
+                - name: 'Verwenden von Bindungen, um Dienste und Clients zu konfigurieren'
+                  href: using-bindings-to-configure-services-and-clients.md
+                  items:
+                    - name: 'Vorgehensweise: Angeben einer Clientbindung im Code'
+                      href: how-to-specify-a-client-binding-in-code.md
+                    - name: 'Vorgehensweise: Angeben einer Clientbindung in einer Konfiguration'
+                      href: how-to-specify-a-client-binding-in-configuration.md
+                    - name: 'Vorgehensweise: Angeben einer Dienstbindung im Code'
+                      href: how-to-specify-a-service-binding-in-code.md
+                    - name: 'Vorgehensweise: Angeben einer Dienstbindung in einer Konfiguration'
+                      href: how-to-specify-a-service-binding-in-configuration.md
+                - name: Konfigurieren von Bindungen für Dienste
+                  href: configuring-bindings-for-wcf-services.md
+            - name: Endpunkte
+              href: endpoints.md
+              items:
+                - name: Übersicht über die Endpunkterstellung
+                  href: endpoint-creation-overview.md
+                - name: Angeben einer Endpunktadresse
+                  href: specifying-an-endpoint-address.md
+                - name: Veröffentlichen von Metadatenendpunkten
+                  href: publishing-metadata-endpoints.md
+            - name: Sichern von Diensten
+              href: securing-services.md
+              items:
+                - name: 'Vorgehensweise: Sichern eines Diensts mit Windows-Anmeldeinformationen'
+                  href: how-to-secure-a-service-with-windows-credentials.md
+                - name: 'Vorgehensweise: Festlegen des Sicherheitsmodus'
+                  href: how-to-set-the-security-mode.md
+                - name: 'Vorgehensweise: Angeben des Typs von Clientanmeldeinformationen'
+                  href: how-to-specify-the-client-credential-type.md
+                - name: 'Vorgehensweise: Einschränken des Zugriffs mit der PrincipalPermissionAttribute-Klasse'
+                  href: how-to-restrict-access-with-the-principalpermissionattribute-class.md
+                - name: 'Vorgehensweise: Annahme der Clientidentität durch einen Dienst'
+                  href: how-to-impersonate-a-client-on-a-service.md
+                - name: 'Vorgehensweise: Prüfen des Sicherheitskontexts'
+                  href: how-to-examine-the-security-context.md
+                - name: Grundlagen der Schutzebene
+                  href: understanding-protection-level.md
+                - name: 'Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft'
+                  href: how-to-set-the-protectionlevel-property.md
+            - name: Erstellen von interoperablen WS-I Basic Profile 1.1-Diensten
+              href: creating-ws-i-basic-profile-1-1-interoperable-services.md
+        - name: Hosting-Dienste
+          href: hosting-services.md
           items:
-          - name: 'Vorgehensweise: Angeben einer Clientbindung im Code'
-            href: how-to-specify-a-client-binding-in-code.md
-          - name: 'Vorgehensweise: Angeben einer Clientbindung in einer Konfiguration'
-            href: how-to-specify-a-client-binding-in-configuration.md
-          - name: 'Vorgehensweise: Angeben einer Dienstbindung im Code'
-            href: how-to-specify-a-service-binding-in-code.md
-          - name: 'Vorgehensweise: Angeben einer Dienstbindung in einer Konfiguration'
-            href: how-to-specify-a-service-binding-in-configuration.md
-        - name: Konfigurieren von Bindungen für Dienste
-          href: configuring-bindings-for-wcf-services.md
-      - name: Endpunkte
-        href: endpoints.md
-        items:
-        - name: Übersicht über die Endpunkterstellung
-          href: endpoint-creation-overview.md
-        - name: Angeben einer Endpunktadresse
-          href: specifying-an-endpoint-address.md
-        - name: Veröffentlichen von Metadatenendpunkten
-          href: publishing-metadata-endpoints.md
-      - name: Sichern von Diensten
-        href: securing-services.md
-        items:
-        - name: 'Vorgehensweise: Sichern eines Diensts mit Windows-Anmeldeinformationen'
-          href: how-to-secure-a-service-with-windows-credentials.md
-        - name: 'Vorgehensweise: Festlegen des Sicherheitsmodus'
-          href: how-to-set-the-security-mode.md
-        - name: 'Vorgehensweise: Angeben des Typs von Clientanmeldeinformationen'
-          href: how-to-specify-the-client-credential-type.md
-        - name: 'Vorgehensweise: Einschränken des Zugriffs mit der PrincipalPermissionAttribute-Klasse'
-          href: how-to-restrict-access-with-the-principalpermissionattribute-class.md
-        - name: 'Vorgehensweise: Annahme der Clientidentität durch einen Dienst'
-          href: how-to-impersonate-a-client-on-a-service.md
-        - name: 'Vorgehensweise: Prüfen des Sicherheitskontexts'
-          href: how-to-examine-the-security-context.md
-        - name: Grundlagen der Schutzebene
-          href: understanding-protection-level.md
-        - name: 'Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft'
-          href: how-to-set-the-protectionlevel-property.md
-      - name: Erstellen von interoperablen WS-I Basic Profile 1.1-Diensten
-        href: creating-ws-i-basic-profile-1-1-interoperable-services.md
-    - name: Hosting-Dienste
-      href: hosting-services.md
+            - name: 'Vorgehensweise: Hosten eines WCF-Diensts in einer verwalteten Anwendung'
+              href: how-to-host-a-wcf-service-in-a-managed-application.md
+            - name: 'Vorgehensweise: Hosten eines WCF-Diensts, der mit .NET Framework 3.5 unter IIS geschrieben wurde und unter .NET Framework 4 ausgeführt wird'
+              href: host-a-wcf-service-net-framework-3-5-iis--net-framework-4.md
+        - name: Erstellen von Clients
+          href: building-clients.md
+          items:
+            - name: Übersicht über den WCF-Client
+              href: wcf-client-overview.md
+            - name: Zugreifen auf Dienste mithilfe eines WCF-Clients
+              href: accessing-services-using-a-wcf-client.md
+              items:
+                - name: Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
+                  href: add-service-reference-in-a-portable-subset-project.md
+                - name: Angeben des Clientlaufzeitverhaltens
+                  href: specifying-client-run-time-behavior.md
+                - name: Konfigurieren von Clientverhalten
+                  href: configuring-client-behaviors.md
+            - name: Sichern von Clients
+              href: securing-clients.md
+              items:
+                - name: 'Vorgehensweise: Angeben der Clientanmeldeinformationswerte'
+                  href: how-to-specify-client-credential-values.md
+        - name: Einführung in die Erweiterbarkeit
+          href: introduction-to-extensibility.md
+        - name: Schnelleinstieg zur Problembehandlung in WCF
+          href: wcf-troubleshooting-quickstart.md
+        - name: WCF-Fehlerbehandlung
+          href: wcf-error-handling.md
+        - name: WCF und ASP.NET-Web-API
+          href: wcf-and-aspnet-web-api.md
+    - name: Details zur WCF-Funktion
+      href: feature-details/
+    - name: Erweitern von WCF
+      href: extending/
+    - name: Richtlinien und empfohlene Vorgehensweisen
+      href: guidelines-and-best-practices.md
       items:
-      - name: 'Vorgehensweise: Hosten eines WCF-Diensts in einer verwalteten Anwendung'
-        href: how-to-host-a-wcf-service-in-a-managed-application.md
-      - name: 'Vorgehensweise: Hosten eines WCF-Diensts, der mit .NET Framework 3.5 unter IIS geschrieben wurde und unter .NET Framework 4 ausgeführt wird'
-        href: host-a-wcf-service-net-framework-3-5-iis--net-framework-4.md
-    - name: Erstellen von Clients
-      href: building-clients.md
+        - name: 'Bewährte Methoden: Datenvertragsversionsverwaltung'
+          href: best-practices-data-contract-versioning.md
+        - name: 'Bewährte Methoden: Zwischenstufen'
+          href: best-practices-intermediaries.md
+        - name: Dienstversionsverwaltung
+          href: service-versioning.md
+        - name: Lastenausgleich
+          href: load-balancing.md
+        - name: Kontrollieren des Ressourcenverbrauchs und Verbessern der Leistung
+          href: controlling-resource-consumption-and-improving-performance.md
+        - name: Bereitstellen von WCF-Anwendungen mit ClickOnce
+          href: deploying-wcf-applications-with-clickonce.md
+    - name: Verwaltung und Diagnose
+      href: diagnostics/
+    - name: Systemanforderungen
+      href: wcf-system-requirements.md
+    - name: Für WCF erforderliche Betriebssystemressourcen
+      href: operating-system-resources-required-by-wcf.md
+    - name: Behandeln von Setup-Problemen
+      href: troubleshooting-setup-issues.md
+    - name: Migrieren von .NET-Remoting zu WCF
+      href: migrating-from-net-remoting-to-wcf.md
+    - name: Verwenden der WCF-Entwicklungstools
+      href: using-the-wcf-development-tools.md
       items:
-      - name: Übersicht über den WCF-Client
-        href: wcf-client-overview.md
-      - name: Zugreifen auf Dienste mithilfe eines WCF-Clients
-        href: accessing-services-using-a-wcf-client.md
-        items:
-        - name: Hinzufügen eines Dienstverweises in einem Projekt für die portable Teilmenge
-          href: add-service-reference-in-a-portable-subset-project.md
-        - name: Angeben des Clientlaufzeitverhaltens
-          href: specifying-client-run-time-behavior.md
-        - name: Konfigurieren von Clientverhalten
-          href: configuring-client-behaviors.md
-      - name: Sichern von Clients
-        href: securing-clients.md
-        items:
-        - name: 'Vorgehensweise: Angeben der Clientanmeldeinformationswerte'
-          href: how-to-specify-client-credential-values.md
-    - name: Einführung in die Erweiterbarkeit
-      href: introduction-to-extensibility.md
-    - name: Schnelleinstieg zur Problembehandlung in WCF
-      href: wcf-troubleshooting-quickstart.md
-    - name: WCF-Fehlerbehandlung
-      href: wcf-error-handling.md
-    - name: WCF und ASP.NET-Web-API
-      href: wcf-and-aspnet-web-api.md
-  - name: Details zur WCF-Funktion
-    href: feature-details/
-  - name: Erweitern von WCF
-    href: extending/
-  - name: Richtlinien und empfohlene Vorgehensweisen
-    href: guidelines-and-best-practices.md
-    items:
-    - name: 'Bewährte Methoden: Datenvertragsversionsverwaltung'
-      href: best-practices-data-contract-versioning.md
-    - name: 'Bewährte Methoden: Zwischenstufen'
-      href: best-practices-intermediaries.md
-    - name: Dienstversionsverwaltung
-      href: service-versioning.md
-    - name: Lastenausgleich
-      href: load-balancing.md
-    - name: Kontrollieren des Ressourcenverbrauchs und Verbessern der Leistung
-      href: controlling-resource-consumption-and-improving-performance.md
-    - name: Bereitstellen von WCF-Anwendungen mit ClickOnce
-      href: deploying-wcf-applications-with-clickonce.md
-  - name: Verwaltung und Diagnose
-    href: diagnostics/
-  - name: Systemanforderungen
-    href: wcf-system-requirements.md
-  - name: Für WCF erforderliche Betriebssystemressourcen
-    href: operating-system-resources-required-by-wcf.md
-  - name: Behandeln von Setup-Problemen
-    href: troubleshooting-setup-issues.md
-  - name: Migrieren von .NET-Remoting zu WCF
-    href: migrating-from-net-remoting-to-wcf.md
-  - name: Verwenden der WCF-Entwicklungstools
-    href: using-the-wcf-development-tools.md
-    items:
-    - name: WCF-Diensthost (WcfSvcHost.exe)
-      href: wcf-service-host-wcfsvchost-exe.md
-    - name: WCF-Testclient (WcfTestClient.exe)
-      href: wcf-test-client-wcftestclient-exe.md
-    - name: WCF Visual Studio-Vorlagen
-      href: wcf-vs-templates.md
-    - name: WCF-Dienstpublishing
-      href: wcf-service-publishing.md
-    - name: Umbenennen eines WCF-Diensts
-      href: renaming-a-wcf-service.md
-    - name: Bereitstellen eines WCF-Bibliotheksprojekts
-      href: deploying-a-wcf-library-project.md
-    - name: Steuern des automatischen Starts des WCF-Diensthosts
-      href: controlling-auto-launching-of-wcf-service-host.md
-    - name: Generieren von Datentypklassen aus XML
-      href: generating-data-type-classes-from-xml.md
-  - name: Windows Communication Foundation-Tools
-    href: tools.md
-    items:
-    - name: ServiceModel Metadata Utility-Tool (Svcutil.exe)
-      href: servicemodel-metadata-utility-tool-svcutil-exe.md
-    - name: Find Private Key-Tool (FindPrivateKey.exe)
-      href: find-private-key-tool-findprivatekey-exe.md
-    - name: ServiceModel Registration-Tool (ServiceModelReg.exe)
-      href: servicemodelreg-exe.md
-    - name: Service Trace Viewer-Tool (SvcTraceViewer.exe)
-      href: service-trace-viewer-tool-svctraceviewer-exe.md
-    - name: Configuration Editor-Tool (SvcConfigEditor.exe)
-      href: configuration-editor-tool-svcconfigeditor-exe.md
-    - name: COM+ Service Model Configuration-Tool (ComSvcConfig.exe)
-      href: com-service-model-configuration-tool-comsvcconfig-exe.md
-    - name: WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)
-      href: ws-atomictransaction-configuration-utility-wsatconfig-exe.md
+        - name: WCF-Diensthost (WcfSvcHost.exe)
+          href: wcf-service-host-wcfsvchost-exe.md
+        - name: WCF-Testclient (WcfTestClient.exe)
+          href: wcf-test-client-wcftestclient-exe.md
+        - name: WCF Visual Studio-Vorlagen
+          href: wcf-vs-templates.md
+        - name: WCF-Dienstpublishing
+          href: wcf-service-publishing.md
+        - name: Umbenennen eines WCF-Diensts
+          href: renaming-a-wcf-service.md
+        - name: Bereitstellen eines WCF-Bibliotheksprojekts
+          href: deploying-a-wcf-library-project.md
+        - name: Steuern des automatischen Starts des WCF-Diensthosts
+          href: controlling-auto-launching-of-wcf-service-host.md
+        - name: Generieren von Datentypklassen aus XML
+          href: generating-data-type-classes-from-xml.md
+    - name: Windows Communication Foundation-Tools
+      href: tools.md
       items:
-      - name: Interpretieren von Fehlercodes, die von wsatConfig.exe zurückgegeben werden
-        href: interpreting-error-codes-returned-by-wsatconfig-exe.md
-    - name: WS-AtomicTransaction-Konfiguration-MMC-Snap-In
-      href: ws-atomictransaction-configuration-mmc-snap-in.md
-    - name: Registrierungstool für Workflow Services (WFServicesReg.exe)
-      href: workflow-service-registration-tool-wfservicesreg-exe.md
-    - name: Vertrag zuerst-Tool
-      href: contract-first-tool.md
-  - name: Beispiele für Windows Communication Foundation
-    href: samples/
-  - name: Glossar für Windows Communication Foundation
-    href: glossary.md
-  - name: Allgemeine Referenzinformationen
-    href: general-reference.md
-  - name: Feedback und Community
-    href: feedback-and-community.md
-  - name: Datenschutzinformationen
-    href: privacy-information.md
-ms.openlocfilehash: 4bd93b468fb7f077fc070053745d8ac6b2abb810
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469420"
+        - name: ServiceModel Metadata Utility-Tool (Svcutil.exe)
+          href: servicemodel-metadata-utility-tool-svcutil-exe.md
+        - name: Find Private Key-Tool (FindPrivateKey.exe)
+          href: find-private-key-tool-findprivatekey-exe.md
+        - name: ServiceModel Registration-Tool (ServiceModelReg.exe)
+          href: servicemodelreg-exe.md
+        - name: Service Trace Viewer-Tool (SvcTraceViewer.exe)
+          href: service-trace-viewer-tool-svctraceviewer-exe.md
+        - name: Configuration Editor-Tool (SvcConfigEditor.exe)
+          href: configuration-editor-tool-svcconfigeditor-exe.md
+        - name: COM+ Service Model Configuration-Tool (ComSvcConfig.exe)
+          href: com-service-model-configuration-tool-comsvcconfig-exe.md
+        - name: WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)
+          href: ws-atomictransaction-configuration-utility-wsatconfig-exe.md
+          items:
+            - name: 'Interpretieren von Fehlercodes, die von wsatConfig.exe zurückgegeben werden'
+              href: interpreting-error-codes-returned-by-wsatconfig-exe.md
+        - name: WS-AtomicTransaction-Konfiguration-MMC-Snap-In
+          href: ws-atomictransaction-configuration-mmc-snap-in.md
+        - name: Registrierungstool für Workflow Services (WFServicesReg.exe)
+          href: workflow-service-registration-tool-wfservicesreg-exe.md
+        - name: Vertrag zuerst-Tool
+          href: contract-first-tool.md
+    - name: Beispiele für Windows Communication Foundation
+      href: samples/
+    - name: Glossar für Windows Communication Foundation
+      href: glossary.md
+    - name: Allgemeine Referenzinformationen
+      href: general-reference.md
+    - name: Feedback und Community
+      href: feedback-and-community.md
+    - name: Datenschutzinformationen
+      href: privacy-information.md

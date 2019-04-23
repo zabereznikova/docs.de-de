@@ -1,106 +1,99 @@
-items:
 - name: Netzwerkeinstellungsschema
   href: index.md
   items:
-  - name: <system.Net>-Element (Netzwerkeinstellungen)
-    href: system-net-element-network-settings.md
-    items:
-    - name: <authenticationModules>-Element (Netzwerkeinstellungen)
-      href: authenticationmodules-element-network-settings.md
+    - name: <system.Net>-Element (Netzwerkeinstellungen)
+      href: system-net-element-network-settings.md
       items:
-      - name: <add>-Element für authenticationModules (Netzwerkeinstellungen)
-        href: add-element-for-authenticationmodules-network-settings.md
-      - name: <remove>-Element für authenticationModules (Netzwerkeinstellungen)
-        href: remove-element-for-authenticationmodules-network-settings.md
-      - name: <clear>-Element für authenticationModules (Netzwerkeinstellungen)
-        href: clear-element-for-authenticationmodules-network-settings.md
-    - name: <connectionManagement>-Element (Netzwerkeinstellungen)
-      href: connectionmanagement-element-network-settings.md
+        - name: <authenticationModules>-Element (Netzwerkeinstellungen)
+          href: authenticationmodules-element-network-settings.md
+          items:
+            - name: <add>-Element für authenticationModules (Netzwerkeinstellungen)
+              href: add-element-for-authenticationmodules-network-settings.md
+            - name: <remove>-Element für authenticationModules (Netzwerkeinstellungen)
+              href: remove-element-for-authenticationmodules-network-settings.md
+            - name: <clear>-Element für authenticationModules (Netzwerkeinstellungen)
+              href: clear-element-for-authenticationmodules-network-settings.md
+        - name: <connectionManagement>-Element (Netzwerkeinstellungen)
+          href: connectionmanagement-element-network-settings.md
+          items:
+            - name: <add>-Element für connectionManagement (Netzwerkeinstellungen)
+              href: add-element-for-connectionmanagement-network-settings.md
+            - name: <clear>-Element für connectionManagement (Netzwerkeinstellungen)
+              href: clear-element-for-connectionmanagement-network-settings.md
+            - name: <remove>-Element für connectionManagement (Netzwerkeinstellungen)
+              href: remove-element-for-connectionmanagement-network-settings.md
+        - name: <defaultProxy>-Element (Netzwerkeinstellungen)
+          href: defaultproxy-element-network-settings.md
+          items:
+            - name: <bypasslist>-Element (Netzwerkeinstellungen)
+              href: bypasslist-element-network-settings.md
+              items:
+                - name: <add>-Element für bypasslist (Netzwerkeinstellungen)
+                  href: add-element-for-bypasslist-network-settings.md
+                - name: <clear>-Element für bypasslist (Netzwerkeinstellungen)
+                  href: clear-element-for-bypasslist-network-settings.md
+                - name: <remove>-Element für bypasslist (Netzwerkeinstellungen)
+                  href: remove-element-for-bypasslist-network-settings.md
+            - name: <module>-Element (Netzwerkeinstellungen)
+              href: module-element-network-settings.md
+            - name: <proxy>-Element (Netzwerkeinstellungen)
+              href: proxy-element-network-settings.md
+        - name: <mailSettings>-Element (Netzwerkeinstellungen)
+          href: mailsettings-element-network-settings.md
+          items:
+            - name: <smtp>-Element (Netzwerkeinstellungen)
+              href: smtp-element-network-settings.md
+              items:
+                - name: <specifiedPickupDirectory>-Element (Netzwerkeinstellungen)
+                  href: specifiedpickupdirectory-element-network-settings.md
+                - name: <network>-Element (Netzwerkeinstellungen)
+                  href: network-element-network-settings.md
+        - name: <requestCaching>-Element (Netzwerkeinstellungen)
+          href: requestcaching-element-network-settings.md
+          items:
+            - name: <defaultHttpCachePolicy>-Element (Netzwerkeinstellungen)
+              href: defaulthttpcachepolicy-element-network-settings.md
+            - name: <defaultFtpCachePolicy>-Element (Netzwerkeinstellungen)
+              href: defaultftpcachepolicy-element-network-settings.md
+        - name: <settings>-Element (Netzwerkeinstellungen)
+          href: settings-element-network-settings.md
+          items:
+            - name: <httpWebRequest>-Element (Netzwerkeinstellungen)
+              href: httpwebrequest-element-network-settings.md
+            - name: <ipv6>-Element (Netzwerkeinstellungen)
+              href: ipv6-element-network-settings.md
+            - name: <performanceCounter>-Element (Netzwerkeinstellungen)
+              href: performancecounter-element-network-settings.md
+            - name: <servicePointManager>-Element (Netzwerkeinstellungen)
+              href: servicepointmanager-element-network-settings.md
+            - name: <socket>-Element (Netzwerkeinstellungen)
+              href: socket-element-network-settings.md
+            - name: <webProxyScript>-Element (Netzwerkeinstellungen)
+              href: webproxyscript-element-network-settings.md
+            - name: <httpListener>-Element (Netzwerkeinstellungen)
+              href: httplistener-element-network-settings.md
+        - name: <webRequestModules>-Element (Netzwerkeinstellungen)
+          href: webrequestmodules-element-network-settings.md
+          items:
+            - name: <add>-Element für webRequestModules (Netzwerkeinstellungen)
+              href: add-element-for-webrequestmodules-network-settings.md
+            - name: <remove>-Element für webRequestModules (Netzwerkeinstellungen)
+              href: remove-element-for-webrequestmodules-network-settings.md
+            - name: <clear>-Element für webRequestModules (Netzwerkeinstellungen)
+              href: clear-element-for-webrequestmodules-network-settings.md
+    - name: <Uri>-Element (URI-Einstellungen)
+      href: uri-element-uri-settings.md
       items:
-      - name: <add>-Element für connectionManagement (Netzwerkeinstellungen)
-        href: add-element-for-connectionmanagement-network-settings.md
-      - name: <clear>-Element für connectionManagement (Netzwerkeinstellungen)
-        href: clear-element-for-connectionmanagement-network-settings.md
-      - name: <remove>-Element für connectionManagement (Netzwerkeinstellungen)
-        href: remove-element-for-connectionmanagement-network-settings.md
-    - name: <defaultProxy>-Element (Netzwerkeinstellungen)
-      href: defaultproxy-element-network-settings.md
-      items:
-      - name: <bypasslist>-Element (Netzwerkeinstellungen)
-        href: bypasslist-element-network-settings.md
-        items:
-        - name: <add>-Element für bypasslist (Netzwerkeinstellungen)
-          href: add-element-for-bypasslist-network-settings.md
-        - name: <clear>-Element für bypasslist (Netzwerkeinstellungen)
-          href: clear-element-for-bypasslist-network-settings.md
-        - name: <remove>-Element für bypasslist (Netzwerkeinstellungen)
-          href: remove-element-for-bypasslist-network-settings.md
-      - name: <module>-Element (Netzwerkeinstellungen)
-        href: module-element-network-settings.md
-      - name: <proxy>-Element (Netzwerkeinstellungen)
-        href: proxy-element-network-settings.md
-    - name: <mailSettings>-Element (Netzwerkeinstellungen)
-      href: mailsettings-element-network-settings.md
-      items:
-      - name: <smtp>-Element (Netzwerkeinstellungen)
-        href: smtp-element-network-settings.md
-        items:
-        - name: <specifiedPickupDirectory>-Element (Netzwerkeinstellungen)
-          href: specifiedpickupdirectory-element-network-settings.md
-        - name: <network>-Element (Netzwerkeinstellungen)
-          href: network-element-network-settings.md
-    - name: <requestCaching>-Element (Netzwerkeinstellungen)
-      href: requestcaching-element-network-settings.md
-      items:
-      - name: <defaultHttpCachePolicy>-Element (Netzwerkeinstellungen)
-        href: defaulthttpcachepolicy-element-network-settings.md
-      - name: <defaultFtpCachePolicy>-Element (Netzwerkeinstellungen)
-        href: defaultftpcachepolicy-element-network-settings.md
-    - name: <settings>-Element (Netzwerkeinstellungen)
-      href: settings-element-network-settings.md
-      items:
-      - name: <httpWebRequest>-Element (Netzwerkeinstellungen)
-        href: httpwebrequest-element-network-settings.md
-      - name: <ipv6>-Element (Netzwerkeinstellungen)
-        href: ipv6-element-network-settings.md
-      - name: <performanceCounter>-Element (Netzwerkeinstellungen)
-        href: performancecounter-element-network-settings.md
-      - name: <servicePointManager>-Element (Netzwerkeinstellungen)
-        href: servicepointmanager-element-network-settings.md
-      - name: <socket>-Element (Netzwerkeinstellungen)
-        href: socket-element-network-settings.md
-      - name: <webProxyScript>-Element (Netzwerkeinstellungen)
-        href: webproxyscript-element-network-settings.md
-      - name: <httpListener>-Element (Netzwerkeinstellungen)
-        href: httplistener-element-network-settings.md
-    - name: <webRequestModules>-Element (Netzwerkeinstellungen)
-      href: webrequestmodules-element-network-settings.md
-      items:
-      - name: <add>-Element für webRequestModules (Netzwerkeinstellungen)
-        href: add-element-for-webrequestmodules-network-settings.md
-      - name: <remove>-Element für webRequestModules (Netzwerkeinstellungen)
-        href: remove-element-for-webrequestmodules-network-settings.md
-      - name: <clear>-Element für webRequestModules (Netzwerkeinstellungen)
-        href: clear-element-for-webrequestmodules-network-settings.md
-  - name: <Uri>-Element (URI-Einstellungen)
-    href: uri-element-uri-settings.md
-    items:
-    - name: <idn>-Element (URI-Einstellungen)
-      href: idn-element-uri-settings.md
-    - name: <iriParsing>-Element (URI-Einstellungen)
-      href: iriparsing-element-uri-settings.md
-    - name: <schemeSettings>-Element (URI-Einstellungen)
-      href: schemesettings-element-uri-settings.md
-      items:
-      - name: <add>-Element für schemeSettings (URI-Einstellungen)
-        href: add-element-for-schemesettings-uri-settings.md
-      - name: <clear>-Element für schemeSettings (URI-Einstellungen)
-        href: clear-element-for-schemesettings-uri-settings.md
-      - name: <remove>-Element für schemeSettings (URI-Einstellungen)
-        href: remove-element-for-schemesettings-uri-settings.md
-ms.openlocfilehash: fb6762a20d1c5210e860b9720a62c200f3109ddd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469006"
+        - name: <idn>-Element (URI-Einstellungen)
+          href: idn-element-uri-settings.md
+        - name: <iriParsing>-Element (URI-Einstellungen)
+          href: iriparsing-element-uri-settings.md
+        - name: <schemeSettings>-Element (URI-Einstellungen)
+          href: schemesettings-element-uri-settings.md
+          items:
+            - name: <add>-Element für schemeSettings (URI-Einstellungen)
+              href: add-element-for-schemesettings-uri-settings.md
+            - name: <clear>-Element für schemeSettings (URI-Einstellungen)
+              href: clear-element-for-schemesettings-uri-settings.md
+            - name: <remove>-Element für schemeSettings (URI-Einstellungen)
+              href: remove-element-for-schemesettings-uri-settings.md

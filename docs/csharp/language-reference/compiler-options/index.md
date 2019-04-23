@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
 ms.openlocfilehash: a0affaf3691d2392c9f8d7502204d0122f2ea428
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662828"
 ---
 # <a name="c-compiler-options"></a>C#-Compileroptionen
 Der Compiler generiert ausführbare Dateien (EXE), Dynamic Link Libraries (DLL) oder Codemodule (NETMODULE).  
@@ -28,7 +28,7 @@ Der Compiler generiert ausführbare Dateien (EXE), Dynamic Link Libraries (DLL) 
  [Erstellen über die Befehlszeile mit csc.exe](command-line-building-with-csc-exe.md)  
  Informationen zum Erstellen einer Visual C#-Anwendung über die Befehlszeile  
   
- [Gewusst wie: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+ [Vorgehensweise: Festlegen von Umgebungsvariablen für die Visual Studio-Befehlszeile](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  Stellt Schritte zum Ausführen von „vsvars32.bat“ bereit, um Befehlszeilenbuilds zu ermöglichen  
   
  [C#-Compileroptionen nach Kategorien sortiert](listed-by-category.md)  
