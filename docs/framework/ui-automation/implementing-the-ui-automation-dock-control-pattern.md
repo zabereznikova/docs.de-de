@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
 ms.openlocfilehash: 32ee58833b83e2a3356b6c1598abd207364e6ec1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190515"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>Implementieren des Dock-Steuerelementmusters der Benutzeroberflächenautomatisierung
@@ -28,7 +28,7 @@ Andockbeispiel aus Visual Studio, in dem das Fenster „Klassenansicht“ die Do
 ## <a name="implementation-guidelines-and-conventions"></a>Implementierungsrichtlinien und -konventionen  
  Beachten Sie beim Implementieren des Dock-Steuerelementmusters die folgenden Richtlinien und Konventionen:  
   
--   <xref:System.Windows.Automation.Provider.IDockProvider> macht Eigenschaften des dockingcontainers oder Eigenschaften von Steuerelementen, die neben dem aktuellen Steuerelement im dockingcontainer angedockt sind.  
+-   <xref:System.Windows.Automation.Provider.IDockProvider> macht keine Eigenschaften des Dockingcontainers bzw. der Steuerelemente verfügbar, die neben dem aktuellen Steuerelement im Dockingcontainer angedockt sind.  
   
 -   Steuerelemente werden relativ zueinander entsprechend ihrer aktuellen z-Reihenfolge angeordnet. Je höher ihre z-Reihenfolgenposition ist, desto weiter entfernt vom angegebenen Rand des Dockingcontainers werden sie platziert.  
   

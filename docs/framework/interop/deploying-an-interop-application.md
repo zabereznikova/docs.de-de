@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0efe9234bd61a45fa87e68cdbed1be69957d218
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e9bacc8f67755319b416c14766204f6eb2be52de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675159"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192081"
 ---
 # <a name="deploying-an-interop-application"></a>Bereitstellen einer Interop-Anwendung
 Eine Interop-Anwendung enthält üblicherweise eine .NET-Clientassembly, eine oder mehr Interopassemblys, die unterschiedliche COM-Typbibliotheken darstellen, sowie eine oder mehrere COM-Komponenten. Visual Studio und das [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] stellen Tools zum Importieren und Konvertieren einer Typbibliothek in eine Interopassembly bereit, wie in [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](importing-a-type-library-as-an-assembly.md) beschrieben. Es gibt zwei Möglichkeiten zum Bereitstellen einer Interop-Anwendung:  
@@ -46,7 +46,8 @@ Eine Interop-Anwendung enthält üblicherweise eine .NET-Clientassembly, eine od
  Assemblys, die von mehreren Anwendungen gemeinsam genutzt werden, sollten in einem zentralen Repository, das als globaler Assemblycache bezeichnet wird, installiert werden. .NET-Clients können auf dieselbe Kopie der Interopassembly zugreifen, die signiert und im globalen Assemblycache installiert ist. Weitere Informationen zum Erstellen und Verwenden von primären Interop-Assemblys finden Sie unter [Primäre Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100)).  
   
 ## <a name="see-also"></a>Siehe auch
-- [Verfügbarmachen von COM-Komponenten für .NET Framework](exposing-com-components.md)
-- [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](importing-a-type-library-as-an-assembly.md)
+
+- [Verfügbarmachen von COM-Komponenten für .NET Framework](exposing-com-components.md)
+- [Importieren einer Typbibliothek als Assembly](importing-a-type-library-as-an-assembly.md)
 - [Verwenden von COM-Typen in verwaltetem Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))
 - [Kompilieren eines Interop-Projekts](compiling-an-interop-project.md)

@@ -1,5 +1,5 @@
 ---
-title: <source> Element
+title: <source>-Element
 ms.date: 09/29/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - <source> element
 - source element
 ms.openlocfilehash: 8860f5d3ed7ee0c04d1e8afd7614f3f73b470808
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186549"
 ---
 # <a name="source-element"></a>\<Quelle >-Element
@@ -84,5 +84,5 @@ Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiie
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
 - [Ablaufverfolgungsschalter](../../../../../docs/framework/debug-trace-profile/trace-switches.md)

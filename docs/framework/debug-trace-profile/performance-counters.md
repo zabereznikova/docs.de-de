@@ -9,10 +9,10 @@ ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 210a0a7d84f21360dce93627cdf6a27777c09968
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184807"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Leistungsindikatoren in .NET Framework
@@ -64,7 +64,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Win
   
 |Leistungsindikator|Beschreibung|  
 |-------------------------|-----------------|  
-|**Anzahl JIT-kompilierte IL-Bytes**|Zeigt die Gesamtzahl der seit dem Anwendungsstart vom JIT-Compiler (Just in Time) kompilierten MSIL-Bytes (Microsoft Intermediate Language) an. Dieser Indikator entspricht dem Indikator **Gesamtzahl JIT-kompilierte IL-Bytes**.|  
+|**Anzahl der JIT-kompilierten IL-Bytes**|Zeigt die Gesamtzahl der seit dem Anwendungsstart vom JIT-Compiler (Just in Time) kompilierten MSIL-Bytes (Microsoft Intermediate Language) an. Dieser Indikator entspricht dem Indikator **Gesamtzahl JIT-kompilierte IL-Bytes**.|  
 |**Anzahl JIT-kompilierte Methoden**|Zeigt die Gesamtzahl der seit dem Anwendungsstart JIT-kompilierten Methoden an. Dieser Indikator berücksichtigt keine vor-JIT-kompilierten Methoden.|  
 |**JIT-Zeitdauer in Prozent**|Zeigt den Prozentsatz der verstrichenen Zeit an, der seit der letzten JIT-Kompilierungsphase in der JIT-Kompilierung verbracht wurde. Dieser Indikator wird am Ende jeder JIT-Kompilierungsphase aktualisiert. Eine JIT-Kompilierungsphase tritt auf, wenn eine Methode und ihre Abhängigkeiten kompiliert werden.|  
 |**JIT-kompilierte IL-Bytes/s**|Zeigt die Anzahl der pro Sekunde JIT-kompilierten MSIL-Bytes an. Dieser Indikator ist kein Durchschnittswert über einen Zeitraum. Es wird vielmehr der Unterschied zwischen den festgestellten Werten in den letzten beiden Abtastungen, dividiert durch die Dauer des Abtastintervalls, angezeigt.|  
@@ -120,7 +120,7 @@ Dieses Thema enthält eine Liste der Leistungsindikatoren Sie in finden der [Win
 |**Anzahl Bytes in allen Heaps**|Zeigt die Summe der Indikatoren **Gen 1-Heapgröße**, **Gen 2-Heapgröße** und **Größe des Heaps für große Objekte** an. Dieser Indikator gibt den aktuellen Speicher in Bytes an, der für Garbage Collection-Heaps reserviert ist.|  
 |**Anzahl GC-Handles**|Zeigt die aktuelle Anzahl der verwendeten Garbage Collection-Handles an. Garbage Collection-Handles sind Handles zu Ressourcen, die sich außerhalb der Common Language Runtime und der verwalteten Umgebung befinden.|  
 |**Anzahl Gen 0-Collections**|Zeigt an, wie oft für die Generation 0-Objekte (d. h. die jüngsten, zuletzt zugewiesenen Objekte) seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde.<br /><br /> Garbage Collection für die Generation 0 tritt auf, wenn der verfügbare Speicher in der Generation 0 nicht ausreicht, um eine Speicherzuordnungsanforderung zu erfüllen. Dieser Indikator wird am Ende einer Garbage Collection für die Generation 0 aktualisiert. Garbage Collections höherer Generationen umfassen alle Garbage Collections der niedrigeren Generationen. Dieser Indikator wird explizit erhöht, wenn eine Garbage Collection einer höheren Generation (Generation 1 oder 2) auftritt.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_**-Indikatorwert ist nicht genau und sollte ignoriert werden.|  
-|**Anzahl Gen 0-Collections**|Zeigt an, wie oft für die Generation 1-Objekte seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde.<br /><br /> Der Indikator wird am Ende einer Garbage Collection für die Generation 1 aktualisiert. Garbage Collections höherer Generationen umfassen alle Garbage Collections der niedrigeren Generationen. Dieser Indikator wird explizit erhöht, wenn eine Garbage Collection einer höheren Generation (Generation 2) auftritt.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_**-Indikatorwert ist nicht genau und sollte ignoriert werden.|  
+|**Anzahl Gen 1-Collections**|Zeigt an, wie oft für die Generation 1-Objekte seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde.<br /><br /> Der Indikator wird am Ende einer Garbage Collection für die Generation 1 aktualisiert. Garbage Collections höherer Generationen umfassen alle Garbage Collections der niedrigeren Generationen. Dieser Indikator wird explizit erhöht, wenn eine Garbage Collection einer höheren Generation (Generation 2) auftritt.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_**-Indikatorwert ist nicht genau und sollte ignoriert werden.|  
 |**Anzahl Gen 2-Collections**|Zeigt an, wie oft für die Generation 2-Objekte seit dem Anwendungsstart eine Garbage Collection durchgeführt wurde. Der Indikator wird am Ende einer Garbage Collection für die Generation 2 (auch als vollständige Garbage Collection bezeichnet) aktualisiert.<br /><br /> Dieser Indikator zeigt den letzten erfassten Wert an. Der **_Global\_**-Indikatorwert ist nicht genau und sollte ignoriert werden.|  
 |**Anzahl induzierte GC**|Zeigt die Höchstzahl der aufgrund eines expliziten Aufrufs von <xref:System.GC.Collect%2A?displayProperty=nameWithType> durchgeführten Garbage Collections. Es wird empfohlen, die Häufigkeit der durchgeführten Garbage Collections dem Garbage Collector zu überlassen.|  
 |**Anzahl fixierte Objekte**|Zeigt die Anzahl der fixierten Objekte an, die in der letzten Garbage Collection vorhanden waren. Ein fixiertes Objekt ist ein Objekt, dass der Garbage Collector nicht im Arbeitsspeicher verschieben kann. Dieser Indikator erfasst fixierte Objekte nur in Heaps, die der Garbage Collection unterliegen. Eine Garbage Collection der Generation 0 verursacht beispielsweise nur eine Zählung der fixierten Objekte im Generation 0-Heap.|  

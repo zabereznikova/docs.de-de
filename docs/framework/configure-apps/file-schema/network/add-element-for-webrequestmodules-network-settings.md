@@ -1,5 +1,5 @@
 ---
-title: <add> -Element für WebRequestModules (Netzwerkeinstellungen)
+title: <add>-Element für webRequestModules (Netzwerkeinstellungen)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
 ms.openlocfilehash: 4c1116c088c12ad3859714c8d75704d0156c12f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188239"
 ---
 # <a name="add-element-for-webrequestmodules-network-settings"></a>\<Hinzufügen >-Element für WebRequestModules (Netzwerkeinstellungen)
@@ -84,4 +84,4 @@ Die Anwendung hinzugefügt ein benutzerdefinierte Webanforderungsmodul.
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Net.WebRequest>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

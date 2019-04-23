@@ -3,10 +3,10 @@ title: Binäre Daten und Daten mit umfangreichen Werten in SQL Server
 ms.date: 03/30/2017
 ms.assetid: e00827b3-7511-4b2d-91d7-851ca86cc6b5
 ms.openlocfilehash: 4b7a3f16726d6363cd702fb912bb7be281a25000
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192965"
 ---
 # <a name="sql-server-binary-and-large-value-data"></a>Binäre Daten und Daten mit umfangreichen Werten in SQL Server
@@ -23,7 +23,7 @@ SQL Server umfasst den `max`-Bezeichner, der die Speicherkapazität für die Dat
   
 ## <a name="see-also"></a>Siehe auch
 
-- [SQL Server-Datentypen und ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [SQL Server-Datenvorgänge in ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
+- [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [SQL Server Data Operations in ADO.NET (SQL Server-Datenvorgänge in ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
 - [Abrufen und Ändern von Daten in ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

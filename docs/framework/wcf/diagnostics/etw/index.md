@@ -7,10 +7,10 @@ helpviewer_keywords:
 - analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
 ms.openlocfilehash: cff13439995d8a90da15b7afa15723f21574e35e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193714"
 ---
 # <a name="analytic-tracing-with-etw"></a>Analytische Ablaufverfolgung per ETW
@@ -26,7 +26,7 @@ Analytische Ablaufverfolgung von Windows Communication Foundation (WCF) bietet e
  [Konfigurieren der Ablaufverfolgung des Nachrichtenflusses](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)  
  Beschreibt, wie die Ablaufverfolgung des Nachrichtenflusses konfiguriert wird.  
   
- [Ereignisverweis der analytischen Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/etw/analytic-trace-event-reference.md)  
+ [Ereignisreferenz der analytischen Ablaufverfolgung](../../../../../docs/framework/wcf/diagnostics/etw/analytic-trace-event-reference.md)  
  Zeigt eine Tabelle von Ereignis-IDs mit den dazugehörigen Ereignisebenen, Ereignisnachrichten und Schlüsselwörtern an.  
   
 ## <a name="see-also"></a>Siehe auch

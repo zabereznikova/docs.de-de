@@ -15,10 +15,10 @@ helpviewer_keywords:
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
 ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188642"
 ---
 # <a name="dependency-properties-overview"></a>Übersicht über Abhängigkeitseigenschaften
@@ -36,7 +36,7 @@ Abhängigkeitseigenschaften dienen der Berechnung des Werts einer Eigenschaft an
 Anhand der SDK-Referenz können Sie ermitteln, welche Eigenschaft eine Abhängigkeitseigenschaft ist, wenn diese im Abschnitt „Informationen zur Abhängigkeitseigenschaft“ auf der verwalteten Referenzseite für diese Eigenschaft vorhanden ist. Der Abschnitt mit den Informationen zur Abhängigkeitseigenschaft enthält einen Link zum <xref:System.Windows.DependencyProperty>-Bezeichner für diese Abhängigkeitseigenschaft und eine Liste der Metadatenoptionen für diese Eigenschaft, der Informationen für das Überschreiben pro Klasse und anderer Details.
 
 ## <a name="dependency-properties-back-clr-properties"></a>Abhängigkeitseigenschaften unterstützen CLR-Eigenschaften
-Abhängigkeitseigenschaften und das WPF-Eigenschaftensystem erweitern die Funktionalität von Eigenschaften durch die Bereitstellung eines Typs, der eine Eigenschaft als eine alternative Implementierung zum Standardmuster unterstützt, bei dem die Eigenschaft mit einem privaten Feld unterstützt wird. Der Name dieses Typs lautet <xref:System.Windows.DependencyProperty>. Der andere wichtige Typ, der das WPF-Eigenschaftensystem definiert, ist <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> definiert die Basisklasse, die registrieren und besitzen eine Abhängigkeitseigenschaft kann an.
+Abhängigkeitseigenschaften und das WPF-Eigenschaftensystem erweitern die Funktionalität von Eigenschaften durch die Bereitstellung eines Typs, der eine Eigenschaft als eine alternative Implementierung zum Standardmuster unterstützt, bei dem die Eigenschaft mit einem privaten Feld unterstützt wird. Der Name dieses Typs lautet <xref:System.Windows.DependencyProperty>. Der andere wichtige Typ, der das WPF-Eigenschaftensystem definiert, ist <xref:System.Windows.DependencyObject>. <xref:System.Windows.DependencyObject> definiert die Basisklasse, die eine Abhängigkeitseigenschaft registrieren und besitzen kann.
 
 Nachfolgend ist die Terminologie aufgeführt, die mit Abhängigkeitseigenschaften verwendet wird:
 
@@ -97,7 +97,7 @@ Eine Abhängigkeitseigenschaft stellt Funktionen bereit, die die Funktionalität
 
 - [Vererbung von Eigenschaftswerten](#property-value-inheritance)
 
-- [WPF-Designer-integration](#wpf-designer-integration)
+- [WPF-Designer-Integration](#wpf-designer-integration)
 
 ### <a name="resources"></a>Ressourcen
 Ein Wert einer Abhängigkeitseigenschaft kann durch Verweisen auf eine Ressource festgelegt werden. Ressourcen werden in der Regel als der `Resources`-Eigenschaftswert eines Seitenstammelements oder der Anwendung angegeben (diese Positionen ermöglichen den einfachsten Zugriff auf die Ressource). Das folgende Beispiel veranschaulicht, wie Sie eine <xref:System.Windows.Media.SolidColorBrush>-Ressource definieren.

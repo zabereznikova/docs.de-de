@@ -11,10 +11,10 @@ helpviewer_keywords:
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
 ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188512"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Vorgehensweise: Starten einer Schleife eines wiedergegebenen Sounds in Windows Forms
@@ -56,5 +56,5 @@ Im folgenden Codebeispiel wird ein Sound mehrfach wiedergegeben. Wenn der Code i
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [Vorgehensweise: Wiedergabe von Sound in Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
+- [Vorgehensweise: Wiedergabe von Sound in Windows Forms](how-to-play-a-sound-from-a-windows-form.md)
 - [Übersicht über die SoundPlayer-Klasse](soundplayer-class-overview.md)

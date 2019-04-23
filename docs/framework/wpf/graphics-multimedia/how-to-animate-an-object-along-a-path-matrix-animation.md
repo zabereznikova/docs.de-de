@@ -9,10 +9,10 @@ helpviewer_keywords:
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
 ms.openlocfilehash: ab15126680b7d8c6936246a7dae2f67c7541233b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190924"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>Vorgehensweise: Animieren eines Objekts auf einem Pfad (Matrixanimation)
@@ -38,4 +38,4 @@ Dieses Beispiel zeigt, wie Sie mit der <xref:System.Windows.Media.Animation.Matr
 
 - [Übersicht über Animationen](animation-overview.md)
 - [Beispiel zu Textanimation](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [Gewusst-wie-Themen zur Pfadanimation](path-animation-how-to-topics.md)
+- [Path Animation How-to Topics (Themen zur Vorgehensweise zur Pfadanimation)](path-animation-how-to-topics.md)

@@ -10,10 +10,10 @@ ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 28463bfd3e54e49461d9ce785d26e5dfca62e438
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188961"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>Vorgehensweise: Verzögerte Initialisierung von Objekten
@@ -79,4 +79,4 @@ End Sub
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>
-- [Verzögerte Initialisierung](../../../docs/framework/performance/lazy-initialization.md)
+- [Lazy Initialization (Verzögerte Initialisierung)](../../../docs/framework/performance/lazy-initialization.md)

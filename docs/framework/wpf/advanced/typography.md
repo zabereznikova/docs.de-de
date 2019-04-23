@@ -9,10 +9,10 @@ helpviewer_keywords:
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
 ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195513"
 ---
 # <a name="typography"></a>Typografie
@@ -21,12 +21,12 @@ ms.locfileid: "59195513"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Typografie in WPF](typography-in-wpf.md)  
  [Übersicht über ClearType](cleartype-overview.md)  
- [ClearType-Registrierungseinstellungen](cleartype-registry-settings.md)  
+ [ClearType Registry Settings (ClearType-Registrierungseinstellungen)](cleartype-registry-settings.md)  
  [Zeichnen von formatiertem Text](drawing-formatted-text.md)  
  [Erweiterte Textformatierung](advanced-text-formatting.md)  
  [Schriftarten](fonts-wpf.md)  
  [Symbole](glyphs.md)  
- [Gewusst wie-Themen](typography-how-to-topics.md)  
+ [Themen zu Vorgehensweisen](typography-how-to-topics.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

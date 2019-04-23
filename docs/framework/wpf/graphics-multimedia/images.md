@@ -10,10 +10,10 @@ helpviewer_keywords:
 - graphics [WPF], images
 ms.assetid: 2fe21d59-b444-4786-b68d-35d94e18ce0d
 ms.openlocfilehash: f14c99b1c5f624fcebf2c08f0889903f258e5c68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194980"
 ---
 # <a name="images"></a>Bilder
@@ -21,7 +21,7 @@ ms.locfileid: "59194980"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Übersicht über die Bildverarbeitung](imaging-overview.md)  
- [Gewusst wie-Themen](imaging-how-to-topics.md)  
+ [Vorgehensweise-Themen](imaging-how-to-topics.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.Image>  

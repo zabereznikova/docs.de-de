@@ -12,10 +12,10 @@ ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51c1ac87cf9111504ba99efa25f6fca2bb0b63df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188525"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Vorgehensweise: Laden von Assemblys in eine Anwendungsdomäne
@@ -49,8 +49,8 @@ Es gibt mehrere Möglichkeiten, eine Assembly in eine Anwendungsdomäne zu laden
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
-- [Programmieren mit Anwendungsdomänen](application-domains.md#programming-with-application-domains)
-- [Spiegelung](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [Programming with Application Domains (Programmieren mit Anwendungsdomänen)](application-domains.md#programming-with-application-domains)
+- [Reflexion](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [Verwenden von Anwendungsdomänen](../../../docs/framework/app-domains/use.md)
-- [Vorgehensweise: Laden von Assemblys in den auf Reflektion beschränkten Kontext](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [Vorgehensweise: Load Assemblies into the Reflection-Only Context](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md) (Gewusst wie: Laden von Assemblys in den auf Reflektion beschränkten Kontext)
 - [Anwendungsdomänen und Assemblys](application-domains.md#application-domains-and-assemblies)

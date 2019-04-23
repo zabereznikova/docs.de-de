@@ -3,10 +3,10 @@ title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
 ms.openlocfilehash: 7221f19dd131dbd60ef1a61625633d54dfdbe85a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191743"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
@@ -58,7 +58,7 @@ Aktiviert Klartext-XML, JavaScript Object Notation (JSON)-Nachrichtencodierungen
   
  Das Bindungselement kann mit dem `writeEncoding`-Attribut mit einer Schreibzeichencodierung konfiguriert werden. Der bereitgestellte <xref:System.Text.Encoding>-Wert gibt das Verhalten beim Schreiben für die JSON- und Text-XML-Fälle an. Beim Lesen wird jede gültige Nachrichtencodierung und Textcodierung interpretiert.  
   
- `maxReadPoolSize` und `maxWritePoolSize` kann auch verwendet werden, um die maximale Anzahl an jeweils zuzuweisenden Readern und Writern festzulegen. Standardmäßig werden 64 Reader und 16 Writer zugeordnet.  
+ `maxReadPoolSize` und `maxWritePoolSize` können auch zum Festlegen der maximalen Anzahl an jeweils zuzuweisenden Readern und Writern verwendet werden. Standardmäßig werden 64 Reader und 16 Writer zugeordnet.  
   
  Standardkomplexitätseinschränkungen werden auch festlegen, über die [ \<ReaderQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) Element zum Schutz vor einer Klasse von Denial-of-Service (DOS)-Angriffe, die versuchen, die meldungskomplexität zum Binden von Endpunkt-Verarbeitung verwenden verwenden Ressourcen zu.  
   
@@ -77,7 +77,7 @@ Aktiviert Klartext-XML, JavaScript Object Notation (JSON)-Nachrichtencodierungen
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
-- [Nachrichtenverschlüsselung](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [Nachrichtencodierung](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
 - [Auswählen eines Nachrichtenencoders](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
 - [Bindungen](../../../../../docs/framework/wcf/bindings.md)
 - [Erweitern von Bindungen](../../../../../docs/framework/wcf/extending/extending-bindings.md)

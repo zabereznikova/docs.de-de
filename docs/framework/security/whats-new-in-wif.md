@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
 ms.openlocfilehash: 07e1aee85e22f6dd5257cdd49e8af99b423cb17f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195526"
 ---
 # <a name="whats-new-in-windows-identity-foundation-45"></a>Neuerungen Windows Identity Foundation 4.5
@@ -60,5 +60,5 @@ Die erste Version von Windows Identity Foundation (WIF) ist als eigenständiger 
 
 - [Richtlinien für die Migration einer mit WIF 3.5 bis WIF 4.5 erstellten Anwendung](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)
 - [Namespacezuordnung zwischen WIF 3.5 und WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)
-- [WIF-API-Verweis](../../../docs/framework/security/wif-api-reference.md)
+- [WIF-API-Referenz](../../../docs/framework/security/wif-api-reference.md)
 - [Referenz zur WIF-Konfiguration](../../../docs/framework/security/wif-configuration-reference.md)

@@ -3,10 +3,10 @@ title: ServiceModel-Attribute und ServiceDescription-Referenz
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
 ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195344"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel-Attribute und ServiceDescription-Referenz
@@ -31,7 +31,7 @@ Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xre
   
 |ServiceContractAttribute-Eigenschaft|Beschreibungsstrukturwert beeinflusst|  
 |---------------------------------------|-------------------------------------|  
-|CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription> hinzugefügt, die für alle Vorgänge <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>.|  
+|CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>, <xref:System.ServiceModel.Description.MessageDescription> hat allen Operationen <xref:System.ServiceModel.Description.OperationDescription.Messages%2A> hinzugefügt.|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> und möglicherweise untergeordnete Schutzebenen. Weitere Informationen zu den schutzebenenhierarchie finden Sie unter [Verständnis Schutzebene](../../../../docs/framework/wcf/understanding-protection-level.md).|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
@@ -42,18 +42,18 @@ Die *beschreibungsstruktur* ist die Hierarchie der Typen (beginnend mit der <xre
   
 |OperationContractAttribute-Wert|Beschreibungsstrukturwert beeinflusst|  
 |--------------------------------------|-------------------------------------|  
-|Aktion|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> für die Ausgabe- oder Eingabenachricht, abhängig von den Vertrag/Rückrufvertrag.|  
-|AsyncPattern|True gibt an, <xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> und <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>|  
-|IsOneWay|Zuordnungen, die eine einzelne <xref:System.ServiceModel.Description.MessageDescription> in <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
+|Aktion|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> für die Ausgabe- oder Eingabenachricht, abhängig vom Vertrag/Rückrufvertrag.|  
+|AsyncPattern|Wenn "true", <xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> und <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>|  
+|IsOneWay|Wird einer einzelnen <xref:System.ServiceModel.Description.MessageDescription> in <xref:System.ServiceModel.Description.OperationDescription.Messages%2A> zugeordnet|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
 |Name|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
 |ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> und möglicherweise untergeordnete Schutzebenen. Weitere Informationen zu den schutzebenenhierarchie finden Sie unter [Verständnis Schutzebene](../../../../docs/framework/wcf/understanding-protection-level.md).|  
-|ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> für die Ausgabe- oder Eingabenachricht, abhängig von den Vertrag/Rückrufvertrag.|  
+|ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> für die Ausgabe- oder Eingabenachricht, abhängig vom Vertrag/Rückrufvertrag.|  
   
 |FaultContractAttribute-Wert|Beschreibungsstrukturwert beeinflusst|  
 |----------------------------------|-------------------------------------|  
-|Aktion|<xref:System.ServiceModel.Description.FaultDescription.Action%2A> Je nach Vertrag/Rückrufvertrag.|  
+|Aktion|<xref:System.ServiceModel.Description.FaultDescription.Action%2A>, abhängig vom Vertrag/Rückrufvertrag.|  
 |DetailType|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
 |Name|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
 |Namespace|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  

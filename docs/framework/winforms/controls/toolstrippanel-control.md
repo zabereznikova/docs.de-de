@@ -9,14 +9,14 @@ helpviewer_keywords:
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
 ms.openlocfilehash: 8dc45e1cedca6a4c73ada057168e0d3194bef741
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192276"
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel-Steuerelement
-`ToolStripPanel` Control ermöglicht die gemeinsame Nutzung eines horizontalen oder vertikalen Bereichs innerhalb des Toolbereichs im angedockten und Anordnung von <xref:System.Windows.Forms.ToolStrip> steuert, wenn Sie nicht die vier Bereiche und den zentralen Bereich des benötigen eine <xref:System.Windows.Forms.ToolStripContainer>.  
+Das `ToolStripPanel`-Steuerelement ermöglicht im angedockten Zustand die gemeinsame Nutzung des horizontalen oder vertikalen Bereichs innerhalb des Toolbereichs sowie das Anordnen von <xref:System.Windows.Forms.ToolStrip>-Steuerelementen, wenn Sie die vier Bereiche und den Hauptbereich eines <xref:System.Windows.Forms.ToolStripContainer> nicht benötigen.  
   
  In den Themen in diesem Abschnitt werden die Konzepte und Techniken beschrieben, die Sie verwenden können, um `ToolStripPanel`-Features in Ihre Anwendungen einzubinden.  
   
@@ -36,4 +36,4 @@ ms.locfileid: "59192276"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)

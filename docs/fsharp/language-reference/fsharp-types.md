@@ -3,10 +3,10 @@ title: F#-Typen
 description: Erfahren Sie mehr über die Typen, die verwendet werden F# und wie F# Typen benannt und beschrieben.
 ms.date: 05/16/2016
 ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193589"
 ---
 # <a name="f-types"></a>F#-Typen
@@ -33,8 +33,8 @@ Die folgende Tabelle zeigt die Bestandteile der Type-Syntax für F# Typen.
 
 |Typ|Type-syntax|Beispiele|
 |----|-----------|--------|
-|primitiver Typ|*Typname*|`int`<br /><br />`float`<br /><br />`string`|
-|aggregierter Typ (Klasse, Struktur, Union, Datensatz, Enum, usw.)|*Typname*|`System.DateTime`<br /><br />`Color`|
+|primitiver Typ|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
+|aggregierter Typ (Klasse, Struktur, Union, Datensatz, Enum, usw.)|*type-name*|`System.DateTime`<br /><br />`Color`|
 |-typabkürzung|*type-abbreviation-name*|`bigint`|
 |voll qualifizierte Typ|*namespaces.type-name*<br /><br />oder<br /><br />*modules.type-name*<br /><br />oder<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
 |array|*Typname*[] oder<br /><br />*Typname* Array|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
@@ -61,7 +61,7 @@ Die folgende Tabelle zeigt die Bestandteile der Type-Syntax für F# Typen.
 |[Arrays](arrays.md)|Beschreibt Arrays, die Sätze des änderbar Elemente desselben Typs sortiert werden, die einen zusammenhängenden Speicherblock zu belegen und mit fester Größe an.|
 |[Sequenzen](sequences.md)|Beschreibt den Sequenz, die eine logische Reihe von Werten darstellt; einzelne Werte werden nur bei Bedarf berechnet.|
 |[Datensätze](records.md)|Beschreibt, der Eintragstyp, ein kleines Aggregat benannter Werte.|
-|[Unterscheidungs-Unions](discriminated-unions.md)|Beschreibt die diskriminierte union-Typs ein Typ, dessen Werte eine einer Reihe von möglichen Typen sein können.|
+|[Unterscheidbare Unions](discriminated-unions.md)|Beschreibt die diskriminierte union-Typs ein Typ, dessen Werte eine einer Reihe von möglichen Typen sein können.|
 |[Funktionen](functions/index.md)|Beschreibt die Werte von Funktionen.|
 |[Klassen](classes.md)|Beschreibt den Klassentyp, einen Objekttyp, der in einen Verweistyp .NET entspricht. Klassentypen können Elemente, Eigenschaften, implementierten Schnittstellen und einen Basistyp enthalten.|
 |[Strukturen](structures.md)|Beschreibt die `struct` Typ, der einen Objekttyp, der ein entspricht. Die `struct` Typ wird in der Regel ein kleines Aggregat der Daten darstellt.|

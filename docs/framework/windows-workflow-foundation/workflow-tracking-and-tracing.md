@@ -5,10 +5,10 @@ helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
 ms.openlocfilehash: dbc5c0b51024c7b88b8c6cd9a052addd74e6f7e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191028"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Nachverfolgung und Ablaufverfolgung für Workflows
@@ -22,11 +22,11 @@ Die Windows Workflow-Überwachung ist eine [!INCLUDE[netfx_current_long](../../.
   
  Für ein besseres Verständnis des Programmiermodells werden in diesem Thema die Hauptkomponenten der Überwachungsinfrastruktur erläutert:  
   
--   <xref:System.Activities.Tracking.TrackingRecord> Objekte, die von der Workflowlaufzeit ausgegeben werden. Weitere Informationen finden Sie unter [Nachverfolgungsdatensätze](tracking-records.md).  
+-   Von der Workflowlaufzeit ausgegebene <xref:System.Activities.Tracking.TrackingRecord>-Objekte. Weitere Informationen finden Sie unter [Nachverfolgungsdatensätze](tracking-records.md).  
   
--   <xref:System.Activities.Tracking.TrackingParticipant> -Objekte abonnieren <xref:System.Activities.Tracking.TrackingRecord> Objekte. Die Überwachungsteilnehmer enthalten die Logik zur Verarbeitung der Nutzdaten der <xref:System.Activities.Tracking.TrackingRecord>-Objekte (beispielsweise für das Schreiben in eine Datei). Weitere Informationen finden Sie unter [Nachverfolgungsteilnehmer](tracking-participants.md).  
+-   <xref:System.Activities.Tracking.TrackingParticipant>-Objekte abonnieren <xref:System.Activities.Tracking.TrackingRecord>-Objekte. Die Überwachungsteilnehmer enthalten die Logik zur Verarbeitung der Nutzdaten der <xref:System.Activities.Tracking.TrackingRecord>-Objekte (beispielsweise für das Schreiben in eine Datei). Weitere Informationen finden Sie unter [Nachverfolgungsteilnehmer](tracking-participants.md).  
   
--   <xref:System.Activities.Tracking.TrackingProfile> Objekte von einer Workflowinstanz ausgegebenen Überwachungsdatensätze zu filtern. Weitere Informationen finden Sie unter [Nachverfolgungsprofile](tracking-profiles.md).  
+-   <xref:System.Activities.Tracking.TrackingProfile>-Objekte filtern die von einer Workflowinstanz ausgegebenen Überwachungsdatensätze. Weitere Informationen finden Sie unter [Nachverfolgungsprofile](tracking-profiles.md).  
   
 ## <a name="workflow-tracking-infrastructure"></a>Infrastruktur für Workflowüberwachung  
  Die Infrastruktur für die Workflowüberwachung erfolgt als Veröffentlichen-und-Abonnieren-Paradigma. Die Workflowinstanz ist der Verleger von Überwachungsdatensätzen, während Abonnenten der Überwachungsdatensätze als Erweiterungen des Workflows registriert werden. Diese Erweiterungen, die <xref:System.Activities.Tracking.TrackingRecord>-Objekte abonnieren, werden als Überwachungsteilnehmer bezeichnet. Überwachungsteilnehmer sind Erweiterbarkeitspunkte mit Zugriff auf <xref:System.Activities.Tracking.TrackingRecord>-Objekte. Sie verarbeiten diese auf jede Weise, die Ihnen angegeben wird. Die Überwachungsinfrastruktur ermöglicht die Anwendung eines Filters für ausgehende Überwachungsdatensätze, sodass ein Teilnehmer eine Teilmenge der Datensätze abonnieren kann. Dieser Filtermechanismus wird durch eine Überwachungsprofildatei erzielt.  

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WPF [WPF], performance
 ms.assetid: c649a20f-8b7e-4a38-9b80-74839298d406
 ms.openlocfilehash: 268bb396564db983c293ab1d718171e963ab7aaa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188486"
 ---
 # <a name="performance"></a>Leistung

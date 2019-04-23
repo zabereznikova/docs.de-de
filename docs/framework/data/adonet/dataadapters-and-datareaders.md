@@ -3,10 +3,10 @@ title: "\"DataAdapters\" und \"DataReaders\""
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
 ms.openlocfilehash: af1d44b1e320557ab7906ce65dbeb5415b5c09dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189682"
 ---
 # <a name="dataadapters-and-datareaders"></a>"DataAdapters" und "DataReaders"
@@ -17,31 +17,31 @@ Sie können mithilfe des ADO.NET- **DataReader** einen schreibgeschützten, nur 
  Jeder in .NET Framework enthaltene .NET Framework-Datenanbieter enthält ein <xref:System.Data.Common.DbDataReader>-Objekt und ein <xref:System.Data.Common.DbDataAdapter>-Objekt: Der .NET Framework-Datenanbieter für OLE DB enthält ein <xref:System.Data.OleDb.OleDbDataReader>-Objekt und ein <xref:System.Data.OleDb.OleDbDataAdapter>-Objekt, der .NET Framework-Datenanbieter für SQL Server enthält ein <xref:System.Data.SqlClient.SqlDataReader>-Objekt und ein <xref:System.Data.SqlClient.SqlDataAdapter>-Objekt, der .NET Framework-Datenanbieter für ODBC enthält ein <xref:System.Data.Odbc.OdbcDataReader>-Objekt und ein <xref:System.Data.Odbc.OdbcDataAdapter>-Objekt, und der .NET Framework-Datenanbieter für Oracle enthält ein <xref:System.Data.OracleClient.OracleDataReader>-Objekt und ein <xref:System.Data.OracleClient.OracleDataAdapter>-Objekt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Abrufen von Daten mit "DataReader"](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
+ [Abrufen von Daten mit einem DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
  Beschreibt die ADO.NET-Architektur **DataReader** -Objekt und dessen Verwendung zum Zurückgeben eines Streams von Ergebnissen aus einer Datenquelle.  
   
- [Auffüllen eines "DataSets" durch einen "DataAdapter"](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
+ [Populating a DataSet from a DataAdapter (Auffüllen eines DataSets durch einen DataAdapter)](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  Beschreibt die Vorgehensweise beim Füllen eines `DataSet` mit Tabellen, Spalten und Zeilen mit einem `DataAdapter`.  
   
  [DataAdapter-Parameter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  Beschreibt die Verwendung von Parametern mit den Befehlseigenschaften eines `DataAdapter`, einschließlich des Zuordnens der Inhalte einer Spalte in einem `DataSet` zu einem Befehlsparameter.  
   
- [Hinzufügen von vorhandenen Einschränkungen zu einem "DataSet"](../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
+ [Adding Existing Constraints to a DataSet (Hinzufügen von vorhandenen Einschränkungen zu einem DataSet)](../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  Beschreibt das Hinzufügen vorhandener Einschränkungen zu einem `DataSet`.  
   
- ["DataTable" und "DataColumn"-Zuordnungen mit "DataAdapter"](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)  
+ [DataTable- und DataColumn-Zuordnungen mit DataAdapter](../../../../docs/framework/data/adonet/dataadapter-datatable-and-datacolumn-mappings.md)  
  Beschreibt das Einrichten von `DataTableMappings` und `ColumnMappings` für einen `DataAdapter`.  
   
- [Paging durch ein Abfrageergebnis](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
+ [Auslagerung durch ein Abfrageergebnis](../../../../docs/framework/data/adonet/paging-through-a-query-result.md)  
  Enthält ein Beispiel für das Anzeigen der Ergebnisse einer Abfrage als Datenseiten.  
   
- [Aktualisieren von Datenquellen mit "DataAdapters"](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
+ [Updating Data Sources with DataAdapters (Aktualisieren von Datenquellen mit DataAdapters)](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  Beschreibt das Verwenden eines `DataAdapter`, um Änderungen in einem `DataSet` in der Datenbank zu aktualisieren.  
   
  [Behandeln von DataAdapter-Ereignissen](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
  Beschreibt `DataAdapter`-Ereignisse und deren Verwendung.  
   
- [Ausführen von Batchvorgängen mit "DataAdapters"](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
+ [Ausführen von Batchvorgängen mit DataAdapters](../../../../docs/framework/data/adonet/performing-batch-operations-using-dataadapters.md)  
  Beschreibt, wie die Anwendungsleistung verbessert werden kann, indem die Anzahl von Roundtrips zu SQL Server beim Anwenden von Updates aus dem `DataSet` reduziert wird.  
   
 ## <a name="see-also"></a>Siehe auch
@@ -49,5 +49,5 @@ Sie können mithilfe des ADO.NET- **DataReader** einen schreibgeschützten, nur 
 - [Aufbauen der Verbindung zu einer Datenquelle](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [Befehle und Parameter](../../../../docs/framework/data/adonet/commands-and-parameters.md)
 - [Transaktionen und Parallelität](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
-- ["DataSets", "DataTables" und "DataViews"](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSets, DataTables und DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)
