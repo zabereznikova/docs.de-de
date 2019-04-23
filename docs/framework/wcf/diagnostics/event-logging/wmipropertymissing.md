@@ -3,23 +3,23 @@ title: WmiPropertyMissing
 ms.date: 03/30/2017
 ms.assetid: 109fa6b4-93dc-4785-bec4-5aa02c434a65
 ms.openlocfilehash: 9b3933ad4e0f7d01bfe94cf0d2f42db482b76b45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163838"
 ---
-# <a name="wmipropertymissing"></a><span data-ttu-id="c96db-102">WmiPropertyMissing</span><span class="sxs-lookup"><span data-stu-id="c96db-102">WmiPropertyMissing</span></span>
-<span data-ttu-id="c96db-103">ID: 129</span><span class="sxs-lookup"><span data-stu-id="c96db-103">Id: 129</span></span>  
+# <a name="wmipropertymissing"></a><span data-ttu-id="685f4-102">WmiPropertyMissing</span><span class="sxs-lookup"><span data-stu-id="685f4-102">WmiPropertyMissing</span></span>
+<span data-ttu-id="685f4-103">ID: 129</span><span class="sxs-lookup"><span data-stu-id="685f4-103">Id: 129</span></span>  
   
- <span data-ttu-id="c96db-104">Schweregrad: Fehler</span><span class="sxs-lookup"><span data-stu-id="c96db-104">Severity: Error</span></span>  
+ <span data-ttu-id="685f4-104">Schweregrad: Fehler</span><span class="sxs-lookup"><span data-stu-id="685f4-104">Severity: Error</span></span>  
   
- <span data-ttu-id="c96db-105">Kategorie: ServiceModel</span><span class="sxs-lookup"><span data-stu-id="c96db-105">Category: ServiceModel</span></span>  
+ <span data-ttu-id="685f4-105">Kategorie: ServiceModel</span><span class="sxs-lookup"><span data-stu-id="685f4-105">Category: ServiceModel</span></span>  
   
-## <a name="description"></a><span data-ttu-id="c96db-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c96db-106">Description</span></span>  
- <span data-ttu-id="c96db-107">Dieses Ereignis gibt an, dass ein Typenkonflikt aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="c96db-107">This event indicates that a type mismatch occurred.</span></span> <span data-ttu-id="c96db-108">Die angegebene CIM-Klasse besitzt keine bestimmte Eigenschaft des angegebenen Typs.</span><span class="sxs-lookup"><span data-stu-id="c96db-108">The specified CIM class does not have the specified property of the specific type.</span></span> <span data-ttu-id="c96db-109">Das Ereignis führt den Prozessnamen und die Prozess-ID auf.</span><span class="sxs-lookup"><span data-stu-id="c96db-109">The event lists the process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="685f4-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="685f4-106">Description</span></span>  
+ <span data-ttu-id="685f4-107">Dieses Ereignis gibt an, dass ein Typenkonflikt aufgetreten ist.</span><span class="sxs-lookup"><span data-stu-id="685f4-107">This event indicates that a type mismatch occurred.</span></span> <span data-ttu-id="685f4-108">Die angegebene CIM-Klasse besitzt keine bestimmte Eigenschaft des angegebenen Typs.</span><span class="sxs-lookup"><span data-stu-id="685f4-108">The specified CIM class does not have the specified property of the specific type.</span></span> <span data-ttu-id="685f4-109">Das Ereignis führt den Prozessnamen und die Prozess-ID auf.</span><span class="sxs-lookup"><span data-stu-id="685f4-109">The event lists the process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c96db-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c96db-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="685f4-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="685f4-110">See also</span></span>
 
-- [<span data-ttu-id="c96db-111">Ereignisprotokollierung</span><span class="sxs-lookup"><span data-stu-id="c96db-111">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="c96db-112">Allgemeine Referenz zu Ereignissen</span><span class="sxs-lookup"><span data-stu-id="c96db-112">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+- [<span data-ttu-id="685f4-111">Ereignisprotokollierung</span><span class="sxs-lookup"><span data-stu-id="685f4-111">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [<span data-ttu-id="685f4-112">Allgemeine Referenz zu Ereignissen</span><span class="sxs-lookup"><span data-stu-id="685f4-112">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

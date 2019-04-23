@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 143b11f0a99081b7d49bfbb68b635d92cf1e9ba3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163877"
 ---
-# <a name="imetadataimportresetenum-method"></a><span data-ttu-id="8ed17-102">IMetaDataImport::ResetEnum-Methode</span><span class="sxs-lookup"><span data-stu-id="8ed17-102">IMetaDataImport::ResetEnum Method</span></span>
-<span data-ttu-id="8ed17-103">Setzt den angegebenen Enumerator auf die der angegebene Position zurück.</span><span class="sxs-lookup"><span data-stu-id="8ed17-103">Resets the specified enumerator to the specified position.</span></span>  
+# <a name="imetadataimportresetenum-method"></a><span data-ttu-id="e28d8-102">IMetaDataImport::ResetEnum-Methode</span><span class="sxs-lookup"><span data-stu-id="e28d8-102">IMetaDataImport::ResetEnum Method</span></span>
+<span data-ttu-id="e28d8-103">Setzt den angegebenen Enumerator auf die der angegebene Position zurück.</span><span class="sxs-lookup"><span data-stu-id="e28d8-103">Resets the specified enumerator to the specified position.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8ed17-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="8ed17-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e28d8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="e28d8-104">Syntax</span></span>  
   
 ```  
 HRESULT ResetEnum (  
@@ -36,23 +36,23 @@ HRESULT ResetEnum (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8ed17-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="8ed17-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e28d8-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="e28d8-105">Parameters</span></span>  
  `hEnum`  
- <span data-ttu-id="8ed17-106">[in] Der Enumerator zurücksetzen.</span><span class="sxs-lookup"><span data-stu-id="8ed17-106">[in] The enumerator to reset.</span></span>  
+ <span data-ttu-id="e28d8-106">[in] Der Enumerator zurücksetzen.</span><span class="sxs-lookup"><span data-stu-id="e28d8-106">[in] The enumerator to reset.</span></span>  
   
  `ulPos`  
- <span data-ttu-id="8ed17-107">[in] Die neue Position, an dem den Enumerator.</span><span class="sxs-lookup"><span data-stu-id="8ed17-107">[in] The new position at which to place the enumerator.</span></span>  
+ <span data-ttu-id="e28d8-107">[in] Die neue Position, an dem den Enumerator.</span><span class="sxs-lookup"><span data-stu-id="e28d8-107">[in] The new position at which to place the enumerator.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8ed17-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="8ed17-108">Requirements</span></span>  
- <span data-ttu-id="8ed17-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8ed17-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e28d8-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="e28d8-108">Requirements</span></span>  
+ <span data-ttu-id="e28d8-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e28d8-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8ed17-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="8ed17-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e28d8-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e28d8-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="8ed17-111">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="8ed17-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="e28d8-111">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="e28d8-111">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="8ed17-112">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="8ed17-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="e28d8-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e28d8-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8ed17-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="8ed17-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e28d8-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="e28d8-113">See also</span></span>
 
-- [<span data-ttu-id="8ed17-114">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8ed17-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="8ed17-115">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="8ed17-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="e28d8-114">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e28d8-114">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="e28d8-115">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="e28d8-115">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

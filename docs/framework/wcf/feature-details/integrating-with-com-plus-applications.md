@@ -10,31 +10,31 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: 98bf7dc4-d49a-4129-a59b-db7a7ec8c241
 ms.openlocfilehash: cd72265fe8e49c7def91ebbf05ad84618dd71d19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162502"
 ---
-# <a name="integrating-with-com-applications"></a><span data-ttu-id="30023-102">Integrieren von COM+-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="30023-102">Integrating with COM+ Applications</span></span>
-<span data-ttu-id="30023-103">Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Erstellen von verteilten Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="30023-103">Windows Communication Foundation (WCF) provides a rich environment for creating distributed applications.</span></span> <span data-ttu-id="30023-104">Wenn Sie bereits erheblichen Aufwand in komponentenbasierte Anwendungslogik, die in COM+ gehostet haben, können Sie WCF, erweitern Sie Ihre vorhandenen Logik, anstatt sie neu zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="30023-104">If you have a substantial investment in component-based application logic hosted in COM+, you can use WCF to extend your existing logic rather than having to rewrite it.</span></span> <span data-ttu-id="30023-105">Die Themen in diesem Abschnitt wird beschrieben, wie COM+ mit WCF.</span><span class="sxs-lookup"><span data-stu-id="30023-105">The topics within this section describe how to use COM+ with WCF.</span></span>  
+# <a name="integrating-with-com-applications"></a><span data-ttu-id="58408-102">Integrieren von COM+-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="58408-102">Integrating with COM+ Applications</span></span>
+<span data-ttu-id="58408-103">Windows Communication Foundation (WCF) bietet eine umfangreiche Umgebung zum Erstellen von verteilten Anwendungen.</span><span class="sxs-lookup"><span data-stu-id="58408-103">Windows Communication Foundation (WCF) provides a rich environment for creating distributed applications.</span></span> <span data-ttu-id="58408-104">Wenn Sie bereits erheblichen Aufwand in komponentenbasierte Anwendungslogik, die in COM+ gehostet haben, können Sie WCF, erweitern Sie Ihre vorhandenen Logik, anstatt sie neu zu schreiben.</span><span class="sxs-lookup"><span data-stu-id="58408-104">If you have a substantial investment in component-based application logic hosted in COM+, you can use WCF to extend your existing logic rather than having to rewrite it.</span></span> <span data-ttu-id="58408-105">Die Themen in diesem Abschnitt wird beschrieben, wie COM+ mit WCF.</span><span class="sxs-lookup"><span data-stu-id="58408-105">The topics within this section describe how to use COM+ with WCF.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="30023-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="30023-106">In This Section</span></span>  
- [<span data-ttu-id="30023-107">Übersicht über die Integration von COM+-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="30023-107">Integrating with COM+ Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
- <span data-ttu-id="30023-108">Gibt eine Übersicht darüber, wann und wie COM+-Komponenten integriert werden.</span><span class="sxs-lookup"><span data-stu-id="30023-108">Gives an overview of when and how to integrate COM+ components.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="58408-106">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="58408-106">In This Section</span></span>  
+ [<span data-ttu-id="58408-107">Übersicht über die Integration von COM+-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="58408-107">Integrating with COM+ Applications Overview</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
+ <span data-ttu-id="58408-108">Gibt eine Übersicht darüber, wann und wie COM+-Komponenten integriert werden.</span><span class="sxs-lookup"><span data-stu-id="58408-108">Gives an overview of when and how to integrate COM+ components.</span></span>  
   
- [<span data-ttu-id="30023-109">Vorgehensweise: Verwenden des COM+-Dienstmodell-Konfigurationstools</span><span class="sxs-lookup"><span data-stu-id="30023-109">How to: Use the COM+ Service Model Configuration Tool</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
- <span data-ttu-id="30023-110">Erläutert, wie das Befehlszeilentool COM+ Service Model Configuration-Tool (ComSvcConfig.exe) zum Konfigurieren der Anwendungsschnittstellen, die als WCF-Dienste verfügbar gemacht werden sollen.</span><span class="sxs-lookup"><span data-stu-id="30023-110">Explains how to use the COM+ Service Model Configuration command-line tool (ComSvcConfig.exe) to configure the application interfaces that you want exposed as WCF services.</span></span>  
+ [<span data-ttu-id="58408-109">Vorgehensweise: Verwenden Sie das COM+ Service Model Configuration-Tool</span><span class="sxs-lookup"><span data-stu-id="58408-109">How to: Use the COM+ Service Model Configuration Tool</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
+ <span data-ttu-id="58408-110">Erläutert, wie das Befehlszeilentool COM+ Service Model Configuration-Tool (ComSvcConfig.exe) zum Konfigurieren der Anwendungsschnittstellen, die als WCF-Dienste verfügbar gemacht werden sollen.</span><span class="sxs-lookup"><span data-stu-id="58408-110">Explains how to use the COM+ Service Model Configuration command-line tool (ComSvcConfig.exe) to configure the application interfaces that you want exposed as WCF services.</span></span>  
   
- [<span data-ttu-id="30023-111">Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen</span><span class="sxs-lookup"><span data-stu-id="30023-111">How to: Configure COM+ Service Settings</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
- <span data-ttu-id="30023-112">Erläutert, wie eine COM+-Objekts als WCF-Dienst zu konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="30023-112">Explains how to configure a COM+ object as a WCF service.</span></span>  
+ [<span data-ttu-id="58408-111">Vorgehensweise: Konfigurieren von COM+-Diensteinstellungen</span><span class="sxs-lookup"><span data-stu-id="58408-111">How to: Configure COM+ Service Settings</span></span>](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ <span data-ttu-id="58408-112">Erläutert, wie eine COM+-Objekts als WCF-Dienst zu konfigurieren.</span><span class="sxs-lookup"><span data-stu-id="58408-112">Explains how to configure a COM+ object as a WCF service.</span></span>  
   
- [<span data-ttu-id="30023-113">Vorgehensweise: Bereitstellung einer COM+-Integrationsanwendung</span><span class="sxs-lookup"><span data-stu-id="30023-113">How to: Deploy a COM+ Integration Application</span></span>](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
- <span data-ttu-id="30023-114">Erläutert das Verschieben einer COM+-Integrationsanwendung</span><span class="sxs-lookup"><span data-stu-id="30023-114">Explains how to move a COM+ integration application.</span></span>  
+ [<span data-ttu-id="58408-113">Vorgehensweise: Bereitstellung einer COM+-Integrationsanwendung</span><span class="sxs-lookup"><span data-stu-id="58408-113">How to: Deploy a COM+ Integration Application</span></span>](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
+ <span data-ttu-id="58408-114">Erläutert das Verschieben einer COM+-Integrationsanwendung</span><span class="sxs-lookup"><span data-stu-id="58408-114">Explains how to move a COM+ integration application.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="30023-115">Referenz</span><span class="sxs-lookup"><span data-stu-id="30023-115">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="58408-115">Referenz</span><span class="sxs-lookup"><span data-stu-id="58408-115">Reference</span></span>  
  <xref:System.ServiceModel>  
   
-## <a name="see-also"></a><span data-ttu-id="30023-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="30023-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="58408-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="58408-116">See also</span></span>
 
-- [<span data-ttu-id="30023-117">Integrieren von COM-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="30023-117">Integrating with COM Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+- [<span data-ttu-id="58408-117">Integrieren von COM-Anwendungen</span><span class="sxs-lookup"><span data-stu-id="58408-117">Integrating with COM Applications</span></span>](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

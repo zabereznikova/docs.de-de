@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b136e1fa480e53bcacfd9ea832d1dc4d1bd69f74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162776"
 ---
-# <a name="strongnamegetblobfromimage-function"></a><span data-ttu-id="d77bb-102">StrongNameGetBlobFromImage-Funktion</span><span class="sxs-lookup"><span data-stu-id="d77bb-102">StrongNameGetBlobFromImage Function</span></span>
-<span data-ttu-id="d77bb-103">Ruft eine binäre Darstellung des Assemblyimages an der angegebenen Speicheradresse ab.</span><span class="sxs-lookup"><span data-stu-id="d77bb-103">Gets a binary representation of the assembly image at the specified memory address.</span></span>  
+# <a name="strongnamegetblobfromimage-function"></a><span data-ttu-id="da386-102">StrongNameGetBlobFromImage-Funktion</span><span class="sxs-lookup"><span data-stu-id="da386-102">StrongNameGetBlobFromImage Function</span></span>
+<span data-ttu-id="da386-103">Ruft eine binäre Darstellung des Assemblyimages an der angegebenen Speicheradresse ab.</span><span class="sxs-lookup"><span data-stu-id="da386-103">Gets a binary representation of the assembly image at the specified memory address.</span></span>  
   
- <span data-ttu-id="d77bb-104">Diese Funktion wurde als veraltet markiert.</span><span class="sxs-lookup"><span data-stu-id="d77bb-104">This function has been deprecated.</span></span> <span data-ttu-id="d77bb-105">Verwenden der [ICLRStrongName:: StrongNameGetBlobFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md) Methode stattdessen.</span><span class="sxs-lookup"><span data-stu-id="d77bb-105">Use the [ICLRStrongName::StrongNameGetBlobFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md) method instead.</span></span>  
+ <span data-ttu-id="da386-104">Diese Funktion wurde als veraltet markiert.</span><span class="sxs-lookup"><span data-stu-id="da386-104">This function has been deprecated.</span></span> <span data-ttu-id="da386-105">Verwenden der [ICLRStrongName:: StrongNameGetBlobFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md) Methode stattdessen.</span><span class="sxs-lookup"><span data-stu-id="da386-105">Use the [ICLRStrongName::StrongNameGetBlobFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d77bb-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="d77bb-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da386-106">Syntax</span><span class="sxs-lookup"><span data-stu-id="da386-106">Syntax</span></span>  
   
 ```  
 BOOLEAN StrongNameGetBlobFromImage (  
@@ -39,36 +39,36 @@ BOOLEAN StrongNameGetBlobFromImage (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d77bb-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="d77bb-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="da386-107">Parameter</span><span class="sxs-lookup"><span data-stu-id="da386-107">Parameters</span></span>  
  `pbBase`  
- <span data-ttu-id="d77bb-108">[in] Die Speicheradresse des Assemblymanifests zugeordnet werden soll.</span><span class="sxs-lookup"><span data-stu-id="d77bb-108">[in] The memory address of the mapped assembly manifest.</span></span>  
+ <span data-ttu-id="da386-108">[in] Die Speicheradresse des Assemblymanifests zugeordnet werden soll.</span><span class="sxs-lookup"><span data-stu-id="da386-108">[in] The memory address of the mapped assembly manifest.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="d77bb-109">[in] Die Größe in Bytes, der das Bild am `pbBase`.</span><span class="sxs-lookup"><span data-stu-id="d77bb-109">[in] The size, in bytes, of the image at `pbBase`.</span></span>  
+ <span data-ttu-id="da386-109">[in] Die Größe in Bytes, der das Bild am `pbBase`.</span><span class="sxs-lookup"><span data-stu-id="da386-109">[in] The size, in bytes, of the image at `pbBase`.</span></span>  
   
  `pbBlob`  
- <span data-ttu-id="d77bb-110">[in] Ein Puffer, die binäre Darstellung des Bilds enthält.</span><span class="sxs-lookup"><span data-stu-id="d77bb-110">[in] A buffer to contain the binary representation of the image.</span></span>  
+ <span data-ttu-id="da386-110">[in] Ein Puffer, die binäre Darstellung des Bilds enthält.</span><span class="sxs-lookup"><span data-stu-id="da386-110">[in] A buffer to contain the binary representation of the image.</span></span>  
   
  `pcbBlob`  
- <span data-ttu-id="d77bb-111">[in, out] Die maximale Größe in Bytes, des angeforderten `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="d77bb-111">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="d77bb-112">Bei der Rückgabe die tatsächliche Größe in Bytes der `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="d77bb-112">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
+ <span data-ttu-id="da386-111">[in, out] Die maximale Größe in Bytes, des angeforderten `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="da386-111">[in, out] The requested maximum size, in bytes, of `pbBlob`.</span></span> <span data-ttu-id="da386-112">Bei der Rückgabe die tatsächliche Größe in Bytes der `pbBlob`.</span><span class="sxs-lookup"><span data-stu-id="da386-112">Upon return, the actual size, in bytes, of `pbBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d77bb-113">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="d77bb-113">Return Value</span></span>  
- `true` <span data-ttu-id="d77bb-114">Bei erfolgreichem Abschluss; andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="d77bb-114">on successful completion; otherwise, `false`.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="da386-113">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="da386-113">Return Value</span></span>  
+ <span data-ttu-id="da386-114">`true` Bei erfolgreichem Abschluss; andernfalls `false`.</span><span class="sxs-lookup"><span data-stu-id="da386-114">`true` on successful completion; otherwise, `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d77bb-115">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d77bb-115">Remarks</span></span>  
- <span data-ttu-id="d77bb-116">Wenn die `StrongNameGetBlobFromImage` Funktion nicht erfolgreich abgeschlossen wurde, rufen Sie die [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) Funktion, um den letzten generierten Fehler abzurufen.</span><span class="sxs-lookup"><span data-stu-id="d77bb-116">If the `StrongNameGetBlobFromImage` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="da386-115">Hinweise</span><span class="sxs-lookup"><span data-stu-id="da386-115">Remarks</span></span>  
+ <span data-ttu-id="da386-116">Wenn die `StrongNameGetBlobFromImage` Funktion nicht erfolgreich abgeschlossen wurde, rufen Sie die [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) Funktion, um den letzten generierten Fehler abzurufen.</span><span class="sxs-lookup"><span data-stu-id="da386-116">If the `StrongNameGetBlobFromImage` function does not complete successfully, call the [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) function to retrieve the last generated error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d77bb-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d77bb-117">Requirements</span></span>  
- <span data-ttu-id="d77bb-118">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d77bb-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da386-117">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="da386-117">Requirements</span></span>  
+ <span data-ttu-id="da386-118">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="da386-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d77bb-119">**Header:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="d77bb-119">**Header:** StrongName.h</span></span>  
+ <span data-ttu-id="da386-119">**Header:** StrongName.h</span><span class="sxs-lookup"><span data-stu-id="da386-119">**Header:** StrongName.h</span></span>  
   
- <span data-ttu-id="d77bb-120">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="d77bb-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="da386-120">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="da386-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="d77bb-121">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="d77bb-121">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="da386-121">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da386-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d77bb-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d77bb-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="da386-122">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="da386-122">See also</span></span>
 
-- [<span data-ttu-id="d77bb-123">StrongNameGetBlobFromImage-Methode</span><span class="sxs-lookup"><span data-stu-id="d77bb-123">StrongNameGetBlobFromImage Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
-- [<span data-ttu-id="d77bb-124">StrongNameGetBlob-Methode</span><span class="sxs-lookup"><span data-stu-id="d77bb-124">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
-- [<span data-ttu-id="d77bb-125">ICLRStrongName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d77bb-125">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="da386-123">StrongNameGetBlobFromImage-Methode</span><span class="sxs-lookup"><span data-stu-id="da386-123">StrongNameGetBlobFromImage Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
+- [<span data-ttu-id="da386-124">StrongNameGetBlob-Methode</span><span class="sxs-lookup"><span data-stu-id="da386-124">StrongNameGetBlob Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
+- [<span data-ttu-id="da386-125">ICLRStrongName-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="da386-125">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
