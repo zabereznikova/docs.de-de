@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c1707a09f14fbab6150c2ecbcd188d7bf88064fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085895"
 ---
-# <a name="cordebuggenerationtypes-enumeration"></a><span data-ttu-id="70943-102">CorDebugGenerationTypes-Enumeration</span><span class="sxs-lookup"><span data-stu-id="70943-102">CorDebugGenerationTypes Enumeration</span></span>
-<span data-ttu-id="70943-103">Gibt die Generierung eines Arbeitsspeicherbereichs auf dem verwalteten Heap an.</span><span class="sxs-lookup"><span data-stu-id="70943-103">Specifies the generation of a region of memory on the managed heap.</span></span>  
+# <a name="cordebuggenerationtypes-enumeration"></a><span data-ttu-id="f76e2-102">CorDebugGenerationTypes-Enumeration</span><span class="sxs-lookup"><span data-stu-id="f76e2-102">CorDebugGenerationTypes Enumeration</span></span>
+<span data-ttu-id="f76e2-103">Gibt die Generierung eines Arbeitsspeicherbereichs auf dem verwalteten Heap an.</span><span class="sxs-lookup"><span data-stu-id="f76e2-103">Specifies the generation of a region of memory on the managed heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="70943-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="70943-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f76e2-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f76e2-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugGenerationTypes {  
@@ -37,26 +37,26 @@ typedef enum CorDebugGenerationTypes {
 } CorDebugRegionTypes;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="70943-105">Member</span><span class="sxs-lookup"><span data-stu-id="70943-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f76e2-105">Member</span><span class="sxs-lookup"><span data-stu-id="f76e2-105">Members</span></span>  
   
-|<span data-ttu-id="70943-106">Membername</span><span class="sxs-lookup"><span data-stu-id="70943-106">Member name</span></span>|<span data-ttu-id="70943-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="70943-107">Description</span></span>|  
+|<span data-ttu-id="f76e2-106">Membername</span><span class="sxs-lookup"><span data-stu-id="f76e2-106">Member name</span></span>|<span data-ttu-id="f76e2-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f76e2-107">Description</span></span>|  
 |-----------------|-----------------|  
-|`CorDebug_Gen0`|<span data-ttu-id="70943-108">Generation 0.</span><span class="sxs-lookup"><span data-stu-id="70943-108">Generation 0.</span></span>|  
-|`CorDebug_Gen1`|<span data-ttu-id="70943-109">Generation 1.</span><span class="sxs-lookup"><span data-stu-id="70943-109">Generation 1.</span></span>|  
-|`CorDebug_Gen2`|<span data-ttu-id="70943-110">Generation 2.</span><span class="sxs-lookup"><span data-stu-id="70943-110">Generation 2.</span></span>|  
-|`CorDebug_LOH`|<span data-ttu-id="70943-111">Der große Objektheap.</span><span class="sxs-lookup"><span data-stu-id="70943-111">The large object heap.</span></span>|  
+|`CorDebug_Gen0`|<span data-ttu-id="f76e2-108">Generation 0.</span><span class="sxs-lookup"><span data-stu-id="f76e2-108">Generation 0.</span></span>|  
+|`CorDebug_Gen1`|<span data-ttu-id="f76e2-109">Generation 1.</span><span class="sxs-lookup"><span data-stu-id="f76e2-109">Generation 1.</span></span>|  
+|`CorDebug_Gen2`|<span data-ttu-id="f76e2-110">Generation 2.</span><span class="sxs-lookup"><span data-stu-id="f76e2-110">Generation 2.</span></span>|  
+|`CorDebug_LOH`|<span data-ttu-id="f76e2-111">Der große Objektheap.</span><span class="sxs-lookup"><span data-stu-id="f76e2-111">The large object heap.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="70943-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="70943-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f76e2-112">Hinweise</span><span class="sxs-lookup"><span data-stu-id="f76e2-112">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="70943-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="70943-113">Requirements</span></span>  
- <span data-ttu-id="70943-114">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="70943-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f76e2-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f76e2-113">Requirements</span></span>  
+ <span data-ttu-id="f76e2-114">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f76e2-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="70943-115">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="70943-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f76e2-115">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f76e2-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="70943-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="70943-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f76e2-116">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f76e2-116">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="70943-117">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="70943-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="f76e2-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f76e2-117">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="70943-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="70943-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f76e2-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f76e2-118">See also</span></span>
 
-- [<span data-ttu-id="70943-119">Debugenumerationen</span><span class="sxs-lookup"><span data-stu-id="70943-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="f76e2-119">Debuggen von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="f76e2-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

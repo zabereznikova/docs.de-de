@@ -19,32 +19,32 @@ helpviewer_keywords:
 - forms [Windows Forms], custom shapes
 ms.assetid: 6e6041e0-8e67-4487-b1e9-e410dbd1ef6c
 ms.openlocfilehash: 03fcbb97db180e71283810e2daeab9be272b9d5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087248"
 ---
-# <a name="how-to-create-a-shaped-windows-form"></a><span data-ttu-id="6efbb-102">Vorgehensweise: Erstellen von geformten Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6efbb-102">How to: Create a Shaped Windows Form</span></span>
-<span data-ttu-id="6efbb-103">In diesem Beispiel wird ein Formular eine elliptische Form, die mit dem Formular der Größe, an.</span><span class="sxs-lookup"><span data-stu-id="6efbb-103">This example gives a form an elliptical shape that resizes with the form.</span></span>  
+# <a name="how-to-create-a-shaped-windows-form"></a><span data-ttu-id="69a76-102">Vorgehensweise: Erstellen von geformten Windows Forms</span><span class="sxs-lookup"><span data-stu-id="69a76-102">How to: Create a Shaped Windows Form</span></span>
+<span data-ttu-id="69a76-103">In diesem Beispiel wird ein Formular eine elliptische Form, die mit dem Formular der Größe, an.</span><span class="sxs-lookup"><span data-stu-id="69a76-103">This example gives a form an elliptical shape that resizes with the form.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="6efbb-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="6efbb-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="69a76-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="69a76-104">Example</span></span>  
  [!code-cpp[System.Drawing.ConceptualHowTos#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#10)]
  [!code-csharp[System.Drawing.ConceptualHowTos#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#10)]
  [!code-vb[System.Drawing.ConceptualHowTos#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#10)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="6efbb-105">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="6efbb-105">Compiling the Code</span></span>  
- <span data-ttu-id="6efbb-106">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="6efbb-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="69a76-105">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="69a76-105">Compiling the Code</span></span>  
+ <span data-ttu-id="69a76-106">Für dieses Beispiel benötigen Sie Folgendes:</span><span class="sxs-lookup"><span data-stu-id="69a76-106">This example requires:</span></span>  
   
--   <span data-ttu-id="6efbb-107">Verweise auf die Namespaces <xref:System.Windows.Forms> und <xref:System.Drawing>.</span><span class="sxs-lookup"><span data-stu-id="6efbb-107">References to the <xref:System.Windows.Forms> and <xref:System.Drawing> namespaces.</span></span>  
+-   <span data-ttu-id="69a76-107">Verweise auf die Namespaces <xref:System.Windows.Forms> und <xref:System.Drawing>.</span><span class="sxs-lookup"><span data-stu-id="69a76-107">References to the <xref:System.Windows.Forms> and <xref:System.Drawing> namespaces.</span></span>  
   
- <span data-ttu-id="6efbb-108">In diesem Beispiel überschreibt die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, um die Form des Formulars zu ändern.</span><span class="sxs-lookup"><span data-stu-id="6efbb-108">This example overrides the <xref:System.Windows.Forms.Control.OnPaint%2A> method to change the shape of the form.</span></span> <span data-ttu-id="6efbb-109">Um diesen Code zu verwenden, kopieren Sie die Deklaration der Methode als auch der Code innerhalb der Methode zum Zeichnen.</span><span class="sxs-lookup"><span data-stu-id="6efbb-109">To use this code, copy the method declaration as well as the drawing code inside the method.</span></span>  
+ <span data-ttu-id="69a76-108">In diesem Beispiel überschreibt die <xref:System.Windows.Forms.Control.OnPaint%2A> Methode, um die Form des Formulars zu ändern.</span><span class="sxs-lookup"><span data-stu-id="69a76-108">This example overrides the <xref:System.Windows.Forms.Control.OnPaint%2A> method to change the shape of the form.</span></span> <span data-ttu-id="69a76-109">Um diesen Code zu verwenden, kopieren Sie die Deklaration der Methode als auch der Code innerhalb der Methode zum Zeichnen.</span><span class="sxs-lookup"><span data-stu-id="69a76-109">To use this code, copy the method declaration as well as the drawing code inside the method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6efbb-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6efbb-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="69a76-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="69a76-110">See also</span></span>
 
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Region>
 - <xref:System.Drawing>
 - <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>
 - <xref:System.Windows.Forms.Control.Region%2A>
-- [<span data-ttu-id="6efbb-111">Erste Schritte mit der Grafikprogrammierung</span><span class="sxs-lookup"><span data-stu-id="6efbb-111">Getting Started with Graphics Programming</span></span>](getting-started-with-graphics-programming.md)
+- [<span data-ttu-id="69a76-111">Erste Schritte mit Grafikprogrammierung</span><span class="sxs-lookup"><span data-stu-id="69a76-111">Getting Started with Graphics Programming</span></span>](getting-started-with-graphics-programming.md)
