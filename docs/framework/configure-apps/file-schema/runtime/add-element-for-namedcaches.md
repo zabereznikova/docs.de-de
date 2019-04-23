@@ -1,15 +1,15 @@
 ---
-title: <add> Element für <namedCaches>
+title: <add>-Element für <namedCaches>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add element for <namedCaches>
 - <add> element for <namedCaches>
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 ms.openlocfilehash: 9a7e370f9cce0e9ddf6dbe49984b7597e041eb84
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094527"
 ---
 # <a name="add-element-for-namedcaches"></a>\<Hinzufügen >-Element für \<NamedCaches >

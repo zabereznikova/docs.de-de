@@ -8,10 +8,10 @@ ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4c1d07e2469a36c4b8e1ef7b8d90a80a3530ae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097173"
 ---
 # <a name="constrained-execution-regions"></a>Eingeschränkte Ausführungsbereiche (CERs)
@@ -49,9 +49,9 @@ Ein eingeschränkter Ausführungsbereich (Constrained Execution Region, CER) ist
 ### <a name="reliability-guarantees"></a>Zuverlässigkeitsgarantien  
  Durch <xref:System.Runtime.ConstrainedExecution.Cer>-Enumerationswerte dargestellte Zuverlässigkeitsgarantien geben den Grad der Zuverlässigkeit einer bestimmten Methode an:  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>sein. Die Methode kann unter Ausnahmebedingungen fehlschlagen. In diesem Fall meldet die Methode der aufrufenden Methode, ob sie erfolgreich ausgeführt wurde oder fehlschlug. Die Methode muss sich in einem CER befinden, um die Meldung des Rückgabewerts zu gewährleisten.  
+-   <xref:System.Runtime.ConstrainedExecution.Cer.MayFail>. Die Methode kann unter Ausnahmebedingungen fehlschlagen. In diesem Fall meldet die Methode der aufrufenden Methode, ob sie erfolgreich ausgeführt wurde oder fehlschlug. Die Methode muss sich in einem CER befinden, um die Meldung des Rückgabewerts zu gewährleisten.  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.None>sein. Die Methode, der Typ oder die Assembly steht nicht mit einem CER in Zusammenhang und kann höchstwahrscheinlich ohne wirksame Schutzmaßnahmen vor Zustandsbeschädigungen nicht sicher aus einem CER aufgerufen werden. CER-Garantien können nicht genutzt werden. Dies impliziert Folgendes:  
+-   <xref:System.Runtime.ConstrainedExecution.Cer.None>. Die Methode, der Typ oder die Assembly steht nicht mit einem CER in Zusammenhang und kann höchstwahrscheinlich ohne wirksame Schutzmaßnahmen vor Zustandsbeschädigungen nicht sicher aus einem CER aufgerufen werden. CER-Garantien können nicht genutzt werden. Dies impliziert Folgendes:  
   
     1.  Die Methode kann unter Ausnahmebedingungen fehlschlagen.  
   
@@ -61,23 +61,23 @@ Ein eingeschränkter Ausführungsbereich (Constrained Execution Region, CER) ist
   
     4.  Wenn einer Methode, einem Typ oder einer Assembly nicht explizit Erfolg garantiert wird, wird diese bzw. dieser implizit als <xref:System.Runtime.ConstrainedExecution.Cer.None> erkannt.  
   
--   <xref:System.Runtime.ConstrainedExecution.Cer.Success>sein. Die Methode ist unter Ausnahmebedingungen garantiert erfolgreich. Um eine solche Zuverlässigkeit zu erlangen, müssen Sie immer einen CER um die aufgerufene Methode konstruieren, selbst wenn sie aus einem Bereich aufgerufen wird, der kein CER ist. Eine Methode ist erfolgreich, wenn sie die vorgegebene Aufgabe erfüllt. Erfolg ist jedoch ein subjektiver Begriff. Ein Beispiel: Count wird mit `ReliabilityContractAttribute(Cer.Success)` markiert. Dies impliziert, dass bei der Ausführung unter einem CER immer ein Wert für die Anzahl von Elementen in der <xref:System.Collections.ArrayList> zurückgegeben wird und die internen Felder niemals in einem unbestimmten Zustand verbleiben.  Die <xref:System.Threading.Interlocked.CompareExchange%2A>-Methode ist ebenfalls mit einer Erfolgsgarantie versehen. In diesem Fall kann Erfolg jedoch bedeuten, dass der Wert aufgrund einer Racebedingung nicht durch einen neuen Wert ersetzt werden kann.  Die Methode verhält sich genau wie dokumentiert, und beim Schreiben von CER-Code muss nicht von außergewöhnlichem Verhalten ausgegangen werden, das jenseits des Verhaltens von korrektem, aber nicht zuverlässigem Code liegt.  
+-   <xref:System.Runtime.ConstrainedExecution.Cer.Success>. Die Methode ist unter Ausnahmebedingungen garantiert erfolgreich. Um eine solche Zuverlässigkeit zu erlangen, müssen Sie immer einen CER um die aufgerufene Methode konstruieren, selbst wenn sie aus einem Bereich aufgerufen wird, der kein CER ist. Eine Methode ist erfolgreich, wenn sie die vorgegebene Aufgabe erfüllt. Erfolg ist jedoch ein subjektiver Begriff. Ein Beispiel: Count wird mit `ReliabilityContractAttribute(Cer.Success)` markiert. Dies impliziert, dass bei der Ausführung unter einem CER immer ein Wert für die Anzahl von Elementen in der <xref:System.Collections.ArrayList> zurückgegeben wird und die internen Felder niemals in einem unbestimmten Zustand verbleiben.  Die <xref:System.Threading.Interlocked.CompareExchange%2A>-Methode ist ebenfalls mit einer Erfolgsgarantie versehen. In diesem Fall kann Erfolg jedoch bedeuten, dass der Wert aufgrund einer Racebedingung nicht durch einen neuen Wert ersetzt werden kann.  Die Methode verhält sich genau wie dokumentiert, und beim Schreiben von CER-Code muss nicht von außergewöhnlichem Verhalten ausgegangen werden, das jenseits des Verhaltens von korrektem, aber nicht zuverlässigem Code liegt.  
   
 ### <a name="corruption-levels"></a>Beschädigungsstufen  
  Beschädigungsstufen, die durch <xref:System.Runtime.ConstrainedExecution.Consistency>-Enumerationswerte dargestellt werden, geben an, in welchem Ausmaß der Zustand in einer bestimmten Umgebung beschädigt werden kann:  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>sein. Die Common Language Runtime (CLR) kann unter Ausnahmebedingungen die Zustandskonsistenz in der aktuellen Anwendungsdomäne nicht garantieren.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptAppDomain>. Die Common Language Runtime (CLR) kann unter Ausnahmebedingungen die Zustandskonsistenz in der aktuellen Anwendungsdomäne nicht garantieren.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>sein. Die Methode beschränkt die Zustandsbeschädigung unter Ausnahmebedingungen garantiert auf die aktuelle Instanz.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptInstance>. Die Methode beschränkt die Zustandsbeschädigung unter Ausnahmebedingungen garantiert auf die aktuelle Instanz.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>, Unter Ausnahmebedingungen die CLR keine Garantie Zustandskonsistenz; die Bedingung kann, also den Prozess beschädigt.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.MayCorruptProcess>. Die CLR kann unter Ausnahmebedingungen die Zustandskonsistenz nicht garantieren, d.h., die Bedingung kann den Prozess beschädigen.  
   
--   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>sein. Unter Ausnahmebedingungen beschädigt die Methode den Zustand garantiert nicht.  
+-   <xref:System.Runtime.ConstrainedExecution.Consistency.WillNotCorruptState>. Unter Ausnahmebedingungen beschädigt die Methode den Zustand garantiert nicht.  
   
 ## <a name="reliability-trycatchfinally"></a>Zuverlässigkeit von try/catch/finally-Blöcken  
  Der zuverlässige `try/catch/finally`-Block ist ein Mechanismus für die Ausnahmebehandlung, dessen Vorhersagbarkeitsgarantie der nicht verwalteten Version entspricht. Der `catch/finally`-Block ist der CER. Die Methoden im Block müssen vorab vorbereitet werden und so angelegt sein, dass sie nicht unterbrochen werden können.  
   
- In .NET Framework, Version 2.0, meldet der Code der Laufzeit, dass ein try-Block zuverlässig ist, indem er <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> unmittelbar vor diesem aufruft. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> ist ein Mitglied <xref:System.Runtime.CompilerServices.RuntimeHelpers>, einer Unterstützungsklasse für Compiler. Rufen Sie <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> direkt auf, sofern dies vom Compiler unterstützt wird.  
+ In .NET Framework, Version 2.0, meldet der Code der Laufzeit, dass ein try-Block zuverlässig ist, indem er <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> unmittelbar vor diesem aufruft. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> ist ein Member von <xref:System.Runtime.CompilerServices.RuntimeHelpers>, einer Unterstützungsklasse für Compiler. Rufen Sie <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> direkt auf, sofern dies vom Compiler unterstützt wird.  
   
 ## <a name="noninterruptible-regions"></a>Nicht unterbrechbare Bereiche  
  In einem nicht unterbrechbaren Bereich wird eine Reihe von Anweisungen zu einem CER gruppiert.  
@@ -106,7 +106,7 @@ Ein eingeschränkter Ausführungsbereich (Constrained Execution Region, CER) ist
   
 -   Sicherheitsüberprüfungen. Führen Sie keine Anforderungen, sondern nur Linkaufrufe aus.  
   
--   <xref:System.Reflection.Emit.OpCodes.Isinst> und <xref:System.Reflection.Emit.OpCodes.Castclass> für COM-Objekte und Proxys  
+-   <xref:System.Reflection.Emit.OpCodes.Isinst> und <xref:System.Reflection.Emit.OpCodes.Castclass> für COM-Objekte und -Proxys  
   
 -   Abrufen oder Festlegen von Feldern für einen transparenten Proxy.  
   

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
 ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096048"
 ---
 # <a name="understanding-protection-level"></a>Grundlagen der Schutzebene
@@ -28,11 +28,11 @@ Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B
   
 -   Drei grundlegende Ebenen des Schutzes sind für jeden Teil einer Nachricht vorhanden. Die Eigenschaft wird (bei jedem Auftreten) auf einen der <xref:System.Net.Security.ProtectionLevel>-Enumerationswerte festgelegt. In aufsteigender Reihenfolge des Schutzes umfassen sie:  
   
-    -   `None`sein.  
+    -   `None`.  
   
-    -   `Sign`sein. Der geschützte Teil wird digital signiert. Dies stellt sicher, dass eine Manipulation am Nachrichtenteil erkannt wird.  
+    -   `Sign`. Der geschützte Teil wird digital signiert. Dies stellt sicher, dass eine Manipulation am Nachrichtenteil erkannt wird.  
   
-    -   `EncryptAndSign`sein. Der Nachrichtenteil wird verschlüsselt, um Vertraulichkeit sicherzustellen, bevor er signiert wird.  
+    -   `EncryptAndSign`. Der Nachrichtenteil wird verschlüsselt, um Vertraulichkeit sicherzustellen, bevor er signiert wird.  
   
 -   Sie können schutzanforderungen nur für festlegen *Anwendungsdaten* mit diesem Feature. WS-Adressierungsheader sind z. B. Infrastrukturdaten und werden deshalb nicht vom `ProtectionLevel` beeinflusst.  
   
@@ -104,6 +104,6 @@ Die `ProtectionLevel`-Eigenschaft ist in vielen anderen Klassen zu finden, z. B
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
 - <xref:System.Net.Security.ProtectionLevel>
 - [Sichern von Diensten](../../../docs/framework/wcf/securing-services.md)
-- [Vorgehensweise: Festlegen der ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [Vorgehensweise: Legen Sie die ProtectionLevel-Eigenschaft](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [Angeben und Behandeln von Fehlern in Verträgen und Diensten](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [Verwendung von Nachrichtenverträgen](../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+- [Verwenden von Nachrichtenverträgen](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

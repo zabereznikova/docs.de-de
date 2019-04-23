@@ -10,10 +10,10 @@ helpviewer_keywords:
 - binding data [WPF], converting bound data
 ms.assetid: b00aaa19-c6df-4c3b-a9fd-88a0b488df2b
 ms.openlocfilehash: 40699bec1c6cd775f7f8495b7a49eda15fb2ed83
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59093799"
 ---
 # <a name="how-to-convert-bound-data"></a>Vorgehensweise: Konvertieren von gebundenen Daten
@@ -40,5 +40,5 @@ Dieses Beispiel zeigt, wie Sie die Konvertierung aus, um Daten anwenden, die in 
 ## <a name="see-also"></a>Siehe auch
 
 - [Implementieren der Bindungsvalidierung](how-to-implement-binding-validation.md)
-- [Übersicht über die Datenbindung](data-binding-overview.md)
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

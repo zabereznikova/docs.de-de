@@ -3,10 +3,10 @@ title: 'Vorgehensweise: Generieren des Objektmodells als externe Datei'
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
 ms.openlocfilehash: 2e439cd6628daa5b574be2049393dc2964896679
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095575"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>Vorgehensweise: Generieren des Objektmodells als externe Datei
@@ -51,5 +51,5 @@ sqlmetal /server:myserver /database:northwind /map:externalfile.xml
 ## <a name="see-also"></a>Siehe auch
 
 - [Erstellen des Objektmodells](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
-- [Externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
-- [Vorgehensweise: Generieren des Objektmodells in Visual Basic oder C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)
+- [External Mapping (Externe Zuordnung)](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
+- [Vorgehensweise: (Vorgehensweise: Generieren des Objektmodells in Visual Basic oder C#)](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)

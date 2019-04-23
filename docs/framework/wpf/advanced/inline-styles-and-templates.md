@@ -8,10 +8,10 @@ helpviewer_keywords:
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
 ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091433"
 ---
 # <a name="inline-styles-and-templates"></a>Inlinestile und -vorlagen
@@ -20,15 +20,15 @@ ms.locfileid: "59091433"
 ## <a name="limitations-of-inline-styles-and-templates"></a>Einschränkungen von Inlinestile und-Vorlagen  
  In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], Stil- und Vorlageneigenschaften können technisch auf zwei Arten festgelegt werden. Sie können die Attributsyntax verwenden, auf einen Stil verweisen, die in eine Ressource, z. B. definiert wurde `<` *Objekt*`Style="{StaticResource`*MyResourceKey*`}" .../>`. Oder Sie können Eigenschaftenelement-Syntax verwenden, z. B. einen Inlinestil zu definieren:  
   
- `<` *object* `>`  
+ `<` *Objekt* `>`  
   
- `<` *object* `.Style>`  
+ `<` *Objekt* `.Style>`  
   
  `<` `Style`  `.../>`  
   
- `</` *object* `.Style>`  
+ `</` *Objekt* `.Style>`  
   
- `</` *object* `>`  
+ `</` *Objekt* `>`  
   
  Die Verwendung von Attributen ist sehr viel häufiger. Ein Format, das Inline definiert und nicht in Ressourcen definiert ist unbedingt auf das enthaltende Element ausgerichtet ist, und kann nicht erneut verwendet werden so einfach, da sie keine Ressourcenschlüssel besitzt. Im Allgemeinen ein definierten Stil vielseitiger und nützlicher und weitere in Übereinstimmung mit den allgemeinen [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Prinzip der Trennung von Programmlogik in Code vom Entwurf im Markup-Programmierung.  
   

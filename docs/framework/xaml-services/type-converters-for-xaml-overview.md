@@ -7,10 +7,10 @@ helpviewer_keywords:
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
 ms.openlocfilehash: 7a5ec731eacda8017c307a0ffa8ec282da78c40f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095723"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Übersicht über Typkonverter für XAML
@@ -32,7 +32,7 @@ Typkonverter stellen die Logik für einen Objekt-Writer bereit, der die Konverti
  Markuperweiterungen müssen durch einen XAML-Prozessor verarbeitet werden, bevor die Überprüfung auf Eigenschaftstyp und andere Überlegungen erfolgt. Wenn beispielsweise eine als Attribut festzulegende Eigenschaft normalerweise eine Typkonvertierung aufweist, in einem bestimmten Fall jedoch durch eine Markuperweiterungsverwendung festgelegt wird, dann wird das Markuperweiterungsverhalten zuerst festgelegt. Eine allgemeine Situation, in der eine Markuperweiterung erforderlich ist, besteht im Erstellen eines Verweises auf ein vorhandenes Objekt. In diesem Szenario kann ein zustandsloser Typkonverter nur eine neue Instanz genieren, die möglicherweise nicht gewünscht ist. Weitere Informationen zur Markuperweiterungen finden Sie unter [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md).  
   
 ### <a name="native-type-converters"></a>Systemeigene Typkonverter  
- In den WPF- und .NET XAML-dienstimplementierungen gibt es bestimmte CLR-Typen, die systemeigenen Typ verfügen, jedoch die CLR-Typen sind nicht konventionell vorstellen als primitive. Ein Beispiel eines solchen Typs ist <xref:System.DateTime>. Ein Grund dafür besteht in der Funktionsweise der .NET Framework-Architektur: Der Typ <xref:System.DateTime> ist in „mscorlib“ definiert. Hierbei handelt es sich um die grundlegendste Bibliothek in .NET. <xref:System.DateTime> darf nicht mit einem Attribut zu attribuieren, die aus einer anderen Assembly stammt, eine Abhängigkeit einführt (<xref:System.ComponentModel.TypeConverterAttribute> stammt aus dem System); aus diesem Grund kann der gewöhnliche Typkonverter-Ermittlungsmechanismus durch die Attributierung nicht unterstützt werden. Stattdessen verfügt der XAML-Parser über eine Liste von Typen, für die die systemeigene Verarbeitung erforderlich ist, und diese Typen werden ähnlich wie echte Primitive verarbeitet. Im Fall von <xref:System.DateTime>umfasst diese Verarbeitung einen Aufruf von <xref:System.DateTime.Parse%2A>.  
+ In den WPF- und .NET XAML-dienstimplementierungen gibt es bestimmte CLR-Typen, die systemeigenen Typ verfügen, jedoch die CLR-Typen sind nicht konventionell vorstellen als primitive. Ein Beispiel eines solchen Typs ist <xref:System.DateTime>. Ein Grund dafür besteht in der Funktionsweise der .NET Framework-Architektur: Der Typ <xref:System.DateTime> ist in „mscorlib“ definiert. Hierbei handelt es sich um die grundlegendste Bibliothek in .NET. Es ist nicht zulässig,<xref:System.DateTime> mit einem Attribut zu attribuieren, das aus einer anderen Assembly stammt, wodurch eine Abhängigkeit erschaffen wird (<xref:System.ComponentModel.TypeConverterAttribute> stammt aus dem System). Daher kann der gewöhnliche Typkonverter-Ermittlungsmechanismus durch die Attributierung nicht unterstützt werden. Stattdessen verfügt der XAML-Parser über eine Liste von Typen, für die die systemeigene Verarbeitung erforderlich ist, und diese Typen werden ähnlich wie echte Primitive verarbeitet. Im Fall von <xref:System.DateTime>umfasst diese Verarbeitung einen Aufruf von <xref:System.DateTime.Parse%2A>.  
   
 <a name="Implementing_a_Type_Converter"></a>   
 ## <a name="implementing-a-type-converter"></a>Implementieren eines Typkonverters  
@@ -43,7 +43,7 @@ Typkonverter stellen die Logik für einen Objekt-Writer bereit, der die Konverti
   
  Für XAML wird die Rolle von <xref:System.ComponentModel.TypeConverter> erweitert. Für XAML-Zwecke ist <xref:System.ComponentModel.TypeConverter> die Basisklasse für das Bereitstellen von Unterstützung für bestimmte To- und From-Zeichenfolgekonvertierungen. Die From-Zeichenfolge ermöglicht das Analysieren eines Zeichenfolgenattributwerts aus XAML. Die To-Zeichenfolge ermöglicht das erneute Verarbeiten eines Laufzeitwerts einer bestimmten Objekteigenschaft zurück in ein Attribut in XAML für die Serialisierung.  
   
- <xref:System.ComponentModel.TypeConverter> definiert vier Member, die zum Konvertieren von to- und from-Zeichenfolgen für XAML-Verarbeitungszwecke relevant sind:  
+ <xref:System.ComponentModel.TypeConverter> definiert vier Member, die für die Konvertierungen von to- und from-Zeichenfolgen für XAML-Verarbeitungszwecke relevant sind:  
   
 -   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
@@ -57,7 +57,7 @@ Typkonverter stellen die Logik für einen Objekt-Writer bereit, der die Konverti
   
  Die zweitwichtigste Methode ist <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>. Wenn eine Anwendung in eine Markupdarstellung (beispielsweise wenn die Speicherung in XAML als Datei erfolgt) umgewandelt wird, wird <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> im größeren Szenario eines XAML-Texts einbezogen, der von Writern in einer Markupdarstellung erstellt wird. In diesem Fall besteht der wichtige Codepfad für XAML darin, wenn der Aufrufer einen `destinationType` von <xref:System.String>weitergibt.  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> und <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> sind Unterstützungsmethoden, die verwendet werden, wenn ein Dienst die Funktionen von Abfragen die <xref:System.ComponentModel.TypeConverter> Implementierung. Sie müssen diese Methoden implementieren, um `true` für typspezifische Klassen zurückzugeben, welche die entsprechenden Konvertierungsmethoden Ihres Konverters unterstützen. Für XAML-Zwecke bedeutet dies in der Regel den <xref:System.String> -Typ.  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> und <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> sind Unterstützungsmethoden, die verwendet werden, wenn ein Dienst die Funktionen der <xref:System.ComponentModel.TypeConverter> -Implementierung abfragt. Sie müssen diese Methoden implementieren, um `true` für typspezifische Klassen zurückzugeben, welche die entsprechenden Konvertierungsmethoden Ihres Konverters unterstützen. Für XAML-Zwecke bedeutet dies in der Regel den <xref:System.String> -Typ.  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Kulturinformations- und Typkonverter für XAML  
  Jede <xref:System.ComponentModel.TypeConverter> -Implementierung kann eindeutig interpretieren, was eine gültige Zeichenfolge für eine Konvertierung ist, und sie kann zudem die Typbeschreibung, die als Parameter weitergegeben wird, verwenden oder ignorieren. Eine wichtige Überlegung in Bezug auf die Kultur- und XAML-Typkonvertierung lautet wie folgt: Auch wenn die Verwendung von lokalisierbaren Zeichenfolgen als Attributwerten durch XAML unterstützt wird, können Sie diese lokalisierbaren Zeichenfolgen nicht als Typkonvertereingabe mit bestimmten Kulturanforderungen verwenden. Diese Einschränkung besteht, da Typkonverter für XAML-Attributwerte ein zwangsläufig festes XAML-Sprachverarbeitungsverhalten umfassen, in dem die `en-US` -Kultur verwendet wird. Weitere Informationen über entwicklungsgründe für diese Einschränkung finden Sie in der XAML-Sprachspezifikation ([\[MS-XAML-\]](https://go.microsoft.com/fwlink/?LinkId=114525)) oder [WPF-Globalisierung und Lokalisierung Übersicht](../wpf/advanced/wpf-globalization-and-localization-overview.md).  

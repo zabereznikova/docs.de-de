@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
 ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092279"
 ---
 # <a name="administration-and-diagnostics"></a>Verwaltung und Diagnose
@@ -50,6 +50,6 @@ Windows Communication Foundation (WCF) bietet einen umfangreichen Satz von Funkt
 - [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [ServiceModel-Registrierungstool](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
 - [Ablaufverfolgung](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [Verwenden der Windows-Verwaltungsinstrumentierung für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
+- [Verwenden der Windows-Verwaltungsinstrumentation für die Diagnose](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
 - [Leistungsindikatoren](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
 - [Windows Communication Foundation-Tools](../../../../docs/framework/wcf/tools.md)
