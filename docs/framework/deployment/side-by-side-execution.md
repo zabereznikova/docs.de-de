@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654600"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341074"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Parallele Ausführung in .NET Framework
 Die parallele Ausführung bezeichnet die Möglichkeit, mehrere Versionen einer Anwendung oder einer Komponente auf demselben Computer auszuführen. Das bedeutet, dass Sie gleichzeitig mehrere Versionen der Common Language Runtime sowie mehrere Versionen von Anwendungen und Komponenten, die eine Version der Common Language Runtime verwenden, gleichzeitig auf demselben Computer ausführen können.  
@@ -75,11 +75,11 @@ Die parallele Ausführung bezeichnet die Möglichkeit, mehrere Versionen einer A
   
  Wenn eine Anwendungskonfigurationsdatei vorhanden ist, bestimmt die Runtime die entsprechende zu ladende Runtime-Version anhand der Ergebnisse der folgenden Vorgehensweise:  
   
-1.  Die Runtime überprüft das [\<<supportedRuntime>-Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) in der Konfigurationsdatei der Anwendung. Sind eine oder mehrere der unterstützten Runtime-Versionen vorhanden, die im **\<<supportedRuntime>**-Element angegeben sind, lädt die Common Language Runtime die Runtime-Version, die im ersten **\<<supportedRuntime>**-Element angegeben ist. Wenn diese Version nicht verfügbar ist, überprüft die Common Language Runtime das nächste **\<<supportedRuntime>**-Element und versucht, die angegebene Runtime-Version zu laden. Wenn auch diese Runtime-Version nicht verfügbar ist, werden die weiteren **\<<supportedRuntime>**-Elemente überprüft. Wenn keine der unterstützten Runtime-Versionen verfügbar ist, kann die Common Language Runtime keine Runtime-Version laden, und sie zeigt eine Meldung an (siehe Schritt 3).  
+1. Die Runtime überprüft das [\<<supportedRuntime>-Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md) in der Konfigurationsdatei der Anwendung. Sind eine oder mehrere der unterstützten Runtime-Versionen vorhanden, die im **\<<supportedRuntime>**-Element angegeben sind, lädt die Common Language Runtime die Runtime-Version, die im ersten **\<<supportedRuntime>**-Element angegeben ist. Wenn diese Version nicht verfügbar ist, überprüft die Common Language Runtime das nächste **\<<supportedRuntime>**-Element und versucht, die angegebene Runtime-Version zu laden. Wenn auch diese Runtime-Version nicht verfügbar ist, werden die weiteren **\<<supportedRuntime>**-Elemente überprüft. Wenn keine der unterstützten Runtime-Versionen verfügbar ist, kann die Common Language Runtime keine Runtime-Version laden, und sie zeigt eine Meldung an (siehe Schritt 3).  
   
-2.  Die Common Language Runtime liest den PE-Dateiheader der ausführbaren Datei der Anwendung. Ist die im PE-Dateiheader angegebene Runtime-Version verfügbar, lädt die Common Language Runtime diese Version. Ist die angegebene Runtime-Version nicht verfügbar, sucht die Runtime nach einer Runtime-Version, für die Microsoft festgestellt hat, dass sie mit der Common Language Runtime-Version im PE-Dateiheader kompatibel ist. Wird diese Version nicht gefunden, wird die Vorgehensweise mit Schritt 3 fortgesetzt.  
+2. Die Common Language Runtime liest den PE-Dateiheader der ausführbaren Datei der Anwendung. Ist die im PE-Dateiheader angegebene Runtime-Version verfügbar, lädt die Common Language Runtime diese Version. Ist die angegebene Runtime-Version nicht verfügbar, sucht die Runtime nach einer Runtime-Version, für die Microsoft festgestellt hat, dass sie mit der Common Language Runtime-Version im PE-Dateiheader kompatibel ist. Wird diese Version nicht gefunden, wird die Vorgehensweise mit Schritt 3 fortgesetzt.  
   
-3.  Die Runtime zeigt eine Meldung an, in der mitgeteilt wird, dass die von der Anwendung unterstützte Runtime-Version nicht verfügbar ist. Die Common Language Runtime wird nicht geladen.  
+3. Die Runtime zeigt eine Meldung an, in der mitgeteilt wird, dass die von der Anwendung unterstützte Runtime-Version nicht verfügbar ist. Die Common Language Runtime wird nicht geladen.  
   
     > [!NOTE]
     >  Sie können die Anzeige dieser Meldung unterdrücken, indem Sie unter dem Registrierungsschlüssel „HKLM\Software\Microsoft\\.NETFramework“ den Wert „NoGuiFromShim“ oder indem Sie die Umgebungsvariable „COMPLUS_NoGuiFromShim“ verwenden. Beispielsweise können Sie die Meldung für Anwendungen unterdrücken, bei denen typischerweise keine Interaktion mit dem Benutzer vorgesehen ist (z. B. bei unbeaufsichtigten Installationen oder Windows-Diensten). Wenn die Anzeige dieser Meldung unterdrückt wird, schreibt die Common Language Runtime eine Meldung in das Ereignisprotokoll.  Legen Sie den Registrierungswert "NoGuiFromShim" auf 1 fest, um diese Meldung für alle Anwendungen auf einem Computer zu unterdrücken. Sie können aber auch die Umgebungsvariable "COMPLUS_NoGuiFromShim" auf 1 festlegen, um die Meldung für Anwendungen zu unterdrücken, die in einem bestimmten Benutzerkontext ausgeführt werden.  
@@ -120,4 +120,4 @@ publicKeyToken=...,
 |[Anwendungsdomänen](../../../docs/framework/app-domains/application-domains.md)|Bietet eine konzeptionelle Übersicht über Anwendungsdomänen.|  
   
 ## <a name="reference"></a>Referenz  
- [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+ [\<supportedRuntime>-Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

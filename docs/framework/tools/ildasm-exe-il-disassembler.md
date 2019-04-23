@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e96f86e516e7b741aa9fbf67efd1683d0845101
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488512"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517537"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL Disassembler)
 
@@ -69,7 +69,7 @@ Die folgenden Optionen gelten nur für Dateien mit den Erweiterungen *.exe*, *.d
 |**/classlist**|Umfasst eine Liste der im Modul definierten Klassen.|
 |**/forward**|Verwendet die Vorwärtsklassendeklaration.|
 |**/headers**|Schließt Informationen über den Dateiheader in der Ausgabe ein.|
-|**/item:** `class`[**::** `member`[`(sig`]]|Disassembliert Folgendes in Abhängigkeit vom angegebenen Argument:<br /><br /> – Disassembliert die angegebene `class`.<br />– Disassembliert den angegebenen `member` der `class`.<br />– Disassembliert den `member` der `class` mit der angegebenen Signatur `sig`. Das Format von `sig` lautet wie folgt:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Hinweis:** In .NET Framework, Versionen 1.0 und 1.1, muss auf `sig` eine schließende Klammer folgen: `(sig)`. Ab .NET Framework 2.0 muss die schließende Klammer weggelassen werden: (`sig`.|
+|**/item:** `class`[**::** `member`[`(sig`]]|Disassembliert Folgendes in Abhängigkeit vom angegebenen Argument:<br /><br /> – Disassembliert die angegebene `class`.<br />– Disassembliert den angegebenen `member` der `class`.<br />– Disassembliert den `member` der `class` mit der angegebenen Signatur `sig`. Das Format von `sig` lautet wie folgt:<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **Hinweis:** In .NET Framework, Versionen 1.0 und 1.1, muss auf `sig` eine schließende Klammer folgen: `(sig)`. Ab .NET Framework 2.0 muss die schließende Klammer weggelassen werden: `(sig`.|
 |**/noil**|Unterdrückt die Ausgabe von IL-Assemblycode.|
 |**/stats**|Schließt Statistiken zum Abbild ein.|
 |**/typelist**|Erzeugt die vollständige Liste mit Typen, um die Reihenfolge von Typen bei Roundtrips beizubehalten.|

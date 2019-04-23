@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661866"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342338"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>So sucht Common Language Runtime nach Assemblys
 Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen Sie mit dem Verfahren vertraut sein, mit dem die Common Language Runtime die Assemblys sucht und bindet, aus denen Ihre Anwendung zusammengesetzt ist. Standardmäßig versucht die Common Language Runtime, die genaue Version einer Assembly einzubinden, mit der die Anwendung erstellt wurde. Dieses Standardverhalten kann durch Einstellungen in der Konfigurationsdatei überschrieben werden.  
@@ -40,16 +40,16 @@ Um Ihre .NET Framework-Anwendung erfolgreich bereitstellen zu können, müssen S
   
  Die Common Language Runtime verwendet die folgenden Schritte, um einen Assemblyverweis aufzulösen:  
   
-1.  [Bestimmen der korrekten Assemblyversion](#step1) durch Überprüfung anwendbarer Konfigurationsdateien, einschließlich der Anwendungskonfigurationsdatei, der Herausgeberrichtliniendatei und der Computerkonfigurationsdatei. Wenn die Konfigurationsdatei auf einem Remotecomputer gespeichert ist, muss die Common Language Runtime zuerst die Anwendungskonfigurationsdatei suchen und herunterladen.  
+1. [Bestimmen der korrekten Assemblyversion](#step1) durch Überprüfung anwendbarer Konfigurationsdateien, einschließlich der Anwendungskonfigurationsdatei, der Herausgeberrichtliniendatei und der Computerkonfigurationsdatei. Wenn die Konfigurationsdatei auf einem Remotecomputer gespeichert ist, muss die Common Language Runtime zuerst die Anwendungskonfigurationsdatei suchen und herunterladen.  
   
-2.  [Überprüfen, ob der Assemblyname bereits zuvor gebunden wurde](#step2) . Ist dies der Fall, wird die zuvor geladene Assembly verwendet. Wenn eine vorherige Anforderung zum Laden der Assembly nicht ausgeführt werden konnte, führt die Anforderung sofort zu einem Fehler, ohne dass versucht wird, die Assembly zu laden.  
+2. [Überprüfen, ob der Assemblyname bereits zuvor gebunden wurde](#step2) . Ist dies der Fall, wird die zuvor geladene Assembly verwendet. Wenn eine vorherige Anforderung zum Laden der Assembly nicht ausgeführt werden konnte, führt die Anforderung sofort zu einem Fehler, ohne dass versucht wird, die Assembly zu laden.  
   
     > [!NOTE]
     >  Das Caching von Assemblybindungsfehlern ist neu in .NET Framework Version 2.0.  
   
-3.  [Durchsuchen des globalen Assemblycache](#step3). Wird die Assembly dort gefunden, wird sie von der Common Language Runtime verwendet.  
+3. [Durchsuchen des globalen Assemblycache](#step3). Wird die Assembly dort gefunden, wird sie von der Common Language Runtime verwendet.  
   
-4.  [Suchen der Assembly](#step4) , wobei folgendermaßen vorgegangen wird:  
+4. [Suchen der Assembly](#step4) , wobei folgendermaßen vorgegangen wird:  
   
     1.  Wenn die Konfiguration und die Herausgeberrichtlinie keine Auswirkung auf den ursprünglichen Verweis haben und die Anforderung zur Bindung mithilfe der <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> -Methode erstellt wurde, sucht die Common Language Runtime nach Hinweisen auf den Speicherort.  
   
@@ -154,9 +154,9 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>Schritt 4: Suchen der Assembly mit CodeBases oder durch Überprüfung  
  Nachdem die richtige Assemblyversion mithilfe der Informationen aus dem Verweis der aufrufenden Assembly und den Konfigurationsdateien ermittelt worden ist und der globale Assemblycache (nur nach Assemblys mit starkem Namen) überprüft wurde, versucht die Common Language Runtime, die Assembly ausfindig zu machen. Die Suche nach einer Assembly setzt sich aus folgenden Schritten zusammen:  
   
-1.  Wird ein [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Element in der Anwendungskonfigurationsdatei gefunden, überprüft die Common Language Runtime den angegebenen Speicherort. Wenn eine Übereinstimmung gefunden wird, wird diese Assembly verwendet und es findet keine Überprüfung statt. Wird die Assembly dort nicht gefunden, schlägt die Bindungsanforderung fehl.  
+1. Wird ein [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Element in der Anwendungskonfigurationsdatei gefunden, überprüft die Common Language Runtime den angegebenen Speicherort. Wenn eine Übereinstimmung gefunden wird, wird diese Assembly verwendet und es findet keine Überprüfung statt. Wird die Assembly dort nicht gefunden, schlägt die Bindungsanforderung fehl.  
   
-2.  Die Common Language Runtime sucht daraufhin nach der Assembly, auf die verwiesen wurde, und wendet dabei die Regeln an, die weiter unten im Abschnitt erläutert sind.  
+2. Die Common Language Runtime sucht daraufhin nach der Assembly, auf die verwiesen wurde, und wendet dabei die Regeln an, die weiter unten im Abschnitt erläutert sind.  
   
 > [!NOTE]
 >  Wenn mehrere Versionen einer Assembly in einem Verzeichnis vorhanden sind und Sie auf eine bestimmte Version dieser Assembly verweisen möchten, müssen Sie das [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)-Element anstelle des `privatePath`-Attributs des [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)-Elements verwenden. Bei Verwendung des [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md)-Elements beendet die Common Language Runtime die Überprüfung beim ersten Auffinden einer Assembly mit dem einfachen Assemblynamen, auf den verwiesen wird, ganz gleich, ob es sich um eine korrekte Übereinstimmung handelt oder nicht. Bei einer korrekten Übereinstimmung wird diese Assembly verwendet. Wenn es sich nicht um eine korrekte Übereinstimmung handelt, wird die Überprüfung beendet und die Bindung schlägt fehl.  
@@ -248,5 +248,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Wenn beispielsweise „Assembly1“ auf „Assembly2“ verweist und „Assembly1“ von `http://www.code.microsoft.com/utils` heruntergeladen wurde, wird dieser Speicherort als Hinweis auf den Speicherort von „Assembly2.dll“ angesehen. Die Runtime sucht in `http://www.code.microsoft.com/utils/Assembly2.dll` und `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll` nach der Assembly. Wenn "Assembly2" in keinem der beiden Speicherorte vorhanden ist, wird eine Anfrage an Windows Installer gestellt.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Bewährte Methoden für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
+
+- [Best Practices für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [Bereitstellung](../../../docs/framework/deployment/index.md)
