@@ -8,10 +8,10 @@ ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 096c818c1103835110478953d0a0d9082b33569e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180660"
 ---
 # <a name="deploying-the-net-framework"></a>Bereitstellen von .NET Framework

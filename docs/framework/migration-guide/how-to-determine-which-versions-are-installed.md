@@ -12,10 +12,10 @@ ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 364d28d5df8e284445d825fbbeb963c54b7b9e27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176305"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Vorgehensweise: Bestimmen der installierten .NET Framework-Versionen
@@ -40,17 +40,17 @@ Benutzer können mehrere Versionen von .NET Framework auf einem Computer [instal
 Eine Liste der auf einem Computer installierten .NET Framework-Versionen finden Sie in der Registrierung. Sie können die Registrierung entweder mit dem Registrierungs-Editor anzeigen oder mit Code abfragen:
  
 - Suchen von neueren .NET Framework-Versionen (4.5 und höher): 
-     - [Verwenden des Registrierungs-Editors zum Suchen nach .NET Framework-Versionen](#net_b)  
-     - [Verwenden von Code zum Suchen nach .NET Framework-Versionen](#net_d)  
-     - [Verwenden von PowerShell zum Abfragen der Registrierung nach .NET Framework-Versionen](#ps_a)
+     - [Suchen von .NET Framework-Versionen 4.5 und höher in der Registrierung](#net_b)  
+     - [Suchen von .NET Framework-Versionen 4.5 und höher mit Code](#net_d)  
+     - [Überprüfen mit PowerShell, ob eine mindestens erforderliche .NET Framework-Version (4.5 und höher) vorliegt](#ps_a)
 - Suchen von älteren .NET Framework-Versionen (1&#8211;4):
-     - [Verwenden des Registrierungs-Editors zum Suchen nach .NET Framework-Versionen](#net_a)
-     - [Verwenden von Code zum Suchen nach .NET Framework-Versionen](#net_c)   
+     - [Suchen von .NET Framework-Versionen 4.5 und höher in der Registrierung](#net_a)
+     - [Suchen von .NET Framework-Versionen 4.5 und höher mit Code](#net_c)   
 
 Verwenden Sie ein Tool oder Code, um eine Liste der auf einem Computer installierten CLR-Versionen zu erhalten:  
   
-- [Verwenden des Clrver-Tools](#clr_a)  
-- [Verwenden von Code zum Abfragen der der Environment-Klasse](#clr_b)  
+- [Suchen der aktuellen CLR-Version mit „Clrver.exe“](#clr_a)  
+- [Suchen der aktuellen CLR-Version mit der Environment-Klasse](#clr_b)  
 
 Informationen zum Ermitteln der installierten Updates für jede Version von .NET Framework finden Sie unter [ Gewusst wie: Ermitteln der installierten .NET Framework-Sicherheitsupdates und -Hotfixes](how-to-determine-which-net-framework-updates-are-installed.md). 
 
@@ -213,6 +213,6 @@ Im folgenden Beispiel wird die Eigenschaft <xref:System.Environment.Version%2A?d
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Ermitteln der installierten .NET Framework-Updates](how-to-determine-which-net-framework-updates-are-installed.md)
-- [Installieren von.NET Framework für Entwickler](../install/guide-for-developers.md)
+- [Vorgehensweise: Ermitteln der installierten .NET Framework-Sicherheitsupdates und -Hotfixes](how-to-determine-which-net-framework-updates-are-installed.md)
+- [Installieren von .NET Framework für Entwickler](../install/guide-for-developers.md)
 - [.NET Framework-Versionen und -Abhängigkeiten](versions-and-dependencies.md)

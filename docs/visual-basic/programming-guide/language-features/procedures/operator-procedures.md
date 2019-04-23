@@ -12,10 +12,10 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175018"
 ---
 # <a name="operator-procedures-visual-basic"></a>Operatorprozeduren (Visual Basic)
@@ -44,7 +44,7 @@ Eine Operatorprozedur besteht aus einer Reihe von Visual Basic-Anweisungen, die 
 ## <a name="declaration-syntax"></a>Deklarationssyntax  
  Die Syntax zum Deklarieren einer Operatorprozedur lautet wie folgt aus:  
   
- `Public Shared`   `[Widening | Narrowing]`   `Operator`  *Operatorsymbol* `(` *operand1*`[,`*operand2* `]) As` *Datatype*   
+ `Public Shared`   `[Widening | Narrowing]`   `Operator`  *Operatorsymbol* `(` *operand1*`[,`*operand2* `]) As` *Datatype*  
   
  `' Statements of the operator procedure.`  
   
@@ -68,7 +68,7 @@ Eine Operatorprozedur besteht aus einer Reihe von Visual Basic-Anweisungen, die 
   
  `Dim testStruct As`  *Strukturname*  
   
- `Dim testNewStruct As`  *Strukturname*`= testStruct`*Operatorsymbol*   `10`  
+ `Dim testNewStruct As`  *Strukturname*`= testStruct`*Operatorsymbol*  `10`  
   
 ### <a name="illustration-of-declaration-and-call"></a>Abbildung der Deklaration und Aufruf  
  Die folgende Struktur speichert einen 128-Bit-Ganzzahl-Wert als die höherwertigen und niederwertigen Bestandteile. Definiert die `+` Operator, um zwei `veryLong` Werte und generiert eine resultierende `veryLong` Wert.  
@@ -86,8 +86,8 @@ Eine Operatorprozedur besteht aus einer Reihe von Visual Basic-Anweisungen, die 
 - [Function-Prozeduren](./function-procedures.md)
 - [Eigenschaftenprozeduren](./property-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator-Anweisung](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Vorgehensweise: Definieren eines Operators](./how-to-define-an-operator.md)
 - [Vorgehensweise: Definieren eines Konvertierungsoperators](./how-to-define-a-conversion-operator.md)
 - [Vorgehensweise: Aufrufen einer Operatorprozedur](./how-to-call-an-operator-procedure.md)
-- [Vorgehensweise: Verwenden einer Klasse, die Operatoren definiert](./how-to-use-a-class-that-defines-operators.md)
+- [Vorgehensweise: Verwenden Sie eine Klasse, die Operatoren definiert](./how-to-use-a-class-that-defines-operators.md)

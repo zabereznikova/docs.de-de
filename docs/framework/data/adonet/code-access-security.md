@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
 ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174108"
 ---
 # <a name="code-access-security-and-adonet"></a>Codezugriffssicherheit und ADO.NET
@@ -27,11 +27,11 @@ ms.locfileid: "59174108"
   
  Es gibt die folgenden drei Arten von Codezugriffsberechtigungen:  
   
--   `Code access permissions` Leiten Sie von der <xref:System.Security.CodeAccessPermission> Klasse. Die Berechtigungen werden benötigt, um auf geschützte Ressourcen, z. B. Dateien und Umgebungsvariablen, zugreifen und geschützte Vorgänge, z. B. das Zugreifen auf nicht verwalteten Code, ausführen zu können.  
+-   `Code access permissions` leiten sich aus der <xref:System.Security.CodeAccessPermission>-Klasse her. Die Berechtigungen werden benötigt, um auf geschützte Ressourcen, z. B. Dateien und Umgebungsvariablen, zugreifen und geschützte Vorgänge, z. B. das Zugreifen auf nicht verwalteten Code, ausführen zu können.  
   
--   `Identity permissions` stehen Sie für Eigenschaften, die eine Assembly zu identifizieren. Die Berechtigungen werden einer Assembly nach Vorlage eines Beweises gewährt. Als Beweise gelten z. B. digitale Signaturen oder der Ursprung des Codes. Identitätsberechtigungen leiten sich auch von der <xref:System.Security.CodeAccessPermission>-Basisklasse her.  
+-   `Identity permissions` stehen für Eigenschaften, die eine Assembly identifizieren. Die Berechtigungen werden einer Assembly nach Vorlage eines Beweises gewährt. Als Beweise gelten z. B. digitale Signaturen oder der Ursprung des Codes. Identitätsberechtigungen leiten sich auch von der <xref:System.Security.CodeAccessPermission>-Basisklasse her.  
   
--   `Role-based security permissions` werden, hängt davon ab, ob ein Prinzipal eine bestimmte Identität besitzt oder ein Mitglied einer angegebenen Rolle ist. Die Klasse <xref:System.Security.Permissions.PrincipalPermission> ermöglicht sowohl deklarative als auch imperative Berechtigungsprüfungen des aktiven Prinzipals.  
+-   `Role-based security permissions` basieren darauf, ob ein Prinzipal eine bestimmte Identität besitzt oder Member einer bestimmten Rolle ist. Die Klasse <xref:System.Security.Permissions.PrincipalPermission> ermöglicht sowohl deklarative als auch imperative Berechtigungsprüfungen des aktiven Prinzipals.  
   
  Zur Bestimmung, ob Code auf eine Ressource zugreifen oder einen Vorgang ausführen darf, durchläuft das Laufzeit-Sicherheitssystem die Aufrufliste und vergleicht dabei die gewährten Berechtigungen der einzelnen Aufrufer mit den angeforderten Berechtigungen. Wenn einer der Aufrufer in der Aufrufliste die angeforderte Berechtigung nicht besitzt, wird eine <xref:System.Security.SecurityException> ausgelöst, und der Zugriff wird verweigert.  
   
@@ -197,6 +197,6 @@ Failed, as expected: Request failed.
 ## <a name="see-also"></a>Siehe auch
 
 - [Sichern von ADO.NET-Anwendungen](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [Sicherheit in systemeigenem Code und .NET Framework-Code](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [Sicherheit in systemeigenem Code und .NET Framework-Code](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [Rollenbasierte Sicherheit](../../../../docs/standard/security/role-based-security.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
 ms.openlocfilehash: 79054ba450dcab1a18562aaadd71b9171896c1e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177436"
 ---
 # <a name="trace-and-debug-settings-schema"></a>Schema für Ablaufverfolgungs- und Debugeinstellungen
@@ -41,8 +41,8 @@ Ablaufverfolgungs- und Debugeinstellungen geben Ablaufverfolgungslistener an, di
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|Entfernt einen Listener aus der `Listeners`-Sammlung für die Ablaufverfolgung.|  
 |[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Entfernt einen Listener aus der `Listeners`-Sammlung für eine Ablaufverfolgungsquelle.|  
 |[\<sharedListeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|Enthält Listener, auf die jedes Quell- oder Ablaufverfolgungselement verweisen kann.|  
-|[\<Quellen >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|Enthält die Ablaufverfolgungsquellen, die die Ablaufverfolgungsmeldungen initiieren.|  
-|[\<Quelle >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiiert.|  
+|[\<sources>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|Enthält die Ablaufverfolgungsquellen, die die Ablaufverfolgungsmeldungen initiieren.|  
+|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|Gibt eine Ablaufverfolgungsquelle an, die die Ablaufverfolgungsmeldungen initiiert.|  
 |[\<switches>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|Enthält Ablaufverfolgungsschalter und die Ebene, für die diese festgelegt sind.|  
 |[\<system.diagnostics>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|Gibt Ablaufverfolgungslistener an, die Meldungen sammeln, speichern und weiterleiten sowie die Ebene, für die ein Ablaufverfolgungsschalter festgelegt ist.|  
 |[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|Enthält Listener, die Ablaufverfolgungsmeldungen sammeln, speichern und weiterleiten.|  

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
 ms.openlocfilehash: cccaf1afa55d786e43863e094a9745a0a1d00870
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174953"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementieren des Value-Steuerelementmusters der Benutzeroberflächenautomatisierung
@@ -34,9 +34,9 @@ Beispiel eines bearbeitbaren Listenelements
   
 -   Um den Textinhalt eines mehrzeiligen Bearbeitungssteuerelements abzurufen, muss <xref:System.Windows.Automation.Provider.ITextProvider>für das Steuerelement implementiert sein. <xref:System.Windows.Automation.Provider.ITextProvider> bietet aber nicht die Möglichkeit, den Wert eines Steuerelements festzulegen.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> unterstützt nicht das Abrufen von Formatierungsinformationen oder Teilzeichenfolgen. Implementieren Sie <xref:System.Windows.Automation.Provider.ITextProvider> in diesen Fällen.  
+-   Mit<xref:System.Windows.Automation.Provider.IValueProvider> ist es nicht möglich, Formatierungsinformationen oder Teilzeichenfolgen abzurufen. Implementieren Sie <xref:System.Windows.Automation.Provider.ITextProvider> in diesen Fällen.  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> muss von Steuerelementen implementiert werden, z. B. die **Farbauswahl** -Auswahlsteuerelement von [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (unten dargestellt), das zeichenfolgenzuordnungen zwischen einem Farbwert (beispielsweise "Gelb") und eine entsprechende interne unterstützt[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]Struktur.  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> muss für Steuerelemente wie z. B. das **Farbauswahl** -Auswahlsteuerelement von [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] (unten dargestellt) implementiert werden. Hierdurch werden Zeichenfolgenzuordnungen zwischen einem Farbwert (beispielsweise „Gelb“) und der entsprechenden internen [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] -Struktur unterstützt.  
   
  ![Farbauswahl mit gelb hervorgehoben. ](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 Beispiel für eine Zuordnung zwischen Farbmustern und Zeichenfolgen  

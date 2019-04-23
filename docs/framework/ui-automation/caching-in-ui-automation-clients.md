@@ -6,10 +6,10 @@ helpviewer_keywords:
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175824"
 ---
 # <a name="caching-in-ui-automation-clients"></a>Zwischenspeichern in Benutzeroberflächenautomatisierungs-Clients
@@ -70,7 +70,7 @@ ms.locfileid: "59175824"
   
  Wenn sich die angeforderte Eigenschaft nicht im Cache befindet, wird eine Ausnahme ausgelöst.  
   
- <xref:System.Windows.Automation.AutomationElement.Cached%2A>, z. B. <xref:System.Windows.Automation.AutomationElement.Current%2A>, macht Sie einzelne Eigenschaften als Member einer Struktur verfügbar. Sie müssen diese Struktur jedoch nicht abrufen, denn Sie können direkt auf die einzelnen Eigenschaften zugreifen. Beispielsweise kann die <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> -Eigenschaft aus `element.Cached.Name`abgerufen werden, wobei `element` ein <xref:System.Windows.Automation.AutomationElement>ist.  
+ <xref:System.Windows.Automation.AutomationElement.Cached%2A>macht, ähnlich wie <xref:System.Windows.Automation.AutomationElement.Current%2A>, einzelne Eigenschaften als Member einer Struktur verfügbar. Sie müssen diese Struktur jedoch nicht abrufen, denn Sie können direkt auf die einzelnen Eigenschaften zugreifen. Beispielsweise kann die <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> -Eigenschaft aus `element.Cached.Name`abgerufen werden, wobei `element` ein <xref:System.Windows.Automation.AutomationElement>ist.  
   
 <a name="Retrieving_Cached_Control_Patterns"></a>   
 ## <a name="retrieving-cached-control-patterns"></a>Abrufen von zwischengespeicherten Steuerelementmustern  

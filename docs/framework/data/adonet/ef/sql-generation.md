@@ -3,10 +3,10 @@ title: SQL-Generierung
 ms.date: 03/30/2017
 ms.assetid: 0e16aa02-d458-4418-a765-58b42aad9315
 ms.openlocfilehash: 108a68f74849c7fa1418775c2a37db06d9d947ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180568"
 ---
 # <a name="sql-generation"></a>SQL-Generierung
@@ -22,7 +22,7 @@ Wenn Sie einen Anbieter für [!INCLUDE[adonet_ef](../../../../../includes/adonet
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Form der Befehlsstrukturen](../../../../../docs/framework/data/adonet/ef/the-shape-of-the-command-trees.md)  
   
- [Generieren von SQL aus Befehlsstrukturen – Best Practices](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)  
+ [Generieren von SQL aus Befehlsstrukturen: Bewährte Methoden](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)  
   
  [SQL-Generierung im Beispielanbieter](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)  
   

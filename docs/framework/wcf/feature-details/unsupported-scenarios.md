@@ -3,10 +3,10 @@ title: Nicht unterstützte Szenarien
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178775"
 ---
 # <a name="unsupported-scenarios"></a>Nicht unterstützte Szenarien
@@ -75,7 +75,7 @@ Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WC
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>Nachrichtensicherheit schlägt fehlt, wenn der ASP.NET-Identitätswechsel verwendet wird und die ASP.NET-Kompatibilität erforderlich ist  
  WCF unterstützt nicht die folgende Kombination von Einstellungen, da sie auftreten der Clientauthentifizierung verhindern können:  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] -Identitätswechsel ist aktiviert. Dies erfolgt in der Datei "Web.config" durch Festlegen der `impersonate` Attribut der <`identity`>-Element `true`.  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Identitätswechsel ist aktiviert. Dies erfolgt in der Datei "Web.config" durch Festlegen der `impersonate` Attribut der <`identity`>-Element `true`.  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] im Kompatibilitätsmodus ist aktiviert, indem die `aspNetCompatibilityEnabled` Attribut der [ \<ServiceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) zu `true`.  
   
@@ -111,8 +111,8 @@ Aus verschiedenen Gründen unterstützt der Windows Communication Foundation (WC
 ## <a name="see-also"></a>Siehe auch
 
 - [Sicherheitsüberlegungen](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [Veröffentlichung von Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [Angriffe durch Rechteerweiterung](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [Dienstverweigerung (Denial of Service)](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [Verfälschungen](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [Wiederholungsangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [Offenlegung vertraulicher Informationen](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [Erhöhen der Berechtigungen](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
+- [Denial-of-Service-Angriffe](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [Manipulation](../../../../docs/framework/wcf/feature-details/tampering.md)
+- [Replayangriffe](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

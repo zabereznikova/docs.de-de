@@ -3,11 +3,11 @@ title: Peernamen und PNRP-IDs
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
 ms.openlocfilehash: e7e92519bede478a5e26a88a56236f987c93c441
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59173107"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772907"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>Peernamen und PNRP-IDs
 Ein Peername steht für einen Endpunkt für die Kommunikation, der ein Computer, ein Benutzer, eine Gruppe, ein Dienst oder alles sein kein, was einem Peer zugeordnet ist, das in eine IPv6-Adresse aufgelöst werden kann. Das Peer Name Resolution-Protokoll (PNRP) nimmt den statistisch eindeutigen Peernamen zur Erstellung einer PNRP-ID an, die zur Identifikation von Cloudelementen verwendet wird.  

@@ -3,10 +3,10 @@ title: Zwischenspeichern von Abfrageplänen (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178177"
 ---
 # <a name="query-plan-caching-entity-sql"></a>Zwischenspeichern von Abfrageplänen (Entity SQL)
@@ -36,7 +36,7 @@ Bei jeder Ausführung einer Abfrage sucht die Abfragepipeline in ihrem Abfragepl
   
 -   Der Abfragetext sollte ein konstantes Muster sein, vorzugsweise eine konstante Zeichenfolge oder eine Ressource.  
   
--   <xref:System.Data.EntityClient.EntityParameter> oder <xref:System.Data.Objects.ObjectParameter> sollte verwendet werden, wo ein vom Benutzer bereitgestellten Wert übergeben werden muss.  
+-   <xref:System.Data.EntityClient.EntityParameter> oder <xref:System.Data.Objects.ObjectParameter> sollte immer dann verwendet werden, wenn ein vom Benutzer bereitgestellter Wert übergeben werden muss.  
   
  Sie sollten die folgenden Abfragemuster vermeiden, die unnötigerweise Slots im Abfrageplancache verwenden:  
   

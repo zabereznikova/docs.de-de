@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
 ms.openlocfilehash: 9c10c334ae2a10df1f75384ce042781b6f1bd43a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178034"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>Beispiele für die Abfrageausdruckssyntax: Projection
-In die Beispielen in diesem Thema wird gezeigt, wie mit der `Select` Methode und die `From … From …` Schlüsselwörter zum Abfragen der [AdventureWorks Sales-Modell](https://archive.codeplex.com/?p=msftdbprodsamples) mithilfe der Abfrageausdruckssyntax Abfragen. `From … From …` ist das abfragebasierte Äquivalent der der `SelectMany` Methode. Für das in den Beispielen verwendete AdventureWorks Sales-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der AdventureWorks-Beispieldatenbank zurückgegriffen.  
+In die Beispielen in diesem Thema wird gezeigt, wie mit der `Select` Methode und die `From … From …` Schlüsselwörter zum Abfragen der [AdventureWorks Sales-Modell](https://archive.codeplex.com/?p=msftdbprodsamples) mithilfe der Abfrageausdruckssyntax Abfragen. `From … From …` ist die abfragebasierte Entsprechung der `SelectMany`-Methode. Für das in den Beispielen verwendete AdventureWorks Sales-Modell wurde auf die Tabellen Contact, Address, Product, SalesOrderHeader und SalesOrderDetail der AdventureWorks-Beispieldatenbank zurückgegriffen.  
   
  In die Beispielen in diesem Thema verwenden Sie die folgenden `using` / `Imports` Anweisungen:  
   

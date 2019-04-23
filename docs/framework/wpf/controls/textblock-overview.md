@@ -9,11 +9,11 @@ helpviewer_keywords:
 - TextBlock control [WPF]
 ms.assetid: 24720bca-341a-4b03-8a6b-7a678023b10a
 ms.openlocfilehash: ce7da2b9c9c8e2a3a24d3acf18396ca447ac3f27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203469"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772727"
 ---
 # <a name="textblock-overview"></a>Übersicht über TextBlock
 Die <xref:System.Windows.Controls.TextBlock> Steuerelement bietet flexible textunterstützung für [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Anwendungen. Es eignet sich hauptsächlich für einfache [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Szenarios, in denen nicht mehr Text als ein Absatz benötigt wird. Unterstützt eine Reihe von Eigenschaften, mit denen präzise gesteuert, wie z. B. <xref:System.Windows.Controls.TextBlock.FontFamily%2A>, <xref:System.Windows.Controls.TextBlock.FontSize%2A>, <xref:System.Windows.Controls.TextBlock.FontWeight%2A>, <xref:System.Windows.Controls.TextBlock.TextEffects%2A>, und <xref:System.Windows.Controls.TextBlock.TextWrapping%2A>. Text-Inhalt kann hinzugefügt werden, mithilfe der <xref:System.Windows.Controls.TextBlock.Text%2A> Eigenschaft. Bei der Verwendung in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] wird der Inhalt zwischen dem öffnenden und dem schließenden Tag implizit als Text des Elements hinzugefügt.  
