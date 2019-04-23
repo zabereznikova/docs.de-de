@@ -1,22 +1,15 @@
-items:
 - name: Entwickeln für mehrere Plattformen
   href: index.md
   items:
-  - name: Portable Klassenbibliothek
-    href: cross-platform-development-with-the-portable-class-library.md
-  - name: Verwenden der portablen Klassenbibliothek mit MVVM
-    href: using-portable-class-library-with-model-view-view-model.md
-  - name: App-Ressourcen für Bibliotheken, die für mehrere Zielplattformen konfiguriert sind
-    href: app-resources-for-libraries-that-target-multiple-platforms.md
-  - name: .NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime
-    href: support-for-windows-store-apps-and-windows-runtime.md
-  - name: Übergeben eines URI an die Windows-Runtime
-    href: passing-a-uri-to-the-windows-runtime.md
-  - name: WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)-Methode
-    href: windowsruntimestreamextensions-asrandomaccessstream-method.md
-ms.openlocfilehash: 92ecd411bf13b7906d5faaaf459f9b786f3aba0a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469219"
+    - name: Portable Klassenbibliothek
+      href: cross-platform-development-with-the-portable-class-library.md
+    - name: Verwenden der portablen Klassenbibliothek mit MVVM
+      href: using-portable-class-library-with-model-view-view-model.md
+    - name: 'App-Ressourcen für Bibliotheken, die für mehrere Zielplattformen konfiguriert sind'
+      href: app-resources-for-libraries-that-target-multiple-platforms.md
+    - name: .NET Framework-Unterstützung für Windows Store-Apps und Windows-Runtime
+      href: support-for-windows-store-apps-and-windows-runtime.md
+    - name: Übergeben eines URI an die Windows-Runtime
+      href: passing-a-uri-to-the-windows-runtime.md
+    - name: WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream)-Methode
+      href: windowsruntimestreamextensions-asrandomaccessstream-method.md

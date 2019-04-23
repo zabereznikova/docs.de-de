@@ -1,32 +1,25 @@
-items:
 - name: Globalisierung und Lokalisierung
   href: index.md
   items:
-  - name: Globalisierung
-    href: globalization.md
-  - name: Überprüfung der Lokalisierbarkeit
-    href: localizability-review.md
-  - name: Lokalisierung
-    href: localization.md
-  - name: Kulturunabhängige Zeichenfolgenoperationen
-    href: culture-insensitive-string-operations.md
-    items:
-    - name: Durchführen kulturunabhängiger Zeichenfolgenoperationen
-      href: performing-culture-insensitive-string-operations.md
+    - name: Globalisierung
+      href: globalization.md
+    - name: Überprüfung der Lokalisierbarkeit
+      href: localizability-review.md
+    - name: Lokalisierung
+      href: localization.md
+    - name: Kulturunabhängige Zeichenfolgenoperationen
+      href: culture-insensitive-string-operations.md
       items:
-      - name: Zeichenfolgenvergleiche
-        href: performing-culture-insensitive-string-comparisons.md
-      - name: Schreibungsänderungen
-        href: performing-culture-insensitive-case-changes.md
-      - name: Zeichenfolgenvorgänge in Sammlungen
-        href: performing-culture-insensitive-string-operations-in-collections.md
-      - name: Zeichenfolgenvorgänge in Arrays
-        href: performing-culture-insensitive-string-operations-in-arrays.md
-  - name: Bewährte Methoden für die Entwicklung weltweit einsatzfähiger Anwendungen
-    href: best-practices-for-developing-world-ready-apps.md
-ms.openlocfilehash: afbb7d141dd544f0fd36f02f9dd9f4523df94840
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469213"
+        - name: Durchführen kulturunabhängiger Zeichenfolgenoperationen
+          href: performing-culture-insensitive-string-operations.md
+          items:
+            - name: Zeichenfolgenvergleiche
+              href: performing-culture-insensitive-string-comparisons.md
+            - name: Schreibungsänderungen
+              href: performing-culture-insensitive-case-changes.md
+            - name: Zeichenfolgenvorgänge in Sammlungen
+              href: performing-culture-insensitive-string-operations-in-collections.md
+            - name: Zeichenfolgenvorgänge in Arrays
+              href: performing-culture-insensitive-string-operations-in-arrays.md
+    - name: Bewährte Methoden für die Entwicklung weltweit einsatzfähiger Anwendungen
+      href: best-practices-for-developing-world-ready-apps.md

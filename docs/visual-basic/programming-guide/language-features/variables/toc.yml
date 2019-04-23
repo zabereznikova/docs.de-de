@@ -1,51 +1,44 @@
-items:
 - name: Variablen in Visual Basic
   href: index.md
   items:
-  - name: Variablendeklaration
-    href: variable-declaration.md
-    items:
-    - name: 'Vorgehensweise: Erstellen einer neuen Variablen'
-      href: how-to-create-a-new-variable.md
-    - name: 'Vorgehensweise: Erstellen einer Variablen mit unveränderlichem Wert'
-      href: how-to-create-a-variable-that-does-not-change-in-value.md
-    - name: 'Vorgehensweise: Verschieben von Daten in eine und aus einer Variablen'
-      href: how-to-move-data-into-and-out-of-a-variable.md
-  - name: Objektvariablen
-    href: object-variables.md
-    items:
-    - name: 'Vorgehensweise: Beschleunigen des Zugriffs auf ein Objekt mit langem Qualifizierungspfad'
-      href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
-  - name: Deklaration von Objektvariablen
-    href: object-variable-declaration.md
-    items:
-    - name: 'Vorgehensweise: Zugreifen auf Member eines Objekts'
-      href: how-to-access-members-of-an-object.md
-    - name: Zuweisung von Objektvariablen
-      href: object-variable-assignment.md
+    - name: Variablendeklaration
+      href: variable-declaration.md
       items:
-      - name: 'Vorgehensweise: Deklarieren einer Objektvariablen und Zuweisen eines entsprechenden Objekts'
-        href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
-      - name: 'Vorgehensweise: Entfernen aller Verweise einer Objektvariablen auf Instanzen'
-        href: how-to-make-an-object-variable-not-refer-to-any-instance.md
-    - name: Werte von Objektvariablen
-      href: object-variable-values.md
+        - name: 'Vorgehensweise: Erstellen einer neuen Variablen'
+          href: how-to-create-a-new-variable.md
+        - name: 'Vorgehensweise: Erstellen einer Variablen mit unveränderlichem Wert'
+          href: how-to-create-a-variable-that-does-not-change-in-value.md
+        - name: 'Vorgehensweise: Verschieben von Daten in eine und aus einer Variablen'
+          href: how-to-move-data-into-and-out-of-a-variable.md
+    - name: Objektvariablen
+      href: object-variables.md
       items:
-      - name: 'Vorgehensweise: Verweisen auf die aktuelle Instanz eines Objekts'
-        href: how-to-refer-to-the-current-instance-of-an-object.md
-      - name: 'Vorgehensweise: Bestimmen des Typs, auf den eine Objektvariable verweist'
-        href: how-to-determine-what-type-an-object-variable-refers-to.md
-      - name: 'Vorgehensweise: Bestimmen des Bezugs zwischen zwei Objekten'
-        href: how-to-determine-whether-two-objects-are-related.md
-      - name: 'Vorgehensweise: Bestimmen der Gleichheit zweier Objekte'
-        href: how-to-determine-whether-two-objects-are-identical.md
-  - name: Lokaler Typrückschluss
-    href: local-type-inference.md
-  - name: Problembehandlung bei Variablen
-    href: troubleshooting-variables.md
-ms.openlocfilehash: b62af96e958cd45db593e3334075b432814b51d5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469324"
+        - name: 'Vorgehensweise: Beschleunigen des Zugriffs auf ein Objekt mit langem Qualifizierungspfad'
+          href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
+    - name: Deklaration von Objektvariablen
+      href: object-variable-declaration.md
+      items:
+        - name: 'Vorgehensweise: Zugreifen auf Member eines Objekts'
+          href: how-to-access-members-of-an-object.md
+        - name: Zuweisung von Objektvariablen
+          href: object-variable-assignment.md
+          items:
+            - name: 'Vorgehensweise: Deklarieren einer Objektvariablen und Zuweisen eines entsprechenden Objekts'
+              href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
+            - name: 'Vorgehensweise: Entfernen aller Verweise einer Objektvariablen auf Instanzen'
+              href: how-to-make-an-object-variable-not-refer-to-any-instance.md
+        - name: Werte von Objektvariablen
+          href: object-variable-values.md
+          items:
+            - name: 'Vorgehensweise: Verweisen auf die aktuelle Instanz eines Objekts'
+              href: how-to-refer-to-the-current-instance-of-an-object.md
+            - name: 'Vorgehensweise: Bestimmen des Typs, auf den eine Objektvariable verweist'
+              href: how-to-determine-what-type-an-object-variable-refers-to.md
+            - name: 'Vorgehensweise: Bestimmen des Bezugs zwischen zwei Objekten'
+              href: how-to-determine-whether-two-objects-are-related.md
+            - name: 'Vorgehensweise: Bestimmen der Gleichheit zweier Objekte'
+              href: how-to-determine-whether-two-objects-are-identical.md
+    - name: Lokaler Typrückschluss
+      href: local-type-inference.md
+    - name: Problembehandlung bei Variablen
+      href: troubleshooting-variables.md

@@ -1,42 +1,35 @@
-items:
 - name: E-Book zu serverlosen Apps
   href: index.md
   items:
-  - name: Architekturansätze
-    href: architecture-approaches.md
-    items:
-    - name: Ansätze der Architekturbereitstellung
-      href: architecture-deployment-approaches.md
-  - name: Serverlose Architektur
-    href: serverless-architecture.md
-    items:
-    - name: Überlegungen zur serverlosen Architektur
-      href: serverless-architecture-considerations.md
-    - name: Beispiele für serverloses Design
-      href: serverless-design-examples.md
-  - name: Die serverlose Azure-Plattform
-    href: azure-serverless-platform.md
-    items:
-    - name: Überprüfung auf
-      href: azure-functions.md
-    - name: Application Insights
-      href: application-insights.md
-    - name: Azure Logic Apps
-      href: logic-apps.md
-    - name: Azure Event Grid
-      href: event-grid.md
-  - name: Durable Functions (Azure)
-    href: durable-azure-functions.md
-    items:
-    - name: Orchestrierungsmuster
-      href: orchestration-patterns.md
-  - name: Geschäftsszenarios für serverlose Architekuren und Anwendungsfälle
-    href: serverless-business-scenarios.md
-  - name: Schlussbemerkung
-    href: serverless-conclusion.md
-ms.openlocfilehash: d8d15dc77dd19b6e32319a98be21ddfa43073202
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469354"
+    - name: Architekturansätze
+      href: architecture-approaches.md
+      items:
+        - name: Ansätze der Architekturbereitstellung
+          href: architecture-deployment-approaches.md
+    - name: Serverlose Architektur
+      href: serverless-architecture.md
+      items:
+        - name: Überlegungen zur serverlosen Architektur
+          href: serverless-architecture-considerations.md
+        - name: Beispiele für serverloses Design
+          href: serverless-design-examples.md
+    - name: Die serverlose Azure-Plattform
+      href: azure-serverless-platform.md
+      items:
+        - name: Überprüfung auf
+          href: azure-functions.md
+        - name: Application Insights
+          href: application-insights.md
+        - name: Azure Logic Apps
+          href: logic-apps.md
+        - name: Azure Event Grid
+          href: event-grid.md
+    - name: Durable Functions (Azure)
+      href: durable-azure-functions.md
+      items:
+        - name: Orchestrierungsmuster
+          href: orchestration-patterns.md
+    - name: Geschäftsszenarios für serverlose Architekuren und Anwendungsfälle
+      href: serverless-business-scenarios.md
+    - name: Schlussbemerkung
+      href: serverless-conclusion.md

@@ -1,121 +1,114 @@
-items:
 - name: Prozeduren in Visual Basic
   href: index.md
   items:
-  - name: 'Vorgehensweise: Erstellen einer Prozedur'
-    href: how-to-create-a-procedure.md
-  - name: Sub-Prozeduren
-    href: sub-procedures.md
-    items:
-    - name: 'Vorgehensweise: Aufrufen einer Prozedur, die keinen Wert zurückgibt'
-      href: how-to-call-a-procedure-that-does-not-return-a-value.md
-    - name: 'Vorgehensweise: Aufrufen eines Ereignishandlers'
-      href: how-to-call-an-event-handler.md
-  - name: Function-Prozeduren
-    href: function-procedures.md
-    items:
-    - name: 'Vorgehensweise: Erstellen einer Prozedur, die einen Wert zurückgibt'
-      href: how-to-create-a-procedure-that-returns-a-value.md
-    - name: 'Vorgehensweise: Abrufen eines Werts aus einer Prozedur'
-      href: how-to-return-a-value-from-a-procedure.md
-    - name: 'Vorgehensweise: Aufrufen einer Prozedur, die einen Wert zurückgibt'
-      href: how-to-call-a-procedure-that-returns-a-value.md
-  - name: Eigenschaftenprozeduren
-    href: property-procedures.md
-    items:
-    - name: Automatisch implementierte Eigenschaften
-      href: auto-implemented-properties.md
-    - name: Unterschiede zwischen Eigenschaften und Variablen
-      href: differences-between-properties-and-variables.md
-    - name: 'Vorgehensweise: Erstellen einer Eigenschaft'
-      href: how-to-create-a-property.md
-    - name: 'Vorgehensweise: Deklarieren einer Eigenschaft mit gemischten Zugriffsebenen'
-      href: how-to-declare-a-property-with-mixed-access-levels.md
-    - name: 'Vorgehensweise: Aufrufen einer Eigenschaftenprozedur'
-      href: how-to-call-a-property-procedure.md
-    - name: 'Vorgehensweise: Deklarieren und Aufrufen einer Standardeigenschaft'
-      href: how-to-declare-and-call-a-default-property.md
-    - name: 'Vorgehensweise: Ablegen eines Werts in eine Eigenschaft'
-      href: how-to-put-a-value-in-a-property.md
-    - name: 'Vorgehensweise: Abrufen eines Werts aus einer Eigenschaft'
-      href: how-to-get-a-value-from-a-property.md
-  - name: Operatorprozeduren
-    href: operator-procedures.md
-    items:
-    - name: 'Vorgehensweise: Definieren eines Operators'
-      href: how-to-define-an-operator.md
-    - name: 'Vorgehensweise: Definieren eines Konvertierungsoperators'
-      href: how-to-define-a-conversion-operator.md
-    - name: 'Vorgehensweise: Aufrufen einer Operatorprozedur'
-      href: how-to-call-an-operator-procedure.md
-    - name: 'Vorgehensweise: Verwenden einer Klasse, die Operatoren definiert'
-      href: how-to-use-a-class-that-defines-operators.md
-  - name: Parameter und Argumente von Prozeduren
-    href: procedure-parameters-and-arguments.md
-    items:
-    - name: Unterschiede zwischen Parametern und Argumenten
-      href: differences-between-parameters-and-arguments.md
-    - name: 'Vorgehensweise: Definieren eines Parameters für eine Prozedur'
-      href: how-to-define-a-parameter-for-a-procedure.md
-    - name: 'Vorgehensweise: Übergeben von Argumenten an eine Prozedur'
-      href: how-to-pass-arguments-to-a-procedure.md
-    - name: Übergeben von Argumenten als Wert und als Verweis
-      href: passing-arguments-by-value-and-by-reference.md
+    - name: 'Vorgehensweise: Erstellen einer Prozedur'
+      href: how-to-create-a-procedure.md
+    - name: Sub-Prozeduren
+      href: sub-procedures.md
       items:
-      - name: Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten
-        href: differences-between-modifiable-and-nonmodifiable-arguments.md
-      - name: Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis
-        href: differences-between-passing-an-argument-by-value-and-by-reference.md
-      - name: 'Vorgehensweise: Ändern des Werts eines Prozedurarguments'
-        href: how-to-change-the-value-of-a-procedure-argument.md
-      - name: 'Vorgehensweise: Schützen eines Prozedurarguments gegen Wertänderungen'
-        href: how-to-protect-a-procedure-argument-against-value-changes.md
-      - name: 'Vorgehensweise: Erzwingen, dass ein Argument als Wert übergeben wird'
-        href: how-to-force-an-argument-to-be-passed-by-value.md
-    - name: Übergeben von Argumenten nach Position und Name
-      href: passing-arguments-by-position-and-by-name.md
-    - name: Optionale Parameter
-      href: optional-parameters.md
-    - name: Parameterarrays
-      href: parameter-arrays.md
-  - name: Verweisrückgabewerte
-    href: ref-return-values.md
-  - name: Rekursive Prozeduren
-    href: recursive-procedures.md
-  - name: Prozedurüberladung
-    href: procedure-overloading.md
-    items:
-    - name: 'Vorgehensweise: Definieren mehrerer Versionen einer Prozedur'
-      href: how-to-define-multiple-versions-of-a-procedure.md
-    - name: 'Vorgehensweise: Aufrufen einer überladenen Prozedur'
-      href: how-to-call-an-overloaded-procedure.md
-    - name: 'Vorgehensweise: Überladen einer Prozedur mit optionalen Parametern'
-      href: how-to-overload-a-procedure-that-takes-optional-parameters.md
-    - name: 'Vorgehensweise: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern'
-      href: how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md
-    - name: Überlegungen zur Prozedurüberladung
-      href: considerations-in-overloading-procedures.md
-    - name: Overload Resolution
-      href: overload-resolution.md
-  - name: Problembehandlung bei Prozeduren
-    href: troubleshooting-procedures.md
-  - name: Erweiterungsmethoden
-    href: extension-methods.md
-    items:
-    - name: 'Vorgehensweise: Schreiben einer Erweiterungsmethode'
-      href: how-to-write-an-extension-method.md
-    - name: 'Vorgehensweise: Aufrufen einer Erweiterungsmethode'
-      href: how-to-call-an-extension-method.md
-  - name: Lambda-Ausdrücke
-    href: lambda-expressions.md
-    items:
-    - name: 'Vorgehensweise: Erstellen eines Lambdaausdrucks'
-      href: how-to-create-a-lambda-expression.md
-  - name: Partielle Methoden
-    href: partial-methods.md
-ms.openlocfilehash: 56cc10bf082515dcf646f005522162b4c9e3bdf0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468868"
+        - name: 'Vorgehensweise: Aufrufen einer Prozedur, die keinen Wert zurückgibt'
+          href: how-to-call-a-procedure-that-does-not-return-a-value.md
+        - name: 'Vorgehensweise: Aufrufen eines Ereignishandlers'
+          href: how-to-call-an-event-handler.md
+    - name: Function-Prozeduren
+      href: function-procedures.md
+      items:
+        - name: 'Vorgehensweise: Erstellen einer Prozedur, die einen Wert zurückgibt'
+          href: how-to-create-a-procedure-that-returns-a-value.md
+        - name: 'Vorgehensweise: Abrufen eines Werts aus einer Prozedur'
+          href: how-to-return-a-value-from-a-procedure.md
+        - name: 'Vorgehensweise: Aufrufen einer Prozedur, die einen Wert zurückgibt'
+          href: how-to-call-a-procedure-that-returns-a-value.md
+    - name: Eigenschaftenprozeduren
+      href: property-procedures.md
+      items:
+        - name: Automatisch implementierte Eigenschaften
+          href: auto-implemented-properties.md
+        - name: Unterschiede zwischen Eigenschaften und Variablen
+          href: differences-between-properties-and-variables.md
+        - name: 'Vorgehensweise: Erstellen einer Eigenschaft'
+          href: how-to-create-a-property.md
+        - name: 'Vorgehensweise: Deklarieren einer Eigenschaft mit gemischten Zugriffsebenen'
+          href: how-to-declare-a-property-with-mixed-access-levels.md
+        - name: 'Vorgehensweise: Aufrufen einer Eigenschaftenprozedur'
+          href: how-to-call-a-property-procedure.md
+        - name: 'Vorgehensweise: Deklarieren und Aufrufen einer Standardeigenschaft'
+          href: how-to-declare-and-call-a-default-property.md
+        - name: 'Vorgehensweise: Ablegen eines Werts in eine Eigenschaft'
+          href: how-to-put-a-value-in-a-property.md
+        - name: 'Vorgehensweise: Abrufen eines Werts aus einer Eigenschaft'
+          href: how-to-get-a-value-from-a-property.md
+    - name: Operatorprozeduren
+      href: operator-procedures.md
+      items:
+        - name: 'Vorgehensweise: Definieren eines Operators'
+          href: how-to-define-an-operator.md
+        - name: 'Vorgehensweise: Definieren eines Konvertierungsoperators'
+          href: how-to-define-a-conversion-operator.md
+        - name: 'Vorgehensweise: Aufrufen einer Operatorprozedur'
+          href: how-to-call-an-operator-procedure.md
+        - name: 'Vorgehensweise: Verwenden einer Klasse, die Operatoren definiert'
+          href: how-to-use-a-class-that-defines-operators.md
+    - name: Parameter und Argumente von Prozeduren
+      href: procedure-parameters-and-arguments.md
+      items:
+        - name: Unterschiede zwischen Parametern und Argumenten
+          href: differences-between-parameters-and-arguments.md
+        - name: 'Vorgehensweise: Definieren eines Parameters für eine Prozedur'
+          href: how-to-define-a-parameter-for-a-procedure.md
+        - name: 'Vorgehensweise: Übergeben von Argumenten an eine Prozedur'
+          href: how-to-pass-arguments-to-a-procedure.md
+        - name: Übergeben von Argumenten als Wert und als Verweis
+          href: passing-arguments-by-value-and-by-reference.md
+          items:
+            - name: Unterschiede zwischen veränderbaren und nicht veränderbaren Argumenten
+              href: differences-between-modifiable-and-nonmodifiable-arguments.md
+            - name: Unterschiede zwischen dem Übergeben von Argumenten als Wert und als Verweis
+              href: differences-between-passing-an-argument-by-value-and-by-reference.md
+            - name: 'Vorgehensweise: Ändern des Werts eines Prozedurarguments'
+              href: how-to-change-the-value-of-a-procedure-argument.md
+            - name: 'Vorgehensweise: Schützen eines Prozedurarguments gegen Wertänderungen'
+              href: how-to-protect-a-procedure-argument-against-value-changes.md
+            - name: 'Vorgehensweise: Erzwingen, dass ein Argument als Wert übergeben wird'
+              href: how-to-force-an-argument-to-be-passed-by-value.md
+        - name: Übergeben von Argumenten nach Position und Name
+          href: passing-arguments-by-position-and-by-name.md
+        - name: Optionale Parameter
+          href: optional-parameters.md
+        - name: Parameterarrays
+          href: parameter-arrays.md
+    - name: Verweisrückgabewerte
+      href: ref-return-values.md
+    - name: Rekursive Prozeduren
+      href: recursive-procedures.md
+    - name: Prozedurüberladung
+      href: procedure-overloading.md
+      items:
+        - name: 'Vorgehensweise: Definieren mehrerer Versionen einer Prozedur'
+          href: how-to-define-multiple-versions-of-a-procedure.md
+        - name: 'Vorgehensweise: Aufrufen einer überladenen Prozedur'
+          href: how-to-call-an-overloaded-procedure.md
+        - name: 'Vorgehensweise: Überladen einer Prozedur mit optionalen Parametern'
+          href: how-to-overload-a-procedure-that-takes-optional-parameters.md
+        - name: 'Vorgehensweise: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern'
+          href: how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md
+        - name: Überlegungen zur Prozedurüberladung
+          href: considerations-in-overloading-procedures.md
+        - name: Overload Resolution
+          href: overload-resolution.md
+    - name: Problembehandlung bei Prozeduren
+      href: troubleshooting-procedures.md
+    - name: Erweiterungsmethoden
+      href: extension-methods.md
+      items:
+        - name: 'Vorgehensweise: Schreiben einer Erweiterungsmethode'
+          href: how-to-write-an-extension-method.md
+        - name: 'Vorgehensweise: Aufrufen einer Erweiterungsmethode'
+          href: how-to-call-an-extension-method.md
+    - name: Lambda-Ausdrücke
+      href: lambda-expressions.md
+      items:
+        - name: 'Vorgehensweise: Erstellen eines Lambdaausdrucks'
+          href: how-to-create-a-lambda-expression.md
+    - name: Partielle Methoden
+      href: partial-methods.md

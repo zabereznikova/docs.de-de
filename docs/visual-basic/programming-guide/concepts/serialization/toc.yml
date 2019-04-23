@@ -1,16 +1,9 @@
-items:
 - name: Serialisierung
   href: index.md
   items:
-  - name: 'Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei'
-    href: how-to-write-object-data-to-an-xml-file.md
-  - name: 'Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei'
-    href: how-to-read-object-data-from-an-xml-file.md
-  - name: 'Exemplarische Vorgehensweise: Beibehalten eines Objekts'
-    href: walkthrough-persisting-an-object-in-visual-studio.md
-ms.openlocfilehash: fb7160fa8eae06a13bf917fff42316fb608d6a95
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469366"
+    - name: 'Vorgehensweise: Schreiben von Objektdaten in eine XML-Datei'
+      href: how-to-write-object-data-to-an-xml-file.md
+    - name: 'Vorgehensweise: Lesen von Objektdaten aus einer XML-Datei'
+      href: how-to-read-object-data-from-an-xml-file.md
+    - name: 'Exemplarische Vorgehensweise: Beibehalten eines Objekts'
+      href: walkthrough-persisting-an-object-in-visual-studio.md
