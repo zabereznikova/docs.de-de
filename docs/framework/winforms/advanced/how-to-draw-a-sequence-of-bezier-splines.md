@@ -9,30 +9,30 @@ helpviewer_keywords:
 - Bezier splines [Windows Forms], drawing sequence of
 ms.assetid: 37a0bedb-20c2-4cf0-91fa-a5509e826b30
 ms.openlocfilehash: 976787f5830282a581d05a9c24d1f83dceca4b25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59168154"
 ---
-# <a name="how-to-draw-a-sequence-of-b233zier-splines"></a><span data-ttu-id="83882-102">Vorgehensweise: Zeichnen Sie eine Sequenz von B&#233;Zier Splines</span><span class="sxs-lookup"><span data-stu-id="83882-102">How to: Draw a Sequence of B&#233;zier Splines</span></span>
-<span data-ttu-id="83882-103">Können Sie die <xref:System.Drawing.Graphics.DrawBeziers%2A> Methode der <xref:System.Drawing.Graphics> Béziersplinekurven zum Zeichnen einer Sequenz von verbunden ist.</span><span class="sxs-lookup"><span data-stu-id="83882-103">You can use the <xref:System.Drawing.Graphics.DrawBeziers%2A> method of the <xref:System.Drawing.Graphics> class to draw a sequence of connected Bézier splines.</span></span>  
+# <a name="how-to-draw-a-sequence-of-b233zier-splines"></a><span data-ttu-id="1086f-102">Vorgehensweise: Zeichnen Sie eine Sequenz von B&#233;Zier Splines</span><span class="sxs-lookup"><span data-stu-id="1086f-102">How to: Draw a Sequence of B&#233;zier Splines</span></span>
+<span data-ttu-id="1086f-103">Können Sie die <xref:System.Drawing.Graphics.DrawBeziers%2A> Methode der <xref:System.Drawing.Graphics> Béziersplinekurven zum Zeichnen einer Sequenz von verbunden ist.</span><span class="sxs-lookup"><span data-stu-id="1086f-103">You can use the <xref:System.Drawing.Graphics.DrawBeziers%2A> method of the <xref:System.Drawing.Graphics> class to draw a sequence of connected Bézier splines.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="83882-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="83882-104">Example</span></span>  
- <span data-ttu-id="83882-105">Im folgende Beispiel zeichnet eine Kurve, die aus zwei verbundenen Béziersplinekurven besteht.</span><span class="sxs-lookup"><span data-stu-id="83882-105">The following example draws a curve that consists of two connected Bézier splines.</span></span> <span data-ttu-id="83882-106">Der Endpunkt die erste Béziersplinekurve ist der Ausgangspunkt der zweiten Béziersplinekurve.</span><span class="sxs-lookup"><span data-stu-id="83882-106">The endpoint of the first Bézier spline is the start point of the second Bézier spline.</span></span>  
+## <a name="example"></a><span data-ttu-id="1086f-104">Beispiel</span><span class="sxs-lookup"><span data-stu-id="1086f-104">Example</span></span>  
+ <span data-ttu-id="1086f-105">Im folgende Beispiel zeichnet eine Kurve, die aus zwei verbundenen Béziersplinekurven besteht.</span><span class="sxs-lookup"><span data-stu-id="1086f-105">The following example draws a curve that consists of two connected Bézier splines.</span></span> <span data-ttu-id="1086f-106">Der Endpunkt die erste Béziersplinekurve ist der Ausgangspunkt der zweiten Béziersplinekurve.</span><span class="sxs-lookup"><span data-stu-id="1086f-106">The endpoint of the first Bézier spline is the start point of the second Bézier spline.</span></span>  
   
- <span data-ttu-id="83882-107">Die folgende Abbildung zeigt die verbundenen Splines sowie die sieben Punkte:</span><span class="sxs-lookup"><span data-stu-id="83882-107">The following illustration shows the connected splines along with the seven points:</span></span>  
+ <span data-ttu-id="1086f-107">Die folgende Abbildung zeigt die verbundenen Splines sowie die sieben Punkte:</span><span class="sxs-lookup"><span data-stu-id="1086f-107">The following illustration shows the connected splines along with the seven points:</span></span>  
   
  ![Grafik, die die verbundene Splines zusammen mit sieben Punkte zeigt.](./media/how-to-draw-a-sequence-of-bezier-splines/bezier-spline-seven-points.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#11)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="83882-109">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="83882-109">Compiling the Code</span></span>  
- <span data-ttu-id="83882-110">Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="83882-110">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="1086f-109">Kompilieren des Codes</span><span class="sxs-lookup"><span data-stu-id="1086f-109">Compiling the Code</span></span>  
+ <span data-ttu-id="1086f-110">Das obige Beispiel ist für die Verwendung mit Windows Forms konzipiert und erfordert <xref:System.Windows.Forms.PaintEventArgs> `e`, ein Parameter von der <xref:System.Windows.Forms.Control.Paint> -Ereignishandler.</span><span class="sxs-lookup"><span data-stu-id="1086f-110">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs> `e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83882-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="83882-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1086f-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1086f-111">See also</span></span>
 
-- [<span data-ttu-id="83882-112">Grafik und Zeichnen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="83882-112">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
-- [<span data-ttu-id="83882-113">Bézier-Splines in GDI+</span><span class="sxs-lookup"><span data-stu-id="83882-113">Bézier Splines in GDI+</span></span>](bezier-splines-in-gdi.md)
-- [<span data-ttu-id="83882-114">Erstellen und Zeichnen von Kurven</span><span class="sxs-lookup"><span data-stu-id="83882-114">Constructing and Drawing Curves</span></span>](constructing-and-drawing-curves.md)
+- [<span data-ttu-id="1086f-112">Grafik und Zeichnen in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1086f-112">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
+- [<span data-ttu-id="1086f-113">Béziersplinekurven in GDI +</span><span class="sxs-lookup"><span data-stu-id="1086f-113">Bézier Splines in GDI+</span></span>](bezier-splines-in-gdi.md)
+- [<span data-ttu-id="1086f-114">Erstellen und Zeichnen von Kurven</span><span class="sxs-lookup"><span data-stu-id="1086f-114">Constructing and Drawing Curves</span></span>](constructing-and-drawing-curves.md)
