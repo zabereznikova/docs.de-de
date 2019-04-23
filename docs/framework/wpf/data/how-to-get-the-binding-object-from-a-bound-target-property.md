@@ -6,10 +6,10 @@ helpviewer_keywords:
 - properties [WPF], getting binding objects from
 ms.assetid: 87974c5f-136b-4de7-b07d-9285b62ab123
 ms.openlocfilehash: 7c7392bc11af57b2e9f27e2302f36efb59d40e9d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083106"
 ---
 # <a name="how-to-get-the-binding-object-from-a-bound-target-property"></a>Vorgehensweise: Abrufen des Bindungsobjekts aus einer gebundenen Zieleigenschaft
@@ -33,4 +33,4 @@ Dieses Beispiel zeigt, wie das Bindungsobjekt aus einer datengebundenen Zieleige
 ## <a name="see-also"></a>Siehe auch
 
 - [Erstellen einer Bindung in Code](how-to-create-a-binding-in-code.md)
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

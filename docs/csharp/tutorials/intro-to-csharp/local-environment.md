@@ -3,10 +3,10 @@ title: Einführung in C# – sich mit den Entwicklungstools vertraut machen
 description: Dieser Artikel bietet eine grundlegende Einführung in die Werkzeuge, die Sie zum Entwickeln von C#- und.NET-Anwendungen auf Ihrem Computer verwenden werden.
 ms.date: 10/23/2018
 ms.openlocfilehash: db0b3228272a17feaa11ec754fa0aa4952a0d1ee
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920661"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Einführung in .NET-Entwicklungstools
@@ -26,25 +26,25 @@ Darüber hinaus werden Sie die Befehle [`dotnet build`](../../../core/tools/dotn
 
 Sie können mit einem der folgenden Tutorials beginnen:
 
-## [<a name="numbers-in-c"></a>Zahlen in C#](numbers-in-csharp-local.md)
+## <a name="numbers-in-cnumbers-in-csharp-localmd"></a>[Zahlen in C#](numbers-in-csharp-local.md)
 
 Im Tutorial [Zahlen in C#](numbers-in-csharp-local.md) erfahren Sie, wie Computer Zahlen speichern und wie Sie Berechnungen mit verschiedenen Zahlentypen ausführen. Sie lernen die Grundlagen der Rundung und das Ausführen mathematischer Berechnungen mithilfe von C#.
 
 Für dieses Tutorial wird vorausgesetzt, dass Sie die [Hallo Welt](hello-world.yml)-Lektion abgeschlossen haben.
 
-## [<a name="branches-and-loops"></a>Verzweigungen und Schleifen](branches-and-loops-local.md)
+## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[Verzweigungen und Schleifen](branches-and-loops-local.md)
 
 Im Tutorial [Branches und Schleifen](branches-and-loops-local.md) werden die Grundlagen der Auswahl verschiedener Codepfadausführungen auf Basis der in Variablen gespeicherten Werte erläutert. Sie lernen die Grundlagen der Ablaufsteuerung kennen, von der abhängt, wie Programme Entscheidungen treffen und verschiedene Aktionen auswählen.
 
 In diesem Tutorial wird vorausgesetzt, dass Sie die Lektionen [Hallo Welt](hello-world.yml) und [Zahlen in C#](numbers-in-csharp-local.md) abgeschlossen haben.
 
-## [<a name="list-collection"></a>Listensammlung](arrays-and-collections.md)
+## <a name="list-collectionarrays-and-collectionsmd"></a>[Listensammlung](arrays-and-collections.md)
 
 Die Lektion [Listensammlung](arrays-and-collections.md) bietet Ihnen einen Überblick über den Listensammlungstyp, in dem Datensequenzen speichert werden. Sie erfahren, wie Sie Elemente hinzufügen und entfernen, nach Elementen suchen und die Listen sortieren. Sie werden verschiedene Arten von Listen erforschen. 
 
 Für dieses Tutorial wird vorausgesetzt, dass Sie die oben aufgeführten Lektionen abgeschlossen haben.
 
-## [<a name="introduction-to-classes"></a>Einführung in Klassen](introduction-to-classes.md)
+## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Einführung in Klassen](introduction-to-classes.md)
 
 Dieses letzte Tutorial „Einführung in C#“ ist nur für die Ausführung auf Ihrem Computer unter Verwendung Ihrer eigenen lokalen Entwicklungsumgebung und von .NET Core verfügbar.
 Sie erstellen eine Konsolenanwendung und die grundlegenden objektorientierten Funktionen, die Teil der C#-Sprache sind.

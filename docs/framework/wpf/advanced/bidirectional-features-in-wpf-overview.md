@@ -6,10 +6,10 @@ helpviewer_keywords:
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
 ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079824"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Übersicht über bidirektionale Features in WPF
@@ -27,7 +27,7 @@ Im Gegensatz zu anderen Entwicklungsplattformen [!INCLUDE[TLA2#tla_winclient](..
   
  [!code-xaml[LTRRTL#LTR](~/samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#ltr)]  
   
- **Flussrichtung von rechts-nach-links**  
+ **Flussrichtung von rechts nach links**  
   
  [!code-xaml[LTRRTL#RTL](~/samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#rtl)]  
   
@@ -41,7 +41,7 @@ Im Gegensatz zu anderen Entwicklungsplattformen [!INCLUDE[TLA2#tla_winclient](..
   
  [!code-xaml[FlowDirection#FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
   
- Die oberste Ebene <xref:System.Windows.Window> verfügt über eine <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>, sodass alle darin enthaltenen Elemente ebenfalls die gleiche erben <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Für ein Element eines angegebenen überschreiben <xref:System.Windows.FrameworkElement.FlowDirection%2A> es muss einen expliziter Richtungswechsel wie z.B. das zweite hinzufügen <xref:System.Windows.Controls.TextBlock> im vorherigen Beispiel in dem Änderungen an <xref:System.Windows.FlowDirection.LeftToRight>. Wenn kein <xref:System.Windows.FrameworkElement.FlowDirection%2A> definiert ist, der Standardwert <xref:System.Windows.FlowDirection.LeftToRight> gilt.  
+ Die oberste Ebene <xref:System.Windows.Window> verfügt über eine <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>, sodass alle darin enthaltenen Elemente ebenfalls die gleiche erben <xref:System.Windows.FrameworkElement.FlowDirection%2A>. Für ein Element eines angegebenen überschreiben <xref:System.Windows.FrameworkElement.FlowDirection%2A> es muss einen expliziter Richtungswechsel wie z.B. das zweite hinzufügen <xref:System.Windows.Controls.TextBlock> im vorherigen Beispiel in dem Änderungen an <xref:System.Windows.FlowDirection.LeftToRight>. Wenn kein <xref:System.Windows.FrameworkElement.FlowDirection%2A> definiert ist, der Standardwert <xref:System.Windows.FlowDirection.LeftToRight> gilt.  
   
  Die folgende Abbildung zeigt die Ausgabe des vorherigen Beispiels:
 
@@ -114,7 +114,7 @@ Im Gegensatz zu anderen Entwicklungsplattformen [!INCLUDE[TLA2#tla_winclient](..
     
  ![Grafik, die eine Symbolleiste mit der von rechts nach links Farbverlauf zeigt.](./media/bidirectional-features-in-wpf-overview/toolbar-right-left-gradient.png)  
   
- Das folgende Beispiel zeichnet eine <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.Controls.ToolBar>. (Um sie von links nach rechts zeichnen, entfernen Sie die <xref:System.Windows.FlowDirection> -Attribut für die <xref:System.Windows.Controls.ToolBar>.  
+ Das folgende Beispiel zeichnet eine <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar>. (Um sie von links nach rechts zeichnen, entfernen Sie die <xref:System.Windows.FlowDirection> -Attribut für die <xref:System.Windows.Controls.ToolBar>.  
   
  [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
   
@@ -122,7 +122,7 @@ Im Gegensatz zu anderen Entwicklungsplattformen [!INCLUDE[TLA2#tla_winclient](..
 ### <a name="flowdirection-exceptions"></a>FlowDirection-Ausnahmen  
  Es gibt einige Fälle, in denen <xref:System.Windows.FlowDirection> nicht wie erwartet verhält. In diesem Abschnitt werden zwei von diesen Ausnahmen behandelt.  
   
- **Bild**  
+ **Image**  
   
  Ein <xref:System.Windows.Controls.Image> stellt ein Steuerelement, das ein Bild anzeigt. In [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kann verwendet werden, mit einer <xref:System.Windows.Controls.Image.Source%2A> Eigenschaft, die definiert die [!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)] von der <xref:System.Windows.Controls.Image> angezeigt.  
   
@@ -140,9 +140,9 @@ Im Gegensatz zu anderen Entwicklungsplattformen [!INCLUDE[TLA2#tla_winclient](..
   
  **Pfade**  
   
- Zusätzlich zu einer <xref:System.Windows.Controls.Image>, ist ein weiteres interessantes Element <xref:System.Windows.Shapes.Path>. Ein Pfad ist ein Objekt, das eine Reihe von miteinander verbundenen Linien und Kurven zeichnen kann. Es verhält sich ähnlich wie ein <xref:System.Windows.Controls.Image> im Hinblick auf seine <xref:System.Windows.FlowDirection>, z. B. die <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> wird ein horizontaler Spiegel der <xref:System.Windows.FlowDirection.LeftToRight> eine. Anders als bei einer <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> erbt seine <xref:System.Windows.FlowDirection> aus dem Container und einer muss nicht explizit anzugeben.  
+ Zusätzlich zu einer <xref:System.Windows.Controls.Image>, ist ein weiteres interessantes Element <xref:System.Windows.Shapes.Path>. Ein Pfad ist ein Objekt, das eine Reihe von miteinander verbundenen Linien und Kurven zeichnen kann. Es verhält sich ähnlich wie ein <xref:System.Windows.Controls.Image> im Hinblick auf seine <xref:System.Windows.FlowDirection>, z. B. die <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> wird ein horizontaler Spiegel der <xref:System.Windows.FlowDirection.LeftToRight> eine. Anders als bei einer <xref:System.Windows.Controls.Image>, <xref:System.Windows.Shapes.Path> erbt seine <xref:System.Windows.FlowDirection> aus dem Container und einer muss nicht explizit anzugeben.  
   
- Im folgenden Beispiel wird ein einfacher Pfeil mit drei Linien gezeichnet. Der erste Pfeil erbt die <xref:System.Windows.FlowDirection.RightToLeft> flussrichtung aus der <xref:System.Windows.Controls.StackPanel> , damit die Start- und Endpunkt von einem Stammelement auf der rechten Seite gemessen werden. Der zweite Pfeil mit einem expliziten <xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> auch auf der rechten Seite beginnt. Der dritte Pfeil hat jedoch seinen Startstamm auf der linken Seite. Weitere Informationen zum Zeichnen finden Sie unter <xref:System.Windows.Media.LineGeometry> und <xref:System.Windows.Media.GeometryGroup>.  
+ Im folgenden Beispiel wird ein einfacher Pfeil mit drei Linien gezeichnet. Der erste Pfeil erbt die <xref:System.Windows.FlowDirection.RightToLeft> flussrichtung aus der <xref:System.Windows.Controls.StackPanel> , damit die Start- und Endpunkt von einem Stammelement auf der rechten Seite gemessen werden. Der zweite Pfeil mit einem expliziten <xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection> auch auf der rechten Seite beginnt. Der dritte Pfeil hat jedoch seinen Startstamm auf der linken Seite. Weitere Informationen zum Zeichnen finden Sie unter <xref:System.Windows.Media.LineGeometry> und <xref:System.Windows.Media.GeometryGroup>.  
   
  [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
   
@@ -158,7 +158,7 @@ Im Gegensatz zu anderen Entwicklungsplattformen [!INCLUDE[TLA2#tla_winclient](..
   
  Dadurch konnten Anwendungen, verarbeiten numerische Werte, ohne dass sie von einer Sprache in eine andere zu konvertieren, z. B. ein Benutzers können Sie öffnen ein [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] Arbeitsblatt in einem lokalisierten arabischen [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] und die Zahlen in Arabisch strukturiert, aber öffnen Sie es in einer Europäischen Version von [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] und sehen die gleichen Zahlen der Europäischen Darstellung. Dies ist auch für andere Symbole, wie z.B. Kommas als Trennzeichen und das Prozentsatzsymbol notwendig, da sie normalerweise Zahlen in einem Dokument begleiten.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] führt diese Tradition fort, und fügt weitere Unterstützung für dieses Feature, das ermöglicht mehreren Benutzern die Steuerung über wann und wie die Ersetzung verwendet wird. Diese Funktion ist für jede Sprache konzipiert, da sie besonders für bidirektionalen Inhalt nützlich ist, bei dem die Strukturierung von Ziffern für eine bestimmte Sprache in der Regel eine Herausforderung für die Entwickler der Anwendung darstellt, da eine Anwendung aufgrund der verschiedenen Kulturen möglicherweise weiter ausgeführt wird.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] führt diese Tradition fort und fügt weitere Unterstützung für diese Funktion hinzu, die mehreren Benutzern die Steuerung darüber ermöglicht, wann und wie die Ersetzung verwendet wird. Diese Funktion ist für jede Sprache konzipiert, da sie besonders für bidirektionalen Inhalt nützlich ist, bei dem die Strukturierung von Ziffern für eine bestimmte Sprache in der Regel eine Herausforderung für die Entwickler der Anwendung darstellt, da eine Anwendung aufgrund der verschiedenen Kulturen möglicherweise weiter ausgeführt wird.  
   
  Die Core-Eigenschaft, die Steuern wie zahlenersetzung funktioniert in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ist die <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> Abhängigkeitseigenschaft. Die <xref:System.Windows.Media.NumberSubstitution> Klasse gibt an, wie Zahlen im Text angezeigt werden. Er verfügt über drei öffentliche Eigenschaften, die sein Verhalten definieren. Es folgt eine Zusammenfassung der einzelnen Eigenschaften.  
   

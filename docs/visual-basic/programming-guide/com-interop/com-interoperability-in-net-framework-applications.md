@@ -7,10 +7,10 @@ helpviewer_keywords:
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
 ms.openlocfilehash: 6e8b4eba40cc1872cb289ca120679bb951f2652a
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920804"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>COM-Interoperabilität in .NET Framework-Anwendungen (Visual Basic)
@@ -26,7 +26,7 @@ Die Links auf dieser Seite die Details auf die Interaktionen zwischen COM und .N
 | | |
 |---------|---------|
 | [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md) | Enthält Links zu Themen, in denen COM-Interoperabilität in Visual Basic, einschließlich COM-Objekten, ActiveX-Steuerelemente, Win32-DLLs, verwaltete Objekte und Vererbung von COM-Objekten. |
-| [Interoperation mit nicht verwaltetem Code](../../../framework/interop/index.md) | Kurz einige der Probleme Interaktion zwischen verwaltetem und nicht verwaltetem Code beschrieben, und enthält Links für weitere Studien. |
+| [Interoperabilität mit nicht verwaltetem Code](../../../framework/interop/index.md) | Kurz einige der Probleme Interaktion zwischen verwaltetem und nicht verwaltetem Code beschrieben, und enthält Links für weitere Studien. |
 | [COM-Wrapper](../../../framework/interop/com-wrappers.md) | Erläutert, Runtime callable Wrapper, die verwalteten Code zum Aufrufen von COM-Methoden zu ermöglichen, und COM callable Wrapper, die COM-Clients .NET Objekt-Methoden aufrufen können. |
 | [Erweiterte COM-Interoperabilität](../../../framework/interop/index.md) | Enthält Links zu Themen, in denen COM-Interoperabilität in Bezug auf Wrapper, Ausnahmen, Vererbung, threading, Ereignisse, Konvertierungen und Marshalling. |
 | [Tlbimp.exe (Type Library Importer-Tool)](../../../framework/tools/tlbimp-exe-type-library-importer.md) | Beschreibt die Tools, die Sie verwenden können, um die Typdefinitionen in einer COM-Typbibliothek in äquivalente Definitionen einer common Language Runtime-Assembly zu konvertieren. |

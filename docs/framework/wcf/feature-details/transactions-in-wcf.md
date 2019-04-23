@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Windows Communication Foundation, using transactions
 ms.assetid: 1e8d04dd-b7cf-41e7-8560-54b4381beb0f
 ms.openlocfilehash: 367abc45b9383a77ba2917030316bda17b4be98c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074117"
 ---
 # <a name="transactions-in-wcf"></a>Transaktionen in WCF
 Die Windows Communication Foundation (WCF)--Transaktionsfunktion ermöglicht es, mehrere Komponenten, gleichzeitig in einem Datenvorgang teilzunehmen. In den Themen in diesem Abschnitt wird diese Funktion ausführlich behandelt.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Übersicht über Windows-Kommunikationfoundation-Transaktionen](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
+ [Übersicht über Windows Communication Foundation-Transaktionen](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
  Eine Übersicht über die Transaktionsfunktion, die von WCF bereitgestellt werden soll.  
   
  [Transaktionsmodelle](../../../../docs/framework/wcf/feature-details/transaction-models.md)  
@@ -31,7 +31,7 @@ Die Windows Communication Foundation (WCF)--Transaktionsfunktion ermöglicht es,
 ## <a name="reference"></a>Referenz  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Basis-WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Einfache WCF-Programmierung](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Siehe auch
 

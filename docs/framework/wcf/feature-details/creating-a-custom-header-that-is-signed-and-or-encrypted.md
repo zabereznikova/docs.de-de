@@ -3,10 +3,10 @@ title: Erstellen eines signierten und/oder verschlüsselten benutzerdefinierten 
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
 ms.openlocfilehash: 76bfb6040f6b78765ed42ce7fbf86cdbd62c1e48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075629"
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>Erstellen eines signierten und/oder verschlüsselten benutzerdefinierten Headers
@@ -60,4 +60,4 @@ public  class MyMessageContract
 
 - [Standardnachrichtenvertrag](../../../../docs/framework/wcf/samples/default-message-contract.md)
 - [Nachrichtenverträge](../../../../docs/framework/wcf/samples/message-contracts.md)
-- [Verwendung von Nachrichtenverträgen](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)
+- [Verwenden von Nachrichtenverträgen](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)

@@ -12,10 +12,10 @@ author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
 ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055247"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung
@@ -39,7 +39,7 @@ Diese exemplarische Vorgehensweise umfasst die folgenden Schritte aus:
 Am Ende dieser exemplarischen Vorgehensweise werden Sie eine eigenständigen Windows-Anwendung erstellt haben, die Benutzer spesenabrechnungen für bestimmte Personen anzeigen können. Die Anwendung besteht aus der WPF-Seiten, die in einem Fenster im Browserstil gehostet werden.
 
 > [!TIP]
-> Der Beispielcode, der verwendet wird, in dieser exemplarischen Vorgehensweise steht für Visual Basic und C# in [Introduction to Building WPF Applications](https://go.microsoft.com/fwlink/?LinkID=160008).
+> Der Beispielcode, der verwendet wird, in dieser exemplarischen Vorgehensweise steht für Visual Basic und c# in [Introduction to Building WPF Applications](https://go.microsoft.com/fwlink/?LinkID=160008).
 
 ## <a name="prerequisites"></a>Vorraussetzungen
 
@@ -51,7 +51,7 @@ Am Ende dieser exemplarischen Vorgehensweise werden Sie eine eigenständigen Win
 
 Der erste Schritt ist die Erstellung von Infrastruktur der Anwendung, die eine Anwendungsdefinition, zwei Seiten und ein Bild enthält.
 
-1. Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Basic oder Visual C# mit dem Namen **`ExpenseIt`**:
+1. Erstellen Sie ein neues WPF-Anwendungsprojekt in Visual Basic oder Visual c# mit dem Namen **`ExpenseIt`**:
 
    1. Öffnen Sie Visual Studio, und wählen Sie **Datei** > **neu** > **Projekt**.
 
@@ -68,7 +68,7 @@ Der erste Schritt ist die Erstellung von Infrastruktur der Anwendung, die eine A
    > [!NOTE]
    > Diese exemplarische Vorgehensweise verwendet die <xref:System.Windows.Controls.DataGrid> Steuerelement, das in .NET Framework 4 und höher verfügbar ist. Stellen Sie sicher, dass das Projekt auf .NET Framework 4 abzielt oder höher. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen von Projekten für eine bestimmte .NET Framework-Version](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
-2. Open *"Application.xaml"* (Visual Basic) oder *"App.xaml"* (C#).
+2. Open *"Application.xaml"* (Visual Basic) oder *"App.xaml"* (c#).
 
     Diese XAML-Datei definiert eine WPF-Anwendung und alle Anwendungsressourcen. Sie verwenden diese Datei auch an der Benutzeroberfläche, die automatisch, wenn zeigt die Anwendung gestartet wird. In diesem Fall *"MainWindow.xaml"*.
 
@@ -118,7 +118,7 @@ Der erste Schritt ist die Erstellung von Infrastruktur der Anwendung, die eine A
 
     Diese Datei ist eine Code-Behind-Datei Code zum Behandeln der Ereignisse, die im deklarierten mit *"MainWindow.xaml"*. Diese Datei enthält eine partielle Klasse für das in XAML definierte Fenster.
 
-7. Wenn Sie C# verwenden, ändern Sie die `MainWindow` Klasse abgeleitet <xref:System.Windows.Navigation.NavigationWindow>. (In Visual Basic geschieht dies automatisch, wenn Sie das Fenster in XAML ändern.)
+7. Wenn Sie c# verwenden, ändern Sie die `MainWindow` Klasse abgeleitet <xref:System.Windows.Navigation.NavigationWindow>. (In Visual Basic geschieht dies automatisch, wenn Sie das Fenster in XAML ändern.)
 
    Ihr Code sollte wie folgt aussehen:
 
@@ -126,7 +126,7 @@ Der erste Schritt ist die Erstellung von Infrastruktur der Anwendung, die eine A
    [!code-vb[ExpenseIt#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml.vb#3)]
 
    > [!TIP]
-   > Sie können die Codesprache des Beispielcodes zwischen C# und Visual Basic in Umschalten der **Sprache** Dropdownliste oben rechts auf der in diesem Artikel.
+   > Sie können die Codesprache des Beispielcodes zwischen c# und Visual Basic in Umschalten der **Sprache** Dropdownliste oben rechts auf der in diesem Artikel.
 
 ## <a name="add-files-to-the-application"></a>Hinzufügen von Dateien zur Anwendung
 
@@ -480,11 +480,11 @@ Die folgende Abbildung zeigt die beiden Seiten von der `ExpenseIt` Anwendung mit
 > [!NOTE]
 > In diesem Beispiel wird veranschaulicht, eine bestimmte Funktion von WPF und nicht alle bewährte Methoden für Aspekte wie Sicherheit, Lokalisierung und Eingabehilfen. Umfassende Behandlung von WPF und bewährte Methoden für die Anwendungsentwicklung die .NET Framework finden Sie unter den folgenden Themen:
 >
-> - [Zugriff](../../ui-automation/accessibility-best-practices.md)
+> - [Barrierefreiheit](../../ui-automation/accessibility-best-practices.md)
 >
 > - [Sicherheit](../security-wpf.md)
 >
-> - [WPF-Globalisierung und Lokalisierung](../advanced/wpf-globalization-and-localization-overview.md)
+> - [Übersicht über WPF-Globalisierung und -Lokalisierung](../advanced/wpf-globalization-and-localization-overview.md)
 >
 > - [Von WPF](../advanced/optimizing-wpf-application-performance.md)
 
@@ -493,7 +493,7 @@ Die folgende Abbildung zeigt die beiden Seiten von der `ExpenseIt` Anwendung mit
 In dieser exemplarischen Vorgehensweise haben Sie gelernt, eine Reihe von Techniken zum Erstellen einer Benutzeroberfläche mit Windows Presentation Foundation (WPF). Sie verfügen nun über einen grundlegenden Überblick über die Bausteine einer datengebundenen, .NET Framework-Anwendung. Weitere Informationen über die WPF-Architektur und -Programmiermodelle finden Sie in den folgenden Themen:
 
 - [WPF-Architektur](../advanced/wpf-architecture.md)
-- [Übersicht über die XAML (WPF)](../advanced/xaml-overview-wpf.md)
+- [Übersicht über XAML (WPF)](../advanced/xaml-overview-wpf.md)
 - [Übersicht über Abhängigkeitseigenschaften](../advanced/dependency-properties-overview.md)
 - [Layout](../advanced/layout.md)
 
@@ -501,7 +501,7 @@ Weitere Informationen zum Erstellen von Anwendungen finden Sie in den folgenden 
 
 - [Anwendungsentwicklung](../app-development/index.md)
 - [Steuerelemente](../controls/index.md)
-- [Übersicht über die Datenbindung](../data/data-binding-overview.md)
+- [Übersicht über Datenbindung](../data/data-binding-overview.md)
 - [Grafiken und multimedia](../graphics-multimedia/index.md)
 - [Dokumente in WPF](../advanced/documents-in-wpf.md)
 
@@ -510,4 +510,4 @@ Weitere Informationen zum Erstellen von Anwendungen finden Sie in den folgenden 
 - [Übersicht über Panel](../controls/panels-overview.md)
 - [Übersicht über Datenvorlagen](../data/data-templating-overview.md)
 - [Erstellen einer WPF-Anwendung](../app-development/building-a-wpf-application-wpf.md)
-- [Stile und Vorlagen](../controls/styles-and-templates.md)
+- [Stile und-Vorlagen](../controls/styles-and-templates.md)

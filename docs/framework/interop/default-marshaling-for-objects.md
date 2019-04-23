@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65b13d99873fe1027d0b316d1cf90e766799dbb1
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1b05d5c72491265b7617950550935e3c719421f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409275"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076159"
 ---
 # <a name="default-marshaling-for-objects"></a>Standardmäßiges Marshalling für Objekte
 Parameter und Felder, die als <xref:System.Object?displayProperty=nameWithType> typisiert sind, können für nicht verwalteten Code als einer der folgenden Typen verfügbar gemacht werden:  
@@ -131,7 +131,7 @@ struct ObjectHolder {
   
 |Objekttyp|COM-Varianttyp|  
 |-----------------|----------------------|  
-|NULL-Objektverweis (**Nothing** (nichts) in Visual&#160;Basic).|**VT_EMPTY**|  
+|NULL-Objektverweis (**Nothing** (nichts) in Visual Basic).|**VT_EMPTY**|  
 |<xref:System.DBNull?displayProperty=nameWithType>|**VT_NULL**|  
 |<xref:System.Runtime.InteropServices.ErrorWrapper?displayProperty=nameWithType>|**VT_ERROR**|  
 |<xref:System.Reflection.Missing?displayProperty=nameWithType>|**VT_ERROR** mit **E_PARAMNOTFOUND**|  
@@ -215,7 +215,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |--------------|----------------------|  
 |**TypeCode.Empty**|**VT_EMPTY**|  
 |**TypeCode.Object**|**VT_UNKNOWN**|  
-|**TypeCode.DBNULL**|**VT_NULL**|  
+|**TypeCode.DBNull**|**VT_NULL**|  
 |**TypeCode.Boolean**|**VT_BOOL**|  
 |**TypeCode.Char**|**VT_UI2**|  
 |**TypeCode.Sbyte**|**VT_I1**|  
@@ -314,7 +314,8 @@ Durch einen Wert und durch einen Verweis übergebene Varianten
 |**Variante**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Objekt**  *o*|Nur, wenn sich der Typ nicht geändert hat.|  
   
 ## <a name="see-also"></a>Siehe auch
-- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)
+
+- [Standardmarshallingverhalten](default-marshaling-behavior.md)
 - [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)
 - [Direktionale Attribute](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [Kopieren und Fixieren](copying-and-pinning.md)

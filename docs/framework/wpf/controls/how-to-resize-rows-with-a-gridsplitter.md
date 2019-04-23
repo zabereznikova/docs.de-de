@@ -7,17 +7,17 @@ helpviewer_keywords:
 - GridSplitter control [WPF], resizing grid rows
 ms.assetid: 2413a9f2-1d81-46ed-95cb-95ec8233eea2
 ms.openlocfilehash: 6760a7a691af4f666294556cae3bc95a4299730a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074273"
 ---
 # <a name="how-to-resize-rows-with-a-gridsplitter"></a>Vorgehensweise: Änderung der Zeilengröße mit einem GridSplitter
 Dieses Beispiel zeigt, wie Sie mit einer horizontalen <xref:System.Windows.Controls.GridSplitter> erneut zu verteilende den Abstand zwischen zwei Zeilen in einer <xref:System.Windows.Controls.Grid> ohne die Abmessungen des der <xref:System.Windows.Controls.Grid>.  
   
 ## <a name="example"></a>Beispiel  
- **Erstellen ein GridSplitter-Elements, überlagert der Rand einer Zeile**  
+ **Erstellen eines GridSplitter-Elements, das den Rand einer Zeile überlagert**  
   
  Angeben einer <xref:System.Windows.Controls.GridSplitter> ändert, die die Größe angrenzenden Zeilen in einer <xref:System.Windows.Controls.Grid>, legen die <xref:System.Windows.Controls.Grid.Row%2A> angefügte Eigenschaft auf eine der Zeilen, die Sie anpassen möchten. Wenn Ihre <xref:System.Windows.Controls.Grid> verfügt über mehr als eine Spalte, legen Sie die <xref:System.Windows.Controls.Grid.ColumnSpan%2A> angefügte Eigenschaft, um die Anzahl der Spalten angeben. Legen Sie dann die <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> zu <xref:System.Windows.VerticalAlignment.Top> oder <xref:System.Windows.VerticalAlignment.Bottom> (welche Ausrichtung Sie festlegen, je nach den beiden Zeilen Sie anpassen möchten). Legen Sie schließlich die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> Eigenschaft <xref:System.Windows.HorizontalAlignment.Stretch>.  
   
@@ -27,7 +27,7 @@ Dieses Beispiel zeigt, wie Sie mit einer horizontalen <xref:System.Windows.Contr
   
  Ein <xref:System.Windows.Controls.GridSplitter> , das ist eine eigene Zeile nicht belegen kann von anderen Steuerelementen im verdeckt werden die <xref:System.Windows.Controls.Grid>. Weitere Informationen zum Vermeiden dieses Problems finden Sie unter [Sicherstellen, dass ein GridSplitter sichtbar ist](how-to-make-sure-that-a-gridsplitter-is-visible.md).  
   
- **Erstellen ein GridSplitter-Elements, das eine Zeile einnimmt**  
+ **Erstellen eines GridSplitter-Elements, das eine Zeile einnimmt**  
   
  Angeben einer <xref:System.Windows.Controls.GridSplitter> , die das über eine Zeile in einer <xref:System.Windows.Controls.Grid>, legen die <xref:System.Windows.Controls.Grid.Row%2A> angefügte Eigenschaft auf eine der Zeilen, die Sie anpassen möchten. Wenn Ihre <xref:System.Windows.Controls.Grid> verfügt über mehr als eine Spalte, legen Sie die <xref:System.Windows.Controls.Grid.ColumnSpan%2A> angefügte Eigenschaft auf die Anzahl der Spalten. Legen Sie dann die <xref:System.Windows.FrameworkElement.VerticalAlignment%2A> zu <xref:System.Windows.VerticalAlignment.Center>, legen die <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> Eigenschaft <xref:System.Windows.HorizontalAlignment.Stretch>, und legen Sie die <xref:System.Windows.Controls.RowDefinition.Height%2A> der Zeile, die enthält die <xref:System.Windows.Controls.GridSplitter> zu <xref:System.Windows.GridLength.Auto%2A>.  
   
@@ -39,4 +39,4 @@ Dieses Beispiel zeigt, wie Sie mit einer horizontalen <xref:System.Windows.Contr
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Controls.GridSplitter>
-- [Gewusst wie-Themen](gridsplitter-how-to-topics.md)
+- [Themen zu Vorgehensweisen](gridsplitter-how-to-topics.md)

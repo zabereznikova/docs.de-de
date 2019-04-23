@@ -16,10 +16,10 @@ helpviewer_keywords:
 - protocols, pluggable
 ms.assetid: 66ef8456-7576-4e97-8956-959b216373db
 ms.openlocfilehash: d14eb426c8e142f56d9f024dcbf37a1d2d78664d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072340"
 ---
 # <a name="programming-pluggable-protocols"></a>Programmieren austauschbarer Protokolle
@@ -33,7 +33,7 @@ Die abstrakten Klassen <xref:System.Net.WebRequest> und <xref:System.Net.WebResp
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Ableiten von WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+- [Deriving from WebRequest (Ableiten von WebRequest)](../../../docs/framework/network-programming/deriving-from-webrequest.md)
 - [Ableiten von WebResponse](../../../docs/framework/network-programming/deriving-from-webresponse.md)
 - [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Vorgehensweise: Typumwandlung einer WebRequest-Klasse in protokollspezifische Zugriffseigenschaften](../../../docs/framework/network-programming/how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md)

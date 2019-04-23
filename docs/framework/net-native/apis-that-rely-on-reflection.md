@@ -5,10 +5,10 @@ ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076860"
 ---
 # <a name="apis-that-rely-on-reflection"></a>APIs, die auf Refelktion beruhen
@@ -51,9 +51,9 @@ App1.AppClass`1<System.Int32>.
   
  Damit dieser Code erfolgreich ausgeführt wird, sind mehrere Elemente von Metadaten erforderlich:  
   
--   `Browse` die Metadaten für den Typ, dessen Methode Sie aufrufen möchten.  
+-   `Browse`-Metadaten für den Typ, dessen Methode Sie aufrufen möchten.  
   
--   `Browse` Metadaten für die Methode, die Sie aufrufen möchten.  Ist es eine öffentliche Methode, umfasst das Hinzufügen von öffentlichen `Browse`-Metadaten für den enthaltenden Typ auch die Methode.  
+-   `Browse`-Metadaten für die Methode, die Sie aufrufen möchten.  Ist es eine öffentliche Methode, umfasst das Hinzufügen von öffentlichen `Browse`-Metadaten für den enthaltenden Typ auch die Methode.  
   
 -   Dynamische Metadaten für die Methode, die Sie aufrufen möchten, damit der Reflektionsaufrufdelegat nicht von der [!INCLUDE[net_native](../../../includes/net-native-md.md)]-Toolkette entfernt wird. Wenn dynamische Metadaten für die Methode fehlen, wird beim Aufruf der <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType>-Methode die folgende Ausnahme ausgelöst:  
   
@@ -86,7 +86,7 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- `Browse` Metadaten für den Arraytyp ist erforderlich, um ihn dynamisch zu instanziieren.  Die folgende Laufzeitdirektive ermöglicht die dynamische Instanziierung von `Class1[]`.  
+ `Browse`-Metadaten für den Arraytyp sind erforderlich, um ihn dynamisch zu instanziieren.  Die folgende Laufzeitdirektive ermöglicht die dynamische Instanziierung von `Class1[]`.  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  
@@ -95,4 +95,4 @@ Unfortunately, no further information is available.
 ## <a name="see-also"></a>Siehe auch
 
 - [Erste Schritte](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

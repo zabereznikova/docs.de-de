@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drawing rectangles
 ms.assetid: d656a93c-987d-4809-aafd-493fe17450f0
 ms.openlocfilehash: e551eacf0924c9bffa802fb5d2ba8bae7c1c3a98
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072026"
 ---
 # <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Vorgehensweise: Zeichnen eines ausgefüllten Rechtecks in Windows Forms
@@ -37,7 +37,7 @@ In diesem Beispiel zeichnet ein ausgefülltes Rechteck in einem Formular.
 
 - <xref:System.Drawing.Graphics.FillRectangle%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
-- [Erste Schritte mit der Grafikprogrammierung](getting-started-with-graphics-programming.md)
+- [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
-- [Verwenden eines Stiftes zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)
+- [Verwenden eines Stifts zum Zeichnen von Linien und Formen](using-a-pen-to-draw-lines-and-shapes.md)
 - [Pinsel und gefüllte Formen in GDI+](brushes-and-filled-shapes-in-gdi.md)

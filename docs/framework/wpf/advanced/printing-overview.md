@@ -16,10 +16,10 @@ helpviewer_keywords:
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
 ms.openlocfilehash: 2aeafa7065b587497fb6f3b23605c21dca291cd1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075859"
 ---
 # <a name="printing-overview"></a>Übersicht über das Drucken
@@ -29,7 +29,7 @@ Mit Microsoft .NET Framework, Anwendungsentwickler, die mit Windows Presentation
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>Info über XPS  
- [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ist ein Format für elektronische Dokumente, ein Format für Spooldateien und eine Seitenbeschreibungssprache. Es handelt sich um ein offenes Dokumentformat, das [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] und andere Branchenstandards verwendet, um plattformübergreifend nutzbare Dokumente zu erstellen. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] vereinfacht den Prozess mit dem digitale Dokumente erstellt, freigegebene, gedruckt, angezeigt und archiviert werden. Weitere Informationen zu [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], finden Sie unter [XPS-Dokumente](/windows/desktop/printdocs/documents).  
+ [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ist ein Format für elektronische Dokumente, ein Format für Spooldateien und eine Seitenbeschreibungssprache. Es handelt sich um ein offenes Dokumentformat, das [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] und andere Branchenstandards verwendet, um plattformübergreifend nutzbare Dokumente zu erstellen. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] vereinfacht die Vorgänge beim Erstellen, Teilen, Drucken, Anzeigen und Archivieren von digitalen Dokumenten. Weitere Informationen zu [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], finden Sie unter [XPS-Dokumente](/windows/desktop/printdocs/documents).  
   
  Verschiedene Techniken für das Drucken von [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-basierten Inhalten mithilfe von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] sind in [Programmgesteuertes Drucken von XPS-Dateien](how-to-programmatically-print-xps-files.md) dargestellt. Es kann sinnvoll sein, diese Beispiele beim Durcharbeiten der in diesem Thema enthaltenen Inhalte hinzuzuziehen. (Entwickler von nicht verwaltetem Code sollten finden Sie in der Dokumentation für die [MXDC_ESCAPE Funktion](/windows/desktop/printdocs/mxdc-escape). Windows Forms-Entwickler verwenden, müssen die [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] in die <xref:System.Drawing.Printing> Namespace, der die vollständige nicht unterstützt. [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] Druckpfad, wohl aber einen Hybriden GDI-nach-XPS-Druckpfad unterstützt. Weitere Informationen finden Sie unter **Druckpfadarchitektur** unten.)  
   
@@ -43,7 +43,7 @@ Mit Microsoft .NET Framework, Anwendungsentwickler, die mit Windows Presentation
   
  Die Vorzüge des [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Druckpfads sind erheblich und umfassen u.a.:  
   
--   [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)] -Druckunterstützung  
+-   [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)]-Druckunterstützung  
   
 -   Systemeigene Unterstützung für erweiterte Farbprofile, die auch 32 Bit pro Kanal (bpc), CMYK, benannte Farben, n-Tinten und systemeigene Unterstützung von Transparenz und Farbverläufen einschließen.  
   
@@ -69,7 +69,7 @@ Mit Microsoft .NET Framework, Anwendungsentwickler, die mit Windows Presentation
  ![Screenshot zeigt, dass das System die XPS-Druckpfad.](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>Einfacher XPS-Druck  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] definiert eine einfache und erweiterte [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Für Anwendungen, die keine umfangreichen Druckanpassungen oder Zugriff auf die Gesamtmenge der [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Funktionen erfordern, ist eine Unterstützung für einfachen Druck verfügbar. Die einfache Druckunterstützung wird über ein Druckdialogfeld-Steuerelement verfügbar gemacht, das nur minimale Konfiguration erfordert und eine vertraute [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bietet. Viele [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Funktionen sind in diesem vereinfachten Druckmodell verfügbar.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] definiert sowohl eine einfache als auch eine erweiterte [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Für Anwendungen, die keine umfangreichen Druckanpassungen oder Zugriff auf die Gesamtmenge der [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Funktionen erfordern, ist eine Unterstützung für einfachen Druck verfügbar. Die einfache Druckunterstützung wird über ein Druckdialogfeld-Steuerelement verfügbar gemacht, das nur minimale Konfiguration erfordert und eine vertraute [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] bietet. Viele [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Funktionen sind in diesem vereinfachten Druckmodell verfügbar.  
   
 #### <a name="printdialog"></a>PrintDialog  
  Das <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType>-Steuerelement stellt einen einheitlichen Einstiegspunkt für [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], Konfiguration und [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Auftragsübermittlung bereit. Informationen zum Instanziieren und Verwenden des Steuerelements finden Sie unter [Aufrufen eines Druckdialogfelds](how-to-invoke-a-print-dialog.md).  
@@ -116,7 +116,7 @@ Für Anwendungen, die keine [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2s
 ## <a name="xpsdrv-driver-model"></a>XPSDrv-Treibermodell  
  Der [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Druckpfad verbessert die Effizienz des Spoolings durch Verwendung von [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] als systemeigenem Druckerspoolerformat beim Drucken auf [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-fähigen Druckern oder Treibern. Das vereinfachte Spooling beseitigt die Notwendigkeit, vor dem Spoolen des Dokuments eine temporäre Spoolingdatei, wie etwa eine [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)]-Datendatei, zu generieren. Durch geringere Größe der Spooldateien kann der [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Druckpfad den Netzwerkverkehr verringern und die Druckleistung verbessern.  
   
- [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] ist ein geschlossenes Format, die Ausgabe als eine Reihe von Aufrufen an darstellt [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] für Renderdienste. Im Gegensatz zu [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] stellt das [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Spoolingformat das tatsächliche Dokument dar, ohne bei der Ausgabe an einen [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-basierten Druckertreiber (XPSDrv) weitere Interpretation zu erfordern. Die Treiber können direkt mit den Daten im vorliegenden Format arbeiten. Durch diese Fähigkeit entfallen die Daten- und Farbraumkonvertierungen, die bei der Verwendung von [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)]-Dateien und [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]-basierten Druckertreibern erforderlich sind.  
+ [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] ist ein geschlossenes Format, das Anwendungsausgaben als Abfolge von Aufrufen an [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] für Renderdienste darstellt. Im Gegensatz zu [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] stellt das [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Spoolingformat das tatsächliche Dokument dar, ohne bei der Ausgabe an einen [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-basierten Druckertreiber (XPSDrv) weitere Interpretation zu erfordern. Die Treiber können direkt mit den Daten im vorliegenden Format arbeiten. Durch diese Fähigkeit entfallen die Daten- und Farbraumkonvertierungen, die bei der Verwendung von [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)]-Dateien und [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]-basierten Druckertreibern erforderlich sind.  
   
  Normalerweise verringert sich die Größe von Spooldateien, wenn [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Dokumente verwendet werden, die einen [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]-Druckertreiber (XPSDrv) zum Ziel haben, gegenüber ihren [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)]-Entsprechungen; allerdings gibt es Ausnahmen:  
   
@@ -143,7 +143,7 @@ Für Anwendungen, die keine [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2s
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.PrintQueue>
-- [Gewusst wie-Themen](printing-how-to-topics.md)
+- [Themen zu Vorgehensweisen](printing-how-to-topics.md)
 - [Dokumente in WPF](documents-in-wpf.md)
 - [XPS-Dokumente](/windows/desktop/printdocs/documents)
 - [Serialisierung und Speicherung von Dokumenten](document-serialization-and-storage.md)

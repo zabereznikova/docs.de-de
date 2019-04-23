@@ -3,10 +3,10 @@ title: Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
 ms.openlocfilehash: a173596b5b4bfbc97a1d013251d654d8073a5c10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072752"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern
@@ -16,7 +16,7 @@ Dieser Abschnitt enthält verschiedene Themen, in denen beschrieben wird, wie Si
  [Empfohlene Einstellungen für Ablaufverfolgung und Nachrichtenprotokollierung](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)  
  Beschreibt vorgeschlagene Einstellungen für Produktions- und Debugumgebungen.  
   
- [Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ [Using Service Trace Viewer for Viewing Correlated Traces and Troubleshooting (Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung)](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  Beschreibt, wie Sie mit dem Service Trace Viewer-Tool Ablaufverfolgungsdaten anzeigen, korrelieren und analysieren können.  
   
  [Bedeutende Ablaufverfolgungen](../../../../../docs/framework/wcf/diagnostics/tracing/significant-traces.md)  

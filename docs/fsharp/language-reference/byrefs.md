@@ -3,10 +3,10 @@ title: Parametry
 description: Informationen Sie zu Byref und Byref-ähnlichen Typen in F#, die für die Low-Level-Programmierung verwendet werden.
 ms.date: 09/02/2018
 ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055364"
 ---
 # <a name="byrefs"></a>Parametry
@@ -114,17 +114,17 @@ C# unterstützt die `in ref` und `out ref` Schlüsselwörter, zusätzlich zu den
 |------------|---------|
 |`ref` Rückgabewert|`outref<'T>`|
 |`ref readonly` Rückgabewert|`inref<'T>`|
-|`in ref` -Parameter von|`inref<'T>`|
-|`out ref` -Parameter von|`outref<'T>`|
+|`in ref` Parameter|`inref<'T>`|
+|`out ref` Parameter|`outref<'T>`|
 
 Die folgende Tabelle zeigt, was F# ausgibt:
 
 |F#Erstellen|Ausgegebene-Konstrukt|
 |------------|-----------------|
-|`inref<'T>` argument|`[In]` Attribut für argument|
-|`inref<'T>` return|`modreq` Attribut nach Wert|
+|`inref<'T>` Argument|`[In]` Attribut für argument|
+|`inref<'T>` zurück|`modreq` Attribut nach Wert|
 |`inref<'T>` in abstrakten Slot oder Implementierung|`modreq` auf Argument- oder Rückgabetypen|
-|`outref<'T>` argument|`[Out]` Attribut für argument|
+|`outref<'T>` Argument|`[Out]` Attribut für argument|
 
 ### <a name="type-inference-and-overloading-rules"></a>Typrückschluss und Überladen von Regeln
 

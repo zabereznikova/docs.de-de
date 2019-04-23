@@ -7,10 +7,10 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
 ms.openlocfilehash: 1212096422f5bb10c7b781228dc54c8790ac97ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072843"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>ClickOnce-Bereitstellung für Windows Forms
@@ -41,7 +41,7 @@ Die folgenden Themen beschreiben [!INCLUDE[ndptecclick](../../../includes/ndptec
  [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
  Veranschaulicht die Verwendung von Befehlszeilen- und SDK-Tools zum Bereitstellen einer [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]-Anwendung ohne Visual Studio.  
   
- [Vorgehensweise: Hinzufügen eines vertrauenswürdigen Herausgebers auf einen Clientcomputer für ClickOnce-Anwendungen](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
+ [Vorgehensweise: Hinzufügen eines vertrauenswürdigen Herausgebers zu einem Clientcomputer für ClickOnce-Anwendungen](/visualstudio/deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications)  
  Veranschaulicht die einmalige Konfiguration von Clientcomputern, die für die Bereitstellung vertrauenswürdiger Anwendungen erforderlich ist.  
   
  [Vorgehensweise: Angeben eines anderen Speicherorts für Bereitstellungsaktualisierungen](/visualstudio/deployment/how-to-specify-an-alternate-location-for-deployment-updates)  

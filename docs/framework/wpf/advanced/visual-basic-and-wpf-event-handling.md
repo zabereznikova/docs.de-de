@@ -6,10 +6,10 @@ helpviewer_keywords:
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
 ms.openlocfilehash: c6e1863850ebf04408c7ffc7b784e9ca3ca12cf5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078018"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic- und WPF-Ereignisbehandlung
@@ -27,11 +27,11 @@ Für die Sprache von Microsoft Visual Basic .NET gesagt können Sie die sprachsp
  Mithilfe von `Handles` können Sie Handler für Routingereignisse anfügen, solange Sie Handler an Instanzen anfügen, die das behandelte Ereignis in ihren Membertabellen definieren. Für Routingereignisse mit angefügte Ereignishandler `Handles` befolgen Sie dieselben Routingregeln wie Handler, die als angefügt sind [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Attribute oder mit der gemeinsamen Signatur <xref:System.Windows.UIElement.AddHandler%2A>. Dies bedeutet, dass das Ereignis bereits als behandelt markiert ist (die <xref:System.Windows.RoutedEventArgs.Handled%2A> -Eigenschaft in den Ereignisdaten ist `True`), und klicken Sie dann mit der Handler angefügt `Handles` nicht als Antwort auf diese Ereignisinstanz aufgerufen werden. Das Ereignis kann von Instanzhandlern auf ein anderes Element in der Route oder von der Klassenbehandlung für das aktuelle Element oder frühere Elemente entlang der Route als behandelt markiert werden. Für Eingabeereignisse, die gekoppelte Tunneling-/Bubblingereignisse unterstützen, kann die Tunnelingroute das Ereignispaar als behandelt markiert haben. Weitere Informationen zu Routingereignissen finden Sie unter [Übersicht über Routingereignisse](routed-events-overview.md).  
   
 ## <a name="limitations-of-handles-for-adding-handlers"></a>Einschränkungen von „Handles“ beim Hinzufügen von Handlern  
- `Handles` Handler für angefügte Ereignisse kann nicht verwiesen werden. Verwenden Sie die `add`-Accessormethode für das angefügte Ereignis oder *typename.eventname*-Ereignisattribute in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Weitere Informationen finden Sie unter [Übersicht über Routingereignisse](routed-events-overview.md).  
+ `Handles` kann für angefügte Ereignisse nicht auf Handler verweisen. Verwenden Sie die `add`-Accessormethode für das angefügte Ereignis oder *typename.eventname*-Ereignisattribute in [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Weitere Informationen finden Sie unter [Übersicht über Routingereignisse](routed-events-overview.md).  
   
  Für Routingereignisse können Sie nur `Handles` dazu verwenden, um Handler für Instanzen zuzuweisen, auf denen das Ereignis in der Instanzmembertabelle vorhanden ist. Mit Routingereignissen kann ein übergeordnetes Element aber im Allgemeinen ein Listener für ein Ereignis aus untergeordneten Elementen sein, selbst wenn dieses Ereignis nicht in der Membertabelle des übergeordneten Elements vorkommt. In der Attributsyntax können Sie dies über die *typename.membername*-Attributform angeben, die beschreibt, welcher Typ tatsächlich das zu behandlende Ereignis definiert. Z. B. ein übergeordnetes Element `Page` (ohne `Click` definiertes Ereignis) Klickereignisse überwachen können, indem ein Attributhandler in Form zuweisen `Button.Click`. `Handles` unterstützt aber nicht die Form *typename.membername*, da es eine in Konflikt stehende *Instance.Event*-Form unterstützen muss. Weitere Informationen finden Sie unter [Übersicht über Routingereignisse](routed-events-overview.md).  
   
- `Handles` kann keine Handler anfügen, die für Ereignisse aufgerufen werden, die bereits als behandelt markiert werden. Sie müssen stattdessen Code, und rufen die `handledEventsToo` Überladung der <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>.  
+ `Handles` kann keine Handler anfügen, die für Ereignisse aufgerufen werden, die bereits als behandelt markiert sind. Sie müssen stattdessen Code, und rufen die `handledEventsToo` Überladung der <xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>.  
   
 > [!NOTE]
 >  Verwenden Sie nicht die `Handles` -Syntax in Visual Basic-Code, wenn Sie einen Ereignishandler für das gleiche Ereignis in XAML angeben. In diesem Fall wird der Ereignishandler zweimal aufgerufen.  

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
 ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921324"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung
@@ -114,6 +114,6 @@ Achten Sie darauf, alle temporären Stammzertifizierungsstellen-Zertifikate aus 
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von Zertifikaten](working-with-certificates.md)
-- [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-In](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Arbeiten mit Zertifikaten](working-with-certificates.md)
+- [Vorgehensweise: Anzeigen von Zertifikaten mit dem MMC-Snap-in](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Sichern von Diensten und Clients](securing-services-and-clients.md)
