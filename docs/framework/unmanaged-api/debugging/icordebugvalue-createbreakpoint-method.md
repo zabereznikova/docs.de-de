@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b291521b667954a4118d5319547e90c4cc988a8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59179737"
 ---
-# <a name="icordebugvaluecreatebreakpoint-method"></a><span data-ttu-id="c036a-102">ICorDebugValue::CreateBreakpoint-Methode</span><span class="sxs-lookup"><span data-stu-id="c036a-102">ICorDebugValue::CreateBreakpoint Method</span></span>
-<span data-ttu-id="c036a-103">Die `CreateBreakpoint` Methode ist derzeit nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="c036a-103">The `CreateBreakpoint` method is currently not implemented.</span></span>  
+# <a name="icordebugvaluecreatebreakpoint-method"></a><span data-ttu-id="6aa81-102">ICorDebugValue::CreateBreakpoint-Methode</span><span class="sxs-lookup"><span data-stu-id="6aa81-102">ICorDebugValue::CreateBreakpoint Method</span></span>
+<span data-ttu-id="6aa81-103">Die `CreateBreakpoint` Methode ist derzeit nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="6aa81-103">The `CreateBreakpoint` method is currently not implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c036a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c036a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6aa81-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6aa81-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateBreakpoint (  
@@ -35,13 +35,13 @@ HRESULT CreateBreakpoint (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="c036a-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c036a-105">Requirements</span></span>  
- <span data-ttu-id="c036a-106">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c036a-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6aa81-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6aa81-105">Requirements</span></span>  
+ <span data-ttu-id="6aa81-106">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6aa81-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c036a-107">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c036a-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6aa81-107">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6aa81-107">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c036a-108">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c036a-108">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6aa81-108">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6aa81-108">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="c036a-109">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="c036a-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="6aa81-109">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6aa81-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c036a-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c036a-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6aa81-110">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6aa81-110">See also</span></span>

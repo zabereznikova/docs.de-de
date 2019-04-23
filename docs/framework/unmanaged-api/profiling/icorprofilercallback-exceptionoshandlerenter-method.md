@@ -18,31 +18,31 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1fcdd52e648b2461036921772b6b5684ba6aec22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175837"
 ---
-# <a name="icorprofilercallbackexceptionoshandlerenter-method"></a><span data-ttu-id="405ab-102">ICorProfilerCallback::ExceptionOSHandlerEnter-Methode</span><span class="sxs-lookup"><span data-stu-id="405ab-102">ICorProfilerCallback::ExceptionOSHandlerEnter Method</span></span>
-<span data-ttu-id="405ab-103">Nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="405ab-103">Not implemented.</span></span> <span data-ttu-id="405ab-104">Ein Profiler, der nicht verwaltete Ausnahmeinformationen benötigt, muss diese Informationen mithilfe anderer Methoden abrufen.</span><span class="sxs-lookup"><span data-stu-id="405ab-104">A profiler that needs unmanaged exception information must obtain this information through other means.</span></span>  
+# <a name="icorprofilercallbackexceptionoshandlerenter-method"></a><span data-ttu-id="37e6e-102">ICorProfilerCallback::ExceptionOSHandlerEnter-Methode</span><span class="sxs-lookup"><span data-stu-id="37e6e-102">ICorProfilerCallback::ExceptionOSHandlerEnter Method</span></span>
+<span data-ttu-id="37e6e-103">Nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="37e6e-103">Not implemented.</span></span> <span data-ttu-id="37e6e-104">Ein Profiler, der nicht verwaltete Ausnahmeinformationen benötigt, muss diese Informationen mithilfe anderer Methoden abrufen.</span><span class="sxs-lookup"><span data-stu-id="37e6e-104">A profiler that needs unmanaged exception information must obtain this information through other means.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="405ab-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="405ab-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="37e6e-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="37e6e-105">Syntax</span></span>  
   
 ```  
 HRESULT ExceptionOSHandlerEnter(  
     [in] UINT_PTR __unused);  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="405ab-106">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="405ab-106">Requirements</span></span>  
- <span data-ttu-id="405ab-107">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="405ab-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="37e6e-106">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="37e6e-106">Requirements</span></span>  
+ <span data-ttu-id="37e6e-107">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="37e6e-107">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="405ab-108">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="405ab-108">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="37e6e-108">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="37e6e-108">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="405ab-109">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="405ab-109">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="37e6e-109">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="37e6e-109">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="405ab-110">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="405ab-110">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="37e6e-110">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37e6e-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="405ab-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="405ab-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="37e6e-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="37e6e-111">See also</span></span>
 
-- [<span data-ttu-id="405ab-112">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="405ab-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="37e6e-112">ICorProfilerCallback-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="37e6e-112">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
