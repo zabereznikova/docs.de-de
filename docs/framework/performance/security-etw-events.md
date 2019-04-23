@@ -8,10 +8,10 @@ ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 11a19dce496423883e5fed62375c6db8ed5efdb1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134029"
 ---
 # <a name="security-etw-events"></a>ETW-Sicherheitsereignisse
@@ -29,7 +29,7 @@ ms.locfileid: "59134029"
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword` (0x400)|Information (4)|  
+|`SecurityKeyword` (0 x 400)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "59134029"
   
 |Schlüsselwort zum Auslösen des Ereignisses|Ebene|  
 |-----------------------------------|-----------|  
-|`SecurityKeyword` (0x400)|Information (4)|  
+|`SecurityKeyword` (0 x 400)|Information (4)|  
   
  Die folgende Tabelle zeigt die Ereignisinformationen an.  
   

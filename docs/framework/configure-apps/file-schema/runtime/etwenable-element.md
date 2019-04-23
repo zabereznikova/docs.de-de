@@ -1,5 +1,5 @@
 ---
-title: <etwEnable> Element
+title: <etwEnable>-Element
 ms.date: 03/30/2017
 helpviewer_keywords:
 - etwEnable element
@@ -8,10 +8,10 @@ ms.assetid: 29dde982-6d8b-4099-8867-ad0d7733f6dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6ba411114bfb853e06c83adb42713d43f1452d9c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135069"
 ---
 # <a name="etwenable-element"></a>\<EtwEnable >-Element
@@ -74,4 +74,4 @@ Gibt an, ob die Ereignisablaufverfolgung für Windows (ETW) für Common Language
 
 - [Schema für Laufzeiteinstellungen](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Steuern der Protokollierung in .NET Framework](../../../../../docs/framework/performance/controlling-logging.md)
+- [Controlling .NET Framework Logging (Steuern der Protokollierung in .NET Framework)](../../../../../docs/framework/performance/controlling-logging.md)

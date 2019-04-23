@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
 ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139528"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Weitere Überlegungen zur Sicherheit in Windows Forms
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Sicherheitseinstellungen können dazu führen, dass Ihre Anwendung anders als in einer teilweise vertrauenswürdigen Umgebung als auf dem lokalen Computer ausgeführt. Der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] beschränkt den Zugriff auf wichtige lokale Ressourcen, beispielsweise unter anderem das Dateisystem, Netzwerk und nicht verwaltete APIs. Die Sicherheitseinstellungen haben Auswirkung auf die Möglichkeit zum Aufrufen der Microsoft Windows-API oder andere APIs, die nicht vom Sicherheitssystem überprüft werden kann. Sicherheit wirkt sich auch auf andere Aspekte der Anwendung aus, einschließlich des Datei-und Datenzugriffs und des Druckens. Weitere Informationen zum Zugriff auf Dateien und Daten in einer teilweise vertrauenswürdigen Umgebung finden Sie unter [Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md). Weitere Informationen zum Drucken in einer teilweise vertrauenswürdigen Umgebung finden Sie unter [Mehr Sicherheit beim Drucken in Windows Forms](more-secure-printing-in-windows-forms.md).  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]Sicherheitseinstellungen können möglicherweise dazu führen, dass Ihre Anwendung anders als in einer teilweise vertrauenswürdigen Umgebung als auf dem lokalen Computer ausgeführt wird. Der [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] beschränkt den Zugriff auf wichtige lokale Ressourcen, beispielsweise unter anderem das Dateisystem, Netzwerk und nicht verwaltete APIs. Die Sicherheitseinstellungen haben Auswirkung auf die Möglichkeit zum Aufrufen der Microsoft Windows-API oder andere APIs, die nicht vom Sicherheitssystem überprüft werden kann. Sicherheit wirkt sich auch auf andere Aspekte der Anwendung aus, einschließlich des Datei-und Datenzugriffs und des Druckens. Weitere Informationen zum Zugriff auf Dateien und Daten in einer teilweise vertrauenswürdigen Umgebung finden Sie unter [Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md). Weitere Informationen zum Drucken in einer teilweise vertrauenswürdigen Umgebung finden Sie unter [Mehr Sicherheit beim Drucken in Windows Forms](more-secure-printing-in-windows-forms.md).  
   
  In den folgenden Abschnitten erläutert das Arbeiten mit der Zwischenablage, Fenstern und rufen Sie die Windows-API von Anwendungen, die in einer teilweise vertrauenswürdigen Umgebung ausgeführt werden.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59139528"
 |<xref:System.Windows.Forms.Control>|– Abrufen der <xref:System.Windows.Forms.Control.Parent%2A> Eigenschaft.<br />– Festlegen der `Region`-Eigenschaft.<br />– Aufrufen der <xref:System.Windows.Forms.Control.FindForm%2A> , <xref:System.Windows.Forms.Control.Focus%2A>, <xref:System.Windows.Forms.Control.FromChildHandle%2A> und <xref:System.Windows.Forms.Control.FromHandle%2A>, <xref:System.Windows.Forms.Control.PreProcessMessage%2A>, <xref:System.Windows.Forms.Control.ReflectMessage%2A>, oder <xref:System.Windows.Forms.Control.SetTopLevel%2A> Methode.<br />– Aufrufen der <xref:System.Windows.Forms.Control.GetChildAtPoint%2A> Methode, wenn das zurückgegebene Steuerelement ist nicht als untergeordnetes Element des aufrufenden Steuerelements.<br />— Ändern des Steuerelementfokus innerhalb eines Containersteuerelements.|  
 |<xref:System.Windows.Forms.Cursor>|– Festlegen der <xref:System.Windows.Forms.Cursor.Clip%2A>-Eigenschaft.<br />– Aufrufen der <xref:System.Windows.Forms.Control.Hide%2A> Methode.|  
 |<xref:System.Windows.Forms.DataGrid>|– Aufrufen der <xref:System.Windows.Forms.ContainerControl.ProcessTabKey%2A> Methode.|  
-|<xref:System.Windows.Forms.Form>|– Abrufen der <xref:System.Windows.Forms.Form.ActiveForm%2A> oder <xref:System.Windows.Forms.Form.MdiParent%2A> Eigenschaft.<br />– Festlegen der <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, oder <xref:System.Windows.Forms.Form.TopMost%2A> Eigenschaft.<br />– Festlegen der <xref:System.Windows.Forms.Form.Opacity%2A> Eigenschaft unter 50 %.<br />– Festlegen der <xref:System.Windows.Forms.Form.WindowState%2A> Eigenschaft <xref:System.Windows.Forms.FormWindowState.Minimized> programmgesteuert.<br />– Aufrufen der <xref:System.Windows.Forms.Form.Activate%2A> Methode.<br />– Die Verwendung der <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, und <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow><xref:System.Windows.Forms.FormBorderStyle> -Enumerationswerte fest.|  
+|<xref:System.Windows.Forms.Form>|– Abrufen der <xref:System.Windows.Forms.Form.ActiveForm%2A> oder <xref:System.Windows.Forms.Form.MdiParent%2A> Eigenschaft.<br />– Festlegen der <xref:System.Windows.Forms.Form.ControlBox%2A>, <xref:System.Windows.Forms.Form.ShowInTaskbar%2A>, oder <xref:System.Windows.Forms.Form.TopMost%2A> Eigenschaft.<br />– Festlegen der <xref:System.Windows.Forms.Form.Opacity%2A> Eigenschaft unter 50 %.<br />– Festlegen der <xref:System.Windows.Forms.Form.WindowState%2A> Eigenschaft <xref:System.Windows.Forms.FormWindowState.Minimized> programmgesteuert.<br />– Aufrufen der <xref:System.Windows.Forms.Form.Activate%2A> Methode.<br />– Die Verwendung der <xref:System.Windows.Forms.FormBorderStyle.None>, <xref:System.Windows.Forms.FormBorderStyle.FixedToolWindow>, und <xref:System.Windows.Forms.FormBorderStyle.SizableToolWindow> <xref:System.Windows.Forms.FormBorderStyle> -Enumerationswerte fest.|  
 |<xref:System.Windows.Forms.NotifyIcon>|– Die Verwendung der <xref:System.Windows.Forms.NotifyIcon> Komponente ist vollständig eingeschränkt.|  
   
  Die <xref:System.Security.Permissions.UIPermissionWindow.SafeSubWindows> Wert bedeutet, dass die darüber hinaus den Einschränkungen, die mithilfe von in der folgenden Tabelle aufgeführten Aktionen der <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> Wert.  
@@ -90,8 +90,8 @@ ms.locfileid: "59139528"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
-- [Mehr Sicherheit beim Drucken in Windows Forms](more-secure-printing-in-windows-forms.md)
-- [Übersicht über die Sicherheit in Windows Forms](security-in-windows-forms-overview.md)
-- [Sicherheit in Windows Forms](windows-forms-security.md)
+- [Mehr Sicherheit beim Datei- und Datenzugriff in Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)
+- [Mehr Sicherheit beim Drucken in Windows Forms](more-secure-printing-in-windows-forms.md)
+- [Übersicht über die Sicherheit in Windows Forms](security-in-windows-forms-overview.md)
+- [Sicherheit in Windows Forms](windows-forms-security.md)
 - [Sichern von ClickOnce-Anwendungen](/visualstudio/deployment/securing-clickonce-applications)

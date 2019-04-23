@@ -7,10 +7,10 @@ helpviewer_keywords:
 - graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
 ms.openlocfilehash: a0b2145b4a5bba11186419fe680f2eca41949d6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134872"
 ---
 # <a name="how-to-create-a-quadratic-bezier-curve"></a>Vorgehensweise: Erstellen einer quadratischen Bézierkurve
@@ -38,4 +38,4 @@ Dieses Beispiel zeigt, wie Sie eine quadratische Bezierkurve zu erstellen.  Verw
 ## <a name="see-also"></a>Siehe auch
 
 - [Erstellen eines elliptischen Bogens](how-to-create-an-elliptical-arc.md)
-- [Erstellen einer kubischen Bézierkurve](how-to-create-a-cubic-bezier-curve.md)
+- [Erstellen Sie eine kubische Bezier-Kurve](how-to-create-a-cubic-bezier-curve.md)

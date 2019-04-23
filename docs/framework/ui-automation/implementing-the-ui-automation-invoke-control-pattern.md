@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
 ms.openlocfilehash: 5c9d94aca6b9b53c505fa7419406a0d2fc4a0ae7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134783"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>Implementieren des Invoke-Steuerelementmusters der Benutzeroberflächenautomatisierung
@@ -29,7 +29,7 @@ ms.locfileid: "59134783"
   
 -   Ein Steuerelement wird normalerweise durch Klicken, Doppelklicken, Drücken der EINGABETASTE oder durch eine vordefinierte oder alternative Tastenkombination aufgerufen.  
   
--   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> wird auf einem Steuerelement ausgelöst, das (als Reaktion auf ein Steuerelement, das seine zugehörige Aktion ausführt) aktiviert ist. Sofern möglich, sollte das Ereignis ausgelöst werden, nachdem das Steuerelement die Aktion abgeschlossen hat und ohne Blockierung zurückgekehrt ist. In den folgenden Szenarien sollte das Invoked-Ereignis ausgelöst werden, bevor die Invoke-Anforderung verarbeitet wird:  
+-   Für ein Steuerelement, das aktiviert wurde, wird<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> ausgelöst (als Reaktion auf ein Steuerelement, das seine zugehörige Aktion ausführt). Sofern möglich, sollte das Ereignis ausgelöst werden, nachdem das Steuerelement die Aktion abgeschlossen hat und ohne Blockierung zurückgekehrt ist. In den folgenden Szenarien sollte das Invoked-Ereignis ausgelöst werden, bevor die Invoke-Anforderung verarbeitet wird:  
   
     -   Es ist nicht möglich oder zweckmäßig, bis zum Abschluss der Aktion zu warten.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59134783"
   
 -   Ein Element kann, wenn es aufgerufen wird, sofort aus der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur ausgeblendet werden. Dies kann zur Folge haben, dass das Anfordern von Informationen von dem Element, die durch den Ereignisrückruf bereitgestellt werden, fehlschlägt. Als Problemlösung wird empfohlen, zwischengespeicherte Informationen vorab abzurufen.  
   
--   Steuerelemente können mehrere Steuerelementmuster implementieren. Beispielsweise implementiert das Füllfarbe-Steuerelement auf der [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] -Symbolleiste sowohl das <xref:System.Windows.Automation.InvokePattern> - als auch das <xref:System.Windows.Automation.ExpandCollapsePattern> -Steuerelementmuster. <xref:System.Windows.Automation.ExpandCollapsePattern> macht das Menü und die <xref:System.Windows.Automation.InvokePattern> füllt die aktive Auswahl mit der ausgewählten Farbe.  
+-   Steuerelemente können mehrere Steuerelementmuster implementieren. Beispielsweise implementiert das Füllfarbe-Steuerelement auf der [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] -Symbolleiste sowohl das <xref:System.Windows.Automation.InvokePattern> - als auch das <xref:System.Windows.Automation.ExpandCollapsePattern> -Steuerelementmuster. Das<xref:System.Windows.Automation.ExpandCollapsePattern> macht das Menü verfügbar, und das I <xref:System.Windows.Automation.InvokePattern> füllt die aktive Auswahl mit der ausgewählten Farbe.  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>Erforderliche Member für IInvokeProvider  
@@ -56,7 +56,7 @@ ms.locfileid: "59134783"
   
 |Erforderliche Member|Memberart|Hinweise|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|Methode|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> ist ein asynchroner Aufruf und muss sofort ohne zu blockieren.<br /><br /> Dieses Verhalten ist insbesondere für Steuerelemente wichtig, die direkt oder indirekt ein modales Dialogfeld starten, wenn sie aufgerufen werden. Jeder Benutzeroberflächenautomatisierungs-Client, der das Ereignis ausgelöst hat, bleibt blockiert, bis das modale Dialogfeld geschlossen wird.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|Methode|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> ist ein asynchroner Aufruf und muss die Kontrolle sofort zurückgeben, ohne zu blockieren.<br /><br /> Dieses Verhalten ist insbesondere für Steuerelemente wichtig, die direkt oder indirekt ein modales Dialogfeld starten, wenn sie aufgerufen werden. Jeder Benutzeroberflächenautomatisierungs-Client, der das Ereignis ausgelöst hat, bleibt blockiert, bis das modale Dialogfeld geschlossen wird.|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Ausnahmen  

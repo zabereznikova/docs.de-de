@@ -8,10 +8,10 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141530"
 ---
 # <a name="loader-etw-events"></a>ETW-Ladeprogrammereignisse
@@ -37,7 +37,7 @@ ms.locfileid: "59141530"
   
 |Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` und `AppDomainUnLoad_V1`|Information (4)|  
+|`LoaderKeyword` (0 x 8)|`AppDomainLoad_V1` und `AppDomainUnLoad_V1`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|Information (4)|  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59141530"
   
 |Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AssemblyLoad` und `AssemblyUnload`|Information (4)|  
+|`LoaderKeyword` (0 x 8)|`AssemblyLoad` und `AssemblyUnload`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|Information (4)|  
   
@@ -100,7 +100,7 @@ ms.locfileid: "59141530"
   
 |Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`ModuleLoad_V2` und `ModuleUnload_V2`|Information (4)|  
+|`LoaderKeyword` (0 x 8)|`ModuleLoad_V2` und `ModuleUnload_V2`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|Information (4)|  
 ||||  
@@ -148,7 +148,7 @@ ms.locfileid: "59141530"
   
 |Schlüsselwort zum Auslösen des Ereignisses|event|Ebene|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|Information (4)|  
+|`LoaderKeyword` (0 x 8)|`DomainModuleLoad_V1`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Information (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`DomainModuleDCEnd_V1`|Information (4)|  
   

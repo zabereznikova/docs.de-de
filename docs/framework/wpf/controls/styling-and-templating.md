@@ -16,14 +16,14 @@ helpviewer_keywords:
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
 ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132293"
 ---
 # <a name="styling-and-templating"></a>Erstellen von Formaten und Vorlagen
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Erstellen von Formaten und Vorlagen finden Sie eine Reihe von Funktionen (Stile, Vorlagen, Trigger und Storyboards) an, mit die Entwickler und Designer visuell ansprechende Effekte erzeugen und ein konsistentes Erscheinungsbild ihres Produkts erstellen können. Obwohl Entwickler und/oder Designer die Darstellung in den einzelnen Anwendungen umfassend anpassen können, ist ein starkes Stil- und Vorlagenmodell erforderlich, um die Wartung und Freigabe der Darstellung innerhalb von Anwendungen und anwendungsübergreifend zu ermöglichen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt dieses Modell bereit.  
+Zum Erstellen von Stilen und Vorlagen in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stehen eine Reihe von Funktionen (Stile, Vorlagen, Trigger und Storyboards) zur Verfügung, mit denen Entwickler und Designer visuell ansprechende Effekte erzeugen und ein einheitliches Erscheinungsbild ihres Produkts erstellen können. Obwohl Entwickler und/oder Designer die Darstellung in den einzelnen Anwendungen umfassend anpassen können, ist ein starkes Stil- und Vorlagenmodell erforderlich, um die Wartung und Freigabe der Darstellung innerhalb von Anwendungen und anwendungsübergreifend zu ermöglichen. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt dieses Modell bereit.  
   
  Eine weitere Funktion des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Stilmodells ist die Trennung von Darstellung und Logik. Dies bedeutet, dass Designer die Darstellung einer Anwendung nur mithilfe von [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bearbeiten können, während die Entwickler mit C# oder Visual Basic an der Programmierlogik arbeiten.  
   
@@ -199,5 +199,5 @@ ms.locfileid: "59132293"
 ## <a name="see-also"></a>Siehe auch
 
 - [Paket-URI in WPF](../app-development/pack-uris-in-wpf.md)
-- [Vorgehensweise: Suchen von Elementen, die mit einer ControlTemplate generiert wurden](how-to-find-controltemplate-generated-elements.md)
-- [Suchen von Elementen, die mit einer DataTemplate-Klasse generiert wurden](../data/how-to-find-datatemplate-generated-elements.md)
+- [Vorgehensweise: Suchen von Elementen einer ControlTemplate generiert wurden](how-to-find-controltemplate-generated-elements.md)
+- [Suchen von Elementen, die mit einer DataTemplate generiert wurden](../data/how-to-find-datatemplate-generated-elements.md)

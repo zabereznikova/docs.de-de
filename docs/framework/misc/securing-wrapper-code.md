@@ -10,10 +10,10 @@ ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e4d8497d17e1a82791f4dd6ca8f91c9a012db167
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132781"
 ---
 # <a name="securing-wrapper-code"></a>Sichern von Wrappercode
@@ -71,7 +71,7 @@ ms.locfileid: "59132781"
   
  Die deklarative Sicherheit bietet die folgenden Sicherheitsüberprüfungen:  
   
--   <xref:System.Security.Permissions.SecurityAction.Demand> Gibt den Code-Sicherheitsstapel an. Alle Aufrufer für den Stapel benötigen die angegebene Berechtigung oder Identität, um die Überprüfung zu bestehen. **Bei Bedarf** tritt bei jedem Aufruf, da der Stapel ggf. verschiedene Aufrufer enthält. Wenn Sie eine Methode wiederholt aufrufen, tritt diese Sicherheitsüberprüfung jedes Mal auf. **Bei Bedarf** ist ein guter Schutz vor Lockangriffen dar; nicht autorisierter Code, von dem zu durchbrechen erkannt.  
+-   <xref:System.Security.Permissions.SecurityAction.Demand> gibt den Stackwalk für die Codezugriffssicherheit an. Alle Aufrufer für den Stapel benötigen die angegebene Berechtigung oder Identität, um die Überprüfung zu bestehen. **Bei Bedarf** tritt bei jedem Aufruf, da der Stapel ggf. verschiedene Aufrufer enthält. Wenn Sie eine Methode wiederholt aufrufen, tritt diese Sicherheitsüberprüfung jedes Mal auf. **Bei Bedarf** ist ein guter Schutz vor Lockangriffen dar; nicht autorisierter Code, von dem zu durchbrechen erkannt.  
   
 -   [LinkDemand](../../../docs/framework/misc/link-demands.md) erfolgt zur Kompilierungszeit für just-in-Time (JIT) und nur den unmittelbaren Aufrufer überprüft. Diese Sicherheitsüberprüfung überprüft nicht den Aufrufer des Aufrufers. Nachdem diese Überprüfung erfolgreich war, werden unabhängig von der Anzahl der Aufrufe durch den Aufrufer keine weiteren Sicherheitsmaßnahmen ergriffen. Es besteht jedoch auch kein Schutz vor Lockangriffen. Mit **LinkDemand**, jeglicher Code, der den Test besteht und kann auf Ihren Code verweisen kann zu schwerwiegenden Fehlern führen Sicherheit von bösartigem Code rufen Sie mithilfe des autorisierten Codes ermöglicht. Aus diesem Grund verwenden Sie keine **LinkDemand** es sei denn, alle potenziellen Risiken ausdrücklich vermieden werden können.  
   

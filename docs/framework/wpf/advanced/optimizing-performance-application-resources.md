@@ -10,10 +10,10 @@ helpviewer_keywords:
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
 ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139424"
 ---
 # <a name="optimizing-performance-application-resources"></a>Optimieren der Leistung: Anwendungsressourcen
@@ -46,7 +46,7 @@ ms.locfileid: "59139424"
 
 - [Optimieren der WPF-Anwendungsleistung](optimizing-wpf-application-performance.md)
 - [Planen der Anwendungsleistung](planning-for-application-performance.md)
-- [Nutzen der Vorteile der Hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Vorteile der Hardware nutzen](optimizing-performance-taking-advantage-of-hardware.md)
 - [Layout und Entwurf](optimizing-performance-layout-and-design.md)
 - [2D-Grafiken und Bildverarbeitung](optimizing-performance-2d-graphics-and-imaging.md)
 - [Objektverhalten](optimizing-performance-object-behavior.md)

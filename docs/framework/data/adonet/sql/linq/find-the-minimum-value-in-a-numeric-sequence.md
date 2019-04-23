@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
 ms.openlocfilehash: 84002609c550cc2de76f9948bf77f9fd88261f64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136720"
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>Suchen des minimalen Werts in einer numerischen Sequenz
@@ -74,4 +74,4 @@ Verwenden Sie den <xref:System.Linq.Enumerable.Min%2A>-Operator, um den minimale
 ## <a name="see-also"></a>Siehe auch
 
 - [Aggregatabfragen](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

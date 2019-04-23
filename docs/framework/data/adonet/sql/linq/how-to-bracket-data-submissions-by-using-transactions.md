@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 94044a31-de90-479b-935a-8159b4ae5c5a
 ms.openlocfilehash: 3e58c6f2849ed9714b3356662dae313ab9d11696
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134003"
 ---
 # <a name="how-to-bracket-data-submissions-by-using-transactions"></a>Vorgehensweise: Einklammern von Datenübergaben mithilfe von Transaktionen
@@ -23,6 +23,6 @@ Sie können <xref:System.Transactions.TransactionScope> verwenden, um die Überg
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Herunterladen von Beispieldatenbanken](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+- [Downloading Sample Databases (Herunterladen von Beispieldatenbanken)](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [Vornehmen und Übergeben von Datenänderungen](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
 - [Transaktionsunterstützung](../../../../../../docs/framework/data/adonet/sql/linq/transaction-support.md)
