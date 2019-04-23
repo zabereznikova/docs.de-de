@@ -3,10 +3,10 @@ title: ServiceDescription und WSDL-Verweis
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
 ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182883"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription und WSDL-Verweis
@@ -50,7 +50,7 @@ In diesem Thema wird beschrieben, wie Windows Communication Foundation (WCF) Web
 |----------------|------------------|  
 |`Name`|Wird im Standardnamen eines Endpunkts verwendet, bei dem es sich um den Bindungsnamen handelt, an den der Vertragsname durch einen Unterstrich abgetrennt angefügt ist.|  
 |`Namespace`|`targetNamespace` für die `wsdl:binding`-Definition.<br /><br /> Ist eine Richtlinie an den WSDL-Anschluss angehängt, wird der importierte Bindungsnamespace dem `targetNamespace` für die `wsdl:port`-Definition zugeordnet.|  
-|`BindingElementCollection`, wie vom die `CreateBindingElements`()-Methode|Verschiedene domänenspezifische Erweiterungen der `wsdl:binding`-Definition, in der Regel Richtlinienassertionen.|  
+|`BindingElementCollection` entsprechend der Rückgabe durch die `CreateBindingElements`()-Methode.|Verschiedene domänenspezifische Erweiterungen der `wsdl:binding`-Definition, in der Regel Richtlinienassertionen.|  
 |`MessageVersion`|`EnvelopeVersion` und `AddressingVersion` für den Endpunkt.<br /><br /> Bei Angabe von `MessageVersion.None` enthält die WSDL-Bindung keine SOAP-Bindung, und der WSDL-Anschluss weist keinen WS-Adressierungsinhalt auf. Diese Einstellung wird in der Regel für Plain Old XML (POX)-Endpunkte verwendet.|  
   
 #### <a name="bindingelements"></a>BindingElements  

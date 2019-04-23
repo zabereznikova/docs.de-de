@@ -10,10 +10,10 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182298"
 ---
 # <a name="lazy-initialization"></a>Verzögerte Initialisierung
@@ -23,7 +23,7 @@ ms.locfileid: "59182298"
   
 -   Sie verfügen über ein Objekt, dessen Erstellung teuer ist und das daher erst erstellt werden soll, wenn andere teure Vorgänge abgeschlossen sind. Angenommen, das Programm lädt beim Start mehrere Objektinstanzen, von denen allerdings nur einige sofort benötigt werden. Hier kann die Startleistung des Programms verbessert werden, indem die Initialisierung der nicht benötigten Objekte verzögert wird, bis die benötigten Objekte erstellt wurden.  
   
- Sie können für die verzögerte Initialisierung Ihren eigenen Code schreiben. Es ist jedoch empfehlenswert, stattdessen <xref:System.Lazy%601> zu verwenden. <xref:System.Lazy%601> und die entsprechenden Typen auch Threadsicherheit zu unterstützen, und geben Sie eine konsistente Richtlinie zur ausnahmeweitergabe.  
+ Sie können für die verzögerte Initialisierung Ihren eigenen Code schreiben. Es ist jedoch empfehlenswert, stattdessen <xref:System.Lazy%601> zu verwenden. <xref:System.Lazy%601> und die zugehörigen verwandten Typen unterstützen auch die Threadsicherheit und stellen eine konsistente Richtlinie zur Ausnahmeweitergabe bereit.  
   
  In der folgenden Tabelle werden die Typen aufgelistet, die .NET Framework Version 4 bereitstellt, um die verzögerte Initialisierung in verschiedenen Szenarios zu aktivieren.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "59182298"
   
  Einige <xref:System.Lazy%601>-Konstruktoren verfügen über einen <xref:System.Threading.LazyThreadSafetyMode>-Parameter mit dem Namen `mode`. Diese Konstruktoren stellen einen zusätzlichen Threadsicherheitsmodus bereit. Entnehmen Sie der folgenden Tabelle, wie die Threadsicherheit eines <xref:System.Lazy%601>-Objekts von den Konstruktorparametern beeinflusst wird, die die Threadsicherheit angeben. Jeder Konstruktor verfügt über höchstens einen solchen Parameter.  
   
-|Threadsicherheit des Objekts|`LazyThreadSafetyMode` `mode` -Parameter von|Boolescher Parameter `isThreadSafe`|Keine Threadsicherheitsparameter|  
+|Threadsicherheit des Objekts|`mode`-Parameter `LazyThreadSafetyMode`|Boolescher Parameter `isThreadSafe`|Keine Threadsicherheitsparameter|  
 |---------------------------------|---------------------------------------------|--------------------------------------|---------------------------------|  
 |Vollständig threadsicher; nur ein Thread versucht jeweils, den Wert zu initialisieren.|<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>|`true`|Ja.|  
 |Nicht threadsicher.|<xref:System.Threading.LazyThreadSafetyMode.None>|`false`|Nicht zutreffend.|  
@@ -126,7 +126,7 @@ ms.locfileid: "59182298"
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601> umschließt sein Objekt auf die gleiche Weise wie <xref:System.Lazy%601>, mit folgenden entscheidenden unterschieden:  
+ <xref:System.Threading.ThreadLocal%601> umschließt sein Objekt auf fast die gleiche Weise wie <xref:System.Lazy%601>, mit folgenden entscheidenden Unterschieden:  
   
 -   Jeder Thread initialisiert die threadlokale Variable mit seinen eigenen privaten Daten, auf die von anderen Threads nicht zugegriffen werden kann.  
   
@@ -155,6 +155,6 @@ ms.locfileid: "59182298"
 ## <a name="see-also"></a>Siehe auch
 
 - [Grundlagen des verwalteten Threadings](../../../docs/standard/threading/managed-threading-basics.md)
-- [Threads und Threading](../../../docs/standard/threading/threads-and-threading.md)
+- [Threads and Threading (Threads und Threading)](../../../docs/standard/threading/threads-and-threading.md)
 - [Task Parallel Library (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [Vorgehensweise: Verzögerte Initialisierung von Objekten](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [Vorgehensweise: Führen Sie die verzögerte Initialisierung von Objekten](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

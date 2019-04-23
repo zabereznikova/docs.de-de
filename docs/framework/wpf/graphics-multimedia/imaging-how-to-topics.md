@@ -8,24 +8,24 @@ helpviewer_keywords:
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
 ms.openlocfilehash: 70294aff4c40bd5ae14b61e6a847155a10d675a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183039"
 ---
 # <a name="imaging-how-to-topics"></a>Gewusst-wie-Themen zur Bildverarbeitung
 Die Themen in diesem Abschnitt veranschaulichen, wie [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zum Anzeigen oder Ändern von Bitmapbildern.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Verwenden eines BitmapImage-Objekts in XAML](how-to-use-a-bitmapimage.md)  
+ [Verwenden eines BitmapImage in XAML](how-to-use-a-bitmapimage.md)  
  [Laden eines Bilds als Miniaturansicht](how-to-load-an-image-as-a-thumbnail.md)  
  [Anwenden einer Transformation auf ein Bitmapbild](how-to-apply-a-transform-to-a-bitmapimage.md)  
  [Erstellen einer Bitmap aus einem visuellen Element](how-to-create-a-bitmap-from-a-visual.md)  
  [Codieren eines Visual-Objekts in einer Bilddatei](how-to-encode-a-visual-to-an-image-file.md)  
  [Erstellen einer neuen BitmapSource](how-to-create-a-new-bitmapsource.md)  
  [Verketten von BitmapSource-Objekten](how-to-chain-bitmapsource-objects-together.md)  
- [Konvertieren einer BitmapSource in ein anderes Pixelformat](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
+ [Konvertieren einer BitmapSource in ein anderes PixelFormat](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
  [Konvertieren einer BitmapSource in ein indiziertes Pixelformat](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
  [Codieren und Decodieren eines JPEG-Bilds](how-to-encode-and-decode-a-jpeg-image.md)  
  [Codieren und Decodieren eines BMP-Bilds](how-to-encode-and-decode-a-bmp-image.md)  

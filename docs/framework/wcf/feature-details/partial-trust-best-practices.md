@@ -3,10 +3,10 @@ title: Empfehlungen für eine teilweise vertrauenswürdige Umgebung
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
 ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184079"
 ---
 # <a name="partial-trust-best-practices"></a>Empfehlungen für eine teilweise vertrauenswürdige Umgebung
@@ -29,7 +29,7 @@ Dieses Thema beschreibt bewährte Methoden bei der Ausführung von Windows Commu
   
 -   Methoden, die Serialisierungsereignisse verarbeiten (z.&amp;#160;B. `OnSerializing`, `OnSerialized`, `OnDeserializing` und `OnDeserialized`), müssen als öffentlich deklariert werden. Jedoch werden sowohl explizite als auch implizite Implementierungen von <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%28System.Object%29> unterstützt.  
   
--   `[DataContract]` markierte Typen, die in Assemblys implementiert, mit der <xref:System.Security.AllowPartiallyTrustedCallersAttribute> durchzuführenden nicht sicherheitsrelevante Aktionen im Typenkonstruktor, als die <xref:System.Runtime.Serialization.DataContractSerializer> wird nicht den Konstruktor des neu instanziierten Objekts während der Deserialisierung aufgerufen. Die folgenden allgemeinen Sicherheitstechniken müssen für `[DataContract]`-Typen vermieden werden:  
+-   `[DataContract]`-Typen, die in Assemblys implementiert und mit <xref:System.Security.AllowPartiallyTrustedCallersAttribute> gekennzeichnet sind, dürfen keine sicherheitsbezogenen Aktionen im Typenkonstruktor ausführen, da der <xref:System.Runtime.Serialization.DataContractSerializer> den Konstruktor des neu instanziierten Objekts während der Deserialisierung aufruft. Die folgenden allgemeinen Sicherheitstechniken müssen für `[DataContract]`-Typen vermieden werden:  
   
 -   Der Versuch, den teilweise vertrauenswürdigen Zugriff durch Definieren des Konstruktors für den Typ als intern oder privat zu beschränken  
   
