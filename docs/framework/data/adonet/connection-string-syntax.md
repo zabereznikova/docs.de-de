@@ -3,10 +3,10 @@ title: Verbindungszeichenfolgen-Syntax
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
 ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084956"
 ---
 # <a name="connection-string-syntax"></a>Verbindungszeichenfolgen-Syntax
@@ -43,7 +43,7 @@ Alle .NET Framework-Datenanbieter besitzen ein `Connection`-Objekt, das von <xre
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  `Integrated Security=true` löst eine Ausnahme bei der Verwendung mit der `OleDb` Anbieter.  
+>  Wenn der `Integrated Security=true`-Anbieter verwendet wird, wird bei `OleDb` eine Ausnahme ausgelöst.  
   
 ## <a name="sqlclient-connection-strings"></a>SqlClient-Verbindungszeichenfolgen  
 Die Syntax für eine <xref:System.Data.SqlClient.SqlConnection>-Verbindungszeichenfolge wird in der <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType>-Eigenschaft dokumentiert. Mit der <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>-Eigenschaft können Sie eine Verbindungszeichenfolge für eine SQL Server-Datenbank abrufen oder festlegen. Wenn Sie eine Verbindung mit einer früheren Version von SQL Server herstellen müssen, müssen Sie den .NET Framework-Datenanbieter für OLE DB verwenden (<xref:System.Data.OleDb>). Für die meisten Schlüsselwörter in Verbindungszeichenfolgen gibt es bei den <xref:System.Data.SqlClient.SqlConnectionStringBuilder>-Eigenschaften passende Entsprechungen.  
@@ -141,7 +141,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 >  Es ist möglich, geben Sie Verbindungsinformationen für eine **OleDbConnection** in einer Datei (Universal Data Link, UDL), jedoch müssen dies zu vermeiden. UDL-Dateien sind nicht verschlüsselt und machen Informationen zur Verbindungszeichenfolge im Klartext verfügbar. Da es sich bei einer UDL-Datei um eine externe Ressource der Anwendung handelt, kann sie nicht mit .NET Framework gesichert werden. UDL-Dateien können nicht für **SqlClient**.  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>Verwenden von "DataDirectory" zum Herstellen einer Verbindung mit Access/Jet  
- `DataDirectory` steht nicht exklusiv für `SqlClient`. Es kann auch für den <xref:System.Data.OleDb>- und den <xref:System.Data.Odbc>-.NET-Datenanbieter verwendet werden. Die folgende <xref:System.Data.OleDb.OleDbConnection>-Beispielzeichenfolge zeigt die Syntax, die erforderlich ist, um eine Verbindung mit der im Ordner &lt;legacyBold&gt;app_data&lt;/legacyBold&gt; der Anwendung befindlichen Datei &lt;legacyBold&gt;Northwind.mdb&lt;/legacyBold&gt; herzustellen. Die Systemdatenbank (System.mdw) ist ebenfalls an diesem Speicherort gespeichert.  
+ `DataDirectory` steht nicht exklusiv für `SqlClient` zur Verfügung. Es kann auch für den <xref:System.Data.OleDb>- und den <xref:System.Data.Odbc>-.NET-Datenanbieter verwendet werden. Die folgende <xref:System.Data.OleDb.OleDbConnection>-Beispielzeichenfolge zeigt die Syntax, die erforderlich ist, um eine Verbindung mit der im Ordner &lt;legacyBold&gt;app_data&lt;/legacyBold&gt; der Anwendung befindlichen Datei &lt;legacyBold&gt;Northwind.mdb&lt;/legacyBold&gt; herzustellen. Die Systemdatenbank (System.mdw) ist ebenfalls an diesem Speicherort gespeichert.  
   
 ```  
 "Provider=Microsoft.Jet.OLEDB.4.0;  

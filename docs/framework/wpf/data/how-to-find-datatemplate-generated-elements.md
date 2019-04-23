@@ -9,10 +9,10 @@ helpviewer_keywords:
 - DataTemplate [WPF]
 ms.assetid: bfcd564e-5e9e-451e-8641-a9b5c3cfac90
 ms.openlocfilehash: de5a4937feabdb4486d9dcf9d5e5bfddd2356690
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089171"
 ---
 # <a name="how-to-find-datatemplate-generated-elements"></a>Vorgehensweise: Suchen von Elementen, die mit einer DataTemplate-Klasse generiert wurden
@@ -39,9 +39,9 @@ In diesem Beispiel zeigt, wie Sie Elemente, die vom generierten eine <xref:Syste
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Suchen von Elementen, die mit einer ControlTemplate generiert wurden](../controls/how-to-find-controltemplate-generated-elements.md)
-- [Übersicht über die Datenbindung](data-binding-overview.md)
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Vorgehensweise: Suchen von Elementen einer ControlTemplate generiert wurden](../controls/how-to-find-controltemplate-generated-elements.md)
+- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)
 - [Erstellen von Formaten und Vorlagen](../controls/styling-and-templating.md)
 - [WPF-XAML-Namescopes](../advanced/wpf-xaml-namescopes.md)
 - [Strukturen in WPF](../advanced/trees-in-wpf.md)

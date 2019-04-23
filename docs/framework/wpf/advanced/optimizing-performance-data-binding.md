@@ -6,14 +6,14 @@ helpviewer_keywords:
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
 ms.openlocfilehash: ac7ca815bedf180c8a680840f585d08f7018d6ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087832"
 ---
 # <a name="optimizing-performance-data-binding"></a>Optimieren der Leistung: Datenbindung
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] die Datenbindung bietet eine einfache und einheitliche Möglichkeit für Anwendungen und mit Daten interagieren. Elemente können an Daten aus einer Vielzahl von Datenquellen in Form von [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objekten und [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] gebunden werden.  
+Die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-Datenbindung bietet für Anwendungen eine einfache und konsistente Möglichkeit, Daten darzustellen und mit ihnen zu interagieren. Elemente können an Daten aus einer Vielzahl von Datenquellen in Form von [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objekten und [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] gebunden werden.  
   
  In diesem Thema erhalten Sie Empfehlungen bezüglich der Datenbindung.  
 
@@ -35,7 +35,7 @@ ms.locfileid: "59087832"
   
  Die folgende Tabelle vergleicht die Geschwindigkeit der Datenbindung die <xref:System.Windows.Controls.TextBlock.Text%2A> -Eigenschaft von Tausend <xref:System.Windows.Controls.TextBlock> Elemente, die diese drei Methoden verwenden.  
   
-|**Die Text-Eigenschaft einen Textblocks binden**|**Binden die Zeit (ms)**|**Renderingzeit, schließt die Bindung (ms)**|  
+|**Bindung einer Text-Eigenschaft an einen TextBlock**|**Bindungszeit (in ms)**|**Renderingzeit, einschließlich Bindung (in ms)**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |An die Eigenschaft eines [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objekts|115|314|  
 |An eine Eigenschaft einer [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Objekts, das implementiert <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
@@ -45,7 +45,7 @@ ms.locfileid: "59087832"
 ## <a name="binding-to-large-clr-objects"></a>Bindung an große CLR-Objekte  
  Wenn Sie Daten an ein einzelnes [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objekt mit tausend Eigenschaften binden, beeinträchtigt dies die Leistung deutlich. Sie können die Beeinträchtigung verringern, indem Sie das einzelne Objekt in mehrere [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objekte aufteilen, die weniger Eigenschaften haben. In der unten stehenden Tabelle werden die Bindungs- und Renderingzeiten für die Datenbindung an ein einzelnes großes [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objekt und an mehrere kleinere Objekte dargestellt.  
   
-|**1000 TextBlock Datenbindungsobjekte**|**Binden die Zeit (ms)**|**Renderingzeit, schließt die Bindung (ms)**|  
+|**Datenbindung an 1000 TextBlock-Objekte**|**Bindungszeit (in ms)**|**Renderingzeit, einschließlich Bindung (in ms)**|  
 |---------------------------------------------|-----------------------------|--------------------------------------------------|  
 |An ein [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objekt mit 1000 Eigenschaften|950|1200|  
 |An 1000 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objekte mit einer Eigenschaft|115|314|  
@@ -58,7 +58,7 @@ ms.locfileid: "59087832"
   
  Die folgende Tabelle zeigt die Zeit, die zum Aktualisieren der <xref:System.Windows.Controls.ListBox> (mit UI-Virtualisierung deaktiviert.) Wenn ein Element hinzugefügt wird. Die Anzahl in der ersten Zeile gibt die verstrichene Zeit bei der [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> -Objekt gebunden ist <xref:System.Windows.Controls.ListBox> des Elements <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Die Anzahl in der zweiten Zeile darstellt, die verstrichene Zeit beim ein <xref:System.Collections.ObjectModel.ObservableCollection%601> gebunden ist die <xref:System.Windows.Controls.ListBox> des Elements <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>. Beachten Sie die erhebliche einsparungen mithilfe der <xref:System.Collections.ObjectModel.ObservableCollection%601> Strategie für die Bindung von Daten.  
   
-|**Datenbindung der ItemsSource**|**Aktualisieren von Zeiteinstellungen für 1 Element (ms)**|  
+|**Datenbindung der ItemsSource**|**Zeit für das Aktualisieren eines Elements (in ms)**|  
 |--------------------------------------|---------------------------------------|  
 |Um eine [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> Objekt|1656|  
 |Um eine <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
@@ -69,18 +69,18 @@ ms.locfileid: "59087832"
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>Konvertieren Sie CLR-Objekte nicht nur für die Datenbindung in XML  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können Sie eine Datenbindung zu [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] Inhaltstypen; allerdings die Datenbindung an [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] Inhalt ist langsamer als die Datenbindung an [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] Objekte. Konvertieren Sie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objektdaten nicht nur für die Datenbindung in XML.  
+ Mit [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] können Sie eine Datenbindung an [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]-Inhalt durchführen; allerdings ist die Datenbindung an [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]-Inhalt langsamer als an [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objekte. Konvertieren Sie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]-Objektdaten nicht nur für die Datenbindung in XML.  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Optimieren der WPF-Anwendungsleistung](optimizing-wpf-application-performance.md)
 - [Planen der Anwendungsleistung](planning-for-application-performance.md)
-- [Nutzen der Vorteile der Hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Vorteile der Hardware nutzen](optimizing-performance-taking-advantage-of-hardware.md)
 - [Layout und Entwurf](optimizing-performance-layout-and-design.md)
 - [2D-Grafiken und Bildverarbeitung](optimizing-performance-2d-graphics-and-imaging.md)
 - [Objektverhalten](optimizing-performance-object-behavior.md)
 - [Anwendungsressourcen](optimizing-performance-application-resources.md)
 - [Text](optimizing-performance-text.md)
 - [Weitere Leistungsempfehlungen](optimizing-performance-other-recommendations.md)
-- [Übersicht über die Datenbindung](../data/data-binding-overview.md)
+- [Übersicht zur Datenbindung](../data/data-binding-overview.md)
 - [Exemplarische Vorgehensweise: Zwischenspeichern von Anwendungsdaten in einer WPF-Anwendung](walkthrough-caching-application-data-in-a-wpf-application.md)

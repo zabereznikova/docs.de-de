@@ -19,10 +19,10 @@ helpviewer_keywords:
 - forms [Windows Forms], custom shapes
 ms.assetid: 6e6041e0-8e67-4487-b1e9-e410dbd1ef6c
 ms.openlocfilehash: 03fcbb97db180e71283810e2daeab9be272b9d5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087248"
 ---
 # <a name="how-to-create-a-shaped-windows-form"></a>Vorgehensweise: Erstellen von geformten Windows Forms
@@ -47,4 +47,4 @@ In diesem Beispiel wird ein Formular eine elliptische Form, die mit dem Formular
 - <xref:System.Drawing>
 - <xref:System.Drawing.Drawing2D.GraphicsPath.AddEllipse%2A>
 - <xref:System.Windows.Forms.Control.Region%2A>
-- [Erste Schritte mit der Grafikprogrammierung](getting-started-with-graphics-programming.md)
+- [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)
