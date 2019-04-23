@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 192acf6fea0c6014aaf092077f8deaa844dfd2ec
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633802"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301125"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Arithmetische Operatoren (C#-Referenz)
 
@@ -93,7 +93,7 @@ Der Multiplikationsoperator `*` berechnet das Produkt seiner Operanden:
 
 [!code-csharp-interactive[multiplication operator](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#Multiplication)]
 
-Der unäre `*`-Operator ist ein [Zeigerdereferenzierungsoperator](multiplication-operator.md#pointer-indirection-operator).
+Der unäre `*`-Operator ist der [Zeigerdereferenzierungsoperator](multiplication-operator.md#pointer-indirection-operator).
 
 ## <a name="division-operator-"></a>Divisionsoperator /
 
@@ -239,7 +239,7 @@ Weitere Informationen finden Sie in den Hinweisen auf den Referenzseiten zu [Sys
 
 ## <a name="operator-overloadability"></a>Operatorüberladbarkeit
 
-Benutzerdefinierte Typen können die unären (`++`, `--`, `+` und `-`) und binären (`*`, `/`, `%`, `+` und `-`) arithmetischen Operatoren [überladen](../keywords/operator.md). Wenn ein binärer Operator überladen ist, wird der zugehörige Verbundzuweisungsoperator implizit auch überladen. Ein benutzerdefinierter Typ kann einen Verbundzuweisungsoperator nicht explizit überladen.
+Ein benutzerdefinierter Typ kann die unären (`++`, `--`, `+` und `-`) und binären (`*`, `/`, `%`, `+` und `-`) arithmetischen Operatoren [überladen](../keywords/operator.md). Wenn ein binärer Operator überladen ist, wird der zugehörige Verbundzuweisungsoperator implizit auch überladen. Ein benutzerdefinierter Typ kann einen Verbundzuweisungsoperator nicht explizit überladen.
 
 ## <a name="c-language-specification"></a>C#-Sprachspezifikation
 
@@ -247,7 +247,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 
 - [Postfix-Inkrementoperator und Postfix-Dekrementoperator](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators)
 - [Präfix-Inkrementoperator und Präfix-Dekrementoperator](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators)
-- [Unärer Plusoperator](~/_csharplang/spec/expressions.md#unary-plus-operator)
+- [Unärer Plus-Operator](~/_csharplang/spec/expressions.md#unary-plus-operator)
 - [Unärer Minusoperator](~/_csharplang/spec/expressions.md#unary-minus-operator)
 - [Multiplikationsoperator](~/_csharplang/spec/expressions.md#multiplication-operator)
 - [Divisionsoperator](~/_csharplang/spec/expressions.md#division-operator)
@@ -255,7 +255,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [Additionsoperator](~/_csharplang/spec/expressions.md#addition-operator)
 - [Subtraktionsoperator](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [Verbundzuweisung](~/_csharplang/spec/expressions.md#compound-assignment)
-- [The checked and unchecked operators (Checked- und Unchecked-Operatoren)](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
+- [Checked- und Unchecked-Operatoren](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
 
 ## <a name="see-also"></a>Siehe auch
 

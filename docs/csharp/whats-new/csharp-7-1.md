@@ -1,13 +1,13 @@
 ---
 title: Neues in C# 7.1
 description: Eine Übersicht der neuen Features in C# 7.1
-ms.date: 08/16/2017
-ms.openlocfilehash: 565db102284424f9d8f6fa04ec9c74b52c9da0e6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 04/09/2019
+ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728653"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480962"
 ---
 # <a name="whats-new-in-c-71"></a>Neues in C# 7.1
 
@@ -17,12 +17,14 @@ Mit C# 7.1 wird ein Konfigurationselement zum [Auswählen der Sprachversion](../
 
 Die neuen Sprachfeatures in diesem Release umfassen:
 
-* Die [`async``Main`-Methode](#async-main)
+* [`async` `Main` Methode](#async-main)
   - Der Einstiegspunkt für eine Anwendung kann über den Modifizierer `async` verfügen.
-* [`default`Literale Ausdrücke](#default-literal-expressions)
+* [`default` Literale Ausdrücke](#default-literal-expressions)
   - Sie können literale Standardausdrücke in Standardwertausdrücken verwenden, wenn der Zieltyp abgeleitet werden kann.
 * [Abgeleitete Tupelelementnamen](#inferred-tuple-element-names)
   - Die Namen von Tupelelementen können in den meisten Fällen von der Initialisierung eines Tupels abgeleitet werden.
+* [Musterabgleich für generische Typparameter](#pattern-matching-on-generic-type-parameters)
+  - Sie können Musterabgleichsausdrücke für Variablen verwenden, deren Typ ein generischer Typparameter ist.
 
 Außerdem verfügt der Compiler über die zwei Optionen `/refout` und `/refonly`, mit denen die [Generierung der Referenzassembly](#reference-assembly-generation) gesteuert wird.
 
@@ -77,7 +79,7 @@ Können Sie nun den Typ weglassen, der auf der rechten Seite der Initialisierung
 Func<string, bool> whereClause = default;
 ```
 
-Weitere Informationen zu dieser Erweiterung finden Sie unter [default value expressions (Standardwertausdrücke)](../programming-guide/statements-expressions-operators/default-value-expressions.md) im C#-Programmierhandbuch.
+Weitere Informationen zu dieser Erweiterung finden Sie unter [Standardwertausdrücke](../programming-guide/statements-expressions-operators/default-value-expressions.md) im C#-Programmierhandbuch.
 
 Diese Erweiterung ändert auch einige Regeln der Analyse für das [Schlüsselwort „default“](../language-reference/keywords/default.md).
 
@@ -100,6 +102,10 @@ var pair = (count, label); // element names are "count" and "label"
 ```
 
 Weitere Informationen über dieses Feature finden Sie im Artikel [Tupel](../tuples.md).
+
+## <a name="pattern-matching-on-generic-type-parameters"></a>Musterabgleich für generische Typparameter
+
+Ab C# 7.1 kann der Musterausdruck für `is` und das `switch`-Typmuster den Typ eines generischen Typparameters haben. Dies kann sehr nützlich sein, wenn Sie Typen überprüfen, die entweder `struct`- oder `class`-Typen sein können, und Sie Boxing vermeiden möchten.
 
 ## <a name="reference-assembly-generation"></a>Generierung der Referenzassembly
 

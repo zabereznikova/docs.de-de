@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 210b7cabb658c6f068d9ab34c83050ad6267e426
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c03fa202b413c98230ba70ca7a0b709d7865cb91
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704907"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427382"
 ---
 # <a name="-operator-c-reference"></a>?: Operator (C#-Referenz)
 
@@ -24,12 +24,12 @@ Der bedingte Operator `?:`, häufig als ternärer bedingter Operator bekannt, we
 Die Syntax für den bedingten Operator lautet:
 
 ```csharp
-condition ? consequence : alternative
+condition ? consequent : alternative
 ```
 
-Der `condition`-Ausdruck muss als `true` oder `false` ausgewertet werden. Wenn `condition` `true` ergibt, wird der `consequence`-Ausdruck ausgewertet, und das Ergebnis ist das Ergebnis des Vorgangs. Wenn `condition` `false` ergibt, wird der `alternative`-Ausdruck ausgewertet, und das Ergebnis ist das Ergebnis des Vorgangs. Nur `consequence` oder `alternative` wird ausgewertet.
+Der `condition`-Ausdruck muss als `true` oder `false` ausgewertet werden. Wenn `condition` `true` ergibt, wird der `consequent`-Ausdruck ausgewertet, und das Ergebnis ist das Ergebnis des Vorgangs. Wenn `condition` `false` ergibt, wird der `alternative`-Ausdruck ausgewertet, und das Ergebnis ist das Ergebnis des Vorgangs. Nur `consequent` oder `alternative` wird ausgewertet.
 
-Der Typ von `consequence` und `alternative` muss identisch sein, oder es muss eine implizite Konvertierung von einem Typ in einen anderen vorhanden sein.
+Der Typ von `consequent` und `alternative` muss identisch sein, oder es muss eine implizite Konvertierung von einem Typ in einen anderen vorhanden sein.
 
 Der bedingte Operator ist rechtsassoziativ, d.h. ein Ausdruck der Form
 
@@ -54,12 +54,12 @@ Beginnend mit C# 7.2 können Sie mit dem bedingten ref-Ausdruck den Verweis auf 
 Die Syntax für den bedingten ref-Ausdruck lautet:
 
 ```csharp
-condition ? ref consequence : ref alternative
+condition ? ref consequent : ref alternative
 ```
 
-Wie der ursprüngliche bedingte Operator wertet der bedingte ref-Ausdruck nur einen von zwei Ausdrücken aus: entweder `consequence` oder `alternative`.
+Wie der ursprüngliche bedingte Operator wertet der bedingte ref-Ausdruck nur einen von zwei Ausdrücken aus: entweder `consequent` oder `alternative`.
 
-Im Fall des bedingten ref-Ausdrucks muss der Typ von `consequence` und `alternative` identisch sein.
+Im Fall des bedingten ref-Ausdrucks muss der Typ von `consequent` und `alternative` identisch sein.
 
 Im folgenden Beispiel wird die Verwendung des bedingten ref-Ausdrucks veranschaulicht:
 
@@ -87,6 +87,6 @@ Weitere Informationen finden Sie im Abschnitt [Bedingter Operator](~/_csharplang
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
 - [if-else-Anweisung](../keywords/if-else.md)
-- [?.- und ?[]-Operatoren](null-conditional-operators.md)
+- [?. und ?[]-Operatoren](null-conditional-operators.md)
 - [?? Operator](null-coalescing-operator.md)
-- [ref (C#-Referenz)](../keywords/ref.md)
+- [ref-Schlüsselwort](../keywords/ref.md)

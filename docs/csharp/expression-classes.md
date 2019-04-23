@@ -3,12 +3,12 @@ title: Framework-Typen, die Ausdrucksbaumstrukturen unterstützen
 description: Erfahren Sie mehr zu Frameworktypen, die Ausdrucksbaumstrukturen unterstützen, wie Sie diese erstellen können und Methoden zum Arbeiten mit Ausdrucksbaumstruktur-APIs.
 ms.date: 06/20/2016
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c18bbfb1273156a4b070d1f195d9e823256fde9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972558"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198464"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>Framework-Typen, die Ausdrucksbaumstrukturen unterstützen
 
@@ -65,4 +65,3 @@ Es gibt Ausdrucksknotentypen, die fast alle Elemente der Syntax der C#-Sprache z
 Sie werden mehr finden, wenn Sie sich jeden dieser drei Bereiche ansehen. Unweigerlich, werden Sie feststellen, was Sie benötigen, wenn Sie mit einem dieser drei Schritte starten.
  
  [Weiter -- Ausführen von Ausdrucksbaumstrukturen](expression-trees-execution.md)
- 

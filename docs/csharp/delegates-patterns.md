@@ -3,16 +3,16 @@ title: Gängige Muster für Delegate
 description: Erfahren Sie etwas über allgemeine Muster für die Verwendung von Delegaten in Ihrem Code, um starke Kopplung zwischen Komponenten zu vermeiden.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827019"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095697"
 ---
 # <a name="common-patterns-for-delegates"></a>Gängige Muster für Delegate
 
-[Vorherige](delegates-strongly-typed.md)
+[Vorheriges](delegates-strongly-typed.md)
 
 Delegaten bieten einen Mechanismus, der Software-Entwürfe ermöglicht, die minimale Kopplung zwischen Komponenten umfassen.
 
@@ -99,7 +99,6 @@ Hier ist diese dateibasierte-Protokollierung:
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
 
-
 Wenn Sie diese Klasse erstellt haben, können Sie sie instanziieren und sie fügt ihre LogMessage-Methode in die Protokollierungskomponente an:
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
@@ -154,4 +153,4 @@ Sie haben die Anfänge einer Protokollkomponente gesehen, die mit anderen Writer
 
 Die Protokollierungsklasse kann eine beliebige Anzahl von Verbesserungen oder Änderungen vornehmen, ohne wichtige Änderungen einzuführen. Wie jede Klasse können Sie die öffentliche API nicht ohne das Risiko von wichtigen Änderungen ändern. Aber da die Kopplung zwischen der Protokollierung und den Ausgabe-Engines nur über den Delegaten stattfindet, sind keine anderen Typen (z.B. Schnittstellen oder Basisklassen) beteiligt. Die Kopplung ist so klein wie möglich.
 
-[Nächste](events-overview.md)
+[Weiter](events-overview.md)

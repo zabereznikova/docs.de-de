@@ -7,16 +7,16 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: c93c00ca939bcb6c3c7feea4e6b6234f738298dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ef334f6d200e75f29e22a9586f4538309797942
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605531"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095983"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed-Anweisung (C#-Referenz)
 
-Die `fixed`-Anweisung verhindert, dass der Garbage Collector eine bewegliche Variable verschiebt. Die `fixed`-Anweisung ist nur in einem [unsicheren (unsafe)](unsafe.md) Kontext zulässig. `fixed` kann auch zum Erstellen eines [Puffers fester Größe](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md) verwendet werden.
+Die `fixed`-Anweisung verhindert, dass der Garbage Collector eine bewegliche Variable verschiebt. Die `fixed`-Anweisung ist nur in einem [unsicheren (unsafe)](unsafe.md) Kontext zulässig. `fixed` kann auch zum Erstellen eines Puffers [fester Größe](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md) verwendet werden.
 
 Die `fixed`-Anweisung setzt einen Zeiger auf eine verwaltete Variable und „fixiert“ diese Variable während der Ausführung der Anweisung. Zeiger auf verschiebbare verwaltete Variablen sind nur in einem `fixed`-Kontext nützlich. Ohne den `fixed`-Kontext könnte die automatische Speicherbereinigung die Variablen auf unvorhersehbare Weise verschieben. Mit dem C#-Compiler können Sie einer verwalteten Variablen nur in einer `fixed`-Anweisung einen Zeiger zuweisen.
 
@@ -62,7 +62,6 @@ fixed (byte* ps = srcarray, pd = dstarray)
     ps++; // invalid: cannot modify ps, as it is declared in the fixed statement.
 }
 ```
-
 
 Im nicht sicheren Modus können Sie dem Stapel Arbeitsspeicher zuweisen, auf dem der Speicher nicht automatisch bereinigt wird und daher nicht fixiert werden muss. Weitere Informationen finden Sie unter [stackalloc](stackalloc.md).
 

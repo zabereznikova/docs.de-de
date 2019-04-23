@@ -3,12 +3,12 @@ title: Entwerfen mit Verweistypen, die NULL-Werte zulassen
 description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistypen, die NULL-Werte zulassen. Sie erfahren, wie Sie Ihre Entwurfsabsicht ausdrücken, wenn die Verweiswerte Null sein können, und wie Sie den Compiler durchsetzen, wenn sie nicht NULL sein können.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 57f738771a6f1d2cebe7af546d06ac7d7289a338
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443249"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427291"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migrieren vorhandenen Codes mit Verweistypen, die NULL-Werte zulassen
 
@@ -24,7 +24,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0 Beta-Compilers. Der C# 8 Beta-Compiler ist mit [Visual Studio 2019 Vorschauversion 2 und höher](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) oder [.NET Core 3.0 Vorschauversion 2](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar.
+Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0 Beta-Compilers. Der C# 8 Beta-Compiler ist mit [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder der neueste[ Vorschauversion von .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar.
 
 In diesem Tutorial wird vorausgesetzt, dass Sie C# und .NET, einschließlich Visual Studio oder die .NET Core-CLI kennen.
 
@@ -81,7 +81,7 @@ Diese beiden Eigenschaften lösen `CS8618` aus: „Initialisierung der NULL-Wert
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-Im vorherigen Codeblock ist einiges los. Diese Anwendung verwendet das [AutoMapper](http://automapper.org/)-NuGet-Paket zum Erstellen eines Nachrichtenelements aus einem `ISyndicationItem`. Sie haben festgestellt, dass in dieser einen Anweisung die Nachrichtenelemente erstellt und die Eigenschaften festgelegt werden. Das bedeutet, dass der Entwurf für das `NewsStoryViewModel` angibt, dass diese Eigenschaften nie den Wert `null` haben sollten. Diese Eigenschaften sollten **Nullwerte nicht zulassende Verweistypen** sein. Das drückt am besten die ursprüngliche Entwurfsabsicht aus. Jedes `NewsStoryViewModel` *ist* in der Tat mit NULL nicht zulassenden Werten ordnungsgemäß instanziiert. Das macht den folgenden Initialisierungscode zu einer gültigen Fehlerbehebung:
+Im vorherigen Codeblock ist einiges los. Diese Anwendung verwendet das [AutoMapper](https://automapper.org/)-NuGet-Paket zum Erstellen eines Nachrichtenelements aus einem `ISyndicationItem`. Sie haben festgestellt, dass in dieser einen Anweisung die Nachrichtenelemente erstellt und die Eigenschaften festgelegt werden. Das bedeutet, dass der Entwurf für das `NewsStoryViewModel` angibt, dass diese Eigenschaften nie den Wert `null` haben sollten. Diese Eigenschaften sollten **Nullwerte nicht zulassende Verweistypen** sein. Das drückt am besten die ursprüngliche Entwurfsabsicht aus. Jedes `NewsStoryViewModel` *ist* in der Tat mit NULL nicht zulassenden Werten ordnungsgemäß instanziiert. Das macht den folgenden Initialisierungscode zu einer gültigen Fehlerbehebung:
 
 ```csharp
 public class NewsStoryViewModel
@@ -148,10 +148,10 @@ Sie müssen ebenfalls eine `using System.Linq`-Anweisung am Anfang der Datei hin
 
 Dieser Satz von Änderungen hebt die besondere Berücksichtigung bei der Aktualisierung von Code hervor, der generische Instanziierungen enthält. Die Liste und die Elemente in der Liste sind nicht NULL-Werte zulassende Typen. Die einen oder anderen oder beide könnten NULL-Werte zulassende Typen sein. Alle folgenden Deklarationen sind zulässig:
 
-- `List<NewsStoryViewModel>`: Nullwerte nicht zulassende Liste Nullwerte nicht zulassender Ansichtsmodelle.
-- `List<NewsStoryViewModel?>`: Nullwerte nicht zulassende Liste Nullwerte zulassender Ansichtsmodelle.
-- `List<NewsStoryViewModel>?`: Nullwerte zulassende Liste Nullwerte nicht zulassender Ansichtsmodelle.
-- `List<NewsStoryViewModel?>?`: Nullwerte zulassende Liste Nullwerte zulassender Ansichtsmodelle.
+- `List<NewsStoryViewModel>`: NULL-Werte nicht zulassende Liste von NULL-Werte nicht zulassenden Ansichtsmodellen.
+- `List<NewsStoryViewModel?>`: NULL-Werte nicht zulassende Liste von NULL-Werte nicht zulassenden Ansichtsmodellen.
+- `List<NewsStoryViewModel>?`: NULL-Werte zulassende Liste von NULL-Werte nicht zulassenden Ansichtsmodellen.
+- `List<NewsStoryViewModel?>?`: NULL-Werte zulassende Liste von NULL-Werte zulassenden Ansichtsmodellen.
 
 ## <a name="interfaces-with-external-code"></a>Schnittstellen mit externem Code
 

@@ -2,23 +2,23 @@
 title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0. Dieser Artikel ist auf dem neuesten Stand mit Vorschauversion 2.
 ms.date: 02/12/2019
-ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545558"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427278"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
 
 Wir haben viele Verbesserungen an der C#-Sprache vorgenommen, die Sie bereits mit Vorschau 2 ausprobieren können. Diese neuen Funktionen wurde in Vorschauversion 2 hinzugefügt:
 
 - [Verbesserungen am Musterabgleich](#more-patterns-in-more-places):
-  * [switch-Ausdrücke](#switch-expressions)
+  * [Switch-Ausdrücke](#switch-expressions)
   * [Eigenschaftsmuster](#property-patterns)
   * [Tupelmuster](#tuple-patterns)
   * [Positionsmuster](#positional-patterns)
-- [using-Deklarationen](#using-declarations)
+- [Using-Deklarationen](#using-declarations)
 - [Statische lokale Funktionen](#static-local-functions)
 - [Verwerfbare Referenzstrukturen](#disposable-ref-structs)
 
@@ -58,7 +58,7 @@ public enum Rainbow
 }
 ```
 
-Sie können einen `Rainbow`-Wert in seine RGB-Werte konvertieren, indem Sie das folgende Verfahren verwenden, das einen switch-Ausdruck enthält:
+Wenn Ihre Anwendung einen `RGBColor`-Typ definiert hat, der aus den Komponenten `R`, `G` und `B` aufgebaut ist, können Sie einen `Rainbow`-Wert in seine RGB-Werte konvertieren, indem Sie die folgende Methode verwenden, die einen Switch-Ausdruck enthält:
 
 ```csharp
 public static RGBColor FromRainbow(Rainbow colorBand) =>
@@ -219,7 +219,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 ```
 
 Im vorhergehenden Beispiel wird die Datei angeordnet, wenn die schließende Klammer für die Methode erreicht ist. Dies ist das Ende des Bereichs, in dem `file` deklariert wird. Der vorhergehende Code entspricht dem folgenden Code unter Verwendung der klassischen [using statements](../language-reference/keywords/using-statement.md)-Anweisung:
-
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)

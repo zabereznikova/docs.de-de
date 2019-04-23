@@ -3,12 +3,12 @@ title: Ausdrucksbaumstrukturen
 description: Weitere Informationen zu Ausdrucksbaumstrukturen in .NET Core und wie sie verwendet werden, um Code als Strukturen darzustellen, die Sie überprüfen, ändern und ausführen können.
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: b7a39ccec293a22e4b4d7d01b30f9f441fd0079b
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125836"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096614"
 ---
 # <a name="expression-trees"></a>Ausdrucksbaumstrukturen
 
@@ -51,4 +51,3 @@ In den verbleibenden Abschnitten dieses Tutorials wird untersucht, was Ausdrucks
 7. [Schlussbemerkung](expression-trees-summary.md)
 
     Überprüfen Sie die Informationen zu Ausdrucksbaumstrukturen.
-    

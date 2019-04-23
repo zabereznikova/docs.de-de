@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie ref-Rückgaben und lokale ref-Werte definiere
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: dd5094789114f7ad620dd681877318ad49b78997
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081834"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref-Rückgaben und lokale ref-Variablen
 
@@ -59,7 +59,6 @@ Der Verweisrückgabewert ist ein Alias für eine andere Variable im Bereich der 
 - Wenn Sie diesen *nach Verweis* zurückgeben, geben Sie einen Alias für diese Variable zurück.
 - Wenn Sie ihn *nach Verweis* an eine andere Methode übergeben, übergeben Sie einen Verweis auf die Variable, für die diese als Alias fungiert.
 - Wenn Sie einen Alias für einen [lokalen Verweis](#ref-locals) erstellen, erstellen Sie einen neuen Alias für diese Variable.
-
 
 ## <a name="ref-locals"></a>Lokale ref-Variablen
 
@@ -124,5 +123,5 @@ Diese zweite Version ist durch längere Sequenzen in Szenarios, in denen die ges
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ref (C#-Referenz)](../../language-reference/keywords/ref.md)
+- [ref-Schlüsselwort](../../language-reference/keywords/ref.md)
 - [Schreiben von sicherem und effizientem Code](../../write-safe-efficient-code.md)

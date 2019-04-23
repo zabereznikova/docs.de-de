@@ -3,12 +3,12 @@ title: C#-Ausdrücke – Überblick über C#
 description: Ausdrücke, Operanden und Operatoren sind Bausteine der Sprache C#.
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 7a7f65eb7ba3da3f9630bbcb92d8578d60d2095d
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 4ffe947a4cb8c36a5925a4b3846486e44a9d8ec4
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846596"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480754"
 ---
 # <a name="expressions"></a>Ausdrücke
 
@@ -28,68 +28,68 @@ Die meisten Operatoren können *überladen* werden. Das Überladen von Operatore
 In der folgenden Übersicht der C#-Operatoren werden die Operatorkategorien gemäß der Rangfolge von oben nach unten aufgelistet. Operatoren der gleichen Kategorie haben den gleichen Rang. Jede Kategorie enthält eine Liste von Ausdrücken mit der Beschreibung des jeweiligen Ausdruckstyps.
 
 * Primär
-    - `x.m`: Memberzugriff
-    - `x(...)`: Methoden- und Delegataufruf
-    - `x[...]`: Array- und Indexerzugriff
-    - `x++`: Postinkrement
-    - `x--`: Postdekrement
-    - `new T(...)`: Objekt- und Delegaterstellung
-    - `new T(...){...}`: Objekterstellung mit Initialisierer
-    - `new {...}`:  Anonymer Objektinitialisierer
-    - `new T[...]`: Arrayerstellung
-    - `typeof(T)`: Abrufen von <xref:System.Type>-Objekt für `T`
-    - `checked(x)`: Auswerten von Ausdrücken in geprüftem Kontext
-    - `unchecked(x)`: Auswerten von Ausdrücken in nicht geprüftem Kontext
-    - `default(T)`: Abrufen des Standardwerts vom Typ `T`
-    - `delegate {...}`: Anonyme Funktion (anonyme Methode)
+  - `x.m`: Memberzugriff
+  - `x(...)`: Methoden- und Delegataufruf
+  - `x[...]`: Array- und Indexerzugriff
+  - `x++`: Postinkrement
+  - `x--`: Postdekrement
+  - `new T(...)`: Objekt- und Delegaterstellung
+  - `new T(...){...}`: Objekterstellung mit Initialisierer
+  - `new {...}`:  Anonymer Objektinitialisierer
+  - `new T[...]`: Arrayerstellung
+  - `typeof(T)`: Abrufen von <xref:System.Type>-Objekt für `T`
+  - `checked(x)`: Auswerten von Ausdrücken in geprüftem Kontext
+  - `unchecked(x)`: Auswerten von Ausdrücken in nicht geprüftem Kontext
+  - `default(T)`: Abrufen des Standardwerts vom Typ `T`
+  - `delegate {...}`: Anonyme Funktion (anonyme Methode)
 * Unär
-    - `+x`: Identität
-    - `-x`: Negation
-    - `!x`: Logische Negation
-    - `~x`: Bitweise Negation
-    - `++x`: Präinkrement
-    - `--x`: Prädekrement
-    - `(T)x`: Explizites Konvertieren von `x` in den Typ `T`
-    - `await x`: Asynchrones Warten auf den Abschluss von `x`
+  - `+x`: Identität
+  - `-x`: Negation
+  - `!x`: Logische Negation
+  - `~x`: Bitweise Negation
+  - `++x`: Präinkrement
+  - `--x`: Prädekrement
+  - `(T)x`: Explizites Konvertieren von `x` in den Typ `T`
+  - `await x`: Asynchrones Warten auf den Abschluss von `x`
 * Multiplikativ
-    - `x * y`: Multiplikation
-    - `x / y`: Division
-    - `x % y`: Rest
+  - `x * y`: Multiplikation
+  - `x / y`: Division
+  - `x % y`: Rest
 * Additiv
-    - `x + y`: Addition, Zeichenfolgenverkettung, Delegatkombination
-    - `x – y`: Subtraktion, Delegatentfernung
+  - `x + y`: Addition, Zeichenfolgenverkettung, Delegatkombination
+  - `x – y`: Subtraktion, Delegatentfernung
 * Shift
-    - `x << y`: Linksverschiebung
-    - `x >> y`: Rechtsverschiebung
+  - `x << y`: Linksverschiebung
+  - `x >> y`: Rechtsverschiebung
 * Relational und Typtest
-    - `x < y`: Kleiner als 
-    - `x > y`: Größer als
-    - `x <= y`: Kleiner oder gleich 
-    - `x >= y`: Größer oder gleich
-    - `x is T`: `true` zurückgeben, wenn `x` ein `T` ist, andernfalls `false`
-    - `x as T`: `x` als `T` typisiert zurückgeben, oder `null`, wenn `x` kein `T` ist
+  - `x < y`: Kleiner als 
+  - `x > y`: Größer als
+  - `x <= y`: Kleiner oder gleich 
+  - `x >= y`: Größer oder gleich
+  - `x is T`: `true` zurückgeben, wenn `x` ein `T` ist, andernfalls `false`
+  - `x as T`: `x`als `T` typisiert zurückgeben, oder `null`,wenn `x` kein ist `T`
 * Gleichheit
-    - `x == y`: Gleich
-    - `x != y`: Ungleich
+  - `x == y`: Gleich
+  - `x != y`: Ungleich
 * Logisches AND
-    - `x & y`: Ganzzahliges bitweises AND, boolesches logisches AND
+  - `x & y`: Ganzzahliges bitweises AND, boolesches logisches AND
 * Logisches XOR
-    - `x ^ y`: Ganzzahliges bitweises XOR, boolesches logisches XOR
+  - `x ^ y`: Ganzzahliges bitweises XOR, boolesches logisches XOR
 * Logisches OR
-    - `x | y`: Ganzzahliges bitweises OR, boolesches logisches OR
+  - `x | y`: Ganzzahliges bitweises OR, boolesches logisches OR
 * Bedingtes AND
-    - `x && y`: Wertet `y` nur aus, wenn `x` nicht `false` ist
+  - `x && y`: Wertet `y` nur aus, wenn `x` nicht ist `false`
 * Bedingtes OR
-    - `x || y`: Wertet `y` nur aus, wenn `x` nicht `true` ist
+  - `x || y`: Wertet `y` nur aus, wenn `x` nicht ist `true`
 * NULL-Sammeloperator
-    - `x ?? y`: Wird zu `y` ausgewertet, wenn `x` NULL ist, andernfalls zu `x`
+  - `x ?? y`: Wird zu `y` ausgewertet, wenn `x` NULL ist, andernfalls zu `x`
 * Bedingt
-    - `x ? y : z`: Wertet `y` aus, wenn `x` `true` ist, `z`, wenn `x` `false` ist
+  - `x ? y : z`: Wertet `y` aus, wenn `x` `true`ist, `z`, wenn `x` ist `false`
 * Zuweisung oder anonyme Funktion
-    - `x = y`: Zuweisung
-    - `x op= y`: Zusammengesetzte Zuweisung; unterstützte Operatoren sind
-        - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-    - `(T x) => y`: Anonyme Funktion (Lambda-Ausdruck)
+  - `x = y`: Zuweisung
+  - `x op= y`: Zusammengesetzte Zuweisung; unterstützte Operatoren sind
+    - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
+  - `(T x) => y`: Anonyme Funktion (Lambda-Ausdruck)
 
 > [!div class="step-by-step"]
 > [Zurück](types-and-variables.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: a205ee04d1b0b68666ca50109001e71288d7f434
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef25b3fb5657d833bbccf5bace71e049623476c9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517837"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294418"
 ---
 # <a name="if-else-c-reference"></a>if-else (C#-Referenz)
 
@@ -62,7 +62,7 @@ Wenn stattdessen `Result2` angezeigt werden soll, wenn `(m > 10)` false ist, kö
 
 [!code-csharp[csrefKeywordsSelection#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#3)]
 
-`Result2` wird angezeigt, wenn die Bedingung `(m > 10)` als FALSE ausgewertet wird.
+`Result2` wird angezeigt, wenn die Bedingung `(m > 10)` zu false ausgewertet wird.
 
 ## <a name="example"></a>Beispiel
 
@@ -82,7 +82,7 @@ Im folgenden Beispiel wird bestimmt, ob ein eingegebenes Zeichen ein Kleinbuchst
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-So, wie eine Anweisung im else-Block oder then-Block jede beliebige Anweisung sein kann, können Sie für die Bedingungen einen beliebigen gültigen booleschen Ausdruck verwenden. Sie können logische Operatoren wie z.B [&&](../operators/conditional-and-operator.md), [&](../operators/and-operator.md), [&#124;&#124;](../operators/conditional-or-operator.md), [&#124;](../operators/or-operator.md) und [!](../operators/logical-negation-operator.md) verwenden verwenden, um Verbundbedingungen zu erstellen. Der folgende Code enthält Beispiele.
+So, wie eine Anweisung im else-Block oder then-Block jede beliebige Anweisung sein kann, können Sie für die Bedingungen einen beliebigen gültigen booleschen Ausdruck verwenden. Sie können [logische Operatoren](../operators/boolean-logical-operators.md) wie `!`, `&&`, `||`, `&`, `|` und `^` verwenden, um Verbundbedingungen zu erstellen. Der folgende Code enthält Beispiele.
 
 ```csharp
 // NOT

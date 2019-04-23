@@ -6,23 +6,23 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 0a75566fdb6222157ecda12a50fd78e22f92fcb4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 869eeab6515340b2f1884ab7206979e83654a10b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245731"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328243"
 ---
 # <a name="true-and-false-operators-c-reference"></a>Operatoren „true“ und „false“ (C#-Referenz)
 
 Der `true`-Operator gibt den [bool](bool.md)-Wert `true` zurück, um anzugeben, dass ein Operand definitiv den Wert „true“ hat. Der `false`-Operator gibt den `bool`-Wert `true` zurück, um anzugeben, dass ein Operand definitiv den Wert „false“ hat. Es kann nicht garantiert werden, dass sich die Operatoren `true` und `false` gegenseitig ergänzen. Dies bedeutet, dass sowohl der Operator `true` als auch der Operator `false` möglicherweise den `bool`-Wert `false` für den gleichen Operanden zurückgeben. Wenn ein Typ einen der beiden Operatoren definiert, muss er auch den anderen Operator definieren.
 
-Wenn ein Typ mit den definierten Operatoren `true` und `false` den [logischen OR-Operator](../operators/or-operator.md) `|` oder den [logischen AND-Operator](../operators/and-operator.md) `&` in einer bestimmten Weise [überlädt](operator.md), kann der [bedingte logische OR-Operator](../operators/conditional-or-operator.md) `||` bzw. der [bedingte logische AND-Operator](../operators/conditional-and-operator.md) `&&` für Operanden dieses Typs ausgewertet werden. Weitere Informationen finden Sie im Abschnitt [Benutzerdefinierte bedingte logische Operatoren](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) der [C#-Sprachspezifikation](../language-specification/index.md).
+Wenn ein Typ mit den definierten Operatoren `true` und `false` den [logischen OR-Operator](../operators/boolean-logical-operators.md#logical-or-operator-) `|` oder den [logischen AND-Operator](../operators/boolean-logical-operators.md#logical-and-operator-) `&` in einer bestimmten Weise [überlädt](operator.md), kann der [bedingte logische OR-Operator](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) `||` bzw. der [bedingte logische AND-Operator](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) `&&` für Operanden dieses Typs ausgewertet werden. Weitere Informationen finden Sie im Abschnitt [Benutzerdefinierte bedingte logische Operatoren](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) der [C#-Sprachspezifikation](../language-specification/index.md).
 
 Ein Typ mit dem definierten `true`-Operator kann der Typ des Ergebnisses eines steuernden bedingten Ausdrucks in [if](if-else.md)-, [do](do.md)-, [while](while.md)- und [for](for.md)-Anweisungen und im [bedingten Operator `?:`](../operators/conditional-operator.md) sein. Weitere Informationen finden Sie im Abschnitt [Boolescher Ausdruck](~/_csharplang/spec/expressions.md#boolean-expressions) der [C#-Sprachspezifikation](../language-specification/index.md).
 
 > [!TIP]
-> Verwenden Sie den Typ `bool?`, wenn Sie die dreiwertige Logik unterstützen müssen, z.B. wenn Sie mit Datenbanken arbeiten, die einen dreiwertigen Logiktyp unterstützen. Weitere Informationen finden Sie im Abschnitt [Der „bool?“-Typ](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type) im Artikel [Verwenden von Nullable-Typen](../../programming-guide/nullable-types/using-nullable-types.md).
+> Verwenden Sie den Typ `bool?`, wenn Sie die dreiwertige Logik unterstützen müssen, z.B. wenn Sie mit Datenbanken arbeiten, die einen dreiwertigen booleschen Typ unterstützen. C# stellt die `&`- und `|`-Operatoren zur Verfügung, die die dreiwertige Logik mit den `bool?`-Operanden unterstützen. Weitere Informationen finden Sie im Abschnitt [Boolesche logische Operatoren, die NULL-Werte zulassen](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) im Artikel [Boolesche logische Operatoren](../operators/boolean-logical-operators.md).
 
 Das folgende Beispiel zeigt den Typ, der sowohl `true`- als auch `false`-Operatoren definiert. Außerdem überlädt er den logischen AND-Operator `&` so, dass der Operator `&&` auch für die Operanden dieses Typs ausgewertet werden kann.
 
@@ -41,5 +41,5 @@ Wait!
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
 - [C#-Operatoren](../operators/index.md)
-- [`true` Literal](true-literal.md)
-- [`false` Literal](false-literal.md)
+- [`true` literal](true-literal.md)
+- [`false` literal](false-literal.md)

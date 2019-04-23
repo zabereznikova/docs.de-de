@@ -3,12 +3,12 @@ title: Entwerfen mit Verweistypen, die NULL-Werte zulassen
 description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistypen, die NULL-Werte zulassen. Sie erfahren, wie Sie Ihre Entwurfsabsicht ausdrücken, wenn die Verweiswerte Null sein können, und wie Sie den Compiler durchsetzen, wenn sie nicht NULL sein können.
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 7f071dedd2e7a611b08a3fd37a7c0b3182be049b
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846583"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296146"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Besseres Ausdrücken Ihrer Entwurfsabsicht mit Verweistypen, die NULL-Werte zulassen und nicht zulassen
 
@@ -24,7 +24,7 @@ In diesem Tutorial lernen Sie, wie die folgenden Aufgaben ausgeführt werden:
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0 Beta-Compilers. Der C# 8 Beta-Compiler ist mit [2019 für Visual Studio Vorschauversion 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) oder [.NET Core 3.0 Vorschauversion 3](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar.
+Sie müssen Ihren Computer zur Ausführung von .NET Core einrichten, einschließlich des C# 8.0 Beta-Compilers. Der C# 8 Beta-Compiler ist mit [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) oder der neueste[ Vorschauversion von .NET Core 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) verfügbar.
 
 In diesem Tutorial wird vorausgesetzt, dass Sie C# und .NET, einschließlich Visual Studio oder die .NET Core-CLI kennen.
 
@@ -45,7 +45,6 @@ Erstellen Sie eine neue Konsolenanwendung in Visual Studio oder über die Befehl
 
 > [!NOTE]
 > Wenn C# 8 freigegeben ist (nicht im Vorschaumodus), wird das `NullableContextOptions`-Element durch neue Projektvorlagen hinzugefügt. Bis dahin müssen Sie es manuell hinzufügen.
-
 
 ### <a name="design-the-types-for-the-application"></a>Entwerfen der Typen für die Anwendung
 
@@ -223,4 +222,4 @@ Experimentieren Sie, indem Sie bei der Typdeklaration zwischen Verweistypen wech
 
 Weitere Informationen erhalten Sie durch die Migration einer vorhandenen Anwendung zur Verwendung NULL-Werte zulassender Verweistypen:
 > [!div class="nextstepaction"]
-> [Tutorial: Migrieren vorhandenen Codes mit Verweistypen, die NULL-Werte zulassen](upgrade-to-nullable-references.md)
+> [Migrieren vorhandenen Codes mit Verweistypen, die NULL-Werte zulassen](upgrade-to-nullable-references.md)

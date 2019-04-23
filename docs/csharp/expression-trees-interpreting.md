@@ -3,12 +3,12 @@ title: Interpretieren von Ausdrücken
 description: Weitere Informationen zum Schreiben von Code, um die Struktur einer Ausdrucksbaumstruktur zu untersuchen.
 ms.date: 06/20/2016
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 49c030706a0a6196dfdd72e3c2fbff90b7667f48
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 952a1c553e2392ffc717dc344dfe77a11f025cc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201975"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211243"
 ---
 # <a name="interpreting-expressions"></a>Interpretieren von Ausdrücken
 
@@ -355,7 +355,6 @@ Expression<Func<int, int>> factorial = (n) =>
 
 Dieser Code stellt eine mögliche Implementierung für die mathematische *Fakultät*-Funktion dar. So wie ich diesen Code geschrieben habe, werden zwei Einschränkungen beim Erstellen von Ausdrucksbaumstrukturen durch die Zuweisung von Lambdaausdrücken an Ausdrücke hervorgehoben. Erstens sind Anweisungslambdas nicht zulässig. Das bedeutet, ich kann keine Schleifen, Blöcke, if/else-Anweisungen und anderen allgemeinen Steuerungsstrukturen in C# verwenden. Ich kann nur Ausdrücke verwenden. Zweitens kann ich nicht denselben Ausdruck rekursiv aufrufen.
 Ich könnte dies, wenn er bereits ein Delegat wäre, aber ich kann ihn nicht in seiner Form der Ausdrucksbaumstruktur aufrufen. Im Abschnitt zu [building expression trees (Erstellen von Ausdrucksbaumstrukturen)](expression-trees-building.md) werden Sie Techniken erlernen, um diese Einschränkung zu umgehen.
-
 
 In diesem Ausdruck können Knoten all dieser Typen auftreten:
 1. Gleich (binärer Ausdruck)

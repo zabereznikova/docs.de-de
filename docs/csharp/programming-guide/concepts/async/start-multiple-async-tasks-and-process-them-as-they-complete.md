@@ -2,12 +2,12 @@
 title: Verarbeiten asynchroner Aufgaben nach Abschluss
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: ec5729eaa8d63eb18b1ac4dea5820cbf834d001b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 335eb5dce74a7f0a2b8af550250105d460212b6a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152361"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304856"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Mehrere asynchrone Aufgaben starten und nach Abschluss verarbeiten (C#)
 
@@ -20,22 +20,22 @@ Im folgenden Beispiel wird eine Abfrage verwendet, um eine Auflistung von Aufgab
 
 ## <a name="download-an-example-solution"></a>Herunterladen einer Beispielprojektmappe
 
-Sie können das vollständige Windows Presentation Foundation (WPF)-Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und anschließend die folgenden Schritte ausführen.
+Sie können alle Windows Presentation Foundation (WPF)-Projekte von [Async Sample: Fine Tuning Your Application (Asynchrones Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen und die folgenden Schritte ausführen.
 
 > [!TIP]
 > Wenn Sie das Projekt nicht herunterladen möchten, können Sie sich stattdessen die Dateien „MainWindow.xaml.vb“ und „MainWindow.xaml.cs“ am Ende dieses Themas anschauen.
 
-1.  Extrahieren Sie die heruntergeladenen Dateien aus der ZIP-Datei, und starten Sie dann Visual Studio.
+1. Extrahieren Sie die heruntergeladenen Dateien aus der ZIP-Datei, und starten Sie dann Visual Studio.
 
-2.  Wählen Sie auf der Menüleiste **Datei** > **Öffnen** > **Projekt/Projektmappe** aus.
+2. Wählen Sie auf der Menüleiste **Datei** > **Öffnen** > **Projekt/Projektmappe** aus.
 
-3.  Öffnen Sie im Dialogfeld **Projekt öffnen** den Ordner, der den von Ihnen heruntergeladenen Beispielcode enthält, und öffnen Sie anschließend die Projektmappendatei (SLN-Datei) für AsyncFineTuningCS.
+3. Öffnen Sie im Dialogfeld **Projekt öffnen** den Ordner, der den von Ihnen heruntergeladenen Beispielcode enthält, und öffnen Sie anschließend die Projektmappendatei (SLN-Datei) für AsyncFineTuningCS.
 
-4.  Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für das Projekt **ProcessTasksAsTheyFinish** und wählen dann **Als Startprojekt festlegen** aus.
+4. Öffnen Sie im **Projektmappen-Explorer** das Kontextmenü für das Projekt **ProcessTasksAsTheyFinish** und wählen dann **Als Startprojekt festlegen** aus.
 
-5.  Wählen Sie die Taste **F5** aus, um das Programm auszuführen (oder drücken Sie die Tasten **STRG**+**F5**, um das Programm ohne Debuggen auszuführen).
+5. Wählen Sie die Taste **F5** aus, um das Programm auszuführen (oder drücken Sie die Tasten **STRG**+**F5**, um das Programm ohne Debuggen auszuführen).
 
-6.  Führen Sie das Projekt mehrmals aus, um zu überprüfen, dass die heruntergeladenen Längen nicht immer in der gleichen Reihenfolge angezeigt werden.
+6. Führen Sie das Projekt mehrmals aus, um zu überprüfen, dass die heruntergeladenen Längen nicht immer in der gleichen Reihenfolge angezeigt werden.
 
 ## <a name="create-the-program-yourself"></a>Das Programm selbst erstellen
 
@@ -87,7 +87,7 @@ Führen Sie das Programm mehrmals aus, um zu bestätigen, dass die heruntergelad
 
 Der folgende Code besteht aus dem vollständigen Text der Datei „MainWindow.xaml.cs“ für das Beispiel. Sternchen markieren die Elemente, die für dieses Beispiel hinzugefügt wurden. Beachten Sie ferner, dass Sie einen Verweis für <xref:System.Net.Http> hinzufügen müssen.
 
-Sie können das Projekt von [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) herunterladen.
+Sie können das Projekt hier herunterladen: [Async Sample: Fine Tuning Your Application (Async-Beispiel: Optimierung Ihrer Anwendung)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).
 
 ```csharp
 using System;
@@ -230,4 +230,4 @@ namespace ProcessTasksAsTheyFinish
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Feinabstimmung der Async-Anwendung (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [Asynchrone Programmierung mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung der Anwendung)
+- [Asynchrones Beispiel: Optimierung Ihrer Anwendung](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

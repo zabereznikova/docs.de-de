@@ -1,19 +1,19 @@
 ---
 title: ref-Schlüsselwort – C#-Referenz
 ms.custom: seodec18
-ms.date: 10/24/2018
+ms.date: 03/26/2019
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726649"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116255"
 ---
 # <a name="ref-c-reference"></a>ref (C#-Referenz)
 
@@ -24,10 +24,9 @@ Das `ref`-Schlüsselwort gibt einen Wert an, der als Verweis übergeben wird. Es
 - In einem Memberkörper, um anzugeben, dass ein Verweisrückgabewert, den der Aufrufer ändern möchte, lokal als Verweis gespeichert ist oder dass eine lokale Variable auf einen anderen Wert per Verweis zugreift. Weitere Informationen finden Sie unter [Lokale ref-Variablen](#ref-locals).
 - In einer `struct`-Deklaration, um `ref struct` oder `ref readonly struct` zu deklarieren. Weitere Informationen finden Sie unter [ref-Strukturtypen](#ref-struct-types).
 
-
 ## <a name="passing-an-argument-by-reference"></a>Übergeben eines Arguments als Verweis
 
-In der Parameterliste einer Methode gibt das `ref`-Schlüsselwort an, dass ein Argument als Verweis und nicht als Wert übergeben wird. Durch das Übergeben als Verweis wird jede Änderung am Argument in der aufgerufenen Methode in der aufrufenden Methode wiedergegeben. Wenn der Aufrufer z.B. einen lokalen Variablenausdruck oder einen Arrayelement-Zugriffsausdruck übergibt und die aufgerufene Methode das Objekt ersetzt, auf das der ref-Parameter verweist, dann verweist die lokale Variable des Aufrufers oder das Arrayelement jetzt auf das neue Objekt, wenn die Methode zurückgibt.
+In der Parameterliste einer Methode gibt das `ref`-Schlüsselwort an, dass ein Argument als Verweis und nicht als Wert übergeben wird. Das `ref`-Schlüsselwort stellt den formalen Parameter als Alias für das Argument dar, das eine Variable sein muss. Anders ausgedrückt, jede Operation mit dem Parameter wird mit dem Argument durchgeführt. Wenn der Aufrufer z.B. einen lokalen Variablenausdruck oder einen Arrayelement-Zugriffsausdruck übergibt und die aufgerufene Methode das Objekt ersetzt, auf das der ref-Parameter verweist, dann verweist die lokale Variable des Aufrufers oder das Arrayelement jetzt auf das neue Objekt, wenn die Methode zurückgibt.
 
 > [!NOTE]
 > Verwechseln Sie nicht das Konzept der Übergabe durch einen Verweis mit dem Konzept der Verweistypen. Die beiden Konzepte sind nicht identisch. Ein Methodenparameter kann durch `ref` geändert werden, unabhängig davon, ob es sich um einen Werttyp oder ein Verweistyp handelt. Es gibt keine Boxing-Konvertierung eines Werttyps, wenn er durch einen Verweis übergeben wird.  
@@ -138,7 +137,7 @@ Das Hinzufügen des `ref`-Modifizierers zu einer `struct`-Deklaration definiert,
 Das Ziel, einen `ref struct`-Typ als im Stapel zugewiesene Variable zu behalten, führt zu verschiedenen Regeln, die der Compiler für alle `ref struct`-Typen erzwingt.
 
 - Sie können für `ref struct` kein Boxing durchführen. Sie können einen `ref struct`-Typ nicht einer Variablen vom Typ `object`, `dynamic` oder einem Schnittstellentyp zuweisen.
-- `ref struct`-Typen können keine Schnittstellen implementieren.
+- `ref struct` Typen können keine Schnittstellen implementieren.
 - Sie können `ref struct` nicht als Member einer Klasse oder einer normalen Struktur deklarieren.
 - Sie können keine lokalen Variablen deklarieren, bei denen es sich um `ref struct`-Typen in asynchronen Methoden handelt. Sie können sie in synchronen Methoden deklarieren, die <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> oder `Task`-ähnliche Typen zurückgeben.
 - Sie können lokale `ref struct`-Variablen nicht in Iteratoren deklarieren.
@@ -155,7 +154,7 @@ Sie können Modifizierer zum Deklarieren einer Struktur als `readonly ref` kombi
 ## <a name="see-also"></a>Siehe auch
 
 - [Schreiben von sicherem und effizientem Code](../../write-safe-efficient-code.md)
-- [Ref-Rückgabetypen und lokale ref-Variablen](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Ref-Rückgaben und lokale ref-Variablen](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Bedingter ref-Ausdruck](../operators/conditional-operator.md#conditional-ref-expression)
 - [ref-Zuweisungsoperator](../operators/assignment-operator.md#ref-assignment-operator)
 - [Übergeben von Parametern](../../programming-guide/classes-and-structs/passing-parameters.md)

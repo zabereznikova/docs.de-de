@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: fe7cf3cf1982060d22f648c5e17d002b1a695ac0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d2e89c842ae83a5be65c7500e47beb7f302e23be
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978526"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427187"
 ---
 # <a name="using-structs-c-programming-guide"></a>Verwenden von Strukturen (C#-Programmierhandbuch)
 Der `struct` -Typ eignet sich für die Darstellung von kompakten Objekten, z. B. `Point`, `Rectangle`und `Color`. Obwohl es ebenso einfach ist, einen Punkt als [Klasse](../../../csharp/language-reference/keywords/class.md) mit [automatisch implementierten Eigenschaften](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)darzustellen, kann eine [Struktur](../../../csharp/language-reference/keywords/struct.md) in verschiedenen Szenarien effizienter sein. Bei der Deklaration eines Arrays mit 1.000 `Point` -Objekten belegen Sie z. B. zusätzlichen Arbeitsspeicher, damit auf jedes Objekt verwiesen werden kann. In diesem Fall wäre eine Struktur weniger speicherintensiv. Da [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ein Objekt mit dem Namen <xref:System.Drawing.Point>enthält, wird die Struktur in diesem Beispiel stattdessen „Coords“ genannt.  
@@ -19,7 +19,7 @@ Der `struct` -Typ eignet sich für die Darstellung von kompakten Objekten, z. B.
   
  Die Definition eines (parameterlosen) Standardkonstruktors für eine Struktur verursacht einen Fehler. Auch durch die Initialisierung eines Instanzenfelds in einem Strukturtext wird ein Fehler generiert. Die extern verfügbaren Strukturmember können nur mithilfe eines parametrisierten Konstruktors, dem expliziten Standardkonstruktor, einem [Objektinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md) oder durch jeweils einzelnen Zugriff auf die Member im Anschluss an die Deklaration der Struktur initialisiert werden. Alle privaten oder auf andere Weise gesperrten Member erfordern die ausschließliche Verwendung von Konstruktoren.
   
- Wenn Sie ein Strukturobjekt mit dem Operator [new](../../../csharp/language-reference/keywords/new.md) erzeugen, wird das Objekt erstellt und der geeignete Konstruktor gemäß der [Signatur des Konstruktors](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax) aufgerufen. Strukturen können im Gegensatz zu Klassen ohne den Operator `new` instanziiert werden. In einem solchen Fall gibt es keinen Konstruktoraufruf, sodass die Zuordnung effizienter ausgeführt werden kann. Die Felder werden jedoch nicht zugewiesen, und das Objekt kann erst verwendet werden, nachdem alle Felder initialisiert wurden. Dazu gehört die Unfähigkeit, Werte mithilfe von automatisch implementierten Eigenschaften abzurufen oder festzulegen.
+ Wenn Sie ein Strukturobjekt mit dem Operator [new](../../../csharp/language-reference/keywords/new.md) erzeugen, wird das Objekt erstellt und der geeignete Konstruktor gemäß der [Signatur des Konstruktors](../../../csharp/programming-guide/classes-and-structs/constructors.md#constructor-syntax) aufgerufen. Strukturen können im Gegensatz zu Klassen ohne den Operator `new` instanziiert werden. In einem solchen Fall gibt es keinen Konstruktoraufruf, sodass die Zuordnung effizienter ausgeführt werden kann. Die Felder werden jedoch nicht zugewiesen, und das Objekt kann erst verwendet werden, nachdem alle Felder initialisiert wurden. Dazu gehört die Unfähigkeit, Werte abzurufen oder festzulegen.
  
  Wenn Sie ein Strukturobjekt unter Verwendung des parameterlosen Standardkonstruktors instanziieren, werden alle Werte gemäß ihrer [Standardwerte](../../../csharp/programming-guide/statements-expressions-operators/default-value-expressions.md) zugeordnet.
   

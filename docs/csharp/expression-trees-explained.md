@@ -3,22 +3,23 @@ title: Ausdrucksbaumstrukturen mit Erläuterung
 description: Weitere Informationen zu Ausdrucksbaumstrukturen und ihrer Verwendung für die Übersetzung von Algorithmen für die externe Ausführung und für das Überprüfen von Code vor der Ausführung.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 97cba9e5ec388729d23fb2689dfc1842a42af9b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 012ea0dec85e6fba7581f4bc46a5e78da8c64708
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216868"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481430"
 ---
 # <a name="expression-trees-explained"></a>Ausdrucksbaumstrukturen mit Erläuterung
 
-[Vorheriges – 2 Übersicht](expression-trees.md)
+[Vorheriges – Übersicht](expression-trees.md)
 
 Eine Ausdrucksbaumstruktur ist eine Datenstruktur, die Code darstellt. Sie basiert auf den gleichen Strukturen, die ein Compiler verwendet, um Code zu analysieren und die kompilierte Ausgabe zu generieren. Wenn Sie dieses Tutorial lesen, werden Sie feststellen, dass eine Ähnlichkeit zwischen Ausdrucksbaumstrukturen und den Typen in den Roslyn-APIs vorhanden ist, um [Analyzers and CodeFixes (Analyzer und CodeFixes)](https://github.com/dotnet/roslyn-analyzers) zu erstellen.
 (Analyzer und CodeFixes sind NuGet-Pakete, die statische Analysen für Code ausführen und mögliche Korrekturen für einen Entwickler vorschlagen können.) Die Konzepte sind ähnlich, und das Endergebnis ist eine Datenstruktur, die eine Prüfung des Quellcodes auf sinnvolle Weise ermöglicht. Ausdrucksbaumstrukturen basieren jedoch auf einem völlig anderen Satz von Klassen und APIs als die Roslyn-APIs.
-    
+
 Sehen wir uns ein einfaches Beispiel an.
 Hier ist eine Codezeile:
+
 ```csharp
 var sum = 1 + 2;
 ```
@@ -26,21 +27,22 @@ Würden Sie dies als eine Ausdrucksbaumstruktur analysieren, enthält die Strukt
 Der äußerste Knoten ist eine Variablendeklaration-Anweisung mit der Zuordnung (`var sum = 1 + 2;`). Dieser äußerste Knoten enthält mehrere untergeordnete Knoten: eine Variablendeklaration, ein Zuweisungsoperator und ein Ausdruck, der die rechte Seite des Gleichheitszeichens darstellt. Dieser Ausdruck wird weiter unterteilt in Ausdrücke, die den Additionsvorgang und linken und rechten Operanden der Addition darstellen.
 
 Lassen Sie uns die Ausdrücke etwas genauer ansehen, die die rechte Seite neben dem Gleichheitszeichen bilden.
-Der Ausdruck ist `1 + 2`. Das ist ein binärer Ausdruck. Genauer gesagt ist es ein binärer Additionsausdruck. Ein binäre Additionsausdruck verfügt über zwei untergeordnete Elemente, die den linken und rechten Knoten des Additionsausdrucks darstellen. Hier handelt es sich bei beiden Knoten um konstante Ausdrücke: Der linke Operand ist der Wert `1`, und der rechte Operand ist der Wert `2`.
+Der Ausdruck ist `1 + 2`. Das ist ein binärer Ausdruck. Genauer gesagt ist es ein binärer Additionsausdruck. Ein binäre Additionsausdruck verfügt über zwei untergeordnete Elemente, die den linken und rechten Knoten des Additionsausdrucks darstellen. Hier sind die beiden Knoten konstante Ausdrücke: Der linke Operand ist der Wert `1`, und der rechte Operand ist der Wert `2`.
 
 Visuell ist die gesamte Anweisung eine Struktur: Sie können beim Stammknoten beginnen und zu jedem Knoten in der Struktur navigieren, um den Code anzuzeigen, der die Anweisung bildet:
 
 - Variablendeklaration-Anweisung mit der Zuordnung (`var sum = 1 + 2;`)
-    * Implizite Typdeklaration von Variablen (`var sum`)
-        - Implizites var-Schlüsselwort (`var`)
-        - Namensdeklaration von Variablen (`sum`)
-    * Zuweisungsoperator (`=`)
-    * Binärer Additionsausdruck (`1 + 2`)
-        - Linker Operand (`1`)
-        - Additionsoperator (`+`)
-        - Rechter Operand (`2`)
+  * Implizite Typdeklaration von Variablen (`var sum`)
+    - Implizites var-Schlüsselwort (`var`)
+    - Namensdeklaration von Variablen (`sum`)
+  * Zuweisungsoperator (`=`)
+  * Binärer Additionsausdruck (`1 + 2`)
+    - Linker Operand (`1`)
+    - Additionsoperator (`+`)
+    - Rechter Operand (`2`)
 
 Dies mag kompliziert aussehen, aber es ist sehr leistungsfähig. Mit den gleichen Verfahren können Sie wesentlich kompliziertere Ausdrücke zerlegen. Betrachten Sie diesen Ausdruck:
+
 ```csharp
 var finalAnswer = this.SecretSauceFunction(
     currentState.createInterimResult(), currentState.createSecondValue(1, 2),
@@ -64,6 +66,6 @@ Sie können auch eine Ausdrucksbaumstruktur in einen ausführbaren Delegaten kon
 
 Mit den APIs für Ausdrucksbaumstrukturen können Sie Strukturen erstellen, die fast jeden gültigen Codekonstrukt darstellen. Um die Dinge so einfach wie möglich zu halten, können jedoch einige C#-Ausdrücke nicht in einer Ausdrucksbaumstruktur erstellt werden. Ein Beispiel sind asynchrone Ausdrücke (mithilfe der `async`- und `await`-Schlüsselwörter). Wenn Ihre Bedürfnisse asynchrone Algorithmen erfordern, müssten Sie die `Task`-Objekte direkt bearbeiten, anstatt sich auf die Unterstützung des Compilers zu verlassen. Ein weiteres Beispiel ist die Erstellung von Schleifen. Normalerweise erstellen Sie diese mithilfe der Schleifen `for`, `foreach`, `while` oder `do`. Wie Sie [später in dieser Serie](expression-trees-building.md) sehen werden, unterstützen die APIs für Ausdrucksbaumstrukturen einen einzelnen Schleifenausdruck mit `break`- und `continue`-Ausdrücken, die die Wiederholung der Schleife steuern.
 
-Eine Sache, die für Sie nicht möglich ist, ist die Änderung einer Ausdrucksbaumstruktur.  Ausdrucksbaumstrukturen sind unveränderliche Datenstrukturen. Wenn Sie eine Ausdrucksbaumstruktur ändern möchten, müssen Sie eine neue Struktur erstellen, die eine Kopie des Originals ist, aber mit den gewünschten Änderungen. 
+Eine Sache, die für Sie nicht möglich ist, ist die Änderung einer Ausdrucksbaumstruktur.  Ausdrucksbaumstrukturen sind unveränderliche Datenstrukturen. Wenn Sie eine Ausdrucksbaumstruktur ändern möchten, müssen Sie eine neue Struktur erstellen, die eine Kopie des Originals ist, aber mit den gewünschten Änderungen.
 
 [Weiter – Framework-Typen, die Ausdrucksbaumstrukturen unterstützen](expression-classes.md)
