@@ -10,21 +10,21 @@ helpviewer_keywords:
 - animation [WPF], camera direction in 3-D scenes
 ms.assetid: 480224b7-a5e5-4165-ba7f-ef760ddff94a
 ms.openlocfilehash: b64263a495ffe845a76317aad8f5b4a14e11b31e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146002"
 ---
-# <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a><span data-ttu-id="7f927-102">Vorgehensweise: Animieren der Kameraposition und -richtung in 3D-Szenen</span><span class="sxs-lookup"><span data-stu-id="7f927-102">How to: Animate Camera Position and Direction in a 3D Scene</span></span>
-<span data-ttu-id="7f927-103">Das folgende Beispiel zeigt das Animieren der Position der Kamera und die Richtung, die er in einer 3D-Szene verweist zu animieren.</span><span class="sxs-lookup"><span data-stu-id="7f927-103">The following example shows how to animate the position of a camera and animate the direction it is pointing in a 3D scene.</span></span> <span data-ttu-id="7f927-104">Dies erfolgt mithilfe von <xref:System.Windows.Media.Animation.Point3DAnimation> und <xref:System.Windows.Media.Animation.Vector3DAnimation> zum Animieren der <xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A> und <xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A> Eigenschaften bzw. die <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span><span class="sxs-lookup"><span data-stu-id="7f927-104">This is done by using <xref:System.Windows.Media.Animation.Point3DAnimation> and <xref:System.Windows.Media.Animation.Vector3DAnimation> to animate the <xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A> and <xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A> properties respectively of the <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span></span> <span data-ttu-id="7f927-105">Sie können eine Animation wie folgt verwenden, um Perspektive Anzeigen einer Szene als Reaktion auf ein Ereignis zu ändern.</span><span class="sxs-lookup"><span data-stu-id="7f927-105">You might use an animation like this to change the onlooker's view of a scene in response to an event.</span></span>  
+# <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a><span data-ttu-id="5988b-102">Vorgehensweise: Animieren der Kameraposition und -richtung in 3D-Szenen</span><span class="sxs-lookup"><span data-stu-id="5988b-102">How to: Animate Camera Position and Direction in a 3D Scene</span></span>
+<span data-ttu-id="5988b-103">Das folgende Beispiel zeigt das Animieren der Position der Kamera und die Richtung, die er in einer 3D-Szene verweist zu animieren.</span><span class="sxs-lookup"><span data-stu-id="5988b-103">The following example shows how to animate the position of a camera and animate the direction it is pointing in a 3D scene.</span></span> <span data-ttu-id="5988b-104">Dies erfolgt mithilfe von <xref:System.Windows.Media.Animation.Point3DAnimation> und <xref:System.Windows.Media.Animation.Vector3DAnimation> zum Animieren der <xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A> und <xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A> Eigenschaften bzw. die <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span><span class="sxs-lookup"><span data-stu-id="5988b-104">This is done by using <xref:System.Windows.Media.Animation.Point3DAnimation> and <xref:System.Windows.Media.Animation.Vector3DAnimation> to animate the <xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A> and <xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A> properties respectively of the <xref:System.Windows.Media.Media3D.PerspectiveCamera>.</span></span> <span data-ttu-id="5988b-105">Sie können eine Animation wie folgt verwenden, um Perspektive Anzeigen einer Szene als Reaktion auf ein Ereignis zu ändern.</span><span class="sxs-lookup"><span data-stu-id="5988b-105">You might use an animation like this to change the onlooker's view of a scene in response to an event.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7f927-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="7f927-106">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="5988b-106">Beispiel</span><span class="sxs-lookup"><span data-stu-id="5988b-106">Example</span></span>  
  [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationExample.xaml#pointvector3danimationexamplewholepage)]  
   
-## <a name="see-also"></a><span data-ttu-id="7f927-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7f927-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5988b-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5988b-107">See also</span></span>
 
 - <xref:System.Windows.Media.Animation.Vector3DAnimation>
 - <xref:System.Windows.Media.Animation.Point3DAnimation>
-- [<span data-ttu-id="7f927-108">Animieren von Kameraposition und -richtung mithilfe von Keyframes</span><span class="sxs-lookup"><span data-stu-id="7f927-108">Animate Camera Position and Direction Using Key Frames</span></span>](how-to-animate-camera-position-and-direction-using-key-frames.md)
-- [<span data-ttu-id="7f927-109">Übersicht über 3D-Grafiken</span><span class="sxs-lookup"><span data-stu-id="7f927-109">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)
+- [<span data-ttu-id="5988b-108">Animieren von Kameraposition und -richtung mithilfe von Keyframes</span><span class="sxs-lookup"><span data-stu-id="5988b-108">Animate Camera Position and Direction Using Key Frames</span></span>](how-to-animate-camera-position-and-direction-using-key-frames.md)
+- [<span data-ttu-id="5988b-109">Übersicht über 3D-Grafiken</span><span class="sxs-lookup"><span data-stu-id="5988b-109">3-D Graphics Overview</span></span>](3-d-graphics-overview.md)

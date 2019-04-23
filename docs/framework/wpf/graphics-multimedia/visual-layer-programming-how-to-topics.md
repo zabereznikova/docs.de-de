@@ -9,27 +9,27 @@ helpviewer_keywords:
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
 ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142687"
 ---
-# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="d6bfe-102">Gewusst-wie-Themen zu visueller Ebenenprogrammierung</span><span class="sxs-lookup"><span data-stu-id="d6bfe-102">Visual Layer Programming How-to Topics</span></span>
-<span data-ttu-id="d6bfe-103">Die Themen in diesem Abschnitt veranschaulichen, wie die visuelle Ebene für Treffertests und Low-Level-Komposition verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="d6bfe-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
+# <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="7c0a0-102">Gewusst-wie-Themen zu visueller Ebenenprogrammierung</span><span class="sxs-lookup"><span data-stu-id="7c0a0-102">Visual Layer Programming How-to Topics</span></span>
+<span data-ttu-id="7c0a0-103">Die Themen in diesem Abschnitt veranschaulichen, wie die visuelle Ebene für Treffertests und Low-Level-Komposition verwendet wird.</span><span class="sxs-lookup"><span data-stu-id="7c0a0-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d6bfe-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="d6bfe-104">In This Section</span></span>  
- [<span data-ttu-id="d6bfe-105">Abrufen des Offsets eines visuellen Objekts</span><span class="sxs-lookup"><span data-stu-id="d6bfe-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
- [<span data-ttu-id="d6bfe-106">Auflisten des Zeichnungsinhalts eines visuellen Objekts</span><span class="sxs-lookup"><span data-stu-id="d6bfe-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
- [<span data-ttu-id="d6bfe-107">Treffertest für eine Geometrie in einem visuellen Objekt</span><span class="sxs-lookup"><span data-stu-id="d6bfe-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
- [<span data-ttu-id="d6bfe-108">Treffertest mit Geometrie als Parameter</span><span class="sxs-lookup"><span data-stu-id="d6bfe-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
- [<span data-ttu-id="d6bfe-109">Treffertest mithilfe eines Win32-Hostcontainers</span><span class="sxs-lookup"><span data-stu-id="d6bfe-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
- [<span data-ttu-id="d6bfe-110">Rendern in Pro-Frame-Intervallen mit CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="d6bfe-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+## <a name="in-this-section"></a><span data-ttu-id="7c0a0-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="7c0a0-104">In This Section</span></span>  
+ [<span data-ttu-id="7c0a0-105">Abrufen des Offsets eines visuellen Objekts</span><span class="sxs-lookup"><span data-stu-id="7c0a0-105">Get the Offset of a Visual</span></span>](how-to-get-the-offset-of-a-visual.md)  
+ [<span data-ttu-id="7c0a0-106">Auflisten des Zeichnungsinhalts eines visuellen Objekts</span><span class="sxs-lookup"><span data-stu-id="7c0a0-106">Enumerate Drawing Content of a Visual</span></span>](how-to-enumerate-drawing-content-of-a-visual.md)  
+ [<span data-ttu-id="7c0a0-107">Vorgehensweise: Treffertest für eine Geometrie in einem visuellen Objekt</span><span class="sxs-lookup"><span data-stu-id="7c0a0-107">Hit Test Geometry in a Visual</span></span>](how-to-hit-test-geometry-in-a-visual.md)  
+ [<span data-ttu-id="7c0a0-108">Treffertest mit Geometrie als Parameter</span><span class="sxs-lookup"><span data-stu-id="7c0a0-108">Hit Test Using Geometry as a Parameter</span></span>](how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [<span data-ttu-id="7c0a0-109">Treffertest mithilfe eines Win32-Hostcontainers</span><span class="sxs-lookup"><span data-stu-id="7c0a0-109">Hit Test Using a Win32 Host Container</span></span>](how-to-hit-test-using-a-win32-host-container.md)  
+ [<span data-ttu-id="7c0a0-110">Rendern in Pro-Frame-Intervallen mit CompositionTarget</span><span class="sxs-lookup"><span data-stu-id="7c0a0-110">Render on a Per Frame Interval Using CompositionTarget</span></span>](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a><span data-ttu-id="d6bfe-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d6bfe-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7c0a0-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="7c0a0-111">See also</span></span>
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>
-- [<span data-ttu-id="d6bfe-112">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="d6bfe-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="d6bfe-113">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="d6bfe-113">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="7c0a0-112">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="7c0a0-112">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="7c0a0-113">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="7c0a0-113">Graphics and Multimedia</span></span>](index.md)
