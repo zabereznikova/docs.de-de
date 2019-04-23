@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 252a65c66764d60f5e307ba1eaad4ded34d9744d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162149"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975740"
 ---
-# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="70811-102">ICorDebugObjectValue2::GetVirtualMethodAndType-Methode</span><span class="sxs-lookup"><span data-stu-id="70811-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
-<span data-ttu-id="70811-103">Diese Methode ist noch nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="70811-103">This method is not yet implemented.</span></span>  
+# <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a><span data-ttu-id="9bc55-102">ICorDebugObjectValue2::GetVirtualMethodAndType-Methode</span><span class="sxs-lookup"><span data-stu-id="9bc55-102">ICorDebugObjectValue2::GetVirtualMethodAndType Method</span></span>
+<span data-ttu-id="9bc55-103">Diese Methode ist noch nicht implementiert.</span><span class="sxs-lookup"><span data-stu-id="9bc55-103">This method is not yet implemented.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="70811-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="70811-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9bc55-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9bc55-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVirtualMethodAndType (  
@@ -37,7 +37,7 @@ HRESULT GetVirtualMethodAndType (
 );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="70811-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="70811-105">Remarks</span></span>  
- <span data-ttu-id="70811-106">Ruft die Schnittstellenzeiger auf die "ICorDebugFunction" und "ICorDebugType"-Instanzen, die am stärksten abgeleiteten Methode und Typ für den angegebenen Memberverweis darstellen.</span><span class="sxs-lookup"><span data-stu-id="70811-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9bc55-105">Hinweise</span><span class="sxs-lookup"><span data-stu-id="9bc55-105">Remarks</span></span>  
+ <span data-ttu-id="9bc55-106">Ruft die Schnittstellenzeiger auf die "ICorDebugFunction" und "ICorDebugType"-Instanzen, die am stärksten abgeleiteten Methode und Typ für den angegebenen Memberverweis darstellen.</span><span class="sxs-lookup"><span data-stu-id="9bc55-106">Gets interface pointers to the "ICorDebugFunction" and "ICorDebugType" instances that represent the most derived method and type for the specified member reference.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="70811-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="70811-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9bc55-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9bc55-107">See also</span></span>
