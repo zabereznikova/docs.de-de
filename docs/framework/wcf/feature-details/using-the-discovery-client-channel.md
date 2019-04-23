@@ -3,10 +3,10 @@ title: Verwenden des Suchclientchannels
 ms.date: 03/30/2017
 ms.assetid: 1494242a-1d64-4035-8ecd-eb4f06c8d2ba
 ms.openlocfilehash: 298cafe34b20a3644f967acf15f831be5b0b90ac
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329933"
 ---
 # <a name="using-the-discovery-client-channel"></a>Verwenden des Suchclientchannels
@@ -20,7 +20,7 @@ Beim Schreiben einer WCF-Clientanwendung müssen Sie die Endpunktadresse des Die
   
  Die <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>-Klasse enthält zwei öffentliche Eigenschaften:  
   
-1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A>, das wird verwendet, um den Dienst zu beschreiben, aufgerufen werden soll.  
+1. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.FindCriteria%2A> wird verwendet, um den Dienst zu beschreiben, den Sie aufrufen möchten.  
   
 2. <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement.DiscoveryEndpointProvider%2A> Gibt den Discovery-Endpunkt, um ermittlungsmeldungen zu senden.  
   

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
 ms.openlocfilehash: 7c65eb54bb95b9a20cd1e43f0d491af47985f2e0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329205"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>Vorgehensweise: Bestimmen von Seiteneigenschaften mit der PageSetupDialog-Komponente
@@ -90,5 +90,5 @@ Mithilfe der [PageSetupDialog](pagesetupdialog-component-windows-forms.md) -Komp
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [Vorgehensweise: Erstellen von standardmäßigen Druckaufträgen in Windows Forms](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [Vorgehensweise: Erstellen von Druckaufträgen in Standard-Windows Forms](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
 - [PageSetupDialog-Komponente](pagesetupdialog-component-windows-forms.md)

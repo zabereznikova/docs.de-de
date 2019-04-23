@@ -3,10 +3,10 @@ title: Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverf
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
 ms.openlocfilehash: dd5fe08054b3a10c1663a7dd7dab5f9de5327cbb
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329049"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>Verwenden von Service Trace Viewer zum Anzeigen korrelierender Ablaufverfolgungen und der Problembehandlung
@@ -45,7 +45,7 @@ In diesem Thema wird das Format von Ablaufverfolgungsdaten und ihre Verwendung b
   
 -   `<SubType>` (Ablaufverfolgungsebene).  
   
--   `<TimeCreated>`sein.  
+-   `<TimeCreated>`.  
   
 -   `<Source>` (Name der Ablaufverfolgungsquelle).  
   
@@ -53,7 +53,7 @@ In diesem Thema wird das Format von Ablaufverfolgungsdaten und ihre Verwendung b
   
 -   `<Execution>` (Prozess- und Thread-Id).  
   
--   `<Computer>`sein.  
+-   `<Computer>`.  
   
 -   `<ExtendedData>`, einschließlich `<Action>`, `<MessageID>` und `<ActivityId>` im Nachrichtenheader festgelegt wird, wenn eine Nachricht gesendet wird.  
   

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
 ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327853"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Überlegungen zum Layout für das WindowsFormsHost-Element
@@ -40,7 +40,7 @@ In diesem Thema wird beschrieben, wie die <xref:System.Windows.Forms.Integration
   
 -   In einigen Fällen kann die Größe von [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelementen nicht geändert werden, oder die Größenänderung ist auf bestimmte Dimensionen beschränkt. Z. B. eine [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> -Steuerelement unterstützt nur eine einzige Höhe, die durch den Schriftgrad des Steuerelements definiert wird. In einem [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dynamisches Layout, in denen Elemente vertikal werden können, einem gehosteten gestreckt <xref:System.Windows.Forms.ComboBox> -Steuerelement nicht wie erwartet gestreckt.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente können nicht gedreht oder verzerrt werden. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element löst die <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> Ereignis, wenn Sie eine Neigung oder Drehung der Transformation anwenden. Wenn Sie nicht behandeln die <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> Ereignis eine <xref:System.InvalidOperationException> ausgelöst wird.  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente können nicht gedreht oder verzerrt werden. Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element löst die <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> Ereignis, wenn Sie eine Neigung oder Drehung der Transformation anwenden. Wenn Sie nicht behandeln die <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> Ereignis eine <xref:System.InvalidOperationException> ausgelöst wird.  
   
 -   In den meisten Fällen unterstützen [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelemente keine proportionale Skalierung. Obwohl die gesamten Dimensionen des Steuerelements skaliert werden, können untergeordnete Steuerelemente und Komponenten des Steuerelements unter Umständen nicht wie erwartet skaliert werden. Diese Einschränkung hängt davon ab, in welcher Form das jeweilige [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-Steuerelement eine Skalierung unterstützt. Darüber hinaus können Sie nicht skalieren [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Steuerelemente auf eine Größe von 0 Pixeln.  
   
@@ -102,7 +102,7 @@ In diesem Thema wird beschrieben, wie die <xref:System.Windows.Forms.Integration
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
+- [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [Anordnen von Windows Forms-Steuerelementen in WPF-Beispiel](https://go.microsoft.com/fwlink/?LinkID=159971)
 - [Eigenschaftenzuordnung von Windows Forms und WPF](windows-forms-and-wpf-property-mapping.md)
 - [Migration und Interoperabilität](migration-and-interoperability.md)

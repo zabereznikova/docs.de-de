@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
 ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329129"
 ---
 # <a name="service-channel-level-programming"></a>Dienst-Kanalebenenprogrammierung
@@ -36,7 +36,7 @@ In diesem Thema wird beschrieben, wie Sie eine Windows Communication Foundation 
 #### <a name="building-a-channellistener"></a>Erstellen eines Kanallisteners.  
  Nach dem Erstellen einer Bindung wird <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> aufgerufen, um den Kanallistener zu erstellen, wobei der Typparameter der zu erstellenden Kanalform entspricht. In diesem Beispiel wird <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType> verwendet, da eingehende Meldungen in einem Anforderungs-/Antwort-Meldungsaustauschmuster abgehört werden sollen.  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> wird zum Empfangen von anforderungsmeldungen und Senden von Antwortnachrichten verwendet. Durch das Aufrufen von <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> wird ein <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType> zurückgegeben, der zum Empfang der Anforderungsmeldung und zum Senden einer Antwortmeldung verwendet werden kann.  
+ <xref:System.ServiceModel.Channels.IReplyChannel> wird zum Empfangen von Anforderungsmeldungen und Senden von Antwortnachrichten verwendet. Durch das Aufrufen von <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> wird ein <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType> zurückgegeben, der zum Empfang der Anforderungsmeldung und zum Senden einer Antwortmeldung verwendet werden kann.  
   
  Beim Erstellen des Listeners wird die Netzwerkadresse übergeben, die dieser abhört, in diesem Fall `http://localhost:8080/channelapp`. Allgemein unterstützt jeder Transportkanal mindestens ein Adressenschema. So unterstützt beispielsweise der HTTP-Transport HTTP- und HTTPS-Schemas.  
   

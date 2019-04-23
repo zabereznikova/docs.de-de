@@ -7,10 +7,10 @@ helpviewer_keywords:
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
 ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327372"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>Vorgehensweise: Erstellen einer Oberfläche im Stil von Windows Explorer in Windows Forms
@@ -52,7 +52,7 @@ Windows-Explorer ist eine gemeinsame Benutzeroberfläche Wahl für Anwendungen a
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
-- [Vorgehensweise: Definieren des Verhaltens bei Größen- und Positionsänderungen in einem geteilten Fenster](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
+- [Vorgehensweise: Erstellen einer Multipane-Benutzeroberfläche mit Windows Forms](how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [Vorgehensweise: Definieren des Größen- und Positionsänderungen Verhalten in einem geteilten Fenster](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)
 - [Vorgehensweise: Horizontales Teilen eines Fensters](how-to-split-a-window-horizontally.md)
 - [SplitContainer-Steuerelement](splitcontainer-control-windows-forms.md)
