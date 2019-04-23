@@ -10,17 +10,17 @@ helpviewer_keywords:
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
 ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143272"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>Vorgehensweise: Steuern, wann der TextBox-Text die Quelle aktualisiert
 In diesem Thema wird beschrieben, wie Sie mit der <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Eigenschaft, um Aktualisierungen von Bindungsquellen zeitlich steuern. In diesem Thema wird die <xref:System.Windows.Controls.TextBox> Steuerelement als Beispiel.  
   
 ## <a name="example"></a>Beispiel  
- Die <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> Eigenschaft hat den Standardwert <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Wert <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Dies bedeutet, wenn eine Anwendung eine <xref:System.Windows.Controls.TextBox> mit einem datengebundenen <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> Eigenschaft, die den Text, die Sie eingeben, die <xref:System.Windows.Controls.TextBox> aktualisiert nicht die Quelle erst die <xref:System.Windows.Controls.TextBox> den Fokus verliert (z. B. beim Klicken auf aus der <xref:System.Windows.Controls.TextBox>).  
+ Das Sprachelement <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> Eigenschaft hat den Standardwert <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Wert <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>. Dies bedeutet, wenn eine Anwendung eine <xref:System.Windows.Controls.TextBox> mit einem datengebundenen <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> Eigenschaft, die den Text, die Sie eingeben, die <xref:System.Windows.Controls.TextBox> aktualisiert nicht die Quelle erst die <xref:System.Windows.Controls.TextBox> den Fokus verliert (z. B. beim Klicken auf aus der <xref:System.Windows.Controls.TextBox>).  
   
  Wenn die Quelle aktualisiert werden, während der Eingabe werden sollen, legen Sie die <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> zur Bindung mit <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>. Im folgenden Beispiel zeigen die hervorgehobenen Codezeilen, die die `Text` Eigenschaften sowohl die <xref:System.Windows.Controls.TextBox> und <xref:System.Windows.Controls.TextBlock> an die gleiche Quelleneigenschaft gebunden sind. Die <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> Eigenschaft der <xref:System.Windows.Controls.TextBox> Bindung nastaven NA hodnotu <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>.  
   
@@ -47,4 +47,4 @@ In diesem Thema wird beschrieben, wie Sie mit der <xref:System.Windows.Data.Bind
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

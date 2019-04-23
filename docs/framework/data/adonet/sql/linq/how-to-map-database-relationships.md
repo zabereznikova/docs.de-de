@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152879"
 ---
 # <a name="how-to-map-database-relationships"></a>Vorgehensweise: Zuordnen von Datenbankbeziehungen
@@ -28,7 +28,7 @@ Sie können in Ihrer Entitätsklasse alle Datenbeziehungen als Eigenschaftenverw
   
 -   M: n: In den primären Schlüssel des der Verknüpfungstabelle m: n Beziehungen (auch mit dem Namen der *Junction* Tabelle) wird häufig durch eine Kombination der Fremdschlüssel aus den beiden anderen Tabellen gebildet.  
   
-     Betrachten Sie beispielsweise eine `Employee` - `Project` m: n Beziehung aus, die mit der Verknüpfungstabelle `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erfordert, dass eine solche Beziehung mit drei Klassen modelliert werden: `Employee`, `Project`, und `EmployeeProject`. In diesem Fall kann beim Ändern der Beziehung zwischen einem `Employee` und einem `Project` das Update des Primärschlüssels `EmployeeProject` erfordern. Diese Situation lässt sich jedoch durch Löschen eines vorhandenen `EmployeeProject` und Erstellen eines neuen `EmployeeProject` am besten modellieren.  
+     Betrachten Sie beispielsweise eine `Employee` - `Project` m: n Beziehung aus, die mit der Verknüpfungstabelle `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erfordert, dass eine solche Beziehung unter Verwendung von drei Klassen modelliert wird: `Employee`, `Project` und `EmployeeProject`. In diesem Fall kann beim Ändern der Beziehung zwischen einem `Employee` und einem `Project` das Update des Primärschlüssels `EmployeeProject` erfordern. Diese Situation lässt sich jedoch durch Löschen eines vorhandenen `EmployeeProject` und Erstellen eines neuen `EmployeeProject` am besten modellieren.  
   
     > [!NOTE]
     >  Beziehungen in relationalen Datenbanken werden typischerweise als Fremdschlüsselwerte modelliert, die sich auf Fremdschlüssel in anderen Dateien beziehen. Navigation zwischen ihnen Sie explizit die beiden Tabellen mit einer relationalen zuordnen *Join* Vorgang.  

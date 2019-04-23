@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
 ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154413"
 ---
 # <a name="controls"></a>Steuerelemente
@@ -103,7 +103,7 @@ ms.locfileid: "59154413"
 - [Kategorien von Steuerelementen](controls-by-category.md)
 - [Steuerelementbibliothek](control-library.md)
 - [Übersicht über Datenvorlagen](../data/data-templating-overview.md)
-- [Übersicht über die Datenbindung](../data/data-binding-overview.md)
+- [Übersicht zur Datenbindung](../data/data-binding-overview.md)
 - [Eingabe](../advanced/input-wpf.md)
 - [Aktivieren eines Befehls](../advanced/how-to-enable-a-command.md)
 - [Exemplarische Vorgehensweisen: Erstellen einer benutzerdefinierten animierten Schaltfläche](walkthroughs-create-a-custom-animated-button.md)

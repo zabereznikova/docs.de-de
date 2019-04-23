@@ -6,10 +6,10 @@ helpviewer_keywords:
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
 ms.openlocfilehash: 756cc821b1a9fe20741e390a1fe6e84d12cc6363
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148160"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Richtlinien zum Entwerfen formatierbarer Steuerelemente
@@ -42,11 +42,11 @@ Dieses Dokument fasst eine Reihe bewährter Methoden zusammen, die zu berücksic
   
     -   Minimieren Sie Verträge so weit wie möglich.  
   
-    -   Entfernen Sie sich beim Entwerfen von der Anforderung, das es während der Entwurfszeit (wenn ein Entwurfstool verwendet wird) für eine Steuerelementvorlage gang und gäbe ist, sich in einem unvollständigen Zustand zu befinden. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wird keinem "zusammengesetzte" statusinfrastruktur, deshalb müssen Steuerelemente mit der Anforderung erstellt werden, dass ein solcher Status womöglich gültig sein kann.  
+    -   Entfernen Sie sich beim Entwerfen von der Anforderung, das es während der Entwurfszeit (wenn ein Entwurfstool verwendet wird) für eine Steuerelementvorlage gang und gäbe ist, sich in einem unvollständigen Zustand zu befinden. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet keine „zusammengesetzte“ Statusinfrastruktur, deshalb müssen Steuerelemente mit der Anforderung erstellt werden, dass ein solcher Status womöglich gültig sein kann.  
   
     -   Lösen Sie keine Ausnahme aus, wenn auch nur ein Punkt eines Vorlagenvertrags nicht befolgt wird. Laut den Anforderungen dürfen Bereiche keine Ausnahme auslösen, wenn Sie zu viele oder zu wenige untergeordnete Elemente besitzen.  
   
--   **Faktor peripherer Funktionalität in vorlagenhilfselementen.** Jedes Steuerelement sollte auf seine Kernfunktionalität und seinen wahren Wertbeitrag fokussiert sein und durch die häufige Verwendung des Steuerelements definiert sein. Verwenden Sie schlussendlich zusammengesetzte Elemente und Hilfselemente innerhalb der Vorlage, um Peripherieverhalten und -visualisierungen zu aktivieren. Dies sind jedoch die Verhalten und Visualisierungen, die nicht zur Kernfunktionalität des Steuerelements beitragen. Hilfselemente lassen sich in drei Kategorien unterteilen:  
+-   **Faktor peripherer Funktionalität in Vorlagenhilfselementen.** Jedes Steuerelement sollte auf seine Kernfunktionalität und seinen wahren Wertbeitrag fokussiert sein und durch die häufige Verwendung des Steuerelements definiert sein. Verwenden Sie schlussendlich zusammengesetzte Elemente und Hilfselemente innerhalb der Vorlage, um Peripherieverhalten und -visualisierungen zu aktivieren. Dies sind jedoch die Verhalten und Visualisierungen, die nicht zur Kernfunktionalität des Steuerelements beitragen. Hilfselemente lassen sich in drei Kategorien unterteilen:  
   
     -   **Eigenständige** Hilfstypen sind öffentliche und wieder verwendbaren Steuerelemente oder Primitive, die „anonym“ in einer Vorlage verwendet werden, was bedeutet, dass weder das Hilfselement noch das formatierte Steuerelement vom jeweils anderen weiß. Technisch gesehen kann jedes Element ein anonymer Typ sein. In diesem Kontext beschreibt jedoch der Begriff diese Typen, die bestimmte Funktionen kapseln, um Zielszenarios zuzulassen.  
   
@@ -79,7 +79,7 @@ Dieses Dokument fasst eine Reihe bewährter Methoden zusammen, die zu berücksic
   
 -   **Verwenden Sie die Name-Eigenschaft, um Elemente innerhalb einer Vorlage zu kennzeichnen**. Ein Steuerelement, das ein Element in seinem Stil finden muss, um programmgesteuert darauf zugreifen, sollte dazu die `Name`-Eigenschaft und das `FindName`-Paradigma verwenden. Ein Steuerelement sollte keine Ausnahme auslösen, wenn ein Element nicht gefunden wird, jedoch im Hintergrund und diskret die Funktionalität deaktivieren, die dieses Element benötigt hat.  
   
--   **Verwenden Sie bewährten Methoden zum Ausdrücken von und des Verhaltens in einem Stil.** Im Folgenden finden Sie eine geordnete Liste der bewährten Methoden zum Ausdrücken von Änderungen des Steuerelementzustands und von Verhalten in einem Stil. Verwenden Sie das erste Element in der Liste, die das Szenario aktiviert.  
+-   **Verwenden Sie bewährte Methoden zum Ausdrücken des Steuerelementzustands und des Verhaltens in einem Stil.** Im Folgenden finden Sie eine geordnete Liste der bewährten Methoden zum Ausdrücken von Änderungen des Steuerelementzustands und von Verhalten in einem Stil. Verwenden Sie das erste Element in der Liste, die das Szenario aktiviert.  
   
     1.  Eigenschaftenbindung Beispiel: Bindung zwischen <xref:System.Windows.Controls.ComboBox.IsDropDownOpen%2A?displayProperty=nameWithType> und <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A?displayProperty=nameWithType>.  
   
@@ -99,9 +99,9 @@ Dieses Dokument fasst eine Reihe bewährter Methoden zusammen, die zu berücksic
   
 -   **Verwenden Sie die Formattrigger (im Gegensatz zu Vorlagentrigger) sparsam**. Trigger, die Eigenschaften für Elemente in der Vorlage beeinflussen, müssen in der Vorlage deklariert werden. Trigger, die Eigenschaften des Steuerelements beeinflussen (keine `TargetName`) können im Stil deklariert werden, es sei denn, Sie wissen, dass eine Änderung der Vorlage auch den Trigger zerstören wird.  
   
--   **Mit vorhandenen Formatierungsmustern konsistent sein.** Oft gibt es mehrere Methoden zur Lösung eines Problems. Beachten Sie, und – wenn möglich – seien Sie konsistent vorhandenen Stilentwürfen des Steuerelements. Dies ist besonders wichtig für Steuerelemente, die von demselben Basistyp abgeleitet werden (z. B. <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>und so weiter).  
+-   **Seien Sie mit vorhandenen Formatierungsmustern konsistent.** Oft gibt es mehrere Methoden zur Lösung eines Problems. Beachten Sie, und – wenn möglich – seien Sie konsistent vorhandenen Stilentwürfen des Steuerelements. Dies ist besonders wichtig für Steuerelemente, die von demselben Basistyp abgeleitet werden (z. B. <xref:System.Windows.Controls.ContentControl>, <xref:System.Windows.Controls.ItemsControl>, <xref:System.Windows.Controls.Primitives.RangeBase>und so weiter).  
   
--   **Machen Sie Eigenschaften verfügbar, um allgemeine Anpassungszenarios ohne neue Vorlagen zuzulassen**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] unterstützt keine austauschbaren/anpassbaren Teile aus, damit ein Benutzer des Steuerelements mit nur zwei Methoden der Anpassung bleibt: direktes Festlegen von Eigenschaften oder Festlegen von Eigenschaften mit Formatvorlagen. Wenn Sie das bedenken, können Sie eine begrenzte Anzahl an Eigenschaften für sehr häufige Anpassungsszenarios mit hoher Priorität darzustellen, die andernfalls eine neue Vorlage erfordern. Hier sind die bewährten Methoden dargestellt, wenn und wie Anpassungsszenarios aktiviert werden:  
+-   **Machen Sie Eigenschaften verfügbar, um allgemeine Anpassungszenarios ohne neue Vorlagen zuzulassen**. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] unterstützt keine austauschbaren/anpassbaren Teile,also bleibt ein Benutzer des Steuerelements mit nur zwei Methoden der Anpassung zurück: direktes Festlegen von Eigenschaften oder Festlegen von Eigenschaften mit Formatvorlagen. Wenn Sie das bedenken, können Sie eine begrenzte Anzahl an Eigenschaften für sehr häufige Anpassungsszenarios mit hoher Priorität darzustellen, die andernfalls eine neue Vorlage erfordern. Hier sind die bewährten Methoden dargestellt, wenn und wie Anpassungsszenarios aktiviert werden:  
   
     -   Sehr häufige Anpassungen sollten als Eigenschaften des Steuerelements verfügbar gemacht werden und von der Vorlage genutzt werden.  
   

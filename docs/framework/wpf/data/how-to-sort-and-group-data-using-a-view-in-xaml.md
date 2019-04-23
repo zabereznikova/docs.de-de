@@ -12,10 +12,10 @@ helpviewer_keywords:
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
 ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144520"
 ---
 # <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>Vorgehensweise: Sortieren und Gruppieren von Daten mit einer Ansicht in XAML
@@ -41,6 +41,6 @@ In diesem Beispiel wird gezeigt, wie zum Erstellen einer Ansicht einer Datensamm
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Data.CollectionViewSource>
-- [Abrufen der Standardansicht einer Datensammlung](how-to-get-the-default-view-of-a-data-collection.md)
-- [Übersicht über die Datenbindung](data-binding-overview.md)
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Abrufen der Standardansicht einer Datenauflistung](how-to-get-the-default-view-of-a-data-collection.md)
+- [Übersicht zur Datenbindung](data-binding-overview.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

@@ -82,10 +82,10 @@ helpviewer_keywords:
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
 ms.openlocfilehash: 56dad921b2900061dbe2db0d8f1faaf759641f87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148134"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>Funktionen für die Typkonvertierung (Visual Basic)
@@ -121,7 +121,7 @@ CUShort(expression)
   
 |Funktionsname|Rückgabedatentyp|Der Bereich für `expression` Argument|  
 |-------------------|----------------------|-------------------------------------|  
-|`CBool`|[Datentyp "Boolean"](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Eine beliebige gültige `Char` oder `String` oder numerischer Ausdruck.|  
+|`CBool`|[Boolean-Datentyp](../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Eine beliebige gültige `Char` oder `String` oder numerischer Ausdruck.|  
 |`CByte`|[Byte-Datentyp](../../../visual-basic/language-reference/data-types/byte-data-type.md)|<xref:System.Byte.MinValue?displayProperty=nameWithType> (0) über <xref:System.Byte.MaxValue?displayProperty=nameWithType> (255) (unsignierten); Nachkommastellen gerundet.<sup> 1</sup><br/><br/>Ab Visual Basic-15.8, Visual Basic optimiert die Leistung von Gleitkommazahl in bytekonvertierung mit der `CByte` funktionieren, finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen. Finden Sie unter den [CInt-Beispiel](#cint-example) -Abschnitt für ein Beispiel.|  
 |`CChar`|[Char-Datentyp](../../../visual-basic/language-reference/data-types/char-data-type.md)|Eine beliebige gültige `Char` oder `String` Ausdruck; nur die ersten Zeichen der ein `String` konvertiert wird; Wert kann 0 bis 65535 (ohne Vorzeichen) sein.|  
 |`CDate`|[Date-Datentyp](../../../visual-basic/language-reference/data-types/date-data-type.md)|Jede gültige Darstellung von Datum und Uhrzeit.|  
@@ -129,7 +129,7 @@ CUShort(expression)
 |`CDec`|[Decimal-Datentyp](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+ / – 79.228.162.514.264.337.593.543.950.335 für die Skalierung von 0 (null) Zahlen, also ohne Dezimalstellen. Ist der Bereich für Zahlen mit 28 Dezimalstellen + / – 7,9228162514264337593543950335. Die kleinste mögliche Zahl ungleich NULL ist – 0,0000000000000000000000000001 (+/-1E-28).|  
 |`CInt`|[Integer-Datentyp](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2.147.483.648) bis <xref:System.Int32.MaxValue?displayProperty=nameWithType> (2.147.483.647); Nachkommastellen gerundet.<sup> 1</sup> <br/><br/>Ab Visual Basic-15.8, Visual Basic optimiert die Leistung von Gleitkommazahl in ganze Zahl Konvertierung mit dem `CInt` funktionieren, finden Sie unter der ["Hinweise"](#remarks) Abschnitt, um weitere Informationen. Finden Sie unter den [CInt-Beispiel](#cint-example) -Abschnitt für ein Beispiel. |  
 |`CLng`|[Long-Datentyp](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9.223.372.036.854.775.808) bis <xref:System.Int64.MaxValue?displayProperty=nameWithType> (9.223.372.036.854.775.807); Nachkommastellen gerundet.<sup> 1</sup><br/><br/>Ab Visual Basic-15.8, Visual Basic optimiert die Leistung von Gleitkommazahl in 64-Bit-Ganzzahl-Konvertierung mit dem `CLng` funktionieren, finden Sie unter der ["Hinweise"](#remarks) Abschnitt, um weitere Informationen. Finden Sie unter den [CInt-Beispiel](#cint-example) -Abschnitt für ein Beispiel.|  
-|`CObj`|[Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)|Jeder gültige Ausdruck.|  
+|`CObj`|[Object-Datentyp](../../../visual-basic/language-reference/data-types/object-data-type.md)|Jeder gültige Ausdruck.|  
 |`CSByte`|[SByte-Datentyp](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (-128) über <xref:System.SByte.MaxValue?displayProperty=nameWithType> (127); Nachkommastellen gerundet.<sup> 1</sup><br/><br/>Ab Visual Basic-15.8, Visual Basic optimiert die Leistung von Gleitkommazahl in Byte mit Vorzeichen Konvertierung mit dem `CSByte` funktionieren, finden Sie unter der ["Hinweise"](#remarks) Abschnitt, um weitere Informationen. Finden Sie unter den [CInt-Beispiel](#cint-example) -Abschnitt für ein Beispiel.|  
 |`CShort`|[Short-Datentyp](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32.768) bis <xref:System.Int16.MaxValue?displayProperty=nameWithType> (32.767); Nachkommastellen gerundet.<sup> 1</sup><br/><br/>Ab Visual Basic-15.8, Visual Basic optimiert die Leistung von Gleitkommazahl in ganze 16-Bit-Konvertierung mit den `CShort` funktionieren, finden Sie unter den ["Hinweise"](#remarks) Abschnitt, um weitere Informationen. Finden Sie unter den [CInt-Beispiel](#cint-example) -Abschnitt für ein Beispiel.|  
 |`CSng`|[Single-Datentyp](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3, 402823e + 38 bis - 1.401298E-45 für negative Werte; 1.401298E-45 bis 3, 402823e + 38 für positive Werte.|  

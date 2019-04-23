@@ -16,10 +16,10 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
 ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148095"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Markuperweiterungen und WPF-XAML
@@ -41,13 +41,13 @@ Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XA
 ## <a name="xaml-defined-markup-extensions"></a>XAML-definierte Markuperweiterungen  
  Es gibt mehrere Markuperweiterungen, die nicht spezifisch für die WPF-Implementierung von XAML gelten, sondern Implementierungen für Interna oder Funktionen von XAML als Sprache sind. Diese Markuperweiterungen werden als Teil der allgemeinen .NET Framework-XAML-Dienste in der System.Xaml-Assembly implementiert und sind im XAML-Sprachnamespace enthalten. Im Hinblick auf die allgemeine Markupverwendung sind diese Markuperweiterungen in der Regel durch das `x:`-Präfix in der Verwendung identifizierbar. Die <xref:System.Windows.Markup.MarkupExtension> Basisklasse (auch in System.Xaml definiert) stellt das Muster, das alle Markuperweiterungen verwendet werden soll, damit er in der XAML-Readern und XAML-Writern, einschließlich in WPF XAML unterstützt werden.  
   
--   `x:Type` Stellt die <xref:System.Type> Objekt für den benannten Typ. Diese Funktion wird am häufigsten in Stilen und Vorlagen verwendet. Weitere Informationen finden Sie unter [x:Type-Markuperweiterung](../../xaml-services/x-type-markup-extension.md).  
+-   `x:Type` stellt das <xref:System.Type> -Objekt für den benannten Typ bereit. Diese Funktion wird am häufigsten in Stilen und Vorlagen verwendet. Weitere Informationen finden Sie unter [x:Type-Markuperweiterung](../../xaml-services/x-type-markup-extension.md).  
   
 -   `x:Static` erzeugt statische Werte. Die Werte stammen aus Wert-Typ-Codeentitäten, die nicht direkt dem Typ eines Zieleigenschaftswerts entsprechen, jedoch diesem Typ entsprechend ausgewertet werden können. Weitere Informationen finden Sie unter [x:Statische Markuperweiterung](../../xaml-services/x-static-markup-extension.md).  
   
--   `x:Null` Gibt an, `null` als Wert für eine Eigenschaft und kann für Attribute oder Eigenschaftenelementwerte verwendet werden. Weitere Informationen finden Sie unter [x:Null-Markuperweiterung](../../xaml-services/x-null-markup-extension.md).  
+-   `x:Null` gibt `null` als Wert für eine Eigenschaft an und kann für Attribute oder Eigenschaftenelementwerte verwendet werden. Weitere Informationen finden Sie unter [x:Null-Markuperweiterung](../../xaml-services/x-null-markup-extension.md).  
   
--   `x:Array` bietet Unterstützung für die Erstellung von allgemeinen Arrays in XAML-Syntax ist für Fälle, in denen die auflistungsunterstützung von WPF-Basiselementen und Steuerelementmodellen bewusst nicht verwendet. Weitere Informationen finden Sie unter [x:Array-Markuperweiterung](../../xaml-services/x-array-markup-extension.md).  
+-   `x:Array` bietet Unterstützung für die Erstellung von allgemeinen Arrays in XAML-Syntax, wenn die Auflistungsunterstützung von WPF-Basiselementen und Steuerelementmodellen bewusst nicht verwendet wird. Weitere Informationen finden Sie unter [x:Array-Markuperweiterung](../../xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
 >  Das `x:`-Präfix wird für die typische XAML-Namespacezuordnung der systeminternen XAML-Sprache im Stammelement einer XAML-Datei oder Produktion verwendet. Beispielsweise initiieren die Visual Studio-Vorlagen für WPF-Anwendungen eine XAML-Datei, die mithilfe dieser `x:` Zuordnung. Sie können ein anderes Präfixtoken in Ihrer eigenen XAML-Namespacezuordnung auswählen, dieser Dokumentation wird jedoch die `x:`-Standardzuordnung für die Identifizierung der Entitäten zugrunde gelegt, die als Teil des XAML-Sprachnamespace definiert sind (im Gegensatz zu einem standardmäßigen WPF-Namespace oder anderen XAML-Namespaces, die keinem bestimmten Framework zugeordnet sind).  
@@ -56,15 +56,15 @@ Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XA
 ## <a name="wpf-specific-markup-extensions"></a>WPF-spezifische Markuperweiterungen  
  Bei der WPF-Programmierung werden am häufigsten die Markuperweiterungen mit Unterstützung für Ressourcenverweise (`StaticResource` und `DynamicResource`), und mit Unterstützung für Datenbindung verwendet (`Binding`).  
   
--   `StaticResource` Stellt einen Wert für eine Eigenschaft bereit, indem der Wert einer bereits definierten Ressource ersetzt wird. Schließlich wird eine `StaticResource`-Auswertung zur der XAML-Ladezeit vorgenommen, die während der tatsächlichen Laufzeit keinen Zugriff auf das Objektdiagramm hat. Weitere Informationen finden Sie unter [StaticResource-Markuperweiterung](staticresource-markup-extension.md)  
+-   `StaticResource` stellt einen Wert für eine Eigenschaft bereit, indem der Wert einer bereits definierten Ressource ersetzt wird. Schließlich wird eine `StaticResource`-Auswertung zur der XAML-Ladezeit vorgenommen, die während der tatsächlichen Laufzeit keinen Zugriff auf das Objektdiagramm hat. Weitere Informationen finden Sie unter [StaticResource-Markuperweiterung](staticresource-markup-extension.md)  
   
--   `DynamicResource` Stellt einen Wert für eine Eigenschaft bereit, um ein Laufzeit-Verweis auf eine Ressource werden indem bereit. Ein dynamischer Ressourcenverweis erzwingt jedes Mal eine neue Suche, wenn auf eine solche Ressource zugegriffen wird und diese zur Laufzeit Zugriff auf das Objektdiagramm hat. Um diesen Zugriff abzurufen, wird das `DynamicResource` Konzept von Abhängigkeitseigenschaften im WPF-Eigenschaftensystem und ausgewerteten Ausdrücken unterstützt. Daher kann `DynamicResource` nur für ein Abhängigkeitseigenschaftsziel verwendet werden. Weitere Informationen finden Sie unter [DynamicResource-Markuperweiterung](dynamicresource-markup-extension.md)  
+-   `DynamicResource` stellt einen Wert für eine Eigenschaft bereit, indem dieser Wert als Laufzeitverweis auf eine Ressource verwendet wird. Ein dynamischer Ressourcenverweis erzwingt jedes Mal eine neue Suche, wenn auf eine solche Ressource zugegriffen wird und diese zur Laufzeit Zugriff auf das Objektdiagramm hat. Um diesen Zugriff abzurufen, wird das `DynamicResource` Konzept von Abhängigkeitseigenschaften im WPF-Eigenschaftensystem und ausgewerteten Ausdrücken unterstützt. Daher kann `DynamicResource` nur für ein Abhängigkeitseigenschaftsziel verwendet werden. Weitere Informationen finden Sie unter [DynamicResource-Markuperweiterung](dynamicresource-markup-extension.md)  
   
--   `Binding` Stellt einen datengebundenen Wert für eine Eigenschaft, indem der Datenkontext, der zur Laufzeit auf das übergeordnete Objekt gilt. Diese Markuperweiterung ist relativ komplex, da eine komplexe Inlinesyntax für die Angabe einer Datenbindung aktiviert wird. Weitere Informationen finden Sie unter [Binding als Markuperweiterung](binding-markup-extension.md).  
+-   `Binding` stellt einen datengebundenen Wert für eine Eigenschaft bereit, indem der Datenkontext verwendet wird, der zur Laufzeit für das übergeordnete Objekt gilt. Diese Markuperweiterung ist relativ komplex, da eine komplexe Inlinesyntax für die Angabe einer Datenbindung aktiviert wird. Weitere Informationen finden Sie unter [Binding als Markuperweiterung](binding-markup-extension.md).  
   
 -   `RelativeSource` Stellt Quellinformationen für eine <xref:System.Windows.Data.Binding> können, die mehrere mögliche Beziehungen in der Laufzeit-Objektstruktur navigieren. Hierdurch werden spezielle Quellbezüge für Bindungen bereitgestellt, die ohne vollständige Kenntnis der umgebenden Objektstruktur in Mehrzweckvorlagen oder in Code erstellt werden. Weitere Informationen finden Sie unter [RelativeSource-Markuperweiterungen](relativesource-markupextension.md).  
   
--   `TemplateBinding` ermöglicht eine Steuerelementvorlage, um Werte für auf Vorlagen basierende Eigenschaften zu verwenden, die das Modell definierten Eigenschaften der Klasse stammen, die die Vorlage verwendet werden. Dies bedeutet, dass die Eigenschaft in der Vorlagendefinition auf einen Kontext zugreifen kann, der erst vorhanden ist, wenn die Vorlage angewendet wird. Weitere Informationen finden Sie unter [TemplateBinding Markuperweiterung](templatebinding-markup-extension.md). Weitere Informationen über die praktische Verwendung von `TemplateBinding`, finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
+-   `TemplateBinding` ermöglicht die Verwendung von Vorlage-Eigenschaftswerten in Steuerelementvorlagen, die von den durch das Objektmodell definierten Eigenschaften der Klasse stammen, die die Vorlage verwenden werden. Dies bedeutet, dass die Eigenschaft in der Vorlagendefinition auf einen Kontext zugreifen kann, der erst vorhanden ist, wenn die Vorlage angewendet wird. Weitere Informationen finden Sie unter [TemplateBinding Markuperweiterung](templatebinding-markup-extension.md). Weitere Informationen über die praktische Verwendung von `TemplateBinding`, finden Sie unter [Beispiel zum Formatieren mit ControlTemplates](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating).  
   
 -   `ColorConvertedBitmap` unterstützt ein relativ komplexes Bildverarbeitungsszenario. Weitere Informationen finden Sie unter [ColorConvertedBitmap-Markuperweiterung](colorconvertedbitmap-markup-extension.md)  
   
@@ -119,7 +119,7 @@ Dieses Thema bietet eine Einführung das Konzept der Markuperweiterungen für XA
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über XAML (WPF)](xaml-overview-wpf.md)
-- [XAML-Namespace (x:) Sprachfunktionen](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML-Namespace (x:)) Sprachfunktionen](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF-XAML-Erweiterungen](wpf-xaml-extensions.md)
 - [StaticResource-Markuperweiterung](staticresource-markup-extension.md)
 - [Bindung als Markuperweiterung](binding-markup-extension.md)

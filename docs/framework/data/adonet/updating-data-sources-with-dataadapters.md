@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153594"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>Aktualisieren von Datenquellen mit "DataAdapters"
@@ -46,7 +46,7 @@ Zum Aktualisieren von Datenquellen mit den Änderungen, die an einem `Update` vo
   
  Um Ausnahmen zu behandeln, die auftreten können, beim Aufrufen der `Update` -Methode können Sie die `RowUpdated` Ereignis, um einen Update-Zeilenfehler reagieren (finden Sie unter [Behandeln von DataAdapter-Ereignissen](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)), oder Sie können festlegen, `DataAdapter.ContinueUpdateOnError` zu `true` vor dem Aufruf `Update`, und reagieren auf den Fehlerinformationen in den `RowError` Eigenschaft für eine bestimmte Zeile aus, wenn das Update abgeschlossen ist (finden Sie unter [Zeilenfehlerinformationen](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md)).  
   
- **Beachten Sie** Aufrufen `AcceptChanges` auf die `DataSet`, `DataTable`, oder `DataRow` bewirkt, dass alle `Original` Werte für eine `DataRow` mit überschrieben werden die `Current` Werte für die `DataRow`. Wenn die Feldwerte, mit denen die Zeile als eindeutig identifiziert wird, geändert wurden, stimmen die `AcceptChanges`-Werte nicht mehr mit den Werten in der Datenquelle überein, nachdem `Original` aufgerufen wurde. `AcceptChanges` wird automatisch für jede Zeile aufgerufen, während eines Aufrufs der Update-Methode eine `DataAdapter`. Sie können die Originalwerte während eines Aufrufs der Update`AcceptChangesDuringUpdate`-Methode beibehalten, indem Sie zuerst die `DataAdapter`-Eigenschaft des `RowUpdated` auf false<xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> setzen oder indem Sie einen Ereignishandler für das <xref:System.Data.UpdateStatus.SkipCurrentRow>-Ereignis erstellen und den  auf  festlegen. Weitere Informationen finden Sie unter [Zusammenführen von DataSet-Inhalten](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) und [Behandeln von DataAdapter-Ereignissen](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
+ **Beachten Sie** Aufrufen `AcceptChanges` auf die `DataSet`, `DataTable`, oder `DataRow` bewirkt, dass alle `Original` Werte für eine `DataRow` mit überschrieben werden die `Current` Werte für die `DataRow`. Wenn die Feldwerte, mit denen die Zeile als eindeutig identifiziert wird, geändert wurden, stimmen die `AcceptChanges`-Werte nicht mehr mit den Werten in der Datenquelle überein, nachdem `Original` aufgerufen wurde. `AcceptChanges` wird während eines Aufrufs der Update-Methode eines `DataAdapter` automatisch für jede Zeile aufgerufen. Sie können die Originalwerte während eines Aufrufs der Update`AcceptChangesDuringUpdate`-Methode beibehalten, indem Sie zuerst die `DataAdapter`-Eigenschaft des `RowUpdated` auf false<xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> setzen oder indem Sie einen Ereignishandler für das <xref:System.Data.UpdateStatus.SkipCurrentRow>-Ereignis erstellen und den  auf  festlegen. Weitere Informationen finden Sie unter [Zusammenführen von DataSet-Inhalten](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md) und [Behandeln von DataAdapter-Ereignissen](../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   
 ## <a name="example"></a>Beispiel  
  In den folgenden Beispielen wird gezeigt, wie zum Durchführen von Aktualisierungen, die geänderten Zeilen, indem Sie explizit festlegen der `UpdateCommand` von einem `DataAdapter` und Aufrufen der `Update` Methode. Beachten Sie, dass der in der WHERE-Klausel der UPDATE-Anweisung festgelegte Parameterwert angibt, dass der `Original`-Wert der `SourceColumn` verwendet wird. Dies ist wichtig, weil der `Current`-Wert möglicherweise geändert wurde und u. U. nicht mehr mit dem Wert in der Datenquelle übereinstimmt. Beim `Original`-Wert handelt es sich um den Wert, mit dem die `DataTable` aus der Datenquelle aufgefüllt wurde.  
@@ -370,9 +370,9 @@ class Program {
   
 ## <a name="see-also"></a>Siehe auch
 
-- ["DataAdapters" und "DataReaders"](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
+- [DataAdapters und DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [Zeilenstatus und Zeilenversionen](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
-- ["AcceptChanges" und "RejectChanges"](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
-- [Zusammenführen von DataSet-Inhalten](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
+- [AcceptChanges und RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
+- [Merging DataSet Contents (Zusammenführen von DataSet-Inhalten)](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
 - [Abrufen von Identity- oder Autonumber-Werten](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

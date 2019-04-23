@@ -5,10 +5,10 @@ ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f81ff8a347235ab1a765b4f41051dab2da786b89
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150773"
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET Native Allgemeine Problembehandlung
@@ -44,4 +44,4 @@ Dieses Thema beschreibt die Behandlung möglicher Probleme, die bei der Entwickl
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Migrieren der Windows Store-App auf .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)
+- [Migrieren der Windows Store-App zu .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)

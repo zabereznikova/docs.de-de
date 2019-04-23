@@ -10,10 +10,10 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148758"
 ---
 # <a name="namespace-c-reference"></a>Namespace (C#-Referenz)
@@ -58,7 +58,7 @@ Weitere Informationen zur Verwendung von Namespaces finden Sie in den folgenden 
 
 - [Namespaces](../../programming-guide/namespaces/index.md)
 
-- [Verwenden von Namespaces](../../programming-guide/namespaces/using-namespaces.md)
+- [Using-Namespaces](../../programming-guide/namespaces/using-namespaces.md)
 
 - [Vorgehensweise: Verwenden des globalen Namespacealias](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
 
@@ -73,4 +73,4 @@ Weitere Informationen zur Verwendung von Namespaces finden Sie in den folgenden 
 - [C#-Schlüsselwörter](index.md)
 - [Namespaceschlüsselwörter](namespace-keywords.md)
 - [using](using-directive.md)
-- [verwendet statische](using-static.md)
+- [using static](using-static.md)

@@ -3,10 +3,10 @@ title: Interpretieren von Fehlercodes, die von wsatConfig.exe zurückgegeben wer
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
 ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151631"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>Interpretieren von Fehlercodes, die von wsatConfig.exe zurückgegeben werden
@@ -21,7 +21,7 @@ In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogram
 |2|Ein unerwarteter Fehler ist aufgetreten, als versucht wurde, Sicherheitseinstellungen von MSDTC abzurufen.|Stellen Sie sicher, dass der MSDTC-Dienst nicht deaktiviert ist, und beheben Sie alle Probleme, die in der zurückgegebenen Ausnahmemeldung aufgelistet sind.|  
 |3|Das Konto, unter dem WsatConfig.exe ausgeführt wurde, hat keine ausreichenden Berechtigungen zum Lesen der Netzwerksicherheitseinstellungen.|Führen Sie WsatConfig.exe über ein Administratorbenutzerkonto aus.|  
 |4|Aktivieren Sie den "DTC-Netzwerkzugriff" für MSDTC, bevor Sie versuchen, die WS-AT-Unterstützung zu aktivieren.|Aktivieren Sie den "DTC-Netzwerkzugriff" für MSDTC, und führen Sie das Hilfsprogramm erneut aus.|  
-|5|Der eingegebene Anschluss lag außerhalb des Bereichs. Der Wert muss im Bereich zwischen 1 und 65535 liegen.|Korrigieren Sie die `-port:<portNum>`<br /><br /> Befehlszeilenoption wie in der Fehlermeldung angegeben.|  
+|5|Der eingegebene Anschluss lag außerhalb des Bereichs. Der Wert muss im Bereich zwischen 1 und 65535 liegen.|Korrigieren Sie die `-port:<portNum>`-<br /><br /> Befehlszeilenoption wie in der Fehlermeldung angegeben.|  
 |6|Ein ungültiges Endpunktzertifikat wurde in der Befehlszeile angegeben.  Das Zertifikat konnte nicht gefunden werden, oder es hat die Überprüfung nicht bestanden.|Korrigieren Sie die `-endpointCert`-Befehlszeilenoption. Stellen Sie sicher, dass das Zertifikat einen privaten Schlüssel aufweist, für die Clientauthentifizierung und Serverauthentifizierung verwendet werden kann, im Zertifikatspeicher LocalMachine\MY installiert ist und vollständig vertrauenswürdig ist.|  
 |7|Ein ungültiges Kontozertifikat wurde in der Befehlszeile angegeben.|Korrigieren Sie die `-accountsCerts`-Befehlszeilenoption. Das Zertifikat wurde entweder nicht korrekt angegeben oder wurde nicht gefunden.|  
 |8|Ein Standardtimeout wurde außerhalb des Bereichs von 1 bis 3600 Sekunden angegeben.|Geben Sie einen zulässigen Standardtimeoutwert ein.|  
@@ -35,9 +35,9 @@ In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogram
 |17|Die Konfiguration von http.sys ist fehlgeschlagen. Die Bindung des SSL-Zertifikats an den vorherigen Anschluss kann nicht aufgehoben werden.|Verwenden Sie den zurückgegebenen Fehlercode in der Fehlermeldung zum Zuweisen des entsprechenden Systemfehlers. Falls notwendig können Sie httpcfg.exe oder netsh.exe verwenden, um die falschen Anschlussreservierungen zu entfernen.|  
 |18|Die Konfiguration von http.sys ist fehlgeschlagen. Das angegebene Zertifikat kann nicht an den Anschluss gebunden werden, da eine vorherige SSL-Bindung bereits vorhanden ist.|Eine andere Anwendung ist bereits im Besitz des bestimmten Anschlusses. Ändern Sie den Anschluss, deinstallieren Sie die aktuelle Anwendung, oder konfigurieren Sie sie neu.|  
 |19|Das Neustarten von MSDTC ist fehlgeschlagen.|Starten Sie MSDTC manuell neu, falls notwendig. Wenden Sie sich an Microsoft, wenn das Problem weiterhin auftritt.|  
-|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] ist auf dem Remotecomputer nicht installiert oder nicht ordnungsgemäß installiert ist.|Installieren Sie [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] auf dem Computer.|  
+|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] ist nicht oder nicht korrekt auf dem Remotecomputer installiert.|Installieren Sie [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] auf dem Computer.|  
 |21|Die Remotekonfiguration ist aufgrund eines Vorgangstimeouts fehlgeschlagen.|Der Aufruf zur Konfiguration von WS-AT auf dem Remotecomputer sollte nicht länger als 90 Sekunden dauern.|  
-|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] ist auf dem Remotecomputer nicht installiert oder nicht ordnungsgemäß installiert ist.|Installieren Sie [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] auf dem Computer.|  
+|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] ist nicht oder nicht korrekt auf dem Remotecomputer installiert.|Installieren Sie [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] auf dem Computer.|  
 |23|Die Remotekonfiguration ist aufgrund einer Ausnahme auf dem Remotecomputer fehlgeschlagen.|Überprüfen Sie die Fehlermeldung auf Elemente, die Aktionen erfordern.|  
 |26|Ein ungültiges Argument wurde an WsatConfig.exe übergeben.|Überprüfen Sie die Befehlszeile auf Fehler.|  
 |27|Die `-accounts`-Befehlszeilenoption war ungültig.|Korrigieren Sie die `accounts`-Befehlszeilenoption, um ein Benutzerkonto ordnungsgemäß anzugeben.|  
@@ -69,4 +69,4 @@ In diesem Thema werden alle vom WS-AtomicTransaction-Konfigurationsdienstprogram
   
 ## <a name="see-also"></a>Siehe auch
 
-- [WS-AtomicTransaction-Konfigurationsdienstprogramm (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [WS-AtomicTransaction-Konfigurationshilfsprogramm (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
