@@ -10,20 +10,20 @@ helpviewer_keywords:
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
 ms.openlocfilehash: bed943466348447e30947c170e27027f324342c6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323173"
 ---
-# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a><span data-ttu-id="a58ac-102">Vorgehensweise: Ändern der Abstände und der Ausrichtung der ToolStrip-Elemente in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a58ac-102">How to: Change the Spacing and Alignment of ToolStrip Items in Windows Forms</span></span>
-<span data-ttu-id="a58ac-103">Die <xref:System.Windows.Forms.ToolStrip> Steuerelement vollständig unterstützt Funktionen wie z. B. das Ändern der Größe, des Abstands des <xref:System.Windows.Forms.ToolStripItem> Steuerelemente relativ zueinander und die Anordnung von Steuerelementen auf der <xref:System.Windows.Forms.ToolStrip>, und der Abstand der Steuerelemente relativ zu den <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="a58ac-103">The <xref:System.Windows.Forms.ToolStrip> control fully supports layout features such as sizing, the spacing of <xref:System.Windows.Forms.ToolStripItem> controls relative to each other, the arrangement of controls on the <xref:System.Windows.Forms.ToolStrip>, and the spacing of controls relative to the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a><span data-ttu-id="1cd55-102">Vorgehensweise: Ändern der Abstände und der Ausrichtung der ToolStrip-Elemente in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1cd55-102">How to: Change the Spacing and Alignment of ToolStrip Items in Windows Forms</span></span>
+<span data-ttu-id="1cd55-103">Die <xref:System.Windows.Forms.ToolStrip> Steuerelement vollständig unterstützt Funktionen wie z. B. das Ändern der Größe, des Abstands des <xref:System.Windows.Forms.ToolStripItem> Steuerelemente relativ zueinander und die Anordnung von Steuerelementen auf der <xref:System.Windows.Forms.ToolStrip>, und der Abstand der Steuerelemente relativ zu den <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="1cd55-103">The <xref:System.Windows.Forms.ToolStrip> control fully supports layout features such as sizing, the spacing of <xref:System.Windows.Forms.ToolStripItem> controls relative to each other, the arrangement of controls on the <xref:System.Windows.Forms.ToolStrip>, and the spacing of controls relative to the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
- <span data-ttu-id="a58ac-104">Da der Standardwert der <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> -Eigenschaft ist `true`, Steuerelemente werden automatisch angepasst, es sei denn, Sie legen die <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> Eigenschaft, um `false`.</span><span class="sxs-lookup"><span data-stu-id="a58ac-104">Because the default value of the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property is `true`, controls are sized automatically unless you set the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property to `false`.</span></span>  
+ <span data-ttu-id="1cd55-104">Da der Standardwert der <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> -Eigenschaft ist `true`, Steuerelemente werden automatisch angepasst, es sei denn, Sie legen die <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> Eigenschaft, um `false`.</span><span class="sxs-lookup"><span data-stu-id="1cd55-104">Because the default value of the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property is `true`, controls are sized automatically unless you set the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property to `false`.</span></span>  
   
-### <a name="to-manually-size-a-toolstripitem"></a><span data-ttu-id="a58ac-105">Manuell auf einem ToolStripItem Größe</span><span class="sxs-lookup"><span data-stu-id="a58ac-105">To manually size a ToolStripItem</span></span>  
+### <a name="to-manually-size-a-toolstripitem"></a><span data-ttu-id="1cd55-105">Manuell auf einem ToolStripItem Größe</span><span class="sxs-lookup"><span data-stu-id="1cd55-105">To manually size a ToolStripItem</span></span>  
   
-1. <span data-ttu-id="a58ac-106">Legen Sie die <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> Eigenschaft `false` für das zugeordnete Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="a58ac-106">Set the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property to `false` for the associated control.</span></span>  
+1. <span data-ttu-id="1cd55-106">Legen Sie die <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> Eigenschaft `false` für das zugeordnete Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="1cd55-106">Set the <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> property to `false` for the associated control.</span></span>  
   
     ```vb  
     ToolStripButton1.AutoSize = False  
@@ -33,13 +33,13 @@ ms.locfileid: "59323173"
     toolStripButton1.AutoSize = false;  
     ```  
   
-2. <span data-ttu-id="a58ac-107">Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Size%2A> Eigenschaft wie gewünscht, für das zugeordnete <xref:System.Windows.Forms.ToolStripItem>.</span><span class="sxs-lookup"><span data-stu-id="a58ac-107">Set the <xref:System.Windows.Forms.ToolStripItem.Size%2A> property the way you want for the associated <xref:System.Windows.Forms.ToolStripItem>.</span></span>  
+2. <span data-ttu-id="1cd55-107">Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Size%2A> Eigenschaft wie gewünscht, für das zugeordnete <xref:System.Windows.Forms.ToolStripItem>.</span><span class="sxs-lookup"><span data-stu-id="1cd55-107">Set the <xref:System.Windows.Forms.ToolStripItem.Size%2A> property the way you want for the associated <xref:System.Windows.Forms.ToolStripItem>.</span></span>  
   
-### <a name="to-set-the-spacing-of-a-toolstripitem"></a><span data-ttu-id="a58ac-108">Um den Abstand eines ToolStripItem festzulegen</span><span class="sxs-lookup"><span data-stu-id="a58ac-108">To set the spacing of a ToolStripItem</span></span>  
+### <a name="to-set-the-spacing-of-a-toolstripitem"></a><span data-ttu-id="1cd55-108">Um den Abstand eines ToolStripItem festzulegen</span><span class="sxs-lookup"><span data-stu-id="1cd55-108">To set the spacing of a ToolStripItem</span></span>  
   
-1. <span data-ttu-id="a58ac-109">Legen Sie die gewünschten Werte in Pixel in der <xref:System.Windows.Forms.ToolStripItem.Margin%2A> Eigenschaft des zugeordneten Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="a58ac-109">Insert the desired values, in pixels, into the <xref:System.Windows.Forms.ToolStripItem.Margin%2A> property of the associated control.</span></span>  
+1. <span data-ttu-id="1cd55-109">Legen Sie die gewünschten Werte in Pixel in der <xref:System.Windows.Forms.ToolStripItem.Margin%2A> Eigenschaft des zugeordneten Steuerelements.</span><span class="sxs-lookup"><span data-stu-id="1cd55-109">Insert the desired values, in pixels, into the <xref:System.Windows.Forms.ToolStripItem.Margin%2A> property of the associated control.</span></span>  
   
-     <span data-ttu-id="a58ac-110">Die Werte der <xref:System.Windows.Forms.ToolStripItem.Margin%2A> Eigenschaft geben den Abstand zwischen dem Element und angrenzenden Elementen in der folgenden Reihenfolge: Links, oben, rechts und unten.</span><span class="sxs-lookup"><span data-stu-id="a58ac-110">The values of the <xref:System.Windows.Forms.ToolStripItem.Margin%2A> property specify the spacing between the item and adjacent items in this order: Left, Top, Right, and Bottom.</span></span>  
+     <span data-ttu-id="1cd55-110">Die Werte der <xref:System.Windows.Forms.ToolStripItem.Margin%2A> Eigenschaft geben den Abstand zwischen dem Element und angrenzenden Elementen in der folgenden Reihenfolge: Links, oben, rechts und unten.</span><span class="sxs-lookup"><span data-stu-id="1cd55-110">The values of the <xref:System.Windows.Forms.ToolStripItem.Margin%2A> property specify the spacing between the item and adjacent items in this order: Left, Top, Right, and Bottom.</span></span>  
   
     ```vb  
     ToolStripTextBox1.Margin = New System.Windows.Forms.Padding _  
@@ -51,9 +51,9 @@ ms.locfileid: "59323173"
         (3, 0, 3, 0);  
     ```  
   
-### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a><span data-ttu-id="a58ac-111">Ausrichten ein ToolStripItem auf die rechte Seite des ToolStrip</span><span class="sxs-lookup"><span data-stu-id="a58ac-111">To align a ToolStripItem to the right side of the ToolStrip</span></span>  
+### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a><span data-ttu-id="1cd55-111">Ausrichten ein ToolStripItem auf die rechte Seite des ToolStrip</span><span class="sxs-lookup"><span data-stu-id="1cd55-111">To align a ToolStripItem to the right side of the ToolStrip</span></span>  
   
-1. <span data-ttu-id="a58ac-112">Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> Eigenschaft <xref:System.Windows.Forms.ToolStripItemAlignment.Right> für das zugeordnete Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="a58ac-112">Set the <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> property to <xref:System.Windows.Forms.ToolStripItemAlignment.Right> for the associated control.</span></span> <span data-ttu-id="a58ac-113">Standardmäßig <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> nastaven NA hodnotu <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, die Steuerelemente auf der linken Seite des richtet die <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="a58ac-113">By default, <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> is set to <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, which aligns controls to the left side of the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
+1. <span data-ttu-id="1cd55-112">Legen Sie die <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> Eigenschaft <xref:System.Windows.Forms.ToolStripItemAlignment.Right> für das zugeordnete Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="1cd55-112">Set the <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> property to <xref:System.Windows.Forms.ToolStripItemAlignment.Right> for the associated control.</span></span> <span data-ttu-id="1cd55-113">Standardmäßig <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> nastaven NA hodnotu <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, die Steuerelemente auf der linken Seite des richtet die <xref:System.Windows.Forms.ToolStrip>.</span><span class="sxs-lookup"><span data-stu-id="1cd55-113">By default, <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> is set to <xref:System.Windows.Forms.ToolStripItemAlignment.Left>, which aligns controls to the left side of the <xref:System.Windows.Forms.ToolStrip>.</span></span>  
   
     ```vb  
     ToolStripSplitButton1.Alignment = _  
@@ -65,9 +65,9 @@ ms.locfileid: "59323173"
         System.Windows.Forms.ToolStripItemAlignment.Right;  
     ```  
   
-### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a><span data-ttu-id="a58ac-114">ToolStrip-Elementen auf der Toolleiste anordnen</span><span class="sxs-lookup"><span data-stu-id="a58ac-114">To arrange ToolStrip items on the ToolStrip</span></span>  
+### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a><span data-ttu-id="1cd55-114">ToolStrip-Elementen auf der Toolleiste anordnen</span><span class="sxs-lookup"><span data-stu-id="1cd55-114">To arrange ToolStrip items on the ToolStrip</span></span>  
   
--   <span data-ttu-id="a58ac-115">Legen Sie die <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> Eigenschaft, um den Wert der <xref:System.Windows.Forms.ToolStripLayoutStyle> , die Sie möchten.</span><span class="sxs-lookup"><span data-stu-id="a58ac-115">Set the <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> property to the value of <xref:System.Windows.Forms.ToolStripLayoutStyle> that you want.</span></span>  
+-   <span data-ttu-id="1cd55-115">Legen Sie die <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> Eigenschaft, um den Wert der <xref:System.Windows.Forms.ToolStripLayoutStyle> , die Sie möchten.</span><span class="sxs-lookup"><span data-stu-id="1cd55-115">Set the <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> property to the value of <xref:System.Windows.Forms.ToolStripLayoutStyle> that you want.</span></span>  
   
     ```vb  
     ToolStripDropDown1.LayoutStyle = _  
@@ -79,7 +79,7 @@ ms.locfileid: "59323173"
         System.Windows.Forms.ToolStripLayoutStyle.Flow;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="a58ac-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a58ac-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1cd55-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1cd55-116">See also</span></span>
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.Layout>
@@ -88,6 +88,6 @@ ms.locfileid: "59323173"
 - <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>
 - <xref:System.Windows.Forms.ToolStripItem.Placement%2A>
 - <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A>
-- [<span data-ttu-id="a58ac-117">Übersicht über das ToolStrip-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="a58ac-117">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="a58ac-118">Architektur des ToolStrip-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="a58ac-118">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
-- [<span data-ttu-id="a58ac-119">Zusammenfassung der ToolStrip-Technologie</span><span class="sxs-lookup"><span data-stu-id="a58ac-119">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
+- [<span data-ttu-id="1cd55-117">Übersicht über das ToolStrip-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="1cd55-117">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="1cd55-118">Architektur des ToolStrip-Steuerelements</span><span class="sxs-lookup"><span data-stu-id="1cd55-118">ToolStrip Control Architecture</span></span>](toolstrip-control-architecture.md)
+- [<span data-ttu-id="1cd55-119">Zusammenfassung der ToolStrip-Technologie</span><span class="sxs-lookup"><span data-stu-id="1cd55-119">ToolStrip Technology Summary</span></span>](toolstrip-technology-summary.md)
