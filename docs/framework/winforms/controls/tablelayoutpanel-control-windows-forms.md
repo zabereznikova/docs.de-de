@@ -10,10 +10,10 @@ helpviewer_keywords:
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
 ms.openlocfilehash: b51d3bd8e9d8816dfae6c10fc752adb0b3cea59c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337785"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>TableLayoutPanel-Steuerelement (Windows Forms)
@@ -32,10 +32,10 @@ Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement ordnet seinen Inh
  [Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
  Veranschaulicht das Verankern und Andocken von untergeordneten Steuerelementen in einem <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement.  
   
- [Vorgehensweise: Entwerfen eines Windows Forms-Layouts, das zur Lokalisierung gut geeignet ist](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
+ [Vorgehensweise: Entwerfen eines Windows Forms-Layouts, das zur Lokalisierung gut geeignet ist](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
  Veranschaulicht die Verwendung eines <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelements zum Erstellen eines Formulars, das zur Lokalisierung gut geeignet ist.  
   
- [Vorgehensweise: Erstellen von in der Größe veränderbaren Windows Forms für die Dateneingabe](how-to-create-a-resizable-windows-form-for-data-entry.md)  
+ [Vorgehensweise: Erstellen Sie in der Größe veränderbaren Windows Forms für die Dateneingabe](how-to-create-a-resizable-windows-form-for-data-entry.md)  
  Veranschaulicht die Verwendung eines <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelements zum Erstellen eines Formulars, das ordnungsgemäß auf die Größenänderung reagiert.  
   
 1. [Vorgehensweise: Ausrichten und Strecken eines Steuerelements in einem TableLayoutPanel-Steuerelement](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
@@ -44,7 +44,7 @@ Das <xref:System.Windows.Forms.TableLayoutPanel>-Steuerelement ordnet seinen Inh
   
 3. [Vorgehensweise: Bearbeiten von Zeilen und Spalten in einem TableLayoutPanel-Steuerelement](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4. [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+4. [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Forms.TableLayoutPanel>  
