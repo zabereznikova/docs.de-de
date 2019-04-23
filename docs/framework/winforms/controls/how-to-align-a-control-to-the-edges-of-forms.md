@@ -11,29 +11,29 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
 ms.openlocfilehash: beb8881dbd2aedaefe66510c2942ce6c082b9729
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329972"
 ---
-# <a name="how-to-align-a-control-to-the-edges-of-forms"></a><span data-ttu-id="428e5-102">Vorgehensweise: Ausrichten eines Steuerelements an Formularrändern</span><span class="sxs-lookup"><span data-stu-id="428e5-102">How to: Align a Control to the Edges of Forms</span></span>
-<span data-ttu-id="428e5-103">Sie können ein Steuerelement am Formularrand ausrichten, indem Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft festlegen.</span><span class="sxs-lookup"><span data-stu-id="428e5-103">You can make your control align to the edge of your forms by setting the <xref:System.Windows.Forms.Control.Dock%2A> property.</span></span> <span data-ttu-id="428e5-104">Diese Eigenschaft legt fest, wo auf dem Formular das Steuerelement sich befindet.</span><span class="sxs-lookup"><span data-stu-id="428e5-104">This property designates where your control resides in the form.</span></span> <span data-ttu-id="428e5-105">Die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft kann auf einen der folgenden Werte festgelegt werden:</span><span class="sxs-lookup"><span data-stu-id="428e5-105">The <xref:System.Windows.Forms.Control.Dock%2A> property can be set to the following values:</span></span>  
+# <a name="how-to-align-a-control-to-the-edges-of-forms"></a><span data-ttu-id="311d6-102">Vorgehensweise: Ausrichten eines Steuerelements an Formularrändern</span><span class="sxs-lookup"><span data-stu-id="311d6-102">How to: Align a Control to the Edges of Forms</span></span>
+<span data-ttu-id="311d6-103">Sie können ein Steuerelement am Formularrand ausrichten, indem Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft festlegen.</span><span class="sxs-lookup"><span data-stu-id="311d6-103">You can make your control align to the edge of your forms by setting the <xref:System.Windows.Forms.Control.Dock%2A> property.</span></span> <span data-ttu-id="311d6-104">Diese Eigenschaft legt fest, wo auf dem Formular das Steuerelement sich befindet.</span><span class="sxs-lookup"><span data-stu-id="311d6-104">This property designates where your control resides in the form.</span></span> <span data-ttu-id="311d6-105">Die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft kann auf einen der folgenden Werte festgelegt werden:</span><span class="sxs-lookup"><span data-stu-id="311d6-105">The <xref:System.Windows.Forms.Control.Dock%2A> property can be set to the following values:</span></span>  
   
-|<span data-ttu-id="428e5-106">Einstellung</span><span class="sxs-lookup"><span data-stu-id="428e5-106">Setting</span></span>|<span data-ttu-id="428e5-107">Auswirkung auf das Steuerelement</span><span class="sxs-lookup"><span data-stu-id="428e5-107">Effect on your control</span></span>|  
+|<span data-ttu-id="311d6-106">Einstellung</span><span class="sxs-lookup"><span data-stu-id="311d6-106">Setting</span></span>|<span data-ttu-id="311d6-107">Auswirkung auf das Steuerelement</span><span class="sxs-lookup"><span data-stu-id="311d6-107">Effect on your control</span></span>|  
 |-------------|----------------------------|  
-|<xref:System.Windows.Forms.DockStyle.Bottom>|<span data-ttu-id="428e5-108">Wird im unteren Bereich des Formulars angedockt.</span><span class="sxs-lookup"><span data-stu-id="428e5-108">Docks to the bottom of the form.</span></span>|  
-|<xref:System.Windows.Forms.DockStyle.Fill>|<span data-ttu-id="428e5-109">Füllt den gesamten verbleibenden Platz im Formular aus.</span><span class="sxs-lookup"><span data-stu-id="428e5-109">Fills all remaining space in the form.</span></span>|  
-|<xref:System.Windows.Forms.DockStyle.Left>|<span data-ttu-id="428e5-110">Wird an der linken Seite des Formulars angedockt.</span><span class="sxs-lookup"><span data-stu-id="428e5-110">Docks to the left side of the form.</span></span>|  
-|<xref:System.Windows.Forms.DockStyle.None>|<span data-ttu-id="428e5-111">Wird nicht angedockt und wird an der mit der <xref:System.Windows.Forms.Control.Location%2A>-Eigenschaft angegebenen Position angezeigt.</span><span class="sxs-lookup"><span data-stu-id="428e5-111">Does not dock anywhere, and it appears at the location specified by its <xref:System.Windows.Forms.Control.Location%2A> property.</span></span>|  
-|<xref:System.Windows.Forms.DockStyle.Right>|<span data-ttu-id="428e5-112">Wird an der rechten Seite des Formulars angedockt.</span><span class="sxs-lookup"><span data-stu-id="428e5-112">Docks to the right side of the form.</span></span>|  
-|<xref:System.Windows.Forms.DockStyle.Top>|<span data-ttu-id="428e5-113">Wird im oberen Bereich des Formulars angedockt.</span><span class="sxs-lookup"><span data-stu-id="428e5-113">Docks to the top of the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Bottom>|<span data-ttu-id="311d6-108">Wird im unteren Bereich des Formulars angedockt.</span><span class="sxs-lookup"><span data-stu-id="311d6-108">Docks to the bottom of the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Fill>|<span data-ttu-id="311d6-109">Füllt den gesamten verbleibenden Platz im Formular aus.</span><span class="sxs-lookup"><span data-stu-id="311d6-109">Fills all remaining space in the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Left>|<span data-ttu-id="311d6-110">Wird an der linken Seite des Formulars angedockt.</span><span class="sxs-lookup"><span data-stu-id="311d6-110">Docks to the left side of the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.None>|<span data-ttu-id="311d6-111">Wird nicht angedockt und wird an der mit der <xref:System.Windows.Forms.Control.Location%2A>-Eigenschaft angegebenen Position angezeigt.</span><span class="sxs-lookup"><span data-stu-id="311d6-111">Does not dock anywhere, and it appears at the location specified by its <xref:System.Windows.Forms.Control.Location%2A> property.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Right>|<span data-ttu-id="311d6-112">Wird an der rechten Seite des Formulars angedockt.</span><span class="sxs-lookup"><span data-stu-id="311d6-112">Docks to the right side of the form.</span></span>|  
+|<xref:System.Windows.Forms.DockStyle.Top>|<span data-ttu-id="311d6-113">Wird im oberen Bereich des Formulars angedockt.</span><span class="sxs-lookup"><span data-stu-id="311d6-113">Docks to the top of the form.</span></span>|  
   
- <span data-ttu-id="428e5-114">Diese Funktion wird zur Entwurfszeit in Visual Studio unterstützt.</span><span class="sxs-lookup"><span data-stu-id="428e5-114">There is design-time support for this feature in Visual Studio.</span></span>  
+ <span data-ttu-id="311d6-114">Diese Funktion wird zur Entwurfszeit in Visual Studio unterstützt.</span><span class="sxs-lookup"><span data-stu-id="311d6-114">There is design-time support for this feature in Visual Studio.</span></span>  
   
-### <a name="to-set-the-dock-property-for-your-control-at-run-time"></a><span data-ttu-id="428e5-115">So legen Sie die Dock-Eigenschaft für das Steuerelement zur Laufzeit fest</span><span class="sxs-lookup"><span data-stu-id="428e5-115">To set the Dock property for your control at run time</span></span>  
+### <a name="to-set-the-dock-property-for-your-control-at-run-time"></a><span data-ttu-id="311d6-115">So legen Sie die Dock-Eigenschaft für das Steuerelement zur Laufzeit fest</span><span class="sxs-lookup"><span data-stu-id="311d6-115">To set the Dock property for your control at run time</span></span>  
   
-1. <span data-ttu-id="428e5-116">Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft im Code auf den geeigneten Wert fest.</span><span class="sxs-lookup"><span data-stu-id="428e5-116">Set the <xref:System.Windows.Forms.Control.Dock%2A> property to the appropriate value in code.</span></span>  
+1. <span data-ttu-id="311d6-116">Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A>-Eigenschaft im Code auf den geeigneten Wert fest.</span><span class="sxs-lookup"><span data-stu-id="311d6-116">Set the <xref:System.Windows.Forms.Control.Dock%2A> property to the appropriate value in code.</span></span>  
   
     ```vb  
     ' To set the Dock property internally.  
@@ -49,11 +49,11 @@ ms.locfileid: "59329972"
     UserControl1.Dock = DockStyle.Top;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="428e5-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="428e5-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="311d6-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="311d6-117">See also</span></span>
 
 - <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="428e5-118">Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework</span><span class="sxs-lookup"><span data-stu-id="428e5-118">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
-- [<span data-ttu-id="428e5-119">Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem FlowLayoutPanel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="428e5-119">How to: Anchor and Dock Child Controls in a FlowLayoutPanel Control</span></span>](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [<span data-ttu-id="428e5-120">Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="428e5-120">How to: Anchor and Dock Child Controls in a TableLayoutPanel Control</span></span>](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [<span data-ttu-id="428e5-121">Übersicht über die AutoSize-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="428e5-121">AutoSize Property Overview</span></span>](autosize-property-overview.md)
+- [<span data-ttu-id="311d6-118">Entwickeln benutzerdefinierter Windows Forms-Steuerelemente mit .NET Framework</span><span class="sxs-lookup"><span data-stu-id="311d6-118">Developing Custom Windows Forms Controls with the .NET Framework</span></span>](developing-custom-windows-forms-controls.md)
+- [<span data-ttu-id="311d6-119">Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem FlowLayoutPanel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="311d6-119">How to: Anchor and Dock Child Controls in a FlowLayoutPanel Control</span></span>](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [<span data-ttu-id="311d6-120">Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement</span><span class="sxs-lookup"><span data-stu-id="311d6-120">How to: Anchor and Dock Child Controls in a TableLayoutPanel Control</span></span>](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [<span data-ttu-id="311d6-121">Übersicht über die AutoSize-Eigenschaft</span><span class="sxs-lookup"><span data-stu-id="311d6-121">AutoSize Property Overview</span></span>](autosize-property-overview.md)
