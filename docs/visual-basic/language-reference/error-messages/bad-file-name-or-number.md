@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
 ms.openlocfilehash: 2e5d4a3ddd66df85dc4758e22b36ac1ed495659a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322159"
 ---
 # <a name="bad-file-name-or-number"></a>Der Dateiname oder die Zahl ist ungültig.
@@ -31,4 +31,4 @@ Fehler beim Versuch, die die angegebene Datei zuzugreifen. Zu den möglichen Urs
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:Microsoft.VisualBasic.FileSystem.FileOpen%2A>
-- [Benennungskonventionen in Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic-Benennungskonventionen](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)

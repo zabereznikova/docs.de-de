@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
 ms.openlocfilehash: fc7a8e18394b904f0c22a80f71dee091d4f786ab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324031"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Vorgehensweise: Definieren Sie mehrerer Versionen einer Prozedur (Visual Basic)
@@ -50,4 +50,4 @@ Sie können eine Prozedur definieren, in mehreren Versionen von *überladen* , e
 - [Vorgehensweise: Überladen einer Prozedur mit optionalen Parametern](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
 - [Vorgehensweise: Überladen einer Prozedur mit einer unbestimmten Anzahl von Parametern](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Überlegungen zur Prozedurüberladung](./considerations-in-overloading-procedures.md)
-- [Overload Resolution](./overload-resolution.md)
+- [Überladungsauflösung](./overload-resolution.md)

@@ -1,19 +1,19 @@
 ---
-title: <idn> -Element (Netzwerkeinstellungen)
+title: <idn>-Element (URI-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321756"
 ---
 # <a name="idn-element-uri-settings"></a>\<IDN >-Element (Netzwerkeinstellungen)
 Gibt an, ob es sich bei Analyse Internationalized Domain Name (IDN) an den Domänennamen angewendet wird.  
   
 ## <a name="schema-hierarchy"></a>Schemahierarchie  
- [\<Configuration >-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<URI >-Elements (Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -97,4 +97,4 @@ Gibt an, ob es sich bei Analyse Internationalized Domain Name (IDN) an den Domä
 
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

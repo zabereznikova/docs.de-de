@@ -6,10 +6,10 @@ helpviewer_keywords:
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
 ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314697"
 ---
 # <a name="framework-property-metadata"></a>Framework-Eigenschaftenmetadaten
@@ -27,7 +27,7 @@ Die Optionen für Framework-Eigenschaftenmetadaten werden für die Eigenschaften
   
 -   Berichte zu Layouteigenschaften, die sich auf das übergeordnete Element eines Elements (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>). Einige Beispiele, in denen diese Flags werden standardmäßig festgelegt, sind <xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType> und <xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>.  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>sein. Standardmäßig erben Abhängigkeitseigenschaften keine Werte. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> ermöglicht dem Vererbungspfad auch in einer visuellen Struktur übertragen der für einige Szenarien für das Steuerelement Zusammensetzung erforderlich ist.  
+-   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. Standardmäßig erben Abhängigkeitseigenschaften keine Werte. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> ermöglicht dem Vererbungspfad auch in einer visuellen Struktur übertragen der für einige Szenarien für das Steuerelement Zusammensetzung erforderlich ist.  
   
     > [!NOTE]
     >  Im Kontext mit Eigenschaftswerten bedeutet der Begriff „erbt“ für Abhängigkeitseigenschaften etwas Bestimmtes. Das bedeutet, dass untergeordnete Elemente den tatsächlichen Abhängigkeitseigenschaftswert von übergeordneten Elementen erben können, aufgrund einer Funktion der WPF-Frameworkebene des [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-Eigenschaftensystems. Dies hat nichts mit verwaltetem Codetypen und Vererbung der Member über abgeleitete Typen zu tun. Weitere Informationen finden Sie unter [Vererbung von Eigenschaftswerten](property-value-inheritance.md).  

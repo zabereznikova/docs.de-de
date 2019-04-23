@@ -5,10 +5,10 @@ ms.assetid: 30c2d66c-04a8-41a5-ad31-646b937f61b5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fbde11672dc17f80a45defc0a55bcf841e83c324
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325071"
 ---
 # <a name="mitigation-deserialization-of-objects-across-app-domains"></a>Entschärfung: Deserialisierung von Objekten über App-Domänen
@@ -50,4 +50,4 @@ In Fällen, in denen eine App zwei oder mehr App-Domänen mit unterschiedlichen 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Laufzeitänderungen](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)
+- [Änderungen zur Laufzeit](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-5-1.md)

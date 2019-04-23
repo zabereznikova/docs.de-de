@@ -5,10 +5,10 @@ ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e25f044247064db26e4e1e74590d6f4970fe4477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318779"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>Tutorial: Verwenden von ML.NET zur Klassifizierung von GitHub-Issues in einem Szenario mit Multiklassenklassifizierung
@@ -50,7 +50,7 @@ Dieses Tutorial folgt einem Machine Learning-Workflow, der den geordneten Ablauf
 
 Die Workflowphasen lauten wie folgt:
 
-1. **Das Problem verstehen**
+1. **Verstehen des Problems**
 2. **Vorbereiten Ihrer Daten**
    * **Laden der Daten**
    * **Extrahieren von Funktionen (Transformieren von Daten)**
@@ -58,7 +58,7 @@ Die Workflowphasen lauten wie folgt:
    * **Trainieren des Modells**
    * **Evaluieren des Modells**
 4. **Bereitstellen des Modells**
-   * **Verwenden des Modells zum Treffen von Vorhersagen**
+   * **Vorhersagen treffen mit dem Modell**
 
 ### <a name="understand-the-problem"></a>Das Problem verstehen
 
@@ -177,7 +177,7 @@ Entfernen Sie die vorhandene Klassendefinition, und fügen Sie der Datei *GitHub
 * `Title` enthält den Titel des GitHub-Issues.
 * `Description` enthält die Beschreibung des GitHub-Issues.
 
-`IssuePrediction` ist die Klasse, die für die Vorhersage verwendet wird, nachdem das Modell trainiert wurde. Sie verfügt über ein einzelnes `string`- (`Area`) und ein `PredictedLabel` `ColumnName`-Attribut. Das `Label` dient zum Erstellen und Trainieren des Modells, und es wird auch mit einem zweiten Dataset verwendet, um das Modell zu evaluieren. Das `PredictedLabel` wird während der Vorhersage und Evaluierung verwendet. Für die Evaluierung werden eine Eingabe mit Trainingsdaten, die vorhergesagten Werte und das Modell verwendet.
+Die `IssuePrediction`-Klasse wird für die Vorhersage verwendet, nachdem das Modell trainiert wurde. Sie verfügt über ein einzelnes `string`- (`Area`) und ein `PredictedLabel` `ColumnName`-Attribut. Das `Label` dient zum Erstellen und Trainieren des Modells, und es wird auch mit einem zweiten Dataset verwendet, um das Modell zu evaluieren. Das `PredictedLabel` wird während der Vorhersage und Evaluierung verwendet. Für die Evaluierung werden eine Eingabe mit Trainingsdaten, die vorhergesagten Werte und das Modell verwendet.
 
 Beim Erstellen eines Modells mit ML.NET erstellen Sie zunächst eine <xref:Microsoft.ML.MLContext>-Klasse. `MLContext` ist im Prinzip vergleichbar mit der Verwendung von `DbContext` in Entity Framework. Die Umgebung bietet einen Kontext für Ihren ML-Job, der für die Verfolgung und Protokollierung von Ausnahmen verwendet werden kann.
 
@@ -203,8 +203,8 @@ Das Datenschema wurde bereits beim Erstellen der `GitHubIssue`-Klasse definiert.
 
 * Die erste Spalte: `ID` (ID des GitHub-Issues)
 * Die zweite Spalte: `Area` (Vorhersage für das Training)
-* Die dritte Spalte `Title` (Titel des GitHub-Issues) ist das erste [Feature](../resources/glossary.md##feature) zur Vorhersage von `Area`
-* Die vierte Spalte `Description` ist das zweite Feature für die Vorhersage von `Area`
+* Die dritte Spalte `Title` (Titel des GitHub-Issues) ist das erste [Feature](../resources/glossary.md##feature) zur Vorhersage von `Area`.
+* Die vierte Spalte `Description` ist das zweite Feature für die Vorhersage von `Area`.
 
 Fügen Sie nach der Initialisierung von `mlContext` den folgenden Code hinzu, um die globale Variable `_trainingDataView` zur Verwendung für die Pipeline zu initialisieren und zu laden:
 

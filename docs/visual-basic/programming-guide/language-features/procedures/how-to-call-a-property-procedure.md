@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
 ms.openlocfilehash: d05c1b63f5567ade9935f80ecc022eb4840e0af0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318746"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>Vorgehensweise: Aufrufen einer Eigenschaftenprozedur (Visual Basic)
@@ -56,12 +56,12 @@ Sie aufrufen eine Eigenschaftenprozedur zum Speichern eines Werts in der Eigensc
 
 - [Eigenschaftenprozeduren](./property-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
-- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](./differences-between-properties-and-variables.md)
-- [Vorgehensweise: Erstellen einer Eigenschaft](./how-to-create-a-property.md)
-- [Vorgehensweise: Deklarieren einer Eigenschaft mit gemischten Zugriffsebenen](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Vorgehensweise: Erstellen Sie eine Eigenschaft](./how-to-create-a-property.md)
+- [Vorgehensweise: Deklarieren Sie eine Eigenschaft mit gemischten Zugriffsebenen](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Vorgehensweise: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic](./how-to-declare-and-call-a-default-property.md)
-- [Vorgehensweise: Ablegen eines Werts in eine Eigenschaft](./how-to-put-a-value-in-a-property.md)
+- [Vorgehensweise: Das Ablegen eines Werts in einer Eigenschaft](./how-to-put-a-value-in-a-property.md)
 - [Vorgehensweise: Abrufen eines Werts aus einer Eigenschaft](./how-to-get-a-value-from-a-property.md)
 - [Get-Anweisung](../../../../visual-basic/language-reference/statements/get-statement.md)
 - [Set-Anweisung](../../../../visual-basic/language-reference/statements/set-statement.md)

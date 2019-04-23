@@ -7,10 +7,10 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316738"
 ---
 # <a name="key-frame-animations-overview"></a>Übersicht über Keyframe-Animationen
@@ -46,11 +46,11 @@ Dieses Thema bietet eine Einführung in Keyframe-Animationen. Mit Keyframe-Anima
   
  Die Keyframe-Animation-Klassen gehören zu den <xref:System.Windows.Media.Animation> Namespace und die folgende Benennungskonvention befolgen:  
   
- *\<Type>* `AnimationUsingKeyFrames`  
+ *\<Typ>* `AnimationUsingKeyFrames`  
   
  Wobei *\<Typ>* der Wertetyp ist, den die Klasse animiert.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Stellt die folgenden Keyframe-Animation-Klassen.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet folgende Keyframe-Animationsklassen.  
   
 |Eigenschaftentyp|Entsprechende From/To/By-Animationsklassen|Unterstützte Interpolationsmethoden|  
 |-------------------|------------------------------------------------|-------------------------------------|  
@@ -79,7 +79,7 @@ Dieses Thema bietet eine Einführung in Keyframe-Animationen. Mit Keyframe-Anima
 ## <a name="target-values-key-frames-and-key-times"></a>Zielwerte (Keyframes) und Schlüsselzeiten  
  Ebenso wie es verschiedene Typen von Keyframe-Animationen zum Animieren verschiedener Eigenschaftentypen gibt, gibt es auch verschiedene Typen von Keyframe-Objekten: einen für jeden animierten Werttyp und jede unterstützte Interpolationsmethode. Keyframe-Typen entsprechen der folgenden Benennungskonvention:  
   
- *\<InterpolationMethod>\<Type>* `KeyFrame`  
+ *\<InterpolationMethod>\<Typ>* `KeyFrame`  
   
  Wobei *\<InterpolationMethod>* für die Interpolationsmethode steht, die der Keyframe verwendet, und *\<Typ>* für den Werttyp, den die Klasse animiert. Eine Keyframe-Animation, die alle drei Interpolationsmethoden unterstützt, besitzt drei Keyframe-Typen, die Sie verwenden können. Sie können z.B. drei Keyframe-Typen mit einem <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>, <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>, und <xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>. (Interpolationsmethoden werden in einem späteren Abschnitt ausführlich beschrieben.)  
   
@@ -292,5 +292,5 @@ Ein Spline für Keyframes mit den Kontrollpunkten (0,25, 0,5) und (0,75, 1,0)
 - [Beispiel für KeyFrame-Animation](https://go.microsoft.com/fwlink/?LinkID=160012)
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über Storyboards](storyboards-overview.md)
-- [Themen zur Vorgehensweise mit Keyframes](key-frame-animation-how-to-topics.md)
+- [Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](key-frame-animation-how-to-topics.md)
 - [Übersicht über Zeitsteuerungsverhalten](timing-behaviors-overview.md)

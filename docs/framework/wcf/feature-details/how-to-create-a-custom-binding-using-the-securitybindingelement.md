@@ -8,17 +8,17 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316803"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Bindung mit dem SecurityBindingElement
 Windows Communication Foundation (WCF) enthält mehrere vom System bereitgestellten Bindungen, die konfiguriert werden können, jedoch bieten keine vollständige Flexibilität, wenn die Sicherheitsoptionen zu konfigurieren, die von WCF unterstützt. Dieses Thema veranschaulicht, wie eine benutzerdefinierte Bindung direkt aus individuellen Bindungselementen erstellt wird, und stellt einige der Sicherheitseinstellungen heraus, die bei der Erstellung einer derartigen Bindung festgelegt werden können. Weitere Informationen zum Erstellen benutzerdefinierter Bindungen finden Sie unter [Erweitern von Bindungen](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> unterstützt nicht die <xref:System.ServiceModel.Channels.IDuplexSessionChannel> Form, die wird von der verwendeten kanalform standardmäßig vom TCP-channel-transport beim <xref:System.ServiceModel.TransferMode> nastaven NA hodnotu <xref:System.ServiceModel.TransferMode.Buffered>. Sie müssen <xref:System.ServiceModel.TransferMode> auf <xref:System.ServiceModel.TransferMode.Streamed> festlegen, um <xref:System.ServiceModel.Channels.SecurityBindingElement> in diesem Szenario verwenden.  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement> unterstützt die <xref:System.ServiceModel.Channels.IDuplexSessionChannel>-Kanalform nicht, die der standardmäßig vom TCP-Transport verwendeten Kanalform entspricht, wenn <xref:System.ServiceModel.TransferMode> auf <xref:System.ServiceModel.TransferMode.Buffered> festgelegt ist. Sie müssen <xref:System.ServiceModel.TransferMode> auf <xref:System.ServiceModel.TransferMode.Streamed> festlegen, um <xref:System.ServiceModel.Channels.SecurityBindingElement> in diesem Szenario verwenden.  
   
 ## <a name="creating-a-custom-binding"></a>Erstellen einer benutzerdefinierten Bindung  
  In WCF Alle Bindungen bestehen *Bindungselemente*. Jedes Bindungselement wird von der <xref:System.ServiceModel.Channels.BindingElement>-Klasse abgeleitet. Bei den standardmäßigen, vom System bereitgestellten Bindungen werden die Bindungselemente für Sie erstellt und konfiguriert, einige der Eigenschaftseinstellungen können jedoch angepasst werden.  

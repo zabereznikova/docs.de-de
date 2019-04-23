@@ -3,10 +3,10 @@ title: Einstellungsprozess
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313150"
 ---
 # <a name="hiring-process"></a>Einstellungsprozess
@@ -18,7 +18,7 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
   
  In diesem Beispiel werden die folgenden Funktionen von [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] veranschaulicht:  
   
--   <xref:System.Activities.Statements.Flowchart> und <xref:System.Activities.Statements.Sequence> Workflows für die Modellierung von Geschäftsprozessen.  
+-   <xref:System.Activities.Statements.Flowchart>-Workflow und <xref:System.Activities.Statements.Sequence>-Workflow zur Modellierung von Geschäftsprozessen  
   
 -   Workflowdienste  
   
@@ -38,9 +38,9 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
   
 -   Komposition von Aktivitäten  
   
--   <xref:System.Activities.Statements.Parallel> Aktivitäten.  
+-   <xref:System.Activities.Statements.Parallel>-Aktivitäten  
   
--   <xref:System.Activities.Statements.CancellationScope> Aktivität.  
+-   <xref:System.Activities.Statements.CancellationScope>-Aktivität  
   
 -   Permanente Zeitgeber (<xref:System.Activities.Statements.Delay>-Aktivität)  
   
@@ -121,10 +121,10 @@ In diesem Beispiel wird veranschaulicht, wie ein Geschäftsprozess mit Messaging
 |Komposition von Aktivitäten|Die Prozessdefinition verwendet die freie Komposition von <xref:System.Activities.Activity>. Das Flussdiagramm enthält verschiedene aufeinanderfolgende sowie parallele Aktivitäten, die wiederum andere Aktivitäten enthalten usw.|HiringRequestService|  
 |Parallele Aktivitäten|-   <xref:System.Activities.Statements.ParallelForEach%601> wird verwendet, um im Posteingang des Firmenchefs sowie der Personalvorständen parallel (wartet auf beiden Personalvorstände Genehmigungsschritt) zu registrieren.<br />-   <xref:System.Activities.Statements.Parallel> wird verwendet, um verschiedene Aufgaben für die Bereinigung in den Abschluss- und Ablehnungsschritten Schritten ausführen|HiringRequestService|  
 |Abbruch des Modells|Im Flussdiagramm wird mit <xref:System.Activities.Statements.CancellationScope> ein Abbruchverhalten erstellt (im vorliegenden Fall werden einige Bereinigungsaufgaben ausgeführt.).|HiringRequestService|  
-|Kundenpersistenzteilnehmer|`HiringRequestPersistenceParticipant` speichert Daten aus einer Workflowvariablen in einer Tabelle in der Personaldatenbank von Contoso gespeichert.|HiringRequestService|  
-|Workflowdienste|`ResumeRequestService` wird mithilfe von Workflowdiensten implementiert. Die Definition des Workflows sowie Informationen zum Dienst sind in ResumeRequestService.xamlx enthalten. Der Dienst ist für die Verwendung von Persistenz und Überwachung konfiguriert.|ResumeRequestService|  
-|Permanente Zeitgeber|`ResumeRequestService` permanente Timer verwendet, definieren Sie die Dauer für eine Stellenausschreibung (sobald dieser abgelaufen ist, die Stellenausschreibung geschlossen).|ResumeRequestService|  
-|Transaktionen|<xref:System.Activities.Statements.TransactionScope> wird verwendet, um sicherzustellen, dass die Konsistenz der Daten während der Ausführung verschiedener Aktivitäten (bei einer neuen Lebenslaufs).|ResumeRequestService|  
+|Kundenpersistenzteilnehmer|Mit `HiringRequestPersistenceParticipant` werden Daten aus einer Workflowvariablen in einer Tabelle erfasst, die in der Personaldatenbank von Contoso gespeichert ist.|HiringRequestService|  
+|Workflowdienste|`ResumeRequestService` wird unter Verwendung von Workflowdiensten implementiert. Die Definition des Workflows sowie Informationen zum Dienst sind in ResumeRequestService.xamlx enthalten. Der Dienst ist für die Verwendung von Persistenz und Überwachung konfiguriert.|ResumeRequestService|  
+|Permanente Zeitgeber|`ResumeRequestService` definiert mit permanenten Zeitgebern den Zeitraum für eine Stellenausschreibung (sobald dieser abgelaufen ist, wird die Stellenausschreibung geschlossen).|ResumeRequestService|  
+|Transaktionen|Mit <xref:System.Activities.Statements.TransactionScope> wird die Konsistenz der Daten während der Ausführung verschiedener Aktivitäten (bei der Erfassung eines neuen Lebenslaufs) sichergestellt.|ResumeRequestService|  
 |Transaktionen|Der benutzerdefinierte Persistenzteilnehmer (`HiringRequestPersistenceParticipant`) und der benutzerdefinierte Überwachungsteilnehmer (`HistoryFileTrackingParticipant`) verwenden die gleiche Transaktion.|HiringRequestService|  
 |Verwenden von [!INCLUDE[wf1](../../../../includes/wf1-md.md)] in [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Anwendungen|Auf die Workflows wird durch zwei [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Anwendungen zugegriffen.|InternalClient/CareersWebSite|  
   

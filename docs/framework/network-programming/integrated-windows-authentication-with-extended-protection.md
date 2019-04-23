@@ -2,12 +2,12 @@
 title: Integrierte Windows-Authentifizierung mit erweitertem Schutz
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 93156ab346d97259030b001d3a4d8ca4612f48c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591616"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325721"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>Integrierte Windows-Authentifizierung mit erweitertem Schutz
 Es wurden Verbesserungen vorgenommen, die beeinflussen, wie die integrierte Windows-Authentifizierung durch <xref:System.Net.HttpWebRequest>, <xref:System.Net.HttpListener>, <xref:System.Net.Mail.SmtpClient>, <xref:System.Net.Security.SslStream>, <xref:System.Net.Security.NegotiateStream> und verknüpfte Klassen in <xref:System.Net> sowie verknüpfte Namespaces behandelt wird. Unterstützung für erweiterten Schutz wurde zur Verbesserung der Sicherheit hinzugefügt.  
@@ -25,17 +25,17 @@ Es wurden Verbesserungen vorgenommen, die beeinflussen, wie die integrierte Wind
   
  Die Hauptziele lauten wie folgt:  
   
-1.  Unterstützt der Client nach der Aktualisierung den erweiterten Schutz, sollten die Anwendungen allen unterstützten Authentifizierungsprotokollen Kanalbindungs- und Dienstbindungsinformationen bereitstellen. Kanalbindungsinformationen können nur bereitgestellt werden, wenn ein Kanal (TLS) vorhanden ist, an den sie sich binden können. Dienstbindungsinformationen sollten immer bereitgestellt werden.  
+1. Unterstützt der Client nach der Aktualisierung den erweiterten Schutz, sollten die Anwendungen allen unterstützten Authentifizierungsprotokollen Kanalbindungs- und Dienstbindungsinformationen bereitstellen. Kanalbindungsinformationen können nur bereitgestellt werden, wenn ein Kanal (TLS) vorhanden ist, an den sie sich binden können. Dienstbindungsinformationen sollten immer bereitgestellt werden.  
   
-2.  Aktualisierte und ordnungsgemäß konfigurierte Server überprüfen möglicherweise die Kanalbindungs- und die Dienstbindungsinformationen, wenn sie im Clientauthentifizierungstoken vorhanden sind. Stimmen die Kanalbindungen nicht überein, wird der Authentifizierungsversuch abgelehnt. Je nach Bereitstellungsszenario überprüfen die Server möglicherweise die Kanalbindung, die Dienstbindung oder beides.  
+2. Aktualisierte und ordnungsgemäß konfigurierte Server überprüfen möglicherweise die Kanalbindungs- und die Dienstbindungsinformationen, wenn sie im Clientauthentifizierungstoken vorhanden sind. Stimmen die Kanalbindungen nicht überein, wird der Authentifizierungsversuch abgelehnt. Je nach Bereitstellungsszenario überprüfen die Server möglicherweise die Kanalbindung, die Dienstbindung oder beides.  
   
-3.  Aktualisierte Server können abwärtskompatible Clientanforderungen, die die Kanalbindungsinformationen der Richtlinie nicht enthalten, annehmen oder ablehnen.  
+3. Aktualisierte Server können abwärtskompatible Clientanforderungen, die die Kanalbindungsinformationen der Richtlinie nicht enthalten, annehmen oder ablehnen.  
   
  Die durch den erweiterten Schutz verwendeten Informationen bestehen aus einem oder beiden der folgenden zwei Elemente:  
   
-1.  einem Kanalbindungstoken oder CBT (Channel Binding Token)  
+1. einem Kanalbindungstoken oder CBT (Channel Binding Token)  
   
-2.  Dienstbindungsinformationen in Form eines Dienstprinzipalnamens oder SPN (Service Principal Name)  
+2. Dienstbindungsinformationen in Form eines Dienstprinzipalnamens oder SPN (Service Principal Name)  
   
  Dienstbindungsinformationen deuten darauf hin, dass sich ein Client bei einem bestimmten Dienstendpunkt authentifizieren möchte. Sie werden mit den folgenden Eigenschaften vom Client zum Server übermittelt:  
   
@@ -122,11 +122,11 @@ Es wurden Verbesserungen vorgenommen, die beeinflussen, wie die integrierte Wind
   
  Wird in dieser Konfiguration eine Anforderung über einen sicheren Außenkanal an den Server gesendet, wird der Außenkanal nach einer Kanalbindung abgefragt. Diese Kanalbindung wird an die SSPI-Authentifizierungsaufrufe übergeben, die überprüfen, ob die Kanalbindung im Authentifizierungsblob übereinstimmt. Es gibt drei mögliche Ergebnisse:  
   
-1.  Das zugrunde liegende Betriebssystem des Servers unterstützt den erweiterten Schutz nicht. Die Anforderung wird der Anwendung nicht verfügbar gemacht, und die Antwort „Nicht autorisiert (401).“ wird an den Client zurückgegeben. Eine Nachricht mit dem Grund für den Fehler wird in der Ablaufverfolgungsquelle <xref:System.Net.HttpListener> protokolliert.  
+1. Das zugrunde liegende Betriebssystem des Servers unterstützt den erweiterten Schutz nicht. Die Anforderung wird der Anwendung nicht verfügbar gemacht, und die Antwort „Nicht autorisiert (401).“ wird an den Client zurückgegeben. Eine Nachricht mit dem Grund für den Fehler wird in der Ablaufverfolgungsquelle <xref:System.Net.HttpListener> protokolliert.  
   
-2.  Es tritt beim SSPI-Aufruf ein Fehler auf. Dies bedeutet entweder, dass die vom Client angegebene Kanalbindung nicht mit dem erwarteten Wert übereinstimmt, der aus dem Außenkanal abgerufen wurde, oder dass der Client bei der Konfiguration der erweiterten Schutzrichtlinie auf dem Server für <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> keine Kanalbindung bereitgestellt hat. In beiden Fällen wird die Anforderung der Anwendung nicht verfügbar gemacht, und die Antwort „Nicht autorisiert (401)“ wird an den Client zurückgegeben. Eine Nachricht mit dem Grund für den Fehler wird in der Ablaufverfolgungsquelle <xref:System.Net.HttpListener> protokolliert.  
+2. Es tritt beim SSPI-Aufruf ein Fehler auf. Dies bedeutet entweder, dass die vom Client angegebene Kanalbindung nicht mit dem erwarteten Wert übereinstimmt, der aus dem Außenkanal abgerufen wurde, oder dass der Client bei der Konfiguration der erweiterten Schutzrichtlinie auf dem Server für <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> keine Kanalbindung bereitgestellt hat. In beiden Fällen wird die Anforderung der Anwendung nicht verfügbar gemacht, und die Antwort „Nicht autorisiert (401)“ wird an den Client zurückgegeben. Eine Nachricht mit dem Grund für den Fehler wird in der Ablaufverfolgungsquelle <xref:System.Net.HttpListener> protokolliert.  
   
-3.  Der Client gibt die richtige Kanalbindung an oder kann ohne Angabe einer Kanalbindung die Verbindung herstellen, da die erweiterte Schutzrichtlinie auf dem Server mit <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> konfiguriert ist. Die Anforderung wird für die Verarbeitung an die Anwendung zurückgegeben. Die Dienstnamenüberprüfung wird nicht automatisch ausgeführt. Eine Anwendung führt möglicherweise eine eigene Überprüfung des Dienstnamens mithilfe der <xref:System.Net.HttpListenerRequest.ServiceName%2A>-Eigenschaft durch. Dies ist unter diesen Umständen jedoch redundant.  
+3. Der Client gibt die richtige Kanalbindung an oder kann ohne Angabe einer Kanalbindung die Verbindung herstellen, da die erweiterte Schutzrichtlinie auf dem Server mit <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> konfiguriert ist. Die Anforderung wird für die Verarbeitung an die Anwendung zurückgegeben. Die Dienstnamenüberprüfung wird nicht automatisch ausgeführt. Eine Anwendung führt möglicherweise eine eigene Überprüfung des Dienstnamens mithilfe der <xref:System.Net.HttpListenerRequest.ServiceName%2A>-Eigenschaft durch. Dies ist unter diesen Umständen jedoch redundant.  
   
  Führt eine Anwendung eigene SSPI-Aufrufe zur Durchführung der Authentifizierung auf der Basis von Blobs durch, die im Text einer HTTP-Anforderung ausgetauscht werden, und ist eine Unterstützung der Kanalbindung erwünscht, muss die Anwendung die erwartete Kanalbindung vom sicheren Außenkanal mithilfe von <xref:System.Net.HttpListener> abrufen, um sie an die native Win32-Funktion [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) zu übergeben. Verwenden Sie hierfür die Eigenschaft <xref:System.Net.HttpListenerRequest.TransportContext%2A>, und rufen Sie zum Abrufen des CBT die Methode <xref:System.Net.TransportContext.GetChannelBinding%2A> auf. Nur Endpunktbindungen werden unterstützt. Wird etwas anderes als <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> angegeben, wird eine <xref:System.NotSupportedException> ausgelöst. Unterstützt das zugrunde liegende Betriebssystem die Kanalbindung, gibt die Methode <xref:System.Net.TransportContext.GetChannelBinding%2A> ein <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> zurück, das einen Zeiger mit einer Kanalbindung umschließt, die an die Funktion [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) als im Parameter `pInput` übergebener Member „PvBuffer“ einer Struktur „SecBuffer“ übergeben wird. Die Eigenschaft <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> enthält die Länge der Kanalbindung in Bytes. Unterstützt das zugrunde liegende Betriebssystem keine Kanalbindungen, gibt die Funktion `null` zurück.  
   
@@ -136,18 +136,19 @@ Es wurden Verbesserungen vorgenommen, die beeinflussen, wie die integrierte Wind
   
  Wird in dieser Konfiguration eine Anforderung ohne sicheren Außenkanal an den Server gesendet, erfolgt die Authentifizierung üblicherweise ohne Überprüfung der Kanalbindung. Bei erfolgreicher Authentifizierung wird der Kontext nach dem vom Client bereitgestellten Dienstnamen abgefragt und anhand der Liste der zulässigen Dienstnamen überprüft. Es gibt vier mögliche Ergebnisse:  
   
-1.  Das zugrunde liegende Betriebssystem des Servers unterstützt den erweiterten Schutz nicht. Die Anforderung wird der Anwendung nicht verfügbar gemacht, und die Antwort „Nicht autorisiert (401).“ wird an den Client zurückgegeben. Eine Nachricht mit dem Grund für den Fehler wird in der Ablaufverfolgungsquelle <xref:System.Net.HttpListener> protokolliert.  
+1. Das zugrunde liegende Betriebssystem des Servers unterstützt den erweiterten Schutz nicht. Die Anforderung wird der Anwendung nicht verfügbar gemacht, und die Antwort „Nicht autorisiert (401).“ wird an den Client zurückgegeben. Eine Nachricht mit dem Grund für den Fehler wird in der Ablaufverfolgungsquelle <xref:System.Net.HttpListener> protokolliert.  
   
-2.  Das zugrunde liegende Betriebssystem des Clients unterstützt den erweiterten Schutz nicht. Der Authentifizierungsversuch wird in der <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>-Konfiguration erfolgreich ausgeführt, und die Anforderung wird an die Anwendung zurückgegeben. Es tritt in der <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>-Konfiguration beim Authentifizierungsversuch ein Fehler auf. Die Anforderung wird der Anwendung nicht verfügbar gemacht, und die Antwort „Nicht autorisiert (401).“ wird an den Client zurückgegeben. Eine Nachricht mit dem Grund für den Fehler wird in der Ablaufverfolgungsquelle <xref:System.Net.HttpListener> protokolliert.  
+2. Das zugrunde liegende Betriebssystem des Clients unterstützt den erweiterten Schutz nicht. Der Authentifizierungsversuch wird in der <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported>-Konfiguration erfolgreich ausgeführt, und die Anforderung wird an die Anwendung zurückgegeben. Es tritt in der <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always>-Konfiguration beim Authentifizierungsversuch ein Fehler auf. Die Anforderung wird der Anwendung nicht verfügbar gemacht, und die Antwort „Nicht autorisiert (401).“ wird an den Client zurückgegeben. Eine Nachricht mit dem Grund für den Fehler wird in der Ablaufverfolgungsquelle <xref:System.Net.HttpListener> protokolliert.  
   
-3.  Das zugrunde liegende Betriebssystem des Clients unterstützt den erweiterten Schutz, doch in der Anwendung wurde keine Dienstbindung angegeben. Die Anforderung wird der Anwendung nicht verfügbar gemacht, und die Antwort „Nicht autorisiert (401).“ wird an den Client zurückgegeben. Eine Nachricht mit dem Grund für den Fehler wird in der Ablaufverfolgungsquelle <xref:System.Net.HttpListener> protokolliert.  
+3. Das zugrunde liegende Betriebssystem des Clients unterstützt den erweiterten Schutz, doch in der Anwendung wurde keine Dienstbindung angegeben. Die Anforderung wird der Anwendung nicht verfügbar gemacht, und die Antwort „Nicht autorisiert (401).“ wird an den Client zurückgegeben. Eine Nachricht mit dem Grund für den Fehler wird in der Ablaufverfolgungsquelle <xref:System.Net.HttpListener> protokolliert.  
   
-4.  Es wurde vom Client eine Dienstbindung angegeben. Die Dienstbindung wird mit der Liste der zulässigen Dienstbindungen verglichen. Bei einer Übereinstimmung wird die Anforderung an die Anwendung zurückgegeben. Andernfalls wird die Anforderung der Anwendung nicht verfügbar gemacht, und die Antwort „Nicht autorisiert (401)“ wird automatisch an den Client zurückgegeben. Eine Nachricht mit dem Grund für den Fehler wird in der Ablaufverfolgungsquelle <xref:System.Net.HttpListener> protokolliert.  
+4. Es wurde vom Client eine Dienstbindung angegeben. Die Dienstbindung wird mit der Liste der zulässigen Dienstbindungen verglichen. Bei einer Übereinstimmung wird die Anforderung an die Anwendung zurückgegeben. Andernfalls wird die Anforderung der Anwendung nicht verfügbar gemacht, und die Antwort „Nicht autorisiert (401)“ wird automatisch an den Client zurückgegeben. Eine Nachricht mit dem Grund für den Fehler wird in der Ablaufverfolgungsquelle <xref:System.Net.HttpListener> protokolliert.  
   
  Reicht diese einfache Vorgehensweise mit einer Liste aus zulässigen Dienstnamen nicht aus, kann eine Anwendung durch Abfragen der Eigenschaft <xref:System.Net.HttpListenerRequest.ServiceName%2A> möglicherweise eine eigene Überprüfung der Dienstnamen bereitstellen. Im 1. und 2. Fall gibt die Eigenschaft `null` zurück. Im 3. Fall wird eine leere Zeichenfolge zurückgegeben. Im 4. Fall wird der vom Client angegebene Dienstname zurückgegeben.  
   
  Diese erweiterten Schutzfunktionen können auch von Serveranwendungen für die Authentifizierung mit anderen Anforderungstypen und bei vertrauenswürdigen Proxys verwendet werden.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Security.Authentication.ExtendedProtection>
 - <xref:System.Security.Authentication.ExtendedProtection.Configuration>

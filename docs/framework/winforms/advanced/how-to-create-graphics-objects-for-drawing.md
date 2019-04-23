@@ -11,10 +11,10 @@ helpviewer_keywords:
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
 ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324200"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen
@@ -165,14 +165,14 @@ Bevor Sie Linien und Formen zeichnen können, Rendern von Text oder anzeigen und
   
     |Zum Rendern|Siehe|  
     |---------------|---------|  
-    |Linien|[Vorgehensweise: Zeichnen einer Linie in Windows Forms](how-to-draw-a-line-on-a-windows-form.md)|  
-    |Formen|[Vorgehensweise: Zeichnen der Kontur einer Form](how-to-draw-an-outlined-shape.md)|  
-    |Text|[Vorgehensweise: Zeichnen von Text in einem Windows Form](how-to-draw-text-on-a-windows-form.md)|  
-    |Bilder|[Vorgehensweise: Darstellen von Bildern mit GDI+](how-to-render-images-with-gdi.md)|  
+    |Linien|[Vorgehensweise: Zeichnen einer Linie in einem Windows Form](how-to-draw-a-line-on-a-windows-form.md)|  
+    |Formen|[Vorgehensweise: Zeichnen der Kontur eine Form](how-to-draw-an-outlined-shape.md)|  
+    |Text|[Vorgehensweise: Zeichnen von Text in einem Windows Form](how-to-draw-text-on-a-windows-form.md)|  
+    |Bilder|[Vorgehensweise: Darstellen von Bildern mit GDI +](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erste Schritte mit der Grafikprogrammierung](getting-started-with-graphics-programming.md)
+- [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Linien, Kurven und Formen](lines-curves-and-shapes.md)
-- [Vorgehensweise: Darstellen von Bildern mit GDI+](how-to-render-images-with-gdi.md)
+- [Vorgehensweise: Darstellen von Bildern mit GDI +](how-to-render-images-with-gdi.md)

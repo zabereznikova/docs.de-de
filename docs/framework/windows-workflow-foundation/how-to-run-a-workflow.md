@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
 ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319923"
 ---
 # <a name="how-to-run-a-workflow"></a>Vorgehensweise: Ausführen eines Workflows
@@ -62,7 +62,7 @@ In diesem Thema ist eine Fortsetzung der Windows Workflow Foundation: Erste Schr
     WorkflowInvoker.Invoke(workflow1);
     ```
 
-     Der generierte Hostingcode verwendet <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> bietet eine einfache Möglichkeit zum Aufrufen eines Workflows, als ob sie wurden von einem Methodenaufruf, und kann verwendet werden, nur für Workflows, die keine Persistenz verwenden. <xref:System.Activities.WorkflowApplication> bietet ein umfangreicheres Modell zum Ausführen von Workflows, die Benachrichtigungen über Lebenszyklusereignisse, ausführungssteuerung, Wiederaufnahme von Lesezeichen und Persistenz enthalten. In diesem Beispiel werden Lesezeichen verwendet, und <xref:System.Activities.WorkflowApplication> wird zum Hosten des Workflows genutzt. Fügen Sie die folgende `using` - oder **Imports** -Anweisung am Anfang von **Program.cs** oder **Module1.vb** unter der vorhandenen **using** - oder **Imports** -Anweisung hinzu.
+     Der generierte Hostingcode verwendet <xref:System.Activities.WorkflowInvoker>. <xref:System.Activities.WorkflowInvoker> stellt eine einfache Möglichkeit zum Aufrufen eines Workflows bereit, so als handelte es sich um einen Methodenaufruf, und kann nur für Workflows verwendet werden, die keine Persistenz verwenden. <xref:System.Activities.WorkflowApplication> bietet ein umfangreicheres Modell zum Ausführen von Workflows, die Benachrichtigungen über Lebenszyklusereignisse, Ausführungssteuerung, Wiederaufnahme von Lesezeichen und Persistenz enthalten. In diesem Beispiel werden Lesezeichen verwendet, und <xref:System.Activities.WorkflowApplication> wird zum Hosten des Workflows genutzt. Fügen Sie die folgende `using` - oder **Imports** -Anweisung am Anfang von **Program.cs** oder **Module1.vb** unter der vorhandenen **using** - oder **Imports** -Anweisung hinzu.
 
     ```vb
     Imports NumberGuessWorkflowActivities
@@ -164,8 +164,8 @@ In diesem Thema ist eine Fortsetzung der Windows Workflow Foundation: Erste Schr
 - <xref:System.Activities.WorkflowApplication>
 - <xref:System.Activities.Bookmark>
 - [Windows Workflow Foundation-Programmierung](programming.md)
-- [Lernprogramm 'Erste Schritte'](getting-started-tutorial.md)
+- [Tutorial mit ersten Schritten](getting-started-tutorial.md)
 - [Vorgehensweise: Erstellen eines Workflows](how-to-create-a-workflow.md)
-- [Vorgehensweise: Erstellen und Ausführen eines Workflows mit langer Laufzeit](how-to-create-and-run-a-long-running-workflow.md)
+- [Vorgehensweise: Erstellen und Ausführen einer langen Workflow ausgeführt wird](how-to-create-and-run-a-long-running-workflow.md)
 - [Warten auf Eingabe in einem Workflow](waiting-for-input-in-a-workflow.md)
 - [Hosten von Workflows](hosting-workflows.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - key frames [WPF], animating colors with
 ms.assetid: ab04ffa6-4de9-4d5b-a3b4-4e35d5b2ef35
 ms.openlocfilehash: e579c4beb757ccf58eb1b9ca1f3852a5b96cac1a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326085"
 ---
 # <a name="how-to-animate-color-by-using-key-frames"></a>Vorgehensweise: Animieren von Color mithilfe von Keyframes
@@ -40,4 +40,4 @@ Dieses Beispiel zeigt, wie Sie animieren der <xref:System.Windows.Media.SolidCol
 - <xref:System.Windows.Media.SolidColorBrush>
 - <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>
 - [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)
-- [Themen zur Vorgehensweise mit Keyframes](key-frame-animation-how-to-topics.md)
+- [Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](key-frame-animation-how-to-topics.md)

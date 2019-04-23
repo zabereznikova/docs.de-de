@@ -3,10 +3,10 @@ title: Variablen und Argumente
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
 ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320742"
 ---
 # <a name="variables-and-arguments"></a>Variablen und Argumente
@@ -87,7 +87,7 @@ public class Prompt : Activity
 >  Aktivitäten, die einen einzelnen Wert zurückgeben, können von <xref:System.Activities.Activity%601>, <xref:System.Activities.NativeActivity%601> oder <xref:System.Activities.CodeActivity%601> abgeleitet werden. Diese Aktivitäten verfügen über ein klar definiertes <xref:System.Activities.OutArgument%601>-Objekt mit dem Namen <xref:System.Activities.Activity%601.Result%2A>, das den Rückgabewert der Aktivität enthält.  
   
 ### <a name="using-variables-and-arguments-in-workflows"></a>Verwenden von Variablen und Argumenten in Workflows  
- Im folgenden Beispiel wird gezeigt, wie Variablen und Argumente in einem Workflow verwendet werden. Der Workflow ist eine Sequenz, die drei Variablen deklariert: `var1`, `var2` und `var3`. Die erste Aktivität im Workflow ist eine `Assign`-Aktivität, die den Wert der `var1`-Variable dem Wert der `var2`-Variable zuweist. Darauf folgt eine `WriteLine`-Aktivität, die den Wert der `var2`-Variable druckt. Als Nächstes kommt eine andere `Assign`-Aktivität, die dem Wert der `var2`-Variable den Wert der `var3`-Variable zuweist. Schließlich folgt eine weitere `WriteLine`-Aktivität, die den Wert der `var3`-Variable druckt. Die erste `Assign`-Aktivität verwendet `InArgument<string>` und `OutArgument<string>`-Objekte, die explizit die Bindungen für die Argumente der Aktivität darstellen. `InArgument<string>` Dient zum <xref:System.Activities.Statements.Assign.Value%2A> , da der Wert übertragen wird die <xref:System.Activities.Statements.Assign%601> Aktivitäten über seine <xref:System.Activities.Statements.Assign.Value%2A> Argument und `OutArgument<string>` dient zur <xref:System.Activities.Statements.Assign.To%2A> , da der Wert von übertragen wird die <xref:System.Activities.Statements.Assign.To%2A> -Argument in die Variable. Die zweite `Assign`-Aktivität erreicht dasselbe Ziel mit einer kompakteren Syntax, die ansonsten äquivalent ist und implizite Umwandlungen verwendet. Die `WriteLine`-Aktivitäten verwenden ebenfalls die kompakte Syntax.  
+ Im folgenden Beispiel wird gezeigt, wie Variablen und Argumente in einem Workflow verwendet werden. Der Workflow ist eine Sequenz, die drei Variablen deklariert: `var1`, `var2` und `var3`. Die erste Aktivität im Workflow ist eine `Assign`-Aktivität, die den Wert der `var1`-Variable dem Wert der `var2`-Variable zuweist. Darauf folgt eine `WriteLine`-Aktivität, die den Wert der `var2`-Variable druckt. Als Nächstes kommt eine andere `Assign`-Aktivität, die dem Wert der `var2`-Variable den Wert der `var3`-Variable zuweist. Schließlich folgt eine weitere `WriteLine`-Aktivität, die den Wert der `var3`-Variable druckt. Die erste `Assign`-Aktivität verwendet `InArgument<string>` und `OutArgument<string>`-Objekte, die explizit die Bindungen für die Argumente der Aktivität darstellen. `InArgument<string>` wird für <xref:System.Activities.Statements.Assign.Value%2A> verwendet, weil der Wert durch das <xref:System.Activities.Statements.Assign%601>-Argument in die <xref:System.Activities.Statements.Assign.Value%2A>-Aktivität übertragen wird, und `OutArgument<string>` wird für <xref:System.Activities.Statements.Assign.To%2A> verwendet, weil der Wert aus dem <xref:System.Activities.Statements.Assign.To%2A>-Argument in die Variable übertragen wird. Die zweite `Assign`-Aktivität erreicht dasselbe Ziel mit einer kompakteren Syntax, die ansonsten äquivalent ist und implizite Umwandlungen verwendet. Die `WriteLine`-Aktivitäten verwenden ebenfalls die kompakte Syntax.  
   
 ```csharp  
 // Declare three variables; the first one is given an initial value.  

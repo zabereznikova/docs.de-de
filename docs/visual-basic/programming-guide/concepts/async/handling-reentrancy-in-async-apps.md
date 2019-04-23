@@ -3,28 +3,28 @@ title: Umgang mit Ablaufinvarianz in asynchronen Anwendungen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324785"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>Umgang mit Ablaufinvarianz in asynchronen Anwendungen (Visual Basic)
 Wenn Sie asynchronen Code in der App einschließen, sollten Sie erneutes Eintreten, also den erneuten Beginn eines asynchronen Vorgangs vor seinem Abschließen, berücksichtigen und möglicherweise verhindern. Wenn Sie Möglichkeiten für erneutes Eintreten nicht identifizieren und behandeln, kann dies zu unerwarteten Ergebnissen führen.  
   
- **In diesem Thema**  
+ **Inhalt**  
   
--   [Erkennen von Reentranz](#BKMK_RecognizingReentrancy)  
+-   [Erkennen von Ablaufinvarianz](#BKMK_RecognizingReentrancy)  
   
--   [Arbeiten mit Reentranz](#BKMK_HandlingReentrancy)  
+-   [Umgang mit Ablaufinvarianz](#BKMK_HandlingReentrancy)  
   
-    -   [Die Schaltfläche "Start" deaktivieren](#BKMK_DisableTheStartButton)  
+    -   [Die Schaltfläche „Start“ deaktivieren](#BKMK_DisableTheStartButton)  
   
     -   [Den Vorgang abbrechen und neu starten](#BKMK_CancelAndRestart)  
   
     -   [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](#BKMK_RunMultipleOperations)  
   
--   [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample)  
+-   [Die Beispiel-App überprüfen und ausführen](#BKMD_SettingUpTheExample)  
   
 > [!NOTE]
 >  Um das Beispiel ausführen zu können, muss Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf Ihrem Computer installiert sein.  
@@ -89,7 +89,7 @@ TOTAL bytes returned:  890591
 ## <a name="BKMK_HandlingReentrancy"></a> Umgang mit Ablaufinvarianz  
  Sie können das erneute Eintreten auf verschiedene Weise behandeln, je nachdem, was von der App ausgeführt werden soll. In diesem Thema werden die folgenden Beispiele zur Veranschaulichung verwendet:  
   
--   [Die Schaltfläche "Start" deaktivieren](#BKMK_DisableTheStartButton)  
+-   [Die Schaltfläche „Start“ deaktivieren](#BKMK_DisableTheStartButton)  
   
      Deaktivieren der Schaltfläche **Start**, während der Vorgang ausgeführt wird, sodass der Benutzer ihn nicht unterbrechen kann  
   
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>Die AccessTheWebAsync-Methode  
  In diesem Beispiel wird `AccessTheWebAsync` in zwei Methoden aufgeteilt. Mit der erste Methode, `AccessTheWebAsync`, werden alle Downloadtasks für eine Gruppe gestartet und `pendingWork` wird zum Steuern des Anzeigenprozesses festgelegt. Die Methode verwendet zum gleichzeitigen Starten aller Downloadtasks eine LINQ-Abfrage (Language-Integrated Query) sowie <xref:System.Linq.Enumerable.ToArray%2A>.  
   
- `AccessTheWebAsync` Ruft dann `FinishOneGroupAsync` "await" den Abschluss jedes einzelnen Downloads und die Länge anzuzeigen.  
+ `AccessTheWebAsync` ruft dann `FinishOneGroupAsync` auf, um den Abschluss jedes einzelnen Downloads zu erwarten und die Länge anzuzeigen.  
   
- `FinishOneGroupAsync` Gibt eine Aufgabe, die zugewiesen ist `pendingWork` in `AccessTheWebAsync`. Dieser Wert verhindert die Unterbrechung durch einen anderen Vorgang, bevor die Aufgabe abgeschlossen wurde.  
+ `FinishOneGroupAsync` gibt einen Task zurück, der in `pendingWork` dem Element `AccessTheWebAsync` zugewiesen wird. Dieser Wert verhindert die Unterbrechung durch einen anderen Vorgang, bevor die Aufgabe abgeschlossen wurde.  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  
@@ -679,4 +679,4 @@ End Function
 ## <a name="see-also"></a>Siehe auch
 
 - [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [Asynchronous Programming with Async and Await (Visual Basic) (Asynchrone Programmierung mit Async und Await (Visual Basic))](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

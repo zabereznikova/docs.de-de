@@ -9,10 +9,10 @@ ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314970"
 ---
 # <a name="get-started-with-the-net-framework"></a>Erste Schritte mit .NET Framework
@@ -89,7 +89,7 @@ Weitere Informationen zum Entwickeln von Apps, die auf .NET Framework ausgericht
 
 ## <a name="see-also"></a>Siehe auch
 
-- [.NET Framework – Leitfaden](../index.md)
-- [Neues](../whats-new/index.md)
+- [Leitfaden für .NET Framework](../index.md)
+- [Neuigkeiten](../whats-new/index.md)
 - [.NET API-Browser](../../../api/index.md)
 - [Entwicklungshandbuch](../development-guide.md)

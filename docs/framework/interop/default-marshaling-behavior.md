@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409444"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315763"
 ---
 # <a name="default-marshaling-behavior"></a>Standardmarshallingverhalten
 Das Interop-Marshalling basiert auf Regeln, die vorgeben, wie sich Daten, die Methodenparametern zugeordnet sind, verhalten, wenn sie zwischen verwaltetem und unverwaltetem Speicher übergeben werden. Mit diesen integrierten Regeln werden Marshalling-Aktivitäten wie Datentyptransformationen gesteuert, es wird gesteuert, ob eine aufrufende Instanz die Daten ändern kann, die an sie übergeben werden, und ob diese Änderungen an den Aufrufer zurückgegeben werden, und unter welchen Umständen der Marshaller Leistungsoptimierungen bereitstellt.  
@@ -64,11 +64,11 @@ BSTR MethodOne (BSTR b) {
   
  Wenn die Schnittstelle nicht von einem bekannten Objekt stammt, geht der Marshaller folgendermaßen vor:  
   
-1.  Der Marshaller fragt das Objekt nach seiner **IProvideClassInfo2**-Schnittstelle ab. Wird diese zurückgegeben, verwendet der Marshaller die von **IProvideClassInfo2.GetGUID** zurückgegebene CLSID, um die Co-Klasse zu identifizieren, die die Schnittstelle bereitstellt. Mit der CLSID kann der Marshaller den Wrapper in der Registrierung finden, wenn die Assembly bereits registriert ist.  
+1. Der Marshaller fragt das Objekt nach seiner **IProvideClassInfo2**-Schnittstelle ab. Wird diese zurückgegeben, verwendet der Marshaller die von **IProvideClassInfo2.GetGUID** zurückgegebene CLSID, um die Co-Klasse zu identifizieren, die die Schnittstelle bereitstellt. Mit der CLSID kann der Marshaller den Wrapper in der Registrierung finden, wenn die Assembly bereits registriert ist.  
   
-2.  Der Marshaller fragt die **IProvideClassInfo**-Schnittstelle der Schnittstelle ab. Wird diese zurückgegeben, verwendet der Marshaller die von **IProvideClassInfo.GetClassinfo** zurückgegebene **ITypeInfo**, um die CLSID der Klasse zu ermitteln, die die Schnittstelle verfügbar macht. Der Marshaller kann die CLSID verwenden, um die Metadaten für den Wrapper zu finden.  
+2. Der Marshaller fragt die **IProvideClassInfo**-Schnittstelle der Schnittstelle ab. Wird diese zurückgegeben, verwendet der Marshaller die von **IProvideClassInfo.GetClassinfo** zurückgegebene **ITypeInfo**, um die CLSID der Klasse zu ermitteln, die die Schnittstelle verfügbar macht. Der Marshaller kann die CLSID verwenden, um die Metadaten für den Wrapper zu finden.  
   
-3.  Wenn der Marshaller die Klasse immer noch nicht identifizieren kann, umschließt er die Schnittstelle mit einer generischen Wrapperklasse mit Namen **System.__ComObject**.  
+3. Wenn der Marshaller die Klasse immer noch nicht identifizieren kann, umschließt er die Schnittstelle mit einer generischen Wrapperklasse mit Namen **System.__ComObject**.  
   
 ## <a name="default-marshaling-for-delegates"></a>Standardmäßiges Marshalling für Delegaten  
  Ein verwalteter Delegat wird als COM-Schnittstelle oder als Funktionszeiger gemarshallt, und zwar basierend auf dem Aufrufmechanismus:  
@@ -440,6 +440,7 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Blitfähige und nicht blitfähige Typen](blittable-and-non-blittable-types.md)
 - [Kopieren und Fixieren](copying-and-pinning.md)
 - [Standardmäßiges Marshalling für Arrays](default-marshaling-for-arrays.md)

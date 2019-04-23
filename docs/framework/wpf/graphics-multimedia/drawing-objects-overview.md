@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325513"
 ---
 # <a name="drawing-objects-overview"></a>Übersicht über Zeichnungsobjekte
@@ -237,8 +237,8 @@ Eine mit einem DrawingBrush verwendete GeometryDrawing
 - <xref:System.Windows.Media.DrawingGroup>
 - [2D-Grafiken und Bildverarbeitung](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md)
-- [Übersicht über die Geometrie](geometry-overview.md)
+- [Übersicht über Geometrien](geometry-overview.md)
 - [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Übersicht über das WPF-Grafikrendering](wpf-graphics-rendering-overview.md)
 - [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md)
-- [Gewusst wie-Themen](drawings-how-to-topics.md)
+- [Themen zu Vorgehensweisen](drawings-how-to-topics.md)

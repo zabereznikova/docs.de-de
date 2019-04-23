@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
 ms.openlocfilehash: 6194ef288bd43267c2b00fa6d7c6250e90b37c75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322640"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Vorgehensweise: Verwenden von Modifizierern und GenerateMember-Eigenschaften
@@ -62,6 +62,6 @@ Wenn Sie eine Komponente in einem Windows-Formular platzieren, werden zwei Eigen
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Windows.Forms.Button>
-- [Visuelle Vererbung in Windows Forms](windows-forms-visual-inheritance.md)
+- [Visuelle Vererbung in Windows Forms](windows-forms-visual-inheritance.md)
 - [Exemplarische Vorgehensweise: Demonstrieren der visuellen Vererbung](walkthrough-demonstrating-visual-inheritance.md)
-- [Vorgehensweise: Erben von Windows Forms](how-to-inherit-windows-forms.md)
+- [Vorgehensweise: Erben von Windows Forms](how-to-inherit-windows-forms.md)

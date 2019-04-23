@@ -3,10 +3,10 @@ title: Transaktionsfluss in Workflowdienste und aus Workflowdiensten
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
 ms.openlocfilehash: 25ab4e415ce2cd6044cedef4841c1ba88254542e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315113"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Transaktionsfluss in Workflowdienste und aus Workflowdiensten
@@ -171,7 +171,7 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
   
 5. Ziehen Sie eine <xref:System.Activities.Statements.Sequence>-Aktivität per Drag &amp; Drop in den Text der <xref:System.Activities.Statements.TransactionScope>-Aktivität.  
   
-6. Drag & drop eine `PrintTransactionInfo` Aktivität innerhalb der <xref:System.Activities.Statements.Sequence>  
+6. Verschieben Sie eine `PrintTransactionInfo`-Aktivität per Drag &amp; Drop innerhalb der <xref:System.Activities.Statements.Sequence>-Aktivität.  
   
 7. Drag & drop eine <xref:System.Activities.Statements.WriteLine> Aktivität nach dem die `PrintTransactionInfo` Aktivität, und legen dessen <xref:System.Activities.Statements.WriteLine.Text%2A> Eigenschaft auf "Client: Beginnen senden". Der Workflow müsste jetzt wie folgt aussehen:  
   
@@ -315,4 +315,4 @@ Workflowdienste und Clients können an Transaktionen teilnehmen.  Damit ein Dien
 ## <a name="see-also"></a>Siehe auch
 
 - [Workflowdienste](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [Übersicht über Windows-Kommunikationfoundation-Transaktionen](../../../../docs/framework/wcf/feature-details/transactions-overview.md)
+- [Übersicht über Windows Communication Foundation-Transaktionen](../../../../docs/framework/wcf/feature-details/transactions-overview.md)

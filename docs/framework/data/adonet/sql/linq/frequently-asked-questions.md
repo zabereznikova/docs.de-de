@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
 ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323244"
 ---
 # <a name="frequently-asked-questions"></a>Häufig gestellte Fragen (FAQs)
@@ -50,12 +50,12 @@ In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die be
 ## <a name="unexpected-query-results"></a>Unerwartete Abfrageergebnisse  
  F. Meine Abfrage gibt unerwartete Ergebnisse zurück. Wie kann der Fehler festgestellt werden?  
   
- A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet verschiedene Tools zum Überprüfen des SQL-Codes, die sie generiert. Eines der wichtigsten Tools ist <xref:System.Data.Linq.DataContext.Log%2A>. Weitere Informationen finden Sie unter [Debugunterstützung](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
+ A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] stellt mehrere Tools zum Überprüfen des generierten SQL-Codes bereit. Eines der wichtigsten Tools ist <xref:System.Data.Linq.DataContext.Log%2A>. Weitere Informationen finden Sie unter [Debugunterstützung](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md).  
   
 ## <a name="unexpected-stored-procedure-results"></a>Gespeicherte Prozedur gibt unerwartete Ergebnisse zurück  
  F. Der Rückgabewert einer gespeicherten Prozedur wird durch `MAX()` berechnet. Wenn die gespeicherte Prozedur auf die [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]-Oberfläche gezogen wird, ist der Rückgabewert nicht richtig.  
   
- A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet zwei Möglichkeiten, um datenbankgenerierte Werte mithilfe gespeicherter Prozeduren zurückzugeben:  
+ A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] bietet zwei Möglichkeiten, von der Datenbank generierte Werte mithilfe gespeicherter Prozeduren zurückzugeben:  
   
 -   Durch Benennen des Ausgabeergebnisses.  
   
@@ -112,7 +112,7 @@ In den folgenden Abschnitten werden einige allgemeine Probleme behandelt, die be
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>Vermeiden, dass von der Datenbank generierte Werte bei Einfüge- oder Updatevorgängen explizit festgelegt werden  
  F. Bei einer Datenbanktabelle mit einer `DateCreated`-Spalte wird die Spalte standardmäßig auf SQL `Getdate()` festgelegt. Beim Versuch, mit [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] einen neuen Datensatz einzufügen, wird der Wert auf `NULL` festgelegt. Erwartungsgemäß sollte der Wert auf den Datenbankstandard festgelegt werden.  
   
- A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] behandelt diese Situation automatisch (automatisch inkrementierten), ROWGUID-(datenbankgenerierte GUID) und Timestamp-Spalten. In anderen Fällen sollten Sie manuell festlegen <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` und <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> Eigenschaften.  
+ A. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] behandelt diese Situation bei ID- (automatisch inkrementierten), ROWGUID- (von der Datenbank generierte GUID) und Timestamp-Spalten automatisch. In anderen Fällen sollten Sie manuell festlegen <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true` und <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate> Eigenschaften.  
   
 ## <a name="multiple-dataloadoptions"></a>Mehrere DataLoadOptions  
  F. Können zusätzliche Ladeoptionen angegeben werden, ohne die erste zu überschreiben?  
@@ -149,7 +149,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="sql-injection-attacks"></a>SQL-Injection-Angriffe  
  F. Wie wird [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] vor SQL-Injection-Angriffen geschützt?  
   
- A. In herkömmlichen SQL-Abfragen, die durch die Verkettung der Benutzereingabe erzeugt wurden, stellte die SQL-Injection ein bedeutendes Risiko dar. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] solche einfügungen vermeidet, mithilfe von <xref:System.Data.SqlClient.SqlParameter> in Abfragen. Die Benutzereingabe wird in Parameterwerte umgewandelt. Auf diese Weise wird verhindert, dass böswillige Befehle aus Kundeneingaben verwendet werden.  
+ A. In herkömmlichen SQL-Abfragen, die durch die Verkettung der Benutzereingabe erzeugt wurden, stellte die SQL-Injection ein bedeutendes Risiko dar. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] werden solche Einfügungen durch die Verwendung von <xref:System.Data.SqlClient.SqlParameter> in Abfragen vermieden. Die Benutzereingabe wird in Parameterwerte umgewandelt. Auf diese Weise wird verhindert, dass böswillige Befehle aus Kundeneingaben verwendet werden.  
   
 ## <a name="changing-read-only-flag-in-dbml-files"></a>Ändern des Schreibschutzflags in DBML-Dateien  
  F. Wie können Setter aus einigen Eigenschaften entfernt werden, wenn ein Objektmodell aus einer DBML-Datei erstellt wird?  
@@ -190,7 +190,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="second-datacontext-is-not-updated"></a>Zweiter DataContext wird nicht aktualisiert  
  F. Zum Speichern von Werten in der Datenbank wurde eine Instanz von <xref:System.Data.Linq.DataContext> verwendet. Die aktualisierten Werte werden aber von einem zweiten <xref:System.Data.Linq.DataContext> in derselben Datenbank nicht angezeigt. Die zweite <xref:System.Data.Linq.DataContext>-Instanz scheint zwischengespeicherte Werte zurückzugeben.  
   
- A. Dieses Verhalten ist vorgesehen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] weiterhin dieselben Instanzen/Werte, die Sie haben gesehen, in der ersten Instanz zurück. Wenn Sie Updates vornehmen, verwenden Sie vollständige Parallelität. Die ursprünglichen Daten werden verwendet, um den aktuellen Datenbankzustand zu überprüfen und zu bestätigen, dass der Zustand weiterhin unverändert ist. Wenn er sich geändert hat, tritt ein Konflikt auf, der von der Anwendung gelöst werden muss. Eine Möglichkeit für die Anwendung besteht darin, den ursprünglichen Zustand auf den aktuellen Datenbankzustand zurückzusetzen und den Updateversuch zu wiederholen. Weitere Informationen finden Sie unter [Vorgehensweise: Verwalten von Änderungskonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
+ A. Dieses Verhalten ist vorgesehen. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] gibt weiterhin dieselben Instanzen/Werte zurück, die in der ersten Instanz angezeigt wurden. Wenn Sie Updates vornehmen, verwenden Sie vollständige Parallelität. Die ursprünglichen Daten werden verwendet, um den aktuellen Datenbankzustand zu überprüfen und zu bestätigen, dass der Zustand weiterhin unverändert ist. Wenn er sich geändert hat, tritt ein Konflikt auf, der von der Anwendung gelöst werden muss. Eine Möglichkeit für die Anwendung besteht darin, den ursprünglichen Zustand auf den aktuellen Datenbankzustand zurückzusetzen und den Updateversuch zu wiederholen. Weitere Informationen finden Sie unter [Vorgehensweise: Verwalten von Änderungskonflikten](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md).  
   
  Sie können auch <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> auf false festlegen, wodurch das Zwischenspeichern und Nachverfolgen von Änderungen deaktiviert wird. Anschließend können Sie bei jeder Abfrage die neuesten Werte abrufen.  
   
@@ -201,6 +201,6 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Referenz](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [Problembehandlung](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
 - [Sicherheit in LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

@@ -15,10 +15,10 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323849"
 ---
 # <a name="creating-an-ink-input-control"></a>Erstellen eines Freihandeingabesteuerelements
@@ -34,7 +34,7 @@ Sie können ein benutzerdefiniertes Steuerelement erstellen, die dynamisch und s
   
 -   [Verwenden zusätzliche Plug-ins und DynamicRenderers](#UsingAdditionalPluginsAndDynamicRenderers)  
   
--   [Schlussbemerkung](#AdvancedInkHandling_Conclusion)  
+-   [Schlussfolgerung](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
 ## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>Vorgehensweise: Stift-Verwaltungspunkt-Daten sammeln und zum Erstellen von Freihandstrichen  

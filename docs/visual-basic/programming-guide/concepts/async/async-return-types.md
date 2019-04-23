@@ -3,10 +3,10 @@ title: Asynchrone Rückgabetypen (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
 ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313280"
 ---
 # <a name="async-return-types-visual-basic"></a>Asynchrone Rückgabetypen (Visual Basic)
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- `Task_MethodAsync` wird aufgerufen und erwartet, indem anstelle einer Await-Anweisung, die einen Await-Ausdruck, ähnlich der aufrufanweisung für einen synchronen `Sub` oder "void" zurückgebende Methode. Die Anwendung von einem `Await` Operator in diesem Fall erzeugt keine Werte.  
+ `Task_MethodAsync` wird aufgerufen und erwartet, indem eine "await"-Anweisung anstelle eines "await"-Ausdrucks verwendet wird, ähnlich der Aufrufanweisung für ein synchrones `Sub` oder eine Methode, die "void" zurückgibt. Die Anwendung von einem `Await` Operator in diesem Fall erzeugt keine Werte.  
   
  Der folgende Code ruft auf und erwartet die `Task_MethodAsync`-Methode.  
   

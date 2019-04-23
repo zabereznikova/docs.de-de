@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846466"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313371"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachenunabhängigkeit und sprachunabhängige Komponenten
 Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer der zahlreichen Sprachen entwickeln kann, die auf .NET Framework ausgerichtet sind, z. B. C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL und Windows PowerShell. Sie können auf die Typen und Member von Klassenbibliotheken, die für .NET Framework entwickelt wurden, zugreifen, ohne die Sprache, in der sie ursprünglich geschrieben wurden, kennen zu müssen und ohne den Konventionen der Originalsprache folgen zu müssen. Wenn Sie ein Komponentenentwickler sind, kann von allen .NET Framework-Apps sprachenunabhängig auf die Komponente zugegriffen werden.  
@@ -34,11 +34,11 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
  In diesem Artikel:  
   
--   [CLS-Kompatibilitätsregeln](#Rules)  
+-   [CLS-Konformitätsregeln](#Rules)  
   
     -   [Typen und Typmembersignaturen](#Types)  
   
-    -   [Namenskonventionen](#naming)  
+    -   [Namenskonventionen ](#naming)  
   
     -   [Typkonvertierung](#conversion)  
   
@@ -60,7 +60,7 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
     -   [Ereignisse](#events)  
   
-    -   [Überladungen](#overloads)  
+    -   [Overloads](#overloads)  
   
     -   [Ausnahmen](#exceptions)  
   
@@ -121,8 +121,8 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
 |Ereignisse|[Ereignisse](#events)|Die `add` und `remove`-Methoden eines Ereignisses müssen jeweils einen Parameter erhalten, dessen Typ den Ereignistyp definiert. Dieser Typ muss von <xref:System.Delegate?displayProperty=nameWithType> abgeleitet sein.|32|  
 |Ereignisse|[Ereignisse](#events)|Ereignisse müssen einem bestimmten Benennungsschema folgen. Das `SpecialName`-Attribut, auf das in CLS-Regel 29 verwiesen wird, muss in den entsprechenden Namensvergleichen ignoriert werden und Bezeichnerregeln befolgen.|33|  
 |Ausnahmen|[Ausnahmen](#exceptions)|Ausgelöste Objekte müssen vom Typ <xref:System.Exception?displayProperty=nameWithType> oder eines davon geerbten Typs sein. Dennoch müssen CLS-kompatible Methoden die Weitergabe anderer Ausnahmetypen nicht blockieren.|40|  
-|Allgemein|[CLS-Kompatibilität: die Regeln](#Rules)|CLS-Regeln gelten nur für die Teile eines Typs, die außerhalb der definierenden Assembly sichtbar sind und auf die außerhalb der definierenden Assembly zugegriffen werden kann.|1|  
-|Allgemein|[CLS-Kompatibilität: die Regeln](#Rules)|Member von Typen, die nicht CLS-kompatibel sind, dürfen nicht als CLS-kompatibel gekennzeichnet werden.|2|  
+|Allgemein|[CLS-Konformität: die Regeln](#Rules)|CLS-Regeln gelten nur für die Teile eines Typs, die außerhalb der definierenden Assembly sichtbar sind und auf die außerhalb der definierenden Assembly zugegriffen werden kann.|1|  
+|Allgemein|[CLS-Konformität: die Regeln](#Rules)|Member von Typen, die nicht CLS-kompatibel sind, dürfen nicht als CLS-kompatibel gekennzeichnet werden.|2|  
 |Generics|[Generische Typen und Member](#Generics)|Geschachtelte Typen müssen mindestens so viele generische Parameter aufweisen wie der einschließende Typ. Die Position von generischen Parametern in einem geschachtelten Typ entspricht der Position der generischen Parameter im einschließenden Typ.|42|  
 |Generics|[Generische Typen und Member](#Generics)|Der Name eines generischen Typs muss die Anzahl von Typparametern, die auf dem nicht geschachtelten Typ deklariert oder neu in den Typ eingeführt werden, kodieren, wenn er entsprechend der oben definierten Regeln geschachtelt ist.|43|  
 |Generics|[Generische Typen und Member](#Generics)|Ein generischer Typ muss genügend Einschränkungen neu deklarieren, um zu gewährleisten, dass alle Einschränkungen des Basistyps oder der Schnittstellen durch die Einschränkungen des generischen Typs erfüllt sein würden.|4444|  
@@ -134,9 +134,9 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
 |Member|[Typmember im Allgemeinen](#members)|Globale static-Felder und Methoden sind nicht CLS-kompatibel.|36|  
 |Member|--|Der Wert eines literalen statischen Elements wird von der Verwendung von Feldinitialisierungsmetadaten angegeben. Ein CLS-kompatibles Literal muss über einen Wert verfügen, der in den Feldinitialisierungsmetadaten angegeben wird, der genau vom gleichen Typ wie das Literal ist (oder des zugrunde liegenden Typs, wenn dieses Literal `enum` ist).|13|  
 |Member|[Typmember im Allgemeinen](#members)|Die vararg-Einschränkung ist nicht Teil der CLS, und die einzige Aufrufkonvention, die von der CLS unterstützt wird, ist die verwaltete Standardaufrufkonvention.|15|  
-|Namenskonventionen |[Namenskonventionen](#naming)|Assemblys müssen Anhang 7 des technischen Berichts 15 von Unicode Standard 3.0 befolgen, in dem Zeichen geregelt werden, die am Anfang oder innerhalb von Bezeichnern enthalten sein dürfen. Er ist online unter <https://www.unicode.org/unicode/reports/tr15/tr15-18.html> verfügbar. Bezeichner müssen im kanonischen Format vorliegen, das durch die Unicode-Normalisierungsform C definiert wird. Im Sinne der CLS sind zwei Bezeichner gleich, wenn ihre kleingeschriebenen Zuordnungen (wie von den Gebietsschema-unabhängigen, klein geschriebenen 1:1-Unicodezuordnungen angegeben) gleich sind. Demnach müssen sich zwei Bezeichner in mehr als nur der Großschreibung unterscheiden, damit sie gemäß der CLS als unterschiedlich angesehen werden können. Um jedoch eine geerbte Definition überschreiben zu können, erfordert die CLI die genaue Codierung der ursprünglichen Deklaration.|4|  
-|Überladen|[Namenskonventionen](#naming)|Alle Namen, die in einem CLS-kompatiblen Bereich eingeführt werden, müssen in ihrer Art eindeutig unabhängig sein, außer bei identischen Namen, die durch Überladen aufgelöst werden. Während es bei CTS möglich ist, dass ein einzelner Typ denselben Namen für eine Methode und ein Feld verwendet, ist dies bei CLS demnach unmöglich.|5|  
-|Überladen|[Namenskonventionen](#naming)|Felder und geschachtelte Typen müssen allein durch Vergleich des Bezeichners zu unterscheiden sein, auch wenn bei CTS verschiedene Signaturen unterschieden werden können. Methoden, Eigenschaften und Ereignisse mit demselben Namen (gemäß Bezeichnervergleich) müssen sich durch mehr als nur den Rückgabetyp unterscheiden (außer wie in CLS-Regel 39 angegeben).|6|  
+|Namenskonventionen |[Namenskonventionen ](#naming)|Assemblys müssen Anhang 7 des technischen Berichts 15 von Unicode Standard 3.0 befolgen, in dem Zeichen geregelt werden, die am Anfang oder innerhalb von Bezeichnern enthalten sein dürfen. Er ist online unter <https://www.unicode.org/unicode/reports/tr15/tr15-18.html> verfügbar. Bezeichner müssen im kanonischen Format vorliegen, das durch die Unicode-Normalisierungsform C definiert wird. Im Sinne der CLS sind zwei Bezeichner gleich, wenn ihre kleingeschriebenen Zuordnungen (wie von den Gebietsschema-unabhängigen, klein geschriebenen 1:1-Unicodezuordnungen angegeben) gleich sind. Demnach müssen sich zwei Bezeichner in mehr als nur der Großschreibung unterscheiden, damit sie gemäß der CLS als unterschiedlich angesehen werden können. Um jedoch eine geerbte Definition überschreiben zu können, erfordert die CLI die genaue Codierung der ursprünglichen Deklaration.|4|  
+|Überladen|[Namenskonventionen ](#naming)|Alle Namen, die in einem CLS-kompatiblen Bereich eingeführt werden, müssen in ihrer Art eindeutig unabhängig sein, außer bei identischen Namen, die durch Überladen aufgelöst werden. Während es bei CTS möglich ist, dass ein einzelner Typ denselben Namen für eine Methode und ein Feld verwendet, ist dies bei CLS demnach unmöglich.|5|  
+|Überladen|[Namenskonventionen ](#naming)|Felder und geschachtelte Typen müssen allein durch Vergleich des Bezeichners zu unterscheiden sein, auch wenn bei CTS verschiedene Signaturen unterschieden werden können. Methoden, Eigenschaften und Ereignisse mit demselben Namen (gemäß Bezeichnervergleich) müssen sich durch mehr als nur den Rückgabetyp unterscheiden (außer wie in CLS-Regel 39 angegeben).|6|  
 |Überladen|[Overloads](#overloads)|Nur Eigenschaften und Methoden können überladen werden.|37|  
 |Überladen|[Overloads](#overloads)|Eigenschaften und Methoden können allein basierend auf der Anzahl und den Typen ihrer Parameter überladen werden, außer den Konvertierungsoperatoren `op_Implicit` und `op_Explicit`, die auch auf Grundlage des Rückgabetyps überladen werden können.|38|  
 |Überladen|--|Wenn mindestens zwei CLS-kompatible Methoden, die in einem Typ deklariert werden, den gleichen Namen und für einen bestimmten Satz von Typinstanziierungen die gleichen Parameter und Rückgabetypen nutzen, dann müssen alle diese Methoden bei diesen Typinstanziierungen semantisch gleichwertig sein.|48|  
@@ -177,7 +177,7 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
 |<xref:System.Int64>|64-Bit-Ganzzahl mit Vorzeichen|  
 |<xref:System.Single>|Gleitkommawert mit einfacher Genauigkeit|  
 |<xref:System.Double>|Gleitkommawert mit doppelter Genauigkeit|  
-|<xref:System.Boolean>|`true` oder `false` value_type|  
+|<xref:System.Boolean>|`true` oder `false`-Werttyp|  
 |<xref:System.Char>|UTF-16-codierte Codeeinheit|  
 |<xref:System.Decimal>|Dezimalzahl ohne Gleitkomma|  
 |<xref:System.IntPtr>|Zeiger oder Handle einer Plattform-definierten Größe|  
@@ -517,13 +517,13 @@ Das .NET Framework ist sprachneutral. Das bedeutet, dass ein Entwickler in einer
   
  So erstellen Sie CLS-kompatible Komponenten:  
   
-1.  Verwenden Sie <xref:System.CLSCompliantAttribute>, um die Assembly als CLS-kompatibel zu markieren.  
+1. Verwenden Sie <xref:System.CLSCompliantAttribute>, um die Assembly als CLS-kompatibel zu markieren.  
   
-2.  Markieren Sie jeden öffentlich verfügbar gemachten, nicht CLS-kompatiblen Typ in der Assembly als nicht kompatibel.  
+2. Markieren Sie jeden öffentlich verfügbar gemachten, nicht CLS-kompatiblen Typ in der Assembly als nicht kompatibel.  
   
-3.  Markieren Sie alle öffentlich verfügbar gemachten Member in CLS-kompatiblen Typen als nicht kompatibel.  
+3. Markieren Sie alle öffentlich verfügbar gemachten Member in CLS-kompatiblen Typen als nicht kompatibel.  
   
-4.  Stellen Sie eine CLS-kompatible Alternative für nicht CLS-kompatible Member bereit.  
+4. Stellen Sie eine CLS-kompatible Alternative für nicht CLS-kompatible Member bereit.  
   
  Wenn alle inkompatiblen Typen und Member erfolgreich markiert wurden, sollte der Compiler keine Kompatibilitätswarnungen ausgeben. Allerdings sollten Sie angeben, welche Member nicht CLS-kompatibel sind und ihre CLS-kompatiblen Alternativen in der Produktdokumentation aufführen.  
   

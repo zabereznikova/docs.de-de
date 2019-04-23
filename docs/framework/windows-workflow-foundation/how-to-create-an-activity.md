@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315139"
 ---
 # <a name="how-to-create-an-activity"></a>Vorgehensweise: Erstellen einer Aktivität
@@ -46,7 +46,7 @@ Aktivitäten sind die wichtigsten Einheiten für das Verhalten in [!INCLUDE[wf1]
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
-    > Die `ReadInt`-Aktivität wird von <xref:System.Activities.NativeActivity%601> statt von <xref:System.Activities.CodeActivity> abgeleitet. Das entspricht dem Standard für die Vorlage "Codeaktivität". <xref:System.Activities.CodeActivity%601> kann verwendet werden, wenn die Aktivität ein einziges Ergebnis bereitstellt, das durch verfügbar gemacht wird die <xref:System.Activities.Activity%601.Result%2A> -Argument, aber <xref:System.Activities.CodeActivity%601> unterstützt nicht die Verwendung von Lesezeichen, also <xref:System.Activities.NativeActivity%601> verwendet wird.
+    > Die `ReadInt`-Aktivität wird von <xref:System.Activities.NativeActivity%601> statt von <xref:System.Activities.CodeActivity> abgeleitet. Das entspricht dem Standard für die Vorlage "Codeaktivität". <xref:System.Activities.CodeActivity%601> kann verwendet werden, wenn die Aktivität ein einziges Ergebnis bereitstellt, das durch das <xref:System.Activities.Activity%601.Result%2A>-Argument verfügbar gemacht wird, da <xref:System.Activities.CodeActivity%601> jedoch nicht die Verwendung von Lesezeichen unterstützt, wird <xref:System.Activities.NativeActivity%601> verwendet.
 
 ## <a name="create-the-prompt-activity"></a>Erstellen Sie die Prompt-Aktivität
 
@@ -107,6 +107,6 @@ Anweisungen zum Erstellen eines Workflows mit den Aktivitäten besteht, finden S
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
 - [Entwerfen und Implementieren von benutzerdefinierten Aktivitäten](designing-and-implementing-custom-activities.md)
-- [Lernprogramm 'Erste Schritte'](getting-started-tutorial.md)
+- [Tutorial mit ersten Schritten](getting-started-tutorial.md)
 - [Vorgehensweise: Erstellen eines Workflows](how-to-create-a-workflow.md)
 - [Verwenden des ExpressionTextBox in einem benutzerdefinierten Aktivitätsdesigner](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

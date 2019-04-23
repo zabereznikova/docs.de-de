@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320047"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Vorgehensweise: Erstellen und Ausführen eines Workflows mit langer Laufzeit
@@ -23,25 +23,25 @@ Eine der zentralen Funktionen von Windows Workflow Foundation (WF) ist der Laufz
   
 ## <a name="in-this-topic"></a>In diesem Thema  
   
--   [So erstellen Sie die Persistenzdatenbank](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+-   [Um die Persistenzdatenbank zu erstellen.](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [So fügen Sie den DurableInstancing-Assemblys den Verweis hinzu](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+-   [Der Verweis auf den DurableInstancing-Assemblys hinzufügen](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [So erstellen Sie das Hostformular für den Workflow](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+-   [Zum Erstellen der Workflowhost-Formular](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [So fügen Sie die Eigenschaften und Hilfsmethoden des Formulars hinzu](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+-   [Die Eigenschaften und Hilfsmethoden des Formulars hinzufügen](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [So konfigurieren Sie den Instanzspeicher, die Handler für den Workflowlebenszyklus und Erweiterungen](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+-   [So konfigurieren Sie den Instanzspeicher, Workflowlebenszyklus-Handler und Erweiterungen](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [So aktivieren Sie das Starten und Fortsetzen mehrerer Workflowtypen](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+-   [So aktivieren Sie starten und fortsetzen mehrerer Workflowtypen](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [So starten Sie einen neuen Workflow](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+-   [Um einen neuen Workflow zu starten.](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [So setzen Sie einen Workflow fort](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+-   [Zum Fortsetzen eines Workflows](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [So beenden Sie einen Workflow](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+-   [Zum Beenden eines Workflows](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [So erstellen und führen Sie die Anwendung aus](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+-   [Zum Erstellen und Ausführen der Anwendungs](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> Um die Persistenzdatenbank zu erstellen.  
   
@@ -50,7 +50,7 @@ Eine der zentralen Funktionen von Windows Workflow Foundation (WF) ist der Laufz
     > [!NOTE]
     >  Stellen Sie sicher, dass man **Create Database** Berechtigung auf dem lokalen Server vor dem Erstellen der Datenbank.  
   
-2. Wählen Sie **öffnen**, **Datei** aus der **Datei** Menü. Navigieren Sie zum folgenden Ordner: `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`  
+2. Wählen Sie **öffnen**, **Datei** aus der **Datei** Menü. Wechseln Sie zum folgenden Ordner: `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`  
   
      Wählen Sie die folgenden beiden Dateien aus, und klicken Sie auf **öffnen**.  
   
@@ -94,7 +94,7 @@ Eine der zentralen Funktionen von Windows Workflow Foundation (WF) ist der Laufz
   
     |Steuerelement|Eigenschaft: Wert|  
     |-------------|---------------------|  
-    |**Schaltfläche**|Name: NewGame<br /><br /> Ort: 13, 13<br /><br /> Größe: 75, 23<br /><br /> Text: Neues Spiel|  
+    |**Button** (Schaltfläche)|Name: NewGame<br /><br /> Ort: 13, 13<br /><br /> Größe: 75, 23<br /><br /> Text: Neues Spiel|  
     |**Bezeichnung**|Ort: 94, 18<br /><br /> Text: Zahl vorschlagen zwischen 1 und|  
     |**ComboBox**|Name: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Elemente: 10, 100, 1000<br /><br /> Ort: 228, 12<br /><br /> Größe: 143, 21|  
     |**Bezeichnung**|Ort: 13, 43<br /><br /> Text: Workflowtyp|  
@@ -111,8 +111,8 @@ Eine der zentralen Funktionen von Windows Workflow Foundation (WF) ist der Laufz
     |**ComboBox**|Name: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Ort: 121, 17<br /><br /> Größe: 227, 21|  
     |**Bezeichnung**|Ort: 7, 47<br /><br /> Text: Vorschlag|  
     |**TextBox**|Name: Vorschlag<br /><br /> Ort: 50, 44<br /><br /> Größe: 65, 20|  
-    |**Schaltfläche**|Name: EnterGuess<br /><br /> Ort: 121, 42<br /><br /> Größe: 75, 23<br /><br /> Text: Vorschlag eingeben|  
-    |**Schaltfläche**|Name: QuitGame<br /><br /> Ort: 274, 42<br /><br /> Größe: 75, 23<br /><br /> Text: Beenden|  
+    |**Button** (Schaltfläche)|Name: EnterGuess<br /><br /> Ort: 121, 42<br /><br /> Größe: 75, 23<br /><br /> Text: Vorschlag eingeben|  
+    |**Button** (Schaltfläche)|Name: QuitGame<br /><br /> Ort: 274, 42<br /><br /> Größe: 75, 23<br /><br /> Text: Beenden|  
     |**TextBox**|Name: WorkflowStatus<br /><br /> Ort: 10, 73<br /><br /> Multiline: True<br /><br /> ReadOnly: True<br /><br /> ScrollBars: Vertikal<br /><br /> Größe: 338, 208|  
   
 5. Legen Sie die **AcceptButton** -Eigenschaft des Formulars auf **EnterGuess**.  
@@ -341,7 +341,7 @@ Eine der zentralen Funktionen von Windows Workflow Foundation (WF) ist der Laufz
     }  
     ```  
   
-     `ListPersistedWorkflows` fragt den Instanzspeicher für persistente Workflowinstanzen und fügt den Instanz-Ids, um die `cboInstanceId` im Kombinationsfeld.  
+     `ListPersistedWorkflows` fragt den Instanzspeicher für persistente Workflowinstanzen ab und fügt dem Kombinationsfeld `cboInstanceId` die Instanz-IDs hinzu.  
   
 10. Fügen Sie der Formularklasse die folgende `UpdateStatus`-Methode und den entsprechenden Delegaten hinzu. Durch diese Methode wird das Statusfenster auf dem Formular mit dem Status des derzeit ausgeführten Workflows aktualisiert.  
   
@@ -574,7 +574,7 @@ Eine der zentralen Funktionen von Windows Workflow Foundation (WF) ist der Laufz
     };  
     ```  
   
-     Die <xref:System.Activities.PersistableIdleAction>-Enumeration besitzt drei Werte: <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> und <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist> bewirkt, dass der Workflow, aber beizubehalten bewirkt nicht den Workflow entladen. <xref:System.Activities.PersistableIdleAction.Unload> bewirkt, dass der Workflow persistent gespeichert und entladen.  
+     Die <xref:System.Activities.PersistableIdleAction>-Enumeration besitzt drei Werte: <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> und <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist> bewirkt, dass der Workflow persistent gespeichert wird, jedoch nicht, dass der Workflow entladen wird. <xref:System.Activities.PersistableIdleAction.Unload> bewirkt, dass der Workflow persistent gespeichert und entladen wird.  
   
      Im folgenden Beispiel ist die abgeschlossene `ConfigureWorkflowApplication`-Methode dargestellt.  
   
@@ -692,7 +692,7 @@ Eine der zentralen Funktionen von Windows Workflow Foundation (WF) ist der Laufz
     ```  
   
 ### <a name="BKMK_WorkflowVersionMap"></a> So aktivieren Sie starten und fortsetzen mehrerer Workflowtypen  
- Um eine Workflowinstanz fortzusetzen, muss der Host die Workflowdefinition bereitstellen. In diesem Lernprogramm werden drei Workflowtypen verwendet, von denen in den folgenden Schritten mehrere Versionen vorgestellt werden. `WorkflowIdentity` bietet eine Möglichkeit für eine hostanwendung, einer persistenten Workflowinstanz Identifikationsinformationen zugeordnet werden soll. Die Schritte in diesem Abschnitt veranschaulichen das Erstellen einer Hilfsprogrammklasse, die das Zuordnen der Workflowidentität von einer persistenten Workflowinstanz zur entsprechenden Workflowdefinition unterstützt. Weitere Informationen zu `WorkflowIdentity` und zur versionsverwaltung finden Sie unter [Verwenden von WorkflowIdentity und Versionsverwaltung](using-workflowidentity-and-versioning.md).  
+ Um eine Workflowinstanz fortzusetzen, muss der Host die Workflowdefinition bereitstellen. In diesem Lernprogramm werden drei Workflowtypen verwendet, von denen in den folgenden Schritten mehrere Versionen vorgestellt werden. `WorkflowIdentity` ermöglicht einer Hostanwendung, einer persistenten Workflowinstanz Identifikationsinformationen zuzuordnen. Die Schritte in diesem Abschnitt veranschaulichen das Erstellen einer Hilfsprogrammklasse, die das Zuordnen der Workflowidentität von einer persistenten Workflowinstanz zur entsprechenden Workflowdefinition unterstützt. Weitere Informationen zu `WorkflowIdentity` und zur versionsverwaltung finden Sie unter [Verwenden von WorkflowIdentity und Versionsverwaltung](using-workflowidentity-and-versioning.md).  
   
 1. Mit der rechten Maustaste **NumberGuessWorkflowHost** in **Projektmappen-Explorer** , und wählen Sie **hinzufügen**, **Klasse**. Typ `WorkflowVersionMap` in die **Namen** ein, und klicken Sie auf **hinzufügen**.  
   
@@ -806,7 +806,7 @@ Eine der zentralen Funktionen von Windows Workflow Foundation (WF) ist der Laufz
     }  
     ```  
   
-     `WorkflowVersionMap` enthält drei workflowidentitäten, die den drei workflowdefinitionen aus diesem Lernprogramm zugeordnet und wird in den folgenden Abschnitten beim Starten und Fortsetzen von Workflows verwendet.  
+     `WorkflowVersionMap` enthält drei Workflowidentitäten, die den drei Workflowdefinitionen aus diesem Lernprogramm zugeordnet werden, und wird in den folgenden Abschnitten beim Starten und Fortsetzen von Workflows verwendet.  
   
 ### <a name="BKMK_StartWorkflow"></a> Um einen neuen Workflow zu starten.  
   

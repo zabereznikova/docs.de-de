@@ -1,5 +1,5 @@
 ---
-title: 'Konnte nicht eingebettet Ressourcendatei "<filename>": <error message>'
+title: 'Ressourcendatei "<filename>" konnte nicht eingebettet werden: <error message>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30143
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30143
 ms.assetid: 319e95b5-5176-4fe1-bc04-90075594b397
 ms.openlocfilehash: c2aab9db8a74665748fba92821fcdfa97a1cec6c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315490"
 ---
 # <a name="unable-to-embed-resource-file-filename-error-message"></a>Konnte nicht eingebettet Ressourcendatei "\<Dateiname >': \<Fehlermeldung >
@@ -28,4 +28,4 @@ Visual Basic-Compiler Ruft die Assembly Linker (Al.exe, auch bekannt als Alink) 
 ## <a name="see-also"></a>Siehe auch
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)

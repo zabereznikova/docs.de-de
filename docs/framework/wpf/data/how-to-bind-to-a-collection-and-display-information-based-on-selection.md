@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data binding [WPF], binding to collections
 ms.assetid: 952a7d76-dd29-49e5-86f5-32c4530e70eb
 ms.openlocfilehash: bb7d4c89e63982a3052857dcb50d04d36d9517dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314390"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Vorgehensweise: Binden an eine Sammlung und Anzeigen von Informationen auf Grundlage der Auswahl
@@ -49,6 +49,6 @@ In einem einfachen Master / Detail-Szenario haben Sie ein datengebundenes <xref:
 
 - [Verwenden des Master-/Detailmusters mit hierarchischen Daten](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
 - [Verwenden des Master-/Detailmusters mit hierarchischen XML-Daten](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
-- [Übersicht über die Datenbindung](data-binding-overview.md)
+- [Übersicht zur Datenbindung](data-binding-overview.md)
 - [Übersicht über Datenvorlagen](data-templating-overview.md)
-- [Gewusst wie-Themen](data-binding-how-to-topics.md)
+- [Themen zu Vorgehensweisen](data-binding-how-to-topics.md)

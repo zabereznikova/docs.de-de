@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 15b790f4a4d3348e2bef3e7e929d72c09da8690c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 1abb64f7d76b772168ed97024f5f1381670c6882
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321444"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Vorgehensweise: Debuggen von Windows-Dienstanwendungen
 Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb von Visual Studio ausgeführt werden. Aus diesem Grund ist das Debuggen eines Dienstes nicht so einfach wie das Debuggen anderer Anwendungstypen in Visual Studio. Damit ein Dienst gedebuggt werden kann, muss er gestartet werden. Danach muss ein Debugger an den Prozess angehängt werden, in dem er ausgeführt wird. Anschließend kann die Anwendung mit allen Standarddebugfunktionen von Visual Studio gedebuggt werden.  
@@ -36,23 +36,23 @@ Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb 
   
 ### <a name="to-debug-a-service"></a>So debuggen Sie einen Dienst  
   
-1.  Erstellen Sie Ihren Dienst in der Debugkonfiguration.  
+1. Erstellen Sie Ihren Dienst in der Debugkonfiguration.  
   
-2.  Installieren Sie den Dienst. Weitere Informationen finden Sie unter [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
+2. Installieren Sie den Dienst. Weitere Informationen finden Sie unter [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
-3.  Starten Sie den Dienst entweder mit dem **Dienststeuerungs-Manager**, mit dem **Server-Explorer** oder aus dem Code. Weitere Informationen finden Sie unter [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md).  
+3. Starten Sie den Dienst entweder mit dem **Dienststeuerungs-Manager**, mit dem **Server-Explorer** oder aus dem Code. Weitere Informationen finden Sie unter [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md).  
   
-4.  Starten Sie Visual Studio mit Administratorrechten, damit Sie die Systemprozesse zuordnen können.  
+4. Starten Sie Visual Studio mit Administratorrechten, damit Sie die Systemprozesse zuordnen können.  
   
-5.  (Optional) Klicken Sie in Visual Studio auf der Menüleiste auf **Extras** und **Optionen**. Wählen Sie im Dialogfeld **Optionen** die Optionen **Debuggen** und **Symbole** aus. Aktivieren Sie das Kontrollkästchen **Microsoft-Symbolserver**, und klicken Sie anschließend auf die Schaltfläche **OK**.  
+5. (Optional) Klicken Sie in Visual Studio auf der Menüleiste auf **Extras** und **Optionen**. Wählen Sie im Dialogfeld **Optionen** die Optionen **Debuggen** und **Symbole** aus. Aktivieren Sie das Kontrollkästchen **Microsoft-Symbolserver**, und klicken Sie anschließend auf die Schaltfläche **OK**.  
   
-6.  Wählen Sie auf der Menüleiste aus dem Menü **Debuggen** oder **Extras** die Option **An den Prozess anhängen** aus. (Tastatur: STRG+ALT+P)  
+6. Wählen Sie auf der Menüleiste aus dem Menü **Debuggen** oder **Extras** die Option **An den Prozess anhängen** aus. (Tastatur: STRG+ALT+P)  
   
      Das Dialogfeld **Prozesse** wird angezeigt.  
   
-7.  Aktivieren Sie das Kontrollkästchen **Prozesse aller Benutzer anzeigen**.  
+7. Aktivieren Sie das Kontrollkästchen **Prozesse aller Benutzer anzeigen**.  
   
-8.  Wählen Sie im Abschnitt **Verfügbare Prozesse** den Prozess für den Dienst aus, und klicken Sie anschließend auf **Anfügen**.  
+8. Wählen Sie im Abschnitt **Verfügbare Prozesse** den Prozess für den Dienst aus, und klicken Sie anschließend auf **Anfügen**.  
   
     > [!TIP]
     >  Der Prozess weist den gleichen Namen wie die ausführbare Datei für den Dienst auf.  
@@ -77,7 +77,7 @@ Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb 
   
 #### <a name="how-to-run-a-windows-service-as-a-console-application"></a>Vorgehensweise: Ausführen eines Windows-Dienstes als Konsolenanwendung  
   
-1.  Fügen Sie eine Methode zu Ihrem Dienst hinzu, die die Methoden <xref:System.ServiceProcess.ServiceBase.OnStart%2A> und <xref:System.ServiceProcess.ServiceBase.OnStop%2A> ausführt:  
+1. Fügen Sie eine Methode zu Ihrem Dienst hinzu, die die Methoden <xref:System.ServiceProcess.ServiceBase.OnStart%2A> und <xref:System.ServiceProcess.ServiceBase.OnStop%2A> ausführt:  
   
     ```csharp  
     internal void TestStartupAndStop(string[] args)  
@@ -88,7 +88,7 @@ Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb 
     }  
     ```  
   
-2.  Schreiben Sie die `Main`-Methode wie folgt um:  
+2. Schreiben Sie die `Main`-Methode wie folgt um:  
   
     ```csharp  
     static void Main(string[] args)  
@@ -105,16 +105,17 @@ Ein Dienst muss im Kontext des Dienststeuerelement-Managers und nicht innerhalb 
     }
     ```  
   
-3.  Legen Sie in der Registerkarte **Anwendung** der Projekteigenschaften den **Ausgabetyp** auf **Konsolenanwendung** fest.  
+3. Legen Sie in der Registerkarte **Anwendung** der Projekteigenschaften den **Ausgabetyp** auf **Konsolenanwendung** fest.  
   
-4.  Wählen Sie **Debugging starten** (F5) aus.  
+4. Wählen Sie **Debugging starten** (F5) aus.  
   
-5.  Wenn Sie das Programm als Windows-Dienst ausführen, installieren Sie es, und starten Sie sie wie gewohnt für einen Windows-Dienst. Es ist nicht notwendig, diese Änderungen rückgängig zu machen.  
+5. Wenn Sie das Programm als Windows-Dienst ausführen, installieren Sie es, und starten Sie sie wie gewohnt für einen Windows-Dienst. Es ist nicht notwendig, diese Änderungen rückgängig zu machen.  
   
  In einigen Fällen, z. B. beim Debuggen eines Problems, das nur beim Systemstart auftritt, müssen Sie den Windows-Debugger verwenden. [Laden Sie das Windows Driver Kit (WDK) herunter](/windows-hardware/drivers/download-the-wdk), und informieren Sie sich über die [Fehlerbehebung (Debugging) bei Windows-Diensten](https://support.microsoft.com/kb/824344).  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Vorgehensweise: Installieren und Deinstallieren von Diensten](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [Vorgehensweise: Starten von Diensten](../../../docs/framework/windows-services/how-to-start-services.md)
-- [Debugging a Service (Debuggen eines Diensts)](/windows/desktop/Services/debugging-a-service)
+- [Debuggen eines Diensts](/windows/desktop/Services/debugging-a-service)

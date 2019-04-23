@@ -3,10 +3,10 @@ title: Anleitung zum Einrichten eines virtuellen Verzeichnisses
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
 ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325344"
 ---
 # <a name="virtual-directory-setup-instructions"></a>Anleitung zum Einrichten eines virtuellen Verzeichnisses
@@ -59,9 +59,9 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
   
 7. Standardmäßig werden die folgenden Kontrollkästchen aktiviert:  
   
-    -   **Lesen**  
+    -   **Read**  
   
-    -   **Skripts ausführen (z. B. ASP)**  
+    -   **Ausführen von Skripts (z. B. ASP)**  
   
 8. Klicken Sie auf **Weiter**, und klicken Sie dann auf **Fertig stellen** um den Assistenten abzuschließen.  
   
@@ -84,11 +84,11 @@ Die Windows Communication Foundation (WCF)-Beispiele dienen zum Freigeben von ei
   
 2. Standardmäßig werden die folgenden Kontrollkästchen aktiviert:  
   
-    -   **Lesen**  
+    -   **Read**  
   
-    -   **Protokollieren von Besuchen**  
+    -   **Besuche protokollieren**  
   
-    -   **Indizieren dieser Ressource**  
+    -   **Ressource indizieren**  
   
 3. Wählen Sie die **Verzeichnissuche** Kontrollkästchen. So können Sie über Internet Explorer auf das Verzeichnis zugreifen, was beim Debuggen eines Diensts hilfreich ist.  
   

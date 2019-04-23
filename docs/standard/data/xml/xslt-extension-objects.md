@@ -6,10 +6,10 @@ ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320417"
 ---
 # <a name="xslt-extension-objects"></a>XSLT-Erweiterungsobjekte
@@ -40,5 +40,5 @@ Mit Erweiterungsobjekten kann der Funktionsumfang von Stylesheets erweitert werd
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XSLT-Transformationen](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [XSLT Transformations (XSLT-Transformationen)](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [XSLT-Sicherheitsaspekte](../../../../docs/standard/data/xml/xslt-security-considerations.md)

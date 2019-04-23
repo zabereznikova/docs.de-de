@@ -3,10 +3,10 @@ title: Überlegungen zur Leistung (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
 ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324044"
 ---
 # <a name="performance-considerations-entity-framework"></a>Überlegungen zur Leistung (Entity Framework)
@@ -147,9 +147,9 @@ In diesem Thema werden Leistungsmerkmale des ADO.NET Entity Framework beschriebe
 ## <a name="performance-data"></a>Leistungsdaten  
  Einige Leistungsdaten für Entity Framework werden in den folgenden Beiträgen veröffentlicht, auf die [ADO.NET-Teamblog](https://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [Exploring the Performance of the ADO.NET Entity Framework - Part 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
+-   [Untersuchen die Leistung der ADO.NET Entity Framework - Teil 1](https://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [Exploring the Performance of the ADO.NET Entity Framework – Part 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
+-   [Untersuchen die Leistung der ADO.NET Entity Framework – Teil 2](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
 -   [ADO.NET Entity Framework-Leistungsvergleich](https://go.microsoft.com/fwlink/?LinkID=123913)  
   

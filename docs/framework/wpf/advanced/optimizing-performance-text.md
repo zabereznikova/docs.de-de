@@ -12,14 +12,14 @@ helpviewer_keywords:
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
 ms.openlocfilehash: 0cc1ac9adf40948a5109b37336d45a2be833e54f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317205"
 ---
 # <a name="optimizing-performance-text"></a>Optimieren der Leistung: Text
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet Unterstützung für die Präsentation von Textinhalt durch Verwendung von umfangreichen [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Steuerelemente. Im Allgemeinen können Sie das Rendern von Text in drei Ebenen unterteilen:  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet Unterstützung für die Präsentation von Textinhalt durch Verwendung von umfangreichen [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]-Steuerelementen. Im Allgemeinen können Sie das Rendern von Text in drei Ebenen unterteilen:  
   
 1. Mithilfe der <xref:System.Windows.Documents.Glyphs> und <xref:System.Windows.Media.GlyphRun> -Objekte direkt.  
   
@@ -37,9 +37,9 @@ ms.locfileid: "59317205"
   
 -   Druckszenarios  
   
-    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] als Gerät Druckersprache.  
+    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] als Druckersprache für Geräte  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)]sein.  
+    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
   
     -   Vorherige Druckertreiber, Ausgabe von [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]-Anwendungen an das feste Format  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59317205"
   
 <a name="FlowDocument_TextBlock_Label"></a>   
 ## <a name="flowdocument-textblock-and-label-controls"></a>FlowDocument, TextBlock- und Label-Steuerelemente  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enthält mehrere Steuerelemente, die zum Zeichnen von Text auf dem Bildschirm. Jedes Steuerelement ist einem bestimmten Szenario zugeordnet und besitzt eine eigene Liste von Funktionen und Einschränkungen.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] enthält zahlreiche Steuerelemente für das Zeichnen von Text auf dem Bildschirm. Jedes Steuerelement dient einem anderen Szenario und verfügt über eine eigene Liste von Funktionen und Einschränkungen.  
   
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument wirkt sich mehr auf die Leistung aus als TextBlock oder Label  
  Im Allgemeinen die <xref:System.Windows.Controls.TextBlock> Element sollte verwendet werden, wenn nur eingeschränkte Textelemente-Unterstützung erforderlich ist, z. B. einem kurzen Satz in einem [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]. <xref:System.Windows.Controls.Label> kann verwendet werden, wenn nur minimale textunterstützung erforderlich ist. Die <xref:System.Windows.Documents.FlowDocument> Element ist ein Container für Inhaltspräsentationen Dokumente, die umfassende Unterstützung, und aus diesem Grund hat größere Auswirkungen auf die Leistung als die Verwendung der <xref:System.Windows.Controls.TextBlock> oder <xref:System.Windows.Controls.Label> Steuerelemente.  
@@ -97,7 +97,7 @@ ms.locfileid: "59317205"
   
  Die folgende Tabelle zeigt die Kosten für die Anzeige von 1000 <xref:System.Windows.Controls.TextBlock> Objekte mit und ohne eine explizite <xref:System.Windows.Documents.Run>.  
   
-|**TextBlock-Typ**|**Zeitpunkt der Erstellung (ms)**|**Renderingzeit (ms)**|  
+|**TextBlock-Typ**|**Erstellungszeit (in ms)**|**Renderingzeit (in ms)**|  
 |------------------------|------------------------------|----------------------------|  
 |Run zum Festlegen von Texteigenschaften|146|540|  
 |TextBlock zum Festlegen von Texteigenschaften|43|453|  
@@ -107,7 +107,7 @@ ms.locfileid: "59317205"
   
  Die Lösung für dieses Problem ist einfach. Wenn die <xref:System.Windows.Controls.Label> ist nicht festgelegt, um eine benutzerdefinierte <xref:System.Windows.Controls.ContentControl.ContentTemplate%2A> -Wert, ersetzen Sie die <xref:System.Windows.Controls.Label> mit einer <xref:System.Windows.Controls.TextBlock> und Datenbindung der <xref:System.Windows.Controls.TextBlock.Text%2A> Eigenschaft, um die Quellzeichenfolge.  
   
-|**Datengebundene Eigenschaft**|**Aktualisieren Sie die Zeit (ms)**|  
+|**Datengebundene Eigenschaft**|**Aktualisierungszeit (in ms)**|  
 |-----------------------------|----------------------------|  
 |Label.Content|835|  
 |TextBlock.Text|242|  
@@ -142,14 +142,14 @@ ms.locfileid: "59317205"
   
  Die folgende Tabelle zeigt die Kosten der Leistung zum Anzeigen von 1000 <xref:System.Windows.Documents.Hyperlink> -Elementen mit und ohne Unterstreichung.  
   
-|**Link**|**Zeitpunkt der Erstellung (ms)**|**Renderingzeit (ms)**|  
+|**Link**|**Erstellungszeit (in ms)**|**Renderingzeit (in ms)**|  
 |-------------------|------------------------------|----------------------------|  
 |Mit Unterstreichung|289|1130|  
 |Ohne Unterstreichung|299|776|  
   
 <a name="Text_Formatting_Features"></a>   
 ## <a name="text-formatting-features"></a>Textformatierungsfunktionen  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet umfassende Dienste, z. B. automatische Silbentrennungen für die textformatierung an. Diese Dienste können die Leistung der Anwendung beeinträchtigen und sollten nur bei Bedarf verwendet werden.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] bietet umfangreiche Formatierungsdienste wie automatische Silbentrennung. Diese Dienste können die Leistung der Anwendung beeinträchtigen und sollten nur bei Bedarf verwendet werden.  
   
 ### <a name="avoid-unnecessary-use-of-hyphenation"></a>Vermeiden von unnötiger Silbentrennung  
  Automatische Silbentrennung findet Trennpunkte für Textzeilen und ermöglicht zusätzliche Trennpositionen für Zeilen in <xref:System.Windows.Controls.TextBlock> und <xref:System.Windows.Documents.FlowDocument> Objekte. In der Standardeinstellung ist die automatische Silbentrennung in diesen Objekten deaktiviert. Sie können diese Funktion aktivieren, indem Sie die IsHyphenationEnabled-Eigenschaft des Objekts auf `true` festlegen. Allerdings führt die Aktivierung dieser Funktion dazu, dass [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)]-Interoperabilität initiiert, was die Leistung der Anwendung beeinträchtigen kann. Es wird empfohlen, die automatische Silbentrennung nur bei Bedarf zu verwenden.  
@@ -164,7 +164,7 @@ ms.locfileid: "59317205"
 
 - [Optimieren der WPF-Anwendungsleistung](optimizing-wpf-application-performance.md)
 - [Planen der Anwendungsleistung](planning-for-application-performance.md)
-- [Nutzen der Vorteile der Hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Vorteile der Hardware nutzen](optimizing-performance-taking-advantage-of-hardware.md)
 - [Layout und Entwurf](optimizing-performance-layout-and-design.md)
 - [2D-Grafiken und Bildverarbeitung](optimizing-performance-2d-graphics-and-imaging.md)
 - [Objektverhalten](optimizing-performance-object-behavior.md)

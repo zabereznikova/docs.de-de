@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c5f1882c37861fe7dd7997348dc51e30ce2950e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218540"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314749"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>Vorgehensweise: Registrieren primärer Interopassemblys
 
@@ -36,7 +36,7 @@ Verwenden Sie das [Assembly Registration-Tool (Regasm.exe)](../../../docs/framew
 
 ## <a name="to-register-a-primary-interop-assembly"></a>So registrieren Sie eine primäre Interop-Assembly
 
-1.  Geben Sie an der Eingabeaufforderung Folgendes ein:
+1. Geben Sie an der Eingabeaufforderung Folgendes ein:
 
      **regasm** *assemblyname*
 
@@ -51,6 +51,6 @@ regasm CompanyA.UtilLib.dll
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Programming with Primary Interop Assemblies (Programmieren mit primären Interop-Assemblys)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
+- [Programmieren mit primären Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/baxfadst(v=vs.100))
 - [Suchen primärer Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/y06sxw56(v=vs.100))
 - [Verteilen primärer Interop-Assemblys](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w0dt2w20(v=vs.100))

@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
 ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314827"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>Exemplarische Vorgehensweise: Ausschließliches Verwenden von gespeicherten Prozeduren (Visual Basic)
@@ -105,7 +105,7 @@ Diese exemplarische Vorgehensweise stellt ein grundlegendes End-to-End-[!INCLUDE
   
 1. In **Projektmappen-Explorer**, mit der rechten Maustaste **Form1.vb**, und klicken Sie dann auf **Ansichtscode**.  
   
-     `Class Form1` wird im Code-Editor angezeigt.  
+     `Class Form1` erscheint im Code-Editor.  
   
 2. Geben Sie den folgenden Code in den `Form1`-Code-Block ein.  
   

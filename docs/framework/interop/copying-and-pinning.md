@@ -9,23 +9,21 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45ac26442adc78c5d1e6a2efe94fc2cefff86562
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e1696bd6eb4eb3a43593cf7ed264c80745c1ec66
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219619"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326280"
 ---
 # <a name="copying-and-pinning"></a>Kopieren und Fixieren
 Beim Marshalling von Daten kann der Interop-Marshaller die gemarshallten Daten kopieren oder fixieren. Beim Kopieren der Daten wird eine Kopie der Daten aus einem Speicherort an einem anderen Speicherort abgelegt. Die folgende Abbildung veranschaulicht die Unterschiede zwischen dem Kopieren eines Werttyps und dem Kopieren eines Typs, der als Verweis von einem verwalteten Speicher zu einem nicht verwalteten Speicher übergeben wird.  
   
- ![Wert und Verweis als übergebener Werttyp](./media/interopmarshalcopy.gif "interopmarshalcopy")  
-Wert und Verweis als übergebener Werttyp  
+ ![Diagramm, das zeigt, wie Wert- und Verweistypen kopiert werden.](./media/copying-and-pinning/interop-marshal-copy.gif)  
   
- Als Wert übergebene Methodenargumente werden in einen nicht verwalteten Code als Werte im Stapel gemarshallt. Der Kopiervorgang wird direkt ausgeführt. Als Verweis übergebene Argumente werden als Zeiger im Stapel übergeben. Auch Verweistypen werden als Wert und als Verweis übergebenen. Die folgende Abbildung zeigt, dass als Wert übergebene Verweistypen entweder kopiert oder fixiert werden.  
+ Als Wert übergebene Methodenargumente werden in einen nicht verwalteten Code als Werte im Stapel gemarshallt. Der Kopiervorgang wird direkt ausgeführt. Als Verweis übergebene Argumente werden als Zeiger im Stapel übergeben. Auch Verweistypen werden als Wert und als Verweis übergebenen. Die folgende Abbildung zeigt, dass als Wert übergebene Verweistypen entweder kopiert oder fixiert werden: 
   
- ![COM-Interop](./media/interopmarshalpin.gif "interopmarshalpin")  
-Wert und Verweis als übergebener Verweistyp  
+ ![Diagramm mit Verweistypen, die nach Wert und Verweis übergeben werden.](./media/copying-and-pinning/interop-marshal-reference-pin.gif)  
   
  Beim Fixieren werden die Daten vorübergehend an ihrem aktuellen Speicherort gesperrt. Dadurch können sie nicht vom Garbage Collector der Common Language Runtime verschoben werden. Der Marshaller fixiert die Daten, um den Aufwand beim Kopieren zu reduzieren und die Leistung zu verbessern. Ob Daten während des Marshallingvorgangs kopiert oder fixiert werden, wird durch den Datentyp bestimmt.  Beim Marshalling für Objekte, wie z.B. <xref:System.String>, werden die Daten automatisch fixiert. Sie können jedoch mithilfe der <xref:System.Runtime.InteropServices.GCHandle>-Klasse den Speicher auch manuell fixieren.  
   
@@ -78,6 +76,7 @@ Wert und Verweis als übergebener Verweistyp
  Wenn ein <xref:System.Text.StringBuilder?displayProperty=nameWithType> als Wert übergeben wird, übergibt der Marshaller dem Aufrufer direkt einen Verweis auf den internen Puffer von **StringBuilder**. Aufrufer und Aufgerufener müssen bei der Größe des Puffers übereinstimmen. Der Aufrufer ist für das Erstellen von **StringBuilder** in einer angemessenen Länge zuständig. Der Aufgerufene muss die erforderlichen Vorsichtsmaßnahmen treffen, um einen Pufferüberlauf zu verhindern. **StringBuilder** stellt eine Ausnahme zu der Regel dar, dass als Wert übergebene Verweistypen standardmäßig als Eingabeparameter übergeben werden. Es wird immer als Ein-/Ausgabeparameter übergeben.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Default Marshaling Behavior (Standardmäßiges Marshallingverhalten)](default-marshaling-behavior.md)
+
+- [Standardmarshallingverhalten](default-marshaling-behavior.md)
 - [Direktionale Attribute](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
-- [Interop Marshaling (Interop-Marshalling)](interop-marshaling.md)
+- [Interop-Marshalling](interop-marshaling.md)

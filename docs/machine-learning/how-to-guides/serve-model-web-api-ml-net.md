@@ -3,12 +3,12 @@ title: Bereitstellen eines Machine Learning-Modells in der ASP.NET Core-Web-API
 description: Bereitstellen eines Machine Learning-Modells zur ML.NET-Standpunktanalyse über das Internet mithilfe der ASP.NET Core-Web-API
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 0cc13ec22b3a8805ec4aa17bf10560b2564ccd63
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: af51ccaac263202fc34d36e746722d2da46404f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58307914"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321229"
 ---
 # <a name="how-to-serve-machine-learning-model-through-aspnet-core-web-api"></a>Vorgehensweise: Bereitstellen eines Machine Learning-Modells über die ASP.NET Core-Web-API
 
@@ -21,7 +21,7 @@ Diese Anleitung und das dazugehörte Beispiel verwenden derzeit **ML.NET Version
 
 ## <a name="prerequisites"></a>Erforderliche Komponenten
 
-- [Visual Studio 2017 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
+- [Visual Studio 2017 15.6 oder höher](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) mit installierter Workload „Plattformübergreifende .NET Core-Entwicklung“.
 - PowerShell.
 - Vorab trainiertes Modell.
     - Erstellen Sie Ihr eigenes Modell mithilfe des Tutorials [Verwenden von ML.NET in einem Standpunktanalyse-Szenario mit binärer Klassifizierung](../tutorials/sentiment-analysis.md).

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 ms.openlocfilehash: 3b3e69d1c52b98822a4cf3b75de74466e1dc68f0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320051"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementierung eines serverseitigen Benutzeroberflächenautomatisierungs-Anbieters
@@ -19,7 +19,7 @@ ms.locfileid: "59320051"
   
  In diesem Abschnitt wird beschrieben, wie ein serverseitiger Benutzeroberflächenautomatisierungs-Anbieter für ein benutzerdefiniertes Steuerelement implementiert wird.  
   
- Die Implementierung für Windows Presentation Foundation (WPF)-Elemente und nicht-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Elemente (z. B. solche, die für entwickelt wurden [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) unterscheidet sich grundlegend. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente unterstützen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] durch eine Klasse, die von abgeleiteten <xref:System.Windows.Automation.Peers.AutomationPeer>. Nicht-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente stellen die Unterstützung durch Implementierungen von Anbieterschnittstellen bereit.  
+ Die Implementierung für Windows Presentation Foundation (WPF)-Elemente und nicht-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Elemente (z. B. solche, die für entwickelt wurden [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) unterscheidet sich grundlegend. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente unterstützen [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] über eine von <xref:System.Windows.Automation.Peers.AutomationPeer>abgeleitete Klasse. Nicht-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] -Elemente stellen die Unterstützung durch Implementierungen von Anbieterschnittstellen bereit.  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>Sicherheitsüberlegungen  
@@ -77,7 +77,7 @@ ms.locfileid: "59320051"
   
 <a name="Property_Values_in_Non_WPF_Providers"></a>   
 ### <a name="property-values-in-non-wpf-providers"></a>Eigenschaftswerte in Nicht-WPF-Anbietern  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter für benutzerdefinierte Steuerelemente müssen bestimmte Eigenschaften unterstützen, die vom Automatisierungssystem sowie von Clientanwendungen verwendet werden können. Bei in Fenstern gehosteten Elementen (HWNDs) kann die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] einige Eigenschaften vom Standardfensteranbieter abrufen, andere müssen jedoch vom benutzerdefinierten Anbieter bezogen werden.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter für benutzerdefinierte Steuerelemente müssen bestimmte Eigenschaften unterstützen, die sowohl vom Automatisierungssystem als auch von Clientanwendungen verwendet werden können. Bei in Fenstern gehosteten Elementen (HWNDs) kann die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] einige Eigenschaften vom Standardfensteranbieter abrufen, andere müssen jedoch vom benutzerdefinierten Anbieter bezogen werden.  
   
  Anbieter für HWND-basierte Steuerelemente müssen die folgenden Eigenschaften (identifiziert nach Feldwerten) normalerweise nicht bereitstellen:  
   
@@ -112,7 +112,7 @@ ms.locfileid: "59320051"
   
 <a name="Events_in_Non_WPF_Providers"></a>   
 ### <a name="events-in-non-wpf-providers"></a>Ereignisse in Nicht-WPF-Anbietern  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter sollten Ereignisse, um Clientanwendungen über Zustandsänderungen der Benutzeroberfläche benachrichtigen auslösen. Ereignisse werden mit den folgenden Methoden ausgelöst.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Anbieter sollten Ereignisse auslösen, um Clientanwendungen über Zustandsänderungen der Benutzeroberfläche zu benachrichtigen. Ereignisse werden mit den folgenden Methoden ausgelöst.  
   
 |Methode|Beschreibung|  
 |------------|-----------------|  
@@ -144,7 +144,7 @@ ms.locfileid: "59320051"
   
 <a name="Non_WPF_Provider_Reparenting"></a>   
 ### <a name="non-wpf-provider-reparenting"></a>Neuzuordnung des übergeordneten Elements für Nicht-WPF-Anbieter  
- Genau genommen sind Popupfenster Fenster oberster Ebene und werden in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur standardmäßig als untergeordnete Elemente des Desktops angezeigt. Eigentlich sind Popupfenster in vielen Fällen jedoch untergeordnete Elemente anderer Steuerelemente. Beispielsweise ist die Dropdownliste eines Kombinationsfelds logischerweise ein untergeordnetes Element des Kombinationsfelds. Dementsprechend ist ein Menüpopupfenster logischerweise ein untergeordnetes Element des Menüs. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] unterstützt das Popupfenster das Neuzuordnen des übergeordneten Elements, sodass diese als untergeordnete Elemente des zugehörigen Steuerelements angezeigt werden.  
+ Genau genommen sind Popupfenster Fenster oberster Ebene und werden in der [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Struktur standardmäßig als untergeordnete Elemente des Desktops angezeigt. Eigentlich sind Popupfenster in vielen Fällen jedoch untergeordnete Elemente anderer Steuerelemente. Beispielsweise ist die Dropdownliste eines Kombinationsfelds logischerweise ein untergeordnetes Element des Kombinationsfelds. Dementsprechend ist ein Menüpopupfenster logischerweise ein untergeordnetes Element des Menüs. Die[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] unterstützt für Popupfenster das Neuzuordnen des übergeordneten Elements, sodass sie als untergeordnete Elemente des zugehörigen Steuerelements angezeigt werden.  
   
  So ordnen Sie ein Popupfenster einem neuen übergeordneten Element zu  
   

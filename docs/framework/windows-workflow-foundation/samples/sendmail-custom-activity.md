@@ -3,10 +3,10 @@ title: Benutzerdefinierte SendMail-Aktivität
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321860"
 ---
 # <a name="sendmail-custom-activity"></a>Benutzerdefinierte SendMail-Aktivität
@@ -113,7 +113,7 @@ new SendMail
   
 -   [IIS 7.0: Konfigurieren des SMTP-e-Mail](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [Installieren des SMTP-Diensts](https://go.microsoft.com/fwlink/?LinkId=150458)  
+-   [Vorgehensweise: Installieren Sie den SMTP-Dienst](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  SMTP-Emulatoren können von Drittanbietern heruntergeladen werden.  
   

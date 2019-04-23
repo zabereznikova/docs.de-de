@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox'
+title: 'Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -11,13 +11,13 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316530"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einer Sandbox
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Vorgehensweise: Ausführen von teilweise vertrauenswürdigem Code in einem Sandkasten
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Unter einer Sandkastenumgebung versteht man das Ausführen von Code in einer beschränkten Sicherheitsumgebung, in der die dem Code gewährten Zugriffsrechte eingeschränkt sind. Wenn Sie beispielsweise über eine verwaltete Bibliothek aus einer nicht vollständig vertrauenswürdigen Quelle verfügen, sollten Sie diese nicht als vollständig vertrauenswürdig ausführen. Stattdessen sollten Sie den Code in eine Sandkastenumgebung setzen, in der die Berechtigungen des Codes auf diejenigen beschränkt sind, die er voraussichtlich benötigt (z. B. die Berechtigung <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>).  
@@ -167,7 +167,7 @@ AppDomain.CreateDomain( string friendlyName,
     }  
     ```  
   
-     <xref:System.Reflection> wird verwendet, um ein Handle einer Methode in der teilweise vertrauenswürdigen Assembly abzurufen. Das Handle kann verwendet werden, um Code auf sichere Weise mit minimalen Berechtigungen auszuführen.  
+     <xref:System.Reflection> wird verwendet, um ein Handle von einer Methode in der teilweise vertrauenswürdigen Assembly zu erhalten. Das Handle kann verwendet werden, um Code auf sichere Weise mit minimalen Berechtigungen auszuführen.  
   
      Beachten Sie im vorherigen Code den <xref:System.Security.PermissionSet.Assert%2A> für die Berechtigung "Volle Vertrauenswürdigkeit", bevor Sie die <xref:System.Security.SecurityException> drucken.  
   

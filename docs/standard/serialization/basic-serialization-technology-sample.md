@@ -3,10 +3,10 @@ title: Technologiebeispiel für einfache Serialisierung
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315009"
 ---
 # <a name="basic-serialization-technology-sample"></a>Technologiebeispiel für einfache Serialisierung
@@ -72,11 +72,11 @@ ms.locfileid: "59315009"
   
 -   Stream-E/A  
   
-    -   <xref:System.IO.Stream> Verwendet zum Serialisieren und deserialisieren. Bei dem in diesem Beispiel verwendeten speziellen Streamtyp handelt es sich um den <xref:System.IO.FileStream>-Typ. Die Serialisierung kann jedoch mit einem beliebigen aus <xref:System.IO.Stream> abgeleitetet Typ durchgeführt werden.  
+    -   <xref:System.IO.Stream> Wird zum Serialisieren und Deserialisieren verwendet. Bei dem in diesem Beispiel verwendeten speziellen Streamtyp handelt es sich um den <xref:System.IO.FileStream>-Typ. Die Serialisierung kann jedoch mit einem beliebigen aus <xref:System.IO.Stream> abgeleitetet Typ durchgeführt werden.  
   
-    -   <xref:System.IO.File> Zum Erstellen <xref:System.IO.FileStream> Objekte zum Lesen und Erstellen von Dateien auf dem Datenträger.  
+    -   <xref:System.IO.File> Wird zum Erstellen von <xref:System.IO.FileStream>-Objekten zum Lesen und Erstellen von Dateien auf einem Datenträger verwendet.  
   
-    -   <xref:System.IO.FileStream> Zum Serialisieren und Deserialisieren verknüpfter Listen verwendet.  
+    -   <xref:System.IO.FileStream> Wird zum Serialisieren und Deserialisieren verknüpfter Listen verwendet.  
   
 ## <a name="see-also"></a>Siehe auch
 

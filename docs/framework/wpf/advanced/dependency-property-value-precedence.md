@@ -8,10 +8,10 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315685"
 ---
 # <a name="dependency-property-value-precedence"></a>Priorität von Abhängigkeitseigenschaftswerten
@@ -59,7 +59,7 @@ ms.locfileid: "59315685"
   
 8. **Stil-Setter.** Werte aus einer <xref:System.Windows.Setter> innerhalb von Stilen einer Seite oder Anwendung.  
   
-9. **Standardstil (Design).** Ausführliche Informationen dazu, wann dies zutrifft und wie sich Designstile auf die Vorlagen innerhalb von Designstilen beziehen, finden Sie unter [Standard(design)stile](#themestyles) weiter unten in diesem Thema. Innerhalb eines Standardstils gilt die folgende Rangfolge:  
+9. **Standard(design)stil.** Ausführliche Informationen dazu, wann dies zutrifft und wie sich Designstile auf die Vorlagen innerhalb von Designstilen beziehen, finden Sie unter [Standard(design)stile](#themestyles) weiter unten in diesem Thema. Innerhalb eines Standardstils gilt die folgende Rangfolge:  
   
     1.  Aktive Trigger im Designstil  
   
@@ -67,7 +67,7 @@ ms.locfileid: "59315685"
   
 10. **Vererbung.** Einige Abhängigkeitseigenschaften vererben ihre Werte von übergeordneten Elementen an untergeordnete Elemente, sodass sie nicht speziell für jedes Element in einer Anwendung festgelegt werden müssen. Weitere Informationen finden Sie unter [Vererbung von Eigenschaftswerten](property-value-inheritance.md).  
   
-11. **Der Standardwert aus Metadaten für Abhängigkeitseigenschaften.** Jede Abhängigkeitseigenschaft kann einen Standardwert haben, wie bei der Registrierung der bestimmten Eigenschaft durch das Eigenschaftensystem festgelegt. Außerdem verfügen abgeleitete Klassen, die eine Abhängigkeitseigenschaft erben, über die Option zum Überschreiben dieser Metadaten (einschließlich des Standardwerts) auf einer Pro-Typ-Basis. Weitere Informationen finden Sie unter [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md). Da die Vererbung vor dem Standardwert überprüft wird, hat bei einer vererbten Eigenschaft der Standardwert eines übergeordneten Elements Vorrang vor einem untergeordneten Element.  Daher wird, wenn eine vererbbare Eigenschaft nicht irgendwo festgelegt ist, der Standardwert verwendet, der im Stamm oder übergeordneten Element festgelegt wurde, anstatt des Standardwerts des untergeordneten Elements.  
+11. **Standardwert von den Metadaten der Abhängigkeitseigenschaft.** Jede Abhängigkeitseigenschaft kann einen Standardwert haben, wie bei der Registrierung der bestimmten Eigenschaft durch das Eigenschaftensystem festgelegt. Außerdem verfügen abgeleitete Klassen, die eine Abhängigkeitseigenschaft erben, über die Option zum Überschreiben dieser Metadaten (einschließlich des Standardwerts) auf einer Pro-Typ-Basis. Weitere Informationen finden Sie unter [Metadaten für Abhängigkeitseigenschaften](dependency-property-metadata.md). Da die Vererbung vor dem Standardwert überprüft wird, hat bei einer vererbten Eigenschaft der Standardwert eines übergeordneten Elements Vorrang vor einem untergeordneten Element.  Daher wird, wenn eine vererbbare Eigenschaft nicht irgendwo festgelegt ist, der Standardwert verwendet, der im Stamm oder übergeordneten Element festgelegt wurde, anstatt des Standardwerts des untergeordneten Elements.  
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  

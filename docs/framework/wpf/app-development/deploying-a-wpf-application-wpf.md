@@ -6,10 +6,10 @@ helpviewer_keywords:
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
 ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320651"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>Bereitstellen von WPF-Anwendungen (WPF)
@@ -21,9 +21,9 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt werden, müss
   
 -   Bereitstellung mit XCopy  
   
--   [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] die Bereitstellung.  
+-   Bereitstellung mit [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)]  
   
--   [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] die Bereitstellung.  
+-   Bereitstellung mit [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)]  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>Bereitstellung mit XCopy  
@@ -39,15 +39,15 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt werden, müss
   
 <a name="Windows_Installer"></a>   
 ### <a name="windows-installer"></a>Windows Installer  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] ermöglicht Anwendungen, die als eigenständige ausführbare Dateien gepackt werden, die leicht an Clients verteilt und ausgeführt werden können. Darüber hinaus wird [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] mit [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] installiert und ermöglicht die Einbindung in Desktop, Startmenü und das Fenster für installierte Software in der Systemsteuerung.  
+ Mit [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] können Anwendungen als eigenständige ausführbare Dateien gepackt werden, die auf einfache Weise an Clients verteilt und ausgeführt werden können. Darüber hinaus wird [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] mit [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] installiert und ermöglicht die Einbindung in Desktop, Startmenü und das Fenster für installierte Software in der Systemsteuerung.  
   
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] vereinfacht die Installation und Deinstallation von Anwendungen, aber es bietet keine Möglichkeit sicherzustellen, dass die installierte Anwendungen auf, die vom Standpunkt der versionsverwaltung dem neuesten Stand gehalten werden.  
+ [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] vereinfacht die Installation und Deinstallation von Anwendungen. Es bietet jedoch keine Versionsverwaltung, das heißt, die Möglichkeit sicherzustellen, dass die installierten Anwendungen immer auf dem neuesten Stand sind.  
   
  Weitere Informationen zu Windows Installer finden Sie unter [Windows Installer-Bereitstellung](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop).
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce-Bereitstellung  
- [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] ermöglicht die Bereitstellung von Web-ähnliches Anwendung für nicht-Webanwendungen. Anwendungen werden auf Web- oder Dateiservern veröffentlicht und von dort bereitgestellt. [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] unterstützt zwar nicht alle Clientfeatures, die von den mit [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] installierten Anwendungen bereitgestellt werden, es steht jedoch eine Teilmenge dieser Features zur Verfügung. Hierzu gehören die folgenden Funktionen:  
+ [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] ermöglicht die Bereitstellung von Nicht-Webanwendungen im Webformat. Anwendungen werden auf Web- oder Dateiservern veröffentlicht und von dort bereitgestellt. [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] unterstützt zwar nicht alle Clientfeatures, die von den mit [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] installierten Anwendungen bereitgestellt werden, es steht jedoch eine Teilmenge dieser Features zur Verfügung. Hierzu gehören die folgenden Funktionen:  
   
 -   Einbindung in Startmenü und das Fenster für installierte Software in der Systemsteuerung  
   
@@ -69,7 +69,7 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt werden, müss
   
 -   Markup-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Anwendungen  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]sein.  
+-   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>Bereitstellen von eigenständigen Anwendungen  
@@ -87,7 +87,7 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt werden, müss
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>Bereitstellen von XAML-Browseranwendungen  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] sind kompilierte Anwendungen, die die folgenden drei Dateien bereitgestellt werden müssen:  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] sind kompilierte Anwendungen, bei denen die folgenden drei Dateien für die Bereitstellung erforderlich sind:  
   
 -   *ApplicationName*.exe: Die ausführbare Assembly-Anwendungsdatei.  
   
@@ -100,7 +100,7 @@ Nachdem Windows Presentation Foundation (WPF)-Anwendungen erstellt werden, müss
   
  Diese Dateien werden erzeugt, wenn eine [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] erstellt wird. Weitere Informationen finden Sie unter [Vorgehensweise: Erstellen ein neues WPF-Browseranwendungsprojekts](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100)). Wie Markup-[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]-Seiten werden [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]s normalerweise auf einem Webserver veröffentlicht und mit [!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] angezeigt.  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] kann von Clients mithilfe eines der Bereitstellungsverfahren bereitgestellt werden. [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] wird jedoch empfohlen, da es die folgenden Funktionen bietet:  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]s können mit einer beliebigen Bereitstellungstechnik auf Clients bereitgestellt werden. [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] wird jedoch empfohlen, da es die folgenden Funktionen bietet:  
   
 1. Automatische Updates, wenn eine neue Version veröffentlicht wird  
   

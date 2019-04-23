@@ -3,10 +3,10 @@ title: Vorgangsformatierer und Vorgangsauswahl
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
 ms.openlocfilehash: 45b489aeb88f57fe442cef9ffed1a2ee079b75e3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318922"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Vorgangsformatierer und Vorgangsauswahl
@@ -16,11 +16,11 @@ Dieses Beispiel veranschaulicht, wie Erweiterungspunkte für Windows Communicati
   
  Zu diesem Zweck enthält das Beispiel Folgendes:  
   
--   `QueryStringFormatter`, implementiert <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> und <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> für den Client und Server, und verarbeitet die Daten in der Abfragezeichenfolge.  
+-   `QueryStringFormatter`, der <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> und <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> für den Client bzw. den Server implementiert und die Daten in der Abfragezeichenfolge verarbeitet.  
   
--   `UriOperationSelector`, implementiert <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> auf dem Server, um die vorgangsverteilung anhand des Vorgangsnamens in der GET-Anforderung auszuführen.  
+-   `UriOperationSelector`, die <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> auf dem Server implementiert, um die Vorgangsverteilung anhand des Vorgangsnamens in der GET-Anforderung zu verteilen.  
   
--   `EnableHttpGetRequestsBehavior` Endpunkt Verhalten (und entsprechende Konfiguration), die die erforderliche Vorgangsauswahl der Laufzeit hinzufügt.  
+-   `EnableHttpGetRequestsBehavior`-Endpunktverhalten (und entsprechende Konfiguration), das die erforderliche Vorgangsauswahl der Laufzeit hinzufügt.  
   
 -   Zeigt, wie ein neuer Vorgangsformatierer in die Laufzeit eingefügt wird.  
   
@@ -38,7 +38,7 @@ Dieses Beispiel veranschaulicht, wie Erweiterungspunkte für Windows Communicati
   
 -   Das Beispiel verwendet die <xref:System.ComponentModel.TypeConverter>-Klasse, um Parameterdaten in der Anforderungsnachricht in und aus Zeichenfolgen zu konvertieren. Wenn ein <xref:System.ComponentModel.TypeConverter> für einen bestimmten Typ nicht verfügbar ist, löst der Beispielformatierer eine Ausnahme aus.  
   
--   In der `IClientMessageFormatter.SerializeRequest`-Methode auf dem Client erstellt der Formatierer einen URI mit der entsprechenden Empfängeradresse und fügt den Vorgangsnamen als Suffix an. Dieser Name dient dann zum Verteilen zum entsprechenden Vorgang auf dem Server. Dann nimmt er das Array mit Parameterobjekten und serialisiert die Parameterdaten mithilfe von Parameternamen und den von der <xref:System.ComponentModel.TypeConverter>-Klasse konvertierten Werten in die URI-Abfragezeichenfolge. Die <xref:System.ServiceModel.Channels.MessageHeaders.To%2A>-Eigenschaft und die <xref:System.ServiceModel.Channels.MessageProperties.Via%2A>-Eigenschaft werden dann auf diesen URI festgelegt. <xref:System.ServiceModel.Channels.MessageProperties> erfolgt über die <xref:System.ServiceModel.Channels.Message.Properties%2A> Eigenschaft.  
+-   In der `IClientMessageFormatter.SerializeRequest`-Methode auf dem Client erstellt der Formatierer einen URI mit der entsprechenden Empfängeradresse und fügt den Vorgangsnamen als Suffix an. Dieser Name dient dann zum Verteilen zum entsprechenden Vorgang auf dem Server. Dann nimmt er das Array mit Parameterobjekten und serialisiert die Parameterdaten mithilfe von Parameternamen und den von der <xref:System.ComponentModel.TypeConverter>-Klasse konvertierten Werten in die URI-Abfragezeichenfolge. Die <xref:System.ServiceModel.Channels.MessageHeaders.To%2A>-Eigenschaft und die <xref:System.ServiceModel.Channels.MessageProperties.Via%2A>-Eigenschaft werden dann auf diesen URI festgelegt. Auf <xref:System.ServiceModel.Channels.MessageProperties> wird über die <xref:System.ServiceModel.Channels.Message.Properties%2A>-Eigenschaft zugegriffen.  
   
 -   In der `IDispatchMessageFormatter.DeserializeRequest`-Methode auf dem Server ruft der Formatierer den `Via`-URI in den Eigenschaften der eingehenden Anforderungsnachricht ab. Er analysiert die Name-Wert-Paare in der URI-Abfragezeichenfolge in Parameternamen und Werte und füllt mit diesen Parameternamen und Werten das an die Methode übergebene Parameterarray auf. Beachten Sie, dass die Vorgangsverteilung bereits stattgefunden hat; daher wird das Namenssuffix in dieser Methode ignoriert.  
   

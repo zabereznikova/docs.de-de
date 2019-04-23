@@ -3,10 +3,10 @@ title: < (Kleiner als) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1fc2a039-3ad6-4b3c-b41d-09932e803f86
 ms.openlocfilehash: 1ca1cbdf1282782295b659393e8f54aae3ec5649
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320443"
 ---
 # <a name="-less-than-entity-sql"></a>\< (Kleiner als) (Entity SQL)
@@ -23,7 +23,7 @@ expression < expression
  Jeder gültige Ausdruck. Beide Ausdrücke müssen implizit konvertierbare Datentypen sein.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- `true` Wenn der linke Ausdruck einen Wert kleiner als der rechte Ausdruck enthält. andernfalls `false`.  
+ `true` , wenn der linke Ausdruck kleiner als der rechte Ausdruck ist, andernfalls `false`.  
   
 ## <a name="example"></a>Beispiel  
  In der folgenden Entity SQL-Abfrage wird der Vergleichsoperator < verwendet, um zu ermitteln, ob der linke Ausdruck kleiner als der rechte Ausdruck ist. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  

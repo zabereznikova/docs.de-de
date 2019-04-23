@@ -3,10 +3,10 @@ title: Routen nach Text
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
 ms.openlocfilehash: b8a3f7785d7d59d8ad85d6dddde7fd6a04a12d63
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320716"
 ---
 # <a name="route-by-body"></a>Routen nach Text
@@ -35,7 +35,7 @@ In diesem Beispiel wird das Implementieren eines Diensts veranschaulicht, der Na
     }  
 ```  
   
- Wenn ein Vertrag vorliegt, erfordert ein Dienst das benutzerdefinierte Sendeverhalten `DispatchByBodyBehavior`, damit die Nachrichten zwischen Vorgängen gesendet werden können. Dieses Sendeverhalten initialisiert die `DispatchByBodyElementOperationSelector` benutzerdefinierte Vorgangsauswahl mit einer Tabelle der Vorgangsnamen, die nach Argumentnamen geordnet QName der entsprechenden Elemente. `DispatchByBodyElementOperationSelector` Sucht nach dem Starttag des ersten untergeordneten Elements des Texts, und wählt den Vorgang anhand der zuvor erwähnten Tabelle.  
+ Wenn ein Vertrag vorliegt, erfordert ein Dienst das benutzerdefinierte Sendeverhalten `DispatchByBodyBehavior`, damit die Nachrichten zwischen Vorgängen gesendet werden können. Dieses Sendeverhalten initialisiert die `DispatchByBodyElementOperationSelector` benutzerdefinierte Vorgangsauswahl mit einer Tabelle der Vorgangsnamen, die nach Argumentnamen geordnet QName der entsprechenden Elemente. `DispatchByBodyElementOperationSelector` prüft das Starttag des ersten untergeordneten Elements von Body und wählt den Vorgang anhand der zuvor erwähnten Tabelle aus.  
   
  Der Client verwendet einen Proxy aus der vom Dienst mit exportierten WSDL automatisch generierten [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   

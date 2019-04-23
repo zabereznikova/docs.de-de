@@ -6,10 +6,10 @@ helpviewer_keywords:
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
 ms.openlocfilehash: b0a0f7c00125a43228a2658415b72f4d541f37be
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315841"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>Vorgehensweise: Animieren eines Objekts mithilfe von Keyframes
@@ -43,4 +43,4 @@ In diesem Beispiel wird gezeigt, wie zum Animieren eines Objekts, die in diesem 
 - <xref:System.Windows.Media.RadialGradientBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - [Übersicht über Keyframe-Animationen](key-frame-animations-overview.md)
-- [Themen zur Vorgehensweise mit Keyframes](key-frame-animation-how-to-topics.md)
+- [Key-Frame How-to Topics (Themen zur Vorgehensweise zu Keyframes)](key-frame-animation-how-to-topics.md)

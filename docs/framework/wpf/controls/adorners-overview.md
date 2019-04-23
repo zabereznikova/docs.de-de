@@ -8,10 +8,10 @@ helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
 ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320469"
 ---
 # <a name="adorners-overview"></a>Übersicht über Adorner
@@ -31,7 +31,7 @@ Adorner sind eine besondere Art von <xref:System.Windows.FrameworkElement>verwen
   
 -   Visuelles Maskieren oder überschreiben oder teilweise ein <xref:System.Windows.UIElement>.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Stellt ein grundlegendes Framework zum Verzieren von visuellen Elementen bereit. In der folgenden Tabelle sind die zum Verzieren von Objekten verwendeten primären Typen samt deren Zweck aufgelistet. Es folgen mehrere Verwendungsbeispiele.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] stellt ein grundlegendes Framework zum Verzieren von visuellen Elementen bereit. In der folgenden Tabelle sind die zum Verzieren von Objekten verwendeten primären Typen samt deren Zweck aufgelistet. Es folgen mehrere Verwendungsbeispiele.  
   
 |||  
 |-|-|  
@@ -105,4 +105,4 @@ Adorner sind eine besondere Art von <xref:System.Windows.FrameworkElement>verwen
 - [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
 - [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
 - [Übersicht über Zeichnungsobjekte](../graphics-multimedia/drawing-objects-overview.md)
-- [Gewusst wie-Themen](adorners-how-to-topics.md)
+- [Themen zu Vorgehensweisen](adorners-how-to-topics.md)

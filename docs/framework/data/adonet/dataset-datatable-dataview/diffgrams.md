@@ -3,10 +3,10 @@ title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
 ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313514"
 ---
 # <a name="diffgrams"></a>DiffGrams
@@ -83,7 +83,7 @@ Ein DiffGram ist ein XML-Format, das aktuelle und ursprüngliche Versionen von D
   
 |Anmerkung|Beschreibung|  
 |----------------|-----------------|  
-|**id**|Verwendet, um die Elemente in der  **\<Diffgr: vor dem >** und  **\<diffgr: errors >** Blöcke, um Elemente in der **\<** ***DataInstance*** **>** Block. Werte mit den **diffgr: ID** -Anmerkung haben das Format *[Tabellenname] [Zeilenbezeichner]*. Beispiel: `<Customers diffgr:id="Customers1">`.|  
+|**ID**|Verwendet, um die Elemente in der  **\<Diffgr: vor dem >** und  **\<diffgr: errors >** Blöcke, um Elemente in der **\<** ***DataInstance*** **>** Block. Werte mit den **diffgr: ID** -Anmerkung haben das Format *[Tabellenname] [Zeilenbezeichner]*. Beispiel: `<Customers diffgr:id="Customers1">`.|  
 |**parentId**|Gibt an, welches Element aus der **\<** ***DataInstance*** **>** Block ist das übergeordnete Element des aktuellen Elements. Werte mit den **diffgr: parentId** -Anmerkung haben das Format *[Tabellenname] [Zeilenbezeichner]*. Beispiel: `<Orders diffgr:parentId="Customers1">`.|  
 |**hasChanges**|Identifiziert eine Zeile in der **\<** ***DataInstance*** **>** -Block als geändert. Die **HasChanges** -Anmerkung kann einen der folgenden zwei Werte aufweisen:<br /><br /> **inserted**<br /> Identifiziert eine **Added** Zeile.<br /><br /> **modified**<br /> Identifiziert eine **"geändert"** Zeile mit einer **ursprünglichen** Zeilenversion in der  **\<Diffgr: vor dem >** Block. Beachten Sie, dass **gelöschte** Zeilen müssen eine **ursprünglichen** Zeilenversion in der  **\<Diffgr: vor dem >** blockieren, aber es ist kein Element mit Anmerkungen in der **\<** ***DataInstance*** **>** Block.|  
 |**hasErrors**|Identifiziert eine Zeile in der **\<** ***DataInstance*** **>** -block mit einer **RowError**. Das Fehlerelement wird der  **\<diffgr: errors >** Block.|  
@@ -133,8 +133,8 @@ Ein DiffGram ist ein XML-Format, das aktuelle und ursprüngliche Versionen von D
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von XML in einem "DataSet"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
-- [Laden eines "DataSets" aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
+- [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [Laden eines DataSet aus XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
 - [Schreiben von DataSet-Inhalten als XML-Daten](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
-- ["DataSets", "DataTables" und "DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
+- [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

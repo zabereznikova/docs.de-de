@@ -14,10 +14,10 @@ ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325708"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>Vorgehensweise: Erstellen, Initialisieren und Konfigurieren von Ablaufverfolgungsschaltern
@@ -77,7 +77,7 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
   
     -   **Visual Basic:** In der **neues Element hinzufügen** Dialogfeld wählen **Anwendungskonfigurationsdatei**.  
   
-         Die Anwendungskonfigurationsdatei wird erstellt und geöffnet. Dies ist ein XML-Dokument dem Stammelement `<configuration>.`  
+         Die Anwendungskonfigurationsdatei wird erstellt und geöffnet. Diese Datei ist ein XML-Dokument mit dem Stammelement `<configuration>.`  
   
     -   **Visual C#:** In der **neues Element hinzufügen** Dialogfeld wählen **XML-Datei**. Geben Sie dieser Datei den Namen **app.config**. Fügen Sie im XML-Editor nach der XML-Deklaration die folgende XML hinzu:  
   
@@ -130,4 +130,4 @@ Mit Ablaufverfolgungsschaltern können Sie die Ablaufverfolgungsausgabe aktivier
 - [Ablaufverfolgung und Instrumentieren von Anwendungen](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
 - [Vorgehensweise: Hinzufügen von Ablaufverfolgungsanweisungen zu Anwendungscode](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [Ablaufverfolgungsschalter](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [Schema für Ablaufverfolgungs- und Debugeinstellungen](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [Trace and Debug Settings Schema (Schema für Ablaufverfolgungs- und Debugeinstellungen)](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -3,10 +3,10 @@ title: '>= (Größer als oder gleich) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
 ms.openlocfilehash: b5a8a834c325cca38e2c106ca3f8ee829dd699b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317141"
 ---
 # <a name="-greater-than-or-equal-to-entity-sql"></a>> = (größer als oder gleich) (Entity SQL)
@@ -23,7 +23,7 @@ expression >= expression
  Jeder gültige Ausdruck. Beide Ausdrücke müssen implizit konvertierbare Datentypen sein.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- `true` Wenn der linke Ausdruck einen Wert größer als oder gleich dem rechten Ausdruck ist; andernfalls `false`.  
+ `true` , wenn der linke Ausdruck größer oder gleich dem rechten Ausdruck ist, andernfalls `false`.  
   
 ## <a name="example"></a>Beispiel  
  In der folgenden Entity SQL-Abfrage wird der Vergleichsoperator >= verwendet, um zu ermitteln, ob der linke Ausdruck größer oder gleich dem rechten Ausdruck ist. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  
