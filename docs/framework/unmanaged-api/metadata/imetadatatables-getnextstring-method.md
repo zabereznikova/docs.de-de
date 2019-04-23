@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4e7e7d89f4c994c5ce37dc09d15826185ed1bb25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129375"
 ---
-# <a name="imetadatatablesgetnextstring-method"></a><span data-ttu-id="d84bf-102">IMetaDataTables::GetNextString-Methode</span><span class="sxs-lookup"><span data-stu-id="d84bf-102">IMetaDataTables::GetNextString Method</span></span>
-<span data-ttu-id="d84bf-103">Ruft den Index der nächsten Zeichenfolge in der aktuellen Spalte ab.</span><span class="sxs-lookup"><span data-stu-id="d84bf-103">Gets the index of the next string in the current table column.</span></span>  
+# <a name="imetadatatablesgetnextstring-method"></a><span data-ttu-id="acef9-102">IMetaDataTables::GetNextString-Methode</span><span class="sxs-lookup"><span data-stu-id="acef9-102">IMetaDataTables::GetNextString Method</span></span>
+<span data-ttu-id="acef9-103">Ruft den Index der nächsten Zeichenfolge in der aktuellen Spalte ab.</span><span class="sxs-lookup"><span data-stu-id="acef9-103">Gets the index of the next string in the current table column.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d84bf-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d84bf-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="acef9-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="acef9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNextString (   
@@ -36,23 +36,23 @@ HRESULT GetNextString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d84bf-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d84bf-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="acef9-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="acef9-105">Parameters</span></span>  
  `ixString`  
- <span data-ttu-id="d84bf-106">[in] Der Indexwert aus einer Zeichenfolge Tabellenspalte.</span><span class="sxs-lookup"><span data-stu-id="d84bf-106">[in] The index value from a string table column.</span></span>  
+ <span data-ttu-id="acef9-106">[in] Der Indexwert aus einer Zeichenfolge Tabellenspalte.</span><span class="sxs-lookup"><span data-stu-id="acef9-106">[in] The index value from a string table column.</span></span>  
   
  `pNext`  
- <span data-ttu-id="d84bf-107">[out] Ein Zeiger auf den Index der nächsten Zeichenfolge in der Spalte.</span><span class="sxs-lookup"><span data-stu-id="d84bf-107">[out] A pointer to the index of the next string in the column.</span></span>  
+ <span data-ttu-id="acef9-107">[out] Ein Zeiger auf den Index der nächsten Zeichenfolge in der Spalte.</span><span class="sxs-lookup"><span data-stu-id="acef9-107">[out] A pointer to the index of the next string in the column.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d84bf-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d84bf-108">Requirements</span></span>  
- <span data-ttu-id="d84bf-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d84bf-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="acef9-108">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="acef9-108">Requirements</span></span>  
+ <span data-ttu-id="acef9-109">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="acef9-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d84bf-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d84bf-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="acef9-110">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="acef9-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d84bf-111">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="d84bf-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="acef9-111">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="acef9-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="d84bf-112">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="d84bf-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="acef9-112">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="acef9-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d84bf-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d84bf-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="acef9-113">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="acef9-113">See also</span></span>
 
-- [<span data-ttu-id="d84bf-114">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d84bf-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="d84bf-115">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d84bf-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="acef9-114">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="acef9-114">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="acef9-115">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="acef9-115">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

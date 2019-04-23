@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b9ffd9ab9ddb95945744ecf210d0ae1d9d9812ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125826"
 ---
-# <a name="imetadatatablesgetnumtables-method"></a><span data-ttu-id="5f32c-102">IMetaDataTables::GetNumTables-Methode</span><span class="sxs-lookup"><span data-stu-id="5f32c-102">IMetaDataTables::GetNumTables Method</span></span>
-<span data-ttu-id="5f32c-103">Ruft die Anzahl der Tabellen im Bereich des aktuellen `IMetaDataTables` Instanz.</span><span class="sxs-lookup"><span data-stu-id="5f32c-103">Gets the number of tables in the scope of the current `IMetaDataTables` instance.</span></span>  
+# <a name="imetadatatablesgetnumtables-method"></a><span data-ttu-id="1c423-102">IMetaDataTables::GetNumTables-Methode</span><span class="sxs-lookup"><span data-stu-id="1c423-102">IMetaDataTables::GetNumTables Method</span></span>
+<span data-ttu-id="1c423-103">Ruft die Anzahl der Tabellen im Bereich des aktuellen `IMetaDataTables` Instanz.</span><span class="sxs-lookup"><span data-stu-id="1c423-103">Gets the number of tables in the scope of the current `IMetaDataTables` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5f32c-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="5f32c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c423-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="1c423-104">Syntax</span></span>  
   
 ```  
 HRESULT GetNumTables (  
@@ -35,20 +35,20 @@ HRESULT GetNumTables (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="5f32c-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="5f32c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1c423-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="1c423-105">Parameters</span></span>  
  `pcTables`  
- <span data-ttu-id="5f32c-106">[out] Ein Zeiger auf die Anzahl der Tabellen im Gültigkeitsbereich der aktuellen Instanz.</span><span class="sxs-lookup"><span data-stu-id="5f32c-106">[out] A pointer to the number of tables in the current instance scope.</span></span>  
+ <span data-ttu-id="1c423-106">[out] Ein Zeiger auf die Anzahl der Tabellen im Gültigkeitsbereich der aktuellen Instanz.</span><span class="sxs-lookup"><span data-stu-id="1c423-106">[out] A pointer to the number of tables in the current instance scope.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5f32c-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="5f32c-107">Requirements</span></span>  
- <span data-ttu-id="5f32c-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5f32c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c423-107">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="1c423-107">Requirements</span></span>  
+ <span data-ttu-id="1c423-108">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1c423-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5f32c-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="5f32c-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="1c423-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1c423-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="5f32c-110">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="5f32c-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="1c423-110">**Bibliothek:** Als Ressource in MsCorEE.dll verwendet</span><span class="sxs-lookup"><span data-stu-id="1c423-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="5f32c-111">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="5f32c-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="1c423-111">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c423-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5f32c-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="5f32c-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c423-112">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1c423-112">See also</span></span>
 
-- [<span data-ttu-id="5f32c-113">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5f32c-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="5f32c-114">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="5f32c-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="1c423-113">IMetaDataTables-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1c423-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="1c423-114">IMetaDataTables2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="1c423-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

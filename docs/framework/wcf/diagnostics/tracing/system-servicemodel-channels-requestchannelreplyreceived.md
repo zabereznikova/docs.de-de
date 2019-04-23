@@ -3,20 +3,20 @@ title: System.ServiceModel.Channels.RequestChannelReplyReceived
 ms.date: 03/30/2017
 ms.assetid: 61d428d1-903e-4c34-9c4f-22704043d9d6
 ms.openlocfilehash: 9dc0611e2dcb0a7814f58a71ffbfa681613c6bee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125046"
 ---
-# <a name="systemservicemodelchannelsrequestchannelreplyreceived"></a><span data-ttu-id="fdca1-102">System.ServiceModel.Channels.RequestChannelReplyReceived</span><span class="sxs-lookup"><span data-stu-id="fdca1-102">System.ServiceModel.Channels.RequestChannelReplyReceived</span></span>
-<span data-ttu-id="fdca1-103">System.ServiceModel.Channels.RequestChannelReplyReceived</span><span class="sxs-lookup"><span data-stu-id="fdca1-103">System.ServiceModel.Channels.RequestChannelReplyReceived</span></span>  
+# <a name="systemservicemodelchannelsrequestchannelreplyreceived"></a><span data-ttu-id="4ae67-102">System.ServiceModel.Channels.RequestChannelReplyReceived</span><span class="sxs-lookup"><span data-stu-id="4ae67-102">System.ServiceModel.Channels.RequestChannelReplyReceived</span></span>
+<span data-ttu-id="4ae67-103">System.ServiceModel.Channels.RequestChannelReplyReceived</span><span class="sxs-lookup"><span data-stu-id="4ae67-103">System.ServiceModel.Channels.RequestChannelReplyReceived</span></span>  
   
-## <a name="description"></a><span data-ttu-id="fdca1-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fdca1-104">Description</span></span>  
- <span data-ttu-id="fdca1-105">Es wurde eine Antwort über einen Anforderungskanal empfangen.</span><span class="sxs-lookup"><span data-stu-id="fdca1-105">Received a reply over a request channel.</span></span>  
+## <a name="description"></a><span data-ttu-id="4ae67-104">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4ae67-104">Description</span></span>  
+ <span data-ttu-id="4ae67-105">Es wurde eine Antwort über einen Anforderungskanal empfangen.</span><span class="sxs-lookup"><span data-stu-id="4ae67-105">Received a reply over a request channel.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fdca1-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fdca1-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4ae67-106">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4ae67-106">See also</span></span>
 
-- [<span data-ttu-id="fdca1-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="fdca1-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="fdca1-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="fdca1-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="fdca1-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="fdca1-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [<span data-ttu-id="4ae67-107">Ablaufverfolgung</span><span class="sxs-lookup"><span data-stu-id="4ae67-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="4ae67-108">Verwenden der Ablaufverfolgung zum Beheben von Anwendungsfehlern</span><span class="sxs-lookup"><span data-stu-id="4ae67-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="4ae67-109">Verwaltung und Diagnose</span><span class="sxs-lookup"><span data-stu-id="4ae67-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
