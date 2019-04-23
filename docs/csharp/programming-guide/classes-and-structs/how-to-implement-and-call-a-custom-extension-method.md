@@ -5,29 +5,29 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: e4b77bf0a44ce58db632e0c58982dba7178f9272
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 2d3f6ec66a13638f0106537ad8b21bff801a53b3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203427"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303335"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Vorgehensweise: Implementieren und Aufrufen einer benutzerdefinierten Erweiterungsmethode (C#-Programmierhandbuch)
 In diesem Artikel wird das Implementieren Ihrer eigenen Erweiterungsmethoden für jeden .NET-Typ behandelt. Der Clientcode kann Ihre Erweiterungsmethoden verwenden, wenn ein Verweis auf die DLL, die die Methoden enthält, und eine [using](../../../csharp/language-reference/keywords/using-directive.md)-Direktive hinzugefügt werden, die den Namespace angibt, in dem die Erweiterungsmethoden definiert sind.  
   
 ## <a name="to-define-and-call-the-extension-method"></a>So definieren Sie die Erweiterungsmethode und rufen Sie auf  
   
-1.  Definieren Sie eine statische [Klasse](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md), die die Erweiterungsmethode enthalten soll.  
+1. Definieren Sie eine statische [Klasse](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md), die die Erweiterungsmethode enthalten soll.  
   
      Die Klasse muss für den Clientcode sichtbar sein. Weitere Informationen finden Sie unter [Zugriffsmodifizierer](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).  
   
-2.  Implementieren Sie die Erweiterungsmethode als statische Methode mit mindestens die gleichen Sichtbarkeit wie die enthaltende Klasse.  
+2. Implementieren Sie die Erweiterungsmethode als statische Methode mit mindestens die gleichen Sichtbarkeit wie die enthaltende Klasse.  
   
-3.  Der erste Parameter der Methode gibt den Typ an, auf den die Methode angewendet wird. Ihm muss ein [this](../../../csharp/language-reference/keywords/this.md)-Modifizierer vorangehen.  
+3. Der erste Parameter der Methode gibt den Typ an, auf den die Methode angewendet wird. Ihm muss ein [this](../../../csharp/language-reference/keywords/this.md)-Modifizierer vorangehen.  
   
-4.  Fügen Sie im aufrufenden Code eine `using`-Direktive hinzu, um den [Namespace](../../../csharp/language-reference/keywords/namespace.md) anzugeben, der die Erweiterungsklassemethode enthält.  
+4. Fügen Sie im aufrufenden Code eine `using`-Direktive hinzu, um den [Namespace](../../../csharp/language-reference/keywords/namespace.md) anzugeben, der die Erweiterungsklassemethode enthält.  
   
-5.  Rufen Sie die Methoden auf, als wären sie Instanzmethoden für den Typ.  
+5. Rufen Sie die Methoden auf, als wären sie Instanzmethoden für den Typ.  
   
      Beachten Sie, dass der erste Parameter nicht durch einen Aufruf von Code angegeben wird, da er den Typ darstellt, auf den der Operator angewendet wird, und der Compiler bereits den Typ des Objekts kennt. Sie müssen nur Argumente für Parameter 2 bis `n` bereitstellen.  
   

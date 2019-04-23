@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: b92660a69194ff2d52cd78427f73510de514ea48
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 027c99df806197637675837b7556b176dc115aba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545818"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318974"
 ---
 # <a name="if-c-reference"></a>#if (C#-Referenz)
 
@@ -24,15 +24,15 @@ Wenn der C#-Compiler eine `#if`-Anweisung vorfindet, auf die möglicherweise ein
 #endif
 ```
 
-Sie können die Operatoren [==](../operators/equality-operators.md#equality-operator-) (Gleichheit) und [!=](../operators/equality-operators.md#inequality-operator-) (Ungleichheit) nur zur Überprüfung auf [true](../keywords/true.md) oder [false](../keywords/false.md) verwenden. „True“ bedeutet, dass das Symbol definiert wurde. Die `#if DEBUG`-Anweisung hat die gleiche Bedeutung wie `#if (DEBUG == true)`. Sie können mithilfe der Operatoren [&&](../operators/conditional-and-operator.md) (und), [&#124;&#124;](../operators/conditional-or-operator.md) (oder) und [!](../operators/logical-negation-operator.md) (nicht ) auswerten, ob mehrere Symbole definiert wurden. Symbole und Operatoren können auch mit Klammern gruppiert werden.
+Sie können die Operatoren [==](../operators/equality-operators.md#equality-operator-) (Gleichheit) und [!=](../operators/equality-operators.md#inequality-operator-) (Ungleichheit) nur zur Überprüfung auf [true](../keywords/true.md) oder [false](../keywords/false.md) verwenden. „True“ bedeutet, dass das Symbol definiert wurde. Die `#if DEBUG`-Anweisung hat die gleiche Bedeutung wie `#if (DEBUG == true)`. Sie können mithilfe der Operatoren [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (und), [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (oder) und [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (nicht ) auswerten, ob mehrere Symbole definiert wurden. Symbole und Operatoren können auch mit Klammern gruppiert werden.
 
 ## <a name="remarks"></a>Anmerkungen
 
-Wenn Sie `#if` mit den Direktiven [#else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md) und [#undef](preprocessor-undef.md) verwenden, können Sie Code je nach dem Vorhandensein eines oder mehrerer Symbole ein- oder ausschließen. Dies kann hilfreich sein, wenn Code für einen Debugbuild oder für eine bestimmte Konfiguration kompiliert wird.
+`#if`ermöglicht Ihnen zusammen mit den Direktiven [#else](preprocessor-else.md), [#elif](preprocessor-elif.md), [#endif](preprocessor-endif.md), [#define](preprocessor-define.md) und [#undef](preprocessor-undef.md), Code je nach dem Vorhandensein eines oder mehrerer Symbole ein- oder auszuschließen. Dies kann hilfreich sein, wenn Code für einen Debugbuild oder für eine bestimmte Konfiguration kompiliert wird.
 
 Eine bedingte Direktive, die mit einer `#if`-Direktive beginnt, muss explizit mit einer `#endif`-Direktive beendet werden.
 
-Über `#define` können Sie ein Symbol definieren. Wenn dieses Symbol dann als Ausdruck an die `#if`-Anweisung übergeben wird, wird der Ausdruck als `true` ausgewertet.
+`#define` ermöglicht Ihnen, ein Symbol zu definieren. Wenn dieses Symbol dann als Ausdruck an die `#if`-Anweisung übergeben wird, wird der Ausdruck als `true` ausgewertet.
 
 Ein Symbol kann auch mit der Compileroption [-define](../compiler-options/define-compiler-option.md) definiert werden. Die Definition eines Symbols kann mit [#undef](preprocessor-undef.md) aufgehoben werden.
 

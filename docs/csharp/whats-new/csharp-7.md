@@ -3,36 +3,36 @@ title: Neues in C# 7.0 – C#-Leitfaden
 description: Erhalten Sie einen Überblick über die neuen Funktionen in Version 7.0 der C#-Sprache.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 81d06d2e2079e04948ad5e93eefadb1bc11d855a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654184"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481300"
 ---
 # <a name="whats-new-in-c-70"></a>Neues in C# 7.0
 
 C# 7.0 bietet eine Reihe von neuen Features für die C#-Programmiersprache:
-* [`out`Variablen](#out-variables)
-    - Sie können `out`-Werte als Inlineargumente für die Methode deklarieren, wenn sie verwendet werden.
+* [`out` Variablen](#out-variables)
+  - Sie können `out`-Werte als Inlineargumente für die Methode deklarieren, wenn sie verwendet werden.
 * [Tupel](#tuples)
-    - Sie können einfache, unbenannte Typen erstellen, die mehrere öffentliche Felder enthalten. Compiler und IDE-Tools kennen die Semantik dieser Typen.
-* [Verwerfen](#discards)
-    - Ausschussvariablen (discards) sind temporäre, lesegeschützte Variablen, die in Zuweisungen verwendet werden, wenn der zugewiesene Wert nicht weiter interessiert. Sie eignen sich besonders zum Dekonstruieren von Tupeln und benutzerdefinierten Typen sowie beim Aufrufen von Methoden mit `out`-Parametern.
-* [Mustervergleich](#pattern-matching)
-    - Sie können Verzweigungslogik basierend auf beliebigen Typen und Werten der Member dieser Typen erstellen.
-* [Lokale `ref`-Variablen und Rückgabetypen](#ref-locals-and-returns)
-    - Lokale Variablen und Rückgabewerte von Methoden können Verweise auf andere Speicher sein.
+  - Sie können einfache, unbenannte Typen erstellen, die mehrere öffentliche Felder enthalten. Compiler und IDE-Tools kennen die Semantik dieser Typen.
+* [Ausschuss](#discards)
+  - Ausschussvariablen (discards) sind temporäre, lesegeschützte Variablen, die in Zuweisungen verwendet werden, wenn der zugewiesene Wert nicht weiter interessiert. Sie eignen sich besonders zum Dekonstruieren von Tupeln und benutzerdefinierten Typen sowie beim Aufrufen von Methoden mit `out`-Parametern.
+* [Musterabgleich](#pattern-matching)
+  - Sie können Verzweigungslogik basierend auf beliebigen Typen und Werten der Member dieser Typen erstellen.
+* [`ref` Lokale Variablen und Rückgabewerte](#ref-locals-and-returns)
+  - Lokale Variablen und Rückgabewerte von Methoden können Verweise auf andere Speicher sein.
 * [Lokale Funktionen](#local-functions)
-    - Sie können Funktionen innerhalb von anderen Funktionen verschachteln, um deren Bereich und Sichtbarkeit zu beschränken.
+  - Sie können Funktionen innerhalb von anderen Funktionen verschachteln, um deren Bereich und Sichtbarkeit zu beschränken.
 * [Mehr Ausdruckskörpermember](#more-expression-bodied-members)
-    - Die Liste der Member, die mithilfe von Ausdrücken erstellt werden können, ist länger geworden.
-* [`throw`-Ausdrücke](#throw-expressions)
-    - Sie können Ausnahmen in Codekonstrukten auslösen, die vorher nicht zulässig waren, da `throw` eine Anweisung war. 
+  - Die Liste der Member, die mithilfe von Ausdrücken erstellt werden können, ist länger geworden.
+* [`throw` Ausdrücke](#throw-expressions)
+  - Sie können Ausnahmen in Codekonstrukten auslösen, die vorher nicht zulässig waren, da `throw` eine Anweisung war.
 * [Generalisierte asynchrone Rückgabetypen](#generalized-async-return-types)
-    - Methoden, die mit dem `async`-Modifizierer deklariert werden, können zusätzlich zu `Task` und `Task<T>` andere Typen zurückgeben.
+  - Methoden, die mit dem `async`-Modifizierer deklariert werden, können zusätzlich zu `Task` und `Task<T>` andere Typen zurückgeben.
 * [Verbesserung der numerischen literalen Syntax](#numeric-literal-syntax-improvements)
-    - Neue Token verbessern die Lesbarkeit für numerische Konstanten.
+  - Neue Token verbessern die Lesbarkeit für numerische Konstanten.
 
 Dieser Artikel enthält im Folgenden eine Übersicht über die einzelnen Funktionen. Sie werden die Hintergründe jeder einzelnen Funktion erfahren. Sie werden die Syntax erlernen. Sie können diese Funktionen im [interaktiven Tutorial](../tutorials/exploration/csharp-7.yml) zur Einführung der Funktionen kennenlernen.
 
@@ -46,10 +46,10 @@ Möglicherweise möchten Sie den Typ der `out`-Variablen aus Gründen der Übers
 
 [!code-csharp[OutVarVariableDeclarations](~/samples/snippets/csharp/new-in-7/program.cs#OutVarVariableDeclarations "Implicitly typed Out variable")]
 
-* Der Code ist einfacher zu lesen. 
-    - Sie deklarieren die out-Variable, wenn Sie sie verwenden, nicht in einer anderen Zeile weiter oben.
+* Der Code ist einfacher zu lesen.
+  - Sie deklarieren die out-Variable, wenn Sie sie verwenden, nicht in einer anderen Zeile weiter oben.
 * Sie müssen keinen Anfangswert zuweisen.
-    - Durch das Deklarieren der `out`-Variable, wenn sie in einem Methodenaufruf verwendet wird, können Sie diese nicht versehentlich verwenden, bevor sie zugewiesen wurde.
+  - Durch das Deklarieren der `out`-Variable, wenn sie in einem Methodenaufruf verwendet wird, können Sie diese nicht versehentlich verwenden, bevor sie zugewiesen wurde.
 
 ## <a name="tuples"></a>Tupel
 
@@ -77,7 +77,7 @@ Manchmal möchten Sie vielleicht die Member eines Tupels entpacken, die von eine
 Sie können auch eine ähnliche Dekonstruktion für alle Typen in .NET bereitstellen. Schreiben Sie eine `Deconstruct`-Methode als Member der Klasse. Diese `Deconstruct`-Methode bietet eine Reihe von `out`-Argumenten für jede der Eigenschaften, die Sie extrahieren möchten. Berücksichtigen Sie diese `Point`-Klasse, die eine Dekonstruktionsmethode bereitstellt, die die `X`- und `Y`-Koordinaten extrahiert:
 
 [!code-csharp[PointWithDeconstruction](~/samples/snippets/csharp/new-in-7/point.cs#PointWithDeconstruction "Point with deconstruction method")]
- 
+
 Sie können die einzelnen Felder extrahieren, indem Sie einem `Point` ein Tupel zuweisen:
 
 [!code-csharp[DeconstructPoint](~/samples/snippets/csharp/new-in-7/program.cs#DeconstructPoint "Deconstruct a point")]
@@ -103,7 +103,8 @@ Weitere Informationen finden Sie unter [Ausschuss](../discards.md).
 
 ## <a name="pattern-matching"></a>Musterabgleich
 
-*Mustervergleich* ist ein Funktion, mit der Sie Methodenverteilung für andere Eigenschaften als den Typ eines Objekts implementieren können. Sie sind wahrscheinlich bereits vertraut mit Methodenverteilung, die auf dem Typ eines Objekts basiert. In der objektorientierten Programmierung stellen virtuelle und überschreibende Methoden Sprachsyntax bereit, um die Abfertigung der Methoden basierend auf dem Typ eines Objekts zu implementieren. Basis- und abgeleitete Klassen stellen verschiedene Implementierungen bereit. Mustervergleichsausdrücke erweitern dieses Konzept, sodass Sie ähnliche Verteilungsmuster für Typen und Datenelemente, die nicht durch eine Vererbungshierarchie verknüpft sind, einfach implementieren können. 
+*Mustervergleich* ist ein Funktion, mit der Sie Methodenverteilung für andere Eigenschaften als den Typ eines Objekts implementieren können. Sie sind wahrscheinlich bereits vertraut mit Methodenverteilung, die auf dem Typ eines Objekts basiert. In der objektorientierten Programmierung stellen virtuelle und überschreibende Methoden Sprachsyntax bereit, um die Abfertigung der Methoden basierend auf dem Typ eines Objekts zu implementieren. Basis- und abgeleitete Klassen stellen verschiedene Implementierungen bereit.
+Mustervergleichsausdrücke erweitern dieses Konzept, sodass Sie ähnliche Verteilungsmuster für Typen und Datenelemente, die nicht durch eine Vererbungshierarchie verknüpft sind, einfach implementieren können.
 
 Mustervergleich unterstützt `is`-Ausdrücke und `switch`-Ausdrücke. Jeder davon ermöglicht das Überprüfen eines Objekts und dessen Eigenschaften, um zu bestimmen, ob das Objekt dem gesuchten Muster entspricht. Sie verwenden das `when`-Schlüsselwort, um zusätzliche Regeln für das Muster anzugeben.
 
@@ -133,7 +134,7 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
     {
         switch (i)
         {
-            case 0: 
+            case 0:
                 break;
             case IEnumerable<int> childSequence:
             {
@@ -141,10 +142,10 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
                     sum += (item > 0) ? item : 0;
                 break;
             }
-            case int n when n > 0: 
-                sum += n; 
+            case int n when n > 0:
+                sum += n;
                 break;
-            null:
+            case null:
                 throw new NullReferenceException("Null found in sequence");
             default:
                 throw new InvalidOperationException("Unrecognized type");
@@ -154,7 +155,7 @@ public static int SumPositiveNumbers(IEnumerable<object> sequence)
 }
 ```
 
-- `case 0:` ist das vertraute Konstantenmuster. 
+- `case 0:` ist das vertraute Konstantenmuster.
 - `case IEnumerable<int> childSequence:` ist ein Typmuster.
 - `case int n when n > 0:` ist ein Typmuster mit einer zusätzlichen `when`-Bedingung.
 - `case null:` ist das NULL-Muster.
@@ -170,20 +171,20 @@ Diese Funktion ermöglicht Algorithmen, die Verweise auf Variablen verwenden und
 
 Sie können den Rückgabewert als `ref` deklarieren und diesen Wert wie im folgenden Code gezeigt in der Matrix ändern:
 
-[!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/program.cs#AssignRefReturn "Assign ref return")]
+[!code-csharp[AssignRefReturn](~/samples/snippets/csharp/new-in-7/Program.cs#AssignRefReturn "Assign ref return")]
 
 Die C#-Sprache verfügt über mehrere Regeln, die Sie vor einer falschen Verwendung der lokalen `ref`-Variablen und Rückgabetypen schützen:
 
 * Sie müssen der Methodensignatur und allen `return`-Anweisungen einer Methode das `ref`-Schlüsselwort hinzufügen.
-    - Dadurch wird deutlich, dass Rückgaben in der gesamten Methode als Verweis erfolgen.
+  - Dadurch wird deutlich, dass Rückgaben in der gesamten Methode als Verweis erfolgen.
 * Eine `ref return`-Rückgabe kann einer Wert- oder einer `ref`-Variablen zugewiesen werden.
-    - Der Aufrufer steuert, ob der Rückgabewert kopiert werden soll. Durch Auslassen des `ref`-Modifizierers beim Zuweisen des Rückgabewerts gibt der Aufrufer an, dass der Wert kopiert werden und nicht etwa ein Verweis auf den Speicher erfolgen soll.
+  - Der Aufrufer steuert, ob der Rückgabewert kopiert werden soll. Durch Auslassen des `ref`-Modifizierers beim Zuweisen des Rückgabewerts gibt der Aufrufer an, dass der Wert kopiert werden und nicht etwa ein Verweis auf den Speicher erfolgen soll.
 * Sie können einer lokalen `ref`-Variablen keinen Rückgabewert einer Standardmethode zuweisen.
-    - Dadurch werden Aussagen wie `ref int i = sequence.Count();` nicht zugelassen.
+  - Dadurch werden folgende Aussagen nicht zugelassen: `ref int i = sequence.Count();`
 * Sie können `ref` nicht an eine Variable zurückgeben, deren Lebensdauer nicht über die Ausführung der Methode hinausgeht.
-    - Das bedeutet, dass Sie keinen Verweis auf eine lokale Variable oder eine Variable mit einem ähnlichen Bereich zurückgeben können.
-* Lokale `ref`-Variablen und Rückgabewerte können nicht in Verbindung mit asynchronen Methoden verwendet werden.
-    - Der Compiler kann nicht feststellen, ob die Variable, auf die verwiesen wird, bei der Rückgabe der asynchronen Methode auf ihren endgültigen Wert festgelegt ist.
+  - Das bedeutet, dass Sie keinen Verweis auf eine lokale Variable oder eine Variable mit einem ähnlichen Bereich zurückgeben können.
+* `ref` Lokale Variablen und Rückgabewerte können nicht in Verbindung mit asynchronen Methoden verwendet werden.
+  - Der Compiler kann nicht feststellen, ob die Variable, auf die verwiesen wird, bei der Rückgabe der asynchronen Methode auf ihren endgültigen Wert festgelegt ist.
 
 Das Hinzufügen von lokalen ref-Variablen und ref-Rückgaben ermöglicht effizientere Algorithmen, da Werte nicht kopiert oder dereferenzierende Vorgänge nicht mehrmals ausgeführt werden.
 
@@ -221,7 +222,7 @@ Das Ändern einer Methode in ein Ausdruckskörpermember ist eine [binärkompatib
 
 ## <a name="throw-expressions"></a>Throw-Ausdrücke
 
-In C# ist `throw` schon immer eine Anweisung. Da `throw` eine Anweisung und kein Ausdruck ist, gab es C#-Konstrukte, in denen diese Anweisung nicht verwendet werden konnte. Darunter waren bedingte Ausdrücke, NULL-Sammelausdrücke und einige Lambdaausdrücke. Das Hinzufügen von Ausdruckskörpermembern fügt mehr Speicherorte hinzu, bei denen `throw`-Ausdrücke nützlich wären. Damit Sie diese Konstrukte schreiben können, führt C# 7.0 *Throw-Ausdrücke* ein. 
+In C# ist `throw` schon immer eine Anweisung. Da `throw` eine Anweisung und kein Ausdruck ist, gab es C#-Konstrukte, in denen diese Anweisung nicht verwendet werden konnte. Darunter waren bedingte Ausdrücke, NULL-Sammelausdrücke und einige Lambdaausdrücke. Das Hinzufügen von Ausdruckskörpermembern fügt mehr Speicherorte hinzu, bei denen `throw`-Ausdrücke nützlich wären. Damit Sie diese Konstrukte schreiben können, führt C# 7.0 *Throw-Ausdrücke* ein.
 
 Diese Ergänzung erleichtert das Schreiben ausdrucksbasierteren Codes. Sie benötigen zur Fehlerüberprüfung keine weiteren Anweisungen.
 
@@ -229,7 +230,7 @@ Diese Ergänzung erleichtert das Schreiben ausdrucksbasierteren Codes. Sie benö
 
 Das Zurückgeben eines `Task`-Objekts von asynchronen Methoden kann Leistungsengpässe in bestimmten Pfaden verursachen. `Task` ist ein Verweistyp, seine Verwendung bedeutet also das Zuordnen eines Objekts. In Fällen, in denen eine mit dem `async`-Modifizierer deklarierte Methode ein zwischengespeichertes Ergebnis zurückgibt oder synchron abschließt, können die zusätzlichen Zuordnungen viel Zeit bei der Ausführung kritischer Codeabschnitte kosten. Es kann kostspielig werden, wenn diese Zuordnungen in engen Schleifen auftreten.
 
-Durch die neue Sprachfunktion sind die Rückgabetypen asynchroner Methoden nicht auf `Task`, `Task<T>` und `void` beschränkt. Der zurückgegebene Typ muss noch immer das asynchrone Muster erfüllen, d.h. dass eine `GetAwaiter`-Methode verfügbar sein muss. Als konkretes Beispiel wurde der `ValueTask`-Typ zu .NET Framework hinzugefügt, um diese neue Sprachfunktion zu nutzen: 
+Durch die neue Sprachfunktion sind die Rückgabetypen asynchroner Methoden nicht auf `Task`, `Task<T>` und `void` beschränkt. Der zurückgegebene Typ muss noch immer das asynchrone Muster erfüllen, d.h. dass eine `GetAwaiter`-Methode verfügbar sein muss. Als konkretes Beispiel wurde der `ValueTask`-Typ zu .NET Framework hinzugefügt, um diese neue Sprachfunktion zu nutzen:
 
 [!code-csharp[UsingValueTask](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#UsingValueTask "Using ValueTask")]
 

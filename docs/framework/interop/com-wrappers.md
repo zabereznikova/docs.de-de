@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce15e0535bbd6bc67054c651a518f11cf9dd2ae1
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b633239be85a66c5bba54132c3732357967eb177
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410354"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182935"
 ---
 # <a name="com-wrappers"></a>COM-Wrapper
 COM unterscheidet sich vom .NET Framework-Objektmodell in mehreren wichtigen Punkten:  
@@ -34,8 +34,9 @@ COM unterscheidet sich vom .NET Framework-Objektmodell in mehreren wichtigen Pun
  In den meisten Fällen stellen die von der Common Language Runtime standardmäßig generierten RCW oder CCW ausreichend Marshalling für Aufrufe bereit, die die Anwendungsgrenze zwischen COM und dem .NET Framework überschreiten. Mithilfe von benutzerdefinierten Attributen können Sie optional anpassen, wie die Common Language Runtime verwalteten und nicht verwalteten Code darstellt.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Erweiterte COM-Interoperabilität](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))
 - [Runtime Callable Wrapper (RCW)](runtime-callable-wrapper.md)
-- [COM Callable Wrapper](com-callable-wrapper.md)
+- [COM Callable Wrapper (CCW)](com-callable-wrapper.md)
 - [Anpassen von Standardwrappern](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))
 - [Vorgehensweise: Anpassen von Runtime Callable Wrappern](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/56kh4hy7(v=vs.100))

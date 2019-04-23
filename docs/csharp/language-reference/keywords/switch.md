@@ -1,6 +1,6 @@
 ---
 title: switch-Anweisung in C#
-ms.date: 08/14/2018
+ms.date: 04/09/2019
 f1_keywords:
 - switch_CSharpKeyword
 - switch
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 73524fd54aeffc86fe0c451ec4418308da764682
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463253"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481456"
 ---
 # <a name="switch-c-reference"></a>switch (C#-Referenz)
 
@@ -41,7 +41,7 @@ Der Vergleichsausdruck stellt den Wert bereit, mit dem die Muster in den Bezeich
    switch (expr)
 ```
 
-In C# 6 muss der Vergleichsausdruck ein Ausdruck sein, der einen Wert der folgenden Typen zurückgibt:
+In C# 6 und früher muss der Vergleichsausdruck ein Ausdruck sein, der einen Wert der folgenden Typen zurückgibt:
 
 - Ein [char](char.md)
 - Eine [Zeichenfolge](string.md)
@@ -57,7 +57,7 @@ Eine `switch`-Anweisung enthält eine oder mehrere switch-Abschnitte. Jeder swit
 
 Eine `switch`-Anweisung kann eine beliebige Anzahl von switch-Abschnitten enthalten, und jeder Abschnitt kann eine oder mehrere case-Bezeichnungen haben, wie im folgend Beispiel gezeigt wird. Allerdings können zwei case-Bezeichnungen nicht denselben Ausdruck enthalten.
 
-[!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
+[!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
 Nur ein switch-Abschnitt einer switch-Anweisung wir ausgeführt. C# lässt nicht zu, dass die Ausführung von einem switch-Abschnitt zum nächsten fortgesetzt wird. Deshalb verursacht der folgende Code den Compilerfehler CS0163: „Das Steuerelement kann nicht von einer case-Bezeichnung (\<case label>) zur nächsten fortfahren.“
 
@@ -76,23 +76,23 @@ switch (caseSwitch)
 
 Diese Anforderung wird normalerweise erfüllt, indem der switch-Abschnitt ausdrücklich durch Verwenden einer Anweisung [break](break.md), [goto](goto.md) oder [return](return.md) beendet wird. Der folgende Code ist jedoch auch gültig, da er sicherstellt, dass die Programmsteuerung nicht im switch-Abschnitt `default` fortfährt.
 
-[!code-csharp[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
+[!code-csharp[switch#4](~/samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
 
-Die Ausführung der Anweisungsliste im switch-Abschnitt mit einer case-Bezeichnung, die den Vergleichsausdruck vergleicht, beginnt mit der ersten Anweisung und durchläuft in der Regel die Anweisungsliste, bis eine jump-Anweisung erreicht wird, z.B. `break`, `goto case`, `goto label`, `return` oder `throw`. An diesem Punkt wird die Steuerung der `switch`-Anweisung entzogen oder an eine andere case-Bezeichnung übertragen. Eine `goto`-Anweisung muss bei Nichtverwendung die Steuerung an eine konstante Bezeichnung übergeben. Diese Einschränkung ist notwendig, da der Versuch, die Steuerung an eine nicht konstante Bezeichnung zu übergeben, unerwünschte Nebeneffekte haben kann, z.B. kann die Steuerung an eine nicht beabsichtigte Position im Code übergeben werden, oder es kann eine Endlosschleife entstehen.
+Die Ausführung der Anweisungsliste im switch-Abschnitt mit einer case-Bezeichnung, die den Vergleichsausdruck vergleicht, beginnt mit der ersten Anweisung und durchläuft in der Regel die Anweisungsliste, bis eine jump-Anweisung erreicht wird, z.B. `break`, `goto case`, `goto label`, `return` oder `throw`. An diesem Punkt wird die Steuerung der `switch`-Anweisung entzogen oder an eine andere case-Bezeichnung übertragen. Wenn eine `goto`-Anweisung verwendet wird, muss sie die Steuerung an eine konstante Bezeichnung übergeben. Diese Einschränkung ist notwendig, da der Versuch, die Steuerung an eine nicht konstante Bezeichnung zu übergeben, unerwünschte Nebeneffekte haben kann, z.B. kann die Steuerung an eine nicht beabsichtigte Position im Code übergeben werden, oder es kann eine Endlosschleife entstehen.
 
 ## <a name="case-labels"></a>case-Bezeichnungen
 
-Jede case-Bezeichnung gibt ein Muster an, mit dem der Vergleichsausdruck verglichen werden soll (die Variable `caseSwitch` in den vorherigen Beispielen). Wenn sie übereinstimmen, wird das Steuerelement an den switch-Abschnitt übertragen, der die **erste** übereinstimmende case-Bezeichnung enthält. Wenn keine case-Bezeichnung mit dem Vergleichsausdruck übereinstimmt, wird das Steuerelement an den Abschnitt mit der `default`-case-Bezeichnung übertragen, sofern vorhanden. Wenn es kein `default`-case gibt, werden keine Anweisungen in jeglichen switch-Abschnitten ausgeführt, und ein Steuerelement wird außerhalb der `switch`-Anweisung übertragen.
+Jede case-Bezeichnung gibt ein Muster an, mit dem der Vergleichsausdruck verglichen werden soll (die Variable `caseSwitch` in den vorherigen Beispielen). Wenn sie übereinstimmen, wird das Steuerelement an den switch-Abschnitt übertragen, der die **erste** übereinstimmende case-Bezeichnung enthält. Wenn keine case-Bezeichnung mit dem Vergleichsausdruck übereinstimmt, wird das Steuerelement an den Abschnitt mit der `default`-case-Bezeichnung übertragen, sofern vorhanden. Wenn kein `default`-case vorhanden ist, werden keine Anweisungen in jeglichen switch-Abschnitten ausgeführt, und ein Steuerelement wird außerhalb der `switch`-Anweisung übertragen.
 
 Informationen zur `switch`-Anweisung und zum Musterabgleich finden Sie im Abschnitt [Musterabgleich mit der `switch`-Anweisung](#pattern).
 
-Da C# 6 nur die Konstantenmuster unterstützt und die Wiederholung von Konstantenwerten nicht erlaubt, definieren case-Bezeichnungen exklusive Werte, und nur ein Muster kann mit dem Vergleichsausdruck übereinstimmen. Daher ist die Reihenfolge, in der die `case`-Anweisungen auftauchen, unwichtig.
+Da C# 6 nur das Konstantenmuster unterstützt und die Wiederholung von Konstantenwerten nicht erlaubt, definieren case-Bezeichnungen exklusive Werte, und nur ein Muster kann mit dem Vergleichsausdruck übereinstimmen. Daher ist die Reihenfolge, in der die `case`-Anweisungen auftauchen, unwichtig.
 
 Da in C# 7.0 jedoch andere Muster unterstützt werden, müssen case-Bezeichnungen keine gegenseitig ausschließenden Werte definieren, und mehrere Muster können mit dem Vergleichsausdruck übereinstimmen. Da nur die Anweisungen im ersten switch-Abschnitt ausgeführt werden, die das übereinstimmende Muster enthalten, ist die Reihenfolge, in der `case`-Anweisungen erscheinen, nun wichtig. Wenn C# einen switch-Abschnitt erkennt, dessen case-Anweisung oder Anweisungen eine Teilmenge der vorherigen Anweisungen ist oder einer entsprechen, erzeugt der Abschnitt den Compilerfehler CS8120: „Der Parameter wurde bereits von einem vorherigen Parameter verarbeitet.“
 
-Das folgende Beispiel veranschaulicht eine `switch`-Anweisung, die eine Reihe von sich nicht gegenseitig ausschließenden Mustern verwendet. Wenn Sie den switch-Abschnitt `case 0:` verschieben, sodass er nicht länger der erste Abschnitt in der `switch`-Anweisung ist, erzeugt C# einen Compilerfehler, da eine Ganzzahl, deren Wert 0 ist, eine Teilmenge aller Ganzzahlen ist, die das Muster anhand der `case int val`-Anweisung definiert.
+Das folgende Beispiel veranschaulicht eine `switch`-Anweisung, die eine Reihe von sich nicht gegenseitig ausschließenden Mustern verwendet. Wenn Sie den switch-Abschnitt `case 0:` verschieben, sodass er nicht länger der erste Abschnitt in der `switch`-Anweisung ist, erzeugt C# einen Compilerfehler, da eine Ganzzahl, deren Wert 0 ist, eine Teilmenge aller Ganzzahlen ist, die dem von der `case int val`-Anweisung definierten Muster entspricht.
 
-[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
+[!code-csharp[switch#5](~/samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
 
 Sie können dieses Problem beheben und die Compilerwarnung auf eine von zwei Arten entfernen:
 
@@ -102,7 +102,7 @@ Sie können dieses Problem beheben und die Compilerwarnung auf eine von zwei Art
 
 ## <a name="the-default-case"></a>Der `default`-Case
 
-Der `default`-Case gibt den auszuführenden switch-Abschnitt an, wenn der Vergleichsausdruck nicht mit einer anderen `case`-Bezeichnung übereinstimmt. Wenn ein `default`-Case nicht vorhanden ist, und der Vergleichsausdruck nicht einer der anderen `case`-Bezeichnung entspricht, fährt der Programmablauf mit der `switch`-Anweisung fort.
+Der `default`-Case gibt den auszuführenden switch-Abschnitt an, wenn der Vergleichsausdruck nicht mit einer anderen `case`-Bezeichnung übereinstimmt. Wenn ein `default`-Case nicht vorhanden ist, und der Vergleichsausdruck nicht einer anderen `case`-Bezeichnung entspricht, fährt der Programmablauf mit der `switch`-Anweisung fort.
 
 Der `default`-Case kann in beliebiger Reihenfolge in der `switch`-Anweisung auftauchen. Unabhängig von der Reihenfolge im Quellcode wird er immer zuletzt ausgewertet, nachdem alle `case`-Bezeichnungen ausgewertet wurden.
 
@@ -135,11 +135,11 @@ Der Konstantenausdruck wird wie folgt ausgewertet:
 
 Das folgende Beispiel verwendet das Konstantenmuster, um zu bestimmen, ob ein bestimmtes Datum ein Wochenende, der erste Tag der Arbeitswoche, der letzte Tag der Arbeitswoche oder die Mitte der Arbeitswoche ist. Es bewertet die Eigenschaft <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> des heutigen Tags mit den Membern der <xref:System.DayOfWeek>-Enumeration.
 
-[!code-csharp[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
+[!code-csharp[switch#7](~/samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
 Im folgenden Beispiel wird das Konstantenmuster verwendet, um Benutzereingaben in einer Konsolenanwendung zu steuern, die eine automatische Kaffeemaschine simuliert.
 
-[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]
+[!code-csharp[switch#6](~/samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]
 
 ### <a name="type-pattern"></a>Typmuster
 
@@ -149,7 +149,7 @@ Das Typmuster ermöglicht die präzise Auswertung und Konvertierung des Typs. We
    case type varname
 ```
 
-bei der *Typ* der Name des Typs ist, in den das Ergebnis von *expr* konvertiert wird, und *varname* das Objekt ist, in das das Ergebnis von *expr* konvertiert wird, wenn der Abgleich erfolgreich ist
+bei der *Typ* der Name des Typs ist, in den das Ergebnis von *expr* konvertiert wird, und *varname* das Objekt ist, in das das Ergebnis von *expr* konvertiert wird, wenn der Abgleich erfolgreich ist Der Kompilierzeittyp von *expr* kann ab C# 7.1 ein generischen Parameter sein.
 
 Der `case`-Ausdruck ist `true`, wenn eine der folgenden Aussagen zutrifft:
 
@@ -173,6 +173,12 @@ Im folgenden Beispiel wird mithilfe des Typmusters Informationen über die versc
 
 [!code-csharp[type-pattern#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
+Anstelle von `object` könnten Sie eine generische Methode erstellen, indem Sie den Typ der Sammlung als Typparameter verwenden, wie im folgenden Code gezeigt:
+
+[!code-csharp[type-pattern#3](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern3.cs#1)]
+
+Die generische Version unterscheidet sich auf zwei Arten vom ersten Beispiel. Zunächst können Sie den `null`-Case verwenden. Sie können keinen konstanten Case verwenden, da der Compiler nicht jeden beliebigen Typ `T` in einen anderen Typ als `object` konvertieren kann. Was ein `default`-Case war, ist jetzt ein `object` ungleich NULL. Das bedeutet, dass der `default`-Case nur `null` ergibt.
+
 Ohne Musterabgleich könnte dieser Code wie folgt geschrieben werden. Die Verwendung des Typmusterabgleichs erzeugt einen kompakteren, lesbaren Code, indem nicht mehr getestet werden muss, ob das Ergebnis einer Umwandlung `null` ist, oder um wiederholte Umwandlungen auszuführen.
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
@@ -181,7 +187,7 @@ Ohne Musterabgleich könnte dieser Code wie folgt geschrieben werden. Die Verwen
 
 Da sich case-Anweisungen ab C# 7.0 nicht gegenseitig ausschließen müssen, können Sie eine `when`-Klausel hinzufügen, um eine zusätzliche Bedingung anzugeben, die erfüllt werden muss, damit die case-Anweisung als TRUE ausgewertet wird. Die `when`-Klausel kann ein beliebiger Ausdruck sein, der einen booleschen Wert zurückgibt.
 
-Im folgenden Beispiel wird eine `Shape`-Basisklasse, eine `Rectangle`-Klasse, die von `Shape` abgeleitet wird, und eine `Square`-Klasse, die von `Rectangle` abgeleitet wird, definiert. Die `when`-Klausel wird verwendet, um sicherzustellen, dass `ShowShapeInfo` ein `Rectangle`-Objekt, dem eine gleiche Länge und Breite zugewiesen wurde, wie `Square` behandelt, selbst wenn es nicht als ein `Square`-Objekt instanziiert wurde. Diese Methode versucht weder Informationen über ein Objekt anzuzeigen, das `null` ist, noch über eine Form, deren Bereich NULL ist.
+Im folgenden Beispiel wird eine `Shape`-Basisklasse, eine `Rectangle`-Klasse, die von `Shape` abgeleitet wird, und eine `Square`-Klasse, die von `Rectangle` abgeleitet wird, definiert. Die `when`-Klausel wird verwendet, um sicherzustellen, dass `ShowShapeInfo` ein `Rectangle`-Objekt, dem eine gleiche Länge und Breite zugewiesen wurde, wie ein `Square` behandelt, selbst wenn es nicht als ein `Square`-Objekt instanziiert wurde. Diese Methode versucht weder Informationen über ein Objekt anzuzeigen, das `null` ist, noch über eine Form, deren Bereich NULL ist.
 
 [!code-csharp[when-clause#1](~/samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
 
@@ -197,4 +203,4 @@ Weitere Informationen finden Sie unter [Die switch-Anweisung](~/_csharplang/spec
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Schlüsselwörter](index.md)
 - [if-else](if-else.md)
-- [Mustervergleich](../../pattern-matching.md)
+- [Musterabgleich](../../pattern-matching.md)

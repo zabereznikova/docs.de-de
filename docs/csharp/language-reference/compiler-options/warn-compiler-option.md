@@ -12,12 +12,12 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 5a4ecd1fbe5bb79a67d9df07d8f1a93830b03880
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17dd992edbec5ce444b53ed42b2b486282618672
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499868"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315802"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (C#-Compileroptionen)
 Die Option **-warn** gibt die vom Compiler anzuzeigende Warnstufe an.  
@@ -40,7 +40,7 @@ Die Option **-warn** gibt die vom Compiler anzuzeigende Warnstufe an.
 |3|Zeigt Warnungen der Stufe 2 sowie bestimmte, weniger schwerwiegende Warnungen an, z.B. Warnungen zu Ausdrücken, immer nach `true` oder `false` ausgewertet werden|  
 |4 (Standard)|Zeigt die Warnungen aller drei Stufen sowie informative Warnungen an|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Um Informationen zu einem Fehler oder einer Warnung zu erhalten, schlagen Sie den Fehlercode im Hilfeindex nach. Andere Möglichkeiten zum Abrufen von Informationen zu einem Fehler oder einer Warnung finden Sie unter [C#-Compilerfehler](../../../csharp/language-reference/compiler-messages/index.md).  
   
  Verwenden Sie [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md), um alle Warnungen als Fehler zu behandeln. Verwenden Sie [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md), um bestimmte Warnungen zu deaktivieren.  
@@ -49,11 +49,11 @@ Die Option **-warn** gibt die vom Compiler anzuzeigende Warnstufe an.
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>So legen Sie diese Compileroption in der Visual Studio-Entwicklungsumgebung fest  
   
-1.  Öffnen Sie die Seite **Eigenschaften** des Projekts.  
+1. Öffnen Sie die Seite **Eigenschaften** des Projekts.  
   
-2.  Klicken Sie auf die Eigenschaftenseite **Build** .  
+2. Klicken Sie auf die Eigenschaftenseite **Build** .  
   
-3.  Ändern Sie die Eigenschaft **Warnstufe**.  
+3. Ändern Sie die Eigenschaft **Warnstufe**.  
   
  Informationen zum programmgesteuerten Festlegen dieser Compileroption finden Sie unter <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>.  
   

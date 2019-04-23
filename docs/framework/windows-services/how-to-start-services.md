@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: 979b9ea58f69f83829c364966a9edeb9e0644309
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494366"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336836"
 ---
 # <a name="how-to-start-services"></a>Vorgehensweise: Starten von Diensten
 Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wird die <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode für die Dienstklasse aufgerufen. In der Regel werden die Vorgänge, die vom Dienst durchgeführt werden, von der <xref:System.ServiceProcess.ServiceBase.OnStart%2A>-Methode definiert. Nachdem ein Dienst gestartet worden ist, bleibt er aktiv, solange er nicht manuell angehalten oder beendet wird.  
@@ -27,11 +27,11 @@ Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wir
   
 ### <a name="to-specify-how-a-service-should-start"></a>So geben Sie an, wie ein Dienst gestartet werden soll  
   
-1.  Nachdem Sie den Dienst erstellt haben, fügen Sie die erforderlichen Installationsprogramme hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+1. Nachdem Sie den Dienst erstellt haben, fügen Sie die erforderlichen Installationsprogramme hinzu. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
-2.  Klicken Sie im Designer auf das Dienstinstallationsprogramm für den Dienst, mit dem Sie arbeiten.  
+2. Klicken Sie im Designer auf das Dienstinstallationsprogramm für den Dienst, mit dem Sie arbeiten.  
   
-3.  Legen Sie im Fenster **Eigenschaften** die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>-Eigenschaft auf einen der folgenden Werte fest:  
+3. Legen Sie im Fenster **Eigenschaften** die <xref:System.ServiceProcess.ServiceInstaller.StartType%2A>-Eigenschaft auf einen der folgenden Werte fest:  
   
     |Installationszeitpunkt|Festzulegender Wert|  
     |----------------------------------|--------------------|  
@@ -48,15 +48,15 @@ Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wir
   
 ### <a name="to-manually-start-a-service-from-server-explorer"></a>So starten Sie einen Dienst manuell mit dem Server-Explorer  
   
-1.  Fügen Sie im **Server-Explorer** den gewünschten Server hinzu, sofern dieser noch nicht aufgelistet ist. Weitere Informationen finden Sie unter Gewusst wie: Zugreifen auf und Initialisieren von Server-Explorer und Datenbank-Explorer“.  
+1. Fügen Sie im **Server-Explorer** den gewünschten Server hinzu, sofern dieser noch nicht aufgelistet ist. Weitere Informationen finden Sie unter „Gewusst wie: Zugreifen auf und Initialisieren von Server-Explorer und Datenbank-Explorer“.  
   
-2.  Erweitern Sie den Knoten **Dienste**, und suchen Sie den zu startenden Dienst.  
+2. Erweitern Sie den Knoten **Dienste**, und suchen Sie den zu startenden Dienst.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Dienst, und klicken Sie dann auf **Starten**.  
+3. Klicken Sie mit der rechten Maustaste auf den Dienst, und klicken Sie dann auf **Starten**.  
   
 ### <a name="to-manually-start-a-service-from-services-control-manager"></a>So starten Sie einen Dienst manuell mit dem Dienststeuerungs-Manager  
   
-1.  Öffnen Sie den **Dienststeuerungs-Manager**, indem Sie einen der folgenden Schritte ausführen:  
+1. Öffnen Sie den **Dienststeuerungs-Manager**, indem Sie einen der folgenden Schritte ausführen:  
   
     -   Klicken Sie in Windows XP und 2000 Professional auf dem Desktop des Computers mit der rechten Maustaste auf **Arbeitsplatz**, und klicken Sie anschließend auf **Verwalten**. Erweitern Sie im nun angezeigten Dialogfeld den Knoten **Dienste und Anwendungen**.  
   
@@ -69,15 +69,16 @@ Nachdem ein Dienst installiert wurde, muss er gestartet werden. Beim Starten wir
   
      Der Dienst wird nun im Bereich **Dienste** des Fensters angezeigt.  
   
-2.  Wählen Sie den Dienst in der Liste aus, klicken Sie mit der rechten Maustaste darauf, und klicken Sie dann auf **Starten**.  
+2. Wählen Sie den Dienst in der Liste aus, klicken Sie mit der rechten Maustaste darauf, und klicken Sie dann auf **Starten**.  
   
 ### <a name="to-manually-start-a-service-from-code"></a>So starten Sie einen Dienst programmgesteuert  
   
-1.  Erstellen Sie eine Instanz der <xref:System.ServiceProcess.ServiceController>-Klasse, und konfigurieren Sie sie so, dass Daten mit dem Dienst ausgetauscht werden können.  
+1. Erstellen Sie eine Instanz der <xref:System.ServiceProcess.ServiceController>-Klasse, und konfigurieren Sie sie so, dass Daten mit dem Dienst ausgetauscht werden können.  
   
-2.  Starten Sie den Dienst, indem Sie die <xref:System.ServiceProcess.ServiceController.Start%2A>-Methode aufrufen.  
+2. Starten Sie den Dienst, indem Sie die <xref:System.ServiceProcess.ServiceController.Start%2A>-Methode aufrufen.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)
 - [Vorgehensweise: Hinzufügen von Installern zur Dienstanwendung](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

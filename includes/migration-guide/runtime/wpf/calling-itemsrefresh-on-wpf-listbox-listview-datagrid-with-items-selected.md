@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: de73145273ad5aa5c19de55525417cfc3305b86d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235234"
+---
 ### <a name="calling-itemsrefresh-on-a-wpf-listbox-listview-or-datagrid-with-items-selected-can-cause-duplicate-items-to-appear-in-the-element"></a>Das Aufrufen von Items.Refresh für die WPF-Steuerelemente ListBox, ListView oder DataGrid mit ausgewählten Einträgen kann dazu führen, dass im Element doppelte Einträge angezeigt werden.
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.5|
 |Typ|Laufzeit|
 |Betroffene APIs|<ul><li><xref:System.Windows.Data.CollectionView.Refresh?displayProperty=nameWithType></li></ul>|
-

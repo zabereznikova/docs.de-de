@@ -16,12 +16,12 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-ms.openlocfilehash: 552fb69910d7186321d834e4bc36abc867a31658
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c792c8d819d17d1fc32fedeeacdacbbb1624d95
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125618"
 ---
 # <a name="using-tcp-services"></a>Verwenden von TCP-Diensten
 Die <xref:System.Net.Sockets.TcpClient>-Klasse fordert über TCP Daten von einer Internetressource an. Die Eigenschaften und Methoden von **TcpClient** abstrahieren die Details zum Erstellen einer <xref:System.Net.Sockets.Socket> zum Anfordern und Empfangen von Daten mithilfe von TCP. Da die Verbindung mit dem Remotegerät als Datenstrom dargestellt wird, können Daten mit Techniken zur Datenstromverarbeitung von .NET Framework gelesen und geschrieben werden.  
@@ -100,7 +100,7 @@ public class TcpTimeClient {
 }  
 ```  
   
- <xref:System.Net.Sockets.TcpListener> wird verwendet, um einen TCP-Port auf eingehende Anforderungen zu überwachen, und entweder einen **Socket** oder ein **TcpClient** zu erstellen, der die Verbindung mit dem Client verwaltet. Die <xref:System.Net.Sockets.TcpListener.Start%2A>-Methode ermöglicht die Überwachung, und die <xref:System.Net.Sockets.TcpListener.Stop%2A>-Methode deaktiviert die Überwachung des Ports. Die <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A>-Methode akzeptiert eingehende Verbindungsanforderungen und erstellt einen **TcpClient** zur Verarbeitung der Anforderung. Die <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A>-Methode akzeptiert eingehende Verbindungsanforderungen und erstellt einen **Socket** zur Verarbeitung der Anforderung.  
+ <xref:System.Net.Sockets.TcpListener> wird verwendet, um einen TCP-Port auf eingehende Anforderungen zu überwachen, und entweder einen **Socket** oder einen **TcpClient** zu erstellen, der die Verbindung mit dem Client verwaltet. Die <xref:System.Net.Sockets.TcpListener.Start%2A>-Methode ermöglicht die Überwachung, und die <xref:System.Net.Sockets.TcpListener.Stop%2A>-Methode deaktiviert die Überwachung des Ports. Die <xref:System.Net.Sockets.TcpListener.AcceptTcpClient%2A>-Methode akzeptiert eingehende Verbindungsanforderungen und erstellt einen **TcpClient** zur Verarbeitung der Anforderung. Die <xref:System.Net.Sockets.TcpListener.AcceptSocket%2A>-Methode akzeptiert eingehende Verbindungsanforderungen und erstellt einen **Socket** zur Verarbeitung der Anforderung.  
   
  Das folgende Beispiel veranschaulicht das Erstellen eines Netzwerkzeitservers mithilfe eines **TcpListener** zur Überwachung des TCP-Ports 13. Wenn eine eingehende Verbindungsanforderung akzeptiert wird, antwortet der Zeitserver mit dem aktuellen Datum und der Uhrzeit vom Hostserver.  
   
@@ -195,4 +195,3 @@ public class TcpTimeServer {
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 9c84afced8c98530e6d6b02c1cde69e93bd8d7e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58018745"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337278"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Veraltete Elemente in der .NET Framework-Klassenbibliothek
 .NET Framework unterliegt im Laufe der Zeit Änderungen. Jede neue Version erhält neue Typen und Typmember, die neue Funktionen bieten. Vorhandene Typen und deren Member werden im Laufe der Zeit ebenfalls geändert. Einige Typen verlieren z. B. an Bedeutung, da die von ihnen unterstützte Technologie durch eine neue Technologie ersetzt wird, und einige Methoden werden von neueren Methoden abgelöst, die entweder benutzerfreundlicher sind oder über einen größeren Funktionsumfang verfügen.  
@@ -42,9 +42,9 @@ ms.locfileid: "58018745"
   
  Sie können sich dazu entscheiden, keinen vorhandenen Code für eine höhere Version von .NET Framework neu zu kompilieren. Stattdessen können Sie die Version von .NET Framework angeben, für die der vorhandene kompilierte Code ausgeführt wird. Beispiel: Angenommen, Sie besitzen eine Anwendung mit dem Namen "app1.exe", die für [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] kompiliert wurde, doch Sie möchten, dass die Anwendung für [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ausgeführt wird. Gehen Sie dazu folgendermaßen vor:  
   
-1.  Erstellen Sie eine Konfigurationsdatei für die zentrale ausführbare Datei, und nennen Sie diese *appName*.exe.config, wobei *appName* der Name der ausführbaren Datei der Anwendung ist. Für die Anwendung mit dem Namen "app1.exe" in diesem Beispiel würden Sie eine Konfigurationsdatei mit dem Namen "app1.exe.config" erstellen.  
+1. Erstellen Sie eine Konfigurationsdatei für die zentrale ausführbare Datei, und nennen Sie diese *appName*.exe.config, wobei *appName* der Name der ausführbaren Datei der Anwendung ist. Für die Anwendung mit dem Namen "app1.exe" in diesem Beispiel würden Sie eine Konfigurationsdatei mit dem Namen "app1.exe.config" erstellen.  
   
-2.  Fügen Sie der Konfigurationsdatei Folgendes hinzu:  
+2. Fügen Sie der Konfigurationsdatei Folgendes hinzu:  
   
     ```xml  
     <configuration>  
@@ -56,7 +56,7 @@ ms.locfileid: "58018745"
   
  In der folgenden Tabelle sind die Zeichenfolgenwerte aufgeführt, die Sie dem `version`-Attribut zuweisen können, um eine bestimmte Version von .NET Framework als Zielversion festzulegen.  
   
-|.NET Framework-Version|`version`-Zeichenfolge|
+|.NET Framework-Version|`version` string|
 |-|-|  
 |4.7 (einschließlich 4.7.1 und 4.7.2)|v4.0|  
 |4.6 (einschließlich 4.6.1 und 4.6.2)|v4.0|  
@@ -75,11 +75,12 @@ ms.locfileid: "58018745"
 ## <a name="obsolete-lists-for-previous-versions"></a>Listen mit veralteten Komponenten für frühere Versionen  
  [Veraltete Typen in .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224224)  
   
- [Veraltete Member in .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224227)  
+ [Veraltete Member in .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224227)  
   
  [Liste veralteter Elemente in .NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkId=163710)  
   
  [Liste veralteter Elemente in .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>Siehe auch
-- [\<supportedRuntime> Element](../configure-apps/file-schema/startup/supportedruntime-element.md)
+
+- [\<supportedRuntime>-Element](../configure-apps/file-schema/startup/supportedruntime-element.md)
