@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 17568a46c8e946989af0e401366d7eaa885886da
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220967"
 ---
-# <a name="imetadataimportgetscopeprops-method"></a><span data-ttu-id="6965a-102">IMetaDataImport::GetScopeProps-Methode</span><span class="sxs-lookup"><span data-stu-id="6965a-102">IMetaDataImport::GetScopeProps Method</span></span>
-<span data-ttu-id="6965a-103">Ruft den Namen und optional den Versionsbezeichner der Assembly oder des Moduls im aktuellen Metadatenbereich ab.</span><span class="sxs-lookup"><span data-stu-id="6965a-103">Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.</span></span>  
+# <a name="imetadataimportgetscopeprops-method"></a><span data-ttu-id="c86cc-102">IMetaDataImport::GetScopeProps-Methode</span><span class="sxs-lookup"><span data-stu-id="c86cc-102">IMetaDataImport::GetScopeProps Method</span></span>
+<span data-ttu-id="c86cc-103">Ruft den Namen und optional den Versionsbezeichner der Assembly oder des Moduls im aktuellen Metadatenbereich ab.</span><span class="sxs-lookup"><span data-stu-id="c86cc-103">Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6965a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="6965a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c86cc-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c86cc-104">Syntax</span></span>  
   
 ```  
 HRESULT GetScopeProps (  
@@ -38,32 +38,32 @@ HRESULT GetScopeProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6965a-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="6965a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c86cc-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="c86cc-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="6965a-106">[out] Ein Puffer für den Namen der Assembly "oder"-Modul.</span><span class="sxs-lookup"><span data-stu-id="6965a-106">[out] A buffer for the assembly or module name.</span></span>  
+ <span data-ttu-id="c86cc-106">[out] Ein Puffer für den Namen der Assembly "oder"-Modul.</span><span class="sxs-lookup"><span data-stu-id="c86cc-106">[out] A buffer for the assembly or module name.</span></span>  
   
  `cchName`  
- <span data-ttu-id="6965a-107">[in] Die Größe in Breitzeichen `szName`.</span><span class="sxs-lookup"><span data-stu-id="6965a-107">[in] The size in wide characters of `szName`.</span></span>  
+ <span data-ttu-id="c86cc-107">[in] Die Größe in Breitzeichen `szName`.</span><span class="sxs-lookup"><span data-stu-id="c86cc-107">[in] The size in wide characters of `szName`.</span></span>  
   
  `pchName`  
- <span data-ttu-id="6965a-108">[out] Die Anzahl der Breitzeichen, die in zurückgegebenen `szName`.</span><span class="sxs-lookup"><span data-stu-id="6965a-108">[out] The number of wide characters returned in `szName`.</span></span>  
+ <span data-ttu-id="c86cc-108">[out] Die Anzahl der Breitzeichen, die in zurückgegebenen `szName`.</span><span class="sxs-lookup"><span data-stu-id="c86cc-108">[out] The number of wide characters returned in `szName`.</span></span>  
   
  `pmvid`  
- <span data-ttu-id="6965a-109">[Out, optional] Ein Zeiger auf eine GUID, die die Version der Assembly oder des Moduls eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="6965a-109">[out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.</span></span>  
+ <span data-ttu-id="c86cc-109">[Out, optional] Ein Zeiger auf eine GUID, die die Version der Assembly oder des Moduls eindeutig identifiziert.</span><span class="sxs-lookup"><span data-stu-id="c86cc-109">[out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6965a-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="6965a-110">Remarks</span></span>  
- <span data-ttu-id="6965a-111">Die [IMetaDataEmit:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) Methode dient zum Festlegen dieser Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="6965a-111">The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c86cc-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="c86cc-110">Remarks</span></span>  
+ <span data-ttu-id="c86cc-111">Die [IMetaDataEmit:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) Methode dient zum Festlegen dieser Eigenschaften.</span><span class="sxs-lookup"><span data-stu-id="c86cc-111">The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="6965a-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="6965a-112">Requirements</span></span>  
- <span data-ttu-id="6965a-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6965a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c86cc-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c86cc-112">Requirements</span></span>  
+ <span data-ttu-id="c86cc-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c86cc-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6965a-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="6965a-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c86cc-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c86cc-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="6965a-115">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="6965a-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c86cc-115">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="c86cc-115">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="6965a-116">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="6965a-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="c86cc-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c86cc-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6965a-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6965a-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c86cc-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c86cc-117">See also</span></span>
 
-- [<span data-ttu-id="6965a-118">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6965a-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="6965a-119">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="6965a-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="c86cc-118">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c86cc-118">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="c86cc-119">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="c86cc-119">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
