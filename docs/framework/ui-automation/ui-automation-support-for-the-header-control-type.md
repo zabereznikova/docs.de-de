@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control types, Header
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
 ms.openlocfilehash: 8a7fe7fb8ec3e4b33ff4814859afe7d1d8de9c60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160120"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>Benutzeroberflächenautomatisierungs-Unterstützung für den Header-Steuerelementtyp
@@ -39,14 +39,14 @@ ms.locfileid: "59160120"
 ## <a name="required-ui-automation-properties"></a>Erforderliche Benutzeroberflächenautomatisierungs-Eigenschaften  
  Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaften, deren Werte oder Definitionen für Headersteuerelemente besonders relevant sind. Weitere Informationen zu Eigenschaften [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -finden Sie unter [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Eigenschaft|Wert|Hinweise|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Eigenschaft|Wert|Hinweise|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Siehe Hinweise.|Der Wert dieser Eigenschaft muss für alle Steuerelemente in einer Anwendung eindeutig sein.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Siehe Hinweise.|Das äußere Rechteck, das das gesamte Steuerelement enthält.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Siehe Hinweise.|Unterstützt, wenn es ein umschließendes Rechteck gibt. Wenn nicht auf jeden Punkt innerhalb des umschließenden Rechtecks geklickt werden kann, und Sie spezielle Treffertests ausführen, setzen Sie die Eigenschaft außer Kraft, und stellen Sie dann einen klickbaren Punkt bereit.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Siehe Hinweise.|Wenn das Steuerelement den Tastaturfokus erhalten kann, muss es diese Eigenschaft unterstützen.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Siehe Hinweise.|Das Headersteuerelement benötigt einen Namen, wenn mehrere Zeilen- oder Spaltenüberschriften vorhanden sind. Dadurch werden die Informationen für den Header (Überschrift) gekennzeichnet.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`sein.|Headersteuerelemente haben keine statische Bezeichnung.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`.|Headersteuerelemente haben keine statische Bezeichnung.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Header|Dieser Wert gilt für alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Frameworks.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|„Header“|Dieser Wert gilt für alle [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] -Frameworks.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|Horizontal|Der Wert dieser Eigenschaft macht die Position des Headersteuerelements verfügbar, egal, ob es eine Zeilen- oder eine Spaltenüberschrift ist.|  
@@ -65,11 +65,11 @@ ms.locfileid: "59160120"
 ## <a name="required-ui-automation-events"></a>Erforderliche Benutzeroberflächenautomatisierungs-Ereignisse  
  Die folgende Tabelle enthält die [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignisse, die von allen Headersteuerelementen unterstützt werden müssen. Weitere Informationen zu Ereignissen finden Sie unter [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event|Unterstützung|Hinweise|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] -Ereignis|Unterstützung|Hinweise|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
-|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
-|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> Durch geänderte Eigenschaften ausgelöste Ereignis.|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
+|Durch geänderte<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> -Eigenschaft ausgelöstes Ereignis.|Erforderlich|Keiner|  
 |<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|Erforderlich|Keiner|  
 |<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|Erforderlich|Keiner|  
   

@@ -3,10 +3,10 @@ title: Serialisierbare Typen
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
 ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160848"
 ---
 # <a name="serializable-types"></a>Serialisierbare Typen
@@ -27,7 +27,7 @@ Standardmäßig serialisiert der <xref:System.Runtime.Serialization.DataContract
   
 -   Schreibgeschützte Felder, Eigenschaften ohne `get`- oder `set`-Methode sowie Eigenschaften mit interner oder privater `set`- oder `get`-Methode werden nicht serialisiert. Diese Eigenschaften werden ignoriert, und es wird keine Ausnahme ausgelöst. Ausgenommen hiervon sind get-exklusive Auflistungen.  
   
--   <xref:System.Xml.Serialization.XmlSerializer> Attribute (z. B. `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude`usw.) werden ignoriert.  
+-   <xref:System.Xml.Serialization.XmlSerializer>Attribute (beispielsweise `XmlElement`, `XmlAttribute`, `XmlIgnore`, `XmlInclude` usw.) werden ignoriert.  
   
 -   Wird das <xref:System.Runtime.Serialization.DataContractAttribute>-Attribut nicht auf einen angegebenen Typ angewendet, ignoriert der Serialisierer jeden Member des Typs, auf den das <xref:System.Runtime.Serialization.DataMemberAttribute>-Attribut angewendet wurde.  
   

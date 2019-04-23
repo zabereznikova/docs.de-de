@@ -7,10 +7,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
 ms.openlocfilehash: b5c055bdd12a4bede6e77233726c697de424a055
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158639"
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Datenformatierung im DataGridView-Steuerelement in Windows Forms
@@ -37,5 +37,5 @@ Die <xref:System.Windows.Forms.DataGridView> Steuerelement ermöglicht die autom
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - [Anzeigen von Daten im DataGridView-Steuerelement in Windows Forms](displaying-data-in-the-windows-forms-datagridview-control.md)
 - [Zellstile im DataGridView-Steuerelement in Windows Forms](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Formatieren von Daten im DataGridView-Steuerelement in Windows Forms](how-to-format-data-in-the-windows-forms-datagridview-control.md)
-- [Vorgehensweise: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Formatieren von Daten in der Windows Forms-DataGridView-Steuerelement](how-to-format-data-in-the-windows-forms-datagridview-control.md)
+- [Vorgehensweise: Anpassen der Datenformatierung im DataGridView-Steuerelement in Windows Forms](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

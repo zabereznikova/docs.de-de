@@ -11,10 +11,10 @@ helpviewer_keywords:
 - PrincipalPermissionAttribute
 ms.assetid: c4845fca-0ed9-4adf-bbdc-10812be69b61
 ms.openlocfilehash: 9b8b18f6c66fdb8f2446d3ddc5c584c5bad44ef3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158794"
 ---
 # <a name="how-to-create-a-custom-principal-identity"></a>Vorgehensweise: Erstellen einer benutzerdefinierten Prinzipalidentität
@@ -54,5 +54,5 @@ Das <xref:System.Security.Permissions.PrincipalPermissionAttribute> ist ein dekl
 - <xref:System.ServiceModel.Description.PrincipalPermissionMode>
 - <xref:System.ServiceModel.Description.PrincipalPermissionMode>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [Vorgehensweise: Verwenden des Rollenanbieters für den ASP.NET bei einem Dienst](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Vorgehensweise: Verwenden des ASP.NET-Rollenanbieters mit einem Dienst](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
 - [Vorgehensweise: Einschränken des Zugriffs mit der PrincipalPermissionAttribute-Klasse](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)

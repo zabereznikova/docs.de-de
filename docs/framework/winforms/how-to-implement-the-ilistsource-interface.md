@@ -9,10 +9,10 @@ helpviewer_keywords:
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
 ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159782"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>Vorgehensweise: Implementieren der IListSource-Schnittstelle
@@ -44,4 +44,4 @@ Implementieren der <xref:System.ComponentModel.IListSource> Schnittstelle, um ei
 - <xref:System.ComponentModel.ITypedList>
 - <xref:System.ComponentModel.BindingList%601>
 - <xref:System.ComponentModel.IBindingList>
-- [Datenbindung und Windows Forms](data-binding-and-windows-forms.md)
+- [Datenbindung und Windows Forms](data-binding-and-windows-forms.md)

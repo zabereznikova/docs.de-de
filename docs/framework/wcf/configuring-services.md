@@ -5,10 +5,10 @@ helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
 ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156506"
 ---
 # <a name="configuring-wcf-services"></a>Konfigurieren von WCF-Diensten
@@ -58,6 +58,6 @@ Nachdem Sie Ihren Dienstvertrag entworfen und implementiert haben, können Sie d
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Basis-WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md)
+- [Einfache WCF-Programmierung](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Konzeptionelle Übersicht](../../../docs/framework/wcf/conceptual-overview.md)
 - [Details zur WCF-Funktion](../../../docs/framework/wcf/feature-details/index.md)

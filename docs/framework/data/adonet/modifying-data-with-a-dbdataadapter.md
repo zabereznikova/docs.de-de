@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
 ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158872"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>Ändern von Daten mit "DbDataAdapter"
@@ -45,6 +45,6 @@ Mit der <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A>-Methode
 ## <a name="see-also"></a>Siehe auch
 
 - [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [Abrufen einer "DbProviderFactory"](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
-- ["DbConnection", "DbCommand" und "DbException"](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
+- [Abrufen einer DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
+- [DbConnection, DbCommand und DbException](../../../../docs/framework/data/adonet/dbconnection-dbcommand-and-dbexception.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155089"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell
@@ -175,8 +175,8 @@ Mit Autorisierung wird der Prozess bezeichnet, in dem entschieden wird, welche E
 - [Ansprüche und das Verweigern des Zugriffs auf Ressourcen](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
 - [Erstellen von Ansprüchen und Ressourcenwerte](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
 - [Vorgehensweise: Erstellen eines benutzerdefinierten Anspruchs](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
-- [Vorgehensweise: Vergleichen von Ansprüchen](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [Vorgehensweise: Erstellen einer benutzerdefinierten Autorisierungsrichtlinie](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [Vorgehensweise: Ansprüche vergleichen](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [Vorgehensweise: Erstellen Sie eine benutzerdefinierte Autorisierungsrichtlinie](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
 - [Vorgehensweise: Erstellen eines benutzerdefinierten Autorisierungs-Managers für einen Dienst](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [Übersicht über die Sicherheit](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Autorisierung](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

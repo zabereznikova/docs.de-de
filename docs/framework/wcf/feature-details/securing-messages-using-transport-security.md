@@ -3,10 +3,10 @@ title: Sichern von Nachrichten mit Transportsicherheit
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160887"
 ---
 # <a name="securing-messages-using-transport-security"></a>Sichern von Nachrichten mit Transportsicherheit
@@ -50,7 +50,7 @@ In diesem Abschnitt wird die Message Queuing (MSMQ)-Transportsicherheit näher e
  Wenn die Transportsicherheit aktiviert ist, ist die Standardeinstellung <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>.  
   
 #### <a name="windows-domain-authentication-mode"></a>Windows-Domänenauthentifizierungsmodus  
- Um die Windows-Sicherheit verwenden zu können, ist die Active Directory-Integration erforderlich. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> ist der standardmäßige transportsicherheitsmodus. Wenn dies festgelegt ist, wird der WCF-Kanal fügt die Windows-SID an die MSMQ-Nachricht und verwendet das interne Zertifikat, das von Active Directory abgerufen. MSMQ verwendet dieses interne Zertifikat, um die Nachricht zu sichern. Der Warteschlangenmanager, der die Nachricht empfängt, verwendet Active Directory, um ein entsprechendes Zertifikat zu suchen, mit dem der Client authentifiziert werden kann. Zugleich wird dadurch überprüft, dass die SID auch der des Clients entspricht. Dieser Authentifizierungsschritt wird ausgeführt, wenn ein Zertifikat, sei es intern erstellt worden wie im Fall des `WindowsDomain`-Authentifizierungsmodus, oder extern wie im Fall des `Certificate`-Authentifizierungsmodus, an die Nachricht angehängt wird, selbst wenn für die Zielwarteschlange nicht festgelegt wurde, dass eine Authentifizierung notwendig ist.  
+ Um die Windows-Sicherheit verwenden zu können, ist die Active Directory-Integration erforderlich. <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain> ist der standardmäßige Transportsicherheitsmodus. Wenn dies festgelegt ist, wird der WCF-Kanal fügt die Windows-SID an die MSMQ-Nachricht und verwendet das interne Zertifikat, das von Active Directory abgerufen. MSMQ verwendet dieses interne Zertifikat, um die Nachricht zu sichern. Der Warteschlangenmanager, der die Nachricht empfängt, verwendet Active Directory, um ein entsprechendes Zertifikat zu suchen, mit dem der Client authentifiziert werden kann. Zugleich wird dadurch überprüft, dass die SID auch der des Clients entspricht. Dieser Authentifizierungsschritt wird ausgeführt, wenn ein Zertifikat, sei es intern erstellt worden wie im Fall des `WindowsDomain`-Authentifizierungsmodus, oder extern wie im Fall des `Certificate`-Authentifizierungsmodus, an die Nachricht angehängt wird, selbst wenn für die Zielwarteschlange nicht festgelegt wurde, dass eine Authentifizierung notwendig ist.  
   
 > [!NOTE]
 >  Beim Erstellen einer Warteschlange können Sie die Warteschlange als authentifizierte Warteschlange kennzeichnen, um anzugeben, dass für die Warteschlange eine Authentifizierung des Clients, der die Nachricht an die Warteschlange sendet, erforderlich ist. Dadurch wird sichergestellt, dass keine nicht authentifizierten Nachrichten in die Warteschlange aufgenommen werden.  

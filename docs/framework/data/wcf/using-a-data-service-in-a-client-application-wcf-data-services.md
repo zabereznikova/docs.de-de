@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
 ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155934"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Verwenden eines Datendiensts in einer Clientanwendung (WCF Data Services)
@@ -21,7 +21,7 @@ Sie können auf zugreifen, einen Dienst, der verfügbar macht eine [!INCLUDE[ssO
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt die Gewährleistung der Interoperabilität zwischen Diensten, die verfügbar machen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Feeds bzw. Anwendungen, die nutzen [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] -feeds. Anwendungen Zugriff auf und Ändern von Daten in eine [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-basierten Diensts durch Senden von Anforderungsnachrichten einer bestimmten HTTP-Aktion und mit einem URI, der eine Entitätsressource adressiert, für die die Aktion ausgeführt werden soll. Erforderliche Entitätsdaten werden als speziell codierte Nutzlast im Nachrichtentext angegeben.  
   
 ### <a name="http-actions"></a>HTTP-Aktionen  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt die folgenden HTTP-Aktionen zum Erstellen, lesen, aktualisieren und Löschen von Entitätsdaten, die die adressierte Ressource darstellt:  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] unterstützt die folgenden HTTP-Aktionen zum Erstellen, Lesen, Aktualisieren und Löschen von Entitätsdaten, die die adressierte Ressource darstellt:  
   
 -   **HTTP GET** – Dies ist die Standardaktion, wenn eine Ressource über einen Browser zugegriffen wird. In der Anforderungsnachricht wird keine Nutzlast angegeben, und es wird eine Antwortmethode mit einer Nutzlast zurückgegeben, die die angeforderten Daten enthält.  
   
