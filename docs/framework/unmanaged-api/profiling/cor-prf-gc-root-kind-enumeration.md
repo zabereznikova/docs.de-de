@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7dfbba3cef8afadfc6e12e53ea328c4fc7165ca0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206758"
 ---
-# <a name="corprfgcrootkind-enumeration"></a><span data-ttu-id="eb768-102">COR_PRF_GC_ROOT_KIND-Enumeration</span><span class="sxs-lookup"><span data-stu-id="eb768-102">COR_PRF_GC_ROOT_KIND Enumeration</span></span>
-<span data-ttu-id="eb768-103">Gibt die Art der Garbage Collection-Stamm, die verfügbar gemacht werden an die [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) Rückruf.</span><span class="sxs-lookup"><span data-stu-id="eb768-103">Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.</span></span>  
+# <a name="corprfgcrootkind-enumeration"></a><span data-ttu-id="10bc1-102">COR_PRF_GC_ROOT_KIND-Enumeration</span><span class="sxs-lookup"><span data-stu-id="10bc1-102">COR_PRF_GC_ROOT_KIND Enumeration</span></span>
+<span data-ttu-id="10bc1-103">Gibt die Art der Garbage Collection-Stamm, die verfügbar gemacht werden an die [ICorProfilerCallback2:: Rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) Rückruf.</span><span class="sxs-lookup"><span data-stu-id="10bc1-103">Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eb768-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="eb768-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="10bc1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="10bc1-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -37,24 +37,24 @@ typedef enum {
 } COR_PRF_GC_ROOT_KIND;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="eb768-105">Member</span><span class="sxs-lookup"><span data-stu-id="eb768-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="10bc1-105">Member</span><span class="sxs-lookup"><span data-stu-id="10bc1-105">Members</span></span>  
   
-|<span data-ttu-id="eb768-106">Member</span><span class="sxs-lookup"><span data-stu-id="eb768-106">Member</span></span>|<span data-ttu-id="eb768-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="eb768-107">Description</span></span>|  
+|<span data-ttu-id="10bc1-106">Member</span><span class="sxs-lookup"><span data-stu-id="10bc1-106">Member</span></span>|<span data-ttu-id="10bc1-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="10bc1-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_STACK`|<span data-ttu-id="eb768-108">Der Stamm ist eine Variable auf dem Stapel.</span><span class="sxs-lookup"><span data-stu-id="eb768-108">The root is a variable on the stack.</span></span>|  
-|`COR_PRF_GC_ROOT_FINALIZER`|<span data-ttu-id="eb768-109">Der Stamm ist ein Eintrag in der Finalizer-Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="eb768-109">The root is an entry in the finalizer queue.</span></span>|  
-|`COR_PRF_GC_ROOT_HANDLE`|<span data-ttu-id="eb768-110">Der Stamm ist eine Garbage Collection-Handle.</span><span class="sxs-lookup"><span data-stu-id="eb768-110">The root is a garbage collection handle.</span></span>|  
-|`COR_PRF_GC_ROOT_OTHER`|<span data-ttu-id="eb768-111">Die Art der Stamm ist nicht angegeben.</span><span class="sxs-lookup"><span data-stu-id="eb768-111">The kind of root is unspecified.</span></span>|  
+|`COR_PRF_GC_ROOT_STACK`|<span data-ttu-id="10bc1-108">Der Stamm ist eine Variable auf dem Stapel.</span><span class="sxs-lookup"><span data-stu-id="10bc1-108">The root is a variable on the stack.</span></span>|  
+|`COR_PRF_GC_ROOT_FINALIZER`|<span data-ttu-id="10bc1-109">Der Stamm ist ein Eintrag in der Finalizer-Warteschlange.</span><span class="sxs-lookup"><span data-stu-id="10bc1-109">The root is an entry in the finalizer queue.</span></span>|  
+|`COR_PRF_GC_ROOT_HANDLE`|<span data-ttu-id="10bc1-110">Der Stamm ist eine Garbage Collection-Handle.</span><span class="sxs-lookup"><span data-stu-id="10bc1-110">The root is a garbage collection handle.</span></span>|  
+|`COR_PRF_GC_ROOT_OTHER`|<span data-ttu-id="10bc1-111">Die Art der Stamm ist nicht angegeben.</span><span class="sxs-lookup"><span data-stu-id="10bc1-111">The kind of root is unspecified.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="eb768-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="eb768-112">Requirements</span></span>  
- <span data-ttu-id="eb768-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eb768-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="10bc1-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="10bc1-112">Requirements</span></span>  
+ <span data-ttu-id="10bc1-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="10bc1-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eb768-114">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="eb768-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="10bc1-114">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="10bc1-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="eb768-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="eb768-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="10bc1-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="10bc1-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="eb768-116">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="eb768-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="10bc1-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10bc1-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb768-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="eb768-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="10bc1-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="10bc1-117">See also</span></span>
 
-- [<span data-ttu-id="eb768-118">Profilerstellungsenumerationen</span><span class="sxs-lookup"><span data-stu-id="eb768-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="10bc1-118">Profilerstellungsenumerationen</span><span class="sxs-lookup"><span data-stu-id="10bc1-118">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

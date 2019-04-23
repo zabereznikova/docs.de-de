@@ -14,23 +14,23 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
 ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206407"
 ---
-# <a name="drawings"></a><span data-ttu-id="51d54-102">Zeichnungen</span><span class="sxs-lookup"><span data-stu-id="51d54-102">Drawings</span></span>
-<xref:System.Windows.Media.Drawing> <span data-ttu-id="51d54-103">Objekte werden verwendet, um effizient Formen, Bildern oder Text zu zeichnen.</span><span class="sxs-lookup"><span data-stu-id="51d54-103">objects are used to efficiently draw shapes, images, or text.</span></span> <span data-ttu-id="51d54-104">Beim Zeichnen mit Zeichnungen dienen einem <xref:System.Windows.Media.DrawingBrush> oder Programmierung mit <xref:System.Windows.Media.Visual> Objekte.</span><span class="sxs-lookup"><span data-stu-id="51d54-104">Drawings are used when painting with a <xref:System.Windows.Media.DrawingBrush> or programming with <xref:System.Windows.Media.Visual> objects.</span></span>  
+# <a name="drawings"></a><span data-ttu-id="225c9-102">Zeichnungen</span><span class="sxs-lookup"><span data-stu-id="225c9-102">Drawings</span></span>
+<span data-ttu-id="225c9-103"><xref:System.Windows.Media.Drawing> Objekte werden verwendet, um effizient Formen, Bildern oder Text zu zeichnen.</span><span class="sxs-lookup"><span data-stu-id="225c9-103"><xref:System.Windows.Media.Drawing> objects are used to efficiently draw shapes, images, or text.</span></span> <span data-ttu-id="225c9-104">Beim Zeichnen mit Zeichnungen dienen einem <xref:System.Windows.Media.DrawingBrush> oder Programmierung mit <xref:System.Windows.Media.Visual> Objekte.</span><span class="sxs-lookup"><span data-stu-id="225c9-104">Drawings are used when painting with a <xref:System.Windows.Media.DrawingBrush> or programming with <xref:System.Windows.Media.Visual> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="51d54-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="51d54-105">In This Section</span></span>  
- [<span data-ttu-id="51d54-106">Übersicht über Zeichnungsobjekte</span><span class="sxs-lookup"><span data-stu-id="51d54-106">Drawing Objects Overview</span></span>](drawing-objects-overview.md)  
-  [<span data-ttu-id="51d54-107">Gewusst wie-Themen</span><span class="sxs-lookup"><span data-stu-id="51d54-107">How-to Topics</span></span>](drawings-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="225c9-105">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="225c9-105">In This Section</span></span>  
+ [<span data-ttu-id="225c9-106">Übersicht über Zeichnungsobjekte</span><span class="sxs-lookup"><span data-stu-id="225c9-106">Drawing Objects Overview</span></span>](drawing-objects-overview.md)  
+  [<span data-ttu-id="225c9-107">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="225c9-107">How-to Topics</span></span>](drawings-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="51d54-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="51d54-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="225c9-108">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="225c9-108">See also</span></span>
 
 - <xref:System.Windows.Media.Drawing>
-- [<span data-ttu-id="51d54-109">2D-Grafiken und Bildverarbeitung</span><span class="sxs-lookup"><span data-stu-id="51d54-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [<span data-ttu-id="51d54-110">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="51d54-110">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="51d54-111">Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF</span><span class="sxs-lookup"><span data-stu-id="51d54-111">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
-- [<span data-ttu-id="51d54-112">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="51d54-112">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="225c9-109">2D-Grafiken und Bildverarbeitung</span><span class="sxs-lookup"><span data-stu-id="225c9-109">2D Graphics and Imaging</span></span>](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [<span data-ttu-id="225c9-110">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="225c9-110">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="225c9-111">Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF</span><span class="sxs-lookup"><span data-stu-id="225c9-111">Shapes and Basic Drawing in WPF Overview</span></span>](shapes-and-basic-drawing-in-wpf-overview.md)
+- [<span data-ttu-id="225c9-112">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="225c9-112">Graphics and Multimedia</span></span>](index.md)

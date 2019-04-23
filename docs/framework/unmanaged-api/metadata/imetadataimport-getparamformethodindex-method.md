@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7c6f06ff4fc7d855ea07f1f572a2b7ea948efc51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207057"
 ---
-# <a name="imetadataimportgetparamformethodindex-method"></a><span data-ttu-id="097d1-102">IMetaDataImport::GetParamForMethodIndex-Methode</span><span class="sxs-lookup"><span data-stu-id="097d1-102">IMetaDataImport::GetParamForMethodIndex Method</span></span>
-<span data-ttu-id="097d1-103">Ruft das Token ab, das einen angegebenen Parameter, der durch das angegebene MethodDef-Token dargestellten Methode darstellt.</span><span class="sxs-lookup"><span data-stu-id="097d1-103">Gets the token that represents a specified parameter of the method represented by the specified MethodDef token.</span></span>  
+# <a name="imetadataimportgetparamformethodindex-method"></a><span data-ttu-id="0ec22-102">IMetaDataImport::GetParamForMethodIndex-Methode</span><span class="sxs-lookup"><span data-stu-id="0ec22-102">IMetaDataImport::GetParamForMethodIndex Method</span></span>
+<span data-ttu-id="0ec22-103">Ruft das Token ab, das einen angegebenen Parameter, der durch das angegebene MethodDef-Token dargestellten Methode darstellt.</span><span class="sxs-lookup"><span data-stu-id="0ec22-103">Gets the token that represents a specified parameter of the method represented by the specified MethodDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="097d1-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="097d1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0ec22-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="0ec22-104">Syntax</span></span>  
   
 ```  
 HRESULT GetParamForMethodIndex (  
@@ -37,26 +37,26 @@ HRESULT GetParamForMethodIndex (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="097d1-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="097d1-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0ec22-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="0ec22-105">Parameters</span></span>  
  `md`  
- <span data-ttu-id="097d1-106">[in] Ein Token, das die Methode zum Zurückgeben der ParameterToken für darstellt.</span><span class="sxs-lookup"><span data-stu-id="097d1-106">[in] A token that represents the method to return the parameter token for.</span></span>  
+ <span data-ttu-id="0ec22-106">[in] Ein Token, das die Methode zum Zurückgeben der ParameterToken für darstellt.</span><span class="sxs-lookup"><span data-stu-id="0ec22-106">[in] A token that represents the method to return the parameter token for.</span></span>  
   
  `ulParamSeq`  
- <span data-ttu-id="097d1-107">[in] Die Ordnungsposition in der Parameterliste, in dem der angeforderte Parameter auftritt.</span><span class="sxs-lookup"><span data-stu-id="097d1-107">[in] The ordinal position in the parameter list where the requested parameter occurs.</span></span> <span data-ttu-id="097d1-108">Parameter sind nummeriert, beginnend bei eins, mit der Methodenrückgabewert an Position 0 (null).</span><span class="sxs-lookup"><span data-stu-id="097d1-108">Parameters are numbered starting from one, with the method's return value in position zero.</span></span>  
+ <span data-ttu-id="0ec22-107">[in] Die Ordnungsposition in der Parameterliste, in dem der angeforderte Parameter auftritt.</span><span class="sxs-lookup"><span data-stu-id="0ec22-107">[in] The ordinal position in the parameter list where the requested parameter occurs.</span></span> <span data-ttu-id="0ec22-108">Parameter sind nummeriert, beginnend bei eins, mit der Methodenrückgabewert an Position 0 (null).</span><span class="sxs-lookup"><span data-stu-id="0ec22-108">Parameters are numbered starting from one, with the method's return value in position zero.</span></span>  
   
  `ppd`  
- <span data-ttu-id="097d1-109">[out] Ein Zeiger auf ein ParamDef-Token, das den angeforderten Parameter darstellt.</span><span class="sxs-lookup"><span data-stu-id="097d1-109">[out] A pointer to a ParamDef token that represents the requested parameter.</span></span>  
+ <span data-ttu-id="0ec22-109">[out] Ein Zeiger auf ein ParamDef-Token, das den angeforderten Parameter darstellt.</span><span class="sxs-lookup"><span data-stu-id="0ec22-109">[out] A pointer to a ParamDef token that represents the requested parameter.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="097d1-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="097d1-110">Requirements</span></span>  
- <span data-ttu-id="097d1-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="097d1-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0ec22-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0ec22-110">Requirements</span></span>  
+ <span data-ttu-id="0ec22-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0ec22-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="097d1-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="097d1-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0ec22-112">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0ec22-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="097d1-113">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="097d1-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0ec22-113">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="0ec22-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="097d1-114">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="097d1-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="0ec22-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0ec22-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="097d1-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="097d1-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0ec22-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0ec22-115">See also</span></span>
 
-- [<span data-ttu-id="097d1-116">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="097d1-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="097d1-117">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="097d1-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="0ec22-116">IMetaDataImport-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0ec22-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="0ec22-117">IMetaDataImport2-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0ec22-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
