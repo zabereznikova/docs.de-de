@@ -18,40 +18,40 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bcae66fd30c29a0a3c9bd0b5ffc2047efdf3788d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138208"
 ---
-# <a name="icorprofilerinfoendinprocdebugging-method"></a><span data-ttu-id="2bf5c-102">ICorProfilerInfo::EndInprocDebugging-Methode</span><span class="sxs-lookup"><span data-stu-id="2bf5c-102">ICorProfilerInfo::EndInprocDebugging Method</span></span>
-<span data-ttu-id="2bf5c-103">Eine in-Process-Debugsitzung wird heruntergefahren.</span><span class="sxs-lookup"><span data-stu-id="2bf5c-103">Shuts down an in-process debugging session.</span></span> <span data-ttu-id="2bf5c-104">Diese Methode ist in .NET Framework, Version 2.0, veraltet.</span><span class="sxs-lookup"><span data-stu-id="2bf5c-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
+# <a name="icorprofilerinfoendinprocdebugging-method"></a><span data-ttu-id="a9fd3-102">ICorProfilerInfo::EndInprocDebugging-Methode</span><span class="sxs-lookup"><span data-stu-id="a9fd3-102">ICorProfilerInfo::EndInprocDebugging Method</span></span>
+<span data-ttu-id="a9fd3-103">Eine in-Process-Debugsitzung wird heruntergefahren.</span><span class="sxs-lookup"><span data-stu-id="a9fd3-103">Shuts down an in-process debugging session.</span></span> <span data-ttu-id="a9fd3-104">Diese Methode ist in .NET Framework, Version 2.0, veraltet.</span><span class="sxs-lookup"><span data-stu-id="a9fd3-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2bf5c-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="2bf5c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a9fd3-105">Syntax</span><span class="sxs-lookup"><span data-stu-id="a9fd3-105">Syntax</span></span>  
   
 ```  
 HRESULT EndInprocDebugging(  
     [in]  DWORD dwProfilerContext);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2bf5c-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="2bf5c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a9fd3-106">Parameter</span><span class="sxs-lookup"><span data-stu-id="a9fd3-106">Parameters</span></span>  
  `dwProfilerContext`  
- <span data-ttu-id="2bf5c-107">[in] Ein Wert, der die Debugsitzung identifiziert.</span><span class="sxs-lookup"><span data-stu-id="2bf5c-107">[in] A value that identifies the debugging session.</span></span> <span data-ttu-id="2bf5c-108">Dieser Wert muss der identisch sein, die empfangen werden, der [ICorProfilerInfo:: BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="2bf5c-108">This value must be the same as that received in the [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) method.</span></span>  
+ <span data-ttu-id="a9fd3-107">[in] Ein Wert, der die Debugsitzung identifiziert.</span><span class="sxs-lookup"><span data-stu-id="a9fd3-107">[in] A value that identifies the debugging session.</span></span> <span data-ttu-id="a9fd3-108">Dieser Wert muss der identisch sein, die empfangen werden, der [ICorProfilerInfo:: BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) Methode.</span><span class="sxs-lookup"><span data-stu-id="a9fd3-108">This value must be the same as that received in the [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) method.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2bf5c-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="2bf5c-109">Remarks</span></span>  
- <span data-ttu-id="2bf5c-110">Rufen Sie [ICorProfilerInfo:: BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) und `EndInprocDebugging` in die gleiche Rückrufmethode.</span><span class="sxs-lookup"><span data-stu-id="2bf5c-110">You must call [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) and `EndInprocDebugging` within the same callback method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a9fd3-109">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a9fd3-109">Remarks</span></span>  
+ <span data-ttu-id="a9fd3-110">Rufen Sie [ICorProfilerInfo:: BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) und `EndInprocDebugging` in die gleiche Rückrufmethode.</span><span class="sxs-lookup"><span data-stu-id="a9fd3-110">You must call [ICorProfilerInfo::BeginInprocDebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md) and `EndInprocDebugging` within the same callback method.</span></span>  
   
- <span data-ttu-id="2bf5c-111">Die Debugdiensten der CLR unterstützt eingeschränkte prozessinternen Debuggens in .NET Framework, Version 1.0 und 1.1.</span><span class="sxs-lookup"><span data-stu-id="2bf5c-111">The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1.</span></span> <span data-ttu-id="2bf5c-112">In-Process-Debuggen aktiviert einen Profiler, die Prüfung Teile der Debug-API zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="2bf5c-112">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="2bf5c-113">Jedoch aufgrund von Kundenfeedback hat prozessinternen Debuggens wurden entfernt von .NET Framework Version 2.0, und mit einem Satz von Funktionen, die enger an die profilerstellungs-API ersetzt.</span><span class="sxs-lookup"><span data-stu-id="2bf5c-113">However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
+ <span data-ttu-id="a9fd3-111">Die Debugdiensten der CLR unterstützt eingeschränkte prozessinternen Debuggens in .NET Framework, Version 1.0 und 1.1.</span><span class="sxs-lookup"><span data-stu-id="a9fd3-111">The CLR debugging services supported limited in-process debugging in the .NET Framework versions 1.0 and 1.1.</span></span> <span data-ttu-id="a9fd3-112">In-Process-Debuggen aktiviert einen Profiler, die Prüfung Teile der Debug-API zu verwenden.</span><span class="sxs-lookup"><span data-stu-id="a9fd3-112">In-process debugging enabled a profiler to use the inspection portions of the debugging API.</span></span> <span data-ttu-id="a9fd3-113">Jedoch aufgrund von Kundenfeedback hat prozessinternen Debuggens wurden entfernt von .NET Framework Version 2.0, und mit einem Satz von Funktionen, die enger an die profilerstellungs-API ersetzt.</span><span class="sxs-lookup"><span data-stu-id="a9fd3-113">However, due to customer feedback, in-process debugging has been removed from the .NET Framework in version 2.0, and replaced with a set of functionality that is more in line with the profiling API.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2bf5c-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="2bf5c-114">Requirements</span></span>  
- <span data-ttu-id="2bf5c-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2bf5c-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a9fd3-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a9fd3-114">Requirements</span></span>  
+ <span data-ttu-id="a9fd3-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a9fd3-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2bf5c-116">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2bf5c-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a9fd3-116">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a9fd3-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="2bf5c-117">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2bf5c-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a9fd3-117">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a9fd3-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2bf5c-118">**.NET Framework Version:** 1.0</span><span class="sxs-lookup"><span data-stu-id="2bf5c-118">**.NET Framework Version:** 1.0</span></span>  
+ <span data-ttu-id="a9fd3-118">**.NET Framework Version:** 1.0</span><span class="sxs-lookup"><span data-stu-id="a9fd3-118">**.NET Framework Version:** 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2bf5c-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="2bf5c-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a9fd3-119">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a9fd3-119">See also</span></span>
 
-- [<span data-ttu-id="2bf5c-120">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="2bf5c-120">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="a9fd3-120">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a9fd3-120">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
