@@ -8,23 +8,23 @@ helpviewer_keywords:
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
 ms.openlocfilehash: f4f0cb15e1dc50fee7ca76e8cfbf31e6eaccd02b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092187"
 ---
-# <a name="richtextbox-how-to-topics"></a><span data-ttu-id="a82d1-102">Gewusst-wie-Themen zu RichTextBox</span><span class="sxs-lookup"><span data-stu-id="a82d1-102">RichTextBox How-to Topics</span></span>
-<span data-ttu-id="a82d1-103">Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie Sie häufige Aufgaben mit der <xref:System.Windows.Controls.RichTextBox> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="a82d1-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.RichTextBox> control.</span></span>  
+# <a name="richtextbox-how-to-topics"></a><span data-ttu-id="56e98-102">Gewusst-wie-Themen zu RichTextBox</span><span class="sxs-lookup"><span data-stu-id="56e98-102">RichTextBox How-to Topics</span></span>
+<span data-ttu-id="56e98-103">Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie Sie häufige Aufgaben mit der <xref:System.Windows.Controls.RichTextBox> Steuerelement.</span><span class="sxs-lookup"><span data-stu-id="56e98-103">This section provides examples that demonstrate how to accomplish common tasks using the <xref:System.Windows.Controls.RichTextBox> control.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a82d1-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="a82d1-104">In This Section</span></span>  
- [<span data-ttu-id="a82d1-105">Extrahieren von Textinhalten aus einem RichTextBox-Objekt</span><span class="sxs-lookup"><span data-stu-id="a82d1-105">Extract the Text Content from a RichTextBox</span></span>](how-to-extract-the-text-content-from-a-richtextbox.md)  
- [<span data-ttu-id="a82d1-106">Programmgesteuertes Ändern der Auswahl in einem RichTextBox-Element</span><span class="sxs-lookup"><span data-stu-id="a82d1-106">Change Selection in a RichTextBox Programmatically</span></span>](change-selection-in-a-richtextbox-programmatically.md)  
- [<span data-ttu-id="a82d1-107">Speichern, Laden und Drucken von RichTextBox-Inhalt</span><span class="sxs-lookup"><span data-stu-id="a82d1-107">Save, Load, and Print RichTextBox Content</span></span>](how-to-save-load-and-print-richtextbox-content.md)  
- [<span data-ttu-id="a82d1-108">Positionieren eines benutzerdefinierten Kontextmenüs in einem RichTextBox-Objekt</span><span class="sxs-lookup"><span data-stu-id="a82d1-108">Position a Custom Context Menu in a RichTextBox</span></span>](how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="56e98-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="56e98-104">In This Section</span></span>  
+ [<span data-ttu-id="56e98-105">Extrahieren von Textinhalten aus einer RichTextBox</span><span class="sxs-lookup"><span data-stu-id="56e98-105">Extract the Text Content from a RichTextBox</span></span>](how-to-extract-the-text-content-from-a-richtextbox.md)  
+ [<span data-ttu-id="56e98-106">Programmgesteuertes Ändern der Auswahl in einem RichTextBox-Element</span><span class="sxs-lookup"><span data-stu-id="56e98-106">Change Selection in a RichTextBox Programmatically</span></span>](change-selection-in-a-richtextbox-programmatically.md)  
+ [<span data-ttu-id="56e98-107">Speichern, Laden und Drucken von RichTextBox-Inhalt</span><span class="sxs-lookup"><span data-stu-id="56e98-107">Save, Load, and Print RichTextBox Content</span></span>](how-to-save-load-and-print-richtextbox-content.md)  
+ [<span data-ttu-id="56e98-108">Positionieren eines benutzerdefinierten Kontextmenüs in einer RichTextBox</span><span class="sxs-lookup"><span data-stu-id="56e98-108">Position a Custom Context Menu in a RichTextBox</span></span>](how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
   
-## <a name="see-also"></a><span data-ttu-id="a82d1-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a82d1-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="56e98-109">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="56e98-109">See also</span></span>
 
 - <xref:System.Windows.Controls.TextBox>
-- [<span data-ttu-id="a82d1-110">Dokumente in WPF</span><span class="sxs-lookup"><span data-stu-id="a82d1-110">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
-- [<span data-ttu-id="a82d1-111">Übersicht über Flussdokumente</span><span class="sxs-lookup"><span data-stu-id="a82d1-111">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)
+- [<span data-ttu-id="56e98-110">Dokumente in WPF</span><span class="sxs-lookup"><span data-stu-id="56e98-110">Documents in WPF</span></span>](../advanced/documents-in-wpf.md)
+- [<span data-ttu-id="56e98-111">Übersicht über Flussdokumente</span><span class="sxs-lookup"><span data-stu-id="56e98-111">Flow Document Overview</span></span>](../advanced/flow-document-overview.md)

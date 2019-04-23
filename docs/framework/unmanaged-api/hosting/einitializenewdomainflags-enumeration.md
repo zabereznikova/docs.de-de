@@ -15,16 +15,16 @@ ms.assetid: 3a120ab2-f5ef-4c9b-8595-d3ed7247c342
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 04b0d9989d66888c33de0359e4c93529fcfbf8d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095359"
 ---
-# <a name="einitializenewdomainflags-enumeration"></a><span data-ttu-id="4b908-102">EInitializeNewDomainFlags-Enumeration</span><span class="sxs-lookup"><span data-stu-id="4b908-102">EInitializeNewDomainFlags Enumeration</span></span>
-<span data-ttu-id="4b908-103">Kann der Host die Laufzeitumgebung mit Informationen zur Initialisierung einer Anwendungsdomäne bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="4b908-103">Enables the host to provide the runtime with information about the initialization of an application domain.</span></span>  
+# <a name="einitializenewdomainflags-enumeration"></a><span data-ttu-id="9df2f-102">EInitializeNewDomainFlags-Enumeration</span><span class="sxs-lookup"><span data-stu-id="9df2f-102">EInitializeNewDomainFlags Enumeration</span></span>
+<span data-ttu-id="9df2f-103">Kann der Host die Laufzeitumgebung mit Informationen zur Initialisierung einer Anwendungsdomäne bereitstellen.</span><span class="sxs-lookup"><span data-stu-id="9df2f-103">Enables the host to provide the runtime with information about the initialization of an application domain.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4b908-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="4b908-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9df2f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="9df2f-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -33,26 +33,26 @@ typedef enum {
 } EInitializeNewDomainFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4b908-105">Member</span><span class="sxs-lookup"><span data-stu-id="4b908-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="9df2f-105">Member</span><span class="sxs-lookup"><span data-stu-id="9df2f-105">Members</span></span>  
   
-|<span data-ttu-id="4b908-106">Member</span><span class="sxs-lookup"><span data-stu-id="4b908-106">Member</span></span>|<span data-ttu-id="4b908-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="4b908-107">Description</span></span>|  
+|<span data-ttu-id="9df2f-106">Member</span><span class="sxs-lookup"><span data-stu-id="9df2f-106">Member</span></span>|<span data-ttu-id="9df2f-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="9df2f-107">Description</span></span>|  
 |------------|-----------------|  
-|`eInitializeNewDomainFlags_None`|<span data-ttu-id="4b908-108">Keine Flags.</span><span class="sxs-lookup"><span data-stu-id="4b908-108">No flags.</span></span>|  
-|`eInitializeNewDomainFlags_NoSecurityChanges`|<span data-ttu-id="4b908-109">Informiert der common Language Runtime (CLR), dass der Host keine Änderungen an die Anwendungsdomäne, in den Sicherheitszustand vornehmen, wird die <xref:System.AppDomainManager.InitializeNewDomain%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="4b908-109">Informs the common language runtime (CLR) that the host will not make changes to the security state of the application domain in the <xref:System.AppDomainManager.InitializeNewDomain%2A> method.</span></span>|  
+|`eInitializeNewDomainFlags_None`|<span data-ttu-id="9df2f-108">Keine Flags.</span><span class="sxs-lookup"><span data-stu-id="9df2f-108">No flags.</span></span>|  
+|`eInitializeNewDomainFlags_NoSecurityChanges`|<span data-ttu-id="9df2f-109">Informiert der common Language Runtime (CLR), dass der Host keine Änderungen an die Anwendungsdomäne, in den Sicherheitszustand vornehmen, wird die <xref:System.AppDomainManager.InitializeNewDomain%2A> Methode.</span><span class="sxs-lookup"><span data-stu-id="9df2f-109">Informs the common language runtime (CLR) that the host will not make changes to the security state of the application domain in the <xref:System.AppDomainManager.InitializeNewDomain%2A> method.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4b908-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="4b908-110">Remarks</span></span>  
- <span data-ttu-id="4b908-111">Die [ICLRDomainManager:: SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) Methode nimmt einen Parameter vom Typ `EInitializeNewDomainFlags`.</span><span class="sxs-lookup"><span data-stu-id="4b908-111">The [ICLRDomainManager::SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) method takes a parameter of type `EInitializeNewDomainFlags`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="9df2f-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="9df2f-110">Remarks</span></span>  
+ <span data-ttu-id="9df2f-111">Die [ICLRDomainManager:: SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) Methode nimmt einen Parameter vom Typ `EInitializeNewDomainFlags`.</span><span class="sxs-lookup"><span data-stu-id="9df2f-111">The [ICLRDomainManager::SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md) method takes a parameter of type `EInitializeNewDomainFlags`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4b908-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="4b908-112">Requirements</span></span>  
- <span data-ttu-id="4b908-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4b908-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9df2f-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="9df2f-112">Requirements</span></span>  
+ <span data-ttu-id="9df2f-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9df2f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4b908-114">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4b908-114">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="9df2f-114">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9df2f-114">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="4b908-115">**Bibliothek:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="4b908-115">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="9df2f-115">**Bibliothek:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9df2f-115">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="4b908-116">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="4b908-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="9df2f-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9df2f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4b908-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4b908-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9df2f-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="9df2f-117">See also</span></span>
 
-- [<span data-ttu-id="4b908-118">Hosten von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="4b908-118">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
-- [<span data-ttu-id="4b908-119">SetAppDomainManagerType-Methode</span><span class="sxs-lookup"><span data-stu-id="4b908-119">SetAppDomainManagerType Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)
+- [<span data-ttu-id="9df2f-118">Hosten von Enumerationen</span><span class="sxs-lookup"><span data-stu-id="9df2f-118">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+- [<span data-ttu-id="9df2f-119">SetAppDomainManagerType-Methode</span><span class="sxs-lookup"><span data-stu-id="9df2f-119">SetAppDomainManagerType Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-setappdomainmanagertype-method.md)
