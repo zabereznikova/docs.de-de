@@ -4,12 +4,12 @@ description: .NET-Microservicearchitektur für .NET-Containeranwendungen | Über
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 3adf711fd00ac0ab57764a67a08ce453318fd965
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 106e38a3cf3a121c4d7f879b718c832d27e0910f
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463136"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611509"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testen von ASP.NET Core-Diensten und -Webanwendungen
 
@@ -104,25 +104,25 @@ public class PrimeWebDefaultRequestShould
 #### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Steve Smith. Testen von Controllern** (ASP.NET Core) \
-    [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
+    [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](/aspnet/core/mvc/controllers/testing)
 
 - **Steve Smith. Integrationstests** (ASP.NET Core) \
-    [https://docs.microsoft.com/aspnet/core/test/integration-tests](https://docs.microsoft.com/aspnet/core/test/integration-tests)
+    [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
 - **Komponententests in .NET Core mit dotnet test** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**. Offizielle Website. \
-    [https://xunit.github.io/](https://xunit.github.io/)
+    <https://xunit.github.io/>
 
 - **Grundlagen zum Komponententest** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
 
 - **Moq**. GitHub-Repository. \
-    [https://github.com/moq/moq](https://github.com/moq/moq)
+    <https://github.com/moq/moq>
 
 - **NUnit**. Offizielle Website. \
-    [https://www.nunit.org/](https://www.nunit.org/)
+    <https://www.nunit.org/>
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>Implementieren von Diensttests in einer Anwendung mit mehreren Containern
 
@@ -203,10 +203,10 @@ Wie Sie sehen können, starten diese „docker-compose“-Dateien nur die Micros
 ### <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Infodatei für Tests** im GitHub-Repository „eShopOnContainers“ \
-    [https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
+    <https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test>
 
 - **Infodatei für Auslastungstests** im GitHub-Repository „eShopOnContainers“ \
-    [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
+    <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/>
 
 > [!div class="step-by-step"]
 > [Zurück](subscribe-events.md)

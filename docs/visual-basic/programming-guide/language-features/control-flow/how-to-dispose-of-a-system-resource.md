@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
 ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341906"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>Vorgehensweise: Freigeben einer Systemressource (Visual Basic)
@@ -49,7 +49,7 @@ Sie können eine `Using` Block, um sicherzustellen, dass das System eine Ressour
 - <xref:System.Data.SqlClient.SqlConnection>
 - [Ablaufsteuerung](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [Entscheidungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [Schleifenstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
+- [Schleifenstruktur](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [Weitere Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
 - [Geschachtelte Steuerungsstrukturen](../../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
 - [Using-Anweisung](../../../../visual-basic/language-reference/statements/using-statement.md)

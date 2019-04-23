@@ -3,10 +3,10 @@ title: Transportsicherheit
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218965"
 ---
 # <a name="transport-security"></a>Transportsicherheit
@@ -22,7 +22,7 @@ Die transportsicherheit in Windows Communication Foundation (WCF), abhängig von
  [Grundlagen der HTTP-Authentifizierung](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)  
  Beschreibt HTTP-Authentifizierungsschemas, z. B. Basic, Digest, NT-LAN-Manager (NTLM) und andere.  
   
- [Identitätswechsel und Transportsicherheit](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
+ [Verwenden von Identitätswechsel mit Transportsicherheit](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  Erläutert die fünf Identitätswechselebenen, die mit dem Transportsicherheitsmodus möglich sind.  
   
  [Vorgehensweise: Konfigurieren eines Anschlusses mit einem SSL-Zertifikat](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  

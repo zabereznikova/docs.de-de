@@ -8,10 +8,10 @@ helpviewer_keywords:
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
 ms.openlocfilehash: 8b709de728726b7695b987c48574d2a70a1bc27e
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481378"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Entwickeln und Bereitstellen von WCF Data Services
@@ -113,7 +113,7 @@ Ein WCF Data Service bietet Flexibilität bei der Auswahl des Prozesses, von dem
     > [!TIP]
     > Bevor Sie versuchen, den Datendienst unter IIS bereitzustellen, muss die Bereitstellung auf einem Webserver mit IIS getestet werden. Weitere Informationen finden Sie unter [Vorgehensweise: Entwickeln Sie einen WCF-Datendienst unter IIS ausgeführte](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
-- **Microsoft Azure**
+- **Windows Azure**
 
      Sie können einen Datendienst in Windows Azure bereitstellen, mithilfe von Windows Azure Tools für Visual Studio. Sie können die Windows Azure Tools für Visual Studio von der [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=201848). Weitere Informationen zum Bereitstellen eines Datendiensts mit Windows Azure finden Sie im Beitrag [Bereitstellen von einem OData-Service in Windows Azure](https://go.microsoft.com/fwlink/?LinkId=201847).
 
@@ -129,4 +129,4 @@ Beachten Sie beim Bereitstellen eines Datendiensts die folgenden Hinweise:
 
 - [Hosten des Datendiensts](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)
 - [Sichern von WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)
-- [Definieren von WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [Defining WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)

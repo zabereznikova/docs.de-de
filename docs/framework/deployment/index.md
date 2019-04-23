@@ -12,10 +12,10 @@ ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b7380556e13e17e26ffb2f8c5fbbc7136a1fb5e9
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481326"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Bereitstellen von .NET Framework und Anwendungen
@@ -34,7 +34,7 @@ Verwenden Sie die folgenden Links zu anderen MSDN-Themen, um genaue Informatione
 
     - [Webinstaller](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
-    - [Offlineinstaller](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
+    - [Offline-Installer](~/docs/framework/install/guide-for-developers.md#to-install-or-download-the-net-framework-redistributable)
 
   - Installationsmodi:
 
@@ -44,7 +44,7 @@ Verwenden Sie die folgenden Links zu anderen MSDN-Themen, um genaue Informatione
 
   - [Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen](../../../docs/framework/deployment/reducing-system-restarts.md)
 
-  - [Problembehandlung von blockierten Installationen und Deinstallationen von .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+  - [Problembehandlung bei blockierten Installationen und Deinstallationen von .NET Framework](~/docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
 
 - Bereitstellen von .NET Framework mit einer Clientanwendung (für Entwickler):
 
@@ -64,7 +64,7 @@ Verwenden Sie die folgenden Links zu anderen MSDN-Themen, um genaue Informatione
 
   - [Administratorhandbuch](../../../docs/framework/deployment/guide-for-administrators.md)
 
-**Die Wartung**
+**Wartung**
 
 - Allgemeine Informationen finden Sie im [.NET Framework-Blog](https://go.microsoft.com/fwlink/p/?LinkId=254977).
 
@@ -163,7 +163,7 @@ Sicherheitsüberlegungen können bei der Bereitstellung einer Anwendung ebenfall
 |Titel|Beschreibung|
 |-----------|-----------------|
 |[So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|Beschreibt, wie die Common Language Runtime ermittelt, welche Assembly zur Erfüllung einer Bindungsanforderung verwendet wird.|
-|[Best Practices für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typidentität erläutert, die zu <xref:System.InvalidCastException>, <xref:System.MissingMethodException> und anderen Fehlern führen können.|
+|[Bewährte Methoden für das Laden von Assemblys](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)|In diesem Artikel werden Möglichkeiten zur Vermeidung von Problemen mit der Typidentität erläutert, die zu <xref:System.InvalidCastException>, <xref:System.MissingMethodException> und anderen Fehlern führen können.|
 |[Reduzieren von Systemneustarts bei .NET Framework 4.5-Installationen](../../../docs/framework/deployment/reducing-system-restarts.md)|Beschreibt den Neustart-Manager, der Neustarts nach Möglichkeit verhindert, und erläutert, wie Anwendungen, mit denen .NET Framework installiert wird, den Neustart-Manager nutzen können.|
 |[Bereitstellungshandbuch für Administratoren](../../../docs/framework/deployment/guide-for-administrators.md)|Hierin wird erläutert, wie ein Systemadministrator mit System Center Configuration Manager (SCCM) .NET Framework und dessen Systemabhängigkeiten in einem Netzwerk bereitstellen kann.|
 |[Bereitstellungshandbuch für Entwickler](../../../docs/framework/deployment/deployment-guide-for-developers.md)|Es wird erklärt, wie Entwickler .NET Framework auf den Computern der Benutzer mit ihren Anwendungen installieren können.|

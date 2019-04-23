@@ -11,10 +11,10 @@ helpviewer_keywords:
 - examples [Windows Forms], tooltips
 ms.assetid: 08979ba7-dd84-477b-ab17-8d06e759be99
 ms.openlocfilehash: cf257cccd272c16c3d7c3d403456265444fc8ac8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345481"
 ---
 # <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>Vorgehensweise: Ändern der Verzögerung der ToolTip-Komponente in Windows Forms
@@ -45,5 +45,5 @@ Es gibt mehrere Verzögerungswerte, die Sie für eine Windows Forms festlegen k�
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über die ToolTip-Komponente](tooltip-component-overview-windows-forms.md)
-- [Vorgehensweise: Festlegen von QuickInfos für Steuerelemente auf einem Windows Form zur Entwurfszeit](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
+- [Vorgehensweise: Festlegen von QuickInfos für Steuerelemente in Windows Forms zur Entwurfszeit](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
 - [ToolTip-Komponente](tooltip-component-windows-forms.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
 ms.openlocfilehash: ed988547e0be3ef934c46d725c41646c3a75e626
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339059"
 ---
 # <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>'\<name1 >' ist nicht eindeutig, importiert aus den Namespaces oder Typen\<name2 >'
@@ -27,6 +27,6 @@ Sie haben einen Namen angegeben, der nicht eindeutig ist und daher einen Konflik
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Imports-Anweisung (.NET-Namespace und Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Imports-Anweisung (.NET-Namespace und -Typ)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Namespace-Anweisung](../../../visual-basic/language-reference/statements/namespace-statement.md)

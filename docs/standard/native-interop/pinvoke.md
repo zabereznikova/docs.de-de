@@ -4,12 +4,12 @@ description: Erfahren Sie, wie Sie native Funktionen über P/Invoke in .Net aufr
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1a5f2f9d13429f84d5b5bb58d36f015004fb746b
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409236"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517862"
 ---
 # <a name="platform-invoke-pinvoke"></a>Plattformaufruf (P/Invoke)
 
@@ -24,7 +24,7 @@ public class Program {
 
     // Import user32.dll (containing the function we need) and define
     // the method corresponding to the native function.
-    [DllImport("user32.dll")]
+    [DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern int MessageBox(IntPtr hWnd, String text, String caption, int options);
 
     public static void Main(string[] args) {
@@ -37,7 +37,7 @@ public class Program {
 Das obige Beispiel ist recht einfach, zeigt jedoch, was zum Aufrufen nicht verwalteter Funktionen von verwaltetem Code aus erforderlich ist. Gehen wir das Beispiel schrittweise durch:
 
 *   Zeile 1 zeigt die using-Anweisung für `System.Runtime.InteropServices`. Dies ist der Namespace, der alle benötigten Elemente enthält.
-*   In Zeile 7 wird das `DllImport`-Attribut eingeführt. Dieses Attribut ist äußerst wichtig, da es der Runtime mitteilt, dass die nicht verwaltete DLL geladen werden soll. Die übergebene Zeichenfolge ist die DLL, in der sich unsere Zielfunktion befindet.
+*   In Zeile 7 wird das `DllImport`-Attribut eingeführt. Dieses Attribut ist äußerst wichtig, da es der Runtime mitteilt, dass die nicht verwaltete DLL geladen werden soll. Die übergebene Zeichenfolge ist die DLL, in der sich unsere Zielfunktion befindet. Zusätzlich gibt sie an, welcher [Zeichensatz](./charset.md) für das Marshallen der Zeichenfolgen verwendet werden soll. Schließlich gibt sie an, dass diese Funktion [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) aufruft und dass die Laufzeit diesen Fehlercode abfangen muss, damit der Benutzer ihn über <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> abrufen kann.
 *   Zeile 8 ist der Kern der P/Invoke-Funktion. Sie definiert eine verwaltete Methode, die **genau dieselbe Signatur** aufweist wie die nicht verwaltete Methode. Wie Sie sehen, enthält die Deklaration ein neues Schlüsselwort, `extern`. Dieses teilt der Runtime mit, dass es sich um eine externe Methode handelt und dass die Runtime die Methode bei Aufruf in der im `DllImport`-Attribut angegebenen DLL findet.
 
 Der Rest des Beispiels besteht nur aus dem Aufruf der Methode, der wie bei jeder anderen verwalteten Methode erfolgt.
@@ -237,7 +237,6 @@ namespace PInvokeSamples {
 ```
 
 Beide oben aufgeführten Beispiele hängen von Parametern ab, und in beiden Fällen werden die Parameter als verwaltete Typen angegeben. Die Runtime reagiert demgemäß und verarbeitet diese in ihren Entsprechungen auf der anderen Seite. Weitere Informationen dazu, wie Typen in nativen Code auf unserer Seite gemarshallt werden, finden Sie unter [Marshalling von Typen](type-marshalling.md).
-
 
 ## <a name="more-resources"></a>Weitere Ressourcen
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
 ms.openlocfilehash: 0ba07d8979a2910ce4ec775493e38c714240f642
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427473"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Vorgehensweise: Steuern des Ausfüllens einer zusammengesetzten Form
@@ -64,4 +64,4 @@ Die <xref:System.Windows.Media.GeometryGroup.FillRule%2A> Eigenschaft eine <xref
 ## <a name="see-also"></a>Siehe auch
 
 - [Erstellen einer zusammengesetzten Form](how-to-create-a-composite-shape.md)
-- [Übersicht über die Geometrie](geometry-overview.md)
+- [Übersicht über Geometrien](geometry-overview.md)

@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 045423f0393ff363b94f4c0e4fe0324c061120d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0aef9a1c81172cda9b6df4574edb331e0ed137ca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628187"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340606"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Vorgehensweise: Roundtrip-Datums- und -Uhrzeitwerte
 In vielen Anwendungen soll ein Datums- und Uhrzeitwert einen bestimmten Zeitpunkt eindeutig identifizieren. In diesem Thema wird gezeigt, wie ein <xref:System.DateTime>-Wert, ein <xref:System.DateTimeOffset>-Wert sowie ein Datums- und Uhrzeitwert mit Zeitzoneninformationen so gespeichert und wiederhergestellt werden, dass der wiederhergestellte Wert denselben Zeitpunkt bezeichnet wie der gespeicherte Wert.  
   
 ### <a name="to-round-trip-a-datetime-value"></a>So führen Sie einen Roundtrip für einen DateTime-Wert durch  
   
-1.  Konvertieren Sie den <xref:System.DateTime>-Wert in seine Zeichenfolgendarstellung, indem Sie die <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>-Methode mit dem Formatbezeichner „o“ aufrufen.  
+1. Konvertieren Sie den <xref:System.DateTime>-Wert in seine Zeichenfolgendarstellung, indem Sie die <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>-Methode mit dem Formatbezeichner „o“ aufrufen.  
   
-2.  Speichern Sie die Zeichenfolgendarstellung des <xref:System.DateTime>-Werts in einer Datei, oder übergeben Sie sie über einen Prozess, eine Anwendungsdomäne oder eine Computergrenze.  
+2. Speichern Sie die Zeichenfolgendarstellung des <xref:System.DateTime>-Werts in einer Datei, oder übergeben Sie sie über einen Prozess, eine Anwendungsdomäne oder eine Computergrenze.  
   
-3.  Rufen Sie die Zeichenfolge ab, die den <xref:System.DateTime>-Wert darstellt.  
+3. Rufen Sie die Zeichenfolge ab, die den <xref:System.DateTime>-Wert darstellt.  
   
-4.  Rufen Sie die <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType>-Methode auf, und übergeben Sie <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> als Wert für den `styles`-Parameter.  
+4. Rufen Sie die <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType>-Methode auf, und übergeben Sie <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> als Wert für den `styles`-Parameter.  
   
  Das folgende Beispiel veranschaulicht, wie ein Roundtrip für einen <xref:System.DateTime>-Wert ausgeführt wird.  
   
@@ -43,13 +43,13 @@ In vielen Anwendungen soll ein Datums- und Uhrzeitwert einen bestimmten Zeitpunk
   
 ### <a name="to-round-trip-a-datetimeoffset-value"></a>So führen Sie einen Roundtrip für einen DateTimeOffset-Wert durch  
   
-1.  Konvertieren Sie den <xref:System.DateTimeOffset>-Wert in seine Zeichenfolgendarstellung, indem Sie die <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>-Methode mit dem Formatbezeichner „o“ aufrufen.  
+1. Konvertieren Sie den <xref:System.DateTimeOffset>-Wert in seine Zeichenfolgendarstellung, indem Sie die <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType>-Methode mit dem Formatbezeichner „o“ aufrufen.  
   
-2.  Speichern Sie die Zeichenfolgendarstellung des <xref:System.DateTimeOffset>-Werts in einer Datei, oder übergeben Sie sie über einen Prozess, eine Anwendungsdomäne oder eine Computergrenze.  
+2. Speichern Sie die Zeichenfolgendarstellung des <xref:System.DateTimeOffset>-Werts in einer Datei, oder übergeben Sie sie über einen Prozess, eine Anwendungsdomäne oder eine Computergrenze.  
   
-3.  Rufen Sie die Zeichenfolge ab, die den <xref:System.DateTimeOffset>-Wert darstellt.  
+3. Rufen Sie die Zeichenfolge ab, die den <xref:System.DateTimeOffset>-Wert darstellt.  
   
-4.  Rufen Sie die <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType>-Methode auf, und übergeben Sie <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> als Wert für den `styles`-Parameter.  
+4. Rufen Sie die <xref:System.DateTimeOffset.Parse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%29?displayProperty=nameWithType>-Methode auf, und übergeben Sie <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> als Wert für den `styles`-Parameter.  
   
  Das folgende Beispiel veranschaulicht, wie ein Roundtrip für einen <xref:System.DateTimeOffset>-Wert ausgeführt wird.  
   
@@ -60,18 +60,18 @@ In vielen Anwendungen soll ein Datums- und Uhrzeitwert einen bestimmten Zeitpunk
   
 ### <a name="to-round-trip-a-date-and-time-value-with-its-time-zone"></a>So führen Sie einen Roundtrip für einen Datums- und Uhrzeitwert mit der jeweiligen Zeitzone durch  
   
-1.  Definieren Sie eine Klasse oder Struktur mit zwei Feldern. Beim ersten Feld handelt es sich entweder um ein <xref:System.DateTime>- oder ein <xref:System.DateTimeOffset>-Objekt und beim zweiten um ein <xref:System.TimeZoneInfo>-Objekt. Im folgenden Beispiel wird eine einfache Version eines solchen Typs gezeigt.  
+1. Definieren Sie eine Klasse oder Struktur mit zwei Feldern. Beim ersten Feld handelt es sich entweder um ein <xref:System.DateTime>- oder ein <xref:System.DateTimeOffset>-Objekt und beim zweiten um ein <xref:System.TimeZoneInfo>-Objekt. Im folgenden Beispiel wird eine einfache Version eines solchen Typs gezeigt.  
   
      [!code-csharp[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/cs/RoundTrip.cs#3)]
      [!code-vb[Formatting.HowTo.RoundTrip#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.RoundTrip/vb/RoundTrip.vb#3)]  
   
-2.  Markieren Sie die Klasse mit dem Attribut <xref:System.SerializableAttribute>.  
+2. Markieren Sie die Klasse mit dem Attribut <xref:System.SerializableAttribute>.  
   
-3.  Serialisieren Sie das Objekt mit der Methode <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType>.  
+3. Serialisieren Sie das Objekt mit der Methode <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Serialize%2A?displayProperty=nameWithType>.  
   
-4.  Stellen Sie das Objekt mit der Methode <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> wieder her.  
+4. Stellen Sie das Objekt mit der Methode <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A> wieder her.  
   
-5.  Wandeln Sie (in C#) das deserialisierte Objekt in ein Objekt des entsprechenden Typs um, oder konvertieren Sie es (in Visual Basic) in diesen Typ.  
+5. Wandeln Sie (in C#) das deserialisierte Objekt in ein Objekt des entsprechenden Typs um, oder konvertieren Sie es (in Visual Basic) in diesen Typ.  
   
  Im folgenden Beispiel wird veranschaulicht, wie ein Roundtrip für ein Objekt durchgeführt wird, das sowohl Datum und Uhrzeit als auch Zeitzoneninformationen speichert.  
   
@@ -85,15 +85,15 @@ In vielen Anwendungen soll ein Datums- und Uhrzeitwert einen bestimmten Zeitpunk
   
 -   Importieren der folgenden Namespaces mithilfe von `using`-Anweisungen (C#) oder `Imports`-Anweisungen (Visual Basic):  
   
-    -   <xref:System> (nur C#)  
+    -   <xref:System> (nur C#).  
   
-    -   <xref:System.Globalization?displayProperty=nameWithType>.  
+    -   <xref:System.Globalization?displayProperty=nameWithType>sein.  
   
-    -   <xref:System.IO?displayProperty=nameWithType>  
+    -   <xref:System.IO?displayProperty=nameWithType>sein.  
   
-    -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>  
+    -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>sein.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
+    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>sein.  
   
 -   Ein Verweis auf „System.Core.dll“  
   
@@ -102,5 +102,5 @@ In vielen Anwendungen soll ein Datums- und Uhrzeitwert einen bestimmten Zeitpunk
 ## <a name="see-also"></a>Siehe auch
 
 - [Durchführen von Formatierungsvorgängen](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [Auswählen zwischen „DateTime“, „DateTimeOffset“, „TimeSpan“ und „TimeZoneInfo“](../../../docs/standard/datetime/choosing-between-datetime.md)
-- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Auswählen zwischen "DateTime", "DateTimeOffset", "TimeSpan" und "TimeZoneInfo"](../../../docs/standard/datetime/choosing-between-datetime.md)
+- [Standard-Formatzeichenfolgen für Datum und Uhrzeit](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

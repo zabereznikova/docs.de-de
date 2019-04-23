@@ -3,12 +3,12 @@ title: Einführung in Docker
 description: Dieser Artikel bietet eine Einführung und einen Überblick über Docker im Rahmen einer.NET Core-Anwendung.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 725d8301a27f1109c85a89945f0fb8403e255ab4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: acf1307c241d9462278bc0fce5cf59fdde0750a3
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817254"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480728"
 ---
 # <a name="introduction-to-net-and-docker"></a>Einführung zu .NET und Docker
 
@@ -20,7 +20,7 @@ Weitere Informationen dazu, wie Sie Docker installieren, finden Sie auf der Down
 
 Es gibt einige Konzepte, die Sie kennen sollten. Der Docker-Client verfügt über ein Befehlszeilen-Schnittstellenprogramm, mit dem Sie Images und Container verwalten können. Wie bereits erwähnt, sollten Sie sich die Zeit nehmen, die [Übersichtsdokumentation](https://docs.docker.com/engine/docker-overview/) zu Docker zu lesen. 
 
-### <a name="images"></a>Images
+### <a name="images"></a>Bilder
 
 Ein Image ist eine geordnete Auflistung von Dateisystemänderungen, die die Grundlage für einen Container bilden. Das Image weist keinen Zustand auf und ist schreibgeschützt. Meistens basiert ein Image auf einem anderen Image, allerdings mit einer gewissen Anpassung. Wenn Sie beispielsweise ein neues Image für Ihre Anwendung erstellen, würden Sie als Grundlage ein vorhandenes Image verwenden, das bereits die .NET Core Runtime enthält.
 
@@ -38,7 +38,7 @@ Docker verfügt über eine öffentliche Registrierung, die auf dem [Docker-Hub](
 
 Die Microsoft Container Registry (MCR) ist die offizielle Quelle für von Microsoft bereitgestellte Containerimages. MCR basiert auf Azure CDN, um global replizierte Images bereitzustellen. MCR verfügt jedoch nicht über eine öffentlich zugängliche Website, und der primäre Weg, um mehr über von Microsoft bereitgestellte Containerimages zu erfahren, führt über die [Microsoft Docker-Hubseiten](https://hub.docker.com/_/microsoft-dotnet-core/).
 
-### <a name="dockerfile"></a>Dockerfile-Datei
+### <a name="dockerfile"></a>Docker-Datei
 
 Eine **Dockerfile-Datei** ist eine Datei, die einen Satz von Anweisungen definiert, mit dem ein Image erstellt wird. Jede Anweisung in der **Dockerfile-Datei** erstellt eine Ebene im Image. Wenn Sie das Image neu erstellen, werden in den meisten Fällen nur die Ebenen neu erstellt, die sich geändert haben. Die **Dockerfile-Datei** kann an andere Benutzer verteilt werden und ermöglicht es ihnen, ein neues Image auf die gleiche Weise zu erstellen, wie Sie es erstellt haben. Dies ermöglicht es Ihnen zwar, die *Anweisungen* zur Erstellung des Images zu verteilen, aber die Hauptmethode zur Verteilung Ihres Images ist die Veröffentlichung in einer Registrierung.
 
@@ -57,6 +57,9 @@ Skalieren und orchestrieren Sie Linux-Container mit Kubernetes.
 
 * [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
 Stellen Sie Web-Apps und APIs mithilfe von Linux-Containern in einer PaaS-Umgebung bereit.
+
+* [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
+Hosten Sie Ihren Container in der Cloud ohne übergeordnete Verwaltungsdienste.
 
 * [Azure Batch](https://azure.microsoft.com/services/batch/)\
 Führen Sie sich wiederholende Computeaufträge mit Containern aus.

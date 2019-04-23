@@ -11,10 +11,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 8b847e91-69a3-49e1-9e5f-0c455e50d804
 ms.openlocfilehash: a7bdfc244b0ff1c2ed625235df7e74ced026c542
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343609"
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Vorgehensweise: Aktivieren der Nachrichtenreplay-Erkennung
@@ -30,13 +30,13 @@ Ein Replay-Angriff tritt auf, wenn ein Angreifer einen Nachrichtenstrom zwischen
   
 2. Verwenden Sie die <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>-Eigenschaft, um einen Verweis auf die <xref:System.ServiceModel.Channels.LocalClientSecuritySettings>-Klasse zurückzugeben und die folgenden Eigenschaften nach Bedarf festzulegen:  
   
-    1.  `DetectReplay`sein. Ein boolescher Wert. Dieser bestimmt, ob der Client Replays vom Server erkennen sollte. Die Standardeinstellung ist `true`.  
+    1.  `DetectReplay`. Ein boolescher Wert. Dieser bestimmt, ob der Client Replays vom Server erkennen sollte. Die Standardeinstellung ist `true`.  
   
-    2.  `MaxClockSkew`sein. Ein <xref:System.TimeSpan>-Wert. Bestimmt die Zeitverschiebung, die der Replay-Mechanismus zwischen dem Client und dem Server tolerieren kann. Das Sicherheitsverfahren untersucht den gesendeten Zeitstempel und bestimmt, ob er zu weit in der Vergangenheit zurückliegend gesendet wurde. Der Standardwert beträgt fünf Minuten.  
+    2.  `MaxClockSkew`. Ein <xref:System.TimeSpan>-Wert. Bestimmt die Zeitverschiebung, die der Replay-Mechanismus zwischen dem Client und dem Server tolerieren kann. Das Sicherheitsverfahren untersucht den gesendeten Zeitstempel und bestimmt, ob er zu weit in der Vergangenheit zurückliegend gesendet wurde. Der Standardwert beträgt fünf Minuten.  
   
-    3.  `ReplayWindow`sein. Ein `TimeSpan`-Wert. Dieser bestimmt, wie lange eine Nachricht im Netzwerk bleiben kann, nachdem sie vom Server (durch Vermittler) gesendet worden ist, bevor sie den Client erreicht. Der Client verfolgt die Signaturen der Nachrichten, die innerhalb des letzten `ReplayWindow` gesendet wurden, zur Replay-Erkennung.  
+    3.  `ReplayWindow`. Ein `TimeSpan`-Wert. Dieser bestimmt, wie lange eine Nachricht im Netzwerk bleiben kann, nachdem sie vom Server (durch Vermittler) gesendet worden ist, bevor sie den Client erreicht. Der Client verfolgt die Signaturen der Nachrichten, die innerhalb des letzten `ReplayWindow` gesendet wurden, zur Replay-Erkennung.  
   
-    4.  `ReplayCacheSize`sein. Ein Ganzzahlwert. Der Client speichert die Signaturen der Nachricht in einem Cache. Diese Einstellung gibt an, wie viele Signaturen der Cache speichern kann. Wenn die Zahl der Nachrichten, die innerhalb des letzten Replay-Fensters gesendet wurden, das Cachelimit erreicht, werden neue Nachrichten zurückgewiesen, bis die ältesten zwischengespeicherten Signaturen das Zeitlimit überschreiten. Der Standardwert ist 500000.  
+    4.  `ReplayCacheSize`. Ein Ganzzahlwert. Der Client speichert die Signaturen der Nachricht in einem Cache. Diese Einstellung gibt an, wie viele Signaturen der Cache speichern kann. Wenn die Zahl der Nachrichten, die innerhalb des letzten Replay-Fensters gesendet wurden, das Cachelimit erreicht, werden neue Nachrichten zurückgewiesen, bis die ältesten zwischengespeicherten Signaturen das Zeitlimit überschreiten. Der Standardwert ist 500000.  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>So steuern Sie die Replay-Erkennung für den Dienst mithilfe von Code  
   
@@ -88,9 +88,9 @@ Ein Replay-Angriff tritt auf, wenn ein Angreifer einen Nachrichtenstrom zwischen
   
  Wenn Sie keine Sitzungen für sichere Konversation verwenden, kann die Replay-Erkennung nicht garantieren, dass Replays in Serverfarmszenarien und bei der Wiederverwendung des Prozesses erkannt werden. Dies gilt für die folgenden vom System bereitgestellten Bindungen:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>sein.  
+-   <xref:System.ServiceModel.BasicHttpBinding>.  
   
--   <xref:System.ServiceModel.WSHttpBinding> mit der <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> -Eigenschaftensatz auf `false`.  
+-   <xref:System.ServiceModel.WSHttpBinding> mit der <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>-Eigenschaft mit dem Wert `false`.  
   
 ## <a name="compiling-the-code"></a>Kompilieren des Codes  
   

@@ -3,10 +3,10 @@ title: Behandeln von Ausnahmen und Fehlern
 ms.date: 03/30/2017
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 ms.openlocfilehash: c29b3900a36d8d5c41fee49c408a2e3fdf67680b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343427"
 ---
 # <a name="handling-exceptions-and-faults"></a>Behandeln von Ausnahmen und Fehlern
@@ -20,7 +20,7 @@ Mit Ausnahmen werden Fehlfunktionen lokal in der Dienst- oder der Clientimplemen
   
 |Ausnahmetyp|Bedeutung|Inhalt der internen Ausnahme|Wiederherstellungsstrategie|  
 |--------------------|-------------|-----------------------------|-----------------------|  
-|<xref:System.ServiceModel.AddressAlreadyInUseException>|Die zur Überwachung angegebene Endpunktadresse wird bereits verwendet.|Gibt, sofern vorhanden, weitere Details zum Transportfehler an, der diese Ausnahme verursacht hat. Beispiel: <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException>, oder <xref:System.Net.Sockets.SocketException>.|Versuchen Sie es mit einer anderen Adresse.|  
+|<xref:System.ServiceModel.AddressAlreadyInUseException>|Die zur Überwachung angegebene Endpunktadresse wird bereits verwendet.|Gibt, sofern vorhanden, weitere Details zum Transportfehler an, der diese Ausnahme verursacht hat. Beispiel: <xref:System.IO.PipeException>, <xref:System.Net.HttpListenerException> oder <xref:System.Net.Sockets.SocketException>.|Versuchen Sie es mit einer anderen Adresse.|  
 |<xref:System.ServiceModel.AddressAccessDeniedException>|Der Prozess darf nicht auf die zur Überwachung angegebene Endpunktadresse zugreifen.|Gibt, sofern vorhanden, weitere Details zum Transportfehler an, der diese Ausnahme verursacht hat. Beispielsweise <xref:System.IO.PipeException> oder <xref:System.Net.HttpListenerException>.|Versuchen Sie es mit anderen Anmeldeinformationen.|  
 |<xref:System.ServiceModel.CommunicationObjectFaultedException>|Die <xref:System.ServiceModel.ICommunicationObject> verwendet wird. im Zustand "Faulted" (Weitere Informationen finden Sie unter [Grundlegendes zu Zustandsänderungen](../../../../docs/framework/wcf/extending/understanding-state-changes.md)). Wenn ein Objekt mit mehreren ausstehenden Aufrufen in den Faulted-Status wechselt, löst nur ein Aufruf eine Ausnahme aus, die sich auf den Fehler bezieht. Die übrigen Aufrufe lösen <xref:System.ServiceModel.CommunicationObjectFaultedException> aus. Diese Ausnahme wird in der Regel ausgelöst, weil eine Anwendung eine Ausnahme übersieht und ein bereits fehlerhaftes Objekt verwenden will, möglicherweise in einem anderen Thread als dem, der die ursprüngliche Ausnahme abfing.|Gibt, sofern vorhanden, Details zur inneren Ausnahme an.|Erstellen Sie ein neues Objekt. Beachten Sie, dass je nachdem, was den Fehler von <xref:System.ServiceModel.ICommunicationObject> ursprünglich verursacht hat, weitere Maßnahmen zur Problembehandlung erforderlich sein können.|  
 |<xref:System.ServiceModel.CommunicationObjectAbortedException>|Die <xref:System.ServiceModel.ICommunicationObject> verwendeten abgebrochen wurde (Weitere Informationen finden Sie unter [Grundlegendes zu Zustandsänderungen](../../../../docs/framework/wcf/extending/understanding-state-changes.md)). Ähnlich wie bei <xref:System.ServiceModel.CommunicationObjectFaultedException> gibt diese Ausnahme an, dass die Anwendung <xref:System.ServiceModel.ICommunicationObject.Abort%2A> für ein Objekt aufgerufen hat, möglicherweise aus einem anderen Thread, und das Objekt deshalb nicht mehr verwendet werden kann.|Gibt, sofern vorhanden, Details zur inneren Ausnahme an.|Erstellen Sie ein neues Objekt. Beachten Sie, dass je nachdem, was den Abbruch von <xref:System.ServiceModel.ICommunicationObject> ursprünglich verursacht hat, weitere Maßnahmen zur Problembehandlung erforderlich sein können.|  
@@ -116,7 +116,7 @@ public class FaultReason
 ### <a name="generating-faults"></a>Generieren von Fehlern  
  In diesem Abschnitt wird das Generieren eines Fehlers als Reaktion auf eine Fehlerbedingung erläutert, die in einem Kanal oder in einer von einem Kanal erstellten Nachrichteneigenschaft festgestellt wird. Ein typisches Beispiel ist die Rückgabe eines Fehlers als Antwort auf eine Anforderungsnachricht, die ungültige Daten enthält.  
   
- Beim Generieren eines Fehlers sollte der benutzerdefinierte Kanal den Fehler nicht direkt senden, sondern eine Ausnahme auslösen, um es der übergeordneten Ebene zu überlassen, ob diese Ausnahme in einen Fehler konvertiert wird und wie der Fehler zu senden ist. Als Hilfestellung bei dieser Konvertierung sollte der Kanal eine `FaultConverter`-Implementierung bereitstellen, die die vom benutzerdefinierten Kanal ausgelöste Ausnahme in den geeigneten Fehler konvertieren kann. `FaultConverter` wird wie folgt definiert:  
+ Beim Generieren eines Fehlers sollte der benutzerdefinierte Kanal den Fehler nicht direkt senden, sondern eine Ausnahme auslösen, um es der übergeordneten Ebene zu überlassen, ob diese Ausnahme in einen Fehler konvertiert wird und wie der Fehler zu senden ist. Als Hilfestellung bei dieser Konvertierung sollte der Kanal eine `FaultConverter`-Implementierung bereitstellen, die die vom benutzerdefinierten Kanal ausgelöste Ausnahme in den geeigneten Fehler konvertieren kann. `FaultConverter` wird folgendermaßen definiert:  
   
 ```  
 public class FaultConverter  
@@ -302,14 +302,14 @@ public class MessageFault
 }  
 ```  
   
- `IsMustUnderstandFault` Gibt `true` Wenn der Fehler ist ein `mustUnderstand` Fehler. `WasHeaderNotUnderstood` Gibt `true` , wenn der Header mit dem angegebenen Namen und Namespace im Fehler als NotUnderstood-Header enthalten ist.  Andernfalls wird `false`zurückgegeben.  
+ `IsMustUnderstandFault` gibt `true` zurück, wenn der Fehler ein `mustUnderstand`-Fehler ist. `WasHeaderNotUnderstood` gibt `true` zurück, wenn der Header mit dem angegebenen Namen und Namespace im Fehler als NotUnderstood-Header enthalten ist.  Andernfalls wird `false`zurückgegeben.  
   
  Wenn dieser Kanal einen Header ausgibt, der mit MustUnderstand = true gekennzeichnet ist, sollte diese Schicht auch das Exception Generation API-Muster implementieren. Außerdem sollte sie `mustUnderstand`-Fehler, die durch diesen Fehler verursacht wurden, wie weiter oben beschrieben in eine nützlichere Ausnahme konvertieren.  
   
 ## <a name="tracing"></a>Ablaufverfolgung  
  .NET Framework stellt einen Mechanismus bereit, mit dem die Programmausführung verfolgt werden kann. Damit wird die Diagnose von Produktionsanwendungen oder von zeitweiligen Problemen unterstützt, bei denen es nicht möglich ist, einfach ein Debugger hinzuzufügen und den Code zu durchlaufen. Die folgenden Kernkomponenten dieses Mechanismus befinden sich im <xref:System.Diagnostics?displayProperty=nameWithType>-Namespace:  
   
--   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType>, die Quelle der Ablaufverfolgungsinformationen geschrieben werden, d.h. <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, dies ist eine abstrakte Basisklasse für konkrete Listener, die die Informationen, die von verfolgt werden erhalten die <xref:System.Diagnostics.TraceSource> und die Ausgabe an ein Listener spezifisches Ziel. Beispielsweise gibt <xref:System.Diagnostics.XmlWriterTraceListener> Ablaufverfolgungsinformationen in eine XML-Datei aus. <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> wird in der Konfiguration angegeben und ermöglicht dem Benutzer der Anwendung die Ausführlichkeit der Ablaufverfolgung zu steuern.  
+-   <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> stellt die Quelle der zu schreibenden Anlaufverfolgungsinformationen dar, <xref:System.Diagnostics.TraceListener?displayProperty=nameWithType>, stellt die abstrakte Basisklasse für konkrete Listener dar, die zu verfolgende Informationen von <xref:System.Diagnostics.TraceSource> erhalten und an ein für die Listener spezifisches Ziel ausgeben. Beispielsweise gibt <xref:System.Diagnostics.XmlWriterTraceListener> Ablaufverfolgungsinformationen in eine XML-Datei aus. <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> wird in der Konfiguration angegeben und ermöglicht dem Benutzer der Anwendung die Ausführlichkeit der Ablaufverfolgung zu steuern.  
   
 -   Zusätzlich zu den Core-Komponenten können Sie die [Service Trace Viewer-Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) ablaufverfolgungen zum Anzeigen und Durchsuchen von WCF. Das Tool wurde speziell für Ablaufverfolgungsdateien, die von WCF generiert und mit geschrieben <xref:System.Diagnostics.XmlWriterTraceListener>. Die folgende Abbildung zeigt die verschiedenen Komponenten der Ablaufverfolgung.  
   
@@ -368,7 +368,7 @@ udpsource.TraceInformation("UdpInputChannel received a message");
 ```  
   
 #### <a name="tracing-structured-data"></a>Verfolgen strukturierter Daten  
- <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> verfügt über eine <xref:System.Diagnostics.TraceSource.TraceData%2A> -Methode, die ein oder mehrere Objekte, die akzeptiert werden, die in den ablaufverfolgungseintrag eingeschlossen werden. Im Allgemeinen wird die <xref:System.Object.ToString%2A?displayProperty=nameWithType>-Methode für jedes Objekt aufgerufen, und die resultierende Zeichenfolge wird als Teil des Ablaufverfolgungseintrags geschrieben. Wenn mit <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> Ablaufverfolgungen ausgegeben werden, können Sie <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> als Datenobjekt an <xref:System.Diagnostics.TraceSource.TraceData%2A> übergeben. Der resultierende Ablaufverfolgungseintrag schließt die von <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType> bereitgestellten XML-Daten ein. Der folgende Beispieleintrag enthält XML-Anwendungsdaten:  
+ <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> besitzt eine <xref:System.Diagnostics.TraceSource.TraceData%2A>-Methode, die ein oder mehrere Objekte in den Ablaufverfolgungseintrag aufnimmt. Im Allgemeinen wird die <xref:System.Object.ToString%2A?displayProperty=nameWithType>-Methode für jedes Objekt aufgerufen, und die resultierende Zeichenfolge wird als Teil des Ablaufverfolgungseintrags geschrieben. Wenn mit <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> Ablaufverfolgungen ausgegeben werden, können Sie <xref:System.Xml.XPath.IXPathNavigable?displayProperty=nameWithType> als Datenobjekt an <xref:System.Diagnostics.TraceSource.TraceData%2A> übergeben. Der resultierende Ablaufverfolgungseintrag schließt die von <xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType> bereitgestellten XML-Daten ein. Der folgende Beispieleintrag enthält XML-Anwendungsdaten:  
   
 ```xml  
 <E2ETraceEvent xmlns="http://schemas.microsoft.com/2004/06/E2ETraceEvent">  

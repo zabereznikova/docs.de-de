@@ -7,10 +7,10 @@ description: Erfahren Sie, wie Sie mit .NET eine Vielzahl von Anwendungen auf je
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
 ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427486"
 ---
 <!-- markdownlint-disable MD033 -->
@@ -92,7 +92,7 @@ ms.locfileid: "59427486"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/standard/">Leitfaden für .NET</a></h3>
+                                                <h3><a href="/dotnet/standard/">.NET Guide (Leitfaden für .NET)</a></h3>
                                                 <p><a href="/dotnet/standard/get-started">Erste Schritte</a></p>
                                                 <p><a href="/dotnet/standard/tour">Einführung in .NET</a></p>
                                                 <p><a href="/dotnet/standard/components">.NET-Architekturkonzepte</a></p>
@@ -132,7 +132,7 @@ ms.locfileid: "59427486"
                                                 </div>
                                             </div>
                                             <div class="cardText">
-                                                <h3><a href="/dotnet/framework/">.NET Framework – Leitfaden</a></h3>
+                                                <h3><a href="/dotnet/framework/">Leitfaden für .NET Framework</a></h3>
                                                 <p><a href="/dotnet/framework/get-started/">Erste Schritte</a></p>
                                                 <p><a href="/dotnet/framework/development-guide">Entwicklungshandbuch</a></p>
                                                 <p><a href="/dotnet/framework/develop-client-apps">Cliententwicklung</a></p>
@@ -214,7 +214,7 @@ ms.locfileid: "59427486"
                                                 <h3><a href="/dotnet/visual-basic">Leitfaden für Visual Basic</a></h3>
                                                 <p><a href="/dotnet/visual-basic/getting-started">Erste Schritte</a></p>
                                                 <p><a href="/dotnet/visual-basic/walkthroughs">Einführung in Visual Basic</a></p>
-                                                <p><a href="/dotnet/visual-basic/language-reference">Sprachreferenz zu Visual Basic</a></p>
+                                                <p><a href="/dotnet/visual-basic/language-reference">Sprachreferenz zu Visual Basic</a></p>
                                             </div>
                                         </div>
                                     </div>
@@ -242,7 +242,7 @@ ms.locfileid: "59427486"
                             </li>
                             <li class="fullSpan">
                                 <div class="container footer">
-                                    <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">Contribute to .NET docs and samples (Zu .NET-Dokumenten und Beispielen beitragen)</a></p>
+                                    <p><a href="https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md">Contribute to .NET docs and samples (Zu .NET-Dokumentationen und Beispielen beitragen)</a></p>
                                     <p><a href="/dotnet/project-json">Find Visual Studio 2015/project.json version of the documentation (Suchen der Visual Studio 2015/project.json-Version der Dokumentation)</a></p>
                                 </div>
                             </li>
@@ -434,7 +434,7 @@ ms.locfileid: "59427486"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">Mobil</a>
+                        <a href="#mobile">Mobile</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
@@ -579,7 +579,7 @@ ms.locfileid: "59427486"
                         </ul>
                     </li>
                     <li>
-                        <a href="#gaming">Spiele</a>
+                        <a href="#gaming">Gaming</a>
                         <ul id="gaming" class="cardsC">
                             <li>
                                 <a href="https://visualstudio.microsoft.com/vs/features/game-development/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link">

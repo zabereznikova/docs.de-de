@@ -4,12 +4,12 @@ description: Übersicht über die Rollen von Containerimageregistrierungen in de
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 9bfd2a834039af9f71d263df3606d1b65a2d784f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: ea25612417f5b0c23eca2a36b52db6f303a4bb45
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466347"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612562"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Adressierbarkeit von Microservices und die Dienstregistrierung
 
@@ -24,13 +24,13 @@ Beachten Sie, dass es eine gewisse Überschneidung zwischen der Dienstregistrier
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 - **Chris Richardson. Pattern: Service Registry (Dienstregistrierung)** \
-  [https://microservices.io/patterns/service-registry.html](https://microservices.io/patterns/service-registry.html)
+  <https://microservices.io/patterns/service-registry.html>
 
 - **Auth0. The Service Registry (Dienstregistrierung)** \
-  [https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
+  <https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/>
 
 - **Gabriel Schenker. Service discovery (Dienstermittlung)** \
-  [https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
+  <https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/>
 
 >[!div class="step-by-step"]
 >[Zurück](maintain-microservice-apis.md)

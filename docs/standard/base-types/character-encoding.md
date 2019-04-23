@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 16154ff6b2fcf6c537126b6ced03c45f6746b57a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649400"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346105"
 ---
 # <a name="character-encoding-in-net"></a>Zeichencodierung in .NET
 Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt werden können. Eine Zeichencodierung ist ein System, in dem jedes Zeichen in einem unterstützten Zeichensatz mit einem Wert verknüpft wird, der dieses Zeichen darstellt. Beispielsweise handelt es sich beim Morsealphabet um eine Zeichencodierung, die alle Zeichen im römischen Alphabet mit einem Muster aus Punkten und Bindestrichen verknüpft, das für die Übertragung über Telegrafenleitungen geeignet ist. Bei einer Zeichencodierung für Computer wird jedes Zeichen in einem unterstützten Zeichensatz mit einem numerischen Wert verknüpft, der das jeweilige Zeichen darstellt. Eine Zeichencodierung verfügt über zwei verschiedene Komponenten:  
@@ -215,11 +215,11 @@ Zeichen sind abstrakte Entitäten, die auf viele verschiedene Arten dargestellt 
   
  Darüber hinaus können Sie eine benutzerdefinierte Lösung implementieren, die den Fallback mit ähnlichen Zeichen, den Ersatzfallback oder den Ausnahmefallback verwendet. Führen Sie hierzu folgende Schritte aus:  
   
-1.  Leiten Sie für Codierungsvorgänge eine Klasse von <xref:System.Text.EncoderFallback> und für Decodierungsvorgänge eine Klasse von <xref:System.Text.DecoderFallback> ab.  
+1. Leiten Sie für Codierungsvorgänge eine Klasse von <xref:System.Text.EncoderFallback> und für Decodierungsvorgänge eine Klasse von <xref:System.Text.DecoderFallback> ab.  
   
-2.  Leiten Sie für Codierungsvorgänge eine Klasse von <xref:System.Text.EncoderFallbackBuffer> und für Decodierungsvorgänge eine Klasse von <xref:System.Text.DecoderFallbackBuffer> ab.  
+2. Leiten Sie für Codierungsvorgänge eine Klasse von <xref:System.Text.EncoderFallbackBuffer> und für Decodierungsvorgänge eine Klasse von <xref:System.Text.DecoderFallbackBuffer> ab.  
   
-3.  Wenn die vordefinierte <xref:System.Text.EncoderFallbackException> -Klasse und die vordefinierte <xref:System.Text.DecoderFallbackException> -Klasse für Ausnahmefallbacks nicht Ihren Anforderungen entspricht, leiten Sie eine Klasse von einem Ausnahmeobjekt ab, z. B. <xref:System.Exception> oder <xref:System.ArgumentException>.  
+3. Wenn die vordefinierte <xref:System.Text.EncoderFallbackException> -Klasse und die vordefinierte <xref:System.Text.DecoderFallbackException> -Klasse für Ausnahmefallbacks nicht Ihren Anforderungen entspricht, leiten Sie eine Klasse von einem Ausnahmeobjekt ab, z. B. <xref:System.Exception> oder <xref:System.ArgumentException>.  
   
 ### <a name="deriving-from-encoderfallback-or-decoderfallback"></a>Ableiten von EncoderFallback oder DecoderFallback  
  Um eine benutzerdefinierte Fallbacklösung zu implementieren, müssen Sie für Codierungsvorgänge eine Klasse erstellen, die von <xref:System.Text.EncoderFallback> erbt. Für Decodierungsvorgänge erstellen Sie eine Klasse, die von <xref:System.Text.DecoderFallback> erbt. Instanzen dieser Klassen werden an die <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> -Methode übergeben und dienen als Vermittler zwischen der Codierungsklasse und der Fallbackimplementierung.  

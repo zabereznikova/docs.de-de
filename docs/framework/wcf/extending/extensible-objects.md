@@ -5,10 +5,10 @@ helpviewer_keywords:
 - extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
 ms.openlocfilehash: 1af44f2394bbf27f9219831612b4e73d7a1759e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220278"
 ---
 # <a name="extensible-objects"></a>Erweiterbare Objekte
@@ -19,7 +19,7 @@ Das erweiterbare Objektmuster wird verwendet, um entweder vorhandene Laufzeitkla
   
  Die <xref:System.ServiceModel.IExtensibleObject%601>-Schnittstelle wird von Typen implementiert, die es <xref:System.ServiceModel.IExtension%601>-Objekten ermöglichen, ihre Funktionalität anzupassen.  
   
- Erweiterbare Objekte ermöglichen die dynamische Aggregation von <xref:System.ServiceModel.IExtension%601>-Objekten. <xref:System.ServiceModel.IExtension%601> -Objekte sind durch die folgende Schnittstelle gekennzeichnet:  
+ Erweiterbare Objekte ermöglichen die dynamische Aggregation von <xref:System.ServiceModel.IExtension%601>-Objekten. <xref:System.ServiceModel.IExtension%601>-Objekte sind durch die folgende Schnittstelle gekennzeichnet:  
   
 ```  
 public interface IExtension<T>  
@@ -30,11 +30,11 @@ where T : IExtensibleObject<T>
 }  
 ```  
   
- Die Typbeschränkung stellt sicher, dass Erweiterungen nur für Klassen definiert werden können, für die <xref:System.ServiceModel.IExtensibleObject%601> gilt. <xref:System.ServiceModel.IExtension%601.Attach%2A> und <xref:System.ServiceModel.IExtension%601.Detach%2A> Benachrichtigung Aggregation oder disaggregation durch.  
+ Die Typbeschränkung stellt sicher, dass Erweiterungen nur für Klassen definiert werden können, für die <xref:System.ServiceModel.IExtensibleObject%601> gilt. <xref:System.ServiceModel.IExtension%601.Attach%2A> und <xref:System.ServiceModel.IExtension%601.Detach%2A> führen die Benachrichtigung über eine Aggregation oder Disaggregation durch.  
   
  Bei Implementierungen können Beschränkungen verwendet werden, wenn sie einem Besitzer hinzugefügt bzw. wenn sie entfernt werden. Sie können zum Beispiel die Entfernung vollständig unmöglich machen, indem Sie das Hinzufügen oder Entfernen von Erweiterungen untersagen, wenn sich der Besitzer oder die Erweiterung in einem bestimmten Zustand befinden, das gleichzeitige Hinzufügen zu mehreren Besitzern untersagen oder nur eine einzelne Hinzufügung gefolgt von einer einzelnen Entfernung zulassen.  
   
- <xref:System.ServiceModel.IExtension%601> impliziert keine Interaktionen mit anderen standardmäßigen verwalteten Schnittstellen nicht. Die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Methode des Besitzerobjekts trennt ihre Erweiterungen in der Regel nicht ab.  
+ <xref:System.ServiceModel.IExtension%601> impliziert keine Interaktionen mit anderen standardmäßigen verwalteten Schnittstellen. Die <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>-Methode des Besitzerobjekts trennt ihre Erweiterungen in der Regel nicht ab.  
   
  Wenn der Auflistung eine Erweiterung hinzugefügt wird, wird <xref:System.ServiceModel.IExtension%601.Attach%2A> aufgerufen, bevor die Erweiterung in die Auflistung aufgenommen wird. Wenn eine Erweiterung aus der Auflistung entfernt wird, wird nach der Entfernung <xref:System.ServiceModel.IExtension%601.Detach%2A> aufgerufen. Dies bedeutet (vorausgesetzt, es erfolgt eine entsprechende Synchronisierung), dass eine Erweiterung nur dann sicher in einer Auflistung enthalten ist, wenn sie sich zwischen den Zuständen <xref:System.ServiceModel.IExtension%601.Attach%2A> und <xref:System.ServiceModel.IExtension%601.Detach%2A> befindet.  
   
@@ -46,16 +46,16 @@ where T : IExtensibleObject<T>
   
  Beim zweiten Szenario werden die Eigenschaften <xref:System.ServiceModel.IExtension%601.Attach%2A> und <xref:System.ServiceModel.IExtension%601.Detach%2A> verwendet, um einem Objekt die Teilnahme am benutzerdefinierten Verhalten zu ermöglichen, zum Beispiel das Registrieren von Ereignissen, Beobachten von Zustandsübergängen usw.  
   
- Die <xref:System.ServiceModel.IExtensionCollection%601>-Schnittstelle ist eine Auflistung von <xref:System.ServiceModel.IExtension%601>-Objekten, für die der Abruf von <xref:System.ServiceModel.IExtension%601> anhand des Typs zulässig ist. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> Gibt das zuletzt hinzugefügte Objekt, das eine <xref:System.ServiceModel.IExtension%601> dieses Typs.  
+ Die <xref:System.ServiceModel.IExtensionCollection%601>-Schnittstelle ist eine Auflistung von <xref:System.ServiceModel.IExtension%601>-Objekten, für die der Abruf von <xref:System.ServiceModel.IExtension%601> anhand des Typs zulässig ist. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType> gibt das zuletzt hinzugefügte Objekt zurück, das eine <xref:System.ServiceModel.IExtension%601> dieses Typs ist.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Erweiterbare Objekte in Windows Communication Foundation  
  Es gibt vier erweiterbare Objekte in der Windows Communication Foundation (WCF):  
   
 -   <xref:System.ServiceModel.ServiceHostBase> – Dies ist die Basisklasse für den Host des Dienstes.  Sie können die Erweiterungen dieser Klasse verwenden, um das Verhalten von <xref:System.ServiceModel.ServiceHostBase> selbst zu erweitern oder um den Zustand für die Dienste einzeln zu speichern.  
   
--   <xref:System.ServiceModel.InstanceContext> – Diese Klasse verbindet eine Instanz des Diensttyps, mit der Dienstlaufzeit.  Sie enthält Informationen zu der Instanz sowie einen Verweis auf den <xref:System.ServiceModel.InstanceContext>, der <xref:System.ServiceModel.ServiceHostBase> enthält. Sie können die Erweiterungen dieser Klasse verwenden, um das Verhalten von <xref:System.ServiceModel.InstanceContext> zu erweitern oder um den Zustand für die Dienste einzeln zu speichern.  
+-   <xref:System.ServiceModel.InstanceContext> – Diese Klasse verbindet eine Instanz des Diensttyps mit der Dienstlaufzeit.  Sie enthält Informationen zu der Instanz sowie einen Verweis auf den <xref:System.ServiceModel.InstanceContext>, der <xref:System.ServiceModel.ServiceHostBase> enthält. Sie können die Erweiterungen dieser Klasse verwenden, um das Verhalten von <xref:System.ServiceModel.InstanceContext> zu erweitern oder um den Zustand für die Dienste einzeln zu speichern.  
   
--   <xref:System.ServiceModel.OperationContext> – Diese Klasse stellt die Vorgangsinformationen, die die Laufzeit für jeden Vorgang aufzeichnet.  Dazu gehören auch Informationen wie Header von eingehenden Nachrichten, Eigenschaften von eingehenden Nachrichten, die eingehende Sicherheitsidentität und andere Informationen.  Erweiterungen dieser Klasse können entweder das Verhalten des <xref:System.ServiceModel.OperationContext> erweitern oder den Zustand für jeden Vorgang einzeln speichern.  
+-   <xref:System.ServiceModel.OperationContext> – Diese Klasse stellt die Vorgangsinformationen dar, die die Laufzeit für jeden Vorgang aufzeichnet.  Dazu gehören auch Informationen wie Header von eingehenden Nachrichten, Eigenschaften von eingehenden Nachrichten, die eingehende Sicherheitsidentität und andere Informationen.  Erweiterungen dieser Klasse können entweder das Verhalten des <xref:System.ServiceModel.OperationContext> erweitern oder den Zustand für jeden Vorgang einzeln speichern.  
   
 -   <xref:System.ServiceModel.IContextChannel> – Diese Schnittstelle ermöglicht die Untersuchung der jeweiligen Zustand für die Kanäle und Proxys, die von den WCF-Laufzeit erstellt.  Erweiterungen dieser Klasse können entweder das Verhalten des <xref:System.ServiceModel.IClientChannel> erweitern oder das Verhalten verwenden, um den Zustand für jeden Kanal einzeln zu speichern.  
   

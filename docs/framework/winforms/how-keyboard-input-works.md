@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
 ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342169"
 ---
 # <a name="how-keyboard-input-works"></a>Funktionsweise von Tastatureingaben
@@ -63,9 +63,9 @@ Windows Forms verarbeitet Tastatureingaben, indem als Reaktion auf Windows-Meldu
 |Aufgabe|Methode|  
 |----------|------------|  
 |Fangen Sie eine Navigationstaste ab und lösen eine <xref:System.Windows.Forms.Control.KeyDown> Ereignis. Beispiel: Sie möchten, dass die TAB- und die Return-Taste in einem Textfeld bearbeitet werden.|Überschreiben Sie <xref:System.Windows.Forms.Control.IsInputKey%2A>. **Hinweis**:  Alternativ können Sie behandeln die <xref:System.Windows.Forms.Control.PreviewKeyDown> -Ereignis und legen <xref:System.Windows.Forms.PreviewKeyDownEventArgs.IsInputKey%2A> von der <xref:System.Windows.Forms.PreviewKeyDownEventArgs> zu `true` für den bzw. die gewünschten Schlüssel.|  
-|Nehmen Sie bei einem Steuerelement eine besondere Eingabe oder Navigationsbehandlung vor. Beispiel: Sie möchten bei dem ausgewählten Element die Verwendung der Pfeiltasten in Ihrem Listensteuerelement ändern.|außer Kraft setzen <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>|  
+|Nehmen Sie bei einem Steuerelement eine besondere Eingabe oder Navigationsbehandlung vor. Beispiel: Sie möchten bei dem ausgewählten Element die Verwendung der Pfeiltasten in Ihrem Listensteuerelement ändern.|Überschreiben Sie <xref:System.Windows.Forms.Control.ProcessDialogKey%2A>.|  
 |Fangen Sie eine Navigationstaste ab und lösen eine <xref:System.Windows.Forms.Control.KeyPress> Ereignis. Beispiel: Sie möchten, dass durch mehrfaches Drücken der Pfeiltaste in einem Drehfeld-Steuerelement der Fortschritt durch die Elemente beschleunigt wird.|Überschreiben Sie <xref:System.Windows.Forms.Control.IsInputChar%2A>.|  
-|Besondere Eingabe oder navigationsbehandlung Behandlung beim Ausführen einer <xref:System.Windows.Forms.Control.KeyPress> Ereignis. Beispiel: Wenn in einem Listensteuerelement die Taste „r“ gedrückt gehalten wird, werden Elemente übersprungen, die mit diesem Buchstaben beginnen.|außer Kraft setzen <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>|  
+|Besondere Eingabe oder navigationsbehandlung Behandlung beim Ausführen einer <xref:System.Windows.Forms.Control.KeyPress> Ereignis. Beispiel: Wenn in einem Listensteuerelement die Taste „r“ gedrückt gehalten wird, werden Elemente übersprungen, die mit diesem Buchstaben beginnen.|Überschreiben Sie <xref:System.Windows.Forms.Control.ProcessDialogChar%2A>.|  
 |Führen Sie eine benutzerdefinierte Bearbeitung mnemonischer Zeichen durch. Beispiel: Sie möchten mnemonische Zeichen in von Benutzern gezeichneten Schaltflächen bearbeiten, die in einer Symbolleiste enthalten sind.|Überschreiben Sie <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>.|  
   
 ## <a name="see-also"></a>Siehe auch

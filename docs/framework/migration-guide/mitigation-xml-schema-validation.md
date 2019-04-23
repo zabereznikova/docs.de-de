@@ -8,10 +8,10 @@ ms.assetid: b73dd4f4-f2dc-47a2-9425-3896e92321fb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5c0087412a53177a7c43df838266f6d896c1bd9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220473"
 ---
 # <a name="mitigation-xml-schema-validation"></a>Entschärfung: XML-Schemavalidierung
@@ -39,4 +39,4 @@ In [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] ermittelt die XSD-Schema
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Neuzuweisungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+- [Neuausrichtungsänderungen](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
 ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219420"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>Übersicht über das SplitContainer-Steuerelement (Windows Forms)
@@ -40,14 +40,14 @@ Das <xref:System.Windows.Forms.SplitContainer>-Steuerelement in Windows Forms ka
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> property|Bestimmt, welchen Bereich unverändert bleiben nach der Größe der <xref:System.Windows.Forms.SplitContainer> ist die Größe des Steuerelements geändert.|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> property|Bestimmt, ob der Splitter mit der Tastatur oder Maus verschoben werden kann.|  
-|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> property|Bestimmt, ob der Splitter vertikal oder horizontal angeordnet ist.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> property|Legt den Abstand in Pixel vom linken oder oberen Rand auf die Splitterleiste verschiebbar.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> property|Bestimmt die minimale Entfernung in Pixeln, des Splitters vom Benutzer verschoben werden kann.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> property|Bestimmt die Breite des Splitters in Pixel an.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> event|Tritt auf, wenn der Splitter verschoben werden.|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> event|Tritt auf, wenn der Splitter verschoben wurde.|  
+|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> -Eigenschaft|Bestimmt, welchen Bereich unverändert bleiben nach der Größe der <xref:System.Windows.Forms.SplitContainer> ist die Größe des Steuerelements geändert.|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> -Eigenschaft|Bestimmt, ob der Splitter mit der Tastatur oder Maus verschoben werden kann.|  
+|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> -Eigenschaft|Bestimmt, ob der Splitter vertikal oder horizontal angeordnet ist.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> -Eigenschaft|Legt den Abstand in Pixel vom linken oder oberen Rand auf die Splitterleiste verschiebbar.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> -Eigenschaft|Bestimmt die minimale Entfernung in Pixeln, des Splitters vom Benutzer verschoben werden kann.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> -Eigenschaft|Bestimmt die Breite des Splitters in Pixel an.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> -Ereignis|Tritt auf, wenn der Splitter verschoben werden.|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> -Ereignis|Tritt auf, wenn der Splitter verschoben wurde.|  
   
 ## <a name="see-also"></a>Siehe auch
 

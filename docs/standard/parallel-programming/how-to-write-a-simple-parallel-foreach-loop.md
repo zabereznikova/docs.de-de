@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3bde7ebcc73c5e9e2d87074b78d78bb63cd441ad
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 599432af178031a85dea4155a8fd2923f879a600
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583640"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427356"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>Vorgehensweise: Schreiben einer einfachen Parallel.ForEach-Schleife
 
@@ -51,7 +51,7 @@ In Visual Studio gibt es Visual Basic- und C#-Konsolenanwendungsvorlagen für Wi
 
 Sie können über die Befehlszeile entweder .NET Core und die zugehörigen CLI-Tools (z.B. `dotnet new console` oder `dotnet new console -lang vb`) nutzen oder die Datei erstellen und den Befehlszeilencompiler für eine .NET Framework-Anwendung nutzen.
 
-Bei einem .NET Core-Projekt müssen Sie auf das NuGet-Paket **System.Drawing.Common** verweisen. Verwenden Sie in Visual Studio den NuGet-Paket-Manager zum Installieren des Pakets. Alternativ können Sie in Ihrer *.* CSPROJ* - oder *.* VBPROJ*-Datei auf das Paket verweisen:
+Bei einem .NET Core-Projekt müssen Sie auf das NuGet-Paket **System.Drawing.Common** verweisen. Verwenden Sie in Visual Studio den NuGet-Paket-Manager zum Installieren des Pakets. Alternativ können Sie in Ihrer \*.CSPROJ oder \*.VBPROJ-Datei auf das Paket verweisen:
  
 ```xml
 <ItemGroup>
@@ -67,4 +67,4 @@ Drücken Sie zum Ausführen Ihrer Konsolenanwendung aus Visual Studio **F5**.
 
 - [Datenparallelität](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
 - [Parallele Programmierung](../../../docs/standard/parallel-programming/index.md)
-- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Paralleles LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

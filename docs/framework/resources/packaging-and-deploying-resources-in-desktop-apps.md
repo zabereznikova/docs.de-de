@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9edc54b5b7d86f0ecb58a6910cde82d088b2c663
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 19f1d3d1d94db885938a5da3f3b66c8e554205b5
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357858"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611392"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>Verpacken und Bereitstellen von Ressourcen in .NET-Apps
 
@@ -226,6 +226,7 @@ Wenn Sie das Beispiel in einem System durchführen, dessen Sprachen nicht Russis
 ```
 Bon jour!
 ```
+
 ## <a name="suggested-packaging-alternative"></a>Empfohlene Verpackalternative
 
 Möglicherweise können Sie aus Zeit- oder Kostengründen keinen Satz an Ressourcen für jede Subkultur erstellen, die von Ihrer Anwendung unterstützt wird. Stattdessen können Sie eine einzelne Satellitenassembly für eine übergeordnete Kultur erstellen, die von allen verknüpften Subkulturen verwendet werden kann. Sie können z.B eine einzelne englische Satellitenassembly (en) bereitstellen, die von Benutzern abgerufen wird, die regionsspezifische englische Ressourcen angefordert haben, und eine einzelne deutsche Satellitenassembly (de) für Benutzer, die regionsspezifische deutsche Ressourcen angefordert haben. Für Anforderungen von z.B. Deutsch, wie es in Deutschland (de-DE), in Österreich (de-AT) oder der Schweiz (de-CH) gesprochen wird, wird auf die deutsche Satellitenassembly (de) ausgewichen. Die Standardressourcen sind die endgültigen Fallbacks und sollten deshalb die Ressourcen sein, die von der Mehrheit der Benutzer Ihrer Anwendung angefordert werden. Achten Sie also darauf, welche Ressourcen Sie dafür auswählen. Bei dieser Vorgehensweise werden Ressourcen bereitgestellt, die weniger kulturspezifisch sind, aber die Lokalisierungskosten Ihrer Anwendung deutlich verringern können.

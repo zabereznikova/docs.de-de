@@ -7,10 +7,10 @@ helpviewer_keywords:
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 ms.openlocfilehash: c91e69e3d9f17f758990b8385f6b8d0a1c03bef6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344740"
 ---
 # <a name="-target-visual-basic"></a>-Target (Visual Basic)
@@ -25,7 +25,7 @@ Gibt das Format der Ausgabe des Compilers.
 ## <a name="remarks"></a>Hinweise  
  Der folgenden Tabelle werden die Auswirkungen der `-target` Option.  
   
-|**Option**|**Verhalten**|  
+|**Option**|**Behavior class (Behavior-Klasse)**|  
 |----------------|------------------|  
 |`-target:exe`|Bewirkt, dass der Compiler eine ausführbare Konsolenanwendung zu erstellen.<br /><br /> Dies ist die Standardoption, wenn kein `-target` angegeben wird. Die ausführbare Datei wird mit der Erweiterung .exe erstellt.<br /><br /> Sofern nicht anders angegeben mit der `/out` Option den Namen der Ausgabedatei erhält den Namen der Eingabedatei, die enthält die `Sub Main` Verfahren.<br /><br /> Nur ein `Sub Main` Prozedur ist erforderlich. in den Quellcodedateien, die in eine .exe-Datei kompiliert werden. Verwenden der `-main` Compileroption, um anzugeben, welche Klasse enthält die `Sub Main` Verfahren.|  
 |`-target:library`|Bewirkt, dass den Compiler eine Dynamic Link Library (DLL) erstellt.<br /><br /> Die Dynamic Link Library-Datei wird mit der Erweiterung ".dll" erstellt.<br /><br /> Sofern nicht anders angegeben mit der `-out` Option den Namen der Ausgabedatei erhält den Namen der ersten Eingabedatei.<br /><br /> Beim Erstellen einer DLL ein `Sub Main` Verfahren ist nicht erforderlich.|  

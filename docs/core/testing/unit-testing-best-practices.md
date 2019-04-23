@@ -5,12 +5,12 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: b543ab2e200e8169a251db8ddfb1493c5583ed69
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f4699b5277c5feeac4d9116ac85e096247aa748
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360250"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427447"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Bewährte Methoden für Komponententests mit .NET Core und .NET Standard
 
@@ -18,7 +18,7 @@ Komponententests bringen zahlreiche Vorteile mit sich: Sie helfen bei der Regres
 
 In diesem Leitfaden lernen Sie die bewährten Methoden beim Schreiben von Komponententests kennen, mit denen Sie Ihre Tests resilient und leicht verständlich gestalten können.
 
-Von [John Reese](https://reese.dev) mit besonderem Dank an [Roy Osherove](http://osherove.com/)
+Von [John Reese](https://reese.dev) mit besonderem Dank an [Roy Osherove](https://osherove.com/)
 
 ## <a name="why-unit-test"></a>Weshalb sollte ich Komponententests durchführen?
 
@@ -250,17 +250,17 @@ Betrachten Sie folgenden Fall:
 ```csharp
 public string ParseLogLine(string input)
 {
-    var sanitizedInput = trimInput(input);
+    var sanitizedInput = TrimInput(input);
     return sanitizedInput;
 }
 
-private string trimInput(string input)
+private string TrimInput(string input)
 {
     return input.Trim();
 }
 ```
 
-Möglicherweise versuchen Sie zunächst, einen Test für `trimInput` zu schreiben, da Sie sicherstellen möchten, dass die Methode wie erwartet funktioniert. Es ist jedoch auch möglich, dass `sanitizedInput` von `ParseLogLine` auf unerwartete Weise manipuliert wird, wodurch das Rendern eines Tests für `trimInput` nutzlos ist. 
+Möglicherweise versuchen Sie zunächst, einen Test für `TrimInput` zu schreiben, da Sie sicherstellen möchten, dass die Methode wie erwartet funktioniert. Es ist jedoch auch möglich, dass `sanitizedInput` von `ParseLogLine` auf unerwartete Weise manipuliert wird, wodurch das Rendern eines Tests für `TrimInput` nutzlos ist. 
 
 Der echte Test sollte für die öffentliche Methode, `ParseLogLine`, ausgeführt werden, denn darum sollten Sie sich letztendlich kümmern. 
 

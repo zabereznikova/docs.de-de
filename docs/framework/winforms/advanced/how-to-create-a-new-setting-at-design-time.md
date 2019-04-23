@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
 ms.openlocfilehash: e371c60e3fb674e4243cec008e1098172725d4cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344961"
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Vorgehensweise: Erstellen einer neuen Einstellung zur Entwurfszeit
@@ -35,4 +35,4 @@ Sie können eine neue Einstellung zur Entwurfszeit erstellen, mit dem Einstellun
 
 - [Verwenden von Anwendungseinstellungen und Benutzereinstellungen](using-application-settings-and-user-settings.md)
 - [Übersicht über Anwendungseinstellungen](application-settings-overview.md)
-- [Vorgehensweise: Ändern des Werts einer vorhandenen Einstellung zur Entwurfszeit](how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [How To: Ändern Sie den Wert einer vorhandenen Einstellung zur Entwurfszeit](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

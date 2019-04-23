@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344173"
 ---
 # <a name="date-and-time-data"></a>Datums- und Zeitdaten
@@ -19,7 +19,7 @@ SQL Server 2008 enthält neue Datentypen zur Behandlung von Datums- und Uhrzeiti
   
  Die vollständige Dokumentation für SQL Server-Datentypen ist in der SQL Server-Onlinedokumentation verfügbar. In der folgenden Tabelle sind die versionsspezifischen Einsteigerthemen für Datums- und Uhrzeitdaten aufgeführt.  
   
- **SQL Server-Onlinedokumentation**  
+ **SQL Server Books Online (SQL Server-Onlinedokumentation)**  
   
 1. [Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
@@ -99,7 +99,7 @@ Sie können angeben, den den Datentyp des einen <xref:System.Data.SqlClient.SqlP
 >  Zeitwerte, die kleiner als 0 bzw. größer als oder gleich 24 Stunden sind, lösen eine <xref:System.ArgumentException> aus.  
   
 ### <a name="creating-parameters"></a>Erstellen von Parametern  
- Können Sie erstellen eine <xref:System.Data.SqlClient.SqlParameter> Objekt mit seinen Konstruktor oder durch Hinzufügen zu einer <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> -Auflistung durch Aufruf der `Add` -Methode der der <xref:System.Data.SqlClient.SqlParameterCollection>. Die `Add`-Methode akzeptiert entweder Konstruktorargumente oder ein bestehendes Parameterobjekt als Eingabe.  
+ Sie können ein <xref:System.Data.SqlClient.SqlParameter>-Objekt erstellen, indem Sie dessen Konstruktor verwenden, oder Sie fügen es zu einer <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A>-Auflistung hinzu, indem Sie die `Add`-Methode der <xref:System.Data.SqlClient.SqlParameterCollection> aufrufen. Die `Add`-Methode akzeptiert entweder Konstruktorargumente oder ein bestehendes Parameterobjekt als Eingabe.  
   
  Die nächsten Abschnitte in diesem Thema enthalten Beispiele über das Angeben von Datums- und Uhrzeitparametern. Weitere Beispiele zum Arbeiten mit Parametern, finden Sie unter [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) und [DataAdapter-Parameter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   
@@ -235,13 +235,13 @@ command.Parameters.AddWithValue( _
   
 |Thema|Beschreibung|  
 |-----------|-----------------|  
-|[Datentypen und Funktionen für die Angabe von Datum und Uhrzeit (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Bietet eine Übersicht über alle Transact-SQL-Datentypen und -Funktionen zur Angabe des Datums und der Uhrzeit.|  
+|[Datums- und Uhrzeitdatentypen und zugehörige Funktionen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Bietet eine Übersicht über alle Transact-SQL-Datentypen und -Funktionen zur Angabe des Datums und der Uhrzeit.|  
 |[Verwenden von Datums- und Zeitdaten](https://go.microsoft.com/fwlink/?LinkId=98361)|Enthält Informationen zu den Datentypen und Funktionen zur Angabe des Datums und der Uhrzeit sowie Beispiele für deren Verwendung.|  
-|[Datentypen (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Beschreibt die Systemdatentypen in SQL Server 2008.|  
+|[Data Types (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Beschreibt die Systemdatentypen in SQL Server 2008.|  
   
 ## <a name="see-also"></a>Siehe auch
 
 - [SQL Server-Datentypzuordnungen](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [Konfigurieren von Parametern und Parameterdatentypen](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [SQL Server-Datentypen und ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
+- [SQL Server Data Types and ADO.NET (SQL Server-Datentypen und ADO.NET)](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
 ms.openlocfilehash: 55459482d0994c581164128b17c08a7ca90d0717
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339098"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>Vorgehensweise: Drucken von Grafiken in Windows Forms
@@ -70,4 +70,4 @@ In vielen Fällen möchten Sie Drucken von Grafiken in Ihrer Windows-basierten A
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)
+- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)

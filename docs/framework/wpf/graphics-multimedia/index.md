@@ -13,10 +13,10 @@ helpviewer_keywords:
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
 ms.openlocfilehash: 58ee58577b9ff71112103abb4d33c8b85d3c806f
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481352"
 ---
 # <a name="graphics-and-multimedia"></a>Grafiken und Multimedia
@@ -59,7 +59,7 @@ WPF unterstützt hochwertige 2D-Grafiken. Die Funktionalität umfasst die Pinsel
 
 ### <a name="2-d-shapes"></a>2D-Formen
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Stellt eine Bibliothek von häufig verwendeten, vektorbasierter [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] Formen wie Rechtecke und Ellipsen, die in der folgenden Abbildung gezeigt.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] enthält eine Bibliothek häufig verwendeter vektorbasierter [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]-Formen wie Rechtecke und Ellipsen, die in der folgenden Abbildung dargestellt sind.
 
 ![Diagramm mit Ellipsen und Rechtecke.](./media/index/two-deminsional-shapes-ellipses-rectangles.png)
 
@@ -109,7 +109,7 @@ Weitere Informationen finden Sie unter [Übersicht über die Geometrie](geometry
 
 ### <a name="2-d-effects"></a>2D-Effekte
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] Stellt eine Bibliothek von [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] Klassen, die Sie verwenden können, um eine Reihe von Effekten zu erstellen. Die [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]-Renderingfunktion von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet die Möglichkeit, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Elemente mit Farbverläufen, Bitmaps, Zeichnungen und Videos zu zeichnen, und diese durch Drehung, Skalierung und Neigung zu bearbeiten. Die folgende Abbildung zeigt ein Beispiel für die vielen Effekte, die Sie mit [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Pinsels erreichen können.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] stellt eine Bibliothek mit [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]-Klassen zur Verfügung, mit denen Sie verschiedene Effekte erstellen können. Die [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]-Renderingfunktion von [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet die Möglichkeit, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]-Elemente mit Farbverläufen, Bitmaps, Zeichnungen und Videos zu zeichnen, und diese durch Drehung, Skalierung und Neigung zu bearbeiten. Die folgende Abbildung zeigt ein Beispiel für die vielen Effekte, die Sie mit [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]-Pinsels erreichen können.
 
 ![Die Abbildung zeigt die verschiedenen WPF-Pinsel und Paint-Elemente.](./media/index/brushes-paint-elements.png)
 
@@ -119,7 +119,7 @@ Weitere Informationen finden Sie unter [Übersicht über WPF-Pinsel](wpf-brushes
 
 ## <a name="3-d-rendering"></a>3D-Rendering
 
-[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet eine Reihe von [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Renderingfunktionen, die mit [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] -grafikunterstützung in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] in der Reihenfolge zum Erstellen von Layout mit Ausrichtung von interessanteren [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], und die datenvisualisierung. Mit [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] können Sie sogar [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]-Bilder auf den Oberflächen von [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]-Formen rendern, was die folgende Abbildung veranschaulicht.
+[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] bietet eine Reihe von [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]-Renderingfunktionen, die in der [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]-Grafikunterstützung in [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] integriert sind, damit Sie Layout, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] und Datenvisualisierung noch ansprechender gestalten können. Mit [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] können Sie sogar [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]-Bilder auf den Oberflächen von [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]-Formen rendern, was die folgende Abbildung veranschaulicht.
 
 ![Screenshot eines Beispiels 3D-Formen mit unterschiedlichen Texturen anzeigen.](./media/index/visual-three-dimensional-shape.png)
 
@@ -170,6 +170,6 @@ Weitere Informationen finden Sie unter [Übersicht über Multimedia](multimedia-
 - [Übersicht über Formen und die grundlegenden Funktionen zum Zeichnen in WPF](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Übersicht über das Zeichnen mit Volltonfarben und Farbverläufen](painting-with-solid-colors-and-gradients-overview.md)
 - [Zeichnen mit Bildern, Zeichnungen und visuellen Elementen](painting-with-images-drawings-and-visuals.md)
-- [Gewusst-wie-Themen zu Animation und Zeitsteuerung](animation-and-timing-how-to-topics.md)
+- [Das Animations- und Zeitsteuerungssystem Gewusst-wie-Themen](animation-and-timing-how-to-topics.md)
 - [Übersicht über 3D-Grafiken](3-d-graphics-overview.md)
 - [Übersicht über Multimedia](multimedia-overview.md)

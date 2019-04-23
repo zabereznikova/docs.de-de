@@ -4,10 +4,10 @@ description: Neu bei C#? Lernen Sie die Grundlagen der Sprache kennen.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
 ms.openlocfilehash: c3a117d660c02702e900b827c2eed9c6b56b5606
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481092"
 ---
 # <a name="a-tour-of-the-c-language"></a>Überblick über C#
@@ -68,11 +68,11 @@ Es gibt noch viel mehr über C# zu erfahren.  Die folgenden Themen bieten eine �
 * [Schnittstellen](interfaces.md)
   - Eine ***Schnittstelle*** definiert einen Vertrag, der von Klassen und Strukturen implementiert werden kann. Eine Schnittstelle kann Methoden, Eigenschaften, Ereignisse und Indexer enthalten. Eine Schnittstelle stellt keine Implementierungen der von ihr definierten Member bereit. Sie gibt lediglich die Member an, die von Klassen oder Strukturen bereitgestellt werden müssen, die die Schnittstelle implementieren.
 * [Enumerationen](enums.md)
-  - Ein ***Enumerationstyp*** ist ein eindeutiger Werttyp mit einem Satz benannter Konstanten.
+  - Ein ***Enumerationstyp*** ist ein unverwechselbarer Werttyp mit einem Satz benannter Konstanten.
 * [Delegaten](delegates.md)
   - Ein ***Delegattyp*** stellt Verweise auf Methoden mit einer bestimmten Parameterliste und dem Rückgabetyp dar. Delegate ermöglichen die Behandlung von Methoden als Entitäten, die Variablen zugewiesen und als Parameter übergeben werden können. Delegate ähneln dem Konzept von Funktionszeigern, die Sie in einigen anderen Sprachen finden. Im Gegensatz zu Funktionszeigern sind Delegate allerdings objektorientiert und typsicher.
 * [Attribute](attributes.md)
   * ***Attribute*** ermöglichen Programmen das Angeben zusätzlicher deklarativer Informationen zu Typen, Member und andere Entitäten.
 
 > [!div class="step-by-step"]
-> [Weiter](program-structure.md)
+> [Nächste](program-structure.md)

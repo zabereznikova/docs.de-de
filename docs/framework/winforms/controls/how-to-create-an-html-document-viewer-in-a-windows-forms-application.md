@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
 ms.openlocfilehash: 99609e4bf5a352c436986e0773375d1c8e15e790
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340749"
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>Vorgehensweise: Erstellen eines HTML-Dokumentviewers in einer Windows Forms-Anwendung
@@ -45,5 +45,5 @@ Sie können die <xref:System.Windows.Forms.WebBrowser> Steuerelement zum Anzeige
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
 - [Übersicht über das WebBrowser-Steuerelement](webbrowser-control-overview.md)
 - [WebBrowser-Sicherheit](webbrowser-security.md)
-- [Vorgehensweise: Navigieren zu einem URL mit dem WebBrowser-Steuerelement](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Vorgehensweise: Drucken mit einem WebBrowser-Steuerelement](how-to-print-with-a-webbrowser-control.md)
+- [Vorgehensweise: Navigieren Sie zu einer URL mit dem WebBrowser-Steuerelement](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Vorgehensweise: Drucken Sie mit einem WebBrowser-Steuerelement](how-to-print-with-a-webbrowser-control.md)

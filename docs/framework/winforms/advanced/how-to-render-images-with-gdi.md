@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
 ms.openlocfilehash: e038da545bb3f56cc757710bcaa93aa2c86bfa67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342545"
 ---
 # <a name="how-to-render-images-with-gdi"></a>Vorgehensweise: Darstellen von Bildern mit GDI+
@@ -83,10 +83,10 @@ Sie können [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Erste Schritte mit der Grafikprogrammierung](getting-started-with-graphics-programming.md)
+- [Erste Schritte mit Grafikprogrammierung](getting-started-with-graphics-programming.md)
 - [Vorgehensweise: Erstellen von Grafikobjekten zum Zeichnen](how-to-create-graphics-objects-for-drawing.md)
 - [Stifte, Linien und Rechtecke in GDI+](pens-lines-and-rectangles-in-gdi.md)
-- [Vorgehensweise: Zeichnen von Text in einem Windows Form](how-to-draw-text-on-a-windows-form.md)
+- [Vorgehensweise: Zeichnen von Text in einem Windows Form](how-to-draw-text-on-a-windows-form.md)
 - [Grafik und Zeichnen in Windows Forms](graphics-and-drawing-in-windows-forms.md)
 - [Zeichnen von Linien oder geschlossenen Körpern](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
 - [Bildbearbeitung für Symbole](/cpp/windows/image-editor-for-icons)

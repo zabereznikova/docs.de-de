@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
 ms.openlocfilehash: 04597283a8ff2e21a0f227268671d3605eac6356
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343583"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms
@@ -92,7 +92,7 @@ Die meisten Formulare werden durch Hinzufügen der Steuerelemente auf die Oberfl
 ## <a name="see-also"></a>Siehe auch
 
 - [Windows Forms-Steuerelemente](index.md)
-- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
-- [Vorgehensweise: Ändern der Größe von Steuerelementen in Windows Forms](how-to-resize-controls-on-windows-forms.md)
-- [Vorgehensweise: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Textes](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
+- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
+- [Vorgehensweise: Größe von Steuerelementen in Windows Forms](how-to-resize-controls-on-windows-forms.md)
+- [Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)

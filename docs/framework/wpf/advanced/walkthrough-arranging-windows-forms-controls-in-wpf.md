@@ -9,10 +9,10 @@ helpviewer_keywords:
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
 ms.openlocfilehash: 5b759baebb7192c1ee94b4aa925198864ba7a31a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338773"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen in WPF
@@ -91,7 +91,7 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
   
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]  
   
-2. Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Button?displayProperty=nameWithType> Steuerelement angezeigt wird, der <xref:System.Windows.Controls.Canvas>. Das gehostete Steuerelement wird basierend auf den Inhalt, Größe und die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element wird angepasst, sodass das gehostete Steuerelement angepasst.  
+2. Drücken Sie F5, um die Anwendung zu erstellen und auszuführen. Die [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> Steuerelement angezeigt wird, der <xref:System.Windows.Controls.Canvas>. Das gehostete Steuerelement wird basierend auf den Inhalt, Größe und die <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element wird angepasst, sodass das gehostete Steuerelement angepasst.  
   
 ## <a name="sizing-to-content"></a>Anpassen der Größe an Inhalt  
  Die <xref:System.Windows.Forms.Integration.WindowsFormsHost> -Element stellt sicher, dass das gehostete Steuerelement angepasst wird, dass der Inhalt ordnungsgemäß angezeigt.  
@@ -263,5 +263,5 @@ Für diese exemplarische Vorgehensweise benötigen Sie Visual Studio.
 - [Entwerfen von XAML-Code in Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [Überlegungen zum Layout für das WindowsFormsHost-Element](layout-considerations-for-the-windowsformshost-element.md)
 - [Anordnen von Windows Forms-Steuerelementen in WPF-Beispiel](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten Windows Forms-Steuerelements in WPF](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [Exemplarische Vorgehensweise: Hosten eines zusammengesetzten WPF-Steuerelements in Windows Forms](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

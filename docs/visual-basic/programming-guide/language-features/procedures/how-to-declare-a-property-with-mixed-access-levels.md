@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
 ms.openlocfilehash: e899b57e02f492b0e4909aca84c069e5b7688618
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339813"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>Vorgehensweise: Deklarieren Sie eine Eigenschaft mit gemischten Zugriffsebenen (Visual Basic)
@@ -39,10 +39,10 @@ Wenn Sie möchten die `Get` und `Set` Prozeduren für eine Eigenschaft, um unter
 - [Verfahren](./index.md)
 - [Eigenschaftenprozeduren](./property-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
-- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property-Anweisung](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [Unterschiede zwischen Eigenschaften und Variablen in Visual Basic](./differences-between-properties-and-variables.md)
-- [Vorgehensweise: Erstellen einer Eigenschaft](./how-to-create-a-property.md)
+- [Vorgehensweise: Erstellen Sie eine Eigenschaft](./how-to-create-a-property.md)
 - [Vorgehensweise: Aufrufen einer Eigenschaftenprozedur](./how-to-call-a-property-procedure.md)
 - [Vorgehensweise: Deklarieren und Aufrufen einer Standardeigenschaft in Visual Basic](./how-to-declare-and-call-a-default-property.md)
-- [Vorgehensweise: Ablegen eines Werts in eine Eigenschaft](./how-to-put-a-value-in-a-property.md)
+- [Vorgehensweise: Das Ablegen eines Werts in einer Eigenschaft](./how-to-put-a-value-in-a-property.md)
 - [Vorgehensweise: Abrufen eines Werts aus einer Eigenschaft](./how-to-get-a-value-from-a-property.md)

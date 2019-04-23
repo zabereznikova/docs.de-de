@@ -13,10 +13,10 @@ ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 97b15ea2202ca410dd517db63a7145d27f62bb48
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338409"
 ---
 # <a name="impersonating-and-reverting"></a>Wechseln und Zurücksetzen der Identität
@@ -65,4 +65,4 @@ Es kann vorkommen, dass Sie das Token eines Windows-Kontos abrufen müssen, um d
 - <xref:System.Security.Principal.WindowsIdentity>
 - <xref:System.Security.Principal.WindowsImpersonationContext>
 - [Principal- und Identitätsobjekte](../../../docs/standard/security/principal-and-identity-objects.md)
-- [Interoperation mit nicht verwaltetem Code](../../../docs/framework/interop/index.md)
+- [Interoperabilität mit nicht verwaltetem Code](../../../docs/framework/interop/index.md)

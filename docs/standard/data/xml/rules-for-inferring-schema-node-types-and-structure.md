@@ -6,10 +6,10 @@ ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338708"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Regeln für Rückschlussschemaknotentypen und Struktur
@@ -149,7 +149,7 @@ In diesem Thema wird beschrieben, wie der Schemarückschlussprozess die in einem
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Xml.Schema.XmlSchemaInference>
-- [XML-Schemaobjektmodell (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [XML Schema Object Model (SOM) (XML-Schemaobjektmodell (SOM))](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
 - [Herleiten eines XML-Schemas](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
-- [Herleiten von Schemata aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
+- [Herleiten von Schemas aus XML-Dokumenten](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
 - [Regeln zum Herleiten einfacher Typen](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
