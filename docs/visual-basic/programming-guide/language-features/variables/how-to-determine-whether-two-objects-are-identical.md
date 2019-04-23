@@ -7,10 +7,10 @@ helpviewer_keywords:
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
 ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295034"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Vorgehensweise: Zu bestimmen, ob zwei Objekte identisch (Visual Basic)
@@ -52,10 +52,10 @@ In Visual Basic sind Verweise auf zwei Variablen als identisch, wenn deren Zeige
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object-Datentyp](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Werte von Objektvariablen](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
 - [Is-Operator](../../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot-Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Vorgehensweise: Bestimmen des Bezugs zwischen zwei Objekten](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [Vorgehensweise: Bestimmen Sie, ob zwei Objekte verknüpft sind](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
 - [Me, My, MyBase und MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

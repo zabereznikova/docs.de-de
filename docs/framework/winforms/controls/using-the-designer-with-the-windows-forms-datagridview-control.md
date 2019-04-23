@@ -7,44 +7,44 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: b66057a6-5983-4864-b4e7-8cbc88a7010c
 ms.openlocfilehash: daac7dca27ac5dca8df4db24c9a3e22dae831377
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59231473"
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Verwenden des Designers mit dem DataGridView-Steuerelement in Windows Forms
 Visual Studio bietet die Designer-Unterstützung für die `DataGridView` -Steuerelement, das Ihnen ermöglicht, viele Setupaufgaben auszuführen, ohne Code zu schreiben. Dazu gehören die Bindung, die das Steuerelement an eine Datenquelle, und Ändern von Spalten zum Anzeigen von Daten verwendet und Anpassen der Darstellung und das grundlegende Verhalten des Steuerelements.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Vorgehensweise: Hinzufügen und Entfernen von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers](add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
+ [Vorgehensweise: Hinzufügen und Entfernen von Spalten in der DataGridView-Steuerelement in Windows Forms mithilfe des Designers](add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
  Beschreibt, wie die **Add Columns** und **Spalten bearbeiten** Dialogfelder zum Auffüllen und die Auflistung der Spalten zu ändern.  
   
  [Vorgehensweise: Binden von Daten an das DataGridView-Steuerelement in Windows Forms mithilfe des Designers](bind-data-to-the-datagrid-using-the-designer.md)  
  Beschreibt, wie die **Datenquelle auswählen** Option smart Tag des Steuerelements mit Daten herstellen.  
   
- [Vorgehensweise: Ändern der Reihenfolge von Spalten des DataGridView-Steuerelements in Windows Forms mithilfe des Designers](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)  
+ [Vorgehensweise: Ändern der Reihenfolge der Spalten in der DataGridView-Steuerelement in Windows Forms mithilfe des Designers](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)  
  Beschreibt, wie die **Spalten bearbeiten** Dialogfeld, um Spalten neu anordnen.  
   
  [Vorgehensweise: Ändern des Typs einer DataGridView-Spalte in Windows Forms mithilfe des Designers](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)  
  Beschreibt, wie die **Spalten bearbeiten** Dialogfelds Spaltentypen zu ändern.  
   
- [Vorgehensweise: Aktivieren der Neuanordnung von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers](enable-column-reordering-in-the-datagrid-using-the-designer.md)  
+ [Vorgehensweise: Aktivieren der Neuanordnung von Spalten in der DataGridView-Steuerelement in Windows Forms mithilfe des Designers](enable-column-reordering-in-the-datagrid-using-the-designer.md)  
  Beschreibt, wie smart Tag des Steuerelements verwendet wird, damit Benutzer auf die Spalten neu anordnen können.  
   
- [Vorgehensweise: Fixieren von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers](freeze-columns-in-the-datagrid-using-the-designer.md)  
+ [Vorgehensweise: Einfrieren von Spalten in der DataGridView-Steuerelement in Windows Forms mithilfe des Designers](freeze-columns-in-the-datagrid-using-the-designer.md)  
  Beschreibt, wie die **Spalten bearbeiten** Dialogfeld, um zu verhindern, dass bestimmte Spalten scrollen.  
   
- [Vorgehensweise: Ausblenden von Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers](hide-columns-in-the-datagrid-using-the-designer.md)  
+ [Vorgehensweise: Ausblenden von Spalten in der DataGridView-Steuerelement in Windows Forms mithilfe des Designers](hide-columns-in-the-datagrid-using-the-designer.md)  
  Beschreibt, wie die **Spalten bearbeiten** im Dialogfeld, um bestimmte Spalten auszublenden.  
   
- [Vorgehensweise: Festlegen von schreibgeschützten Spalten im DataGridView-Steuerelement in Windows Forms mithilfe des Designers](make-columns-read-only-in-the-datagrid-using-the-designer.md)  
+ [Vorgehensweise: Stellen Sie Spalten aus, in das DataGridView-Steuerelement in Windows Forms mithilfe des Designers schreibgeschützt](make-columns-read-only-in-the-datagrid-using-the-designer.md)  
  Beschreibt, wie die **Spalten bearbeiten** Dialogfeld, um zu verhindern, dass Benutzer bearbeiten Werte in bestimmte Spalten.  
   
- [Vorgehensweise: Verhindern des Hinzufügens und Löschens von Zeilen im DataGridView-Steuerelement in Windows Forms mithilfe des Designers](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)  
+ [Vorgehensweise: Zu verhindern, dass Hinzufügens und Löschens in das DataGridView-Steuerelement in Windows Forms mithilfe des Designers](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)  
  Beschreibt das Smarttag des Steuerelements zu verwenden, um zu verhindern, dass Benutzer hinzufügen oder Löschen von Zeilen.  
   
- [Vorgehensweise: Festlegen von abwechselnden Zeilenstilen für das Windows Forms-Steuerelement DataGridView mithilfe des Designers](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)  
+ [Vorgehensweise: Festlegen von abwechselnden Zeilenstilen für das DataGridView-Steuerelement in Windows Forms mithilfe des Designers](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)  
  Beschreibt, wie die **CellStyle-Generator** im Dialogfeld eine Ledger Darstellung im Steuerelement zu erstellen.  
   
  [Vorgehensweise: Festlegen von standardmäßigen Zellenstilen und Datenformaten für das DataGridView-Steuerelement in Windows Forms mithilfe des Designers](default-cell-styles-datagridview.md)  

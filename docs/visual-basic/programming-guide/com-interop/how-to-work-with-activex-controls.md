@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
 ms.openlocfilehash: 5950779e1f0d1e76b933b83135a8bf516161aced
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295080"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Vorgehensweise: Arbeiten Sie mit ActiveX-Steuerelemente (Visual Basic)
@@ -33,7 +33,7 @@ ActiveX-Steuerelemente sind COM-Komponenten oder Objekte, die Sie einfügen kön
 ## <a name="see-also"></a>Siehe auch
 
 - [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Vorgehensweise: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
+- [Vorgehensweise: Hinzufügen von ActiveX-Steuerelemente zu Windows Forms](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)
 - [Aximp.exe (Windows Forms ActiveX Control Importer-Tool)](../../../framework/tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [Aspekte beim Hosten eines ActiveX-Steuerelements in Windows Forms](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)
-- [Fehlerbehandlung bei der Interoperabilität](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [Problembehandlung bei der Interoperabilität](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

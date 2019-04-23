@@ -11,10 +11,10 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
 ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227112"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox-Steuerelement (Windows Forms)
@@ -28,13 +28,13 @@ Die Windows-Formulare `ComboBox` Steuerelement zur Anzeige von Daten in einem Dr
  Veranschaulicht das benutzerdefinierte Zeichnen von Text in einem `ComboBox` Steuerelement.  
   
 ## <a name="reference"></a>Referenz  
- <xref:System.Windows.Forms.ComboBox> Klasse  
+ <xref:System.Windows.Forms.ComboBox>-Klasse  
  Beschreibt diese Klasse und enthält Links zu allen deren Membern.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Steuerelemente in Windows Forms zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)  
+ [Windows Forms-Steuerelemente zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)  
  Enthält eine Liste der Dinge, die mit Listenfeldern, Kombinationsfeldern und aktivierten möglich.  
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)

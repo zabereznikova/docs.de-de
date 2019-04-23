@@ -9,10 +9,10 @@ helpviewer_keywords:
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
 ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230654"
 ---
 # <a name="graphics-how-to-topics"></a>Gewusst-wie-Themen zu Grafiken
@@ -20,7 +20,7 @@ In den folgenden Themen veranschaulichen, wie die Grafiken Funktionen des die [!
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Animieren eines Rechtecks](how-to-animate-a-rectangle.md)  
- [Animieren der Position eines Objekts mithilfe von PointAnimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [Animieren der Position eines Objekts mit Punktanimation](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
  [Transformieren von Punkten und Vektoren](how-to-transform-points-and-vectors.md)  
  [Erweitern von Glasframe in eine WPF-Anwendung](extend-glass-frame-into-a-wpf-application.md)  
  [Vorgehensweise: Verbessern der Renderingleistung durch Zwischenspeichern eines Elements](how-to-improve-rendering-performance-by-caching-an-element.md)  

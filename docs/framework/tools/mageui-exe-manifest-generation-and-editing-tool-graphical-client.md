@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 7b0135e4fc655b0efc3140e388f75ac8f45193cf
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 029e4983ef270bb5272ad0bf541ee34febd9399c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222340"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Tool zum Generieren und Bearbeiten von Manifesten, grafischer Client)
 
@@ -36,7 +36,7 @@ ms.locfileid: "56219762"
 |**Speichern unter**|**Datei**||Speichert eine Datei auf einen Datenträger unter Angabe eines neues Dateinamens und/oder Speicherorts.|  
 |**Alle speichern**|**Datei**||Speichert die an allen in "MageUI.exe" geöffneten Dateien vorgenommenen Änderungen.|  
 |**Einstellungen**|**Datei**||Öffnet das Dialogfeld **Einstellungen**. Weitere Informationen finden Sie in folgendem Abschnitt.|  
-|**Beenden**|**Datei**|ALT+F4|Beendet "MageUI.exe".|  
+|**Schließen**|**Datei**|ALT+F4|Beendet "MageUI.exe".|  
 |**Ausschneiden**|**Bearbeiten**|STRG+X|Entfernt den momentan markierten Text aus der Anwendung und verschiebt ihn in die Zwischenablage des Systems.|  
 |**Kopieren**|**Bearbeiten**|STRG+C|Kopiert den aktuell ausgewählten Text in die Zwischenablage des Systems.|  
 |**Einfügen**|**Bearbeiten**|STRG+V|Fügt den Text aus der Zwischenablage des Systems in das momentan aktive Textelement ein.|  
@@ -79,7 +79,7 @@ ms.locfileid: "56219762"
   
 |Benutzeroberflächenelement|Beschreibung|  
 |----------------|-----------------|  
-|**Name**|Gibt bezeichnende Informationen zur Bereitstellung an.|  
+|**name**|Gibt bezeichnende Informationen zur Bereitstellung an.|  
 |**Beschreibung**|Gibt Herausgeber-, Produkt- und Supportinformationen an.|  
 |**Anwendungsoptionen**|Gibt an, ob dies eine Browseranwendung und das Manifest die Quelle der vertrauenswürdigen Informationen ist.|  
 |**Dateien**|Gibt alle Dateien an, aus denen die Bereitstellung besteht.|  
@@ -90,11 +90,11 @@ ms.locfileid: "56219762"
   
 |Benutzeroberflächenelement|Beschreibung|  
 |----------------|-----------------|  
-|**Name**|Erforderlich. Der Name des Anwendungsmanifests. In der Regel identisch mit dem Dateinamen.|  
+|**name**|Erforderlich. Der Name des Anwendungsmanifests. In der Regel identisch mit dem Dateinamen.|  
 |**Version**|Erforderlich. Die Versionsnummer der Bereitstellung im Format *N.N.N.N*. Nur die erste Hauptbuildnummer ist erforderlich. Für Version 1.0 einer Anwendung sind z.B.`1`, `1.0`, `1.0.0` und `1.0.0.0` gültige Werte.|  
 |**Prozessor**|Dies ist optional. Die Computerarchitektur, auf der diese Bereitstellung ausgeführt werden kann. Der Standardwert ist `msil` oder Microsoft Intermediate Language, das Standardformat für alle verwalteten Assemblys. Ändern Sie dieses Feld, wenn Sie die Assemblys in der Anwendung für eine bestimmte Architektur vorkompiliert haben. Weitere Informationen zur Vorkompilierung finden Sie unter [Ngen.exe (Native Image Generator)](../../../docs/framework/tools/ngen-exe-native-image-generator.md).|  
-|**Kultur**|Dies ist optional. Der zweiteilige ISO-Land- und Regionscode, in dem die Anwendung ausgeführt wird. Die Standardeinstellung ist `neutral`.|  
-|**Öffentliches Schlüsseltoken**|Optional. Der öffentliche Schlüssel, mit dem dieses Anwendungsmanifest signiert wurde. Wenn es sich um ein neues oder unsigniertes Manifest handelt, wird dieses Feld als `Unsigned` angezeigt.|  
+|**culture**|Dies ist optional. Der zweiteilige ISO-Land- und Regionscode, in dem die Anwendung ausgeführt wird. Die Standardeinstellung ist `neutral`.|  
+|**Öffentliches Schlüsseltoken**|Dies ist optional. Der öffentliche Schlüssel, mit dem dieses Anwendungsmanifest signiert wurde. Wenn es sich um ein neues oder unsigniertes Manifest handelt, wird dieses Feld als `Unsigned` angezeigt.|  
   
 ### <a name="description-tab"></a>Registerkarte "Beschreibung"  
  Diese Informationen werden normalerweise im Bereitstellungsmanifest bereitgestellt. Diese Felder können nur geändert werden, wenn das Kontrollkästchen **Anwendungsmanifest für Vertrauensinformationen verwenden** auf der Registerkarte **Anwendungsoptionen** aktiviert ist.  
@@ -136,7 +136,7 @@ ms.locfileid: "56219762"
   
 |Benutzeroberflächenelement|Beschreibung|  
 |----------------|-----------------|  
-|**Name**|Gibt bezeichnende Informationen zur Bereitstellung an.|  
+|**name**|Gibt bezeichnende Informationen zur Bereitstellung an.|  
 |**Beschreibung**|Gibt Herausgeber-, Produkt- und Supportinformationen an.|  
 |**Bereitstellungsoptionen**|Gibt zusätzliche Informationen zur Bereitstellung an, z. B. den Anwendungstyp und die Startposition.|  
 |**Aktualisierungsoptionen**|Gibt an, wie oft [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] nach Anwendungsupdates suchen soll.|  
@@ -147,10 +147,10 @@ ms.locfileid: "56219762"
   
 |Benutzeroberflächenelement|Beschreibung|  
 |----------------|-----------------|  
-|**Name**|Erforderlich. Der Namen des Bereitstellungsmanifests. In der Regel identisch mit dem Dateinamen.|  
+|**name**|Erforderlich. Der Namen des Bereitstellungsmanifests. In der Regel identisch mit dem Dateinamen.|  
 |**Version**|Erforderlich. Die Versionsnummer der Bereitstellung im Format *N.N.N.N*. Nur die erste Hauptbuildnummer ist erforderlich. Für Version 1.0 einer Anwendung sind z.B.`1`, `1.0`, `1.0.0` und `1.0.0.0` gültige Werte.|  
 |**Prozessor**|Dies ist optional. Die Computerarchitektur, auf der diese Bereitstellung ausgeführt werden kann. Der Standardwert ist `msil` oder Microsoft Intermediate Language, das Standardformat für alle verwalteten Assemblys. Ändern Sie dieses Feld, wenn Sie die Assemblys in der Anwendung für eine bestimmte Architektur kompiliert haben.|  
-|**Kultur**|Dies ist optional. Der zweiteilige ISO-Land-/Regionscode, in dem die Anwendung ausgeführt wird. Die Standardeinstellung ist `neutral`.|  
+|**culture**|Dies ist optional. Der zweiteilige ISO-Land-/Regionscode, in dem die Anwendung ausgeführt wird. Die Standardeinstellung ist `neutral`.|  
 |**Öffentliches Schlüsseltoken**|Dies ist optional. Der öffentliche Schlüssel, mit dem dieses Bereitstellungsmanifest signiert wurde. Wenn es sich um ein neues oder unsigniertes Manifest handelt, wird dieses Feld als `Unsigned` angezeigt.|  
   
 ### <a name="description-tab"></a>Registerkarte "Beschreibung"  
@@ -191,6 +191,7 @@ ms.locfileid: "56219762"
 |**Manifest auswählen**|Ermöglicht Ihnen die Auswahl des Anwendungsmanifests. Alle anderen Felder auf dieser Seite werden aufgefüllt, wenn Sie ein Anwendungsmanifest auswählen.|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [ClickOnce-Sicherheit und Bereitstellung](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Exemplarische Vorgehensweise: Manuelles Bereitstellen einer ClickOnce-Anwendung](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [Mage.exe (Tool zum Generieren und Bearbeiten von Manifesten)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)

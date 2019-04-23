@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228587"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importieren von Schemas zum Generieren von Klassen
@@ -52,7 +52,7 @@ Verwenden Sie zum Generieren von Klassen aus Schemas, die mit Windows Communicat
   
  Normalerweise werden öffentliche Typen aus Schemas generiert, indem private Felder und passende Eigenschaften öffentlicher Datenmember verwendet werden. Wenn Sie stattdessen interne Typen generieren möchten, legen Sie die <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A>-Eigenschaft auf `true` fest.  
   
- Das folgende Beispiel zeigt ein Schema transformiert, die in eine interne Klasse an, wenn die <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> Eigenschaft auf festgelegt ist `true.`  
+ Das folgende Beispiel zeigt ein Schema, das in eine interne Klasse umgewandelt wird, wenn die <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A>-Eigenschaft auf `true.` festgelegt ist.  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
@@ -175,9 +175,9 @@ Verwenden Sie zum Generieren von Klassen aus Schemas, die mit Windows Communicat
 #### <a name="import-options-advanced-options"></a>Importoptionen: Erweiterte Optionen  
  Bei den folgenden Optionen handelt es sich um erweiterte Importoptionen:  
   
--   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> -Eigenschaft veranschaulicht. Geben Sie den <xref:System.CodeDom.Compiler.CodeDomProvider> an, der verwendet werden soll, um den Code für die generierten Klassen zu generieren. Der Importmechanismus versucht, Funktionen zu vermeiden, die der <xref:System.CodeDom.Compiler.CodeDomProvider> nicht unterstützt. Wenn der <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> nicht festgelegt wird, wird der gesamte Satz an [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Funktionen ohne Einschränkungen verwendet.  
+-   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>-Eigenschaft. Geben Sie den <xref:System.CodeDom.Compiler.CodeDomProvider> an, der verwendet werden soll, um den Code für die generierten Klassen zu generieren. Der Importmechanismus versucht, Funktionen zu vermeiden, die der <xref:System.CodeDom.Compiler.CodeDomProvider> nicht unterstützt. Wenn der <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> nicht festgelegt wird, wird der gesamte Satz an [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-Funktionen ohne Einschränkungen verwendet.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> -Eigenschaft veranschaulicht. Mit dieser Eigenschaft können Sie eine <xref:System.Runtime.Serialization.IDataContractSurrogate>-Implementierung angeben. <xref:System.Runtime.Serialization.IDataContractSurrogate> passt den Importprozess an. Weitere Informationen finden Sie unter [Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Standardmäßig wird kein Ersatzzeichen verwendet.  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>-Eigenschaft. Mit dieser Eigenschaft können Sie eine <xref:System.Runtime.Serialization.IDataContractSurrogate>-Implementierung angeben. <xref:System.Runtime.Serialization.IDataContractSurrogate> passt den Importprozess an. Weitere Informationen finden Sie unter [Datenvertrag-Ersatzzeichen](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Standardmäßig wird kein Ersatzzeichen verwendet.  
   
 ## <a name="see-also"></a>Siehe auch
 

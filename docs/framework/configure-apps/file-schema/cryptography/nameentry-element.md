@@ -1,5 +1,5 @@
 ---
-title: <nameEntry> Element
+title: <nameEntry>-Element
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#nameEntry
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59225325"
 ---
 # <a name="nameentry-element"></a>\<NameEntry >-Element
@@ -37,8 +37,8 @@ Ordnet einen Klassennamen dem Anzeigenamen eines Algorithmus zu. Dadurch kann ei
   
 |Attribut|Beschreibung|  
 |---------------|-----------------|  
-|**Name**|Erforderliches Attribut.<br /><br /> Gibt den Anzeigenamen des Algorithmus, den die Kryptografieklasse implementiert.|  
-|**Klasse**|Erforderliches Attribut.<br /><br /> Gibt den Wert für die **Namen** -Attribut in der [ \<CryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) Element.|  
+|**name**|Erforderliches Attribut.<br /><br /> Gibt den Anzeigenamen des Algorithmus, den die Kryptografieklasse implementiert.|  
+|**class**|Erforderliches Attribut.<br /><br /> Gibt den Wert für die **Namen** -Attribut in der [ \<CryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) Element.|  
   
 ### <a name="child-elements"></a>Untergeordnete Elemente  
  Keine  
@@ -78,6 +78,6 @@ Ordnet einen Klassennamen dem Anzeigenamen eines Algorithmus zu. Dadurch kann ei
 ## <a name="see-also"></a>Siehe auch
 
 - [Konfigurationsdateischema](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [Schema für Kryptografieeinstellungen](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Kryptografische Dienste](../../../../../docs/standard/security/cryptographic-services.md)
+- [Cryptography Settings Schema (Schema für Kryptografieeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [Konfigurieren kryptografischer Klassen](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

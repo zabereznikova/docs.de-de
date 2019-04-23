@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224922"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>Übersicht über Markuperweiterungen für XAML
@@ -25,19 +25,19 @@ Bei Markuperweiterungen handelt es sich um eine XAML-Technik für das Abrufen ei
 >  Das Präfix `x:` wird für die typische XAML-Namespacezuordnung des XAML-Sprachnamespace im Stammelement einer XAML-Produktion verwendet. Beispielsweise initiieren die Visual Studio-Projekt- und-Seitenvorlagen für verschiedene spezifische Frameworks eine XAML-Datei, die mithilfe dieser `x:` Zuordnung. Sie können ein anderes Präfixtoken in Ihrer XAML-Namespacezuordnung auswählen. In dieser Dokumentation wird jedoch von der standardmäßigen `x:` -Zuordnung im Zuge der Ermittlung dieser Entitäten ausgegangen, die im Gegensatz zum standardmäßigen XAML-Namespace eines bestimmten Frameworks oder anderer willkürlicher CLR- oder XML-Namespaces ein definierter Bestandteil des XAML-Sprachennamespace sind.  
   
 ### <a name="xtype"></a>x:Type  
- `x:Type` Stellt die <xref:System.Type> Objekt für den benannten Typ. Diese Funktionalität wird am häufigsten in Mechanismen mit Verzögerungen verwendet, die einen zugrunde liegenden CLR-Typ und eine Typenableitung als Gruppierungsmoniker oder Bezeichner verwenden. WPF-Style und -Vorlagen und deren Verwendung von `TargetType` -Eigenschaften sind ein bestimmtes Beispiel. Weitere Informationen finden Sie unter [x:Type Markup Extension](x-type-markup-extension.md).  
+ `x:Type` stellt das <xref:System.Type> -Objekt für den benannten Typ bereit. Diese Funktionalität wird am häufigsten in Mechanismen mit Verzögerungen verwendet, die einen zugrunde liegenden CLR-Typ und eine Typenableitung als Gruppierungsmoniker oder Bezeichner verwenden. WPF-Style und -Vorlagen und deren Verwendung von `TargetType` -Eigenschaften sind ein bestimmtes Beispiel. Weitere Informationen finden Sie unter [x:Type Markup Extension](x-type-markup-extension.md).  
   
 ### <a name="xstatic"></a>x:Static  
- `x:Static` erzeugt statische Werte aus Wert-Typ-Codeentitäten, die nicht direkt der Typ des Werts einer Eigenschaft, jedoch in diesen Typ ausgewertet werden können. Dies ist hilfreich für das Angeben von Werten, die bereits als bekannte Konstanten in einer Typendefinition vorhanden sind. Weitere Informationen finden Sie unter [x:Static Markup Extension](x-static-markup-extension.md).  
+ `x:Static` generiert statische Werte aus Werttypecode-Entitäten, die nicht direkt der Typ des Werts einer Eigenschaft sind, jedoch zu diesem Typ ausgewertet werden können. Dies ist hilfreich für das Angeben von Werten, die bereits als bekannte Konstanten in einer Typendefinition vorhanden sind. Weitere Informationen finden Sie unter [x:Static Markup Extension](x-static-markup-extension.md).  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` Gibt an, `null` als Wert für ein XAML-Element. In Abhängigkeit des Designs von bestimmten Typen oder größerer Frameworkkonzepte ist `null` nicht immer ein Standardwert für eine Eigenschaft oder der implizierte Wert eines leeren Zeichenfolgenattributs. Weitere Informationen finden Sie unter [x:Null Markup Extension](x-null-markup-extension.md).  
+ `x:Null` gibt `null` als einen Wert für ein XAML-Member an. In Abhängigkeit des Designs von bestimmten Typen oder größerer Frameworkkonzepte ist `null` nicht immer ein Standardwert für eine Eigenschaft oder der implizierte Wert eines leeren Zeichenfolgenattributs. Weitere Informationen finden Sie unter [x:Null Markup Extension](x-null-markup-extension.md).  
   
 ### <a name="xarray"></a>x:Array  
- `x:Array` unterstützt die Erstellung von allgemeinen Arrays in XAML-Syntax in Fällen, in der die durch Basiselemente und Steuerelementmodelle bereitgestellte auflistungsunterstützung nicht absichtlich verwendet wird. Weitere Informationen finden Sie unter [x:Array Markup Extension](x-array-markup-extension.md). Insbesondere in XAML 2009 erfolgt der Zugriff auf Arrays als Sprachprimitive und nicht im Sinne einer Erweiterung. Weitere Informationen finden Sie unter [XAML 2009 Language Features](xaml-2009-language-features.md).  
+ `x:Array` unterstützt das Erstellen von allgemeinen Arrays in einer XAML-Syntax in Fällen, wo die durch Basiselemente und Steuerelementmodelle bereitgestellte Auflistungsunterstützung nicht absichtlich verwendet wird. Weitere Informationen finden Sie unter [x:Array Markup Extension](x-array-markup-extension.md). Insbesondere in XAML 2009 erfolgt der Zugriff auf Arrays als Sprachprimitive und nicht im Sinne einer Erweiterung. Weitere Informationen finden Sie unter [XAML 2009 Language Features](xaml-2009-language-features.md).  
   
 ### <a name="xreference"></a>x:Reference  
- `x:Reference` ist Bestandteil von XAML 2009. hierbei, eine Erweiterung des ursprünglichen (2006) Sprachsatzes. `x:Reference` Stellt einen Verweis auf ein anderes vorhandenes Objekt in einem Objektdiagramm. Dieses Objekt wird anhand seiner `x:Name`bestimmt. Weitere Informationen finden Sie unter [x:Reference Markup Extension](x-reference-markup-extension.md).  
+ `x:Reference` ist ein Bestandteil von XAML 2009. Hierbei handelt es sich um eine Erweiterung des ursprünglichen (2006) Sprachsatzes. `x:Reference` repräsentiert einen Verweis auf ein anderes vorhandenes Objekt in einem Objektdiagramm. Dieses Objekt wird anhand seiner `x:Name`bestimmt. Weitere Informationen finden Sie unter [x:Reference Markup Extension](x-reference-markup-extension.md).  
   
 ### <a name="other-x-constructs"></a>Andere x: Erstellt  
  Es sind weitere `x:` -Konstrukte für die Unterstützung von XAML-Sprachfeatures vorhanden. Diese sind jedoch nicht als Markuperweiterungen implementiert. Weitere Informationen finden Sie unter [XAML-Namespace (x:)) Sprachfunktionen](xaml-namespace-x-language-features.md).  
@@ -122,7 +122,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="attributing-for-a-custom-markup-extension"></a>Attributierung für eine benutzerdefinierte Markuperweiterung  
  Zum Unterstützen von Entwurfsumgebungen und bestimmten XAML-Objekt-Writer-Szenarien sollten Sie einen Markup-Erweiterungsunterstützungstyp mit verschiedenen CLR-Attributen mit Attributen versehen. Diese Attribute melden die vorgesehene Markuperweiterungsverwendung.  
   
- <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> Berichte der <xref:System.Type> Typinformationen für das Objekt, das <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> zurückgibt. Anhand seiner reinen Signatur gibt <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> <xref:System.Object>zurück. Verschiedene Verbraucher benötigen möglicherweise genauere Rückgabetypinformationen. Dies umfasst Folgendes:  
+ <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> meldet die <xref:System.Type> -Informationen für den Objekttyp, den <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> zurückgibt. Anhand seiner reinen Signatur gibt <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> <xref:System.Object>zurück. Verschiedene Verbraucher benötigen möglicherweise genauere Rückgabetypinformationen. Dies umfasst Folgendes:  
   
 -   Designer und IDEs, die möglicherweise in der Lage sind, eine typenkompatible Unterstützung für Markuperweiterungsverwendungen bereitzustellen.  
   
@@ -138,9 +138,9 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  Wenn die Markuperweiterungsverwendung Positionsargumente verwendet, wird sie als ein Startobjekt mit einem Initialisierungswert repräsentiert. Als grobe Textdarstellung ähnelt der Knotenstream Folgendem:  
   
- `StartObject` (<xref:System.Xaml.XamlType> der Markuperweiterung Definition Typ ist, nicht dessen Rückgabetyp)  
+ `StartObject` (<xref:System.Xaml.XamlType> ist der Definitionstyp der Markuperweiterung und nicht dessen Rückgabetyp)  
   
- `StartMember` (der Name der <xref:System.Xaml.XamlMember> ist `_InitializationText`)  
+ `StartMember` (der Name von <xref:System.Xaml.XamlMember> lautet `_InitializationText`)  
   
  `Value` (Wert entspricht den Positionsargumenten als eine Zeichenfolge, einschließlich der Trennzeichen)  
   

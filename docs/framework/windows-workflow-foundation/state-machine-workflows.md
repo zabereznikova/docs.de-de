@@ -3,10 +3,10 @@ title: Zustandsautomatworkflows
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222990"
 ---
 # <a name="state-machine-workflows"></a>Zustandsautomatworkflows
@@ -102,8 +102,8 @@ Ein Zustandsautomat ist ein bekanntes Paradigma zum Entwickeln von Anwendungen. 
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Erstellen eines Zustandsautomatworkflows](how-to-create-a-state-machine-workflow.md)
-- [StateMachine-Aktivitäts-Designer](/visualstudio/workflow-designer/statemachine-activity-designer)
-- [Zustandsaktivitäts-Designer](/visualstudio/workflow-designer/state-activity-designer)
-- [FinalState-Aktivitäts-Designer](/visualstudio/workflow-designer/finalstate-activity-designer)
+- [Vorgehensweise: Erstellen eines Zustandsautomatenworkflows](how-to-create-a-state-machine-workflow.md)
+- [StateMachine-Aktivitätsdesigner](/visualstudio/workflow-designer/statemachine-activity-designer)
+- [Zustands-Aktivitätsdesigner](/visualstudio/workflow-designer/state-activity-designer)
+- [FinalState-Aktivitätsdesigner](/visualstudio/workflow-designer/finalstate-activity-designer)
 - [Übergangsaktivitäts-Designer](/visualstudio/workflow-designer/transition-activity-designer)

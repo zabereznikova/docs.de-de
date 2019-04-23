@@ -8,10 +8,10 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294924"
 ---
 # <a name="white-space-processing-in-xaml"></a>Leerstellenverarbeitung in XAML
@@ -76,6 +76,6 @@ Gemäß den Sprachregeln für XAML Status, signifikante Leerraum verarbeitet wer
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Übersicht über die XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [Übersicht über XAML (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [XML-Zeichenentitäten und XAML](xml-character-entities-and-xaml.md)
 - [XML: space-Behandlung in XAML](xml-space-handling-in-xaml.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
 ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295769"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Struktur von Visual Basic-Programmen
@@ -47,9 +47,9 @@ Visual Basic-Programms wird von den Standardbausteinen entwickelt. Ein *Lösung*
 ## <a name="namespace-level-programming-elements"></a>Namespace-Ebene Programmierelemente  
  Klassen, Strukturen und -Module enthalten alle den Code in der Quelldatei. Sie sind *auf Namespace-Ebene* -Elemente, die in einem Namespace oder auf der Ebene der Quelldatei angezeigt werden können. Sie enthalten die Deklarationen der anderen Programmierungselementen. Schnittstellen, die Elementsignaturen zu definieren, aber keine Implementierung bereitstellen, werden auch auf Modulebene angezeigt. Weitere Informationen zu den Elementen auf Modulebene finden Sie in der folgenden:  
   
--   [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md)  
+-   [Class-Anweisung](../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md)  
+-   [Structure-Anweisung](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
 -   [Module-Anweisung](../../../visual-basic/language-reference/statements/module-statement.md)  
   
@@ -64,11 +64,11 @@ Visual Basic-Programms wird von den Standardbausteinen entwickelt. Ein *Lösung*
   
 -   [Sub-Anweisung](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [Declare-Anweisung](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
+-   [Operator-Anweisung](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property-Anweisung](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 -   [Event-Anweisung](../../../visual-basic/language-reference/statements/event-statement.md)  
   
@@ -95,5 +95,5 @@ Visual Basic-Programms wird von den Standardbausteinen entwickelt. Ein *Lösung*
 ## <a name="see-also"></a>Siehe auch
 
 - [Main-Prozedur in Visual Basic](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
-- [Benennungskonventionen in Visual Basic](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-- [Beschränkungen in Visual Basic](../../../visual-basic/programming-guide/program-structure/limitations.md)
+- [Visual Basic-Benennungskonventionen](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Beschränkungen in Visual Basic](../../../visual-basic/programming-guide/program-structure/limitations.md)

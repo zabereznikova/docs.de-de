@@ -3,10 +3,10 @@ title: Attributbasiertes Zuordnen
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
 ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223562"
 ---
 # <a name="attribute-based-mapping"></a>Attributbasiertes Zuordnen
@@ -26,12 +26,12 @@ ms.locfileid: "59223562"
   
 |Eigenschaft|Typ|Standard|Beschreibung|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Zeichenfolge|Siehe <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Gibt in Verbindung mit seiner <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>-Eigenschaft den Namen der Datenbank an.|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Zeichenfolge|Siehe <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>.|Gibt in Verbindung mit seiner <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>-Eigenschaft den Namen der Datenbank an.|  
   
  Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.DatabaseAttribute>.  
   
 ## <a name="tableattribute-attribute"></a>TableAttribute-Attribut  
- Verwenden Sie dieses Attribut, um eine Klasse als Entität zu kennzeichnen, die einer Datenbanktabelle oder einer Ansicht zugeordnet ist. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] behandelt Klassen, die dieses Attribut als permanente Klassen verfügen. In der folgenden Tabelle wird die <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>-Eigenschaft beschrieben.  
+ Verwenden Sie dieses Attribut, um eine Klasse als Entität zu kennzeichnen, die einer Datenbanktabelle oder einer Ansicht zugeordnet ist. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] behandelt Klassen, die über dieses Attribut als permanente Klassen verfügen. In der folgenden Tabelle wird die <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A>-Eigenschaft beschrieben.  
   
 |Eigenschaft|Typ|Standard|Beschreibung|  
 |--------------|----------|-------------|-----------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "59223562"
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolesch|`false`|Gibt an, dass die Spalte einen Diskriminatorwert für eine [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Vererbungshierarchie enthält.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolesch|`false`|Legt fest, dass dieser Klassenmember eine Spalte darstellt, die zu den Primärschlüsseln der Tabelle zählt oder ein Teil davon ist.|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolesch|`false`|Identifiziert den Spaltentyp des Members als Datenbank-Timestamp oder Versionsnummer.|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, es sei denn, <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> ist `true` für ein Element|Gibt an, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] der Erkennung von Konflikten bei der vollständigen Parallelität handhabt.|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`, außer wenn <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>`true` für einen Member ist|Gibt an, wie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] der Erkennung von Konflikten bei der vollständigen Parallelität handhabt.|  
   
  Weitere Informationen finden Sie unter <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
@@ -144,4 +144,4 @@ ms.locfileid: "59223562"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Referenz](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
+- [Verweis](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

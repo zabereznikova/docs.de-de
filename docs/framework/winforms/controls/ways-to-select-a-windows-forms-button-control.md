@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Button control [Windows Forms], selecting
 ms.assetid: fe2fc058-5118-4f70-b264-6147d64a7a8d
 ms.openlocfilehash: f2881646a05d257044c6461f822a4c35a225f8c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223289"
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a>Methoden zur Auswahl eines Button-Steuerelements in Windows Forms
@@ -31,5 +31,5 @@ Eine Windows Forms-Schaltfläche kann auf folgende Weise ausgewählt werden:
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht über das Button-Steuerelement](button-control-overview-windows-forms.md)
-- [Vorgehensweise: Reagieren auf das Anklicken von Schaltflächen in Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)
+- [Vorgehensweise: Reagieren Sie auf eine Windows Forms-Schaltfläche geklickt](how-to-respond-to-windows-forms-button-clicks.md)
 - [Button-Steuerelement](button-control-windows-forms.md)

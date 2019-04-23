@@ -1,5 +1,5 @@
 ---
-title: <type1>"<typename>"implementieren muss"<membername>"für Schnittstelle"<interfacename>"
+title: <type1> '<typename>' muss '<membername>' für die <interfacename>-Schnittstelle implementieren.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30154
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
 ms.openlocfilehash: 86b0d46e0e27b2fd8d1fccb37f4a3c45e95f5f63
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295327"
 ---
 # <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<Typ1 >'\<Typename > 'implementieren müssen'\<Membername >' für die Schnittstelle '\<Schnittstellenname >'

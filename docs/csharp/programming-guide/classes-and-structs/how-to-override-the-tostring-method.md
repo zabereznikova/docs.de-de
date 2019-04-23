@@ -7,10 +7,10 @@ helpviewer_keywords:
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
 ms.openlocfilehash: 18734627e299c696e23bb0ec9bc63ed37fe3e601
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294976"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Vorgehensweise: Überschreiben der ToString-Methode (C#-Programmierhandbuch)
@@ -50,7 +50,7 @@ In C# erben alle Klassen oder Strukturen implizit die <xref:System.Object>-Klass
 - [Klassen und Strukturen](../../../csharp/programming-guide/classes-and-structs/index.md)
 - [Zeichenfolgen](../../../csharp/programming-guide/strings/index.md)
 - [string](../../../csharp/language-reference/keywords/string.md)
-- [neu](../../../csharp/language-reference/keywords/new.md)
+- [new](../../../csharp/language-reference/keywords/new.md)
 - [override](../../../csharp/language-reference/keywords/override.md)
 - [virtual](../../../csharp/language-reference/keywords/virtual.md)
 - [Formatierung von Typen](../../../standard/base-types/formatting-types.md)

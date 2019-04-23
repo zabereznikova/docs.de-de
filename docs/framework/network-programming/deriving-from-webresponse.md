@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Deriving from WebResponse
 ms.assetid: f11d4866-a199-4087-9306-a5a4c18b13db
 ms.openlocfilehash: 6bdb21b8aaf8deb39e3abd68a69a9a5a10247e6f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226044"
 ---
 # <a name="deriving-from-webresponse"></a>Ableiten von WebResponse
@@ -44,4 +44,4 @@ Die <xref:System.Net.WebResponse>-Klasse ist eine abstrakte Basisklasse, die die
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.FileWebResponse>
 - [Programmieren austauschbarer Protokolle](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [Ableiten von WebRequest](../../../docs/framework/network-programming/deriving-from-webrequest.md)
+- [Deriving from WebRequest (Ableiten von WebRequest)](../../../docs/framework/network-programming/deriving-from-webrequest.md)

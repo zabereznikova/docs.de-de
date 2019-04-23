@@ -9,10 +9,10 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
 ms.openlocfilehash: 8ff23ff449bc3b90fbd51bab1d73f8a7268bee05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229055"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>Übersicht über das CheckedListBox-Steuerelement (Windows Forms)
@@ -26,5 +26,5 @@ Die Windows-Formulare <xref:System.Windows.Forms.CheckedListBox> Steuerelement e
 - <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ListControl.DataSource%2A?displayProperty=nameWithType>
 - [Übersicht über das ListBox-Steuerelement](listbox-control-overview-windows-forms.md)
-- [Steuerelemente in Windows Forms zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)
-- [Vorgehensweise: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)
+- [Windows Forms-Steuerelemente zum Auflisten von Optionen](windows-forms-controls-used-to-list-options.md)
+- [Vorgehensweise: Bestimmen der aktivierten Elemente im CheckedListBox-Steuerelement von Windows Forms](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)

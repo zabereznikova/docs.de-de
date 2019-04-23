@@ -1,14 +1,14 @@
 ---
-title: <EnableAmPmParseAdjustment> Element
+title: <EnableAmPmParseAdjustment>-Element
 ms.date: 03/30/2017
 ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 57d1a14199debbb90827c1ea95347d485a636329
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222509"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment >-Element
@@ -84,4 +84,4 @@ Bestimmt, ob Datum und Uhrzeit-Analysemethoden verwenden einen angepassten Satz 
 ## <a name="see-also"></a>Siehe auch
 
 - [\<Common Language Runtime >-Element](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
-- [\<Configuration >-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
+- [\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
