@@ -9,10 +9,10 @@ helpviewer_keywords:
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
 ms.openlocfilehash: 8319e451268152e95326c02027157db72df631b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125145"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource-Markuperweiterung
@@ -55,7 +55,7 @@ Gibt einen Wert für alle [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2shar
   
  `StaticResource` kann in Objektelementsyntax verwendet werden. In diesem Fall geben Sie den Wert der <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> Eigenschaft ist erforderlich.  
   
- `StaticResource` kann auch verwendet werden, in einer ausführlichen Attributverwendung, der angibt, die <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> Eigenschaft als Eigenschaft = Wert-Paar:  
+ `StaticResource` kann zudem in einer ausführlichen Attributverwendung verwendet werden, die die <xref:System.Windows.StaticResourceExtension.ResourceKey%2A>-Eigenschaft als Eigenschaft=Wert-Paar angibt:  
   
 ```xml  
 <object property="{StaticResource ResourceKey=key}" .../>  

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
 ms.openlocfilehash: 8932f393af58f2014f643c5b6ebd6dc7a127b7eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122004"
 ---
 # <a name="creating-a-datareader"></a>Erstellen eines "DataReader"
@@ -34,5 +34,5 @@ Die <xref:System.Data.DataTable>-Klasse und die <xref:System.Data.DataSet>-Klass
 
 - <xref:System.Data.DataTable.CreateDataReader%2A>
 - <xref:System.Data.DataSet.CreateDataReader%2A>
-- ["DataTableReaders"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
+- [DataTableReaders](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
 - [ADO.NET Managed Provider und DataSet Developer Center](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129934"
 ---
 # <a name="using-data-contracts"></a>Verwenden von Datenverträgen
@@ -73,10 +73,10 @@ Ein neuer *Datenvertrag* ist eine formale Vereinbarung zwischen einem Dienst und
 - [Serialisierbare Typen](../../../../docs/framework/wcf/feature-details/serializable-types.md)
 - [Datenvertragsnamen](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
 - [Datenvertragsäquivalenz](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [Datenmember-Reihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md)
+- [Datenmemberreihenfolge](../../../../docs/framework/wcf/feature-details/data-member-order.md)
 - [Bekannte Typen in Datenverträgen](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [Aufwärtskompatible Datenverträge](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
-- [Datenvertragsversionsverwaltung](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Datenvertrags-Versionsverwaltung](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
 - [Versionstolerante Serialisierungsrückrufe](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
 - [Standardwerte der Datenelemente](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)
 - [Vom Datenvertragsserialisierer unterstützte Typen](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

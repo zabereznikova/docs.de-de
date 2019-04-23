@@ -10,10 +10,10 @@ helpviewer_keywords:
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
 ms.openlocfilehash: 6b178ac6b93205afebb1bea45f1b7e94826cb670
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124838"
 ---
 # <a name="storyboards-overview"></a>Übersicht über Storyboards
@@ -64,7 +64,7 @@ In diesem Thema wird gezeigt, wie Sie mit <xref:System.Windows.Media.Animation.S
 |<xref:System.Windows.Media.Animation.BeginStoryboard> und ein <xref:System.Windows.EventTrigger>|Ja|Ja|Ja|Ja|[Animieren einer Eigenschaft unter Verwendung eines Storyboards](how-to-animate-a-property-by-using-a-storyboard.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> und eine Eigenschaft <xref:System.Windows.Trigger>|Nein|Ja|Ja|Ja|[Auslösen einer Animation, wenn sich eine Eigenschaft ändert](how-to-trigger-an-animation-when-a-property-value-changes.md)|  
 |<xref:System.Windows.Media.Animation.BeginStoryboard> und ein <xref:System.Windows.DataTrigger>|Nein|Ja|Ja|Ja|[Vorgehensweise: Auslösen einer Animation bei Änderung von Daten](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa970679(v=vs.90))|  
-|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A> Methode|Ja|Nein|Nein|Nein|[Animieren einer Eigenschaft unter Verwendung eines Storyboards](how-to-animate-a-property-by-using-a-storyboard.md)|  
+|<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>-Methode|Ja|Nein|Nein|Nein|[Animieren einer Eigenschaft unter Verwendung eines Storyboards](how-to-animate-a-property-by-using-a-storyboard.md)|  
   
  Im folgenden Beispiel wird eine <xref:System.Windows.Media.Animation.Storyboard> zum Animieren der <xref:System.Windows.FrameworkElement.Width%2A> von eine <xref:System.Windows.Shapes.Rectangle> Element und die <xref:System.Windows.Media.SolidColorBrush.Color%2A> von eine <xref:System.Windows.Media.SolidColorBrush> gezeichnet werden soll, die zum <xref:System.Windows.Shapes.Rectangle>.  
   
@@ -276,7 +276,7 @@ In diesem Thema wird gezeigt, wie Sie mit <xref:System.Windows.Media.Animation.S
   
 -   Sie nicht angeben, ein <xref:System.Windows.EventTrigger.SourceName%2A> für eine <xref:System.Windows.EventTrigger> oder <xref:System.Windows.Trigger>.  
   
--   Sie können keine dynamische ressourcenreferenzen oder Datenbindungsausdrücke festgelegt <xref:System.Windows.Media.Animation.Storyboard> oder animationseigenschaftenwert. Der Grund dafür ist alles, was in einem <xref:System.Windows.Style> muss threadsicher sein und das Zeitsteuerungssystem muss <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> Objekte, um sie threadsicher zu machen. Ein <xref:System.Windows.Media.Animation.Storyboard> kann nicht fixiert werden, wenn es oder seine untergeordneten Zeitachsen dynamische ressourcenreferenzen oder Datenbindungsausdrücke enthalten. Weitere Informationen über das Fixieren und andere <xref:System.Windows.Freezable> Features finden Sie die [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md).  
+-   Sie können keine dynamische ressourcenreferenzen oder Datenbindungsausdrücke festgelegt <xref:System.Windows.Media.Animation.Storyboard> oder animationseigenschaftenwert. Der Grund dafür ist alles, was in einem <xref:System.Windows.Style> muss threadsicher sein und das Zeitsteuerungssystem muss <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> Objekte, um sie threadsicher zu machen. Ein <xref:System.Windows.Media.Animation.Storyboard> kann nicht fixiert werden, wenn es oder seine untergeordneten Zeitachsen dynamische ressourcenreferenzen oder Datenbindungsausdrücke enthalten. Weitere Informationen über das Fixieren und andere <xref:System.Windows.Freezable> Features finden Sie die [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md).  
   
 -   In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], Sie können keine Ereignishandler für deklarieren <xref:System.Windows.Media.Animation.Storyboard> oder Animationsereignisse.  
   
@@ -290,7 +290,7 @@ In diesem Thema wird gezeigt, wie Sie mit <xref:System.Windows.Media.Animation.S
   
 -   Die <xref:System.Windows.EventTrigger.SourceName%2A> für eine <xref:System.Windows.EventTrigger> oder <xref:System.Windows.Trigger> kann nur auf untergeordnete Objekte verweisen, die <xref:System.Windows.Controls.ControlTemplate>.  
   
--   Sie können keine dynamische ressourcenreferenzen oder Datenbindungsausdrücke festgelegt <xref:System.Windows.Media.Animation.Storyboard> oder animationseigenschaftenwert. Der Grund dafür ist alles, was in einem <xref:System.Windows.Controls.ControlTemplate> muss threadsicher sein und das Zeitsteuerungssystem muss <xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard> Objekte, um sie threadsicher zu machen. Ein <xref:System.Windows.Media.Animation.Storyboard> kann nicht fixiert werden, wenn es oder seine untergeordneten Zeitachsen dynamische ressourcenreferenzen oder Datenbindungsausdrücke enthalten. Weitere Informationen über das Fixieren und andere <xref:System.Windows.Freezable> Features finden Sie die [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md).  
+-   Sie können keine dynamische ressourcenreferenzen oder Datenbindungsausdrücke festgelegt <xref:System.Windows.Media.Animation.Storyboard> oder animationseigenschaftenwert. Der Grund dafür ist alles, was in einem <xref:System.Windows.Controls.ControlTemplate> muss threadsicher sein und das Zeitsteuerungssystem muss <xref:System.Windows.Freezable.Freeze%2A> <xref:System.Windows.Media.Animation.Storyboard> Objekte, um sie threadsicher zu machen. Ein <xref:System.Windows.Media.Animation.Storyboard> kann nicht fixiert werden, wenn es oder seine untergeordneten Zeitachsen dynamische ressourcenreferenzen oder Datenbindungsausdrücke enthalten. Weitere Informationen über das Fixieren und andere <xref:System.Windows.Freezable> Features finden Sie die [Übersicht über Freezable-Objekte](../advanced/freezable-objects-overview.md).  
   
 -   In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], Sie können keine Ereignishandler für deklarieren <xref:System.Windows.Media.Animation.Storyboard> oder Animationsereignisse.  
   

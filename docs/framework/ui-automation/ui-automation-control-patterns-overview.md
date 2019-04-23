@@ -6,10 +6,10 @@ helpviewer_keywords:
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126359"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Übersicht über Steuerelementmuster für Benutzeroberflächenautomatisierung
@@ -18,7 +18,7 @@ ms.locfileid: "59126359"
   
  In dieser Übersicht werden [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] -Steuerelementmuster vorgestellt. Steuerelementmuster bieten eine Möglichkeit zum Kategorisieren und Verfügbarmachen der Funktionalität eines Steuerelements, unabhängig vom Typ des Steuerelements oder vom Erscheinungsbild des Steuerelements.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] verwendet Steuerelementmuster, um die allgemeinen Steuerelementverhaltensweisen darzustellen. Beispielsweise verwenden Sie das Aufruf-Steuerelementmuster für Steuerelemente, die aufgerufen werden können (etwa Schaltflächen), und das Scroll-Steuerelementmuster für Steuerelemente, die Scrollleisten haben (z. B. Listenfelder, Listenansichten oder Kombinationsfelder). Da mit jedem Steuerelementmuster eine separate Funktionalität abgebildet wird, können diese kombiniert werden, um den gesamten Funktionsumfang zu beschreiben, der von einem bestimmten Steuerelement unterstützt wird.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] verwendet Steuerelementmuster, um allgemeine Verhaltensweisen von Steuerelementen abzubilden. Beispielsweise verwenden Sie das Aufruf-Steuerelementmuster für Steuerelemente, die aufgerufen werden können (etwa Schaltflächen), und das Scroll-Steuerelementmuster für Steuerelemente, die Scrollleisten haben (z. B. Listenfelder, Listenansichten oder Kombinationsfelder). Da mit jedem Steuerelementmuster eine separate Funktionalität abgebildet wird, können diese kombiniert werden, um den gesamten Funktionsumfang zu beschreiben, der von einem bestimmten Steuerelement unterstützt wird.  
   
 > [!NOTE]
 >  Zusammengesetzte Steuerelemente – Steuerelemente, die mit untergeordneten Steuerelementen erstellt wurden, die die [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] für Funktionalität bereitstellen, die vom übergeordneten Steuerelement verfügbar gemacht wird – sollten alle Steuerelementmuster implementieren, die normalerweise den untergeordneten Steuerelementen zugewiesen sind. Dagegen ist es nicht erforderlich, dass diese selben Steuerelementmuster durch die untergeordneten Steuerelemente implementiert werden.  

@@ -14,10 +14,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
 ms.openlocfilehash: 86e96045b7de580b7cefd0262369ce860d00e234
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124318"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView-Steuerelement (Windows Forms)
@@ -49,7 +49,7 @@ Das `DataGridView`-Steuerelement ermöglicht die flexible Anzeige von Daten in t
  [Größenanpassung bei Spalten und Zeilen im DataGridView-Steuerelement in Windows Forms](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)  
  Enthält Themen, in denen erläutert wird, wie die Größe von Zeilen und Spalten automatisch angepasst werden kann, um dem Zellinhalt oder der verfügbaren Breite des Steuerelements zu entsprechen.  
   
- [Sortieren von Daten im DataGridView-Steuerelement in Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)  
+ [Sortieren von Daten im DataGridView-Steuerelement in Windows Forms](sorting-data-in-the-windows-forms-datagridview-control.md)  
  Unter diesen Themen werden die Sortierfunktionen des Steuerelements beschrieben.  
   
  [Dateneingabe im DataGridView-Steuerelement in Windows Forms](data-entry-in-the-windows-forms-datagridview-control.md)  
@@ -67,7 +67,7 @@ Das `DataGridView`-Steuerelement ermöglicht die flexible Anzeige von Daten in t
  [Leistungsoptimierung im DataGridView-Steuerelement in Windows Forms](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  Enthält Themen, in den erläutert wird, wie das Steuerelement effizient eingesetzt wird, um bei der Arbeit mit großen Datenmengen Leistungsprobleme zu vermeiden.  
   
- [Standardbehandlung von Tastatur und Maus im DataGridView-Steuerelement von Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)  
+ [Standardbehandlung von Tastatur und Maus im DataGridView-Steuerelement von Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)  
  Beschreibt, wie Benutzer per Tastatur und Maus mit dem `DataGridView`-Steuerelement interagieren können.  
   
  [Unterschiede zwischen dem DataGridView-Steuerelement und dem DataGrid-Steuerelement in Windows Forms](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)  
@@ -84,4 +84,4 @@ Das `DataGridView`-Steuerelement ermöglicht die flexible Anzeige von Daten in t
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
 ms.openlocfilehash: b5a7f68edc49a02bb99ca05765d4582b798e72ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127386"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>Wie das WCF-Syndication-Objektmodell Atom und RSS zugeordnet wird
@@ -37,12 +37,12 @@ Wenn Sie einen Windows Communication Foundation (WCF)-Syndication-Dienst zu entw
   
  Für die Codebeispiele in diesem Thema wird eine der beiden hier definierten Methoden für die Serialisierung verwendet.  
   
- `SerializeFeed` serialisiert einen Syndication-feed.  
+ `SerializeFeed` serialisiert einen Syndication-Feed.  
   
  [!code-csharp[SyndicationMapping#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#10)]
  [!code-vb[SyndicationMapping#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#10)]  
   
- `SerializeItem` Serialisiert ein Syndication-Element.  
+ `SerializeItem` serialisiert ein Syndication-Element.  
   
  [!code-csharp[SyndicationMapping#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/syndicationmapping/cs/snippets.cs#11)]
  [!code-vb[SyndicationMapping#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/syndicationmapping/vb/snippets.vb#11)]  
@@ -401,6 +401,6 @@ Wenn Sie einen Windows Communication Foundation (WCF)-Syndication-Dienst zu entw
 
 - [Übersicht über WCF Syndication](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
 - [Architektur von Syndication](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
-- [Vorgehensweise: Erstellen eines grundlegenden RSS-Feeds](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
+- [Vorgehensweise: Erstellen eines einfachen RSS-Feeds](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
 - [Vorgehensweise: Erstellen eines grundlegenden Atom-Feeds](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
-- [Vorgehensweise: Verfügbarmachen eines Feeds als Atom und RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+- [Vorgehensweise: Bereitstellen eines Feeds als Atom und RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

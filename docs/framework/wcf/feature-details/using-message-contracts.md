@@ -8,10 +8,10 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121978"
 ---
 # <a name="using-message-contracts"></a>Verwendung von Nachrichtenverträgen
@@ -105,7 +105,7 @@ public class BankingTransaction
  Das <xref:System.ServiceModel.MessageContractAttribute> ermöglicht Ihnen das Angeben des WrapperName-Attributs und des WrapperNamespace-Attributs, die den Namen des Wrapperelements im Textkörper der SOAP-Nachricht steuern. Standardmäßig wird der Name des Typs des Nachrichtenvertrags für den Wrapper verwendet, und der Namespace, in dem der Nachrichtenvertrag `http://tempuri.org/` definiert ist, fungiert als Standardnamespace.  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute> Attribute werden in Nachrichtenverträgen ignoriert. Ist ein <xref:System.Runtime.Serialization.KnownTypeAttribute> erforderlich, platzieren Sie es auf dem Vorgang, der den in Frage kommenden Nachrichtenvertrag nutzt.  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute>-Attribute werden in Nachrichtenverträgen ignoriert. Ist ein <xref:System.Runtime.Serialization.KnownTypeAttribute> erforderlich, platzieren Sie es auf dem Vorgang, der den in Frage kommenden Nachrichtenvertrag nutzt.  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>Kontrollieren von Header- und Textteilnamen und Namespaces  
  In der SOAP-Darstellung eines Nachrichtenvertrags wird jeder Header und jeder Textteil einem XML-Element zugeordnet, das über einen Namen und einen Namespace verfügt.  

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
 ms.openlocfilehash: 589e28b3c05496e3fc17055b98240e389faed068
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125375"
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>Vorgehensweise: Verwenden eines anwendungsspezifischen Ressourcenverzeichnisses
@@ -46,4 +46,4 @@ In diesem Beispiel wird gezeigt, wie ein benutzerdefiniertes Ressourcenverzeichn
 - <xref:System.Windows.ResourceDictionary>
 - <xref:System.Windows.Application.Resources%2A>
 - [XAML-Ressourcen](../advanced/xaml-resources.md)
-- [Zusammengeführte Ressourcenwörterbücher](../advanced/merged-resource-dictionaries.md)
+- [Zusammengeführte Ressourcenverzeichnisse](../advanced/merged-resource-dictionaries.md)

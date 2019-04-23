@@ -7,12 +7,12 @@ helpviewer_keywords:
 - networking how-tos [.NET Framework]
 - network
 ms.assetid: 8fd6c675-9ea6-4fad-a412-e2c2c1f233d8
-ms.openlocfilehash: e3569ec8608a52101cc0bf752d39fbe01ab46917
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c165470cd00ac39a45464ec5a534eb0eea531be2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121991"
 ---
 # <a name="network-programming-how-to-topics"></a>Gewusst-wie-Themen zur Netzwerkprogrammierung
 Die folgende Liste enthält Links zu den Themen zur Vorgehensweise in der Begriffsdokumentation zur Netzwerkprogrammierung.  
@@ -45,7 +45,7 @@ Die folgende Liste enthält Links zu den Themen zur Vorgehensweise in der Begrif
   
 -   [Vorgehensweise: Auflisten von Verzeichnisinhalt mit FTP](../../../docs/framework/network-programming/how-to-list-directory-contents-with-ftp.md)  
   
- **Internetprotokoll Version 6:**  
+ **Internetprotokoll, Version 6:**  
   
 -   [Vorgehensweise: Ändern der Computerkonfigurationsdatei zum Aktivieren der IPv6-Unterstützung](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md)  
   
@@ -78,6 +78,7 @@ Die folgende Liste enthält Links zu den Themen zur Vorgehensweise in der Begrif
 -   [Vorgehensweise: Pingen eines Hosts](../../../docs/framework/network-programming/how-to-ping-a-host.md)  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Netzwerkprogrammierung in .NET Framework](../../../docs/framework/network-programming/index.md)
 - [Beispiele zur Netzwerkprogrammierung](../../../docs/framework/network-programming/network-programming-samples.md)
 - [Netzwerkbeispiele für .NET in der MSDN Code Gallery](https://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

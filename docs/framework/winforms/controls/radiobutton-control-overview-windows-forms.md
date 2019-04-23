@@ -10,10 +10,10 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
 ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129115"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>Übersicht über das RadioButton-Steuerelement (Windows Forms)
@@ -30,7 +30,7 @@ Windows Forms <xref:System.Windows.Forms.RadioButton> Steuerelemente enthalten e
 - [Übersicht über das Panel-Steuerelement](panel-control-overview-windows-forms.md)
 - [Übersicht über das GroupBox-Steuerelement](groupbox-control-overview-windows-forms.md)
 - [Übersicht über das CheckBox-Steuerelement](checkbox-control-overview-windows-forms.md)
-- [Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Vorgehensweise: Festlegen des durch ein Windows Forms-Steuerelement angezeigten Textes](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [Vorgehensweise: Gruppieren von RadioButton-Steuerelementen in Windows Forms für die Verwendung als Set](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [Vorgehensweise: Erstellen von Zugriffstasten für Windows Forms-Steuerelemente](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Vorgehensweise: Legen Sie den Text von einer Windows Forms-Steuerelement](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [Vorgehensweise: Gruppe Windows Forms-RadioButton-Steuerelementen in als Gruppe](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [RadioButton-Steuerelement](radiobutton-control-windows-forms.md)

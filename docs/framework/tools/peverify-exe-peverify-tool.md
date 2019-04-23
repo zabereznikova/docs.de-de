@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 35ff03eb830a02b05dd128da4c072a8c2c918921
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0423946ab32c04274bb3d5656ed8603ec4314d88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501512"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128734"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify-Tool)
 Mit dem PEVerify-Tool können Entwickler, die MSIL (Microsoft Intermediate Language) generieren (Compilerentwickler, Skript-Engine-Entwickler usw.), herausfinden, ob ihr MSIL-Code und die zugeordneten Metadaten den Anforderungen an die Typsicherheit entsprechen. Einige Compiler generieren nur dann überprüfbar typsicheren Code, wenn bestimmte Sprachkonstrukte nicht verwendet werden. Wenn Sie als Entwickler einen solchen Compiler verwenden, sollten Sie unter Umständen prüfen, ob die Typsicherheit des Codes eingeschränkt wurde. Hierzu können Sie das PEVerify-Tool für die Dateien ausführen und damit die MSIL und Metadaten überprüfen.  
@@ -121,7 +121,8 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
 ```  
   
 ## <a name="see-also"></a>Siehe auch
-- [Extras](../../../docs/framework/tools/index.md)
+
+- [Tools](../../../docs/framework/tools/index.md)
 - [Schreiben von überprüfbar typsicherem Code](../../../docs/framework/misc/code-access-security-basics.md#typesafe_code)
 - [Typsicherheit und Sicherheit](../../../docs/standard/security/key-security-concepts.md#type-safety-and-security)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

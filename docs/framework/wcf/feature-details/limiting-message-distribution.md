@@ -3,10 +3,10 @@ title: Beschränken der Nachrichtenverteilung
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
 ms.openlocfilehash: d09a2be4a59a08a4bddbb1e0f4d038cd2c5ff3e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130220"
 ---
 # <a name="limiting-message-distribution"></a>Beschränken der Nachrichtenverteilung
@@ -20,9 +20,9 @@ Der Peerkanal ist als Übertragungsnetz konzipiert. Das grundlegende Weitergabem
 -   Codeausschnitte und Weitere Informationen finden Sie unter den [Peer Channel Team Blog](https://go.microsoft.com/fwlink/?LinkID=114531).  
   
 ## <a name="message-propagation-filter"></a>Nachrichtenweitergabefilter  
- `MessagePropagationFilter` kann verwendet werden, zum benutzerdefinierten Steuern der Nachrichtenweitergabe, besonders, wenn der Inhalt der Nachricht oder andere spezifische Szenarios bestimmt Weitergabe. Durch den Filter werden für jede Nachricht, die den Knoten passiert, Weitergabenentscheidungen getroffen. Dies gilt sowohl für Nachrichten, die von einem anderen Punkt innerhalb des Netzes stammen und von Ihrem Knoten empfangen werden, als auch für Nachrichten, die in Ihrer Anwendung erstellt wurden. Der Filter kann sowohl auf die Nachricht als auch auf deren Ursprung zugreifen, sodass Entscheidungen über die Weiterleitung oder das Verwerfen der Nachricht auf der Grundlage der vollständig verfügbaren Informationen getroffen werden können.  
+ `MessagePropagationFilter` dient zum benutzerdefinierten Steuern der Nachrichtenweitergabe, besonders in Fällen, in denen die Weitergabe durch den Inhalt der Nachricht oder durch andere spezifische Szenarios bestimmt wird. Durch den Filter werden für jede Nachricht, die den Knoten passiert, Weitergabenentscheidungen getroffen. Dies gilt sowohl für Nachrichten, die von einem anderen Punkt innerhalb des Netzes stammen und von Ihrem Knoten empfangen werden, als auch für Nachrichten, die in Ihrer Anwendung erstellt wurden. Der Filter kann sowohl auf die Nachricht als auch auf deren Ursprung zugreifen, sodass Entscheidungen über die Weiterleitung oder das Verwerfen der Nachricht auf der Grundlage der vollständig verfügbaren Informationen getroffen werden können.  
   
- <xref:System.ServiceModel.PeerMessagePropagationFilter> ist eine abstrakte Basisklasse mit einer einzelnen Funktion, <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. Das erste Argument des Methodenaufrufs übergibt eine vollständige Kopie der Nachricht. Änderungen an der Nachricht wirken sich nicht auf die eigentliche Nachricht aus. Das letzte Argument des Methodenaufrufs identifiziert den Ursprung der Nachricht (`PeerMessageOrigination.Local` oder `PeerMessageOrigination.Remote`). Konkrete Implementierungen dieser Methode müssen eine Konstante aus der <xref:System.ServiceModel.PeerMessagePropagation>-Enumeration zurückgeben, die angibt, dass die Nachricht an die lokale Anwendung (`Local`), an Remoteclients (`Remote`), an beide dieser Optionen (`LocalAndRemote`) oder an keine dieser Optionen (`None`) weitergeleitet werden soll. Sie können diesen Filter durch Zugreifen auf das entsprechende `PeerNode`-Objekt und Angeben einer Instanz der abgeleiteten Weitergabefilterklasse in der `PeerNode.MessagePropagationFilter`-Eigenschaft anwenden. Vergewissern Sie sich vor dem Öffnen des Peerkanals, dass der Weitergabefilter angefügt ist.  
+ <xref:System.ServiceModel.PeerMessagePropagationFilter> ist eine abstrakte Basisklasse mit einer einzelnen Funktion: <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>. Das erste Argument des Methodenaufrufs übergibt eine vollständige Kopie der Nachricht. Änderungen an der Nachricht wirken sich nicht auf die eigentliche Nachricht aus. Das letzte Argument des Methodenaufrufs identifiziert den Ursprung der Nachricht (`PeerMessageOrigination.Local` oder `PeerMessageOrigination.Remote`). Konkrete Implementierungen dieser Methode müssen eine Konstante aus der <xref:System.ServiceModel.PeerMessagePropagation>-Enumeration zurückgeben, die angibt, dass die Nachricht an die lokale Anwendung (`Local`), an Remoteclients (`Remote`), an beide dieser Optionen (`LocalAndRemote`) oder an keine dieser Optionen (`None`) weitergeleitet werden soll. Sie können diesen Filter durch Zugreifen auf das entsprechende `PeerNode`-Objekt und Angeben einer Instanz der abgeleiteten Weitergabefilterklasse in der `PeerNode.MessagePropagationFilter`-Eigenschaft anwenden. Vergewissern Sie sich vor dem Öffnen des Peerkanals, dass der Weitergabefilter angefügt ist.  
   
 -   Codeausschnitte und Weitere Informationen finden Sie unter den [Peer Channel Team Blog](https://go.microsoft.com/fwlink/?LinkID=114532).  
   
@@ -52,13 +52,13 @@ Der Peerkanal ist als Übertragungsnetz konzipiert. Das grundlegende Weitergabem
   
     -   *Komplexe Teilmenge des Netzes*:  MessagePropagationFilter.  
   
--   **Wie häufig**  
+-   **Wie oft**  
   
     -   *Sehr häufig*:  Direktverbindung, PeerHopCount, MessagePropagationFilter.  
   
     -   *Occasional*:  Lokaler Filter.  
   
--   **Bandbreitenauslastung**  
+-   **Nutzung der Netzwerkbandbreite**  
   
     -   *Hohe*:  Direkte Verbindung, MessagePropagationFilter oder lokalem Filter nicht ratsam.  
   

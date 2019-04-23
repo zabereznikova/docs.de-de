@@ -4,17 +4,17 @@ description: Entwerfen moderner Webanwendungen mit ASP.NET Core und Azure | Entw
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128387"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Entwickeln von ASP.NET Core MVC-Apps
 
 > „Sie müssen nicht schon beim ersten Mal alles richtig machen, aber unbedingt beim letzten Mal.“  
-> _– Andrew Hunt and David Thomas_
+> _– Andrew Hunt und David Thomas_
 
 ASP.NET Core ist ein plattformübergreifendes Open-Source-Framework zum Erstellen moderner cloudoptimierter Webanwendungen. ASP.NET Core-Apps sind einfach und modular aufgebaut. Sie verfügen über integrierte Unterstützung für Dependency Injection, wodurch ihre Testfähigkeit und Verwaltbarkeit verbessert wird. In Kombination mit MVC (einem Muster, das neben ansichtsbasierten Apps das Erstellen von modernen Web-APIs unterstützt) stellt ASP.NET Core ein leistungsstarkes Framework zum Erstellen von Unternehmenswebanwendungen dar.
 
@@ -100,15 +100,15 @@ Für Web-API-Projekte sollte das `[ApiController]`-Attribut verwendet werden, da
 
 > ### <a name="references--mapping-requests-to-responses"></a>Ressourcen: Zuordnen von Anforderungen zu Antworten
 >
-> - **Routing to Controller Actions (Routing zu Controlleraktionen)**
+> - **Routing zu Controlleraktionen**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **Modellbindung in ASP.NET Core**
+> - **Modellbindung**
  > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
-> - **Model Validation (Modellvalidierung)**
+> - **Modellvalidierung**
  > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **Filter in ASP.NET Core**
+> - **Filter**
  > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **ApiController Attribute (ApiController-Attribut)**
+> - **ApiController-Attribut**
  > <https://docs.microsoft.com/aspnet/core/web-api/?view=aspnetcore-2.2>
 
 ## <a name="working-with-dependencies"></a>Arbeiten mit Abhängigkeiten
@@ -317,11 +317,11 @@ Weitere Informationen zum Implementieren von Filtern und ein Arbeitsbeispiel zum
 >
 > - **Bereiche**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **ASP.NET Core: Feature-Slices für ASP.NET Core MVC**  
+> - **MSDN Magazine: Feature-Slices für ASP.NET Core MVC**  
 >   <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filter**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **ASP.NET Core – ASP.NET Core MVC-Filter in der Praxis**  
+> - **MSDN: ASP.NET Core MVC-Filter in der Praxis**  
 >   <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
 ## <a name="security"></a>Sicherheit
@@ -418,7 +418,7 @@ Die meisten Web-APIs sollten ein tokenbasiertes Authentifizierungssystem impleme
 
 ![TokenAuth](./media/image7-4.png)
 
-**Abbildung 7-4.** Tokenbasierte Authentifizierung für Web-APIs.
+**Abbildung 7.4** Tokenbasierte Authentifizierung für Web-APIs.
 
 Sie können einen eigenen Authentifizierungsdienst erstellen und diesen in Azure AD oder OAuth integrieren oder einen Dienst über ein Open Source-Tool wie [IdentityServer](https://github.com/IdentityServer) implementieren.
 
@@ -426,18 +426,17 @@ Sie können einen eigenen Authentifizierungsdienst erstellen und diesen in Azure
 
 Gehen Sie insbesondere mit Bedacht vor, wenn Sie eigene Kryptografien, Benutzermitgliedschaften oder Systeme zur Tokengenerierung implementieren. Es gibt viele im Handel erwerbliche oder Open Source-Alternativen, deren Sicherheit die einer benutzerdefinierten Implementierung in den meisten Fällen übertrifft.
 
-
 > ### <a name="references--security"></a>Ressourcen: Sicherheit
 >
 > - **Übersicht über die Dokumentation zur Sicherheit**  
 >   https://docs.microsoft.com/aspnet/core/security/
-> - **Enforcing SSL in an ASP.NET Core App (Erzwingen von SSL in einer ASP.NET Core-App)**  
+> - **Erzwingen von SSL in einer ASP.NET Core-App**  
 >   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Einführung in Identity**  
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
-> - **Introduction to Authorization (Einführung in die Authentifizierung)**  
+> - **Einführung in die Authentifizierung**  
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
-> - **Authentifizierung und Autorisierung in Azure App Service**  
+> - **Authentifizierung und Autorisierung für API-Apps in Azure App Service**  
 >   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 > - **IdentityServer**  
 >   <https://github.com/IdentityServer>
@@ -551,7 +550,7 @@ Sie können auch einen hybriden Ansatz auswählen und DDD nur für Transaktionsb
 
 > ### <a name="references--domain-driven-design"></a>Ressourcen: Domain-Driven Design
 >
-> - **DDD in Plain English (StackOverflow Answer) (Einfache Beschreibung von DDD (StackOverflow-Antwort))**  
+> - **DDD in Plain English (StackOverflow Answer) (Einfache Beschreibung von DDD [StackOverflow-Antwort])**  
 >   <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>Bereitstellung
@@ -594,13 +593,13 @@ _Weitere Informationen zu den Bereitstellungsoptionen für Azure finden Sie in [
 
 > ### <a name="references--deployment"></a>Ressourcen: Bereitstellung
 >
-> - **Hosten und Bereitstellen von ASP.NET Core**  
+> - **Übersicht über Hosting und Bereitstellung**  
 >   <https://docs.microsoft.com/aspnet/core/publishing/>
 > - **Verwenden von Kestrel mit einem Reverseproxy**  
 >   <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
-> - **Hosten von ASP.NET Core in Docker-Containern**  
+> - **Hosten von ASP.NET Core-Apps in Docker**  
 >   <https://docs.microsoft.com/aspnet/core/publishing/docker>
-> - **Übersicht über Application Gateway**  
+> - **Übersicht über Azure Application Gateway**  
 >   <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]

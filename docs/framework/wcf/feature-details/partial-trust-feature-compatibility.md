@@ -3,10 +3,10 @@ title: Funktionskompatibilität für teilweise Vertrauenswürdigkeit
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124565"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Funktionskompatibilität für teilweise Vertrauenswürdigkeit
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge der
   
 -   Bei Verwendung des `[ServiceKnownType]` -Attributs muss die angegebene Methode `public`sein.  
   
--   `[MessageContract]` Klassen und deren Member möglich `public`. Ist in der Anwendungsassembly die `[MessageContract]` -Klasse definiert, kann diese `internal` sein und Member vom Typ `internal` besitzen.  
+-   `[MessageContract]` -Klassen und ihre Member können `public`sein. Ist in der Anwendungsassembly die `[MessageContract]` -Klasse definiert, kann diese `internal` sein und Member vom Typ `internal` besitzen.  
   
 ## <a name="system-provided-bindings"></a>Vom System bereitgestellte Bindungen  
  Sowohl <xref:System.ServiceModel.BasicHttpBinding> als auch <xref:System.ServiceModel.WebHttpBinding> werden in einer teilweise vertrauenswürdigen Umgebung vollständig unterstützt. <xref:System.ServiceModel.WSHttpBinding> wird nur für den Transportsicherheitsmodus unterstützt.  
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge der
   
 -   <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>, und <xref:System.IdentityModel.Tokens>.  
+-   <xref:System.IdentityModel.Claims>, <xref:System.IdentityModel.Policy>, <xref:System.IdentityModel.Selectors>und <xref:System.IdentityModel.Tokens>.  
   
  Folgende Ablaufverfolgungsquellen werden nicht unterstützt:  
   
@@ -166,4 +166,4 @@ Windows Communication Foundation (WCF) unterstützt eine begrenzte Teilmenge der
 - <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>
 - [Unterstützte Bereitstellungsszenarien](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md)
-- [Empfehlungen für eine teilweise vertrauenswürdige Umgebung](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)
+- [Bewährte Methoden für teilweise Vertrauenswürdigkeit](../../../../docs/framework/wcf/feature-details/partial-trust-best-practices.md)

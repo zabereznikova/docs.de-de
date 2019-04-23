@@ -6,10 +6,10 @@ helpviewer_keywords:
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
 ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129589"
 ---
 # <a name="timing-behaviors-overview"></a>Übersicht über Zeitsteuerungsverhalten
@@ -42,7 +42,7 @@ Dieses Thema beschreibt das Zeitsteuerungsverhalten von Animationen und andere <
 |----------|-----------------|----------------|-|-|-|  
 |Einfache Dauer|Zeitspanne, die eine Zeitachse für eine Vorwärtsiteration benötigt.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
 |Eine Wiederholung|Die Zeitspanne für eine Zeitachse vorwärts nach und bei Spielen dauert die <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A> -Eigenschaft "true" ist, einmal rückwärts abgespielt.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
-|Aktiver Zeitraum|Die Zeitdauer für ein Timeline alle angegebenen von Wiederholungen ausführen dauert seine <xref:System.Windows.Media.Animation.RepeatBehavior> Eigenschaft.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>ist <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>ist <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
+|Aktiver Zeitraum|Die Zeitdauer für ein Timeline alle angegebenen von Wiederholungen ausführen dauert seine <xref:System.Windows.Media.Animation.RepeatBehavior> Eigenschaft.|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
   
 <a name="duration"></a>   
 ### <a name="the-duration-property"></a>Die Duration-Eigenschaft  
@@ -127,5 +127,5 @@ Dieses Thema beschreibt das Zeitsteuerungsverhalten von Animationen und andere <
 - [Übersicht über Animationen](animation-overview.md)
 - [Übersicht über das Animations- und Zeitsteuerungssystem](animation-and-timing-system-overview.md)
 - [Übersicht über Zeitsteuerungsereignisse](timing-events-overview.md)
-- [Gewusst wie-Themen](animation-and-timing-how-to-topics.md)
-- [Beispiel zu Textanimation Timing Verhalten](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [Themen zu Vorgehensweisen](animation-and-timing-how-to-topics.md)
+- [Beispiel zum Verhalten der Animationszeitsteuerung](https://go.microsoft.com/fwlink/?LinkID=159970)

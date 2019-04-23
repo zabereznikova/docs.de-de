@@ -5,10 +5,10 @@ ms.assetid: bf94f090-5265-4112-8e57-5b4e20e070d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15e2e94ac4e30fbdb375175148a5b448c51821f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128023"
 ---
 # <a name="icordebugprocess6markdebuggerattached-method"></a>ICorDebugProcess6::MarkDebuggerAttached-Methode
@@ -24,7 +24,7 @@ HRESULT MarkDebuggerAttached(
   
 ## <a name="parameters"></a>Parameter  
  `fIsAttached`  
- `true` Wenn die <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType> -Methode herausstellt, dass ein Debugger angefügt wird; `false` andernfalls.  
+ `true`, falls sich bei der <xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType>-Methode herausstellt, dass ein Debugger verbunden ist; anderenfalls `false`.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Diese Methode kann die in der folgenden Tabelle aufgeführten Werte zurückgeben.  
@@ -52,4 +52,4 @@ HRESULT MarkDebuggerAttached(
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugProcess6-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
