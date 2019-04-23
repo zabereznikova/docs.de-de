@@ -3,10 +3,10 @@ title: Fehlerbehandlung
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
 ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300280"
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
@@ -69,4 +69,4 @@ ms.locfileid: "59300280"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Basis-WCF-Programmierung](../basic-wcf-programming.md)
+- [Einfache WCF-Programmierung](../basic-wcf-programming.md)
