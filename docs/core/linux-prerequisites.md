@@ -4,18 +4,18 @@ description: Unterstützte Versionen von Linux-Versionen und .NET Core-Abhängig
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 29256259c66b909ad65691230bd652f38583184e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0bd3287535ba2c398f6577890d1d39f42a806364
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084899"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612224"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Voraussetzungen für .NET Core unter Linux
 
 Dieser Artikel erläutert die notwendigen Abhängigkeiten zum Entwickeln von .NET Core-Anwendungen unter Linux. Die unterstützten Linux-Verteilungen und -Versionen und die daraus folgenden Abhängigkeiten gelten für die beiden Möglichkeiten zum Entwickeln von .NET Core-Apps unter Linux:
 
-* [Befehlszeile mit Ihrem bevorzugten Editor](tutorials/using-with-xplat-cli.md)
+* [Erste Schritte mit .NET Core unter Windows/Linux/Mac OS unter Verwendung der Befehlszeile](tutorials/using-with-xplat-cli.md)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 > [!NOTE]
@@ -23,7 +23,7 @@ Dieser Artikel erläutert die notwendigen Abhängigkeiten zum Entwickeln von .NE
 
 ## <a name="supported-linux-versions"></a>Unterstützte Linux-Versionen
 
-# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 .NET Core 2.x behandelt Linux als ein einzelnes Betriebssystem. Es gibt einen Linux-Build (pro Chiparchitektur) für unterstützte Linux-Verteilungen. 
 
@@ -44,7 +44,7 @@ Links zum Herunterladen und weitere Informationen finden Sie unter [.NET Core 2.
 
 Unter [Von .NET Core 2.1 unterstützte Betriebssystemversionen](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) und [Von .NET Core 2.2 unterstützte Betriebssystemversionen](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) finden Sie die vollständige Liste der Betriebssysteme, Verteilungen und Versionen, die von .NET Core 2.1 und .NET Core 2.2 unterstützt werden, außerdem nicht mehr unterstützte Betriebssystemversionen und Links zu Lebenszyklusrichtlinien.
 
-# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 Links zum Herunterladen und weitere Informationen finden Sie unter [.NET Core 1.1-Downloads](https://www.microsoft.com/net/download/dotnet-core/1.1) oder [.NET Core 1.0-Downloads](https://www.microsoft.com/net/download/dotnet-core/1.0).
 
@@ -61,7 +61,7 @@ Links zum Herunterladen und weitere Informationen finden Sie unter [.NET Core 1.
 
 Unter [.NET Core 1.x Supported OS Versions (Von .NET Core 1.x unterstützte Betriebssystemversionen)](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) finden Sie die komplette Liste der Betriebssysteme, die von .NET Core 1.x unterstützt werden, außerdem nicht mehr unterstützte Betriebssystemversionen und Links zu Lebenszyklusrichtlinien.
 
-# [<a name="net-core-30-preview-1"></a>.NET Core 3.0 Vorschauversion 1](#tab/netcore30)
+# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3.0 Vorschauversion 1](#tab/netcore30)
 
 .NET Core 3.0 Vorschauversion 1 behandelt Linux als ein einziges Betriebssystem. Es gibt einen Linux-Build (pro Chiparchitektur) für unterstützte Linux-Verteilungen. 
 
@@ -144,7 +144,7 @@ Unter Linux gibt es zwei Auswahlmöglichkeiten für Installationspakete:
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>Das Skripten von Installationen mit dem Installationsskript von .NET Core
 
-Die [Dotnet-Installationsskripts](./tools/dotnet-install-script.md) werden verwendet, um ohne Administratorrechte eine Installation der CLI-Toolkette und der freigegebenen Laufzeit auszuführen. Sie können das Skript unter [https://dot.net/v1/dotnet-install.sh](https://dot.net/v1/dotnet-install.sh) herunterladen.
+Die [Dotnet-Installationsskripts](./tools/dotnet-install-script.md) werden verwendet, um ohne Administratorrechte eine Installation der CLI-Toolkette und der freigegebenen Laufzeit auszuführen. Sie können das Skript unter <https://dot.net/v1/dotnet-install.sh> herunterladen.
 
 Das Skript installiert standardmäßig die neueste Version von „LTS“, aktuell .NET Core 1.1. Zum Installieren von .NET Core 2.1 führen Sie das Skript mit dem folgenden Switch aus:
 
@@ -158,8 +158,8 @@ Das Bash-Skript für das Installationsprogramm wird in Automatisierungsszenarios
 
 Weitere Informationen zu Problemen mit der Installation von .NET Core auf einer unterstützten Verteilung bzw. Version von Linux finden Sie in den folgenden Artikeln zu Ihrer installierte Verteilung bzw. Version:
 
-* [.NET Core 3.0 Bekannte Probleme](https://github.com/dotnet/core/tree/master/release-notes/3.0)
-* [.NET Core 2.2 Bekannte Probleme](https://github.com/dotnet/core/tree/master/release-notes/2.2)
-* [.NET Core 2.1 Bekannte Probleme](https://github.com/dotnet/core/tree/master/release-notes/2.1)
-* [.NET Core 1.1 Bekannte Probleme](https://github.com/dotnet/core/blob/master/release-notes/1.1)
-* [.NET Core 1.0 Bekannte Probleme](https://github.com/dotnet/core/blob/master/release-notes/1.0)
+* [.NET Core 3.0 known issues (.NET Core 1.0 Bekannte Probleme)](https://github.com/dotnet/core/tree/master/release-notes/3.0)
+* [.NET Core 2.2 known issues (.NET Core 1.0 Bekannte Probleme)](https://github.com/dotnet/core/tree/master/release-notes/2.2)
+* [.NET Core 2.1 known issues (.NET Core 2.1 Bekannte Probleme)](https://github.com/dotnet/core/tree/master/release-notes/2.1)
+* [.NET Core 1.1 known issues (.NET Core 1.1 Bekannte Probleme)](https://github.com/dotnet/core/blob/master/release-notes/1.1)
+* [.NET Core 1.0 known issues (.NET Core 1.0 Bekannte Probleme)](https://github.com/dotnet/core/blob/master/release-notes/1.0)

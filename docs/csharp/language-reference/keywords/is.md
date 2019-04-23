@@ -1,19 +1,19 @@
 ---
 title: is – C#-Referenz
 ms.custom: seodec18
-ms.date: 02/17/2017
+ms.date: 04/09/2019
 f1_keywords:
 - is_CSharpKeyword
 - is
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977052"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480832"
 ---
 # <a name="is-c-reference"></a>is (C#-Referenz)
 
@@ -47,11 +47,11 @@ Im folgenden Beispiel wird veranschaulicht, wie der Ausdruck `is` für jede dies
 
 [!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
 
-Das Schlüsselwort `is` generiert eine Kompilierzeitwarnung, wenn der Ausdruck immer entweder `true` oder `false` ist. Es berücksichtigt nur Verweis-, Boxing- und Unboxing-Konvertierungen; es berücksichtigt keine benutzerdefinierten Konvertierungen oder Konvertierungen, die von den [impliziten](implicit.md) und [expliziten](explicit.md) Operatoren eines Typs definiert wurden. Das folgende Beispiel generiert Warnungen, weil das Ergebnis der Konvertierung zur Kompilierzeit bekannt ist. Bitte beachten Sie, dass der Ausdruck `is` für Konvertierungen von `int` in `long` und `double` FALSE zurückgibt, da diese Konvertierungen vom [impliziten](implicit.md) Operator verarbeitet werden.
+Das Schlüsselwort `is` generiert eine Kompilierzeitwarnung, wenn der Ausdruck immer entweder `true` oder `false` ist. Es berücksichtigt nur Verweis-, Boxing- und Unboxing-Konvertierungen; es berücksichtigt keine benutzerdefinierten Konvertierungen oder Konvertierungen, die von den [impliziten](implicit.md) und [expliziten](explicit.md) Operatoren eines Typs definiert wurden. Das folgende Beispiel generiert Warnungen, weil das Ergebnis der Konvertierung zur Kompilierzeit bekannt ist. Der Ausdruck `is` für Konvertierungen von `int` in `long` und `double` gibt FALSE zurück, da diese Konvertierungen vom [impliziten](implicit.md) Operator verarbeitet werden.
 
 [!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-`expr` kann jeder beliebige Ausdruck sein, der einen Wert zurückgibt – davon ausgenommen sind anonyme Methoden und Lambdaausdrücke. Im folgenden Beispiel wird `is` verwendet, um den Rückgabewert eines Methodenaufrufs auszuwerten.   
+`expr` kann weder eine anonyme Methode noch ein Lambdaausdruck sein. Es kann ein anderer Ausdruck sein, der einen Wert zurückgibt. Im folgenden Beispiel wird `is` verwendet, um den Rückgabewert eines Methodenaufrufs auszuwerten.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
 Ab C# 7.0 können Sie den Musterabgleich mit dem [Typmuster](#type) verwenden, um präziseren Code zu schreiben, der die Anweisung `is` verwendet.
@@ -66,9 +66,9 @@ Ab C# 7.0 unterstützen die Anweisungen `is` und [switch](../../../csharp/langua
 
 - Das [Variablenmuster](#var), eine Übereinstimmung, die immer erfolgreich ausführt wird und den Wert eines Ausdrucks an eine neue lokale Variable bindet. 
 
-### <a name="type" />Typmuster</a>
+### <a name="a-nametype-type-pattern"></a><a name="type" />Typmuster
 
-Wenn Sie das Typmuster verwenden, um einen Musterabgleich durchzuführen, prüft `is`, ob ein Ausdruck in einen angegebenen Typen konvertiert werden kann; sofern dies möglich ist, wandelt es diesen in eine Variable dieses Typ um. Dies ist eine einfach Erweiterung der `is`-Anweisung, der eine präzise Auswertung und Konvertierung der Typs ermöglicht. Die allgemeine Form des Typmusters `is` ist:
+Wenn Sie das Typmuster verwenden, um einen Musterabgleich durchzuführen, prüft `is`, ob ein Ausdruck in einen angegebenen Typen konvertiert werden kann; sofern dies möglich ist, wandelt es diesen in eine Variable dieses Typ um. Dies ist eine einfach Erweiterung der `is`-Anweisung, die eine präzise Auswertung und Konvertierung des Typs ermöglicht. Die allgemeine Form des Typmusters `is` ist:
 
 ```csharp
    expr is type varname 
@@ -85,6 +85,8 @@ Der Ausdruck `is` ist `true`, wenn *expr* nicht `null` ist und eine der folgende
 - *expr* hat einen Kompilierzeittyp, der eine Basisklasse von *Typ* ist, und *expr* hat einen Runtime-Typ,der *Typ* ist oder von *Typ* abgeleitet wird. Der *Kompilierzeittyp* einer Variablen ist der Typ der Variablen, wie in der Deklaration des Typs definiert. Der *Laufzeittyp* einer Variablen ist der Typ der Instanz, die dieser Variablen zugewiesen wird.
 
 - *expr* ist eine Instanz eines Typs, der die Schnittstelle *Typ* implementiert.
+
+Beginnend mit C# 7.1 kann *expr* einen Kompilierzeittyp haben, der durch einen generischen Typparameter und seine Einschränkungen definiert ist. 
 
 Wenn *expr* `true` ist, und `is` mit der `if`-Anweisung verwendet wird, wird *varname* zugewiesen und ist nur lokal innerhalb der Anweisung `if` gültig.
 
@@ -142,17 +144,15 @@ Das folgende Beispiel zeigt einen Vergleich von `null`-Überprüfungen:
  
 ### <a name="var" />Variablenmuster</a>
 
-Eine Musterübereinstimmung mit einem Variablenmuster wird immer erfolgreich ausgeführt. Deren Syntax lautet
+Eine Musterübereinstimmung mit dem Variablenmuster ist für Nicht-NULL-Ausdrücke immer erfolgreich; wenn *expr* gleich `null` ist, dann ist der `is`-Ausdruck gleich `false`. Der Wert ungleich NULL von *expr* wird immer einer lokalen Variablen zugewiesen, deren Typ dem Runtimetyp von *expr* entspricht.  Die Syntax lautet:
 
 ```csharp 
    expr is var varname
 ```
 
-Hier wird der Wert von *expr* immer einer lokalen Variablen mit dem Namen *varname* zugewiesen. *varname* ist eine statische Variable des gleichen Typs wie *expr*. In folgendem Beispiel wird das Variablenmuster verwendet, um einen Ausdruck einer Variablen mit dem Namen `obj` zuzuweisen. Dann zeigt es den Wert und den Typ von `obj` an.
+In folgendem Beispiel wird das Variablenmuster verwendet, um einen Ausdruck einer Variablen mit dem Namen `obj` zuzuweisen. Dann zeigt es den Wert und den Typ von `obj` an.
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
-
-Bitte beachten Sie, dass der Ausdruck `is` immer noch TRUE ist und `null` *varname* zuweist, wenn *expr* `null` ist. 
 
 ## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
   

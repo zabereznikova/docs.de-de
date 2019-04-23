@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1b12e614c59785a066ad34e5320a205961f7dd49
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610807"
+---
 # <a name="contributing"></a>Beitragen
 
 Vielen Dank für Ihr Interesse und Ihre Bereitschaft, an der .NET-Dokumentation mitzuwirken!
@@ -24,7 +32,7 @@ Tickets und Aufgaben für all diese Repositorys werden hier verfolgt.
 
 Sie benötigen Grundkenntnisse von [Git und GitHub.com](https://guides.github.com/activities/hello-world/).
 
-**Schritt 1:** Überspringen Sie diesen Schritt, wenn Sie nur kleine Änderungen vornehmen möchten. Wenn Sie daran interessiert sind, neue Inhalte zu schreiben oder vorhandene Inhalte sorgfältig zu überarbeiten, eröffnen Sie ein [Ticket](https://github.com/dotnet/docs/issues) (Issue), in dem Sie beschreiben, was Sie tun möchten.
+**Schritt 1:** Überspringen Sie diesen Schritt, wenn Sie nur kleine Änderungen vornehmen möchten (wenn Sie beispielsweise einen Tippfehler korrigieren oder sofort einen Pull Request öffnen, um ein Problem zu beheben, das Sie in der Dokumentation finden). Wenn Sie daran interessiert sind, neue Inhalte zu schreiben oder vorhandene Inhalte sorgfältig zu überarbeiten, eröffnen Sie ein [Ticket](https://github.com/dotnet/docs/issues) (Issue), in dem Sie beschreiben, was Sie tun möchten.
 Der Inhalt im Ordner **docs** ist in Abschnitte unterteilt, die sich im Inhaltsverzeichnis (Table of Contents, TOC) wiederfinden. Definieren Sie, an welcher Stelle sich das Thema im Inhaltsverzeichnis befinden wird. Warten Sie auf Feedback zu Ihrem Vorschlag.
 
 - oder - 

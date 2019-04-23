@@ -74,8 +74,8 @@ ms.locfileid: "58410523"
   
  [Zurück nach oben](#top)  
   
-## <a name="anchors"></a>Anker  
- Anker oder atomare Assertionen mit einer Breite von Null bewirken, dass, in Abhängigkeit von der Position in der Zeichenfolge, eine Entsprechung gefunden oder nicht gefunden wird. Sie bewirken jedoch nicht, dass die Engine die Zeichenfolge durchläuft oder Zeichen verwendet. Die Metazeichen in der folgenden Tabelle sind Anker. Weitere Informationen finden Sie unter [Anker](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
+## <a name="anchors"></a>Anchors  
+ Anchors oder atomare Assertionen mit einer Breite von Null bewirken, dass, in Abhängigkeit von der Position in der Zeichenfolge, eine Entsprechung gefunden oder nicht gefunden wird. Sie bewirken jedoch nicht, dass die Engine die Zeichenfolge durchläuft oder Zeichen verwendet. Die Metazeichen in der folgenden Tabelle sind Anchors. Weitere Informationen finden Sie unter [Anchor](../../../docs/standard/base-types/anchors-in-regular-expressions.md).  
   
 |Assertion|Beschreibung|Muster|Übereinstimmungen|  
 |---------------|-----------------|-------------|-------------|  

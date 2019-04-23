@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309484"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613251"
 ---
 # <a name="com-callable-wrapper"></a>COM Callable Wrapper (CCW)
 
@@ -182,7 +182,7 @@ Um die DispId eines Schnittstellenmembers zur Laufzeit abzurufen, können COM-Cl
 
 Duale Schnittstellen ermöglichen ein frühes und spätes Binden an Schnittstellenmember durch COM-Clients. Während der Entwurfszeit und beim Testen finden Sie es möglicherweise hilfreich, die Klassenschnittstelle auf dual festzulegen. Bei einer verwalteten Klasse (und deren Basisklassen), die nie geändert wird, ist diese Option ebenfalls akzeptabel. In allen anderen Fällen sollten Sie vermeiden, die Klassenschnittstelle auf dual festzulegen.
 
-Eine automatisch generierte duale Schnittstelle kann in seltenen Fällen die geeignete Lösung sein, aber häufiger werden hiermit versionsbezogene Komplexitäten erzeugt. So können COM-Clients, die die Klassenschnittstelle einer abgeleiteten Klasse verwenden, beispielsweise schnell unterbrochen werden, wenn Änderungen an der Basisklasse vorgenommen werden. Wenn die Basisklasse von einem Drittanbieter bereitgestellt wird, liegt das Layout der Klassenschnittstelle außerhalb Ihrer Kontrolle. Darüber hinaus stellt eine duale Schnittstelle (**ClassInterfaceType.AutoDual**) im Gegensatz zu einer auf Dispatch beschränkten Schnittstelle eine Beschreibung der Klassenschnittstelle in der exportierten Typbibliothek bereit. Eine solche Beschreibung kann dafür sorgen, dass spät gebundene Clients DispIds zur Laufzeit zwischenspeichern.
+Eine automatisch generierte duale Schnittstelle kann in seltenen Fällen die geeignete Lösung sein, aber häufiger werden hiermit versionsbezogene Komplexitäten erzeugt. So können COM-Clients, die die Klassenschnittstelle einer abgeleiteten Klasse verwenden, beispielsweise schnell unterbrochen werden, wenn Änderungen an der Basisklasse vorgenommen werden. Wenn die Basisklasse von einem Drittanbieter bereitgestellt wird, liegt das Layout der Klassenschnittstelle außerhalb Ihrer Kontrolle. Darüber hinaus stellt eine duale Schnittstelle (**ClassInterfaceType.AutoDual**) im Gegensatz zu einer auf Dispatch beschränkten Schnittstelle eine Beschreibung der Klassenschnittstelle in der exportierten Typbibliothek bereit. Eine solche Beschreibung kann dafür sorgen, dass spät gebundene Clients DispIds zur Kompilierungszeit zwischenspeichern.
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>Stellen Sie sicher, dass alle COM-Ereignisbenachrichtigungen spät gebunden sind.
 

@@ -3,12 +3,12 @@ title: C#-Typen und -Variablen – Überblick über C#
 description: Erfahren Sie mehr über das Definieren von Typen und Deklarieren von Variablen in C#.
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 5159d75c601bbcb8248a11993a4aaf39299734f0
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 552066ff8d17d49dc5cc0bbb60b05c9c3e5f8eda
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846609"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481079"
 ---
 # <a name="types-and-variables"></a>Typen und Variablen
 
@@ -19,30 +19,30 @@ C#-Werttypen sind weiter unterteilt in *einfache Typen*, *Enumerationstypen*, *S
 Im Folgenden finden Sie eine Übersicht des C#-Typsystems.
 
 * Werttypen
-    - Einfache Typen
-        * Ganzzahlig mit Vorzeichen: `sbyte`, `short`, `int`,`long`
-        * Ganzzahlig ohne Vorzeichen: `byte`, `ushort`, `uint`,`ulong`
-        * Unicode-Zeichen: `char`
-        * IEEE-Gleitkomma: `float`, `double`
-        * Dezimalwert mit hoher Genauigkeit: `decimal`
-        * Boolesch: `bool`
-    - Enumerationstypen
-        * Benutzerdefinierte Typen der Form `enum E {...}`
-    - Strukturtypen
-        * Benutzerdefinierte Typen der Form `struct S {...}`
-    - Auf NULL festlegbare Werttypen
-        * Erweiterungen aller anderen Werttypen mit einem `null`-Wert
+  - Einfache Typen
+    * Ganzzahlig mit Vorzeichen: `sbyte`, `short`, `int`, `long`
+    * Ganzzahlig ohne Vorzeichen: `byte`, `ushort`, `uint`, `ulong`
+    * Unicode-Zeichen: `char`
+    * IEEE-Gleitkomma: `float`, `double`
+    * Dezimalwert mit hoher Genauigkeit: `decimal`
+    * Boolesch: `bool`
+  - Enumerationstypen
+    * Benutzerdefinierte Typen der Form `enum E {...}`
+  - Strukturtypen
+    * Benutzerdefinierte Typen der Form `struct S {...}`
+  - Auf NULL festlegbare Werttypen
+    * Erweiterungen aller anderen Werttypen mit einem `null`-Wert
 * Verweistypen
-    - Klassentypen
-        * Ultimative Basisklasse aller anderen Typen:`object`
-        * Unicode-Zeichenfolgen: `string`
-        * Benutzerdefinierte Typen der Form `class C {...}`
-    - Schnittstellentypen
-        * Benutzerdefinierte Typen der Form `interface I {...}`
-    - Arraytypen
-        * Ein- und mehrdimensional, z.B. `int[]` und`int[,]`
-    - Delegattypen
-        * Benutzerdefinierte Typen der Form `delegate int D(...)`
+  - Klassentypen
+    * Ultimative Basisklasse aller anderen Typen: `object`
+    * Unicode-Zeichenfolgen: `string`
+    * Benutzerdefinierte Typen der Form `class C {...}`
+  - Schnittstellentypen
+    * Benutzerdefinierte Typen der Form `interface I {...}`
+  - Arraytypen
+    * Ein- und mehrdimensional, z.B. `int[]` und `int[,]`
+  - Delegattypen
+    * Benutzerdefinierte Typen der Form `delegate int D(...)`
 
 Die acht Ganzzahltypen unterstützen 8-Bit-, 16-Bit, 32-Bit- und 64-Bit-Werte mit oder ohne Vorzeichen.
 
@@ -57,20 +57,20 @@ Zur Zeichen- und Zeichenfolgenverarbeitung in C# wird die Unicode-Codierung verw
 Hier sind die numerischen Typen von C# zusammengefasst.
 
 * Ganzzahlig mit Vorzeichen
-    - `sbyte`:  8 Bit, Bereich von -128 bis 127
-    - `short`: 16 Bit, Bereich von -32.768 bis 32.767
-    - `int`: 32 Bit, Bereich von -2.147.483.648 bis 2.147.483.647
-    - `long` : 64 Bit, Bereich von -9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807
+  - `sbyte`:  8 Bit, Bereich von -128 bis 127
+  - `short`: 16 Bit, Bereich von -32.768 bis 32.767
+  - `int`  : 32 Bit, Bereich von -2.147.483.648 bis 2.147.483.647
+  - `long` : 64 Bit, Bereich von -9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807
 * Ganzzahlig ohne Vorzeichen
-    - `byte`:  8 Bit, Bereich von -0 bis 255
-    - `ushort` : 16 Bit, Bereich von 0 bis 65.535
-    - `uint`: 32 Bit, Bereich von 0 bis 4.294.967.295
-    - `ulong`: 64 Bit, Bereich von 0 bis 18.446.744.073.709.551.615
+  - `byte`   :  8 Bit, Bereich von -0 bis 255
+  - `ushort` : 16 Bit, Bereich von 0 bis 65.535
+  - `uint`   : 32 Bit, Bereich von 0 bis 4.294.967.295
+  - `ulong`  : 64 Bit, Bereich von 0 bis 18.446.744.073.709.551.615
 * Gleitkomma
-    - `float`: 32 Bit, Bereich von 1,5 × 10<sup>-45</sup> bis 3,4 x 10<sup>38</sup>, Genauigkeit von 7 Stellen
-    - `double` : 64 Bit, Bereich von 5,0 × 10<sup>-324</sup> bis 1,7 x 10<sup>308</sup>, Genauigkeit von 15 Stellen
+  - `float`  : 32 Bit, Bereich von 1,5 × 10<sup>-45</sup> bis 3,4 x 10<sup>38</sup>, Genauigkeit von 7 Stellen
+  - `double` : 64 Bit, Bereich von 5,0 × 10<sup>-324</sup> bis 1,7 x 10<sup>308</sup>, Genauigkeit von 15 Stellen
 * Decimal
-    - `decimal` : 128 Bit, Bereich mindestens -7,9 × 10<sup>-28</sup> bis 7,9 x 10<sup>28</sup>, mit einer Genauigkeit von mindestens 28 Stellen
+  - `decimal` : 128 Bit, Bereich mindestens -7,9 × 10<sup>-28</sup> bis 7,9 x 10<sup>28</sup>, mit einer Genauigkeit von mindestens 28 Stellen
 
 C#-Programme verwenden *Typdeklarationen*, um neue Typen zu erstellen. Eine Typdeklaration gibt den Namen und die Member des neuen Typs an. Fünf Typkategorien von C# sind benutzerdefinierbar: Klassentypen, Strukturtypen, Schnittstellentypen, Enumerationstypen und Delegattypen.
 
@@ -101,19 +101,19 @@ Aus dem einheitlichen C#-Typensystem resultiert, dass Werttypen „bei Nachfrage
 Es gibt mehrere Arten von *Variablen* in C#, einschließlich Feldern, Arrayelementen, lokalen Variablen und Parametern. Variablen stellen Speicherorte dar, und jede Variable hat einen Typ, der bestimmt, welche Werte in der Variablen gespeichert werden können, wie unten gezeigt.
 
 * Nicht auf NULL festlegbarer Werttyp
-    - Ein Wert genau dieses Typs
+  - Ein Wert genau dieses Typs
 * Auf NULL festlegbarer Werttyp
-    - Ein `null`-Wert oder ein Wert genau dieses Typs
+  - Ein `null`-Wert oder ein Wert genau dieses Typs
 * object
-    - Ein `null`-Verweis, ein Verweis auf ein Objekt eines beliebigen Verweistyps oder ein Verweis auf einen geschachtelten Wert eines beliebigen Werttyps
+  - Ein `null`-Verweis, ein Verweis auf ein Objekt eines beliebigen Verweistyps oder ein Verweis auf einen geschachtelten Wert eines beliebigen Werttyps
 * Klassentyp
-    - Ein `null`-Verweis, ein Verweis auf eine Instanz dieses Klassentyps oder ein Verweis auf eine Instanz einer Klasse, die von diesem Klassentyp abgeleitet ist
+  - Ein `null`-Verweis, ein Verweis auf eine Instanz dieses Klassentyps oder ein Verweis auf eine Instanz einer Klasse, die von diesem Klassentyp abgeleitet ist
 * Schnittstellentyp
-    - Ein `null`-Verweis, ein Verweis auf eine Instanz eines Klassentyps, der diesen Schnittstellentyp implementiert, oder ein Verweis auf einen geschachtelten Wert eines Werttyps, der diesen Schnittstellentyp implementiert
+  - Ein `null`-Verweis, ein Verweis auf eine Instanz eines Klassentyps, der diesen Schnittstellentyp implementiert, oder ein Verweis auf einen geschachtelten Wert eines Werttyps, der diesen Schnittstellentyp implementiert
 * Arraytyp
-    - Ein `null`-Verweis, ein Verweis auf eine Instanz dieses Arraytyps oder ein Verweis auf eine Instanz eines kompatiblen Arraytyps
+  - Ein `null`-Verweis, ein Verweis auf eine Instanz dieses Arraytyps oder ein Verweis auf eine Instanz eines kompatiblen Arraytyps
 * Delegattyp
-    - Ein `null`-Verweis oder ein Verweis auf eine Instanz eines kompatiblen Delegattyp
+  - Ein `null`-Verweis oder ein Verweis auf eine Instanz eines kompatiblen Delegattyp
 
 > [!div class="step-by-step"]
 > [Zurück](program-structure.md)

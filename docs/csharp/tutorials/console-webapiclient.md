@@ -3,12 +3,12 @@ title: Erstellen eines REST-Clients mithilfe von .NET Core
 description: In diesem Tutorial lernen Sie verschiedene Features in .NET Core und der Sprache C# kennen.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: a375215f2d31845333290c85f7701c1a7dfbe780
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 332e47d9a02f48c53bbad272477768fa4c0367f2
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412304"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612064"
 ---
 # <a name="rest-client"></a>REST-Client
 
@@ -66,7 +66,7 @@ Nachdem Sie diese Änderungen durchgeführt haben, sollten Sie erneut `dotnet re
 
 ## <a name="making-web-requests"></a>Ausführen von Webanforderungen
 
-Jetzt können Sie damit beginnen, Daten aus dem Web abzurufen. In dieser Anwendung lesen Sie Informationen aus der [GitHub-API](https://developer.github.com/v3/) ein. Beginnen wir damit, Informationen zu den Projekten unterhalb der Kategorie [.NET Foundation](https://www.dotnetfoundation.org/) einzulesen. Hierzu senden Sie zunächst eine Anforderung an die GitHub-API, um Informationen zu den Projekten abzurufen. Der verwendete Endpunkt ist [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos). Sie möchten alle Informationen zu diesen Projekten abrufen, deshalb verwenden Sie eine HTTP GET-Anforderung.
+Jetzt können Sie damit beginnen, Daten aus dem Web abzurufen. In dieser Anwendung lesen Sie Informationen aus der [GitHub-API](https://developer.github.com/v3/) ein. Beginnen wir damit, Informationen zu den Projekten unterhalb der Kategorie [.NET Foundation](https://www.dotnetfoundation.org/) einzulesen. Hierzu senden Sie zunächst eine Anforderung an die GitHub-API, um Informationen zu den Projekten abzurufen. Der verwendete Endpunkt ist <https://api.github.com/orgs/dotnet/repos>. Sie möchten alle Informationen zu diesen Projekten abrufen, deshalb verwenden Sie eine HTTP GET-Anforderung.
 Ihr Browser verwendet ebenfalls HTTP GET-Anforderungen, deshalb können Sie diese URL in Ihren Browser einfügen, um zu sehen, welche Informationen abgerufen und verarbeitet werden.
 
 Sie verwenden die <xref:System.Net.Http.HttpClient> -Klasse zum Ausführen der Webanforderungen. Wie alle modernen .NET-APIs unterstützt <xref:System.Net.Http.HttpClient> nur asynchrone Methoden für APIs mit langer Ausführungszeit.

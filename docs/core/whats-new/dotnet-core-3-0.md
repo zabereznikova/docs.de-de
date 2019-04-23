@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: e9a69c61df574ea391622ebb709c14948c71014d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 086be4649f4e7e27ff98df6f26d08856683865c8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341724"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611782"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>Neuerungen in .NET Core 3.0 (Vorschauversion 2)
 
@@ -24,8 +24,8 @@ In diesem Artikel werden Neuerungen in .NET Core 3.0 (Vorschauversion 2) beschri
 
 Weitere Informationen zu den Inhalten der einzelnen Versionen finden Sie in den folgenden Ankündigungen:
 
-- [Ankündigung von .NET Core 3.0 Vorschauversion 1](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
-- [Ankündigung von .NET Core 3.0 Vorschauversion 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
+- [.NET Core 3.0 Preview 1 announcement (Ankündigung von .NET Core 3.0 Preview 1)](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-1-and-open-sourcing-windows-desktop-frameworks/)
+- [.NET Core 3.0 Preview 2 announcement (Ankündigung von .NET Core 3.0 Preview 2)](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-2/)
 
 ## <a name="c-8"></a>C# 8.0
 
@@ -63,7 +63,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 {
     await foreach (var result in GetResultsAsync())
     {
-        if (result > 20) yield return result; 
+        if (result > 20) yield return result;
     }
 }
 ```
@@ -166,20 +166,20 @@ Während `dotnet build` oder `dotnet publish` wird eine ausführbare Datei erste
 
 ## <a name="build-copies-dependencies"></a>Build kopiert Abhängigkeiten
 
-`dotnet build` kopiert jetzt NuGet-Abhängigkeiten für Ihre Anwendung aus dem NuGet-Cache in den Buildausgabeordner. Bisher wurde Abhängigkeiten nur als Teil von `dotnet publish` kopiert. 
+`dotnet build` kopiert jetzt NuGet-Abhängigkeiten für Ihre Anwendung aus dem NuGet-Cache in den Buildausgabeordner. Bisher wurde Abhängigkeiten nur als Teil von `dotnet publish` kopiert.
 
 Es gibt einige Vorgänge, wie das Verlinken und das Veröffentlichen von Razor-Seiten, die noch veröffentlicht werden müssen.
 
 ## <a name="local-dotnet-tools"></a>Lokale dotnet-Tools
 
->[!WARNING]
->Nach der Vorschauversion 1 von .NET Core 3.0 wurde in Vorschauversion 2 eine Änderung an den lokalen .NET Core-Tools vorgenommen.  Wenn Sie die lokalen Tools in Vorschauversion 1 mit einem Befehl wie `dotnet tool restore` oder `dotnet tool install` verwenden haben, müssen Sie den Cacheordner für die lokalen Tools löschen, da diese andernfalls in Vorschauversion 2 nicht funktionieren. Je nach Betriebssystem werden die Ordnerpfade wie folgt gelöscht:
+> [!WARNING]
+> Nach der Vorschauversion 1 von .NET Core 3.0 wurde in Vorschauversion 2 eine Änderung an den lokalen .NET Core-Tools vorgenommen.  Wenn Sie die lokalen Tools in Vorschauversion 1 mit einem Befehl wie `dotnet tool restore` oder `dotnet tool install` verwenden haben, müssen Sie den Cacheordner für die lokalen Tools löschen, da diese andernfalls in Vorschauversion 2 nicht funktionieren. Je nach Betriebssystem werden die Ordnerpfade wie folgt gelöscht:
 >
->Unter Mac und Linux: `rm -r $HOME/.dotnet/toolResolverCache`
+> Mac und Linux: `rm -r $HOME/.dotnet/toolResolverCache`
 >
->Unter Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+> Windows: `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
 >
->Wenn Sie diesen Ordner nicht löschen, wird eine Fehlermeldung angezeigt.
+> Wenn Sie diesen Ordner nicht löschen, wird eine Fehlermeldung angezeigt.
 
 .NET Core 2.1 unterstützt globale Tools, .NET Core 3.0 verfügt jetzt über lokale Tools. Lokale Tools ähneln globalen Tools, sind aber mit einem bestimmten Speicherort auf dem Datenträger verknüpft. Dies ermöglicht die Bereitstellung von Tools für einzelne Projekte und Repositorys. Jedes lokal installierte Tool ist nicht global verfügbar. Tools werden als NuGet-Pakete verteilt.
 
@@ -309,10 +309,12 @@ Ihr Feedback in den [dotnet/winforms](https://github.com/dotnet/winforms/issues)
 
 In Visual Studio 2019 können mit dem enthaltenen [Paketerstellungsprojekt für Windows-Anwendungen](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) MSIX-Pakete mit [eigenständigen](../deploying/index.md#self-contained-deployments-scd) .NET Core-Anwendungen erstellt werden.
 
->Hinweis: Die unterstützten Laufzeiten müssen in der `<RuntimeIdentifiers>`-Eigenschaft der .NET Core-Projektdatei angegeben werden:
-```xml
-<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
-```
+> [!NOTE]
+> Die unterstützten Laufzeiten müssen in der `<RuntimeIdentifiers>`-Eigenschaft der .NET Core-Projektdatei angegeben werden:
+>
+> ```xml
+> <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+> ```
 
 ## <a name="fast-built-in-json-support"></a>Schneller integrierter JSON-Support
 
@@ -379,7 +381,7 @@ public static void Utf8JsonReaderLoop(ReadOnlySpan<byte> dataUtf8)
 
 ### <a name="utf8jsonwriter"></a>Utf8JsonWriter
 
-`System.Text.Json.Utf8JsonWriter` damit lassen sich in UTF-8 codierte JSON-Texte aus gängigen .NET-Typen wie `String`, `Int32` und `DateTime` schnell, vorwärtsgerichtet und ohne Zwischenspeichern schreiben. Der Writer ist ebenso wie der Reader ein grundlegender Low-Level-Typ, der zum Erstellen von benutzerdefinierten Serialisierungsmodulen verwendet werden kann. Mit der neuen `Utf8JsonWriter`-Klasse werden JSON-Nutzlasten 30 bis 80 % schnell geschrieben als mit dem **Json.NET**-Writer. Außerdem findet keine Speicherbelegung statt.
+Mit `System.Text.Json.Utf8JsonWriter` lassen sich in UTF-8 codierte JSON-Texte aus gängigen .NET-Typen wie `String`, `Int32` und `DateTime` schnell, vorwärtsgerichtet und ohne Zwischenspeichern schreiben. Der Writer ist ebenso wie der Reader ein grundlegender Low-Level-Typ, der zum Erstellen von benutzerdefinierten Serialisierungsmodulen verwendet werden kann. Mit der neuen `Utf8JsonWriter`-Klasse werden JSON-Nutzlasten 30 bis 80 % schnell geschrieben als mit dem **Json.NET**-Writer. Außerdem findet keine Speicherbelegung statt.
 
 Das folgende Beispiel enthält für `Utf8JsonWriter` ein Anwendungsszenario, das als Ausgangspunkt verwendet werden kann:
 
@@ -421,7 +423,7 @@ static int WriteJson(IBufferWriter<byte> output, long[] extraData)
 }
 ```
 
-`Utf8JsonWriter` nimmt `IBufferWriter<byte>` als Ausgabespeicherort entgegen, in den die JSON-Daten geschrieben werden. In der aufrufenden Funktion muss eine konkrete Implementierung bereitgestellt werden. Die Plattform umfasst zurzeit keine Implementierung dieser Schnittstelle. Ein Beispiel zu `IBufferWriter<byte>` finden Sie unter [https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35](https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35).
+`Utf8JsonWriter` nimmt `IBufferWriter<byte>` als Ausgabespeicherort entgegen, in den die JSON-Daten geschrieben werden. In der aufrufenden Funktion muss eine konkrete Implementierung bereitgestellt werden. Die Plattform umfasst zurzeit keine Implementierung dieser Schnittstelle. Ein Beispiel zu `IBufferWriter<byte>` finden Sie unter <https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35>.
 
 ### <a name="jsondocument"></a>JsonDocument
 
@@ -466,7 +468,7 @@ Assemblyentladbarkeit ist eine neue Funktion von `AssemblyLoadContext`. Dieses n
 
 Diese neue Funktion kann für Szenarios wie die folgenden verwendet werden:
 
-* Plug-In-Szenarios, in denen ein dynamisches Laden und Entladen von Plug-Ins erforderlich ist. 
+* Plug-In-Szenarios, in denen ein dynamisches Laden und Entladen von Plug-Ins erforderlich ist.
 * Dynamisches Kompilieren und Ausführen von Code sowie Leeren des zugehörigen Speichers. Dies ist beispielsweise für Websites und Skript-Engines nützlich.
 * Laden von Assemblys für eine Selbstprüfung (ähnlich wie bei ReflectionOnlyLoad). In vielen Fällen ist [MetadataLoadContext](#type-metadataloadcontext) (veröffentlicht in Vorschauversion 1) jedoch die bessere Wahl.
 
@@ -484,7 +486,7 @@ Ein Beispiel zur Verwendung von COM finden Sie im [Quellcode der Excel-Demo](htt
 
 ## <a name="type-sequencereader"></a>Typ: SequenceReader
 
-In .NET Core 3.0 wurde `System.Buffers.SequenceReader` hinzugefügt, der als Leser für `ReadOnlySequence<T>` verwendet werden kann. Dies ermöglicht eine einfache, leistungsstarke Zuteilungsanalyse mit geringer Priorität von `System.IO.Pipelines`-Daten, die mehrere Hintergrundpuffer überwinden können. 
+In .NET Core 3.0 wurde `System.Buffers.SequenceReader` hinzugefügt, der als Leser für `ReadOnlySequence<T>` verwendet werden kann. Dies ermöglicht eine einfache, leistungsstarke Zuteilungsanalyse mit geringer Priorität von `System.IO.Pipelines`-Daten, die mehrere Hintergrundpuffer überwinden können.
 
 Das folgende Beispiel bricht eine Eingabe-`Sequence` in gültige, durch Trennzeichen getrennte `CR/LF`-Zeilen auf:
 
@@ -521,7 +523,7 @@ Der `MetadataLoadContext`-Typ wurde hinzugefügt, der das Lesen von Assemblymeta
 
 `MetdataLoadContext` ist im [System.Reflection.MetadataLoadContext-Paket](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext) verfügbar. Es ist ein .NET Standard 2.0-Paket.
 
-Der `MetadataLoadContext` stellt APIs ähnlich dem Typ <xref:System.Runtime.Loader.AssemblyLoadContext> zur Verfügung, basiert aber nicht auf diesem Typ. Ähnlich wie <xref:System.Runtime.Loader.AssemblyLoadContext> ermöglicht der `MetadataLoadContext` das Laden von Assemblys innerhalb einer isolierten Umgebung zum Laden von Assemblys. `MetdataLoadContext` APIs geben <xref:System.Reflection.Assembly>-Objekte zurück, sodass bekannte Reflektions-APIs verwendet werden können. Ausführungsorientierte APIs, wie [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127) sind nicht zulässig, und geben „InvalidOperationException“ zurück.
+Der `MetadataLoadContext` stellt APIs ähnlich dem Typ <xref:System.Runtime.Loader.AssemblyLoadContext> zur Verfügung, basiert aber nicht auf diesem Typ. Ähnlich wie <xref:System.Runtime.Loader.AssemblyLoadContext> ermöglicht der `MetadataLoadContext` das Laden von Assemblys innerhalb einer isolierten Umgebung zum Laden von Assemblys. `MetdataLoadContext`-APIs geben <xref:System.Reflection.Assembly>-Objekte zurück, sodass bekannte Reflektions-APIs verwendet werden können. Ausführungsorientierte APIs, wie [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127) sind nicht zulässig, und geben „InvalidOperationException“ zurück.
 
 Das folgende Beispiel zeigt, wie Sie den richtigen Typen in einer Assembly findet, die eine bestimmte Schnittstelle implementiert:
 
@@ -663,7 +665,7 @@ namespace rsakeyprint
             {
                 byte[] keyBytes = File.ReadAllBytes(args[0]);
                 rsa.ImportRSAPrivateKey(keyBytes, out int bytesRead);
- 
+
                 Console.WriteLine($"Read {bytesRead} bytes, {keyBytes.Length-bytesRead} extra byte(s) in file.");
                 RSAParameters rsaParameters = rsa.ExportParameters(true);
                 Console.WriteLine(BitConverter.ToString(rsaParameters.D));
@@ -709,7 +711,7 @@ Bisher unterstützte .NET Core nur die Verwendung des `SerialPort`-Typs auf Wind
 
 ## <a name="more-bcl-improvements"></a>Weitere BCL-Verbesserungen
 
-Die Typen `Span<T>`, `Memory<T>` und verwandte Typen, die in .NET Core 2.1 eingeführt wurden, wurden in .NET Core 3.0 optimiert. Allgemeine Vorgänge, wie die Bereichserstellung, Slicing, Analyse und Formatierung werden jetzt besser ausgeführt. 
+Die Typen `Span<T>`, `Memory<T>` und verwandte Typen, die in .NET Core 2.1 eingeführt wurden, wurden in .NET Core 3.0 optimiert. Allgemeine Vorgänge, wie die Bereichserstellung, Slicing, Analyse und Formatierung werden jetzt besser ausgeführt.
 
 Darüber hinaus haben Typen wie `String` indirekte Verbesserungen, um sie effizienter zu machen, wenn sie als Schlüssel mit `Dictionary<TKey, TValue>` und anderen Sammlungen verwendet werden. Um von diesen Verbesserungen zu profitieren, sind keine Codeänderungen erforderlich.
 
@@ -751,7 +753,7 @@ Führen Sie nach dem Konfigurieren von Snap auf Ihrem System den folgenden Befeh
 ```console
 sudo snap install dotnet-sdk --beta --classic
 ```
- 
+
 Wenn .NET Core mit dem Snap-Paket installiert wird, lautet der Standardbefehl für .NET Core `dotnet-sdk.dotnet` und nicht nur `dotnet`. Der Vorteil des Befehls mit dem Namespace besteht darin, dass keine Konflikte mit möglicherweise global installierten .NET Core-Versionen auftreten. Für diesen Befehl kann der Alias `dotnet` wie folgt erstellt werden:
 
 ```console

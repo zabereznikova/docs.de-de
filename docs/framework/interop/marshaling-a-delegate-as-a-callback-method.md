@@ -12,10 +12,10 @@ ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4cc9d592bc2030cdd17e7f87d7c5ac458dc01106
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124812"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Marshalling von Delegaten als Rückrufmethode
@@ -26,13 +26,13 @@ In diesem Beispiel wird veranschaulicht, wie Delegaten an eine nicht verwaltete 
 
 Das Rückrufbeispiel verwendet die folgenden nicht verwalteten Funktionen, die jeweils zusammen mit ihrer ursprünglichen Funktionsdeklaration aufgeführt werden:
 
--   `TestCallBack` exportiert aus „PinvokeLib.dll“.
+-   `TestCallBack` aus „PinvokeLib.dll“ exportiert.
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
--   `TestCallBack2` exportiert aus „PinvokeLib.dll“.
+-   `TestCallBack2` aus „PinvokeLib.dll“ exportiert.
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);
@@ -56,4 +56,4 @@ Die `LibWrap`-Klasse in diesem Beispiel enthält verwaltete Prototypen für die 
 
 - [Verschiedene Marshallingbeispiele](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ss9sb93t(v=vs.100))
 - [Datentypen für den Plattformaufruf](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
-- [Erstellen von Prototypen in verwaltetem Code](creating-prototypes-in-managed-code.md)
+- [Creating Prototypes in Managed Code (Erstellen von Prototypen in verwaltetem Code)](creating-prototypes-in-managed-code.md)

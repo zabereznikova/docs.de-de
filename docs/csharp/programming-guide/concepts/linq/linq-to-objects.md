@@ -3,10 +3,10 @@ title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
 ms.openlocfilehash: b82d21a7de4f596afb5e41487221498dd5ca9f98
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326631"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
@@ -27,13 +27,13 @@ Die Bezeichnung „LINQ to Objects“ bezieht sich auf die direkte Verwendung vo
  Der Zweck dieses Abschnitts ist es, den LINQ-Ansatz anhand einiger Beispiele zu veranschaulichen. Er ist bei weitem nicht als vollständig zu betrachten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [LINQ und Zeichenfolgen (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+ [LINQ and Strings (C#) (LINQ und Zeichenfolgen (C#))](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
  Erläutert, wie LINQ zum Abfragen und Transformieren von Zeichenfolgen und Auflistungen von Zeichenfolgen verwendet werden kann. Dieser Abschnitt umfasst auch Links zu Themen, die diese Prinzipien veranschaulichen.  
   
- [LINQ und Reflektion (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-reflection.md)  
+ [LINQ and Reflection (C#) (LINQ und Reflektion (C#))](../../../../csharp/programming-guide/concepts/linq/linq-and-reflection.md)  
  Verweist auf ein Beispiel, das darstellt, wie LINQ die Reflektion verwendet.  
   
- [LINQ und Dateiverzeichnisse (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+ [LINQ and File Directories (C#) (LINQ und Dateiverzeichnisse (C#))](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
  Erläutert, wie LINQ für die Interaktion mit Dateisystemen verwendet werden kann. Dieser Abschnitt umfasst auch Links zu Themen, die diese Konzepte veranschaulichen.  
   
  [Vorgehensweise: Abfragen der ArrayList-Klasse mit LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
@@ -42,5 +42,5 @@ Die Bezeichnung „LINQ to Objects“ bezieht sich auf die direkte Verwendung vo
  [Vorgehensweise: Hinzufügen von benutzerdefinierten Methoden zu LINQ-Abfragen (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
  Erläutert die Erweiterung des Methodensatzes, den Sie durch Hinzufügen von Erweiterungsmethoden zur <xref:System.Collections.Generic.IEnumerable%601>-Schnittstelle verwenden können.  
   
- [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
+ [Language Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  
  Stellt Links zu Themen bereit, die LINQ erläutern. Zudem werden Codebeispiele bereitgestellt, die Abfragen durchführen.
