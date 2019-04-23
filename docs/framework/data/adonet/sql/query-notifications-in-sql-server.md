@@ -3,10 +3,10 @@ title: Abfragebenachrichtigungen in SQL Server
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
 ms.openlocfilehash: e31a733635cf56a9c5e539dfb1d71d7d7037175a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336667"
 ---
 # <a name="query-notifications-in-sql-server"></a>Abfragebenachrichtigungen in SQL Server
@@ -30,11 +30,11 @@ Mit Abfragebenachrichtigungen, die auf der Service Broker-Infrastruktur aufsetze
   
 -   [Verwenden von Abfragebenachrichtigungen](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
--   [Erstellen einer Abfrage für die Benachrichtigung](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+-   [Erstellen eine Abfrage für die Benachrichtigung](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
 -   [Entwicklung (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
--   [Service Broker (InfoCenter für Entwickler)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+-   [Service Broker Developer InfoCenter](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
 -   [Entwicklerhandbuch (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
@@ -42,13 +42,13 @@ Mit Abfragebenachrichtigungen, die auf der Service Broker-Infrastruktur aufsetze
  [Aktivieren von Abfragebenachrichtigungen](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
  Erläutert die Verwendung von Abfragebenachrichtigungen und informiert über die Anforderungen, die für deren Aktivierung und Verwendung erfüllt sein müssen.  
   
- ["SqlDependency" in einer ASP.NET-Anwendung](../../../../../docs/framework/data/adonet/sql/sqldependency-in-an-aspnet-app.md)  
+ [SqlDependency in einer ASP.NET-Anwendung](../../../../../docs/framework/data/adonet/sql/sqldependency-in-an-aspnet-app.md)  
  Zeigt, wie Sie Abfragebenachrichtigungen von einer ASP.NET-Anwendung aus verwenden können.  
   
- [Ermitteln von Änderungen mit "SqlDependency"](../../../../../docs/framework/data/adonet/sql/detecting-changes-with-sqldependency.md)  
+ [Ermitteln von Änderungen mit SqlDependency](../../../../../docs/framework/data/adonet/sql/detecting-changes-with-sqldependency.md)  
  Zeigt, wie Sie erkennen können, dass sich Abfrageergebnisse von den ursprünglich empfangenen Abfrageergebnissen unterscheiden.  
   
- [SqlCommand-Ausführung mit "SqlNotificationRequest"](../../../../../docs/framework/data/adonet/sql/sqlcommand-execution-with-a-sqlnotificationrequest.md)  
+ [SqlCommand-Ausführung mit SqlNotificationRequest](../../../../../docs/framework/data/adonet/sql/sqlcommand-execution-with-a-sqlnotificationrequest.md)  
  Zeigt, wie ein <xref:System.Data.SqlClient.SqlCommand>-Objekt so konfiguriert werden kann, dass es mit einer Abfragebenachrichtigung arbeitet.  
   
 ## <a name="reference"></a>Referenz  

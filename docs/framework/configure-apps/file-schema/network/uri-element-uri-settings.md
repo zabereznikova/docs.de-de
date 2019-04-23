@@ -1,19 +1,19 @@
 ---
-title: <Uri> -Element (Netzwerkeinstellungen)
+title: <Uri>-Element (URI-Einstellungen)
 ms.date: 03/30/2017
 ms.assetid: c22bab8b-477c-4ae4-8498-65ad409e0847
 ms.openlocfilehash: 1f3573babd2e363a78f0ad454f0ba36c87ba6390
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212140"
 ---
 # <a name="uri-element-uri-settings"></a>\<URI >-Elements (Netzwerkeinstellungen)
 Enthält Einstellungen, die angeben, wie .NET Framework Webadressen, die mithilfe von uniform Resource Identifier (URIs) ausgedrückt verarbeitet.  
   
 ## <a name="schema-hierarchy"></a>Schemahierarchie  
- [\<Configuration >-Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<configuration> Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<uri>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -42,7 +42,7 @@ Enthält Einstellungen, die angeben, wie .NET Framework Webadressen, die mithilf
   
 |**Element**|**Beschreibung**|  
 |-----------------|---------------------|  
-|[Konfiguration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Enthält Einstellungen für alle Namespaces.|  
+|[configuration](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Enthält Einstellungen für alle Namespaces.|  
   
 ## <a name="remarks"></a>Hinweise  
  Die `uri` Element enthält Einstellungen für Mitglieder der <xref:System.Uri> Klasse, die vom Klassen in der <xref:System.Net> Namespace. Die Einstellungen Konfigurieren der Unterstützung für IRI und IDN.  
@@ -69,4 +69,4 @@ Enthält Einstellungen, die angeben, wie .NET Framework Webadressen, die mithilf
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Netzwerkeinstellungsschema](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [Network Settings Schema (Schema für Netzwerkeinstellungen)](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

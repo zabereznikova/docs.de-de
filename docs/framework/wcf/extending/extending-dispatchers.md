@@ -5,10 +5,10 @@ helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
 ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335029"
 ---
 # <a name="extending-dispatchers"></a>Erweitern von Verteilern
@@ -84,17 +84,17 @@ Verteiler sind dafür verantwortlich, eingehende Nachrichten aus den zugrunde li
   
 4. Sicherheitsrelevante Komponenten können die folgenden Eigenschaften verwenden:  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> Gibt an, wohin Überwachungsereignisse geschrieben werden.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> gibt an, wohin Überwachungsereignisse geschrieben werden.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> Steuert, ob der Dienst versucht, mithilfe der Anmeldeinformationen der eingehenden Nachricht einen Identitätswechsel durchzuführen.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> steuert, ob der Dienst versucht, mithilfe der Anmeldeinformationen der eingehenden Nachricht einen Identitätswechsel durchzuführen.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> Steuert, ob Ereignisse für erfolgreiche Nachrichtenauthentifizierung in das Ereignisprotokoll durch angegeben geschrieben werden <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> steuert, ob Ereignisse für erfolgreiche Nachrichtenauthentifizierung in das Ereignisprotokoll geschrieben werden, das von <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> angegeben wird.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> Steuerelemente wie die <xref:System.Threading.Thread.CurrentPrincipal%2A> festgelegt wird.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> steuert, wie die <xref:System.Threading.Thread.CurrentPrincipal%2A>-Eigenschaft festgelegt wird.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> Gibt an, wie die Überwachung von Autorisierungsereignissen durchgeführt wird.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> gibt an, wie die Überwachung von Autorisierungsereignissen durchgeführt wird.  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> Gibt an, ob nicht schwerwiegende Ausnahmen unterdrückt werden sollen, die während des protokollierungsprozesses auftreten.  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> gibt an, ob während des Protokollierungsprozesses auftretende nicht schwerwiegende Ausnahmen unterdrückt werden sollen.  
   
  In der Regel werden benutzerdefinierte Erweiterungsobjekte einer <xref:System.ServiceModel.Dispatcher.DispatchRuntime>-Eigenschaft zugewiesen oder durch ein Dienstverhalten (ein Objekt, das <xref:System.ServiceModel.Description.IServiceBehavior> implementiert), durch ein Vertragsverhalten (ein Objekt, das <xref:System.ServiceModel.Description.IContractBehavior> implementiert) oder durch ein Endpunktverhalten (ein Objekt, das <xref:System.ServiceModel.Description.IEndpointBehavior> implementiert) in eine Auflistung eingefügt. Das installierende Verhaltensobjekt wird dann der entsprechenden Verhaltensauflistung entweder programmgesteuert oder durch Implementierung eines benutzerdefinierten <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>-Objekts hinzugefügt, um das Verhalten, das eingefügt werden soll, mithilfe einer Anwendungskonfigurationsdatei zu aktivieren.  
   
@@ -131,6 +131,6 @@ Verteiler sind dafür verantwortlich, eingehende Nachrichten aus den zugrunde li
 
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [Vorgehensweise: Überprüfen und Ändern von Nachrichten auf dem Dienst](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
+- [Vorgehensweise: Überprüfen und Ändern von Nachrichten für den Dienst](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
 - [Vorgehensweise: Überprüfen oder Ändern von Parametern](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
 - [Vorgehensweise: Sperren von Endpunkten im Unternehmen](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
 ms.openlocfilehash: 115c1df4bd49d5848d72c4cbd0242a49a12740c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335497"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>Vorgehensweise: Erstellen Sie eine Prozedur, die einen Wert zurückgibt (Visual Basic)
@@ -44,5 +44,5 @@ Sie verwenden eine `Function` -Prozedur, einen Wert an den aufrufenden Code zur�
 - [Operatorprozeduren](./operator-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Function-Anweisung](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Vorgehensweise: Abrufen eines Werts aus einer Prozedur](./how-to-return-a-value-from-a-procedure.md)
-- [Vorgehensweise: Aufrufen einer Prozedur, die einen Wert zurückgibt](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Vorgehensweise: Zurückgeben eines Werts aus einer Prozedur](./how-to-return-a-value-from-a-procedure.md)
+- [Vorgehensweise: Aufrufen einer Prozedur, die einen Wert zurückgibt.](./how-to-call-a-procedure-that-returns-a-value.md)

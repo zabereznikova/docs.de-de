@@ -7,10 +7,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
 ms.openlocfilehash: 6e3ce2a184ca5411a6a016929a16bf3d67e669ca
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335471"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>Vorgehensweise: Aufrufen einer Prozedur, die keinen Wert (Visual Basic) zurückgibt
@@ -36,6 +36,6 @@ Ein `Sub` -Prozedur gibt keinen Wert an den aufrufenden Code zurück. Sie rufen 
 - [Sub-Prozeduren](./sub-procedures.md)
 - [Parameter und Argumente von Prozeduren](./procedure-parameters-and-arguments.md)
 - [Sub-Anweisung](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Vorgehensweise: Erstellen einer Prozedur](./how-to-create-a-procedure.md)
-- [Vorgehensweise: Aufrufen einer Prozedur, die einen Wert zurückgibt](./how-to-call-a-procedure-that-returns-a-value.md)
+- [Vorgehensweise: Erstellen Sie eine Prozedur](./how-to-create-a-procedure.md)
+- [Vorgehensweise: Aufrufen einer Prozedur, die einen Wert zurückgibt.](./how-to-call-a-procedure-that-returns-a-value.md)
 - [Vorgehensweise: Aufrufen eines Ereignishandlers in Visual Basic](./how-to-call-an-event-handler.md)

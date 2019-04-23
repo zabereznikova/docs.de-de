@@ -3,10 +3,10 @@ title: Hosten in einer Windows-Dienstanwendung
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
 ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335367"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hosten in einer Windows-Dienstanwendung
@@ -39,7 +39,7 @@ Windows-Dienste (früher Windows NT-Dienste) bieten ein Prozessmodell, das beson
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.ServiceProcess>
-- [Exemplarische Vorgehensweise: Erstellen eine Windows-Dienstanwendung im Komponenten-Designer](https://go.microsoft.com/fwlink/?LinkId=94875)
+- [Exemplarische Vorgehensweise: Erstellen einer Windows-Dienstanwendung](https://go.microsoft.com/fwlink/?LinkId=94875)
 - [Vorgehensweise: Hosten eines WCF-Diensts in einem verwalteten Windows-Dienst](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
 - [Windows-Diensthost](../../../../docs/framework/wcf/samples/windows-service-host.md)
 - [Programmierarchitektur für Dienstanwendungen](https://go.microsoft.com/fwlink/?LinkId=94876)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211659"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Implementieren des ExpandCollapse-Steuerelementmusters der Benutzeroberflächenautomatisierung
@@ -32,7 +32,7 @@ ms.locfileid: "59211659"
   
 -   Wenn der <xref:System.Windows.Automation.ExpandCollapseState> eines Steuerelements auf <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>festgelegt ist, sind die <xref:System.Windows.Automation.ExpandCollapsePattern> -Funktionalitäten aktuell inaktiv für das Steuerelement, und <xref:System.Windows.Automation.ExpandCollapseState>sind die einzigen Informationen, die mithilfe dieses Steuerelementmusters abgerufen werden können. Wenn untergeordnete Objekte später hinzugefügt werden, wird <xref:System.Windows.Automation.ExpandCollapseState> geändert, und die <xref:System.Windows.Automation.ExpandCollapsePattern> -Funktionalität wird aktiviert.  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> bezieht sich auf die Sichtbarkeit der unmittelbaren untergeordneten Objekte nur. Es verweist nicht auf die Sichtbarkeit sämtlicher Nachfolgerobjekte.  
+-   <xref:System.Windows.Automation.ExpandCollapseState> verweist nur auf die Sichtbarkeit der unmittelbaren untergeordneten Objekte und nicht auf die Sichtbarkeit sämtlicher Nachfolgerobjekte.  
   
 -   Die Funktionalität zum Erweitern und Reduzieren ist steuerelementspezifisch. Im Folgenden finden Sie Beispiele dieses Verhaltens.  
   

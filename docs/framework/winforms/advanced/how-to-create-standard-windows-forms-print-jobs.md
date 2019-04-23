@@ -11,10 +11,10 @@ helpviewer_keywords:
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
 ms.openlocfilehash: 816da93218e20f73f16c14769ed1a549dd3d8eb3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335406"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>Vorgehensweise: Erstellen von standardmäßigen Druckaufträgen in Windows Forms
@@ -79,4 +79,4 @@ Die Grundlage für das Drucken in Windows Forms ist die <xref:System.Drawing.Pri
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)
+- [Druckunterstützung in Windows Forms](windows-forms-print-support.md)

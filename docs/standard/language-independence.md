@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 40ba9b2dcc7321c81ee3f03112e677363c37a5f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79b74090a5a443c944df94f9df1c3f4d283df02f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723308"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214740"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Sprachunabhängigkeit und sprachunabhängige Komponenten
 
@@ -31,7 +31,7 @@ In diesem Artikel:
 
     * [Typen und Typmembersignaturen](#types-and-type-member-signatures)
 
-    * [Namenskonventionen](#naming-conventions)
+    * [Namenskonventionen ](#naming-conventions)
 
     * [Typkonvertierung](#type-conversion)
 
@@ -53,7 +53,7 @@ In diesem Artikel:
 
     * [Ereignisse](#events)
 
-    * [Überladungen](#overloads)
+    * [Overloads](#overloads)
 
     * [Ausnahmen](#exceptions)
 
@@ -184,9 +184,9 @@ Schnittstellen | [Schnittstellen](#interfaces) | CLS-kompatible Schnittstellen d
 Member | [Typmember im Allgemeinen](#type-members-in-general) | Globale static-Felder und Methoden sind nicht CLS-kompatibel. | 36
 Member | -- | Der Wert eines literalen statischen Elements wird von der Verwendung von Feldinitialisierungsmetadaten angegeben. Ein CLS-kompatibles Literal muss über einen Wert verfügen, der in den Feldinitialisierungsmetadaten angegeben wird, der genau vom gleichen Typ wie das Literal ist (oder des zugrunde liegenden Typs, wenn dieses Literal `enum` ist). | 13
 Member | [Typmember im Allgemeinen](#type-members-in-general) | Die vararg-Einschränkung ist nicht Teil der CLS, und die einzige Aufrufkonvention, die von der CLS unterstützt wird, ist die verwaltete Standardaufrufkonvention. | 15
-Namenskonventionen  | [Namenskonventionen](#naming-conventions) | Assemblys müssen Anhang 7 von Fachbericht 15 des Unicode Standard3.0 folgen, in dem der Satz von Zeichen geregelt wird, die am Anfang oder innerhalb von Bezeichnern enthalten sein dürfen. Er ist online unter [Unicode Normalization Forms](https://www.unicode.org/unicode/reports/tr15/tr15-18.html) (Unicode-Normalisierungsformen) verfügbar. Bezeichner müssen im kanonischen Format vorliegen, das durch die Unicode-Normalisierungsform C definiert wird. Im Sinne der CLS sind zwei Bezeichner gleich, wenn ihre kleingeschriebenen Zuordnungen (wie von den Gebietsschema-unabhängigen, klein geschriebenen 1:1-Unicodezuordnungen angegeben) gleich sind. Demnach müssen sich zwei Bezeichner in mehr als nur der Großschreibung unterscheiden, damit sie gemäß der CLS als unterschiedlich angesehen werden können. Um jedoch eine geerbte Definition überschreiben zu können, erfordert die CLI die genaue Codierung der ursprünglichen Deklaration. | 4
-Überladen | [Namenskonventionen](#naming-conventions) | Alle Namen, die in einem CLS-kompatiblen Bereich eingeführt werden, müssen in ihrer Art eindeutig unabhängig sein, außer bei identischen Namen, die durch Überladen aufgelöst werden. Während es bei CTS möglich ist, dass ein einzelner Typ denselben Namen für eine Methode und ein Feld verwendet, ist dies bei CLS demnach unmöglich. | 5
-Überladen | [Namenskonventionen](#naming-conventions) | Felder und geschachtelte Typen müssen allein durch Vergleich des Bezeichners zu unterscheiden sein, auch wenn bei CTS verschiedene Signaturen unterschieden werden können. Methoden, Eigenschaften und Ereignisse mit demselben Namen (nach Bezeichnervergleich) müssen sich durch mehr als nur den Rückgabetyp unterscheiden (außer wie in CLS-Regel 39 angegeben). | 6
+Namenskonventionen  | [Namenskonventionen ](#naming-conventions) | Assemblys müssen Anhang 7 von Fachbericht 15 des Unicode Standard3.0 folgen, in dem der Satz von Zeichen geregelt wird, die am Anfang oder innerhalb von Bezeichnern enthalten sein dürfen. Er ist online unter [Unicode Normalization Forms](https://www.unicode.org/unicode/reports/tr15/tr15-18.html) (Unicode-Normalisierungsformen) verfügbar. Bezeichner müssen im kanonischen Format vorliegen, das durch die Unicode-Normalisierungsform C definiert wird. Im Sinne der CLS sind zwei Bezeichner gleich, wenn ihre kleingeschriebenen Zuordnungen (wie von den Gebietsschema-unabhängigen, klein geschriebenen 1:1-Unicodezuordnungen angegeben) gleich sind. Demnach müssen sich zwei Bezeichner in mehr als nur der Großschreibung unterscheiden, damit sie gemäß der CLS als unterschiedlich angesehen werden können. Um jedoch eine geerbte Definition überschreiben zu können, erfordert die CLI die genaue Codierung der ursprünglichen Deklaration. | 4
+Überladen | [Namenskonventionen ](#naming-conventions) | Alle Namen, die in einem CLS-kompatiblen Bereich eingeführt werden, müssen in ihrer Art eindeutig unabhängig sein, außer bei identischen Namen, die durch Überladen aufgelöst werden. Während es bei CTS möglich ist, dass ein einzelner Typ denselben Namen für eine Methode und ein Feld verwendet, ist dies bei CLS demnach unmöglich. | 5
+Überladen | [Namenskonventionen ](#naming-conventions) | Felder und geschachtelte Typen müssen allein durch Vergleich des Bezeichners zu unterscheiden sein, auch wenn bei CTS verschiedene Signaturen unterschieden werden können. Methoden, Eigenschaften und Ereignisse mit demselben Namen (nach Bezeichnervergleich) müssen sich durch mehr als nur den Rückgabetyp unterscheiden (außer wie in CLS-Regel 39 angegeben). | 6
 Überladen | [Overloads](#overloads) | Nur Eigenschaften und Methoden können überladen werden. | 37
 Überladen | [Overloads](#overloads) |Eigenschaften und Methoden können allein basierend auf der Anzahl und den Typen ihrer Parameter überladen werden, außer den Konvertierungsoperatoren `op_Implicit` und `op_Explicit`, die auch auf Grundlage des Rückgabetyps überladen werden können. | 38
 Überladen | -- | Wenn mindestens zwei CLS-kompatible Methoden, die in einem Typ deklariert werden, den gleichen Namen und für einen bestimmten Satz von Typinstanziierungen die gleichen Parameter und Rückgabetypen nutzen, dann müssen alle diese Methoden bei diesen Typinstanziierungen semantisch gleichwertig sein. | 48
@@ -323,11 +323,11 @@ CLS-kompatibler Typ | Beschreibung
 [Int64](xref:System.Int64) | 64-Bit-Ganzzahl mit Vorzeichen
 [Single](xref:System.Single) | Gleitkommawert mit einfacher Genauigkeit
 [Double](xref:System.Double) | Gleitkommawert mit doppelter Genauigkeit
-[Boolean](xref:System.Boolean) | TRUE- oder FALSE-Werttyp
+[Boolesch](xref:System.Boolean) | TRUE- oder FALSE-Werttyp
 [Char](xref:System.Char) | UTF-16-codierte Codeeinheit
 [Decimal](xref:System.Decimal) | Dezimalzahl ohne Gleitkomma
 [IntPtr](xref:System.IntPtr) | Zeiger oder Handle einer Plattform-definierten Größe
-[String](xref:System.String) | Sammlung von null, einem oder mehreren Char-Objekten
+[Zeichenfolge](xref:System.String) | Sammlung von null, einem oder mehreren Char-Objekten
 
 Die in der folgenden Tabelle aufgeführten systeminternen Typen sind nicht CLS-kompatibel.
 
@@ -1632,7 +1632,6 @@ using System;
 [CLSCompliant(false)] public class BaseClass
 {}
 
-
 public class BaseCollection<T> where T : BaseClass
 {}
 // Attempting to compile the example displays the following output:
@@ -1644,7 +1643,6 @@ Assembly: CLSCompliant(True)>
 
 <CLSCompliant(False)> Public Class BaseClass
 End Class
-
 
 Public Class BaseCollection(Of T As BaseClass)
 End Class
@@ -1763,7 +1761,6 @@ Das Beispiel wird erfolgreich kompiliert, wenn die Einschränkung der `FloatingP
 using System;
 
 [assembly:CLSCompliant(true)]
-
 
 public class Number<T> where T : struct
 {
@@ -1893,7 +1890,6 @@ Public Class C1(Of T)
    Protected Sub M1(n As C1(Of Integer).N)   ' Not CLS-compliant - C1<int>.N not
                                              ' accessible from within C1(Of T) in all
    End Sub                                   ' languages
-
 
    Protected Sub M2(n As C1(Of T).N)     ' CLS-compliant – C1(Of T).N accessible
    End Sub                               ' inside C1(Of T)
@@ -2568,7 +2564,7 @@ End Structure
 
 Der Konstruktor oder die Eigenschaften eines CLS-kompatiblen Attributs können nur die folgenden Typen verfügbar machen:
 
-* [Boolean](xref:System.Boolean)
+* [Boolesch](xref:System.Boolean)
 
 * [Byte](xref:System.Byte)
 
@@ -2584,9 +2580,9 @@ Der Konstruktor oder die Eigenschaften eines CLS-kompatiblen Attributs können n
 
 * [Single](xref:System.Single)
 
-* [String](xref:System.String)
+* [Zeichenfolge](xref:System.String)
 
-* [Type](xref:System.Type)
+* [Typ](xref:System.Type)
 
 * Ein Enumerationstyp, dessen zugrunde liegender Typ `Byte`, `Int16`, `Int32` oder `Int64` ist.
 

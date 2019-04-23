@@ -9,10 +9,10 @@ helpviewer_keywords:
 - image formats [Windows Forms], converting between
 ms.assetid: 9d4a692d-73ac-4ce3-9e05-9ec321e8fbd6
 ms.openlocfilehash: 3072c07781a8e8e57b64b48e5b4c304c2a0a0efb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217015"
 ---
 # <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>Vorgehensweise: Konvertieren eines BMP-Bilds in ein PNG-Bild
@@ -35,4 +35,4 @@ Sie möchten sicher oft eine Datei von einem Bilddateiformat in ein anderes konv
 
 - [Vorgehensweise: Auflisten installierter Encoder](how-to-list-installed-encoders.md)
 - [Verwenden von Bildencodern und -decodern in Managed GDI+](using-image-encoders-and-decoders-in-managed-gdi.md)
-- [Bitmaptypen](types-of-bitmaps.md)
+- [Typen von Bitmaps](types-of-bitmaps.md)

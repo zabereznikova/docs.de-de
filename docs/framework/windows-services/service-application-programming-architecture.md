@@ -15,19 +15,19 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 009d95089efdfb78680ca7e364093e5f2b65bc77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17e16cec34b381cdfe46e1066c3219a93c3780e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714879"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216391"
 ---
 # <a name="service-application-programming-architecture"></a>Programmierarchitektur für Dienstanwendungen
 Windows-Dienstanwendungen basieren auf einer Klasse, die aus der Klasse <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> erbt. Wenn Sie das Verhalten Ihres Diensts bestimmen möchten, können Sie Methoden aus dieser Klasse außer Kraft setzen und ihre Funktionen definieren.  
   
  Folgende Klassen sind wesentlich in die Diensterstellung eingebunden:  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>: Beim Erstellen eines Diensts setzen Sie Methoden aus der Klasse <xref:System.ServiceProcess.ServiceBase> außer Kraft und definieren den Code, um zu bestimmen, wie Ihr Dienst in dieser geerbten Klasse funktioniert.  
+-   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> : Beim Erstellen eines Diensts setzen Sie Methoden aus der Klasse <xref:System.ServiceProcess.ServiceBase> außer Kraft und definieren den Code, um zu bestimmen, wie Ihr Dienst in dieser geerbten Klasse funktioniert.  
   
 -   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> und <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType>: Mithilfe dieser Klassen lässt sich Ihr Dienst installieren und deinstallieren.  
   
@@ -67,5 +67,6 @@ Windows-Dienstanwendungen basieren auf einer Klasse, die aus der Klasse <xref:Sy
  Sie können auch die Komponente <xref:System.ServiceProcess.ServiceController> verwenden, um mit dem vorhandenen Dienst zu kommunizieren und sein Verhalten zu steuern.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - [Einführung in Windows-Dienstanwendungen](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [Vorgehensweise: Erstellen von Windows-Diensten](../../../docs/framework/windows-services/how-to-create-windows-services.md)

@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 54652727b4684d71068a19eb5eeb2e862f413f25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215078"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason-Enumeration
@@ -43,7 +43,7 @@ Typedef enum CorDebugBlockingReason
 |------------|-----------------|  
 |`BLOCKING_NONE`|Nur zur internen Verwendung.|  
 |`BLOCKING_MONITOR_CRITICAL_SECTION`|Ein Thread versucht, den kritischen Abschnitt anzufordern, der die Monitorsperre für ein Objekt zugeordnet ist. In der Regel tritt dies auf, wenn eine Aufrufen der <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> oder <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType> Methoden.|  
-|`BLOCKING_MONITOR_EVENT`|Ein Thread wartet auf das Ereignis, das mit einer Monitorsperre für ein Objekt verknüpft ist. In der Regel tritt dies auf, wenn eine Aufrufen der <xref:System.Threading.Monitor?displayProperty=nameWithType>`Wait` Methoden.|  
+|`BLOCKING_MONITOR_EVENT`|Ein Thread wartet auf das Ereignis, das mit einer Monitorsperre für ein Objekt verknüpft ist. In der Regel tritt dies auf, wenn eine Aufrufen der <xref:System.Threading.Monitor?displayProperty=nameWithType> `Wait` Methoden.|  
   
 ## <a name="remarks"></a>Hinweise  
  Wenn die `BLOCKING_MONITOR_CRITICAL_SECTION` oder `BLOCKING_MONITOR_EVENT` Member wird verwendet, eine [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) Struktur, die `pBlockingObject` Member der Struktur-verweist auf eine "ICorDebugValue"-Schnittstelle, die das Objekt darstellt, die aufgerufen wird . Es ist auch sichergestellt, implementieren die [ICorDebugHeapValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue3-interface.md) Schnittstelle.  
@@ -59,5 +59,5 @@ Typedef enum CorDebugBlockingReason
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Debugenumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [Debuggen von Enumerationen](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

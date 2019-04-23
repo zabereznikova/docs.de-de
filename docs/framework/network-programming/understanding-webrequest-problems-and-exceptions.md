@@ -2,12 +2,12 @@
 title: Grundlegendes zu WebRequest-Problemen und -Ausnahmen
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: 55ef0b0f5260c986cad01d2854202dea3755ace7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a6dc06ed7abdbb6a28f9d6c09eda079157493d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215013"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>Grundlegendes zu WebRequest-Problemen und -Ausnahmen
 <xref:System.Net.WebRequest> und die abgeleiteten Klassen (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest> und <xref:System.Net.FileWebRequest>) lösen Ausnahmen aus, um einen nicht ordnungsgemäßen Zustand zu signalisieren. In einigen Fällen ist die Lösung dieser Probleme nicht offensichtlich.  
@@ -29,6 +29,7 @@ ms.locfileid: "54587527"
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|Die Serverantwort ist eine ungültige HTTP-Antwort. Dieses Problem tritt auf, wenn .NET Framework erkennt, dass die Serverantwort nicht mit HTTP 1.1 RFC übereinstimmt. Dieses Problem kann auftreten, wenn die Antwort falsche Header oder falsche Headertrennzeichen enthält. RFC 2616 definiert HTTP 1.1 und gültige Formate für die Serverantwort. Weitere Informationen finden Sie unter [RFC 2616 –Hypertext Transfer-Protokoll – HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388) auf der Webseite der [Internet Engineering Task Force (IETF)](https://www.ietf.org/).|Führen Sie eine Ablaufverfolgung im Netzwerk der Transaktion aus, und untersuchen Sie die Header in der Antwort.<br /><br /> Wenn Ihre Anwendung eine Serverantwort ohne Analyse erfordert (dies kann ein Sicherheitsproblem sein), dann legen Sie `useUnsafeHeaderParsing` in der Konfigurationsdatei auf `true` fest. Weitere Informationen finden Sie unter [\<HttpWebRequest>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.Dns>

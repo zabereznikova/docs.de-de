@@ -4,11 +4,11 @@ description: Erfahren Sie wie ein Machine Learning-Modell mithilfe von Kreuzvali
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
 ms.openlocfilehash: 9508835e613cf4f78d7f95a25cc98c3c3aade7ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231317"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768929"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a>Trainieren eines Machine Learning-Modells mit Kreuzvalidierung: ML.NET
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
 ms.openlocfilehash: a3302d9c360b0918a1fce956af3e3aa14f29361b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212426"
 ---
 # <a name="scrollviewer-overview"></a>Übersicht über ScrollViewer
@@ -29,7 +29,7 @@ Der Inhalt einer Benutzeroberfläche ist häufig größer als der Anzeigebereich
   
 <a name="scrollviewer_physical_vs_logical"></a>   
 ## <a name="physical-vs-logical-scrolling"></a>Physische im Vergleich zu Logisches Scrollen  
- Das physische Scrollen wird zum Scrollen durch Inhalt anhand eines vordefinierten physischen Werts verwendet – in der Regel durch einen Wert in Pixel. Das logische Scrollen wird verwendet, um zum nächsten Element in einer logischen Struktur zu scrollen. Das physische Scrollen ist das standardscrollverhalten für die meisten <xref:System.Windows.Controls.Panel> Elemente. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] unterstützt beide scrolltypen.  
+ Das physische Scrollen wird zum Scrollen durch Inhalt anhand eines vordefinierten physischen Werts verwendet – in der Regel durch einen Wert in Pixel. Das logische Scrollen wird verwendet, um zum nächsten Element in einer logischen Struktur zu scrollen. Das physische Scrollen ist das standardscrollverhalten für die meisten <xref:System.Windows.Controls.Panel> Elemente. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]unterstützt beide Scrolltypen.  
   
 #### <a name="the-iscrollinfo-interface"></a>Die IScrollInfo-Schnittstelle  
  Die <xref:System.Windows.Controls.Primitives.IScrollInfo> Schnittstelle darstellt, den wichtigsten scrollbereich innerhalb einer <xref:System.Windows.Controls.ScrollViewer> oder eines abgeleiteten Steuerelements. Die Schnittstelle definiert scrolleigenschaften und -Methoden, die von implementiert werden können, <xref:System.Windows.Controls.Panel> Elemente, die Elemente ein Bildlauf durchgeführt, um logische Einheit, anstatt eines physischen inkrementierten Werts. Umwandeln einer Instanz von <xref:System.Windows.Controls.Primitives.IScrollInfo> auf eine abgeleitete <xref:System.Windows.Controls.Panel> , und klicken Sie dann mit Scrollen ist eine gute Möglichkeit bis zum nächsten logischen Einheit in einer untergeordneten Auflistung scrollen. In der Standardeinstellung die <xref:System.Windows.Controls.ScrollViewer> -Steuerelement unterstützt das Scrollen durch physische Einheiten.  

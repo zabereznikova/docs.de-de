@@ -3,10 +3,10 @@ title: Kontextaustauschprotokoll
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
 ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217002"
 ---
 # <a name="context-exchange-protocol"></a>Kontextaustauschprotokoll
@@ -69,4 +69,4 @@ In diesem Abschnitt wird das in Windows Communication Foundation (WCF)-Version .
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Handbuch für die Interoperabilität von Webdienstprotokollen](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)
+- [Leitfaden für die Interoperabilität von Webdienstprotokollen](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)

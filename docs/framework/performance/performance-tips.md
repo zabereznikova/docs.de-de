@@ -10,10 +10,10 @@ ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216469"
 ---
 # <a name="net-performance-tips"></a>.NET-Leistungstipps
@@ -36,14 +36,14 @@ Der Begriff *Leistung* bezieht sich im Allgemeinen auf die Ausführungsgeschwind
   
 -   [Garbage Collector-Grundlagen und Tipps zur Leistung](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [Leistungstipps und Tricks in .NET-Anwendungen](https://go.microsoft.com/fwlink/?LinkId=99297)  
+-   [Performance Tips and Tricks in .NET Applications (Tipps und Tricks zur Leistung in .NET-Anwendungen)](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
--   [Mariani's Performance Tidbits](https://go.microsoft.com/fwlink/?LinkId=115679)  
+-   [Rico Mariani's Performance Tidbits (Rico Marianis spezielle Leistungstipps)](https://go.microsoft.com/fwlink/?LinkId=115679)  
 
 -   [Blog von Vance morrisons](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>Siehe auch
 
 - [Leistung](../../../docs/framework/performance/index.md)
-- [Visual Basic-Programmierhandbuch](../../visual-basic/programming-guide/index.md)
+- [Visual Basic-Programmierhandbuch](../../visual-basic/programming-guide/index.md)
 - [C#-Programmierhandbuch](../../csharp/programming-guide/index.md)

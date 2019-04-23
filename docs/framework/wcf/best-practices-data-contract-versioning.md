@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
 ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334925"
 ---
 # <a name="best-practices-data-contract-versioning"></a>Bewährte Methoden: Datenvertragsversionsverwaltung
@@ -102,7 +102,7 @@ In diesem Thema sind die empfohlenen Vorgehensweisen zum Erstellen von Datenvert
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
 - [Verwenden von Datenverträgen](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [Datenvertragsversionsverwaltung](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
+- [Datenvertrags-Versionsverwaltung](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
 - [Datenvertragsnamen](../../../docs/framework/wcf/feature-details/data-contract-names.md)
 - [Aufwärtskompatible Datenverträge](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
 - [Versionstolerante Serialisierungsrückrufe](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

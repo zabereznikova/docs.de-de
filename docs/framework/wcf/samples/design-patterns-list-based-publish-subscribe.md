@@ -3,11 +3,11 @@ title: 'Entwurfsmuster: Listenbasiertes Veröffentlichen/Abonnieren'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
 ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312045"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768435"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Entwurfsmuster: Listenbasiertes Veröffentlichen/Abonnieren
 Dieses Beispiel veranschaulicht das listenbasierte Veröffentlichen-Abonnieren-Muster, die als ein Windows Communication Foundation (WCF)-Programm implementiert.  

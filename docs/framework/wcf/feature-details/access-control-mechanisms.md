@@ -6,10 +6,10 @@ helpviewer_keywords:
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
 ms.openlocfilehash: 53b20e7f11f5accd1436f29063817142681e4f74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213258"
 ---
 # <a name="access-control-mechanisms"></a>Zugriffssteuerungsmechanismen
@@ -42,7 +42,7 @@ Sie können den Zugriff auf verschiedene Weise mit Windows Communication Foundat
  Weitere Informationen zur Verwendung der rollenanbieterfunktion finden Sie unter [Vorgehensweise: Verwenden des ASP.NET-Rollenanbieters mit einem Dienst](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
 ## <a name="authorization-manager"></a>Autorisierungs-Manager  
- Eine andere Funktion kombiniert den Autorisierungs-Manager (AzMan) mit dem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieter, um Clients zu autorisieren. Wenn [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] einen Webdienst hostet, kann AzMan so in die Anwendung integriert werden, dass die Autorisierung für den Dienst über AzMan erfolgt. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Rollen-Manager stellt eine API, mit dem Sie Anwendungsrollen verwalten, hinzufügen und Entfernen von Benutzern Rollen und Rollenmitgliedschaften überprüfen kann, aber das ist nicht zugelassen Abfragen, ob ein Benutzer autorisiert ist, um eine Aufgabe oder einen Vorgang auszuführen. AzMan ermöglicht es Ihnen, einzelne Vorgänge zu definieren und sie in Aufgaben zu kombinieren. Mit AZMan können Sie neben Rollenüberprüfungen auch feststellen, ob ein Benutzer eine Aufgabe ausführen kann. Rollenzuweisungen und Aufgabenautorisierungen können außerhalb der Anwendung konfiguriert oder programmgesteuert innerhalb der Anwendung ausgeführt werden. Das Snap-In der Microsoft Management Console (MMC) für die AzMan-Verwaltung ermöglicht Administratoren, die Aufgaben zu ändern, die eine Rolle während der Laufzeit ausführen kann, und die Rollenmitgliedschaft jedes Benutzers zu verwalten.  
+ Eine andere Funktion kombiniert den Autorisierungs-Manager (AzMan) mit dem [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieter, um Clients zu autorisieren. Wenn [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] einen Webdienst hostet, kann AzMan so in die Anwendung integriert werden, dass die Autorisierung für den Dienst über AzMan erfolgt. Der [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollen-Manager bietet eine API, mit der Sie Anwendungsrollen verwalten, Benutzern Rollen hinzufügen und entziehen und Rollenmitgliedschaften überprüfen können. Sie können damit jedoch nicht abfragen, ob ein Benutzer befugt ist, eine Aufgabe oder einen Vorgang auszuführen. AzMan ermöglicht es Ihnen, einzelne Vorgänge zu definieren und sie in Aufgaben zu kombinieren. Mit AZMan können Sie neben Rollenüberprüfungen auch feststellen, ob ein Benutzer eine Aufgabe ausführen kann. Rollenzuweisungen und Aufgabenautorisierungen können außerhalb der Anwendung konfiguriert oder programmgesteuert innerhalb der Anwendung ausgeführt werden. Das Snap-In der Microsoft Management Console (MMC) für die AzMan-Verwaltung ermöglicht Administratoren, die Aufgaben zu ändern, die eine Rolle während der Laufzeit ausführen kann, und die Rollenmitgliedschaft jedes Benutzers zu verwalten.  
   
  Sie können AzMan und den [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]-Rollenanbieter auch verwenden, wenn Sie bereits über Zugriff auf eine bestehende AzMan-Installation verfügen und Ihre Dienstbenutzer über die Funktionen der AzMan/Rollenanbieter-Kombination autorisieren möchten.  
   
@@ -61,7 +61,7 @@ Sie können den Zugriff auf verschiedene Weise mit Windows Communication Foundat
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [Vorgehensweise: Einschränken des Zugriffs mit der PrincipalPermissionAttribute-Klasse](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [Vorgehensweise: Verwenden des Rollenanbieters für den ASP.NET bei einem Dienst](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
-- [Vorgehensweise: Verwenden des Rollenanbieters für den ASP.NET-Autorisierungs-Manager bei einem Dienst](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
+- [Vorgehensweise: Verwenden des ASP.NET-Rollenanbieters mit einem Dienst](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Vorgehensweise: Verwenden Sie den Rollenanbieter ASP.NET-Autorisierungs-Manager bei einem Dienst](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
 - [Verwalten von Ansprüchen und Autorisierung mit dem Identitätsmodell](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [Delegierung und Identitätswechsel](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

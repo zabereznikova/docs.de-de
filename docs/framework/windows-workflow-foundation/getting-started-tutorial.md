@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], getting started
 ms.assetid: c2d3585f-6b1a-4d4f-9865-bd7cd31c5d42
 ms.openlocfilehash: 540765c09dceef583798ceaf1abf9f191f444697
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217431"
 ---
 # <a name="getting-started-tutorial"></a>Lernprogramm 'Erste Schritte'
@@ -25,13 +25,13 @@ Dieser Abschnitt enthält eine Reihe von exemplarischen Vorgehensweisen, in dene
  [Vorgehensweise: Ausführen eines Workflows](how-to-run-a-workflow.md)  
  Beschreibt, wie Sie einen Workflow aus einer Hostumgebung aufrufen, Daten an einen bzw. aus einem Workflow übergeben und Lesezeichen wiederaufnehmen.  
   
- [Vorgehensweise: Erstellen und Ausführen eines Workflows mit langer Laufzeit](how-to-create-and-run-a-long-running-workflow.md)  
+ [Vorgehensweise: Erstellen und Ausführen einer langen Workflow ausgeführt wird](how-to-create-and-run-a-long-running-workflow.md)  
  Beschreibt, wie Sie einer Workflowanwendung Persistenz hinzufügen.  
   
- [Vorgehensweise: Erstellen einer benutzerdefinierten Nachverfolgungskomponente](how-to-create-a-custom-tracking-participant.md)  
+ [Vorgehensweise: Erstellen eines benutzerdefinierten Überwachungsteilnehmer](how-to-create-a-custom-tracking-participant.md)  
  Beschreibt, wie Sie einen benutzerdefinierten Überwachungsteilnehmer und ein Nachverfolgungsprofil erstellen.  
   
- [Vorgehensweise: Paralleles Hosten mehrerer Workflowversionen](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
+ [Vorgehensweise: Hosten Sie mehrerer Workflowversionen zu einem Workflow Seite-an-Seite](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
  Beschreibt, wie `WorkflowIdentity` zum parallelen Hosten mehrerer Workflowversionen verwendet wird.  
   
  [Vorgehensweise: Aktualisieren der Definition einer ausgeführten Workflowinstanz](how-to-update-the-definition-of-a-running-workflow-instance.md)  

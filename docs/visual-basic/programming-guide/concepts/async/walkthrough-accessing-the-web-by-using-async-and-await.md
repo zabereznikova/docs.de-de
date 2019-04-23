@@ -3,10 +3,10 @@ title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await 
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
 ms.openlocfilehash: 7f9b71bc76e8d17cf2fb6714070b4439265d1fda
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335900"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await (Visual Basic)
@@ -20,7 +20,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
  Im Verlauf dieser exemplarischen Vorgehensweise führen Sie folgende Aufgaben aus:  
   
--   [So erstellen Sie eine WPF-Anwendung.](#CreateWPFApp)  
+-   [So erstellen Sie eine WPF-Anwendung](#CreateWPFApp)  
   
 -   [So entwerfen Sie ein einfaches WPF-MainWindow](#MainWindow)  
   
@@ -32,15 +32,15 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
 -   [So testen Sie die synchrone Lösung](#testSynch)  
   
--   [So konvertieren Sie GetURLContents in eine asynchrone Methode](#GetURLContents)  
+-   [So konvertieren Sie „GetURLContents“ in eine asynchrone Methode](#GetURLContents)  
   
--   [So konvertieren Sie SumPageSizes in eine asynchrone Methode](#SumPageSizes)  
+-   [So konvertieren Sie „SumPageSizes“ in eine asynchrone Methode](#SumPageSizes)  
   
--   [So konvertieren Sie startButton_Click in eine asynchrone Methode](#startButton)  
+-   [So konvertieren Sie „startButton_Click“ in eine asynchrone Methode](#startButton)  
   
 -   [So testen Sie die asynchrone Lösung](#testAsynch)  
   
--   [So ersetzen Sie die Methode "GetURLContentsAsync" durch eine .NET Framework-Methode](#GetURLContentsAsync)  
+-   [So ersetzen Sie die Methode „GetURLContentsAsync“ durch eine .NET Framework-Methode](#GetURLContentsAsync)  
   
 -   [Beispiel](#BKMK_CompleteCodeExamples)  
   
@@ -137,13 +137,13 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
   
 3. Der Code für die synchrone Lösung enthält die folgenden vier Methoden:  
   
-    -   `SumPageSizes`, eine Liste von Webseiten-URLs von `SetUpURLList` und ruft dann `GetURLContents` und `DisplayResults` jede URL zu verarbeiten.  
+    -   `SumPageSizes`. Enthält eine Liste von Webseiten-URLs aus `SetUpURLList` und ruft dann `GetURLContents` und `DisplayResults` auf, um jede URL zu verarbeiten.  
   
-    -   `SetUpURLList`, erstellt und gibt eine Liste der Webadressen zurück.  
+    -   `SetUpURLList`. Erstellt und gibt eine Liste der Webadressen zurück.  
   
-    -   `GetURLContents`, die die Inhalte jeder Website herunterlädt und gibt den Inhalt als Bytearray zurück.  
+    -   `GetURLContents`. Lädt Inhalte jeder Website herunter und gibt die Inhalte als ein Bytearray zurück.  
   
-    -   `DisplayResults`, der die Anzahl der Bytes im Bytearray für jede URL angezeigt.  
+    -   `DisplayResults`. Zeigt die Anzahl der Bytes im Bytearray für jede URL an.  
   
      Kopieren Sie die folgenden vier Methoden, und fügen Sie sie in der `startButton_Click` -Ereignishandler in "MainWindow.Xaml.vb":  
   
@@ -263,7 +263,7 @@ Sie können asynchrone Programme mit den Funktionen „Async/Await“ einfacher 
     Using response As WebResponse = webReq.GetResponseAsync()  
     ```  
   
-2. `GetResponseAsync` Gibt eine <xref:System.Threading.Tasks.Task%601>. In diesem Fall weist die *Aufgabenrückgabevariable*, `TResult`, den Typ <xref:System.Net.WebResponse> auf. Mit dieser Aufgabe soll ein tatsächliches `WebResponse`-Objekt erstellt werden, nachdem die angeforderten Daten heruntergeladen und das Ausführen der Aufgabe abgeschlossen wurde.  
+2. `GetResponseAsync` gibt einen Wert vom Typ <xref:System.Threading.Tasks.Task%601> zurück. In diesem Fall weist die *Aufgabenrückgabevariable*, `TResult`, den Typ <xref:System.Net.WebResponse> auf. Mit dieser Aufgabe soll ein tatsächliches `WebResponse`-Objekt erstellt werden, nachdem die angeforderten Daten heruntergeladen und das Ausführen der Aufgabe abgeschlossen wurde.  
   
      Zum Abrufen der `WebResponse` -Werts aus der Aufgabe, Anwenden einer ["await"](../../../../visual-basic/language-reference/operators/await-operator.md) Operator, um den Aufruf von `GetResponseAsync`, wie der folgende Code zeigt.  
   
@@ -675,11 +675,11 @@ End Class
   
 ## <a name="see-also"></a>Siehe auch
 
-- [ASYNC-Beispiel: Accessing the Web Walkthrough (C# und Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Async Sample: Accessing the Web Walkthrough (C# und Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [Await-Operator](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
-- [Asynchronous Programming with Async and Await (Visual Basic) (Asynchrone Programmierung mit Async und Await (Visual Basic))](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Asynchrone Rückgabetypen (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [Aufgabenbasierte asynchrone Programmierung (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)
+- [Asynchrone Programmierung mit „Async“ und „Await“ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Asynchrone Rückgabetypen (Visual Basic))
+- [Task-based Asynchronous Programming (TAP) (Aufgabenbasiertes asynchrones Programmieren (TAP))](https://go.microsoft.com/fwlink/?LinkId=204847)
 - [Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
 - [Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

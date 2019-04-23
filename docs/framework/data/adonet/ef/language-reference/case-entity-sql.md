@@ -3,10 +3,10 @@ title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
 ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334886"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
@@ -29,13 +29,13 @@ END
  Ist ein Platzhalter, der angibt, dass mehrere WHEN `Boolean_expression` THEN `result_expression` -Klauseln verwendet werden können.  
   
  THEN `result_expression`  
- Ist der zurückgegebene Ausdruck, wenn `Boolean_expression` den Wert `true`ergibt. `result expression` Kann jeder gültige Ausdruck.  
+ Ist der zurückgegebene Ausdruck, wenn `Boolean_expression` den Wert `true`ergibt. `result expression` ist ein beliebiger gültiger Ausdruck.  
   
  ELSE `else_result_expression`  
- Der Ausdruck, der zurückgegeben wird, wenn keine Vergleichsoperation `true`ergibt. Wenn dieses Argument nicht angegeben wird und keine Vergleichsoperation `true`ergibt, gibt die CASE-Funktion null zurück. `else_result_expression` Kann jeder gültige Ausdruck. Die Datentypen von `else_result_expression` und allen `result_expression` -Ausdrücken müssen gleich sein, oder es muss eine implizite Konvertierung vorliegen.  
+ Der Ausdruck, der zurückgegeben wird, wenn keine Vergleichsoperation `true`ergibt. Wenn dieses Argument nicht angegeben wird und keine Vergleichsoperation `true`ergibt, gibt die CASE-Funktion null zurück. `else_result_expression` ist ein beliebiger gültiger Ausdruck. Die Datentypen von `else_result_expression` und allen `result_expression` -Ausdrücken müssen gleich sein, oder es muss eine implizite Konvertierung vorliegen.  
   
  WHEN `Boolean_expression`  
- Der `Boolean` -Ausdruck, der ausgewertet wird, wenn das gesuchte CASE-Format verwendet wird. `Boolean_expression` bezeichnet jeden gültigen `Boolean` Ausdruck.  
+ Der `Boolean` -Ausdruck, der ausgewertet wird, wenn das gesuchte CASE-Format verwendet wird. `Boolean_expression` ist ein beliebiger gültiger `Boolean` -Ausdruck.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Gibt den Typ mit der höchsten Priorität in `result_expression` und im optionalen `else_result_expression`zurück.  

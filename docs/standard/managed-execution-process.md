@@ -12,29 +12,29 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3e6548484f3e41ce67522931f4eafef3acee1fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce088fd10540ce9d390b7411bdcd8e563636a437
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652019"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336147"
 ---
 # <a name="managed-execution-process"></a>Verwalteter Ausführungsprozess
 <a name="introduction"></a> Der verwaltete Ausführungsprozess schließt die folgenden Schritte ein, die weiter unten in diesem Thema ausführlich erläutert werden:  
   
-1.  [Auswählen eines Compilers](#choosing_a_compiler).  
+1. [Auswählen eines Compilers](#choosing_a_compiler).  
   
      Um die Vorzüge der Common Language Runtime nutzen zu können, müssen Sie mindestens einen Sprachcompiler mit Unterstützung der Laufzeit verwenden.  
   
-2.  [Kompilieren des Codes in MSIL](#compiling_to_msil).  
+2. [Kompilieren des Codes in MSIL](#compiling_to_msil).  
   
      Beim Kompilieren wird der Quellcode in Microsoft Intermediate Language (MSIL) übersetzt, und die erforderlichen Metadaten werden generiert.  
   
-3.  [Kompilieren von MSIL in systemeigenen Code](#compiling_msil_to_native_code).  
+3. [Kompilieren von MSIL in systemeigenen Code](#compiling_msil_to_native_code).  
   
      Zur Ausführungszeit übersetzt ein JIT-Compiler (Just-In-Time) die MSIL in systemeigenen Code. Während dieser Kompilierung muss der Code eine Überprüfung der MSIL und der Metadaten durchlaufen, um zu ermitteln, ob der Code als typsicher gelten kann.  
   
-4.  [Ausführen von Code](#running_code).  
+4. [Ausführen von Code](#running_code).  
   
      Die Common Language Runtime stellt eine Infrastruktur bereit, die die Ausführung des Codes sowie von Diensten ermöglicht, die während der Ausführung verwendet werden können.  
   
@@ -99,9 +99,9 @@ ms.locfileid: "54652019"
   
  Unter Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] und [!INCLUDE[windowsver](../../includes/windowsver-md.md)]sucht das Ladeprogramm des Betriebssystems nach verwalteten Modulen, indem ein Bit im COFF-Header überprüft wird. Das festgelegte Bit steht dabei für ein verwaltetes Modul. Wenn das Ladeprogramm verwaltete Module erkennt, lädt es mscoree.dll. `_CorValidateImage` und `_CorImageUnloading` benachrichtigen das Ladeprogramm, wenn die Images der verwalteten Module geladen und entladen werden. `_CorValidateImage` führt die folgenden Aktionen aus:  
   
-1.  Überprüfen, dass es sich um gültigen verwalteten Code handelt  
+1. Überprüfen, dass es sich um gültigen verwalteten Code handelt  
   
-2.  Ändern des Einstiegspunktes im Image in einen Einstiegspunkt zur Laufzeit  
+2. Ändern des Einstiegspunktes im Image in einen Einstiegspunkt zur Laufzeit  
   
  Bei 64-Bit-Versionen von Windows ändert `_CorValidateImage` das Image im Arbeitsspeicher vom Format PE32 in das Format PE32+.  
   
@@ -110,11 +110,11 @@ ms.locfileid: "54652019"
 ## <a name="see-also"></a>Siehe auch
 
 - [Übersicht](../../docs/framework/get-started/overview.md)
-- [Sprachunabhängigkeit und sprachunabhängige Komponenten](../../docs/standard/language-independence-and-language-independent-components.md)
+- [Sprachenunabhängigkeit und sprachunabhängige Komponenten](../../docs/standard/language-independence-and-language-independent-components.md)
 - [Metadaten und selbstbeschreibende Komponenten](../../docs/standard/metadata-and-self-describing-components.md)
 - [Ilasm.exe (IL-Assembler)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
 - [Sicherheit](../../docs/standard/security/index.md)
-- [Interoperabilität mit nicht verwaltetem Code](../../docs/framework/interop/index.md)
+- [Interoperation mit nicht verwaltetem Code](../../docs/framework/interop/index.md)
 - [Bereitstellung](../../docs/framework/deployment/net-framework-applications.md)
 - [Assemblys in der Common Language Runtime (CLR)](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [Anwendungsdomänen](../../docs/framework/app-domains/application-domains.md)

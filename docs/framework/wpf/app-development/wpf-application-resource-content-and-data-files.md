@@ -18,10 +18,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211921"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF-Anwendungsressource, Inhalts- und Datendateien
@@ -123,7 +123,7 @@ ms.locfileid: "59211921"
  Verwenden Sie Inhaltsdateien, wenn die Anwendung einen speziellen Satz von Anwendungsdatendateien erfordert, die aktualisierbar sein soll, ohne dass die Assembly, die sie verwendet, neu kompiliert werden muss.  
   
 ### <a name="configuring-content-files"></a>Konfigurieren von Inhaltsdateien  
- Um ein Projekt eine Inhaltsdatei hinzuzufügen, muss eine Anwendungsdatendatei als einbezogen werden eine `Content` Element. Da eine Inhaltsdatei nicht direkt in die Assembly kompiliert wird, müssen Sie außerdem zum Festlegen der [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` Metadata-Element, um anzugeben, dass die Inhaltsdatei an einen Speicherort kopiert wird, der relativ zur erstellten Assembly ist. Wenn Sie die Ressource in den Buildausgabeordner kopiert werden soll, ein Projekt erstellt wird, Festlegen der `CopyToOutputDirectory` Metadata-Element mit der `Always` Wert. Andernfalls können Sie sicherstellen, dass nur die neueste Version der Ressource in den Buildausgabeordner, mithilfe kopiert wird der `PreserveNewest` Wert.  
+ Um ein Projekt eine Inhaltsdatei hinzuzufügen, muss eine Anwendungsdatendatei als einbezogen werden eine `Content` Element. Da eine Inhaltsdatei nicht direkt in die Assembly kompiliert wird, müssen Sie außerdem zum Festlegen der [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` Metadata-Element, um anzugeben, dass die Inhaltsdatei an einen Speicherort kopiert wird, der relativ zur erstellten Assembly ist. Wenn Sie die Ressource in den Buildausgabeordner kopiert werden soll, ein Projekt erstellt wird, Festlegen der `CopyToOutputDirectory` Metadata-Element mit der `Always` Wert. Andernfalls können Sie sicherstellen, dass nur die neueste Version der Ressource in den Buildausgabeordner, mithilfe kopiert wird der `PreserveNewest` Wert.  
   
  Im Folgenden wird eine Datei gezeigt, die als Inhaltsdatei konfiguriert ist und nur dann in den Buildausgabeordner kopiert wird, wenn dem Projekt eine neue Version der Ressource hinzugefügt wird.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "59211921"
 ### <a name="configuring-site-of-origin-files"></a>Konfigurieren der Dateien der Ursprungssite  
  Wenn die Dateien der Ursprungssite zur Kompilierungszeit nicht vorhanden oder unbekannt sind, müssen Sie herkömmliche Bereitstellung verwenden Mechanismen zum gewährleisten, dass die erforderlichen Dateien verfügbar sind, zur Laufzeit, einschließlich der `XCopy` Befehlszeilenprogramm oder dem [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- Wenn Sie zum Zeitpunkt der Kompilierung die Dateien kennen, die Sie gerne auf der Ursprungssite befinden würde, aber dennoch explizite Abhängigkeit vermeiden möchten, können Sie diese Dateien zum Hinzufügen einer [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] -Projekt als `None` Element. Wie bei Inhaltsdateien Sie müssen die [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory` Attribut, um anzugeben, dass die Website Datei der Ursprungssite an einen Speicherort kopiert wird, der relativ zur erstellten Assembly ist entweder der `Always` Wert oder die `PreserveNewest` Wert.  
+ Wenn Sie zum Zeitpunkt der Kompilierung die Dateien kennen, die Sie gerne auf der Ursprungssite befinden würde, aber dennoch explizite Abhängigkeit vermeiden möchten, können Sie diese Dateien zum Hinzufügen einer [!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)] -Projekt als `None` Element. Wie bei Inhaltsdateien Sie müssen die [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory` Attribut, um anzugeben, dass die Website Datei der Ursprungssite an einen Speicherort kopiert wird, der relativ zur erstellten Assembly ist entweder der `Always` Wert oder die `PreserveNewest` Wert.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  

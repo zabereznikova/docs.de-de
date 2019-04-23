@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 333bd8c1793e4982b11208aa1a547e78fe680bb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628850"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213128"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (Management Strongly Typed Class Generator)
 Mit dem Management Strongly Typed Class Generator-Tool können Sie schnell eine früh gebundene Klasse für eine angegebene WMI (Windows Management Instrumentation)-Klasse generieren. Die generierte Klasse vereinfacht den Code, den Sie für den Zugriff auf eine Instanz der WMI-Klasse schreiben müssen.  
@@ -45,7 +45,7 @@ WMIClass [options]
 |**/u** *benutzername*|Gibt den Benutzernamen für die Anmeldung an einem Computer an, der durch die **/m**-Option angegeben ist|  
 |**/?**|Zeigt Befehlssyntax und Optionen für das Tool an.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  "Mgmtclassgen.exe" verwendet die <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>-Methode. Sie können daher mit einem beliebigen benutzerdefinierten Codeanbieter Code in anderen verwalteten Sprachen als C#, Visual Basic und JScript generieren.  
   
  Beachten Sie, dass die generierten Klassen an das Schema gebunden sind, für das sie generiert werden. Änderungen am zugrunde liegenden Schema wirken sich auf die Klasse erst nach einer Neugenerierung aus.  
@@ -64,13 +64,13 @@ WMIClass [options]
 |CIM_UINT64|**UInt64**|  
 |CIM_REAL32|**Single**|  
 |CIM_REAL64|**Double**|  
-|CIM_BOOLEAN|**Boolean**|  
-|CIM_String|**String**|  
+|CIM_BOOLEAN|**Boolesch**|  
+|CIM_String|**Zeichenfolge**|  
 |CIM_DATETIME|**DateTime** oder **TimeSpan**|  
 |CIM_REFERENCE|**ManagementPath**|  
 |CIM_CHAR16|**Char**|  
 |CIM_OBJECT|**ManagementBaseObject**|  
-|CIM_IUNKNOWN|**Objekt**|  
+|CIM_IUNKNOWN|**Object**|  
 |CIM_ARRAY|Array der zuvor aufgeführten Objekte|  
   
  Beim Generieren einer WMI-Klasse werden Sie folgende Verhaltensweisen feststellen:  
@@ -151,8 +151,9 @@ public class App
 ```  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Management>
 - <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
 - <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>
-- [Extras](../../../docs/framework/tools/index.md)
+- [Tools](../../../docs/framework/tools/index.md)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
