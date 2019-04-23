@@ -18,15 +18,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9218dd87b0794f3972365a4049cd8941e6671312
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193932"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="0925e-102">ICorDebugEditAndContinueSnapshot::GetMvid-Methode</span><span class="sxs-lookup"><span data-stu-id="0925e-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
-`GetMvid` <span data-ttu-id="0925e-103">ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="0925e-103">is obsolete.</span></span> <span data-ttu-id="0925e-104">Rufen Sie diese Methode nicht.</span><span class="sxs-lookup"><span data-stu-id="0925e-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="1b999-102">ICorDebugEditAndContinueSnapshot::GetMvid-Methode</span><span class="sxs-lookup"><span data-stu-id="1b999-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
+<span data-ttu-id="1b999-103">`GetMvid` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="1b999-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="1b999-104">Rufen Sie diese Methode nicht.</span><span class="sxs-lookup"><span data-stu-id="1b999-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0925e-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0925e-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1b999-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="1b999-105">See also</span></span>
 
-- [<span data-ttu-id="0925e-106">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="0925e-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="1b999-106">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="1b999-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

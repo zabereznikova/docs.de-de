@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81afb9b40269b04a59c54636c7e88c1f67189593
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189546"
 ---
-# <a name="icorprofilerinfogetclassfromobject-method"></a><span data-ttu-id="b3bc3-102">ICorProfilerInfo::GetClassFromObject-Methode</span><span class="sxs-lookup"><span data-stu-id="b3bc3-102">ICorProfilerInfo::GetClassFromObject Method</span></span>
-<span data-ttu-id="b3bc3-103">Ruft die `ClassID` eines angegebenen Objekts an, dessen `ObjectID`.</span><span class="sxs-lookup"><span data-stu-id="b3bc3-103">Gets the `ClassID` of an object, given its `ObjectID`.</span></span>  
+# <a name="icorprofilerinfogetclassfromobject-method"></a><span data-ttu-id="a4e28-102">ICorProfilerInfo::GetClassFromObject-Methode</span><span class="sxs-lookup"><span data-stu-id="a4e28-102">ICorProfilerInfo::GetClassFromObject Method</span></span>
+<span data-ttu-id="a4e28-103">Ruft die `ClassID` eines angegebenen Objekts an, dessen `ObjectID`.</span><span class="sxs-lookup"><span data-stu-id="a4e28-103">Gets the `ClassID` of an object, given its `ObjectID`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b3bc3-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="b3bc3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a4e28-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a4e28-104">Syntax</span></span>  
   
 ```  
 HRESULT GetClassFromObject(  
@@ -35,25 +35,25 @@ HRESULT GetClassFromObject(
     [out] ClassID *pClassId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b3bc3-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="b3bc3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a4e28-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a4e28-105">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="b3bc3-106">[in] Die ID des Objekts, für das Abrufen der `ClassID`.</span><span class="sxs-lookup"><span data-stu-id="b3bc3-106">[in] The ID of the object for which to get the `ClassID`.</span></span>  
+ <span data-ttu-id="a4e28-106">[in] Die ID des Objekts, für das Abrufen der `ClassID`.</span><span class="sxs-lookup"><span data-stu-id="a4e28-106">[in] The ID of the object for which to get the `ClassID`.</span></span>  
   
  `pClassId`  
- <span data-ttu-id="b3bc3-107">[out] Ein Zeiger auf das zurückgegebene `ClassID`.</span><span class="sxs-lookup"><span data-stu-id="b3bc3-107">[out] A pointer to the returned `ClassID`.</span></span>  
+ <span data-ttu-id="a4e28-107">[out] Ein Zeiger auf das zurückgegebene `ClassID`.</span><span class="sxs-lookup"><span data-stu-id="a4e28-107">[out] A pointer to the returned `ClassID`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b3bc3-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="b3bc3-108">Remarks</span></span>  
- <span data-ttu-id="b3bc3-109">Ein NULL-Wert `pClassId` gibt an, dass `objectId` verfügt über einen Typ, der entladen wird.</span><span class="sxs-lookup"><span data-stu-id="b3bc3-109">A null `pClassId` indicates that `objectId` has a type that is unloading.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a4e28-108">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a4e28-108">Remarks</span></span>  
+ <span data-ttu-id="a4e28-109">Ein NULL-Wert `pClassId` gibt an, dass `objectId` verfügt über einen Typ, der entladen wird.</span><span class="sxs-lookup"><span data-stu-id="a4e28-109">A null `pClassId` indicates that `objectId` has a type that is unloading.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b3bc3-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="b3bc3-110">Requirements</span></span>  
- <span data-ttu-id="b3bc3-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b3bc3-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a4e28-110">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a4e28-110">Requirements</span></span>  
+ <span data-ttu-id="a4e28-111">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a4e28-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b3bc3-112">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b3bc3-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a4e28-112">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a4e28-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b3bc3-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b3bc3-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a4e28-113">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a4e28-113">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="b3bc3-114">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="b3bc3-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="a4e28-114">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a4e28-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b3bc3-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="b3bc3-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a4e28-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a4e28-115">See also</span></span>
 
-- [<span data-ttu-id="b3bc3-116">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="b3bc3-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="a4e28-116">ICorProfilerInfo-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a4e28-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

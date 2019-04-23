@@ -19,31 +19,31 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84ec75fb2a994543ba9ead84c41abc304c420053
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182974"
 ---
-# <a name="cleardownloadcache-function"></a><span data-ttu-id="a751a-102">ClearDownloadCache-Funktion</span><span class="sxs-lookup"><span data-stu-id="a751a-102">ClearDownloadCache Function</span></span>
-<span data-ttu-id="a751a-103">Löscht den globalen Assemblycache des heruntergeladenen Assemblys.</span><span class="sxs-lookup"><span data-stu-id="a751a-103">Clears the global assembly cache of downloaded assemblies.</span></span>  
+# <a name="cleardownloadcache-function"></a><span data-ttu-id="a308f-102">ClearDownloadCache-Funktion</span><span class="sxs-lookup"><span data-stu-id="a308f-102">ClearDownloadCache Function</span></span>
+<span data-ttu-id="a308f-103">Löscht den globalen Assemblycache des heruntergeladenen Assemblys.</span><span class="sxs-lookup"><span data-stu-id="a308f-103">Clears the global assembly cache of downloaded assemblies.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a751a-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a751a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a308f-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a308f-104">Syntax</span></span>  
   
 ```  
 HRESULT ClearDownloadCache ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="a751a-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a751a-105">Requirements</span></span>  
- <span data-ttu-id="a751a-106">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a751a-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a308f-105">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a308f-105">Requirements</span></span>  
+ <span data-ttu-id="a308f-106">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a308f-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a751a-107">**Header:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="a751a-107">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="a308f-107">**Header:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="a308f-107">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="a751a-108">**Bibliothek:** Fusion.dll und "Mscorwks.dll".</span><span class="sxs-lookup"><span data-stu-id="a751a-108">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="a751a-109">Verwenden Sie Fusion.dll anstelle von "Mscorwks.dll", um sicherzustellen, dass Sie die richtige Version von .NET Framework abzielen.</span><span class="sxs-lookup"><span data-stu-id="a751a-109">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
+ <span data-ttu-id="a308f-108">**Bibliothek:** Fusion.dll und "Mscorwks.dll".</span><span class="sxs-lookup"><span data-stu-id="a308f-108">**Library:** Fusion.dll and Mscorwks.dll.</span></span> <span data-ttu-id="a308f-109">Verwenden Sie Fusion.dll anstelle von "Mscorwks.dll", um sicherzustellen, dass Sie die richtige Version von .NET Framework abzielen.</span><span class="sxs-lookup"><span data-stu-id="a308f-109">Use Fusion.dll instead of Mscorwks.dll to ensure that you target the correct version of the .NET Framework.</span></span>  
   
- **<span data-ttu-id="a751a-110">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="a751a-110">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="a308f-110">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a308f-110">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a751a-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a751a-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a308f-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a308f-111">See also</span></span>
 
-- [<span data-ttu-id="a751a-112">Fusion – Globale statistische Funktionen</span><span class="sxs-lookup"><span data-stu-id="a751a-112">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
-- [<span data-ttu-id="a751a-113">Globaler Assemblycache</span><span class="sxs-lookup"><span data-stu-id="a751a-113">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)
+- [<span data-ttu-id="a308f-112">Fusion: Globale statistische Funktionen</span><span class="sxs-lookup"><span data-stu-id="a308f-112">Fusion Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+- [<span data-ttu-id="a308f-113">Globaler Assemblycache</span><span class="sxs-lookup"><span data-stu-id="a308f-113">Global Assembly Cache</span></span>](../../../../docs/framework/app-domains/gac.md)

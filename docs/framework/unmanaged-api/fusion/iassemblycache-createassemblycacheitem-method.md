@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 648b641cbd2ec97305674451df06ce5be6a93a49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183689"
 ---
-# <a name="iassemblycachecreateassemblycacheitem-method"></a><span data-ttu-id="a2e42-102">IAssemblyCache::CreateAssemblyCacheItem-Methode</span><span class="sxs-lookup"><span data-stu-id="a2e42-102">IAssemblyCache::CreateAssemblyCacheItem Method</span></span>
-<span data-ttu-id="a2e42-103">Ruft einen Verweis auf ein neues [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) Objekt.</span><span class="sxs-lookup"><span data-stu-id="a2e42-103">Gets a reference to a new [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) object.</span></span>  
+# <a name="iassemblycachecreateassemblycacheitem-method"></a><span data-ttu-id="87213-102">IAssemblyCache::CreateAssemblyCacheItem-Methode</span><span class="sxs-lookup"><span data-stu-id="87213-102">IAssemblyCache::CreateAssemblyCacheItem Method</span></span>
+<span data-ttu-id="87213-103">Ruft einen Verweis auf ein neues [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) Objekt.</span><span class="sxs-lookup"><span data-stu-id="87213-103">Gets a reference to a new [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a2e42-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a2e42-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="87213-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="87213-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateAssemblyCacheItem (  
@@ -38,31 +38,31 @@ HRESULT CreateAssemblyCacheItem (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a2e42-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a2e42-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="87213-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="87213-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="a2e42-106">[in] Flags, die in Fusion.idl definiert sind.</span><span class="sxs-lookup"><span data-stu-id="a2e42-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="a2e42-107">Die folgenden Werte werden unterstützt:</span><span class="sxs-lookup"><span data-stu-id="a2e42-107">The following values are supported:</span></span>  
+ <span data-ttu-id="87213-106">[in] Flags, die in Fusion.idl definiert sind.</span><span class="sxs-lookup"><span data-stu-id="87213-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="87213-107">Die folgenden Werte werden unterstützt:</span><span class="sxs-lookup"><span data-stu-id="87213-107">The following values are supported:</span></span>  
   
--   <span data-ttu-id="a2e42-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0 X 00000001)</span><span class="sxs-lookup"><span data-stu-id="a2e42-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
+-   <span data-ttu-id="87213-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0 X 00000001)</span><span class="sxs-lookup"><span data-stu-id="87213-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
   
--   <span data-ttu-id="a2e42-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="a2e42-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
+-   <span data-ttu-id="87213-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="87213-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
   
  `pvReserved`  
- <span data-ttu-id="a2e42-110">[in] Für zukünftige Erweiterungen reserviert.</span><span class="sxs-lookup"><span data-stu-id="a2e42-110">[in] Reserved for future extensibility.</span></span> `pvReserved` <span data-ttu-id="a2e42-111">ein null-Verweis muss sein.</span><span class="sxs-lookup"><span data-stu-id="a2e42-111">must be a null reference.</span></span>  
+ <span data-ttu-id="87213-110">[in] Für zukünftige Erweiterungen reserviert.</span><span class="sxs-lookup"><span data-stu-id="87213-110">[in] Reserved for future extensibility.</span></span> <span data-ttu-id="87213-111">`pvReserved` ein null-Verweis muss sein.</span><span class="sxs-lookup"><span data-stu-id="87213-111">`pvReserved` must be a null reference.</span></span>  
   
  `ppAsmItem`  
- <span data-ttu-id="a2e42-112">[out] Das zurückgegebene `IAssemblyCacheItem` Zeiger.</span><span class="sxs-lookup"><span data-stu-id="a2e42-112">[out] The returned `IAssemblyCacheItem` pointer.</span></span>  
+ <span data-ttu-id="87213-112">[out] Das zurückgegebene `IAssemblyCacheItem` Zeiger.</span><span class="sxs-lookup"><span data-stu-id="87213-112">[out] The returned `IAssemblyCacheItem` pointer.</span></span>  
   
  `pszAssemblyName`  
- <span data-ttu-id="a2e42-113">[in, optional] Uncanonicalized, durch Trennzeichen getrennte `name=value` Paare.</span><span class="sxs-lookup"><span data-stu-id="a2e42-113">[in, optional] Uncanonicalized, comma-separated `name=value` pairs.</span></span>  
+ <span data-ttu-id="87213-113">[in, optional] Uncanonicalized, durch Trennzeichen getrennte `name=value` Paare.</span><span class="sxs-lookup"><span data-stu-id="87213-113">[in, optional] Uncanonicalized, comma-separated `name=value` pairs.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a2e42-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a2e42-114">Requirements</span></span>  
- <span data-ttu-id="a2e42-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a2e42-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="87213-114">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="87213-114">Requirements</span></span>  
+ <span data-ttu-id="87213-115">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="87213-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a2e42-116">**Header:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="a2e42-116">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="87213-116">**Header:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="87213-116">**Header:** Fusion.h</span></span>  
   
- **<span data-ttu-id="a2e42-117">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="a2e42-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="87213-117">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="87213-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a2e42-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a2e42-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="87213-118">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="87213-118">See also</span></span>
 
-- [<span data-ttu-id="a2e42-119">IAssemblyCache-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a2e42-119">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
-- [<span data-ttu-id="a2e42-120">IAssemblyCacheItem-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a2e42-120">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+- [<span data-ttu-id="87213-119">IAssemblyCache-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="87213-119">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [<span data-ttu-id="87213-120">IAssemblyCacheItem-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="87213-120">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

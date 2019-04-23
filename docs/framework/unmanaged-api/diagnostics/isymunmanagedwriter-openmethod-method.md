@@ -18,34 +18,34 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b05ba185a9ad4ab076d29d7d609734d41677b760
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194785"
 ---
-# <a name="isymunmanagedwriteropenmethod-method"></a><span data-ttu-id="bf8fa-102">ISymUnmanagedWriter::OpenMethod-Methode</span><span class="sxs-lookup"><span data-stu-id="bf8fa-102">ISymUnmanagedWriter::OpenMethod Method</span></span>
-<span data-ttu-id="bf8fa-103">Öffnet eine Methode, die in der, die Symbolinformationen ausgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="bf8fa-103">Opens a method into which symbol information is emitted.</span></span> <span data-ttu-id="bf8fa-104">Die angegebene Methode wird die aktuelle Methode für Aufrufe zum Definieren der Sequenzpunkte, Parameter und lexikalischen Gültigkeitsbereiche.</span><span class="sxs-lookup"><span data-stu-id="bf8fa-104">The given method becomes the current method for calls to define sequence points, parameters, and lexical scopes.</span></span> <span data-ttu-id="bf8fa-105">Es gibt ein implizite Lexikalischer Gültigkeitsbereich die gesamte Methode aus.</span><span class="sxs-lookup"><span data-stu-id="bf8fa-105">There is an implicit lexical scope around the entire method.</span></span> <span data-ttu-id="bf8fa-106">Öffnen eine Methode, die bereits geschlossen wurde, löscht alle zuvor definierten Symbole für diese Methode.</span><span class="sxs-lookup"><span data-stu-id="bf8fa-106">Reopening a method that was previously closed erases any previously defined symbols for that method.</span></span> <span data-ttu-id="bf8fa-107">Es kann nur eine open-Methode zu einem Zeitpunkt vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="bf8fa-107">There can be only one open method at a time.</span></span>  
+# <a name="isymunmanagedwriteropenmethod-method"></a><span data-ttu-id="214fd-102">ISymUnmanagedWriter::OpenMethod-Methode</span><span class="sxs-lookup"><span data-stu-id="214fd-102">ISymUnmanagedWriter::OpenMethod Method</span></span>
+<span data-ttu-id="214fd-103">Öffnet eine Methode, die in der, die Symbolinformationen ausgegeben wird.</span><span class="sxs-lookup"><span data-stu-id="214fd-103">Opens a method into which symbol information is emitted.</span></span> <span data-ttu-id="214fd-104">Die angegebene Methode wird die aktuelle Methode für Aufrufe zum Definieren der Sequenzpunkte, Parameter und lexikalischen Gültigkeitsbereiche.</span><span class="sxs-lookup"><span data-stu-id="214fd-104">The given method becomes the current method for calls to define sequence points, parameters, and lexical scopes.</span></span> <span data-ttu-id="214fd-105">Es gibt ein implizite Lexikalischer Gültigkeitsbereich die gesamte Methode aus.</span><span class="sxs-lookup"><span data-stu-id="214fd-105">There is an implicit lexical scope around the entire method.</span></span> <span data-ttu-id="214fd-106">Öffnen eine Methode, die bereits geschlossen wurde, löscht alle zuvor definierten Symbole für diese Methode.</span><span class="sxs-lookup"><span data-stu-id="214fd-106">Reopening a method that was previously closed erases any previously defined symbols for that method.</span></span> <span data-ttu-id="214fd-107">Es kann nur eine open-Methode zu einem Zeitpunkt vorhanden sein.</span><span class="sxs-lookup"><span data-stu-id="214fd-107">There can be only one open method at a time.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf8fa-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="bf8fa-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="214fd-108">Syntax</span><span class="sxs-lookup"><span data-stu-id="214fd-108">Syntax</span></span>  
   
 ```  
 HRESULT OpenMethod(  
     [in] mdMethodDef method);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bf8fa-109">Parameter</span><span class="sxs-lookup"><span data-stu-id="bf8fa-109">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="214fd-109">Parameter</span><span class="sxs-lookup"><span data-stu-id="214fd-109">Parameters</span></span>  
  `method`  
- <span data-ttu-id="bf8fa-110">[in] Das Metadatentoken für die Methode, die geöffnet werden.</span><span class="sxs-lookup"><span data-stu-id="bf8fa-110">[in] The metadata token for the method to be opened.</span></span>  
+ <span data-ttu-id="214fd-110">[in] Das Metadatentoken für die Methode, die geöffnet werden.</span><span class="sxs-lookup"><span data-stu-id="214fd-110">[in] The metadata token for the method to be opened.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="bf8fa-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="bf8fa-111">Return Value</span></span>  
- <span data-ttu-id="bf8fa-112">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="bf8fa-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="214fd-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="214fd-111">Return Value</span></span>  
+ <span data-ttu-id="214fd-112">S_OK, wenn die Methode erfolgreich ist; andernfalls E_FAIL oder einen anderen Fehlercode.</span><span class="sxs-lookup"><span data-stu-id="214fd-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bf8fa-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="bf8fa-113">Requirements</span></span>  
- <span data-ttu-id="bf8fa-114">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="bf8fa-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="214fd-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="214fd-113">Requirements</span></span>  
+ <span data-ttu-id="214fd-114">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="214fd-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bf8fa-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="bf8fa-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="214fd-115">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="214fd-115">See also</span></span>
 
-- [<span data-ttu-id="bf8fa-116">ISymUnmanagedWriter-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="bf8fa-116">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="bf8fa-117">CloseMethod-Methode</span><span class="sxs-lookup"><span data-stu-id="bf8fa-117">CloseMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)
-- [<span data-ttu-id="bf8fa-118">OpenMethod2-Methode</span><span class="sxs-lookup"><span data-stu-id="bf8fa-118">OpenMethod2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-openmethod2-method.md)
+- [<span data-ttu-id="214fd-116">ISymUnmanagedWriter-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="214fd-116">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="214fd-117">CloseMethod-Methode</span><span class="sxs-lookup"><span data-stu-id="214fd-117">CloseMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closemethod-method.md)
+- [<span data-ttu-id="214fd-118">OpenMethod2-Methode</span><span class="sxs-lookup"><span data-stu-id="214fd-118">OpenMethod2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-openmethod2-method.md)
