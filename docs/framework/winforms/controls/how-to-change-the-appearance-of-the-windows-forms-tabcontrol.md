@@ -12,10 +12,10 @@ helpviewer_keywords:
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
 ms.openlocfilehash: 05df05a52914f27a4b62cf7bde92e5d942b6ea06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331337"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>Vorgehensweise: Ändern der Darstellung der TabControl-Komponente in Windows Forms
@@ -70,5 +70,5 @@ Sie können die Darstellung der Registerkarten in Windows Forms ändern, indem S
 - [TabControl-Steuerelement](tabcontrol-control-windows-forms.md)
 - [Übersicht über das TabControl-Steuerelement](tabcontrol-control-overview-windows-forms.md)
 - [Vorgehensweise: Hinzufügen eines Steuerelements zu einer Registerkarte](how-to-add-a-control-to-a-tab-page.md)
-- [Vorgehensweise: Deaktivieren von Registerkartenseiten](how-to-disable-tab-pages.md)
-- [Vorgehensweise: Hinzufügen und Entfernen von Registerkarten mit dem TabControl-Steuerelement in Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [Vorgehensweise: Deaktivieren von Registerkarten](how-to-disable-tab-pages.md)
+- [Vorgehensweise: Hinzufügen und Entfernen von Registerkarten zu TabControls in Windows Forms](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

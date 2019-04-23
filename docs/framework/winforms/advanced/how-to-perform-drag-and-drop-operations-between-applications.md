@@ -5,10 +5,10 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
 ms.openlocfilehash: 9aac3a0efd6359c25a6972f0e0b52dd489ec31db
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327528"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Vorgehensweise: Ausführen von Drag & Drop-Operationen zwischen Anwendungen
@@ -40,6 +40,6 @@ Das Ausführen von Drag &amp; Drop-Vorgängen zwischen Anwendungen unterscheidet
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Vorgehensweise: Hinzufügen von Daten zur Zwischenablage](how-to-add-data-to-the-clipboard.md)
+- [Vorgehensweise: Hinzufügen von Daten in die Zwischenablage](how-to-add-data-to-the-clipboard.md)
 - [Vorgehensweise: Abrufen von Daten aus der Zwischenablage](how-to-retrieve-data-from-the-clipboard.md)
-- [Drag &amp; Drop-Operationen und Unterstützung der Zwischenablage](drag-and-drop-operations-and-clipboard-support.md)
+- [Drag & Drop-Vorgänge und Unterstützung der Zwischenablage](drag-and-drop-operations-and-clipboard-support.md)

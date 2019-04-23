@@ -13,10 +13,10 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
 ms.openlocfilehash: b5550aef220ece09d5486421275b19a37bfe9011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329777"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Vorgehensweise: Verankern von Steuerelementen in Windows Forms
@@ -56,9 +56,9 @@ Wenn Sie ein Formular entwerfen, die der Benutzer zur Laufzeit ändern kann, sol
 ## <a name="see-also"></a>Siehe auch
 
 - [Windows Forms-Steuerelemente](index.md)
-- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
+- [Anordnen von Steuerelementen in Windows Forms](arranging-controls-on-windows-forms.md)
 - [Übersicht über die AutoSize-Eigenschaft](autosize-property-overview.md)
-- [Vorgehensweise: Andocken von Steuerelementen in Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Vorgehensweise: Andocken von Steuerelementen in Windows Forms](how-to-dock-controls-on-windows-forms.md)
 - [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [Exemplarische Vorgehensweise: Anordnen von Windows Forms-Steuerelementen mithilfe von Abständen, Rändern und der AutoSize-Eigenschaft](windows-forms-controls-padding-autosize.md)

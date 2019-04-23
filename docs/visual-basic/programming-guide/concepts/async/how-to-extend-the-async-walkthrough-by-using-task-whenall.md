@@ -3,10 +3,10 @@ title: 'Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise 
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
 ms.openlocfilehash: 7ad2d9cdd85a7bdb67bbf091a38274fd20e5a66f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331883"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (Visual Basic)
@@ -75,7 +75,7 @@ Sie können die Leistung der asynchronen Projektmappe in [Exemplarische Vorgehen
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4. Wenden Sie `Task.WhenAll` auf die Auflistung von Aufgaben `downloadTasks` an. `Task.WhenAll` Gibt eine einzelne Aufgabe, die abgeschlossen wird, wenn alle Aufgaben in der Auflistung von Aufgaben abgeschlossen haben.  
+4. Wenden Sie `Task.WhenAll` auf die Auflistung von Aufgaben `downloadTasks` an. `Task.WhenAll` gibt eine einzelne abgeschlossene Aufgabe zurück, wenn alle Aufgaben in der Auflistung abgeschlossen wurden.  
   
      Im folgenden Beispiel erwartet der `Await`-Ausdruck den Abschluss der einzelnen Aufgabe, die `WhenAll` zurückgibt. Der Ausdruck wird gegen ein Array mit ganzen Zahlen ausgewertet, wobei jede ganze Zahl die Länge einer heruntergeladenen Website ist. Fügen Sie `SumPageSizesAsync` den folgenden Code hinzu, direkt nach dem im vorherigen Schritt hinzugefügten Code.  
   
@@ -148,7 +148,7 @@ Sie können die Leistung der asynchronen Projektmappe in [Exemplarische Vorgehen
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4. Wenden Sie `Task.WhenAll` auf die Auflistung von Aufgaben an, `downloadTasks`. `Task.WhenAll` Gibt eine einzelne Aufgabe, die abgeschlossen wird, wenn alle Aufgaben in der Auflistung von Aufgaben abgeschlossen haben.  
+4. Wenden Sie `Task.WhenAll` auf die Auflistung von Aufgaben an, `downloadTasks`. `Task.WhenAll` gibt eine einzelne abgeschlossene Aufgabe zurück, wenn alle Aufgaben in der Auflistung abgeschlossen wurden.  
   
      Im folgenden Beispiel erwartet der `Await`-Ausdruck den Abschluss der einzelnen Aufgabe, die `WhenAll` zurückgibt. Wenn vollständig, wertet der `Await`-Ausdruck als Ergebnis ein Array von ganzen Zahlen aus, wobei jede ganze Zahl die Länge einer heruntergeladenen Website hat. Fügen Sie `SumPageSizesAsync` den folgenden Code hinzu, direkt nach dem im vorherigen Schritt hinzugefügten Code.  
   

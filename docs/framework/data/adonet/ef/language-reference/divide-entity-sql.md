@@ -3,10 +3,10 @@ title: '- (Division) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
 ms.openlocfilehash: c3b477a63adf3c3d51f28449e94c2b716422296c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330856"
 ---
 # <a name="-divide-entity-sql"></a>/ (Division) (Entity SQL)
@@ -20,10 +20,10 @@ dividend / divisor
   
 ## <a name="arguments"></a>Argumente  
  `dividend`  
- Der zu dividierende numerische Ausdruck. `dividend` ist jeder gültiger Ausdruck eines beliebigen numerischen Datentyps sein.  
+ Der zu dividierende numerische Ausdruck. `dividend` ist jeder gültige Ausdruck eines der numerischen Datentypen.  
   
  `divisor`  
- Der numerische Ausdruck, durch den der Dividend geteilt werden soll. `divisor` ist jeder gültiger Ausdruck eines beliebigen numerischen Datentyps sein.  
+ Der numerische Ausdruck, durch den der Dividend geteilt werden soll. `divisor` ist jeder gültige Ausdruck eines der numerischen Datentypen.  
   
 ## <a name="result-types"></a>Ergebnistypen  
  Der Datentyp, der sich aus der impliziten Datentyphöherstufung der zwei Argumente ergibt. Weitere Informationen zur impliziten datentyphöherstufung finden Sie unter [Typsystem](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).  

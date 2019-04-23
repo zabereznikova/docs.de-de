@@ -3,10 +3,10 @@ title: = (Gleich) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
 ms.openlocfilehash: d50ede1964f6d6b9025a7214efe90e878aa55a0c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333157"
 ---
 # <a name="-equals-entity-sql"></a>= (Gleich) (Entity SQL)
@@ -25,7 +25,7 @@ expression == expression
  Jeder gültige Ausdruck. Beide Ausdrücke müssen implizit konvertierbare Datentypen sein.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- `true` Wenn der linke Ausdruck ungleich dem rechten Ausdruck ist. andernfalls `false`.  
+ `true` , wenn der linke Ausdruck gleich dem rechten Ausdruck ist, andernfalls `false`.  
   
 ## <a name="remarks"></a>Hinweise  
  Der Operator "==" ist äquivalent zum Operator "=".  

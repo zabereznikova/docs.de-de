@@ -3,10 +3,10 @@ title: Formatieren von WCF-Web-HTTP
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
 ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331038"
 ---
 # <a name="wcf-web-http-formatting"></a>Formatieren von WCF-Web-HTTP
@@ -169,5 +169,5 @@ public class Service : IService
 - <xref:System.UriTemplateMatch>
 - [WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [UriTemplate und UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
-- [Überblick über WCF-Web-HTTP-Programmiermodelle](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+- [Überblick über das WCF-Web-HTTP-Programmiermodell](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
 - [Objektmodell für WCF-Web-HTTP-Programmierung](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)

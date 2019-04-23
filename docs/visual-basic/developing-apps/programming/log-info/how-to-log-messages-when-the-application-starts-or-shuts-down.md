@@ -10,10 +10,10 @@ helpviewer_keywords:
 - My.Log object, logging
 ms.assetid: 67624d05-cddf-48b7-8c36-5c99baa4c621
 ms.openlocfilehash: 8fc7b441c6e19d70ceefa3422cf9823007280b64
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330570"
 ---
 # <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Vorgehensweise: Protokollieren von Meldungen beim Starten oder Beenden der Anwendung (Visual Basic)
@@ -63,5 +63,5 @@ Sie können die Objekte `My.Application.Log` und `My.Log` verwenden, um Informat
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
-- [Application Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [Seite „Anwendung“, Projekt-Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [Arbeiten mit Anwendungsprotokollen](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
 ms.openlocfilehash: 8ca6fd64edbd73301fd298f42c3d4d97d021888a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331862"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Vorgehensweise: Ausrichten eines Steuerelements an den Rändern eines Formulars zur Entwurfszeit
@@ -47,9 +47,9 @@ Können Sie vornehmen, das Steuerelement an Ihre Formen ausrichten, durch Festle
 - <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
 - [Vorgehensweise: Ausrichten eines Steuerelements an Formularrändern](how-to-align-a-control-to-the-edges-of-forms.md)
 - [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von Ausrichtungslinien](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Vorgehensweise: Verankern von Steuerelementen in Windows Forms](how-to-anchor-controls-on-windows-forms.md)
+- [Vorgehensweise: Verankern von Steuerelementen in Windows Forms](how-to-anchor-controls-on-windows-forms.md)
 - [Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem TableLayoutPanel-Steuerelement](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
 - [Vorgehensweise: Verankern und Andocken von untergeordneten Steuerelementen in einem FlowLayoutPanel-Steuerelement](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [Exemplarische Vorgehensweise: Anordnen von Steuerelementen in Windows Forms mithilfe von FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Entwickeln von Windows Forms-Steuerelementen zur Entwurfszeit](developing-windows-forms-controls-at-design-time.md)

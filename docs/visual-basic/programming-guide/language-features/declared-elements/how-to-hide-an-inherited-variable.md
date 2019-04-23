@@ -12,10 +12,10 @@ helpviewer_keywords:
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
 ms.openlocfilehash: ee147ecd00b88b538ace32844c42ac9c5022b2ef
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331701"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>Vorgehensweise: Ausblenden einer geerbten Variablen (Visual Basic)
@@ -57,7 +57,7 @@ Eine abgeleitete Klasse erbt alle Definitionen der Basisklasse. Wenn Sie eine Va
   
 ## <a name="see-also"></a>Siehe auch
 
-- [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Verweise auf deklarierte Elemente](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Unterschiede zwischen Shadowing und Überschreiben](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [Vorgehensweise: Ausblenden einer Variablen mit dem gleichen Namen wie die aktuelle Variable](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)

@@ -15,10 +15,10 @@ helpviewer_keywords:
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
 ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330102"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Vorgehensweise: Hinzufügen von Steuerelementen ohne Benutzeroberfläche zu Windows Forms
@@ -82,10 +82,10 @@ Ein nicht visuelles Steuerelement (oder Komponente) bietet Funktionen für Ihre 
 ## <a name="see-also"></a>Siehe auch
 
 - [Windows Forms-Steuerelemente](index.md)
-- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [Vorgehensweise: Hinzufügen von ActiveX-Steuerelementen zu Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
+- [Vorgehensweise: Hinzufügen von Steuerelementen zu Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Vorgehensweise: Hinzufügen von ActiveX-Steuerelemente zu Windows Forms](how-to-add-activex-controls-to-windows-forms.md)
 - [Vorgehensweise: Kopieren von Steuerelementen zwischen Windows Forms](how-to-copy-controls-between-windows-forms.md)
 - [Einfügen von Steuerelementen in Windows Forms](putting-controls-on-windows-forms.md)
-- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [Steuerelemente für Windows Forms](controls-to-use-on-windows-forms.md)
-- [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)
+- [Beschriften einzelner Steuerelemente für Windows Forms und Konfigurieren von Shortcuts für diese Elemente](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [Windows Forms-Steuerelemente](controls-to-use-on-windows-forms.md)
+- [Windows Forms-Steuerelemente nach Funktion](windows-forms-controls-by-function.md)

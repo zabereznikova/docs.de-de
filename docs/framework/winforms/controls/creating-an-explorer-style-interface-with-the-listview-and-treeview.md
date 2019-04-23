@@ -14,10 +14,10 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
 ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332117"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>Exemplarische Vorgehensweise: Erstellen einer Explorer-ähnlichen Schnittstelle mit dem ListView-Steuerelement und dem TreeView-Steuerelement im Designer
@@ -46,7 +46,7 @@ Einer der Vorteile von Visual Studio ist die Fähigkeit zum Erstellen von profes
   
     1.  Legen Sie die <xref:System.Windows.Forms.Control.Dock%2A> -Eigenschaft auf <xref:System.Windows.Forms.DockStyle.Fill>fest.  
   
-    2.  Legen Sie die <xref:System.Windows.Forms.TreeView.ImageList%2A> Eigenschaft `imagelist1.`  
+    2.  Legen Sie die <xref:System.Windows.Forms.TreeView.ImageList%2A>-Eigenschaft auf `imagelist1.` fest.  
   
 7. Hinzufügen einer <xref:System.Windows.Forms.ListView> Steuerelement mit dem Namen `listView1` auf das Formular, und positionieren Sie sie auf der rechten Seite von der <xref:System.Windows.Forms.SplitContainer> Steuerelement. Im Fenster "Eigenschaften" für `listview1` gehen Sie folgendermaßen vor:  
   
@@ -56,7 +56,7 @@ Einer der Vorteile von Visual Studio ist die Fähigkeit zum Erstellen von profes
   
     3.  Öffnen Sie den ColumnHeader-Auflistungs-Editor, indem Sie auf die Auslassungspunkte (![VisualStudioEllipsesButton-bildschirmabbildung](../media/vbellipsesbutton.png "VbEllipsesButton")) in der <xref:System.Windows.Forms.ListView.Columns%2A> Eigenschaft **.** Fügen Sie drei Spalten hinzu, und legen Sie deren <xref:System.Windows.Forms.ColumnHeader.Text%2A> Eigenschaft `Name`, `Type`, und `Last Modified`bzw. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
   
-    4.  Legen Sie die <xref:System.Windows.Forms.ListView.SmallImageList%2A> Eigenschaft `imageList1.`  
+    4.  Legen Sie die <xref:System.Windows.Forms.ListView.SmallImageList%2A>-Eigenschaft auf `imageList1.` fest.  
   
 8. Implementieren Sie den Code zum Auffüllen der <xref:System.Windows.Forms.TreeView> mit Knoten und die untergeordneten Knoten. Fügen Sie diesen Code zur `Form1`-Klasse hinzu.  
   
@@ -94,7 +94,7 @@ Einer der Vorteile von Visual Studio ist die Fähigkeit zum Erstellen von profes
 ## <a name="next-steps"></a>Nächste Schritte  
  Diese Anwendung bietet Ihnen ein Beispiel für eine Möglichkeit, Sie können <xref:System.Windows.Forms.TreeView> und <xref:System.Windows.Forms.ListView> Steuerelement. Weitere Informationen zu diesen Steuerelementen finden Sie unter den folgenden Themen:  
   
--   [Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+-   [Vorgehensweise: Hinzufügen von benutzerdefinierten Daten zu einem TreeView- oder ListView-Steuerelement (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
 -   [Vorgehensweise: Hinzufügen von Suchfunktionen zu einem ListView-Steuerelement](how-to-add-search-capabilities-to-a-listview-control.md)  
   
@@ -105,6 +105,6 @@ Einer der Vorteile von Visual Studio ist die Fähigkeit zum Erstellen von profes
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
 - [ListView-Steuerelement](listview-control-windows-forms.md)
-- [Vorgehensweise: Hinzufügen oder Entfernen von Knoten mit dem TreeView-Steuerelement in Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [Vorgehensweise: Hinzufügen von Spalten zum ListView-Steuerelement in Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [Vorgehensweise: Hinzufügen und Entfernen von Knoten mit dem TreeView-Steuerelement in Windows Forms](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [Vorgehensweise: Hinzufügen und Entfernen von Elementen mit dem ListView-Steuerelement in Windows Forms](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [Vorgehensweise: Hinzufügen von Spalten zu dem ListView-Steuerelement in Windows Forms](how-to-add-columns-to-the-windows-forms-listview-control.md)

@@ -3,10 +3,10 @@ title: Verteilen nach Textelement
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
 ms.openlocfilehash: ff82ab027ff66b1c4c7433ea77efa6c34ccae088
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330194"
 ---
 # <a name="dispatch-by-body-element"></a>Verteilen nach Textelement
@@ -34,7 +34,7 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
 }
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> die Implementierungen sind sehr einfach zu erstellen, da nur eine Methode für die Schnittstelle vorhanden ist: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Die Aufgabe dieser Methode ist, eingehende Nachrichten zu überprüfen und eine Zeichenkette zurückzugeben, die dem Namen einer Methode auf dem Dienstvertrag für den aktuellen Endpunkt entspricht.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>-Implementierungen sind sehr einfach zu erstellen, da die Schnittstelle nur eine Methode besitzt: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Die Aufgabe dieser Methode ist, eingehende Nachrichten zu überprüfen und eine Zeichenkette zurückzugeben, die dem Namen einer Methode auf dem Dienstvertrag für den aktuellen Endpunkt entspricht.  
   
  In diesem Beispiel ruft die Vorgangsauswahl mithilfe von <xref:System.Xml.XmlDictionaryReader> einen <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> für den Text der eingehenden Nachricht ab. Diese Methode setzt den Leser bereits auf das erste untergeordnete Element des Nachrichtentexts, sodass es ausreicht, den aktuellen Namen des Elements und den Namespace-URI abzurufen und diese zu einem `XmlQualifiedName` zu kombinieren, der dann für die Suche nach dem entsprechenden Vorgang aus dem Wörterbuch der Vorgangsauswahl verwendet wird.  
   

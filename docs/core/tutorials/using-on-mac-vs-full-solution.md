@@ -4,12 +4,12 @@ description: Dieses Thema führt Sie durch die Erstellung einer .NET Core-Lösun
 author: guardrex
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3c515c3771f8204bbc7b6944f81fed463c309bc3
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: be0aebb1ac700de07a52c4c50383f45d1191b7f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203401"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327749"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Erstellen einer vollständigen .NET Core-Lösung unter macOS mit Visual Studio für Mac
 
@@ -26,7 +26,7 @@ Dieses Tutorial zeigt Ihnen, wie Sie eine Anwendung erstellen, die einen Suchbeg
 
 - OpenSSL (wenn .NET Core 1.1 ausgeführt wird): Weitere Informationen finden Sie unter dem Thema [Voraussetzungen für .NET Core unter Mac](../macos-prerequisites.md).
 - [.NET Core SDK 1.1 oder höher](https://www.microsoft.com/net/core#macos)
-- [Visual Studio 2017 für Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)
+- [Visual Studio 2017 für Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
 Weitere Informationen über erforderliche Komponenten finden Sie unter [Prerequisites for .NET Core on Mac (Erforderliche Komponenten für .NET Core unter Mac)](../../core/macos-prerequisites.md). Die vollständigen Systemanforderungen von Visual Studio 2017 für Mac finden Sie unter [Visual Studio 2017 für Mac – Systemanforderungen der Produktfamilie](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
@@ -164,7 +164,7 @@ Komponententests bieten automatisierte Softwaretests während der Entwicklung un
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
 
-1. Zum Ausführen der Anwendung in einem Konsolenfenster anstatt in IDE klicken Sie mit der rechten Maustaste auf das `WordCounterApp`-Projekt, wählen **Optionen** aus, und öffnen unter **Konfigurationen** den Knoten **Standard**. Aktivieren Sie das Kontrollkästchen für **Auf externer Konsole ausführen**. Lassen Sie die Option **Konsolenausgabe anhalten** aktiviert. Diese Einstellung bewirkt, dass die Anwendung in einem Konsolenfenster gestartet wird und Sie Eingaben für die `Console.ReadLine`-Anweisungen eingeben können. Wenn Sie die Anwendung weiterhin in IDE ausführen, sehen Sie nur die Ausgabe von `Console.WriteLine`-Anweisungen. `Console.ReadLine`-Anweisungen funktionieren nicht im Bereich **Anwendungsausgabe** von IDE.
+1. Zum Ausführen der Anwendung in einem Konsolenfenster anstatt in IDE klicken Sie mit der rechten Maustaste auf das `WordCounterApp`-Projekt, wählen **Optionen** aus, und öffnen unter **Konfigurationen** den Knoten **Standard**. Aktivieren Sie das Kontrollkästchen für **Auf externer Konsole ausführen**. Lassen Sie die Option **Konsolenausgabe anhalten** aktiviert. Diese Einstellung bewirkt, dass die Anwendung in einem Konsolenfenster gestartet wird und Sie Eingaben für die `Console.ReadLine`-Anweisungen eingeben können. Wenn Sie die Anwendung weiterhin in IDE ausführen, sehen Sie nur die Ausgabe von `Console.WriteLine`-Anweisungen. `Console.ReadLine` Anweisungen funktionieren nicht im Bereich **Anwendungsausgabe** von IDE.
 
    ![Visual Studio für Mac, Fenster „Projektoptionen“](./media/using-on-mac-vs-full-solution/visual-studio-mac-project-options.png)
 

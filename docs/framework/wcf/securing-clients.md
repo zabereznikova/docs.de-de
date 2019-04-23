@@ -5,10 +5,10 @@ helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331805"
 ---
 # <a name="securing-clients"></a>Sichern von Clients
@@ -80,13 +80,13 @@ In Windows Communication Foundation (WCF), schreibt der Dienst die sicherheitsan
   
 |ClientCredential-Eigenschaft|Beschreibung|Hinweise|  
 |-------------------------------|-----------------|-----------|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|Gibt ein <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|Stellt ein X.509-Zertifikat dar, das vom Client geliefert wird, um sich selbst am Dienst zu authentifizieren.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Gibt ein <xref:System.ServiceModel.Security.HttpDigestClientCredential>|Stellt HTTP-Digest-Anmeldeinformationen dar. Die Anmeldeinformationen sind ein Hash des Benutzernamens und des Kennworts.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|Gibt ein <xref:System.ServiceModel.Security.IssuedTokenClientCredential>|Stellt ein benutzerdefiniertes Sicherheitstoken dar, das von einem Sicherheitstokendienst ausgegeben wird und normalerweise in Verbundszenarien verwendet wird.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|Gibt ein <xref:System.ServiceModel.Security.PeerCredential>|Stellt auf einer Windows-Domäne Peeranmeldeinformationen für die Teilnahme in einem Peernetz dar.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|Gibt ein <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>|Stellt ein X.509-Zertifikat dar, das vom Dienst in einer Out-of-Band-Aushandlung geliefert wurde.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|Gibt ein <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>|Stellt eine Kombination aus Benutzername und Kennwort dar.|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|Gibt ein <xref:System.ServiceModel.Security.WindowsClientCredential>|Stellt Windows-Clientanmeldeinformationen (Kerberos-Anmeldeinformationen) dar. Die Eigenschaften der Klasse sind schreibgeschützt.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|Gibt <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> zurück.|Stellt ein X.509-Zertifikat dar, das vom Client geliefert wird, um sich selbst am Dienst zu authentifizieren.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|Gibt <xref:System.ServiceModel.Security.HttpDigestClientCredential> zurück.|Stellt HTTP-Digest-Anmeldeinformationen dar. Die Anmeldeinformationen sind ein Hash des Benutzernamens und des Kennworts.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|Gibt <xref:System.ServiceModel.Security.IssuedTokenClientCredential> zurück.|Stellt ein benutzerdefiniertes Sicherheitstoken dar, das von einem Sicherheitstokendienst ausgegeben wird und normalerweise in Verbundszenarien verwendet wird.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|Gibt <xref:System.ServiceModel.Security.PeerCredential> zurück.|Stellt auf einer Windows-Domäne Peeranmeldeinformationen für die Teilnahme in einem Peernetz dar.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|Gibt <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> zurück.|Stellt ein X.509-Zertifikat dar, das vom Dienst in einer Out-of-Band-Aushandlung geliefert wurde.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|Gibt <xref:System.ServiceModel.Security.UserNamePasswordClientCredential> zurück.|Stellt eine Kombination aus Benutzername und Kennwort dar.|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|Gibt <xref:System.ServiceModel.Security.WindowsClientCredential> zurück.|Stellt Windows-Clientanmeldeinformationen (Kerberos-Anmeldeinformationen) dar. Die Eigenschaften der Klasse sind schreibgeschützt.|  
   
 #### <a name="setting-a-clientcredentials-value-in-configuration"></a>Festlegen einer \<ClientCredentials > Wert in der Konfiguration  
  Werte für die Anmeldeinformationen werden angegeben, ein Endpunktverhalten als untergeordnete Elemente mit den [ \<ClientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) Element. Das verwendete Element hängt vom Typ der Clientanmeldeinformationen ab. Das folgende Beispiel zeigt z. B. die Konfiguration festzulegende ein x. 509-Zertifikat mit der <[\<ClientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md).  
@@ -129,7 +129,7 @@ In Windows Communication Foundation (WCF), schreibt der Dienst die sicherheitsan
  Weitere Informationen zum Festlegen der Clientanmeldeinformationen, finden Sie unter [Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../docs/framework/wcf/how-to-specify-client-credential-values.md).  
   
 > [!NOTE]
->  `ClientCredentialType` ignoriert, wenn `SecurityMode` nastaven NA hodnotu `"TransportWithMessageCredential",` wie in der folgenden Beispielkonfiguration dargestellt.  
+>  `ClientCredentialType` wird ignoriert, wenn `SecurityMode` auf `"TransportWithMessageCredential",` festgelegt wird (siehe Beispielkonfiguration unten).  
   
 ```xml  
 <wsHttpBinding>  
@@ -157,4 +157,4 @@ In Windows Communication Foundation (WCF), schreibt der Dienst die sicherheitsan
 - [Zugreifen auf Dienste mithilfe eines WCF-Clients](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
 - [Vorgehensweise: Angeben der Clientanmeldeinformationswerte](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [ServiceModel Metadata Utility-Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [Vorgehensweise: Angeben des Typs von Clientanmeldeinformationen](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [Vorgehensweise: Geben Sie den Typ der Clientanmeldeinformationen](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

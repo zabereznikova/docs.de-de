@@ -3,10 +3,10 @@ title: Beispiel für Suche mit Bereichen
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
 ms.openlocfilehash: 9ad20e63e00464ed615620b9d0ec83fb90d07444
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328087"
 ---
 # <a name="discovery-with-scopes-sample"></a>Beispiel für Suche mit Bereichen
@@ -20,7 +20,7 @@ In diesem Beispiel wird veranschaulicht, wie Bereiche verwendet werden, um erken
   
 #### <a name="to-use-this-sample"></a>So verwenden Sie dieses Beispiel  
   
-1. In diesem Beispiel werden HTTP-Endpunkte verwendet. Zur Ausführung des Beispiels müssen die richtigen URL-ACLs hinzugefügt werden. Finden Sie unter [Konfigurieren von HTTP und HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Details. Durch die Ausführung des folgenden Befehls mit erweiterten Berechtigungen werden die entsprechenden ACLs hinzugefügt. Sie möchten möglicherweise ersetzen die Domäne und den Benutzernamen für die folgenden Argumente, wenn der Befehl nicht funktioniert: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. In diesem Beispiel werden HTTP-Endpunkte verwendet. Zur Ausführung des Beispiels müssen die richtigen URL-ACLs hinzugefügt werden. Finden Sie unter [Konfigurieren von HTTP und HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) Details. Durch die Ausführung des folgenden Befehls mit erweiterten Berechtigungen werden die entsprechenden ACLs hinzugefügt. Es empfiehlt sich, die folgenden Argumente durch die Domäne und den Benutzernamen zu ersetzen, wenn der Befehl nicht funktioniert: `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. Erstellen Sie die Projektmappe.  
   

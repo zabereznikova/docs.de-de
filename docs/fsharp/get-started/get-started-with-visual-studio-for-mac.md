@@ -3,10 +3,10 @@ title: Erste Schritte mit F# in Visual Studio für Mac
 description: Erfahren Sie, wie F# in Visual Studio für Mac verwenden.
 ms.date: 07/03/2018
 ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331863"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Erste Schritte mit F# in Visual Studio für Mac
@@ -115,7 +115,7 @@ Wenn Sie nicht bereits getan haben, sehen Sie sich die [Einführung in F#](../to
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Visual F#](../index.md)
+- [Visual F#](../index.md)
 - [Einführung in F#](../tour.md)
 - [F#Referenz zur Abfragesprache](../language-reference/index.md)
 - [Typrückschluss](../language-reference/type-inference.md)

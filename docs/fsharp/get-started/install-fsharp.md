@@ -3,10 +3,10 @@ title: Installieren von F#
 description: Informationen zum Installieren F# basierend auf Ihrer Umgebung.
 ms.date: 08/28/2018
 ms.openlocfilehash: 792c61c0522cd4d0c68a64572f2892ce33f71ea6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331974"
 ---
 # <a name="install-f"></a>Installieren von F\#
@@ -31,7 +31,7 @@ Nachdem die Installation abgeschlossen ist, wählen Sie "Starten Sie Visual Stud
 
 Sie benötigen [Git-Installation](https://git-scm.com/download) und verfügbar ist, auf dem Weg zur Stellen verwenden der Projektvorlagen das Projekt. Sie können überprüfen, dass es ordnungsgemäß, durch Eingabe installiert ist `git --version` an einer Eingabeaufforderung, und drücken **EINGABETASTE**.
 
-### [<a name="macos"></a>macOS](#tab/macos)
+### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 [Mono](https://www.mono-project.com) dient zur [F# Interactive](../tutorials/fsharp-interactive/index.md) unterstützen. Die einfachste Möglichkeit zum Installieren von Mono unter MacOS ist über Homebrew. Geben Sie einfach Folgendes in Ihrem Terminal ein:
 
@@ -41,7 +41,7 @@ brew install mono
 
 Installieren Sie auch die [.NET Core SDK](https://www.microsoft.com/net/download).
 
-### [<a name="linux"></a>Linux](#tab/linux)
+### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 [Mono](https://www.mono-project.com) dient zur [F# Interactive](../tutorials/fsharp-interactive/index.md) unterstützen. Wenn Sie sich unter Debian oder Ubuntu sind, können Sie Folgendes:
 
@@ -52,7 +52,7 @@ sudo apt-get install mono-complete fsharp
 
 Installieren Sie auch die [.NET Core SDK](https://www.microsoft.com/net/download).
 
-### [<a name="windows"></a>Windows](#tab/windows)
+### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 Installieren Sie [Visual Studio mit F#-Unterstützung](#install-f-with-visual-studio). Dadurch werden alle erforderlichen Komponenten zum Schreiben, kompilieren und Ausführen von F#-Code installiert.
 

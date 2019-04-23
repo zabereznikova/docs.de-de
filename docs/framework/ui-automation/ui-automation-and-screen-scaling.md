@@ -11,17 +11,17 @@ helpviewer_keywords:
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
 ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332683"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Benutzeroberflächenautomatisierung und Bildschirmskalierung
 > [!NOTE]
 >  Diese Dokumentation ist für .NET Framework-Entwickler vorgesehen, die die verwalteten [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-Klassen verwenden möchten, die im <xref:System.Windows.Automation>-Namespace definiert sind. Die neuesten Informationen zu [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], finden Sie unter [Windows-Automatisierungs-API: Benutzeroberflächenautomatisierung](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] ermöglicht Benutzern das Ändern der [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] Einstellung so, dass die meisten [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] Elemente auf dem Bildschirm größer erscheinen. Obwohl dieses Feature in [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]bereits seit längerem verfügbar ist, musste die Skalierung in früheren Versionen von Anwendungen implementiert werden. In [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]führt der Desktopfenster-Manager standardmäßig die Skalierung für alle Anwendungen aus, die ihre eigene Skalierung nicht übernehmen. Benutzeroberflächenautomatisierungs-Clientanwendungen müssen dieses Feature berücksichtigen.  
+ [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] ermöglicht es Benutzern, die [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] -Einstellung so zu ändern, dass die meisten [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] -Elemente auf dem Bildschirm größer erscheinen. Obwohl dieses Feature in [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]bereits seit längerem verfügbar ist, musste die Skalierung in früheren Versionen von Anwendungen implementiert werden. In [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]führt der Desktopfenster-Manager standardmäßig die Skalierung für alle Anwendungen aus, die ihre eigene Skalierung nicht übernehmen. Benutzeroberflächenautomatisierungs-Clientanwendungen müssen dieses Feature berücksichtigen.  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Skalierung in Windows Vista  

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
 ms.openlocfilehash: 21e9e0609ed63c4398f2df7ba718f8af17464b0a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332481"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>Vorgehensweise: Abrufen eines Zertifikats (WCF)
@@ -20,7 +20,7 @@ Funktionen, verwenden Sie x. 509-Zertifikate von Windows Communication Foundatio
   
     -   Erwerben Sie ein Zertifikat von einer Zertifizierungsstelle, z. B. VeriSign, Inc.  
   
-    -   Richten Sie einen eigenen Zertifikatdienst ein, und lassen Sie die Zertifikate von einer Zertifizierungsstelle signieren. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Windows 2000 Server, Windows 2000 Server Datacenter und Windows 2000 Datacenter Server umfassen Zertifikatdienste, die public Key-Infrastruktur (PKI) zu unterstützen. In Windows Server 2008 verwenden, die [Active Directory Certificate Services](https://go.microsoft.com/fwlink/?LinkID=153483) Rolle um eine Zertifizierungsstelle zu verwalten.  
+    -   Richten Sie einen eigenen Zertifikatdienst ein, und lassen Sie die Zertifikate von einer Zertifizierungsstelle signieren. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Windows&amp;amp;#160;2000 Server, Windows&amp;amp;#160;2000 Server Datacenter und Windows&amp;amp;#160;2000 Datacenter Server verfügen alle über Zertifikatdienste mit Public Key Infrastructure (PKI)-Unterstützung. In Windows Server 2008 verwenden, die [Active Directory Certificate Services](https://go.microsoft.com/fwlink/?LinkID=153483) Rolle um eine Zertifizierungsstelle zu verwalten.  
   
     -   Richten Sie einen eigenen Zertifikatsdienst ein, und lassen Sie die Zertifikate nicht signieren.  
   
@@ -29,5 +29,5 @@ Funktionen, verwenden Sie x. 509-Zertifikate von Windows Communication Foundatio
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Arbeiten mit Zertifikaten](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [Vorgehensweise: Erstellen von temporären Zertifikaten für die Verwendung während der Entwicklung](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

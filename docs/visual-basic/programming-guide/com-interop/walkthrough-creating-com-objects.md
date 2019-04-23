@@ -9,10 +9,10 @@ helpviewer_keywords:
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
 ms.openlocfilehash: 97e917d568b31860979e54598350d1ae7a6fdb25
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331896"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen von COM-Objekte in Visual Basic
@@ -94,7 +94,7 @@ Wenn Sie neue Anwendungen oder Komponenten erstellen möchten, empfiehlt es sich
 
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
 - [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)
-- [Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekte](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
+- [Exemplarische Vorgehensweise: Implementieren der Vererbung mit COM-Objekten](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 - [#Region-Anweisung](../../../visual-basic/language-reference/directives/region-directive.md)
 - [COM-Interoperabilität in .NET Framework-Anwendungen](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
-- [Fehlerbehandlung bei der Interoperabilität](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)
+- [Problembehandlung bei der Interoperabilität](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

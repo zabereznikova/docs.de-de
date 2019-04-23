@@ -3,10 +3,10 @@ title: AJAX-Dienst ohne Konfiguration
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
 ms.openlocfilehash: f5ebc952fcc6c2ca4c7272a90dc1929d4b4a0eae
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331610"
 ---
 # <a name="ajax-service-without-configuration"></a>AJAX-Dienst ohne Konfiguration
@@ -28,7 +28,7 @@ Dieses Beispiel veranschaulicht, wie Windows Communication Foundation (WCF) zum 
 %>  
 ```
 
- <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> Fügt automatisch eine <xref:System.ServiceModel.Description.WebScriptEndpoint> an den Dienst. Wenn keine Konfigurationsänderungen am Endpunkt vorgenommen werden müssen, kann der Abschnitt `<system.ServiceModel>` vollständig aus der Datei "Web.config" für den Dienst entfernt werden. Die Datei Web.config enthält einige ASP.NET-Einstellungen, die von ConfigFreeClientPage.aspx verwendet werden. Wenn dies nicht der Fall wäre, könnte die gesamte Datei Web.config entfernt werden.  
+ <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> fügt dem Dienst automatisch einen <xref:System.ServiceModel.Description.WebScriptEndpoint> hinzu. Wenn keine Konfigurationsänderungen am Endpunkt vorgenommen werden müssen, kann der Abschnitt `<system.ServiceModel>` vollständig aus der Datei "Web.config" für den Dienst entfernt werden. Die Datei Web.config enthält einige ASP.NET-Einstellungen, die von ConfigFreeClientPage.aspx verwendet werden. Wenn dies nicht der Fall wäre, könnte die gesamte Datei Web.config entfernt werden.  
   
 > [!IMPORTANT]
 >  Die Beispiele sind möglicherweise bereits auf dem Computer installiert. Suchen Sie nach dem folgenden Verzeichnis (Standardverzeichnis), bevor Sie fortfahren.  

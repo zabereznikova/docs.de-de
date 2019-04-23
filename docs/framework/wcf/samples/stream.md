@@ -3,10 +3,10 @@ title: Stream
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
 ms.openlocfilehash: f6ca887240ec4f6a304f0d5972790837c0121721
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330219"
 ---
 # <a name="stream"></a>Stream
@@ -36,7 +36,7 @@ public interface IStreamingSample
 }  
 ```  
   
- Der `GetStream`-Vorgang empfängt Eingabedaten als Zeichenfolge, die gepuffert wird, und gibt einen `Stream` zurück, der im Streamingmodus übertragen wird. Umgekehrt nimmt `UploadStream` einen (per Streaming übertragenen) `Stream` entgegen und gibt einen (gepufferten) `bool` zurück. `EchoStream` annimmt und zurückgibt `Stream` und ist ein Beispiel für einen Vorgang, dessen Eingabe- und Ausgabenachrichten im Streamingmodus übermittelt. `GetReversedStream` akzeptiert keine Eingaben und gibt einen `Stream`-Wert (im Streamingmodus) zurück.  
+ Der `GetStream`-Vorgang empfängt Eingabedaten als Zeichenfolge, die gepuffert wird, und gibt einen `Stream` zurück, der im Streamingmodus übertragen wird. Umgekehrt nimmt `UploadStream` einen (per Streaming übertragenen) `Stream` entgegen und gibt einen (gepufferten) `bool` zurück. `EchoStream` akzeptiert und gibt einen Wert des Typs `Stream` zurück und ist ein Beispiel für einen Vorgang, dessen Eingabe- und Ausgabenachrichten per Streaming übertragen werden. `GetReversedStream` akzeptiert keine Eingaben und gibt einen `Stream`-Wert (im Streamingmodus) zurück.  
   
 ## <a name="enabling-streamed-transfers"></a>Aktivieren von Streamübertragungen  
  Wenn Sie Vorgangsverträge wie oben beschrieben definieren, können Sie Streaming auf Programmiermodellebene durchführen. Wenn Sie an dieser Stelle aufhören, wird immer noch der gesamte Nachrichteninhalt vom Transport gepuffert. Zum Aktivieren von Transportstreaming müssen Sie im Bindungselement des Transports einen Übertragungsmodus auswählen. Das Bindungselement weist eine `TransferMode`-Eigenschaft auf, die auf `Buffered`, `Streamed`, `StreamedRequest` oder `StreamedResponse` festgelegt werden kann. Wenn Sie den Übertragungsmodus auf `Streamed` festlegen, wird ein Kommunikationsstream in beide Richtungen ermöglicht. Wenn Sie den Übertragungsmodus auf `StreamedRequest` oder `StreamedResponse` festlegen, wird ein Kommunikationsstream nur in der jeweiligen Richtung (Anforderung bzw. Antwort) ermöglicht.  
@@ -66,7 +66,7 @@ public interface IStreamingSample
 ## <a name="processing-data-as-it-is-streamed"></a>Verarbeiten von Daten bei deren Streamingübertragung  
  Bei den Vorgängen `GetStream`, `UploadStream` und `EchoStream` werden Daten direkt aus einer Datei gesendet oder empfangene Daten direkt in einer Datei gespeichert. In manchen Fällen ist es jedoch erforderlich, große Mengen von Daten zu senden oder zu empfangen und Teile dieser Daten dabei zu verarbeiten. Eine Möglichkeit in solchen Situationen wäre, einen benutzerdefinierten Stream (eine Klasse, die sich von <xref:System.IO.Stream> ableitet) zu schreiben, der Daten verarbeitet, während diese gelesen oder geschrieben werden. Der `GetReversedStream`-Vorgang und die `ReverseStream`-Klasse sind ein Beispiel für ein solches Vorgehen.  
   
- `GetReversedStream` Erstellt und gibt eine neue Instanz der `ReverseStream`. Die tatsächliche Verarbeitung erfolgt, wenn das System Daten aus diesem `ReverseStream`-Objekt liest. Die `ReverseStream.Read`-Implementierung liest eine Gruppe von Bytes aus der zugrunde liegenden Datei, invertiert die Reihenfolge der Bytes und gibt die invertierten Bytes zurück. Sie invertiert nicht den gesamten Dateiinhalt, sondern immer nur eine Gruppe von Bytes auf einmal. Dieses Beispiel zeigt, wie Sie das Verarbeiten eines Streams durchführen können, wenn der Inhalt aus dem Stream gelesen oder in den Stream geschrieben wird.  
+ `GetReversedStream` erstellt eine neue Instanz der `ReverseStream`-Klasse und gibt eine Instanz dieser Klasse zurück. Die tatsächliche Verarbeitung erfolgt, wenn das System Daten aus diesem `ReverseStream`-Objekt liest. Die `ReverseStream.Read`-Implementierung liest eine Gruppe von Bytes aus der zugrunde liegenden Datei, invertiert die Reihenfolge der Bytes und gibt die invertierten Bytes zurück. Sie invertiert nicht den gesamten Dateiinhalt, sondern immer nur eine Gruppe von Bytes auf einmal. Dieses Beispiel zeigt, wie Sie das Verarbeiten eines Streams durchführen können, wenn der Inhalt aus dem Stream gelesen oder in den Stream geschrieben wird.  
   
 ```csharp
 class ReverseStream : Stream  
