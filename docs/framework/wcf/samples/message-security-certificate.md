@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
 ms.openlocfilehash: b5a36d39e6e38f121bf3155c822681fb198f0850
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59306273"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771113"
 ---
 # <a name="message-security-certificate"></a>Nachrichtensicherheitszertifikat
 Dieses Beispiel zeigt, wie eine Anwendung implementiert wird, die WS-Sicherheit mit X.509 v3-Zertifikatauthentifizierung für den Client verwendet und eine Serverauthentifizierung über das X.509 v3-Zertifikat des Servers erfordert. Es werden Standardeinstellungen so verwendet, dass alle Anwendungsnachrichten zwischen dem Client und dem Server signiert und verschlüsselt werden. Dieses Beispiel basiert auf der [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) und besteht aus einem clientkonsolenprogramm und einer von IIS (Internetinformationsdienste) gehosteten Dienstbibliothek. Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.  

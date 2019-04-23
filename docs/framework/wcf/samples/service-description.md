@@ -3,11 +3,11 @@ title: Dienstbeschreibung
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
 ms.openlocfilehash: d68bc3f304a9ade8ab17729fb23b5bd89b007d0b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59333651"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771322"
 ---
 # <a name="service-description"></a>Dienstbeschreibung
 Im Beispiel "Dienstbeschreibung" wird veranschaulicht, wie ein Dienst seine Dienstbeschreibungsinformationen zur Laufzeit abrufen kann. Das Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md), mit einen zusätzlichen Dienstvorgang definiert, um beschreibende Informationen über den Dienst zurückzugeben. Die zurückgegebenen Informationen enthalten die Basisadressen und Endpunkte für den Dienst. Der Dienst stellt diese Informationen mithilfe der Klassen <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost> und <xref:System.ServiceModel.Description.ServiceDescription> bereit.  

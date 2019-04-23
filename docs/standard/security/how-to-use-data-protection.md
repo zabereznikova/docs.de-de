@@ -19,11 +19,11 @@ ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59314456"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771841"
 ---
 # <a name="how-to-use-data-protection"></a>Vorgehensweise: Verwenden des Datenschutzes
 .NET Framework bietet Zugriff auf die Datenschutz-API, die es Ihnen ermöglicht, Daten mithilfe von Informationen vom aktuellen Benutzerkonto oder Computer zu verschlüsseln.  Wenn Sie die Datenschutz-API verwenden, umgehen Sie die schwierige Aufgabe, einen kryptografischen Schlüssel explizit zu generieren und zu speichern.  

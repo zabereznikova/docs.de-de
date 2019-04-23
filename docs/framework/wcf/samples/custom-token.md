@@ -3,11 +3,11 @@ title: Benutzerdefiniertes Token
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
 ms.openlocfilehash: fbde7d1006cabddafa7e03fdee0e3493416001da
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334444"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770515"
 ---
 # <a name="custom-token"></a>Benutzerdefiniertes Token
 In diesem Beispiel wird veranschaulicht, wie Sie einer benutzerdefinierten tokenimplementierung in eine Windows Communication Foundation (WCF)-Anwendung. Im Beispiel wird ein `CreditCardToken` verwendet, um Informationen über Clientkreditkarten sicher an den Dienst zu übergeben. Das Token wird an den WS-Sicherheits-Nachrichtenkopf übergeben und zusammen mit Nachrichtentext und anderen Nachrichtenköpfen mithilfe des symmetrischen Sicherheitsbindungselements signiert und verschlüsselt. Dies ist in Fällen nützlich, in denen die integrierten Token nicht ausreichen. In diesem Beispiel wird veranschaulicht, wie anstelle eines der integrierten Token ein benutzerdefiniertes Sicherheitstoken für einen Dienst bereitgestellt werden kann. Der Dienst implementiert einen Vertrag, der ein Anforderungs-Antwort-Kommunikationsmuster definiert.

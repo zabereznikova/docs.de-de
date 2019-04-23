@@ -13,10 +13,10 @@ ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3b149a9b8ee41f5e196fd69258044f9b6563cb99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217873"
 ---
 # <a name="releasehandlefailed-mda"></a>ReleaseHandleFailed-MDA
@@ -28,7 +28,7 @@ Der `releaseHandleFailed`-MDA (Managed Debugging Assistant, Assistent für verwa
 ## <a name="cause"></a>Ursache  
  Benutzer müssen die Implementierung der <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>-Methode bereitstellen, wenn sie Klassen erstellen, die aus <xref:System.Runtime.InteropServices.SafeHandle> oder <xref:System.Runtime.InteropServices.CriticalHandle> abgeleitet sind. Daher hängen die Umstände von der jeweiligen Ressource ab. Die Anforderungen sehen jedoch wie folgt aus:  
   
--   <xref:System.Runtime.InteropServices.SafeHandle> und <xref:System.Runtime.InteropServices.CriticalHandle> -Typen sind Wrapper für entscheidende Prozessressourcen. Ein Arbeitsspeicherverlust würde den Prozess im Lauf der Zeit unbrauchbar machen.  
+-   <xref:System.Runtime.InteropServices.SafeHandle>- und <xref:System.Runtime.InteropServices.CriticalHandle>-Typen sind Wrapper für entscheidende Prozessressourcen. Ein Arbeitsspeicherverlust würde den Prozess im Lauf der Zeit unbrauchbar machen.  
   
 -   Die <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>-Methode darf beim Ausführen ihrer Funktion nicht fehlschlagen. Sobald ein Prozess eine solche Ressource abgerufen hat, ist <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> die einzige Möglichkeit, diese freizugeben. Ein Fehlschlagen bedeutet deshalb Ressourcenverluste.  
   
@@ -93,5 +93,5 @@ bool ReleaseHandle()
 ## <a name="see-also"></a>Siehe auch
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [Interop-Marshalling](../../../docs/framework/interop/interop-marshaling.md)
+- [Diagnosing Errors with Managed Debugging Assistants (Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen)](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [Interop Marshaling (Interop-Marshalling)](../../../docs/framework/interop/interop-marshaling.md)

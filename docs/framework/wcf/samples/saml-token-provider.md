@@ -3,11 +3,11 @@ title: SAML-Tokenanbieter
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
 ms.openlocfilehash: e662d9b84bbc43178946fdadc8ddbec6f6b6e042
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59304596"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771100"
 ---
 # <a name="saml-token-provider"></a>SAML-Tokenanbieter
 Dieses Beispiel veranschaulicht das Implementieren eines benutzerdefinierten Client-SAML-Tokenanbieters. Ein Tokenanbieter in Windows Communication Foundation (WCF) Dient zum Angeben von Anmeldeinformationen, um der Sicherheitsinfrastruktur. Der Tokenanbieter untersucht im Allgemeinen das Ziel und gibt die entsprechenden Anmeldeinformationen aus, sodass die Sicherheitsinfrastruktur die Nachricht sichern kann. Im Lieferumfang von WCF ist der standardmäßige Tokenanbieter der Anmeldeinformationsverwaltung enthalten. Außerdem Lieferumfang von WCF ein [!INCLUDE[infocard](../../../../includes/infocard-md.md)] Tokenanbieter. Benutzerdefinierte Tokenanbieter sind in den folgenden Fällen nützlich:

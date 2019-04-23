@@ -1,7 +1,7 @@
 ---
 title: <AppContextSwitchOverrides>-Element
 ms.custom: updateeachrelease
-ms.date: 03/07/2019
+ms.date: 04/18/2019
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bc4cd94d3acd37244e1d5b882612e4b1da91b90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e887747a3f036d10e5e5fec6c0cadaf9f34050df
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136460"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978249"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides >-Element
 Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse für die Bereitstellung eines Mechanismus zum Deaktivieren neuer Funktionen verwendet wird.  
@@ -98,6 +98,7 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Steuerelemente, ob der Wert des der [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) -Eigenschaft ist ein [IntPtr](xref:System.IntPtr) , stellt die Speicheradresse eines Fensters verarbeiten, oder gibt an, ob es ein Fensterhandle (HWND) ist. Weitere Informationen finden Sie unter [Entschärfung: CspParameters.ParentWindowHandle erwartet ein HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value). |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Bestimmt, ob der Standardwert für einige Vorgänge SignedCMS SHA1- oder SHA-256 ist.<br>Microsoft empfiehlt aufgrund der Konflikte mit SHA1 SHA256.|.NET Framework 4.7.1|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|Bestimmt, ob der Standardwert für einige Vorgänge SignedXML SHA1- oder SHA-256 ist.<br>Microsoft empfiehlt aufgrund der Konflikte mit SHA1 SHA256.|.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|Steuert, ob die Verwendung von verwalteten Kryptografie im FIPS-Modus löst Klassen eine <xref:System.Security.Cryptography.CryptographicException> (`true`) oder auf die Implementierung der Systembibliotheken basiert (`false`).|.NET Framework 4.8|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Bestimmt, ob die `TransportWithMessageCredential` Modus können Nachrichten mit einer nicht signierten "to"-Header. Dies ist ein Opt-in-Schalter. Weitere Informationen finden Sie unter [Laufzeitänderungen in .NET Framework 4.6.1](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Steuerelemente, ob die <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> Konstruktor löst eine <xref:System.ArgumentException> ist eines der Elemente `null`.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|Bestimmt, ob der Versuch, verwenden Sie X509-Zertifikate mit ein CSG-Schlüsselspeicheranbieter eine Ausnahme auslöst. Weitere Informationen finden Sie unter [WCF-transportsicherheit unterstützt Zertifikate, die mithilfe der CNG gespeichert](../../../migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng).|.NET Framework 4.6.1|
@@ -109,6 +110,7 @@ Definiert mindestens eine Option, die von der <xref:System.AppContext>-Klasse f�
 |`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|Steuert, ob WCF ein SHA1- oder einen SHA256-Hash verwendet, um zufällige Namen für named Pipes zu generieren.<br>Microsoft empfiehlt aufgrund der Konflikte mit SHA1 SHA256.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|Steuert, ob Auslösen einer ["NullReferenceException"](xref:System.NullReferenceException) Wenn in der Ausnahmemeldung an null ist.|.NET Framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Steuert, ob beim Start des Diensts ausgelöste Ausnahmen an den Aufrufer der weitergegeben werden die <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> Methode.|.NET Framework 4.7.1|
+|`Switch.System.Threading.UseNetCoreTimer`|Steuerelemente, ob <xref:System.Threading.Timer> Instanzen leistungsverbesserungen für hoch skalierbare Umgebungen nutzen. Wenn `true`, die leistungsverbesserungen aktiviert sind, wenn `false` (der Standardwert), deaktiviert sind.|.NET Framework 4.8|
 |`Switch.System.Uri.`<br/>`DontEnableStrictRFC3986ReservedCharacterSets`|Bestimmt, ob bestimmte prozentcodierte Zeichen, die manchmal decodiert wurden jetzt konsistent linkscodiert sind. Wenn `true`, werden decodierte; andernfalls `false`.|.NET Framework 4.7.2|
 |`Switch.System.Uri.`<br/>`DontKeepUnicodeBidiFormattingCharacters`|Bestimmt die Behandlung von bidirektionale uniccode-Zeichen in URIs an. `true` Um diese URIs zu entfernen; `false` beibehalten wird und sie Prozent-Codierung.|.NET Framework 4.7.2|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Bestimmt, ob Windows Presentation Foundation einen alten Algorithmus angewendet (`true`) oder einen neuen Algorithmus (`false`) beim Reservieren von Speicherplatz für \*-Spalten. Weitere Informationen finden Sie unter [Entschärfung: Rastersteuerelement Platzzuweisung an mit Stern gekennzeichnete Spalten](../../../migration-guide/retargeting/4.6.2-4.7.md#wpf-grid-allocation-of-space-to-star-columns). |.NET Framework 4.7 |

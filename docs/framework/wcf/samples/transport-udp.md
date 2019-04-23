@@ -3,11 +3,11 @@ title: 'Transport: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
 ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334665"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772010"
 ---
 # <a name="transport-udp"></a>Transport: UDP
 Beispiel für den UDP-Transport veranschaulicht, wie UDP-Unicast und -Multicast als einen benutzerdefinierten Windows Communication Foundation (WCF)-Transport implementiert wird. Im Beispiel wird die empfohlene Vorgehensweise zum Erstellen eines benutzerdefinierten Transports in WCF anhand des kanalframeworks und WCF-best Practices beschrieben. Die Schritte zum Erstellen eines benutzerdefinierten Transports lauten wie folgt:  

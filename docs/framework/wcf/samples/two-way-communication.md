@@ -3,11 +3,11 @@ title: Bidirektionale Kommunikation
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
 ms.openlocfilehash: 6ce0d15bca15fff52ea6c4ab210dd08664e19824
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59298837"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770918"
 ---
 # <a name="two-way-communication"></a>Bidirektionale Kommunikation
 Dieses Beispiel veranschaulicht das Ausführen der transaktiven bidirektionalen Warteschlangenkommunikation über MSMQ. In diesem Beispiel wird die `netMsmqBinding`-Bindung verwendet. Der Dienst ist in diesem Fall eine selbst gehostete Konsolenanwendung, die es Ihnen ermöglicht, den Dienst beim Empfang von Nachrichten in der Warteschlange zu beobachten.  
@@ -227,7 +227,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
     > [!NOTE]
     >  Wenn Sie zur Neugenerierung der Konfiguration für dieses Beispiel die Datei "Svcutil.exe" verwenden, müssen Sie die Endpunktnamen in der Clientkonfiguration ändern, sodass sie mit dem Clientcode übereinstimmen.  
   
- Standardmäßig wird mit <xref:System.ServiceModel.NetMsmqBinding> die Transportsicherheit aktiviert. Es gibt zwei relevante Eigenschaften für MSMQ-transportsicherheit: <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> und <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` standardmäßig der Authentifizierungsmodus festgelegt ist, um `Windows` und die Schutzebene auf `Sign`. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es Teil einer Domäne sein, und die Active Directory-Integrationsoption für MSMQ muss installiert sein. Wenn Sie dieses Beispiel auf einem Computer ausführen, der diese Kriterien nicht erfüllt, tritt ein Fehler auf.  
+ Standardmäßig wird mit <xref:System.ServiceModel.NetMsmqBinding> die Transportsicherheit aktiviert. Es gibt zwei relevante Eigenschaften für MSMQ-transportsicherheit: <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> und <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` standardmäßig der Authentifizierungsmodus festgelegt ist, um `Windows` und die Schutzebene auf `Sign`. Damit MSMQ die Authentifizierungs- und Signierungsfunktion bereitstellt, muss es Teil einer Domäne sein, und die Active Directory-Integrationsoption für MSMQ muss installiert sein. Wenn Sie dieses Beispiel auf einem Computer ausführen, der diese Kriterien nicht erfüllt, tritt ein Fehler auf.  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>So führen Sie das Beispiel auf einem Computer aus, der sich in einer Arbeitsgruppe befindet oder über keine Active Directory-Integration verfügt  
   

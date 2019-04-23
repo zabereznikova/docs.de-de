@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
 ms.openlocfilehash: 5bab8b5a19f33f8dcfcc5a5f5d882309a4b1cc99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59305272"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59771139"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>Vorgehensweise: Erstellen eines grundlegenden RSS-Feeds
 Windows Communication Foundation (WCF) ermöglicht Ihnen die Erstellung ein Diensts, das einen Syndication-feed verfügbar macht. In diesem Thema wird erläutert, wie ein Syndication-Dienst, der einen RSS Syndication-Feed verfügbar macht, erstellt wird.  

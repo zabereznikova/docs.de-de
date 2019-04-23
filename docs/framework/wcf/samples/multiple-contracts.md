@@ -3,11 +3,11 @@ title: Mehrere Verträge
 ms.date: 03/30/2017
 ms.assetid: 2bef319b-fe9c-4d49-ac6c-dfb23eb35099
 ms.openlocfilehash: acced4bfc79571c78e868b31b0a4db6cfbdea76a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295561"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772036"
 ---
 # <a name="multiple-contracts"></a>Mehrere Verträge
 Das Beispiel zu mehreren Verträgen zeigt, wie mehr als ein Vertrag für einen Dienst implementiert wird und wie Endpunkte zur Kommunikation mit den einzelnen implementierten Verträgen konfiguriert werden. Dieses Beispiel basiert auf der [Einstieg](../../../../docs/framework/wcf/samples/getting-started-sample.md). Der Dienst wurde so geändert, dass zwei Verträge definiert sind – der `ICalculator`-Vertrag und der `ICalculatorSession`-Vertrag.  

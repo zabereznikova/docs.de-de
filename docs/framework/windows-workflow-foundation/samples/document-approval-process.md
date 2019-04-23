@@ -3,11 +3,11 @@ title: Dokumentgenehmigungsprozess
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
 ms.openlocfilehash: dfc2e0a12d053733823427ac50066b1e4a0f97aa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59318467"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770398"
 ---
 # <a name="document-approval-process"></a>Dokumentgenehmigungsprozess
 Dieses Beispiel veranschaulicht die Verwendung von vielen Features von Windows Workflow Foundation (WF) und Windows Communication Foundation (WCF) miteinander aus. Zusammen implementieren sie ein Szenario für einen Dokumentgenehmigungsprozess. Eine Clientanwendung kann Dokumente zur Genehmigung senden und Dokumente genehmigen. Es ist eine Genehmigungs-Manager-Anwendung vorhanden, um die Kommunikation zwischen Clients zu unterstützen und die Regeln für den Genehmigungsprozess umzusetzen. Der Genehmigungsprozess ist ein Workflow, der mehrere Genehmigungsarten ausführen kann. Es sind Aktivitäten vorhanden, mit denen ein Einzelgenehmigungsprozess, ein Quorumgenehmigungsprozess (Prozentsatz aller Genehmiger) und ein komplexer Genehmigungsprozess, der aus einer Abfolge einer Quorumgenehmigung und einer Einzelgenehmigung besteht, abgerufen werden.

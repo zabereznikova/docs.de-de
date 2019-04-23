@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: f07053c9fba194138467bbf8664e2f5fe1f667ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 66964497159c5c03a9070090ee60b43fa7d31abf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352816"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978925"
 ---
 # <a name="data-binding"></a>Datenbindung
 
@@ -42,9 +42,9 @@ Auflistungsgenerierungen werden von generischem <xref:System.Data.Linq.Table%601
 
 - Die Datenquelle ist eine <xref:System.Linq.IQueryable%601>. Es existieren zwei Szenarien:
 
-    - Wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sucht nach den zugrunde liegenden <xref:System.Data.Linq.Table%601> aus der <xref:System.Linq.IQueryable%601>Edition ermöglicht die Quelle und die Situation entspricht jener im ersten Listenpunkt.
+  - Wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] sucht nach den zugrunde liegenden <xref:System.Data.Linq.Table%601> aus der <xref:System.Linq.IQueryable%601>Edition ermöglicht die Quelle und die Situation entspricht jener im ersten Listenpunkt.
 
-    - Wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kann nicht gefunden werden die zugrunde liegende <xref:System.Data.Linq.Table%601>, die Quelle Edition nicht zulässig (z. B. `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] durchsucht die Abfrage um eine generische füllen `SortableBindingList`, dies ist eine einfache <xref:System.ComponentModel.BindingList%601> , das die Sortierfunktion für T-Entitäten für eine bestimmte Eigenschaft implementiert.
+  - Wenn [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] kann nicht gefunden werden die zugrunde liegende <xref:System.Data.Linq.Table%601>, die Quelle Edition nicht zulässig (z. B. `groupby`). [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] durchsucht die Abfrage um eine generische füllen `SortableBindingList`, dies ist eine einfache <xref:System.ComponentModel.BindingList%601> , das die Sortierfunktion für T-Entitäten für eine bestimmte Eigenschaft implementiert.
 
 ## <a name="specialized-collections"></a>Spezialisierte Auflistungen
 

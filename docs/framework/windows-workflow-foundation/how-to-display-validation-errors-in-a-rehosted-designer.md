@@ -3,11 +3,11 @@ title: 'Vorgehensweise: Anzeigen von Validierungsfehlern in einem neu gehosteten
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
 ms.openlocfilehash: a3d993f55bf130039905f1a6512a7ae104512432
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310199"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770905"
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>Vorgehensweise: Anzeigen von Validierungsfehlern in einem neu gehosteten Designer
 In diesem Thema wird beschrieben, wie Validierungsfehler in einem neu gehosteten [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] abgerufen und veröffentlicht werden. Er stellt ein Verfahren zur Verfügung, mit dem bestätigt werden kann, dass ein Workflow in einem neu gehosteten Designer gültig ist.  

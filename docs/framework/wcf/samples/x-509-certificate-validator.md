@@ -3,11 +3,11 @@ title: X.509-Zertifikats-Validierungssteuerelement
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
 ms.openlocfilehash: 88364aabf5df3a4f41d83613c0c4328b2d5979a0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59302555"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772153"
 ---
 # <a name="x509-certificate-validator"></a>X.509-Zertifikats-Validierungssteuerelement
 In diesem Beispiel wird veranschaulicht, wie ein benutzerdefiniertes X.509-Zertifikats-Validierungssteuerelement implementiert wird. Dies ist nützlich, wenn keines der integrierten X.509-Zertifikats-Validierungsmodi den Anforderungen der Anwendung entspricht. Dieses Beispiel zeigt einen Dienst, der über ein benutzerdefiniertes Validierungssteuerelement verfügt, das selbst herausgegebene Zertifikate akzeptiert. Der Client verwendet solch ein Zertifikat, um den Dienst zu authentifizieren.
