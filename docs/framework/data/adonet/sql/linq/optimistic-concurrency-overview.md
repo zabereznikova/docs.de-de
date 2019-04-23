@@ -3,14 +3,14 @@ title: 'Optimistische Nebenläufigkeit: Übersicht'
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
 ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106547"
 ---
 # <a name="optimistic-concurrency-overview"></a>Optimistische Nebenläufigkeit: Übersicht
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die Steuerung für optimistische Parallelität. Die folgende Tabelle beschreibt die Bedingungen für optimistische Parallelität in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentation:  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt die Steuerung der vollständigen Parallelität. Die folgende Tabelle beschreibt die Bedingungen für optimistische Parallelität in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentation:  
   
 |Begriffe|Beschreibung|  
 |-----------|-----------------|  
@@ -18,7 +18,7 @@ ms.locfileid: "59106547"
 |Parallelitätskonflikt|Die Situation, in der zwei oder mehr Benutzer gleichzeitig versuchen, konkurrierende Werte an eine oder mehrere Datenbankzeilen zu übergeben.|  
 |Parallelitätssteuerung|Die Technik zur Behebung von Parallelitätskonflikten.|  
 |Steuerelement für vollständige Parallelität|Die Technik zur Prüfung, ob andere Transaktionen die Werte in einer Zeile geändert haben, bevor die Übergabe von Änderungen zugelassen wird.<br /><br /> Im Gegensatz dazu *Steuerung durch eingeschränkte Parallelität*, die den Datensatz, um Parallelitätskonflikte zu vermeiden sperrt.<br /><br /> *Vollständige* Steuerung verdankt Ihre da betrachtet die Wahrscheinlichkeit, dass ein Konflikt zwischen Transaktionen unwahrscheinlich ist.|  
-|Konfliktlösung|Der Prozess des Aktualisierens eines problematischen Elements durch eine erneute Datenbankabfrage und Ausgleichen der Unterschiede.<br /><br /> Wenn ein Objekt aktualisiert wird, enthält der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Änderungsprotokollierer die folgenden Daten:<br /><br /> – Die Werte, die ursprünglich aus der Datenbank erstellt und verwendet für das Update überprüfen.<br />– Die neuen Datenbankwerte aus der nachfolgenden Abfrage.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Klicken Sie dann bestimmt, ob das Objekt in Konflikt stehende (d. h., ob eine oder mehrere der Elementwerte geändert hat). Wenn das Objekt in Konflikt stehende, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] als Nächstes bestimmt, welche Member in Konflikt stehen.<br /><br /> Jeder von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erkannte Memberkonflikt wird einer Konfliktliste hinzugefügt.|  
+|Konfliktlösung|Der Prozess des Aktualisierens eines problematischen Elements durch eine erneute Datenbankabfrage und Ausgleichen der Unterschiede.<br /><br /> Wenn ein Objekt aktualisiert wird, enthält der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Änderungsprotokollierer die folgenden Daten:<br /><br /> – Die Werte, die ursprünglich aus der Datenbank erstellt und verwendet für das Update überprüfen.<br />– Die neuen Datenbankwerte aus der nachfolgenden Abfrage.<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ermittelt dann, ob ein Objektkonflikt vorliegt (d. h., ob sich die Werte von einem oder mehreren Membern geändert haben). Wenn das Objekt in Konflikt stehende, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] als Nächstes bestimmt, welche Member in Konflikt stehen.<br /><br /> Jeder von [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] erkannte Memberkonflikt wird einer Konfliktliste hinzugefügt.|  
   
  In der [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Objektmodell eine *Konflikts der vollständigen Parallelität* tritt auf, wenn beide der folgenden Bedingungen zutreffen:  
   

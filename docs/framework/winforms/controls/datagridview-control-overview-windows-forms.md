@@ -20,10 +20,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
 ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112878"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>Übersicht über das DataGridView-Steuerelement (Windows Forms)
@@ -59,7 +59,7 @@ ms.locfileid: "59112878"
  [Architektur des DataGridView-Steuerelements](datagridview-control-architecture-windows-forms.md)  
  Beschreibt die Architektur von der <xref:System.Windows.Forms.DataGridView> -Steuerelement, erläutert die zugehörige und Vererbung.  
   
- [Szenarios für das DataGridView-Steuerelement](datagridview-control-scenarios-windows-forms.md)  
+ [Szenarien für das DataGridView-Steuerelement](datagridview-control-scenarios-windows-forms.md)  
  Beschreibt die häufigsten Szenarien, in denen <xref:System.Windows.Forms.DataGridView> Steuerelemente verwendet werden.  
   
  [Codeverzeichnis für DataGridView-Steuerelementcode](datagridview-control-code-directory-windows-forms.md)  
@@ -84,4 +84,4 @@ ms.locfileid: "59112878"
 - <xref:System.Windows.Forms.BindingSource>
 - [DataGridView-Steuerelement](datagridview-control-windows-forms.md)
 - [Standardfunktionalität des DataGridView-Steuerelements von Windows Forms](default-functionality-in-the-windows-forms-datagridview-control.md)
-- [Standardbehandlung von Tastatur und Maus im DataGridView-Steuerelement von Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+- [Standardbehandlung von Tastatur und Maus im DataGridView-Steuerelement von Windows Forms](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

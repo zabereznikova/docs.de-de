@@ -10,10 +10,10 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107067"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>Optimieren der Leistung: Layout und Entwurf
@@ -57,7 +57,7 @@ Der Entwurf Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptl
 ### <a name="build-your-tree-top-down"></a>Erstellen Sie Ihre Struktur von oben nach unten  
  Wenn der logischen Struktur ein Knoten hinzugefügt oder dieser entfernt wird, werden Eigenschafteninvalidierungen auf dem übergeordneten und allen untergeordneten Elementen des Knotens ausgelöst. Demzufolge sollte immer ein Oben-nach-unten-Erstellmuster eingehalten werden, um unnötige Invalidierungen auf Knoten zu verhindern, die bereits validiert wurden. Die folgende Tabelle zeigt den Unterschied in der ausführungsgeschwindigkeit zwischen dem Erstellen einer Struktur von oben nach unten und von unten nach oben, in denen die Struktur 150 Ebenen mit einem einzelnen ist <xref:System.Windows.Controls.TextBlock> und <xref:System.Windows.Controls.DockPanel> auf jeder Ebene.  
   
-|**Aktion**|**Strukturerstellung (in ms)**|**Rendern, einschließlich strukturerstellung (in Millisekunden)**|  
+|**Aktion**|**Strukturerstellung (in ms)**|**Rendern, einschließlich Strukturerstellung (in ms)**|  
 |----------------|---------------------------------|-------------------------------------------------|  
 |Unten-nach-oben|366|454|  
 |Oben-nach-unten|11|96|  
@@ -73,7 +73,7 @@ Der Entwurf Ihrer [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptl
 
 - [Optimieren der WPF-Anwendungsleistung](optimizing-wpf-application-performance.md)
 - [Planen der Anwendungsleistung](planning-for-application-performance.md)
-- [Nutzen der Vorteile der Hardware](optimizing-performance-taking-advantage-of-hardware.md)
+- [Vorteile der Hardware nutzen](optimizing-performance-taking-advantage-of-hardware.md)
 - [2D-Grafiken und Bildverarbeitung](optimizing-performance-2d-graphics-and-imaging.md)
 - [Objektverhalten](optimizing-performance-object-behavior.md)
 - [Anwendungsressourcen](optimizing-performance-application-resources.md)

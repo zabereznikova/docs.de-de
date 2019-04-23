@@ -3,10 +3,10 @@ title: Kanalfactory und Zwischenspeichern
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106456"
 ---
 # <a name="channel-factory-and-caching"></a>Kanalfactory und Zwischenspeichern
@@ -25,7 +25,7 @@ WCF-Clientanwendungen verwenden die <xref:System.ServiceModel.ChannelFactory%601
 > [!TIP]
 >  Sie können die Erstellung von Kanalfactorys direkt steuern, wenn Sie die <xref:System.ServiceModel.ChannelFactory%601>-Klasse direkt verwenden.  
   
- Mit generierten WCF-Clientproxys [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) davon abgeleitet sind <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> definiert eine statische <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> -Eigenschaft, Cachingverhalten der Kanalfactory definiert. Cacheeinstellungen gelten für einen bestimmten Typ. Beispiel: Wenn `ClientBase<ITest>.CacheSettings` auf einen der unten definierten Werte wirken sich nur die Proxy/ClientBase vom Typ `ITest`. Die Cacheeinstellung für eine bestimmte <xref:System.ServiceModel.ClientBase%601> ist unveränderlich, sobald die erste Proxy/ClientBase-Instanz erstellt wurde.  
+ Mit generierten WCF-Clientproxys [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) davon abgeleitet sind <xref:System.ServiceModel.ClientBase%601>. <xref:System.ServiceModel.ClientBase%601> definiert eine statische <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>-Eigenschaft, die das Cachingverhalten der Kanalfactory definiert. Cacheeinstellungen gelten für einen bestimmten Typ. Beispiel: Wenn `ClientBase<ITest>.CacheSettings` auf einen der unten definierten Werte wirken sich nur die Proxy/ClientBase vom Typ `ITest`. Die Cacheeinstellung für eine bestimmte <xref:System.ServiceModel.ClientBase%601> ist unveränderlich, sobald die erste Proxy/ClientBase-Instanz erstellt wurde.  
   
 ## <a name="specifying-caching-behavior"></a>Angeben des Cachingverhaltens  
  Das Cachingverhalten wird angegeben, indem die <xref:System.ServiceModel.ClientBase%601.CacheSetting>-Eigenschaft auf einen der folgenden Werte festgelegt wird.  
@@ -117,4 +117,4 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
 - [Erstellen von Clients](../../../../docs/framework/wcf/building-clients.md)
 - [Clients](../../../../docs/framework/wcf/feature-details/clients.md)
 - [Zugreifen auf Dienste mithilfe eines WCF-Clients](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [Vorgehensweise: Verwenden der ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [Vorgehensweise: Verwenden von ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

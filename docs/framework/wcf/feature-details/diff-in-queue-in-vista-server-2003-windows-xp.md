@@ -5,10 +5,10 @@ helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
 ms.openlocfilehash: d13cb3e732d0276902def5de6ca7c007f61b0ec9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115985"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Unterschiede zwischen den Warteschlangenfunktionen in Windows Vista, Windows Server 2003 und Windows XP
@@ -19,7 +19,7 @@ In diesem Thema werden die Unterschiede in der Windows Communication Foundation 
   
  In der Regel gibt es eine systemweite Warteschlange für nicht zustellbare Nachrichten für alle Anwendungen, die denselben Warteschlangen-Manager verwenden. Eine Warteschlange für nicht zustellbare Nachrichten für jede einzelne Anwendung ermöglicht eine bessere Isolation zwischen den Anwendungen, die mit Warteschlangen arbeiten und denselben Warteschlangen-Manager verwenden. Dabei können für die Anwendungen eigene, anwendungsspezifische Warteschlangen für nicht zustellbare Nachrichten angegeben werden. Eine Anwendung, die eine Warteschlange für unzustellbare Nachrichten gemeinsam mit anderen Anwendungen nutzt, muss die Wartschlangen nach den Nachrichten durchsuchen, die für sie bestimmt sind. Bei einer anwendungsspezifischen Warteschlange für unzustellbare Nachrichten ist sichergestellt, dass alle Nachrichten in der Warteschlange diese Anwendung betreffen.  
   
- [!INCLUDE[wv](../../../../includes/wv-md.md)] Stellt für anwendungsspezifische unzustellbare Warteschlangen bereit. Anwendungsspezifische Warteschlangen für unzustellbare Nachrichten sind in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nicht verfügbar. Anwendungen müssen hier die systemweite Warteschlange für unzustellbare Nachrichten verwenden.  
+ [!INCLUDE[wv](../../../../includes/wv-md.md)] unterstützt anwendungsspezifische Warteschlangen für unzustellbare Nachrichten. Anwendungsspezifische Warteschlangen für unzustellbare Nachrichten sind in [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] und [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nicht verfügbar. Anwendungen müssen hier die systemweite Warteschlange für unzustellbare Nachrichten verwenden.  
   
 ## <a name="poison-message-handling"></a>Behandlung nicht verarbeitbarer Nachrichten  
  Eine nicht verarbeitbare Nachricht ist eine Nachricht, die auch nach der maximalen Anzahl von Zustellversuchen nicht an die empfangende Anwendung übermittelt werden konnte. Diese Situation kann auftreten, wenn eine Anwendung, die Nachrichten aus einer Transaktionswarteschlange liest, die Nachricht aufgrund von Fehlern nicht sofort verarbeiten kann. Wenn die Anwendung die Transaktion abbricht, in der die in der Warteschlange stehende Nachricht empfangen wurde, wird die Nachricht an die Warteschlange zurückgegeben. Die Anwendung versucht dann, die Nachricht in einer neuen Transaktion abzurufen. Wenn das Problem, das den Fehler verursacht, nicht korrigiert wird, kann die empfangende Anwendung in einer Schleife hängen bleiben, in der sie dieselbe Nachricht immer wieder empfängt und abbricht, bis die maximale Anzahl der Zustellungsversuche überschritten wird, und so entsteht eine nicht verarbeitbare Nachricht.  

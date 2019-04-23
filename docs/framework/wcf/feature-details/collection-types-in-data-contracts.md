@@ -10,10 +10,10 @@ helpviewer_keywords:
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
 ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106742"
 ---
 # <a name="collection-types-in-data-contracts"></a>Sammlungstypen in Datenverträgen
@@ -273,7 +273,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |---------------------|----------------------------------------------|-------------|----------------------|  
 |Nicht generisch oder geschlossen generisch (beliebige Anzahl von Parametern)|Nicht generisch|`MyType : IList`<br /><br /> oder<br /><br /> `MyType<T> : IList`<br /><br /> , wobei T= `int`|Geschlossen generisch von `Object` (z. B. `IList<object>`)|  
 |Nicht generisch oder geschlossen generisch (beliebige Anzahl von Parametern, die nicht notwendigerweise mit dem Sammlungstyp übereinstimmen)|Geschlossen generisch|`MyType : IList<string>`<br /><br /> oder<br /><br /> `MyType<T> : IList<string>` , wobei T=`int`|Geschlossen generisch (z. B. `IList<string>`)|  
-|Geschlossen generisch mit einer beliebigen Anzahl an Parametern|Offen generisch mit einem beliebigen Parameter des Typs|`MyType<T,U,V> : IList<U>`<br /><br /> wobei T =`int`, U =`string`, V =`bool`|Geschlossen generisch (z. B. `IList<string>`)|  
+|Geschlossen generisch mit einer beliebigen Anzahl an Parametern|Offen generisch mit einem beliebigen Parameter des Typs|`MyType<T,U,V> : IList<U>`<br /><br /> , wobei T=`int`, U=`string`, V=`bool`|Geschlossen generisch (z. B. `IList<string>`)|  
 |Offen generisch mit einem Parameter|Offen generisch mit dem Parameter des Typs|`MyType<T> : IList<T>`, T ist offen|Offen generisch (z. B. `IList<T>`)|  
   
  Wenn ein Typ mehr als eine Listensammlungsschnittstelle implementiert, gelten die folgenden Einschränkungen:  
@@ -286,10 +286,10 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |Referenzierter Typ|Vom referenzierten Typ implementierte Schnittstelle|Beispiel|Typ behandelt als|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
-|Nicht generisch oder geschlossen generisch (beliebige Anzahl von Parametern)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> oder<br /><br /> `MyType<T> : IDictionary` , wobei T=`int`|Geschlossen generisch `IDictionary<object,object>`|  
+|Nicht generisch oder geschlossen generisch (beliebige Anzahl von Parametern)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> oder<br /><br /> `MyType<T> : IDictionary` , wobei T=`int`|Geschlossenes generisches `IDictionary<object,object>`|  
 |Geschlossen generisch (beliebigen Anzahl an Parametern)|<xref:System.Collections.Generic.IDictionary%602>, geschlossen|`MyType<T> : IDictionary<string, bool>` , wobei T=`int`|Geschlossen generisch (z. B. `IDIctionary<string,bool>`)|  
-|Geschlossen generisch (beliebigen Anzahl an Parametern)|Generisches <xref:System.Collections.Generic.IDictionary%602>, entweder der Schlüssel oder der Wert ist geschlossen, das andere Element ist offen und verwendet einen Parameter des Typs|`MyType<T,U,V> : IDictionary<string,V>` wobei T =`int`, U =`float`, V =`bool`<br /><br /> oder<br /><br /> `MyType<Z> : IDictionary<Z,bool>` , wobei Z=`string`|Geschlossen generisch (z. B. `IDictionary<string,bool>`)|  
-|Geschlossen generisch (beliebigen Anzahl an Parametern)|Generisches <xref:System.Collections.Generic.IDictionary%602>, sowohl Schlüssel als auch Wert sind geöffnet und verwenden beide jeweils einen Parameter des Typs|`MyType<T,U,V> : IDictionary<V,U>` wobei T =`int`, U =`bool`, V =`string`|Geschlossen generisch (z. B. `IDictionary<string,bool>`)|  
+|Geschlossen generisch (beliebigen Anzahl an Parametern)|Generisches <xref:System.Collections.Generic.IDictionary%602>, entweder der Schlüssel oder der Wert ist geschlossen, das andere Element ist offen und verwendet einen Parameter des Typs|`MyType<T,U,V> : IDictionary<string,V>` , wobei T=`int`, U=`float`, V=`bool`<br /><br /> oder<br /><br /> `MyType<Z> : IDictionary<Z,bool>` , wobei Z=`string`|Geschlossen generisch (z. B. `IDictionary<string,bool>`)|  
+|Geschlossen generisch (beliebigen Anzahl an Parametern)|Generisches <xref:System.Collections.Generic.IDictionary%602>, sowohl Schlüssel als auch Wert sind geöffnet und verwenden beide jeweils einen Parameter des Typs|`MyType<T,U,V> : IDictionary<V,U>` , wobei T=`int`, U=`bool`, V=`string`|Geschlossen generisch (z. B. `IDictionary<string,bool>`)|  
 |Offen generisch (zwei Parameter)|Generisches <xref:System.Collections.Generic.IDictionary%602>, offen, verwendet beide generischen Parametern des Typs in der Reihenfolge, in der sie angezeigt werden.|`MyType<K,V> : IDictionary<K,V>`, K und V beide offen|Offen generisch (z. B. `IDictionary<K,V>`)|  
   
  Wenn der Typ sowohl das <xref:System.Collections.IDictionary> als auch das generische <xref:System.Collections.Generic.IDictionary%602>implementiert, wird nur das generische <xref:System.Collections.Generic.IDictionary%602> betrachtet.  
@@ -321,13 +321,13 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |Sammlungstyp implementiert|Bei der Serialisierung aufgerufene Methode(n)|Bei der Deserialisierung aufgerufene Methode(n)|  
 |--------------------------------|-----------------------------------------|-------------------------------------------|  
-|Generisch <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|Generisches Hinzufügen|  
+|Generisches <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|Generisches Hinzufügen|  
 |<xref:System.Collections.IDictionary>|`get_Keys`, `get_Values`|`Add`|  
-|Generisch <xref:System.Collections.Generic.IList%601>|Generischer <xref:System.Collections.Generic.IList%601> -Indexer|Generisches Hinzufügen|  
-|Generisch <xref:System.Collections.Generic.ICollection%601>|Enumerator|Generisches Hinzufügen|  
-|<xref:System.Collections.IList>|<xref:System.Collections.IList> Indexer|`Add`|  
-|Generisch <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|Eine nicht statische Methode mit dem Namen `Add` , die einen Parameter des entsprechenden Typs annimmt (den Typ des generischen Parameters oder einen der Basistypen). Eine solche Methode ist erforderlich, damit das Serialisierungsprogramm einen Sammlungstyp sowohl während der Serialisierung als auch während der Deserialisierung als Sammlung behandelt.|  
-|<xref:System.Collections.IEnumerable> (und somit <xref:System.Collections.ICollection>, die sich daraus ableitet)|`GetEnumerator`|Eine nicht statische Methode namens `Add` , die einen Parameter des Typs `Object`annimmt. Eine solche Methode ist erforderlich, damit das Serialisierungsprogramm einen Sammlungstyp sowohl während der Serialisierung als auch während der Deserialisierung als Sammlung behandelt.|  
+|Generisches <xref:System.Collections.Generic.IList%601>|Generischer <xref:System.Collections.Generic.IList%601> -Indexer|Generisches Hinzufügen|  
+|Generisches <xref:System.Collections.Generic.ICollection%601>|Enumerator|Generisches Hinzufügen|  
+|<xref:System.Collections.IList>|<xref:System.Collections.IList> -Indexer|`Add`|  
+|Generisches <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|Eine nicht statische Methode mit dem Namen `Add` , die einen Parameter des entsprechenden Typs annimmt (den Typ des generischen Parameters oder einen der Basistypen). Eine solche Methode ist erforderlich, damit das Serialisierungsprogramm einen Sammlungstyp sowohl während der Serialisierung als auch während der Deserialisierung als Sammlung behandelt.|  
+|<xref:System.Collections.IEnumerable> (und daher <xref:System.Collections.ICollection>, die sich daraus ableitet)|`GetEnumerator`|Eine nicht statische Methode namens `Add` , die einen Parameter des Typs `Object`annimmt. Eine solche Methode ist erforderlich, damit das Serialisierungsprogramm einen Sammlungstyp sowohl während der Serialisierung als auch während der Deserialisierung als Sammlung behandelt.|  
   
  In der vorangehenden Tabelle werden in absteigender Reihenfolge Sammlungsschnittstellen aufgelistet. Das bedeutet beispielsweise, dass die Sammlung gemäß den <xref:System.Collections.IList> -Regeln serialisiert und deserialisiert wird, wenn ein Typ sowohl die <xref:System.Collections.Generic.IEnumerable%601>als auch das generische <xref:System.Collections.IList> implementiert:  
   

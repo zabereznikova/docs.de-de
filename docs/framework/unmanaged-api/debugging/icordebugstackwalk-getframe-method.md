@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 253a25fdfc1f00adbc20388660caf6c227030a1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111240"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame-Methode
@@ -45,7 +45,7 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
 |S_OK|Den aktuellen Frame wird von der Common Language Runtime wurde erfolgreich zurückgegeben.|  
 |E_FAIL|Der aktuelle Frame wurde nicht zurückgegeben.|  
 |S_FALSE|Der aktuelle Frame ist ein systemeigener Stapelrahmen.|  
-|E_INVALIDARG|`pFrame` ist null.|  
+|E_INVALIDARG|`pFrame` ist NULL.|  
 |CORDBG_E_PAST_END_OF_STACK|Die Frame-Pointer ist bereits am Ende des Stapels. aus diesem Grund können keine zusätzlichen Frames zugegriffen werden.|  
   
 ## <a name="exceptions"></a>Ausnahmen  
@@ -65,5 +65,5 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
 ## <a name="see-also"></a>Siehe auch
 
 - [ICorDebugStackWalk-Schnittstelle](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
-- [Debugschnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [Debuggen von Schnittstellen](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [Debuggen](../../../../docs/framework/unmanaged-api/debugging/index.md)

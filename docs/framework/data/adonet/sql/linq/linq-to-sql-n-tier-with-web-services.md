@@ -3,10 +3,10 @@ title: N-Schicht-LINQ to SQL mit Webdiensten
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
 ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107405"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>N-Schicht-LINQ to SQL mit Webdiensten
@@ -30,7 +30,7 @@ ms.locfileid: "59107405"
  Bein Einfügen von Daten kann die Präsentationsebene ein neues Objekt erstellen und es an die mittlere Ebene senden, oder sie kann das Objekt von der mittleren Ebene auf der Grundlage der von ihr gelieferten Daten erstellen lassen. Im Allgemeinen unterscheidet sich das Abrufen und Einfügen von Daten in N-Tier-Anwendungen nicht von der Vorgehensweise in 2-Tier-Anwendungen. Weitere Informationen finden Sie unter [Datenbankabfrage](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md) und [zu erstellen und Übermitteln von Datenänderungen](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md).  
   
 ## <a name="tracking-changes-for-updates-and-deletes"></a>Nachverfolgen von Änderungen für Update- und Löschvorgänge  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt optimistische Parallelität, die basierend auf Timestamps (auch als RowVersions bezeichnet) und ursprünglichen Werte. Wenn die Datenbanktabellen über Timestamps verfügen, ist auf der mittleren oder Präsentationsebene wenig zusätzliche Arbeit für Update- und Löschvorgänge erforderlich. Wenn Sie für Überprüfungen auf vollständige Parallelität jedoch Originalwerte verwenden müssen, ist die Präsentationsebene dafür verantwortlich, diese Werte zu verfolgen und sie bei der Ausführung von Updates zurückzusenden. Dies liegt daran, dass Änderungen, die an Entitäten auf der Präsentationsebene vorgenommen wurden, nicht auf der mittleren Ebene verfolgt werden. Tatsächlich werden das ursprüngliche Abrufen einer Entität und das endgültig vorgenommene Update normalerweise von zwei vollständig getrennten <xref:System.Data.Linq.DataContext>-Instanzen ausgeführt.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] unterstützt vollständige Parallelität auf der Basis von Timestamps (auch als RowVersions bezeichnet) und ursprünglichen Werten. Wenn die Datenbanktabellen über Timestamps verfügen, ist auf der mittleren oder Präsentationsebene wenig zusätzliche Arbeit für Update- und Löschvorgänge erforderlich. Wenn Sie für Überprüfungen auf vollständige Parallelität jedoch Originalwerte verwenden müssen, ist die Präsentationsebene dafür verantwortlich, diese Werte zu verfolgen und sie bei der Ausführung von Updates zurückzusenden. Dies liegt daran, dass Änderungen, die an Entitäten auf der Präsentationsebene vorgenommen wurden, nicht auf der mittleren Ebene verfolgt werden. Tatsächlich werden das ursprüngliche Abrufen einer Entität und das endgültig vorgenommene Update normalerweise von zwei vollständig getrennten <xref:System.Data.Linq.DataContext>-Instanzen ausgeführt.  
   
  Je größer die Anzahl der Änderungen ist, die von der Präsentationsebene vorgenommen werden, desto komplexer ist das Verfolgen dieser Änderungen und das Zurückpacken auf die mittlere Ebene. Die Implementierung eines Mechanismus zum Kommunizieren von Änderungen liegt vollständig in der Zuständigkeit der Anwendung. Die einzige Anforderung besteht darin, dass die ursprünglichen Werte, die für Überprüfungen auf vollständige Parallelität erforderlich sind, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zur Verfügung gestellt werden müssen.  
   

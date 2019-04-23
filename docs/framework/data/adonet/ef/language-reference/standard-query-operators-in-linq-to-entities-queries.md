@@ -3,10 +3,10 @@ title: Standardabfrageoperatoren in LINQ to Entities-Abfragen
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
 ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118143"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Standardabfrageoperatoren in LINQ to Entities-Abfragen
@@ -69,7 +69,7 @@ In einer Abfrage geben Sie die Informationen an, die aus der Datenquelle abgeruf
 ## <a name="type-methods"></a>Typmethoden  
  Die beiden LINQ-Methoden, die typkonvertierung und das Testen verarbeiten, werden sowohl im Kontext von Entity Framework unterstützt. Dies bedeutet, dass die einzigen unterstützten Typen werden, die in den entsprechenden Entity Framework-Typ zugeordnet. Eine Liste dieser Typen finden Sie [konzeptionelle Modelltypen (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl). Als Typmethoden werden `Convert` und `OfType` verwendet.  
   
- `OfType` wird für Entitätstypen unterstützt. `Convert` wird für primitive Typen des konzeptionellen Modells unterstützt.  Die C#-Methoden `is` und `as` werden ebenfalls unterstützt.  
+ `OfType` wird für Entitätstypen unterstützt. `Convert` wird für primitive Typen in einem konzeptionellen Modell unterstützt.  Die C#-Methoden `is` und `as` werden ebenfalls unterstützt.  
   
 ## <a name="paging-methods"></a>Pagingmethoden  
  Pagingvorgänge geben ein einzelnes Element oder mehrere Elemente aus einer Sequenz zurück. Sind die unterstützten Pagingmethoden `First`, `FirstOrDefault`, `Single`, `SingleOrDefault`, `Skip`, und `Take`.  

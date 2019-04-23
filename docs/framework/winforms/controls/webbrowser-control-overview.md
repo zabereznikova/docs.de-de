@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
 ms.openlocfilehash: c75d0b348a2f3dd678f2bfb235bce2e4e227c4b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109434"
 ---
 # <a name="webbrowser-control-overview"></a>Übersicht über das WebBrowser-Steuerelement
@@ -26,19 +26,19 @@ Die <xref:System.Windows.Forms.WebBrowser> Steuerelement stellt einen verwaltete
   
 |Name|Beschreibung|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.WebBrowser.Document%2A> property|Ruft ein Objekt, das verwalteten Zugriff auf das HTML Document Object Model (DOM) der aktuellen Webseite bereitstellt.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> event|Tritt auf, wenn eine Webseite auf das Laden abgeschlossen ist.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentText%2A> property|Übernimmt oder bestimmt den HTML-Code als Inhalt der aktuellen Webseite.|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A> property|Ruft den Titel der aktuellen Webseite ab.|  
-|<xref:System.Windows.Forms.WebBrowser.GoBack%2A> Methode|Wechselt zur vorherigen Seite im Verlauf.|  
-|<xref:System.Windows.Forms.WebBrowser.GoForward%2A> Methode|Wechselt zur nächsten Seite im Verlauf.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigate%2A> Methode|Navigiert zur angegebenen URL.|  
-|<xref:System.Windows.Forms.WebBrowser.Navigating> event|Tritt auf, vor dem Beginn der Navigation aktivieren die Aktion abgebrochen werden soll.|  
-|<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> property|Übernimmt oder bestimmt ein Objekt, das Webseitenskriptcode für die Kommunikation mit Ihrer Anwendung verwenden können.|  
-|<xref:System.Windows.Forms.WebBrowser.Print%2A> Methode|Gibt die aktuelle Webseite.|  
-|<xref:System.Windows.Forms.WebBrowser.Refresh%2A> Methode|Lädt die aktuelle Webseite neu.|  
-|<xref:System.Windows.Forms.WebBrowser.Stop%2A> Methode|Hält die aktuelle Navigation und beendet dynamische Seitenelemente wie z. B. Sounds und Animationen.|  
-|<xref:System.Windows.Forms.WebBrowser.Url%2A> property|Übernimmt oder bestimmt die URL der aktuellen Webseite. Durch Festlegen dieser Eigenschaft wird das Steuerelement an die neue URL navigiert.|  
+|<xref:System.Windows.Forms.WebBrowser.Document%2A> -Eigenschaft|Ruft ein Objekt, das verwalteten Zugriff auf das HTML Document Object Model (DOM) der aktuellen Webseite bereitstellt.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> -Ereignis|Tritt auf, wenn eine Webseite auf das Laden abgeschlossen ist.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentText%2A> -Eigenschaft|Übernimmt oder bestimmt den HTML-Code als Inhalt der aktuellen Webseite.|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A> -Eigenschaft|Ruft den Titel der aktuellen Webseite ab.|  
+|<xref:System.Windows.Forms.WebBrowser.GoBack%2A>-Methode|Wechselt zur vorherigen Seite im Verlauf.|  
+|<xref:System.Windows.Forms.WebBrowser.GoForward%2A>-Methode|Wechselt zur nächsten Seite im Verlauf.|  
+|<xref:System.Windows.Forms.WebBrowser.Navigate%2A>-Methode|Navigiert zur angegebenen URL.|  
+|<xref:System.Windows.Forms.WebBrowser.Navigating> -Ereignis|Tritt auf, vor dem Beginn der Navigation aktivieren die Aktion abgebrochen werden soll.|  
+|<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> -Eigenschaft|Übernimmt oder bestimmt ein Objekt, das Webseitenskriptcode für die Kommunikation mit Ihrer Anwendung verwenden können.|  
+|<xref:System.Windows.Forms.WebBrowser.Print%2A>-Methode|Gibt die aktuelle Webseite.|  
+|<xref:System.Windows.Forms.WebBrowser.Refresh%2A>-Methode|Lädt die aktuelle Webseite neu.|  
+|<xref:System.Windows.Forms.WebBrowser.Stop%2A>-Methode|Hält die aktuelle Navigation und beendet dynamische Seitenelemente wie z. B. Sounds und Animationen.|  
+|<xref:System.Windows.Forms.WebBrowser.Url%2A> -Eigenschaft|Übernimmt oder bestimmt die URL der aktuellen Webseite. Durch Festlegen dieser Eigenschaft wird das Steuerelement an die neue URL navigiert.|  
   
 ## <a name="see-also"></a>Siehe auch
 
@@ -53,9 +53,9 @@ Die <xref:System.Windows.Forms.WebBrowser> Steuerelement stellt einen verwaltete
 - <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>
 - <xref:System.Windows.Forms.WebBrowserReadyState>
 - <xref:System.Windows.Forms.WebBrowserRefreshOption>
-- [Vorgehensweise: Navigieren zu einem URL mit dem WebBrowser-Steuerelement](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [Vorgehensweise: Drucken mit einem WebBrowser-Steuerelement](how-to-print-with-a-webbrowser-control.md)
-- [Vorgehensweise: Hinzufügen von Webbrowserfunktionen zu einer Windows Forms-Anwendung](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [Vorgehensweise: Erstellen eines HTML-Dokumentviewers in einer Windows Forms-Anwendung](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [Vorgehensweise: Navigieren Sie zu einer URL mit dem WebBrowser-Steuerelement](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [Vorgehensweise: Drucken Sie mit einem WebBrowser-Steuerelement](how-to-print-with-a-webbrowser-control.md)
+- [Vorgehensweise: Hinzufügen von Webbrowserfunktionen zu einer Windows Forms-Anwendung](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [Vorgehensweise: Erstellen Sie eine HTML-Dokumentviewers in einer Windows Forms-Anwendung](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
 - [Vorgehensweise: Implementieren der bidirektionalen Kommunikation zwischen DHTML-Code und Clientanwendungscode](implement-two-way-com-between-dhtml-and-client.md)
 - [WebBrowser-Sicherheit](webbrowser-security.md)

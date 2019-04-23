@@ -7,10 +7,10 @@ helpviewer_keywords:
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
 ms.openlocfilehash: dcfad1c2b2f95783e2b348a3a1111501f958143f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116479"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>Aus WPF zu System.Xaml migrierte Typen
@@ -41,7 +41,7 @@ In [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] und [!INCLUDE[
   
 <a name="markupextension_supporting_service_classes"></a>   
 ## <a name="markupextension-supporting-service-classes"></a>Dienstklassen, die MarkupExtension unterstützen  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] und [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] für WPF mehrere Dienste bereitgestellt, die verfügbar waren <xref:System.Windows.Markup.MarkupExtension> Implementierungen und <xref:System.ComponentModel.TypeConverter> Implementierungen für die Verwendung der Type-Eigenschaft in XAML unterstützen. Es handelt sich dabei um die folgenden Dienste:  
+ In[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] und [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] für WPF wurden mehrere Dienste bereitgestellt, die <xref:System.Windows.Markup.MarkupExtension> implementers und <xref:System.ComponentModel.TypeConverter> -Implementierungen die Verwendung von Typen/Eigenschaften in XAML ermöglichten. Es handelt sich dabei um die folgenden Dienste:  
   
 -   <xref:System.Windows.Markup.IProvideValueTarget>  
   
@@ -50,7 +50,7 @@ In [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] und [!INCLUDE[
 -   <xref:System.Windows.Markup.IXamlTypeResolver>  
   
 > [!NOTE]
->  Ein weiterer Dienst aus [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] im Zusammenhang mit Markuperweiterungen ist die <xref:System.Windows.Markup.IReceiveMarkupExtension> -Schnittstelle. <xref:System.Windows.Markup.IReceiveMarkupExtension> wurde nicht migriert und ist markiert `[Obsolete]` für [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]. Für Szenarios, in denen zuvor <xref:System.Windows.Markup.IReceiveMarkupExtension> verwendet wurde, sollten stattdessen attributierte <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> -Rückrufe verwendet werden. <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> markiert `[Obsolete]`.  
+>  Ein weiterer Dienst aus [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] im Zusammenhang mit Markuperweiterungen ist die <xref:System.Windows.Markup.IReceiveMarkupExtension> -Schnittstelle. <xref:System.Windows.Markup.IReceiveMarkupExtension> wurde nicht migriert und ist mit `[Obsolete]` für [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]markiert. Für Szenarios, in denen zuvor <xref:System.Windows.Markup.IReceiveMarkupExtension> verwendet wurde, sollten stattdessen attributierte <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> -Rückrufe verwendet werden. <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> ist ebenfalls als `[Obsolete]`gekennzeichnet.  
   
 <a name="xaml_language_features"></a>   
 ## <a name="xaml-language-features"></a>Features der XAML-Sprache  
@@ -69,7 +69,7 @@ In [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] und [!INCLUDE[
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## <a name="valueserializer-and-supporting-classes"></a>ValueSerializer und unterstützende Klassen  
- Die <xref:System.Windows.Markup.ValueSerializer> -Klasse unterstützt die Typkonvertierung in eine Zeichenfolge, insbesondere für XAML-Serialisierungsfälle, in denen die Serialisierung möglicherweise mehrere Modi oder Knoten in der Ausgabe erfordert. In [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] und [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]war die <xref:System.Windows.Markup.ValueSerializer> -Klasse für WPF in der WindowsBase-Assembly enthalten. In [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]ist die <xref:System.Windows.Markup.ValueSerializer> -Klasse in „System.Xaml“ enthalten und für alle XAML-Erweiterbarkeitsszenarios gedacht, nicht nur für diejenigen, die auf WPF aufbauen. <xref:System.Windows.Markup.IValueSerializerContext> (ein unterstützender Dienst) und <xref:System.Windows.Markup.DateTimeValueSerializer> (eine bestimmte Unterklasse) werden ebenfalls zu System.Xaml migriert.  
+ Die <xref:System.Windows.Markup.ValueSerializer> -Klasse unterstützt die Typkonvertierung in eine Zeichenfolge, insbesondere für XAML-Serialisierungsfälle, in denen die Serialisierung möglicherweise mehrere Modi oder Knoten in der Ausgabe erfordert. In [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] und [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]war die <xref:System.Windows.Markup.ValueSerializer> -Klasse für WPF in der WindowsBase-Assembly enthalten. In [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]ist die <xref:System.Windows.Markup.ValueSerializer> -Klasse in „System.Xaml“ enthalten und für alle XAML-Erweiterbarkeitsszenarios gedacht, nicht nur für diejenigen, die auf WPF aufbauen. <xref:System.Windows.Markup.IValueSerializerContext> (ein unterstützender Dienst) und <xref:System.Windows.Markup.DateTimeValueSerializer> (eine bestimmte Unterklasse) werden ebenfalls zu „System.Xaml“ migriert.  
   
 <a name="xamlrelated_attributes"></a>   
 ## <a name="xaml-related-attributes"></a>XAML-bezogene Attribute  
@@ -107,7 +107,7 @@ In [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] und [!INCLUDE[
   
 <a name="miscellaneous_classes"></a>   
 ## <a name="miscellaneous-classes"></a>Verschiedene Klassen  
- Die <xref:System.Windows.Markup.IComponentConnector> -Schnittstelle ist in [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] und in [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]in WindowsBase vorhanden, ist in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]jedoch in „System.Xaml“ enthalten. <xref:System.Windows.Markup.IComponentConnector> ist hauptsächlich für toolunterstützung und XAML-Markupcompiler gedacht.  
+ Die <xref:System.Windows.Markup.IComponentConnector> -Schnittstelle ist in [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] und in [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]in WindowsBase vorhanden, ist in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]jedoch in „System.Xaml“ enthalten. <xref:System.Windows.Markup.IComponentConnector> ist hauptsächlich für Toolunterstützung und XAML-Markupcompiler gedacht.  
   
  Die <xref:System.Windows.Markup.INameScope> -Schnittstelle ist in [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] und in [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]in WindowsBase vorhanden, ist in [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]jedoch in „System.Xaml“ enthalten. <xref:System.Windows.Markup.INameScope> definiert grundlegende Vorgänge für einen XAML-Namensbereich.  
   
@@ -127,4 +127,4 @@ In [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] und [!INCLUDE[
   
 ## <a name="see-also"></a>Siehe auch
 
-- [XAML-Dienste](index.md)
+- [XAML Services](index.md) (XAML-Dienste)

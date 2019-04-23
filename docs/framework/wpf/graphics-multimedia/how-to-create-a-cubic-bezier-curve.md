@@ -8,10 +8,10 @@ helpviewer_keywords:
 - cubic Bezier curves [WPF]
 ms.assetid: 450a3a77-7c57-48b0-a008-0f6051add980
 ms.openlocfilehash: 36544abc774b7fe82c2ff47483cfedd6fb13e344
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115569"
 ---
 # <a name="how-to-create-a-cubic-bezier-curve"></a>Vorgehensweise: Erstellen einer kubischen Bézierkurve
@@ -36,5 +36,5 @@ Dieses Beispiel zeigt, wie Sie eine kubische Bezier-Kurve zu erstellen. Verwende
 
 - [Erstellen eines elliptischen Bogens](how-to-create-an-elliptical-arc.md)
 - [Erstellen eines LineSegment in einer PathGeometry](how-to-create-a-linesegment-in-a-pathgeometry.md)
-- [Erstellen einer kubischen Bézierkurve](how-to-create-a-cubic-bezier-curve.md)
-- [Erstellen einer quadratischen Bézierkurve](how-to-create-a-quadratic-bezier-curve.md)
+- [Erstellen Sie eine kubische Bezier-Kurve](how-to-create-a-cubic-bezier-curve.md)
+- [Erstellen einer quadratischen Bezier-Kurve](how-to-create-a-quadratic-bezier-curve.md)

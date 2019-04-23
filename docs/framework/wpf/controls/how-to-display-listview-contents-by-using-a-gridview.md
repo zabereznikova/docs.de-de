@@ -6,10 +6,10 @@ helpviewer_keywords:
 - GridView [WPF], displaying ListView contents
 ms.assetid: 5bc1e767-ab46-4f14-bd41-3d5d39e1d000
 ms.openlocfilehash: 9b467c95d541c326a41d1ed4bd9eb5c87e25bd5c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112787"
 ---
 # <a name="how-to-display-listview-contents-by-using-a-gridview"></a>Vorgehensweise: Anzeigen von ListView-Inhalten mithilfe eines GridView-Objekts
@@ -30,4 +30,4 @@ Dieses Beispiel zeigt, wie Sie definieren eine <xref:System.Windows.Controls.Gri
 - <xref:System.Windows.Controls.GridView>
 - [Übersicht über ListView](listview-overview.md)
 - [Übersicht über GridView](gridview-overview.md)
-- [Gewusst wie-Themen](listview-how-to-topics.md)
+- [Themen zu Vorgehensweisen](listview-how-to-topics.md)
