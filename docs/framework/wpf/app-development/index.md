@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
 ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211061"
 ---
 # <a name="application-development"></a>Anwendungsentwicklung
@@ -17,7 +17,7 @@ ms.locfileid: "59211061"
   
 -   Eigenständige Anwendungen: Herkömmliche [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]-Anwendungen, die als ausführbare Assemblys erstellt, auf dem Clientcomputer installiert und von dort ausgeführt werden.  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (Anwendungen aus Navigationsseiten bestehende, die als ausführbare Assemblys erstellt und gehostet von Webbrowsern wie z. B. [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] oder Mozilla Firefox).  
+-   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]: Aus Navigationsseiten bestehende Anwendungen, die als ausführbare Assemblys erstellt und von Webbrowsern wie [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] oder Mozilla Firefox gehostet werden.  
   
 -   Benutzerdefinierte Steuerelementbibliotheken: Nicht ausführbare Assemblys mit wiederverwendbaren Steuerelementen.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "59211061"
   
  Weitere Informationen finden Sie unter [Übersicht über WPF-Fenster](wpf-windows-overview.md).  
   
- <xref:System.Windows.Window> unterstützt die Möglichkeit, eine besondere Art von Fenster, nämlich ein Dialogfeld zu erstellen. Es können sowohl modale als auch nicht modale Dialogfelder (Dialogfelder ohne Modus) erstellt werden.  
+ <xref:System.Windows.Window> unterstützt die Erstellung einer besonderen Art von Fenster, nämlich von Dialogfeldern. Es können sowohl modale als auch nicht modale Dialogfelder (Dialogfelder ohne Modus) erstellt werden.  
   
  Zur Vereinfachung und die Vorteile der wiederverwendbarkeit und Benutzern eine konsistente Umgebung für Anwendungen [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] macht drei von der Windows-Standarddialogfelder: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, und <xref:System.Windows.Controls.PrintDialog>.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "59211061"
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Navigation  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] unterstützt Webstil Navigation mithilfe von Seiten (<xref:System.Windows.Controls.Page>) und Links (<xref:System.Windows.Documents.Hyperlink>). Die Navigation kann unter anderem auf folgende Weise implementiert werden:  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] unterstützt die Navigation im Webstil über Seiten (<xref:System.Windows.Controls.Page>) und Links (<xref:System.Windows.Documents.Hyperlink>). Die Navigation kann unter anderem auf folgende Weise implementiert werden:  
   
 -   Eigenständige Seiten, die in einem Webbrowser gehostet werden  
   
@@ -94,7 +94,7 @@ ms.locfileid: "59211061"
   
  Zur Unterstützung der Navigation implementiert [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] folgende Elemente:  
   
--   <xref:System.Windows.Navigation.NavigationService>, die freigegebene Navigations-Engine für die Verarbeitung von navigationsanforderungen, mit dem <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow>, und [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] zur Unterstützung der anwendungsinternen Navigation.  
+-   <xref:System.Windows.Navigation.NavigationService>, die freigegebene Navigations-Engine für die Verarbeitung von Navigationsanforderungen, das von <xref:System.Windows.Controls.Frame>, <xref:System.Windows.Navigation.NavigationWindow> und [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] zur Unterstützung der Navigation innerhalb von Anwendungen verwendet wird  
   
 -   Navigationsmethoden zur Einleitung der Navigation  
   
@@ -104,11 +104,11 @@ ms.locfileid: "59211061"
   
  Weitere Informationen finden Sie unter [Übersicht über die Navigation](navigation-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] unterstützt auch eine besondere Art der Navigation, die strukturierte Navigation. Die strukturierte Navigation kann zum Aufruf einer oder mehrerer Seiten verwendet werden, die Daten auf strukturierte und vorhersagbare Weise in Übereinstimmung mit den aufrufenden Funktionen zurückgeben. Diese Funktion ist abhängig von der <xref:System.Windows.Navigation.PageFunction%601>-Klasse, die unter [Übersicht über die strukturierte Navigation](structured-navigation-overview.md) genauer beschrieben wird. <xref:System.Windows.Navigation.PageFunction%601> dient auch zur Vereinfachung der der Erstellung komplexer Navigationstopologien, die in beschriebenen [Übersicht über Navigationstopologien](navigation-topologies-overview.md).  
+ Darüber hinaus unterstützt [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] die strukturierte Navigation. Die strukturierte Navigation kann zum Aufruf einer oder mehrerer Seiten verwendet werden, die Daten auf strukturierte und vorhersagbare Weise in Übereinstimmung mit den aufrufenden Funktionen zurückgeben. Diese Funktion ist abhängig von der <xref:System.Windows.Navigation.PageFunction%601>-Klasse, die unter [Übersicht über die strukturierte Navigation](structured-navigation-overview.md) genauer beschrieben wird. <xref:System.Windows.Navigation.PageFunction%601> vereinfacht zudem die Erstellung komplexer Navigationstopologien, die unter [Übersicht über Navigationstopologien](navigation-topologies-overview.md) vorgestellt werden.  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Hosting  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] in gehostet werden [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] oder Firefox. Bei jedem Hostmodell sind spezifische Punkte und Einschränkungen zu beachten, die unter [Hosten](hosting-wpf-applications.md) erläutert werden.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]s können in [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] oder Firefox gehostet werden. Bei jedem Hostmodell sind spezifische Punkte und Einschränkungen zu beachten, die unter [Hosten](hosting-wpf-applications.md) erläutert werden.  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Erstellen und Bereitstellen  
@@ -127,4 +127,4 @@ ms.locfileid: "59211061"
 |[Hosting](hosting-wpf-applications.md)|Enthält allgemeine Informationen zu [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
 |[Erstellen und Bereitstellen](building-and-deploying-wpf-applications.md)|Hier wird beschrieben, wie Sie die WPF-Anwendung erstellen und bereitstellen.|  
 |[Einführung in WPF in Visual Studio](../getting-started/introduction-to-wpf-in-vs.md)|Hier werden die wichtigsten Funktionen von WPF beschrieben.|  
-|[Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie eine WPF-Anwendung mit Seitennavigation, Layout, Steuerelementen, Bildern, Stilen und Bindung erstellen.|
+|[Exemplarische Vorgehensweise: Walkthrough: My first WPF desktop application (Exemplarische Vorgehensweise: Meine erste WPF-Desktopanwendung)](../getting-started/walkthrough-my-first-wpf-desktop-application.md)|In dieser exemplarischen Vorgehensweise wird gezeigt, wie Sie eine WPF-Anwendung mit Seitennavigation, Layout, Steuerelementen, Bildern, Stilen und Bindung erstellen.|

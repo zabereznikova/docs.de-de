@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7e3a4a2208f669dc4fc0589f08b32aeb2c5e4423
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c238f0aebd7c81443eb55fe0ee84844f0c9aee8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207512"
 ---
 # <a name="security-considerations-for-reflection"></a>Sicherheitsüberlegungen für die Reflektion
 Die Reflektion bietet die Möglichkeit, Typ- und Memberinformationen abzurufen und auf Member zuzugreifen (d. h. Aufrufen von Methoden und Konstruktoren, Abrufen und Festlegen von Eigenschaftswerten, Hinzufügen und Entfernen von Ereignishandlern usw.). Die Verwendung von Reflektion, um Typ- und Memberinformationen abzurufen, ist nicht eingeschränkt. Jeglicher Code kann Reflektion verwenden, um die folgenden Aufgaben auszuführen:  
@@ -36,7 +36,7 @@ Die Reflektion bietet die Möglichkeit, Typ- und Memberinformationen abzurufen u
   
     -   Geschützte Member der Basisklassen des aufrufenden Codes. (In Reflektion wird dies als Zugriff auf Familienebene bezeichnet.)  
   
-    -   `internal`-Member (`Friend`-Member in Visual Basic) in der Assembly des aufrufenden Codes. (In Reflektion wird dies als Zugriff auf Assemblyebene bezeichnet.)  
+    -   `internal` -Member (`Friend`-Member in Visual Basic) in der Assembly des aufrufenden Codes. (In Reflektion wird dies als Zugriff auf Assemblyebene bezeichnet.)  
   
     -   Private Member von anderen Instanzen der Klasse, die den aufrufenden Code enthält.  
   
@@ -105,6 +105,7 @@ Die Reflektion bietet die Möglichkeit, Typ- und Memberinformationen abzurufen u
 -   Ab [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] sind keine Berechtigungen erforderlich, um über Reflektion Informationen über nicht öffentliche Typen und Member abzurufen. In früheren Versionen ist <xref:System.Security.Permissions.ReflectionPermission> mit dem <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType>-Flag erforderlich.  
   
 ## <a name="see-also"></a>Siehe auch
+
 - <xref:System.Security.Permissions.ReflectionPermissionFlag>
 - <xref:System.Security.Permissions.ReflectionPermission>
 - <xref:System.Security.Permissions.SecurityPermission>

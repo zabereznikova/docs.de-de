@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
 ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211230"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Abrufen von Objekten aus dem Identitätscache
@@ -30,7 +30,7 @@ In diesem Thema werden die Typen von LINQ to SQL-Abfragen beschrieben, die Objek
   
  In diesen allgemeinen Formen werden `Function1`, `Function2` und `predicate` wie folgt definiert.  
   
- `Function1` Dabei kann es sich um eine der folgenden sein:  
+ `Function1` kann eine der folgenden Formen haben:  
   
 -   <xref:System.Linq.Queryable.Where%2A>  
   
@@ -42,7 +42,7 @@ In diesem Thema werden die Typen von LINQ to SQL-Abfragen beschrieben, die Objek
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `Function2` Dabei kann es sich um eine der folgenden sein:  
+ `Function2` kann eine der folgenden Formen haben:  
   
 -   <xref:System.Linq.Queryable.First%2A>  
   
@@ -52,7 +52,7 @@ In diesem Thema werden die Typen von LINQ to SQL-Abfragen beschrieben, die Objek
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `predicate` Ein Ausdruck muss sein, in dem Primärschlüsseleigenschaft des Objekts auf einen konstanten Wert festgelegt ist. Wenn der Primärschlüssel eines Objekts von mehreren Eigenschaften definiert wird, muss jede dieser Eigenschaften auf einen konstanten Wert festgelegt sein. Hier einige Beispiele der Form, die `predicate` aufweisen muss:  
+ `predicate` muss ein Ausdruck sein, in dem die Primärschlüsseleigenschaft des Objekts auf einen konstanten Wert festgelegt ist. Wenn der Primärschlüssel eines Objekts von mehreren Eigenschaften definiert wird, muss jede dieser Eigenschaften auf einen konstanten Wert festgelegt sein. Hier einige Beispiele der Form, die `predicate` aufweisen muss:  
   
 -   `c => c.PK == constant_value`  
   

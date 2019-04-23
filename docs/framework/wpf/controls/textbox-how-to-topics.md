@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
 ms.openlocfilehash: d3d5116a2fa2198661050a1c1adbae9512cd078a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211425"
 ---
 # <a name="textbox-how-to-topics"></a>Gewusst-wie-Themen zu TextBox
@@ -19,18 +19,18 @@ Dieser Abschnitt enthält Beispiele, die veranschaulichen, wie Sie häufige Aufg
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen eines mehrzeiligen TextBox-Steuerelements](how-to-create-a-multiline-textbox-control.md)  
- [Erkennen von Textänderungen in einem TextBox-Objekt](how-to-detect-when-text-in-a-textbox-has-changed.md)  
+ [Erkennen von Änderungen an Text in einem Textfeld](how-to-detect-when-text-in-a-textbox-has-changed.md)  
  [Aktivieren von Tabulatorzeichen in einem TextBox-Steuerelement](how-to-enable-tab-characters-in-a-textbox-control.md)  
- [Abrufen einer Auflistung der Zeilen aus einem TextBox-Objekt](how-to-get-a-collection-of-lines-from-a-textbox.md)  
+ [Abrufen einer Auflistung der Zeilen aus einem TextBox-Element](how-to-get-a-collection-of-lines-from-a-textbox.md)  
  [Erstellen eines schreibgeschützten TextBox-Steuerelements](how-to-make-a-textbox-control-read-only.md)  
  [Positionieren des Cursors am Anfang oder Ende von Text in einem TextBox-Steuerelement](position-the-cursor-at-the-beginning-or-end-of-text.md)  
  [Abrufen einer Textauswahl](how-to-retrieve-a-text-selection.md)  
  [Setzen des Fokus in einem TextBox-Steuerelement](how-to-set-focus-in-a-textbox-control.md)  
  [Festlegen des Textinhalts eines TextBox-Steuerelements](how-to-set-the-text-content-of-a-textbox-control.md)  
  [Aktivieren der Rechtschreibprüfung in einem Textbearbeitungssteuerelement](how-to-enable-spell-checking-in-a-text-editing-control.md)  
- [Verwenden eines benutzerdefinierten Kontextmenüs mit einem TextBox-Objekt](how-to-use-a-custom-context-menu-with-a-textbox.md)  
+ [Verwenden eines benutzerdefinierten Kontextmenüs mit "TextBox"](how-to-use-a-custom-context-menu-with-a-textbox.md)  
  [Verwenden der Rechtschreibprüfung mit einem Kontextmenü](how-to-use-spell-checking-with-a-context-menu.md)  
- [Hinzufügen eines Wasserzeichens zu einem TextBox-Objekt](how-to-add-a-watermark-to-a-textbox.md)  
+ [Hinzufügen eines Wasserzeichens zu einer TextBox](how-to-add-a-watermark-to-a-textbox.md)  
   
 ## <a name="reference"></a>Referenz  
  <xref:System.Windows.Controls.TextBox>  

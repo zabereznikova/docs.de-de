@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c8aa10c25fd7459bebb1de6d71a54b6e361e20e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560814"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208123"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analysieren von Zeichenfolgen für Datum und Uhrzeit in .NET
 
@@ -32,7 +32,6 @@ Das Analysieren von Zeichenfolgen für die Konvertierung in <xref:System.DateTim
 1. Sie können angeben, wie fehlende Komponenten in der Textdarstellung in Datum und Uhrzeit festgelegt werden.
 
 Die Methoden <xref:System.DateTime.Parse%2A> und <xref:System.DateTime.TryParse%2A> ermöglichen eine Konvertierung zahlreicher gängiger Darstellungen von Datum und Uhrzeit. Die Methoden <xref:System.DateTime.ParseExact%2A> und <xref:System.DateTime.TryParseExact%2A> konvertieren eine Zeichenfolgendarstellung entsprechend dem Muster, das durch eine Formatzeichenfolge für Datum und Uhrzeit angegeben wird. (Ausführliche Informationen hierzu finden Sie in den Artikeln [Standard-Formatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md) und [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md).)
-
 
 Das aktuelle <xref:System.Globalization.DateTimeFormatInfo>-Objekt bietet mehr Kontrolle darüber, wie der Text als Datum und Uhrzeit interpretiert werden soll. Die Eigenschaften eines <xref:System.Globalization.DateTimeFormatInfo>-Objekts beschreiben die Trennzeichen für Datum und Uhrzeit, die Namen von Monaten, Tagen und Zeiträumen sowie das Format der Bezeichnung „AM“ und „PM“. Die aktuelle Threadkultur stellt ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt bereit, das die aktuelle Kultur repräsentiert. Wenn Sie eine bestimmte Kultur oder benutzerdefinierte Einstellungen verwenden möchten, geben Sie den Parameter <xref:System.IFormatProvider> einer Analysemethode an. Geben Sie für den <xref:System.IFormatProvider>-Parameter ein <xref:System.Globalization.CultureInfo>-Objekt an, das eine Kultur darstellt, oder ein <xref:System.Globalization.DateTimeFormatInfo>-Objekt.
 
@@ -89,8 +88,8 @@ Jede Überladung der Methode <xref:System.DateTime.Parse%2A> und <xref:System.Da
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Parsing Strings](parsing-strings.md)
+- [Analysieren von Zeichenfolgen](parsing-strings.md)
 - [Formatierung von Typen](formatting-types.md)
 - [Typkonvertierung in .NET](type-conversion.md)
 - [Standard-Formatzeichenfolgen für Datum und Uhrzeit](standard-date-and-time-format-strings.md)
-- [Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit](custom-date-and-time-format-strings.md)
+- [Custom date and time format strings (Benutzerdefinierte Formatzeichenfolgen für Datum und Uhrzeit)](custom-date-and-time-format-strings.md)
