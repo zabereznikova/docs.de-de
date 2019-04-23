@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 490af9ca67b538e0093115a6b371b65d9788772f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222964"
 ---
-# <a name="iclrruntimehostunloadappdomain-method"></a><span data-ttu-id="007ae-102">ICLRRuntimeHost::UnloadAppDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="007ae-102">ICLRRuntimeHost::UnloadAppDomain Method</span></span>
-<span data-ttu-id="007ae-103">Entlädt die verwaltete <xref:System.AppDomain> , die dem angegebenen numerischen Bezeichner entspricht.</span><span class="sxs-lookup"><span data-stu-id="007ae-103">Unloads the managed <xref:System.AppDomain> that corresponds to the specified numeric identifier.</span></span>  
+# <a name="iclrruntimehostunloadappdomain-method"></a><span data-ttu-id="dfb23-102">ICLRRuntimeHost::UnloadAppDomain-Methode</span><span class="sxs-lookup"><span data-stu-id="dfb23-102">ICLRRuntimeHost::UnloadAppDomain Method</span></span>
+<span data-ttu-id="dfb23-103">Entlädt die verwaltete <xref:System.AppDomain> , die dem angegebenen numerischen Bezeichner entspricht.</span><span class="sxs-lookup"><span data-stu-id="dfb23-103">Unloads the managed <xref:System.AppDomain> that corresponds to the specified numeric identifier.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="007ae-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="007ae-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dfb23-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="dfb23-104">Syntax</span></span>  
   
 ```  
 HRESULT UnloadAppDomain(  
@@ -36,36 +36,36 @@ HRESULT UnloadAppDomain(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="007ae-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="007ae-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="dfb23-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="dfb23-105">Parameters</span></span>  
  `dwAppDomainId`  
- <span data-ttu-id="007ae-106">[in] Der numerische Bezeichner der Anwendungsdomäne zu nicht entladen.</span><span class="sxs-lookup"><span data-stu-id="007ae-106">[in] The numeric identifier of the application domain to unload.</span></span>  
+ <span data-ttu-id="dfb23-106">[in] Der numerische Bezeichner der Anwendungsdomäne zu nicht entladen.</span><span class="sxs-lookup"><span data-stu-id="dfb23-106">[in] The numeric identifier of the application domain to unload.</span></span>  
   
  `fWaitUntilDone`  
- <span data-ttu-id="007ae-107">[in] `true` , um anzugeben, dass die common Language Runtime (CLR) warten muss, bis sie die Ausführung von aktuellen Thread der Anwendung vor dem Entladen der Anwendungsdomäne beendet hat.</span><span class="sxs-lookup"><span data-stu-id="007ae-107">[in] `true` to indicate that the common language runtime( CLR) must wait until it has finished executing the application's current thread before attempting to unload the application domain.</span></span>  
+ <span data-ttu-id="dfb23-107">[in] `true` , um anzugeben, dass die common Language Runtime (CLR) warten muss, bis sie die Ausführung von aktuellen Thread der Anwendung vor dem Entladen der Anwendungsdomäne beendet hat.</span><span class="sxs-lookup"><span data-stu-id="dfb23-107">[in] `true` to indicate that the common language runtime( CLR) must wait until it has finished executing the application's current thread before attempting to unload the application domain.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="007ae-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="007ae-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="dfb23-108">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="dfb23-108">Return Value</span></span>  
   
-|<span data-ttu-id="007ae-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="007ae-109">HRESULT</span></span>|<span data-ttu-id="007ae-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="007ae-110">Description</span></span>|  
+|<span data-ttu-id="dfb23-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="dfb23-109">HRESULT</span></span>|<span data-ttu-id="dfb23-110">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="dfb23-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="007ae-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="007ae-111">S_OK</span></span>|`UnloadAppDomain` <span data-ttu-id="007ae-112">wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="007ae-112">returned successfully.</span></span>|  
-|<span data-ttu-id="007ae-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="007ae-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="007ae-114">Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="007ae-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="007ae-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="007ae-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="007ae-116">Der Aufruf ist ein Timeout aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="007ae-116">The call timed out.</span></span>|  
-|<span data-ttu-id="007ae-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="007ae-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="007ae-118">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="007ae-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="007ae-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="007ae-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="007ae-120">Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.</span><span class="sxs-lookup"><span data-stu-id="007ae-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="007ae-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="007ae-121">E_FAIL</span></span>|<span data-ttu-id="007ae-122">Ein Unbekannter Schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="007ae-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="007ae-123">Wenn eine Methode E_FAIL zurückgegeben wird, ist die CLR nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="007ae-123">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="007ae-124">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="007ae-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="dfb23-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="dfb23-111">S_OK</span></span>|<span data-ttu-id="dfb23-112">`UnloadAppDomain` wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="dfb23-112">`UnloadAppDomain` returned successfully.</span></span>|  
+|<span data-ttu-id="dfb23-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="dfb23-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="dfb23-114">Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf erfolgreich zu verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="dfb23-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="dfb23-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="dfb23-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="dfb23-116">Der Aufruf ist ein Timeout aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="dfb23-116">The call timed out.</span></span>|  
+|<span data-ttu-id="dfb23-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="dfb23-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="dfb23-118">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="dfb23-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="dfb23-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="dfb23-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="dfb23-120">Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.</span><span class="sxs-lookup"><span data-stu-id="dfb23-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="dfb23-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="dfb23-121">E_FAIL</span></span>|<span data-ttu-id="dfb23-122">Ein Unbekannter Schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="dfb23-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="dfb23-123">Wenn eine Methode E_FAIL zurückgegeben wird, ist die CLR nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="dfb23-123">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="dfb23-124">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="dfb23-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="007ae-125">Hinweise</span><span class="sxs-lookup"><span data-stu-id="007ae-125">Remarks</span></span>  
- <span data-ttu-id="007ae-126">Sie können den numerischen Bezeichner der Anwendungsdomäne, in dem der aktuelle Thread, durch den Aufruf ausgeführt wird, abrufen [GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span><span class="sxs-lookup"><span data-stu-id="007ae-126">You can get the numeric identifier of the application domain in which the current thread is executing by calling [GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span></span> <span data-ttu-id="007ae-127">Dieser Bezeichner entspricht der <xref:System.AppDomain.Id%2A> Eigenschaft der verwalteten <xref:System.AppDomain> Typ.</span><span class="sxs-lookup"><span data-stu-id="007ae-127">This identifier corresponds to the <xref:System.AppDomain.Id%2A> property of the managed <xref:System.AppDomain> type.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dfb23-125">Hinweise</span><span class="sxs-lookup"><span data-stu-id="dfb23-125">Remarks</span></span>  
+ <span data-ttu-id="dfb23-126">Sie können den numerischen Bezeichner der Anwendungsdomäne, in dem der aktuelle Thread, durch den Aufruf ausgeführt wird, abrufen [GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span><span class="sxs-lookup"><span data-stu-id="dfb23-126">You can get the numeric identifier of the application domain in which the current thread is executing by calling [GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md).</span></span> <span data-ttu-id="dfb23-127">Dieser Bezeichner entspricht der <xref:System.AppDomain.Id%2A> Eigenschaft der verwalteten <xref:System.AppDomain> Typ.</span><span class="sxs-lookup"><span data-stu-id="dfb23-127">This identifier corresponds to the <xref:System.AppDomain.Id%2A> property of the managed <xref:System.AppDomain> type.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="007ae-128">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="007ae-128">Requirements</span></span>  
- <span data-ttu-id="007ae-129">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="007ae-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="dfb23-128">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="dfb23-128">Requirements</span></span>  
+ <span data-ttu-id="dfb23-129">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="dfb23-129">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="007ae-130">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="007ae-130">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="dfb23-130">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="dfb23-130">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="007ae-131">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="007ae-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="dfb23-131">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="dfb23-131">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="007ae-132">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="007ae-132">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="dfb23-132">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dfb23-132">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="007ae-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="007ae-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="dfb23-133">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="dfb23-133">See also</span></span>
 
-- [<span data-ttu-id="007ae-134">ICLRRuntimeHost-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="007ae-134">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [<span data-ttu-id="dfb23-134">ICLRRuntimeHost-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="dfb23-134">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

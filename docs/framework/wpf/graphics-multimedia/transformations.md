@@ -17,22 +17,22 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
 ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227227"
 ---
-# <a name="transformations"></a><span data-ttu-id="f2851-102">Transformationen</span><span class="sxs-lookup"><span data-stu-id="f2851-102">Transformations</span></span>
-<span data-ttu-id="f2851-103">Transformationen werden verwendet, um zu drehen, skalieren, übersetzen oder neigen <xref:System.Windows.FrameworkElement> Objekte.</span><span class="sxs-lookup"><span data-stu-id="f2851-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
+# <a name="transformations"></a><span data-ttu-id="6bea4-102">Transformationen</span><span class="sxs-lookup"><span data-stu-id="6bea4-102">Transformations</span></span>
+<span data-ttu-id="6bea4-103">Transformationen werden verwendet, um zu drehen, skalieren, übersetzen oder neigen <xref:System.Windows.FrameworkElement> Objekte.</span><span class="sxs-lookup"><span data-stu-id="6bea4-103">Transforms are used to rotate, scale, translate, or skew <xref:System.Windows.FrameworkElement> objects.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f2851-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="f2851-104">In This Section</span></span>  
- [<span data-ttu-id="f2851-105">Übersicht über Transformationen</span><span class="sxs-lookup"><span data-stu-id="f2851-105">Transforms Overview</span></span>](transforms-overview.md)  
- [<span data-ttu-id="f2851-106">Gewusst wie-Themen</span><span class="sxs-lookup"><span data-stu-id="f2851-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="6bea4-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="6bea4-104">In This Section</span></span>  
+ [<span data-ttu-id="6bea4-105">Übersicht über Transformationen</span><span class="sxs-lookup"><span data-stu-id="6bea4-105">Transforms Overview</span></span>](transforms-overview.md)  
+ [<span data-ttu-id="6bea4-106">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="6bea4-106">How-to Topics</span></span>](transformations-how-to-topics.md)  
   
-## <a name="see-also"></a><span data-ttu-id="f2851-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f2851-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6bea4-107">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="6bea4-107">See also</span></span>
 
 - <xref:System.Windows.Media.Transform>
-- [<span data-ttu-id="f2851-108">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="f2851-108">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="f2851-109">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="f2851-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
-- [<span data-ttu-id="f2851-110">Layout</span><span class="sxs-lookup"><span data-stu-id="f2851-110">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="6bea4-108">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="6bea4-108">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="6bea4-109">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="6bea4-109">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="6bea4-110">Layout</span><span class="sxs-lookup"><span data-stu-id="6bea4-110">Layout</span></span>](../advanced/layout.md)

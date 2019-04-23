@@ -9,24 +9,24 @@ helpviewer_keywords:
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
 ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230654"
 ---
-# <a name="graphics-how-to-topics"></a><span data-ttu-id="057ab-102">Gewusst-wie-Themen zu Grafiken</span><span class="sxs-lookup"><span data-stu-id="057ab-102">Graphics How-to Topics</span></span>
-<span data-ttu-id="057ab-103">In den folgenden Themen veranschaulichen, wie die Grafiken Funktionen des die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="057ab-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
+# <a name="graphics-how-to-topics"></a><span data-ttu-id="4254c-102">Gewusst-wie-Themen zu Grafiken</span><span class="sxs-lookup"><span data-stu-id="4254c-102">Graphics How-to Topics</span></span>
+<span data-ttu-id="4254c-103">In den folgenden Themen veranschaulichen, wie die Grafiken Funktionen des die [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="4254c-103">The following topics demonstrate how to use the graphic capabilities of the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="057ab-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="057ab-104">In This Section</span></span>  
- [<span data-ttu-id="057ab-105">Animieren eines Rechtecks</span><span class="sxs-lookup"><span data-stu-id="057ab-105">Animate a Rectangle</span></span>](how-to-animate-a-rectangle.md)  
- [<span data-ttu-id="057ab-106">Animieren der Position eines Objekts mithilfe von PointAnimation</span><span class="sxs-lookup"><span data-stu-id="057ab-106">Animate the Position of an Object by Using PointAnimation</span></span>](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
- [<span data-ttu-id="057ab-107">Transformieren von Punkten und Vektoren</span><span class="sxs-lookup"><span data-stu-id="057ab-107">Transform Points and Vectors</span></span>](how-to-transform-points-and-vectors.md)  
- [<span data-ttu-id="057ab-108">Erweitern von Glasframe in eine WPF-Anwendung</span><span class="sxs-lookup"><span data-stu-id="057ab-108">Extend Glass Frame Into a WPF Application</span></span>](extend-glass-frame-into-a-wpf-application.md)  
- [<span data-ttu-id="057ab-109">Vorgehensweise: Verbessern der Renderingleistung durch Zwischenspeichern eines Elements</span><span class="sxs-lookup"><span data-stu-id="057ab-109">How to: Improve Rendering Performance by Caching an Element</span></span>](how-to-improve-rendering-performance-by-caching-an-element.md)  
- [<span data-ttu-id="057ab-110">Vorgehensweise: Verwenden eines zwischengespeicherten Elements als Pinsel</span><span class="sxs-lookup"><span data-stu-id="057ab-110">How to: Use a Cached Element as a Brush</span></span>](how-to-use-a-cached-element-as-a-brush.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4254c-104">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="4254c-104">In This Section</span></span>  
+ [<span data-ttu-id="4254c-105">Animieren eines Rechtecks</span><span class="sxs-lookup"><span data-stu-id="4254c-105">Animate a Rectangle</span></span>](how-to-animate-a-rectangle.md)  
+ [<span data-ttu-id="4254c-106">Animieren der Position eines Objekts mit Punktanimation</span><span class="sxs-lookup"><span data-stu-id="4254c-106">Animate the Position of an Object by Using PointAnimation</span></span>](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
+ [<span data-ttu-id="4254c-107">Transformieren von Punkten und Vektoren</span><span class="sxs-lookup"><span data-stu-id="4254c-107">Transform Points and Vectors</span></span>](how-to-transform-points-and-vectors.md)  
+ [<span data-ttu-id="4254c-108">Erweitern von Glasframe in eine WPF-Anwendung</span><span class="sxs-lookup"><span data-stu-id="4254c-108">Extend Glass Frame Into a WPF Application</span></span>](extend-glass-frame-into-a-wpf-application.md)  
+ [<span data-ttu-id="4254c-109">Vorgehensweise: Verbessern der Renderingleistung durch Zwischenspeichern eines Elements</span><span class="sxs-lookup"><span data-stu-id="4254c-109">How to: Improve Rendering Performance by Caching an Element</span></span>](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [<span data-ttu-id="4254c-110">Vorgehensweise: Verwenden eines zwischengespeicherten Elements als Pinsel</span><span class="sxs-lookup"><span data-stu-id="4254c-110">How to: Use a Cached Element as a Brush</span></span>](how-to-use-a-cached-element-as-a-brush.md)  
   
-## <a name="see-also"></a><span data-ttu-id="057ab-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="057ab-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4254c-111">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="4254c-111">See also</span></span>
 
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
@@ -35,5 +35,5 @@ ms.locfileid: "59230654"
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Effects.BitmapEffect>
-- [<span data-ttu-id="057ab-112">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="057ab-112">Graphics and Multimedia</span></span>](index.md)
-- [<span data-ttu-id="057ab-113">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="057ab-113">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
+- [<span data-ttu-id="4254c-112">Grafiken und Multimedia</span><span class="sxs-lookup"><span data-stu-id="4254c-112">Graphics and Multimedia</span></span>](index.md)
+- [<span data-ttu-id="4254c-113">Übersicht über das WPF-Grafikrendering</span><span class="sxs-lookup"><span data-stu-id="4254c-113">WPF Graphics Rendering Overview</span></span>](wpf-graphics-rendering-overview.md)
