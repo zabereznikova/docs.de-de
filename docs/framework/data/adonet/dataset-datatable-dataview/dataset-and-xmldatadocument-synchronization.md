@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
 ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164735"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet- und XmlDataDocument-Synchronisierung
@@ -90,7 +90,7 @@ Das ADO.NET-<xref:System.Data.DataSet> stellt Daten relational dar. Für einen h
  Bei der Synchronisierung ein **DataSet** mit einer **XmlDataDocument**, Ergebnisse hängen davon ab, ob Ihre <xref:System.Data.DataRelation> -Objekte geschachtelt sind. Weitere Informationen finden Sie unter [Schachteln von DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Synchronisieren eines "DataSet "mit einem "XmlDataDocument"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
+ [Synchronisieren eines DataSet mit einem XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)  
  Demonstriert die Synchronisierung eine stark typisierte **DataSet**, mit dem Schema "minimal", mit einem **XmlDataDocument**.  
   
  [Ausführen einer XPath-Abfrage für ein DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
@@ -100,13 +100,13 @@ Das ADO.NET-<xref:System.Data.DataSet> stellt Daten relational dar. Für einen h
  Veranschaulicht die Anwendung einer XSLT-Transformation auf den Inhalt einer **DataSet**.  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
- [Verwenden von XML in einem "DataSet"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Using XML in a DataSet (Verwenden von XML in einem DataSet)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Beschreibt, wie die **DataSet** interagiert mit XML als Datenquelle, einschließlich des Ladens und Beibehaltens des Inhalts einer **DataSet** als XML-Daten.  
   
- [Verschachteln von "DataRelations"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
+ [Schachteln von DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  Erläutert die Bedeutung geschachtelter **DataRelation** -Objekte beim Darstellen des Inhalts einer **DataSet** als XML-Daten, und beschreibt, wie diese Beziehungen zu erstellen.  
   
- ["DataSets", "DataTables" und "DataViews"](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [DataSets, DataTables und DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  Beschreibt die **DataSet** und wie Sie es verwenden, um Anwendungsdaten zu verwalten und für die Interaktion mit Datenquellen, einschließlich relationaler Datenbanken und XML.  
   
  <xref:System.Xml.XmlDataDocument>  

@@ -5,10 +5,10 @@ ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a92e6627ba937b10b183a833a005792f0a51f921
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162697"
 ---
 # <a name="type-element-net-native"></a>\<Typ > (Element (.NET Native)
@@ -66,13 +66,13 @@ Wendet eine Laufzeitrichtlinie auf einen bestimmten Typ an, z. B. eine Klasse od
 |Element|Beschreibung|  
 |-------------|-----------------|  
 |[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|Wenn der enthaltende Typ ein Attribut ist, wird die Laufzeitrichtlinie für Codeelemente definiert, auf die das Attribut angewendet wird.|  
-|[\<Ereignis >](../../../docs/framework/net-native/event-element-net-native.md)|Wendet die Reflektionsrichtlinie auf ein Ereignis dieses Typs an.|  
-|[\<Feld >](../../../docs/framework/net-native/field-element-net-native.md)|Wendet die Reflektionsrichtlinie auf ein Feld dieses Typs an.|  
+|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|Wendet die Reflektionsrichtlinie auf ein Ereignis dieses Typs an.|  
+|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|Wendet die Reflektionsrichtlinie auf ein Feld dieses Typs an.|  
 |[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|Wendet eine Richtlinie auf den Parametertyp eines generischen Typs an.|  
 |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|Wendet eine Richtlinie auf einen Typ an, wenn diese Richtlinie an den Typ angewendet wurde, der vom enthaltenden `<Type>`-Element dargestellt wird.|  
-|[\<Methode >](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Methode dieses Typs an.|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Methode dieses Typs an.|  
 |[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine konstruierte generische Methode dieses Typs an.|  
-|[\<Eigenschaft >](../../../docs/framework/net-native/property-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Eigenschaft dieses Typs an.|  
+|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|Wendet die Reflektionsrichtlinie auf eine Eigenschaft dieses Typs an.|  
 |[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|Wendet eine Laufzeitrichtlinie auf alle vom enthaltenden Typ geerbten Klassen an.|  
 |`<Type>`|Wendet die Reflektionsrichtlinie auf einen geschachtelten Typ an.|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Wendet die Reflektionsrichtlinie auf einen konstruierten generischen Typ an.|  
@@ -133,6 +133,6 @@ Wendet eine Laufzeitrichtlinie auf einen bestimmten Typ an, z. B. eine Klasse od
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Laufzeitanweisungs-Konfigurationsdatei (rd.xml) Referenz](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+- [Runtime Directives (rd.xml) Configuration File Reference (Referenz zur Laufzeitanweisungs-Konfigurationsdatei (rd.xml))](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [Elemente der Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [Richtlinieneinstellungen für die Laufzeitanweisung](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
