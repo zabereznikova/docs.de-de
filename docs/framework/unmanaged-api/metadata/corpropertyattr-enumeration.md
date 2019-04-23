@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1a0fff266e964b506b2dc7c4030caa54abaa5ed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171820"
 ---
-# <a name="corpropertyattr-enumeration"></a><span data-ttu-id="f8013-102">CorPropertyAttr-Enumeration</span><span class="sxs-lookup"><span data-stu-id="f8013-102">CorPropertyAttr Enumeration</span></span>
-<span data-ttu-id="f8013-103">Enthält Werte, in denen die Metadaten einer Eigenschaft beschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="f8013-103">Contains values that describe the metadata of a property.</span></span>  
+# <a name="corpropertyattr-enumeration"></a><span data-ttu-id="c97b9-102">CorPropertyAttr-Enumeration</span><span class="sxs-lookup"><span data-stu-id="c97b9-102">CorPropertyAttr Enumeration</span></span>
+<span data-ttu-id="c97b9-103">Enthält Werte, in denen die Metadaten einer Eigenschaft beschrieben werden.</span><span class="sxs-lookup"><span data-stu-id="c97b9-103">Contains values that describe the metadata of a property.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f8013-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="f8013-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c97b9-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="c97b9-104">Syntax</span></span>  
   
 ```  
 typedef enum CorPropertyAttr {  
@@ -40,23 +40,23 @@ typedef enum CorPropertyAttr {
 } CorPropertyAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="f8013-105">Member</span><span class="sxs-lookup"><span data-stu-id="f8013-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c97b9-105">Member</span><span class="sxs-lookup"><span data-stu-id="c97b9-105">Members</span></span>  
   
-|<span data-ttu-id="f8013-106">Member</span><span class="sxs-lookup"><span data-stu-id="f8013-106">Member</span></span>|<span data-ttu-id="f8013-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="f8013-107">Description</span></span>|  
+|<span data-ttu-id="c97b9-106">Member</span><span class="sxs-lookup"><span data-stu-id="c97b9-106">Member</span></span>|<span data-ttu-id="c97b9-107">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="c97b9-107">Description</span></span>|  
 |------------|-----------------|  
-|`prSpecialName`|<span data-ttu-id="f8013-108">Gibt an, dass die Eigenschaft spezielle und seinen Namen wird beschrieben, wie.</span><span class="sxs-lookup"><span data-stu-id="f8013-108">Specifies that the property is special, and that its name describes how.</span></span>|  
-|`prReservedMask`|<span data-ttu-id="f8013-109">Durch die common Language Runtime können Sie für die interne Verwendung reserviert.</span><span class="sxs-lookup"><span data-stu-id="f8013-109">Reserved for internal use by the common language runtime.</span></span>|  
-|`prRTSpecialName`|<span data-ttu-id="f8013-110">Gibt an, dass die common Language Runtime-Metadaten über interne APIs überprüfen soll, die die Codierung der Namen der Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="f8013-110">Specifies that the common language runtime metadata internal APIs should check the encoding of the property name.</span></span>|  
-|`prHasDefault`|<span data-ttu-id="f8013-111">Gibt an, dass die Eigenschaft einen Standardwert verfügt.</span><span class="sxs-lookup"><span data-stu-id="f8013-111">Specifies that the property has a default value.</span></span>|  
-|`prUnused`|<span data-ttu-id="f8013-112">Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="f8013-112">Unused.</span></span>|  
+|`prSpecialName`|<span data-ttu-id="c97b9-108">Gibt an, dass die Eigenschaft spezielle und seinen Namen wird beschrieben, wie.</span><span class="sxs-lookup"><span data-stu-id="c97b9-108">Specifies that the property is special, and that its name describes how.</span></span>|  
+|`prReservedMask`|<span data-ttu-id="c97b9-109">Durch die common Language Runtime können Sie für die interne Verwendung reserviert.</span><span class="sxs-lookup"><span data-stu-id="c97b9-109">Reserved for internal use by the common language runtime.</span></span>|  
+|`prRTSpecialName`|<span data-ttu-id="c97b9-110">Gibt an, dass die common Language Runtime-Metadaten über interne APIs überprüfen soll, die die Codierung der Namen der Eigenschaft.</span><span class="sxs-lookup"><span data-stu-id="c97b9-110">Specifies that the common language runtime metadata internal APIs should check the encoding of the property name.</span></span>|  
+|`prHasDefault`|<span data-ttu-id="c97b9-111">Gibt an, dass die Eigenschaft einen Standardwert verfügt.</span><span class="sxs-lookup"><span data-stu-id="c97b9-111">Specifies that the property has a default value.</span></span>|  
+|`prUnused`|<span data-ttu-id="c97b9-112">Nicht verwendet.</span><span class="sxs-lookup"><span data-stu-id="c97b9-112">Unused.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="f8013-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="f8013-113">Requirements</span></span>  
- <span data-ttu-id="f8013-114">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f8013-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c97b9-113">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="c97b9-113">Requirements</span></span>  
+ <span data-ttu-id="c97b9-114">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c97b9-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f8013-115">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="f8013-115">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="c97b9-115">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="c97b9-115">**Header:** CorHdr.h</span></span>  
   
- **<span data-ttu-id="f8013-116">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="f8013-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="c97b9-116">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c97b9-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8013-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="f8013-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c97b9-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="c97b9-117">See also</span></span>
 
-- [<span data-ttu-id="f8013-118">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="f8013-118">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="c97b9-118">Metadatenenumerationen</span><span class="sxs-lookup"><span data-stu-id="c97b9-118">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
