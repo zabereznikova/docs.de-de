@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be053c9f8b431a9e157e53ec2d32fef874cf2d6b
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 41cdc3db069ecf7ea854b76ac45d4b268a357459
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262458"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309510"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Handbuch für die Bereitstellung von .NET Framework für Administratoren
 In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] und dessen Systemabhängigkeiten in einem Netzwerk mit Microsoft System Center Configuration Manager bereitstellen können. In diesem Artikel wird davon ausgegangen, dass alle Zielclientcomputer die Mindestanforderungen für .NET Framework erfüllen. Eine Liste der Software- und Hardwareanforderungen zum Installieren von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] finden Sie unter [Systemanforderungen](../../../docs/framework/get-started/system-requirements.md).  
@@ -52,13 +52,13 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
 ## <a name="deploying-the-net-framework"></a>Bereitstellen von .NET Framework  
  Sie können mit System Center 2012 Configuration Manager eine automatische Installation von [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] bereitstellen, bei der die Benutzer nicht in den Installationsvorgang eingreifen. Führen Sie folgende Schritte aus:  
   
-1.  [Erstellen Sie eine Sammlung](#creating_a_collection).  
+1. [Erstellen Sie eine Sammlung](#creating_a_collection).  
   
-2.  [Erstellen Sie ein Paket und Programm für das verteilbare .NET Framework-Paket](#creating_a_package).  
+2. [Erstellen Sie ein Paket und Programm für das verteilbare .NET Framework-Paket](#creating_a_package).  
   
-3.  [Wählen Sie einen Verteilungspunkt aus](#select_dist_point).  
+3. [Wählen Sie einen Verteilungspunkt aus](#select_dist_point).  
   
-4.  [Stellen Sie das Paket bereit](#deploying_package).  
+4. [Stellen Sie das Paket bereit](#deploying_package).  
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>Erstellen einer Sammlung  
@@ -66,21 +66,21 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
  So erstellen Sie eine Sammlung  
   
-1.  Wählen Sie in der Configuration Manager-Konsole **Bestand und Kompatibilität** aus.  
+1. Wählen Sie in der Configuration Manager-Konsole **Bestand und Kompatibilität** aus.  
   
-2.  Wählen Sie im Arbeitsbereich **Bestand und Kompatibilität** die Option **Gerätesammlungen** aus.  
+2. Wählen Sie im Arbeitsbereich **Bestand und Kompatibilität** die Option **Gerätesammlungen** aus.  
   
-3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** die Option **Gerätesammlung erstellen** aus.  
+3. Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** die Option **Gerätesammlung erstellen** aus.  
   
-4.  Geben Sie im **Assistent zum Erstellen von Gerätesammlungen** auf der Seite **Allgemein** einen Namen für die Auflistung ein.  
+4. Geben Sie im **Assistent zum Erstellen von Gerätesammlungen** auf der Seite **Allgemein** einen Namen für die Auflistung ein.  
   
-5.  Wählen **Durchsuchen** aus, um eine begrenzende Sammlung anzugeben.  
+5. Wählen **Durchsuchen** aus, um eine begrenzende Sammlung anzugeben.  
   
-6.  Wählen Sie auf der Seite **Mitgliedschaftsregeln** die Option **Regel hinzufügen** aus, und wählen Sie dann **Direkte Regel** aus, um den **Assistent für die Erstellung von Regeln der direkten Mitgliedschaft** zu öffnen. Wählen Sie **Weiter** aus.  
+6. Wählen Sie auf der Seite **Mitgliedschaftsregeln** die Option **Regel hinzufügen** aus, und wählen Sie dann **Direkte Regel** aus, um den **Assistent für die Erstellung von Regeln der direkten Mitgliedschaft** zu öffnen. Wählen Sie **Weiter** aus.  
   
-7.  Wählen Sie auf der Seite **Ressourcen suchen** in der Liste **Ressourcenklasse** die Option **Systemressource** aus. Wählen Sie in der Liste **Attributname** die Option **Name** aus. Geben Sie im Feld **Wert** das Zeichen `%` ein, und wählen Sie dann **Weiter** aus.  
+7. Wählen Sie auf der Seite **Ressourcen suchen** in der Liste **Ressourcenklasse** die Option **Systemressource** aus. Wählen Sie in der Liste **Attributname** die Option **Name** aus. Geben Sie im Feld **Wert** das Zeichen `%` ein, und wählen Sie dann **Weiter** aus.  
   
-8.  Aktivieren Sie auf der Seite **Ressourcen auswählen** das Kontrollkästchen für jeden Computer, für den Sie .NET Framework bereitstellen möchten. Wählen Sie **Weiter** aus, und schließen Sie den Assistenten.  
+8. Aktivieren Sie auf der Seite **Ressourcen auswählen** das Kontrollkästchen für jeden Computer, für den Sie .NET Framework bereitstellen möchten. Wählen Sie **Weiter** aus, und schließen Sie den Assistenten.  
   
 9. Wählen Sie auf der Seite **Mitgliedschaftsregeln** im **Assistent zum Erstellen von Gerätesammlungen** die Option **Weiter** aus, und schließen Sie den Assistenten ab.  
   
@@ -90,13 +90,13 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
  So erstellen Sie ein Paket  
   
-1.  Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** aus.  
+1. Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** aus.  
   
-2.  Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Knoten **Anwendungsverwaltung**, und wählen Sie dann **Pakete** aus.  
+2. Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Knoten **Anwendungsverwaltung**, und wählen Sie dann **Pakete** aus.  
   
-3.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** die Option **Paket erstellen** aus.  
+3. Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Erstellen** die Option **Paket erstellen** aus.  
   
-4.  Geben Sie auf der Seite **Paket** im **Assistent zum Erstellen von Paketen und Programmen** die folgenden Informationen ein:  
+4. Geben Sie auf der Seite **Paket** im **Assistent zum Erstellen von Paketen und Programmen** die folgenden Informationen ein:  
   
     -   Name: `.NET Framework 4.5`  
   
@@ -104,11 +104,11 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
     -   Sprache: `English (US)`  
   
-5.  Wählen Sie **Dieses Paket enthält Quelldateien** aus, und wählen Sie anschließend **Durchsuchen** aus, um den lokalen oder Netzwerkordner mit den .NET Framework-Installationsdateien auszuwählen. Wenn Sie den Ordner ausgewählt haben, wählen Sie **OK** und anschließend **Weiter** aus.  
+5. Wählen Sie **Dieses Paket enthält Quelldateien** aus, und wählen Sie anschließend **Durchsuchen** aus, um den lokalen oder Netzwerkordner mit den .NET Framework-Installationsdateien auszuwählen. Wenn Sie den Ordner ausgewählt haben, wählen Sie **OK** und anschließend **Weiter** aus.  
   
-6.  Wählen Sie auf der Seite **Programmtyp** des Assistenten **Standardprogramm** und anschließend **Weiter** aus.  
+6. Wählen Sie auf der Seite **Programmtyp** des Assistenten **Standardprogramm** und anschließend **Weiter** aus.  
   
-7.  Geben Sie auf der Seite **Programm** im **Assistent zum Erstellen von Paketen und Programmen** die folgenden Informationen ein:  
+7. Geben Sie auf der Seite **Programm** im **Assistent zum Erstellen von Paketen und Programmen** die folgenden Informationen ein:  
   
     1.  **Name:** `.NET Framework 4.5`  
   
@@ -118,7 +118,7 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
     4.  **Programmausführung:** Wählen Sie die Option aus, die angibt, dass das Programm unabhängig davon, ob ein Benutzer angemeldet ist, ausgeführt werden kann.  
   
-8.  Wählen Sie auf der Seite **Anforderungen** zum Übernehmen der Standardwerte **Weiter** aus, und schließen Sie dann den Assistenten ab.  
+8. Wählen Sie auf der Seite **Anforderungen** zum Übernehmen der Standardwerte **Weiter** aus, und schließen Sie dann den Assistenten ab.  
   
  In der folgenden Tabelle werden die in Schritt 7 angegebenen Befehlszeilenoptionen beschrieben.  
   
@@ -136,21 +136,21 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
  Führen Sie die folgenden Schritte aus, um einen Verteilungspunkt für das im vorherigen Abschnitt erstellte .NET Framework 4.5-Paket auszuwählen:  
   
-1.  Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** aus.  
+1. Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** aus.  
   
-2.  Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Knoten **Anwendungsverwaltung**, und wählen Sie dann **Pakete** aus.  
+2. Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Knoten **Anwendungsverwaltung**, und wählen Sie dann **Pakete** aus.  
   
-3.  Wählen Sie aus der Liste von Paketen das Paket **.NET Framework 4.5** aus, das Sie im vorherigen Abschnitt erstellt haben.  
+3. Wählen Sie aus der Liste von Paketen das Paket **.NET Framework 4.5** aus, das Sie im vorherigen Abschnitt erstellt haben.  
   
-4.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** die Option **Inhalt verteilen** aus.  
+4. Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** die Option **Inhalt verteilen** aus.  
   
-5.  Wählen Sie auf der Registerkarte **Allgemein** im **Assistent für die Verteilung von Inhalt** die Option **Weiter** aus.  
+5. Wählen Sie auf der Registerkarte **Allgemein** im **Assistent für die Verteilung von Inhalt** die Option **Weiter** aus.  
   
-6.  Wählen Sie auf der Seite **Inhaltsziel** des Assistenten **Hinzufügen** und anschließend **Verteilungspunkt** aus.  
+6. Wählen Sie auf der Seite **Inhaltsziel** des Assistenten **Hinzufügen** und anschließend **Verteilungspunkt** aus.  
   
-7.  Wählen Sie im Dialogfeld **Verteilungspunkte hinzufügen** mindestens einen Verteilungspunkt aus, von dem das Paket und Programm gehostet werden sollen, und wählen Sie dann **OK** aus.  
+7. Wählen Sie im Dialogfeld **Verteilungspunkte hinzufügen** mindestens einen Verteilungspunkt aus, von dem das Paket und Programm gehostet werden sollen, und wählen Sie dann **OK** aus.  
   
-8.  Durchlaufen Sie den Assistenten.  
+8. Durchlaufen Sie den Assistenten.  
   
  Das Paket enthält jetzt alle Informationen, die Sie für die automatische Bereitstellung von .NET Framework 4.5 benötigen. Überprüfen Sie vor dem Bereitstellen des Pakets und Programms, ob die Installation auf dem Verteilungspunkt ausgeführt wurde. Weitere Informationen finden Sie in der Configuration Manager-Dokumentationsbibliothek [Überwachen von mit System Center Configuration Manager verteilten Inhalten](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed) im Abschnitt „Überwachen von Inhalten“.  
   
@@ -158,21 +158,21 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
 ### <a name="deploy-the-package"></a>Bereitstellen des Pakets  
  So stellen Sie das .NET Framework 4.5-Paket und -Programm bereit  
   
-1.  Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** aus.  
+1. Wählen Sie in der Configuration Manager-Konsole **Softwarebibliothek** aus.  
   
-2.  Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Knoten **Anwendungsverwaltung**, und wählen Sie dann **Pakete** aus.  
+2. Erweitern Sie im Arbeitsbereich **Softwarebibliothek** den Knoten **Anwendungsverwaltung**, und wählen Sie dann **Pakete** aus.  
   
-3.  Wählen Sie aus der Liste von Paketen das Paket **.NET Framework 4.5** aus, das Sie erstellt haben.  
+3. Wählen Sie aus der Liste von Paketen das Paket **.NET Framework 4.5** aus, das Sie erstellt haben.  
   
-4.  Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** die Option **Bereitstellen** aus.  
+4. Wählen Sie auf der Registerkarte **Startseite** in der Gruppe **Bereitstellung** die Option **Bereitstellen** aus.  
   
-5.  Wählen Sie auf der Seite **Allgemein** im **Assistent zum Bereitstellen von Software** die Option **Durchsuchen** und anschließend die Sammlung aus, die Sie zuvor erstellt haben. Wählen Sie **Weiter** aus.  
+5. Wählen Sie auf der Seite **Allgemein** im **Assistent zum Bereitstellen von Software** die Option **Durchsuchen** und anschließend die Sammlung aus, die Sie zuvor erstellt haben. Wählen Sie **Weiter** aus.  
   
-6.  Überprüfen Sie auf der Seite **Inhalt** des Assistenten, ob der Punkt, von dem Sie die Software verteilen möchten, angezeigt wird. Wählen Sie anschließend **Weiter** aus.  
+6. Überprüfen Sie auf der Seite **Inhalt** des Assistenten, ob der Punkt, von dem Sie die Software verteilen möchten, angezeigt wird. Wählen Sie anschließend **Weiter** aus.  
   
-7.  Bestätigen Sie auf der Seite **Bereitstellungseinstellungen** des Assistenten, dass **Aktion** auf **Installieren** festgelegt ist und dass **Zweck** auf **Erforderlich** festgelegt ist. Dadurch wird sichergestellt, dass die Installation des Softwarepakets auf den Zielcomputern erforderlich ist. Wählen Sie **Weiter** aus.  
+7. Bestätigen Sie auf der Seite **Bereitstellungseinstellungen** des Assistenten, dass **Aktion** auf **Installieren** festgelegt ist und dass **Zweck** auf **Erforderlich** festgelegt ist. Dadurch wird sichergestellt, dass die Installation des Softwarepakets auf den Zielcomputern erforderlich ist. Wählen Sie **Weiter** aus.  
   
-8.  Geben Sie auf der Seite **Zeitplanung** des Assistenten an, wann .NET Framework installiert werden soll. Sie können **Neu** auswählen, um eine Installationszeit zuzuweisen, oder die Software anweisen, die Installation bei An- oder Abmeldung des Benutzers oder so schnell wie möglich durchzuführen. Wählen Sie **Weiter** aus.  
+8. Geben Sie auf der Seite **Zeitplanung** des Assistenten an, wann .NET Framework installiert werden soll. Sie können **Neu** auswählen, um eine Installationszeit zuzuweisen, oder die Software anweisen, die Installation bei An- oder Abmeldung des Benutzers oder so schnell wie möglich durchzuführen. Wählen Sie **Weiter** aus.  
   
 9. Verwenden Sie auf der Seite **Benutzerfreundlichkeit** des Assistenten die Standardwerte, und wählen Sie **Weiter** aus.  
   
@@ -193,9 +193,9 @@ In diesem Artikel wird schrittweise beschrieben, wie Systemadministratoren [!INC
   
 -   [Active Directory Domain Services](/windows/desktop/ad/active-directory-domain-services)  
   
--   [Domain Name System (DNS)](/windows-server/networking/dns/dns-top)  
+-   [DNS (Domain Name System)](/windows-server/networking/dns/dns-top)  
   
--   [Dynamic Host Configuration-Protokoll (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)  
+-   [Dynamic Host Configuration Protocol (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top)  
   
  **SQL Server 2008:**  
   

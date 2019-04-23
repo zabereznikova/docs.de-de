@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9aa04051a8aad56c653eaee1a79fb48a849cf377
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397984"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310563"
 ---
 # <a name="garbage-collection-and-performance"></a>Garbage Collection und Leistung
 <a name="top"></a> In diesem Thema werden Probleme im Zusammenhang mit Garbage Collection und Speicherauslastung besprochen. Es werden Probleme beschrieben, die den verwalteten Heap betreffen, und es wird erläutert, wie die Auswirkungen der Garbage Collection auf Ihre Anwendungen minimiert werden können. Jedes Problem bietet Links zu Verfahren, mit denen Sie die Probleme untersuchen können.  
@@ -63,7 +63,7 @@ ms.locfileid: "47397984"
 ### <a name="application-domain-resource-monitoring"></a>Überwachung von Anwendungsdomänenressourcen  
  Ab [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] können Hosts mit der Ressourcenüberwachung für die Anwendungsdomäne (ARM) die CPU- und Speicherauslastung pro Anwendungsdomäne überwachen. Weitere Informationen finden Sie unter [Überwachung von Anwendungsdomänenressourcen](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="troubleshooting_performance_issues"></a>   
 ## <a name="troubleshooting-performance-issues"></a>Problembehandlung bei Performanceproblemen  
@@ -187,7 +187,7 @@ ms.locfileid: "47397984"
 |------------------------|  
 |[Ermitteln Sie, ob die hohe CPU-Auslastung durch die Garbage Collection verursacht wird.](#HighCPU)<br /><br /> [Legen Sie einen Haltepunkt am Ende der Garbage Collection fest.](#GenBreak)|  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="troubleshooting_guidelines"></a>   
 ## <a name="troubleshooting-guidelines"></a>Richtlinien für die Problembehandlung  
@@ -228,7 +228,7 @@ ms.locfileid: "47397984"
   
      Bei der Garbage Collection auf dem Server ruft nur ein Thread **RestartEE** auf, sodass der Haltepunkt nur einmal während einer Garbage Collection der Generation 2 angelaufen wird.  
   
- [Zurück zum Anfang](#top)  
+ [Zurück nach oben](#top)  
   
 <a name="performance_check_procedures"></a>   
 ## <a name="performance-check-procedures"></a>Prozeduren zur Leistungsüberprüfung  
@@ -278,7 +278,7 @@ ms.locfileid: "47397984"
 <a name="OOMIsManaged"></a>   
 ##### <a name="to-determine-whether-the-out-of-memory-exception-is-managed"></a>So bestimmen Sie, ob die Ausnahme aufgrund ungenügenden Arbeitsspeichers verwaltet ist  
   
-1.  Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den Befehl zur Ausgabe von Ausnahmen (**pe**) ein:  
+1. Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den Befehl zur Ausgabe von Ausnahmen (**pe**) ein:  
   
      **!pe**  
   
@@ -292,7 +292,7 @@ ms.locfileid: "47397984"
     StackTrace (generated):  
     ```  
   
-2.  Wenn die Ausgabe keine Ausnahme angibt, müssen Sie ermitteln, welcher Thread die Ausnahme aufgrund ungenügenden Arbeitsspeichers ausgelöst hat. Geben Sie im Debugger den folgenden Befehl ein, um alle Threads mit ihren Aufruflisten anzuzeigen:  
+2. Wenn die Ausgabe keine Ausnahme angibt, müssen Sie ermitteln, welcher Thread die Ausnahme aufgrund ungenügenden Arbeitsspeichers ausgelöst hat. Geben Sie im Debugger den folgenden Befehl ein, um alle Threads mit ihren Aufruflisten anzuzeigen:  
   
      **~\*kb**  
   
@@ -302,7 +302,7 @@ ms.locfileid: "47397984"
     28adfb44 7923918f 5b61f2b4 00000000 5b61f2b4 mscorwks!RaiseTheException+0xa0   
     ```  
   
-3.  Sie können den folgenden Befehl verwenden, um geschachtelte Ausnahmen zu speichern.  
+3. Sie können den folgenden Befehl verwenden, um geschachtelte Ausnahmen zu speichern.  
   
      **!pe -nested**  
   
@@ -344,9 +344,9 @@ ms.locfileid: "47397984"
 <a name="Physical"></a>   
 ##### <a name="to-determine-whether-there-is-enough-physical-memory"></a>So bestimmen Sie, ob ausreichend physikalischer Speicher vorhanden ist  
   
-1.  Starten Sie Windows Task-Manager.  
+1. Starten Sie Windows Task-Manager.  
   
-2.  Prüfen Sie auf der Registerkarte **Leistung** den zugesicherten Wert. (Prüfen Sie unter Windows 7 den Wert **Zugesichert (KB)** in der **Systemgruppe**.)  
+2. Prüfen Sie auf der Registerkarte **Leistung** den zugesicherten Wert. (Prüfen Sie unter Windows 7 den Wert **Zugesichert (KB)** in der **Systemgruppe**.)  
   
      Wenn **Gesamt** nahe der **Grenze** ist, ist nicht genügend physischer Arbeitsspeicher verfügbar.  
   
@@ -415,7 +415,7 @@ ms.locfileid: "47397984"
   
      Wenn der verwaltete Heap groß ist, kann die Ausführung von **dumpheap** eine Weile dauern.  
   
-     Sie können die Analyse in den letzten Zeilen der Ausgabe beginnen, da diese die Objekte auflisten, die den meisten Platz verwenden. Zum Beispiel:  
+     Sie können die Analyse in den letzten Zeilen der Ausgabe beginnen, da diese die Objekte auflisten, die den meisten Platz verwenden. Beispiel:  
   
     ```  
     2c6108d4   173712     14591808 DevExpress.XtraGrid.Views.Grid.ViewInfo.GridCellInfo  
@@ -494,13 +494,13 @@ ms.locfileid: "47397984"
 <a name="Finalize"></a>   
 ##### <a name="to-determine-whether-there-are-objects-waiting-to-be-finalized"></a>So bestimmen Sie, ob Objekte auf einen Abschluss warten  
   
-1.  Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den folgenden Befehl ein:  
+1. Geben Sie im WinDbg-Debugger oder im Visual Studio-Debugger bei geladener SOS-Debuggererweiterung den folgenden Befehl ein:  
   
      **!finalizequeue**  
   
      Prüfen Sie die Anzahl der Objekte, die auf einen Abschluss warten. Wenn die Zahl hoch ist, müssen Sie überprüfen, weshalb diese Finalizer nicht schnell genug bzw. überhaupt nicht fortgesetzt werden können.  
   
-2.  Um eine Ausgabe der Threads abzurufen, geben Sie den folgenden Befehl ein:  
+2. Um eine Ausgabe der Threads abzurufen, geben Sie den folgenden Befehl ein:  
   
      **threads -special**  
   

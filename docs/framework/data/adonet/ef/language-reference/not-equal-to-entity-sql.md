@@ -3,10 +3,10 @@ title: '!= (Ungleich) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 3b4a02ad-ddfc-4c42-8dfa-676234461312
 ms.openlocfilehash: f5fdbbf2892781ce44dfe73e8cd80fbe0f74cf1c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310966"
 ---
 # <a name="-not-equal-to-entity-sql"></a>!= (Ungleich) (Entity SQL)
@@ -25,7 +25,7 @@ expression <> expression
  Jeder gültige Ausdruck. Beide Ausdrücke müssen implizit konvertierbare Datentypen sein.  
   
 ## <a name="result-types"></a>Ergebnistypen  
- `true` Wenn der linke Ausdruck ungleich dem rechten Ausdruck ist; andernfalls `false`.  
+ `true` , wenn der linke Ausdruck ungleich dem rechten Ausdruck ist, andernfalls `false`.  
   
 ## <a name="example"></a>Beispiel  
  In der folgenden Entity SQL-Abfrage wird der Operator "!=" verwendet, um zu ermitteln, ob der linke Ausdruck ungleich dem rechten Ausdruck ist. Diese Abfrage beruht auf dem "AdventureWorks Sales"-Modell. Führen Sie folgende Schritte aus, um diese Abfrage zu kompilieren und auszuführen:  

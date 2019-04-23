@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
 ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310251"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>Übersicht über das WSFederation-Authentifizierungsmodul
@@ -31,7 +31,7 @@ Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NE
 6. Die vertrauende Seite extrahiert die Ansprüche des Clients aus dem Sicherheitstoken und trifft eine Autorisierungsentscheidung.  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>Verwenden des Verbundauthentifizierungsmoduls mit ASP.NET  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) ist ein HTTP-Modul, in dem Sie die Verbundauthentifizierung hinzufügen kann eine [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Anwendung. Mit Verbundauthentifizierung kann der STS Authentifizierungslogik verwenden, sodass Sie sich auf das Schreiben von Geschäftslogik konzentrieren können.  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) ist ein HTTP-Modul, mit dem Sie einer [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Anwendung Verbundauthentifizierung hinzufügen können. Mit Verbundauthentifizierung kann der STS Authentifizierungslogik verwenden, sodass Sie sich auf das Schreiben von Geschäftslogik konzentrieren können.  
   
  Bei der Konfiguration des WS-FAM geben Sie den STS an, an den nicht authentifizierte Anforderungen umgeleitet werden sollen. Mit WIF können Sie einen Benutzer auf zwei Arten authentifizieren:  
   
@@ -61,7 +61,7 @@ Windows Identity Foundation (WIF) umfasst die Verbundauthentifizierung in ASP.NE
  ![Diagramm für die zeitliche Steuerung von SAM, das die Anmeldung mithilfe von Steuerelementen zeigt](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>Ereignisse  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule>, und die übergeordnete Klasse <xref:System.IdentityModel.Services.HttpModuleBase>, lösen Sie Ereignisse in verschiedenen Phasen der Verarbeitung einer HTTP-Anforderung. Sie können diese Ereignisse in der Datei `global.asax` der [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Anwendung bearbeiten.  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>, <xref:System.IdentityModel.Services.SessionAuthenticationModule> und die übergeordnete Klasse <xref:System.IdentityModel.Services.HttpModuleBase> lösen an verschiedenen Punkten der Verarbeitung einer HTTP-Anforderung Ereignisse aus. Sie können diese Ereignisse in der Datei `global.asax` der [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Anwendung bearbeiten.  
   
 -   Die ASP.NET-Infrastruktur ruft die <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A>-Methode des Moduls auf, um das Modul zu initialisieren.  
   

@@ -7,10 +7,10 @@ ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312097"
 ---
 # <a name="controlling-net-framework-logging"></a>Steuern der Protokollierung in .NET Framework
@@ -53,9 +53,9 @@ Provider                                 GUID
   
     -   Durch den `-p`-Parameter wird die Anbieter-GUID identifiziert.  
   
-    -   `0x1CCBD` Gibt die Kategorien von Ereignissen, die ausgelöst wird.  
+    -   `0x1CCBD` gibt die Kategorien der Ereignisse an, die ausgelöst werden.  
   
-    -   `0x5` Legt fest, den Umfang der Protokollierung (in diesem Fall "ausführlich" (5)).  
+    -   `0x5` legt die Ebene der Protokollierung fest (in diesem Fall "Ausführlich" (5)).  
   
     -   Mit dem `-ets`-Parameter wird Logman angewiesen, Befehle an Ereignisablaufverfolgungs-Sitzungen zu senden.  
   
@@ -111,4 +111,4 @@ Provider                                 GUID
 ## <a name="see-also"></a>Siehe auch
 
 - [Windows Performance Toolkit](/windows-hardware/test/wpt/)
-- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+- [ETW-Ereignisse in der Common Language Runtime](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

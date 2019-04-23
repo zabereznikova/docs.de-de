@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
 ms.openlocfilehash: 0d8428487c3c320a634914b99219e23befb70d55
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312162"
 ---
 # <a name="how-to-enable-streaming"></a>Vorgehensweise: Aktivieren des Streamingmodus
@@ -30,17 +30,17 @@ Windows Communication Foundation (WCF) kann Nachrichten, die mit der gepufferten
      [!code-csharp[c_HowTo_EnableStreaming#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#1)]
      [!code-vb[c_HowTo_EnableStreaming#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#1)]  
   
-     Der `GetStream`-Vorgang muss gepufferte Eingabedaten des Typs `string` erhalten, die dann gepuffert werden, und er gibt einen `Stream`-Wert zurück, der im Streamingmodus übertragen wird. Umgekehrt akzeptiert `UploadStream` einen (per Streaming übertragenen) `Stream` und gibt einen (gepufferten) `bool` zurück. `EchoStream` annimmt und zurückgibt `Stream` und ist ein Beispiel für einen Vorgang, dessen Eingabe- und Ausgabenachrichten im Streamingmodus übermittelt. `GetReversedStream` akzeptiert keine Eingaben und gibt einen `Stream`-Wert (im Streamingmodus) zurück.  
+     Der `GetStream`-Vorgang muss gepufferte Eingabedaten des Typs `string` erhalten, die dann gepuffert werden, und er gibt einen `Stream`-Wert zurück, der im Streamingmodus übertragen wird. Umgekehrt akzeptiert `UploadStream` einen (per Streaming übertragenen) `Stream` und gibt einen (gepufferten) `bool` zurück. `EchoStream` akzeptiert und gibt einen Wert des Typs `Stream` zurück und ist ein Beispiel für einen Vorgang, dessen Eingabe- und Ausgabenachrichten per Streaming übertragen werden. `GetReversedStream` akzeptiert keine Eingaben und gibt einen `Stream`-Wert (im Streamingmodus) zurück.  
   
 2. Der Streamingmodus muss für die Bindung aktiviert werden. Sie legen eine `TransferMode`-Eigenschaft fest, für die die folgenden Werte zulässig sind:  
   
     1.  `Buffered`,  
   
-    2.  `Streamed`, wodurch kommunikationsstream in beide Richtungen.  
+    2.  `Streamed`, womit ein Kommunikationsstream in beide Richtungen ermöglicht wird.  
   
-    3.  `StreamedRequest`, wodurch die Anforderung nur streaming.  
+    3.  `StreamedRequest`, womit der Streamingmodus lediglich für die Übertragung der Anforderung aktiviert wird.  
   
-    4.  `StreamedResponse`, womit die Antwort nur streaming.  
+    4.  `StreamedResponse`, womit der Streamingmodus lediglich für die Übertragung der Antwort aktiviert wird.  
   
      Die `BasicHttpBinding`-Bindung macht die `TransferMode`-Eigenschaft für die Bindung verfügbar. Dies gilt ebenso für `NetTcpBinding` und `NetNamedPipeBinding`. Die `TransferMode`-Eigenschaft kann auch für das Transportbindungselement festgelegt und in einer benutzerdefinierten Bindung verwendet werden.  
   
@@ -69,7 +69,7 @@ Windows Communication Foundation (WCF) kann Nachrichten, die mit der gepufferten
   
 1. Wenn jedes Element eines Datenstreams beim Senden oder Empfangen auf eine besondere Weise verarbeitet werden soll, müssen Sie eine benutzerdefinierte Streamklasse von der <xref:System.IO.Stream>-Klasse ableiten Der folgende Code enthält als Beispiel für einen benutzerdefinierten Stream die `GetReversedStream`-Methode und die `ReverseStream`-Klasse.  
   
-     `GetReversedStream` Erstellt und gibt eine neue Instanz der `ReverseStream`. Die tatsächliche Verarbeitung erfolgt, wenn das System Daten aus dem `ReverseStream`-Objekt liest. Die `ReverseStream.Read`-Methode liest eine Gruppe von Bytes aus der zugrunde liegenden Datei, invertiert die Reihenfolge der Bytes und gibt die invertierten Bytes zurück. Diese Methode invertiert nicht den gesamten Dateiinhalt, sondern jeweils nur eine Gruppe von Bytes. Dieses Beispiel zeigt, wie Daten im Streamingmodus verarbeitet werden, wenn Daten aus dem Stream gelesen oder in den Stream geschrieben werden.  
+     `GetReversedStream` erstellt eine neue Instanz der `ReverseStream`-Klasse und gibt eine Instanz dieser Klasse zurück. Die tatsächliche Verarbeitung erfolgt, wenn das System Daten aus dem `ReverseStream`-Objekt liest. Die `ReverseStream.Read`-Methode liest eine Gruppe von Bytes aus der zugrunde liegenden Datei, invertiert die Reihenfolge der Bytes und gibt die invertierten Bytes zurück. Diese Methode invertiert nicht den gesamten Dateiinhalt, sondern jeweils nur eine Gruppe von Bytes. Dieses Beispiel zeigt, wie Daten im Streamingmodus verarbeitet werden, wenn Daten aus dem Stream gelesen oder in den Stream geschrieben werden.  
   
      [!code-csharp[c_HowTo_EnableStreaming#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/cs/service.cs#2)]
      [!code-vb[c_HowTo_EnableStreaming#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_enablestreaming/vb/service.vb#2)]  

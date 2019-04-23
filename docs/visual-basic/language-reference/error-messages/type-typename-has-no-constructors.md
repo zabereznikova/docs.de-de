@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
 ms.openlocfilehash: 8564499b9ff55514179314217b7d40d8d3cdf6a2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311643"
 ---
 # <a name="type-typename-has-no-constructors"></a>Typ "\<Typname >' hat keine Konstruktoren
@@ -32,4 +32,4 @@ Ein Typ unterstützt nicht den Aufruf von `Sub New()`. Eine mögliche Ursache is
 ## <a name="see-also"></a>Siehe auch
 
 - [Objekte und Klassen](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [Sprechen Sie mit uns](/visualstudio/ide/talk-to-us)

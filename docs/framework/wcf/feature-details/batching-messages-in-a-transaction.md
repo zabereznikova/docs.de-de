@@ -5,10 +5,10 @@ helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
 ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310524"
 ---
 # <a name="batching-messages-in-a-transaction"></a>Batchverarbeitung von Nachrichten in einer Transaktion
@@ -20,11 +20,11 @@ Anwendungen, die mit Warteschlangen arbeiten, verwenden Transaktionen, um eine r
 ## <a name="committing-a-transaction"></a>Durchführen eines Commits für eine Transaktion  
  Bei Batchtransaktionen werden Commits auf Grundlage der folgenden Punkte durchgeführt:  
   
--   `MaxBatchSize`sein. Eine Eigenschaft des <xref:System.ServiceModel.Description.TransactedBatchingBehavior>-Verhaltens. Durch diese Eigenschaft wird die maximale Anzahl von Nachrichten in einen Batch bestimmt. Sobald diese Anzahl erreicht ist, wird ein Commit für den Batch durchgeführt. Es handelt sich bei diesem Wert allerdings um einen flexiblen Grenzwert, das heißt, dass für einen Batch auch schon vor Erreichen dieser Anzahl von Nachrichten ein Commit durchgeführt werden kann.  
+-   `MaxBatchSize`. Eine Eigenschaft des <xref:System.ServiceModel.Description.TransactedBatchingBehavior>-Verhaltens. Durch diese Eigenschaft wird die maximale Anzahl von Nachrichten in einen Batch bestimmt. Sobald diese Anzahl erreicht ist, wird ein Commit für den Batch durchgeführt. Es handelt sich bei diesem Wert allerdings um einen flexiblen Grenzwert, das heißt, dass für einen Batch auch schon vor Erreichen dieser Anzahl von Nachrichten ein Commit durchgeführt werden kann.  
   
--   `Transaction Timeout`sein. Sobald 80 Prozent des Transaktionstimeouts verstrichen sind, wird ein Commit für den Batch durchgeführt und ein neuer Batch erstellt. Das heißt, dass der Commit für den Batch durchgeführt wird, sobald nur noch maximal 20 Prozent der für die Transaktion erlaubten Zeit übrig sind.  
+-   `Transaction Timeout`. Sobald 80 Prozent des Transaktionstimeouts verstrichen sind, wird ein Commit für den Batch durchgeführt und ein neuer Batch erstellt. Das heißt, dass der Commit für den Batch durchgeführt wird, sobald nur noch maximal 20 Prozent der für die Transaktion erlaubten Zeit übrig sind.  
   
--   `TransactionScopeRequired`sein. Bei der Verarbeitung von Batches von Nachrichten, wenn WCF eine gefunden, die `TransactionScopeRequired`  =  `false`, er führt einen Commit für Batch und erneut öffnet einen neuen Batch beim Empfang der ersten Nachricht mit `TransactionScopeRequired`  =  `true` und `TransactionAutoComplete`  = `true`.  
+-   `TransactionScopeRequired`. Bei der Verarbeitung von Batches von Nachrichten, wenn WCF eine gefunden, die `TransactionScopeRequired`  =  `false`, er führt einen Commit für Batch und erneut öffnet einen neuen Batch beim Empfang der ersten Nachricht mit `TransactionScopeRequired`  =  `true` und `TransactionAutoComplete`  = `true`.  
   
 -   Falls die Warteschlange keine weiteren Nachrichten mehr enthält, wird ein Commit für den aktuellen Batch durchgeführt, selbst wenn `MaxBatchSize` noch nicht erreicht wurde bzw. noch keine 80 Prozent des Transaktionstimeouts verstrichen sind.  
   
@@ -85,4 +85,4 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
 ## <a name="see-also"></a>Siehe auch
 
 - [Warteschlangenübersicht](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Warteschlangen in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+- [Queuing in WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

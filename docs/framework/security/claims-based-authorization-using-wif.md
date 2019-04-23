@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312175"
 ---
 # <a name="claims-based-authorization-using-wif"></a>Anspruchsbasierte Autorisierung mit WIF
@@ -60,4 +60,4 @@ In einer Anwendung der vertrauenden Seite bestimmt die Autorisierung, auf welche
   
 5. Der Zugriff wird gewährt, wenn das Ergebnis "true" ist, und verweigert, wenn es "false" ist. Beispielsweise könnte die Regel lauten, dass der Benutzer mindestens 21 Jahre alt sein und in Hessen leben muss.  
   
- <xref:System.Security.Claims.ClaimsAuthorizationManager> ist nützlich für die entscheidungslogik für anspruchsbasierte Autorisierung in Ihren Anwendungen zu externalisieren. ClaimsAuthorizationManager ist eine WIF-Komponente, die im Lieferumfang von .NET 4.5 enthalten ist. Mit ClaimsAuthorizationManager können Sie eingehende Anforderungen abfangen und eine Logik Ihrer Wahl implementieren, um Autorisierungsentscheidungen auf der Basis eingehender Ansprüche zu treffen. Dies ist wichtig, wenn die Autorisierungslogik geändert werden muss. In diesem Fall beeinträchtigt die Verwendung von ClaimsAuthorizationManager nicht die Integrität der Anwendung. Darüber hinaus wird die Wahrscheinlichkeit eines Anwendungsfehlers aufgrund der Änderung reduziert. Weitere Informationen zum Verwenden von ClaimsAuthenticationManager zum Implementieren von anspruchsbasierter Zugriffssteuerung finden Sie unter [so wird's gemacht: Implementieren von Autorisierung in einer Claims Aware ASP.NET-Anwendung mithilfe von WIF und ACS Ansprüchen](https://go.microsoft.com/fwlink/?LinkID=247446).
+ <xref:System.Security.Claims.ClaimsAuthorizationManager> ist nützlich, um die Entscheidungslogik für die anspruchsbasierte Autorisierung in Anwendungen zu externalisieren. ClaimsAuthorizationManager ist eine WIF-Komponente, die im Lieferumfang von .NET 4.5 enthalten ist. Mit ClaimsAuthorizationManager können Sie eingehende Anforderungen abfangen und eine Logik Ihrer Wahl implementieren, um Autorisierungsentscheidungen auf der Basis eingehender Ansprüche zu treffen. Dies ist wichtig, wenn die Autorisierungslogik geändert werden muss. In diesem Fall beeinträchtigt die Verwendung von ClaimsAuthorizationManager nicht die Integrität der Anwendung. Darüber hinaus wird die Wahrscheinlichkeit eines Anwendungsfehlers aufgrund der Änderung reduziert. Weitere Informationen zum Verwenden von ClaimsAuthenticationManager zum Implementieren von anspruchsbasierter Zugriffssteuerung finden Sie unter [so wird's gemacht: Implementieren von Autorisierung in einer Claims Aware ASP.NET-Anwendung mithilfe von WIF und ACS Ansprüchen](https://go.microsoft.com/fwlink/?LinkID=247446).

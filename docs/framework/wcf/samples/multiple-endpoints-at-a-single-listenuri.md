@@ -3,10 +3,10 @@ title: Mehrere Endpunkte unter einem ListenUri
 ms.date: 03/30/2017
 ms.assetid: 911ffad4-4d47-4430-b7c2-79192ce6bcbd
 ms.openlocfilehash: 6249690b7fdc95affd21eee13e0c6e2af1c4f8a0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312357"
 ---
 # <a name="multiple-endpoints-at-a-single-listenuri"></a>Mehrere Endpunkte unter einem ListenUri
@@ -39,7 +39,7 @@ In diesem Beispiel wird ein Dienst gezeigt, der mehrere Endpunkte unter einem ei
   
  Alle drei Endpunkte werden unter demselben `ListenUri` gehostet und verwenden dieselbe `binding`. Endpunkte unter demselben `ListenUri` müssen dieselbe Bindung besitzen, da sie gemeinsam einen einzigen Kanalstapel nutzen, der Nachrichten an dieser physischen Adresse des Computers überwacht. Die `address` jedes Endpunkts ist ein URN. Obwohl Adressen in der Regel physische Speicherplätze darstellen, kann die Adresse eigentlich ein beliebiger URI sein, da die Adresse für den Abgleich und die Filterung verwendet wird, wie in diesem Beispiel gezeigt.  
   
- Da alle drei Endpunkte denselben `ListenUri`, wenn eine Nachricht eintrifft, Windows Communication Foundation (WCF) müssen entscheiden, welcher Endpunkt die Nachricht bestimmt ist. Jeder Endpunkt besitzt einen Nachrichtenfilter, der aus zwei Teilen besteht: dem Adressfilter und dem Vertragsfilter. Der Adressfilter gleicht `To` der SOAP-Nachricht mit der Adresse des Dienstendpunkts ab. So sind beispielsweise nur an `To "Urn:OtherEcho"` adressierte Nachrichten für den dritten Endpunkt dieses Diensts vorgesehen. Der Vertragsfilter gleicht die den Vorgängen eines besonderen Vertrags zugeordneten Aktionen ab. Nachrichten mit der Aktion von `IEcho` `Echo` mit die vertragsfiltern des zweiten und dritten Endpunkts dieses Diensts, übereinstimmt, da beide Endpunkte hosten die `IEcho` Vertrag.  
+ Da alle drei Endpunkte denselben `ListenUri`, wenn eine Nachricht eintrifft, Windows Communication Foundation (WCF) müssen entscheiden, welcher Endpunkt die Nachricht bestimmt ist. Jeder Endpunkt besitzt einen Nachrichtenfilter, der aus zwei Teilen besteht: dem Adressfilter und dem Vertragsfilter. Der Adressfilter gleicht `To` der SOAP-Nachricht mit der Adresse des Dienstendpunkts ab. So sind beispielsweise nur an `To "Urn:OtherEcho"` adressierte Nachrichten für den dritten Endpunkt dieses Diensts vorgesehen. Der Vertragsfilter gleicht die den Vorgängen eines besonderen Vertrags zugeordneten Aktionen ab. Nachrichten mit der Aktion von `IEcho` `Echo` stimmen beispielsweise mit den Vertragsfiltern des zweiten und dritten Endpunkts dieses Diensts überein, da beide Endpunkte den `IEcho`-Vertrag hosten.  
   
  Deshalb ermöglicht es die Kombination aus Adressfilter und Vertragsfilter, jede am `ListenUri` dieses Diensts eingehende Nachricht zum richtigen Endpunkt weiterzuleiten. Der dritte Endpunkt wird von den anderen beiden unterschieden, da er Nachrichten akzeptiert, die von den anderen Endpunkten an eine andere Adresse gesendet wurden. Der erste und der zweite Endpunkt werden anhand ihrer Verträge (die Aktion der eingehenden Nachricht) voneinander unterschieden.  
   

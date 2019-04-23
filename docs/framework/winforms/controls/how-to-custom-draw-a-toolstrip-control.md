@@ -17,18 +17,18 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
 ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311044"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>Vorgehensweise: Benutzerdefiniertes Zeichnen eines ToolStrip-Steuerelements
 Die <xref:System.Windows.Forms.ToolStrip>-Steuerelemente verfügen über die folgenden zugeordneten Renderingklassen (Zeichnungsklassen):  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> Stellt das Aussehen und den Stil des Betriebssystems.  
+-   <xref:System.Windows.Forms.ToolStripSystemRenderer> stellt das Aussehen und den Stil des Betriebssystems bereit.  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> Stellt das Aussehen und den Stil von Microsoft Office.  
+-   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> stellt das Aussehen und den Stil von Microsoft Office bereit.  
   
 -   <xref:System.Windows.Forms.ToolStripRenderer> ist die abstrakte Basisklasse für die beiden anderen Renderingklassen.  
   
@@ -139,5 +139,5 @@ Die <xref:System.Windows.Forms.ToolStrip>-Steuerelemente verfügen über die fol
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [Steuerelemente mit integrierter Ownerdrawing-Unterstützung](controls-with-built-in-owner-drawing-support.md)
-- [Vorgehensweise: Erstellen und Festlegen eines benutzerdefinierten Renderers für das ToolStrip-Steuerelement in Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [Vorgehensweise: Erstellen und Festlegen eines benutzerdefinierten Renderers für das ToolStrip-Steuerelement in Windows Forms](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [Übersicht über das ToolStrip-Steuerelement](toolstrip-control-overview-windows-forms.md)
