@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], ListBox
 ms.assetid: b91bb352-4f51-44e0-9017-a041f216c852
 ms.openlocfilehash: 69f93b902fc3c35749871a187e57d45a404c6602
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055052"
 ---
-# <a name="listbox"></a><span data-ttu-id="be9d5-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="be9d5-102">ListBox</span></span>
-<span data-ttu-id="be9d5-103">Ein <xref:System.Windows.Controls.ListBox> -Steuerelement stellt Benutzern eine Liste auswählbarer Elemente bereit.</span><span class="sxs-lookup"><span data-stu-id="be9d5-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
+# <a name="listbox"></a><span data-ttu-id="9a650-102">ListBox</span><span class="sxs-lookup"><span data-stu-id="9a650-102">ListBox</span></span>
+<span data-ttu-id="9a650-103">Ein <xref:System.Windows.Controls.ListBox> -Steuerelement stellt Benutzern eine Liste auswählbarer Elemente bereit.</span><span class="sxs-lookup"><span data-stu-id="9a650-103">A <xref:System.Windows.Controls.ListBox> control provides users with a list of selectable items.</span></span>  
   
- <span data-ttu-id="be9d5-104">Die folgende Abbildung veranschaulicht einen typischen <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="be9d5-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
+ <span data-ttu-id="9a650-104">Die folgende Abbildung veranschaulicht einen typischen <xref:System.Windows.Controls.ListBox>.</span><span class="sxs-lookup"><span data-stu-id="9a650-104">The following figure illustrates a typical <xref:System.Windows.Controls.ListBox>.</span></span>  
   
- <span data-ttu-id="be9d5-105">![Bildschirmabbildung von ListBox](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="be9d5-105">![ListBox screenshot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
-<span data-ttu-id="be9d5-106">Typische ListBox-Element</span><span class="sxs-lookup"><span data-stu-id="be9d5-106">Typical ListBox</span></span>  
+ <span data-ttu-id="9a650-105">![Bildschirmabbildung von ListBox](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span><span class="sxs-lookup"><span data-stu-id="9a650-105">![ListBox screenshot](./media/ss-ctl-listbox.gif "SS_CTL_listbox")</span></span>  
+<span data-ttu-id="9a650-106">Typische ListBox-Element</span><span class="sxs-lookup"><span data-stu-id="9a650-106">Typical ListBox</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="be9d5-107">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="be9d5-107">In This Section</span></span>  
- [<span data-ttu-id="be9d5-108">Gewusst wie-Themen</span><span class="sxs-lookup"><span data-stu-id="be9d5-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="9a650-107">In diesem Abschnitt</span><span class="sxs-lookup"><span data-stu-id="9a650-107">In This Section</span></span>  
+ [<span data-ttu-id="9a650-108">Themen zu Vorgehensweisen</span><span class="sxs-lookup"><span data-stu-id="9a650-108">How-to Topics</span></span>](listbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="be9d5-109">Referenz</span><span class="sxs-lookup"><span data-stu-id="be9d5-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="9a650-109">Referenz</span><span class="sxs-lookup"><span data-stu-id="9a650-109">Reference</span></span>  
  <xref:System.Windows.Controls.ListBox>  
   <xref:System.Windows.Controls.ListBoxItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="be9d5-110">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="be9d5-110">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="9a650-110">Verwandte Abschnitte</span><span class="sxs-lookup"><span data-stu-id="9a650-110">Related Sections</span></span>

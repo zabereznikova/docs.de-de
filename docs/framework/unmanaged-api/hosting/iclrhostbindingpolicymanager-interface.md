@@ -17,33 +17,33 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e494bbbd08a77329b7b64816216e4bb2e1b724a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074195"
 ---
-# <a name="iclrhostbindingpolicymanager-interface"></a><span data-ttu-id="0662a-102">ICLRHostBindingPolicyManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0662a-102">ICLRHostBindingPolicyManager Interface</span></span>
-<span data-ttu-id="0662a-103">Stellt Methoden für den Host zum Bewerten von aktuellen Bindungsrichtlinie und kommunizieren von Änderungen für eine angegebene Assembly bereit.</span><span class="sxs-lookup"><span data-stu-id="0662a-103">Provides methods for the host to evaluate current binding policy and communicate policy changes for a specified assembly.</span></span>  
+# <a name="iclrhostbindingpolicymanager-interface"></a><span data-ttu-id="a6112-102">ICLRHostBindingPolicyManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a6112-102">ICLRHostBindingPolicyManager Interface</span></span>
+<span data-ttu-id="a6112-103">Stellt Methoden für den Host zum Bewerten von aktuellen Bindungsrichtlinie und kommunizieren von Änderungen für eine angegebene Assembly bereit.</span><span class="sxs-lookup"><span data-stu-id="a6112-103">Provides methods for the host to evaluate current binding policy and communicate policy changes for a specified assembly.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="0662a-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="0662a-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="a6112-104">Methoden</span><span class="sxs-lookup"><span data-stu-id="a6112-104">Methods</span></span>  
   
-|<span data-ttu-id="0662a-105">Methode</span><span class="sxs-lookup"><span data-stu-id="0662a-105">Method</span></span>|<span data-ttu-id="0662a-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="0662a-106">Description</span></span>|  
+|<span data-ttu-id="a6112-105">Methode</span><span class="sxs-lookup"><span data-stu-id="a6112-105">Method</span></span>|<span data-ttu-id="a6112-106">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="a6112-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="0662a-107">EvaluatePolicy-Methode</span><span class="sxs-lookup"><span data-stu-id="0662a-107">EvaluatePolicy Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-evaluatepolicy-method.md)|<span data-ttu-id="0662a-108">Wertet Richtlinien für die Bindung für den Host.</span><span class="sxs-lookup"><span data-stu-id="0662a-108">Evaluates binding policy on behalf of the host.</span></span>|  
-|[<span data-ttu-id="0662a-109">ModifyApplicationPolicy-Methode</span><span class="sxs-lookup"><span data-stu-id="0662a-109">ModifyApplicationPolicy Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md)|<span data-ttu-id="0662a-110">Ändert die Richtlinie für die angegebene Assembly und erstellt eine neue Version der Richtlinie.</span><span class="sxs-lookup"><span data-stu-id="0662a-110">Modifies the binding policy for the specified assembly, and creates a new version of the policy.</span></span>|  
+|[<span data-ttu-id="a6112-107">EvaluatePolicy-Methode</span><span class="sxs-lookup"><span data-stu-id="a6112-107">EvaluatePolicy Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-evaluatepolicy-method.md)|<span data-ttu-id="a6112-108">Wertet Richtlinien für die Bindung für den Host.</span><span class="sxs-lookup"><span data-stu-id="a6112-108">Evaluates binding policy on behalf of the host.</span></span>|  
+|[<span data-ttu-id="a6112-109">ModifyApplicationPolicy-Methode</span><span class="sxs-lookup"><span data-stu-id="a6112-109">ModifyApplicationPolicy Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md)|<span data-ttu-id="a6112-110">Ändert die Richtlinie für die angegebene Assembly und erstellt eine neue Version der Richtlinie.</span><span class="sxs-lookup"><span data-stu-id="a6112-110">Modifies the binding policy for the specified assembly, and creates a new version of the policy.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0662a-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="0662a-111">Requirements</span></span>  
- <span data-ttu-id="0662a-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0662a-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a6112-111">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a6112-111">Requirements</span></span>  
+ <span data-ttu-id="a6112-112">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a6112-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0662a-113">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0662a-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="a6112-113">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a6112-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="0662a-114">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="0662a-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="a6112-114">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="a6112-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="0662a-115">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="0662a-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="a6112-115">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a6112-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0662a-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0662a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a6112-116">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a6112-116">See also</span></span>
 
-- [<span data-ttu-id="0662a-117">ICLRAssemblyIdentityManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0662a-117">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
-- [<span data-ttu-id="0662a-118">IHostAssemblyStore-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="0662a-118">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
-- [<span data-ttu-id="0662a-119">Hostingschnittstellen</span><span class="sxs-lookup"><span data-stu-id="0662a-119">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [<span data-ttu-id="a6112-117">ICLRAssemblyIdentityManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a6112-117">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+- [<span data-ttu-id="a6112-118">IHostAssemblyStore-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a6112-118">IHostAssemblyStore Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)
+- [<span data-ttu-id="a6112-119">Hosten von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="a6112-119">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
