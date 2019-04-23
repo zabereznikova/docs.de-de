@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df9cc0cc86237b1ec439a4ec4fa6a75429c416d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111175"
 ---
-# <a name="corvalidateimage-function"></a><span data-ttu-id="eec08-102">_CorValidateImage-Funktion</span><span class="sxs-lookup"><span data-stu-id="eec08-102">_CorValidateImage Function</span></span>
-<span data-ttu-id="eec08-103">Überprüft Images des verwalteten Moduls, und benachrichtigt das Betriebssystemladeprogramm, nachdem sie geladen wurden.</span><span class="sxs-lookup"><span data-stu-id="eec08-103">Validates managed module images, and notifies the operating system loader after they have been loaded.</span></span>  
+# <a name="corvalidateimage-function"></a><span data-ttu-id="d37d5-102">_CorValidateImage-Funktion</span><span class="sxs-lookup"><span data-stu-id="d37d5-102">_CorValidateImage Function</span></span>
+<span data-ttu-id="d37d5-103">Überprüft Images des verwalteten Moduls, und benachrichtigt das Betriebssystemladeprogramm, nachdem sie geladen wurden.</span><span class="sxs-lookup"><span data-stu-id="d37d5-103">Validates managed module images, and notifies the operating system loader after they have been loaded.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="eec08-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="eec08-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d37d5-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d37d5-104">Syntax</span></span>  
   
 ```  
 STDAPI _CorValidateImage (   
@@ -35,53 +35,53 @@ STDAPI _CorValidateImage (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="eec08-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="eec08-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d37d5-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d37d5-105">Parameters</span></span>  
  `ImageBase`  
- <span data-ttu-id="eec08-106">[in] Ein Zeiger auf den Anfangsort des Bildes, das als Überprüfen von verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="eec08-106">[in] A pointer to the starting location of the image to validate as managed code.</span></span> <span data-ttu-id="eec08-107">Das Image muss bereits in den Arbeitsspeicher geladen werden.</span><span class="sxs-lookup"><span data-stu-id="eec08-107">The image must already be loaded into memory.</span></span>  
+ <span data-ttu-id="d37d5-106">[in] Ein Zeiger auf den Anfangsort des Bildes, das als Überprüfen von verwaltetem Code.</span><span class="sxs-lookup"><span data-stu-id="d37d5-106">[in] A pointer to the starting location of the image to validate as managed code.</span></span> <span data-ttu-id="d37d5-107">Das Image muss bereits in den Arbeitsspeicher geladen werden.</span><span class="sxs-lookup"><span data-stu-id="d37d5-107">The image must already be loaded into memory.</span></span>  
   
  `FileName`  
- <span data-ttu-id="eec08-108">[in] Der Dateiname des Bilds.</span><span class="sxs-lookup"><span data-stu-id="eec08-108">[in] The file name of the image.</span></span>  
+ <span data-ttu-id="d37d5-108">[in] Der Dateiname des Bilds.</span><span class="sxs-lookup"><span data-stu-id="d37d5-108">[in] The file name of the image.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="eec08-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="eec08-109">Return Value</span></span>  
- <span data-ttu-id="eec08-110">Diese Funktion gibt die Standardwerte zurück `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, und `E_FAIL`, sowie die folgenden Werte.</span><span class="sxs-lookup"><span data-stu-id="eec08-110">This function returns the standard values `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, and `E_FAIL`, as well as the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d37d5-109">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="d37d5-109">Return Value</span></span>  
+ <span data-ttu-id="d37d5-110">Diese Funktion gibt die Standardwerte zurück `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, und `E_FAIL`, sowie die folgenden Werte.</span><span class="sxs-lookup"><span data-stu-id="d37d5-110">This function returns the standard values `E_INVALIDARG`, `E_OUTOFMEMORY`, `E_UNEXPECTED`, and `E_FAIL`, as well as the following values.</span></span>  
   
-|<span data-ttu-id="eec08-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="eec08-111">Return value</span></span>|<span data-ttu-id="eec08-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="eec08-112">Description</span></span>|  
+|<span data-ttu-id="d37d5-111">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="d37d5-111">Return value</span></span>|<span data-ttu-id="d37d5-112">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="d37d5-112">Description</span></span>|  
 |------------------|-----------------|  
-|`STATUS_INVALID_IMAGE_FORMAT`|<span data-ttu-id="eec08-113">Das Image ist ungültig.</span><span class="sxs-lookup"><span data-stu-id="eec08-113">The image is invalid.</span></span> <span data-ttu-id="eec08-114">Dieser Wert muss es sich um das HRESULT 0xC000007BL auf.</span><span class="sxs-lookup"><span data-stu-id="eec08-114">This value has the HRESULT 0xC000007BL.</span></span>|  
-|`STATUS_SUCCESS`|<span data-ttu-id="eec08-115">Das Image ist ungültig.</span><span class="sxs-lookup"><span data-stu-id="eec08-115">The image is valid.</span></span> <span data-ttu-id="eec08-116">Dieser Wert muss es sich um das HRESULT 0x00000000L auf.</span><span class="sxs-lookup"><span data-stu-id="eec08-116">This value has the HRESULT 0x00000000L.</span></span>|  
+|`STATUS_INVALID_IMAGE_FORMAT`|<span data-ttu-id="d37d5-113">Das Image ist ungültig.</span><span class="sxs-lookup"><span data-stu-id="d37d5-113">The image is invalid.</span></span> <span data-ttu-id="d37d5-114">Dieser Wert muss es sich um das HRESULT 0xC000007BL auf.</span><span class="sxs-lookup"><span data-stu-id="d37d5-114">This value has the HRESULT 0xC000007BL.</span></span>|  
+|`STATUS_SUCCESS`|<span data-ttu-id="d37d5-115">Das Image ist ungültig.</span><span class="sxs-lookup"><span data-stu-id="d37d5-115">The image is valid.</span></span> <span data-ttu-id="d37d5-116">Dieser Wert muss es sich um das HRESULT 0x00000000L auf.</span><span class="sxs-lookup"><span data-stu-id="d37d5-116">This value has the HRESULT 0x00000000L.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="eec08-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="eec08-117">Remarks</span></span>  
- <span data-ttu-id="eec08-118">In Windows XP und höheren Versionen überprüft vom Ladeprogramm des Betriebssystems nach verwalteten Modulen durch untersuchen das Verzeichnis der COM-Deskriptor-Bit in den Header zu common Object File-Format (COFF).</span><span class="sxs-lookup"><span data-stu-id="eec08-118">In Windows XP and later versions, the operating system loader checks for managed modules by examining the COM Descriptor Directory bit in the common object file format (COFF) header.</span></span> <span data-ttu-id="eec08-119">Ein festgelegtes Bit gibt an, ein verwaltetes Modul.</span><span class="sxs-lookup"><span data-stu-id="eec08-119">A set bit indicates a managed module.</span></span> <span data-ttu-id="eec08-120">Wenn das Ladeprogramm ein verwaltetes Modul erkannt wird, lädt es "Mscoree.dll" und ruft `_CorValidateImage`, die die folgenden Aktionen ausführt:</span><span class="sxs-lookup"><span data-stu-id="eec08-120">If the loader detects a managed module, it loads MsCorEE.dll and calls `_CorValidateImage`, which performs the following actions:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d37d5-117">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d37d5-117">Remarks</span></span>  
+ <span data-ttu-id="d37d5-118">In Windows XP und höheren Versionen überprüft vom Ladeprogramm des Betriebssystems nach verwalteten Modulen durch untersuchen das Verzeichnis der COM-Deskriptor-Bit in den Header zu common Object File-Format (COFF).</span><span class="sxs-lookup"><span data-stu-id="d37d5-118">In Windows XP and later versions, the operating system loader checks for managed modules by examining the COM Descriptor Directory bit in the common object file format (COFF) header.</span></span> <span data-ttu-id="d37d5-119">Ein festgelegtes Bit gibt an, ein verwaltetes Modul.</span><span class="sxs-lookup"><span data-stu-id="d37d5-119">A set bit indicates a managed module.</span></span> <span data-ttu-id="d37d5-120">Wenn das Ladeprogramm ein verwaltetes Modul erkannt wird, lädt es "Mscoree.dll" und ruft `_CorValidateImage`, die die folgenden Aktionen ausführt:</span><span class="sxs-lookup"><span data-stu-id="d37d5-120">If the loader detects a managed module, it loads MsCorEE.dll and calls `_CorValidateImage`, which performs the following actions:</span></span>  
   
--   <span data-ttu-id="eec08-121">Bestätigt, dass das Bild, ein gültiges verwaltetes Modul ist.</span><span class="sxs-lookup"><span data-stu-id="eec08-121">Confirms that the image is a valid managed module.</span></span>  
+-   <span data-ttu-id="d37d5-121">Bestätigt, dass das Bild, ein gültiges verwaltetes Modul ist.</span><span class="sxs-lookup"><span data-stu-id="d37d5-121">Confirms that the image is a valid managed module.</span></span>  
   
--   <span data-ttu-id="eec08-122">Ändert den Einstiegspunkt in das Abbild an einen Einstiegspunkt in die common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="eec08-122">Changes the entry point in the image to an entry point in the common language runtime (CLR).</span></span>  
+-   <span data-ttu-id="d37d5-122">Ändert den Einstiegspunkt in das Abbild an einen Einstiegspunkt in die common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="d37d5-122">Changes the entry point in the image to an entry point in the common language runtime (CLR).</span></span>  
   
--   <span data-ttu-id="eec08-123">Für 64-Bit-Versionen von Windows ändert das Image im Arbeitsspeicher vom Format PE32 in das Format PE32 + transformieren.</span><span class="sxs-lookup"><span data-stu-id="eec08-123">For 64-bit versions of Windows, modifies the image that is in memory by transforming it from PE32 to PE32+ format.</span></span>  
+-   <span data-ttu-id="d37d5-123">Für 64-Bit-Versionen von Windows ändert das Image im Arbeitsspeicher vom Format PE32 in das Format PE32 + transformieren.</span><span class="sxs-lookup"><span data-stu-id="d37d5-123">For 64-bit versions of Windows, modifies the image that is in memory by transforming it from PE32 to PE32+ format.</span></span>  
   
--   <span data-ttu-id="eec08-124">Benachrichtigt das Ladeprogramm, wenn die Images des verwalteten Moduls geladen werden.</span><span class="sxs-lookup"><span data-stu-id="eec08-124">Returns to the loader when the managed module images are loaded.</span></span>  
+-   <span data-ttu-id="d37d5-124">Benachrichtigt das Ladeprogramm, wenn die Images des verwalteten Moduls geladen werden.</span><span class="sxs-lookup"><span data-stu-id="d37d5-124">Returns to the loader when the managed module images are loaded.</span></span>  
   
- <span data-ttu-id="eec08-125">Für ausführbare Images vom Ladeprogramm des Betriebssystems dann ruft der [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) -Funktion, unabhängig von der Einstiegspunkt in die ausführbare Datei angegeben.</span><span class="sxs-lookup"><span data-stu-id="eec08-125">For executable images, the operating system loader then calls the [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) function, regardless of the entry point specified in the executable.</span></span> <span data-ttu-id="eec08-126">DLL-Assembly-Images, das Ladeprogramm ruft die [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) Funktion.</span><span class="sxs-lookup"><span data-stu-id="eec08-126">For DLL assembly images, the loader calls the [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) function.</span></span>  
+ <span data-ttu-id="d37d5-125">Für ausführbare Images vom Ladeprogramm des Betriebssystems dann ruft der [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) -Funktion, unabhängig von der Einstiegspunkt in die ausführbare Datei angegeben.</span><span class="sxs-lookup"><span data-stu-id="d37d5-125">For executable images, the operating system loader then calls the [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md) function, regardless of the entry point specified in the executable.</span></span> <span data-ttu-id="d37d5-126">DLL-Assembly-Images, das Ladeprogramm ruft die [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) Funktion.</span><span class="sxs-lookup"><span data-stu-id="d37d5-126">For DLL assembly images, the loader calls the [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md) function.</span></span>  
   
- `_CorExeMain` <span data-ttu-id="eec08-127">oder `_CorDllMain` führt folgende Aktionen aus:</span><span class="sxs-lookup"><span data-stu-id="eec08-127">or `_CorDllMain` performs the following actions:</span></span>  
+ <span data-ttu-id="d37d5-127">`_CorExeMain` oder `_CorDllMain` führt folgende Aktionen aus:</span><span class="sxs-lookup"><span data-stu-id="d37d5-127">`_CorExeMain` or `_CorDllMain` performs the following actions:</span></span>  
   
--   <span data-ttu-id="eec08-128">Initialisiert die CLR.</span><span class="sxs-lookup"><span data-stu-id="eec08-128">Initializes the CLR.</span></span>  
+-   <span data-ttu-id="d37d5-128">Initialisiert die CLR.</span><span class="sxs-lookup"><span data-stu-id="d37d5-128">Initializes the CLR.</span></span>  
   
--   <span data-ttu-id="eec08-129">Sucht den verwalteten Einstiegspunkt von CLR-Header der Assembly an.</span><span class="sxs-lookup"><span data-stu-id="eec08-129">Locates the managed entry point from the assembly's CLR header.</span></span>  
+-   <span data-ttu-id="d37d5-129">Sucht den verwalteten Einstiegspunkt von CLR-Header der Assembly an.</span><span class="sxs-lookup"><span data-stu-id="d37d5-129">Locates the managed entry point from the assembly's CLR header.</span></span>  
   
--   <span data-ttu-id="eec08-130">Beginnt die Ausführung.</span><span class="sxs-lookup"><span data-stu-id="eec08-130">Begins execution.</span></span>  
+-   <span data-ttu-id="d37d5-130">Beginnt die Ausführung.</span><span class="sxs-lookup"><span data-stu-id="d37d5-130">Begins execution.</span></span>  
   
- <span data-ttu-id="eec08-131">Die Aufrufe der Loader die [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) funktionieren, wenn verwaltete Modulimages entladen.</span><span class="sxs-lookup"><span data-stu-id="eec08-131">The loader calls the [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) function when managed module images are unloaded.</span></span> <span data-ttu-id="eec08-132">Diese Funktion führt jedoch keine Maßnahmen; Es gibt nur zurück.</span><span class="sxs-lookup"><span data-stu-id="eec08-132">However, this function does not perform any action; it just returns.</span></span>  
+ <span data-ttu-id="d37d5-131">Die Aufrufe der Loader die [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) funktionieren, wenn verwaltete Modulimages entladen.</span><span class="sxs-lookup"><span data-stu-id="d37d5-131">The loader calls the [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md) function when managed module images are unloaded.</span></span> <span data-ttu-id="d37d5-132">Diese Funktion führt jedoch keine Maßnahmen; Es gibt nur zurück.</span><span class="sxs-lookup"><span data-stu-id="d37d5-132">However, this function does not perform any action; it just returns.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="eec08-133">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="eec08-133">Requirements</span></span>  
- <span data-ttu-id="eec08-134">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="eec08-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d37d5-133">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d37d5-133">Requirements</span></span>  
+ <span data-ttu-id="d37d5-134">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d37d5-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="eec08-135">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="eec08-135">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d37d5-135">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d37d5-135">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="eec08-136">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="eec08-136">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d37d5-136">**Bibliothek:** Als Ressource in MsCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="d37d5-136">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="eec08-137">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="eec08-137">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="d37d5-137">**.NET Framework-Versionen:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d37d5-137">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eec08-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="eec08-138">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d37d5-138">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d37d5-138">See also</span></span>
 
-- [<span data-ttu-id="eec08-139">Globale statische Metadatenfunktionen</span><span class="sxs-lookup"><span data-stu-id="eec08-139">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+- [<span data-ttu-id="d37d5-139">Globale statische Metadatenfunktionen</span><span class="sxs-lookup"><span data-stu-id="d37d5-139">Metadata Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

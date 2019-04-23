@@ -5,16 +5,16 @@ ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cbcdb5541fdd49944f462321dc24131a32a42391
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107288"
 ---
-# <a name="icordebugsymbolprovidergetobjectsize-method"></a><span data-ttu-id="a0711-102">ICorDebugSymbolProvider::GetObjectSize-Methode</span><span class="sxs-lookup"><span data-stu-id="a0711-102">ICorDebugSymbolProvider::GetObjectSize Method</span></span>
-<span data-ttu-id="a0711-103">Gibt die Objektgröße eines Objekts basierend auf seiner TypeSpec-Signatur zurück.</span><span class="sxs-lookup"><span data-stu-id="a0711-103">Returns the object size for an object based on its typespec signature.</span></span>  
+# <a name="icordebugsymbolprovidergetobjectsize-method"></a><span data-ttu-id="d0fc8-102">ICorDebugSymbolProvider::GetObjectSize-Methode</span><span class="sxs-lookup"><span data-stu-id="d0fc8-102">ICorDebugSymbolProvider::GetObjectSize Method</span></span>
+<span data-ttu-id="d0fc8-103">Gibt die Objektgröße eines Objekts basierend auf seiner TypeSpec-Signatur zurück.</span><span class="sxs-lookup"><span data-stu-id="d0fc8-103">Returns the object size for an object based on its typespec signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a0711-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="a0711-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d0fc8-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="d0fc8-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObjectSize(  
@@ -24,31 +24,31 @@ HRESULT GetObjectSize(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a0711-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="a0711-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d0fc8-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="d0fc8-105">Parameters</span></span>  
  `cbSignature`  
- <span data-ttu-id="a0711-106">[in] Die Anzahl der Bytes in der TypeSpec-Signatur.</span><span class="sxs-lookup"><span data-stu-id="a0711-106">[in] The number of bytes in the typespec signature.</span></span>  
+ <span data-ttu-id="d0fc8-106">[in] Die Anzahl der Bytes in der TypeSpec-Signatur.</span><span class="sxs-lookup"><span data-stu-id="d0fc8-106">[in] The number of bytes in the typespec signature.</span></span>  
   
- <span data-ttu-id="a0711-107">typeSig</span><span class="sxs-lookup"><span data-stu-id="a0711-107">typeSig</span></span>  
- <span data-ttu-id="a0711-108">[in] Die TypeSpec-Signatur.</span><span class="sxs-lookup"><span data-stu-id="a0711-108">[in] The typespec signature.</span></span>  
+ <span data-ttu-id="d0fc8-107">typeSig</span><span class="sxs-lookup"><span data-stu-id="d0fc8-107">typeSig</span></span>  
+ <span data-ttu-id="d0fc8-108">[in] Die TypeSpec-Signatur.</span><span class="sxs-lookup"><span data-stu-id="d0fc8-108">[in] The typespec signature.</span></span>  
   
  `pObjectSize`  
- <span data-ttu-id="a0711-109">[out] Ein Zeiger auf die Größe des Objekts.</span><span class="sxs-lookup"><span data-stu-id="a0711-109">[out] A pointer to the size of the object.</span></span>  
+ <span data-ttu-id="d0fc8-109">[out] Ein Zeiger auf die Größe des Objekts.</span><span class="sxs-lookup"><span data-stu-id="d0fc8-109">[out] A pointer to the size of the object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a0711-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="a0711-110">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d0fc8-110">Hinweise</span><span class="sxs-lookup"><span data-stu-id="d0fc8-110">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="a0711-111">Diese Methode ist nur mit .NET Native verfügbar.</span><span class="sxs-lookup"><span data-stu-id="a0711-111">This method is available with .NET Native only.</span></span>  
+>  <span data-ttu-id="d0fc8-111">Diese Methode ist nur mit .NET Native verfügbar.</span><span class="sxs-lookup"><span data-stu-id="d0fc8-111">This method is available with .NET Native only.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a0711-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="a0711-112">Requirements</span></span>  
- <span data-ttu-id="a0711-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a0711-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d0fc8-112">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="d0fc8-112">Requirements</span></span>  
+ <span data-ttu-id="d0fc8-113">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d0fc8-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a0711-114">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="a0711-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d0fc8-114">**Header:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d0fc8-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="a0711-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a0711-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d0fc8-115">**Bibliothek:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d0fc8-115">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="a0711-116">.NET Framework-Versionen:</span><span class="sxs-lookup"><span data-stu-id="a0711-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ <span data-ttu-id="d0fc8-116">**.NET Framework-Versionen:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0fc8-116">**.NET Framework Versions:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a0711-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="a0711-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d0fc8-117">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="d0fc8-117">See also</span></span>
 
-- [<span data-ttu-id="a0711-118">ICorDebugSymbolProvider-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="a0711-118">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [<span data-ttu-id="a0711-119">Debugschnittstellen</span><span class="sxs-lookup"><span data-stu-id="a0711-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="d0fc8-118">ICorDebugSymbolProvider-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="d0fc8-118">ICorDebugSymbolProvider Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
+- [<span data-ttu-id="d0fc8-119">Debuggen von Schnittstellen</span><span class="sxs-lookup"><span data-stu-id="d0fc8-119">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
