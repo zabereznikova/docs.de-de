@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3daf0a1cf2d1ae55780a16612aa33a0fdb70a52b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e5320bc6c5105c95d63b1888e1adbc2ecf1bc5fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199998"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework-Befehlszeilendebugger)
 Der .NET Framework-Befehlszeilendebugger unterstützt Anbieter von Tools und Anwendungsentwickler beim Suchen und Beheben von Fehlern in Programmen, die für die Common Language Runtime von .NET Framework entwickelt wurden. Dieses Tool stellt mithilfe der Debug-API Debugdienste bereit. Sie können mit "MDbg.exe" lediglich verwalteten Code debuggen. Das Debuggen von nicht verwaltetem Code wird nicht unterstützt.  
@@ -78,14 +78,14 @@ MDbg [ProgramName[arguments]] [options]
 |**s**[**tep**]|Wechselt mit der Ausführung in die nächste Funktion der aktuellen Zeile oder wechselt zur nächsten Zeile, wenn keine Funktion vorhanden ist, zu der gewechselt werden kann.|  
 |**su**[**spend**] [\* &#124; [~]*threadnummer*]|Hält den aktuellen Thread oder den vom *threadnummer*-Parameter angegebenen Thread an.  Wenn *threadnummer* als `*` angegeben wird, wird der Befehl auf alle Threads angewendet. Beginnt die Threadnummer mit `~`, wird der Befehl für alle Threads mit Ausnahme des durch *threadnummer* angegebenen Threads angewendet. Unterbrochene Threads werden von der Ausführung ausgeschlossen, wenn der Prozess entweder durch den **go**-Befehl oder den **step**-Befehl ausgeführt wird. Wenn sich keine nicht unterbrochenen Threads im Prozess befinden und Sie den **go**-Befehl ausgeben, wird der Prozess nicht fortgesetzt. Drücken Sie in diesem Fall STRG+C, um den Prozess zu beeinflussen.|  
 |**sy**[**mbol**] *befehlsname* [*befehlswert*]|Gibt einen der folgenden Befehle an:<br /><br /> -   `symbol path` [`"value"`] – Zeigt den aktuellen Symbolpfad an oder legt diesen fest.<br />-   `symbol addpath` `"value"` – Fügt dem aktuellen Symbolpfad den Wert hinzu.<br />-   `symbol reload` [`"module"`] – Lädt entweder alle Symbole oder die Symbole für das angegebene Modul erneut.<br />-   `symbol list` [`module`] – Zeigt die derzeit geladenen Symbole für alle Module oder das angegebene Modul an.|  
-|**t**[**hread**] [*neuerThread*] [-*nick spitzname*`]`|Der Thread-Befehl ohne Parameter zeigt alle verwalteten Threads im aktuellen Prozess an. Threads werden in der Regel durch ihre Threadnummern bezeichnet. Wurde dem Thread jedoch ein Spitzname zugewiesen, wird stattdessen der Spitzname angezeigt. Sie können den `-nick`-Parameter verwenden, um einem Thread einen Spitznamen zuzuweisen.<br /><br /> -   **thread** `-nick` *threadname* weist dem aktuell ausgeführten Thread einen Spitznamen zu.<br /><br /> Spitznamen dürfen nicht aus Zahlen bestehen. Wenn dem aktuellen Thread bereits ein Spitzname zugewiesen wurde, wird der alte Spitzname durch den neuen ersetzt. Wenn der neue Spitzname eine leere Zeichenfolge ("") ist, wird der Spitzname für den aktuellen Thread gelöscht und dem Thread wird kein neuer Spitzname zugewiesen.|  
+|**t**[**hread**] [*newThread*] [-*nick nickname*`]`|Der Thread-Befehl ohne Parameter zeigt alle verwalteten Threads im aktuellen Prozess an. Threads werden in der Regel durch ihre Threadnummern bezeichnet. Wurde dem Thread jedoch ein Spitzname zugewiesen, wird stattdessen der Spitzname angezeigt. Sie können den `-nick`-Parameter verwenden, um einem Thread einen Spitznamen zuzuweisen.<br /><br /> -   **thread** `-nick` *threadname* weist dem aktuell ausgeführten Thread einen Spitznamen zu.<br /><br /> Spitznamen dürfen nicht aus Zahlen bestehen. Wenn dem aktuellen Thread bereits ein Spitzname zugewiesen wurde, wird der alte Spitzname durch den neuen ersetzt. Wenn der neue Spitzname eine leere Zeichenfolge ("") ist, wird der Spitzname für den aktuellen Thread gelöscht und dem Thread wird kein neuer Spitzname zugewiesen.|  
 |**u**[**p**]|Verschiebt den aktiven Stapelrahmen nach oben.|  
 |**uwgc**[**handle**] [*var*] &#124; [*adresse*]|Druckt die von einem Handle nachverfolgte Variable. Das Handle kann mit dem Namen oder der Adresse angegeben werden.|  
 |**when**|Zeigt die derzeit aktiven `when`-Anweisungen an.<br /><br /> **when** **delete all** &#124; `num` [`num` [`num` …]] - Löscht die `when`-Anweisung, die durch die Zahl angegeben wird, oder alle `when`-Anweisungen, wenn `all` angegeben wird.<br /><br /> **when** `stopReason` [`specific_condition`] **do**`cmd` [`cmd` [`cmd` …] ] - Der *stopGrund*-Parameter kann einer der folgenden sein:<br /><br /> `StepComplete`, `ProcessExited`, `ThreadCreated`, `BreakpointHit`, `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ControlCTrapped`, `ExceptionThrown`, `UnhandledExceptionThrown`, `AsyncStop`, `AttachComplete`, `UserBreak`, `EvalComplete`, `EvalException`, `RemapOpportunityReached`, `NativeStop`.<br /><br /> *specific_condition* kann einen der folgenden Werte haben:<br /><br /> -   *zahl* – Löst für `ThreadCreated` und `BreakpointHit` nur eine Aktion bei Beenden durch eine Thread-ID/Haltepunktnummer mit demselben Wert aus.<br />– [`!`]*name* – Löst für `ModuleLoaded`, `ClassLoaded`, `AssemblyLoaded`, `AssemblyUnloaded`, `ExceptionThrown` und `UnhandledExceptionThrown` nur eine Aktion aus, wenn der Name dem Namen von *stopGrund* entspricht.<br /><br /> *specific_condition* muss für andere Werte von *stopGrund* leer sein.|  
 |**w**[**here**] [`-v`] [`-c` *tiefe*] [*threadID*]|Zeigt Debuginformationen über Stapelrahmen an.<br /><br /> – Die `-v`-Option liefert ausführliche Informationen über jeden angezeigten Stapelrahmen.<br />– Durch Angeben einer Zahl für `depth` wird die Anzahl der angezeigten Frames beschränkt. Verwenden Sie den **all**-Befehl, um alle Frames anzuzeigen. Der Standard ist 100.<br />– Wenn Sie den *threadID*-Parameter angeben, können Sie steuern, welcher Thread dem Stapel zugeordnet wird. Der Standardwert ist nur der aktuelle Thread. Verwenden Sie den **all**-Befehl, um alle Threads abzurufen.|  
 |**x** [`-c`*nrsymbole*] [*modul*[`!`*muster*]]|Zeigt Funktionen an, die dem `pattern` für ein Modul entsprechen.<br /><br /> Wenn *nrsymbole* angegeben wird, wird die Ausgabe auf die festgelegte Anzahl beschränkt. Wenn `!` (das einen regulären Ausdruck angibt) für *muster* nicht angegeben wird, werden alle Funktionen angezeigt. Wenn *modul* nicht angegeben wird, werden alle geladenen Module angezeigt. Symbole (*~#*) können verwendet werden, um Haltepunkte mit dem **break**-Befehl festzulegen.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Anmerkungen  
  Kompilieren Sie die zu debuggende Anwendung mit compilerspezifischen Flags, die den Compiler dazu veranlassen, Debugsymbole zu generieren. Weitere Informationen über diese Flags finden Sie in der Compilerdokumentation. Sie können optimierte Anwendungen debuggen; ein Teil der Debuginformationen wird jedoch fehlen. Viele lokale Variablen sind beispielsweise nicht sichtbar, und die Quellzeilen sind ungenau.  
   
  Geben Sie nach dem Kompilieren der Anwendung in der Befehlszeile **mdbg** ein, um eine Debugsitzung zu beginnen, wie das folgende Beispiel veranschaulicht.  
@@ -105,5 +105,6 @@ mdbg>
  Sobald Sie im Debugger sind, verwenden Sie die im vorherigen Abschnitt beschriebenen Befehle und Argumente.  
   
 ## <a name="see-also"></a>Siehe auch
-- [Extras](../../../docs/framework/tools/index.md)
+
+- [Tools](../../../docs/framework/tools/index.md)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

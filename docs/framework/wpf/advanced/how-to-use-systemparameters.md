@@ -8,10 +8,10 @@ helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
 ms.openlocfilehash: 344fb54b48bcbf188b36a29d8205c21deff713c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199855"
 ---
 # <a name="how-to-use-systemparameters"></a>Vorgehensweise: Verwenden von SystemParameters
@@ -37,4 +37,4 @@ Dieses Beispiel zeigt, wie Sie den Zugriff auf und verwenden Sie die Eigenschaft
 - [Zeichnen eines Bereichs mit einem Systempinsel](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [Verwenden von SystemFonts](how-to-use-systemfonts.md)
 - [Verwenden von Systemparameterschlüsseln](how-to-use-system-parameters-keys.md)
-- [Gewusst wie-Themen](resources-how-to-topics.md)
+- [Themen zu Vorgehensweisen](resources-how-to-topics.md)

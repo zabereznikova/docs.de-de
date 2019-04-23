@@ -5,12 +5,12 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3f5d44e90ba705195deba54ef658668488cdb0f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200363"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>Definition von ML.NET und Grundlagen zu Machine Learning
 
@@ -24,7 +24,6 @@ ML.NET ist ein kostenloses, plattformübergeifendes Open Source-Framework für m
 Maschinelles Lernen ist eine Technik aus dem Bereich Data Science, mit der Computer vorhandene Daten verwenden können, um zukünftiges Verhalten, Ergebnisse und Tendenzen vorherzusagen. Mit maschinellem Lernen können Computer dazulernen, ohne explizit programmiert werden zu müssen.
 
 Durch Vorhersagen und Prognosen von maschinellem Lernen werden Apps und Geräte intelligenter. Wenn Sie online einkaufen, werden Ihnen basierend auf bereits getätigten Einkäufen durch maschinelles Lernen weitere Produkte vorgeschlagen, die Ihnen gefallen könnten. Wenn Ihre Kreditkarte gelesen wird, wird die Transaktion durch maschinelles Lernen mit einer Transaktionsdatenbank verglichen, um Betrug zu erkennen. Wenn Ihr Staubsaugerroboter ein Zimmer saugt, kann dieser durch maschinelles Lernen entscheiden, ob der gesamte Raum gesaugt wurde.
-
 
 ## <a name="short-videos-on-data-science"></a>Kurze Videos zu Data Science 
 

@@ -5,10 +5,10 @@ ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199894"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>Beispiel: Behandeln von Ausnahmen beim Binden von Daten
@@ -62,4 +62,4 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
 ## <a name="see-also"></a>Siehe auch
 
 - [Erste Schritte](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [Beispiel: Problembehandlung bei dynamischer Programmierung](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)
+- [Anpassen von mit VSTU Problembehandlung bei dynamischer Programmierung](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

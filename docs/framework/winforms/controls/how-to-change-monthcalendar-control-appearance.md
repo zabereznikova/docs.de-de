@@ -10,10 +10,10 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
 ms.openlocfilehash: 233143099996759cc006b3f28b984938554a0d18
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199920"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>Vorgehensweise: Ändern der Darstellung des MonthCalendar-Steuerelements in Windows Forms
@@ -106,6 +106,6 @@ Die Windows-Formulare <xref:System.Windows.Forms.MonthCalendar> Steuerelement er
 ## <a name="see-also"></a>Siehe auch
 
 - [MonthCalendar-Steuerelement](monthcalendar-control-windows-forms.md)
-- [Vorgehensweise: Auswählen eines Datumsbereichs mithilfe des MonthCalendar-Steuerelements in Windows Forms](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [Vorgehensweise: Anzeigen einzelner Tage in Fettschrift mit dem MonthCalendar-Steuerelement in Windows Forms](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [Vorgehensweise: Anzeigen mehrerer Monate mit dem MonthCalendar-Steuerelement in Windows Forms](display-more-than-one-month-wf-monthcalendar-control.md)
+- [Vorgehensweise: Auswählen eines Datumsbereichs in das Windows Forms-MonthCalendar-Steuerelement](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [Vorgehensweise: Anzeige bestimmte Tage im mit der Windows Bold Forms-MonthCalendar-Steuerelement](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [Vorgehensweise: Anzeigen von mehr als einen Monat in der Windows Forms-MonthCalendar-Steuerelement](display-more-than-one-month-wf-monthcalendar-control.md)
