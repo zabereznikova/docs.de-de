@@ -10,10 +10,10 @@ ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b3fda2af84ff74e129c36dc966bad247bdf9e20
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427135"
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>Vorgehensweise: Hinzufügen von Verweisen zu Typbibliotheken
@@ -46,9 +46,9 @@ Visual Studio generiert eine Interopassembly mit Metadaten, wenn Sie einer Typbi
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Importieren einer Typbibliothek als Assembly](importing-a-type-library-as-an-assembly.md)
-- [Verfügbarmachen von COM-Komponenten für .NET Framework](exposing-com-components.md)
+- [Importing a Type Library as an Assembly (Importieren einer Typbibliothek als Assembly)](importing-a-type-library-as-an-assembly.md)
+- [Verfügbarmachen von COM-Komponenten für .NET Framework](exposing-com-components.md)
 - [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (C#)](../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md) 
-- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)
-- [/link (C#-Compileroptionen)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
+- [Exemplarische Vorgehensweise: Embedding Types from Managed Assemblies in Visual Studio (Visual Basic)](../../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md) (Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio (Visual Basic))
+- [-link (C#-Compileroptionen)](../../csharp/language-reference/compiler-options/link-compiler-option.md)
 - [/link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

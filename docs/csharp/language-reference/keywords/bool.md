@@ -9,10 +9,10 @@ helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
 ms.openlocfilehash: d87da29872582e9c0d47a6c999312ce88252a5cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334171"
 ---
 # <a name="bool-c-reference"></a>bool (C#-Referenz)

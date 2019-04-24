@@ -10,10 +10,10 @@ helpviewer_keywords:
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
 ms.openlocfilehash: 71330714658729ed82ba111e9384e6cd9d5ae116
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339423"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Erstellen und Verwenden von dynamischen Objekten (C# und Visual Basic)
@@ -165,4 +165,4 @@ Das nächste Projekt, das Sie in dieser exemplarischen Vorgehensweise erstellen,
 - [Verwenden von dynamischen Typen](../../../csharp/programming-guide/types/using-type-dynamic.md)
 - [Frühes und spätes Binden](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
 - [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
-- [Implementieren von dynamischen Schnittstellen (PDF von Microsoft TechNet zum Download)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)
+- [Implementing Dynamic Interfaces (downloadable PDF from Microsoft TechNet) (Implementieren von dynamischen Schnittstellen (PDF von Microsoft TechNet zum Download))](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

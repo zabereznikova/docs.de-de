@@ -7,10 +7,10 @@ helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
 ms.openlocfilehash: ef7c9c18d303131b5a1c0156be820e1d475e7ec1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306650"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Verwenden von Nullable-Typen (C#-Programmierleitfaden)
@@ -31,7 +31,7 @@ Verwenden Sie die folgenden schreibgeschützten Eigenschaften, um eine Instanz e
   
 - <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> gibt an, ob eine Instanz des Nullable-Typs über einen Wert des zugrunde liegenden Typs verfügt.
   
-- <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> ruft den Wert eines zugrunde liegenden Typs ab, wenn <xref:System.Nullable%601.HasValue%2A> gleich `true` ist. Wenn <xref:System.Nullable%601.HasValue%2A> `false` ist, löst die <xref:System.Nullable%601.Value%2A>-Eigenschaft eine <xref:System.InvalidOperationException> aus.
+- <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> ruft den Wert eines zugrunde liegenden Typs ab, wenn <xref:System.Nullable%601.HasValue%2A> `true` ist. Wenn <xref:System.Nullable%601.HasValue%2A> `false` ist, löst die <xref:System.Nullable%601.Value%2A>-Eigenschaft eine <xref:System.InvalidOperationException> aus.
   
 Im folgenden Beispielcode wird mit der `HasValue`-Eigenschaft überprüft, ob die Variable einen Wert enthält. Erst danach erfolgt die Ausgabe:
   
@@ -94,6 +94,6 @@ Sie können den Werttyp, für den das Boxing durchgeführt wurde, mittels Unboxi
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Auf NULL festlegbare Typen](index.md)
+- [Nullable-Typen](index.md)
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
-- [What exactly does 'lifted' mean? (Was bedeutet „transformiert“ genau?)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- [What exactly does 'lifted' mean?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/) (Was bedeutet „Lifted“ genau?)

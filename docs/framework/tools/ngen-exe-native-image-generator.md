@@ -21,10 +21,10 @@ ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e425394df0d04ffbb4cde41c83a9efe3c5b4abe0
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481261"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Native Image Generator)
@@ -536,7 +536,7 @@ ngen uninstall ClientApp /debug
 ```
 
 > [!NOTE]
-> Beim Deinstallieren von `/debug`-Szenarien werden keine Szenarien deinstalliert, die sowohl `/profile` enthalten als auch `/debug.`
+> Beim Deinstallieren von `/debug`-Szenarien werden keine Szenarien deinstalliert, die sowohl `/profile` als auch `/debug.` enthalten.
 
 Mit dem folgenden Befehl werden alle Szenarien für eine bestimmte Version von `ClientApp.exe` deinstalliert:
 
@@ -636,7 +636,7 @@ In .NET Framework 2.0 erfolgt die einzige Interaktion mit dem Dienst für system
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Tools](../../../docs/framework/tools/index.md)
-- [Verwalteter Ausführungsprozess](../../../docs/standard/managed-execution-process.md)
+- [Extras](../../../docs/framework/tools/index.md)
+- [Der verwaltete Ausführungsprozess](../../../docs/standard/managed-execution-process.md)
 - [So sucht Common Language Runtime nach Assemblys](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Eingabeaufforderungen](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

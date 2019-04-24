@@ -3,10 +3,10 @@ title: Neues in C# 8.0 – C#-Leitfaden
 description: Überblick über die neuen Funktionen von C# 8.0. Dieser Artikel ist auf dem neuesten Stand mit Vorschauversion 2.
 ms.date: 02/12/2019
 ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427278"
 ---
 # <a name="whats-new-in-c-80"></a>Neues in C# 8.0
@@ -14,11 +14,11 @@ ms.locfileid: "59427278"
 Wir haben viele Verbesserungen an der C#-Sprache vorgenommen, die Sie bereits mit Vorschau 2 ausprobieren können. Diese neuen Funktionen wurde in Vorschauversion 2 hinzugefügt:
 
 - [Verbesserungen am Musterabgleich](#more-patterns-in-more-places):
-  * [Switch-Ausdrücke](#switch-expressions)
+  * [switch-Ausdrücke](#switch-expressions)
   * [Eigenschaftsmuster](#property-patterns)
   * [Tupelmuster](#tuple-patterns)
   * [Positionsmuster](#positional-patterns)
-- [Using-Deklarationen](#using-declarations)
+- [using-Deklarationen](#using-declarations)
 - [Statische lokale Funktionen](#static-local-functions)
 - [Verwerfbare Referenzstrukturen](#disposable-ref-structs)
 

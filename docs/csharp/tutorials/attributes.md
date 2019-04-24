@@ -5,10 +5,10 @@ author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
 ms.openlocfilehash: 3141c1bf7ddcf3fd3426290428f9eeeb54b3c872
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481230"
 ---
 # <a name="using-attributes-in-c"></a>Verwenden von Attributen in C\#
@@ -134,12 +134,12 @@ Attribute werden in vielen Tools und Frameworks verwendet. NUnit verwendet Attri
 
 Nachfolgend werden einige wichtige Attribute aufgeführt, die in die .NET Core-Basisklassenbibliotheken integriert sind:
 
-* `[Obsolete]`sein. Dieses Attribut wurde in den obigen Beispielen verwendet, es ist im `System`-Namespace enthalten. Es ist nützlich, um eine deklarative Dokumentation für eine sich ändernde Codebasis bereitzustellen. Eine Meldung kann in Form einer Zeichenfolge bereitgestellt werden, und ein weiterer, boolescher Parameter kann für eine Eskalation von einer Compilerwarnung zu einem Compilerfehler verwendet werden.
+* `[Obsolete]`. Dieses Attribut wurde in den obigen Beispielen verwendet, es ist im `System`-Namespace enthalten. Es ist nützlich, um eine deklarative Dokumentation für eine sich ändernde Codebasis bereitzustellen. Eine Meldung kann in Form einer Zeichenfolge bereitgestellt werden, und ein weiterer, boolescher Parameter kann für eine Eskalation von einer Compilerwarnung zu einem Compilerfehler verwendet werden.
 
-* `[Conditional]`sein. Dieses Attribut ist im `System.Diagnostics`-Namespace enthalten. Es kann auf Methoden (oder Attributklassen) angewendet werden. Sie müssen eine Zeichenfolge an den Konstruktor übergeben.
+* `[Conditional]`. Dieses Attribut ist im `System.Diagnostics`-Namespace enthalten. Es kann auf Methoden (oder Attributklassen) angewendet werden. Sie müssen eine Zeichenfolge an den Konstruktor übergeben.
 Wenn diese Zeichenfolge nicht einer `#define`-Anweisung entspricht, werden alle Aufrufe dieser Methode (aber nicht die Methode selbst) durch den C#-Compiler entfernt. Dieses Attribut wird typischerweise zum Debuggen (zu Diagnosezwecken) eingesetzt.
 
-* `[CallerMemberName]`sein. Dieses Attribut kann für Parameter verwendet werden und ist im `System.Runtime.CompilerServices`-Namespace enthalten. Es handelt sich um ein Attribut, mit dem der Name der Methode eingeführt wird, die eine andere Methode aufruft. So werden typischerweise „magische Zeichenfolgen“ beim Implementieren von „INotifyPropertyChanged“ in verschiedenen UI-Frameworks beseitigt. Ein Beispiel:
+* `[CallerMemberName]`. Dieses Attribut kann für Parameter verwendet werden und ist im `System.Runtime.CompilerServices`-Namespace enthalten. Es handelt sich um ein Attribut, mit dem der Name der Methode eingeführt wird, die eine andere Methode aufruft. So werden typischerweise „magische Zeichenfolgen“ beim Implementieren von „INotifyPropertyChanged“ in verschiedenen UI-Frameworks beseitigt. Ein Beispiel:
 
 [!code-csharp[Using CallerMemberName when implementing INotifyPropertyChanged](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#CallerMemberName1)]
 

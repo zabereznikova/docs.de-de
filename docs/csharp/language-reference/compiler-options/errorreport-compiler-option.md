@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345091"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (C#-Compileroptionen)
@@ -28,16 +28,16 @@ Diese Option bietet eine einfache Möglichkeit, einen internen C#-Compilerfehler
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **Keine**  
+ **none**  
  Berichte zu internen Compilerfehlern werden nicht gesammelt oder an Microsoft gesendet.  
   
- **Eingabeaufforderung**  
+ **Aufforderung**  
  Sie werden aufgefordert, einen Bericht zu senden, wenn Sie einen internen Compilerfehler empfangen. **Aufforderung** ist die Standardeinstellung beim Kompilieren einer Anwendung in der Entwicklungsumgebung.  
   
  **Warteschlange**  
  Der Fehlerbericht wird in die Warteschlange gesetzt. Wenn Sie sich mit Administratoranmeldeinformationen anmelden, können Sie alle Fehler seit dem letzten Login melden. Sie werden nicht aufgefordert, Fehlerberichte mehr als einmal alle drei Tage zu senden. **Warteschlange** ist die Standardeinstellung, wenn Sie eine Anwendung in der Befehlszeile kompilieren.  
   
- **send**  
+ **Senden**  
  Sendet Berichte über interne Compilerfehler automatisch an Microsoft. Wenn Sie diese Option aktivieren, müssen Sie zuerst der Richtlinie zur Datensammlung von Microsoft zustimmen. Beim ersten Mal, wenn Sie **-errorreport:send** auf einem Computer angeben, wird eine Compilermeldung Sie auf eine Website verweisen, die die Microsoft-Richtlinie zur Datensammlung enthält.  
     
 ## <a name="remarks"></a>Anmerkungen  

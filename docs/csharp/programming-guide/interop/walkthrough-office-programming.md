@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
 ms.openlocfilehash: 1f46d6594c249db394a5493ad9cdbbb1937a5d45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328451"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Exemplarische Vorgehensweise: Office-Programmierung (C# und Visual Basic)
@@ -204,9 +204,9 @@ Auf Ihrem Computer müssen Microsoft Office Excel und Microsoft Office Word oder
 - [Verwenden von dynamischen Typen](../../../csharp/programming-guide/types/using-type-dynamic.md)
 - [Lambdaausdrücke (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [Lambdaausdrücke (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
-- [Vorgehensweise: Indizierte Eigenschaften bei der COM-Interop-Programmierung](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
+- [Vorgehensweise: Verwenden von indizierten Eigenschaften bei der COM-Interop-Programmierung](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)
 - [Exemplarische Vorgehensweise: Einbetten von Typinformationen aus Microsoft Office-Assemblys in Visual Studio](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ee317478(v%3dvs.120))
-- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
-- [Exemplarische Vorgehensweise: Erstellen des ersten VSTO-Add-Ins für Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
+- [Exemplarische Vorgehensweise: Einbetten von Typen aus verwalteten Assemblys in Visual Studio](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)
+- [Exemplarische Vorgehensweise: Creating Your First VSTO Add-in for Excel (Exemplarische Vorgehensweise: Erstellen Ihres ersten VSTO-Add-Ins für Excel)](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)
 - [COM-Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [Interoperabilität](../../../csharp/programming-guide/interop/index.md)
