@@ -1,1 +1,9 @@
-<span data-ttu-id="47b93-101">Visual C++</span><span class="sxs-lookup"><span data-stu-id="47b93-101">Visual C++</span></span>
+---
+ms.openlocfilehash: 0e4abc18f9fb9d8d6d39f047dc20fbebd4a975bd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: de-DE
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756572"
+---
+<span data-ttu-id="d4d95-101">Visual C++</span><span class="sxs-lookup"><span data-stu-id="d4d95-101">Visual C++</span></span>
