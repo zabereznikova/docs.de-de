@@ -4,10 +4,10 @@ description: Wie sah die Sprache in ihren ersten Versionen aus und wie hat sie s
 author: erikdietrich
 ms.date: 09/20/2017
 ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303361"
 ---
 # <a name="the-history-of-c"></a>Die Geschichte von C\#
@@ -57,9 +57,9 @@ Nun wird es langsam interessant. Werfen wir einen Blick auf einige wichtige Feat
 
 - [Generics](../programming-guide/generics/index.md)
 - [Partial types (Partielle Typen)](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
-- [Anonymen Methoden](../programming-guide/statements-expressions-operators/anonymous-methods.md)
-- [Auf NULL festlegbare Typen](../programming-guide/nullable-types/index.md)
-- [Iterators](../programming-guide/concepts/iterators.md)
+- [Anonyme Methoden](../programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Nullable-Typen](../programming-guide/nullable-types/index.md)
+- [Iteratoren](../programming-guide/concepts/iterators.md)
 - [Kovarianz und Kontravarianz](../programming-guide/concepts/covariance-contravariance/index.md)
 
 Andere Features von C# 2.0 fügten vorhandenen Features Funktionen hinzu:
@@ -83,13 +83,13 @@ C# Version 3.0 wurde Ende 2007 zusammen mit Visual Studio 2008 veröffentlicht. 
 
 - [Automatisch implementierte Eigenschaften](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Anonyme Typen](../programming-guide/classes-and-structs/anonymous-types.md)
-- [Abfrageausdrücke](../linq/query-expression-basics.md)
-- [Lambdaausdrücke](../programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [Query expressions (Abfrageausdrücke)](../linq/query-expression-basics.md)
+- [Lambda-Ausdrücke](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [Ausdrucksbaumstrukturen](../expression-trees.md)
 - [Erweiterungsmethoden](../programming-guide/classes-and-structs/extension-methods.md)
 - [Implizit typisierte lokale Variablen](../language-reference/keywords/var.md)
 - [Partielle Methoden](../language-reference/keywords/partial-method.md)
-- [Objekt- und Sammlungsinitialisierer](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
+- [Objekt- und Elementinitialisierer](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
 Rückblickend scheinen viele dieser Features unvermeidlich und untrennbar. Sie alle passen strategisch zusammen. Im Allgemeinen wird angenommen, dass das durchschlagende Feature dieser Version von C# der Abfrageausdruck war, auch bekannt als Language Integrated Query (LINQ).
 
@@ -108,7 +108,7 @@ Die nächste Version führte einige interessante neue Features ein:
 - [Dynamische Bindung](../language-reference/keywords/dynamic.md)
 - [Benannte/optionale Argumente](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Generische Kovarianz und Kontravarianz](../../standard/generics/covariance-and-contravariance.md)
-- [Eingebettete Interoptypen](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
+- [Eingebettete Interop-Typen](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
 
 Eingebettete Interop-Typen überwanden eine Schwierigkeit beim Entwickeln. Generische Kovarianz und Kontravarianz bieten Ihnen mehr Möglichkeiten zum Verwenden von Generics. Sie sind allerdings recht theoretisch und werden vermutlich von Framework- und Bibliotheksautoren am meisten geschätzt. Mit benannten und optionalen Parametern können Sie Methodenüberladungen eliminieren. Außerdem bieten sie Bequemlichkeit. Keines dieser Features war jedoch bahnbrechend.
 
@@ -121,11 +121,11 @@ Die dynamische Bindung kann zu Fehlern führen, bietet aber gleichzeitig eine ho
 C# Version 5.0 war eine fokussierte Version der Sprache. Nahezu die gesamte Arbeit für diese Version war einem weiteren bahnbrechenden Sprachkonzept gewidmet: den Modellen `async` und `await` für die asynchrone Programmierung.  Hier ist die Liste der wichtigsten Features:
 
 - [Asynchrone Member](../async.md)
-- [Aufruferinformationsattribute](../programming-guide/concepts/caller-information.md)
+- [Attribute „CallerInfo“](../programming-guide/concepts/caller-information.md)
 
 ### <a name="see-also"></a>Siehe auch
 
-* [Code Project: Caller Info Attributes in C# 5.0 (Aufruferinformationsattribute in C# 5.0)](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+* [Code Project: Caller Info Attributes in C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp) (Aufruferinformationsattribute in C# 5.0)
 
 Mit dem Attribut „CallerInfo“ können Sie leicht Informationen über den Kontext erhalten, in dem Sie ausführen, ohne auf Dutzende Reflektionscodebausteine zurückzugreifen. Es gibt viele Verwendungsmöglichkeiten für Diagnose- und Protokollierungsaufgaben.
 
@@ -137,7 +137,7 @@ Mit den Versionen 3.0 und 5.0 wurde C# um wichtige neue Features in einer objekt
 
 - [Statische Importe](./csharp-6.md#using-static)
 - [Ausnahmefilter](./csharp-6.md#exception-filters)
-- [Auto-Eigenschaft-Initialisierer](./csharp-6.md#auto-property-initializers)
+- [Initialisierer für automatische Eigenschaften](./csharp-6.md#auto-property-initializers)
 - [Ausdruckskörpermember](./csharp-6.md#expression-bodied-function-members)
 - [Nullpropagator](./csharp-6.md#null-conditional-operators)
 - [Zeichenfolgeninterpolation](./csharp-6.md#string-interpolation)
@@ -159,19 +159,19 @@ Die aktuellste Version ist C# 7.0. Diese Version bietet einige evolutionäre und
 
 - [Out-Variablen](./csharp-7.md#out-variables)
 - [Tupel und Dekonstruktionen](./csharp-7.md#tuples)
-- [Musterabgleich](./csharp-7.md#pattern-matching)
-- [Lokale Funktionen](./csharp-7.md#local-functions)
+- [Mustervergleich](./csharp-7.md#pattern-matching)
+- [Local functions (Lokale Funktionen)](./csharp-7.md#local-functions)
 - [Erweiterte Ausdruckskörpermember](./csharp-7.md#more-expression-bodied-members)
-- [Lokale ref-Variablen und Rückgabetypen](./csharp-7.md#ref-locals-and-returns)
+- [Lokale ref-Variablen und Rückgaben](./csharp-7.md#ref-locals-and-returns)
 
 Weitere Features umfassten:
 
-- [Ausschuss](./csharp-7.md#discards)
+- [Verwerfen](./csharp-7.md#discards)
 - [Binäre Literale und Zahlentrennzeichen](./csharp-7.md#numeric-literal-syntax-improvements)
-- [Throw-Ausdrücke](./csharp-7.md#throw-expressions)
+- [Throw expressions (Throw-Ausdrücke)](./csharp-7.md#throw-expressions)
 
 Alle diese Features bieten tolle neue Möglichkeiten für Entwickler und erlauben es, einen noch saubereren Code als je zuvor zu schreiben. Ein Highlight ist das Verdichten der Variablendeklaration zur Verwendung mit dem `out`-Schlüsselwort und indem die Rückgabe mehrerer Werte über Tupel erlaubt wird.
 
 C# kommt auf einem immer breiteren Feld zum Einsatz. .NET Core zielt nun auf alle Betriebssysteme ab und konzentriert sich stark auf die Cloud und auf Portabilität.  Diese neuen Funktionen nehmen zusätzlich zum Entwickeln neuer Features sicherlich viel Arbeit und Zeit in Anspruch.
 
-_Dieser Artikel_ wurde [_ursprünglich auf dem NDepend-Blog_](https://blog.ndepend.com/c-versions-look-language-history/)_ veröffentlicht, mit freundlicher Genehmigung von Erik Dietrich und Patrick Smacchia._
+_Dieser Artikel_ wurde [_ursprünglich auf dem NDepend-Blog_](https://blog.ndepend.com/c-versions-look-language-history/) _veröffentlicht, mit freundlicher Genehmigung von Erik Dietrich und Patrick Smacchia._

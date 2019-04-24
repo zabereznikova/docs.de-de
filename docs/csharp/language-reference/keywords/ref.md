@@ -9,10 +9,10 @@ helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116255"
 ---
 # <a name="ref-c-reference"></a>ref (C#-Referenz)
@@ -137,7 +137,7 @@ Das Hinzufügen des `ref`-Modifizierers zu einer `struct`-Deklaration definiert,
 Das Ziel, einen `ref struct`-Typ als im Stapel zugewiesene Variable zu behalten, führt zu verschiedenen Regeln, die der Compiler für alle `ref struct`-Typen erzwingt.
 
 - Sie können für `ref struct` kein Boxing durchführen. Sie können einen `ref struct`-Typ nicht einer Variablen vom Typ `object`, `dynamic` oder einem Schnittstellentyp zuweisen.
-- `ref struct` Typen können keine Schnittstellen implementieren.
+- `ref struct`-Typen können keine Schnittstellen implementieren.
 - Sie können `ref struct` nicht als Member einer Klasse oder einer normalen Struktur deklarieren.
 - Sie können keine lokalen Variablen deklarieren, bei denen es sich um `ref struct`-Typen in asynchronen Methoden handelt. Sie können sie in synchronen Methoden deklarieren, die <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601> oder `Task`-ähnliche Typen zurückgeben.
 - Sie können lokale `ref struct`-Variablen nicht in Iteratoren deklarieren.
@@ -154,7 +154,7 @@ Sie können Modifizierer zum Deklarieren einer Struktur als `readonly ref` kombi
 ## <a name="see-also"></a>Siehe auch
 
 - [Schreiben von sicherem und effizientem Code](../../write-safe-efficient-code.md)
-- [Ref-Rückgaben und lokale ref-Variablen](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Ref-Rückgabetypen und lokale ref-Variablen](../../programming-guide/classes-and-structs/ref-returns.md)
 - [Bedingter ref-Ausdruck](../operators/conditional-operator.md#conditional-ref-expression)
 - [ref-Zuweisungsoperator](../operators/assignment-operator.md#ref-assignment-operator)
 - [Übergeben von Parametern](../../programming-guide/classes-and-structs/passing-parameters.md)

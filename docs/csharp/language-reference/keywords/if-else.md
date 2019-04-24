@@ -12,10 +12,10 @@ helpviewer_keywords:
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
 ms.openlocfilehash: ef25b3fb5657d833bbccf5bace71e049623476c9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294418"
 ---
 # <a name="if-else-c-reference"></a>if-else (C#-Referenz)
@@ -62,7 +62,7 @@ Wenn stattdessen `Result2` angezeigt werden soll, wenn `(m > 10)` false ist, kö
 
 [!code-csharp[csrefKeywordsSelection#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#3)]
 
-`Result2` wird angezeigt, wenn die Bedingung `(m > 10)` zu false ausgewertet wird.
+`Result2` wird angezeigt, wenn die Bedingung `(m > 10)` als FALSE ausgewertet wird.
 
 ## <a name="example"></a>Beispiel
 

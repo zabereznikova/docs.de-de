@@ -4,10 +4,10 @@ description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistype
 ms.date: 02/19/2019
 ms.custom: mvc
 ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296146"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>Tutorial: Besseres Ausdrücken Ihrer Entwurfsabsicht mit Verweistypen, die NULL-Werte zulassen und nicht zulassen
@@ -222,4 +222,4 @@ Experimentieren Sie, indem Sie bei der Typdeklaration zwischen Verweistypen wech
 
 Weitere Informationen erhalten Sie durch die Migration einer vorhandenen Anwendung zur Verwendung NULL-Werte zulassender Verweistypen:
 > [!div class="nextstepaction"]
-> [Migrieren vorhandenen Codes mit Verweistypen, die NULL-Werte zulassen](upgrade-to-nullable-references.md)
+> [Tutorial: Migrieren vorhandenen Codes mit Verweistypen, die NULL-Werte zulassen](upgrade-to-nullable-references.md)

@@ -6,10 +6,10 @@ ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
 ms.custom: seodec18
 ms.openlocfilehash: 8570692c02855cda7a1990f10ef97590449baccd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184664"
 ---
 # <a name="asynchronous-programming"></a>Asynchrone Programmierung
@@ -231,14 +231,14 @@ Dies ist die in .NET verwendete Konvention, mit der leichter zwischen synchronen
 `async void` ist die einzige Möglichkeit, mit der asynchrone Ereignishandler ausgeführt werden können, da Ereignisse keine Rückgabetypen haben (und somit `Task` und `Task<T>` nicht verwenden können). Jede andere Verwendung der `async void` folgt nicht dem TAP-Modell und kann schwierig zu verwenden sein, wie beispielsweise:
 
 * Ausnahmen in einer `async void`-Methode können nicht außerhalb der Methode abgefangen werden.
-* `async void` Methoden sind sehr schwierig zu testen.
-* `async void` Methoden können große Nebeneffekte verursachen, wenn der Aufrufende nicht erwartet, dass sie asynchron sind.
+* `async void`-Methoden sind sehr schwierig zu testen.
+* `async void`-Methoden können große Nebeneffekte verursachen, wenn der Aufrufende nicht erwartet, dass sie asynchron sind.
 
-* **Gehen Sie bei der Verwendung von asynchronen Lambdaausdrücken in LINQ-Ausdrücken sorgfältig vor.**
+* **Gehen Sie bei der Verwendung von asynchronen Lambdaausdrücken in LINQ-Ausdrücken sorgfältig vor**
 
 Lambdaausdrücke in LINQ verwenden verzögerte Ausführung. Das bedeutet, dass Code zu einem Zeitpunkt ausgeführt werden kann, zu dem Sie es nicht erwarten. Die Einführung von blockierenden Aufgaben kann schnell zu einem Deadlock führen, wenn diese nicht ordnungsgemäß geschrieben werden. Darüber hinaus kann die Schachtelung von asynchronem Code die Ausführung des Codes erschweren. Async und LINQ sind leistungsstark, sollten aber so sorgfältig und genau wie möglich zusammen verwendet werden.
 
-* **Schreiben von Code, der Aufgaben in einer nicht blockierenden Art und Weise erwartet**
+* **Schreiben Sie Code, der Aufgaben in einer nicht blockierenden Art und Weise erwartet**
 
 Wenn Sie den aktuellen Thread blockieren, um auf den Abschluss einer Aufgabe zu warten, kann es zu Deadlocks und blockierten Kontextthreads kommen und wesentlich komplexere Fehlerbehandlung erfordern. Die folgende Tabelle enthält Anleitungen zum nicht-blockierenden Warten auf Aufgaben:
 

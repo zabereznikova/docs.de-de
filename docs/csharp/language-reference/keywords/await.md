@@ -9,10 +9,10 @@ helpviewer_keywords:
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
 ms.openlocfilehash: 91d76309fedb2a6f3d877a47f230fda74060107e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122888"
 ---
 # <a name="await-c-reference"></a>await (C#-Referenz)
@@ -69,6 +69,6 @@ Im vorhergehenden Beispiel wird C# 7.1 verwendet, was die [`async` `Main`-Method
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Asynchrone Programmierung mit „async“ und „await“](../../../csharp/programming-guide/concepts/async/index.md)
+- [Asynchrone Programmierung mit Async und Await](../../../csharp/programming-guide/concepts/async/index.md)
 - [Exemplarische Vorgehensweise: Zugreifen auf das Web mit Async und Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [async](../../../csharp/language-reference/keywords/async.md)

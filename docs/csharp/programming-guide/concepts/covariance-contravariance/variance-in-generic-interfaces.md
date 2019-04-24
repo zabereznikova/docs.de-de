@@ -3,10 +3,10 @@ title: Varianz in generischen Schnittstellen (C#)
 ms.date: 04/10/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
 ms.openlocfilehash: 5874a39a57f85695bedc3d1ffa61adf19fcdbe37
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480780"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>Varianz in generischen Schnittstellen (C#)
@@ -100,7 +100,7 @@ IEnumerable<Object> listObjects = new List<String>();
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Verwenden von Varianz in Schnittstellen für generische Auflistungen (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
-- [Erstellen varianter generischer Schnittstellen (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
+- [Using Variance in Interfaces for Generic Collections (C#) (Verwenden von Varianz in Schnittstellen für generische Auflistungen (C#))](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
+- [Creating Variant Generic Interfaces (C#) (Erstellen von varianten generischen Schnittstellen (C#))](../../../../csharp/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
 - [Generische Schnittstellen](../../../../standard/generics/interfaces.md)
-- [Varianz bei Delegaten (C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [Variance in Delegates (C#) (Varianz bei Delegaten (C#))](../../../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)

@@ -4,30 +4,30 @@ description: Erhalten Sie einen Überblick über die neuen Funktionen in Version
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
 ms.openlocfilehash: 69e32bf6aae0da15c23e8f08da8c2bb9e3d3456e
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481300"
 ---
 # <a name="whats-new-in-c-70"></a>Neues in C# 7.0
 
 C# 7.0 bietet eine Reihe von neuen Features für die C#-Programmiersprache:
-* [`out` Variablen](#out-variables)
+* [`out`Variablen](#out-variables)
   - Sie können `out`-Werte als Inlineargumente für die Methode deklarieren, wenn sie verwendet werden.
 * [Tupel](#tuples)
   - Sie können einfache, unbenannte Typen erstellen, die mehrere öffentliche Felder enthalten. Compiler und IDE-Tools kennen die Semantik dieser Typen.
-* [Ausschuss](#discards)
+* [Verwerfen](#discards)
   - Ausschussvariablen (discards) sind temporäre, lesegeschützte Variablen, die in Zuweisungen verwendet werden, wenn der zugewiesene Wert nicht weiter interessiert. Sie eignen sich besonders zum Dekonstruieren von Tupeln und benutzerdefinierten Typen sowie beim Aufrufen von Methoden mit `out`-Parametern.
-* [Musterabgleich](#pattern-matching)
+* [Mustervergleich](#pattern-matching)
   - Sie können Verzweigungslogik basierend auf beliebigen Typen und Werten der Member dieser Typen erstellen.
-* [`ref` Lokale Variablen und Rückgabewerte](#ref-locals-and-returns)
+* [Lokale `ref`-Variablen und Rückgabetypen](#ref-locals-and-returns)
   - Lokale Variablen und Rückgabewerte von Methoden können Verweise auf andere Speicher sein.
 * [Lokale Funktionen](#local-functions)
   - Sie können Funktionen innerhalb von anderen Funktionen verschachteln, um deren Bereich und Sichtbarkeit zu beschränken.
 * [Mehr Ausdruckskörpermember](#more-expression-bodied-members)
   - Die Liste der Member, die mithilfe von Ausdrücken erstellt werden können, ist länger geworden.
-* [`throw` Ausdrücke](#throw-expressions)
+* [`throw`-Ausdrücke](#throw-expressions)
   - Sie können Ausnahmen in Codekonstrukten auslösen, die vorher nicht zulässig waren, da `throw` eine Anweisung war.
 * [Generalisierte asynchrone Rückgabetypen](#generalized-async-return-types)
   - Methoden, die mit dem `async`-Modifizierer deklariert werden, können zusätzlich zu `Task` und `Task<T>` andere Typen zurückgeben.
@@ -180,10 +180,10 @@ Die C#-Sprache verfügt über mehrere Regeln, die Sie vor einer falschen Verwend
 * Eine `ref return`-Rückgabe kann einer Wert- oder einer `ref`-Variablen zugewiesen werden.
   - Der Aufrufer steuert, ob der Rückgabewert kopiert werden soll. Durch Auslassen des `ref`-Modifizierers beim Zuweisen des Rückgabewerts gibt der Aufrufer an, dass der Wert kopiert werden und nicht etwa ein Verweis auf den Speicher erfolgen soll.
 * Sie können einer lokalen `ref`-Variablen keinen Rückgabewert einer Standardmethode zuweisen.
-  - Dadurch werden folgende Aussagen nicht zugelassen: `ref int i = sequence.Count();`
+  - Dadurch werden Aussagen wie `ref int i = sequence.Count();` nicht zugelassen.
 * Sie können `ref` nicht an eine Variable zurückgeben, deren Lebensdauer nicht über die Ausführung der Methode hinausgeht.
   - Das bedeutet, dass Sie keinen Verweis auf eine lokale Variable oder eine Variable mit einem ähnlichen Bereich zurückgeben können.
-* `ref` Lokale Variablen und Rückgabewerte können nicht in Verbindung mit asynchronen Methoden verwendet werden.
+* Lokale `ref`-Variablen und Rückgabewerte können nicht in Verbindung mit asynchronen Methoden verwendet werden.
   - Der Compiler kann nicht feststellen, ob die Variable, auf die verwiesen wird, bei der Rückgabe der asynchronen Methode auf ihren endgültigen Wert festgelegt ist.
 
 Das Hinzufügen von lokalen ref-Variablen und ref-Rückgaben ermöglicht effizientere Algorithmen, da Werte nicht kopiert oder dereferenzierende Vorgänge nicht mehrmals ausgeführt werden.

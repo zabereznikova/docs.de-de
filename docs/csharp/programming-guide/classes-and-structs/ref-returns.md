@@ -5,10 +5,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
 ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59081834"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref-Rückgaben und lokale ref-Variablen
@@ -123,5 +123,5 @@ Diese zweite Version ist durch längere Sequenzen in Szenarios, in denen die ges
 
 ## <a name="see-also"></a>Siehe auch
 
-- [ref-Schlüsselwort](../../language-reference/keywords/ref.md)
+- [ref (C#-Referenz)](../../language-reference/keywords/ref.md)
 - [Schreiben von sicherem und effizientem Code](../../write-safe-efficient-code.md)

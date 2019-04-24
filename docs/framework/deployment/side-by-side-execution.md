@@ -7,10 +7,10 @@ ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341074"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>Parallele Ausführung in .NET Framework
@@ -120,4 +120,4 @@ publicKeyToken=...,
 |[Anwendungsdomänen](../../../docs/framework/app-domains/application-domains.md)|Bietet eine konzeptionelle Übersicht über Anwendungsdomänen.|  
   
 ## <a name="reference"></a>Referenz  
- [\<supportedRuntime>-Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)
+ [\<supportedRuntime> Element](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

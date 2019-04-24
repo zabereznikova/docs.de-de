@@ -8,10 +8,10 @@ helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
 ms.openlocfilehash: 3da60366ec1a8e2e0242cf78e0418fe76e18da68
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226572"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Vorgehensweise: Festlegen einer Cacherichtlinie für eine Anforderung
@@ -110,5 +110,5 @@ End Namespace
 - [Cacheverwaltung für Netzwerkanwendungen](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [Cacherichtlinie](../../../docs/framework/network-programming/cache-policy.md)
 - [Speicherortbasierte Cacherichtlinien](../../../docs/framework/network-programming/location-based-cache-policies.md)
-- [zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)
+- [Zeitbasierte Cacherichtlinien](../../../docs/framework/network-programming/time-based-cache-policies.md)
 - [\<requestCaching>-Element (Netzwerkeinstellungen)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

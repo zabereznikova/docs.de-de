@@ -18,10 +18,10 @@ ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2cb07389ad68985362993e76f82e58d2a59e237
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178879"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (Resource File Generator)
@@ -73,7 +73,7 @@ resgen filename.extension [outputDirectory]
   
 |Parameter oder Schalter|Beschreibung|  
 |-------------------------|-----------------|  
-|`/define:` *symbol1*[, *symbol2*,...]|Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wird bedingte Kompilierung in textbasierten Ressourcendateien (TXT- oder RESTEXT-Dateien) unterstützt. Wenn *symbol* einem Symbol entspricht, das innerhalb eines `#ifdef`-Konstrukts in der Eingabetextdatei enthalten ist, wird die zugehörige Zeichenfolgenressource in die RESOURCES-Datei einbezogen. Wenn die Eingabetextdatei eine `#if !`-Anweisung mit einem Symbol enthält, das nicht durch den `/define`-Schalter definiert ist, wird die zugehörige Zeichenfolgenressource in die RESOURCES-Datei einbezogen.<br /><br /> `/define` wird bei Verwendung mit Nicht-Textdateien ignoriert. Bei Symbolen wird die Groß-/Kleinschreibung berücksichtigt.<br /><br /> Weitere Informationen zu dieser Option finden Sie weiter unten in diesem Thema unter [Bedingte Kompilierung von Ressourcen](#Conditional).|  
+|`/define:` *symbol1*[, *symbol2*,...]|Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wird bedingte Kompilierung in textbasierten Ressourcendateien (TXT- oder RESTEXT-Dateien) unterstützt. Wenn *symbol* einem Symbol entspricht, das innerhalb eines `#ifdef`-Konstrukts in der Eingabetextdatei enthalten ist, wird die zugehörige Zeichenfolgenressource in die RESOURCES-Datei einbezogen. Wenn die Eingabetextdatei eine `#if !`-Anweisung mit einem Symbol enthält, das nicht durch den `/define`-Schalter definiert ist, wird die zugehörige Zeichenfolgenressource in die RESOURCES-Datei einbezogen.<br /><br /> Bei Verwendung mit Nicht-Textdateien wird `/define` ignoriert. Bei Symbolen wird die Groß-/Kleinschreibung berücksichtigt.<br /><br /> Weitere Informationen zu dieser Option finden Sie weiter unten in diesem Thema unter [Bedingte Kompilierung von Ressourcen](#Conditional).|  
 |`useSourcePath`|Gibt an, dass das aktuelle Verzeichnis der Eingabedatei zum Auflösen relativer Dateipfade verwendet werden soll.|  
 |`/compile`|Ermöglicht Ihnen die Angabe mehrerer RESX- oder Textdateien, die von einem einzelnen Massenvorgang in RESOURCES-Dateien konvertiert werden sollen. Wenn Sie diese Option nicht festlegen, kann für die Eingabedatei nur ein Argument angegeben werden. Ausgabedateien werden als *dateiname*.resources benannt.<br /><br /> Diese Option kann nicht mit der `/str:`-Option verwendet werden.<br /><br /> Weitere Informationen zu dieser Option finden Sie weiter unten in diesem Thema unter [Kompilieren oder Konvertieren mehrerer Dateien](#Multiple).|  
 |`/r:` `assembly`|Verweist auf Metadaten aus der angegebenen Assembly. Wird beim Konvertieren von RESX-Dateien verwendet und ermöglicht Resgen.exe das Serialisieren oder Deserialisieren von Objektressourcen. Ähnelt der `/reference:`-Option oder `/r:`-Option für den C#- und den Visual Basic-Compiler.|  
@@ -116,17 +116,17 @@ resgen filename.extension [outputDirectory]
 ## <a name="performing-specific-resgenexe-tasks"></a>Ausführen bestimmter Aufgaben mit Resgen.exe  
  Resgen.exe bietet vielfältige Verwendungsmöglichkeiten, z. B. Kompilieren einer text- oder XML-basierten Ressourcendatei in eine Binärdatei, Konvertieren zwischen Ressourcendateiformaten und Generieren einer Klasse, die <xref:System.Resources.ResourceManager>-Funktionen umschließt und Zugriff auf Ressourcen bereitstellt. In diesem Abschnitt werden die einzelnen Aufgaben ausführlich beschrieben:  
   
--   [Kompilieren von Ressourcen in eine Binärdatei](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
+-   [Compiling Resources into a Binary File (Kompilieren von Ressourcen in eine Binärdatei)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
   
--   [Konvertieren zwischen Ressourcendateitypen](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
+-   [Converting Between Resource File Types (Konvertieren zwischen Ressourcendateitypen)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
   
--   [Kompilieren oder Konvertieren mehrerer Dateien](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
+-   [Compiling or Converting Multiple Files (Kompilieren oder Konvertieren mehrerer Dateien)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
   
--   [Exportieren von Ressourcen in eine RESW-Datei](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
+-   [Exporting Resources to a .resw File (Exportieren von Ressourcen in eine RESW-Datei)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
   
--   [Bedingte Kompilierung von Ressourcen](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
+-   [Conditionally Compiling Resources (Bedingte Kompilierung von Ressourcen)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
   
--   [Generieren einer stark typisierten Ressourcenklasse](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
+-   [Generating a Strongly Typed Resource Class (Generieren einer stark typisierten Ressourcenklasse)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
   
 <a name="Compiling"></a>   
 ### <a name="compiling-resources-into-a-binary-file"></a>Kompilieren von Ressourcen in eine Binärdatei  
@@ -246,7 +246,7 @@ resgen MyApp.exe Win8Resources
 ### <a name="conditionally-compiling-resources"></a>Bedingte Kompilierung von Ressourcen  
  Ab [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wird von Resgen.exe die bedingte Kompilierung von Zeichenfolgenressourcen in Textdateien (".txt" und ".restext") unterstütz. Hierdurch kann eine einzige textbasierte Ressourcendatei in mehreren Buildkonfigurationen verwendet werden.  
   
- In einer TXT- oder RESTEXT-Datei verwenden Sie das Konstrukt `#ifdef`,`#endif` um eine Ressource in die binäre RESOURCES-Datei einzubeziehen. Verwenden Sie das Konstrukt `#if !`...`#endif`, um eine Ressource einzubeziehen, wenn ein Symbol nicht definiert ist. Zur Kompilierzeit definieren Sie anschließend Symbole mithilfe der `/define:`-Option, gefolgt von einer durch Kommas getrennten Liste von Symbolen. Beim Vergleich wird die Klein-/Großschreibung berücksichtigt. Die Groß-/Kleinschreibung der durch `/define` definierten Symbole muss derjenigen in den zu kompilierenden Textdateien entsprechen.  
+ In einer TXT- oder RESTEXT-Datei verwenden Sie das Konstrukt `#ifdef`...`#endif`, um eine Ressource in die binäre RESOURCES-Datei einzubeziehen. Verwenden Sie das Konstrukt `#if !`...`#endif`, um eine Ressource einzubeziehen, wenn ein Symbol nicht definiert ist. Zur Kompilierzeit definieren Sie anschließend Symbole mithilfe der `/define:`-Option, gefolgt von einer durch Kommas getrennten Liste von Symbolen. Beim Vergleich wird die Klein-/Großschreibung berücksichtigt. Die Groß-/Kleinschreibung der durch `/define` definierten Symbole muss derjenigen in den zu kompilierenden Textdateien entsprechen.  
   
  Beispielsweise enthält die folgende Datei "UIResources.restext" eine Zeichenfolgenressource mit dem Namen `AppTitle`, die abhängig von der Definition der Attribute `PRODUCTION`, `CONSULT` oder `RETAIL` einen von drei Werten annehmen kann.  
   
@@ -331,7 +331,7 @@ resgen StringResources.txt /str:vb,,StringResources
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Tools](../../../docs/framework/tools/index.md)
+- [Extras](../../../docs/framework/tools/index.md)
 - [Ressourcen in Desktop-Apps](../../../docs/framework/resources/index.md)
 - [Erstellen von Ressourcendateien](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)
 - [Al.exe (Assembly Linker-Tool)](../../../docs/framework/tools/al-exe-assembly-linker.md)

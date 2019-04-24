@@ -3,29 +3,29 @@ title: Ablaufinvarianz in asynchronen Anwendungen (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
 ms.openlocfilehash: 5774aab9357c5af58cd1ee664066ba5e4ee9b1f6
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480871"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>Ablaufinvarianz in asynchronen Anwendungen (C#)
 
 Wenn Sie asynchronen Code in der App einschließen, sollten Sie erneutes Eintreten, also den erneuten Beginn eines asynchronen Vorgangs vor seinem Abschließen, berücksichtigen und möglicherweise verhindern. Wenn Sie Möglichkeiten für erneutes Eintreten nicht identifizieren und behandeln, kann dies zu unerwarteten Ergebnissen führen.
 
-**In diesem Thema**
+**Inhalt**
 
 - [Erkennen von Ablaufinvarianz](#BKMK_RecognizingReentrancy)
 
 - [Umgang mit Ablaufinvarianz](#BKMK_HandlingReentrancy)
 
-  - [Deaktivieren der Schaltfläche „Start“](#BKMK_DisableTheStartButton)
+  - [Die Schaltfläche „Start“ deaktivieren](#BKMK_DisableTheStartButton)
 
-  - [Abbrechen und Neustarten des Vorgangs](#BKMK_CancelAndRestart)
+  - [Den Vorgang abbrechen und neu starten](#BKMK_CancelAndRestart)
 
-  - [Ausführen mehrerer Vorgänge und Einreihen der Ausgabe in die Warteschlange](#BKMK_RunMultipleOperations)
+  - [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](#BKMK_RunMultipleOperations)
 
-- [Überprüfen und Ausführen der Beispiel-App](#BKMD_SettingUpTheExample)
+- [Die Beispiel-App überprüfen und ausführen](#BKMD_SettingUpTheExample)
 
 > [!NOTE]
 > Um das Beispiel ausführen zu können, muss Visual Studio 2012 oder höher sowie .NET Framework 4.5 oder höher auf Ihrem Computer installiert sein.
@@ -92,15 +92,15 @@ Sie können den Code, der diese Ausgabe erzeugt, überprüfen, indem Sie einen B
 
 Sie können das erneute Eintreten auf verschiedene Weise behandeln, je nachdem, was von der App ausgeführt werden soll. In diesem Thema werden die folgenden Beispiele zur Veranschaulichung verwendet:
 
-- [Deaktivieren der Schaltfläche „Start“](#BKMK_DisableTheStartButton)
+- [Die Schaltfläche „Start“ deaktivieren](#BKMK_DisableTheStartButton)
 
   Deaktivieren der Schaltfläche **Start**, während der Vorgang ausgeführt wird, sodass der Benutzer ihn nicht unterbrechen kann
 
-- [Abbrechen und Neustarten des Vorgangs](#BKMK_CancelAndRestart)
+- [Den Vorgang abbrechen und neu starten](#BKMK_CancelAndRestart)
 
   Abbrechen aller Vorgänge, die noch ausgeführt werden, wenn der Benutzer die Schaltfläche **Start** erneut anklickt, sodass nur der zuletzt angeforderte Vorgang fortgesetzt wird
 
-- [Ausführen mehrerer Vorgänge und Einreihen der Ausgabe in die Warteschlange](#BKMK_RunMultipleOperations)
+- [Mehrere Vorgänge ausführen und die Ausgabe in eine Warteschlange stellen](#BKMK_RunMultipleOperations)
 
   Alle angeforderten Vorgänge asynchron ausführen lassen, die Anzeige der Ausgabe allerdings koordinieren, damit die Ergebnisse der einzelnen Vorgänge zusammen und in Reihenfolge angezeigt werden.
 
@@ -434,7 +434,7 @@ In diesem Beispiel wird `AccessTheWebAsync` in zwei Methoden aufgeteilt. Mit der
 
 `AccessTheWebAsync` ruft dann `FinishOneGroupAsync` auf, um den Abschluss jedes einzelnen Downloads zu erwarten und die Länge anzuzeigen.
 
-`FinishOneGroupAsync` gibt einen Task zurück, der in `AccessTheWebAsync` dem Element `pendingWork` zugewiesen wird. Dieser Wert verhindert die Unterbrechung durch einen anderen Vorgang, bevor die Aufgabe abgeschlossen wurde.
+`FinishOneGroupAsync` gibt einen Task zurück, der in `pendingWork` dem Element `AccessTheWebAsync` zugewiesen wird. Dieser Wert verhindert die Unterbrechung durch einen anderen Vorgang, bevor die Aufgabe abgeschlossen wurde.
 
 ```csharp
 private async Task<char> AccessTheWebAsync(char grp)
@@ -724,5 +724,5 @@ Der folgende Abschnitt enthält den Code, um das Beispiel als WPF-App zu erstell
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Asynchrone Programmierung mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/index.md)

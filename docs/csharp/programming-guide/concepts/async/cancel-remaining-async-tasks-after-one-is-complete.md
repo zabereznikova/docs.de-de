@@ -3,10 +3,10 @@ title: Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen (
 ms.date: 07/20/2015
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
 ms.openlocfilehash: baf757f7f7a71528dd5dc36b0f807eb452577a38
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298668"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Verbleibende asynchrone Aufgaben nach Abschluss einer Aufgabe abbrechen (C#)
@@ -262,4 +262,4 @@ namespace CancelAfterOneTask
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [Feinabstimmung der Async-Anwendung (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [Asynchrone Programmierung mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Asynchrones Beispiel: Optimierung Ihrer Anwendung](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (Asynchrones Beispiel: Feinabstimmung Ihrer Anwendung)

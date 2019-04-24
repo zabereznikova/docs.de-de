@@ -13,16 +13,16 @@ helpviewer_keywords:
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
 ms.openlocfilehash: b95699430a05ef9d81c705b05d04b4ab06e7abc7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307651"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>Typbeziehungen in LINQ-Abfragevorgängen (C#)
 Um Abfragen effektiv erstellen zu können, ist es wichtig, dass Sie verstehen, wie die Variablentypen in einer vollständigen Abfrageoperation miteinander zusammenhängen. Wenn Sie diese Beziehungen verstehen, können Sie die [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Beispiele und die Codebeispiele in der Dokumentation besser nachvollziehen. Weiterhin können Sie dann besser verstehen, was im Hintergrund abläuft, wenn Variablen implizit mithilfe von `var` typisiert werden.  
   
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] -Abfrageoperationen sind in der Datenquelle, in der Abfrage selbst und in der Abfrageausführung stark typisiert. Die Variablentypen in der Abfrage müssen mit den Elementtypen in der Datenquelle und mit dem Typ der Iterationsvariablen in der `foreach`-Anweisung kompatibel sein. Diese starke Typisierung stellt sicher, dass Typfehler zur Kompilierzeit abgefangen werden, sodass sie korrigiert werden können, bevor die Benutzer sie ausführen.  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]-Abfrageoperationen sind in der Datenquelle, in der Abfrage selbst und in der Abfrageausführung stark typisiert. Die Variablentypen in der Abfrage müssen mit den Elementtypen in der Datenquelle und mit dem Typ der Iterationsvariablen in der `foreach`-Anweisung kompatibel sein. Diese starke Typisierung stellt sicher, dass Typfehler zur Kompilierzeit abgefangen werden, sodass sie korrigiert werden können, bevor die Benutzer sie ausführen.  
   
  Um diese Typbeziehungen zu veranschaulichen, wird in den meisten folgenden Beispielen explizite Typisierung für alle Variablen angewendet. Im letzten Beispiel wird gezeigt, wie diese Prinzipien auch dann gelten, wenn Sie die implizite Typisierung mithilfe von [var](../../../../csharp/language-reference/keywords/var.md) verwenden.  
   

@@ -28,10 +28,10 @@ helpviewer_keywords:
 - subtraction operator [C#]
 - '- operator [C#]'
 ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301125"
 ---
 # <a name="arithmetic-operators-c-reference"></a>Arithmetische Operatoren (C#-Referenz)
@@ -247,7 +247,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 
 - [Postfix-Inkrementoperator und Postfix-Dekrementoperator](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators)
 - [Präfix-Inkrementoperator und Präfix-Dekrementoperator](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators)
-- [Unärer Plus-Operator](~/_csharplang/spec/expressions.md#unary-plus-operator)
+- [Unärer Plusoperator](~/_csharplang/spec/expressions.md#unary-plus-operator)
 - [Unärer Minusoperator](~/_csharplang/spec/expressions.md#unary-minus-operator)
 - [Multiplikationsoperator](~/_csharplang/spec/expressions.md#multiplication-operator)
 - [Divisionsoperator](~/_csharplang/spec/expressions.md#division-operator)
@@ -255,7 +255,7 @@ Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspez
 - [Additionsoperator](~/_csharplang/spec/expressions.md#addition-operator)
 - [Subtraktionsoperator](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [Verbundzuweisung](~/_csharplang/spec/expressions.md#compound-assignment)
-- [Checked- und Unchecked-Operatoren](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
+- [The checked and unchecked operators (Checked- und Unchecked-Operatoren)](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
 
 ## <a name="see-also"></a>Siehe auch
 

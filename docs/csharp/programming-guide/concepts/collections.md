@@ -3,10 +3,10 @@ title: Auflistungen (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
 ms.openlocfilehash: a256b2f23bca973d1ed489724bf4d34ab35449f1
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481105"
 ---
 # <a name="collections-c"></a>Auflistungen (C#)
@@ -24,7 +24,7 @@ Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klas
 > [!NOTE]
 > Schließen Sie bei den Beispielen in diesem Thema [using](../../../csharp/language-reference/keywords/using-directive.md)-Anweisungen für die `System.Collections.Generic`- und `System.Linq`-Namespaces ein.
 
- **In diesem Thema**
+ **Inhalt**
 
 - [Verwenden einer einfachen Auflistung](#BKMK_SimpleCollection)
 
@@ -36,7 +36,7 @@ Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klas
 
   - [System.Collections-Klassen](#BKMK_Collections)
 
-- [Implementieren einer Auflistung von Schlüssel/Wert-Paaren](#BKMK_KeyValuePairs)
+- [Implementieren einer Auflistung von Schlüssel-Wert-Paaren](#BKMK_KeyValuePairs)
 
 - [Verwenden von LINQ zum Zugriff auf eine Auflistung](#BKMK_LINQ)
 
@@ -44,7 +44,7 @@ Wenn die Auflistung Elemente eines Datentyps enthält, können Sie eine der Klas
 
 - [Definieren einer benutzerdefinierten Auflistung](#BKMK_CustomCollection)
 
-- [Iterators](#BKMK_Iterators)
+- [Iteratoren](#BKMK_Iterators)
 
 <a name="BKMK_SimpleCollection"></a>
 
@@ -186,11 +186,11 @@ Viele allgemeine Auflistungen werden von .NET Framework bereitgestellt. Jeder Au
 
 Einige der häufig verwendeten Auflistungsklassen werden in diesem Abschnitt beschrieben:
 
-- <xref:System.Collections.Generic> Klassen
+- <xref:System.Collections.Generic>-Klassen
 
-- <xref:System.Collections.Concurrent> Klassen
+- <xref:System.Collections.Concurrent>-Klassen
 
-- <xref:System.Collections> Klassen
+- <xref:System.Collections>-Klassen
 
 <a name="BKMK_Generic"></a>
 
@@ -600,10 +600,10 @@ private static IEnumerable<int> EvenSequence(
 
 - [Objekt- und Auflistungsinitialisierer](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
 - [Programmierkonzepte (C#)](../../../csharp/programming-guide/concepts/index.md)
-- [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Option Strict-Anweisung](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [LINQ to Objects (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [Paralleles LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)
-- [Auflistungen und Datenstrukturen](../../../standard/collections/index.md)
+- [Parallel LINQ (PLINQ) (Paralleles LINQ (PLINQ))](../../../standard/parallel-programming/parallel-linq-plinq.md)
+- [Sammlungen und Datenstrukturen](../../../standard/collections/index.md)
 - [Auswählen einer Auflistungsklasse](../../../standard/collections/selecting-a-collection-class.md)
-- [Vergleiche und Sortierungen innerhalb von Sammlungen](../../../standard/collections/comparisons-and-sorts-within-collections.md)
+- [Vergleiche und Sortierungen innerhalb von Auflistungen](../../../standard/collections/comparisons-and-sorts-within-collections.md)
 - [Verwenden von generischen Auflistungen](../../../standard/collections/when-to-use-generic-collections.md)

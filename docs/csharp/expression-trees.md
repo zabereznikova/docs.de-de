@@ -4,10 +4,10 @@ description: Weitere Informationen zu Ausdrucksbaumstrukturen in .NET Core und w
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
 ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096614"
 ---
 # <a name="expression-trees"></a>Ausdrucksbaumstrukturen

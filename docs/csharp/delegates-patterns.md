@@ -4,15 +4,15 @@ description: Erfahren Sie etwas über allgemeine Muster für die Verwendung von 
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
 ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095697"
 ---
 # <a name="common-patterns-for-delegates"></a>Gängige Muster für Delegate
 
-[Vorheriges](delegates-strongly-typed.md)
+[Vorherige](delegates-strongly-typed.md)
 
 Delegaten bieten einen Mechanismus, der Software-Entwürfe ermöglicht, die minimale Kopplung zwischen Komponenten umfassen.
 
@@ -153,4 +153,4 @@ Sie haben die Anfänge einer Protokollkomponente gesehen, die mit anderen Writer
 
 Die Protokollierungsklasse kann eine beliebige Anzahl von Verbesserungen oder Änderungen vornehmen, ohne wichtige Änderungen einzuführen. Wie jede Klasse können Sie die öffentliche API nicht ohne das Risiko von wichtigen Änderungen ändern. Aber da die Kopplung zwischen der Protokollierung und den Ausgabe-Engines nur über den Delegaten stattfindet, sind keine anderen Typen (z.B. Schnittstellen oder Basisklassen) beteiligt. Die Kopplung ist so klein wie möglich.
 
-[Weiter](events-overview.md)
+[Nächste](events-overview.md)

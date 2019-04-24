@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
 ms.openlocfilehash: 382ecb17654377e8d37e1b3a572ed84442d76b1a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302997"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Vorgehensweise: Zugreifen auf Office-Interop-Objekte mithilfe von Visual C#-Funktionen (C#-Programmierhandbuch)
@@ -96,7 +96,7 @@ Visual C# verfügt über Funktionen, die den Zugriff auf Office-API-Objekte vere
   
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
-     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]und höhere Versionen konvertieren das zurückgegebene `Object` automatisch in `dynamic`, wenn die Compileroption [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) auf die Assembly verweist oder gleichermaßen wenn die Excel-Eigenschaft **Interop-Typen einbetten** auf „true“ festgelegt ist. Der Standardwert für diese Eigenschaft ist "True".  
+     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] und höhere Versionen konvertieren das zurückgegebene `Object` automatisch in `dynamic`, wenn die Compileroption [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) auf die Assembly verweist oder gleichermaßen wenn die Excel-Eigenschaft **Interop-Typen einbetten** auf TRUE festgelegt ist. Der Standardwert für diese Eigenschaft ist "True".  
   
 ## <a name="to-run-the-project"></a>So führen Sie das Projekt aus  
   

@@ -10,10 +10,10 @@ ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9c84afced8c98530e6d6b02c1cde69e93bd8d7e9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337278"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>Veraltete Elemente in der .NET Framework-Klassenbibliothek
@@ -56,7 +56,7 @@ ms.locfileid: "59337278"
   
  In der folgenden Tabelle sind die Zeichenfolgenwerte aufgeführt, die Sie dem `version`-Attribut zuweisen können, um eine bestimmte Version von .NET Framework als Zielversion festzulegen.  
   
-|.NET Framework-Version|`version` string|
+|.NET Framework-Version|`version`-Zeichenfolge|
 |-|-|  
 |4.7 (einschließlich 4.7.1 und 4.7.2)|v4.0|  
 |4.6 (einschließlich 4.6.1 und 4.6.2)|v4.0|  
@@ -75,7 +75,7 @@ ms.locfileid: "59337278"
 ## <a name="obsolete-lists-for-previous-versions"></a>Listen mit veralteten Komponenten für frühere Versionen  
  [Veraltete Typen in .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224224)  
   
- [Veraltete Member in .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224227)  
+ [Veraltete Member in .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224227)  
   
  [Liste veralteter Elemente in .NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkId=163710)  
   
@@ -83,4 +83,4 @@ ms.locfileid: "59337278"
   
 ## <a name="see-also"></a>Siehe auch
 
-- [\<supportedRuntime>-Element](../configure-apps/file-schema/startup/supportedruntime-element.md)
+- [\<supportedRuntime> Element](../configure-apps/file-schema/startup/supportedruntime-element.md)

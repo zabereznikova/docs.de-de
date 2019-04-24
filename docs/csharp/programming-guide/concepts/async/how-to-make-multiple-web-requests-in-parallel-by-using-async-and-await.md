@@ -3,10 +3,10 @@ title: 'Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit „as
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
 ms.openlocfilehash: 3ea41c1fa0fce3a35635e069061f1953c6395406
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335419"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit „async“ und „await“ (C#)
@@ -226,6 +226,6 @@ namespace AsyncExample_MultipleTasks
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#).](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Exemplarische Vorgehensweise: Zugreifen auf das Web mit async und await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Asynchrone Programmierung mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
