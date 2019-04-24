@@ -8,10 +8,10 @@ f1_keywords:
 helpviewer_keywords:
 - stackalloc keyword [C#]
 ms.openlocfilehash: 61a27e777a1919a2a6fc5140a311835a8f3daba9
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480806"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (C#-Referenz)
@@ -52,7 +52,7 @@ Span<int> third = stackalloc[] { 1, 2, 3 };
 
 Wenn Zeigertypen beteiligt sind, benötigt `stackalloc` einen [unsafe](unsafe.md)-Kontext. Weitere Informationen finden Sie unter [Unsicherer Code und Zeiger](../../programming-guide/unsafe-code-pointers/index.md).
 
-`stackalloc` befindet sich wie [_alloca](/cpp/c-runtime-library/reference/alloca) in der C-Laufzeitbibliothek.
+Genau wie [_alloca](/cpp/c-runtime-library/reference/alloca) befindet sich `stackalloc` in der C-Laufzeitbibliothek.
 
 ## <a name="examples"></a>Beispiele
 

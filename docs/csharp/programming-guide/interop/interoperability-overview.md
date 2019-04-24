@@ -10,10 +10,10 @@ helpviewer_keywords:
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337551"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Überblick über die Interoperabilität (C#-Programmierhandbuch)
@@ -60,9 +60,9 @@ Dieses Thema beschreibt Methoden zur Gewährleistung der Interoperabilität zwis
   
 ## <a name="see-also"></a>Siehe auch
 
-- [Optimieren der Interopleistung](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
+- [Improving Interop Performance (Optimieren der Interopleistung)](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
 - [Einführung in die Interoperabilität zwischen COM und .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
-- [Einführung in COM-Interop in Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
-- [Marshalling zwischen verwaltetem und nicht verwaltetem Code](../../../../docs/framework/interop/interop-marshaling.md)
-- [Interoperation mit nicht verwaltetem Code](../../../../docs/framework/interop/index.md)
+- [Einführung in COM-Interop (Visual Basic)](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
+- [Marshaling between Managed and Unmanaged Code (Marshalling zwischen verwaltetem und nicht verwaltetem Code)](../../../../docs/framework/interop/interop-marshaling.md)
+- [Interoperabilität mit nicht verwaltetem Code](../../../../docs/framework/interop/index.md)
 - [C#-Programmierhandbuch](../../../csharp/programming-guide/index.md)

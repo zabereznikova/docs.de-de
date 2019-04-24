@@ -12,10 +12,10 @@ ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49c490b57574f8c9c9c93e3e0da2089cec95481f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344233"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Vorgehensweise: Definieren einer generischen Methode mit Reflektionsausgabe
@@ -78,7 +78,7 @@ Im ersten Verfahren wird veranschaulicht, wie eine einfache generische Methode m
 10. Geben Sie den Methodentext mithilfe von <xref:System.Reflection.Emit.ILGenerator> aus. Weitere Einzelheiten hierzu finden Sie im zugehörigen Verfahren zum Ausgeben des Methodentexts.  
   
     > [!IMPORTANT]
-    >  Wenn Sie Aufrufe von Methoden generischer Typen ausgeben und es sich bei den Typargumenten dieser Typen um Typparameter der generischen Methode handelt, müssen Sie über die Methodenüberladungen `static`<xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29>, <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29> und <xref:System.Reflection.Emit.TypeBuilder.GetField%28System.Type%2CSystem.Reflection.FieldInfo%29> der <xref:System.Reflection.Emit.TypeBuilder>-Klasse erstellte Formulare der Methoden abrufen. Dies wird im zugehörigen Verfahren zum Ausgeben von Methodentext veranschaulicht.  
+    >  Wenn Sie Aufrufe von Methoden generischer Typen ausgeben und es sich bei den Typargumenten dieser Typen um Typparameter der generischen Methode handelt, müssen Sie über die `static`-Methodenüberladungen <xref:System.Reflection.Emit.TypeBuilder.GetConstructor%28System.Type%2CSystem.Reflection.ConstructorInfo%29>, <xref:System.Reflection.Emit.TypeBuilder.GetMethod%28System.Type%2CSystem.Reflection.MethodInfo%29> und <xref:System.Reflection.Emit.TypeBuilder.GetField%28System.Type%2CSystem.Reflection.FieldInfo%29> der <xref:System.Reflection.Emit.TypeBuilder>-Klasse erstellte Formulare der Methoden abrufen. Dies wird im zugehörigen Verfahren zum Ausgeben von Methodentext veranschaulicht.  
   
 11. Vervollständigen Sie den Typ, der die Methode enthält, und speichern Sie die Assembly. Im zugehörigen Verfahren zum Aufrufen der generischen Methode werden zwei Möglichkeiten zum Aufrufen der vollständigen Methode veranschaulicht.  
   
@@ -95,7 +95,7 @@ Im ersten Verfahren wird veranschaulicht, wie eine einfache generische Methode m
      [!code-csharp[GenericMethodHowTo#10](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#10)]
      [!code-vb[GenericMethodHowTo#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#10)]  
   
-2. Geben Sie Code aus, um mithilfe der generischen Methodenüberladung der `TOutput`-Methode eine Instanz von <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> zu erstellen. Für die Verwendung dieser Überladung muss der angegebene Typ über einen parameterlosen Konstruktor verfügen, daher wird `TOutput` diese Einschränkung hinzugefügt. Erstellen Sie die erstellte generische Methode, indem Sie `TOutput` an <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> übergeben. Geben Sie nach der Ausgabe von Code für den Methodenaufruf Code zum Speichern in der lokalen Variable `retVal` aus mithilfe von <xref:System.Reflection.Emit.OpCodes.Stloc_S>  
+2. Geben Sie Code aus, um mithilfe der generischen Methodenüberladung der `TOutput`-Methode eine Instanz von <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> zu erstellen. Für die Verwendung dieser Überladung muss der angegebene Typ über einen parameterlosen Konstruktor verfügen, daher wird `TOutput` diese Einschränkung hinzugefügt. Erstellen Sie die erstellte generische Methode, indem Sie `TOutput` an <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A> übergeben. Geben Sie nach der Ausgabe von Code für den Methodenaufruf mithilfe von `retVal` Code zum Speichern in der lokalen Variable <xref:System.Reflection.Emit.OpCodes.Stloc_S> aus.  
   
      [!code-csharp[GenericMethodHowTo#11](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#11)]
      [!code-vb[GenericMethodHowTo#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#11)]  

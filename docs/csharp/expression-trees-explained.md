@@ -3,16 +3,16 @@ title: Ausdrucksbaumstrukturen mit Erläuterung
 description: Weitere Informationen zu Ausdrucksbaumstrukturen und ihrer Verwendung für die Übersetzung von Algorithmen für die externe Ausführung und für das Überprüfen von Code vor der Ausführung.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 012ea0dec85e6fba7581f4bc46a5e78da8c64708
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481430"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613420"
 ---
 # <a name="expression-trees-explained"></a>Ausdrucksbaumstrukturen mit Erläuterung
 
-[Vorheriges – Übersicht](expression-trees.md)
+[Vorheriges – 2 Übersicht](expression-trees.md)
 
 Eine Ausdrucksbaumstruktur ist eine Datenstruktur, die Code darstellt. Sie basiert auf den gleichen Strukturen, die ein Compiler verwendet, um Code zu analysieren und die kompilierte Ausgabe zu generieren. Wenn Sie dieses Tutorial lesen, werden Sie feststellen, dass eine Ähnlichkeit zwischen Ausdrucksbaumstrukturen und den Typen in den Roslyn-APIs vorhanden ist, um [Analyzers and CodeFixes (Analyzer und CodeFixes)](https://github.com/dotnet/roslyn-analyzers) zu erstellen.
 (Analyzer und CodeFixes sind NuGet-Pakete, die statische Analysen für Code ausführen und mögliche Korrekturen für einen Entwickler vorschlagen können.) Die Konzepte sind ähnlich, und das Endergebnis ist eine Datenstruktur, die eine Prüfung des Quellcodes auf sinnvolle Weise ermöglicht. Ausdrucksbaumstrukturen basieren jedoch auf einem völlig anderen Satz von Klassen und APIs als die Roslyn-APIs.
@@ -23,6 +23,7 @@ Hier ist eine Codezeile:
 ```csharp
 var sum = 1 + 2;
 ```
+
 Würden Sie dies als eine Ausdrucksbaumstruktur analysieren, enthält die Struktur mehrere Knoten.
 Der äußerste Knoten ist eine Variablendeklaration-Anweisung mit der Zuordnung (`var sum = 1 + 2;`). Dieser äußerste Knoten enthält mehrere untergeordnete Knoten: eine Variablendeklaration, ein Zuweisungsoperator und ein Ausdruck, der die rechte Seite des Gleichheitszeichens darstellt. Dieser Ausdruck wird weiter unterteilt in Ausdrücke, die den Additionsvorgang und linken und rechten Operanden der Addition darstellen.
 

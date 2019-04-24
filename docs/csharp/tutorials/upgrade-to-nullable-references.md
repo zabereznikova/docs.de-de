@@ -4,10 +4,10 @@ description: Dieses erweiterte Tutorial enthält eine Einführung zu Verweistype
 ms.date: 02/19/2019
 ms.custom: mvc
 ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427291"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: Migrieren vorhandenen Codes mit Verweistypen, die NULL-Werte zulassen
@@ -148,10 +148,10 @@ Sie müssen ebenfalls eine `using System.Linq`-Anweisung am Anfang der Datei hin
 
 Dieser Satz von Änderungen hebt die besondere Berücksichtigung bei der Aktualisierung von Code hervor, der generische Instanziierungen enthält. Die Liste und die Elemente in der Liste sind nicht NULL-Werte zulassende Typen. Die einen oder anderen oder beide könnten NULL-Werte zulassende Typen sein. Alle folgenden Deklarationen sind zulässig:
 
-- `List<NewsStoryViewModel>`: NULL-Werte nicht zulassende Liste von NULL-Werte nicht zulassenden Ansichtsmodellen.
-- `List<NewsStoryViewModel?>`: NULL-Werte nicht zulassende Liste von NULL-Werte nicht zulassenden Ansichtsmodellen.
-- `List<NewsStoryViewModel>?`: NULL-Werte zulassende Liste von NULL-Werte nicht zulassenden Ansichtsmodellen.
-- `List<NewsStoryViewModel?>?`: NULL-Werte zulassende Liste von NULL-Werte zulassenden Ansichtsmodellen.
+- `List<NewsStoryViewModel>`: Nullwerte nicht zulassende Liste Nullwerte nicht zulassender Ansichtsmodelle.
+- `List<NewsStoryViewModel?>`: Nullwerte nicht zulassende Liste Nullwerte zulassender Ansichtsmodelle.
+- `List<NewsStoryViewModel>?`: Nullwerte zulassende Liste Nullwerte nicht zulassender Ansichtsmodelle.
+- `List<NewsStoryViewModel?>?`: Nullwerte zulassende Liste Nullwerte zulassender Ansichtsmodelle.
 
 ## <a name="interfaces-with-external-code"></a>Schnittstellen mit externem Code
 
