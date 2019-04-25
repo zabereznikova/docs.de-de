@@ -1,57 +1,50 @@
-items:
 - name: Zeichenfolgen in Visual Basic
   href: index.md
   items:
-  - name: Einführung in Zeichenfolgen
-    href: introduction-to-strings.md
-    items:
-    - name: Grundlagen zu Zeichenfolgen
-      href: string-basics.md
-    - name: Verschiedene Typen von Methoden zur Zeichenfolgenbearbeitung
-      href: types-of-string-manipulation-methods.md
-    - name: Nothing und Zeichenfolgen
-      href: nothing-and-strings.md
-    - name: Auswirkungen der Kultur auf Zeichenfolgen
-      href: how-culture-affects-strings.md
-    - name: Interpolierte Zeichenfolgen
-      href: interpolated-strings.md
-    - name: Nullbasierter und 1-basierter Zeichenfolgenzugriff
-      href: zero-based-vs-one-based-string-access.md
-  - name: 'Vorgehensweise: Erstellen von Zeichenfolgen mit StringBuilder'
-    href: how-to-create-strings-using-a-stringbuilder.md
-  - name: 'Vorgehensweise: Suchen innerhalb einer Zeichenfolge'
-    href: how-to-search-within-a-string.md
-  - name: Konvertieren zwischen Zeichenfolgen und anderen Datentypen
-    href: converting-between-strings-and-other-data-types.md
-    items:
-    - name: 'Vorgehensweise: Konvertieren eines Arrays von Bytes in eine Zeichenfolge'
-      href: how-to-convert-an-array-of-bytes-into-a-string.md
-    - name: 'Vorgehensweise: Konvertieren von Zeichenfolgen in ein Bytearray'
-      href: how-to-convert-strings-into-an-array-of-bytes.md
-    - name: 'Vorgehensweise: Erstellen einer Zeichenfolge aus einem Array mit Char-Werten'
-      href: how-to-create-a-string-from-an-array-of-char-values.md
-    - name: 'Vorgehensweise: Konvertieren von Hexadezimalzeichenfolgen in Zahlen'
-      href: how-to-convert-hexadecimal-strings-to-numbers.md
-    - name: 'Vorgehensweise: Konvertieren einer Zeichenfolge in ein Array von Zeichen'
-      href: how-to-convert-a-string-to-an-array-of-characters.md
-    - name: 'Vorgehensweise: Zugreifen auf Zeichen in Zeichenfolgen'
-      href: how-to-access-characters-in-strings.md
-  - name: Überprüfen von Zeichenfolgen
-    href: validating-strings.md
-    items:
-    - name: 'Vorgehensweise: Überprüfen von Dateinamen und Pfaden'
-      href: how-to-validate-file-names-and-paths.md
-    - name: 'Vorgehensweise: Überprüfen von Zeichenfolgen, die Datumsangaben oder Uhrzeiten darstellen'
-      href: how-to-validate-strings-that-represent-dates-or-times.md
-    - name: Verwenden von regulären Ausdrücken mit dem MaskedTextBox-Steuerelement
-      href: using-regular-expressions-with-the-maskedtextbox-control.md
-    - name: 'Exemplarische Vorgehensweise: Überprüfen der Komplexität von Kennwörtern'
-      href: walkthrough-validating-that-passwords-are-complex.md
-  - name: 'Exemplarische Vorgehensweise: Verschlüsseln und Entschlüsseln von Zeichenfolgen'
-    href: walkthrough-encrypting-and-decrypting-strings.md
-ms.openlocfilehash: 2c148e2d34ef032785f1ccd723fb1d8aad136332
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: de-DE
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469312"
+    - name: Einführung in Zeichenfolgen
+      href: introduction-to-strings.md
+      items:
+        - name: Grundlagen zu Zeichenfolgen
+          href: string-basics.md
+        - name: Verschiedene Typen von Methoden zur Zeichenfolgenbearbeitung
+          href: types-of-string-manipulation-methods.md
+        - name: Nothing und Zeichenfolgen
+          href: nothing-and-strings.md
+        - name: Auswirkungen der Kultur auf Zeichenfolgen
+          href: how-culture-affects-strings.md
+        - name: Interpolierte Zeichenfolgen
+          href: interpolated-strings.md
+        - name: Nullbasierter und 1-basierter Zeichenfolgenzugriff
+          href: zero-based-vs-one-based-string-access.md
+    - name: 'Vorgehensweise: Erstellen von Zeichenfolgen mit StringBuilder'
+      href: how-to-create-strings-using-a-stringbuilder.md
+    - name: 'Vorgehensweise: Suchen innerhalb einer Zeichenfolge'
+      href: how-to-search-within-a-string.md
+    - name: Konvertieren zwischen Zeichenfolgen und anderen Datentypen
+      href: converting-between-strings-and-other-data-types.md
+      items:
+        - name: 'Vorgehensweise: Konvertieren eines Arrays von Bytes in eine Zeichenfolge'
+          href: how-to-convert-an-array-of-bytes-into-a-string.md
+        - name: 'Vorgehensweise: Konvertieren von Zeichenfolgen in ein Bytearray'
+          href: how-to-convert-strings-into-an-array-of-bytes.md
+        - name: 'Vorgehensweise: Erstellen einer Zeichenfolge aus einem Array mit Char-Werten'
+          href: how-to-create-a-string-from-an-array-of-char-values.md
+        - name: 'Vorgehensweise: Konvertieren von Hexadezimalzeichenfolgen in Zahlen'
+          href: how-to-convert-hexadecimal-strings-to-numbers.md
+        - name: 'Vorgehensweise: Konvertieren einer Zeichenfolge in ein Array von Zeichen'
+          href: how-to-convert-a-string-to-an-array-of-characters.md
+        - name: 'Vorgehensweise: Zugreifen auf Zeichen in Zeichenfolgen'
+          href: how-to-access-characters-in-strings.md
+    - name: Überprüfen von Zeichenfolgen
+      href: validating-strings.md
+      items:
+        - name: 'Vorgehensweise: Überprüfen von Dateinamen und Pfaden'
+          href: how-to-validate-file-names-and-paths.md
+        - name: 'Vorgehensweise: Überprüfen von Zeichenfolgen, die Datumsangaben oder Uhrzeiten darstellen'
+          href: how-to-validate-strings-that-represent-dates-or-times.md
+        - name: Verwenden von regulären Ausdrücken mit dem MaskedTextBox-Steuerelement
+          href: using-regular-expressions-with-the-maskedtextbox-control.md
+        - name: 'Exemplarische Vorgehensweise: Überprüfen der Komplexität von Kennwörtern'
+          href: walkthrough-validating-that-passwords-are-complex.md
+    - name: 'Exemplarische Vorgehensweise: Verschlüsseln und Entschlüsseln von Zeichenfolgen'
+      href: walkthrough-encrypting-and-decrypting-strings.md

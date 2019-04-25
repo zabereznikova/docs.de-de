@@ -9,14 +9,14 @@ ms.assetid: ee1fbb7a-b0f9-482f-8cd0-6df37e6586a2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 418c9afdec32b685f67bd457c055476b5501b414
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599301"
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>Diagnosesymbolspeicher (Referenz zur nicht verwalteten API)
-Die Diagnose Symbol-Speicher-API ermöglicht einen Compiler Symbolinformationen für die Verwendung von einem Debugger zu generieren.  
+Die Diagnosesymbolspeicher-API ermöglicht einem Compiler das Generieren von Symbolinformationen, die von einem Debugger verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Diagnosesymbolspeicher-Schnittstellen](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
