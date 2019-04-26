@@ -3,12 +3,12 @@ title: C#-Typen und -Variablen – Überblick über C#
 description: Erfahren Sie mehr über das Definieren von Typen und Deklarieren von Variablen in C#.
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 552066ff8d17d49dc5cc0bbb60b05c9c3e5f8eda
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: ae44dd273a2460e5718adc7324fae324e3de5bba
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481079"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672367"
 ---
 # <a name="types-and-variables"></a>Typen und Variablen
 
@@ -18,31 +18,42 @@ C#-Werttypen sind weiter unterteilt in *einfache Typen*, *Enumerationstypen*, *S
 
 Im Folgenden finden Sie eine Übersicht des C#-Typsystems.
 
-* Werttypen
-  - Einfache Typen
-    * Ganzzahlig mit Vorzeichen: `sbyte`, `short`, `int`, `long`
-    * Ganzzahlig ohne Vorzeichen: `byte`, `ushort`, `uint`, `ulong`
+* [Werttypen][ValueTypes]
+  - [Einfache Typen][SimpleTypes]
+    * Ganzzahlig mit Vorzeichen: `sbyte`, `short`, `int`,`long`
+    * Ganzzahlig ohne Vorzeichen: `byte`, `ushort`, `uint`,`ulong`
     * Unicode-Zeichen: `char`
     * IEEE-Gleitkomma: `float`, `double`
     * Dezimalwert mit hoher Genauigkeit: `decimal`
     * Boolesch: `bool`
-  - Enumerationstypen
+  - [Enumerationstypen][EnumTypes]
     * Benutzerdefinierte Typen der Form `enum E {...}`
-  - Strukturtypen
+  - [Strukturtypen][StructTypes]
     * Benutzerdefinierte Typen der Form `struct S {...}`
-  - Auf NULL festlegbare Werttypen
+  - [Auf NULL festlegbare Werttypen][NullableTypes]
     * Erweiterungen aller anderen Werttypen mit einem `null`-Wert
-* Verweistypen
-  - Klassentypen
-    * Ultimative Basisklasse aller anderen Typen: `object`
+* [Verweistypen][ReferenceTypes]
+  - [Klassentypen][ClassTypes]
+    * Ultimative Basisklasse aller anderen Typen:`object`
     * Unicode-Zeichenfolgen: `string`
     * Benutzerdefinierte Typen der Form `class C {...}`
-  - Schnittstellentypen
+  - [Schnittstellentypen][InterfaceTypes]
     * Benutzerdefinierte Typen der Form `interface I {...}`
-  - Arraytypen
-    * Ein- und mehrdimensional, z.B. `int[]` und `int[,]`
-  - Delegattypen
+  - [Arraytypen][ArrayTypes]
+    * Ein- und mehrdimensional, z.B. `int[]` und`int[,]`
+  - [Delegattypen][DelegateTypes]
     * Benutzerdefinierte Typen der Form `delegate int D(...)`
+
+[ValueTypes]: ../language-reference/keywords/value-types-table.md
+[SimpleTypes]: ../language-reference/keywords/value-types.md#simple-types
+[EnumTypes]: ../language-reference/keywords/enum.md
+[StructTypes]: ../language-reference/keywords/struct.md
+[NullableTypes]: ../programming-guide/nullable-types/index.md
+[ReferenceTypes]: ../language-reference/keywords/reference-types.md
+[ClassTypes]: ../language-reference/keywords/class.md
+[InterfaceTypes]: ../language-reference/keywords/interface.md
+[DelegateTypes]: ../language-reference/keywords/delegate.md
+[ArrayTypes]: ../programming-guide/arrays/index.md
 
 Die acht Ganzzahltypen unterstützen 8-Bit-, 16-Bit, 32-Bit- und 64-Bit-Werte mit oder ohne Vorzeichen.
 
@@ -59,15 +70,15 @@ Hier sind die numerischen Typen von C# zusammengefasst.
 * Ganzzahlig mit Vorzeichen
   - `sbyte`:  8 Bit, Bereich von -128 bis 127
   - `short`: 16 Bit, Bereich von -32.768 bis 32.767
-  - `int`  : 32 Bit, Bereich von -2.147.483.648 bis 2.147.483.647
+  - `int`: 32 Bit, Bereich von -2.147.483.648 bis 2.147.483.647
   - `long` : 64 Bit, Bereich von -9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807
 * Ganzzahlig ohne Vorzeichen
-  - `byte`   :  8 Bit, Bereich von -0 bis 255
+  - `byte`:  8 Bit, Bereich von -0 bis 255
   - `ushort` : 16 Bit, Bereich von 0 bis 65.535
-  - `uint`   : 32 Bit, Bereich von 0 bis 4.294.967.295
-  - `ulong`  : 64 Bit, Bereich von 0 bis 18.446.744.073.709.551.615
+  - `uint`: 32 Bit, Bereich von 0 bis 4.294.967.295
+  - `ulong`: 64 Bit, Bereich von 0 bis 18.446.744.073.709.551.615
 * Gleitkomma
-  - `float`  : 32 Bit, Bereich von 1,5 × 10<sup>-45</sup> bis 3,4 x 10<sup>38</sup>, Genauigkeit von 7 Stellen
+  - `float`: 32 Bit, Bereich von 1,5 × 10<sup>-45</sup> bis 3,4 x 10<sup>38</sup>, Genauigkeit von 7 Stellen
   - `double` : 64 Bit, Bereich von 5,0 × 10<sup>-324</sup> bis 1,7 x 10<sup>308</sup>, Genauigkeit von 15 Stellen
 * Decimal
   - `decimal` : 128 Bit, Bereich mindestens -7,9 × 10<sup>-28</sup> bis 7,9 x 10<sup>28</sup>, mit einer Genauigkeit von mindestens 28 Stellen

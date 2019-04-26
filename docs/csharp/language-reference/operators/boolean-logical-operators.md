@@ -33,10 +33,10 @@ helpviewer_keywords:
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
 ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427317"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Logische boolesche Operatoren – C#-Referenz
@@ -164,7 +164,7 @@ In der folgenden Liste sind die logischen Operatoren beginnend mit dem höchsten
 - Logischer Negationsoperator `!`
 - Logischer AND-Operator `&`
 - Logischer exklusiver OR-Operator `^`
-- Logischer OR-Operator (||) `|`
+- Logischer OR-Operator `|`
 - Bedingter logischer AND-Operator `&&`
 - Bedingter logischer OR-Operator `||`
 
@@ -178,11 +178,11 @@ Die vollständige Liste der nach Rangfolgenebene sortierten C#-Operatoren finden
 
 Ein benutzerdefinierter Typ kann die Operatoren `!`, `&`, `|` und `^` [überladen](../keywords/operator.md). Wenn ein binärer Operator überladen ist, wird der zugehörige Verbundzuweisungsoperator implizit auch überladen. Ein benutzerdefinierter Typ kann einen Verbundzuweisungsoperator nicht explizit überladen.
 
-Ein benutzerdefinierter Typ kann die bedingten logischen Operatoren `&&` und `||` nicht überladen. Wenn jedoch ein benutzerdefinierter Typ die [„true“ und „false“-Operatoren](../keywords/true-false-operators.md) und den `&`- oder `|`-Operator in einer bestimmten Weise überlädt, kann die `&&`- bzw. `||`-Operation für die Operanden dieses Typs ausgewertet werden. Weitere Informationen finden Sie im Abschnitt [Benutzerdefinierte bedingte logische Operatoren](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md).
+Ein benutzerdefinierter Typ kann die bedingten logischen Operatoren `&&` und `||` nicht überladen. Wenn jedoch ein benutzerdefinierter Typ die [„true“ und „false“-Operatoren](../keywords/true-false-operators.md) und den `&`- oder `|`-Operator in einer bestimmten Weise überlädt, kann die `&&`- bzw. `||`-Operation für die Operanden dieses Typs ausgewertet werden. Weitere Informationen finden Sie im Abschnitt [Benutzerdefinierte bedingte logische Operatoren](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) der [C#-Programmiersprachenspezifikation](~/_csharplang/spec/introduction.md).
 
-## <a name="c-language-specification"></a>C#-Sprachspezifikation
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
 
-Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Sprachspezifikation](~/_csharplang/spec/introduction.md):
+Weitere Informationen finden Sie in den folgenden Abschnitten der [C#-Programmiersprachenspezifikation](~/_csharplang/spec/introduction.md):
 
 - [Logischer Negationsoperator](~/_csharplang/spec/expressions.md#logical-negation-operator)
 - [Logische Operatoren](~/_csharplang/spec/expressions.md#logical-operators)

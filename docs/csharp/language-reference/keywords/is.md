@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 9fb57caeafde9db5759300d938a85f4abf4d05f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480832"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672458"
 ---
 # <a name="is-c-reference"></a>is (C#-Referenz)
 
@@ -144,7 +144,7 @@ Das folgende Beispiel zeigt einen Vergleich von `null`-Überprüfungen:
  
 ### <a name="var" />Variablenmuster</a>
 
-Eine Musterübereinstimmung mit dem Variablenmuster ist für Nicht-NULL-Ausdrücke immer erfolgreich; wenn *expr* gleich `null` ist, dann ist der `is`-Ausdruck gleich `false`. Der Wert ungleich NULL von *expr* wird immer einer lokalen Variablen zugewiesen, deren Typ dem Runtimetyp von *expr* entspricht.  Die Syntax lautet:
+Das `var`-Muster ist ein Catch-All-Muster für jeden Typ bzw. jeden Wert. Der Wert von *expr* wird immer einer lokalen Variablen zugewiesen, deren Typ dem Kompilierzeittyp von *expr* entspricht. Das Ergebnis des `is`-Ausdrucks lautet immer `true`. Die Syntax lautet:
 
 ```csharp 
    expr is var varname
