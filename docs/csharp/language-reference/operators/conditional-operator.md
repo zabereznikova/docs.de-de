@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: c03fa202b413c98230ba70ca7a0b709d7865cb91
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 82ada5e4d1f56ea93bbd7f41b04cda9f98d678c9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427382"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672393"
 ---
 # <a name="-operator-c-reference"></a>?: Operator (C#-Referenz)
 
@@ -37,11 +37,17 @@ Der bedingte Operator ist rechtsassoziativ, d.h. ein Ausdruck der Form
 a ? b : c ? d : e
 ```
 
-wird als ausgewertet,
+wird wie folgt ausgewertet
 
 ```csharp
 a ? b : (c ? d : e)
 ```
+
+Eine praktische Gedächtnisstütze für die Auswertung des Operators ist die folgende Frage: 
+```
+is this condition true ? yes : no
+```
+Dabei fungiert das ? im Operatorausdruck als Fragezeichen für die vorherige Anweisung und die daraus folgende Handlung als logische Antwort auf diese Frage.
 
 Im folgenden Beispiel wird die Verwendung des bedingten Operators veranschaulicht:
 
@@ -77,9 +83,9 @@ Die Verwendung des bedingten Operators über einer [if-else](../keywords/if-else
 
 Der bedingte Operator kann nicht überladen werden.
 
-## <a name="c-language-specification"></a>C#-Sprachspezifikation
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
 
-Weitere Informationen finden Sie im Abschnitt [Bedingter Operator](~/_csharplang/spec/expressions.md#conditional-operator) der [C#-Sprachspezifikation](../language-specification/index.md).
+Weitere Informationen finden Sie im Abschnitt [Bedingter Operator](~/_csharplang/spec/expressions.md#conditional-operator) der [C#-Programmiersprachenspezifikation](../language-specification/index.md).
 
 ## <a name="see-also"></a>Siehe auch
 
@@ -87,6 +93,6 @@ Weitere Informationen finden Sie im Abschnitt [Bedingter Operator](~/_csharplang
 - [C#-Programmierhandbuch](../../programming-guide/index.md)
 - [C#-Operatoren](index.md)
 - [if-else-Anweisung](../keywords/if-else.md)
-- [?. und ?[]-Operatoren](null-conditional-operators.md)
+- [?.- und ?[]-Operatoren](null-conditional-operators.md)
 - [?? Operator](null-coalescing-operator.md)
-- [ref-Schlüsselwort](../keywords/ref.md)
+- [ref (C#-Referenz)](../keywords/ref.md)
