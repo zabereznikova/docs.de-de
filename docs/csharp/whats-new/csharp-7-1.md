@@ -3,10 +3,10 @@ title: Neues in C# 7.1
 description: Eine Übersicht der neuen Features in C# 7.1
 ms.date: 04/09/2019
 ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480962"
 ---
 # <a name="whats-new-in-c-71"></a>Neues in C# 7.1
@@ -17,9 +17,9 @@ Mit C# 7.1 wird ein Konfigurationselement zum [Auswählen der Sprachversion](../
 
 Die neuen Sprachfeatures in diesem Release umfassen:
 
-* [`async` `Main` Methode](#async-main)
+* Die [`async``Main`-Methode](#async-main)
   - Der Einstiegspunkt für eine Anwendung kann über den Modifizierer `async` verfügen.
-* [`default` Literale Ausdrücke](#default-literal-expressions)
+* [`default`Literale Ausdrücke](#default-literal-expressions)
   - Sie können literale Standardausdrücke in Standardwertausdrücken verwenden, wenn der Zieltyp abgeleitet werden kann.
 * [Abgeleitete Tupelelementnamen](#inferred-tuple-element-names)
   - Die Namen von Tupelelementen können in den meisten Fällen von der Initialisierung eines Tupels abgeleitet werden.

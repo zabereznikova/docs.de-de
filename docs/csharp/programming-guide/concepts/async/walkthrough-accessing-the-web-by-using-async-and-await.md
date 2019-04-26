@@ -3,10 +3,10 @@ title: 'Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und 
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
 ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306728"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>Exemplarische Vorgehensweise: Zugreifen auf das Web mit „async“ und „await“ (C#)
@@ -235,7 +235,7 @@ Beachten Sie, dass es ein paar Sekunden dauert, bis die Zahlen angezeigt werden.
     using (WebResponse response = webReq.GetResponseAsync())
     ```
 
-2. `GetResponseAsync` Gibt <xref:System.Threading.Tasks.Task%601> zurück. In diesem Fall weist die *Aufgabenrückgabevariable*, `TResult`, den Typ <xref:System.Net.WebResponse> auf. Mit dieser Aufgabe soll ein tatsächliches `WebResponse`-Objekt erstellt werden, nachdem die angeforderten Daten heruntergeladen und das Ausführen der Aufgabe abgeschlossen wurde.
+2. `GetResponseAsync` gibt einen Wert vom Typ <xref:System.Threading.Tasks.Task%601> zurück. In diesem Fall weist die *Aufgabenrückgabevariable*, `TResult`, den Typ <xref:System.Net.WebResponse> auf. Mit dieser Aufgabe soll ein tatsächliches `WebResponse`-Objekt erstellt werden, nachdem die angeforderten Daten heruntergeladen und das Ausführen der Aufgabe abgeschlossen wurde.
 
      Wenden Sie analog zur Darstellung im folgenden Code zum Abrufen des `WebResponse`-Werts aus der Aufgabe einen [await](../../../../csharp/language-reference/keywords/await.md)-Operator für den Aufruf von `GetResponseAsync` an.
 
@@ -690,11 +690,11 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>Siehe auch
 
-- [Asynchrones Beispiel: Webzugriff – Exemplarische Vorgehensweise (C# und Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Async Sample: Webzugriff – Exemplarische Vorgehensweise (C# und Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [async](../../../../csharp/language-reference/keywords/async.md)
 - [await](../../../../csharp/language-reference/keywords/await.md)
 - [Asynchrone Programmierung mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [Asynchrone Rückgabetypen (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [Aufgabenbasiertes asynchrones Programmieren (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957)
+- [Task-based Asynchronous Programming (TAP) (Aufgabenbasiertes asynchrones Programmieren (TAP))](https://www.microsoft.com/en-us/download/details.aspx?id=19957)
 - [Vorgehensweise: Erweitern der asynchronen exemplarischen Vorgehensweise mit Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit „async“ und „await“ (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [Vorgehensweise: Paralleles Erstellen mehrerer Webanforderungen mit Async und Await (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

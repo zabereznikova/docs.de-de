@@ -11,10 +11,10 @@ helpviewer_keywords:
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
 ms.openlocfilehash: 67d60709e1c6c76071ecfb7aac74c83dec6f372a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310043"
 ---
 # <a name="amp-operator-c-reference"></a>&amp;-Operator (C#-Referenz)
@@ -54,9 +54,9 @@ Für Operanden, die NULL-Werte zulassen, ist das Verhalten des `&`-Operators kon
 
 Benutzerdefinierte Typen können den binären `&`-Operator [überladen](../keywords/operator.md). Wenn ein binärer `&`-Operator überladen ist, wird der [AND-Zuweisungsoperator](and-assignment-operator.md) `&=` auch implizit überladen.
 
-## <a name="c-language-specification"></a>C#-Sprachspezifikation
+## <a name="c-language-specification"></a>C#-Programmiersprachenspezifikation
 
-Weitere Informationen finden Sie in den Abschnitten [Der address-of-Operator](~/_csharplang/spec/unsafe-code.md#the-address-of-operator) und [Logische Operatoren](~/_csharplang/spec/expressions.md#logical-operators) der [C#-Sprachspezifikation](../language-specification/index.md).
+Weitere Informationen finden Sie in den Abschnitten [Der address-of-Operator](~/_csharplang/spec/unsafe-code.md#the-address-of-operator) und [Logische Operatoren](~/_csharplang/spec/expressions.md#logical-operators) der [C#-Programmiersprachenspezifikation](../language-specification/index.md).
 
 ## <a name="see-also"></a>Siehe auch
 
