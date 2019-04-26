@@ -1,29 +1,29 @@
 ---
-title: 'Migrationshandbuch zu .NET Framework 4.7, 4.6 und 4.5 '
+title: 'Migrationshandbuch zu .NET Framework 4.8, 4.7, 4.6 und 4.5 '
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9c537aa8fff5fdf823effeae42382ee499efaf4
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: fb51a0be57992d65a88e958d76a5e371dc028a00
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61871448"
 ---
-# <a name="migration-guide-to-the-net-framework-47-46-and-45"></a>Migrationshandbuch zu .NET Framework 4.7, 4.6 und 4.5
+# <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>Migrationshandbuch zu .NET Framework 4.8, 4.7, 4.6 und 4.5
 
-Wenn Sie Ihre App mit einer früheren Version von .NET Framework erstellt haben, können Sie im Allgemeinen problemlos ein Upgrade auf .NET Framework 4.5 und die Nebenversionen (4.5.1 und 4.5.2), .NET Framework 4.6 und die Nebenversionen (4.6.1 und 4.6.2) oder .NET Framework 4.7 und seine Nebenversionen (4.7.1 und 4.7.2) ausführen. Öffnen Sie Ihr Projekt in Visual Studio. Wenn das Projekt in einer früheren Version von Visual Studio erstellt wurde, wird automatisch das Dialogfeld **Projektkompatibilität** geöffnet. Weitere Informationen zum Durchführen von Upgrades für ein Projekt in Visual Studio finden Sie unter [Übertragung, Migration und Upgrade der Visual Studio-Projekte](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) und [Visual Studio 2017 – Zielplattformen und Kompatibilität](/visualstudio/productinfo/vs2017-compatibility-vs).
+Wenn Sie Ihre App mit einer früheren Version von .NET Framework erstellt haben, können Sie im Allgemeinen problemlos ein Upgrade auf .NET Framework 4.5 und die Nebenversionen (4.5.1 und 4.5.2), .NET Framework 4.6 und die Nebenversionen (4.6.1 und 4.6.2), .NET Framework 4.7 und seine Nebenversionen (4.7.1 und 4.7.2) oder .NET Framework 4.8 ausführen. Öffnen Sie Ihr Projekt in Visual Studio. Wenn das Projekt in einer früheren Version von Visual Studio erstellt wurde, wird automatisch das Dialogfeld **Projektkompatibilität** geöffnet. Weitere Informationen zum Durchführen von Upgrades für ein Projekt in Visual Studio finden Sie unter [Übertragung, Migration und Upgrade der Visual Studio-Projekte](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) und [Visual Studio 2019 – Zielplattformen und Kompatibilität](/visualstudio/releases/2019/compatibility).
 
- Einige Änderungen in .NET Framework erfordern jedoch Änderungen am Code. So möchten Sie möglicherweise die neuen Funktionen von .NET Framework 4.5 und Nebenversionen, von .NET Framework 4.6 und Nebenversionen sowie von .NET Framework 4.7 und Nebenversionen nutzen. Diese Art von Änderungen an der App für eine neue Version von .NET Framework wird in der Regel als *Migration* bezeichnet. Wenn Ihre Anwendung nicht migriert werden muss, können Sie sie in .NET Framework 4.5 oder einer späteren Version ausführen, ohne sie neu zu kompilieren.
+ Einige Änderungen in .NET Framework erfordern jedoch Änderungen am Code. So möchten Sie möglicherweise die neuen Features von .NET Framework 4.5 und Nebenversionen, von .NET Framework 4.6 und Nebenversionen, von .NET Framework 4.7 und Nebenversionen oder .NET Framework 4.8 nutzen. Diese Art von Änderungen an der App für eine neue Version von .NET Framework wird in der Regel als *Migration* bezeichnet. Wenn Ihre Anwendung nicht migriert werden muss, können Sie sie in .NET Framework 4.5 oder einer späteren Version ausführen, ohne sie neu zu kompilieren.
 
 ## <a name="migration-resources"></a>Migrationsressourcen
 
-Lesen Sie die folgenden Dokumente, bevor Sie die App aus früheren Versionen von .NET Framework zu Version 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 oder 4.7.2 migrieren:
+Lesen Sie die folgenden Dokumente, bevor Sie die App aus früheren Versionen von .NET Framework zu Version 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 oder 4.8 migrieren:
 
 - Lesen Sie [Versionen und Abhängigkeiten](versions-and-dependencies.md), damit Sie die CLR-Version kennen, die den einzelnen Versionen von .NET Framework zugrunde liegt, und um Richtlinien zur erfolgreichen Ausrichtung für Apps auf das gewünschte Ziel zu erfahren.
 
