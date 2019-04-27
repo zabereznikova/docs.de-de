@@ -8,11 +8,11 @@ ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b9833d768b84faaf6e1dcf8c9cb8b00b92adc3d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673985"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks >-Element
 Fordert an, dass die common Language Runtime (CLR) Speicher reduzieren verwenden, indem Sie explizite Stapelgrößen angeben, wenn es sich um bestimmte Threads, die sie intern verwendet erstellt, statt die standardmäßige Stapelgröße für diese Threads.  
