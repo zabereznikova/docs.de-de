@@ -15,11 +15,11 @@ ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 43404ba24f6308d8da17b03df9997e893799c8d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875003"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock-MDA
 
@@ -39,11 +39,11 @@ Standardmäßig wird STA als Threadingmodell für den Hauptthread von Visual Bas
 
 Unter Umständen wird dieser MDA fälschlicherweise aktiviert, wenn alle folgenden Bedingungen erfüllt sind:
 
--   Eine Anwendung erstellt entweder direkt oder indirekt über Bibliotheken COM-Komponenten von STA-Threads.
+- Eine Anwendung erstellt entweder direkt oder indirekt über Bibliotheken COM-Komponenten von STA-Threads.
 
--   Die Anwendung wurde im Debugger angehalten, und der Benutzer hat entweder die Ausführung der Anwendung fortgesetzt oder einen Ausführungsschritt durchgeführt.
+- Die Anwendung wurde im Debugger angehalten, und der Benutzer hat entweder die Ausführung der Anwendung fortgesetzt oder einen Ausführungsschritt durchgeführt.
 
--   Nicht verwaltetes Debuggen ist nicht aktiviert.
+- Nicht verwaltetes Debuggen ist nicht aktiviert.
 
 Um festzustellen, ob der MDA fälschlicherweise aktiviert wurde, deaktivieren Sie alle Haltepunkte, starten Sie die Anwendung neu, und führen Sie sie ohne Unterbrechung aus. Wenn der MDA nicht aktiviert wird, war die erste Aktivierung wahrscheinlich falsch. Deaktivieren Sie in diesem Fall den MDA, um eine Störung der Debugsitzung zu vermeiden.
 
@@ -58,7 +58,7 @@ Befolgen Sie die COM-Regeln hinsichtlich der STA-Meldungsweiterleitung.
 
 Dieser MDA hat keine Auswirkungen auf die CLR. Es werden nur Angaben über COM-Kontexte gemeldet.
 
-## <a name="output"></a>Ausgabe
+## <a name="output"></a>Output
 
 Eine Meldung, die den aktuellen Kontext und den Zielkontext beschreibt.
 

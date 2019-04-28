@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
 ms.openlocfilehash: b50c902f69f7602dbad4663dc35bf0a2b932973f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796980"
 ---
 # <a name="char-data-type-visual-basic"></a>Char-Datentyp (Visual Basic)
 Enthält unsignierten 16-Bit (2-Byte) Codepunkte im Bereich von 0 bis 65535. Jede *Codepunkt*, oder Zeichencode ein einzelnes Unicodezeichens darstellt.  
@@ -47,15 +47,15 @@ charVar = "Z"C
   
 ## <a name="programming-tips"></a>Programmiertipps  
   
--   **Negative Zahlen.** `Char` ein Typ ohne Vorzeichen und einen negativen Wert nicht darstellen kann. In jedem Fall sollten Sie nicht verwenden `Char` für numerische Werte.  
+- **Negative Zahlen.** `Char` ein Typ ohne Vorzeichen und einen negativen Wert nicht darstellen kann. In jedem Fall sollten Sie nicht verwenden `Char` für numerische Werte.  
   
--   **Interop-Überlegungen.** Wenn Sie eine mit Komponenten, die nicht für .NET Framework geschrieben wurden Schnittstelle z. B. Automatisierungs- oder COM-Objekte, denken Sie daran: Typen mit Zeichen eine andere Datenbreite (8 Bits) in anderen Umgebungen. Wenn Sie ein 8-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie sie als `Byte` anstelle von `Char` im neuen Visual Basic-Code.  
+- **Interop-Überlegungen.** Wenn Sie eine mit Komponenten, die nicht für .NET Framework geschrieben wurden Schnittstelle z. B. Automatisierungs- oder COM-Objekte, denken Sie daran: Typen mit Zeichen eine andere Datenbreite (8 Bits) in anderen Umgebungen. Wenn Sie ein 8-Bit-Argument an eine solche Komponente übergeben, deklarieren Sie sie als `Byte` anstelle von `Char` im neuen Visual Basic-Code.  
   
--   **Erweiternde.** Die `Char` -Datentyp wird zu `String`. Dies bedeutet, Sie können konvertieren `Char` zu `String` , ohne dass eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
+- **Erweiternde.** Die `Char` -Datentyp wird zu `String`. Dies bedeutet, Sie können konvertieren `Char` zu `String` , ohne dass eine <xref:System.OverflowException?displayProperty=nameWithType> Fehler.  
   
--   **Typzeichen.** Durch Anhängen des Literaltypzeichens `C` in eine Zeichenfolge für die einzelnen Zeichen Literal wird der `Char` -Datentyp. `Char` verfügt über keine Typkennzeichen aus.  
+- **Typzeichen.** Durch Anhängen des Literaltypzeichens `C` in eine Zeichenfolge für die einzelnen Zeichen Literal wird der `Char` -Datentyp. `Char` verfügt über keine Typkennzeichen aus.  
   
--   **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Char?displayProperty=nameWithType>-Struktur.  
+- **Framework-Typ.** Der entsprechende Typ in .NET Framework ist die <xref:System.Char?displayProperty=nameWithType>-Struktur.  
   
 ## <a name="see-also"></a>Siehe auch
 

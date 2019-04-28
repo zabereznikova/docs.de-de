@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
 ms.openlocfilehash: 21efca701eb16898dd291d73bf0431641ba75d12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788881"
 ---
 # <a name="-reference-visual-basic"></a>-Referenz (Visual Basic)
 Veranlasst den Compiler Typinformationen in den angegebenen Assemblys für das Projekt verfügbar sein, auf denen Sie aktuell kompilieren.  
@@ -38,9 +38,9 @@ Veranlasst den Compiler Typinformationen in den angegebenen Assemblys für das P
   
  Wenn Sie eine Assembly (Assembly A) verweisen, die ihrerseits auf einer anderen Assembly (Assembly B) verweist, müssen Sie auf Assembly B verweisen wenn:  
   
--   Ein Typ von Assembly A erbt von einem Typ oder implementiert eine Schnittstelle aus Assembly B.  
+- Ein Typ von Assembly A erbt von einem Typ oder implementiert eine Schnittstelle aus Assembly B.  
   
--   Es wird ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode aufgerufen, das/die über einen Rückgabetyp oder Parametertyp von Assembly B verfügt.  
+- Es wird ein Feld, eine Eigenschaft, ein Ereignis oder eine Methode aufgerufen, das/die über einen Rückgabetyp oder Parametertyp von Assembly B verfügt.  
   
  Verwendung [- Libpath](../../../visual-basic/reference/command-line-compiler/libpath.md) auf das Verzeichnis anzugeben, in denen eine oder mehrere der Assemblyverweise befinden.  
   

@@ -3,11 +3,11 @@ title: Typische Schritte bei der Verwendung von LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
 ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876972"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Typische Schritte bei der Verwendung von LINQ to SQL
 Zur Implementierung einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]-Anwendung führen Sie die weiter unten beschriebenen Schritte aus. Beachten Sie, dass viele Schritte optional sind. Es ist gut möglich, dass Sie das Objektmodell in seinem Standardzustand verwenden können.  
@@ -20,32 +20,32 @@ Zur Implementierung einer [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtec
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Wählen Sie ein Tool aus, um das Modell zu erstellen.  
  Für die Erstellung des Modells stehen drei Tools zur Verfügung.  
   
--   Der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+- Der [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
      Dieser Designer stellt eine umfangreiche Benutzeroberfläche zum Erstellen eines Objektmodells aus einer vorhandenen Datenbank bereit. Dieses Tool ist Teil der Visual Studio-IDE und eignet sich am besten für kleine oder mittlere Datenbanken.  
   
--   Das SQLMetal-Tool zur Codeerstellung  
+- Das SQLMetal-Tool zur Codeerstellung  
   
      Dieses Befehlszeilenhilfsprogramm stellt einen Optionssatz bereit, der leicht von [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] abweicht. Dieses Tool eignet sich vor allem für die Modellierung großer Datenbanken. Weitere Informationen finden Sie unter [SqlMetal.exe (Tool zur Codegenerierung)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
--   Ein Code-Editor  
+- Ein Code-Editor  
   
      Sie können Ihren eigenen Code schreiben, mit Visual Studio Code-Editor oder einem anderen Editor. Dieser Ansatz wird nicht empfohlen, da hierbei Fehler auftreten können. Wenn Sie über eine Datenbank verfügen, verwenden Sie entweder [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] oder das SQLMetal-Tool . Der Code-Editor kann sich jedoch beim Verfeinern und Ändern von bereits erzeugtem Code als nützlich erweisen. Weitere Informationen finden Sie unter [Vorgehensweise: Anpassen von Entitätsklassen mit dem Code-Editor](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Wählen Sie die Art von Code aus, die Sie erzeugen möchten.  
   
--   Ein C# oder Visual Basic-Quellcodedatei für attributbasierte Zuordnung.  
+- Ein C# oder Visual Basic-Quellcodedatei für attributbasierte Zuordnung.  
   
      Sie schließen dann diese Codedatei im Visual Studio-Projekt. Weitere Informationen finden Sie unter [attributbasierte Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
--   Eine XML-Datei für externe Zuordnung.  
+- Eine XML-Datei für externe Zuordnung.  
   
      Sie können bei diesem Ansatz die Zuordnungsmetadaten vom Anwendungscode fernhalten. Weitere Informationen finden Sie unter [externe Zuordnung](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
   
     > [!NOTE]
     >  Der [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] unterstützt die Erzeugung externer Zuordnungsdateien nicht. Sie müssen das SQLMetal-Tool verwenden, um diese Funktion zu implementieren.  
   
--   Eine DBML-Datei, die Sie vor dem Erzeugen einer abschließenden Codedatei ändern können.  
+- Eine DBML-Datei, die Sie vor dem Erzeugen einer abschließenden Codedatei ändern können.  
   
      Dies ist eine erweiterte Funktion.  
   

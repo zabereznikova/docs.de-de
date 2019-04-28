@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876277"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express-Benutzerinstanzen
 Microsoft SQL Server Express Edition (SQL Server Express) unterstützt die Benutzerinstanzfunktion, die die Verwendung des .NET Framework-Datenanbieters für SQL Server (`SqlClient`) voraussetzt. Eine Benutzerinstanz ist eine separate Instanz der SQL Server Express-Datenbank-Engine, die von einer übergeordneten Instanz generiert wird. Mit Benutzerinstanzen können Benutzer, die auf ihrem lokalen Computer nicht mit Administratorrechten arbeiten, eine Verbindung zu SQL Server Express-Datenbanken herstellen. Jede Instanz wird im Sicherheitskontext des jeweiligen Benutzers ausgeführt, wobei für jeden Benutzer genau eine Instanz erstellt wird.  
@@ -41,15 +41,15 @@ sp_configure 'user instances enabled','0'
   
  Beachten Sie bei der unten genannten Beispielverbindungszeichenfolge Folgendes:  
   
--   Das `Data Source`-Schlüsselwort verweist auf die übergeordnete Instanz von SQL Server Express, die die Benutzerinstanz generiert. Die Standardinstanz ist .\sqlexpress.  
+- Das `Data Source`-Schlüsselwort verweist auf die übergeordnete Instanz von SQL Server Express, die die Benutzerinstanz generiert. Die Standardinstanz ist .\sqlexpress.  
   
--   Für `Integrated Security` ist `true` festgelegt. Zur Herstellung einer Verbindung mit einer Benutzerinstanz ist die Windows-Authentifizierung erforderlich. SQL Server-Anmeldungen werden nicht unterstützt.  
+- Für `Integrated Security` ist `true` festgelegt. Zur Herstellung einer Verbindung mit einer Benutzerinstanz ist die Windows-Authentifizierung erforderlich. SQL Server-Anmeldungen werden nicht unterstützt.  
   
--   Für `User Instance` ist `true` festgelegt, wodurch eine Benutzerinstanz aufgerufen wird. (Der Standardwert ist `false`.)  
+- Für `User Instance` ist `true` festgelegt, wodurch eine Benutzerinstanz aufgerufen wird. (Der Standardwert ist `false`.)  
   
--   Das Schlüsselwort für die `AttachDbFileName`-Verbindungszeichenfolge wird verwendet, um die primäre Datenbankdatei (.mdf) anzufügen. Diese muss den vollständigen Pfadnamen enthalten. `AttachDbFileName` entspricht auch den Schlüsseln "extended properties" und "initial file name" in einer <xref:System.Data.SqlClient.SqlConnection>-Verbindungszeichenfolge.  
+- Das Schlüsselwort für die `AttachDbFileName`-Verbindungszeichenfolge wird verwendet, um die primäre Datenbankdatei (.mdf) anzufügen. Diese muss den vollständigen Pfadnamen enthalten. `AttachDbFileName` entspricht auch den Schlüsseln "extended properties" und "initial file name" in einer <xref:System.Data.SqlClient.SqlConnection>-Verbindungszeichenfolge.  
   
--   Die `|DataDirectory|`-Ersatzzeichenfolge zwischen den vertikalen Strichen (|) verweist auf das Datenverzeichnis der Anwendung, die die Verbindung öffnet, und gibt den relativen Pfad zum Speicherort der MDF- und LDF-Datenbank- und Protokolldateien an. Wenn sich diese Dateien woanders befinden, müssen Sie den vollständigen Pfad zu den Dateien angeben.  
+- Die `|DataDirectory|`-Ersatzzeichenfolge zwischen den vertikalen Strichen (|) verweist auf das Datenverzeichnis der Anwendung, die die Verbindung öffnet, und gibt den relativen Pfad zum Speicherort der MDF- und LDF-Datenbank- und Protokolldateien an. Wenn sich diese Dateien woanders befinden, müssen Sie den vollständigen Pfad zu den Dateien angeben.  
   
 ```  
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -144,11 +144,11 @@ private static void OpenSqlConnection()
   
  Zu den Benutzerinstanzszenarien gehören folgende Szenarien:  
   
--   alle Einzelbenutzeranwendungen, in denen keine Datenfreigabe erforderlich ist  
+- alle Einzelbenutzeranwendungen, in denen keine Datenfreigabe erforderlich ist  
   
--   ClickOnce-Bereitstellung: Auf Computern, auf denen .NET Framework 2.0 (oder höher) und SQL Server Express bereits installiert sind, kann das im Rahmen einer ClickOnce-Aktion heruntergeladene Installationspaket installiert und von Benutzern ohne Administratorberechtigung verwendet werden. Beachten Sie, dass die Installation von SQL Server Express, sofern diese Teil des Setups ist, von einem Administrator vorgenommen werden muss. Weitere Informationen finden Sie unter [ClickOnce-Bereitstellung für Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
+- ClickOnce-Bereitstellung: Auf Computern, auf denen .NET Framework 2.0 (oder höher) und SQL Server Express bereits installiert sind, kann das im Rahmen einer ClickOnce-Aktion heruntergeladene Installationspaket installiert und von Benutzern ohne Administratorberechtigung verwendet werden. Beachten Sie, dass die Installation von SQL Server Express, sofern diese Teil des Setups ist, von einem Administrator vorgenommen werden muss. Weitere Informationen finden Sie unter [ClickOnce-Bereitstellung für Windows Forms](../../../winforms/clickonce-deployment-for-windows-forms.md).
   
--   dediziertes ASP.NET-Hosting mit Windows-Authentifizierung: Eine einzelne SQL Server Express-Instanz kann in einem Intranet gehostet werden. Die Anwendung stellt die Verbindung über das ASPNET-Windows-Konto und nicht durch einen Identitätswechsel her. Benutzerinstanzen dürfen nicht in Drittanbieterszenarien oder Szenarien mit gemeinsamem Hosting verwendet werden, in denen alle Anwendungen dieselbe Benutzerinstanz nutzen und damit nicht mehr voneinander isoliert sind.  
+- dediziertes ASP.NET-Hosting mit Windows-Authentifizierung: Eine einzelne SQL Server Express-Instanz kann in einem Intranet gehostet werden. Die Anwendung stellt die Verbindung über das ASPNET-Windows-Konto und nicht durch einen Identitätswechsel her. Benutzerinstanzen dürfen nicht in Drittanbieterszenarien oder Szenarien mit gemeinsamem Hosting verwendet werden, in denen alle Anwendungen dieselbe Benutzerinstanz nutzen und damit nicht mehr voneinander isoliert sind.  
   
 ## <a name="see-also"></a>Siehe auch
 

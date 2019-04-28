@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
 ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877122"
 ---
 # <a name="remote-vs-local-execution"></a>Remoteausführung im Vergleich zu lokaler Ausführung
 Sie können festlegen, ob Ihre Abfragen remote (die Datenbank-Engine führt eine Abfrage mit der Datenbank aus ) oder lokal ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] führt die Abfrage mit einem lokalen Cache aus) erfolgen sollen.  
@@ -23,18 +23,18 @@ Sie können festlegen, ob Ihre Abfragen remote (die Datenbank-Engine führt eine
   
  Wenn Ihre Datenbank Tausende von Zeilen mit Bestellungen aufweist, möchten Sie diese nicht alle abrufen müssen, um eine kleinere Teilmenge zu bearbeiten. In [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] implementiert die <xref:System.Data.Linq.EntitySet%601>-Klasse die <xref:System.Linq.IQueryable>-Schnittstelle. Dieser Ansatz stellt sicher, dass solche Abfragen remote ausgeführt werden können. Aus dieser Technik ergeben sich zwei wesentliche Vorteile:  
   
--   Unnötige Daten werden nicht abgerufen.  
+- Unnötige Daten werden nicht abgerufen.  
   
--   Eine von der Datenbank-Engine ausgeführte Abfrage ist aufgrund der Datenbankindizes oft effizienter.  
+- Eine von der Datenbank-Engine ausgeführte Abfrage ist aufgrund der Datenbankindizes oft effizienter.  
   
 ## <a name="local-execution"></a>lokaler Ausführung  
  In anderen Situationen möchten Sie ggf. alle verbundenen Entitäten in den lokalen Cache übertragen. Zu diesem Zweck stellt <xref:System.Data.Linq.EntitySet%601> die <xref:System.Data.Linq.EntitySet%601.Load%2A>-Methode bereit, um explizit alle Member von <xref:System.Data.Linq.EntitySet%601> zu laden.  
   
  Wenn ein <xref:System.Data.Linq.EntitySet%601> bereits geladen ist, werden nachfolgende Abfragen lokal ausgeführt. Dieser Ansatz unterstützt Sie auf zwei Arten:  
   
--   Wenn der gesamte Satz lokal oder mehrmals verwendet werden muss, können Sie Remoteabfragen und die zugehörige Latenz vermeiden.  
+- Wenn der gesamte Satz lokal oder mehrmals verwendet werden muss, können Sie Remoteabfragen und die zugehörige Latenz vermeiden.  
   
--   Die Entität kann als vollständige Entität serialisiert werden.  
+- Die Entität kann als vollständige Entität serialisiert werden.  
   
  Das folgende Codefragment zeigt, wie die lokale Ausführung erreicht werden kann:  
   
