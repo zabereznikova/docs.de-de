@@ -18,13 +18,13 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91a9bea6a89d7684d1f3524e4105da81f11e00a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749643"
 ---
-# <a name="icordebugcontrollercancommitchanges-method"></a><span data-ttu-id="0ad44-102">ICorDebugController::CanCommitChanges-Methode</span><span class="sxs-lookup"><span data-stu-id="0ad44-102">ICorDebugController::CanCommitChanges Method</span></span>
-<span data-ttu-id="0ad44-103">`CanCommitChanges` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="0ad44-103">`CanCommitChanges` is obsolete.</span></span> <span data-ttu-id="0ad44-104">Rufen Sie diese Methode nicht.</span><span class="sxs-lookup"><span data-stu-id="0ad44-104">Do not call this method.</span></span>  
+# <a name="icordebugcontrollercancommitchanges-method"></a><span data-ttu-id="ab5d7-102">ICorDebugController::CanCommitChanges-Methode</span><span class="sxs-lookup"><span data-stu-id="ab5d7-102">ICorDebugController::CanCommitChanges Method</span></span>
+<span data-ttu-id="ab5d7-103">`CanCommitChanges` ist veraltet.</span><span class="sxs-lookup"><span data-stu-id="ab5d7-103">`CanCommitChanges` is obsolete.</span></span> <span data-ttu-id="ab5d7-104">Rufen Sie diese Methode nicht.</span><span class="sxs-lookup"><span data-stu-id="ab5d7-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0ad44-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="0ad44-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ab5d7-105">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="ab5d7-105">See also</span></span>

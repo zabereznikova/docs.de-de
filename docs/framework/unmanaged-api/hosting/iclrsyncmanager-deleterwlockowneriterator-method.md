@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 82988d25926a4e61d91a98e7cd5995dacde4e5b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763697"
 ---
-# <a name="iclrsyncmanagerdeleterwlockowneriterator-method"></a><span data-ttu-id="fba79-102">ICLRSyncManager::DeleteRWLockOwnerIterator-Methode</span><span class="sxs-lookup"><span data-stu-id="fba79-102">ICLRSyncManager::DeleteRWLockOwnerIterator Method</span></span>
-<span data-ttu-id="fba79-103">Fordert an, dass die common Language Runtime (CLR) den Iterator, der durch einen Aufruf erstellt wurde zerstört [ICLRSyncManager:: CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).</span><span class="sxs-lookup"><span data-stu-id="fba79-103">Requests that the common language runtime (CLR) destroy an iterator that was created by a call to [ICLRSyncManager::CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).</span></span>  
+# <a name="iclrsyncmanagerdeleterwlockowneriterator-method"></a><span data-ttu-id="626bf-102">ICLRSyncManager::DeleteRWLockOwnerIterator-Methode</span><span class="sxs-lookup"><span data-stu-id="626bf-102">ICLRSyncManager::DeleteRWLockOwnerIterator Method</span></span>
+<span data-ttu-id="626bf-103">Fordert an, dass die common Language Runtime (CLR) den Iterator, der durch einen Aufruf erstellt wurde zerstört [ICLRSyncManager:: CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).</span><span class="sxs-lookup"><span data-stu-id="626bf-103">Requests that the common language runtime (CLR) destroy an iterator that was created by a call to [ICLRSyncManager::CreateRWLockOwnerIterator](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-createrwlockowneriterator-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fba79-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="fba79-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="626bf-104">Syntax</span><span class="sxs-lookup"><span data-stu-id="626bf-104">Syntax</span></span>  
   
 ```  
 HRESULT DeleteRWLockOwnerIterator (  
@@ -35,34 +35,34 @@ HRESULT DeleteRWLockOwnerIterator (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fba79-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="fba79-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="626bf-105">Parameter</span><span class="sxs-lookup"><span data-stu-id="626bf-105">Parameters</span></span>  
  `Iterator`  
- <span data-ttu-id="fba79-106">[in] Der Iterator, der erstellt wurde, mit einem Aufruf von `CreateRWLockOwnerIterator`.</span><span class="sxs-lookup"><span data-stu-id="fba79-106">[in] The iterator that was created by using a call to `CreateRWLockOwnerIterator`.</span></span>  
+ <span data-ttu-id="626bf-106">[in] Der Iterator, der erstellt wurde, mit einem Aufruf von `CreateRWLockOwnerIterator`.</span><span class="sxs-lookup"><span data-stu-id="626bf-106">[in] The iterator that was created by using a call to `CreateRWLockOwnerIterator`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="fba79-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="fba79-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="626bf-107">Rückgabewert</span><span class="sxs-lookup"><span data-stu-id="626bf-107">Return Value</span></span>  
   
-|<span data-ttu-id="fba79-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="fba79-108">HRESULT</span></span>|<span data-ttu-id="fba79-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="fba79-109">Description</span></span>|  
+|<span data-ttu-id="626bf-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="626bf-108">HRESULT</span></span>|<span data-ttu-id="626bf-109">Beschreibung</span><span class="sxs-lookup"><span data-stu-id="626bf-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="fba79-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="fba79-110">S_OK</span></span>|<span data-ttu-id="fba79-111">`DeleteRWLockOwnerIterator` wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="fba79-111">`DeleteRWLockOwnerIterator` returned successfully.</span></span>|  
-|<span data-ttu-id="fba79-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="fba79-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="fba79-113">Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf nicht erfolgreich verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="fba79-113">The CLR has not been loaded into a process, or is in a state in which it cannot run managed code or successfully process the call.</span></span>|  
-|<span data-ttu-id="fba79-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="fba79-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="fba79-115">Der Aufruf ist ein Timeout aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="fba79-115">The call timed out.</span></span>|  
-|<span data-ttu-id="fba79-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="fba79-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="fba79-117">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="fba79-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="fba79-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="fba79-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="fba79-119">Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.</span><span class="sxs-lookup"><span data-stu-id="fba79-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="fba79-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="fba79-120">E_FAIL</span></span>|<span data-ttu-id="fba79-121">Ein Unbekannter Schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="fba79-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="fba79-122">Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="fba79-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="fba79-123">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="fba79-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="626bf-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="626bf-110">S_OK</span></span>|<span data-ttu-id="626bf-111">`DeleteRWLockOwnerIterator` wurde erfolgreich zurückgegeben.</span><span class="sxs-lookup"><span data-stu-id="626bf-111">`DeleteRWLockOwnerIterator` returned successfully.</span></span>|  
+|<span data-ttu-id="626bf-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="626bf-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="626bf-113">Die CLR wurde nicht in einen Prozess geladen und befindet sich in einem Zustand, in dem nicht verwalteten Code ausführen oder den Aufruf nicht erfolgreich verarbeiten.</span><span class="sxs-lookup"><span data-stu-id="626bf-113">The CLR has not been loaded into a process, or is in a state in which it cannot run managed code or successfully process the call.</span></span>|  
+|<span data-ttu-id="626bf-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="626bf-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="626bf-115">Der Aufruf ist ein Timeout aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="626bf-115">The call timed out.</span></span>|  
+|<span data-ttu-id="626bf-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="626bf-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="626bf-117">Der Aufrufer ist nicht Besitzer der Sperre.</span><span class="sxs-lookup"><span data-stu-id="626bf-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="626bf-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="626bf-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="626bf-119">Ein Ereignis wurde abgebrochen, während sich der blockierte Thread oder eine Fiber darauf gewartet.</span><span class="sxs-lookup"><span data-stu-id="626bf-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="626bf-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="626bf-120">E_FAIL</span></span>|<span data-ttu-id="626bf-121">Ein Unbekannter Schwerwiegender Fehler ist aufgetreten.</span><span class="sxs-lookup"><span data-stu-id="626bf-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="626bf-122">Wenn eine Methode E_FAIL zurückgibt, ist die CLR nicht mehr im Prozess verwendet werden.</span><span class="sxs-lookup"><span data-stu-id="626bf-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="626bf-123">Nachfolgende Aufrufe zum Hosten der Methoden HOST_E_CLRNOTAVAILABLE zurück.</span><span class="sxs-lookup"><span data-stu-id="626bf-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fba79-124">Hinweise</span><span class="sxs-lookup"><span data-stu-id="fba79-124">Remarks</span></span>  
- <span data-ttu-id="fba79-125">Der Host kann diese Methode aufrufen und `CreateRWLockOwnerIterator` , stellen Sie sicher, dass die threadingimplementierung synchronisiert bleibt.</span><span class="sxs-lookup"><span data-stu-id="fba79-125">The host can call this method and `CreateRWLockOwnerIterator` to ensure that its threading implementation remains synchronized.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="626bf-124">Hinweise</span><span class="sxs-lookup"><span data-stu-id="626bf-124">Remarks</span></span>  
+ <span data-ttu-id="626bf-125">Der Host kann diese Methode aufrufen und `CreateRWLockOwnerIterator` , stellen Sie sicher, dass die threadingimplementierung synchronisiert bleibt.</span><span class="sxs-lookup"><span data-stu-id="626bf-125">The host can call this method and `CreateRWLockOwnerIterator` to ensure that its threading implementation remains synchronized.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fba79-126">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="fba79-126">Requirements</span></span>  
- <span data-ttu-id="fba79-127">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fba79-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="626bf-126">Anforderungen</span><span class="sxs-lookup"><span data-stu-id="626bf-126">Requirements</span></span>  
+ <span data-ttu-id="626bf-127">**Plattformen:** Weitere Informationen finden Sie unter [Systemanforderungen](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="626bf-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fba79-128">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="fba79-128">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="626bf-128">**Header:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="626bf-128">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="fba79-129">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="fba79-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="626bf-129">**Bibliothek:** Als Ressource in MSCorEE.dll enthalten</span><span class="sxs-lookup"><span data-stu-id="626bf-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="fba79-130">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fba79-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="626bf-130">**.NET Framework-Versionen:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="626bf-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fba79-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="fba79-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="626bf-131">Siehe auch</span><span class="sxs-lookup"><span data-stu-id="626bf-131">See also</span></span>
 
-- [<span data-ttu-id="fba79-132">ICLRSyncManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="fba79-132">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
-- [<span data-ttu-id="fba79-133">IHostSyncManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="fba79-133">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- [<span data-ttu-id="626bf-132">ICLRSyncManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="626bf-132">ICLRSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [<span data-ttu-id="626bf-133">IHostSyncManager-Schnittstelle</span><span class="sxs-lookup"><span data-stu-id="626bf-133">IHostSyncManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
